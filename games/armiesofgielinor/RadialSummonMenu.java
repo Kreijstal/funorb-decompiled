@@ -156,17 +156,17 @@ final class RadialSummonMenu {
     }
 
     final static void a(boolean param0, boolean param1) {
-        DebugConsole.field_w = !param1 ? new CommunityTabGroup(ob.field_O, eb.field_c) : new CommunityTabGroup(TeleportAction.field_x, uj.field_l);
+        DebugConsole.field_w = !param1 ? new CommunityTabGroup(GridWidgetContainer.field_O, eb.field_c) : new CommunityTabGroup(TeleportAction.field_x, uj.field_l);
         if (param0) {
           return;
         }
         BitmapTextWidgetPainter.field_a = new ClientUiComponent(0L, (ClientUiComponent) null);
         BitmapTextWidgetPainter.field_a.addChild(DebugConsole.field_w.tabs, 126);
         BitmapTextWidgetPainter.field_a.addChild(SocialListPanel.field_Lb, 97);
-        ta.field_R = new ClientUiComponent(0L, ArchiveIndex.field_b);
+        LabeledWidgetContainer.field_R = new ClientUiComponent(0L, ArchiveIndex.field_b);
         df.field_K = new ClientUiComponent(0L, (ClientUiComponent) null);
-        ta.field_R.addChild(bk.field_f, 54);
-        ta.field_R.addChild(df.field_K, 70);
+        LabeledWidgetContainer.field_R.addChild(bk.field_f, 54);
+        LabeledWidgetContainer.field_R.addChild(df.field_K, 70);
         df.field_K.addChild(IconTextComponent.field_Kb, 112);
         df.field_K.addChild(ConsolePanel.field_m, 74);
         ClientUiComponent.a(27, param1);

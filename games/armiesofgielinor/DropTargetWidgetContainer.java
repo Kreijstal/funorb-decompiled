@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ku extends SingleChildWidgetContainer {
+final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
     static String[][] field_L;
     static volatile boolean pointerChanged;
     static int field_K;
@@ -17,7 +17,7 @@ final class ku extends SingleChildWidgetContainer {
 
     final static CampaignQuicksave getStoredQuicksave(int obfuscationGuard) {
         if (obfuscationGuard <= 78) {
-          ku.k(-59);
+          DropTargetWidgetContainer.k(-59);
           if (null != bu.storedQuicksave) {
             return bu.storedQuicksave;
           }
@@ -30,27 +30,27 @@ final class ku extends SingleChildWidgetContainer {
     }
 
     final void pointerReleased(int originY, Widget rootWidget, int pointerX, byte obfuscationGuard, int pointerY, int originX) {
-        DraggableWidgetContainer var9 = null;
+        DraggableWidgetContainer draggedWidget = null;
         try {
           super.pointerReleased(originY, rootWidget, pointerX, (byte) 42, pointerY, originX);
-          int var8 = -111 % ((-58 - obfuscationGuard) / 53);
-          var9 = bn.draggedWidget;
-          if (var9 != null &&
+          int guardRemainder = -111 % ((-58 - obfuscationGuard) / 53);
+          draggedWidget = bn.draggedWidget;
+          if (draggedWidget != null &&
             this.containsPointer(1, originX, pointerY, pointerX, originY)) {
-            if (!(this.listener instanceof ch)) {
-              if (!(var9.listener instanceof ch)) {
+            if (!(this.listener instanceof WidgetDropListener)) {
+              if (!(draggedWidget.listener instanceof WidgetDropListener)) {
                 return;
               }
-              ((ch) (var9.listener)).a(var9, -14486, this);
+              ((WidgetDropListener) (draggedWidget.listener)).widgetDropped(draggedWidget, -14486, this);
               bn.draggedWidget = null;
               return;
             }
-            ((ch) (this.listener)).a(var9, -14486, this);
+            ((WidgetDropListener) (this.listener)).widgetDropped(draggedWidget, -14486, this);
             bn.draggedWidget = null;
             return;
           }
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ku.JA(" + originY + ',' + (rootWidget != null ? "{...}" : "null") + ',' + pointerX + ',' + obfuscationGuard + ',' + pointerY + ',' + originX + ')');
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ku.JA(" + originY + ',' + (rootWidget != null ? "{...}" : "null") + ',' + pointerX + ',' + obfuscationGuard + ',' + pointerY + ',' + originX + ')');
         }
     }
 
@@ -65,12 +65,12 @@ final class ku extends SingleChildWidgetContainer {
         }
     }
 
-    private ku(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, Widget param6) {
-        super(param0, param1, param2, param3, param4, param5);
+    private DropTargetWidgetContainer(int x, int y, int width, int height, WidgetPainter painter, WidgetListener listener, Widget child) {
+        super(x, y, width, height, painter, listener);
         try {
-          this.child = param6;
+          this.child = child;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ku.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ku.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (painter != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ')');
         }
     }
 

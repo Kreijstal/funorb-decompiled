@@ -177,8 +177,8 @@ final class MovementPresentation implements EventPresentation {
           var8 = wh.a(117);
           var1 = var8;
           var2 = var8.length;
-          if (sf.unitAnimationGroups.length < var2) {
-            var2 = sf.unitAnimationGroups.length;
+          if (ResizableModalDialog.unitAnimationGroups.length < var2) {
+            var2 = ResizableModalDialog.unitAnimationGroups.length;
           }
           var3 = fd.field_n[0].length;
           BestScoreStrategy.unitAnimationVariants = new int[var2][var3][];
@@ -186,7 +186,7 @@ final class MovementPresentation implements EventPresentation {
             return;
           }
           for (var4 = 0; var4 < var2; var4++) {
-            var5 = sf.unitAnimationGroups[var4];
+            var5 = ResizableModalDialog.unitAnimationGroups[var4];
             var6 = SetCoatConsoleCommand.field_I[var5];
             PreparedAction.a(var8[var4], var6, var4, 2378077);
           }

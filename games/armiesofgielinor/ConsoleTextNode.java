@@ -37,10 +37,10 @@ final class ConsoleTextNode extends IntrusiveNode {
         IsaacRandom.field_g = new kd();
         if (param0) {
           ConsoleTextNode.pushRasterState((byte) 79);
-          lt.field_g.a(IsaacRandom.field_g, (byte) 78);
+          lt.field_g.replaceContent(IsaacRandom.field_g, (byte) 78);
           return;
         }
-        lt.field_g.a(IsaacRandom.field_g, (byte) 78);
+        lt.field_g.replaceContent(IsaacRandom.field_g, (byte) 78);
     }
 
     ConsoleTextNode(String text) {

@@ -666,17 +666,17 @@ final class BattleCharacter {
                       return;
                     }
                     if (null != ck.animationSequencesByGroup &&
-                      null != sf.unitAnimationGroups &&
+                      null != ResizableModalDialog.unitAnimationGroups &&
                       0 <= this.modelIndex &&
-                      sf.unitAnimationGroups.length > this.modelIndex) {
-                      if (sf.unitAnimationGroups[this.modelIndex] >= 0 &&
-                        sf.unitAnimationGroups[this.modelIndex] < ck.animationSequencesByGroup.length) {
-                        if (null != ck.animationSequencesByGroup[sf.unitAnimationGroups[this.modelIndex]] &&
+                      ResizableModalDialog.unitAnimationGroups.length > this.modelIndex) {
+                      if (ResizableModalDialog.unitAnimationGroups[this.modelIndex] >= 0 &&
+                        ResizableModalDialog.unitAnimationGroups[this.modelIndex] < ck.animationSequencesByGroup.length) {
+                        if (null != ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]] &&
                           BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] >= 0 &&
-                          BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] < ck.animationSequencesByGroup[sf.unitAnimationGroups[this.modelIndex]].length) {
+                          BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] < ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]].length) {
                           var3 = new AnimationPlayer();
                           this.a(-313055120);
-                          var3.selectSequence(-1, ck.animationSequencesByGroup[sf.unitAnimationGroups[this.modelIndex]][BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0]]);
+                          var3.selectSequence(-1, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]][BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0]]);
                           var4 = 0;
                           var5 = 0;
                           var6 = 10000;

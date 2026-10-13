@@ -220,7 +220,7 @@ public final class ArmiesOfGielinor extends wf {
                     AiUnitPlanner.field_t = true;
                     du.field_h = false;
                     FaceNormal.field_d = false;
-                    gk.field_H = false;
+                    ModalDialogHost.field_H = false;
                     fj.field_c = false;
                     vs.field_j = true;
                     uc.a(0);
@@ -351,7 +351,7 @@ public final class ArmiesOfGielinor extends wf {
                   var10 = new GameplayController(stackIn_194_2, stackIn_194_3, stackIn_194_4, stackIn_194_5, stackIn_194_6 != 0, stackIn_194_7, stackIn_194_8, stackIn_194_9, stackIn_194_10, stackIn_194_11 != 0, stackIn_194_12, stackIn_194_13, stackIn_195_14, (CampaignMission) null);
                   if (MusicCrossfadeStream.deliveredOpcode != 64) {
                     SectorCacheStore.field_a = var10;
-                    gk.field_H = true;
+                    ModalDialogHost.field_H = true;
                   } else {
                     fj.field_c = true;
                     rd.gameplayController = var10;
@@ -367,7 +367,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 if (66 == MusicCrossfadeStream.deliveredOpcode) {
                   if (fj.field_c ||
-                    gk.field_H) {
+                    ModalDialogHost.field_H) {
                     if (fj.field_c &&
                       null != rd.gameplayController) {
                       rd.gameplayController.d(127, false);
@@ -378,7 +378,7 @@ public final class ArmiesOfGielinor extends wf {
                     du.field_h = false;
                     CipherPacketBuffer.a(false, -2, 1, jt.field_a);
                     fj.field_c = false;
-                    gk.field_H = false;
+                    ModalDialogHost.field_H = false;
                     uc.a(0);
                   }
                   ScrollContainer.field_Qb = false;
@@ -386,7 +386,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 var2 = null;
                 if (!fj.field_c) {
-                  if (gk.field_H) {
+                  if (ModalDialogHost.field_H) {
                     var2 = SectorCacheStore.field_a;
                   }
                 } else {
@@ -586,7 +586,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   ut.i((byte) 126);
                   ConsoleTextNode.field_p[jt.field_a].restoreStageSelection(100, false, 0);
-                  gk.field_H = false;
+                  ModalDialogHost.field_H = false;
                   fj.field_c = false;
                   FaceNormal.field_d = false;
                   uc.a(0);
@@ -806,7 +806,7 @@ public final class ArmiesOfGielinor extends wf {
                 var3_int = 0;
               }
               GiveTileConsoleCommand.a(73, var3_int != 0);
-              if (gk.field_H) {
+              if (ModalDialogHost.field_H) {
                 SectorCacheStore.field_a.a(109, var4 != 0);
               }
               if (fj.field_c) {
@@ -842,7 +842,7 @@ public final class ArmiesOfGielinor extends wf {
                     }
                   }
                 }
-                if (gk.field_H) {
+                if (ModalDialogHost.field_H) {
                   SectorCacheStore.field_a.g(false);
                 }
                 if (!fj.field_c) {
@@ -953,7 +953,7 @@ public final class ArmiesOfGielinor extends wf {
             if (jt.field_a != -11) {
               stackIn_197_2 = null;
             } else {
-              stackIn_197_2 = ku.getStoredQuicksave(127);
+              stackIn_197_2 = DropTargetWidgetContainer.getStoredQuicksave(127);
             }
             TextLineLayout.startCampaignMission(stackIn_196_0, stackIn_196_1, stackIn_197_2);
             if (jt.field_a == -10) {
@@ -986,7 +986,7 @@ public final class ArmiesOfGielinor extends wf {
             TelepopEvent.field_F = mj.field_c;
           }
           if (jt.field_a == -5) {
-            boolean decompiledSharedTail0 = !(gk.field_H);
+            boolean decompiledSharedTail0 = !(ModalDialogHost.field_H);
             if (!decompiledSharedTail0) {
               ov.writeSpectateRoomRequest(11, 3, 0);
               decompiledSharedTail0 = (var8 != 0);
@@ -1048,7 +1048,7 @@ public final class ArmiesOfGielinor extends wf {
             tq.a(sq.c((byte) 54), false);
           }
           var3 = rd.gameplayController;
-          if (gk.field_H) {
+          if (ModalDialogHost.field_H) {
             var3 = SectorCacheStore.field_a;
           }
           if (var3 != null &&
@@ -1094,7 +1094,7 @@ public final class ArmiesOfGielinor extends wf {
             rs.field_n.drawRightAligned(Runtime.getRuntime().totalMemory() / 1024L + "kB", 500, 120, 16777215, 1);
           }
           ToggleTurnSkipConsoleCommand.h(2);
-          pt.a(0, 12, var2, 0);
+          ContentTransitionDialog.a(0, 12, var2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1220,11 +1220,11 @@ public final class ArmiesOfGielinor extends wf {
           ArchiveProvider.a(false);
           aq.a((byte) -22);
           hq.a((byte) -73);
-          wl.f((byte) 97);
-          gk.l(17);
+          ModalDialog.f((byte) 97);
+          ModalDialogHost.l(17);
           oe.j((byte) 126);
           cr.n(260);
-          lw.j((byte) 49);
+          StandardContentDialog.j((byte) 49);
           ro.n(0);
           kd.f((byte) 19);
           ce.k(param0 ^ -11944);
@@ -1379,10 +1379,10 @@ public final class ArmiesOfGielinor extends wf {
           ut.p(0);
           ls.a(-121);
           vq.a((byte) 107);
-          sf.h((byte) 58);
+          ResizableModalDialog.h((byte) 58);
           DropdownSelector.a(param0 - 11763);
           InteractiveWidget.i(0);
-          ob.e((byte) 68);
+          GridWidgetContainer.e((byte) 68);
           DequeWidgetContainer.d((byte) -89);
           ArrayWidgetContainer.i(0);
           vr.a((byte) -37);
@@ -1463,10 +1463,10 @@ public final class ArmiesOfGielinor extends wf {
           GrowthEvent.g(-74);
           MusicPatch.a((byte) 52);
           MusicPatchEnvelope.a((byte) 99);
-          ta.j(-12819);
+          LabeledWidgetContainer.j(-12819);
           ma.g((byte) -127);
           EditableTextWidget.m(32);
-          pt.i(param0);
+          ContentTransitionDialog.i(param0);
           rj.a((byte) -85);
           kv.b(true);
           HotspotTextWidget.b(true);
@@ -1499,7 +1499,7 @@ public final class ArmiesOfGielinor extends wf {
           fh.a((byte) -28);
           BitmapTextLayout.c(true);
           DraggableWidgetContainer.j(0);
-          ku.k(param0 ^ -36);
+          DropTargetWidgetContainer.k(param0 ^ -36);
           cs.b(true);
           tn.n(param0 + 72);
           ClippedWidgetContainer.j(param0 + 150);
@@ -1700,7 +1700,7 @@ public final class ArmiesOfGielinor extends wf {
             TickCounter.loadClientAssets(RegionAnchor.field_o, 10207);
             IntKeyLookup.a(UnitLossCondition.battlefieldThemes, (byte) 62);
             RegionAnchor.field_o = null;
-            wl.a(0);
+            ModalDialog.a(0);
           }
           bt.field_e = nu.a(3, true);
           iw.field_l = DamageEvent.a(0, 5, (byte) 102, false, false);
@@ -2010,7 +2010,7 @@ public final class ArmiesOfGielinor extends wf {
                                                     TurnTimerDial.a(126, jl.field_d);
                                                     TabbedPanel.a(jl.field_d, (byte) 123);
                                                     br.field_d = null;
-                                                    wl.a(0);
+                                                    ModalDialog.a(0);
                                                     break;
                                                   }
                                                   el.field_b[var5_int + 1] = jl.field_d.getSoundEffectByName("runewars_mana_stars_" + (1 + var5_int), (byte) -97, "");
@@ -2076,11 +2076,11 @@ public final class ArmiesOfGielinor extends wf {
             bn.a((byte) -24, 71.0f, ph.field_a);
             this.a(0);
             SpellConfirmationDialog.field_f = null;
-            wl.a(0);
+            ModalDialog.a(0);
             return false;
           }
           if (null != SummonAction.field_w) {
-            bn.a((byte) -24, 75.0f, ta.field_M);
+            bn.a((byte) -24, 75.0f, LabeledWidgetContainer.field_M);
             this.a(0);
             SocialListPanel.field_Ob = MusicTrack.load(SummonAction.field_w, "", "Runewars Titlescreen");
             DeployRequest.field_B = MusicTrack.load(SummonAction.field_w, "", "legion");
@@ -2129,7 +2129,7 @@ public final class ArmiesOfGielinor extends wf {
                 SummonAction.field_w = null;
                 ep.field_b = null;
                 jl.field_d = null;
-                wl.a(0);
+                ModalDialog.a(0);
                 break;
               }
               var8_ref = var6_array[var7_int];
@@ -2142,7 +2142,7 @@ public final class ArmiesOfGielinor extends wf {
             if (bt.field_e != null) {
               uc.setChatHuffmanCodec(new HuffmanCodec(bt.field_e.getFileByName("huffman", -105, "")), 4);
               bt.field_e = null;
-              wl.a(0);
+              ModalDialog.a(0);
               return false;
             }
             if (null != ce.field_M &&
@@ -2165,7 +2165,7 @@ public final class ArmiesOfGielinor extends wf {
             if (!this.o(11672)) {
               return false;
             }
-            wl.a(0);
+            ModalDialog.a(0);
             return true;
           }
           bn.a((byte) -24, 90.0f, SectorCacheStore.field_i);
@@ -2214,7 +2214,7 @@ public final class ArmiesOfGielinor extends wf {
           UpkeepEvent.a(iw.field_l, 116);
           ArrayWidgetContainer.field_F = fk.loadRgbSpritesByName("fireball", (byte) -128, iw.field_l, "basic");
           MatchConditionRegistry.field_d = fk.loadRgbSpritesByName("fortcontrols", (byte) -124, iw.field_l, "basic");
-          lw.field_ob = DiskCacheRequest.loadRgbSpriteByName("smallorb", "basic", iw.field_l, false);
+          StandardContentDialog.field_ob = DiskCacheRequest.loadRgbSpriteByName("smallorb", "basic", iw.field_l, false);
           DraggableWidgetContainer.field_J = DiskCacheRequest.loadRgbSpriteByName("bigorb", "basic", iw.field_l, false);
           pg.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", iw.field_l, false);
           UnitModelPreview.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
@@ -2310,15 +2310,15 @@ public final class ArmiesOfGielinor extends wf {
             var16[var17] = fk.loadRgbSpritesByName(ArrayWidgetContainer.field_E[var17], (byte) -127, iw.field_l, "basic");
             var17++;
           } while (var18 == 0);
-          if (!ta.field_L) {
+          if (!LabeledWidgetContainer.field_L) {
             dh.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
-            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, ku.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
+            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, DropTargetWidgetContainer.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
             la.initializeChatHistory((byte) 30, 200);
             ps.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
           }
           sh.field_j = null;
           ResourceRequest.field_A = null;
-          wl.a(0);
+          ModalDialog.a(0);
           fe.field_o = new int[7][64];
           var17 = 0;
           do {
@@ -2409,7 +2409,7 @@ public final class ArmiesOfGielinor extends wf {
             this.a(param0 ^ 11672);
             QuickChatCategoryRepository.a(0, ki.field_b);
             ki.field_b = null;
-            wl.a(0);
+            ModalDialog.a(0);
             return false;
           }
           if (null != ReportAbuseDialog.field_Lb &&
@@ -2417,7 +2417,7 @@ public final class ArmiesOfGielinor extends wf {
             bn.a((byte) -24, 98.0f, AiPlanner.field_R);
             this.a(0);
             ReportAbuseDialog.field_Lb = null;
-            wl.a(param0 ^ 11672);
+            ModalDialog.a(param0 ^ 11672);
             return false;
           }
           if (param0 != 11672) {
@@ -2433,7 +2433,7 @@ public final class ArmiesOfGielinor extends wf {
             op.field_b = null;
             bi.field_f = null;
             MusicCrossfadeStream.field_s = null;
-            wl.a(0);
+            ModalDialog.a(0);
             return false;
           }
           return true;

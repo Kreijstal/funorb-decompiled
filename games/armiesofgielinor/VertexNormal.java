@@ -152,7 +152,7 @@ final class VertexNormal {
               var12.inheritVisualStateForDescendants(-10027);
               var12.admissionButton = new ClientUiComponent(0L, QuickChatPhraseRepository.field_d);
               var12.addChild(var12.admissionButton, param1 - 194);
-              var12.cancelRejectButton = new ClientUiComponent(0L, pt.field_X);
+              var12.cancelRejectButton = new ClientUiComponent(0L, ContentTransitionDialog.field_X);
               var12.addChild(var12.cancelRejectButton, 90);
               var13 = 1;
             }
@@ -430,7 +430,7 @@ final class VertexNormal {
                     var29 = 1;
                   }
                   if (var29 != 0) {
-                    var30_refLifetime2 = "<col=A00000>" + ob.field_M[var27_int] + "</col>";
+                    var30_refLifetime2 = "<col=A00000>" + GridWidgetContainer.field_M[var27_int] + "</col>";
                     var25 = var30_refLifetime2;
                     var24Lifetime2 = var25;
                     var25 = var30_refLifetime2;

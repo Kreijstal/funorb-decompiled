@@ -15,7 +15,7 @@ final class QuickChatPhrase extends DualLinkedNode {
 
     final static void a(int param0, MusicTrack param1) {
         try {
-          ku.a((byte) -93, true, param1);
+          DropTargetWidgetContainer.a((byte) -93, true, param1);
           if (param0 != 2) {
             QuickChatPhrase.getCampaignMission(87, 100, -49);
           }

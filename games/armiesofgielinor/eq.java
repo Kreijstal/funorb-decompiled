@@ -64,7 +64,7 @@ final class eq extends af {
 
     final h a(byte param0) {
         int var2 = -87 / ((param0 + 63) / 45);
-        return pt.field_db;
+        return ContentTransitionDialog.field_db;
     }
 
     public static void a(boolean param0) {

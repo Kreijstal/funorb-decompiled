@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr extends sf {
+final class cr extends ResizableModalDialog {
     static String field_eb;
     private boolean field_ab;
     static String field_bb;
@@ -39,12 +39,12 @@ final class cr extends sf {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
-        super.b(param0, param1, param2);
-        CipherPacketBuffer.field_t.drawCentered(this.field_cb, (this.width >> 1) + param0, param2 + 103, 16777215, -1);
+    final void drawDialogBackground(int x, int obfuscationGuard, int y) {
+        super.drawDialogBackground(x, obfuscationGuard, y);
+        CipherPacketBuffer.field_t.drawCentered(this.field_cb, (this.width >> 1) + x, y + 103, 16777215, -1);
         if (null != this.field_X) {
-          SoftwareRaster.e(20 + param0, -7 + (120 + param2), 260, 8421504);
-          CipherPacketBuffer.field_t.drawParagraph(this.field_X, 20 + param0, param2 + 120 + 8, 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_t.maxAscent);
+          SoftwareRaster.e(20 + x, -7 + (120 + y), 260, 8421504);
+          CipherPacketBuffer.field_t.drawParagraph(this.field_X, 20 + x, y + 120 + 8, 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_t.maxAscent);
         }
     }
 
@@ -114,14 +114,14 @@ final class cr extends sf {
         }
     }
 
-    cr(gk param0, String param1) {
+    cr(ModalDialogHost param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
           this.field_X = param1;
           if (this.field_X != null) {
             var3_int = CipherPacketBuffer.field_t.getParagraphHeight(this.field_X, 260, CipherPacketBuffer.field_t.maxAscent);
-            this.a(300, (byte) 100, 150 + var3_int);
+            this.setCenteredSize(300, (byte) 100, 150 + var3_int);
           }
           this.field_Y = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_db = false;

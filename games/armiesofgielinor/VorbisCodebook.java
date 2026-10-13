@@ -163,7 +163,7 @@ final class VorbisCodebook {
           lengthCursorOrSparseFlag = 0;
           currentCodeLength = VorbisSample.readBits(5) + 1;
           while (lengthCursorOrSparseFlag < this.entryCount) {
-            lengthRunCount = VorbisSample.readBits(wl.bitLength(this.entryCount - lengthCursorOrSparseFlag, -13337));
+            lengthRunCount = VorbisSample.readBits(ModalDialog.bitLength(this.entryCount - lengthCursorOrSparseFlag, -13337));
             for (runEntryIndex = 0; runEntryIndex < lengthRunCount; runEntryIndex++) {
               lengthEntryIndex = lengthCursorOrSparseFlag;
               lengthCursorOrSparseFlag++;

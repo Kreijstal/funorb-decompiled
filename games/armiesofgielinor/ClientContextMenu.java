@@ -77,7 +77,7 @@ final class ClientContextMenu {
                 if (var5 == null) {
                   return true;
                 }
-                ta.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var5, 0);
+                LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var5, 0);
                 return true;
               }
               var4_ref = se.requestAddIgnoredAccount(this.accountName, socialPacketOpcode, -127);
@@ -90,7 +90,7 @@ final class ClientContextMenu {
           if (var4_ref == null) {
             return true;
           }
-          ta.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var4_ref, 0);
+          LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var4_ref, 0);
           return true;
         }
         if (actionId == 4) {
@@ -98,7 +98,7 @@ final class ClientContextMenu {
           if (var6 == null) {
             return true;
           }
-          ta.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var6, 0);
+          LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var6, 0);
           return true;
         }
         if (actionId == 5) {
@@ -106,7 +106,7 @@ final class ClientContextMenu {
           if (var7 == null) {
             return true;
           }
-          ta.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var7, 0);
+          LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var7, 0);
           return true;
         }
         if (actionId == 6) {
@@ -114,7 +114,7 @@ final class ClientContextMenu {
           if (var9 == null) {
             return true;
           }
-          ta.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var9, 0);
+          LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var9, 0);
           return true;
         }
         if (actionId != 7) {
@@ -124,7 +124,7 @@ final class ClientContextMenu {
         if (var8 == null) {
           return true;
         }
-        ta.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var8, 0);
+        LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, this.accountName, var8, 0);
         return true;
     }
 
@@ -411,7 +411,7 @@ final class ClientContextMenu {
         int var4Lifetime6;
         int var4Lifetime7;
         if (actionId == 8) {
-          gk.openPrivateTextChat(-23503, this.accountName, this.accountId);
+          ModalDialogHost.openPrivateTextChat(-23503, this.accountName, this.accountId);
           var4 = 84 % ((obfuscationGuard - 30) / 54);
           return true;
         }

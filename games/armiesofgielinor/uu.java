@@ -343,7 +343,7 @@ final class uu {
                   so.field_d.inputEnabled = false;
                   if (so.field_d.hovered) {
                     if (DebugConsole.field_w.tabs.activeTab != 0) {
-                      ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{ob.field_O});
+                      ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
                       if (var19 != 0) {
                         ad.field_I = ResourceArchive.field_f;
                       }
@@ -368,7 +368,7 @@ final class uu {
                       stackIn_148_0 = stackOut_147_0;
                       if (var19 == 0) {
                         if (stackIn_148_0) {
-                          var24 = "<col=A00000>" + ob.field_M[var13_intLifetime1] + "</col>";
+                          var24 = "<col=A00000>" + GridWidgetContainer.field_M[var13_intLifetime1] + "</col>";
                           if (var11 != null) {
                             var12 = 1;
                             var11 = (String) (var11) + ", " + var24;
@@ -427,7 +427,7 @@ final class uu {
           stackIn_178_1 = true;
           stackIn_179_2 = (param0) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_178_0).updateInput(stackIn_178_1, stackIn_179_2);
-          stackIn_183_0 = ta.field_R;
+          stackIn_183_0 = LabeledWidgetContainer.field_R;
           stackIn_183_1 = true;
           stackIn_184_2 = (param0) && (!param1) && (ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_183_0).updateInput(stackIn_183_1, stackIn_184_2);

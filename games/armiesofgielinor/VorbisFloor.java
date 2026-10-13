@@ -50,7 +50,7 @@ final class VorbisFloor {
         pointCount = this.xList.length;
         System.arraycopy(this.xList, 0, pointXs, 0, pointCount);
         levelRange = floorRanges[this.multiplier - 1];
-        levelBits = wl.bitLength(levelRange - 1, -13337);
+        levelBits = ModalDialog.bitLength(levelRange - 1, -13337);
         pointYs[0] = VorbisSample.readBits(levelBits);
         pointYs[1] = VorbisSample.readBits(levelBits);
         pointCursor = 2;

@@ -93,7 +93,7 @@ final class ChatMessage {
         this.contextId = ut.decodedChatContextId;
         this.privateMessageIdLow24 = th.decodedPrivateMessageIdLow24;
         this.chatIconId = hc.decodedChatIconId;
-        this.accountId = gk.decodedChatAccountId;
+        this.accountId = ModalDialogHost.decodedChatAccountId;
     }
 
     ChatMessage(int channelId, String accountName, int contextId, String channelLabel, String text) {

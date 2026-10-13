@@ -3,7 +3,7 @@
  */
 final class lt extends ev {
     static String field_f;
-    static lw field_g;
+    static StandardContentDialog field_g;
     static RgbSprite[] field_h;
     static RgbSprite[] field_i;
 

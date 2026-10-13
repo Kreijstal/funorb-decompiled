@@ -44,8 +44,8 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
 
     df(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetPainter) null);
-        ta dupTemp$0 = null;
-        ta dupTemp$1 = null;
+        LabeledWidgetContainer dupTemp$0 = null;
+        LabeledWidgetContainer dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -65,8 +65,8 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
         BitmapFont var7 = null;
         String var8 = null;
         pf var9 = null;
-        ta var12 = null;
-        ta var13 = null;
+        LabeledWidgetContainer var12 = null;
+        LabeledWidgetContainer var13 = null;
         try {
           stackIn_4_1 = (param3);
           this.field_H = stackIn_4_1;
@@ -141,11 +141,11 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
           } else {
             var8 = DeployAction.field_t;
           }
-          dupTemp$0 = new ta(10, this.y, this.width - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledWidgetContainer(10, this.y, this.width - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.addChild((byte) 10, (Widget) (dupTemp$0));
           this.y = this.y + (((Widget) ((Object) var12)).height + 5);
-          dupTemp$1 = new ta(10, this.y, -20 + this.width, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
+          dupTemp$1 = new LabeledWidgetContainer(10, this.y, -20 + this.width, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
           var13 = dupTemp$1;
           this.addChild((byte) 10, (Widget) (dupTemp$1));
           this.field_O.listener = (WidgetListener) (this);

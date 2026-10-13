@@ -201,13 +201,13 @@ final class ActionSpell extends Spell {
         if (param1 == 23505) {
           MeshObject.a(-8994, param0, param2);
           CampaignMission.a(param2, -22696, param0);
-          pt.c(param0 / 2, param2 / 2, 9);
+          ContentTransitionDialog.c(param0 / 2, param2 / 2, 9);
           return;
         }
         ActionSpell.a(-106, -34, -122);
         MeshObject.a(-8994, param0, param2);
         CampaignMission.a(param2, -22696, param0);
-        pt.c(param0 / 2, param2 / 2, 9);
+        ContentTransitionDialog.c(param0 / 2, param2 / 2, 9);
     }
 
     ActionSpell(int spellId, ActionRequest request) {

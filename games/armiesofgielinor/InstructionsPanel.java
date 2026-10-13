@@ -2159,9 +2159,9 @@ final class InstructionsPanel {
         int var2;
         AnimationSequence var3;
         this.illustrationAnimation = null;
-        if (null != sf.unitAnimationGroups &&
-          sf.unitAnimationGroups.length > 76) {
-          var2 = sf.unitAnimationGroups[76];
+        if (null != ResizableModalDialog.unitAnimationGroups &&
+          ResizableModalDialog.unitAnimationGroups.length > 76) {
+          var2 = ResizableModalDialog.unitAnimationGroups[76];
           if (null != ck.animationSequencesByGroup &&
             var2 >= 0 &&
             ck.animationSequencesByGroup.length > var2) {
@@ -2170,7 +2170,7 @@ final class InstructionsPanel {
               if (param0 != -11195) {
                 this.nextEnabled = false;
               }
-              var3 = ck.animationSequencesByGroup[sf.unitAnimationGroups[76]][0];
+              var3 = ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[76]][0];
               if (var3 == null) {
                 return;
               }
@@ -2415,7 +2415,7 @@ final class InstructionsPanel {
             if (oq.field_m == ov.connectionState &&
               jh.isPacketPayloadReady(2)) {
               dc.field_o = ByteStorage.incomingPacket.readLong((byte) -2);
-              wl.field_I = param3;
+              ModalDialog.field_I = param3;
               BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
               tf.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);
               df.field_M = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
@@ -2465,7 +2465,7 @@ final class InstructionsPanel {
               IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var11, false);
               vt.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
               ov.connectionState = ResourceArchive.connectedState;
-              if (CampaignRewardPreview.field_g.a((byte) 50) != pt.field_db) {
+              if (CampaignRewardPreview.field_g.a((byte) 50) != ContentTransitionDialog.field_db) {
                 if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
                   ps.field_y.a(param0 - 84, CombatEvent.d((byte) -120));
                 }

@@ -80,7 +80,7 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     final static void d(boolean param0) {
         int var1 = (tq.field_c - 640) / 2;
         int var2 = mj.field_c * mj.field_c;
-        int var3 = -(gk.field_J * gk.field_J) + var2;
+        int var3 = -(ModalDialogHost.field_J * ModalDialogHost.field_J) + var2;
         if (!param0) {
           no.field_T.setBounds(-4 + (SoftwareRaster.height - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
           ov.field_i.setBounds(-4 + (SoftwareRaster.height - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);

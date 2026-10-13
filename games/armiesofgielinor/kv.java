@@ -35,7 +35,7 @@ final class kv extends DequeWidgetContainer implements WidgetActivationListener 
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_E[var5] = new InteractiveWidget(this.field_H[var5], (WidgetListener) (this));
               this.field_E[var5].painter = (WidgetPainter) ((Object) var4);
-              this.field_E[var5].tooltipText = wl.field_J;
+              this.field_E[var5].tooltipText = ModalDialog.field_J;
               this.field_E[var5].setBounds(0, 80, 20 + 16 * var5, 8192, 15);
               this.addChild((byte) 10, (Widget) (this.field_E[var5]));
             }

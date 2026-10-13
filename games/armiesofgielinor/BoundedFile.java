@@ -82,45 +82,45 @@ final class BoundedFile {
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param0 == -1) {
-          wl.a(19, param1);
+          ModalDialog.a(19, param1);
         } else {
           if (19 == param0) {
-            wl.a(65, false);
+            ModalDialog.a(65, false);
             SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
             ConsoleTextNode.field_p[param0].e(param3);
           } else {
             if (param0 == 25) {
-              wl.a(65, false);
+              ModalDialog.a(65, false);
               SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
               ConsoleTextNode.field_p[param0].e(param3);
             } else {
               if (param0 == 1) {
-                wl.a(65, false);
+                ModalDialog.a(65, false);
                 SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                 ConsoleTextNode.field_p[param0].e(param3);
               } else {
                 if (param0 == 24) {
-                  wl.a(65, false);
+                  ModalDialog.a(65, false);
                   SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                   ConsoleTextNode.field_p[param0].e(param3);
                 } else {
                   if (param0 == 2) {
-                    wl.a(65, false);
+                    ModalDialog.a(65, false);
                     SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                     ConsoleTextNode.field_p[param0].e(param3);
                   } else {
                     if (param0 == 17) {
-                      wl.a(65, false);
+                      ModalDialog.a(65, false);
                       SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                       ConsoleTextNode.field_p[param0].e(param3);
                     } else {
                       if (param0 == 3) {
-                        wl.a(65, false);
+                        ModalDialog.a(65, false);
                         SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                         ConsoleTextNode.field_p[param0].e(param3);
                       } else {
                         if (param0 == 4) {
-                          wl.a(65, false);
+                          ModalDialog.a(65, false);
                           SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                           ConsoleTextNode.field_p[param0].e(param3);
                         } else {
@@ -142,7 +142,7 @@ final class BoundedFile {
                                     if (!param2) {
                                       jg.field_m.f(so.field_b.field_a / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + so.field_b.field_g / 2);
                                     } else {
-                                      wl.a(61, false);
+                                      ModalDialog.a(61, false);
                                     }
                                     SoftwareRaster.d(0, 0, so.field_b.field_a, so.field_b.field_g);
                                     ConsoleTextNode.field_p[param0].e(false);

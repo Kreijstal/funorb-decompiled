@@ -108,7 +108,7 @@ final class VorbisSample extends IntrusiveNode {
             trigC[2 * trigCIndex + 1] = -(float)Math.sin((double)(4 * trigCIndex + 2) * 3.141592653589793 / (double)blockSize);
           }
           bitReverse = new int[eighthBlockSize];
-          reverseBits = wl.bitLength(eighthBlockSize - 1, -13337);
+          reverseBits = ModalDialog.bitLength(eighthBlockSize - 1, -13337);
           for (reverseIndex = 0; reverseIndex < eighthBlockSize; reverseIndex++) {
             bitReverse[reverseIndex] = qt.reverseBits(reverseIndex, reverseBits, (byte) -114);
           }
@@ -359,7 +359,7 @@ final class VorbisSample extends IntrusiveNode {
         int overlapLength;
         VorbisSample.setBitStream(this.packets[packetIndex], 0);
         VorbisSample.readBit();
-        modeId = VorbisSample.readBits(wl.bitLength(modeMappingIds.length - 1, -13337));
+        modeId = VorbisSample.readBits(ModalDialog.bitLength(modeMappingIds.length - 1, -13337));
         usesLargeBlock = modeUsesLargeBlock[modeId] ? 1 : 0;
         if (usesLargeBlock == 0) {
           selectedBlockSize = smallBlockSize;
@@ -478,7 +478,7 @@ final class VorbisSample extends IntrusiveNode {
             transformBuffer[4 * firstButterflyIndex + 3] = (firstButterflyRealA - firstButterflyRealB) * firstButterflyCosine - (firstButterflyImaginaryA - firstButterflyImaginaryB) * firstButterflySine;
             transformBuffer[4 * firstButterflyIndex + 1] = (firstButterflyImaginaryA - firstButterflyImaginaryB) * firstButterflyCosine + (firstButterflyRealA - firstButterflyRealB) * firstButterflySine;
           }
-          blockLog2 = wl.bitLength(blockSize - 1, -13337);
+          blockLog2 = ModalDialog.bitLength(blockSize - 1, -13337);
           for (stage = 0; stage < blockLog2 - 3; stage++) {
             groupSize = blockSize >> stage + 2;
             trigStride = 8 << stage;

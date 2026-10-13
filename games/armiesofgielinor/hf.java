@@ -27,7 +27,7 @@ final class hf {
     final static void a(int param0) {
         ConsoleParseException.field_d = new String[CampaignMenuEntry.field_F];
         ConsoleParseException.field_d[9] = GiveTileConsoleCommand.field_E;
-        ConsoleParseException.field_d[18] = sf.field_Q;
+        ConsoleParseException.field_d[18] = ResizableModalDialog.field_Q;
         ConsoleParseException.field_d[17] = qc.field_b;
         ConsoleParseException.field_d[19] = MidiPcmStream.field_X;
         ConsoleParseException.field_d[11] = pf.field_f;

@@ -280,7 +280,7 @@ final class DeployEvent extends GameEvent {
           if (TaggedMapData.field_g.removeButton.pressedButton == 0) {
             return;
           }
-          EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, lw.field_kb, kq.field_N, eq.field_h, eq.field_h);
+          EffectPresentation.field_e = new AccountNamePrompt(TaggedMapData.field_g.removeButton.screenX, TaggedMapData.field_g.removeButton.screenY, TaggedMapData.field_g.removeButton.width, TaggedMapData.field_g.removeButton.height, StandardContentDialog.field_kb, kq.field_N, eq.field_h, eq.field_h);
           ut.field_fb = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

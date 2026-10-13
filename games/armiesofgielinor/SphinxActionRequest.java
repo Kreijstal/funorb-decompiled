@@ -7,7 +7,7 @@ final class SphinxActionRequest extends ActionRequest {
     private int sphinxX;
     static ClientUiComponent field_A;
     private ActionRequest delegatedRequest;
-    static gk field_v;
+    static ModalDialogHost field_v;
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
@@ -22,7 +22,7 @@ final class SphinxActionRequest extends ActionRequest {
             var4 = (bj) (ArchiveIndex.field_o.next((byte) 123));
           }
           if (param1 <= 33) {
-            field_v = (gk) null;
+            field_v = (ModalDialogHost) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -171,7 +171,7 @@ final class SphinxActionRequest extends ActionRequest {
           DualLinkedNode.field_k.textColour = 16764006;
           DualLinkedNode.field_k.heldPressTextColour = 16777215;
           if (param2 >= -38) {
-            field_v = (gk) null;
+            field_v = (ModalDialogHost) null;
           }
           DualLinkedNode.field_k.matchedButtonTextColour = 16777215;
           var15 = new ClientUiComponent(0L, DualLinkedNode.field_k);
@@ -224,7 +224,7 @@ final class SphinxActionRequest extends ActionRequest {
           ClientUiComponent.field_Q.selectedOffsetX = 1;
           ClientUiComponent.field_Q.horizontalAlignment = 1;
           QuickChatPhraseRepository.field_d = new ClientUiComponent(0L, ClientUiComponent.field_Q);
-          pt.field_X = new ClientUiComponent(0L, ClientUiComponent.field_Q);
+          ContentTransitionDialog.field_X = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           kd.field_M = new ClientUiComponent(0L, ConsoleValue.field_a);
           rd.field_e = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           PreparedAction.field_o = new ClientUiComponent(0L, ClientUiComponent.field_Q);
@@ -245,9 +245,9 @@ final class SphinxActionRequest extends ActionRequest {
           QuickChatPhraseRepository.field_d.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("greenbutton", (byte) -124, param1, "lobby"));
           QuickChatPhraseRepository.field_d.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("greenbutton_mouseover", (byte) -126, param1, "lobby"));
           QuickChatPhraseRepository.field_d.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("greenbutton_mouseheld", (byte) -127, param1, "lobby"));
-          pt.field_X.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton", (byte) -128, param1, "lobby"));
-          pt.field_X.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton_mouseover", (byte) -127, param1, "lobby"));
-          pt.field_X.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton_mouseheld", (byte) -126, param1, "lobby"));
+          ContentTransitionDialog.field_X.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton", (byte) -128, param1, "lobby"));
+          ContentTransitionDialog.field_X.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton_mouseover", (byte) -127, param1, "lobby"));
+          ContentTransitionDialog.field_X.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("redbutton_mouseheld", (byte) -126, param1, "lobby"));
           kd.field_M.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton", (byte) -124, param1, "lobby"));
           kd.field_M.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_mouseover", (byte) -124, param1, "lobby"));
           kd.field_M.heldPressSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("backbutton_mouseheld", (byte) -128, param1, "lobby"));

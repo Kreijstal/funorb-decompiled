@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lw extends pt {
+final class StandardContentDialog extends ContentTransitionDialog {
     static RgbSprite field_ob;
     static String field_nb;
     static String field_lb;
@@ -9,27 +9,27 @@ final class lw extends pt {
     static String field_pb;
     static String field_kb;
 
-    final static void a(byte param0, QuickChatMenu param1) {
+    final static void attachQuickChatMenu(byte obfuscationGuard, QuickChatMenu menu) {
         try {
-          OwnerChangeEvent.quickChatMenuHost.addChild(param1, 80);
-          if (param0 != 79) {
+          OwnerChangeEvent.quickChatMenuHost.addChild(menu, 80);
+          if (obfuscationGuard != 79) {
             field_nb = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.K(" + obfuscationGuard + ',' + (menu != null ? "{...}" : "null") + ')');
         }
     }
 
-    lw(gk param0, Widget param1) {
-        super(param0, param1, 33, 20, 30);
+    StandardContentDialog(ModalDialogHost host, Widget content) {
+        super(host, content, 33, 20, 30);
     }
 
-    final void a(Widget param0, byte param1) {
+    final void replaceContent(Widget content, byte obfuscationGuard) {
         try {
-          int var3_int = -61 % ((-27 - param1) / 44);
-          super.a(param0, (byte) 87);
+          int var3_int = -61 % ((-27 - obfuscationGuard) / 44);
+          super.replaceContent(content, (byte) 87);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lw.A(" + (content != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -44,12 +44,12 @@ final class lw extends pt {
         field_lb = null;
     }
 
-    final static ScrollControlWidget n(int param0) {
-        if (param0 == 0) {
+    final static ScrollControlWidget createVerticalScrollControl(int obfuscationGuard) {
+        if (obfuscationGuard == 0) {
           return new ScrollControlWidget(0, 0, t.field_c.field_a, 0, (WidgetPainter) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
         }
         QuickChatMenu var2 = (QuickChatMenu) null;
-        lw.a((byte) -16, (QuickChatMenu) null);
+        StandardContentDialog.attachQuickChatMenu((byte) -16, (QuickChatMenu) null);
         return new ScrollControlWidget(0, 0, t.field_c.field_a, 0, (WidgetPainter) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
     }
 

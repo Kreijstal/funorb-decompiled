@@ -111,7 +111,7 @@ final class FixInvisibleUnitsConsoleCommand extends ConsoleCommand {
           NetworkResourceRequest.field_C = param3;
           CipherPacketBuffer.currentBattlefield = param0;
           PaletteRegionMap.field_g = new AnimationPlayer(param2);
-          PaletteRegionMap.field_g.selectSequence(-1, ck.animationSequencesByGroup[sf.unitAnimationGroups[76]][0]);
+          PaletteRegionMap.field_g.selectSequence(-1, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[76]][0]);
           ResourceArchive.field_a = NetworkResourceRequest.field_C.camera;
           discarded$1 = new RgbSprite(80, 40);
           ConsoleParseException.field_c = CipherPacketBuffer.currentBattlefield.mapHeight;

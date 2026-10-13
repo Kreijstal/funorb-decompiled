@@ -208,7 +208,7 @@ final class GameplayController {
               fe.b(InstructionsPanel.field_gb, db.a(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
               fe.c(InstructionsPanel.field_gb, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
               var18 = var5.createRewardPreview(-1);
-              lw.field_ob.g(db.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
+              StandardContentDialog.field_ob.g(db.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
               var18.icon.g(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
               km.field_h[2].g(db.a(true, var10 + 15), MatchConditionEntry.a(param0 + 128, (byte) 94));
               var19 = 10 + km.field_h[2].canvasWidth + (var10 + 15);
@@ -4033,10 +4033,10 @@ final class GameplayController {
                 if (1 == s.field_d) {
                   kp.field_k = CacheEntry.field_y;
                   if (var10 != 0) {
-                    kp.field_k = lw.field_pb;
+                    kp.field_k = StandardContentDialog.field_pb;
                   }
                 } else {
-                  kp.field_k = lw.field_pb;
+                  kp.field_k = StandardContentDialog.field_pb;
                 }
               }
             }
@@ -5352,7 +5352,7 @@ final class GameplayController {
             !this.field_bb &&
             ~this.battlefield.currentPlayer == ~this.controlledPlayerId &&
             !this.field_mb &&
-            !gk.field_H &&
+            !ModalDialogHost.field_H &&
             this.controlledPlayerId != -1) {
             if (null != this.selectedUnit &&
               ~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer) {
@@ -5396,7 +5396,7 @@ final class GameplayController {
             !this.field_bb &&
             this.battlefield.currentPlayer == this.controlledPlayerId &&
             !this.field_mb &&
-            !gk.field_H &&
+            !ModalDialogHost.field_H &&
             -1 != this.controlledPlayerId) {
             if (null != this.selectedUnit &&
               this.selectedUnit.ownerPlayer == this.controlledPlayerId) {

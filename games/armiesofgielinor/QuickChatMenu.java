@@ -151,7 +151,7 @@ final class QuickChatMenu extends ClientUiComponent {
             this.setCollapseTicks(0, -124);
             this.openItemIndex = itemIndex;
             this.activeSubmenu = this.submenus[this.openItemIndex];
-            lw.a((byte) 79, this.activeSubmenu);
+            StandardContentDialog.attachQuickChatMenu((byte) 79, this.activeSubmenu);
             this.activeSubmenu.setCollapseTicks(12, 42);
           } else {
             if (this.phraseIds[itemIndex] == -1) {

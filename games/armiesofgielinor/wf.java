@@ -41,7 +41,7 @@ abstract class wf extends iv {
         ChatMessage.field_c = param7;
         on.field_n = param5;
         BitmapTextWidgetPainter.field_p = param0;
-        wl.field_E = param1;
+        ModalDialog.field_E = param1;
         DualLinkedNode.field_t = param4;
         this.f((byte) -51);
         df.l(0);
@@ -107,7 +107,7 @@ abstract class wf extends iv {
           if (SoundCache.field_b != 11) {
             return var2;
           }
-          if (gk.field_K != 0) {
+          if (ModalDialogHost.field_K != 0) {
             return var2;
           }
           DualLinkedNode.e(116);
@@ -123,7 +123,7 @@ abstract class wf extends iv {
           jl.field_a = vi.monotonicMillis(-111) + 15000L;
         } else {
           if (SoundCache.field_b == 11 &&
-            gk.field_K == 0) {
+            ModalDialogHost.field_K == 0) {
             DualLinkedNode.e(116);
           }
         }
@@ -239,9 +239,9 @@ abstract class wf extends iv {
             }
           }
           if (3 == var4) {
-            if (gk.field_K != -1 &&
-              gk.field_K != 0) {
-              gk.field_K = -1;
+            if (ModalDialogHost.field_K != -1 &&
+              ModalDialogHost.field_K != 0) {
+              ModalDialogHost.field_K = -1;
               lb.a((byte) -8);
             }
             if (param1) {
@@ -292,7 +292,7 @@ abstract class wf extends iv {
             t.a((byte) -118, CombatEvent.d((byte) 7));
           }
           if (var4 == 12) {
-            ActionSpell.a(CombatEvent.d((byte) -123), -69, ob.j(-129));
+            ActionSpell.a(CombatEvent.d((byte) -123), -69, GridWidgetContainer.j(-129));
           }
           if (var4 == 13) {
             try {
@@ -545,33 +545,33 @@ abstract class wf extends iv {
             jl.field_a = 15000L + vi.monotonicMillis(-49);
           }
         }
-        if (gk.field_K == -1 ||
-          0 == gk.field_K) {
-          stackIn_25_0 = (gk.field_K != -1) ? 0 : 1;
+        if (ModalDialogHost.field_K == -1 ||
+          0 == ModalDialogHost.field_K) {
+          stackIn_25_0 = (ModalDialogHost.field_K != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_25_0;
-          gk.field_K = IntrusiveNode.b(86);
+          ModalDialogHost.field_K = IntrusiveNode.b(86);
           if (var3Lifetime1 != 0 &&
-            gk.field_K == 0 &&
+            ModalDialogHost.field_K == 0 &&
             11 == SoundCache.field_b &&
             !MovementPresentation.j(-11)) {
             DualLinkedNode.e(112);
           }
-          if (gk.field_K != -1 &&
-            gk.field_K != 0) {
+          if (ModalDialogHost.field_K != -1 &&
+            ModalDialogHost.field_K != 0) {
             jl.field_a = vi.monotonicMillis(98) + 15000L;
           }
         }
-        if (gk.field_K != -1 &&
-          gk.field_K != 0) {
+        if (ModalDialogHost.field_K != -1 &&
+          ModalDialogHost.field_K != 0) {
           if (StrongCacheEntry.field_E < 10) {
-            if (3 == gk.field_K) {
+            if (3 == ModalDialogHost.field_K) {
               this.a("js5crc", (byte) -107);
             } else {
-              if (gk.field_K != 4) {
-                if (gk.field_K == 2) {
+              if (ModalDialogHost.field_K != 4) {
+                if (ModalDialogHost.field_K == 2) {
                   this.a("js5connect_full", (byte) -37);
                 } else {
-                  if (gk.field_K == 5) {
+                  if (ModalDialogHost.field_K == 5) {
                     this.a("outofdate", (byte) -67);
                   } else {
                     this.a("js5connect", (byte) -41);
@@ -584,10 +584,10 @@ abstract class wf extends iv {
           } else {
             if (SoundCache.field_b >= 10) {
               er.b(-11);
-              if (3 != gk.field_K) {
-                if (gk.field_K != 4) {
-                  if (gk.field_K != 2) {
-                    if (gk.field_K == 5) {
+              if (3 != ModalDialogHost.field_K) {
+                if (ModalDialogHost.field_K != 4) {
+                  if (ModalDialogHost.field_K != 2) {
+                    if (ModalDialogHost.field_K == 5) {
                       wv.a(fk.field_f, 10, 5);
                     } else {
                       wv.a(wm.field_a, 10, 256);
@@ -605,18 +605,18 @@ abstract class wf extends iv {
             }
           }
         }
-        if ((gk.field_K != -1 &&
-          gk.field_K != 0 ||
+        if ((ModalDialogHost.field_K != -1 &&
+          ModalDialogHost.field_K != 0 ||
           MovementPresentation.j(-11)) &&
           jl.field_a <= vi.monotonicMillis(74)) {
           ol.field_C = false;
-          if (gk.field_K != -1 &&
-            gk.field_K != 0) {
-            gk.field_K = -1;
+          if (ModalDialogHost.field_K != -1 &&
+            ModalDialogHost.field_K != 0) {
+            ModalDialogHost.field_K = -1;
             lb.a((byte) -8);
           }
         }
-        if (gk.field_K == 0 &&
+        if (ModalDialogHost.field_K == 0 &&
           !MovementPresentation.j(-11)) {
           dd.field_a = false;
         }
@@ -629,7 +629,7 @@ abstract class wf extends iv {
             IconTextComponent.field_Nb = nu.a(on.field_n, true);
           }
           ps.field_u = DamageEvent.a(1, ChatMessage.field_c, (byte) 119, false, true);
-          CombatPresentation.field_M = DamageEvent.a(1, wl.field_E, (byte) 122, false, true);
+          CombatPresentation.field_M = DamageEvent.a(1, ModalDialog.field_E, (byte) 122, false, true);
           h.field_g = DamageEvent.a(1, DualLinkedNode.field_t, (byte) 127, false, true);
           PrintVictoryConditionsConsoleCommand.field_K = ps.field_u;
           StrongCacheEntry.field_E = 2;
@@ -644,7 +644,7 @@ abstract class wf extends iv {
               if (IconTextComponent.field_Nb.ensureGroupAvailableByName(28979, "")) {
                 CampaignUnitOverride.a((byte) -82, IconTextComponent.field_Nb);
                 IconTextComponent.field_Nb = null;
-                wl.a(0);
+                ModalDialog.a(0);
               }
             }
           }
@@ -671,16 +671,16 @@ abstract class wf extends iv {
           if (hc.field_i) {
             di.c((byte) -128);
           }
-          if (null == pt.field_eb) {
-            pt.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
+          if (null == ContentTransitionDialog.field_eb) {
+            ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
             ko.field_e = nb.c((byte) 111);
           }
-          qd.a(h.field_g, (byte) 76, pt.field_eb, ko.field_e);
+          qd.a(h.field_g, (byte) 76, ContentTransitionDialog.field_eb, ko.field_e);
           ps.field_u = null;
           CombatPresentation.field_M = null;
           h.field_g = null;
           SoundCache.a(-24602, (java.applet.Applet) (this));
-          wl.a(0);
+          ModalDialog.a(0);
           StrongCacheEntry.field_E = 10;
         }
         if (StrongCacheEntry.field_E == 10) {

@@ -462,7 +462,7 @@ final class MusicCrossfadeStream extends PcmStream {
         ClientUiComponent stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
         CampaignUnitOverride.a(-640 + SoftwareRaster.width >> 1, 640 + SoftwareRaster.width >> 1, SoftwareRaster.height, 0, (byte) 91);
-        if (gk.field_J > 0) {
+        if (ModalDialogHost.field_J > 0) {
           if (null != dh.field_k) {
             dh.field_k.f(no.field_T.x, 0);
           }

@@ -348,30 +348,30 @@ final class ep {
             return 1;
           }
           try {
-            if (ta.field_N == 0) {
+            if (LabeledWidgetContainer.field_N == 0) {
               kd.field_R = vq.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, db.field_c);
-              ta.field_N = ta.field_N + 1;
+              LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
             }
-            if (ta.field_N == 1) {
+            if (LabeledWidgetContainer.field_N == 1) {
               if (2 == kd.field_R.status) {
                 stackIn_13_0 = OwnerChangeEvent.a(-1, (byte) 101);
                 return stackIn_13_0;
               }
               if (1 == kd.field_R.status) {
-                ta.field_N = ta.field_N + 1;
+                LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
               }
             }
-            if (ta.field_N == 2) {
+            if (LabeledWidgetContainer.field_N == 2) {
               jj.field_g = new BufferedSocket((java.net.Socket) (kd.field_R.result), vq.field_c);
               var2 = new PacketBuffer(13);
               it.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
               var2.writeByte(1, 15);
               var2.writeInt((byte) -124, vq.field_d);
               jj.field_g.write(var2.payload, (byte) 20, 0, 13);
-              ta.field_N = ta.field_N + 1;
+              LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
               UnitInfoPopup.field_s = 30000L + vi.monotonicMillis(103);
             }
-            if (3 == ta.field_N) {
+            if (3 == LabeledWidgetContainer.field_N) {
               if (jj.field_g.available((byte) 43) <= 0) {
                 if (vi.monotonicMillis(97) > UnitInfoPopup.field_s) {
                   stackIn_30_0 = OwnerChangeEvent.a(-2, (byte) 101);
@@ -383,13 +383,13 @@ final class ep {
                   stackIn_25_0 = OwnerChangeEvent.a(var1_int, (byte) 101);
                   return stackIn_25_0;
                 }
-                ta.field_N = ta.field_N + 1;
+                LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
               }
             }
-            if (4 == ta.field_N) {
+            if (4 == LabeledWidgetContainer.field_N) {
               ScrollWidgetContainer.field_T.attachTransport(jj.field_g, TextLineLayout.field_m, -68);
               kd.field_R = null;
-              ta.field_N = 0;
+              LabeledWidgetContainer.field_N = 0;
               jj.field_g = null;
               stackIn_34_0 = 0;
               return stackIn_34_0;

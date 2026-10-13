@@ -17,9 +17,9 @@ final class TabbedPanel extends ClientUiComponent {
           wh.field_f = false;
           MoveAttackRequest.field_v = new PcmSample[47];
           for (var2_int = 0; var2_int < 47; var2_int++) {
-            var3 = param0.getSoundEffectByName(wl.field_M[var2_int], (byte) -97, "");
+            var3 = param0.getSoundEffectByName(ModalDialog.field_M[var2_int], (byte) -97, "");
             if (var3 == null) {
-              var3 = param0.getMusicSampleByName((byte) -128, "", wl.field_M[var2_int]);
+              var3 = param0.getMusicSampleByName((byte) -128, "", ModalDialog.field_M[var2_int]);
             }
             MoveAttackRequest.field_v[var2_int] = var3;
           }

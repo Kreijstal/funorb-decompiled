@@ -127,7 +127,7 @@ final class it {
             packet.writeNullTerminatedString(recipientName, 13851);
           }
           if (text != null) {
-            sf.writeCompressedChatText(15901, text, packet);
+            ResizableModalDialog.writeCompressedChatText(15901, text, packet);
           } else {
             packet.writeShort(true, phraseId);
           }

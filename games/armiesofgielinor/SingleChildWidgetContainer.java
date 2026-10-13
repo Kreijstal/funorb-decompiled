@@ -299,7 +299,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
         try {
           DeployEvent.field_F = param5;
           lm.field_e = param11;
-          ob.field_M = param10;
+          GridWidgetContainer.field_M = param10;
           VerticalScrollbar.field_Mb = param6;
           wb.field_a = param4;
           DirectByteStorage.field_j = param3;
@@ -343,7 +343,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
           bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, InteractiveWidget.field_H);
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, ArrayWidgetContainer.field_D);
-          wl.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
+          ModalDialog.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           fj.field_d = new ClientUiComponent(0L, ConsoleValue.field_a, l.field_f.toUpperCase());
           fj.field_d.inputEnabled = fh.field_c;
@@ -371,7 +371,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             LobbyPlayer.field_Lb.addChild(bs.field_a, 114);
           }
           LobbyPlayer.field_Lb.addChild(SphinxActionRequest.field_A, 78);
-          LobbyPlayer.field_Lb.addChild(wl.field_K, 99);
+          LobbyPlayer.field_Lb.addChild(ModalDialog.field_K, 99);
           LobbyPlayer.field_Lb.addChild(CipherPacketBuffer.field_x, 70);
           if (fh.field_c) {
             ov.field_i.addChild(fj.field_d, 127);
@@ -433,7 +433,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             }
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
-            KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ob.field_M[var17_intLifetime3]);
+            KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, IconLabelControl.field_Lb, GridWidgetContainer.field_M[var17_intLifetime3]);
             array$2 = new IconTextComponent[rn.bitwiseAnd(255, (int) MusicPatchNode.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
             pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);

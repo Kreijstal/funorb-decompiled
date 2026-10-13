@@ -21,13 +21,13 @@ final class ds {
         Object var1 = null;
         var1 = BattleCharacter.pointerInputHandler;
         synchronized (var1) {
-          ro.pointerButton = ob.heldPointerButton;
+          ro.pointerButton = GridWidgetContainer.heldPointerButton;
           av.pointerIdleTicks = av.pointerIdleTicks + 1;
           AiPlanningStrategy.pointerX = DiskCacheRequest.livePointerX;
           ko.pointerY = ResourceArchive.livePointerY;
-          BitmapTextWidgetPainter.pointerChangedSnapshot = ku.pointerChanged;
+          BitmapTextWidgetPainter.pointerChangedSnapshot = DropTargetWidgetContainer.pointerChanged;
           var2 = 48 / ((36 - obfuscationGuard) / 56);
-          ku.pointerChanged = false;
+          DropTargetWidgetContainer.pointerChanged = false;
           DeployEvent.pointerPressButton = ArchiveIndex.pressedPointerButton;
           BattleTutorial.pointerPressX = QuickChatMenu.lastPointerPressX;
           TeleportAction.pointerPressY = BoundedFile.lastPointerPressY;

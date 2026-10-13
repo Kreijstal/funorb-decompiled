@@ -527,9 +527,9 @@ final class jg extends IntrusiveNode {
                   }
                 }
                 if (var35 != null) {
-                  ad.field_I = ob.field_M[var34_intLifetime2] + " - " + (String) (var35);
+                  ad.field_I = GridWidgetContainer.field_M[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  ad.field_I = ob.field_M[var34_intLifetime2];
+                  ad.field_I = GridWidgetContainer.field_M[var34_intLifetime2];
                 }
               }
             }
@@ -630,7 +630,7 @@ final class jg extends IntrusiveNode {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(1);
             }
-            var12 = (b) (ta.field_O.first((byte) 98));
+            var12 = (b) (LabeledWidgetContainer.field_O.first((byte) 98));
             if (var12 == null) {
               dj.a((byte) -127);
               return;
@@ -649,7 +649,7 @@ final class jg extends IntrusiveNode {
             var11.unlink(41);
           } else {
             if (var2 == 2) {
-              var14 = (b) (ta.field_O.first((byte) 125));
+              var14 = (b) (LabeledWidgetContainer.field_O.first((byte) 125));
               if (var14 == null) {
                 dj.a((byte) -125);
                 return;

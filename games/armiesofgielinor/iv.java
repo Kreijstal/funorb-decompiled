@@ -424,7 +424,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             if (BitmapTextWidgetPainter.b(true)) {
               if (SoundCache.field_b == 0) {
                 tq.a(param1, false, 112);
-                pt.a(0, 12, param2, 0);
+                ContentTransitionDialog.a(0, 12, param2, 0);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -432,7 +432,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 if (var4 != 0) {
                   SoftwareRaster.b();
                   TaggedMapData.a(240, 320, -121);
-                  pt.a(0, 12, param2, 0);
+                  ContentTransitionDialog.a(0, 12, param2, 0);
                   var3_int = 0;
                   if (ol.field_z) {
                     ol.field_z = false;
@@ -444,7 +444,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             } else {
               SoftwareRaster.b();
               TaggedMapData.a(240, 320, -121);
-              pt.a(0, 12, param2, 0);
+              ContentTransitionDialog.a(0, 12, param2, 0);
               if (var4 != 0) {
                 var3_int = 0;
                 if (ol.field_z) {

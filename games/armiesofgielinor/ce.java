@@ -92,7 +92,7 @@ final class ce extends DequeWidgetContainer implements WidgetActivationListener 
     public ce() {
         super(0, 0, 476, 225, (WidgetPainter) null);
         this.field_L = new InteractiveWidget(li.field_p, (WidgetListener) null);
-        this.field_G = new InteractiveWidget(pt.field_Y, (WidgetListener) null);
+        this.field_G = new InteractiveWidget(ContentTransitionDialog.field_Y, (WidgetListener) null);
         this.field_E = new InteractiveWidget(pi.field_O, (WidgetListener) null);
         nu var1 = new nu();
         this.field_L.painter = (WidgetPainter) ((Object) var1);

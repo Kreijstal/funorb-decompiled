@@ -47,7 +47,7 @@ abstract class af {
             if (!message.systemMessage) {
               if (0 == message.privateMessageIdHigh16 &&
                 message.privateMessageIdLow24 == 0) {
-                var3_ref = fo.a(obfuscationGuard + 4697, ta.field_Q, new String[]{(String) (var2)});
+                var3_ref = fo.a(obfuscationGuard + 4697, LabeledWidgetContainer.field_Q, new String[]{(String) (var2)});
               } else {
                 var3_ref = fo.a(obfuscationGuard + 4697, ov.field_l, new String[]{(String) (var2)});
               }
@@ -182,7 +182,7 @@ abstract class af {
           se.field_f = param0;
           ac.field_n = true;
           qc.field_a = new ro(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, param1, fh.field_i, se.field_f);
-          KingBlackDragonEvent.field_C.a(qc.field_a, param2 ^ param2);
+          KingBlackDragonEvent.field_C.showDialog(qc.field_a, param2 ^ param2);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

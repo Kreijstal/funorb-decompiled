@@ -609,7 +609,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         this.optionList.setBounds(0, this.width, obfuscationGuard, obfuscationGuard ^ 8192, var2);
         this.dropdownViewport = new ScrollWidgetContainer(0, 0, 0, 0, new fc(), this.optionList, (WidgetPainter) null);
         if (var4 != 0) {
-          this.dropdownViewport.setVerticalControl((byte) 118, true, lw.n(obfuscationGuard ^ 0));
+          this.dropdownViewport.setVerticalControl((byte) 118, true, StandardContentDialog.createVerticalScrollControl(obfuscationGuard ^ 0));
         }
         this.dropdownViewport.setBounds(0, this.width, this.collapsedHeight, obfuscationGuard + 8192, this.height - this.collapsedHeight);
         this.expanded = true;

@@ -9,37 +9,37 @@ final class oe extends ro implements WidgetActivationListener {
     static ClientUiComponent field_Cb;
     static String field_zb;
 
-    final boolean a(byte param0) {
+    final boolean advanceDialogAnimation(byte obfuscationGuard) {
         wd var2;
         wd var3;
         wd var2Lifetime1;
-        if (param0 == -1) {
-          if (!this.field_L) {
-            return super.a((byte) -1);
+        if (obfuscationGuard == -1) {
+          if (!this.open) {
+            return super.advanceDialogAnimation((byte) -1);
           }
           if (this.field_Ab) {
-            return super.a((byte) -1);
+            return super.advanceDialogAnimation((byte) -1);
           }
           var2 = ki.a(-61440);
           if (var2 == null) {
-            return super.a((byte) -1);
+            return super.advanceDialogAnimation((byte) -1);
           }
           this.a(false, (byte) -53, var2);
-          return super.a((byte) -1);
+          return super.advanceDialogAnimation((byte) -1);
         }
         var3 = (wd) null;
         this.a(true, (byte) 54, (wd) null);
-        if (!this.field_L) {
-          return super.a((byte) -1);
+        if (!this.open) {
+          return super.advanceDialogAnimation((byte) -1);
         }
         if (this.field_Ab) {
-          return super.a((byte) -1);
+          return super.advanceDialogAnimation((byte) -1);
         }
         var2Lifetime1 = ki.a(-61440);
         if (var2Lifetime1 != null) {
           this.a(false, (byte) -53, var2Lifetime1);
         }
-        return super.a((byte) -1);
+        return super.advanceDialogAnimation((byte) -1);
     }
 
     public static void j(byte param0) {
@@ -134,7 +134,7 @@ final class oe extends ro implements WidgetActivationListener {
           var5 = new ad((ro) (this), CipherPacketBuffer.field_t, var4);
           if (param2.field_a) {
             if (param2.field_h) {
-              this.a(new qd(this), (byte) -81);
+              this.replaceContent(new qd(this), (byte) -81);
               return;
             }
             var5.a(ro.field_kb, (WidgetListener) (this), (byte) -61);
@@ -157,7 +157,7 @@ final class oe extends ro implements WidgetActivationListener {
               }
             }
           }
-          this.a(var5, (byte) -110);
+          this.replaceContent(var5, (byte) -110);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,7 +173,7 @@ final class oe extends ro implements WidgetActivationListener {
         }
     }
 
-    oe(gk param0, kd param1) {
+    oe(ModalDialogHost param0, kd param1) {
         super(param0, CipherPacketBuffer.field_t, wm.field_d, false, false);
         try {
           this.field_xb = param1;

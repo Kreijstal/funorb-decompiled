@@ -8,7 +8,7 @@ final class qh {
         if (param9) {
           QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
           ClientUiComponent.c(param9, -120);
-          if (gk.field_J > 0) {
+          if (ModalDialogHost.field_J > 0) {
             bn.a(param0, param9, 117, param5);
           }
           pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
@@ -35,7 +35,7 @@ final class qh {
             if (!param9) {
               QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
               ClientUiComponent.c(param9, -120);
-              if (gk.field_J > 0) {
+              if (ModalDialogHost.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
               pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
@@ -59,7 +59,7 @@ final class qh {
             } else {
               QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
               ClientUiComponent.c(param9, -120);
-              if (gk.field_J > 0) {
+              if (ModalDialogHost.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
               pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
@@ -96,7 +96,7 @@ final class qh {
                 QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
               }
               ClientUiComponent.c(param9, -120);
-              if (gk.field_J > 0) {
+              if (ModalDialogHost.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
               }
               pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
@@ -131,7 +131,7 @@ final class qh {
           if (!param9) {
             QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
             ClientUiComponent.c(param9, -120);
-            if (gk.field_J > 0) {
+            if (ModalDialogHost.field_J > 0) {
               bn.a(param0, param9, 117, param5);
             }
             pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
@@ -155,7 +155,7 @@ final class qh {
           } else {
             QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
             ClientUiComponent.c(param9, -120);
-            if (gk.field_J > 0) {
+            if (ModalDialogHost.field_J > 0) {
               bn.a(param0, param9, 117, param5);
               pi.field_N.textHorizontalPadding = ke.field_e.textHorizontalPadding;
               pi.field_N.horizontalAlignment = 1;

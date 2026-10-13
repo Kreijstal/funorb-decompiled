@@ -98,7 +98,7 @@ final class TileMetadata implements TaggedFieldReader {
           l.musicPlayer = PcmPlayer.create(platformTasks, component, 0, musicLatencyFrames);
           TextCursor.effectsPlayer = PcmPlayer.create(platformTasks, component, 1, effectsLatencyFrames);
           AnimationSkeleton.effectsMixer = new PcmStreamMixer();
-          ku.field_K = effectsLatencyFrames;
+          DropTargetWidgetContainer.field_K = effectsLatencyFrames;
           if (obfuscationGuard >= -38) {
             field_a = (int[]) null;
           }
@@ -126,7 +126,7 @@ final class TileMetadata implements TaggedFieldReader {
     }
 
     final static void a(int param0, boolean param1) {
-        if (gk.field_J > 0 &&
+        if (ModalDialogHost.field_J > 0 &&
           bw.field_g) {
           SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
           qc.field_c.draw(param1, 20);
@@ -135,7 +135,7 @@ final class TileMetadata implements TaggedFieldReader {
           !(0 >= InstructionsPanel.field_D)) &&
           ChannelGainProfile.field_f) {
           SoftwareRaster.d(0, 0, SoftwareRaster.width, CombatEvent.field_I.screenY);
-          ta.field_R.draw(param1, 20);
+          LabeledWidgetContainer.field_R.draw(param1, 20);
         }
         if (param0 != 5295) {
           TileMetadata.a(88);

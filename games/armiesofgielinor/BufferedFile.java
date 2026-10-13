@@ -434,7 +434,7 @@ final class BufferedFile {
         if (param0 < 78) {
           BufferedFile.a(59, -15, 35, -65);
         }
-        SphinxActionRequest.field_v = new gk();
+        SphinxActionRequest.field_v = new ModalDialogHost();
         TutorialController.h((byte) 74);
     }
 

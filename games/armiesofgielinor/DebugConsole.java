@@ -12,7 +12,7 @@ final class DebugConsole extends ConsolePanel {
     static String field_u;
     static String field_v;
     private ConsoleCommand[] commands;
-    static int field_x;
+    static int dialogViewportHeight;
 
     final boolean handleKey(int obfuscationGuard, char character, int keyCode) {
         boolean baseConsumed = false;
@@ -561,6 +561,6 @@ final class DebugConsole extends ConsolePanel {
         field_y = 0;
         field_v = "Group";
         field_u = "Report abuse";
-        field_x = 480;
+        dialogViewportHeight = 480;
     }
 }

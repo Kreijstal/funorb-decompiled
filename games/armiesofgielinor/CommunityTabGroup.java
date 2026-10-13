@@ -86,7 +86,7 @@ final class CommunityTabGroup {
         DualNodeDeque.decodedChatSystemMessage = systemMessage;
         MatchConditionEntry.decodedChatChannel = packedChannel & 127;
         hc.decodedChatIconId = packet.readUnsignedByte(0);
-        gk.decodedChatAccountId = packet.readLong((byte) -2);
+        ModalDialogHost.decodedChatAccountId = packet.readLong((byte) -2);
         if (2 == MatchConditionEntry.decodedChatChannel) {
           PcmPlayerService.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
           th.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);
@@ -252,7 +252,7 @@ final class CommunityTabGroup {
         DualNodeDeque.decodedChatSystemMessage = systemMessage;
         MatchConditionEntry.decodedChatChannel = packedChannel & 127;
         hc.decodedChatIconId = packet.readUnsignedByte(0);
-        gk.decodedChatAccountId = packet.readLong((byte) -2);
+        ModalDialogHost.decodedChatAccountId = packet.readLong((byte) -2);
         if (2 == MatchConditionEntry.decodedChatChannel) {
           PcmPlayerService.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
           th.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);

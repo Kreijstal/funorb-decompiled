@@ -162,7 +162,7 @@ class kq extends InteractiveWidget {
     }
 
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
-        lw.field_mb = param4;
+        StandardContentDialog.field_mb = param4;
         jg.field_k = param0;
         cn.field_o = param1;
         ia.field_g = param3;

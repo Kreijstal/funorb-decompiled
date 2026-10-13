@@ -43,7 +43,7 @@ final class EffectPresentation implements EventPresentation {
         MapRepository.a(true);
         DeployAction.field_A = true;
         fh.field_i = true;
-        KingBlackDragonEvent.field_C.j(-102);
+        KingBlackDragonEvent.field_C.closeAllDialogs(-102);
         if (param0 != 7) {
           EffectPresentation.c(101);
         }

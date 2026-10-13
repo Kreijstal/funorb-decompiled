@@ -19,7 +19,7 @@ final class vi {
             vi.a((String) null, -8, (String) null);
           }
           ContextActionMenu.field_Qb = new df(param0, param2, false, true, true);
-          lt.field_g.a(ContextActionMenu.field_Qb, (byte) -77);
+          lt.field_g.replaceContent(ContextActionMenu.field_Qb, (byte) -77);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

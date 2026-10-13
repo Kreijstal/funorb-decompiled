@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class KingBlackDragonEvent extends GameEvent {
-    static gk field_C;
+    static ModalDialogHost field_C;
     static int field_A;
     private int playerId;
     static ClientUiComponent[] field_z;

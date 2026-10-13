@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sf extends wl {
-    private int field_T;
+abstract class ResizableModalDialog extends ModalDialog {
+    private int resizeStartWidth;
     static int[] unitAnimationGroups;
-    private int field_R;
-    private int field_V;
+    private int resizeTick;
+    private int resizeTargetWidth;
     static String field_Q;
-    private int field_U;
-    private int field_O;
-    private int field_S;
+    private int resizeTargetHeight;
+    private int resizeDuration;
+    private int resizeStartHeight;
 
-    void b(int param0, int param1, int param2) {
+    void drawDialogBackground(int x, int obfuscationGuard, int y) {
         int var4;
         int var5;
         int var6;
@@ -41,12 +41,12 @@ abstract class sf extends wl {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        SoftwareRaster.a(6 + param0, 35 + param2, this.width - 12, this.height - 40, 2105376, 0);
+        SoftwareRaster.a(6 + x, 35 + y, this.width - 12, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
-        var8 = param2;
+        var8 = y;
         while (var4 > var7) {
           if (var8 >= SoftwareRaster.clipTop &&
             var8 < SoftwareRaster.clipBottom) {
@@ -62,7 +62,7 @@ abstract class sf extends wl {
                   }
                   var13 = var9 * (462 - var12) / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  SoftwareRaster.pixels[var8 * SoftwareRaster.width - (-param0 - var10)] = var13;
+                  SoftwareRaster.pixels[var8 * SoftwareRaster.width - (-x - var10)] = var13;
                 }
                 var10++;
               }
@@ -78,7 +78,7 @@ abstract class sf extends wl {
                   } else {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    SoftwareRaster.pixels[var11 + param0 + SoftwareRaster.width * var8] = var15;
+                    SoftwareRaster.pixels[var11 + x + SoftwareRaster.width * var8] = var15;
                   }
                   var11++;
                   continue;
@@ -88,7 +88,7 @@ abstract class sf extends wl {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            SoftwareRaster.e(param0 + var10, var8, -var10 + var11, var9);
+            SoftwareRaster.e(x + var10, var8, -var10 + var11, var9);
           }
           var8++;
           var7++;
@@ -97,64 +97,64 @@ abstract class sf extends wl {
         var4Lifetime1 = 22;
         var5Lifetime1 = 194;
         var7Lifetime1 = 0;
-        var8Lifetime1 = param2 + 35;
+        var8Lifetime1 = y + 35;
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          SoftwareRaster.e(param0, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRaster.e(param0 - (-this.width + 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRaster.e(x, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRaster.e(x - (-this.width + 6), var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        gt.field_e.g(this.width + (param0 - 90), 10 + param2);
-        EquipmentBattleTutorial.a(t.field_d, param0 + 5, param2 + 35, this.width - 10, 8941);
-        EquipmentBattleTutorial.a(ip.field_c, param0, -22 + param2 + this.height, this.width, param1 ^ 1851672364);
+        gt.field_e.g(this.width + (x - 90), 10 + y);
+        EquipmentBattleTutorial.a(t.field_d, x + 5, y + 35, this.width - 10, 8941);
+        EquipmentBattleTutorial.a(ip.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;
-        if (param1 != 1851680193) {
+        if (obfuscationGuard != 1851680193) {
           var17 = (PacketBuffer) null;
-          sf.writeCompressedChatText(-110, (String) null, (PacketBuffer) null);
+          ResizableModalDialog.writeCompressedChatText(-110, (String) null, (PacketBuffer) null);
         }
         var7Lifetime2 = 0;
-        var8Lifetime2 = param2 + 57;
+        var8Lifetime2 = y + 57;
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = (-var5Lifetime2 + var6Lifetime2) * var7Lifetime2 / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          SoftwareRaster.e(param0, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRaster.e(param0 + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRaster.e(x, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRaster.e(x + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
     }
 
-    boolean a(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int fieldTemp$0 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        if (0 >= this.field_O) {
+    boolean advanceDialogAnimation(byte obfuscationGuard) {
+        int width = 0;
+        int height = 0;
+        int nextTick = 0;
+        int interpolationNumerator = 0;
+        int interpolationDenominator = 0;
+        if (0 >= this.resizeDuration) {
         } else {
-          var2 = this.field_V;
-          var3 = this.field_U;
-          fieldTemp$0 = this.field_R + 1;
-          this.field_R = this.field_R + 1;
-          if (fieldTemp$0 >= this.field_O) {
-            this.field_O = 0;
-            this.m(param0 - 22);
+          width = this.resizeTargetWidth;
+          height = this.resizeTargetHeight;
+          nextTick = this.resizeTick + 1;
+          this.resizeTick = this.resizeTick + 1;
+          if (nextTick >= this.resizeDuration) {
+            this.resizeDuration = 0;
+            this.resizeCompleted(obfuscationGuard - 22);
           } else {
-            var4 = this.field_R * (-this.field_R + 2 * this.field_O);
-            var5 = this.field_O * this.field_O;
-            var3 = var4 * (-this.field_S + this.field_U) / var5 + this.field_S;
-            var2 = this.field_T + var4 * (this.field_V - this.field_T) / var5;
+            interpolationNumerator = this.resizeTick * (-this.resizeTick + 2 * this.resizeDuration);
+            interpolationDenominator = this.resizeDuration * this.resizeDuration;
+            height = interpolationNumerator * (-this.resizeStartHeight + this.resizeTargetHeight) / interpolationDenominator + this.resizeStartHeight;
+            width = this.resizeStartWidth + interpolationNumerator * (this.resizeTargetWidth - this.resizeStartWidth) / interpolationDenominator;
           }
-          this.a(var2, (byte) 127, var3);
+          this.setCenteredSize(width, (byte) 127, height);
         }
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           return true;
         }
-        return super.a((byte) -1);
+        return super.advanceDialogAnimation((byte) -1);
     }
 
     final static int writeCompressedChatText(int obfuscationGuard, String text, PacketBuffer packet) {
@@ -173,7 +173,7 @@ abstract class sf extends wl {
         try {
           if (obfuscationGuard != 15901) {
             var5 = (PacketBuffer) null;
-            sf.writeCompressedChatText(-112, (String) null, (PacketBuffer) null);
+            ResizableModalDialog.writeCompressedChatText(-112, (String) null, (PacketBuffer) null);
           }
           startPosition = packet.position;
           textCharacters = (CharSequence) ((Object) text);
@@ -202,33 +202,33 @@ abstract class sf extends wl {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
-        if (param0 <= 0) {
-          this.a(param3, (byte) 115, param2);
+    final void resizeDialog(int duration, boolean obfuscationGuard, int height, int width) {
+        if (duration <= 0) {
+          this.setCenteredSize(width, (byte) 115, height);
           return;
         }
-        this.field_R = 0;
-        this.field_U = param2;
-        this.field_O = param0;
-        this.field_S = this.height;
-        this.field_V = param3;
-        this.field_T = this.width;
-        if (param1) {
-          this.a(-36, true, -43, -81);
+        this.resizeTick = 0;
+        this.resizeTargetHeight = height;
+        this.resizeDuration = duration;
+        this.resizeStartHeight = this.height;
+        this.resizeTargetWidth = width;
+        this.resizeStartWidth = this.width;
+        if (obfuscationGuard) {
+          this.resizeDialog(-36, true, -43, -81);
         }
     }
 
-    boolean k(int param0) {
-        int var2 = 125 / ((param0 + 1) / 44);
-        this.l(-87);
-        return super.k(66);
+    boolean snapDialogAnimation(int obfuscationGuard) {
+        int var2 = 125 / ((obfuscationGuard + 1) / 44);
+        this.finishResize(-87);
+        return super.snapDialogAnimation(66);
     }
 
     public static void h(byte param0) {
         unitAnimationGroups = null;
         field_Q = null;
         if (param0 <= 21) {
-          sf.h((byte) -93);
+          ResizableModalDialog.h((byte) -93);
         }
     }
 
@@ -275,8 +275,8 @@ abstract class sf extends wl {
         }
     }
 
-    void m(int param0) {
-        int var2 = -52 % ((69 - param0) / 50);
+    void resizeCompleted(int obfuscationGuard) {
+        int var2 = -52 % ((69 - obfuscationGuard) / 50);
     }
 
     final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -369,7 +369,7 @@ abstract class sf extends wl {
                   stackIn_44_4 = 1;
                 }
                 ((RgbSprite) (Object) stackIn_43_0).b(stackIn_43_1, stackIn_43_2, stackIn_43_3[stackIn_44_4][var10]);
-                wl.groundShadowSprite.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
+                ModalDialog.groundShadowSprite.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
               }
             }
             var7 = (EventPresenter) (NetworkResourceRequest.field_C.eventPresenters.next((byte) 123));
@@ -378,7 +378,7 @@ abstract class sf extends wl {
             if (vs.field_e[param4].occupant.presentationOwnsModel) {
               return;
             }
-            wl.groundShadowSprite.b(param3, param5);
+            ModalDialog.groundShadowSprite.b(param3, param5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -388,20 +388,20 @@ abstract class sf extends wl {
         }
     }
 
-    void l(int param0) {
-        if (0 >= this.field_O) {
+    void finishResize(int obfuscationGuard) {
+        if (0 >= this.resizeDuration) {
           return;
         }
-        this.a(this.field_V, (byte) 113, this.field_U);
-        this.field_O = 0;
-        int var2 = 40 % ((-25 - param0) / 57);
-        this.m(-120);
+        this.setCenteredSize(this.resizeTargetWidth, (byte) 113, this.resizeTargetHeight);
+        this.resizeDuration = 0;
+        int var2 = 40 % ((-25 - obfuscationGuard) / 57);
+        this.resizeCompleted(-120);
     }
 
-    sf(gk param0, int param1, int param2) {
-        super(param0, param1, param2);
-        this.field_R = 0;
-        this.field_O = 0;
+    ResizableModalDialog(ModalDialogHost host, int width, int height) {
+        super(host, width, height);
+        this.resizeTick = 0;
+        this.resizeDuration = 0;
     }
 
     static {

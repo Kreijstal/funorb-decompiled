@@ -40,7 +40,7 @@ final class PrintCoatConsoleCommand extends ConsoleCommand {
         if (param0 < 68) {
           return;
         }
-        lt.field_g.a(new ce(), (byte) 66);
+        lt.field_g.replaceContent(new ce(), (byte) 66);
     }
 
     public static void i(int param0) {

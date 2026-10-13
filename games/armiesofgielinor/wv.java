@@ -46,7 +46,7 @@ class wv extends af {
           DeployAction.field_A = false;
           ac.field_n = false;
           if (qc.field_a != null &&
-            qc.field_a.field_L) {
+            qc.field_a.open) {
             if (8 != param2) {
             } else {
               if (!fh.field_i) {

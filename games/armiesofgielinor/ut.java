@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ut extends sf implements WidgetActivationListener {
+final class ut extends ResizableModalDialog implements WidgetActivationListener {
     private InteractiveWidget field_bb;
     static String field_ib;
     private InteractiveWidget field_ab;
@@ -12,7 +12,7 @@ final class ut extends sf implements WidgetActivationListener {
     private boolean field_hb;
     static byte[][] field_W;
     private boolean field_jb;
-    private ob field_gb;
+    private GridWidgetContainer field_gb;
     static int decodedChatContextId;
     static String[] field_cb;
     static int field_fb;
@@ -21,7 +21,7 @@ final class ut extends sf implements WidgetActivationListener {
     private boolean field_nb;
     private InteractiveWidget field_X;
 
-    ut(gk param0) {
+    ut(ModalDialogHost param0) {
         super(param0, 430, 254);
         int incrementValue$0 = 0;
         int var7_int = 0;
@@ -31,11 +31,11 @@ final class ut extends sf implements WidgetActivationListener {
         int stackIn_40_0 = 0;
         int stackIn_48_0 = 0;
         Object stackIn_51_0;
-        ob stackIn_51_1;
-        ob stackIn_51_2;
+        GridWidgetContainer stackIn_51_1;
+        GridWidgetContainer stackIn_51_2;
         int stackIn_51_3;
-        ob stackIn_52_1 = null;
-        ob stackIn_52_2 = null;
+        GridWidgetContainer stackIn_52_1 = null;
+        GridWidgetContainer stackIn_52_2 = null;
         int stackIn_52_4 = 0;
         int stackIn_57_1 = 0;
         String stackIn_74_0 = null;
@@ -57,10 +57,10 @@ final class ut extends sf implements WidgetActivationListener {
         ls var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
-        ob stackIn_51_1Lifetime1;
-        ob stackIn_51_2Lifetime1;
-        ob stackIn_52_1Lifetime1;
-        ob stackIn_52_2Lifetime1;
+        GridWidgetContainer stackIn_51_1Lifetime1;
+        GridWidgetContainer stackIn_51_2Lifetime1;
+        GridWidgetContainer stackIn_52_1Lifetime1;
+        GridWidgetContainer stackIn_52_2Lifetime1;
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -142,9 +142,9 @@ final class ut extends sf implements WidgetActivationListener {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_gb = new ob(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
+          this.field_gb = new GridWidgetContainer(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
           this.field_gb.field_Q = 83;
-          this.field_gb.d(5, 57, 5);
+          this.field_gb.setCellInsets(5, 57, 5);
           this.addChild((byte) 10, (Widget) (this.field_gb));
           this.field_mb = this.a((WidgetListener) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
           if (var2_intLifetime1 != 0) {
@@ -275,11 +275,11 @@ final class ut extends sf implements WidgetActivationListener {
                   if (var6_int == 0 &&
                     widget == this.field_bb) {
                     if (!this.field_jb) {
-                      this.field_G.a(new ud(this.field_G, PlayerProfile.field_h), 0);
+                      this.host.showDialog(new ud(this.host, PlayerProfile.field_h), 0);
                       return;
                     }
                     if (df.field_M <= 0) {
-                      this.field_G.a(new tn(this.field_G), 0);
+                      this.host.showDialog(new tn(this.host), 0);
                       return;
                     }
                     this.a(widget, (byte) 34);
@@ -334,7 +334,7 @@ final class ut extends sf implements WidgetActivationListener {
                 }
               }
               AiPlanningStrategy.a(true, param0 + 8029);
-              this.field_G.a(new cs(this.field_G), 0);
+              this.host.showDialog(new cs(this.host), 0);
             }
           }
         }
@@ -632,7 +632,7 @@ final class ut extends sf implements WidgetActivationListener {
           if (!this.field_hb &&
             !DamageEvent.g(115)) {
             this.n(88);
-            this.field_G.a(new ut(this.field_G), 0);
+            this.host.showDialog(new ut(this.host), 0);
           }
           if (null != this.field_lb) {
             stackIn_14_0 = this.field_lb.isExpanded(11180);
@@ -666,10 +666,10 @@ final class ut extends sf implements WidgetActivationListener {
         if (param0 < 79) {
           this.field_bb = (InteractiveWidget) null;
         }
-        if (!this.field_L) {
+        if (!this.open) {
           return;
         }
-        this.field_L = false;
+        this.open = false;
     }
 
     final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
@@ -806,7 +806,7 @@ final class ut extends sf implements WidgetActivationListener {
     private final InteractiveWidget a(WidgetListener param0, String param1, IndexedSprite[] param2, boolean param3) {
         InteractiveWidget var5 = null;
         RuntimeException var5_ref = null;
-        ob var6 = null;
+        GridWidgetContainer var6 = null;
         InteractiveWidget var7 = null;
         InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -825,7 +825,7 @@ final class ut extends sf implements WidgetActivationListener {
           }
           var6 = this.field_gb;
           var7 = var5;
-          var6.a(var7, var6.field_Q, 0);
+          var6.addCell(var7, var6.field_Q, 0);
           this.field_gb.refreshLayout(0);
           stackIn_3_0 = var5;
           return stackIn_3_0;

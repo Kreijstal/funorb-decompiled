@@ -541,7 +541,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TXT_AND");
                 if (var2 != null) {
-                  gk.field_L = uu.a(var2, (byte) 101);
+                  ModalDialogHost.field_L = uu.a(var2, (byte) 101);
                 }
                 var2 = fk.a(false, "PANTHEON_REQUIRED");
                 if (var2 != null) {
@@ -593,91 +593,91 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "gameoptnames,0,0");
                 if (null != var2) {
-                  ku.field_L[0][0] = uu.a(var2, (byte) 56);
+                  DropTargetWidgetContainer.field_L[0][0] = uu.a(var2, (byte) 56);
                 }
                 var2 = fk.a(false, "gameoptnames,0,1");
                 if (null != var2) {
-                  ku.field_L[0][1] = uu.a(var2, (byte) -120);
+                  DropTargetWidgetContainer.field_L[0][1] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "gameoptnames,0,2");
                 if (var2 != null) {
-                  ku.field_L[0][2] = uu.a(var2, (byte) 64);
+                  DropTargetWidgetContainer.field_L[0][2] = uu.a(var2, (byte) 64);
                 }
                 var2 = fk.a(false, "gameoptnames,0,3");
                 if (var2 != null) {
-                  ku.field_L[0][3] = uu.a(var2, (byte) -106);
+                  DropTargetWidgetContainer.field_L[0][3] = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "gameoptnames,0,4");
                 if (null != var2) {
-                  ku.field_L[0][4] = uu.a(var2, (byte) -93);
+                  DropTargetWidgetContainer.field_L[0][4] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "gameoptnames,0,5");
                 if (null != var2) {
-                  ku.field_L[0][5] = uu.a(var2, (byte) -110);
+                  DropTargetWidgetContainer.field_L[0][5] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "gameoptnames,0,6");
                 if (null != var2) {
-                  ku.field_L[0][6] = uu.a(var2, (byte) -127);
+                  DropTargetWidgetContainer.field_L[0][6] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "gameoptnames,1,0");
                 if (var2 != null) {
-                  ku.field_L[1][0] = uu.a(var2, (byte) 39);
+                  DropTargetWidgetContainer.field_L[1][0] = uu.a(var2, (byte) 39);
                 }
                 var2 = fk.a(false, "gameoptnames,1,1");
                 if (var2 != null) {
-                  ku.field_L[1][1] = uu.a(var2, (byte) 51);
+                  DropTargetWidgetContainer.field_L[1][1] = uu.a(var2, (byte) 51);
                 }
                 var2 = fk.a(false, "gameoptnames,1,2");
                 if (null != var2) {
-                  ku.field_L[1][2] = uu.a(var2, (byte) -108);
+                  DropTargetWidgetContainer.field_L[1][2] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "gameoptnames,1,3");
                 if (var2 != null) {
-                  ku.field_L[1][3] = uu.a(var2, (byte) -126);
+                  DropTargetWidgetContainer.field_L[1][3] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "gameoptnames,2,0");
                 if (null != var2) {
-                  ku.field_L[2][0] = uu.a(var2, (byte) -108);
+                  DropTargetWidgetContainer.field_L[2][0] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "gameoptnames,2,1");
                 if (null != var2) {
-                  ku.field_L[2][1] = uu.a(var2, (byte) -94);
+                  DropTargetWidgetContainer.field_L[2][1] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "gameoptnames,2,2");
                 if (null != var2) {
-                  ku.field_L[2][2] = uu.a(var2, (byte) -101);
+                  DropTargetWidgetContainer.field_L[2][2] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "gameoptnames,2,3");
                 if (var2 != null) {
-                  ku.field_L[2][3] = uu.a(var2, (byte) -99);
+                  DropTargetWidgetContainer.field_L[2][3] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "gameoptnames,4,0");
                 if (null != var2) {
-                  ku.field_L[4][0] = uu.a(var2, (byte) 112);
+                  DropTargetWidgetContainer.field_L[4][0] = uu.a(var2, (byte) 112);
                 }
                 var2 = fk.a(false, "gameoptnames,4,1");
                 if (null != var2) {
-                  ku.field_L[4][1] = uu.a(var2, (byte) 104);
+                  DropTargetWidgetContainer.field_L[4][1] = uu.a(var2, (byte) 104);
                 }
                 var2 = fk.a(false, "gameoptnames,5,0");
                 if (var2 != null) {
-                  ku.field_L[5][0] = uu.a(var2, (byte) -97);
+                  DropTargetWidgetContainer.field_L[5][0] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "gameoptnames,5,1");
                 if (var2 != null) {
-                  ku.field_L[5][1] = uu.a(var2, (byte) 87);
+                  DropTargetWidgetContainer.field_L[5][1] = uu.a(var2, (byte) 87);
                 }
                 var2 = fk.a(false, "gameoptnames,5,2");
                 if (var2 != null) {
-                  ku.field_L[5][2] = uu.a(var2, (byte) -126);
+                  DropTargetWidgetContainer.field_L[5][2] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "gameoptnames,5,3");
                 if (null != var2) {
-                  ku.field_L[5][3] = uu.a(var2, (byte) -113);
+                  DropTargetWidgetContainer.field_L[5][3] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "gameoptnames,5,4");
                 if (null != var2) {
-                  ku.field_L[5][4] = uu.a(var2, (byte) -111);
+                  DropTargetWidgetContainer.field_L[5][4] = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "gameopttooltips,0,0");
                 if (var2 != null) {
@@ -1195,7 +1195,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_FIRSTTOWERS");
                 if (var2 != null) {
-                  gk.field_N = uu.a(var2, (byte) 59);
+                  ModalDialogHost.field_N = uu.a(var2, (byte) 59);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_FIRSTHOUSES");
                 if (null != var2) {
@@ -3375,7 +3375,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_STATS");
                 if (var2 != null) {
-                  lw.field_lb = uu.a(var2, (byte) 110);
+                  StandardContentDialog.field_lb = uu.a(var2, (byte) 110);
                 }
                 var2 = fk.a(false, "LABEL_ZAMORAK_HIGHSCORE");
                 if (var2 != null) {
@@ -3383,7 +3383,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_SARADOMIN_HIGHSCORE");
                 if (null != var2) {
-                  gk.field_P = uu.a(var2, (byte) 12);
+                  ModalDialogHost.field_P = uu.a(var2, (byte) 12);
                 }
                 var2 = fk.a(false, "LABEL_GUTHIX_HIGHSCORE");
                 if (null != var2) {
@@ -3423,7 +3423,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "INTRO_4");
                 if (var2 != null) {
-                  ob.field_P = uu.a(var2, (byte) -128);
+                  GridWidgetContainer.field_P = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "TEXT_ON");
                 if (var2 != null) {

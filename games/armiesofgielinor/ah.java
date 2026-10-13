@@ -115,10 +115,10 @@ final class ah {
             FixInvisibleUnitsConsoleCommand.a((byte) 112, param1, var4);
             var4 = (iw) (cg.field_c.next((byte) 123));
           }
-          var2 = ta.field_O.first((byte) 116);
+          var2 = LabeledWidgetContainer.field_O.first((byte) 116);
           while (var2 != null) {
             RegionAnchor.a(param1, (byte) -32);
-            var2 = ta.field_O.next((byte) 123);
+            var2 = LabeledWidgetContainer.field_O.next((byte) 123);
           }
           if (param0 == 33) {
             return;

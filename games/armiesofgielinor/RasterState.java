@@ -52,7 +52,7 @@ final class RasterState extends IntrusiveNode {
                   rv.a(false, param3, param5, var7);
                 } else {
                   po.a((byte) -7, param0, param3, param5, var9, var8, var7, param1);
-                  sf.b(param0, param1, 0, param5, var7, param3);
+                  ResizableModalDialog.b(param0, param1, 0, param5, var7, param3);
                   IntrusiveNode.a(62, param1, param0, 19 + param3, var7, 39 + param5);
                   cw.a(var7, 19 + param3, param5 + 39, -118, param1, param0);
                   TickCounter.a(var9, false, param0, param3, var7, 0, param1, param5, var8);

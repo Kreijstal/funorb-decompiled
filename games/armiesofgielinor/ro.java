@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ro extends pt implements WidgetActivationListener {
+class ro extends ContentTransitionDialog implements WidgetActivationListener {
     private rj field_tb;
     private boolean field_sb;
     static String field_kb;
@@ -89,7 +89,7 @@ class ro extends pt implements WidgetActivationListener {
         }
     }
 
-    ro(gk param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+    ro(ModalDialogHost param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ad((ro) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = false;
@@ -106,12 +106,12 @@ class ro extends pt implements WidgetActivationListener {
     }
 
     final void b(boolean param0) {
-        if (!this.field_L) {
+        if (!this.open) {
           return;
         }
         if (!param0) {
           field_rb = (IndexedSprite[]) null;
-          this.field_L = false;
+          this.open = false;
           if (this.field_mb) {
             AttackEvent.d((byte) 83);
             return;
@@ -122,7 +122,7 @@ class ro extends pt implements WidgetActivationListener {
           }
           return;
         }
-        this.field_L = false;
+        this.open = false;
         if (this.field_mb) {
           AttackEvent.d((byte) 83);
           return;
@@ -205,10 +205,10 @@ class ro extends pt implements WidgetActivationListener {
           if (FaceNormal.a(var4_ref_String, param1 + 134)) {
             var13 = (String) null;
             var12 = (String) null;
-            ta.appendSystemChatMessage((String) null, 2, -18119, (String) null, KingBlackDragonEvent.field_y, 0);
+            LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, KingBlackDragonEvent.field_y, 0);
             var15 = (String) null;
             var14 = (String) null;
-            ta.appendSystemChatMessage((String) null, 2, -18119, (String) null, ContextualRuntimeException.field_a, 0);
+            LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, ContextualRuntimeException.field_a, 0);
             rd.clearChatText(8445);
             return true;
           }
@@ -253,7 +253,7 @@ class ro extends pt implements WidgetActivationListener {
         var18 = var16;
         if (rs.outgoingChatChannel == 2) {
           var56 = (CharSequence) ((Object) qd.chatRecipientName);
-          var20 = fo.a(4800, ta.field_Q, new String[]{ug.a(16, var56)});
+          var20 = fo.a(4800, LabeledWidgetContainer.field_Q, new String[]{ug.a(16, var56)});
           var8 = fo.a(4800, ov.field_l, new String[]{var16});
           var9 = IntrusiveNode.field_e.textWidth(var20);
           var10 = IntrusiveNode.field_e.textWidth(var8);
@@ -356,7 +356,7 @@ class ro extends pt implements WidgetActivationListener {
           this.field_tb.c(4210752, 2121792, 27178);
           var2 = new ad(this, this.field_nb, QuickChatCategory.field_B);
           var2.a(ClientConnectionState.field_b, 15, 1);
-          this.a(var2, (byte) -108);
+          this.replaceContent(var2, (byte) -108);
           return;
         }
     }
@@ -415,7 +415,7 @@ class ro extends pt implements WidgetActivationListener {
               var6.a(IconTextComponent.field_Jb, 8, 1);
             }
           }
-          this.a(var6, param1);
+          this.replaceContent(var6, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

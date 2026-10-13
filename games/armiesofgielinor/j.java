@@ -56,7 +56,7 @@ final class j {
           DisplacedUnitMarker.field_t[13] = DeployAction.field_v;
           DisplacedUnitMarker.field_t[7] = gp.field_c;
           DisplacedUnitMarker.field_t[3] = lb.field_d;
-          DisplacedUnitMarker.field_t[53] = gk.field_P;
+          DisplacedUnitMarker.field_t[53] = ModalDialogHost.field_P;
           DisplacedUnitMarker.field_t[6] = AiInfluenceMap.field_k;
           DisplacedUnitMarker.field_t[9] = PreparedAction.field_k;
           DisplacedUnitMarker.field_t[8] = null;
@@ -91,13 +91,13 @@ final class j {
           DisplacedUnitMarker.field_t[35] = wd.field_j;
           DisplacedUnitMarker.field_t[47] = qk.field_f;
           DisplacedUnitMarker.field_t[51] = nt.field_p;
-          DisplacedUnitMarker.field_t[48] = lw.field_lb;
+          DisplacedUnitMarker.field_t[48] = StandardContentDialog.field_lb;
           DisplacedUnitMarker.field_t[44] = dd.field_g;
           DisplacedUnitMarker.field_t[37] = lg.field_c;
           CampaignDefinition.field_m = new String[3];
           DisplacedUnitMarker.field_t[52] = ToggleTurnSkipConsoleCommand.field_G;
           DisplacedUnitMarker.field_t[38] = PortalLossCondition.field_f;
-          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, QuickChatPhraseRepository.field_e, ClientUiComponent.field_lb, ob.field_P};
+          ParasiteEvent.field_A = new String[]{VertexNormal.field_a, QuickChatPhraseRepository.field_e, ClientUiComponent.field_lb, GridWidgetContainer.field_P};
           DisplacedUnitMarker.field_t[43] = FaceNormal.field_c;
           DisplacedUnitMarker.field_t[33] = gv.field_b;
           DisplacedUnitMarker.field_t[59] = TickCounter.field_e;
@@ -118,15 +118,15 @@ final class j {
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = QuickChatPhrase.field_y;
-          du.field_g = new String[]{ClientContextMenu.field_l, gk.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
+          du.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, kd.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
           wb.field_b[14] = ov.field_d;
           wb.field_b[17] = ke.field_f;
           wb.field_b[12] = bk.field_b;
-          wb.field_b[27] = gk.field_P;
+          wb.field_b[27] = ModalDialogHost.field_P;
           wb.field_b[28] = mh.field_d;
-          wb.field_b[23] = lw.field_lb;
+          wb.field_b[23] = StandardContentDialog.field_lb;
           wb.field_b[1] = ConsoleEvaluationException.field_d;
           wb.field_b[22] = MeshObject.field_b;
           wb.field_b[2] = cw.field_b;
@@ -339,7 +339,7 @@ final class j {
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < tq.gameOptionCount; var10Lifetime1++) {
                     if (dt.field_d[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + ob.field_M[var10Lifetime1] + "</col>";
+                      var11_ref = "<col=A00000>" + GridWidgetContainer.field_M[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 != null) {
@@ -391,7 +391,7 @@ final class j {
           stackIn_71_1 = true;
           stackIn_72_2 = (param2) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_71_0).updateInput(stackIn_71_1, stackIn_72_2);
-          stackIn_76_0 = ta.field_R;
+          stackIn_76_0 = LabeledWidgetContainer.field_R;
           stackIn_76_1 = true;
           stackIn_77_2 = (param2) && (!param1) && (ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);

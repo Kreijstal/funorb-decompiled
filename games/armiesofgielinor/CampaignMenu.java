@@ -74,7 +74,7 @@ final class CampaignMenu {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = ku.getStoredQuicksave(124);
+          var2 = DropTargetWidgetContainer.getStoredQuicksave(124);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           TextLineLayout.startCampaignMission(var3, -1, var2);
           var4 = var3.playerSlot;
@@ -231,7 +231,7 @@ final class CampaignMenu {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          var2 = ku.getStoredQuicksave(111);
+          var2 = DropTargetWidgetContainer.getStoredQuicksave(111);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = fo.a(4800, wd.field_e, new String[]{var3.name, Integer.toString(var4)});
@@ -719,7 +719,7 @@ final class CampaignMenu {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          var2 = ku.getStoredQuicksave(97);
+          var2 = DropTargetWidgetContainer.getStoredQuicksave(97);
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, param0 - 26);
           var4 = Battlefield.a(var3.participantIds.length, var2.snapshotBytes, false);
           var5 = fo.a(4800, sb.field_f, new String[]{Integer.toString(var4)});
@@ -1161,7 +1161,7 @@ final class CampaignMenu {
             if (null == this.field_p) {
               this.field_p = new CampaignMenuButton(pn.field_k, var5Lifetime1, var6Lifetime3, var2_int);
             }
-            var25 = ku.getStoredQuicksave(121);
+            var25 = DropTargetWidgetContainer.getStoredQuicksave(121);
             if (null != var25 &&
               ~this.campaignIndex == ~var25.campaignIndex &&
               ~var25.missionId == ~this.selectedMissionEntry.entryId) {
@@ -1213,7 +1213,7 @@ final class CampaignMenu {
           var10 = (13 * param3 + fe.field_b + param7 * 57) % 100;
           if (param6 == (float)param5) {
             if (param0 != null) {
-              lw.field_ob.g(1 + (param7 - var9_int / 2), -(var9_int / 2) + (param3 + 1));
+              StandardContentDialog.field_ob.g(1 + (param7 - var9_int / 2), -(var9_int / 2) + (param3 + 1));
             }
             if (null != param4) {
               param4.g(-(var9_int / 2) + param7 + 1, 1 - var9_int / 2 + param3);
@@ -1235,7 +1235,7 @@ final class CampaignMenu {
             var13 = (int)(param6 * 40.0f);
             var14 = (int)(96.0f * param6);
             if (param0 != null) {
-              lw.field_ob.c(param7 - var11 / 2, -(var11 / 2) + param3, var11, var11);
+              StandardContentDialog.field_ob.c(param7 - var11 / 2, -(var11 / 2) + param3, var11, var11);
             }
             if (null != param4) {
               param4.c(-(var11 / 2) + param7, -(var11 / 2) + param3, var11, var11);
@@ -1251,7 +1251,7 @@ final class CampaignMenu {
             }
           }
           if (param0 != null) {
-            lw.field_ob.h(-(var9_int / 4) + (param7 + 1), param3 - var9_int / 4 + 1);
+            StandardContentDialog.field_ob.h(-(var9_int / 4) + (param7 + 1), param3 - var9_int / 4 + 1);
           }
           if (null != param4) {
             param4.h(-(var9_int / 4) + param7 + 1, 1 + (-(var9_int / 4) + param3));
@@ -1461,7 +1461,7 @@ final class CampaignMenu {
         try {
           this.selectedMissionEntry = null;
           if (this.selectedCampaignEntry.entryId == -1) {
-            var2 = ku.getStoredQuicksave(obfuscationGuard + 86);
+            var2 = DropTargetWidgetContainer.getStoredQuicksave(obfuscationGuard + 86);
             if (!BoundedFile.a(var2.campaignIndex, obfuscationGuard + 11906) &&
               QuickChatPhraseRepository.a(27875)) {
               PaletteRegionMap.field_i = bn.field_g;
@@ -1655,7 +1655,7 @@ final class CampaignMenu {
                 if (DeployEvent.pointerPressButton == 1 &&
                   this.field_c != null &&
                   this.field_c.containsPointer((byte) -49)) {
-                  var2 = ku.getStoredQuicksave(86);
+                  var2 = DropTargetWidgetContainer.getStoredQuicksave(86);
                   var3 = QuickChatPhrase.getCampaignMission(((CampaignQuicksave) (var2)).campaignIndex, ((CampaignQuicksave) (var2)).missionId, 0);
                   l.activeCampaignMission = (CampaignMission) (var3);
                   CipherPacketBuffer.a(true, -11, 1, 0);
@@ -1777,7 +1777,7 @@ final class CampaignMenu {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2 = ku.getStoredQuicksave(91);
+          var2 = DropTargetWidgetContainer.getStoredQuicksave(91);
           if (null == var2) {
             l.activeCampaignMission = this.selectedMissionEntry.mission;
             CipherPacketBuffer.a(true, -10, 1, 0);
@@ -2187,7 +2187,7 @@ final class CampaignMenu {
             this.setViewMode(85, (byte) -25);
           }
           var3 = null;
-          var4_ref = ku.getStoredQuicksave(85);
+          var4_ref = DropTargetWidgetContainer.getStoredQuicksave(85);
           var5_ref_cq = (CampaignMenuEntry) (this.missionEntries.first(1));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5_ref_cq == null))) {
@@ -2349,7 +2349,7 @@ final class CampaignMenu {
               var9 = 10;
               this.campaignEntries.clear((byte) -124);
               try {
-                var10_ref_sl = ku.getStoredQuicksave(84);
+                var10_ref_sl = DropTargetWidgetContainer.getStoredQuicksave(84);
                 if (var10_ref_sl != null) {
                   var11 = new CampaignMenuEntry(-1, SummonAction.field_A);
                   var11.width = 278;

@@ -164,12 +164,12 @@ final class ad extends DequeWidgetContainer implements WidgetActivationListener 
             var1_ref = (LobbyRoom) (qc.lobbyRoomOrder.next((byte) 123));
           }
           var2 = -62 % ((obfuscationGuard + 41) / 60);
-          var1Lifetime1 = (LobbyPlayer) (wl.currentRoomPlayers.first((byte) 115));
+          var1Lifetime1 = (LobbyPlayer) (ModalDialog.currentRoomPlayers.first((byte) 115));
           while (var1Lifetime1 != null) {
             if (0 < var1Lifetime1.notificationTicks) {
               var1Lifetime1.notificationTicks = var1Lifetime1.notificationTicks - 1;
               if (var1Lifetime1.notificationTicks != 0) {
-                var1Lifetime1 = (LobbyPlayer) (wl.currentRoomPlayers.next((byte) 123));
+                var1Lifetime1 = (LobbyPlayer) (ModalDialog.currentRoomPlayers.next((byte) 123));
                 continue;
               }
               var1Lifetime1.notificationCode = 0;
@@ -177,7 +177,7 @@ final class ad extends DequeWidgetContainer implements WidgetActivationListener 
                 var1Lifetime1.unlink(-123);
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (wl.currentRoomPlayers.next((byte) 123));
+            var1Lifetime1 = (LobbyPlayer) (ModalDialog.currentRoomPlayers.next((byte) 123));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

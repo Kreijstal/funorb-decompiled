@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends sf implements WidgetActivationListener {
+final class ud extends ResizableModalDialog implements WidgetActivationListener {
     static String field_Y;
     static String field_Z;
     static String field_W;
@@ -108,7 +108,7 @@ final class ud extends sf implements WidgetActivationListener {
         }
     }
 
-    ud(gk param0, jl param1) {
+    ud(ModalDialogHost param0, jl param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Widget var4 = null;
@@ -215,16 +215,16 @@ final class ud extends sf implements WidgetActivationListener {
     private final void i(byte param0) {
         if (param0 != 60) {
           ud.n(-98);
-          if (!this.field_L) {
+          if (!this.open) {
             return;
           }
-          this.field_L = false;
+          this.open = false;
           return;
         }
-        if (!this.field_L) {
+        if (!this.open) {
           return;
         }
-        this.field_L = false;
+        this.open = false;
     }
 
     static {

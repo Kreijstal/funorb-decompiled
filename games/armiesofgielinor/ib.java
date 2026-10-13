@@ -362,7 +362,7 @@ final class ib extends mk {
                       if (0 != (1 << var18 & ve.field_a[kd.field_X][var9_int])) {
                         if (var13Lifetime1 != 0 &&
                           var12 != null) {
-                          var12 = fo.a(param7 + 4840, gk.field_L, new String[]{(String) (var12), so.field_a[var18]});
+                          var12 = fo.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), so.field_a[var18]});
                         } else {
                           var12 = so.field_a[var18];
                         }

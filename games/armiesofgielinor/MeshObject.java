@@ -8,13 +8,13 @@ abstract class MeshObject {
     static String field_c;
 
     final static void a(int param0, int param1, int param2) {
-        SoundPlaybackHandle.field_l = param1;
+        SoundPlaybackHandle.dialogViewportWidth = param1;
         if (param0 != -8994) {
           return;
         }
-        DebugConsole.field_x = param2;
+        DebugConsole.dialogViewportHeight = param2;
         if (KingBlackDragonEvent.field_C != null) {
-          KingBlackDragonEvent.field_C.a(param1, param2, (byte) -14);
+          KingBlackDragonEvent.field_C.resizeViewport(param1, param2, (byte) -14);
         }
     }
 

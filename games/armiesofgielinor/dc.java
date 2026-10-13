@@ -23,7 +23,7 @@ final class dc extends IntrusiveNode {
           param0.removeMouseListener(BattleCharacter.pointerInputHandler);
           param0.removeMouseMotionListener(BattleCharacter.pointerInputHandler);
           param0.removeFocusListener(BattleCharacter.pointerInputHandler);
-          ob.heldPointerButton = 0;
+          GridWidgetContainer.heldPointerButton = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "dc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

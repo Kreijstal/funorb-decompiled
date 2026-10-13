@@ -331,8 +331,8 @@ class Widget extends IntrusiveNode {
                       this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                       var21 = bn.draggedWidget;
                       if (var21 != null) {
-                        if (var21.listener instanceof ch) {
-                          ((ch) (var21.listener)).a(var21, -14486, (ku) null);
+                        if (var21.listener instanceof WidgetDropListener) {
+                          ((WidgetDropListener) (var21.listener)).widgetDropped(var21, -14486, (DropTargetWidgetContainer) null);
                         }
                         bn.draggedWidget = null;
                       }
@@ -360,8 +360,8 @@ class Widget extends IntrusiveNode {
                   this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                   var23 = bn.draggedWidget;
                   if (var23 != null) {
-                    if (var23.listener instanceof ch) {
-                      ((ch) (var23.listener)).a(var23, -14486, (ku) null);
+                    if (var23.listener instanceof WidgetDropListener) {
+                      ((WidgetDropListener) (var23.listener)).widgetDropped(var23, -14486, (DropTargetWidgetContainer) null);
                     }
                     bn.draggedWidget = null;
                   }
@@ -400,8 +400,8 @@ class Widget extends IntrusiveNode {
                       var27 = bn.draggedWidget;
                       var6 = var27;
                       if (var27 != null) {
-                        if (var27.listener instanceof ch) {
-                          ((ch) (var27.listener)).a(var27, -14486, (ku) null);
+                        if (var27.listener instanceof WidgetDropListener) {
+                          ((WidgetDropListener) (var27.listener)).widgetDropped(var27, -14486, (DropTargetWidgetContainer) null);
                         }
                         bn.draggedWidget = null;
                       }
@@ -437,8 +437,8 @@ class Widget extends IntrusiveNode {
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
               var28 = bn.draggedWidget;
               if (var28 != null) {
-                if (var28.listener instanceof ch) {
-                  ((ch) (var28.listener)).a(var28, -14486, (ku) null);
+                if (var28.listener instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var28.listener)).widgetDropped(var28, -14486, (DropTargetWidgetContainer) null);
                 }
                 bn.draggedWidget = null;
               }
@@ -485,8 +485,8 @@ class Widget extends IntrusiveNode {
               var8 = bn.draggedWidget;
               var6 = var8;
               if (var8 != null) {
-                if (var8.listener instanceof ch) {
-                  ((ch) (var8.listener)).a(var8, -14486, (ku) null);
+                if (var8.listener instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var8.listener)).widgetDropped(var8, -14486, (DropTargetWidgetContainer) null);
                 }
                 bn.draggedWidget = null;
               }
@@ -517,8 +517,8 @@ class Widget extends IntrusiveNode {
               var10 = bn.draggedWidget;
               var6 = var10;
               if (var10 != null) {
-                if (var10.listener instanceof ch) {
-                  ((ch) (var10.listener)).a(var10, -14486, (ku) null);
+                if (var10.listener instanceof WidgetDropListener) {
+                  ((WidgetDropListener) (var10.listener)).widgetDropped(var10, -14486, (DropTargetWidgetContainer) null);
                 }
                 bn.draggedWidget = null;
               }
@@ -546,8 +546,8 @@ class Widget extends IntrusiveNode {
                 this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                 var15 = bn.draggedWidget;
                 if (var15 != null) {
-                  if (var15.listener instanceof ch) {
-                    ((ch) (var15.listener)).a(var15, -14486, (ku) null);
+                  if (var15.listener instanceof WidgetDropListener) {
+                    ((WidgetDropListener) (var15.listener)).widgetDropped(var15, -14486, (DropTargetWidgetContainer) null);
                   }
                   bn.draggedWidget = null;
                 }
@@ -580,8 +580,8 @@ class Widget extends IntrusiveNode {
             this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
             var18 = bn.draggedWidget;
             if (var18 != null) {
-              if (var18.listener instanceof ch) {
-                ((ch) (var18.listener)).a(var18, -14486, (ku) null);
+              if (var18.listener instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var18.listener)).widgetDropped(var18, -14486, (DropTargetWidgetContainer) null);
               }
               bn.draggedWidget = null;
             }

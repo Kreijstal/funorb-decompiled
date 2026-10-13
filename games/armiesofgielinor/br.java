@@ -93,7 +93,7 @@ final class br {
           pf.field_d = param1;
           TaggedMapData.field_b = param0;
           AiInfluenceMap.field_h = param3;
-          pt.c(SoftwareRaster.width / 2, SoftwareRaster.height / 2, 75);
+          ContentTransitionDialog.c(SoftwareRaster.width / 2, SoftwareRaster.height / 2, 75);
           uc.a(param0.maxDescent + param0.capitalHeight, param0.capitalHeight, param3.capitalHeight, false, param3.maxDescent + param3.capitalHeight);
           if (param2 != 333) {
             heldKeys = (boolean[]) null;

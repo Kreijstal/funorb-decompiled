@@ -153,12 +153,12 @@ final class DeathEvent extends GameEvent {
           no.field_P.pixelHeight = SoftwareRaster.height;
           no.field_P.pixels = SoftwareRaster.pixels;
           no.field_P.pixelWidth = SoftwareRaster.width;
-          ku.field_J.b();
+          DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           MatchSetupPanel.a(-1, -1, param1, -1, false, param0, -1, false, 0, false, 0, param2);
           no.field_P.b();
           if (param3 == 17813) {
-            stackIn_4_0 = ArchiveProvider.a((byte) 107, ku.field_J);
+            stackIn_4_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
             return (RgbSprite) ((Object) stackIn_4_0);
           }
           stackIn_2_0 = (RgbSprite) null;

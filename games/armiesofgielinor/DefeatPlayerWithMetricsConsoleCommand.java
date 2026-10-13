@@ -99,7 +99,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
               RegionAnchor.field_m[1].e(param3, param2);
             }
           } else {
-            ku.field_J.b();
+            DropTargetWidgetContainer.field_J.b();
             SoftwareRaster.b();
             param9.g(0, 0);
             if (!param1) {
@@ -109,7 +109,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
               } else {
                 if (!param4) {
                   no.field_P.b();
-                  ku.field_J.h(param3, param2);
+                  DropTargetWidgetContainer.field_J.h(param3, param2);
                   return;
                 }
                 RegionAnchor.field_m[3].e(0, 0);
@@ -118,7 +118,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
               RegionAnchor.field_m[1].e(0, 0);
             }
             no.field_P.b();
-            ku.field_J.h(param3, param2);
+            DropTargetWidgetContainer.field_J.h(param3, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

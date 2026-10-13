@@ -52,16 +52,16 @@ final class hc {
         this.field_p.b(0, this.field_a);
         this.field_f.a(0, this.field_a);
         this.field_f.a(true);
-        this.field_m = new String[pt.field_W.length + 1];
+        this.field_m = new String[ContentTransitionDialog.field_W.length + 1];
         int var3 = 0;
         if (param1 != 39) {
           discarded$0 = this.a(-92, 45);
         }
-        while (pt.field_W.length > var3) {
-          this.field_m[var3] = pt.field_W[var3];
+        while (ContentTransitionDialog.field_W.length > var3) {
+          this.field_m[var3] = ContentTransitionDialog.field_W[var3];
           var3++;
         }
-        this.field_m[pt.field_W.length] = "special";
+        this.field_m[ContentTransitionDialog.field_W.length] = "special";
         this.field_x.a(this.field_m, -29799);
         this.a(false, 0);
     }
@@ -223,7 +223,7 @@ final class hc {
         this.field_n.a(71);
         this.field_u.a(45);
         this.field_l.drawCentered("shift: " + DiskCacheRequest.unitProjectionVariants[this.field_a], 480, 230, 16777215, -1);
-        this.field_l.drawCentered("model ID: " + sf.unitAnimationGroups[this.field_a], 480, 242, 16777215, -1);
+        this.field_l.drawCentered("model ID: " + ResizableModalDialog.unitAnimationGroups[this.field_a], 480, 242, 16777215, -1);
         this.a(false);
         this.e((byte) -25);
         this.field_f.e((byte) 109);
@@ -416,7 +416,7 @@ final class hc {
           this.field_c = param1;
           this.field_j = param3;
           this.field_l = param2;
-          this.field_m = pt.field_W;
+          this.field_m = ContentTransitionDialog.field_W;
           this.field_v = param0;
           this.d((byte) -127);
           this.d(3);

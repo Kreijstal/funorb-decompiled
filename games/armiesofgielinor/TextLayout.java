@@ -105,7 +105,7 @@ abstract class TextLayout {
           if (obfuscationGuard != 0) {
             TextLayout.a(-112);
           }
-          result = ob.a(radix, true, text, 0);
+          result = GridWidgetContainer.parseRadixInt(radix, true, text, 0);
           return result;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

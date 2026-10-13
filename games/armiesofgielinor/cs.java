@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cs extends sf implements WidgetActivationListener {
+final class cs extends ResizableModalDialog implements WidgetActivationListener {
     static String[] field_W;
     private Widget field_ab;
     private InteractiveWidget field_gb;
@@ -14,7 +14,7 @@ final class cs extends sf implements WidgetActivationListener {
     static java.math.BigInteger field_cb;
     static String field_eb;
 
-    cs(gk param0) {
+    cs(ModalDialogHost param0) {
         super(param0, 200, 200);
         Widget var3 = null;
         try {
@@ -77,15 +77,15 @@ final class cs extends sf implements WidgetActivationListener {
     }
 
     private final void n(int param0) {
-        if (!this.field_L) {
+        if (!this.open) {
           return;
         }
         if (param0 != 10) {
           field_db = (ModelMeshBase[]) null;
-          this.field_L = false;
+          this.open = false;
           return;
         }
-        this.field_L = false;
+        this.open = false;
     }
 
     public static void b(boolean param0) {
@@ -124,19 +124,19 @@ final class cs extends sf implements WidgetActivationListener {
           if (0 >= var7) {
             ck.b(-62);
             this.n(10);
-            this.field_G.a(new ud(this.field_G, tn.field_cb), 0);
+            this.host.showDialog(new ud(this.host, tn.field_cb), 0);
           } else {
             this.field_ab.text = "" + var7;
           }
-          if (this.field_L &&
+          if (this.open &&
             null == FixedQuaternion.field_a) {
             this.n(obfuscationGuard ^ 32728);
-            this.field_G.a(new ud(this.field_G, SocialListPanel.field_Mb), 0);
+            this.host.showDialog(new ud(this.host, SocialListPanel.field_Mb), 0);
           }
           if (null != FixedQuaternion.field_a &&
             FixedQuaternion.field_a.field_k) {
             this.n(10);
-            this.field_G.a(new ud(this.field_G, SocialListPanel.field_Mb), obfuscationGuard ^ 32722);
+            this.host.showDialog(new ud(this.host, SocialListPanel.field_Mb), obfuscationGuard ^ 32722);
             return;
           }
           return;

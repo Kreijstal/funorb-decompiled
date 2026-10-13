@@ -19,12 +19,12 @@ final class pf {
             if (FixedQuaternion.field_a != null &&
               FixedQuaternion.field_a.field_k) {
               ck.b(-110);
-              SphinxActionRequest.field_v.a(new ud(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
+              SphinxActionRequest.field_v.showDialog(new ud(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
             }
             return;
           }
           SphinxActionRequest.field_v.a(true, -6226, en.field_F, AiUnitPlanner.field_s);
-          SphinxActionRequest.field_v.d((byte) -117);
+          SphinxActionRequest.field_v.advanceDialogs((byte) -117);
           while (Unit.pollKeyEvent((byte) 107)) {
             SphinxActionRequest.field_v.a(rs.keyCode, DualNodeDeque.typedCharacter, 80);
           }

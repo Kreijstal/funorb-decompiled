@@ -25,11 +25,11 @@ final class FaceNormal {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (wl.field_I == null) {
+          if (ModalDialog.field_I == null) {
             return false;
           }
           if (param1 > 34) {
-            stackIn_10_0 = !(0 > param0.toLowerCase().indexOf(wl.field_I.toLowerCase()));
+            stackIn_10_0 = !(0 > param0.toLowerCase().indexOf(ModalDialog.field_I.toLowerCase()));
             return stackIn_10_0;
           }
           return false;

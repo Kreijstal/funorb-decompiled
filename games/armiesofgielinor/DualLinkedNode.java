@@ -126,7 +126,7 @@ class DualLinkedNode extends IntrusiveNode {
           var1 = vt.field_n;
           if (var1 > 0) {
             if (1 != var1) {
-              BestScoreStrategy.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
+              BestScoreStrategy.field_h = fo.a(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});
             } else {
               BestScoreStrategy.field_h = TrianglePulse.field_a;
             }
@@ -145,7 +145,7 @@ class DualLinkedNode extends IntrusiveNode {
           var1 = vt.field_n;
           if (var1 > 0) {
             if (1 != var1) {
-              BestScoreStrategy.field_h = fo.a(4800, lw.field_nb, new String[]{Integer.toString(var1)});
+              BestScoreStrategy.field_h = fo.a(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});
             } else {
               BestScoreStrategy.field_h = TrianglePulse.field_a;
             }

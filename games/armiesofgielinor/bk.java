@@ -183,7 +183,7 @@ final class bk {
                 var20 = stackIn_13_0;
               } else if (var19 == 1 &&
                 bq.field_c) {
-                var20 = ob.field_O;
+                var20 = GridWidgetContainer.field_O;
               } else {
                 decompiledFrameRemainder0 = (var19 == 2);
                 if (decompiledFrameRemainder0) {

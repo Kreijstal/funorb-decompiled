@@ -566,7 +566,7 @@ abstract class vf {
                   var23 = 0;
                   for (var24 = 0; var24 < var7; var24++) {
                     if (dt.field_d[var24]) {
-                      var25_refLifetime1 = "</col>" + ob.field_M[var24] + "<col=A00000>";
+                      var25_refLifetime1 = "</col>" + GridWidgetContainer.field_M[var24] + "<col=A00000>";
                       var22 = var25_refLifetime1;
                       var21 = var22;
                       var22 = var25_refLifetime1;

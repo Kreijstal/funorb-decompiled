@@ -86,9 +86,9 @@ final class pu {
             qc.lobbyRoomOrder = null;
           }
           ClippedWidgetContainer.lobbyRoomsById = null;
-          if (wl.currentRoomPlayers != null) {
-            wl.currentRoomPlayers.clear(87);
-            wl.currentRoomPlayers = null;
+          if (ModalDialog.currentRoomPlayers != null) {
+            ModalDialog.currentRoomPlayers.clear(87);
+            ModalDialog.currentRoomPlayers = null;
           }
           UnitCycler.currentRoomPlayersById = null;
           if (null != oi.lobbyPlayersById) {

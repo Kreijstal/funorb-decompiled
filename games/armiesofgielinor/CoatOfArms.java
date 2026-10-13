@@ -107,7 +107,7 @@ final class CoatOfArms {
               ck.animationSequencesByGroup[var4_int][var7] = new AnimationSequence(param0, var10, var8);
             }
           }
-          if (!ta.field_L) {
+          if (!LabeledWidgetContainer.field_L) {
             var12 = 0;
             var4_intLifetime1 = var12;
             while (var12 < 6) {
@@ -177,7 +177,7 @@ final class CoatOfArms {
           }
           no.field_P.pixels = SoftwareRaster.pixels;
           no.field_P.pixelWidth = SoftwareRaster.width;
-          ku.field_J.b();
+          DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           if (!param2) {
             var4_int = this.parts[3];
@@ -187,7 +187,7 @@ final class CoatOfArms {
           }
           MatchSetupPanel.a(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
           no.field_P.b();
-          stackIn_5_0 = ArchiveProvider.a((byte) 107, ku.field_J);
+          stackIn_5_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -244,7 +244,7 @@ final class CoatOfArms {
             }
             ConsolePanel.field_k.d(-20 + param4, param2 - 15, 92, 92, 256);
           }
-          ku.field_J.b();
+          DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           if (param6) {
             cc.a(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
@@ -267,7 +267,7 @@ final class CoatOfArms {
             RegionAnchor.field_m[1].g(0, 0);
           }
           no.field_P.b();
-          ku.field_J.e(param4, param2);
+          DropTargetWidgetContainer.field_J.e(param4, param2);
           if (param9 == -19744) {
             return;
           }
@@ -301,7 +301,7 @@ final class CoatOfArms {
           no.field_P.pixelHeight = SoftwareRaster.height;
           no.field_P.pixels = SoftwareRaster.pixels;
           no.field_P.pixelWidth = SoftwareRaster.width;
-          ku.field_J.b();
+          DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           if (!param3) {
             var10_int = this.parts[3];
@@ -328,7 +328,7 @@ final class CoatOfArms {
           }
           ko.field_g.b();
           SoftwareRaster.b();
-          ku.field_J.e(0, 0);
+          DropTargetWidgetContainer.field_J.e(0, 0);
           no.field_P.b();
           ko.field_g.h(param8, param6);
           return;
@@ -371,7 +371,7 @@ final class CoatOfArms {
           if (param6) {
             RegionAnchor.field_m[0].d(-40 + param0, -30 + param4, 184, 184, 256);
           }
-          ku.field_J.b();
+          DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           cc.a(0, -1, this.parts, -1, -1, false, -1, param1, this.colourIndices, 0);
           if (!param3) {
@@ -387,7 +387,7 @@ final class CoatOfArms {
             RegionAnchor.field_m[1].g(0, 0);
           }
           no.field_P.b();
-          ku.field_J.h(param0, param4);
+          DropTargetWidgetContainer.field_J.h(param0, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

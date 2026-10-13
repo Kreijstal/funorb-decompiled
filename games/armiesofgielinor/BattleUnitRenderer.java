@@ -244,7 +244,7 @@ final class BattleUnitRenderer {
             return false;
           }
           var9 = new oe(KingBlackDragonEvent.field_C, param1);
-          KingBlackDragonEvent.field_C.a(var9, 0);
+          KingBlackDragonEvent.field_C.showDialog(var9, 0);
           if (!AnimationSkeleton.a(-8327)) {
             cd.field_e = param3;
             SoundCache.field_a = null;

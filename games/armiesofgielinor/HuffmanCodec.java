@@ -57,12 +57,12 @@ final class HuffmanCodec {
             no.field_P.pixelWidth = SoftwareRaster.width;
             no.field_P.pixels = SoftwareRaster.pixels;
             no.field_P.pixelHeight = SoftwareRaster.height;
-            ku.field_J.b();
+            DropTargetWidgetContainer.field_J.b();
             SoftwareRaster.b();
             gq.b(SectorCacheStore.field_j[3][0], 0, 0, param1);
             fe.c(DeployRequest.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
             no.field_P.b();
-            ku.field_J.h(param0, param5);
+            DropTargetWidgetContainer.field_J.h(param0, param5);
           } else {
             gq.b(SectorCacheStore.field_j[3][0], param0, param5, param1);
             fe.c(DeployRequest.a(param2, (byte) 42), (uh.field_e[3][0] >> 1) + param0, 20 + (uh.field_e[3][1] >> 1) + param5, 2, true);
@@ -83,7 +83,7 @@ final class HuffmanCodec {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 7) {
-            stackIn_4_0 = ob.a(10, true, param1, 0);
+            stackIn_4_0 = GridWidgetContainer.parseRadixInt(10, true, param1, 0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -59;

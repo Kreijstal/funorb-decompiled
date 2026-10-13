@@ -196,9 +196,9 @@ final class la {
     private final void c(int param0) {
         if (this.field_b >= 0 &&
           this.field_b < 9) {
-          this.field_a.selectSequence(-1, ck.animationSequencesByGroup[sf.unitAnimationGroups[this.field_f]][BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0]]);
+          this.field_a.selectSequence(-1, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][BestScoreStrategy.unitAnimationVariants[this.field_f][this.field_b][0]]);
         } else {
-          this.field_a.selectSequence(~param0, ck.animationSequencesByGroup[sf.unitAnimationGroups[this.field_f]][0]);
+          this.field_a.selectSequence(~param0, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.field_f]][0]);
         }
         if (param0 != 0) {
           this.a((byte) 11, -94);

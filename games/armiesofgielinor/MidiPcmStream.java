@@ -326,7 +326,7 @@ class MidiPcmStream extends PcmStream {
             patchId = (int)usage.key;
             cachedPatch = (MusicPatch) (this.patches.get(-27, (long)patchId));
             if (cachedPatch == null) {
-              loadedPatch = wl.loadMusicPatch(patchArchive, patchId, true);
+              loadedPatch = ModalDialog.loadMusicPatch(patchArchive, patchId, true);
               if (loadedPatch != null) {
                 this.patches.put(loadedPatch, (long)patchId, 24);
                 if (!loadedPatch.prepareSamples(obfuscationGuard + 10922, usage.notes, (int[]) (sampleBudget), soundCache)) {

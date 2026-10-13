@@ -115,7 +115,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ticketing_xunread");
                 if (null != var2) {
-                  lw.field_nb = uu.a(var2, (byte) 34);
+                  StandardContentDialog.field_nb = uu.a(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "ticketing_gotowebsite");
                 if (null != var2) {
@@ -155,7 +155,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game");
                 if (var2 != null) {
-                  ob.field_O = uu.a(var2, (byte) -108);
+                  GridWidgetContainer.field_O = uu.a(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_private");
                 if (null != var2) {
@@ -743,7 +743,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "privatequickchat_to_x");
                 if (var2 != null) {
-                  ta.field_Q = uu.a(var2, (byte) 108);
+                  LabeledWidgetContainer.field_Q = uu.a(var2, (byte) 108);
                 }
                 var2 = NodeIterator.a(param0 + 132, "privatechat_blankarea_explanation");
                 if (null != var2) {
@@ -755,7 +755,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "privatechat_friend_offline");
                 if (var2 != null) {
-                  pt.field_gb = uu.a(var2, (byte) 15);
+                  ContentTransitionDialog.field_gb = uu.a(var2, (byte) 15);
                 }
                 var2 = NodeIterator.a(50, "privatechat_friend_notlisted");
                 if (var2 != null) {
@@ -981,7 +981,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_1_2");
                 if (var2 != null) {
-                  sf.field_Q = uu.a(var2, (byte) -96);
+                  ResizableModalDialog.field_Q = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rule_1_3");
                 if (null != var2) {
@@ -1077,7 +1077,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "goback");
                 if (null != var2) {
-                  pt.field_Y = uu.a(var2, (byte) 67);
+                  ContentTransitionDialog.field_Y = uu.a(var2, (byte) 67);
                 }
                 var2 = NodeIterator.a(50, "otheroptions");
                 if (null != var2) {
@@ -1461,7 +1461,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_select_alternative");
                 if (null != var2) {
-                  wl.field_J = uu.a(var2, (byte) 19);
+                  ModalDialog.field_J = uu.a(var2, (byte) 19);
                 }
                 var2 = NodeIterator.a(param0 + 132, "create_optin_news");
                 if (var2 != null) {
@@ -1741,7 +1741,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "enterignore_del");
                 if (null != var2) {
-                  lw.field_kb = uu.a(var2, (byte) 81);
+                  StandardContentDialog.field_kb = uu.a(var2, (byte) 81);
                 }
                 var2 = NodeIterator.a(param0 + 132, "text_removed_from_game");
                 if (null != var2) {
@@ -1867,7 +1867,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "unpacking_music");
                 if (var2 != null) {
-                  ta.field_M = uu.a(var2, (byte) 74);
+                  LabeledWidgetContainer.field_M = uu.a(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "unpacking_levels");
                 if (null != var2) {
@@ -2454,7 +2454,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mp_showchat_nounread");
                 if (null != var2) {
-                  lw.field_pb = uu.a(var2, (byte) -117);
+                  StandardContentDialog.field_pb = uu.a(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mp_showchat_unread1");
                 if (var2 != null) {

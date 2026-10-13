@@ -73,7 +73,7 @@ final class RadialSummonItem {
         }
         if (0 < availability) {
           if (this.containsPoint(31, AiPlanningStrategy.pointerX, originY, originX, ko.pointerY)) {
-            lw.field_ob.b(originX - (-this.offsetX + 20), -20 + (this.offsetY + originY), TutorialLayout.field_g[this.godGroupId]);
+            StandardContentDialog.field_ob.b(originX - (-this.offsetX + 20), -20 + (this.offsetY + originY), TutorialLayout.field_g[this.godGroupId]);
             if (var6 == 0) {
               if (this.choiceId != 81) {
                 DeployAction.field_x[this.choiceId].g(this.offsetX + originX - 20, this.offsetY + originY - 20);
@@ -85,7 +85,7 @@ final class RadialSummonItem {
               return;
             }
           }
-          lw.field_ob.d(-20 + this.offsetX + originX, originY + this.offsetY - 20, TutorialLayout.field_g[this.godGroupId]);
+          StandardContentDialog.field_ob.d(-20 + this.offsetX + originX, originY + this.offsetY - 20, TutorialLayout.field_g[this.godGroupId]);
           if (this.choiceId == 81) {
             DeployAction.field_x[4].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
             if (var6 != 0) {
@@ -96,7 +96,7 @@ final class RadialSummonItem {
           }
           km.field_h[0].g(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
           if (var6 != 0) {
-            lw.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+            StandardContentDialog.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
             if (this.choiceId != 81) {
               DeployAction.field_x[this.choiceId].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
             }
@@ -105,7 +105,7 @@ final class RadialSummonItem {
           }
           return;
         }
-        lw.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+        StandardContentDialog.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
         if (this.choiceId == 81) {
           DeployAction.field_x[4].g(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
         } else {
@@ -237,8 +237,8 @@ final class RadialSummonItem {
           if (null == param5.children) {
             param5.children = new NodeDeque();
           }
-          wl.currentRoomPlayers = param5.children;
-          wl.currentRoomPlayers.clear(122);
+          ModalDialog.currentRoomPlayers = param5.children;
+          ModalDialog.currentRoomPlayers.clear(122);
           UnitCycler.currentRoomPlayersById = new DualNodeHashTable(param0);
           qd.lobbyNotificationDuration = param2;
           ph.field_d = 0L;

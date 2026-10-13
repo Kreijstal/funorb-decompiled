@@ -134,7 +134,7 @@ final class cd {
           if (SphinxActionRequest.field_v == null) {
             return false;
           }
-          if (null != SphinxActionRequest.field_v.a((byte) 89)) {
+          if (null != SphinxActionRequest.field_v.getTopOpenDialog((byte) 89)) {
             return true;
           }
           return false;
@@ -142,7 +142,7 @@ final class cd {
         if (SphinxActionRequest.field_v == null) {
           return false;
         }
-        if (null != SphinxActionRequest.field_v.a((byte) 89)) {
+        if (null != SphinxActionRequest.field_v.getTopOpenDialog((byte) 89)) {
           return true;
         }
         return false;

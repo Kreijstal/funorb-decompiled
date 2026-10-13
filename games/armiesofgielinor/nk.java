@@ -68,7 +68,7 @@ final class nk {
               var3 = CampaignMenuEntry.field_u[var1_intLifetime1 * ResourceRequest.field_y + var2];
               if (1 == var3) {
                 var3 = 7;
-                if (ta.field_L) {
+                if (LabeledWidgetContainer.field_L) {
                   var3 = 4;
                 }
                 if (0 == var2 ||

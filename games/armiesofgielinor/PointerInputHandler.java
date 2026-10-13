@@ -22,7 +22,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           av.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = -1;
           ResourceArchive.livePointerY = -1;
-          ku.pointerChanged = true;
+          DropTargetWidgetContainer.pointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,10 +62,10 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
             vi.monotonicMillis(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               ArchiveIndex.pressedPointerButton = 2;
-              ob.heldPointerButton = 2;
+              GridWidgetContainer.heldPointerButton = 2;
             } else {
               ArchiveIndex.pressedPointerButton = 1;
-              ob.heldPointerButton = 1;
+              GridWidgetContainer.heldPointerButton = 1;
             }
             var2_int = event.getModifiers();
             if ((var2_int & 16) != 0) {
@@ -77,7 +77,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
             if ((4 & var2_int) != 0) {
               EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask | 4;
             }
-            ku.pointerChanged = true;
+            DropTargetWidgetContainer.pointerChanged = true;
           }
           if (!event.isPopupTrigger()) {
             return;
@@ -111,7 +111,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           av.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = event.getX();
           ResourceArchive.livePointerY = event.getY();
-          ku.pointerChanged = true;
+          DropTargetWidgetContainer.pointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           av.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = event.getX();
           ResourceArchive.livePointerY = event.getY();
-          ku.pointerChanged = true;
+          DropTargetWidgetContainer.pointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -198,7 +198,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
             av.pointerIdleTicks = 0;
             DiskCacheRequest.livePointerX = event.getX();
             ResourceArchive.livePointerY = event.getY();
-            ku.pointerChanged = true;
+            DropTargetWidgetContainer.pointerChanged = true;
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.mouseEntered(" + (event != null ? "{...}" : "null") + ')');
@@ -208,7 +208,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     public final synchronized void focusLost(java.awt.event.FocusEvent event) {
         try {
           if (BattleCharacter.pointerInputHandler != null) {
-            ob.heldPointerButton = 0;
+            GridWidgetContainer.heldPointerButton = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pq.focusLost(" + (event != null ? "{...}" : "null") + ')');
@@ -225,8 +225,8 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         try {
           if (null != BattleCharacter.pointerInputHandler) {
             av.pointerIdleTicks = 0;
-            ob.heldPointerButton = 0;
-            ku.pointerChanged = true;
+            GridWidgetContainer.heldPointerButton = 0;
+            DropTargetWidgetContainer.pointerChanged = true;
             var2_int = event.getModifiers();
             if ((var2_int & 16) != 0) {
               EffectPresentation.livePointerButtonMask = EffectPresentation.livePointerButtonMask & -2;

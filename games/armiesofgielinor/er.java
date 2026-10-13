@@ -106,7 +106,7 @@ final class er {
     final static void a(byte param0) {
         int var1 = -52 % ((param0 + 85) / 37);
         if (null != KingBlackDragonEvent.field_C) {
-          KingBlackDragonEvent.field_C.k(0);
+          KingBlackDragonEvent.field_C.snapAndPruneDialogs(0);
         }
         if (PointerInputHandler.field_a != null) {
           PointerInputHandler.field_a.i((byte) 2);

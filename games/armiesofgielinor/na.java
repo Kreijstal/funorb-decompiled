@@ -269,7 +269,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
     private final int a(int param0, int param1, String param2, Widget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         pk var9 = null;
-        ta var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -281,7 +281,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ta(20, param0, 120 + param4, 25, param3, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param2);
+          var10 = new LabeledWidgetContainer(20, param0, 120 + param4, 25, param3, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param2);
           this.addChild((byte) 10, (Widget) (var10));
           var9 = new pk(((eg) ((Object) param3)).a(-918933630), param5, 126, param0 + var10.height, param4 + 25, param1);
           var9.listener = (WidgetListener) (this);

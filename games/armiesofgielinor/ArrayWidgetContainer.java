@@ -270,14 +270,14 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             if (param2.unitType == 39) {
               if (!param2.movementSpent &&
                 param2.attacksRemaining != 0) {
-                lw.field_ob.g(11 + param4, param6 + (-36 + param7));
+                StandardContentDialog.field_ob.g(11 + param4, param6 + (-36 + param7));
                 ii.field_a[2].g(11 + param4, -36 + (param6 + param7));
                 if ((var17Lifetime2 != 0)) {
-                  lw.field_ob.f(11 + param4, param7 - (-param6 + 36), 128);
+                  StandardContentDialog.field_ob.f(11 + param4, param7 - (-param6 + 36), 128);
                 }
                 break regionExit1;
               }
-              lw.field_ob.g(param4 + 11, param7 + param6 - 36, 128);
+              StandardContentDialog.field_ob.g(param4 + 11, param7 + param6 - 36, 128);
               ii.field_a[2].g(param4 + 11, param7 + param6 - 36, 128);
             } else {
               if (param2.unitType != 72) {
@@ -287,13 +287,13 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                   if (!((Unit) (Object) stackIn_82_0).hasMovementFlag1(stackIn_83_1)) {
                     if (!param2.movementSpent &&
                       param2.attacksRemaining != 0) {
-                      lw.field_ob.g(11 + param4, param7 - 36 + param6);
+                      StandardContentDialog.field_ob.g(11 + param4, param7 - 36 + param6);
                       ii.field_a[1].g(param4 + 11, param7 + param6 - 36);
                       if ((var17Lifetime2 != 0)) {
-                        lw.field_ob.f(11 + param4, -36 - (-param6 - param7), 128);
+                        StandardContentDialog.field_ob.f(11 + param4, -36 - (-param6 - param7), 128);
                       }
                     } else {
-                      lw.field_ob.g(param4 + 11, param6 - 36 + param7, 128);
+                      StandardContentDialog.field_ob.g(param4 + 11, param6 - 36 + param7, 128);
                       ii.field_a[1].g(11 + param4, param6 - 36 + param7, 128);
                     }
                     break regionExit1;
@@ -307,13 +307,13 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                   if (!param2.movementSpent &&
                     param2.attacksRemaining != 0 &&
                     var19 == 0) {
-                    lw.field_ob.g(param4 + 11, param7 + (param6 - 36));
+                    StandardContentDialog.field_ob.g(param4 + 11, param7 + (param6 - 36));
                     ii.field_a[4].g(param4 + 11, param7 + param6 - 36);
                     if ((var17Lifetime2 != 0)) {
-                      lw.field_ob.f(11 + param4, param7 + (-36 + param6), 128);
+                      StandardContentDialog.field_ob.f(11 + param4, param7 + (-36 + param6), 128);
                     }
                   } else {
-                    lw.field_ob.g(11 + param4, param6 + (-36 + param7), 128);
+                    StandardContentDialog.field_ob.g(11 + param4, param6 + (-36 + param7), 128);
                     ii.field_a[4].g(11 + param4, -36 + param6 + param7, 128);
                   }
                   break regionExit1;
@@ -326,31 +326,31 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
                   if (!param2.movementSpent &&
                     param2.attacksRemaining != 0 &&
                     var19Lifetime1 == 0) {
-                    lw.field_ob.g(param4 + 11, -36 + (param6 + param7));
+                    StandardContentDialog.field_ob.g(param4 + 11, -36 + (param6 + param7));
                     ii.field_a[0].g(11 + param4, -36 + param6 + param7);
                     if (var17Lifetime2 != 0) {
-                      lw.field_ob.f(param4 + 11, -36 + param6 + param7, 128);
+                      StandardContentDialog.field_ob.f(param4 + 11, -36 + param6 + param7, 128);
                       break regionExit1;
                     }
                     km.field_h[1].g(7 + param4, -40 + (param6 + param7));
                     return;
                   }
-                  lw.field_ob.g(11 + param4, param6 - 36 + param7, 128);
+                  StandardContentDialog.field_ob.g(11 + param4, param6 - 36 + param7, 128);
                   ii.field_a[0].g(11 + param4, param7 - 36 + param6, 128);
                   break regionExit1;
                 }
-                lw.field_ob.g(11 + param4, -36 - (-param6 - param7), 128);
+                StandardContentDialog.field_ob.g(11 + param4, -36 - (-param6 - param7), 128);
               } else {
                 if (!param2.movementSpent &&
                   0 != param2.attacksRemaining) {
-                  lw.field_ob.g(11 + param4, param7 - (-param6 + 36));
+                  StandardContentDialog.field_ob.g(11 + param4, param7 - (-param6 + 36));
                   ii.field_a[3].g(param4 + 11, param6 - (36 - param7));
                   if ((var17Lifetime2 != 0)) {
-                    lw.field_ob.f(param4 + 11, param6 + (-36 + param7), 128);
+                    StandardContentDialog.field_ob.f(param4 + 11, param6 + (-36 + param7), 128);
                   }
                   break regionExit1;
                 }
-                lw.field_ob.g(11 + param4, param6 + (-36 + param7), 128);
+                StandardContentDialog.field_ob.g(11 + param4, param6 + (-36 + param7), 128);
                 ii.field_a[3].g(param4 + 11, param7 - (-param6 + 36), 128);
               }
             }

@@ -55,7 +55,7 @@ final class wd {
             var8 = var8 & 16777215;
             if (!param0) {
               po.a((byte) 91, param3, param4, param1, var9, var8, var6_int, param5);
-              sf.b(param3, param5, param2 + 128, param1, var6_int, param4);
+              ResizableModalDialog.b(param3, param5, param2 + 128, param1, var6_int, param4);
             }
             IntrusiveNode.a(78, param5, param3, param4 + 19, var6_int, param1 + 39);
             cw.a(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
@@ -172,13 +172,13 @@ final class wd {
             if (!jj.isFriend(62, wm.chatRecipientNameKey)) {
               var2 = fo.a(4800, DiskCacheWorker.field_h, new String[]{qd.chatRecipientName});
               if (var10 != 0) {
-                var2 = fo.a(4800, pt.field_gb, new String[]{qd.chatRecipientName});
+                var2 = fo.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
               }
             } else {
-              var2 = fo.a(4800, pt.field_gb, new String[]{qd.chatRecipientName});
+              var2 = fo.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
             }
             if (BattleTutorial.quickChatMenuVisible) {
-              ta.appendSystemChatMessage((String) null, 2, -18119, (String) null, (String) (var2), 0);
+              LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, (String) (var2), 0);
               DelayedPacket.e(-3);
             }
           }
@@ -197,7 +197,7 @@ final class wd {
             var6 = rs.outgoingChatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = fo.a(4800, ta.field_Q, new String[]{qd.chatRecipientName});
+              var4 = fo.a(4800, LabeledWidgetContainer.field_Q, new String[]{qd.chatRecipientName});
               var8 = fo.a(4800, ov.field_l, new String[]{var3});
               var7 = rb.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.textWidth(var8) + IntrusiveNode.field_e.textWidth(var4));
               if (var7 < 0) {

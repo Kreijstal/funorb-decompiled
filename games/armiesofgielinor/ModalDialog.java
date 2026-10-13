@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wl extends DequeWidgetContainer {
+abstract class ModalDialog extends DequeWidgetContainer {
     static String field_J;
     static RgbSprite groundShadowSprite;
     static String[] field_M;
     static ClientUiComponent field_K;
     static int field_E;
     static NodeDeque currentRoomPlayers;
-    private int field_H;
-    gk field_G;
+    private int alpha;
+    ModalDialogHost host;
     static String field_I;
-    boolean field_L;
+    boolean open;
 
     final static MusicPatch loadMusicPatch(ResourceArchive archive, int patchId, boolean obfuscationGuard) {
         byte[] packedPatch = null;
@@ -51,11 +51,11 @@ abstract class wl extends DequeWidgetContainer {
         }
     }
 
-    final void a(int param0, byte param1, int param2) {
-        if (param1 < 95) {
+    final void setCenteredSize(int width, byte obfuscationGuard, int height) {
+        if (obfuscationGuard < 95) {
           field_K = (ClientUiComponent) null;
         }
-        this.setBounds(SoundPlaybackHandle.field_l - param0 >> 1, param0, DebugConsole.field_x - param2 >> 1, 8192, param2);
+        this.setBounds(SoundPlaybackHandle.dialogViewportWidth - width >> 1, width, DebugConsole.dialogViewportHeight - height >> 1, 8192, height);
     }
 
     public static void f(byte param0) {
@@ -69,14 +69,14 @@ abstract class wl extends DequeWidgetContainer {
     }
 
     final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
-        if (0 == this.field_H) {
+        if (0 == this.alpha) {
           return;
         }
-        if (this.field_H >= 256) {
+        if (this.alpha >= 256) {
           if (renderLayer != 0) {
             return;
           }
-          this.b(this.x + originX, 1851680193, originY + this.y);
+          this.drawDialogBackground(this.x + originX, 1851680193, originY + this.y);
           super.drawWidget(originX, originY, (byte) -121, renderLayer);
           return;
         }
@@ -87,13 +87,13 @@ abstract class wl extends DequeWidgetContainer {
         }
         CombatSandbox.a(TutorialLayout.field_b, 3);
         SoftwareRaster.b();
-        this.b(0, 1851680193, 0);
+        this.drawDialogBackground(0, 1851680193, 0);
         super.drawWidget(-originX - this.x, -originY - this.y, (byte) -106, renderLayer);
         QuickChatPhraseRepository.popRasterState(-18862);
         if (obfuscationGuard >= -82) {
           field_J = (String) null;
         }
-        TutorialLayout.field_b.e(this.x + originX, this.y + originY, this.field_H);
+        TutorialLayout.field_b.e(this.x + originX, this.y + originY, this.alpha);
     }
 
     final static int bitLength(int value, int obfuscationGuard) {
@@ -125,23 +125,23 @@ abstract class wl extends DequeWidgetContainer {
         return var2 + value;
     }
 
-    boolean a(byte param0) {
-        int var2;
-        int var3;
-        boolean stackIn_12_0 = false;
-        var2 = this.g((byte) 122);
-        var3 = -this.field_H + var2;
-        if (0 < var3) {
-          this.field_H = this.field_H + (-1 + (var3 + 8)) / 8;
+    boolean advanceDialogAnimation(byte obfuscationGuard) {
+        int targetAlpha;
+        int alphaDelta;
+        boolean closedAndHidden = false;
+        targetAlpha = this.getTargetAlpha((byte) 122);
+        alphaDelta = -this.alpha + targetAlpha;
+        if (0 < alphaDelta) {
+          this.alpha = this.alpha + (-1 + (alphaDelta + 8)) / 8;
         }
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           field_K = (ClientUiComponent) null;
         }
-        if (var3 < 0) {
-          this.field_H = this.field_H + (var3 - 15) / 16;
+        if (alphaDelta < 0) {
+          this.alpha = this.alpha + (alphaDelta - 15) / 16;
         }
-        stackIn_12_0 = (this.field_H == 0) && (var2 == 0) && (!this.field_L);
-        return stackIn_12_0;
+        closedAndHidden = (this.alpha == 0) && (targetAlpha == 0) && (!this.open);
+        return closedAndHidden;
     }
 
     final Widget getFocusedChild(byte obfuscationGuard) {
@@ -151,7 +151,7 @@ abstract class wl extends DequeWidgetContainer {
           return var2;
         }
         if (obfuscationGuard < 24) {
-          discarded$0 = this.g((byte) -91);
+          discarded$0 = this.getTargetAlpha((byte) -91);
         }
         return (Widget) (this);
     }
@@ -174,7 +174,7 @@ abstract class wl extends DequeWidgetContainer {
         var2 = stackIn_6_0;
         if (param0 < 9) {
           var4 = (ResourceArchive) null;
-          wl.loadMusicPatch((ResourceArchive) null, -105, true);
+          ModalDialog.loadMusicPatch((ResourceArchive) null, -105, true);
         }
         stackIn_13_0 = (param1) && (sq.c((byte) -103)) && (var2 == 0);
         tq.a(stackIn_13_0, false);
@@ -199,32 +199,32 @@ abstract class wl extends DequeWidgetContainer {
         }
     }
 
-    private final int g(byte param0) {
-        if (param0 != 122) {
-          this.field_H = -92;
+    private final int getTargetAlpha(byte obfuscationGuard) {
+        if (obfuscationGuard != 122) {
+          this.alpha = -92;
         }
-        return !this.field_L ? 0 : this == this.field_G.a((byte) 89) ? 256 : 0;
+        return !this.open ? 0 : this == this.host.getTopOpenDialog((byte) 89) ? 256 : 0;
     }
 
-    boolean k(int param0) {
-        int var2;
-        boolean stackIn_4_0 = false;
-        this.field_H = this.g((byte) 122);
-        var2 = -85 / ((param0 + 1) / 44);
-        stackIn_4_0 = (this.field_H == 0) && (!this.field_L);
-        return stackIn_4_0;
+    boolean snapDialogAnimation(int obfuscationGuard) {
+        int guardQuotient;
+        boolean closedAndHidden = false;
+        this.alpha = this.getTargetAlpha((byte) 122);
+        guardQuotient = -85 / ((obfuscationGuard + 1) / 44);
+        closedAndHidden = (this.alpha == 0) && (!this.open);
+        return closedAndHidden;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawDialogBackground(int x, int obfuscationGuard, int y);
 
-    wl(gk param0, int param1, int param2) {
-        super(SoundPlaybackHandle.field_l - param1 >> 1, DebugConsole.field_x - param2 >> 1, param1, param2, (WidgetPainter) null);
+    ModalDialog(ModalDialogHost host, int width, int height) {
+        super(SoundPlaybackHandle.dialogViewportWidth - width >> 1, DebugConsole.dialogViewportHeight - height >> 1, width, height, (WidgetPainter) null);
         try {
-          this.field_G = param0;
-          this.field_L = false;
-          this.field_H = 0;
+          this.host = host;
+          this.open = false;
+          this.alpha = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (host != null ? "{...}" : "null") + ',' + width + ',' + height + ')');
         }
     }
 

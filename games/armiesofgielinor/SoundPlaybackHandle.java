@@ -5,7 +5,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
     static ClientUiComponent field_p;
     static String field_m;
     static int musicGain;
-    static int field_l;
+    static int dialogViewportWidth;
     int unscaledVolume;
     IntrusiveNode lifetimeNode;
     RawPcmStream stream;
@@ -58,7 +58,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
           }
           return "Please select a tile before using this.";
         }
-        field_l = 113;
+        dialogViewportWidth = 113;
         guardedController = rd.gameplayController;
         guardedControllerAlias = guardedController;
         guardedControllerSecondAlias = guardedControllerAlias;
@@ -136,6 +136,6 @@ final class SoundPlaybackHandle extends IntrusiveNode {
     static {
         musicGain = 256;
         field_m = "To server list";
-        field_l = 640;
+        dialogViewportWidth = 640;
     }
 }

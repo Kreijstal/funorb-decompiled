@@ -166,15 +166,15 @@ final class AttackEvent extends GameEvent {
         String var1 = BattleGraphicsAssets.a(-123);
         ContextActionMenu.field_Qb = new df(var1, (String) null, true, false, false);
         if (param0 >= 75) {
-          KingBlackDragonEvent.field_C.a(lt.field_g, 0);
-          lt.field_g.a(ContextActionMenu.field_Qb, (byte) 55);
-          lt.field_g.l(105);
+          KingBlackDragonEvent.field_C.showDialog(lt.field_g, 0);
+          lt.field_g.replaceContent(ContextActionMenu.field_Qb, (byte) 55);
+          lt.field_g.finishResize(105);
           return;
         }
         AttackEvent.a(true);
-        KingBlackDragonEvent.field_C.a(lt.field_g, 0);
-        lt.field_g.a(ContextActionMenu.field_Qb, (byte) 55);
-        lt.field_g.l(105);
+        KingBlackDragonEvent.field_C.showDialog(lt.field_g, 0);
+        lt.field_g.replaceContent(ContextActionMenu.field_Qb, (byte) 55);
+        lt.field_g.finishResize(105);
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {

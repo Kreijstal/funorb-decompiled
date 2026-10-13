@@ -32,7 +32,7 @@ final class pg {
         int[] slotVariants = variantChoices;
         int selectedVariant = variantChoices[AttackEvent.nextBoundedInt(false, variants.length, PrintVictoryConditionsConsoleCommand.animationRandom)];
         if (selectedVariant >= 0) {
-          return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][selectedVariant];
+          return ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[unitType]][selectedVariant];
         }
         if (obfuscationGuard != 176) {
           return (AnimationSequence) null;
@@ -41,13 +41,13 @@ final class pg {
         for (variantOrdinal = 0; variantOrdinal < fallbackChoices.length; variantOrdinal++) {
           variant = fallbackChoices[variantOrdinal];
           if (0 <= variant) {
-            return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][variant];
+            return ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[unitType]][variant];
           }
         }
         if (!allowDefaultFallback) {
           return null;
         }
-        return ck.animationSequencesByGroup[sf.unitAnimationGroups[unitType]][BestScoreStrategy.unitAnimationVariants[unitType][0][0]];
+        return ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[unitType]][BestScoreStrategy.unitAnimationVariants[unitType][0][0]];
     }
 
     final static void a(boolean param0) {

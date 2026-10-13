@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ContextualRuntimeException extends RuntimeException {
-    static tv field_c;
+    static tv contentResizeStage;
     static String field_e;
     Throwable originalCause;
     static java.awt.Frame field_f;
@@ -14,7 +14,7 @@ final class ContextualRuntimeException extends RuntimeException {
         field_f = null;
         field_e = null;
         field_d = null;
-        field_c = null;
+        contentResizeStage = null;
         if (param0 != 1) {
           field_a = (String) null;
         }
@@ -80,8 +80,8 @@ final class ContextualRuntimeException extends RuntimeException {
     final static void b(int param0) {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (0 < gk.field_J) {
-          gk.field_J = gk.field_J - 1;
+        if (0 < ModalDialogHost.field_J) {
+          ModalDialogHost.field_J = ModalDialogHost.field_J - 1;
         } else {
           if (PreparedAction.field_r <= 0) {
             if (InstructionsPanel.field_D > 0) {
@@ -91,7 +91,7 @@ final class ContextualRuntimeException extends RuntimeException {
             PreparedAction.field_r = PreparedAction.field_r - 1;
           }
         }
-        if (gk.field_J > 0) {
+        if (ModalDialogHost.field_J > 0) {
           AlphaWidgetContainer.d(false);
         }
         if (PreparedAction.field_r > 0) {
@@ -146,7 +146,7 @@ final class ContextualRuntimeException extends RuntimeException {
     }
 
     static {
-        field_c = new tv();
+        contentResizeStage = new tv();
         field_e = "Level:<nbsp><col=ff0000><%0></col>  Speed:<nbsp><col=ff0000><%1></col>  Strength:<nbsp><col=ff0000><%2></col>  Range:<nbsp><col=ff0000><%4>-<%5></col>  Cost:<nbsp><col=ff0000><%6></col>";
         field_a = "If you are not, please change your password to something more obscure!";
         field_d = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";

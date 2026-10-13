@@ -181,7 +181,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         int var1 = 1;
         this.field_ab = new vu("", (WidgetListener) null, var1 != 0);
         this.field_bb = new InteractiveWidget(ed.field_c, (WidgetListener) null);
-        this.field_G = new InteractiveWidget(pt.field_Y, (WidgetListener) null);
+        this.field_G = new InteractiveWidget(ContentTransitionDialog.field_Y, (WidgetListener) null);
         this.field_O.tooltipText = DualLinkedNode.field_m;
         this.field_I.tooltipText = NodeIterator.field_d;
         this.field_H.tooltipText = AccountNamePrompt.field_Jb;
@@ -215,7 +215,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         var3 = var3 + (this.a(TurnEffectEvent.field_B, this.field_K, 170, tf.field_m, 210, var3) + 5);
         var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.field_O, 170, MusicPatchEnvelope.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.field_N, 170, field_S, 27270);
-        ta var4 = new ta(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
+        LabeledWidgetContainer var4 = new LabeledWidgetContainer(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
         this.addChild((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
         BitmapTextWidgetPainter var5 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
@@ -347,7 +347,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
     private final int a(int param0, Widget param1, int param2, String param3, int param4) {
         RuntimeException var6 = null;
         kw var7 = null;
-        ta var8 = null;
+        LabeledWidgetContainer var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -357,7 +357,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new ta(20, param0, param2 + 120, 25, param1, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
+          var8 = new LabeledWidgetContainer(20, param0, param2 + 120, 25, param1, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
           if (param4 != 27270) {
             stackIn_2_0 = -80;
             return stackIn_2_0;
@@ -499,7 +499,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
     private final int a(boolean param0, int param1, Widget param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         pk var9 = null;
-        ta var10 = null;
+        LabeledWidgetContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -510,7 +510,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ta(20, param6, 120 + param1, 25, param2, param0, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
+          var10 = new LabeledWidgetContainer(20, param6, 120 + param1, 25, param2, param0, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
           this.addChild((byte) 10, (Widget) (var10));
           var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.height + param6, param1 + 50, param4);
           var9.listener = (WidgetListener) (this);
@@ -587,7 +587,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
     }
 
     private final int a(String param0, int param1, int param2, byte param3, Widget param4) {
-        ta var6 = null;
+        LabeledWidgetContainer var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -597,7 +597,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ta(20, param1, param2 + 120, 25, param4, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param0);
+          var6 = new LabeledWidgetContainer(20, param1, param2 + 120, 25, param4, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param0);
           this.addChild((byte) 10, (Widget) (var6));
           if (param3 != 18) {
             this.field_G = (InteractiveWidget) null;
@@ -660,7 +660,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
                 var5Lifetime1 = MusicPatchEnvelope.requestRemoveIgnoredAccount(param1, var4, false, var4);
               }
               if (var5Lifetime1 != null) {
-                ta.appendSystemChatMessage((String) null, 2, param0 ^ -18117, var4, (String) (var5Lifetime1), 0);
+                LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, param0 ^ -18117, var4, (String) (var5Lifetime1), 0);
               }
             }
             EffectPresentation.field_e = null;

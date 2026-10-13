@@ -76,9 +76,9 @@ final class nb {
         if (param0 < 93) {
           Unit var2 = (Unit) null;
           nb.a(-81, 18, (byte) -44, (Unit) null);
-          return ku.field_K;
+          return DropTargetWidgetContainer.field_K;
         }
-        return ku.field_K;
+        return DropTargetWidgetContainer.field_K;
     }
 
     final boolean a(int param0, int param1, int param2) {

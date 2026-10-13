@@ -40,11 +40,11 @@ final class uh {
           no.field_P.pixelWidth = SoftwareRaster.width;
           no.field_P.pixelHeight = SoftwareRaster.height;
           no.field_P.pixels = SoftwareRaster.pixels;
-          ku.field_J.b();
+          DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           MatchSetupPanel.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
           no.field_P.b();
-          ku.field_J.g(param6, param0);
+          DropTargetWidgetContainer.field_J.g(param6, param0);
           if (!param1) {
             int[] var8 = (int[]) null;
             uh.a((int[]) null, -31);

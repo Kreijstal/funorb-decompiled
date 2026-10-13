@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends sf implements WidgetActivationListener {
+final class tn extends ResizableModalDialog implements WidgetActivationListener {
     private InteractiveWidget field_bb;
     static rn field_ab;
     private InteractiveWidget field_fb;
@@ -27,7 +27,7 @@ final class tn extends sf implements WidgetActivationListener {
         field_cb = null;
     }
 
-    tn(gk param0) {
+    tn(ModalDialogHost param0) {
         super(param0, 200, 130);
         Widget var2 = null;
         try {
@@ -85,10 +85,10 @@ final class tn extends sf implements WidgetActivationListener {
           CipherPacketBuffer var3 = (CipherPacketBuffer) null;
           tn.readTaggedInteger(false, 35, (CipherPacketBuffer) null);
         }
-        if (!this.field_L) {
+        if (!this.open) {
           return;
         }
-        this.field_L = false;
+        this.open = false;
     }
 
     private final InteractiveWidget a(WidgetListener param0, boolean param1, String param2) {

@@ -258,7 +258,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         if (obfuscationGuard < 86) {
           CampaignMission.c((byte) 8);
         }
-        byte[] var3 = this.mapArchive.getFile((byte) 76, this.mapResourceId, this.mapArchive.getGroupId(gk.field_O[this.campaign.campaignIndex], 102));
+        byte[] var3 = this.mapArchive.getFile((byte) 76, this.mapResourceId, this.mapArchive.getGroupId(ModalDialogHost.field_O[this.campaign.campaignIndex], 102));
         byte[] var2 = var3;
         return new MapLayout(this.missionId, var3);
     }
@@ -375,10 +375,10 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         if (param1 != -22696) {
           field_s = (String) null;
         }
-        DebugConsole.field_x = param0;
-        SoundPlaybackHandle.field_l = param2;
+        DebugConsole.dialogViewportHeight = param0;
+        SoundPlaybackHandle.dialogViewportWidth = param2;
         if (null != SphinxActionRequest.field_v) {
-          SphinxActionRequest.field_v.a(param2, param0, (byte) -14);
+          SphinxActionRequest.field_v.resizeViewport(param2, param0, (byte) -14);
         }
     }
 

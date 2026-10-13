@@ -1613,7 +1613,7 @@ final class TutorialController {
                                                                                                     return;
                                                                                                   }
                                                                                                   if (fj.field_c ||
-                                                                                                    gk.field_H) {
+                                                                                                    ModalDialogHost.field_H) {
                                                                                                     ma.field_Z = false;
                                                                                                   }
                                                                                                   DebugConsole.field_y = 0;
@@ -1948,7 +1948,7 @@ final class TutorialController {
                                                           CipherPacketBuffer.a(var6 != 0, -5, param1 ^ 1, jt.field_a);
                                                         }
                                                       }
-                                                      if (!gk.field_H) {
+                                                      if (!ModalDialogHost.field_H) {
                                                         return;
                                                       }
                                                       ov.writeSpectateRoomRequest(11, 3, 0);
@@ -2667,8 +2667,8 @@ final class TutorialController {
 
     final static void h(byte param0) {
         try {
-          SphinxActionRequest.field_v.j(-128);
-          SphinxActionRequest.field_v.a(new ut(SphinxActionRequest.field_v), 0);
+          SphinxActionRequest.field_v.closeAllDialogs(-128);
+          SphinxActionRequest.field_v.showDialog(new ut(SphinxActionRequest.field_v), 0);
           if (param0 < 44) {
             TutorialController.h((byte) -22);
           }
@@ -4265,7 +4265,7 @@ final class TutorialController {
                 if (stackIn_43_0 == stackIn_43_1) {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1 - 35), MatchConditionEntry.a(-35 + var9Lifetime1, (byte) 94), var2_int);
                 }
-                lw.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
+                StandardContentDialog.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
                 km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[1 + MoveAttackAction.field_s]) > 0) {
                   DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
@@ -4306,7 +4306,7 @@ final class TutorialController {
                   MoveAttackAction.field_s == li.field_q) {
                   TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
                 }
-                lw.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
+                StandardContentDialog.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[li.field_q + 1]) <= 0) {
                   DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
                   km.field_h[0].g(db.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);

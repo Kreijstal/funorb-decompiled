@@ -95,7 +95,7 @@ final class SpellCastAction extends PreparedAction {
             var6 = (String) null;
             SpellCastAction.a((java.applet.Applet) null, 31, (String) null, false);
           }
-          var3 = pt.field_W[param0];
+          var3 = ContentTransitionDialog.field_W[param0];
           var4 = db.a(true, '_');
           var5 = var3 + var4 + param2;
           stackIn_3_0 = var5;

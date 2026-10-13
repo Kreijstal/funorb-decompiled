@@ -44,7 +44,7 @@ final class et {
         int var13Lifetime1;
         var19 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = wl.bitLength((-param3 + param4) * 3, param1 ^ 13329);
+          var5_int = ModalDialog.bitLength((-param3 + param4) * 3, param1 ^ 13329);
           var6 = 3 * param3;
           EditableTextField.n(0);
           var7 = param1 + var5_int;
@@ -167,7 +167,7 @@ final class et {
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           KingBlackDragonEvent.field_C.a(true, -6226, pf.field_b, UiSelectionState.field_i);
-          KingBlackDragonEvent.field_C.d((byte) -102);
+          KingBlackDragonEvent.field_C.advanceDialogs((byte) -102);
           if (param0 != -3) {
             et.a(103);
           }

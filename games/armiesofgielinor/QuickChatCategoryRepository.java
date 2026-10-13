@@ -139,7 +139,7 @@ final class QuickChatCategoryRepository {
                 var8_ref_of.ratedGamesPlayed = var10 >> 1;
                 var8_ref_of.chatIconId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                 var8_ref_of.optionUnlockMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                sf.insertLobbyPlayerSorted((byte) -115, var8_ref_of);
+                ResizableModalDialog.insertLobbyPlayerSorted((byte) -115, var8_ref_of);
                 break regionExit1;
               }
               if (var2 == 6) {
@@ -242,7 +242,7 @@ final class QuickChatCategoryRepository {
                                     stackIn_80_0.packedFlag0 = stackIn_81_1;
                                     var7.chatIconId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
                                     var7.optionUnlockMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                                    wl.currentRoomPlayers.addLast((byte) -119, (IntrusiveNode) (var7));
+                                    ModalDialog.currentRoomPlayers.addLast((byte) -119, (IntrusiveNode) (var7));
                                     break regionExit1;
                                   case 19:
                                     var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
@@ -302,7 +302,7 @@ final class QuickChatCategoryRepository {
                                 } else {
                                   var13.invitationSent = false;
                                 }
-                                sf.insertLobbyPlayerSorted((byte) 107, var26);
+                                ResizableModalDialog.insertLobbyPlayerSorted((byte) 107, var26);
                               }
                             } else {
                               var3_long = ((PacketBuffer) ((Object) var1)).readLong((byte) -2);
@@ -316,7 +316,7 @@ final class QuickChatCategoryRepository {
                                     AnimationPlayer.pendingJoinRequestCount = AnimationPlayer.pendingJoinRequestCount + 1;
                                   }
                                 }
-                                sf.insertLobbyPlayerSorted((byte) 66, var25);
+                                ResizableModalDialog.insertLobbyPlayerSorted((byte) 66, var25);
                               }
                             }
                           }
@@ -340,11 +340,11 @@ final class QuickChatCategoryRepository {
               }
               break regionExit1;
             }
-            var3_ref_of = (LobbyPlayer) (wl.currentRoomPlayers.first((byte) 93));
+            var3_ref_of = (LobbyPlayer) (ModalDialog.currentRoomPlayers.first((byte) 93));
             while (var3_ref_of != null) {
               var3_ref_of.unlink(99);
               var3_ref_of.unlinkSecondary((byte) -76);
-              var3_ref_of = (LobbyPlayer) (wl.currentRoomPlayers.next((byte) 123));
+              var3_ref_of = (LobbyPlayer) (ModalDialog.currentRoomPlayers.next((byte) 123));
             }
             var3_ref_of = (LobbyPlayer) (oi.lobbyPlayersById.first((byte) 66));
             while (var3_ref_of != null) {
@@ -355,7 +355,7 @@ final class QuickChatCategoryRepository {
                   var3_ref_of.joinRequested = false;
                 }
                 var3_ref_of.invitationSent = false;
-                sf.insertLobbyPlayerSorted((byte) 122, var3_ref_of);
+                ResizableModalDialog.insertLobbyPlayerSorted((byte) 122, var3_ref_of);
               }
               var3_ref_of = (LobbyPlayer) (oi.lobbyPlayersById.next(1));
             }
