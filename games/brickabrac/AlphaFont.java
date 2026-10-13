@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends dh {
-    private byte[][] field_M;
+final class AlphaFont extends TextFont {
+    private byte[][] glyphCoverage;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int glyphId, int x, int y, int width, int height, int paint, boolean shadow) {
         int var8;
         int var9;
         int var10;
@@ -12,47 +12,47 @@ final class mb extends dh {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * Rasterizer2D.width;
-        var9 = Rasterizer2D.width - param3;
+        var8 = x + y * Rasterizer2D.width;
+        var9 = Rasterizer2D.width - width;
         var10 = 0;
         var11 = 0;
-        if (param2 < Rasterizer2D.clipTop) {
-          var12 = Rasterizer2D.clipTop - param2;
-          param4 = param4 - var12;
-          param2 = Rasterizer2D.clipTop;
-          var11 = var11 + var12 * param3;
+        if (y < Rasterizer2D.clipTop) {
+          var12 = Rasterizer2D.clipTop - y;
+          height = height - var12;
+          y = Rasterizer2D.clipTop;
+          var11 = var11 + var12 * width;
           var8 = var8 + var12 * Rasterizer2D.width;
         }
-        if (param2 + param4 > Rasterizer2D.clipBottom) {
-          param4 = param4 - (param2 + param4 - Rasterizer2D.clipBottom);
+        if (y + height > Rasterizer2D.clipBottom) {
+          height = height - (y + height - Rasterizer2D.clipBottom);
         }
-        if (param1 < Rasterizer2D.clipLeft) {
-          var12Lifetime1 = Rasterizer2D.clipLeft - param1;
-          param3 = param3 - var12Lifetime1;
-          param1 = Rasterizer2D.clipLeft;
+        if (x < Rasterizer2D.clipLeft) {
+          var12Lifetime1 = Rasterizer2D.clipLeft - x;
+          width = width - var12Lifetime1;
+          x = Rasterizer2D.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > Rasterizer2D.clipRight) {
-          var12Lifetime2 = param1 + param3 - Rasterizer2D.clipRight;
-          param3 = param3 - var12Lifetime2;
+        if (x + width > Rasterizer2D.clipRight) {
+          var12Lifetime2 = x + width - Rasterizer2D.clipRight;
+          width = width - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
-        if (param3 > 0 &&
-          param4 > 0) {
-          if (!param6) {
-            mb.a(Rasterizer2D.pixels, this.field_M[param0], param5, var11, var8, param3, param4, var9, var10);
+        if (width > 0 &&
+          height > 0) {
+          if (!shadow) {
+            AlphaFont.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var11, var8, width, height, var9, var10);
           } else {
-            hl.a(Rasterizer2D.pixels, this.field_M[param0], param5, var11, var8, param3, param4, var9, var10);
+            hl.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var11, var8, width, height, var9, var10);
           }
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int glyphId, int x, int y, int width, int height, int paint, int alpha, boolean shadow) {
         int var9;
         int var10;
         int var11;
@@ -60,53 +60,53 @@ final class mb extends dh {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * Rasterizer2D.width;
-        var10 = Rasterizer2D.width - param3;
+        var9 = x + y * Rasterizer2D.width;
+        var10 = Rasterizer2D.width - width;
         var11 = 0;
         var12 = 0;
-        if (param2 < Rasterizer2D.clipTop) {
-          var13 = Rasterizer2D.clipTop - param2;
-          param4 = param4 - var13;
-          param2 = Rasterizer2D.clipTop;
-          var12 = var12 + var13 * param3;
+        if (y < Rasterizer2D.clipTop) {
+          var13 = Rasterizer2D.clipTop - y;
+          height = height - var13;
+          y = Rasterizer2D.clipTop;
+          var12 = var12 + var13 * width;
           var9 = var9 + var13 * Rasterizer2D.width;
         }
-        if (param2 + param4 > Rasterizer2D.clipBottom) {
-          param4 = param4 - (param2 + param4 - Rasterizer2D.clipBottom);
+        if (y + height > Rasterizer2D.clipBottom) {
+          height = height - (y + height - Rasterizer2D.clipBottom);
         }
-        if (param1 < Rasterizer2D.clipLeft) {
-          var13Lifetime1 = Rasterizer2D.clipLeft - param1;
-          param3 = param3 - var13Lifetime1;
-          param1 = Rasterizer2D.clipLeft;
+        if (x < Rasterizer2D.clipLeft) {
+          var13Lifetime1 = Rasterizer2D.clipLeft - x;
+          width = width - var13Lifetime1;
+          x = Rasterizer2D.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > Rasterizer2D.clipRight) {
-          var13Lifetime2 = param1 + param3 - Rasterizer2D.clipRight;
-          param3 = param3 - var13Lifetime2;
+        if (x + width > Rasterizer2D.clipRight) {
+          var13Lifetime2 = x + width - Rasterizer2D.clipRight;
+          width = width - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
         }
-        if (param3 > 0 &&
-          param4 > 0) {
-          if (!param7) {
-            mb.a(Rasterizer2D.pixels, this.field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        if (width > 0 &&
+          height > 0) {
+          if (!shadow) {
+            AlphaFont.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var12, var9, width, height, var10, var11, alpha);
           } else {
-            hl.a(Rasterizer2D.pixels, this.field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            hl.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var12, var9, width, height, var10, var11, alpha);
           }
           return;
         }
     }
 
-    mb(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
-        super(param0, param1, param2, param3, param4);
-        this.field_M = new byte[256][];
-        this.field_M = mb.a(param5, param6);
+    AlphaFont(byte[] metrics, int[] glyphOffsetX, int[] glyphOffsetY, int[] glyphWidths, int[] glyphHeights, int[] palette, byte[][] glyphData) {
+        super(metrics, glyphOffsetX, glyphOffsetY, glyphWidths, glyphHeights);
+        this.glyphCoverage = new byte[256][];
+        this.glyphCoverage = AlphaFont.convertToCoverage(palette, glyphData);
     }
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertToCoverage(int[] palette, byte[][] glyphData) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -115,22 +115,22 @@ final class mb extends dh {
         byte[] var4;
         int var6;
         int var3Lifetime1;
-        for (var2_int = 0; var2_int < param0.length; var2_int++) {
-          var3 = param0[var2_int];
+        for (var2_int = 0; var2_int < palette.length; var2_int++) {
+          var3 = palette[var2_int];
           var4_int = (var3 >> 15 & 510) + (var3 & 255);
-          param0[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
+          palette[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
         }
-        var2 = param1;
+        var2 = glyphData;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2.length; var3Lifetime1++) {
           var4 = var2[var3Lifetime1];
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
             if (var6 != 0) {
-              var4[var5] = (byte)param0[var6];
+              var4[var5] = (byte)palette[var6];
             }
           }
         }
-        return param1;
+        return glyphData;
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

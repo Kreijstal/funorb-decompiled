@@ -121,7 +121,7 @@ final class wn {
               }
               stackIn_33_0 = var7.field_Xb;
               if (var14 > 0) {
-                stackIn_34_1 = dh.a(var7.field_Xb.field_O, var7.field_Rb, var14);
+                stackIn_34_1 = TextFont.truncateText(var7.field_Xb.field_O, var7.field_Rb, var14);
               } else {
                 stackIn_34_1 = var7.field_Rb;
               }

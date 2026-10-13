@@ -28,7 +28,7 @@ final class hk extends ib implements hf, en {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (this.field_N != null) {
-          a.field_u.a(this.field_N, this.field_o + (param1 + 20), param0 - (-this.field_w - 15), -40 + this.field_t, this.field_s, 16777215, -1, 1, 0, a.field_u.field_F);
+          a.field_u.a(this.field_N, this.field_o + (param1 + 20), param0 - (-this.field_w - 15), -40 + this.field_t, this.field_s, 16777215, -1, 1, 0, a.field_u.ascent);
         }
         if (null != this.field_O) {
           Rasterizer2D.drawHorizontalLine(param1 + 10, param0 + 134, this.field_t - 20, 4210752);
@@ -71,7 +71,7 @@ final class hk extends ib implements hf, en {
         }
     }
 
-    final static void a(dh param0, byte param1, mf param2) {
+    final static void a(TextFont param0, byte param1, mf param2) {
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -85,7 +85,7 @@ final class hk extends ib implements hf, en {
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
-        dh var10 = null;
+        TextFont var10 = null;
         int[] var14 = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -105,8 +105,8 @@ final class hk extends ib implements hf, en {
             return;
           }
           hb.a(var4, false);
-          var10 = (dh) null;
-          ko.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (dh) null, 0, 65793, 2245737, 8947848);
+          var10 = (TextFont) null;
+          ko.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
           nb.field_e = ug.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
           cp.field_K = ug.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
           var5 = Rasterizer2D.width;
@@ -301,8 +301,8 @@ final class hk extends ib implements hf, en {
         int var1 = 0;
         int var2 = 0;
         if (param0 >= 4) {
-          var1 = nn.field_g.c(ag.buttonLabels[20]);
-          var2 = nn.field_g.c(ag.buttonLabels[21]);
+          var1 = nn.field_g.measureText(ag.buttonLabels[20]);
+          var2 = nn.field_g.measureText(ag.buttonLabels[21]);
           dg.field_d = (var2 >= var1 ? var2 : var1) + 4;
           og.field_Zb = og.field_Zb + (dg.field_d + 120);
           return;
@@ -329,7 +329,7 @@ final class hk extends ib implements hf, en {
         RuntimeException decompiledCaughtException = null;
         hi var6 = null;
         RuntimeException var6_ref = null;
-        dh var7 = null;
+        TextFont var7 = null;
         String var8 = null;
         me var9 = null;
         ma var12 = null;
@@ -397,7 +397,7 @@ final class hk extends ib implements hf, en {
           this.field_w = 15;
           var7 = a.field_u;
           if (this.field_N != null) {
-            this.field_w = this.field_w + (5 + var7.b(this.field_N, -40 + this.field_t, var7.field_F));
+            this.field_w = this.field_w + (5 + var7.measureWrappedHeight(this.field_N, -40 + this.field_t, var7.ascent));
           }
           var8 = p.field_p;
           var9 = qi.a(uc.e((byte) -115), -28432);
@@ -405,7 +405,7 @@ final class hk extends ib implements hf, en {
             var8 = sq.field_a;
           } else {
             if (ll.field_d == var9) {
-              var8 = fc.field_c;
+              var8 = IndexedSpriteGeometry.field_c;
             }
           }
           dupTemp$0 = new ma(10, this.field_w, this.field_t - 20, 25, this.field_P, false, 80, 3, var7, 16777215, var8);

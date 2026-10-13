@@ -99,7 +99,7 @@ final class am extends mh {
         try {
           param2 += 8;
           var6_int = -87 / ((param1 + 73) / 46);
-          var7 = param3.field_O.b(param3.field_Mb, param4 - param3.field_V * 2, param3.field_R);
+          var7 = param3.field_O.measureWrappedHeight(param3.field_Mb, param4 - param3.field_V * 2, param3.field_R);
           param3.a(var7, param2, 0, param4, (byte) 64);
           param0.a(param3, 0);
           param2 = param2 + (0 + var7);
@@ -293,15 +293,15 @@ final class am extends mh {
               discarded$1 = this.field_Tb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_O.c(DualLinkNode.field_o);
+            var17 = param6.field_O.measureText(DualLinkNode.field_o);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_O.c(SaveResultsPromptScreen.field_r);
+            var17Lifetime2 = param6.field_O.measureText(SaveResultsPromptScreen.field_r);
             if (var16Lifetime2 < var17Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_O.c(nh.field_d);
+            var17Lifetime3 = param6.field_O.measureText(nh.field_d);
             if (var16Lifetime2 < var17Lifetime3) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -391,7 +391,7 @@ final class am extends mh {
           this.field_Xb.a(this.field_Rb, 0);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Rb.field_O.a(this.field_Rb.field_Mb, var15_int);
+          var17Lifetime1 = this.field_Rb.field_O.countWrappedLines(this.field_Rb.field_Mb, var15_int);
           this.field_Rb.a(np.field_a * var17Lifetime1, var16Lifetime1, 13, var15_int, (byte) 64);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * np.field_a;
           this.field_Xb.a(10 + var16Lifetime1, 24, 0, 13 + (var15_int + 13), (byte) 64);
@@ -487,7 +487,7 @@ final class am extends mh {
         this.a(param0, -15211);
         if (this.field_Yb != null) {
           this.field_Yb.field_Mb = this.field_Tb.toString();
-          this.field_Yb.field_P = (this.field_Ib - this.field_Yb.field_O.c(this.field_Yb.field_Mb)) / 2;
+          this.field_Yb.field_P = (this.field_Ib - this.field_Yb.field_O.measureText(this.field_Yb.field_Mb)) / 2;
           this.field_Yb.field_Ib = -this.field_Yb.field_P + this.field_Ib;
           if (null != this.field_bc &&
             0 != this.field_bc.field_L) {

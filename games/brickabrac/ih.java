@@ -104,7 +104,7 @@ abstract class ih {
 
     final static void a(pb param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {
         try {
-          fc.a(-77, param0.field_p);
+          IndexedSpriteGeometry.a(-77, param0.field_p);
           Rasterizer2D.fillVerticalGradient(0, 0, param0.field_i, param0.field_q, ro.field_x[param2], 16777215);
           param1.b((-param1.canvasWidth + param0.field_i) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.field_q - 200 / param3), 55, 110);
           sc.b(-117);

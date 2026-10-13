@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fc {
-    int field_a;
+abstract class IndexedSpriteGeometry {
+    int height;
     static ql field_e;
     static String field_c;
-    int field_h;
-    int field_b;
-    int field_g;
-    int field_d;
-    int field_f;
+    int canvasHeight;
+    int offsetX;
+    int offsetY;
+    int width;
+    int canvasWidth;
 
     final static void a(int param0, RgbSprite param1) {
         try {
           HighscorePackSelector.d(-99);
           Rasterizer2D.bind(param1.pixels, param1.canvasWidth, param1.canvasHeight);
           if (param0 > -46) {
-            tp[] var3 = (tp[]) null;
-            fc.a(79, (byte[]) null, 74, (tp[]) null, -94, -115);
+            IndexedSprite[] var3 = (IndexedSprite[]) null;
+            IndexedSpriteGeometry.a(79, (byte[]) null, 74, (IndexedSprite[]) null, -94, -115);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "fc.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -48,14 +48,14 @@ abstract class fc {
         return GameScreen.field_d;
     }
 
-    final static bi a(int param0, byte[] param1, int param2, tp[] param3, int param4, int param5) {
+    final static PaletteFont a(int param0, byte[] param1, int param2, IndexedSprite[] param3, int param4, int param5) {
         int var16_int = 0;
         byte[] array$0 = null;
         int incrementValue$3 = 0;
         int var26 = 0;
         int incrementValue$2 = 0;
-        bi stackIn_28_0 = null;
-        bi stackIn_30_0 = null;
+        PaletteFont stackIn_28_0 = null;
+        PaletteFont stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -71,7 +71,7 @@ abstract class fc {
         byte[][] var11 = null;
         int var13 = 0;
         int var14 = 0;
-        bi var16 = null;
+        PaletteFont var16 = null;
         byte[] var17 = null;
         byte[] var18 = null;
         int var19 = 0;
@@ -125,16 +125,16 @@ abstract class fc {
           var44 = new int[4];
           Rasterizer2D.saveClip(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
-            var6[var16_int] = -param0 + param3[var16_int].field_b;
-            var7[var16_int] = -param0 + param3[var16_int].field_g;
-            var8[var16_int] = param3[var16_int].field_d + (param0 << 1);
-            var9[var16_int] = (param0 << 1) + param3[var16_int].field_a;
+            var6[var16_int] = -param0 + param3[var16_int].offsetX;
+            var7[var16_int] = -param0 + param3[var16_int].offsetY;
+            var8[var16_int] = param3[var16_int].width + (param0 << 1);
+            var9[var16_int] = (param0 << 1) + param3[var16_int].height;
             array$0 = new byte[var36[var16_int] * var37[var16_int]];
             var11[var16_int] = array$0;
             var17 = array$0;
-            var18 = param3[var16_int].field_i;
-            var19 = param3[var16_int].field_d;
-            var20 = param3[var16_int].field_a;
+            var18 = param3[var16_int].indices;
+            var19 = param3[var16_int].width;
+            var20 = param3[var16_int].height;
             var21 = var36[var16_int];
             var22 = -var19 + var21;
             Rasterizer2D.bind(new int[var36[var16_int] * var37[var16_int]], var36[var16_int], var37[var16_int]);
@@ -166,15 +166,15 @@ abstract class fc {
               var24Lifetime2 = var24Lifetime2 + var22;
             }
           }
-          var16 = new bi(param1, var38, var39, var36, var37, var10, var40);
-          var16.field_B = var16.field_B - param0;
-          var16.field_P = var16.field_P - param0;
-          var16.field_F = var16.field_F - param0;
+          var16 = new PaletteFont(param1, var38, var39, var36, var37, var10, var40);
+          var16.capHeight = var16.capHeight - param0;
+          var16.descent = var16.descent - param0;
+          var16.ascent = var16.ascent - param0;
           if (param5 != 1) {
-            stackIn_28_0 = (bi) null;
+            stackIn_28_0 = (PaletteFont) null;
             return stackIn_28_0;
           }
-          var16.field_L = var16.field_L - param0;
+          var16.xHeight = var16.xHeight - param0;
           Rasterizer2D.bind(var45, var13, var14);
           Rasterizer2D.restoreClip(var44);
           stackIn_30_0 = var16;
@@ -199,9 +199,9 @@ abstract class fc {
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int x, int y, int alpha);
 
-    abstract void a(int param0, int param1);
+    abstract void drawTransparent(int x, int y);
 
     static {
         field_c = "Username: ";

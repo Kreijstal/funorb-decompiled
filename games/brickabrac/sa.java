@@ -145,12 +145,12 @@ abstract class sa extends qg implements vc {
 
     abstract boolean a(BitPacketBuffer param0, byte param1, int param2);
 
-    final static void a(int param0, bi param1, String param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, PaletteFont param1, String param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
         try {
-          var7_int = (-param1.field_B + (param4 + (2 * param0 - param1.field_L))) / 2;
+          var7_int = (-param1.capHeight + (param4 + (2 * param0 - param1.xHeight))) / 2;
           int var8 = -69 / ((param6 + 85) / 40);
-          nn.field_g.b(param2, param3, var7_int + nn.field_g.field_B, param5, -1);
+          nn.field_g.drawCentered(param2, param3, var7_int + nn.field_g.capHeight, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "sa.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

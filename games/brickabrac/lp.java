@@ -11,7 +11,7 @@ class lp extends fe implements en {
     static RgbSprite[] field_yb;
     static mh field_Ab;
     static qh field_xb;
-    private dh field_sb;
+    private TextFont field_sb;
     static GameScreen currentScreen;
     static tg field_ub;
 
@@ -183,7 +183,7 @@ class lp extends fe implements en {
         }
     }
 
-    lp(cp param0, dh param1, String param2, boolean param3, boolean param4) {
+    lp(cp param0, TextFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ec((lp) null, param1, param2), 77, 10, 10);
         try {
           this.field_tb = param4 ? true : false;

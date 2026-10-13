@@ -4,7 +4,7 @@
 final class qp {
     static String field_a;
     static mh field_f;
-    static tp[] field_e;
+    static IndexedSprite[] field_e;
     static int[] field_c;
     static String field_b;
     static String field_d;

@@ -3,7 +3,7 @@
  */
 final class w {
     private int field_h;
-    private tp[] field_q;
+    private IndexedSprite[] field_q;
     private RgbSprite field_p;
     static RgbSprite field_r;
     private int field_b;
@@ -156,14 +156,14 @@ final class w {
 
     private final void a(boolean param0) {
         RuntimeException decompiledCaughtException = null;
-        tp var2 = null;
+        IndexedSprite var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        tp var6 = null;
-        tp var7 = null;
-        tp var2Lifetime1;
+        IndexedSprite var6 = null;
+        IndexedSprite var7 = null;
+        IndexedSprite var2Lifetime1;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           if (this.field_q == null) {
@@ -179,18 +179,18 @@ final class w {
               ch.field_c.a(cm.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
-            var6.a(9, 58);
+            var6.drawTransparent(9, 58);
           }
           if (this.field_j < IsaacGenerator.field_n) {
             var7 = this.field_q[this.field_b];
             var2Lifetime1 = var7;
             if (var2Lifetime1 != null) {
-              var3 = (60 + var7.field_f) * this.field_j / IsaacGenerator.field_n;
+              var3 = (60 + var7.canvasWidth) * this.field_j / IsaacGenerator.field_n;
               var4 = var3 - 30;
               if (this.field_a) {
-                ml.a(-256 * var4 / 30, var2Lifetime1, (byte) 101, 58, 9, (-var4 + var7.field_f) * 256 / 30);
+                ml.a(-256 * var4 / 30, var2Lifetime1, (byte) 101, 58, 9, (-var4 + var7.canvasWidth) * 256 / 30);
               } else {
-                ml.a(256 * (-var4 + var7.field_f) / 30, var7, (byte) 106, 58, 9, -256 * var4 / 30);
+                ml.a(256 * (-var4 + var7.canvasWidth) / 30, var7, (byte) 106, 58, 9, -256 * var4 / 30);
               }
             }
           }
@@ -219,7 +219,7 @@ final class w {
           if (this.field_l == null &&
             null != co.field_j) {
             this.field_l = new RgbSprite(622, 47);
-            fc.a(-49, this.field_l);
+            IndexedSpriteGeometry.a(-49, this.field_l);
             Rasterizer2D.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
@@ -230,17 +230,17 @@ final class w {
             this.a(co.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
             var17 = lk.a(-124, 526344, 526344);
             var5 = new RgbSprite(121, 122);
-            fc.a(param0 ^ -388, var5);
+            IndexedSpriteGeometry.a(param0 ^ -388, var5);
             Rasterizer2D.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
             Rasterizer2D.fillVerticalGradient(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
             var6 = tl.field_a;
             var7 = ko.field_q;
             this.a(co.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
             this.a(co.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
-            this.a(co.field_j, -co.field_j.field_F + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
+            this.a(co.field_j, -co.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
             sc.b(-119);
             this.field_p = new RgbSprite(121, 122);
-            fc.a(-115, this.field_p);
+            IndexedSpriteGeometry.a(-115, this.field_p);
             var5.e(this.field_p.width / 2, this.field_p.height / 2, -2048, 4096);
             sc.b(-108);
             return;
@@ -311,7 +311,7 @@ final class w {
           }
           this.field_p.drawTransparent(376, 339);
           this.field_l.drawTransparent(9, 9);
-          AchievementsScreen.field_J.a(0, 0);
+          AchievementsScreen.field_J.drawTransparent(0, 0);
           if (null != ll.field_c) {
             ll.field_c.drawTransparent(9, 257);
             ll.field_c.f(558, 257);
@@ -418,7 +418,7 @@ final class w {
         }
     }
 
-    private final void a(dh param0, int param1, float param2, byte param3, int param4, String param5, int[] param6, int param7, RgbSprite param8, int param9) {
+    private final void a(TextFont param0, int param1, float param2, byte param3, int param4, String param5, int[] param6, int param7, RgbSprite param8, int param9) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -446,11 +446,11 @@ final class w {
           }
           var12 = (int)((float)param7 / param2);
           var13 = new RgbSprite(var11_int, var12);
-          fc.a(-116, var13);
+          IndexedSpriteGeometry.a(-116, var13);
           param8.a((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.width / param2), (int)((float)param8.height / param2));
           this.a(var12, 0, param5, param6, param0, var11_int, 0, 0);
           sc.b(-104);
-          fc.a(-126, param8);
+          IndexedSpriteGeometry.a(-126, param8);
           var13.c(param9, param1, param4, param7);
           sc.b(-93);
           return;
@@ -495,7 +495,7 @@ final class w {
         }
     }
 
-    private final void a(String param0, boolean param1, boolean param2, tp[] param3, String[] param4, java.applet.Applet param5) {
+    private final void a(String param0, boolean param1, boolean param2, IndexedSprite[] param3, String[] param4, java.applet.Applet param5) {
         String var7 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -666,7 +666,7 @@ final class w {
         }
     }
 
-    private final void a(int param0, int param1, String param2, int[] param3, dh param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, String param2, int[] param3, TextFont param4, int param5, int param6, int param7) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -768,7 +768,7 @@ final class w {
         }
     }
 
-    w(java.applet.Applet param0, String param1, tp[] param2, boolean param3, String[] param4) {
+    w(java.applet.Applet param0, String param1, IndexedSprite[] param2, boolean param3, String[] param4) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

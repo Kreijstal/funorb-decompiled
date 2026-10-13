@@ -215,7 +215,7 @@ final class nh {
         }
     }
 
-    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, dh param5, int param6, int param7, int param8, RgbSprite[] param9, int param10, RgbSprite[] param11, int param12, byte param13, int param14) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, TextFont param5, int param6, int param7, int param8, RgbSprite[] param9, int param10, RgbSprite[] param11, int param12, byte param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -231,11 +231,11 @@ final class nh {
         int var16 = 0;
         RgbSprite[] var17 = null;
         try {
-          var15_int = param5.field_B + param5.field_P;
-          var16 = param5.field_B;
+          var15_int = param5.capHeight + param5.descent;
+          var16 = param5.capHeight;
           if (param13 != -110) {
             var17 = (RgbSprite[]) null;
-            nh.a((RgbSprite[]) null, -71, 62, -50, 61, (dh) null, 97, 90, 79, (RgbSprite[]) null, 117, (RgbSprite[]) null, 81, (byte) 46, -119);
+            nh.a((RgbSprite[]) null, -71, 62, -50, 61, (TextFont) null, 97, 90, 79, (RgbSprite[]) null, 117, (RgbSprite[]) null, 81, (byte) 46, -119);
           }
           oa.a(param3, var15_int, param10, param2, var15_int, param12, param1, param7, param4, param0, param5, param11, param8, param6, var16, false, param14, param9, param5, var16);
           return;

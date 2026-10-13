@@ -107,7 +107,7 @@ final class be {
     }
 
     final void a(int param0, up param1, oc param2, byte param3, int param4) {
-        dh stackIn_18_0 = null;
+        TextFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_21_2;
@@ -182,7 +182,7 @@ final class be {
             } else {
               stackIn_25_8 = this.field_b;
             }
-            ((dh) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param1.field_f, param1.field_m, param1.field_h);
+            ((TextFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param1.field_f, param1.field_m, param1.field_h);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

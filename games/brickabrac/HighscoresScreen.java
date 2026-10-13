@@ -120,12 +120,12 @@ final class HighscoresScreen extends MenuScreen {
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, String param7) {
         try {
           if (param0 != -1) {
-            ob.field_D.a(param0 + 1 + ". ", lq.field_b[0], param2, param3, -1);
+            ob.field_D.drawRight(param0 + 1 + ". ", lq.field_b[0], param2, param3, -1);
           }
-          ob.field_D.c(param7, lq.field_b[0], param2, param3, -1);
-          ob.field_D.b(Integer.toString(1 + param1), lq.field_b[1] - nn.field_g.c(SpriteGeometry.field_u) / 2, param2, param3, -1);
-          ob.field_D.b(Integer.toString(1 + param4), lq.field_b[2] - nn.field_g.c(ba.field_u) / 2, param2, param3, -1);
-          ob.field_D.a(Integer.toString(param6), lq.field_b[3], param2, param3, -1);
+          ob.field_D.drawLeft(param7, lq.field_b[0], param2, param3, -1);
+          ob.field_D.drawCentered(Integer.toString(1 + param1), lq.field_b[1] - nn.field_g.measureText(SpriteGeometry.field_u) / 2, param2, param3, -1);
+          ob.field_D.drawCentered(Integer.toString(1 + param4), lq.field_b[2] - nn.field_g.measureText(ba.field_u) / 2, param2, param3, -1);
+          ob.field_D.drawRight(Integer.toString(param6), lq.field_b[3], param2, param3, -1);
           int var9_int = 102 % ((param5 + 15) / 45);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ah.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
@@ -252,7 +252,7 @@ final class HighscoresScreen extends MenuScreen {
             }
             var9 = stackIn_8_0;
             var5_ref = var9;
-            var6_int = nn.field_g.c(var9) + 30;
+            var6_int = nn.field_g.measureText(var9) + 30;
             if (var6_int > var2) {
               var2 = var6_int;
             }
@@ -550,7 +550,7 @@ final class HighscoresScreen extends MenuScreen {
         super(5, 38, 460, 402, 35, LevelPack.field_a);
         this.packIndex = 0;
         this.scoreFilterIndex = 0;
-        fk.field_g = ob.field_D.c("10. ") + 10;
+        fk.field_g = ob.field_D.measureText("10. ") + 10;
         lq.field_b = new int[4];
         lq.field_b[2] = 125 + fk.field_g + 330;
         lq.field_b[1] = 125 + fk.field_g + 240;
@@ -661,19 +661,19 @@ final class HighscoresScreen extends MenuScreen {
           return;
         }
         im.a(475, 5, 33, 5, 140, (byte) -101, 120);
-        nn.field_g.b(qn.packNames[this.packIndex], 357, 1 + (-nn.field_g.field_L + 178), 0, -1);
+        nn.field_g.drawCentered(qn.packNames[this.packIndex], 357, 1 + (-nn.field_g.xHeight + 178), 0, -1);
         da.packSelectorIcons[this.packIndex].e(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
           field_v = -65;
         }
         im.a(475, 5, 243, 5, 178, (byte) -57, 120);
-        var2 = 149 + nn.field_g.field_B + 38;
+        var2 = 149 + nn.field_g.capHeight + 38;
         var3 = 0;
-        nn.field_g.c(DualLinkIterator.field_i, -fk.field_g + lq.field_b[0] + 12, var2, var3, -1);
-        nn.field_g.a(SpriteGeometry.field_u, lq.field_b[1], var2, var3, -1);
-        nn.field_g.a(ba.field_u, lq.field_b[2], var2, var3, -1);
-        nn.field_g.a(pj.field_d, lq.field_b[3], var2, var3, -1);
-        var2Lifetime1 = 5 * (nn.field_g.field_P + nn.field_g.field_B) / 2 + 187;
+        nn.field_g.drawLeft(DualLinkIterator.field_i, -fk.field_g + lq.field_b[0] + 12, var2, var3, -1);
+        nn.field_g.drawRight(SpriteGeometry.field_u, lq.field_b[1], var2, var3, -1);
+        nn.field_g.drawRight(ba.field_u, lq.field_b[2], var2, var3, -1);
+        nn.field_g.drawRight(pj.field_d, lq.field_b[3], var2, var3, -1);
+        var2Lifetime1 = 5 * (nn.field_g.descent + nn.field_g.capHeight) / 2 + 187;
         var4 = null;
         if (rf.field_g != null &&
           rf.field_g.field_o) {

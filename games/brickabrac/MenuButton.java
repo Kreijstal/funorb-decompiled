@@ -92,7 +92,7 @@ final class MenuButton {
                 stackIn_36_2[stackIn_36_3] = stackIn_37_4;
                 var4 = rd.a(stackIn_36_0, stackIn_36_1, (byte) 103);
               }
-              var5 = nn.field_g.c(var4);
+              var5 = nn.field_g.measureText(var4);
               if (20 == this.actionId ||
                 this.actionId == 21) {
                 var5 = og.field_Zb;
@@ -107,9 +107,9 @@ final class MenuButton {
               if (this.actionId == 42) {
                 var8_ref_String = var4.toLowerCase();
                 var9_int = -16 + this.width;
-                nn.field_g.a(var8_ref_String, 8 + this.x, this.y - 5, var9_int, this.height, var7, -1, 1, 1, 3 + nn.field_g.field_B);
+                nn.field_g.a(var8_ref_String, 8 + this.x, this.y - 5, var9_int, this.height, var7, -1, 1, 1, 3 + nn.field_g.capHeight);
               } else {
-                nn.field_g.c(var4.toLowerCase(), var6, 2 + (this.y + (-nn.field_g.field_P + nn.field_g.field_B + this.height) / 2), var7, -1);
+                nn.field_g.drawLeft(var4.toLowerCase(), var6, 2 + (this.y + (-nn.field_g.descent + nn.field_g.capHeight + this.height) / 2), var7, -1);
               }
               if (this.actionId == 20 ||
                 this.actionId == 21) {

@@ -14,16 +14,16 @@ final class IntrusiveHashTable {
     static RgbSprite field_i;
     static byte[][] field_b;
     static int[] field_d;
-    static tp[] achievementSourceIcons;
+    static IndexedSprite[] achievementSourceIcons;
     private IntrusiveNode[] buckets;
     static int field_l;
 
-    final static mb a(byte param0, String param1, String param2, mf param3, mf param4) {
+    final static AlphaFont a(byte param0, String param1, String param2, mf param3, mf param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        mb stackIn_2_0 = null;
-        mb stackIn_4_0 = null;
+        AlphaFont stackIn_2_0 = null;
+        AlphaFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -41,7 +41,7 @@ final class IntrusiveHashTable {
             stackIn_4_0 = tb.a(117, var5_int, param3, param4, var6);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (mb) null;
+          stackIn_2_0 = (AlphaFont) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

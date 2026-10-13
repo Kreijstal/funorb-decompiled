@@ -11,7 +11,7 @@ final class SoundPlayback extends IntrusiveNode {
 
     final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
         try {
-          fc.a(-89, param2.field_p);
+          IndexedSpriteGeometry.a(-89, param2.field_p);
           la.a(param5, (-param5.canvasWidth + param2.field_i) / 2, -param5.canvasHeight + (param0 + param2.field_q), MatchCompleteScreen.field_C[param3]);
           sc.b(-95);
           if (param1 != 26746) {

@@ -422,7 +422,7 @@ final class Brick extends RectangleBody {
         int var4 = BrickABrac.field_J ? 1 : 0;
         GameplayScreen.field_j = 0;
         MouseInput.field_d = null;
-        fc.field_e = null;
+        IndexedSpriteGeometry.field_e = null;
         int var2 = gd.field_a;
         gd.field_a = up.field_z;
         int var3 = -47 / ((param0 + 22) / 61);

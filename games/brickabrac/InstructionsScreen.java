@@ -208,7 +208,7 @@ final class InstructionsScreen extends MenuScreen {
 
     InstructionsScreen() {
         super(7, 38, 460, 402, 35, LevelPackCard.field_n);
-        m.field_j = ob.field_D.field_F + ob.field_D.field_P + 1;
+        m.field_j = ob.field_D.ascent + ob.field_D.descent + 1;
     }
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
@@ -235,7 +235,7 @@ final class InstructionsScreen extends MenuScreen {
             stackIn_5_0 = this.e((byte) 112);
           }
           var7_ref_String = stackIn_5_0;
-          var8_int = nn.field_g.c(var7_ref_String);
+          var8_int = nn.field_g.measureText(var7_ref_String);
           if (var8_int > var4) {
             var4 = var8_int;
           }
@@ -270,7 +270,7 @@ final class InstructionsScreen extends MenuScreen {
         int var4 = 0;
         int var2;
         int var3;
-        bi var5;
+        PaletteFont var5;
         int var6;
         int var7;
         int var8;
@@ -280,11 +280,11 @@ final class InstructionsScreen extends MenuScreen {
         im.a(550, 5, 243, 5, 140, (byte) -101, 45);
         al.a(this.screenId, 19);
         if (this.pageIndex != 0) {
-          ob.field_D.a(h.field_C, nd.field_f);
+          ob.field_D.setInlineSprites(h.field_C, nd.field_f);
         } else {
-          ob.field_D.a(un.field_e, vj.field_f);
+          ob.field_D.setInlineSprites(un.field_e, vj.field_f);
         }
-        var2 = ob.field_D.a(gh.field_b[this.pageIndex], jq.field_t, ok.field_b);
+        var2 = ob.field_D.wrapText(gh.field_b[this.pageIndex], jq.field_t, ok.field_b);
         var3 = 145 - (-m.field_j - 4);
         for (var4 = 0; var2 > var4; var4++) {
           var5 = ob.field_D;
@@ -319,13 +319,13 @@ final class InstructionsScreen extends MenuScreen {
               }
             }
           }
-          var5.c(ok.field_b[var4], 60, var3, var6, var7);
+          var5.drawLeft(ok.field_b[var4], 60, var3, var6, var7);
           var3 = var3 + (m.field_j + var8);
         }
         if (obfuscationGuard >= -14) {
           InstructionsScreen.g((byte) 61);
         }
-        nn.field_g.a(pb.a(this.pageIndex, 4), 581, -12 + (nn.field_g.field_B + 373), 0, -1);
+        nn.field_g.drawRight(pb.a(this.pageIndex, 4), 581, -12 + (nn.field_g.capHeight + 373), 0, -1);
         this.a(0);
     }
 

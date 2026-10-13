@@ -241,9 +241,9 @@ final class ri extends ib implements en {
         if (param2 != 0) {
           return;
         }
-        dh var5 = a.field_u;
+        TextFont var5 = a.field_u;
         if (this.field_J != null) {
-          var5.a(AchievementIcon.field_l, param1 + this.field_o, this.field_w + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.field_P + var5.field_F);
+          var5.a(AchievementIcon.field_l, param1 + this.field_o, this.field_w + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
         }
     }
 

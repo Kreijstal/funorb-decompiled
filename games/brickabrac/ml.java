@@ -85,7 +85,7 @@ final class ml {
         return stackIn_7_0;
     }
 
-    final static void a(int param0, tp param1, byte param2, int param3, int param4, int param5) {
+    final static void a(int param0, IndexedSprite param1, byte param2, int param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -112,17 +112,17 @@ final class ml {
         int var14Lifetime3;
         var20 = BrickABrac.field_J ? 1 : 0;
         try {
-          var6_int = (-param5 + param0 << 8) / param1.field_f;
-          param4 = param4 + param1.field_b;
-          param3 = param3 + param1.field_g;
-          var7 = var6_int * param1.field_b + (param5 << 8);
+          var6_int = (-param5 + param0 << 8) / param1.canvasWidth;
+          param4 = param4 + param1.offsetX;
+          param3 = param3 + param1.offsetY;
+          var7 = var6_int * param1.offsetX + (param5 << 8);
           if (param2 <= 80) {
             field_e = (String[]) null;
           }
           var8 = param3 * Rasterizer2D.width + param4;
           var9 = 0;
-          var10 = param1.field_a;
-          var11 = param1.field_d;
+          var10 = param1.height;
+          var11 = param1.width;
           var12 = Rasterizer2D.width - var11;
           var13 = 0;
           if (param3 < Rasterizer2D.clipTop) {
@@ -162,7 +162,7 @@ final class ml {
                 if (var15 >= 0) {
                   incrementValue$0 = var9;
                   var9++;
-                  var17 = param1.field_j[255 & param1.field_i[incrementValue$0]];
+                  var17 = param1.palette[255 & param1.indices[incrementValue$0]];
                   if (var17 != 0) {
                     if (var15 > 255) {
                       Rasterizer2D.pixels[var8] = var17;
@@ -202,8 +202,8 @@ final class ml {
         field_c = null;
         field_e = null;
         if (param0 != 111) {
-          tp var2 = (tp) null;
-          ml.a(26, (tp) null, (byte) 26, -9, 66, -42);
+          IndexedSprite var2 = (IndexedSprite) null;
+          ml.a(26, (IndexedSprite) null, (byte) 26, -9, 66, -42);
         }
     }
 

@@ -87,7 +87,7 @@ abstract class jc extends ib {
             !(this.field_s <= nl.field_e.height)) {
             nl.field_e = new RgbSprite(this.field_t, this.field_s);
           }
-          fc.a(-109, nl.field_e);
+          IndexedSpriteGeometry.a(-109, nl.field_e);
           Rasterizer2D.clear();
           this.b(0, param3 ^ -281, 0);
           super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);

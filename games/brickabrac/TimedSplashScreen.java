@@ -107,7 +107,7 @@ final class TimedSplashScreen extends MenuScreen {
         if (obfuscationGuard >= -14) {
           return;
         }
-        RankingsScreen.field_t.b(0, 0);
+        RankingsScreen.field_t.drawOpaque(0, 0);
         pg.d(0);
         MovingBody.a((byte) -115);
     }

@@ -205,7 +205,7 @@ final class LevelList {
               } else {
                 labelStyle = (levelIndex != this.selectedLevelIndex) ? 2 : 1;
               }
-              nn.field_g.b(this.pack.metadata[levelIndex].numberLabel, (this.viewport.x * 2 + this.viewport.width) / 2, rowBaselineY, labelStyle, -1);
+              nn.field_g.drawCentered(this.pack.metadata[levelIndex].numberLabel, (this.viewport.x * 2 + this.viewport.width) / 2, rowBaselineY, labelStyle, -1);
             }
             levelIndex++;
             continue;
@@ -429,7 +429,7 @@ final class LevelList {
           this.viewport = viewport;
           this.buttonIndex = buttonIndex;
           this.pack = pack;
-          this.labelBaselineOffset = nn.field_g.field_L + (nn.field_g.field_B - 5);
+          this.labelBaselineOffset = nn.field_g.xHeight + (nn.field_g.capHeight - 5);
           this.rowGap = rowGap;
           this.rowHeight = rowHeight;
           this.contentHeight = this.rowGap + this.pack.levelCount * this.rowSpacing;

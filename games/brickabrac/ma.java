@@ -4,13 +4,13 @@
 final class ma extends h {
     private String field_M;
     private boolean field_J;
-    private dh field_H;
+    private TextFont field_H;
     private int field_L;
     private int field_K;
     static ac field_I;
     static String field_G;
     private int field_N;
-    static bi field_O;
+    static PaletteFont field_O;
     static mf field_P;
 
     final void a(int param0, int param1, int param2, byte param3) {
@@ -21,7 +21,7 @@ final class ma extends h {
           return;
         }
         int var7 = this.field_J ? this.field_t - (this.field_N + this.field_L * 2) : 0;
-        this.field_H.a(this.field_M, this.field_L + var5 + var7, this.field_L + var6, this.field_N - this.field_L, -(2 * this.field_L) + this.field_s, this.field_K, -1, !this.field_J ? 2 : 0, 1, this.field_H.field_F);
+        this.field_H.a(this.field_M, this.field_L + var5 + var7, this.field_L + var6, this.field_N - this.field_L, -(2 * this.field_L) + this.field_s, this.field_K, -1, !this.field_J ? 2 : 0, 1, this.field_H.ascent);
     }
 
     public static void c(boolean param0) {
@@ -30,11 +30,11 @@ final class ma extends h {
         field_G = null;
         field_P = null;
         if (param0) {
-          field_O = (bi) null;
+          field_O = (PaletteFont) null;
         }
     }
 
-    ma(int param0, int param1, int param2, int param3, oc param4, boolean param5, int param6, int param7, dh param8, int param9, String param10) {
+    ma(int param0, int param1, int param2, int param3, oc param4, boolean param5, int param6, int param7, TextFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ub) null, (uh) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -60,7 +60,7 @@ final class ma extends h {
           this.field_M = param10;
           this.field_N = param6;
           var12_int = this.field_N - this.field_L;
-          var13 = this.field_H.b(param10, var12_int, this.field_H.field_F) + this.field_L * 2;
+          var13 = this.field_H.measureWrappedHeight(param10, var12_int, this.field_H.ascent) + this.field_L * 2;
           if (param3 >= var13) {
             var13 = param3;
           } else {

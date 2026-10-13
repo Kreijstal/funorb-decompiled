@@ -8,7 +8,7 @@ final class ce {
     static int[][] field_a;
     static char[] field_f;
     static int field_d;
-    static bi field_e;
+    static PaletteFont field_e;
 
     final static void a(int param0) {
         if (mf.field_f != null) {
@@ -57,7 +57,7 @@ final class ce {
             if (!param0) {
               wd.field_w.a(param0, -15211);
               if (param2 < 89) {
-                field_e = (bi) null;
+                field_e = (PaletteFont) null;
               }
               var5 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
               if (var5 > 640) {
@@ -90,7 +90,7 @@ final class ce {
               HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
               return;
             }
-            field_e = (bi) null;
+            field_e = (PaletteFont) null;
             var5Lifetime3 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
             if (var5Lifetime3 <= 640) {
               if (635 <= var5Lifetime3) {
@@ -115,7 +115,7 @@ final class ce {
           wd.field_w.a(param0, -15211);
         }
         if (param2 < 89) {
-          field_e = (bi) null;
+          field_e = (PaletteFont) null;
         }
         var5Lifetime1 = hd.field_a.e((byte) -92) + hd.field_a.field_Eb;
         if (var5Lifetime1 > 640) {

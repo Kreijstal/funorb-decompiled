@@ -10,7 +10,7 @@ final class lj extends IntrusiveNode {
     static int[] field_l;
     static MouseInput mouseInput;
     static mh field_k;
-    static dh field_r;
+    static TextFont field_r;
     static int field_i;
 
     final static hg[] a(boolean param0, tg param1) {

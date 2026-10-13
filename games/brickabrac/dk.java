@@ -457,7 +457,7 @@ final class dk extends ib implements ha, en, vf {
     }
 
     final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
-        fc.a(-85, param2.field_p);
+        IndexedSpriteGeometry.a(-85, param2.field_p);
         Rasterizer2D.fillVerticalGradient(0, 0, param2.field_i, param2.field_q, pf.field_b[param1], 16777215);
         if (param4 != 23275) {
           return;
@@ -627,7 +627,7 @@ final class dk extends ib implements ha, en, vf {
         ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, og.field_Yb, 11579568, LevelCompleteScreen.field_z);
         this.a(var4, true);
         var3 = var3 + var4.field_s;
-        um var5 = new um(a.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, a.field_u.field_F, -1, 2147483647, true);
+        um var5 = new um(a.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, a.field_u.ascent, -1, 2147483647, true);
         this.field_I = new lg(var2, var5);
         this.field_I.field_z = "";
         this.field_I.a(qg.field_z, 0, (byte) -98);

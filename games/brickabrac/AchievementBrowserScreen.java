@@ -43,7 +43,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         int var13 = 0;
         int stackIn_9_0 = 0;
         int stackIn_17_0 = 0;
-        bi stackIn_19_0 = null;
+        PaletteFont stackIn_19_0 = null;
         String stackIn_20_1 = null;
         int var3;
         int var4;
@@ -87,45 +87,45 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         if (obfuscationGuard >= -14) {
           return;
         }
-        var4 = ob.field_D.field_P + ob.field_D.field_B;
-        var5 = nn.field_g.field_B + nn.field_g.field_P;
+        var4 = ob.field_D.descent + ob.field_D.capHeight;
+        var5 = nn.field_g.capHeight + nn.field_g.descent;
         if (-1 != var3) {
           stackIn_17_0 = (!eo.isBitSet(this.achievementMask, var3, (byte) -75)) ? 0 : 1;
           var6 = stackIn_17_0;
-          nn.field_g.c(field_s[var3], 209, nn.field_g.field_B + 246, 1, -1);
+          nn.field_g.drawLeft(field_s[var3], 209, nn.field_g.capHeight + 246, 1, -1);
           stackIn_19_0 = nn.field_g;
           if (var6 == 0) {
             stackIn_20_1 = po.field_c;
           } else {
             stackIn_20_1 = gi.field_s;
           }
-          ((bi) (Object) stackIn_19_0).c(stackIn_20_1, 209, 2 * var5 + 246 + 2, 2, -1);
+          ((PaletteFont) (Object) stackIn_19_0).drawLeft(stackIn_20_1, 209, 2 * var5 + 246 + 2, 2, -1);
           if (var6 != 0) {
-            IntrusiveHashTable.achievementSourceIcons[var3].a(54, 242);
+            IntrusiveHashTable.achievementSourceIcons[var3].drawTransparent(54, 242);
           } else {
             LevelCompleteScreen.field_F.drawTransparent(54, 242);
           }
           var7 = 246 + 5 * var5 / 2;
           var8 = var7 + var5;
-          var9 = var7 - (-(7 * var4) + ob.field_D.field_F);
-          var10 = ob.field_D.a(rd.a(mp.field_bc[var3], new String[]{nl.a(true, true, 0, (long)dp.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
+          var9 = var7 - (-(7 * var4) + ob.field_D.ascent);
+          var10 = ob.field_D.wrapText(rd.a(mp.field_bc[var3], new String[]{nl.a(true, true, 0, (long)dp.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
           for (var11 = 0; var11 < var10; var11++) {
-            ob.field_D.c(this.descriptionLines[var11], 209, var8, 2, -1);
+            ob.field_D.drawLeft(this.descriptionLines[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
           }
-          ob.field_D.c(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.height / 2), 2, -1);
-          ob.field_D.c(fl.field_m, 209, -nn.field_g.field_P + var9, 2, -1);
-          var11Lifetime1 = ob.field_D.c(fl.field_m) + 209;
+          ob.field_D.drawLeft(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.descent) - nj.field_z.height / 2), 2, -1);
+          ob.field_D.drawLeft(fl.field_m, 209, -nn.field_g.descent + var9, 2, -1);
+          var11Lifetime1 = ob.field_D.measureText(fl.field_m) + 209;
           var12 = -(nj.field_z.canvasHeight / 2) + var9;
           for (var13 = 0; fq.field_e[var3] > var13; var13++) {
             nj.field_z.a(var11Lifetime1, var12);
             var11Lifetime1 = var11Lifetime1 + nj.field_z.width / 3;
           }
         } else {
-          nn.field_g.c(jo.field_h, 209, 246 + nn.field_g.field_B, 2, -1);
+          nn.field_g.drawLeft(jo.field_h, 209, 246 + nn.field_g.capHeight, 2, -1);
           if (og.h(-26090)) {
             var6 = 246 + var5 * 3;
-            ob.field_D.c(na.field_N, 209, var6, 2, -1);
+            ob.field_D.drawLeft(na.field_N, 209, var6, 2, -1);
           }
         }
         al.a(this.screenId, 19);
@@ -560,7 +560,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
           var10 = stackIn_7_0;
           var7 = var10;
-          dupTemp$0 = 30 + nn.field_g.c(var10);
+          dupTemp$0 = 30 + nn.field_g.measureText(var10);
           var6_ref_q.width = dupTemp$0;
           var4 = var4 + dupTemp$0;
           if (var5 > 3) {

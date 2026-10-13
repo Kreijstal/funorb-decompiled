@@ -141,10 +141,10 @@ final class sq {
 
     final static m a(int param0) {
         if (param0 > 31) {
-          return new m(fc.a(57), ga.c(30794));
+          return new m(IndexedSpriteGeometry.a(57), ga.c(30794));
         }
         field_c = (kb) null;
-        return new m(fc.a(57), ga.c(30794));
+        return new m(IndexedSpriteGeometry.a(57), ga.c(30794));
     }
 
     public static void a(byte param0) {

@@ -132,10 +132,10 @@ final class lq {
         }
     }
 
-    final static tp a(int param0, int param1, int param2, mf param3) {
+    final static IndexedSprite a(int param0, int param1, int param2, mf param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        tp stackIn_6_0 = null;
+        IndexedSprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -143,7 +143,7 @@ final class lq {
         try {
           if (!ln.a(-105, param2, param3, param1)) {
             stackIn_2_0 = null;
-            return (tp) (stackIn_2_0);
+            return (IndexedSprite) (stackIn_2_0);
           }
           if (param0 != 0) {
             lq.d(-20);

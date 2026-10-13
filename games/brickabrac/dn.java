@@ -54,7 +54,7 @@ final class dn extends h {
         }
     }
 
-    final static void a(int param0, String param1, ml param2, int param3, dh param4) {
+    final static void a(int param0, String param1, ml param2, int param3, TextFont param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -79,7 +79,7 @@ final class dn extends h {
           for (var7 = 1; var7 < param1.length(); var7++) {
             var8 = param1.charAt(var7);
             if (60 == var8) {
-              var6 = param2.field_g[0] + (var5_int >> 8) + param4.c(param1.substring(0, var7));
+              var6 = param2.field_g[0] + (var5_int >> 8) + param4.measureText(param1.substring(0, var7));
             }
             if (-1 != var6) {
               param2.field_g[var7] = var6;
@@ -87,7 +87,7 @@ final class dn extends h {
               if (32 == var8) {
                 var5_int = var5_int + param3;
               }
-              param2.field_g[var7] = (var5_int >> 8) - (-param2.field_g[0] - param4.c(param1.substring(0, var7 + 1))) - param4.a((char) var8);
+              param2.field_g[var7] = (var5_int >> 8) - (-param2.field_g[0] - param4.measureText(param1.substring(0, var7 + 1))) - param4.getAdvance((char) var8);
             }
             if (var8 == 62) {
               var6 = -1;
@@ -233,7 +233,7 @@ final class dn extends h {
           field_J = (String) null;
         }
         if (ad.field_e == null) {
-          ad.field_e = new um(og.field_Yb, 20, 0, 0, 0, 11579568, -1, 0, 0, og.field_Yb.field_F, -1, 2147483647, true);
+          ad.field_e = new um(og.field_Yb, 20, 0, 0, 0, 11579568, -1, 0, 0, og.field_Yb.ascent, -1, 2147483647, true);
         }
         return ad.field_e;
     }

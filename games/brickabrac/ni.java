@@ -8,7 +8,7 @@ final class ni extends mh {
     static String field_Tb;
     static RgbSprite field_Ub;
     static boolean field_Sb;
-    static dh field_Wb;
+    static TextFont field_Wb;
     private mh field_Vb;
 
     final int a(byte param0, int param1) {

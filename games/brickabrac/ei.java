@@ -14,7 +14,7 @@ final class ei implements ub {
     private int field_d;
     private int field_i;
     private int field_c;
-    private dh field_n;
+    private TextFont field_n;
     private int field_e;
 
     public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
@@ -109,7 +109,7 @@ final class ei implements ub {
         field_a = null;
     }
 
-    ei(dh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    ei(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_i = 1;
         this.field_k = 1;
         try {

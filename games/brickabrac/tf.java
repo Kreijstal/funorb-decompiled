@@ -154,7 +154,7 @@ final class tf {
 
     final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
         try {
-          fc.a(-68, param2.field_p);
+          IndexedSpriteGeometry.a(-68, param2.field_p);
           Rasterizer2D.fillRectangle(0, 0, param2.field_i, param2.field_q, 16777215);
           int var6_int = -110 / ((param4 - 62) / 39);
           param5.drawTransparent((-param5.canvasWidth + param2.field_i) / 2, param2.field_q + (param0 - (param5.canvasHeight - 5 / param3)));

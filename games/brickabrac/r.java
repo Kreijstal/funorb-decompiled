@@ -92,8 +92,8 @@ class r extends um {
         return false;
     }
 
-    r(dh param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_F, -1, 2147483647, false);
+    r(TextFont param0, int param1) {
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.ascent, -1, 2147483647, false);
     }
 
     final static int a(byte param0, int param1) {

@@ -124,18 +124,18 @@ final class hc {
         }
     }
 
-    final static void a(byte param0, tp[] param1, int[] param2, mf param3, mf param4) {
+    final static void a(byte param0, IndexedSprite[] param1, int[] param2, mf param3, mf param4) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[] dupTemp$1 = null;
         RgbSprite[] dupTemp$2 = null;
         RgbSprite[] dupTemp$3 = null;
-        tp[] var5 = null;
-        tp[] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var18 = 0;
         int[] var19 = null;
-        tp[] var20 = null;
+        IndexedSprite[] var20 = null;
         int[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
@@ -171,7 +171,7 @@ final class hc {
           var5 = var20;
           LevelPackLoader.field_g = var20.length;
           if (param1 != null) {
-            var6 = new tp[LevelPackLoader.field_g + param1.length];
+            var6 = new IndexedSprite[LevelPackLoader.field_g + param1.length];
             for (var7_int = 0; LevelPackLoader.field_g > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
@@ -196,7 +196,7 @@ final class hc {
               }
             } else {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param1.length; var7_intLifetime2++) {
-                var6_array[LevelPackLoader.field_g + var7_intLifetime2] = param1[var7_intLifetime2].field_h;
+                var6_array[LevelPackLoader.field_g + var7_intLifetime2] = param1[var7_intLifetime2].canvasHeight;
               }
             }
           }
@@ -211,11 +211,11 @@ final class hc {
           var7 = TooltipSprite.a((byte) -37, "lobby", param3, param4, "largefont");
           rd.field_e = TooltipSprite.a((byte) -37, "lobby", param3, param4, "generalfont");
           ScorePopup.field_m = TooltipSprite.a((byte) -37, "lobby", param3, param4, "chatfont");
-          var7.a(var5, var24);
-          rd.field_e.a(var5, var24);
-          ScorePopup.field_m.a(var5, var24);
+          var7.setInlineSprites(var5, var24);
+          rd.field_e.setInlineSprites(var5, var24);
+          ScorePopup.field_m.setInlineSprites(var5, var24);
           var8 = new mh(0L, (mh) null);
-          var8.field_O = (dh) ((Object) var7);
+          var8.field_O = (TextFont) ((Object) var7);
           var8.field_X = 16777215;
           var8.field_R = np.field_a;
           var8.field_Q = 1;
@@ -224,7 +224,7 @@ final class hc {
           var10 = new mh(0L, (mh) null);
           var10.field_R = np.field_a;
           var10.field_X = 16777215;
-          var10.field_O = (dh) ((Object) rd.field_e);
+          var10.field_O = (TextFont) ((Object) rd.field_e);
           var11 = var10;
           var10.field_Q = 1;
           var11.field_S = 1;
@@ -257,7 +257,7 @@ final class hc {
           ik.field_a.field_Jb = TimedSplashScreen.a(false, (byte) 83, 3815994, 30, 2039583, true);
           ad.field_l = new mh(0L, (mh) null);
           ad.field_l.field_Q = 1;
-          ad.field_l.field_O = (dh) ((Object) rd.field_e);
+          ad.field_l.field_O = (TextFont) ((Object) rd.field_e);
           ad.field_l.field_R = np.field_a;
           ad.field_l.field_X = 13421772;
           DualLinkNode.field_t = new mh(0L, ad.field_l);
@@ -267,7 +267,7 @@ final class hc {
           DualLinkNode.field_t.field_Y = 16777215;
           DualLinkNode.field_t.field_vb = 16777215;
           var15 = new mh(0L, DualLinkNode.field_t);
-          var15.field_O = (dh) ((Object) var7);
+          var15.field_O = (TextFont) ((Object) var7);
           var15.field_X = 16777215;
           var15.field_R = np.field_a;
           Paddle.field_C = new mh(0L, ad.field_l);

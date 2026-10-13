@@ -966,7 +966,7 @@ final class sb implements vc {
               var4 = n.field_d ? 1 : 0;
               n.field_d = false;
               if (this.d(76)) {
-                var5 = IntrusiveHashTable.field_l + nn.field_g.c(nn.field_f);
+                var5 = IntrusiveHashTable.field_l + nn.field_g.measureText(nn.field_f);
                 stackIn_22_0 = (0 <= pq.pointerX) && (pq.pointerX < var5) && (DualLinkDeque.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.field_db > po.pointerY);
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
@@ -1064,7 +1064,7 @@ final class sb implements vc {
           }
           return;
         }
-        var5Lifetime2 = IntrusiveHashTable.field_l + nn.field_g.c(nn.field_f);
+        var5Lifetime2 = IntrusiveHashTable.field_l + nn.field_g.measureText(nn.field_f);
         stackIn_80_0 = (0 <= pq.pointerX) && (pq.pointerX < var5Lifetime2) && (DualLinkDeque.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.field_db > po.pointerY);
         n.field_d = stackIn_80_0;
         if (!n.field_d) {
@@ -1423,7 +1423,7 @@ final class sb implements vc {
     }
 
     sb() {
-        LevelSelectScreen.field_w = nn.field_g.field_P + (qi.field_K[0].height + qi.field_K[6].height) + nn.field_g.field_B;
+        LevelSelectScreen.field_w = nn.field_g.descent + (qi.field_K[0].height + qi.field_K[6].height) + nn.field_g.capHeight;
         IntrusiveHashTable.field_l = qi.field_K[2].width + (3 + qi.field_K[0].width);
     }
 

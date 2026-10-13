@@ -327,7 +327,7 @@ final class BitPacketBuffer extends PacketBuffer {
 
     final static void a(RgbSprite param0, pb param1, int param2, int param3, byte param4, int param5) {
         try {
-          fc.a(-102, param1.field_p);
+          IndexedSpriteGeometry.a(-102, param1.field_p);
           Rasterizer2D.fillVerticalGradient(0, 0, param1.field_i, param1.field_q, hh.field_c[param2], 10792131);
           param0.drawTransparent((param1.field_i - param0.canvasWidth) / 2, -(75 / param3) - param0.canvasHeight + (param5 + param1.field_q));
           sc.b(-102);

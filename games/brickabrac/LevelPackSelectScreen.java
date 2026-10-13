@@ -123,7 +123,7 @@ final class LevelPackSelectScreen extends MenuScreen {
           }
           var10 = stackIn_7_0;
           var5_ref = var10;
-          dupTemp$0 = nn.field_g.c(var10) + 30;
+          dupTemp$0 = nn.field_g.measureText(var10) + 30;
           var9.width = dupTemp$0;
           var2 = var2 + dupTemp$0;
           if (var3 > 0) {

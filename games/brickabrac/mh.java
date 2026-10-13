@@ -16,7 +16,7 @@ class mh extends ba {
     RgbSprite field_T;
     private int field_qb;
     int field_db;
-    dh field_O;
+    TextFont field_O;
     int field_S;
     private boolean field_Kb;
     int field_ub;
@@ -335,25 +335,25 @@ class mh extends ba {
             this.field_Cb != null) {
             var24Lifetime2 = var27 + this.field_Cb;
           }
-          if (this.field_O.c(var24Lifetime2) <= -(this.field_V * 2) + this.field_Ib &&
+          if (this.field_O.measureText(var24Lifetime2) <= -(this.field_V * 2) + this.field_Ib &&
             var24Lifetime2.indexOf("<br>") < 0) {
             if (this.field_Q != 1) {
               if (this.field_Q == 2) {
-                var23 = var23 + (-this.field_O.field_F + this.field_cb - this.field_O.field_P);
+                var23 = var23 + (-this.field_O.ascent + this.field_cb - this.field_O.descent);
               }
             } else {
-              var23 = var23 + (this.field_cb - this.field_O.field_F - this.field_O.field_P) / 2;
+              var23 = var23 + (this.field_cb - this.field_O.ascent - this.field_O.descent) / 2;
             }
             if (this.field_S == 0) {
-              this.field_O.c(var24Lifetime2, var22 + (this.field_Eb + this.field_V), this.field_db + var23 + this.field_O.field_F, var19, -1, this.field_jb);
+              this.field_O.c(var24Lifetime2, var22 + (this.field_Eb + this.field_V), this.field_db + var23 + this.field_O.ascent, var19, -1, this.field_jb);
             } else {
               if (this.field_S == 1) {
-                this.field_O.b(var24Lifetime2, var22 + this.field_V + this.field_Eb + (-(this.field_V * 2) + this.field_Ib) / 2, this.field_db - (-var23 - this.field_O.field_F), var19, -1, this.field_jb);
+                this.field_O.drawCenteredAlpha(var24Lifetime2, var22 + this.field_V + this.field_Eb + (-(this.field_V * 2) + this.field_Ib) / 2, this.field_db - (-var23 - this.field_O.ascent), var19, -1, this.field_jb);
               } else {
                 if (this.field_S != 2) {
                   this.field_O.a(var24Lifetime2, var22 + (this.field_V + this.field_Eb), var23 + this.field_db, -(2 * this.field_V) + this.field_Ib, this.field_cb, var19, -1, this.field_jb, this.field_S, this.field_Q, this.field_R);
                 } else {
-                  this.field_O.a(var24Lifetime2, this.field_Eb + this.field_V - (-var22 + this.field_V * 2) + this.field_Ib, this.field_db + (var23 + this.field_O.field_F), var19, -1, this.field_jb);
+                  this.field_O.drawRightAlpha(var24Lifetime2, this.field_Eb + this.field_V - (-var22 + this.field_V * 2) + this.field_Ib, this.field_db + (var23 + this.field_O.ascent), var19, -1, this.field_jb);
                 }
               }
             }
@@ -787,7 +787,7 @@ class mh extends ba {
         int var4_intLifetime1;
         if (this.field_Mb != null &&
           null != this.field_O) {
-          var4_int = this.field_O.b(this.field_Mb, param0);
+          var4_int = this.field_O.measureWrappedWidth(this.field_Mb, param0);
           if (var3 < var4_int) {
             var3 = var4_int;
           }

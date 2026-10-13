@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dg implements ub {
-    private dh field_j;
+    private TextFont field_j;
     static String field_k;
     private int field_i;
     private int field_h;
@@ -60,7 +60,7 @@ final class dg implements ub {
             dg.a(46);
           }
           if (this.field_j != null) {
-            this.field_j.b(var12.field_A, var7 / 2 + var8, var9 + this.field_j.field_N + var12.field_M, this.field_h, this.field_f);
+            this.field_j.drawCentered(var12.field_A, var7 / 2 + var8, var9 + this.field_j.baselineHeight + var12.field_M, this.field_h, this.field_f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class dg implements ub {
         if (MatchResultScreen.field_t > 200) {
           var5 = (-MatchResultScreen.field_t + 250 << 8) / 50;
         }
-        fc.a(-90, me.field_b);
+        IndexedSpriteGeometry.a(-90, me.field_b);
         mg.c();
         if (!param0) {
           Rasterizer2D.clear();
@@ -243,7 +243,7 @@ final class dg implements ub {
         }
     }
 
-    dg(dh param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    dg(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_j = param0;
           this.field_h = param1;

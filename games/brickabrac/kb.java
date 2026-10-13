@@ -200,7 +200,7 @@ final class kb extends mh {
           for (var12 = 0; MenuSelection.field_p.length > var12; var12++) {
             var13 = new mh(0L, param3, qo.field_M[var12]);
             var14 = new mh(0L, param3, MenuSelection.field_p[var12]);
-            var15 = param3.field_O.c(MenuSelection.field_p[var12]);
+            var15 = param3.field_O.measureText(MenuSelection.field_p[var12]);
             var13.a(15, var10, 20, 65, (byte) 64);
             if (var15 > var11) {
               var11 = var15;

@@ -45,11 +45,11 @@ final class wl extends d {
           if (ik.field_c != null &&
             ik.field_c.width >= var9 &&
             var10 <= ik.field_c.height) {
-            fc.a(-114, ik.field_c);
+            IndexedSpriteGeometry.a(-114, ik.field_c);
             Rasterizer2D.clear();
           } else {
             ik.field_c = new RgbSprite(var9, var10);
-            fc.a(-87, ik.field_c);
+            IndexedSpriteGeometry.a(-87, ik.field_c);
           }
           var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.field_P << 10, 4096);
           sc.b(-104);

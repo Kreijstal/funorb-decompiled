@@ -6,7 +6,7 @@ final class ja {
     static String field_b;
     static RgbSprite[][] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, dh param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, dh param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, RgbSprite[] param19, RgbSprite[] param20) {
+    final static void a(int param0, int param1, int param2, int param3, TextFont param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, TextFont param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, RgbSprite[] param19, RgbSprite[] param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

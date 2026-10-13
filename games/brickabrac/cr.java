@@ -73,7 +73,7 @@ final class cr extends oc {
           }
           sc.b(-103);
           if (param0 + this.field_G.width >= Rasterizer2D.clipLeft) {
-            fc.a(-112, this.field_C);
+            IndexedSpriteGeometry.a(-112, this.field_C);
             param2.drawTransparent(-this.field_K, 0);
             param2.drawTransparent(this.field_H * 2 - this.field_K, 0);
             this.field_O.b(0, 0);
@@ -81,7 +81,7 @@ final class cr extends oc {
             this.field_C.drawTransparent(param0, param1);
           }
           if (Rasterizer2D.clipRight >= var5_int - this.field_G.width) {
-            fc.a(-51, this.field_C);
+            IndexedSpriteGeometry.a(-51, this.field_C);
             for (var7 = this.field_t - this.field_G.width + this.field_K; var7 > 2 * this.field_H; var7 = var7 - this.field_H * 2) {
             }
             param2.drawTransparent(-var7, 0);
@@ -190,7 +190,7 @@ final class cr extends oc {
           return (RgbSprite) null;
         }
         RgbSprite var3 = new RgbSprite(var2, this.field_s);
-        fc.a(-67, var3);
+        IndexedSpriteGeometry.a(-67, var3);
         for (var4 = 0; this.field_s > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_s - var4));
@@ -220,7 +220,7 @@ final class cr extends oc {
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
-        fc.a(-102, var5);
+        IndexedSpriteGeometry.a(-102, var5);
         int var6 = this.field_s >> 1;
         for (var7 = 0; var7 < this.field_s; var7++) {
           var8 = (var7 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);

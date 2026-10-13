@@ -29,14 +29,14 @@ final class AchievementIcon extends IntrusiveNode {
             param3 = (param3 * 200 + var9_int) / (var9_int * 2);
           }
           if (-1 != param8) {
-            ob.field_D.a(1 + param8 + ". ", qo.field_N + 54, param1, param5, -1);
+            ob.field_D.drawRight(1 + param8 + ". ", qo.field_N + 54, param1, param5, -1);
           }
-          ob.field_D.c(param2, 54 + qo.field_N, param1, param5, -1);
-          ob.field_D.a(Integer.toString(param4), mf.field_d[0], param1, param5, -1);
-          ob.field_D.a(var9_int < 50 ? Integer.toString(var9_int) : "50+", mf.field_d[1], param1, param5, -1);
-          ob.field_D.a(param3 + "%", mf.field_d[2], param1, param5, param6);
-          ob.field_D.a(param0 + "%", mf.field_d[3], param1, param5, -1);
-          ob.field_D.a(param7 + "%", mf.field_d[4], param1, param5, -1);
+          ob.field_D.drawLeft(param2, 54 + qo.field_N, param1, param5, -1);
+          ob.field_D.drawRight(Integer.toString(param4), mf.field_d[0], param1, param5, -1);
+          ob.field_D.drawRight(var9_int < 50 ? Integer.toString(var9_int) : "50+", mf.field_d[1], param1, param5, -1);
+          ob.field_D.drawRight(param3 + "%", mf.field_d[2], param1, param5, param6);
+          ob.field_D.drawRight(param0 + "%", mf.field_d[3], param1, param5, -1);
+          ob.field_D.drawRight(param7 + "%", mf.field_d[4], param1, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "i.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -272,9 +272,9 @@ final class AchievementIcon extends IntrusiveNode {
         RgbSprite var6;
         RgbSprite var7;
         RgbSprite var10;
-        tp var11;
-        tp var12;
-        tp var13;
+        IndexedSprite var11;
+        IndexedSprite var12;
+        IndexedSprite var13;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (eo.isBitSet(this.owner.achievementMask, this.achievementId, (byte) -75)) {
           if (this.achievementId == nf.selectedAchievementId) {
@@ -282,9 +282,9 @@ final class AchievementIcon extends IntrusiveNode {
             if (this.cachedThumbnail == null ||
               this.thumbnailIsPlaceholder) {
               var12 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
-              this.cachedThumbnail = new RgbSprite(var12.field_f / 4, var12.field_h / 4);
-              fc.a(-119, this.cachedThumbnail);
-              var12.c(0, 0);
+              this.cachedThumbnail = new RgbSprite(var12.canvasWidth / 4, var12.canvasHeight / 4);
+              IndexedSpriteGeometry.a(-119, this.cachedThumbnail);
+              var12.drawQuarter(0, 0);
               sc.b(-89);
               this.thumbnailIsPlaceholder = false;
             }
@@ -294,9 +294,9 @@ final class AchievementIcon extends IntrusiveNode {
               if (this.cachedThumbnail == null ||
                 this.thumbnailIsPlaceholder) {
                 var11 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
-                this.cachedThumbnail = new RgbSprite(var11.field_f / 4, var11.field_h / 4);
-                fc.a(-119, this.cachedThumbnail);
-                var11.c(0, 0);
+                this.cachedThumbnail = new RgbSprite(var11.canvasWidth / 4, var11.canvasHeight / 4);
+                IndexedSpriteGeometry.a(-119, this.cachedThumbnail);
+                var11.drawQuarter(0, 0);
                 sc.b(-89);
                 this.thumbnailIsPlaceholder = false;
               }
@@ -304,9 +304,9 @@ final class AchievementIcon extends IntrusiveNode {
               if (this.cachedThumbnail == null ||
                 this.thumbnailIsPlaceholder) {
                 var13 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
-                this.cachedThumbnail = new RgbSprite(var13.field_f / 4, var13.field_h / 4);
-                fc.a(-119, this.cachedThumbnail);
-                var13.c(0, 0);
+                this.cachedThumbnail = new RgbSprite(var13.canvasWidth / 4, var13.canvasHeight / 4);
+                IndexedSpriteGeometry.a(-119, this.cachedThumbnail);
+                var13.drawQuarter(0, 0);
                 sc.b(-89);
                 this.thumbnailIsPlaceholder = false;
               }
@@ -318,7 +318,7 @@ final class AchievementIcon extends IntrusiveNode {
               if (this.cachedThumbnail == null) {
                 var6 = LevelCompleteScreen.field_F;
                 this.cachedThumbnail = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
-                fc.a(-76, this.cachedThumbnail);
+                IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
                 var6.e(0, 0);
                 sc.b(-110);
                 this.thumbnailIsPlaceholder = true;
@@ -326,7 +326,7 @@ final class AchievementIcon extends IntrusiveNode {
                 if (!this.thumbnailIsPlaceholder) {
                   var7 = LevelCompleteScreen.field_F;
                   this.cachedThumbnail = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
-                  fc.a(-76, this.cachedThumbnail);
+                  IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
                   var7.e(0, 0);
                   sc.b(-110);
                   this.thumbnailIsPlaceholder = true;
@@ -345,7 +345,7 @@ final class AchievementIcon extends IntrusiveNode {
           if (this.cachedThumbnail == null) {
             var10 = LevelCompleteScreen.field_F;
             this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
-            fc.a(-76, this.cachedThumbnail);
+            IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
             var10.e(0, 0);
             sc.b(-110);
             this.thumbnailIsPlaceholder = true;
@@ -353,7 +353,7 @@ final class AchievementIcon extends IntrusiveNode {
             if (!this.thumbnailIsPlaceholder) {
               var10 = LevelCompleteScreen.field_F;
               this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
-              fc.a(-76, this.cachedThumbnail);
+              IndexedSpriteGeometry.a(-76, this.cachedThumbnail);
               var10.e(0, 0);
               sc.b(-110);
               this.thumbnailIsPlaceholder = true;

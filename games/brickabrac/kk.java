@@ -10,12 +10,12 @@ final class kk {
     static String field_d;
     static String field_f;
 
-    final static tp[] a(byte param0) {
+    final static IndexedSprite[] a(byte param0) {
         int var2 = 0;
         int var3 = BrickABrac.field_J ? 1 : 0;
-        tp[] var1 = new tp[nl.field_c];
+        IndexedSprite[] var1 = new IndexedSprite[nl.field_c];
         for (var2 = 0; nl.field_c > var2; var2++) {
-          var1[var2] = new tp(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], cn.field_a[var2], qp.field_c);
+          var1[var2] = new IndexedSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], cn.field_a[var2], qp.field_c);
         }
         if (param0 == -2) {
           MotionWaypoint.d((byte) 96);

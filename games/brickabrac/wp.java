@@ -4,7 +4,7 @@
 final class wp {
     static String field_i;
     private mf field_j;
-    static dh field_c;
+    static TextFont field_c;
     static mh field_k;
     private mf field_g;
     static NodeDeque field_f;

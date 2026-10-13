@@ -19,9 +19,9 @@ final class og extends mh {
     private int field_Pb;
     private og field_Vb;
     private int field_ec;
-    static dh field_Yb;
+    static TextFont field_Yb;
 
-    final static void a(String[] args, tp[] param1, byte[] param2, RgbSprite[][] param3, byte[] param4, int[] param5, int param6, RgbSprite[][] param7, mf param8, int param9, mf param10, String[][] param11, mf param12, int param13, int[] param14, String[][] param15, boolean param16) {
+    final static void a(String[] args, IndexedSprite[] param1, byte[] param2, RgbSprite[][] param3, byte[] param4, int[] param5, int param6, RgbSprite[][] param7, mf param8, int param9, mf param10, String[][] param11, mf param12, int param13, int[] param14, String[][] param15, boolean param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -429,7 +429,7 @@ final class og extends mh {
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
         RuntimeException decompiledCaughtException = null;
-        dh var10 = null;
+        TextFont var10 = null;
         RuntimeException var10_ref = null;
         String var11 = null;
         String var12 = null;
@@ -445,7 +445,7 @@ final class og extends mh {
           this.field_fc = param7;
           this.field_cc = this.field_Ub.length;
           var10 = param3.field_O;
-          this.field_dc = var10.field_P + (var10.field_F + 2);
+          this.field_dc = var10.descent + (var10.ascent + 2);
           this.field_Pb = this.field_dc * this.field_cc;
           this.field_Rb = 0;
           this.field_Qb = new rk[this.field_cc];
@@ -465,7 +465,7 @@ final class og extends mh {
               }
               this.field_Qb[var13] = new rk(0L, param2, (mh) null, param3, (RgbSprite) (var14), param6[var13]);
               this.a(this.field_Qb[var13], 0);
-              var15 = var10.c(param6[var13]);
+              var15 = var10.measureText(param6[var13]);
               if (var15 > this.field_Rb) {
                 this.field_Rb = var15;
               }

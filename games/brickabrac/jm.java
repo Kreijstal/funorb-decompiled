@@ -148,7 +148,7 @@ final class jm {
             }
             stackIn_20_0 = var6.field_Xb;
             if (0 < var10) {
-              stackIn_21_1 = dh.a(var6.field_Xb.field_O, var6.field_Rb, var10);
+              stackIn_21_1 = TextFont.truncateText(var6.field_Xb.field_O, var6.field_Rb, var10);
             } else {
               stackIn_21_1 = var6.field_Rb;
             }
@@ -201,11 +201,11 @@ final class jm {
         }
     }
 
-    final static mb a(byte[] param0, byte param1) {
-        mb var2 = null;
+    final static AlphaFont a(byte[] param0, byte param1) {
+        AlphaFont var2 = null;
         RuntimeException var2_ref = null;
-        mb stackIn_5_0 = null;
-        mb stackIn_7_0 = null;
+        AlphaFont stackIn_5_0 = null;
+        AlphaFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -215,10 +215,10 @@ final class jm {
             return null;
           }
           if (param1 >= -7) {
-            stackIn_5_0 = (mb) null;
+            stackIn_5_0 = (AlphaFont) null;
             return stackIn_5_0;
           }
-          var2 = new mb(param0, ag.field_K, dl.field_d, jh.field_b, gg.field_t, qp.field_c, cn.field_a);
+          var2 = new AlphaFont(param0, ag.field_K, dl.field_d, jh.field_b, gg.field_t, qp.field_c, cn.field_a);
           MotionWaypoint.d((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;

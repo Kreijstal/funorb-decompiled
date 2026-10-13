@@ -166,7 +166,7 @@ final class sk extends h {
           return;
         }
         RgbSprite var6 = new RgbSprite(this.field_E.field_t, this.field_E.field_s);
-        fc.a(-113, var6);
+        IndexedSpriteGeometry.a(-113, var6);
         this.field_E.a(0, 0, param2, param3);
         sc.b(param3 ^ 119);
         var6.b(param1 + this.field_o, param0 + this.field_w, this.field_K);

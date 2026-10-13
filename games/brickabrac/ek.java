@@ -14,11 +14,11 @@ final class ek extends bj implements en {
     static String[] field_eb;
     static String field_fb;
 
-    final static tp a(tp param0, byte param1, int[] param2) {
-        tp var3 = null;
+    final static IndexedSprite a(IndexedSprite param0, byte param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        tp stackIn_2_0 = null;
-        tp stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -27,18 +27,18 @@ final class ek extends bj implements en {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -57) {
-            stackIn_2_0 = (tp) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var3 = new tp(0, 0, 0);
-          var3.field_i = param0.field_i;
-          var3.field_a = param0.field_a;
-          var3.field_d = param0.field_d;
-          var3.field_h = param0.field_h;
-          var3.field_g = param0.field_g;
-          var3.field_j = param2;
-          var3.field_f = param0.field_f;
-          var3.field_b = param0.field_b;
+          var3 = new IndexedSprite(0, 0, 0);
+          var3.indices = param0.indices;
+          var3.height = param0.height;
+          var3.width = param0.width;
+          var3.canvasHeight = param0.canvasHeight;
+          var3.offsetY = param0.offsetY;
+          var3.palette = param2;
+          var3.canvasWidth = param0.canvasWidth;
+          var3.offsetX = param0.offsetX;
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

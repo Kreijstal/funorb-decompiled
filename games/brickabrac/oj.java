@@ -13,11 +13,11 @@ final class oj extends ep {
     private boolean field_x;
     static long field_t;
     private int field_p;
-    private dh field_u;
+    private TextFont field_u;
     private int field_v;
     private int field_y;
 
-    final void a(String param0, int param1, dh param2, int param3, int param4) {
+    final void a(String param0, int param1, TextFont param2, int param3, int param4) {
         ml var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -36,7 +36,7 @@ final class oj extends ep {
           this.field_u = param2;
           this.field_l = param4;
           var8 = this.a(param0, param2, (byte) -72, param1);
-          var7 = param2.c(param0);
+          var7 = param2.measureText(param0);
           var8.field_g[0] = param3 - (var7 >> 1);
           var8.field_g[param0.length()] = param3 + (var7 >> 1);
           dn.a(25293, param0, var8, 0, param2);
@@ -224,7 +224,7 @@ final class oj extends ep {
         return;
     }
 
-    final void a(dh param0, int param1, int param2, String param3, int param4) {
+    final void a(TextFont param0, int param1, int param2, String param3, int param4) {
         ml var7 = null;
         ml var8 = null;
         if (param3 == null) {
@@ -243,7 +243,7 @@ final class oj extends ep {
           var7 = this.a(param3, param0, (byte) -109, param1);
           var8 = var7;
           var7.field_g[0] = param2;
-          var8.field_g[param3.length()] = param0.c(param3) + param2;
+          var8.field_g[param3.length()] = param0.measureText(param3) + param2;
           dn.a(param4 ^ 25293, param3, var8, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "oj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -358,7 +358,7 @@ final class oj extends ep {
         }
     }
 
-    private final ml a(String param0, dh param1, byte param2, int param3) {
+    private final ml a(String param0, TextFont param1, byte param2, int param3) {
         ml var5 = null;
         RuntimeException var5_ref = null;
         ml var6 = null;
@@ -371,7 +371,7 @@ final class oj extends ep {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ml(-param1.field_F + param3, param3 + param1.field_P, param0.length());
+          var6 = new ml(-param1.ascent + param3, param3 + param1.descent, param0.length());
           var5 = var6;
           this.field_c = new ml[]{var6};
           if (param2 < -71) {
@@ -415,7 +415,7 @@ final class oj extends ep {
         field_o = null;
     }
 
-    final void a(String param0, dh param1, int param2, byte param3, int param4) {
+    final void a(String param0, TextFont param1, int param2, byte param3, int param4) {
         ml var9 = null;
         ml var10 = null;
         if (param0 == null) {
@@ -428,8 +428,8 @@ final class oj extends ep {
         }
         try {
           if (param3 > -90) {
-            dh var7 = (dh) null;
-            this.a((String) null, -87, (dh) null, 2, -3);
+            TextFont var7 = (TextFont) null;
+            this.a((String) null, -87, (TextFont) null, 2, -3);
           }
           this.field_u = param1;
           this.field_w = param0;
@@ -437,7 +437,7 @@ final class oj extends ep {
           this.field_l = 2;
           var9 = this.a(param0, param1, (byte) -108, param4);
           var10 = var9;
-          var10.field_g[0] = param2 - param1.c(param0);
+          var10.field_g[0] = param2 - param1.measureText(param0);
           var10.field_g[param0.length()] = param2;
           dn.a(25293, param0, var10, 0, param1);
         } catch (RuntimeException runtimeException) {
@@ -505,7 +505,7 @@ final class oj extends ep {
         return 100;
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, dh param7) {
+    final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, TextFont param7) {
         ml stackIn_34_0;
         ml stackIn_34_1;
         int stackIn_34_2;
@@ -536,7 +536,7 @@ final class oj extends ep {
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
           if (0 == param4) {
-            param4 = param7.field_N;
+            param4 = param7.baselineHeight;
           }
           if (param0 == null) {
             this.field_c = null;
@@ -562,28 +562,28 @@ final class oj extends ep {
           this.field_p = param4;
           this.field_n = param5;
           this.field_u = param7;
-          var10 = new String[1 + param7.a(param0, param5)];
-          var11 = Math.max(1, param7.a(param0, new int[]{param5}, var10));
+          var10 = new String[1 + param7.countWrappedLines(param0, param5)];
+          var11 = Math.max(1, param7.wrapText(param0, new int[]{param5}, var10));
           if (this.field_v == 3 &&
             var11 == 1) {
             this.field_v = 1;
           }
           this.field_c = new ml[var11];
           if (this.field_v == 0) {
-            var12 = param7.field_F;
+            var12 = param7.ascent;
           } else {
             if (this.field_v == 1) {
-              var12 = (-(var11 * this.field_p) + this.field_y >> 1) + param7.field_F;
+              var12 = (-(var11 * this.field_p) + this.field_y >> 1) + param7.ascent;
             } else {
               if (2 != this.field_v) {
                 var13 = (this.field_y - this.field_p * var11) / (var11 + 1);
                 if (var13 < 0) {
                   var13 = 0;
                 }
-                var12 = var13 + param7.field_F;
+                var12 = var13 + param7.ascent;
                 this.field_p = this.field_p + var13;
               } else {
-                var12 = this.field_y - param7.field_P - var11 * this.field_p;
+                var12 = this.field_y - param7.descent - var11 * this.field_p;
               }
             }
           }
@@ -591,8 +591,8 @@ final class oj extends ep {
             var14 = var10[var13Lifetime1];
             stackIn_34_0 = null;
             stackIn_34_1 = null;
-            stackIn_34_2 = var12 - param7.field_F;
-            stackIn_34_3 = param7.field_P + var12;
+            stackIn_34_2 = var12 - param7.ascent;
+            stackIn_34_3 = param7.descent + var12;
             if (var14 != null) {
               stackIn_35_0 = null;
               stackIn_35_1 = null;
@@ -605,14 +605,14 @@ final class oj extends ep {
             var15 = new ml(stackIn_34_2, stackIn_34_3, stackIn_35_4);
             var15.field_g[0] = 0;
             if (var14 != null) {
-              var15.field_g[var14.length()] = param7.c(var14);
+              var15.field_g[var14.length()] = param7.measureText(var14);
               stackIn_39_0 = 25293;
               stackIn_39_1 = var14;
               stackIn_39_2 = var15;
               if (param1 != 3) {
                 stackIn_40_3 = 0;
               } else {
-                stackIn_40_3 = this.a(param5, param7.c(var14), var14, true);
+                stackIn_40_3 = this.a(param5, param7.measureText(var14), var14, true);
               }
               dn.a(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_40_3, param7);
             }

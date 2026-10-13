@@ -65,7 +65,7 @@ final class jk extends ki {
           pk.field_a = pl.a("water", "water_small", (byte) 112, AchievementIcon.field_m);
           sn.field_t = pl.a("water", "water_character", (byte) -43, AchievementIcon.field_m);
           vj.field_b = new RgbSprite(n.field_c.canvasWidth, n.field_c.canvasHeight);
-          fc.a(-49, vj.field_b);
+          IndexedSpriteGeometry.a(-49, vj.field_b);
           n.field_c.g(0, 0);
           sc.b(-81);
           to.field_e = jh.a(0, wm.field_b);
@@ -73,7 +73,7 @@ final class jk extends ki {
           jg.field_a = jh.a(0, n.field_c);
           ig.field_P = jh.a(0, vj.field_b);
           uo.field_d = new RgbSprite(go.field_d.canvasWidth / 2, go.field_d.canvasHeight);
-          fc.a(-83, uo.field_d);
+          IndexedSpriteGeometry.a(-83, uo.field_d);
           go.field_d.a(0, 0, go.field_d.canvasWidth / 2, go.field_d.canvasHeight);
           sc.b(-114);
           pl.a(n.field_c, 0);

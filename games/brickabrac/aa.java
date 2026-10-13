@@ -39,7 +39,7 @@ final class aa {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          fc.a(-109, param4.field_p);
+          IndexedSpriteGeometry.a(-109, param4.field_p);
           Rasterizer2D.fillVerticalGradient(0, 0, param4.field_i, param4.field_q, fj.field_Sb[param3], 0);
           stackIn_2_0 = -120;
           if (param5 == 1) {

@@ -121,10 +121,10 @@ final class hm {
             hm.a(-91, (PcmSound) null, 44);
           }
           if (param0) {
-            stackIn_6_0 = kp.field_b.c(param1);
+            stackIn_6_0 = kp.field_b.measureText(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ni.field_Wb.c(param1);
+          stackIn_4_0 = ni.field_Wb.measureText(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ final class ui {
     static int[] field_a;
     static String field_b;
 
-    final static void a(String param0, bi param1, int param2, tp[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void a(String param0, PaletteFont param1, int param2, IndexedSprite[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int dupTemp$0 = 0;
         int var17 = 0;
         int stackIn_8_0 = 0;
@@ -33,7 +33,7 @@ final class ui {
         var18 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param3 != null) {
-            param1.a(param3, vj.field_f);
+            param1.setInlineSprites(param3, vj.field_f);
           }
           if (param6 != 1729) {
             field_a = (int[]) null;
@@ -41,17 +41,17 @@ final class ui {
           var19 = new String[16];
           var20 = var19;
           var11 = new int[]{param8};
-          var12 = param1.a(param0, var11, var20);
+          var12 = param1.wrapText(param0, var11, var20);
           if (param1 == nn.field_g) {
-            stackIn_8_0 = param1.field_B;
+            stackIn_8_0 = param1.capHeight;
           } else {
-            stackIn_8_0 = param1.field_P + param1.field_F;
+            stackIn_8_0 = param1.descent + param1.ascent;
           }
           var13 = stackIn_8_0;
           var14 = param8;
           var15 = 0;
           for (var16 = 0; var16 < var12; var16++) {
-            dupTemp$0 = param1.c(var19[var16]);
+            dupTemp$0 = param1.measureText(var19[var16]);
             var15Lifetime1 = dupTemp$0;
             if (dupTemp$0 > var14) {
               var14 = var15Lifetime1;
@@ -69,9 +69,9 @@ final class ui {
           var16Lifetime1 = param7 + (-(var12 * var13) + param4 + 18) / 2;
           for (var17 = 0; var12 > var17; var17++) {
             if (param9 == 0) {
-              param1.c(var20[var17], -param8 + param5 + param8 * 0 / 2, param1.field_F / 3 + (var16Lifetime1 - param4), param2, -1);
+              param1.drawLeft(var20[var17], -param8 + param5 + param8 * 0 / 2, param1.ascent / 3 + (var16Lifetime1 - param4), param2, -1);
             } else {
-              param1.b(var20[var17], -2 + param5 - param8 / 2, var16Lifetime1 + (-param4 + param1.field_F / 3), param2, -1);
+              param1.drawCentered(var20[var17], -2 + param5 - param8 / 2, var16Lifetime1 + (-param4 + param1.ascent / 3), param2, -1);
             }
             var16Lifetime1 = var16Lifetime1 + var13;
           }

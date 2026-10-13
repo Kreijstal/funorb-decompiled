@@ -100,7 +100,7 @@ final class fr {
         }
     }
 
-    final static void a(int param0, dh param1, dh param2, boolean param3) {
+    final static void a(int param0, TextFont param1, TextFont param2, boolean param3) {
         try {
           m.field_b = param0;
           kp.field_b = param1;
@@ -109,7 +109,7 @@ final class fr {
           if (!param3) {
             field_k = -98;
           }
-          tn.a(param1.field_B, param1.field_P + param1.field_B, 256, param2.field_B, param2.field_P + param2.field_B);
+          tn.a(param1.capHeight, param1.descent + param1.capHeight, 256, param2.capHeight, param2.descent + param2.capHeight);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "fr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

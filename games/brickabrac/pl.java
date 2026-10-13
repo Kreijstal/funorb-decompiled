@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pl {
-    static tp[] field_f;
+    static IndexedSprite[] field_f;
     static int[] pendingAchievementMask;
     static String field_e;
     static String[] field_c;
@@ -195,10 +195,10 @@ final class pl {
             pl.a(-94);
           }
           if (!param2) {
-            stackIn_6_0 = oc.field_m.c(param1);
+            stackIn_6_0 = oc.field_m.measureText(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = lj.field_r.c(param1);
+          stackIn_4_0 = lj.field_r.measureText(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

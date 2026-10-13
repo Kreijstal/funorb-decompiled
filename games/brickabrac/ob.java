@@ -5,7 +5,7 @@ final class ob extends r {
     static int field_I;
     static AudioMixer soundMixer;
     static String field_H;
-    static bi field_D;
+    static PaletteFont field_D;
     static NodeDeque field_E;
     static long field_G;
     static NodeDeque field_F;
@@ -72,7 +72,7 @@ final class ob extends r {
         }
     }
 
-    private ob(dh param0, int param1) {
+    private ob(TextFont param0, int param1) {
         super(param0, param1);
     }
 

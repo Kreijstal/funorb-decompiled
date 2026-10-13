@@ -130,7 +130,7 @@ final class po {
         boolean stackIn_18_0 = false;
         boolean stackIn_19_1 = false;
         String[] stackIn_25_0 = null;
-        tp[] stackIn_28_0 = null;
+        IndexedSprite[] stackIn_28_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;

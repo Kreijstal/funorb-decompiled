@@ -1589,7 +1589,7 @@ final class GameplayScreen extends GameScreen {
         int var9;
         int var10;
         int var11;
-        tp[] var12;
+        IndexedSprite[] var12;
         Paddle var13;
         int[] var14;
         int[] var15;
@@ -1750,8 +1750,8 @@ final class GameplayScreen extends GameScreen {
             ui.a(tb.field_eb + ro.field_v, ob.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != var7_ref_j.field_fb) {
-              var12 = (tp[]) null;
-              ui.a(var7_ref_j.field_fb, nn.field_g, 0, (tp[]) null, 80, 621, 1729, 340, 85, -1);
+              var12 = (IndexedSprite[]) null;
+              ui.a(var7_ref_j.field_fb, nn.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
             }
           }
         }
@@ -1770,10 +1770,10 @@ final class GameplayScreen extends GameScreen {
           if (var5[var7Lifetime4] == 2) {
             var20 = ScorePopup.field_k[this.match.playerBoards[var6Lifetime2].field_H];
             var8 = var20;
-            var9Lifetime2 = ob.field_D.field_F + ob.field_D.field_P;
+            var9Lifetime2 = ob.field_D.ascent + ob.field_D.descent;
             Rasterizer2D.fillRectangleAlpha(var18[var7Lifetime4], 235 + var19[var7Lifetime4] - 23, 153, var9Lifetime2, 0, 141);
             var8.drawTransparent(-var20.canvasWidth + (153 + var18[var7Lifetime4]), 0 + (-var20.canvasHeight + var19[var7Lifetime4]) + 233);
-            ce.field_e.c(this.match.playerNames[var6Lifetime2], var18[var7Lifetime4] + 4, 2 + var19[var7Lifetime4] + 223, 2, -1);
+            ce.field_e.drawLeft(this.match.playerNames[var6Lifetime2], var18[var7Lifetime4] + 4, 2 + var19[var7Lifetime4] + 223, 2, -1);
           }
           var6Lifetime2++;
           var6Lifetime2 = var6Lifetime2 % this.match.playerCount;

@@ -89,7 +89,7 @@ final class pn extends IntrusiveNode {
             if (2 == var6) {
               var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.field_p}, (byte) 103);
               var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
-              var7 = -485 + g.field_n.field_Ib + ap.field_e.field_Ib - (-jq.field_y.c(var8) + jq.field_y.c(var4));
+              var7 = -485 + g.field_n.field_Ib + ap.field_e.field_Ib - (-jq.field_y.measureText(var8) + jq.field_y.measureText(var4));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -132,7 +132,7 @@ final class pn extends IntrusiveNode {
                 var4 = "<col=999999>" + var4 + MainMenuScreen.field_y + "</col>";
                 var5 = "";
               }
-              var9 = jq.field_y.c(var4);
+              var9 = jq.field_y.measureText(var4);
               if (!ri.a(-112)) {
                 if (g.field_n.field_kb &&
                   (-g.field_n.field_Eb + pq.pointerX) < var9) {
@@ -149,7 +149,7 @@ final class pn extends IntrusiveNode {
                 }
               }
             }
-            na.a(param0 + 9132, var5, var4 + dh.b(OptionsScreen.field_A.toString()), var7, ki.field_i[var6]);
+            na.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, ki.field_i[var6]);
             if (!MatchResultScreen.field_s) {
               ap.field_e.field_kb = false;
             }

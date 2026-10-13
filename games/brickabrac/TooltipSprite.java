@@ -16,12 +16,12 @@ final class TooltipSprite extends IntrusiveNode {
 
     final static void a(mf param0, mf param1, byte param2, mf param3) {
         RgbSprite var17 = null;
-        tp[] var5 = null;
-        tp[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        tp[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
         RgbSprite var15 = null;
         RgbSprite var18 = null;
@@ -38,30 +38,30 @@ final class TooltipSprite extends IntrusiveNode {
           ka.field_n = pl.a("commonui", "jagex_logo_grey", (byte) -110, param3);
           sf.field_U = cr.a("commonui", param3, "button", 2);
           df.field_a = bd.a("commonui", "validation", param3, (byte) -8);
-          og.field_Yb = (dh) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
-          a.field_u = (dh) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
-          wm.field_a = (dh) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
+          og.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
+          a.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
+          wm.field_a = (TextFont) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
           var17 = new RgbSprite(param1.a(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
           uo.a((byte) 29, param3, "dropdown", "commonui");
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
-          LevelPackLoader.field_b = new tp[4];
-          cd.field_b = new tp[4];
-          ng.field_d = new tp[4];
-          var6 = new tp[][]{LevelPackLoader.field_b, ng.field_d, cd.field_b};
+          LevelPackLoader.field_b = new IndexedSprite[4];
+          cd.field_b = new IndexedSprite[4];
+          ng.field_d = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{LevelPackLoader.field_b, ng.field_d, cd.field_b};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
-          var7[0] = var5[0].field_j;
+          var7[0] = var5[0].palette;
           for (var8 = 1; var19.length > var8; var8++) {
             var7[var8] = (int[]) ((Object) var19[0].clone());
           }
-          var8Lifetime1 = var5[0].field_i[0];
+          var8Lifetime1 = var5[0].indices[0];
           var19[2][var8Lifetime1] = 16777215;
           var19[1][var8Lifetime1] = 2394342;
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            tp[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = ek.a(var5[var9], (byte) -85, var19[var11_int]);
             }
@@ -218,8 +218,8 @@ final class TooltipSprite extends IntrusiveNode {
           this.x = x;
           this.y = y;
           this.tooltipText = tooltipText.toLowerCase();
-          this.tooltipWidth = 2 * lm.field_b + ob.field_D.c(this.tooltipText);
-          this.tooltipHeight = ob.field_D.field_P + 2 * ki.field_a + ob.field_D.field_F;
+          this.tooltipWidth = 2 * lm.field_b + ob.field_D.measureText(this.tooltipText);
+          this.tooltipHeight = ob.field_D.descent + 2 * ki.field_a + ob.field_D.ascent;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "nq.<init>(" + x + ',' + y + ',' + (sprite != null ? "{...}" : "null") + ',' + (tooltipText != null ? "{...}" : "null") + ')');
         }

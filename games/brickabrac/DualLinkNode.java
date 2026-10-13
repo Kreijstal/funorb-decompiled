@@ -28,7 +28,7 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryNext = null;
     }
 
-    final static void a(int param0, MultiplayerMatch param1, bi param2, PlayerBoard param3, byte param4, int param5, int param6, int param7) {
+    final static void a(int param0, MultiplayerMatch param1, PaletteFont param2, PlayerBoard param3, byte param4, int param5, int param6, int param7) {
         int var13 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -49,16 +49,16 @@ class DualLinkNode extends IntrusiveNode {
         try {
           var8_int = 5;
           var9 = 5;
-          var10 = 3 + param2.field_B + param2.field_P;
+          var10 = 3 + param2.capHeight + param2.descent;
           var11 = var8_int + param5;
-          var12 = param6 + (var9 + param2.field_B);
-          param2.c(jo.field_j, var11, var12, 2, -1);
+          var12 = param6 + (var9 + param2.capHeight);
+          param2.drawLeft(jo.field_j, var11, var12, 2, -1);
           var12 = var12 + var10;
-          param2.c(lq.field_e, var11, var12, 1, -1);
+          param2.drawLeft(lq.field_e, var11, var12, 1, -1);
           var12 = var12 + var10;
-          param2.c(ff.field_j, var11, var12, 2, -1);
+          param2.drawLeft(ff.field_j, var11, var12, 2, -1);
           var12 = var12 + var10;
-          param2.c(vd.field_d, var11, var12, 0, -1);
+          param2.drawLeft(vd.field_d, var11, var12, 0, -1);
           if (param4 >= -96) {
             return;
           }
@@ -67,7 +67,7 @@ class DualLinkNode extends IntrusiveNode {
             return;
           }
           var11 -= 2;
-          var12 = var12 + (param2.field_P + 4);
+          var12 = var12 + (param2.descent + 4);
           for (var13 = 0; var13 < -1 + param3.field_rb; var13++) {
             if (var13 < -2 + param3.field_rb) {
               ch.field_l.a(var11, var12, 196);

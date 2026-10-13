@@ -31,7 +31,7 @@ final class LevelPackCard {
         return (1 << param0 & o.field_d) != 0 ? true : false;
     }
 
-    final static void a(String[][] param0, tp[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, mf param7, mf param8, mf param9, int[] param10, RgbSprite[][] param11, int param12, boolean param13, RgbSprite[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {
+    final static void a(String[][] param0, IndexedSprite[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, mf param7, mf param8, mf param9, int[] param10, RgbSprite[][] param11, int param12, boolean param13, RgbSprite[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -70,7 +70,7 @@ final class LevelPackCard {
           pf.a(param18, param15, param8, param3, -27460, param13, param14, param7, param12, param10, (String[]) null, param11, param1, 1, param16, param0, param5, param6, param17, param9);
           if (param2 != 47) {
             var20 = (int[]) null;
-            LevelPackCard.a((String[][]) null, (tp[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (mf) null, (mf) null, (mf) null, (int[]) null, (RgbSprite[][]) null, 5, true, (RgbSprite[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
+            LevelPackCard.a((String[][]) null, (IndexedSprite[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (mf) null, (mf) null, (mf) null, (int[]) null, (RgbSprite[][]) null, 5, true, (RgbSprite[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -173,7 +173,7 @@ final class LevelPackCard {
           Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2 : 0) + 32);
           Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
           this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);
-          nn.field_g.b(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
+          nn.field_g.drawCentered(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
           return;
         }
         this.viewport = (MenuButton) null;
@@ -181,7 +181,7 @@ final class LevelPackCard {
         Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2Lifetime1 : 0) + 32);
         Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
         this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);
-        nn.field_g.b(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
+        nn.field_g.drawCentered(this.caption, (this.viewport.width + this.viewport.x * 2) / 2, this.viewport.y - (-this.viewport.height + 13), !this.focused ? 0 : 1, -1);
     }
 
     public static void a(int param0) {

@@ -227,7 +227,7 @@ final class n {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = ke.field_e.field_O.c(var16) + ke.field_e.field_O.a('.') * 3;
+              var10Lifetime1 = ke.field_e.field_O.measureText(var16) + ke.field_e.field_O.getAdvance('.') * 3;
               ke.field_e.field_S = 0;
               if (16 == (an.field_h & 48)) {
                 var9 = var16 + ".";

@@ -9,11 +9,11 @@ final class uo {
     static RgbSprite[] field_c;
     static String field_a;
 
-    final static tp a(byte param0, mf param1, String param2, String param3) {
+    final static IndexedSprite a(byte param0, mf param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tp stackIn_3_0 = null;
+        IndexedSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

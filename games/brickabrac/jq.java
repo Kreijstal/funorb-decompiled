@@ -3,7 +3,7 @@
  */
 final class jq extends bc {
     static int[] field_t;
-    static dh field_y;
+    static TextFont field_y;
     private ve field_B;
     private ih field_j;
     private byte[] field_i;
@@ -96,10 +96,10 @@ final class jq extends bc {
               var2 = var2 + GameCanvas.field_f;
             }
             if (var4 >= 0) {
-              lj.field_r.c(var6, var8, lj.field_i + var2, var5, -1);
+              lj.field_r.drawLeft(var6, var8, lj.field_i + var2, var5, -1);
               var2 = var2 + (TooltipSprite.field_i + dj.field_g + GameCanvas.field_f);
             } else {
-              oc.field_m.c(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
+              oc.field_m.drawLeft(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
               var2 = var2 + wh.field_m;
             }
           }

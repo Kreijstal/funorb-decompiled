@@ -289,7 +289,7 @@ final class ka extends IntrusiveNode {
             if (param1 == IsaacGenerator.field_b) {
               var22 += 42;
             }
-            var21 = dh.a(var13.field_Rb.field_O, var21, var22);
+            var21 = TextFont.truncateText(var13.field_Rb.field_O, var21, var22);
             stackIn_90_0 = (var21.equals(var13.field_Yb)) ? 0 : 1;
             var23 = stackIn_90_0;
             if (4 <= var13.field_Zb) {
@@ -388,7 +388,7 @@ final class ka extends IntrusiveNode {
             }
             var24 = SoundPlayback.a((byte) -110, var21, var13.field_kc);
             if (null != var24) {
-              var25_intLifetime1 = var13.field_Tb.field_O.a(var24, -om.field_oc + var13.field_Ib - om.field_oc);
+              var25_intLifetime1 = var13.field_Tb.field_O.countWrappedLines(var24, -om.field_oc + var13.field_Ib - om.field_oc);
               var13.field_Tb.field_jb = var13.field_ic * 256 / cm.field_o;
               var13.field_Tb.field_Mb = var24;
               var13.field_Tb.a(var25_intLifetime1 * np.field_a, var20, om.field_oc, var13.field_Ib - 2 * om.field_oc, (byte) 64);

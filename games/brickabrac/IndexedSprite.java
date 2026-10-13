@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp extends fc {
-    byte[] field_i;
-    int[] field_j;
+final class IndexedSprite extends IndexedSpriteGeometry {
+    byte[] indices;
+    int[] palette;
 
     private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
@@ -93,39 +93,39 @@ final class tp extends fc {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int x, int y, int alpha) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_b;
-        param1 = param1 + this.field_g;
-        int var4 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * Rasterizer2D.width;
         int var5 = 0;
-        int var6 = this.field_a;
-        int var7 = this.field_d;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var10 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - y;
           var6 = var6 - var10;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > Rasterizer2D.clipBottom) {
-          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
+        if (y + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (y + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > Rasterizer2D.clipRight) {
-          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
+        if (x + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = x + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -134,10 +134,10 @@ final class tp extends fc {
           var6 <= 0) {
           return;
         }
-        tp.b(Rasterizer2D.pixels, this.field_i, this.field_j, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.b(Rasterizer2D.pixels, this.indices, this.palette, var5, var4, var7, var6, var8, var9, alpha);
     }
 
-    final void c(int param0, int param1) {
+    final void drawQuarter(int x, int y) {
         int var9 = 0;
         int var10 = 0;
         int var16 = 0;
@@ -158,44 +158,44 @@ final class tp extends fc {
         int var14;
         int var15;
         int var13Lifetime1;
-        var3 = this.field_d >> 2;
-        var4 = this.field_a >> 2;
-        param0 = param0 + this.field_b / 4;
-        param1 = param1 + this.field_g / 4;
-        if (param0 >= Rasterizer2D.clipLeft) {
+        var3 = this.width >> 2;
+        var4 = this.height >> 2;
+        x = x + this.offsetX / 4;
+        y = y + this.offsetY / 4;
+        if (x >= Rasterizer2D.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = Rasterizer2D.clipLeft - param0 << 2;
+          stackIn_3_0 = Rasterizer2D.clipLeft - x << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= Rasterizer2D.clipRight) {
-          stackIn_6_0 = this.field_d - 4;
+        if (x + var3 <= Rasterizer2D.clipRight) {
+          stackIn_6_0 = this.width - 4;
         } else {
-          stackIn_6_0 = (Rasterizer2D.clipRight - param0 << 2) - 4;
+          stackIn_6_0 = (Rasterizer2D.clipRight - x << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= Rasterizer2D.clipTop) {
+        if (y >= Rasterizer2D.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = Rasterizer2D.clipTop - param1 << 2;
+          stackIn_9_0 = Rasterizer2D.clipTop - y << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= Rasterizer2D.clipBottom) {
-          stackIn_12_0 = this.field_a - 4;
+        if (y + var4 <= Rasterizer2D.clipBottom) {
+          stackIn_12_0 = this.height - 4;
         } else {
-          stackIn_12_0 = (Rasterizer2D.clipBottom - param1 << 2) - 4;
+          stackIn_12_0 = (Rasterizer2D.clipBottom - y << 2) - 4;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 4) {
           for (var10 = var5; var10 <= var6; var10 += 4) {
-            var11 = var9 * this.field_d + var10;
-            var12 = (param1 + (var9 >> 2)) * Rasterizer2D.width + (param0 + (var10 >> 2));
+            var11 = var9 * this.width + var10;
+            var12 = (y + (var9 >> 2)) * Rasterizer2D.width + (x + (var10 >> 2));
             var13 = 0;
             var14 = 0;
             var15 = 0;
             for (var16 = 0; var16 < 4; var16++) {
               for (var17 = 0; var17 < 4; var17++) {
-                var13Lifetime1 = this.field_j[this.field_i[var11 + var16 * this.field_d + var17] & 255];
+                var13Lifetime1 = this.palette[this.indices[var11 + var16 * this.width + var17] & 255];
                 if (var13Lifetime1 == 0) {
                   var13Lifetime1 = Rasterizer2D.pixels[var12];
                 }
@@ -208,49 +208,49 @@ final class tp extends fc {
         }
     }
 
-    final RgbSprite a() {
+    final RgbSprite toRgbSprite() {
         int var3 = 0;
-        int var1 = this.field_d * this.field_a;
+        int var1 = this.width * this.height;
         int[] var2 = new int[var1];
         for (var3 = 0; var3 < var1; var3++) {
-          var2[var3] = this.field_j[this.field_i[var3] & 255];
+          var2[var3] = this.palette[this.indices[var3] & 255];
         }
-        return new RgbSprite(this.field_f, this.field_h, this.field_b, this.field_g, this.field_d, this.field_a, var2);
+        return new RgbSprite(this.canvasWidth, this.canvasHeight, this.offsetX, this.offsetY, this.width, this.height, var2);
     }
 
-    final void b(int param0, int param1) {
+    final void drawOpaque(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_b;
-        param1 = param1 + this.field_g;
-        int var3 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * Rasterizer2D.width;
         int var4 = 0;
-        int var5 = this.field_a;
-        int var6 = this.field_d;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = Rasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var9 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - y;
           var5 = var5 - var9;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var5 = var5 - (param1 + var5 - Rasterizer2D.clipBottom);
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (y + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -259,7 +259,7 @@ final class tp extends fc {
           var5 <= 0) {
           return;
         }
-        tp.a(Rasterizer2D.pixels, this.field_i, this.field_j, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(Rasterizer2D.pixels, this.indices, this.palette, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -313,50 +313,50 @@ final class tp extends fc {
         }
     }
 
-    tp(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        this.field_f = param0;
-        this.field_h = param1;
-        this.field_b = param2;
-        this.field_g = param3;
-        this.field_d = param4;
-        this.field_a = param5;
-        this.field_i = param6;
-        this.field_j = param7;
+    IndexedSprite(int canvasWidth, int canvasHeight, int offsetX, int offsetY, int width, int height, byte[] indices, int[] palette) {
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
+        this.offsetX = offsetX;
+        this.offsetY = offsetY;
+        this.width = width;
+        this.height = height;
+        this.indices = indices;
+        this.palette = palette;
     }
 
-    final void a(int param0, int param1) {
+    final void drawTransparent(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_b;
-        param1 = param1 + this.field_g;
-        int var3 = param0 + param1 * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * Rasterizer2D.width;
         int var4 = 0;
-        int var5 = this.field_a;
-        int var6 = this.field_d;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = Rasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var9 = Rasterizer2D.clipTop - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - y;
           var5 = var5 - var9;
-          param1 = Rasterizer2D.clipTop;
+          y = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var5 = var5 - (param1 + var5 - Rasterizer2D.clipBottom);
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (y + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -365,17 +365,17 @@ final class tp extends fc {
           var5 <= 0) {
           return;
         }
-        tp.a(Rasterizer2D.pixels, this.field_i, this.field_j, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(Rasterizer2D.pixels, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    tp(int param0, int param1, int param2) {
-        this.field_d = param0;
-        this.field_f = param0;
-        this.field_a = param1;
-        this.field_h = param1;
-        this.field_g = 0;
-        this.field_b = 0;
-        this.field_i = new byte[param0 * param1];
-        this.field_j = new int[param2];
+    IndexedSprite(int width, int height, int paletteSize) {
+        this.width = width;
+        this.canvasWidth = width;
+        this.height = height;
+        this.canvasHeight = height;
+        this.offsetY = 0;
+        this.offsetX = 0;
+        this.indices = new byte[width * height];
+        this.palette = new int[paletteSize];
     }
 }

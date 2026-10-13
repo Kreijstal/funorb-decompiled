@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nn {
-    static bi field_g;
+    static PaletteFont field_g;
     private long field_i;
     private int[] field_c;
     mh field_j;
@@ -1628,7 +1628,7 @@ final class nn {
                 }
                 var2 = nk.a("login_username", (byte) 66);
                 if (var2 != null) {
-                  fc.field_c = MenuButton.a(var2, (byte) 98);
+                  IndexedSpriteGeometry.field_c = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = nk.a("login_email", (byte) 34);
                 if (null != var2) {

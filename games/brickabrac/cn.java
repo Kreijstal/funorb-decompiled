@@ -47,7 +47,7 @@ final class cn {
 
     final static void a(ScorePopup param0, PlayerBoard param1, int param2, int param3, int param4) {
         try {
-          nn.field_g.b(param0.text, (param0.x256 >> 8) + param3, (param0.y256 >> 8) + param4 + nn.field_g.field_B, 0, -1, 256 * param0.remainingTicks / 50);
+          nn.field_g.drawCenteredAlpha(param0.text, (param0.x256 >> 8) + param3, (param0.y256 >> 8) + param4 + nn.field_g.capHeight, 0, -1, 256 * param0.remainingTicks / 50);
           if (param2 != 10030) {
             PlayerBoard var6 = (PlayerBoard) null;
             cn.a((ScorePopup) null, (PlayerBoard) null, -6, -71, 111);

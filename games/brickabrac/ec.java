@@ -12,7 +12,7 @@ final class ec extends ib implements en {
     static int[] field_N;
     private String field_R;
     static String field_S;
-    private dh field_H;
+    private TextFont field_H;
     private lp field_K;
     static ki field_Q;
 
@@ -86,7 +86,7 @@ final class ec extends ib implements en {
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, param3);
-        this.field_H.a(this.field_R, 14 + (param1 + this.field_o), 10 + (param0 + this.field_w), this.field_t - 28, this.field_s, 16777215, -1, 0, 0, this.field_H.field_F);
+        this.field_H.a(this.field_R, 14 + (param1 + this.field_o), 10 + (param0 + this.field_w), this.field_t - 28, this.field_s, 16777215, -1, 0, 0, this.field_H.ascent);
     }
 
     final d a(byte param0, String param1, uh param2) {
@@ -299,7 +299,7 @@ final class ec extends ib implements en {
         }
     }
 
-    ec(lp param0, dh param1, String param2) {
+    ec(lp param0, TextFont param1, String param2) {
         super(0, 0, 288, 0, (ub) null);
         int var4_int = 0;
         this.field_M = 0;
@@ -307,7 +307,7 @@ final class ec extends ib implements en {
           this.field_K = param0;
           this.field_R = param2;
           this.field_H = param1;
-          var4_int = this.field_R == null ? 0 : this.field_H.b(this.field_R, 260, this.field_H.field_F);
+          var4_int = this.field_R == null ? 0 : this.field_H.measureWrappedHeight(this.field_R, 260, this.field_H.ascent);
           this.a(22 + var4_int, 0, 0, (byte) -119, 288);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -27,11 +27,11 @@ abstract class MatchResultScreen extends MenuScreen {
           return;
         }
         var2 = 1;
-        var3 = nn.field_g.c(ag.buttonLabels[this.buttons[0].actionId]);
+        var3 = nn.field_g.measureText(ag.buttonLabels[this.buttons[0].actionId]);
         if (this.isButtonEnabled((byte) 110, 1)) {
           var2++;
           for (var4 = 0; var4 < sj.field_c.length; var4++) {
-            var5 = nn.field_g.c(sj.field_c[var4]);
+            var5 = nn.field_g.measureText(sj.field_c[var4]);
             if (var5 > var3) {
               var3 = var5;
             }
@@ -63,7 +63,7 @@ abstract class MatchResultScreen extends MenuScreen {
         int var3;
         int var4;
         int var5;
-        tp var5_ref_tp;
+        IndexedSprite var5_ref_tp;
         int var6;
         int var7;
         int var8;
@@ -81,17 +81,17 @@ abstract class MatchResultScreen extends MenuScreen {
           var12 = qh.field_e;
           var12.drawTransparent((640 - var12.canvasWidth) / 2, 20);
         }
-        var2 = -qp.field_e[0].field_h + 480;
+        var2 = -qp.field_e[0].canvasHeight + 480;
         var3 = this.getResultBottom(-6);
         for (var4 = 0; var4 < 3; var4++) {
           var5_ref_tp = qp.field_e[var4];
-          var5_ref_tp.a((640 - var5_ref_tp.field_f) / 2, -((-var3 + 480) / ((1 + var4) * 2)) + var2);
+          var5_ref_tp.drawTransparent((640 - var5_ref_tp.canvasWidth) / 2, -((-var3 + 480) / ((1 + var4) * 2)) + var2);
         }
         if (obfuscationGuard > -14) {
           field_s = false;
         }
         var2 = var2 - (-var3 + 480) / 2;
-        var4 = qp.field_e[0].field_f;
+        var4 = qp.field_e[0].canvasWidth;
         var5 = 0;
         var6 = 0;
         scanLoop1: while (true) {
@@ -132,7 +132,7 @@ abstract class MatchResultScreen extends MenuScreen {
               }
               var10 = stackIn_27_0[da.field_C[var7]];
               var10.drawTransparent(var8 - var10.canvasWidth / 2, var9 - var10.canvasHeight);
-              ce.field_e.b(fh.field_h[var7], var8, var2 + 85, 0, -1);
+              ce.field_e.drawCentered(fh.field_h[var7], var8, var2 + 85, 0, -1);
               var5++;
               if (var5 == 3) {
                 break scanLoop1;

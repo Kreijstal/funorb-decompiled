@@ -176,7 +176,7 @@ final class na extends ug {
 
     private final void a(oc param0, String param1, byte param2, int param3, int param4) {
         try {
-          og.field_Yb.b(param1, param3 + param0.field_o + (param0.field_t >> 1), param0.field_w + (param4 - 5), 16777215, -1);
+          og.field_Yb.drawCentered(param1, param3 + param0.field_o + (param0.field_t >> 1), param0.field_w + (param4 - 5), 16777215, -1);
           int var6_int = -127 % ((-2 - param2) / 59);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "na.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

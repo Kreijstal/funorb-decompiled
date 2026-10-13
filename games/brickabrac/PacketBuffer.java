@@ -554,12 +554,12 @@ class PacketBuffer extends IntrusiveNode {
         this.data[this.position - length - 1] = (byte)length;
     }
 
-    final static tp[] a(String param0, mf param1, String param2, int param3) {
+    final static IndexedSprite[] a(String param0, mf param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        tp[] stackIn_2_0 = null;
-        tp[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_2_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -575,7 +575,7 @@ class PacketBuffer extends IntrusiveNode {
             stackIn_4_0 = ba.a(var4_int, var5, -59, param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (tp[]) null;
+          stackIn_2_0 = (IndexedSprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

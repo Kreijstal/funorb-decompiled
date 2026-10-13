@@ -3,7 +3,7 @@
  */
 final class bb implements ub {
     private int field_d;
-    private dh field_b;
+    private TextFont field_b;
     private int field_f;
     static int field_e;
     static me field_c;
@@ -31,15 +31,15 @@ final class bb implements ub {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_A + "</u>", param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, var6_int, -1, this.field_d, this.field_f, this.field_b.field_P + this.field_b.field_F);
+          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_A + "</u>", param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, var6_int, -1, this.field_d, this.field_f, this.field_b.descent + this.field_b.ascent);
           if (param1 != -20618) {
             field_a = (String) null;
           }
           if (!param3.f(-54)) {
             return;
           }
-          var7 = this.field_b.c(param3.field_A);
-          var8 = this.field_b.field_P + this.field_b.field_F;
+          var7 = this.field_b.measureText(param3.field_A);
+          var8 = this.field_b.descent + this.field_b.ascent;
           var9 = param3.field_o + param2;
           if (this.field_d == 2) {
             var9 = var9 + (-var7 + param3.field_t);
@@ -88,7 +88,7 @@ final class bb implements ub {
         field_a = null;
     }
 
-    bb(dh param0, int param1, int param2) {
+    bb(TextFont param0, int param1, int param2) {
         try {
           this.field_d = param1;
           this.field_b = param0;

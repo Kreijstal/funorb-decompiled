@@ -7,7 +7,7 @@ final class pf implements ub {
     private int field_j;
     private int field_e;
     private int field_g;
-    private dh field_l;
+    private TextFont field_l;
     static int[] field_b;
     static String field_c;
     private int field_o;
@@ -165,7 +165,7 @@ final class pf implements ub {
         field_h = null;
     }
 
-    final static void a(int param0, byte[] param1, mf param2, String[] param3, int param4, boolean param5, RgbSprite[][] param6, mf param7, int param8, int[] param9, String[] param10, RgbSprite[][] param11, tp[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, mf param19) {
+    final static void a(int param0, byte[] param1, mf param2, String[] param3, int param4, boolean param5, RgbSprite[][] param6, mf param7, int param8, int[] param9, String[] param10, RgbSprite[][] param11, IndexedSprite[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, mf param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -367,7 +367,7 @@ final class pf implements ub {
           return true;
         }
         var3 = (mf) null;
-        pf.a(97, (byte[]) null, (mf) null, (String[]) null, 18, true, (RgbSprite[][]) null, (mf) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (tp[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (mf) null);
+        pf.a(97, (byte[]) null, (mf) null, (String[]) null, 18, true, (RgbSprite[][]) null, (mf) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (mf) null);
         if (null == hd.pendingScreen &&
           param1 == lp.currentScreen.screenId) {
           return true;
@@ -381,7 +381,7 @@ final class pf implements ub {
         return true;
     }
 
-    pf(dh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    pf(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_n = param1;
           this.field_o = param7;

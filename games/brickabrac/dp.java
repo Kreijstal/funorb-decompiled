@@ -96,7 +96,7 @@ final class dp extends ki {
 
     final static void a(int param0, int param1, boolean param2, int param3, RgbSprite param4, pb param5) {
         try {
-          fc.a(-95, param5.field_p);
+          IndexedSpriteGeometry.a(-95, param5.field_p);
           Rasterizer2D.clear();
           param4.b(-(60 / param0) + (-param4.canvasWidth + param5.field_i) / 2, -param4.canvasHeight + param1 - (-param5.field_q + 130 / param0), 0, 208);
           la.a(0, 0, param5.field_i, param5.field_q, 0, nj.field_G[param3], 96);

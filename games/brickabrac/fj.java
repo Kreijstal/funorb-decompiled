@@ -206,8 +206,8 @@ final class fj extends mh {
           field_Pb = null;
           return;
         }
-        bi var2 = (bi) null;
-        fj.a(31, (String) null, 82, (bi) null, 55, -109);
+        PaletteFont var2 = (PaletteFont) null;
+        fj.a(31, (String) null, 82, (PaletteFont) null, 55, -109);
         field_Pb = null;
     }
 
@@ -379,7 +379,7 @@ final class fj extends mh {
         }
     }
 
-    final static void a(int param0, String param1, int param2, bi param3, int param4, int param5) {
+    final static void a(int param0, String param1, int param2, PaletteFont param3, int param4, int param5) {
         try {
           if (param4 != -15531) {
             fj.e((byte) 21);

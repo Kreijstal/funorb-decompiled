@@ -197,11 +197,11 @@ final class nf extends lg {
             if (this.field_X != null &&
               var11 <= this.field_X.width &&
               this.field_X.height >= var12) {
-              fc.a(-70, this.field_X);
+              IndexedSpriteGeometry.a(-70, this.field_X);
               Rasterizer2D.clear();
             } else {
               this.field_X = new RgbSprite(var11, var12);
-              fc.a(-86, this.field_X);
+              IndexedSpriteGeometry.a(-86, this.field_X);
             }
             var21.a(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.field_Q << 10, 4096);
             sc.b(-111);
@@ -232,18 +232,18 @@ final class nf extends lg {
           var12Lifetime5 = var25.canvasHeight << 1;
           if (this.field_X == null) {
             this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
-            fc.a(-86, this.field_X);
+            IndexedSpriteGeometry.a(-86, this.field_X);
           } else {
             if (var11Lifetime5 > this.field_X.width) {
               this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
-              fc.a(-86, this.field_X);
+              IndexedSpriteGeometry.a(-86, this.field_X);
             } else {
               if (this.field_X.height >= var12Lifetime5) {
-                fc.a(-70, this.field_X);
+                IndexedSpriteGeometry.a(-70, this.field_X);
                 Rasterizer2D.clear();
               } else {
                 this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
-                fc.a(-86, this.field_X);
+                IndexedSpriteGeometry.a(-86, this.field_X);
               }
             }
           }
@@ -282,11 +282,11 @@ final class nf extends lg {
             if (this.field_X != null &&
               var11Lifetime1 <= this.field_X.width &&
               this.field_X.height >= var12Lifetime1) {
-              fc.a(-70, this.field_X);
+              IndexedSpriteGeometry.a(-70, this.field_X);
               Rasterizer2D.clear();
             } else {
               this.field_X = new RgbSprite(var11Lifetime1, var12Lifetime1);
-              fc.a(-86, this.field_X);
+              IndexedSpriteGeometry.a(-86, this.field_X);
             }
             var30.a(112, 144, var30.canvasWidth << 4, var30.canvasHeight << 4, -this.field_Q << 10, 4096);
             sc.b(-111);
@@ -317,18 +317,18 @@ final class nf extends lg {
           var12Lifetime1Lifetime1 = var34.canvasHeight << 1;
           if (this.field_X == null) {
             this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-            fc.a(-86, this.field_X);
+            IndexedSpriteGeometry.a(-86, this.field_X);
           } else {
             if (var11Lifetime1Lifetime1 > this.field_X.width) {
               this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              fc.a(-86, this.field_X);
+              IndexedSpriteGeometry.a(-86, this.field_X);
             } else {
               if (this.field_X.height >= var12Lifetime1Lifetime1) {
-                fc.a(-70, this.field_X);
+                IndexedSpriteGeometry.a(-70, this.field_X);
                 Rasterizer2D.clear();
               } else {
                 this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-                fc.a(-86, this.field_X);
+                IndexedSpriteGeometry.a(-86, this.field_X);
               }
             }
           }
@@ -365,11 +365,11 @@ final class nf extends lg {
             if (this.field_X != null &&
               var11Lifetime2 <= this.field_X.width &&
               this.field_X.height >= var12Lifetime2) {
-              fc.a(-70, this.field_X);
+              IndexedSpriteGeometry.a(-70, this.field_X);
               Rasterizer2D.clear();
             } else {
               this.field_X = new RgbSprite(var11Lifetime2, var12Lifetime2);
-              fc.a(-86, this.field_X);
+              IndexedSpriteGeometry.a(-86, this.field_X);
             }
             var53.a(112, 144, var53.canvasWidth << 4, var53.canvasHeight << 4, -this.field_Q << 10, 4096);
             sc.b(-111);
@@ -403,18 +403,18 @@ final class nf extends lg {
           var12Lifetime2Lifetime1 = var47.canvasHeight << 1;
           if (this.field_X == null) {
             this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-            fc.a(-86, this.field_X);
+            IndexedSpriteGeometry.a(-86, this.field_X);
           } else {
             if (var11Lifetime2Lifetime1 > this.field_X.width) {
               this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-              fc.a(-86, this.field_X);
+              IndexedSpriteGeometry.a(-86, this.field_X);
             } else {
               if (this.field_X.height >= var12Lifetime2Lifetime1) {
-                fc.a(-70, this.field_X);
+                IndexedSpriteGeometry.a(-70, this.field_X);
                 Rasterizer2D.clear();
               } else {
                 this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-                fc.a(-86, this.field_X);
+                IndexedSpriteGeometry.a(-86, this.field_X);
               }
             }
           }
@@ -453,11 +453,11 @@ final class nf extends lg {
           if (this.field_X != null &&
             var11Lifetime3 <= this.field_X.width &&
             this.field_X.height >= var12Lifetime3) {
-            fc.a(-70, this.field_X);
+            IndexedSpriteGeometry.a(-70, this.field_X);
             Rasterizer2D.clear();
           } else {
             this.field_X = new RgbSprite(var11Lifetime3, var12Lifetime3);
-            fc.a(-86, this.field_X);
+            IndexedSpriteGeometry.a(-86, this.field_X);
           }
           var39.a(112, 144, var39.canvasWidth << 4, var39.canvasHeight << 4, -this.field_Q << 10, 4096);
           sc.b(-111);
@@ -488,17 +488,17 @@ final class nf extends lg {
         var12Lifetime4 = var43.canvasHeight << 1;
         if (this.field_X == null) {
           this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
-          fc.a(-86, this.field_X);
+          IndexedSpriteGeometry.a(-86, this.field_X);
         } else {
           if (var11Lifetime4 > this.field_X.width) {
             this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
-            fc.a(-86, this.field_X);
+            IndexedSpriteGeometry.a(-86, this.field_X);
           } else {
             if (this.field_X.height < var12Lifetime4) {
               this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
-              fc.a(-86, this.field_X);
+              IndexedSpriteGeometry.a(-86, this.field_X);
             } else {
-              fc.a(-70, this.field_X);
+              IndexedSpriteGeometry.a(-70, this.field_X);
               Rasterizer2D.clear();
             }
           }

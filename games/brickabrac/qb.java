@@ -176,7 +176,7 @@ final class qb extends ki {
         }
     }
 
-    final static int a(String[] args, int param1, int param2, dh param3, String param4) {
+    final static int a(String[] args, int param1, int param2, TextFont param3, String param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -203,7 +203,7 @@ final class qb extends ki {
         int var6Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5_int = param3.c(param4);
+          var5_int = param3.measureText(param4);
           if (param1 >= var5_int &&
             param4.indexOf("<br>") == -1) {
             args[0] = param4;
@@ -220,7 +220,7 @@ final class qb extends ki {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param4.substring(var7, var9 + 1).trim();
-              var12 = param3.c(var11);
+              var12 = param3.measureText(var11);
               if (param1 <= var12) {
                 incrementValue$1 = var6Lifetime1;
                 var6Lifetime1++;

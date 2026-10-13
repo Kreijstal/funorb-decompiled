@@ -4,7 +4,7 @@
 final class AchievementsScreen extends AchievementBrowserScreen {
     static int[][] field_F;
     static String[] field_H;
-    static tp field_J;
+    static IndexedSprite field_J;
     static String field_G;
     static String field_I;
     static String field_K;

@@ -1,50 +1,50 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends dh {
+final class hl extends TextFont {
     private byte[][] field_M;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int glyphId, int x, int y, int width, int height, int paint, int alpha, boolean shadow) {
         int var13 = 0;
-        int var9 = param1 + param2 * Rasterizer2D.width;
-        int var10 = Rasterizer2D.width - param3;
+        int var9 = x + y * Rasterizer2D.width;
+        int var10 = Rasterizer2D.width - width;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < Rasterizer2D.clipTop) {
-          var13 = Rasterizer2D.clipTop - param2;
-          param4 = param4 - var13;
-          param2 = Rasterizer2D.clipTop;
-          var12 = var12 + var13 * param3;
+        if (y < Rasterizer2D.clipTop) {
+          var13 = Rasterizer2D.clipTop - y;
+          height = height - var13;
+          y = Rasterizer2D.clipTop;
+          var12 = var12 + var13 * width;
           var9 = var9 + var13 * Rasterizer2D.width;
         }
-        if (param2 + param4 > Rasterizer2D.clipBottom) {
-          param4 = param4 - (param2 + param4 - Rasterizer2D.clipBottom);
+        if (y + height > Rasterizer2D.clipBottom) {
+          height = height - (y + height - Rasterizer2D.clipBottom);
         }
-        if (param1 < Rasterizer2D.clipLeft) {
-          var13Lifetime1 = Rasterizer2D.clipLeft - param1;
-          param3 = param3 - var13Lifetime1;
-          param1 = Rasterizer2D.clipLeft;
+        if (x < Rasterizer2D.clipLeft) {
+          var13Lifetime1 = Rasterizer2D.clipLeft - x;
+          width = width - var13Lifetime1;
+          x = Rasterizer2D.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > Rasterizer2D.clipRight) {
-          var13Lifetime2 = param1 + param3 - Rasterizer2D.clipRight;
-          param3 = param3 - var13Lifetime2;
+        if (x + width > Rasterizer2D.clipRight) {
+          var13Lifetime2 = x + width - Rasterizer2D.clipRight;
+          width = width - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
         }
-        if (param3 <= 0 ||
-          param4 <= 0) {
+        if (width <= 0 ||
+          height <= 0) {
           return;
         }
-        hl.a(Rasterizer2D.pixels, this.field_M[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        hl.a(Rasterizer2D.pixels, this.field_M[glyphId], paint, var12, var9, width, height, var10, var11, alpha);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int glyphId, int x, int y, int width, int height, int paint, boolean shadow) {
         int var8;
         int var9;
         int var10;
@@ -52,41 +52,41 @@ final class hl extends dh {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * Rasterizer2D.width;
-        var9 = Rasterizer2D.width - param3;
+        var8 = x + y * Rasterizer2D.width;
+        var9 = Rasterizer2D.width - width;
         var10 = 0;
         var11 = 0;
-        if (param2 < Rasterizer2D.clipTop) {
-          var12 = Rasterizer2D.clipTop - param2;
-          param4 = param4 - var12;
-          param2 = Rasterizer2D.clipTop;
-          var11 = var11 + var12 * param3;
+        if (y < Rasterizer2D.clipTop) {
+          var12 = Rasterizer2D.clipTop - y;
+          height = height - var12;
+          y = Rasterizer2D.clipTop;
+          var11 = var11 + var12 * width;
           var8 = var8 + var12 * Rasterizer2D.width;
         }
-        if (param2 + param4 > Rasterizer2D.clipBottom) {
-          param4 = param4 - (param2 + param4 - Rasterizer2D.clipBottom);
+        if (y + height > Rasterizer2D.clipBottom) {
+          height = height - (y + height - Rasterizer2D.clipBottom);
         }
-        if (param1 < Rasterizer2D.clipLeft) {
-          var12Lifetime1 = Rasterizer2D.clipLeft - param1;
-          param3 = param3 - var12Lifetime1;
-          param1 = Rasterizer2D.clipLeft;
+        if (x < Rasterizer2D.clipLeft) {
+          var12Lifetime1 = Rasterizer2D.clipLeft - x;
+          width = width - var12Lifetime1;
+          x = Rasterizer2D.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > Rasterizer2D.clipRight) {
-          var12Lifetime2 = param1 + param3 - Rasterizer2D.clipRight;
-          param3 = param3 - var12Lifetime2;
+        if (x + width > Rasterizer2D.clipRight) {
+          var12Lifetime2 = x + width - Rasterizer2D.clipRight;
+          width = width - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
-        if (param3 > 0 &&
-          param4 > 0) {
+        if (width > 0 &&
+          height > 0) {
           if (Rasterizer2D.field_e == null) {
-            hl.a(Rasterizer2D.pixels, this.field_M[param0], param5, var11, var8, param3, param4, var9, var10);
+            hl.a(Rasterizer2D.pixels, this.field_M[glyphId], paint, var11, var8, width, height, var9, var10);
           } else {
-            hl.a(Rasterizer2D.pixels, this.field_M[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, Rasterizer2D.field_e, Rasterizer2D.field_h);
+            hl.a(Rasterizer2D.pixels, this.field_M[glyphId], x, y, width, height, paint, var11, var8, var9, var10, Rasterizer2D.field_e, Rasterizer2D.field_h);
           }
           return;
         }

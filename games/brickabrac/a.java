@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class a extends ih {
-    static dh field_u;
+    static TextFont field_u;
     static String field_t;
     static RgbSprite[] field_s;
     private wh field_q;

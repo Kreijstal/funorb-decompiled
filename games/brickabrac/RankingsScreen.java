@@ -4,7 +4,7 @@
 final class RankingsScreen extends MenuScreen {
     static long field_u;
     private int sortIndex;
-    static tp field_t;
+    static IndexedSprite field_t;
     static int[] field_r;
     static mh field_s;
 
@@ -40,7 +40,7 @@ final class RankingsScreen extends MenuScreen {
           for (var3 = 0; var3 < 2; var3++) {
             var4_ref_q = this.buttons[var3];
             var8 = ag.buttonLabels[var4_ref_q.actionId];
-            var6_int = 30 + nn.field_g.c(var8);
+            var6_int = 30 + nn.field_g.measureText(var8);
             if (var6_int > var2) {
               var2 = var6_int;
             }
@@ -55,7 +55,7 @@ final class RankingsScreen extends MenuScreen {
             var6.height = this.getButtonHeight((byte) -30, var5_int);
             var4 = var4 + (10 + var6.width);
           }
-          var2Lifetime1 = 30 + nn.field_g.c(this.e((byte) 111));
+          var2Lifetime1 = 30 + nn.field_g.measureText(this.e((byte) 111));
           var4Lifetime1 = (-var2Lifetime1 + 640) / 2;
           var5 = this.buttons[2];
           var5.x = var4Lifetime1;
@@ -93,7 +93,7 @@ final class RankingsScreen extends MenuScreen {
 
     final static void a(pb param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         try {
-          fc.a(-59, param0.field_p);
+          IndexedSpriteGeometry.a(-59, param0.field_p);
           if (param5 < 39) {
             RankingsScreen.a(true, 49, true);
           }
@@ -130,10 +130,10 @@ final class RankingsScreen extends MenuScreen {
         String[] var9;
         int var6Lifetime1;
         this.sortIndex = 0;
-        qo.field_N = 10 + ob.field_D.c("10. ");
+        qo.field_N = 10 + ob.field_D.measureText("10. ");
         var8 = new String[]{so.field_e, NodeDeque.field_c, be.field_e, hj.field_Vb, jg.field_p};
         var9 = var8;
-        var2 = nn.field_g.c(IntrusiveNode.a((CharSequence[]) ((Object) var9), true));
+        var2 = nn.field_g.measureText(IntrusiveNode.a((CharSequence[]) ((Object) var9), true));
         var3 = 582;
         var4 = 182;
         var5 = (-var4 + (var3 - var2)) / 5;
@@ -142,7 +142,7 @@ final class RankingsScreen extends MenuScreen {
           var5 = 0;
         }
         for (var6 = 0; var6 < mf.field_d.length; var6++) {
-          mf.field_d[var6] = var5 + nn.field_g.c(var8[var6]);
+          mf.field_d[var6] = var5 + nn.field_g.measureText(var8[var6]);
           if (0 < var6) {
             mf.field_d[var6] = mf.field_d[var6] + mf.field_d[var6 - 1];
           }
@@ -226,18 +226,18 @@ final class RankingsScreen extends MenuScreen {
           bo.a((byte) 97, na.field_N);
           return;
         }
-        var2 = 149 + nn.field_g.field_B;
+        var2 = 149 + nn.field_g.capHeight;
         var3 = 0;
-        nn.field_g.c(DualLinkIterator.field_i, 66, var2, var3, -1);
-        nn.field_g.a(so.field_e, mf.field_d[0], var2, var3, -1);
-        nn.field_g.a(NodeDeque.field_c, mf.field_d[1], var2, var3, -1);
+        nn.field_g.drawLeft(DualLinkIterator.field_i, 66, var2, var3, -1);
+        nn.field_g.drawRight(so.field_e, mf.field_d[0], var2, var3, -1);
+        nn.field_g.drawRight(NodeDeque.field_c, mf.field_d[1], var2, var3, -1);
         if (obfuscationGuard >= -14) {
           this.advanceScreen(false, true, 9);
         }
-        nn.field_g.a(be.field_e, mf.field_d[2], var2, var3, -1);
-        nn.field_g.a(hj.field_Vb, mf.field_d[3], var2, var3, -1);
-        nn.field_g.a(jg.field_p, mf.field_d[4], var2, var3, -1);
-        var2Lifetime1 = 149 + (nn.field_g.field_B + nn.field_g.field_P) * 5 / 2;
+        nn.field_g.drawRight(be.field_e, mf.field_d[2], var2, var3, -1);
+        nn.field_g.drawRight(hj.field_Vb, mf.field_d[3], var2, var3, -1);
+        nn.field_g.drawRight(jg.field_p, mf.field_d[4], var2, var3, -1);
+        var2Lifetime1 = 149 + (nn.field_g.capHeight + nn.field_g.descent) * 5 / 2;
         var4 = null;
         if (ch.field_h != null &&
           ch.field_h.field_v) {

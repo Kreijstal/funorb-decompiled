@@ -1341,7 +1341,7 @@ final class ie extends AudioStream {
         }
     }
 
-    final static void a(int param0, RgbSprite[] param1, RgbSprite[] param2, int param3, RgbSprite[] param4, int param5, int param6, dh param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, RgbSprite[] param1, RgbSprite[] param2, int param3, RgbSprite[] param4, int param5, int param6, TextFont param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1359,8 +1359,8 @@ final class ie extends AudioStream {
           if (param10 < 87) {
             field_q = (String) null;
           }
-          var15_int = param7.field_P + param7.field_B;
-          var16 = param7.field_B;
+          var15_int = param7.descent + param7.capHeight;
+          var16 = param7.capHeight;
           ja.a(param12, param9, var15_int, param3, param7, param13, var15_int, -111, param5, var16, param1, param7, param8, 480, param0, param6, var16, param11, param14, param2, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

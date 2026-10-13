@@ -49,8 +49,8 @@ public final class BrickABrac extends sa {
               var4 = 123 - var5 / 2;
             }
           }
-          IntrusiveHashTable.achievementSourceIcons[var3.value].c(8, var4);
-          nn.field_g.c(AchievementBrowserScreen.field_s[var3.value], 48, var4 + nn.field_g.field_F, 0, -1);
+          IntrusiveHashTable.achievementSourceIcons[var3.value].drawQuarter(8, var4);
+          nn.field_g.drawLeft(AchievementBrowserScreen.field_s[var3.value], 48, var4 + nn.field_g.ascent, 0, -1);
         }
         if (cf.a((byte) 62)) {
           rd.b(-79);
@@ -679,7 +679,7 @@ public final class BrickABrac extends sa {
         MultiplayerMatch.d(-19537);
         p.b(false);
         vd.a(true);
-        dh.a();
+        TextFont.a();
         rf.a((byte) 98);
         ObjectHistoryBuffer.a(81);
         aa.b(118);
@@ -695,7 +695,7 @@ public final class BrickABrac extends sa {
         ok.b(-116);
         mo.d(false);
         rh.a(121);
-        fc.b(31797);
+        IndexedSpriteGeometry.b(31797);
         fi.d((byte) -31);
         oo.d((byte) -61);
         sn.f(94);

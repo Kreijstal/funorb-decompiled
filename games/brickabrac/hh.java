@@ -36,7 +36,7 @@ final class hh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          fc.a(-72, param3.field_p);
+          IndexedSpriteGeometry.a(-72, param3.field_p);
           Rasterizer2D.fillVerticalGradient(0, 0, param3.field_i, param3.field_q, um.field_u[param5], 928072);
           og.a(-124, 128, 8, param0, 16777215, (-param0.canvasWidth + param3.field_i) / 2, 85 + (param1 - param0.canvasHeight));
           if (param4 != -8562) {

@@ -6,7 +6,7 @@ class um implements ub, qe {
     int field_q;
     static int[] field_u;
     int field_a;
-    dh field_k;
+    TextFont field_k;
     int field_h;
     int field_c;
     static mh field_b;
@@ -201,7 +201,7 @@ class um implements ub, qe {
         }
     }
 
-    um(dh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    um(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -703,12 +703,12 @@ class um implements ub, qe {
               if (var6 != 3 &&
                 var6 == 1) {
               }
-              var5 = (-this.field_k.field_P + var4 - this.field_k.field_F >> 1) + this.field_k.field_F;
+              var5 = (-this.field_k.descent + var4 - this.field_k.ascent >> 1) + this.field_k.ascent;
             } else {
-              var5 = var4 - this.field_k.field_P;
+              var5 = var4 - this.field_k.descent;
             }
           } else {
-            var5 = this.field_k.field_F;
+            var5 = this.field_k.ascent;
           }
           var6Lifetime1 = this.field_f;
           if (var6Lifetime1 != 0 &&
@@ -1082,7 +1082,7 @@ class um implements ub, qe {
               } else {
                 var13.field_nc.a(np.field_a, var32, 0, 68, (byte) 64);
               }
-              var13.field_Vb.field_Mb = dh.a(var13.field_Vb.field_O, var33, 78);
+              var13.field_Vb.field_Mb = TextFont.truncateText(var13.field_Vb.field_O, var33, 78);
               var13.field_Vb.a(np.field_a, var32, 70, 78, (byte) 64);
               if (var13.field_Vb.field_kb &&
                 !var13.field_Vb.field_Mb.equals(var33)) {
@@ -1095,7 +1095,7 @@ class um implements ub, qe {
               } else {
                 var13.field_Cc.field_Mb = "/" + var13.field_jc;
                 var13.field_tc.field_S = 2;
-                var34_int = (348 - var13.field_Cc.field_O.c("/")) / 2;
+                var34_int = (348 - var13.field_Cc.field_O.measureText("/")) / 2;
                 var13.field_tc.a(np.field_a, var32, 150, -150 + var34_int, (byte) 64);
                 var13.field_Cc.a(np.field_a, var32, var34_int, 198 - var34_int, (byte) 64);
               }
@@ -1199,7 +1199,7 @@ class um implements ub, qe {
                 }
                 var39 = var38.toString();
                 var13.field_Ub.field_Mb = var39;
-                var40Lifetime1 = var13.field_Ub.field_O.a(var39, var13.field_Ib - var13.field_Ub.field_V * 2);
+                var40Lifetime1 = var13.field_Ub.field_O.countWrappedLines(var39, var13.field_Ib - var13.field_Ub.field_V * 2);
                 var13.field_Ub.a(np.field_a * var40Lifetime1, var32, 0, var13.field_Ib, (byte) 64);
                 var32 = var32 + np.field_a * var40Lifetime1;
               }
@@ -1218,7 +1218,7 @@ class um implements ub, qe {
             var35 = var34;
             var35Lifetime1 = var34;
             if (var34 != null) {
-              var35_intLifetime1 = var13.field_gc.field_O.a(var34, -om.field_oc + (var13.field_Ib - om.field_oc));
+              var35_intLifetime1 = var13.field_gc.field_O.countWrappedLines(var34, -om.field_oc + (var13.field_Ib - om.field_oc));
               var13.field_gc.field_Mb = var34;
               var13.field_gc.field_jb = var13.field_Wb * 256 / cm.field_o;
               var13.field_gc.a(np.field_a * var35_intLifetime1, var32, om.field_oc, var13.field_Ib - 2 * om.field_oc, (byte) 64);
@@ -1374,27 +1374,27 @@ class um implements ub, qe {
                 if (var12 != 3 &&
                   var12 != 1) {
                 }
-                var11 = this.field_k.field_F + (-this.field_k.field_P - this.field_k.field_F + var10 >> 1);
+                var11 = this.field_k.ascent + (-this.field_k.descent - this.field_k.ascent + var10 >> 1);
               } else {
-                var11 = -this.field_k.field_P + var10;
+                var11 = -this.field_k.descent + var10;
               }
             } else {
-              var11 = this.field_k.field_F;
+              var11 = this.field_k.ascent;
             }
             var12Lifetime1 = this.field_f;
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_k.b(this.a(param7, true), (var9_int >> 1) + this.a(param0, param7, 65263, param6), this.a((byte) 118, param3, param1, param7) + var11, param4, param2);
+                this.field_k.drawCentered(this.a(param7, true), (var9_int >> 1) + this.a(param0, param7, 65263, param6), this.a((byte) 118, param3, param1, param7) + var11, param4, param2);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_k.a(this.a(param7, true), this.a(param0, param7, 65263, param6) + var9_int, var11 + this.a((byte) 127, param3, param1, param7), param4, param2);
+                  this.field_k.drawRight(this.a(param7, true), this.a(param0, param7, 65263, param6) + var9_int, var11 + this.a((byte) 127, param3, param1, param7), param4, param2);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_k.c(this.a(param7, true), this.a(param0, param7, 65263, param6), this.a((byte) 105, param3, param1, param7) + var11, param4, param2);
+              this.field_k.drawLeft(this.a(param7, true), this.a(param0, param7, 65263, param6), this.a((byte) 105, param3, param1, param7) + var11, param4, param2);
             }
           }
           sc.b(-103);
@@ -1422,7 +1422,7 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -92) {
-            this.field_k = (dh) null;
+            this.field_k = (TextFont) null;
           }
           stackIn_3_0 = this.a((byte) 125, param0, 0, param2);
           return stackIn_3_0;
@@ -1444,7 +1444,7 @@ class um implements ub, qe {
         if (param0 < 64) {
           this.field_h = -89;
         }
-        return this.field_k.field_P + this.field_k.field_F;
+        return this.field_k.descent + this.field_k.ascent;
     }
 
     public final int a(oc param0, int param1) {
@@ -1492,7 +1492,7 @@ class um implements ub, qe {
     protected um() {
     }
 
-    um(dh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    um(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_n = param12 ? true : false;
           this.field_r = param5;

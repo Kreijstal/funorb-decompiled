@@ -344,7 +344,7 @@ abstract class qg extends ke {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), fc.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.field_C);
+            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.field_C);
             if (-1 != var5_intLifetime1) {
               vh.a(var5_intLifetime1, (byte) -123, eo.field_e, co.field_f);
               eo.field_e = null;

@@ -3,7 +3,7 @@
  */
 final class MembershipBenefitsScreen extends MenuScreen {
     static cd field_v;
-    private tp[] screenshots;
+    private IndexedSprite[] screenshots;
     static mh field_t;
     private mf archive;
     static int field_x;

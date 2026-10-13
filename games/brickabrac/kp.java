@@ -5,7 +5,7 @@ import java.util.*;
 
 final class kp {
     static NodeDeque achievementNotifications;
-    static dh field_b;
+    static TextFont field_b;
     static RgbSprite[] field_e;
     static int field_a;
     static Vector field_d;

@@ -14,25 +14,25 @@ final class tb extends bj {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1 ^ 0, param2);
-        wm.field_a.b(this.field_jb, param0 + (this.field_t >> 1), param2 + 103, 16777215, -1);
+        wm.field_a.drawCentered(this.field_jb, param0 + (this.field_t >> 1), param2 + 103, 16777215, -1);
         if (param1 == 274) {
           if (this.field_ib != null) {
             Rasterizer2D.drawHorizontalLine(20 + param0, 120 + param2 - 7, 260, 8421504);
-            wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.field_F);
+            wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
           }
           return;
         }
         this.field_gb = false;
         if (this.field_ib != null) {
           Rasterizer2D.drawHorizontalLine(20 + param0, 120 + param2 - 7, 260, 8421504);
-          wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.field_F);
+          wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
         }
     }
 
-    final static mb a(int param0, int param1, mf param2, mf param3, int param4) {
+    final static AlphaFont a(int param0, int param1, mf param2, mf param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
-        mb stackIn_6_0 = null;
+        AlphaFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -48,7 +48,7 @@ final class tb extends bj {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (mb) (stackIn_4_0);
+          return (AlphaFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -224,7 +224,7 @@ final class tb extends bj {
         try {
           this.field_ib = param1;
           if (null != this.field_ib) {
-            var3_int = wm.field_a.b(this.field_ib, 260, wm.field_a.field_F);
+            var3_int = wm.field_a.measureWrappedHeight(this.field_ib, 260, wm.field_a.ascent);
             this.a(true, 150 + var3_int, 300);
           }
           this.field_bb = new cr(13, 50, 274, 30, 15, 2113632, 4210752);

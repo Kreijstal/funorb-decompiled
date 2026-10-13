@@ -120,7 +120,7 @@ final class ai extends ki {
           kc.field_p = pl.a("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
           IntrusiveHashTable.field_i = jh.a(0, qa.field_y);
           if (param0) {
-            ai.a((mh) null, (dh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
+            ai.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
           }
           jk.field_t = jh.a(0, th.field_c);
           MembershipBenefitsScreen.field_s = jh.a(0, bf.field_K);
@@ -198,7 +198,7 @@ final class ai extends ki {
         }
     }
 
-    final static void a(mh param0, dh param1, mh param2, mh param3, mh param4, mh param5, mh param6, mh param7, byte param8, boolean param9, fj param10, mh param11) {
+    final static void a(mh param0, TextFont param1, mh param2, mh param3, mh param4, mh param5, mh param6, mh param7, byte param8, boolean param9, fj param10, mh param11) {
         String stackIn_30_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -249,7 +249,7 @@ final class ai extends ki {
           r.field_C[3] = 16736511;
           r.field_C[0] = 16764000;
           if (param8 != 61) {
-            ai.a((mh) null, (dh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 97, false, (fj) null, (mh) null);
+            ai.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 97, false, (fj) null, (mh) null);
           }
           r.field_C[1] = 6356832;
           var12 = new RgbSprite(4, 4);

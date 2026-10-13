@@ -5,7 +5,7 @@ final class c {
     static int field_g;
     static String field_c;
     private boolean field_f;
-    static tp[] field_i;
+    static IndexedSprite[] field_i;
     static ta field_l;
     private int field_h;
     private int[] field_k;

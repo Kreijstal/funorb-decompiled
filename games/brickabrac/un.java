@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class un {
-    static tp[] field_e;
+    static IndexedSprite[] field_e;
     static int field_a;
     static String field_h;
     static String[] field_c;

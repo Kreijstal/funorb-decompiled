@@ -116,9 +116,9 @@ final class so {
         byte[] var13 = null;
         byte[] var14 = null;
         byte[] var15 = null;
-        tp[] var16 = null;
+        IndexedSprite[] var16 = null;
         byte[] var17 = null;
-        tp[] var18 = null;
+        IndexedSprite[] var18 = null;
         RgbSprite var19 = null;
         RgbSprite var20 = null;
         byte[] var21 = null;
@@ -150,19 +150,19 @@ final class so {
           var5 = var13;
           var16 = PacketBuffer.a("basic", param0, "gamefont", param3 - 946744493);
           sn.a(param3 ^ 29068, var21, 1);
-          ma.field_O = fc.a(0, var21, 0, var16, 0, 1);
-          ma.field_O.field_M = bg.field_n;
-          nn.field_g = fc.a(2, var21, 0, var16, 0, 1);
-          nn.field_g.field_M = bg.field_n;
+          ma.field_O = IndexedSpriteGeometry.a(0, var21, 0, var16, 0, 1);
+          ma.field_O.palettes = bg.field_n;
+          nn.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
+          nn.field_g.palettes = bg.field_n;
           var22 = param4.a(86, "kartika13", "");
           var17 = var22;
           var14 = var17;
           var5Lifetime1 = var14;
           var18 = PacketBuffer.a("kartika13", param1, "", -946715356);
-          ob.field_D = fc.a(0, var22, 0, var18, 0, 1);
-          ob.field_D.field_M = bg.field_n;
-          ce.field_e = fc.a(1, var22, 0, var18, 0, 1);
-          ce.field_e.field_M = bg.field_n;
+          ob.field_D = IndexedSpriteGeometry.a(0, var22, 0, var18, 0, 1);
+          ob.field_D.palettes = bg.field_n;
+          ce.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
+          ce.field_e.palettes = bg.field_n;
           gj.field_c = bd.a("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
             gj.field_c[var7_int] = qg.a(gj.field_c[var7_int], 1);
@@ -202,7 +202,7 @@ final class so {
           for (var10_int = 0; var10_int < IntrusiveHashTable.achievementSourceIcons.length; var10_int++) {
             var20.bindRasterTarget();
             Rasterizer2D.clear();
-            IntrusiveHashTable.achievementSourceIcons[var10_int].c(0, 0);
+            IntrusiveHashTable.achievementSourceIcons[var10_int].drawQuarter(0, 0);
             kc.field_q.a((byte) 101);
             e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
             pa.field_h[var10_int] = p.a(pn.a(param3, -29147), var20, 12, 9838226);
@@ -241,7 +241,7 @@ final class so {
           qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
           pa.field_m = new RgbSprite[h.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
-            pa.field_m[var10_intLifetime2] = h.field_C[var10_intLifetime2].a();
+            pa.field_m[var10_intLifetime2] = h.field_C[var10_intLifetime2].toRgbSprite();
           }
           pa.field_m[24].bindRasterTarget();
           Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
@@ -301,7 +301,7 @@ final class so {
             var11_ref_jp = dupTemp$0;
             var11_ref_jp.rotateCounterclockwise();
           }
-          un.field_e = new tp[7];
+          un.field_e = new IndexedSprite[7];
           un.field_e[0] = uo.a((byte) 29, param0, "p1_key_right", "basic");
           un.field_e[1] = uo.a((byte) 29, param0, "p1_key_left", "basic");
           un.field_e[2] = uo.a((byte) 29, param0, "p1_key_launch", "basic");
@@ -352,7 +352,7 @@ final class so {
           da.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {
             da.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);
-            fc.a(-59, da.packSelectorIcons[var11Lifetime1]);
+            IndexedSpriteGeometry.a(-59, da.packSelectorIcons[var11Lifetime1]);
             SaveResultsPromptScreen.packCardIcons[var11Lifetime1].a(0, 0);
             sc.b(-89);
           }

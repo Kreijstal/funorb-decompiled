@@ -6,7 +6,7 @@ final class cd {
     static mh field_d;
     static vm field_g;
     static String field_f;
-    static tp[] field_b;
+    static IndexedSprite[] field_b;
     int field_a;
     static int field_e;
     static RgbSprite[] field_h;

@@ -37,20 +37,20 @@ final class sm {
           }
           try {
             if (param0 == ~GameplayScreen.field_j) {
-              fc.field_e = ec.field_P.a(LevelMetadata.field_k, (byte) 120, gd.field_a);
+              IndexedSpriteGeometry.field_e = ec.field_P.a(LevelMetadata.field_k, (byte) 120, gd.field_a);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
             }
             if (1 == GameplayScreen.field_j) {
-              if (fc.field_e.field_f == 2) {
+              if (IndexedSpriteGeometry.field_e.field_f == 2) {
                 stackIn_15_0 = Brick.a((byte) 41, -1);
                 return stackIn_15_0;
               }
-              if (fc.field_e.field_f == 1) {
+              if (IndexedSpriteGeometry.field_e.field_f == 1) {
                 GameplayScreen.field_j = GameplayScreen.field_j + 1;
               }
             }
             if (GameplayScreen.field_j == 2) {
-              MouseInput.field_d = new wh((java.net.Socket) (fc.field_e.field_e), ec.field_P);
+              MouseInput.field_d = new wh((java.net.Socket) (IndexedSpriteGeometry.field_e.field_e), ec.field_P);
               var2 = new PacketBuffer(13);
               c.a(vb.field_S, 12, nb.field_a, u.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);
@@ -81,7 +81,7 @@ final class sm {
             vd.field_f.a(MouseInput.field_d, rd.field_a, 12);
             MouseInput.field_d = null;
             GameplayScreen.field_j = 0;
-            fc.field_e = null;
+            IndexedSpriteGeometry.field_e = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

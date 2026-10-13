@@ -13,7 +13,7 @@ class oc extends IntrusiveNode {
     boolean field_q;
     String field_A;
     int field_t;
-    static dh field_m;
+    static TextFont field_m;
     static long field_p;
     static String field_u;
     int field_o;
@@ -134,7 +134,7 @@ class oc extends IntrusiveNode {
           var8 = LevelPackSelectScreen.field_r.width + param2 - 5;
           Rasterizer2D.fillRectangle(var8, param0 + 1, 4, LevelPackSelectScreen.field_r.height - 2, 16777215);
           if (param5 <= 106) {
-            oc.a(120, (dh) null);
+            oc.a(120, (TextFont) null);
           }
           var9 = param3.field_cb[param1] >> 8;
           var10 = LevelPackSelectScreen.field_r.height + (param0 - 1);
@@ -443,7 +443,7 @@ class oc extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, dh param1) {
+    final static void a(int param0, TextFont param1) {
         try {
           wp.field_c = param1;
           bq.field_b = new ck();

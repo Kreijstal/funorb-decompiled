@@ -307,7 +307,7 @@ final class he extends ib implements en {
     final void a(int param0, int param1, int param2, byte param3) {
         int var5 = this.field_o + param1;
         int var6 = param0 + this.field_w;
-        a.field_u.a(qo.field_H, var5 + 20, 20 + var6, this.field_t - 40, -50 + this.field_s, 16777215, -1, 1, 0, a.field_u.field_F);
+        a.field_u.a(qo.field_H, var5 + 20, 20 + var6, this.field_t - 40, -50 + this.field_s, 16777215, -1, 1, 0, a.field_u.ascent);
         super.a(param0, param1, param2, param3);
     }
 

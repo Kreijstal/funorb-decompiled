@@ -135,7 +135,7 @@ final class s {
         int var8_int = 0;
         RuntimeException var8 = null;
         try {
-          fc.a(-72, param4.field_p);
+          IndexedSpriteGeometry.a(-72, param4.field_p);
           Rasterizer2D.fillVerticalGradient(0, 0, param4.field_i, param4.field_q, kg.field_d[param2], 22953);
           param3.drawTransparent((-param3.canvasWidth + param4.field_i) / 2 - 147 / param1, 480 + param5 - param7.canvasHeight);
           param0.b(-(80 / param1) + (param4.field_i - param0.canvasWidth) / 2, -(201 / param1) + (param4.field_q + param5) - param0.canvasHeight, 41, 110);

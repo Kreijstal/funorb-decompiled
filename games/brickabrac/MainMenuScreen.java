@@ -113,7 +113,7 @@ final class MainMenuScreen extends MenuScreen {
           fieldTemp$0 = c.field_g - 1;
           c.field_g = c.field_g - 1;
           if (0 == fieldTemp$0) {
-            fc.a(-59, field_s);
+            IndexedSpriteGeometry.a(-59, field_s);
             pa.a(true);
             sc.b(-96);
             if (IntrusiveHashTable.field_k != null) {

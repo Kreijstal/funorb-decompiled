@@ -12,7 +12,7 @@ final class qf extends lp implements en {
           if (param5) {
             field_Cb = -58;
           }
-          fc.a(-77, param1.field_p);
+          IndexedSpriteGeometry.a(-77, param1.field_p);
           Rasterizer2D.fillVerticalGradient(0, 0, param1.field_i, param1.field_q, rm.field_d[param0], 22953);
           param3.b((-param3.canvasWidth + param1.field_i) / 2 - 80 / param2, -param3.canvasHeight + (param1.field_q + param4 - 201 / param2), 41, 110);
           sc.b(-107);

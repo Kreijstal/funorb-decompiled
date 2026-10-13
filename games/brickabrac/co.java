@@ -12,7 +12,7 @@ final class co {
     private ih field_a;
     private da field_c;
     private kg field_h;
-    static mb field_j;
+    static AlphaFont field_j;
 
     final void a(int param0) {
         int var2;
@@ -204,7 +204,7 @@ final class co {
 
     final static int a(byte param0) {
         if (param0 != -53) {
-          field_j = (mb) null;
+          field_j = (AlphaFont) null;
         }
         return lk.field_p - LevelPack.field_k;
     }

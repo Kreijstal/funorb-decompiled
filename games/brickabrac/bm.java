@@ -246,7 +246,7 @@ final class bm {
               var11 = 100;
             }
             var11 = var11 * 128 / 50;
-            nn.field_g.b(param6, param0 + param4 / (2 * param5), nn.field_g.field_B + (param2 / (2 * param5) + (param1 - 100 / param5)), 0, -1, var11);
+            nn.field_g.drawCenteredAlpha(param6, param0 + param4 / (2 * param5), nn.field_g.capHeight + (param2 / (2 * param5) + (param1 - 100 / param5)), 0, -1, var11);
             lo.a(param4, var11, 60, param0, param5, param1, param2, param3);
           }
           return;

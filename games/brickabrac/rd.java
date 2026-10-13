@@ -51,7 +51,7 @@ final class rd {
             while (var4_ref_ck != null) {
               var5_int = 0;
               for (var6 = 0; var4_ref_ck.field_l.length() > var6; var6++) {
-                var5_int = var5_int + wp.field_c.a(var4_ref_ck.field_l.charAt(var6));
+                var5_int = var5_int + wp.field_c.getAdvance(var4_ref_ck.field_l.charAt(var6));
               }
               if (var5_int > var3) {
                 var3 = var5_int;
@@ -73,8 +73,8 @@ final class rd {
               for (var8 = 0; var5.field_l.length() > var8; var8++) {
                 dupTemp$0 = var5.field_l.charAt(var5.field_l.length() + (-var8 - 1));
                 var7Lifetime1 = dupTemp$0;
-                var6Lifetime1 = var6Lifetime1 - wp.field_c.a(dupTemp$0);
-                wp.field_c.a((char) var7Lifetime1, var6Lifetime1, var4Lifetime1, 2);
+                var6Lifetime1 = var6Lifetime1 - wp.field_c.getAdvance(dupTemp$0);
+                wp.field_c.drawCharacter((char) var7Lifetime1, var6Lifetime1, var4Lifetime1, 2);
               }
               var4Lifetime1 += 18;
               var5 = (ck) (ff.field_d.next((byte) 116));

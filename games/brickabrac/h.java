@@ -7,7 +7,7 @@ abstract class h extends oc implements sd {
     oc field_E;
     static boolean[] field_D;
     static String[] field_F;
-    static tp[] field_C;
+    static IndexedSprite[] field_C;
 
     public static void f(byte param0) {
         field_C = null;
@@ -108,7 +108,7 @@ abstract class h extends oc implements sd {
             if (param1 == 110) {
               return false;
             }
-            field_C = (tp[]) null;
+            field_C = (IndexedSprite[]) null;
             return false;
           }
           if (pe.heldKeys[81]) {
@@ -138,7 +138,7 @@ abstract class h extends oc implements sd {
     String d(int param0) {
         String var3 = null;
         if (param0 <= 6) {
-          field_C = (tp[]) null;
+          field_C = (IndexedSprite[]) null;
         }
         String var2 = super.d(66);
         if (null != this.field_E) {
@@ -259,7 +259,7 @@ abstract class h extends oc implements sd {
             this.field_E.a(param0, param1, this.field_w + param2, param3, 19223, this.field_o + param5);
           }
           if (param4 != 19223) {
-            field_C = (tp[]) null;
+            field_C = (IndexedSprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -423,7 +423,7 @@ abstract class h extends oc implements sd {
           this.field_E.a(this.field_w + param0, param1 + this.field_o, param2, (byte) -11);
         }
         if (param3 != -11) {
-          field_C = (tp[]) null;
+          field_C = (IndexedSprite[]) null;
         }
     }
 
@@ -470,7 +470,7 @@ abstract class h extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -35) {
-            field_C = (tp[]) null;
+            field_C = (IndexedSprite[]) null;
           }
           stackIn_7_0 = (this.field_E != null) && (!this.field_E.f(-117)) && (this.field_E.a(true, param0));
           return stackIn_7_0;

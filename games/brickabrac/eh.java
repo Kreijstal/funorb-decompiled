@@ -3,7 +3,7 @@
  */
 final class eh {
     ub field_i;
-    dh field_l;
+    TextFont field_l;
     int field_h;
     int field_g;
     int field_m;
@@ -31,7 +31,7 @@ final class eh {
         }
     }
 
-    final void a(dh param0, int param1) {
+    final void a(TextFont param0, int param1) {
         um var17 = null;
         up var4 = null;
         RgbSprite[] var5 = null;
@@ -55,7 +55,7 @@ final class eh {
         up var14Lifetime1;
         up var14Lifetime2;
         try {
-          var17 = new um(param0, 2, 2, 2236962, 1, 1, 1, param0.field_F + param0.field_P + 2);
+          var17 = new um(param0, 2, 2, 2236962, 1, 1, 1, param0.ascent + param0.descent + 2);
           var17.field_r = 16777215;
           this.field_i = (ub) ((Object) var17);
           var4 = new up();
@@ -327,8 +327,8 @@ final class eh {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_l.c(param1);
-          var6 = this.field_l.field_B + this.field_l.field_P;
+          var5_int = this.field_l.measureText(param1);
+          var6 = this.field_l.capHeight + this.field_l.descent;
           if (param0 != 8081) {
             return;
           }
@@ -336,13 +336,13 @@ final class eh {
           if (Rasterizer2D.width < 6 + var7 + var5_int) {
             var7 = -6 + (Rasterizer2D.width - var5_int);
           }
-          var8 = param2 - (this.field_l.field_B - 32);
+          var8 = param2 - (this.field_l.capHeight - 32);
           if (6 + (var8 + var6) > Rasterizer2D.height) {
             var8 = -var6 + Rasterizer2D.height - 6;
           }
           Rasterizer2D.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_c);
           Rasterizer2D.fillRectangle(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_p);
-          this.field_l.c(param1, var7 + 3, this.field_l.field_B + var8 + 3, this.field_c, -1);
+          this.field_l.drawLeft(param1, var7 + 3, this.field_l.capHeight + var8 + 3, this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -516,11 +516,11 @@ final class eh {
             field_d = (String) null;
           }
           if (var7 == -1) {
-            var7 = this.field_l.field_F + this.field_l.field_P;
+            var7 = this.field_l.ascent + this.field_l.descent;
           }
           var8 = Rasterizer2D.width >> 2;
-          var9 = this.field_l.c(param0);
-          var10 = this.field_l.field_P + this.field_l.field_F;
+          var9 = this.field_l.measureText(param0);
+          var10 = this.field_l.descent + this.field_l.ascent;
           var11 = 1;
           if (var9 > var8 ||
             param0.indexOf("<br>") != -1) {
@@ -533,11 +533,11 @@ final class eh {
             if (null == an.field_j) {
               an.field_j = new String[16];
             }
-            var11Lifetime1 = this.field_l.a(param0, new int[]{var12}, an.field_j);
+            var11Lifetime1 = this.field_l.wrapText(param0, new int[]{var12}, an.field_j);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_l.c(an.field_j[var13Lifetime2]);
+              var14 = this.field_l.measureText(an.field_j[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -547,7 +547,7 @@ final class eh {
           if (var12 + var9 + var5_int > Rasterizer2D.width) {
             var12 = Rasterizer2D.width - var9 - var5_int;
           }
-          var13Lifetime1 = -this.field_l.field_B + (param2 + 32);
+          var13Lifetime1 = -this.field_l.capHeight + (param2 + 32);
           if (var13Lifetime1 + var10 + var6 > Rasterizer2D.height) {
             var13Lifetime1 = -var6 - var10 + param2;
           }

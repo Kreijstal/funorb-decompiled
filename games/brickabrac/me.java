@@ -4,7 +4,7 @@
 final class me {
     private String field_c;
     static RgbSprite field_b;
-    static tp[] field_a;
+    static IndexedSprite[] field_a;
     static int[][] field_e;
     static boolean[] field_f;
     static PcmStream field_d;
@@ -27,7 +27,7 @@ final class me {
         field_b = null;
         field_d = null;
         if (param0 != 100) {
-          field_a = (tp[]) null;
+          field_a = (IndexedSprite[]) null;
         }
     }
 

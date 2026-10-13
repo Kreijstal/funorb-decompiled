@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wm {
-    static dh field_a;
+    static TextFont field_a;
     static RgbSprite field_b;
     private static String field_z;
 

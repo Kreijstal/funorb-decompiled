@@ -10,7 +10,7 @@ final class pa extends ta {
     static RgbSprite field_j;
     static int field_n;
 
-    final static void a(int param0, int param1, int param2, dh param3, int param4, int param5, int param6, ta param7, int param8, int param9, int param10, int param11, int param12, ta param13, int param14, int param15, dh param16, ta param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, TextFont param3, int param4, int param5, int param6, ta param7, int param8, int param9, int param10, int param11, int param12, ta param13, int param14, int param15, TextFont param16, ta param17, int param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -84,7 +84,7 @@ final class pa extends ta {
           return;
         }
         ta var2 = (ta) null;
-        pa.a(-2, -34, -105, (dh) null, -37, -46, -79, (ta) null, 96, 79, -47, -14, 91, (ta) null, -22, -64, (dh) null, (ta) null, 77, -115, -55);
+        pa.a(-2, -34, -105, (TextFont) null, -37, -46, -79, (ta) null, 96, 79, -47, -14, 91, (ta) null, -22, -64, (TextFont) null, (ta) null, 77, -115, -55);
         ed.a(0, 0);
     }
 

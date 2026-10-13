@@ -56,7 +56,7 @@ final class sj {
                 Brick.field_E = Brick.field_E + 1;
               }
               var10 = IntNode.a(var8_ref_gb, (byte) 91);
-              var11 = var10 + dh.b(var8_ref_gb.field_j);
+              var11 = var10 + TextFont.escapeAngles(var8_ref_gb.field_j);
               var12 = ik.a(-31126, var8_ref_gb);
               var8_ref_gb.field_b = new mh(0L, field_a, var11);
               var8_ref_gb.field_b.field_Fb = var12 + (-((var12 & 16711422) >> 1) + (field_a.field_Fb >> 1 & 8355711));

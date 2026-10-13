@@ -24,7 +24,7 @@ final class fl extends k {
         try {
           var1 = new RgbSprite(540, 140);
           int var2 = 5 / ((16 - param0) / 50);
-          fc.a(-89, var1);
+          IndexedSpriteGeometry.a(-89, var1);
           mg.c();
           Rasterizer2D.clear();
           MatchResultScreen.field_t = 0;

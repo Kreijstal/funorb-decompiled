@@ -192,7 +192,7 @@ final class hj extends mh {
         try {
           Rasterizer2D.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
           Rasterizer2D.c(param0, -param2 + param1, param3, param2, 3, param5);
-          ob.field_D.c(param4, pq.pointerX, -1 + (-ob.field_D.field_P + po.pointerY - ob.field_D.field_P), 2, -1);
+          ob.field_D.drawLeft(param4, pq.pointerX, -1 + (-ob.field_D.descent + po.pointerY - ob.field_D.descent), 2, -1);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
