@@ -103,7 +103,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           if (param4 <= 11) {
             savePrompts = (String[]) null;
           }
-          nq.a(param3, param1, (byte) -59, param2);
+          TooltipSprite.a(param3, param1, (byte) -59, param2);
           np.b(false);
           ka.field_l = ej.field_P;
           ik.field_g = ej.field_P;

@@ -228,7 +228,7 @@ final class hk extends ib implements hf, en {
           GameCanvas.registerMenuScreen(-91, new MatchCompleteScreen());
           int var2_int = -5 / ((obfuscationGuard - 70) / 42);
           GameCanvas.registerMenuScreen(-73, new TimedSplashScreen());
-          si.field_k = rd.a(0, (byte) 19);
+          IntrusiveHashTable.field_k = rd.a(0, (byte) 19);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "hk.E(" + obfuscationGuard + ',' + (archive != null ? "{...}" : "null") + ')');
         }

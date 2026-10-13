@@ -32,7 +32,7 @@ final class sj {
         int var9Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         var4 = null;
-        i.field_q.field_Rb.field_bb.clear((byte) -61);
+        AchievementIcon.field_q.field_Rb.field_bb.clear((byte) -61);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + mm.field_Sb; var7 >= 0; var7--) {
@@ -71,7 +71,7 @@ final class sj {
         for (var8 = 0; mm.field_Sb > var8; var8++) {
           var9_ref_gb = jk.field_s[var8];
           if (null != var9_ref_gb.field_b) {
-            i.field_q.field_Rb.a(var9_ref_gb.field_b, 0);
+            AchievementIcon.field_q.field_Rb.a(var9_ref_gb.field_b, 0);
             var9_ref_gb.field_b.a(param1, var7Lifetime1, param0, var9_ref_gb.field_b.g(87), (byte) 64);
             if (var9_ref_gb.field_b.field_L != 0) {
               var4 = var9_ref_gb;
@@ -79,18 +79,18 @@ final class sj {
             var7Lifetime1 = var7Lifetime1 + param1;
           }
         }
-        var8Lifetime1 = i.field_q.field_Rb.field_C + i.field_q.field_Rb.field_cb - (-var6 + var7Lifetime1);
-        i.field_q.field_Rb.field_cb = i.field_q.field_Rb.field_cb - var8Lifetime1;
-        i.field_q.field_Rb.field_zb = i.field_q.field_Rb.field_zb + var8Lifetime1;
+        var8Lifetime1 = AchievementIcon.field_q.field_Rb.field_C + AchievementIcon.field_q.field_Rb.field_cb - (-var6 + var7Lifetime1);
+        AchievementIcon.field_q.field_Rb.field_cb = AchievementIcon.field_q.field_Rb.field_cb - var8Lifetime1;
+        AchievementIcon.field_q.field_Rb.field_zb = AchievementIcon.field_q.field_Rb.field_zb + var8Lifetime1;
         if (LevelSequence.field_d) {
-          i.field_q.field_Rb.field_cb = var7Lifetime1;
+          AchievementIcon.field_q.field_Rb.field_cb = var7Lifetime1;
         }
-        i.field_q.field_Rb.field_C = var7Lifetime1 - i.field_q.field_Rb.field_cb;
+        AchievementIcon.field_q.field_Rb.field_C = var7Lifetime1 - AchievementIcon.field_q.field_Rb.field_cb;
         if (LevelSequence.field_d) {
           LevelSequence.field_d = false;
-          i.field_q.field_Rb.field_zb = i.field_q.field_Qb.field_cb - i.field_q.field_Rb.field_cb;
+          AchievementIcon.field_q.field_Rb.field_zb = AchievementIcon.field_q.field_Qb.field_cb - AchievementIcon.field_q.field_Rb.field_cb;
           nd.field_b = true;
-          i.field_q.field_Rb.field_Db = 0;
+          AchievementIcon.field_q.field_Rb.field_Db = 0;
         }
         if (param2 != -13294) {
           field_d = (mh) null;
@@ -102,12 +102,12 @@ final class sj {
             nd.field_b = true;
           }
         }
-        var9Lifetime1 = i.field_q.field_Qb.field_cb - (i.field_q.field_Rb.field_cb + i.field_q.field_Rb.field_C);
+        var9Lifetime1 = AchievementIcon.field_q.field_Qb.field_cb - (AchievementIcon.field_q.field_Rb.field_cb + AchievementIcon.field_q.field_Rb.field_C);
         if (nd.field_b) {
-          i.field_q.field_Rb.field_Db = var9Lifetime1 - i.field_q.field_Rb.field_zb;
+          AchievementIcon.field_q.field_Rb.field_Db = var9Lifetime1 - AchievementIcon.field_q.field_Rb.field_zb;
         }
-        i.field_q.a(true, param1, true, 2 * (param1 * param3));
-        stackIn_50_0 = (var9Lifetime1 == i.field_q.field_Rb.field_Db + i.field_q.field_Rb.field_zb);
+        AchievementIcon.field_q.a(true, param1, true, 2 * (param1 * param3));
+        stackIn_50_0 = (var9Lifetime1 == AchievementIcon.field_q.field_Rb.field_Db + AchievementIcon.field_q.field_Rb.field_zb);
         nd.field_b = stackIn_50_0;
         return (gb) (var4);
     }

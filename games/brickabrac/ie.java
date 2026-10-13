@@ -17,7 +17,7 @@ final class ie extends qd {
     private int[] field_Q;
     private hr field_K;
     private int[] field_m;
-    private si field_w;
+    private IntrusiveHashTable field_w;
     private int[] field_p;
     private int[] field_G;
     private ka[][] field_A;
@@ -294,10 +294,10 @@ final class ie extends qd {
     final synchronized void a(byte param0) {
         int var4 = BrickABrac.field_J ? 1 : 0;
         int var2 = -47 / ((param0 + 49) / 33);
-        pq var3 = (pq) (this.field_w.b(-15519));
+        pq var3 = (pq) (this.field_w.first(-15519));
         while (var3 != null) {
           var3.c((byte) 81);
-          var3 = (pq) (this.field_w.a(true));
+          var3 = (pq) (this.field_w.next(true));
         }
     }
 
@@ -474,7 +474,7 @@ final class ie extends qd {
             var5 = (ka) (this.field_C.field_v.previous(-111));
           }
         }
-        var10 = (pq) (this.field_w.a(-81, (long)this.field_J[param0]));
+        var10 = (pq) (this.field_w.get(-81, (long)this.field_J[param0]));
         var11 = var10;
         if (var11 == null) {
           return;
@@ -744,11 +744,11 @@ final class ie extends qd {
           if (param0 > -110) {
             this.f(115, 34, -56);
           }
-          var8 = (se) (param1.field_i.b(-15519));
+          var8 = (se) (param1.field_i.first(-15519));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var9 = (int)var8.key;
-            var12 = (pq) (this.field_w.a(-70, (long)var9));
+            var12 = (pq) (this.field_w.get(-70, (long)var9));
             if (var12 == null) {
               var13 = mi.a(param3, var9, 8);
               if (var13 == null) {
@@ -756,7 +756,7 @@ final class ie extends qd {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_w.a(34, var13, (long)var9);
+                this.field_w.put(34, var13, (long)var9);
                 decompiledFrameRemainder0 = !(var13.a(var8.field_i, (byte) -73, param4, (int[]) (var7)));
               }
             } else {
@@ -765,7 +765,7 @@ final class ie extends qd {
             if (decompiledFrameRemainder0) {
               var6_int = 0;
             }
-            var8 = (se) (param1.field_i.a(true));
+            var8 = (se) (param1.field_i.next(true));
           }
           if (var6_int != 0) {
             param1.a();
@@ -1418,7 +1418,7 @@ final class ie extends qd {
         this.field_s = new int[16];
         this.field_K = new hr();
         this.field_C = new lk(this);
-        this.field_w = new si(128);
+        this.field_w = new IntrusiveHashTable(128);
         this.e(256, -1, 16);
         this.b(-38, true);
     }

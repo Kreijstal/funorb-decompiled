@@ -70,7 +70,7 @@ final class ko {
         int var13Lifetime1Lifetime1;
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
-          var17 = new PacketBuffer(i.a(true, param0));
+          var17 = new PacketBuffer(AchievementIcon.a(true, param0));
           var4 = var17.readUnsignedByte(255);
           if (var4 >= 5 &&
             var4 <= 7) {

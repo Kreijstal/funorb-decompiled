@@ -121,9 +121,9 @@ final class kg implements Runnable {
           var8 = 3 / ((49 - param0) / 40);
           ap.field_e.a(param3, 0, param1 + g.field_n.field_Ib, ap.field_e.field_Ib, (byte) 64);
           var7 = var7 - (param3 + 2);
-          i.field_q.a(2, (byte) -110, 2 + (485 + param1) + param4, 5, 5, param4, var7 - 5);
+          AchievementIcon.field_q.a(2, (byte) -110, 2 + (485 + param1) + param4, 5, 5, param4, var7 - 5);
           if (null != vd.field_a) {
-            vd.field_a.a(i.field_q.field_cb, i.field_q.field_P, i.field_q.field_zb, (byte) -119, i.field_q.field_Ib);
+            vd.field_a.a(AchievementIcon.field_q.field_cb, AchievementIcon.field_q.field_P, AchievementIcon.field_q.field_zb, (byte) -119, AchievementIcon.field_q.field_Ib);
           }
           var9 = -param1 + (DualLinkDeque.field_d.field_Ib - var6_int);
           var10 = var9 / 2;

@@ -223,7 +223,7 @@ final class wn {
             }
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
-            si.keyEventReadIndex = fm.keyEventFrameEnd;
+            IntrusiveHashTable.keyEventReadIndex = fm.keyEventFrameEnd;
             PowerUp.keyboardIdleTicks = PowerUp.keyboardIdleTicks + 1;
             if (pl.keyChangeWriteIndex < 0) {
               keyIndex = 0;

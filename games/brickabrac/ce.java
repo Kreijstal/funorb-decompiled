@@ -47,7 +47,7 @@ final class ce {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        if (!nq.field_p) {
+        if (!TooltipSprite.field_p) {
           return;
         }
         wd.field_w.a(param0, -15211);

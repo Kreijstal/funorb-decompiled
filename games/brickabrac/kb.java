@@ -290,7 +290,7 @@ final class kb extends mh {
         if (param0 != 7457) {
           return true;
         }
-        if (i.field_j < 10) {
+        if (AchievementIcon.field_j < 10) {
           return false;
         }
         if (qg.field_A >= 13) {

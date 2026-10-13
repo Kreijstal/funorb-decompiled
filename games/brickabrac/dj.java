@@ -86,7 +86,7 @@ abstract class dj {
         int var1 = 15 % ((81 - param0) / 36);
         hk.field_R = true;
         cg.field_i = 15000L + ue.a(false);
-        return i.field_j == 11 ? true : false;
+        return AchievementIcon.field_j == 11 ? true : false;
     }
 
     public static void a(byte param0) {

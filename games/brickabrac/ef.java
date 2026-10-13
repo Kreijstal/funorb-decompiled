@@ -91,11 +91,11 @@ final class ef extends IOException {
           ka.field_l = up.field_v;
           if (param2 != 255) {
             if (param2 < 100) {
-              he.field_H = i.a(param2, -60, param0);
+              he.field_H = AchievementIcon.a(param2, -60, param0);
               return;
             }
             if (param2 > 105) {
-              he.field_H = i.a(param2, -60, param0);
+              he.field_H = AchievementIcon.a(param2, -60, param0);
               return;
             }
             var8 = param3;

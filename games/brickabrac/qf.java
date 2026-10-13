@@ -57,7 +57,7 @@ final class qf extends lp implements en {
     }
 
     final void c(boolean param0) {
-        this.a(-7, i.a(248, -85, CircleBody.field_q), param0);
+        this.a(-7, AchievementIcon.a(248, -85, CircleBody.field_q), param0);
     }
 
     public final void a(int param0, int param1, byte param2, int param3, d param4) {

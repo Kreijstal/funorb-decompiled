@@ -89,8 +89,8 @@ final class gd {
           if (ac.field_e > 0) {
             fieldTemp$5 = ac.field_e - 1;
             ac.field_e = ac.field_e - 1;
-            var2_ref_byte__Lifetime5 = si.field_b[fieldTemp$5];
-            si.field_b[ac.field_e] = null;
+            var2_ref_byte__Lifetime5 = IntrusiveHashTable.field_b[fieldTemp$5];
+            IntrusiveHashTable.field_b[ac.field_e] = null;
             return var2_ref_byte__Lifetime5;
           }
           if (param1 < 99) {
@@ -123,8 +123,8 @@ final class gd {
             ac.field_e > 0) {
             fieldTemp$14 = ac.field_e - 1;
             ac.field_e = ac.field_e - 1;
-            var2_ref_byte__Lifetime2 = si.field_b[fieldTemp$14];
-            si.field_b[ac.field_e] = null;
+            var2_ref_byte__Lifetime2 = IntrusiveHashTable.field_b[fieldTemp$14];
+            IntrusiveHashTable.field_b[ac.field_e] = null;
             return var2_ref_byte__Lifetime2;
           }
           if (param1 < 99) {
@@ -176,8 +176,8 @@ final class gd {
         if (ac.field_e > 0) {
           fieldTemp$12 = ac.field_e - 1;
           ac.field_e = ac.field_e - 1;
-          var2_ref_byte__Lifetime4 = si.field_b[fieldTemp$12];
-          si.field_b[ac.field_e] = null;
+          var2_ref_byte__Lifetime4 = IntrusiveHashTable.field_b[fieldTemp$12];
+          IntrusiveHashTable.field_b[ac.field_e] = null;
           return var2_ref_byte__Lifetime4;
         }
         if (param1 < 99) {

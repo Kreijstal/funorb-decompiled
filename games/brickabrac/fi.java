@@ -162,17 +162,17 @@ final class fi extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (i.field_m.a("arctic", -28138)) {
-          s.field_d = pl.a("arctic", "arctic_near", (byte) 117, i.field_m);
-          kc.field_r = pl.a("arctic", "arctic_mid", (byte) -79, i.field_m);
-          hk.field_I = pl.a("arctic", "arctic_far", (byte) 112, i.field_m);
-          be.field_d = pl.a("arctic", "arctic_small", (byte) -44, i.field_m);
+        if (AchievementIcon.field_m.a("arctic", -28138)) {
+          s.field_d = pl.a("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
+          kc.field_r = pl.a("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
+          hk.field_I = pl.a("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);
+          be.field_d = pl.a("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
           un.field_d = jh.a(0, s.field_d);
           jl.field_d = jh.a(0, kc.field_r);
           Brick.field_K = jh.a(0, hk.field_I);
-          ObjectHistoryBuffer.field_o[0] = cr.a("arctic", i.field_m, "arctic_caps", 2);
-          ja.field_a[0] = cr.a("arctic", i.field_m, "arctic_segs", 2);
-          ga.field_k[0] = pl.a("arctic", "arctic_centre", (byte) -115, i.field_m);
+          ObjectHistoryBuffer.field_o[0] = cr.a("arctic", AchievementIcon.field_m, "arctic_caps", 2);
+          ja.field_a[0] = cr.a("arctic", AchievementIcon.field_m, "arctic_segs", 2);
+          ga.field_k[0] = pl.a("arctic", "arctic_centre", (byte) -115, AchievementIcon.field_m);
           ObjectHistoryBuffer.field_o[1] = ig.a(ObjectHistoryBuffer.field_o[0], param0);
           ja.field_a[1] = ig.a(ja.field_a[0], false);
           ga.field_k[1] = pl.a(-16371, ga.field_k[0]);

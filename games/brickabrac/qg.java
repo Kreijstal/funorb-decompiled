@@ -225,7 +225,7 @@ abstract class qg extends ke {
         }
         if (var2 == 0 ||
           var2 == 1) {
-          if (i.field_j == 11 &&
+          if (AchievementIcon.field_j == 11 &&
             tm.field_a == 0) {
             ei.b(~param0);
           }
@@ -259,7 +259,7 @@ abstract class qg extends ke {
             ff.a((byte) -61, 3);
           }
           if (uf.field_d[3]) {
-            nq.a(4, 13330);
+            TooltipSprite.a(4, 13330);
           }
           if (uf.field_d[4]) {
             ui.a(5, (byte) 115);
@@ -366,7 +366,7 @@ abstract class qg extends ke {
                 } else {
                   sb.field_e = sl.field_v;
                   ei.b(0);
-                  i.field_j = 10;
+                  AchievementIcon.field_j = 10;
                   LevelPackSelectScreen.field_s = false;
                 }
               }
@@ -376,7 +376,7 @@ abstract class qg extends ke {
           }
           if (4 == var4) {
             if (!qb.field_u) {
-              i.field_j = 10;
+              AchievementIcon.field_j = 10;
               LevelPackSelectScreen.field_s = true;
             } else {
               jc.a(uc.e((byte) -97), (byte) 97);
@@ -387,7 +387,7 @@ abstract class qg extends ke {
           }
           if (var4 == 6 &&
             ci.field_t) {
-            i.field_j = 10;
+            AchievementIcon.field_j = 10;
           }
           if (7 == var4) {
             pf.a(uc.e((byte) -76), false);
@@ -435,7 +435,7 @@ abstract class qg extends ke {
             }
           }
           if (var4 == 15) {
-            i.field_j = 10;
+            AchievementIcon.field_j = 10;
           }
           if (var4 == 16) {
             return 1;
@@ -466,7 +466,7 @@ abstract class qg extends ke {
         } else {
           if (field_A >= 10) {
             if (il.e((byte) -126)) {
-              if (i.field_j == 0) {
+              if (AchievementIcon.field_j == 0) {
                 discarded$2 = this.a(false, (byte) 46, false);
               } else {
                 MouseWheelSource.a(GameplayAudioEvent.mouseWheelDelta, (byte) 124);
@@ -495,7 +495,7 @@ abstract class qg extends ke {
         gb var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = si.field_a;
+        var2 = IntrusiveHashTable.field_a;
         if (var2 < 64 &&
           uf.field_d[var2]) {
           if (param0) {
@@ -712,7 +712,7 @@ abstract class qg extends ke {
         wn.snapshotKeyboardInput((byte) -97);
         sg.snapshotMouseInput(70);
         if (!r.c((byte) -114) &&
-          i.field_j != 11) {
+          AchievementIcon.field_j != 11) {
           GameplayAudioEvent.c(27144);
         }
         if (qa.mouseWheelSource != null) {
@@ -739,7 +739,7 @@ abstract class qg extends ke {
           tm.field_a = GameCanvas.a(false);
           if (var3Lifetime1 != 0 &&
             tm.field_a == 0 &&
-            i.field_j == 11 &&
+            AchievementIcon.field_j == 11 &&
             !ui.a(false)) {
             ei.b(0);
           }
@@ -751,7 +751,7 @@ abstract class qg extends ke {
         if (tm.field_a != -1 &&
           tm.field_a != 0) {
           if (10 <= field_A) {
-            if (10 <= i.field_j) {
+            if (10 <= AchievementIcon.field_j) {
               qb.g(114);
               if (tm.field_a == 3) {
                 tf.a(nk.field_d, (byte) -49, 256);

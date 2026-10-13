@@ -34,7 +34,7 @@ final class jg {
         if (!param0) {
           return true;
         }
-        stackIn_7_0 = (null != sq.field_c) || (nq.field_p);
+        stackIn_7_0 = (null != sq.field_c) || (TooltipSprite.field_p);
         return stackIn_7_0;
     }
 

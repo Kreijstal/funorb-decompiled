@@ -110,7 +110,7 @@ final class dk extends ib implements ha, en, vf {
             stackIn_38_0 = bg.field_r;
             stackIn_38_1 = MenuSelection.field_q[var8Lifetime2];
             if (stackIn_38_1 >= 0) {
-              stackIn_41_1 = nq.field_i;
+              stackIn_41_1 = TooltipSprite.field_i;
             } else {
               stackIn_41_1 = wh.field_m;
             }

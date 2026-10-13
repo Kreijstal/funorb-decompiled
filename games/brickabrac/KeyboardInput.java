@@ -309,7 +309,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (mappedKeyCode >= 0) {
               nextWriteIndex = 127 & hb.keyEventWriteIndex + 1;
-              if (si.keyEventReadIndex != nextWriteIndex) {
+              if (IntrusiveHashTable.keyEventReadIndex != nextWriteIndex) {
                 ef.keyEventCodes[hb.keyEventWriteIndex] = mappedKeyCode;
                 TimedSplashScreen.keyEventCharacters[hb.keyEventWriteIndex] = (char)0;
                 hb.keyEventWriteIndex = nextWriteIndex;
@@ -370,7 +370,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             if (0 != characterCode && characterCode != 65535 &&
               DelegatingCanvas.isLegacyInputCharacter((char) characterCode, -12)) {
               nextWriteIndex = 127 & hb.keyEventWriteIndex + 1;
-              if (si.keyEventReadIndex != nextWriteIndex) {
+              if (IntrusiveHashTable.keyEventReadIndex != nextWriteIndex) {
                 ef.keyEventCodes[hb.keyEventWriteIndex] = -1;
                 TimedSplashScreen.keyEventCharacters[hb.keyEventWriteIndex] = (char)characterCode;
                 hb.keyEventWriteIndex = nextWriteIndex;

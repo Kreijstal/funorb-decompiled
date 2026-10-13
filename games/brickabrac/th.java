@@ -110,13 +110,13 @@ final class th {
     final static void b(int param0) {
         if (param0 != 1) {
           th.a((byte) 83);
-          if (!nq.field_p) {
+          if (!TooltipSprite.field_p) {
             return;
           }
           rd.a(-1);
           return;
         }
-        if (nq.field_p) {
+        if (TooltipSprite.field_p) {
           rd.a(-1);
           return;
         }

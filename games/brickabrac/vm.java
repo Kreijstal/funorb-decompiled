@@ -3,7 +3,7 @@
  */
 final class vm extends IntrusiveNode {
     byte[] field_j;
-    si field_i;
+    IntrusiveHashTable field_i;
 
     final void a() {
         this.field_i = null;
@@ -37,7 +37,7 @@ final class vm extends IntrusiveNode {
         if (this.field_i != null) {
           return;
         }
-        this.field_i = new si(16);
+        this.field_i = new IntrusiveHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;
@@ -94,10 +94,10 @@ final class vm extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (se) (this.field_i.a(-103, (long)var13));
+                var14 = (se) (this.field_i.get(-103, (long)var13));
                 if (var14 == null) {
                   var14 = new se(new byte[128]);
-                  this.field_i.a(34, var14, (long)var13);
+                  this.field_i.put(34, var14, (long)var13);
                 }
                 var14.field_i[var11Lifetime2] = (byte) 1;
               }

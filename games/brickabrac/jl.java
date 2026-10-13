@@ -125,15 +125,15 @@ final class jl {
         Throwable decompiledCaughtException = null;
         keyboardMonitor = DualLinkDeque.keyboardInput;
         synchronized (keyboardMonitor) {
-          if (si.keyEventReadIndex == fm.keyEventFrameEnd) {
+          if (IntrusiveHashTable.keyEventReadIndex == fm.keyEventFrameEnd) {
             return false;
           }
-          dc.currentKeyCode = ef.keyEventCodes[si.keyEventReadIndex];
-          go.currentKeyCharacter = TimedSplashScreen.keyEventCharacters[si.keyEventReadIndex];
+          dc.currentKeyCode = ef.keyEventCodes[IntrusiveHashTable.keyEventReadIndex];
+          go.currentKeyCharacter = TimedSplashScreen.keyEventCharacters[IntrusiveHashTable.keyEventReadIndex];
           if (obfuscationGuard != 5) {
             return true;
           }
-          si.keyEventReadIndex = si.keyEventReadIndex + 1 & 127;
+          IntrusiveHashTable.keyEventReadIndex = IntrusiveHashTable.keyEventReadIndex + 1 & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

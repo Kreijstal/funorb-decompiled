@@ -16,7 +16,7 @@ final class ok {
         }
         ci.field_t = true;
         RankingsScreen.a((byte) -78, false);
-        i.field_j = param0;
+        AchievementIcon.field_j = param0;
     }
 
     public static void b(int param0) {

@@ -98,13 +98,13 @@ final class qb extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("farm", -28138)) {
+        if (!AchievementIcon.field_m.a("farm", -28138)) {
           return false;
         }
-        LevelPackCard.field_e = pl.a("farm", "farm_near", (byte) 103, i.field_m);
-        rm.field_f = pl.a("farm", "farm_mid", (byte) -63, i.field_m);
-        MouseInput.field_f = pl.a("farm", "farm_far", (byte) -78, i.field_m);
-        MultiplayerExitScreen.field_z = pl.a("farm", "farm_small", (byte) 106, i.field_m);
+        LevelPackCard.field_e = pl.a("farm", "farm_near", (byte) 103, AchievementIcon.field_m);
+        rm.field_f = pl.a("farm", "farm_mid", (byte) -63, AchievementIcon.field_m);
+        MouseInput.field_f = pl.a("farm", "farm_far", (byte) -78, AchievementIcon.field_m);
+        MultiplayerExitScreen.field_z = pl.a("farm", "farm_small", (byte) 106, AchievementIcon.field_m);
         if (param0) {
           qb.g(-29);
         }
@@ -297,10 +297,10 @@ final class qb extends ki {
     }
 
     final static void g(int param0) {
-        if (10 == i.field_j ||
+        if (10 == AchievementIcon.field_j ||
           !am.i(0)) {
           ec.h(6846);
-          i.field_j = 11;
+          AchievementIcon.field_j = 11;
         }
         if (param0 < 105) {
           qb.f(-80);

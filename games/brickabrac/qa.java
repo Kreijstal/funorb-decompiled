@@ -20,14 +20,14 @@ final class qa extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("ninja", -28138)) {
+        if (!AchievementIcon.field_m.a("ninja", -28138)) {
           return false;
         }
-        LegacyUtf8Decoder.field_d = pl.a("ninja", "ninja_near", (byte) -24, i.field_m);
-        ap.field_f = pl.a("ninja", "ninja_mid", (byte) -128, i.field_m);
-        hn.field_b = pl.a("ninja", "ninja_far", (byte) 127, i.field_m);
-        hc.field_g = pl.a("ninja", "ninja_small", (byte) -81, i.field_m);
-        ObjectHistoryBuffer.field_q = pl.a("ninja", "ninja_character", (byte) -105, i.field_m);
+        LegacyUtf8Decoder.field_d = pl.a("ninja", "ninja_near", (byte) -24, AchievementIcon.field_m);
+        ap.field_f = pl.a("ninja", "ninja_mid", (byte) -128, AchievementIcon.field_m);
+        hn.field_b = pl.a("ninja", "ninja_far", (byte) 127, AchievementIcon.field_m);
+        hc.field_g = pl.a("ninja", "ninja_small", (byte) -81, AchievementIcon.field_m);
+        ObjectHistoryBuffer.field_q = pl.a("ninja", "ninja_character", (byte) -105, AchievementIcon.field_m);
         nk.field_h = jh.a(0, LegacyUtf8Decoder.field_d);
         mp.field_Zb = jh.a(0, ap.field_f);
         rh.field_c = jh.a(0, hn.field_b);
@@ -202,7 +202,7 @@ final class qa extends ki {
         if (um.field_e) {
           return vd.field_a.a(go.currentKeyCharacter, dc.currentKeyCode, true);
         }
-        if (nq.field_p) {
+        if (TooltipSprite.field_p) {
           return sa.a(param1, 102, param0);
         }
         if (ln.a(param1, 11, param0)) {

@@ -371,7 +371,7 @@ class vb extends d {
         }
         ci.field_t = true;
         RankingsScreen.a((byte) -71, true);
-        i.field_j = param0;
+        AchievementIcon.field_j = param0;
     }
 
     final boolean a(int param0, byte param1, oc param2, char param3) {

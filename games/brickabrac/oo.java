@@ -69,26 +69,26 @@ final class oo extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("chocolate", -28138)) {
+        if (!AchievementIcon.field_m.a("chocolate", -28138)) {
           return false;
         }
-        nl.field_d = pl.a("chocolate", "chocolate_near", (byte) 114, i.field_m);
-        field_x = pl.a("chocolate", "chocolate_mid", (byte) 123, i.field_m);
-        ad.field_b = pl.a("chocolate", "chocolate_spires", (byte) -53, i.field_m);
-        rg.field_f = pl.a("chocolate", "chocolate_far", (byte) 127, i.field_m);
+        nl.field_d = pl.a("chocolate", "chocolate_near", (byte) 114, AchievementIcon.field_m);
+        field_x = pl.a("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.field_m);
+        ad.field_b = pl.a("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
+        rg.field_f = pl.a("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
         th.field_i = jh.a(0, nl.field_d);
         ek.field_hb = jh.a(0, field_x);
         up.field_w = jh.a(0, ad.field_b);
-        u.field_c = pl.a("chocolate", "chocolate_small_far", (byte) -36, i.field_m);
-        dj.field_a = pl.a("chocolate", "chocolate_small_near", (byte) -69, i.field_m);
-        dc.field_c = pl.a("chocolate", "chocolate_character", (byte) 101, i.field_m);
-        Brick.field_I[0] = cr.a("chocolate", i.field_m, "choc_caps", 2);
-        aj.field_a[0] = cr.a("chocolate", i.field_m, "choc_segs", 2);
-        lm.field_e[0] = pl.a("chocolate", "choc_centre", (byte) -126, i.field_m);
+        u.field_c = pl.a("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
+        dj.field_a = pl.a("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
+        dc.field_c = pl.a("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
+        Brick.field_I[0] = cr.a("chocolate", AchievementIcon.field_m, "choc_caps", 2);
+        aj.field_a[0] = cr.a("chocolate", AchievementIcon.field_m, "choc_segs", 2);
+        lm.field_e[0] = pl.a("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
         Brick.field_I[1] = ig.a(Brick.field_I[0], param0);
         aj.field_a[1] = ig.a(aj.field_a[0], param0);
         lm.field_e[1] = pl.a(-16371, lm.field_e[0]);
-        gq.field_Ub = cr.a("chocolate", i.field_m, "choc_lever", 2);
+        gq.field_Ub = cr.a("chocolate", AchievementIcon.field_m, "choc_lever", 2);
         return true;
     }
 

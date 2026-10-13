@@ -117,7 +117,7 @@ final class ui {
           }
           var5 = (pe) (ob.field_F.first(-61));
           while (var5 != null) {
-            i.a(param0, var5, 61);
+            AchievementIcon.a(param0, var5, 61);
             var5 = (pe) (ob.field_F.next((byte) 116));
           }
           if (param1 != 115) {
@@ -188,7 +188,7 @@ final class ui {
         if (param0) {
           field_b = (String) null;
         }
-        stackIn_7_0 = (i.field_j >= 10) && (!LevelPackSelectScreen.field_s) && (!ik.a(false));
+        stackIn_7_0 = (AchievementIcon.field_j >= 10) && (!LevelPackSelectScreen.field_s) && (!ik.a(false));
         return stackIn_7_0;
     }
 

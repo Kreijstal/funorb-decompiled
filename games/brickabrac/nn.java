@@ -42,7 +42,7 @@ final class nn {
                   }
                   if (decompiledFrameRemainder0) {
                     if (param2 == 14) {
-                      nq.d(2);
+                      TooltipSprite.d(2);
                       decompiledFrameRemainder0 = (var5 != 0);
                     }
                     if (decompiledFrameRemainder0) {
@@ -378,7 +378,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_request_withdrawn", (byte) -111);
                 if (var2 != null) {
-                  i.field_o = MenuButton.a(var2, (byte) 71);
+                  AchievementIcon.field_o = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("mu_all_players_have_left", (byte) 95);
                 if (null != var2) {
@@ -758,7 +758,7 @@ final class nn {
                 }
                 var2 = nk.a("status_join", (byte) -107);
                 if (var2 != null) {
-                  nq.field_k = MenuButton.a(var2, (byte) 117);
+                  TooltipSprite.field_k = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = nk.a("status_private", (byte) 46);
                 if (var2 != null) {
@@ -1276,7 +1276,7 @@ final class nn {
                 }
                 var2 = nk.a("invalidpass", (byte) -116);
                 if (null != var2) {
-                  nq.field_n = MenuButton.a(var2, (byte) 123);
+                  TooltipSprite.field_n = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = nk.a("retry", (byte) -124);
                 if (var2 != null) {
@@ -1600,7 +1600,7 @@ final class nn {
                 }
                 var2 = nk.a("create_suggestions", (byte) -19);
                 if (null != var2) {
-                  i.field_l = MenuButton.a(var2, (byte) 71);
+                  AchievementIcon.field_l = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("create_more_suggestions", (byte) -119);
                 if (var2 != null) {

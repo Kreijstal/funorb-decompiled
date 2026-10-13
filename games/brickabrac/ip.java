@@ -922,20 +922,20 @@ final class ip extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("jungle", -28138)) {
+        if (!AchievementIcon.field_m.a("jungle", -28138)) {
           return false;
         }
-        ch.field_f = pl.a("jungle", "jungle_near", (byte) -39, i.field_m);
-        dg.field_g = pl.a("jungle", "jungle_mid", (byte) -67, i.field_m);
-        np.field_d = pl.a("jungle", "jungle_far", (byte) -46, i.field_m);
-        Brick.field_w = pl.a("jungle", "jungle_small", (byte) -109, i.field_m);
+        ch.field_f = pl.a("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);
+        dg.field_g = pl.a("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
+        np.field_d = pl.a("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
+        Brick.field_w = pl.a("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
         sl.field_D = jh.a(0, ch.field_f);
         fk.field_e = jh.a(0, dg.field_g);
         ib.field_E = jh.a(0, np.field_d);
-        ep.field_h = pl.a("jungle", "jungle_character", (byte) -119, i.field_m);
-        DualLinkNode.field_l[0] = cr.a("jungle", i.field_m, "jungle_caps", 2);
-        DualLinkIterator.field_g[0] = cr.a("jungle", i.field_m, "jungle_segs", 2);
-        up.field_A[0] = pl.a("jungle", "jungle_centre", (byte) -110, i.field_m);
+        ep.field_h = pl.a("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
+        DualLinkNode.field_l[0] = cr.a("jungle", AchievementIcon.field_m, "jungle_caps", 2);
+        DualLinkIterator.field_g[0] = cr.a("jungle", AchievementIcon.field_m, "jungle_segs", 2);
+        up.field_A[0] = pl.a("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
         DualLinkNode.field_l[1] = ig.a(DualLinkNode.field_l[0], false);
         DualLinkIterator.field_g[1] = ig.a(DualLinkIterator.field_g[0], param0);
         up.field_A[1] = pl.a(-16371, up.field_A[0]);

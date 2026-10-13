@@ -4,7 +4,7 @@
 final class MainMenuScreen extends MenuScreen {
     static String field_r;
     static RgbSprite field_s;
-    private NodeDeque field_v;
+    private NodeDeque tooltipSprites;
     static mh field_t;
     static int field_x;
     static RgbSprite field_w;
@@ -81,7 +81,7 @@ final class MainMenuScreen extends MenuScreen {
     }
 
     final void drawScreen(byte obfuscationGuard) {
-        nq var4 = null;
+        TooltipSprite var4 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -68);
         im.a(this.buttonRight + (-this.buttonLeft + 30), 0, 468, 0, 6, (byte) -90, -15 + this.buttonLeft);
@@ -90,19 +90,19 @@ final class MainMenuScreen extends MenuScreen {
         if (obfuscationGuard > -14) {
           field_s = (RgbSprite) null;
         }
-        si.a(pq.pointerX, (byte) -118, po.pointerY, hc.field_h);
+        IntrusiveHashTable.a(pq.pointerX, (byte) -118, po.pointerY, hc.field_h);
         if (!pg.c(77)) {
-          var4 = (nq) (this.field_v.first(-90));
+          var4 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var4 != null) {
-            var4.a(2);
-            var4 = (nq) (this.field_v.next((byte) 116));
+            var4.draw(2);
+            var4 = (TooltipSprite) (this.tooltipSprites.next((byte) 116));
           }
         }
     }
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int fieldTemp$0 = 0;
-        nq var6 = null;
+        TooltipSprite var6 = null;
         int var5 = BrickABrac.field_J ? 1 : 0;
         super.advanceScreen(updateFlag, inputEnabled, -95);
         if (obfuscationGuard > -52) {
@@ -116,19 +116,19 @@ final class MainMenuScreen extends MenuScreen {
             fc.a(-59, field_s);
             pa.a(true);
             sc.b(-96);
-            if (si.field_k != null) {
-              pe.field_n = si.field_k.field_m;
+            if (IntrusiveHashTable.field_k != null) {
+              pe.field_n = IntrusiveHashTable.field_k.field_m;
             }
-            si.field_k = rd.a(0, (byte) 19);
+            IntrusiveHashTable.field_k = rd.a(0, (byte) 19);
             hc.field_h = 2 * hi.field_w.nextBoundedInt(-37880252, 2);
             im.field_e = 50;
           }
         }
         if (!pg.c(112)) {
-          var6 = (nq) (this.field_v.first(-90));
+          var6 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var6 != null) {
-            var6.c(0);
-            var6 = (nq) (this.field_v.next((byte) 116));
+            var6.updateHover(0);
+            var6 = (TooltipSprite) (this.tooltipSprites.next((byte) 116));
           }
         }
     }
@@ -219,10 +219,10 @@ final class MainMenuScreen extends MenuScreen {
 
     MainMenuScreen() {
         super(0, 180, 460, 150, 35, hc.field_e);
-        this.field_v = new NodeDeque();
+        this.tooltipSprites = new NodeDeque();
         int var1 = 468;
         var1 = var1 - da.packSelectorIcons[1].canvasHeight;
-        this.field_v.addLast(new nq(12, var1, da.packSelectorIcons[1], rd.a(ii.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
+        this.tooltipSprites.addLast(new TooltipSprite(12, var1, da.packSelectorIcons[1], rd.a(ii.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {

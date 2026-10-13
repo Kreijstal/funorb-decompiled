@@ -77,14 +77,14 @@ final class nk {
         }
         if (param0 >= 0) {
           if (param0 > 65536) {
-            return -si.field_d[134217728 / param0] + 2048;
+            return -IntrusiveHashTable.field_d[134217728 / param0] + 2048;
           }
-          return si.field_d[param0 >> 5];
+          return IntrusiveHashTable.field_d[param0 >> 5];
         }
         if (param0 >= -65536) {
-          return -si.field_d[-param0 >> 5];
+          return -IntrusiveHashTable.field_d[-param0 >> 5];
         }
-        return -2048 + si.field_d[134217728 / -param0];
+        return -2048 + IntrusiveHashTable.field_d[134217728 / -param0];
     }
 
     final static void a(byte param0, boolean param1) {

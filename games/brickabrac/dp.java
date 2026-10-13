@@ -65,22 +65,22 @@ final class dp extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("halloween", -28138)) {
+        if (!AchievementIcon.field_m.a("halloween", -28138)) {
           return false;
         }
-        nf.field_U = pl.a("halloween", "halloween_near", (byte) -116, i.field_m);
-        ni.field_Ub = pl.a("halloween", "halloween_mid", (byte) 116, i.field_m);
-        dj.field_e = pl.a("halloween", "halloween_far", (byte) 120, i.field_m);
-        LevelPackLoader.field_f = pl.a("halloween", "halloween_small", (byte) 105, i.field_m);
-        MotionWaypoint.field_p = pl.a("halloween", "halloween_moon", (byte) 102, i.field_m);
+        nf.field_U = pl.a("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);
+        ni.field_Ub = pl.a("halloween", "halloween_mid", (byte) 116, AchievementIcon.field_m);
+        dj.field_e = pl.a("halloween", "halloween_far", (byte) 120, AchievementIcon.field_m);
+        LevelPackLoader.field_f = pl.a("halloween", "halloween_small", (byte) 105, AchievementIcon.field_m);
+        MotionWaypoint.field_p = pl.a("halloween", "halloween_moon", (byte) 102, AchievementIcon.field_m);
         va.field_b = jh.a(0, nf.field_U);
         field_u = jh.a(0, ni.field_Ub);
         ch.field_m = jh.a(0, dj.field_e);
         th.field_j = jh.a(0, MotionWaypoint.field_p);
-        ba.field_A = pl.a("halloween", "halloween_character", (byte) -106, i.field_m);
-        ej.field_L[0] = cr.a("halloween", i.field_m, "halloween_caps", 2);
-        qg.field_r[0] = cr.a("halloween", i.field_m, "halloween_segs", 2);
-        ap.field_c[0] = pl.a("halloween", "halloween_centre", (byte) -118, i.field_m);
+        ba.field_A = pl.a("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
+        ej.field_L[0] = cr.a("halloween", AchievementIcon.field_m, "halloween_caps", 2);
+        qg.field_r[0] = cr.a("halloween", AchievementIcon.field_m, "halloween_segs", 2);
+        ap.field_c[0] = pl.a("halloween", "halloween_centre", (byte) -118, AchievementIcon.field_m);
         ej.field_L[1] = ig.a(ej.field_L[0], param0);
         qg.field_r[1] = ig.a(qg.field_r[0], param0);
         ap.field_c[1] = pl.a(-16371, ap.field_c[0]);

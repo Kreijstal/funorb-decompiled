@@ -152,7 +152,7 @@ final class fk {
           }
           wd.field_w.field_bb.clear((byte) -72);
           wd.field_w.a(hd.field_a, 0);
-          nq.field_p = true;
+          TooltipSprite.field_p = true;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "fk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

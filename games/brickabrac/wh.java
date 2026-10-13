@@ -267,7 +267,7 @@ final class wh implements Runnable {
         if (param0 != 21862) {
           return;
         }
-        if (nq.field_p) {
+        if (TooltipSprite.field_p) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, -Rasterizer2D.clipLeft + Rasterizer2D.clipRight, -Rasterizer2D.clipTop + Rasterizer2D.clipBottom);
           wd.field_w.a(true, false);
         }

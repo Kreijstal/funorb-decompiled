@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nq extends IntrusiveNode {
+final class TooltipSprite extends IntrusiveNode {
     static boolean field_p;
-    private int field_o;
+    private int tooltipHeight;
     static String field_k;
-    private int field_r;
-    private int field_m;
-    private int field_q;
-    private RgbSprite field_s;
+    private int y;
+    private int x;
+    private int tooltipWidth;
+    private RgbSprite sprite;
     static String field_n;
-    private String field_l;
+    private String tooltipText;
     static int field_i;
-    private boolean field_j;
+    private boolean hovered;
 
     final static void a(mf param0, mf param1, byte param2, mf param3) {
         RgbSprite var17 = null;
@@ -38,9 +38,9 @@ final class nq extends IntrusiveNode {
           ka.field_n = pl.a("commonui", "jagex_logo_grey", (byte) -110, param3);
           sf.field_U = cr.a("commonui", param3, "button", 2);
           df.field_a = bd.a("commonui", "validation", param3, (byte) -8);
-          og.field_Yb = (dh) ((Object) si.a((byte) -118, "commonui", "arezzo12", param3, param0));
-          a.field_u = (dh) ((Object) si.a((byte) -108, "commonui", "arezzo14", param3, param0));
-          wm.field_a = (dh) ((Object) si.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
+          og.field_Yb = (dh) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
+          a.field_u = (dh) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
+          wm.field_a = (dh) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
           var17 = new RgbSprite(param1.a(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
           uo.a((byte) 29, param3, "dropdown", "commonui");
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
@@ -77,7 +77,7 @@ final class nq extends IntrusiveNode {
           var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var11.bindRasterTarget();
           if (param2 != -59) {
-            nq.d(-50);
+            TooltipSprite.d(-50);
           }
           var17.drawAt(var9Lifetime1 - var17.width, 0);
           var12 = new RgbSprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
@@ -90,12 +90,12 @@ final class nq extends IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
-        if (param0 != 0) {
+    final void updateHover(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
-        this.field_j = oh.a(pq.pointerX, po.pointerY, (byte) -24, this.field_r, this.field_m, this.field_s);
-        this.field_j = this.field_s.containsPixel(this.field_m, this.field_r, pq.pointerX, po.pointerY);
+        this.hovered = oh.a(pq.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
+        this.hovered = this.sprite.containsPixel(this.x, this.y, pq.pointerX, po.pointerY);
     }
 
     final static void e(int param0) {
@@ -106,7 +106,7 @@ final class nq extends IntrusiveNode {
           jk.field_w.f();
         }
         if (param0 < 39) {
-          nq.a(-13, -69);
+          TooltipSprite.a(-13, -69);
         }
     }
 
@@ -212,26 +212,26 @@ final class nq extends IntrusiveNode {
         }
     }
 
-    nq(int param0, int param1, RgbSprite param2, String param3) {
+    TooltipSprite(int x, int y, RgbSprite sprite, String tooltipText) {
         try {
-          this.field_s = param2;
-          this.field_m = param0;
-          this.field_r = param1;
-          this.field_l = param3.toLowerCase();
-          this.field_q = 2 * lm.field_b + ob.field_D.c(this.field_l);
-          this.field_o = ob.field_D.field_P + 2 * ki.field_a + ob.field_D.field_F;
+          this.sprite = sprite;
+          this.x = x;
+          this.y = y;
+          this.tooltipText = tooltipText.toLowerCase();
+          this.tooltipWidth = 2 * lm.field_b + ob.field_D.c(this.tooltipText);
+          this.tooltipHeight = ob.field_D.field_P + 2 * ki.field_a + ob.field_D.field_F;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "nq.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "nq.<init>(" + x + ',' + y + ',' + (sprite != null ? "{...}" : "null") + ',' + (tooltipText != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0) {
-        this.field_s.drawTransparent(this.field_m, this.field_r);
-        if (param0 != 2) {
+    final void draw(int obfuscationGuard) {
+        this.sprite.drawTransparent(this.x, this.y);
+        if (obfuscationGuard != 2) {
           return;
         }
-        if (this.field_j) {
-          hj.a(-lm.field_b + pq.pointerX, -ki.field_a + po.pointerY, this.field_o, this.field_q, this.field_l, 16777215);
+        if (this.hovered) {
+          hj.a(-lm.field_b + pq.pointerX, -ki.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
         }
     }
 

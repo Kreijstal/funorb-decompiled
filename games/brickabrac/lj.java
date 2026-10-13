@@ -174,7 +174,7 @@ final class lj extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         DualLinkDeque.field_b = param4;
         wh.field_m = param2;
-        nq.field_i = param0;
+        TooltipSprite.field_i = param0;
         if (param3 != 0) {
           tg var6 = (tg) null;
           lj.a(true, (tg) null);

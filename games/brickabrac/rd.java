@@ -9,7 +9,7 @@ final class rd {
     static RgbSprite[][] field_d;
 
     final static void a(int param0) {
-        nq.field_p = false;
+        TooltipSprite.field_p = false;
         if (null != hd.field_a) {
           hd.field_a.f((byte) 41);
         }

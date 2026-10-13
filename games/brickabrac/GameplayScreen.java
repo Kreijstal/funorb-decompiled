@@ -621,7 +621,7 @@ final class GameplayScreen extends GameScreen {
         if (param0 != 40) {
           return;
         }
-        pe.field_n = si.field_k.field_m;
+        pe.field_n = IntrusiveHashTable.field_k.field_m;
     }
 
     final void a(boolean param0, byte param1) {

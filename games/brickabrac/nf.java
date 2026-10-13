@@ -3,9 +3,9 @@
  */
 final class nf extends lg {
     private int field_Q;
-    static int field_P;
+    static int selectedAchievementId;
     private String field_S;
-    static int field_Y;
+    static int hoveredAchievementId;
     static RgbSprite[] field_W;
     static boolean field_V;
     private RgbSprite field_X;

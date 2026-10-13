@@ -143,11 +143,11 @@ final class vh extends d {
           ik.field_g = up.field_v;
           if (param0 != 255) {
             if (param0 < 100) {
-              ni.field_Rb = i.a(param0, -126, param2);
+              ni.field_Rb = AchievementIcon.a(param0, -126, param2);
               return;
             }
             if (param0 > 105) {
-              ni.field_Rb = i.a(param0, -126, param2);
+              ni.field_Rb = AchievementIcon.a(param0, -126, param2);
               return;
             }
             ni.field_Rb = lm.a(-2079, param3);

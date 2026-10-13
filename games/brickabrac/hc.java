@@ -208,9 +208,9 @@ final class hc {
           }
           kn.field_z = 2;
           ok.field_f = 11;
-          var7 = nq.a((byte) -37, "lobby", param3, param4, "largefont");
-          rd.field_e = nq.a((byte) -37, "lobby", param3, param4, "generalfont");
-          ScorePopup.field_m = nq.a((byte) -37, "lobby", param3, param4, "chatfont");
+          var7 = TooltipSprite.a((byte) -37, "lobby", param3, param4, "largefont");
+          rd.field_e = TooltipSprite.a((byte) -37, "lobby", param3, param4, "generalfont");
+          ScorePopup.field_m = TooltipSprite.a((byte) -37, "lobby", param3, param4, "chatfont");
           var7.a(var5, var24);
           rd.field_e.a(var5, var24);
           ScorePopup.field_m.a(var5, var24);

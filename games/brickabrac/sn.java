@@ -108,21 +108,21 @@ final class sn extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("construct", -28138)) {
+        if (!AchievementIcon.field_m.a("construct", -28138)) {
           return false;
         }
-        sf.field_Y = pl.a("construct", "construction_near", (byte) 124, i.field_m);
-        AchievementBrowserScreen.field_D = pl.a("construct", "construction_mid", (byte) 102, i.field_m);
-        sf.field_cb = pl.a("construct", "construction_far", (byte) -93, i.field_m);
-        IntNode.field_o = pl.a("construct", "construction_smoke", (byte) -128, i.field_m);
-        MenuSelection.field_h = pl.a("construct", "construction_small", (byte) -74, i.field_m);
+        sf.field_Y = pl.a("construct", "construction_near", (byte) 124, AchievementIcon.field_m);
+        AchievementBrowserScreen.field_D = pl.a("construct", "construction_mid", (byte) 102, AchievementIcon.field_m);
+        sf.field_cb = pl.a("construct", "construction_far", (byte) -93, AchievementIcon.field_m);
+        IntNode.field_o = pl.a("construct", "construction_smoke", (byte) -128, AchievementIcon.field_m);
+        MenuSelection.field_h = pl.a("construct", "construction_small", (byte) -74, AchievementIcon.field_m);
         t.field_a = jh.a(0, sf.field_Y);
         IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.field_D);
         hg.field_g = jh.a(0, sf.field_cb);
         er.field_d = jh.a(0, IntNode.field_o);
-        rd.field_d[0] = cr.a("construct", i.field_m, "construction_caps", 2);
-        kh.field_d[0] = cr.a("construct", i.field_m, "construction_segs", 2);
-        sk.field_J[0] = pl.a("construct", "construction_centre", (byte) 127, i.field_m);
+        rd.field_d[0] = cr.a("construct", AchievementIcon.field_m, "construction_caps", 2);
+        kh.field_d[0] = cr.a("construct", AchievementIcon.field_m, "construction_segs", 2);
+        sk.field_J[0] = pl.a("construct", "construction_centre", (byte) 127, AchievementIcon.field_m);
         rd.field_d[1] = ig.a(rd.field_d[0], false);
         kh.field_d[1] = ig.a(kh.field_d[0], param0);
         sk.field_J[1] = pl.a(-16371, sk.field_J[0]);

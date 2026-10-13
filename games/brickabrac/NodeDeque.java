@@ -68,7 +68,7 @@ final class NodeDeque {
             return stackIn_18_0;
           }
           if (param0 == 11) {
-            stackIn_21_0 = i.field_o;
+            stackIn_21_0 = AchievementIcon.field_o;
             return stackIn_21_0;
           }
           if (param2 != ~param0) {

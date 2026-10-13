@@ -1057,13 +1057,13 @@ class um implements ub, qe {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var13.field_nc.field_Mb = nq.field_k;
+                  var13.field_nc.field_Mb = TooltipSprite.field_k;
                 }
               } else {
                 if (var13.field_yc < 0) {
                   if (var13.field_Dc && (var13.field_uc ||
                     var13.field_Pb)) {
-                    var13.field_nc.field_Mb = nq.field_k;
+                    var13.field_nc.field_Mb = TooltipSprite.field_k;
                     decompiledFrameRemainder1 = false;
                   }
                   else {

@@ -15,7 +15,7 @@ abstract class sa extends qg implements vc {
         var3 = BrickABrac.field_J ? 1 : 0;
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!nl.a(ch.field_g, (byte) 64)))) {
-          stackIn_11_0 = this.a(jl.field_e, (byte) 47, si.field_a);
+          stackIn_11_0 = this.a(jl.field_e, (byte) 47, IntrusiveHashTable.field_a);
           if (var3 == 0) {
             if (stackIn_11_0) {
               continue;

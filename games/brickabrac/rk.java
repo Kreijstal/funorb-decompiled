@@ -8,7 +8,7 @@ final class rk extends mh {
     static String field_Tb;
     static RgbSprite field_Sb;
     private mh field_Pb;
-    static int field_Qb;
+    static int achievementTransitionMask;
 
     private final void b(int param0, int param1, int param2) {
         int var4;

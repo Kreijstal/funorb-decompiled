@@ -70,7 +70,7 @@ final class ln extends IntrusiveNode {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           BrickABrac.field_I = param4;
-          i.field_m = param3;
+          AchievementIcon.field_m = param3;
           if (param5 != -10) {
             field_j = (RgbSprite[]) null;
           }

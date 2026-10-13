@@ -8,40 +8,40 @@ final class cn {
     static int field_d;
     static String field_b;
 
-    final static i a(int param0, int param1, int param2, AchievementBrowserScreen param3, int param4, int param5, int param6, int param7, int param8) {
-        i var9 = null;
+    final static AchievementIcon acquireAchievementIcon(int remainingOffset, int y, int width, AchievementBrowserScreen owner, int height, int transitionBitIndex, int x, int achievementId, int transitionBit) {
+        AchievementIcon icon = null;
         RuntimeException var9_ref = null;
-        i stackIn_3_0 = null;
+        AchievementIcon stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = (i) (aa.field_a.removeFirst(3));
-          if (var9 == null) {
-            var9 = new i();
+          icon = (AchievementIcon) (aa.achievementIconPool.removeFirst(3));
+          if (icon == null) {
+            icon = new AchievementIcon();
           }
-          var9.field_n = param1;
-          var9.field_u = param2;
-          var9.field_w = param4;
-          var9.field_t = param3;
-          var9.field_r = param7;
-          var9.field_i = param6;
-          var9.field_p = param0;
-          var9.field_x = ~(param8 << param5);
-          stackIn_3_0 = var9;
+          icon.y = y;
+          icon.width = width;
+          icon.height = height;
+          icon.owner = owner;
+          icon.achievementId = achievementId;
+          icon.x = x;
+          icon.remainingOffset = remainingOffset;
+          icon.transitionKeepMask = ~(transitionBit << transitionBitIndex);
+          stackIn_3_0 = icon;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9_ref = decompiledCaughtException;
           stackIn_6_0 = var9_ref;
-          stackIn_6_1 = new StringBuilder().append("cn.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("cn.A(").append(remainingOffset).append(',').append(y).append(',').append(width).append(',');
+          if (owner == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(height).append(',').append(transitionBitIndex).append(',').append(x).append(',').append(achievementId).append(',').append(transitionBit).append(')').toString());
         }
     }
 

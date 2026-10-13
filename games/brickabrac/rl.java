@@ -29,7 +29,7 @@ final class rl {
     }
 
     final static void b(int param0) {
-        nq.e(40);
+        TooltipSprite.e(40);
         if (param0 != 18) {
           rl.a(81);
         }

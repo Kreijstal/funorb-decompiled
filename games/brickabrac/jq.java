@@ -9,7 +9,7 @@ final class jq extends bc {
     private byte[] field_i;
     private hb field_s;
     private int field_A;
-    private si field_l;
+    private IntrusiveHashTable field_l;
     private ko field_v;
     private byte[] field_e;
     private ve field_g;
@@ -28,7 +28,7 @@ final class jq extends bc {
     private boolean field_w;
 
     final int a(byte param0, int param1) {
-        hb var3 = (hb) (this.field_l.a(-117, (long)param1));
+        hb var3 = (hb) (this.field_l.get(-117, (long)param1));
         if (param0 >= -60) {
           this.field_k = true;
         }
@@ -91,13 +91,13 @@ final class jq extends bc {
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((ek.field_lb << 1) + var7, (GameCanvas.field_f << 1) + nq.field_i, -ek.field_lb + var8, false, var2);
+                var9.a((ek.field_lb << 1) + var7, (GameCanvas.field_f << 1) + TooltipSprite.field_i, -ek.field_lb + var8, false, var2);
               }
               var2 = var2 + GameCanvas.field_f;
             }
             if (var4 >= 0) {
               lj.field_r.c(var6, var8, lj.field_i + var2, var5, -1);
-              var2 = var2 + (nq.field_i + dj.field_g + GameCanvas.field_f);
+              var2 = var2 + (TooltipSprite.field_i + dj.field_g + GameCanvas.field_f);
             } else {
               oc.field_m.c(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
               var2 = var2 + wh.field_m;
@@ -298,7 +298,7 @@ final class jq extends bc {
         }
         if (this.field_w &&
           this.field_q <= ue.a(false)) {
-          var2 = (hb) (this.field_l.b(-15519));
+          var2 = (hb) (this.field_l.first(-15519));
           while (var2 != null) {
             if (!var2.field_u) {
               if (!var2.field_v) {
@@ -310,7 +310,7 @@ final class jq extends bc {
                 var2.unlink((byte) 111);
               }
             }
-            var2 = (hb) (this.field_l.a(true));
+            var2 = (hb) (this.field_l.next(true));
           }
           this.field_q = ue.a(false) + 1000L;
         }
@@ -339,7 +339,7 @@ final class jq extends bc {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
-        var12 = (hb) (this.field_l.a(-48, (long)param1));
+        var12 = (hb) (this.field_l.get(-48, (long)param1));
         var4 = var12;
         if (var12 != null &&
           0 == param0 &&
@@ -381,7 +381,7 @@ final class jq extends bc {
               var4 = this.field_j.a(-952050528, this.field_h, (byte) 2, param1, false);
             }
           }
-          this.field_l.a(34, (IntrusiveNode) (var4), (long)param1);
+          this.field_l.put(34, (IntrusiveNode) (var4), (long)param1);
         }
         if (((hb) (var4)).field_u) {
           return null;
@@ -436,7 +436,7 @@ final class jq extends bc {
             if (((hb) (var4)).field_B &&
               !this.field_j.a(2)) {
               var4 = this.field_j.a(-952050528, this.field_h, (byte) 2, param1, true);
-              this.field_l.a(34, (IntrusiveNode) (var4), (long)param1);
+              this.field_l.put(34, (IntrusiveNode) (var4), (long)param1);
             }
             return null;
           }
@@ -478,7 +478,7 @@ final class jq extends bc {
               return null;
             }
             var4 = this.field_j.a(-952050528, this.field_h, (byte) 2, param1, true);
-            this.field_l.a(34, (IntrusiveNode) (var4), (long)param1);
+            this.field_l.put(34, (IntrusiveNode) (var4), (long)param1);
           }
           return null;
         }
@@ -597,7 +597,7 @@ final class jq extends bc {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_l = new si(16);
+        this.field_l = new IntrusiveHashTable(16);
         this.field_m = 0;
         this.field_x = new NodeDeque();
         this.field_q = 0L;

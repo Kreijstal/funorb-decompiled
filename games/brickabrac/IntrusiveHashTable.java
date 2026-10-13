@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si {
+final class IntrusiveHashTable {
     static ki field_k;
-    private IntrusiveNode field_h;
+    private IntrusiveNode lookupCursor;
     static int field_a;
     static th field_o;
     static int keyEventReadIndex;
-    private int field_f;
-    private int field_g;
+    private int traversalBucketIndex;
+    private int bucketCount;
     static char[] field_n;
-    private IntrusiveNode field_e;
+    private IntrusiveNode traversalCursor;
     static RgbSprite field_i;
     static byte[][] field_b;
     static int[] field_d;
-    static tp[] field_c;
-    private IntrusiveNode[] field_j;
+    static tp[] achievementSourceIcons;
+    private IntrusiveNode[] buckets;
     static int field_l;
 
     final static mb a(byte param0, String param1, String param2, mf param3, mf param4) {
@@ -75,44 +75,44 @@ final class si {
         }
     }
 
-    final IntrusiveNode a(int param0, long param1) {
+    final IntrusiveNode get(int obfuscationGuard, long key) {
         IntrusiveNode var5 = null;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        IntrusiveNode var4 = this.field_j[(int)(param1 & (long)(this.field_g - 1))];
+        IntrusiveNode var4 = this.buckets[(int)(key & (long)(this.bucketCount - 1))];
         IntrusiveNode var5Lifetime1;
-        this.field_h = var4.next;
-        if (param0 < -23) {
-          while (this.field_h != var4) {
-            if (~param1 == ~this.field_h.key) {
-              var5 = this.field_h;
-              this.field_h = this.field_h.next;
+        this.lookupCursor = var4.next;
+        if (obfuscationGuard < -23) {
+          while (this.lookupCursor != var4) {
+            if (~key == ~this.lookupCursor.key) {
+              var5 = this.lookupCursor;
+              this.lookupCursor = this.lookupCursor.next;
               return var5;
             }
-            this.field_h = this.field_h.next;
+            this.lookupCursor = this.lookupCursor.next;
           }
-          this.field_h = null;
+          this.lookupCursor = null;
           return null;
         }
-        this.a(60, (IntrusiveNode) null, -45L);
-        while (this.field_h != var4) {
-          if (~param1 == ~this.field_h.key) {
-            var5Lifetime1 = this.field_h;
-            this.field_h = this.field_h.next;
+        this.put(60, (IntrusiveNode) null, -45L);
+        while (this.lookupCursor != var4) {
+          if (~key == ~this.lookupCursor.key) {
+            var5Lifetime1 = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.next;
             return var5Lifetime1;
           }
-          this.field_h = this.field_h.next;
+          this.lookupCursor = this.lookupCursor.next;
         }
-        this.field_h = null;
+        this.lookupCursor = null;
         return null;
     }
 
     public static void a(int param0) {
         field_n = null;
-        field_c = null;
+        achievementSourceIcons = null;
         field_o = null;
         field_k = null;
         if (param0 <= 76) {
-          si.a(-40, false);
+          IntrusiveHashTable.a(-40, false);
           field_i = null;
           field_d = null;
           field_b = (byte[][]) null;
@@ -123,7 +123,7 @@ final class si {
         field_b = (byte[][]) null;
     }
 
-    final IntrusiveNode a(boolean param0) {
+    final IntrusiveNode next(boolean obfuscationGuard) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
@@ -132,47 +132,47 @@ final class si {
         IntrusiveNode var9;
         IntrusiveNode var12;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (!param0) {
+        if (!obfuscationGuard) {
           return (IntrusiveNode) null;
         }
-        if (this.field_f <= 0) {
+        if (this.traversalBucketIndex <= 0) {
           do {
-            if (this.field_g <= this.field_f) {
+            if (this.bucketCount <= this.traversalBucketIndex) {
               return null;
             }
-            fieldTemp$1 = this.field_f;
-            this.field_f = this.field_f + 1;
-            var4 = this.field_j[fieldTemp$1].next;
+            fieldTemp$1 = this.traversalBucketIndex;
+            this.traversalBucketIndex = this.traversalBucketIndex + 1;
+            var4 = this.buckets[fieldTemp$1].next;
             var5 = var4;
-          } while (var4 == this.field_j[this.field_f - 1]);
-          this.field_e = var5.next;
+          } while (var4 == this.buckets[this.traversalBucketIndex - 1]);
+          this.traversalCursor = var5.next;
           return var5;
         }
-        if (this.field_e != this.field_j[this.field_f - 1]) {
-          var12 = this.field_e;
-          this.field_e = var12.next;
+        if (this.traversalCursor != this.buckets[this.traversalBucketIndex - 1]) {
+          var12 = this.traversalCursor;
+          this.traversalCursor = var12.next;
           return var12;
         }
         do {
-          if (this.field_g <= this.field_f) {
+          if (this.bucketCount <= this.traversalBucketIndex) {
             return null;
           }
-          fieldTemp$0 = this.field_f;
-          this.field_f = this.field_f + 1;
-          var4 = this.field_j[fieldTemp$0].next;
+          fieldTemp$0 = this.traversalBucketIndex;
+          this.traversalBucketIndex = this.traversalBucketIndex + 1;
+          var4 = this.buckets[fieldTemp$0].next;
           var9 = var4;
-        } while (var4 == this.field_j[this.field_f - 1]);
-        this.field_e = var9.next;
+        } while (var4 == this.buckets[this.traversalBucketIndex - 1]);
+        this.traversalCursor = var9.next;
         return var9;
     }
 
-    final IntrusiveNode b(int param0) {
-        this.field_f = 0;
-        if (param0 != -15519) {
-          this.field_h = (IntrusiveNode) null;
-          return this.a(true);
+    final IntrusiveNode first(int obfuscationGuard) {
+        this.traversalBucketIndex = 0;
+        if (obfuscationGuard != -15519) {
+          this.lookupCursor = (IntrusiveNode) null;
+          return this.next(true);
         }
-        return this.a(true);
+        return this.next(true);
     }
 
     final static void a(int param0, boolean param1) {
@@ -200,7 +200,7 @@ final class si {
         int var9Lifetime2;
         um.field_p.drawTransparent(var4, var5);
         if (param1 >= -115) {
-          si.a(75, (byte) 65, 92, -101);
+          IntrusiveHashTable.a(75, (byte) 65, 92, -101);
         }
         int var6 = var4 + (um.field_p.canvasWidth - pa.field_j.canvasWidth) / 2;
         int var7 = 64 + var5;
@@ -238,38 +238,38 @@ final class si {
         gr.field_d[param3].drawTransparent(var8Lifetime3, var9Lifetime2);
     }
 
-    final void a(int param0, IntrusiveNode param1, long param2) {
+    final void put(int obfuscationGuard, IntrusiveNode node, long key) {
         IntrusiveNode var5 = null;
         try {
-          if (param1.previous != null) {
-            param1.unlink((byte) 111);
+          if (node.previous != null) {
+            node.unlink((byte) 111);
           }
-          if (param0 != 34) {
+          if (obfuscationGuard != 34) {
             mf var6 = (mf) null;
-            si.a((byte) -123, (String) null, (String) null, (mf) null, (mf) null);
+            IntrusiveHashTable.a((byte) -123, (String) null, (String) null, (mf) null, (mf) null);
           }
-          var5 = this.field_j[(int)((long)(this.field_g - 1) & param2)];
-          param1.next = var5;
-          param1.previous = var5.previous;
-          param1.previous.next = param1;
-          param1.next.previous = param1;
-          param1.key = param2;
+          var5 = this.buckets[(int)((long)(this.bucketCount - 1) & key)];
+          node.next = var5;
+          node.previous = var5.previous;
+          node.previous.next = node;
+          node.next.previous = node;
+          node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "si.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "si.H(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
         }
     }
 
-    si(int param0) {
+    IntrusiveHashTable(int bucketCount) {
         int var2 = 0;
         IntrusiveNode dupTemp$1 = null;
         IntrusiveNode var3;
-        this.field_f = 0;
-        this.field_g = param0;
-        this.field_j = new IntrusiveNode[param0];
-        for (var2 = 0; var2 < param0; var2++) {
+        this.traversalBucketIndex = 0;
+        this.bucketCount = bucketCount;
+        this.buckets = new IntrusiveNode[bucketCount];
+        for (var2 = 0; var2 < bucketCount; var2++) {
           dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
-          this.field_j[var2] = dupTemp$1;
+          this.buckets[var2] = dupTemp$1;
           var3.previous = var3;
           var3.next = var3;
         }

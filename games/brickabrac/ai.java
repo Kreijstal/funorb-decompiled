@@ -110,15 +110,15 @@ final class ai extends ki {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!i.field_m.a("paris", -28138)) {
+          if (!AchievementIcon.field_m.a("paris", -28138)) {
             return false;
           }
-          qa.field_y = pl.a("paris", "paris_near", (byte) -51, i.field_m);
-          th.field_c = pl.a("paris", "paris_mid", (byte) 98, i.field_m);
-          bf.field_K = pl.a("paris", "paris_far", (byte) -100, i.field_m);
-          pl.field_a = pl.a("paris", "paris_small", (byte) 108, i.field_m);
-          kc.field_p = pl.a("paris", "paris_character", (byte) -43, i.field_m);
-          si.field_i = jh.a(0, qa.field_y);
+          qa.field_y = pl.a("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
+          th.field_c = pl.a("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
+          bf.field_K = pl.a("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
+          pl.field_a = pl.a("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
+          kc.field_p = pl.a("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
+          IntrusiveHashTable.field_i = jh.a(0, qa.field_y);
           if (param0) {
             ai.a((mh) null, (dh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
           }
@@ -127,7 +127,7 @@ final class ai extends ki {
           uq.b(th.field_c);
           uq.b(jk.field_t);
           uq.b(qa.field_y);
-          uq.b(si.field_i);
+          uq.b(IntrusiveHashTable.field_i);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ final class ai extends ki {
               ej.a(0, MembershipBenefitsScreen.field_s, 2, 0, param3, var6);
               var6.a(this.field_m, param3, (byte) 78);
             }
-            wo.a(param0, param4, jk.field_t, 118, 306, 0, param2, 2, si.field_i, var6.field_p, param3);
+            wo.a(param0, param4, jk.field_t, 118, 306, 0, param2, 2, IntrusiveHashTable.field_i, var6.field_p, param3);
           }
           if (param1 >= -84) {
             ai.a((byte) -61, -0.03386414423584938f, (String) null);
@@ -267,8 +267,8 @@ final class ai extends ki {
           DualLinkDeque.field_d.a(sh.field_d, 0);
           var17 = new mh(0L, (mh) null);
           var17.field_bb = new NodeDeque();
-          i.field_q = new mm(0L, var17, param5, param10);
-          sh.field_d.a(i.field_q, param8 - 61);
+          AchievementIcon.field_q = new mm(0L, var17, param5, param10);
+          sh.field_d.a(AchievementIcon.field_q, param8 - 61);
           kc.field_n = new mh(0L, param3);
           sh.field_d.a(kc.field_n, 0);
           g.field_n = new mh(0L, param7);

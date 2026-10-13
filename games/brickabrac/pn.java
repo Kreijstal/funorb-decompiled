@@ -67,7 +67,7 @@ final class pn extends IntrusiveNode {
             if (decompiledSharedTail2) {
               var2 = rd.a(kk.field_c, new String[]{DualLinkNode.field_p}, (byte) 103);
             }
-            if (nq.field_p) {
+            if (TooltipSprite.field_p) {
               wp.a((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
               th.b(1);
             }

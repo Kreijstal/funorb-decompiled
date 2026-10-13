@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends IntrusiveNode {
+final class AchievementIcon extends IntrusiveNode {
     static mf field_s;
-    int field_i;
-    AchievementBrowserScreen field_t;
-    private RgbSprite field_k;
-    int field_u;
-    int field_w;
-    int field_p;
+    int x;
+    AchievementBrowserScreen owner;
+    private RgbSprite cachedThumbnail;
+    int width;
+    int height;
+    int remainingOffset;
     static String field_l;
-    int field_x;
+    int transitionKeepMask;
     static mf field_m;
-    int field_r;
+    int achievementId;
     static String field_o;
-    private boolean field_v;
+    private boolean thumbnailIsPlaceholder;
     static int field_j;
     static mm field_q;
-    int field_n;
+    int y;
 
     final static void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
@@ -52,7 +52,7 @@ final class i extends IntrusiveNode {
           return;
         }
         String var2 = (String) null;
-        i.a(110, 111, (String) null);
+        AchievementIcon.a(110, 111, (String) null);
         field_l = null;
         field_q = null;
     }
@@ -141,53 +141,53 @@ final class i extends IntrusiveNode {
         }
     }
 
-    final void a(int param0) {
+    final void update(int obfuscationGuard) {
         int var2;
-        int var3;
-        int var2Lifetime1;
-        var3 = BrickABrac.field_J ? 1 : 0;
-        if (0 != this.field_p) {
+        int clientBranchFlag;
+        int offsetStep;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        if (0 != this.remainingOffset) {
           var2 = 0;
-          if (this.field_p <= 0) {
-            var2Lifetime1 = this.field_p >> 2;
+          if (this.remainingOffset <= 0) {
+            offsetStep = this.remainingOffset >> 2;
           } else {
-            var2Lifetime1 = -(-this.field_p >> 2);
+            offsetStep = -(-this.remainingOffset >> 2);
           }
-          this.field_p = this.field_p - var2Lifetime1;
-          this.field_i = this.field_i + var2Lifetime1;
+          this.remainingOffset = this.remainingOffset - offsetStep;
+          this.x = this.x + offsetStep;
         } else {
-          rk.field_Qb = rk.field_Qb & this.field_x;
-          if (bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 47, po.pointerY, pq.pointerX, this.field_n)) {
-            nf.field_Y = this.field_r;
+          rk.achievementTransitionMask = rk.achievementTransitionMask & this.transitionKeepMask;
+          if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, pq.pointerX, this.y)) {
+            nf.hoveredAchievementId = this.achievementId;
             if (1 == ki.pressedButton &&
-              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.pressY, tb.pressX, this.field_n)) {
-              if (nf.field_P != this.field_r) {
-                nf.field_P = this.field_r;
+              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
+              if (nf.selectedAchievementId != this.achievementId) {
+                nf.selectedAchievementId = this.achievementId;
               } else {
-                nf.field_P = -1;
+                nf.selectedAchievementId = -1;
               }
-              if (nf.field_P != -1) {
+              if (nf.selectedAchievementId != -1) {
                 wp.a(8, ta.field_e[0]);
               }
             }
           } else {
             if (1 == ki.pressedButton &&
-              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.pressY, tb.pressX, this.field_n)) {
-              if (nf.field_P != this.field_r) {
-                nf.field_P = this.field_r;
+              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
+              if (nf.selectedAchievementId != this.achievementId) {
+                nf.selectedAchievementId = this.achievementId;
               } else {
-                nf.field_P = -1;
+                nf.selectedAchievementId = -1;
               }
-              if (nf.field_P != -1) {
+              if (nf.selectedAchievementId != -1) {
                 wp.a(8, ta.field_e[0]);
               }
             }
           }
         }
-        if (param0 <= -125) {
+        if (obfuscationGuard <= -125) {
           return;
         }
-        this.field_n = -78;
+        this.y = -78;
     }
 
     final static void c(byte param0) {
@@ -233,7 +233,7 @@ final class i extends IntrusiveNode {
           var3.field_g = param2;
           if (param1 > -27) {
             var4 = (pe) null;
-            i.a(-57, (pe) null, 111);
+            AchievementIcon.a(-57, (pe) null, 111);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -251,23 +251,23 @@ final class i extends IntrusiveNode {
         }
     }
 
-    final void c(int param0) {
-        if (param0 == 1) {
-          aa.field_a.addLast((IntrusiveNode) (this), (byte) 3);
-          this.field_v = false;
-          this.field_k = null;
-          this.field_t = null;
+    final void recycle(int obfuscationGuard) {
+        if (obfuscationGuard == 1) {
+          aa.achievementIconPool.addLast((IntrusiveNode) (this), (byte) 3);
+          this.thumbnailIsPlaceholder = false;
+          this.cachedThumbnail = null;
+          this.owner = null;
           return;
         }
         pe var3 = (pe) null;
-        i.a(-1, (pe) null, 57);
-        aa.field_a.addLast((IntrusiveNode) (this), (byte) 3);
-        this.field_v = false;
-        this.field_k = null;
-        this.field_t = null;
+        AchievementIcon.a(-1, (pe) null, 57);
+        aa.achievementIconPool.addLast((IntrusiveNode) (this), (byte) 3);
+        this.thumbnailIsPlaceholder = false;
+        this.cachedThumbnail = null;
+        this.owner = null;
     }
 
-    final void a(byte param0) {
+    final void draw(byte obfuscationGuard) {
         int var3;
         RgbSprite var6;
         RgbSprite var7;
@@ -276,97 +276,97 @@ final class i extends IntrusiveNode {
         tp var12;
         tp var13;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (eo.isBitSet(this.field_t.achievementMask, this.field_r, (byte) -75)) {
-          if (this.field_r == nf.field_P) {
-            pa.field_h[this.field_r].f(this.field_i, this.field_n, 384);
-            if (this.field_k == null ||
-              this.field_v) {
-              var12 = si.field_c[this.field_r];
-              this.field_k = new RgbSprite(var12.field_f / 4, var12.field_h / 4);
-              fc.a(-119, this.field_k);
+        if (eo.isBitSet(this.owner.achievementMask, this.achievementId, (byte) -75)) {
+          if (this.achievementId == nf.selectedAchievementId) {
+            pa.field_h[this.achievementId].f(this.x, this.y, 384);
+            if (this.cachedThumbnail == null ||
+              this.thumbnailIsPlaceholder) {
+              var12 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
+              this.cachedThumbnail = new RgbSprite(var12.field_f / 4, var12.field_h / 4);
+              fc.a(-119, this.cachedThumbnail);
               var12.c(0, 0);
               sc.b(-89);
-              this.field_v = false;
+              this.thumbnailIsPlaceholder = false;
             }
           } else {
-            if (this.field_r == nf.field_Y) {
-              e.field_l[this.field_r].f(this.field_i, this.field_n, 256);
-              if (this.field_k == null ||
-                this.field_v) {
-                var11 = si.field_c[this.field_r];
-                this.field_k = new RgbSprite(var11.field_f / 4, var11.field_h / 4);
-                fc.a(-119, this.field_k);
+            if (this.achievementId == nf.hoveredAchievementId) {
+              e.field_l[this.achievementId].f(this.x, this.y, 256);
+              if (this.cachedThumbnail == null ||
+                this.thumbnailIsPlaceholder) {
+                var11 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
+                this.cachedThumbnail = new RgbSprite(var11.field_f / 4, var11.field_h / 4);
+                fc.a(-119, this.cachedThumbnail);
                 var11.c(0, 0);
                 sc.b(-89);
-                this.field_v = false;
+                this.thumbnailIsPlaceholder = false;
               }
             } else {
-              if (this.field_k == null ||
-                this.field_v) {
-                var13 = si.field_c[this.field_r];
-                this.field_k = new RgbSprite(var13.field_f / 4, var13.field_h / 4);
-                fc.a(-119, this.field_k);
+              if (this.cachedThumbnail == null ||
+                this.thumbnailIsPlaceholder) {
+                var13 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];
+                this.cachedThumbnail = new RgbSprite(var13.field_f / 4, var13.field_h / 4);
+                fc.a(-119, this.cachedThumbnail);
                 var13.c(0, 0);
                 sc.b(-89);
-                this.field_v = false;
+                this.thumbnailIsPlaceholder = false;
               }
             }
           }
         } else {
-          if (nf.field_P != this.field_r) {
-            if (nf.field_Y != this.field_r) {
-              if (this.field_k == null) {
+          if (nf.selectedAchievementId != this.achievementId) {
+            if (nf.hoveredAchievementId != this.achievementId) {
+              if (this.cachedThumbnail == null) {
                 var6 = LevelCompleteScreen.field_F;
-                this.field_k = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
-                fc.a(-76, this.field_k);
+                this.cachedThumbnail = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
+                fc.a(-76, this.cachedThumbnail);
                 var6.e(0, 0);
                 sc.b(-110);
-                this.field_v = true;
+                this.thumbnailIsPlaceholder = true;
               } else {
-                if (!this.field_v) {
+                if (!this.thumbnailIsPlaceholder) {
                   var7 = LevelCompleteScreen.field_F;
-                  this.field_k = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
-                  fc.a(-76, this.field_k);
+                  this.cachedThumbnail = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
+                  fc.a(-76, this.cachedThumbnail);
                   var7.e(0, 0);
                   sc.b(-110);
-                  this.field_v = true;
+                  this.thumbnailIsPlaceholder = true;
                 }
               }
-              if (param0 < 87) {
+              if (obfuscationGuard < 87) {
                 return;
               }
-              this.field_k.drawTransparent(this.field_i, this.field_n);
+              this.cachedThumbnail.drawTransparent(this.x, this.y);
               return;
             }
-            bf.field_L.f(this.field_i, this.field_n, 256);
+            bf.field_L.f(this.x, this.y, 256);
           } else {
-            qh.field_c.f(this.field_i, this.field_n, 384);
+            qh.field_c.f(this.x, this.y, 384);
           }
-          if (this.field_k == null) {
+          if (this.cachedThumbnail == null) {
             var10 = LevelCompleteScreen.field_F;
-            this.field_k = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
-            fc.a(-76, this.field_k);
+            this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
+            fc.a(-76, this.cachedThumbnail);
             var10.e(0, 0);
             sc.b(-110);
-            this.field_v = true;
+            this.thumbnailIsPlaceholder = true;
           } else {
-            if (!this.field_v) {
+            if (!this.thumbnailIsPlaceholder) {
               var10 = LevelCompleteScreen.field_F;
-              this.field_k = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
-              fc.a(-76, this.field_k);
+              this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
+              fc.a(-76, this.cachedThumbnail);
               var10.e(0, 0);
               sc.b(-110);
-              this.field_v = true;
+              this.thumbnailIsPlaceholder = true;
             }
           }
         }
-        if (param0 < 87) {
+        if (obfuscationGuard < 87) {
           return;
         }
-        this.field_k.drawTransparent(this.field_i, this.field_n);
+        this.cachedThumbnail.drawTransparent(this.x, this.y);
     }
 
-    i() {
+    AchievementIcon() {
     }
 
     static {

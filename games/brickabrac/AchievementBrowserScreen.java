@@ -20,22 +20,22 @@ abstract class AchievementBrowserScreen extends MenuScreen {
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int var5 = BrickABrac.field_J ? 1 : 0;
         super.advanceScreen(updateFlag, inputEnabled, -89);
-        nf.field_Y = -1;
-        i var4 = (i) (this.visibleIcons.first(-117));
+        nf.hoveredAchievementId = -1;
+        AchievementIcon var4 = (AchievementIcon) (this.visibleIcons.first(-117));
         if (obfuscationGuard > -52) {
           field_u = 41;
         }
         while (var4 != null) {
-          var4.a(-127);
-          var4 = (i) (this.visibleIcons.next((byte) 116));
+          var4.update(-127);
+          var4 = (AchievementIcon) (this.visibleIcons.next((byte) 116));
         }
-        var4 = (i) (this.departingIcons.first(-113));
+        var4 = (AchievementIcon) (this.departingIcons.first(-113));
         while (var4 != null) {
-          var4.a(-128);
-          if (var4.field_p == 0) {
-            var4.c(1);
+          var4.update(-128);
+          if (var4.remainingOffset == 0) {
+            var4.recycle(1);
           }
-          var4 = (i) (this.departingIcons.next((byte) 116));
+          var4 = (AchievementIcon) (this.departingIcons.next((byte) 116));
         }
     }
 
@@ -56,32 +56,32 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         int var11;
         int var12;
         int var14;
-        i var15;
+        AchievementIcon var15;
         Object var16;
-        i var17;
+        AchievementIcon var17;
         int var11Lifetime1;
         var16 = null;
         var14 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -104);
         im.a(550, 5, 88, 5, 140, (byte) -72, 45);
         MovingBody.a((byte) 98, 560, 80, 140, 228);
-        var17 = (i) (this.visibleIcons.first(-94));
+        var17 = (AchievementIcon) (this.visibleIcons.first(-94));
         while (var17 != null) {
-          var17.a((byte) 103);
-          var17 = (i) (this.visibleIcons.next((byte) 116));
+          var17.draw((byte) 103);
+          var17 = (AchievementIcon) (this.visibleIcons.next((byte) 116));
         }
-        var15 = (i) (this.departingIcons.first(-43));
+        var15 = (AchievementIcon) (this.departingIcons.first(-43));
         while (var15 != null) {
-          var15.a((byte) 107);
-          var15 = (i) (this.departingIcons.next((byte) 116));
+          var15.draw((byte) 107);
+          var15 = (AchievementIcon) (this.departingIcons.next((byte) 116));
         }
         sc.b(-81);
         im.a(146, 5, 146, 5, 233, (byte) -87, 45);
         im.a(399, 5, 146, 5, 233, (byte) -107, 196);
-        if (nf.field_P != -1) {
-          stackIn_9_0 = nf.field_P;
+        if (nf.selectedAchievementId != -1) {
+          stackIn_9_0 = nf.selectedAchievementId;
         } else {
-          stackIn_9_0 = nf.field_Y;
+          stackIn_9_0 = nf.hoveredAchievementId;
         }
         var3 = stackIn_9_0;
         if (obfuscationGuard >= -14) {
@@ -101,7 +101,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
           ((bi) (Object) stackIn_19_0).c(stackIn_20_1, 209, 2 * var5 + 246 + 2, 2, -1);
           if (var6 != 0) {
-            si.field_c[var3].a(54, 242);
+            IntrusiveHashTable.achievementSourceIcons[var3].a(54, 242);
           } else {
             LevelCompleteScreen.field_F.drawTransparent(54, 242);
           }
@@ -352,8 +352,8 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         super.onEnter(usePointer, 2, 110);
         this.pageIndex = 0;
         this.pageCount = 0;
-        nf.field_Y = -1;
-        nf.field_P = -1;
+        nf.hoveredAchievementId = -1;
+        nf.selectedAchievementId = -1;
         this.achievementPages[this.pageCount].clear((byte) -114);
         if (obfuscationGuard <= 96) {
           return;
@@ -385,7 +385,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        i var5 = null;
+        AchievementIcon var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -394,15 +394,15 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          nf.field_P = -1;
+          nf.selectedAchievementId = -1;
           var4_int = 640 * transitionDirection;
           this.clearIcons(32367, this.departingIcons);
-          var5 = (i) (this.visibleIcons.removeFirst(3));
+          var5 = (AchievementIcon) (this.visibleIcons.removeFirst(3));
           while (var5 != null) {
-            var5.field_x = -1;
-            var5.field_p = -var4_int;
+            var5.transitionKeepMask = -1;
+            var5.remainingOffset = -var4_int;
             this.departingIcons.addLast(var5, (byte) 3);
-            var5 = (i) (this.visibleIcons.removeFirst(3));
+            var5 = (AchievementIcon) (this.visibleIcons.removeFirst(3));
           }
           var6 = 82;
           var7 = (24 + var6 * 2) / columnDivisor;
@@ -410,8 +410,8 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var9 = (IntNode) (achievementIds.first(-74));
           var10 = 0;
           while (var9 != null) {
-            this.visibleIcons.addLast(cn.a(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, columnDivisor - 1), (byte) 3);
-            rk.field_Qb = rk.field_Qb | 1 << var10;
+            this.visibleIcons.addLast(cn.acquireAchievementIcon(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, columnDivisor - 1), (byte) 3);
+            rk.achievementTransitionMask = rk.achievementTransitionMask | 1 << var10;
             var9 = (IntNode) (achievementIds.next((byte) 116));
             var10++;
             if (var10 != 8) {
@@ -438,7 +438,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
 
     private final void clearIcons(int obfuscationGuard, NodeDeque icons) {
         int var4 = 0;
-        i var5 = null;
+        AchievementIcon icon = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -449,10 +449,10 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           if (obfuscationGuard != 32367) {
             this.visibleIcons = (NodeDeque) null;
           }
-          var5 = (i) (icons.removeFirst(obfuscationGuard - 32364));
-          while (var5 != null) {
-            var5.c(1);
-            var5 = (i) (icons.removeFirst(3));
+          icon = (AchievementIcon) (icons.removeFirst(obfuscationGuard - 32364));
+          while (icon != null) {
+            icon.recycle(1);
+            icon = (AchievementIcon) (icons.removeFirst(3));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -489,7 +489,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
           if (this.selection.isActivated((byte) 113) &&
             this.isButtonEnabled((byte) 90, buttonIndex) &&
-            rk.field_Qb == 0) {
+            rk.achievementTransitionMask == 0) {
             fieldTemp$0 = this.pageIndex + 1;
             this.pageIndex = this.pageIndex + 1;
             if (fieldTemp$0 >= this.pageCount) {
@@ -504,7 +504,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         } else {
           if (this.selection.isActivated((byte) 113) &&
             this.isButtonEnabled((byte) 86, buttonIndex)) {
-            if (rk.field_Qb != 0) {
+            if (rk.achievementTransitionMask != 0) {
               return false;
             }
             fieldTemp$1 = this.pageIndex - 1;

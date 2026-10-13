@@ -65,7 +65,7 @@ final class m {
               return true;
             }
           }
-          var2Lifetime1 = si.field_n;
+          var2Lifetime1 = IntrusiveHashTable.field_n;
           var3Lifetime1 = 0;
           while (true) {
             if (var2Lifetime1.length <= var3Lifetime1) {

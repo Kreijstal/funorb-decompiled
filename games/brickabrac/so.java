@@ -180,7 +180,7 @@ final class so {
           AchievementBrowserScreen.field_A = kf.a("button_frame", "basic", param0, -91);
           Ball.field_G = kf.a("button_raised", "basic", param0, 103);
           pe.field_k = kf.a("button_depressed", "basic", param0, -104);
-          si.field_c = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
+          IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
           LevelCompleteScreen.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
           pg.field_p = pl.a("basic", "orbcoin", (byte) 122, param1);
           pl.a("basic", "locked", (byte) -45, param1);
@@ -196,13 +196,13 @@ final class so {
           bf.field_L = p.a(-12, var19, 8, 9838226);
           qh.field_c = p.a(-12, var19, 12, 9838226);
           var8 = null;
-          e.field_l = new RgbSprite[si.field_c.length];
-          pa.field_h = new RgbSprite[si.field_c.length];
+          e.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
+          pa.field_h = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
           var20 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
-          for (var10_int = 0; var10_int < si.field_c.length; var10_int++) {
+          for (var10_int = 0; var10_int < IntrusiveHashTable.achievementSourceIcons.length; var10_int++) {
             var20.bindRasterTarget();
             Rasterizer2D.clear();
-            si.field_c[var10_int].c(0, 0);
+            IntrusiveHashTable.achievementSourceIcons[var10_int].c(0, 0);
             kc.field_q.a((byte) 101);
             e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
             pa.field_h[var10_int] = p.a(pn.a(param3, -29147), var20, 12, 9838226);

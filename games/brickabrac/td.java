@@ -47,19 +47,19 @@ final class td extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("volcanic", -28138)) {
+        if (!AchievementIcon.field_m.a("volcanic", -28138)) {
           return false;
         }
-        pb.field_j = pl.a("volcanic", "volcanic_near", (byte) -127, i.field_m);
-        cp.field_I = pl.a("volcanic", "volcanic_mid", (byte) -73, i.field_m);
-        se.field_k = pl.a("volcanic", "volcanic_far", (byte) -125, i.field_m);
-        mc.field_f = pl.a("volcanic", "volcanic_small", (byte) -77, i.field_m);
+        pb.field_j = pl.a("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
+        cp.field_I = pl.a("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
+        se.field_k = pl.a("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
+        mc.field_f = pl.a("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
         cg.field_q = jh.a(0, pb.field_j);
         gq.field_Sb = jh.a(0, cp.field_I);
         RectangleBody.field_p = jh.a(0, se.field_k);
-        kg.field_a[0] = cr.a("volcanic", i.field_m, "volcanic_caps", 2);
-        np.field_c[0] = cr.a("volcanic", i.field_m, "volcanic_segs", 2);
-        LevelList.field_e[0] = pl.a("volcanic", "volcanic_centre", (byte) -67, i.field_m);
+        kg.field_a[0] = cr.a("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
+        np.field_c[0] = cr.a("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
+        LevelList.field_e[0] = pl.a("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
         kg.field_a[1] = ig.a(kg.field_a[0], false);
         np.field_c[1] = ig.a(np.field_c[0], param0);
         LevelList.field_e[1] = pl.a(-16371, LevelList.field_e[0]);

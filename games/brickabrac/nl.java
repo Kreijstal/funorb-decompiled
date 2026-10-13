@@ -57,8 +57,8 @@ final class nl {
               }
               r.field_z = we.field_a;
               we.field_a = mh.field_gb;
-              mh.field_gb = si.field_a;
-              si.field_a = var4_ref_pg.field_r;
+              mh.field_gb = IntrusiveHashTable.field_a;
+              IntrusiveHashTable.field_a = var4_ref_pg.field_r;
               return true;
             }
           }
@@ -78,8 +78,8 @@ final class nl {
             if (ue.field_d == 0) {
               r.field_z = we.field_a;
               we.field_a = mh.field_gb;
-              mh.field_gb = si.field_a;
-              si.field_a = ob.field_I;
+              mh.field_gb = IntrusiveHashTable.field_a;
+              IntrusiveHashTable.field_a = ob.field_I;
               ob.field_I = -1;
               return true;
             }

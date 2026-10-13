@@ -50,7 +50,7 @@ final class ij implements wb {
         KeyboardInput.a(new sb(), 0);
         td.g(0);
         qn.a(240, 0, 640, 0, -6532);
-        bm.a(kh.field_i, qb.field_r, 24876, LevelList.field_o, GameScreen.field_e, ki.field_f, i.field_s);
+        bm.a(kh.field_i, qb.field_r, 24876, LevelList.field_o, GameScreen.field_e, ki.field_f, AchievementIcon.field_s);
         oc.a(1, ob.field_D);
         hk.h((byte) 55);
         hk.initializeMenuScreens((byte) 115, ki.field_f);
@@ -151,7 +151,7 @@ final class ij implements wb {
         ki.field_f = bq.a(-6, 0, false, 5, true);
         ScorePopup.field_l = aj.a(6, true);
         qb.field_r = aj.a(7, true);
-        i.field_s = aj.a(8, param0);
+        AchievementIcon.field_s = aj.a(8, param0);
         LevelList.field_o = aj.a(9, true);
         kh.field_i = aj.a(10, true);
         nl.field_a = aj.a(11, true);
@@ -167,7 +167,7 @@ final class ij implements wb {
         bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
         bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
         bh.field_tb.a(qb.field_r, false, MovingBody.field_n, wl.field_Q);
-        bh.field_tb.a(i.field_s, false, MovingBody.field_n, wl.field_Q);
+        bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(LevelList.field_o, false, kc.field_i, sg.field_m);
         bh.field_tb.a(kh.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
@@ -216,7 +216,7 @@ final class ij implements wb {
         } else {
           mc.a((byte) 115);
           LevelList.a(-1);
-          lq.a(LevelList.field_o, kh.field_i, (byte) -38, i.field_s, qb.field_r);
+          lq.a(LevelList.field_o, kh.field_i, (byte) -38, AchievementIcon.field_s, qb.field_r);
         }
         if (var2 != 0) {
           be.field_c = be.field_c + 1;

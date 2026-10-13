@@ -50,7 +50,7 @@ final class pk {
             ck.a(param1, 0, 14209, 0);
             return;
           }
-          if (i.field_j != 0) {
+          if (AchievementIcon.field_j != 0) {
             kn.a(true, param1);
             return;
           }

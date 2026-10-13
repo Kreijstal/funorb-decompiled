@@ -331,7 +331,7 @@ final class wl extends d {
                 AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, jl.field_e));
                 jl.field_e.position = 0;
               } else {
-                si.field_a = var9Lifetime1;
+                IntrusiveHashTable.field_a = var9Lifetime1;
                 rf.field_b = vj.field_e;
                 ga.field_j = -1;
               }
@@ -356,7 +356,7 @@ final class wl extends d {
           }
           if (vj.field_e == rf.field_b &&
             um.b((byte) -92)) {
-            if (si.field_a == 255) {
+            if (IntrusiveHashTable.field_a == 255) {
               var9_ref_String = jl.field_e.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {
                 ui.a(param6 ^ -55, uc.e((byte) -120), var9_ref_String);
@@ -366,7 +366,7 @@ final class wl extends d {
             }
             hn.a((byte) 106);
             pf.field_d = false;
-            stackIn_51_0 = si.field_a;
+            stackIn_51_0 = IntrusiveHashTable.field_a;
             return stackIn_51_0;
           }
           if (param6 != 4) {

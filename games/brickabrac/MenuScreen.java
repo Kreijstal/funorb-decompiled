@@ -188,7 +188,7 @@ abstract class MenuScreen extends GameScreen {
         int var7;
         MenuButton[] var8;
         var7 = BrickABrac.field_J ? 1 : 0;
-        si.field_k.e(1);
+        IntrusiveHashTable.field_k.e(1);
         var8 = this.buttons;
         var4_ref_q__ = var8;
         for (var5 = 0; var8.length > var5; var5++) {

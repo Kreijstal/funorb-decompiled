@@ -8,9 +8,9 @@ final class wp {
     static mh field_k;
     private mf field_g;
     static NodeDeque field_f;
-    private si field_a;
+    private IntrusiveHashTable field_a;
     static char field_h;
-    private si field_e;
+    private IntrusiveHashTable field_e;
     static String field_b;
     static String field_d;
 
@@ -141,7 +141,7 @@ final class wp {
           var5_int = ((param1 & -536866817) << 4 | param1 >>> 12) ^ param0;
           var5_int = var5_int | param1 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (oe) (this.field_e.a(-87, var6));
+          var8 = (oe) (this.field_e.get(-87, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -154,13 +154,13 @@ final class wp {
             stackIn_8_0 = null;
             return (oe) (stackIn_8_0);
           }
-          var9 = (bk) (this.field_a.a(-87, var6));
+          var9 = (bk) (this.field_a.get(-87, var6));
           if (var9 == null) {
             var9 = bk.a(this.field_g, param1, param0);
             if (var9 == null) {
               return null;
             }
-            this.field_a.a(34, var9, var6);
+            this.field_a.put(34, var9, var6);
           }
           var8Lifetime1 = var9.a(param2);
           if (var8Lifetime1 == null) {
@@ -168,7 +168,7 @@ final class wp {
             return (oe) (stackIn_17_0);
           }
           var9.unlink((byte) 111);
-          this.field_e.a(34, var8Lifetime1, var6);
+          this.field_e.put(34, var8Lifetime1, var6);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -256,7 +256,7 @@ final class wp {
               if (var6_int == 0) {
                 rf.field_b = dc.field_f;
               } else {
-                si.field_a = var6_int;
+                IntrusiveHashTable.field_a = var6_int;
                 ga.field_j = -1;
                 rf.field_b = MenuScreen.field_k;
               }
@@ -273,7 +273,7 @@ final class wp {
               vd.a(20, 1)) {
               var6_intLifetime1 = jl.field_e.readUnsignedByte(255);
               ai.field_t = null;
-              si.field_a = var6_intLifetime1;
+              IntrusiveHashTable.field_a = var6_intLifetime1;
               jl.field_e.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -369,7 +369,7 @@ final class wp {
                 LevelPackCard.field_a[var8Lifetime1] = LevelPackCard.field_a[var8Lifetime1] + 50;
               }
               jl.field_e.initializeOpcodeCipher(LevelPackCard.field_a, -62);
-              stackIn_81_0 = si.field_a;
+              stackIn_81_0 = IntrusiveHashTable.field_a;
               return stackIn_81_0;
             }
             if (!param2) {
@@ -378,18 +378,18 @@ final class wp {
             if (rf.field_b == MenuScreen.field_k &&
               um.b((byte) -41)) {
               hn.a((byte) 58);
-              if (si.field_a == 7 &&
+              if (IntrusiveHashTable.field_a == 7 &&
                 !pf.field_d) {
                 pf.field_d = true;
                 stackIn_91_0 = -1;
                 return stackIn_91_0;
               }
-              if (si.field_a == 7) {
-                si.field_a = 3;
+              if (IntrusiveHashTable.field_a == 7) {
+                IntrusiveHashTable.field_a = 3;
               }
               eo.field_e = jl.field_e.readCp1252String(-1);
               pf.field_d = false;
-              stackIn_95_0 = si.field_a;
+              stackIn_95_0 = IntrusiveHashTable.field_a;
               return stackIn_95_0;
             }
             if (eq.field_g == null) {
@@ -725,7 +725,7 @@ final class wp {
           var5_int = param0 ^ (param2 >>> 12 | (-1342173185 & param2) << 4);
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int;
-          var8 = (oe) (this.field_e.a(param1 ^ -88, var6));
+          var8 = (oe) (this.field_e.get(param1 ^ -88, var6));
           if (var8 != null) {
             stackIn_4_0 = var8;
             return stackIn_4_0;
@@ -742,7 +742,7 @@ final class wp {
           }
           var10 = var9.a();
           var8Lifetime1 = var10;
-          this.field_e.a(param1 ^ 34, var8Lifetime1, var6);
+          this.field_e.put(param1 ^ 34, var8Lifetime1, var6);
           if (param3 != null) {
             param3[0] = param3[0] - var10.field_m.length;
           }
@@ -763,8 +763,8 @@ final class wp {
     }
 
     wp(mf param0, mf param1) {
-        this.field_a = new si(256);
-        this.field_e = new si(256);
+        this.field_a = new IntrusiveHashTable(256);
+        this.field_e = new IntrusiveHashTable(256);
         try {
           this.field_j = param0;
           this.field_g = param1;

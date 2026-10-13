@@ -297,8 +297,8 @@ final class w {
             fe.field_jb.a("pump32", -28138)) {
             AchievementsScreen.field_J = uo.a((byte) 29, jg.field_d, "frame", "members_expansion_screen");
             ll.field_c = pl.a("members_expansion_screen", "arrow", (byte) 111, jg.field_d);
-            ch.field_c = nq.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");
-            co.field_j = si.a((byte) -107, "pump32", "", jg.field_d, fe.field_jb);
+            ch.field_c = TooltipSprite.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");
+            co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", jg.field_d, fe.field_jb);
             MainMenuScreen.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, jg.field_d);
             LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, jg.field_d);
             sf.field_V = bd.a("members_expansion_screen", "button_highlights", jg.field_d, (byte) -8);

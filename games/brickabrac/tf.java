@@ -27,7 +27,7 @@ final class tf {
             var3_int = 1;
             if (param2 == 8) {
               if (cg.field_l) {
-                param0 = nq.field_n;
+                param0 = TooltipSprite.field_n;
               } else {
                 param0 = gi.field_u;
               }

@@ -10,8 +10,8 @@ final class ed {
     static int[] field_e;
 
     final static void a(int param0, int param1) {
-        si.field_k.a(true, MouseInput.field_b, 0, param1, param0);
-        if (si.field_k.field_m == 7) {
+        IntrusiveHashTable.field_k.a(true, MouseInput.field_b, 0, param1, param0);
+        if (IntrusiveHashTable.field_k.field_m == 7) {
           SaveResultsPromptScreen.b(true, true, param0);
         }
     }

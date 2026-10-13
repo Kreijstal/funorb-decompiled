@@ -12,13 +12,13 @@ final class fa extends IntrusiveNode {
         if (param1 <= -68) {
           var4.field_m = new int[param0];
           ob.field_F.addLast(var4, (byte) 3);
-          i.a(param3, var4, 108);
+          AchievementIcon.a(param3, var4, 108);
           return var4;
         }
         field_j = (String) null;
         var4.field_m = new int[param0];
         ob.field_F.addLast(var4, (byte) 3);
-        i.a(param3, var4, 108);
+        AchievementIcon.a(param3, var4, 108);
         return var4;
     }
 

@@ -49,7 +49,7 @@ public final class BrickABrac extends sa {
               var4 = 123 - var5 / 2;
             }
           }
-          si.field_c[var3.value].c(8, var4);
+          IntrusiveHashTable.achievementSourceIcons[var3.value].c(8, var4);
           nn.field_g.c(AchievementBrowserScreen.field_s[var3.value], 48, var4 + nn.field_g.field_F, 0, -1);
         }
         if (cf.a((byte) 62)) {
@@ -285,9 +285,9 @@ public final class BrickABrac extends sa {
             }
             return true;
           }
-          if (si.field_a != 64 &&
-            65 != si.field_a) {
-            if (79 == si.field_a) {
+          if (IntrusiveHashTable.field_a != 64 &&
+            65 != IntrusiveHashTable.field_a) {
+            if (79 == IntrusiveHashTable.field_a) {
               if (pe.gameplayScreen == null) {
                 return true;
               }
@@ -309,7 +309,7 @@ public final class BrickABrac extends sa {
               }
               return true;
             }
-            if (66 == si.field_a) {
+            if (66 == IntrusiveHashTable.field_a) {
               if (pe.gameplayScreen != null) {
                 sk.i((byte) -123);
                 if (!pe.gameplayScreen.c(123)) {
@@ -326,40 +326,40 @@ public final class BrickABrac extends sa {
             }
             boolean decompiledFrameRemainder0 = true;
             if (null != pe.gameplayScreen) {
-              if (76 == si.field_a) {
+              if (76 == IntrusiveHashTable.field_a) {
                 pe.gameplayScreen.a(param0, (byte) 74);
                 return true;
               }
-              if (73 != si.field_a &&
-                si.field_a != 74) {
-                if (si.field_a == 75) {
+              if (73 != IntrusiveHashTable.field_a &&
+                IntrusiveHashTable.field_a != 74) {
+                if (IntrusiveHashTable.field_a == 75) {
                   pe.gameplayScreen.a((byte) 33, param0);
                   return true;
                 }
-                if (77 == si.field_a) {
+                if (77 == IntrusiveHashTable.field_a) {
                   pe.gameplayScreen.a(param0, false, 87);
                   return true;
                 }
-                if (si.field_a == 78) {
+                if (IntrusiveHashTable.field_a == 78) {
                   pe.gameplayScreen.a(param0, true, 118);
                   return true;
                 }
-                if (si.field_a == 67) {
+                if (IntrusiveHashTable.field_a == 67) {
                   pe.gameplayScreen.a(param0, param1 - 47);
                   return true;
                 }
-                if (si.field_a == 69) {
+                if (IntrusiveHashTable.field_a == 69) {
                   pe.gameplayScreen.a(18504, param0);
                   return true;
                 }
-                if (si.field_a == 70) {
+                if (IntrusiveHashTable.field_a == 70) {
                   pe.gameplayScreen.match.field_j = param0.readUnsignedByte(255);
                   if (pe.gameplayScreen != null) {
                     fr.a(1);
                   }
                   return true;
                 }
-                decompiledFrameRemainder0 = (si.field_a == 71);
+                decompiledFrameRemainder0 = (IntrusiveHashTable.field_a == 71);
                 if (decompiledFrameRemainder0) {
                   pe.gameplayScreen.field_v = param0.readUnsignedByte(255);
                   if (pe.gameplayScreen != null) {
@@ -372,7 +372,7 @@ public final class BrickABrac extends sa {
                 stackIn_99_0 = pe.gameplayScreen;
                 stackIn_99_1 = -15;
                 stackIn_99_2 = (BitPacketBuffer) (param0);
-                stackIn_100_3 = (si.field_a == 74);
+                stackIn_100_3 = (IntrusiveHashTable.field_a == 74);
                 ((GameplayScreen) (Object) stackIn_99_0).a((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
                 return true;
               }
@@ -422,8 +422,8 @@ public final class BrickABrac extends sa {
           if (!pe.gameplayScreen.field_q) {
             pe.gameplayScreen.field_x = 0;
           }
-          if (si.field_a == 64) {
-            i.c((byte) 32);
+          if (IntrusiveHashTable.field_a == 64) {
+            AchievementIcon.c((byte) 32);
             fr.a(param1 ^ 46);
           }
           ed.field_d = false;
@@ -793,7 +793,7 @@ public final class BrickABrac extends sa {
         ui.b(1516);
         wd.f(32463);
         to.a(-125);
-        si.a(120);
+        IntrusiveHashTable.a(120);
         ka.c((byte) 67);
         hr.g();
         lk.c(2143);
@@ -889,12 +889,12 @@ public final class BrickABrac extends sa {
         eb.a(false);
         ii.a(20888);
         ck.a(30850);
-        nq.a((byte) -77);
+        TooltipSprite.a((byte) -77);
         OptionsScreen.c(false);
         LevelCompleteScreen.h(-257);
         PauseMenuScreen.h((byte) -34);
         HighscorePackSelector.a(false);
-        i.d(0);
+        AchievementIcon.d(0);
         NewAchievementsScreen.g(6);
         AchievementsScreen.h((byte) -124);
         LevelPackCard.a(32156);

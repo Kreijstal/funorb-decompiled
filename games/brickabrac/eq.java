@@ -57,7 +57,7 @@ final class eq {
         if (param0 >= -58) {
           eq.c((byte) -29);
         }
-        var6 = "(" + r.field_z + " " + we.field_a + " " + mh.field_gb + ") " + si.field_a;
+        var6 = "(" + r.field_z + " " + we.field_a + " " + mh.field_gb + ") " + IntrusiveHashTable.field_a;
         var1 = var6;
         if (ga.field_j > 0) {
           var1 = var6 + ":";

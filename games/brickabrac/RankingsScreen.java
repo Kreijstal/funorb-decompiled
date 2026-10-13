@@ -259,12 +259,12 @@ final class RankingsScreen extends MenuScreen {
                   Rasterizer2D.fillRectangleAlpha(50, -15 + var2Lifetime1, 540, 18, 16777215, 16);
                 }
                 var4Lifetime1 = null;
-                i.a(var6[4 * var8 + 3], var2Lifetime1, var5[var8], var6[var8 * 4 + 1], var6[4 * var8], var3Lifetime1, -1, var6[var8 * 4 + 2], var8);
+                AchievementIcon.a(var6[4 * var8 + 3], var2Lifetime1, var5[var8], var6[var8 * 4 + 1], var6[4 * var8], var3Lifetime1, -1, var6[var8 * 4 + 2], var8);
               }
               var2Lifetime1 += 18;
             }
             if (var7 == 0) {
-              i.a(ch.field_h.field_j, var2Lifetime1, tb.field_cb, ch.field_h.field_l, ch.field_h.field_n, 1, -1, ch.field_h.field_k, -1);
+              AchievementIcon.a(ch.field_h.field_j, var2Lifetime1, tb.field_cb, ch.field_h.field_l, ch.field_h.field_n, 1, -1, ch.field_h.field_k, -1);
             }
           }
         } else {

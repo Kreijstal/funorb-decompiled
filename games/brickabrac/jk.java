@@ -57,13 +57,13 @@ final class jk extends ki {
         if (param0) {
           return true;
         }
-        if (i.field_m.a("water", -28138)) {
-          go.field_d = pl.a("water", "water_rays", (byte) 116, i.field_m);
-          wm.field_b = pl.a("water", "water_near", (byte) 105, i.field_m);
-          hk.field_Q = pl.a("water", "water_mid", (byte) 109, i.field_m);
-          n.field_c = pl.a("water", "water_far", (byte) -121, i.field_m);
-          pk.field_a = pl.a("water", "water_small", (byte) 112, i.field_m);
-          sn.field_t = pl.a("water", "water_character", (byte) -43, i.field_m);
+        if (AchievementIcon.field_m.a("water", -28138)) {
+          go.field_d = pl.a("water", "water_rays", (byte) 116, AchievementIcon.field_m);
+          wm.field_b = pl.a("water", "water_near", (byte) 105, AchievementIcon.field_m);
+          hk.field_Q = pl.a("water", "water_mid", (byte) 109, AchievementIcon.field_m);
+          n.field_c = pl.a("water", "water_far", (byte) -121, AchievementIcon.field_m);
+          pk.field_a = pl.a("water", "water_small", (byte) 112, AchievementIcon.field_m);
+          sn.field_t = pl.a("water", "water_character", (byte) -43, AchievementIcon.field_m);
           vj.field_b = new RgbSprite(n.field_c.canvasWidth, n.field_c.canvasHeight);
           fc.a(-49, vj.field_b);
           n.field_c.g(0, 0);

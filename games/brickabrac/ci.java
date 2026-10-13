@@ -91,22 +91,22 @@ final class ci extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!i.field_m.a("space", -28138)) {
+        if (!AchievementIcon.field_m.a("space", -28138)) {
           return false;
         }
-        om.field_fc = pl.a("space", "space_near", (byte) -91, i.field_m);
-        pn.field_m = pl.a("space", "space_mid", (byte) 115, i.field_m);
-        ng.field_a = pl.a("space", "space_far", (byte) -98, i.field_m);
-        rf.field_a = pl.a("space", "space_small", (byte) -90, i.field_m);
+        om.field_fc = pl.a("space", "space_near", (byte) -91, AchievementIcon.field_m);
+        pn.field_m = pl.a("space", "space_mid", (byte) 115, AchievementIcon.field_m);
+        ng.field_a = pl.a("space", "space_far", (byte) -98, AchievementIcon.field_m);
+        rf.field_a = pl.a("space", "space_small", (byte) -90, AchievementIcon.field_m);
         ng.field_a.bindRasterTarget();
         Rasterizer2D.a(7136, 6592, 1600, 128, sq.field_b);
         if (!param0) {
           kc.field_q.a((byte) 100);
-          pk.field_f = pl.a("space", "space_character", (byte) -50, i.field_m);
+          pk.field_f = pl.a("space", "space_character", (byte) -50, AchievementIcon.field_m);
           jh.field_d = jh.a(0, om.field_fc);
           lk.field_t = jh.a(0, pn.field_m);
           kh.field_b = jh.a(0, ng.field_a);
-          b.field_b = cr.a("space", i.field_m, "space_lever", 2);
+          b.field_b = cr.a("space", AchievementIcon.field_m, "space_lever", 2);
           return true;
         }
         return false;

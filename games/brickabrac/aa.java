@@ -5,18 +5,18 @@ import java.util.*;
 
 final class aa {
     static RgbSprite field_b;
-    static NodeDeque field_a;
+    static NodeDeque achievementIconPool;
     static String field_c;
 
     public static void b(int param0) {
         field_b = null;
         if (param0 < 64) {
           aa.a((byte) 28);
-          field_a = null;
+          achievementIconPool = null;
           field_c = null;
           return;
         }
-        field_a = null;
+        achievementIconPool = null;
         field_c = null;
     }
 
@@ -153,6 +153,6 @@ final class aa {
     static {
         field_b = new RgbSprite(270, 70);
         field_c = "Use this alternative as your account name";
-        field_a = new NodeDeque();
+        achievementIconPool = new NodeDeque();
     }
 }

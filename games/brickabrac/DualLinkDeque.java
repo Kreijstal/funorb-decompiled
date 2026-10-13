@@ -144,7 +144,7 @@ final class DualLinkDeque implements Iterable {
           sb.field_c.field_d.a(true, param0);
         }
         if (!param1) {
-          si.a(7070, param0);
+          IntrusiveHashTable.a(7070, param0);
           return;
         }
     }
