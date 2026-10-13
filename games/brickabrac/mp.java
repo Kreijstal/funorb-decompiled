@@ -83,7 +83,7 @@ final class mp extends mh {
           if (null != var44.faceGroups &&
             var44.faceGroupCount > 1) {
             var60 = var44.faceGroups;
-            h.a(0, 0, (byte) 114, var60, AppletGameShell.field_m);
+            h.a(0, 0, (byte) 114, var60, AppletGameShell.faceGroupOffsets);
           } else {
             ArchiveNetworkClient.f((byte) 94);
           }
@@ -92,9 +92,9 @@ final class mp extends mh {
           var41 = var49;
           var8 = var41;
           var64 = new int[param4.directionCount];
-          var63 = wl.field_R;
-          var62 = ff.field_f;
-          var61 = nn.field_h;
+          var63 = wl.worldDirectionX;
+          var62 = ff.worldDirectionY;
+          var61 = nn.worldDirectionZ;
           for (var13 = 0; param4.directionCount > var13; var13++) {
             var14 = var61[var13] * param3 + param7 * var62[var13] + var63[var13] * param1 >> 8;
             if (0 > var14) {
@@ -122,24 +122,24 @@ final class mp extends mh {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < mc.field_c; var13Lifetime1++) {
-            var14Lifetime1 = ek.field_jb[var13Lifetime1];
+          for (var13Lifetime1 = 0; var13Lifetime1 < mc.sortedFaceCount; var13Lifetime1++) {
+            var14Lifetime1 = ek.sortedFaceIds[var13Lifetime1];
             var15Lifetime1 = param4.faceVertexA[var14Lifetime1];
             var16 = param4.faceVertexB[var14Lifetime1];
             var17 = param4.faceVertexC[var14Lifetime1];
-            if (wl.field_R.length <= param4.field_v[var14Lifetime1]) {
+            if (wl.worldDirectionX.length <= param4.field_v[var14Lifetime1]) {
               stackIn_26_0 = -1;
             } else {
               stackIn_26_0 = param4.field_v[var14Lifetime1];
             }
             var18 = stackIn_26_0;
-            if (wl.field_R.length > param4.field_h[var14Lifetime1]) {
+            if (wl.worldDirectionX.length > param4.field_h[var14Lifetime1]) {
               stackIn_29_0 = param4.field_h[var14Lifetime1];
             } else {
               stackIn_29_0 = -1;
             }
             var19 = stackIn_29_0;
-            if (wl.field_R.length <= param4.field_t[var14Lifetime1]) {
+            if (wl.worldDirectionX.length <= param4.field_t[var14Lifetime1]) {
               stackIn_32_0 = -1;
             } else {
               stackIn_32_0 = param4.field_t[var14Lifetime1];
@@ -155,12 +155,12 @@ final class mp extends mh {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = ArchiveNetworkRequest.field_M[var15Lifetime1];
-            var23 = ed.field_e[var15Lifetime1];
-            var24 = ArchiveNetworkRequest.field_M[var16];
-            var25 = ed.field_e[var16];
-            var26 = ArchiveNetworkRequest.field_M[var17];
-            var27 = ed.field_e[var17];
+            var22 = ArchiveNetworkRequest.projectedVertexX[var15Lifetime1];
+            var23 = ed.projectedVertexY[var15Lifetime1];
+            var24 = ArchiveNetworkRequest.projectedVertexX[var16];
+            var25 = ed.projectedVertexY[var16];
+            var26 = ArchiveNetworkRequest.projectedVertexX[var17];
+            var27 = ed.projectedVertexY[var17];
             if (var19 == var18 &&
               var19 == var20) {
               var28 = var54[var18];

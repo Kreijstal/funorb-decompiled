@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bf extends d {
-    static int[] field_M;
+    static int[] viewFacePointTwoY;
     static RgbSprite field_L;
     static RgbSprite parisFarSprite;
     static NodeDeque field_N;
@@ -13,7 +13,7 @@ final class bf extends d {
         }
         field_N = null;
         parisFarSprite = null;
-        field_M = null;
+        viewFacePointTwoY = null;
         field_L = null;
     }
 
@@ -127,6 +127,6 @@ final class bf extends d {
     }
 
     static {
-        field_M = new int[8192];
+        viewFacePointTwoY = new int[8192];
     }
 }

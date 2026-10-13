@@ -90,7 +90,7 @@ final class PowerUpWarning extends IntrusiveNode {
         desertMidSprite = null;
     }
 
-    final static void a(int param0) {
+    final static void clearFaceDepthBuckets(int offset) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -100,9 +100,9 @@ final class PowerUpWarning extends IntrusiveNode {
         RuntimeException var1_ref = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = ArcticBackground.field_w;
+          var5 = ArcticBackground.faceDepthBucketCounts;
           var1 = var5;
-          var2 = param0;
+          var2 = offset;
           var3 = var5.length;
           while (var3 > var2) {
             var5[var2++] = 0;
@@ -118,7 +118,7 @@ final class PowerUpWarning extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "lj.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "lj.C(" + offset + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class ArcticBackground extends BackgroundScene {
     static MenuSelection field_r;
     static String field_u;
-    static int[] field_w;
+    static int[] faceDepthBucketCounts;
     static mh field_s;
     static int field_t;
     static String field_v;
@@ -109,7 +109,7 @@ final class ArcticBackground extends BackgroundScene {
         field_u = null;
         field_r = null;
         field_s = null;
-        field_w = null;
+        faceDepthBucketCounts = null;
     }
 
     final RgbSprite[] a(int param0, boolean param1) {
@@ -183,7 +183,7 @@ final class ArcticBackground extends BackgroundScene {
 
     static {
         field_r = new MenuSelection(1);
-        field_w = new int[1024];
+        faceDepthBucketCounts = new int[1024];
         field_u = "Lobby";
         field_v = "<%0> has left the lobby.";
     }

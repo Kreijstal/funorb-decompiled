@@ -183,7 +183,7 @@ final class PowerUp extends CircleBody {
                             var7Lifetime1 = 0;
                             var8 = (Ball) (board.activeBalls.first(-39));
                             while (var8 != null) {
-                              var8.velocityX256 = (15 * BrickABrac.c(obfuscationGuard + 1949, 1024 * var7Lifetime1) >> 8) + var5_int;
+                              var8.velocityX256 = (15 * BrickABrac.cosine8192(obfuscationGuard + 1949, 1024 * var7Lifetime1) >> 8) + var5_int;
                               var8.velocityY256 = var6 + (15 * InteractiveGameClient.sine8192(var7Lifetime1 * 1024, -4097) >> 8);
                               var9 = CacheIoRequest.approximateSqrt256(var8.velocityY256 * var8.velocityY256 + var8.velocityX256 * var8.velocityX256, 2) >> 8;
                               var8.velocityX256 = var4 * var8.velocityX256 / var9;

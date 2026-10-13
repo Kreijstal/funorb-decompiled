@@ -10,7 +10,7 @@ final class Paddle extends RectangleBody {
     static mh field_C;
     static int field_x;
     private int centerX256;
-    static int[] field_v;
+    static int[] projectedVertexDepth;
     static String field_G;
     int sizeStage;
     int field_H;
@@ -20,7 +20,7 @@ final class Paddle extends RectangleBody {
         field_C = null;
         int var1 = -6 / ((param0 + 5) / 47);
         field_G = null;
-        field_v = null;
+        projectedVertexDepth = null;
     }
 
     Paddle(int centerX256, int y256, int controlMode, int boardSpan256) {
@@ -85,7 +85,7 @@ final class Paddle extends RectangleBody {
           var3 = CircleBody.field_p.b(param1, 8421504);
           if (-2 == var3) {
             if (param2 <= 69) {
-              field_v = (int[]) null;
+              projectedVertexDepth = (int[]) null;
               return;
             }
             return;
@@ -100,7 +100,7 @@ final class Paddle extends RectangleBody {
         if (param2 > 69) {
           return;
         }
-        field_v = (int[]) null;
+        projectedVertexDepth = (int[]) null;
     }
 
     final void increaseReboundSpeed(boolean obfuscationGuard) {
@@ -258,6 +258,6 @@ final class Paddle extends RectangleBody {
 
     static {
         field_G = "Show players in <%0>'s game";
-        field_v = new int[8192];
+        projectedVertexDepth = new int[8192];
     }
 }

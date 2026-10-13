@@ -422,13 +422,13 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         RuntimeException var1 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = ArcticBackground.field_w[0];
+          var1_int = ArcticBackground.faceDepthBucketCounts[0];
           if (param0 != 94) {
             ArchiveNetworkClient.f((byte) 52);
           }
-          for (var2 = 1; ArcticBackground.field_w.length > var2; var2++) {
-            var3 = ArcticBackground.field_w[var2];
-            ArrayOperations.copy(ek.field_jb, var2 << 4, ek.field_jb, var1_int, var3);
+          for (var2 = 1; ArcticBackground.faceDepthBucketCounts.length > var2; var2++) {
+            var3 = ArcticBackground.faceDepthBucketCounts[var2];
+            ArrayOperations.copy(ek.sortedFaceIds, var2 << 4, ek.sortedFaceIds, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

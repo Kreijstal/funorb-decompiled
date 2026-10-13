@@ -33,7 +33,7 @@ final class nj extends IntrusiveNode {
     private int field_p;
     private int field_s;
     private int field_O;
-    static int[] field_v;
+    static int[] viewFacePointOneX;
     private int field_L;
 
     final void c(int param0) {
@@ -131,7 +131,7 @@ final class nj extends IntrusiveNode {
         field_z = null;
         field_G = null;
         field_l = null;
-        field_v = null;
+        viewFacePointOneX = null;
     }
 
     nj(int param0, int param1, int param2, int param3) {
@@ -173,7 +173,7 @@ final class nj extends IntrusiveNode {
             this.field_A[var5] = this.field_s + (JungleBackground.field_r.nextBoundedInt(-37880252, 4) - 2 << 8);
             this.field_C[var5] = this.field_N + (-2 + JungleBackground.field_r.nextBoundedInt(-37880252, 4) << 8);
             this.field_r[var5] = (InteractiveGameClient.sine8192(var12 * var7 + var8, -4097) >> 8) * var6 >> 8;
-            this.field_y[var5] = var6 * (BrickABrac.c(2048, var8 + var12 * var7) >> 8) >> 8;
+            this.field_y[var5] = var6 * (BrickABrac.cosine8192(2048, var8 + var12 * var7) >> 8) >> 8;
             this.field_n[var5] = var9;
             this.field_P[var5] = var10;
             var5++;
@@ -188,6 +188,6 @@ final class nj extends IntrusiveNode {
     static {
         field_G = new int[]{31114, 12658477, 16494651, 26679, 16711935};
         field_F = "Searching for opponents";
-        field_v = new int[8192];
+        viewFacePointOneX = new int[8192];
     }
 }

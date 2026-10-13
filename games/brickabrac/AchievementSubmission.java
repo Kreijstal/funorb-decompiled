@@ -142,24 +142,24 @@ final class AchievementSubmission extends IntrusiveNode {
         }
     }
 
-    final static int[] a(int param0, int param1, int param2) {
-        int var9 = 0;
-        int var10 = 0;
-        int var3 = InteractiveGameClient.sine8192(param0, -4097);
-        int var4 = BrickABrac.c(2048, param0);
-        int var5 = InteractiveGameClient.sine8192(param2, param1 - 4097);
-        int var6 = BrickABrac.c(2048, param2);
-        int var7 = (int)((long)var3 * (long)var5 >> 16);
-        int var8 = (int)((long)var6 * (long)var3 >> 16);
-        if (param1 == 0) {
-          var9 = (int)((long)var5 * (long)var4 >> 16);
-          var10 = (int)((long)var4 * (long)var6 >> 16);
-          return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
+    final static int[] createPitchYawPose(int pitch, int obfuscationGuard, int yaw) {
+        int cosPitchSinYaw = 0;
+        int cosPitchCosYaw = 0;
+        int sinPitch = InteractiveGameClient.sine8192(pitch, -4097);
+        int cosPitch = BrickABrac.cosine8192(2048, pitch);
+        int sinYaw = InteractiveGameClient.sine8192(yaw, obfuscationGuard - 4097);
+        int cosYaw = BrickABrac.cosine8192(2048, yaw);
+        int sinPitchSinYaw = (int)((long)sinPitch * (long)sinYaw >> 16);
+        int sinPitchCosYaw = (int)((long)cosYaw * (long)sinPitch >> 16);
+        if (obfuscationGuard == 0) {
+          cosPitchSinYaw = (int)((long)sinYaw * (long)cosPitch >> 16);
+          cosPitchCosYaw = (int)((long)cosPitch * (long)cosYaw >> 16);
+          return new int[]{0, 0, 0, cosYaw, 0, sinYaw, sinPitchSinYaw, cosPitch, -sinPitchCosYaw, -cosPitchSinYaw, sinPitch, cosPitchCosYaw};
         }
-        AchievementSubmission.a(118, 72, 44);
-        var9 = (int)((long)var5 * (long)var4 >> 16);
-        var10 = (int)((long)var4 * (long)var6 >> 16);
-        return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
+        AchievementSubmission.createPitchYawPose(118, 72, 44);
+        cosPitchSinYaw = (int)((long)sinYaw * (long)cosPitch >> 16);
+        cosPitchCosYaw = (int)((long)cosPitch * (long)cosYaw >> 16);
+        return new int[]{0, 0, 0, cosYaw, 0, sinYaw, sinPitchSinYaw, cosPitch, -sinPitchCosYaw, -cosPitchSinYaw, sinPitch, cosPitchCosYaw};
     }
 
     public static void a(int param0) {

@@ -3,7 +3,7 @@
  */
 abstract class ff {
     static String field_g;
-    static int[] field_f;
+    static int[] worldDirectionY;
     static String field_j;
     static String[][] field_i;
     static w field_c;
@@ -65,7 +65,7 @@ abstract class ff {
         field_i = (String[][]) null;
         field_d = null;
         field_c = null;
-        field_f = null;
+        worldDirectionY = null;
         field_a = null;
         field_g = null;
         field_e = null;
@@ -104,7 +104,7 @@ abstract class ff {
 
     static {
         field_a = "Unfortunately your configuration doesn't support fullscreen mode.";
-        field_f = new int[8192];
+        worldDirectionY = new int[8192];
         field_h = new int[]{13, 12};
         field_e = "Invite more players, or alternatively try changing the following settings:  ";
         field_g = "Cancel rematch";

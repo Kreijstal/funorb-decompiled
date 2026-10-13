@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BubbleDistortion extends CircleBody {
-    static int[] field_D;
+    static int[] viewFacePointThreeZ;
     private int animationPhase;
     int oscillationStep;
     int oscillationOffset;
@@ -226,7 +226,7 @@ final class BubbleDistortion extends CircleBody {
           return;
         }
         field_A = null;
-        field_D = null;
+        viewFacePointThreeZ = null;
         field_B = null;
     }
 
@@ -308,7 +308,7 @@ final class BubbleDistortion extends CircleBody {
     }
 
     static {
-        field_D = new int[8192];
+        viewFacePointThreeZ = new int[8192];
         field_z = -1;
         field_A = "Show chat";
     }

@@ -136,7 +136,7 @@ final class HuffmanCodec {
           var4 = 1;
           var5 = 1;
         }
-        MatchResultScreen.field_w = AchievementSubmission.a(var4 * var2, 0, var2 * var5);
+        MatchResultScreen.field_w = AchievementSubmission.createPitchYawPose(var4 * var2, 0, var2 * var5);
         return;
     }
 

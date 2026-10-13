@@ -3,7 +3,7 @@
  */
 final class UnderwaterBackground extends BackgroundScene {
     static String field_v;
-    static int[] field_r;
+    static int[] viewFacePointOneZ;
     static RgbSprite field_t;
     static PcmPlayer field_w;
     static gb[] field_s;
@@ -11,7 +11,7 @@ final class UnderwaterBackground extends BackgroundScene {
 
     final boolean hasSprites(byte obfuscationGuard) {
         if (obfuscationGuard > -91) {
-          field_r = (int[]) null;
+          viewFacePointOneZ = (int[]) null;
           if (wm.waterNearSprite == null) {
             return false;
           }
@@ -202,21 +202,21 @@ final class UnderwaterBackground extends BackgroundScene {
         field_u = null;
         field_v = null;
         if (param0 == -46) {
-          field_r = null;
+          viewFacePointOneZ = null;
           field_t = null;
           field_w = null;
           field_s = null;
           return;
         }
-        field_r = (int[]) null;
-        field_r = null;
+        viewFacePointOneZ = (int[]) null;
+        viewFacePointOneZ = null;
         field_t = null;
         field_w = null;
         field_s = null;
     }
 
     static {
-        field_r = new int[8192];
+        viewFacePointOneZ = new int[8192];
         field_v = "New Game";
     }
 }

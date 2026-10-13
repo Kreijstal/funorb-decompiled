@@ -5,7 +5,7 @@ final class wl extends d {
     private int field_P;
     private ia field_M;
     static String field_L;
-    static int[] field_R;
+    static int[] worldDirectionX;
     static boolean field_N;
     static String field_O;
     static ResourceArchive field_K;
@@ -419,7 +419,7 @@ final class wl extends d {
     public static void a(int param0) {
         field_K = null;
         field_L = null;
-        field_R = null;
+        worldDirectionX = null;
         field_Q = null;
         field_O = null;
         if (param0 != 2) {
@@ -491,7 +491,7 @@ final class wl extends d {
     }
 
     static {
-        field_R = new int[8192];
+        worldDirectionX = new int[8192];
         field_L = "Cancel";
         field_O = "Please check if address is correct";
         field_Q = "Loading sound effects";

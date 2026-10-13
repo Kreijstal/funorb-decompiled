@@ -7,7 +7,7 @@ final class ed {
     static boolean field_d;
     static int[] field_f;
     static String field_a;
-    static int[] field_e;
+    static int[] projectedVertexY;
 
     final static void a(int param0, int param1) {
         IntrusiveHashTable.field_k.drawFullBackground(true, MouseInput.field_b, 0, param1, param0);
@@ -105,13 +105,13 @@ final class ed {
           return;
         }
         field_c = null;
-        field_e = null;
+        projectedVertexY = null;
         field_b = null;
     }
 
     static {
         field_a = "Asking for or providing contact information";
-        field_e = new int[8192];
+        projectedVertexY = new int[8192];
         field_f = new int[]{0, 1, 2, 10, 25, -1, -1, -1, -1, 3, 4, -1, -1, -1, -1, -1, -1, -1, -1, 5, 6, 7, 8, -1, -1, -1, -1, -1, -1, 9, 10, 11, 12, 13, -1, -1, -1, -1, -1, 14, -1};
         field_c = "You have <%0> unread messages!";
     }

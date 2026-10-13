@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ep {
-    static int[] field_f;
+    static int[] viewVertexY;
     static int field_k;
     ml[] field_c;
     static volatile int livePointerY;
@@ -102,7 +102,7 @@ abstract class ep {
     }
 
     public static void a(boolean param0) {
-        field_f = null;
+        viewVertexY = null;
         if (!param0) {
           field_b = (RgbSprite) null;
         }
@@ -236,7 +236,7 @@ abstract class ep {
     }
 
     static {
-        field_f = new int[8192];
+        viewVertexY = new int[8192];
         livePointerY = -1;
         field_d = "Logging in...";
     }

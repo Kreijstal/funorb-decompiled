@@ -650,215 +650,215 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void a(int[] param0, int param1, int[] param2, boolean param3, boolean param4, Mesh3D param5, boolean param6) {
-        int stackIn_65_0 = 0;
-        int stackIn_65_1 = 0;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
-        String stackIn_71_2 = null;
-        StringBuilder stackIn_74_1 = null;
-        String stackIn_75_2 = null;
-        StringBuilder stackIn_78_1 = null;
-        String stackIn_79_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var21Lifetime1;
-        int var21Lifetime2;
-        int var22Lifetime1;
-        int var22Lifetime2;
-        int var23Lifetime1;
-        int var23Lifetime2;
-        int var24Lifetime1;
-        int var25Lifetime1;
-        int var26Lifetime1;
-        int var27Lifetime1;
-        int var28Lifetime1;
-        int var29Lifetime1;
-        var30 = BrickABrac.field_J ? 1 : 0;
+    final static void transformAndProjectMesh(int[] cameraPose, int obfuscationGuard, int[] objectPose, boolean retainViewVertices, boolean transformDirections, Mesh3D mesh, boolean cullBackfaces) {
+        int branchOrCullValue = 0;
+        int boundOrMinimumDepth = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String cameraSummary = null;
+        StringBuilder objectContext = null;
+        String objectSummary = null;
+        StringBuilder meshContext = null;
+        String meshSummary = null;
+        RuntimeException caughtFailure = null;
+        int minimumDepth = 0;
+        RuntimeException failure = null;
+        int maximumDepth = 0;
+        int cameraXOrWorldXX = 0;
+        int cameraYOrWorldYX = 0;
+        int cameraZOrWorldZX = 0;
+        int relativeXXOrWorldXY = 0;
+        int relativeYXOrWorldYY = 0;
+        int relativeZXOrWorldZY = 0;
+        int relativeXYOrWorldXZ = 0;
+        int relativeYYOrWorldYZ = 0;
+        int relativeZYOrWorldZZ = 0;
+        int relativeXZOrDirectionIndex = 0;
+        int relativeYZOrDirectionX = 0;
+        int relativeZZOrDirectionY = 0;
+        int cameraXXQ14 = 0;
+        int cameraXYQ14 = 0;
+        int cameraXZQ14 = 0;
+        int cameraYXQ14 = 0;
+        int cameraYYQ14 = 0;
+        int cameraYZQ14 = 0;
+        int cameraZXQ14 = 0;
+        int cameraZYQ14 = 0;
+        int cameraZZQ14 = 0;
+        int gameFlag = 0;
+        int deltaX;
+        int centerXOrDirectionZ;
+        int deltaY;
+        int centerY;
+        int deltaZ;
+        int vertexOrFace;
+        int pointX;
+        int pointY;
+        int pointZ;
+        int scaledViewX;
+        int scaledViewY;
+        int viewZ;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var7_int = 2147483647;
-          var8 = -2147483648;
-          var21 = param0[3] >> 2;
-          var22 = param0[4] >> 2;
-          var23 = param0[5] >> 2;
-          if (param1 != -16283) {
+          minimumDepth = 2147483647;
+          maximumDepth = -2147483648;
+          cameraXXQ14 = cameraPose[3] >> 2;
+          cameraXYQ14 = cameraPose[4] >> 2;
+          cameraXZQ14 = cameraPose[5] >> 2;
+          if (obfuscationGuard != -16283) {
             field_l = (tq) null;
           }
-          var24 = param0[6] >> 2;
-          var25 = param0[7] >> 2;
-          var26 = param0[8] >> 2;
-          var27 = param0[9] >> 2;
-          var28 = param0[10] >> 2;
-          var13 = var25 * param2[4] + (var24 * param2[3] + param2[5] * var26) >> 14;
-          var29 = param0[11] >> 2;
-          var12 = param2[5] * var23 + (param2[3] * var21 + param2[4] * var22) >> 14;
-          var16 = param2[8] * var26 + var24 * param2[6] + param2[7] * var25 >> 14;
-          var18 = var23 * param2[11] + param2[10] * var22 + param2[9] * var21 >> 14;
-          var15 = param2[7] * var22 + var21 * param2[6] + param2[8] * var23 >> 14;
-          var20 = var28 * param2[10] + (param2[9] * var27 + param2[11] * var29) >> 14;
-          var19 = param2[11] * var26 + (var25 * param2[10] + param2[9] * var24) >> 14;
-          var14 = param2[3] * var27 - (-(param2[4] * var28) - param2[5] * var29) >> 14;
-          var17 = param2[8] * var29 + (var27 * param2[6] + var28 * param2[7]) >> 14;
-          var21Lifetime1 = param2[0] - param0[0];
-          var22Lifetime1 = param2[1] - param0[1];
-          var23Lifetime1 = -param0[2] + param2[2];
-          var9 = param0[4] * var22Lifetime1 + var21Lifetime1 * param0[3] + var23Lifetime1 * param0[5] >> -LevelPackCard.field_k + 16;
-          var10 = var23Lifetime1 * param0[8] + (param0[7] * var22Lifetime1 + var21Lifetime1 * param0[6]) >> -LevelPackCard.field_k + 16;
-          var11 = param0[11] * var23Lifetime1 + (var21Lifetime1 * param0[9] + var22Lifetime1 * param0[10]) >> 16;
-          var21Lifetime2 = mg.field_d;
-          var22Lifetime2 = mg.field_a;
-          var23Lifetime2 = 0;
+          cameraYXQ14 = cameraPose[6] >> 2;
+          cameraYYQ14 = cameraPose[7] >> 2;
+          cameraYZQ14 = cameraPose[8] >> 2;
+          cameraZXQ14 = cameraPose[9] >> 2;
+          cameraZYQ14 = cameraPose[10] >> 2;
+          relativeYXOrWorldYY = cameraYYQ14 * objectPose[4] + (cameraYXQ14 * objectPose[3] + objectPose[5] * cameraYZQ14) >> 14;
+          cameraZZQ14 = cameraPose[11] >> 2;
+          relativeXXOrWorldXY = objectPose[5] * cameraXZQ14 + (objectPose[3] * cameraXXQ14 + objectPose[4] * cameraXYQ14) >> 14;
+          relativeYYOrWorldYZ = objectPose[8] * cameraYZQ14 + cameraYXQ14 * objectPose[6] + objectPose[7] * cameraYYQ14 >> 14;
+          relativeXZOrDirectionIndex = cameraXZQ14 * objectPose[11] + objectPose[10] * cameraXYQ14 + objectPose[9] * cameraXXQ14 >> 14;
+          relativeXYOrWorldXZ = objectPose[7] * cameraXYQ14 + cameraXXQ14 * objectPose[6] + objectPose[8] * cameraXZQ14 >> 14;
+          relativeZZOrDirectionY = cameraZYQ14 * objectPose[10] + (objectPose[9] * cameraZXQ14 + objectPose[11] * cameraZZQ14) >> 14;
+          relativeYZOrDirectionX = objectPose[11] * cameraYZQ14 + (cameraYYQ14 * objectPose[10] + objectPose[9] * cameraYXQ14) >> 14;
+          relativeZXOrWorldZY = objectPose[3] * cameraZXQ14 - (-(objectPose[4] * cameraZYQ14) - objectPose[5] * cameraZZQ14) >> 14;
+          relativeZYOrWorldZZ = objectPose[8] * cameraZZQ14 + (cameraZXQ14 * objectPose[6] + cameraZYQ14 * objectPose[7]) >> 14;
+          deltaX = objectPose[0] - cameraPose[0];
+          deltaY = objectPose[1] - cameraPose[1];
+          deltaZ = -cameraPose[2] + objectPose[2];
+          cameraXOrWorldXX = cameraPose[4] * deltaY + deltaX * cameraPose[3] + deltaZ * cameraPose[5] >> -LevelPackCard.projectionShift + 16;
+          cameraYOrWorldYX = deltaZ * cameraPose[8] + (cameraPose[7] * deltaY + deltaX * cameraPose[6]) >> -LevelPackCard.projectionShift + 16;
+          cameraZOrWorldZX = cameraPose[11] * deltaZ + (deltaX * cameraPose[9] + deltaY * cameraPose[10]) >> 16;
+          centerXOrDirectionZ = mg.projectionCenterX;
+          centerY = mg.projectionCenterY;
+          vertexOrFace = 0;
           scanLoop1: while (true) {
-            if (param5.vertexCount > var23Lifetime2) {
-              var24Lifetime1 = param5.vertexX[var23Lifetime2];
-              var25Lifetime1 = param5.vertexY[var23Lifetime2];
-              var26Lifetime1 = param5.vertexZ[var23Lifetime2];
-              var27Lifetime1 = var9 + (var24Lifetime1 * var12 + var15 * var25Lifetime1 + var26Lifetime1 * var18 >> -LevelPackCard.field_k + 16);
-              var28Lifetime1 = var10 + (var26Lifetime1 * var19 + var24Lifetime1 * var13 + var25Lifetime1 * var16 >> -LevelPackCard.field_k + 16);
-              var29Lifetime1 = var11 + (var24Lifetime1 * var14 + var17 * var25Lifetime1 + var26Lifetime1 * var20 >> 16);
-              stackIn_65_0 = ~var29Lifetime1;
-              stackIn_65_1 = -51;
-              if (var30 == 0) {
-                if (stackIn_65_0 <= stackIn_65_1) {
-                  ArchiveNetworkRequest.field_M[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
-                  ed.field_e[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
-                  if (var7_int > var29Lifetime1) {
-                    var7_int = var29Lifetime1;
+            if (mesh.vertexCount > vertexOrFace) {
+              pointX = mesh.vertexX[vertexOrFace];
+              pointY = mesh.vertexY[vertexOrFace];
+              pointZ = mesh.vertexZ[vertexOrFace];
+              scaledViewX = cameraXOrWorldXX + (pointX * relativeXXOrWorldXY + relativeXYOrWorldXZ * pointY + pointZ * relativeXZOrDirectionIndex >> -LevelPackCard.projectionShift + 16);
+              scaledViewY = cameraYOrWorldYX + (pointZ * relativeYZOrDirectionX + pointX * relativeYXOrWorldYY + pointY * relativeYYOrWorldYZ >> -LevelPackCard.projectionShift + 16);
+              viewZ = cameraZOrWorldZX + (pointX * relativeZXOrWorldZY + relativeZYOrWorldZZ * pointY + pointZ * relativeZZOrDirectionY >> 16);
+              branchOrCullValue = ~viewZ;
+              boundOrMinimumDepth = -51;
+              if (gameFlag == 0) {
+                if (branchOrCullValue <= boundOrMinimumDepth) {
+                  ArchiveNetworkRequest.projectedVertexX[vertexOrFace] = centerXOrDirectionZ + scaledViewX / viewZ;
+                  ed.projectedVertexY[vertexOrFace] = scaledViewY / viewZ + centerY;
+                  if (minimumDepth > viewZ) {
+                    minimumDepth = viewZ;
                   }
-                  Paddle.field_v[var23Lifetime2] = var29Lifetime1;
-                  if (var29Lifetime1 > var8) {
-                    var8 = var29Lifetime1;
+                  Paddle.projectedVertexDepth[vertexOrFace] = viewZ;
+                  if (viewZ > maximumDepth) {
+                    maximumDepth = viewZ;
                   }
                 } else {
-                  Paddle.field_v[var23Lifetime2] = -2147483648;
+                  Paddle.projectedVertexDepth[vertexOrFace] = -2147483648;
                 }
-                if (param3) {
-                  fh.field_f[var23Lifetime2] = var27Lifetime1 >> LevelPackCard.field_k;
-                  ep.field_f[var23Lifetime2] = var28Lifetime1 >> LevelPackCard.field_k;
-                  ml.field_c[var23Lifetime2] = var29Lifetime1;
+                if (retainViewVertices) {
+                  fh.viewVertexX[vertexOrFace] = scaledViewX >> LevelPackCard.projectionShift;
+                  ep.viewVertexY[vertexOrFace] = scaledViewY >> LevelPackCard.projectionShift;
+                  ml.viewVertexZ[vertexOrFace] = viewZ;
                 }
-                var23Lifetime2++;
+                vertexOrFace++;
                 continue;
               }
             } else {
-              if (null != param5.field_F &&
-                null != param5.field_E &&
-                param5.field_O != null &&
-                null != param5.field_I &&
-                param5.field_D != null &&
-                null != param5.field_u &&
-                param5.field_g != null &&
-                null != param5.field_s &&
-                param5.field_i != null) {
-                var23Lifetime2 = 0;
-                while (!(param5.faceCount <= var23Lifetime2)) {
-                  var24Lifetime1 = param5.field_F[var23Lifetime2];
-                  var25Lifetime1 = param5.field_E[var23Lifetime2];
-                  var26Lifetime1 = param5.field_O[var23Lifetime2];
-                  nj.field_v[var23Lifetime2] = (var15 * var25Lifetime1 + (var12 * var24Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
-                  nd.field_e[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + (var24Lifetime1 * var13 + var26Lifetime1 * var19) >> 16);
-                  UnderwaterBackground.field_r[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var25Lifetime1 * var17) - var20 * var26Lifetime1) >> 16) + var11;
-                  var24Lifetime1 = param5.field_I[var23Lifetime2];
-                  var25Lifetime1 = param5.field_D[var23Lifetime2];
-                  var26Lifetime1 = param5.field_u[var23Lifetime2];
-                  LevelPackCard.field_l[var23Lifetime2] = (var24Lifetime1 * var12 + var25Lifetime1 * var15 + var18 * var26Lifetime1 >> 16) + var9;
-                  bf.field_M[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + (var13 * var24Lifetime1 + var16 * var25Lifetime1) >> 16);
-                  LevelCompleteScreen.field_G[var23Lifetime2] = (var26Lifetime1 * var20 + (var24Lifetime1 * var14 + var25Lifetime1 * var17) >> 16) + var11;
-                  var24Lifetime1 = param5.field_g[var23Lifetime2];
-                  var25Lifetime1 = param5.field_s[var23Lifetime2];
-                  var26Lifetime1 = param5.field_i[var23Lifetime2];
-                  vd.field_b[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var26Lifetime1 * var18) >> 16);
-                  NewAchievementsScreen.field_I[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var13 * var24Lifetime1 + var16 * var25Lifetime1 >> 16);
-                  BubbleDistortion.field_D[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
-                  var23Lifetime2++;
-                  if (var30 != 0) {
+              if (null != mesh.facePointOneX &&
+                null != mesh.facePointOneY &&
+                mesh.facePointOneZ != null &&
+                null != mesh.facePointTwoX &&
+                mesh.facePointTwoY != null &&
+                null != mesh.facePointTwoZ &&
+                mesh.facePointThreeX != null &&
+                null != mesh.facePointThreeY &&
+                mesh.facePointThreeZ != null) {
+                vertexOrFace = 0;
+                while (!(mesh.faceCount <= vertexOrFace)) {
+                  pointX = mesh.facePointOneX[vertexOrFace];
+                  pointY = mesh.facePointOneY[vertexOrFace];
+                  pointZ = mesh.facePointOneZ[vertexOrFace];
+                  nj.viewFacePointOneX[vertexOrFace] = (relativeXYOrWorldXZ * pointY + (relativeXXOrWorldXY * pointX + relativeXZOrDirectionIndex * pointZ) >> 16) + cameraXOrWorldXX;
+                  nd.viewFacePointOneY[vertexOrFace] = cameraYOrWorldYX + (relativeYYOrWorldYZ * pointY + (pointX * relativeYXOrWorldYY + pointZ * relativeYZOrDirectionX) >> 16);
+                  UnderwaterBackground.viewFacePointOneZ[vertexOrFace] = (relativeZXOrWorldZY * pointX - (-(pointY * relativeZYOrWorldZZ) - relativeZZOrDirectionY * pointZ) >> 16) + cameraZOrWorldZX;
+                  pointX = mesh.facePointTwoX[vertexOrFace];
+                  pointY = mesh.facePointTwoY[vertexOrFace];
+                  pointZ = mesh.facePointTwoZ[vertexOrFace];
+                  LevelPackCard.viewFacePointTwoX[vertexOrFace] = (pointX * relativeXXOrWorldXY + pointY * relativeXYOrWorldXZ + relativeXZOrDirectionIndex * pointZ >> 16) + cameraXOrWorldXX;
+                  bf.viewFacePointTwoY[vertexOrFace] = cameraYOrWorldYX + (relativeYZOrDirectionX * pointZ + (relativeYXOrWorldYY * pointX + relativeYYOrWorldYZ * pointY) >> 16);
+                  LevelCompleteScreen.viewFacePointTwoZ[vertexOrFace] = (pointZ * relativeZZOrDirectionY + (pointX * relativeZXOrWorldZY + pointY * relativeZYOrWorldZZ) >> 16) + cameraZOrWorldZX;
+                  pointX = mesh.facePointThreeX[vertexOrFace];
+                  pointY = mesh.facePointThreeY[vertexOrFace];
+                  pointZ = mesh.facePointThreeZ[vertexOrFace];
+                  vd.viewFacePointThreeX[vertexOrFace] = cameraXOrWorldXX + (pointY * relativeXYOrWorldXZ + (pointX * relativeXXOrWorldXY + pointZ * relativeXZOrDirectionIndex) >> 16);
+                  NewAchievementsScreen.viewFacePointThreeY[vertexOrFace] = cameraYOrWorldYX + (relativeYZOrDirectionX * pointZ + relativeYXOrWorldYY * pointX + relativeYYOrWorldYZ * pointY >> 16);
+                  BubbleDistortion.viewFacePointThreeZ[vertexOrFace] = (relativeZXOrWorldZY * pointX - (-(relativeZYOrWorldZZ * pointY) - pointZ * relativeZZOrDirectionY) >> 16) + cameraZOrWorldZX;
+                  vertexOrFace++;
+                  if (gameFlag != 0) {
                     return;
                   }
                 }
               }
-              if (param4) {
-                var9 = param2[3];
-                var10 = param2[4];
-                var11 = param2[5];
-                var12 = param2[6];
-                var13 = param2[7];
-                var14 = param2[8];
-                var15 = param2[9];
-                var16 = param2[10];
-                var17 = param2[11];
-                var18 = 0;
-                while (!(var18 >= param5.directionCount)) {
-                  stackIn_65_0 = ~var18;
-                  stackIn_65_1 = ~wl.field_R.length;
-                  if (var30 != 0) {
+              if (transformDirections) {
+                cameraXOrWorldXX = objectPose[3];
+                cameraYOrWorldYX = objectPose[4];
+                cameraZOrWorldZX = objectPose[5];
+                relativeXXOrWorldXY = objectPose[6];
+                relativeYXOrWorldYY = objectPose[7];
+                relativeZXOrWorldZY = objectPose[8];
+                relativeXYOrWorldXZ = objectPose[9];
+                relativeYYOrWorldYZ = objectPose[10];
+                relativeZYOrWorldZZ = objectPose[11];
+                relativeXZOrDirectionIndex = 0;
+                while (!(relativeXZOrDirectionIndex >= mesh.directionCount)) {
+                  branchOrCullValue = ~relativeXZOrDirectionIndex;
+                  boundOrMinimumDepth = ~wl.worldDirectionX.length;
+                  if (gameFlag != 0) {
                     break scanLoop1;
                   }
-                  if (stackIn_65_0 <= stackIn_65_1) {
+                  if (branchOrCullValue <= boundOrMinimumDepth) {
                     break;
                   }
-                  var19 = param5.directionX[var18];
-                  var20 = param5.directionY[var18];
-                  var21Lifetime2 = param5.directionZ[var18];
-                  wl.field_R[var18] = var21Lifetime2 * var15 + (var9 * var19 + var20 * var12) >> 16;
-                  ff.field_f[var18] = var21Lifetime2 * var16 + var13 * var20 + var19 * var10 >> 16;
-                  nn.field_h[var18] = var19 * var11 - (-(var20 * var14) - var21Lifetime2 * var17) >> 16;
-                  var18++;
+                  relativeYZOrDirectionX = mesh.directionX[relativeXZOrDirectionIndex];
+                  relativeZZOrDirectionY = mesh.directionY[relativeXZOrDirectionIndex];
+                  centerXOrDirectionZ = mesh.directionZ[relativeXZOrDirectionIndex];
+                  wl.worldDirectionX[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeXYOrWorldXZ + (cameraXOrWorldXX * relativeYZOrDirectionX + relativeZZOrDirectionY * relativeXXOrWorldXY) >> 16;
+                  ff.worldDirectionY[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeYYOrWorldYZ + relativeYXOrWorldYY * relativeZZOrDirectionY + relativeYZOrDirectionX * cameraYOrWorldYX >> 16;
+                  nn.worldDirectionZ[relativeXZOrDirectionIndex] = relativeYZOrDirectionX * cameraZOrWorldZX - (-(relativeZZOrDirectionY * relativeZXOrWorldZY) - centerXOrDirectionZ * relativeZYOrWorldZZ) >> 16;
+                  relativeXZOrDirectionIndex++;
                 }
               }
-              stackIn_65_0 = param6 ? 1 : 0;
-              stackIn_65_1 = var7_int;
+              branchOrCullValue = cullBackfaces ? 1 : 0;
+              boundOrMinimumDepth = minimumDepth;
             }
             break;
           }
-          bm.a(stackIn_65_0 != 0, stackIn_65_1, var8, false, param5);
+          bm.sortMeshFaces(branchOrCullValue != 0, boundOrMinimumDepth, maximumDepth, false, mesh);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_70_0 = var7;
-          stackIn_70_1 = new StringBuilder().append("ka.C(");
-          if (param0 == null) {
-            stackIn_71_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ka.C(");
+          if (cameraPose == null) {
+            cameraSummary = "null";
           } else {
-            stackIn_71_2 = "{...}";
+            cameraSummary = "{...}";
           }
-          stackIn_74_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_75_2 = "null";
+          objectContext = ((StringBuilder) (Object) contextBuilder).append(cameraSummary).append(',').append(obfuscationGuard).append(',');
+          if (objectPose == null) {
+            objectSummary = "null";
           } else {
-            stackIn_75_2 = "{...}";
+            objectSummary = "{...}";
           }
-          stackIn_78_1 = ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
-            stackIn_79_2 = "null";
+          meshContext = ((StringBuilder) (Object) objectContext).append(objectSummary).append(',').append(retainViewVertices).append(',').append(transformDirections).append(',');
+          if (mesh == null) {
+            meshSummary = "null";
           } else {
-            stackIn_79_2 = "{...}";
+            meshSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) meshContext).append(meshSummary).append(',').append(cullBackfaces).append(')').toString());
         }
     }
 

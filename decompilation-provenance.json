@@ -478,7 +478,7 @@
         },
         "publishedSources": {
           "files": 420,
-          "sha256": "b8fc50d5b3dd5eac7868b3fe5fbcede9cc048befd6521ff5816a3772ab83a68d"
+          "sha256": "a7a2e483229a71d6e52176b9f0e43abb55546eb1572ae355e9907d6a4be22681"
         }
       },
       "chess": {
@@ -2858,17 +2858,17 @@
       "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
       "sources": {
         "files": 420,
-        "sha256": "b8fc50d5b3dd5eac7868b3fe5fbcede9cc048befd6521ff5816a3772ab83a68d"
+        "sha256": "a7a2e483229a71d6e52176b9f0e43abb55546eb1572ae355e9907d6a4be22681"
       },
       "dictionary": {
         "path": "decompilation/brickabrac-naming.json",
-        "sha256": "55dc78e5475d2c31ef0ed162f5e8eb2186453245dda6182c96ccd386b6a38ffb"
+        "sha256": "04a86dfcd45643a2e4ce7cb010f71ea9a40c26bb25c5fa5c14d2ae2968bb86a3"
       },
       "readingGuide": {
         "path": "games/brickabrac/README.md",
-        "sha256": "e73fdea6c5ecea01e65dfcd3ba8701a574842244db02d8357fad6411a71f641f"
+        "sha256": "2ee2e6ad4b04e30ac6c0bcb80758878171c7d9e5052b2502cfacedc062530753"
       },
-      "rulesSha256": "1b46527a5f3e1a0f37c1e7ea6627ad285a7e6ebf4d901a0deab79fe7f9444045",
+      "rulesSha256": "c0916900b977bd3f8164f8799f8111edc33b6a6b28b880ea299a39628268d9b3",
       "compiler": {
         "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff",
         "trackedSourceTarSha256": "7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd"

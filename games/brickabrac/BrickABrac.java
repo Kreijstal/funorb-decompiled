@@ -543,15 +543,15 @@ public final class BrickABrac extends InteractiveGameClient {
         return null != lp.currentScreen ? lp.currentScreen.handleKey(character, 106, keyCode) : false;
     }
 
-    final static int c(int param0, int param1) {
-        param1 = param1 & 8191;
-        if (param0 != 2048) {
+    final static int cosine8192(int obfuscationGuard, int angle) {
+        angle = angle & 8191;
+        if (obfuscationGuard != 2048) {
           BrickABrac.s(116);
         }
-        if (param1 >= 4096) {
-          return param1 < 6144 ? -um.quarterSineQ16[6144 - param1] : um.quarterSineQ16[param1 - 6144];
+        if (angle >= 4096) {
+          return angle < 6144 ? -um.quarterSineQ16[6144 - angle] : um.quarterSineQ16[angle - 6144];
         }
-        return 2048 > param1 ? um.quarterSineQ16[-param1 + 2048] : -um.quarterSineQ16[-2048 + param1];
+        return 2048 > angle ? um.quarterSineQ16[-angle + 2048] : -um.quarterSineQ16[-2048 + angle];
     }
 
     final void clearClientResources(boolean obfuscationGuard) {

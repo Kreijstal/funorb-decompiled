@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class vd {
-    static int[] field_b;
+    static int[] viewFacePointThreeX;
     static String field_d;
     static boolean field_e;
     static mo field_a;
@@ -75,13 +75,13 @@ final class vd {
         if (!param0) {
           return;
         }
-        field_b = null;
+        viewFacePointThreeX = null;
         field_d = null;
     }
 
     static {
         field_e = true;
         field_c = 20;
-        field_b = new int[8192];
+        viewFacePointThreeX = new int[8192];
     }
 }

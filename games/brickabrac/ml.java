@@ -5,7 +5,7 @@ final class ml {
     int field_a;
     static String[] field_e;
     int field_d;
-    static int[] field_c;
+    static int[] viewVertexZ;
     static int field_f;
     int[] field_g;
     static int field_b;
@@ -199,7 +199,7 @@ final class ml {
     }
 
     public static void a(byte param0) {
-        field_c = null;
+        viewVertexZ = null;
         field_e = null;
         if (param0 != 111) {
           IndexedSprite var2 = (IndexedSprite) null;
@@ -214,6 +214,6 @@ final class ml {
     }
 
     static {
-        field_c = new int[8192];
+        viewVertexZ = new int[8192];
     }
 }

@@ -8,7 +8,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
     static String field_k;
     boolean field_d;
     private static Calendar field_n;
-    static int[] field_m;
+    static int[] faceGroupOffsets;
     static String field_b;
     static String field_f;
     public static int field_l;
@@ -545,7 +545,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          field_m = null;
+          faceGroupOffsets = null;
           if (param0 != 19254) {
             AppletGameShell.shuffleFivePasses((int[]) null, (byte) -57, (IsaacGenerator) null);
           }
@@ -1019,7 +1019,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
     static {
         field_k = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_n = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
-        field_m = new int[128];
+        faceGroupOffsets = new int[128];
         field_b = null;
         field_f = "Shrink: makes your paddle shorter.";
     }

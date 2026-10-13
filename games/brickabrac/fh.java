@@ -4,7 +4,7 @@
 final class fh {
     static String field_a;
     static String field_e;
-    static int[] field_f;
+    static int[] viewVertexX;
     static int field_g;
     static int field_c;
     static boolean field_d;
@@ -20,14 +20,14 @@ final class fh {
           return;
         }
         field_b = null;
-        field_f = null;
+        viewVertexX = null;
     }
 
     static {
         field_z = "fh.A(";
         field_a = "Cancel draw";
         field_e = "Close";
-        field_f = new int[8192];
+        viewVertexX = new int[8192];
         field_b = "This option cannot be combined with the current '<%0>' setting.";
     }
 }

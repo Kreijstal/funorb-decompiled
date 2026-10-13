@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ek extends bj implements en {
-    static int[] field_jb;
+    static int[] sortedFaceIds;
     static int field_bb;
     static int field_lb;
     static int field_kb;
@@ -173,7 +173,7 @@ final class ek extends bj implements en {
     public static void c(boolean param0) {
         field_gb = null;
         field_fb = null;
-        field_jb = null;
+        sortedFaceIds = null;
         field_hb = null;
         field_eb = null;
         if (!param0) {
@@ -259,7 +259,7 @@ final class ek extends bj implements en {
         field_gb = "Mute this player for 48 hours";
         field_bb = 20;
         keyChangeReadIndex = 0;
-        field_jb = new int[16384];
+        sortedFaceIds = new int[16384];
         field_eb = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_fb = "From <%0>: ";
     }

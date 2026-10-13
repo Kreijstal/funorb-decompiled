@@ -12,7 +12,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
     static String field_J;
     static boolean field_C;
     static RgbSprite field_I;
-    static int[] field_G;
+    static int[] viewFacePointTwoZ;
 
     public static void h(int param0) {
         if (param0 != -257) {
@@ -20,7 +20,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         }
         field_D = null;
         field_F = null;
-        field_G = null;
+        viewFacePointTwoZ = null;
         field_J = null;
         field_B = null;
         field_z = null;
@@ -79,6 +79,6 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         field_z = "Please send me news and updates (I can unsubscribe at any time)";
         field_J = null;
         field_B = new String[255];
-        field_G = new int[8192];
+        viewFacePointTwoZ = new int[8192];
     }
 }

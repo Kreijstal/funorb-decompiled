@@ -12,7 +12,7 @@ final class nn {
     br field_d;
     String field_e;
     private int field_a;
-    static int[] field_h;
+    static int[] worldDirectionZ;
 
     private final boolean a(int param0, boolean param1, int param2) {
         RuntimeException decompiledCaughtException = null;
@@ -3258,7 +3258,7 @@ final class nn {
             }
           }
           if (param1 > -68) {
-            field_h = (int[]) null;
+            worldDirectionZ = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3480,7 +3480,7 @@ final class nn {
             }
           }
           if (param0 != 97) {
-            field_h = (int[]) null;
+            worldDirectionZ = (int[]) null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3492,7 +3492,7 @@ final class nn {
 
     public static void a(int param0) {
         field_f = null;
-        field_h = null;
+        worldDirectionZ = null;
         if (param0 != 0) {
           return;
         }
@@ -3625,6 +3625,6 @@ final class nn {
     }
 
     static {
-        field_h = new int[8192];
+        worldDirectionZ = new int[8192];
     }
 }

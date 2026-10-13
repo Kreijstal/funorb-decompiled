@@ -4,7 +4,7 @@
 final class NewAchievementsScreen extends AchievementBrowserScreen {
     static String field_F;
     static int field_H;
-    static int[] field_I;
+    static int[] viewFacePointThreeY;
     static int field_J;
     static boolean discardGameplayOnTransition;
 
@@ -39,7 +39,7 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
         Rasterizer2D.intersectClip(qi.field_K[0].width - 1, DualLinkDeque.field_d.field_db + (-LevelSelectScreen.field_w - qi.field_K[0].height), 1 - (-var4 + qi.field_K[0].width), -qi.field_K[0].height + DualLinkDeque.field_d.field_db);
         nn.field_g.c(nn.field_f, qi.field_K[0].width + 1, -5 - qi.field_K[6].height + (DualLinkDeque.field_d.field_db + 2), !param1 ? 1 : 0, -1, !param2 ? 196 : 256);
         if (param3 > -105) {
-          field_I = (int[]) null;
+          viewFacePointThreeY = (int[]) null;
         } else {
           Rasterizer2D.restoreClip(LevelPackSelectScreen.field_v);
           return;
@@ -48,7 +48,7 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
     }
 
     public static void g(int param0) {
-        field_I = null;
+        viewFacePointThreeY = null;
         if (param0 != 6) {
           NewAchievementsScreen.g(49);
           field_F = null;
@@ -59,6 +59,6 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
 
     static {
         field_F = "Find opponent";
-        field_I = new int[8192];
+        viewFacePointThreeY = new int[8192];
     }
 }

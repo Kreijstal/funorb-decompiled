@@ -7,7 +7,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
     static int field_G;
     static RgbSprite[] packSelectorIcons;
     static int[] field_C;
-    static int[] field_M;
+    static int[] projectedVertexX;
     int blockPosition;
     byte trailerBytes;
     static String field_H;
@@ -99,7 +99,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
     }
 
     public static void e(byte param0) {
-        field_M = null;
+        projectedVertexX = null;
         field_J = null;
         field_C = null;
         int var1 = -85 / ((4 - param0) / 55);
@@ -161,7 +161,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
 
     static {
         field_L = new byte[250][];
-        field_M = new int[8192];
+        projectedVertexX = new int[8192];
         field_H = "Enter multiplayer lobby";
         field_J = "No highscores";
     }

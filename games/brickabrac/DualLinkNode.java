@@ -72,7 +72,7 @@ class DualLinkNode extends IntrusiveNode {
             if (var13 < -2 + param3.lives) {
               ch.field_l.a(var11, var12, 196);
             } else {
-              ch.field_l.e(ch.field_l.canvasWidth / 2 + var11, var12 + ch.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.c(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
+              ch.field_l.e(ch.field_l.canvasWidth / 2 + var11, var12 + ch.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.cosine8192(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
             }
             var11 = var11 + ch.field_l.width / 2;
             if (param5 + param7 < var11 + ch.field_l.width) {

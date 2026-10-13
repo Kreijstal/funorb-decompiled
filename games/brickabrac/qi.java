@@ -76,7 +76,7 @@ final class qi extends d {
         }
     }
 
-    final static void a(byte param0) {
+    final static void clearFaceGroupCounts(byte obfuscationGuard) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -86,10 +86,10 @@ final class qi extends d {
         RuntimeException var1_ref = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = AppletGameShell.field_m;
+          var5 = AppletGameShell.faceGroupOffsets;
           var1 = var5;
           var2 = 0;
-          if (param0 != 109) {
+          if (obfuscationGuard != 109) {
             return;
           }
           var3 = var5.length;
@@ -107,7 +107,7 @@ final class qi extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "qi.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "qi.F(" + obfuscationGuard + ')');
         }
     }
 

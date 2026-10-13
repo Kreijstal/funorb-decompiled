@@ -235,7 +235,7 @@ final class ec extends ib implements en {
                   if (var24 < var18) {
                     var28 = ap.a(var24 << 12, -55);
                     var29 = (param1 << 6) - var28;
-                    var30 = var28 - ((-BrickABrac.c(2048, (var29 << 7) / param1) + 65536) * param5 >> 11);
+                    var30 = var28 - ((-BrickABrac.cosine8192(2048, (var29 << 7) / param1) + 65536) * param5 >> 11);
                     var26 = var21 * var30 / var28 + param4;
                     var27 = var30 * var23 / var28 + param2;
                     if (Rasterizer2D.clipLeft > var27) {
@@ -261,7 +261,7 @@ final class ec extends ib implements en {
                     }
                     var28 = ap.a(var24 << 12, -100);
                     var29 = -(param1 << 6) + var28;
-                    var30 = var28 - (param5 * (-BrickABrac.c(2048, (var29 << 7) / param7) + 65536) >> 11);
+                    var30 = var28 - (param5 * (-BrickABrac.cosine8192(2048, (var29 << 7) / param7) + 65536) >> 11);
                     var27 = param2 + var23 * var30 / var28;
                     var26 = var30 * var21 / var28 + param4;
                     if (Rasterizer2D.clipLeft > var27) {

@@ -9,148 +9,148 @@ final class bm {
     static String field_e;
     static int field_c;
 
-    final static void a(boolean param0, int param1, int param2, boolean param3, Mesh3D param4) {
-        byte dupTemp$0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_32_1 = 0;
-        boolean stackIn_41_0 = false;
-        RuntimeException stackIn_58_0 = null;
-        StringBuilder stackIn_58_1 = null;
-        String stackIn_59_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int stackIn_32_0Lifetime1;
-        int stackIn_32_1Lifetime1;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        int var12Lifetime1;
-        int var13Lifetime1;
-        var19 = BrickABrac.field_J ? 1 : 0;
+    final static void sortMeshFaces(boolean cullBackfaces, int minimumDepth, int maximumDepth, boolean obfuscationGuard, Mesh3D mesh) {
+        byte groupId = 0;
+        int scaledDepth = 0;
+        int lowerBucketSentinel = 0;
+        int invertedBucket = 0;
+        boolean cullOrGuardFlag = false;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String meshSummary = null;
+        RuntimeException caughtFailure = null;
+        int depthBits = 0;
+        RuntimeException failure = null;
+        int minimumDepthTimesThree = 0;
+        int depthShift = 0;
+        int face = 0;
+        int vertexA = 0;
+        int vertexB = 0;
+        int vertexC = 0;
+        int screenAX = 0;
+        int screenAY = 0;
+        int edgeBXOrDepthC = 0;
+        int edgeCXOrDepthSum = 0;
+        int edgeBYOrBucket = 0;
+        int edgeCYOrBucketCount = 0;
+        int sortedIndex = 0;
+        int gameFlag = 0;
+        int bucketBase;
+        int bucketSlot;
+        int prefixCount;
+        int group;
+        int groupCount;
+        int depthA;
+        int depthB;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var5_int = ed.unsignedBitLength(9, 3 * (-param1 + param2));
-          var6 = param1 * 3;
-          PowerUpWarning.a(0);
-          var7 = var5_int - 10;
-          if (param4.faceGroupCount > 0 &&
-            null != param4.faceGroups) {
-            qi.a((byte) 109);
+          depthBits = ed.unsignedBitLength(9, 3 * (-minimumDepth + maximumDepth));
+          minimumDepthTimesThree = minimumDepth * 3;
+          PowerUpWarning.clearFaceDepthBuckets(0);
+          depthShift = depthBits - 10;
+          if (mesh.faceGroupCount > 0 &&
+            null != mesh.faceGroups) {
+            qi.clearFaceGroupCounts((byte) 109);
           }
-          mc.field_c = 0;
-          var8 = 0;
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(param4.faceCount > var8)))) {
-            var9 = param4.faceVertexA[var8];
-            var10 = param4.faceVertexB[var8];
-            var11 = param4.faceVertexC[var8];
-            stackIn_41_0 = param0;
-            if (var19 == 0) {
-              if (stackIn_41_0) {
-                var12 = ArchiveNetworkRequest.field_M[var9];
-                var13 = ed.field_e[var9];
-                var14 = ArchiveNetworkRequest.field_M[var10] - var12;
-                var15 = -var12 + ArchiveNetworkRequest.field_M[var11];
-                var16 = ed.field_e[var10] - var13;
-                var17 = -var13 + ed.field_e[var11];
+          mc.sortedFaceCount = 0;
+          face = 0;
+          boolean facesExhausted = false;
+          while (!(facesExhausted = (!(mesh.faceCount > face)))) {
+            vertexA = mesh.faceVertexA[face];
+            vertexB = mesh.faceVertexB[face];
+            vertexC = mesh.faceVertexC[face];
+            cullOrGuardFlag = cullBackfaces;
+            if (gameFlag == 0) {
+              if (cullOrGuardFlag) {
+                screenAX = ArchiveNetworkRequest.projectedVertexX[vertexA];
+                screenAY = ed.projectedVertexY[vertexA];
+                edgeBXOrDepthC = ArchiveNetworkRequest.projectedVertexX[vertexB] - screenAX;
+                edgeCXOrDepthSum = -screenAX + ArchiveNetworkRequest.projectedVertexX[vertexC];
+                edgeBYOrBucket = ed.projectedVertexY[vertexB] - screenAY;
+                edgeCYOrBucketCount = -screenAY + ed.projectedVertexY[vertexC];
               }
-              if (!stackIn_41_0 ||
-                var14 * var17 - var15 * var16 < 0) {
-                var12Lifetime1 = Paddle.field_v[var9];
-                if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = Paddle.field_v[var10];
-                  if (var13Lifetime1 != -2147483648) {
-                    var14 = Paddle.field_v[var11];
-                    if (var14 != -2147483648) {
-                      var15 = var12Lifetime1 + (var13Lifetime1 + var14 - var6);
-                      if (var7 < 0) {
-                        stackIn_22_0 = var15 << -var7;
+              if (!cullOrGuardFlag ||
+                edgeBXOrDepthC * edgeCYOrBucketCount - edgeCXOrDepthSum * edgeBYOrBucket < 0) {
+                depthA = Paddle.projectedVertexDepth[vertexA];
+                if (depthA != -2147483648) {
+                  depthB = Paddle.projectedVertexDepth[vertexB];
+                  if (depthB != -2147483648) {
+                    edgeBXOrDepthC = Paddle.projectedVertexDepth[vertexC];
+                    if (edgeBXOrDepthC != -2147483648) {
+                      edgeCXOrDepthSum = depthA + (depthB + edgeBXOrDepthC - minimumDepthTimesThree);
+                      if (depthShift < 0) {
+                        scaledDepth = edgeCXOrDepthSum << -depthShift;
                       } else {
-                        stackIn_22_0 = var15 >> var7;
+                        scaledDepth = edgeCXOrDepthSum >> depthShift;
                       }
-                      var16 = -stackIn_22_0 + (ArcticBackground.field_w.length - 1);
-                      var17 = ArcticBackground.field_w[var16];
+                      edgeBYOrBucket = -scaledDepth + (ArcticBackground.faceDepthBucketCounts.length - 1);
+                      edgeCYOrBucketCount = ArcticBackground.faceDepthBucketCounts[edgeBYOrBucket];
                       while (true) {
-                        if (var17 >> 4 != 0) {
-                          var16--;
-                          stackIn_32_0 = -1;
-                          stackIn_32_1 = ~var16;
-                          if (stackIn_32_0 < stackIn_32_1) {
+                        if (edgeCYOrBucketCount >> 4 != 0) {
+                          edgeBYOrBucket--;
+                          lowerBucketSentinel = -1;
+                          invertedBucket = ~edgeBYOrBucket;
+                          if (lowerBucketSentinel < invertedBucket) {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = ArcticBackground.field_w[var16];
+                          edgeCYOrBucketCount = ArcticBackground.faceDepthBucketCounts[edgeBYOrBucket];
                           continue;
                         }
-                        stackIn_32_0Lifetime1 = var16 << 4;
-                        stackIn_32_1Lifetime1 = var17;
-                        var18 = stackIn_32_0Lifetime1 + stackIn_32_1Lifetime1;
-                        ek.field_jb[var18] = var8;
-                        ArcticBackground.field_w[var16] = var17 + 1;
-                        if (param4.faceGroupCount > 0 &&
-                          param4.faceGroups != null) {
-                          dupTemp$0 = param4.faceGroups[var8];
-                          AppletGameShell.field_m[dupTemp$0] = AppletGameShell.field_m[dupTemp$0] + 1;
+                        bucketBase = edgeBYOrBucket << 4;
+                        bucketSlot = edgeCYOrBucketCount;
+                        sortedIndex = bucketBase + bucketSlot;
+                        ek.sortedFaceIds[sortedIndex] = face;
+                        ArcticBackground.faceDepthBucketCounts[edgeBYOrBucket] = edgeCYOrBucketCount + 1;
+                        if (mesh.faceGroupCount > 0 &&
+                          mesh.faceGroups != null) {
+                          groupId = mesh.faceGroups[face];
+                          AppletGameShell.faceGroupOffsets[groupId] = AppletGameShell.faceGroupOffsets[groupId] + 1;
                         }
-                        mc.field_c = mc.field_c + 1;
+                        mc.sortedFaceCount = mc.sortedFaceCount + 1;
                         break;
                       }
                     }
                   }
                 }
               }
-              var8++;
+              face++;
               continue;
             }
             break;
           }
-          if (decompiledNaturalLoopExit0) {
-            stackIn_41_0 = param3;
+          if (facesExhausted) {
+            cullOrGuardFlag = obfuscationGuard;
           }
-          if (stackIn_41_0) {
+          if (cullOrGuardFlag) {
             field_e = (String) null;
           }
-          if (0 < param4.faceGroupCount &&
-            param4.faceGroups != null) {
-            var8Lifetime1 = 0;
-            var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= AppletGameShell.field_m.length)) {
-              var10Lifetime1 = AppletGameShell.field_m[var9Lifetime1];
-              AppletGameShell.field_m[var9Lifetime1] = var8Lifetime1;
-              var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
-              var9Lifetime1++;
-              if (var19 != 0) {
+          if (0 < mesh.faceGroupCount &&
+            mesh.faceGroups != null) {
+            prefixCount = 0;
+            group = 0;
+            while (!(group >= AppletGameShell.faceGroupOffsets.length)) {
+              groupCount = AppletGameShell.faceGroupOffsets[group];
+              AppletGameShell.faceGroupOffsets[group] = prefixCount;
+              prefixCount = prefixCount + groupCount;
+              group++;
+              if (gameFlag != 0) {
                 return;
               }
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_58_0 = var5;
-          stackIn_58_1 = new StringBuilder().append("bm.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_59_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("bm.A(").append(cullBackfaces).append(',').append(minimumDepth).append(',').append(maximumDepth).append(',').append(obfuscationGuard).append(',');
+          if (mesh == null) {
+            meshSummary = "null";
           } else {
-            stackIn_59_2 = "{...}";
+            meshSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(meshSummary).append(')').toString());
         }
     }
 

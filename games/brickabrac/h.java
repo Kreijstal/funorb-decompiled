@@ -298,10 +298,10 @@ abstract class h extends oc implements sd {
             field_F = (String[]) null;
           }
           while (true) {
-            if (var5_int >= ArcticBackground.field_w.length) {
+            if (var5_int >= ArcticBackground.faceDepthBucketCounts.length) {
               return;
             }
-            param0 = ArcticBackground.field_w[var5_int];
+            param0 = ArcticBackground.faceDepthBucketCounts[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param0;
@@ -312,11 +312,11 @@ abstract class h extends oc implements sd {
               }
               incrementValue$1 = var6;
               var6++;
-              param1 = ek.field_jb[incrementValue$1];
+              param1 = ek.sortedFaceIds[incrementValue$1];
               dupTemp$2 = param3[param1];
               dupTemp$3 = param4[dupTemp$2];
               param4[dupTemp$2] = dupTemp$3 + 1;
-              ek.field_jb[dupTemp$3] = param1;
+              ek.sortedFaceIds[dupTemp$3] = param1;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

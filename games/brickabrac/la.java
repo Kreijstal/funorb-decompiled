@@ -525,7 +525,7 @@ final class la {
               var8++;
               incrementValue$6 = param6;
               param6++;
-              pa.field_i[incrementValue$5] = var16 + (var11 * BrickABrac.c(2048, mh.field_F[incrementValue$6]) >> 16);
+              pa.field_i[incrementValue$5] = var16 + (var11 * BrickABrac.cosine8192(2048, mh.field_F[incrementValue$6]) >> 16);
               incrementValue$7 = var8;
               var8++;
               incrementValue$8 = param6;

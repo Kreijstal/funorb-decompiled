@@ -6,7 +6,7 @@ final class mc {
     static RgbSprite volcanicSmallSprite;
     static int field_d;
     static String field_b;
-    static int field_c;
+    static int sortedFaceCount;
     static String field_a;
 
     public static void a(int param0) {
@@ -28,7 +28,7 @@ final class mc {
 
     static {
         field_e = new n();
-        field_c = 0;
+        sortedFaceCount = 0;
         field_a = "On";
         field_b = "Accept <%0> into this game";
     }

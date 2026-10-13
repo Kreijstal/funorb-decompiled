@@ -3,7 +3,7 @@
  */
 final class nd {
     static int[] field_f;
-    static int[] field_e;
+    static int[] viewFacePointOneY;
     static String field_d;
     static boolean field_b;
     static int field_c;
@@ -16,7 +16,7 @@ final class nd {
         if (param0 != 121) {
           return;
         }
-        field_e = null;
+        viewFacePointOneY = null;
         field_f = null;
         field_d = null;
     }
@@ -138,7 +138,7 @@ final class nd {
 
     static {
         field_b = true;
-        field_e = new int[8192];
+        viewFacePointOneY = new int[8192];
         field_d = "Just play";
     }
 }

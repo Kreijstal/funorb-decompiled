@@ -4,8 +4,8 @@
 final class LevelPackCard {
     static int[] field_a;
     private int focusStartTick;
-    static int[] field_l;
-    static int field_k;
+    static int[] viewFacePointTwoX;
+    static int projectionShift;
     private MenuButton viewport;
     static int[] field_n;
     private boolean focused;
@@ -188,12 +188,12 @@ final class LevelPackCard {
         field_n = null;
         field_a = null;
         if (param0 == 32156) {
-          field_l = null;
+          viewFacePointTwoX = null;
           farmNearSprite = null;
           return;
         }
         LevelPackCard.a(-115);
-        field_l = null;
+        viewFacePointTwoX = null;
         farmNearSprite = null;
     }
 
@@ -227,9 +227,9 @@ final class LevelPackCard {
     }
 
     static {
-        field_l = new int[8192];
+        viewFacePointTwoX = new int[8192];
         field_n = new int[]{25, 8, 26, 37};
         field_a = new int[4];
-        field_k = 9;
+        projectionShift = 9;
     }
 }

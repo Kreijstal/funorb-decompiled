@@ -3,9 +3,9 @@
  */
 final class mg {
     private static int[] field_h;
-    static int field_d;
+    static int projectionCenterX;
     private static int[] field_c;
-    static int field_a;
+    static int projectionCenterY;
     static int[] field_g;
     static int field_e;
     static int field_b;
@@ -13,8 +13,8 @@ final class mg {
     static int[] field_f;
 
     private final static void a() {
-        field_d = field_e / 2;
-        field_a = field_b / 2;
+        projectionCenterX = field_e / 2;
+        projectionCenterY = field_b / 2;
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
