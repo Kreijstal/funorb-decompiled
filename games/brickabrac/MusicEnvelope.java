@@ -93,8 +93,8 @@ final class MusicEnvelope {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        nn var16 = null;
-        nn var17 = null;
+        ContextActionController var16 = null;
+        ContextActionController var17 = null;
         var15 = BrickABrac.field_J ? 1 : 0;
         try {
           stackIn_3_0 = f.field_c.scrollPane;
@@ -173,10 +173,10 @@ final class MusicEnvelope {
             }
             if (var6.pressedButton != 0) {
               SpriteGeometry.a(-1, var6, f.field_c.scrollPane, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
-              var16 = bm.field_d;
+              var16 = bm.contextActions;
               var13_ref_String = ng.field_e;
               var16.contextMenu.addAction(var13_ref_String, 7, (byte) 126);
-              var17 = bm.field_d;
+              var17 = bm.contextActions;
               var13 = tb.pressX;
               var14 = qo.pressY;
               var17.contextMenu.layoutAtAnchor(var14, -126, 0, 0, var13);

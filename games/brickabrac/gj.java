@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gj {
-    static int field_a;
+    static int receivedChatChannel;
     static UiComponent field_b;
     static String field_d;
     static RgbSprite[] field_c;

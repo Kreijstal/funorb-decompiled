@@ -379,7 +379,7 @@ final class BitPacketBuffer extends PacketBuffer {
         try {
           DualLinkNode.quickChatRecipient = param1;
           var5 = (CharSequence) ((Object) param1);
-          QuickChatHelpDialog.field_Qb = gb.a(var5, 96);
+          QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var5, 96);
           qn.field_n = param2;
           di.a((byte) -120);
         } catch (RuntimeException runtimeException) {

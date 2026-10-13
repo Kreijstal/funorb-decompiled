@@ -10,7 +10,7 @@ final class sj {
     static UiComponent field_d;
     static tb field_b;
 
-    final static gb a(int param0, int param1, int param2, int param3) {
+    final static ChatMessage a(int param0, int param1, int param2, int param3) {
         Object stackIn_42_0 = null;
         UiComponent stackIn_42_1 = null;
         boolean stackIn_50_0 = false;
@@ -19,9 +19,9 @@ final class sj {
         int var6;
         int var7;
         int var8;
-        gb var8_ref_gb;
+        ChatMessage var8_ref_gb;
         int var9;
-        gb var9_ref_gb;
+        ChatMessage var9_ref_gb;
         int var10_int;
         String var10;
         String var11;
@@ -35,45 +35,45 @@ final class sj {
         AchievementIcon.field_q.content.children.clear((byte) -61);
         var5 = 0;
         var6 = 0;
-        for (var7 = -1 + ScrollPane.field_Sb; var7 >= 0; var7--) {
-          var8_ref_gb = UnderwaterBackground.field_s[var7];
+        for (var7 = -1 + ScrollPane.chatHistorySize; var7 >= 0; var7--) {
+          var8_ref_gb = UnderwaterBackground.chatHistory[var7];
           var9 = 0;
           if (!um.field_e &&
-            var5 < eh.field_k) {
-            var10_int = tm.getChatFilter(var8_ref_gb.field_c, (byte) 18);
-            if (var10_int <= var8_ref_gb.a(true) && (var8_ref_gb.field_e ||
-              !AchievementBrowserScreen.a(125, var8_ref_gb.field_m))) {
+            var5 < eh.chatHistoryCategoryLimit) {
+            var10_int = tm.getChatFilter(var8_ref_gb.channel, (byte) 18);
+            if (var10_int <= var8_ref_gb.getRetentionCategory(true) && (var8_ref_gb.systemMessage ||
+              !AchievementBrowserScreen.a(125, var8_ref_gb.senderName))) {
               var9 = 1;
             }
           }
           if (var9 == 0) {
-            var8_ref_gb.field_b = null;
+            var8_ref_gb.component = null;
           } else {
             var5++;
-            if (var8_ref_gb.field_b == null ||
+            if (var8_ref_gb.component == null ||
               LevelSequence.chatFiltersChanged) {
-              if (null == var8_ref_gb.field_b) {
+              if (null == var8_ref_gb.component) {
                 Brick.field_E = Brick.field_E + 1;
               }
-              var10 = IntNode.a(var8_ref_gb, (byte) 91);
-              var11 = var10 + TextFont.escapeAngles(var8_ref_gb.field_j);
-              var12 = ik.a(-31126, var8_ref_gb);
-              var8_ref_gb.field_b = new UiComponent(0L, field_a, var11);
-              var8_ref_gb.field_b.capturedTextColor = var12 + (-((var12 & 16711422) >> 1) + (field_a.capturedTextColor >> 1 & 8355711));
-              var8_ref_gb.field_b.activeTextColor = (field_a.activeTextColor >> 1 & 8355711) - (8355711 & var12 >> 1) + var12;
-              var8_ref_gb.field_b.textColor = var12;
-              var8_ref_gb.field_b.font = CachedArchiveSource.field_y;
+              var10 = IntNode.formatChatPrefix(var8_ref_gb, (byte) 91);
+              var11 = var10 + TextFont.escapeAngles(var8_ref_gb.text);
+              var12 = ik.getChatMessageColor(-31126, var8_ref_gb);
+              var8_ref_gb.component = new UiComponent(0L, field_a, var11);
+              var8_ref_gb.component.capturedTextColor = var12 + (-((var12 & 16711422) >> 1) + (field_a.capturedTextColor >> 1 & 8355711));
+              var8_ref_gb.component.activeTextColor = (field_a.activeTextColor >> 1 & 8355711) - (8355711 & var12 >> 1) + var12;
+              var8_ref_gb.component.textColor = var12;
+              var8_ref_gb.component.font = CachedArchiveSource.field_y;
               var6 = var6 + param1;
             }
           }
         }
         var7Lifetime1 = 0;
-        for (var8 = 0; ScrollPane.field_Sb > var8; var8++) {
-          var9_ref_gb = UnderwaterBackground.field_s[var8];
-          if (null != var9_ref_gb.field_b) {
-            AchievementIcon.field_q.content.addChild(var9_ref_gb.field_b, 0);
-            var9_ref_gb.field_b.setBounds(param1, var7Lifetime1, param0, var9_ref_gb.field_b.getContentWidth(87), (byte) 64);
-            if (var9_ref_gb.field_b.pressedButton != 0) {
+        for (var8 = 0; ScrollPane.chatHistorySize > var8; var8++) {
+          var9_ref_gb = UnderwaterBackground.chatHistory[var8];
+          if (null != var9_ref_gb.component) {
+            AchievementIcon.field_q.content.addChild(var9_ref_gb.component, 0);
+            var9_ref_gb.component.setBounds(param1, var7Lifetime1, param0, var9_ref_gb.component.getContentWidth(87), (byte) 64);
+            if (var9_ref_gb.component.pressedButton != 0) {
               var4 = var9_ref_gb;
             }
             var7Lifetime1 = var7Lifetime1 + param1;
@@ -109,7 +109,7 @@ final class sj {
         AchievementIcon.field_q.updateScroll(true, param1, true, 2 * (param1 * param3));
         stackIn_50_0 = (var9Lifetime1 == AchievementIcon.field_q.content.remainingY + AchievementIcon.field_q.content.localY);
         nd.field_b = stackIn_50_0;
-        return (gb) (var4);
+        return (ChatMessage) (var4);
     }
 
     final static void a(java.applet.Applet param0, byte param1, String param2, String param3, long param4) {

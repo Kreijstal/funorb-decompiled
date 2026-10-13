@@ -1,86 +1,86 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn {
+final class ContextActionController {
     static PaletteFont field_g;
-    private long field_i;
-    private int[] field_c;
-    UiComponent field_j;
-    int field_b;
-    private String field_k;
+    private long targetId;
+    private int[] suggestedPhraseIds;
+    UiComponent anchorComponent;
+    int gameId;
+    private String targetDisplayName;
     static String field_f;
     ContextMenu contextMenu;
-    String field_e;
-    private int field_a;
+    String targetName;
+    private int chatChannel;
     static int[] worldDirectionZ;
 
-    private final boolean a(int param0, boolean param1, int param2) {
+    private final boolean dispatchChatAction(int opcode, boolean obfuscationGuard, int actionId) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        int var5 = 0;
-        var5 = BrickABrac.field_J ? 1 : 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1) {
+          if (obfuscationGuard) {
             return false;
           }
-          boolean decompiledFrameRemainder0 = true;
-          if (8 == param2) {
-            MessageScreen.a(this.field_e, this.field_i, 2);
+          boolean remainingActionBranch = true;
+          if (8 == actionId) {
+            MessageScreen.a(this.targetName, this.targetId, 2);
           }
-          if (8 != param2 ||
-            var5 != 0) {
-            if (18 == param2) {
-              BitPacketBuffer.a(21846, this.field_e, this.field_i);
+          if (8 != actionId ||
+            unusedGameFlag != 0) {
+            if (18 == actionId) {
+              BitPacketBuffer.a(21846, this.targetName, this.targetId);
             }
-            if (18 != param2 ||
-              var5 != 0) {
-              if (param2 != 11) {
-                if (param2 != 12) {
-                  if (13 == param2) {
-                    DirectByteStorage.updateChatFilter(0, param0, 2, this.field_a);
-                    decompiledFrameRemainder0 = (var5 != 0);
+            if (18 != actionId ||
+              unusedGameFlag != 0) {
+              if (actionId != 11) {
+                if (actionId != 12) {
+                  if (13 == actionId) {
+                    DirectByteStorage.updateChatFilter(0, opcode, 2, this.chatChannel);
+                    remainingActionBranch = (unusedGameFlag != 0);
                   }
-                  if (decompiledFrameRemainder0) {
-                    if (param2 == 14) {
+                  if (remainingActionBranch) {
+                    if (actionId == 14) {
                       TooltipSprite.d(2);
-                      decompiledFrameRemainder0 = (var5 != 0);
+                      remainingActionBranch = (unusedGameFlag != 0);
                     }
-                    if (decompiledFrameRemainder0) {
-                      if (param2 == 20) {
+                    if (remainingActionBranch) {
+                      if (actionId == 20) {
                         LevelPackLoader.a(4252);
-                        decompiledFrameRemainder0 = (var5 != 0);
+                        remainingActionBranch = (unusedGameFlag != 0);
                       }
-                      if (decompiledFrameRemainder0) {
-                        if (19 == param2) {
-                          QuickChatParameterType.a(this.field_c, this.field_i, this.field_a, param1, this.field_e);
-                          decompiledFrameRemainder0 = (var5 != 0);
+                      if (remainingActionBranch) {
+                        if (19 == actionId) {
+                          QuickChatParameterType.a(this.suggestedPhraseIds, this.targetId, this.chatChannel, obfuscationGuard, this.targetName);
+                          remainingActionBranch = (unusedGameFlag != 0);
                         }
-                        if (decompiledFrameRemainder0) {
+                        if (remainingActionBranch) {
                           return false;
                         }
                       }
                     }
                   }
                 }
-                if (decompiledFrameRemainder0) {
-                  DirectByteStorage.updateChatFilter(0, param0, 1, this.field_a);
-                  if (var5 != 0) {
-                    DirectByteStorage.updateChatFilter(0, param0, 0, this.field_a);
+                if (remainingActionBranch) {
+                  DirectByteStorage.updateChatFilter(0, opcode, 1, this.chatChannel);
+                  if (unusedGameFlag != 0) {
+                    DirectByteStorage.updateChatFilter(0, opcode, 0, this.chatChannel);
                   }
                 }
               } else {
-                DirectByteStorage.updateChatFilter(0, param0, 0, this.field_a);
+                DirectByteStorage.updateChatFilter(0, opcode, 0, this.chatChannel);
               }
             }}
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.B(" + opcode + ',' + obfuscationGuard + ',' + actionId + ')');
         }
     }
 
-    final void a(boolean param0) {
+    final void addGameActions(boolean obfuscationGuard) {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
         om var2 = null;
@@ -91,7 +91,7 @@ final class nn {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (null == o.field_e) {
-            var2 = dg.a(this.field_b, (byte) 61);
+            var2 = dg.a(this.gameId, (byte) 61);
             if (var2 != null) {
               var3 = var2.field_Fc;
               if (var2.field_Pb) {
@@ -117,51 +117,51 @@ final class nn {
               }
             }
           }
-          if (!param0) {
-            discarded$0 = this.a((byte) 3, 96, 123);
+          if (!obfuscationGuard) {
+            discarded$0 = this.dispatchSocialAction((byte) 3, 96, 123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.L(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.L(" + obfuscationGuard + ')');
         }
     }
 
-    private final String c(int param0) {
-        String var2 = null;
+    private final String getTargetCaption(int obfuscationGuard) {
+        String caption = null;
         RuntimeException var2_ref = null;
-        String stackIn_2_0 = null;
-        String stackIn_7_0 = null;
+        String invalidGuardResult = null;
+        String result = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -12688) {
-            stackIn_2_0 = (String) null;
-            return stackIn_2_0;
+          if (obfuscationGuard != -12688) {
+            invalidGuardResult = (String) null;
+            return invalidGuardResult;
           }
-          if (this.field_k == null) {
-            var2 = this.field_e;
+          if (this.targetDisplayName == null) {
+            caption = this.targetName;
             if (BrickABrac.field_J) {
-              var2 = this.field_k;
+              caption = this.targetDisplayName;
             }
           } else {
-            var2 = this.field_k;
+            caption = this.targetDisplayName;
           }
-          stackIn_7_0 = var2;
-          return stackIn_7_0;
+          result = caption;
+          return result;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.M(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.M(" + obfuscationGuard + ')');
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void drawContextMenu(byte obfuscationGuard, boolean showTextSuffix) {
         try {
-          this.contextMenu.drawRoot(true, param1);
-          int var3_int = 11 % ((param0 + 91) / 34);
+          this.contextMenu.drawRoot(true, showTextSuffix);
+          int var3_int = 11 % ((obfuscationGuard + 91) / 34);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.H(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.H(" + obfuscationGuard + ',' + showTextSuffix + ')');
         }
     }
 
@@ -3099,7 +3099,7 @@ final class nn {
                   MultiplayerExitScreen.savePrompts[2] = MenuButton.a(var2, (byte) 81);
                 }
                 if (param1 <= 89) {
-                  nn.a((ResourceArchive) null, -113);
+                  ContextActionController.a((ResourceArchive) null, -113);
                 }
                 var2 = nk.a("mustlogin_alternate,3", (byte) -120);
                 if (null != var2) {
@@ -3213,51 +3213,51 @@ final class nn {
         decompiledBody.run();
     }
 
-    final void a(int[] param0, byte param1, int param2) {
+    final void addSocialActions(int[] suggestedPhraseIds, byte obfuscationGuard, int channel) {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
         RuntimeException decompiledCaughtException = null;
-        String var4 = null;
+        String caption = null;
         RuntimeException var4_ref = null;
-        mp var5 = null;
-        int var6 = 0;
+        mp friend = null;
+        int ignoredPlayer = 0;
         try {
-          if (null != this.field_e && (oc.field_p != this.field_i ||
-            param2 == 2) && 2 == LevelMetadata.field_m) {
-            var4 = this.c(-12688);
-            var5 = pf.a(false, this.field_e);
-            var6 = AchievementBrowserScreen.a(121, this.field_e) ? 1 : 0;
-            if (var5 == null &&
-              var6 == 0) {
-              this.contextMenu.addAction(rd.a(AchievementMaskRequest.field_l, new String[]{var4}, (byte) 103), 4, (byte) 105);
-              this.contextMenu.addAction(rd.a(ob.field_H, new String[]{var4}, (byte) 103), 6, (byte) 110);
-              if (null != param0 &&
-                2 != param2 &&
+          if (null != this.targetName && (oc.field_p != this.targetId ||
+            channel == 2) && 2 == LevelMetadata.field_m) {
+            caption = this.getTargetCaption(-12688);
+            friend = pf.a(false, this.targetName);
+            ignoredPlayer = AchievementBrowserScreen.a(121, this.targetName) ? 1 : 0;
+            if (friend == null &&
+              ignoredPlayer == 0) {
+              this.contextMenu.addAction(rd.a(AchievementMaskRequest.field_l, new String[]{caption}, (byte) 103), 4, (byte) 105);
+              this.contextMenu.addAction(rd.a(ob.field_H, new String[]{caption}, (byte) 103), 6, (byte) 110);
+              if (null != suggestedPhraseIds &&
+                2 != channel &&
                 !um.field_e) {
-                this.field_c = param0;
-                this.contextMenu.addAction(rd.a(cn.field_b, new String[]{var4}, (byte) 103), 19, (byte) 95);
+                this.suggestedPhraseIds = suggestedPhraseIds;
+                this.contextMenu.addAction(rd.a(cn.field_b, new String[]{caption}, (byte) 103), 19, (byte) 95);
               }
             }
-            if (null != var5) {
-              if (!m.a(13134, this.field_e) &&
+            if (null != friend) {
+              if (!m.a(13134, this.targetName) &&
                 !um.field_e) {
                 if (!qo.field_I) {
-                  this.contextMenu.addAction(rd.a(ClientException.field_c, new String[]{var4}, (byte) 103), 8, (byte) 80);
+                  this.contextMenu.addAction(rd.a(ClientException.field_c, new String[]{caption}, (byte) 103), 8, (byte) 80);
                 }
-                this.contextMenu.addAction(rd.a(qm.field_b, new String[]{var4}, (byte) 103), 18, (byte) 104);
-                if (null != param0) {
-                  this.field_c = param0;
-                  this.contextMenu.addAction(rd.a(cn.field_b, new String[]{var4}, (byte) 103), 19, (byte) 72);
+                this.contextMenu.addAction(rd.a(qm.field_b, new String[]{caption}, (byte) 103), 18, (byte) 104);
+                if (null != suggestedPhraseIds) {
+                  this.suggestedPhraseIds = suggestedPhraseIds;
+                  this.contextMenu.addAction(rd.a(cn.field_b, new String[]{caption}, (byte) 103), 19, (byte) 72);
                 }
               }
-              this.contextMenu.addAction(rd.a(sj.field_g, new String[]{var4}, (byte) 103), 5, (byte) 106);
+              this.contextMenu.addAction(rd.a(sj.field_g, new String[]{caption}, (byte) 103), 5, (byte) 106);
             }
-            if (var6 != 0) {
-              this.contextMenu.addAction(rd.a(ri.field_O, new String[]{var4}, (byte) 103), 7, (byte) 82);
+            if (ignoredPlayer != 0) {
+              this.contextMenu.addAction(rd.a(ri.field_O, new String[]{caption}, (byte) 103), 7, (byte) 82);
             }
           }
-          if (param1 > -68) {
+          if (obfuscationGuard > -68) {
             worldDirectionZ = (int[]) null;
           }
           return;
@@ -3266,227 +3266,227 @@ final class nn {
           var4_ref = decompiledCaughtException;
           stackIn_53_0 = var4_ref;
           stackIn_53_1 = new StringBuilder().append("nn.I(");
-          if (param0 == null) {
+          if (suggestedPhraseIds == null) {
             stackIn_54_2 = "null";
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(obfuscationGuard).append(',').append(channel).append(')').toString());
         }
     }
 
-    final void a(boolean param0, boolean param1) {
+    final void addPlayerGameActions(boolean obfuscationGuard, boolean allowAdditionalActions) {
         RuntimeException decompiledCaughtException = null;
-        id var3 = null;
+        id gamePlayer = null;
         RuntimeException var3_ref = null;
-        id var4 = null;
-        String var5 = null;
-        int var6 = 0;
-        var6 = BrickABrac.field_J ? 1 : 0;
+        id invitedPlayer = null;
+        String caption = null;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!param0) {
-            this.a((byte) -36, true);
+          if (!obfuscationGuard) {
+            this.drawContextMenu((byte) -36, true);
           }
-          if (this.field_e != null &&
-            ~oc.field_p != ~this.field_i &&
+          if (this.targetName != null &&
+            ~oc.field_p != ~this.targetId &&
             null != o.field_e &&
             hn.b((byte) 7)) {
-            var3 = MatchCompleteScreen.a((byte) 96, this.field_i);
-            var4 = ac.a(this.field_i, 2);
-            var5 = this.c(-12688);
-            if (var4 != null) {
+            gamePlayer = MatchCompleteScreen.a((byte) 96, this.targetId);
+            invitedPlayer = ac.a(this.targetId, 2);
+            caption = this.getTargetCaption(-12688);
+            if (invitedPlayer != null) {
               if (o.field_e.field_Rb &&
                 o.field_e.field_yc < 0) {
                 return;
               }
-              this.contextMenu.addAction(rd.a(cq.field_q, new String[]{var5}, (byte) 103), 1, (byte) 94);
-              if (var6 == 0) {
+              this.contextMenu.addAction(rd.a(cq.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
+              if (unusedGameFlag == 0) {
                 return;
               }
             }
-            if (null != var3 &&
+            if (null != gamePlayer &&
               o.field_e.field_Dc &&
               o.field_e.field_jc > o.field_e.field_cc) {
-              if (var3.field_Qb) {
-                this.contextMenu.addAction(rd.a(hm.field_c, new String[]{var5}, (byte) 103), 1, (byte) 108);
-                if (var6 == 0) {
+              if (gamePlayer.field_Qb) {
+                this.contextMenu.addAction(rd.a(hm.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
+                if (unusedGameFlag == 0) {
                   return;
                 }
               }
-              if (param1 &&
-                var3.field_fc) {
-                this.contextMenu.addAction(rd.a(mc.field_b, new String[]{var5}, (byte) 103), 0, (byte) 112);
-                this.contextMenu.addAction(rd.a(RasterCacheSurface.field_o, new String[]{var5}, (byte) 103), 1, (byte) 116);
-                if (var6 == 0) {
+              if (allowAdditionalActions &&
+                gamePlayer.field_fc) {
+                this.contextMenu.addAction(rd.a(mc.field_b, new String[]{caption}, (byte) 103), 0, (byte) 112);
+                this.contextMenu.addAction(rd.a(RasterCacheSurface.field_o, new String[]{caption}, (byte) 103), 1, (byte) 116);
+                if (unusedGameFlag == 0) {
                   return;
                 }
               }
-              this.contextMenu.addAction(rd.a(ResourceRequest.field_A, new String[]{var5}, (byte) 103), 0, (byte) 126);
+              this.contextMenu.addAction(rd.a(ResourceRequest.field_A, new String[]{caption}, (byte) 103), 0, (byte) 126);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3_ref), "nn.C(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3_ref), "nn.C(" + obfuscationGuard + ',' + allowAdditionalActions + ')');
         }
     }
 
-    final void a(byte param0) {
+    final void addReportAction(byte obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         String var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (param0 > -66) {
-            this.b(32);
+          if (obfuscationGuard > -66) {
+            this.handleContextCancelKey(32);
           }
-          if (null != this.field_e &&
-            this.field_i != oc.field_p) {
-            var2 = this.c(-12688);
+          if (null != this.targetName &&
+            this.targetId != oc.field_p) {
+            var2 = this.getTargetCaption(-12688);
             this.contextMenu.addAction(rd.a(DesertBackground.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.K(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.K(" + obfuscationGuard + ')');
         }
     }
 
-    final boolean b(int param0) {
+    final boolean handleContextCancelKey(int obfuscationGuard) {
         RuntimeException var2 = null;
         boolean stackIn_10_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 2099) {
-            this.a((gb) null, -34);
+          if (obfuscationGuard != 2099) {
+            this.addMessageFilterActions((ChatMessage) null, -34);
           }
           stackIn_10_0 = (this.contextMenu != null) && (this.contextMenu.handleCancelKey(94));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "nn.N(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "nn.N(" + obfuscationGuard + ')');
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, boolean param4) {
-        boolean discarded$4 = false;
-        boolean discarded$5 = false;
-        boolean discarded$6 = false;
-        boolean discarded$7 = false;
-        int var6_int = 0;
+    final boolean pollAndDispatchAction(int pendingResult, int socialAndFilterOpcode, int unusedReportOption, int gameOpcode, boolean inputEnabled) {
+        boolean ignoredGameResult = false;
+        boolean ignoredSocialResult = false;
+        boolean ignoredChatResult = false;
+        boolean ignoredReportResult = false;
+        int actionId = 0;
         RuntimeException var6 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = this.contextMenu.updateAndPollAction((byte) -60, param4);
-          if (param0 == var6_int) {
+          actionId = this.contextMenu.updateAndPollAction((byte) -60, inputEnabled);
+          if (pendingResult == actionId) {
             return false;
           }
-          discarded$4 = this.b((byte) 97, param3, var6_int);
-          discarded$5 = this.a((byte) -67, var6_int, param1);
-          discarded$6 = this.a(param1, false, var6_int);
-          discarded$7 = this.a(122, var6_int, param2);
+          ignoredGameResult = this.dispatchGameAction((byte) 97, gameOpcode, actionId);
+          ignoredSocialResult = this.dispatchSocialAction((byte) -67, actionId, socialAndFilterOpcode);
+          ignoredChatResult = this.dispatchChatAction(socialAndFilterOpcode, false, actionId);
+          ignoredReportResult = this.dispatchReportAction(122, actionId, unusedReportOption);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var6), "nn.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var6), "nn.J(" + pendingResult + ',' + socialAndFilterOpcode + ',' + unusedReportOption + ',' + gameOpcode + ',' + inputEnabled + ')');
         }
     }
 
-    private final boolean a(byte param0, int param1, int param2) {
-        boolean discarded$1 = false;
-        Object var4 = null;
-        String var4_ref = null;
+    private final boolean dispatchSocialAction(byte obfuscationGuard, int actionId, int opcode) {
+        boolean ignoredGuardResult = false;
+        Object unusedError = null;
+        String errorMessage = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4_ref2 = null;
         try {
-          if (param0 != -67) {
-            discarded$1 = this.a(-62, 55, -75);
+          if (obfuscationGuard != -67) {
+            ignoredGuardResult = this.dispatchReportAction(-62, 55, -75);
           }
-          var4 = null;
-          if (param1 == 4) {
-            var4_ref = jl.a(param0 ^ -24878, this.field_e, param2);
+          unusedError = null;
+          if (actionId == 4) {
+            errorMessage = jl.a(obfuscationGuard ^ -24878, this.targetName, opcode);
           } else {
-            if (param1 == 5) {
-              var4_ref = KeyboardInput.a(param2, false, this.field_e);
+            if (actionId == 5) {
+              errorMessage = KeyboardInput.a(opcode, false, this.targetName);
             } else {
-              if (6 == param1) {
-                var4_ref = me.a(this.field_e, param2, 2);
+              if (6 == actionId) {
+                errorMessage = me.a(this.targetName, opcode, 2);
               } else {
-                if (7 != param1) {
+                if (7 != actionId) {
                   return false;
                 }
-                var4_ref = uf.a(this.field_e, param2, this.field_k, -66);
+                errorMessage = uf.a(this.targetName, opcode, this.targetDisplayName, -66);
               }
             }
           }
-          if (var4_ref != null) {
-            SoundCache.a((byte) 92, 0, (String) null, var4_ref, this.field_e, 2);
+          if (errorMessage != null) {
+            SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, errorMessage, this.targetName, 2);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4_ref2), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4_ref2), "nn.D(" + obfuscationGuard + ',' + actionId + ',' + opcode + ')');
         }
     }
 
-    private final boolean b(byte param0, int param1, int param2) {
+    private final boolean dispatchGameAction(byte obfuscationGuard, int opcode, int actionId) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        int var5 = 0;
-        var5 = BrickABrac.field_J ? 1 : 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param2 == 0) {
-            hd.a(this.field_i, 69, param1);
+          if (actionId == 0) {
+            hd.a(this.targetId, 69, opcode);
           }
-          if (param2 != 0 ||
-            var5 != 0) {
-            if (param2 != 1) {
-              if (param2 != 2) {
-                if (3 == param2) {
-                  vg.a(this.field_b, false, param1);
+          if (actionId != 0 ||
+            unusedGameFlag != 0) {
+            if (actionId != 1) {
+              if (actionId != 2) {
+                if (3 == actionId) {
+                  vg.a(this.gameId, false, opcode);
                 }
-                if (3 != param2 ||
-                  var5 != 0) {
-                  if (param2 == 10) {
-                    dn.b(this.field_b, param0 - 11, param1);
+                if (3 != actionId ||
+                  unusedGameFlag != 0) {
+                  if (actionId == 10) {
+                    dn.b(this.gameId, obfuscationGuard - 11, opcode);
                   }
-                  if (param2 != 10 ||
-                    var5 != 0) {
-                    if (param2 == 15) {
-                      ContextMenu.a(param1, (byte) -34, this.field_b);
+                  if (actionId != 10 ||
+                    unusedGameFlag != 0) {
+                    if (actionId == 15) {
+                      ContextMenu.a(opcode, (byte) -34, this.gameId);
                     }
-                    if (param2 != 15 ||
-                      var5 != 0) {
-                      if (param2 != 16) {
+                    if (actionId != 15 ||
+                      unusedGameFlag != 0) {
+                      if (actionId != 16) {
                         return false;
                       }
-                      ContextMenu.a(param1, (byte) 120, 0);
-                      if (var5 != 0) {
-                        jb.b(this.field_b, param1, param0 + 11815);
-                        rf.a(param1, this.field_i, true);
+                      ContextMenu.a(opcode, (byte) 120, 0);
+                      if (unusedGameFlag != 0) {
+                        jb.b(this.gameId, opcode, obfuscationGuard + 11815);
+                        rf.a(opcode, this.targetId, true);
                       }
                     }}}} else {
-                jb.b(this.field_b, param1, param0 + 11815);
-                if (var5 != 0) {
-                  rf.a(param1, this.field_i, true);
+                jb.b(this.gameId, opcode, obfuscationGuard + 11815);
+                if (unusedGameFlag != 0) {
+                  rf.a(opcode, this.targetId, true);
                 }
               }
             } else {
-              rf.a(param1, this.field_i, true);
+              rf.a(opcode, this.targetId, true);
             }
           }
-          if (param0 != 97) {
+          if (obfuscationGuard != 97) {
             worldDirectionZ = (int[]) null;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.G(" + obfuscationGuard + ',' + opcode + ',' + actionId + ')');
         }
     }
 
@@ -3503,26 +3503,26 @@ final class nn {
         }
     }
 
-    private final boolean a(int param0, int param1, int param2) {
+    private final boolean dispatchReportAction(int obfuscationGuard, int actionId, int unusedReportOption) {
         RuntimeException var4 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 17) {
-            CircleBody.reportAbuseDialog = new ReportAbuseDialog(this.field_j.screenX, this.field_j.screenY, this.field_j.width, this.field_j.height, param2, MenuSelection.field_m, rf.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
+          if (actionId == 17) {
+            CircleBody.reportAbuseDialog = new ReportAbuseDialog(this.anchorComponent.screenX, this.anchorComponent.screenY, this.anchorComponent.width, this.anchorComponent.height, unusedReportOption, MenuSelection.field_m, rf.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.targetName, this.targetId);
             return true;
           }
-          if (param0 < 121) {
+          if (obfuscationGuard < 121) {
             this.contextMenu = (ContextMenu) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.E(" + obfuscationGuard + ',' + actionId + ',' + unusedReportOption + ')');
         }
     }
 
-    nn(UiComponent param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    ContextActionController(UiComponent anchorComponent, long targetId, String targetName, String targetDisplayName, int gameId, int chatChannel, int[] suggestedPhraseIds) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -3535,40 +3535,40 @@ final class nn {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.contextMenu = new ContextMenu(ce.field_b);
-          this.field_i = param1;
-          this.field_j = param0;
-          this.field_a = param5;
-          this.field_b = param4;
-          this.field_e = param2;
-          param0.selected = true;
-          this.field_c = param6;
-          this.field_k = param3;
+          this.contextMenu = new ContextMenu(ce.contextMenuStyle);
+          this.targetId = targetId;
+          this.anchorComponent = anchorComponent;
+          this.chatChannel = chatChannel;
+          this.gameId = gameId;
+          this.targetName = targetName;
+          anchorComponent.selected = true;
+          this.suggestedPhraseIds = suggestedPhraseIds;
+          this.targetDisplayName = targetDisplayName;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("nn.<init>(");
-          if (param0 == null) {
+          if (anchorComponent == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(targetId).append(',');
+          if (targetName == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param3 == null) {
+          if (targetDisplayName == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(gameId).append(',').append(chatChannel).append(',');
+          if (suggestedPhraseIds == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -3577,33 +3577,33 @@ final class nn {
         }
     }
 
-    final void a(gb param0, int param1) {
+    final void addMessageFilterActions(ChatMessage message, int obfuscationGuard) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0.field_e) {
+          if (message.systemMessage) {
             return;
           }
-          this.field_a = param0.field_c;
-          if (param0.field_c == 0) {
+          this.chatChannel = message.channel;
+          if (message.channel == 0) {
             if (InstructionsScreen.lobbyChatFilter == 0) {
               this.contextMenu.addAction(RasterSnapshot.field_l, 12, (byte) 81);
             }
             this.contextMenu.addAction(co.field_e, 13, (byte) 87);
           }
-          if (param1 >= -70) {
+          if (obfuscationGuard >= -70) {
             return;
           }
-          if (param0.field_c == 1) {
+          if (message.channel == 1) {
             if (InstructionsScreen.gameChatFilter == 0) {
               this.contextMenu.addAction(ej.field_K, 12, (byte) 107);
             }
             this.contextMenu.addAction(CacheIoWorker.field_b, 13, (byte) 82);
           }
-          if (param0.field_c == 2) {
+          if (message.channel == 2) {
             if (to.privateChatFilter == 0) {
               this.contextMenu.addAction(qp.field_d, 12, (byte) 121);
             }
@@ -3615,12 +3615,12 @@ final class nn {
           var3 = decompiledCaughtException;
           stackIn_32_0 = var3;
           stackIn_32_1 = new StringBuilder().append("nn.O(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

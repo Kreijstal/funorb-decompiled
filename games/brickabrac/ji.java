@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ji implements Iterable {
-    static boolean field_f;
+    static boolean receivedChatSystem;
     private IntrusiveNode field_h;
     static Random packetDelayRandom;
     static String field_g;

@@ -88,12 +88,12 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           return;
         }
         var4 = ob.field_D.descent + ob.field_D.capHeight;
-        var5 = nn.field_g.capHeight + nn.field_g.descent;
+        var5 = ContextActionController.field_g.capHeight + ContextActionController.field_g.descent;
         if (-1 != var3) {
           stackIn_17_0 = (!DirectByteStorage.isBitSet(this.achievementMask, var3, (byte) -75)) ? 0 : 1;
           var6 = stackIn_17_0;
-          nn.field_g.drawLeft(field_s[var3], 209, nn.field_g.capHeight + 246, 1, -1);
-          stackIn_19_0 = nn.field_g;
+          ContextActionController.field_g.drawLeft(field_s[var3], 209, ContextActionController.field_g.capHeight + 246, 1, -1);
+          stackIn_19_0 = ContextActionController.field_g;
           if (var6 == 0) {
             stackIn_20_1 = po.field_c;
           } else {
@@ -114,7 +114,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
             var8 = var8 + var4;
           }
           ob.field_D.drawLeft(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.descent) - nj.field_z.height / 2), 2, -1);
-          ob.field_D.drawLeft(fl.field_m, 209, -nn.field_g.descent + var9, 2, -1);
+          ob.field_D.drawLeft(fl.field_m, 209, -ContextActionController.field_g.descent + var9, 2, -1);
           var11Lifetime1 = ob.field_D.measureText(fl.field_m) + 209;
           var12 = -(nj.field_z.canvasHeight / 2) + var9;
           for (var13 = 0; fq.field_e[var3] > var13; var13++) {
@@ -122,7 +122,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
             var11Lifetime1 = var11Lifetime1 + nj.field_z.width / 3;
           }
         } else {
-          nn.field_g.drawLeft(ProducerFramebuffer.field_h, 209, 246 + nn.field_g.capHeight, 2, -1);
+          ContextActionController.field_g.drawLeft(ProducerFramebuffer.field_h, 209, 246 + ContextActionController.field_g.capHeight, 2, -1);
           if (QuickChatMenu.h(-26090)) {
             var6 = 246 + var5 * 3;
             ob.field_D.drawLeft(na.field_N, 209, var6, 2, -1);
@@ -560,7 +560,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
           var10 = stackIn_7_0;
           var7 = var10;
-          dupTemp$0 = 30 + nn.field_g.measureText(var10);
+          dupTemp$0 = 30 + ContextActionController.field_g.measureText(var10);
           var6_ref_q.width = dupTemp$0;
           var4 = var4 + dupTemp$0;
           if (var5 > 3) {

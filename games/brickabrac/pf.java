@@ -45,7 +45,7 @@ final class pf implements ub {
             return null;
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = gb.a(var6, 75);
+          var2 = ChatMessage.normalizePlayerName(var6, 75);
           if (var2 == null) {
             stackIn_10_0 = null;
             return (mp) (stackIn_10_0);
@@ -56,7 +56,7 @@ final class pf implements ub {
           }
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Rb);
-            var4 = gb.a(var7, 117);
+            var4 = ChatMessage.normalizePlayerName(var7, 117);
             if (var4.equals(var2)) {
               stackIn_18_0 = var3;
               return stackIn_18_0;

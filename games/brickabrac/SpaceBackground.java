@@ -170,7 +170,7 @@ final class SpaceBackground extends BackgroundScene {
             field_u = -69;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = ArchiveFetchClient.field_d.equals(gb.a(var3, 92));
+          stackIn_3_0 = ArchiveFetchClient.field_d.equals(ChatMessage.normalizePlayerName(var3, 92));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -152,8 +152,8 @@ final class so {
           ConstructionBackground.a(param3 ^ 29068, var21, 1);
           ma.field_O = IndexedSpriteGeometry.a(0, var21, 0, var16, 0, 1);
           ma.field_O.palettes = bg.field_n;
-          nn.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
-          nn.field_g.palettes = bg.field_n;
+          ContextActionController.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
+          ContextActionController.field_g.palettes = bg.field_n;
           var22 = param4.takeFileByName(86, "kartika13", "");
           var17 = var22;
           var14 = var17;

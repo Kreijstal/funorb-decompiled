@@ -6,14 +6,14 @@ final class gd {
     static String field_e;
     static String field_b;
     static int field_a;
-    static String field_d;
+    static String receivedChatText;
 
     public static void a(boolean param0) {
         field_b = null;
-        field_d = null;
+        receivedChatText = null;
         field_e = null;
         if (param0) {
-          field_d = (String) null;
+          receivedChatText = (String) null;
           field_c = null;
           return;
         }

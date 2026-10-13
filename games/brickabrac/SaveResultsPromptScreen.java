@@ -32,7 +32,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         super.drawScreen((byte) -39);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -81, 45);
         if (obfuscationGuard <= -14) {
-          nn.field_g.a(this.promptText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
+          ContextActionController.field_g.a(this.promptText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
           this.a(0);
           return;
         }

@@ -235,7 +235,7 @@ final class InstructionsScreen extends MenuScreen {
             stackIn_5_0 = this.e((byte) 112);
           }
           var7_ref_String = stackIn_5_0;
-          var8_int = nn.field_g.measureText(var7_ref_String);
+          var8_int = ContextActionController.field_g.measureText(var7_ref_String);
           if (var8_int > var4) {
             var4 = var8_int;
           }
@@ -325,7 +325,7 @@ final class InstructionsScreen extends MenuScreen {
         if (obfuscationGuard >= -14) {
           InstructionsScreen.g((byte) 61);
         }
-        nn.field_g.drawRight(RasterCacheSurface.a(this.pageIndex, 4), 581, -12 + (nn.field_g.capHeight + 373), 0, -1);
+        ContextActionController.field_g.drawRight(RasterCacheSurface.a(this.pageIndex, 4), 581, -12 + (ContextActionController.field_g.capHeight + 373), 0, -1);
         this.a(0);
     }
 

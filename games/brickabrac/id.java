@@ -42,7 +42,7 @@ final class id extends UiComponent {
           }
           this.field_Yb = param0;
           var6 = (CharSequence) ((Object) this.field_hc);
-          gb.a(var6, 116);
+          ChatMessage.normalizePlayerName(var6, 116);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "id.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -56,7 +56,7 @@ final class id extends UiComponent {
           this.field_Yb = param1;
           this.field_gc = param2;
           var6 = (CharSequence) ((Object) this.field_hc);
-          gb.a(var6, 124);
+          ChatMessage.normalizePlayerName(var6, 124);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -22,7 +22,7 @@ final class MusicVoice extends IntrusiveNode {
     int decayProgress;
     int notePan;
     int vibratoPhase;
-    static int field_E;
+    static int receivedChatContextId;
     int velocityGain;
     PcmSound sample;
     int field_j;
@@ -639,7 +639,7 @@ final class MusicVoice extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 60) {
-            field_E = -98;
+            receivedChatContextId = -98;
           }
           stackIn_10_0 = (r.field_A) && (~ga.field_i != ~pp.field_a);
           return stackIn_10_0;
@@ -825,7 +825,7 @@ final class MusicVoice extends IntrusiveNode {
                   centerXOrDirectionZ = mesh.directionZ[relativeXZOrDirectionIndex];
                   wl.worldDirectionX[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeXYOrWorldXZ + (cameraXOrWorldXX * relativeYZOrDirectionX + relativeZZOrDirectionY * relativeXXOrWorldXY) >> 16;
                   ff.worldDirectionY[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeYYOrWorldYZ + relativeYXOrWorldYY * relativeZZOrDirectionY + relativeYZOrDirectionX * cameraYOrWorldYX >> 16;
-                  nn.worldDirectionZ[relativeXZOrDirectionIndex] = relativeYZOrDirectionX * cameraZOrWorldZX - (-(relativeZZOrDirectionY * relativeZXOrWorldZY) - centerXOrDirectionZ * relativeZYOrWorldZZ) >> 16;
+                  ContextActionController.worldDirectionZ[relativeXZOrDirectionIndex] = relativeYZOrDirectionX * cameraZOrWorldZX - (-(relativeZZOrDirectionY * relativeZXOrWorldZY) - centerXOrDirectionZ * relativeZYOrWorldZZ) >> 16;
                   relativeXZOrDirectionIndex++;
                 }
               }

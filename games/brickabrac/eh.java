@@ -13,7 +13,7 @@ final class eh {
     static String[] field_e;
     int field_f;
     int field_j;
-    static int field_k;
+    static int chatHistoryCategoryLimit;
     static UiComponent field_n;
     ub field_b;
     ub field_r;
@@ -408,7 +408,7 @@ final class eh {
           sq.quickChatHelpDialog.drawRoot(true, param0);
         }
         if (!param1) {
-          field_k = -26;
+          chatHistoryCategoryLimit = -26;
         }
     }
 

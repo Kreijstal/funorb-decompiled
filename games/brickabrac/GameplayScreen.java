@@ -1737,7 +1737,7 @@ final class GameplayScreen extends GameScreen {
           Rasterizer2D.fillRectangleAlpha(7, 473, 510, 7, 0, 96);
           Rasterizer2D.fillRectangleAlpha(524, 0, 116, 480, 0, 96);
           nh.a(125, 482, -40, 516, cd.field_h, -1);
-          DualLinkNode.a(130, this.match, nn.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
+          DualLinkNode.a(130, this.match, ContextActionController.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
           nh.a(125, 9, -40, 516, cd.field_h, 137);
           if (!r.field_A ||
             wc.field_b) {
@@ -1751,7 +1751,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             if (null != var7_ref_j.displayedMessage) {
               var12 = (IndexedSprite[]) null;
-              ui.a(var7_ref_j.displayedMessage, nn.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
+              ui.a(var7_ref_j.displayedMessage, ContextActionController.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
             }
           }
         }

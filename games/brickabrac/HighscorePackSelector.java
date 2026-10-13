@@ -97,7 +97,7 @@ final class HighscorePackSelector {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var2 = gb.a(var7, 85);
+          var2 = ChatMessage.normalizePlayerName(var7, 85);
           if (var2 == null) {
             var2 = param1;
           }
@@ -111,7 +111,7 @@ final class HighscorePackSelector {
               return null;
             }
             var8 = (CharSequence) ((Object) var3.field_Rb);
-            var4 = gb.a(var8, param0 + 55);
+            var4 = ChatMessage.normalizePlayerName(var8, param0 + 55);
             if (var4 == null) {
               var4 = var3.field_Rb;
             }

@@ -59,7 +59,7 @@ final class ch {
             }
             var6 = HighscorePackSelector.a(0, var4_ref_String);
             var7_ref = var1.readCp1252String(-1);
-            var8 = gb.a((CharSequence) ((Object) var4_ref_String), 69);
+            var8 = ChatMessage.normalizePlayerName((CharSequence) ((Object) var4_ref_String), 69);
             if (null == var8) {
               var8 = var4_ref_String;
             }
@@ -124,12 +124,12 @@ final class ch {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = pf.a(false, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              BlankScreen.field_i.put((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 87).hashCode(), var6Lifetime1, 104);
+              BlankScreen.field_i.put((long)ChatMessage.normalizePlayerName((CharSequence) ((Object) var4_ref_StringLifetime1), 87).hashCode(), var6Lifetime1, 104);
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new mp();
-            BlankScreen.field_i.put((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 116).hashCode(), var6Lifetime1, 101);
+            BlankScreen.field_i.put((long)ChatMessage.normalizePlayerName((CharSequence) ((Object) var4_ref_StringLifetime1), 116).hashCode(), var6Lifetime1, 101);
             fieldTemp$0 = LevelPackSelectScreen.field_w;
             LevelPackSelectScreen.field_w = LevelPackSelectScreen.field_w + 1;
             var6Lifetime1.field_Sb = fieldTemp$0;

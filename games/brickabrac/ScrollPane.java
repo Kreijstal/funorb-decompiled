@@ -6,7 +6,7 @@ final class ScrollPane extends UiComponent {
     static int field_Pb;
     UiComponent viewport;
     VerticalScrollbar scrollbar;
-    static int field_Sb;
+    static int chatHistorySize;
     static int field_Tb;
 
     final void updateScroll(boolean obfuscationGuard, int lineStep, boolean clampMinimumFirst, int wheelDisplacement) {

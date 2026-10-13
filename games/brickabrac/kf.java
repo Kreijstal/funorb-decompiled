@@ -201,7 +201,7 @@ final class kf extends k {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = gb.a(param1, param2 + 111);
+            var4 = ChatMessage.normalizePlayerName(param1, param2 + 111);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!ik.isNameSeparator((byte) -9, var4.charAt(0)) &&

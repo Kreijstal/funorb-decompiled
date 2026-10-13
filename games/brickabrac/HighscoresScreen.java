@@ -123,8 +123,8 @@ final class HighscoresScreen extends MenuScreen {
             ob.field_D.drawRight(param0 + 1 + ". ", SecondaryNodeQueue.field_b[0], param2, param3, -1);
           }
           ob.field_D.drawLeft(param7, SecondaryNodeQueue.field_b[0], param2, param3, -1);
-          ob.field_D.drawCentered(Integer.toString(1 + param1), SecondaryNodeQueue.field_b[1] - nn.field_g.measureText(SpriteGeometry.field_u) / 2, param2, param3, -1);
-          ob.field_D.drawCentered(Integer.toString(1 + param4), SecondaryNodeQueue.field_b[2] - nn.field_g.measureText(ba.field_u) / 2, param2, param3, -1);
+          ob.field_D.drawCentered(Integer.toString(1 + param1), SecondaryNodeQueue.field_b[1] - ContextActionController.field_g.measureText(SpriteGeometry.field_u) / 2, param2, param3, -1);
+          ob.field_D.drawCentered(Integer.toString(1 + param4), SecondaryNodeQueue.field_b[2] - ContextActionController.field_g.measureText(ba.field_u) / 2, param2, param3, -1);
           ob.field_D.drawRight(Integer.toString(param6), SecondaryNodeQueue.field_b[3], param2, param3, -1);
           int var9_int = 102 % ((param5 + 15) / 45);
         } catch (RuntimeException runtimeException) {
@@ -132,14 +132,14 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final static char a(int param0, char param1) {
+    final static char foldPlayerNameCharacter(int obfuscationGuard, char character) {
         int var2;
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (param0 != 207) {
+        if (obfuscationGuard != 207) {
           return 'j';
         }
-        var2 = param1;
+        var2 = character;
         if (32 != var2 &&
           160 != var2 &&
           var2 != 95 &&
@@ -196,7 +196,7 @@ final class HighscoresScreen extends MenuScreen {
                           if (var2 != 241 &&
                             var2 != 209) {
                             if (223 != var2) {
-                              return Character.toLowerCase(param1);
+                              return Character.toLowerCase(character);
                             }
                             return 'b';
                           }
@@ -216,7 +216,7 @@ final class HighscoresScreen extends MenuScreen {
             }
             return 'a';
           }
-          return param1;
+          return character;
         }
         return '_';
     }
@@ -252,7 +252,7 @@ final class HighscoresScreen extends MenuScreen {
             }
             var9 = stackIn_8_0;
             var5_ref = var9;
-            var6_int = nn.field_g.measureText(var9) + 30;
+            var6_int = ContextActionController.field_g.measureText(var9) + 30;
             if (var6_int > var2) {
               var2 = var6_int;
             }
@@ -463,7 +463,7 @@ final class HighscoresScreen extends MenuScreen {
               }
             }
             if (param1 != 9) {
-              HighscoresScreen.a(-62, '&');
+              HighscoresScreen.foldPlayerNameCharacter(-62, '&');
             }
             param0.appendCrc32(3, var4);
             var17.unlink((byte) 111);
@@ -657,23 +657,23 @@ final class HighscoresScreen extends MenuScreen {
         this.a(0);
         if (QuickChatMenu.h(-26090)) {
           GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);
-          VerticalScrollbar.a(243, na.field_N, 140, nn.field_g, -15531, 2);
+          VerticalScrollbar.a(243, na.field_N, 140, ContextActionController.field_g, -15531, 2);
           return;
         }
         GzipInflater.a(475, 5, 33, 5, 140, (byte) -101, 120);
-        nn.field_g.drawCentered(qn.packNames[this.packIndex], 357, 1 + (-nn.field_g.xHeight + 178), 0, -1);
+        ContextActionController.field_g.drawCentered(qn.packNames[this.packIndex], 357, 1 + (-ContextActionController.field_g.xHeight + 178), 0, -1);
         ArchiveNetworkRequest.packSelectorIcons[this.packIndex].e(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
           field_v = -65;
         }
         GzipInflater.a(475, 5, 243, 5, 178, (byte) -57, 120);
-        var2 = 149 + nn.field_g.capHeight + 38;
+        var2 = 149 + ContextActionController.field_g.capHeight + 38;
         var3 = 0;
-        nn.field_g.drawLeft(DualLinkIterator.field_i, -HuffmanCodec.field_g + SecondaryNodeQueue.field_b[0] + 12, var2, var3, -1);
-        nn.field_g.drawRight(SpriteGeometry.field_u, SecondaryNodeQueue.field_b[1], var2, var3, -1);
-        nn.field_g.drawRight(ba.field_u, SecondaryNodeQueue.field_b[2], var2, var3, -1);
-        nn.field_g.drawRight(pj.field_d, SecondaryNodeQueue.field_b[3], var2, var3, -1);
-        var2Lifetime1 = 5 * (nn.field_g.descent + nn.field_g.capHeight) / 2 + 187;
+        ContextActionController.field_g.drawLeft(DualLinkIterator.field_i, -HuffmanCodec.field_g + SecondaryNodeQueue.field_b[0] + 12, var2, var3, -1);
+        ContextActionController.field_g.drawRight(SpriteGeometry.field_u, SecondaryNodeQueue.field_b[1], var2, var3, -1);
+        ContextActionController.field_g.drawRight(ba.field_u, SecondaryNodeQueue.field_b[2], var2, var3, -1);
+        ContextActionController.field_g.drawRight(pj.field_d, SecondaryNodeQueue.field_b[3], var2, var3, -1);
+        var2Lifetime1 = 5 * (ContextActionController.field_g.descent + ContextActionController.field_g.capHeight) / 2 + 187;
         var4 = null;
         if (rf.field_g != null &&
           rf.field_g.complete) {
@@ -712,7 +712,7 @@ final class HighscoresScreen extends MenuScreen {
           var4_ref = kd.field_a;
         }
         if (var4_ref != null) {
-          InteractiveGameClient.a(178, nn.field_g, var4_ref, 357, 243, 2, 15);
+          InteractiveGameClient.a(178, ContextActionController.field_g, var4_ref, 357, 243, 2, 15);
         }
         this.packSelector.draw(117);
     }

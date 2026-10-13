@@ -99,35 +99,35 @@ final class tf {
         RuntimeException var4 = null;
         int var6 = 0;
         int var7 = 0;
-        nn var9 = null;
+        ContextActionController var9 = null;
         String var10 = null;
-        nn var11 = null;
+        ContextActionController var11 = null;
         String var12 = null;
-        nn var13 = null;
+        ContextActionController var13 = null;
         String var14 = null;
-        nn var15 = null;
+        ContextActionController var15 = null;
         try {
           var4_int = 47 / ((param2 + 13) / 51);
           SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.e((byte) -14), (byte) -58, 0L, (String) null);
           if (param0.field_Rb && (param0.field_wc == 2 ||
             !(QuickChatHelpDialog.field_Yb < 2))) {
-            var9 = bm.field_d;
+            var9 = bm.contextActions;
             var10 = rd.a(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);
             var9.contextMenu.addAction(var10, 10, (byte) 91);
           }
-          bm.field_d.a(true);
+          bm.contextActions.addGameActions(true);
           if (param1) {
-            if (bm.field_d.field_b == MenuSelection.field_i) {
-              var13 = bm.field_d;
+            if (bm.contextActions.gameId == MenuSelection.field_i) {
+              var13 = bm.contextActions;
               var14 = rd.a(co.field_d, new String[]{param3}, (byte) 103);
               var13.contextMenu.addAction(var14, 16, (byte) 90);
             } else {
-              var11 = bm.field_d;
+              var11 = bm.contextActions;
               var12 = rd.a(Paddle.field_G, new String[]{param3}, (byte) 103);
               var11.contextMenu.addAction(var12, 15, (byte) 116);
             }
           }
-          var15 = bm.field_d;
+          var15 = bm.contextActions;
           var6 = tb.pressX;
           var7 = qo.pressY;
           var15.contextMenu.layoutAtAnchor(var7, -102, 0, 0, var6);

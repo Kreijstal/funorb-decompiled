@@ -161,18 +161,18 @@ final class sq {
     }
 
     final static void a(boolean param0, int param1, int param2) {
-        nn var4_ref_nn = null;
+        ContextActionController var4_ref_nn = null;
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
         mp var3 = wn.a(param0, param1, -16);
-        nn var4_ref_nnLifetime1;
+        ContextActionController var4_ref_nnLifetime1;
         if (var3 != null) {
-          bm.field_d.a(true, false);
-          var4_ref_nn = bm.field_d;
+          bm.contextActions.addPlayerGameActions(true, false);
+          var4_ref_nn = bm.contextActions;
           var5_ref_String = ChocolateBackground.field_y;
           var4_ref_nn.contextMenu.addAction(var5_ref_String, 5, (byte) 104);
-          var4_ref_nnLifetime1 = bm.field_d;
+          var4_ref_nnLifetime1 = bm.contextActions;
           var5 = tb.pressX;
           var6 = qo.pressY;
           var4_ref_nnLifetime1.contextMenu.layoutAtAnchor(var6, -98, 0, 0, var5);

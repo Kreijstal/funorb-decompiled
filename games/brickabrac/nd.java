@@ -8,10 +8,10 @@ final class nd {
     static boolean field_b;
     static int field_c;
     static UiComponent field_a;
-    static String field_g;
+    static String receivedChatSenderName;
 
     public static void a(byte param0) {
-        field_g = null;
+        receivedChatSenderName = null;
         field_a = null;
         if (param0 != 121) {
           return;

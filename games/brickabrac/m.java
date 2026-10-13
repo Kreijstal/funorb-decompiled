@@ -100,7 +100,7 @@ final class m {
           if (ng.quickChatChannel == 2 &&
             QuickChatHelpDialog.field_Qb != null) {
             var3 = (CharSequence) ((Object) param1);
-            if (QuickChatHelpDialog.field_Qb.equals(gb.a(var3, param0 - 13073))) {
+            if (QuickChatHelpDialog.field_Qb.equals(ChatMessage.normalizePlayerName(var3, param0 - 13073))) {
               if (param0 == 13134) {
                 return true;
               }

@@ -301,8 +301,8 @@ final class hk extends ib implements hf, en {
         int var1 = 0;
         int var2 = 0;
         if (param0 >= 4) {
-          var1 = nn.field_g.measureText(ag.buttonLabels[20]);
-          var2 = nn.field_g.measureText(ag.buttonLabels[21]);
+          var1 = ContextActionController.field_g.measureText(ag.buttonLabels[20]);
+          var2 = ContextActionController.field_g.measureText(ag.buttonLabels[21]);
           dg.field_d = (var2 >= var1 ? var2 : var1) + 4;
           QuickChatMenu.field_Zb = QuickChatMenu.field_Zb + (dg.field_d + 120);
           return;

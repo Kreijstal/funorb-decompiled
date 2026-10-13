@@ -136,15 +136,15 @@ final class cr extends oc {
     }
 
     final static void f(byte param0) {
-        if (null != bm.field_d &&
-          bm.field_d.field_j != null) {
-          bm.field_d.field_j.selected = false;
+        if (null != bm.contextActions &&
+          bm.contextActions.anchorComponent != null) {
+          bm.contextActions.anchorComponent.selected = false;
         }
         if (param0 >= -39) {
           cr.a(0, 110);
         }
         o.field_b = null;
-        bm.field_d = null;
+        bm.contextActions = null;
     }
 
     final void a(oc param0, byte param1, int param2, int param3) {

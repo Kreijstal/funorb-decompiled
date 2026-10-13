@@ -42,7 +42,7 @@ final class QuickChatParameterType {
           DualLinkNode.quickChatRecipient = param4;
           ng.quickChatChannel = param2;
           var7 = (CharSequence) ((Object) param4);
-          QuickChatHelpDialog.field_Qb = gb.a(var7, 64);
+          QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var7, 64);
           qn.field_n = param1;
           var6 = SaveResultsPromptScreen.a(param0, cp.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
           if (param3) {

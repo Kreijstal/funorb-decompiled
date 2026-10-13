@@ -129,7 +129,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        gb var9 = null;
+        ChatMessage var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           if (ScrollPaneWithFooter.field_Yb > hc.field_f) {

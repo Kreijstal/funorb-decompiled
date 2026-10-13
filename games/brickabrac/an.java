@@ -7,7 +7,7 @@ final class an extends pj implements hf, ph {
     static String field_g;
     static QuickChatParameterType field_i;
     static int field_h;
-    static long field_k;
+    static long receivedChatSenderId;
 
     public static void c(byte param0) {
         field_j = null;
@@ -119,13 +119,13 @@ final class an extends pj implements hf, ph {
         int var1_int = 0;
         int var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var1_int = 0; var1_int < ScrollPane.field_Sb; var1_int++) {
-            UnderwaterBackground.field_s[var1_int] = null;
+          for (var1_int = 0; var1_int < ScrollPane.chatHistorySize; var1_int++) {
+            UnderwaterBackground.chatHistory[var1_int] = null;
           }
           if (param0 != -56) {
             field_i = (QuickChatParameterType) null;
           }
-          ScrollPane.field_Sb = 0;
+          ScrollPane.chatHistorySize = 0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.R(" + param0 + ')');
         }
@@ -133,7 +133,7 @@ final class an extends pj implements hf, ph {
 
     public final boolean a(byte param0) {
         if (param0 > -27) {
-          field_k = 93L;
+          receivedChatSenderId = 93L;
         }
         return this.field_l.h((byte) -124);
     }

@@ -94,7 +94,7 @@ final class mp extends UiComponent {
           highlights = new int[mesh.directionCount];
           directionX = wl.worldDirectionX;
           directionY = ff.worldDirectionY;
-          directionZ = nn.worldDirectionZ;
+          directionZ = ContextActionController.worldDirectionZ;
           for (direction = 0; mesh.directionCount > direction; direction++) {
             diffuseDot = directionZ[direction] * diffuseZ + diffuseY * directionY[direction] + directionX[direction] * diffuseX >> 8;
             if (0 > diffuseDot) {

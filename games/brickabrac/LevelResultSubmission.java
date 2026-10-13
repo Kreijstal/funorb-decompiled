@@ -68,7 +68,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               var2 = rd.a(kk.field_c, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
             }
             if (TooltipSprite.field_p) {
-              SoundCache.a((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
+              SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
               QuickChatParameterType.b(1);
             }
           }
@@ -186,13 +186,13 @@ final class LevelResultSubmission extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          eh.field_k = param1;
-          BubbleDistortion.field_B = new int[3];
-          ScrollPane.field_Sb = 0;
+          eh.chatHistoryCategoryLimit = param1;
+          BubbleDistortion.chatHistoryCategoryCounts = new int[3];
+          ScrollPane.chatHistorySize = 0;
           if (param0 > -4) {
             LevelResultSubmission.c(104);
           }
-          UnderwaterBackground.field_s = new gb[param1 * 15];
+          UnderwaterBackground.chatHistory = new ChatMessage[param1 * 15];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

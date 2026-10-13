@@ -8,7 +8,7 @@ final class n {
     static String field_b;
     static String field_a;
 
-    final static void a(int param0, gb param1) {
+    final static void appendChatHistory(int firstOutputIndex, ChatMessage message) {
         int dupTemp$3 = 0;
         int dupTemp$0 = 0;
         int var3 = 0;
@@ -27,43 +27,43 @@ final class n {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            BubbleDistortion.field_B[var2_int] = 0;
+            BubbleDistortion.chatHistoryCategoryCounts[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; ScrollPane.field_Sb > var2_intLifetime1; var2_intLifetime1++) {
-            if (param1.field_c == UnderwaterBackground.field_s[var2_intLifetime1].field_c) {
-              dupTemp$3 = UnderwaterBackground.field_s[var2_intLifetime1].a(true);
-              BubbleDistortion.field_B[dupTemp$3] = BubbleDistortion.field_B[dupTemp$3] + 1;
+          for (var2_intLifetime1 = 0; ScrollPane.chatHistorySize > var2_intLifetime1; var2_intLifetime1++) {
+            if (message.channel == UnderwaterBackground.chatHistory[var2_intLifetime1].channel) {
+              dupTemp$3 = UnderwaterBackground.chatHistory[var2_intLifetime1].getRetentionCategory(true);
+              BubbleDistortion.chatHistoryCategoryCounts[dupTemp$3] = BubbleDistortion.chatHistoryCategoryCounts[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param1.a(true);
-          BubbleDistortion.field_B[dupTemp$0] = BubbleDistortion.field_B[dupTemp$0] + 1;
-          var2_intLifetime2 = param0;
-          for (var3 = 0; ScrollPane.field_Sb > var3; var3++) {
+          dupTemp$0 = message.getRetentionCategory(true);
+          BubbleDistortion.chatHistoryCategoryCounts[dupTemp$0] = BubbleDistortion.chatHistoryCategoryCounts[dupTemp$0] + 1;
+          var2_intLifetime2 = firstOutputIndex;
+          for (var3 = 0; ScrollPane.chatHistorySize > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param1.field_c == UnderwaterBackground.field_s[var3].field_c) {
-              var4 = UnderwaterBackground.field_s[var3].a(true);
-              if (eh.field_k < BubbleDistortion.field_B[var4]) {
-                BubbleDistortion.field_B[var4] = BubbleDistortion.field_B[var4] - 1;
+            if (message.channel == UnderwaterBackground.chatHistory[var3].channel) {
+              var4 = UnderwaterBackground.chatHistory[var3].getRetentionCategory(true);
+              if (eh.chatHistoryCategoryLimit < BubbleDistortion.chatHistoryCategoryCounts[var4]) {
+                BubbleDistortion.chatHistoryCategoryCounts[var4] = BubbleDistortion.chatHistoryCategoryCounts[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              UnderwaterBackground.field_s[incrementValue$2] = UnderwaterBackground.field_s[var3];
+              UnderwaterBackground.chatHistory[incrementValue$2] = UnderwaterBackground.chatHistory[var3];
             }
           }
-          ScrollPane.field_Sb = var2_intLifetime2;
-          fieldTemp$1 = ScrollPane.field_Sb;
-          ScrollPane.field_Sb = ScrollPane.field_Sb + 1;
-          UnderwaterBackground.field_s[fieldTemp$1] = param1;
+          ScrollPane.chatHistorySize = var2_intLifetime2;
+          fieldTemp$1 = ScrollPane.chatHistorySize;
+          ScrollPane.chatHistorySize = ScrollPane.chatHistorySize + 1;
+          UnderwaterBackground.chatHistory[fieldTemp$1] = message;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_21_0 = var2;
-          stackIn_21_1 = new StringBuilder().append("n.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("n.C(").append(firstOutputIndex).append(',');
+          if (message == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";

@@ -96,11 +96,11 @@ final class LevelSelectScreen extends MenuScreen {
         GzipInflater.a(550, 5, 33, 5, 140, (byte) -106, 45);
         GzipInflater.a(160, 5, 243, 5, 178, (byte) -88, 45);
         GzipInflater.a(385, 5, 243, 5, 178, (byte) -124, 210);
-        nn.field_g.drawCentered(qn.packNames[this.pack.packId], 320, 1 + (178 - nn.field_g.xHeight), 0, -1);
+        ContextActionController.field_g.drawCentered(qn.packNames[this.pack.packId], 320, 1 + (178 - ContextActionController.field_g.xHeight), 0, -1);
         ArchiveNetworkRequest.packSelectorIcons[this.pack.packId].e(565, 140, -2048, 4096);
         if (this.levelList.selectedLevelIndex >= 0 &&
           this.levelList.selectedLevelIndex < this.pack.levelCount) {
-          var2 = nn.field_g.capHeight + 2;
+          var2 = ContextActionController.field_g.capHeight + 2;
           var3 = this.levelList.selectedLevelIndex;
           if (var3 != this.previewLevelIndex) {
             this.loadPreview(-6845, var3);
@@ -112,7 +112,7 @@ final class LevelSelectScreen extends MenuScreen {
           }
           if (GameConnectionShell.field_t ||
             !(hh.unlockedLevelCounts[this.pack.packId] < this.previewLevelIndex)) {
-            nn.field_g.drawCentered(this.pack.metadata[this.previewLevelIndex].title, 402, 421 - var2, 0, -1);
+            ContextActionController.field_g.drawCentered(this.pack.metadata[this.previewLevelIndex].title, 402, 421 - var2, 0, -1);
           }
           if (!GameConnectionShell.field_t &&
             !(this.previewLevelIndex <= hh.unlockedLevelCounts[this.pack.packId])) {
@@ -135,7 +135,7 @@ final class LevelSelectScreen extends MenuScreen {
             var4.b(var5, var6, 196);
           }
         } else {
-          nn.field_g.drawCentered(this.emptySelectionText, 402, 299 + nn.field_g.descent, 0, -1);
+          ContextActionController.field_g.drawCentered(this.emptySelectionText, 402, 299 + ContextActionController.field_g.descent, 0, -1);
           this.previewLevelIndex = -1;
         }
         this.levelList.draw((byte) 28);
@@ -309,7 +309,7 @@ final class LevelSelectScreen extends MenuScreen {
           this.emptySelectionText = oj.field_s.toLowerCase();
           this.pack = na.field_L[packIndex];
           for (var4_int = 0; this.pack.levelCount > var4_int; var4_int++) {
-            var5 = nn.field_g.measureText(this.pack.metadata[var4_int].numberLabel);
+            var5 = ContextActionController.field_g.measureText(this.pack.metadata[var4_int].numberLabel);
             if (var5 > this.maxNumberLabelWidth) {
               this.maxNumberLabelWidth = var5;
             }
@@ -470,7 +470,7 @@ final class LevelSelectScreen extends MenuScreen {
           }
           var12 = stackIn_9_0;
           var8 = var12;
-          dupTemp$0 = 30 + nn.field_g.measureText(var12);
+          dupTemp$0 = 30 + ContextActionController.field_g.measureText(var12);
           var7_ref_q.width = dupTemp$0;
           var5 = var5 + dupTemp$0;
           if (var6 > 3) {

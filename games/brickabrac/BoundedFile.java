@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class BoundedFile {
-    static int[] field_m;
+    static int[] receivedChatSuggestions;
     static int[][] logoOriginalCenters;
     private long maxLength;
     static int field_c;
@@ -105,14 +105,14 @@ final class BoundedFile {
           field_b = null;
           field_d = null;
           field_a = null;
-          field_m = null;
+          receivedChatSuggestions = null;
           return;
         }
         field_a = (RgbSprite[]) null;
         field_b = null;
         field_d = null;
         field_a = null;
-        field_m = null;
+        receivedChatSuggestions = null;
     }
 
     final void seek(int obfuscationGuard, long position) throws IOException {

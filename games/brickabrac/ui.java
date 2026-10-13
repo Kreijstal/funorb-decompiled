@@ -42,7 +42,7 @@ final class ui {
           var20 = var19;
           var11 = new int[]{param8};
           var12 = param1.wrapText(param0, var11, var20);
-          if (param1 == nn.field_g) {
+          if (param1 == ContextActionController.field_g) {
             stackIn_8_0 = param1.capHeight;
           } else {
             stackIn_8_0 = param1.descent + param1.ascent;

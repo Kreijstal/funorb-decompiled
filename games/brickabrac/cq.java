@@ -55,8 +55,8 @@ final class cq extends IntrusiveNode {
           if (null != ep.field_e) {
             DelayedPacket.a(false, ep.field_e);
           }
-          if (bm.field_d != null) {
-            bm.field_d.a((byte) -126, param0);
+          if (bm.contextActions != null) {
+            bm.contextActions.drawContextMenu((byte) -126, param0);
           }
           MembershipBenefitsScreen.a(param0, false);
           if (null != CircleBody.reportAbuseDialog) {
@@ -70,8 +70,8 @@ final class cq extends IntrusiveNode {
         if (null != ep.field_e) {
           DelayedPacket.a(false, ep.field_e);
         }
-        if (bm.field_d != null) {
-          bm.field_d.a((byte) -126, param0);
+        if (bm.contextActions != null) {
+          bm.contextActions.drawContextMenu((byte) -126, param0);
         }
         MembershipBenefitsScreen.a(param0, false);
         if (null != CircleBody.reportAbuseDialog) {

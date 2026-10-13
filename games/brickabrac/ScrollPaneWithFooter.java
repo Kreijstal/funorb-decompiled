@@ -35,7 +35,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         return var5;
     }
 
-    final static void a(int param0, gb param1) {
+    final static void a(int param0, ChatMessage param1) {
         int stackIn_2_0;
         UiComponent stackIn_2_1;
         Object stackIn_2_2;
@@ -49,59 +49,59 @@ final class ScrollPaneWithFooter extends UiComponent {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        nn var5 = null;
+        ContextActionController var5 = null;
         String var6 = null;
-        nn var7 = null;
+        ContextActionController var7 = null;
         String var8 = null;
-        nn var9 = null;
+        ContextActionController var9 = null;
         String var10 = null;
-        nn var11 = null;
+        ContextActionController var11 = null;
         String var12 = null;
-        nn var13 = null;
+        ContextActionController var13 = null;
         try {
-          stackIn_2_0 = param1.field_c;
-          stackIn_2_1 = param1.field_b;
+          stackIn_2_0 = param1.channel;
+          stackIn_2_1 = param1.component;
           stackIn_2_2 = null;
           stackIn_2_3 = null;
-          stackIn_2_4 = param1.field_m;
-          if (param1.field_c == 1) {
-            stackIn_3_5 = param1.field_o;
+          stackIn_2_4 = param1.senderName;
+          if (param1.channel == 1) {
+            stackIn_3_5 = param1.contextId;
           } else {
             stackIn_3_5 = 0;
           }
-          SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.field_k, param1.field_q);
-          if (param1.field_c == 0 &&
+          SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.senderId, param1.senderDisplayName);
+          if (param1.channel == 0 &&
             !cb.e(-91) &&
             null == o.field_e &&
             nl.field_f == null) {
             if (!qo.field_I) {
-              var5 = bm.field_d;
+              var5 = bm.contextActions;
               var6 = LevelPackSelectScreen.field_x;
               var5.contextMenu.addAction(var6, 14, (byte) 84);
             }
-            var7 = bm.field_d;
+            var7 = bm.contextActions;
             var8 = tq.field_b;
             var7.contextMenu.addAction(var8, 20, (byte) 118);
           }
-          if (param1.field_c == 1 &&
+          if (param1.channel == 1 &&
             !cb.e(-128) &&
             null != o.field_e &&
-            param1.field_o == o.field_e.e((byte) 118)) {
+            param1.contextId == o.field_e.e((byte) 118)) {
             if (!qo.field_I) {
-              var9 = bm.field_d;
+              var9 = bm.contextActions;
               var10 = hc.field_b;
               var9.contextMenu.addAction(var10, 14, (byte) 120);
             }
-            var11 = bm.field_d;
+            var11 = bm.contextActions;
             var12 = MultiplayerExitScreen.field_y;
             var11.contextMenu.addAction(var12, 20, (byte) 103);
           }
-          bm.field_d.a(true);
-          bm.field_d.a(true, false);
-          bm.field_d.a(param1.field_g, (byte) -79, param1.field_c);
-          bm.field_d.a((byte) -126);
-          bm.field_d.a(param1, -96);
-          var13 = bm.field_d;
+          bm.contextActions.addGameActions(true);
+          bm.contextActions.addPlayerGameActions(true, false);
+          bm.contextActions.addSocialActions(param1.suggestedPhraseIds, (byte) -79, param1.channel);
+          bm.contextActions.addReportAction((byte) -126);
+          bm.contextActions.addMessageFilterActions(param1, -96);
+          var13 = bm.contextActions;
           var3 = tb.pressX;
           var4 = qo.pressY;
           var13.contextMenu.layoutAtAnchor(var4, -101, 0, param0, var3);
@@ -152,8 +152,8 @@ final class ScrollPaneWithFooter extends UiComponent {
         field_Ub = null;
         field_Sb = null;
         if (param0 > -15) {
-          gb var2 = (gb) null;
-          ScrollPaneWithFooter.a(-63, (gb) null);
+          ChatMessage var2 = (ChatMessage) null;
+          ScrollPaneWithFooter.a(-63, (ChatMessage) null);
         }
         field_Vb = null;
         field_Rb = null;

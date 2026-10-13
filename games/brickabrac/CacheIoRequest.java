@@ -177,10 +177,10 @@ final class CacheIoRequest extends ResourceRequest {
               !(IntArrayRequest.field_t <= 1))) {
               if (!param1 &&
                 3 == var6) {
-                dupTemp$0 = gb.field_l[var6];
+                dupTemp$0 = ChatMessage.field_l[var6];
                 var14 = dupTemp$0;
                 var7 = dupTemp$0;
-                gb.field_l[var6].height = 0;
+                ChatMessage.field_l[var6].height = 0;
                 var14.width = 0;
                 for (var8 = 0; MatchCompleteScreen.field_A[var6].length > var8; var8++) {
                   if (null != MatchCompleteScreen.field_A[var6][var8]) {
@@ -191,8 +191,8 @@ final class CacheIoRequest extends ResourceRequest {
                 }
               } else if (param1 &&
                 0 == var6) {
-                var7 = gb.field_l[var6];
-                gb.field_l[var6].height = 0;
+                var7 = ChatMessage.field_l[var6];
+                ChatMessage.field_l[var6].height = 0;
                 var7.width = 0;
                 for (var8 = 0; var8 < MatchCompleteScreen.field_A[var6].length; var8++) {
                   stackIn_37_0 = null;
@@ -219,8 +219,8 @@ final class CacheIoRequest extends ResourceRequest {
                 }
                 var7_int = stackIn_52_0;
                 if (var7_int != 0) {
-                  var8_ref_mh = gb.field_l[var6];
-                  gb.field_l[var6].height = 0;
+                  var8_ref_mh = ChatMessage.field_l[var6];
+                  ChatMessage.field_l[var6].height = 0;
                   var8_ref_mh.width = 0;
                   for (var9_int = 0; MatchCompleteScreen.field_A[var6].length > var9_int; var9_int++) {
                     if (MatchCompleteScreen.field_A[var6][var9_int] != null) {
@@ -230,7 +230,7 @@ final class CacheIoRequest extends ResourceRequest {
                     }
                   }
                 } else {
-                  gb.field_l[var6].setBounds(var3, var5, 5, 103, (byte) 64);
+                  ChatMessage.field_l[var6].setBounds(var3, var5, 5, 103, (byte) 64);
                   var8 = 110;
                   if (!param1) {
                     if (null != MatchCompleteScreen.field_A[var6][0]) {

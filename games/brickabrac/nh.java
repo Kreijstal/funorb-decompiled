@@ -4,7 +4,7 @@
 final class nh {
     static UiComponent field_a;
     static String field_d;
-    static int field_b;
+    static int receivedChatBadge;
     static QuickChatPhraseRegistry quickChatPhrases;
 
     final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
@@ -769,7 +769,7 @@ final class nh {
           }
           var1_ref = (om) (rq.field_a.first(-14));
           if (param0 != 0) {
-            field_b = -23;
+            receivedChatBadge = -23;
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var1_ref == null))) {

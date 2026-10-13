@@ -8,7 +8,7 @@ final class BubbleDistortion extends CircleBody {
     int oscillationOffset;
     static int field_z;
     static String field_A;
-    static int[] field_B;
+    static int[] chatHistoryCategoryCounts;
     private int fadeStep;
     int oscillationAmplitude;
     int distortionAmount;
@@ -227,7 +227,7 @@ final class BubbleDistortion extends CircleBody {
         }
         field_A = null;
         viewFacePointThreeZ = null;
-        field_B = null;
+        chatHistoryCategoryCounts = null;
     }
 
     BubbleDistortion(int x256, int y256, int velocityX256, int velocityY256, int radius256, int typeId) {

@@ -5,7 +5,7 @@ final class bm {
     static String field_b;
     static byte[][][] field_a;
     static int[] field_f;
-    static nn field_d;
+    static ContextActionController contextActions;
     static String field_e;
     static int field_c;
 
@@ -246,7 +246,7 @@ final class bm {
               var11 = 100;
             }
             var11 = var11 * 128 / 50;
-            nn.field_g.drawCenteredAlpha(param6, param0 + param4 / (2 * param5), nn.field_g.capHeight + (param2 / (2 * param5) + (param1 - 100 / param5)), 0, -1, var11);
+            ContextActionController.field_g.drawCenteredAlpha(param6, param0 + param4 / (2 * param5), ContextActionController.field_g.capHeight + (param2 / (2 * param5) + (param1 - 100 / param5)), 0, -1, var11);
             lo.a(param4, var11, 60, param0, param5, param1, param2, param3);
           }
           return;
@@ -496,7 +496,7 @@ final class bm {
     public static void a(byte param0) {
         try {
           field_e = null;
-          field_d = null;
+          contextActions = null;
           field_b = null;
           field_f = null;
           int var1_int = -21 / ((param0 + 44) / 60);

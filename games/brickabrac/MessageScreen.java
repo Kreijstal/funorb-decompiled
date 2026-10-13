@@ -134,7 +134,7 @@ final class MessageScreen extends MenuScreen {
           ng.quickChatChannel = param2;
           DualLinkNode.quickChatRecipient = param0;
           var5 = (CharSequence) ((Object) param0);
-          QuickChatHelpDialog.field_Qb = gb.a(var5, param2 ^ 103);
+          QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var5, param2 ^ 103);
           qn.field_n = param1;
           MatchResultScreen.field_s = true;
         } catch (RuntimeException runtimeException) {
@@ -199,7 +199,7 @@ final class MessageScreen extends MenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -50);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -107, 45);
-        nn.field_g.a(qn.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
+        ContextActionController.field_g.a(qn.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
         if (obfuscationGuard < -14) {
           this.a(0);
           return;

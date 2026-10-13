@@ -6,7 +6,7 @@ final class UnderwaterBackground extends BackgroundScene {
     static int[] viewFacePointOneZ;
     static RgbSprite field_t;
     static PcmPlayer field_w;
-    static gb[] field_s;
+    static ChatMessage[] chatHistory;
     static RgbSprite field_u;
 
     final boolean hasSprites(byte obfuscationGuard) {
@@ -205,14 +205,14 @@ final class UnderwaterBackground extends BackgroundScene {
           viewFacePointOneZ = null;
           field_t = null;
           field_w = null;
-          field_s = null;
+          chatHistory = null;
           return;
         }
         viewFacePointOneZ = (int[]) null;
         viewFacePointOneZ = null;
         field_t = null;
         field_w = null;
-        field_s = null;
+        chatHistory = null;
     }
 
     static {

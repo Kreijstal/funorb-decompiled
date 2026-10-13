@@ -122,9 +122,9 @@ final class PowerUpWarning extends IntrusiveNode {
         }
     }
 
-    final static void a(gb param0, int param1) {
+    final static void acceptChatMessage(ChatMessage message, int obfuscationGuard) {
         int var2_int = 0;
-        gb var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -134,40 +134,40 @@ final class PowerUpWarning extends IntrusiveNode {
         int var2_intLifetime1;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (null == param0.field_j) {
+          if (null == message.text) {
             return;
           }
-          if (param0.field_f != 0 ||
-            0 != param0.field_d) {
-            for (var2_int = 0; ScrollPane.field_Sb > var2_int; var2_int++) {
-              var3 = UnderwaterBackground.field_s[var2_int];
-              if (var3.field_c == 2 &&
-                var3.field_f == param0.field_f &&
-                var3.field_d == param0.field_d) {
+          if (message.messageKeyHigh16 != 0 ||
+            0 != message.messageKeyLow24) {
+            for (var2_int = 0; ScrollPane.chatHistorySize > var2_int; var2_int++) {
+              var3 = UnderwaterBackground.chatHistory[var2_int];
+              if (var3.channel == 2 &&
+                var3.messageKeyHigh16 == message.messageKeyHigh16 &&
+                var3.messageKeyLow24 == message.messageKeyLow24) {
                 return;
               }
             }
           }
-          if (null != param0.field_g) {
-            ig.field_K = param0.field_m;
-            QuickChatHelpDialog.field_Zb = param0.field_k;
-            r.field_x = param0.field_c;
-            ResourceRequest.field_z = param0.field_g;
+          if (null != message.suggestedPhraseIds) {
+            ig.field_K = message.senderName;
+            QuickChatHelpDialog.field_Zb = message.senderId;
+            r.field_x = message.channel;
+            ResourceRequest.field_z = message.suggestedPhraseIds;
           }
-          n.a(0, param0);
-          var2_intLifetime1 = 85 / ((param1 + 11) / 50);
+          n.appendChatHistory(0, message);
+          var2_intLifetime1 = 85 / ((obfuscationGuard + 11) / 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_21_0 = var2;
           stackIn_21_1 = new StringBuilder().append("lj.E(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

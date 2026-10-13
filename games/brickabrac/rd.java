@@ -95,7 +95,7 @@ final class rd {
         if (obfuscationGuard != 19) {
           rd.a((byte) -86);
         }
-        gb.backgroundVariant = hi.field_w.nextBoundedInt(-37880252, 2);
+        ChatMessage.backgroundVariant = hi.field_w.nextBoundedInt(-37880252, 2);
         if (selector == 0) {
           var3 = hi.field_w.nextBoundedInt(-37880252, 11);
           if (var3 + 1 == IntArrayRequest.lastBackgroundId) {

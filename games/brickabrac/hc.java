@@ -281,7 +281,7 @@ final class hc {
           vb.field_K = new UiComponent(0L, wi.field_n);
           vb.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
           var16 = cr.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
-          ce.field_b = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.uiRowHeight);
+          ce.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.uiRowHeight);
           ArcticBackground.field_s = new UiComponent(0L, DualLinkNode.field_t);
           ArcticBackground.field_s.capturedOffsetY = 1;
           ArcticBackground.field_s.capturedOffsetX = 1;

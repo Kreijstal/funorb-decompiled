@@ -80,7 +80,7 @@ final class IntNode extends IntrusiveNode {
         }
     }
 
-    final static String a(gb param0, byte param1) {
+    final static String formatChatPrefix(ChatMessage message, byte obfuscationGuard) {
         String stackIn_31_0 = null;
         Object stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -97,48 +97,48 @@ final class IntNode extends IntrusiveNode {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           var2 = null;
-          var3 = 13 % ((-28 - param1) / 42);
-          if (param0.field_q != null) {
-            var6 = param0.field_q;
+          var3 = 13 % ((-28 - obfuscationGuard) / 42);
+          if (message.senderDisplayName != null) {
+            var6 = message.senderDisplayName;
             var2 = var6;
             var4 = var2;
             var2 = var6;
             var2 = var6;
-            if (1 == param0.field_a) {
+            if (1 == message.badgeId) {
               var2 = "<img=0>" + var6;
             }
-            if (param0.field_a == 2) {
+            if (message.badgeId == 2) {
               var2 = "<img=1>" + (String) (var2);
               var4Lifetime1 = var2;
               var4Lifetime1Lifetime1 = var2;
             }
           }
           var4_ref = "";
-          if (param0.field_c == 2) {
-            if (!param0.field_e) {
-              if (param0.field_f == 0 &&
-                param0.field_d == 0) {
+          if (message.channel == 2) {
+            if (!message.systemMessage) {
+              if (message.messageKeyHigh16 == 0 &&
+                message.messageKeyLow24 == 0) {
                 var4_ref = rd.a(SaveResultsPromptScreen.field_x, new String[]{(String) (var2)}, (byte) 103);
               } else {
                 var4_ref = rd.a(ek.field_fb, new String[]{(String) (var2)}, (byte) 103);
               }
             }
           } else {
-            if (param0.field_c == 0 &&
+            if (message.channel == 0 &&
               QuickChatParameterType.field_d) {
               var4_ref = "[" + ArcticBackground.field_u + "] ";
             }
-            if (param0.field_c == 1) {
-              var4_ref = "[" + rd.a(fm.field_a, new String[]{param0.field_p}, (byte) 103) + "] ";
+            if (message.channel == 1) {
+              var4_ref = "[" + rd.a(fm.field_a, new String[]{message.contextLabel}, (byte) 103) + "] ";
             }
-            if (param0.field_c == 4 &&
+            if (message.channel == 4 &&
               jd.field_b != null) {
               var4_ref = "[" + jd.field_b + "] ";
             }
-            if (param0.field_c == 3) {
-              var4_ref = "[#" + param0.field_p + "] ";
+            if (message.channel == 3) {
+              var4_ref = "[#" + message.contextLabel + "] ";
             }
-            if (!param0.field_e) {
+            if (!message.systemMessage) {
               var4_ref = var4_ref + (String) (var2) + ": ";
             }
           }
@@ -149,12 +149,12 @@ final class IntNode extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_34_0 = var2;
           stackIn_34_1 = new StringBuilder().append("kq.A(");
-          if (param0 == null) {
+          if (message == null) {
             stackIn_35_2 = "null";
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

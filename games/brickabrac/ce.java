@@ -3,7 +3,7 @@
  */
 final class ce {
     static String field_g;
-    static ContextMenu field_b;
+    static ContextMenu contextMenuStyle;
     static RgbSprite desertSmallSprite;
     static int[][] field_a;
     static char[] nameCharacterExtensions;
@@ -137,7 +137,7 @@ final class ce {
           return;
         }
         nameCharacterExtensions = null;
-        field_b = null;
+        contextMenuStyle = null;
         desertSmallSprite = null;
         field_a = (int[][]) null;
         field_g = null;

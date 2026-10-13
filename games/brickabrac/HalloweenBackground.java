@@ -5,7 +5,7 @@ final class HalloweenBackground extends BackgroundScene {
     static UiComponent field_x;
     static String field_s;
     static int[] field_r;
-    static String field_t;
+    static String receivedChatDisplayName;
     private static RgbSprite field_u;
     static UiComponent[] field_w;
     static boolean field_y;
@@ -233,7 +233,7 @@ final class HalloweenBackground extends BackgroundScene {
 
     public static void f(int param0) {
         field_r = null;
-        field_t = null;
+        receivedChatDisplayName = null;
         field_s = null;
         field_w = null;
         field_u = null;

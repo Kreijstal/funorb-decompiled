@@ -27,11 +27,11 @@ abstract class MatchResultScreen extends MenuScreen {
           return;
         }
         var2 = 1;
-        var3 = nn.field_g.measureText(ag.buttonLabels[this.buttons[0].actionId]);
+        var3 = ContextActionController.field_g.measureText(ag.buttonLabels[this.buttons[0].actionId]);
         if (this.isButtonEnabled((byte) 110, 1)) {
           var2++;
           for (var4 = 0; var4 < sj.field_c.length; var4++) {
-            var5 = nn.field_g.measureText(sj.field_c[var4]);
+            var5 = ContextActionController.field_g.measureText(sj.field_c[var4]);
             if (var5 > var3) {
               var3 = var5;
             }

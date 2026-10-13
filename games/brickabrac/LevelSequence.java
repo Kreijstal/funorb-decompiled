@@ -48,8 +48,8 @@ final class LevelSequence {
         if (param1 != -1) {
           return true;
         }
-        if (null != bm.field_d &&
-          bm.field_d.b(param1 ^ -2100)) {
+        if (null != bm.contextActions &&
+          bm.contextActions.handleContextCancelKey(param1 ^ -2100)) {
           cr.f((byte) -123);
           return true;
         }

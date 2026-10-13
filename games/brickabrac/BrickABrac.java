@@ -50,7 +50,7 @@ public final class BrickABrac extends InteractiveGameClient {
             }
           }
           IntrusiveHashTable.achievementSourceIcons[notification.value].drawQuarter(8, notificationY);
-          nn.field_g.drawLeft(AchievementBrowserScreen.field_s[notification.value], 48, notificationY + nn.field_g.ascent, 0, -1);
+          ContextActionController.field_g.drawLeft(AchievementBrowserScreen.field_s[notification.value], 48, notificationY + ContextActionController.field_g.ascent, 0, -1);
         }
         if (cf.a((byte) 62)) {
           rd.b(-79);
@@ -603,7 +603,7 @@ public final class BrickABrac extends InteractiveGameClient {
         vg.b(13);
         rd.a((byte) 46);
         cn.a(117);
-        gb.a(0);
+        ChatMessage.a(0);
         kd.a(obfuscationGuard);
         fq.a((byte) 15);
         GameClock.a((byte) 66);
@@ -661,7 +661,7 @@ public final class BrickABrac extends InteractiveGameClient {
         UiComponent.c((byte) 88);
         ContextMenu.h(21);
         ScrollPaneWithFooter.h(-48);
-        nn.a(0);
+        ContextActionController.a(0);
         ReportAbuseDialog.k(8421504);
         id.h(-56);
         om.d((byte) -32);

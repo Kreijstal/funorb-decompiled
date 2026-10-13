@@ -100,7 +100,7 @@ abstract class MenuScreen extends GameScreen {
           }
           var7 = stackIn_5_0;
           var5 = var7;
-          dupTemp$0 = nn.field_g.measureText(var7) + 30;
+          dupTemp$0 = ContextActionController.field_g.measureText(var7) + 30;
           var4_ref_q.width = dupTemp$0;
           var2 = var2 + dupTemp$0;
           if (var3 > 0) {

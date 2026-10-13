@@ -128,10 +128,10 @@ final class hi extends um {
                 if (ScrollPane.a(var4_ref_String, (byte) -128)) {
                   var13 = (String) null;
                   var12 = (String) null;
-                  SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                  SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                   var15 = (String) null;
                   var14 = (String) null;
-                  SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                  SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
                 } else {
                   var5 = ng.quickChatChannel;
                   if (var5 == 0 &&
@@ -234,10 +234,10 @@ final class hi extends um {
                   if (ScrollPane.a(var4_ref_StringLifetime1, (byte) -128)) {
                     var13Lifetime1 = (String) null;
                     var12Lifetime1 = (String) null;
-                    SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                    SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                     var15Lifetime1 = (String) null;
                     var14Lifetime1 = (String) null;
-                    SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                    SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
                     fl.b(true);
                   } else {
                     var5Lifetime1 = ng.quickChatChannel;
@@ -343,10 +343,10 @@ final class hi extends um {
               if (ScrollPane.a(var4_ref_StringLifetime2, (byte) -128)) {
                 var13Lifetime2 = (String) null;
                 var12Lifetime2 = (String) null;
-                SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
+                SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                 var15Lifetime2 = (String) null;
                 var14Lifetime2 = (String) null;
-                SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
               } else {
                 var5Lifetime2 = ng.quickChatChannel;
                 if (var5Lifetime2 == 0 &&

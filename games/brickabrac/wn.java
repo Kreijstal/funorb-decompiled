@@ -38,10 +38,10 @@ final class wn {
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
-        nn var17 = null;
+        ContextActionController var17 = null;
         String var18 = null;
         int var19 = 0;
-        nn var17Lifetime1;
+        ContextActionController var17Lifetime1;
         String var18Lifetime1;
         var19 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -157,14 +157,14 @@ final class wn {
                 var16 = var7.field_Rb;
                 SpriteGeometry.a(-1, var7, GameScreen.field_f.scrollPane, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
                 if (null != var7.field_Ub &&
-                  !m.a(13134, bm.field_d.field_e) &&
+                  !m.a(13134, bm.contextActions.targetName) &&
                   !um.field_e) {
                   if (!qo.field_I) {
-                    var17 = bm.field_d;
+                    var17 = bm.contextActions;
                     var18 = rd.a(ClientException.field_c, new String[]{var16}, (byte) 103);
                     var17.contextMenu.addAction(var18, 8, (byte) 84);
                   }
-                  var17Lifetime1 = bm.field_d;
+                  var17Lifetime1 = bm.contextActions;
                   var18Lifetime1 = rd.a(qm.field_b, new String[]{var16}, (byte) 103);
                   var17Lifetime1.contextMenu.addAction(var18Lifetime1, 18, (byte) 97);
                 }

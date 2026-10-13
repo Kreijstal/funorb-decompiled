@@ -951,7 +951,7 @@ final class sb implements vc {
           this.field_a = 0;
           return;
         }
-        nn.field_f = bj.field_V;
+        ContextActionController.field_f = bj.field_V;
         if (this.c(-25437) &&
           this.field_a < 20) {
           this.field_a = this.field_a + 1;
@@ -962,11 +962,11 @@ final class sb implements vc {
           }
           if (Brick.field_E != 1) {
             if (1 < Brick.field_E) {
-              nn.field_f = rd.a(ArchiveSource.field_a, new String[]{Integer.toString(Brick.field_E)}, (byte) 103);
+              ContextActionController.field_f = rd.a(ArchiveSource.field_a, new String[]{Integer.toString(Brick.field_E)}, (byte) 103);
               var4 = n.field_d ? 1 : 0;
               n.field_d = false;
               if (this.d(76)) {
-                var5 = IntrusiveHashTable.field_l + nn.field_g.measureText(nn.field_f);
+                var5 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
                 stackIn_22_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.screenY > po.pointerY);
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
@@ -1021,9 +1021,9 @@ final class sb implements vc {
               }
               return;
             }
-            nn.field_f = BubbleDistortion.field_A;
+            ContextActionController.field_f = BubbleDistortion.field_A;
           } else {
-            nn.field_f = an.field_g;
+            ContextActionController.field_f = an.field_g;
           }
         } else {
           Brick.field_E = 0;
@@ -1064,7 +1064,7 @@ final class sb implements vc {
           }
           return;
         }
-        var5Lifetime2 = IntrusiveHashTable.field_l + nn.field_g.measureText(nn.field_f);
+        var5Lifetime2 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
         stackIn_80_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5Lifetime2) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.screenY > po.pointerY);
         n.field_d = stackIn_80_0;
         if (!n.field_d) {
@@ -1423,7 +1423,7 @@ final class sb implements vc {
     }
 
     sb() {
-        LevelSelectScreen.field_w = nn.field_g.descent + (qi.field_K[0].height + qi.field_K[6].height) + nn.field_g.capHeight;
+        LevelSelectScreen.field_w = ContextActionController.field_g.descent + (qi.field_K[0].height + qi.field_K[6].height) + ContextActionController.field_g.capHeight;
         IntrusiveHashTable.field_l = qi.field_K[2].width + (3 + qi.field_K[0].width);
     }
 

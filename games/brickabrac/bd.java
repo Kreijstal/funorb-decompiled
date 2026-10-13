@@ -61,7 +61,7 @@ final class bd implements ub {
           if (var3_int > 12) {
             return false;
           }
-          var4 = gb.a(param0, 67);
+          var4 = ChatMessage.normalizePlayerName(param0, 67);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!ik.isNameSeparator((byte) -9, var4.charAt(0)) &&

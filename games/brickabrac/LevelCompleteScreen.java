@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LevelCompleteScreen extends PauseMenuScreen {
-    static int field_H;
+    static int receivedChatKeyLow24;
     static int field_A;
     static int[] field_D;
     static RgbSprite field_F;
@@ -50,7 +50,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
     }
 
     LevelCompleteScreen() {
-        super(18, gb.field_i, gb.field_i);
+        super(18, ChatMessage.field_i, ChatMessage.field_i);
     }
 
     final void navigateBack(int obfuscationGuard) {

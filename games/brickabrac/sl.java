@@ -8,14 +8,14 @@ abstract class sl extends DualLinkNode {
     static int field_z;
     static RgbSprite field_D;
     static QuickChatParameterType field_B;
-    static String field_y;
+    static String receivedChatContextLabel;
     int field_u;
     static String[] field_A;
     static boolean field_w;
 
     public static void f(int param0) {
         field_x = null;
-        field_y = null;
+        receivedChatContextLabel = null;
         field_A = null;
         field_B = null;
         if (param0 != 31434) {
@@ -192,15 +192,15 @@ abstract class sl extends DualLinkNode {
           ba.field_v = new UiComponent(0L, qh.field_j);
           QuickChatPhraseRegistry.field_e = new UiComponent(0L, FarmBackground.field_x);
           jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
-          gb.field_l = new UiComponent[4 + param13];
+          ChatMessage.field_l = new UiComponent[4 + param13];
           MatchCompleteScreen.field_A = new AlignedIconLabel[4 + param13][];
-          gb.field_l[0] = new UiComponent(0L, wi.field_n, ro.field_H);
+          ChatMessage.field_l[0] = new UiComponent(0L, wi.field_n, ro.field_H);
           MatchCompleteScreen.field_A[0] = new AlignedIconLabel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             MatchCompleteScreen.field_A[0][1 + var17_int] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
-            gb.field_l[1] = new UiComponent(0L, wi.field_n, QuickChatMenu.field_ac);
+            ChatMessage.field_l[1] = new UiComponent(0L, wi.field_n, QuickChatMenu.field_ac);
             array$0 = new AlignedIconLabel[1 + w.field_n.length];
             MatchCompleteScreen.field_A[1] = array$0;
             MatchCompleteScreen.field_A[1][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
@@ -208,10 +208,10 @@ abstract class sl extends DualLinkNode {
               MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
             }
           }
-          gb.field_l[2] = new UiComponent(0L, wi.field_n, PlayerInputBatch.field_j);
+          ChatMessage.field_l[2] = new UiComponent(0L, wi.field_n, PlayerInputBatch.field_j);
           MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < IntArrayRequest.field_t) {
-            gb.field_l[3] = new UiComponent(0L, wi.field_n, uc.field_r);
+            ChatMessage.field_l[3] = new UiComponent(0L, wi.field_n, uc.field_r);
             array$1 = new AlignedIconLabel[IntArrayRequest.field_t + 1];
             MatchCompleteScreen.field_A[3] = array$1;
             MatchCompleteScreen.field_A[3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
@@ -220,7 +220,7 @@ abstract class sl extends DualLinkNode {
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
-            gb.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, QuickChatPhraseRegistry.field_b[var17_intLifetime3]);
+            ChatMessage.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, QuickChatPhraseRegistry.field_b[var17_intLifetime3]);
             array$2 = new AlignedIconLabel[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
             MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
@@ -247,8 +247,8 @@ abstract class sl extends DualLinkNode {
             }
           }
           for (var17_intLifetime4 = 0; 4 + param13 > var17_intLifetime4; var17_intLifetime4++) {
-            if (gb.field_l[var17_intLifetime4] != null) {
-              gb.field_l[var17_intLifetime4].lineSpacing = 11;
+            if (ChatMessage.field_l[var17_intLifetime4] != null) {
+              ChatMessage.field_l[var17_intLifetime4].lineSpacing = 11;
             }
             if (null != MatchCompleteScreen.field_A[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; var18Lifetime1 < MatchCompleteScreen.field_A[var17_intLifetime4].length; var18Lifetime1++) {
@@ -274,7 +274,7 @@ abstract class sl extends DualLinkNode {
             if ((var18Lifetime2 != 1 ||
               !(w.field_n.length < 2)) && (var18Lifetime2 != 3 ||
               !(IntArrayRequest.field_t <= 1))) {
-              QuickChatPhraseRegistry.field_e.addChild(gb.field_l[var18Lifetime2], 0);
+              QuickChatPhraseRegistry.field_e.addChild(ChatMessage.field_l[var18Lifetime2], 0);
               for (var19 = 0; MatchCompleteScreen.field_A[var18Lifetime2].length > var19; var19++) {
                 if (MatchCompleteScreen.field_A[var18Lifetime2][var19] != null) {
                   QuickChatPhraseRegistry.field_e.addChild(MatchCompleteScreen.field_A[var18Lifetime2][var19], 0);

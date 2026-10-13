@@ -36,7 +36,7 @@ final class SoundCache {
                 var6Lifetime2 = var5;
               } else {
                 var8 = (CharSequence) ((Object) MusicCrossfadeStream.nameEntryPopup.text);
-                var5 = gb.a(var8, 57);
+                var5 = ChatMessage.normalizePlayerName(var8, 57);
               }
               var6Lifetime1 = null;
               if (GameUiController.field_d == 0) {
@@ -53,7 +53,7 @@ final class SoundCache {
               }
               if (var6Lifetime1 != null) {
                 var7 = (String) null;
-                SoundCache.a((byte) 92, 0, (String) null, (String) (var6Lifetime1), var5, 2);
+                SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, (String) (var6Lifetime1), var5, 2);
               }
               GameUiController.field_d = -1;
               MusicCrossfadeStream.nameEntryPopup = null;
@@ -331,7 +331,7 @@ final class SoundCache {
               }
               tb.field_cb = jl.incomingPackets.readCp1252String(-1);
               var12 = (CharSequence) ((Object) tb.field_cb);
-              ArchiveFetchClient.field_d = gb.a(var12, 65);
+              ArchiveFetchClient.field_d = ChatMessage.normalizePlayerName(var12, 65);
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
               if (NanoGameClock.field_s.a(13) == vh.field_X) {
@@ -435,16 +435,16 @@ final class SoundCache {
         }
     }
 
-    final static void a(byte param0, int param1, String param2, String param3, String param4, int param5) {
-        gb var6 = null;
+    final static void appendSystemChatMessage(byte obfuscationGuard, int contextId, String contextLabel, String text, String senderName, int channel) {
+        ChatMessage var6 = null;
         try {
-          if (param0 != 92) {
+          if (obfuscationGuard != 92) {
             SoundCache.a(100, 53);
           }
-          var6 = new gb(param5, param4, param1, param2, param3);
-          n.a(0, var6);
+          var6 = new ChatMessage(channel, senderName, contextId, contextLabel, text);
+          n.appendChatHistory(0, var6);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.B(" + obfuscationGuard + ',' + contextId + ',' + (contextLabel != null ? "{...}" : "null") + ',' + (text != null ? "{...}" : "null") + ',' + (senderName != null ? "{...}" : "null") + ',' + channel + ')');
         }
     }
 

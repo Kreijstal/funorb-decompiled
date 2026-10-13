@@ -82,7 +82,7 @@ final class BallPulseEffect extends IntrusiveNode {
         return this.ageTicks * (-this.ageTicks + 100) / 20 - 5;
     }
 
-    final static gb a(byte param0, boolean param1) {
+    final static ChatMessage readChatMessage(byte obfuscationGuard, boolean quickChat) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
@@ -98,62 +98,62 @@ final class BallPulseEffect extends IntrusiveNode {
         var7 = BrickABrac.field_J ? 1 : 0;
         var8 = jl.incomingPackets;
         var2 = var8;
-        var3 = var8.readUnsignedByte(param0 + 188);
-        gj.field_a = 127 & var3;
-        if (param0 != 67) {
+        var3 = var8.readUnsignedByte(obfuscationGuard + 188);
+        gj.receivedChatChannel = 127 & var3;
+        if (obfuscationGuard != 67) {
           BallPulseEffect.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
-        ji.field_f = stackIn_5_0;
-        nh.field_b = var8.readUnsignedByte(255);
-        an.field_k = var8.readLong(-32768);
-        if (gj.field_a == 2) {
-          gb.field_h = var8.readUnsignedShort(65280);
-          LevelCompleteScreen.field_H = var8.readUnsignedMedium((byte) -34);
+        ji.receivedChatSystem = stackIn_5_0;
+        nh.receivedChatBadge = var8.readUnsignedByte(255);
+        an.receivedChatSenderId = var8.readLong(-32768);
+        if (gj.receivedChatChannel == 2) {
+          ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
+          LevelCompleteScreen.receivedChatKeyLow24 = var8.readUnsignedMedium((byte) -34);
         } else {
-          gb.field_h = 0;
-          LevelCompleteScreen.field_H = 0;
+          ChatMessage.receivedChatKeyHigh16 = 0;
+          LevelCompleteScreen.receivedChatKeyLow24 = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        HalloweenBackground.field_t = var8.readCp1252String(-1);
+        HalloweenBackground.receivedChatDisplayName = var8.readCp1252String(-1);
         if (var4 != 0) {
-          nd.field_g = var8.readCp1252String(-1);
+          nd.receivedChatSenderName = var8.readCp1252String(-1);
         } else {
-          nd.field_g = HalloweenBackground.field_t;
+          nd.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
         }
-        if (1 != gj.field_a &&
-          4 != gj.field_a) {
-          MusicVoice.field_E = 0;
-          sl.field_y = null;
+        if (1 != gj.receivedChatChannel &&
+          4 != gj.receivedChatChannel) {
+          MusicVoice.receivedChatContextId = 0;
+          sl.receivedChatContextLabel = null;
         } else {
-          MusicVoice.field_E = var8.readUnsignedShort(param0 ^ 65347);
-          sl.field_y = var8.readCp1252String(-1);
+          MusicVoice.receivedChatContextId = var8.readUnsignedShort(obfuscationGuard ^ 65347);
+          sl.receivedChatContextLabel = var8.readCp1252String(-1);
         }
-        if (!param1) {
-          gd.field_d = bj.readCompressedString(80, (byte) 76, var8);
-          BoundedFile.field_m = null;
-          return new gb(param1);
+        if (!quickChat) {
+          gd.receivedChatText = bj.readCompressedString(80, (byte) 76, var8);
+          BoundedFile.receivedChatSuggestions = null;
+          return new ChatMessage(quickChat);
         }
         var5 = var8.readUnsignedShort(65280);
         try {
           var9 = nh.quickChatPhrases.getDefinition(var5, true);
-          gd.field_d = var9.getPreview(-3);
-          if (nd.field_g.equals(tb.field_cb)) {
+          gd.receivedChatText = var9.getPreview(-3);
+          if (nd.receivedChatSenderName.equals(tb.field_cb)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.linkedPhraseIds;
           }
-          BoundedFile.field_m = stackIn_24_0;
+          BoundedFile.receivedChatSuggestions = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
-          BoundedFile.field_m = null;
-          gd.field_d = null;
-          return new gb(param1);
+          AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), obfuscationGuard ^ 16);
+          BoundedFile.receivedChatSuggestions = null;
+          gd.receivedChatText = null;
+          return new ChatMessage(quickChat);
         }
-        return new gb(param1);
+        return new ChatMessage(quickChat);
     }
 
     BallPulseEffect(int x256, int y256) {
@@ -167,7 +167,7 @@ final class BallPulseEffect extends IntrusiveNode {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static gb $cfr$intArgs$a$a948187ac0af(int param0, boolean param1) {
+    final static ChatMessage $cfr$intArgs$a$a948187ac0af(int param0, boolean param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
@@ -184,60 +184,60 @@ final class BallPulseEffect extends IntrusiveNode {
         var8 = jl.incomingPackets;
         var2 = var8;
         var3 = var8.readUnsignedByte(param0 + 188);
-        gj.field_a = 127 & var3;
+        gj.receivedChatChannel = 127 & var3;
         if (param0 != 67) {
           BallPulseEffect.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
-        ji.field_f = stackIn_5_0;
-        nh.field_b = var8.readUnsignedByte(255);
-        an.field_k = var8.readLong(-32768);
-        if (gj.field_a == 2) {
-          gb.field_h = var8.readUnsignedShort(65280);
-          LevelCompleteScreen.field_H = var8.readUnsignedMedium((byte) -34);
+        ji.receivedChatSystem = stackIn_5_0;
+        nh.receivedChatBadge = var8.readUnsignedByte(255);
+        an.receivedChatSenderId = var8.readLong(-32768);
+        if (gj.receivedChatChannel == 2) {
+          ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
+          LevelCompleteScreen.receivedChatKeyLow24 = var8.readUnsignedMedium((byte) -34);
         } else {
-          gb.field_h = 0;
-          LevelCompleteScreen.field_H = 0;
+          ChatMessage.receivedChatKeyHigh16 = 0;
+          LevelCompleteScreen.receivedChatKeyLow24 = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        HalloweenBackground.field_t = var8.readCp1252String(-1);
+        HalloweenBackground.receivedChatDisplayName = var8.readCp1252String(-1);
         if (var4 != 0) {
-          nd.field_g = var8.readCp1252String(-1);
+          nd.receivedChatSenderName = var8.readCp1252String(-1);
         } else {
-          nd.field_g = HalloweenBackground.field_t;
+          nd.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
         }
-        if (1 != gj.field_a &&
-          4 != gj.field_a) {
-          MusicVoice.field_E = 0;
-          sl.field_y = null;
+        if (1 != gj.receivedChatChannel &&
+          4 != gj.receivedChatChannel) {
+          MusicVoice.receivedChatContextId = 0;
+          sl.receivedChatContextLabel = null;
         } else {
-          MusicVoice.field_E = var8.readUnsignedShort(param0 ^ 65347);
-          sl.field_y = var8.readCp1252String(-1);
+          MusicVoice.receivedChatContextId = var8.readUnsignedShort(param0 ^ 65347);
+          sl.receivedChatContextLabel = var8.readCp1252String(-1);
         }
         if (!param1) {
-          gd.field_d = bj.readCompressedString(80, (byte) 76, var8);
-          BoundedFile.field_m = null;
-          return new gb(param1);
+          gd.receivedChatText = bj.readCompressedString(80, (byte) 76, var8);
+          BoundedFile.receivedChatSuggestions = null;
+          return new ChatMessage(param1);
         }
         var5 = var8.readUnsignedShort(65280);
         try {
           var9 = nh.quickChatPhrases.getDefinition(var5, true);
-          gd.field_d = var9.getPreview(-3);
-          if (nd.field_g.equals(tb.field_cb)) {
+          gd.receivedChatText = var9.getPreview(-3);
+          if (nd.receivedChatSenderName.equals(tb.field_cb)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.linkedPhraseIds;
           }
-          BoundedFile.field_m = stackIn_24_0;
+          BoundedFile.receivedChatSuggestions = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
-          BoundedFile.field_m = null;
-          gd.field_d = null;
-          return new gb(param1);
+          BoundedFile.receivedChatSuggestions = null;
+          gd.receivedChatText = null;
+          return new ChatMessage(param1);
         }
-        return new gb(param1);
+        return new ChatMessage(param1);
     }
 }

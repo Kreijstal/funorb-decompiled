@@ -85,7 +85,7 @@ final class ik implements Iterator {
         return stackIn_6_0;
     }
 
-    final static int a(int param0, gb param1) {
+    final static int getChatMessageColor(int obfuscationGuard, ChatMessage message) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_16_0 = 0;
@@ -99,29 +99,29 @@ final class ik implements Iterator {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           var2_int = cn.field_d;
-          if (param1.field_c != 2) {
-            if (param1.field_c != 4) {
-              if (~param1.field_k != ~oc.field_p) {
-                var2_intLifetime1 = r.field_C[param1.field_c];
+          if (message.channel != 2) {
+            if (message.channel != 4) {
+              if (~message.senderId != ~oc.field_p) {
+                var2_intLifetime1 = r.field_C[message.channel];
               } else {
-                var2_intLifetime1 = BackgroundScene.field_i[param1.field_c];
+                var2_intLifetime1 = BackgroundScene.field_i[message.channel];
               }
             } else {
-              var2_intLifetime1 = r.field_C[param1.field_c];
+              var2_intLifetime1 = r.field_C[message.channel];
             }
           } else {
-            if (!param1.field_e) {
-              if (param1.field_f == 0 &&
-                param1.field_d == 0) {
-                var2_intLifetime1 = BackgroundScene.field_i[param1.field_c];
+            if (!message.systemMessage) {
+              if (message.messageKeyHigh16 == 0 &&
+                message.messageKeyLow24 == 0) {
+                var2_intLifetime1 = BackgroundScene.field_i[message.channel];
               } else {
-                var2_intLifetime1 = r.field_C[param1.field_c];
+                var2_intLifetime1 = r.field_C[message.channel];
               }
             } else {
               var2_intLifetime1 = cn.field_d;
             }
           }
-          if (param0 == -31126) {
+          if (obfuscationGuard == -31126) {
             stackIn_18_0 = var2_intLifetime1;
             return stackIn_18_0;
           }
@@ -131,8 +131,8 @@ final class ik implements Iterator {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_21_0 = var2;
-          stackIn_21_1 = new StringBuilder().append("ik.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("ik.F(").append(obfuscationGuard).append(',');
+          if (message == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";

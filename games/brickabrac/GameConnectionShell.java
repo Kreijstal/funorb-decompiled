@@ -492,7 +492,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         int stackIn_31_0 = 0;
         boolean stackIn_32_1 = false;
         int var2;
-        gb var3;
+        ChatMessage var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = IntrusiveHashTable.currentPacketOpcode;
@@ -540,7 +540,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             stackIn_31_0 = 67;
                             stackIn_32_1 = (var2 == 12);
                             var3 = BallPulseEffect.$cfr$intArgs$a$a948187ac0af(stackIn_31_0, stackIn_32_1);
-                            PowerUpWarning.a(var3, 79);
+                            PowerUpWarning.acceptChatMessage(var3, 79);
                           }
                         } else {
                           um.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, lp.field_ub);
@@ -829,7 +829,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               wl.field_K = null;
             } else {
               if (wl.field_K.ensureGroupAvailableByName("", -28138)) {
-                nn.a(wl.field_K, 122);
+                ContextActionController.a(wl.field_K, 122);
                 wl.field_K = null;
                 hc.b(guardCode ^ 3);
               }

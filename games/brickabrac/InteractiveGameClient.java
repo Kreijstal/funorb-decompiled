@@ -150,7 +150,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         try {
           var7_int = (-param1.capHeight + (param4 + (2 * param0 - param1.xHeight))) / 2;
           int var8 = -69 / ((param6 + 85) / 40);
-          nn.field_g.drawCentered(param2, param3, var7_int + nn.field_g.capHeight, param5, -1);
+          ContextActionController.field_g.drawCentered(param2, param3, var7_int + ContextActionController.field_g.capHeight, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sa.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
