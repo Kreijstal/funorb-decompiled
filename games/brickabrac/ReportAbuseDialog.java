@@ -233,7 +233,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.instructions.horizontalAlignment = 1;
             this.instructions.textColor = 11184810;
             this.body.addChild(this.instructions, 0);
-            this.nameInstructions = new UiComponent(0L, textStyle, wd.field_D);
+            this.nameInstructions = new UiComponent(0L, textStyle, QuickChatPhraseDefinition.field_D);
             this.nameInstructions.horizontalAlignment = 1;
             this.nameInstructions.textColor = 11184810;
             this.body.addChild(this.nameInstructions, 0);
@@ -277,8 +277,8 @@ final class ReportAbuseDialog extends UiComponent {
             this.body.addChild(reasonColumns[1], 0);
             reasonColumns[2] = new UiComponent(0L, (UiComponent) null);
             this.body.addChild(reasonColumns[2], 0);
-            this.reasonButtons = new UiComponent[rg.field_a];
-            for (reasonId = 0; reasonId < rg.field_a; reasonId++) {
+            this.reasonButtons = new UiComponent[QuickChatPhraseRegistry.field_a];
+            for (reasonId = 0; reasonId < QuickChatPhraseRegistry.field_a; reasonId++) {
               if (kd.field_d[reasonId] != null) {
                 this.reasonButtons[reasonId] = new UiComponent(0L, reasonStyle, kd.field_d[reasonId]);
                 this.reasonButtons[reasonId].horizontalAlignment = 0;
@@ -305,7 +305,7 @@ final class ReportAbuseDialog extends UiComponent {
             if (columnWidth < thirdHeadingWidth) {
               columnWidth = thirdHeadingWidth;
             }
-            for (measuredReasonId = 0; measuredReasonId < rg.field_a; measuredReasonId++) {
+            for (measuredReasonId = 0; measuredReasonId < QuickChatPhraseRegistry.field_a; measuredReasonId++) {
               if (null != this.reasonButtons[measuredReasonId]) {
                 reasonWidth = this.reasonButtons[measuredReasonId].getContentWidth(95);
                 if (columnWidth < reasonWidth) {
@@ -495,7 +495,7 @@ final class ReportAbuseDialog extends UiComponent {
             muteSelected = !(this.muteControl.selected);
             muteControl.selected = muteSelected;
           }
-          for (reasonId = 0; reasonId < rg.field_a; reasonId++) {
+          for (reasonId = 0; reasonId < QuickChatPhraseRegistry.field_a; reasonId++) {
             if (null != this.reasonButtons[reasonId]) {
               reasonButton = this.reasonButtons[reasonId];
               hasReportedName = !(this.reportedName.length() <= 0);

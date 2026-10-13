@@ -10,7 +10,7 @@ final class c {
     private int field_h;
     private int[] field_k;
     static MusicTrack field_j;
-    static th field_m;
+    static QuickChatParameterType field_m;
     private int field_b;
     static int cyclesDue;
     static String field_d;
@@ -33,28 +33,28 @@ final class c {
         }
     }
 
-    final static void a(int param0, String param1, byte param2, int param3, int param4, String param5) {
-        BitPacketBuffer var9 = null;
-        int var8 = 0;
+    final static void writeChatMessage(int messageId, String recipientName, byte obfuscationGuard, int channel, int opcode, String text) {
+        BitPacketBuffer packet = null;
+        int bodyStart = 0;
         try {
-          var9 = k.outgoingPackets;
-          BitPacketBuffer var6 = var9;
-          int var7 = -44 / ((-59 - param2) / 38);
-          var9.writeCipheredOpcode(-13413, param4);
-          var9.position = var9.position + 1;
-          var8 = var9.position;
-          var9.writeByte(86, param3);
-          if (param3 == 2) {
-            var9.writeCp1252String(param1, -1);
+          packet = k.outgoingPackets;
+          BitPacketBuffer packetAlias = packet;
+          int guardDivision = -44 / ((-59 - obfuscationGuard) / 38);
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          bodyStart = packet.position;
+          packet.writeByte(86, channel);
+          if (channel == 2) {
+            packet.writeCp1252String(recipientName, -1);
           }
-          if (param5 != null) {
-            InstructionsScreen.writeCompressedString(26152, param5, var9);
+          if (text != null) {
+            InstructionsScreen.writeCompressedString(26152, text, packet);
           } else {
-            var9.writeShort((byte) 123, param0);
+            packet.writeShort((byte) 123, messageId);
           }
-          var9.backfillByteLength((byte) 116, var9.position - var8);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "c.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          packet.backfillByteLength((byte) 116, packet.position - bodyStart);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "c.I(" + messageId + ',' + (recipientName != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + channel + ',' + opcode + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -426,6 +426,6 @@ final class c {
         field_d = "Create";
         field_c = "Accept";
         field_n = "Real-life threats";
-        field_m = new th(7, 0, 1, 1);
+        field_m = new QuickChatParameterType(7, 0, 1, 1);
     }
 }

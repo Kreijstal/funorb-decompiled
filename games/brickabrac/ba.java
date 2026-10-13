@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ba extends DualLinkNode {
-    static th field_B;
+    static QuickChatParameterType field_B;
     static String field_x;
     static UiComponent field_v;
     static RgbSprite halloweenCharacterSprite;
-    static String field_z;
+    static String repeatRecipientName;
     static int field_w;
     static String field_y;
     static String field_u;
@@ -115,7 +115,7 @@ class ba extends DualLinkNode {
         halloweenCharacterSprite = null;
         field_B = null;
         field_x = null;
-        field_z = null;
+        repeatRecipientName = null;
         field_v = null;
         field_u = null;
         field_y = null;
@@ -127,7 +127,7 @@ class ba extends DualLinkNode {
 
     static {
         field_x = "Your game";
-        field_B = new th(9, 0, 4, 1);
+        field_B = new QuickChatParameterType(9, 0, 4, 1);
         field_u = "To Level";
         field_y = "<%0> might change the options - wait and see.";
     }

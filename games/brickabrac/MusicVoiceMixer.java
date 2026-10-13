@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MusicVoiceMixer extends AudioStream {
-    static th field_o;
+    static QuickChatParameterType field_o;
     static RgbSprite field_t;
     private MidiSynthesizer synthesizer;
     NodeDeque voices;
@@ -299,7 +299,7 @@ final class MusicVoiceMixer extends AudioStream {
     }
 
     static {
-        field_o = new th(15, 0, 1, 0);
+        field_o = new QuickChatParameterType(15, 0, 1, 0);
         field_q = "ON";
     }
 }

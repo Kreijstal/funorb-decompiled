@@ -94,7 +94,7 @@ final class BallPulseEffect extends IntrusiveNode {
         Exception var6 = null;
         int var7 = 0;
         BitPacketBuffer var8 = null;
-        wd var9 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         var8 = jl.incomingPackets;
         var2 = var8;
@@ -137,12 +137,12 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         var5 = var8.readUnsignedShort(65280);
         try {
-          var9 = nh.field_c.a(var5, true);
-          gd.field_d = var9.h(-3);
+          var9 = nh.quickChatPhrases.getDefinition(var5, true);
+          gd.field_d = var9.getPreview(-3);
           if (nd.field_g.equals(tb.field_cb)) {
             stackIn_24_0 = null;
           } else {
-            stackIn_24_0 = var9.field_u;
+            stackIn_24_0 = var9.linkedPhraseIds;
           }
           BoundedFile.field_m = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class BallPulseEffect extends IntrusiveNode {
         Exception var6 = null;
         int var7 = 0;
         BitPacketBuffer var8 = null;
-        wd var9 = null;
+        QuickChatPhraseDefinition var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         var8 = jl.incomingPackets;
         var2 = var8;
@@ -222,12 +222,12 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         var5 = var8.readUnsignedShort(65280);
         try {
-          var9 = nh.field_c.a(var5, true);
-          gd.field_d = var9.h(-3);
+          var9 = nh.quickChatPhrases.getDefinition(var5, true);
+          gd.field_d = var9.getPreview(-3);
           if (nd.field_g.equals(tb.field_cb)) {
             stackIn_24_0 = null;
           } else {
-            stackIn_24_0 = var9.field_u;
+            stackIn_24_0 = var9.linkedPhraseIds;
           }
           BoundedFile.field_m = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {

@@ -37,7 +37,7 @@ final class nn {
               if (param2 != 11) {
                 if (param2 != 12) {
                   if (13 == param2) {
-                    DirectByteStorage.a(0, param0, 2, this.field_a);
+                    DirectByteStorage.updateChatFilter(0, param0, 2, this.field_a);
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -52,7 +52,7 @@ final class nn {
                       }
                       if (decompiledFrameRemainder0) {
                         if (19 == param2) {
-                          th.a(this.field_c, this.field_i, this.field_a, param1, this.field_e);
+                          QuickChatParameterType.a(this.field_c, this.field_i, this.field_a, param1, this.field_e);
                           decompiledFrameRemainder0 = (var5 != 0);
                         }
                         if (decompiledFrameRemainder0) {
@@ -63,13 +63,13 @@ final class nn {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  DirectByteStorage.a(0, param0, 1, this.field_a);
+                  DirectByteStorage.updateChatFilter(0, param0, 1, this.field_a);
                   if (var5 != 0) {
-                    DirectByteStorage.a(0, param0, 0, this.field_a);
+                    DirectByteStorage.updateChatFilter(0, param0, 0, this.field_a);
                   }
                 }
               } else {
-                DirectByteStorage.a(0, param0, 0, this.field_a);
+                DirectByteStorage.updateChatFilter(0, param0, 0, this.field_a);
               }
             }}
           return true;
@@ -770,7 +770,7 @@ final class nn {
                 }
                 var2 = nk.a("players_in_game", (byte) 112);
                 if (null != var2) {
-                  th.field_f = MenuButton.a(var2, (byte) 124);
+                  QuickChatParameterType.field_f = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("you_are_invited_to_xs_game", (byte) -111);
                 if (null != var2) {
@@ -942,7 +942,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_needrating", (byte) -113);
                 if (var2 != null) {
-                  wd.field_x = MenuButton.a(var2, (byte) 71);
+                  QuickChatPhraseDefinition.field_x = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("gameopt_unratedonly", (byte) 45);
                 if (var2 != null) {
@@ -1084,7 +1084,7 @@ final class nn {
                 }
                 var2 = nk.a("ra_explanation", (byte) 21);
                 if (var2 != null) {
-                  wd.field_D = MenuButton.a(var2, (byte) 75);
+                  QuickChatPhraseDefinition.field_D = MenuButton.a(var2, (byte) 75);
                 }
                 var2 = nk.a("rule_pillar_0", (byte) -117);
                 if (null != var2) {
@@ -3589,7 +3589,7 @@ final class nn {
           }
           this.field_a = param0.field_c;
           if (param0.field_c == 0) {
-            if (InstructionsScreen.field_r == 0) {
+            if (InstructionsScreen.lobbyChatFilter == 0) {
               this.contextMenu.addAction(RasterSnapshot.field_l, 12, (byte) 81);
             }
             this.contextMenu.addAction(co.field_e, 13, (byte) 87);
@@ -3598,13 +3598,13 @@ final class nn {
             return;
           }
           if (param0.field_c == 1) {
-            if (InstructionsScreen.field_v == 0) {
+            if (InstructionsScreen.gameChatFilter == 0) {
               this.contextMenu.addAction(ej.field_K, 12, (byte) 107);
             }
             this.contextMenu.addAction(CacheIoWorker.field_b, 13, (byte) 82);
           }
           if (param0.field_c == 2) {
-            if (to.field_a == 0) {
+            if (to.privateChatFilter == 0) {
               this.contextMenu.addAction(qp.field_d, 12, (byte) 121);
             }
             this.contextMenu.addAction(ac.field_b, 13, (byte) 118);

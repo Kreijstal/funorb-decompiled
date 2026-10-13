@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class InstructionsScreen extends MenuScreen {
-    static int field_r;
+    static int lobbyChatFilter;
     private int pageIndex;
-    static int field_v;
+    static int gameChatFilter;
     static String field_x;
     static String field_t;
     private int parentScreenId;
@@ -137,7 +137,7 @@ final class InstructionsScreen extends MenuScreen {
           return false;
         }
         if (obfuscationGuard <= 80) {
-          field_v = -12;
+          gameChatFilter = -12;
         }
         var3 = this.buttons[buttonIndex].actionId;
         if (var3 == 25) {

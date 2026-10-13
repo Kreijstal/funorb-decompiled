@@ -109,17 +109,17 @@ final class hi extends um {
         }
         if (param0) {
           rasterStack = (NodeDeque) null;
-          if (ng.field_b == 0 &&
+          if (ng.quickChatChannel == 0 &&
             null != nl.field_f) {
             var3 = 0;
           }
-          if (ng.field_b == 2 &&
+          if (ng.quickChatChannel == 2 &&
             !FileCacheStore.b(-21835160)) {
             var3 = 0;
           }
           if (MeshAttributeRecord.currentKeyCode == 84) {
             if (var3 == 0) {
-              if (ng.field_b != 0) {
+              if (ng.quickChatChannel != 0) {
                 fl.b(!param0);
               }
             } else {
@@ -133,15 +133,15 @@ final class hi extends um {
                   var14 = (String) null;
                   SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
                 } else {
-                  var5 = ng.field_b;
+                  var5 = ng.quickChatChannel;
                   if (var5 == 0 &&
                     null != o.field_e) {
                     var5 = 1;
                   }
-                  if (tm.a(var5, (byte) 18) == 2) {
-                    DirectByteStorage.a(0, param2, 1, var5);
+                  if (tm.getChatFilter(var5, (byte) 18) == 2) {
+                    DirectByteStorage.updateChatFilter(0, param2, 1, var5);
                   }
-                  c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_String);
+                  c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_String);
                 }
               }
               fl.b(true);
@@ -177,11 +177,11 @@ final class hi extends um {
           var19 = var16;
           var7Lifetime13 = var19;
           var7Lifetime14 = var19;
-          if (ng.field_b != 2) {
+          if (ng.quickChatChannel != 2) {
             var7Lifetime15 = "";
-            if (ng.field_b == 0) {
+            if (ng.quickChatChannel == 0) {
               if (o.field_e == null &&
-                th.field_d) {
+                QuickChatParameterType.field_d) {
                 var7Lifetime15 = "[" + ArcticBackground.field_u + "] ";
               }
               if (null != o.field_e) {
@@ -196,7 +196,7 @@ final class hi extends um {
             var20 = var7Lifetime15 + var19 + ": ";
             var5Lifetime4 = var5Lifetime4 - CachedArchiveSource.field_y.measureText(var20);
           } else {
-            var24 = (CharSequence) ((Object) DualLinkNode.field_p);
+            var24 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
             var18 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
             var7Lifetime15 = var18;
             var7Lifetime15 = var18;
@@ -217,15 +217,15 @@ final class hi extends um {
           MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
           return true;
         }
-        if (ng.field_b == 0) {
+        if (ng.quickChatChannel == 0) {
           if (null == nl.field_f) {
-            if (ng.field_b == 2 &&
+            if (ng.quickChatChannel == 2 &&
               !FileCacheStore.b(-21835160)) {
               var3 = 0;
             }
             if (MeshAttributeRecord.currentKeyCode == 84) {
               if (var3 == 0) {
-                if (ng.field_b != 0) {
+                if (ng.quickChatChannel != 0) {
                   fl.b(!param0);
                 }
               } else {
@@ -240,15 +240,15 @@ final class hi extends um {
                     SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
                     fl.b(true);
                   } else {
-                    var5Lifetime1 = ng.field_b;
+                    var5Lifetime1 = ng.quickChatChannel;
                     if (var5Lifetime1 == 0 &&
                       null != o.field_e) {
                       var5Lifetime1 = 1;
                     }
-                    if (tm.a(var5Lifetime1, (byte) 18) == 2) {
-                      DirectByteStorage.a(0, param2, 1, var5Lifetime1);
+                    if (tm.getChatFilter(var5Lifetime1, (byte) 18) == 2) {
+                      DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime1);
                     }
-                    c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime1);
+                    c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime1);
                     fl.b(true);
                   }
                 } else {
@@ -282,11 +282,11 @@ final class hi extends um {
               var19Lifetime1 = var16;
               var7Lifetime1Lifetime4 = var19Lifetime1;
               var7Lifetime1Lifetime5 = var19Lifetime1;
-              if (ng.field_b != 2) {
+              if (ng.quickChatChannel != 2) {
                 var7Lifetime1Lifetime6 = "";
-                if (ng.field_b == 0) {
+                if (ng.quickChatChannel == 0) {
                   if (o.field_e == null &&
-                    th.field_d) {
+                    QuickChatParameterType.field_d) {
                     var7Lifetime1Lifetime6 = "[" + ArcticBackground.field_u + "] ";
                   }
                   if (null != o.field_e) {
@@ -303,7 +303,7 @@ final class hi extends um {
                 var7Lifetime1Lifetime6 = var20Lifetime1;
                 var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - CachedArchiveSource.field_y.measureText(var20Lifetime1);
               } else {
-                var25 = (CharSequence) ((Object) DualLinkNode.field_p);
+                var25 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
                 var18Lifetime1 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var7Lifetime1Lifetime6 = var18Lifetime1;
@@ -326,13 +326,13 @@ final class hi extends um {
           }
           var3 = 0;
         }
-        if (ng.field_b == 2 &&
+        if (ng.quickChatChannel == 2 &&
           !FileCacheStore.b(-21835160)) {
           var3 = 0;
         }
         if (MeshAttributeRecord.currentKeyCode == 84) {
           if (var3 == 0) {
-            if (ng.field_b != 0) {
+            if (ng.quickChatChannel != 0) {
               fl.b(!param0);
             }
           } else {
@@ -348,15 +348,15 @@ final class hi extends um {
                 var14Lifetime2 = (String) null;
                 SoundCache.a((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
               } else {
-                var5Lifetime2 = ng.field_b;
+                var5Lifetime2 = ng.quickChatChannel;
                 if (var5Lifetime2 == 0 &&
                   null != o.field_e) {
                   var5Lifetime2 = 1;
                 }
-                if (tm.a(var5Lifetime2, (byte) 18) == 2) {
-                  DirectByteStorage.a(0, param2, 1, var5Lifetime2);
+                if (tm.getChatFilter(var5Lifetime2, (byte) 18) == 2) {
+                  DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime2);
                 }
-                c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime2);
+                c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime2);
               }
             }
             fl.b(true);
@@ -395,9 +395,9 @@ final class hi extends um {
         var19Lifetime2 = var16;
         var7Lifetime7 = var19Lifetime2;
         var7Lifetime8 = var19Lifetime2;
-        if (ng.field_b != 2) {
+        if (ng.quickChatChannel != 2) {
           var7Lifetime9 = "";
-          if (ng.field_b != 0) {
+          if (ng.quickChatChannel != 0) {
             var20Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var7Lifetime9 = var20Lifetime2;
             var7Lifetime9 = var20Lifetime2;
@@ -408,7 +408,7 @@ final class hi extends um {
             return true;
           }
           if (o.field_e == null &&
-            th.field_d) {
+            QuickChatParameterType.field_d) {
             var7Lifetime9 = "[" + ArcticBackground.field_u + "] ";
           }
           if (null == o.field_e) {
@@ -441,7 +441,7 @@ final class hi extends um {
           var20Lifetime2Lifetime4 = var7Lifetime9 + var19Lifetime2 + ": ";
           var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime4);
         } else {
-          var26 = (CharSequence) ((Object) DualLinkNode.field_p);
+          var26 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
           var18Lifetime2 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
           var7Lifetime9 = var18Lifetime2;
           var7Lifetime9 = var18Lifetime2;

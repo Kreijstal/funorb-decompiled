@@ -168,7 +168,7 @@ abstract class GameClock {
     }
 
     final static void b(byte param0) {
-        kd.field_d = new String[rg.field_a];
+        kd.field_d = new String[QuickChatPhraseRegistry.field_a];
         kd.field_d[18] = ta.field_c;
         kd.field_d[4] = BackgroundRegistry.field_a;
         kd.field_d[16] = oj.field_o;

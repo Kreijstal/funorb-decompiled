@@ -13,7 +13,7 @@ final class rd {
         if (null != hd.quickChatMenu) {
           hd.quickChatMenu.resetSelection((byte) 41);
         }
-        if (param0 != ~ng.field_b) {
+        if (param0 != ~ng.quickChatChannel) {
           fl.b(true);
         }
         HighscoresScreen.field_v = 0;

@@ -7,7 +7,7 @@ final class o {
     static int field_f;
     static String field_a;
     static ScrollPane field_b;
-    static th field_h;
+    static QuickChatParameterType field_h;
     static int enabledFeatureMask;
     static dk field_c;
 
@@ -105,7 +105,7 @@ final class o {
     static {
         field_a = "Destroy the flashing bricks to get power-ups!";
         field_g = new n();
-        field_h = new th(6, 0, 4, 2);
+        field_h = new QuickChatParameterType(6, 0, 4, 2);
         enabledFeatureMask = 0;
     }
 }

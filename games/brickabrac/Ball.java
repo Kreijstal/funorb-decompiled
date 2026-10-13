@@ -27,30 +27,30 @@ final class Ball extends CircleBody {
         this.setVelocityFromAngle(this.launchAngle, speed, 116);
     }
 
-    final static th a(int param0, byte param1) {
-        th[] var2;
+    final static QuickChatParameterType findQuickChatParameterType(int commandId, byte obfuscationGuard) {
+        QuickChatParameterType[] var2;
         int var3;
         int var4;
-        th[] var5;
+        QuickChatParameterType[] var5;
         int var3Lifetime1;
-        th[] var2Lifetime1;
-        th[] var5Lifetime1;
+        QuickChatParameterType[] var2Lifetime1;
+        QuickChatParameterType[] var5Lifetime1;
         var4 = BrickABrac.field_J ? 1 : 0;
-        if (param1 > 4) {
-          var5 = SecondaryNodeQueue.b(0);
+        if (obfuscationGuard > 4) {
+          var5 = SecondaryNodeQueue.getQuickChatParameterTypes(0);
           var2 = var5;
           for (var3 = 0; var5.length > var3; var3++) {
-            if (param0 == var5[var3].field_e) {
+            if (commandId == var5[var3].commandId) {
               return var5[var3];
             }
           }
           return null;
         }
         field_A = (UiComponent) null;
-        var5Lifetime1 = SecondaryNodeQueue.b(0);
+        var5Lifetime1 = SecondaryNodeQueue.getQuickChatParameterTypes(0);
         var2Lifetime1 = var5Lifetime1;
         for (var3Lifetime1 = 0; var5Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
-          if (param0 == var5Lifetime1[var3Lifetime1].field_e) {
+          if (commandId == var5Lifetime1[var3Lifetime1].commandId) {
             return var5Lifetime1[var3Lifetime1];
           }
         }

@@ -8,7 +8,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     static RgbSprite farmSmallSprite;
     static String[] savePrompts;
     static String field_y;
-    static long field_E;
+    static long repeatRecipientId;
 
     public static void i(int param0) {
         field_y = null;

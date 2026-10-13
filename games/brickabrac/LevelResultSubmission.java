@@ -53,23 +53,23 @@ final class LevelResultSubmission extends IntrusiveNode {
           }
           var1 = null;
           var2 = null;
-          if (ng.field_b == 0 &&
+          if (ng.quickChatChannel == 0 &&
             null != nl.field_f) {
             var2 = rl.field_a;
           }
-          if (2 == ng.field_b &&
+          if (2 == ng.quickChatChannel &&
             !FileCacheStore.b(-21835160)) {
             boolean decompiledSharedTail2 = !(LevelPack.a(0, QuickChatHelpDialog.field_Qb));
             if (!decompiledSharedTail2) {
-              var2 = rd.a(ScorePopup.field_j, new String[]{DualLinkNode.field_p}, (byte) 103);
+              var2 = rd.a(ScorePopup.field_j, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
-              var2 = rd.a(kk.field_c, new String[]{DualLinkNode.field_p}, (byte) 103);
+              var2 = rd.a(kk.field_c, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
             }
             if (TooltipSprite.field_p) {
               SoundCache.a((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
-              th.b(1);
+              QuickChatParameterType.b(1);
             }
           }
           if (null == var2 &&
@@ -84,10 +84,10 @@ final class LevelResultSubmission extends IntrusiveNode {
             var3 = r.a((byte) 82, var3);
             var4 = "";
             var5 = "|";
-            var6 = ng.field_b;
+            var6 = ng.quickChatChannel;
             var7 = 0;
             if (2 == var6) {
-              var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.field_p}, (byte) 103);
+              var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
               var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
               var7 = -485 + g.field_n.width + ap.field_e.width - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
               if (0 > var7) {
@@ -98,7 +98,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               var10 != 0) {
               if (0 == var6) {
                 if (null == o.field_e &&
-                  th.field_d) {
+                  QuickChatParameterType.field_d) {
                   var4 = "[" + ArcticBackground.field_u + "] ";
                 }
                 if (null != o.field_e) {
@@ -154,7 +154,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               ap.field_e.activeInside = false;
             }
             if (ap.field_e.activeInside) {
-              var1 = rd.a(df.field_b, new String[]{var3, DualLinkNode.field_p}, (byte) 103);
+              var1 = rd.a(df.field_b, new String[]{var3, DualLinkNode.quickChatRecipient}, (byte) 103);
             }
           }
           stackIn_96_0 = var1;

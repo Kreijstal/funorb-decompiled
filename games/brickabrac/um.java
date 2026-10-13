@@ -1191,7 +1191,7 @@ class um implements ub, qe {
               if (var13.field_Qb != null) {
                 var32 += 2;
                 var38 = new StringBuilder(64);
-                discarded$1 = var38.append(th.field_f);
+                discarded$1 = var38.append(QuickChatParameterType.field_f);
                 discarded$2 = var38.append(var13.field_Qb[0]);
                 for (var39_intLifetime1 = 1; var13.field_cc > var39_intLifetime1; var39_intLifetime1++) {
                   discarded$3 = var38.append(", ");
@@ -1242,9 +1242,9 @@ class um implements ub, qe {
                   }
                 }
                 if (var36 == null) {
-                  ep.field_e = rg.field_b[var35_intLifetime2];
+                  ep.field_e = QuickChatPhraseRegistry.field_b[var35_intLifetime2];
                 } else {
-                  ep.field_e = rg.field_b[var35_intLifetime2] + " - " + (String) (var36);
+                  ep.field_e = QuickChatPhraseRegistry.field_b[var35_intLifetime2] + " - " + (String) (var36);
                 }
               }
             }

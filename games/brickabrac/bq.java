@@ -189,8 +189,8 @@ final class bq {
             if (-1 == var4) {
               throw new IllegalStateException();
             }
-            rg.field_k = new String[var4];
-            ArrayOperations.copy(CacheIoWorker.field_h, 0, rg.field_k, 0, var4);
+            QuickChatPhraseRegistry.field_k = new String[var4];
+            ArrayOperations.copy(CacheIoWorker.field_h, 0, QuickChatPhraseRegistry.field_k, 0, var4);
             h.field_F = new String[-1 - var4 + var3_int];
             ArrayOperations.copy(CacheIoWorker.field_h, 1 + var4, h.field_F, 0, -1 + (-var4 + var3_int));
             var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
@@ -209,10 +209,10 @@ final class bq {
             ArrayOperations.copy(CacheIoWorker.field_h, 0, ik.field_b, 0, var4);
             HuffmanCodec.field_h = new String[var3_int - (var4 + 1)];
             ArrayOperations.copy(CacheIoWorker.field_h, var4 + 1, HuffmanCodec.field_h, 0, -1 + (var3_int - var4));
-            if (ik.field_b.length > rg.field_k.length) {
+            if (ik.field_b.length > QuickChatPhraseRegistry.field_k.length) {
               stackIn_66_0 = ik.field_b.length;
             } else {
-              stackIn_66_0 = rg.field_k.length;
+              stackIn_66_0 = QuickChatPhraseRegistry.field_k.length;
             }
             var5 = stackIn_66_0;
             if (HuffmanCodec.field_h.length <= h.field_F.length) {
@@ -277,7 +277,7 @@ final class bq {
             }
           }
           if (ArchiveFetchClient.field_p == 2) {
-            var10 = rg.field_k;
+            var10 = QuickChatPhraseRegistry.field_k;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];

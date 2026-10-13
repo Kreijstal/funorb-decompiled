@@ -60,7 +60,7 @@ final class wn {
           var4 = GameScreen.field_f.content.children;
           var5 = null;
           if (LevelMetadata.field_m == 2) {
-            rg.field_c.enabled = true;
+            QuickChatPhraseRegistry.field_c.enabled = true;
             sj.field_d.text = rd.a(LevelDecoder.field_c, new String[]{AlignedIconLabel.field_Tb}, (byte) 103);
             GameScreen.field_f.scrollPane.viewport.text = null;
             var6 = null;
@@ -184,7 +184,7 @@ final class wn {
             }
           } else {
             sj.field_d.text = kd.field_a;
-            rg.field_c.enabled = false;
+            QuickChatPhraseRegistry.field_c.enabled = false;
             if (LevelMetadata.field_m == 1) {
               GameScreen.field_f.scrollPane.viewport.text = cd.field_f;
               if (var19 != 0) {
@@ -379,17 +379,17 @@ final class wn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          InstructionsScreen.field_r = param1 >> 4 & 3;
-          InstructionsScreen.field_v = (param1 & 12) >> 2;
-          if (InstructionsScreen.field_r > 2) {
-            InstructionsScreen.field_r = 2;
+          InstructionsScreen.lobbyChatFilter = param1 >> 4 & 3;
+          InstructionsScreen.gameChatFilter = (param1 & 12) >> 2;
+          if (InstructionsScreen.lobbyChatFilter > 2) {
+            InstructionsScreen.lobbyChatFilter = 2;
           }
-          if (InstructionsScreen.field_v > param0) {
-            InstructionsScreen.field_v = 2;
+          if (InstructionsScreen.gameChatFilter > param0) {
+            InstructionsScreen.gameChatFilter = 2;
           }
-          to.field_a = 3 & param1;
-          if (to.field_a > 2) {
-            to.field_a = 2;
+          to.privateChatFilter = 3 & param1;
+          if (to.privateChatFilter > 2) {
+            to.privateChatFilter = 2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

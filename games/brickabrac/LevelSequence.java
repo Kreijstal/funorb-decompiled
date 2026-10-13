@@ -7,7 +7,7 @@ final class LevelSequence {
     static String field_g;
     private int period;
     private int[] order;
-    static boolean field_d;
+    static boolean chatFiltersChanged;
     boolean repeats;
 
     final void decodeLevel(ga unusedContext, IntNode levelState, NodeDeque motionPaths, int levelIndex, byte obfuscationGuard, NodeDeque[] brickGroups) {
@@ -128,7 +128,7 @@ final class LevelSequence {
 
     static {
         field_g = null;
-        field_d = true;
+        chatFiltersChanged = true;
         field_a = "Close";
     }
 }

@@ -291,7 +291,7 @@ final class n {
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < cq.field_p; var10Lifetime1++) {
                     if (h.field_D[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + rg.field_b[var10Lifetime1] + "</col>";
+                      var11_ref = "<col=A00000>" + QuickChatPhraseRegistry.field_b[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;
                       if (var9 == null) {

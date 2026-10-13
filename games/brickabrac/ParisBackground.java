@@ -114,7 +114,7 @@ final class ParisBackground extends BackgroundScene {
             return false;
           }
           NinjaBackground.parisNearSprite = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
-          th.parisMidSprite = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
+          QuickChatParameterType.parisMidSprite = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
           bf.parisFarSprite = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
           pl.parisSmallSprite = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
           BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
@@ -122,9 +122,9 @@ final class ParisBackground extends BackgroundScene {
           if (obfuscationGuard) {
             ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
           }
-          UnderwaterBackground.field_t = jh.a(0, th.parisMidSprite);
+          UnderwaterBackground.field_t = jh.a(0, QuickChatParameterType.parisMidSprite);
           MembershipBenefitsScreen.field_s = jh.a(0, bf.parisFarSprite);
-          uq.b(th.parisMidSprite);
+          uq.b(QuickChatParameterType.parisMidSprite);
           uq.b(UnderwaterBackground.field_t);
           uq.b(NinjaBackground.parisNearSprite);
           uq.b(IntrusiveHashTable.field_i);
@@ -177,7 +177,7 @@ final class ParisBackground extends BackgroundScene {
           if (obfuscationGuard >= -91) {
             this.drawFullBackground(false, 87, -76, -86, -25);
           }
-          stackIn_19_0 = (NinjaBackground.parisNearSprite != null) && (null != th.parisMidSprite) && (bf.parisFarSprite != null) && (pl.parisSmallSprite != null) && (null != BallPulseEffect.parisCharacterSprite);
+          stackIn_19_0 = (NinjaBackground.parisNearSprite != null) && (null != QuickChatParameterType.parisMidSprite) && (bf.parisFarSprite != null) && (pl.parisSmallSprite != null) && (null != BallPulseEffect.parisCharacterSprite);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -235,7 +235,7 @@ final class ParisBackground extends BackgroundScene {
         int var20 = 0;
         var20 = BrickABrac.field_J ? 1 : 0;
         try {
-          th.field_d = param9;
+          QuickChatParameterType.field_d = param9;
           sj.field_a = param6;
           BackgroundScene.field_i[0] = 16764000;
           BackgroundScene.field_i[3] = 16736511;
@@ -280,7 +280,7 @@ final class ParisBackground extends BackgroundScene {
           BallPulseEffect.field_n.addChild(ap.field_e, 0);
           HalloweenBackground.field_w = new UiComponent[5];
           vj.field_a = new UiComponent[5];
-          wd.field_F = new UiComponent[5];
+          QuickChatPhraseDefinition.field_F = new UiComponent[5];
           ik.field_i = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -290,7 +290,7 @@ final class ParisBackground extends BackgroundScene {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_34_0 != var18) {
                 if (var18 != 1 ||
-                  !th.field_d) {
+                  !QuickChatParameterType.field_d) {
                   decompiledFrameRemainder0 = (var18 == 2);
                   if (decompiledFrameRemainder0) {
                     var19 = fe.field_hb;
@@ -299,7 +299,7 @@ final class ParisBackground extends BackgroundScene {
                   var19 = UiComponent.field_Z;
                 }
               } else {
-                if (!th.field_d) {
+                if (!QuickChatParameterType.field_d) {
                   stackIn_30_0 = QuickChatHelpDialog.field_Wb;
                 } else {
                   stackIn_30_0 = ArcticBackground.field_u;
@@ -311,11 +311,11 @@ final class ParisBackground extends BackgroundScene {
                 HalloweenBackground.field_w[var18] = new UiComponent(0L, sj.field_a, var19);
                 vj.field_a[var18] = new UiComponent(0L, (UiComponent) null);
                 vj.field_a[var18].verticalAlignment = 1;
-                wd.field_F[var18] = new UiComponent(0L, sj.field_a);
-                wd.field_F[var18].verticalAlignment = 1;
+                QuickChatPhraseDefinition.field_F[var18] = new UiComponent(0L, sj.field_a);
+                QuickChatPhraseDefinition.field_F[var18].verticalAlignment = 1;
                 ik.field_i[var18].addChild(HalloweenBackground.field_w[var18], 0);
                 ik.field_i[var18].addChild(vj.field_a[var18], 0);
-                ik.field_i[var18].addChild(wd.field_F[var18], 0);
+                ik.field_i[var18].addChild(QuickChatPhraseDefinition.field_F[var18], 0);
                 ik.field_i[var18].markDescendantsToInheritVisualState(true);
                 DualLinkDeque.field_d.addChild(ik.field_i[var18], 0);
                 fe.field_pb = fe.field_pb + 1;
@@ -424,7 +424,7 @@ final class ParisBackground extends BackgroundScene {
             ej.a(0, bf.parisFarSprite, 1, 0, colorIndex, var6);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          wo.a(destinationY, scroll16, th.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);
+          wo.a(destinationY, scroll16, QuickChatParameterType.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

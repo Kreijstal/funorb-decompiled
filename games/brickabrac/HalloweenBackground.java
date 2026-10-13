@@ -39,7 +39,7 @@ final class HalloweenBackground extends BackgroundScene {
           }
           var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            s.a(ch.field_m, 1, colorIndex, th.field_j, var7, 0, (byte) -86, va.field_b);
+            s.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, va.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           qh.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, nf.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
@@ -51,7 +51,7 @@ final class HalloweenBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = PowerUp.a(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          s.a(ch.field_m, 1, colorIndex, th.field_j, var8, 0, (byte) -86, va.field_b);
+          s.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, va.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         qh.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, nf.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
@@ -76,7 +76,7 @@ final class HalloweenBackground extends BackgroundScene {
         va.field_b = jh.a(0, nf.halloweenNearSprite);
         field_u = jh.a(0, StateIconLabel.halloweenMidSprite);
         ch.field_m = jh.a(0, GameClock.halloweenFarSprite);
-        th.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
+        QuickChatParameterType.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
         ba.halloweenCharacterSprite = pl.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
         ej.halloweenCapsSprites[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
         GameConnectionShell.halloweenSegsSprites[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
@@ -193,7 +193,7 @@ final class HalloweenBackground extends BackgroundScene {
           }
           var7 = kd.a(this.sceneId, colorIndex, (byte) 116);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            s.a(ch.field_m, 2, colorIndex, th.field_j, var7, -13, (byte) -96, va.field_b);
+            s.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, va.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
             return;
@@ -210,7 +210,7 @@ final class HalloweenBackground extends BackgroundScene {
           qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
           return;
         }
-        s.a(ch.field_m, 2, colorIndex, th.field_j, var8, -13, (byte) -96, va.field_b);
+        s.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, va.field_b);
         var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
     }

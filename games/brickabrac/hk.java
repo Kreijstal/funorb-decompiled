@@ -90,7 +90,7 @@ final class hk extends ib implements hf, en {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = cd.field_e;
-          wd.quickChatMenuRoot = new UiComponent(0L, (UiComponent) null);
+          QuickChatPhraseDefinition.quickChatMenuRoot = new UiComponent(0L, (UiComponent) null);
           if (param2 == null) {
             AlignedIconLabel.a("QC1", (Throwable) null, param1 ^ 118);
             return;
@@ -98,7 +98,7 @@ final class hk extends ib implements hf, en {
           param2.decodedFilePolicy = 0;
           param2.discardPackedGroups = false;
           pj.field_c = new so(var3_int, param2, param2);
-          nh.field_c = new rg(var3_int, param2, param2, new rm());
+          nh.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, param2, param2, new rm());
           var4 = gj.b(0);
           if (var4 == null) {
             AlignedIconLabel.a("QC2", (Throwable) null, param1 - 14);
@@ -122,7 +122,7 @@ final class hk extends ib implements hf, en {
           }
           Rasterizer2D.bind(var14, var5, var6);
           fe.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, cp.field_K);
-          wd.quickChatMenuRoot.children = new NodeDeque();
+          QuickChatPhraseDefinition.quickChatMenuRoot.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

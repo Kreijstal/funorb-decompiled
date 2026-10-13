@@ -11,7 +11,7 @@ final class fl extends k {
         int var1 = 50 / ((31 - param0) / 52);
         LevelCompleteScreen.field_J = null;
         go.field_e = 0;
-        th.field_h = false;
+        QuickChatParameterType.field_h = false;
         b.field_a = -1;
         CappedUrlRequest.field_j = -1;
     }
@@ -58,7 +58,7 @@ final class fl extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          var3 = th.a(var5, -106);
+          var3 = QuickChatParameterType.a(var5, -106);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
@@ -100,11 +100,11 @@ final class fl extends k {
         if (!param0) {
           fl.f((byte) -72);
           OptionsScreen.field_A.setLength(0);
-          ng.field_b = 0;
+          ng.quickChatChannel = 0;
           return;
         }
         OptionsScreen.field_A.setLength(0);
-        ng.field_b = 0;
+        ng.quickChatChannel = 0;
     }
 
     fl(vb param0) {

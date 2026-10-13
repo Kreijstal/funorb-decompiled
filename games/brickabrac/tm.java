@@ -58,7 +58,7 @@ final class tm {
           RectangleBody.field_r.position = 0;
           RectangleBody.field_r.writeByte(21, 10);
           if (param2 <= 115) {
-            tm.a(-128, (byte) -47);
+            tm.getChatFilter(-128, (byte) -47);
           }
           var11 = 0;
           var9Lifetime1 = var11;
@@ -180,20 +180,20 @@ final class tm {
         field_d = null;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int getChatFilter(int channel, byte obfuscationGuard) {
         int var2 = 0;
-        if (param0 == 0) {
-          var2 = InstructionsScreen.field_r;
+        if (channel == 0) {
+          var2 = InstructionsScreen.lobbyChatFilter;
         }
-        if (param1 != 18) {
+        if (obfuscationGuard != 18) {
           java.math.BigInteger var3 = (java.math.BigInteger) null;
           tm.a((PacketBuffer) null, 46, (byte) -64, (java.math.BigInteger) null, -75, (byte[]) null, (java.math.BigInteger) null);
         }
-        if (param0 == 1) {
-          var2 = InstructionsScreen.field_v;
+        if (channel == 1) {
+          var2 = InstructionsScreen.gameChatFilter;
         }
-        if (param0 == 2) {
-          var2 = to.field_a;
+        if (channel == 2) {
+          var2 = to.privateChatFilter;
         }
         return var2;
     }

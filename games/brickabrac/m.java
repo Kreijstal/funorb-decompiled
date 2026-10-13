@@ -97,7 +97,7 @@ final class m {
           if (!MatchResultScreen.field_s) {
             return false;
           }
-          if (ng.field_b == 2 &&
+          if (ng.quickChatChannel == 2 &&
             QuickChatHelpDialog.field_Qb != null) {
             var3 = (CharSequence) ((Object) param1);
             if (QuickChatHelpDialog.field_Qb.equals(gb.a(var3, param0 - 13073))) {

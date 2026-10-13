@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends DualLinkNode {
-    int[] field_u;
-    private int[][] field_A;
-    private int[] field_B;
-    private String[] field_y;
+final class QuickChatPhraseDefinition extends DualLinkNode {
+    int[] linkedPhraseIds;
+    private int[][] parameterArguments;
+    private int[] parameterCommandIds;
+    private String[] fragments;
     static NodeDeque soundPlaybacks;
     static UiComponent field_E;
     static UiComponent[] field_F;
     static String field_D;
     static String field_x;
-    static int field_z;
+    static int repeatMessageChannel;
     static UiComponent quickChatMenuRoot;
     static ResourceArchive field_C;
 
-    final void g(int param0) {
-        int var2 = 0;
-        int var3 = BrickABrac.field_J ? 1 : 0;
-        int var2Lifetime1;
-        if (null != this.field_u) {
-          for (var2 = 0; var2 < this.field_u.length; var2++) {
-            this.field_u[var2] = LevelSelectScreen.d(this.field_u[var2], 32768);
+    final void markExtendedLinks(int obfuscationGuard) {
+        int linkIndex = 0;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        int guardDivision;
+        if (null != this.linkedPhraseIds) {
+          for (linkIndex = 0; linkIndex < this.linkedPhraseIds.length; linkIndex++) {
+            this.linkedPhraseIds[linkIndex] = LevelSelectScreen.d(this.linkedPhraseIds[linkIndex], 32768);
           }
         }
-        var2Lifetime1 = 122 % ((param0 + 60) / 61);
+        guardDivision = 122 % ((obfuscationGuard + 60) / 61);
     }
 
     public static void f(int param0) {
@@ -36,87 +36,87 @@ final class wd extends DualLinkNode {
         field_D = null;
         quickChatMenuRoot = null;
         if (param0 != 32463) {
-          wd.f(-119);
+          QuickChatPhraseDefinition.f(-119);
         }
     }
 
-    final String h(int param0) {
-        int var3 = 0;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        int var4 = BrickABrac.field_J ? 1 : 0;
-        StringBuilder var5 = new StringBuilder(80);
-        StringBuilder var2 = var5;
-        if (null == this.field_y) {
+    final String getPreview(int obfuscationGuard) {
+        int fragmentIndex = 0;
+        StringBuilder ignoredSeparatorAppend = null;
+        StringBuilder ignoredFragmentAppend = null;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        StringBuilder preview = new StringBuilder(80);
+        StringBuilder previewAlias = preview;
+        if (null == this.fragments) {
           return "";
         }
-        StringBuilder discarded$15 = var5.append(this.field_y[0]);
-        if (param0 != -3) {
+        StringBuilder ignoredFirstFragmentAppend = preview.append(this.fragments[0]);
+        if (obfuscationGuard != -3) {
           return (String) null;
         }
-        for (var3 = 1; var3 < this.field_y.length; var3++) {
-          discarded$16 = var2.append("...");
-          discarded$17 = var5.append(this.field_y[var3]);
+        for (fragmentIndex = 1; fragmentIndex < this.fragments.length; fragmentIndex++) {
+          ignoredSeparatorAppend = previewAlias.append("...");
+          ignoredFragmentAppend = preview.append(this.fragments[fragmentIndex]);
         }
-        return var2.toString();
+        return previewAlias.toString();
     }
 
-    private final void a(int param0, int param1, PacketBuffer param2) {
-        int[] array$0 = null;
-        int var8 = 0;
+    private final void decodeTag(int tag, int obfuscationGuard, PacketBuffer packet) {
+        int[] arguments = null;
+        int argumentIndex = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int count = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        th var7 = null;
-        int var9 = 0;
-        var9 = BrickABrac.field_J ? 1 : 0;
+        int entryIndex = 0;
+        int commandId = 0;
+        QuickChatParameterType parameterType = null;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != -3) {
-            this.field_B = (int[]) null;
+          if (obfuscationGuard != -3) {
+            this.parameterCommandIds = (int[]) null;
           }
-          if (param0 != 1) {
-            if (param0 == 2) {
-              var4_int = param2.readUnsignedByte(255);
-              this.field_u = new int[var4_int];
-              for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_u[var5] = param2.readUnsignedShort(65280);
+          if (tag != 1) {
+            if (tag == 2) {
+              count = packet.readUnsignedByte(255);
+              this.linkedPhraseIds = new int[count];
+              for (entryIndex = 0; entryIndex < count; entryIndex++) {
+                this.linkedPhraseIds[entryIndex] = packet.readUnsignedShort(65280);
               }
-            } else if (param0 == 3) {
-              var4_int = param2.readUnsignedByte(255);
-              this.field_B = new int[var4_int];
-              this.field_A = new int[var4_int][];
-              for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param2.readUnsignedShort(65280);
-                var7 = Ball.a(var6, (byte) 84);
-                if (var7 != null) {
-                  this.field_B[var5] = var6;
-                  array$0 = new int[var7.field_g];
-                  this.field_A[var5] = array$0;
-                  for (var8 = 0; var7.field_g > var8; var8++) {
-                    this.field_A[var5][var8] = param2.readUnsignedShort(65280);
+            } else if (tag == 3) {
+              count = packet.readUnsignedByte(255);
+              this.parameterCommandIds = new int[count];
+              this.parameterArguments = new int[count][];
+              for (entryIndex = 0; count > entryIndex; entryIndex++) {
+                commandId = packet.readUnsignedShort(65280);
+                parameterType = Ball.findQuickChatParameterType(commandId, (byte) 84);
+                if (parameterType != null) {
+                  this.parameterCommandIds[entryIndex] = commandId;
+                  arguments = new int[parameterType.definitionWordCount];
+                  this.parameterArguments[entryIndex] = arguments;
+                  for (argumentIndex = 0; parameterType.definitionWordCount > argumentIndex; argumentIndex++) {
+                    this.parameterArguments[entryIndex][argumentIndex] = packet.readUnsignedShort(65280);
                   }
                 }
               }
             } else {
-              if (param0 != 4) {
+              if (tag != 4) {
                 return;
               }
             }
           } else {
-            this.field_y = FarmBackground.a((byte) -63, param2.readCp1252String(-1), '<');
+            this.fragments = FarmBackground.a((byte) -63, packet.readCp1252String(-1), '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_22_0 = var4;
-          stackIn_22_1 = new StringBuilder().append("wd.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_22_1 = new StringBuilder().append("wd.F(").append(tag).append(',').append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
@@ -125,37 +125,37 @@ final class wd extends DualLinkNode {
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
-        int var3_int = 0;
-        int var4 = 0;
+    final void decode(PacketBuffer packet, int obfuscationGuard) {
+        int tag = 0;
+        int unusedGameFlag = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != -3) {
-            this.g(-2);
+          if (obfuscationGuard != -3) {
+            this.markExtendedLinks(-2);
           }
           while (true) {
-            var3_int = param0.readUnsignedByte(255);
-            if (var3_int == 0) {
+            tag = packet.readUnsignedByte(255);
+            if (tag == 0) {
               return;
             }
-            this.a(var3_int, -3, param0);
+            this.decodeTag(tag, -3, packet);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("wd.B(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class wd extends DualLinkNode {
         }
     }
 
-    wd() {
+    QuickChatPhraseDefinition() {
     }
 
     static {

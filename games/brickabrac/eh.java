@@ -300,15 +300,15 @@ final class eh {
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        BitPacketBuffer var2 = k.outgoingPackets;
-        var2.writeCipheredOpcode(-13413, param1);
-        if (!param0) {
+    final static void writeChatFilters(boolean obfuscationGuard, int opcode) {
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(-13413, opcode);
+        if (!obfuscationGuard) {
           eh.isAsciiDigit('￪', (byte) -120);
         }
-        var2.writeByte(-101, 2);
-        var2.writeByte(-103, 4);
-        var2.writeByte(-109, qf.p(248));
+        packet.writeByte(-101, 2);
+        packet.writeByte(-103, 4);
+        packet.writeByte(-109, qf.packChatFilters(248));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

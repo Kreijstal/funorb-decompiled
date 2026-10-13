@@ -59,14 +59,14 @@ abstract class h extends oc implements sd {
           if (param0 != 13894) {
             h.a(-92, -23);
           }
-          var2 = (SoundPlayback) (wd.soundPlaybacks.first(param0 ^ -13940));
+          var2 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.first(param0 ^ -13940));
           while (var2 != null) {
             if (!var2.sourceNode.isLinked(0)) {
               var2.unlink((byte) 111);
             } else {
               var2.stream.setGain(BackgroundScene.masterSoundGain * var2.baseGain + 128 >> 8);
             }
-            var2 = (SoundPlayback) (wd.soundPlaybacks.next((byte) 116));
+            var2 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.next((byte) 116));
           }
           if (jc.field_M != null) {
             var2Lifetime1 = (SoundPlayback) (jc.field_M.first(param0 - 13977));

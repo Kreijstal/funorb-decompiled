@@ -758,7 +758,7 @@ public final class BrickABrac extends InteractiveGameClient {
         uo.a((byte) 66);
         QuickChatMenu.d(true);
         so.b((byte) -19);
-        rg.a(64);
+        QuickChatPhraseRegistry.a(64);
         kn.a((byte) 90);
         an.c((byte) -93);
         na.k((byte) 84);
@@ -791,7 +791,7 @@ public final class BrickABrac extends InteractiveGameClient {
         gr.a((byte) 118);
         VorbisFloor1.releaseScratch();
         ui.b(1516);
-        wd.f(32463);
+        QuickChatPhraseDefinition.f(32463);
         to.a(-125);
         IntrusiveHashTable.a(120);
         MusicVoice.c((byte) 67);
@@ -846,7 +846,7 @@ public final class BrickABrac extends InteractiveGameClient {
         jb.i((byte) -116);
         DirectByteStorage.c(7301);
         c.a(true);
-        th.a(125);
+        QuickChatParameterType.a(125);
         ej.h(928072);
         wi.b((byte) -54);
         AudioFilter.releaseScratch();

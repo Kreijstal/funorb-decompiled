@@ -841,7 +841,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (3 == clientStage &&
           HuffmanCodec.a(vh.field_S, ma.field_P, ja.field_c, -111) &&
-          rg.a(ja.field_c, (byte) 101)) {
+          QuickChatPhraseRegistry.a(ja.field_c, (byte) 101)) {
           ui.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
           SpaceBackground.field_t = false;

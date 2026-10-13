@@ -412,8 +412,8 @@ final class JungleBackground extends BackgroundScene {
               }
               if (var29.hovered &&
                 var6Lifetime2 > 0) {
-                if (null != th.field_a) {
-                  stackIn_173_0 = th.field_a[-1 + var6Lifetime2];
+                if (null != QuickChatParameterType.field_a) {
+                  stackIn_173_0 = QuickChatParameterType.field_a[-1 + var6Lifetime2];
                 } else {
                   stackIn_173_0 = null;
                 }
@@ -620,7 +620,7 @@ final class JungleBackground extends BackgroundScene {
                         }
                       }
                       if (var12 != 0) {
-                        var30 = rd.a(wd.field_x, new String[]{Integer.toString(m.field_h), Integer.toString(AchievementsScreen.field_F[var7][var9])}, (byte) 103);
+                        var30 = rd.a(QuickChatPhraseDefinition.field_x, new String[]{Integer.toString(m.field_h), Integer.toString(AchievementsScreen.field_F[var7][var9])}, (byte) 103);
                         var21 = var30;
                         var21 = var30;
                         if (null == var21) {
@@ -678,7 +678,7 @@ final class JungleBackground extends BackgroundScene {
                         stackIn_364_0 = stackOut_357_0 ? 1 : 0;
                         stackIn_358_0 = stackOut_357_0;
                         if (stackIn_358_0) {
-                          var25_ref = "</col>" + rg.field_b[var24] + "<col=A00000>";
+                          var25_ref = "</col>" + QuickChatPhraseRegistry.field_b[var24] + "<col=A00000>";
                           var22 = var25_ref;
                           var22 = var25_ref;
                           if (null == var22) {

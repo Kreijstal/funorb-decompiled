@@ -401,7 +401,7 @@ abstract class MenuScreen extends GameScreen {
                 if (this.selection.isRightArrow(-98) &&
                   FramedMenuScreen.g((byte) -44) < MenuSelection.e((byte) 90)) {
                   var7 = 1;
-                  th.a((byte) -63);
+                  QuickChatParameterType.a((byte) -63);
                 }
                 if (this.selection.isHeld(false)) {
                   var8 = -120 + var5.width + var5.x + var5.x + dg.field_d >> 1;
@@ -680,18 +680,18 @@ abstract class MenuScreen extends GameScreen {
         return this.buttonLeft;
     }
 
-    final static void a(int param0, int param1, long param2, String param3, int param4) {
+    final static void rememberRepeatMessage(int messageId, int obfuscationGuard, long recipientId, String recipientName, int channel) {
         try {
-          ep.field_k = param0;
-          bo.field_l = true;
-          wd.field_z = param4;
-          MultiplayerExitScreen.field_E = param2;
-          ba.field_z = param3;
-          if (param1 != 29295) {
+          ep.repeatMessageId = messageId;
+          bo.repeatMessageAvailable = true;
+          QuickChatPhraseDefinition.repeatMessageChannel = channel;
+          MultiplayerExitScreen.repeatRecipientId = recipientId;
+          ba.repeatRecipientName = recipientName;
+          if (obfuscationGuard != 29295) {
             MenuScreen.b(48);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "km.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "km.P(" + messageId + ',' + obfuscationGuard + ',' + recipientId + ',' + (recipientName != null ? "{...}" : "null") + ',' + channel + ')');
         }
     }
 

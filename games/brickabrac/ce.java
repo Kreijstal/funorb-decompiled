@@ -50,12 +50,12 @@ final class ce {
         if (!TooltipSprite.field_p) {
           return;
         }
-        wd.quickChatMenuRoot.updateRoot(param0, -15211);
+        QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
         var4 = hd.quickChatMenu.hasPressedItem(28) ? 1 : 0;
         if (0 != BackgroundScene.pressedButton) {
           if (var4 != 0) {
             if (!param0) {
-              wd.quickChatMenuRoot.updateRoot(param0, -15211);
+              QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
               if (param2 < 89) {
                 field_e = (PaletteFont) null;
               }
@@ -74,7 +74,7 @@ final class ce {
               return;
             }
             hd.quickChatMenu.processPressedItems(38, param3, param1);
-            wd.quickChatMenuRoot.updateRoot(param0, -15211);
+            QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
             if (param2 >= 89) {
               var5Lifetime2 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
               if (var5Lifetime2 > 640) {
@@ -105,14 +105,14 @@ final class ce {
             }
             return;
           }
-          th.b(1);
+          QuickChatParameterType.b(1);
           param0 = false;
         }
         if (param0) {
           hd.quickChatMenu.processPressedItems(38, param3, param1);
         }
         if (var4 != 0) {
-          wd.quickChatMenuRoot.updateRoot(param0, -15211);
+          QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
         }
         if (param2 < 89) {
           field_e = (PaletteFont) null;

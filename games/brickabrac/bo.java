@@ -4,7 +4,7 @@
 class bo extends ff {
     private long field_m;
     private String field_k;
-    static boolean field_l;
+    static boolean repeatMessageAvailable;
 
     final static me[] b(int param0) {
         if (param0 == 140) {
@@ -53,6 +53,6 @@ class bo extends ff {
     }
 
     static {
-        field_l = false;
+        repeatMessageAvailable = false;
     }
 }

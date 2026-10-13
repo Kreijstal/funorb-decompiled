@@ -149,11 +149,11 @@ final class CacheIoRequest extends ResourceRequest {
           if (!param0) {
             field_D = (java.awt.Canvas) null;
           }
-          wd.field_E.setBounds(18, np.uiRowHeight + 2, -40 + (-2 + ji.field_b.width) - ec.field_J, 42 + ec.field_J, (byte) 64);
+          QuickChatPhraseDefinition.field_E.setBounds(18, np.uiRowHeight + 2, -40 + (-2 + ji.field_b.width) - ec.field_J, 42 + ec.field_J, (byte) 64);
           TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, ji.field_b.width, 0, np.uiRowHeight + 2 + 20, ec.field_J, -2 + ji.field_b.height - (np.uiRowHeight + 20));
           GameUiController.field_e.setBounds(40, -40 + NinjaBackground.field_w.height, 0, NinjaBackground.field_w.width, (byte) 64);
           ba.field_v.setBounds(30, 0, 0, MultiplayerMatch.field_d.width, (byte) 64);
-          rg.field_e.setBounds(-2 + (-40 + MultiplayerMatch.field_d.height) - 30, 30, 0, MultiplayerMatch.field_d.width, (byte) 64);
+          QuickChatPhraseRegistry.field_e.setBounds(-2 + (-40 + MultiplayerMatch.field_d.height) - 30, 30, 0, MultiplayerMatch.field_d.width, (byte) 64);
           var2_int = cq.field_p + 3;
           if (w.field_n.length < 2) {
             var2_int--;
@@ -161,15 +161,15 @@ final class CacheIoRequest extends ResourceRequest {
           if (param1) {
             var2_int--;
           }
-          var3 = -2 + (2 + (-15 + (rg.field_e.height - (5 - (var2_int + 1) / 2)))) / (1 + var2_int);
+          var3 = -2 + (2 + (-15 + (QuickChatPhraseRegistry.field_e.height - (5 - (var2_int + 1) / 2)))) / (1 + var2_int);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -5 + (rg.field_e.height - (5 + (2 + var3) * var2_int));
+          var4 = -5 + (QuickChatPhraseRegistry.field_e.height - (5 + (2 + var3) * var2_int));
           if (var4 > 40) {
             var4 = 40;
           }
-          jd.field_a.setBounds(var4, 5, 5, -5 + (-5 + rg.field_e.width), (byte) 64);
+          jd.field_a.setBounds(var4, 5, 5, -5 + (-5 + QuickChatPhraseRegistry.field_e.width), (byte) 64);
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + cq.field_p > var6; var6++) {
             if ((var6 != 1 ||

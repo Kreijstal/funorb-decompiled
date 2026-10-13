@@ -139,7 +139,7 @@ final class CacheIoWorker implements Runnable {
                 ik.field_i[var13].setBounds(var7Lifetime1, var14, var6_int, var9, (byte) 64);
                 HalloweenBackground.field_w[var13].setBounds(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);
                 vj.field_a[var13].setBounds(-param5 + (var7Lifetime1 - param5), param5, var10, param2, (byte) 64);
-                wd.field_F[var13].setBounds(-param5 - param5 + var7Lifetime1, param5, var11, -var11 + var9 - param1, (byte) 64);
+                QuickChatPhraseDefinition.field_F[var13].setBounds(-param5 - param5 + var7Lifetime1, param5, var11, -var11 + var9 - param1, (byte) 64);
               } else {
                 LegacyUtf8Decoder.field_c.setBounds(var7Lifetime1, var14, var6_int, var9, (byte) 64);
               }

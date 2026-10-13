@@ -5,7 +5,7 @@ final class an extends pj implements hf, ph {
     ug field_l;
     static String[] field_j;
     static String field_g;
-    static th field_i;
+    static QuickChatParameterType field_i;
     static int field_h;
     static long field_k;
 
@@ -61,7 +61,7 @@ final class an extends pj implements hf, ph {
     public final void a(vb param0, int param1) {
         try {
           if (param1 != -40) {
-            field_i = (th) null;
+            field_i = (QuickChatParameterType) null;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -123,7 +123,7 @@ final class an extends pj implements hf, ph {
             UnderwaterBackground.field_s[var1_int] = null;
           }
           if (param0 != -56) {
-            field_i = (th) null;
+            field_i = (QuickChatParameterType) null;
           }
           ScrollPane.field_Sb = 0;
         } catch (RuntimeException runtimeException) {
@@ -143,6 +143,6 @@ final class an extends pj implements hf, ph {
 
     static {
         field_g = "Show chat (1 unread message)";
-        field_i = new th(4, 1, 1, 1);
+        field_i = new QuickChatParameterType(4, 1, 1, 1);
     }
 }

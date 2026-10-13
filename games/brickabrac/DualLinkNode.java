@@ -12,7 +12,7 @@ class DualLinkNode extends IntrusiveNode {
     long secondaryKey;
     static String field_i;
     DualLinkNode secondaryPrevious;
-    static String field_p;
+    static String quickChatRecipient;
     DualLinkNode secondaryNext;
 
     final void unlinkSecondary(int obfuscationGuard) {
@@ -111,10 +111,10 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     public static void a(int param0) {
-        field_p = null;
+        quickChatRecipient = null;
         field_o = null;
         if (param0 != -2) {
-          field_p = (String) null;
+          quickChatRecipient = (String) null;
         }
         field_m = null;
         jungleCapsSprites = (RgbSprite[][]) null;

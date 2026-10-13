@@ -7,7 +7,7 @@ import java.util.*;
 final class wi extends dl {
     static String field_h;
     static int field_m;
-    static th field_i;
+    static QuickChatParameterType field_i;
     private java.net.ProxySelector field_l;
     static UiComponent field_n;
     static int field_k;
@@ -350,7 +350,7 @@ final class wi extends dl {
 
     static {
         field_h = "Connection lost. <%0>";
-        field_i = new th(8, 0, 4, 1);
+        field_i = new QuickChatParameterType(8, 0, 4, 1);
         field_g = false;
     }
 

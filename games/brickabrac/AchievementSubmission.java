@@ -40,7 +40,7 @@ final class AchievementSubmission extends IntrusiveNode {
         kn var13_ref_kn = null;
         int var13 = 0;
         int var15 = 0;
-        wd var16 = null;
+        QuickChatPhraseDefinition var16 = null;
         int var17 = 0;
         ResourceArchive var18 = null;
         int[] var19 = null;
@@ -97,8 +97,8 @@ final class AchievementSubmission extends IntrusiveNode {
                 var9[var14 + var12Lifetime1] = param2.field_u[var14];
                 var10[var12Lifetime1 + var14] = param2.field_v[var14];
               } else {
-                var16 = nh.field_c.a(var15, true);
-                var8[var14 + var12Lifetime1] = var16.h(-3);
+                var16 = nh.quickChatPhrases.getDefinition(var15, true);
+                var8[var14 + var12Lifetime1] = var16.getPreview(-3);
                 var9[var14 + var12Lifetime1] = param2.field_u[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);

@@ -7,7 +7,7 @@ abstract class sl extends DualLinkNode {
     static BrickABrac field_C;
     static int field_z;
     static RgbSprite field_D;
-    static th field_B;
+    static QuickChatParameterType field_B;
     static String field_y;
     int field_u;
     static String[] field_A;
@@ -85,8 +85,8 @@ abstract class sl extends DualLinkNode {
           IntArrayRequest.field_t = param4;
           Brick.field_O = param5;
           MouseInput.field_c = param10;
-          rg.field_b = param12;
-          th.field_a = param3;
+          QuickChatPhraseRegistry.field_b = param12;
+          QuickChatParameterType.field_a = param3;
           aj.field_c = param1;
           SecondaryHashTable.field_c = param0;
           GzipInflater.field_c = param6;
@@ -180,17 +180,17 @@ abstract class sl extends DualLinkNode {
           um.field_b = new UiComponent(0L, CappedUrlRequest.field_l);
           um.field_b.horizontalAlignment = 1;
           BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
-          wd.field_E = new UiComponent(0L, ik.field_a, pf.field_c);
+          QuickChatPhraseDefinition.field_E = new UiComponent(0L, ik.field_a, pf.field_c);
           TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           ji.field_b.addChild(um.field_b, 0);
           ji.field_b.addChild(BoundedFile.field_g, 0);
           if (vd.field_e) {
-            ji.field_b.addChild(wd.field_E, 0);
+            ji.field_b.addChild(QuickChatPhraseDefinition.field_E, 0);
           }
           ji.field_b.addChild(TimedSplashScreen.field_u, 0);
           GameUiController.field_e = new UiComponent(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
           ba.field_v = new UiComponent(0L, qh.field_j);
-          rg.field_e = new UiComponent(0L, FarmBackground.field_x);
+          QuickChatPhraseRegistry.field_e = new UiComponent(0L, FarmBackground.field_x);
           jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           gb.field_l = new UiComponent[4 + param13];
           MatchCompleteScreen.field_A = new AlignedIconLabel[4 + param13][];
@@ -220,7 +220,7 @@ abstract class sl extends DualLinkNode {
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
-            gb.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
+            gb.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, QuickChatPhraseRegistry.field_b[var17_intLifetime3]);
             array$2 = new AlignedIconLabel[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
             MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
@@ -268,16 +268,16 @@ abstract class sl extends DualLinkNode {
           var17.horizontalAlignment = 1;
           MultiplayerMatch.field_d = new UiComponent(0L, (UiComponent) null);
           MultiplayerMatch.field_d.addChild(ba.field_v, 0);
-          MultiplayerMatch.field_d.addChild(rg.field_e, 0);
-          rg.field_e.addChild(jd.field_a, 0);
+          MultiplayerMatch.field_d.addChild(QuickChatPhraseRegistry.field_e, 0);
+          QuickChatPhraseRegistry.field_e.addChild(jd.field_a, 0);
           for (var18Lifetime2 = 0; param13 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(w.field_n.length < 2)) && (var18Lifetime2 != 3 ||
               !(IntArrayRequest.field_t <= 1))) {
-              rg.field_e.addChild(gb.field_l[var18Lifetime2], 0);
+              QuickChatPhraseRegistry.field_e.addChild(gb.field_l[var18Lifetime2], 0);
               for (var19 = 0; MatchCompleteScreen.field_A[var18Lifetime2].length > var19; var19++) {
                 if (MatchCompleteScreen.field_A[var18Lifetime2][var19] != null) {
-                  rg.field_e.addChild(MatchCompleteScreen.field_A[var18Lifetime2][var19], 0);
+                  QuickChatPhraseRegistry.field_e.addChild(MatchCompleteScreen.field_A[var18Lifetime2][var19], 0);
                 }
               }
             }
@@ -371,6 +371,6 @@ abstract class sl extends DualLinkNode {
     static {
         field_z = 2147483647;
         field_A = new String[29];
-        field_B = new th(12, 0, 1, 0);
+        field_B = new QuickChatParameterType(12, 0, 1, 0);
     }
 }

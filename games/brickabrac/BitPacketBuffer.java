@@ -372,12 +372,12 @@ final class BitPacketBuffer extends PacketBuffer {
 
     final static void a(int param0, String param1, long param2) {
         CharSequence var5 = null;
-        ng.field_b = 2;
+        ng.quickChatChannel = 2;
         if (param0 != 21846) {
           return;
         }
         try {
-          DualLinkNode.field_p = param1;
+          DualLinkNode.quickChatRecipient = param1;
           var5 = (CharSequence) ((Object) param1);
           QuickChatHelpDialog.field_Qb = gb.a(var5, 96);
           qn.field_n = param2;

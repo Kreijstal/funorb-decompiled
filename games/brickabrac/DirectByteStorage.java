@@ -38,28 +38,28 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
-        if (param3 == param0 &&
-          InstructionsScreen.field_r != param2) {
-          LevelSequence.field_d = true;
-          InstructionsScreen.field_r = param2;
-          eh.a(true, param1);
+    final static void updateChatFilter(int firstChannel, int opcode, int filter, int channel) {
+        if (channel == firstChannel &&
+          InstructionsScreen.lobbyChatFilter != filter) {
+          LevelSequence.chatFiltersChanged = true;
+          InstructionsScreen.lobbyChatFilter = filter;
+          eh.writeChatFilters(true, opcode);
         }
-        if (param3 == 1 &&
-          InstructionsScreen.field_v != param2) {
-          InstructionsScreen.field_v = param2;
-          LevelSequence.field_d = true;
-          eh.a(true, param1);
+        if (channel == 1 &&
+          InstructionsScreen.gameChatFilter != filter) {
+          InstructionsScreen.gameChatFilter = filter;
+          LevelSequence.chatFiltersChanged = true;
+          eh.writeChatFilters(true, opcode);
         }
-        if (2 != param3) {
+        if (2 != channel) {
           return;
         }
-        if (param2 == to.field_a) {
+        if (filter == to.privateChatFilter) {
           return;
         }
-        LevelSequence.field_d = true;
-        to.field_a = param2;
-        eh.a(true, param1);
+        LevelSequence.chatFiltersChanged = true;
+        to.privateChatFilter = filter;
+        eh.writeChatFilters(true, opcode);
     }
 
     final void store(int obfuscationGuard, byte[] data) {

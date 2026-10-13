@@ -148,7 +148,7 @@ final class cb extends k {
         if (!MatchResultScreen.field_s) {
           return false;
         }
-        if (ng.field_b == 0) {
+        if (ng.quickChatChannel == 0) {
           return true;
         }
         return false;

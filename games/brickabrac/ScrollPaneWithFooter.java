@@ -3,7 +3,7 @@
  */
 final class ScrollPaneWithFooter extends UiComponent {
     UiComponent rightFooter;
-    static th field_Sb;
+    static QuickChatParameterType field_Sb;
     ScrollPane scrollPane;
     UiComponent content;
     UiComponent leftFooter;
@@ -478,7 +478,7 @@ final class ScrollPaneWithFooter extends UiComponent {
 
     static {
         field_Pb = 0;
-        field_Sb = new th(11, 0, 1, 2);
+        field_Sb = new QuickChatParameterType(11, 0, 1, 2);
         field_Rb = "Invalid date";
         field_Yb = 20;
         field_Ub = "Unable to delete friend - system busy";

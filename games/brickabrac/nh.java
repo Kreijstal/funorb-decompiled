@@ -5,7 +5,7 @@ final class nh {
     static UiComponent field_a;
     static String field_d;
     static int field_b;
-    static rg field_c;
+    static QuickChatPhraseRegistry quickChatPhrases;
 
     final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
         int stackIn_10_0 = 0;
@@ -90,26 +90,26 @@ final class nh {
               var19 = param1 * var8 / (var8 + var9) + param5;
               var18 = param1 * var8 / (var8 + var9) + param5;
             }
-            Rasterizer2D.saveClip(rg.field_g);
+            Rasterizer2D.saveClip(QuickChatPhraseRegistry.field_g);
             if (null != param4[0]) {
               Rasterizer2D.intersectClip(param3, param5, var16, var18);
               param4[0].drawTransparent(param3, param5);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (null != param4[2]) {
               Rasterizer2D.intersectClip(var17, param5, var10, var18);
               param4[2].drawTransparent(var13, param5);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (null != param4[6]) {
               Rasterizer2D.intersectClip(param3, var19, var16, var11);
               param4[6].drawTransparent(param3, var15);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (param4[8] != null) {
               Rasterizer2D.intersectClip(var17, var19, var10, var11);
               param4[8].drawTransparent(var13, var15);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             boolean decompiledFrameCompleted3 = true;
             if (param4[1] != null &&
@@ -125,7 +125,7 @@ final class nh {
                 }
               }
               if (decompiledFrameCompleted3) {
-                Rasterizer2D.restoreClip(rg.field_g);
+                Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               }
             }
             boolean decompiledFrameCompleted2 = true;
@@ -142,7 +142,7 @@ final class nh {
                 }
               }
               if (decompiledFrameCompleted2) {
-                Rasterizer2D.restoreClip(rg.field_g);
+                Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               }
             }
             boolean decompiledFrameCompleted1 = true;
@@ -159,7 +159,7 @@ final class nh {
                 }
               }
               if (decompiledFrameCompleted1) {
-                Rasterizer2D.restoreClip(rg.field_g);
+                Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               }
             }
             boolean decompiledFrameCompleted0 = true;
@@ -176,7 +176,7 @@ final class nh {
                 }
               }
               if (decompiledFrameCompleted0) {
-                Rasterizer2D.restoreClip(rg.field_g);
+                Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               }
             }
             if (null != param4[4] &&
@@ -195,7 +195,7 @@ final class nh {
                 }
                 var20Lifetime4 = var20Lifetime4 + param4[4].canvasHeight;
               }
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               return;
             }
             return;
@@ -508,7 +508,7 @@ final class nh {
                       stackIn_81_0 = stackOut_80_0;
                       if (var19 == 0) {
                         if (stackIn_81_0) {
-                          var25 = "<col=A00000>" + rg.field_b[var13] + "</col>";
+                          var25 = "<col=A00000>" + QuickChatPhraseRegistry.field_b[var13] + "</col>";
                           if (var11_ref != null) {
                             var11_ref = (String) (var11_ref) + ", " + var25;
                             var12 = 1;
@@ -826,7 +826,7 @@ final class nh {
         int var1 = 17 / ((param0 + 45) / 59);
         field_d = null;
         field_a = null;
-        field_c = null;
+        quickChatPhrases = null;
     }
 
     static {

@@ -3,7 +3,7 @@
  */
 final class IntNode extends IntrusiveNode {
     int value;
-    static th field_i;
+    static QuickChatParameterType field_i;
     static String field_n;
     static String field_k;
     static RgbSprite constructionSmokeSprite;
@@ -125,7 +125,7 @@ final class IntNode extends IntrusiveNode {
             }
           } else {
             if (param0.field_c == 0 &&
-              th.field_d) {
+              QuickChatParameterType.field_d) {
               var4_ref = "[" + ArcticBackground.field_u + "] ";
             }
             if (param0.field_c == 1) {
@@ -202,7 +202,7 @@ final class IntNode extends IntrusiveNode {
 
     static {
         field_n = "Well done! <%0>";
-        field_i = new th(14, 0, 4, 1);
+        field_i = new QuickChatParameterType(14, 0, 4, 1);
         field_k = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_m = "<%0> has not yet unlocked this option for use.";
         field_l = "Email (Login):";

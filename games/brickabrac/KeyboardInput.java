@@ -153,26 +153,26 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var20 = param4 * var9 / (var9 + var10) + param6;
               var19 = param4 * var9 / (var9 + var10) + param6;
             }
-            Rasterizer2D.saveClip(rg.field_g);
+            Rasterizer2D.saveClip(QuickChatPhraseRegistry.field_g);
             if (param1[0] != null) {
               Rasterizer2D.intersectClip(param0, param6, var17, var19);
               param1[0].b(param0, param6, param5);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (null != param1[2]) {
               Rasterizer2D.intersectClip(var18, param6, var11, var19);
               param1[2].b(var14, param6, param5);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (null != param1[param3]) {
               Rasterizer2D.intersectClip(param0, var20, var17, var12);
               param1[6].b(param0, var16, param5);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (param1[8] != null) {
               Rasterizer2D.intersectClip(var18, var20, var11, var12);
               param1[8].b(var14, var16, param5);
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (param1[1] != null &&
               param1[1].canvasWidth != 0) {
@@ -180,7 +180,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               for (var21 = var13; var14 > var21; var21 = var21 + param1[1].canvasWidth) {
                 param1[1].b(var21, param6, param5);
               }
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (param1[7] != null &&
               param1[7].canvasWidth != 0) {
@@ -188,7 +188,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param1[7].canvasWidth) {
                 param1[7].b(var21Lifetime1, var16, param5);
               }
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (param1[3] != null &&
               param1[3].canvasHeight != 0) {
@@ -196,7 +196,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param1[3].canvasHeight) {
                 param1[3].b(param0, var21Lifetime2, param5);
               }
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (param1[5] != null &&
               param1[5].canvasHeight != 0) {
@@ -204,7 +204,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param1[5].canvasHeight) {
                 param1[5].b(var14, var21Lifetime3, param5);
               }
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             if (null != param1[4] &&
               param1[4].canvasWidth != 0 &&
@@ -215,7 +215,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
                   param1[4].b(var22, var21Lifetime4, param5);
                 }
               }
-              Rasterizer2D.restoreClip(rg.field_g);
+              Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               return;
             }
             return;

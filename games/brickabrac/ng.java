@@ -3,7 +3,7 @@
  */
 final class ng {
     static String field_f;
-    static int field_b;
+    static int quickChatChannel;
     static IndexedSprite[] field_d;
     static RgbSprite spaceFarSprite;
     static String field_e;
@@ -63,7 +63,7 @@ final class ng {
     }
 
     static {
-        field_b = 0;
+        quickChatChannel = 0;
         field_e = "Remove name";
         field_c = "Quick Chat Help";
         field_f = "That name is not available";

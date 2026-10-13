@@ -55,7 +55,7 @@ final class MusicVoice extends IntrusiveNode {
             decompiledFrameRemainder0 = !(param0.equals(LevelCompleteScreen.field_J));
           }
           if (decompiledFrameRemainder0) {
-            if (!th.field_h &&
+            if (!QuickChatParameterType.field_h &&
               go.field_e >= MonotonicTime.field_e &&
               MonotonicTime.field_e + jh.field_a > go.field_e) {
               stackIn_28_0 = 1;
@@ -63,7 +63,7 @@ final class MusicVoice extends IntrusiveNode {
               stackIn_28_0 = 0;
             }
             var2_int = stackIn_28_0;
-            if (param0 != null && (th.field_h ||
+            if (param0 != null && (QuickChatParameterType.field_h ||
               var2_int != 0)) {
               go.field_e = MonotonicTime.field_e;
               if (var3 != 0) {
@@ -75,27 +75,27 @@ final class MusicVoice extends IntrusiveNode {
             CappedUrlRequest.field_j = ll.field_b;
             if (null == param0) {
               if (var2_int != 0) {
-                th.field_h = true;
+                QuickChatParameterType.field_h = true;
                 if (var3 != 0) {
-                  th.field_h = false;
+                  QuickChatParameterType.field_h = false;
                 }
               }
             } else {
-              th.field_h = false;
+              QuickChatParameterType.field_h = false;
             }
             b.field_a = ChocolateBackground.field_v;
           }
           LevelCompleteScreen.field_J = param0;
-          if (!th.field_h &&
+          if (!QuickChatParameterType.field_h &&
             go.field_e < MonotonicTime.field_e &&
             QuickChatHelpDialog.pointerChanged) {
             b.field_a = ChocolateBackground.field_v;
             go.field_e = 0;
             CappedUrlRequest.field_j = ll.field_b;
           }
-          if (th.field_h &&
+          if (QuickChatParameterType.field_h &&
             go.field_e == LevelPackSelectScreen.field_y) {
-            th.field_h = false;
+            QuickChatParameterType.field_h = false;
             go.field_e = 0;
           }
           ll.field_b = -1;
@@ -521,7 +521,7 @@ final class MusicVoice extends IntrusiveNode {
                       var30 = 1;
                     }
                     if (var30 != 0) {
-                      var31 = "<col=A00000>" + rg.field_b[var28_int] + "</col>";
+                      var31 = "<col=A00000>" + QuickChatPhraseRegistry.field_b[var28_int] + "</col>";
                       if (var26 == null) {
                         var26 = var31;
                       } else {

@@ -170,7 +170,7 @@ final class ln extends IntrusiveNode {
             var3 != 0) {
             return false;
           }
-          return th.a(ResourceRequest.field_z, QuickChatHelpDialog.field_Zb, r.field_x, false, ig.field_K);
+          return QuickChatParameterType.a(ResourceRequest.field_z, QuickChatHelpDialog.field_Zb, r.field_x, false, ig.field_K);
         }
         if (10 == MeshAttributeRecord.currentKeyCode) {
           if (var3 != 0) {
@@ -180,20 +180,20 @@ final class ln extends IntrusiveNode {
           return true;
         }
         if (MeshAttributeRecord.currentKeyCode == param1) {
-          if (!bo.field_l) {
+          if (!bo.repeatMessageAvailable) {
             return false;
           }
-          if (wd.field_z == 2 &&
-            !LevelSelectScreen.a(MultiplayerExitScreen.field_E, ba.field_z, param1 ^ -106)) {
+          if (QuickChatPhraseDefinition.repeatMessageChannel == 2 &&
+            !LevelSelectScreen.a(MultiplayerExitScreen.repeatRecipientId, ba.repeatRecipientName, param1 ^ -106)) {
             return false;
           }
-          if (wd.field_z != 2 &&
+          if (QuickChatPhraseDefinition.repeatMessageChannel != 2 &&
             var3 != 0) {
             return false;
           }
           if (cd.a(param1 - 138)) {
             String var4 = (String) null;
-            c.a(ep.field_k, ba.field_z, (byte) -117, wd.field_z, param2, (String) null);
+            c.writeChatMessage(ep.repeatMessageId, ba.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
           }
           return true;
         }

@@ -35,13 +35,13 @@ final class ChocolateBackground extends BackgroundScene {
           }
           var7 = kd.a(this.sceneId, colorIndex, (byte) -50);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            SoundPlayback.a(-35, 26746, var7, colorIndex, 2, rg.chocolateFarSprite);
+            SoundPlayback.a(-35, 26746, var7, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           } else {
-            ua.a(th.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+            ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
             return;
           }
-          ua.a(th.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
           return;
         }
         if (!this.hasSprites((byte) -128)) {
@@ -50,13 +50,13 @@ final class ChocolateBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = kd.a(this.sceneId, colorIndex, (byte) -50);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          SoundPlayback.a(-35, 26746, var8, colorIndex, 2, rg.chocolateFarSprite);
+          SoundPlayback.a(-35, 26746, var8, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          ua.a(th.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
           return;
         }
-        ua.a(th.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+        ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
     }
 
     final RgbSprite a(boolean param0, int param1) {
@@ -75,8 +75,8 @@ final class ChocolateBackground extends BackgroundScene {
         nl.chocolateNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.field_m);
         chocolateMidSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.field_m);
         CappedUrlRequest.chocolateSpiresSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
-        rg.chocolateFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
-        th.field_i = jh.a(0, nl.chocolateNearSprite);
+        QuickChatPhraseRegistry.chocolateFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
+        QuickChatParameterType.field_i = jh.a(0, nl.chocolateNearSprite);
         ek.field_hb = jh.a(0, chocolateMidSprite);
         up.field_w = jh.a(0, CappedUrlRequest.chocolateSpiresSprite);
         u.chocolateSmallFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
@@ -143,7 +143,7 @@ final class ChocolateBackground extends BackgroundScene {
         if (this.hasSprites((byte) -112)) {
           var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            SoundPlayback.a(0, 26746, var6, colorIndex, 1, rg.chocolateFarSprite);
+            SoundPlayback.a(0, 26746, var6, colorIndex, 1, QuickChatPhraseRegistry.chocolateFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ua.a(nl.chocolateNearSprite, destinationX, 640, destinationY, chocolateMidSprite, 95, var6.sprite, scroll16, colorIndex, 1, CappedUrlRequest.chocolateSpiresSprite, 0);
@@ -185,7 +185,7 @@ final class ChocolateBackground extends BackgroundScene {
           if (null == chocolateMidSprite) {
             return false;
           }
-          if (rg.chocolateFarSprite == null) {
+          if (QuickChatPhraseRegistry.chocolateFarSprite == null) {
             return false;
           }
           if (CappedUrlRequest.chocolateSpiresSprite == null) {
@@ -205,7 +205,7 @@ final class ChocolateBackground extends BackgroundScene {
         if (null == chocolateMidSprite) {
           return false;
         }
-        if (rg.chocolateFarSprite == null) {
+        if (QuickChatPhraseRegistry.chocolateFarSprite == null) {
           return false;
         }
         if (CappedUrlRequest.chocolateSpiresSprite == null) {

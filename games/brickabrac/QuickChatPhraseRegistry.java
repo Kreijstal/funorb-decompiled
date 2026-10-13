@@ -1,49 +1,49 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rg {
-    private ResourceArchive field_d;
+final class QuickChatPhraseRegistry {
+    private ResourceArchive extendedArchive;
     static tf field_i;
     static String[] field_b;
-    private to field_h;
+    private to definitions;
     static String[] field_k;
     static int field_a;
     static UiComponent field_e;
-    private ResourceArchive field_j;
+    private ResourceArchive standardArchive;
     static RgbSprite chocolateFarSprite;
     static int[] field_g;
     static UiComponent field_c;
 
-    final wd a(int param0, boolean param1) {
-        byte[] var4 = null;
-        wd var3 = (wd) (this.field_h.a((long)param0, param1));
-        if (var3 != null) {
-          return var3;
+    final QuickChatPhraseDefinition getDefinition(int phraseId, boolean obfuscationGuard) {
+        byte[] data = null;
+        QuickChatPhraseDefinition definition = (QuickChatPhraseDefinition) (this.definitions.a((long)phraseId, obfuscationGuard));
+        if (definition != null) {
+          return definition;
         }
-        if (param0 < 32768) {
-          var4 = this.field_j.takeFile(param0, 1, 4);
+        if (phraseId < 32768) {
+          data = this.standardArchive.takeFile(phraseId, 1, 4);
         } else {
-          var4 = this.field_d.takeFile(param0 & 32767, 1, 4);
+          data = this.extendedArchive.takeFile(phraseId & 32767, 1, 4);
         }
-        var3 = new wd();
-        if (var4 != null) {
-          var3.a(new PacketBuffer(var4), -3);
+        definition = new QuickChatPhraseDefinition();
+        if (data != null) {
+          definition.decode(new PacketBuffer(data), -3);
         }
-        if (param0 >= 32768) {
-          var3.g(-126);
-          this.field_h.a(84, var3, (long)param0);
-          if (!param1) {
-            this.a(120, false);
-            return var3;
+        if (phraseId >= 32768) {
+          definition.markExtendedLinks(-126);
+          this.definitions.a(84, definition, (long)phraseId);
+          if (!obfuscationGuard) {
+            this.getDefinition(120, false);
+            return definition;
           }
-          return var3;
+          return definition;
         }
-        this.field_h.a(84, var3, (long)param0);
-        if (param1) {
-          return var3;
+        this.definitions.a(84, definition, (long)phraseId);
+        if (obfuscationGuard) {
+          return definition;
         }
-        this.a(120, false);
-        return var3;
+        this.getDefinition(120, false);
+        return definition;
     }
 
     final static boolean a(ResourceArchive param0, byte param1) {
@@ -82,11 +82,11 @@ final class rg {
         field_b = null;
         field_k = null;
         if (param0 != 64) {
-          rg.a(-104);
+          QuickChatPhraseRegistry.a(-104);
         }
     }
 
-    rg(int param0, ResourceArchive param1, ResourceArchive param2, bp param3) {
+    QuickChatPhraseRegistry(int unusedOption, ResourceArchive standardArchive, ResourceArchive extendedArchive, bp unusedContext) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -96,36 +96,36 @@ final class rg {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_h = new to(64);
+        this.definitions = new to(64);
         try {
-          this.field_j = param1;
-          this.field_d = param2;
-          if (this.field_j != null) {
-            this.field_j.getFileCapacity(-123, 1);
+          this.standardArchive = standardArchive;
+          this.extendedArchive = extendedArchive;
+          if (this.standardArchive != null) {
+            this.standardArchive.getFileCapacity(-123, 1);
           }
-          if (this.field_d == null) {
+          if (this.extendedArchive == null) {
             return;
           }
-          this.field_d.getFileCapacity(-124, 1);
+          this.extendedArchive.getFileCapacity(-124, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("rg.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("rg.<init>(").append(unusedOption).append(',');
+          if (standardArchive == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (extendedArchive == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param3 == null) {
+          if (unusedContext == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

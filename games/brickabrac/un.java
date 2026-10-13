@@ -11,7 +11,7 @@ final class un {
     static RgbSprite field_d;
     static long field_g;
     static boolean field_f;
-    static th field_b;
+    static QuickChatParameterType field_b;
 
     public static void a(boolean param0) {
         field_b = null;
@@ -63,6 +63,6 @@ final class un {
     static {
         field_c = new String[]{null, "to discard it and<nbsp>continue.", "to discard it and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue.", "to discard them and<nbsp>continue."};
         field_h = "Chat view has been scrolled up. Scroll down to chat.";
-        field_b = new th(0, 2, 2, 1);
+        field_b = new QuickChatParameterType(0, 2, 2, 1);
     }
 }

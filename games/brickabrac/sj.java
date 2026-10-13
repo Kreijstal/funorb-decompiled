@@ -40,7 +40,7 @@ final class sj {
           var9 = 0;
           if (!um.field_e &&
             var5 < eh.field_k) {
-            var10_int = tm.a(var8_ref_gb.field_c, (byte) 18);
+            var10_int = tm.getChatFilter(var8_ref_gb.field_c, (byte) 18);
             if (var10_int <= var8_ref_gb.a(true) && (var8_ref_gb.field_e ||
               !AchievementBrowserScreen.a(125, var8_ref_gb.field_m))) {
               var9 = 1;
@@ -51,7 +51,7 @@ final class sj {
           } else {
             var5++;
             if (var8_ref_gb.field_b == null ||
-              LevelSequence.field_d) {
+              LevelSequence.chatFiltersChanged) {
               if (null == var8_ref_gb.field_b) {
                 Brick.field_E = Brick.field_E + 1;
               }
@@ -82,12 +82,12 @@ final class sj {
         var8Lifetime1 = AchievementIcon.field_q.content.remainingHeight + AchievementIcon.field_q.content.height - (-var6 + var7Lifetime1);
         AchievementIcon.field_q.content.height = AchievementIcon.field_q.content.height - var8Lifetime1;
         AchievementIcon.field_q.content.localY = AchievementIcon.field_q.content.localY + var8Lifetime1;
-        if (LevelSequence.field_d) {
+        if (LevelSequence.chatFiltersChanged) {
           AchievementIcon.field_q.content.height = var7Lifetime1;
         }
         AchievementIcon.field_q.content.remainingHeight = var7Lifetime1 - AchievementIcon.field_q.content.height;
-        if (LevelSequence.field_d) {
-          LevelSequence.field_d = false;
+        if (LevelSequence.chatFiltersChanged) {
+          LevelSequence.chatFiltersChanged = false;
           AchievementIcon.field_q.content.localY = AchievementIcon.field_q.viewport.height - AchievementIcon.field_q.content.height;
           nd.field_b = true;
           AchievementIcon.field_q.content.remainingY = 0;

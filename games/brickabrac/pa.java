@@ -3,7 +3,7 @@
  */
 final class pa extends ta {
     static RgbSprite[] field_l;
-    static th field_k;
+    static QuickChatParameterType field_k;
     static RgbSprite[] field_h;
     static RgbSprite[] field_m;
     static int[] field_i;
@@ -106,7 +106,7 @@ final class pa extends ta {
 
     static {
         field_i = new int[1500];
-        field_k = new th(10, 2, 2, 0);
+        field_k = new QuickChatParameterType(10, 2, 2, 0);
         field_n = 5;
     }
 }

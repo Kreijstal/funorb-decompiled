@@ -356,16 +356,16 @@ final class QuickChatMenu extends UiComponent {
             if (this.submenus[itemIndex] == null) {
               if (this.messageIds[itemIndex] != -1) {
                 encodedMessageId = this.messageIds[itemIndex] | 32768;
-                effectiveChannel = ng.field_b;
+                effectiveChannel = ng.quickChatChannel;
                 if (effectiveChannel == 0 &&
                   o.field_e != null) {
                   effectiveChannel = 1;
                 }
-                if (tm.a(effectiveChannel, (byte) 18) == 2) {
-                  DirectByteStorage.a(0, filterOpcode, 1, effectiveChannel);
+                if (tm.getChatFilter(effectiveChannel, (byte) 18) == 2) {
+                  DirectByteStorage.updateChatFilter(0, filterOpcode, 1, effectiveChannel);
                 }
-                c.a(encodedMessageId, DualLinkNode.field_p, (byte) -113, ng.field_b, messageOpcode, (String) null);
-                MenuScreen.a(encodedMessageId, 29295, qn.field_n, DualLinkNode.field_p, ng.field_b);
+                c.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ng.quickChatChannel, messageOpcode, (String) null);
+                MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, qn.field_n, DualLinkNode.quickChatRecipient, ng.quickChatChannel);
                 rd.a(-1);
                 bh.m(-69);
                 openHelpBranch = (unusedGameFlag != 0);

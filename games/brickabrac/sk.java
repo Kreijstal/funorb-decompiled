@@ -192,7 +192,7 @@ final class sk extends h {
         try {
           var2 = new SoundPlayback(stream, stream);
           var3 = 30 % ((obfuscationGuard - 58) / 43);
-          wd.soundPlaybacks.addLast(var2, (byte) 3);
+          QuickChatPhraseDefinition.soundPlaybacks.addLast(var2, (byte) 3);
           ob.soundMixer.addStream(stream);
           stackIn_1_0 = var2;
           return stackIn_1_0;

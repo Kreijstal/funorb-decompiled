@@ -155,11 +155,11 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             var5 = ik.field_i[var4_int];
             if (var5 != null) {
               if (var5.pressedButton != 0) {
-                wd.a(784, var4_int, var5);
+                QuickChatPhraseDefinition.a(784, var4_int, var5);
               }
-              var6 = tm.a(var4_int, (byte) 18);
+              var6 = tm.getChatFilter(var4_int, (byte) 18);
               vj.field_a[var4_int].sprite = ef.field_b[var6];
-              wd.field_F[var4_int].text = rh.field_e[var6];
+              QuickChatPhraseDefinition.field_F[var4_int].text = rh.field_e[var6];
             }
           }
           if (LegacyUtf8Decoder.field_c.pressedButton != 0) {

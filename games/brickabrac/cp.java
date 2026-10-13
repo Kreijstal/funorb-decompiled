@@ -251,8 +251,8 @@ final class cp extends h {
             var6 = qh.field_i[var3];
             if (2 == ArchiveFetchClient.field_p &&
               1 == var2) {
-              if (rg.field_k.length >= ik.field_b.length) {
-                stackIn_19_0 = rg.field_k.length;
+              if (QuickChatPhraseRegistry.field_k.length >= ik.field_b.length) {
+                stackIn_19_0 = QuickChatPhraseRegistry.field_k.length;
               } else {
                 stackIn_19_0 = ik.field_b.length;
               }
@@ -265,10 +265,10 @@ final class cp extends h {
               var8 = stackIn_22_0;
               if (var3 >= 6 &&
                 6 + var7 > var3) {
-                if (-var7 - 6 + var3 + rg.field_k.length < 0) {
+                if (-var7 - 6 + var3 + QuickChatPhraseRegistry.field_k.length < 0) {
                   stackIn_27_0 = "";
                 } else {
-                  stackIn_27_0 = rg.field_k[-var7 + var3 + (-6 + rg.field_k.length)];
+                  stackIn_27_0 = QuickChatPhraseRegistry.field_k[-var7 + var3 + (-6 + QuickChatPhraseRegistry.field_k.length)];
                 }
                 var6 = stackIn_27_0;
               }

@@ -47,7 +47,7 @@ final class VerticalScrollbar extends UiComponent {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
-        wd.quickChatMenuRoot.setBounds(param2, param5, param1, param3, (byte) 64);
+        QuickChatPhraseDefinition.quickChatMenuRoot.setBounds(param2, param5, param1, param3, (byte) 64);
         if (param6 == 94) {
           if (null != hd.quickChatMenu) {
             hd.quickChatMenu.layoutMenuChain(param6 ^ 94, -HighscoresScreen.field_v + param4, param2, param0, param4, param2);

@@ -39,7 +39,7 @@ final class BlankScreen extends GameScreen {
           if (param0 != -2) {
             BlankScreen.d((byte) 104);
           }
-          wd.quickChatMenuRoot.addChild(param1, 0);
+          QuickChatPhraseDefinition.quickChatMenuRoot.addChild(param1, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -57,7 +57,7 @@ final class BlankScreen extends GameScreen {
         if (param0 != 63) {
           return (String) null;
         }
-        if (th.field_h) {
+        if (QuickChatParameterType.field_h) {
           return null;
         }
         if (MonotonicTime.field_e > go.field_e) {

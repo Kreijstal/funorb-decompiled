@@ -131,8 +131,8 @@ final class MessageScreen extends MenuScreen {
     final static void a(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
-          ng.field_b = param2;
-          DualLinkNode.field_p = param0;
+          ng.quickChatChannel = param2;
+          DualLinkNode.quickChatRecipient = param0;
           var5 = (CharSequence) ((Object) param0);
           QuickChatHelpDialog.field_Qb = gb.a(var5, param2 ^ 103);
           qn.field_n = param1;

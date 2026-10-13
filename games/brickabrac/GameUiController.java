@@ -43,7 +43,7 @@ final class GameUiController implements GameUiLifecycle {
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.a(20, -97, 20, var2);
-        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
+        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
@@ -93,10 +93,10 @@ final class GameUiController implements GameUiLifecycle {
         if (obfuscationGuard != 23570) {
           this.initializeUi(true);
         }
-        if (!th.field_b) {
-          th.field_b = this.pollRequiredData(true);
+        if (!QuickChatParameterType.field_b) {
+          QuickChatParameterType.field_b = this.pollRequiredData(true);
         }
-        stackIn_15_0 = (ResourceRequest.field_y) && (jc.field_H) && (th.field_b);
+        stackIn_15_0 = (ResourceRequest.field_y) && (jc.field_H) && (QuickChatParameterType.field_b);
         return stackIn_15_0;
     }
 
@@ -156,7 +156,7 @@ final class GameUiController implements GameUiLifecycle {
         NodeDequeCursor.field_i = aj.a(10, true);
         nl.field_a = aj.a(11, true);
         IntHistoryBuffer.field_i = aj.a(12, true);
-        wd.field_C = aj.a(13, true);
+        QuickChatPhraseDefinition.field_C = aj.a(13, true);
         wn.a(NameEntryPopup.field_Rb, wn.field_c, 0);
         bh.field_tb = new s(82);
         bh.field_tb.a(tm.field_e, "basic", 125, ib.field_F, NameEntryPopup.field_Rb);
@@ -172,7 +172,7 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
         bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
-        bh.field_tb.a(wd.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
+        bh.field_tb.a(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
         bh.field_tb.a(uf.field_a, false, IntHistoryBuffer.field_k, qm.field_e);
     }
 

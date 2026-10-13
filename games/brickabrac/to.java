@@ -4,7 +4,7 @@
 final class to {
     private int field_m;
     static java.math.BigInteger field_g;
-    static int field_a;
+    static int privateChatFilter;
     private int field_d;
     static String field_l;
     private ji field_c;
@@ -160,7 +160,7 @@ final class to {
     }
 
     static {
-        field_a = 2;
+        privateChatFilter = 2;
         field_g = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
         field_h = "<%0> is not on your ignore list.";
         field_l = "Email is valid";

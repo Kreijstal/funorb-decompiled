@@ -30,7 +30,7 @@ final class ro {
     int[] field_c;
     byte[] field_I;
     int field_b;
-    static th field_r;
+    static QuickChatParameterType field_r;
     byte[] field_l;
     int field_G;
     byte field_L;
@@ -76,7 +76,7 @@ final class ro {
 
     static {
         field_J = "ro.A(";
-        field_r = new th(2, 4, 4, 0);
+        field_r = new QuickChatParameterType(2, 4, 4, 0);
         jungleBackgroundColors = new int[]{30870, 12658477, 16494651, 26679, 16711935};
         field_H = "Who can join";
         field_m = "Show all lobby chat";

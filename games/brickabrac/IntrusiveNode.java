@@ -4,7 +4,7 @@
 class IntrusiveNode {
     IntrusiveNode previous;
     IntrusiveNode next;
-    static th field_c;
+    static QuickChatParameterType field_c;
     static String field_a;
     static RgbSprite[] field_f;
     static RgbSprite field_d;
@@ -84,7 +84,7 @@ class IntrusiveNode {
     }
 
     static {
-        field_c = new th(1, 2, 2, 0);
+        field_c = new QuickChatParameterType(1, 2, 2, 0);
         field_a = "Waiting for <%0> to start the game...";
         field_h = new int[]{26679, 10200253, 12658477, 16494651, 16711935};
     }

@@ -80,7 +80,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         QuickChatMenu[] var8 = null;
         int var9 = 0;
         Exception var10 = null;
-        wd var11 = null;
+        QuickChatPhraseDefinition var11 = null;
         int var12 = 0;
         UiComponent var13 = null;
         char[] var14 = null;
@@ -100,8 +100,8 @@ final class SaveResultsPromptScreen extends MenuScreen {
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = nh.field_c.a(param0[var10_int], true);
-              var6[var10_int] = var11.h(-3);
+              var11 = nh.quickChatPhrases.getDefinition(param0[var10_int], true);
+              var6[var10_int] = var11.getPreview(-3);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;
               var8[var10_int] = null;

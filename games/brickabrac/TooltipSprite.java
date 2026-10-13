@@ -123,7 +123,7 @@ final class TooltipSprite extends IntrusiveNode {
           field_i = 90;
         }
         MatchResultScreen.field_s = true;
-        ng.field_b = 0;
+        ng.quickChatChannel = 0;
     }
 
     final static void resendPendingAchievements(int opcode, int obfuscationGuard) {

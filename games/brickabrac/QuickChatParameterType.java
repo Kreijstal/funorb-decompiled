@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th {
+final class QuickChatParameterType {
     static RgbSprite field_j;
-    int field_g;
+    int definitionWordCount;
     static String field_f;
     static String[] field_a;
     static boolean field_d;
     static RgbSprite field_i;
     static boolean field_h;
     static RgbSprite parisMidSprite;
-    int field_e;
+    int commandId;
     static boolean field_b;
 
     public static void a(int param0) {
@@ -39,8 +39,8 @@ final class th {
           if (param2 == 1) {
             param2 = 0;
           }
-          DualLinkNode.field_p = param4;
-          ng.field_b = param2;
+          DualLinkNode.quickChatRecipient = param4;
+          ng.quickChatChannel = param2;
           var7 = (CharSequence) ((Object) param4);
           QuickChatHelpDialog.field_Qb = gb.a(var7, 64);
           qn.field_n = param1;
@@ -76,7 +76,7 @@ final class th {
           return;
         }
         String var2 = (String) null;
-        th.a((int[]) null, 43L, -67, true, (String) null);
+        QuickChatParameterType.a((int[]) null, 43L, -67, true, (String) null);
         ri.c(true);
     }
 
@@ -89,7 +89,7 @@ final class th {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -81) {
-            th.a((byte) -77);
+            QuickChatParameterType.a((byte) -77);
           }
           stackIn_3_0 = AchievementsScreen.a(0, false, param0);
           return stackIn_3_0;
@@ -109,7 +109,7 @@ final class th {
 
     final static void b(int param0) {
         if (param0 != 1) {
-          th.a((byte) 83);
+          QuickChatParameterType.a((byte) 83);
           if (!TooltipSprite.field_p) {
             return;
           }
@@ -126,9 +126,9 @@ final class th {
         throw new IllegalStateException();
     }
 
-    th(int param0, int param1, int param2, int param3) {
-        this.field_g = param3;
-        this.field_e = param0;
+    QuickChatParameterType(int commandId, int unusedOption0, int unusedOption1, int definitionWordCount) {
+        this.definitionWordCount = definitionWordCount;
+        this.commandId = commandId;
     }
 
     static {

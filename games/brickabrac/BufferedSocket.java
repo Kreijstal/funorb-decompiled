@@ -269,7 +269,7 @@ final class BufferedSocket implements Runnable {
         }
         if (TooltipSprite.field_p) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, -Rasterizer2D.clipLeft + Rasterizer2D.clipRight, -Rasterizer2D.clipTop + Rasterizer2D.clipBottom);
-          wd.quickChatMenuRoot.drawRoot(true, false);
+          QuickChatPhraseDefinition.quickChatMenuRoot.drawRoot(true, false);
         }
     }
 

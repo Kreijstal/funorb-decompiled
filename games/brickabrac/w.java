@@ -622,7 +622,7 @@ final class w {
           }
           h.field_F = null;
           ik.field_j = false;
-          rg.field_k = null;
+          QuickChatPhraseRegistry.field_k = null;
           ik.field_b = null;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');

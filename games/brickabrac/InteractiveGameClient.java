@@ -46,7 +46,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_10_0 = false;
         if (MeshAttributeRecord.currentKeyCode == 13) {
-          th.b(param1 ^ 103);
+          QuickChatParameterType.b(param1 ^ 103);
           return true;
         }
         if (MeshAttributeRecord.currentKeyCode == param1) {

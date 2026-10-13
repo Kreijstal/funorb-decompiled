@@ -150,8 +150,8 @@ final class HuffmanCodec {
             String var3 = (String) null;
             HuffmanCodec.a((byte) 84, (java.applet.Applet) null, (String) null, false);
           }
-          wd.quickChatMenuRoot.children.clear((byte) -72);
-          wd.quickChatMenuRoot.addChild(hd.quickChatMenu, 0);
+          QuickChatPhraseDefinition.quickChatMenuRoot.children.clear((byte) -72);
+          QuickChatPhraseDefinition.quickChatMenuRoot.addChild(hd.quickChatMenu, 0);
           TooltipSprite.field_p = true;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -39,12 +39,12 @@ final class qf extends lp implements en {
         return super.h(0);
     }
 
-    final static int p(int param0) {
-        if (param0 == 248) {
-          return to.field_a + ((InstructionsScreen.field_v << 2) + (InstructionsScreen.field_r << 4));
+    final static int packChatFilters(int obfuscationGuard) {
+        if (obfuscationGuard == 248) {
+          return to.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
         }
         tableSubmissionSequence = 19;
-        return to.field_a + ((InstructionsScreen.field_v << 2) + (InstructionsScreen.field_r << 4));
+        return to.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
     }
 
     qf(cp param0, dk param1) {

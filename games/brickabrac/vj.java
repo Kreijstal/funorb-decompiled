@@ -16,10 +16,10 @@ final class vj {
           var6 = 24;
           var7 = 5;
           this.field_d.setTabbedPaneBounds(var7, param1, param0, var6, param4, param3, 75);
-          sj.field_d.setBounds(np.uiRowHeight, 0, 0, rg.field_c.width, (byte) 64);
-          MouseWheelSource.field_c.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (rg.field_c.width - ec.field_J - 2), (byte) 64);
-          GameplayScreen.field_u.setBounds(18, 2 + np.uiRowHeight, -2 + (-ec.field_J + (rg.field_c.width - 80)), 82 + ec.field_J, (byte) 64);
-          GameScreen.field_f.setPaneFooterBounds(true, 2, rg.field_c.width, 0, 20 + (np.uiRowHeight + 2), ec.field_J, 20, -2 + (-np.uiRowHeight + rg.field_c.height) - 20);
+          sj.field_d.setBounds(np.uiRowHeight, 0, 0, QuickChatPhraseRegistry.field_c.width, (byte) 64);
+          MouseWheelSource.field_c.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.field_c.width - ec.field_J - 2), (byte) 64);
+          GameplayScreen.field_u.setBounds(18, 2 + np.uiRowHeight, -2 + (-ec.field_J + (QuickChatPhraseRegistry.field_c.width - 80)), 82 + ec.field_J, (byte) 64);
+          GameScreen.field_f.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.field_c.width, 0, 20 + (np.uiRowHeight + 2), ec.field_J, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.field_c.height) - 20);
           f.field_c.layoutPaneFooter(20, -779, ec.field_J, 2);
           return;
         }
@@ -90,7 +90,7 @@ final class vj {
         UiComponent[] var4 = null;
         try {
           var3 = new String[]{param0, AchievementSubmission.field_j, pl.field_e};
-          var4 = new UiComponent[]{param1, rg.field_c, (UiComponent) ((Object) f.field_c)};
+          var4 = new UiComponent[]{param1, QuickChatPhraseRegistry.field_c, (UiComponent) ((Object) f.field_c)};
           this.field_d = new TabbedPane(0L, eh.field_n, var3, hd.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
