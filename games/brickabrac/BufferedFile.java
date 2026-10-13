@@ -81,7 +81,7 @@ final class BufferedFile {
         long overlapEnd = 0L;
         int overlapLength = 0;
         int clientBranchFlag = 0;
-        lj var15 = null;
+        PowerUpWarning var15 = null;
         int directReadCount;
         int gapEndOffset;
         int refillReadCount;
@@ -99,8 +99,8 @@ final class BufferedFile {
               return;
             }
             if (obfuscationGuard <= 116) {
-              var15 = (lj) null;
-              BufferedFile.a(36, (PlayerBoard) null, (lj) null, -113, -57, 112);
+              var15 = (PowerUpWarning) null;
+              BufferedFile.drawPowerUpWarning(36, (PlayerBoard) null, (PowerUpWarning) null, -113, -57, 112);
             }
             readStart = this.position;
             targetStart = offset;
@@ -417,7 +417,7 @@ final class BufferedFile {
         }
     }
 
-    final static void a(int param0, PlayerBoard param1, lj param2, int param3, int param4, int param5) {
+    final static void drawPowerUpWarning(int destinationX, PlayerBoard board, PowerUpWarning warning, int scaleDivisor, int entryTicks, int destinationY) {
         int var6_int = 0;
         int var7 = 0;
         RgbSprite var8 = null;
@@ -436,45 +436,45 @@ final class BufferedFile {
         int var9Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          var6_int = param1.boardWidth / (param3 << 1) + param0;
-          var7 = param1.field_wb / (param3 << 1) + param1.field_wb / (param3 << 3) + param5;
-          var8 = gg.field_p[param2.field_o];
+          var6_int = board.boardWidth / (scaleDivisor << 1) + destinationX;
+          var7 = board.field_wb / (scaleDivisor << 1) + board.field_wb / (scaleDivisor << 3) + destinationY;
+          var8 = gg.field_p[warning.typeId];
           var9 = 96;
           var10 = 512;
-          if (param2.field_m < param4) {
-            var10 = (param2.field_m << 9) / 25;
-            var7 = var7 + (-param2.field_m + 25 << 2) / param3;
-            var9Lifetime1 = (param2.field_m << 7) / 25;
+          if (warning.ageTicks < entryTicks) {
+            var10 = (warning.ageTicks << 9) / 25;
+            var7 = var7 + (-warning.ageTicks + 25 << 2) / scaleDivisor;
+            var9Lifetime1 = (warning.ageTicks << 7) / 25;
           } else {
-            if (50 <= param2.field_m) {
-              var9Lifetime1 = (75 - param2.field_m << 7) / 25;
-              var10 = (75 - param2.field_m << 9) / 25;
-              var7 = var7 - (param2.field_m - 50 << 2) / param3;
+            if (50 <= warning.ageTicks) {
+              var9Lifetime1 = (75 - warning.ageTicks << 7) / 25;
+              var10 = (75 - warning.ageTicks << 9) / 25;
+              var7 = var7 - (warning.ageTicks - 50 << 2) / scaleDivisor;
             } else {
               var9Lifetime1 = 128;
             }
           }
-          var11 = (var10 * var8.width >> 7) / param3;
-          var12 = (var10 * var8.height >> 7) / param3;
+          var11 = (var10 * var8.width >> 7) / scaleDivisor;
+          var12 = (var10 * var8.height >> 7) / scaleDivisor;
           var8.b(-(var11 >> 1) + var6_int, var7 - (var12 >> 1), var11, var12, var9Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_10_0 = var6;
-          stackIn_10_1 = new StringBuilder().append("jg.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("jg.B(").append(destinationX).append(',');
+          if (board == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (warning == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(scaleDivisor).append(',').append(entryTicks).append(',').append(destinationY).append(')').toString());
         }
     }
 

@@ -321,7 +321,7 @@ final class kb extends mh {
             kb.a(-35L, 83, (String) null, (int[]) null, -41);
           }
           if (var4_int == 0 &&
-            param3.field_Z == 2 && (!r.field_A ||
+            param3.boardState == 2 && (!r.field_A ||
             !ka.a((byte) 93))) {
             if ((1 & param3.field_db) != 0 &&
               (-2 & param3.field_db) == 0) {

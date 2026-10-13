@@ -80,7 +80,7 @@ final class tq {
 
     final static void a(int param0, boolean param1, ie param2, PlatformServices param3, int param4, java.awt.Component param5) {
         try {
-          il.a(param2, param3, param0, param4, param0, param4 ^ 2024, param5, param1);
+          BubbleDistortion.a(param2, param3, param0, param4, param0, param4 ^ 2024, param5, param1);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "tq.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

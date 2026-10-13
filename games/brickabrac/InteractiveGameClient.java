@@ -35,12 +35,12 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         return;
     }
 
-    final static int a(int param0, int param1) {
-        param0 = param0 & 8191;
-        if (~param0 <= param1) {
-          return param0 >= 6144 ? -um.field_j[8192 - param0] : -um.field_j[-4096 + param0];
+    final static int sine8192(int angle, int obfuscationGuard) {
+        angle = angle & 8191;
+        if (~angle <= obfuscationGuard) {
+          return angle >= 6144 ? -um.quarterSineQ16[8192 - angle] : -um.quarterSineQ16[-4096 + angle];
         }
-        return param0 < 2048 ? um.field_j[param0] : um.field_j[4096 - param0];
+        return angle < 2048 ? um.quarterSineQ16[angle] : um.quarterSineQ16[4096 - angle];
     }
 
     final static boolean a(int param0, int param1, int param2) {

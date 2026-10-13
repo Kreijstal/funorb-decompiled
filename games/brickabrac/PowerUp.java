@@ -108,7 +108,7 @@ final class PowerUp extends CircleBody {
         var3 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (board.field_Z == 3) {
+          if (board.boardState == 3) {
             return;
           }
           if (this.typeId != 3) {
@@ -184,7 +184,7 @@ final class PowerUp extends CircleBody {
                             var8 = (Ball) (board.activeBalls.first(-39));
                             while (var8 != null) {
                               var8.velocityX256 = (15 * BrickABrac.c(obfuscationGuard + 1949, 1024 * var7Lifetime1) >> 8) + var5_int;
-                              var8.velocityY256 = var6 + (15 * InteractiveGameClient.a(var7Lifetime1 * 1024, -4097) >> 8);
+                              var8.velocityY256 = var6 + (15 * InteractiveGameClient.sine8192(var7Lifetime1 * 1024, -4097) >> 8);
                               var9 = CacheIoRequest.approximateSqrt256(var8.velocityY256 * var8.velocityY256 + var8.velocityX256 * var8.velocityX256, 2) >> 8;
                               var8.velocityX256 = var4 * var8.velocityX256 / var9;
                               var8.velocityY256 = var4 * var8.velocityY256 / var9;
@@ -250,14 +250,14 @@ final class PowerUp extends CircleBody {
                     }
                   }
                 } else {
-                  if (board.field_C.isEmpty(false)) {
-                    board.field_k = 0;
-                    board.field_R = board.nextRandomInt(obfuscationGuard + 22);
-                    board.f(1000);
+                  if (board.bubbles.isEmpty(false)) {
+                    board.bubbleTick = 0;
+                    board.bubbleSeed = board.nextRandomInt(obfuscationGuard + 22);
+                    board.recreateBubbles(1000);
                   }
                 }
               } else {
-                board.field_rb = board.field_rb + 1;
+                board.lives = board.lives + 1;
               }
             }
           } else {

@@ -191,7 +191,7 @@ abstract class sl extends DualLinkNode {
           GameUiController.field_e = new mh(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
           ba.field_v = new mh(0L, qh.field_j);
           rg.field_e = new mh(0L, qb.field_x);
-          jd.field_a = new mh(0L, lj.field_k, ArchiveSource.field_b.toUpperCase());
+          jd.field_a = new mh(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           gb.field_l = new mh[4 + param13];
           MatchCompleteScreen.field_A = new rk[4 + param13][];
           gb.field_l[0] = new mh(0L, wi.field_n, ro.field_H);

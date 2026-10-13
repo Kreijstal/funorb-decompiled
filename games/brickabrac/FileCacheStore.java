@@ -70,10 +70,10 @@ final class FileCacheStore {
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (lj.mouseInput != null) {
-          var1 = lj.mouseInput;
+        if (PowerUpWarning.mouseInput != null) {
+          var1 = PowerUpWarning.mouseInput;
           synchronized (var1) {
-            lj.mouseInput = null;
+            PowerUpWarning.mouseInput = null;
           }
         }
         if (param0 != 5) {

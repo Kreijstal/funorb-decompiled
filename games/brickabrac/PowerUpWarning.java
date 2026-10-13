@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends IntrusiveNode {
+final class PowerUpWarning extends IntrusiveNode {
     static int[] field_n;
-    int field_m;
-    int field_o;
+    int ageTicks;
+    int typeId;
     static RgbSprite field_q;
     static byte[] field_p;
     static int[] field_l;
@@ -177,7 +177,7 @@ final class lj extends IntrusiveNode {
         TooltipSprite.field_i = param0;
         if (param3 != 0) {
           PlatformServices var6 = (PlatformServices) null;
-          lj.a(true, (PlatformServices) null);
+          PowerUpWarning.a(true, (PlatformServices) null);
         }
         field_i = param1;
     }
@@ -191,13 +191,13 @@ final class lj extends IntrusiveNode {
         }
     }
 
-    lj(int param0) {
-        this(param0, true);
+    PowerUpWarning(int typeId) {
+        this(typeId, true);
     }
 
-    lj(int param0, boolean param1) {
-        this.field_m = 0;
-        this.field_o = param0;
+    PowerUpWarning(int typeId, boolean unusedFlag) {
+        this.ageTicks = 0;
+        this.typeId = typeId;
     }
 
     static {

@@ -434,7 +434,7 @@ final class eh {
             return null;
           }
           if (0 == param4) {
-            var10 = lj.a(true, param1);
+            var10 = PowerUpWarning.a(true, param1);
             var6 = var10;
             if (var6 == null) {
               stackIn_7_0 = null;

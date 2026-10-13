@@ -233,7 +233,7 @@ final class ip extends ki {
           boolean decompiledFrameCompleted3 = true;
           if (w.field_n.length >= 2) {
             if (param2 &&
-              il.field_z != -1) {
+              BubbleDistortion.field_z != -1) {
               stackIn_52_0 = 1;
             } else {
               stackIn_52_0 = 0;
@@ -241,7 +241,7 @@ final class ip extends ki {
             boolean decompiledFrameCompleted4 = true;
             var6Lifetime1 = stackIn_52_0;
             if (var6Lifetime1 != 0) {
-              var7 = il.field_z;
+              var7 = BubbleDistortion.field_z;
               var8_int = 0;
               while (rh.field_d.length > var8_int) {
                 rh.field_d[var8_int] = (byte) 0;
@@ -264,7 +264,7 @@ final class ip extends ki {
                 break;
               }
               if (stackIn_117_0 != 0 &&
-                var7 != il.field_z) {
+                var7 != BubbleDistortion.field_z) {
                 stackIn_71_0 = 1;
               } else {
                 stackIn_71_0 = 0;
@@ -563,11 +563,11 @@ final class ip extends ki {
                     if (-1 == var9) {
                       var18 = var6Lifetime2;
                       while (-1 + (var6Lifetime2 + var27.length) > var18) {
-                        lj.field_p[var18 / 8] = (byte)ik.a((int) lj.field_p[var18 / 8], ~(1 << ik.a(7, var18)));
+                        PowerUpWarning.field_p[var18 / 8] = (byte)ik.a((int) PowerUpWarning.field_p[var18 / 8], ~(1 << ik.a(7, var18)));
                         var18++;
                       }
                     } else {
-                      lj.field_p[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) lj.field_p[(var9 + var6Lifetime2) / 8], 1 << ik.a(7, var6Lifetime2 + var9));
+                      PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8], 1 << ik.a(7, var6Lifetime2 + var9));
                     }
                     decompiledFrameRemainder1 = false;
                   }
@@ -581,7 +581,7 @@ final class ip extends ki {
                 }
                 if (param2 &&
                   var16Lifetime1 != 0) {
-                  lj.field_p[(var9 + var6Lifetime2) / 8] = (byte)ik.a((int) lj.field_p[(var9 + var6Lifetime2) / 8], ~(1 << ik.a(var9 + var6Lifetime2, 7)));
+                  PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8] = (byte)ik.a((int) PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8], ~(1 << ik.a(var9 + var6Lifetime2, 7)));
                 }
                 if (var9 >= 0 &&
                   var17.field_G) {
@@ -727,7 +727,7 @@ final class ip extends ki {
                         stackIn_376_0 = var17;
                         stackIn_376_1 = var17.field_Nb;
                         stackIn_376_2 = 0;
-                        stackIn_376_3 = lj.field_p[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
+                        stackIn_376_3 = PowerUpWarning.field_p[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
                         stackIn_388_0 = stackIn_376_0;
                         stackIn_388_1 = stackIn_376_1;
                         if (stackIn_376_2 != stackIn_376_3) {
@@ -749,7 +749,7 @@ final class ip extends ki {
                   if (decompiledFrameCompleted1) {
                     stackIn_377_0 = var17;
                     stackIn_377_1 = 0;
-                    stackIn_377_2 = lj.field_p[(var9 + var6Lifetime2) / 8] & 1 << (var9 + var6Lifetime2 & 7);
+                    stackIn_377_2 = PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8] & 1 << (var9 + var6Lifetime2 & 7);
                     while (true) {
                       stackIn_380_0 = stackIn_377_0;
                       if (stackIn_377_1 == stackIn_377_2) {

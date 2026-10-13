@@ -38,8 +38,8 @@ final class gh {
             gh.a(71, (ta) null, 110, 68, 116, -46, (TextFont) null, (TextFont) null, 98, -11, (ta) null, (ta) null, -41, 115, -68, 100, 62, 64, -15, -127);
           }
           oc.field_m = param7;
-          lj.field_r = param6;
-          lj.a(param16, param13, param12, 0, param4);
+          PowerUpWarning.field_r = param6;
+          PowerUpWarning.a(param16, param13, param12, 0, param4);
           ka.a(param0, -28, param5, param11);
           cd.a(param10, param1, param19, 7, param18, param2);
           GameConnectionShell.a(param3, param9, (byte) -119);

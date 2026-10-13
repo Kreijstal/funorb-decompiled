@@ -1021,7 +1021,7 @@ final class sb implements vc {
               }
               return;
             }
-            nn.field_f = il.field_A;
+            nn.field_f = BubbleDistortion.field_A;
           } else {
             nn.field_f = an.field_g;
           }

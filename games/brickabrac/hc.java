@@ -244,8 +244,8 @@ final class hc {
           am.field_Zb = new mh(0L, (mh) null);
           am.field_Zb.field_wb = pl.loadRgbSpriteByName("lobby", "closebutton", (byte) -90, param3);
           am.field_Zb.field_T = pl.loadRgbSpriteByName("lobby", "closebutton_mouseover", (byte) 119, param3);
-          lj.field_k = new mh(0L, var8);
-          lj.field_k.field_Jb = TimedSplashScreen.a(true, (byte) 57, 3815994, 40, 2039583, true);
+          PowerUpWarning.field_k = new mh(0L, var8);
+          PowerUpWarning.field_k.field_Jb = TimedSplashScreen.a(true, (byte) 57, 3815994, 40, 2039583, true);
           MainMenuScreen.field_t = new mh(0L, var10);
           MainMenuScreen.field_t.field_V = 2;
           MainMenuScreen.field_t.field_Jb = TimedSplashScreen.a(true, (byte) 44, 3815994, 30, 2039583, false);

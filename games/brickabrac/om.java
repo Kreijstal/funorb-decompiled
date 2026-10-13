@@ -203,7 +203,7 @@ final class om extends mh {
           nh.a(322, 482, -40, param2 - 1, cd.field_h, param5 - 1);
           nh.a(322, 44, -40, param2 - 1, cd.field_h, -7 + var10Lifetime1 - 1);
           param2 += 7;
-          lj.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
+          PowerUpWarning.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
           param2 += 306;
           var18 = ef.field_e[param4.field_H];
           var11 = var18;
@@ -226,7 +226,7 @@ final class om extends mh {
           var15 = null;
           if (!param7 ||
             var9_int != 0 ||
-            param4.field_fb == null) {
+            param4.displayedMessage == null) {
             if (param0 &&
               var9_int != 0) {
               if (param4.field_V < 0) {
@@ -246,13 +246,13 @@ final class om extends mh {
           }
           if (param7 &&
             var9_int == 0) {
-            if (param4.field_fb == null) {
+            if (param4.displayedMessage == null) {
               return;
             }
-            var16 = nn.field_g.measureText(param4.field_fb) + 20;
+            var16 = nn.field_g.measureText(param4.displayedMessage) + 20;
             nh.a(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
             rk.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
-            ob.field_D.drawCentered(param4.field_fb, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.ascent), 6, -1);
+            ob.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.ascent), 6, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -352,7 +352,7 @@ final class om extends mh {
           nh.a(322, 482, -40, param2 - 1, cd.field_h, param5 - 1);
           nh.a(322, 44, -40, param2 - 1, cd.field_h, -7 + var10Lifetime1 - 1);
           param2 += 7;
-          lj.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
+          PowerUpWarning.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
           param2 += 306;
           var18 = ef.field_e[param4.field_H];
           var11 = var18;
@@ -375,7 +375,7 @@ final class om extends mh {
           var15 = null;
           if (!param7 ||
             var9_int != 0 ||
-            param4.field_fb == null) {
+            param4.displayedMessage == null) {
             if (param0 &&
               var9_int != 0) {
               if (param4.field_V < 0) {
@@ -395,13 +395,13 @@ final class om extends mh {
           }
           if (param7 &&
             var9_int == 0) {
-            if (param4.field_fb == null) {
+            if (param4.displayedMessage == null) {
               return;
             }
-            var16 = nn.field_g.measureText(param4.field_fb) + 20;
+            var16 = nn.field_g.measureText(param4.displayedMessage) + 20;
             nh.a(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
             rk.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
-            ob.field_D.drawCentered(param4.field_fb, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.ascent), 6, -1);
+            ob.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.ascent), 6, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

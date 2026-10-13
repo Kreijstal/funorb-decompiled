@@ -45,7 +45,7 @@ final class hm {
             var10_int = var10_int + (BufferedFile.field_c[var11] & 255);
           }
           var10_int = (7 + var10_int) / 8;
-          lj.field_p = new byte[var10_int];
+          PowerUpWarning.field_p = new byte[var10_int];
           if (param3.field_bb == null) {
             param3.field_bb = new NodeDeque();
           }

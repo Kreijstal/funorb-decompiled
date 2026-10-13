@@ -187,7 +187,7 @@ final class LevelResultSubmission extends IntrusiveNode {
         RuntimeException var2 = null;
         try {
           eh.field_k = param1;
-          il.field_B = new int[3];
+          BubbleDistortion.field_B = new int[3];
           mm.field_Sb = 0;
           if (param0 > -4) {
             LevelResultSubmission.c(104);

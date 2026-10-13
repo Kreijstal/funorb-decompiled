@@ -170,13 +170,13 @@ final class pl {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.addMouseListener(lj.mouseInput);
-          param0.addMouseMotionListener(lj.mouseInput);
+          param0.addMouseListener(PowerUpWarning.mouseInput);
+          param0.addMouseMotionListener(PowerUpWarning.mouseInput);
           if (param1 != 7282) {
             ResourceArchive var3 = (ResourceArchive) null;
             pl.loadRgbSpriteByName((String) null, (String) null, (byte) 8, (ResourceArchive) null);
           }
-          param0.addFocusListener(lj.mouseInput);
+          param0.addFocusListener(PowerUpWarning.mouseInput);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -198,7 +198,7 @@ final class pl {
             stackIn_6_0 = oc.field_m.measureText(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = lj.field_r.measureText(param1);
+          stackIn_4_0 = PowerUpWarning.field_r.measureText(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

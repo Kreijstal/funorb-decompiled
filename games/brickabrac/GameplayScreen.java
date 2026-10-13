@@ -254,7 +254,7 @@ final class GameplayScreen extends GameScreen {
         }
         var4Lifetime1 = stackIn_19_0 | stackIn_20_1;
         if (1 == this.match.playerCount &&
-          this.match.playerBoards[0].field_Z == 5) {
+          this.match.playerBoards[0].boardState == 5) {
           ji.a(25459, true, c.field_j, 1, 1, true);
         } else {
           if (!this.match.field_c) {
@@ -403,10 +403,10 @@ final class GameplayScreen extends GameScreen {
           if (MenuScreen.field_i == 0) {
             DelegatingCanvas.a((byte) 32);
             var18 = this.match.playerBoards[0];
-            if (2 == var18.field_Z) {
+            if (2 == var18.boardState) {
               jc.a(var18.field_db, 0, (byte) -85);
             }
-            if (var18.field_Z == 0 ||
+            if (var18.boardState == 0 ||
               !ka.a((byte) 62)) {
               stackIn_116_0 = (!this.a(var7, true, var19)) ? 0 : 1;
               var5Lifetime4 = stackIn_116_0;
@@ -483,7 +483,7 @@ final class GameplayScreen extends GameScreen {
               this.a(250, 67, 5);
             }
             if (-1 + dp.field_r[6] <= var20.levelIndex &&
-              var20.field_Z == 5) {
+              var20.boardState == 5) {
               this.a(249, 67, 6);
             }
             if (dp.field_r[7] <= var20.score) {
@@ -611,7 +611,7 @@ final class GameplayScreen extends GameScreen {
             be.field_a = stackIn_8_0;
           }
           if (this.match.playerCount == 1 &&
-            this.match.playerBoards[0].field_Z == 8) {
+            this.match.playerBoards[0].boardState == 8) {
             ng.requestScreen(param1, 107, 18);
             ji.a(25459, true, cd.field_g, 1, 1, true);
           } else {
@@ -630,7 +630,7 @@ final class GameplayScreen extends GameScreen {
         rj.a((byte) 80, to.field_k);
         rj.a((byte) 80, me.field_d);
         if (!(this.match.playerCount <= 1) ||
-          9 != this.match.playerBoards[0].field_Z) {
+          9 != this.match.playerBoards[0].boardState) {
           ji.a(25459, true, cd.field_g, 1, 1, true);
         }
         if (this.field_p) {
@@ -752,7 +752,7 @@ final class GameplayScreen extends GameScreen {
         }
         k.outgoingPackets.finishBitWrite(-105);
         if (param2) {
-          k.outgoingPackets.writeInt(var5.a(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
+          k.outgoingPackets.writeInt(var5.computeBoardChecksum(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
         }
     }
 
@@ -853,7 +853,7 @@ final class GameplayScreen extends GameScreen {
             }
           } else {
             if (this.match.playerCount == 1) {
-              var5Lifetime1 = this.match.playerBoards[0].field_Z;
+              var5Lifetime1 = this.match.playerBoards[0].boardState;
               decompiledFrameRemainder0 = (5 == var5Lifetime1 ||
                 9 == var5Lifetime1 ||
                 var5Lifetime1 == 3 ||
@@ -946,12 +946,12 @@ final class GameplayScreen extends GameScreen {
             fieldTemp$0 = var8.levelIndex + 1;
             var8.levelIndex = var8.levelIndex + 1;
             if (DualLinkNode.field_q > fieldTemp$0) {
-              var8.field_Z = 0;
+              var8.boardState = 0;
             } else {
-              var8.field_Z = 5;
+              var8.boardState = 5;
             }
             this.field_s = true;
-            var8.field_P = 0;
+            var8.stateTicks = 0;
             return true;
           }
           if (keyCode == 55) {
@@ -964,7 +964,7 @@ final class GameplayScreen extends GameScreen {
             return true;
           }
           if (keyCode == 56) {
-            var8.field_rb = 5;
+            var8.lives = 5;
             this.field_s = true;
             return true;
           }
@@ -1021,9 +1021,9 @@ final class GameplayScreen extends GameScreen {
             return true;
           }
           if (38 == keyCode) {
-            var8.field_Z = 0;
+            var8.boardState = 0;
             this.field_s = true;
-            var8.field_P = 0;
+            var8.stateTicks = 0;
             return true;
           }
         }
@@ -1273,14 +1273,14 @@ final class GameplayScreen extends GameScreen {
                 while (var9 < var8_int) {
                   this.match.applyPendingPowerUps((byte) 120, var6_int);
                   var16.field_db = var10_ref_p.a((byte) -104);
-                  this.match.a(var16, param0, var5, 0);
+                  this.match.advanceBoard(var16, param0, var5, 0);
                   var16.simulationTick = var16.simulationTick + 1;
                   if (var10_ref_p.c(1)) {
                     var10_ref_p.unlink((byte) 111);
                     var16.field_p = var10_ref_p.field_k;
                     if (var10_ref_p.field_l) {
                       var11 = null;
-                      var12 = var16.a(param1, (StringBuilder) (var11)) ^ var16.nextRandomInt(120);
+                      var12 = var16.computeBoardChecksum(param1, (StringBuilder) (var11)) ^ var16.nextRandomInt(120);
                       if (var10_ref_p.field_m != var12) {
                         hn.a((byte) 91);
                         rk.a("T2 " + var10_ref_p.field_m + " " + var12 + " ", (Throwable) null, 54);
@@ -1307,7 +1307,7 @@ final class GameplayScreen extends GameScreen {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (((this.match.playerMaskThree | (this.match.playerMaskTwo | this.match.playerMaskOne)) & 1 << var6_int) == 0))) {
                 this.match.applyPendingPowerUps((byte) 127, var6_int);
-                this.match.a(var16, param2, var5, 0);
+                this.match.advanceBoard(var16, param2, var5, 0);
                 if (!this.field_p) {
                   this.match.distributeQueuedAttacks(var6_int, 1, var5, (byte) -122);
                   var16.field_p = var16.field_Q;
@@ -1320,7 +1320,7 @@ final class GameplayScreen extends GameScreen {
               if (var5 != null) {
                 var5.clear((byte) -110);
               }
-              var16.c(-101);
+              var16.advancePowerUpWarnings(-101);
             }
           }
           var6_intLifetime1 = 0;
@@ -1394,10 +1394,10 @@ final class GameplayScreen extends GameScreen {
           if (!this.field_p) {
             if (this.match.playerCount == 1) {
               var6 = this.match.playerBoards[0];
-              if (var6.field_Z == 8 ||
-                var6.field_Z == 9) {
+              if (var6.boardState == 8 ||
+                var6.boardState == 9) {
                 this.a((byte) 40, false);
-                if (8 != var6.field_Z) {
+                if (8 != var6.boardState) {
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
               }
@@ -1626,7 +1626,7 @@ final class GameplayScreen extends GameScreen {
               var9 = (-((var13.x256 + var13.width256 / 2 << 8) * 2) + 33423360) / 510;
               oa.field_Sb.a(true, var9, 0, 0, 0);
               if (oa.field_Sb.field_m == 7 ||
-                this.match.playerBoards[var6].field_Z == 5) {
+                this.match.playerBoards[var6].boardState == 5) {
                 gh.a(121, true);
               }
               if (MenuScreen.field_i <= 0) {
@@ -1749,9 +1749,9 @@ final class GameplayScreen extends GameScreen {
             ka.a((byte) 124)) {
             ui.a(tb.field_eb + ro.field_v, ob.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
-            if (null != var7_ref_j.field_fb) {
+            if (null != var7_ref_j.displayedMessage) {
               var12 = (IndexedSprite[]) null;
-              ui.a(var7_ref_j.field_fb, nn.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
+              ui.a(var7_ref_j.displayedMessage, nn.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
             }
           }
         }

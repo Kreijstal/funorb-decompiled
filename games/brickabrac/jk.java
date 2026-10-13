@@ -109,12 +109,12 @@ final class jk extends ki {
         var2.writeByte(-125, bb.field_e);
         var2.writeByte(param1 ^ -12, ResourceArchive.field_c);
         if (param1 == 98) {
-          var2.writeBytes(lj.field_p, -1, 0, lj.field_p.length);
+          var2.writeBytes(PowerUpWarning.field_p, -1, 0, PowerUpWarning.field_p.length);
           var2.backfillByteLength((byte) 126, -var3 + var2.position);
           return;
         }
         jk.d((byte) 3);
-        var2.writeBytes(lj.field_p, -1, 0, lj.field_p.length);
+        var2.writeBytes(PowerUpWarning.field_p, -1, 0, PowerUpWarning.field_p.length);
         var2.backfillByteLength((byte) 126, -var3 + var2.position);
     }
 
@@ -131,7 +131,7 @@ final class jk extends ki {
             hh.a(BufferedFile.field_a, -13, 2, var8, -8562, param3, ig.field_P);
             var8.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          il.a(param4, to.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
+          BubbleDistortion.a(param4, to.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
           return;
         }
         if (!this.b((byte) -95)) {
@@ -143,7 +143,7 @@ final class jk extends ki {
           hh.a(BufferedFile.field_a, -13, 2, var9, -8562, param3, ig.field_P);
           var9.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        il.a(param4, to.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
+        BubbleDistortion.a(param4, to.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
@@ -159,7 +159,7 @@ final class jk extends ki {
             hh.a(n.field_c, 0, 1, var7, -8562, param3, vj.field_b);
             var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          il.a(param1, wm.field_b, var7.sprite, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
+          BubbleDistortion.a(param1, wm.field_b, var7.sprite, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
           return;
         }
         if (!this.b((byte) -112)) {
@@ -171,7 +171,7 @@ final class jk extends ki {
           hh.a(n.field_c, 0, 1, var8, -8562, param3, vj.field_b);
           var8.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        il.a(param1, wm.field_b, var8.sprite, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
+        BubbleDistortion.a(param1, wm.field_b, var8.sprite, 1, 2, hk.field_Q, 0, param3, param2, param4, go.field_d, 640);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {

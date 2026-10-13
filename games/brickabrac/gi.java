@@ -14,14 +14,14 @@ final class gi extends ki {
           if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             RankingsScreen.a(var6, 1, 0, OptionsScreen.field_B, param3, 100);
             var6.setCacheKeys(this.field_m, param3, (byte) 78);
-            InteractiveGameClient.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
+            InteractiveGameClient.a((byte) 119, wn.field_b, param2, 1, PowerUpWarning.field_q, var6.sprite, param1, 640, 0, param4);
             if (!param0) {
               field_u = (String) null;
               return;
             }
             return;
           }
-          InteractiveGameClient.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
+          InteractiveGameClient.a((byte) 119, wn.field_b, param2, 1, PowerUpWarning.field_q, var6.sprite, param1, 640, 0, param4);
           if (!param0) {
             field_u = (String) null;
             return;
@@ -58,11 +58,11 @@ final class gi extends ki {
     final boolean a(boolean param0) {
         if (AchievementIcon.field_m.ensureGroupAvailableByName("desert", -28138)) {
           wn.field_b = pl.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.field_m);
-          lj.field_q = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
+          PowerUpWarning.field_q = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
           OptionsScreen.field_B = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
           ce.field_c = pl.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.field_m);
           SecondaryNodeQueue.field_d = jh.a(0, wn.field_b);
-          oc.field_x = jh.a(0, lj.field_q);
+          oc.field_x = jh.a(0, PowerUpWarning.field_q);
           pp.field_b = jh.a(0, OptionsScreen.field_B);
           GzipInflater.field_f[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
           TableNameEntry.field_e[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
@@ -157,7 +157,7 @@ final class gi extends ki {
           if (wn.field_b == null) {
             return false;
           }
-          if (null == lj.field_q) {
+          if (null == PowerUpWarning.field_q) {
             return false;
           }
           if (null == OptionsScreen.field_B) {
@@ -177,7 +177,7 @@ final class gi extends ki {
         if (wn.field_b == null) {
           return false;
         }
-        if (null == lj.field_q) {
+        if (null == PowerUpWarning.field_q) {
           return false;
         }
         if (null == OptionsScreen.field_B) {

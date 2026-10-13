@@ -153,7 +153,7 @@ final class ch {
             break;
           }
           if (var7 != null) {
-            il.a(var6Lifetime1, -103, var7);
+            BubbleDistortion.insertNodeBefore(var6Lifetime1, -103, var7);
             if (var9 == 0) {
               return;
             }

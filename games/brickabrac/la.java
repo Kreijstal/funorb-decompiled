@@ -285,15 +285,15 @@ final class la {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void drawBubbleDistortion(int centerX16, int centerY16, int radius16, int distortionAmount) {
         int var28 = 0;
-        int var4 = param2 * param2;
-        int var5 = param0 - param2 >> 4;
-        int var6 = param0 + 15 >> 4;
-        int var7 = param0 + param2 + 15 >> 4;
-        int var8 = param1 - param2 >> 4;
-        int var9 = param1 + 15 >> 4;
-        int var10 = param1 + param2 + 15 >> 4;
+        int var4 = radius16 * radius16;
+        int var5 = centerX16 - radius16 >> 4;
+        int var6 = centerX16 + 15 >> 4;
+        int var7 = centerX16 + radius16 + 15 >> 4;
+        int var8 = centerY16 - radius16 >> 4;
+        int var9 = centerY16 + 15 >> 4;
+        int var10 = centerY16 + radius16 + 15 >> 4;
         int var28Lifetime1;
         if (var5 < 0) {
           var5 = 0;
@@ -319,20 +319,20 @@ final class la {
         if (var9 > Rasterizer2D.height) {
           var9 = Rasterizer2D.height;
         }
-        int var11 = (var6 << 4) - param0;
+        int var11 = (var6 << 4) - centerX16;
         var11 = var11 * var11;
-        int var12 = (var6 + 1 << 4) - param0;
+        int var12 = (var6 + 1 << 4) - centerX16;
         var12 = var12 * var12;
-        int var13 = (var6 + 2 << 4) - param0;
+        int var13 = (var6 + 2 << 4) - centerX16;
         var13 = var13 * var13;
         int var14 = var12 - var11;
         int var15 = var13 - var12;
         int var16 = var15 - var14;
-        int var17 = (var9 << 4) - param1;
+        int var17 = (var9 << 4) - centerY16;
         var17 = var17 * var17;
-        int var18 = (var9 + 1 << 4) - param1;
+        int var18 = (var9 + 1 << 4) - centerY16;
         var18 = var18 * var18;
-        int var19 = (var9 + 2 << 4) - param1;
+        int var19 = (var9 + 2 << 4) - centerY16;
         var19 = var19 * var19;
         int var20 = var18 - var17;
         int var21 = var19 - var18;
@@ -347,7 +347,7 @@ final class la {
         int var26 = var11 + var17;
         int var27 = var20;
         for (var28 = var9; var28 < var10; var28++) {
-          la.a(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
+          la.a(var28, var26, var14, var16, var23, var4, var24, var5, var6, var7, distortionAmount, var25, centerX16, centerY16);
           var26 = var26 + var27;
           var27 = var27 + var22;
           var25 = var25 + Rasterizer2D.width;
@@ -359,7 +359,7 @@ final class la {
           var27 = var27 - var22;
           var26 = var26 - var27;
           var25 = var25 - Rasterizer2D.width;
-          la.b(var28Lifetime1, var26, var14, var16, var23, var4, var24, var5, var6, var7, param3, var25, param0, param1);
+          la.b(var28Lifetime1, var26, var14, var16, var23, var4, var24, var5, var6, var7, distortionAmount, var25, centerX16, centerY16);
         }
     }
 
@@ -520,7 +520,7 @@ final class la {
               var8++;
               incrementValue$4 = param6;
               param6++;
-              pa.field_i[incrementValue$3] = var15 + (var11 * InteractiveGameClient.a(mh.field_F[incrementValue$4], -4097) >> 16);
+              pa.field_i[incrementValue$3] = var15 + (var11 * InteractiveGameClient.sine8192(mh.field_F[incrementValue$4], -4097) >> 16);
               incrementValue$5 = var8;
               var8++;
               incrementValue$6 = param6;

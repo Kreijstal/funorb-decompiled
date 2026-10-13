@@ -71,7 +71,7 @@ final class jl {
           var5Lifetime1 = kk.field_e[11] >> 8;
           var6Lifetime1 = MatchResultScreen.field_t << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = InteractiveGameClient.a(var6Lifetime1, -4097) >> 8;
+          var8Lifetime1 = InteractiveGameClient.sine8192(var6Lifetime1, -4097) >> 8;
           var9Lifetime1 = BrickABrac.c(2048, var6Lifetime1) >> 8;
           if (-1 != pq.pointerX &&
             -1 != po.pointerY) {

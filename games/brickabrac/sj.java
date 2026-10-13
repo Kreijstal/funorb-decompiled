@@ -522,8 +522,8 @@ final class sj {
               }
               bb.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
               ResourceArchive.field_c = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
-              for (var3_int = 0; var3_int < lj.field_p.length; var3_int++) {
-                lj.field_p[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
+              for (var3_int = 0; var3_int < PowerUpWarning.field_p.length; var3_int++) {
+                PowerUpWarning.field_p[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
               }
             }
           }

@@ -44,7 +44,7 @@ final class TableNameEntry {
             po.a(ArchiveNetworkRequest.d((byte) 103), sb.field_f, oj.b(false), var3_int != 0, 0);
             return;
           }
-          if (!il.e((byte) -94)) {
+          if (!BubbleDistortion.e((byte) -94)) {
             Rasterizer2D.clear();
             dg.a(false, 240, 320);
             ck.a(param1, 0, 14209, 0);

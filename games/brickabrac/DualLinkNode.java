@@ -68,8 +68,8 @@ class DualLinkNode extends IntrusiveNode {
           }
           var11 -= 2;
           var12 = var12 + (param2.descent + 4);
-          for (var13 = 0; var13 < -1 + param3.field_rb; var13++) {
-            if (var13 < -2 + param3.field_rb) {
+          for (var13 = 0; var13 < -1 + param3.lives; var13++) {
+            if (var13 < -2 + param3.lives) {
               ch.field_l.a(var11, var12, 196);
             } else {
               ch.field_l.e(ch.field_l.canvasWidth / 2 + var11, var12 + ch.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.c(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));

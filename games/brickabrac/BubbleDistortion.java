@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class il extends CircleBody {
+final class BubbleDistortion extends CircleBody {
     static int[] field_D;
-    private int field_C;
-    int field_w;
-    int field_E;
+    private int animationPhase;
+    int oscillationStep;
+    int oscillationOffset;
     static int field_z;
     static String field_A;
     static int[] field_B;
-    private int field_x;
-    int field_y;
-    int field_v;
+    private int fadeStep;
+    int oscillationAmplitude;
+    int distortionAmount;
 
-    final static void a(IntrusiveNode param0, int param1, IntrusiveNode param2) {
+    final static void insertNodeBefore(IntrusiveNode node, int obfuscationGuard, IntrusiveNode before) {
         try {
-          if (null != param0.previous) {
-            param0.unlink((byte) 111);
+          if (null != node.previous) {
+            node.unlink((byte) 111);
           }
-          param0.previous = param2.previous;
-          param0.next = param2;
-          param0.previous.next = param0;
-          int var3_int = 73 / ((-34 - param1) / 43);
-          param0.next.previous = param0;
+          node.previous = before.previous;
+          node.next = before;
+          node.previous.next = node;
+          int var3_int = 73 / ((-34 - obfuscationGuard) / 43);
+          node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.O(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (before != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -32,50 +32,50 @@ final class il extends CircleBody {
         try {
           super.readBodySnapshot(123, packet);
           this.radius256 = packet.readUnsignedByte(255) << 8;
-          this.field_C = packet.readUnsignedByte(255);
-          this.field_E = packet.readUnsignedShort(65280);
+          this.animationPhase = packet.readUnsignedByte(255);
+          this.oscillationOffset = packet.readUnsignedShort(65280);
           if (obfuscationGuard <= 89) {
             IntrusiveNode var4 = (IntrusiveNode) null;
-            il.a((IntrusiveNode) null, 19, (IntrusiveNode) null);
+            BubbleDistortion.insertNodeBefore((IntrusiveNode) null, 19, (IntrusiveNode) null);
           }
-          this.field_w = packet.readUnsignedShort(65280);
-          this.field_y = packet.readUnsignedShort(65280);
+          this.oscillationStep = packet.readUnsignedShort(65280);
+          this.oscillationAmplitude = packet.readUnsignedShort(65280);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void d(int param0) {
+    final void advance(int obfuscationGuard) {
         int var3 = BrickABrac.field_J ? 1 : 0;
         this.y256 = this.y256 + this.velocityY256;
-        if (param0 == -2081170685) {
+        if (obfuscationGuard == -2081170685) {
           this.x256 = this.x256 + this.velocityX256;
           if (-6144 > this.y256) {
             this.y256 = this.y256 + 129024;
           }
-          if (this.field_C == 0) {
+          if (this.animationPhase == 0) {
             if (this.stateWord == 32) {
-              this.field_C = 1;
+              this.animationPhase = 1;
             }
-            this.field_v = this.field_v + 500;
+            this.distortionAmount = this.distortionAmount + 500;
             this.stateWord = this.stateWord + 1;
             return;
           }
-          if (this.field_C != 1) {
-            if (this.field_C != 2) {
+          if (this.animationPhase != 1) {
+            if (this.animationPhase != 2) {
               this.stateWord = this.stateWord + 1;
               return;
             }
-            if (this.field_x < this.field_v) {
-              this.field_v = this.field_v - this.field_x;
+            if (this.fadeStep < this.distortionAmount) {
+              this.distortionAmount = this.distortionAmount - this.fadeStep;
               if (this.stateWord == 564) {
                 this.unlink((byte) 111);
               }
               this.stateWord = this.stateWord + 1;
               return;
             }
-            if (this.field_x / 2 < this.field_v) {
-              this.field_v = this.field_v * 4 / 5;
+            if (this.fadeStep / 2 < this.distortionAmount) {
+              this.distortionAmount = this.distortionAmount * 4 / 5;
               if (this.stateWord == 564) {
                 this.unlink((byte) 111);
               }
@@ -88,41 +88,41 @@ final class il extends CircleBody {
             this.stateWord = this.stateWord + 1;
             return;
           }
-          this.field_v = (this.field_y * InteractiveGameClient.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
+          this.distortionAmount = (this.oscillationAmplitude * InteractiveGameClient.sine8192(this.oscillationOffset + this.stateWord * this.oscillationStep, obfuscationGuard ^ 2081174780) >> 16) + 16000;
           if (this.stateWord == 532) {
-            this.field_C = 2;
-            this.field_x = this.field_v / 32;
+            this.animationPhase = 2;
+            this.fadeStep = this.distortionAmount / 32;
             this.stateWord = this.stateWord + 1;
             return;
           }
           this.stateWord = this.stateWord + 1;
           return;
         }
-        this.field_C = 106;
+        this.animationPhase = 106;
         this.x256 = this.x256 + this.velocityX256;
         if (-6144 <= this.y256) {
-          if (this.field_C == 0) {
+          if (this.animationPhase == 0) {
             if (this.stateWord == 32) {
-              this.field_C = 1;
+              this.animationPhase = 1;
             }
-            this.field_v = this.field_v + 500;
+            this.distortionAmount = this.distortionAmount + 500;
             this.stateWord = this.stateWord + 1;
             return;
           }
-          if (this.field_C != 1) {
-            if (this.field_C != 2) {
+          if (this.animationPhase != 1) {
+            if (this.animationPhase != 2) {
               this.stateWord = this.stateWord + 1;
               return;
             }
-            if (this.field_x >= this.field_v) {
-              if (this.field_x / 2 >= this.field_v) {
+            if (this.fadeStep >= this.distortionAmount) {
+              if (this.fadeStep / 2 >= this.distortionAmount) {
                 if (this.stateWord == 564) {
                   this.unlink((byte) 111);
                 }
                 this.stateWord = this.stateWord + 1;
                 return;
               }
-              this.field_v = this.field_v * 4 / 5;
+              this.distortionAmount = this.distortionAmount * 4 / 5;
               if (this.stateWord != 564) {
                 this.stateWord = this.stateWord + 1;
                 return;
@@ -131,7 +131,7 @@ final class il extends CircleBody {
               this.stateWord = this.stateWord + 1;
               return;
             }
-            this.field_v = this.field_v - this.field_x;
+            this.distortionAmount = this.distortionAmount - this.fadeStep;
             if (this.stateWord != 564) {
               this.stateWord = this.stateWord + 1;
               return;
@@ -140,10 +140,10 @@ final class il extends CircleBody {
             this.stateWord = this.stateWord + 1;
             return;
           }
-          this.field_v = (this.field_y * InteractiveGameClient.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
+          this.distortionAmount = (this.oscillationAmplitude * InteractiveGameClient.sine8192(this.oscillationOffset + this.stateWord * this.oscillationStep, obfuscationGuard ^ 2081174780) >> 16) + 16000;
           if (this.stateWord == 532) {
-            this.field_C = 2;
-            this.field_x = this.field_v / 32;
+            this.animationPhase = 2;
+            this.fadeStep = this.distortionAmount / 32;
             this.stateWord = this.stateWord + 1;
             return;
           }
@@ -151,24 +151,24 @@ final class il extends CircleBody {
           return;
         }
         this.y256 = this.y256 + 129024;
-        if (this.field_C == 0) {
+        if (this.animationPhase == 0) {
           if (this.stateWord != 32) {
-            this.field_v = this.field_v + 500;
+            this.distortionAmount = this.distortionAmount + 500;
             this.stateWord = this.stateWord + 1;
             return;
           }
-          this.field_C = 1;
-          this.field_v = this.field_v + 500;
+          this.animationPhase = 1;
+          this.distortionAmount = this.distortionAmount + 500;
           this.stateWord = this.stateWord + 1;
           return;
         }
-        if (this.field_C != 1) {
-          if (this.field_C != 2) {
+        if (this.animationPhase != 1) {
+          if (this.animationPhase != 2) {
             this.stateWord = this.stateWord + 1;
             return;
           }
-          if (this.field_x >= this.field_v) {
-            if (this.field_x / 2 >= this.field_v) {
+          if (this.fadeStep >= this.distortionAmount) {
+            if (this.fadeStep / 2 >= this.distortionAmount) {
               if (this.stateWord != 564) {
                 this.stateWord = this.stateWord + 1;
                 return;
@@ -177,7 +177,7 @@ final class il extends CircleBody {
               this.stateWord = this.stateWord + 1;
               return;
             }
-            this.field_v = this.field_v * 4 / 5;
+            this.distortionAmount = this.distortionAmount * 4 / 5;
             if (this.stateWord == 564) {
               this.unlink((byte) 111);
               this.stateWord = this.stateWord + 1;
@@ -186,7 +186,7 @@ final class il extends CircleBody {
             this.stateWord = this.stateWord + 1;
             return;
           }
-          this.field_v = this.field_v - this.field_x;
+          this.distortionAmount = this.distortionAmount - this.fadeStep;
           if (this.stateWord == 564) {
             this.unlink((byte) 111);
             this.stateWord = this.stateWord + 1;
@@ -195,13 +195,13 @@ final class il extends CircleBody {
           this.stateWord = this.stateWord + 1;
           return;
         }
-        this.field_v = (this.field_y * InteractiveGameClient.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
+        this.distortionAmount = (this.oscillationAmplitude * InteractiveGameClient.sine8192(this.oscillationOffset + this.stateWord * this.oscillationStep, obfuscationGuard ^ 2081174780) >> 16) + 16000;
         if (this.stateWord != 532) {
           this.stateWord = this.stateWord + 1;
           return;
         }
-        this.field_C = 2;
-        this.field_x = this.field_v / 32;
+        this.animationPhase = 2;
+        this.fadeStep = this.distortionAmount / 32;
         this.stateWord = this.stateWord + 1;
     }
 
@@ -230,13 +230,13 @@ final class il extends CircleBody {
         field_B = null;
     }
 
-    il(int param0, int param1, int param2, int param3, int param4, int param5) {
-        super(param0, param1, param2, param3, param4, param5);
+    BubbleDistortion(int x256, int y256, int velocityX256, int velocityY256, int radius256, int typeId) {
+        super(x256, y256, velocityX256, velocityY256, radius256, typeId);
     }
 
     final static void a(byte param0, int param1) {
         if (param0 != 86) {
-          il.e((byte) -105);
+          BubbleDistortion.e((byte) -105);
           wp.a(param0 ^ 87, param1);
           return;
         }
@@ -269,19 +269,19 @@ final class il extends CircleBody {
         try {
           if (obfuscationGuard <= 79) {
             var4 = (java.awt.Component) null;
-            il.a((ie) null, (PlatformServices) null, 83, 59, 15, -106, (java.awt.Component) null, true);
+            BubbleDistortion.a((ie) null, (PlatformServices) null, 83, 59, 15, -106, (java.awt.Component) null, true);
           }
           var3_int = super.computeSyncChecksum(120, diagnostics) ^ -72674834;
           if (diagnostics != null) {
             discarded$3 = diagnostics.append(this.x256 + " " + this.y256 + " ");
-            discarded$4 = diagnostics.append(this.field_E + " " + this.stateWord + " ");
+            discarded$4 = diagnostics.append(this.oscillationOffset + " " + this.stateWord + " ");
             discarded$5 = diagnostics.append("\n");
           }
-          var3_int = var3_int ^ 97 * this.field_C + 9269 << 3;
-          var3_int = var3_int ^ 39185 + 47 * this.field_v << 13;
-          var3_int = var3_int ^ this.field_E * 17 + 31 << 2;
-          var3_int = var3_int ^ 30 + 19 * this.field_w << 22;
-          var3_int = var3_int ^ 27 * this.field_y + 21554 << 10;
+          var3_int = var3_int ^ 97 * this.animationPhase + 9269 << 3;
+          var3_int = var3_int ^ 39185 + 47 * this.distortionAmount << 13;
+          var3_int = var3_int ^ this.oscillationOffset * 17 + 31 << 2;
+          var3_int = var3_int ^ 30 + 19 * this.oscillationStep << 22;
+          var3_int = var3_int ^ 27 * this.oscillationAmplitude + 21554 << 10;
           stackIn_6_0 = var3_int;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -303,7 +303,7 @@ final class il extends CircleBody {
           return MatchResultScreen.field_t > 250 ? true : false;
         }
         RgbSprite var2 = (RgbSprite) null;
-        il.a(-62, (RgbSprite) null, (RgbSprite) null, 105, -38, (RgbSprite) null, 49, -61, 61, -69, (RgbSprite) null, 126);
+        BubbleDistortion.a(-62, (RgbSprite) null, (RgbSprite) null, 105, -38, (RgbSprite) null, 49, -61, 61, -69, (RgbSprite) null, 126);
         return MatchResultScreen.field_t > 250 ? true : false;
     }
 

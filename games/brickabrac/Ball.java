@@ -105,7 +105,7 @@ final class Ball extends CircleBody {
     }
 
     final void setVelocityFromAngle(int angle, int speed, int obfuscationGuard) {
-        this.velocityX256 = (InteractiveGameClient.a(angle, -4097) >> 8) * speed >> 8;
+        this.velocityX256 = (InteractiveGameClient.sine8192(angle, -4097) >> 8) * speed >> 8;
         if (obfuscationGuard >= 95) {
           this.velocityY256 = (BrickABrac.c(2048, angle) >> 8) * -speed >> 8;
           return;

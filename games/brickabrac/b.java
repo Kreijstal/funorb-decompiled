@@ -7,13 +7,13 @@ final class b {
     static int field_c;
 
     final static void a(int param0, java.awt.Component param1) {
-        param1.removeMouseListener(lj.mouseInput);
-        param1.removeMouseMotionListener(lj.mouseInput);
+        param1.removeMouseListener(PowerUpWarning.mouseInput);
+        param1.removeMouseMotionListener(PowerUpWarning.mouseInput);
         if (param0 != 20616) {
           return;
         }
         try {
-          param1.removeFocusListener(lj.mouseInput);
+          param1.removeFocusListener(PowerUpWarning.mouseInput);
           kb.liveHeldButton = 0;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "b.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

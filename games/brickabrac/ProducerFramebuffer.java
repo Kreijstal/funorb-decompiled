@@ -203,7 +203,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                       4 == ga.field_i &&
                       (2 & var14.flags) != 0) {
                       var17 = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
-                      var16.f(var7_int, var8, 64 + (InteractiveGameClient.a(200 * var17, param5 ^ -4127) >> 10));
+                      var16.f(var7_int, var8, 64 + (InteractiveGameClient.sine8192(200 * var17, param5 ^ -4127) >> 10));
                     }
                   }
                 } else {

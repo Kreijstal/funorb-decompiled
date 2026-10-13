@@ -127,7 +127,7 @@ class oc extends IntrusiveNode {
           var7 = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
           gg.field_p[param1].drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {
-            gg.field_p[param1].f(param2, param0, 64 + (InteractiveGameClient.a(200 * var7, -4097) >> 10));
+            gg.field_p[param1].f(param2, param0, 64 + (InteractiveGameClient.sine8192(200 * var7, -4097) >> 10));
           }
           param2 += 7;
           param0--;
@@ -174,11 +174,11 @@ class oc extends IntrusiveNode {
             Rasterizer2D.fillRectangle(var8, var10 - var11Lifetime3, 4, var11Lifetime3, 13245286);
           }
           if (var9 >= 20) {
-            Rasterizer2D.fillRectangleAlpha(var8, param0 + LevelPackSelectScreen.field_r.height - 21, 4, 20, 16777215, (InteractiveGameClient.a(200 * MembershipBenefitsScreen.clientTick, -4097) >> 10) + 64);
+            Rasterizer2D.fillRectangleAlpha(var8, param0 + LevelPackSelectScreen.field_r.height - 21, 4, 20, 16777215, (InteractiveGameClient.sine8192(200 * MembershipBenefitsScreen.clientTick, -4097) >> 10) + 64);
           }
           LevelPackSelectScreen.field_r.drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {
-            LevelPackSelectScreen.field_r.f(param2, param0, (InteractiveGameClient.a(400 * var7, -4097) >> 10) + 64);
+            LevelPackSelectScreen.field_r.f(param2, param0, (InteractiveGameClient.sine8192(400 * var7, -4097) >> 10) + 64);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

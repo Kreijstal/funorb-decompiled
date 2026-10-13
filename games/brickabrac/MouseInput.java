@@ -18,7 +18,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.mouseInput != null) {
+          if (PowerUpWarning.mouseInput != null) {
             gr.pointerIdleTicks = 0;
             SoundPlayback.livePressX = event.getX();
             va.livePressY = event.getY();
@@ -65,7 +65,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.mouseInput == null) {
+          if (PowerUpWarning.mouseInput == null) {
             return;
           }
           gr.pointerIdleTicks = 0;
@@ -94,7 +94,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.mouseInput == null) {
+          if (PowerUpWarning.mouseInput == null) {
             return;
           }
           kb.liveHeldButton = 0;
@@ -127,7 +127,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent event) {
         try {
-          if (lj.mouseInput != null) {
+          if (PowerUpWarning.mouseInput != null) {
             gr.pointerIdleTicks = 0;
             DirectByteStorage.livePointerX = -1;
             ep.livePointerY = -1;
@@ -146,7 +146,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != lj.mouseInput) {
+          if (null != PowerUpWarning.mouseInput) {
             gr.pointerIdleTicks = 0;
             kb.liveHeldButton = 0;
             kn.livePointerChanged = true;
@@ -228,7 +228,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.mouseInput == null) {
+          if (PowerUpWarning.mouseInput == null) {
             return;
           }
           gr.pointerIdleTicks = 0;
@@ -257,7 +257,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == lj.mouseInput) {
+          if (null == PowerUpWarning.mouseInput) {
             return;
           }
           gr.pointerIdleTicks = 0;

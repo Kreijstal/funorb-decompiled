@@ -27,23 +27,23 @@ final class n {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            il.field_B[var2_int] = 0;
+            BubbleDistortion.field_B[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; mm.field_Sb > var2_intLifetime1; var2_intLifetime1++) {
             if (param1.field_c == jk.field_s[var2_intLifetime1].field_c) {
               dupTemp$3 = jk.field_s[var2_intLifetime1].a(true);
-              il.field_B[dupTemp$3] = il.field_B[dupTemp$3] + 1;
+              BubbleDistortion.field_B[dupTemp$3] = BubbleDistortion.field_B[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.a(true);
-          il.field_B[dupTemp$0] = il.field_B[dupTemp$0] + 1;
+          BubbleDistortion.field_B[dupTemp$0] = BubbleDistortion.field_B[dupTemp$0] + 1;
           var2_intLifetime2 = param0;
           for (var3 = 0; mm.field_Sb > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_c == jk.field_s[var3].field_c) {
               var4 = jk.field_s[var3].a(true);
-              if (eh.field_k < il.field_B[var4]) {
-                il.field_B[var4] = il.field_B[var4] - 1;
+              if (eh.field_k < BubbleDistortion.field_B[var4]) {
+                BubbleDistortion.field_B[var4] = BubbleDistortion.field_B[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

@@ -199,7 +199,7 @@ abstract class MenuScreen extends GameScreen {
           this.onEnter(true, -79, -10);
         }
         var4 = this.selection.selectedIndex;
-        MouseInput.field_b = InteractiveGameClient.a(MembershipBenefitsScreen.clientTick * 20, -4097);
+        MouseInput.field_b = InteractiveGameClient.sine8192(MembershipBenefitsScreen.clientTick * 20, -4097);
         if (inputEnabled &&
           !vh.field_L &&
           !ed.field_d) {
@@ -427,10 +427,10 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 21) {
                 if (this.selection.isHomeKey(obfuscationGuard ^ -30)) {
-                  il.a((byte) 86, 0);
+                  BubbleDistortion.a((byte) 86, 0);
                 }
                 if (this.selection.isEndKey(-1)) {
-                  il.a((byte) 86, 256);
+                  BubbleDistortion.a((byte) 86, 256);
                 }
                 if (this.selection.isLeftArrow((byte) -57)) {
                   RankingsScreen.f(-1);
@@ -443,12 +443,12 @@ abstract class MenuScreen extends GameScreen {
                   var9 = -var8 + pq.pointerX;
                   var10 = 256 * var9 / 120;
                   if (var10 <= 0) {
-                    il.a((byte) 86, 0);
+                    BubbleDistortion.a((byte) 86, 0);
                   } else {
                     if (var10 >= 256) {
-                      il.a((byte) 86, 256);
+                      BubbleDistortion.a((byte) 86, 256);
                     } else {
-                      il.a((byte) 86, var10);
+                      BubbleDistortion.a((byte) 86, var10);
                     }
                   }
                 }
@@ -614,7 +614,7 @@ abstract class MenuScreen extends GameScreen {
           var9 = 0;
           var10 = 0;
           for (var11 = 0; var11 < 29; var11++) {
-            if ((1 << var11 & param1.field_S) != 0) {
+            if ((1 << var11 & param1.flaggedBrickTypeMask) != 0) {
               oc.a(var8, var11, var7_int, param1, param0, (byte) 115);
               var7_int += 25;
               var9++;

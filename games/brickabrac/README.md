@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 131 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 133 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -50,6 +50,7 @@ This pass reviews 131 class identities across 420 compiled classes. Other names 
 | [IntArrayRequest](IntArrayRequest.java) | Pending integer-array response values, also used by saved-progress polling. |
 | [LevelResultSubmission](LevelResultSubmission.java) / [TableRowSubmission](TableRowSubmission.java) / [TableDataRequest](TableDataRequest.java) / [TableNameEntry](TableNameEntry.java) | Queued level results, table submissions, three response partitions and name dictionary. |
 | [SecondaryHashTable](SecondaryHashTable.java) | Secondary-link hash buckets, duplicate lookup and independent traversal. |
+| [PowerUpWarning](PowerUpWarning.java) / [BubbleDistortion](BubbleDistortion.java) | Imminent-effect warning records and seeded bubble distortion phases. |
 
 | Registered menu ID | Screen |
 | --- | --- |
@@ -106,5 +107,7 @@ Huffman fixtures use independent prefix-interval allocation and per-bit packing,
 The earlier pollRequiredFonts name is corrected to pollSavedProgress: the helper requests two integer arrays and combines level metadata by pack ID. IntArrayRequest fixtures check encoded request type/ID, allocated values, FIFO response completion and ownership release, metadata flags and released progress requests. Pinned-source behavior is preserved: the response shift expression accumulates bytes rather than conventional32-bit words, and progress polling resets both counts after accumulating metadata. Original-JAR/server semantics remain unverified; these are observations of the fixed decompiled source.
 
 Result fixtures independently encode signed-smart boundaries, qualified result words and CRC32 frames, check gameplay counter capture/suppression and match acknowledgments by pack/level. Table fixtures cover wrapping16-bit submission IDs, caller-owned values, empty/nonempty row wires, returned64-bit row IDs, pending table-ID deduplication, optional dictionary labels, repeated names, all three name/ID/value partitions, zero-dictionary completion and row lookup/mismatches. Response counters and flattened offsets have reviewed names. Secondary labels are parsed into temporary arrays but not retained in TableDataRequest. Deterministic secondary-hash fixtures compare duplicate lookup, bucket traversal and ownership transfer against independent list models, including non-power-of-two masking, negative keys and separate lookup/traversal cursors; primary links remain intact. Counter words retain qualified meanings. Oversized table responses, invalid guards, active traversal mutation, missing-request disconnects, live server compatibility and original-JAR equivalence remain unverified.
+
+PowerUpWarning fixtures check25-tick lookahead, numeric type priority, timer boundaries, unused constructor boolean and pending/displayed aging/promotion. BubbleDistortion fixtures check566 motion/phase/fade updates, ownership release at age564, snapshot fields/retained amount and fade step, and independent checksums. The wrapped8192-angle sine helper matches an independent mathematical model at every angle. Independent ISAAC fixtures reconstruct all64 bubbles at ages0,33,533,564 and preserve age bounds. PlayerBoard now names installLevelBricks/readBoardSnapshot/computeBoardChecksum/resetServe paths; MultiplayerMatch names advanceBoard and its main body roles. Controlled fixtures check eligible brick count/type mask, portal order, states1/3/4/5 and single/multiplayer timing, audio event13, message promotion, empty snapshot common header/paddle/history/random position/skipped extension and explicit/random serve resets. Numeric state meanings remain qualified. Bubble and warning pixel output, active simulation states0/2, complete collision/match behavior, extended/nonempty snapshots, whole-board checksum equivalence, original-JAR equivalence and live server/gameplay remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

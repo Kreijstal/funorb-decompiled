@@ -80,7 +80,7 @@ final class BitPacketBuffer extends PacketBuffer {
         int var11 = 0;
         Ball var12_ref_vn = null;
         PowerUp var12_ref_ge = null;
-        il var12_ref_il = null;
+        BubbleDistortion var12_ref_il = null;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
@@ -119,7 +119,7 @@ final class BitPacketBuffer extends PacketBuffer {
           }
           stackIn_8_0 = (((match.playerMaskTwo | match.playerMaskOne | match.playerMaskThree) & 1 << playerId) == 0) ? 0 : 1;
           var10 = stackIn_8_0;
-          if (var24.field_Z == 2 &&
+          if (var24.boardState == 2 &&
             var10 == 0) {
             var11 = var24.activeBalls.size(127);
             var12_ref_vn = (Ball) (var24.activeBalls.first(-7));
@@ -149,8 +149,8 @@ final class BitPacketBuffer extends PacketBuffer {
                 break;
               }
               if (var12_ref_vn.contactCount >= 40) {
-                al.a((var12_ref_vn.radius256 >> 8) / scaleDivisor + (destinationY + (var12_ref_vn.y256 >> 8) / scaleDivisor), 40 / scaleDivisor, 256, InteractiveGameClient.a(100 * MembershipBenefitsScreen.clientTick, -4097) * 10 >> 16, 123, 20 / scaleDivisor, (var12_ref_vn.x256 >> 8) / scaleDivisor + destinationX + (var12_ref_vn.radius256 >> 8) / scaleDivisor);
-                la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / scaleDivisor + (destinationX << 4), (destinationY << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / scaleDivisor, (var12_ref_vn.radius256 >> 3) / scaleDivisor, 4, 3, lj.field_n, var24.simulationTick / 5);
+                al.a((var12_ref_vn.radius256 >> 8) / scaleDivisor + (destinationY + (var12_ref_vn.y256 >> 8) / scaleDivisor), 40 / scaleDivisor, 256, InteractiveGameClient.sine8192(100 * MembershipBenefitsScreen.clientTick, -4097) * 10 >> 16, 123, 20 / scaleDivisor, (var12_ref_vn.x256 >> 8) / scaleDivisor + destinationX + (var12_ref_vn.radius256 >> 8) / scaleDivisor);
+                la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / scaleDivisor + (destinationX << 4), (destinationY << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / scaleDivisor, (var12_ref_vn.radius256 >> 3) / scaleDivisor, 4, 3, PowerUpWarning.field_n, var24.simulationTick / 5);
               }
               IntNode.a(var12_ref_vn, (byte) -119, scaleDivisor, destinationX, destinationY);
               var12_ref_vn = (Ball) (var24.activeBalls.next((byte) 116));
@@ -165,15 +165,15 @@ final class BitPacketBuffer extends PacketBuffer {
               we.field_b[var12_ref_ge.typeId].drawTransparent(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
               var12_ref_ge = (PowerUp) (var24.fallingPowerUps.next((byte) 116));
             }
-            var12_ref_il = (il) (var24.field_C.first(-20));
+            var12_ref_il = (BubbleDistortion) (var24.bubbles.first(-20));
             while (var12_ref_il != null) {
-              la.a((var12_ref_il.x256 >> 4) / scaleDivisor + (destinationX << 4), (var12_ref_il.y256 >> 4) / scaleDivisor + (destinationY << 4), (var12_ref_il.radius256 >> 4) / scaleDivisor, var12_ref_il.field_v);
-              var12_ref_il = (il) (var24.field_C.next((byte) 116));
+              la.drawBubbleDistortion((var12_ref_il.x256 >> 4) / scaleDivisor + (destinationX << 4), (var12_ref_il.y256 >> 4) / scaleDivisor + (destinationY << 4), (var12_ref_il.radius256 >> 4) / scaleDivisor, var12_ref_il.distortionAmount);
+              var12_ref_il = (BubbleDistortion) (var24.bubbles.next((byte) 116));
             }
           }
-          if ((var24.field_Z == 2 ||
-            var24.field_Z == 4 ||
-            var24.field_Z == 1) &&
+          if ((var24.boardState == 2 ||
+            var24.boardState == 4 ||
+            var24.boardState == 1) &&
             var10 == 0) {
             oj.a(kb.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
           }
@@ -183,30 +183,30 @@ final class BitPacketBuffer extends PacketBuffer {
             var27 = (kc) (var24.field_x.next((byte) 116));
           }
           if (match.playerCount == 1 &&
-            var24.field_Z == 1) {
+            var24.boardState == 1) {
             var12 = 256;
-            if (var24.field_P < 25) {
-              var12 = var24.field_P * 256 / 25;
+            if (var24.stateTicks < 25) {
+              var12 = var24.stateTicks * 256 / 25;
             } else {
-              if (var24.field_P > 109) {
-                var12 = 125 - var24.field_P;
+              if (var24.stateTicks > 109) {
+                var12 = 125 - var24.stateTicks;
                 var12 = var12 * 256 / 15;
               }
             }
             Rasterizer2D.fillRectangleAlpha(7, 280, 510, 45, 0, 96 * var12 / 256);
             w.field_r.b(7 + (-w.field_r.width + 510) / 2, 260, var12);
           }
-          if (3 == var24.field_Z) {
+          if (3 == var24.boardState) {
             ja.a((byte) -113, ClientException.field_b, var8, var9, var24);
           }
-          if (var24.field_Z == 5) {
+          if (var24.boardState == 5) {
             ja.a((byte) -104, jk.field_u, var8, var9, var24);
           }
-          if (null != var24.field_w) {
-            BufferedFile.a(destinationX, var24, var24.field_w, scaleDivisor, 25, destinationY);
+          if (null != var24.displayedWarning) {
+            BufferedFile.drawPowerUpWarning(destinationX, var24, var24.displayedWarning, scaleDivisor, 25, destinationY);
           }
-          if (var24.field_D != null) {
-            BufferedFile.a(destinationX, var24, var24.field_D, scaleDivisor, 25, destinationY);
+          if (var24.pendingWarning != null) {
+            BufferedFile.drawPowerUpWarning(destinationX, var24, var24.pendingWarning, scaleDivisor, 25, destinationY);
           }
           var28 = (ScorePopup) (var24.scorePopups.first(-81));
           if (obfuscationGuard < 14) {

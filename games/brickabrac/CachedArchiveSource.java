@@ -96,7 +96,7 @@ final class CachedArchiveSource extends ArchiveSource {
               var2 = var2 + GameCanvas.field_f;
             }
             if (var4 >= 0) {
-              lj.field_r.drawLeft(var6, var8, lj.field_i + var2, var5, -1);
+              PowerUpWarning.field_r.drawLeft(var6, var8, PowerUpWarning.field_i + var2, var5, -1);
               var2 = var2 + (TooltipSprite.field_i + GameClock.field_g + GameCanvas.field_f);
             } else {
               oc.field_m.drawLeft(var6, var8, DualLinkDeque.field_b + var2, var5, -1);

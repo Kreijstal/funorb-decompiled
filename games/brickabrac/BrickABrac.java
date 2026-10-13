@@ -296,7 +296,7 @@ public final class BrickABrac extends InteractiveGameClient {
               } else {
                 fieldTemp$0 = IntArrayRequest.gameplayScreen.field_x;
                 IntArrayRequest.gameplayScreen.field_x = IntArrayRequest.gameplayScreen.field_x + 1;
-                IntArrayRequest.gameplayScreen.match.playerBoards[fieldTemp$0].a(false, packet, IntArrayRequest.gameplayScreen.match.playerCount);
+                IntArrayRequest.gameplayScreen.match.playerBoards[fieldTemp$0].readBoardSnapshot(false, packet, IntArrayRequest.gameplayScreen.match.playerCount);
                 stackIn_74_0 = IntArrayRequest.gameplayScreen;
                 stackIn_75_1 = (IntArrayRequest.gameplayScreen.field_x == IntArrayRequest.gameplayScreen.match.playerCount);
                 stackIn_74_0.field_q = stackIn_75_1;
@@ -549,9 +549,9 @@ public final class BrickABrac extends InteractiveGameClient {
           BrickABrac.s(116);
         }
         if (param1 >= 4096) {
-          return param1 < 6144 ? -um.field_j[6144 - param1] : um.field_j[param1 - 6144];
+          return param1 < 6144 ? -um.quarterSineQ16[6144 - param1] : um.quarterSineQ16[param1 - 6144];
         }
-        return 2048 > param1 ? um.field_j[-param1 + 2048] : -um.field_j[-2048 + param1];
+        return 2048 > param1 ? um.quarterSineQ16[-param1 + 2048] : -um.quarterSineQ16[-2048 + param1];
     }
 
     final void clearClientResources(boolean obfuscationGuard) {
@@ -670,11 +670,11 @@ public final class BrickABrac extends InteractiveGameClient {
         hn.a(122);
         GameplayAudioEvent.d(0);
         Ball.c(122);
-        il.c(124);
+        BubbleDistortion.c(124);
         kc.a(95);
         Paddle.e(-77);
         PowerUp.c(6);
-        lj.b(false);
+        PowerUpWarning.b(false);
         ScorePopup.a((byte) -73);
         MultiplayerMatch.d(-19537);
         p.b(false);

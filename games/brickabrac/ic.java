@@ -32,7 +32,7 @@ final class ic {
             rq.field_a.addLast(param1, (byte) 3);
             return;
           }
-          il.a(param1, -90, var2);
+          BubbleDistortion.insertNodeBefore(param1, -90, var2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

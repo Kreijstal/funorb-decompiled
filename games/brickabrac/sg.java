@@ -15,7 +15,7 @@ final class sg extends k {
         int var2 = 0;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = lj.mouseInput;
+        var1 = PowerUpWarning.mouseInput;
         synchronized (var1) {
           cb.heldButton = kb.liveHeldButton;
           gr.pointerIdleTicks = gr.pointerIdleTicks + 1;

@@ -2598,7 +2598,7 @@ final class nn {
                 }
                 var2 = nk.a("mp_showchat_nounread", (byte) 116);
                 if (var2 != null) {
-                  il.field_A = MenuButton.a(var2, (byte) 109);
+                  BubbleDistortion.field_A = MenuButton.a(var2, (byte) 109);
                 }
                 var2 = nk.a("mp_showchat_unread1", (byte) 111);
                 if (null != var2) {

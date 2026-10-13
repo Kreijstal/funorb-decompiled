@@ -129,7 +129,7 @@ final class ar {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
                 for (var10Lifetime2 = 0; -1 + var16.length > var10Lifetime2; var10Lifetime2++) {
-                  if (0 == (lj.field_p[(var10Lifetime2 + param7) / 8] & 1 << (param7 + var10Lifetime2 & 7))) {
+                  if (0 == (PowerUpWarning.field_p[(var10Lifetime2 + param7) / 8] & 1 << (param7 + var10Lifetime2 & 7))) {
                     continue;
                   }
                   var9 = 0;

@@ -465,7 +465,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           discarded$1 = this.a(stackIn_13_1, (byte) 46, false);
         } else {
           if (clientStage >= 10) {
-            if (il.e((byte) -126)) {
+            if (BubbleDistortion.e((byte) -126)) {
               if (AchievementIcon.field_j == 0) {
                 discarded$2 = this.a(false, (byte) 46, false);
               } else {
@@ -540,7 +540,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             stackIn_31_0 = 67;
                             stackIn_32_1 = (var2 == 12);
                             var3 = kc.$cfr$intArgs$a$a948187ac0af(stackIn_31_0, stackIn_32_1);
-                            lj.a(var3, 79);
+                            PowerUpWarning.a(var3, 79);
                           }
                         } else {
                           um.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, lp.field_ub);

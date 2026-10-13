@@ -455,7 +455,7 @@ final class wl extends d {
           if (var2 == null) {
             ua.field_c.addLast(param0, (byte) 3);
           } else {
-            il.a(param0, 56, var2);
+            BubbleDistortion.insertNodeBefore(param0, 56, var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

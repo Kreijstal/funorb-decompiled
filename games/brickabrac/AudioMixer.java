@@ -30,7 +30,7 @@ final class AudioMixer extends AudioStream {
     private final void scheduleListener(IntrusiveNode startNode, AudioMixerListener listener) {
         while (true) {
           if (startNode == this.listeners.sentinel) {
-            il.a(listener, 113, startNode);
+            BubbleDistortion.insertNodeBefore(listener, 113, startNode);
             this.nextListenerSample = ((AudioMixerListener) (this.listeners.sentinel.next)).remainingSamples;
             return;
           }
@@ -40,7 +40,7 @@ final class AudioMixer extends AudioStream {
           }
           break;
         }
-        il.a(listener, 113, startNode);
+        BubbleDistortion.insertNodeBefore(listener, 113, startNode);
         this.nextListenerSample = ((AudioMixerListener) (this.listeners.sentinel.next)).remainingSamples;
         return;
     }

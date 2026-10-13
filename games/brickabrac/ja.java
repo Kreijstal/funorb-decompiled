@@ -95,7 +95,7 @@ final class ja {
           if (param0 > -13) {
             return;
           }
-          var5_int = param4.field_P;
+          var5_int = param4.stateTicks;
           stackIn_5_0 = (var5_int >= 96) ? 96 : var5_int;
           var6 = stackIn_5_0;
           var5_int -= 50;

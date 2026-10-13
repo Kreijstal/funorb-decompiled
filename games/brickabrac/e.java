@@ -145,9 +145,9 @@ final class e extends IntrusiveNode {
     final static int[] a(int param0, int param1, int param2) {
         int var9 = 0;
         int var10 = 0;
-        int var3 = InteractiveGameClient.a(param0, -4097);
+        int var3 = InteractiveGameClient.sine8192(param0, -4097);
         int var4 = BrickABrac.c(2048, param0);
-        int var5 = InteractiveGameClient.a(param2, param1 - 4097);
+        int var5 = InteractiveGameClient.sine8192(param2, param1 - 4097);
         int var6 = BrickABrac.c(2048, param2);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);

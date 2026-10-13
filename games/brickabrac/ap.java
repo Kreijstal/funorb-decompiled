@@ -55,43 +55,43 @@ final class ap {
         if ((long)param0 < 65536L) {
           if ((long)param0 < 256L) {
             if (param0 >= 0) {
-              return lj.field_l[param0] >> 12;
+              return PowerUpWarning.field_l[param0] >> 12;
             }
             return -1;
           }
           if ((long)param0 < 4096L) {
             if ((long)param0 < 1024L) {
-              return lj.field_l[param0 >> 2] >> 11;
+              return PowerUpWarning.field_l[param0 >> 2] >> 11;
             }
-            return lj.field_l[param0 >> 4] >> 10;
+            return PowerUpWarning.field_l[param0 >> 4] >> 10;
           }
           if (16384L > (long)param0) {
-            return lj.field_l[param0 >> 6] >> 9;
+            return PowerUpWarning.field_l[param0 >> 6] >> 9;
           }
-          return lj.field_l[param0 >> 8] >> 8;
+          return PowerUpWarning.field_l[param0 >> 8] >> 8;
         }
         if ((long)param0 >= 16777216L) {
           if ((long)param0 < 268435456L) {
             if ((long)param0 < 67108864L) {
-              return lj.field_l[param0 >> 18] >> 3;
+              return PowerUpWarning.field_l[param0 >> 18] >> 3;
             }
-            return lj.field_l[param0 >> 20] >> 2;
+            return PowerUpWarning.field_l[param0 >> 20] >> 2;
           }
           if (1073741824L <= (long)param0) {
-            return lj.field_l[param0 >> 24];
+            return PowerUpWarning.field_l[param0 >> 24];
           }
-          return lj.field_l[param0 >> 22] >> 1;
+          return PowerUpWarning.field_l[param0 >> 22] >> 1;
         }
         if ((long)param0 < 1048576L) {
           if ((long)param0 < 262144L) {
-            return lj.field_l[param0 >> 10] >> 7;
+            return PowerUpWarning.field_l[param0 >> 10] >> 7;
           }
-          return lj.field_l[param0 >> 12] >> 6;
+          return PowerUpWarning.field_l[param0 >> 12] >> 6;
         }
         if ((long)param0 < 4194304L) {
-          return lj.field_l[param0 >> 14] >> 5;
+          return PowerUpWarning.field_l[param0 >> 14] >> 5;
         }
-        return lj.field_l[param0 >> 16] >> 4;
+        return PowerUpWarning.field_l[param0 >> 16] >> 4;
     }
 
     public static void a(boolean param0) {

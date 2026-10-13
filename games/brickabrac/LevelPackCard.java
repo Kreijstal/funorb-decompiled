@@ -169,7 +169,7 @@ final class LevelPackCard {
         int var2 = 0;
         int var2Lifetime1;
         if (obfuscationGuard > 89) {
-          var2 = InteractiveGameClient.a(100 * (-this.focusStartTick + MembershipBenefitsScreen.clientTick), -4097) + 65536 >> 12;
+          var2 = InteractiveGameClient.sine8192(100 * (-this.focusStartTick + MembershipBenefitsScreen.clientTick), -4097) + 65536 >> 12;
           Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2 : 0) + 32);
           Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
           this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);
@@ -177,7 +177,7 @@ final class LevelPackCard {
           return;
         }
         this.viewport = (MenuButton) null;
-        var2Lifetime1 = InteractiveGameClient.a(100 * (-this.focusStartTick + MembershipBenefitsScreen.clientTick), -4097) + 65536 >> 12;
+        var2Lifetime1 = InteractiveGameClient.sine8192(100 * (-this.focusStartTick + MembershipBenefitsScreen.clientTick), -4097) + 65536 >> 12;
         Rasterizer2D.a(this.viewport.x - 2, -2 + this.viewport.y, 4 + this.viewport.width, this.viewport.height + 4, 20, 16777215, (this.focused ? var2Lifetime1 : 0) + 32);
         Rasterizer2D.b(this.viewport.x, this.viewport.y, this.viewport.width, this.viewport.height, 20, 0);
         this.icon.drawTransparent(this.viewport.x + 30, this.viewport.y + 20);

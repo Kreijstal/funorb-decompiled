@@ -793,7 +793,7 @@ final class ka extends IntrusiveNode {
                   var26Lifetime1 = param5.field_i[var23Lifetime2];
                   vd.field_b[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var26Lifetime1 * var18) >> 16);
                   NewAchievementsScreen.field_I[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var13 * var24Lifetime1 + var16 * var25Lifetime1 >> 16);
-                  il.field_D[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
+                  BubbleDistortion.field_D[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var17 * var25Lifetime1) - var26Lifetime1 * var20) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
                     return;

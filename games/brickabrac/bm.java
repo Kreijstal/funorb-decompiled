@@ -46,7 +46,7 @@ final class bm {
         try {
           var5_int = ed.b(9, 3 * (-param1 + param2));
           var6 = param1 * 3;
-          lj.a(0);
+          PowerUpWarning.a(0);
           var7 = var5_int - 10;
           if (param4.field_A > 0 &&
             null != param4.field_p) {

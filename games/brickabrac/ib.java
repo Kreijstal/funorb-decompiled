@@ -386,7 +386,7 @@ class ib extends oc implements sd {
         if (param3 > 0 &&
           param3 <= 5) {
           var9_int = 2048 * param3 / 5;
-          var7 = 295 + (3 * InteractiveGameClient.a(var9_int, -4097) >> 16);
+          var7 = 295 + (3 * InteractiveGameClient.sine8192(var9_int, -4097) >> 16);
           var8 = -(3 * BrickABrac.c(2048, var9_int) >> 16) + 8;
         }
         if (param1) {
@@ -403,7 +403,7 @@ class ib extends oc implements sd {
           param3 <= 5) {
           var9_intLifetime1 = param3 * 2048 / 5;
           var7 = 295 + (3 * BrickABrac.c(2048, var9_intLifetime1) >> 16);
-          var8 = (InteractiveGameClient.a(var9_intLifetime1, -4097) * 3 >> 16) + 421;
+          var8 = (InteractiveGameClient.sine8192(var9_intLifetime1, -4097) * 3 >> 16) + 421;
         }
         param3 -= 5;
         if (0 < param3 &&
@@ -415,7 +415,7 @@ class ib extends oc implements sd {
         if (0 < param3 &&
           param3 <= 5) {
           var9_intLifetime2 = param3 * 2048 / 5;
-          var7 = -(3 * InteractiveGameClient.a(var9_intLifetime2, -4097) >> 16) + 11;
+          var7 = -(3 * InteractiveGameClient.sine8192(var9_intLifetime2, -4097) >> 16) + 11;
           var8 = 421 + (BrickABrac.c(2048, var9_intLifetime2) * 3 >> 16);
         }
         param3 -= 5;
@@ -428,7 +428,7 @@ class ib extends oc implements sd {
         if (param3 > 0) {
           var9_intLifetime3 = 2048 * param3 / 5;
           var7 = 11 - (3 * BrickABrac.c(2048, var9_intLifetime3) >> 16);
-          var8 = 8 - (InteractiveGameClient.a(var9_intLifetime3, -4097) * 3 >> 16);
+          var8 = 8 - (InteractiveGameClient.sine8192(var9_intLifetime3, -4097) * 3 >> 16);
         }
         var9 = tf.field_g[param0];
         param6 = param6 + (-(var9.canvasWidth / 2) + var7);
