@@ -13,7 +13,7 @@ final class ScorePopup extends IntrusiveNode {
     static RgbSprite[] characterHeads;
     int remainingTicks;
 
-    final static void a(int param0) {
+    final static void initializeMeshLighting(int obfuscationGuard) {
         int var1_int = 0;
         int var2 = 0;
         double var3 = 0.0;
@@ -24,25 +24,25 @@ final class ScorePopup extends IntrusiveNode {
         int var1_intLifetime1;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          mg.c();
+          MeshRasterState.syncRasterClip();
           LevelPackCard.projectionShift = 11;
-          ClientException.field_a = new int[260];
-          var2 = -120 / ((param0 - 32) / 49);
+          ClientException.meshHighlightTable = new int[260];
+          var2 = -120 / ((obfuscationGuard - 32) / 49);
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var3 = 15.0;
-            ClientException.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var3) * 255.0);
+            ClientException.meshHighlightTable[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var3) * 255.0);
           }
           var6 = 256;
           var1_intLifetime1 = var6;
-          while (ClientException.field_a.length > var6) {
-            ClientException.field_a[var6] = 255;
+          while (ClientException.meshHighlightTable.length > var6) {
+            ClientException.meshHighlightTable[var6] = 255;
             var6++;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ul.D(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ul.D(" + obfuscationGuard + ')');
         }
     }
 
@@ -59,7 +59,7 @@ final class ScorePopup extends IntrusiveNode {
 
     final static RgbSprite[] a(int param0, int param1, byte param2, int param3) {
         if (param2 <= 34) {
-          ScorePopup.a(19);
+          ScorePopup.initializeMeshLighting(19);
         }
         return hj.a(1, (byte) -110, param1, param3, param0);
     }

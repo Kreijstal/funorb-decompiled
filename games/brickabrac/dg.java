@@ -112,7 +112,7 @@ final class dg implements ub {
           var5 = (-MatchResultScreen.field_t + 250 << 8) / 50;
         }
         IndexedSpriteGeometry.pushSpriteRaster(-90, me.field_b);
-        mg.c();
+        MeshRasterState.syncRasterClip();
         if (!param0) {
           Rasterizer2D.clear();
           jl.b(-120);

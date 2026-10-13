@@ -233,15 +233,15 @@ abstract class MovingBody extends IntrusiveNode {
         var42 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param15 >= 0 &&
-            param2 < mg.field_b) {
+            param2 < MeshRasterState.viewportHeight) {
             if (0 > param7 &&
               0 > param4 &&
               param1 < 0) {
               return;
             }
-            if (mg.field_e <= param7 &&
-              param4 >= mg.field_e &&
-              mg.field_e <= param1) {
+            if (MeshRasterState.viewportWidth <= param7 &&
+              param4 >= MeshRasterState.viewportWidth &&
+              MeshRasterState.viewportWidth <= param1) {
               return;
             }
             if (param3 != -111) {
@@ -378,32 +378,32 @@ abstract class MovingBody extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = mg.field_g[param2];
+                var36Lifetime2 = MeshRasterState.rowOffsets[param2];
                 while (param2 < param14) {
                   var37 = var17_int >> 16;
-                  if (mg.field_e > var37) {
+                  if (MeshRasterState.viewportWidth > var37) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (0 == var38) {
                       if (var37 >= 0 &&
-                        var37 < mg.field_e) {
-                        MainMenuScreen.a((byte) 127, var29, 0, 0, 0, var36Lifetime2 + var37, var38, var21, param9, var25);
+                        var37 < MeshRasterState.viewportWidth) {
+                        MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) 127, var29, 0, 0, 0, var36Lifetime2 + var37, var38, var21, param9, var25);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (mg.field_e <= var38 + var37) {
-                        var38 = -1 + (-var37 + mg.field_e);
+                      if (MeshRasterState.viewportWidth <= var38 + var37) {
+                        var38 = -1 + (-var37 + MeshRasterState.viewportWidth);
                       }
                       if (var37 < 0) {
-                        MainMenuScreen.a((byte) 121, var29 - var41 * var37, var41, var39, var40, var36Lifetime2, var38 + var37, var21 - var37 * var39, param9, -(var40 * var37) + var25);
+                        MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) 121, var29 - var41 * var37, var41, var39, var40, var36Lifetime2, var38 + var37, var21 - var37 * var39, param9, -(var40 * var37) + var25);
                       } else {
-                        MainMenuScreen.a((byte) 117, var29, var41, var39, var40, var36Lifetime2 + var37, var38, var21, param9, var25);
+                        MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) 117, var29, var41, var39, var40, var36Lifetime2 + var37, var38, var21, param9, var25);
                       }
                     }
                   }
                   param2++;
-                  if (mg.field_b <= param2) {
+                  if (MeshRasterState.viewportHeight <= param2) {
                     return;
                   }
                   var22 = var22 + var24;
@@ -465,32 +465,32 @@ abstract class MovingBody extends IntrusiveNode {
               var18 = var18 + param2 * var20;
               param2 = 0;
             }
-            var35Lifetime1 = mg.field_g[param2];
+            var35Lifetime1 = MeshRasterState.rowOffsets[param2];
             while (param15 > param2) {
               var36Lifetime1 = var17_int >> 16;
-              if (mg.field_e > var36Lifetime1) {
+              if (MeshRasterState.viewportWidth > var36Lifetime1) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
-                    mg.field_e > var36Lifetime1) {
-                    MainMenuScreen.a((byte) 127, var29, 0, 0, 0, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var21, param9, var25);
+                    MeshRasterState.viewportWidth > var36Lifetime1) {
+                    MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) 127, var29, 0, 0, 0, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var21, param9, var25);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
                   var39Lifetime1 = (var26 - var25) / var37Lifetime1;
                   var40Lifetime1 = (-var29 + var30) / var37Lifetime1;
-                  if (var36Lifetime1 + var37Lifetime1 >= mg.field_e) {
-                    var37Lifetime1 = mg.field_e - (var36Lifetime1 + 1);
+                  if (var36Lifetime1 + var37Lifetime1 >= MeshRasterState.viewportWidth) {
+                    var37Lifetime1 = MeshRasterState.viewportWidth - (var36Lifetime1 + 1);
                   }
                   if (0 <= var36Lifetime1) {
-                    MainMenuScreen.a((byte) 125, var29, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var21, param9, var25);
+                    MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) 125, var29, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var21, param9, var25);
                   } else {
-                    MainMenuScreen.a((byte) 117, var29 - var40Lifetime1 * var36Lifetime1, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, param9, var25 - var36Lifetime1 * var39Lifetime1);
+                    MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) 117, var29 - var40Lifetime1 * var36Lifetime1, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, param9, var25 - var36Lifetime1 * var39Lifetime1);
                   }
                 }
               }
               param2++;
-              if (mg.field_b <= param2) {
+              if (MeshRasterState.viewportHeight <= param2) {
                 return;
               }
               var17_int = var17_int + var19;

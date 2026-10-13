@@ -107,7 +107,7 @@ final class jl {
               MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.logoOriginalCenters[var15][var18];
             }
             MusicVoice.transformAndProjectMesh(kk.field_e, -16283, MatchResultScreen.field_w, false, true, var17, false);
-            mp.a(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);
+            mp.shadeAndDrawMesh(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

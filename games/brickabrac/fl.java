@@ -25,7 +25,7 @@ final class fl extends k {
           var1 = new RgbSprite(540, 140);
           int var2 = 5 / ((16 - param0) / 50);
           IndexedSpriteGeometry.pushSpriteRaster(-89, var1);
-          mg.c();
+          MeshRasterState.syncRasterClip();
           Rasterizer2D.clear();
           MatchResultScreen.field_t = 0;
           jl.b(-115);

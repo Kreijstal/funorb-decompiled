@@ -171,7 +171,7 @@ final class bm {
           var2 = new BitPacketBuffer(archive.takeFileByName(-72, "logo.fo3d", ""));
           var3 = var2.readUnsignedByte(obfuscationGuard + 325);
           var2.beginBitRead(obfuscationGuard - 47);
-          um.field_o = rk.decodeMeshAttributeRecords(var2, 24);
+          um.meshAttributeRecords = rk.decodeMeshAttributeRecords(var2, 24);
           gg.logoMeshes = new Mesh3D[var3];
           BoundedFile.logoOriginalCenters = new int[var3][];
           if (obfuscationGuard != -70) {

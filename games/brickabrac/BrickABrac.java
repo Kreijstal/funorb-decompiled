@@ -746,7 +746,7 @@ public final class BrickABrac extends InteractiveGameClient {
         CacheIoWorker.b(26679);
         co.b(-70);
         um.a(31292);
-        mg.b();
+        MeshRasterState.releaseTables();
         VorbisSample.releaseScratch();
         MeshAttributeRecord.a(-9669);
         Mesh3D.b((byte) -52);

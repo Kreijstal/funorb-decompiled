@@ -10,7 +10,7 @@ final class Mesh3D {
     int minY;
     short faceCount;
     int[] facePointTwoX;
-    short[] field_L;
+    short[] faceMaterialIds;
     short[] vertexZ;
     int[] facePointThreeZ;
     short[] directionY;
@@ -18,7 +18,7 @@ final class Mesh3D {
     short[] field_z;
     int[] facePointOneZ;
     short[] field_K;
-    short[] field_v;
+    short[] faceDirectionA;
     int[] facePointTwoZ;
     short directionCount;
     short[] field_J;
@@ -29,7 +29,7 @@ final class Mesh3D {
     int[] facePointOneX;
     int minZ;
     int maxX;
-    short[] field_h;
+    short[] faceDirectionB;
     int[] facePointThreeX;
     int[] facePointOneY;
     short[] faceVertexC;
@@ -44,7 +44,7 @@ final class Mesh3D {
     short[] vertexX;
     static int[] field_l;
     static PcmSound[] field_e;
-    short[] field_t;
+    short[] faceDirectionC;
 
     final static boolean a(byte param0) {
         if (param0 <= 33) {

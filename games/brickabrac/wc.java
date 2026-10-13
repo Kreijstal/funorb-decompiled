@@ -8,46 +8,46 @@ final class wc {
     static String field_a;
     static String field_c;
 
-    final static void a(int[] param0, int param1, int param2, int param3, int param4) {
-        int[] var5 = null;
-        RuntimeException var5_ref = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int[] var9 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    final static void blendHalfRgbSpan(int[] target, int length, int halfRgb, int offset, int obfuscationGuard) {
+        int[] targetAlias = null;
+        RuntimeException failure = null;
+        int pixelIndex = 0;
+        int sourceHalfRgb = 0;
+        int unusedGameFlag = 0;
+        int[] targetStorage = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String targetSummary = null;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           while (true) {
-            param1--;
-            if (param1 < 0) {
-              if (param4 == -1) {
+            length--;
+            if (length < 0) {
+              if (obfuscationGuard == -1) {
                 return;
               }
               field_a = (String) null;
               return;
             }
-            var9 = param0;
-            var5 = var9;
-            var6 = param3;
-            var7 = param2;
-            var9[var6] = var7 + (ik.a(var9[var6], 16711422) >> 1);
-            param3++;
+            targetStorage = target;
+            targetAlias = targetStorage;
+            pixelIndex = offset;
+            sourceHalfRgb = halfRgb;
+            targetStorage[pixelIndex] = sourceHalfRgb + (ik.a(targetStorage[pixelIndex], 16711422) >> 1);
+            offset++;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_8_0 = var5_ref;
-          stackIn_8_1 = new StringBuilder().append("wc.C(");
-          if (param0 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("wc.C(");
+          if (target == null) {
+            targetSummary = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            targetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(targetSummary).append(',').append(length).append(',').append(halfRgb).append(',').append(offset).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

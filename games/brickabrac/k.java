@@ -90,219 +90,219 @@ abstract class k extends pj implements hf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8) {
-        RuntimeException stackIn_94_0 = null;
-        StringBuilder stackIn_94_1 = null;
-        String stackIn_95_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var9_int = 0;
-        RuntimeException var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var15Lifetime1;
-        int var16Lifetime1;
-        int var17Lifetime1;
-        int var16Lifetime2;
-        int var16Lifetime3;
-        int var17Lifetime2;
-        var19 = BrickABrac.field_J ? 1 : 0;
+    final static void rasterFlatMeshTriangle(int xMiddle, int xBottom, int yTop, int[] target, int yBottom, int yMiddle, int halfRgb, int xTop, int obfuscationGuard) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String targetSummary = null;
+        RuntimeException caughtFailure = null;
+        int leftXQ16 = 0;
+        RuntimeException failure = null;
+        int rightXQ16 = 0;
+        int leftStepQ16 = 0;
+        int rightStepQ16 = 0;
+        int shortEdgeOnRight = 0;
+        int totalHeight = 0;
+        int upperHeight = 0;
+        int swappedSlope = 0;
+        int upperLeftX = 0;
+        int upperSpanLength = 0;
+        int unusedGameFlag = 0;
+        int lowerRowOffset;
+        int lowerLeftX;
+        int lowerSpanLength;
+        int upperRowOffset;
+        int lowerHeight;
+        int bottomXQ16;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param4 >= 0 &&
-            mg.field_b > param2) {
-            if (param7 < param8 &&
-              param0 < 0 &&
-              param1 < 0) {
+          if (yBottom >= 0 &&
+            MeshRasterState.viewportHeight > yTop) {
+            if (xTop < obfuscationGuard &&
+              xMiddle < 0 &&
+              xBottom < 0) {
               return;
             }
-            if (mg.field_e <= param7 &&
-              param0 >= mg.field_e &&
-              param1 >= mg.field_e) {
+            if (MeshRasterState.viewportWidth <= xTop &&
+              xMiddle >= MeshRasterState.viewportWidth &&
+              xBottom >= MeshRasterState.viewportWidth) {
               return;
             }
-            var14 = -param2 + param4;
-            if (param5 == param2) {
-              if (param4 == param2) {
-                var9_int = param7 << 16;
-                var11 = 0;
-                var10 = param0 << 16;
-                var12 = 0;
+            totalHeight = -yTop + yBottom;
+            if (yMiddle == yTop) {
+              if (yBottom == yTop) {
+                leftXQ16 = xTop << 16;
+                leftStepQ16 = 0;
+                rightXQ16 = xMiddle << 16;
+                rightStepQ16 = 0;
               } else {
-                var15 = -param5 + param4;
-                if (param0 > param7) {
-                  var10 = param0 << 16;
-                  var11 = (-param7 + param1 << 16) / var14;
-                  var12 = (param1 - param0 << 16) / var15;
-                  var9_int = param7 << 16;
+                upperHeight = -yMiddle + yBottom;
+                if (xMiddle > xTop) {
+                  rightXQ16 = xMiddle << 16;
+                  leftStepQ16 = (-xTop + xBottom << 16) / totalHeight;
+                  rightStepQ16 = (xBottom - xMiddle << 16) / upperHeight;
+                  leftXQ16 = xTop << 16;
                 } else {
-                  var9_int = param0 << 16;
-                  var10 = param7 << 16;
-                  var12 = (param1 - param7 << 16) / var14;
-                  var11 = (-param0 + param1 << 16) / var15;
+                  leftXQ16 = xMiddle << 16;
+                  rightXQ16 = xTop << 16;
+                  rightStepQ16 = (xBottom - xTop << 16) / totalHeight;
+                  leftStepQ16 = (-xMiddle + xBottom << 16) / upperHeight;
                 }
               }
-              if (param2 < 0) {
-                param2 = Math.min(-param2, -param2 + param5);
-                var10 = var10 + param2 * var12;
-                var9_int = var9_int + var11 * param2;
-                param2 = 0;
+              if (yTop < 0) {
+                yTop = Math.min(-yTop, -yTop + yMiddle);
+                rightXQ16 = rightXQ16 + yTop * rightStepQ16;
+                leftXQ16 = leftXQ16 + leftStepQ16 * yTop;
+                yTop = 0;
               }
-              var13 = 0;
+              shortEdgeOnRight = 0;
             } else {
-              var10 = param7 << 16;
-              var9_int = param7 << 16;
-              var15 = -param2 + param5;
-              var11 = (param0 - param7 << 16) / var15;
-              var12 = (-param7 + param1 << 16) / var14;
-              if (var11 >= var12) {
-                var16 = var11;
-                var11 = var12;
-                var12 = var16;
-                var13 = 1;
+              rightXQ16 = xTop << 16;
+              leftXQ16 = xTop << 16;
+              upperHeight = -yTop + yMiddle;
+              leftStepQ16 = (xMiddle - xTop << 16) / upperHeight;
+              rightStepQ16 = (-xTop + xBottom << 16) / totalHeight;
+              if (leftStepQ16 >= rightStepQ16) {
+                swappedSlope = leftStepQ16;
+                leftStepQ16 = rightStepQ16;
+                rightStepQ16 = swappedSlope;
+                shortEdgeOnRight = 1;
               } else {
-                var13 = 0;
+                shortEdgeOnRight = 0;
               }
-              if (0 <= param2) {
-                var16Lifetime2 = mg.field_g[param2];
-                while (param5 > param2) {
-                  var17 = var9_int >> 16;
-                  if (mg.field_e > var17) {
-                    var18 = -(var9_int >> 16) + (var10 >> 16);
-                    if (var18 == 0) {
-                      if (var17 >= 0 &&
-                        mg.field_e > var17) {
-                        wc.a(param3, var18, param6, var16Lifetime2 + var17, -1);
+              if (0 <= yTop) {
+                upperRowOffset = MeshRasterState.rowOffsets[yTop];
+                while (yMiddle > yTop) {
+                  upperLeftX = leftXQ16 >> 16;
+                  if (MeshRasterState.viewportWidth > upperLeftX) {
+                    upperSpanLength = -(leftXQ16 >> 16) + (rightXQ16 >> 16);
+                    if (upperSpanLength == 0) {
+                      if (upperLeftX >= 0 &&
+                        MeshRasterState.viewportWidth > upperLeftX) {
+                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperRowOffset + upperLeftX, -1);
                       }
                     } else {
-                      if (mg.field_e <= var17 + var18) {
-                        var18 = -1 - var17 + mg.field_e;
+                      if (MeshRasterState.viewportWidth <= upperLeftX + upperSpanLength) {
+                        upperSpanLength = -1 - upperLeftX + MeshRasterState.viewportWidth;
                       }
-                      if (var17 < 0) {
-                        wc.a(param3, var17 + var18, param6, var16Lifetime2, -1);
+                      if (upperLeftX < 0) {
+                        wc.blendHalfRgbSpan(target, upperLeftX + upperSpanLength, halfRgb, upperRowOffset, -1);
                       } else {
-                        wc.a(param3, var18, param6, var17 + var16Lifetime2, ~param8);
+                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperLeftX + upperRowOffset, ~obfuscationGuard);
                       }
                     }
                   }
-                  param2++;
-                  if (param2 >= mg.field_b) {
+                  yTop++;
+                  if (yTop >= MeshRasterState.viewportHeight) {
                     return;
                   }
-                  var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + Rasterizer2D.width;
-                  var10 = var10 + var12;
+                  leftXQ16 = leftXQ16 + leftStepQ16;
+                  upperRowOffset = upperRowOffset + Rasterizer2D.width;
+                  rightXQ16 = rightXQ16 + rightStepQ16;
                 }
-              } else if (param5 >= 0) {
-                param2 = -param2;
-                var10 = var10 + var12 * param2;
-                var9_int = var9_int + param2 * var11;
-                param2 = 0;
-                var16Lifetime2 = mg.field_g[param2];
-                while (param5 > param2) {
-                  var17 = var9_int >> 16;
-                  if (mg.field_e > var17) {
-                    var18 = -(var9_int >> 16) + (var10 >> 16);
-                    if (var18 == 0) {
-                      if (var17 >= 0 &&
-                        mg.field_e > var17) {
-                        wc.a(param3, var18, param6, var16Lifetime2 + var17, -1);
+              } else if (yMiddle >= 0) {
+                yTop = -yTop;
+                rightXQ16 = rightXQ16 + rightStepQ16 * yTop;
+                leftXQ16 = leftXQ16 + yTop * leftStepQ16;
+                yTop = 0;
+                upperRowOffset = MeshRasterState.rowOffsets[yTop];
+                while (yMiddle > yTop) {
+                  upperLeftX = leftXQ16 >> 16;
+                  if (MeshRasterState.viewportWidth > upperLeftX) {
+                    upperSpanLength = -(leftXQ16 >> 16) + (rightXQ16 >> 16);
+                    if (upperSpanLength == 0) {
+                      if (upperLeftX >= 0 &&
+                        MeshRasterState.viewportWidth > upperLeftX) {
+                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperRowOffset + upperLeftX, -1);
                       }
                     } else {
-                      if (mg.field_e <= var17 + var18) {
-                        var18 = -1 - var17 + mg.field_e;
+                      if (MeshRasterState.viewportWidth <= upperLeftX + upperSpanLength) {
+                        upperSpanLength = -1 - upperLeftX + MeshRasterState.viewportWidth;
                       }
-                      if (var17 < 0) {
-                        wc.a(param3, var17 + var18, param6, var16Lifetime2, -1);
+                      if (upperLeftX < 0) {
+                        wc.blendHalfRgbSpan(target, upperLeftX + upperSpanLength, halfRgb, upperRowOffset, -1);
                       } else {
-                        wc.a(param3, var18, param6, var17 + var16Lifetime2, ~param8);
+                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperLeftX + upperRowOffset, ~obfuscationGuard);
                       }
                     }
                   }
-                  param2++;
-                  if (param2 >= mg.field_b) {
+                  yTop++;
+                  if (yTop >= MeshRasterState.viewportHeight) {
                     return;
                   }
-                  var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + Rasterizer2D.width;
-                  var10 = var10 + var12;
+                  leftXQ16 = leftXQ16 + leftStepQ16;
+                  upperRowOffset = upperRowOffset + Rasterizer2D.width;
+                  rightXQ16 = rightXQ16 + rightStepQ16;
                 }
               } else {
-                param2 = param5 - param2;
-                var9_int = var9_int + param2 * var11;
-                var10 = var10 + var12 * param2;
-                param2 = param5;
+                yTop = yMiddle - yTop;
+                leftXQ16 = leftXQ16 + yTop * leftStepQ16;
+                rightXQ16 = rightXQ16 + rightStepQ16 * yTop;
+                yTop = yMiddle;
               }
-              var16Lifetime3 = param4 - param5;
-              if (var16Lifetime3 != 0) {
-                var17Lifetime2 = param1 << 16;
-                if (var13 == 0) {
-                  var9_int = param0 << 16;
+              lowerHeight = yBottom - yMiddle;
+              if (lowerHeight != 0) {
+                bottomXQ16 = xBottom << 16;
+                if (shortEdgeOnRight == 0) {
+                  leftXQ16 = xMiddle << 16;
                 } else {
-                  var10 = param0 << 16;
+                  rightXQ16 = xMiddle << 16;
                 }
-                var12 = (-var10 + var17Lifetime2) / var16Lifetime3;
-                var11 = (var17Lifetime2 - var9_int) / var16Lifetime3;
+                rightStepQ16 = (-rightXQ16 + bottomXQ16) / lowerHeight;
+                leftStepQ16 = (bottomXQ16 - leftXQ16) / lowerHeight;
               } else {
-                var12 = 0;
-                var11 = 0;
+                rightStepQ16 = 0;
+                leftStepQ16 = 0;
               }
             }
-            if (param2 < 0) {
-              param2 = -param2;
-              var9_int = var9_int + var11 * param2;
-              var10 = var10 + param2 * var12;
-              param2 = 0;
+            if (yTop < 0) {
+              yTop = -yTop;
+              leftXQ16 = leftXQ16 + leftStepQ16 * yTop;
+              rightXQ16 = rightXQ16 + yTop * rightStepQ16;
+              yTop = 0;
             }
-            var15Lifetime1 = mg.field_g[param2];
-            while (param2 < param4) {
-              var16Lifetime1 = var9_int >> 16;
-              if (mg.field_e > var16Lifetime1) {
-                var17Lifetime1 = (var10 >> 16) - (var9_int >> 16);
-                if (var17Lifetime1 == 0) {
-                  if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < mg.field_e) {
-                    wc.a(param3, var17Lifetime1, param6, var16Lifetime1 + var15Lifetime1, -1);
+            lowerRowOffset = MeshRasterState.rowOffsets[yTop];
+            while (yTop < yBottom) {
+              lowerLeftX = leftXQ16 >> 16;
+              if (MeshRasterState.viewportWidth > lowerLeftX) {
+                lowerSpanLength = (rightXQ16 >> 16) - (leftXQ16 >> 16);
+                if (lowerSpanLength == 0) {
+                  if (lowerLeftX >= 0 &&
+                    lowerLeftX < MeshRasterState.viewportWidth) {
+                    wc.blendHalfRgbSpan(target, lowerSpanLength, halfRgb, lowerLeftX + lowerRowOffset, -1);
                   }
                 } else {
-                  if (mg.field_e <= var16Lifetime1 + var17Lifetime1) {
-                    var17Lifetime1 = -1 + mg.field_e - var16Lifetime1;
+                  if (MeshRasterState.viewportWidth <= lowerLeftX + lowerSpanLength) {
+                    lowerSpanLength = -1 + MeshRasterState.viewportWidth - lowerLeftX;
                   }
-                  if (var16Lifetime1 >= 0) {
-                    wc.a(param3, var17Lifetime1, param6, var16Lifetime1 + var15Lifetime1, -1);
+                  if (lowerLeftX >= 0) {
+                    wc.blendHalfRgbSpan(target, lowerSpanLength, halfRgb, lowerLeftX + lowerRowOffset, -1);
                   } else {
-                    wc.a(param3, var17Lifetime1 + var16Lifetime1, param6, var15Lifetime1, -1);
+                    wc.blendHalfRgbSpan(target, lowerSpanLength + lowerLeftX, halfRgb, lowerRowOffset, -1);
                   }
                 }
               }
-              param2++;
-              if (param2 >= mg.field_b) {
+              yTop++;
+              if (yTop >= MeshRasterState.viewportHeight) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + Rasterizer2D.width;
-              var9_int = var9_int + var11;
-              var10 = var10 + var12;
+              lowerRowOffset = lowerRowOffset + Rasterizer2D.width;
+              leftXQ16 = leftXQ16 + leftStepQ16;
+              rightXQ16 = rightXQ16 + rightStepQ16;
             }
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9 = decompiledCaughtException;
-          stackIn_94_0 = var9;
-          stackIn_94_1 = new StringBuilder().append("k.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_95_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("k.S(").append(xMiddle).append(',').append(xBottom).append(',').append(yTop).append(',');
+          if (target == null) {
+            targetSummary = "null";
           } else {
-            stackIn_95_2 = "{...}";
+            targetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_94_0), ((StringBuilder) (Object) stackIn_94_1).append(stackIn_95_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(targetSummary).append(',').append(yBottom).append(',').append(yMiddle).append(',').append(halfRgb).append(',').append(xTop).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

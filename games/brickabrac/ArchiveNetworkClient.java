@@ -413,7 +413,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         field_t = null;
     }
 
-    final static void f(byte param0) {
+    final static void compactFaceBuckets(byte obfuscationGuard) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -423,8 +423,8 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           var1_int = ArcticBackground.faceDepthBucketCounts[0];
-          if (param0 != 94) {
-            ArchiveNetworkClient.f((byte) 52);
+          if (obfuscationGuard != 94) {
+            ArchiveNetworkClient.compactFaceBuckets((byte) 52);
           }
           for (var2 = 1; ArcticBackground.faceDepthBucketCounts.length > var2; var2++) {
             var3 = ArcticBackground.faceDepthBucketCounts[var2];
@@ -435,7 +435,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "a.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "a.F(" + obfuscationGuard + ')');
         }
     }
 

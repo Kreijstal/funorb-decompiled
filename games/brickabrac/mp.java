@@ -16,202 +16,202 @@ final class mp extends mh {
     static RgbSprite field_Zb;
     mh field_Yb;
 
-    final static void a(int param0, int param1, int param2, int param3, Mesh3D param4, byte param5, int param6, int param7) {
-        int stackIn_17_0 = 0;
-        int[] stackIn_19_0 = null;
-        int stackIn_20_1 = 0;
-        int stackIn_26_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_32_0 = 0;
-        MeshAttributeRecord stackIn_39_0 = null;
-        int stackIn_45_0 = 0;
-        int stackIn_49_0 = 0;
-        RuntimeException stackIn_54_0 = null;
-        StringBuilder stackIn_54_1 = null;
-        String stackIn_55_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] var8 = null;
-        RuntimeException var8_ref = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        MeshAttributeRecord var21 = null;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        int var27 = 0;
-        int var28 = 0;
-        int var29 = 0;
-        int var30 = 0;
-        int var31 = 0;
-        int var32 = 0;
-        int var33 = 0;
-        int var34 = 0;
-        int var35 = 0;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int[] var41 = null;
-        Mesh3D var44 = null;
-        int[] var49 = null;
-        int[] var54 = null;
-        byte[] var60 = null;
-        int[] var61 = null;
-        int[] var62 = null;
-        int[] var63 = null;
-        int[] var64 = null;
-        int var13Lifetime1;
-        int var14Lifetime1;
-        int var15Lifetime1;
-        int var14Lifetime2;
-        int var15Lifetime2;
-        var40 = BrickABrac.field_J ? 1 : 0;
+    final static void shadeAndDrawMesh(int highlightZ, int diffuseX, int highlightX, int diffuseZ, Mesh3D mesh, byte obfuscationGuard, int highlightY, int diffuseY) {
+        int diffuseResponse = 0;
+        int[] highlightTable = null;
+        int absoluteHighlightDot = 0;
+        int directionAValue = 0;
+        int directionBValue = 0;
+        int directionCValue = 0;
+        MeshAttributeRecord materialValue = null;
+        int interpolatedBaseRgb = 0;
+        int flatBaseRgb = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String meshSummary = null;
+        RuntimeException caughtFailure = null;
+        int[] diffuseAlias = null;
+        RuntimeException failure = null;
+        int direction = 0;
+        int diffuseDot = 0;
+        int highlightDot = 0;
+        int vertexB = 0;
+        int vertexC = 0;
+        int directionA = 0;
+        int directionB = 0;
+        int directionC = 0;
+        MeshAttributeRecord material = null;
+        int xA = 0;
+        int yA = 0;
+        int xB = 0;
+        int yB = 0;
+        int xC = 0;
+        int yC = 0;
+        int gainA = 0;
+        int highlightAOrGainB = 0;
+        int baseRgbOrGainC = 0;
+        int redBlueOrHighlightA = 0;
+        int greenOrHighlightB = 0;
+        int flatRgbOrHighlightC = 0;
+        int baseRgb = 0;
+        int baseRedBlue = 0;
+        int baseGreen = 0;
+        int rgbA = 0;
+        int rgbB = 0;
+        int rgbC = 0;
+        int unusedGameFlag = 0;
+        int[] diffuseStorage = null;
+        Mesh3D meshAlias = null;
+        int[] diffuseValues = null;
+        int[] diffuseGains = null;
+        byte[] faceGroups = null;
+        int[] directionZ = null;
+        int[] directionY = null;
+        int[] directionX = null;
+        int[] highlights = null;
+        int sortedFace;
+        int face;
+        int vertexA;
+        int diffuseGain;
+        int highlight;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var44 = param4;
-          if (param5 != -105) {
+          meshAlias = mesh;
+          if (obfuscationGuard != -105) {
             return;
           }
-          if (null != var44.faceGroups &&
-            var44.faceGroupCount > 1) {
-            var60 = var44.faceGroups;
-            h.a(0, 0, (byte) 114, var60, AppletGameShell.faceGroupOffsets);
+          if (null != meshAlias.faceGroups &&
+            meshAlias.faceGroupCount > 1) {
+            faceGroups = meshAlias.faceGroups;
+            h.orderFacesByGroup(0, 0, (byte) 114, faceGroups, AppletGameShell.faceGroupOffsets);
           } else {
-            ArchiveNetworkClient.f((byte) 94);
+            ArchiveNetworkClient.compactFaceBuckets((byte) 94);
           }
-          var54 = new int[param4.directionCount];
-          var49 = var54;
-          var41 = var49;
-          var8 = var41;
-          var64 = new int[param4.directionCount];
-          var63 = wl.worldDirectionX;
-          var62 = ff.worldDirectionY;
-          var61 = nn.worldDirectionZ;
-          for (var13 = 0; param4.directionCount > var13; var13++) {
-            var14 = var61[var13] * param3 + param7 * var62[var13] + var63[var13] * param1 >> 8;
-            if (0 > var14) {
-              var14 = -var14;
+          diffuseGains = new int[mesh.directionCount];
+          diffuseValues = diffuseGains;
+          diffuseStorage = diffuseValues;
+          diffuseAlias = diffuseStorage;
+          highlights = new int[mesh.directionCount];
+          directionX = wl.worldDirectionX;
+          directionY = ff.worldDirectionY;
+          directionZ = nn.worldDirectionZ;
+          for (direction = 0; mesh.directionCount > direction; direction++) {
+            diffuseDot = directionZ[direction] * diffuseZ + diffuseY * directionY[direction] + directionX[direction] * diffuseX >> 8;
+            if (0 > diffuseDot) {
+              diffuseDot = -diffuseDot;
             }
-            if (0 <= var14) {
-              if (var14 < 128) {
-                stackIn_17_0 = 128 + var14;
+            if (0 <= diffuseDot) {
+              if (diffuseDot < 128) {
+                diffuseResponse = 128 + diffuseDot;
               } else {
-                stackIn_17_0 = 256;
+                diffuseResponse = 256;
               }
             } else {
-              stackIn_17_0 = 128;
+              diffuseResponse = 128;
             }
-            var14Lifetime2 = stackIn_17_0;
-            var15 = var61[var13] * param0 + (var62[var13] * param6 + var63[var13] * param2) >> 8;
-            stackIn_19_0 = ClientException.field_a;
-            if (var15 >= 0) {
-              stackIn_20_1 = var15;
+            diffuseGain = diffuseResponse;
+            highlightDot = directionZ[direction] * highlightZ + (directionY[direction] * highlightY + directionX[direction] * highlightX) >> 8;
+            highlightTable = ClientException.meshHighlightTable;
+            if (highlightDot >= 0) {
+              absoluteHighlightDot = highlightDot;
             } else {
-              stackIn_20_1 = -var15;
+              absoluteHighlightDot = -highlightDot;
             }
-            var15Lifetime2 = stackIn_19_0[stackIn_20_1];
-            var14Lifetime2 = var14Lifetime2 * (-var15Lifetime2 + 256) >>> 8;
-            var54[var13] = var14Lifetime2;
-            var64[var13] = var15Lifetime2;
+            highlight = highlightTable[absoluteHighlightDot];
+            diffuseGain = diffuseGain * (-highlight + 256) >>> 8;
+            diffuseGains[direction] = diffuseGain;
+            highlights[direction] = highlight;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < mc.sortedFaceCount; var13Lifetime1++) {
-            var14Lifetime1 = ek.sortedFaceIds[var13Lifetime1];
-            var15Lifetime1 = param4.faceVertexA[var14Lifetime1];
-            var16 = param4.faceVertexB[var14Lifetime1];
-            var17 = param4.faceVertexC[var14Lifetime1];
-            if (wl.worldDirectionX.length <= param4.field_v[var14Lifetime1]) {
-              stackIn_26_0 = -1;
+          for (sortedFace = 0; sortedFace < mc.sortedFaceCount; sortedFace++) {
+            face = ek.sortedFaceIds[sortedFace];
+            vertexA = mesh.faceVertexA[face];
+            vertexB = mesh.faceVertexB[face];
+            vertexC = mesh.faceVertexC[face];
+            if (wl.worldDirectionX.length <= mesh.faceDirectionA[face]) {
+              directionAValue = -1;
             } else {
-              stackIn_26_0 = param4.field_v[var14Lifetime1];
+              directionAValue = mesh.faceDirectionA[face];
             }
-            var18 = stackIn_26_0;
-            if (wl.worldDirectionX.length > param4.field_h[var14Lifetime1]) {
-              stackIn_29_0 = param4.field_h[var14Lifetime1];
+            directionA = directionAValue;
+            if (wl.worldDirectionX.length > mesh.faceDirectionB[face]) {
+              directionBValue = mesh.faceDirectionB[face];
             } else {
-              stackIn_29_0 = -1;
+              directionBValue = -1;
             }
-            var19 = stackIn_29_0;
-            if (wl.worldDirectionX.length <= param4.field_t[var14Lifetime1]) {
-              stackIn_32_0 = -1;
+            directionB = directionBValue;
+            if (wl.worldDirectionX.length <= mesh.faceDirectionC[face]) {
+              directionCValue = -1;
             } else {
-              stackIn_32_0 = param4.field_t[var14Lifetime1];
+              directionCValue = mesh.faceDirectionC[face];
             }
-            var20 = stackIn_32_0;
-            if (null != um.field_o &&
-              param4.field_L != null &&
-              var14Lifetime1 < param4.field_L.length &&
-              -1 != param4.field_L[var14Lifetime1] &&
-              param4.field_L[var14Lifetime1] < um.field_o.length) {
-              stackIn_39_0 = um.field_o[param4.field_L[var14Lifetime1]];
+            directionC = directionCValue;
+            if (null != um.meshAttributeRecords &&
+              mesh.faceMaterialIds != null &&
+              face < mesh.faceMaterialIds.length &&
+              -1 != mesh.faceMaterialIds[face] &&
+              mesh.faceMaterialIds[face] < um.meshAttributeRecords.length) {
+              materialValue = um.meshAttributeRecords[mesh.faceMaterialIds[face]];
             } else {
-              stackIn_39_0 = null;
+              materialValue = null;
             }
-            var21 = stackIn_39_0;
-            var22 = ArchiveNetworkRequest.projectedVertexX[var15Lifetime1];
-            var23 = ed.projectedVertexY[var15Lifetime1];
-            var24 = ArchiveNetworkRequest.projectedVertexX[var16];
-            var25 = ed.projectedVertexY[var16];
-            var26 = ArchiveNetworkRequest.projectedVertexX[var17];
-            var27 = ed.projectedVertexY[var17];
-            if (var19 == var18 &&
-              var19 == var20) {
-              var28 = var54[var18];
-              var29 = var64[var18];
-              if (var21 != null) {
-                stackIn_49_0 = var21.encodedWord24;
+            material = materialValue;
+            xA = ArchiveNetworkRequest.projectedVertexX[vertexA];
+            yA = ed.projectedVertexY[vertexA];
+            xB = ArchiveNetworkRequest.projectedVertexX[vertexB];
+            yB = ed.projectedVertexY[vertexB];
+            xC = ArchiveNetworkRequest.projectedVertexX[vertexC];
+            yC = ed.projectedVertexY[vertexC];
+            if (directionB == directionA &&
+              directionB == directionC) {
+              gainA = diffuseGains[directionA];
+              highlightAOrGainB = highlights[directionA];
+              if (material != null) {
+                flatBaseRgb = material.baseRgb;
               } else {
-                stackIn_49_0 = 8355711;
+                flatBaseRgb = 8355711;
               }
-              var30 = stackIn_49_0;
-              var31 = 16711935 & var30;
-              var32 = 65280 & var30;
-              var33 = (var28 * var31 & -16711791) >>> 8 | (var32 * var28 & 16711898) >>> 8;
-              var33 = var33 + var29 * 65793;
-              BackgroundScene.a(var33 >> 1 & 8355711, var23, var26, var22, var25, var27, var24, 116);
+              baseRgbOrGainC = flatBaseRgb;
+              redBlueOrHighlightA = 16711935 & baseRgbOrGainC;
+              greenOrHighlightB = 65280 & baseRgbOrGainC;
+              flatRgbOrHighlightC = (gainA * redBlueOrHighlightA & -16711791) >>> 8 | (greenOrHighlightB * gainA & 16711898) >>> 8;
+              flatRgbOrHighlightC = flatRgbOrHighlightC + highlightAOrGainB * 65793;
+              BackgroundScene.drawFlatMeshTriangle(flatRgbOrHighlightC >> 1 & 8355711, yA, xC, xA, yB, yC, xB, 116);
             } else {
-              var28 = var54[var18];
-              var29 = var54[var19];
-              var30 = var54[var20];
-              var31 = var64[var18];
-              var32 = var64[var19];
-              var33 = var64[var20];
-              if (var21 != null) {
-                stackIn_45_0 = var21.encodedWord24;
+              gainA = diffuseGains[directionA];
+              highlightAOrGainB = diffuseGains[directionB];
+              baseRgbOrGainC = diffuseGains[directionC];
+              redBlueOrHighlightA = highlights[directionA];
+              greenOrHighlightB = highlights[directionB];
+              flatRgbOrHighlightC = highlights[directionC];
+              if (material != null) {
+                interpolatedBaseRgb = material.baseRgb;
               } else {
-                stackIn_45_0 = 8355711;
+                interpolatedBaseRgb = 8355711;
               }
-              var34 = stackIn_45_0;
-              var35 = var34 & 16711935;
-              var36 = 65280 & var34;
-              var37 = (var36 * var28 & 16711775) >>> 8 | var35 * var28 >>> 8 & -1895890689;
-              var38 = (-16711863 & var29 * var35) >>> 8 | (var36 * var29 & 16711854) >>> 8;
-              var39 = (var35 * var30 & -16711923) >>> 8 | (16711836 & var30 * var36) >>> 8;
-              var38 = var38 + 65793 * var32;
-              var37 = var37 + 65793 * var31;
-              var39 = var39 + 65793 * var33;
-              tq.a(var39 & 255, 255 & var37 >> 8, var26, (65445 & var38) >> 8, var24, var38 >> 16, var27, var39 >> 8 & 255, var23, (byte) -55, var38 & 255, var22, 255 & var37, var39 >> 16, var25, var37 >> 16);
+              baseRgb = interpolatedBaseRgb;
+              baseRedBlue = baseRgb & 16711935;
+              baseGreen = 65280 & baseRgb;
+              rgbA = (baseGreen * gainA & 16711775) >>> 8 | baseRedBlue * gainA >>> 8 & -1895890689;
+              rgbB = (-16711863 & highlightAOrGainB * baseRedBlue) >>> 8 | (baseGreen * highlightAOrGainB & 16711854) >>> 8;
+              rgbC = (baseRedBlue * baseRgbOrGainC & -16711923) >>> 8 | (16711836 & baseRgbOrGainC * baseGreen) >>> 8;
+              rgbB = rgbB + 65793 * greenOrHighlightB;
+              rgbA = rgbA + 65793 * redBlueOrHighlightA;
+              rgbC = rgbC + 65793 * flatRgbOrHighlightC;
+              tq.drawInterpolatedMeshTriangle(rgbC & 255, 255 & rgbA >> 8, xC, (65445 & rgbB) >> 8, xB, rgbB >> 16, yC, rgbC >> 8 & 255, yA, (byte) -55, rgbB & 255, xA, 255 & rgbA, rgbC >> 16, yB, rgbA >> 16);
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref = decompiledCaughtException;
-          stackIn_54_0 = var8_ref;
-          stackIn_54_1 = new StringBuilder().append("mp.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_55_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("mp.A(").append(highlightZ).append(',').append(diffuseX).append(',').append(highlightX).append(',').append(diffuseZ).append(',');
+          if (mesh == null) {
+            meshSummary = "null";
           } else {
-            stackIn_55_2 = "{...}";
+            meshSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(meshSummary).append(',').append(obfuscationGuard).append(',').append(highlightY).append(',').append(diffuseY).append(')').toString());
         }
     }
 

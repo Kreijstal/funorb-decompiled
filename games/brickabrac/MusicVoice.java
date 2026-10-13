@@ -729,8 +729,8 @@ final class MusicVoice extends IntrusiveNode {
           cameraXOrWorldXX = cameraPose[4] * deltaY + deltaX * cameraPose[3] + deltaZ * cameraPose[5] >> -LevelPackCard.projectionShift + 16;
           cameraYOrWorldYX = deltaZ * cameraPose[8] + (cameraPose[7] * deltaY + deltaX * cameraPose[6]) >> -LevelPackCard.projectionShift + 16;
           cameraZOrWorldZX = cameraPose[11] * deltaZ + (deltaX * cameraPose[9] + deltaY * cameraPose[10]) >> 16;
-          centerXOrDirectionZ = mg.projectionCenterX;
-          centerY = mg.projectionCenterY;
+          centerXOrDirectionZ = MeshRasterState.projectionCenterX;
+          centerY = MeshRasterState.projectionCenterY;
           vertexOrFace = 0;
           scanLoop1: while (true) {
             if (mesh.vertexCount > vertexOrFace) {

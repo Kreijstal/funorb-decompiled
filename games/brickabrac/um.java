@@ -15,7 +15,7 @@ class um implements ub, qe {
     int field_r;
     int field_m;
     int field_i;
-    static MeshAttributeRecord[] field_o;
+    static MeshAttributeRecord[] meshAttributeRecords;
     private int field_g;
     static boolean field_e;
     int field_f;
@@ -1484,7 +1484,7 @@ class um implements ub, qe {
           field_b = (mh) null;
         }
         underwaterBackgroundColors = null;
-        field_o = null;
+        meshAttributeRecords = null;
         field_b = null;
         desertCentreSprites = null;
     }

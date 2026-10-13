@@ -274,7 +274,7 @@ final class rk extends mh {
               record = new MeshAttributeRecord();
               packet.readBits(24, (byte) -115);
               packet.readBits(24, (byte) 107);
-              record.encodedWord24 = packet.readBits(24, (byte) -86);
+              record.baseRgb = packet.readBits(24, (byte) -86);
               packet.readBits(9, (byte) 110);
               packet.readBits(12, (byte) -113);
               packet.readBits(12, (byte) -91);

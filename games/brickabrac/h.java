@@ -276,7 +276,7 @@ abstract class h extends oc implements sd {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, byte[] param3, int[] param4) {
+    final static void orderFacesByGroup(int bucketCountScratch, int faceIdScratch, byte obfuscationGuard, byte[] faceGroups, int[] groupOffsets) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -294,43 +294,43 @@ abstract class h extends oc implements sd {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           var5_int = 0;
-          if (param2 != 114) {
+          if (obfuscationGuard != 114) {
             field_F = (String[]) null;
           }
           while (true) {
             if (var5_int >= ArcticBackground.faceDepthBucketCounts.length) {
               return;
             }
-            param0 = ArcticBackground.faceDepthBucketCounts[var5_int];
+            bucketCountScratch = ArcticBackground.faceDepthBucketCounts[var5_int];
             var6 = var5_int << 4;
             while (true) {
-              incrementValue$0 = param0;
-              param0--;
+              incrementValue$0 = bucketCountScratch;
+              bucketCountScratch--;
               if (0 == incrementValue$0) {
                 var5_int++;
                 break;
               }
               incrementValue$1 = var6;
               var6++;
-              param1 = ek.sortedFaceIds[incrementValue$1];
-              dupTemp$2 = param3[param1];
-              dupTemp$3 = param4[dupTemp$2];
-              param4[dupTemp$2] = dupTemp$3 + 1;
-              ek.sortedFaceIds[dupTemp$3] = param1;
+              faceIdScratch = ek.sortedFaceIds[incrementValue$1];
+              dupTemp$2 = faceGroups[faceIdScratch];
+              dupTemp$3 = groupOffsets[dupTemp$2];
+              groupOffsets[dupTemp$2] = dupTemp$3 + 1;
+              ek.sortedFaceIds[dupTemp$3] = faceIdScratch;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("h.FB(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_11_1 = new StringBuilder().append("h.FB(").append(bucketCountScratch).append(',').append(faceIdScratch).append(',').append(obfuscationGuard).append(',');
+          if (faceGroups == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param4 == null) {
+          if (groupOffsets == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

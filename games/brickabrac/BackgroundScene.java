@@ -62,32 +62,32 @@ abstract class BackgroundScene {
         this(sceneId, musicName, uc.createSoundEffectNames(soundEffectCount, soundEffectPrefix, (byte) -1));
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var9;
-        int var8;
-        var9 = BrickABrac.field_J ? 1 : 0;
-        if (param4 > param1) {
-          if (param4 >= param5) {
-            if (param5 > param1) {
-              k.a(param2, param6, param1, Rasterizer2D.pixels, param4, param5, param0, param3, 0);
+    final static void drawFlatMeshTriangle(int halfRgb, int yA, int xC, int xA, int yB, int yC, int xB, int obfuscationGuard) {
+        int unusedGameFlag;
+        int guardQuotient;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (yB > yA) {
+          if (yB >= yC) {
+            if (yC > yA) {
+              k.rasterFlatMeshTriangle(xC, xB, yA, Rasterizer2D.pixels, yB, yC, halfRgb, xA, 0);
             } else {
-              k.a(param3, param6, param5, Rasterizer2D.pixels, param4, param1, param0, param2, 0);
+              k.rasterFlatMeshTriangle(xA, xB, yC, Rasterizer2D.pixels, yB, yA, halfRgb, xC, 0);
             }
           } else {
-            k.a(param6, param2, param1, Rasterizer2D.pixels, param5, param4, param0, param3, 0);
+            k.rasterFlatMeshTriangle(xB, xC, yA, Rasterizer2D.pixels, yC, yB, halfRgb, xA, 0);
           }
         } else {
-          if (param5 > param1) {
-            k.a(param3, param2, param4, Rasterizer2D.pixels, param5, param1, param0, param6, 0);
+          if (yC > yA) {
+            k.rasterFlatMeshTriangle(xA, xC, yB, Rasterizer2D.pixels, yC, yA, halfRgb, xB, 0);
           } else {
-            if (param4 < param5) {
-              k.a(param2, param3, param4, Rasterizer2D.pixels, param1, param5, param0, param6, 0);
+            if (yB < yC) {
+              k.rasterFlatMeshTriangle(xC, xA, yB, Rasterizer2D.pixels, yA, yC, halfRgb, xB, 0);
             } else {
-              k.a(param6, param3, param5, Rasterizer2D.pixels, param1, param4, param0, param2, 0);
+              k.rasterFlatMeshTriangle(xB, xA, yC, Rasterizer2D.pixels, yA, yB, halfRgb, xC, 0);
             }
           }
         }
-        var8 = 88 % ((-60 - param7) / 62);
+        guardQuotient = 88 % ((-60 - obfuscationGuard) / 62);
     }
 
     final void ensureSprites(int obfuscationGuard) {

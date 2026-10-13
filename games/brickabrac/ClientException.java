@@ -8,7 +8,7 @@ final class ClientException extends RuntimeException {
     static RgbSprite field_b;
     static int field_e;
     static String field_c;
-    static int[] field_a;
+    static int[] meshHighlightTable;
 
     final static int b(int param0) {
         if (param0 != 5395) {
@@ -24,7 +24,7 @@ final class ClientException extends RuntimeException {
         field_g = null;
         field_b = null;
         field_c = null;
-        field_a = null;
+        meshHighlightTable = null;
     }
 
     ClientException(Throwable originalCause, String context) {

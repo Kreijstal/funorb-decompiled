@@ -3,7 +3,7 @@
  */
 final class MeshAttributeRecord {
     static n field_f;
-    int encodedWord24;
+    int baseRgb;
     static MusicCrossfadeStream musicCrossfadeStream;
     static int currentKeyCode;
     static RgbSprite chocolateCharacterSprite;

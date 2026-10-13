@@ -47,7 +47,7 @@ final class BallPulseEffect extends IntrusiveNode {
           ck.a(-2196, param0);
           bm.loadLogoMeshes((byte) -70, param0);
           AchievementSubmission.a(param0, 115);
-          ScorePopup.a(-37);
+          ScorePopup.initializeMeshLighting(-37);
           fl.e(-41);
           MatchResultScreen.field_t = -BoundedFile.field_i + 0;
         } catch (RuntimeException runtimeException) {

@@ -11,54 +11,54 @@ final class tq {
     static String field_g;
     static String field_e;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, byte param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    final static void drawInterpolatedMeshTriangle(int blueC, int greenA, int xC, int greenB, int xB, int redB, int yC, int greenC, int yA, byte obfuscationGuard, int blueB, int xA, int blueA, int redC, int yB, int redA) {
         int var17 = BrickABrac.field_J ? 1 : 0;
-        if (param9 < -51) {
-          if (param8 < param14) {
-            if (param14 < param6) {
-              MovingBody.a(param12, param2, param8, (byte) -111, param4, param1, param3, param11, param13, Rasterizer2D.pixels, param5, param0, param7, param10, param14, param6, param15);
+        if (obfuscationGuard < -51) {
+          if (yA < yB) {
+            if (yB < yC) {
+              MovingBody.a(blueA, xC, yA, (byte) -111, xB, greenA, greenB, xA, redC, Rasterizer2D.pixels, redB, blueC, greenC, blueB, yB, yC, redA);
               return;
             }
-            if (param6 <= param8) {
-              MovingBody.a(param0, param4, param6, (byte) -111, param11, param7, param1, param2, param5, Rasterizer2D.pixels, param15, param10, param3, param12, param8, param14, param13);
+            if (yC <= yA) {
+              MovingBody.a(blueC, xB, yC, (byte) -111, xA, greenC, greenA, xC, redB, Rasterizer2D.pixels, redA, blueB, greenB, blueA, yA, yB, redC);
               return;
             }
-            MovingBody.a(param12, param4, param8, (byte) -111, param2, param1, param7, param11, param5, Rasterizer2D.pixels, param13, param10, param3, param0, param6, param14, param15);
+            MovingBody.a(blueA, xB, yA, (byte) -111, xC, greenA, greenC, xA, redB, Rasterizer2D.pixels, redC, blueB, greenB, blueC, yC, yB, redA);
             return;
           }
-          if (param8 < param6) {
-            MovingBody.a(param10, param2, param14, (byte) -111, param11, param3, param1, param4, param13, Rasterizer2D.pixels, param15, param0, param7, param12, param8, param6, param5);
+          if (yA < yC) {
+            MovingBody.a(blueB, xC, yB, (byte) -111, xA, greenB, greenA, xB, redC, Rasterizer2D.pixels, redA, blueC, greenC, blueA, yA, yC, redB);
             return;
           }
-          if (param6 > param14) {
-            MovingBody.a(param10, param11, param14, (byte) -111, param2, param3, param7, param4, param15, Rasterizer2D.pixels, param13, param12, param1, param0, param6, param8, param5);
+          if (yC > yB) {
+            MovingBody.a(blueB, xA, yB, (byte) -111, xC, greenB, greenC, xB, redA, Rasterizer2D.pixels, redC, blueA, greenA, blueC, yC, yA, redB);
             return;
           }
-          MovingBody.a(param0, param11, param6, (byte) -111, param4, param7, param3, param2, param15, Rasterizer2D.pixels, param5, param12, param1, param10, param14, param8, param13);
+          MovingBody.a(blueC, xA, yC, (byte) -111, xB, greenC, greenB, xC, redA, Rasterizer2D.pixels, redB, blueA, greenA, blueB, yB, yA, redC);
           return;
         }
         tq.a(82);
-        if (param8 < param14) {
-          if (param14 < param6) {
-            MovingBody.a(param12, param2, param8, (byte) -111, param4, param1, param3, param11, param13, Rasterizer2D.pixels, param5, param0, param7, param10, param14, param6, param15);
+        if (yA < yB) {
+          if (yB < yC) {
+            MovingBody.a(blueA, xC, yA, (byte) -111, xB, greenA, greenB, xA, redC, Rasterizer2D.pixels, redB, blueC, greenC, blueB, yB, yC, redA);
             return;
           }
-          if (param6 <= param8) {
-            MovingBody.a(param0, param4, param6, (byte) -111, param11, param7, param1, param2, param5, Rasterizer2D.pixels, param15, param10, param3, param12, param8, param14, param13);
+          if (yC <= yA) {
+            MovingBody.a(blueC, xB, yC, (byte) -111, xA, greenC, greenA, xC, redB, Rasterizer2D.pixels, redA, blueB, greenB, blueA, yA, yB, redC);
             return;
           }
-          MovingBody.a(param12, param4, param8, (byte) -111, param2, param1, param7, param11, param5, Rasterizer2D.pixels, param13, param10, param3, param0, param6, param14, param15);
+          MovingBody.a(blueA, xB, yA, (byte) -111, xC, greenA, greenC, xA, redB, Rasterizer2D.pixels, redC, blueB, greenB, blueC, yC, yB, redA);
           return;
         }
-        if (param8 < param6) {
-          MovingBody.a(param10, param2, param14, (byte) -111, param11, param3, param1, param4, param13, Rasterizer2D.pixels, param15, param0, param7, param12, param8, param6, param5);
+        if (yA < yC) {
+          MovingBody.a(blueB, xC, yB, (byte) -111, xA, greenB, greenA, xB, redC, Rasterizer2D.pixels, redA, blueC, greenC, blueA, yA, yC, redB);
           return;
         }
-        if (param6 > param14) {
-          MovingBody.a(param10, param11, param14, (byte) -111, param2, param3, param7, param4, param15, Rasterizer2D.pixels, param13, param12, param1, param0, param6, param8, param5);
+        if (yC > yB) {
+          MovingBody.a(blueB, xA, yB, (byte) -111, xC, greenB, greenC, xB, redA, Rasterizer2D.pixels, redC, blueA, greenA, blueC, yC, yA, redB);
           return;
         }
-        MovingBody.a(param0, param11, param6, (byte) -111, param4, param7, param3, param2, param15, Rasterizer2D.pixels, param5, param12, param1, param10, param14, param8, param13);
+        MovingBody.a(blueC, xA, yC, (byte) -111, xB, greenC, greenB, xC, redA, Rasterizer2D.pixels, redB, blueA, greenA, blueB, yB, yA, redC);
     }
 
     public final String toString() {

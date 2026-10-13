@@ -47,9 +47,9 @@ final class hc {
             mesh.directionX = LevelList.readPackedShortArray((byte) -107, mesh.directionX, packet, 16);
             mesh.directionY = LevelList.readPackedShortArray((byte) -77, mesh.directionY, packet, 16);
             mesh.directionZ = LevelList.readPackedShortArray((byte) -117, mesh.directionZ, packet, 16);
-            mesh.field_v = LevelList.readPackedShortArray((byte) -68, mesh.field_v, packet, 16);
-            mesh.field_h = LevelList.readPackedShortArray((byte) -80, mesh.field_h, packet, 16);
-            mesh.field_t = LevelList.readPackedShortArray((byte) -61, mesh.field_t, packet, 16);
+            mesh.faceDirectionA = LevelList.readPackedShortArray((byte) -68, mesh.faceDirectionA, packet, 16);
+            mesh.faceDirectionB = LevelList.readPackedShortArray((byte) -80, mesh.faceDirectionB, packet, 16);
+            mesh.faceDirectionC = LevelList.readPackedShortArray((byte) -61, mesh.faceDirectionC, packet, 16);
           }
           if (hasExtraChannels != 0) {
             packet.readBits(16, (byte) 101);
@@ -60,7 +60,7 @@ final class hc {
             mesh.field_J = LevelList.readPackedShortArray((byte) -124, mesh.field_J, packet, 16);
           }
           if (DirectByteStorage.readPacketFlag(false, packet)) {
-            mesh.field_L = LevelList.readPackedShortArray((byte) -65, mesh.field_L, packet, 16);
+            mesh.faceMaterialIds = LevelList.readPackedShortArray((byte) -65, mesh.faceMaterialIds, packet, 16);
           }
           if (DirectByteStorage.readPacketFlag(false, packet)) {
             mesh.faceGroups = ri.readPackedByteArray(mesh.faceGroups, 16, packet, 20);

@@ -192,7 +192,7 @@ final class MainMenuScreen extends MenuScreen {
         field_w = null;
         if (param0) {
           int[] var2 = (int[]) null;
-          MainMenuScreen.a((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
+          MainMenuScreen.blendInterpolatedHalfRgbSpan((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
         }
         field_r = null;
     }
@@ -225,7 +225,7 @@ final class MainMenuScreen extends MenuScreen {
         this.tooltipSprites.addLast(new TooltipSprite(12, var1, ArchiveNetworkRequest.packSelectorIcons[1], rd.a(RasterSnapshot.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {
+    final static void blendInterpolatedHalfRgbSpan(byte obfuscationGuard, int blueQ16, int blueStepQ16, int redStepQ16, int greenStepQ16, int offset, int length, int redQ16, int[] target, int greenQ16) {
         int[] var10 = null;
         int var11 = 0;
         int var12 = 0;
@@ -241,38 +241,38 @@ final class MainMenuScreen extends MenuScreen {
         RuntimeException var10_ref = null;
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 <= 115) {
+          if (obfuscationGuard <= 115) {
             field_y = (String) null;
           }
           while (true) {
-            param6--;
-            if (0 > param6) {
+            length--;
+            if (0 > length) {
               return;
             }
-            var17 = param8;
+            var17 = target;
             var10 = var17;
-            var11 = param5;
-            var12 = param7;
-            var13 = param9;
-            var14 = param1;
+            var11 = offset;
+            var12 = redQ16;
+            var13 = greenQ16;
+            var14 = blueQ16;
             var15 = var17[var11] >> 1 & 8355711;
             var10[var11] = ik.a(255, var14 >> 17) - (-ik.a(var12 >> 1, 16711680) + (-(ik.a(33423869, var13) >> 9) - var15));
-            param9 = param9 + param4;
-            param1 = param1 + param2;
-            param5++;
-            param7 = param7 + param3;
+            greenQ16 = greenQ16 + greenStepQ16;
+            blueQ16 = blueQ16 + blueStepQ16;
+            offset++;
+            redQ16 = redQ16 + redStepQ16;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10_ref = decompiledCaughtException;
           stackIn_8_0 = var10_ref;
-          stackIn_8_1 = new StringBuilder().append("rp.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-          if (param8 == null) {
+          stackIn_8_1 = new StringBuilder().append("rp.C(").append(obfuscationGuard).append(',').append(blueQ16).append(',').append(blueStepQ16).append(',').append(redStepQ16).append(',').append(greenStepQ16).append(',').append(offset).append(',').append(length).append(',').append(redQ16).append(',');
+          if (target == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param9).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(greenQ16).append(')').toString());
         }
     }
 

@@ -15,7 +15,7 @@ final class di {
 
     final static int a(byte param0, int param1) {
         int var2 = 25 % ((param0 - 66) / 58);
-        return mg.field_f[param1 & 2047];
+        return MeshRasterState.sine2048Q16[param1 & 2047];
     }
 
     public static void a(int param0) {
