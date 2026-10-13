@@ -18,7 +18,7 @@ final class MultiplayerMatch {
     int field_j;
 
     final void distributeQueuedAttacks(int playerId, int tickOffset, NodeDeque attacks, byte obfuscationGuard) {
-        int var6 = 0;
+        int recipientIndex = 0;
         int stackIn_6_0 = 0;
         int stackIn_6_1 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -27,28 +27,28 @@ final class MultiplayerMatch {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var7 = 0;
-        ge var8 = null;
+        PowerUp powerUp = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard > -39) {
             this.getStateSevenPlayerMask(86);
           }
-          var8 = (ge) (attacks.first(-44));
-          while (var8 != null) {
+          powerUp = (PowerUp) (attacks.first(-44));
+          while (powerUp != null) {
             stackIn_6_0 = this.playerCount;
             stackIn_6_1 = 1;
             if (stackIn_6_0 != stackIn_6_1 &&
-              !var8.b(false)) {
-              for (var6 = 0; var6 < this.playerCount; var6++) {
-                if (var6 != playerId &&
-                  (1 << var6 & (this.playerMaskTwo | this.playerMaskOne | this.playerMaskThree)) == 0) {
-                  this.playerBoards[var6].field_kb.a(new ge(var8, tickOffset + this.playerBoards[var6].simulationTick), (byte) -39);
+              !powerUp.isSelfTargeted(false)) {
+              for (recipientIndex = 0; recipientIndex < this.playerCount; recipientIndex++) {
+                if (recipientIndex != playerId &&
+                  (1 << recipientIndex & (this.playerMaskTwo | this.playerMaskOne | this.playerMaskThree)) == 0) {
+                  this.playerBoards[recipientIndex].powerUpHistory.append(new PowerUp(powerUp, tickOffset + this.playerBoards[recipientIndex].simulationTick), (byte) -39);
                 }
               }
             } else {
-              this.playerBoards[playerId].field_kb.a(new ge(var8, tickOffset + this.playerBoards[playerId].simulationTick), (byte) -39);
+              this.playerBoards[playerId].powerUpHistory.append(new PowerUp(powerUp, tickOffset + this.playerBoards[playerId].simulationTick), (byte) -39);
             }
-            var8 = (ge) (attacks.next((byte) 116));
+            powerUp = (PowerUp) (attacks.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,7 +156,7 @@ final class MultiplayerMatch {
         RuntimeException decompiledCaughtException = null;
         kc var5 = null;
         RuntimeException var5_ref = null;
-        ul var6 = null;
+        ScorePopup var6 = null;
         Paddle var7 = null;
         int var8 = 0;
         NodeDeque[] var8_ref_vl__ = null;
@@ -169,7 +169,7 @@ final class MultiplayerMatch {
         Object var10_ref = null;
         Brick var10_ref_on = null;
         int var10 = 0;
-        ge var10_ref_ge = null;
+        PowerUp var10_ref_ge = null;
         Ball var10_ref_vn = null;
         Object var11_ref = null;
         int var11 = 0;
@@ -242,12 +242,12 @@ final class MultiplayerMatch {
             }
             var5 = (kc) (param0.field_x.next((byte) 116));
           }
-          var6 = (ul) (param0.field_nb.first(-85));
+          var6 = (ScorePopup) (param0.scorePopups.first(-85));
           while (var6 != null) {
-            if (!var6.b(false)) {
+            if (!var6.advance(false)) {
               var6.unlink((byte) 111);
             }
-            var6 = (ul) (param0.field_nb.next((byte) 116));
+            var6 = (ScorePopup) (param0.scorePopups.next((byte) 116));
           }
           var7 = param0.paddle;
           if (param0.field_Z == 2) {
@@ -267,8 +267,8 @@ final class MultiplayerMatch {
             }
             if ((param0.field_db & 4) != 0) {
               var8 = 0;
-              if (!param0.field_gb.isEmpty(false)) {
-                var9 = (Ball) (param0.field_gb.first(-76));
+              if (!param0.activeBalls.isEmpty(false)) {
+                var9 = (Ball) (param0.activeBalls.first(-76));
                 while (var9 != null) {
                   if (40 <= var9.field_C) {
                     if (param1 != null) {
@@ -350,12 +350,12 @@ final class MultiplayerMatch {
                     }
                     ((PlayerBoard) (Object) stackIn_158_0).a(stackIn_159_1, (byte) 75);
                   }
-                  var9 = (Ball) (param0.field_gb.next((byte) 116));
+                  var9 = (Ball) (param0.activeBalls.next((byte) 116));
                 }
               }
               if (var8 == 0 &&
                 !param0.queuedBalls.isEmpty(false)) {
-                param0.field_gb.addLast(param0.queuedBalls.removeFirst(3), (byte) 3);
+                param0.activeBalls.addLast(param0.queuedBalls.removeFirst(3), (byte) 3);
               }
               if (var8 != 0) {
                 fieldTemp$2 = param0.field_A + 1;
@@ -376,7 +376,7 @@ final class MultiplayerMatch {
                     var22Lifetime1Lifetime1 = var21Lifetime1;
                     var11_ref_on = (Brick) (var21Lifetime1.first(param3 - 91));
                     while (var11_ref_on != null) {
-                      if ((1 << var11_ref_on.typeId & hp.field_m) != 0 &&
+                      if ((1 << var11_ref_on.typeId & IntHistoryBuffer.field_m) != 0 &&
                         81920 <= var11_ref_on.y256) {
                         var8 = 0;
                         break regionExit1;
@@ -417,7 +417,7 @@ final class MultiplayerMatch {
                     var11_ref_onLifetime1.stateWord = 0;
                     if (0 == var11_ref_onLifetime1.field_R) {
                       var11_ref_onLifetime1.unlink((byte) 111);
-                      if ((1 << var11_ref_onLifetime1.typeId & hp.field_m) != 0) {
+                      if ((1 << var11_ref_onLifetime1.typeId & IntHistoryBuffer.field_m) != 0) {
                         param0.field_L = param0.field_L - 1;
                         param0.field_m = param0.field_m + 1;
                         param0.field_Q = param0.field_Q + 1;
@@ -456,17 +456,17 @@ final class MultiplayerMatch {
               }
               var9Lifetime1 = (Ball) (param0.queuedBalls.next((byte) 116));
             }
-            var9Lifetime2 = (Ball) (param0.field_gb.first(param3 - 13));
+            var9Lifetime2 = (Ball) (param0.activeBalls.first(param3 - 13));
             while (var9Lifetime2 != null) {
-              var9Lifetime2.field_E.a(-7255, var9Lifetime2.x256 + var9Lifetime2.radius256);
-              var9Lifetime2.field_y.a(-7255, var9Lifetime2.y256 + var9Lifetime2.radius256);
+              var9Lifetime2.centerXHistory256.append(-7255, var9Lifetime2.x256 + var9Lifetime2.radius256);
+              var9Lifetime2.centerYHistory256.append(-7255, var9Lifetime2.y256 + var9Lifetime2.radius256);
               if (var9Lifetime2.field_J > 0) {
                 var9Lifetime2.field_J = var9Lifetime2.field_J - 1;
               }
               if (var9Lifetime2.field_v > 0) {
                 var9Lifetime2.field_v = var9Lifetime2.field_v - 1;
               }
-              var9Lifetime2 = (Ball) (param0.field_gb.next((byte) 116));
+              var9Lifetime2 = (Ball) (param0.activeBalls.next((byte) 116));
             }
             if (var7.field_w > 0) {
               var7.field_w = var7.field_w - 1;
@@ -539,7 +539,7 @@ final class MultiplayerMatch {
                   param0.field_hb = param0.field_hb + 1;
                   param0.field_t = param0.field_t + 1;
                   if (1 == this.playerCount) {
-                    param0.a(250, false, 65280, var7.y256 - 12800);
+                    param0.addScore(250, false, 65280, var7.y256 - 12800);
                   }
                   fieldTemp$5 = param0.field_qb + 1;
                   param0.field_qb = param0.field_qb + 1;
@@ -563,7 +563,7 @@ final class MultiplayerMatch {
                 var10 = 0;
                 var11 = 0;
                 var12Lifetime1 = 0;
-                var13 = (Ball) (param0.field_gb.first(-26));
+                var13 = (Ball) (param0.activeBalls.first(-26));
                 while (var13 != null) {
                   var12Lifetime1Lifetime1 = var13.field_I;
                   if (var13.field_I > var10) {
@@ -573,7 +573,7 @@ final class MultiplayerMatch {
                   if (var11 < var13.field_B) {
                     var11 = var12Lifetime1Lifetime1;
                   }
-                  var13 = (Ball) (param0.field_gb.next((byte) 116));
+                  var13 = (Ball) (param0.activeBalls.next((byte) 116));
                 }
                 if (var10 <= 20 &&
                   15 >= var11) {
@@ -582,7 +582,7 @@ final class MultiplayerMatch {
                 param0.a(ml.field_e, (byte) 75);
                 return;
               }
-              var10_ref_ge = (ge) (param0.field_pb.first(-119));
+              var10_ref_ge = (PowerUp) (param0.fallingPowerUps.first(-119));
               while (var10_ref_ge != null) {
                 var10_ref_ge.x256 = var10_ref_ge.x256 + var10_ref_ge.velocityX256 / 8;
                 var10_ref_ge.y256 = var10_ref_ge.y256 + var10_ref_ge.velocityY256 / 8;
@@ -602,7 +602,7 @@ final class MultiplayerMatch {
                 } else {
                   if (var7.resolveCircleCollision(var10_ref_ge, (byte) 25)) {
                     var10_ref_ge.unlink((byte) 111);
-                    stackIn_279_0 = (!var10_ref_ge.b(false)) ? 0 : 1;
+                    stackIn_279_0 = (!var10_ref_ge.isSelfTargeted(false)) ? 0 : 1;
                     var11 = stackIn_279_0;
                     if (param2 != null) {
                       param2.addLast(var10_ref_ge, (byte) 3);
@@ -648,7 +648,7 @@ final class MultiplayerMatch {
                     ((PlayerBoard) (Object) stackIn_300_0).a(stackIn_302_1, (byte) 75);
                   }
                 }
-                var10_ref_ge = (ge) (param0.field_pb.next((byte) 116));
+                var10_ref_ge = (PowerUp) (param0.fallingPowerUps.next((byte) 116));
               }
               var7.x256 = var7.x256 + var7.velocityX256 / 8;
               if (var7.controlMode > var7.x256) {
@@ -658,7 +658,7 @@ final class MultiplayerMatch {
                 var7.x256 = -var7.width256 + var7.boardSpan256;
               }
               if (var7.field_H > 0) {
-                var10_ref_vn = (Ball) (param0.field_gb.first(-111));
+                var10_ref_vn = (Ball) (param0.activeBalls.first(-111));
                 while (var10_ref_vn != null) {
                   if ((var10_ref_vn.x256 + var10_ref_vn.radius256) > (var7.width256 / 2 + var7.x256)) {
                     if (var10_ref_vn.velocityX256 > 0) {
@@ -666,12 +666,12 @@ final class MultiplayerMatch {
                     }
                   } else {
                     if (0 <= var10_ref_vn.velocityX256) {
-                      var10_ref_vn = (Ball) (param0.field_gb.next((byte) 116));
+                      var10_ref_vn = (Ball) (param0.activeBalls.next((byte) 116));
                       continue;
                     }
                     var10_ref_vn.velocityX256 = -var10_ref_vn.velocityX256;
                   }
-                  var10_ref_vn = (Ball) (param0.field_gb.next((byte) 116));
+                  var10_ref_vn = (Ball) (param0.activeBalls.next((byte) 116));
                 }
               }
               for (var10 = 0; param0.field_z.length > var10; var10++) {
@@ -686,7 +686,7 @@ final class MultiplayerMatch {
                   var12_ref_on = (Brick) (var26Lifetime1.next((byte) 116));
                 }
               }
-              var10_ref_vnLifetime1 = (Ball) (param0.field_gb.first(-122));
+              var10_ref_vnLifetime1 = (Ball) (param0.activeBalls.first(-122));
               while (var10_ref_vnLifetime1 != null) {
                 for (var11 = 0; var11 < 5; var11++) {
                   if (this.a(param0, param1, 8, -128, var10_ref_vnLifetime1)) {
@@ -699,15 +699,15 @@ final class MultiplayerMatch {
                   !(0 <= var10_ref_vnLifetime1.y256) ||
                   !(param0.boardWidth << 8 >= var10_ref_vnLifetime1.x256))) {
                   var10_ref_vnLifetime1.setVelocityFromAngle(-1024 + param0.a(2048, (byte) 62), 1536, 105);
-                  var10_ref_vnLifetime1.field_E.field_j = -1;
+                  var10_ref_vnLifetime1.centerXHistory256.latestIndex = -1;
                   var10_ref_vnLifetime1.field_B = 0;
-                  var10_ref_vnLifetime1.field_y.field_j = -1;
+                  var10_ref_vnLifetime1.centerYHistory256.latestIndex = -1;
                   var10_ref_vnLifetime1.field_I = 0;
                   var10_ref_vnLifetime1.field_C = 0;
                   param0.queuedBalls.addLast(var10_ref_vnLifetime1, (byte) 3);
                 }
-                if (!param0.field_gb.isEmpty(false)) {
-                  var10_ref_vnLifetime1 = (Ball) (param0.field_gb.next((byte) 116));
+                if (!param0.activeBalls.isEmpty(false)) {
+                  var10_ref_vnLifetime1 = (Ball) (param0.activeBalls.next((byte) 116));
                   continue;
                 }
                 break;
@@ -943,20 +943,20 @@ final class MultiplayerMatch {
         return var2;
     }
 
-    final void a(byte param0, int param1) {
-        PlayerBoard var3;
-        ge var4;
+    final void applyPendingPowerUps(byte obfuscationGuard, int playerId) {
+        PlayerBoard board;
+        PowerUp powerUp;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (param0 < 81) {
+        if (obfuscationGuard < 81) {
           this.field_c = true;
         }
-        var3 = this.playerBoards[param1];
-        while (var3.field_X <= var3.field_kb.field_n) {
-          var4 = (ge) (var3.field_kb.a(var3.field_X, 67));
-          if (var4.field_y <= var3.simulationTick) {
-            var4.a(var3, (byte) 99);
-            var3.field_X = var3.field_X + 1;
+        board = this.playerBoards[playerId];
+        while (board.nextPowerUpIndex <= board.powerUpHistory.latestIndex) {
+          powerUp = (PowerUp) (board.powerUpHistory.get(board.nextPowerUpIndex, 67));
+          if (powerUp.activationTick <= board.simulationTick) {
+            powerUp.applyToBoard(board, (byte) 99);
+            board.nextPowerUpIndex = board.nextPowerUpIndex + 1;
             continue;
           }
           break;
@@ -987,7 +987,7 @@ final class MultiplayerMatch {
             if (param1 != null) {
               param1.addLast(new qc(7), (byte) 3);
             }
-            if (param0.field_gb.isEmpty(false) &&
+            if (param0.activeBalls.isEmpty(false) &&
               param0.queuedBalls.isEmpty(false)) {
               if (1 == this.playerCount && (!r.field_A ||
                 0 != this.configuration.field_b.field_h ||
@@ -1045,9 +1045,9 @@ final class MultiplayerMatch {
                   param1.addLast(new qc(10), (byte) 3);
                 }
                 param0.paddle.a((byte) 53, param0, param4);
-                param4.field_E.field_j = -1;
+                param4.centerXHistory256.latestIndex = -1;
                 param4.field_C = 0;
-                param4.field_y.field_j = -1;
+                param4.centerYHistory256.latestIndex = -1;
                 param0.queuedBalls.addLast(param4, (byte) 3);
                 return false;
               }

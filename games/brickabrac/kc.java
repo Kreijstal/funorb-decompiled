@@ -47,7 +47,7 @@ final class kc extends IntrusiveNode {
           ck.a(-2196, param0);
           bm.a((byte) -70, param0);
           e.a(param0, 115);
-          ul.a(-37);
+          ScorePopup.a(-37);
           fl.e(-41);
           ld.field_t = -rn.field_i + 0;
         } catch (RuntimeException runtimeException) {

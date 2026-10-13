@@ -430,7 +430,7 @@ final class ka extends IntrusiveNode {
                     } else {
                       if ((var8 & ~var13.field_Ub) != 0) {
                         var26_int = r.a((byte) -82, ~var13.field_Ub & var8);
-                        var25 = ao.field_j;
+                        var25 = ObjectHistoryBuffer.field_j;
                         if (var26_int > 0 &&
                           eb.field_p != null &&
                           var26_int <= eb.field_p.length &&

@@ -94,7 +94,7 @@ final class fi extends ki {
         super(param0, param1, param2, param3);
         try {
           ga.field_k = new jp[2];
-          ao.field_o = new jp[2][];
+          ObjectHistoryBuffer.field_o = new jp[2][];
           ja.field_a = new jp[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -122,7 +122,7 @@ final class fi extends ki {
 
     final jp[] a(byte param0, int param1) {
         int var3 = 84 % ((65 - param0) / 49);
-        return ao.field_o[-1 + param1];
+        return ObjectHistoryBuffer.field_o[-1 + param1];
     }
 
     final jp a(boolean param0, int param1) {
@@ -142,7 +142,7 @@ final class fi extends ki {
           }
           return;
         }
-        pb var6 = ge.a(this.field_m, param3, -20777);
+        pb var6 = PowerUp.a(this.field_m, param3, -20777);
         if (!var6.a((byte) -84, param3, this.field_m)) {
           dk.a(1, param3, var6, 0, 23275, hk.field_I);
           var6.a(this.field_m, param3, (byte) 78);
@@ -170,10 +170,10 @@ final class fi extends ki {
           un.field_d = jh.a(0, s.field_d);
           jl.field_d = jh.a(0, kc.field_r);
           Brick.field_K = jh.a(0, hk.field_I);
-          ao.field_o[0] = cr.a("arctic", i.field_m, "arctic_caps", 2);
+          ObjectHistoryBuffer.field_o[0] = cr.a("arctic", i.field_m, "arctic_caps", 2);
           ja.field_a[0] = cr.a("arctic", i.field_m, "arctic_segs", 2);
           ga.field_k[0] = pl.a("arctic", "arctic_centre", (byte) -115, i.field_m);
-          ao.field_o[1] = ig.a(ao.field_o[0], param0);
+          ObjectHistoryBuffer.field_o[1] = ig.a(ObjectHistoryBuffer.field_o[0], param0);
           ja.field_a[1] = ig.a(ja.field_a[0], false);
           ga.field_k[1] = pl.a(-16371, ga.field_k[0]);
           return true;

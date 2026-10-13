@@ -244,7 +244,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException var2 = null;
         try {
           if (null != gp.field_c) {
-            ge.field_w = 0;
+            PowerUp.field_w = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               tf.field_a.length > var2_int) {
@@ -288,7 +288,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var3Lifetime1;
         try {
           if (null != gp.field_c) {
-            ge.field_w = 0;
+            PowerUp.field_w = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               var2_int < tf.field_a.length) {

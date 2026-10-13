@@ -98,7 +98,7 @@ final class sn extends ki {
         if (!this.b((byte) -124)) {
           lb.g(param4, param2, 640, 480, 16777215);
         } else {
-          var6 = ge.a(this.field_m, param3, -20777);
+          var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
             tf.a(0, param3, var6, 1, 114, sf.field_cb);
             var6.a(this.field_m, param3, (byte) 78);

@@ -16,7 +16,7 @@ final class ip extends ki {
         if (!this.b((byte) -99)) {
           lb.g(param4, param2, 640, 480, ro.field_x[param3], 16777215);
           if (BrickABrac.field_J) {
-            var7 = ge.a(this.field_m, param3, -20777);
+            var7 = PowerUp.a(this.field_m, param3, -20777);
             if (!var7.a((byte) -84, param3, this.field_m)) {
               ih.a(var7, np.field_d, param3, 1, 0, true);
               var7.a(this.field_m, param3, (byte) 78);
@@ -24,7 +24,7 @@ final class ip extends ki {
             ef.a(var7.field_p, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
           }
         } else {
-          var7 = ge.a(this.field_m, param3, -20777);
+          var7 = PowerUp.a(this.field_m, param3, -20777);
           if (!var7.a((byte) -84, param3, this.field_m)) {
             ih.a(var7, np.field_d, param3, 1, 0, true);
             var7.a(this.field_m, param3, (byte) 78);

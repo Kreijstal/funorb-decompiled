@@ -224,7 +224,7 @@ final class wn {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
             si.field_m = fm.field_d;
-            ge.field_w = ge.field_w + 1;
+            PowerUp.field_w = PowerUp.field_w + 1;
             if (pl.field_d < 0) {
               var2 = 0;
               while (true) {

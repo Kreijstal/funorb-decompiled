@@ -431,10 +431,10 @@ final class GameplayScreen extends GameScreen {
               var20.field_u = 0;
               var12 = var20;
               var12.field_N = 0;
-              var13 = (Ball) (var20.field_gb.first(-66));
+              var13 = (Ball) (var20.activeBalls.first(-66));
               while (var13 != null) {
                 var13.field_I = 0;
-                var13 = (Ball) (var20.field_gb.next((byte) 116));
+                var13 = (Ball) (var20.activeBalls.next((byte) 116));
               }
             }
             if ((this.field_i > 1 ||
@@ -495,13 +495,13 @@ final class GameplayScreen extends GameScreen {
             if (var20.score >= dp.field_r[40]) {
               this.a((byte) 39, 40, 215);
             }
-            var9 = (Ball) (var20.field_gb.first(-119));
+            var9 = (Ball) (var20.activeBalls.first(-119));
             while (var9 != null) {
               if (dp.field_r[9] <= var9.field_I) {
                 this.b(9, 106, 246);
               }
               if (var9.field_I < dp.field_r[10]) {
-                var9 = (Ball) (var20.field_gb.next((byte) 116));
+                var9 = (Ball) (var20.activeBalls.next((byte) 116));
                 continue;
               }
               this.b(10, -52, 245);
@@ -925,19 +925,19 @@ final class GameplayScreen extends GameScreen {
             var7.score = -20 + dp.field_r[8];
           }
           if (obfuscationGuard == 53) {
-            var5_ref_vn = (Ball) (var8.field_gb.first(-19));
+            var5_ref_vn = (Ball) (var8.activeBalls.first(-19));
             while (var5_ref_vn != null) {
               var5_ref_vn.field_I = dp.field_r[9] - 2;
-              var5_ref_vn = (Ball) (var8.field_gb.next((byte) 116));
+              var5_ref_vn = (Ball) (var8.activeBalls.next((byte) 116));
             }
             this.field_s = true;
             return true;
           }
           if (obfuscationGuard == 39) {
-            var5_ref_vnLifetime1 = (Ball) (var8.field_gb.first(-114));
+            var5_ref_vnLifetime1 = (Ball) (var8.activeBalls.first(-114));
             while (var5_ref_vnLifetime1 != null) {
               var5_ref_vnLifetime1.field_I = dp.field_r[10] - 2;
-              var5_ref_vnLifetime1 = (Ball) (var8.field_gb.next((byte) 116));
+              var5_ref_vnLifetime1 = (Ball) (var8.activeBalls.next((byte) 116));
             }
             this.field_s = true;
             return true;
@@ -1224,7 +1224,7 @@ final class GameplayScreen extends GameScreen {
         int var7 = 0;
         int var8_int = 0;
         PlayerBoard var8 = null;
-        ge var9_ref_ge = null;
+        PowerUp var9_ref_ge = null;
         int var9 = 0;
         int var10 = 0;
         p var10_ref_p = null;
@@ -1271,7 +1271,7 @@ final class GameplayScreen extends GameScreen {
                 var9 = 0;
                 var10_ref_p = (p) (var16.field_eb.first(-84));
                 while (var9 < var8_int) {
-                  this.match.a((byte) 120, var6_int);
+                  this.match.applyPendingPowerUps((byte) 120, var6_int);
                   var16.field_db = var10_ref_p.a((byte) -104);
                   this.match.a(var16, param0, var5, 0);
                   var16.simulationTick = var16.simulationTick + 1;
@@ -1306,7 +1306,7 @@ final class GameplayScreen extends GameScreen {
               }
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = (((this.match.playerMaskThree | (this.match.playerMaskTwo | this.match.playerMaskOne)) & 1 << var6_int) == 0))) {
-                this.match.a((byte) 127, var6_int);
+                this.match.applyPendingPowerUps((byte) 127, var6_int);
                 this.match.a(var16, param2, var5, 0);
                 if (!this.field_p) {
                   this.match.distributeQueuedAttacks(var6_int, 1, var5, (byte) -122);
@@ -1330,10 +1330,10 @@ final class GameplayScreen extends GameScreen {
           while (this.match.playerCount > var6_intLifetime1) {
             var17 = this.match.playerBoards[var6_intLifetime1];
             var8_intLifetime1 = 0;
-            var9_ref_ge = (ge) (var17.field_pb.first(-48));
+            var9_ref_ge = (PowerUp) (var17.fallingPowerUps.first(-48));
             while (var9_ref_ge != null) {
               var8_intLifetime1 = var8_intLifetime1 | 1 << var9_ref_ge.typeId;
-              var9_ref_ge = (ge) (var17.field_pb.next((byte) 116));
+              var9_ref_ge = (PowerUp) (var17.fallingPowerUps.next((byte) 116));
             }
             var15 = 0;
             var9Lifetime1 = var15;
@@ -1488,15 +1488,15 @@ final class GameplayScreen extends GameScreen {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        ge var6 = null;
+        PowerUp var6 = null;
         try {
           var3_int = param0.l(255);
           var4 = param0.l(255);
           var5 = param0.e(255);
-          var6 = new ge(0, 0, var4);
+          var6 = new PowerUp(0, 0, var4);
           int var7 = 102 / ((-65 - param1) / 34);
-          var6.field_y = var5;
-          this.match.playerBoards[var3_int].field_kb.a(var6, (byte) -39);
+          var6.activationTick = var5;
+          this.match.playerBoards[var3_int].powerUpHistory.append(var6, (byte) -39);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "qj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1768,7 +1768,7 @@ final class GameplayScreen extends GameScreen {
         var18 = kh.field_c[this.match.playerCount - 1];
         for (var7Lifetime4 = 0; this.match.playerCount > var7Lifetime4; var7Lifetime4++) {
           if (var5[var7Lifetime4] == 2) {
-            var20 = ul.field_k[this.match.playerBoards[var6Lifetime2].field_H];
+            var20 = ScorePopup.field_k[this.match.playerBoards[var6Lifetime2].field_H];
             var8 = var20;
             var9Lifetime2 = ob.field_D.field_F + ob.field_D.field_P;
             lb.d(var18[var7Lifetime4], 235 + var19[var7Lifetime4] - 23, 153, var9Lifetime2, 0, 141);

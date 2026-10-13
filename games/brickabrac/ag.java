@@ -19,12 +19,12 @@ abstract class ag extends oc implements sd {
     final static void f(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (ul.field_p > 32) {
-          var1 = ul.field_p % 32;
+        if (ScorePopup.field_p > 32) {
+          var1 = ScorePopup.field_p % 32;
           if (0 == var1) {
             var1 = 32;
           }
-          wp.a(1, -var1 + ul.field_p);
+          wp.a(1, -var1 + ScorePopup.field_p);
         } else {
           wp.a(1, 0);
         }

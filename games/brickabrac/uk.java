@@ -39,7 +39,7 @@ final class uk extends km {
               ba.field_w = param0;
             }
             lf.field_r[wi.field_m] = param5;
-            ao.field_p[wi.field_m] = param1;
+            ObjectHistoryBuffer.field_p[wi.field_m] = param1;
             ib.field_D[wi.field_m] = param4;
             var6 = param1 + param5 + param4;
             if (0 != var6) {
@@ -63,7 +63,7 @@ final class uk extends km {
             ba.field_w = param0;
           }
           lf.field_r[wi.field_m] = param5;
-          ao.field_p[wi.field_m] = param1;
+          ObjectHistoryBuffer.field_p[wi.field_m] = param1;
           ib.field_D[wi.field_m] = param4;
           var6Lifetime2 = param1 + param5 + param4;
           if (0 != var6Lifetime2) {
@@ -92,7 +92,7 @@ final class uk extends km {
             ba.field_w = param0;
           }
           lf.field_r[wi.field_m] = param5;
-          ao.field_p[wi.field_m] = param1;
+          ObjectHistoryBuffer.field_p[wi.field_m] = param1;
           ib.field_D[wi.field_m] = param4;
           var6Lifetime1 = param1 + param5 + param4;
           if (0 != var6Lifetime1) {
@@ -107,7 +107,7 @@ final class uk extends km {
             ba.field_w = param0;
           }
           lf.field_r[wi.field_m] = param5;
-          ao.field_p[wi.field_m] = param1;
+          ObjectHistoryBuffer.field_p[wi.field_m] = param1;
           ib.field_D[wi.field_m] = param4;
           var6Lifetime1 = param1 + param5 + param4;
           if (0 != var6Lifetime1) {

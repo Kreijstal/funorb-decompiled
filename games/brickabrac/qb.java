@@ -31,7 +31,7 @@ final class qb extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var7 = null;
         if (this.b((byte) -106)) {
-          var7 = ge.a(this.field_m, param3, -20777);
+          var7 = PowerUp.a(this.field_m, param3, -20777);
           if (!var7.a((byte) -84, param3, this.field_m)) {
             qf.a(param3, var7, 1, dm.field_f, 0, !param0 ? true : false);
             var7.a(this.field_m, param3, (byte) 78);

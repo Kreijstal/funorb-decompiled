@@ -61,7 +61,7 @@ final class pn extends IntrusiveNode {
             !ve.b(-21835160)) {
             boolean decompiledSharedTail2 = !(nc.a(0, kb.field_Qb));
             if (!decompiledSharedTail2) {
-              var2 = rd.a(ul.field_j, new String[]{tk.field_p}, (byte) 103);
+              var2 = rd.a(ScorePopup.field_j, new String[]{tk.field_p}, (byte) 103);
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
@@ -103,7 +103,7 @@ final class pn extends IntrusiveNode {
                 }
                 if (null != o.field_e) {
                   var6 = 1;
-                  boolean decompiledSharedTail1 = (!(ge.field_v) ||
+                  boolean decompiledSharedTail1 = (!(PowerUp.field_v) ||
                     null == jd.field_b);
                   if (!decompiledSharedTail1) {
                     var4 = "[" + jd.field_b + "] ";

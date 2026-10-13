@@ -14,9 +14,9 @@ final class qa extends ki {
     final jp c(byte param0) {
         if (param0 >= -74) {
           this.a((byte) 57, -62, 109, 2);
-          return ao.field_q;
+          return ObjectHistoryBuffer.field_q;
         }
-        return ao.field_q;
+        return ObjectHistoryBuffer.field_q;
     }
 
     final boolean a(boolean param0) {
@@ -27,7 +27,7 @@ final class qa extends ki {
         ap.field_f = pl.a("ninja", "ninja_mid", (byte) -128, i.field_m);
         hn.field_b = pl.a("ninja", "ninja_far", (byte) 127, i.field_m);
         hc.field_g = pl.a("ninja", "ninja_small", (byte) -81, i.field_m);
-        ao.field_q = pl.a("ninja", "ninja_character", (byte) -105, i.field_m);
+        ObjectHistoryBuffer.field_q = pl.a("ninja", "ninja_character", (byte) -105, i.field_m);
         nk.field_h = jh.a(0, mj.field_d);
         mp.field_Zb = jh.a(0, ap.field_f);
         rh.field_c = jh.a(0, hn.field_b);
@@ -47,7 +47,7 @@ final class qa extends ki {
           lb.g(param4, param2, 640, 480, fj.field_Sb[param3], 0);
           return;
         }
-        pb var6 = ge.a(this.field_m, param3, -20777);
+        pb var6 = PowerUp.a(this.field_m, param3, -20777);
         if (!var6.a((byte) -84, param3, this.field_m)) {
           aa.a(0, hn.field_b, true, param3, var6, 1);
           var6.a(this.field_m, param3, (byte) 78);
@@ -82,7 +82,7 @@ final class qa extends ki {
             return false;
           }
           if (null != hc.field_g) {
-            return null != ao.field_q ? true : false;
+            return null != ObjectHistoryBuffer.field_q ? true : false;
           }
           return false;
         }
@@ -96,7 +96,7 @@ final class qa extends ki {
           return false;
         }
         if (null != hc.field_g) {
-          return null != ao.field_q ? true : false;
+          return null != ObjectHistoryBuffer.field_q ? true : false;
         }
         return false;
     }

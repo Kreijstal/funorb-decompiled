@@ -233,7 +233,7 @@ final class wd extends tk {
         if (param1 == 2) {
           var27 = bm.field_d;
           var29Lifetime1 = ef.field_b[0];
-          var28 = ao.field_l;
+          var28 = ObjectHistoryBuffer.field_l;
           var27.field_d.a(var28, param0 - 686, 11, var29Lifetime1);
           var30 = bm.field_d;
           var32 = ef.field_b[1];

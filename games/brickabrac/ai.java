@@ -419,7 +419,7 @@ final class ai extends ki {
               return;
             }
           }
-          var6 = ge.a(this.field_m, param3, -20777);
+          var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
             ej.a(0, bf.field_K, 1, 0, param3, var6);
             var6.a(this.field_m, param3, (byte) 78);

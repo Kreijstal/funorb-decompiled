@@ -141,7 +141,7 @@ final class oo extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var6 = null;
         if (this.b((byte) -112)) {
-          var6 = ge.a(this.field_m, param3, -20777);
+          var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
             l.a(0, 26746, var6, param3, 1, rg.field_f);
             var6.a(this.field_m, param3, (byte) 78);

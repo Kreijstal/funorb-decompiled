@@ -29,11 +29,11 @@ final class po {
         if (param0 != 13) {
           return;
         }
-        if (224 <= ul.field_p) {
+        if (224 <= ScorePopup.field_p) {
           wp.a(1, 256);
         } else {
-          var1 = ul.field_p % 32;
-          wp.a(param0 ^ 12, 32 + (ul.field_p - var1));
+          var1 = ScorePopup.field_p % 32;
+          wp.a(param0 ^ 12, 32 + (ScorePopup.field_p - var1));
         }
     }
 

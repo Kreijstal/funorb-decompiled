@@ -99,7 +99,7 @@ final class td extends ki {
         if (!this.b((byte) -92)) {
           lb.g(param4, param2, 640, 480, hh.field_c[param3], 10792131);
         } else {
-          var6 = ge.a(this.field_m, param3, -20777);
+          var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
             pi.a(se.field_k, var6, param3, 1, (byte) 18, 0);
             var6.a(this.field_m, param3, (byte) 78);

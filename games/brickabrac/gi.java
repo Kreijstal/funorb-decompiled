@@ -10,7 +10,7 @@ final class gi extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var6 = null;
         if (this.b((byte) -127)) {
-          var6 = ge.a(this.field_m, param3, -20777);
+          var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
             lf.a(var6, 1, 0, fp.field_B, param3, 100);
             var6.a(this.field_m, param3, (byte) 78);

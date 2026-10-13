@@ -602,7 +602,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_pm_show_all", (byte) -125);
                 if (var2 != null) {
-                  ao.field_l = q.a(var2, (byte) 90);
+                  ObjectHistoryBuffer.field_l = q.a(var2, (byte) 90);
                 }
                 var2 = nk.a("mu_chat_pm_friends_only", (byte) -123);
                 if (null != var2) {
@@ -902,7 +902,7 @@ final class nn {
                 }
                 var2 = nk.a("privatechat_friend_offline", (byte) -120);
                 if (var2 != null) {
-                  ul.field_j = q.a(var2, (byte) 102);
+                  ScorePopup.field_j = q.a(var2, (byte) 102);
                 }
                 var2 = nk.a("privatechat_friend_notlisted", (byte) -111);
                 if (null != var2) {
@@ -998,7 +998,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_youhaventunlocked", (byte) 79);
                 if (var2 != null) {
-                  ao.field_j = q.a(var2, (byte) 77);
+                  ObjectHistoryBuffer.field_j = q.a(var2, (byte) 77);
                 }
                 var2 = nk.a("gameopt_trychanging1", (byte) -10);
                 if (null != var2) {
@@ -1942,7 +1942,7 @@ final class nn {
                 }
                 var2 = nk.a("waitingfor_extradata", (byte) 5);
                 if (null != var2) {
-                  hp.field_k = q.a(var2, (byte) 79);
+                  IntHistoryBuffer.field_k = q.a(var2, (byte) 79);
                 }
                 var2 = nk.a("waitingfor_languages", (byte) 65);
                 if (var2 != null) {
@@ -2820,7 +2820,7 @@ final class nn {
                 }
                 var2 = nk.a("fs_accept_countdown_sing", (byte) 40);
                 if (var2 != null) {
-                  ge.field_x = q.a(var2, (byte) 72);
+                  PowerUp.field_x = q.a(var2, (byte) 72);
                 }
                 var2 = nk.a("fs_accept_countdown_pl", (byte) -107);
                 if (var2 != null) {

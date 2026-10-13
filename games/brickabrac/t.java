@@ -31,7 +31,7 @@ final class t {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ge.a(-2846, (java.awt.Component) ((Object) param1));
+          PowerUp.a(-2846, (java.awt.Component) ((Object) param1));
           b.a(20616, (java.awt.Component) ((Object) param1));
           if (param0) {
             return;

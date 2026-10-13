@@ -134,7 +134,7 @@ final class da extends hb {
           return m.field_k + " - " + vh.field_S.b(0, "commonui") + "%";
         }
         if (!ja.field_c.a((byte) -127)) {
-          return hp.field_k;
+          return IntHistoryBuffer.field_k;
         }
         if (!ja.field_c.a(param0 ^ 12)) {
           return qm.field_e + " - " + ja.field_c.b(-4126) + "%";

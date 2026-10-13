@@ -226,14 +226,14 @@ final class so {
           IntrusiveNode.field_f = cr.a("basic", param0, "eyes_game", 2);
           tf.field_g = cr.a("basic", param0, "track_heads", 2);
           ef.field_e = cr.a("basic", param0, "characters_small", 2);
-          ul.field_k = cr.a("basic", param0, "character_heads", param3 ^ 29139);
+          ScorePopup.field_k = cr.a("basic", param0, "character_heads", param3 ^ 29139);
           cn.field_e = cr.a("basic", param0, "lever_small", 2);
-          ul.field_r = cr.a("basic", param0, "lever_small_choc", 2);
+          ScorePopup.field_r = cr.a("basic", param0, "lever_small_choc", 2);
           lp.field_yb = cr.a("basic", param0, "lever_small_space", param3 ^ 29139);
           qi.field_K = kf.a("frame_bubble", "basic", param0, -105);
           ap.field_a = pl.a("basic", "frame_bubble_point", (byte) -120, param0);
           ln.field_j = bd.a("basic", "rosette_sml", param0, (byte) -8);
-          hp.field_l = bd.a("basic", "rosette_lrg", param0, (byte) -8);
+          IntHistoryBuffer.field_l = bd.a("basic", "rosette_lrg", param0, (byte) -8);
           me.field_a = wq.a("basic", param0, "podium2", -946715356);
           pl.field_f = wq.a("basic", param0, "podium3", param3 ^ -946719499);
           cl.field_r = cr.a("basic", param0, "podium_happy", 2);
@@ -285,8 +285,8 @@ final class so {
           for (var10_intLifetime7 = 0; var10_intLifetime7 < ln.field_j.length; var10_intLifetime7++) {
             ln.field_j[var10_intLifetime7].d();
           }
-          for (var10_intLifetime8 = 0; hp.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
-            hp.field_l[var10_intLifetime8].d();
+          for (var10_intLifetime8 = 0; IntHistoryBuffer.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
+            IntHistoryBuffer.field_l[var10_intLifetime8].d();
           }
           um.field_p = pl.a("basic", "character_menu", (byte) -62, param0);
           pa.field_j = pl.a("basic", "character_menu_eyes", (byte) -120, param0);

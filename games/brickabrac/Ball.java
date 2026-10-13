@@ -10,19 +10,19 @@ final class Ball extends CircleBody {
     static jp[] field_G;
     private int field_z;
     static jp[] field_K;
-    hp field_E;
+    IntHistoryBuffer centerXHistory256;
     int field_v;
     static String field_x;
     int field_C;
     int field_J;
     static jp field_D;
     int field_B;
-    hp field_y;
+    IntHistoryBuffer centerYHistory256;
 
     private Ball(int param0, int param1) {
         super(0, 0, 0, 0, 1536, 0);
-        this.field_E = new hp(50);
-        this.field_y = new hp(50);
+        this.centerXHistory256 = new IntHistoryBuffer(50);
+        this.centerYHistory256 = new IntHistoryBuffer(50);
         this.field_z = param0;
         this.setVelocityFromAngle(this.field_z, param1, 116);
     }
@@ -63,7 +63,7 @@ final class Ball extends CircleBody {
           this.y256 = param0.y256 - 3072;
           this.x256 = this.x256 + param0.width256 * this.field_z / 3072;
           if (param1 != 0) {
-            this.field_E = (hp) null;
+            this.centerXHistory256 = (IntHistoryBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "vn.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -72,8 +72,8 @@ final class Ball extends CircleBody {
 
     Ball(int x256, int y256, int velocityX256, int velocityY256) {
         super(x256, y256, velocityX256, velocityY256, 1536, 0);
-        this.field_E = new hp(50);
-        this.field_y = new hp(50);
+        this.centerXHistory256 = new IntHistoryBuffer(50);
+        this.centerYHistory256 = new IntHistoryBuffer(50);
     }
 
     final static int[] d(int param0) {

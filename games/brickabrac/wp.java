@@ -186,7 +186,7 @@ final class wp {
     }
 
     final static void a(int param0, int param1) {
-        ul.field_p = param1;
+        ScorePopup.field_p = param1;
         if (null != m.field_f) {
           m.field_f.a(param1, false);
         }

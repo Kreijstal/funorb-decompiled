@@ -185,7 +185,7 @@ final class hi extends um {
                 var7Lifetime15 = "[" + fi.field_u + "] ";
               }
               if (null != o.field_e) {
-                if (ge.field_v &&
+                if (PowerUp.field_v &&
                   null != jd.field_b) {
                   var7Lifetime15 = "[" + jd.field_b + "] ";
                 } else {
@@ -290,7 +290,7 @@ final class hi extends um {
                     var7Lifetime1Lifetime6 = "[" + fi.field_u + "] ";
                   }
                   if (null != o.field_e) {
-                    if (ge.field_v &&
+                    if (PowerUp.field_v &&
                       null != jd.field_b) {
                       var7Lifetime1Lifetime6 = "[" + jd.field_b + "] ";
                     } else {
@@ -419,7 +419,7 @@ final class hi extends um {
             }
             return true;
           }
-          if (!ge.field_v) {
+          if (!PowerUp.field_v) {
             var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - jq.field_y.c(var20Lifetime2Lifetime2);

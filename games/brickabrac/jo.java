@@ -162,7 +162,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
           lb.a(var24);
           var10 = new jp(nj.field_l[0].field_x, nj.field_l[0].field_z);
           var10.g();
-          nj.field_l[24].c(0, 0, ul.a(255, param1.simulationTick % 360 << 8));
+          nj.field_l[24].c(0, 0, ScorePopup.a(255, param1.simulationTick % 360 << 8));
           kc.field_q.a((byte) 105);
           lb.b(var24);
           stackIn_6_0 = ((1 << param2 & (param3.playerMaskThree | (param3.playerMaskOne | param3.playerMaskTwo))) != 0) ? 0 : 1;

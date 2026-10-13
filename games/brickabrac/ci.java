@@ -13,7 +13,7 @@ final class ci extends ki {
           if (!this.b((byte) -102)) {
             lb.g(param4, param2, 640, 480, 0);
           } else {
-            var8 = ge.a(this.field_m, param3, -20777);
+            var8 = PowerUp.a(this.field_m, param3, -20777);
             if (!var8.a((byte) -84, param3, this.field_m)) {
               dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var8);
               var8.a(this.field_m, param3, (byte) 78);
@@ -27,7 +27,7 @@ final class ci extends ki {
           lb.g(param4, param2, 640, 480, 0);
           return;
         }
-        pb var7 = ge.a(this.field_m, param3, -20777);
+        pb var7 = PowerUp.a(this.field_m, param3, -20777);
         if (!var7.a((byte) -84, param3, this.field_m)) {
           dp.a(1, 0, !param0 ? true : false, param3, ng.field_a, var7);
           var7.a(this.field_m, param3, (byte) 78);

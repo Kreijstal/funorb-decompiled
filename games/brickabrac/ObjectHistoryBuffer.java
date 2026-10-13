@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ao extends IntrusiveNode {
+final class ObjectHistoryBuffer extends IntrusiveNode {
     static String field_l;
     static jp field_q;
     static int[] field_k;
     static String field_j;
     static jp[][] field_o;
     static int[] field_p;
-    int field_n;
-    private Object[] field_i;
-    private int field_m;
+    int latestIndex;
+    private Object[] entries;
+    private int capacity;
 
     public static void a(int param0) {
         field_j = null;
@@ -102,35 +102,35 @@ final class ao extends IntrusiveNode {
         }
     }
 
-    final Object a(int param0, int param1) {
-        if (this.field_n < param0) {
-          throw new RuntimeException("State in future " + this.field_n + " " + param0);
+    final Object get(int index, int obfuscationGuard) {
+        if (this.latestIndex < index) {
+          throw new RuntimeException("State in future " + this.latestIndex + " " + index);
         }
-        int var3 = 80 / ((11 - param1) / 35);
-        if (1 + (this.field_n - this.field_m) > param0) {
-          throw new RuntimeException("State erased " + param0 + ". Lastest entry: " + this.field_n);
+        int var3 = 80 / ((11 - obfuscationGuard) / 35);
+        if (1 + (this.latestIndex - this.capacity) > index) {
+          throw new RuntimeException("State erased " + index + ". Lastest entry: " + this.latestIndex);
         }
-        return this.field_i[param0 % this.field_m];
+        return this.entries[index % this.capacity];
     }
 
-    final void a(Object param0, byte param1) {
-        int fieldTemp$0 = 0;
+    final void append(Object value, byte obfuscationGuard) {
+        int nextIndex = 0;
         try {
-          if (param1 != -39) {
-            this.a(((Object[]) (this.field_i[8]))[13], ((byte[]) (this.field_i[1]))[9]);
+          if (obfuscationGuard != -39) {
+            this.append(((Object[]) (this.entries[8]))[13], ((byte[]) (this.entries[1]))[9]);
           }
-          fieldTemp$0 = this.field_n + 1;
-          this.field_n = this.field_n + 1;
-          this.field_i[fieldTemp$0 % this.field_m] = param0;
+          nextIndex = this.latestIndex + 1;
+          this.latestIndex = this.latestIndex + 1;
+          this.entries[nextIndex % this.capacity] = value;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ao.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ao.A(" + (value != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    ao(int param0) {
-        this.field_n = -1;
-        this.field_m = param0;
-        this.field_i = new Object[this.field_m];
+    ObjectHistoryBuffer(int capacity) {
+        this.latestIndex = -1;
+        this.capacity = capacity;
+        this.entries = new Object[this.capacity];
     }
 
     static {

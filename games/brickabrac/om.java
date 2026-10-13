@@ -215,7 +215,7 @@ final class om extends mh {
               var12 = lp.field_yb;
             }
           } else {
-            var12 = ul.field_r;
+            var12 = ScorePopup.field_r;
           }
           var13 = var12[kb.a(param8, param6, 87, param4)];
           var13.c(-8 + param2 - (var18.field_x + var13.field_x) / 2, -var13.field_z + 480 + 10);
@@ -364,7 +364,7 @@ final class om extends mh {
               var12 = lp.field_yb;
             }
           } else {
-            var12 = ul.field_r;
+            var12 = ScorePopup.field_r;
           }
           var13 = var12[kb.a(param8, param6, 87, param4)];
           var13.c(-8 + param2 - (var18.field_x + var13.field_x) / 2, -var13.field_z + 480 + 10);

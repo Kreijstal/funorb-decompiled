@@ -77,8 +77,8 @@ final class nd {
             return false;
           }
           if (param0) {
-            var4 = ib.field_D[param2] + (ao.field_p[param2] + lf.field_r[param2]);
-            var5 = ib.field_D[param1] + lf.field_r[param1] + ao.field_p[param1];
+            var4 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + lf.field_r[param2]);
+            var5 = ib.field_D[param1] + lf.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
             if (var5 > var4) {
               return true;
             }
@@ -88,8 +88,8 @@ final class nd {
             return !(param1 <= param2);
           }
           field_c = -96;
-          var4Lifetime3 = ib.field_D[param2] + (ao.field_p[param2] + lf.field_r[param2]);
-          var5Lifetime3 = ib.field_D[param1] + lf.field_r[param1] + ao.field_p[param1];
+          var4Lifetime3 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + lf.field_r[param2]);
+          var5Lifetime3 = ib.field_D[param1] + lf.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
           if (var5Lifetime3 > var4Lifetime3) {
             return true;
           }
@@ -111,8 +111,8 @@ final class nd {
           return false;
         }
         if (param0) {
-          var4Lifetime1 = ib.field_D[param2] + (ao.field_p[param2] + lf.field_r[param2]);
-          var5Lifetime1 = ib.field_D[param1] + lf.field_r[param1] + ao.field_p[param1];
+          var4Lifetime1 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + lf.field_r[param2]);
+          var5Lifetime1 = ib.field_D[param1] + lf.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -122,8 +122,8 @@ final class nd {
           return !(param1 <= param2);
         }
         field_c = -96;
-        var4Lifetime2 = ib.field_D[param2] + (ao.field_p[param2] + lf.field_r[param2]);
-        var5Lifetime2 = ib.field_D[param1] + lf.field_r[param1] + ao.field_p[param1];
+        var4Lifetime2 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + lf.field_r[param2]);
+        var5Lifetime2 = ib.field_D[param1] + lf.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
         if (var5Lifetime2 > var4Lifetime2) {
           return true;
         }

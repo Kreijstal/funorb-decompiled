@@ -37,7 +37,7 @@ final class dp extends ki {
             lb.g(param4, param2, 640, 480, kg.field_d[param3], 22953);
             return;
           }
-          var7 = ge.a(this.field_m, param3, -20777);
+          var7 = PowerUp.a(this.field_m, param3, -20777);
           if (!var7.a((byte) -84, param3, this.field_m)) {
             s.a(ch.field_m, 1, param3, th.field_j, var7, 0, (byte) -86, va.field_b);
             var7.a(this.field_m, param3, (byte) 78);
@@ -49,7 +49,7 @@ final class dp extends ki {
           lb.g(param4, param2, 640, 480, kg.field_d[param3], 22953);
           return;
         }
-        pb var8 = ge.a(this.field_m, param3, -20777);
+        pb var8 = PowerUp.a(this.field_m, param3, -20777);
         if (!var8.a((byte) -84, param3, this.field_m)) {
           s.a(ch.field_m, 1, param3, th.field_j, var8, 0, (byte) -86, va.field_b);
           var8.a(this.field_m, param3, (byte) 78);

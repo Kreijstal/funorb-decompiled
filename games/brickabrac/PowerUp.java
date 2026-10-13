@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends CircleBody {
-    int field_y;
+final class PowerUp extends CircleBody {
+    int activationTick;
     static boolean field_v;
     static String field_x;
     static volatile int field_w;
 
-    ge(ge param0, int param1) {
-        this(param0.x256, param0.y256, param0.typeId, param1);
+    PowerUp(PowerUp source, int activationTick) {
+        this(source.x256, source.y256, source.typeId, activationTick);
     }
 
     final static void a(int param0, java.awt.Component param1) {
@@ -16,7 +16,7 @@ final class ge extends CircleBody {
           param1.removeKeyListener(gp.field_c);
           param1.removeFocusListener(gp.field_c);
           if (param0 != -2846) {
-            ge.c(91);
+            PowerUp.c(91);
           }
           pl.field_d = -1;
         } catch (RuntimeException runtimeException) {
@@ -24,32 +24,32 @@ final class ge extends CircleBody {
         }
     }
 
-    private ge(int param0, int param1, int param2, int param3) {
-        super(param0, param1, 0, 1024, 2048, param2);
-        this.field_y = param3;
+    private PowerUp(int x256, int y256, int typeId, int activationTick) {
+        super(x256, y256, 0, 1024, 2048, typeId);
+        this.activationTick = activationTick;
     }
 
     public static void c(int param0) {
         field_x = null;
         if (param0 != 6) {
-          ge.c(-60);
+          PowerUp.c(-60);
         }
     }
 
-    ge(int param0, int param1, int param2) {
-        this(param0, param1, param2, 0);
+    PowerUp(int x256, int y256, int typeId) {
+        this(x256, y256, typeId, 0);
     }
 
     final static pb a(int param0, int param1, int param2) {
         if (param2 != -20777) {
           java.awt.Component var4 = (java.awt.Component) null;
-          ge.a(58, (java.awt.Component) null);
+          PowerUp.a(58, (java.awt.Component) null);
         }
         return so.a(param2 ^ -20777, param1, param0, ip.field_s);
     }
 
-    final boolean b(boolean param0) {
-        if (param0) {
+    final boolean isSelfTargeted(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           StringBuilder var3 = (StringBuilder) null;
           this.computeSyncChecksum(61, (StringBuilder) null);
         }
@@ -66,7 +66,7 @@ final class ge extends CircleBody {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= 79) {
-            stackIn_4_0 = 139 * this.field_y + 131 << 5 ^ super.computeSyncChecksum(121, diagnostics);
+            stackIn_4_0 = 139 * this.activationTick + 131 << 5 ^ super.computeSyncChecksum(121, diagnostics);
             return stackIn_4_0;
           }
           stackIn_2_0 = -19;
@@ -85,7 +85,7 @@ final class ge extends CircleBody {
         }
     }
 
-    final void a(PlayerBoard param0, byte param1) {
+    final void applyToBoard(PlayerBoard board, byte obfuscationGuard) {
         RuntimeException stackIn_80_0 = null;
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
@@ -108,36 +108,36 @@ final class ge extends CircleBody {
         var3 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0.field_Z == 3) {
+          if (board.field_Z == 3) {
             return;
           }
           if (this.typeId != 3) {
             if (4 == this.typeId) {
-              var3_ref = (Ball) (param0.queuedBalls.first(-75));
+              var3_ref = (Ball) (board.queuedBalls.first(-75));
               while (var3_ref != null) {
                 var3_ref.a((byte) 40, 150);
-                var3_ref = (Ball) (param0.queuedBalls.next((byte) 116));
+                var3_ref = (Ball) (board.queuedBalls.next((byte) 116));
               }
-              var3_ref = (Ball) (param0.field_gb.first(-9));
+              var3_ref = (Ball) (board.activeBalls.first(-9));
               while (var3_ref != null) {
                 var3_ref.a((byte) 40, 150);
-                var3_ref = (Ball) (param0.field_gb.next((byte) 116));
+                var3_ref = (Ball) (board.activeBalls.next((byte) 116));
               }
             } else {
               if (5 != this.typeId) {
                 if (6 != this.typeId) {
                   if (this.typeId == 7) {
-                    param0.paddle.shrink((byte) 127);
+                    board.paddle.shrink((byte) 127);
                   } else {
                     if (this.typeId == 8) {
-                      param0.paddle.b(true);
+                      board.paddle.b(true);
                     } else {
                       if (this.typeId == 9) {
-                        if (!param0.field_gb.isEmpty(false)) {
-                          var12 = (Ball) (param0.field_gb.first(-63));
+                        if (!board.activeBalls.isEmpty(false)) {
+                          var12 = (Ball) (board.activeBalls.first(-63));
                           var3_ref = var12;
                           var4 = (31457280 - (var12.y256 << 8)) / var12.velocityY256;
-                          var5 = (Ball) (param0.field_gb.first(-8));
+                          var5 = (Ball) (board.activeBalls.first(-8));
                           while (var5 != null) {
                             var5.field_C = 0;
                             var5.field_v = 0;
@@ -151,96 +151,96 @@ final class ge extends CircleBody {
                             } else {
                               var5.unlink((byte) 111);
                             }
-                            var5 = (Ball) (param0.field_gb.next((byte) 116));
+                            var5 = (Ball) (board.activeBalls.next((byte) 116));
                           }
                         }
-                        if (!param0.queuedBalls.isEmpty(false)) {
-                          if (!param0.field_gb.isEmpty(false)) {
-                            param0.queuedBalls.clear((byte) -62);
+                        if (!board.queuedBalls.isEmpty(false)) {
+                          if (!board.activeBalls.isEmpty(false)) {
+                            board.queuedBalls.clear((byte) -62);
                           } else {
-                            var3_ref = (Ball) (param0.queuedBalls.first(param1 - 108));
+                            var3_ref = (Ball) (board.queuedBalls.first(obfuscationGuard - 108));
                             var3_ref.field_C = 0;
                             var3_ref.field_v = 0;
-                            param0.queuedBalls.clear((byte) -63);
-                            param0.queuedBalls.addLast(var3_ref, (byte) 3);
+                            board.queuedBalls.clear((byte) -63);
+                            board.queuedBalls.addLast(var3_ref, (byte) 3);
                           }
                         }
-                        while (param0.paddle.sizeStage > 8) {
-                          param0.paddle.shrink((byte) 126);
+                        while (board.paddle.sizeStage > 8) {
+                          board.paddle.shrink((byte) 126);
                         }
-                        param0.paddle.field_H = 0;
-                        param0.paddle.field_z = 0;
+                        board.paddle.field_H = 0;
+                        board.paddle.field_z = 0;
                       } else {
                         if (10 == this.typeId) {
-                          if (param0.field_gb.size(118) == 1) {
-                            var11 = (Ball) (param0.field_gb.first(param1 - 161));
-                            var4 = kj.a(var11.velocityY256 * var11.velocityY256 + var11.velocityX256 * var11.velocityX256, param1 ^ 97) >> 8;
+                          if (board.activeBalls.size(118) == 1) {
+                            var11 = (Ball) (board.activeBalls.first(obfuscationGuard - 161));
+                            var4 = kj.a(var11.velocityY256 * var11.velocityY256 + var11.velocityX256 * var11.velocityX256, obfuscationGuard ^ 97) >> 8;
                             var5_int = var11.velocityX256;
                             var6 = var11.velocityY256;
                             for (var7 = 0; 7 > var7; var7++) {
-                              param0.field_gb.addLast(new Ball(var11.x256, var11.y256, 0, 0), (byte) 3);
+                              board.activeBalls.addLast(new Ball(var11.x256, var11.y256, 0, 0), (byte) 3);
                             }
                             var7Lifetime1 = 0;
-                            var8 = (Ball) (param0.field_gb.first(-39));
+                            var8 = (Ball) (board.activeBalls.first(-39));
                             while (var8 != null) {
-                              var8.velocityX256 = (15 * BrickABrac.c(param1 + 1949, 1024 * var7Lifetime1) >> 8) + var5_int;
+                              var8.velocityX256 = (15 * BrickABrac.c(obfuscationGuard + 1949, 1024 * var7Lifetime1) >> 8) + var5_int;
                               var8.velocityY256 = var6 + (15 * sa.a(var7Lifetime1 * 1024, -4097) >> 8);
                               var9 = kj.a(var8.velocityY256 * var8.velocityY256 + var8.velocityX256 * var8.velocityX256, 2) >> 8;
                               var8.velocityX256 = var4 * var8.velocityX256 / var9;
                               var8.velocityY256 = var4 * var8.velocityY256 / var9;
                               var7Lifetime1++;
-                              var8 = (Ball) (param0.field_gb.next((byte) 116));
+                              var8 = (Ball) (board.activeBalls.next((byte) 116));
                             }
                           }
                         } else {
                           if (this.typeId == 11) {
-                            var3_ref = (Ball) (param0.field_gb.first(-54));
+                            var3_ref = (Ball) (board.activeBalls.first(-54));
                             while (var3_ref != null) {
                               var3_ref.c(512, 128);
-                              var3_ref = (Ball) (param0.field_gb.next((byte) 116));
+                              var3_ref = (Ball) (board.activeBalls.next((byte) 116));
                             }
                           } else {
                             if (this.typeId == 12) {
-                              param0.paddle.field_H = param0.paddle.field_H + 300;
+                              board.paddle.field_H = board.paddle.field_H + 300;
                             } else {
                               if (this.typeId == 13) {
-                                var13 = (Ball) (param0.field_gb.first(param1 - 224));
+                                var13 = (Ball) (board.activeBalls.first(obfuscationGuard - 224));
                                 while (var13 != null) {
                                   var13.c(512, -128);
-                                  var13 = (Ball) (param0.field_gb.next((byte) 116));
+                                  var13 = (Ball) (board.activeBalls.next((byte) 116));
                                 }
                               } else {
                                 if (this.typeId != 14) {
                                   if (this.typeId == 15) {
-                                    var3_ref = (Ball) (param0.queuedBalls.first(-30));
+                                    var3_ref = (Ball) (board.queuedBalls.first(-30));
                                     while (var3_ref != null) {
-                                      var3_ref.b(param1 - 150, 150);
-                                      var3_ref = (Ball) (param0.queuedBalls.next((byte) 116));
+                                      var3_ref.b(obfuscationGuard - 150, 150);
+                                      var3_ref = (Ball) (board.queuedBalls.next((byte) 116));
                                     }
-                                    var3_ref = (Ball) (param0.field_gb.first(-88));
+                                    var3_ref = (Ball) (board.activeBalls.first(-88));
                                     while (var3_ref != null) {
                                       var3_ref.b(-128, 150);
-                                      var3_ref = (Ball) (param0.field_gb.next((byte) 116));
+                                      var3_ref = (Ball) (board.activeBalls.next((byte) 116));
                                     }
                                   } else {
                                     if (16 == this.typeId) {
-                                      param0.field_n = param0.field_n + 16;
+                                      board.field_n = board.field_n + 16;
                                     } else {
                                       if (17 != this.typeId) {
                                         if (18 == this.typeId) {
-                                          var3_ref = (Ball) (param0.field_gb.first(-73));
+                                          var3_ref = (Ball) (board.activeBalls.first(-73));
                                           while (var3_ref != null) {
                                             var3_ref.field_C = var3_ref.field_C + 40;
-                                            var3_ref = (Ball) (param0.field_gb.next((byte) 116));
+                                            var3_ref = (Ball) (board.activeBalls.next((byte) 116));
                                           }
                                         }
                                       } else {
-                                        param0.paddle.grow(82);
+                                        board.paddle.grow(82);
                                       }
                                     }
                                   }
                                 } else {
-                                  param0.paddle.field_z = param0.paddle.field_z + 150;
+                                  board.paddle.field_z = board.paddle.field_z + 150;
                                 }
                               }
                             }
@@ -250,21 +250,21 @@ final class ge extends CircleBody {
                     }
                   }
                 } else {
-                  if (param0.field_C.isEmpty(false)) {
-                    param0.field_k = 0;
-                    param0.field_R = param0.e(param1 + 22);
-                    param0.f(1000);
+                  if (board.field_C.isEmpty(false)) {
+                    board.field_k = 0;
+                    board.field_R = board.e(obfuscationGuard + 22);
+                    board.f(1000);
                   }
                 }
               } else {
-                param0.field_rb = param0.field_rb + 1;
+                board.field_rb = board.field_rb + 1;
               }
             }
           } else {
-            param0.paddle.field_w = param0.paddle.field_w + 250;
+            board.paddle.field_w = board.paddle.field_w + 250;
           }
-          if (param1 != 99) {
-            ge.c(-104);
+          if (obfuscationGuard != 99) {
+            PowerUp.c(-104);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -272,16 +272,16 @@ final class ge extends CircleBody {
           var3_ref2 = decompiledCaughtException;
           stackIn_80_0 = var3_ref2;
           stackIn_80_1 = new StringBuilder().append("ge.C(");
-          if (param0 == null) {
+          if (board == null) {
             stackIn_81_2 = "null";
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param1).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    ge() {
+    PowerUp() {
         this(0, 0, 0, 0);
     }
 

@@ -149,13 +149,13 @@ final class ij implements wb {
         }
         uf.field_a = aj.a(3, true);
         ki.field_f = bq.a(-6, 0, false, 5, true);
-        ul.field_l = aj.a(6, true);
+        ScorePopup.field_l = aj.a(6, true);
         qb.field_r = aj.a(7, true);
         i.field_s = aj.a(8, param0);
         uj.field_o = aj.a(9, true);
         kh.field_i = aj.a(10, true);
         nl.field_a = aj.a(11, true);
-        hp.field_i = aj.a(12, true);
+        IntHistoryBuffer.field_i = aj.a(12, true);
         wd.field_C = aj.a(13, true);
         wn.a(gq.field_Rb, wn.field_c, 0);
         bh.field_tb = new s(82);
@@ -164,16 +164,16 @@ final class ij implements wb {
         bh.field_tb.a(tm.field_e, "lobby", 124, ib.field_F, wn.field_c);
         bh.field_tb.a(tm.field_e, "kartika13", 125, ib.field_F, gq.field_Rb);
         bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, ki.field_f);
-        bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ul.field_l);
+        bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
         bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
         bh.field_tb.a(qb.field_r, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(i.field_s, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(uj.field_o, false, kc.field_i, sg.field_m);
         bh.field_tb.a(kh.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
-        bh.field_tb.a(hp.field_i, false, fa.field_j, uo.field_a);
-        bh.field_tb.a(wd.field_C, !param0 ? true : false, hp.field_k, qm.field_e);
-        bh.field_tb.a(uf.field_a, false, hp.field_k, qm.field_e);
+        bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
+        bh.field_tb.a(wd.field_C, !param0 ? true : false, IntHistoryBuffer.field_k, qm.field_e);
+        bh.field_tb.a(uf.field_a, false, IntHistoryBuffer.field_k, qm.field_e);
     }
 
     public final boolean a(byte param0) {
@@ -190,7 +190,7 @@ final class ij implements wb {
                 if (4 == var3) {
                   ai.a((byte) 24, 92.0f, Ball.field_x);
                   sl.field_C.g(121);
-                  sb.a(nl.field_a, hp.field_i, 2);
+                  sb.a(nl.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
                   if (var3 != 5) {
                     return true;
@@ -201,7 +201,7 @@ final class ij implements wb {
               } else {
                 ai.a((byte) 24, 90.0f, uk.field_u);
                 sl.field_C.g(106);
-                so.a(ki.field_f, gq.field_Rb, ul.field_l, 29137, wn.field_c);
+                so.a(ki.field_f, gq.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }
             } else {
               ai.a((byte) 24, 88.0f, sf.field_bb);

@@ -214,7 +214,7 @@ final class il extends CircleBody {
           af.field_u = param5 * param3 / param2;
           jk.field_w.b(ob.field_J);
           m.field_f = param0;
-          m.field_f.a(ul.field_p, false);
+          m.field_f.a(ScorePopup.field_p, false);
           eo.field_f.b(m.field_f);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "il.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');

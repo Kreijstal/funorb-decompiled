@@ -190,9 +190,9 @@ class tk extends IntrusiveNode {
           !(lf.field_r.length >= param1)) {
           lf.field_r = new int[param1 * 2];
         }
-        if (ao.field_p == null ||
-          !(param1 <= ao.field_p.length)) {
-          ao.field_p = new int[param1 * 2];
+        if (ObjectHistoryBuffer.field_p == null ||
+          !(param1 <= ObjectHistoryBuffer.field_p.length)) {
+          ObjectHistoryBuffer.field_p = new int[param1 * 2];
         }
         if (null == ib.field_D ||
           !(param1 <= ib.field_D.length)) {

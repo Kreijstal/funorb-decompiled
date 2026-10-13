@@ -177,7 +177,7 @@ final class bq {
               ri.field_I[1] = 5;
             }
           } else {
-            var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(ge.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
+            var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(kg.field_h[var5])) {

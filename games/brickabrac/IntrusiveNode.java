@@ -35,7 +35,7 @@ class IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = ao.a(0, param0.length, 19166, param0);
+            stackIn_4_0 = ObjectHistoryBuffer.a(0, param0.length, 19166, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

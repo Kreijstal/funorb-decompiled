@@ -52,7 +52,7 @@ final class vj {
         try {
           var4_int = -2 / ((41 - param2) / 40);
           if (null != dc.field_e) {
-            ul.a(1048576, param3, param1, param0, -104);
+            ScorePopup.a(1048576, param3, param1, param0, -104);
           }
           if (null == m.field_f) {
             return;

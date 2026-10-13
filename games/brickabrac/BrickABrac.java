@@ -673,15 +673,15 @@ public final class BrickABrac extends sa {
         il.c(124);
         kc.a(95);
         Paddle.e(-77);
-        ge.c(6);
+        PowerUp.c(6);
         lj.b(false);
-        ul.a((byte) -73);
+        ScorePopup.a((byte) -73);
         MultiplayerMatch.d(-19537);
         p.b(false);
         vd.a(true);
         dh.a();
         rf.a((byte) 98);
-        ao.a(81);
+        ObjectHistoryBuffer.a(81);
         aa.b(118);
         ic.a(false);
         ga.a(0);
@@ -803,7 +803,7 @@ public final class BrickABrac extends sa {
         jo.b(11);
         rq.a((byte) -118);
         hg.a((byte) 19);
-        hp.a(67108864);
+        IntHistoryBuffer.a(67108864);
         va.a(-15504);
         jh.a((byte) -123);
         se.a(84);

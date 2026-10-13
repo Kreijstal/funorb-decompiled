@@ -154,7 +154,7 @@ final class jk extends ki {
             lb.g(param4, param2, 640, 480, um.field_u[param3], 928072);
             return;
           }
-          var7 = ge.a(this.field_m, param3, -20777);
+          var7 = PowerUp.a(this.field_m, param3, -20777);
           if (!var7.a((byte) -84, param3, this.field_m)) {
             hh.a(n.field_c, 0, 1, var7, -8562, param3, vj.field_b);
             var7.a(this.field_m, param3, (byte) 78);
@@ -166,7 +166,7 @@ final class jk extends ki {
           lb.g(param4, param2, 640, 480, um.field_u[param3], 928072);
           return;
         }
-        pb var8 = ge.a(this.field_m, param3, -20777);
+        pb var8 = PowerUp.a(this.field_m, param3, -20777);
         if (!var8.a((byte) -84, param3, this.field_m)) {
           hh.a(n.field_c, 0, 1, var8, -8562, param3, vj.field_b);
           var8.a(this.field_m, param3, (byte) 78);

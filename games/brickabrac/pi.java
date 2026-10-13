@@ -79,7 +79,7 @@ final class pi extends wq {
         int var10 = 0;
         int var11 = 0;
         Ball var12_ref_vn = null;
-        ge var12_ref_ge = null;
+        PowerUp var12_ref_ge = null;
         il var12_ref_il = null;
         int var12 = 0;
         int var13 = 0;
@@ -97,7 +97,7 @@ final class pi extends wq {
         Object var25 = null;
         Ball var26 = null;
         kc var27 = null;
-        ul var28 = null;
+        ScorePopup var28 = null;
         var22 = null;
         var23 = null;
         var25 = null;
@@ -121,10 +121,10 @@ final class pi extends wq {
           var10 = stackIn_8_0;
           if (var24.field_Z == 2 &&
             var10 == 0) {
-            var11 = var24.field_gb.size(127);
-            var12_ref_vn = (Ball) (var24.field_gb.first(-7));
+            var11 = var24.activeBalls.size(127);
+            var12_ref_vn = (Ball) (var24.activeBalls.first(-7));
             while (var12_ref_vn != null) {
-              var13 = var12_ref_vn.field_E.field_j;
+              var13 = var12_ref_vn.centerXHistory256.latestIndex;
               if (var12_ref_vn.field_C < 40) {
                 stackIn_16_0 = (18 + var12_ref_vn.field_C) / (var11 * 3);
               } else {
@@ -137,8 +137,8 @@ final class pi extends wq {
               var18 = 0;
               while (var13 >= 0) {
                 if (var18 < var14) {
-                  var19 = var12_ref_vn.field_E.b(var13, 1);
-                  var20 = var12_ref_vn.field_y.b(var13, 1);
+                  var19 = var12_ref_vn.centerXHistory256.get(var13, 1);
+                  var20 = var12_ref_vn.centerYHistory256.get(var13, 1);
                   lb.a((param5 << 4) + (var19 >> 4) / param2, (var20 >> 4) / param2 + (param3 << 4), var17 / param2 >> 4, var15, ag.field_M);
                   var15 = var15 - var16;
                   var17 = var17 * 252 >> 8;
@@ -153,17 +153,17 @@ final class pi extends wq {
                 la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / param2 + (param5 << 4), (param3 << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / param2, (var12_ref_vn.radius256 >> 3) / param2, 4, 3, lj.field_n, var24.simulationTick / 5);
               }
               kq.a(var12_ref_vn, (byte) -119, param2, param5, param3);
-              var12_ref_vn = (Ball) (var24.field_gb.next((byte) 116));
+              var12_ref_vn = (Ball) (var24.activeBalls.next((byte) 116));
             }
             var26 = (Ball) (var24.queuedBalls.first(-76));
             while (var26 != null) {
               kq.a(var26, (byte) -119, param2, param5, param3);
               var26 = (Ball) (var24.queuedBalls.next((byte) 116));
             }
-            var12_ref_ge = (ge) (var24.field_pb.first(-113));
+            var12_ref_ge = (PowerUp) (var24.fallingPowerUps.first(-113));
             while (var12_ref_ge != null) {
               we.field_b[var12_ref_ge.typeId].c(param5 + (var12_ref_ge.x256 >> 8) / param2, (var12_ref_ge.y256 >> 8) / param2 + param3);
-              var12_ref_ge = (ge) (var24.field_pb.next((byte) 116));
+              var12_ref_ge = (PowerUp) (var24.fallingPowerUps.next((byte) 116));
             }
             var12_ref_il = (il) (var24.field_C.first(-20));
             while (var12_ref_il != null) {
@@ -208,13 +208,13 @@ final class pi extends wq {
           if (var24.field_D != null) {
             jg.a(param5, var24, var24.field_D, param2, 25, param3);
           }
-          var28 = (ul) (var24.field_nb.first(-81));
+          var28 = (ScorePopup) (var24.scorePopups.first(-81));
           if (param0 < 14) {
             return;
           }
           while (var28 != null) {
             cn.a(var28, var24, 10030, param5, param3);
-            var28 = (ul) (var24.field_nb.next((byte) 116));
+            var28 = (ScorePopup) (var24.scorePopups.next((byte) 116));
           }
           if (0 != (param4.playerMaskThree & 1 << param1)) {
             cp.a(param5, var8, var9, (byte) 126, var24, param3, param2);

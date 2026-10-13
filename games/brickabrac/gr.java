@@ -84,7 +84,7 @@ final class gr {
           fq.field_d = ol.field_z;
         } else {
           bq.field_e = ip.field_v;
-          a.field_s = hp.field_l;
+          a.field_s = IntHistoryBuffer.field_l;
           tf.field_c = dg.field_b;
           Ball.field_w = dg.field_e;
           jc.field_J = Ball.field_D;

@@ -11,23 +11,23 @@ final class PlayerBoard extends IntrusiveNode {
     int field_db;
     int field_bb;
     int field_j;
-    NodeDeque field_nb;
+    NodeDeque scorePopups;
     int field_rb;
     int score;
     int field_I;
     int field_q;
-    private ao field_Y;
+    private ObjectHistoryBuffer snapshotHistory;
     Paddle paddle;
     NodeDeque queuedBalls;
-    NodeDeque field_gb;
+    NodeDeque activeBalls;
     NodeDeque field_x;
     int field_A;
-    NodeDeque field_pb;
+    NodeDeque fallingPowerUps;
     NodeDeque field_C;
-    ao field_kb;
+    ObjectHistoryBuffer powerUpHistory;
     int field_N;
     kq field_ab;
-    int field_X;
+    int nextPowerUpIndex;
     int field_hb;
     NodeDeque[] field_z;
     NodeDeque field_v;
@@ -183,7 +183,7 @@ final class PlayerBoard extends IntrusiveNode {
         int var6;
         Ball var5Lifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
-        var2 = this.a(3, 96, 25);
+        var2 = this.ticksUntilPendingPowerUp(3, 96, 25);
         if (var2 != -1 &&
           var2 > this.paddle.field_w) {
           return new lj(3);
@@ -193,10 +193,10 @@ final class PlayerBoard extends IntrusiveNode {
           var2 == -1) {
           return new lj(3, false);
         }
-        if (this.a(9, 96, 25) != -1) {
+        if (this.ticksUntilPendingPowerUp(9, 96, 25) != -1) {
           return new lj(9);
         }
-        var3 = this.a(15, 117, 25);
+        var3 = this.ticksUntilPendingPowerUp(15, 117, 25);
         if (var3 != -1) {
           var4 = 0;
           var5 = (Ball) (this.queuedBalls.first(-98));
@@ -206,36 +206,36 @@ final class PlayerBoard extends IntrusiveNode {
             }
             var5 = (Ball) (this.queuedBalls.next((byte) 116));
           }
-          var5Lifetime1 = (Ball) (this.field_gb.first(-95));
+          var5Lifetime1 = (Ball) (this.activeBalls.first(-95));
           while (var5Lifetime1 != null) {
             if (var5Lifetime1.field_J < var3) {
               var4 = 1;
             }
-            var5Lifetime1 = (Ball) (this.field_gb.next((byte) 116));
+            var5Lifetime1 = (Ball) (this.activeBalls.next((byte) 116));
           }
           if (var4 != 0) {
             return new lj(15);
           }
         }
-        if (this.a(6, 117, 25) != -1) {
+        if (this.ticksUntilPendingPowerUp(6, 117, 25) != -1) {
           return new lj(6);
         }
-        if (this.a(16, 74, 25) != -1) {
+        if (this.ticksUntilPendingPowerUp(16, 74, 25) != -1) {
           return new lj(16);
         }
-        if (this.a(7, 123, 25) != -1) {
+        if (this.ticksUntilPendingPowerUp(7, 123, 25) != -1) {
           return new lj(7);
         }
         if (param0 >= -81) {
           this.field_E = 12;
         }
-        if (this.a(11, 33, 25) != -1) {
+        if (this.ticksUntilPendingPowerUp(11, 33, 25) != -1) {
           return new lj(11);
         }
-        if (this.a(8, 84, 25) != -1) {
+        if (this.ticksUntilPendingPowerUp(8, 84, 25) != -1) {
           return new lj(8);
         }
-        if (this.a(13, 102, 25) != -1) {
+        if (this.ticksUntilPendingPowerUp(13, 102, 25) != -1) {
           return new lj(13);
         }
         return null;
@@ -283,7 +283,7 @@ final class PlayerBoard extends IntrusiveNode {
         int var8 = 0;
         int var9 = 0;
         Ball var10 = null;
-        ge var11 = null;
+        PowerUp var11 = null;
         cl var12 = null;
         il var13 = null;
         Ball var14 = null;
@@ -390,20 +390,20 @@ final class PlayerBoard extends IntrusiveNode {
             var14 = (Ball) (this.queuedBalls.next((byte) 116));
           }
           if (var3_int != 0) {
-            discarded$16 = param1.append("Balls in play: " + this.field_gb.size(119) + "\n");
+            discarded$16 = param1.append("Balls in play: " + this.activeBalls.size(119) + "\n");
           }
-          var10 = (Ball) (this.field_gb.first(-75));
+          var10 = (Ball) (this.activeBalls.first(-75));
           while (var10 != null) {
             var4 = var4 ^ var10.computeSyncChecksum(82, param1);
-            var10 = (Ball) (this.field_gb.next((byte) 116));
+            var10 = (Ball) (this.activeBalls.next((byte) 116));
           }
           if (var3_int != 0) {
             discarded$17 = param1.append("9. " + Integer.toString(var4, 16) + "\n");
           }
-          var11 = (ge) (this.field_pb.first(-61));
+          var11 = (PowerUp) (this.fallingPowerUps.first(-61));
           while (var11 != null) {
             var4 = var4 ^ var11.computeSyncChecksum(114, param1);
-            var11 = (ge) (this.field_pb.next((byte) 116));
+            var11 = (PowerUp) (this.fallingPowerUps.next((byte) 116));
           }
           if (var3_int != 0) {
             discarded$18 = param1.append("10. " + Integer.toString(var4, 16) + "\n");
@@ -470,21 +470,21 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    private final int a(int param0, int param1, int param2) {
-        int var4 = 0;
-        ge var5 = null;
+    private final int ticksUntilPendingPowerUp(int typeId, int obfuscationGuard, int lookaheadTicks) {
+        int historyIndex = 0;
+        PowerUp powerUp = null;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        if (param1 <= 8) {
+        if (obfuscationGuard <= 8) {
           return -87;
         }
-        param2 = this.simulationTick + param2;
-        for (var4 = this.field_X; var4 <= this.field_kb.field_n; var4++) {
-          var5 = (ge) (this.field_kb.a(var4, 111));
-          if (!(param2 >= var5.field_y)) {
+        lookaheadTicks = this.simulationTick + lookaheadTicks;
+        for (historyIndex = this.nextPowerUpIndex; historyIndex <= this.powerUpHistory.latestIndex; historyIndex++) {
+          powerUp = (PowerUp) (this.powerUpHistory.get(historyIndex, 111));
+          if (!(lookaheadTicks >= powerUp.activationTick)) {
             return -1;
           }
-          if (var5.typeId == param0) {
-            return var5.field_y - this.simulationTick;
+          if (powerUp.typeId == typeId) {
+            return powerUp.activationTick - this.simulationTick;
           }
         }
         return -1;
@@ -506,7 +506,7 @@ final class PlayerBoard extends IntrusiveNode {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ge var11 = null;
+        PowerUp var11 = null;
         int var12 = 0;
         Brick var13 = null;
         cl var14 = null;
@@ -525,7 +525,7 @@ final class PlayerBoard extends IntrusiveNode {
           this.field_Z = param1.l(255);
           this.field_P = param1.i(65280);
           this.simulationTick = param1.e(255);
-          this.field_Y.field_n = -1 + this.simulationTick / 5;
+          this.snapshotHistory.latestIndex = -1 + this.simulationTick / 5;
           this.score = param1.e((byte) -34);
           this.field_qb = param1.l(255);
           this.field_rb = param1.l(255);
@@ -561,7 +561,7 @@ final class PlayerBoard extends IntrusiveNode {
           }
           this.a(var6, 9, var5);
           this.queuedBalls.clear((byte) -79);
-          this.field_gb.clear((byte) -118);
+          this.activeBalls.clear((byte) -118);
           var8Lifetime2 = param1.l(255);
           for (var9 = 0; var8Lifetime2 > var9; var9++) {
             var15 = new Ball();
@@ -572,14 +572,14 @@ final class PlayerBoard extends IntrusiveNode {
           for (var9Lifetime1 = 0; var8Lifetime3 > var9Lifetime1; var9Lifetime1++) {
             var16 = new Ball();
             var16.readBodySnapshot(107, param1);
-            this.field_gb.addLast(var16, (byte) 3);
+            this.activeBalls.addLast(var16, (byte) 3);
           }
-          this.field_pb.clear((byte) -63);
+          this.fallingPowerUps.clear((byte) -63);
           var9Lifetime2 = param1.l(255);
           for (var10 = 0; var9Lifetime2 > var10; var10++) {
-            var11 = new ge();
+            var11 = new PowerUp();
             var11.readBodySnapshot(97, param1);
-            this.field_pb.addLast(var11, (byte) 3);
+            this.fallingPowerUps.addLast(var11, (byte) 3);
           }
           this.paddle.readBodySnapshot(100, param1);
           this.field_C.clear((byte) -83);
@@ -683,8 +683,8 @@ final class PlayerBoard extends IntrusiveNode {
         this.paddle.resetSize(param0 ^ 85);
         this.queuedBalls.clear((byte) -82);
         this.queuedBalls.addLast(new Ball(this.paddle, param2, 1536), (byte) 3);
-        this.field_pb.clear((byte) -92);
-        this.field_gb.clear((byte) -88);
+        this.fallingPowerUps.clear((byte) -92);
+        this.activeBalls.clear((byte) -88);
         if (param0 != 85) {
           this.field_j = 84;
         }
@@ -860,7 +860,7 @@ final class PlayerBoard extends IntrusiveNode {
 
     final void a(int param0, Brick param1, int param2) {
         try {
-          this.a(param0, false, param1.x256 + param1.width256 / 2, param1.height256 / param2 + param1.y256);
+          this.addScore(param0, false, param1.x256 + param1.width256 / 2, param1.height256 / param2 + param1.y256);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "j.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -868,29 +868,29 @@ final class PlayerBoard extends IntrusiveNode {
 
     final void a(int param0, Paddle param1, int param2) {
         try {
-          this.a(param0, false, param1.x256 + param1.width256 / param2, -12800 + param1.y256);
+          this.addScore(param0, false, param1.x256 + param1.width256 / param2, -12800 + param1.y256);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "j.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void addScore(int points, boolean resetStateWord, int x256, int y256) {
         int var6 = 0;
         int var5 = 0;
         if (100 < this.a(200, (byte) 62)) {
-          var5 = param0;
+          var5 = points;
           ep.field_i = ep.field_i + var5;
         } else {
-          var5 = param0;
+          var5 = points;
           var6 = this.a(50, (byte) 62);
           ep.field_i = ep.field_i - var6 * var5;
           fp.field_z = fp.field_z + (1 + var6) * var5;
         }
-        if (param1) {
+        if (resetStateWord) {
           this.field_l = 1;
         }
-        this.score = this.score + param0;
-        this.field_nb.addLast(new ul(param0, param2, param3), (byte) 3);
+        this.score = this.score + points;
+        this.scorePopups.addLast(new ScorePopup(points, x256, y256), (byte) 3);
     }
 
     final boolean a(int param0, int param1) {
@@ -912,13 +912,13 @@ final class PlayerBoard extends IntrusiveNode {
         this.field_eb = new NodeDeque();
         this.field_rb = 4;
         this.score = 0;
-        this.field_nb = new NodeDeque();
+        this.scorePopups = new NodeDeque();
         this.queuedBalls = new NodeDeque();
-        this.field_gb = new NodeDeque();
+        this.activeBalls = new NodeDeque();
         this.field_x = new NodeDeque();
-        this.field_pb = new NodeDeque();
+        this.fallingPowerUps = new NodeDeque();
         this.field_C = new NodeDeque();
-        this.field_kb = new ao(500);
+        this.powerUpHistory = new ObjectHistoryBuffer(500);
         this.field_ab = new kq();
         this.field_G = -1;
         this.field_o = new byte[29];
@@ -936,7 +936,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.seededRandom = new fo(new int[]{this.randomSeed});
         this.field_cb = new int[29];
         this.field_xb = new int[29];
-        this.field_Y = new ao(500);
+        this.snapshotHistory = new ObjectHistoryBuffer(500);
         this.b(16387, 0);
         this.field_H = initialState;
         if (ah.field_w == null) {

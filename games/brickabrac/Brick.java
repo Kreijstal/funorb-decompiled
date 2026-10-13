@@ -130,7 +130,7 @@ final class Brick extends RectangleBody {
           }
           if ((this.field_N & 2) != 0 &&
             param0.a(26, this.typeId)) {
-            param0.field_pb.addLast(new ge(this.x256 + this.width256 / 2 - 2048, this.y256 + this.height256 * 2, this.typeId), (byte) 3);
+            param0.fallingPowerUps.addLast(new PowerUp(this.x256 + this.width256 / 2 - 2048, this.y256 + this.height256 * 2, this.typeId), (byte) 3);
             if (!r.field_A) {
               return;
             }

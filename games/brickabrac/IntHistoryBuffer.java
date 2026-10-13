@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hp extends IntrusiveNode {
-    int field_j;
+final class IntHistoryBuffer extends IntrusiveNode {
+    int latestIndex;
     static String field_k;
     static mf field_i;
-    private int[] field_o;
+    private int[] entries;
     static jp[] field_l;
-    private int field_n;
+    private int capacity;
     static int field_m;
 
-    final int b(int param0, int param1) {
-        if (param0 > this.field_j) {
-          throw new RuntimeException("State in future " + this.field_j + " " + param0);
+    final int get(int index, int retentionAdjustment) {
+        if (index > this.latestIndex) {
+          throw new RuntimeException("State in future " + this.latestIndex + " " + index);
         }
-        if (param0 < -this.field_n + this.field_j + param1) {
-          throw new RuntimeException("State erased " + param0 + ". Lastest entry: " + this.field_j);
+        if (index < -this.capacity + this.latestIndex + retentionAdjustment) {
+          throw new RuntimeException("State erased " + index + ". Lastest entry: " + this.latestIndex);
         }
-        return this.field_o[param0 % this.field_n];
+        return this.entries[index % this.capacity];
     }
 
-    final void a(int param0, int param1) {
-        int fieldTemp$0 = this.field_j + 1;
-        this.field_j = this.field_j + 1;
-        this.field_o[fieldTemp$0 % this.field_n] = param1;
-        if (param0 != -7255) {
-          this.a(-25, 104);
+    final void append(int obfuscationGuard, int value) {
+        int nextIndex = this.latestIndex + 1;
+        this.latestIndex = this.latestIndex + 1;
+        this.entries[nextIndex % this.capacity] = value;
+        if (obfuscationGuard != -7255) {
+          this.append(-25, 104);
         }
     }
 
@@ -38,10 +38,10 @@ final class hp extends IntrusiveNode {
         }
     }
 
-    hp(int param0) {
-        this.field_j = -1;
-        this.field_n = param0;
-        this.field_o = new int[this.field_n];
+    IntHistoryBuffer(int capacity) {
+        this.latestIndex = -1;
+        this.capacity = capacity;
+        this.entries = new int[this.capacity];
     }
 
     static {

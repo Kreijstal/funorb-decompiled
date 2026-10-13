@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ul extends IntrusiveNode {
+final class ScorePopup extends IntrusiveNode {
     static String field_j;
-    String field_o;
-    int field_n;
+    String text;
+    int y256;
     static jp[] field_r;
-    int field_i;
+    int x256;
     static mf field_l;
     static hl field_m;
     static int field_p;
     static jp[] field_k;
-    int field_q;
+    int remainingTicks;
 
     final static void a(int param0) {
         int var1_int = 0;
@@ -59,7 +59,7 @@ final class ul extends IntrusiveNode {
 
     final static jp[] a(int param0, int param1, byte param2, int param3) {
         if (param2 <= 34) {
-          ul.a(19);
+          ScorePopup.a(19);
         }
         return hj.a(1, (byte) -110, param1, param3, param0);
     }
@@ -80,21 +80,21 @@ final class ul extends IntrusiveNode {
         return la.a(param1, 255, 255);
     }
 
-    final boolean b(boolean param0) {
-        this.field_n = this.field_n - 256;
-        if (param0) {
+    final boolean advance(boolean obfuscationGuard) {
+        this.y256 = this.y256 - 256;
+        if (obfuscationGuard) {
           return false;
         }
-        int fieldTemp$0 = this.field_q - 1;
-        this.field_q = this.field_q - 1;
-        return fieldTemp$0 != 0 ? true : false;
+        int nextRemainingTicks = this.remainingTicks - 1;
+        this.remainingTicks = this.remainingTicks - 1;
+        return nextRemainingTicks != 0 ? true : false;
     }
 
-    ul(int param0, int param1, int param2) {
-        this.field_n = param2;
-        this.field_q = 50;
-        this.field_i = param1;
-        this.field_o = Integer.toString(param0);
+    ScorePopup(int points, int x256, int y256) {
+        this.y256 = y256;
+        this.remainingTicks = 50;
+        this.x256 = x256;
+        this.text = Integer.toString(points);
     }
 
     static {

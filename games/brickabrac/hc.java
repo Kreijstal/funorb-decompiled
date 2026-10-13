@@ -210,10 +210,10 @@ final class hc {
           ok.field_f = 11;
           var7 = nq.a((byte) -37, "lobby", param3, param4, "largefont");
           rd.field_e = nq.a((byte) -37, "lobby", param3, param4, "generalfont");
-          ul.field_m = nq.a((byte) -37, "lobby", param3, param4, "chatfont");
+          ScorePopup.field_m = nq.a((byte) -37, "lobby", param3, param4, "chatfont");
           var7.a(var5, var24);
           rd.field_e.a(var5, var24);
-          ul.field_m.a(var5, var24);
+          ScorePopup.field_m.a(var5, var24);
           var8 = new mh(0L, (mh) null);
           var8.field_O = (dh) ((Object) var7);
           var8.field_X = 16777215;

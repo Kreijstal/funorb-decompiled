@@ -269,7 +269,7 @@ final class qi extends d {
         if (param0 != -29946) {
           return -15;
         }
-        return ul.field_p;
+        return ScorePopup.field_p;
     }
 
     private qi() throws Throwable {

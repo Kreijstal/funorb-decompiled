@@ -556,11 +556,11 @@ final class ah extends km {
         lq.field_b[1] = 125 + fk.field_g + 240;
         lq.field_b[0] = 125 + fk.field_g;
         lq.field_b[3] = 50 - (-fk.field_g - 500);
-        this.field_r = new jf(this, ao.field_k.length - 1, 2);
+        this.field_r = new jf(this, ObjectHistoryBuffer.field_k.length - 1, 2);
     }
 
     final void d(int param0) {
-        this.a(ao.field_k, 0);
+        this.a(ObjectHistoryBuffer.field_k, 0);
         this.b(true, 1);
         if (param0 >= -60) {
           ah.f(-46);

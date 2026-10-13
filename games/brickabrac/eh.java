@@ -71,9 +71,9 @@ final class eh {
           this.field_c = 15658734;
           this.field_j = 15658734;
           this.field_g = 3;
-          var4.b(0, 113).a(false, 15658734).a(ul.a(7829367, 10066329, (byte) 66, 8947848), -2147483648);
-          var4.b(1, 110).a(ul.a(13421772, 10066329, (byte) 115, 11184810), -2147483648);
-          var4.b(3, 118).a(ul.a(10066329, 7829367, (byte) 115, 8947848), param1 ^ -2134061876).b(1, (byte) -50).a(0, 1);
+          var4.b(0, 113).a(false, 15658734).a(ScorePopup.a(7829367, 10066329, (byte) 66, 8947848), -2147483648);
+          var4.b(1, 110).a(ScorePopup.a(13421772, 10066329, (byte) 115, 11184810), -2147483648);
+          var4.b(3, 118).a(ScorePopup.a(10066329, 7829367, (byte) 115, 8947848), param1 ^ -2134061876).b(1, (byte) -50).a(0, 1);
           var5 = new jp[9];
           var16 = new fb(32, 32);
           var18 = var16;
@@ -95,7 +95,7 @@ final class eh {
           discarded$1 = new dg(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new up();
           var17.a(-68, var8);
-          var8.b(0, 105).a(ul.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).a(false, 1118481).a(-1, (byte) -69);
+          var8.b(0, 105).a(ScorePopup.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).a(false, 1118481).a(-1, (byte) -69);
           var8.b(4, 108).a(true, false).a(var5, -2147483648);
           this.field_b = (ub) ((Object) var8);
           var9 = new jp[9];
