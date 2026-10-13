@@ -37,12 +37,12 @@ final class ed {
         }
         it.field_b = true;
         if (!param0) {
-          wc.a(true, -49);
+          DraggableWidgetContainer.a(true, -49);
           SoundCache.field_b = 0;
           return;
         }
         ed.a(-80);
-        wc.a(true, -49);
+        DraggableWidgetContainer.a(true, -49);
         SoundCache.field_b = 0;
     }
 

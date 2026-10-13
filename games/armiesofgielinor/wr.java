@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wr extends hs implements WidgetActivationListener {
+final class wr extends ArrayWidgetContainer implements WidgetActivationListener {
     static int decodedSpriteCanvasHeight;
     private no field_M;
     static int campaignPacketWord3;
@@ -21,14 +21,14 @@ final class wr extends hs implements WidgetActivationListener {
         this.field_M = new no(new lu(10000536), c.field_c, 0, 0, 140, 25);
         this.field_M.a((byte) -101, new sb());
         this.field_K = new InteractiveWidget(ro.field_kb, (WidgetListener) (this));
-        this.field_C = new Widget[]{(Widget) ((Object) this.field_M), (Widget) ((Object) this.field_K)};
+        this.children = new Widget[]{(Widget) ((Object) this.field_M), (Widget) ((Object) this.field_K)};
         this.field_K.painter = (WidgetPainter) ((Object) new nu());
-        this.e(0);
+        this.refreshLayout(0);
     }
 
-    final void d(byte param0) {
+    final void layoutChildren(byte obfuscationGuard) {
         int var2 = 250;
-        if (param0 < 84) {
+        if (obfuscationGuard < 84) {
           this.field_M = (no) null;
         }
         this.field_M.setBounds(-var2 + this.width >> 1, 140, -25 + (this.height + 20) >> 1, 8192, 25);

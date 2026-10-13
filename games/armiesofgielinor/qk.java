@@ -11,10 +11,10 @@ final class qk {
 
     final static String a(int param0, int param1, int param2) {
         if (param1 == -2823) {
-          return 1 + param2 + hs.field_I + param0;
+          return 1 + param2 + ArrayWidgetContainer.field_I + param0;
         }
         field_e = (ResourceArchive) null;
-        return 1 + param2 + hs.field_I + param0;
+        return 1 + param2 + ArrayWidgetContainer.field_I + param0;
     }
 
     public static void a(int param0) {

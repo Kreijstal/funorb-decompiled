@@ -165,7 +165,7 @@ final class ClientContextMenu {
             if (cd.field_c == 0) {
               this.menu.addTextAction(12, SummonRequest.field_C, (byte) -120);
             }
-            this.menu.addTextAction(13, ai.field_R, (byte) -119);
+            this.menu.addTextAction(13, ScrollWidgetContainer.field_R, (byte) -119);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tg.A(" + (message != null ? "{...}" : "null") + ',' + currentChannel + ')');
@@ -234,7 +234,7 @@ final class ClientContextMenu {
               vu.currentRoom.completedDurationMillis < 0) {
               return;
             }
-            this.menu.addTextAction(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
+            this.menu.addTextAction(1, fo.a(4800, DraggableWidgetContainer.field_R, new String[]{var5}), (byte) -103);
             return;
           }
           if (var11 == null) {
@@ -283,7 +283,7 @@ final class ClientContextMenu {
             vu.currentRoom.completedDurationMillis < 0) {
             return;
           }
-          this.menu.addTextAction(1, fo.a(4800, wc.field_R, new String[]{var5}), (byte) -103);
+          this.menu.addTextAction(1, fo.a(4800, DraggableWidgetContainer.field_R, new String[]{var5}), (byte) -103);
           return;
         }
         if (var10 == null) {
@@ -468,13 +468,13 @@ final class ClientContextMenu {
         if (obfuscationGuard <= 38) {
           ClientContextMenu.a(-18);
           if (actionId == 17) {
-            Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
+            Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
             return true;
           }
           return false;
         }
         if (actionId == 17) {
-          Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
+          Spell.field_b = new ReportAbuseDialog(this.sourceComponent.screenX, this.sourceComponent.screenY, this.sourceComponent.width, this.sourceComponent.height, reportPacketOpcode, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, this.accountName, this.accountId);
           return true;
         }
         return false;

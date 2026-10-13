@@ -321,7 +321,7 @@ class IntrusiveNode {
 
     final static int b(int param0) {
         oi.field_c.a(18199);
-        if (!ai.field_T.poll(true)) {
+        if (!ScrollWidgetContainer.field_T.poll(true)) {
           return ep.b((byte) -120);
         }
         if (param0 >= 68) {

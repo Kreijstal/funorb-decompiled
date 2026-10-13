@@ -123,8 +123,8 @@ final class CoatOfArms {
               var12++;
             }
           }
-          nl.a(param1, ck.animationSequencesByGroup, param2, (byte) 126);
-          nl.a(param1, pv.field_a, param2, (byte) 126);
+          SingleChildWidgetContainer.a(param1, ck.animationSequencesByGroup, param2, (byte) 126);
+          SingleChildWidgetContainer.a(param1, pv.field_a, param2, (byte) 126);
           MovementPresentation.c(param3 ^ -11757);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

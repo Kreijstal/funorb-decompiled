@@ -550,7 +550,7 @@ final class BattleCharacter {
             for (var9Lifetime1 = 0; var9Lifetime1 < lb.field_a; var9Lifetime1++) {
               if (0 < this.field_k[var9Lifetime1]) {
                 stackIn_58_0 = this.destinationY;
-                stackIn_58_1 = hs.field_F[this.field_k[var9Lifetime1] % hs.field_F.length];
+                stackIn_58_1 = ArrayWidgetContainer.field_F[this.field_k[var9Lifetime1] % ArrayWidgetContainer.field_F.length];
                 if (255 < this.field_k[var9Lifetime1] << 4) {
                   stackIn_59_2 = 256;
                 } else {

@@ -57,7 +57,7 @@ final class pg {
         }
         BufferedSocket.disableKeyboard((byte) 41);
         pf.a(-15291);
-        tj.j(-118);
+        DequeWidgetContainer.j(-118);
         if (fh.b((byte) -88)) {
           vl.outgoingPacket.writeCipheredOpcode(32161, 1);
           hb.$cfr$intArgs$a$e9dea5688aa5(124, 0);

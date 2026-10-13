@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ku extends nl {
+final class ku extends SingleChildWidgetContainer {
     static String[][] field_L;
     static volatile boolean pointerChanged;
     static int field_K;
@@ -30,11 +30,11 @@ final class ku extends nl {
     }
 
     final void pointerReleased(int originY, Widget rootWidget, int pointerX, byte obfuscationGuard, int pointerY, int originX) {
-        wc var9 = null;
+        DraggableWidgetContainer var9 = null;
         try {
           super.pointerReleased(originY, rootWidget, pointerX, (byte) 42, pointerY, originX);
           int var8 = -111 % ((-58 - obfuscationGuard) / 53);
-          var9 = bn.field_f;
+          var9 = bn.draggedWidget;
           if (var9 != null &&
             this.containsPointer(1, originX, pointerY, pointerX, originY)) {
             if (!(this.listener instanceof ch)) {
@@ -42,11 +42,11 @@ final class ku extends nl {
                 return;
               }
               ((ch) (var9.listener)).a(var9, -14486, this);
-              bn.field_f = null;
+              bn.draggedWidget = null;
               return;
             }
             ((ch) (this.listener)).a(var9, -14486, this);
-            bn.field_f = null;
+            bn.draggedWidget = null;
             return;
           }
         } catch (RuntimeException runtimeException) {
@@ -68,7 +68,7 @@ final class ku extends nl {
     private ku(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, Widget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-          this.field_E = param6;
+          this.child = param6;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ku.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

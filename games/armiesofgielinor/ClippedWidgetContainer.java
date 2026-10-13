@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends nl {
+final class ClippedWidgetContainer extends SingleChildWidgetContainer {
     static String field_I;
     static String field_H;
     static int field_L;
     static DualNodeHashTable lobbyRoomsById;
     static int[] decodedSpriteWidths;
 
-    final void b(boolean param0) {
-        this.field_E.e(0);
-        if (!param0) {
+    final void layoutChild(boolean obfuscationGuard) {
+        this.child.refreshLayout(0);
+        if (!obfuscationGuard) {
           field_I = (String) null;
         }
     }
 
-    qm(int param0, int param1, int param2, int param3, WidgetPainter param4, Widget param5) {
-        super(param0, param1, param2, param3, param4, (WidgetListener) null);
+    ClippedWidgetContainer(int x, int y, int width, int height, WidgetPainter painter, Widget child) {
+        super(x, y, width, height, painter, (WidgetListener) null);
         try {
-          this.field_E = param5;
+          this.child = child;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qm.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qm.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (painter != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class qm extends nl {
           }
           if (this.height != 0) {
             t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
-            this.field_E.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
+            this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
             t.field_c.a(58);
             return;
           }
@@ -46,7 +46,7 @@ final class qm extends nl {
           }
           if (this.height != 0) {
             t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
-            this.field_E.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
+            this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
             t.field_c.a(58);
             return;
           }
@@ -58,7 +58,7 @@ final class qm extends nl {
         }
         if (this.height != 0) {
           t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
-          this.field_E.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
+          this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
           t.field_c.a(58);
           return;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wl extends tj {
+abstract class wl extends DequeWidgetContainer {
     static String field_J;
     static RgbSprite groundShadowSprite;
     static String[] field_M;
@@ -144,13 +144,13 @@ abstract class wl extends tj {
         return stackIn_12_0;
     }
 
-    final Widget e(byte param0) {
+    final Widget getFocusedChild(byte obfuscationGuard) {
         int discarded$0 = 0;
-        Widget var2 = super.e((byte) 66);
+        Widget var2 = super.getFocusedChild((byte) 66);
         if (var2 != null) {
           return var2;
         }
-        if (param0 < 24) {
+        if (obfuscationGuard < 24) {
           discarded$0 = this.g((byte) -91);
         }
         return (Widget) (this);

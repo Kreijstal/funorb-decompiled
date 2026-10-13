@@ -52,7 +52,7 @@ final class ContextualRuntimeException extends RuntimeException {
           bn.field_c = new ClientUiComponent(0L, eq.field_h);
           bn.field_c.horizontalAlignment = 1;
           AdaptiveMidiPcmStream.field_kb = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
-          ek.field_a = new ClientUiComponent(0L, br.field_e, nl.field_C);
+          ek.field_a = new ClientUiComponent(0L, br.field_e, SingleChildWidgetContainer.field_C);
           PlayerProfile.field_f = new ClientUiComponent(0L, DualLinkedNode.field_k);
           su.field_d.addChild(bn.field_c, 49);
           su.field_d.addChild(AdaptiveMidiPcmStream.field_kb, 109);
@@ -92,7 +92,7 @@ final class ContextualRuntimeException extends RuntimeException {
           }
         }
         if (gk.field_J > 0) {
-          bh.d(false);
+          AlphaWidgetContainer.d(false);
         }
         if (PreparedAction.field_r > 0) {
           AnimationSequence.a(PreparedAction.field_r, -71);

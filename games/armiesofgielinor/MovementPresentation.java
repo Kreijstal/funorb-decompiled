@@ -140,7 +140,7 @@ final class MovementPresentation implements EventPresentation {
             }
             if (var8.unit.packedFlag256) {
               var8.unit = var8.unit.copyDetached(false);
-              hs.b(-90, 29);
+              ArrayWidgetContainer.b(-90, 29);
             }
             var8.unit.modelAnimationIndex = 1;
             var8.claimUnitModel(var8.unit, 12);

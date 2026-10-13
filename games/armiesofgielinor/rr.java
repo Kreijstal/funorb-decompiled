@@ -14,7 +14,7 @@ final class rr {
     }
 
     final static IndexedSprite b(int param0) {
-        IndexedSprite var1 = new IndexedSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], qm.decodedSpriteWidths[0], c.decodedSpriteHeights[param0], AnimationPlayer.decodedSpriteIndices[0], MovementPresentation.decodedSpritePalette);
+        IndexedSprite var1 = new IndexedSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[param0], AnimationPlayer.decodedSpriteIndices[0], MovementPresentation.decodedSpritePalette);
         rj.releaseSpriteDecodeBuffers((byte) 99);
         return var1;
     }

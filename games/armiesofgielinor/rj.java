@@ -303,7 +303,7 @@ final class rj extends Widget {
 
     final static void releaseSpriteDecodeBuffers(byte obfuscationGuard) {
         c.decodedSpriteHeights = null;
-        qm.decodedSpriteWidths = null;
+        ClippedWidgetContainer.decodedSpriteWidths = null;
         j.decodedSpriteOffsetXs = null;
         AnimationPlayer.decodedSpriteIndices = (byte[][]) null;
         if (obfuscationGuard < 96) {

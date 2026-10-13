@@ -282,7 +282,7 @@ final class TaggedMapData implements TaggedFieldReader {
                 if (encodedLength <= 0) {
                   return;
                 }
-                var5_int = ai.readCompactInt(packet, true);
+                var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                 this.tiles = new MapTile[var5_int];
                 for (var6 = 0; var5_int > var6; var6++) {
                   TextCursor.readTagName(packet, true);

@@ -179,7 +179,7 @@ public final class ArmiesOfGielinor extends wf {
               if (var2 == null) {
                 break;
               }
-              nl.a(0, 4, (iw) (var2));
+              SingleChildWidgetContainer.a(0, 4, (iw) (var2));
               if (var11 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -878,12 +878,12 @@ public final class ArmiesOfGielinor extends wf {
             var6 = -(TelepopEvent.field_F * TelepopEvent.field_F) + var5;
             var7 = SoftwareRaster.height - (120 - var6 * 120 / var5);
             SpellCastAction.b(8, var7);
-            if (null != ai.field_P.first((byte) 111)) {
+            if (null != ScrollWidgetContainer.field_P.first((byte) 111)) {
               fieldTemp$0 = lq.field_b + 1;
               lq.field_b = lq.field_b + 1;
               if (fieldTemp$0 == 335) {
                 lq.field_b = 0;
-                ai.field_P.popFirst(0);
+                ScrollWidgetContainer.field_P.popFirst(0);
               }
             }
             decompiledFrameRemainder4 = (var8 != 0);
@@ -1374,7 +1374,7 @@ public final class ArmiesOfGielinor extends wf {
           kp.a(2);
           BitmapTextWidgetPainter.a((byte) 58);
           Widget.c((byte) -124);
-          nl.i(-98);
+          SingleChildWidgetContainer.i(-98);
           TextLayout.a(param0 - 51);
           ut.p(0);
           ls.a(-121);
@@ -1383,8 +1383,8 @@ public final class ArmiesOfGielinor extends wf {
           DropdownSelector.a(param0 - 11763);
           InteractiveWidget.i(0);
           ob.e((byte) 68);
-          tj.d((byte) -89);
-          hs.i(0);
+          DequeWidgetContainer.d((byte) -89);
+          ArrayWidgetContainer.i(0);
           vr.a((byte) -37);
           jj.a((byte) -112);
           PcmPlayerService.releaseLabels(-74);
@@ -1493,17 +1493,17 @@ public final class ArmiesOfGielinor extends wf {
           bs.a(true);
           tq.a((byte) -84);
           en.n(0);
-          ai.b(false);
+          ScrollWidgetContainer.b(false);
           nb.d((byte) 68);
           DirectByteStorage.c(1);
           fh.a((byte) -28);
           BitmapTextLayout.c(true);
-          wc.j(0);
+          DraggableWidgetContainer.j(0);
           ku.k(param0 ^ -36);
           cs.b(true);
           tn.n(param0 + 72);
-          qm.j(param0 + 150);
-          nv.l(-24061);
+          ClippedWidgetContainer.j(param0 + 150);
+          ScrollControlWidget.l(-24061);
           IterableNodeHashTable.a(false);
           IterableDualNodeDeque.a(19345);
           CacheEntry.g(param0 ^ 91);
@@ -1531,7 +1531,7 @@ public final class ArmiesOfGielinor extends wf {
           lu.a(1);
           ol.b((byte) 117);
           oi.b(true);
-          bh.c(false);
+          AlphaWidgetContainer.c(false);
           ps.c(false);
           SocialListEntry.k(param0 - 4103);
           we.a((byte) 120);
@@ -1745,7 +1745,7 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_5_0 = null;
             return (BinaryBitmapFont) (stackIn_5_0);
           }
-          var2 = new BinaryBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, AnimationPlayer.decodedSpriteIndices);
+          var2 = new BinaryBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, ClippedWidgetContainer.decodedSpriteWidths, c.decodedSpriteHeights, AnimationPlayer.decodedSpriteIndices);
           rj.releaseSpriteDecodeBuffers((byte) 124);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -2207,15 +2207,15 @@ public final class ArmiesOfGielinor extends wf {
           SocialListPanel.field_Jb = DiskCacheRequest.loadRgbSpriteByName("slider", "basic", iw.field_l, false);
           MoveEvent.field_z = GameplayController.a("bcarrow", (byte) 51, "basic", iw.field_l);
           BestScoreStrategy.field_m = GameplayController.a("goldiv", (byte) 51, "basic", iw.field_l);
-          wc.field_Q = fk.loadRgbSpritesByName("silverbar", (byte) -125, iw.field_l, "basic");
+          DraggableWidgetContainer.field_Q = fk.loadRgbSpritesByName("silverbar", (byte) -125, iw.field_l, "basic");
           TaggedMapData.field_f = fk.loadRgbSpritesByName("pathfinder", (byte) -125, iw.field_l, "basic");
           DeployAction.field_x = ac.a(iw.field_l, "unitheads", (byte) -4, "basic");
           lt.field_i = fk.loadRgbSpritesByName("theme_icons", (byte) -127, iw.field_l, "basic");
           UpkeepEvent.a(iw.field_l, 116);
-          hs.field_F = fk.loadRgbSpritesByName("fireball", (byte) -128, iw.field_l, "basic");
+          ArrayWidgetContainer.field_F = fk.loadRgbSpritesByName("fireball", (byte) -128, iw.field_l, "basic");
           MatchConditionRegistry.field_d = fk.loadRgbSpritesByName("fortcontrols", (byte) -124, iw.field_l, "basic");
           lw.field_ob = DiskCacheRequest.loadRgbSpriteByName("smallorb", "basic", iw.field_l, false);
-          wc.field_J = DiskCacheRequest.loadRgbSpriteByName("bigorb", "basic", iw.field_l, false);
+          DraggableWidgetContainer.field_J = DiskCacheRequest.loadRgbSpriteByName("bigorb", "basic", iw.field_l, false);
           pg.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", iw.field_l, false);
           UnitModelPreview.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
           gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
@@ -2300,14 +2300,14 @@ public final class ArmiesOfGielinor extends wf {
           ChatMessage.field_t.d(0, 0, 32, 32);
           so.field_b.a(5605);
           ChatMessage.field_t = null;
-          var16 = new RgbSprite[hs.field_E.length][];
+          var16 = new RgbSprite[ArrayWidgetContainer.field_E.length][];
           var17 = 0;
           do {
-            if (!(hs.field_E.length > var17)) {
+            if (!(ArrayWidgetContainer.field_E.length > var17)) {
               km.field_c = MapLayout.loadIndexedSpritesByName("prestigeicons", -28106, "basic", iw.field_l);
               break;
             }
-            var16[var17] = fk.loadRgbSpritesByName(hs.field_E[var17], (byte) -127, iw.field_l, "basic");
+            var16[var17] = fk.loadRgbSpritesByName(ArrayWidgetContainer.field_E[var17], (byte) -127, iw.field_l, "basic");
             var17++;
           } while (var18 == 0);
           if (!ta.field_L) {
@@ -2386,7 +2386,7 @@ public final class ArmiesOfGielinor extends wf {
           CombatEvent.field_I.draw(param1, param0 ^ 20);
           var2 = BestScoreStrategy.field_i;
           if (null != var2) {
-            var2.a(CombatEvent.field_I.screenX, -125, CombatEvent.field_I.screenY);
+            var2.drawAllLayers(CombatEvent.field_I.screenX, -125, CombatEvent.field_I.screenY);
           }
           if (param0 != 0) {
             field_H = (String) null;
@@ -2456,7 +2456,7 @@ public final class ArmiesOfGielinor extends wf {
           if (param0) {
             field_L = (PacketBuffer) null;
           }
-          var2 = (jg) (ai.field_P.first((byte) 97));
+          var2 = (jg) (ScrollWidgetContainer.field_P.first((byte) 97));
           if (null != var2) {
             var4 = lq.field_b;
             if (var4 < 80) {

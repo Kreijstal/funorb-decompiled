@@ -37,7 +37,7 @@ final class tn extends sf implements WidgetActivationListener {
           var2.x = 0;
           var2.y = 50;
           var2.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a((byte) 10, var2);
+          this.addChild((byte) 10, var2);
           if (DamageEvent.g(98)) {
             this.field_fb = this.a((WidgetListener) (this), true, ClientContextMenu.field_j);
           }
@@ -111,8 +111,8 @@ final class tn extends sf implements WidgetActivationListener {
           var5 = -6 + this.height;
           this.height = this.height + 38;
           var4.setBounds(15, -14 + this.width - 16, var5, 8192, 30);
-          this.a((byte) 10, (Widget) (var4));
-          this.e(0);
+          this.addChild((byte) 10, (Widget) (var4));
+          this.refreshLayout(0);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

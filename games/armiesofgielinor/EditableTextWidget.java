@@ -183,7 +183,7 @@ class EditableTextWidget extends InteractiveWidget {
           for (var4 = 1; var4 < ActionRequest.field_m[param1].length; var4++) {
             if (null == ActionRequest.unitModels[param1][var4]) {
               var5 = ActionRequest.field_m[param1][var4];
-              var6 = hs.a(var5, param2 ^ -32697, var9);
+              var6 = ArrayWidgetContainer.a(var5, param2 ^ -32697, var9);
               if (var6 != null) {
                 if (th.a(var6, -17900)) {
                   DiskCacheRequest.unitProjectionVariants[param1] = true;

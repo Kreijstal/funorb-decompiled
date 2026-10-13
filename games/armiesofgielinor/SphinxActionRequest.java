@@ -269,7 +269,7 @@ final class SphinxActionRequest extends ActionRequest {
           PreparedAction.field_o.selectedSkinSprites = dupTemp$3;
           PreparedAction.field_o.heldPressSkinSprites = dupTemp$3;
           var17 = fk.loadRgbSpritesByName("checkbox", (byte) -124, param1, "lobby");
-          hs.field_H = new IconLabelControl(0L, var17[1], var17[0], 1, DualLinkedNode.field_k, (String) null);
+          ArrayWidgetContainer.field_H = new IconLabelControl(0L, var17[1], var17[0], 1, DualLinkedNode.field_k, (String) null);
           oe.field_Cb = new ClientUiComponent(0L, (ClientUiComponent) null);
           oe.field_Cb.skinSprites = it.a(17, GameplayController.a("slideregion", (byte) 51, "lobby", param1));
           oe.field_Cb.matchedButtonSkinSprites = it.a(17, GameplayController.a("slideregion_mouseover", (byte) 51, "lobby", param1));

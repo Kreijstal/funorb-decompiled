@@ -108,7 +108,7 @@ final class DamageEvent extends GameEvent {
         try {
           SphinxActionRequest.a(param14, param8, -84, param19, param18);
           ContextualRuntimeException.a(param10 - 716, param8);
-          nl.a(param16, param7, param2, param17, param6, param0, param1, param8, param11, param3, param9, param15, param12, false, param4);
+          SingleChildWidgetContainer.a(param16, param7, param2, param17, param6, param0, param1, param8, param11, param3, param9, param15, param12, false, param4);
           if (param10 != -5429) {
             field_z = (String) null;
           }
@@ -245,7 +245,7 @@ final class DamageEvent extends GameEvent {
     }
 
     final static void b(byte param0, boolean param1) {
-        KingBlackDragonEvent.field_C.a(0, -122, 0);
+        KingBlackDragonEvent.field_C.drawAllLayers(0, -122, 0);
         if (param0 != 92) {
           field_z = (String) null;
         }

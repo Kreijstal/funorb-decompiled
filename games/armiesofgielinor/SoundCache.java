@@ -327,7 +327,7 @@ final class SoundCache {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (0L != wc.a(var3, 0)) {
+            if (0L != DraggableWidgetContainer.a(var3, 0)) {
               return;
             }
           }

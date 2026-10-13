@@ -258,7 +258,7 @@ final class TabbedPanel extends ClientUiComponent {
             var6 = param1;
           } else {
             var8 = (CharSequence) ((Object) param1);
-            var4_long = wc.a(var8, param2 - 10);
+            var4_long = DraggableWidgetContainer.a(var8, param2 - 10);
           }
           stackIn_6_0 = oi.a((String) (var6), param3, param0, param2 ^ 11, var4_long);
           return stackIn_6_0;

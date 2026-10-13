@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df extends tj implements EditableTextWidgetListener, WidgetActivationListener {
+final class df extends DequeWidgetContainer implements EditableTextWidgetListener, WidgetActivationListener {
     private boolean field_H;
     private InteractiveWidget field_O;
     private EditableTextWidget field_Q;
@@ -132,7 +132,7 @@ final class df extends tj implements EditableTextWidgetListener, WidgetActivatio
           if (null != this.field_I) {
             this.y = this.y + (5 + var7.getParagraphHeight(this.field_I, this.width - 40, var7.maxAscent));
           }
-          var8 = bh.field_J;
+          var8 = AlphaWidgetContainer.field_J;
           var9 = CommunityTabGroup.a(0, CombatEvent.d((byte) 34));
           if (var9 != CombatSandbox.field_j) {
             if (var9 == ps.field_y) {
@@ -143,11 +143,11 @@ final class df extends tj implements EditableTextWidgetListener, WidgetActivatio
           }
           dupTemp$0 = new ta(10, this.y, this.width - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a((byte) 10, (Widget) (dupTemp$0));
+          this.addChild((byte) 10, (Widget) (dupTemp$0));
           this.y = this.y + (((Widget) ((Object) var12)).height + 5);
           dupTemp$1 = new ta(10, this.y, -20 + this.width, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
           var13 = dupTemp$1;
-          this.a((byte) 10, (Widget) (dupTemp$1));
+          this.addChild((byte) 10, (Widget) (dupTemp$1));
           this.field_O.listener = (WidgetListener) (this);
           this.y = this.y + (5 + ((Widget) ((Object) var13)).height);
           if (this.field_R != null) {
@@ -178,12 +178,12 @@ final class df extends tj implements EditableTextWidgetListener, WidgetActivatio
             }
           }
           this.setBounds(0, this.width, 0, 8192, 3 + this.y);
-          this.a((byte) 10, (Widget) (this.field_O));
+          this.addChild((byte) 10, (Widget) (this.field_O));
           if (this.field_R != null) {
-            this.a((byte) 10, (Widget) (this.field_R));
+            this.addChild((byte) 10, (Widget) (this.field_R));
           }
           if (this.field_N != null) {
-            this.a((byte) 10, (Widget) (this.field_N));
+            this.addChild((byte) 10, (Widget) (this.field_N));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -426,13 +426,13 @@ final class df extends tj implements EditableTextWidgetListener, WidgetActivatio
             return true;
           }
           if (98 == keyCode) {
-            stackIn_6_0 = this.a(false, rootWidget);
+            stackIn_6_0 = this.focusPreviousChild(false, rootWidget);
             return stackIn_6_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.b((byte) -128, rootWidget);
+          stackIn_10_0 = this.focusNextChild((byte) -128, rootWidget);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

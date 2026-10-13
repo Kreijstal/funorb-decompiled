@@ -22,7 +22,7 @@ final class lq {
           if (param0 == null) {
             return null;
           }
-          var2 = new AntialiasedBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
+          var2 = new AntialiasedBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, ClippedWidgetContainer.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
           if (param1 != 0) {
             stackIn_5_0 = (AntialiasedBitmapFont) null;
             return stackIn_5_0;

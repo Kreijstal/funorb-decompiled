@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qd extends tj implements TextHotspotListener, WidgetActivationListener {
+final class qd extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static String chatRecipientName;
     static int lobbyNotificationDuration;
     static QuickChatMenu activeQuickChatMenu;
@@ -139,13 +139,13 @@ final class qd extends tj implements TextHotspotListener, WidgetActivationListen
             return true;
           }
           if (98 == keyCode) {
-            stackIn_6_0 = this.a(false, rootWidget);
+            stackIn_6_0 = this.focusPreviousChild(false, rootWidget);
             return stackIn_6_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.b((byte) -125, rootWidget);
+          stackIn_10_0 = this.focusNextChild((byte) -125, rootWidget);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -201,12 +201,12 @@ final class qd extends tj implements TextHotspotListener, WidgetActivationListen
           this.field_F.listener = (WidgetListener) (this);
           this.field_F.setTextBounds(this.width - 40, 9567, 26, var3);
           var3 = var3 + (this.field_F.height + 15);
-          this.a((byte) 10, (Widget) (this.field_F));
+          this.addChild((byte) 10, (Widget) (this.field_F));
           var5 = 4;
           var6 = 200;
           this.field_M.setBounds(-var6 + 300 >> 1, var6, var3, 8192, 40);
           this.field_M.listener = (WidgetListener) (this);
-          this.a((byte) 10, (Widget) (this.field_M));
+          this.addChild((byte) 10, (Widget) (this.field_M));
           this.setBounds(0, 300, 0, 8192, var5 + var3 + 55);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qd.<init>(" + (param0 != null ? "{...}" : "null") + ')');

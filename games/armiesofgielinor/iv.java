@@ -611,7 +611,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 this.c((byte) 87);
                 so.field_b = rj.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
                 this.a(false);
-                qc.field_h = wc.c(false);
+                qc.field_h = DraggableWidgetContainer.c(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != ActionRequest.field_s) {

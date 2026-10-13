@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class wc extends nl {
-    private int field_O;
-    private boolean field_P;
+final class DraggableWidgetContainer extends SingleChildWidgetContainer {
+    private int returnX;
+    private boolean returnAfterDrag;
     static String field_R;
     static String field_K;
-    private int field_L;
-    private boolean field_I;
-    private int field_N;
+    private int pressOffsetY;
+    private boolean childPressPreventsDrag;
+    private int pressOffsetX;
     static RgbSprite[] field_Q;
     static RgbSprite field_J;
-    private int field_M;
+    private int returnY;
 
     final boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         int var8_int = 0;
@@ -26,10 +26,10 @@ final class wc extends nl {
         try {
           var8_int = super.pointerPressed(pointerX, originX, originY, 108, rootWidget, pointerY, button) ? 1 : 0;
           if (obfuscationGuard < 103) {
-            this.field_N = 62;
+            this.pressOffsetX = 62;
           }
           if (var8_int != 0 &&
-            this.field_I) {
+            this.childPressPreventsDrag) {
             return true;
           }
           if (!this.containsPointer(1, originX, pointerY, pointerX, originY)) {
@@ -37,9 +37,9 @@ final class wc extends nl {
             return stackIn_8_0 != 0;
           }
           if (1 == button) {
-            this.field_L = -this.y + (pointerY - originY);
-            bn.field_f = this;
-            this.field_N = -originX - this.x + pointerX;
+            this.pressOffsetY = -this.y + (pointerY - originY);
+            bn.draggedWidget = this;
+            this.pressOffsetX = -originX - this.x + pointerX;
           }
           this.pressedButton = button;
           return true;
@@ -58,71 +58,71 @@ final class wc extends nl {
     }
 
     final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
-        int stackIn_18_1 = 0;
-        int stackIn_19_2 = 0;
-        int stackIn_25_1 = 0;
-        int stackIn_26_2 = 0;
+        int previousX = 0;
+        int returnStepX = 0;
+        int previousY = 0;
+        int returnStepY = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
+        int pointerXOrReturnDelta = 0;
+        RuntimeException failure = null;
+        int pointerY = 0;
         try {
-          if ((!(this.field_E instanceof InteractiveWidget) ||
-            ((InteractiveWidget) (this.field_E)).enabled) &&
+          if ((!(this.child instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.child)).enabled) &&
             this.pressedButton == 1) {
-            var5_int = -originX + (AiPlanningStrategy.pointerX - this.field_N);
-            var6 = -this.field_L + (ko.pointerY - originY);
-            if (this.x != var5_int ||
-              this.y != var6) {
-              this.x = var5_int;
-              this.y = var6;
-              if (this.listener instanceof fr) {
-                ((fr) (this.listener)).a(this, originY, obfuscationGuard ^ -32678, originX);
+            pointerXOrReturnDelta = -originX + (AiPlanningStrategy.pointerX - this.pressOffsetX);
+            pointerY = -this.pressOffsetY + (ko.pointerY - originY);
+            if (this.x != pointerXOrReturnDelta ||
+              this.y != pointerY) {
+              this.x = pointerXOrReturnDelta;
+              this.y = pointerY;
+              if (this.listener instanceof WidgetDragListener) {
+                ((WidgetDragListener) (this.listener)).widgetDragged(this, originY, obfuscationGuard ^ -32678, originX);
               }
             }
           } else {
-            if (!this.field_P) {
+            if (!this.returnAfterDrag) {
               super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
               return;
             }
-            if (this.field_O != this.x) {
-              var5_int = -this.x + this.field_O;
-              stackIn_18_1 = this.x;
-              if (2 < Math.abs(var5_int)) {
-                stackIn_19_2 = var5_int >> 1;
+            if (this.returnX != this.x) {
+              pointerXOrReturnDelta = -this.x + this.returnX;
+              previousX = this.x;
+              if (2 < Math.abs(pointerXOrReturnDelta)) {
+                returnStepX = pointerXOrReturnDelta >> 1;
               } else {
-                if (var5_int > 0) {
-                  stackIn_19_2 = 1;
+                if (pointerXOrReturnDelta > 0) {
+                  returnStepX = 1;
                 } else {
-                  stackIn_19_2 = -1;
+                  returnStepX = -1;
                 }
               }
-              this.x = stackIn_18_1 + stackIn_19_2;
+              this.x = previousX + returnStepX;
             }
-            if (this.y != this.field_M) {
-              var5_int = -this.y + this.field_M;
-              stackIn_25_1 = this.y;
-              if (2 < Math.abs(var5_int)) {
-                stackIn_26_2 = var5_int >> 1;
+            if (this.y != this.returnY) {
+              pointerXOrReturnDelta = -this.y + this.returnY;
+              previousY = this.y;
+              if (2 < Math.abs(pointerXOrReturnDelta)) {
+                returnStepY = pointerXOrReturnDelta >> 1;
               } else {
-                if (var5_int <= 0) {
-                  stackIn_26_2 = -1;
+                if (pointerXOrReturnDelta <= 0) {
+                  returnStepY = -1;
                 } else {
-                  stackIn_26_2 = 1;
+                  returnStepY = 1;
                 }
               }
-              this.y = stackIn_25_1 + stackIn_26_2;
+              this.y = previousY + returnStepY;
             }
           }
           super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_31_0 = var5;
+          failure = decompiledCaughtException;
+          stackIn_31_0 = failure;
           stackIn_31_1 = new StringBuilder().append("wc.P(").append(obfuscationGuard).append(',').append(originX).append(',').append(originY).append(',');
           if (rootWidget == null) {
             stackIn_32_2 = "null";
@@ -157,14 +157,14 @@ final class wc extends nl {
         return (qc) ((Object) new uk());
     }
 
-    final void b(boolean param0) {
-        if (!param0) {
-          this.field_O = -119;
+    final void layoutChild(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
+          this.returnX = -119;
         }
-        super.b(param0);
-        this.field_E.setBounds(0, this.width, 0, 8192, this.height);
-        this.field_M = this.y;
-        this.field_O = this.x;
+        super.layoutChild(obfuscationGuard);
+        this.child.setBounds(0, this.width, 0, 8192, this.height);
+        this.returnY = this.y;
+        this.returnX = this.x;
     }
 
     final void pointerReleased(int originY, Widget rootWidget, int pointerX, byte obfuscationGuard, int pointerY, int originX) {
@@ -190,15 +190,15 @@ final class wc extends nl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 26477) {
-            this.field_P = false;
+            this.returnAfterDrag = false;
           }
           if (this.a(param3, param0, (byte) 61, param1)) {
             this.a(param0, param3, true, param1);
             this.a(param3, param0, -56, param1);
-            discarded$62 = param1.append(" revert=").append(this.field_P);
-            if (2147483647 != this.field_O &&
-              this.field_M != 2147483647) {
-              discarded$63 = param1.append(" to ").append(this.field_O).append(',').append(this.field_M);
+            discarded$62 = param1.append(" revert=").append(this.returnAfterDrag);
+            if (2147483647 != this.returnX &&
+              this.returnY != 2147483647) {
+              discarded$63 = param1.append(" to ").append(this.returnX).append(',').append(this.returnY);
             }
           }
           stackIn_9_0 = (StringBuilder) (param1);
@@ -240,16 +240,16 @@ final class wc extends nl {
         qh.a(param0, 0);
     }
 
-    wc(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, Widget param6, boolean param7, boolean param8) {
-        super(param0, param1, param2, param3, param4, param5);
-        this.field_O = 2147483647;
-        this.field_M = 2147483647;
+    DraggableWidgetContainer(int x, int y, int width, int height, WidgetPainter painter, WidgetListener listener, Widget child, boolean returnAfterDrag, boolean childPressPreventsDrag) {
+        super(x, y, width, height, painter, listener);
+        this.returnX = 2147483647;
+        this.returnY = 2147483647;
         try {
-          this.field_P = param7 ? true : false;
-          this.field_I = param8 ? true : false;
-          this.field_E = param6;
+          this.returnAfterDrag = returnAfterDrag ? true : false;
+          this.childPressPreventsDrag = childPressPreventsDrag ? true : false;
+          this.child = child;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wc.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (painter != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ',' + returnAfterDrag + ',' + childPressPreventsDrag + ')');
         }
     }
 

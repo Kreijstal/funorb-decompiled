@@ -12,22 +12,22 @@ final class ek {
     final static void a(byte param0) {
         if (qc.field_a != null) {
           qc.field_a.b(true);
-          tj.field_C = new na();
+          DequeWidgetContainer.field_C = new na();
           if (param0 > -22) {
             ek.a(-112);
-            lt.field_g.a(tj.field_C, (byte) -88);
+            lt.field_g.a(DequeWidgetContainer.field_C, (byte) -88);
             return;
           }
-          lt.field_g.a(tj.field_C, (byte) -88);
+          lt.field_g.a(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
-        tj.field_C = new na();
+        DequeWidgetContainer.field_C = new na();
         if (param0 <= -22) {
-          lt.field_g.a(tj.field_C, (byte) -88);
+          lt.field_g.a(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
         ek.a(-112);
-        lt.field_g.a(tj.field_C, (byte) -88);
+        lt.field_g.a(DequeWidgetContainer.field_C, (byte) -88);
     }
 
     final static int[] a(int param0, int param1, int param2) {

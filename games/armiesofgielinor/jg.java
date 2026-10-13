@@ -202,7 +202,7 @@ final class jg extends IntrusiveNode {
                 var12.optionIconContainer.addChild(var12.gameTypeIcon, param0 + 62);
               }
               var12.field_ec = new ClientUiComponent(0L, (ClientUiComponent) null);
-              if ((1 << ai.field_M & var14) != 0) {
+              if ((1 << ScrollWidgetContainer.field_M & var14) != 0) {
                 var12.optionIconContainer.addChild(var12.field_ec, param0 + 59);
               }
               var12.spectatorIcon = new ClientUiComponent(0L, (ClientUiComponent) null);
@@ -398,7 +398,7 @@ final class jg extends IntrusiveNode {
                 var12.gameTypeIcon.setBounds(var12.optionIconContainer.height, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var50_ref.canvasWidth + MusicPatch.field_n);
               }
-              if ((1 << ai.field_M & var14Lifetime1) != 0) {
+              if ((1 << ScrollWidgetContainer.field_M & var14Lifetime1) != 0) {
                 if (!var12.joinable) {
                   stackIn_83_0 = (var12.invitationReceived) ? 1 : 0;
                 } else {

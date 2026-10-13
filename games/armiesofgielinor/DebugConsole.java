@@ -318,8 +318,8 @@ final class DebugConsole extends ConsolePanel {
             stackIn_2_0 = (LobbyRoom) null;
             return stackIn_2_0;
           }
-          if (null != qm.lobbyRoomsById) {
-            stackIn_7_0 = qm.lobbyRoomsById.get((byte) -27, (long)roomId);
+          if (null != ClippedWidgetContainer.lobbyRoomsById) {
+            stackIn_7_0 = ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)roomId);
           } else {
             stackIn_7_0 = null;
           }

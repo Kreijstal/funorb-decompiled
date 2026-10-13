@@ -24,8 +24,8 @@ class InteractiveWidget extends Widget {
           if (null != IsaacRandom.field_g) {
             IsaacRandom.field_g.field_T.a(100, param1);
           }
-          if (null != tj.field_C) {
-            tj.field_C.field_M.a(100, param1);
+          if (null != DequeWidgetContainer.field_C) {
+            DequeWidgetContainer.field_C.field_M.a(100, param1);
           }
           if (param0 == -1) {
             return;

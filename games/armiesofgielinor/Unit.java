@@ -1008,7 +1008,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
           }
           for (var1_int = 0; var1_int < so.field_a.length; var1_int++) {
             if (rb.a(var1_int, ConsoleTextNode.field_n, 1)) {
-              ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(var1_int)));
+              ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(var1_int)));
             }
           }
           var18 = BoundedFile.field_e;

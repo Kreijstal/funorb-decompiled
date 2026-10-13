@@ -79,7 +79,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                         if (encodedLength <= 0) {
                           return;
                         }
-                        var5_int = ai.readCompactInt(packet, true);
+                        var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                         this.neighborMissionIds = new int[var5_int];
                         for (var6 = 0; var6 < var5_int; var6++) {
                           this.neighborMissionIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
@@ -96,7 +96,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                               if (encodedLength <= 0) {
                                 return;
                               }
-                              var5_int = ai.readCompactInt(packet, true);
+                              var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                               this.participantIds = new int[var5_int];
                               for (var6 = 0; var5_int > var6; var6++) {
                                 this.participantIds[var6] = (int)tn.readTaggedInteger(false, 2, packet);
@@ -155,7 +155,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                         return;
                                       }
                                       if (encodedLength > 0) {
-                                        var5_int = ai.readCompactInt(packet, true);
+                                        var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                                         this.teamAssignments = new int[var5_int];
                                         for (var6 = 0; var5_int > var6; var6++) {
                                           this.teamAssignments[var6] = (int)tn.readTaggedInteger(false, 2, packet);
@@ -171,7 +171,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
                                 }
                               } else {
                                 if (encodedLength > 0) {
-                                  var5_int = ai.readCompactInt(packet, true);
+                                  var5_int = ScrollWidgetContainer.readCompactInt(packet, true);
                                   this.rewardUnitTypes = new int[var5_int];
                                   for (var6 = 0; var6 < var5_int; var6++) {
                                     this.rewardUnitTypes[var6] = (int)tn.readTaggedInteger(false, 2, packet);
@@ -360,8 +360,8 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     final void a(boolean param0) {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        for (var2 = 0; var2 < hs.field_G.length; var2++) {
-          if (hs.field_G[var2] == this.field_A) {
+        for (var2 = 0; var2 < ArrayWidgetContainer.field_G.length; var2++) {
+          if (ArrayWidgetContainer.field_G[var2] == this.field_A) {
             this.mapSizeSetting = var2;
             break;
           }

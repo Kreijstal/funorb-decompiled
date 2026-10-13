@@ -105,7 +105,7 @@ final class se {
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var1 = new RgbSprite[iw.decodedSpriteCount];
         for (var2 = 0; iw.decodedSpriteCount > var2; var2++) {
-          var3 = c.decodedSpriteHeights[var2] * qm.decodedSpriteWidths[var2];
+          var3 = c.decodedSpriteHeights[var2] * ClippedWidgetContainer.decodedSpriteWidths[var2];
           var20 = AnimationPlayer.decodedSpriteIndices[var2];
           if (!MapTile.decodedSpriteHasAlpha[var2]) {
             var9 = new int[var3];
@@ -113,7 +113,7 @@ final class se {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var20[var6_int])];
             }
-            var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], qm.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
+            var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var21);
           } else {
             var22 = CampaignMenuEntry.decodedSpriteAlphas[var2];
             var16 = new int[var3];
@@ -122,7 +122,7 @@ final class se {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = oe.bitwiseOr(MovementPresentation.decodedSpritePalette[rn.bitwiseAnd((int) var20[var7], 255)], rn.bitwiseAnd((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new nj(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], qm.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new nj(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
           }
         }
         if (param0 != 32) {

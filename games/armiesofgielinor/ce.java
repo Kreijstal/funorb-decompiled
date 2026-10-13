@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce extends tj implements WidgetActivationListener {
+final class ce extends DequeWidgetContainer implements WidgetActivationListener {
     static RgbSprite[] field_F;
     static int[] field_I;
     static String field_P;
@@ -29,13 +29,13 @@ final class ce extends tj implements WidgetActivationListener {
             return true;
           }
           if (keyCode == 98) {
-            stackIn_6_0 = this.a(false, rootWidget);
+            stackIn_6_0 = this.focusPreviousChild(false, rootWidget);
             return stackIn_6_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_9_0 = this.b((byte) -126, rootWidget);
+          stackIn_9_0 = this.focusNextChild((byte) -126, rootWidget);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,9 +109,9 @@ final class ce extends tj implements WidgetActivationListener {
         this.field_E.listener = (WidgetListener) (this);
         this.field_L.tooltipText = hb.field_b;
         this.field_E.tooltipText = CombatSandbox.field_e;
-        this.a((byte) 10, (Widget) (this.field_G));
-        this.a((byte) 10, (Widget) (this.field_L));
-        this.a((byte) 10, (Widget) (this.field_E));
+        this.addChild((byte) 10, (Widget) (this.field_G));
+        this.addChild((byte) 10, (Widget) (this.field_L));
+        this.addChild((byte) 10, (Widget) (this.field_E));
     }
 
     public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {

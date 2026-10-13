@@ -5,7 +5,7 @@ final class bn {
     static ClientUiComponent field_c;
     static boolean field_e;
     static ModelMeshBase[] field_a;
-    static wc field_f;
+    static DraggableWidgetContainer draggedWidget;
     static String field_d;
     static int field_b;
     static String field_g;
@@ -56,13 +56,13 @@ final class bn {
         field_d = null;
         if (param0 == 29022) {
           field_a = null;
-          field_f = null;
+          draggedWidget = null;
           field_c = null;
           return;
         }
         field_d = (String) null;
         field_a = null;
-        field_f = null;
+        draggedWidget = null;
         field_c = null;
     }
 
@@ -87,7 +87,7 @@ final class bn {
         boolean stackIn_69_2 = false;
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        bh.d(false);
+        AlphaWidgetContainer.d(false);
         if (GlobalSpell.field_g >= 0) {
           t.field_g.text = fo.a(4800, AttackEvent.field_F, new String[]{Integer.toString(GlobalSpell.field_g)});
           stackIn_56_0 = no.field_T;

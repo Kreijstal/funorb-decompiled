@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends nl {
+final class ta extends SingleChildWidgetContainer {
     static NodeDeque field_O;
     private int field_H;
     private int field_S;
@@ -21,17 +21,17 @@ final class ta extends nl {
         String var3Lifetime1;
         int var2Lifetime1;
         if (obfuscationGuard == 21384) {
-          var2 = this.field_E.hovered ? 1 : 0;
-          this.field_E.hovered = this.hovered;
-          var3 = this.field_E.getTooltipText(obfuscationGuard + 0);
-          this.field_E.hovered = var2 != 0 ? true : false;
+          var2 = this.child.hovered ? 1 : 0;
+          this.child.hovered = this.hovered;
+          var3 = this.child.getTooltipText(obfuscationGuard + 0);
+          this.child.hovered = var2 != 0 ? true : false;
           return var3;
         }
         this.field_J = true;
-        var2Lifetime1 = this.field_E.hovered ? 1 : 0;
-        this.field_E.hovered = this.hovered;
-        var3Lifetime1 = this.field_E.getTooltipText(obfuscationGuard + 0);
-        this.field_E.hovered = var2Lifetime1 != 0 ? true : false;
+        var2Lifetime1 = this.child.hovered ? 1 : 0;
+        this.child.hovered = this.hovered;
+        var3Lifetime1 = this.child.getTooltipText(obfuscationGuard + 0);
+        this.child.hovered = var2Lifetime1 != 0 ? true : false;
         return var3Lifetime1;
     }
 
@@ -107,7 +107,7 @@ final class ta extends nl {
         int var13 = 0;
         int var14 = 0;
         try {
-          this.field_E = param4;
+          this.child = param4;
           this.field_H = param7;
           this.field_I = param9;
           this.field_S = param6;
@@ -128,7 +128,7 @@ final class ta extends nl {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_E.setBounds(var14, param2 + (-this.field_S - this.field_H * 3), (var13 - param3 >> 1) + this.field_H, 8192, param3 - 2 * this.field_H);
+          this.child.setBounds(var14, param2 + (-this.field_S - this.field_H * 3), (var13 - param3 >> 1) + this.field_H, 8192, param3 - 2 * this.field_H);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

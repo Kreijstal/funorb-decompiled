@@ -143,8 +143,8 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    int g(int param0) {
-        if (param0 != -31989) {
+    int getMaximumRenderLayer(int obfuscationGuard) {
+        if (obfuscationGuard != -31989) {
           return 112;
         }
         return 0;
@@ -179,14 +179,14 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Widget param6) {
+    boolean handleWheel(int pointerX, int originX, int originY, int pointerY, int wheelDelta, int obfuscationGuard, Widget rootWidget) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param5 >= 93) {
+          if (obfuscationGuard >= 93) {
             return false;
           }
           return true;
@@ -194,8 +194,8 @@ class Widget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_7_0 = var8;
-          stackIn_7_1 = new StringBuilder().append("kb.RA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_7_1 = new StringBuilder().append("kb.RA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(pointerY).append(',').append(wheelDelta).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -211,8 +211,8 @@ class Widget extends IntrusiveNode {
         field_y = null;
     }
 
-    final void e(int param0) {
-        if (param0 != 0) {
+    final void refreshLayout(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
         this.setBounds(this.x, this.width, this.y, 8192, this.height);
@@ -298,16 +298,16 @@ class Widget extends IntrusiveNode {
 
     final boolean a(boolean param0, int param1, int param2, int param3) {
         int var5;
-        wc var6;
+        DraggableWidgetContainer var6;
         int var7;
-        wc var8;
-        wc var10;
-        wc var15;
-        wc var18;
-        wc var21;
-        wc var23;
-        wc var27;
-        wc var28;
+        DraggableWidgetContainer var8;
+        DraggableWidgetContainer var10;
+        DraggableWidgetContainer var15;
+        DraggableWidgetContainer var18;
+        DraggableWidgetContainer var21;
+        DraggableWidgetContainer var23;
+        DraggableWidgetContainer var27;
+        DraggableWidgetContainer var28;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.updatePointer(32722, param2, param3, this);
         if (param1 == -6226) {
@@ -329,12 +329,12 @@ class Widget extends IntrusiveNode {
                         return param0;
                       }
                       this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                      var21 = bn.field_f;
+                      var21 = bn.draggedWidget;
                       if (var21 != null) {
                         if (var21.listener instanceof ch) {
                           ((ch) (var21.listener)).a(var21, -14486, (ku) null);
                         }
-                        bn.field_f = null;
+                        bn.draggedWidget = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
@@ -358,12 +358,12 @@ class Widget extends IntrusiveNode {
                     return param0;
                   }
                   this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                  var23 = bn.field_f;
+                  var23 = bn.draggedWidget;
                   if (var23 != null) {
                     if (var23.listener instanceof ch) {
                       ((ch) (var23.listener)).a(var23, -14486, (ku) null);
                     }
-                    bn.field_f = null;
+                    bn.draggedWidget = null;
                   }
                   if (var7 == 0) {
                     LobbyRoom.field_Ob = ro.pointerButton;
@@ -385,7 +385,7 @@ class Widget extends IntrusiveNode {
                   OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
-                this.a(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
+                this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
               }
               if (DeployEvent.pointerPressButton != 0) {
                 if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
@@ -397,13 +397,13 @@ class Widget extends IntrusiveNode {
                         return param0;
                       }
                       this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                      var27 = bn.field_f;
+                      var27 = bn.draggedWidget;
                       var6 = var27;
                       if (var27 != null) {
                         if (var27.listener instanceof ch) {
                           ((ch) (var27.listener)).a(var27, -14486, (ku) null);
                         }
-                        bn.field_f = null;
+                        bn.draggedWidget = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
@@ -435,12 +435,12 @@ class Widget extends IntrusiveNode {
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-              var28 = bn.field_f;
+              var28 = bn.draggedWidget;
               if (var28 != null) {
                 if (var28.listener instanceof ch) {
                   ((ch) (var28.listener)).a(var28, -14486, (ku) null);
                 }
-                bn.field_f = null;
+                bn.draggedWidget = null;
               }
               if (var7 == 0) {
                 break regionExit1;
@@ -482,13 +482,13 @@ class Widget extends IntrusiveNode {
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-              var8 = bn.field_f;
+              var8 = bn.draggedWidget;
               var6 = var8;
               if (var8 != null) {
                 if (var8.listener instanceof ch) {
                   ((ch) (var8.listener)).a(var8, -14486, (ku) null);
                 }
-                bn.field_f = null;
+                bn.draggedWidget = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
@@ -500,7 +500,7 @@ class Widget extends IntrusiveNode {
               return param0;
             }
             if (var5 != 0) {
-              this.a(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
+              this.handleWheel(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
             }
             if (DeployEvent.pointerPressButton == 0) {
               if (ro.pointerButton != 0) {
@@ -514,13 +514,13 @@ class Widget extends IntrusiveNode {
                 return param0;
               }
               this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-              var10 = bn.field_f;
+              var10 = bn.draggedWidget;
               var6 = var10;
               if (var10 != null) {
                 if (var10.listener instanceof ch) {
                   ((ch) (var10.listener)).a(var10, -14486, (ku) null);
                 }
-                bn.field_f = null;
+                bn.draggedWidget = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
@@ -544,12 +544,12 @@ class Widget extends IntrusiveNode {
                   return param0;
                 }
                 this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-                var15 = bn.field_f;
+                var15 = bn.draggedWidget;
                 if (var15 != null) {
                   if (var15.listener instanceof ch) {
                     ((ch) (var15.listener)).a(var15, -14486, (ku) null);
                   }
-                  bn.field_f = null;
+                  bn.draggedWidget = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
@@ -578,12 +578,12 @@ class Widget extends IntrusiveNode {
               return param0;
             }
             this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
-            var18 = bn.field_f;
+            var18 = bn.draggedWidget;
             if (var18 != null) {
               if (var18.listener instanceof ch) {
                 ((ch) (var18.listener)).a(var18, -14486, (ku) null);
               }
-              bn.field_f = null;
+              bn.draggedWidget = null;
             }
             if (var7 == 0) {
               LobbyRoom.field_Ob = ro.pointerButton;
@@ -773,7 +773,7 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAllLayers(int originX, int obfuscationGuard, int originY) {
         int var4;
         int var5_int;
         String var5;
@@ -784,11 +784,11 @@ class Widget extends IntrusiveNode {
         String var9Lifetime1;
         String var12Lifetime1;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param1 <= -117) {
-          var4 = this.g(-31989);
+        if (obfuscationGuard <= -117) {
+          var4 = this.getMaximumRenderLayer(-31989);
           var5_int = 0;
           while (var5_int <= var4) {
-            this.drawWidget(param0, param2, (byte) -115, var5_int);
+            this.drawWidget(originX, originY, (byte) -115, var5_int);
             var5_int++;
             if (var6 == 0) {
               continue;
@@ -803,10 +803,10 @@ class Widget extends IntrusiveNode {
           var5 = var9Lifetime1;
         } else {
           field_A = 34;
-          var4 = this.g(-31989);
+          var4 = this.getMaximumRenderLayer(-31989);
           var5_int = 0;
           while (var5_int <= var4) {
-            this.drawWidget(param0, param2, (byte) -115, var5_int);
+            this.drawWidget(originX, originY, (byte) -115, var5_int);
             var5_int++;
             if (var6 == 0) {
               continue;

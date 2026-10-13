@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kv extends tj implements WidgetActivationListener {
+final class kv extends DequeWidgetContainer implements WidgetActivationListener {
     private String[] field_H;
     static String field_J;
     private InteractiveWidget[] field_E;
@@ -22,7 +22,7 @@ final class kv extends tj implements WidgetActivationListener {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.field_D.clear(param0 - 11);
+          this.children.clear(param0 - 11);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;
@@ -37,12 +37,12 @@ final class kv extends tj implements WidgetActivationListener {
               this.field_E[var5].painter = (WidgetPainter) ((Object) var4);
               this.field_E[var5].tooltipText = wl.field_J;
               this.field_E[var5].setBounds(0, 80, 20 + 16 * var5, 8192, 15);
-              this.a((byte) 10, (Widget) (this.field_E[var5]));
+              this.addChild((byte) 10, (Widget) (this.field_E[var5]));
             }
             this.field_E[var3_int] = new InteractiveWidget(h.field_h, (WidgetListener) (this));
             this.field_E[var3_int].painter = (WidgetPainter) ((Object) var4);
             this.field_E[var3_int].setBounds(0, param0, var3_int * 16 + 16 + 20, param0 ^ 8292, 15);
-            this.a((byte) 10, (Widget) (this.field_E[var3_int]));
+            this.addChild((byte) 10, (Widget) (this.field_E[var3_int]));
             return;
           }
           this.field_H = null;
@@ -167,13 +167,13 @@ final class kv extends tj implements WidgetActivationListener {
             return true;
           }
           if (98 == keyCode) {
-            stackIn_8_0 = this.a(false, rootWidget);
+            stackIn_8_0 = this.focusPreviousChild(false, rootWidget);
             return stackIn_8_0;
           }
           if (keyCode != 99) {
             return false;
           }
-          stackIn_12_0 = this.b((byte) -125, rootWidget);
+          stackIn_12_0 = this.focusNextChild((byte) -125, rootWidget);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

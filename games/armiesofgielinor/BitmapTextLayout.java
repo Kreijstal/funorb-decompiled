@@ -353,7 +353,7 @@ final class BitmapTextLayout extends TextLayout {
     final static void b(boolean param0) {
         tq.field_c = SoftwareRaster.width;
         CachedArchiveProvider.field_p = SoftwareRaster.height;
-        bh.d(false);
+        AlphaWidgetContainer.d(false);
         SpellCastEvent.field_E.setLayout(-2 + no.field_T.height - 40, (byte) -124, 0, no.field_T.width, 0);
         t.field_g.setBounds(jn.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
         int var1 = 2 + jn.field_d;

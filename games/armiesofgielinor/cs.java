@@ -25,14 +25,14 @@ final class cs extends sf implements WidgetActivationListener {
           var3.width = this.width;
           var3.x = 0;
           var3.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a((byte) 10, var3);
+          this.addChild((byte) 10, var3);
           this.field_ab = new Widget(ro.field_vb, (WidgetListener) null);
           this.field_ab.width = this.width;
           this.field_ab.x = 0;
           this.field_ab.y = 20 + (var3.y + var3.height);
           this.field_ab.height = 80;
           this.field_ab.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(CipherPacketBuffer.field_t, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a((byte) 10, this.field_ab);
+          this.addChild((byte) 10, this.field_ab);
           this.field_Z = this.a(DualNodeDeque.field_e, -63, (WidgetListener) (this));
           this.field_gb = this.a(WeightedScoreStrategy.field_m, -74, (WidgetListener) (this));
         } catch (RuntimeException runtimeException) {
@@ -213,8 +213,8 @@ final class cs extends sf implements WidgetActivationListener {
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, -30 + this.width, var5, 8192, 30);
-          this.a((byte) 10, (Widget) (var4));
-          this.e(0);
+          this.addChild((byte) 10, (Widget) (var4));
+          this.refreshLayout(0);
           var6 = 121 % ((1 - param1) / 62);
           stackIn_1_0 = var4;
           return stackIn_1_0;

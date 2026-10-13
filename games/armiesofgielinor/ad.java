@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad extends tj implements WidgetActivationListener {
+final class ad extends DequeWidgetContainer implements WidgetActivationListener {
     private ro field_L;
     private BitmapFont field_J;
     static gu field_K;
@@ -30,7 +30,7 @@ final class ad extends tj implements WidgetActivationListener {
           var6 = -98 / ((24 - param2) / 44);
           this.setBounds(0, this.width, 0, 8192, this.height + 34);
           var4.setBounds(7, this.width - 14, var5, 8192, 30);
-          this.a((byte) 10, (Widget) (var4));
+          this.addChild((byte) 10, (Widget) (var4));
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

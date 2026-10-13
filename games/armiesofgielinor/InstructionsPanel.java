@@ -80,7 +80,7 @@ final class InstructionsPanel {
         if (param1 < 90) {
           discarded$0 = this.c(60, 20);
         }
-        hs.a(false, true, this.auxiliaryPreviewUnit, 0, db.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
+        ArrayWidgetContainer.a(false, true, this.auxiliaryPreviewUnit, 0, db.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
     }
 
     private final void a(byte param0, int param1, int param2) {

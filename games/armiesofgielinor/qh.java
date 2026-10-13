@@ -6,7 +6,7 @@ final class qh {
         int var11;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (param9) {
-          QuickChatCategory.field_u = qm.field_L;
+          QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
           ClientUiComponent.c(param9, -120);
           if (gk.field_J > 0) {
             bn.a(param0, param9, 117, param5);
@@ -57,7 +57,7 @@ final class qh {
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               }
             } else {
-              QuickChatCategory.field_u = qm.field_L;
+              QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
               ClientUiComponent.c(param9, -120);
               if (gk.field_J > 0) {
                 bn.a(param0, param9, 117, param5);
@@ -91,7 +91,7 @@ final class qh {
             if (null != vu.currentRoom) {
               ClientUiComponent.a(45, false);
               if (param9) {
-                QuickChatCategory.field_u = qm.field_L;
+                QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
               } else {
                 QuickChatCategory.field_u = (-640 + tq.field_c) / 2;
               }
@@ -153,7 +153,7 @@ final class qh {
               VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
             }
           } else {
-            QuickChatCategory.field_u = qm.field_L;
+            QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
             ClientUiComponent.c(param9, -120);
             if (gk.field_J > 0) {
               bn.a(param0, param9, 117, param5);

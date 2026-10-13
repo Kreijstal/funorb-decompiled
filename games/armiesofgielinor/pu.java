@@ -85,7 +85,7 @@ final class pu {
             qc.lobbyRoomOrder.clear(94);
             qc.lobbyRoomOrder = null;
           }
-          qm.lobbyRoomsById = null;
+          ClippedWidgetContainer.lobbyRoomsById = null;
           if (wl.currentRoomPlayers != null) {
             wl.currentRoomPlayers.clear(87);
             wl.currentRoomPlayers = null;

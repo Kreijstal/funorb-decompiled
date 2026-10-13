@@ -127,7 +127,7 @@ final class cr extends sf {
           this.field_db = false;
           this.field_ab = false;
           this.field_Y.field_R = true;
-          this.a((byte) 10, (Widget) (this.field_Y));
+          this.addChild((byte) 10, (Widget) (this.field_Y));
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cr.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

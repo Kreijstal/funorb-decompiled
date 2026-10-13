@@ -338,11 +338,11 @@ final class ep {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (ai.field_T.errorCount >= 4) {
-            if (-1 == ai.field_T.errorCode) {
+          if (ScrollWidgetContainer.field_T.errorCount >= 4) {
+            if (-1 == ScrollWidgetContainer.field_T.errorCode) {
               return 3;
             }
-            if (ai.field_T.errorCode == -2) {
+            if (ScrollWidgetContainer.field_T.errorCode == -2) {
               return 4;
             }
             return 1;
@@ -387,7 +387,7 @@ final class ep {
               }
             }
             if (4 == ta.field_N) {
-              ai.field_T.attachTransport(jj.field_g, TextLineLayout.field_m, -68);
+              ScrollWidgetContainer.field_T.attachTransport(jj.field_g, TextLineLayout.field_m, -68);
               kd.field_R = null;
               ta.field_N = 0;
               jj.field_g = null;

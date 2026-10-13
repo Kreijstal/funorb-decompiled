@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gk extends nl {
+final class gk extends SingleChildWidgetContainer {
     static boolean field_H;
     static String field_L;
     static int field_J;
@@ -60,7 +60,7 @@ final class gk extends nl {
           var3.field_L = false;
           var3 = (wl) (var2.next(50));
         }
-        this.field_E = null;
+        this.child = null;
         if (param0 >= -85) {
           this.d((byte) 125);
         }
@@ -125,7 +125,7 @@ final class gk extends nl {
           }
           var3 = (wl) (var2.next(50));
         }
-        this.field_E = (Widget) ((Object) this.a((byte) 89));
+        this.child = (Widget) ((Object) this.a((byte) 89));
         int var4 = 94 / ((param0 - 30) / 60);
     }
 
@@ -177,17 +177,17 @@ final class gk extends nl {
         }
     }
 
-    final Widget a(int param0) {
+    final Widget getFocusedChild(int obfuscationGuard) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         NodeIterator var2 = new NodeIterator(this.field_M);
         wl var3 = (wl) (var2.first(50));
         while (var3 != null) {
           if (var3.field_L) {
-            return var3.e((byte) 119);
+            return var3.getFocusedChild((byte) 119);
           }
-          var3 = (wl) (var2.next(param0 + 1898));
+          var3 = (wl) (var2.next(obfuscationGuard + 1898));
         }
-        if (param0 == -1848) {
+        if (obfuscationGuard == -1848) {
           return null;
         }
         decodedChatAccountId = -68L;

@@ -413,18 +413,18 @@ final class oo {
             iw.field_p.ensureGroupAvailableByName(28979, "members_expansion_screen") &&
             iw.field_p.ensureGroupAvailableByName(28979, "arialish12") &&
             iw.field_p.ensureGroupAvailableByName(28979, "pump32") &&
-            bh.field_H != null &&
-            bh.field_H.ensureIndex((byte) 82) &&
-            bh.field_H.ensureGroupAvailableByName(28979, "arialish12") &&
-            bh.field_H.ensureGroupAvailableByName(28979, "pump32")) {
+            AlphaWidgetContainer.field_H != null &&
+            AlphaWidgetContainer.field_H.ensureIndex((byte) 82) &&
+            AlphaWidgetContainer.field_H.ensureGroupAvailableByName(28979, "arialish12") &&
+            AlphaWidgetContainer.field_H.ensureGroupAvailableByName(28979, "pump32")) {
             UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
             ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
-            VerticalScrollbar.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, bh.field_H, (byte) -53, "");
-            kt.field_n = it.a("", iw.field_p, bh.field_H, (byte) -87, "pump32");
+            VerticalScrollbar.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, AlphaWidgetContainer.field_H, (byte) -53, "");
+            kt.field_n = it.a("", iw.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.loadRgbSpriteByName("benefit_orbs", "members_expansion_screen", iw.field_p, false);
             QuickChatPhrase.field_D = DiskCacheRequest.loadRgbSpriteByName("button_text", "members_expansion_screen", iw.field_p, false);
             DiskCacheRequest.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
-            bh.field_H = null;
+            AlphaWidgetContainer.field_H = null;
             iw.field_p = null;
           }
           this.a((byte) -124);

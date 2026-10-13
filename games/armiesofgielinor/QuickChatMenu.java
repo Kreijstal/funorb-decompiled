@@ -349,7 +349,7 @@ final class QuickChatMenu extends ClientUiComponent {
             var29.menu.addIconAction(param2, var30, 12, var31);
             var32 = tn.activeContextMenu;
             var34 = dh.field_n[2];
-            var33 = ai.field_R;
+            var33 = ScrollWidgetContainer.field_R;
             var32.menu.addIconAction(false, var33, 13, var34);
           }
           var35 = tn.activeContextMenu;

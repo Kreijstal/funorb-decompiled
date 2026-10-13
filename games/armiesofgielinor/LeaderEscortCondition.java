@@ -27,7 +27,7 @@ final class LeaderEscortCondition implements MatchCondition {
           if (param1 < 71) {
             field_f = (BinaryBitmapFont) null;
           }
-          var2 = new PalettedBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, qm.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
+          var2 = new PalettedBitmapFont(param0, j.decodedSpriteOffsetXs, CampaignMenuButton.decodedSpriteOffsetYs, ClippedWidgetContainer.decodedSpriteWidths, c.decodedSpriteHeights, MovementPresentation.decodedSpritePalette, AnimationPlayer.decodedSpriteIndices);
           rj.releaseSpriteDecodeBuffers((byte) 107);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -99,7 +99,7 @@ final class LeaderEscortCondition implements MatchCondition {
             return stackIn_6_0;
           }
           if (param0 == 7) {
-            stackIn_10_0 = qm.field_H;
+            stackIn_10_0 = ClippedWidgetContainer.field_H;
             return stackIn_10_0;
           }
           if (8 == param0) {

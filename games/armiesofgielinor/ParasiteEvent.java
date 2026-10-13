@@ -41,13 +41,13 @@ final class ParasiteEvent extends GameEvent {
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         RgbSprite[] var1 = new RgbSprite[iw.decodedSpriteCount];
         for (var2 = 0; iw.decodedSpriteCount > var2; var2++) {
-          var3 = qm.decodedSpriteWidths[var2] * c.decodedSpriteHeights[var2];
+          var3 = ClippedWidgetContainer.decodedSpriteWidths[var2] * c.decodedSpriteHeights[var2];
           var4 = AnimationPlayer.decodedSpriteIndices[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var4[var6])];
           }
-          var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], qm.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
+          var1[var2] = new RgbSprite(lg.decodedSpriteCanvasWidth, wr.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
         }
         rj.releaseSpriteDecodeBuffers((byte) 106);
         if (obfuscationGuard >= 1) {

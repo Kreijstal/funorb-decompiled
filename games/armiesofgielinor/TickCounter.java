@@ -1315,7 +1315,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "CAMPAIGNS");
                 if (var2 != null) {
-                  ai.field_V = uu.a(var2, (byte) -106);
+                  ScrollWidgetContainer.field_V = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "BACK");
                 if (null != var2) {
@@ -2525,141 +2525,141 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "unitspecials,0");
                 if (null != var2) {
-                  bh.field_M[0] = uu.a(var2, (byte) -100);
+                  AlphaWidgetContainer.field_M[0] = uu.a(var2, (byte) -100);
                 }
                 var2 = fk.a(false, "unitspecials,3");
                 if (null != var2) {
-                  bh.field_M[3] = uu.a(var2, (byte) -126);
+                  AlphaWidgetContainer.field_M[3] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "unitspecials,4");
                 if (null != var2) {
-                  bh.field_M[4] = uu.a(var2, (byte) -92);
+                  AlphaWidgetContainer.field_M[4] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "unitspecials,6");
                 if (null != var2) {
-                  bh.field_M[6] = uu.a(var2, (byte) -109);
+                  AlphaWidgetContainer.field_M[6] = uu.a(var2, (byte) -109);
                 }
                 var2 = fk.a(false, "unitspecials,7");
                 if (var2 != null) {
-                  bh.field_M[7] = uu.a(var2, (byte) 59);
+                  AlphaWidgetContainer.field_M[7] = uu.a(var2, (byte) 59);
                 }
                 var2 = fk.a(false, "unitspecials,10");
                 if (null != var2) {
-                  bh.field_M[10] = uu.a(var2, (byte) -119);
+                  AlphaWidgetContainer.field_M[10] = uu.a(var2, (byte) -119);
                 }
                 var2 = fk.a(false, "unitspecials,17");
                 if (null != var2) {
-                  bh.field_M[17] = uu.a(var2, (byte) -96);
+                  AlphaWidgetContainer.field_M[17] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "unitspecials,18");
                 if (null != var2) {
-                  bh.field_M[18] = uu.a(var2, (byte) 28);
+                  AlphaWidgetContainer.field_M[18] = uu.a(var2, (byte) 28);
                 }
                 var2 = fk.a(false, "unitspecials,20");
                 if (null != var2) {
-                  bh.field_M[20] = uu.a(var2, (byte) -113);
+                  AlphaWidgetContainer.field_M[20] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "unitspecials,21");
                 if (null != var2) {
-                  bh.field_M[21] = uu.a(var2, (byte) -108);
+                  AlphaWidgetContainer.field_M[21] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "unitspecials,27");
                 if (var2 != null) {
-                  bh.field_M[27] = uu.a(var2, (byte) -99);
+                  AlphaWidgetContainer.field_M[27] = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "unitspecials,28");
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  bh.field_M[28] = uu.a(var2, (byte) -101);
+                  AlphaWidgetContainer.field_M[28] = uu.a(var2, (byte) -101);
                 }
                 var2 = fk.a(false, "unitspecials,29");
                 if (null != var2) {
-                  bh.field_M[29] = uu.a(var2, (byte) -105);
+                  AlphaWidgetContainer.field_M[29] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "unitspecials,32");
                 if (var2 != null) {
-                  bh.field_M[32] = uu.a(var2, (byte) 40);
+                  AlphaWidgetContainer.field_M[32] = uu.a(var2, (byte) 40);
                 }
                 var2 = fk.a(false, "unitspecials,34");
                 if (null != var2) {
-                  bh.field_M[34] = uu.a(var2, (byte) -103);
+                  AlphaWidgetContainer.field_M[34] = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "unitspecials,39");
                 if (null != var2) {
-                  bh.field_M[39] = uu.a(var2, (byte) -123);
+                  AlphaWidgetContainer.field_M[39] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "unitspecials,40");
                 if (null != var2) {
-                  bh.field_M[40] = uu.a(var2, (byte) -95);
+                  AlphaWidgetContainer.field_M[40] = uu.a(var2, (byte) -95);
                 }
                 var2 = fk.a(false, "unitspecials,43");
                 if (var2 != null) {
-                  bh.field_M[43] = uu.a(var2, (byte) 75);
+                  AlphaWidgetContainer.field_M[43] = uu.a(var2, (byte) 75);
                 }
                 var2 = fk.a(false, "unitspecials,51");
                 if (null != var2) {
-                  bh.field_M[51] = uu.a(var2, (byte) -93);
+                  AlphaWidgetContainer.field_M[51] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "unitspecials,53");
                 if (var2 != null) {
-                  bh.field_M[53] = uu.a(var2, (byte) 102);
+                  AlphaWidgetContainer.field_M[53] = uu.a(var2, (byte) 102);
                 }
                 var2 = fk.a(false, "unitspecials,56");
                 if (var2 != null) {
-                  bh.field_M[56] = uu.a(var2, (byte) -120);
+                  AlphaWidgetContainer.field_M[56] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "unitspecials,57");
                 if (null != var2) {
-                  bh.field_M[57] = uu.a(var2, (byte) -108);
+                  AlphaWidgetContainer.field_M[57] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "unitspecials,58");
                 if (null != var2) {
-                  bh.field_M[58] = uu.a(var2, (byte) -121);
+                  AlphaWidgetContainer.field_M[58] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "unitspecials,59");
                 if (null != var2) {
-                  bh.field_M[59] = uu.a(var2, (byte) 43);
+                  AlphaWidgetContainer.field_M[59] = uu.a(var2, (byte) 43);
                 }
                 var2 = fk.a(false, "unitspecials,62");
                 if (null != var2) {
-                  bh.field_M[62] = uu.a(var2, (byte) 80);
+                  AlphaWidgetContainer.field_M[62] = uu.a(var2, (byte) 80);
                 }
                 var2 = fk.a(false, "unitspecials,63");
                 if (var2 != null) {
-                  bh.field_M[63] = uu.a(var2, (byte) 89);
+                  AlphaWidgetContainer.field_M[63] = uu.a(var2, (byte) 89);
                 }
                 var2 = fk.a(false, "unitspecials,65");
                 if (null != var2) {
-                  bh.field_M[65] = uu.a(var2, (byte) 43);
+                  AlphaWidgetContainer.field_M[65] = uu.a(var2, (byte) 43);
                 }
                 var2 = fk.a(false, "unitspecials,66");
                 if (var2 != null) {
-                  bh.field_M[66] = uu.a(var2, (byte) -97);
+                  AlphaWidgetContainer.field_M[66] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "unitspecials,70");
                 if (null != var2) {
-                  bh.field_M[70] = uu.a(var2, (byte) -116);
+                  AlphaWidgetContainer.field_M[70] = uu.a(var2, (byte) -116);
                 }
                 var2 = fk.a(false, "unitspecials,71");
                 if (var2 != null) {
-                  bh.field_M[71] = uu.a(var2, (byte) 41);
+                  AlphaWidgetContainer.field_M[71] = uu.a(var2, (byte) 41);
                 }
                 var2 = fk.a(false, "unitspecials,72");
                 if (var2 != null) {
-                  bh.field_M[72] = uu.a(var2, (byte) -92);
+                  AlphaWidgetContainer.field_M[72] = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "unitspecials,73");
                 if (var2 != null) {
-                  bh.field_M[73] = uu.a(var2, (byte) -121);
+                  AlphaWidgetContainer.field_M[73] = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "unitspecials,74");
                 if (var2 != null) {
-                  bh.field_M[74] = uu.a(var2, (byte) 33);
+                  AlphaWidgetContainer.field_M[74] = uu.a(var2, (byte) 33);
                 }
                 var2 = fk.a(false, "unitspecials,81");
                 if (var2 != null) {
-                  bh.field_M[81] = uu.a(var2, (byte) -123);
+                  AlphaWidgetContainer.field_M[81] = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "descriptions,0");
                 if (var2 != null) {
@@ -3095,7 +3095,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "SLASH");
                 if (var2 != null) {
-                  hs.field_I = uu.a(var2, (byte) -128);
+                  ArrayWidgetContainer.field_I = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "QUIT_MULTI");
                 if (var2 != null) {
@@ -3219,7 +3219,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_MAPSIZE");
                 if (null != var2) {
-                  qm.field_I = uu.a(var2, (byte) -97);
+                  ClippedWidgetContainer.field_I = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "LABEL_MODEL_VIEWER");
                 if (var2 != null) {
@@ -3295,7 +3295,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_HOTSEAT");
                 if (null != var2) {
-                  nl.field_F = uu.a(var2, (byte) -115);
+                  SingleChildWidgetContainer.field_F = uu.a(var2, (byte) -115);
                 }
                 var2 = fk.a(false, "LABEL_INSTRUCTIONS");
                 if (var2 != null) {
@@ -4815,7 +4815,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_FLAME");
                 if (var2 != null) {
-                  nl.field_D = uu.a(var2, (byte) -110);
+                  SingleChildWidgetContainer.field_D = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "TTREEN_HEALING");
                 if (var2 != null) {
@@ -4823,7 +4823,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_HARMING");
                 if (null != var2) {
-                  nl.field_G = uu.a(var2, (byte) -99);
+                  SingleChildWidgetContainer.field_G = uu.a(var2, (byte) -99);
                 }
                 var2 = fk.a(false, "TTREEN_MOVES");
                 if (var2 != null) {
@@ -4931,7 +4931,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_CAMOUFLAGE");
                 if (null != var2) {
-                  ai.field_J = uu.a(var2, (byte) -97);
+                  ScrollWidgetContainer.field_J = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "TTREED_RUNIC");
                 if (var2 != null) {
@@ -4943,7 +4943,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_MELEE");
                 if (var2 != null) {
-                  nv.field_J = uu.a(var2, (byte) -108);
+                  ScrollControlWidget.field_J = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TTREED_RANGED");
                 if (var2 != null) {
@@ -4963,7 +4963,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_HEALING");
                 if (var2 != null) {
-                  bh.field_L = uu.a(var2, (byte) -94);
+                  AlphaWidgetContainer.field_L = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "TTREED_HARMING");
                 if (var2 != null) {
@@ -5063,7 +5063,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_NOUNIT");
                 if (null != var2) {
-                  ai.field_N = uu.a(var2, (byte) -126);
+                  ScrollWidgetContainer.field_N = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "TERROR_NOTALLY");
                 if (var2 != null) {

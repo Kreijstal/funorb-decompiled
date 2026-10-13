@@ -350,7 +350,7 @@ final class SpellCastEvent extends GameEvent {
         int var12Lifetime1;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          hs.b(-103, this.spell.spellId);
+          ArrayWidgetContainer.b(-103, this.spell.spellId);
           SpellCastRequest.a(3, (byte) -121, 38);
           param2.notifyTutorialInteraction(27, this.spell.spellId, -91);
           var4_int = 0;

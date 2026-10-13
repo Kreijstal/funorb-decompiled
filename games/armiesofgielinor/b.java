@@ -53,7 +53,7 @@ final class b extends IntrusiveNode {
           c.decodedSpriteHeights = new int[iw.decodedSpriteCount];
           CampaignMenuButton.decodedSpriteOffsetYs = new int[iw.decodedSpriteCount];
           MapTile.decodedSpriteHasAlpha = new boolean[iw.decodedSpriteCount];
-          qm.decodedSpriteWidths = new int[iw.decodedSpriteCount];
+          ClippedWidgetContainer.decodedSpriteWidths = new int[iw.decodedSpriteCount];
           AnimationPlayer.decodedSpriteIndices = new byte[iw.decodedSpriteCount][];
           CampaignMenuEntry.decodedSpriteAlphas = new byte[iw.decodedSpriteCount][];
           packetAlias.position = -(iw.decodedSpriteCount * 8) - 7 + encodedSheet.length;
@@ -67,7 +67,7 @@ final class b extends IntrusiveNode {
             CampaignMenuButton.decodedSpriteOffsetYs[offsetYIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
           for (widthIndex = 0; iw.decodedSpriteCount > widthIndex; widthIndex++) {
-            qm.decodedSpriteWidths[widthIndex] = packetAlias.readUnsignedShort((byte) -104);
+            ClippedWidgetContainer.decodedSpriteWidths[widthIndex] = packetAlias.readUnsignedShort((byte) -104);
           }
           for (heightIndex = 0; heightIndex < iw.decodedSpriteCount; heightIndex++) {
             c.decodedSpriteHeights[heightIndex] = packetAlias.readUnsignedShort((byte) -104);
@@ -85,7 +85,7 @@ final class b extends IntrusiveNode {
           }
           packetAlias.position = 0;
           for (spriteIndex = 0; spriteIndex < iw.decodedSpriteCount; spriteIndex++) {
-            spriteWidth = qm.decodedSpriteWidths[spriteIndex];
+            spriteWidth = ClippedWidgetContainer.decodedSpriteWidths[spriteIndex];
             spriteHeight = c.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteHeight * spriteWidth;
             var20 = new byte[pixelCount];

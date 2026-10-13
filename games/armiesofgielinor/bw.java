@@ -193,7 +193,7 @@ final class bw {
         LobbyRoom var7 = null;
         CipherPacketBuffer var4 = null;
         if (roomId != oo.watchedRoomId) {
-          var6 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)oo.watchedRoomId));
+          var6 = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)oo.watchedRoomId));
           var7 = var6;
           oo.watchedRoomId = roomId;
           if (var7 != null) {

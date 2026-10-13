@@ -217,7 +217,7 @@ final class PopupPresentation implements EventPresentation {
           }
           if (param3.eventKind == 25) {
             this.field_n = 7;
-            hs.b(-55, 46);
+            ArrayWidgetContainer.b(-55, 46);
           } else {
             if (param3.eventKind == 26) {
               this.field_n = 7;
@@ -331,7 +331,7 @@ final class PopupPresentation implements EventPresentation {
         GameEvent var6;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.elapsedFrames < 20) {
-          stackIn_4_0 = hs.field_F[AttackEvent.nextBoundedInt(false, hs.field_F.length, li.field_n)];
+          stackIn_4_0 = ArrayWidgetContainer.field_F[AttackEvent.nextBoundedInt(false, ArrayWidgetContainer.field_F.length, li.field_n)];
           stackIn_4_1 = this.presenter.screenX + 30;
           stackIn_4_2 = -90 + (this.presenter.screenY + this.elapsedFrames * 4);
           stackIn_4_3 = 20;
@@ -347,7 +347,7 @@ final class PopupPresentation implements EventPresentation {
           for (var2 = 0; var2 < this.field_t.length; var2++) {
             var3 = this.presenter.screenX + (this.field_t[var2][0] * (this.elapsedFrames - 20) / 20 + 35);
             var4 = -10 + this.presenter.screenY + (-20 + this.elapsedFrames) * this.field_t[var2][1] / 20;
-            hs.field_F[AttackEvent.nextBoundedInt(false, hs.field_F.length, li.field_n)].d(-((-20 + this.elapsedFrames) / 4) + var3, -((-40 + this.elapsedFrames) / 4) + (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10 + var4, (-20 + this.elapsedFrames) / 2 + 10, (-20 + this.elapsedFrames) / 2 + 10, (-this.elapsedFrames + 60) * 255 / 40);
+            ArrayWidgetContainer.field_F[AttackEvent.nextBoundedInt(false, ArrayWidgetContainer.field_F.length, li.field_n)].d(-((-20 + this.elapsedFrames) / 4) + var3, -((-40 + this.elapsedFrames) / 4) + (this.elapsedFrames - 20) * (this.elapsedFrames - 20) / 10 + var4, (-20 + this.elapsedFrames) / 2 + 10, (-20 + this.elapsedFrames) / 2 + 10, (-this.elapsedFrames + 60) * 255 / 40);
           }
         }
         if (param0 != -117) {

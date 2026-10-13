@@ -4,30 +4,30 @@
 import java.io.*;
 import java.util.*;
 
-class tj extends Widget implements gw {
+class DequeWidgetContainer extends Widget implements WidgetContainerMarker {
     static na field_C;
-    NodeDeque field_D;
+    NodeDeque children;
 
-    final int g(int param0) {
-        int var5 = 0;
-        int var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var2 = 0;
-        NodeIterator var3 = new NodeIterator(this.field_D);
-        if (param0 != -31989) {
+    final int getMaximumRenderLayer(int obfuscationGuard) {
+        int childLayer = 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int maximumLayer = 0;
+        NodeIterator iterator = new NodeIterator(this.children);
+        if (obfuscationGuard != -31989) {
           this.isFocused(false);
         }
-        Widget var4 = (Widget) (var3.first(param0 ^ -31943));
-        while (var4 != null) {
-          var5 = var4.g(-31989);
-          if (var5 > var2) {
-            var2 = var5;
+        Widget child = (Widget) (iterator.first(obfuscationGuard ^ -31943));
+        while (child != null) {
+          childLayer = child.getMaximumRenderLayer(-31989);
+          if (childLayer > maximumLayer) {
+            maximumLayer = childLayer;
           }
-          var4 = (Widget) (var3.next(50));
+          child = (Widget) (iterator.next(50));
         }
-        return var2;
+        return maximumLayer;
     }
 
-    final boolean b(byte param0, Widget param1) {
+    final boolean focusNextChild(byte obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         Widget var4 = null;
         NodeIterator var5 = null;
@@ -40,21 +40,21 @@ class tj extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_D.isEmpty(false)) {
+          if (this.children.isEmpty(false)) {
             return false;
           }
-          var8 = new NodeIterator(this.field_D);
-          if (param0 >= -121) {
-            tj.d((byte) 127);
+          var8 = new NodeIterator(this.children);
+          if (obfuscationGuard >= -121) {
+            DequeWidgetContainer.d((byte) 127);
           }
           var4 = (Widget) (var8.first(50));
           while (var4 != null) {
             if (var4.isFocused(false)) {
-              var5 = new NodeIterator(this.field_D);
+              var5 = new NodeIterator(this.children);
               var5.startForwardAt(var4, true);
               var6 = (Widget) (var5.next(50));
               while (var6 != null) {
-                if (!var6.takeFocus(11, param1)) {
+                if (!var6.takeFocus(11, rootWidget)) {
                   var6 = (Widget) (var5.next(50));
                   continue;
                 }
@@ -68,8 +68,8 @@ class tj extends Widget implements gw {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
-          stackIn_21_1 = new StringBuilder().append("tj.BC(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("tj.BC(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -80,7 +80,7 @@ class tj extends Widget implements gw {
 
     void blur(int obfuscationGuard) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeIterator var2 = new NodeIterator(this.field_D);
+        NodeIterator var2 = new NodeIterator(this.children);
         if (obfuscationGuard != 1) {
           field_C = (na) null;
         }
@@ -91,21 +91,21 @@ class tj extends Widget implements gw {
         }
     }
 
-    Widget e(byte param0) {
-        NodeIterator var2;
-        Widget var3;
-        int var4;
-        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = new NodeIterator(this.field_D);
-        if (param0 < 24) {
-          this.field_D = (NodeDeque) null;
+    Widget getFocusedChild(byte obfuscationGuard) {
+        NodeIterator iterator;
+        Widget child;
+        int obfuscationControl;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        iterator = new NodeIterator(this.children);
+        if (obfuscationGuard < 24) {
+          this.children = (NodeDeque) null;
         }
-        var3 = (Widget) (var2.first(50));
-        while (var3 != null) {
-          if (var3.isFocused(false)) {
-            return var3;
+        child = (Widget) (iterator.first(50));
+        while (child != null) {
+          if (child.isFocused(false)) {
+            return child;
           }
-          var3 = (Widget) (var2.next(50));
+          child = (Widget) (iterator.next(50));
         }
         return null;
     }
@@ -121,7 +121,7 @@ class tj extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var3 = new NodeIterator(this.field_D);
+          var3 = new NodeIterator(this.children);
           if (obfuscationGuard != 11) {
             return true;
           }
@@ -151,7 +151,7 @@ class tj extends Widget implements gw {
         }
     }
 
-    final boolean a(boolean param0, Widget param1) {
+    final boolean focusPreviousChild(boolean obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         Widget var4 = null;
         NodeIterator var5 = null;
@@ -165,22 +165,22 @@ class tj extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             var8 = (Widget) null;
             this.handleKey((Widget) null, 21, '￘', -49);
           }
-          if (this.field_D.isEmpty(param0)) {
+          if (this.children.isEmpty(obfuscationGuard)) {
             return false;
           }
-          var9 = new NodeIterator(this.field_D);
+          var9 = new NodeIterator(this.children);
           var4 = (Widget) (var9.last(50));
           while (var4 != null) {
             if (var4.isFocused(false)) {
-              var5 = new NodeIterator(this.field_D);
+              var5 = new NodeIterator(this.children);
               var5.startReverseAt(false, var4);
               var6 = (Widget) (var5.previous((byte) -112));
               while (var6 != null) {
-                if (var6.takeFocus(11, param1)) {
+                if (var6.takeFocus(11, rootWidget)) {
                   return true;
                 }
                 var6 = (Widget) (var5.previous((byte) -112));
@@ -193,8 +193,8 @@ class tj extends Widget implements gw {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_21_0 = var3;
-          stackIn_21_1 = new StringBuilder().append("tj.WB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("tj.WB(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
@@ -203,41 +203,41 @@ class tj extends Widget implements gw {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, Widget param6) {
-        NodeIterator var8 = null;
-        RuntimeException var8_ref = null;
-        Widget var9 = null;
-        int var10 = 0;
+    final boolean handleWheel(int pointerX, int originX, int originY, int pointerY, int wheelDelta, int obfuscationGuard, Widget rootWidget) {
+        NodeIterator iterator = null;
+        RuntimeException failure = null;
+        Widget child = null;
+        int obfuscationControl = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var8 = new NodeIterator(this.field_D);
-          var9 = (Widget) (var8.first(50));
-          while (var9 != null) {
-            if (var9.isLinked(65280)) {
-              if (var9.isFocused(false) &&
-                var9.a(param0, param1, param2, param3, param4, 94, param6)) {
+          iterator = new NodeIterator(this.children);
+          child = (Widget) (iterator.first(50));
+          while (child != null) {
+            if (child.isLinked(65280)) {
+              if (child.isFocused(false) &&
+                child.handleWheel(pointerX, originX, originY, pointerY, wheelDelta, 94, rootWidget)) {
                 return true;
               }
-              var9 = (Widget) (var8.next(50));
+              child = (Widget) (iterator.next(50));
               continue;
             }
             break;
           }
-          if (param5 > 93) {
+          if (obfuscationGuard > 93) {
             return false;
           }
-          this.g(116);
+          this.getMaximumRenderLayer(116);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref = decompiledCaughtException;
-          stackIn_15_0 = var8_ref;
-          stackIn_15_1 = new StringBuilder().append("tj.RA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          failure = decompiledCaughtException;
+          stackIn_15_0 = failure;
+          stackIn_15_1 = new StringBuilder().append("tj.RA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(pointerY).append(',').append(wheelDelta).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -246,21 +246,21 @@ class tj extends Widget implements gw {
         }
     }
 
-    final void a(byte param0, Widget param1) {
+    final void addChild(byte obfuscationGuard, Widget child) {
         try {
-          this.field_D.addLast((byte) -119, (IntrusiveNode) (param1));
-          if (param0 != 10) {
+          this.children.addLast((byte) -119, (IntrusiveNode) (child));
+          if (obfuscationGuard != 10) {
             this.blur(-101);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tj.CC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tj.CC(" + obfuscationGuard + ',' + (child != null ? "{...}" : "null") + ')');
         }
     }
 
     String getTooltipText(int obfuscationGuard) {
         String var4 = null;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeIterator var2 = new NodeIterator(this.field_D);
+        NodeIterator var2 = new NodeIterator(this.children);
         Widget var3 = (Widget) (var2.first(obfuscationGuard ^ 21434));
         while (var3 != null) {
           var4 = var3.getTooltipText(21384);
@@ -272,32 +272,32 @@ class tj extends Widget implements gw {
         if (obfuscationGuard == 21384) {
           return null;
         }
-        this.field_D = (NodeDeque) null;
+        this.children = (NodeDeque) null;
         return null;
     }
 
     boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
-        NodeIterator var8 = null;
-        RuntimeException var8_ref = null;
-        Widget var9 = null;
-        int var10 = 0;
+        NodeIterator iterator = null;
+        RuntimeException failure = null;
+        Widget child = null;
+        int obfuscationControl = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard <= 103) {
             field_C = (na) null;
           }
-          var8 = new NodeIterator(this.field_D);
-          var9 = (Widget) (var8.first(50));
-          while (var9 != null) {
-            if (var9.isLinked(65280)) {
-              if (var9.pointerPressed(pointerX, this.x + originX, this.y + originY, 107, rootWidget, pointerY, button)) {
+          iterator = new NodeIterator(this.children);
+          child = (Widget) (iterator.first(50));
+          while (child != null) {
+            if (child.isLinked(65280)) {
+              if (child.pointerPressed(pointerX, this.x + originX, this.y + originY, 107, rootWidget, pointerY, button)) {
                 return true;
               }
-              var9 = (Widget) (var8.next(50));
+              child = (Widget) (iterator.next(50));
               continue;
             }
             break;
@@ -305,8 +305,8 @@ class tj extends Widget implements gw {
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref = decompiledCaughtException;
-          stackIn_15_0 = var8_ref;
+          failure = decompiledCaughtException;
+          stackIn_15_0 = failure;
           stackIn_15_1 = new StringBuilder().append("tj.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
           if (rootWidget == null) {
             stackIn_16_2 = "null";
@@ -319,9 +319,9 @@ class tj extends Widget implements gw {
 
     boolean isFocused(boolean obfuscationGuard) {
         if (obfuscationGuard) {
-          this.field_D = (NodeDeque) null;
+          this.children = (NodeDeque) null;
         }
-        return null != this.e((byte) 94) ? true : false;
+        return null != this.getFocusedChild((byte) 94) ? true : false;
     }
 
     final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
@@ -370,7 +370,7 @@ class tj extends Widget implements gw {
         if (obfuscationGuard != 8192) {
           field_C = (na) null;
         }
-        this.i(0);
+        this.refreshChildLayouts(0);
     }
 
     private final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
@@ -389,7 +389,7 @@ class tj extends Widget implements gw {
         RuntimeException var5_ref = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5 = new NodeIterator(this.field_D);
+          var5 = new NodeIterator(this.children);
           var6 = (Widget) (var5.first(50));
           if (param1 != 81) {
             return;
@@ -435,7 +435,7 @@ class tj extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var7 = new NodeIterator(this.field_D);
+          var7 = new NodeIterator(this.children);
           var8 = -73 / ((-58 - obfuscationGuard) / 53);
           var9 = (Widget) (var7.first(50));
           while (var9 != null) {
@@ -474,7 +474,7 @@ class tj extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var9 = new NodeIterator(this.field_D);
+          var9 = new NodeIterator(this.children);
           var8 = (Widget) (var9.first(50));
           while (var8 != null) {
             if (var8.isLinked(65280)) {
@@ -492,13 +492,13 @@ class tj extends Widget implements gw {
             if (obfuscationGuard == -12215) {
               return false;
             }
-            this.field_D = (NodeDeque) null;
+            this.children = (NodeDeque) null;
             return false;
           }
           if (!br.heldKeys[81]) {
-            stackIn_13_0 = this.b((byte) -123, rootWidget);
+            stackIn_13_0 = this.focusNextChild((byte) -123, rootWidget);
           } else {
-            stackIn_13_0 = this.a(false, rootWidget);
+            stackIn_13_0 = this.focusPreviousChild(false, rootWidget);
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -527,7 +527,7 @@ class tj extends Widget implements gw {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
-          var5 = new NodeIterator(this.field_D);
+          var5 = new NodeIterator(this.children);
           var6 = (Widget) (var5.first(50));
           while (var6 != null) {
             if (var6.isLinked(obfuscationGuard + 32558)) {
@@ -552,45 +552,45 @@ class tj extends Widget implements gw {
         }
     }
 
-    private final void i(int param0) {
-        int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        NodeIterator var2 = new NodeIterator(this.field_D);
-        Widget var3 = (Widget) (var2.first(50));
-        if (param0 != 0) {
+    private final void refreshChildLayouts(int obfuscationGuard) {
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        NodeIterator iterator = new NodeIterator(this.children);
+        Widget child = (Widget) (iterator.first(50));
+        if (obfuscationGuard != 0) {
           return;
         }
-        while (var3 != null) {
-          var3.e(0);
-          var3 = (Widget) (var2.next(50));
+        while (child != null) {
+          child.refreshLayout(0);
+          child = (Widget) (iterator.next(50));
         }
     }
 
-    tj(int param0, int param1, int param2, int param3, WidgetPainter param4) {
-        super(param0, param1, param2, param3, param4, (WidgetListener) null);
-        this.field_D = new NodeDeque();
+    DequeWidgetContainer(int x, int y, int width, int height, WidgetPainter painter) {
+        super(x, y, width, height, painter, (WidgetListener) null);
+        this.children = new NodeDeque();
     }
 
     public static void d(byte param0) {
         if (param0 != -89) {
-          tj.j(114);
+          DequeWidgetContainer.j(114);
         }
         field_C = null;
     }
 
     void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
-        int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (0 == renderLayer &&
           null != this.painter) {
           this.painter.paintWidget((Widget) (this), originX, -94, true, originY);
         }
-        NodeIterator var5 = new NodeIterator(this.field_D);
-        Widget var6 = (Widget) (var5.last(50));
-        while (var6 != null) {
-          var6.drawWidget(originX + this.x, this.y + originY, (byte) -101, renderLayer);
-          var6 = (Widget) (var5.previous((byte) -112));
+        NodeIterator iterator = new NodeIterator(this.children);
+        Widget child = (Widget) (iterator.last(50));
+        while (child != null) {
+          child.drawWidget(originX + this.x, this.y + originY, (byte) -101, renderLayer);
+          child = (Widget) (iterator.previous((byte) -112));
         }
         if (obfuscationGuard >= -82) {
-          this.i(108);
+          this.refreshChildLayouts(108);
         }
     }
 
@@ -605,8 +605,8 @@ class tj extends Widget implements gw {
           IOException var3 = null;
           var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
-            if (ai.field_T != null) {
-              ai.field_T.close(-5758);
+            if (ScrollWidgetContainer.field_T != null) {
+              ScrollWidgetContainer.field_T.close(-5758);
             }
             if (MapRepository.field_h != null) {
               MapRepository.field_h.stop((byte) -117);

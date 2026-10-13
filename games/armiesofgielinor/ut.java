@@ -145,7 +145,7 @@ final class ut extends sf implements WidgetActivationListener {
           this.field_gb = new ob(stackIn_51_3, stackIn_52_4, 410, 105, (WidgetPainter) null, var3Lifetime1, 1);
           this.field_gb.field_Q = 83;
           this.field_gb.d(5, 57, 5);
-          this.a((byte) 10, (Widget) (this.field_gb));
+          this.addChild((byte) 10, (Widget) (this.field_gb));
           this.field_mb = this.a((WidgetListener) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
           if (var2_intLifetime1 != 0) {
             this.field_Z = this.a((WidgetListener) (this), Unit.field_n, HuffmanCodec.field_e, false);
@@ -177,7 +177,7 @@ final class ut extends sf implements WidgetActivationListener {
             }
             this.field_lb = new DropdownSelector(var5_ref_String__, var6_int, 150);
             this.field_lb.setBounds(this.field_bb.x + this.field_gb.x, 126, this.field_bb.height + this.field_bb.y + (this.field_gb.y - 19), 8192, 18);
-            this.field_D.addFirst(750, this.field_lb);
+            this.children.addFirst(750, this.field_lb);
           }
           this.field_X = this.a((byte) 38, VineGrowthAction.field_w, (WidgetListener) (this));
           var5Lifetime1 = this.field_X.width / 2 + this.field_X.x;
@@ -202,7 +202,7 @@ final class ut extends sf implements WidgetActivationListener {
             var7.width = this.width;
             var7.height = 80;
             var7.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
-            this.a((byte) 10, var7);
+            this.addChild((byte) 10, var7);
           }
           this.field_nb = false;
           var6_ref = this.o(-1);
@@ -579,7 +579,7 @@ final class ut extends sf implements WidgetActivationListener {
           }
           var5 = this.height - 46;
           var4.setBounds(15, -14 + (this.width - 16), var5, 8192, 30);
-          this.a((byte) 10, (Widget) (var4));
+          this.addChild((byte) 10, (Widget) (var4));
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -826,7 +826,7 @@ final class ut extends sf implements WidgetActivationListener {
           var6 = this.field_gb;
           var7 = var5;
           var6.a(var7, var6.field_Q, 0);
-          this.field_gb.e(0);
+          this.field_gb.refreshLayout(0);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -83,8 +83,8 @@ final class ud extends sf implements WidgetActivationListener {
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, -16 + (-14 + this.width), var5, 8192, 30);
-          this.a((byte) 10, (Widget) (var4));
-          this.e(0);
+          this.addChild((byte) 10, (Widget) (var4));
+          this.refreshLayout(0);
           var6 = -126 / ((-6 - param2) / 40);
           stackIn_1_0 = var4;
           return stackIn_1_0;
@@ -143,7 +143,7 @@ final class ud extends sf implements WidgetActivationListener {
           var4.width = this.width;
           var4.height = 80;
           var4.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a((byte) 10, var4);
+          this.addChild((byte) 10, var4);
           this.field_bb = this.a(pd.field_f, (WidgetListener) (this), 93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

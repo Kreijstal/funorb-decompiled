@@ -7,7 +7,7 @@ abstract class pt extends sf {
     static ClientUiComponent field_X;
     private int field_ib;
     private int field_hb;
-    private bh field_cb;
+    private AlphaWidgetContainer field_cb;
     private tv field_bb;
     static h field_db;
     private int field_ab;
@@ -37,7 +37,7 @@ abstract class pt extends sf {
         this.field_hb = 0;
         this.b(72, this.field_jb);
         this.field_jb = null;
-        this.field_cb.field_K = 0;
+        this.field_cb.alpha = 0;
     }
 
     boolean a(byte param0) {
@@ -56,12 +56,12 @@ abstract class pt extends sf {
           fieldTemp$2 = this.field_hb + 1;
           this.field_hb = this.field_hb + 1;
           if (this.field_ib != fieldTemp$2) {
-            this.field_cb.field_K = 256 - (this.field_hb << 8) / this.field_ib;
+            this.field_cb.alpha = 256 - (this.field_hb << 8) / this.field_ib;
           } else {
             this.field_bb = ContextualRuntimeException.field_c;
             this.a(this.field_Z, false, this.field_jb.height + 12 + this.field_ab, this.field_jb.width + 12);
             this.field_hb = 0;
-            this.field_cb.field_K = 0;
+            this.field_cb.alpha = 0;
           }
           if (param0 == -1) {
             return super.a((byte) -1);
@@ -79,10 +79,10 @@ abstract class pt extends sf {
         fieldTemp$3 = this.field_hb + 1;
         this.field_hb = this.field_hb + 1;
         if (this.field_fb != fieldTemp$3) {
-          this.field_cb.field_K = (this.field_hb << 8) / this.field_fb;
+          this.field_cb.alpha = (this.field_hb << 8) / this.field_fb;
         } else {
           this.field_bb = null;
-          this.field_cb.field_K = 256;
+          this.field_cb.alpha = 256;
         }
         if (param0 == -1) {
           return super.a((byte) -1);
@@ -117,13 +117,13 @@ abstract class pt extends sf {
           this.b(107, this.field_jb);
         } else {
           this.field_bb = null;
-          this.field_cb.field_K = 256;
+          this.field_cb.alpha = 256;
           super.l(81);
           var2Lifetime1 = 71 % ((param0 + 25) / 57);
           return;
         }
         this.field_bb = null;
-        this.field_cb.field_K = 256;
+        this.field_cb.alpha = 256;
         super.l(81);
         var2Lifetime2 = 71 % ((param0 + 25) / 57);
     }
@@ -247,12 +247,12 @@ abstract class pt extends sf {
           }
           if (param1 != null) {
             param1.setBounds(6, param1.width, 6 + this.field_ab, 8192, param1.height);
-            this.field_cb = new bh(param1);
+            this.field_cb = new AlphaWidgetContainer(param1);
           } else {
-            this.field_cb = new bh();
+            this.field_cb = new AlphaWidgetContainer();
           }
           int var3_int = 29 % ((param0 - 24) / 42);
-          this.a((byte) 10, (Widget) (this.field_cb));
+          this.addChild((byte) 10, (Widget) (this.field_cb));
           this.field_jb = null;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pt.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

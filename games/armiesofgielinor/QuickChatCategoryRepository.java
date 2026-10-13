@@ -171,10 +171,10 @@ final class QuickChatCategoryRepository {
                 } else {
                   if (8 == var2) {
                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                    var4_ref_au = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
+                    var4_ref_au = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)var3));
                     if (var4_ref_au == null) {
                       var4_ref_au = new LobbyRoom(tq.gameOptionCount);
-                      qm.lobbyRoomsById.put(-1, (long)var3, var4_ref_au);
+                      ClippedWidgetContainer.lobbyRoomsById.put(-1, (long)var3, var4_ref_au);
                     }
                     TrianglePulse.decodeLobbyRoom(var4_ref_au, true, var1, 78);
                     QuickChatPhraseRepository.insertLobbyRoomSorted(-107, var4_ref_au);
@@ -182,7 +182,7 @@ final class QuickChatCategoryRepository {
                     if (var2 == 9) {
                       var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                       var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                      var32 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
+                      var32 = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)var3));
                       if ((var32 != null)) {
                         if (var4 != 0) {
                           var32.notificationTicks = qd.lobbyNotificationDuration;
@@ -206,7 +206,7 @@ final class QuickChatCategoryRepository {
                           if (var2 == 13) {
                             var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                             var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(0);
-                            var17_ref = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
+                            var17_ref = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)var3));
                             if ((var17_ref != null)) {
                               var17_ref.joinRequestSent = false;
                               var12 = var17_ref;
@@ -322,7 +322,7 @@ final class QuickChatCategoryRepository {
                           }
                         } else {
                           var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-                          var15 = (LobbyRoom) (qm.lobbyRoomsById.get((byte) -27, (long)var3));
+                          var15 = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)var3));
                           var30 = var15;
                           if ((var15 != null)) {
                             if (var2 != 11) {
@@ -461,7 +461,7 @@ final class QuickChatCategoryRepository {
             ActionRequest.unitModels[var3] = array$0;
             DiskCacheRequest.unitProjectionVariants[var3] = false;
             var8 = ActionRequest.field_m[var3][0];
-            var10 = hs.a(var8, 235, var9);
+            var10 = ArrayWidgetContainer.a(var8, 235, var9);
             var5 = var10;
             if (var10 != null) {
               if (76 == var3) {
@@ -487,7 +487,7 @@ final class QuickChatCategoryRepository {
           }
           for (var3Lifetime1 = 0; var3Lifetime1 < cs.field_W.length; var3Lifetime1++) {
             var11 = cs.field_W[var3Lifetime1];
-            var12 = hs.a(var11, 235, var9);
+            var12 = ArrayWidgetContainer.a(var11, 235, var9);
             var5Lifetime1 = var12;
             stackIn_23_0 = var12;
             if (stackIn_23_0.faceRenderTypes != null) {

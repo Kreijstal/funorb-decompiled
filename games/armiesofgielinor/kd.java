@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd extends tj implements TextHotspotListener, WidgetActivationListener, mf {
+final class kd extends DequeWidgetContainer implements TextHotspotListener, WidgetActivationListener, mf {
     static String field_U;
     kv field_T;
     static ClientUiComponent field_M;
@@ -216,7 +216,7 @@ final class kd extends tj implements TextHotspotListener, WidgetActivationListen
         var3 = var3 + (5 + this.a(ScrollContainer.field_Ob, this.field_O, 170, MusicPatchEnvelope.field_k, 210, var3));
         var3 = var3 + this.a(var3, this.field_N, 170, field_S, 27270);
         ta var4 = new ta(46, var3, this.width - 90, 25, this.field_ab, true, this.width - 120, 5, gl.field_e, 11579568, IterableDualNodeDeque.field_c);
-        this.a((byte) 10, (Widget) (var4));
+        this.addChild((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
         BitmapTextWidgetPainter var5 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         this.field_W = new HotspotTextWidget(var2, var5);
@@ -226,18 +226,18 @@ final class kd extends tj implements TextHotspotListener, WidgetActivationListen
         this.field_W.listener = (WidgetListener) (this);
         this.field_W.setTextBounds(this.width - 90, 9567, 46, var3);
         var3 = var3 + (this.field_W.height + 15);
-        this.a((byte) 10, (Widget) (this.field_W));
+        this.addChild((byte) 10, (Widget) (this.field_W));
         int var6 = 4;
         int var7 = 200;
         this.field_bb.setBounds(496 - var7 >> 1, var7, var3, 8192, 40);
         this.field_G.setBounds(var6 + 3, 60, 15 + var3, 8192, 40);
         this.field_G.listener = (WidgetListener) (this);
         this.field_bb.listener = (WidgetListener) (this);
-        this.a((byte) 10, (Widget) (this.field_bb));
-        this.a((byte) 10, (Widget) (this.field_G));
+        this.addChild((byte) 10, (Widget) (this.field_bb));
+        this.addChild((byte) 10, (Widget) (this.field_G));
         this.field_T = new kv((mf) (this));
         this.field_T.setBounds(this.field_O.x - (-this.field_O.width - 60), this.width + (-this.field_O.x - this.field_O.width - 60), this.field_O.y + 20, 8192, 150);
-        this.a((byte) 10, (Widget) (this.field_T));
+        this.addChild((byte) 10, (Widget) (this.field_T));
         this.setBounds(0, 496, 0, 8192, var3 + (55 + var6));
     }
 
@@ -362,9 +362,9 @@ final class kd extends tj implements TextHotspotListener, WidgetActivationListen
             stackIn_2_0 = -80;
             return stackIn_2_0;
           }
-          this.a((byte) 10, (Widget) (var8));
+          this.addChild((byte) 10, (Widget) (var8));
           var7 = new kw(((eg) ((Object) param1)).a(-918933630));
-          this.a((byte) 10, (Widget) (var7));
+          this.addChild((byte) 10, (Widget) (var7));
           var7.setBounds(3 + var8.width + var8.x, 15, var8.y + (-15 + var8.height >> 1), 8192, 15);
           stackIn_4_0 = var8.height;
           return stackIn_4_0;
@@ -467,13 +467,13 @@ final class kd extends tj implements TextHotspotListener, WidgetActivationListen
             return true;
           }
           if (keyCode == 98) {
-            stackIn_7_0 = this.a(false, rootWidget);
+            stackIn_7_0 = this.focusPreviousChild(false, rootWidget);
             return stackIn_7_0;
           }
           if (99 != keyCode) {
             return false;
           }
-          stackIn_11_0 = this.b((byte) -123, rootWidget);
+          stackIn_11_0 = this.focusNextChild((byte) -123, rootWidget);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -511,10 +511,10 @@ final class kd extends tj implements TextHotspotListener, WidgetActivationListen
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ta(20, param6, 120 + param1, 25, param2, param0, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
-          this.a((byte) 10, (Widget) (var10));
+          this.addChild((byte) 10, (Widget) (var10));
           var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.height + param6, param1 + 50, param4);
           var9.listener = (WidgetListener) (this);
-          this.a((byte) 10, (Widget) (var9));
+          this.addChild((byte) 10, (Widget) (var9));
           stackIn_1_0 = var10.height + var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -598,7 +598,7 @@ final class kd extends tj implements TextHotspotListener, WidgetActivationListen
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new ta(20, param1, param2 + 120, 25, param4, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param0);
-          this.a((byte) 10, (Widget) (var6));
+          this.addChild((byte) 10, (Widget) (var6));
           if (param3 != 18) {
             this.field_G = (InteractiveWidget) null;
           }

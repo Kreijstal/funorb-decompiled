@@ -63,12 +63,12 @@ final class CampaignMenuButton {
         }
         it.field_b = true;
         if (param0 == -20267) {
-          wc.a(false, -49);
+          DraggableWidgetContainer.a(false, -49);
           SoundCache.field_b = 0;
           return;
         }
         CampaignMenuButton.c(56);
-        wc.a(false, -49);
+        DraggableWidgetContainer.a(false, -49);
         SoundCache.field_b = 0;
     }
 

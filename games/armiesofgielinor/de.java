@@ -148,7 +148,7 @@ final class de {
               if (var8Lifetime1 != 0) {
                 if (var8Lifetime1 == 1) {
                   if (var7 == null) {
-                    stackIn_283_0 = ai.field_N;
+                    stackIn_283_0 = ScrollWidgetContainer.field_N;
                     return stackIn_283_0;
                   }
                   if (battlefield.arePlayersAllied(var7.ownerPlayer, -16985, actingPlayer)) {
@@ -168,7 +168,7 @@ final class de {
                   if (var7 != null) {
                     return null;
                   }
-                  stackIn_296_0 = ai.field_N;
+                  stackIn_296_0 = ScrollWidgetContainer.field_N;
                   return stackIn_296_0;
                 }
                 if (var8Lifetime1 != 8) {
@@ -207,7 +207,7 @@ final class de {
                   }
                 } else {
                   if (var7 == null) {
-                    stackIn_300_0 = ai.field_N;
+                    stackIn_300_0 = ScrollWidgetContainer.field_N;
                     return stackIn_300_0;
                   }
                   if (actingPlayer == var7.ownerPlayer) {
@@ -219,7 +219,7 @@ final class de {
                 return (String) (stackIn_329_0);
               }
               if (var7 == null) {
-                stackIn_69_0 = ai.field_N;
+                stackIn_69_0 = ScrollWidgetContainer.field_N;
                 return stackIn_69_0;
               }
               if (!battlefield.arePlayersAllied(var7.ownerPlayer, -16985, actingPlayer)) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DropdownSelector extends tj implements WidgetActivationListener {
+final class DropdownSelector extends DequeWidgetContainer implements WidgetActivationListener {
     static String field_P;
     private int collapsedHeight;
     String typedPrefix;
@@ -13,7 +13,7 @@ final class DropdownSelector extends tj implements WidgetActivationListener {
     DropdownOptionList optionList;
     private InteractiveWidget arrowButton;
     private int maximumDropdownHeight;
-    ai dropdownViewport;
+    ScrollWidgetContainer dropdownViewport;
 
     public static void a(int param0) {
         field_M = null;
@@ -124,8 +124,8 @@ final class DropdownSelector extends tj implements WidgetActivationListener {
           this.arrowButton = new InteractiveWidget();
           this.arrowButton.painter = (WidgetPainter) ((Object) new DropdownArrowPainter());
           this.arrowButton.listener = (WidgetListener) (this);
-          this.a((byte) 10, (Widget) (this.textButton));
-          this.a((byte) 10, (Widget) (this.arrowButton));
+          this.addChild((byte) 10, (Widget) (this.textButton));
+          this.addChild((byte) 10, (Widget) (this.arrowButton));
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.<init>(" + (options != null ? "{...}" : "null") + ',' + selectedIndex + ',' + maximumDropdownHeight + ')');
         }
@@ -334,15 +334,15 @@ final class DropdownSelector extends tj implements WidgetActivationListener {
         if (this.isExpanded(11180) &&
           this.optionList.selectedIndex != -1 &&
           null != this.optionList.options &&
-          null != this.dropdownViewport.field_K) {
-          var2 = this.dropdownViewport.field_S.height;
+          null != this.dropdownViewport.verticalControl) {
+          var2 = this.dropdownViewport.viewport.height;
           var3 = this.optionList.rowHeight;
           var4 = this.optionList.height - var2;
           if (var4 <= 0) {
             return;
           }
           var5 = var3 * this.optionList.selectedIndex;
-          var6 = var5 + this.dropdownViewport.field_S.field_E.y;
+          var6 = var5 + this.dropdownViewport.viewport.child.y;
           var7 = var2 >> 2;
           if (obfuscationGuard != 107805154) {
             return;
@@ -352,7 +352,7 @@ final class DropdownSelector extends tj implements WidgetActivationListener {
             if (var8 < 0) {
               var8 = 0;
             }
-            this.dropdownViewport.field_K.field_W = var8;
+            this.dropdownViewport.verticalControl.verticalPosition = var8;
           }
           var7Lifetime1 = -var3 + (3 * var2 >> 2);
           if (var7Lifetime1 < var6) {
@@ -360,7 +360,7 @@ final class DropdownSelector extends tj implements WidgetActivationListener {
             if (var8Lifetime1 > 65536) {
               var8Lifetime1 = 65536;
             }
-            this.dropdownViewport.field_K.field_W = var8Lifetime1;
+            this.dropdownViewport.verticalControl.verticalPosition = var8Lifetime1;
           }
           return;
         }
@@ -419,7 +419,7 @@ final class DropdownSelector extends tj implements WidgetActivationListener {
                 if (!this.isExpanded(obfuscationGuard + 23395)) {
                   this.openDropdown(0);
                 }
-                var6_intLifetime1 = this.dropdownViewport.field_S.height / this.optionList.rowHeight;
+                var6_intLifetime1 = this.dropdownViewport.viewport.height / this.optionList.rowHeight;
                 if (105 != keyCode) {
                   this.optionList.selectedIndex = this.optionList.selectedIndex - var6_intLifetime1;
                 } else {
@@ -607,13 +607,13 @@ final class DropdownSelector extends tj implements WidgetActivationListener {
         }
         this.a(var3 + this.collapsedHeight, this.y, (byte) 50, this.x, this.width);
         this.optionList.setBounds(0, this.width, obfuscationGuard, obfuscationGuard ^ 8192, var2);
-        this.dropdownViewport = new ai(0, 0, 0, 0, new fc(), this.optionList, (WidgetPainter) null);
+        this.dropdownViewport = new ScrollWidgetContainer(0, 0, 0, 0, new fc(), this.optionList, (WidgetPainter) null);
         if (var4 != 0) {
-          this.dropdownViewport.a((byte) 118, true, lw.n(obfuscationGuard ^ 0));
+          this.dropdownViewport.setVerticalControl((byte) 118, true, lw.n(obfuscationGuard ^ 0));
         }
         this.dropdownViewport.setBounds(0, this.width, this.collapsedHeight, obfuscationGuard + 8192, this.height - this.collapsedHeight);
         this.expanded = true;
-        this.a((byte) 10, (Widget) (this.dropdownViewport));
+        this.addChild((byte) 10, (Widget) (this.dropdownViewport));
         this.ensureSelectionVisible(107805154);
     }
 

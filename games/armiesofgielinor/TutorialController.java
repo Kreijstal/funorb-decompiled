@@ -241,7 +241,7 @@ final class TutorialController {
                     if (pg.playerProfile.equippedSpellIds[var2_int] > -1) {
                       if (BufferedSocket.field_j >= 2 &&
                         br.heldKeys[82]) {
-                        hs.b(119, pg.playerProfile.equippedSpellIds[var2_int]);
+                        ArrayWidgetContainer.b(119, pg.playerProfile.equippedSpellIds[var2_int]);
                         return;
                       }
                       if (ClientContextMenu.field_k != 0) {
@@ -1827,7 +1827,7 @@ final class TutorialController {
                                                                     }
                                                                     if (this.selectionState.isIncrementKeyPressed(-98) &&
                                                                       ResourceProtocolClient.effectsGain < 256) {
-                                                                      hs.a(30);
+                                                                      ArrayWidgetContainer.a(30);
                                                                       var5 = 1;
                                                                     }
                                                                     if (var5 == 0) {
@@ -3157,7 +3157,7 @@ final class TutorialController {
                 var2 = hf.field_i;
               }
             } else {
-              var2 = ai.field_U;
+              var2 = ScrollWidgetContainer.field_U;
             }
           } else {
             var2 = DisplacedUnitMarker.field_t[7];
@@ -4007,7 +4007,7 @@ final class TutorialController {
                 var5 = AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F];
                 var6 = "";
                 var6Lifetime1 = ut.field_cb[var5];
-                var7 = bh.field_M[var5];
+                var7 = AlphaWidgetContainer.field_M[var5];
                 this.a(var7, bw.unitDefinitions[var5][0], ve.a((byte) 13, ScrollContainer.unitDisplayNames[var5]), this.f(var5, 8), (byte) 116, var6Lifetime1);
               } else {
                 this.a((String) null, -1, ve.a((byte) 13, wf.field_q[li.field_q + 1]), (String) null, (byte) -55, GlobalSpell.field_l[li.field_q + 1]);
@@ -4619,7 +4619,7 @@ final class TutorialController {
                   RevivalEvent.d((byte) 122);
                   var3_ref_int__ = BoundedFile.field_e;
                   var3_ref_int__[0] = oe.bitwiseOr(var3_ref_int__[0], 2);
-                  ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
+                  ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(0)));
                   UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(0, 255, 0, 0, 0, 0)));
                 }
                 if (rs.keyCode == 13) {
@@ -4985,8 +4985,8 @@ final class TutorialController {
                   var8 < 354) {
                   fe.c(param1.children[var7_int].label, db.a(true, 152), MatchConditionEntry.a(var8 + 55, (byte) 94), field_e, true);
                   var9 = -30 + (270 + (-(nr.field_e.textWidth(param1.children[var7_int].label) >> 1) - 25) >> 1);
-                  fm.a(wc.field_Q, var9, db.a(true, 50), MatchConditionEntry.a(38 + var8, (byte) 94), -66);
-                  fm.a(wc.field_Q, var9, db.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
+                  fm.a(DraggableWidgetContainer.field_Q, var9, db.a(true, 50), MatchConditionEntry.a(38 + var8, (byte) 94), -66);
+                  fm.a(DraggableWidgetContainer.field_Q, var9, db.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
                 }
               }
               param3 = this.a(param0, param1.children[var7_int], false, param3, param4, (byte) 126);

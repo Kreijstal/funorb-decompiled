@@ -99,7 +99,7 @@ class ro extends pt implements WidgetActivationListener {
           this.field_nb = param1;
           this.field_tb = new rj(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_tb.field_R = true;
-          this.a((byte) 10, (Widget) (this.field_tb));
+          this.addChild((byte) 10, (Widget) (this.field_tb));
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ro.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

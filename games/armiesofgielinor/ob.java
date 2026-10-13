@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends hs {
+final class ob extends ArrayWidgetContainer {
     private int[] field_L;
     private int field_T;
     static String field_P;
@@ -152,7 +152,7 @@ final class ob extends hs {
         int var4_int = this.field_N % this.field_K.length;
         int var5 = this.field_N / this.field_K.length;
         this.field_L[this.field_N] = param1;
-        this.field_C[this.field_N] = param0;
+        this.children[this.field_N] = param0;
         if (param0 != null) {
           this.a(var5, (byte) 65, param0, var4_int);
         }
@@ -279,13 +279,13 @@ final class ob extends hs {
         }
         int var4 = this.field_K == null ? 0 : this.field_K.length;
         Widget[] var5 = new Widget[param2 * var4];
-        if (this.field_C != null &&
-          this.field_C.length > 0 &&
+        if (this.children != null &&
+          this.children.length > 0 &&
           var5.length > 0 &&
           param1 > 0) {
-          vm.a(this.field_C, 0, var5, 0, Math.min(param1, param2) * var4);
+          vm.a(this.children, 0, var5, 0, Math.min(param1, param2) * var4);
         }
-        this.field_C = var5;
+        this.children = var5;
     }
 
     final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
@@ -308,19 +308,19 @@ final class ob extends hs {
           }
           var5_int = keyCode;
           if (98 == var5_int) {
-            stackIn_12_0 = this.a((byte) 106, rootWidget, this.field_K.length);
+            stackIn_12_0 = this.focusBackwardBy((byte) 106, rootWidget, this.field_K.length);
             return stackIn_12_0;
           }
           if (99 == var5_int) {
-            stackIn_14_0 = this.a(rootWidget, this.field_K.length, true);
+            stackIn_14_0 = this.focusForwardBy(rootWidget, this.field_K.length, true);
             return stackIn_14_0;
           }
           if (96 == var5_int) {
-            stackIn_16_0 = this.a((byte) 88, rootWidget);
+            stackIn_16_0 = this.focusPreviousChild((byte) 88, rootWidget);
             return stackIn_16_0;
           }
           if (var5_int == 97) {
-            stackIn_18_0 = this.b(obfuscationGuard ^ -12286, rootWidget);
+            stackIn_18_0 = this.focusNextChild(obfuscationGuard ^ -12286, rootWidget);
             return stackIn_18_0;
           }
           if (obfuscationGuard != -12215) {
@@ -351,7 +351,7 @@ final class ob extends hs {
         field_O = null;
     }
 
-    final void d(byte param0) {
+    final void layoutChildren(byte obfuscationGuard) {
         int incrementValue$0 = 0;
         int var2;
         int var3;
@@ -362,14 +362,14 @@ final class ob extends hs {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
         var3 = 0;
-        while (var2 < this.field_C.length) {
+        while (var2 < this.children.length) {
           if (this.field_S.length > var3) {
             var4 = 0;
-            while (this.field_C.length > var2) {
+            while (this.children.length > var2) {
               if (var4 < this.field_K.length) {
                 incrementValue$0 = var2;
                 var2++;
-                var5 = this.field_C[incrementValue$0];
+                var5 = this.children[incrementValue$0];
                 if (var5 != null) {
                   this.a(var3, (byte) 65, var5, var4);
                 }
@@ -383,7 +383,7 @@ final class ob extends hs {
           }
           break;
         }
-        if (param0 < 84) {
+        if (obfuscationGuard < 84) {
           var7 = (Widget) null;
           this.pointerPressed(-86, 103, -38, 9, (Widget) null, 3, 102);
         }
@@ -394,16 +394,16 @@ final class ob extends hs {
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var4 = null == this.field_S ? 0 : this.field_S.length;
         Widget[] var5 = new Widget[param1 * var4];
-        if (null != this.field_C && this.field_C.length > 0 && var5.length > 0 &&
+        if (null != this.children && this.children.length > 0 && var5.length > 0 &&
           param0 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            vm.a(this.field_C, var6 * param0, var5, var6 * param1, Math.min(param0, param1));
+            vm.a(this.children, var6 * param0, var5, var6 * param1, Math.min(param0, param1));
           }
         }
         if (param2 != -20410) {
           return;
         }
-        this.field_C = var5;
+        this.children = var5;
     }
 
     ob(int param0, int param1, int param2, int param3, WidgetPainter param4, int param5, int param6) {

@@ -68,7 +68,7 @@ final class s {
             return stackIn_20_0;
           }
           if (param2 == 7) {
-            stackIn_24_0 = fo.a(4800, bh.field_I, new String[]{param1});
+            stackIn_24_0 = fo.a(4800, AlphaWidgetContainer.field_I, new String[]{param1});
             return stackIn_24_0;
           }
           if (param2 == 8) {

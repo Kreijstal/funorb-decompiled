@@ -138,7 +138,7 @@ final class DropdownOptionList extends kq {
         if (!this.selector.expanded) {
           return false;
         }
-        if (!this.selector.dropdownViewport.field_S.hovered) {
+        if (!this.selector.dropdownViewport.viewport.hovered) {
           return false;
         }
         if (this.options == null) {

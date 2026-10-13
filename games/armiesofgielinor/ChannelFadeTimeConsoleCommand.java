@@ -23,7 +23,7 @@ final class ChannelFadeTimeConsoleCommand extends ConsoleCommand {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard == -24872) {
-            result = new ConsoleValue(bh.setMusicProfileTransitionMillis(arguments[0].asInt(2), (byte) 74));
+            result = new ConsoleValue(AlphaWidgetContainer.setMusicProfileTransitionMillis(arguments[0].asInt(2), (byte) 74));
             return result;
           }
           guardResult = (ConsoleValue) null;

@@ -105,7 +105,7 @@ final class j {
           DisplacedUnitMarker.field_t[45] = ToggleTurnSkipConsoleCommand.field_G;
           DisplacedUnitMarker.field_t[50] = GameEvent.field_u;
           DisplacedUnitMarker.field_t[34] = pf.field_e;
-          DisplacedUnitMarker.field_t[29] = qm.field_I;
+          DisplacedUnitMarker.field_t[29] = ClippedWidgetContainer.field_I;
           DisplacedUnitMarker.field_t[39] = StateChangeEvent.field_y;
           wb.field_b = new String[29];
           CampaignDefinition.field_m[0] = on.field_o;
@@ -130,7 +130,7 @@ final class j {
           wb.field_b[1] = ConsoleEvaluationException.field_d;
           wb.field_b[22] = MeshObject.field_b;
           wb.field_b[2] = cw.field_b;
-          wb.field_b[5] = nl.field_F;
+          wb.field_b[5] = SingleChildWidgetContainer.field_F;
           wb.field_b[24] = ConsoleEvaluationException.field_d;
           wb.field_b[15] = hc.field_w;
           wb.field_b[26] = lb.field_d;

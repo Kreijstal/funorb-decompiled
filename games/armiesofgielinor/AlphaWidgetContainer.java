@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends nl {
+final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     static String field_J;
     static String field_L;
     static String[] field_M;
     static String field_I;
     static ResourceArchive field_H;
-    int field_K;
+    int alpha;
 
     final static String setMusicProfileTransitionMillis(int durationMillis, byte obfuscationGuard) {
         String previousDurationText = null;
@@ -25,55 +25,55 @@ final class bh extends nl {
         field_J = null;
         field_I = null;
         if (param0) {
-          bh.c(false);
+          AlphaWidgetContainer.c(false);
           field_L = null;
           return;
         }
         field_L = null;
     }
 
-    public bh() {
+    public AlphaWidgetContainer() {
         super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
-        this.field_K = 256;
+        this.alpha = 256;
     }
 
     final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         if (renderLayer != 0) {
           return;
         }
-        if (this.field_E == null) {
+        if (this.child == null) {
           return;
         }
-        if (this.field_K == 0) {
+        if (this.alpha == 0) {
           return;
         }
-        if (this.field_K == 256) {
-          this.field_E.drawWidget(this.x + originX, originY + this.y, (byte) -125, renderLayer);
+        if (this.alpha == 256) {
+          this.child.drawWidget(this.x + originX, originY + this.y, (byte) -125, renderLayer);
           return;
         }
-        RgbSprite var6 = new RgbSprite(this.field_E.width, this.field_E.height);
+        RgbSprite compositeSprite = new RgbSprite(this.child.width, this.child.height);
         if (obfuscationGuard < -82) {
-          CombatSandbox.a(var6, 3);
-          this.field_E.drawWidget(0, 0, (byte) -86, renderLayer);
+          CombatSandbox.a(compositeSprite, 3);
+          this.child.drawWidget(0, 0, (byte) -86, renderLayer);
           QuickChatPhraseRepository.popRasterState(-18862);
-          var6.e(this.x + originX, originY + this.y, this.field_K);
+          compositeSprite.e(this.x + originX, originY + this.y, this.alpha);
           return;
         }
         field_M = (String[]) null;
-        CombatSandbox.a(var6, 3);
-        this.field_E.drawWidget(0, 0, (byte) -86, renderLayer);
+        CombatSandbox.a(compositeSprite, 3);
+        this.child.drawWidget(0, 0, (byte) -86, renderLayer);
         QuickChatPhraseRepository.popRasterState(-18862);
-        var6.e(this.x + originX, originY + this.y, this.field_K);
+        compositeSprite.e(this.x + originX, originY + this.y, this.alpha);
     }
 
-    bh(Widget param0) {
-        super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (WidgetListener) null);
+    AlphaWidgetContainer(Widget child) {
+        super(child.x, child.y, child.width, child.height, (WidgetPainter) null, (WidgetListener) null);
         try {
-          param0.setBounds(0, this.width, 0, 8192, this.height);
-          this.field_K = 256;
-          this.field_E = param0;
+          child.setBounds(0, this.width, 0, 8192, this.height);
+          this.alpha = 256;
+          this.child = child;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "bh.<init>(" + (child != null ? "{...}" : "null") + ')');
         }
     }
 

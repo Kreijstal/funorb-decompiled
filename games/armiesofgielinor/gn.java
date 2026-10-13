@@ -96,7 +96,7 @@ final class gn {
     }
 
     final static void openQuickChatHelp(int obfuscationGuard) {
-        Spell.quickChatHelpDialog = new QuickChatHelpDialog(ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, hs.field_H, DualLinkedNode.field_k);
+        Spell.quickChatHelpDialog = new QuickChatHelpDialog(ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, eq.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k);
         if (obfuscationGuard != 5) {
           gn.openQuickChatHelp(-31);
         }

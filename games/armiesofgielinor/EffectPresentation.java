@@ -304,7 +304,7 @@ final class EffectPresentation implements EventPresentation {
                 this.presenter.tileIndex = var4;
                 var23_ref.unit = this.battlefield.getUnitAt(var23_ref.tileY, true, var23_ref.tileX);
                 if (var23_ref.unit == null) {
-                  var24 = nv.field_bb + ": Can see capture";
+                  var24 = ScrollControlWidget.field_bb + ": Can see capture";
                   this.battlefield.a(obfuscationGuard ^ 57, var24, event);
                   return false;
                 }
@@ -325,7 +325,7 @@ final class EffectPresentation implements EventPresentation {
                         var21_ref.unit = var21_ref.unit.copyDetached(false);
                       }
                       if (null == var21_ref.unit) {
-                        var22 = nv.field_bb + ": Can see telepop";
+                        var22 = ScrollControlWidget.field_bb + ": Can see telepop";
                         this.battlefield.a(0, var22, event);
                         return false;
                       }
@@ -336,7 +336,7 @@ final class EffectPresentation implements EventPresentation {
                       if (event.eventKind == 5) {
                         var20_ref = (TelefragEvent) (event);
                         if (var20_ref.unit == null) {
-                          var4_ref_String = nv.field_bb + ": Telefrag unit null";
+                          var4_ref_String = ScrollControlWidget.field_bb + ": Telefrag unit null";
                           this.battlefield.a(0, var4_ref_String, event);
                           return false;
                         }
@@ -356,7 +356,7 @@ final class EffectPresentation implements EventPresentation {
                             this.presenter.tileIndex = var4;
                             var15.unit = this.battlefield.getUnitAt(var15.tileY, true, var15.tileX);
                             if (var15.unit == null) {
-                              var16 = nv.field_bb + ": Can see deployment";
+                              var16 = ScrollControlWidget.field_bb + ": Can see deployment";
                               this.battlefield.a(0, var16, event);
                               return false;
                             }
@@ -366,7 +366,7 @@ final class EffectPresentation implements EventPresentation {
                             } else {
                               if (var15.unit.unitType != 7 &&
                                 17 != var15.unit.unitType) {
-                                var17 = nv.field_bb + ": Unit not deployable";
+                                var17 = ScrollControlWidget.field_bb + ": Unit not deployable";
                                 this.battlefield.a(0, var17, event);
                                 return false;
                               }
@@ -383,7 +383,7 @@ final class EffectPresentation implements EventPresentation {
                           this.presenter.tileIndex = var4;
                           var18_ref.unit = this.battlefield.getUnitAt(var18_ref.tileY, true, var18_ref.tileX);
                           if (var18_ref.unit == null) {
-                            var19 = nv.field_bb + ": Can see heal, raise, pump";
+                            var19 = ScrollControlWidget.field_bb + ": Can see heal, raise, pump";
                             this.battlefield.a(0, var19, event);
                             return false;
                           }
@@ -403,7 +403,7 @@ final class EffectPresentation implements EventPresentation {
                     }
                     this.presenter.tileIndex = var4;
                     if (var13.unit == null) {
-                      var14 = nv.field_bb + ": Can see teleport";
+                      var14 = ScrollControlWidget.field_bb + ": Can see teleport";
                       this.battlefield.a(0, var14, event);
                       return false;
                     }
@@ -418,7 +418,7 @@ final class EffectPresentation implements EventPresentation {
                   this.presenter.tileIndex = var4;
                   var11.unit = this.battlefield.getUnitAt(var11.tileY, true, var11.tileX);
                   if (null == var11.unit) {
-                    var12 = nv.field_bb + ": Can see burial";
+                    var12 = ScrollControlWidget.field_bb + ": Can see burial";
                     this.battlefield.a(0, var12, event);
                     return false;
                   }
@@ -432,7 +432,7 @@ final class EffectPresentation implements EventPresentation {
               var4 = var9.tileX + var9.tileY * this.mapWidth;
               this.presenter.tileIndex = var4;
               if (null == var9.unit) {
-                var10 = nv.field_bb + ": Can see growth";
+                var10 = ScrollControlWidget.field_bb + ": Can see growth";
                 this.battlefield.a(0, var10, event);
                 return false;
               }
@@ -448,7 +448,7 @@ final class EffectPresentation implements EventPresentation {
               var7.unit = this.battlefield.getUnitAt(var7.tileY, true, var7.tileX);
             }
             if (null == var7.unit) {
-              var8 = nv.field_bb + ": Can see death";
+              var8 = ScrollControlWidget.field_bb + ": Can see death";
               this.battlefield.a(0, var8, event);
               return false;
             }

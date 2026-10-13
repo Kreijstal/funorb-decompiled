@@ -11,10 +11,10 @@ final class tq {
         GlobalSpell.a(-47, param0);
         if (param1) {
           tq.a((byte) 89);
-          wc.a(param0, true);
+          DraggableWidgetContainer.a(param0, true);
           return;
         }
-        wc.a(param0, true);
+        DraggableWidgetContainer.a(param0, true);
     }
 
     final static void a(boolean param0, boolean param1, int param2) {

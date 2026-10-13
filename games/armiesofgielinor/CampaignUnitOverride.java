@@ -187,7 +187,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_cannot_join_inprogress");
                 if (var2 != null) {
-                  bh.field_I = uu.a(var2, (byte) 77);
+                  AlphaWidgetContainer.field_I = uu.a(var2, (byte) 77);
                 }
                 var2 = NodeIterator.a(50, "mu_x_declined_invite");
                 if (null != var2) {
@@ -215,7 +215,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_game_has_started");
                 if (null != var2) {
-                  qm.field_H = uu.a(var2, (byte) -117);
+                  ClippedWidgetContainer.field_H = uu.a(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "mu_you_declined_invite");
                 if (null != var2) {
@@ -263,7 +263,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_location");
                 if (null != var2) {
-                  nl.field_C = uu.a(var2, (byte) 43);
+                  SingleChildWidgetContainer.field_C = uu.a(var2, (byte) 43);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_all_games");
                 if (null != var2) {
@@ -287,7 +287,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_options");
                 if (null != var2) {
-                  hs.field_D = uu.a(var2, (byte) 111);
+                  ArrayWidgetContainer.field_D = uu.a(var2, (byte) 111);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_elapsed_time");
                 if (null != var2) {
@@ -391,7 +391,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_gameopt_kick_x_from_this_game");
                 if (null != var2) {
-                  wc.field_R = uu.a(var2, (byte) 64);
+                  DraggableWidgetContainer.field_R = uu.a(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_gameopt_withdraw_invite_to_x");
                 if (var2 != null) {
@@ -467,7 +467,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
-                  ai.field_R = uu.a(var2, (byte) -119);
+                  ScrollWidgetContainer.field_R = uu.a(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
@@ -751,7 +751,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "publicchat_unavailable_ratedgame");
                 if (null != var2) {
-                  wc.field_K = uu.a(var2, (byte) 15);
+                  DraggableWidgetContainer.field_K = uu.a(var2, (byte) 15);
                 }
                 var2 = NodeIterator.a(param0 + 132, "privatechat_friend_offline");
                 if (var2 != null) {
@@ -1477,7 +1477,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "login_username_email");
                 if (null != var2) {
-                  bh.field_J = uu.a(var2, (byte) -98);
+                  AlphaWidgetContainer.field_J = uu.a(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "login_username");
                 if (null != var2) {
@@ -1967,7 +1967,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "pausemenu");
                 if (null != var2) {
-                  ai.field_U = uu.a(var2, (byte) 54);
+                  ScrollWidgetContainer.field_U = uu.a(var2, (byte) 54);
                 }
                 var2 = NodeIterator.a(50, "optionsmenu_notpaused");
                 if (var2 != null) {

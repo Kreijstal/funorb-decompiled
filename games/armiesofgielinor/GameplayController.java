@@ -3035,7 +3035,7 @@ final class GameplayController {
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
-              hs.a(false, true, this.field_W, 0, 253, this.field_fb, this.field_i, 0);
+              ArrayWidgetContainer.a(false, true, this.field_W, 0, 253, this.field_fb, this.field_i, 0);
             }
           }
           if (this.selectedTileIndex > -1) {
@@ -3043,7 +3043,7 @@ final class GameplayController {
           }
           if (null != this.selectedUnit) {
             stackIn_95_0 = (~this.controlledPlayerId == ~this.selectedUnit.ownerPlayer);
-            hs.a(stackIn_95_0, true, this.selectedUnit, this.field_qb, 253, this.field_fb, this.field_fb, 0);
+            ArrayWidgetContainer.a(stackIn_95_0, true, this.selectedUnit, this.field_qb, 253, this.field_fb, this.field_fb, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4240,7 +4240,7 @@ final class GameplayController {
           var5_int = param3;
           var6 = param0;
           param3 = 75;
-          wc.field_J.d(var5_int - 73, var6 - 73, TutorialLayout.field_g[bw.unitDefinitions[param1][1] + 1]);
+          DraggableWidgetContainer.field_J.d(var5_int - 73, var6 - 73, TutorialLayout.field_g[bw.unitDefinitions[param1][1] + 1]);
           param0 = 75;
           fe.a(var5_int - 50, -46 + var6, 100, 30, jh.field_l, 128);
           fe.a(-50 + var5_int, var6 + 1, 100, 15, jh.field_l, 128);
@@ -4310,10 +4310,10 @@ final class GameplayController {
             pg.field_c.g(var5_int - 78, var6 - 78, 10);
           }
           ro.field_rb[bw.unitDefinitions[param1][0]].draw(var5_int - 8, var6 - 71);
-          if (null != bh.field_M[param1]) {
-            var10 = en.field_E.getParagraphHeight(bh.field_M[param1], 220, 0);
+          if (null != AlphaWidgetContainer.field_M[param1]) {
+            var10 = en.field_E.getParagraphHeight(AlphaWidgetContainer.field_M[param1], 220, 0);
             fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
-            en.field_E.drawParagraph(bh.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
+            en.field_E.drawParagraph(AlphaWidgetContainer.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11348,7 +11348,7 @@ final class GameplayController {
           var4Lifetime1 = ReportAbuseDialog.field_Nb;
           var5Lifetime1 = param0;
           var4Lifetime1[var5Lifetime1 >> 5] = oe.bitwiseOr(var4Lifetime1[var5Lifetime1 >> 5], 1 << rn.bitwiseAnd(31, var5Lifetime1));
-          ai.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(param0)));
+          ScrollWidgetContainer.field_P.addLast((byte) -119, (IntrusiveNode) (new jg(param0)));
           if (!this.field_R) {
             UnitInfoPopup.field_u.addLast((byte) -119, (IntrusiveNode) (new iw(param0, param2, -1, -1, -1, -1)));
           }

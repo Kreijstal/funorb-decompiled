@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends tj implements mf, WidgetActivationListener {
+final class na extends DequeWidgetContainer implements mf, WidgetActivationListener {
     static QuickChatCommandDefinition field_G;
     private ma field_P;
     static int field_E;
@@ -32,17 +32,17 @@ final class na extends tj implements mf, WidgetActivationListener {
         int var5 = 200;
         var2.setBounds(20, 270, var3, 8192, 50);
         var3 += 50;
-        this.a((byte) 10, var2);
+        this.addChild((byte) 10, var2);
         var3 = var3 + (5 + this.a(-124, MusicPatchEnvelope.field_k, ScrollContainer.field_Ob, 170, var3, this.field_P));
         this.field_O.setBounds(496 - var5 >> 1, var5, var3, 8192, 40);
         this.field_L.setBounds(var4 + 3, 60, var3 + 15, 8192, 40);
         this.field_L.listener = (WidgetListener) (this);
         this.field_O.listener = (WidgetListener) (this);
-        this.a((byte) 10, (Widget) (this.field_O));
-        this.a((byte) 10, (Widget) (this.field_L));
+        this.addChild((byte) 10, (Widget) (this.field_O));
+        this.addChild((byte) 10, (Widget) (this.field_L));
         this.field_M = new kv((mf) (this));
         this.field_M.setBounds(60 + (this.field_P.x + this.field_P.width), -60 + (-this.field_P.x + (this.width - this.field_P.width)), 20, 8192, 150);
-        this.a((byte) 10, (Widget) (this.field_M));
+        this.addChild((byte) 10, (Widget) (this.field_M));
         this.setBounds(0, 496, 0, 8192, var4 + var3 + 55);
     }
 
@@ -282,10 +282,10 @@ final class na extends tj implements mf, WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ta(20, param0, 120 + param4, 25, param3, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param2);
-          this.a((byte) 10, (Widget) (var10));
+          this.addChild((byte) 10, (Widget) (var10));
           var9 = new pk(((eg) ((Object) param3)).a(-918933630), param5, 126, param0 + var10.height, param4 + 25, param1);
           var9.listener = (WidgetListener) (this);
-          this.a((byte) 10, (Widget) (var9));
+          this.addChild((byte) 10, (Widget) (var9));
           if (param6 < -59) {
             stackIn_4_0 = var9.height + var10.height;
             return stackIn_4_0;
@@ -533,7 +533,7 @@ final class na extends tj implements mf, WidgetActivationListener {
             return true;
           }
           if (keyCode == 98) {
-            stackIn_6_0 = this.a(false, rootWidget);
+            stackIn_6_0 = this.focusPreviousChild(false, rootWidget);
             return stackIn_6_0;
           }
           if (obfuscationGuard != -12215) {
@@ -542,7 +542,7 @@ final class na extends tj implements mf, WidgetActivationListener {
           if (keyCode != 99) {
             return false;
           }
-          stackIn_12_0 = this.b((byte) -127, rootWidget);
+          stackIn_12_0 = this.focusNextChild((byte) -127, rootWidget);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

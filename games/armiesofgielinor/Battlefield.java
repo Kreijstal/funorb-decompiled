@@ -1073,7 +1073,7 @@ final class Battlefield {
           field_q = (String) null;
         }
         int var3 = param0;
-        if (nv.c(0, param1) &&
+        if (ScrollControlWidget.c(0, param1) &&
           param0 == 3) {
           var3 = 3;
         }
@@ -5037,8 +5037,8 @@ final class Battlefield {
           this.mapSizeSetting = 0;
         }
         if (this.mapSizeSetting >= 0 &&
-          hs.field_G.length > this.mapSizeSetting) {
-          dupTemp$0 = hs.field_G[this.mapSizeSetting];
+          ArrayWidgetContainer.field_G.length > this.mapSizeSetting) {
+          dupTemp$0 = ArrayWidgetContainer.field_G[this.mapSizeSetting];
           this.mapWidth = dupTemp$0;
           this.mapHeight = dupTemp$0;
           if ((0 > this.mapSizeSetting ||
@@ -5328,7 +5328,7 @@ final class Battlefield {
     private final int b(byte param0) {
         int var2 = 1 + this.field_vb;
         if (this.mapSizeSetting < 0 ||
-          hs.field_G.length <= this.mapSizeSetting) {
+          ArrayWidgetContainer.field_G.length <= this.mapSizeSetting) {
           return var2 * nr.field_a[0];
         }
         int var3 = nr.field_a[this.mapSizeSetting] * var2;

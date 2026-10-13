@@ -310,7 +310,7 @@ final class CampaignMenu {
         int var4Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, jh.field_k, 0, 128, ai.field_V, true, ConsoleValue.field_b);
+          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, jh.field_k, 0, 128, ScrollWidgetContainer.field_V, true, ConsoleValue.field_b);
           fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, jh.field_k, 0, 128, SummonAction.field_A, true, ConsoleValue.field_b);
           if (null != this.selectedCampaignEntry) {
             if (this.selectedCampaignEntry.entryId == -1) {

@@ -165,7 +165,7 @@ final class wd {
           var2 = null;
           if (rs.outgoingChatChannel == 0 &&
             no.roomSetup != null) {
-            var2 = wc.field_K;
+            var2 = DraggableWidgetContainer.field_K;
           }
           if (rs.outgoingChatChannel == 2 &&
             !vu.isChatRecipientAvailable(6)) {

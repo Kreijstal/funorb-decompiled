@@ -225,13 +225,13 @@ final class no extends en {
           this.field_L.painter = param0;
           this.field_R = param1 ? true : false;
           if (!this.field_R) {
-            this.a((byte) 10, (Widget) (this.field_L));
-            this.a((byte) 10, (Widget) (this.field_Q));
+            this.addChild((byte) 10, (Widget) (this.field_L));
+            this.addChild((byte) 10, (Widget) (this.field_Q));
           } else {
-            this.a((byte) 10, (Widget) (this.field_Q));
-            this.a((byte) 10, (Widget) (this.field_L));
+            this.addChild((byte) 10, (Widget) (this.field_Q));
+            this.addChild((byte) 10, (Widget) (this.field_L));
           }
-          this.a((byte) 10, (Widget) (this.field_O));
+          this.addChild((byte) 10, (Widget) (this.field_O));
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
