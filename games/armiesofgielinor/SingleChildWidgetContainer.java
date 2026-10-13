@@ -338,7 +338,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           cp.field_d = new ClientUiComponent(0L, AccountRegistrationForm.field_M, eq.field_e.toUpperCase());
           ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, nr.field_d.toUpperCase());
           LobbyPlayer.field_Lb = new ClientUiComponent(0L, sh.field_m);
-          r.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
+          SpriteDropdownControl.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
           bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, InteractiveWidget.field_H);
@@ -364,7 +364,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ov.field_i = new ClientUiComponent(0L, (ClientUiComponent) null);
           ov.field_i.addChild(ClientContextMenu.field_n, 92);
           ov.field_i.addChild(LobbyPlayer.field_Lb, 47);
-          LobbyPlayer.field_Lb.addChild(r.field_v, 38);
+          LobbyPlayer.field_Lb.addChild(SpriteDropdownControl.field_v, 38);
           LobbyPlayer.field_Lb.addChild(ek.field_c, 114);
           LobbyPlayer.field_Lb.addChild(CombatViewTransition.field_p, 121);
           if (fh.field_c) {

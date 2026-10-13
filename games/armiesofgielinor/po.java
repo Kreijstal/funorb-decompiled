@@ -80,11 +80,11 @@ final class po {
             if (!lq.hasLastQuickChat) {
               return false;
             }
-            if (vt.lastQuickChatChannel == 2 &&
+            if (SpriteControlNode.lastQuickChatChannel == 2 &&
               !FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, AdaptiveMidiPcmStream.lastQuickChatRecipientName, (byte) 78)) {
               return false;
             }
-            if (vt.lastQuickChatChannel != 2 &&
+            if (SpriteControlNode.lastQuickChatChannel != 2 &&
               var3 != 0) {
               return false;
             }
@@ -102,13 +102,13 @@ final class po {
             if (!lq.hasLastQuickChat) {
               return false;
             }
-            if (vt.lastQuickChatChannel != 2) {
-              if (vt.lastQuickChatChannel == 2) {
+            if (SpriteControlNode.lastQuickChatChannel != 2) {
+              if (SpriteControlNode.lastQuickChatChannel == 2) {
                 if (!BestScoreStrategy.a(true)) {
                   return true;
                 }
                 var4 = (String) null;
-                it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
+                it.writeChatMessage(vi.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
                 return true;
               }
               if (var3 != 0) {
@@ -118,7 +118,7 @@ final class po {
               if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, AdaptiveMidiPcmStream.lastQuickChatRecipientName, (byte) 78)) {
                 return false;
               }
-              if (vt.lastQuickChatChannel != 2 &&
+              if (SpriteControlNode.lastQuickChatChannel != 2 &&
                 var3 != 0) {
                 return false;
               }
@@ -126,7 +126,7 @@ final class po {
           }
           if (BestScoreStrategy.a(true)) {
             var4Lifetime4 = (String) null;
-            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
+            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
           }
           return true;
         }
@@ -154,13 +154,13 @@ final class po {
           if (!lq.hasLastQuickChat) {
             return false;
           }
-          if (vt.lastQuickChatChannel != 2) {
-            if (vt.lastQuickChatChannel == 2) {
+          if (SpriteControlNode.lastQuickChatChannel != 2) {
+            if (SpriteControlNode.lastQuickChatChannel == 2) {
               if (!BestScoreStrategy.a(true)) {
                 return true;
               }
               var4Lifetime1 = (String) null;
-              it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
+              it.writeChatMessage(vi.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
               return true;
             }
             if (var3 != 0) {
@@ -170,14 +170,14 @@ final class po {
             if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, AdaptiveMidiPcmStream.lastQuickChatRecipientName, (byte) 78)) {
               return false;
             }
-            if (vt.lastQuickChatChannel != 2 &&
+            if (SpriteControlNode.lastQuickChatChannel != 2 &&
               var3 != 0) {
               return false;
             }
           }
           if (BestScoreStrategy.a(true)) {
             var4Lifetime1Lifetime1 = (String) null;
-            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
+            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
           }
           return true;
         }
@@ -194,13 +194,13 @@ final class po {
         if (!lq.hasLastQuickChat) {
           return false;
         }
-        if (vt.lastQuickChatChannel != 2) {
-          if (vt.lastQuickChatChannel == 2) {
+        if (SpriteControlNode.lastQuickChatChannel != 2) {
+          if (SpriteControlNode.lastQuickChatChannel == 2) {
             if (!BestScoreStrategy.a(true)) {
               return true;
             }
             var4Lifetime2 = (String) null;
-            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
+            it.writeChatMessage(vi.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
             return true;
           }
           if (var3 != 0) {
@@ -210,7 +210,7 @@ final class po {
           if (!FixedQuaternion.isOnlineFriendOrRoomMember(RevivalEvent.lastQuickChatRecipientAccountId, AdaptiveMidiPcmStream.lastQuickChatRecipientName, (byte) 78)) {
             return false;
           }
-          if (vt.lastQuickChatChannel != 2 &&
+          if (SpriteControlNode.lastQuickChatChannel != 2 &&
             var3 != 0) {
             return false;
           }
@@ -219,7 +219,7 @@ final class po {
           return true;
         }
         var4Lifetime3 = (String) null;
-        it.writeChatMessage(vi.lastQuickChatPhraseId, -82, vt.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
+        it.writeChatMessage(vi.lastQuickChatPhraseId, -82, SpriteControlNode.lastQuickChatChannel, AdaptiveMidiPcmStream.lastQuickChatRecipientName, packetOpcode, (String) null);
         return true;
     }
 

@@ -122,7 +122,7 @@ final class NodeIterator {
             if (jt.a((byte) -92)) {
               return true;
             }
-            if (!vt.a(param1, param0, param2, (byte) 28)) {
+            if (!SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
               return false;
             }
             return true;
@@ -136,7 +136,7 @@ final class NodeIterator {
             if (jt.a((byte) -92)) {
               return true;
             }
-            if (!vt.a(param1, param0, param2, (byte) 28)) {
+            if (!SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
               return false;
             }
             return true;
@@ -146,7 +146,7 @@ final class NodeIterator {
         if (jt.a((byte) -92)) {
           return true;
         }
-        if (vt.a(param1, param0, param2, (byte) 28)) {
+        if (SpriteControlNode.a(param1, param0, param2, (byte) 28)) {
           return true;
         }
         return false;

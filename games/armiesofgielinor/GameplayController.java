@@ -397,7 +397,7 @@ final class GameplayController {
             }
             var3 = stackIn_19_0;
             if (this.battlefield.currentPlayer == -1) {
-              stackIn_33_0 = r.field_J;
+              stackIn_33_0 = SpriteDropdownControl.field_J;
             } else {
               if (l.activeCampaignMission == null &&
                 this.controlledPlayerId > -1 &&
@@ -2327,7 +2327,7 @@ final class GameplayController {
               stackIn_92_0 = 18;
               return stackIn_92_0;
             }
-            if (vt.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -121)) {
+            if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -121)) {
               stackIn_97_0 = 4;
               return stackIn_97_0;
             }
@@ -4145,7 +4145,7 @@ final class GameplayController {
               stackIn_32_0 = 0;
             }
             var2_int = stackIn_32_0;
-            var3 = vt.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
+            var3 = SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
             stackIn_38_0 = 6684672;
             stackIn_38_1 = -116;
             stackIn_39_2 = (var3 != 0) && (var2_int != 0);
@@ -6167,7 +6167,7 @@ final class GameplayController {
                       decompiledFrameRemainder11 = (var20 != 0);
                     }
                     if (decompiledFrameRemainder11) {
-                      if (vt.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -123) &&
+                      if (SpriteControlNode.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -123) &&
                         !this.battlefield.field_X &&
                         this.battlefield.currentPlayer == this.controlledPlayerId &&
                         !this.field_bc) {

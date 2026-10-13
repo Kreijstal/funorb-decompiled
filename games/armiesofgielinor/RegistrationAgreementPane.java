@@ -168,7 +168,7 @@ final class RegistrationAgreementPane extends DequeWidgetContainer implements Te
           jj.a(-93, param0);
           lg.a(32381, param0);
           DropdownArrowPainter.a(54);
-          ng.b(true);
+          SpriteDropdownMenu.b(true);
           if (param1 <= 70) {
             String var5 = (String) null;
             RegistrationAgreementPane.isPasswordAllowedForName((String) null, (String) null, true);

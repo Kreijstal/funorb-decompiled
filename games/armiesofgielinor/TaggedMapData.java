@@ -62,7 +62,7 @@ final class TaggedMapData implements TaggedFieldReader {
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
                 }
-                vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7 * var5 >> 8);
               }
             } else {
               if (20 > var6) {
@@ -82,7 +82,7 @@ final class TaggedMapData implements TaggedFieldReader {
                 if (var6 < 20) {
                   var7 = var6 * 256 / 20;
                 }
-                vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7 * var5 >> 8);
+                SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7 * var5 >> 8);
               }
             }
             return;
@@ -93,7 +93,7 @@ final class TaggedMapData implements TaggedFieldReader {
             if (var6Lifetime3 < 20) {
               var7Lifetime4 = var6Lifetime3 * 256 / 20;
             }
-            vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
+            SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime4 * var5 >> 8);
           }
           return;
         }
@@ -111,7 +111,7 @@ final class TaggedMapData implements TaggedFieldReader {
               if (var6Lifetime1 < 20) {
                 var7Lifetime1 = var6Lifetime1 * 256 / 20;
               }
-              vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
+              SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
             }
             return;
           }
@@ -122,7 +122,7 @@ final class TaggedMapData implements TaggedFieldReader {
               if (var6Lifetime1 < 20) {
                 var7Lifetime1Lifetime1 = var6Lifetime1 * 256 / 20;
               }
-              vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
+              SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
             }
           } else {
             if (20 > var6Lifetime1) {
@@ -134,7 +134,7 @@ final class TaggedMapData implements TaggedFieldReader {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1Lifetime1 = var6Lifetime1 * 256 / 20;
                 }
-                vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
+                SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
               }
               return;
             }
@@ -147,7 +147,7 @@ final class TaggedMapData implements TaggedFieldReader {
                 if (var6Lifetime1 < 20) {
                   var7Lifetime1Lifetime1 = var6Lifetime1 * 256 / 20;
                 }
-                vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
+                SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
               }
               return;
             }
@@ -158,7 +158,7 @@ final class TaggedMapData implements TaggedFieldReader {
               if (var6Lifetime1 < 20) {
                 var7Lifetime1Lifetime1 = var6Lifetime1 * 256 / 20;
               }
-              vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
+              SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1Lifetime1 * var5 >> 8);
             }
             return;
           }
@@ -173,7 +173,7 @@ final class TaggedMapData implements TaggedFieldReader {
             if (var6Lifetime2 < 20) {
               var7Lifetime2 = var6Lifetime2 * 256 / 20;
             }
-            vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
+            SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime2 * var5 >> 8);
           }
           return;
         }
@@ -184,7 +184,7 @@ final class TaggedMapData implements TaggedFieldReader {
             if (var6Lifetime2 < 20) {
               var7Lifetime3 = var6Lifetime2 * 256 / 20;
             }
-            vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
+            SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
           }
         } else {
           if (20 > var6Lifetime2) {
@@ -196,7 +196,7 @@ final class TaggedMapData implements TaggedFieldReader {
               if (var6Lifetime2 < 20) {
                 var7Lifetime3 = var6Lifetime2 * 256 / 20;
               }
-              vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
+              SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
             }
             return;
           }
@@ -209,7 +209,7 @@ final class TaggedMapData implements TaggedFieldReader {
               if (var6Lifetime2 < 20) {
                 var7Lifetime3 = var6Lifetime2 * 256 / 20;
               }
-              vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
+              SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
             }
             return;
           }
@@ -220,7 +220,7 @@ final class TaggedMapData implements TaggedFieldReader {
             if (var6Lifetime2 < 20) {
               var7Lifetime3 = var6Lifetime2 * 256 / 20;
             }
-            vt.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
+            SpriteControlNode.field_k.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime3 * var5 >> 8);
           }
           return;
         }

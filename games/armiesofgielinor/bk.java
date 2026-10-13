@@ -353,7 +353,7 @@ final class bk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7_ref = null;
         try {
-          ng.openClientContextMenu(param5, param4, (int[]) null, param4.displayName, -1, 111, -1, param4.accountName, param4.accountId);
+          SpriteDropdownMenu.openClientContextMenu(param5, param4, (int[]) null, param4.displayName, -1, 111, -1, param4.accountName, param4.accountId);
           tn.activeContextMenu.addPlayerAdmissionActions(23899, true);
           tn.activeContextMenu.addSocialActions((int[]) null, 7, 0);
           tn.activeContextMenu.addReportAction((byte) 44);

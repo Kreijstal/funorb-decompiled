@@ -808,7 +808,7 @@ final class AiInfluenceMap {
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = vt.field_m[var9];
+              var11 = SpriteControlNode.field_m[var9];
               var6[0][var10] = LeaderEscortCondition.field_a[var11];
               var7[0][var10 * 4] = NumericDateInputWidget.field_U[var11];
               var7[0][1 + 4 * var10] = AnimationFrameSet.field_w[var11];
@@ -826,7 +826,7 @@ final class AiInfluenceMap {
             var13 = 0;
             var10Lifetime1 = var13;
             while (var8 > var9Lifetime1) {
-              var11Lifetime1 = vt.field_m[var5 + var9Lifetime1];
+              var11Lifetime1 = SpriteControlNode.field_m[var5 + var9Lifetime1];
               var6[1][var13] = LeaderEscortCondition.field_a[var11Lifetime1];
               var7[1][4 * var13] = NumericDateInputWidget.field_U[var11Lifetime1];
               var7[1][var13 * 4 + 1] = AnimationFrameSet.field_w[var11Lifetime1];

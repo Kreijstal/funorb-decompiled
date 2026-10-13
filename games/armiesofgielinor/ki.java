@@ -10,11 +10,11 @@ final class ki {
     static String[][] field_d;
 
     final static AccountRequestResult a(int param0) {
-        if (nb.nameCheckResultConsumed == ChannelBaseVolumeConsoleCommand.field_L) {
+        if (SpriteScrollBar.nameCheckResultConsumed == ChannelBaseVolumeConsoleCommand.field_L) {
           throw new IllegalStateException();
         }
         if (lm.nameCheckComplete == ChannelBaseVolumeConsoleCommand.field_L) {
-          ChannelBaseVolumeConsoleCommand.field_L = nb.nameCheckResultConsumed;
+          ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
           return SoundCache.field_a;
         }
         if (param0 != -61440) {

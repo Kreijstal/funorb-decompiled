@@ -55,19 +55,19 @@ final class MoveAttackAction extends PreparedAction {
             var7 = BattleTutorial.a(480, var11, param3 ^ 7444, AiPlanner.field_G, fs.field_c);
             var8 = 3 + var7;
             DirectByteStorage.field_k = new int[var8];
-            nb.field_h = new String[var8];
+            SpriteScrollBar.field_h = new String[var8];
             for (var9 = 0; var9 < var8; var9++) {
               DirectByteStorage.field_k[var9] = -1;
             }
             SpellMenuGroup.field_m = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
-              nb.field_h[var9] = fs.field_c[var9];
+              SpriteScrollBar.field_h[var9] = fs.field_c[var9];
             }
-            nb.field_h[var8 - 3] = "";
-            nb.field_h[-2 + var8] = var6;
+            SpriteScrollBar.field_h[var8 - 3] = "";
+            SpriteScrollBar.field_h[-2 + var8] = var6;
             DirectByteStorage.field_k[-2 + var8] = 0;
             SpellMenuGroup.field_m[0] = 1;
-            nb.field_h[var8 - 1] = pd.field_f;
+            SpriteScrollBar.field_h[var8 - 1] = pd.field_f;
             DirectByteStorage.field_k[var8 - 1] = 1;
             SpellMenuGroup.field_m[1] = 2;
           } else {
@@ -77,23 +77,23 @@ final class MoveAttackAction extends PreparedAction {
             var7 = BattleTutorial.a(480, var11, param3 + 7412, AiPlanner.field_G, fs.field_c);
             var8 = 2 + var7;
             DirectByteStorage.field_k = new int[var8];
-            nb.field_h = new String[var8];
+            SpriteScrollBar.field_h = new String[var8];
             for (var9 = 0; var9 < var8; var9++) {
               DirectByteStorage.field_k[var9] = -1;
             }
             SpellMenuGroup.field_m = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
-              nb.field_h[var9] = fs.field_c[var9];
+              SpriteScrollBar.field_h[var9] = fs.field_c[var9];
             }
-            nb.field_h[var8 - 2] = "";
-            nb.field_h[var8 - 1] = pd.field_f;
+            SpriteScrollBar.field_h[var8 - 2] = "";
+            SpriteScrollBar.field_h[var8 - 1] = pd.field_f;
             DirectByteStorage.field_k[var8 - 1] = 0;
             SpellMenuGroup.field_m[0] = 2;
           }
           MovementPlanner.field_z.itemCount = SpellMenuGroup.field_m.length;
           var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; var8Lifetime1 < nb.field_h.length; var8Lifetime1++) {
-            stackIn_25_0 = nb.field_h[var8Lifetime1];
+          for (var8Lifetime1 = 0; var8Lifetime1 < SpriteScrollBar.field_h.length; var8Lifetime1++) {
+            stackIn_25_0 = SpriteScrollBar.field_h[var8Lifetime1];
             stackIn_26_1 = !(DirectByteStorage.field_k[var8Lifetime1] < 0);
             var9Lifetime1 = lp.a(stackIn_25_0, stackIn_26_1, false);
             if (DirectByteStorage.field_k[var8Lifetime1] != -1) {
@@ -107,7 +107,7 @@ final class MoveAttackAction extends PreparedAction {
           BattlefieldTheme.field_f = bt.field_g - (var7Lifetime1 >> 1);
           DualLinkedNode.field_r = (QuickChatPhrase.field_w + FullscreenFocusCanvas.field_b << 1) * MovementPlanner.field_z.itemCount;
           var8Lifetime2 = 0;
-          while (nb.field_h.length > var8Lifetime2) {
+          while (SpriteScrollBar.field_h.length > var8Lifetime2) {
             stackIn_38_0 = DualLinkedNode.field_r;
             stackIn_38_1 = ~DirectByteStorage.field_k[var8Lifetime2];
             if (stackIn_38_1 <= -1) {

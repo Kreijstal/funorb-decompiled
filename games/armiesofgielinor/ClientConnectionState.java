@@ -25,7 +25,7 @@ final class ClientConnectionState {
             var4 = (String) null;
             ClientConnectionState.a(18, -42, -58, (String) null);
           }
-          stackIn_3_0 = (long)vt.readTwoTierUnsignedInt(-9202, 8, 4, packet);
+          stackIn_3_0 = (long)SpriteControlNode.readTwoTierUnsignedInt(-9202, 8, 4, packet);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

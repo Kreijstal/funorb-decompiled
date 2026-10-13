@@ -219,7 +219,7 @@ final class AgeValidator extends TextFieldValidator {
     }
 
     final static void rememberLastQuickChat(String recipientName, long accountId, int phraseId, int channelId, int obfuscationGuard) {
-        vt.lastQuickChatChannel = channelId;
+        SpriteControlNode.lastQuickChatChannel = channelId;
         AdaptiveMidiPcmStream.lastQuickChatRecipientName = recipientName;
         vi.lastQuickChatPhraseId = phraseId;
         if (obfuscationGuard != 19212) {

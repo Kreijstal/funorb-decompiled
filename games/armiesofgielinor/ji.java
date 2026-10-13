@@ -25,7 +25,7 @@ final class ji {
           }
           if (mh.accountNameCheckState == lm.nameCheckComplete &&
             name.equals(AgeValidator.requestedAccountName)) {
-            mh.accountNameCheckState = nb.nameCheckResultConsumed;
+            mh.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
             completedResult = EmailValidator.accountNameCheckResult;
             return completedResult;
           }

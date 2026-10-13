@@ -2072,7 +2072,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    final void f() {
+    final void rotateCounterClockwise() {
         int var4 = 0;
         int incrementValue$0 = 0;
         int var3 = 0;
@@ -2241,7 +2241,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    final RgbSprite g() {
+    final RgbSprite copySprite() {
         int var3 = 0;
         RgbSprite var1 = new RgbSprite(this.pixelWidth, this.pixelHeight);
         var1.canvasWidth = this.canvasWidth;

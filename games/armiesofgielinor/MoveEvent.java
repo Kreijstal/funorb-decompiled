@@ -538,7 +538,7 @@ final class MoveEvent extends GameEvent {
         EquipmentBattleTutorial.configureTutorialStage(30, 12, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -114);
         EquipmentBattleTutorial.configureTutorialStage(30, 13, 60, 580, 440, 470, new int[]{7}, -78);
         EquipmentBattleTutorial.configureTutorialStage(30, 20, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -95);
-        vt.a(-120);
+        SpriteControlNode.a(-120);
         EquipmentBattleTutorial.configureTutorialStage(30, 8, 280, 360, 438, 440, new int[]{20, 8}, -119);
         EquipmentBattleTutorial.configureTutorialStage(30, 9, 280, 360, 438, 440, new int[]{7}, -27);
         EquipmentBattleTutorial.configureTutorialStage(30, 10, 180, 460, 400, 460, new int[]{20, 21}, -70);

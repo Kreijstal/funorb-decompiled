@@ -44,7 +44,7 @@ final class hq {
             DefeatPlayerConsoleCommand.field_E = param12;
             CampaignRewardPreview.field_d = param0;
             fl.field_e = param13;
-            ng.field_v = param6;
+            SpriteDropdownMenu.field_v = param6;
             if (null != wj.field_n.randomDataFile) {
               try {
                 GameCanvas.field_d = new BufferedFile(wj.field_n.randomDataFile, 64, 0);

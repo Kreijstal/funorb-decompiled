@@ -151,9 +151,9 @@ final class TextLineLayout {
             PointerInputHandler.field_f = null;
             var8 = mission.getParticipantNames(-23209);
             var3 = var8;
-            r.field_B = var8.length;
+            SpriteDropdownControl.field_B = var8.length;
             var4 = mission.playerSlot;
-            ByteStorage.field_g = obfuscationGuard + r.field_B;
+            ByteStorage.field_g = obfuscationGuard + SpriteDropdownControl.field_B;
             LinkButtonPainter.field_f.selectTheme(mission.mapTheme, 0);
             stackIn_4_0 = null;
             stackIn_4_1 = null;

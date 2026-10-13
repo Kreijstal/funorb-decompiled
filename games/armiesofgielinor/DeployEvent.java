@@ -261,7 +261,7 @@ final class DeployEvent extends GameEvent {
               }
             }
             if (0 != var6.pressedButton) {
-              ng.openClientContextMenu(TaggedMapData.field_g.scrollContainer, var6, (int[]) null, var6.displayName, -1, -110, -1, var6.accountName, 0L);
+              SpriteDropdownMenu.openClientContextMenu(TaggedMapData.field_g.scrollContainer, var6, (int[]) null, var6.displayName, -1, -110, -1, var6.accountName, 0L);
               var16 = tn.activeContextMenu;
               var13_ref_String = ArchiveIndex.field_u;
               var16.menu.addTextAction(7, var13_ref_String, (byte) -100);

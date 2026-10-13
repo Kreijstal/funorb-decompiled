@@ -99,7 +99,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         int var3;
         DialogMessagePane.advanceLobbyNotifications(-117);
         if (ToggleWidget.currentRoom != null) {
-          stackIn_6_0 = (r.c(ToggleWidget.currentRoom.playerCount, 2)) ? 1 : 0;
+          stackIn_6_0 = (SpriteDropdownControl.c(ToggleWidget.currentRoom.playerCount, 2)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -107,7 +107,7 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         stackIn_8_0 = true;
         stackIn_8_1 = 65524;
         stackIn_8_2 = 15;
-        stackIn_9_3 = (50 >= r.field_u) ? false : true;
+        stackIn_9_3 = (50 >= SpriteDropdownControl.field_u) ? false : true;
         stackIn_12_4 = el.field_d;
         stackIn_12_5 = 65528;
         stackIn_12_6 = 14;

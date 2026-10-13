@@ -1671,7 +1671,7 @@ final class TutorialController {
                                                                                             return;
                                                                                           }
                                                                                         }
-                                                                                        MoveAttackAction.a(0, r.field_G, param0, (byte) 90, true);
+                                                                                        MoveAttackAction.a(0, SpriteDropdownControl.field_G, param0, (byte) 90, true);
                                                                                         if (var9 == 0) {
                                                                                           return;
                                                                                         }
@@ -2116,38 +2116,38 @@ final class TutorialController {
                         if (!this.selectionState.hasActivationInput((byte) 111)) {
                           return;
                         }
-                        stackIn_693_0 = r.field_B;
+                        stackIn_693_0 = SpriteDropdownControl.field_B;
                         if (DeployEvent.pointerPressButton == 1) {
                           stackIn_694_1 = 1;
                         } else {
                           stackIn_694_1 = -1;
                         }
-                        r.field_B = stackIn_693_0 + stackIn_694_1;
-                        if (r.field_B < 2) {
-                          r.field_B = 8;
+                        SpriteDropdownControl.field_B = stackIn_693_0 + stackIn_694_1;
+                        if (SpriteDropdownControl.field_B < 2) {
+                          SpriteDropdownControl.field_B = 8;
                         }
-                        if (r.field_B > 8) {
-                          r.field_B = 2;
+                        if (SpriteDropdownControl.field_B > 8) {
+                          SpriteDropdownControl.field_B = 2;
                         }
-                        if (ByteStorage.field_g > r.field_B) {
-                          ByteStorage.field_g = r.field_B;
+                        if (ByteStorage.field_g > SpriteDropdownControl.field_B) {
+                          ByteStorage.field_g = SpriteDropdownControl.field_B;
                         }
                         if (0 == t.field_e &&
-                          r.field_B > 2) {
+                          SpriteDropdownControl.field_B > 2) {
                           t.field_e = 1;
                         }
                         if (t.field_e == 1 &&
-                          r.field_B > 4) {
+                          SpriteDropdownControl.field_B > 4) {
                           t.field_e = 2;
                         }
                         if (t.field_e == 2 &&
-                          r.field_B > 6) {
+                          SpriteDropdownControl.field_B > 6) {
                           t.field_e = 3;
                         }
                         if (t.field_e != 3) {
                           return;
                         }
-                        if (4 <= r.field_B) {
+                        if (4 <= SpriteDropdownControl.field_B) {
                           return;
                         }
                         t.field_e = 2;
@@ -2166,9 +2166,9 @@ final class TutorialController {
                       }
                       ByteStorage.field_g = stackIn_740_0 + stackIn_741_1;
                       if (ByteStorage.field_g < 0) {
-                        ByteStorage.field_g = r.field_B;
+                        ByteStorage.field_g = SpriteDropdownControl.field_B;
                       }
-                      if (r.field_B >= ByteStorage.field_g) {
+                      if (SpriteDropdownControl.field_B >= ByteStorage.field_g) {
                         return;
                       }
                       ByteStorage.field_g = 0;
@@ -2193,24 +2193,24 @@ final class TutorialController {
                     t.field_e = 0;
                   }
                   if (0 == t.field_e &&
-                    r.field_B > 2) {
-                    r.field_B = 2;
+                    SpriteDropdownControl.field_B > 2) {
+                    SpriteDropdownControl.field_B = 2;
                   }
                   if (t.field_e == 1 &&
-                    4 < r.field_B) {
-                    r.field_B = 4;
+                    4 < SpriteDropdownControl.field_B) {
+                    SpriteDropdownControl.field_B = 4;
                   }
                   if (t.field_e == 2 &&
-                    r.field_B > 6) {
-                    r.field_B = 6;
+                    SpriteDropdownControl.field_B > 6) {
+                    SpriteDropdownControl.field_B = 6;
                   }
                   if (3 != t.field_e) {
                     return;
                   }
-                  if (4 <= r.field_B) {
+                  if (4 <= SpriteDropdownControl.field_B) {
                     return;
                   }
-                  r.field_B = 4;
+                  SpriteDropdownControl.field_B = 4;
                   if (var9 == 0) {
                     return;
                   }
@@ -2655,7 +2655,7 @@ final class TutorialController {
           if (MoveEvent.matchSetupPanel == null) {
             return;
           }
-          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, t.field_e, NetworkGameShell.field_D, vg.field_m, ByteStorage.field_g, r.field_B, this.f(true));
+          MoveEvent.matchSetupPanel.setOptions(this.selectionState.selectedIndex, (byte) -28, t.field_e, NetworkGameShell.field_D, vg.field_m, ByteStorage.field_g, SpriteDropdownControl.field_B, this.f(true));
           var2_int = -9 % ((61 - param0) / 60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3828,7 +3828,7 @@ final class TutorialController {
             var3 = this.f(true);
           }
           if (itemId == 28) {
-            var3 = DisplacedUnitMarker.field_t[28] + r.field_B;
+            var3 = DisplacedUnitMarker.field_t[28] + SpriteDropdownControl.field_B;
           }
           if (itemId == 46) {
             var3 = DisplacedUnitMarker.field_t[28] + ByteStorage.field_g;

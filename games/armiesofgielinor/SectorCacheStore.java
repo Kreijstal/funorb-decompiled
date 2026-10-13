@@ -63,7 +63,7 @@ final class SectorCacheStore {
           ChatMessage var2 = (ChatMessage) null;
           SectorCacheStore.appendChatHistory(-95, (ChatMessage) null);
         }
-        ng.x(90);
+        SpriteDropdownMenu.x(90);
     }
 
     final static void appendChatHistory(int obfuscationGuard, ChatMessage message) {

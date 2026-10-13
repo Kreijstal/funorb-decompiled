@@ -210,7 +210,7 @@ final class vv {
               UnitCycler.a(111, param5, param0, var12);
             }
             if (var12.u(8)) {
-              nb.a(param0, param5, (byte) -97, var12);
+              SpriteScrollBar.a(param0, param5, (byte) -97, var12);
             }
             if (var12.modelPreview != null) {
               if (var12.ownerPlayer == MapTile.field_i &&
@@ -266,7 +266,7 @@ final class vv {
                 UnitCycler.a(111, param5, param0, var12);
               }
               if (var12.u(8)) {
-                nb.a(param0, param5, (byte) -97, var12);
+                SpriteScrollBar.a(param0, param5, (byte) -97, var12);
               }
               if (var12.modelPreview != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
@@ -321,7 +321,7 @@ final class vv {
                 UnitCycler.a(111, param5, param0, var12);
               }
               if (var12.u(8)) {
-                nb.a(param0, param5, (byte) -97, var12);
+                SpriteScrollBar.a(param0, param5, (byte) -97, var12);
               }
               if (var12.modelPreview != null) {
                 if (var12.ownerPlayer == MapTile.field_i &&
@@ -378,7 +378,7 @@ final class vv {
           UnitCycler.a(111, param5, param0, var12);
         }
         if (var12.u(8)) {
-          nb.a(param0, param5, (byte) -97, var12);
+          SpriteScrollBar.a(param0, param5, (byte) -97, var12);
         }
         if (var12.modelPreview == null) {
           return;

@@ -361,7 +361,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
         DropdownOptionList.field_R[EmailConfirmationValidator.field_p] = param5;
-        vt.field_m[EmailConfirmationValidator.field_p] = EmailConfirmationValidator.field_p;
+        SpriteControlNode.field_m[EmailConfirmationValidator.field_p] = EmailConfirmationValidator.field_p;
         NumericDateInputWidget.field_U[EmailConfirmationValidator.field_p] = param2;
         if (LoginForm.field_T < param2) {
           se.field_e = param2;

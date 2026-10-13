@@ -61,7 +61,7 @@ final class SpellCastEvent extends GameEvent {
           }
           InstructionsPanel.field_r = -(DualLinkedNode.field_r >> 1) + lm.field_g;
           var2 = InstructionsPanel.field_r;
-          for (var3 = 0; nb.field_h.length > var3; var3++) {
+          for (var3 = 0; SpriteScrollBar.field_h.length > var3; var3++) {
             var4 = DirectByteStorage.field_k[var3];
             if (var4 >= 0) {
               if (var4 == MovementPlanner.field_z.selectedIndex) {
@@ -72,7 +72,7 @@ final class SpellCastEvent extends GameEvent {
             } else {
               var5 = ActionRequest.field_n;
             }
-            var6 = nb.field_h[var3];
+            var6 = SpriteScrollBar.field_h[var3];
             stackIn_12_0 = var6;
             stackIn_13_1 = !(0 > var4);
             var7 = lp.a(stackIn_12_0, stackIn_13_1, false);

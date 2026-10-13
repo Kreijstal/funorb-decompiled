@@ -165,7 +165,7 @@ abstract class AiPlanningStrategy {
                     }
                   } else {
                     var16 = var7.displayName;
-                    ng.openClientContextMenu(ListMissionsConsoleCommand.field_E.scrollContainer, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
+                    SpriteDropdownMenu.openClientContextMenu(ListMissionsConsoleCommand.field_E.scrollContainer, var7, (int[]) null, (String) null, -1, 84, -1, var16, 0L);
                     if (null != var7.locationLabel &&
                       !fs.isActivePrivateTextRecipient((byte) 110, tn.activeContextMenu.accountName) &&
                       !NodeIterator.field_a) {

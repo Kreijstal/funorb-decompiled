@@ -123,7 +123,7 @@ class DualLinkedNode extends IntrusiveNode {
             GameClock.loginProgressDialog.showConnectionFailure(4259);
             return;
           }
-          var1 = vt.field_n;
+          var1 = SpriteControlNode.field_n;
           if (var1 > 0) {
             if (1 != var1) {
               BestScoreStrategy.field_h = EmailCheckResult.a(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});
@@ -142,7 +142,7 @@ class DualLinkedNode extends IntrusiveNode {
         if (fh.field_i) {
           GameClock.loginProgressDialog.showConnectionFailure(4259);
         } else {
-          var1 = vt.field_n;
+          var1 = SpriteControlNode.field_n;
           if (var1 > 0) {
             if (1 != var1) {
               BestScoreStrategy.field_h = EmailCheckResult.a(4800, StandardContentDialog.field_nb, new String[]{Integer.toString(var1)});

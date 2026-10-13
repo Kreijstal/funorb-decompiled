@@ -225,7 +225,7 @@ abstract class NetworkGameShell extends GameAppletShell {
               BitmapTextWidgetPainter.field_r = null;
               br.field_b = null;
             }
-            optionalChoice = r.l(-11506);
+            optionalChoice = SpriteDropdownControl.l(-11506);
             if (optionalChoice != null) {
               UiSelectionState.a((byte) 32, optionalChoice.booleanValue());
             }
@@ -519,7 +519,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           ActionSpell.viewportManager.advanceViewport(0);
         }
-        r.snapshotKeyboard(true);
+        SpriteDropdownControl.snapshotKeyboard(true);
         ds.capturePointerInput((byte) 118);
         if (obfuscationGuard <= 124) {
           return;
@@ -673,7 +673,7 @@ abstract class NetworkGameShell extends GameAppletShell {
           }
           if (null == ContentTransitionDialog.field_eb) {
             ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);
-            ko.field_e = nb.c((byte) 111);
+            ko.field_e = SpriteScrollBar.c((byte) 111);
           }
           RegistrationAgreementPane.a(h.field_g, (byte) 76, ContentTransitionDialog.field_eb, ko.field_e);
           ps.field_u = null;

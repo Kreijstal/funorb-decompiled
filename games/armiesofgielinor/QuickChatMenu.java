@@ -293,7 +293,7 @@ final class QuickChatMenu extends ClientUiComponent {
         RgbSprite var28Lifetime1Lifetime3;
         RgbSprite var28Lifetime1Lifetime4;
         RgbSprite var28Lifetime1Lifetime5;
-        ng.openClientContextMenu((ScrollContainer) null, param0, (int[]) null, (String) null, -1, 2, param1, (String) null, 0L);
+        SpriteDropdownMenu.openClientContextMenu((ScrollContainer) null, param0, (int[]) null, (String) null, -1, 2, param1, (String) null, 0L);
         if (param2) {
           return;
         }

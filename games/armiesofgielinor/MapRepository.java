@@ -41,8 +41,8 @@ final class MapRepository {
         }
         try {
           gl.a(127, -1);
-          ChannelBaseVolumeConsoleCommand.field_L = nb.nameCheckResultConsumed;
-          mh.accountNameCheckState = nb.nameCheckResultConsumed;
+          ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
+          mh.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.M(" + param0 + ')');
         }

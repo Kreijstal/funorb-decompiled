@@ -107,7 +107,7 @@ final class TabbedPanel extends ClientUiComponent {
         String var13 = null;
         ClientContextMenu var14 = null;
         try {
-          ng.openClientContextMenu(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.getRoomId((byte) -84), 92, -1, (String) null, 0L);
+          SpriteDropdownMenu.openClientContextMenu(CipherPacketBuffer.field_x, param1, (int[]) null, (String) null, param1.getRoomId((byte) -84), 92, -1, (String) null, 0L);
           if (param1.playing && (2 == param1.spectatorMode ||
             !(BufferedSocket.field_j < 2))) {
             var8 = tn.activeContextMenu;

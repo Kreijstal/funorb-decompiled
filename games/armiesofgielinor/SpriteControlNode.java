@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vt extends IntrusiveNode {
+abstract class SpriteControlNode extends IntrusiveNode {
     static int[] field_m;
     static RgbSprite field_k;
     static int field_n;
@@ -31,7 +31,7 @@ abstract class vt extends IntrusiveNode {
         field_k = null;
         field_m = null;
         if (param0) {
-          vt.a(true);
+          SpriteControlNode.a(true);
         }
     }
 
@@ -91,7 +91,7 @@ abstract class vt extends IntrusiveNode {
         }
     }
 
-    vt() {
+    SpriteControlNode() {
     }
 
     final static boolean a(int param0, BinaryBitmapFont param1, int param2, RgbSprite[] param3, String param4, int param5) {

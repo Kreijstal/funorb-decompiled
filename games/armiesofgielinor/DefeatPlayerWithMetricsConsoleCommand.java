@@ -69,7 +69,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
             if (ConsolePanel.field_k == null ||
               t.field_f != param7) {
               t.field_f = param7;
-              ConsolePanel.field_k = RegionAnchor.field_m[0].g();
+              ConsolePanel.field_k = RegionAnchor.field_m[0].copySprite();
               var19 = ConsolePanel.field_k.pixels;
               var18 = var19;
               var17 = var18;

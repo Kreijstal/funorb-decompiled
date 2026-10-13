@@ -362,37 +362,37 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           if (uc.spellDefinitions[param1][3] == 4 &&
             1 == uc.spellDefinitions[param1][5] &&
             this.isGodLocked(uc.spellDefinitions[param1][6], 121)) {
-            stackIn_10_0 = r.equipmentTutorialMessages[23];
+            stackIn_10_0 = SpriteDropdownControl.equipmentTutorialMessages[23];
             return stackIn_10_0;
           }
           if (param1 == 115 &&
             this.isUnitLocked(63, (byte) -9)) {
-            stackIn_16_0 = r.equipmentTutorialMessages[25];
+            stackIn_16_0 = SpriteDropdownControl.equipmentTutorialMessages[25];
             return stackIn_16_0;
           }
           if (param1 == 115 &&
             this.isUnitLocked(63, (byte) -58)) {
-            stackIn_22_0 = r.equipmentTutorialMessages[25];
+            stackIn_22_0 = SpriteDropdownControl.equipmentTutorialMessages[25];
             return stackIn_22_0;
           }
           if (param1 == 116 &&
             this.isUnitLocked(58, (byte) -62)) {
-            stackIn_28_0 = r.equipmentTutorialMessages[25];
+            stackIn_28_0 = SpriteDropdownControl.equipmentTutorialMessages[25];
             return stackIn_28_0;
           }
           if (param1 == 117 &&
             this.isUnitLocked(53, (byte) -44)) {
-            stackIn_36_0 = r.equipmentTutorialMessages[25];
+            stackIn_36_0 = SpriteDropdownControl.equipmentTutorialMessages[25];
             return stackIn_36_0;
           }
           if (param1 == 118 &&
             this.isUnitLocked(59, (byte) -120)) {
-            stackIn_44_0 = r.equipmentTutorialMessages[25];
+            stackIn_44_0 = SpriteDropdownControl.equipmentTutorialMessages[25];
             return stackIn_44_0;
           }
           if (119 == param1 &&
             this.isUnitLocked(43, (byte) -103)) {
-            stackIn_50_0 = r.equipmentTutorialMessages[25];
+            stackIn_50_0 = SpriteDropdownControl.equipmentTutorialMessages[25];
             return stackIn_50_0;
           }
           if (param0 != 66) {
@@ -941,7 +941,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                                                                                                       }
                                                                                                       if (decompiledFrameRemainder2) {
                                                                                                         if (decompiledFrameRemainder1) {
-                                                                                                          this.setMessage(r.equipmentTutorialMessages[8], (byte) 122);
+                                                                                                          this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[8], (byte) 122);
                                                                                                           this.setEquipmentStage(-128, 6);
                                                                                                           if (var4 == 0) {
                                                                                                             break regionExit1;
@@ -956,55 +956,55 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                                                                                                       }
                                                                                                     }
                                                                                                   }
-                                                                                                  this.setMessage(r.equipmentTutorialMessages[9], (byte) 118);
+                                                                                                  this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 118);
                                                                                                   this.setEquipmentStage(-122, 6);
                                                                                                   if (var4 == 0) {
                                                                                                     break regionExit1;
                                                                                                   }
                                                                                                 }
-                                                                                                this.setMessage(r.equipmentTutorialMessages[8], (byte) 113);
+                                                                                                this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[8], (byte) 113);
                                                                                                 this.setEquipmentStage(-124, 6);
                                                                                                 if (var4 == 0) {
                                                                                                   break regionExit1;
                                                                                                 }
                                                                                               }
-                                                                                              this.setMessage(r.equipmentTutorialMessages[15], (byte) 115);
+                                                                                              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[15], (byte) 115);
                                                                                               this.setEquipmentStage(-121, 6);
                                                                                               if (var4 == 0) {
                                                                                                 break regionExit1;
                                                                                               }
                                                                                             }
-                                                                                            this.setMessage(r.equipmentTutorialMessages[13], (byte) 116);
+                                                                                            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 116);
                                                                                             this.setEquipmentStage(-117, 6);
                                                                                             if (var4 == 0) {
                                                                                               break regionExit1;
                                                                                             }
                                                                                           }
-                                                                                          this.setMessage(r.equipmentTutorialMessages[12], (byte) 125);
+                                                                                          this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[12], (byte) 125);
                                                                                           this.setEquipmentStage(-126, 6);
                                                                                           if (var4 == 0) {
                                                                                             break regionExit1;
                                                                                           }
                                                                                         }
-                                                                                        this.setMessage(r.equipmentTutorialMessages[13], (byte) 114);
+                                                                                        this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 114);
                                                                                         this.setEquipmentStage(-123, 6);
                                                                                         if (var4 == 0) {
                                                                                           break regionExit1;
                                                                                         }
                                                                                       }
-                                                                                      this.setMessage(r.equipmentTutorialMessages[11], (byte) 116);
+                                                                                      this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[11], (byte) 116);
                                                                                       this.setEquipmentStage(-123, 6);
                                                                                       if (var4 == 0) {
                                                                                         break regionExit1;
                                                                                       }
                                                                                     }
-                                                                                    this.setMessage(r.equipmentTutorialMessages[9], (byte) 115);
+                                                                                    this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 115);
                                                                                     this.setEquipmentStage(-126, 6);
                                                                                     if (var4 == 0) {
                                                                                       break regionExit1;
                                                                                     }
                                                                                   }
-                                                                                  this.setMessage(r.equipmentTutorialMessages[8], (byte) 112);
+                                                                                  this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[8], (byte) 112);
                                                                                   this.setEquipmentStage(-116, 6);
                                                                                   if (var4 == 0) {
                                                                                     break regionExit1;
@@ -1016,19 +1016,19 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                                                                                     break regionExit1;
                                                                                   }
                                                                                 }
-                                                                                this.setMessage(r.equipmentTutorialMessages[23], (byte) 119);
+                                                                                this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[23], (byte) 119);
                                                                                 this.setEquipmentStage(-122, 9);
                                                                                 if (var4 == 0) {
                                                                                   break regionExit1;
                                                                                 }
                                                                               }
-                                                                              this.setMessage(r.equipmentTutorialMessages[10], (byte) 125);
+                                                                              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[10], (byte) 125);
                                                                               this.setEquipmentStage(-114, 6);
                                                                               if (var4 == 0) {
                                                                                 break regionExit1;
                                                                               }
                                                                             }
-                                                                            this.setMessage(r.equipmentTutorialMessages[14], (byte) 123);
+                                                                            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[14], (byte) 123);
                                                                             this.setEquipmentStage(-119, 6);
                                                                             if (var4 == 0) {
                                                                               break regionExit1;
@@ -1039,216 +1039,216 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                                                                             break regionExit1;
                                                                           }
                                                                         }
-                                                                        this.setMessage(r.equipmentTutorialMessages[9], (byte) 126);
+                                                                        this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 126);
                                                                         this.setEquipmentStage(-121, 6);
                                                                         if (var4 == 0) {
                                                                           break regionExit1;
                                                                         }
                                                                       }
-                                                                      this.setMessage(r.equipmentTutorialMessages[13], (byte) 125);
+                                                                      this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 125);
                                                                       this.setEquipmentStage(-115, 6);
                                                                       if (var4 == 0) {
                                                                         break regionExit1;
                                                                       }
                                                                     }
-                                                                    this.setMessage(r.equipmentTutorialMessages[9], (byte) 115);
+                                                                    this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 115);
                                                                     this.setEquipmentStage(-118, 6);
                                                                     if (var4 == 0) {
                                                                       break regionExit1;
                                                                     }
                                                                   }
-                                                                  this.setMessage(r.equipmentTutorialMessages[13], (byte) 114);
+                                                                  this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 114);
                                                                   this.setEquipmentStage(-116, 6);
                                                                   if (var4 == 0) {
                                                                     break regionExit1;
                                                                   }
                                                                 }
-                                                                this.setMessage(r.equipmentTutorialMessages[8], (byte) 121);
+                                                                this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[8], (byte) 121);
                                                                 this.setEquipmentStage(-116, 6);
                                                                 if (var4 == 0) {
                                                                   break regionExit1;
                                                                 }
                                                               }
-                                                              this.setMessage(r.equipmentTutorialMessages[9], (byte) 120);
+                                                              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 120);
                                                               this.setEquipmentStage(-114, 6);
                                                               if (var4 == 0) {
                                                                 break regionExit1;
                                                               }
                                                             }
-                                                            this.setMessage(r.equipmentTutorialMessages[13], (byte) 125);
+                                                            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 125);
                                                             this.setEquipmentStage(-117, 6);
                                                             if (var4 == 0) {
                                                               break regionExit1;
                                                             }
                                                           }
-                                                          this.setMessage(r.equipmentTutorialMessages[13], (byte) 123);
+                                                          this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 123);
                                                           this.setEquipmentStage(-115, 6);
                                                           if (var4 == 0) {
                                                             break regionExit1;
                                                           }
                                                         }
-                                                        this.setMessage(r.equipmentTutorialMessages[13], (byte) 112);
+                                                        this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 112);
                                                         this.setEquipmentStage(-115, 6);
                                                         if (var4 == 0) {
                                                           break regionExit1;
                                                         }
                                                       }
-                                                      this.setMessage(r.equipmentTutorialMessages[13], (byte) 122);
+                                                      this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[13], (byte) 122);
                                                       this.setEquipmentStage(-124, 6);
                                                       if (var4 == 0) {
                                                         break regionExit1;
                                                       }
                                                     }
                                                     if (!this.isUnitLocked(63, (byte) -72)) {
-                                                      this.setMessage(r.equipmentTutorialMessages[18], (byte) 114);
+                                                      this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[18], (byte) 114);
                                                       this.setEquipmentStage(-116, 6);
                                                       if (var4 == 0) {
                                                         break regionExit1;
                                                       }
                                                     }
-                                                    this.setMessage(r.equipmentTutorialMessages[25], (byte) 116);
+                                                    this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[25], (byte) 116);
                                                     this.setEquipmentStage(-116, 9);
                                                     if (var4 == 0) {
                                                       break regionExit1;
                                                     }
                                                   }
                                                   if (this.isUnitLocked(58, (byte) -35)) {
-                                                    this.setMessage(r.equipmentTutorialMessages[25], (byte) 118);
+                                                    this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[25], (byte) 118);
                                                     this.setEquipmentStage(-118, 9);
                                                     if (var4 == 0) {
                                                       break regionExit1;
                                                     }
                                                   }
-                                                  this.setMessage(r.equipmentTutorialMessages[20], (byte) 115);
+                                                  this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[20], (byte) 115);
                                                   this.setEquipmentStage(-128, 6);
                                                   if (var4 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
                                                 if (!this.isUnitLocked(53, (byte) -32)) {
-                                                  this.setMessage(r.equipmentTutorialMessages[19], (byte) 112);
+                                                  this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[19], (byte) 112);
                                                   this.setEquipmentStage(-115, 6);
                                                   if (var4 == 0) {
                                                     break regionExit1;
                                                   }
                                                 }
-                                                this.setMessage(r.equipmentTutorialMessages[25], (byte) 117);
+                                                this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[25], (byte) 117);
                                                 this.setEquipmentStage(-123, 9);
                                                 if (var4 == 0) {
                                                   break regionExit1;
                                                 }
                                               }
                                               if (!this.isUnitLocked(59, (byte) -39)) {
-                                                this.setMessage(r.equipmentTutorialMessages[17], (byte) 124);
+                                                this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[17], (byte) 124);
                                                 this.setEquipmentStage(-117, 6);
                                                 if (var4 == 0) {
                                                   break regionExit1;
                                                 }
                                               }
-                                              this.setMessage(r.equipmentTutorialMessages[25], (byte) 119);
+                                              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[25], (byte) 119);
                                               this.setEquipmentStage(-114, 9);
                                               if (var4 == 0) {
                                                 break regionExit1;
                                               }
                                             }
                                             if (this.isUnitLocked(43, (byte) -79)) {
-                                              this.setMessage(r.equipmentTutorialMessages[25], (byte) 115);
+                                              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[25], (byte) 115);
                                               this.setEquipmentStage(-125, 9);
                                               if (var4 == 0) {
                                                 break regionExit1;
                                               }
                                             }
-                                            this.setMessage(r.equipmentTutorialMessages[21], (byte) 111);
+                                            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[21], (byte) 111);
                                             this.setEquipmentStage(-117, 6);
                                             if (var4 == 0) {
                                               break regionExit1;
                                             }
                                           }
-                                          this.setMessage(r.equipmentTutorialMessages[9], (byte) 124);
+                                          this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 124);
                                           this.setEquipmentStage(-115, 6);
                                           if (var4 == 0) {
                                             break regionExit1;
                                           }
                                         }
-                                        this.setMessage(r.equipmentTutorialMessages[8], (byte) 121);
+                                        this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[8], (byte) 121);
                                         this.setEquipmentStage(-116, 6);
                                         if (var4 == 0) {
                                           break regionExit1;
                                         }
                                       }
-                                      this.setMessage(r.equipmentTutorialMessages[8], (byte) 109);
+                                      this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[8], (byte) 109);
                                       this.setEquipmentStage(-128, 6);
                                       if (var4 == 0) {
                                         break regionExit1;
                                       }
                                     }
-                                    this.setMessage(r.equipmentTutorialMessages[8], (byte) 114);
+                                    this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[8], (byte) 114);
                                     this.setEquipmentStage(-128, 6);
                                     if (var4 == 0) {
                                       break regionExit1;
                                     }
                                   }
-                                  this.setMessage(r.equipmentTutorialMessages[9], (byte) 120);
+                                  this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 120);
                                   this.setEquipmentStage(-121, 6);
                                   if (var4 == 0) {
                                     break regionExit1;
                                   }
                                 }
-                                this.setMessage(r.equipmentTutorialMessages[9], (byte) 123);
+                                this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 123);
                                 this.setEquipmentStage(-116, 6);
                                 if (var4 == 0) {
                                   break regionExit1;
                                 }
                               }
-                              this.setMessage(r.equipmentTutorialMessages[9], (byte) 125);
+                              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 125);
                               this.setEquipmentStage(-123, 6);
                               if (var4 == 0) {
                                 break regionExit1;
                               }
                             }
-                            this.setMessage(r.equipmentTutorialMessages[9], (byte) 126);
+                            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 126);
                             this.setEquipmentStage(-126, 6);
                             if (var4 == 0) {
                               break regionExit1;
                             }
                           }
-                          this.setMessage(r.equipmentTutorialMessages[9], (byte) 118);
+                          this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 118);
                           this.setEquipmentStage(-123, 6);
                           if (var4 == 0) {
                             break regionExit1;
                           }
                         }
-                        this.setMessage(r.equipmentTutorialMessages[9], (byte) 119);
+                        this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 119);
                         this.setEquipmentStage(-116, 6);
                         if (var4 == 0) {
                           break regionExit1;
                         }
                       }
-                      this.setMessage(r.equipmentTutorialMessages[9], (byte) 126);
+                      this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 126);
                       this.setEquipmentStage(-122, 6);
                       if (var4 == 0) {
                         break regionExit1;
                       }
                     }
-                    this.setMessage(r.equipmentTutorialMessages[9], (byte) 125);
+                    this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 125);
                     this.setEquipmentStage(-126, 6);
                     if (var4 == 0) {
                       break regionExit1;
                     }
                   }
-                  this.setMessage(r.equipmentTutorialMessages[9], (byte) 120);
+                  this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 120);
                   this.setEquipmentStage(-117, 6);
                   if (var4 == 0) {
                     break regionExit1;
                   }
                 }
-                this.setMessage(r.equipmentTutorialMessages[9], (byte) 123);
+                this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 123);
                 this.setEquipmentStage(-124, 6);
                 if (var4 == 0) {
                   break regionExit1;
                 }
               }
-              this.setMessage(r.equipmentTutorialMessages[9], (byte) 112);
+              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[9], (byte) 112);
               this.setEquipmentStage(-124, 6);
             }
           }
@@ -2116,7 +2116,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           var6 = stage;
           if (var6 == 2 &&
             var7 == 0) {
-            this.setMessage(r.equipmentTutorialMessages[2], (byte) 111);
+            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[2], (byte) 111);
             this.buttonMode = 4;
             if (var7 == 0) {
               return;
@@ -2144,7 +2144,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1) &&
             (decompiledFrameRemainder0)) {
-            this.setMessage(r.equipmentTutorialMessages[0], (byte) 126);
+            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[0], (byte) 126);
             this.buttonMode = 0;
             if (var7 == 0) {
               return;
@@ -2156,7 +2156,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             (decompiledFrameRemainder3) &&
             (decompiledFrameRemainder2) &&
             (decompiledFrameRemainder1)) {
-            this.setMessage(r.equipmentTutorialMessages[1], (byte) 111);
+            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[1], (byte) 111);
             this.buttonMode = 1;
             this.d(-75, 255);
             if (var7 == 0) {
@@ -2170,7 +2170,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             (decompiledFrameRemainder2)) {
             this.equipmentSlot = this.equipmentSlot + 1;
             if (-1 == this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
-              this.setMessage(r.equipmentTutorialMessages[24], (byte) 117);
+              this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[24], (byte) 117);
               while (this.equipmentSlot < 5) {
                 if (-1 == this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
                   this.equipmentSlot = this.equipmentSlot + 1;
@@ -2193,7 +2193,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                   break scanLoop1;
                 }
                 if (stackIn_87_0 == ~this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
-                  this.setMessage(EmailCheckResult.a(4800, r.equipmentTutorialMessages[31], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]}), (byte) 119);
+                  this.setMessage(EmailCheckResult.a(4800, SpriteDropdownControl.equipmentTutorialMessages[31], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]}), (byte) 119);
                   this.buttonMode = 0;
                   this.stage = 9;
                   while (true) {
@@ -2228,18 +2228,18 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             }
             if (decompiledSharedTail0) {
               if (var3_int != 4) {
-                var4 = r.equipmentTutorialMessages[26];
+                var4 = SpriteDropdownControl.equipmentTutorialMessages[26];
               }
               if (var3_int == 4 ||
                 var7 != 0) {
-                var4 = r.equipmentTutorialMessages[22];
+                var4 = SpriteDropdownControl.equipmentTutorialMessages[22];
               }
               var4 = EmailCheckResult.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
               this.buttonMode = 1;
               this.stage = 8;
               this.d(-37, this.equipmentSlot);
             }
-            this.setMessage(EmailCheckResult.a(4800, r.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
+            this.setMessage(EmailCheckResult.a(4800, SpriteDropdownControl.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
             if (var7 == 0) {
               return;
             }
@@ -2248,10 +2248,10 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             (decompiledFrameRemainder5) &&
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
-            var4 = r.equipmentTutorialMessages[26];
+            var4 = SpriteDropdownControl.equipmentTutorialMessages[26];
             var4 = EmailCheckResult.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
             stackIn_101_1 = 4800;
-            stackIn_101_2 = r.equipmentTutorialMessages;
+            stackIn_101_2 = SpriteDropdownControl.equipmentTutorialMessages;
             if (this.controller.field_gc < 0) {
               stackIn_102_3 = 1;
             } else {
@@ -2274,7 +2274,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           }
           if ((decompiledFrameRemainder6) &&
             (decompiledFrameRemainder5)) {
-            this.setMessage(r.equipmentTutorialMessages[29], (byte) 110);
+            this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[29], (byte) 110);
             this.buttonMode = 1;
             if (var7 == 0) {
               return;
@@ -2283,7 +2283,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           if (decompiledFrameRemainder6) {
             var5 = us.field_b[this.i(-134)];
             if (this.equipmentSlot == 0) {
-              var5 = EmailCheckResult.a(4800, r.equipmentTutorialMessages[27], new String[]{var5});
+              var5 = EmailCheckResult.a(4800, SpriteDropdownControl.equipmentTutorialMessages[27], new String[]{var5});
             }
             this.setMessage(var5, (byte) 126);
             this.buttonMode = 0;
@@ -2291,7 +2291,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               return;
             }
           }
-          this.setMessage(r.equipmentTutorialMessages[30], (byte) 110);
+          this.setMessage(SpriteDropdownControl.equipmentTutorialMessages[30], (byte) 110);
           this.buttonMode = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

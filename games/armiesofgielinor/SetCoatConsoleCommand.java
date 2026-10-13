@@ -52,7 +52,7 @@ final class SetCoatConsoleCommand extends ConsoleCommand {
         Object var10 = null;
         Object var11 = null;
         if (param0) {
-          var13 = var9.g();
+          var13 = var9.copySprite();
           var10 = var13;
           var13.b();
           SoftwareRaster.e(0, 0, 5, 0);
@@ -62,7 +62,7 @@ final class SetCoatConsoleCommand extends ConsoleCommand {
           SoftwareRaster.e(0, 4, 1, 0);
         }
         if (param4) {
-          var14 = var9.g();
+          var14 = var9.copySprite();
           var11 = var14;
           var14.b();
           SoftwareRaster.e(11, 0, 5, 0);

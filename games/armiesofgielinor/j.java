@@ -118,7 +118,7 @@ final class j {
           }
           wb.field_b[6] = el.field_a;
           wb.field_b[13] = QuickChatPhrase.field_y;
-          du.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, r.field_I, we.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
+          du.field_g = new String[]{ClientContextMenu.field_l, ModalDialogHost.field_N, tv.field_c, tv.field_b, CombatSandbox.field_g, ScrollContainer.field_Kb, DelayedPacket.field_r, SpriteDropdownControl.field_I, we.field_h, AccountRegistrationForm.field_Q, ConsoleExpression.field_t, ByteStorage.field_c, RasterState.field_l, pi.field_P, StateChangeEvent.field_H, ut.field_ib};
           wb.field_b[18] = dd.field_g;
           wb.field_b[4] = PrintVictoryConditionsConsoleCommand.field_H;
           wb.field_b[14] = ov.field_d;

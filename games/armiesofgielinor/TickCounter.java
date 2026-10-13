@@ -525,7 +525,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "text_config_pleaselogin_free");
                 if (var2 != null) {
-                  r.field_G = uu.a(var2, (byte) 19);
+                  SpriteDropdownControl.field_G = uu.a(var2, (byte) 19);
                 }
                 var2 = fk.a(false, "text_campaign_pleaselogin_free");
                 if (null != var2) {
@@ -1219,7 +1219,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_AWARD_UNITBULLY");
                 if (null != var2) {
-                  r.field_I = uu.a(var2, (byte) 122);
+                  SpriteDropdownControl.field_I = uu.a(var2, (byte) 122);
                 }
                 var2 = fk.a(false, "LABEL_AWARD_UNITTOUGHEST");
                 if (null != var2) {
@@ -1733,7 +1733,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ANNOUNCE_DRAW");
                 if (var2 != null) {
-                  r.field_J = uu.a(var2, (byte) -92);
+                  SpriteDropdownControl.field_J = uu.a(var2, (byte) -92);
                 }
                 var2 = fk.a(false, "GAME_STATS,0");
                 if (null != var2) {
@@ -4779,7 +4779,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_ENCHANTED");
                 if (null != var2) {
-                  r.field_w = uu.a(var2, (byte) -103);
+                  SpriteDropdownControl.field_w = uu.a(var2, (byte) -103);
                 }
                 var2 = fk.a(false, "TTREEN_DRAGONSCALE");
                 if (null != var2) {
@@ -4999,7 +4999,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_RAINS");
                 if (null != var2) {
-                  ng.field_s = uu.a(var2, (byte) 121);
+                  SpriteDropdownMenu.field_s = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "TTREED_CURSE");
                 if (null != var2) {
@@ -5213,142 +5213,142 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRT_TEXT,0");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[0] = uu.a(var2, (byte) -114);
+                  SpriteDropdownControl.equipmentTutorialMessages[0] = uu.a(var2, (byte) -114);
                 }
                 var2 = fk.a(false, "TRT_TEXT,1");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[1] = uu.a(var2, (byte) -97);
+                  SpriteDropdownControl.equipmentTutorialMessages[1] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "TRT_TEXT,2");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[2] = uu.a(var2, (byte) -124);
+                  SpriteDropdownControl.equipmentTutorialMessages[2] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "TRT_TEXT,3");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[3] = uu.a(var2, (byte) -113);
+                  SpriteDropdownControl.equipmentTutorialMessages[3] = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "TRT_TEXT,4");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[4] = uu.a(var2, (byte) -105);
+                  SpriteDropdownControl.equipmentTutorialMessages[4] = uu.a(var2, (byte) -105);
                 }
                 var2 = fk.a(false, "TRT_TEXT,5");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[5] = uu.a(var2, (byte) 101);
+                  SpriteDropdownControl.equipmentTutorialMessages[5] = uu.a(var2, (byte) 101);
                 }
                 var2 = fk.a(false, "TRT_TEXT,6");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[6] = uu.a(var2, (byte) -113);
+                  SpriteDropdownControl.equipmentTutorialMessages[6] = uu.a(var2, (byte) -113);
                 }
                 if (param1 != 10207) {
                   finished = true; return;
                 }
                 var2 = fk.a(false, "TRT_TEXT,7");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[7] = uu.a(var2, (byte) -118);
+                  SpriteDropdownControl.equipmentTutorialMessages[7] = uu.a(var2, (byte) -118);
                 }
                 var2 = fk.a(false, "TRT_TEXT,8");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[8] = uu.a(var2, (byte) 100);
+                  SpriteDropdownControl.equipmentTutorialMessages[8] = uu.a(var2, (byte) 100);
                 }
                 var2 = fk.a(false, "TRT_TEXT,9");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[9] = uu.a(var2, (byte) -96);
+                  SpriteDropdownControl.equipmentTutorialMessages[9] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "TRT_TEXT,10");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[10] = uu.a(var2, (byte) 121);
+                  SpriteDropdownControl.equipmentTutorialMessages[10] = uu.a(var2, (byte) 121);
                 }
                 var2 = fk.a(false, "TRT_TEXT,11");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[11] = uu.a(var2, (byte) -107);
+                  SpriteDropdownControl.equipmentTutorialMessages[11] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TRT_TEXT,12");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[12] = uu.a(var2, (byte) -97);
+                  SpriteDropdownControl.equipmentTutorialMessages[12] = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "TRT_TEXT,13");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[13] = uu.a(var2, (byte) -107);
+                  SpriteDropdownControl.equipmentTutorialMessages[13] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TRT_TEXT,14");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[14] = uu.a(var2, (byte) -124);
+                  SpriteDropdownControl.equipmentTutorialMessages[14] = uu.a(var2, (byte) -124);
                 }
                 var2 = fk.a(false, "TRT_TEXT,15");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[15] = uu.a(var2, (byte) -125);
+                  SpriteDropdownControl.equipmentTutorialMessages[15] = uu.a(var2, (byte) -125);
                 }
                 var2 = fk.a(false, "TRT_TEXT,16");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[16] = uu.a(var2, (byte) -128);
+                  SpriteDropdownControl.equipmentTutorialMessages[16] = uu.a(var2, (byte) -128);
                 }
                 var2 = fk.a(false, "TRT_TEXT,17");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[17] = uu.a(var2, (byte) -94);
+                  SpriteDropdownControl.equipmentTutorialMessages[17] = uu.a(var2, (byte) -94);
                 }
                 var2 = fk.a(false, "TRT_TEXT,18");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[18] = uu.a(var2, (byte) -126);
+                  SpriteDropdownControl.equipmentTutorialMessages[18] = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "TRT_TEXT,19");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[19] = uu.a(var2, (byte) 86);
+                  SpriteDropdownControl.equipmentTutorialMessages[19] = uu.a(var2, (byte) 86);
                 }
                 var2 = fk.a(false, "TRT_TEXT,20");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[20] = uu.a(var2, (byte) 16);
+                  SpriteDropdownControl.equipmentTutorialMessages[20] = uu.a(var2, (byte) 16);
                 }
                 var2 = fk.a(false, "TRT_TEXT,21");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[21] = uu.a(var2, (byte) -108);
+                  SpriteDropdownControl.equipmentTutorialMessages[21] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TRT_TEXT,22");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[22] = uu.a(var2, (byte) 127);
+                  SpriteDropdownControl.equipmentTutorialMessages[22] = uu.a(var2, (byte) 127);
                 }
                 var2 = fk.a(false, "TRT_TEXT,23");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[23] = uu.a(var2, (byte) 3);
+                  SpriteDropdownControl.equipmentTutorialMessages[23] = uu.a(var2, (byte) 3);
                 }
                 var2 = fk.a(false, "TRT_TEXT,24");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[24] = uu.a(var2, (byte) -108);
+                  SpriteDropdownControl.equipmentTutorialMessages[24] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TRT_TEXT,25");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[25] = uu.a(var2, (byte) 102);
+                  SpriteDropdownControl.equipmentTutorialMessages[25] = uu.a(var2, (byte) 102);
                 }
                 var2 = fk.a(false, "TRT_TEXT,26");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[26] = uu.a(var2, (byte) -107);
+                  SpriteDropdownControl.equipmentTutorialMessages[26] = uu.a(var2, (byte) -107);
                 }
                 var2 = fk.a(false, "TRT_TEXT,27");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[27] = uu.a(var2, (byte) 60);
+                  SpriteDropdownControl.equipmentTutorialMessages[27] = uu.a(var2, (byte) 60);
                 }
                 var2 = fk.a(false, "TRT_TEXT,28");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[28] = uu.a(var2, (byte) -127);
+                  SpriteDropdownControl.equipmentTutorialMessages[28] = uu.a(var2, (byte) -127);
                 }
                 var2 = fk.a(false, "TRT_TEXT,29");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[29] = uu.a(var2, (byte) -120);
+                  SpriteDropdownControl.equipmentTutorialMessages[29] = uu.a(var2, (byte) -120);
                 }
                 var2 = fk.a(false, "TRT_TEXT,30");
                 if (null != var2) {
-                  r.equipmentTutorialMessages[30] = uu.a(var2, (byte) 88);
+                  SpriteDropdownControl.equipmentTutorialMessages[30] = uu.a(var2, (byte) 88);
                 }
                 var2 = fk.a(false, "TRT_TEXT,31");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[31] = uu.a(var2, (byte) -108);
+                  SpriteDropdownControl.equipmentTutorialMessages[31] = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TRT_TEXT,32");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[32] = uu.a(var2, (byte) -110);
+                  SpriteDropdownControl.equipmentTutorialMessages[32] = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "TRT_TEXT,33");
                 if (var2 != null) {
-                  r.equipmentTutorialMessages[33] = uu.a(var2, (byte) 95);
+                  SpriteDropdownControl.equipmentTutorialMessages[33] = uu.a(var2, (byte) 95);
                 }
                 var2 = fk.a(false, "trinketcongratulations,0");
                 if (null != var2) {

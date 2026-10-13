@@ -100,7 +100,7 @@ final class pg {
           } else {
             stackIn_3_4 = 0;
           }
-          ng.openClientContextMenu((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, message.channelId, message.accountName, message.accountId);
+          SpriteDropdownMenu.openClientContextMenu((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, message.channelId, message.accountName, message.accountId);
           if (message.channelId == 0 &&
             !bn.a(false) &&
             null == ToggleWidget.currentRoom &&

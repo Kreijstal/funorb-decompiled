@@ -26,10 +26,10 @@ final class lg {
           AccountRequestResult.field_k = new RgbSprite(var3, 3 * var4 / 4);
           AccountRequestResult.field_k.b();
           var2.drawPixels(0, 0);
-          vt.field_k = new RgbSprite(var3, var4 - AccountRequestResult.field_k.pixelHeight);
-          vt.field_k.b();
+          SpriteControlNode.field_k = new RgbSprite(var3, var4 - AccountRequestResult.field_k.pixelHeight);
+          SpriteControlNode.field_k.b();
           var2.drawPixels(0, -AccountRequestResult.field_k.pixelHeight);
-          vt.field_k.offsetY = AccountRequestResult.field_k.pixelHeight;
+          SpriteControlNode.field_k.offsetY = AccountRequestResult.field_k.pixelHeight;
           QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "lg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

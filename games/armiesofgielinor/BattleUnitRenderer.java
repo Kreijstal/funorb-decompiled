@@ -240,7 +240,7 @@ final class BattleUnitRenderer {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nb.nameCheckResultConsumed != ChannelBaseVolumeConsoleCommand.field_L) {
+          if (SpriteScrollBar.nameCheckResultConsumed != ChannelBaseVolumeConsoleCommand.field_L) {
             return false;
           }
           var9 = new AccountRegistrationDialog(KingBlackDragonEvent.field_C, param1);

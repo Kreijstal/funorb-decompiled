@@ -77,7 +77,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
         var11 = obfuscationControl ? 1 : 0;
         try {
           bs.a((byte) -127);
-          r.field_u = MusicPatchPcmStream.getPointerIdleTicks(4);
+          SpriteDropdownControl.field_u = MusicPatchPcmStream.getPointerIdleTicks(4);
           QuickChatHelpDialog.pumpAudioAndPruneSounds(128);
           if (FixedQuaternion.fullscreenCanvas != null &&
             FixedQuaternion.fullscreenCanvas.focusLost) {
@@ -942,7 +942,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (jt.field_a == -3) {
             this.a(false, (byte) -62);
             FullscreenFocusCanvas.gameplayController.h(true);
-            var3_intLifetime1 = r.field_s ? 1 : 0;
+            var3_intLifetime1 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime1 != 0, -1, 1, 0);
             du.field_h = true;
           }
@@ -960,7 +960,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               qh.requestDeleteQuicksave((byte) 27);
             }
             FullscreenFocusCanvas.gameplayController.h(true);
-            var3_intLifetime2 = r.field_s ? 1 : 0;
+            var3_intLifetime2 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime2 != 0, -1, 1, 0);
             du.field_h = true;
           }
@@ -968,7 +968,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             this.a(true, (byte) -67);
             FullscreenFocusCanvas.gameplayController.k((byte) -113);
             FullscreenFocusCanvas.gameplayController.h(true);
-            var3_intLifetime3 = r.field_s ? 1 : 0;
+            var3_intLifetime3 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime3 != 0, -1, 1, 0);
             du.field_h = true;
           }
@@ -976,7 +976,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             this.a(true, (byte) -90);
             FullscreenFocusCanvas.gameplayController.startEquipmentTutorial((byte) 60);
             FullscreenFocusCanvas.gameplayController.h(true);
-            var3_intLifetime4 = r.field_s ? 1 : 0;
+            var3_intLifetime4 = SpriteDropdownControl.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime4 != 0, -1, 1, 0);
             du.field_h = true;
           }
@@ -1348,7 +1348,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           AnimationSequence.a(obfuscationGuard ^ 125);
           qf.a((byte) 31);
           pn.b((byte) -90);
-          r.d((byte) -11);
+          SpriteDropdownControl.d((byte) -11);
           sh.b((byte) 40);
           pd.a((byte) 95);
           QuickChatHelpDialog.l(obfuscationGuard ^ 55);
@@ -1393,8 +1393,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           BattleCharacter.c(-1);
           CombatViewTransition.b((byte) 120);
           br.a(111);
-          vt.a(false);
-          ng.w(0);
+          SpriteControlNode.a(false);
+          SpriteDropdownMenu.w(0);
           MeshObject.a(-66);
           FaceNormal.a((byte) -101);
           VertexNormal.a(obfuscationGuard - 14619);
@@ -1494,7 +1494,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           tq.a((byte) -84);
           DateInputWidget.n(0);
           ScrollWidgetContainer.b(false);
-          nb.d((byte) 68);
+          SpriteScrollBar.d((byte) 68);
           DirectByteStorage.c(1);
           fh.a((byte) -28);
           BitmapTextLayout.c(true);
@@ -1802,9 +1802,9 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           l.activeCampaignMission = null;
           PointerInputHandler.field_f = null;
           if (!param0) {
-            var3 = new String[r.field_B];
+            var3 = new String[SpriteDropdownControl.field_B];
             var4 = 0;
-            while (var4 < r.field_B) {
+            while (var4 < SpriteDropdownControl.field_B) {
               var3[var4] = ArchiveIndex.field_w[var4];
               var4++;
               if (var6 != 0) {
@@ -1871,10 +1871,10 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
             stackIn_25_14 = false;
           }
           FullscreenFocusCanvas.gameplayController = new GameplayController(stackIn_20_2, (int) stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_20_6, stackIn_20_7, stackIn_21_8, stackIn_24_9, stackIn_24_10, stackIn_24_11, stackIn_24_12, stackIn_24_13, stackIn_25_14, (CampaignMission) null);
-          FullscreenFocusCanvas.gameplayController.battlefield.playerCoats = new CoatOfArms[r.field_B];
+          FullscreenFocusCanvas.gameplayController.battlefield.playerCoats = new CoatOfArms[SpriteDropdownControl.field_B];
           FullscreenFocusCanvas.gameplayController.battlefield.field_F = true;
           var5 = 0;
-          while (r.field_B > var5) {
+          while (SpriteDropdownControl.field_B > var5) {
             FullscreenFocusCanvas.gameplayController.battlefield.playerCoats[var5] = ah.localCoat;
             var5++;
             if (var6 != 0) {
@@ -2284,7 +2284,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           SocketResourceClient.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
           IsaacRandom.field_k = fk.loadRgbSpritesByName("arrows", (byte) -124, iw.field_l, "basic");
           pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
-          ng.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
+          SpriteDropdownMenu.a(GameplayController.a("glowray", (byte) 51, "basic", iw.field_l), 0, GameplayController.a("glowspark", (byte) 51, "basic", iw.field_l));
           MoveAttackRequest.field_C = fk.loadRgbSpritesByName("medals", (byte) -127, iw.field_l, "campaign");
           ps.field_w[0] = DiskCacheRequest.loadRgbSpriteByName("campaign_1_glow", "campaign", iw.field_l, false);
           ps.field_w[1] = DiskCacheRequest.loadRgbSpriteByName("campaign_2_glow", "campaign", iw.field_l, false);

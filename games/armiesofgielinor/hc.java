@@ -15,7 +15,7 @@ final class hc {
     static int decodedChatIconId;
     static String field_w;
     private int field_g;
-    private r field_p;
+    private SpriteDropdownControl field_p;
     static boolean field_i;
     private ia field_n;
     private int field_r;
@@ -23,20 +23,20 @@ final class hc {
     private RgbSprite[] field_v;
     static int field_q;
     private int field_t;
-    private r field_x;
+    private SpriteDropdownControl field_x;
     private int field_s;
     private ia field_u;
     private String[] field_m;
     private sh field_f;
 
     private final void e(byte param0) {
-        if (this.field_p.g(260)) {
-          this.field_x.f((byte) 126);
-          this.field_p.f((byte) 127);
+        if (this.field_p.isInputEnabled(260)) {
+          this.field_x.drawControl((byte) 126);
+          this.field_p.drawControl((byte) 127);
         } else {
-          if (this.field_x.g(260)) {
-            this.field_p.f((byte) -53);
-            this.field_x.f((byte) 1);
+          if (this.field_x.isInputEnabled(260)) {
+            this.field_p.drawControl((byte) -53);
+            this.field_x.drawControl((byte) 1);
           }
         }
         if (param0 != -25) {
@@ -49,7 +49,7 @@ final class hc {
         int discarded$0 = 0;
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         this.field_a = param0;
-        this.field_p.b(0, this.field_a);
+        this.field_p.setSelectedIndex(0, this.field_a);
         this.field_f.a(0, this.field_a);
         this.field_f.a(true);
         this.field_m = new String[ContentTransitionDialog.field_W.length + 1];
@@ -62,7 +62,7 @@ final class hc {
           var3++;
         }
         this.field_m[ContentTransitionDialog.field_W.length] = "special";
-        this.field_x.a(this.field_m, -29799);
+        this.field_x.setOptions(this.field_m, -29799);
         this.a(false, 0);
     }
 
@@ -85,7 +85,7 @@ final class hc {
     }
 
     private final void b(byte param0) {
-        int var2 = this.field_p.h(5);
+        int var2 = this.field_p.getSelectedIndex(5);
         if (var2 == this.field_a) {
           return;
         }
@@ -113,13 +113,13 @@ final class hc {
           return this.field_n.a((byte) -50);
         }
         if (param1 == 1) {
-          return this.field_p.e(true);
+          return this.field_p.getHeight(true);
         }
         if (param1 == 2) {
           return this.field_u.a((byte) -11);
         }
         if (param1 == 3) {
-          return this.field_x.e(true);
+          return this.field_x.getHeight(true);
         }
         return 0;
     }
@@ -129,14 +129,14 @@ final class hc {
         if (param2 != 8) {
           this.field_g = 40;
         }
-        if (this.field_p.g(param2 ^ 268)) {
-          this.field_p.a(param0, -18596, param3, param4, param1, param5);
+        if (this.field_p.isInputEnabled(param2 ^ 268)) {
+          this.field_p.updateInput(param0, -18596, param3, param4, param1, param5);
         }
-        if (this.field_x.g(260)) {
-          this.field_x.a(param0, param2 ^ -18604, param3, param4, param1, param5);
+        if (this.field_x.isInputEnabled(260)) {
+          this.field_x.updateInput(param0, param2 ^ -18604, param3, param4, param1, param5);
         }
-        if (this.field_p.a((byte) 111) ||
-          this.field_x.a((byte) 74)) {
+        if (this.field_p.hasInputChanged((byte) 111) ||
+          this.field_x.hasInputChanged((byte) 74)) {
           this.a(0, so.field_b.field_a >> 1, so.field_b.field_a >> 1, so.field_b.field_g, 0);
           return;
         }
@@ -147,7 +147,7 @@ final class hc {
           return this.field_n.c(-29408);
         }
         if (1 == param1) {
-          return this.field_p.n(-18332);
+          return this.field_p.getWidth(-18332);
         }
         if (param1 == 2) {
           return this.field_u.c(-29408);
@@ -156,7 +156,7 @@ final class hc {
         if (param1 != 3) {
           return 0;
         }
-        return this.field_x.n(-18332);
+        return this.field_x.getWidth(-18332);
     }
 
     final void a(int param0, boolean param1, boolean param2, int param3, int param4, int param5) {
@@ -272,36 +272,36 @@ final class hc {
     private final void a(int param0, int param1, int param2) {
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (this.field_p.g((byte) 97) &&
-          this.field_p.c(param1, param0 - 1, param2)) {
-          this.field_p.j(0);
-          this.field_x.e(32);
-        } else if (this.field_x.g((byte) 97) &&
-          this.field_x.c(param1, param0 - 1, param2)) {
-          this.field_x.j(0);
-          this.field_p.e(32);
+        if (this.field_p.isMenuOpen((byte) 97) &&
+          this.field_p.containsOption(param1, param0 - 1, param2)) {
+          this.field_p.enableInput(0);
+          this.field_x.disableInput(32);
+        } else if (this.field_x.isMenuOpen((byte) 97) &&
+          this.field_x.containsOption(param1, param0 - 1, param2)) {
+          this.field_x.enableInput(0);
+          this.field_p.disableInput(32);
         } else {
-          if (!this.field_p.a(param2, param0 + 106, param1)) {
-            if (this.field_x.a(param2, 81, param1)) {
-              this.field_x.j(param0 - 1);
-              this.field_p.e(32);
+          if (!this.field_p.containsPointer(param2, param0 + 106, param1)) {
+            if (this.field_x.containsPointer(param2, 81, param1)) {
+              this.field_x.enableInput(param0 - 1);
+              this.field_p.disableInput(32);
             } else {
-              if (!this.field_p.g((byte) 97)) {
-                if (!this.field_x.g((byte) 97)) {
-                  this.field_p.j(0);
-                  this.field_x.e(32);
+              if (!this.field_p.isMenuOpen((byte) 97)) {
+                if (!this.field_x.isMenuOpen((byte) 97)) {
+                  this.field_p.enableInput(0);
+                  this.field_x.disableInput(32);
                 } else {
-                  this.field_x.j(0);
-                  this.field_p.e(32);
+                  this.field_x.enableInput(0);
+                  this.field_p.disableInput(32);
                 }
               } else {
-                this.field_p.j(0);
-                this.field_x.e(32);
+                this.field_p.enableInput(0);
+                this.field_x.disableInput(32);
               }
             }
           } else {
-            this.field_p.j(param0 ^ 1);
-            this.field_x.e(32);
+            this.field_p.enableInput(param0 ^ 1);
+            this.field_x.disableInput(32);
           }
         }
         if (param0 == 1) {
@@ -311,7 +311,7 @@ final class hc {
     }
 
     private final void a(int param0) {
-        int var2 = this.field_x.h(5);
+        int var2 = this.field_x.getSelectedIndex(5);
         if (var2 == this.field_g) {
           return;
         }
@@ -321,7 +321,7 @@ final class hc {
 
     private final void a(boolean param0, int param1) {
         this.field_g = param1;
-        this.field_x.b(0, this.field_g);
+        this.field_x.setSelectedIndex(0, this.field_g);
         this.field_f.a(115);
         int var3 = this.b(this.field_g, -6892);
         if (param0) {
@@ -343,7 +343,7 @@ final class hc {
           this.field_n.a(param0, (byte) 67, param1);
         }
         if (param2 == 1) {
-          this.field_p.e(105, param1, param0);
+          this.field_p.setPosition(105, param1, param0);
         }
         if (param3 <= 18) {
           return;
@@ -352,7 +352,7 @@ final class hc {
           this.field_u.a(param0, (byte) 53, param1);
         }
         if (param2 == 3) {
-          this.field_x.e(68, param1, param0);
+          this.field_x.setPosition(68, param1, param0);
         }
     }
 
@@ -360,11 +360,11 @@ final class hc {
         this.field_n = new ia(this.field_v, this.field_l, this.field_j, "Model", 0, 0);
         this.field_u = new ia(this.field_v, this.field_l, this.field_j, "Animation", 0, 0);
         this.field_k = hf.field_d;
-        this.field_p = new r(this.field_v, this.field_c, this.field_l, this.field_j, this.field_k, 0, 0);
+        this.field_p = new SpriteDropdownControl(this.field_v, this.field_c, this.field_l, this.field_j, this.field_k, 0, 0);
         if (param0 >= -122) {
           campaignMetricMutationCounter = 61;
         }
-        this.field_x = new r(this.field_v, this.field_c, this.field_l, this.field_j, this.field_m, 0, 0);
+        this.field_x = new SpriteDropdownControl(this.field_v, this.field_c, this.field_l, this.field_j, this.field_m, 0, 0);
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {

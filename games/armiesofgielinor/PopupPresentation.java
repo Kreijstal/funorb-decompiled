@@ -590,7 +590,7 @@ final class PopupPresentation implements EventPresentation {
         }
         boolean decompiledFrameRemainder0 = true;
         if (StrongCacheEntry.field_E >= 20 &&
-          AccountRequestResult.a((byte) 28) && (!(vt.field_n > 0) ||
+          AccountRequestResult.a((byte) 28) && (!(SpriteControlNode.field_n > 0) ||
           du.c(10))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;

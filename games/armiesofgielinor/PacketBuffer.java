@@ -354,7 +354,7 @@ class PacketBuffer extends IntrusiveNode {
             var9 = param1;
             var10 = param3;
             for (var11 = param0; param4 > var11; var11++) {
-              var12 = vt.field_m[var11];
+              var12 = SpriteControlNode.field_m[var11];
               if (!param6) {
                 stackIn_24_0 = EffectPresentation.field_h[var12];
               } else {
@@ -366,10 +366,10 @@ class PacketBuffer extends IntrusiveNode {
                   var10 = var13;
                 }
               } else {
-                vt.field_m[var11] = vt.field_m[var8];
+                SpriteControlNode.field_m[var11] = SpriteControlNode.field_m[var8];
                 incrementValue$0 = var8;
                 var8++;
-                vt.field_m[incrementValue$0] = var12;
+                SpriteControlNode.field_m[incrementValue$0] = var12;
                 if (var9 > var13) {
                   var9 = var13;
                 }
@@ -381,11 +381,11 @@ class PacketBuffer extends IntrusiveNode {
           }
           for (var7_intLifetime1 = -1 + param4; var7_intLifetime1 > param0; var7_intLifetime1--) {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = vt.field_m[var8Lifetime1];
-              var10Lifetime1 = vt.field_m[1 + var8Lifetime1];
+              var9Lifetime1 = SpriteControlNode.field_m[var8Lifetime1];
+              var10Lifetime1 = SpriteControlNode.field_m[1 + var8Lifetime1];
               if (BattlefieldTheme.a(param6, var10Lifetime1, var9Lifetime1, -27)) {
-                vt.field_m[var8Lifetime1] = var10Lifetime1;
-                vt.field_m[var8Lifetime1 + 1] = var9Lifetime1;
+                SpriteControlNode.field_m[var8Lifetime1] = var10Lifetime1;
+                SpriteControlNode.field_m[var8Lifetime1 + 1] = var9Lifetime1;
               }
             }
           }

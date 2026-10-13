@@ -616,7 +616,7 @@ final class CampaignMenu {
             }
             if (param2) {
               if (null == param3.highlightSprite) {
-                param3.highlightSprite = param3.previewSprite.g();
+                param3.highlightSprite = param3.previewSprite.copySprite();
                 param3.highlightSprite.c(228, 130, 4);
               }
               param3.highlightSprite.drawWithOpacity(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.b(NanoGameClock.field_n << 6, 100) >> 12) + 22);

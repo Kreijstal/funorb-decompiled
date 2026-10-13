@@ -99,9 +99,9 @@ final class DelayedPacket extends IntrusiveNode {
           }
           if (EffectPresentation.field_h == null) {
             EffectPresentation.field_h = new int[2 * param2];
-            if (vt.field_m == null ||
-              !(param2 + param1 <= vt.field_m.length)) {
-              vt.field_m = new int[(param2 + param1) * 2];
+            if (SpriteControlNode.field_m == null ||
+              !(param2 + param1 <= SpriteControlNode.field_m.length)) {
+              SpriteControlNode.field_m = new int[(param2 + param1) * 2];
             }
             if (AiUnitPlanner.field_q == null ||
               !(AiUnitPlanner.field_q.length >= param2)) {
@@ -110,24 +110,24 @@ final class DelayedPacket extends IntrusiveNode {
           } else {
             if (EffectPresentation.field_h.length < param2) {
               EffectPresentation.field_h = new int[2 * param2];
-              if (vt.field_m == null ||
-                !(param2 + param1 <= vt.field_m.length)) {
-                vt.field_m = new int[(param2 + param1) * 2];
+              if (SpriteControlNode.field_m == null ||
+                !(param2 + param1 <= SpriteControlNode.field_m.length)) {
+                SpriteControlNode.field_m = new int[(param2 + param1) * 2];
               }
               if (AiUnitPlanner.field_q == null ||
                 !(AiUnitPlanner.field_q.length >= param2)) {
                 AiUnitPlanner.field_q = new boolean[2 * param2];
               }
             } else {
-              if (vt.field_m == null) {
-                vt.field_m = new int[(param2 + param1) * 2];
+              if (SpriteControlNode.field_m == null) {
+                SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                 if (AiUnitPlanner.field_q == null ||
                   !(AiUnitPlanner.field_q.length >= param2)) {
                   AiUnitPlanner.field_q = new boolean[2 * param2];
                 }
               } else {
-                if (param2 + param1 > vt.field_m.length) {
-                  vt.field_m = new int[(param2 + param1) * 2];
+                if (param2 + param1 > SpriteControlNode.field_m.length) {
+                  SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                   if (AiUnitPlanner.field_q == null ||
                     !(AiUnitPlanner.field_q.length >= param2)) {
                     AiUnitPlanner.field_q = new boolean[2 * param2];
@@ -164,9 +164,9 @@ final class DelayedPacket extends IntrusiveNode {
             }
             if (EffectPresentation.field_h == null) {
               EffectPresentation.field_h = new int[2 * param2];
-              if (vt.field_m == null ||
-                !(param2 + param1 <= vt.field_m.length)) {
-                vt.field_m = new int[(param2 + param1) * 2];
+              if (SpriteControlNode.field_m == null ||
+                !(param2 + param1 <= SpriteControlNode.field_m.length)) {
+                SpriteControlNode.field_m = new int[(param2 + param1) * 2];
               }
               if (AiUnitPlanner.field_q == null ||
                 !(AiUnitPlanner.field_q.length >= param2)) {
@@ -175,24 +175,24 @@ final class DelayedPacket extends IntrusiveNode {
             } else {
               if (EffectPresentation.field_h.length < param2) {
                 EffectPresentation.field_h = new int[2 * param2];
-                if (vt.field_m == null ||
-                  !(param2 + param1 <= vt.field_m.length)) {
-                  vt.field_m = new int[(param2 + param1) * 2];
+                if (SpriteControlNode.field_m == null ||
+                  !(param2 + param1 <= SpriteControlNode.field_m.length)) {
+                  SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                 }
                 if (AiUnitPlanner.field_q == null ||
                   !(AiUnitPlanner.field_q.length >= param2)) {
                   AiUnitPlanner.field_q = new boolean[2 * param2];
                 }
               } else {
-                if (vt.field_m == null) {
-                  vt.field_m = new int[(param2 + param1) * 2];
+                if (SpriteControlNode.field_m == null) {
+                  SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                   if (AiUnitPlanner.field_q == null ||
                     !(AiUnitPlanner.field_q.length >= param2)) {
                     AiUnitPlanner.field_q = new boolean[2 * param2];
                   }
                 } else {
-                  if (param2 + param1 > vt.field_m.length) {
-                    vt.field_m = new int[(param2 + param1) * 2];
+                  if (param2 + param1 > SpriteControlNode.field_m.length) {
+                    SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                     if (AiUnitPlanner.field_q == null ||
                       !(AiUnitPlanner.field_q.length >= param2)) {
                       AiUnitPlanner.field_q = new boolean[2 * param2];
@@ -229,9 +229,9 @@ final class DelayedPacket extends IntrusiveNode {
             }
             if (EffectPresentation.field_h == null) {
               EffectPresentation.field_h = new int[2 * param2];
-              if (vt.field_m == null ||
-                !(param2 + param1 <= vt.field_m.length)) {
-                vt.field_m = new int[(param2 + param1) * 2];
+              if (SpriteControlNode.field_m == null ||
+                !(param2 + param1 <= SpriteControlNode.field_m.length)) {
+                SpriteControlNode.field_m = new int[(param2 + param1) * 2];
               }
               if (AiUnitPlanner.field_q == null) {
                 AiUnitPlanner.field_q = new boolean[2 * param2];
@@ -243,20 +243,20 @@ final class DelayedPacket extends IntrusiveNode {
             } else {
               if (EffectPresentation.field_h.length < param2) {
                 EffectPresentation.field_h = new int[2 * param2];
-                if (vt.field_m == null ||
-                  !(param2 + param1 <= vt.field_m.length)) {
-                  vt.field_m = new int[(param2 + param1) * 2];
+                if (SpriteControlNode.field_m == null ||
+                  !(param2 + param1 <= SpriteControlNode.field_m.length)) {
+                  SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                 }
                 if (AiUnitPlanner.field_q == null ||
                   !(AiUnitPlanner.field_q.length >= param2)) {
                   AiUnitPlanner.field_q = new boolean[2 * param2];
                 }
               } else {
-                if (vt.field_m == null) {
-                  vt.field_m = new int[(param2 + param1) * 2];
+                if (SpriteControlNode.field_m == null) {
+                  SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                 } else {
-                  if (param2 + param1 > vt.field_m.length) {
-                    vt.field_m = new int[(param2 + param1) * 2];
+                  if (param2 + param1 > SpriteControlNode.field_m.length) {
+                    SpriteControlNode.field_m = new int[(param2 + param1) * 2];
                   }
                 }
                 if (AiUnitPlanner.field_q == null) {

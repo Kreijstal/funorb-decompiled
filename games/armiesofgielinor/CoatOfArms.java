@@ -229,7 +229,7 @@ final class CoatOfArms {
           if (param8) {
             if (null == ConsolePanel.field_k ||
               param1 != t.field_f) {
-              ConsolePanel.field_k = RegionAnchor.field_m[0].g();
+              ConsolePanel.field_k = RegionAnchor.field_m[0].copySprite();
               var21 = ConsolePanel.field_k.pixels;
               var20 = var21;
               var19 = var20;

@@ -180,12 +180,12 @@ final class DiskCacheWorker implements Runnable {
           var3_int = 33 / ((19 - param0) / 63);
           var4 = 0;
           var5 = InstructionsPanel.field_r;
-          while (var4 < nb.field_h.length) {
+          while (var4 < SpriteScrollBar.field_h.length) {
             var6 = DirectByteStorage.field_k[var4];
             if (var6 < 0) {
               var5 = var5 + cn.field_o;
             } else {
-              var7 = lp.a(nb.field_h[var4], true, false);
+              var7 = lp.a(SpriteScrollBar.field_h[var4], true, false);
               var5 = var5 + QuickChatPhrase.field_w;
               var8 = bt.field_g - (var7 >> 1);
               if (mu.a(param2, jg.field_k + (FullscreenFocusCanvas.field_b << 1), param1, -LoginForm.field_E + var8, 5138823, (LoginForm.field_E << 1) + var7, var5)) {

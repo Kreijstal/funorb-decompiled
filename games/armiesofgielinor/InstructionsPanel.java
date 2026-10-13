@@ -865,7 +865,7 @@ final class InstructionsPanel {
         if (null != this.auxiliaryPreviewModel) {
           this.auxiliaryPreviewModel.setScreenPosition(db.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
           this.auxiliaryPreviewModel.drawAtStoredPosition((byte) -72, false);
-          nb.a(db.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
+          SpriteScrollBar.a(db.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
           return;
@@ -2463,7 +2463,7 @@ final class InstructionsPanel {
               mv.localAccountName = ByteStorage.incomingPacket.readNullTerminatedString(1);
               var11 = (CharSequence) ((Object) mv.localAccountName);
               IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var11, false);
-              vt.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
+              SpriteControlNode.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
               ov.connectionState = ResourceArchive.connectedState;
               if (CampaignRewardPreview.field_g.a((byte) 50) != ContentTransitionDialog.field_db) {
                 if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {

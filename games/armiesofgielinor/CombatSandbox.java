@@ -9,7 +9,7 @@ final class CombatSandbox {
     static LoginMethod emailLoginMethod;
     private ia field_d;
     private ia field_a;
-    private r[] field_l;
+    private SpriteDropdownControl[] field_l;
     private BinaryBitmapFont field_m;
     private ia field_h;
     static String field_g;
@@ -20,16 +20,16 @@ final class CombatSandbox {
         this.field_d = new ia(this.field_b, this.field_m, this.field_i, "Attacker", 0, 0);
         this.field_h = new ia(this.field_b, this.field_m, this.field_i, "Defender", 0, 0);
         this.field_a = new ia(this.field_b, this.field_m, this.field_i, "Run Attack", 0, 0);
-        this.field_l = new r[6];
-        this.field_l[0] = new r(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
-        this.field_l[1] = new r(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
-        this.field_l[2] = new r(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
-        this.field_l[3] = new r(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
-        this.field_l[4] = new r(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
+        this.field_l = new SpriteDropdownControl[6];
+        this.field_l[0] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
+        this.field_l[1] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, af.field_a, 0, 0);
+        this.field_l[2] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
+        this.field_l[3] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, TextLineLayout.field_d, 0, 0);
+        this.field_l[4] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
         if (param0 != -49) {
           this.field_a = (ia) null;
         }
-        this.field_l[5] = new r(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
+        this.field_l[5] = new SpriteDropdownControl(this.field_b, this.field_f, this.field_m, this.field_i, PlayerProfile.field_i, 0, 0);
     }
 
     private final int a(int param0, byte param1) {
@@ -40,30 +40,30 @@ final class CombatSandbox {
           emailLoginMethod = (LoginMethod) null;
         }
         if (param0 == 1) {
-          return this.field_l[0].n(-18332);
+          return this.field_l[0].getWidth(-18332);
         }
         if (param0 == 2) {
-          return this.field_l[2].n(-18332);
+          return this.field_l[2].getWidth(-18332);
         }
         if (param0 == 3) {
           return this.field_h.c(-29408);
         }
         if (4 == param0) {
-          return this.field_l[1].n(-18332);
+          return this.field_l[1].getWidth(-18332);
         }
         if (param0 == 5) {
-          return this.field_l[3].n(-18332);
+          return this.field_l[3].getWidth(-18332);
         }
         if (6 == param0) {
           return this.field_a.c(-29408);
         }
         if (param0 == 7) {
-          return this.field_l[4].n(-18332);
+          return this.field_l[4].getWidth(-18332);
         }
         if (param0 != 8) {
           return 0;
         }
-        return this.field_l[5].n(-18332);
+        return this.field_l[5].getWidth(-18332);
     }
 
     private final void b(int param0) {
@@ -73,15 +73,15 @@ final class CombatSandbox {
         int var2Lifetime1;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         for (var2 = param0; this.field_l.length > var2; var2++) {
-          if (!this.field_l[var2].g((byte) 97)) {
-            this.field_l[var2].f((byte) 124);
+          if (!this.field_l[var2].isMenuOpen((byte) 97)) {
+            this.field_l[var2].drawControl((byte) 124);
           }
         }
         var4 = 0;
         var2Lifetime1 = var4;
         while (var4 < this.field_l.length) {
-          if (this.field_l[var4].g((byte) 97)) {
-            this.field_l[var4].f((byte) -55);
+          if (this.field_l[var4].isMenuOpen((byte) 97)) {
+            this.field_l[var4].drawControl((byte) -55);
           }
           var4++;
         }
@@ -92,31 +92,31 @@ final class CombatSandbox {
           this.field_d.a(param3, (byte) 55, param0);
         }
         if (param2 == 1) {
-          this.field_l[0].e(-84, param0, param3);
+          this.field_l[0].setPosition(-84, param0, param3);
         }
         if (param2 == 2) {
-          this.field_l[2].e(-71, param0, param3);
+          this.field_l[2].setPosition(-71, param0, param3);
         }
         if (param2 == 3) {
           this.field_h.a(param3, (byte) 127, param0);
         }
         if (param2 == 4) {
-          this.field_l[1].e(-59, param0, param3);
+          this.field_l[1].setPosition(-59, param0, param3);
         }
         if (param1 > -41) {
           this.a(-21);
         }
         if (param2 == 5) {
-          this.field_l[3].e(87, param0, param3);
+          this.field_l[3].setPosition(87, param0, param3);
         }
         if (param2 == 6) {
           this.field_a.a(param3, (byte) 107, param0);
         }
         if (param2 == 7) {
-          this.field_l[4].e(-57, param0, param3);
+          this.field_l[4].setPosition(-57, param0, param3);
         }
         if (param2 == 8) {
-          this.field_l[5].e(-87, param0, param3);
+          this.field_l[5].setPosition(-87, param0, param3);
         }
     }
 
@@ -166,18 +166,18 @@ final class CombatSandbox {
         this.a((byte) -121, param2, param4);
         var7 = param5 ? 1 : 0;
         for (var8 = 0; var8 < this.field_l.length; var8++) {
-          this.field_l[var8].a(param0, -18596, param4, param2, param3, param1);
-          var7 = var7 != 0 | this.field_l[var8].a((byte) 122) ? 1 : 0;
+          this.field_l[var8].updateInput(param0, -18596, param4, param2, param3, param1);
+          var7 = var7 != 0 | this.field_l[var8].hasInputChanged((byte) 122) ? 1 : 0;
         }
         if (var7 != 0) {
           this.c((byte) -95);
         }
         if (this.field_a.a(param4, 0, param2) &&
           param0) {
-          var8Lifetime1 = this.field_l[0].h(5);
-          var9 = this.field_l[1].h(5);
-          var10 = this.field_l[2].h(5);
-          var11 = this.field_l[3].h(5);
+          var8Lifetime1 = this.field_l[0].getSelectedIndex(5);
+          var9 = this.field_l[1].getSelectedIndex(5);
+          var10 = this.field_l[2].getSelectedIndex(5);
+          var11 = this.field_l[3].getSelectedIndex(5);
           var12 = 0;
           var13 = 0;
           if (75 == var9) {
@@ -197,9 +197,9 @@ final class CombatSandbox {
             var8Lifetime1 = 7;
           }
           var14 = bw.unitDefinitions[var8Lifetime1][4];
-          var15 = var14 / (1 + this.field_l[4].h(5));
+          var15 = var14 / (1 + this.field_l[4].getSelectedIndex(5));
           var16 = bw.unitDefinitions[var9][4];
-          var17 = var16 / (1 + this.field_l[5].h(5));
+          var17 = var16 / (1 + this.field_l[5].getSelectedIndex(5));
           if (var15 == 0) {
             var15++;
           }
@@ -289,15 +289,15 @@ final class CombatSandbox {
             var4 = var7;
             while (var7 < this.field_l.length) {
               if (var7 == 0) {
-                this.field_l[var7].j(0);
+                this.field_l[var7].enableInput(0);
               } else {
-                this.field_l[var7].e(32);
+                this.field_l[var7].disableInput(32);
               }
               var7++;
             }
             return;
           }
-          if (!this.field_l[var4].b(param1, 2, param2)) {
+          if (!this.field_l[var4].containsControlOrMenu(param1, 2, param2)) {
             var4++;
             continue;
           }
@@ -305,9 +305,9 @@ final class CombatSandbox {
         }
         for (var5Lifetime1 = 0; var5Lifetime1 < this.field_l.length; var5Lifetime1++) {
           if (var4 != var5Lifetime1) {
-            this.field_l[var5Lifetime1].e(32);
+            this.field_l[var5Lifetime1].disableInput(32);
           } else {
-            this.field_l[var5Lifetime1].j(0);
+            this.field_l[var5Lifetime1].enableInput(0);
           }
         }
         return;
@@ -350,31 +350,31 @@ final class CombatSandbox {
           return this.field_d.a((byte) -25);
         }
         if (param1 == 1) {
-          return this.field_l[0].e(true);
+          return this.field_l[0].getHeight(true);
         }
         if (param1 == 2) {
-          return this.field_l[2].e(true);
+          return this.field_l[2].getHeight(true);
         }
         if (param1 == 3) {
           return this.field_h.a((byte) -63);
         }
         if (param1 == 4) {
-          return this.field_l[1].e(true);
+          return this.field_l[1].getHeight(true);
         }
         if (param1 == 5) {
-          return this.field_l[3].e(true);
+          return this.field_l[3].getHeight(true);
         }
         if (6 == param1) {
           return this.field_a.a((byte) -127);
         }
         if (param1 == 7) {
-          return this.field_l[4].e(true);
+          return this.field_l[4].getHeight(true);
         }
         if (param0 != -101) {
           this.a(true, 53, -58, false, -8, false);
         }
         if (param1 == 8) {
-          return this.field_l[5].e(true);
+          return this.field_l[5].getHeight(true);
         }
         return 0;
     }

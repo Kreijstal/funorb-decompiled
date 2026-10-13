@@ -474,8 +474,8 @@ final class StateChangeEvent extends GameEvent {
         try {
           MoveEvent.a(param2, false, param1, param0);
           da.b(-2);
-          ChannelBaseVolumeConsoleCommand.field_L = nb.nameCheckResultConsumed;
-          mh.accountNameCheckState = nb.nameCheckResultConsumed;
+          ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
+          mh.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qq.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

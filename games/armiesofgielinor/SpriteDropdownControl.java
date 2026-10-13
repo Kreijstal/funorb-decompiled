@@ -1,67 +1,67 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r extends vt {
-    private ng field_z;
-    private boolean field_p;
+final class SpriteDropdownControl extends SpriteControlNode {
+    private SpriteDropdownMenu menu;
+    private boolean hovered;
     static String field_G;
     static int field_B;
-    private boolean field_F;
-    private RgbSprite[] field_H;
-    private boolean field_r;
+    private boolean enabled;
+    private RgbSprite[] arrowSprites;
+    private boolean expanded;
     static boolean field_s;
-    private int field_L;
-    private RgbSprite[] field_D;
-    private int field_K;
-    private int field_A;
-    private int[] field_q;
+    private int selectedIndex;
+    private RgbSprite[] frameSprites;
+    private int y;
+    private int x;
+    private int[] colours;
     static String[] equipmentTutorialMessages;
     static String field_J;
-    private int field_o;
-    private boolean field_x;
-    private int field_t;
-    private boolean field_y;
+    private int height;
+    private boolean inputChanged;
+    private int width;
+    private boolean layoutEnabled;
     static int field_u;
     static String field_I;
     static ClientUiComponent field_v;
-    private BinaryBitmapFont field_C;
+    private BinaryBitmapFont font;
     static String field_w;
 
-    private final RgbSprite k(int param0) {
-        int var2 = 0;
-        if (this.field_p) {
-          var2 = 1;
+    private final RgbSprite getArrowSprite(int obfuscationGuard) {
+        int spriteIndex = 0;
+        if (this.hovered) {
+          spriteIndex = 1;
         }
-        if (this.field_r) {
-          var2 = 2;
+        if (this.expanded) {
+          spriteIndex = 2;
         }
-        RgbSprite var3 = this.field_H[var2];
-        if (param0 != 3) {
-          this.n(-61);
+        RgbSprite sprite = this.arrowSprites[spriteIndex];
+        if (obfuscationGuard != 3) {
+          this.getWidth(-61);
         }
-        return var3;
+        return sprite;
     }
 
-    final boolean g(byte param0) {
-        if (param0 != 97) {
+    final boolean isMenuOpen(byte obfuscationGuard) {
+        if (obfuscationGuard != 97) {
           return false;
         }
-        return this.field_z.d(false);
+        return this.menu.isOpen(false);
     }
 
-    final boolean b(int param0, int param1, int param2) {
+    final boolean containsControlOrMenu(int pointerX, int obfuscationGuard, int pointerY) {
         int var4;
         int stackIn_9_0 = 0;
         int var4Lifetime1;
-        if (param1 != 2) {
-          this.field_A = 9;
+        if (obfuscationGuard != 2) {
+          this.x = 9;
         }
-        if (!this.field_z.d(false)) {
-          return this.a(param0, param1 ^ 84, param2);
+        if (!this.menu.isOpen(false)) {
+          return this.containsPointer(pointerX, obfuscationGuard ^ 84, pointerY);
         }
         var4 = 0;
-        if (!this.c(param2, 0, param0)) {
-          stackIn_9_0 = (this.field_z.b(31127, param0, param2)) ? 1 : 0;
+        if (!this.containsOption(pointerY, 0, pointerX)) {
+          stackIn_9_0 = (this.menu.isPointerOverScrollBars(31127, pointerX, pointerY)) ? 1 : 0;
         } else {
           stackIn_9_0 = 1;
         }
@@ -69,35 +69,35 @@ final class r extends vt {
         return var4Lifetime1 != 0;
     }
 
-    final void e(int param0, int param1, int param2) {
-        this.field_A = param1;
-        int var4 = 79 % ((param0 - 15) / 32);
-        this.field_K = param2;
-        this.field_z.a(param1, 112, param2);
+    final void setPosition(int obfuscationGuard, int x, int y) {
+        this.x = x;
+        int var4 = 79 % ((obfuscationGuard - 15) / 32);
+        this.y = y;
+        this.menu.setPosition(x, 112, y);
     }
 
-    final int e(boolean param0) {
-        if (!param0) {
+    final int getHeight(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_J = (String) null;
         }
-        return this.field_o;
+        return this.height;
     }
 
-    final boolean g(int param0) {
+    final boolean isInputEnabled(int obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0 != 260) {
+        if (obfuscationGuard != 260) {
           return true;
         }
-        stackIn_7_0 = (this.field_F) || (this.field_z.D(85));
+        stackIn_7_0 = (this.enabled) || (this.menu.isInputEnabled(85));
         return stackIn_7_0;
     }
 
-    final void e(int param0) {
-        this.field_F = false;
-        if (param0 != 32) {
+    final void disableInput(int obfuscationGuard) {
+        this.enabled = false;
+        if (obfuscationGuard != 32) {
           return;
         }
-        this.field_z.e(true);
+        this.menu.disableInput(true);
     }
 
     final static boolean c(int param0, int param1) {
@@ -107,150 +107,150 @@ final class r extends vt {
         return 2 <= param0 ? true : false;
     }
 
-    final void f(byte param0) {
-        this.b(false);
-        this.f(4);
-        int var2 = -124 % ((75 - param0) / 49);
+    final void drawControl(byte obfuscationGuard) {
+        this.drawBackground(false);
+        this.drawExpandedMenu(4);
+        int var2 = -124 % ((75 - obfuscationGuard) / 49);
     }
 
-    final void b(int param0, int param1) {
-        if (param0 != 0) {
-          this.field_F = true;
+    final void setSelectedIndex(int obfuscationGuard, int index) {
+        if (obfuscationGuard != 0) {
+          this.enabled = true;
         }
-        this.field_L = param1;
+        this.selectedIndex = index;
     }
 
-    final boolean a(byte param0) {
-        if (param0 <= 72) {
+    final boolean hasInputChanged(byte obfuscationGuard) {
+        if (obfuscationGuard <= 72) {
           field_w = (String) null;
         }
-        return this.field_x;
+        return this.inputChanged;
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void applyPress(int obfuscationGuard, boolean pressed) {
         int var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var3 = 114 / ((44 - param0) / 34);
-        this.field_x = false;
-        if (this.field_F) {
-          if (!param1) {
+        int var3 = 114 / ((44 - obfuscationGuard) / 34);
+        this.inputChanged = false;
+        if (this.enabled) {
+          if (!pressed) {
           } else {
-            if (this.field_z.r(-37)) {
-              this.field_L = this.field_z.b(78);
-              this.field_r = false;
-              this.field_z.l(0);
-              this.m(10009);
-              this.field_x = true;
+            if (this.menu.hasSelectionChanged(-37)) {
+              this.selectedIndex = this.menu.getSelectedIndex(78);
+              this.expanded = false;
+              this.menu.closeMenu(0);
+              this.computeSize(10009);
+              this.inputChanged = true;
             } else {
-              if (!this.field_p) {
+              if (!this.hovered) {
               } else {
-                this.field_r = !this.field_r ? true : false;
-                if (this.field_r) {
-                  this.field_z.c(56);
+                this.expanded = !this.expanded ? true : false;
+                if (this.expanded) {
+                  this.menu.openMenu(56);
                 } else {
-                  this.field_z.l(0);
+                  this.menu.closeMenu(0);
                 }
-                if (!this.field_r) {
-                  this.field_z.a(0, (byte) 39);
+                if (!this.expanded) {
+                  this.menu.setSelectedIndex(0, (byte) 39);
                 }
-                this.field_x = true;
+                this.inputChanged = true;
               }
             }
           }
         }
-        if (!this.field_F) {
-          if (this.field_z.d(false) &&
-            param1) {
-            this.field_z.l(0);
-            this.field_x = true;
-            this.field_r = false;
+        if (!this.enabled) {
+          if (this.menu.isOpen(false) &&
+            pressed) {
+            this.menu.closeMenu(0);
+            this.inputChanged = true;
+            this.expanded = false;
           }
           return;
         }
     }
 
-    private final void f(int param0) {
-        if (!this.field_r) {
+    private final void drawExpandedMenu(int obfuscationGuard) {
+        if (!this.expanded) {
           return;
         }
-        this.field_z.e(6815);
-        if (param0 != 4) {
-          this.e((byte) -72);
-          return;
-        }
-    }
-
-    private final void h(byte param0) {
-        this.field_y = true;
-        this.i(0);
-        this.d(false);
-        if (param0 != -120) {
-          this.field_K = 118;
+        this.menu.drawMenu(6815);
+        if (obfuscationGuard != 4) {
+          this.drawSelectedText((byte) -72);
           return;
         }
     }
 
-    final boolean c(int param0, int param1, int param2) {
-        if (param1 != 0) {
-          this.h((byte) -118);
+    private final void initializeLayout(byte obfuscationGuard) {
+        this.layoutEnabled = true;
+        this.resetSelection(0);
+        this.refreshSize(false);
+        if (obfuscationGuard != -120) {
+          this.y = 118;
+          return;
         }
-        return this.field_z.a(param0, (byte) 113, param2) >= 0 ? true : false;
     }
 
-    final void a(String[] param0, int param1) {
+    final boolean containsOption(int pointerY, int obfuscationGuard, int pointerX) {
+        if (obfuscationGuard != 0) {
+          this.initializeLayout((byte) -118);
+        }
+        return this.menu.findOptionAt(pointerY, (byte) 113, pointerX) >= 0 ? true : false;
+    }
+
+    final void setOptions(String[] options, int obfuscationGuard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -29799) {
+          if (obfuscationGuard != -29799) {
             return;
           }
-          this.field_z.a((byte) 126, param0);
-          this.i(0);
-          this.d(false);
+          this.menu.setOptions((byte) 126, options);
+          this.resetSelection(0);
+          this.refreshSize(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("r.V(");
-          if (param0 == null) {
+          if (options == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void e(byte param0) {
-        int var2 = this.field_D[3].canvasWidth;
-        int var3 = this.field_C.characterWidth(' ');
-        int var4 = this.field_A - (-var2 - var3);
-        int var5 = this.field_D[1].canvasHeight;
-        if (param0 != 108) {
-          this.field_L = -29;
+    private final void drawSelectedText(byte obfuscationGuard) {
+        int leftBorder = this.frameSprites[3].canvasWidth;
+        int spaceWidth = this.font.characterWidth(' ');
+        int textX = this.x - (-leftBorder - spaceWidth);
+        int topBorder = this.frameSprites[1].canvasHeight;
+        if (obfuscationGuard != 108) {
+          this.selectedIndex = -29;
         }
-        int var6 = 2;
-        int var7 = this.field_C.maxAscent;
-        int var8 = var5 + (this.field_K - (-var6 - var7));
-        int var9 = this.field_q[0];
-        if (this.field_r) {
-          var9 = this.field_q[2];
+        int textPaddingY = 2;
+        int fontAscent = this.font.maxAscent;
+        int baselineY = topBorder + (this.y - (-textPaddingY - fontAscent));
+        int textColour = this.colours[0];
+        if (this.expanded) {
+          textColour = this.colours[2];
         }
-        if (this.field_p) {
-          var9 = this.field_q[1];
+        if (this.hovered) {
+          textColour = this.colours[1];
         }
-        String var10 = this.field_z.a((byte) -96, this.field_L);
-        this.field_C.drawText(var10, var4, var8, var9, -1);
+        String selectedText = this.menu.getOptionText((byte) -96, this.selectedIndex);
+        this.font.drawText(selectedText, textX, baselineY, textColour, -1);
     }
 
-    final int h(int param0) {
-        if (param0 != 5) {
+    final int getSelectedIndex(int obfuscationGuard) {
+        if (obfuscationGuard != 5) {
           field_v = (ClientUiComponent) null;
         }
-        return this.field_L;
+        return this.selectedIndex;
     }
 
     final static void snapshotKeyboard(boolean obfuscationGuard) {
@@ -265,7 +265,7 @@ final class r extends vt {
           synchronized (listenerLock) {
             SummonAction.keyEventReadIndex = FullscreenFocusCanvas.keyEventFrameEndIndex;
             if (!obfuscationGuard) {
-              r.d((byte) 47);
+              SpriteDropdownControl.d((byte) 47);
             }
             fc.keyboardIdleTicks = fc.keyboardIdleTicks + 1;
             if (us.keyStateWriteIndex < 0) {
@@ -306,88 +306,88 @@ final class r extends vt {
         field_v = null;
     }
 
-    final boolean a(int param0, int param1, int param2) {
-        int var4 = -56 % ((17 - param1) / 60);
-        return ChatMessage.a(param2, this.field_A, this.field_K, param0, this.field_t, (byte) -99, this.field_o);
+    final boolean containsPointer(int pointerX, int obfuscationGuard, int pointerY) {
+        int var4 = -56 % ((17 - obfuscationGuard) / 60);
+        return ChatMessage.a(pointerY, this.x, this.y, pointerX, this.width, (byte) -99, this.height);
     }
 
-    final void j(int param0) {
-        if (param0 != 0) {
+    final void enableInput(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return;
         }
-        this.field_F = true;
-        this.field_z.g(83);
+        this.enabled = true;
+        this.menu.enableInput(83);
     }
 
-    final int n(int param0) {
-        if (param0 != -18332) {
-          this.field_A = -93;
+    final int getWidth(int obfuscationGuard) {
+        if (obfuscationGuard != -18332) {
+          this.x = -93;
         }
-        return this.field_t;
+        return this.width;
     }
 
-    private final void d(boolean param0) {
-        this.m(10009);
-        if (param0) {
+    private final void refreshSize(boolean obfuscationGuard) {
+        this.computeSize(10009);
+        if (obfuscationGuard) {
           return;
         }
     }
 
-    private final void c(byte param0) {
-        RgbSprite var2 = this.k(3);
-        int var3 = this.field_D[5].canvasWidth;
-        int var4 = var2.canvasWidth;
-        int var5 = -var3 + this.field_A - (-this.field_t + var4);
-        int var6 = this.field_D[1].canvasHeight;
-        if (param0 != -36) {
+    private final void drawArrow(byte obfuscationGuard) {
+        RgbSprite arrow = this.getArrowSprite(3);
+        int rightBorder = this.frameSprites[5].canvasWidth;
+        int arrowWidth = arrow.canvasWidth;
+        int arrowX = -rightBorder + this.x - (-this.width + arrowWidth);
+        int topBorder = this.frameSprites[1].canvasHeight;
+        if (obfuscationGuard != -36) {
           return;
         }
-        int var7 = var6 + this.field_K;
-        var2.drawTransparent(var5, var7);
+        int arrowY = topBorder + this.y;
+        arrow.drawTransparent(arrowX, arrowY);
     }
 
-    private final void d(int param0, int param1, int param2) {
+    private final void updateHover(int pointerY, int pointerX, int obfuscationGuard) {
         boolean stackIn_9_1 = false;
-        this.field_p = false;
-        if (param2 != 4) {
-          this.e(false);
+        this.hovered = false;
+        if (obfuscationGuard != 4) {
+          this.getHeight(false);
         }
-        if (!this.field_F) {
+        if (!this.enabled) {
           return;
         }
-        stackIn_9_1 = (this.a(param1, param2 ^ -82, param0)) && (!this.g((byte) 97));
-        this.field_p = stackIn_9_1;
+        stackIn_9_1 = (this.containsPointer(pointerX, obfuscationGuard ^ -82, pointerY)) && (!this.isMenuOpen((byte) 97));
+        this.hovered = stackIn_9_1;
     }
 
-    private final void b(boolean param0) {
-        SoftwareRaster.f(this.field_A, this.field_K, this.field_t, this.field_o, 7829367);
-        ReportAbuseDialog.drawNineSlice(this.field_D, this.field_o, this.field_A, (byte) -47, this.field_K, this.field_t);
-        if (param0) {
-          this.field_q = (int[]) null;
+    private final void drawBackground(boolean obfuscationGuard) {
+        SoftwareRaster.f(this.x, this.y, this.width, this.height, 7829367);
+        ReportAbuseDialog.drawNineSlice(this.frameSprites, this.height, this.x, (byte) -47, this.y, this.width);
+        if (obfuscationGuard) {
+          this.colours = (int[]) null;
         }
-        this.e((byte) 108);
-        this.c((byte) -36);
+        this.drawSelectedText((byte) 108);
+        this.drawArrow((byte) -36);
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, boolean param4, int param5) {
-        if (!this.field_y) {
-          this.i(param1 ^ -18596);
+    final void updateInput(boolean pressed, int obfuscationGuard, int pointerY, int pointerX, boolean held, int wheelDelta) {
+        if (!this.layoutEnabled) {
+          this.resetSelection(obfuscationGuard ^ -18596);
           return;
         }
-        this.d(param2, param3, 4);
-        this.field_z.a(param2, param4, param0, 0, param3, param5);
-        this.a(-34, param0);
-        if (param1 != -18596) {
-          this.field_K = -86;
+        this.updateHover(pointerY, pointerX, 4);
+        this.menu.updateInput(pointerY, held, pressed, 0, pointerX, wheelDelta);
+        this.applyPress(-34, pressed);
+        if (obfuscationGuard != -18596) {
+          this.y = -86;
           return;
         }
     }
 
-    private final void i(int param0) {
-        this.field_L = 0;
-        this.field_z.a(param0, (byte) 46);
-        this.field_p = false;
-        this.field_r = false;
+    private final void resetSelection(int menuIndex) {
+        this.selectedIndex = 0;
+        this.menu.setSelectedIndex(menuIndex, (byte) 46);
+        this.hovered = false;
+        this.expanded = false;
     }
 
     final static Boolean l(int param0) {
@@ -399,7 +399,7 @@ final class r extends vt {
         return var1;
     }
 
-    r(RgbSprite[] param0, RgbSprite[] param1, BinaryBitmapFont param2, int[] param3, String[] param4, int param5, int param6) {
+    SpriteDropdownControl(RgbSprite[] frameSprites, RgbSprite[] arrowSprites, BinaryBitmapFont font, int[] colours, String[] options, int x, int y) {
         RuntimeException var8 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -414,94 +414,94 @@ final class r extends vt {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_D = param0;
-          this.field_H = param1;
-          this.field_q = param3;
-          this.field_C = param2;
-          this.field_z = new ng(param0, param1, param2, param3, param4, param5, param6);
-          this.e(-20, param5, param6);
-          this.h((byte) -120);
-          this.e(32);
-          this.field_x = false;
+          this.frameSprites = frameSprites;
+          this.arrowSprites = arrowSprites;
+          this.colours = colours;
+          this.font = font;
+          this.menu = new SpriteDropdownMenu(frameSprites, arrowSprites, font, colours, options, x, y);
+          this.setPosition(-20, x, y);
+          this.initializeLayout((byte) -120);
+          this.disableInput(32);
+          this.inputChanged = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_5_0 = var8;
           stackIn_5_1 = new StringBuilder().append("r.<init>(");
-          if (param0 == null) {
+          if (frameSprites == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
           stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',');
-          if (param1 == null) {
+          if (arrowSprites == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (font == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param3 == null) {
+          if (colours == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param4 == null) {
+          if (options == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(x).append(',').append(y).append(')').toString());
         }
     }
 
-    private final void m(int param0) {
-        int stackIn_7_0 = 0;
-        int var2;
-        int var3;
-        int var4;
-        String var4_ref_String;
-        RgbSprite var5;
-        int var5_int;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var3Lifetime1;
-        var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var2 = 0;
-        for (var3 = 0; this.field_z.u(117) > var3; var3++) {
-          var4_ref_String = this.field_z.a((byte) -126, var3);
-          var5_int = this.field_C.textWidth(var4_ref_String);
-          stackIn_7_0 = (var2 >= var5_int) ? var2 : var5_int;
-          var2 = stackIn_7_0;
+    private final void computeSize(int obfuscationGuard) {
+        int maximumWidthValue = 0;
+        int maximumTextWidth;
+        int optionIndex;
+        int frameBorderWidth;
+        String optionText;
+        RgbSprite arrow;
+        int textWidth;
+        int arrowWidth;
+        int fontHeight;
+        int rowPadding;
+        int arrowHeight;
+        int frameBorderHeight;
+        int obfuscationControl;
+        int spacePadding;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        maximumTextWidth = 0;
+        for (optionIndex = 0; this.menu.getOptionCount(117) > optionIndex; optionIndex++) {
+          optionText = this.menu.getOptionText((byte) -126, optionIndex);
+          textWidth = this.font.textWidth(optionText);
+          maximumWidthValue = (maximumTextWidth >= textWidth) ? maximumTextWidth : textWidth;
+          maximumTextWidth = maximumWidthValue;
         }
-        var3Lifetime1 = this.field_C.characterWidth(' ') << 1;
-        if (param0 != 10009) {
+        spacePadding = this.font.characterWidth(' ') << 1;
+        if (obfuscationGuard != 10009) {
           return;
         }
-        var4 = this.field_D[3].canvasWidth + this.field_D[5].canvasWidth;
-        var5 = this.k(3);
-        var6 = var5.canvasWidth;
-        this.field_t = var6 + var4 + var2 + var3Lifetime1;
-        var7 = this.field_C.maxDescent + this.field_C.maxAscent;
-        var8 = 4;
-        var9 = var5.canvasHeight;
-        this.field_o = var8 + var7;
-        if (var9 > this.field_o) {
-          this.field_o = var9;
+        frameBorderWidth = this.frameSprites[3].canvasWidth + this.frameSprites[5].canvasWidth;
+        arrow = this.getArrowSprite(3);
+        arrowWidth = arrow.canvasWidth;
+        this.width = arrowWidth + frameBorderWidth + maximumTextWidth + spacePadding;
+        fontHeight = this.font.maxDescent + this.font.maxAscent;
+        rowPadding = 4;
+        arrowHeight = arrow.canvasHeight;
+        this.height = rowPadding + fontHeight;
+        if (arrowHeight > this.height) {
+          this.height = arrowHeight;
         }
-        var10 = this.field_D[7].canvasHeight + this.field_D[1].canvasHeight;
-        this.field_o = var10 + this.field_o;
+        frameBorderHeight = this.frameSprites[7].canvasHeight + this.frameSprites[1].canvasHeight;
+        this.height = frameBorderHeight + this.height;
         return;
     }
 

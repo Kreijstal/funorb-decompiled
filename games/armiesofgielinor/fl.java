@@ -294,13 +294,13 @@ final class fl {
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, param0, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           this.field_a = 10;
           var14 = new ao(var4, true);
-          var14.a(0, var13.g());
+          var14.a(0, var13.copySprite());
           var13.d();
           var14Lifetime1 = new ao(var4, true);
-          var14Lifetime1.a(0, var13.g());
+          var14Lifetime1.a(0, var13.copySprite());
           var13.d();
           var14Lifetime2 = new ao(var4, true);
-          var14Lifetime2.a(0, var13.g());
+          var14Lifetime2.a(0, var13.copySprite());
           var13.d();
           var19 = new ao(var4, true);
           var19.a(0, var13);
