@@ -158,14 +158,14 @@ final class kn extends DualLinkNode {
         }
         if (null != this.field_v) {
           for (var2 = 0; var2 < this.field_v.length; var2++) {
-            this.field_v[var2] = ud.d(this.field_v[var2], 32768);
+            this.field_v[var2] = LevelSelectScreen.d(this.field_v[var2], 32768);
           }
         }
         if (this.field_x != null) {
           var5 = 0;
           var2Lifetime1 = var5;
           while (var5 < this.field_x.length) {
-            this.field_x[var5] = ud.d(this.field_x[var5], 32768);
+            this.field_x[var5] = LevelSelectScreen.d(this.field_x[var5], 32768);
             var5++;
           }
         }

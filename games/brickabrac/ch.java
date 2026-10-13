@@ -110,8 +110,8 @@ final class ch {
             }
             return;
           }
-          if (null == of.field_i) {
-            of.field_i = new mk(128);
+          if (null == BlankScreen.field_i) {
+            BlankScreen.field_i = new mk(128);
             ol.field_w = 0;
           }
           var3Lifetime1 = var1.readCp1252String(-1);
@@ -124,12 +124,12 @@ final class ch {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = pf.a(false, var5Lifetime1);
             if (var6Lifetime1 != null) {
-              of.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 87).hashCode(), var6Lifetime1, 104);
+              BlankScreen.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 87).hashCode(), var6Lifetime1, 104);
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new mp();
-            of.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 116).hashCode(), var6Lifetime1, 101);
+            BlankScreen.field_i.a((long)gb.a((CharSequence) ((Object) var4_ref_StringLifetime1), 116).hashCode(), var6Lifetime1, 101);
             fieldTemp$0 = ol.field_w;
             ol.field_w = ol.field_w + 1;
             var6Lifetime1.field_Sb = fieldTemp$0;

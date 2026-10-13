@@ -17,22 +17,22 @@ public final class BrickABrac extends sa {
         int var6;
         int stackIn_6_0 = 0;
         var6 = field_J ? 1 : 0;
-        if (null != hd.field_d) {
-          stackIn_6_0 = (lp.field_rb.a((byte) -51)) ? 1 : 0;
+        if (null != hd.pendingScreen) {
+          stackIn_6_0 = (lp.currentScreen.a((byte) -51)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
         var2 = stackIn_6_0;
         if (var2 != 0) {
           if (16 > kh.field_a) {
-            lp.field_rb.drawScreen((byte) -75);
+            lp.currentScreen.drawScreen((byte) -75);
             jn.a(kh.field_a + 1, 256, 16769381, false, false);
           } else {
-            hd.field_d.drawScreen((byte) -85);
+            hd.pendingScreen.drawScreen((byte) -85);
             jn.a(32 - (kh.field_a - 1), 256, 16769381, false, false);
           }
         } else {
-          lp.field_rb.drawScreen((byte) -63);
+          lp.currentScreen.drawScreen((byte) -63);
         }
         var3 = (IntNode) (kp.field_c.first(-123));
         if (param0 != 16769381) {
@@ -69,7 +69,7 @@ public final class BrickABrac extends sa {
         pn var6;
         var5 = field_J ? 1 : 0;
         vd.a(-127);
-        de.field_x = de.field_x + 1;
+        MembershipBenefitsScreen.field_x = MembershipBenefitsScreen.field_x + 1;
         if (!og.h(-26090)) {
           while (true) {
             var6 = (pn) (IntNode.field_j.removeFirst(3));
@@ -79,25 +79,25 @@ public final class BrickABrac extends sa {
             g.a(var6, 5, (byte) -116);
           }
         }
-        if (hd.field_d != null) {
-          stackIn_10_0 = (lp.field_rb.a((byte) -51)) ? 1 : 0;
+        if (hd.pendingScreen != null) {
+          stackIn_10_0 = (lp.currentScreen.a((byte) -51)) ? 1 : 0;
         } else {
           stackIn_10_0 = 0;
         }
         var3 = stackIn_10_0;
-        if (pe.field_o != lp.field_rb ||
+        if (pe.field_o != lp.currentScreen ||
           pe.field_o.field_p ||
           var3 == 0) {
-          stackIn_17_0 = lp.field_rb;
+          stackIn_17_0 = lp.currentScreen;
           stackIn_17_1 = true;
           stackIn_18_2 = (param0) && (var3 == 0);
           ((GameScreen) (Object) stackIn_17_0).advanceScreen(stackIn_17_1, stackIn_18_2, -104);
         }
         if (var3 != 0) {
-          if ((pe.field_o != hd.field_d ||
+          if ((pe.field_o != hd.pendingScreen ||
             pe.field_o.field_p) &&
-            hd.field_d != null) {
-            hd.field_d.advanceScreen(false, false, -82);
+            hd.pendingScreen != null) {
+            hd.pendingScreen.advanceScreen(false, false, -82);
           }
           kh.field_a = kh.field_a + 1;
           if (32 == kh.field_a) {
@@ -105,7 +105,7 @@ public final class BrickABrac extends sa {
           }
         } else {
           if (pe.field_o != null &&
-            lp.field_rb != pe.field_o &&
+            lp.currentScreen != pe.field_o &&
             pe.field_o.field_p) {
             pe.field_o.advanceScreen(false, false, -81);
           }
@@ -208,7 +208,7 @@ public final class BrickABrac extends sa {
           if (9 == param2) {
             sk.i((byte) -113);
             vh.field_L = false;
-            ng.a(false, param1 + 66, 11);
+            ng.requestScreen(false, param1 + 66, 11);
             kk.a(true, param0.readCp1252String(-1));
             return true;
           }
@@ -218,14 +218,14 @@ public final class BrickABrac extends sa {
             hn.a(lh.f(115), kb.h(param1 - 45), param1 ^ 12);
             vh.field_L = false;
             ue.field_c = true;
-            ng.a(false, 113, -2);
+            ng.requestScreen(false, 113, -2);
             return true;
           }
           if (param2 == 15) {
             if (ue.field_c) {
               eq.a(7);
               an.d((byte) -56);
-              ng.a(false, param1 + 43, 0);
+              ng.requestScreen(false, param1 + 43, 0);
               ue.field_c = false;
               cc.field_G = true;
               dp.field_y = true;
@@ -273,7 +273,7 @@ public final class BrickABrac extends sa {
             var5_arrayLifetime2 = var21;
             var47 = var4;
             for (var7 = 0; var7 < 8; var7++) {
-              var21[var7] = ud.d(var36[var7], var47[var7]);
+              var21[var7] = LevelSelectScreen.d(var36[var7], var47[var7]);
             }
             var37 = pl.field_b;
             var29 = var37;
@@ -281,7 +281,7 @@ public final class BrickABrac extends sa {
             var5_arrayLifetime3 = var23;
             var48 = var4;
             for (var7 = 0; var7 < 8; var7++) {
-              var23[var7] = ud.d(var37[var7], var48[var7]);
+              var23[var7] = LevelSelectScreen.d(var37[var7], var48[var7]);
             }
             return true;
           }
@@ -319,7 +319,7 @@ public final class BrickABrac extends sa {
                 cc.field_G = true;
                 pf.field_p = true;
                 Brick.field_E = 0;
-                ng.a(false, 125, -2);
+                ng.requestScreen(false, 125, -2);
               }
               ed.field_d = false;
               return true;
@@ -429,7 +429,7 @@ public final class BrickABrac extends sa {
           ed.field_d = false;
           r.field_A = false;
           pf.field_p = false;
-          ng.a(false, param1 ^ 105, -1);
+          ng.requestScreen(false, param1 ^ 105, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -462,13 +462,13 @@ public final class BrickABrac extends sa {
         if (param0 != 1) {
           return;
         }
-        if (lp.field_rb.field_a == 9 &&
+        if (lp.currentScreen.screenId == 9 &&
           !ib.a(pl.field_b, -1)) {
-          ng.a(false, 69, 5);
+          ng.requestScreen(false, 69, 5);
         } else {
           if (sl.field_z != 2147483647) {
             if (sl.field_z != -2) {
-              ng.a(false, param0 + 55, sl.field_z);
+              ng.requestScreen(false, param0 + 55, sl.field_z);
             } else {
               cb.b(true);
             }
@@ -491,12 +491,12 @@ public final class BrickABrac extends sa {
             if (pe.field_o != null &&
               !pe.field_o.c(param1 + 94)) {
               kk.a(true, sg.field_k);
-              ng.a(false, param1 ^ 118, 11);
+              ng.requestScreen(false, param1 ^ 118, 11);
             } else {
-              ng.a(false, 120, 0);
+              ng.requestScreen(false, 120, 0);
             }
-            if (lp.field_rb instanceof km) {
-              ((km) (lp.field_rb)).a(false, 0, param1 + 116);
+            if (lp.currentScreen instanceof MenuScreen) {
+              ((MenuScreen) (lp.currentScreen)).onEnter(false, 0, param1 + 116);
             }
             ue.field_c = false;
           }
@@ -537,10 +537,10 @@ public final class BrickABrac extends sa {
         if (param2 > -58) {
           this.b(78, 8);
         }
-        if (null != hd.field_d) {
+        if (null != hd.pendingScreen) {
           return false;
         }
-        return null != lp.field_rb ? lp.field_rb.handleKey(param1, 106, param0) : false;
+        return null != lp.currentScreen ? lp.currentScreen.handleKey(param1, 106, param0) : false;
     }
 
     final static int c(int param0, int param1) {
@@ -560,9 +560,9 @@ public final class BrickABrac extends sa {
         b.a(true);
         fd.a(0);
         LevelSequence.a((byte) 70);
-        km.b(-107);
+        MenuScreen.b(-107);
         uk.f((byte) 88);
-        ud.f((byte) -115);
+        LevelSelectScreen.f((byte) -115);
         ld.g(-25617);
         la.a((byte) -75);
         v.a(false);
@@ -609,11 +609,11 @@ public final class BrickABrac extends sa {
         dj.a((byte) 66);
         nb.a(-125);
         s.c(4862);
-        wg.a(0);
+        GameCanvas.a(0);
         qn.b(0);
         ng.a((byte) -49);
         GameScreen.c((byte) -91);
-        of.a(-2);
+        BlankScreen.a(-2);
         GameplayScreen.d(81);
         Brick.d(4641);
         IntrusiveNode.a(true);
@@ -630,7 +630,7 @@ public final class BrickABrac extends sa {
         BrickMotionPath.b(true);
         ij.c(false);
         cf.a(-12251);
-        q.a((byte) -32);
+        MenuButton.a((byte) -32);
         hh.a(true);
         kk.a(0);
         w.d((byte) 102);
@@ -640,7 +640,7 @@ public final class BrickABrac extends sa {
         jj.a(true);
         sq.a((byte) -11);
         nl.a(-106);
-        re.b((byte) -60);
+        MenuSelection.b((byte) -60);
         ed.a(-104);
         ki.a((byte) 7);
         rb.a((byte) -116);
@@ -714,7 +714,7 @@ public final class BrickABrac extends sa {
         ko.a((byte) 117);
         im.a(-32);
         bc.a((byte) -59);
-        rp.c(!param0 ? true : false);
+        MainMenuScreen.c(!param0 ? true : false);
         lh.f((byte) -101);
         ah.f(-5);
         lf.g(-118);
@@ -722,9 +722,9 @@ public final class BrickABrac extends sa {
         af.f((byte) -106);
         di.a(8070);
         hq.f(550);
-        de.g(2);
+        MembershipBenefitsScreen.g(2);
         ol.f(14529);
-        vp.f(0);
+        TimedSplashScreen.f(0);
         ta.a(0);
         np.a(true);
         rn.b(57);

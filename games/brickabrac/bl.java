@@ -9,11 +9,11 @@ final class bl extends af {
     static String field_I;
     static String field_K;
 
-    final void d(int param0) {
-        if (param0 > -60) {
+    final void refreshMenu(int obfuscationGuard) {
+        if (obfuscationGuard > -60) {
           this.a(-74, (byte) 4);
         }
-        this.a(mi.field_b, 0);
+        this.initializeButtons(mi.field_b, 0);
     }
 
     final static String a(int param0, boolean param1, CharSequence param2) {

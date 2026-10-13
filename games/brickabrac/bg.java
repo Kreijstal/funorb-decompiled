@@ -46,33 +46,33 @@ final class bg extends IntrusiveNode {
         field_p = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
-        if (param3 <= 32) {
+    final static boolean containsRectanglePoint(int left, int rectangleHeight, int rectangleWidth, byte obfuscationGuard, int pointY, int pointX, int top) {
+        if (obfuscationGuard <= 32) {
           field_r = -47;
-          if (param5 < param0) {
+          if (pointX < left) {
             return false;
           }
-          if (param0 + param2 <= param5) {
+          if (left + rectangleWidth <= pointX) {
             return false;
           }
-          if (param6 > param4) {
+          if (top > pointY) {
             return false;
           }
-          if (param1 + param6 > param4) {
+          if (rectangleHeight + top > pointY) {
             return true;
           }
           return false;
         }
-        if (param5 < param0) {
+        if (pointX < left) {
           return false;
         }
-        if (param0 + param2 <= param5) {
+        if (left + rectangleWidth <= pointX) {
           return false;
         }
-        if (param6 > param4) {
+        if (top > pointY) {
           return false;
         }
-        if (param1 + param6 > param4) {
+        if (rectangleHeight + top > pointY) {
           return true;
         }
         return false;

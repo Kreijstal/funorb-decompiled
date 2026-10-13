@@ -219,7 +219,7 @@ abstract class qg extends ke {
         if (n.field_e) {
           return -1;
         }
-        int var2 = wp.a(ud.d(true), true, true, this.field_s, this.field_C, MotionWaypoint.b(false));
+        int var2 = wp.a(LevelSelectScreen.d(true), true, true, this.field_s, this.field_C, MotionWaypoint.b(false));
         if (var2 == param0) {
           return -1;
         }
@@ -344,7 +344,7 @@ abstract class qg extends ke {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = wg.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), fc.a(param1 ^ 115), aa.a(480), ud.d(true), this.field_C);
+            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), fc.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.field_C);
             if (-1 != var5_intLifetime1) {
               vh.a(var5_intLifetime1, (byte) -123, eo.field_e, co.field_f);
               eo.field_e = null;
@@ -358,7 +358,7 @@ abstract class qg extends ke {
               pp.a((byte) 79);
             }
             if (!param2) {
-              var5_intLifetime2 = wp.a(ud.d(true), false, true, this.field_s, this.field_C, MotionWaypoint.b(false));
+              var5_intLifetime2 = wp.a(LevelSelectScreen.d(true), false, true, this.field_s, this.field_C, MotionWaypoint.b(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   tf.a(eo.field_e, (byte) -77, var5_intLifetime2);
@@ -553,7 +553,7 @@ abstract class qg extends ke {
                       wl.c(false);
                     }
                   } else {
-                    re.f((byte) -71);
+                    MenuSelection.f((byte) -71);
                   }
                 }
               } else {
@@ -736,7 +736,7 @@ abstract class qg extends ke {
           tm.field_a == 0) {
           stackIn_23_0 = (tm.field_a != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          tm.field_a = wg.a(false);
+          tm.field_a = GameCanvas.a(false);
           if (var3Lifetime1 != 0 &&
             tm.field_a == 0 &&
             i.field_j == 11 &&
@@ -864,7 +864,7 @@ abstract class qg extends ke {
           vh.field_S = null;
           ma.field_P = null;
           ja.field_c = null;
-          km.a((java.applet.Applet) (this), -90);
+          MenuScreen.a((java.applet.Applet) (this), -90);
           hc.b(2);
           field_A = 10;
         }
@@ -932,7 +932,7 @@ abstract class qg extends ke {
           return;
         }
         jl.field_e.readCipheredBytes(false, 0, var4, var5);
-        fk.a((byte) 114, uc.e((byte) -73), q.a(var5, (byte) 70), var3 != 0);
+        fk.a((byte) 114, uc.e((byte) -73), MenuButton.a(var5, (byte) 70), var3 != 0);
     }
 
     static {

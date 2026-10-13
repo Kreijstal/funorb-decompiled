@@ -53,8 +53,8 @@ final class vq extends oq {
         super(18, gb.field_i, gb.field_i);
     }
 
-    final void c(int param0) {
-        if (param0 != -1) {
+    final void navigateBack(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           this.drawScreen((byte) 35);
         }
     }

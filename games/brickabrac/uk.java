@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends km {
+final class uk extends MenuScreen {
     static mh field_r;
     static String field_u;
     static mh field_s;
@@ -146,14 +146,14 @@ final class uk extends km {
         super(11, 180, 460, 402, 0, new int[]{7});
     }
 
-    final void a(boolean param0, int param1, int param2) {
-        if (param2 >= 96) {
-          super.a(param0, param1, 103);
+    final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
+        if (obfuscationGuard >= 96) {
+          super.onEnter(usePointer, initialSelection, 103);
           return;
         }
         StringBuilder var5 = (StringBuilder) null;
         uk.a('3', (StringBuilder) null, 57, true);
-        super.a(param0, param1, 103);
+        super.onEnter(usePointer, initialSelection, 103);
     }
 
     final static StringBuilder a(char param0, StringBuilder param1, int param2, boolean param3) {
@@ -206,20 +206,20 @@ final class uk extends km {
         }
     }
 
-    final void b(boolean param0) {
+    final void layoutButtons(boolean obfuscationGuard) {
         this.e(2);
-        if (param0) {
+        if (obfuscationGuard) {
           return;
         }
         uk.f((byte) -66);
     }
 
-    final int b(int param0, int param1) {
-        if (param1 != 1) {
+    final int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           uk.f((byte) 127);
-          return this.field_p;
+          return this.buttonTop;
         }
-        return this.field_p;
+        return this.buttonTop;
     }
 
     static {

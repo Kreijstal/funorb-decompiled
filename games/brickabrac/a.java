@@ -29,10 +29,10 @@ final class a extends ih {
           if (oa.field_Sb == null) {
             return;
           }
-          var3_int = 256 * km.field_i / 32;
+          var3_int = 256 * MenuScreen.field_i / 32;
           var4 = oa.field_Sb.c((byte) -123);
           if (var4 != null) {
-            if (km.field_i == 0) {
+            if (MenuScreen.field_i == 0) {
               var4.drawTransparent(-var4.canvasWidth + 640, 470 - var4.canvasHeight);
             } else {
               var4.b(-var4.canvasWidth + 640, 470 - var4.canvasHeight, 256 - var3_int);
@@ -41,7 +41,7 @@ final class a extends ih {
           if (param0 != 640) {
             field_r = (String) null;
           }
-          if (km.field_i > 0 &&
+          if (MenuScreen.field_i > 0 &&
             ih.field_k != null) {
             ih.field_k.b(640 - ih.field_k.canvasWidth, 480 - ih.field_k.canvasHeight - 10, var3_int);
           }
@@ -55,7 +55,7 @@ final class a extends ih {
             var9 = var7[var6];
             var9.drawTransparent(-20 + (-var9.canvasWidth + 640), 520 - var9.canvasHeight);
           }
-          if (km.field_i > 0) {
+          if (MenuScreen.field_i > 0) {
             if (null == fq.field_c) {
               return;
             }

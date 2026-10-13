@@ -50,24 +50,24 @@ abstract class hb extends DualLinkNode {
         }
         param4 = 256 - param4;
         if (param8 != 0) {
-          rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
-          rp.a(param0, 65280, param6, param4, param1, param2);
-          rp.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
-          rp.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
-          rp.a(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
+          MainMenuScreen.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
+          MainMenuScreen.a(param0, 65280, param6, param4, param1, param2);
+          MainMenuScreen.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
+          MainMenuScreen.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
+          MainMenuScreen.a(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
           nh.a(14 + param6, param5 + 14, -40, -7 + param0, cd.field_h, param2 - 7);
           return;
         }
         if (0 == param1) {
-          rp.a(param0, 65280, param6, param4, param5, param2);
+          MainMenuScreen.a(param0, 65280, param6, param4, param5, param2);
           nh.a(14 + param6, param5 + 14, -40, -7 + param0, cd.field_h, param2 - 7);
           return;
         }
-        rp.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
-        rp.a(param0, 65280, param6, param4, param1, param2);
-        rp.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
-        rp.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
-        rp.a(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
+        MainMenuScreen.a(param8 + param0, 65280, -(param8 * 2) + param6, param4 * param7 >> 8, -(param1 * 2) + param5, param1 + param2);
+        MainMenuScreen.a(param0, 65280, param6, param4, param1, param2);
+        MainMenuScreen.a(param0, 65280, param6, param4, param1, param2 + param5 - param1);
+        MainMenuScreen.a(param0, 65280, param8, param4, -(2 * param1) + param5, param2 + param1);
+        MainMenuScreen.a(-param8 + param0 + param6, 65280, param8, param4, param5 - 2 * param1, param1 + param2);
         nh.a(14 + param6, param5 + 14, -40, -7 + param0, cd.field_h, param2 - 7);
     }
 

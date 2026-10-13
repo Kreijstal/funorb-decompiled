@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lh extends km {
+class lh extends MenuScreen {
     static String field_r;
     static String field_t;
     static tg field_s;
@@ -23,16 +23,16 @@ class lh extends km {
     }
 
     final void g(int param0) {
-        q var5 = null;
-        q var2 = this.field_m[0];
+        MenuButton var5 = null;
+        MenuButton var2 = this.buttons[0];
         if (param0 > 34) {
-          var5 = this.field_m[this.field_h.field_r - 1];
-          im.a(30 + (-this.field_j + this.field_l), 0, -var2.field_a + var5.field_d + (var5.field_a + 30), 0, -15 + var2.field_a, (byte) -88, -15 + this.field_j);
+          var5 = this.buttons[this.selection.itemCount - 1];
+          im.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var5.height + (var5.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
           return;
         }
         field_t = (String) null;
-        q var4 = this.field_m[this.field_h.field_r - 1];
-        im.a(30 + (-this.field_j + this.field_l), 0, -var2.field_a + var4.field_d + (var4.field_a + 30), 0, -15 + var2.field_a, (byte) -88, -15 + this.field_j);
+        MenuButton var4 = this.buttons[this.selection.itemCount - 1];
+        im.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var4.height + (var4.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
     }
 
     final static mh f(int param0) {
@@ -187,10 +187,10 @@ class lh extends km {
         }
     }
 
-    int b(int param0, int param1) {
-        int var3 = super.b(param0, param1);
-        if (param0 == -1 + this.field_h.field_r) {
-          var3 = var3 + this.field_q / 2;
+    int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        int var3 = super.getButtonTop(buttonIndex, obfuscationGuard);
+        if (buttonIndex == -1 + this.selection.itemCount) {
+          var3 = var3 + this.buttonSpacing / 2;
         }
         return var3;
     }

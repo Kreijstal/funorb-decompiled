@@ -67,8 +67,8 @@ final class hn {
           if (param0.field_bb == null) {
             param0.field_bb = new NodeDeque();
           }
-          if (null == of.field_i) {
-            of.field_i = new mk(64);
+          if (null == BlankScreen.field_i) {
+            BlankScreen.field_i = new mk(64);
           }
           if (tf.field_d == null) {
             tf.field_d = new mk(64);

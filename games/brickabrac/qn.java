@@ -153,12 +153,12 @@ final class qn {
         ag.field_E = -fr.field_k + wo.field_a;
     }
 
-    final wg a(boolean param0) {
+    final GameCanvas a(boolean param0) {
         this.field_d = be.field_g;
         this.field_l = to.field_b;
         this.field_e.a(this.field_q, this.field_s, -93);
         tn.field_A = false;
-        wg var2 = ff.a(0, 0, this.field_q, this.field_s, param0, lp.field_ub);
+        GameCanvas var2 = ff.a(0, 0, this.field_q, this.field_s, param0, lp.field_ub);
         if (var2 == null) {
           this.a(102);
         }

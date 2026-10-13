@@ -15,13 +15,13 @@ abstract class ff {
 
     abstract void a(int param0, PacketBuffer param1);
 
-    final static wg a(int param0, int param1, int param2, int param3, boolean param4, tg param5) {
+    final static GameCanvas a(int param0, int param1, int param2, int param3, boolean param4, tg param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        wg var7 = null;
+        GameCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        wg stackIn_6_0 = null;
+        GameCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -31,11 +31,11 @@ abstract class ff {
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (wg) (stackIn_2_0);
+            return (GameCanvas) (stackIn_2_0);
           }
-          var7 = new wg();
-          var7.field_a = var8;
-          var7.field_a.add((java.awt.Component) ((Object) var7));
+          var7 = new GameCanvas();
+          var7.window = var8;
+          var7.window.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param2, param3);
           var7.addFocusListener(var7);
           if (!param4) {

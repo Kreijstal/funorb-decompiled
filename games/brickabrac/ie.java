@@ -1038,14 +1038,14 @@ final class ie extends qd {
         }
         if (64 == var5Lifetime4) {
           if (var6Lifetime3 >= 64) {
-            this.field_n[var4Lifetime4] = ud.d(this.field_n[var4Lifetime4], 1);
+            this.field_n[var4Lifetime4] = LevelSelectScreen.d(this.field_n[var4Lifetime4], 1);
           } else {
             this.field_n[var4Lifetime4] = ik.a(this.field_n[var4Lifetime4], -2);
           }
         }
         if (var5Lifetime4 == 65) {
           if (var6Lifetime3 >= 64) {
-            this.field_n[var4Lifetime4] = ud.d(this.field_n[var4Lifetime4], 2);
+            this.field_n[var4Lifetime4] = LevelSelectScreen.d(this.field_n[var4Lifetime4], 2);
           } else {
             this.a(0, var4Lifetime4);
             this.field_n[var4Lifetime4] = ik.a(this.field_n[var4Lifetime4], -3);
@@ -1092,7 +1092,7 @@ final class ie extends qd {
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 >= 64) {
-            this.field_n[var4Lifetime4] = ud.d(this.field_n[var4Lifetime4], 4);
+            this.field_n[var4Lifetime4] = LevelSelectScreen.d(this.field_n[var4Lifetime4], 4);
           } else {
             this.c(var4Lifetime4, 0);
             this.field_n[var4Lifetime4] = ik.a(this.field_n[var4Lifetime4], -5);

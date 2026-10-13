@@ -606,7 +606,7 @@ final class mf {
               if (param0 > -58) {
                 mf.a(false);
               }
-              stackIn_12_0 = wg.field_c;
+              stackIn_12_0 = GameCanvas.field_c;
               return stackIn_12_0;
             }
             var4 = param1.charAt(var3);

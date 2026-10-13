@@ -47,14 +47,14 @@ final class im {
             lh.field_s = param8;
             ko.field_e = param0;
             qb.field_u = param2;
-            rp.field_x = param7;
+            MainMenuScreen.field_x = param7;
             if (param9 <= 121) {
               im.b(47);
             }
             dl.field_b = param13;
             pj.field_a = param12;
             ec.field_O = param10;
-            ud.field_E = param11;
+            LevelSelectScreen.field_E = param11;
             pe.field_r = param3;
             if (null == lh.field_s.field_k) {
               return;

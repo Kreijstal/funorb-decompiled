@@ -25,7 +25,7 @@ class mh extends ba {
     private int field_sb;
     private int field_yb;
     String field_Cb;
-    static re field_H;
+    static MenuSelection field_H;
     boolean field_G;
     int field_Ob;
     int field_Q;
@@ -819,7 +819,7 @@ class mh extends ba {
     }
 
     static {
-        field_H = new re(1);
+        field_H = new MenuSelection(1);
         field_Z = "Game";
         field_gb = -1;
         field_mb = "Log in / Create account";

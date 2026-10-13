@@ -19,7 +19,7 @@ final class qb extends ki {
         if (this.b((byte) -122)) {
           var6 = kd.a(this.field_m, param3, (byte) -36);
           if (!var6.a((byte) -84, param3, this.field_m)) {
-            qf.a(param3, var6, 2, rp.field_w, -13, false);
+            qf.a(param3, var6, 2, MainMenuScreen.field_w, -13, false);
             var6.a(this.field_m, param3, (byte) 78);
           }
           dg.a(-899814320, 306, param2, cr.field_D, var6.field_p, param0, 2, ep.field_b, param4, -13);
@@ -110,7 +110,7 @@ final class qb extends ki {
         }
         cr.field_D = jh.a(0, lc.field_e);
         ep.field_b = jh.a(0, rm.field_f);
-        rp.field_w = jh.a(0, dm.field_f);
+        MainMenuScreen.field_w = jh.a(0, dm.field_f);
         return true;
     }
 

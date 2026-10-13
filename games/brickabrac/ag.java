@@ -8,7 +8,7 @@ abstract class ag extends oc implements sd {
     static int[] field_M;
     static String field_I;
     static mf field_G;
-    static String[] field_D;
+    static String[] buttonLabels;
     static String field_J;
     static int[] field_L;
     static int field_E;
@@ -105,7 +105,7 @@ abstract class ag extends oc implements sd {
         field_M = null;
         field_I = null;
         field_L = null;
-        field_D = null;
+        buttonLabels = null;
         field_J = null;
         field_K = null;
         field_C = null;
@@ -615,7 +615,7 @@ abstract class ag extends oc implements sd {
         if (param0 >= 6) {
           return null;
         }
-        field_D = (String[]) null;
+        buttonLabels = (String[]) null;
         return null;
     }
 
@@ -743,7 +743,7 @@ abstract class ag extends oc implements sd {
         field_I = "Spectate";
         for (var0 = 0; var0 < 256; var0++) {
           var1 = var0;
-          field_M[var0] = ud.d(ud.d(var1 << 16, var1 << 8), 0 * var1);
+          field_M[var0] = LevelSelectScreen.d(LevelSelectScreen.d(var1 << 16, var1 << 8), 0 * var1);
         }
         field_J = "Find opponents";
         field_L = new int[]{7, 40, 41};

@@ -252,7 +252,7 @@ final class ip extends ki {
                 }
               }
               if (decompiledFrameCompleted4) {
-                rh.field_d[var7 / 8] = (byte)ud.d((int) rh.field_d[var7 / 8], 1 << var7 % 8);
+                rh.field_d[var7 / 8] = (byte)LevelSelectScreen.d((int) rh.field_d[var7 / 8], 1 << var7 % 8);
               }
             }
             stackIn_63_0 = (param2) ? -1 : 0;

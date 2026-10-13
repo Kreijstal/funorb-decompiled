@@ -108,7 +108,7 @@ final class hc {
         int var2 = BrickABrac.field_J ? 1 : 0;
         int var1_intLifetime1;
         try {
-          re.field_b.a(1);
+          MenuSelection.field_b.a(1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             ig.field_M[var1_int] = 0L;
           }
@@ -201,7 +201,7 @@ final class hc {
             }
           }
           np.field_a = 15;
-          re.field_g = 2;
+          MenuSelection.field_g = 2;
           om.field_oc = 4;
           if (param0 < 102) {
             return;
@@ -231,7 +231,7 @@ final class hc {
           qh.field_j = new mh(0L, var8);
           qh.field_j.field_Jb = qg.a(cr.a("lobby", param3, "heading", 2), (byte) -117);
           lp.field_Ab = new mh(0L, (mh) null);
-          lp.field_Ab.field_Jb = vp.a(false, (byte) 83, 8421504, 120, 4210752, false);
+          lp.field_Ab.field_Jb = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
           f.field_a = new mh(0L, (mh) null);
           f.field_a.field_Jb = na.a(false, 6316128, 3, 6316128, 114, 1);
           ij.field_c = new mh(0L, (mh) null);
@@ -245,16 +245,16 @@ final class hc {
           am.field_Zb.field_wb = pl.a("lobby", "closebutton", (byte) -90, param3);
           am.field_Zb.field_T = pl.a("lobby", "closebutton_mouseover", (byte) 119, param3);
           lj.field_k = new mh(0L, var8);
-          lj.field_k.field_Jb = vp.a(true, (byte) 57, 3815994, 40, 2039583, true);
-          rp.field_t = new mh(0L, var10);
-          rp.field_t.field_V = 2;
-          rp.field_t.field_Jb = vp.a(true, (byte) 44, 3815994, 30, 2039583, false);
+          lj.field_k.field_Jb = TimedSplashScreen.a(true, (byte) 57, 3815994, 40, 2039583, true);
+          MainMenuScreen.field_t = new mh(0L, var10);
+          MainMenuScreen.field_t.field_V = 2;
+          MainMenuScreen.field_t.field_Jb = TimedSplashScreen.a(true, (byte) 44, 3815994, 30, 2039583, false);
           cd.field_d = new mh(0L, var10);
           cd.field_d.field_V = 2;
-          cd.field_d.field_Jb = vp.a(false, (byte) 77, 3815994, 30, 2039583, false);
+          cd.field_d.field_Jb = TimedSplashScreen.a(false, (byte) 77, 3815994, 30, 2039583, false);
           ik.field_a = new mh(0L, var10);
           ik.field_a.field_V = 2;
-          ik.field_a.field_Jb = vp.a(false, (byte) 83, 3815994, 30, 2039583, true);
+          ik.field_a.field_Jb = TimedSplashScreen.a(false, (byte) 83, 3815994, 30, 2039583, true);
           ad.field_l = new mh(0L, (mh) null);
           ad.field_l.field_Q = 1;
           ad.field_l.field_O = (dh) ((Object) rd.field_e);
@@ -271,10 +271,10 @@ final class hc {
           var15.field_X = 16777215;
           var15.field_R = np.field_a;
           Paddle.field_C = new mh(0L, ad.field_l);
-          Paddle.field_C.field_Jb = vp.a(false, (byte) 94, 2236962, 16, 2236962, false);
+          Paddle.field_C.field_Jb = TimedSplashScreen.a(false, (byte) 94, 2236962, 16, 2236962, false);
           Paddle.field_C.field_V = 2;
           wi.field_n = new mh(0L, ad.field_l);
-          wi.field_n.field_Jb = vp.a(false, (byte) 80, 1513239, 16, 1513239, false);
+          wi.field_n.field_Jb = TimedSplashScreen.a(false, (byte) 80, 1513239, 16, 1513239, false);
           wi.field_n.field_V = 2;
           fp.field_v = new mh(0L, Paddle.field_C);
           fp.field_v.a((byte) -82, DualLinkNode.field_t);
@@ -361,7 +361,7 @@ final class hc {
           fp.field_u.field_pb = dupTemp$3;
           fp.field_u.field_D = dupTemp$3;
           var17 = cr.a("lobby", param3, "checkbox", 2);
-          of.field_k = new ni(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
+          BlankScreen.field_k = new ni(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
           kb.field_Vb = new mh(0L, (mh) null);
           kb.field_Vb.field_Jb = jf.a(pl.a("lobby", "slideregion", (byte) -95, param3), -52);
           kb.field_Vb.field_Gb = jf.a(pl.a("lobby", "slideregion_mouseover", (byte) 104, param3), -71);

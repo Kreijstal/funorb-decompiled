@@ -321,7 +321,7 @@ final class cr extends oc {
           boolean decompiledFrameRemainder0 = true;
           if (eq.field_g != null) {
             if (0 <= param0) {
-              decompiledFrameRemainder0 = (q.field_i == rf.field_b);
+              decompiledFrameRemainder0 = (MenuButton.field_i == rf.field_b);
               if ((decompiledFrameRemainder0) && (k.field_h.position == 0 &&
                 BrickMotionPath.field_q + 10000L < ue.a(false))) {
                 k.field_h.writeCipheredOpcode(-13413, param0);

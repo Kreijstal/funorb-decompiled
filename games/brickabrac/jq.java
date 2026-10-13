@@ -66,11 +66,11 @@ final class jq extends bc {
           lk.field_p = var1_int + LevelPack.field_k;
           var2 = mi.field_d;
           for (var3 = 0; var3 < kn.field_E.length; var3++) {
-            var4 = re.field_q[var3];
+            var4 = MenuSelection.field_q[var3];
             if (var4 < 0) {
               var5 = qh.field_d;
             } else {
-              if (fi.field_r.field_j != var4) {
+              if (fi.field_r.selectedIndex != var4) {
                 var5 = ug.field_I;
               } else {
                 var5 = om.field_hc;
@@ -84,20 +84,20 @@ final class jq extends bc {
             var8 = cc.field_J - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + dj.field_g;
-              if (fi.field_r.field_j != var4) {
+              if (fi.field_r.selectedIndex != var4) {
                 stackIn_17_0 = ag.field_F;
               } else {
                 stackIn_17_0 = uc.field_l;
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((ek.field_lb << 1) + var7, (wg.field_f << 1) + nq.field_i, -ek.field_lb + var8, false, var2);
+                var9.a((ek.field_lb << 1) + var7, (GameCanvas.field_f << 1) + nq.field_i, -ek.field_lb + var8, false, var2);
               }
-              var2 = var2 + wg.field_f;
+              var2 = var2 + GameCanvas.field_f;
             }
             if (var4 >= 0) {
               lj.field_r.c(var6, var8, lj.field_i + var2, var5, -1);
-              var2 = var2 + (nq.field_i + dj.field_g + wg.field_f);
+              var2 = var2 + (nq.field_i + dj.field_g + GameCanvas.field_f);
             } else {
               oc.field_m.c(var6, var8, gp.field_b + var2, var5, -1);
               var2 = var2 + wh.field_m;

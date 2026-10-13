@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends GameScreen {
+final class BlankScreen extends GameScreen {
     static ni field_k;
     static String field_j;
     static String field_h;
     static mk field_i;
 
-    of() {
+    BlankScreen() {
         super(-2);
     }
 
     final void drawScreen(byte obfuscationGuard) {
         Rasterizer2D.clear();
         if (obfuscationGuard > -14) {
-          of.a(-57);
+          BlankScreen.a(-57);
         }
     }
 
@@ -37,7 +37,7 @@ final class of extends GameScreen {
     final static void a(int param0, og param1) {
         try {
           if (param0 != -2) {
-            of.d((byte) 104);
+            BlankScreen.d((byte) 104);
           }
           wd.field_w.a(param1, 0);
         } catch (RuntimeException runtimeException) {

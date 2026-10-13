@@ -33,9 +33,9 @@ final class gn extends ld {
         }
     }
 
-    final boolean a(byte param0, int param1) {
-        int var3 = this.field_m[param1].field_f;
-        if (param0 < 80) {
+    final boolean isButtonEnabled(byte obfuscationGuard, int buttonIndex) {
+        int var3 = this.buttons[buttonIndex].actionId;
+        if (obfuscationGuard < 80) {
           field_C = -10L;
           if (eg.field_k) {
             return var3 != 12 ? true : false;
@@ -121,8 +121,8 @@ final class gn extends ld {
         return gp.field_d.field_db;
     }
 
-    final void c(int param0) {
-        if (param0 != -1) {
+    final void navigateBack(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           gn.i(-22);
           da.f((byte) 122);
           return;

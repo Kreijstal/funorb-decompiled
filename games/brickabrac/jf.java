@@ -141,9 +141,9 @@ final class jf {
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
         int var3 = 26 % ((param0 - 50) / 56);
-        q var2 = this.field_a.field_m[this.field_h];
-        int var4 = var2.field_c;
-        int var5 = var2.field_a;
+        MenuButton var2 = this.field_a.buttons[this.field_h];
+        int var4 = var2.x;
+        int var5 = var2.y;
         for (var6 = 0; var6 < this.field_f; var6++) {
           if (this.field_i == var6) {
             nb.a(-111, var5, var4, cm.field_r[var6]);
@@ -159,20 +159,20 @@ final class jf {
         int var3;
         int var4;
         int var6;
-        q var7;
+        MenuButton var7;
         var6 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_a.field_h.field_j != this.field_h) {
+        if (this.field_a.selection.selectedIndex != this.field_h) {
           this.field_e = -1;
           this.field_b = false;
           this.field_j = -1;
           this.field_i = -1;
         } else {
-          var7 = this.field_a.field_m[this.field_h];
+          var7 = this.field_a.buttons[this.field_h];
           if (!this.field_b ||
             pq.field_k != this.field_e ||
             this.field_j != po.field_a) {
-            var3 = var7.field_c;
-            var4 = var7.field_a;
+            var3 = var7.x;
+            var4 = var7.y;
             for (var5 = 0; this.field_f > var5; var5++) {
               if (da.field_E[var5].containsPixel(var3, var4, pq.field_k, po.field_a)) {
                 this.field_i = var5;

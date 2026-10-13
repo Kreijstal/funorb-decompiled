@@ -212,7 +212,7 @@ final class so {
           for (var10_intLifetime1 = 0; lo.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
             CircleBody.field_t[var10_intLifetime1] = cr.a("basic", param0, lo.field_c[var10_intLifetime1], 2);
           }
-          re.field_k = pl.a("basic", "ball", (byte) 121, param0);
+          MenuSelection.field_k = pl.a("basic", "ball", (byte) 121, param0);
           Ball.field_D = pl.a("basic", "steelball", (byte) 98, param0);
           h.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
           dg.field_b = cr.a("basic", param0, "paddlecaps", param3 - 29135);
@@ -266,9 +266,9 @@ final class so {
           ep.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
           ep.field_j.bindRasterTarget();
           dk.field_R.a(0, 0);
-          p.field_i = new RgbSprite(re.field_k.canvasWidth / 2, re.field_k.canvasHeight / 2);
+          p.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
           p.field_i.bindRasterTarget();
-          re.field_k.a(0, 0);
+          MenuSelection.field_k.a(0, 0);
           mh.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
           mh.field_ib.bindRasterTarget();
           Ball.field_D.a(0, 0);

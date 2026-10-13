@@ -32,7 +32,7 @@ final class kb extends mh {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3 != null && (param4 != 2 ||
-            ud.a(param0, param2, -123))) {
+            LevelSelectScreen.a(param0, param2, -123))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }
@@ -137,12 +137,12 @@ final class kb extends mh {
             if (var4 == 45) {
               if (var3 == 0 ||
                 var3 == var2_int - 1) {
-                stackIn_17_0 = wg.field_c;
+                stackIn_17_0 = GameCanvas.field_c;
                 return stackIn_17_0;
               }
             } else {
               if (IntNode.field_k.indexOf(var4) == -1) {
-                stackIn_20_0 = wg.field_c;
+                stackIn_20_0 = GameCanvas.field_c;
                 return stackIn_20_0;
               }
             }
@@ -197,10 +197,10 @@ final class kb extends mh {
           var9.field_S = 1;
           var10 = 50;
           var11 = 0;
-          for (var12 = 0; re.field_p.length > var12; var12++) {
+          for (var12 = 0; MenuSelection.field_p.length > var12; var12++) {
             var13 = new mh(0L, param3, qo.field_M[var12]);
-            var14 = new mh(0L, param3, re.field_p[var12]);
-            var15 = param3.field_O.c(re.field_p[var12]);
+            var14 = new mh(0L, param3, MenuSelection.field_p[var12]);
+            var15 = param3.field_O.c(MenuSelection.field_p[var12]);
             var13.a(15, var10, 20, 65, (byte) 64);
             if (var15 > var11) {
               var11 = var15;

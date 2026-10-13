@@ -195,7 +195,7 @@ final class kf extends k {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param1 == null) {
-            stackIn_4_0 = km.field_o;
+            stackIn_4_0 = MenuScreen.field_o;
             return stackIn_4_0;
           }
           var3_int = param1.length();
@@ -227,16 +227,16 @@ final class kf extends k {
                 if (var5 <= 0) {
                   return null;
                 }
-                stackIn_36_0 = q.field_g;
+                stackIn_36_0 = MenuButton.field_g;
                 return stackIn_36_0;
               }
-              stackIn_19_0 = q.field_g;
+              stackIn_19_0 = MenuButton.field_g;
               return stackIn_19_0;
             }
-            stackIn_14_0 = km.field_o;
+            stackIn_14_0 = MenuScreen.field_o;
             return stackIn_14_0;
           }
-          stackIn_9_0 = km.field_o;
+          stackIn_9_0 = MenuScreen.field_o;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

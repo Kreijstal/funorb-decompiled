@@ -260,8 +260,8 @@ final class mp extends mh {
           }
           k.field_h.position = k.field_h.position + 2;
           var5_int = k.field_h.position;
-          k.field_h.writeInt(rp.field_x, (byte) -79);
-          k.field_h.writeLong(-23054, ud.field_E);
+          k.field_h.writeInt(MainMenuScreen.field_x, (byte) -79);
+          k.field_h.writeLong(-23054, LevelSelectScreen.field_E);
           var6 = 0;
           if (qb.field_u) {
             var6 = var6 | 1;

@@ -49,7 +49,7 @@ class bo extends ff {
         if (param0 != 13) {
           return (cd) null;
         }
-        return de.field_v;
+        return MembershipBenefitsScreen.field_v;
     }
 
     static {

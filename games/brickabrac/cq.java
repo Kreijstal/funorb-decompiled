@@ -58,7 +58,7 @@ final class cq extends IntrusiveNode {
           if (bm.field_d != null) {
             bm.field_d.a((byte) -126, param0);
           }
-          de.a(param0, false);
+          MembershipBenefitsScreen.a(param0, false);
           if (null != CircleBody.field_p) {
             CircleBody.field_p.a(true, param0);
           }
@@ -73,7 +73,7 @@ final class cq extends IntrusiveNode {
         if (bm.field_d != null) {
           bm.field_d.a((byte) -126, param0);
         }
-        de.a(param0, false);
+        MembershipBenefitsScreen.a(param0, false);
         if (null != CircleBody.field_p) {
           CircleBody.field_p.a(true, param0);
         }

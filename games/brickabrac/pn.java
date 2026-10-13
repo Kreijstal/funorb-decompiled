@@ -129,7 +129,7 @@ final class pn extends IntrusiveNode {
               }
               if ((decompiledSharedTail0) &&
                 (qo.field_I)) {
-                var4 = "<col=999999>" + var4 + rp.field_y + "</col>";
+                var4 = "<col=999999>" + var4 + MainMenuScreen.field_y + "</col>";
                 var5 = "";
               }
               var9 = jq.field_y.c(var4);
@@ -137,7 +137,7 @@ final class pn extends IntrusiveNode {
                 if (g.field_n.field_kb &&
                   (-g.field_n.field_Eb + pq.field_k) < var9) {
                   if (!um.field_e) {
-                    var1 = rp.field_y;
+                    var1 = MainMenuScreen.field_y;
                   } else {
                     var1 = "Broken!";
                   }

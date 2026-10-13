@@ -3,7 +3,7 @@
  */
 final class ua {
     static String[] field_b;
-    static wg field_d;
+    static GameCanvas field_d;
     static String field_e;
     static NodeDeque field_c;
     static String field_a;
@@ -13,7 +13,7 @@ final class ua {
           if (param3 >= -53) {
             field_e = (String) null;
           }
-          km.a(param6, param0, 3 + (param4 + (param5 - 75) / 2), (param2 - 75) / 2 + param1, true, 4, 3);
+          MenuScreen.a(param6, param0, 3 + (param4 + (param5 - 75) / 2), (param2 - 75) / 2 + param1, true, 4, 3);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ua.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

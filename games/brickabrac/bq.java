@@ -27,11 +27,11 @@ final class bq {
         return go.a(param4, param3, false, param1, param2, true);
     }
 
-    final static km a(int param0, int param1) {
+    final static MenuScreen a(int param0, int param1) {
         if (param1 != 28472) {
-          return (km) null;
+          return (MenuScreen) null;
         }
-        return pg.field_k[param0];
+        return pg.menuScreens[param0];
     }
 
     final static void a(boolean param0, int param1, byte param2) {
@@ -264,7 +264,7 @@ final class bq {
             }
             un.field_g = ue.a(false);
           }
-          mh.field_H.field_r = ri.field_I.length;
+          mh.field_H.itemCount = ri.field_I.length;
           var3_intLifetime1 = 0;
           if (param2 != 104) {
             return;
@@ -295,7 +295,7 @@ final class bq {
               }
             }
           }
-          jj.field_c = mh.field_H.field_r * (kn.field_y + jb.field_H << 1);
+          jj.field_c = mh.field_H.itemCount * (kn.field_y + jb.field_H << 1);
           np.field_b = wi.field_k - (var3_intLifetime1 >> 1);
           ci.field_u = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + wi.field_k);
           for (var4Lifetime2 = 0; qh.field_i.length > var4Lifetime2; var4Lifetime2++) {
@@ -329,9 +329,9 @@ final class bq {
             var4Lifetime3++;
           }
           if (ih.field_p != 2) {
-            mh.field_H.a(qo.b(120, po.field_a, pq.field_k), 0, param0, (byte) -127);
+            mh.field_H.initializeSelection(qo.b(120, po.field_a, pq.field_k), 0, param0, (byte) -127);
           } else {
-            mh.field_H.a(-1, -1, param0, (byte) -128);
+            mh.field_H.initializeSelection(-1, -1, param0, (byte) -128);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

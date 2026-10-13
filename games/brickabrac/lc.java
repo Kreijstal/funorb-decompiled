@@ -6,12 +6,12 @@ final class lc {
     private int field_f;
     static int[] field_l;
     static int field_k;
-    private q field_d;
+    private MenuButton field_d;
     static int[] field_n;
     private boolean field_g;
     static RgbSprite field_e;
     private int field_m;
-    private km field_h;
+    private MenuScreen field_h;
     private int field_b;
     private RgbSprite field_j;
     static int field_i;
@@ -169,19 +169,19 @@ final class lc {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 > 89) {
-          var2 = sa.a(100 * (-this.field_f + de.field_x), -4097) + 65536 >> 12;
-          Rasterizer2D.a(this.field_d.field_c - 2, -2 + this.field_d.field_a, 4 + this.field_d.field_j, this.field_d.field_d + 4, 20, 16777215, (this.field_g ? var2 : 0) + 32);
-          Rasterizer2D.b(this.field_d.field_c, this.field_d.field_a, this.field_d.field_j, this.field_d.field_d, 20, 0);
-          this.field_j.drawTransparent(this.field_d.field_c + 30, this.field_d.field_a + 20);
-          nn.field_g.b(this.field_c, (this.field_d.field_j + this.field_d.field_c * 2) / 2, this.field_d.field_a - (-this.field_d.field_d + 13), !this.field_g ? 0 : 1, -1);
+          var2 = sa.a(100 * (-this.field_f + MembershipBenefitsScreen.field_x), -4097) + 65536 >> 12;
+          Rasterizer2D.a(this.field_d.x - 2, -2 + this.field_d.y, 4 + this.field_d.width, this.field_d.height + 4, 20, 16777215, (this.field_g ? var2 : 0) + 32);
+          Rasterizer2D.b(this.field_d.x, this.field_d.y, this.field_d.width, this.field_d.height, 20, 0);
+          this.field_j.drawTransparent(this.field_d.x + 30, this.field_d.y + 20);
+          nn.field_g.b(this.field_c, (this.field_d.width + this.field_d.x * 2) / 2, this.field_d.y - (-this.field_d.height + 13), !this.field_g ? 0 : 1, -1);
           return;
         }
-        this.field_d = (q) null;
-        var2Lifetime1 = sa.a(100 * (-this.field_f + de.field_x), -4097) + 65536 >> 12;
-        Rasterizer2D.a(this.field_d.field_c - 2, -2 + this.field_d.field_a, 4 + this.field_d.field_j, this.field_d.field_d + 4, 20, 16777215, (this.field_g ? var2Lifetime1 : 0) + 32);
-        Rasterizer2D.b(this.field_d.field_c, this.field_d.field_a, this.field_d.field_j, this.field_d.field_d, 20, 0);
-        this.field_j.drawTransparent(this.field_d.field_c + 30, this.field_d.field_a + 20);
-        nn.field_g.b(this.field_c, (this.field_d.field_j + this.field_d.field_c * 2) / 2, this.field_d.field_a - (-this.field_d.field_d + 13), !this.field_g ? 0 : 1, -1);
+        this.field_d = (MenuButton) null;
+        var2Lifetime1 = sa.a(100 * (-this.field_f + MembershipBenefitsScreen.field_x), -4097) + 65536 >> 12;
+        Rasterizer2D.a(this.field_d.x - 2, -2 + this.field_d.y, 4 + this.field_d.width, this.field_d.height + 4, 20, 16777215, (this.field_g ? var2Lifetime1 : 0) + 32);
+        Rasterizer2D.b(this.field_d.x, this.field_d.y, this.field_d.width, this.field_d.height, 20, 0);
+        this.field_j.drawTransparent(this.field_d.x + 30, this.field_d.y + 20);
+        nn.field_g.b(this.field_c, (this.field_d.width + this.field_d.x * 2) / 2, this.field_d.y - (-this.field_d.height + 13), !this.field_g ? 0 : 1, -1);
     }
 
     public static void a(int param0) {
@@ -201,7 +201,7 @@ final class lc {
         if (param0 != -75) {
           return;
         }
-        if (this.field_h.field_h.field_j != this.field_b) {
+        if (this.field_h.selection.selectedIndex != this.field_b) {
           this.field_g = false;
           return;
         }
@@ -209,11 +209,11 @@ final class lc {
           this.field_g = true;
           return;
         }
-        this.field_f = de.field_x;
+        this.field_f = MembershipBenefitsScreen.field_x;
         this.field_g = true;
     }
 
-    lc(km param0, q param1, int param2, int param3) {
+    lc(MenuScreen param0, MenuButton param1, int param2, int param3) {
         try {
           this.field_m = param3;
           this.field_b = param2;

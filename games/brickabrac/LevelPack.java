@@ -71,7 +71,7 @@ final class LevelPack {
 
     final static mh c(int param0) {
         int var1 = -61 / ((param0 + 36) / 63);
-        return vp.field_u.field_Rb;
+        return TimedSplashScreen.field_u.field_Rb;
     }
 
     LevelPack(int packId, int scoreOffset, int completionWord) {

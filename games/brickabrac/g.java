@@ -137,7 +137,7 @@ final class g extends k {
             stackIn_33_0 = l.field_k;
             return stackIn_33_0;
           }
-          if (q.a(var6, 0, var7)) {
+          if (MenuButton.a(var6, 0, var7)) {
             stackIn_23_0 = fd.field_b;
             return stackIn_23_0;
           }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fi extends ki {
-    static re field_r;
+    static MenuSelection field_r;
     static String field_u;
     static int[] field_w;
     static mh field_s;
@@ -182,7 +182,7 @@ final class fi extends ki {
     }
 
     static {
-        field_r = new re(1);
+        field_r = new MenuSelection(1);
         field_w = new int[1024];
         field_u = "Lobby";
         field_v = "<%0> has left the lobby.";

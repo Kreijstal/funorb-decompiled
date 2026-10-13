@@ -132,10 +132,10 @@ final class uc extends k {
           ol.field_w = 0;
           bf.field_N.clear((byte) -72);
           jq.field_n.clear((byte) -92);
-          var2 = of.field_i.b((byte) 74);
+          var2 = BlankScreen.field_i.b((byte) 74);
           while (var2 != null) {
             var2.unlinkSecondary(3);
-            var2 = of.field_i.a(false);
+            var2 = BlankScreen.field_i.a(false);
           }
           var2Lifetime1 = tf.field_d.b((byte) 122);
           while (var2Lifetime1 != null) {

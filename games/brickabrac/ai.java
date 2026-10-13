@@ -123,7 +123,7 @@ final class ai extends ki {
             ai.a((mh) null, (dh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
           }
           jk.field_t = jh.a(0, th.field_c);
-          de.field_s = jh.a(0, bf.field_K);
+          MembershipBenefitsScreen.field_s = jh.a(0, bf.field_K);
           uq.b(th.field_c);
           uq.b(jk.field_t);
           uq.b(qa.field_y);
@@ -153,7 +153,7 @@ final class ai extends ki {
           if (decompiledSharedTail0) {
             var6 = kd.a(this.field_m, param3, (byte) -34);
             if (!var6.a((byte) -84, param3, this.field_m)) {
-              ej.a(0, de.field_s, 2, 0, param3, var6);
+              ej.a(0, MembershipBenefitsScreen.field_s, 2, 0, param3, var6);
               var6.a(this.field_m, param3, (byte) 78);
             }
             wo.a(param0, param4, jk.field_t, 118, 306, 0, param2, 2, si.field_i, var6.field_p, param3);

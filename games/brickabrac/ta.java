@@ -40,7 +40,7 @@ class ta {
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = ud.d(qp.field_c[ik.a((int) var16[var6], 255)], ik.a(-16777216, var17[var6] << 24));
+            var5[var6] = LevelSelectScreen.d(qp.field_c[ik.a((int) var16[var6], 255)], ik.a(-16777216, var17[var6] << 24));
           }
           var3 = new ArgbSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var13);
         }

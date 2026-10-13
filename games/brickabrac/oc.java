@@ -73,7 +73,7 @@ class oc extends IntrusiveNode {
           }
           break;
         }
-        var5 = of.d((byte) 63);
+        var5 = BlankScreen.d((byte) 63);
         if (var5 == null) {
           return;
         }
@@ -124,7 +124,7 @@ class oc extends IntrusiveNode {
             stackIn_13_1 = 1;
           }
           var6_intLifetime1 = stackIn_11_0 & stackIn_13_1;
-          var7 = de.field_x - SpriteGeometry.field_v;
+          var7 = MembershipBenefitsScreen.field_x - SpriteGeometry.field_v;
           gg.field_p[param1].drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {
             gg.field_p[param1].f(param2, param0, 64 + (sa.a(200 * var7, -4097) >> 10));
@@ -174,7 +174,7 @@ class oc extends IntrusiveNode {
             Rasterizer2D.fillRectangle(var8, var10 - var11Lifetime3, 4, var11Lifetime3, 13245286);
           }
           if (var9 >= 20) {
-            Rasterizer2D.fillRectangleAlpha(var8, param0 + ol.field_r.height - 21, 4, 20, 16777215, (sa.a(200 * de.field_x, -4097) >> 10) + 64);
+            Rasterizer2D.fillRectangleAlpha(var8, param0 + ol.field_r.height - 21, 4, 20, 16777215, (sa.a(200 * MembershipBenefitsScreen.field_x, -4097) >> 10) + 64);
           }
           ol.field_r.drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {

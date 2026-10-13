@@ -364,7 +364,7 @@ final class nh {
               var9 = (MultiplayerMatch.field_d.field_Ib + 2) / 2;
               pf.field_h.a(40, MultiplayerMatch.field_d.field_cb - 40, 0, -2 + var9, (byte) 64);
               if (o.field_e.field_jc <= o.field_e.field_cc) {
-                pf.field_h.field_Mb = wg.field_d.toUpperCase();
+                pf.field_h.field_Mb = GameCanvas.field_d.toUpperCase();
                 pf.field_h.field_eb = false;
                 if (var19 != 0) {
                   pf.field_h.field_Mb = lq.field_a.toUpperCase();
@@ -601,7 +601,7 @@ final class nh {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = vp.field_u.field_Rb.field_bb;
+                var17 = TimedSplashScreen.field_u.field_Rb.field_bb;
                 var18_ref = (id) (var17.first(-97));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;

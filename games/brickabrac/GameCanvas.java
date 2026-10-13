@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
-    volatile boolean field_e;
+final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
+    volatile boolean focusLossPending;
     static lo field_c;
-    java.awt.Frame field_a;
+    java.awt.Frame window;
     static String field_b;
     static String field_d;
     static int field_f;
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          this.field_e = true;
+          this.focusLossPending = true;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "wg.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -67,8 +67,8 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static int a(boolean param0) {
         dp.field_v.a(77);
         if (param0) {
-          km var2 = (km) null;
-          wg.a(43, (km) null);
+          MenuScreen var2 = (MenuScreen) null;
+          GameCanvas.registerMenuScreen(43, (MenuScreen) null);
           if (vd.field_f.b(72)) {
             return 0;
           }
@@ -88,7 +88,7 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
           return;
         }
         String var2 = (String) null;
-        wg.a((String) null, (byte) 44, true, (String) null, -49, (String) null, 29);
+        GameCanvas.a((String) null, (byte) 44, true, (String) null, -49, (String) null, 29);
         field_c = null;
         field_b = null;
         field_d = null;
@@ -96,7 +96,7 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final void a(tg param0, int param1) {
         try {
-          sq.a(param0, -20954, this.field_a);
+          sq.a(param0, -20954, this.window);
           int var3_int = -13 / ((param1 - 82) / 32);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "wg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -106,18 +106,18 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final static void a(int param0, km param1) {
+    final static void registerMenuScreen(int obfuscationGuard, MenuScreen screen) {
         try {
-          if (param0 > -53) {
+          if (obfuscationGuard > -53) {
             field_d = (String) null;
           }
-          if (param1.field_a >= 0 &&
-            pg.field_k.length > param1.field_a) {
-            pg.field_k[param1.field_a] = param1;
+          if (screen.screenId >= 0 &&
+            pg.menuScreens.length > screen.screenId) {
+            pg.menuScreens[screen.screenId] = screen;
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "wg.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "wg.E(" + obfuscationGuard + ',' + (screen != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
           }
           if (LegacyUtf8Decoder.field_c.field_L != 0) {
-            CircleBody.field_p = new am(LegacyUtf8Decoder.field_c.field_Eb, LegacyUtf8Decoder.field_c.field_db, LegacyUtf8Decoder.field_c.field_Ib, LegacyUtf8Decoder.field_c.field_cb, param1, re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, DualLinkNode.field_t, (String) null, 0L);
+            CircleBody.field_p = new am(LegacyUtf8Decoder.field_c.field_Eb, LegacyUtf8Decoder.field_c.field_db, LegacyUtf8Decoder.field_c.field_Ib, LegacyUtf8Decoder.field_c.field_cb, param1, MenuSelection.field_m, rf.field_c, am.field_Zb, ad.field_l, BlankScreen.field_k, DualLinkNode.field_t, (String) null, 0L);
           }
           var9 = sj.a(om.field_oc, np.field_a, -13294, param0);
           if (var9 != null) {
@@ -185,7 +185,7 @@ final class wg extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    wg() {
+    GameCanvas() {
     }
 
     public final void update(java.awt.Graphics param0) {

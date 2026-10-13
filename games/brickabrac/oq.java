@@ -17,24 +17,24 @@ class oq extends lh {
         field_v = null;
     }
 
-    final void d(int param0) {
-        this.a(this.field_y, 0);
-        if (param0 > -60) {
+    final void refreshMenu(int obfuscationGuard) {
+        this.initializeButtons(this.field_y, 0);
+        if (obfuscationGuard > -60) {
           field_u = (String) null;
         }
     }
 
-    final int b(int param0, int param1) {
-        int var3 = (this.field_q * 2 * this.field_h.field_r + this.field_q) / 2;
+    final int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        int var3 = (this.buttonSpacing * 2 * this.selection.itemCount + this.buttonSpacing) / 2;
         int var4 = (480 - var3) / 2;
-        if (param0 != this.field_h.field_r - param1) {
-          return var4 + param0 * this.field_q;
+        if (buttonIndex != this.selection.itemCount - obfuscationGuard) {
+          return var4 + buttonIndex * this.buttonSpacing;
         }
-        return -this.field_q + (var3 + var4);
+        return -this.buttonSpacing + (var3 + var4);
     }
 
-    final int a(boolean param0) {
-        if (!param0) {
+    final int getParentScreenId(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_v = (String) null;
           return -1;
         }

@@ -129,7 +129,7 @@ final class jl {
             return false;
           }
           dc.field_b = ef.field_d[si.field_m];
-          go.field_b = vp.field_r[si.field_m];
+          go.field_b = TimedSplashScreen.field_r[si.field_m];
           if (param0 != 5) {
             return true;
           }

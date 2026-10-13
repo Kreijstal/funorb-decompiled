@@ -168,7 +168,7 @@ final class eq {
         int var9 = 0;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_h[this.field_c] = (byte)ud.d((int) this.field_h[this.field_c], 128 >>> ik.a(7, this.field_j));
+          this.field_h[this.field_c] = (byte)LevelSelectScreen.d((int) this.field_h[this.field_c], 128 >>> ik.a(7, this.field_j));
           var4_int = -48 % ((-28 - param1) / 38);
           this.field_c = this.field_c + 1;
           if (this.field_c > 32) {
@@ -254,7 +254,7 @@ final class eq {
             var8 = param0[var5_int] << var6 & 255 | (param0[var5_int + 1] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_h[this.field_c] = (byte)ud.d((int) this.field_h[this.field_c], var8 >>> var7);
+              this.field_h[this.field_c] = (byte)LevelSelectScreen.d((int) this.field_h[this.field_c], var8 >>> var7);
               this.field_c = this.field_c + 1;
               this.field_j = this.field_j + (-var7 + 8);
               if (this.field_j == 512) {
@@ -274,7 +274,7 @@ final class eq {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param0[var5_int] << var6;
-            this.field_h[this.field_c] = (byte)ud.d((int) this.field_h[this.field_c], var8Lifetime1 >>> var7);
+            this.field_h[this.field_c] = (byte)LevelSelectScreen.d((int) this.field_h[this.field_c], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param2 >= 8L) {
             param2 = param2 - (long)(8 - var7);

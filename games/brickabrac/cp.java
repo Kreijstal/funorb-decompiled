@@ -242,7 +242,7 @@ final class cp extends h {
             if (var4 < 0) {
               var5 = cc.field_H;
             } else {
-              if (mh.field_H.field_j != var4) {
+              if (mh.field_H.selectedIndex != var4) {
                 var5 = eb.field_n;
               } else {
                 var5 = vq.field_A;
@@ -289,7 +289,7 @@ final class cp extends h {
             var8Lifetime1 = wi.field_k - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + kn.field_y;
-              if (mh.field_H.field_j != var4) {
+              if (mh.field_H.selectedIndex != var4) {
                 stackIn_44_0 = cd.field_c;
               } else {
                 stackIn_44_0 = c.field_l;

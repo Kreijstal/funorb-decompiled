@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ld extends km {
+abstract class ld extends MenuScreen {
     static int[] field_w;
     static String field_r;
     static boolean field_u;
@@ -11,14 +11,14 @@ abstract class ld extends km {
 
     abstract int f(int param0);
 
-    final void b(boolean param0) {
+    final void layoutButtons(boolean obfuscationGuard) {
         int var7 = 0;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
-        q var8;
+        MenuButton var8;
         int var9;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -27,8 +27,8 @@ abstract class ld extends km {
           return;
         }
         var2 = 1;
-        var3 = nn.field_g.c(ag.field_D[this.field_m[0].field_f]);
-        if (this.a((byte) 110, 1)) {
+        var3 = nn.field_g.c(ag.buttonLabels[this.buttons[0].actionId]);
+        if (this.isButtonEnabled((byte) 110, 1)) {
           var2++;
           for (var4 = 0; var4 < sj.field_c.length; var4++) {
             var5 = nn.field_g.c(sj.field_c[var4]);
@@ -38,21 +38,21 @@ abstract class ld extends km {
           }
         }
         var3 += 20;
-        if (!param0) {
+        if (!obfuscationGuard) {
           ld.g(102);
         }
         var4Lifetime1 = 5 * var2 - (5 - var2 * var3);
         var5Lifetime1 = (-var4Lifetime1 + 640) / 2;
         var6 = this.h(6175);
-        for (var7 = 0; var7 < this.field_m.length; var7++) {
-          var8 = this.field_m[var7];
-          var8.field_c = var7 * var3 + var5Lifetime1 + 5 * var7;
-          var8.field_a = var6;
+        for (var7 = 0; var7 < this.buttons.length; var7++) {
+          var8 = this.buttons[var7];
+          var8.x = var7 * var3 + var5Lifetime1 + 5 * var7;
+          var8.y = var6;
           if (0 == var7) {
-            var8.field_c = var8.field_c - 5;
+            var8.x = var8.x - 5;
           }
-          var8.field_j = var3;
-          var8.field_d = this.b((byte) 115, var7);
+          var8.width = var3;
+          var8.height = this.getButtonHeight((byte) 115, var7);
         }
         return;
     }
@@ -152,19 +152,19 @@ abstract class ld extends km {
         super(param0, 180, 460, 150, 35, param1);
     }
 
-    final void a(boolean param0, int param1, int param2) {
-        if (param2 < 96) {
+    final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
+        if (obfuscationGuard < 96) {
           this.f(66);
         }
-        super.a(param0, param1, 100);
-        this.b(true);
+        super.onEnter(usePointer, initialSelection, 100);
+        this.layoutButtons(true);
     }
 
-    void a(int param0, int param1, char param2) {
-        if (param0 != -120) {
+    void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
+        if (obfuscationGuard != -120) {
           field_w = (int[]) null;
         }
-        this.field_h.a(0, -1);
+        this.selection.navigateVertical(0, -1);
     }
 
     private final int h(int param0) {
@@ -182,8 +182,8 @@ abstract class ld extends km {
         }
         super.advanceScreen(updateFlag, inputEnabled, -121);
         int var4 = this.h(6175);
-        for (var5 = 0; var5 < this.field_m.length; var5++) {
-          this.field_m[var5].field_a = var4;
+        for (var5 = 0; var5 < this.buttons.length; var5++) {
+          this.buttons[var5].y = var4;
         }
     }
 

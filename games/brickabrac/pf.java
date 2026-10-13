@@ -35,7 +35,7 @@ final class pf implements ub {
         RuntimeException var2_ref = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (of.field_i == null) {
+          if (BlankScreen.field_i == null) {
             return null;
           }
           if (param1 == null) {
@@ -50,7 +50,7 @@ final class pf implements ub {
             stackIn_10_0 = null;
             return (mp) (stackIn_10_0);
           }
-          var3 = (mp) (of.field_i.a((long)var2.hashCode(), -1));
+          var3 = (mp) (BlankScreen.field_i.a((long)var2.hashCode(), -1));
           if (param0) {
             field_f = false;
           }
@@ -61,7 +61,7 @@ final class pf implements ub {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (mp) (of.field_i.a((byte) 127));
+            var3 = (mp) (BlankScreen.field_i.a((byte) 127));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -354,28 +354,28 @@ final class pf implements ub {
     final static boolean a(boolean param0, int param1) {
         mf var3;
         if (!param0) {
-          if (null == hd.field_d &&
-            param1 == lp.field_rb.field_a) {
+          if (null == hd.pendingScreen &&
+            param1 == lp.currentScreen.screenId) {
             return true;
           }
-          if (null == hd.field_d) {
+          if (null == hd.pendingScreen) {
             return false;
           }
-          if (hd.field_d.field_a != param1) {
+          if (hd.pendingScreen.screenId != param1) {
             return false;
           }
           return true;
         }
         var3 = (mf) null;
         pf.a(97, (byte[]) null, (mf) null, (String[]) null, 18, true, (RgbSprite[][]) null, (mf) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (tp[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (mf) null);
-        if (null == hd.field_d &&
-          param1 == lp.field_rb.field_a) {
+        if (null == hd.pendingScreen &&
+          param1 == lp.currentScreen.screenId) {
           return true;
         }
-        if (null == hd.field_d) {
+        if (null == hd.pendingScreen) {
           return false;
         }
-        if (hd.field_d.field_a != param1) {
+        if (hd.pendingScreen.screenId != param1) {
           return false;
         }
         return true;

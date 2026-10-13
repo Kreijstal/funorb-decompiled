@@ -157,10 +157,10 @@ final class i extends IntrusiveNode {
           this.field_i = this.field_i + var2Lifetime1;
         } else {
           rk.field_Qb = rk.field_Qb & this.field_x;
-          if (bg.a(this.field_i, this.field_w, this.field_u, (byte) 47, po.field_a, pq.field_k, this.field_n)) {
+          if (bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 47, po.field_a, pq.field_k, this.field_n)) {
             nf.field_Y = this.field_r;
             if (1 == ki.field_e &&
-              bg.a(this.field_i, this.field_w, this.field_u, (byte) 33, qo.field_O, tb.field_fb, this.field_n)) {
+              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.field_O, tb.field_fb, this.field_n)) {
               if (nf.field_P != this.field_r) {
                 nf.field_P = this.field_r;
               } else {
@@ -172,7 +172,7 @@ final class i extends IntrusiveNode {
             }
           } else {
             if (1 == ki.field_e &&
-              bg.a(this.field_i, this.field_w, this.field_u, (byte) 33, qo.field_O, tb.field_fb, this.field_n)) {
+              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.field_O, tb.field_fb, this.field_n)) {
               if (nf.field_P != this.field_r) {
                 nf.field_P = this.field_r;
               } else {
@@ -197,21 +197,21 @@ final class i extends IntrusiveNode {
         }
         if ((1 << pe.field_o.field_k & pe.field_o.match.field_n) == 0) {
           if (pe.field_o.match.field_n != 0) {
-            ag.field_D[10] = er.field_a;
+            ag.buttonLabels[10] = er.field_a;
             if (param0 != 32) {
               field_o = (String) null;
               return;
             }
             return;
           }
-          ag.field_D[10] = t.field_b;
+          ag.buttonLabels[10] = t.field_b;
           if (param0 != 32) {
             field_o = (String) null;
             return;
           }
           return;
         }
-        ag.field_D[10] = fh.field_a;
+        ag.buttonLabels[10] = fh.field_a;
         if (param0 == 32) {
           return;
         }

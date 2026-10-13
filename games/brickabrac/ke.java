@@ -410,7 +410,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 this.c(false);
                 kc.field_q = jm.a((java.awt.Component) ((Object) kj.field_D), to.field_b, -2414, be.field_g);
                 this.b(false);
-                re.field_b = ja.a((byte) 123);
+                MenuSelection.field_b = ja.a((byte) 123);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != jg.field_k) {
@@ -422,7 +422,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    c.field_a = re.field_b.a(hb.field_x, (byte) -71);
+                    c.field_a = MenuSelection.field_b.a(hb.field_x, (byte) -71);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
@@ -467,9 +467,9 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = ue.a(false);
-          var4 = ig.field_M[de.field_w];
-          ig.field_M[de.field_w] = var2_long;
-          de.field_w = 31 & 1 + de.field_w;
+          var4 = ig.field_M[MembershipBenefitsScreen.field_w];
+          ig.field_M[MembershipBenefitsScreen.field_w] = var2_long;
+          MembershipBenefitsScreen.field_w = 31 & 1 + MembershipBenefitsScreen.field_w;
           if ((long)param0 != var4 &&
             var2_long > var4) {
             var6_int = (int)(var2_long - var4);

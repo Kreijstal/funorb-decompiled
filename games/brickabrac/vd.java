@@ -32,7 +32,7 @@ final class vd {
                 hn.a((byte) 123);
                 return false;
               }
-              if (de.f(param0 - 6812) <= 30000L) {
+              if (MembershipBenefitsScreen.f(param0 - 6812) <= 30000L) {
                 return false;
               }
               hn.a((byte) 123);

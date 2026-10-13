@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class de extends km {
+final class MembershipBenefitsScreen extends MenuScreen {
     static cd field_v;
-    private tp[] field_r;
+    private tp[] screenshots;
     static mh field_t;
-    private mf field_u;
+    private mf archive;
     static int field_x;
     static RgbSprite field_s;
     static int field_w;
@@ -14,7 +14,7 @@ final class de extends km {
         field_v = null;
         field_t = null;
         if (param0 != 2) {
-          de.g(47);
+          MembershipBenefitsScreen.g(47);
           field_s = null;
           return;
         }
@@ -29,7 +29,7 @@ final class de extends km {
           }
           return;
         }
-        de.g(61);
+        MembershipBenefitsScreen.g(61);
         if (ff.field_c != null) {
           ff.field_c.e((byte) -93);
         }
@@ -42,7 +42,7 @@ final class de extends km {
           }
           return;
         }
-        de.f(-8);
+        MembershipBenefitsScreen.f(-8);
         if (null != tn.field_m) {
           tn.field_m.a(true, param0);
         }
@@ -66,18 +66,18 @@ final class de extends km {
         }
         if (3 != param1) {
           var3 = param1 == 2 ? 1 : 0;
-          ng.a(var3 != 0, param0 - 386, this.a(true));
+          ng.requestScreen(var3 != 0, param0 - 386, this.getParentScreenId(true));
           return var3 == 0 ? true : false;
         }
         return false;
     }
 
-    de(mf param0) {
+    MembershipBenefitsScreen(mf archive) {
         super(12, 180, 460, 150, 35, (int[]) null);
         try {
-          this.field_u = param0;
+          this.archive = archive;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "de.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "de.<init>(" + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -87,15 +87,15 @@ final class de extends km {
         if (obfuscationGuard >= -52) {
           return;
         }
-        if (null == this.field_r) {
-          this.field_r = PacketBuffer.a("benefits", this.field_u, "members_benefits_screenshots", -946715356);
+        if (null == this.screenshots) {
+          this.screenshots = PacketBuffer.a("benefits", this.archive, "members_benefits_screenshots", -946715356);
           return;
         }
         if (ff.field_c != null) {
           discarded$0 = this.c(460, ff.field_c.a(false, inputEnabled));
           return;
         }
-        ff.field_c = new w(sl.field_C, oc.field_u, this.field_r, false, hq.field_u);
+        ff.field_c = new w(sl.field_C, oc.field_u, this.screenshots, false, hq.field_u);
     }
 
     final boolean handleKey(char character, int keyCode, int obfuscationGuard) {

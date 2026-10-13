@@ -139,7 +139,7 @@ final class nq extends IntrusiveNode {
           }
           var4 = (e) (na.field_Q.first(-37));
           while (var4 != null) {
-            ud.a(param0, var4, (byte) 80);
+            LevelSelectScreen.a(param0, var4, (byte) 80);
             var4 = (e) (na.field_Q.next((byte) 116));
           }
           var2 = ej.field_F.first(param1 ^ -13402);

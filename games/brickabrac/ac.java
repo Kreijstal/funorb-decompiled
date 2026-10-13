@@ -63,7 +63,7 @@ final class ac {
         c.a(param13, param12, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
         sq.a(param2, param13, -126);
         if (param9 == -113) {
-          wg.a(param13, param7, -1, param3);
+          GameCanvas.a(param13, param7, -1, param3);
           return;
         }
     }

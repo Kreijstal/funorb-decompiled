@@ -98,20 +98,20 @@ final class vh extends d {
         try {
           var1_int = 0;
           while (jl.a((byte) 5)) {
-            fi.field_r.d(param0 - 1);
-            if (!fi.field_r.a((byte) 113)) {
+            fi.field_r.navigateHorizontal(param0 - 1);
+            if (!fi.field_r.isActivated((byte) 113)) {
               continue;
             }
             var1_int = 1;
           }
-          fi.field_r.a(aj.a(param0 + param0, po.field_a, pq.field_k), param0 ^ 27479, aj.a(0, qo.field_O, tb.field_fb));
-          if (fi.field_r.a((byte) 113)) {
+          fi.field_r.updatePointer(aj.a(param0 + param0, po.field_a, pq.field_k), param0 ^ 27479, aj.a(0, qo.field_O, tb.field_fb));
+          if (fi.field_r.isActivated((byte) 113)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            fi.field_r.field_j >= 0) {
-            var2 = hi.field_A[fi.field_r.field_j];
+            fi.field_r.selectedIndex >= 0) {
+            var2 = hi.field_A[fi.field_r.selectedIndex];
             if (var2 == 2) {
               ae.b((byte) 99);
             }

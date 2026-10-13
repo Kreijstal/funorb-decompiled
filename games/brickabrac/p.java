@@ -61,7 +61,7 @@ final class p extends IntrusiveNode {
             var1 = dg.b(100);
           }
           if (var1.length() == 0) {
-            var1 = ud.field_t;
+            var1 = LevelSelectScreen.field_t;
           }
           return var1;
         }
@@ -70,7 +70,7 @@ final class p extends IntrusiveNode {
           var1 = dg.b(100);
         }
         if (var1.length() == 0) {
-          var1 = ud.field_t;
+          var1 = LevelSelectScreen.field_t;
         }
         return var1;
     }

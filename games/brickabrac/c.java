@@ -101,7 +101,7 @@ final class c {
             }
             if (hc.field_c &&
               o.field_e.field_jc <= o.field_e.field_cc) {
-              IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+              IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
               Ball.field_A.field_eb = false;
               jh.a(true, IsaacGenerator.field_b.field_Rb);
             } else {
@@ -124,7 +124,7 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+                IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                 Ball.field_A.field_eb = false;
                 jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
@@ -151,7 +151,7 @@ final class c {
                   Ball.field_A.field_eb = true;
                   ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                   Ball.field_A.field_eb = false;
                   jh.a(true, IsaacGenerator.field_b.field_Rb);
                 }
@@ -189,7 +189,7 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+                IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                 Ball.field_A.field_eb = false;
                 jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
@@ -221,7 +221,7 @@ final class c {
                   Ball.field_A.field_eb = true;
                   ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                   Ball.field_A.field_eb = false;
                   jh.a(true, IsaacGenerator.field_b.field_Rb);
                 }
@@ -256,7 +256,7 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+                IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                 Ball.field_A.field_eb = false;
                 jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
@@ -279,7 +279,7 @@ final class c {
                 }
                 if (hc.field_c &&
                   o.field_e.field_jc <= o.field_e.field_cc) {
-                  IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                   Ball.field_A.field_eb = false;
                   jh.a(true, IsaacGenerator.field_b.field_Rb);
                 } else {
@@ -306,7 +306,7 @@ final class c {
                     Ball.field_A.field_eb = true;
                     ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                   } else {
-                    IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
+                    IsaacGenerator.field_b.field_Qb.field_Mb = GameCanvas.field_d;
                     Ball.field_A.field_eb = false;
                     jh.a(true, IsaacGenerator.field_b.field_Rb);
                   }
@@ -316,7 +316,7 @@ final class c {
           }
         }
         um.a(param6, param9, param4, param0, param2, param1, (byte) -114);
-        ka.a(param4, vp.field_u, param2, param0, 121);
+        ka.a(param4, TimedSplashScreen.field_u, param2, param0, 121);
         if (param5 <= 6) {
           field_g = -90;
         }

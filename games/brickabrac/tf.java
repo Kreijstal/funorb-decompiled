@@ -43,7 +43,7 @@ final class tf {
                 param0 = rd.a(wi.field_h, new String[]{param0}, (byte) 103);
               }
               if (ln.field_l) {
-                param0 = wg.field_b;
+                param0 = GameCanvas.field_b;
               }
               ej.field_I.a(param2, false, param0);
             }
@@ -117,7 +117,7 @@ final class tf {
           }
           bm.field_d.a(true);
           if (param1) {
-            if (bm.field_d.field_b == re.field_i) {
+            if (bm.field_d.field_b == MenuSelection.field_i) {
               var13 = bm.field_d;
               var14 = rd.a(co.field_d, new String[]{param3}, (byte) 103);
               var13.field_d.a(var14, 16, (byte) 90);

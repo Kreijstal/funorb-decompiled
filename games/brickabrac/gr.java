@@ -92,7 +92,7 @@ final class gr {
           nj.field_l = pa.field_m;
           fq.field_d = qg.field_D;
           we.field_b = gg.field_p;
-          field_c = re.field_k;
+          field_c = MenuSelection.field_k;
         }
         if (param1 != -28463) {
           field_a = -38;

@@ -150,7 +150,7 @@ final class kj extends hb {
             field_D = (java.awt.Canvas) null;
           }
           wd.field_E.a(18, np.field_a + 2, -40 + (-2 + ji.field_b.field_Ib) - ec.field_J, 42 + ec.field_J, (byte) 64);
-          vp.field_u.a(2, (byte) -109, ji.field_b.field_Ib, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.field_cb - (np.field_a + 20));
+          TimedSplashScreen.field_u.a(2, (byte) -109, ji.field_b.field_Ib, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.field_cb - (np.field_a + 20));
           ij.field_e.a(40, -40 + qa.field_w.field_cb, 0, qa.field_w.field_Ib, (byte) 64);
           ba.field_v.a(30, 0, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
           rg.field_e.a(-2 + (-40 + MultiplayerMatch.field_d.field_cb) - 30, 30, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
@@ -255,12 +255,12 @@ final class kj extends hb {
           }
           wi.field_j.a(-10 + (-120 + Rasterizer2D.height) - 4 - 10, 10, -360 + Rasterizer2D.width >> 1, 360, (byte) 64);
           pk.field_h.a(24, 0, 0, wi.field_j.field_Ib, (byte) 64);
-          de.field_t.a(-24 + wi.field_j.field_cb, 24, 0, wi.field_j.field_Ib, (byte) 64);
-          stackIn_78_0 = de.field_t;
+          MembershipBenefitsScreen.field_t.a(-24 + wi.field_j.field_cb, 24, 0, wi.field_j.field_Ib, (byte) 64);
+          stackIn_78_0 = MembershipBenefitsScreen.field_t;
           stackIn_79_1 = !(param0);
-          stackIn_78_0.field_Jb = na.a(stackIn_79_1, 8421504, 3, 11579568, de.field_t.field_cb, 1);
-          Ball.field_A.a(de.field_t.field_cb - 10 - 26, 5, 5, -10 + de.field_t.field_Ib, (byte) 64);
-          nd.field_a.a(24, -29 + de.field_t.field_cb, (de.field_t.field_Ib - 80) / 2, 80, (byte) 64);
+          stackIn_78_0.field_Jb = na.a(stackIn_79_1, 8421504, 3, 11579568, MembershipBenefitsScreen.field_t.field_cb, 1);
+          Ball.field_A.a(MembershipBenefitsScreen.field_t.field_cb - 10 - 26, 5, 5, -10 + MembershipBenefitsScreen.field_t.field_Ib, (byte) 64);
+          nd.field_a.a(24, -29 + MembershipBenefitsScreen.field_t.field_cb, (MembershipBenefitsScreen.field_t.field_Ib - 80) / 2, 80, (byte) 64);
           s.b(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

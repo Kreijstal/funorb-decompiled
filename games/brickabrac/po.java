@@ -15,7 +15,7 @@ final class po {
         if (!param0) {
           return;
         }
-        sq.field_c = new kb(re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, DualLinkNode.field_t);
+        sq.field_c = new kb(MenuSelection.field_m, rf.field_c, am.field_Zb, ad.field_l, BlankScreen.field_k, DualLinkNode.field_t);
     }
 
     public static void b(int param0) {

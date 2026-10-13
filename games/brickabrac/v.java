@@ -54,7 +54,7 @@ final class v extends RuntimeException {
             if (0 == (1 << var6_int & (param3.playerMaskTwo | param3.playerMaskOne | param3.playerMaskThree))) {
               var7 = param3.playerBoards[var6_int];
               var8 = 1414 * var7.field_G / (30 * param3.playerCount);
-              var8 = var8 + (de.field_x + 294 << 7);
+              var8 = var8 + (MembershipBenefitsScreen.field_x + 294 << 7);
               var8 = var8 >> 8;
               stackIn_7_0 = var7.field_H;
               stackIn_7_1 = false;
@@ -120,7 +120,7 @@ final class v extends RuntimeException {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6_ref_int__[var7] = ud.d(ik.a(255, (int) var15[var7]) << 24, qp.field_c[ik.a(255, (int) var21[var7])]);
+              var6_ref_int__[var7] = LevelSelectScreen.d(ik.a(255, (int) var15[var7]) << 24, qp.field_c[ik.a(255, (int) var21[var7])]);
             }
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var17));
           }

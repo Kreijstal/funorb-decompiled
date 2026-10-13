@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q {
-    int field_a;
+final class MenuButton {
+    int y;
     static n field_i;
-    int field_d;
-    int field_f;
-    boolean field_h;
+    int height;
+    int actionId;
+    boolean marked;
     static String field_g;
-    private km field_e;
-    int field_j;
-    private boolean field_b;
-    int field_c;
+    private MenuScreen owner;
+    int width;
+    private boolean pressed;
+    int x;
 
-    final boolean a(int param0, int param1, int param2) {
-        if (param2 >= -25) {
+    final boolean containsPoint(int pointX, int pointY, int obfuscationGuard) {
+        if (obfuscationGuard >= -25) {
           return false;
         }
-        return bg.a(this.field_c, this.field_d, this.field_j, (byte) 126, param1, param0, this.field_a);
+        return bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 126, pointY, pointX, this.y);
     }
 
-    final void a(int param0) {
-        this.field_b = false;
-        if (param0 > -63) {
-          this.field_d = -50;
+    final void resetPressed(int obfuscationGuard) {
+        this.pressed = false;
+        if (obfuscationGuard > -63) {
+          this.height = -50;
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void draw(byte obfuscationGuard, boolean focused) {
         String[] array$0 = null;
         RgbSprite[] stackIn_16_0 = null;
         int stackIn_17_1 = 0;
@@ -56,12 +56,12 @@ final class q {
         RgbSprite var12;
         RgbSprite var4_refLifetime1;
         var10 = BrickABrac.field_J ? 1 : 0;
-        if (31 != this.field_f &&
-          40 != this.field_f &&
-          this.field_f != 41 &&
-          this.field_f != 43) {
-          if (!this.field_b) {
-            if (!param1) {
+        if (31 != this.actionId &&
+          40 != this.actionId &&
+          this.actionId != 41 &&
+          this.actionId != 43) {
+          if (!this.pressed) {
+            if (!focused) {
               var3 = Ball.field_G;
             } else {
               var3 = af.field_A;
@@ -69,16 +69,16 @@ final class q {
           } else {
             var3 = pe.field_k;
           }
-          nh.a(this.field_j, this.field_d, -40, this.field_c, var3, this.field_a);
-          if (29 != this.field_f &&
-            this.field_f != 30) {
-            if (44 != this.field_f &&
-              this.field_f != 45) {
-              var4 = ag.field_D[this.field_f];
-              if (this.field_f == 8) {
-                var4 = this.field_e.e((byte) 87);
+          nh.a(this.width, this.height, -40, this.x, var3, this.y);
+          if (29 != this.actionId &&
+            this.actionId != 30) {
+            if (44 != this.actionId &&
+              this.actionId != 45) {
+              var4 = ag.buttonLabels[this.actionId];
+              if (this.actionId == 8) {
+                var4 = this.owner.e((byte) 87);
               }
-              if (this.field_f == 36) {
+              if (this.actionId == 36) {
                 array$0 = new String[1];
                 stackIn_36_0 = gj.field_d;
                 stackIn_36_1 = array$0;
@@ -93,68 +93,68 @@ final class q {
                 var4 = rd.a(stackIn_36_0, stackIn_36_1, (byte) 103);
               }
               var5 = nn.field_g.c(var4);
-              if (20 == this.field_f ||
-                this.field_f == 21) {
+              if (20 == this.actionId ||
+                this.actionId == 21) {
                 var5 = og.field_Zb;
               }
-              var6 = -var5 + (this.field_j + 2 * this.field_c) >> 1;
-              if (!this.field_h) {
-                stackIn_47_0 = (!param1) ? 0 : 1;
+              var6 = -var5 + (this.width + 2 * this.x) >> 1;
+              if (!this.marked) {
+                stackIn_47_0 = (!focused) ? 0 : 1;
               } else {
                 stackIn_47_0 = 7;
               }
               var7 = stackIn_47_0;
-              if (this.field_f == 42) {
+              if (this.actionId == 42) {
                 var8_ref_String = var4.toLowerCase();
-                var9_int = -16 + this.field_j;
-                nn.field_g.a(var8_ref_String, 8 + this.field_c, this.field_a - 5, var9_int, this.field_d, var7, -1, 1, 1, 3 + nn.field_g.field_B);
+                var9_int = -16 + this.width;
+                nn.field_g.a(var8_ref_String, 8 + this.x, this.y - 5, var9_int, this.height, var7, -1, 1, 1, 3 + nn.field_g.field_B);
               } else {
-                nn.field_g.c(var4.toLowerCase(), var6, 2 + (this.field_a + (-nn.field_g.field_P + nn.field_g.field_B + this.field_d) / 2), var7, -1);
+                nn.field_g.c(var4.toLowerCase(), var6, 2 + (this.y + (-nn.field_g.field_P + nn.field_g.field_B + this.height) / 2), var7, -1);
               }
-              if (this.field_f == 20 ||
-                this.field_f == 21) {
+              if (this.actionId == 20 ||
+                this.actionId == 21) {
                 var6 = var6 + dg.field_d;
-                Rasterizer2D.drawHorizontalLine(var6, this.field_d / 2 + this.field_a - 1, 121, 11184810);
-                Rasterizer2D.drawHorizontalLine(var6, this.field_a + this.field_d / 2, 121, 0);
-                Rasterizer2D.drawHorizontalLine(var6, this.field_d / 2 + this.field_a + 1, 121, 11184810);
-                if (20 != this.field_f) {
+                Rasterizer2D.drawHorizontalLine(var6, this.height / 2 + this.y - 1, 121, 11184810);
+                Rasterizer2D.drawHorizontalLine(var6, this.y + this.height / 2, 121, 0);
+                Rasterizer2D.drawHorizontalLine(var6, this.height / 2 + this.y + 1, 121, 11184810);
+                if (20 != this.actionId) {
                   stackIn_56_0 = qi.i(-29946) * 120 / 256;
                 } else {
-                  stackIn_56_0 = lh.g((byte) -44) * 120 / re.e((byte) 43);
+                  stackIn_56_0 = lh.g((byte) -44) * 120 / MenuSelection.e((byte) 43);
                 }
                 var8 = stackIn_56_0;
-                if (!param1) {
+                if (!focused) {
                   stackIn_59_0 = g.field_l[0];
                 } else {
                   stackIn_59_0 = g.field_l[1];
                 }
                 var9 = stackIn_59_0;
-                var9.drawTransparent(var8 + (var6 + (-1 - var9.canvasWidth / 2)), (-var9.canvasHeight + this.field_d) / 2 + this.field_a);
+                var9.drawTransparent(var8 + (var6 + (-1 - var9.canvasWidth / 2)), (-var9.canvasHeight + this.height) / 2 + this.y);
               }
-              if (param0 != 4) {
-                this.a(-113, 101, -34);
+              if (obfuscationGuard != 4) {
+                this.containsPoint(-113, 101, -34);
               }
               return;
             }
             stackIn_26_0 = pa.field_l;
-            stackIn_27_1 = (!param1) ? 0 : 1;
+            stackIn_27_1 = (!focused) ? 0 : 1;
             var12 = stackIn_26_0[stackIn_27_1];
             var4_ref = var12;
-            if (44 == this.field_f) {
-              var4_ref.drawTransparent((this.field_j - var12.canvasWidth) / 2 + this.field_c, this.field_a + (-var12.canvasHeight + this.field_d) / 2);
+            if (44 == this.actionId) {
+              var4_ref.drawTransparent((this.width - var12.canvasWidth) / 2 + this.x, this.y + (-var12.canvasHeight + this.height) / 2);
             } else {
-              var4_ref.f((-var12.canvasWidth + this.field_j) / 2 + this.field_c, this.field_a + (-var12.canvasHeight + this.field_d) / 2);
+              var4_ref.f((-var12.canvasWidth + this.width) / 2 + this.x, this.y + (-var12.canvasHeight + this.height) / 2);
             }
             return;
           }
           stackIn_16_0 = mp.field_Vb;
-          stackIn_17_1 = (!param1) ? 0 : 1;
+          stackIn_17_1 = (!focused) ? 0 : 1;
           var11 = stackIn_16_0[stackIn_17_1];
           var4_refLifetime1 = var11;
-          if (this.field_f == 29) {
-            var4_refLifetime1.drawTransparent(this.field_c + (this.field_j - var11.canvasWidth) / 2, this.field_a + (-var11.canvasHeight + this.field_d) / 2);
+          if (this.actionId == 29) {
+            var4_refLifetime1.drawTransparent(this.x + (this.width - var11.canvasWidth) / 2, this.y + (-var11.canvasHeight + this.height) / 2);
           } else {
-            var4_refLifetime1.g((-var11.canvasWidth + this.field_j) / 2 + this.field_c, this.field_a + (-var11.canvasHeight + this.field_d) / 2);
+            var4_refLifetime1.g((-var11.canvasWidth + this.width) / 2 + this.x, this.y + (-var11.canvasHeight + this.height) / 2);
           }
           return;
         }
@@ -175,7 +175,7 @@ final class q {
           var3 = w.a(param1 + 121, param2);
           if (param1 != 0) {
             var4 = (String) null;
-            q.a((String) null, 78, (String) null);
+            MenuButton.a((String) null, 78, (String) null);
           }
           if (param0.indexOf(param2) == -1 &&
             param0.indexOf(var3) == -1) {
@@ -207,33 +207,33 @@ final class q {
         field_g = null;
         field_i = null;
         if (param0 != -32) {
-          q.a((byte) 49);
+          MenuButton.a((byte) 49);
         }
     }
 
-    q(int param0, km param1) {
+    MenuButton(int actionId, MenuScreen owner) {
         try {
-          this.field_f = param0;
-          this.field_e = param1;
+          this.actionId = actionId;
+          this.owner = owner;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "q.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "q.<init>(" + actionId + ',' + (owner != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0) {
-        re var2;
+    final void updatePressed(int obfuscationGuard) {
+        MenuSelection var2;
         boolean stackIn_12_1 = false;
-        if (param0 != -2217) {
+        if (obfuscationGuard != -2217) {
           return;
         }
-        var2 = this.field_e.field_h;
+        var2 = this.owner.selection;
         if (var2 == null) {
           return;
         }
-        if (this.field_f == 29 ||
-          30 == this.field_f) {
-          stackIn_12_1 = (var2.a(false)) && (this.a(pq.field_k, po.field_a, -56));
-          this.field_b = stackIn_12_1;
+        if (this.actionId == 29 ||
+          30 == this.actionId) {
+          stackIn_12_1 = (var2.isHeld(false)) && (this.containsPoint(pq.field_k, po.field_a, -56));
+          this.pressed = stackIn_12_1;
         }
     }
 

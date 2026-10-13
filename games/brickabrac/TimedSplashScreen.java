@@ -1,56 +1,56 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vp extends km {
+final class TimedSplashScreen extends MenuScreen {
     static mm field_u;
     static String field_s;
     static char[] field_r;
-    private int field_t;
+    private int remainingTicks;
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int fieldTemp$0 = 0;
         if (obfuscationGuard >= -52) {
-          vp.a(true, (byte) -10, 12, -97, -36, false);
+          TimedSplashScreen.a(true, (byte) -10, 12, -97, -36, false);
           if (!inputEnabled) {
             return;
           }
-          fieldTemp$0 = this.field_t - 1;
-          this.field_t = this.field_t - 1;
+          fieldTemp$0 = this.remainingTicks - 1;
+          this.remainingTicks = this.remainingTicks - 1;
           if (fieldTemp$0 == 0) {
-            ng.a(true, 120, 0);
+            ng.requestScreen(true, 120, 0);
             return;
           }
           if (cb.field_q != 0) {
-            ng.a(true, 120, 0);
+            ng.requestScreen(true, 120, 0);
             return;
           }
           if (0 == ki.field_e) {
             return;
           }
-          ng.a(true, 120, 0);
+          ng.requestScreen(true, 120, 0);
           return;
         }
         if (!inputEnabled) {
           return;
         }
-        int fieldTemp$1 = this.field_t - 1;
-        this.field_t = this.field_t - 1;
+        int fieldTemp$1 = this.remainingTicks - 1;
+        this.remainingTicks = this.remainingTicks - 1;
         if (fieldTemp$1 == 0) {
-          ng.a(true, 120, 0);
+          ng.requestScreen(true, 120, 0);
           return;
         }
         if (cb.field_q != 0) {
-          ng.a(true, 120, 0);
+          ng.requestScreen(true, 120, 0);
           return;
         }
         if (0 == ki.field_e) {
           return;
         }
-        ng.a(true, 120, 0);
+        ng.requestScreen(true, 120, 0);
     }
 
-    final void d(byte param0) {
-        if (param0 != 79) {
+    final void onExit(byte obfuscationGuard) {
+        if (obfuscationGuard != 79) {
           field_s = (String) null;
           lf.field_t = null;
           return;
@@ -58,9 +58,9 @@ final class vp extends km {
         lf.field_t = null;
     }
 
-    vp() {
+    TimedSplashScreen() {
         super(21, 0, 0, 0, 0, (int[]) null);
-        this.field_t = 250;
+        this.remainingTicks = 250;
     }
 
     final static l a(int param0, oe param1) {
@@ -98,7 +98,7 @@ final class vp extends km {
           return;
         }
         oe var2 = (oe) null;
-        vp.a(-53, (oe) null);
+        TimedSplashScreen.a(-53, (oe) null);
         field_s = null;
         field_r = null;
     }
@@ -156,13 +156,13 @@ final class vp extends km {
     final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
         if (keyCode >= 98) {
           if (obfuscationGuard >= 0) {
-            ng.a(false, 99, 0);
+            ng.requestScreen(false, 99, 0);
           }
           return true;
         }
-        this.field_t = -100;
+        this.remainingTicks = -100;
         if (obfuscationGuard >= 0) {
-          ng.a(false, 99, 0);
+          ng.requestScreen(false, 99, 0);
           return true;
         }
         return true;

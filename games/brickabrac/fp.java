@@ -91,7 +91,7 @@ final class fp extends lh {
         if (obfuscationGuard > -14) {
           return;
         }
-        al.a(this.field_a, 19);
+        al.a(this.screenId, 19);
         this.g(68);
         this.a(0);
     }

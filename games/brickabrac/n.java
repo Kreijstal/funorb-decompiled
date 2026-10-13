@@ -118,7 +118,7 @@ final class n {
         if (param0 != -26774) {
           return true;
         }
-        stackIn_8_0 = (this == rq.field_c) || (this == IsaacGenerator.field_g) || (this == q.field_i);
+        stackIn_8_0 = (this == rq.field_c) || (this == IsaacGenerator.field_g) || (this == MenuButton.field_i);
         return stackIn_8_0;
     }
 

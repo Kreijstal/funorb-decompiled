@@ -102,9 +102,9 @@ abstract class sl extends DualLinkNode {
           bl.field_H[1] = t.field_e;
           bl.field_H[2] = ji.field_g;
           bl.field_H[4] = bq.field_a;
-          bl.field_H[0] = rp.field_r;
+          bl.field_H[0] = MainMenuScreen.field_r;
           Ball.field_A = new mh(0L, (mh) null);
-          qb.field_v = new mh(0L, rp.field_t, n.field_a);
+          qb.field_v = new mh(0L, MainMenuScreen.field_t, n.field_a);
           ij.field_a = new mh(0L, ik.field_a, pf.field_c);
           IsaacGenerator.field_b = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           Ball.field_A.a(qb.field_v, 0);
@@ -122,7 +122,7 @@ abstract class sl extends DualLinkNode {
           jf.field_k = new mh(0L, ab.field_x, fj.field_Rb.toUpperCase());
           sc.field_b = new mh(0L, qh.field_j, rl.field_c.toUpperCase());
           ll.field_e = new mh(0L, qb.field_x);
-          nk.field_g = new mh(0L, rp.field_t, nk.field_b);
+          nk.field_g = new mh(0L, MainMenuScreen.field_t, nk.field_b);
           nk.field_a = new mh(0L, cd.field_d, td.field_r);
           kk.field_b = new mh(0L, cd.field_d, ch.field_d);
           la.field_b = new mh(0L, cd.field_d, kc.field_o);
@@ -168,7 +168,7 @@ abstract class sl extends DualLinkNode {
           Brick.field_A.field_S = 1;
           Brick.field_A.field_Q = 0;
           nh.field_a = new mh(0L, ij.field_b, k.field_j.toUpperCase());
-          qp.field_f = new mh(0L, re.field_m);
+          qp.field_f = new mh(0L, MenuSelection.field_m);
           qp.field_f.a(Brick.field_A, 0);
           qp.field_f.a(nh.field_a, 0);
           t.field_f = new mh(0L, am.field_Qb);
@@ -179,15 +179,15 @@ abstract class sl extends DualLinkNode {
           ji.field_b = new mh(0L, (mh) null);
           um.field_b = new mh(0L, ad.field_l);
           um.field_b.field_S = 1;
-          rn.field_g = new mh(0L, rp.field_t, n.field_a);
+          rn.field_g = new mh(0L, MainMenuScreen.field_t, n.field_a);
           wd.field_E = new mh(0L, ik.field_a, pf.field_c);
-          vp.field_u = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
+          TimedSplashScreen.field_u = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           ji.field_b.a(um.field_b, 0);
           ji.field_b.a(rn.field_g, 0);
           if (vd.field_e) {
             ji.field_b.a(wd.field_E, 0);
           }
-          ji.field_b.a(vp.field_u, 0);
+          ji.field_b.a(TimedSplashScreen.field_u, 0);
           ij.field_e = new mh(0L, ab.field_x, di.field_a.toUpperCase());
           ba.field_v = new mh(0L, qh.field_j);
           rg.field_e = new mh(0L, qb.field_x);
@@ -209,7 +209,7 @@ abstract class sl extends DualLinkNode {
             }
           }
           gb.field_l[2] = new mh(0L, wi.field_n, p.field_j);
-          ab.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], re.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
+          ab.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < pe.field_t) {
             gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);
             array$1 = new rk[pe.field_t + 1];

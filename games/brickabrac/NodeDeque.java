@@ -64,7 +64,7 @@ final class NodeDeque {
             return stackIn_15_0;
           }
           if (param0 == 10) {
-            stackIn_18_0 = km.field_n;
+            stackIn_18_0 = MenuScreen.field_n;
             return stackIn_18_0;
           }
           if (param0 == 11) {
@@ -196,13 +196,13 @@ final class NodeDeque {
         qa.field_w = new mh(0L, (mh) null);
         qa.field_w.a(sb.field_c.field_d, 0);
         qa.field_w.a(ij.field_e, 0);
-        wi.field_j = new mh(0L, re.field_m);
-        de.field_t = new mh(0L, (mh) null);
+        wi.field_j = new mh(0L, MenuSelection.field_m);
+        MembershipBenefitsScreen.field_t = new mh(0L, (mh) null);
         wi.field_j.a(pk.field_h, 0);
-        wi.field_j.a(de.field_t, 0);
+        wi.field_j.a(MembershipBenefitsScreen.field_t, 0);
         int var2 = -67 / ((1 - param1) / 63);
-        de.field_t.a(Ball.field_A, 0);
-        de.field_t.a(nd.field_a, 0);
+        MembershipBenefitsScreen.field_t.a(Ball.field_A, 0);
+        MembershipBenefitsScreen.field_t.a(nd.field_a, 0);
         kj.a(true, param0);
     }
 

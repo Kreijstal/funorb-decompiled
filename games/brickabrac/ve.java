@@ -64,7 +64,7 @@ final class ve {
         if (param0 != -21835160) {
           ve.b(-54);
         }
-        return ud.a(qn.field_n, kb.field_Qb, 21);
+        return LevelSelectScreen.a(qn.field_n, kb.field_Qb, 21);
     }
 
     final static void a(int param0) {

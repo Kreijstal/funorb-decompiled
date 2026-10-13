@@ -386,7 +386,7 @@ abstract class MovingBody extends IntrusiveNode {
                     if (0 == var38) {
                       if (var37 >= 0 &&
                         var37 < mg.field_e) {
-                        rp.a((byte) 127, var29, 0, 0, 0, var36Lifetime2 + var37, var38, var21, param9, var25);
+                        MainMenuScreen.a((byte) 127, var29, 0, 0, 0, var36Lifetime2 + var37, var38, var21, param9, var25);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
@@ -396,9 +396,9 @@ abstract class MovingBody extends IntrusiveNode {
                         var38 = -1 + (-var37 + mg.field_e);
                       }
                       if (var37 < 0) {
-                        rp.a((byte) 121, var29 - var41 * var37, var41, var39, var40, var36Lifetime2, var38 + var37, var21 - var37 * var39, param9, -(var40 * var37) + var25);
+                        MainMenuScreen.a((byte) 121, var29 - var41 * var37, var41, var39, var40, var36Lifetime2, var38 + var37, var21 - var37 * var39, param9, -(var40 * var37) + var25);
                       } else {
-                        rp.a((byte) 117, var29, var41, var39, var40, var36Lifetime2 + var37, var38, var21, param9, var25);
+                        MainMenuScreen.a((byte) 117, var29, var41, var39, var40, var36Lifetime2 + var37, var38, var21, param9, var25);
                       }
                     }
                   }
@@ -473,7 +473,7 @@ abstract class MovingBody extends IntrusiveNode {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     mg.field_e > var36Lifetime1) {
-                    rp.a((byte) 127, var29, 0, 0, 0, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var21, param9, var25);
+                    MainMenuScreen.a((byte) 127, var29, 0, 0, 0, var36Lifetime1 + var35Lifetime1, var37Lifetime1, var21, param9, var25);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -483,9 +483,9 @@ abstract class MovingBody extends IntrusiveNode {
                     var37Lifetime1 = mg.field_e - (var36Lifetime1 + 1);
                   }
                   if (0 <= var36Lifetime1) {
-                    rp.a((byte) 125, var29, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var21, param9, var25);
+                    MainMenuScreen.a((byte) 125, var29, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1 + var36Lifetime1, var37Lifetime1, var21, param9, var25);
                   } else {
-                    rp.a((byte) 117, var29 - var40Lifetime1 * var36Lifetime1, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, param9, var25 - var36Lifetime1 * var39Lifetime1);
+                    MainMenuScreen.a((byte) 117, var29 - var40Lifetime1 * var36Lifetime1, var40Lifetime1, var38Lifetime1, var39Lifetime1, var35Lifetime1, var37Lifetime1 + var36Lifetime1, var21 - var38Lifetime1 * var36Lifetime1, param9, var25 - var36Lifetime1 * var39Lifetime1);
                   }
                 }
               }

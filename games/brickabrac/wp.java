@@ -258,7 +258,7 @@ final class wp {
               } else {
                 si.field_a = var6_int;
                 ga.field_j = -1;
-                rf.field_b = km.field_k;
+                rf.field_b = MenuScreen.field_k;
               }
             }
             if (rf.field_b == dc.field_f &&
@@ -279,7 +279,7 @@ final class wp {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   ga.field_j = -1;
-                  rf.field_b = km.field_k;
+                  rf.field_b = MenuScreen.field_k;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -333,11 +333,11 @@ final class wp {
               var12 = (CharSequence) ((Object) tb.field_cb);
               ih.field_d = gb.a(var12, 65);
               fp.field_x = jl.field_e.readUnsignedByte(255);
-              rf.field_b = q.field_i;
+              rf.field_b = MenuButton.field_i;
               if (cg.field_s.a(13) == vh.field_X) {
                 uc.field_k.a(100, uc.e((byte) -66));
               } else {
-                if (cg.field_s.a(13) == de.field_v) {
+                if (cg.field_s.a(13) == MembershipBenefitsScreen.field_v) {
                   ll.field_d.a(112, uc.e((byte) -81));
                 }
               }
@@ -375,7 +375,7 @@ final class wp {
             if (!param2) {
               field_h = 'ﾢ';
             }
-            if (rf.field_b == km.field_k &&
+            if (rf.field_b == MenuScreen.field_k &&
               um.b((byte) -41)) {
               hn.a((byte) 58);
               if (si.field_a == 7 &&
@@ -394,7 +394,7 @@ final class wp {
             }
             if (eq.field_g == null) {
               if (pf.field_d) {
-                if (30000L >= de.f(-6792)) {
+                if (30000L >= MembershipBenefitsScreen.f(-6792)) {
                   eo.field_e = gd.field_e;
                 } else {
                   eo.field_e = hg.field_b;
@@ -508,7 +508,7 @@ final class wp {
           return;
         }
         try {
-          vp.a(param0 ^ 100, param1);
+          TimedSplashScreen.a(param0 ^ 100, param1);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "wp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

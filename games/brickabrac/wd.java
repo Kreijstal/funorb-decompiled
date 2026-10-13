@@ -21,7 +21,7 @@ final class wd extends DualLinkNode {
         int var2Lifetime1;
         if (null != this.field_u) {
           for (var2 = 0; var2 < this.field_u.length; var2++) {
-            this.field_u[var2] = ud.d(this.field_u[var2], 32768);
+            this.field_u[var2] = LevelSelectScreen.d(this.field_u[var2], 32768);
           }
         }
         var2Lifetime1 = 122 % ((param0 + 60) / 61);

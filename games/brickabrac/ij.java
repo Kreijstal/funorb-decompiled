@@ -53,8 +53,8 @@ final class ij implements wb {
         bm.a(kh.field_i, qb.field_r, 24876, uj.field_o, GameScreen.field_e, ki.field_f, i.field_s);
         oc.a(1, ob.field_D);
         hk.h((byte) 55);
-        hk.a((byte) 115, ki.field_f);
-        lp.field_rb = (GameScreen) ((Object) bq.a(21, 28472));
+        hk.initializeMenuScreens((byte) 115, ki.field_f);
+        lp.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
         co.a((byte) -79, cd.field_g);
     }
 

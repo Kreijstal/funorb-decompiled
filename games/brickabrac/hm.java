@@ -53,7 +53,7 @@ final class hm {
           ua.field_c.clear((byte) -60);
           eq.field_m = new mk(param5);
           m.field_h = -1;
-          re.field_i = 0;
+          MenuSelection.field_i = 0;
           uf.field_c = 0;
           ko.field_s = -1;
           if (param6.field_bb == null) {

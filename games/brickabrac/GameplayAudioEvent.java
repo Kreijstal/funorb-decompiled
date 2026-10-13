@@ -124,7 +124,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
         try {
           if (!m.a(param0 ^ 27146)) {
             if (null != ua.field_d &&
-              ua.field_d.field_e) {
+              ua.field_d.focusLossPending) {
               LevelPack.b(109);
               wo.field_b.a(-80, new ek(wo.field_b, ch.field_a));
             }

@@ -75,7 +75,7 @@ final class fr {
           rg.field_c = new mh(0L, (mh) null);
           sj.field_d = new mh(0L, ad.field_l);
           sj.field_d.field_S = 1;
-          gk.field_c = new mh(0L, rp.field_t, n.field_a);
+          gk.field_c = new mh(0L, MainMenuScreen.field_t, n.field_a);
           GameplayScreen.field_u = new mh(0L, ik.field_a, bc.field_c);
           mo.field_R = new mh(0L, DualLinkNode.field_t);
           rg.field_c.a(sj.field_d, 0);
@@ -156,30 +156,30 @@ final class fr {
         }
         if (pe.field_o.field_n) {
           if ((pe.field_o.match.field_j & 1 << pe.field_o.field_k) != 0) {
-            ag.field_D[12] = mi.field_a;
+            ag.buttonLabels[12] = mi.field_a;
           } else {
             if (pe.field_o.match.field_j != 0) {
-              ag.field_D[12] = qm.field_c;
+              ag.buttonLabels[12] = qm.field_c;
             } else {
               if ((1 << pe.field_o.field_k | pe.field_o.field_v) != (1 << pe.field_o.match.playerCount) - 1) {
-                ag.field_D[12] = s.field_a;
+                ag.buttonLabels[12] = s.field_a;
               } else {
-                ag.field_D[12] = oa.field_Pb;
+                ag.buttonLabels[12] = oa.field_Pb;
               }
             }
           }
         } else {
           if ((1 << pe.field_o.field_k & pe.field_o.match.field_j) != 0) {
-            ag.field_D[12] = ff.field_g;
+            ag.buttonLabels[12] = ff.field_g;
           } else {
             if (0 == pe.field_o.match.field_j) {
               if ((pe.field_o.field_v | 1 << pe.field_o.field_k) != -1 + (1 << pe.field_o.match.playerCount)) {
-                ag.field_D[12] = RectangleBody.field_t;
+                ag.buttonLabels[12] = RectangleBody.field_t;
               } else {
-                ag.field_D[12] = bm.field_b;
+                ag.buttonLabels[12] = bm.field_b;
               }
             } else {
-              ag.field_D[12] = pq.field_m;
+              ag.buttonLabels[12] = pq.field_m;
             }
           }
         }

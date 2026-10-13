@@ -275,7 +275,7 @@ abstract class jc extends ib {
               dj.field_d <= 0) {
               return;
             }
-            SpriteGeometry.field_v = de.field_x;
+            SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
             ga.field_i = 4;
             tb.field_eb = o.field_a;
             pp.field_a = -1;
@@ -298,7 +298,7 @@ abstract class jc extends ib {
             pp.field_a = -1;
             BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
             kb.field_Sb = true;
-            SpriteGeometry.field_v = de.field_x;
+            SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
             return;
           }
           if (param1 == 3) {
@@ -333,7 +333,7 @@ abstract class jc extends ib {
                 ga.field_i = 12;
                 pp.field_a = -1;
                 tb.field_eb = rh.field_a;
-                SpriteGeometry.field_v = de.field_x;
+                SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
                 return;
               }
             } else {

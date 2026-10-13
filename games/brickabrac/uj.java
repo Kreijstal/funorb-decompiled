@@ -5,7 +5,7 @@ final class uj {
     private int field_i;
     private int field_f;
     private int field_g;
-    private km field_m;
+    private MenuScreen field_m;
     private LevelPack field_l;
     private int field_n;
     int field_h;
@@ -17,7 +17,7 @@ final class uj {
     static RgbSprite[] field_e;
     static mf field_o;
     private int field_c;
-    private q field_p;
+    private MenuButton field_p;
     private int field_r;
     int field_q;
 
@@ -44,59 +44,59 @@ final class uj {
     }
 
     final static void a(int param0) {
-        if (null != ag.field_D) {
+        if (null != ag.buttonLabels) {
           return;
         }
-        ag.field_D = new String[46];
-        ag.field_D[5] = gg.field_l;
-        ag.field_D[3] = tn.field_B;
-        ag.field_D[4] = pp.field_c;
-        ag.field_D[9] = LevelPackLoader.field_d;
-        ag.field_D[1] = da.field_H;
-        ag.field_D[11] = ej.field_H;
-        ag.field_D[7] = jj.field_b;
-        ag.field_D[0] = mo.field_O;
-        ag.field_D[6] = rd.field_b;
-        ag.field_D[8] = null;
-        ag.field_D[13] = di.field_a;
-        ag.field_D[27] = ld.field_r;
-        ag.field_D[2] = pj.field_e;
+        ag.buttonLabels = new String[46];
+        ag.buttonLabels[5] = gg.field_l;
+        ag.buttonLabels[3] = tn.field_B;
+        ag.buttonLabels[4] = pp.field_c;
+        ag.buttonLabels[9] = LevelPackLoader.field_d;
+        ag.buttonLabels[1] = da.field_H;
+        ag.buttonLabels[11] = ej.field_H;
+        ag.buttonLabels[7] = jj.field_b;
+        ag.buttonLabels[0] = mo.field_O;
+        ag.buttonLabels[6] = rd.field_b;
+        ag.buttonLabels[8] = null;
+        ag.buttonLabels[13] = di.field_a;
+        ag.buttonLabels[27] = ld.field_r;
+        ag.buttonLabels[2] = pj.field_e;
         sl.field_A[11] = tn.field_w;
         sl.field_A[5] = ef.field_c;
         sl.field_A[6] = ch.field_i;
         sl.field_A[9] = mk.field_a;
         sl.field_A[4] = tm.field_d;
-        ag.field_D[14] = pl.field_c[0];
+        ag.buttonLabels[14] = pl.field_c[0];
         sl.field_A[3] = sj.field_e;
-        ag.field_D[39] = ki.field_o;
-        ag.field_D[23] = mh.field_mb;
-        ag.field_D[21] = a.field_r;
-        ag.field_D[17] = vq.field_E[0];
-        ag.field_D[38] = kk.field_a;
+        ag.buttonLabels[39] = ki.field_o;
+        ag.buttonLabels[23] = mh.field_mb;
+        ag.buttonLabels[21] = a.field_r;
+        ag.buttonLabels[17] = vq.field_E[0];
+        ag.buttonLabels[38] = kk.field_a;
         if (param0 != -1) {
           return;
         }
-        ag.field_D[34] = f.field_b;
-        ag.field_D[28] = sn.field_r;
-        ag.field_D[19] = jf.field_g;
-        ag.field_D[35] = LevelPackLoader.field_d;
-        ag.field_D[20] = pn.field_q;
-        ag.field_D[33] = t.field_c;
-        ag.field_D[32] = hk.field_L;
-        ag.field_D[25] = ck.field_i;
-        ag.field_D[24] = gi.field_r;
-        ag.field_D[42] = oc.field_u;
-        ag.field_D[37] = LevelPackLoader.field_i;
+        ag.buttonLabels[34] = f.field_b;
+        ag.buttonLabels[28] = sn.field_r;
+        ag.buttonLabels[19] = jf.field_g;
+        ag.buttonLabels[35] = LevelPackLoader.field_d;
+        ag.buttonLabels[20] = pn.field_q;
+        ag.buttonLabels[33] = t.field_c;
+        ag.buttonLabels[32] = hk.field_L;
+        ag.buttonLabels[25] = ck.field_i;
+        ag.buttonLabels[24] = gi.field_r;
+        ag.buttonLabels[42] = oc.field_u;
+        ag.buttonLabels[37] = LevelPackLoader.field_i;
         sl.field_A[7] = ke.field_f;
         sl.field_A[8] = oq.field_v;
-        ag.field_D[15] = pl.field_c[1];
-        ag.field_D[16] = pl.field_c[2];
+        ag.buttonLabels[15] = pl.field_c[1];
+        ag.buttonLabels[16] = pl.field_c[2];
         sl.field_A[12] = uo.field_b;
         sl.field_A[10] = eh.field_d;
-        ag.field_D[18] = vq.field_E[1];
-        ag.field_D[26] = oq.field_u;
-        ag.field_D[22] = d.field_D;
-        sl.field_A[13] = vp.field_s;
+        ag.buttonLabels[18] = vq.field_E[1];
+        ag.buttonLabels[26] = oq.field_u;
+        ag.buttonLabels[22] = d.field_D;
+        sl.field_A[13] = TimedSplashScreen.field_s;
         hm.field_b = new String[]{mi.field_a, qm.field_c, oa.field_Pb, s.field_a};
         sl.field_A[16] = dc.field_d;
         qn.field_u = new String[]{vh.field_T, oc.field_u};
@@ -189,12 +189,12 @@ final class uj {
         int var4;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        MovingBody.a((byte) 70, this.field_p.field_c + this.field_p.field_j, this.field_p.field_c, this.field_p.field_a, this.field_p.field_a + this.field_p.field_d);
+        MovingBody.a((byte) 70, this.field_p.x + this.field_p.width, this.field_p.x, this.field_p.y, this.field_p.y + this.field_p.height);
         var2 = df.a(this.field_i, (byte) 15, this.field_g - this.field_c);
         if (param0 != 28) {
           return;
         }
-        for (var3 = this.field_p.field_a + (-this.field_g + this.field_c + this.field_j) + var2 * this.field_i; this.field_p.field_d + (10 + this.field_p.field_a) > var3; var3 = var3 + this.field_i) {
+        for (var3 = this.field_p.y + (-this.field_g + this.field_c + this.field_j) + var2 * this.field_i; this.field_p.height + (10 + this.field_p.y) > var3; var3 = var3 + this.field_i) {
           if (this.field_l.levelCount > var2) {
             if (0 <= var2) {
               var4 = 3;
@@ -205,7 +205,7 @@ final class uj {
               } else {
                 var4 = (var2 != this.field_q) ? 2 : 1;
               }
-              nn.field_g.b(this.field_l.metadata[var2].numberLabel, (this.field_p.field_c * 2 + this.field_p.field_j) / 2, var3, var4, -1);
+              nn.field_g.b(this.field_l.metadata[var2].numberLabel, (this.field_p.x * 2 + this.field_p.width) / 2, var3, var4, -1);
             }
             var2++;
             continue;
@@ -218,7 +218,7 @@ final class uj {
 
     final boolean a(int param0, int param1, int param2) {
         int var4;
-        var4 = df.a(this.field_f, (byte) 15, this.field_g - this.field_c) + this.field_p.field_d / (2 * this.field_i);
+        var4 = df.a(this.field_f, (byte) 15, this.field_g - this.field_c) + this.field_p.height / (2 * this.field_i);
         if (param0 != -28088) {
           this.field_r = -121;
         }
@@ -262,7 +262,7 @@ final class uj {
     }
 
     final void b(boolean param0) {
-        if (this.field_a != this.field_m.field_h.field_j) {
+        if (this.field_a != this.field_m.selection.selectedIndex) {
           this.field_q = -1;
           this.field_b = -1;
           this.field_n = -1;
@@ -273,7 +273,7 @@ final class uj {
           if (!this.field_d ||
             pq.field_k != this.field_b ||
             this.field_n != po.field_a) {
-            this.field_q = df.a(this.field_i, (byte) 15, po.field_a - (this.field_p.field_a - (-this.field_c + this.field_g)));
+            this.field_q = df.a(this.field_i, (byte) 15, po.field_a - (this.field_p.y - (-this.field_c + this.field_g)));
             if (this.field_q < 0) {
               this.field_q = 0;
             }
@@ -285,7 +285,7 @@ final class uj {
           this.field_b = pq.field_k;
         }
         if (param0) {
-          this.field_p = (q) null;
+          this.field_p = (MenuButton) null;
         }
     }
 
@@ -421,7 +421,7 @@ final class uj {
         }
     }
 
-    uj(int param0, int param1, int param2, km param3, q param4, LevelPack param5) {
+    uj(int param0, int param1, int param2, MenuScreen param3, MenuButton param4, LevelPack param5) {
         this.field_q = -1;
         try {
           this.field_i = param0 + param1;
@@ -433,7 +433,7 @@ final class uj {
           this.field_c = param1;
           this.field_f = param0;
           this.field_r = this.field_c + this.field_l.levelCount * this.field_i;
-          this.field_k = -this.field_p.field_d + this.field_r + 5;
+          this.field_k = -this.field_p.height + this.field_r + 5;
           if (0 > this.field_k) {
             this.field_k = 0;
           }

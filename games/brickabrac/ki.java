@@ -8,7 +8,7 @@ abstract class ki {
     static String field_g;
     vm field_n;
     static String field_o;
-    static of field_p;
+    static BlankScreen field_p;
     private int[] field_c;
     private oe[] field_b;
     private String[] field_j;
@@ -259,7 +259,7 @@ abstract class ki {
         field_a = 1;
         field_o = "World select";
         field_e = 0;
-        field_p = new of();
+        field_p = new BlankScreen();
         field_i = new int[5];
         field_d = 256;
     }

@@ -374,7 +374,7 @@ final class wl extends d {
           }
           if (null == eq.field_g) {
             if (pf.field_d) {
-              if (de.f(param6 ^ -6788) > 30000L) {
+              if (MembershipBenefitsScreen.f(param6 ^ -6788) > 30000L) {
                 eo.field_e = hg.field_b;
               } else {
                 eo.field_e = gd.field_e;

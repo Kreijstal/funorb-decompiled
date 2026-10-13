@@ -565,7 +565,7 @@ abstract class h extends oc implements sd {
           }
           if (param0.charAt(0) == 34) {
             if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_11_0 = wg.field_c;
+              stackIn_11_0 = GameCanvas.field_c;
               return stackIn_11_0;
             }
             var3 = 0;
@@ -577,7 +577,7 @@ abstract class h extends oc implements sd {
               } else {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = wg.field_c;
+                  stackIn_24_0 = GameCanvas.field_c;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -597,13 +597,13 @@ abstract class h extends oc implements sd {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_37_0 = wg.field_c;
+                stackIn_37_0 = GameCanvas.field_c;
                 return stackIn_37_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (-1 == qa.field_v.indexOf(var5Lifetime1)) {
-                stackIn_42_0 = wg.field_c;
+                stackIn_42_0 = GameCanvas.field_c;
                 return stackIn_42_0;
               }
               var3Lifetime1 = 0;

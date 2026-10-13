@@ -103,7 +103,7 @@ final class cd {
         try {
           uc.field_l = param1;
           ag.field_F = param0;
-          wg.field_f = param4;
+          GameCanvas.field_f = param4;
           ek.field_lb = param5;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "cd.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

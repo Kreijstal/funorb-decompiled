@@ -202,35 +202,35 @@ final class hk extends ib implements hf, en {
         }
     }
 
-    final static void a(byte param0, mf param1) {
+    final static void initializeMenuScreens(byte obfuscationGuard, mf archive) {
         try {
-          pg.field_k = new km[22];
-          wg.a(-74, new rp());
-          wg.a(-68, cf.a(1, -2635));
-          wg.a(-90, cf.a(2, -2635));
-          wg.a(-111, cf.a(3, -2635));
-          wg.a(-109, cf.a(4, -2635));
-          wg.a(-93, new ah());
-          wg.a(-114, new lf());
-          wg.a(-114, new md());
-          wg.a(-104, new bl());
-          wg.a(-66, new cc());
-          wg.a(-55, new hq());
-          wg.a(-75, new uk());
-          wg.a(-63, new de(param1));
-          wg.a(-60, new ud(13, 0));
-          wg.a(-105, new fp());
-          wg.a(-69, new ud(15, 1));
-          wg.a(-71, new ol());
-          wg.a(-54, cf.a(17, -2635));
-          wg.a(-70, new vq());
-          wg.a(-63, new gn());
-          wg.a(-91, new ab());
-          int var2_int = -5 / ((param0 - 70) / 42);
-          wg.a(-73, new vp());
+          pg.menuScreens = new MenuScreen[22];
+          GameCanvas.registerMenuScreen(-74, new MainMenuScreen());
+          GameCanvas.registerMenuScreen(-68, cf.a(1, -2635));
+          GameCanvas.registerMenuScreen(-90, cf.a(2, -2635));
+          GameCanvas.registerMenuScreen(-111, cf.a(3, -2635));
+          GameCanvas.registerMenuScreen(-109, cf.a(4, -2635));
+          GameCanvas.registerMenuScreen(-93, new ah());
+          GameCanvas.registerMenuScreen(-114, new lf());
+          GameCanvas.registerMenuScreen(-114, new md());
+          GameCanvas.registerMenuScreen(-104, new bl());
+          GameCanvas.registerMenuScreen(-66, new cc());
+          GameCanvas.registerMenuScreen(-55, new hq());
+          GameCanvas.registerMenuScreen(-75, new uk());
+          GameCanvas.registerMenuScreen(-63, new MembershipBenefitsScreen(archive));
+          GameCanvas.registerMenuScreen(-60, new LevelSelectScreen(13, 0));
+          GameCanvas.registerMenuScreen(-105, new fp());
+          GameCanvas.registerMenuScreen(-69, new LevelSelectScreen(15, 1));
+          GameCanvas.registerMenuScreen(-71, new ol());
+          GameCanvas.registerMenuScreen(-54, cf.a(17, -2635));
+          GameCanvas.registerMenuScreen(-70, new vq());
+          GameCanvas.registerMenuScreen(-63, new gn());
+          GameCanvas.registerMenuScreen(-91, new ab());
+          int var2_int = -5 / ((obfuscationGuard - 70) / 42);
+          GameCanvas.registerMenuScreen(-73, new TimedSplashScreen());
           si.field_k = rd.a(0, (byte) 19);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "hk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "hk.E(" + obfuscationGuard + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -301,8 +301,8 @@ final class hk extends ib implements hf, en {
         int var1 = 0;
         int var2 = 0;
         if (param0 >= 4) {
-          var1 = nn.field_g.c(ag.field_D[20]);
-          var2 = nn.field_g.c(ag.field_D[21]);
+          var1 = nn.field_g.c(ag.buttonLabels[20]);
+          var2 = nn.field_g.c(ag.buttonLabels[21]);
           dg.field_d = (var2 >= var1 ? var2 : var1) + 4;
           og.field_Zb = og.field_Zb + (dg.field_d + 120);
           return;

@@ -12,7 +12,7 @@ class lp extends fe implements en {
     static mh field_Ab;
     static qh field_xb;
     private dh field_sb;
-    static GameScreen field_rb;
+    static GameScreen currentScreen;
     static tg field_ub;
 
     final boolean a(int param0, byte param1, oc param2, char param3) {
@@ -28,7 +28,7 @@ class lp extends fe implements en {
             return true;
           }
           if (param1 != 110) {
-            field_rb = (GameScreen) null;
+            currentScreen = (GameScreen) null;
           }
           stackIn_7_0 = super.a(param0, (byte) 110, param2, param3);
           return stackIn_7_0;
@@ -52,7 +52,7 @@ class lp extends fe implements en {
           if (!LegacyUtf8Decoder.a((byte) -80)) {
             return false;
           }
-          if (0 == (de.field_x & 8)) {
+          if (0 == (MembershipBenefitsScreen.field_x & 8)) {
             return true;
           }
           return false;
@@ -60,7 +60,7 @@ class lp extends fe implements en {
         if (!LegacyUtf8Decoder.a((byte) -80)) {
           return false;
         }
-        if (0 == (de.field_x & 8)) {
+        if (0 == (MembershipBenefitsScreen.field_x & 8)) {
           return true;
         }
         return false;
@@ -233,7 +233,7 @@ class lp extends fe implements en {
     public static void o(int param0) {
         field_wb = null;
         field_ub = null;
-        field_rb = null;
+        currentScreen = null;
         field_Ab = null;
         if (param0 == 50) {
           field_xb = null;

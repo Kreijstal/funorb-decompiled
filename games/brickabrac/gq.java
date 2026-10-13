@@ -333,7 +333,7 @@ final class gq extends mh {
           var1 = var5;
           var16 = bd.field_b.field_k;
           for (var3 = 0; 8 > var3; var3++) {
-            var5[var3] = ud.d(var12[var3], var16[var3]);
+            var5[var3] = LevelSelectScreen.d(var12[var3], var16[var3]);
           }
           var13 = pl.field_b;
           var11 = var13;

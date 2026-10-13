@@ -9,19 +9,19 @@ final class ng {
     static String field_e;
     static String field_c;
 
-    final static void a(boolean param0, int param1, int param2) {
-        if (hd.field_d != null) {
+    final static void requestScreen(boolean usePointer, int obfuscationGuard, int screenId) {
+        if (hd.pendingScreen != null) {
           sk.i((byte) -127);
         }
-        if (lp.field_rb.field_a == param2) {
+        if (lp.currentScreen.screenId == screenId) {
           return;
         }
-        hd.field_d = ij.a(param2, (byte) -128);
-        if (hd.field_d instanceof km) {
-          ((km) (hd.field_d)).a(param0, 0, 125);
+        hd.pendingScreen = ij.a(screenId, (byte) -128);
+        if (hd.pendingScreen instanceof MenuScreen) {
+          ((MenuScreen) (hd.pendingScreen)).onEnter(usePointer, 0, 125);
         }
-        if (param1 < 52) {
-          ng.a(true, 107, -22);
+        if (obfuscationGuard < 52) {
+          ng.requestScreen(true, 107, -22);
         }
         kh.field_a = 0;
         wp.a(8, ta.field_e[8]);

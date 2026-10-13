@@ -16,7 +16,7 @@ final class w {
     static int[] field_n;
     private int field_c;
     private int field_j;
-    private re field_g;
+    private MenuSelection field_g;
     private int field_o;
     private int field_i;
     private RgbSprite field_l;
@@ -120,13 +120,13 @@ final class w {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.field_g.a(this.a(po.field_a, -636, pq.field_k), 27479, this.a(qo.field_O, -636, tb.field_fb));
+          this.field_g.updatePointer(this.a(po.field_a, -636, pq.field_k), 27479, this.a(qo.field_O, -636, tb.field_fb));
           var4Lifetime1 = 0;
-          if (this.field_g.a((byte) 113)) {
-            if (this.field_g.field_j == 0) {
+          if (this.field_g.isActivated((byte) 113)) {
+            if (this.field_g.selectedIndex == 0) {
               var4Lifetime1 = 1;
             }
-            if (this.field_g.field_j == 1) {
+            if (this.field_g.selectedIndex == 1) {
               stackIn_75_0 = 2;
               return stackIn_75_0;
             }
@@ -299,7 +299,7 @@ final class w {
             ll.field_c = pl.a("members_expansion_screen", "arrow", (byte) 111, jg.field_d);
             ch.field_c = nq.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");
             co.field_j = si.a((byte) -107, "pump32", "", jg.field_d, fe.field_jb);
-            rp.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, jg.field_d);
+            MainMenuScreen.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, jg.field_d);
             LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, jg.field_d);
             sf.field_V = bd.a("members_expansion_screen", "button_highlights", jg.field_d, (byte) -8);
             fe.field_jb = null;
@@ -341,15 +341,15 @@ final class w {
           }
           this.field_e.drawTransparent(16, 302);
           ch.field_c.a(this.field_d[this.field_h], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-          rp.field_u.drawTransparent(30, 330);
+          MainMenuScreen.field_u.drawTransparent(30, 330);
           ch.field_c.a(ab.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(ab.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(ab.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           LevelPack.field_e.drawTransparent((-LevelPack.field_e.canvasWidth + 127) / 2 + 508, 315);
-          if (0 == this.field_g.field_j) {
+          if (0 == this.field_g.selectedIndex) {
             sf.field_V[0].drawTransparent(508, 299);
           } else {
-            if (this.field_g.field_j == 1) {
+            if (this.field_g.selectedIndex == 1) {
               sf.field_V[1].drawTransparent(508, 387);
             }
           }
@@ -392,14 +392,14 @@ final class w {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          this.field_g.d(-1);
-          if (this.field_g.a((byte) 113)) {
-            if (this.field_g.field_j == 0) {
+          this.field_g.navigateHorizontal(-1);
+          if (this.field_g.isActivated((byte) 113)) {
+            if (this.field_g.selectedIndex == 0) {
               this.b((byte) 125);
               stackIn_5_0 = 3;
               return stackIn_5_0;
             }
-            if (this.field_g.field_j == 1) {
+            if (this.field_g.selectedIndex == 1) {
               stackIn_10_0 = 1;
               return stackIn_10_0;
             }
@@ -523,7 +523,7 @@ final class w {
             this.field_c = 2;
           }
           this.field_f = param0;
-          this.field_g = new re(2);
+          this.field_g = new MenuSelection(2);
           this.field_q = param3;
           this.field_d = param4;
           if (this.field_q != null &&

@@ -37,7 +37,7 @@ final class nl {
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (q.field_i != rf.field_b) {
+          if (MenuButton.field_i != rf.field_b) {
             return false;
           }
           if (param1 != 64) {

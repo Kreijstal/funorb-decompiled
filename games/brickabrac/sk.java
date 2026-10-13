@@ -60,7 +60,7 @@ final class sk extends h {
           stackIn_10_1 = pe.field_o.field_s;
           stackIn_11_2 = (kb.field_Yb >= 2) && (param3 == 1) && (qg.field_t);
           stackIn_10_0.field_s = stackIn_10_1 | stackIn_11_2;
-          ng.a(param4, 103, -1);
+          ng.requestScreen(param4, 103, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,14 +99,14 @@ final class sk extends h {
         int var2Lifetime1;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (hd.field_d == null) {
+          if (hd.pendingScreen == null) {
             return;
           }
-          if (lp.field_rb instanceof km) {
-            ((km) (lp.field_rb)).d((byte) 79);
+          if (lp.currentScreen instanceof MenuScreen) {
+            ((MenuScreen) (lp.currentScreen)).onExit((byte) 79);
           }
-          lp.field_rb = hd.field_d;
-          hd.field_d = null;
+          lp.currentScreen = hd.pendingScreen;
+          hd.pendingScreen = null;
           kh.field_a = 0;
           if (cc.field_G) {
             cc.field_G = false;

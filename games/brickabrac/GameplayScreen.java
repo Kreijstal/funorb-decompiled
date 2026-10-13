@@ -86,11 +86,11 @@ final class GameplayScreen extends GameScreen {
         int[] var5 = mk.field_b;
         int[] var3 = var5;
         int var4 = param0;
-        var5[var4 >> 5] = ud.d(var5[var4 >> 5], 1 << ik.a(31, var4));
+        var5[var4 >> 5] = LevelSelectScreen.d(var5[var4 >> 5], 1 << ik.a(31, var4));
         int[] var6 = pl.field_b;
         var3 = var6;
         var4 = param0;
-        var6[var4 >> 5] = ud.d(var6[var4 >> 5], param1 << ik.a(var4, 31));
+        var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], param1 << ik.a(var4, 31));
         kp.field_c.addLast(new IntNode(param0), (byte) 3);
         return false;
     }
@@ -224,18 +224,18 @@ final class GameplayScreen extends GameScreen {
           if (!oa.field_Sb.field_q) {
             oa.field_Sb.d(59);
           }
-          if (km.field_i > 0) {
-            fieldTemp$0 = km.field_i - 1;
-            km.field_i = km.field_i - 1;
+          if (MenuScreen.field_i > 0) {
+            fieldTemp$0 = MenuScreen.field_i - 1;
+            MenuScreen.field_i = MenuScreen.field_i - 1;
             if (fieldTemp$0 == 0) {
               fq.field_c = null;
               ih.field_k = null;
             }
           }
         } else {
-          if (km.field_i > 0) {
-            fieldTemp$1 = km.field_i - 1;
-            km.field_i = km.field_i - 1;
+          if (MenuScreen.field_i > 0) {
+            fieldTemp$1 = MenuScreen.field_i - 1;
+            MenuScreen.field_i = MenuScreen.field_i - 1;
             if (fieldTemp$1 == 0) {
               fq.field_c = null;
               ih.field_k = null;
@@ -287,13 +287,13 @@ final class GameplayScreen extends GameScreen {
             }
             po.a((byte) -97);
             if (!this.field_p) {
-              ng.a(false, 62, 20);
+              ng.requestScreen(false, 62, 20);
               cc.field_G = true;
             } else {
               if (op.field_a) {
-                if (null == hd.field_d ||
-                  hd.field_d.field_a != -2) {
-                  ng.a(false, 101, 19);
+                if (null == hd.pendingScreen ||
+                  hd.pendingScreen.screenId != -2) {
+                  ng.requestScreen(false, 101, 19);
                 }
               } else {
                 da.f((byte) 122);
@@ -400,7 +400,7 @@ final class GameplayScreen extends GameScreen {
           stackIn_120_0 = (!this.a(var7, true, var19)) ? 0 : 1;
           var5Lifetime4 = stackIn_120_0;
         } else {
-          if (km.field_i == 0) {
+          if (MenuScreen.field_i == 0) {
             od.a((byte) 32);
             var18 = this.match.playerBoards[0];
             if (2 == var18.field_Z) {
@@ -455,7 +455,7 @@ final class GameplayScreen extends GameScreen {
             ih.field_k = oa.field_Sb.c((byte) -116);
             fq.field_c = oa.field_Sb.b(-102);
             oa.field_Sb = rd.a(var20.levelState.value, (byte) 19);
-            km.field_i = 32;
+            MenuScreen.field_i = 32;
             var20.field_tb = false;
             pe.field_n = var20.levelState.value;
           }
@@ -612,7 +612,7 @@ final class GameplayScreen extends GameScreen {
           }
           if (this.match.playerCount == 1 &&
             this.match.playerBoards[0].field_Z == 8) {
-            ng.a(param1, 107, 18);
+            ng.requestScreen(param1, 107, 18);
             ji.a(25459, true, cd.field_g, 1, 1, true);
           } else {
             this.a(param1, (byte) 69);
@@ -642,19 +642,19 @@ final class GameplayScreen extends GameScreen {
         if (og.h(-26090)) {
           if (!ib.a(pl.field_b, -1) &&
             fj.field_Ub == null) {
-            ng.a(param0, 121, 0);
+            ng.requestScreen(param0, 121, 0);
           } else {
-            ng.a(param0, 68, 10);
+            ng.requestScreen(param0, 68, 10);
           }
         } else {
           if (!ib.a(pl.field_b, -1)) {
             if (fj.field_Ub != null) {
-              ng.a(param0, 68, 5);
+              ng.requestScreen(param0, 68, 5);
             } else {
-              ng.a(param0, 100, 0);
+              ng.requestScreen(param0, 100, 0);
             }
           } else {
-            ng.a(param0, 60, 9);
+            ng.requestScreen(param0, 60, 9);
           }
         }
     }
@@ -874,7 +874,7 @@ final class GameplayScreen extends GameScreen {
               return true;
             }
           } else {
-            ng.a(false, 64, var4Lifetime2);
+            ng.requestScreen(false, 64, var4Lifetime2);
           }
           return true;
         }
@@ -1297,10 +1297,10 @@ final class GameplayScreen extends GameScreen {
               if (this.field_p) {
                 var8_int = var16.simulationTick - var16.field_E;
                 decompiledFrameRemainder0 = (!(var8_int > 30) ||
-                  0 != de.field_x % 10);
+                  0 != MembershipBenefitsScreen.field_x % 10);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (!(40 < var8_int) ||
-                  0 != de.field_x % 5))) {
+                  0 != MembershipBenefitsScreen.field_x % 5))) {
                   decompiledFrameRemainder0 = (50 != var8_int);
                 }
               }
@@ -1629,10 +1629,10 @@ final class GameplayScreen extends GameScreen {
                 this.match.playerBoards[var6].field_Z == 5) {
                 gh.a(121, true);
               }
-              if (km.field_i <= 0) {
+              if (MenuScreen.field_i <= 0) {
                 break;
               }
-              var10 = km.field_i * 256 / 32;
+              var10 = MenuScreen.field_i * 256 / 32;
               nk.field_c.b(0, 0, var10);
               break;
             }
@@ -1854,7 +1854,7 @@ final class GameplayScreen extends GameScreen {
           if (oo.field_w == null) {
             oo.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
           }
-          km.field_i = 0;
+          MenuScreen.field_i = 0;
           to.field_k = kl.a(ta.field_e[2], 256, 0);
           me.field_d = kl.a(ta.field_e[2], 256, 0);
           to.field_k.f(-1);

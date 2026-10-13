@@ -405,7 +405,7 @@ abstract class sa extends qg implements vc {
         e var5 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         if (null != ua.field_d &&
-          ua.field_d.field_e) {
+          ua.field_d.focusLossPending) {
           LevelPack.b(84);
           MotionWaypoint.c(4);
         }

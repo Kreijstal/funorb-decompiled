@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends km {
+final class md extends MenuScreen {
     static int field_r;
     private int field_u;
     static int field_v;
@@ -26,8 +26,8 @@ final class md extends km {
           var1_int = 0;
           var2 = 0;
           while (jl.a((byte) 5)) {
-            mh.field_H.d(-1);
-            if (mh.field_H.a((byte) 113)) {
+            mh.field_H.navigateHorizontal(-1);
+            if (mh.field_H.isActivated((byte) 113)) {
               var1_int = 1;
             }
             if (dc.field_b != 13) {
@@ -39,14 +39,14 @@ final class md extends km {
             var8 = (java.awt.Component) null;
             md.a(22, (java.awt.Component) null);
           }
-          mh.field_H.a(qo.b(120, po.field_a, pq.field_k), param0 + 27355, qo.b(param0 - 4, qo.field_O, tb.field_fb));
-          if (mh.field_H.a((byte) 113)) {
+          mh.field_H.updatePointer(qo.b(120, po.field_a, pq.field_k), param0 + 27355, qo.b(param0 - 4, qo.field_O, tb.field_fb));
+          if (mh.field_H.isActivated((byte) 113)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            mh.field_H.field_j >= 0) {
-            var3 = ri.field_I[mh.field_H.field_j];
+            mh.field_H.selectedIndex >= 0) {
+            var3 = ri.field_I[mh.field_H.selectedIndex];
             if (var3 == 2) {
               w.c((byte) 3);
             } else if (5 == var3) {
@@ -121,25 +121,25 @@ final class md extends km {
         }
     }
 
-    final int a(boolean param0) {
-        if (!param0) {
+    final int getParentScreenId(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return 71;
         }
         return this.field_s;
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean isButtonEnabled(byte obfuscationGuard, int buttonIndex) {
         int var3;
         boolean stackIn_10_0 = false;
         boolean stackIn_16_0 = false;
         boolean stackIn_20_0 = false;
-        if (param1 < 0) {
+        if (buttonIndex < 0) {
           return false;
         }
-        if (param0 <= 80) {
+        if (obfuscationGuard <= 80) {
           field_v = -12;
         }
-        var3 = this.field_m[param1].field_f;
+        var3 = this.buttons[buttonIndex].actionId;
         if (var3 == 25) {
           stackIn_20_0 = !(0 >= this.field_u);
           return stackIn_20_0;
@@ -155,7 +155,7 @@ final class md extends km {
         return stackIn_16_0;
     }
 
-    final void a(int param0, int param1, char param2) {
+    final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -166,42 +166,42 @@ final class md extends km {
         int var5Lifetime1;
         int var6Lifetime1;
         var7 = BrickABrac.field_J ? 1 : 0;
-        stackIn_3_0 = (!this.a((byte) 113, 0)) ? 1 : 0;
+        stackIn_3_0 = (!this.isButtonEnabled((byte) 113, 0)) ? 1 : 0;
         var4 = stackIn_3_0;
-        stackIn_6_0 = (this.a((byte) 104, 2)) ? 2 : 1;
+        stackIn_6_0 = (this.isButtonEnabled((byte) 104, 2)) ? 2 : 1;
         var5 = stackIn_6_0;
-        stackIn_9_0 = (this.a((byte) 111, 3)) ? 3 : var5;
+        stackIn_9_0 = (this.isButtonEnabled((byte) 111, 3)) ? 3 : var5;
         var5Lifetime1 = stackIn_9_0;
-        if (!this.field_h.a(false)) {
-          if (param1 == 96) {
-            var6 = -1 + this.field_h.field_j;
-            if (!this.a((byte) 86, var6)) {
+        if (!this.selection.isHeld(false)) {
+          if (keyCode == 96) {
+            var6 = -1 + this.selection.selectedIndex;
+            if (!this.isButtonEnabled((byte) 86, var6)) {
               var6--;
             }
-            if (var4 < this.field_h.field_j) {
-              this.field_h.a(false, var6);
+            if (var4 < this.selection.selectedIndex) {
+              this.selection.setSelectedIndex(false, var6);
             } else {
-              this.field_h.a(false, var5Lifetime1);
+              this.selection.setSelectedIndex(false, var5Lifetime1);
             }
           }
-          if (param1 == 97) {
-            var6Lifetime1 = 1 + this.field_h.field_j;
-            if (!this.a((byte) 85, var6Lifetime1)) {
+          if (keyCode == 97) {
+            var6Lifetime1 = 1 + this.selection.selectedIndex;
+            if (!this.isButtonEnabled((byte) 85, var6Lifetime1)) {
               var6Lifetime1++;
             }
-            if (this.field_h.field_j < 0) {
-              this.field_h.a(false, var4);
+            if (this.selection.selectedIndex < 0) {
+              this.selection.setSelectedIndex(false, var4);
             } else {
-              if (this.field_h.field_j >= var5Lifetime1) {
-                this.field_h.a(false, var4);
+              if (this.selection.selectedIndex >= var5Lifetime1) {
+                this.selection.setSelectedIndex(false, var4);
               } else {
-                this.field_h.a(false, var6Lifetime1);
+                this.selection.setSelectedIndex(false, var6Lifetime1);
               }
             }
           }
         }
-        this.field_h.d((byte) -124);
-        if (param0 != -120) {
+        this.selection.pollKeyboardCode((byte) -124);
+        if (obfuscationGuard != -120) {
           field_x = (String) null;
         }
     }
@@ -211,26 +211,26 @@ final class md extends km {
         m.field_j = ob.field_D.field_F + ob.field_D.field_P + 1;
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         int var7 = 0;
         int var4;
         int var5;
-        q var6_ref_q;
+        MenuButton var6_ref_q;
         String var7_ref_String;
         int var8_int;
         int var9;
         String stackIn_5_0 = null;
         int var6;
-        q var8;
+        MenuButton var8;
         int var5Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
-        super.a(param0, 2, 98);
+        super.onEnter(usePointer, 2, 98);
         this.field_u = 0;
         var4 = 0;
-        for (var5 = 0; var5 < this.field_m.length; var5++) {
-          var6_ref_q = this.field_m[var5];
-          if (var6_ref_q.field_f != 8) {
-            stackIn_5_0 = ag.field_D[var6_ref_q.field_f];
+        for (var5 = 0; var5 < this.buttons.length; var5++) {
+          var6_ref_q = this.buttons[var5];
+          if (var6_ref_q.actionId != 8) {
+            stackIn_5_0 = ag.buttonLabels[var6_ref_q.actionId];
           } else {
             stackIn_5_0 = this.e((byte) 112);
           }
@@ -243,18 +243,18 @@ final class md extends km {
         var4 += 30;
         var5Lifetime1 = 20 + 3 * var4;
         var6 = (-var5Lifetime1 + 640) / 2;
-        if (param2 < 96) {
+        if (obfuscationGuard < 96) {
           field_t = (String) null;
         }
-        for (var7 = 0; var7 < this.field_m.length; var7++) {
-          var8 = this.field_m[var7];
-          var8.field_j = var4;
-          var8.field_c = var6;
-          if (var8.field_f != 26) {
-            var6 = var6 + (var8.field_j + 10);
+        for (var7 = 0; var7 < this.buttons.length; var7++) {
+          var8 = this.buttons[var7];
+          var8.width = var4;
+          var8.x = var6;
+          if (var8.actionId != 26) {
+            var6 = var6 + (var8.width + 10);
           }
         }
-        this.field_s = lp.field_rb.field_a;
+        this.field_s = lp.currentScreen.screenId;
     }
 
     public static void g(byte param0) {
@@ -278,7 +278,7 @@ final class md extends km {
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -27);
         im.a(550, 5, 243, 5, 140, (byte) -101, 45);
-        al.a(this.field_a, 19);
+        al.a(this.screenId, 19);
         if (this.field_u != 0) {
           ob.field_D.a(h.field_C, nd.field_f);
         } else {
@@ -345,66 +345,66 @@ final class md extends km {
           java.awt.Component var3 = (java.awt.Component) null;
           md.a(-108, (java.awt.Component) null);
         }
-        return ag.field_D[7];
+        return ag.buttonLabels[7];
     }
 
-    final boolean a(int param0, boolean param1, byte param2) {
+    final boolean handleMenuAction(int buttonIndex, boolean inputFlag, byte obfuscationGuard) {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int var4;
-        q var5;
+        MenuButton var5;
         int var6;
         int var7;
         int var8;
         var8 = BrickABrac.field_J ? 1 : 0;
-        if (param2 != 123) {
-          this.b(117, -99);
+        if (obfuscationGuard != 123) {
+          this.getButtonTop(117, -99);
         }
         var4 = 0;
-        var5 = this.field_m[param0];
-        var6 = var5.field_f;
+        var5 = this.buttons[buttonIndex];
+        var6 = var5.actionId;
         var7 = var6;
         if (26 == var7) {
-          if (this.field_h.a((byte) 113) &&
-            this.a((byte) 106, param0)) {
+          if (this.selection.isActivated((byte) 113) &&
+            this.isButtonEnabled((byte) 106, buttonIndex)) {
             fieldTemp$1 = this.field_u + 1;
             this.field_u = this.field_u + 1;
             if (fieldTemp$1 >= gh.field_b.length) {
               this.field_u = gh.field_b.length - 1;
             }
-            if (!this.a((byte) 123, 2)) {
-              this.field_h.a(false, 3);
-              if (!this.a((byte) 102, 3)) {
-                this.field_h.a(false, 1);
+            if (!this.isButtonEnabled((byte) 123, 2)) {
+              this.selection.setSelectedIndex(false, 3);
+              if (!this.isButtonEnabled((byte) 102, 3)) {
+                this.selection.setSelectedIndex(false, 1);
               }
             }
             var4 = 1;
           }
         } else {
           if (25 != var7) {
-            return super.a(param0, param1, (byte) 123);
+            return super.handleMenuAction(buttonIndex, inputFlag, (byte) 123);
           }
-          if (this.field_h.a((byte) 113) &&
-            this.a((byte) 91, param0)) {
+          if (this.selection.isActivated((byte) 113) &&
+            this.isButtonEnabled((byte) 91, buttonIndex)) {
             fieldTemp$2 = this.field_u - 1;
             this.field_u = this.field_u - 1;
             if (0 > fieldTemp$2) {
               this.field_u = 0;
             }
             var4 = 1;
-            if (!this.a((byte) 86, 0)) {
-              this.field_h.a(false, 2);
+            if (!this.isButtonEnabled((byte) 86, 0)) {
+              this.selection.setSelectedIndex(false, 2);
             }
           }
         }
         return var4 != 0;
     }
 
-    final int b(int param0, int param1) {
-        if (param1 != 1) {
+    final int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return 42;
         }
-        return this.field_p;
+        return this.buttonTop;
     }
 
     final static void a(String[] args, boolean param1) {

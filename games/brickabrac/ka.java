@@ -323,7 +323,7 @@ final class ka extends IntrusiveNode {
               var13.field_Vb.field_vb = var25_int;
               var13.field_Vb.field_Fb = var25_int;
               var13.field_Vb.field_Y = var25_int;
-              if (param1 == vp.field_u) {
+              if (param1 == TimedSplashScreen.field_u) {
                 if (!o.field_e.field_Rb) {
                   var13.field_cc.field_Mb = LegacyUtf8Decoder.field_b;
                 }
@@ -349,7 +349,7 @@ final class ka extends IntrusiveNode {
                   var26_int = var26_int + var27;
                 }
                 if (var13.field_cc.field_Mb != null) {
-                  if (vp.field_u == param1) {
+                  if (TimedSplashScreen.field_u == param1) {
                     var27Lifetime2 = 40;
                   } else {
                     var27Lifetime2 = var13.field_cc.g(99) + 2 * om.field_oc;
@@ -450,7 +450,7 @@ final class ka extends IntrusiveNode {
               } else {
                 if (var5_int != 0 &&
                   !var13.field_ec) {
-                  var25 = rd.a(re.field_f, new String[]{var21}, (byte) 103);
+                  var25 = rd.a(MenuSelection.field_f, new String[]{var21}, (byte) 103);
                 } else {
                   if (var13.field_ac >= var7) {
                     if (var13.field_Wb < var6) {
@@ -532,7 +532,7 @@ final class ka extends IntrusiveNode {
                     var28_int++;
                     continue;
                   }
-                  if (param1 != vp.field_u ||
+                  if (param1 != TimedSplashScreen.field_u ||
                     !hn.b((byte) 7)) {
                     if (var27Lifetime1 == 0) {
                       var25 = (String) (var25) + "<br>" + rd.a(jo.field_k, new String[]{(String) (var26)}, (byte) 103);
@@ -548,7 +548,7 @@ final class ka extends IntrusiveNode {
                   }
                   break;
                 }
-                if (vp.field_u == param1 &&
+                if (TimedSplashScreen.field_u == param1 &&
                   !hn.b((byte) 7)) {
                   var28 = o.field_e.field_Fc;
                   var25 = (String) (var25) + "<br>" + rd.a(ba.field_y, new String[]{var28}, (byte) 103);

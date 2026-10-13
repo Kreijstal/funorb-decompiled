@@ -109,25 +109,25 @@ final class oo extends ki {
     }
 
     final static m f(int param0) {
-        String var1 = ud.d(true);
+        String var1 = LevelSelectScreen.d(true);
         if (param0 < 68) {
           oo.d((byte) 97);
           if (var1 != null) {
             if (!(0 > var1.indexOf('@'))) {
               var1 = "";
             }
-            return new m(ud.d(true), la.b((byte) 118));
+            return new m(LevelSelectScreen.d(true), la.b((byte) 118));
           }
-          return new m(ud.d(true), la.b((byte) 118));
+          return new m(LevelSelectScreen.d(true), la.b((byte) 118));
         }
         if (var1 == null) {
-          return new m(ud.d(true), la.b((byte) 118));
+          return new m(LevelSelectScreen.d(true), la.b((byte) 118));
         }
         if (0 <= var1.indexOf('@')) {
           var1 = "";
-          return new m(ud.d(true), la.b((byte) 118));
+          return new m(LevelSelectScreen.d(true), la.b((byte) 118));
         }
-        return new m(ud.d(true), la.b((byte) 118));
+        return new m(LevelSelectScreen.d(true), la.b((byte) 118));
     }
 
     final RgbSprite[] b(int param0) {

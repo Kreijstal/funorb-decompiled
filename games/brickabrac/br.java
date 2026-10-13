@@ -23,13 +23,13 @@ final class br extends mh {
         om var6 = null;
         om var7 = null;
         BitPacketBuffer var4 = null;
-        if (re.field_i != param2) {
-          var6 = (om) (pn.field_i.a((long)re.field_i, -1));
+        if (MenuSelection.field_i != param2) {
+          var6 = (om) (pn.field_i.a((long)MenuSelection.field_i, -1));
           var7 = var6;
           if (var7 != null) {
             var7.field_Qb = null;
           }
-          re.field_i = param2;
+          MenuSelection.field_i = param2;
           var4 = k.field_h;
           var4.writeCipheredOpcode(-13413, param0);
           var4.writeByte(-29, 3);

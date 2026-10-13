@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hq extends km {
+final class hq extends MenuScreen {
     static String field_r;
     private String field_v;
     static mf field_t;
@@ -12,8 +12,8 @@ final class hq extends km {
     static RgbSprite[] field_s;
     static String field_y;
 
-    final void b(boolean param0) {
-        if (!param0) {
+    final void layoutButtons(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_x = (String) null;
           this.e(2);
           return;
@@ -21,11 +21,11 @@ final class hq extends km {
         this.e(2);
     }
 
-    final int b(int param0, int param1) {
-        if (param1 != 1) {
+    final int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return 100;
         }
-        return this.field_p;
+        return this.buttonTop;
     }
 
     final void drawScreen(byte obfuscationGuard) {
@@ -181,10 +181,10 @@ final class hq extends km {
         super(10, 180, 460, 402, 35, new int[]{23, 24});
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         int var5 = 0;
         int var4 = ib.a(pl.field_b, -1) ? 1 : 0;
-        if (param2 >= 96) {
+        if (obfuscationGuard >= 96) {
           var5 = null != fj.field_Ub ? 1 : 0;
           this.field_v = oq.field_w + " " + wj.a(-1, rd.a(af.a(var4 != 0, var5 != 0, false, 126), new String[]{gi.field_r}, (byte) 103), '#', "<br><br>");
           return;
@@ -215,8 +215,8 @@ final class hq extends km {
         }
     }
 
-    final void c(int param0) {
-        if (param0 != -1) {
+    final void navigateBack(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           fa var3 = (fa) null;
           hq.a((fa) null, -66, -20);
         }

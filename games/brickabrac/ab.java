@@ -20,12 +20,12 @@ final class ab extends ld {
         field_y = null;
     }
 
-    final void a(int param0, int param1, char param2) {
-        if (param0 != -120) {
+    final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
+        if (obfuscationGuard != -120) {
           String var5 = (String) null;
           ab.a((String) null, 111);
         }
-        this.field_h.a(0, -1);
+        this.selection.navigateVertical(0, -1);
     }
 
     final int f(int param0) {
@@ -59,7 +59,7 @@ final class ab extends ld {
           if (param2.length() == 0) {
             return true;
           }
-          if (q.a(param1, 0, param2)) {
+          if (MenuButton.a(param1, 0, param2)) {
             return false;
           }
           if (ll.a(param1, (byte) 122, param2)) {

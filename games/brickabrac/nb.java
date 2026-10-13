@@ -17,7 +17,7 @@ abstract class nb {
           return;
         }
         ef.a(param0 ^ -54);
-        kg.a((byte) 93, om.field_oc, ef.field_b[0].canvasWidth, np.field_a, ec.field_J, re.field_g);
+        kg.a((byte) 93, om.field_oc, ef.field_b[0].canvasWidth, np.field_a, ec.field_J, MenuSelection.field_g);
     }
 
     final void a(byte param0) {

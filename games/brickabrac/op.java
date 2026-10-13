@@ -311,7 +311,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & hb.field_w + 1;
               if (si.field_m != var3) {
                 ef.field_d[hb.field_w] = var2_int;
-                vp.field_r[hb.field_w] = (char)0;
+                TimedSplashScreen.field_r[hb.field_w] = (char)0;
                 hb.field_w = var3;
               }
             }
@@ -372,7 +372,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 127 & hb.field_w + 1;
               if (si.field_m != var3) {
                 ef.field_d[hb.field_w] = -1;
-                vp.field_r[hb.field_w] = (char)var2_int;
+                TimedSplashScreen.field_r[hb.field_w] = (char)var2_int;
                 hb.field_w = var3;
               }
             }

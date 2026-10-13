@@ -81,7 +81,7 @@ final class ik implements Iterator {
         if (param0) {
           field_g = (tq) null;
         }
-        stackIn_6_0 = (null != eq.field_g) && (q.field_i == rf.field_b);
+        stackIn_6_0 = (null != eq.field_g) && (MenuButton.field_i == rf.field_b);
         return stackIn_6_0;
     }
 

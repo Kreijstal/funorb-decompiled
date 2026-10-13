@@ -202,7 +202,7 @@ final class fk {
             var14 = var12 + (var13 + (var11 - 1) >> 3);
             var8 = var8 + var11;
             var13 += 24;
-            dupTemp$0 = ud.d(var7_int, var10 >>> var13);
+            dupTemp$0 = LevelSelectScreen.d(var7_int, var10 >>> var13);
             var7_int = dupTemp$0;
             param3[var12] = (byte)dupTemp$0;
             if (var14 > var12) {
@@ -607,7 +607,7 @@ final class fk {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = ud.d(var12, var11);
+                  var3[var10] = LevelSelectScreen.d(var12, var11);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {

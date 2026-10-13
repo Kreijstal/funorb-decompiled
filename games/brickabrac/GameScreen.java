@@ -3,7 +3,7 @@
  */
 abstract class GameScreen {
     static wp field_e;
-    int field_a;
+    int screenId;
     static String field_d;
     static n field_c;
     static String field_b;
@@ -23,8 +23,8 @@ abstract class GameScreen {
 
     abstract void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard);
 
-    GameScreen(int param0) {
-        this.field_a = param0;
+    GameScreen(int screenId) {
+        this.screenId = screenId;
     }
 
     public static void c(byte param0) {

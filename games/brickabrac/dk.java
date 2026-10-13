@@ -41,7 +41,7 @@ final class dk extends ib implements ha, en, vf {
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
           va.field_a = true;
-          ud.field_v = param2;
+          LevelSelectScreen.field_v = param2;
           var11 = param0;
           if (!param1) {
             stackIn_4_0 = g.field_q;
@@ -49,13 +49,13 @@ final class dk extends ib implements ha, en, vf {
             stackIn_4_0 = mh.field_mb;
           }
           var6 = stackIn_4_0;
-          if (ud.field_v == 0) {
+          if (LevelSelectScreen.field_v == 0) {
             var7 = qb.a(ii.field_r, 480, param4 ^ -17, oc.field_m, var11);
             var8 = var7 + 3;
-            re.field_q = new int[var8];
+            MenuSelection.field_q = new int[var8];
             kn.field_E = new String[var8];
             for (var9 = 0; var8 > var9; var9++) {
-              re.field_q[var9] = -1;
+              MenuSelection.field_q[var9] = -1;
             }
             hi.field_A = new int[2];
             for (var9 = 0; var7 > var9; var9++) {
@@ -63,21 +63,21 @@ final class dk extends ib implements ha, en, vf {
             }
             kn.field_E[-3 + var8] = "";
             kn.field_E[var8 - 2] = var6;
-            re.field_q[-2 + var8] = 0;
+            MenuSelection.field_q[-2 + var8] = 0;
             hi.field_A[0] = 1;
             kn.field_E[-1 + var8] = LevelSequence.field_a;
-            re.field_q[var8 - 1] = 1;
+            MenuSelection.field_q[var8 - 1] = 1;
             hi.field_A[1] = 2;
           } else {
-            if (ud.field_v != 1) {
+            if (LevelSelectScreen.field_v != 1) {
               throw new IllegalArgumentException();
             }
             var7 = qb.a(ii.field_r, 480, param4 - 109, oc.field_m, var11);
             var8 = 2 + var7;
-            re.field_q = new int[var8];
+            MenuSelection.field_q = new int[var8];
             kn.field_E = new String[var8];
             for (var9 = 0; var8 > var9; var9++) {
-              re.field_q[var9] = -1;
+              MenuSelection.field_q[var9] = -1;
             }
             hi.field_A = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
@@ -85,17 +85,17 @@ final class dk extends ib implements ha, en, vf {
             }
             kn.field_E[var8 - 2] = "";
             kn.field_E[-1 + var8] = LevelSequence.field_a;
-            re.field_q[-1 + var8] = 0;
+            MenuSelection.field_q[-1 + var8] = 0;
             hi.field_A[0] = 2;
           }
-          fi.field_r.field_r = hi.field_A.length;
+          fi.field_r.itemCount = hi.field_A.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < kn.field_E.length; var8Lifetime1++) {
             stackIn_25_0 = 0;
             stackIn_25_1 = kn.field_E[var8Lifetime1];
-            stackIn_26_2 = !(0 > re.field_q[var8Lifetime1]);
+            stackIn_26_2 = !(0 > MenuSelection.field_q[var8Lifetime1]);
             var9Lifetime1 = pl.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
-            if (re.field_q[var8Lifetime1] != -1) {
+            if (MenuSelection.field_q[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + ek.field_lb * 2;
             }
             if (var7Lifetime1 < var9Lifetime1) {
@@ -103,12 +103,12 @@ final class dk extends ib implements ha, en, vf {
             }
           }
           lk.field_p = var7Lifetime1 + (cc.field_J - (var7Lifetime1 >> 1));
-          bg.field_r = fi.field_r.field_r * (wg.field_f + dj.field_g << 1);
+          bg.field_r = fi.field_r.itemCount * (GameCanvas.field_f + dj.field_g << 1);
           LevelPack.field_k = cc.field_J - (var7Lifetime1 >> 1);
           var8Lifetime2 = 0;
           while (kn.field_E.length > var8Lifetime2) {
             stackIn_38_0 = bg.field_r;
-            stackIn_38_1 = re.field_q[var8Lifetime2];
+            stackIn_38_1 = MenuSelection.field_q[var8Lifetime2];
             if (stackIn_38_1 >= 0) {
               stackIn_41_1 = nq.field_i;
             } else {
@@ -118,7 +118,7 @@ final class dk extends ib implements ha, en, vf {
             var8Lifetime2++;
           }
           mi.field_d = ea.field_e - (bg.field_r >> 1);
-          fi.field_r.a(aj.a(param4 - 46, po.field_a, pq.field_k), 0, param3, (byte) -127);
+          fi.field_r.initializeSelection(aj.a(param4 - 46, po.field_a, pq.field_k), 0, param3, (byte) -127);
           if (param4 != 46) {
             field_R = (RgbSprite) null;
             return;
@@ -402,7 +402,7 @@ final class dk extends ib implements ha, en, vf {
 
     final static void h(byte param0) {
         int var1_int = 0;
-        km var2 = null;
+        MenuScreen var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -411,10 +411,10 @@ final class dk extends ib implements ha, en, vf {
           if (param0 > -59) {
             field_R = (RgbSprite) null;
           }
-          for (var1_int = 0; var1_int < pg.field_k.length; var1_int++) {
-            var2 = pg.field_k[var1_int];
+          for (var1_int = 0; var1_int < pg.menuScreens.length; var1_int++) {
+            var2 = pg.menuScreens[var1_int];
             if (var2 != null) {
-              var2.d(-88);
+              var2.refreshMenu(-88);
             }
           }
           return;
@@ -622,7 +622,7 @@ final class dk extends ib implements ha, en, vf {
         var3 = var3 + (this.a(this.field_H, var3, "", 20, 170, pg.field_o, 170) + 5);
         var3 = var3 + this.a(wc.field_c, this.field_O, var3, 84, 170);
         var3 = var3 + (this.a(170, md.field_x, cp.field_G, -3, this.field_L, var3) + 5);
-        var3 = var3 + (this.a(170, dj.field_h, of.field_j, -3, this.field_J, var3) + 5);
+        var3 = var3 + (this.a(170, dj.field_h, BlankScreen.field_j, -3, this.field_J, var3) + 5);
         var3 = var3 + this.a(this.field_S, fk.field_d, 170, 111, var3);
         ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, og.field_Yb, 11579568, vq.field_z);
         this.a(var4, true);

@@ -94,7 +94,7 @@ final class l extends IntrusiveNode {
             return stackIn_23_0;
           }
           if (8 == param2) {
-            stackIn_27_0 = rd.a(of.field_h, new String[]{param1}, (byte) 103);
+            stackIn_27_0 = rd.a(BlankScreen.field_h, new String[]{param1}, (byte) 103);
             return stackIn_27_0;
           }
           if (param0 != -110) {

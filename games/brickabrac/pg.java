@@ -11,7 +11,7 @@ final class pg extends IntrusiveNode {
     static String field_o;
     byte[] field_l;
     long field_j;
-    static km[] field_k;
+    static MenuScreen[] menuScreens;
 
     final static boolean c(int param0) {
         if (param0 <= 57) {
@@ -74,7 +74,7 @@ final class pg extends IntrusiveNode {
     }
 
     public static void a(int param0) {
-        field_k = null;
+        menuScreens = null;
         field_o = null;
         field_i = null;
         field_p = null;

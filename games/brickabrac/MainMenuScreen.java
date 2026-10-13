@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp extends km {
+final class MainMenuScreen extends MenuScreen {
     static String field_r;
     static RgbSprite field_s;
     private NodeDeque field_v;
@@ -12,15 +12,15 @@ final class rp extends km {
     static RgbSprite field_u;
     static String field_y;
 
-    final int b(int param0, int param1) {
-        int var3 = this.field_m[param0].field_f;
-        if (param1 != 1) {
+    final int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        int var3 = this.buttons[buttonIndex].actionId;
+        if (obfuscationGuard != 1) {
           field_t = (mh) null;
         }
         if (var3 == 42) {
-          return super.b(7, 1);
+          return super.getButtonTop(7, 1);
         }
-        return super.b(param0, 1);
+        return super.getButtonTop(buttonIndex, 1);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -69,13 +69,13 @@ final class rp extends km {
         }
     }
 
-    final int a(boolean param0, int param1) {
-        int var3 = this.field_m[param1].field_f;
-        if (!param0) {
+    final int getButtonLeft(boolean obfuscationGuard, int buttonIndex) {
+        int var3 = this.buttons[buttonIndex].actionId;
+        if (!obfuscationGuard) {
           field_s = (RgbSprite) null;
         }
         if (var3 != 42) {
-          return super.a(true, param1);
+          return super.getButtonLeft(true, buttonIndex);
         }
         return 19;
     }
@@ -84,7 +84,7 @@ final class rp extends km {
         nq var4 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -68);
-        im.a(this.field_l + (-this.field_j + 30), 0, 468, 0, 6, (byte) -90, -15 + this.field_j);
+        im.a(this.buttonRight + (-this.buttonLeft + 30), 0, 468, 0, 6, (byte) -90, -15 + this.buttonLeft);
         MovingBody.a((byte) -105);
         this.a(0);
         if (obfuscationGuard > -14) {
@@ -106,7 +106,7 @@ final class rp extends km {
         int var5 = BrickABrac.field_J ? 1 : 0;
         super.advanceScreen(updateFlag, inputEnabled, -95);
         if (obfuscationGuard > -52) {
-          this.b((byte) 59, 93);
+          this.getButtonHeight((byte) 59, 93);
         }
         if (inputEnabled &&
           c.field_g > 0) {
@@ -133,52 +133,52 @@ final class rp extends km {
         }
     }
 
-    final void a(int param0, int param1, char param2) {
+    final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (param0 != -120) {
+        if (obfuscationGuard != -120) {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
         if (pg.c(117)) {
-          if (this.field_h.field_j == 9) {
-            if (param1 == 99) {
-              this.field_h.a(false, 0);
+          if (this.selection.selectedIndex == 9) {
+            if (keyCode == 99) {
+              this.selection.setSelectedIndex(false, 0);
             } else {
-              if (param1 == 96) {
-                this.field_h.a(false, 0);
+              if (keyCode == 96) {
+                this.selection.setSelectedIndex(false, 0);
               } else {
-                if (param1 == 97) {
-                  this.field_h.a(false, 0);
+                if (keyCode == 97) {
+                  this.selection.setSelectedIndex(false, 0);
                 } else {
-                  if (param1 == 98) {
-                    this.field_h.a(false, 8);
+                  if (keyCode == 98) {
+                    this.selection.setSelectedIndex(false, 8);
                   }
                 }
               }
             }
           } else {
-            if (96 != param1 &&
-              param1 != 97) {
-              if (param1 == 99) {
-                this.field_h.a(false, 1 + this.field_h.field_j);
+            if (96 != keyCode &&
+              keyCode != 97) {
+              if (keyCode == 99) {
+                this.selection.setSelectedIndex(false, 1 + this.selection.selectedIndex);
               } else {
-                if ((param1 == 98)) {
-                  if (this.field_h.field_j <= 0) {
-                    this.field_h.a(false, 9);
+                if ((keyCode == 98)) {
+                  if (this.selection.selectedIndex <= 0) {
+                    this.selection.setSelectedIndex(false, 9);
                   } else {
-                    this.field_h.a(false, -1 + this.field_h.field_j);
+                    this.selection.setSelectedIndex(false, -1 + this.selection.selectedIndex);
                   }
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_h.a(false, 9);
+              this.selection.setSelectedIndex(false, 9);
             }
           }
         } else {
-          super.a(-120, param1, param2);
+          super.handleNavigationKey(-120, keyCode, character);
         }
 
     }
@@ -192,32 +192,32 @@ final class rp extends km {
         field_w = null;
         if (param0) {
           int[] var2 = (int[]) null;
-          rp.a((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
+          MainMenuScreen.a((byte) -63, 85, -10, 116, -76, 75, -37, -95, (int[]) null, 59);
         }
         field_r = null;
     }
 
-    final void d(int param0) {
-        if (param0 > -60) {
-          rp.c(false);
+    final void refreshMenu(int obfuscationGuard) {
+        if (obfuscationGuard > -60) {
+          MainMenuScreen.c(false);
         }
         if (!pg.c(102)) {
-          this.a(g.field_o, 0);
+          this.initializeButtons(g.field_o, 0);
         }
     }
 
-    final int a(int param0, int param1) {
-        if (param0 > -71) {
+    final int getButtonRight(int obfuscationGuard, int buttonIndex) {
+        if (obfuscationGuard > -71) {
           field_u = (RgbSprite) null;
         }
-        int var3 = this.field_m[param1].field_f;
+        int var3 = this.buttons[buttonIndex].actionId;
         if (var3 == 42) {
           return 147;
         }
-        return super.a(-106, param1);
+        return super.getButtonRight(-106, buttonIndex);
     }
 
-    rp() {
+    MainMenuScreen() {
         super(0, 180, 460, 150, 35, hc.field_e);
         this.field_v = new NodeDeque();
         int var1 = 468;
@@ -276,13 +276,13 @@ final class rp extends km {
         }
     }
 
-    final int b(byte param0, int param1) {
-        int var4 = -61 % ((param0 - 66) / 45);
-        int var3 = this.field_m[param1].field_f;
+    final int getButtonHeight(byte obfuscationGuard, int buttonIndex) {
+        int var4 = -61 % ((obfuscationGuard - 66) / 45);
+        int var3 = this.buttons[buttonIndex].actionId;
         if (42 != var3) {
-          return super.b((byte) 121, param1);
+          return super.getButtonHeight((byte) 121, buttonIndex);
         }
-        return this.field_q + super.b((byte) 8, param1);
+        return this.buttonSpacing + super.getButtonHeight((byte) 8, buttonIndex);
     }
 
     static {

@@ -51,18 +51,18 @@ final class aj {
           var3_int = param0;
           var4 = mi.field_d;
           while (kn.field_E.length > var3_int) {
-            var5 = re.field_q[var3_int];
+            var5 = MenuSelection.field_q[var3_int];
             if (0 > var5) {
               var4 = var4 + wh.field_m;
             } else {
               var6 = pl.a(0, kn.field_E[var3_int], true);
               var7 = -(var6 >> 1) + cc.field_J;
               var4 = var4 + dj.field_g;
-              if (bg.a(-ek.field_lb + var7, (wg.field_f << 1) + nq.field_i, (ek.field_lb << 1) + var6, (byte) 80, param1, param2, var4)) {
+              if (bg.containsRectanglePoint(-ek.field_lb + var7, (GameCanvas.field_f << 1) + nq.field_i, (ek.field_lb << 1) + var6, (byte) 80, param1, param2, var4)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (dj.field_g + ((wg.field_f << 1) + nq.field_i));
+              var4 = var4 + (dj.field_g + ((GameCanvas.field_f << 1) + nq.field_i));
             }
             var3_int++;
           }

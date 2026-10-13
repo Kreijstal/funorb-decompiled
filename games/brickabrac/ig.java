@@ -135,7 +135,7 @@ final class ig extends ib implements ha, en {
           this.field_I = param0;
           this.field_L = new d(ri.field_L, (uh) null);
           this.field_L.field_l = (ub) ((Object) new hi());
-          var7 = rd.a(rp.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
+          var7 = rd.a(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
           var3 = 20;
           var4 = new um(a.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, a.field_u.field_F, -1, 2147483647, true);
           this.field_O = new lg(var7, var4);

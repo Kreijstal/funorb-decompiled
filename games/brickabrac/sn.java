@@ -69,7 +69,7 @@ final class sn extends ki {
           la.a(param2, param3, 153, 240, IntrusiveNode.field_h[param1], 11970969, 152);
         }
         if (this.b((byte) -112)) {
-          re.field_h.drawTransparent(param2, param3);
+          MenuSelection.field_h.drawTransparent(param2, param3);
         }
     }
 
@@ -115,7 +115,7 @@ final class sn extends ki {
         af.field_D = pl.a("construct", "construction_mid", (byte) 102, i.field_m);
         sf.field_cb = pl.a("construct", "construction_far", (byte) -93, i.field_m);
         IntNode.field_o = pl.a("construct", "construction_smoke", (byte) -128, i.field_m);
-        re.field_h = pl.a("construct", "construction_small", (byte) -74, i.field_m);
+        MenuSelection.field_h = pl.a("construct", "construction_small", (byte) -74, i.field_m);
         t.field_a = jh.a(0, sf.field_Y);
         IntrusiveNode.field_d = jh.a(0, af.field_D);
         hg.field_g = jh.a(0, sf.field_cb);
@@ -200,7 +200,7 @@ final class sn extends ki {
         if (param0 >= -91) {
           this.a((byte) -78, -121);
         }
-        stackIn_9_0 = (null != sf.field_Y) && (af.field_D != null) && (null != sf.field_cb) && (null != IntNode.field_o) && (re.field_h != null);
+        stackIn_9_0 = (null != sf.field_Y) && (af.field_D != null) && (null != sf.field_cb) && (null != IntNode.field_o) && (MenuSelection.field_h != null);
         return stackIn_9_0;
     }
 

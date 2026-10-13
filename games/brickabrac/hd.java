@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hd {
-    static GameScreen field_d;
+    static GameScreen pendingScreen;
     static mh field_c;
     static og field_a;
     static String field_b;
@@ -52,7 +52,7 @@ final class hd {
         field_a = null;
         field_c = null;
         field_b = null;
-        field_d = null;
+        pendingScreen = null;
     }
 
     final static void a(boolean param0) {

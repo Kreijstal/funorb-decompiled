@@ -220,7 +220,7 @@ final class sb implements vc {
           var3 = gp.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E &&
-              20 > de.field_x % 40) {
+              20 > MembershipBenefitsScreen.field_x % 40) {
               var4 = 1;
               if (var4 != 0) {
                 stackIn_309_0 = 1;
@@ -349,7 +349,7 @@ final class sb implements vc {
           var3Lifetime1 = gp.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E) {
-              stackIn_10_0 = (20 > de.field_x % 40) ? 1 : 0;
+              stackIn_10_0 = (20 > MembershipBenefitsScreen.field_x % 40) ? 1 : 0;
             } else {
               stackIn_10_0 = 0;
             }
@@ -389,7 +389,7 @@ final class sb implements vc {
           var3Lifetime2 = gp.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E &&
-              20 > de.field_x % 40) {
+              20 > MembershipBenefitsScreen.field_x % 40) {
               var4Lifetime2 = 1;
               if (var4Lifetime2 != 0) {
                 stackIn_46_0 = 1;
@@ -657,7 +657,7 @@ final class sb implements vc {
           }
           return;
         }
-        if (20 > de.field_x % 40) {
+        if (20 > MembershipBenefitsScreen.field_x % 40) {
           var4Lifetime5 = 1;
           if (var4Lifetime5 == 0) {
             if (!pf.field_p) {
@@ -967,7 +967,7 @@ final class sb implements vc {
               n.field_d = false;
               if (this.d(76)) {
                 var5 = si.field_l + nn.field_g.c(nn.field_f);
-                stackIn_22_0 = (0 <= pq.field_k) && (pq.field_k < var5) && (gp.field_d.field_db - ud.field_w <= po.field_a) && (gp.field_d.field_db > po.field_a);
+                stackIn_22_0 = (0 <= pq.field_k) && (pq.field_k < var5) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.field_a) && (gp.field_d.field_db > po.field_a);
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
                   ki.field_e == 1) {
@@ -1065,7 +1065,7 @@ final class sb implements vc {
           return;
         }
         var5Lifetime2 = si.field_l + nn.field_g.c(nn.field_f);
-        stackIn_80_0 = (0 <= pq.field_k) && (pq.field_k < var5Lifetime2) && (gp.field_d.field_db - ud.field_w <= po.field_a) && (gp.field_d.field_db > po.field_a);
+        stackIn_80_0 = (0 <= pq.field_k) && (pq.field_k < var5Lifetime2) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.field_a) && (gp.field_d.field_db > po.field_a);
         n.field_d = stackIn_80_0;
         if (!n.field_d) {
           if (!n.field_d) {
@@ -1423,7 +1423,7 @@ final class sb implements vc {
     }
 
     sb() {
-        ud.field_w = nn.field_g.field_P + (qi.field_K[0].height + qi.field_K[6].height) + nn.field_g.field_B;
+        LevelSelectScreen.field_w = nn.field_g.field_P + (qi.field_K[0].height + qi.field_K[6].height) + nn.field_g.field_B;
         si.field_l = qi.field_K[2].width + (3 + qi.field_K[0].width);
     }
 

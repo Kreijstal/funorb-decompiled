@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class af extends km {
+abstract class af extends MenuScreen {
     static char[] field_B;
     static int field_u;
     static Boolean field_r;
@@ -128,7 +128,7 @@ abstract class af extends km {
             ob.field_D.c(na.field_N, 209, var6, 2, -1);
           }
         }
-        al.a(this.field_a, 19);
+        al.a(this.screenId, 19);
         this.a(0);
     }
 
@@ -147,81 +147,81 @@ abstract class af extends km {
         return gn.field_D[var4];
     }
 
-    final void a(int param0, int param1, char param2) {
+    final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         int var5;
         RgbSprite var6;
         boolean decompiledFrameRemainder0 = true;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_h.field_j < 0) {
-          this.field_h.a(false, 2);
+        if (this.selection.selectedIndex < 0) {
+          this.selection.setSelectedIndex(false, 2);
         } else {
-          if (0 == this.field_h.field_j) {
-            if (param1 != 98 &&
-              99 != param1) {
-              if (((param1 == 96 ||
-                param1 == 97)) && (!(!this.a((byte) 106, 1)))) {
-                this.field_h.a(false, 1);
+          if (0 == this.selection.selectedIndex) {
+            if (keyCode != 98 &&
+              99 != keyCode) {
+              if (((keyCode == 96 ||
+                keyCode == 97)) && (!(!this.isButtonEnabled((byte) 106, 1)))) {
+                this.selection.setSelectedIndex(false, 1);
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_h.a(false, 2);
+              this.selection.setSelectedIndex(false, 2);
             }
           } else {
-            if (this.field_h.field_j == 1) {
-              if (param1 != 98 &&
-                param1 != 99) {
-                if (((param1 == 96 ||
-                  param1 == 97)) && (!(!this.a((byte) 121, 0)))) {
-                  this.field_h.a(false, 0);
+            if (this.selection.selectedIndex == 1) {
+              if (keyCode != 98 &&
+                keyCode != 99) {
+                if (((keyCode == 96 ||
+                  keyCode == 97)) && (!(!this.isButtonEnabled((byte) 121, 0)))) {
+                  this.selection.setSelectedIndex(false, 0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_h.a(false, 2);
+                this.selection.setSelectedIndex(false, 2);
               }
             } else {
-              if (this.field_h.field_j != 2) {
-                if (this.field_h.field_j == 3) {
-                  if (param1 != 97 &&
-                    96 != param1) {
-                    if ((98 == param1 ||
-                      param1 == 99)) {
-                      if (!this.a((byte) 124, 0)) {
-                        this.field_h.a(false, 1);
+              if (this.selection.selectedIndex != 2) {
+                if (this.selection.selectedIndex == 3) {
+                  if (keyCode != 97 &&
+                    96 != keyCode) {
+                    if ((98 == keyCode ||
+                      keyCode == 99)) {
+                      if (!this.isButtonEnabled((byte) 124, 0)) {
+                        this.selection.setSelectedIndex(false, 1);
                       } else {
-                        this.field_h.a(false, 0);
+                        this.selection.setSelectedIndex(false, 0);
                       }
                     }
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    this.field_h.a(false, 2);
+                    this.selection.setSelectedIndex(false, 2);
                   }
                 }
               } else {
-                if (param1 != 97 &&
-                  param1 != 96) {
-                  if ((param1 == 98 ||
-                    param1 == 99)) {
-                    if (!this.a((byte) 103, 0)) {
-                      this.field_h.a(false, 1);
+                if (keyCode != 97 &&
+                  keyCode != 96) {
+                  if ((keyCode == 98 ||
+                    keyCode == 99)) {
+                    if (!this.isButtonEnabled((byte) 103, 0)) {
+                      this.selection.setSelectedIndex(false, 1);
                     } else {
-                      this.field_h.a(false, 0);
+                      this.selection.setSelectedIndex(false, 0);
                     }
                   }
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  if (this.field_m.length == 4) {
-                    this.field_h.a(false, 3);
+                  if (this.buttons.length == 4) {
+                    this.selection.setSelectedIndex(false, 3);
                   }
                 }
               }
             }
           }
         }
-        if (param0 != -120) {
+        if (obfuscationGuard != -120) {
           var6 = (RgbSprite) null;
           af.a((RgbSprite) null, -23, 26, 101, 46, -121, -33, (RgbSprite) null, 118, (RgbSprite) null, -100);
         }
@@ -304,16 +304,16 @@ abstract class af extends km {
         }
     }
 
-    final int b(int param0, int param1) {
-        if (param1 != 1) {
+    final int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           field_D = (RgbSprite) null;
         }
-        return this.field_p;
+        return this.buttonTop;
     }
 
-    final void d(byte param0) {
+    final void onExit(byte obfuscationGuard) {
         this.g((byte) -121);
-        if (param0 != 79) {
+        if (obfuscationGuard != 79) {
           this.field_E = (String[]) null;
         }
     }
@@ -326,8 +326,8 @@ abstract class af extends km {
         this.a(32367, this.field_v);
     }
 
-    final boolean a(byte param0, int param1) {
-        int var3 = this.field_m[param1].field_f;
+    final boolean isButtonEnabled(byte obfuscationGuard, int buttonIndex) {
+        int var3 = this.buttons[buttonIndex].actionId;
         if (var3 == 44 &&
           this.field_w == 0) {
           return false;
@@ -336,26 +336,26 @@ abstract class af extends km {
           this.field_x - 1 <= this.field_w) {
           return false;
         }
-        if (param0 < 80) {
+        if (obfuscationGuard < 80) {
           field_u = -122;
           return true;
         }
         return true;
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         int var5 = 0;
         int fieldTemp$0 = 0;
         int var4;
         int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
-        super.a(param0, 2, 110);
+        super.onEnter(usePointer, 2, 110);
         this.field_w = 0;
         this.field_x = 0;
         nf.field_Y = -1;
         nf.field_P = -1;
         this.field_z[this.field_x].clear((byte) -114);
-        if (param2 <= 96) {
+        if (obfuscationGuard <= 96) {
           return;
         }
         var4 = 0;
@@ -469,26 +469,26 @@ abstract class af extends km {
         }
     }
 
-    final boolean a(int param0, boolean param1, byte param2) {
+    final boolean handleMenuAction(int buttonIndex, boolean inputFlag, byte obfuscationGuard) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var5;
         int var6;
         int var7;
-        q var8;
+        MenuButton var8;
         var7 = BrickABrac.field_J ? 1 : 0;
-        if (param2 != 123) {
+        if (obfuscationGuard != 123) {
           return false;
         }
-        var8 = this.field_m[param0];
-        var5 = var8.field_f;
+        var8 = this.buttons[buttonIndex];
+        var5 = var8.actionId;
         var6 = var5;
         if (var6 != 44) {
           if (45 != var6) {
-            return super.a(param0, param1, (byte) 123);
+            return super.handleMenuAction(buttonIndex, inputFlag, (byte) 123);
           }
-          if (this.field_h.a((byte) 113) &&
-            this.a((byte) 90, param0) &&
+          if (this.selection.isActivated((byte) 113) &&
+            this.isButtonEnabled((byte) 90, buttonIndex) &&
             rk.field_Qb == 0) {
             fieldTemp$0 = this.field_w + 1;
             this.field_w = this.field_w + 1;
@@ -496,14 +496,14 @@ abstract class af extends km {
               this.field_w = this.field_x - 1;
             }
             this.a(2, 1, this.field_z[this.field_w]);
-            if (!this.a((byte) 86, 1)) {
-              this.field_h.a(false, 0);
+            if (!this.isButtonEnabled((byte) 86, 1)) {
+              this.selection.setSelectedIndex(false, 0);
             }
             return true;
           }
         } else {
-          if (this.field_h.a((byte) 113) &&
-            this.a((byte) 86, param0)) {
+          if (this.selection.isActivated((byte) 113) &&
+            this.isButtonEnabled((byte) 86, buttonIndex)) {
             if (rk.field_Qb != 0) {
               return false;
             }
@@ -513,8 +513,8 @@ abstract class af extends km {
               this.field_w = 0;
             }
             this.a(2, -1, this.field_z[this.field_w]);
-            if (!this.a((byte) 83, 0)) {
-              this.field_h.a(false, 1);
+            if (!this.isButtonEnabled((byte) 83, 0)) {
+              this.selection.setSelectedIndex(false, 1);
             }
             return true;
           }
@@ -522,58 +522,58 @@ abstract class af extends km {
         return false;
     }
 
-    final void b(boolean param0) {
+    final void layoutButtons(boolean obfuscationGuard) {
         int dupTemp$0 = 0;
         int var6 = 0;
         String stackIn_7_0 = null;
-        q var3;
+        MenuButton var3;
         int var4;
         int var5;
-        q var6_ref_q;
+        MenuButton var6_ref_q;
         String var7;
         int var8;
-        q var9;
+        MenuButton var9;
         String var10;
-        q var11;
+        MenuButton var11;
         int var5Lifetime1;
         var8 = BrickABrac.field_J ? 1 : 0;
-        var9 = this.field_m[0];
-        var9.field_a = 145;
-        var9.field_c = 50;
-        var9.field_j = 25;
-        var9.field_d = 78;
-        if (!param0) {
-          this.a((byte) 110, 75);
+        var9 = this.buttons[0];
+        var9.y = 145;
+        var9.x = 50;
+        var9.width = 25;
+        var9.height = 78;
+        if (!obfuscationGuard) {
+          this.isButtonEnabled((byte) 110, 75);
         }
-        var3 = this.field_m[1];
-        var3.field_c = -5 - (var9.field_j - 595);
-        var3.field_a = var9.field_a;
-        var3.field_d = var9.field_d;
-        var3.field_j = var9.field_j;
+        var3 = this.buttons[1];
+        var3.x = -5 - (var9.width - 595);
+        var3.y = var9.y;
+        var3.height = var9.height;
+        var3.width = var9.width;
         var4 = 0;
-        for (var5 = 2; this.field_m.length > var5; var5++) {
-          var6_ref_q = this.field_m[var5];
-          if (var6_ref_q.field_f == 8) {
+        for (var5 = 2; this.buttons.length > var5; var5++) {
+          var6_ref_q = this.buttons[var5];
+          if (var6_ref_q.actionId == 8) {
             stackIn_7_0 = this.e((byte) 105);
           } else {
-            stackIn_7_0 = ag.field_D[var6_ref_q.field_f];
+            stackIn_7_0 = ag.buttonLabels[var6_ref_q.actionId];
           }
           var10 = stackIn_7_0;
           var7 = var10;
           dupTemp$0 = 30 + nn.field_g.c(var10);
-          var6_ref_q.field_j = dupTemp$0;
+          var6_ref_q.width = dupTemp$0;
           var4 = var4 + dupTemp$0;
           if (var5 > 3) {
             var4 += 10;
           }
         }
         var5Lifetime1 = (640 - var4) / 2;
-        for (var6 = 2; var6 < this.field_m.length; var6++) {
-          var11 = this.field_m[var6];
-          var11.field_c = var5Lifetime1;
-          var11.field_a = this.b(var6, 1);
-          var11.field_d = this.b((byte) -7, var6);
-          var5Lifetime1 = var5Lifetime1 + (10 + var11.field_j);
+        for (var6 = 2; var6 < this.buttons.length; var6++) {
+          var11 = this.buttons[var6];
+          var11.x = var5Lifetime1;
+          var11.y = this.getButtonTop(var6, 1);
+          var11.height = this.getButtonHeight((byte) -7, var6);
+          var5Lifetime1 = var5Lifetime1 + (10 + var11.width);
         }
     }
 

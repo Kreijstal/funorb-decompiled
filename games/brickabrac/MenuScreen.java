@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class km extends GameScreen {
-    int field_p;
-    int field_q;
-    int field_l;
+abstract class MenuScreen extends GameScreen {
+    int buttonTop;
+    int buttonSpacing;
+    int buttonRight;
     static n field_k;
-    int field_j;
-    re field_h;
-    q[] field_m;
+    int buttonLeft;
+    MenuSelection selection;
+    MenuButton[] buttons;
     static String field_n;
     static String field_o;
     static int field_i;
@@ -23,10 +23,10 @@ abstract class km extends GameScreen {
           var2 = (-50 + im.field_e) * 640 / 50;
           if (0 != hc.field_h) {
             ed.a(-640 - var2, 0);
-            rp.field_s.drawAt(-var2, 0);
+            MainMenuScreen.field_s.drawAt(-var2, 0);
           } else {
             ed.a(640 + var2, 0);
-            rp.field_s.drawAt(var2, 0);
+            MainMenuScreen.field_s.drawAt(var2, 0);
           }
         }
         if (obfuscationGuard >= -14) {
@@ -35,32 +35,32 @@ abstract class km extends GameScreen {
         pg.d(0);
     }
 
-    final void a(int[] param0, int param1) {
+    final void initializeButtons(int[] actionIds, int startIndex) {
         int var3_int = 0;
         int var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_m = new q[param0.length];
-          this.field_h = new re(this.field_m.length);
-          for (var3_int = param1; param0.length > var3_int; var3_int++) {
-            this.field_m[var3_int] = new q(param0[var3_int], this);
-            this.field_m[var3_int].a(-97);
+          this.buttons = new MenuButton[actionIds.length];
+          this.selection = new MenuSelection(this.buttons.length);
+          for (var3_int = startIndex; actionIds.length > var3_int; var3_int++) {
+            this.buttons[var3_int] = new MenuButton(actionIds[var3_int], this);
+            this.buttons[var3_int].resetPressed(-97);
           }
-          this.b(true);
+          this.layoutButtons(true);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "km.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "km.Q(" + (actionIds != null ? "{...}" : "null") + ',' + startIndex + ')');
         }
     }
 
     String e(byte param0) {
         int discarded$0 = 0;
         if (param0 <= 53) {
-          discarded$0 = this.a(18, (byte) 84, -33);
+          discarded$0 = this.findButtonAt(18, (byte) 84, -33);
         }
-        return ag.field_D[7];
+        return ag.buttonLabels[7];
     }
 
-    int a(boolean param0) {
-        if (!param0) {
+    int getParentScreenId(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_n = (String) null;
           return 0;
         }
@@ -68,12 +68,12 @@ abstract class km extends GameScreen {
     }
 
     private final void c(boolean param0, int param1) {
-        if (this.field_h.field_j != -1 &&
-          param1 != this.field_h.field_j) {
+        if (this.selection.selectedIndex != -1 &&
+          param1 != this.selection.selectedIndex) {
           PlayerBoard.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
         }
         if (!param0) {
-          this.field_j = -36;
+          this.buttonLeft = -36;
         }
     }
 
@@ -83,81 +83,81 @@ abstract class km extends GameScreen {
         String stackIn_5_0 = null;
         int var2;
         int var3;
-        q var4_ref_q;
+        MenuButton var4_ref_q;
         String var5;
         int var6;
         String var7;
-        q var8;
+        MenuButton var8;
         int var3Lifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
         var2 = 0;
-        for (var3 = 0; this.field_m.length > var3; var3++) {
-          var4_ref_q = this.field_m[var3];
-          if (var4_ref_q.field_f == 8) {
+        for (var3 = 0; this.buttons.length > var3; var3++) {
+          var4_ref_q = this.buttons[var3];
+          if (var4_ref_q.actionId == 8) {
             stackIn_5_0 = this.e((byte) 108);
           } else {
-            stackIn_5_0 = ag.field_D[var4_ref_q.field_f];
+            stackIn_5_0 = ag.buttonLabels[var4_ref_q.actionId];
           }
           var7 = stackIn_5_0;
           var5 = var7;
           dupTemp$0 = nn.field_g.c(var7) + 30;
-          var4_ref_q.field_j = dupTemp$0;
+          var4_ref_q.width = dupTemp$0;
           var2 = var2 + dupTemp$0;
           if (var3 > 0) {
             var2 += 10;
           }
         }
         var3Lifetime1 = (640 - var2) / param0;
-        for (var4 = 0; var4 < this.field_m.length; var4++) {
-          var8 = this.field_m[var4];
-          var8.field_c = var3Lifetime1;
-          var8.field_a = this.b(var4, param0 ^ 3);
-          var8.field_d = this.b((byte) 125, var4);
-          var3Lifetime1 = var3Lifetime1 + (var8.field_j + 10);
+        for (var4 = 0; var4 < this.buttons.length; var4++) {
+          var8 = this.buttons[var4];
+          var8.x = var3Lifetime1;
+          var8.y = this.getButtonTop(var4, param0 ^ 3);
+          var8.height = this.getButtonHeight((byte) 125, var4);
+          var3Lifetime1 = var3Lifetime1 + (var8.width + 10);
         }
     }
 
-    int a(int param0, int param1) {
-        if (param0 >= -71) {
-          this.b(true, 87);
+    int getButtonRight(int obfuscationGuard, int buttonIndex) {
+        if (obfuscationGuard >= -71) {
+          this.markButton(true, 87);
         }
-        return this.field_l;
+        return this.buttonRight;
     }
 
-    km(int param0, int param1, int param2, int param3, int param4, int[] param5) {
-        super(param0);
+    MenuScreen(int screenId, int buttonLeft, int buttonRight, int buttonTop, int buttonSpacing, int[] actionIds) {
+        super(screenId);
         try {
-          this.field_p = param3;
-          this.field_l = param2;
-          this.field_q = param4;
-          if (param5 == null) {
-            param5 = new int[]{};
+          this.buttonTop = buttonTop;
+          this.buttonRight = buttonRight;
+          this.buttonSpacing = buttonSpacing;
+          if (actionIds == null) {
+            actionIds = new int[]{};
           }
-          this.field_j = param1;
-          this.a(param5, 0);
+          this.buttonLeft = buttonLeft;
+          this.initializeButtons(actionIds, 0);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "km.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "km.<init>(" + screenId + ',' + buttonLeft + ',' + buttonRight + ',' + buttonTop + ',' + buttonSpacing + ',' + (actionIds != null ? "{...}" : "null") + ')');
         }
     }
 
-    void d(int param0) {
-        if (param0 > -60) {
-          this.a(true, -25, 10);
+    void refreshMenu(int obfuscationGuard) {
+        if (obfuscationGuard > -60) {
+          this.onEnter(true, -25, 10);
         }
     }
 
     boolean handleKey(char character, int keyCode, int obfuscationGuard) {
         int var4 = 0;
         if (13 != obfuscationGuard) {
-          var4 = this.field_h.field_j;
-          this.a(-120, obfuscationGuard, character);
-          this.field_h.d((byte) -124);
+          var4 = this.selection.selectedIndex;
+          this.handleNavigationKey(-120, obfuscationGuard, character);
+          this.selection.pollKeyboardCode((byte) -124);
           if (this.a(false, (byte) 126)) {
             wp.a(8, ta.field_e[0]);
           }
           this.c(true, var4);
         } else {
-          this.c(-1);
+          this.navigateBack(-1);
         }
         if (keyCode <= 98) {
           return true;
@@ -165,16 +165,16 @@ abstract class km extends GameScreen {
         return true;
     }
 
-    int b(int param0, int param1) {
-        if (param1 != 1) {
+    int getButtonTop(int buttonIndex, int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           this.advanceScreen(true, true, -57);
         }
-        return this.field_q * param0 + this.field_p;
+        return this.buttonSpacing * buttonIndex + this.buttonTop;
     }
 
-    void a(int param0, int param1, char param2) {
-        this.field_h.d(param0 + 119);
-        if (param0 != -120) {
+    void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
+        this.selection.navigateHorizontal(obfuscationGuard + 119);
+        if (obfuscationGuard != -120) {
           this.c(true, 117);
         }
     }
@@ -182,34 +182,34 @@ abstract class km extends GameScreen {
     void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int var5 = 0;
         int fieldTemp$2 = 0;
-        q[] var4_ref_q__;
+        MenuButton[] var4_ref_q__;
         int var4;
-        q var6;
+        MenuButton var6;
         int var7;
-        q[] var8;
+        MenuButton[] var8;
         var7 = BrickABrac.field_J ? 1 : 0;
         si.field_k.e(1);
-        var8 = this.field_m;
+        var8 = this.buttons;
         var4_ref_q__ = var8;
         for (var5 = 0; var8.length > var5; var5++) {
           var6 = var8[var5];
-          var6.b(-2217);
+          var6.updatePressed(-2217);
         }
         if (obfuscationGuard > -52) {
-          this.a(true, -79, -10);
+          this.onEnter(true, -79, -10);
         }
-        var4 = this.field_h.field_j;
-        dm.field_b = sa.a(de.field_x * 20, -4097);
+        var4 = this.selection.selectedIndex;
+        dm.field_b = sa.a(MembershipBenefitsScreen.field_x * 20, -4097);
         if (inputEnabled &&
           !vh.field_L &&
           !ed.field_d) {
-          this.field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), 27479, this.a(qo.field_O, (byte) -80, tb.field_fb));
+          this.selection.updatePointer(this.findButtonAt(po.field_a, (byte) -106, pq.field_k), 27479, this.findButtonAt(qo.field_O, (byte) -80, tb.field_fb));
           if (this.a(true, (byte) -117)) {
             wp.a(8, ta.field_e[0]);
           }
         }
         this.c(true, var4);
-        if (lp.field_rb == this &&
+        if (lp.currentScreen == this &&
           im.field_e > 0) {
           fieldTemp$2 = im.field_e - 1;
           im.field_e = im.field_e - 1;
@@ -223,25 +223,25 @@ abstract class km extends GameScreen {
     final void a(int param0) {
         int var2 = 0;
         int var3;
-        q stackIn_7_0 = null;
+        MenuButton stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
         var3 = BrickABrac.field_J ? 1 : 0;
-        for (var2 = param0; var2 < this.field_h.field_r; var2++) {
-          if (this.a((byte) 99, var2)) {
-            stackIn_7_0 = this.field_m[var2];
+        for (var2 = param0; var2 < this.selection.itemCount; var2++) {
+          if (this.isButtonEnabled((byte) 99, var2)) {
+            stackIn_7_0 = this.buttons[var2];
             stackIn_7_1 = 4;
-            stackIn_8_2 = (this.field_h.field_j == var2);
-            ((q) (Object) stackIn_7_0).a((byte) stackIn_7_1, stackIn_8_2);
+            stackIn_8_2 = (this.selection.selectedIndex == var2);
+            ((MenuButton) (Object) stackIn_7_0).draw((byte) stackIn_7_1, stackIn_8_2);
           }
         }
     }
 
     private final boolean a(boolean param0, byte param1) {
         int var3 = 5 % ((param1 - 69) / 51);
-        if (this.field_m.length != 0 &&
-          0 <= this.field_h.field_j) {
-          return this.a(this.field_h.field_j, param0, (byte) 123);
+        if (this.buttons.length != 0 &&
+          0 <= this.selection.selectedIndex) {
+          return this.handleMenuAction(this.selection.selectedIndex, param0, (byte) 123);
         }
         return false;
     }
@@ -280,21 +280,21 @@ abstract class km extends GameScreen {
         }
     }
 
-    void c(int param0) {
-        ng.a(false, 97, this.a(true));
-        if (param0 != -1) {
+    void navigateBack(int obfuscationGuard) {
+        ng.requestScreen(false, 97, this.getParentScreenId(true));
+        if (obfuscationGuard != -1) {
           field_n = (String) null;
         }
     }
 
-    boolean a(int param0, boolean param1, byte param2) {
+    boolean handleMenuAction(int buttonIndex, boolean inputFlag, byte obfuscationGuard) {
         boolean stackIn_47_0 = false;
         int stackIn_47_1 = 0;
         int stackIn_48_2 = 0;
         int stackIn_143_0 = 0;
         boolean stackIn_165_0 = false;
         int var4;
-        q var5;
+        MenuButton var5;
         int var6;
         int var7;
         int var8;
@@ -303,143 +303,143 @@ abstract class km extends GameScreen {
         int var11;
         String var12;
         var11 = BrickABrac.field_J ? 1 : 0;
-        if (param2 != 123) {
+        if (obfuscationGuard != 123) {
           return true;
         }
         regionExit1: {
           var4 = 0;
-          var5 = this.field_m[param0];
-          var6 = var5.field_f;
+          var5 = this.buttons[buttonIndex];
+          var6 = var5.actionId;
           var8 = var6;
           if (0 != var8) {
             if (var8 != 38 &&
               var8 != 27) {
               if (var8 == 37) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   be.field_a = true;
-                  cq.a(16727, param1, 0, new LevelSequence(na.field_L[0]));
+                  cq.a(16727, inputFlag, 0, new LevelSequence(na.field_L[0]));
                 }
                 break regionExit1;
               }
               if (var8 == 1) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   if (!og.h(-26090)) {
                     cb.b(true);
                   } else {
                     sl.field_z = -2;
-                    dk.a(sb.field_b, true, 0, param1, 46);
+                    dk.a(sb.field_b, true, 0, inputFlag, 46);
                   }
                 }
                 break regionExit1;
               }
               if (var8 == 2) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, 69, -1);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, 69, -1);
                 }
                 break regionExit1;
               }
               if (var8 == 7) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, 74, 0);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, 74, 0);
                 }
                 break regionExit1;
               }
               if (var8 == 24) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   eb.field_l = true;
-                  ng.a(param1, param2 ^ 61, 0);
+                  ng.requestScreen(inputFlag, obfuscationGuard ^ 61, 0);
                 }
                 break regionExit1;
               }
               if (var8 == 22) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, 67, 8);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, 67, 8);
                 }
                 break regionExit1;
               }
               if (var8 == 5) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, 126, 7);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, 126, 7);
                 }
                 break regionExit1;
               }
               if (var8 == 8) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, param2 ^ 28, this.a(true));
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, obfuscationGuard ^ 28, this.getParentScreenId(true));
                 }
                 break regionExit1;
               }
               if (var8 == 4) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, 71, 6);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, 71, 6);
                 }
                 break regionExit1;
               }
               if (var8 == 3) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, 86, 5);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, 86, 5);
                 }
                 break regionExit1;
               }
               if (var8 == 20) {
                 var7 = 0;
-                if (this.field_h.b(-103) &&
+                if (this.selection.isKey102(-103) &&
                   lh.g((byte) -44) > 0) {
                   ma.a((byte) -113, 0);
                   var7 = 1;
                 }
-                if (this.field_h.a(-1) &&
-                  lh.g((byte) -44) < re.e((byte) 44)) {
-                  ma.a((byte) 47, re.e((byte) 31));
+                if (this.selection.isKey103(-1) &&
+                  lh.g((byte) -44) < MenuSelection.e((byte) 44)) {
+                  ma.a((byte) 47, MenuSelection.e((byte) 31));
                   var7 = 1;
                 }
-                if (this.field_h.g((byte) -57) &&
+                if (this.selection.isKey96((byte) -57) &&
                   lh.g((byte) -44) > 0) {
                   k.d((byte) 116);
                   var7 = 1;
                 }
-                if (this.field_h.c(-98) &&
-                  lh.g((byte) -44) < re.e((byte) 90)) {
+                if (this.selection.isKey97(-98) &&
+                  lh.g((byte) -44) < MenuSelection.e((byte) 90)) {
                   var7 = 1;
                   th.a((byte) -63);
                 }
-                if (this.field_h.a(false)) {
-                  var8 = -120 + var5.field_j + var5.field_c + var5.field_c + dg.field_d >> 1;
+                if (this.selection.isHeld(false)) {
+                  var8 = -120 + var5.width + var5.x + var5.x + dg.field_d >> 1;
                   var9 = pq.field_k - var8;
-                  var10 = var9 * re.e((byte) 51) / 120;
+                  var10 = var9 * MenuSelection.e((byte) 51) / 120;
                   if (var10 <= 0) {
                     ma.a((byte) -114, 0);
                   } else {
-                    if (var10 < re.e((byte) 81)) {
+                    if (var10 < MenuSelection.e((byte) 81)) {
                       ma.a((byte) -127, var10);
                     } else {
-                      ma.a((byte) 95, re.e((byte) 32));
+                      ma.a((byte) 95, MenuSelection.e((byte) 32));
                     }
                   }
                   var7 = 1;
                 }
-                if (((var7 != 0)) && ((!(this.field_h.a(false)) ||
-                  !(de.field_x <= ea.field_d)))) {
+                if (((var7 != 0)) && ((!(this.selection.isHeld(false)) ||
+                  !(MembershipBenefitsScreen.field_x <= ea.field_d)))) {
                   wp.a(8, ta.field_e[1]);
-                  ea.field_d = de.field_x + 20;
+                  ea.field_d = MembershipBenefitsScreen.field_x + 20;
                 }
                 break regionExit1;
               }
               if (var8 == 21) {
-                if (this.field_h.b(param2 ^ -30)) {
+                if (this.selection.isKey102(obfuscationGuard ^ -30)) {
                   il.a((byte) 86, 0);
                 }
-                if (this.field_h.a(-1)) {
+                if (this.selection.isKey103(-1)) {
                   il.a((byte) 86, 256);
                 }
-                if (this.field_h.g((byte) -57)) {
+                if (this.selection.isKey96((byte) -57)) {
                   lf.f(-1);
                 }
-                if (this.field_h.c(param2 ^ -27)) {
+                if (this.selection.isKey97(obfuscationGuard ^ -27)) {
                   nf.a((byte) 109);
                 }
-                if (!(!this.field_h.a(false))) {
-                  var8 = -120 + (dg.field_d + (var5.field_c + var5.field_j) + var5.field_c) >> 1;
+                if (!(!this.selection.isHeld(false))) {
+                  var8 = -120 + (dg.field_d + (var5.x + var5.width) + var5.x) >> 1;
                   var9 = -var8 + pq.field_k;
                   var10 = 256 * var9 / 120;
                   if (var10 <= 0) {
@@ -455,10 +455,10 @@ abstract class km extends GameScreen {
                 break regionExit1;
               }
               if (var8 == 6) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
                   if (null == ua.field_d) {
-                    cp.a(param1, 21543);
+                    cp.a(inputFlag, 21543);
                   } else {
                     LevelPack.b(82);
                   }
@@ -466,34 +466,34 @@ abstract class km extends GameScreen {
                 break regionExit1;
               }
               if (var8 == 9) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  pe.field_o.a((byte) 40, param1);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  pe.field_o.a((byte) 40, inputFlag);
                   cc.field_G = true;
                 }
                 break regionExit1;
               }
               if (var8 == 11) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   pe.field_o.b(29);
-                  ng.a(param1, 73, -1);
+                  ng.requestScreen(inputFlag, 73, -1);
                 }
                 break regionExit1;
               }
               if (var8 == 12) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   pe.field_o.f(69);
                 }
                 break regionExit1;
               }
               if (13 == var8) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   da.f((byte) 122);
                 }
                 break regionExit1;
               }
               if (var8 == 23) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  if (this.field_a != 10) {
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  if (this.screenId != 10) {
                     he.a(LevelPackLoader.field_a, true, (byte) 126);
                     sl.field_z = 2147483647;
                   } else {
@@ -510,54 +510,54 @@ abstract class km extends GameScreen {
                 break regionExit1;
               }
               if (19 == var8) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
                   nk.a(2048, uc.e((byte) -66));
                 }
                 break regionExit1;
               }
               if (var8 == 32) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  ng.a(param1, 62, 14);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  ng.requestScreen(inputFlag, 62, 14);
                 }
                 break regionExit1;
               }
               if (var8 == 33) {
-                if (!(!this.field_h.a((byte) 113))) {
-                  cq.a(16727, param1, pe.field_o.field_r, pe.field_o.match.configuration);
+                if (!(!this.selection.isActivated((byte) 113))) {
+                  cq.a(16727, inputFlag, pe.field_o.field_r, pe.field_o.match.configuration);
                 }
                 break regionExit1;
               }
               if (var8 == 34) {
-                if (!(!this.field_h.a((byte) 113))) {
+                if (!(!this.selection.isActivated((byte) 113))) {
                   var8 = 13;
                   if (gq.field_Yb == 1) {
                     var8 = 15;
                   }
-                  ng.a(param1, param2 ^ 25, var8);
+                  ng.requestScreen(inputFlag, obfuscationGuard ^ 25, var8);
                   cc.field_G = true;
                 }
                 break regionExit1;
               }
               switch (var8) {
                 case 35:
-                  if (!this.field_h.a((byte) 113)) {
+                  if (!this.selection.isActivated((byte) 113)) {
                     break regionExit1;
                   }
-                  pe.field_o.a(param1, (byte) 69);
+                  pe.field_o.a(inputFlag, (byte) 69);
                   cc.field_G = true;
                   break regionExit1;
                 default:
                   break regionExit1;
                 case 42:
-                  if (!this.field_h.a((byte) 113)) {
+                  if (!this.selection.isActivated((byte) 113)) {
                     break regionExit1;
                   }
                   var4 = 1;
-                  ng.a(param1, 110, 12);
+                  ng.requestScreen(inputFlag, 110, 12);
                   break regionExit1;
                 case 36:
-                  if (!this.field_h.a((byte) 113)) {
+                  if (!this.selection.isActivated((byte) 113)) {
                     break regionExit1;
                   }
                   stackIn_165_0 = !(be.field_a);
@@ -571,19 +571,19 @@ abstract class km extends GameScreen {
                   break regionExit1;
               }
             }
-            if (this.field_h.a((byte) 113)) {
-              GameplayScreen.b((byte) -126, param1);
+            if (this.selection.isActivated((byte) 113)) {
+              GameplayScreen.b((byte) -126, inputFlag);
             }
           } else {
-            if (this.field_h.a((byte) 113)) {
-              stackIn_47_0 = param1;
-              stackIn_47_1 = param2 - 44;
+            if (this.selection.isActivated((byte) 113)) {
+              stackIn_47_0 = inputFlag;
+              stackIn_47_1 = obfuscationGuard - 44;
               if (pg.c(72)) {
                 stackIn_48_2 = 13;
               } else {
                 stackIn_48_2 = 16;
               }
-              ng.a(stackIn_47_0, stackIn_47_1, stackIn_48_2);
+              ng.requestScreen(stackIn_47_0, stackIn_47_1, stackIn_48_2);
             }
           }
         }
@@ -650,34 +650,34 @@ abstract class km extends GameScreen {
         }
     }
 
-    boolean a(byte param0, int param1) {
-        if (param0 <= 80) {
+    boolean isButtonEnabled(byte obfuscationGuard, int buttonIndex) {
+        if (obfuscationGuard <= 80) {
           return false;
         }
         return true;
     }
 
-    void b(boolean param0) {
+    void layoutButtons(boolean obfuscationGuard) {
         int var2 = 0;
-        q var3 = null;
+        MenuButton var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
-        if (!param0) {
+        if (!obfuscationGuard) {
           this.e((byte) -7);
         }
-        for (var2 = 0; var2 < this.field_m.length; var2++) {
-          var3 = this.field_m[var2];
-          var3.field_c = this.a(true, var2);
-          var3.field_a = this.b(var2, 1);
-          var3.field_j = this.a(-109, var2) - this.a(param0, var2);
-          this.field_m[var2].field_d = this.b((byte) -78, var2);
+        for (var2 = 0; var2 < this.buttons.length; var2++) {
+          var3 = this.buttons[var2];
+          var3.x = this.getButtonLeft(true, var2);
+          var3.y = this.getButtonTop(var2, 1);
+          var3.width = this.getButtonRight(-109, var2) - this.getButtonLeft(obfuscationGuard, var2);
+          this.buttons[var2].height = this.getButtonHeight((byte) -78, var2);
         }
     }
 
-    int a(boolean param0, int param1) {
-        if (!param0) {
-          this.a(109, -54, 'ￃ');
+    int getButtonLeft(boolean obfuscationGuard, int buttonIndex) {
+        if (!obfuscationGuard) {
+          this.handleNavigationKey(109, -54, 'ￃ');
         }
-        return this.field_j;
+        return this.buttonLeft;
     }
 
     final static void a(int param0, int param1, long param2, String param3, int param4) {
@@ -688,7 +688,7 @@ abstract class km extends GameScreen {
           gn.field_E = param2;
           ba.field_z = param3;
           if (param1 != 29295) {
-            km.b(48);
+            MenuScreen.b(48);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "km.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -700,55 +700,55 @@ abstract class km extends GameScreen {
         field_n = null;
         if (param0 >= -57) {
           PlayerBoard var2 = (PlayerBoard) null;
-          km.a((MultiplayerMatch) null, (PlayerBoard) null, 113, 61, false, -53, 18);
+          MenuScreen.a((MultiplayerMatch) null, (PlayerBoard) null, 113, 61, false, -53, 18);
         }
         field_k = null;
     }
 
-    void a(boolean param0, int param1, int param2) {
-        if (param2 <= 96) {
+    void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
+        if (obfuscationGuard <= 96) {
           this.handleKey('F', -76, -96);
         }
-        this.field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), param1, param0, (byte) -127);
+        this.selection.initializeSelection(this.findButtonAt(po.field_a, (byte) -106, pq.field_k), initialSelection, usePointer, (byte) -127);
     }
 
-    void d(byte param0) {
-        if (param0 != 79) {
-          this.b(-57, -105);
+    void onExit(byte obfuscationGuard) {
+        if (obfuscationGuard != 79) {
+          this.getButtonTop(-57, -105);
         }
     }
 
-    int b(byte param0, int param1) {
-        int var3 = 11 % ((param0 - 66) / 45);
+    int getButtonHeight(byte obfuscationGuard, int buttonIndex) {
+        int var3 = 11 % ((obfuscationGuard - 66) / 45);
         return 30;
     }
 
-    final void b(boolean param0, int param1) {
+    final void markButton(boolean marked, int buttonIndex) {
         int var4 = 0;
-        q var5 = null;
+        MenuButton var5 = null;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        q[] var7 = this.field_m;
-        q[] var3 = var7;
+        MenuButton[] var7 = this.buttons;
+        MenuButton[] var3 = var7;
         for (var4 = 0; var4 < var7.length; var4++) {
           var5 = var7[var4];
-          var5.field_h = false;
+          var5.marked = false;
         }
-        this.field_m[param1].field_h = param0 ? true : false;
+        this.buttons[buttonIndex].marked = marked ? true : false;
     }
 
-    private final int a(int param0, byte param1, int param2) {
+    private final int findButtonAt(int pointY, byte obfuscationGuard, int pointX) {
         int var4;
-        q var5;
+        MenuButton var5;
         int var6;
         var6 = BrickABrac.field_J ? 1 : 0;
         var4 = 0;
-        if (param1 >= -77) {
-          this.field_h = (re) null;
+        if (obfuscationGuard >= -77) {
+          this.selection = (MenuSelection) null;
         }
-        while (var4 < this.field_m.length) {
-          var5 = this.field_m[var4];
-          if (this.a((byte) 122, var4) &&
-            var5.a(param2, param0, -79)) {
+        while (var4 < this.buttons.length) {
+          var5 = this.buttons[var4];
+          if (this.isButtonEnabled((byte) 122, var4) &&
+            var5.containsPoint(pointX, pointY, -79)) {
             return var4;
           }
           var4++;

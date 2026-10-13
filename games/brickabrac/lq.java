@@ -148,7 +148,7 @@ final class lq {
           if (param0 != 0) {
             lq.d(-20);
           }
-          stackIn_6_0 = ud.c(false);
+          stackIn_6_0 = LevelSelectScreen.c(false);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
