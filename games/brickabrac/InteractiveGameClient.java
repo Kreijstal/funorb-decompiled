@@ -50,10 +50,10 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           return true;
         }
         if (MeshAttributeRecord.currentKeyCode == param1) {
-          hd.field_a.f((byte) 41);
+          hd.quickChatMenu.resetSelection((byte) 41);
           return true;
         }
-        stackIn_10_0 = (hd.field_a != null) && (hd.field_a.a(param2, param0, (byte) -126));
+        stackIn_10_0 = (hd.quickChatMenu != null) && (hd.quickChatMenu.handleShortcutKey(param2, param0, (byte) -126));
         return stackIn_10_0;
     }
 
@@ -84,7 +84,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           return;
         }
         if (!um.field_t &&
-          !og.h(-26090)) {
+          !QuickChatMenu.h(-26090)) {
           ParisBackground.a((byte) 24, 100.0f, qm.field_e);
           kn.a(true, var2);
           return;
@@ -437,7 +437,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         }
         if (decompiledFrameRemainder0) {
           boolean decompiledSharedTail0 = (!(um.field_t) &&
-            !(og.h(-26090)));
+            !(QuickChatMenu.h(-26090)));
           if (!decompiledSharedTail0) {
             this.r(10);
             decompiledSharedTail0 = (var4 != 0);
@@ -449,7 +449,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             mc.a((byte) 126);
           }
         }
-        if (!og.h(-26090)) {
+        if (!QuickChatMenu.h(-26090)) {
           do {
             var5 = (AchievementSubmission) (lp.queuedAchievementSubmissions.removeFirst(3));
             if (var5 == null) {

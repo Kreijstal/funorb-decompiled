@@ -81,8 +81,8 @@ final class Paddle extends RectangleBody {
     final static void a(int param0, boolean param1, int param2) {
         int var3 = 0;
         int var4 = 0;
-        if (null != CircleBody.field_p) {
-          var3 = CircleBody.field_p.b(param1, 8421504);
+        if (null != CircleBody.reportAbuseDialog) {
+          var3 = CircleBody.reportAbuseDialog.updateAndPollReason(param1, 8421504);
           if (-2 == var3) {
             if (param2 <= 69) {
               projectedVertexDepth = (int[]) null;
@@ -91,10 +91,10 @@ final class Paddle extends RectangleBody {
             return;
           }
           if (var3 != -1) {
-            var4 = CircleBody.field_p.j(72) ? 1 : 0;
-            oc.a(var3, param0, CircleBody.field_p.field_Wb, 1, var4 != 0, CircleBody.field_p.h(107));
+            var4 = CircleBody.reportAbuseDialog.isMuteRequested(72) ? 1 : 0;
+            oc.writeAbuseReport(var3, param0, CircleBody.reportAbuseDialog.reportTargetId, 1, var4 != 0, CircleBody.reportAbuseDialog.getReportedName(107));
           }
-          CircleBody.field_p = null;
+          CircleBody.reportAbuseDialog = null;
           cr.f((byte) -124);
         }
         if (param2 > 69) {

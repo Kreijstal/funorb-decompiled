@@ -72,7 +72,7 @@ class r extends um {
           if (OptionsScreen.field_x <= 0) {
             return false;
           }
-          if (!am.i(0)) {
+          if (!ReportAbuseDialog.i(0)) {
             return true;
           }
           return false;
@@ -86,7 +86,7 @@ class r extends um {
         if (OptionsScreen.field_x <= 0) {
           return false;
         }
-        if (!am.i(0)) {
+        if (!ReportAbuseDialog.i(0)) {
           return true;
         }
         return false;

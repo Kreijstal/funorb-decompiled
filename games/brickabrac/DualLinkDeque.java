@@ -53,7 +53,7 @@ final class DualLinkDeque implements Iterable {
           if (s.a(-121)) {
             return true;
           }
-          if (CircleBody.field_p != null) {
+          if (CircleBody.reportAbuseDialog != null) {
             return true;
           }
           if (!BufferedFile.b(true)) {
@@ -67,7 +67,7 @@ final class DualLinkDeque implements Iterable {
         if (s.a(-121)) {
           return true;
         }
-        if (CircleBody.field_p != null) {
+        if (CircleBody.reportAbuseDialog != null) {
           return true;
         }
         if (!BufferedFile.b(true)) {

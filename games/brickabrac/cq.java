@@ -59,8 +59,8 @@ final class cq extends IntrusiveNode {
             bm.field_d.a((byte) -126, param0);
           }
           MembershipBenefitsScreen.a(param0, false);
-          if (null != CircleBody.field_p) {
-            CircleBody.field_p.drawRoot(true, param0);
+          if (null != CircleBody.reportAbuseDialog) {
+            CircleBody.reportAbuseDialog.drawRoot(true, param0);
           }
           eh.a(param0, true);
           return;
@@ -74,8 +74,8 @@ final class cq extends IntrusiveNode {
           bm.field_d.a((byte) -126, param0);
         }
         MembershipBenefitsScreen.a(param0, false);
-        if (null != CircleBody.field_p) {
-          CircleBody.field_p.drawRoot(true, param0);
+        if (null != CircleBody.reportAbuseDialog) {
+          CircleBody.reportAbuseDialog.drawRoot(true, param0);
         }
         eh.a(param0, true);
         return;
@@ -107,7 +107,7 @@ final class cq extends IntrusiveNode {
           var5 = stackIn_2_0;
           DelegatingCanvas.field_c = 13;
           OptionsScreen.resultCounterOne = 57;
-          og.field_Wb = 3;
+          QuickChatMenu.field_Wb = 3;
           ep.resultCounterTwo = 23;
           hg.field_e = 51550 + (hi.field_w.nextInt(92) << 16);
           tm.field_g = 11;
@@ -132,7 +132,7 @@ final class cq extends IntrusiveNode {
           if (param0 != 16727) {
             tickTimeCursor = 49;
           }
-          oa.currentBackground = rd.selectBackground(param3.pack.metadata[param2].attributeByte, (byte) 19);
+          TabbedPane.currentBackground = rd.selectBackground(param3.pack.metadata[param2].attributeByte, (byte) 19);
           sk.a(var5, param2, param3, 1, param1, -12665);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

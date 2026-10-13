@@ -176,7 +176,7 @@ final class na extends ug {
 
     private final void a(oc param0, String param1, byte param2, int param3, int param4) {
         try {
-          og.field_Yb.drawCentered(param1, param3 + param0.field_o + (param0.field_t >> 1), param0.field_w + (param4 - 5), 16777215, -1);
+          QuickChatMenu.field_Yb.drawCentered(param1, param3 + param0.field_o + (param0.field_t >> 1), param0.field_w + (param4 - 5), 16777215, -1);
           int var6_int = -127 % ((-2 - param2) / 59);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -241,7 +241,7 @@ final class na extends ug {
           stackIn_20_1 = (param0) && (!param1) && (sc.field_c);
           ((UiComponent) (Object) stackIn_19_0).updateRoot(stackIn_20_1, -15211);
         }
-        ap.field_b.field_d.i(0);
+        ap.field_b.field_d.processTabPresses(0);
         if (HighscorePackSelector.field_k.pressedButton != 0) {
           tq.field_c = true;
         }

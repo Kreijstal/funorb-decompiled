@@ -60,7 +60,7 @@ final class mo extends ag implements en {
 
     final void a(int param0, int param1, int param2, byte param3) {
         super.a(param0, param1, param2, param3);
-        og.field_Yb.drawLeft(MusicEnvelope.field_i, 4 + (this.field_o + param1), 4 + param0 + (this.field_w + og.field_Yb.ascent), 16777215, -1);
+        QuickChatMenu.field_Yb.drawLeft(MusicEnvelope.field_i, 4 + (this.field_o + param1), 4 + param0 + (this.field_w + QuickChatMenu.field_Yb.ascent), 16777215, -1);
     }
 
     static {

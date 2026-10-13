@@ -23,7 +23,7 @@ final class th {
     }
 
     final static boolean a(int[] param0, long param1, int param2, boolean param3, String param4) {
-        og var6 = null;
+        QuickChatMenu var6 = null;
         RuntimeException var6_ref = null;
         CharSequence var7 = null;
         RuntimeException stackIn_12_0 = null;

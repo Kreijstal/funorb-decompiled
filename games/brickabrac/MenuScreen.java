@@ -323,7 +323,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 1) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  if (!og.h(-26090)) {
+                  if (!QuickChatMenu.h(-26090)) {
                     cb.b(true);
                   } else {
                     sl.field_z = -2;

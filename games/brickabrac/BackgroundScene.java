@@ -36,7 +36,7 @@ abstract class BackgroundScene {
           if (BrickABrac.field_I.hasFileName(var2, "", (byte) -121)) {
             this.soundEffects[this.loadedSoundCount] = SoundPlayback.soundCache.getSoundEffectByName(var3, "", (byte) 122);
           }
-          if (og.field_gc.hasFileName(var2, "", (byte) -121)) {
+          if (QuickChatMenu.field_gc.hasFileName(var2, "", (byte) -121)) {
             this.soundEffects[this.loadedSoundCount] = SoundPlayback.soundCache.getMusicSampleByName((byte) 28, var3, "");
           }
           if (this.soundEffects[this.loadedSoundCount] != null) {

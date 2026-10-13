@@ -12,12 +12,12 @@ final class AchievementSubmission extends IntrusiveNode {
     int submissionByte;
     static RgbSprite[] field_q;
 
-    final static og a(UiComponent param0, UiComponent param1, kn param2, int param3, UiComponent param4) {
+    final static QuickChatMenu a(UiComponent param0, UiComponent param1, kn param2, int param3, UiComponent param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
-        og stackIn_28_0 = null;
+        QuickChatMenu stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -35,7 +35,7 @@ final class AchievementSubmission extends IntrusiveNode {
         String[] var8 = null;
         char[] var9 = null;
         int[] var10 = null;
-        og[] var11 = null;
+        QuickChatMenu[] var11 = null;
         int var12 = 0;
         kn var13_ref_kn = null;
         int var13 = 0;
@@ -52,7 +52,7 @@ final class AchievementSubmission extends IntrusiveNode {
         try {
           if (param2 == null) {
             stackIn_3_0 = null;
-            return (og) (stackIn_3_0);
+            return (QuickChatMenu) (stackIn_3_0);
           }
           if (param2.field_x != null) {
             stackIn_7_0 = param2.field_x.length;
@@ -78,7 +78,7 @@ final class AchievementSubmission extends IntrusiveNode {
           var21 = new int[var7];
           var19 = var21;
           var10 = var19;
-          var11 = new og[var7];
+          var11 = new QuickChatMenu[var7];
           if (param2.field_x != null) {
             for (var12 = 0; param2.field_x.length > var12; var12++) {
               var13_ref_kn = pj.field_c.a(param2.field_x[var12], (byte) 124);
@@ -108,7 +108,7 @@ final class AchievementSubmission extends IntrusiveNode {
               }
             }
           }
-          stackIn_28_0 = new og(0L, param4, param1, param0, var11, var21, var8, var22);
+          stackIn_28_0 = new QuickChatMenu(0L, param4, param1, param0, var11, var21, var8, var22);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

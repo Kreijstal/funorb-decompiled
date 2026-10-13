@@ -10,8 +10,8 @@ final class rd {
 
     final static void a(int param0) {
         TooltipSprite.field_p = false;
-        if (null != hd.field_a) {
-          hd.field_a.f((byte) 41);
+        if (null != hd.quickChatMenu) {
+          hd.quickChatMenu.resetSelection((byte) 41);
         }
         if (param0 != ~ng.field_b) {
           fl.b(true);

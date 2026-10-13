@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends UiComponent {
-    private int field_Xb;
+final class QuickChatMenu extends UiComponent {
+    private int menuWidth;
     static int field_Wb;
-    private int field_dc;
-    private char[] field_fc;
+    private int rowHeight;
+    private char[] shortcuts;
     static String field_ac;
-    private AlignedIconLabel[] field_Qb;
+    private AlignedIconLabel[] items;
     static ResourceArchive field_gc;
-    private int field_Rb;
-    private int field_Sb;
-    private int field_Tb;
-    private og[] field_bc;
-    private int[] field_Ub;
-    private int field_cc;
+    private int contentWidth;
+    private int animationAnchorY;
+    private int selectedItem;
+    private QuickChatMenu[] submenus;
+    private int[] messageIds;
+    private int itemCount;
     static int field_Zb;
-    private int field_Pb;
-    private og field_Vb;
-    private int field_ec;
+    private int preferredHeight;
+    private QuickChatMenu openSubmenu;
+    private int remainingExpansionTicks;
     static TextFont field_Yb;
 
     final static void a(String[] args, IndexedSprite[] param1, byte[] param2, RgbSprite[][] param3, byte[] param4, int[] param5, int param6, RgbSprite[][] param7, ResourceArchive param8, int param9, ResourceArchive param10, String[][] param11, ResourceArchive param12, int param13, int[] param14, String[][] param15, boolean param16) {
@@ -140,26 +140,26 @@ final class og extends UiComponent {
         }
     }
 
-    private final void a(int param0, byte param1) {
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+    private final void setExpansionTicks(int remainingTicks, byte obfuscationGuard) {
+        int expandedY = 0;
+        int collapseWeight = 0;
+        int itemIndex = 0;
+        int unusedGameFlag = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != -81) {
-            this.i(-108);
+          if (obfuscationGuard != -81) {
+            this.hasPressedItem(-108);
           }
-          this.field_ec = param0;
-          var5 = 0;
-          while (var5 < this.field_cc) {
-            var3_int = var5 * this.field_dc;
-            var4 = this.field_ec * this.field_ec;
-            this.field_Qb[var5].localY = (var4 * (-this.screenY + this.field_Sb) + var3_int * (144 - var4)) / 144;
-            var5++;
-            if (var6 != 0) {
+          this.remainingExpansionTicks = remainingTicks;
+          itemIndex = 0;
+          while (itemIndex < this.itemCount) {
+            expandedY = itemIndex * this.rowHeight;
+            collapseWeight = this.remainingExpansionTicks * this.remainingExpansionTicks;
+            this.items[itemIndex].localY = (collapseWeight * (-this.screenY + this.animationAnchorY) + expandedY * (144 - collapseWeight)) / 144;
+            itemIndex++;
+            if (unusedGameFlag != 0) {
               return;
             }
           }
@@ -167,62 +167,62 @@ final class og extends UiComponent {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "og.E(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "og.E(" + remainingTicks + ',' + obfuscationGuard + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void processPressedItems(int obfuscationGuard, int messageOpcode, int filterOpcode) {
         RuntimeException runtimeException = null;
-        int var4_int = 0;
-        og var4 = null;
-        AlignedIconLabel var5 = null;
-        int var6 = 0;
-        AlignedIconLabel stackIn_13_0 = null;
-        boolean stackIn_14_1 = false;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
+        int itemIndex = 0;
+        QuickChatMenu submenu = null;
+        AlignedIconLabel item = null;
+        int unusedGameFlag = 0;
+        AlignedIconLabel selectedRow = null;
+        boolean rowSelected = false;
+        int comparisonSentinel = 0;
+        int pressComplementOrSelectedItem = 0;
         RuntimeException decompiledCaughtException = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = 0;
-          if (param0 != 38) {
+          itemIndex = 0;
+          if (obfuscationGuard != 38) {
             return;
           }
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (this.field_Qb.length <= var4_int))) {
-            var5 = this.field_Qb[var4_int];
-            stackIn_17_0 = -2;
-            stackIn_17_1 = ~var5.pressedButton;
-            if (var6 == 0) {
-              if (stackIn_17_0 == stackIn_17_1) {
-                this.a(param2, var4_int, param0 ^ 38, param1);
-                stackIn_13_0 = var5;
-                stackIn_14_1 = (this.field_Tb == var4_int);
-                stackIn_13_0.selected = stackIn_14_1;
+          boolean finishedRowScan = false;
+          while (!(finishedRowScan = (this.items.length <= itemIndex))) {
+            item = this.items[itemIndex];
+            comparisonSentinel = -2;
+            pressComplementOrSelectedItem = ~item.pressedButton;
+            if (unusedGameFlag == 0) {
+              if (comparisonSentinel == pressComplementOrSelectedItem) {
+                this.activateItem(filterOpcode, itemIndex, obfuscationGuard ^ 38, messageOpcode);
+                selectedRow = item;
+                rowSelected = (this.selectedItem == itemIndex);
+                selectedRow.selected = rowSelected;
               }
-              var4_int++;
+              itemIndex++;
               continue;
             }
             break;
           }
-          if (decompiledNaturalLoopExit0) {
-            stackIn_17_0 = -1;
-            stackIn_17_1 = this.field_Tb;
+          if (finishedRowScan) {
+            comparisonSentinel = -1;
+            pressComplementOrSelectedItem = this.selectedItem;
           }
-          if (stackIn_17_0 != stackIn_17_1) {
-            var4 = this.field_bc[this.field_Tb];
-            if (null != var4) {
-              var4.a(param0 ^ 0, param1, param2);
+          if (comparisonSentinel != pressComplementOrSelectedItem) {
+            submenu = this.submenus[this.selectedItem];
+            if (null != submenu) {
+              submenu.processPressedItems(obfuscationGuard ^ 0, messageOpcode, filterOpcode);
             }
           }
-          if (this.field_ec > 0) {
-            this.a(-1 + this.field_ec, (byte) -81);
+          if (this.remainingExpansionTicks > 0) {
+            this.setExpansionTicks(-1 + this.remainingExpansionTicks, (byte) -81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "og.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "og.B(" + obfuscationGuard + ',' + messageOpcode + ',' + filterOpcode + ')');
         }
     }
 
@@ -243,176 +243,176 @@ final class og extends UiComponent {
         }
     }
 
-    final void f(byte param0) {
+    final void resetSelection(byte obfuscationGuard) {
         RuntimeException runtimeException = null;
-        AlignedIconLabel[] var2 = null;
-        int var3 = 0;
-        AlignedIconLabel var4 = null;
-        int var5 = 0;
+        AlignedIconLabel[] rows = null;
+        int itemIndex = 0;
+        AlignedIconLabel item = null;
+        int unusedGameFlag = 0;
         RuntimeException decompiledCaughtException = null;
-        var5 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2 = this.field_Qb;
-          if (param0 != 41) {
-            this.field_Qb = (AlignedIconLabel[]) null;
+          rows = this.items;
+          if (obfuscationGuard != 41) {
+            this.items = (AlignedIconLabel[]) null;
           }
-          var3 = 0;
+          itemIndex = 0;
           scanLoop1: while (true) {
-            if (var3 < var2.length) {
-              var4 = var2[var3];
-              var4.pressedButton = 0;
-              var4.selected = false;
-              var3++;
-              if (var5 == 0) {
+            if (itemIndex < rows.length) {
+              item = rows[itemIndex];
+              item.pressedButton = 0;
+              item.selected = false;
+              itemIndex++;
+              if (unusedGameFlag == 0) {
                 continue;
               }
             } else {
-              if (null == this.field_Vb) {
+              if (null == this.openSubmenu) {
                 break scanLoop1;
               }
-              this.field_Vb.f((byte) 41);
+              this.openSubmenu.resetSelection((byte) 41);
             }
-            this.field_Vb.unlink((byte) 111);
+            this.openSubmenu.unlink((byte) 111);
             break;
           }
-          this.field_Vb = null;
-          this.field_Tb = -1;
-          this.a(12, (byte) -81);
+          this.openSubmenu = null;
+          this.selectedItem = -1;
+          this.setExpansionTicks(12, (byte) -81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "og.H(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "og.H(" + obfuscationGuard + ')');
         }
     }
 
-    final boolean i(int param0) {
-        int var2_int = 0;
+    final boolean hasPressedItem(int obfuscationGuard) {
+        int anyPressed = 0;
         RuntimeException var2 = null;
-        AlignedIconLabel[] var3 = null;
-        int var4 = 0;
-        AlignedIconLabel var5 = null;
-        int var6 = 0;
-        int stackIn_13_1 = 0;
-        int stackIn_17_0 = 0;
-        int stackIn_17_1 = 0;
-        int stackIn_25_0 = 0;
+        AlignedIconLabel[] rows = null;
+        int itemIndex = 0;
+        AlignedIconLabel item = null;
+        int unusedGameFlag = 0;
+        int rowPressed = 0;
+        int pressedOrNoSelectionSentinel = 0;
+        int pressComplementOrSelectedItem = 0;
+        int result = 0;
         RuntimeException decompiledCaughtException = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 != 28) {
+          if (obfuscationGuard != 28) {
             field_gc = (ResourceArchive) null;
           }
-          var2_int = 0;
-          var3 = this.field_Qb;
-          var4 = 0;
+          anyPressed = 0;
+          rows = this.items;
+          itemIndex = 0;
           scanLoop1: while (true) {
-            if (var4 < var3.length) {
-              var5 = var3[var4];
-              stackIn_17_0 = var2_int;
-              stackIn_17_1 = -1;
-              if (var6 == 0) {
-                if (stackIn_17_1 == ~var5.pressedButton) {
-                  stackIn_13_1 = 0;
+            if (itemIndex < rows.length) {
+              item = rows[itemIndex];
+              pressedOrNoSelectionSentinel = anyPressed;
+              pressComplementOrSelectedItem = -1;
+              if (unusedGameFlag == 0) {
+                if (pressComplementOrSelectedItem == ~item.pressedButton) {
+                  rowPressed = 0;
                 } else {
-                  stackIn_13_1 = 1;
+                  rowPressed = 1;
                 }
-                var2_int = stackIn_17_0 | stackIn_13_1;
-                var4++;
+                anyPressed = pressedOrNoSelectionSentinel | rowPressed;
+                itemIndex++;
                 continue;
               }
             } else {
-              if (var2_int != 0) {
+              if (anyPressed != 0) {
                 break scanLoop1;
               }
-              stackIn_17_0 = -1;
-              stackIn_17_1 = this.field_Tb;
+              pressedOrNoSelectionSentinel = -1;
+              pressComplementOrSelectedItem = this.selectedItem;
             }
-            if (stackIn_17_0 != stackIn_17_1 &&
-              this.field_bc[this.field_Tb] != null) {
-              var2_int = this.field_bc[this.field_Tb].i(28) ? 1 : 0;
+            if (pressedOrNoSelectionSentinel != pressComplementOrSelectedItem &&
+              this.submenus[this.selectedItem] != null) {
+              anyPressed = this.submenus[this.selectedItem].hasPressedItem(28) ? 1 : 0;
             }
             break;
           }
-          stackIn_25_0 = var2_int;
-          return stackIn_25_0 != 0;
+          result = anyPressed;
+          return result != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "og.A(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "og.A(" + obfuscationGuard + ')');
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3) {
+    private final void activateItem(int filterOpcode, int itemIndex, int obfuscationGuard, int messageOpcode) {
         RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
+        int encodedMessageId = 0;
         RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        var7 = BrickABrac.field_J ? 1 : 0;
+        int effectiveChannel = 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          boolean decompiledFrameRemainder0 = true;
-          if (this.field_Tb != param1) {
-            if (this.field_bc[param1] == null) {
-              if (this.field_Ub[param1] != -1) {
-                var5_int = this.field_Ub[param1] | 32768;
-                var6 = ng.field_b;
-                if (var6 == 0 &&
+          boolean openHelpBranch = true;
+          if (this.selectedItem != itemIndex) {
+            if (this.submenus[itemIndex] == null) {
+              if (this.messageIds[itemIndex] != -1) {
+                encodedMessageId = this.messageIds[itemIndex] | 32768;
+                effectiveChannel = ng.field_b;
+                if (effectiveChannel == 0 &&
                   o.field_e != null) {
-                  var6 = 1;
+                  effectiveChannel = 1;
                 }
-                if (tm.a(var6, (byte) 18) == 2) {
-                  DirectByteStorage.a(0, param0, 1, var6);
+                if (tm.a(effectiveChannel, (byte) 18) == 2) {
+                  DirectByteStorage.a(0, filterOpcode, 1, effectiveChannel);
                 }
-                c.a(var5_int, DualLinkNode.field_p, (byte) -113, ng.field_b, param3, (String) null);
-                MenuScreen.a(var5_int, 29295, qn.field_n, DualLinkNode.field_p, ng.field_b);
+                c.a(encodedMessageId, DualLinkNode.field_p, (byte) -113, ng.field_b, messageOpcode, (String) null);
+                MenuScreen.a(encodedMessageId, 29295, qn.field_n, DualLinkNode.field_p, ng.field_b);
                 rd.a(-1);
                 bh.m(-69);
-                decompiledFrameRemainder0 = (var7 != 0);
+                openHelpBranch = (unusedGameFlag != 0);
               }
-              if (decompiledFrameRemainder0) {
+              if (openHelpBranch) {
                 po.a(true);
                 rd.a(-1);
-                if (var7 != 0) {
-                  this.f((byte) 41);
-                  this.a(0, (byte) -81);
-                  this.field_Tb = param1;
-                  this.field_Vb = this.field_bc[this.field_Tb];
-                  BlankScreen.a(param2 ^ -2, this.field_Vb);
-                  this.field_Vb.a(12, (byte) -81);
-                  this.f((byte) 41);
-                  this.a(0, (byte) -81);
+                if (unusedGameFlag != 0) {
+                  this.resetSelection((byte) 41);
+                  this.setExpansionTicks(0, (byte) -81);
+                  this.selectedItem = itemIndex;
+                  this.openSubmenu = this.submenus[this.selectedItem];
+                  BlankScreen.a(obfuscationGuard ^ -2, this.openSubmenu);
+                  this.openSubmenu.setExpansionTicks(12, (byte) -81);
+                  this.resetSelection((byte) 41);
+                  this.setExpansionTicks(0, (byte) -81);
                 }
               }
             } else {
-              this.f((byte) 41);
-              this.a(0, (byte) -81);
-              this.field_Tb = param1;
-              this.field_Vb = this.field_bc[this.field_Tb];
-              BlankScreen.a(param2 ^ -2, this.field_Vb);
-              this.field_Vb.a(12, (byte) -81);
-              if (var7 != 0) {
-                this.f((byte) 41);
-                this.a(0, (byte) -81);
+              this.resetSelection((byte) 41);
+              this.setExpansionTicks(0, (byte) -81);
+              this.selectedItem = itemIndex;
+              this.openSubmenu = this.submenus[this.selectedItem];
+              BlankScreen.a(obfuscationGuard ^ -2, this.openSubmenu);
+              this.openSubmenu.setExpansionTicks(12, (byte) -81);
+              if (unusedGameFlag != 0) {
+                this.resetSelection((byte) 41);
+                this.setExpansionTicks(0, (byte) -81);
               }
             }
           } else {
-            this.f((byte) 41);
-            this.a(0, (byte) -81);
+            this.resetSelection((byte) 41);
+            this.setExpansionTicks(0, (byte) -81);
           }
-          if (param2 != 0) {
-            this.field_Qb = (AlignedIconLabel[]) null;
+          if (obfuscationGuard != 0) {
+            this.items = (AlignedIconLabel[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var5), "og.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var5), "og.I(" + filterOpcode + ',' + itemIndex + ',' + obfuscationGuard + ',' + messageOpcode + ')');
         }
     }
 
-    og(long param0, UiComponent param1, UiComponent param2, UiComponent param3, og[] param4, int[] param5, String[] param6, char[] param7) {
-        super(param0, param1);
+    QuickChatMenu(long id, UiComponent styleTemplate, UiComponent itemStyle, UiComponent labelStyle, QuickChatMenu[] submenus, int[] messageIds, String[] labels, char[] shortcuts) {
+        super(id, styleTemplate);
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -429,98 +429,98 @@ final class og extends UiComponent {
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
         RuntimeException decompiledCaughtException = null;
-        TextFont var10 = null;
+        TextFont font = null;
         RuntimeException var10_ref = null;
-        String var11 = null;
-        String var12 = null;
-        int var13 = 0;
-        Object var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        var16 = BrickABrac.field_J ? 1 : 0;
-        this.field_Tb = -1;
+        String shortcutColorOpen = null;
+        String shortcutColorClose = null;
+        int itemIndex = 0;
+        Object branchSprite = null;
+        int labelWidth = 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        this.selectedItem = -1;
         try {
-          this.field_bc = param4;
-          this.field_Ub = param5;
-          this.field_fc = param7;
-          this.field_cc = this.field_Ub.length;
-          var10 = param3.font;
-          this.field_dc = var10.descent + (var10.ascent + 2);
-          this.field_Pb = this.field_dc * this.field_cc;
-          this.field_Rb = 0;
-          this.field_Qb = new AlignedIconLabel[this.field_cc];
-          var11 = "<col=999999>";
-          var12 = "</col>";
-          var13 = 0;
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var13 >= this.field_cc))) {
-            if (var16 == 0) {
-              if (this.field_fc[var13] > 0) {
-                param6[var13] = var11 + MusicEnvelope.a(true, this.field_fc[var13]).toUpperCase() + ": " + var12 + param6[var13];
+          this.submenus = submenus;
+          this.messageIds = messageIds;
+          this.shortcuts = shortcuts;
+          this.itemCount = this.messageIds.length;
+          font = labelStyle.font;
+          this.rowHeight = font.descent + (font.ascent + 2);
+          this.preferredHeight = this.rowHeight * this.itemCount;
+          this.contentWidth = 0;
+          this.items = new AlignedIconLabel[this.itemCount];
+          shortcutColorOpen = "<col=999999>";
+          shortcutColorClose = "</col>";
+          itemIndex = 0;
+          boolean finishedRowCreation = false;
+          while (!(finishedRowCreation = (itemIndex >= this.itemCount))) {
+            if (unusedGameFlag == 0) {
+              if (this.shortcuts[itemIndex] > 0) {
+                labels[itemIndex] = shortcutColorOpen + MusicEnvelope.a(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutColorClose + labels[itemIndex];
               }
-              var14 = null;
-              if (null != this.field_bc[var13] ||
-                this.field_Ub[var13] == -1) {
-                var14 = uf.field_e;
+              branchSprite = null;
+              if (null != this.submenus[itemIndex] ||
+                this.messageIds[itemIndex] == -1) {
+                branchSprite = uf.field_e;
               }
-              this.field_Qb[var13] = new AlignedIconLabel(0L, param2, (UiComponent) null, param3, (RgbSprite) (var14), param6[var13]);
-              this.addChild(this.field_Qb[var13], 0);
-              var15 = var10.measureText(param6[var13]);
-              if (var15 > this.field_Rb) {
-                this.field_Rb = var15;
+              this.items[itemIndex] = new AlignedIconLabel(0L, itemStyle, (UiComponent) null, labelStyle, (RgbSprite) (branchSprite), labels[itemIndex]);
+              this.addChild(this.items[itemIndex], 0);
+              labelWidth = font.measureText(labels[itemIndex]);
+              if (labelWidth > this.contentWidth) {
+                this.contentWidth = labelWidth;
               }
-              var13++;
+              itemIndex++;
               continue;
             }
             break;
           }
-          if (decompiledNaturalLoopExit0) {
-            this.field_Rb = this.field_Rb + (10 + uf.field_e.canvasWidth);
+          if (finishedRowCreation) {
+            this.contentWidth = this.contentWidth + (10 + uf.field_e.canvasWidth);
           }
-          this.a(12, (byte) -81);
+          this.setExpansionTicks(12, (byte) -81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10_ref = decompiledCaughtException;
           stackIn_25_0 = var10_ref;
-          stackIn_25_1 = new StringBuilder().append("og.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_25_1 = new StringBuilder().append("og.<init>(").append(id).append(',');
+          if (styleTemplate == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
           stackIn_29_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
-          if (param2 == null) {
+          if (itemStyle == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
           stackIn_33_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
-          if (param3 == null) {
+          if (labelStyle == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
           stackIn_37_1 = ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',');
-          if (param4 == null) {
+          if (submenus == null) {
             stackIn_38_2 = "null";
           } else {
             stackIn_38_2 = "{...}";
           }
           stackIn_41_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',');
-          if (param5 == null) {
+          if (messageIds == null) {
             stackIn_42_2 = "null";
           } else {
             stackIn_42_2 = "{...}";
           }
           stackIn_45_1 = ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',');
-          if (param6 == null) {
+          if (labels == null) {
             stackIn_46_2 = "null";
           } else {
             stackIn_46_2 = "{...}";
           }
           stackIn_49_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',');
-          if (param7 == null) {
+          if (shortcuts == null) {
             stackIn_50_2 = "null";
           } else {
             stackIn_50_2 = "{...}";
@@ -870,7 +870,7 @@ final class og extends UiComponent {
             AchievementBrowserScreen.field_s[30] = MenuButton.a(var2Lifetime37, (byte) 118);
           }
           if (param0) {
-            og.h(67);
+            QuickChatMenu.h(67);
           }
           var2Lifetime38 = gr.a(true, "achievement_names,31");
           if (var2Lifetime38 != null) {
@@ -1450,47 +1450,47 @@ final class og extends UiComponent {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void layoutMenuChain(int firstItemIndex, int x, int bottomY, int iconLabelGap, int itemInset, int animationAnchorY) {
         RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
+        int itemIndex = 0;
         RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var7_intLifetime1;
-        var9 = BrickABrac.field_J ? 1 : 0;
+        int submenuBottomY = 0;
+        int unusedGameFlag = 0;
+        int submenuItemCount;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_Xb = this.field_Rb + 2 * param4;
-          this.setBounds(this.field_Pb, -this.field_Pb + param2, param1, this.field_Xb, (byte) 64);
-          if (param5 != this.field_Sb) {
-            this.field_Sb = param5;
-            this.a(this.field_ec, (byte) -81);
+          this.menuWidth = this.contentWidth + 2 * itemInset;
+          this.setBounds(this.preferredHeight, -this.preferredHeight + bottomY, x, this.menuWidth, (byte) 64);
+          if (animationAnchorY != this.animationAnchorY) {
+            this.animationAnchorY = animationAnchorY;
+            this.setExpansionTicks(this.remainingExpansionTicks, (byte) -81);
           }
-          var7_int = param0;
-          while (var7_int < this.field_cc) {
-            this.field_Qb[var7_int].setIconLabelBounds(-10411, this.field_Qb[var7_int].localY, param4, param3, 0, this.field_dc, this.field_Xb);
-            var7_int++;
-            if (var9 != 0) {
+          itemIndex = firstItemIndex;
+          while (itemIndex < this.itemCount) {
+            this.items[itemIndex].setIconLabelBounds(-10411, this.items[itemIndex].localY, itemInset, iconLabelGap, 0, this.rowHeight, this.menuWidth);
+            itemIndex++;
+            if (unusedGameFlag != 0) {
               return;
             }
           }
-          if (this.field_Tb != -1 &&
-            this.field_bc[this.field_Tb] != null) {
-            var7_intLifetime1 = this.field_bc[this.field_Tb].field_cc;
-            var8 = this.localY + (var7_intLifetime1 + this.field_Tb) * this.field_dc;
-            while (param2 < var8) {
-              var8 = var8 - this.field_dc;
-              if (var9 != 0) {
+          if (this.selectedItem != -1 &&
+            this.submenus[this.selectedItem] != null) {
+            submenuItemCount = this.submenus[this.selectedItem].itemCount;
+            submenuBottomY = this.localY + (submenuItemCount + this.selectedItem) * this.rowHeight;
+            while (bottomY < submenuBottomY) {
+              submenuBottomY = submenuBottomY - this.rowHeight;
+              if (unusedGameFlag != 0) {
                 return;
               }
             }
-            this.field_bc[this.field_Tb].a(0, this.field_Xb + param1, var8, param3, param4, this.field_Qb[this.field_Tb].screenY);
+            this.submenus[this.selectedItem].layoutMenuChain(0, this.menuWidth + x, submenuBottomY, iconLabelGap, itemInset, this.items[this.selectedItem].screenY);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var7), "og.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var7), "og.C(" + firstItemIndex + ',' + x + ',' + bottomY + ',' + iconLabelGap + ',' + itemInset + ',' + animationAnchorY + ')');
         }
     }
 
@@ -1521,92 +1521,92 @@ final class og extends UiComponent {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2) {
-        int stackIn_5_0 = 0;
-        boolean stackIn_24_0 = false;
-        int stackIn_47_0 = 0;
+    final boolean handleShortcutKey(int messageOpcode, int filterOpcode, byte obfuscationGuard) {
+        int backspaceFlag = 0;
+        boolean submenuHandled = false;
+        int shortcutOrResult = 0;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int backspace = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        var7 = BrickABrac.field_J ? 1 : 0;
+        int shortcutCharacter = 0;
+        int itemIndex = 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_5_0 = (MeshAttributeRecord.currentKeyCode != 85) ? 0 : 1;
-          var4_int = stackIn_5_0;
-          if (this.field_Vb != null) {
-            if (var4_int != 0 &&
-              this.field_Vb.field_Tb == -1) {
-              this.f((byte) 41);
-              this.a(0, (byte) -81);
+          backspaceFlag = (MeshAttributeRecord.currentKeyCode != 85) ? 0 : 1;
+          backspace = backspaceFlag;
+          if (this.openSubmenu != null) {
+            if (backspace != 0 &&
+              this.openSubmenu.selectedItem == -1) {
+              this.resetSelection((byte) 41);
+              this.setExpansionTicks(0, (byte) -81);
               return true;
             }
-            stackIn_24_0 = this.field_Vb.a(param0, param1, (byte) -126);
-            return stackIn_24_0;
+            submenuHandled = this.openSubmenu.handleShortcutKey(messageOpcode, filterOpcode, (byte) -126);
+            return submenuHandled;
           }
-          if (this.field_Vb == null &&
-            hd.field_a == this &&
-            var4_int != 0) {
+          if (this.openSubmenu == null &&
+            hd.quickChatMenu == this &&
+            backspace != 0) {
             rd.a(-1);
             return true;
           }
-          if (param2 != -126) {
-            this.field_Ub = (int[]) null;
+          if (obfuscationGuard != -126) {
+            this.messageIds = (int[]) null;
           }
-          boolean decompiledFrameCompleted0 = true;
-          var5 = go.currentKeyCharacter;
-          if (var5 > 0) {
-            if (~SoundCache.field_h == ~var5) {
-              var5 = 63;
+          boolean finishedShortcutScan = true;
+          shortcutCharacter = go.currentKeyCharacter;
+          if (shortcutCharacter > 0) {
+            if (~SoundCache.field_h == ~shortcutCharacter) {
+              shortcutCharacter = 63;
             }
-            var6 = 0;
-            while (var6 < this.field_fc.length) {
-              stackIn_47_0 = var5;
-              if (var7 != 0) {
-                decompiledFrameCompleted0 = false;
+            itemIndex = 0;
+            while (itemIndex < this.shortcuts.length) {
+              shortcutOrResult = shortcutCharacter;
+              if (unusedGameFlag != 0) {
+                finishedShortcutScan = false;
                 break;
               }
-              if (stackIn_47_0 == this.field_fc[var6]) {
-                this.a(param1, var6, 0, param0);
+              if (shortcutOrResult == this.shortcuts[itemIndex]) {
+                this.activateItem(filterOpcode, itemIndex, 0, messageOpcode);
                 return true;
               }
-              var6++;
+              itemIndex++;
             }
           }
-          if (decompiledFrameCompleted0) {
-            stackIn_47_0 = 0;
+          if (finishedShortcutScan) {
+            shortcutOrResult = 0;
           }
-          return stackIn_47_0 != 0;
+          return shortcutOrResult != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "og.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "og.D(" + messageOpcode + ',' + filterOpcode + ',' + obfuscationGuard + ')');
         }
     }
 
-    final int e(byte param0) {
+    final int getOpenChainWidth(byte obfuscationGuard) {
         RuntimeException var2 = null;
-        int stackIn_6_0 = 0;
-        int stackIn_7_1 = 0;
-        int stackIn_8_0 = 0;
+        int ownWidth = 0;
+        int submenuWidth = 0;
+        int chainWidth = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 > -57) {
-            this.a(-64, -111, 97, -110, -124, 103);
+          if (obfuscationGuard > -57) {
+            this.layoutMenuChain(-64, -111, 97, -110, -124, 103);
           }
-          stackIn_6_0 = this.field_Xb;
-          if (null != this.field_Vb) {
-            stackIn_7_1 = this.field_Vb.e((byte) -117);
+          ownWidth = this.menuWidth;
+          if (null != this.openSubmenu) {
+            submenuWidth = this.openSubmenu.getOpenChainWidth((byte) -117);
           } else {
-            stackIn_7_1 = 0;
+            submenuWidth = 0;
           }
-          stackIn_8_0 = stackIn_6_0 + stackIn_7_1;
-          return stackIn_8_0;
+          chainWidth = ownWidth + submenuWidth;
+          return chainWidth;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "og.G(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "og.G(" + obfuscationGuard + ')');
         }
     }
 

@@ -23,7 +23,7 @@ final class sh {
         MouseInput.field_g.field_f = 5;
         MouseInput.field_g.field_j = 7697781;
         MouseInput.field_g.field_m = 14;
-        MouseInput.field_g.field_l = og.field_Yb;
+        MouseInput.field_g.field_l = QuickChatMenu.field_Yb;
         var1Lifetime1 = 89 / ((param0 - 32) / 44);
         return MouseInput.field_g;
     }

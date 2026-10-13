@@ -97,7 +97,7 @@ final class s {
 
     final static void a(byte param0) {
         String var2 = (String) null;
-        Mesh3D.a(true, (String) null, am.field_cc);
+        Mesh3D.a(true, (String) null, ReportAbuseDialog.field_cc);
         if (param0 == -30) {
           return;
         }

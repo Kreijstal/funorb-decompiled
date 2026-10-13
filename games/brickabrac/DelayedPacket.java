@@ -16,12 +16,12 @@ final class DelayedPacket extends IntrusiveNode {
     final static boolean c(int param0) {
         if (param0 <= 57) {
           field_o = (String) null;
-          if (!og.h(-26090)) {
+          if (!QuickChatMenu.h(-26090)) {
             return 0 >= go.field_c ? true : false;
           }
           return true;
         }
-        if (og.h(-26090)) {
+        if (QuickChatMenu.h(-26090)) {
           return true;
         }
         if (0 < go.field_c) {

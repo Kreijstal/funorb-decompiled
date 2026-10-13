@@ -70,7 +70,7 @@ public final class BrickABrac extends InteractiveGameClient {
         clientBranchFlag = field_J ? 1 : 0;
         vd.a(-127);
         MembershipBenefitsScreen.clientTick = MembershipBenefitsScreen.clientTick + 1;
-        if (!og.h(-26090)) {
+        if (!QuickChatMenu.h(-26090)) {
           while (true) {
             var6 = (LevelResultSubmission) (IntNode.queuedLevelResults.removeFirst(3));
             if (var6 == null) {
@@ -133,7 +133,7 @@ public final class BrickABrac extends InteractiveGameClient {
         nk.field_c = new RgbSprite(640, 480);
         oc.a(lp.field_ub, (byte) 60, CacheIoRequest.field_D);
         this.registerUiLifecycle(3160, new GameUiController());
-        am.a(ch.incomingPacketLengths, 1);
+        ReportAbuseDialog.a(ch.incomingPacketLengths, 1);
     }
 
     final boolean q(int param0) {
@@ -406,7 +406,7 @@ public final class BrickABrac extends InteractiveGameClient {
           repeatMode = packet.readByte(true);
           configuration = new LevelSequence(tq.field_d, var49, repeatMode);
           backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
-          oa.currentBackground = rd.selectBackground(backgroundSelector, (byte) 19);
+          TabbedPane.currentBackground = rd.selectBackground(backgroundSelector, (byte) 19);
           characterOrder = id.createCharacterOrder(matchRandom, false);
           VerticalScrollbar.field_Ub = null;
           if (0 <= localPlayerId) {
@@ -517,7 +517,7 @@ public final class BrickABrac extends InteractiveGameClient {
         if (obfuscationGuard) {
           field_G = (String) null;
         }
-        og.d((byte) 107);
+        QuickChatMenu.d((byte) 107);
     }
 
     public final boolean handleGameKey(int keyCode, char character, int obfuscationGuard) {
@@ -662,7 +662,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ContextMenu.h(21);
         ScrollPaneWithFooter.h(-48);
         nn.a(0);
-        am.k(8421504);
+        ReportAbuseDialog.k(8421504);
         id.h(-56);
         om.d((byte) -32);
         SecondaryHashTable.c((byte) 85);
@@ -687,7 +687,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ga.a(0);
         AlignedIconLabel.d((byte) 21);
         u.a(2);
-        oa.h(47);
+        TabbedPane.h(47);
         NameEntryPopup.d(false);
         sb.a((byte) -102);
         qp.a(false);
@@ -756,7 +756,7 @@ public final class BrickABrac extends InteractiveGameClient {
         LevelPackLoader.b(-30593);
         rm.a(-41);
         uo.a((byte) 66);
-        og.d(true);
+        QuickChatMenu.d(true);
         so.b((byte) -19);
         rg.a(64);
         kn.a((byte) 90);

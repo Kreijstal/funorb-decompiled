@@ -95,7 +95,7 @@ final class ek extends bj implements en {
           var4.field_s = 80;
           var4.field_t = this.field_t;
           var4.field_o = 0;
-          var4.field_l = (ub) ((Object) new um(og.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_l = (ub) ((Object) new um(QuickChatMenu.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, true);
           this.field_ib = this.a(LevelSequence.field_a, 101, (uh) (this));
           return;
@@ -250,7 +250,7 @@ final class ek extends bj implements en {
     }
 
     final static void l(int param0) {
-        ArchiveFetchClient.a(true, am.field_cc, VerticalScrollbar.field_Qb, 2);
+        ArchiveFetchClient.a(true, ReportAbuseDialog.field_cc, VerticalScrollbar.field_Qb, 2);
         ln.field_l = true;
         int var1 = -31 / ((-11 - param0) / 62);
     }

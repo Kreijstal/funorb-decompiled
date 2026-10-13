@@ -106,7 +106,7 @@ abstract class sl extends DualLinkNode {
           Ball.field_A = new UiComponent(0L, (UiComponent) null);
           FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
           GameUiController.field_a = new UiComponent(0L, ik.field_a, pf.field_c);
-          IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           Ball.field_A.addChild(FarmBackground.field_v, 0);
           if (vd.field_e) {
             Ball.field_A.addChild(GameUiController.field_a, 0);
@@ -128,7 +128,7 @@ abstract class sl extends DualLinkNode {
           la.field_b = new UiComponent(0L, cd.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, cd.field_d, r.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, ik.field_a, ByteStorage.field_d);
-          rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           gj.field_b = new UiComponent(0L, fm.field_b, ua.field_e.toUpperCase());
           gj.field_b.enabled = vd.field_e;
           stackIn_6_0 = null;
@@ -171,7 +171,7 @@ abstract class sl extends DualLinkNode {
           qp.field_f = new UiComponent(0L, MenuSelection.field_m);
           qp.field_f.addChild(Brick.field_A, 0);
           qp.field_f.addChild(nh.field_a, 0);
-          t.field_f = new UiComponent(0L, am.field_Qb);
+          t.field_f = new UiComponent(0L, ReportAbuseDialog.field_Qb);
           t.field_f.copyStyle((byte) -83, CappedUrlRequest.field_l);
           t.field_f.verticalAlignment = 1;
           var16 = t.field_f;
@@ -181,7 +181,7 @@ abstract class sl extends DualLinkNode {
           um.field_b.horizontalAlignment = 1;
           BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
           wd.field_E = new UiComponent(0L, ik.field_a, pf.field_c);
-          TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           ji.field_b.addChild(um.field_b, 0);
           ji.field_b.addChild(BoundedFile.field_g, 0);
           if (vd.field_e) {
@@ -200,7 +200,7 @@ abstract class sl extends DualLinkNode {
             MatchCompleteScreen.field_A[0][1 + var17_int] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
-            gb.field_l[1] = new UiComponent(0L, wi.field_n, og.field_ac);
+            gb.field_l[1] = new UiComponent(0L, wi.field_n, QuickChatMenu.field_ac);
             array$0 = new AlignedIconLabel[1 + w.field_n.length];
             MatchCompleteScreen.field_A[1] = array$0;
             MatchCompleteScreen.field_A[1][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);

@@ -40,7 +40,7 @@ final class sk extends h {
           if (param5 != -12665) {
             sk.a(122);
           }
-          og.field_Wb = 3;
+          QuickChatMenu.field_Wb = 3;
           hg.field_e = 51550 + (hi.field_w.nextInt(102) << 16);
           ek.field_kb = 72;
           qm.field_a = 40;

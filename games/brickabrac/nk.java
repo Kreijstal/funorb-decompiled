@@ -35,7 +35,7 @@ final class nk {
           return;
         }
         if (sm.field_b == RasterSnapshot.field_q) {
-          if (!og.h(-26090)) {
+          if (!QuickChatMenu.h(-26090)) {
             if (VerticalScrollbar.field_Ub != null) {
               bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
             }

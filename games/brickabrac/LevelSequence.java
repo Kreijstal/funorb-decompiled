@@ -53,9 +53,9 @@ final class LevelSequence {
           cr.f((byte) -123);
           return true;
         }
-        if (CircleBody.field_p != null &&
-          CircleBody.field_p.d((byte) 119)) {
-          CircleBody.field_p = null;
+        if (CircleBody.reportAbuseDialog != null &&
+          CircleBody.reportAbuseDialog.handleCancelKey((byte) 119)) {
+          CircleBody.reportAbuseDialog = null;
           cr.f((byte) -55);
           return true;
         }

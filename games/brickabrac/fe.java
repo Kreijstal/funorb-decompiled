@@ -10,7 +10,7 @@ abstract class fe extends bj {
     static ResourceArchive field_jb;
     static String field_ib;
     private oc field_eb;
-    static og field_kb;
+    static QuickChatMenu field_kb;
     private int field_db;
     private int field_bb;
     static int field_pb;

@@ -237,7 +237,7 @@ final class nh {
             var17 = (RgbSprite[]) null;
             nh.a((RgbSprite[]) null, -71, 62, -50, 61, (TextFont) null, 97, 90, 79, (RgbSprite[]) null, 117, (RgbSprite[]) null, 81, (byte) 46, -119);
           }
-          oa.a(param3, var15_int, param10, param2, var15_int, param12, param1, param7, param4, param0, param5, param11, param8, param6, var16, false, param14, param9, param5, var16);
+          TabbedPane.a(param3, var15_int, param10, param2, var15_int, param12, param1, param7, param4, param0, param5, param11, param8, param6, var16, false, param14, param9, param5, var16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -659,7 +659,7 @@ final class nh {
                 if (var16 != 0) {
                   dn.field_K.enabled = false;
                   if (dn.field_K.hovered) {
-                    if (sb.field_c.field_d.field_Vb != 0) {
+                    if (sb.field_c.field_d.selectedTab != 0) {
                       ep.field_e = rd.a(ta.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
                       if (var19 != 0) {
                         ep.field_e = ei.field_a;
@@ -694,7 +694,7 @@ final class nh {
             var20 = (RgbSprite[]) null;
             nh.a(-9, -55, 119, -100, (RgbSprite[]) null, -102);
           }
-          sb.field_c.field_d.i(0);
+          sb.field_c.field_d.processTabPresses(0);
           if (null != o.field_e) {
             if (GameUiController.field_e.pressedButton != 0) {
               vg.a(o.field_e.e((byte) 123), false, param3);

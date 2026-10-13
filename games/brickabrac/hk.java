@@ -90,7 +90,7 @@ final class hk extends ib implements hf, en {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = cd.field_e;
-          wd.field_w = new UiComponent(0L, (UiComponent) null);
+          wd.quickChatMenuRoot = new UiComponent(0L, (UiComponent) null);
           if (param2 == null) {
             AlignedIconLabel.a("QC1", (Throwable) null, param1 ^ 118);
             return;
@@ -122,7 +122,7 @@ final class hk extends ib implements hf, en {
           }
           Rasterizer2D.bind(var14, var5, var6);
           fe.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, cp.field_K);
-          wd.field_w.children = new NodeDeque();
+          wd.quickChatMenuRoot.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -304,7 +304,7 @@ final class hk extends ib implements hf, en {
           var1 = nn.field_g.measureText(ag.buttonLabels[20]);
           var2 = nn.field_g.measureText(ag.buttonLabels[21]);
           dg.field_d = (var2 >= var1 ? var2 : var1) + 4;
-          og.field_Zb = og.field_Zb + (dg.field_d + 120);
+          QuickChatMenu.field_Zb = QuickChatMenu.field_Zb + (dg.field_d + 120);
           return;
         }
     }
@@ -366,7 +366,7 @@ final class hk extends ib implements hf, en {
               this.field_O = new d(bd.field_a, (uh) (this));
             }
           } else {
-            this.field_U = new d(oa.field_Tb, (uh) null);
+            this.field_U = new d(TabbedPane.field_Tb, (uh) null);
             this.field_M = new d(wc.field_a, (uh) null);
             this.field_P.field_J = false;
           }

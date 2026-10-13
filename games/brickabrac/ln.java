@@ -76,7 +76,7 @@ final class ln extends IntrusiveNode {
           }
           UiComponent.field_lb = param2;
           SoundPlayback.soundCache = param1;
-          og.field_gc = param0;
+          QuickChatMenu.field_gc = param0;
           ji.field_a = param6;
           for (var7_int = 0; var7_int < 2; var7_int++) {
             JungleBackground.field_s.addLast(new RasterCacheSurface(960, 480), (byte) 3);

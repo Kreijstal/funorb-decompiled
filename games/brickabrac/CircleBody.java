@@ -7,7 +7,7 @@ class CircleBody extends MovingBody {
     static String field_s;
     static RgbSprite[][] field_t;
     int radius256;
-    static am field_p;
+    static ReportAbuseDialog reportAbuseDialog;
 
     CircleBody(int x256, int y256, int velocityX256, int velocityY256, int radius256, int typeId) {
         super(x256, y256, velocityX256, velocityY256, typeId);
@@ -19,7 +19,7 @@ class CircleBody extends MovingBody {
         field_t = (RgbSprite[][]) null;
         int var1 = -78 % ((-14 - param0) / 61);
         field_q = null;
-        field_p = null;
+        reportAbuseDialog = null;
     }
 
     int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
@@ -31,7 +31,7 @@ class CircleBody extends MovingBody {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 79) {
-            field_p = (am) null;
+            reportAbuseDialog = (ReportAbuseDialog) null;
           }
           stackIn_3_0 = this.radius256 + 1365 << 6 ^ super.computeSyncChecksum(89, diagnostics);
           return stackIn_3_0;

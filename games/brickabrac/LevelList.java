@@ -97,7 +97,7 @@ final class LevelList {
         ag.buttonLabels[26] = PauseMenuScreen.field_u;
         ag.buttonLabels[22] = d.field_D;
         sl.field_A[13] = TimedSplashScreen.field_s;
-        hm.field_b = new String[]{mi.field_a, qm.field_c, oa.field_Pb, s.field_a};
+        hm.field_b = new String[]{mi.field_a, qm.field_c, TabbedPane.field_Pb, s.field_a};
         sl.field_A[16] = MeshAttributeRecord.field_d;
         qn.packNames = new String[]{vh.field_T, oc.field_u};
         eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};

@@ -241,9 +241,9 @@ final class hc {
           var14 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_active", 2), (byte) -110);
           rf.field_c = new UiComponent(0L, var8);
           rf.field_c.frameSprites = var14;
-          am.field_Zb = new UiComponent(0L, (UiComponent) null);
-          am.field_Zb.sprite = pl.loadRgbSpriteByName("lobby", "closebutton", (byte) -90, param3);
-          am.field_Zb.activeSprite = pl.loadRgbSpriteByName("lobby", "closebutton_mouseover", (byte) 119, param3);
+          ReportAbuseDialog.field_Zb = new UiComponent(0L, (UiComponent) null);
+          ReportAbuseDialog.field_Zb.sprite = pl.loadRgbSpriteByName("lobby", "closebutton", (byte) -90, param3);
+          ReportAbuseDialog.field_Zb.activeSprite = pl.loadRgbSpriteByName("lobby", "closebutton_mouseover", (byte) 119, param3);
           PowerUpWarning.field_k = new UiComponent(0L, var8);
           PowerUpWarning.field_k.frameSprites = TimedSplashScreen.a(true, (byte) 57, 3815994, 40, 2039583, true);
           MainMenuScreen.field_t = new UiComponent(0L, var10);
@@ -383,7 +383,7 @@ final class hc {
           MessageScreen.field_s.capturedSprite = pl.loadRgbSpriteByName("lobby", "downbutton_mouseheld", (byte) 97, param3);
           MessageScreen.field_s.disabledSprite = pl.loadRgbSpriteByName("lobby", "downbutton_disabled", (byte) 104, param3);
           ic.field_c = new VerticalScrollbar(0L, ChocolateBackground.field_u, MessageScreen.field_s, QuickChatHelpDialog.field_Vb, RankingsScreen.field_s);
-          rq.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, am.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
+          rq.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, ReportAbuseDialog.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -39,7 +39,7 @@ abstract class ArchiveSource {
           ik.field_g = MusicEnvelope.field_f;
           tf.field_i = param6;
           VerticalScrollbar.field_Qb = param1;
-          am.field_cc = param2;
+          ReportAbuseDialog.field_cc = param2;
           StateIconLabel.field_Rb = null;
           Paddle.field_x = param3;
           return true;

@@ -664,7 +664,7 @@ final class JungleBackground extends BackgroundScene {
                     var22 = null;
                     var23 = 0;
                     if (MusicVoiceMixer.field_s) {
-                      var22 = "</col>" + og.field_ac + "<col=A00000>";
+                      var22 = "</col>" + QuickChatMenu.field_ac + "<col=A00000>";
                       var25Lifetime1 = var22;
                       var22 = var25Lifetime1;
                       var25Lifetime1Lifetime1 = var22;

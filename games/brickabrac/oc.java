@@ -864,7 +864,7 @@ class oc extends IntrusiveNode {
         return false;
     }
 
-    final static void a(int param0, int param1, long param2, int param3, boolean param4, String param5) {
+    final static void writeAbuseReport(int reasonId, int opcode, long reportTargetId, int obfuscationGuard, boolean muteRequested, String playerName) {
         int var7_int = 0;
         BitPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
@@ -875,22 +875,22 @@ class oc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          k.outgoingPackets.writeCipheredOpcode(-13413, param1);
+          k.outgoingPackets.writeCipheredOpcode(-13413, opcode);
           k.outgoingPackets.position = k.outgoingPackets.position + 1;
           var7_int = k.outgoingPackets.position;
-          k.outgoingPackets.writeLong(-23054, param2);
-          k.outgoingPackets.writeCp1252String(param5, param3 - 2);
-          k.outgoingPackets.writeByte(31, param0);
+          k.outgoingPackets.writeLong(-23054, reportTargetId);
+          k.outgoingPackets.writeCp1252String(playerName, obfuscationGuard - 2);
+          k.outgoingPackets.writeByte(31, reasonId);
           stackIn_2_0 = k.outgoingPackets;
           stackIn_2_1 = -105;
-          if (!param4) {
+          if (!muteRequested) {
             stackIn_3_2 = 0;
           } else {
             stackIn_3_2 = 1;
           }
           ((BitPacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_2_1, stackIn_3_2);
           k.outgoingPackets.backfillByteLength((byte) 114, -var7_int + k.outgoingPackets.position);
-          if (param3 != 1) {
+          if (obfuscationGuard != 1) {
             field_k = (BufferedFile) null;
           }
           return;
@@ -898,8 +898,8 @@ class oc extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("oc.VA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_8_1 = new StringBuilder().append("oc.VA(").append(reasonId).append(',').append(opcode).append(',').append(reportTargetId).append(',').append(obfuscationGuard).append(',').append(muteRequested).append(',');
+          if (playerName == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

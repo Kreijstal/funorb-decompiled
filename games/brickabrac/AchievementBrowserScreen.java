@@ -123,7 +123,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
         } else {
           nn.field_g.drawLeft(ProducerFramebuffer.field_h, 209, 246 + nn.field_g.capHeight, 2, -1);
-          if (og.h(-26090)) {
+          if (QuickChatMenu.h(-26090)) {
             var6 = 246 + var5 * 3;
             ob.field_D.drawLeft(na.field_N, 209, var6, 2, -1);
           }

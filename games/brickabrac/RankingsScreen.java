@@ -80,7 +80,7 @@ final class RankingsScreen extends MenuScreen {
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         super.advanceScreen(updateFlag, inputEnabled, -94);
-        if (og.h(-26090)) {
+        if (QuickChatMenu.h(-26090)) {
           return;
         }
         if (obfuscationGuard >= -52) {
@@ -222,7 +222,7 @@ final class RankingsScreen extends MenuScreen {
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -62, 45);
         AchievementMaskRequest.a(this.screenId, 19);
         this.a(0);
-        if (og.h(-26090)) {
+        if (QuickChatMenu.h(-26090)) {
           bo.a((byte) 97, na.field_N);
           return;
         }

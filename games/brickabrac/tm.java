@@ -121,9 +121,9 @@ final class tm {
         int var6Lifetime1;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (oa.field_Ub != 0) {
+          if (TabbedPane.field_Ub != 0) {
             var2_long = MonotonicTime.nowMillis(false);
-            var4 = oa.field_Ub;
+            var4 = TabbedPane.field_Ub;
             if (HuffmanCodec.field_b != 0.0) {
               var4 = (int)((double)var4 + ji.packetDelayRandom.nextGaussian() * HuffmanCodec.field_b);
               if (0 > var4) {

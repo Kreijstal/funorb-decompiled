@@ -34,12 +34,12 @@ final class BlankScreen extends GameScreen {
         field_j = null;
     }
 
-    final static void a(int param0, og param1) {
+    final static void a(int param0, QuickChatMenu param1) {
         try {
           if (param0 != -2) {
             BlankScreen.d((byte) 104);
           }
-          wd.field_w.addChild(param1, 0);
+          wd.quickChatMenuRoot.addChild(param1, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

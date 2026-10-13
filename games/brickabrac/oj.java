@@ -275,23 +275,23 @@ final class oj extends ep {
         int var12_intLifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (oa.currentBackground != null) {
-            stackIn_4_0 = oa.currentBackground.a((byte) -89, param2);
+          if (TabbedPane.currentBackground != null) {
+            stackIn_4_0 = TabbedPane.currentBackground.a((byte) -89, param2);
           } else {
             stackIn_4_0 = null;
           }
           var14 = stackIn_4_0;
           var7 = var14;
-          if (oa.currentBackground != null) {
-            stackIn_7_0 = oa.currentBackground.a(param2, true);
+          if (TabbedPane.currentBackground != null) {
+            stackIn_7_0 = TabbedPane.currentBackground.a(param2, true);
           } else {
             stackIn_7_0 = null;
           }
           var8 = stackIn_7_0;
-          if (oa.currentBackground == null) {
+          if (TabbedPane.currentBackground == null) {
             stackIn_10_0 = null;
           } else {
-            stackIn_10_0 = oa.currentBackground.a(true, param2);
+            stackIn_10_0 = TabbedPane.currentBackground.a(true, param2);
           }
           var9 = stackIn_10_0;
           if (param4 < 54) {

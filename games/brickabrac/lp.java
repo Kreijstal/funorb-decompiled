@@ -137,12 +137,12 @@ class lp extends fe implements en {
           var4 = var6;
           if (param0 != 5) {
             if (param0 == 256) {
-              var6.a((byte) -78, oa.field_Tb, (uh) (this));
+              var6.a((byte) -78, TabbedPane.field_Tb, (uh) (this));
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = false;
               if (this.field_vb) {
-                stackIn_15_2 = oa.field_Tb;
+                stackIn_15_2 = TabbedPane.field_Tb;
               } else {
                 stackIn_15_2 = HalloweenBackground.field_s;
               }

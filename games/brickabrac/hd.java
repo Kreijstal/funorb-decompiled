@@ -4,7 +4,7 @@
 final class hd {
     static GameScreen pendingScreen;
     static UiComponent field_c;
-    static og field_a;
+    static QuickChatMenu quickChatMenu;
     static String field_b;
 
     final static RgbSprite a(int param0, int param1, byte param2) {
@@ -49,7 +49,7 @@ final class hd {
         if (param0 != 12) {
           return;
         }
-        field_a = null;
+        quickChatMenu = null;
         field_c = null;
         field_b = null;
         pendingScreen = null;

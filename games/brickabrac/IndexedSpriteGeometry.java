@@ -37,7 +37,7 @@ abstract class IndexedSpriteGeometry {
           return (String) null;
         }
         if (ik.field_g == MusicEnvelope.field_f) {
-          return am.field_cc;
+          return ReportAbuseDialog.field_cc;
         }
         if (!ma.field_I.b(96)) {
           return ma.field_I.a(0);

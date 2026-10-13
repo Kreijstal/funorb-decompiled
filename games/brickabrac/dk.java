@@ -624,7 +624,7 @@ final class dk extends ib implements ha, en, vf {
         var3 = var3 + (this.a(170, InstructionsScreen.field_x, cp.field_G, -3, this.field_L, var3) + 5);
         var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.field_J, var3) + 5);
         var3 = var3 + this.a(this.field_S, HuffmanCodec.field_d, 170, 111, var3);
-        ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, og.field_Yb, 11579568, LevelCompleteScreen.field_z);
+        ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
         this.a(var4, true);
         var3 = var3 + var4.field_s;
         um var5 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);

@@ -26,11 +26,11 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         RgbSprite var9 = null;
         RgbSprite var10 = null;
         try {
-          if (oa.currentBackground == null) {
+          if (TabbedPane.currentBackground == null) {
             return;
           }
           var3_int = 256 * MenuScreen.field_i / 32;
-          var4 = oa.currentBackground.c((byte) -123);
+          var4 = TabbedPane.currentBackground.c((byte) -123);
           if (var4 != null) {
             if (MenuScreen.field_i == 0) {
               var4.drawTransparent(-var4.canvasWidth + 640, 470 - var4.canvasHeight);
@@ -50,7 +50,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
             var5.drawTransparent(-3 + (640 - (var4.canvasWidth + var5.canvasWidth) / 2), -var4.canvasHeight + 480 - 10 + 45);
           }
           var6 = QuickChatHelpDialog.a(param1, 0, 100, param2);
-          var7 = oa.currentBackground.b(param0 ^ -746);
+          var7 = TabbedPane.currentBackground.b(param0 ^ -746);
           if (var7 != null) {
             var9 = var7[var6];
             var9.drawTransparent(-20 + (-var9.canvasWidth + 640), 520 - var9.canvasHeight);

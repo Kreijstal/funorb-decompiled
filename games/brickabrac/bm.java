@@ -359,10 +359,10 @@ final class bm {
                   sound = UiComponent.field_ob[ChocolateBackground.field_w.nextBoundedInt(-37880252, UiComponent.field_ob.length)];
                 }
               } else {
-                if (oa.currentBackground != null) {
-                  sceneSounds = oa.currentBackground.pollSoundEffects(0);
-                  if (0 < oa.currentBackground.loadedSoundCount) {
-                    sound = sceneSounds[ChocolateBackground.field_w.nextBoundedInt(-37880252, oa.currentBackground.loadedSoundCount)];
+                if (TabbedPane.currentBackground != null) {
+                  sceneSounds = TabbedPane.currentBackground.pollSoundEffects(0);
+                  if (0 < TabbedPane.currentBackground.loadedSoundCount) {
+                    sound = sceneSounds[ChocolateBackground.field_w.nextBoundedInt(-37880252, TabbedPane.currentBackground.loadedSoundCount)];
                   }
                 }
               }

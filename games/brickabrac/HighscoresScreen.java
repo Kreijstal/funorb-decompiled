@@ -655,7 +655,7 @@ final class HighscoresScreen extends MenuScreen {
         super.drawScreen((byte) -38);
         AchievementMaskRequest.a(this.screenId, 19);
         this.a(0);
-        if (og.h(-26090)) {
+        if (QuickChatMenu.h(-26090)) {
           GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);
           VerticalScrollbar.a(243, na.field_N, 140, nn.field_g, -15531, 2);
           return;
@@ -722,7 +722,7 @@ final class HighscoresScreen extends MenuScreen {
         if (obfuscationGuard >= -52) {
           return;
         }
-        if (og.h(-26090)) {
+        if (QuickChatMenu.h(-26090)) {
           return;
         }
         if (rf.field_g == null) {

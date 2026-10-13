@@ -12,7 +12,7 @@ final class wd extends DualLinkNode {
     static String field_D;
     static String field_x;
     static int field_z;
-    static UiComponent field_w;
+    static UiComponent quickChatMenuRoot;
     static ResourceArchive field_C;
 
     final void g(int param0) {
@@ -34,7 +34,7 @@ final class wd extends DualLinkNode {
         soundPlaybacks = null;
         field_C = null;
         field_D = null;
-        field_w = null;
+        quickChatMenuRoot = null;
         if (param0 != 32463) {
           wd.f(-119);
         }

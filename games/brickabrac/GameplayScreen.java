@@ -165,7 +165,7 @@ final class GameplayScreen extends GameScreen {
           ep.resultCounterTwo = ep.resultCounterTwo - (var4 + this.progressBaseLevel);
           var5 = this.match.playerBoards[0].levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var5;
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (var4 + this.progressBaseLevel);
           ep.resultCounterTwo = ep.resultCounterTwo - var5;
         }
@@ -219,10 +219,10 @@ final class GameplayScreen extends GameScreen {
         if (!this.snapshotsReady) {
           return;
         }
-        if (null != oa.currentBackground) {
-          oa.currentBackground.ensureSprites(1);
-          if (!oa.currentBackground.musicReady) {
-            oa.currentBackground.pollMusicPreparation(59);
+        if (null != TabbedPane.currentBackground) {
+          TabbedPane.currentBackground.ensureSprites(1);
+          if (!TabbedPane.currentBackground.musicReady) {
+            TabbedPane.currentBackground.pollMusicPreparation(59);
           }
           if (MenuScreen.field_i > 0) {
             fieldTemp$0 = MenuScreen.field_i - 1;
@@ -261,9 +261,9 @@ final class GameplayScreen extends GameScreen {
             if (var4Lifetime1 != 0) {
               ji.a(25459, true, MessageScreen.field_t, 1, 1, true);
             } else {
-              if (oa.currentBackground != null &&
-                oa.currentBackground.musicReady) {
-                wj.a(1, true, oa.currentBackground.c(-109), false, 1, oa.currentBackground.musicData, true);
+              if (TabbedPane.currentBackground != null &&
+                TabbedPane.currentBackground.musicReady) {
+                wj.a(1, true, TabbedPane.currentBackground.c(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
                 ji.a(25459, true, cd.field_g, 1, 1, true);
               }
@@ -308,35 +308,35 @@ final class GameplayScreen extends GameScreen {
         var6 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 3);
         if (var5 == 0) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + og.field_Wb;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + QuickChatMenu.field_Wb;
         }
         if (var5 == 1) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
-          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - 2 * og.field_Wb;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - 2 * QuickChatMenu.field_Wb;
         }
         if (var5 == 2) {
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + 2 * DelegatingCanvas.field_c;
-          og.field_Wb = og.field_Wb + 2;
+          QuickChatMenu.field_Wb = QuickChatMenu.field_Wb + 2;
         }
         if (var5 == 3) {
-          og.field_Wb = og.field_Wb - 1;
+          QuickChatMenu.field_Wb = QuickChatMenu.field_Wb - 1;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - DelegatingCanvas.field_c;
         }
         if (var5 == 4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
         }
         if (var5 == 5) {
-          ep.resultCounterTwo = ep.resultCounterTwo - og.field_Wb * 2;
+          ep.resultCounterTwo = ep.resultCounterTwo - QuickChatMenu.field_Wb * 2;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
         }
         if (6 == var5) {
-          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var5 == 7) {
           ep.resultCounterTwo = ep.resultCounterTwo - DelegatingCanvas.field_c * 2;
-          og.field_Wb = og.field_Wb - 2;
+          QuickChatMenu.field_Wb = QuickChatMenu.field_Wb - 2;
         }
         if (var5 == 8) {
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var6;
@@ -440,7 +440,7 @@ final class GameplayScreen extends GameScreen {
             if ((this.field_i > 1 ||
               this.match.configuration.pack.packId == 1) &&
               (LevelPackCard.hasFeatureBit(0, -119) &&
-              oa.currentBackground instanceof HalloweenBackground)) {
+              TabbedPane.currentBackground instanceof HalloweenBackground)) {
               this.queueProgressAchievement(false, 239, 16);
             }
             if (this.field_i < this.match.configuration.getPeriod(95)) {
@@ -450,11 +450,11 @@ final class GameplayScreen extends GameScreen {
           if (var20.field_tb) {
             var9_int = (33423360 - 2 * (var20.paddle.x256 + var20.paddle.width256 / 2 << 8)) / 510;
             nk.field_c.bindRasterTarget();
-            oa.currentBackground.drawFullBackground(true, var9_int, 0, 0, 0);
+            TabbedPane.currentBackground.drawFullBackground(true, var9_int, 0, 0, 0);
             BallPulseEffect.framebuffer.bindRaster((byte) 78);
-            ArchiveFetchClient.field_k = oa.currentBackground.c((byte) -116);
-            fq.field_c = oa.currentBackground.b(-102);
-            oa.currentBackground = rd.selectBackground(var20.levelState.value, (byte) 19);
+            ArchiveFetchClient.field_k = TabbedPane.currentBackground.c((byte) -116);
+            fq.field_c = TabbedPane.currentBackground.b(-102);
+            TabbedPane.currentBackground = rd.selectBackground(var20.levelState.value, (byte) 19);
             MenuScreen.field_i = 32;
             var20.field_tb = false;
             IntArrayRequest.lastBackgroundId = var20.levelState.value;
@@ -591,8 +591,8 @@ final class GameplayScreen extends GameScreen {
         }
         if (null == VerticalScrollbar.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
-          VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.field_r});
-          if (!og.h(-26090)) {
+          VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.field_r});
+          if (!QuickChatMenu.h(-26090)) {
             bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
           }
         }
@@ -639,7 +639,7 @@ final class GameplayScreen extends GameScreen {
         if (param1 != 69) {
           return;
         }
-        if (og.h(-26090)) {
+        if (QuickChatMenu.h(-26090)) {
           if (!ib.a(pl.pendingAchievementMask, -1) &&
             VerticalScrollbar.field_Ub == null) {
             ng.requestScreen(param0, 121, 0);
@@ -775,38 +775,38 @@ final class GameplayScreen extends GameScreen {
         var4 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 10);
         var5 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 5);
         if (var4 == 0) {
-          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + og.field_Wb;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + QuickChatMenu.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var4 == 1) {
-          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - og.field_Wb * 2;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - QuickChatMenu.field_Wb * 2;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
         }
         if (var4 == 2) {
-          og.field_Wb = og.field_Wb + 2;
+          QuickChatMenu.field_Wb = QuickChatMenu.field_Wb + 2;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + DelegatingCanvas.field_c * 2;
         }
         if (var4 == 3) {
-          og.field_Wb = og.field_Wb - 1;
+          QuickChatMenu.field_Wb = QuickChatMenu.field_Wb - 1;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - DelegatingCanvas.field_c;
         }
         if (4 == var4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
         }
         if (var4 == 5) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
-          ep.resultCounterTwo = ep.resultCounterTwo - 2 * og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo - 2 * QuickChatMenu.field_Wb;
         }
         if (obfuscationGuard <= 98) {
           return false;
         }
         if (6 == var4) {
-          ep.resultCounterTwo = ep.resultCounterTwo + og.field_Wb;
+          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var4 == 7) {
-          og.field_Wb = og.field_Wb - 2;
+          QuickChatMenu.field_Wb = QuickChatMenu.field_Wb - 2;
           ep.resultCounterTwo = ep.resultCounterTwo - DelegatingCanvas.field_c * 2;
         }
         if (8 == var4) {
@@ -976,7 +976,7 @@ final class GameplayScreen extends GameScreen {
               var5Lifetime2Lifetime1 += 10;
             }
             if (var5Lifetime2Lifetime1 <= 11) {
-              oa.currentBackground = rd.selectBackground(var5Lifetime2Lifetime1, (byte) 19);
+              TabbedPane.currentBackground = rd.selectBackground(var5Lifetime2Lifetime1, (byte) 19);
               return true;
             }
           }
@@ -1034,7 +1034,7 @@ final class GameplayScreen extends GameScreen {
     private final void a(int param0, int param1, long param2, boolean param3, int param4) {
         int var7 = 0;
         if (!this.suppressResultSubmission) {
-          if (og.h(-26090)) {
+          if (QuickChatMenu.h(-26090)) {
             return;
           }
           param1 = param1 + param0 * 1000;
@@ -1067,7 +1067,7 @@ final class GameplayScreen extends GameScreen {
           var5 = this.match.playerBoards[0].levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (this.progressBaseLevel + var4);
           ep.resultCounterTwo = ep.resultCounterTwo + (-this.progressBaseLevel + var5);
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (-this.progressBaseLevel + var5);
           ep.resultCounterTwo = ep.resultCounterTwo + (this.progressBaseLevel + var4);
         }
@@ -1097,7 +1097,7 @@ final class GameplayScreen extends GameScreen {
         String[] var3 = new String[]{tb.field_cb == null ? we.field_c : tb.field_cb, DelayedPacket.field_q};
         LevelSequence var4 = new LevelSequence(qh.field_b, kk.createIndexOrder(false, qh.field_b.levelCount, hi.field_w), 3);
         r.field_A = false;
-        oa.currentBackground = rd.selectBackground(0, (byte) 19);
+        TabbedPane.currentBackground = rd.selectBackground(0, (byte) 19);
         sk.a(var3, 0, var4, 2, param1, -12665);
     }
 
@@ -1198,7 +1198,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             ep.resultCounterTwo = ep.resultCounterTwo - this.progressBaseLevel;
           }
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb), (byte) 3);
+          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           if (achievementId != 7) {
             ep.resultCounterTwo = ep.resultCounterTwo + this.progressBaseLevel;
           } else {
@@ -1462,7 +1462,7 @@ final class GameplayScreen extends GameScreen {
             this.networkedMatch = true;
           }
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (resultIncrement + this.progressBaseLevel);
-          var5 = new LevelResultSubmission(pack.packId, -1 + levelNumber, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb);
+          var5 = new LevelResultSubmission(pack.packId, -1 + levelNumber, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb);
           IntNode.queuedLevelResults.addLast(var5, (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (pack.scoreOffset + levelNumber);
           ep.resultCounterTwo = ep.resultCounterTwo + (resultIncrement + this.progressBaseLevel);
@@ -1619,13 +1619,13 @@ final class GameplayScreen extends GameScreen {
         var3 = var15;
         var5 = NodeDequeCursor.field_h[-1 + this.match.playerCount];
         var6 = this.viewedPlayerId;
-        if (null != oa.currentBackground) {
+        if (null != TabbedPane.currentBackground) {
           for (var7 = 0; var7 < this.match.playerCount; var7++) {
             var13 = this.match.playerBoards[var6].paddle;
             if (1 == this.match.playerCount) {
               var9 = (-((var13.x256 + var13.width256 / 2 << 8) * 2) + 33423360) / 510;
-              oa.currentBackground.drawFullBackground(true, var9, 0, 0, 0);
-              if (oa.currentBackground.sceneId == 7 ||
+              TabbedPane.currentBackground.drawFullBackground(true, var9, 0, 0, 0);
+              if (TabbedPane.currentBackground.sceneId == 7 ||
                 this.match.playerBoards[var6].boardState == 5) {
                 gh.a(121, true);
               }
@@ -1642,24 +1642,24 @@ final class GameplayScreen extends GameScreen {
               var14 = var2;
               var15 = var3;
               MovingBody.a((byte) 124, 153 + var14[var7], var14[var7], var15[var7], 233 + var15[var7]);
-              oa.currentBackground.drawPreview((byte) -102, var6, var14[var7], var15[var7]);
+              TabbedPane.currentBackground.drawPreview((byte) -102, var6, var14[var7], var15[var7]);
               sc.popRaster(-79);
             } else {
               MovingBody.a((byte) 76, 306 + var14[var7], var14[var7], var15[var7], var15[var7] + 480);
               var9Lifetime3 = (-(2 * (var13.x256 + var13.width256 / 2 << 8)) + 20054016) / 306;
-              oa.currentBackground.drawSplitBackground(var15[var7], (byte) -107, var14[var7], var6, var9Lifetime3 / 2);
+              TabbedPane.currentBackground.drawSplitBackground(var15[var7], (byte) -107, var14[var7], var6, var9Lifetime3 / 2);
               sc.popRaster(-122);
             }
             var6++;
             var6 = var6 % this.match.playerCount;
           }
         }
-        if (oa.currentBackground != null) {
+        if (TabbedPane.currentBackground != null) {
           var14 = var2;
           var15 = var3;
           if (this.match.playerCount > 2) {
             for (var7Lifetime1 = this.match.playerCount; var7Lifetime1 < 5; var7Lifetime1++) {
-              oa.currentBackground.drawPreview((byte) -79, -1, var14[var7Lifetime1], var15[var7Lifetime1]);
+              TabbedPane.currentBackground.drawPreview((byte) -79, -1, var14[var7Lifetime1], var15[var7Lifetime1]);
               Rasterizer2D.fillRectangleAlpha(var14[var7Lifetime1], var15[var7Lifetime1], 153, 233, 0, 160);
             }
           }

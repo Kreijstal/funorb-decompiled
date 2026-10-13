@@ -458,7 +458,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_options_players", (byte) -107);
                 if (var2 != null) {
-                  og.field_ac = MenuButton.a(var2, (byte) 75);
+                  QuickChatMenu.field_ac = MenuButton.a(var2, (byte) 75);
                 }
                 var2 = nk.a("mu_options_dontmind", (byte) 19);
                 if (null != var2) {
@@ -1280,7 +1280,7 @@ final class nn {
                 }
                 var2 = nk.a("retry", (byte) -124);
                 if (var2 != null) {
-                  oa.field_Tb = MenuButton.a(var2, (byte) 123);
+                  TabbedPane.field_Tb = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = nk.a("back", (byte) -114);
                 if (var2 != null) {
@@ -2514,7 +2514,7 @@ final class nn {
                 }
                 var2 = nk.a("mp_rematchnewgame_unrated", (byte) -116);
                 if (null != var2) {
-                  oa.field_Pb = MenuButton.a(var2, (byte) 117);
+                  TabbedPane.field_Pb = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = nk.a("mp_x_wantstodraw", (byte) -106);
                 if (var2 != null) {
@@ -3508,7 +3508,7 @@ final class nn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 17) {
-            CircleBody.field_p = new am(this.field_j.screenX, this.field_j.screenY, this.field_j.width, this.field_j.height, param2, MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
+            CircleBody.reportAbuseDialog = new ReportAbuseDialog(this.field_j.screenX, this.field_j.screenY, this.field_j.width, this.field_j.height, param2, MenuSelection.field_m, rf.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
             return true;
           }
           if (param0 < 121) {

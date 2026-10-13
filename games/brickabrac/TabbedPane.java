@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends UiComponent {
+final class TabbedPane extends UiComponent {
     static long[][] field_Wb;
-    private UiComponent field_Yb;
+    private UiComponent body;
     static long[] field_Xb;
-    int field_Vb;
-    private UiComponent[] field_Rb;
-    private UiComponent[] field_Qb;
+    int selectedTab;
+    private UiComponent[] tabButtons;
+    private UiComponent[] panels;
     static String field_Pb;
     static int field_Ub;
     static BackgroundScene currentBackground;
@@ -43,9 +43,9 @@ final class oa extends UiComponent {
         try {
           if (param14 != 22287) {
             var16 = (TextFont) null;
-            oa.a(56, 101, -86, 51, -89, 7, -10, 119, -103, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -32, 111, 0, true, -111, (RgbSprite[]) null, (TextFont) null, 2);
+            TabbedPane.a(56, 101, -86, 51, -89, 7, -10, 119, -103, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -32, 111, 0, true, -111, (RgbSprite[]) null, (TextFont) null, 2);
           }
-          og.a(args, (IndexedSprite[]) null, param13, param6, param4, param10, param14 - 22286, param1, param12, param9, param5, param3, param7, param2, (int[]) null, param11, param8);
+          QuickChatMenu.a(args, (IndexedSprite[]) null, param13, param6, param4, param10, param14 - 22286, param1, param12, param9, param5, param3, param7, param2, (int[]) null, param11, param8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -121,48 +121,48 @@ final class oa extends UiComponent {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
-        UiComponent dupTemp$0 = null;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        var7 = BrickABrac.field_J ? 1 : 0;
-        for (var4 = 0; this.field_Rb.length > var4; var4++) {
-          var5 = var4 * this.width / this.field_Rb.length;
-          var6 = this.width * (1 + var4) / this.field_Rb.length;
-          this.field_Rb[var4].localX = var5;
-          this.field_Rb[var4].localY = 0;
-          this.field_Rb[var4].width = var6 - var5;
-          this.field_Rb[var4].height = param0;
+    private final void layoutTabs(int tabHeight, int panelInset, int obfuscationGuard) {
+        UiComponent inactivePanel = null;
+        int tabIndex;
+        int tabLeft;
+        int tabRight;
+        int unusedGameFlag;
+        int panelIndex;
+        int guardDivision;
+        int unusedPanelIndex;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        for (tabIndex = 0; this.tabButtons.length > tabIndex; tabIndex++) {
+          tabLeft = tabIndex * this.width / this.tabButtons.length;
+          tabRight = this.width * (1 + tabIndex) / this.tabButtons.length;
+          this.tabButtons[tabIndex].localX = tabLeft;
+          this.tabButtons[tabIndex].localY = 0;
+          this.tabButtons[tabIndex].width = tabRight - tabLeft;
+          this.tabButtons[tabIndex].height = tabHeight;
         }
-        this.field_Yb.setBounds(-param0 + this.height, param0, 0, this.width, (byte) 64);
-        var4Lifetime1 = 65 / ((param2 + 35) / 58);
-        var8 = 0;
-        var5Lifetime1 = var8;
-        while (this.field_Qb.length > var8) {
-          this.field_Qb[var8].setBounds(this.field_Yb.height - param1 * 2, param1, param1, this.field_Yb.width - param1 * 2, (byte) 64);
-          if (this.field_Vb != var8) {
-            dupTemp$0 = this.field_Qb[var8];
-            dupTemp$0.localX = dupTemp$0.localX + 10000;
+        this.body.setBounds(-tabHeight + this.height, tabHeight, 0, this.width, (byte) 64);
+        guardDivision = 65 / ((obfuscationGuard + 35) / 58);
+        panelIndex = 0;
+        unusedPanelIndex = panelIndex;
+        while (this.panels.length > panelIndex) {
+          this.panels[panelIndex].setBounds(this.body.height - panelInset * 2, panelInset, panelInset, this.body.width - panelInset * 2, (byte) 64);
+          if (this.selectedTab != panelIndex) {
+            inactivePanel = this.panels[panelIndex];
+            inactivePanel.localX = inactivePanel.localX + 10000;
           }
-          var8++;
+          panelIndex++;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.width = param2;
-        this.localY = param5;
-        this.localX = param1;
-        if (param6 < 44) {
+    final void setTabbedPaneBounds(int panelInset, int x, int width, int tabHeight, int height, int y, int obfuscationGuard) {
+        this.width = width;
+        this.localY = y;
+        this.localX = x;
+        if (obfuscationGuard < 44) {
           TextFont var9 = (TextFont) null;
-          oa.a(23, 14, 2, 105, -34, -65, 67, 44, -119, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -66, -50, -90, false, 92, (RgbSprite[]) null, (TextFont) null, -101);
+          TabbedPane.a(23, 14, 2, 105, -34, -65, 67, 44, -119, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -66, -50, -90, false, 92, (RgbSprite[]) null, (TextFont) null, -101);
         }
-        this.height = param4;
-        this.a(param3, param0, -117);
+        this.height = height;
+        this.layoutTabs(tabHeight, panelInset, -117);
     }
 
     public static void h(int param0) {
@@ -174,28 +174,28 @@ final class oa extends UiComponent {
         field_Wb = (long[][]) null;
     }
 
-    final void i(int param0) {
-        int var2 = 0;
-        UiComponent dupTemp$0 = null;
-        UiComponent dupTemp$1 = null;
-        int var3;
-        var3 = BrickABrac.field_J ? 1 : 0;
-        for (var2 = param0; var2 < this.field_Rb.length; var2++) {
-          if (var2 != this.field_Vb &&
-            this.field_Rb[var2].pressedButton != 0) {
-            this.field_Rb[this.field_Vb].selected = false;
-            dupTemp$0 = this.field_Qb[this.field_Vb];
-            dupTemp$0.localX = dupTemp$0.localX + 10000;
-            this.field_Vb = var2;
-            this.field_Rb[var2].selected = true;
-            dupTemp$1 = this.field_Qb[var2];
-            dupTemp$1.localX = dupTemp$1.localX - 10000;
+    final void processTabPresses(int firstTabIndex) {
+        int tabIndex = 0;
+        UiComponent previousPanel = null;
+        UiComponent selectedPanel = null;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        for (tabIndex = firstTabIndex; tabIndex < this.tabButtons.length; tabIndex++) {
+          if (tabIndex != this.selectedTab &&
+            this.tabButtons[tabIndex].pressedButton != 0) {
+            this.tabButtons[this.selectedTab].selected = false;
+            previousPanel = this.panels[this.selectedTab];
+            previousPanel.localX = previousPanel.localX + 10000;
+            this.selectedTab = tabIndex;
+            this.tabButtons[tabIndex].selected = true;
+            selectedPanel = this.panels[tabIndex];
+            selectedPanel.localX = selectedPanel.localX - 10000;
           }
         }
     }
 
-    oa(long param0, UiComponent param1, String[] param2, UiComponent param3, UiComponent[] param4, int param5) {
-        super(param0, (UiComponent) null);
+    TabbedPane(long id, UiComponent tabStyle, String[] labels, UiComponent bodyStyle, UiComponent[] panels, int initialTab) {
+        super(id, (UiComponent) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -206,60 +206,60 @@ final class oa extends UiComponent {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
+        int tabIndex = 0;
         RuntimeException var8 = null;
-        UiComponent var9 = null;
-        int var11 = 0;
-        int var8_intLifetime1;
+        UiComponent tab = null;
+        int panelIndex = 0;
+        int unusedPanelIndex;
         try {
-          this.field_Rb = new UiComponent[param2.length];
-          this.field_Yb = new UiComponent(0L, param3);
-          this.field_Qb = param4;
-          for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new UiComponent(0L, param1);
-            var9.text = param2[var8_int];
-            this.field_Rb[var8_int] = var9;
-            this.addChild(var9, 0);
+          this.tabButtons = new UiComponent[labels.length];
+          this.body = new UiComponent(0L, bodyStyle);
+          this.panels = panels;
+          for (tabIndex = 0; tabIndex < labels.length; tabIndex++) {
+            tab = new UiComponent(0L, tabStyle);
+            tab.text = labels[tabIndex];
+            this.tabButtons[tabIndex] = tab;
+            this.addChild(tab, 0);
           }
-          this.addChild(this.field_Yb, 0);
-          var11 = 0;
-          var8_intLifetime1 = var11;
-          while (param4.length > var11) {
-            this.field_Yb.addChild(param4[var11], 0);
-            var11++;
+          this.addChild(this.body, 0);
+          panelIndex = 0;
+          unusedPanelIndex = panelIndex;
+          while (panels.length > panelIndex) {
+            this.body.addChild(panels[panelIndex], 0);
+            panelIndex++;
           }
-          this.field_Vb = param5;
-          this.field_Rb[param5].selected = true;
+          this.selectedTab = initialTab;
+          this.tabButtons[initialTab].selected = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_11_0 = var8;
-          stackIn_11_1 = new StringBuilder().append("oa.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("oa.<init>(").append(id).append(',');
+          if (tabStyle == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param2 == null) {
+          if (labels == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param3 == null) {
+          if (bodyStyle == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
           stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-          if (param4 == null) {
+          if (panels == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(initialTab).append(')').toString());
         }
     }
 

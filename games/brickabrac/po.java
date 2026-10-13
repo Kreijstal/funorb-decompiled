@@ -15,7 +15,7 @@ final class po {
         if (!param0) {
           return;
         }
-        sq.quickChatHelpDialog = new QuickChatHelpDialog(MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
+        sq.quickChatHelpDialog = new QuickChatHelpDialog(MenuSelection.field_m, rf.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
     }
 
     public static void b(int param0) {
@@ -145,7 +145,7 @@ final class po {
         try {
           var4 = IntArrayRequest.gameplayScreen.match;
           var5 = var4;
-          ec.field_Q = oa.currentBackground;
+          ec.field_Q = TabbedPane.currentBackground;
           SpaceBackground.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
           TableDataRequest.field_k = IntArrayRequest.gameplayScreen.c(124);
           cb.field_n = IntArrayRequest.gameplayScreen.field_n;

@@ -39,7 +39,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        if (og.h(-26090)) {
+        if (QuickChatMenu.h(-26090)) {
           return;
         }
         BitPacketBuffer var4 = k.outgoingPackets;
@@ -59,10 +59,10 @@ final class SaveResultsPromptScreen extends MenuScreen {
         var4.backfillByteLength((byte) 121, -var5 + var4.position);
     }
 
-    final static og a(int[] param0, UiComponent param1, UiComponent param2, UiComponent param3, byte param4) {
+    final static QuickChatMenu a(int[] param0, UiComponent param1, UiComponent param2, UiComponent param3, byte param4) {
         int var10_int = 0;
         Object stackIn_9_0 = null;
-        og stackIn_11_0 = null;
+        QuickChatMenu stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -77,7 +77,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         RuntimeException var5 = null;
         String[] var6 = null;
         char[] var7 = null;
-        og[] var8 = null;
+        QuickChatMenu[] var8 = null;
         int var9 = 0;
         Exception var10 = null;
         wd var11 = null;
@@ -96,7 +96,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
           var15 = new char[var5_int];
           var14 = var15;
           var7 = var14;
-          var8 = new og[var5_int];
+          var8 = new QuickChatMenu[var5_int];
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
@@ -110,9 +110,9 @@ final class SaveResultsPromptScreen extends MenuScreen {
             decompiledCaughtException = decompiledCaughtParameter0;
             var10 = (Exception) (Object) decompiledCaughtException;
             stackIn_9_0 = null;
-            return (og) (stackIn_9_0);
+            return (QuickChatMenu) (stackIn_9_0);
           }
-          stackIn_11_0 = new og(0L, param1, param2, param3, var8, param0, var6, var15);
+          stackIn_11_0 = new QuickChatMenu(0L, param1, param2, param3, var8, param0, var6, var15);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

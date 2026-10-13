@@ -22,7 +22,7 @@ final class eq {
           gameTransport = (BufferedSocket) null;
         }
         SecondaryNodeQueue.d(125);
-        CircleBody.field_p = null;
+        CircleBody.reportAbuseDialog = null;
         rd.a(param0 - 8);
     }
 
@@ -124,7 +124,7 @@ final class eq {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_l[var3Lifetime1] = qf.a(this.field_l[var3Lifetime1], oa.field_Wb[var4][ik.a((int)(this.field_f[ik.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_l[var3Lifetime1] = qf.a(this.field_l[var3Lifetime1], TabbedPane.field_Wb[var4][ik.a((int)(this.field_f[ik.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -132,14 +132,14 @@ final class eq {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_f[var3Lifetime1Lifetime1] = this.field_l[var3Lifetime1Lifetime1];
           }
-          this.field_f[0] = qf.a(this.field_f[0], oa.field_Xb[var2Lifetime2]);
+          this.field_f[0] = qf.a(this.field_f[0], TabbedPane.field_Xb[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_l[var3Lifetime1Lifetime2] = this.field_f[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_l[var3Lifetime1Lifetime2] = qf.a(this.field_l[var3Lifetime1Lifetime2], oa.field_Wb[var7][ik.a(255, (int)(this.field_k[ik.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_l[var3Lifetime1Lifetime2] = qf.a(this.field_l[var3Lifetime1Lifetime2], TabbedPane.field_Wb[var7][ik.a(255, (int)(this.field_k[ik.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }

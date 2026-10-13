@@ -18,7 +18,7 @@ final class cp extends h {
           cp.a(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
         }
         if (0 >= go.field_c) {
-          var2 = (og.h(-26090)) ? 0 : 1;
+          var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
         } else {
           if (null == jj.field_a) {
             ua.field_d = ff.a(0, 0, 640, 480, true, lp.field_ub);

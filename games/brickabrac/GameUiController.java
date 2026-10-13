@@ -43,7 +43,7 @@ final class GameUiController implements GameUiLifecycle {
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.a(20, -97, 20, var2);
-        oa.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
+        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
@@ -143,7 +143,7 @@ final class GameUiController implements GameUiLifecycle {
 
     public final void prepareUiAssets(boolean obfuscationGuard) {
         if (null != GameplayAudioEvent.field_k) {
-          og.a(!obfuscationGuard ? true : false, GameplayAudioEvent.field_k);
+          QuickChatMenu.a(!obfuscationGuard ? true : false, GameplayAudioEvent.field_k);
           GameplayAudioEvent.field_k = null;
           hc.b(2);
         }

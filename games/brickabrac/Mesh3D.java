@@ -164,7 +164,7 @@ final class Mesh3D {
               if ((1 << IntArrayRequest.gameplayScreen.localPlayerId | IntArrayRequest.gameplayScreen.field_v) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
                 ag.buttonLabels[12] = s.field_a;
               } else {
-                ag.buttonLabels[12] = oa.field_Pb;
+                ag.buttonLabels[12] = TabbedPane.field_Pb;
               }
             }
           }

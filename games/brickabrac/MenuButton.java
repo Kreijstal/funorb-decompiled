@@ -95,7 +95,7 @@ final class MenuButton {
               var5 = nn.field_g.measureText(var4);
               if (20 == this.actionId ||
                 this.actionId == 21) {
-                var5 = og.field_Zb;
+                var5 = QuickChatMenu.field_Zb;
               }
               var6 = -var5 + (this.width + 2 * this.x) >> 1;
               if (!this.marked) {

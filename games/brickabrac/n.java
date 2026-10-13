@@ -283,7 +283,7 @@ final class n {
                 if (dn.field_K.hovered) {
                   var9 = null;
                   if (MusicVoiceMixer.field_s) {
-                    var9 = "<col=A00000>" + og.field_ac + "</col>";
+                    var9 = "<col=A00000>" + QuickChatMenu.field_ac + "</col>";
                     var11 = var9;
                     var9 = var11;
                     var11Lifetime1 = var9;
@@ -315,7 +315,7 @@ final class n {
           stackIn_83_0 = wi.field_j;
           stackIn_84_1 = (param1) && (!param2) && (hc.field_c);
           ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
-          sb.field_c.field_d.i(0);
+          sb.field_c.field_d.processTabPresses(0);
           if (nl.field_f != null) {
             if (GameUiController.field_e.pressedButton != 0) {
               ef.a(-22809, param0);

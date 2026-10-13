@@ -298,7 +298,7 @@ final class FarmBackground extends BackgroundScene {
 
     final static void g(int param0) {
         if (10 == AchievementIcon.field_j ||
-          !am.i(0)) {
+          !ReportAbuseDialog.i(0)) {
           ec.h(6846);
           AchievementIcon.field_j = 11;
         }
