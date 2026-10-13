@@ -136,7 +136,7 @@ final class ui {
           ui.a(false);
         }
         oj.field_r = null;
-        eo.field_g = null;
+        DirectByteStorage.field_g = null;
     }
 
     final static void a(int param0, java.applet.Applet param1, String param2) {

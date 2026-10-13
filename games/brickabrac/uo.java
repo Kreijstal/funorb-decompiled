@@ -9,7 +9,7 @@ final class uo {
     static RgbSprite[] field_c;
     static String field_a;
 
-    final static IndexedSprite loadIndexedSpriteByName(byte obfuscationGuard, mf archive, String fileName, String groupName) {
+    final static IndexedSprite loadIndexedSpriteByName(byte obfuscationGuard, ResourceArchive archive, String fileName, String groupName) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -23,11 +23,11 @@ final class uo {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = archive.a(groupName, false);
+          var4_int = archive.getGroupId(groupName, false);
           if (obfuscationGuard != 29) {
             field_a = (String) null;
           }
-          var5 = archive.a(var4_int, -86, fileName);
+          var5 = archive.getFileId(var4_int, -86, fileName);
           stackIn_3_0 = lq.loadIndexedSprite(0, var4_int, var5, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

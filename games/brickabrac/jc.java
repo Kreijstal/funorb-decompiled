@@ -242,7 +242,7 @@ abstract class jc extends ib {
                   jl.field_a = 25;
                   ga.field_i = 2;
                 }
-                im.b(-8);
+                GzipInflater.b(-8);
                 return;
               }
               if (ga.field_i != 1 &&
@@ -252,7 +252,7 @@ abstract class jc extends ib {
               if (0 == (param0 & 4)) {
                 return;
               }
-              im.b(-8);
+              GzipInflater.b(-8);
               return;
             }
             if ((4 & param0) == 0) {
@@ -318,7 +318,7 @@ abstract class jc extends ib {
               ga.field_i = 9;
               pp.field_a = -1;
               jl.field_a = 250;
-              tb.field_eb = rd.a(tl.field_c, new String[]{ui.field_b}, (byte) 103);
+              tb.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }
@@ -341,7 +341,7 @@ abstract class jc extends ib {
                 ga.field_i = 9;
                 jl.field_a = 250;
                 pp.field_a = -1;
-                tb.field_eb = rd.a(tl.field_c, new String[]{ui.field_b}, (byte) 103);
+                tb.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
                 wc.field_b = true;
                 return;
               }

@@ -21,8 +21,8 @@ final class lq {
             param0.unlinkSecondary(3);
           }
           if (param1) {
-            mf var4 = (mf) null;
-            lq.loadIndexedSprite(-17, 78, 86, (mf) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            lq.loadIndexedSprite(-17, 78, 86, (ResourceArchive) null);
           }
           param0.secondaryNext = this.field_g;
           param0.secondaryPrevious = this.field_g.secondaryPrevious;
@@ -117,7 +117,7 @@ final class lq {
         field_c = null;
     }
 
-    final static void a(mf param0, mf param1, byte param2, mf param3, mf param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           kc.field_j = param1;
           ta.field_g = param3;
@@ -132,7 +132,7 @@ final class lq {
         }
     }
 
-    final static IndexedSprite loadIndexedSprite(int obfuscationGuard, int groupId, int fileId, mf archive) {
+    final static IndexedSprite loadIndexedSprite(int obfuscationGuard, int groupId, int fileId, ResourceArchive archive) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         IndexedSprite stackIn_6_0 = null;

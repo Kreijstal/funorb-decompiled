@@ -57,14 +57,14 @@ final class vj {
           if (null == m.field_f) {
             return;
           }
-          var5 = eo.field_f;
+          var5 = DirectByteStorage.field_f;
           synchronized (var5) {
             m.field_f.e(param1, -1, 16);
             if (param3 == IsaacGenerator.field_a) {
               return;
             }
             m.field_f.f(-24774);
-            eo.field_f.b();
+            DirectByteStorage.field_f.b();
             IsaacGenerator.field_a = param3;
             if (null != IsaacGenerator.field_a) {
               m.field_f.a(IsaacGenerator.field_a, 127, param0);

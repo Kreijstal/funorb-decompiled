@@ -3,7 +3,7 @@
  */
 final class uf {
     static int field_c;
-    static mf field_a;
+    static ResourceArchive field_a;
     static boolean[] field_d;
     static int field_b;
     static RgbSprite field_e;

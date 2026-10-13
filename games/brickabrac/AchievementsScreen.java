@@ -57,7 +57,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
 
     final boolean isAchievementExcluded(int achievementId, byte obfuscationGuard) {
         boolean stackIn_13_0 = false;
-        if (eo.isBitSet(this.achievementMask, achievementId, (byte) -75)) {
+        if (DirectByteStorage.isBitSet(this.achievementMask, achievementId, (byte) -75)) {
           return false;
         }
         if (obfuscationGuard != 38) {

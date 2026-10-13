@@ -18,15 +18,15 @@ final class eg extends IntrusiveNode {
         cq.a(param0, (byte) -125);
         if (param1 < 10) {
           byte[] var3 = (byte[]) null;
-          eg.a(38, (byte[]) null, true);
+          eg.storeArchiveBytes(38, (byte[]) null, true);
         }
     }
 
-    final static Object a(int param0, byte[] param1, boolean param2) {
-        eo var3 = null;
+    final static Object storeArchiveBytes(int obfuscationGuard, byte[] data, boolean copy) {
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
-        eo stackIn_6_0 = null;
+        DirectByteStorage stackIn_6_0 = null;
         Object stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
         byte[] stackIn_14_0 = null;
@@ -35,37 +35,37 @@ final class eg extends IntrusiveNode {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == null) {
+          if (data == null) {
             stackIn_2_0 = null;
             return stackIn_2_0;
           }
-          if (param1.length > 136) {
-            var3 = new eo();
-            ((tl) ((Object) var3)).a(67, param1);
+          if (data.length > 136) {
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).store(67, data);
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }
-          if (param0 >= -103) {
+          if (obfuscationGuard >= -103) {
             stackIn_9_0 = (Object) null;
             return stackIn_9_0;
           }
-          if (!param2) {
-            stackIn_14_0 = (byte[]) (param1);
+          if (!copy) {
+            stackIn_14_0 = (byte[]) (data);
             return stackIn_14_0;
           }
-          stackIn_12_0 = ke.a(false, param1);
+          stackIn_12_0 = ke.copyBytes(false, data);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_17_0 = var3_ref;
-          stackIn_17_1 = new StringBuilder().append("eg.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("eg.C(").append(obfuscationGuard).append(',');
+          if (data == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(copy).append(')').toString());
         }
     }
 

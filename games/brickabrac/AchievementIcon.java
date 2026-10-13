@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AchievementIcon extends IntrusiveNode {
-    static mf field_s;
+    static ResourceArchive field_s;
     int x;
     AchievementBrowserScreen owner;
     private RgbSprite cachedThumbnail;
@@ -11,7 +11,7 @@ final class AchievementIcon extends IntrusiveNode {
     int remainingOffset;
     static String field_l;
     int transitionKeepMask;
-    static mf field_m;
+    static ResourceArchive field_m;
     int achievementId;
     static String field_o;
     private boolean thumbnailIsPlaceholder;
@@ -32,11 +32,11 @@ final class AchievementIcon extends IntrusiveNode {
             ob.field_D.drawRight(1 + param8 + ". ", qo.field_N + 54, param1, param5, -1);
           }
           ob.field_D.drawLeft(param2, 54 + qo.field_N, param1, param5, -1);
-          ob.field_D.drawRight(Integer.toString(param4), mf.field_d[0], param1, param5, -1);
-          ob.field_D.drawRight(var9_int < 50 ? Integer.toString(var9_int) : "50+", mf.field_d[1], param1, param5, -1);
-          ob.field_D.drawRight(param3 + "%", mf.field_d[2], param1, param5, param6);
-          ob.field_D.drawRight(param0 + "%", mf.field_d[3], param1, param5, -1);
-          ob.field_D.drawRight(param7 + "%", mf.field_d[4], param1, param5, -1);
+          ob.field_D.drawRight(Integer.toString(param4), ResourceArchive.field_d[0], param1, param5, -1);
+          ob.field_D.drawRight(var9_int < 50 ? Integer.toString(var9_int) : "50+", ResourceArchive.field_d[1], param1, param5, -1);
+          ob.field_D.drawRight(param3 + "%", ResourceArchive.field_d[2], param1, param5, param6);
+          ob.field_D.drawRight(param0 + "%", ResourceArchive.field_d[3], param1, param5, -1);
+          ob.field_D.drawRight(param7 + "%", ResourceArchive.field_d[4], param1, param5, -1);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "i.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -57,7 +57,7 @@ final class AchievementIcon extends IntrusiveNode {
         field_q = null;
     }
 
-    final static byte[] a(boolean param0, byte[] param1) {
+    final static byte[] decompressArchiveContainer(boolean obfuscationGuard, byte[] data) {
         byte[] stackIn_9_0 = null;
         byte[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
@@ -77,14 +77,14 @@ final class AchievementIcon extends IntrusiveNode {
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             field_l = (String) null;
           }
-          var9 = new PacketBuffer(param1);
+          var9 = new PacketBuffer(data);
           var3 = var9.readUnsignedByte(255);
           var4 = var9.readInt(255);
-          if (0 <= var4 && (bq.field_d == 0 ||
-            !(var4 > bq.field_d))) {
+          if (0 <= var4 && (bq.maxArchiveContainerBytes == 0 ||
+            !(var4 > bq.maxArchiveContainerBytes))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
@@ -94,17 +94,17 @@ final class AchievementIcon extends IntrusiveNode {
               return stackIn_9_0;
             }
             var5 = var9.readInt(255);
-            if (var5 >= 0 && (bq.field_d == 0 ||
-              !(var5 > bq.field_d))) {
+            if (var5 >= 0 && (bq.maxArchiveContainerBytes == 0 ||
+              !(var5 > bq.maxArchiveContainerBytes))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
               if (var3 == 1) {
-                tc.a(var13, var5, param1, var4, 9);
+                tc.a(var13, var5, data, var4, 9);
               } else {
-                var7 = DualLinkIterator.field_d;
+                var7 = DualLinkIterator.archiveGzipInflater;
                 synchronized (var7) {
-                  DualLinkIterator.field_d.a(var13, -20555, var9);
+                  DualLinkIterator.archiveGzipInflater.inflateGzip(var13, -20555, var9);
                 }
               }
               stackIn_23_0 = var6;
@@ -117,8 +117,8 @@ final class AchievementIcon extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_26_0 = var2;
-          stackIn_26_1 = new StringBuilder().append("i.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_26_1 = new StringBuilder().append("i.E(").append(obfuscationGuard).append(',');
+          if (data == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
@@ -276,7 +276,7 @@ final class AchievementIcon extends IntrusiveNode {
         IndexedSprite var12;
         IndexedSprite var13;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (eo.isBitSet(this.owner.achievementMask, this.achievementId, (byte) -75)) {
+        if (DirectByteStorage.isBitSet(this.owner.achievementMask, this.achievementId, (byte) -75)) {
           if (this.achievementId == nf.selectedAchievementId) {
             pa.field_h[this.achievementId].f(this.x, this.y, 384);
             if (this.cachedThumbnail == null ||

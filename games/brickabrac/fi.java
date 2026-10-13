@@ -162,7 +162,7 @@ final class fi extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (AchievementIcon.field_m.a("arctic", -28138)) {
+        if (AchievementIcon.field_m.ensureGroupAvailableByName("arctic", -28138)) {
           s.field_d = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
           kc.field_r = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
           hk.field_I = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);

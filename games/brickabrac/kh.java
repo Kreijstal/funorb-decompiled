@@ -8,7 +8,7 @@ final class kh {
     static int field_a;
     static RgbSprite[][] field_d;
     static int[][] field_c;
-    static mf field_i;
+    static ResourceArchive field_i;
     static int[][] field_h;
     static RgbSprite field_b;
 
@@ -22,7 +22,7 @@ final class kh {
           field_c = (int[][]) null;
           return;
         }
-        field_i = (mf) null;
+        field_i = (ResourceArchive) null;
         field_c = (int[][]) null;
     }
 

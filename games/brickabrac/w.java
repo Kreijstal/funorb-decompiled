@@ -233,8 +233,8 @@ final class w {
             IndexedSpriteGeometry.pushSpriteRaster(param0 ^ -388, var5);
             Rasterizer2D.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
             Rasterizer2D.fillVerticalGradient(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
-            var6 = tl.field_a;
-            var7 = ko.field_q;
+            var6 = ByteStorage.field_a;
+            var7 = ArchiveIndex.field_q;
             this.a(co.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
             this.a(co.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
             this.a(co.field_j, -co.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
@@ -287,14 +287,14 @@ final class w {
           }
           this.a(true);
           if (jg.field_d != null &&
-            jg.field_d.a((byte) -127) &&
-            jg.field_d.a("members_expansion_screen", -28138) &&
-            jg.field_d.a("arialish12", -28138) &&
-            jg.field_d.a("pump32", -28138) &&
+            jg.field_d.ensureIndex((byte) -127) &&
+            jg.field_d.ensureGroupAvailableByName("members_expansion_screen", -28138) &&
+            jg.field_d.ensureGroupAvailableByName("arialish12", -28138) &&
+            jg.field_d.ensureGroupAvailableByName("pump32", -28138) &&
             fe.field_jb != null &&
-            fe.field_jb.a((byte) -127) &&
-            fe.field_jb.a("arialish12", -28138) &&
-            fe.field_jb.a("pump32", -28138)) {
+            fe.field_jb.ensureIndex((byte) -127) &&
+            fe.field_jb.ensureGroupAvailableByName("arialish12", -28138) &&
+            fe.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
             AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, jg.field_d, "frame", "members_expansion_screen");
             ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, jg.field_d);
             ch.field_c = TooltipSprite.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");

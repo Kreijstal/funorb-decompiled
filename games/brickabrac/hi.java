@@ -139,7 +139,7 @@ final class hi extends um {
                     var5 = 1;
                   }
                   if (tm.a(var5, (byte) 18) == 2) {
-                    eo.a(0, param2, 1, var5);
+                    DirectByteStorage.a(0, param2, 1, var5);
                   }
                   c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_String);
                 }
@@ -246,7 +246,7 @@ final class hi extends um {
                       var5Lifetime1 = 1;
                     }
                     if (tm.a(var5Lifetime1, (byte) 18) == 2) {
-                      eo.a(0, param2, 1, var5Lifetime1);
+                      DirectByteStorage.a(0, param2, 1, var5Lifetime1);
                     }
                     c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime1);
                     fl.b(true);
@@ -354,7 +354,7 @@ final class hi extends um {
                   var5Lifetime2 = 1;
                 }
                 if (tm.a(var5Lifetime2, (byte) 18) == 2) {
-                  eo.a(0, param2, 1, var5Lifetime2);
+                  DirectByteStorage.a(0, param2, 1, var5Lifetime2);
                 }
                 c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime2);
               }

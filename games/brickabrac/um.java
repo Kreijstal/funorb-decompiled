@@ -145,7 +145,7 @@ class um implements ub, qe {
                 var19.field_k[var6] = -5;
               }
             }
-            mf.field_i.addLast(var19, (byte) 3);
+            ResourceArchive.field_i.addLast(var19, (byte) 3);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -216,7 +216,7 @@ class um implements ub, qe {
 
     public final int a(int param0, oc param1) {
         RuntimeException var3 = null;
-        mf var4 = null;
+        ResourceArchive var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -224,8 +224,8 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 61823) {
-            var4 = (mf) null;
-            um.a((String) null, (String) null, -49, (mf) null);
+            var4 = (ResourceArchive) null;
+            um.a((String) null, (String) null, -49, (ResourceArchive) null);
           }
           stackIn_3_0 = -this.field_d + (param1.field_t - this.field_i);
           return stackIn_3_0;
@@ -507,7 +507,7 @@ class um implements ub, qe {
         }
     }
 
-    final static RgbSprite a(String param0, String param1, int param2, mf param3) {
+    final static RgbSprite a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -521,11 +521,11 @@ class um implements ub, qe {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.a(param0, false);
+          var4_int = param3.getGroupId(param0, false);
           if (param2 != 1593955777) {
             field_p = (RgbSprite) null;
           }
-          var5 = param3.a(var4_int, param2 - 1593955846, param1);
+          var5 = param3.getFileId(var4_int, param2 - 1593955846, param1);
           stackIn_3_0 = ml.a(param3, var4_int, var5, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1273,7 +1273,7 @@ class um implements ub, qe {
                   stackIn_158_0 = be.field_n;
                 }
               } else {
-                stackIn_158_0 = bc.field_d;
+                stackIn_158_0 = ArchiveSource.field_d;
               }
               ep.field_e = stackIn_158_0;
             }

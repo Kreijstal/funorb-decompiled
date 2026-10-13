@@ -159,7 +159,7 @@ final class ik implements Iterator {
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = (bg) (mf.field_i.first(-78));
+          var5 = (bg) (ResourceArchive.field_i.first(-78));
           var1 = var5;
           if (var1 == null) {
             return false;

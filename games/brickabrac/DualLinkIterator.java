@@ -6,7 +6,7 @@ import java.util.*;
 final class DualLinkIterator implements Iterator {
     private DualLinkNode nextNode;
     static int field_b;
-    static im field_d;
+    static GzipInflater archiveGzipInflater;
     private DualLinkDeque owner;
     static String field_i;
     private DualLinkNode lastReturned;
@@ -17,7 +17,7 @@ final class DualLinkIterator implements Iterator {
     public static void a(byte param0) {
         field_i = null;
         field_c = null;
-        field_d = null;
+        archiveGzipInflater = null;
         if (param0 < 55) {
           return;
         }
@@ -55,7 +55,7 @@ final class DualLinkIterator implements Iterator {
         return this.owner.sentinel != this.nextNode;
     }
 
-    final static RgbSprite[] loadRgbSprites(int fileId, int obfuscationGuard, int groupId, mf archive) {
+    final static RgbSprite[] loadRgbSprites(int fileId, int obfuscationGuard, int groupId, ResourceArchive archive) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         RgbSprite[] stackIn_6_0 = null;
@@ -100,7 +100,7 @@ final class DualLinkIterator implements Iterator {
 
     static {
         field_i = "Name";
-        field_d = new im();
+        archiveGzipInflater = new GzipInflater();
         field_c = new qh();
     }
 }

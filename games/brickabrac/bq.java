@@ -4,7 +4,7 @@
 final class bq {
     static String field_a;
     static ck field_b;
-    static int field_d;
+    static int maxArchiveContainerBytes;
     static RgbSprite[] field_c;
     static String field_f;
     static RgbSprite[][] field_e;
@@ -20,7 +20,7 @@ final class bq {
         }
     }
 
-    final static mf a(int param0, int param1, boolean param2, int param3, boolean param4) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param0 != -6) {
           field_c = (RgbSprite[]) null;
         }
@@ -157,7 +157,7 @@ final class bq {
               if (ih.field_p != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, eo.field_h);
+              var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, DirectByteStorage.field_h);
               var4 = 3 + var3_int;
               BrickABrac.field_K = new int[var4];
               qh.field_i = new String[var4];
@@ -344,6 +344,6 @@ final class bq {
     static {
         field_a = "Open";
         field_f = "Crumbs!";
-        field_d = 0;
+        maxArchiveContainerBytes = 0;
     }
 }

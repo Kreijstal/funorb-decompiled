@@ -31,8 +31,8 @@ final class hc {
           if (0 < var2_int) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = eo.a(false, param1) ? 1 : 0;
-          var4 = eo.a(false, param1) ? 1 : 0;
+          var3 = DirectByteStorage.a(false, param1) ? 1 : 0;
+          var4 = DirectByteStorage.a(false, param1) ? 1 : 0;
           var5 = new fr();
           var5.field_w = (short)param1.readBits(16, (byte) -114);
           var5.field_B = LevelList.a((byte) -67, var5.field_B, param1, 16);
@@ -59,10 +59,10 @@ final class hc {
             var5.field_j = LevelList.a((byte) -104, var5.field_j, param1, 16);
             var5.field_J = LevelList.a((byte) -124, var5.field_J, param1, 16);
           }
-          if (eo.a(false, param1)) {
+          if (DirectByteStorage.a(false, param1)) {
             var5.field_L = LevelList.a((byte) -65, var5.field_L, param1, 16);
           }
-          if (eo.a(false, param1)) {
+          if (DirectByteStorage.a(false, param1)) {
             var5.field_p = ri.a(var5.field_p, 16, param1, 20);
             var6 = 0;
             for (var7 = 0; var5.field_p.length > var7; var7++) {
@@ -124,7 +124,7 @@ final class hc {
         }
     }
 
-    final static void a(byte param0, IndexedSprite[] param1, int[] param2, mf param3, mf param4) {
+    final static void a(byte param0, IndexedSprite[] param1, int[] param2, ResourceArchive param3, ResourceArchive param4) {
         RgbSprite[] dupTemp$0 = null;
         RgbSprite[] dupTemp$1 = null;
         RgbSprite[] dupTemp$2 = null;
@@ -318,7 +318,7 @@ final class hc {
           ok.field_d = new mh(0L, MessageScreen.field_r);
           MotionWaypoint.field_s = new mh(0L, MessageScreen.field_r);
           MatchCompleteScreen.field_x = new mh(0L, fm.field_b);
-          im.field_d = new mh(0L, MessageScreen.field_r);
+          GzipInflater.field_d = new mh(0L, MessageScreen.field_r);
           OptionsScreen.field_u = new mh(0L, MessageScreen.field_r);
           al.field_n = new mh(0L, MessageScreen.field_r);
           MessageScreen.field_r.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton", 2), (byte) -119);
@@ -350,11 +350,11 @@ final class hc {
           al.field_n.field_pb = dupTemp$1;
           al.field_n.field_D = dupTemp$1;
           al.field_n.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
-          im.field_d.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
-          im.field_d.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
+          GzipInflater.field_d.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
+          GzipInflater.field_d.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
           dupTemp$2 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_active", 2), (byte) -125);
-          im.field_d.field_pb = dupTemp$2;
-          im.field_d.field_D = dupTemp$2;
+          GzipInflater.field_d.field_pb = dupTemp$2;
+          GzipInflater.field_d.field_D = dupTemp$2;
           OptionsScreen.field_u.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton", 2), (byte) -119);
           OptionsScreen.field_u.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_mouseover", 2), (byte) -106);
           dupTemp$3 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_active", 2), (byte) -105);

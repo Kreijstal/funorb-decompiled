@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 88 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 95 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -36,6 +36,8 @@ This pass reviews 88 class identities across 420 compiled classes. Other names r
 | [IndexedSpriteGeometry](IndexedSpriteGeometry.java) / [IndexedSprite](IndexedSprite.java) | Palette image crop/canvas geometry, unsigned indices, draw modes and quarter-size averaging. |
 | [TextFont](TextFont.java) / [PaletteFont](PaletteFont.java) / [AlphaFont](AlphaFont.java) | Text metrics/layout and palette versus alpha-coverage glyph rendering. |
 | [RasterSnapshot](RasterSnapshot.java) / [RasterCacheSurface](RasterCacheSurface.java) / [ClientException](ClientException.java) | Nested raster state, cache surfaces and client exception context. |
+| [ResourceArchive](ResourceArchive.java) / [ArchiveSource](ArchiveSource.java) / [ArchiveIndex](ArchiveIndex.java) / [IntKeyIndex](IntKeyIndex.java) | Indexed resource access, provider, sparse archive metadata and integer name-hash lookup. |
+| [ByteStorage](ByteStorage.java) / [DirectByteStorage](DirectByteStorage.java) / [GzipInflater](GzipInflater.java) | Archive byte storage and fixed-header gzip decoding. |
 
 | Registered menu ID | Screen |
 | --- | --- |
@@ -75,6 +77,8 @@ Audio fixtures mix synthetic children and real PCM streams in memory. They cover
 
 Indexed sprite fixtures cover clipping/crop placement, unsigned indices, transparent/opaque/alpha modes, quarter averages and RGB expansion. Font fixtures construct controlled real glyph/metric data, check tags/entities, wrapping, inline images, alignment and clipped palette/coverage glyph output. They preserve signed packed-blend high bytes, AlphaFont caller-array mutation and negative-index failures, and ellipsis truncation’s extra dropped character/short-budget bounds failure. Extended contour/kerning metrics, shadow glyphs, justification, paragraph layout, thumbnail regeneration and complete rendered menus remain unverified.
 
-Raster fixtures cover nested pixel/dimension/clip restoration, pooled reference release/reuse, empty-stack rejection and cache keys. Synthetic sprite assets cover row/column layout and optional alpha, palette black-to1 correction, RGB/ARGB choice, indexed sharing and single-RGB alpha omission. Materializers clear six index/palette/geometry arrays but retain alpha planes/flags and scalar metadata. Exception fixtures preserve separate stored throwable/context, standard null message/cause and wrapper reuse. Archive retrieval, malformed asset recovery, thumbnail regeneration and complete image-backed menus remain unverified.
+Raster fixtures cover nested pixel/dimension/clip restoration, pooled reference release/reuse, empty-stack rejection and cache keys. Synthetic sprite assets cover row/column layout and optional alpha, palette black-to1 correction, RGB/ARGB choice, indexed sharing and single-RGB alpha omission. Materializers clear six index/palette/geometry arrays but retain alpha planes/flags and scalar metadata. Exception fixtures preserve separate stored throwable/context, standard null message/cause and wrapper reuse. Live archive retrieval, malformed asset recovery, thumbnail regeneration and complete image-backed menus remain unverified.
+
+Archive fixtures decode version5/6/7 indexes with sparse IDs, name/digest flags and large version7 IDs; reject bad encoded CRC; and retrieve multi-chunk groups with all three decoded-file policies, both packed-discard modes and raw/gzip containers. They test unavailable index/group data, progress, case-normalized name lookup, copied direct storage at the136-byte threshold, duplicate/colliding integer keys and actual sprite loading through synthetic archives. Policy0 retains decoded files;1 evicts the requested file;2 extracts only that file and drops its group cache after retrieval. Capacity checks preserve acceptance of sparse holes. Gzip decoding assumes fixed header/trailer lengths and does not validate trailer checksums or completion. Live providers/network/disk, XTEA archive retrieval, bzip decoding, index digest authentication, malformed recovery and full image-backed menus remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

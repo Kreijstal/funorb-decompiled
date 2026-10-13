@@ -13,7 +13,7 @@ final class oa extends mh {
     static ki field_Sb;
     static String field_Tb;
 
-    final static void a(String[] args, RgbSprite[][] param1, int param2, String[][] param3, byte[] param4, mf param5, RgbSprite[][] param6, mf param7, boolean param8, int param9, int[] param10, String[][] param11, mf param12, byte[] param13, int param14) {
+    final static void a(String[] args, RgbSprite[][] param1, int param2, String[][] param3, byte[] param4, ResourceArchive param5, RgbSprite[][] param6, ResourceArchive param7, boolean param8, int param9, int[] param10, String[][] param11, ResourceArchive param12, byte[] param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -64,7 +64,7 @@ final class fr {
         this.b(-107);
     }
 
-    final static void a(mf param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         mh var5 = null;
         mh var6 = null;
         mh var3 = null;
@@ -76,7 +76,7 @@ final class fr {
           sj.field_d = new mh(0L, ad.field_l);
           sj.field_d.field_S = 1;
           MouseWheelSource.field_c = new mh(0L, MainMenuScreen.field_t, n.field_a);
-          GameplayScreen.field_u = new mh(0L, ik.field_a, bc.field_c);
+          GameplayScreen.field_u = new mh(0L, ik.field_a, ArchiveSource.field_c);
           mo.field_R = new mh(0L, DualLinkNode.field_t);
           rg.field_c.a(sj.field_d, 0);
           rg.field_c.a(MouseWheelSource.field_c, 0);
@@ -247,8 +247,8 @@ final class fr {
           if (null != ej.field_I) {
             ej.field_I.m(17);
           }
-          eo.field_k = new hk(param2, param1, false, true, param0);
-          rj.field_c.b((byte) 114, eo.field_k);
+          DirectByteStorage.field_k = new hk(param2, param1, false, true, param0);
+          rj.field_c.b((byte) 114, DirectByteStorage.field_k);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

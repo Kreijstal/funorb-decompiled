@@ -25,12 +25,12 @@ final class go {
         return jl.field_e.readCp1252String(-1);
     }
 
-    final static mf a(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           jq var8 = null;
-          mf stackIn_14_0 = null;
+          ResourceArchive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -57,7 +57,7 @@ final class go {
             if (param0) {
               var8.f(-10476);
             }
-            stackIn_14_0 = new mf(var8, param4, param3);
+            stackIn_14_0 = new ResourceArchive(var8, param4, param3);
             return stackIn_14_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

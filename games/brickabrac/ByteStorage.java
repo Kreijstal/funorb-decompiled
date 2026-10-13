@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tl {
+abstract class ByteStorage {
     static String field_a;
     static lo field_b;
     static String field_c;
     static String field_d;
 
-    abstract byte[] b(int param0);
+    abstract byte[] toByteArray(int obfuscationGuard);
 
     public static void a(int param0) {
         field_d = null;
@@ -18,12 +18,12 @@ abstract class tl {
           return;
         }
         RgbSprite var2 = (RgbSprite) null;
-        tl.a((RgbSprite) null, (byte) 73, 53, -72, (RgbSprite) null, (RgbSprite) null, 93, 73, -92, 81, -52);
+        ByteStorage.a((RgbSprite) null, (byte) 73, 53, -72, (RgbSprite) null, (RgbSprite) null, 93, 73, -92, 81, -52);
         field_c = null;
         field_b = null;
     }
 
-    abstract void a(int param0, byte[] param1);
+    abstract void store(int obfuscationGuard, byte[] data);
 
     final static void a(RgbSprite param0, byte param1, int param2, int param3, RgbSprite param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
         RuntimeException stackIn_6_0 = null;

@@ -29,7 +29,7 @@ final class tb extends bj {
         }
     }
 
-    final static AlphaFont a(int param0, int param1, mf param2, mf param3, int param4) {
+    final static AlphaFont a(int param0, int param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         AlphaFont stackIn_6_0 = null;
@@ -44,7 +44,7 @@ final class tb extends bj {
             pressX = -88;
           }
           if (ln.decodeSpritesFromArchive(-104, param4, param2, param1)) {
-            stackIn_6_0 = jm.a(param3.a(param4, param1, 4), (byte) -14);
+            stackIn_6_0 = jm.a(param3.takeFile(param4, param1, 4), (byte) -14);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
@@ -93,7 +93,7 @@ final class tb extends bj {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        mf var13 = null;
+        ResourceArchive var13 = null;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           var4_int = param1.length();
@@ -104,8 +104,8 @@ final class tb extends bj {
           }
           var7 = var4_int;
           if (!param2) {
-            var13 = (mf) null;
-            tb.a(95, -81, (mf) null, (mf) null, -12);
+            var13 = (ResourceArchive) null;
+            tb.a(95, -81, (ResourceArchive) null, (ResourceArchive) null, -12);
           }
           var8 = var6 - var5;
           if (var8 != 0) {

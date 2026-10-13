@@ -18,7 +18,7 @@ final class ni extends mh {
         return this.field_Vb.g(param0 + 90) + (param1 + this.field_Qb.g(91));
     }
 
-    final static int a(int param0, CharSequence param1) {
+    final static int hashArchiveName(int obfuscationGuard, CharSequence name) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -31,13 +31,13 @@ final class ni extends mh {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param1.length();
+          var2_int = name.length();
           var3 = 0;
-          if (param0 > -103) {
+          if (obfuscationGuard > -103) {
             field_Ub = (RgbSprite) null;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + na.a(-8250, param1.charAt(var4));
+            var3 = (var3 << 5) - var3 + na.a(-8250, name.charAt(var4));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -45,8 +45,8 @@ final class ni extends mh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("ni.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ni.A(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

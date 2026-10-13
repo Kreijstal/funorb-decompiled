@@ -14,7 +14,7 @@ final class TooltipSprite extends IntrusiveNode {
     static int field_i;
     private boolean hovered;
 
-    final static void a(mf param0, mf param1, byte param2, mf param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         RgbSprite var17 = null;
         IndexedSprite[] var5 = null;
         IndexedSprite[][] var6 = null;
@@ -41,7 +41,7 @@ final class TooltipSprite extends IntrusiveNode {
           og.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
           a.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
           wm.field_a = (TextFont) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
-          var17 = new RgbSprite(param1.a(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
+          var17 = new RgbSprite(param1.takeFileByName(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
           uo.loadIndexedSpriteByName((byte) 29, param3, "dropdown", "commonui");
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
           LevelPackLoader.field_b = new IndexedSprite[4];
@@ -99,8 +99,8 @@ final class TooltipSprite extends IntrusiveNode {
     }
 
     final static void e(int param0) {
-        if (eo.field_f != null) {
-          eo.field_f.f();
+        if (DirectByteStorage.field_f != null) {
+          DirectByteStorage.field_f.f();
         }
         if (jk.field_w != null) {
           jk.field_w.f();
@@ -155,7 +155,7 @@ final class TooltipSprite extends IntrusiveNode {
         }
     }
 
-    final static hl a(byte param0, String param1, mf param2, mf param3, String param4) {
+    final static hl a(byte param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -172,8 +172,8 @@ final class TooltipSprite extends IntrusiveNode {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param2.a(param1, false);
-          var6 = param2.a(var5_int, -80, param4);
+          var5_int = param2.getGroupId(param1, false);
+          var6 = param2.getFileId(var5_int, -80, param4);
           if (param0 == -37) {
             stackIn_4_0 = wn.a(var5_int, param3, param2, var6, (byte) -112);
             return stackIn_4_0;
@@ -218,7 +218,7 @@ final class TooltipSprite extends IntrusiveNode {
           this.x = x;
           this.y = y;
           this.tooltipText = tooltipText.toLowerCase();
-          this.tooltipWidth = 2 * lm.field_b + ob.field_D.measureText(this.tooltipText);
+          this.tooltipWidth = 2 * IntKeyIndex.field_b + ob.field_D.measureText(this.tooltipText);
           this.tooltipHeight = ob.field_D.descent + 2 * ki.field_a + ob.field_D.ascent;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nq.<init>(" + x + ',' + y + ',' + (sprite != null ? "{...}" : "null") + ',' + (tooltipText != null ? "{...}" : "null") + ')');
@@ -231,7 +231,7 @@ final class TooltipSprite extends IntrusiveNode {
           return;
         }
         if (this.hovered) {
-          hj.a(-lm.field_b + pq.pointerX, -ki.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
+          hj.a(-IntKeyIndex.field_b + pq.pointerX, -ki.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
         }
     }
 

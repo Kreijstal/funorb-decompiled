@@ -962,7 +962,7 @@ final class sb implements vc {
           }
           if (Brick.field_E != 1) {
             if (1 < Brick.field_E) {
-              nn.field_f = rd.a(bc.field_a, new String[]{Integer.toString(Brick.field_E)}, (byte) 103);
+              nn.field_f = rd.a(ArchiveSource.field_a, new String[]{Integer.toString(Brick.field_E)}, (byte) 103);
               var4 = n.field_d ? 1 : 0;
               n.field_d = false;
               if (this.d(76)) {
@@ -993,7 +993,7 @@ final class sb implements vc {
               sn.b((byte) -118, var6);
               nh.a(0);
               if (o.field_e != null) {
-                stackIn_43_0 = (lm.a(o.field_e.field_cc, 0)) ? 1 : 0;
+                stackIn_43_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
               } else {
                 stackIn_43_0 = 0;
               }
@@ -1036,7 +1036,7 @@ final class sb implements vc {
           sn.b((byte) -118, var6Lifetime1);
           nh.a(0);
           if (o.field_e != null) {
-            stackIn_62_0 = (lm.a(o.field_e.field_cc, 0)) ? 1 : 0;
+            stackIn_62_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
           } else {
             stackIn_62_0 = 0;
           }
@@ -1074,7 +1074,7 @@ final class sb implements vc {
             sn.b((byte) -118, var6Lifetime2);
             nh.a(0);
             if (o.field_e != null) {
-              stackIn_88_0 = (lm.a(o.field_e.field_cc, 0)) ? 1 : 0;
+              stackIn_88_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
             } else {
               stackIn_88_0 = 0;
             }
@@ -1101,7 +1101,7 @@ final class sb implements vc {
               sn.b((byte) -118, var6Lifetime2);
               nh.a(0);
               if (o.field_e != null) {
-                stackIn_128_0 = (lm.a(o.field_e.field_cc, 0)) ? 1 : 0;
+                stackIn_128_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
               } else {
                 stackIn_128_0 = 0;
               }
@@ -1126,7 +1126,7 @@ final class sb implements vc {
               sn.b((byte) -118, var6Lifetime2);
               nh.a(0);
               if (o.field_e != null) {
-                stackIn_110_0 = (lm.a(o.field_e.field_cc, 0)) ? 1 : 0;
+                stackIn_110_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
               } else {
                 stackIn_110_0 = 0;
               }
@@ -1167,7 +1167,7 @@ final class sb implements vc {
                 sn.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
-                  stackIn_238_0 = (!lm.a(o.field_e.field_cc, 0)) ? 0 : 1;
+                  stackIn_238_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
                 } else {
                   stackIn_238_0 = 0;
                 }
@@ -1194,7 +1194,7 @@ final class sb implements vc {
             sn.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
-              stackIn_257_0 = (!lm.a(o.field_e.field_cc, 0)) ? 0 : 1;
+              stackIn_257_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
             } else {
               stackIn_257_0 = 0;
             }
@@ -1227,7 +1227,7 @@ final class sb implements vc {
                 sn.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
-                  stackIn_156_0 = (!lm.a(o.field_e.field_cc, 0)) ? 0 : 1;
+                  stackIn_156_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
                 } else {
                   stackIn_156_0 = 0;
                 }
@@ -1262,7 +1262,7 @@ final class sb implements vc {
             sn.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
-              stackIn_174_0 = (!lm.a(o.field_e.field_cc, 0)) ? 0 : 1;
+              stackIn_174_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
             } else {
               stackIn_174_0 = 0;
             }
@@ -1292,7 +1292,7 @@ final class sb implements vc {
                 sn.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
-                  stackIn_197_0 = (!lm.a(o.field_e.field_cc, 0)) ? 0 : 1;
+                  stackIn_197_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
                 } else {
                   stackIn_197_0 = 0;
                 }
@@ -1327,7 +1327,7 @@ final class sb implements vc {
             sn.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
-              stackIn_215_0 = (!lm.a(o.field_e.field_cc, 0)) ? 0 : 1;
+              stackIn_215_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
             } else {
               stackIn_215_0 = 0;
             }
@@ -1371,31 +1371,31 @@ final class sb implements vc {
         field_d = null;
     }
 
-    final static void a(mf param0, mf param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         int var4 = 0;
         PacketBuffer var8 = null;
         PacketBuffer var9 = null;
         PacketBuffer var10 = null;
         PacketBuffer var11 = null;
         PacketBuffer var7 = null;
-        int var3_int = param0.a("", false);
+        int var3_int = param0.getGroupId("", false);
         if (param2 != 2) {
           return;
         }
         try {
           na.field_L = new LevelPack[2];
           var4 = 0;
-          var8 = new PacketBuffer(param0.a(param2 ^ 118, "single", ""));
+          var8 = new PacketBuffer(param0.takeFileByName(param2 ^ 118, "single", ""));
           var9 = var8;
           na.field_L[0] = LevelPackLoader.loadLevelPack((byte) 76, param0, var9, var3_int, 0, 0, var4);
           var4 = var4 + na.field_L[0].levelCount;
-          var10 = new PacketBuffer(param0.a(121, "hotseat", ""));
+          var10 = new PacketBuffer(param0.takeFileByName(121, "hotseat", ""));
           qh.field_b = LevelPackLoader.loadLevelPack((byte) -115, param0, var10, var3_int, -1, -1, -1);
-          var11 = new PacketBuffer(param0.a(100, "multiplayer", ""));
+          var11 = new PacketBuffer(param0.takeFileByName(100, "multiplayer", ""));
           tq.field_d = LevelPackLoader.loadLevelPack((byte) -97, param0, var11, var3_int, -1, -1, -1);
           tq.field_d.appendLevelData(qh.field_b, false);
-          var3_int = param1.a("", false);
-          var7 = new PacketBuffer(param1.a(-88, "single", ""));
+          var3_int = param1.getGroupId("", false);
+          var7 = new PacketBuffer(param1.takeFileByName(-88, "single", ""));
           na.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, param1, var7, var3_int, 1, 1, var4);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sb.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

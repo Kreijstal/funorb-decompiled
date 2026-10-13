@@ -8,7 +8,7 @@ final class wl extends d {
     static int[] field_R;
     static boolean field_N;
     static String field_O;
-    static mf field_K;
+    static ResourceArchive field_K;
     static String field_Q;
 
     final void a(int param0, int param1, int param2, byte param3) {
@@ -320,7 +320,7 @@ final class wl extends d {
             } else {
               if (var9Lifetime1 == 248) {
                 cb.a(uc.e((byte) -108), param6 + 5);
-                eo.field_e = m.field_d;
+                DirectByteStorage.field_e = m.field_d;
                 hn.a((byte) 96);
                 pf.field_d = false;
                 stackIn_33_0 = var9Lifetime1;
@@ -362,7 +362,7 @@ final class wl extends d {
                 ui.a(param6 ^ -55, uc.e((byte) -120), var9_ref_String);
               }
             } else {
-              eo.field_e = jl.field_e.readCp1252String(-1);
+              DirectByteStorage.field_e = jl.field_e.readCp1252String(-1);
             }
             hn.a((byte) 106);
             pf.field_d = false;
@@ -375,9 +375,9 @@ final class wl extends d {
           if (null == eq.field_g) {
             if (pf.field_d) {
               if (MembershipBenefitsScreen.f(param6 ^ -6788) > 30000L) {
-                eo.field_e = hg.field_b;
+                DirectByteStorage.field_e = hg.field_b;
               } else {
-                eo.field_e = gd.field_e;
+                DirectByteStorage.field_e = gd.field_e;
               }
               pf.field_d = false;
               stackIn_62_0 = 249;
@@ -482,7 +482,7 @@ final class wl extends d {
 
     final String d(int param0) {
         if (param0 <= 6) {
-          field_K = (mf) null;
+          field_K = (ResourceArchive) null;
         }
         if (this.field_q) {
           return this.field_M.a(-87);

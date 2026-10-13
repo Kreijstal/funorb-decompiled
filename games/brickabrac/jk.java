@@ -57,7 +57,7 @@ final class jk extends ki {
         if (param0) {
           return true;
         }
-        if (AchievementIcon.field_m.a("water", -28138)) {
+        if (AchievementIcon.field_m.ensureGroupAvailableByName("water", -28138)) {
           go.field_d = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.field_m);
           wm.field_b = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.field_m);
           hk.field_Q = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
@@ -107,7 +107,7 @@ final class jk extends ki {
         var2.writeByte(6, 2);
         var2.writeBytes(rh.field_d, param1 - 99, 0, rh.field_d.length);
         var2.writeByte(-125, bb.field_e);
-        var2.writeByte(param1 ^ -12, mf.field_c);
+        var2.writeByte(param1 ^ -12, ResourceArchive.field_c);
         if (param1 == 98) {
           var2.writeBytes(lj.field_p, -1, 0, lj.field_p.length);
           var2.backfillByteLength((byte) 126, -var3 + var2.position);

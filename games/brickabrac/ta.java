@@ -6,7 +6,7 @@ class ta {
     static int field_f;
     static String field_a;
     static PcmSound[] uiSounds;
-    static mf field_g;
+    static ResourceArchive field_g;
     static String field_d;
     static String field_c;
 

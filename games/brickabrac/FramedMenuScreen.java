@@ -27,12 +27,12 @@ class FramedMenuScreen extends MenuScreen {
         MenuButton var2 = this.buttons[0];
         if (obfuscationGuard > 34) {
           var5 = this.buttons[this.selection.itemCount - 1];
-          im.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var5.height + (var5.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
+          GzipInflater.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var5.height + (var5.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
           return;
         }
         field_t = (String) null;
         MenuButton var4 = this.buttons[this.selection.itemCount - 1];
-        im.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var4.height + (var4.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
+        GzipInflater.a(30 + (-this.buttonLeft + this.buttonRight), 0, -var2.y + var4.height + (var4.y + 30), 0, -15 + var2.y, (byte) -88, -15 + this.buttonLeft);
     }
 
     final static mh f(int param0) {

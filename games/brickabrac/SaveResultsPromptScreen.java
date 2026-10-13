@@ -4,7 +4,7 @@
 final class SaveResultsPromptScreen extends MenuScreen {
     static String field_r;
     private String promptText;
-    static mf field_t;
+    static ResourceArchive field_t;
     static String field_w;
     static qh field_z;
     static String field_x;
@@ -30,7 +30,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
 
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -39);
-        im.a(550, 5, 243, 5, 140, (byte) -81, 45);
+        GzipInflater.a(550, 5, 243, 5, 140, (byte) -81, 45);
         if (obfuscationGuard <= -14) {
           nn.field_g.a(this.promptText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
           this.a(0);

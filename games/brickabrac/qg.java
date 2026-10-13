@@ -67,7 +67,7 @@ abstract class qg extends ke {
         this.setBackground(java.awt.Color.black);
         cd.field_e = this.field_u;
         hk.a(cd.field_e, (byte) 125);
-        im.a(param7, this.field_x, this.field_q, this.field_B, 5000, 5000, cd.field_e, this.field_o, lp.field_ub, (byte) 123, param3, this.field_w, this.field_p, this.field_v);
+        GzipInflater.a(param7, this.field_x, this.field_q, this.field_B, 5000, 5000, cd.field_e, this.field_o, lp.field_ub, (byte) 123, param3, this.field_w, this.field_p, this.field_v);
         cr.a(param7, cd.field_e, param0 + 3, this.field_v, lp.field_ub, this.field_x, this.field_p, this.field_o, this.field_B);
         rn.patchJavaKeyCodeMap(59);
         qa.mouseWheelSource = ea.createMouseWheelSource(60);
@@ -235,7 +235,7 @@ abstract class qg extends ke {
           this.a("reconnect", 4000);
         }
         qb.g(108);
-        tf.a(eo.field_e, (byte) -61, var2);
+        tf.a(DirectByteStorage.field_e, (byte) -61, var2);
         n.field_e = true;
         cg.field_i = ue.a(false) + 15000L;
         return var2;
@@ -334,8 +334,8 @@ abstract class qg extends ke {
           if (var4 == 1) {
             var5_int = ek.a(oo.f(param1 ^ 67), sq.a(64), (byte) -16);
             if (var5_int != -1) {
-              ef.a(eo.field_e, -106, var5_int, co.field_f);
-              eo.field_e = null;
+              ef.a(DirectByteStorage.field_e, -106, var5_int, co.field_f);
+              DirectByteStorage.field_e = null;
               co.field_f = null;
             }
             var11 = df.a(0);
@@ -346,8 +346,8 @@ abstract class qg extends ke {
           if (var4 == 2) {
             var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.field_C);
             if (-1 != var5_intLifetime1) {
-              vh.a(var5_intLifetime1, (byte) -123, eo.field_e, co.field_f);
-              eo.field_e = null;
+              vh.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, co.field_f);
+              DirectByteStorage.field_e = null;
               co.field_f = null;
             }
           }
@@ -361,8 +361,8 @@ abstract class qg extends ke {
               var5_intLifetime2 = wp.a(LevelSelectScreen.d(true), false, true, this.field_s, this.field_C, MotionWaypoint.b(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  tf.a(eo.field_e, (byte) -77, var5_intLifetime2);
-                  eo.field_e = null;
+                  tf.a(DirectByteStorage.field_e, (byte) -77, var5_intLifetime2);
+                  DirectByteStorage.field_e = null;
                 } else {
                   sb.field_e = sl.field_v;
                   ei.b(0);
@@ -517,7 +517,7 @@ abstract class qg extends ke {
                       if (var2 != 7) {
                         if (var2 != 8) {
                           if (var2 == 16) {
-                            bc.a(27423);
+                            ArchiveSource.a(27423);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {
@@ -824,11 +824,11 @@ abstract class qg extends ke {
         }
         if (2 == field_A) {
           if (null != wl.field_K &&
-            wl.field_K.a((byte) -127)) {
-            if (!wl.field_K.a(113, "")) {
+            wl.field_K.ensureIndex((byte) -127)) {
+            if (!wl.field_K.hasGroupName(113, "")) {
               wl.field_K = null;
             } else {
-              if (wl.field_K.a("", -28138)) {
+              if (wl.field_K.ensureGroupAvailableByName("", -28138)) {
                 nn.a(wl.field_K, 122);
                 wl.field_K = null;
                 hc.b(param1 ^ 3);
@@ -876,8 +876,8 @@ abstract class qg extends ke {
         }
         boolean decompiledFrameRemainder0 = true;
         if (field_A == 11) {
-          if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.a((byte) -127) ||
-            !GameplayAudioEvent.field_k.a(98))) {
+          if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.ensureIndex((byte) -127) ||
+            !GameplayAudioEvent.field_k.ensureAllGroupsAvailable(98))) {
             ai.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, d.field_C));
             decompiledFrameRemainder0 = false;
           }

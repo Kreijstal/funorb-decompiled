@@ -15,8 +15,8 @@ final class mi {
           field_b = null;
           return;
         }
-        mf var2 = (mf) null;
-        mi.a((mf) null, 51, -113);
+        ResourceArchive var2 = (ResourceArchive) null;
+        mi.a((ResourceArchive) null, 51, -113);
         field_e = null;
         field_a = null;
         field_b = null;
@@ -80,7 +80,7 @@ final class mi {
         }
     }
 
-    final static pq a(mf param0, int param1, int param2) {
+    final static pq a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -91,7 +91,7 @@ final class mi {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = param0.b(param1, (byte) 113);
+          var4 = param0.takeFlatFile(param1, (byte) 113);
           var3 = var4;
           if (param2 != 8) {
             stackIn_2_0 = (pq) null;

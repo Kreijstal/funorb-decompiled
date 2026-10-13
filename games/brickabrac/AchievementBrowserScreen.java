@@ -63,7 +63,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         var16 = null;
         var14 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -104);
-        im.a(550, 5, 88, 5, 140, (byte) -72, 45);
+        GzipInflater.a(550, 5, 88, 5, 140, (byte) -72, 45);
         MovingBody.a((byte) 98, 560, 80, 140, 228);
         var17 = (AchievementIcon) (this.visibleIcons.first(-94));
         while (var17 != null) {
@@ -76,8 +76,8 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var15 = (AchievementIcon) (this.departingIcons.next((byte) 116));
         }
         sc.popRaster(-81);
-        im.a(146, 5, 146, 5, 233, (byte) -87, 45);
-        im.a(399, 5, 146, 5, 233, (byte) -107, 196);
+        GzipInflater.a(146, 5, 146, 5, 233, (byte) -87, 45);
+        GzipInflater.a(399, 5, 146, 5, 233, (byte) -107, 196);
         if (nf.selectedAchievementId != -1) {
           stackIn_9_0 = nf.selectedAchievementId;
         } else {
@@ -90,7 +90,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         var4 = ob.field_D.descent + ob.field_D.capHeight;
         var5 = nn.field_g.capHeight + nn.field_g.descent;
         if (-1 != var3) {
-          stackIn_17_0 = (!eo.isBitSet(this.achievementMask, var3, (byte) -75)) ? 0 : 1;
+          stackIn_17_0 = (!DirectByteStorage.isBitSet(this.achievementMask, var3, (byte) -75)) ? 0 : 1;
           var6 = stackIn_17_0;
           nn.field_g.drawLeft(field_s[var3], 209, nn.field_g.capHeight + 246, 1, -1);
           stackIn_19_0 = nn.field_g;

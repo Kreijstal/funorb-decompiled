@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eo extends tl {
+final class DirectByteStorage extends ByteStorage {
     static String field_h;
     static hk field_k;
     static PcmPlayer field_f;
     static java.awt.Font field_g;
     static volatile int livePointerX;
     static String field_e;
-    private java.nio.ByteBuffer field_j;
+    private java.nio.ByteBuffer buffer;
     static String field_l;
 
     final static boolean a(boolean param0, BitPacketBuffer param1) {
@@ -20,7 +20,7 @@ final class eo extends tl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            eo.c(-28);
+            DirectByteStorage.c(-28);
           }
           stackIn_5_0 = (1 == param1.readBits(1, (byte) 127));
           return stackIn_5_0;
@@ -62,25 +62,25 @@ final class eo extends tl {
         eh.a(true, param1);
     }
 
-    final void a(int param0, byte[] param1) {
+    final void store(int obfuscationGuard, byte[] data) {
         try {
-          this.field_j = java.nio.ByteBuffer.allocateDirect(param1.length);
-          if (param0 < 63) {
+          this.buffer = java.nio.ByteBuffer.allocateDirect(data.length);
+          if (obfuscationGuard < 63) {
             field_g = (java.awt.Font) null;
           }
-          this.field_j.position(0);
-          this.field_j.put(param1);
+          this.buffer.position(0);
+          this.buffer.put(data);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "eo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "eo.B(" + obfuscationGuard + ',' + (data != null ? "{...}" : "null") + ')');
         }
     }
 
-    final byte[] b(int param0) {
-        byte[] var3 = new byte[this.field_j.capacity()];
+    final byte[] toByteArray(int obfuscationGuard) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_j.position(0);
-        if (param0 == 16616) {
-          this.field_j.get(var3);
+        this.buffer.position(0);
+        if (obfuscationGuard == 16616) {
+          this.buffer.get(var3);
           return var3;
         }
         return (byte[]) null;
@@ -125,7 +125,7 @@ final class eo extends tl {
         field_e = null;
     }
 
-    eo() {
+    DirectByteStorage() {
     }
 
     static {

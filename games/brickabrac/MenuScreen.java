@@ -17,10 +17,10 @@ abstract class MenuScreen extends GameScreen {
         int var2;
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (im.field_e <= 0) {
+        if (GzipInflater.field_e <= 0) {
           pa.a(true);
         } else {
-          var2 = (-50 + im.field_e) * 640 / 50;
+          var2 = (-50 + GzipInflater.field_e) * 640 / 50;
           if (0 != hc.field_h) {
             ed.a(-640 - var2, 0);
             MainMenuScreen.field_s.drawAt(-var2, 0);
@@ -210,9 +210,9 @@ abstract class MenuScreen extends GameScreen {
         }
         this.c(true, var4);
         if (lp.currentScreen == this &&
-          im.field_e > 0) {
-          fieldTemp$2 = im.field_e - 1;
-          im.field_e = im.field_e - 1;
+          GzipInflater.field_e > 0) {
+          fieldTemp$2 = GzipInflater.field_e - 1;
+          GzipInflater.field_e = GzipInflater.field_e - 1;
           if (fieldTemp$2 == 0) {
             hc.field_h = 1;
             c.field_g = 250;

@@ -8,9 +8,9 @@ final class ck extends IntrusiveNode {
     static boolean[] field_m;
     StringBuilder field_l;
 
-    final static void a(int param0, mf param1) {
+    final static void a(int param0, ResourceArchive param1) {
         bk var2 = null;
-        bk.b(param1.a(111, "headers.packvorbis", ""));
+        bk.b(param1.takeFileByName(111, "headers.packvorbis", ""));
         if (param0 != -2196) {
           return;
         }

@@ -18,7 +18,7 @@ final class IntrusiveHashTable {
     private IntrusiveNode[] buckets;
     static int field_l;
 
-    final static AlphaFont a(byte param0, String param1, String param2, mf param3, mf param4) {
+    final static AlphaFont a(byte param0, String param1, String param2, ResourceArchive param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -35,8 +35,8 @@ final class IntrusiveHashTable {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.a(param1, false);
-          var6 = param3.a(var5_int, -40, param2);
+          var5_int = param3.getGroupId(param1, false);
+          var6 = param3.getFileId(var5_int, -40, param2);
           if (param0 < -5) {
             stackIn_4_0 = tb.a(117, var5_int, param3, param4, var6);
             return stackIn_4_0;
@@ -245,8 +245,8 @@ final class IntrusiveHashTable {
             node.unlink((byte) 111);
           }
           if (obfuscationGuard != 34) {
-            mf var6 = (mf) null;
-            IntrusiveHashTable.a((byte) -123, (String) null, (String) null, (mf) null, (mf) null);
+            ResourceArchive var6 = (ResourceArchive) null;
+            IntrusiveHashTable.a((byte) -123, (String) null, (String) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           var5 = this.buckets[(int)((long)(this.bucketCount - 1) & key)];
           node.next = var5;

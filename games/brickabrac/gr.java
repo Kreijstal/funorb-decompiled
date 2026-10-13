@@ -27,7 +27,7 @@ final class gr {
           if (!param0) {
             field_c = (RgbSprite) null;
           }
-          stackIn_3_0 = SaveResultsPromptScreen.field_t.a(-61, "", param1);
+          stackIn_3_0 = SaveResultsPromptScreen.field_t.takeFileByName(-61, "", param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,7 +80,7 @@ final class gr {
           we.field_b = ch.field_k;
           bq.field_e = hc.field_a;
           gg.field_o = ep.field_j;
-          nj.field_l = mf.field_a;
+          nj.field_l = ResourceArchive.field_a;
           fq.field_d = LevelPackSelectScreen.field_z;
         } else {
           bq.field_e = ip.field_v;

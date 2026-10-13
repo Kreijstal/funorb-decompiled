@@ -151,7 +151,7 @@ final class InstructionsScreen extends MenuScreen {
         if (var3 != 37) {
           return true;
         }
-        stackIn_16_0 = (gh.field_b.length - 1 == this.pageIndex) && (!lm.a((byte) -10));
+        stackIn_16_0 = (gh.field_b.length - 1 == this.pageIndex) && (!IntKeyIndex.a((byte) -10));
         return stackIn_16_0;
     }
 
@@ -277,7 +277,7 @@ final class InstructionsScreen extends MenuScreen {
         int var9;
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -27);
-        im.a(550, 5, 243, 5, 140, (byte) -101, 45);
+        GzipInflater.a(550, 5, 243, 5, 140, (byte) -101, 45);
         al.a(this.screenId, 19);
         if (this.pageIndex != 0) {
           ob.field_D.setInlineSprites(h.field_C, nd.field_f);

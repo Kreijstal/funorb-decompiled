@@ -100,7 +100,7 @@ final class ef extends IOException {
             }
             var8 = param3;
             InstructionsScreen.a(var8, true);
-            he.field_H = lm.a(param1 ^ 2167, param3);
+            he.field_H = IntKeyIndex.a(param1 ^ 2167, param3);
             return;
           }
           stackIn_6_0 = true;

@@ -108,7 +108,7 @@ final class sn extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("construct", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("construct", -28138)) {
           return false;
         }
         sf.field_Y = pl.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.field_m);

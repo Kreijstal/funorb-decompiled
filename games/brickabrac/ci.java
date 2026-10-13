@@ -91,7 +91,7 @@ final class ci extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("space", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("space", -28138)) {
           return false;
         }
         om.field_fc = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.field_m);

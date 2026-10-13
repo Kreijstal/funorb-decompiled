@@ -11,7 +11,7 @@ final class s {
     private po[] field_f;
     static String field_a;
 
-    final void a(mf param0, boolean param1, String param2, String param3) {
+    final void a(ResourceArchive param0, boolean param1, String param2, String param3) {
         try {
           if (param1) {
             this.field_c = -45;
@@ -31,25 +31,25 @@ final class s {
         }
         while (this.field_c < this.field_b) {
           var4 = this.field_f[this.field_c];
-          if (!var4.field_b.a((byte) -127)) {
+          if (!var4.field_b.ensureIndex((byte) -127)) {
             this.a(0, -22269, var4);
             return false;
           }
           if (0 <= var4.field_h &&
-            !var4.field_b.a(-13083, var4.field_h)) {
-            this.a(var4.field_b.d(var4.field_h, -27509), -22269, var4);
+            !var4.field_b.ensureGroupAvailable(-13083, var4.field_h)) {
+            this.a(var4.field_b.getGroupProgress(var4.field_h, -27509), -22269, var4);
             return false;
           }
           if (var4.field_d != null &&
-            !var4.field_b.a(var4.field_d, -28138)) {
-            this.a(var4.field_b.b(0, var4.field_d), -22269, var4);
+            !var4.field_b.ensureGroupAvailableByName(var4.field_d, -28138)) {
+            this.a(var4.field_b.getGroupProgressByName(0, var4.field_d), -22269, var4);
             return false;
           }
           if (var4.field_h < 0 &&
             null == var4.field_d &&
             var4.field_g != null &&
-            !var4.field_b.a(108)) {
-            this.a(var4.field_b.b(-4126), -22269, var4);
+            !var4.field_b.ensureAllGroupsAvailable(108)) {
+            this.a(var4.field_b.getProgress(-4126), -22269, var4);
             return false;
           }
           this.field_c = this.field_c + 1;
@@ -57,7 +57,7 @@ final class s {
         return true;
     }
 
-    final void a(String param0, String param1, int param2, String param3, mf param4) {
+    final void a(String param0, String param1, int param2, String param3, ResourceArchive param4) {
         try {
           this.a(param1, param0, param3, param4, -1, -90);
           int var6_int = -82 / ((73 - param2) / 51);
@@ -66,7 +66,7 @@ final class s {
         }
     }
 
-    private final void a(String param0, String param1, String param2, mf param3, int param4, int param5) {
+    private final void a(String param0, String param1, String param2, ResourceArchive param3, int param4, int param5) {
         po[] var10 = null;
         po var9 = null;
         po var11 = null;

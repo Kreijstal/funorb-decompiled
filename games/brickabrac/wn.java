@@ -4,7 +4,7 @@
 final class wn {
     static String field_a;
     static RgbSprite field_b;
-    static mf field_c;
+    static ResourceArchive field_c;
 
     final static mp a(boolean param0, int param1, int param2) {
         mm stackIn_4_0;
@@ -273,7 +273,7 @@ final class wn {
         }
     }
 
-    final static void a(mf param0, mf param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -319,7 +319,7 @@ final class wn {
         }
     }
 
-    final static hl a(int param0, mf param1, mf param2, int param3, byte param4) {
+    final static hl a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
@@ -336,7 +336,7 @@ final class wn {
             return (hl) (stackIn_4_0);
           }
           var5_int = 126 / ((param4 + 35) / 45);
-          stackIn_6_0 = rm.a(12658477, param1.a(param3, param0, 4));
+          stackIn_6_0 = rm.a(12658477, param1.takeFile(param3, param0, 4));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

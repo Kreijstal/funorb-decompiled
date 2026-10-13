@@ -108,8 +108,8 @@ final class vm extends IntrusiveNode {
         }
     }
 
-    final static vm a(mf param0, String param1, String param2) {
-        byte[] var3 = param0.a(113, param1, param2);
+    final static vm a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.takeFileByName(113, param1, param2);
         if (var3 == null) {
           return null;
         }

@@ -11,7 +11,7 @@ final class vh extends d {
     int field_Q;
     static cd field_X;
     static String field_T;
-    static mf field_S;
+    static ResourceArchive field_S;
     int field_Z;
     static String field_P;
     static String field_Y;
@@ -150,7 +150,7 @@ final class vh extends d {
               ni.field_Rb = AchievementIcon.a(param0, -126, param2);
               return;
             }
-            ni.field_Rb = lm.a(-2079, param3);
+            ni.field_Rb = IntKeyIndex.a(-2079, param3);
             return;
           }
           stackIn_4_0 = true;

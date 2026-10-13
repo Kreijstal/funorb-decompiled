@@ -554,7 +554,7 @@ class PacketBuffer extends IntrusiveNode {
         this.data[this.position - length - 1] = (byte)length;
     }
 
-    final static IndexedSprite[] a(String param0, mf param1, String param2, int param3) {
+    final static IndexedSprite[] a(String param0, ResourceArchive param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -569,8 +569,8 @@ class PacketBuffer extends IntrusiveNode {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param1.a(param0, false);
-          var5 = param1.a(var4_int, -24, param2);
+          var4_int = param1.getGroupId(param0, false);
+          var5 = param1.getFileId(var4_int, -24, param2);
           if (param3 == -946715356) {
             stackIn_4_0 = ba.a(var4_int, var5, -59, param1);
             return stackIn_4_0;

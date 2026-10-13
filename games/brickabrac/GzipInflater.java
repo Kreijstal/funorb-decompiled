@@ -4,8 +4,8 @@
 import java.io.*;
 import java.util.*;
 
-final class im {
-    private java.util.zip.Inflater field_b;
+final class GzipInflater {
+    private java.util.zip.Inflater inflater;
     static RgbSprite[] field_a;
     static boolean field_g;
     static mh field_d;
@@ -13,10 +13,10 @@ final class im {
     static RgbSprite[][] field_f;
     static String[] field_c;
 
-    private im(int param0, int param1, int param2) {
+    private GzipInflater(int param0, int param1, int param2) {
     }
 
-    public im() {
+    public GzipInflater() {
         this(-1, 1000000, 1000000);
     }
 
@@ -25,7 +25,7 @@ final class im {
           hb.a(param6, param3, param4, 2, 196, param2, param0, 76, param1);
           return;
         }
-        im.a(39, -27, -77, 50, -59, (byte) -97, -42);
+        GzipInflater.a(39, -27, -77, 50, -59, (byte) -97, -42);
         hb.a(param6, param3, param4, 2, 196, param2, param0, 76, param1);
     }
 
@@ -45,11 +45,11 @@ final class im {
             fe.field_ob = param6;
             tq.field_h = param1;
             FramedMenuScreen.field_s = param8;
-            ko.field_e = param0;
+            ArchiveIndex.field_e = param0;
             qb.field_u = param2;
             MainMenuScreen.field_x = param7;
             if (param9 <= 121) {
-              im.b(47);
+              GzipInflater.b(47);
             }
             dl.field_b = param13;
             pj.field_a = param12;
@@ -105,33 +105,33 @@ final class im {
     final static void b(int param0) {
         pp.field_a = ga.field_i;
         if (param0 != -8) {
-          im.a(42);
+          GzipInflater.a(42);
         }
     }
 
-    final void a(byte[] param0, int param1, PacketBuffer param2) {
+    final void inflateGzip(byte[] output, int obfuscationGuard, PacketBuffer packet) {
         try {
           try {
-            if (param2.data[param2.position] != 31 ||
-              -117 != param2.data[param2.position + 1]) {
+            if (packet.data[packet.position] != 31 ||
+              -117 != packet.data[packet.position + 1]) {
               throw new RuntimeException("");
             }
-            if (this.field_b == null) {
-              this.field_b = new java.util.zip.Inflater(true);
+            if (this.inflater == null) {
+              this.inflater = new java.util.zip.Inflater(true);
             }
-            if (param1 != -20555) {
-              im.b(-99);
+            if (obfuscationGuard != -20555) {
+              GzipInflater.b(-99);
             }
             try {
-              this.field_b.setInput(param2.data, param2.position + 10, param2.data.length + (-8 - param2.position) - 10);
-              this.field_b.inflate(param0);
+              this.inflater.setInput(packet.data, packet.position + 10, packet.data.length + (-8 - packet.position) - 10);
+              this.inflater.inflate(output);
             } catch (Exception exception) {
-              this.field_b.reset();
+              this.inflater.reset();
               throw new RuntimeException("");
             }
-            this.field_b.reset();
+            this.inflater.reset();
           } catch (RuntimeException runtimeException) {
-            throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "im.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "im.A(" + (output != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

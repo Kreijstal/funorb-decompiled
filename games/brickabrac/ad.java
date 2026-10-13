@@ -80,7 +80,7 @@ final class ad implements Runnable {
               mh.field_gb = stackIn_11_0;
               rf.field_b = BitPacketBuffer.field_u;
               var5.position = 0;
-              c.a(ko.field_e, 12, pe.field_r, fe.field_ob, k.field_h);
+              c.a(ArchiveIndex.field_e, 12, pe.field_r, fe.field_ob, k.field_h);
               cr.a(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

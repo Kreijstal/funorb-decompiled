@@ -195,7 +195,7 @@ final class ij implements wb {
                   if (var3 != 5) {
                     return true;
                   }
-                  rj.a(new fk(uf.field_a.a(121, "", "huffman")), false);
+                  rj.a(new fk(uf.field_a.takeFileByName(121, "", "huffman")), false);
                   uf.field_a = null;
                 }
               } else {

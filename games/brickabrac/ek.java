@@ -79,7 +79,7 @@ final class ek extends bj implements en {
             if (ch.field_a != param1) {
               if (param1 == rg.field_i) {
                 this.field_s = this.field_s + 30;
-                var3 = eo.field_h;
+                var3 = DirectByteStorage.field_h;
               }
             } else {
               this.field_s = this.field_s + 10;

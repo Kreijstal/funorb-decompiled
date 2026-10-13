@@ -450,52 +450,52 @@ final class oj extends ep {
           return 0;
         }
         if (cd.field_e == 0) {
-          if (!ma.field_P.a((byte) -127)) {
+          if (!ma.field_P.ensureIndex((byte) -127)) {
             return 20;
           }
-          if (!ma.field_P.a("commonui", -28138)) {
+          if (!ma.field_P.ensureGroupAvailableByName("commonui", -28138)) {
             return 40;
           }
-          if (!vh.field_S.a((byte) -127)) {
+          if (!vh.field_S.ensureIndex((byte) -127)) {
             return 50;
           }
-          if (!vh.field_S.a("commonui", -28138)) {
+          if (!vh.field_S.ensureGroupAvailableByName("commonui", -28138)) {
             return 60;
           }
-          if (!ja.field_c.a((byte) -127)) {
+          if (!ja.field_c.ensureIndex((byte) -127)) {
             return 70;
           }
-          if (!ja.field_c.a(117)) {
+          if (!ja.field_c.ensureAllGroupsAvailable(117)) {
             return 80;
           }
         } else {
           if (wl.field_K != null) {
-            if (!wl.field_K.a((byte) -127)) {
+            if (!wl.field_K.ensureIndex((byte) -127)) {
               return 14;
             }
-            if (!wl.field_K.a(-104, "")) {
+            if (!wl.field_K.hasGroupName(-104, "")) {
               return 29;
             }
-            if (!wl.field_K.a("", -28138)) {
+            if (!wl.field_K.ensureGroupAvailableByName("", -28138)) {
               return 29;
             }
           }
-          if (!ma.field_P.a((byte) -127)) {
+          if (!ma.field_P.ensureIndex((byte) -127)) {
             return 43;
           }
-          if (!ma.field_P.a("commonui", -28138)) {
+          if (!ma.field_P.ensureGroupAvailableByName("commonui", -28138)) {
             return 57;
           }
-          if (!vh.field_S.a((byte) -127)) {
+          if (!vh.field_S.ensureIndex((byte) -127)) {
             return 71;
           }
-          if (!vh.field_S.a("commonui", -28138)) {
+          if (!vh.field_S.ensureGroupAvailableByName("commonui", -28138)) {
             return 80;
           }
-          if (!ja.field_c.a((byte) -127)) {
+          if (!ja.field_c.ensureIndex((byte) -127)) {
             return 82;
           }
-          if (!ja.field_c.a(110)) {
+          if (!ja.field_c.ensureAllGroupsAvailable(110)) {
             return 86;
           }
         }

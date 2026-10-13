@@ -24,8 +24,8 @@ final class bf extends d {
             bf.a((String) null, 67, -0.11976710706949234f, true);
           }
           if (sj.field_b == null) {
-            sj.field_b = new tb(mf.field_f, ke.field_b);
-            mf.field_f.a(param1 - 8287, sj.field_b);
+            sj.field_b = new tb(ResourceArchive.field_f, ke.field_b);
+            ResourceArchive.field_f.a(param1 - 8287, sj.field_b);
           }
           sj.field_b.a(param2, param0, param3, (byte) 86);
           Rasterizer2D.clear();
@@ -75,14 +75,14 @@ final class bf extends d {
 
     final static void a(boolean param0, boolean param1, int param2, String param3) {
         try {
-          lm.a(-1);
-          mf.field_f.a(-127);
+          IntKeyIndex.a(-1);
+          ResourceArchive.field_f.a(-127);
           if (param2 != -15947) {
             field_K = (RgbSprite) null;
           }
-          eo.field_k = new hk(GameScreen.field_d, (String) null, cg.field_l, param0, param1);
-          rj.field_c = new bh(mf.field_f, eo.field_k);
-          mf.field_f.a(-117, rj.field_c);
+          DirectByteStorage.field_k = new hk(GameScreen.field_d, (String) null, cg.field_l, param0, param1);
+          rj.field_c = new bh(ResourceArchive.field_f, DirectByteStorage.field_k);
+          ResourceArchive.field_f.a(-117, rj.field_c);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

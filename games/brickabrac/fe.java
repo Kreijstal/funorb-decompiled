@@ -7,7 +7,7 @@ abstract class fe extends bj {
     static int field_ob;
     private int field_fb;
     static mh field_gb;
-    static mf field_jb;
+    static ResourceArchive field_jb;
     static String field_ib;
     private oc field_eb;
     static og field_kb;

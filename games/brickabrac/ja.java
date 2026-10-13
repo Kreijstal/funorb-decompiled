@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ja {
-    static mf field_c;
+    static ResourceArchive field_c;
     static String field_b;
     static RgbSprite[][] field_a;
 

@@ -53,11 +53,11 @@ final class wc {
 
     final static void a(boolean param0, int param1) {
         if (param1 == -1) {
-          mf.field_f.a(0, 0, param1 + 1);
+          ResourceArchive.field_f.a(0, 0, param1 + 1);
           return;
         }
         field_d = false;
-        mf.field_f.a(0, 0, param1 + 1);
+        ResourceArchive.field_f.a(0, 0, param1 + 1);
     }
 
     public static void a(int param0) {

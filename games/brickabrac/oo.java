@@ -61,15 +61,15 @@ final class oo extends ki {
 
     final RgbSprite a(boolean param0, int param1) {
         if (param0) {
-          return lm.field_e[param1 - 1];
+          return IntKeyIndex.field_e[param1 - 1];
         }
         java.applet.Applet var4 = (java.applet.Applet) null;
         oo.a((java.applet.Applet) null, 68);
-        return lm.field_e[param1 - 1];
+        return IntKeyIndex.field_e[param1 - 1];
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("chocolate", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("chocolate", -28138)) {
           return false;
         }
         nl.field_d = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.field_m);
@@ -84,10 +84,10 @@ final class oo extends ki {
         dc.field_c = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
         Brick.field_I[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
         aj.field_a[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
-        lm.field_e[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
+        IntKeyIndex.field_e[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
         Brick.field_I[1] = ig.a(Brick.field_I[0], param0);
         aj.field_a[1] = ig.a(aj.field_a[0], param0);
-        lm.field_e[1] = pl.a(-16371, lm.field_e[0]);
+        IntKeyIndex.field_e[1] = pl.a(-16371, IntKeyIndex.field_e[0]);
         gq.field_Ub = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
         return true;
     }
@@ -169,7 +169,7 @@ final class oo extends ki {
         super(param0, param1, param2, param3);
         try {
           aj.field_a = new RgbSprite[2][];
-          lm.field_e = new RgbSprite[2];
+          IntKeyIndex.field_e = new RgbSprite[2];
           Brick.field_I = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

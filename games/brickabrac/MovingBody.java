@@ -142,10 +142,10 @@ abstract class MovingBody extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          mf.field_f.a(ClientException.field_e, DualLinkNode.field_r, -114, true);
-          mf.field_f.i(79);
+          ResourceArchive.field_f.a(ClientException.field_e, DualLinkNode.field_r, -114, true);
+          ResourceArchive.field_f.i(79);
           while (jl.pollKeyEvent((byte) 5)) {
-            mf.field_f.a(go.currentKeyCharacter, dc.currentKeyCode, true);
+            ResourceArchive.field_f.a(go.currentKeyCharacter, dc.currentKeyCode, true);
           }
           var1_int = -30 % ((55 - param0) / 43);
           if (ch.field_b != -1) {

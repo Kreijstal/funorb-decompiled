@@ -20,7 +20,7 @@ final class qa extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("ninja", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("ninja", -28138)) {
           return false;
         }
         LegacyUtf8Decoder.field_d = pl.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.field_m);
@@ -52,7 +52,7 @@ final class qa extends ki {
           aa.a(0, hn.field_b, true, param3, var6, 1);
           var6.setCacheKeys(this.field_m, param3, (byte) 78);
         }
-        tl.a(var6.sprite, (byte) -78, param2, 640, LegacyUtf8Decoder.field_d, ap.field_f, param1, 0, param3, param4, 1);
+        ByteStorage.a(var6.sprite, (byte) -78, param2, 640, LegacyUtf8Decoder.field_d, ap.field_f, param1, 0, param3, param4, 1);
     }
 
     qa(int param0, String param1, String param2, int param3) {
@@ -101,9 +101,9 @@ final class qa extends ki {
         return false;
     }
 
-    final static RgbSprite[] loadRgbSprites(int fileId, int groupId, mf archive, boolean obfuscationGuard) {
+    final static RgbSprite[] loadRgbSprites(int fileId, int groupId, ResourceArchive archive, boolean obfuscationGuard) {
         RuntimeException var4 = null;
-        mf var5 = null;
+        ResourceArchive var5 = null;
         Object stackIn_4_0 = null;
         RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -112,8 +112,8 @@ final class qa extends ki {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!obfuscationGuard) {
-            var5 = (mf) null;
-            qa.loadRgbSprites(-20, -51, (mf) null, true);
+            var5 = (ResourceArchive) null;
+            qa.loadRgbSprites(-20, -51, (ResourceArchive) null, true);
           }
           if (ln.decodeSpritesFromArchive(-97, fileId, archive, groupId)) {
             stackIn_6_0 = ClientException.buildRgbSprites(-835);
@@ -137,24 +137,24 @@ final class qa extends ki {
 
     final static void e(byte param0) {
         int var1 = 35 / ((-43 - param0) / 37);
-        mf.field_f.a(-125);
+        ResourceArchive.field_f.a(-125);
         if (null != sj.field_b) {
-          mf.field_f.a(-76, sj.field_b);
+          ResourceArchive.field_f.a(-76, sj.field_b);
           return;
         }
-        sj.field_b = new tb(mf.field_f, ke.field_b);
-        mf.field_f.a(-76, sj.field_b);
+        sj.field_b = new tb(ResourceArchive.field_f, ke.field_b);
+        ResourceArchive.field_f.a(-76, sj.field_b);
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
-        mf var7 = null;
-        mf var7Lifetime1;
-        mf var7Lifetime2;
+        ResourceArchive var7 = null;
+        ResourceArchive var7Lifetime1;
+        ResourceArchive var7Lifetime2;
         if (!this.b((byte) -127)) {
           Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, fj.field_Sb[param3], 0);
           if (param1 > -84) {
-            var7 = (mf) null;
-            qa.loadRgbSprites(90, 38, (mf) null, true);
+            var7 = (ResourceArchive) null;
+            qa.loadRgbSprites(90, 38, (ResourceArchive) null, true);
             return;
           }
           return;
@@ -164,20 +164,20 @@ final class qa extends ki {
           aa.a(0, rh.field_c, true, param3, var8, 2);
           var8.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          tl.a(var8.sprite, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
+          ByteStorage.a(var8.sprite, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
           if (param1 > -84) {
-            var7Lifetime1 = (mf) null;
-            qa.loadRgbSprites(90, 38, (mf) null, true);
+            var7Lifetime1 = (ResourceArchive) null;
+            qa.loadRgbSprites(90, 38, (ResourceArchive) null, true);
             return;
           }
           return;
         }
-        tl.a(var8.sprite, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
+        ByteStorage.a(var8.sprite, (byte) -78, param0, 306, nk.field_h, mp.field_Zb, param4, 0, param3, param2, 2);
         if (param1 <= -84) {
           return;
         }
-        var7Lifetime2 = (mf) null;
-        qa.loadRgbSprites(90, 38, (mf) null, true);
+        var7Lifetime2 = (ResourceArchive) null;
+        qa.loadRgbSprites(90, 38, (ResourceArchive) null, true);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {

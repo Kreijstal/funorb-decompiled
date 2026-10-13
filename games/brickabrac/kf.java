@@ -97,7 +97,7 @@ final class kf extends k {
     final qh a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        mf var4 = null;
+        ResourceArchive var4 = null;
         CharSequence var5 = null;
         CharSequence var6 = null;
         qh stackIn_2_0 = null;
@@ -115,8 +115,8 @@ final class kf extends k {
           var6 = (CharSequence) ((Object) param0);
           var3_int = fl.a(var6, -28734);
           if (param1 != 106) {
-            var4 = (mf) null;
-            kf.a((String) null, (String) null, (mf) null, -17);
+            var4 = (ResourceArchive) null;
+            kf.a((String) null, (String) null, (ResourceArchive) null, -17);
           }
           if (var3_int > 0 &&
             var3_int <= 130) {
@@ -302,7 +302,7 @@ final class kf extends k {
         }
     }
 
-    final static RgbSprite[] a(String param0, String param1, mf param2, int param3) {
+    final static RgbSprite[] a(String param0, String param1, ResourceArchive param2, int param3) {
         RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

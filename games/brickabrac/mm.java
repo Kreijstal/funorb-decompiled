@@ -204,7 +204,7 @@ final class mm extends mh {
         SoundPlayback var1Lifetime1;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          eo.field_f.c();
+          DirectByteStorage.field_f.c();
           if (param0 != -29448) {
             var3 = (String) null;
             mm.a((String) null, (byte) 116);

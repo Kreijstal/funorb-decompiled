@@ -270,7 +270,7 @@ final class rk extends mh {
           var3 = param0.readBits(12, (byte) 85);
           var4 = new dc[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (eo.a(false, param0)) {
+            if (DirectByteStorage.a(false, param0)) {
               var6 = new dc();
               param0.readBits(24, (byte) -115);
               param0.readBits(24, (byte) 107);

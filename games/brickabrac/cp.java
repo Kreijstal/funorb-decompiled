@@ -155,7 +155,7 @@ final class cp extends h {
             stackIn_13_0 = var5;
             return stackIn_13_0;
           }
-          stackIn_4_0 = tl.field_b;
+          stackIn_4_0 = ByteStorage.field_b;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

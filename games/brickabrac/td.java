@@ -47,7 +47,7 @@ final class td extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("volcanic", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("volcanic", -28138)) {
           return false;
         }
         RasterCacheSurface.field_j = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
@@ -104,7 +104,7 @@ final class td extends ki {
             BitPacketBuffer.a(se.field_k, var6, param3, 1, (byte) 18, 0);
             var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ko.a(-91, -7, RasterCacheSurface.field_j, param1, var6.sprite, param3, 640, 1, param4, param2, cp.field_I);
+          ArchiveIndex.a(-91, -7, RasterCacheSurface.field_j, param1, var6.sprite, param3, 640, 1, param4, param2, cp.field_I);
         }
         if (!param0) {
           field_v = (mh) null;
@@ -195,7 +195,7 @@ final class td extends ki {
             BitPacketBuffer.a(RectangleBody.field_p, var6, param3, 2, (byte) 119, -14);
             var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ko.a(-113, -14, cg.field_q, param4, var6.sprite, param3, 306, 2, param2, param0, gq.field_Sb);
+          ArchiveIndex.a(-113, -14, cg.field_q, param4, var6.sprite, param3, 306, 2, param2, param0, gq.field_Sb);
         }
         if (param1 >= -84) {
           field_v = (mh) null;

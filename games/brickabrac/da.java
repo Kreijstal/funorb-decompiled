@@ -113,7 +113,7 @@ final class da extends hb {
           return kd.field_c;
         }
         if (null != wl.field_K) {
-          if (!wl.field_K.a((byte) -127)) {
+          if (!wl.field_K.ensureIndex((byte) -127)) {
             return wn.field_a;
           }
           return d.field_C;
@@ -121,23 +121,23 @@ final class da extends hb {
         if (param0 != 103) {
           return (String) null;
         }
-        if (!ma.field_P.a((byte) -127)) {
+        if (!ma.field_P.ensureIndex((byte) -127)) {
           return tm.field_e;
         }
-        if (!ma.field_P.a("commonui", -28138)) {
-          return ib.field_F + " - " + ma.field_P.b(0, "commonui") + "%";
+        if (!ma.field_P.ensureGroupAvailableByName("commonui", -28138)) {
+          return ib.field_F + " - " + ma.field_P.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!vh.field_S.a((byte) -127)) {
+        if (!vh.field_S.ensureIndex((byte) -127)) {
           return vh.field_P;
         }
-        if (!vh.field_S.a("commonui", -28138)) {
-          return m.field_k + " - " + vh.field_S.b(0, "commonui") + "%";
+        if (!vh.field_S.ensureGroupAvailableByName("commonui", -28138)) {
+          return m.field_k + " - " + vh.field_S.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!ja.field_c.a((byte) -127)) {
+        if (!ja.field_c.ensureIndex((byte) -127)) {
           return IntHistoryBuffer.field_k;
         }
-        if (!ja.field_c.a(param0 ^ 12)) {
-          return qm.field_e + " - " + ja.field_c.b(-4126) + "%";
+        if (!ja.field_c.ensureAllGroupsAvailable(param0 ^ 12)) {
+          return qm.field_e + " - " + ja.field_c.getProgress(-4126) + "%";
         }
         return kd.field_a;
     }

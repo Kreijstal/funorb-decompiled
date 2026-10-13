@@ -10,7 +10,7 @@ final class ji implements Iterable {
     static String field_g;
     IntrusiveNode[] field_d;
     int field_c;
-    static mf field_a;
+    static ResourceArchive field_a;
     static mh field_b;
 
     public static void a(int param0) {
@@ -88,7 +88,7 @@ final class ji implements Iterable {
         Object var6_ref = null;
         RuntimeException var6_ref2 = null;
         try {
-          var6_ref = eo.field_f;
+          var6_ref = DirectByteStorage.field_f;
           synchronized (var6_ref) {
             if (param0 != 25459) {
               field_g = (String) null;
@@ -169,7 +169,7 @@ final class ji implements Iterable {
           var5 = param1;
           while (true) {
             if (var4.length <= var5) {
-              stackIn_18_0 = mf.a((byte) -95, var3[var3.length - 1]);
+              stackIn_18_0 = ResourceArchive.a((byte) -95, var3[var3.length - 1]);
               return stackIn_18_0;
             }
             var6 = var4[var5];

@@ -241,7 +241,7 @@ final class cr extends oc {
         return var5;
     }
 
-    final static RgbSprite[] loadRgbSpritesByName(String groupName, mf archive, String fileName, int obfuscationGuard) {
+    final static RgbSprite[] loadRgbSpritesByName(String groupName, ResourceArchive archive, String fileName, int obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -258,8 +258,8 @@ final class cr extends oc {
           if (obfuscationGuard != 2) {
             field_N = (NodeDeque) null;
           }
-          var4_int = archive.a(groupName, false);
-          var5 = archive.a(var4_int, obfuscationGuard ^ -31, fileName);
+          var4_int = archive.getGroupId(groupName, false);
+          var5 = archive.getFileId(var4_int, obfuscationGuard ^ -31, fileName);
           stackIn_3_0 = DualLinkIterator.loadRgbSprites(var5, obfuscationGuard ^ -23174, var4_int, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

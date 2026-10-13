@@ -5,7 +5,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
     static cd field_v;
     private IndexedSprite[] screenshots;
     static mh field_t;
-    private mf archive;
+    private ResourceArchive archive;
     static int field_x;
     static RgbSprite field_s;
     static int field_w;
@@ -72,7 +72,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
         return false;
     }
 
-    MembershipBenefitsScreen(mf archive) {
+    MembershipBenefitsScreen(ResourceArchive archive) {
         super(12, 180, 460, 150, 35, (int[]) null);
         try {
           this.archive = archive;

@@ -407,7 +407,7 @@ final class sj {
                                     break regionExit1;
                                   case 22:
                                     m.field_h = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                                    ko.field_s = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 119);
+                                    ArchiveIndex.field_s = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 119);
                                     break regionExit1;
                                   case 23:
                                     oc.field_p = ((PacketBuffer) ((Object) var1)).readLong(-32768);
@@ -521,7 +521,7 @@ final class sj {
                 rh.field_d[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
               }
               bb.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              mf.field_c = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
+              ResourceArchive.field_c = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
               for (var3_int = 0; var3_int < lj.field_p.length; var3_int++) {
                 lj.field_p[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
               }

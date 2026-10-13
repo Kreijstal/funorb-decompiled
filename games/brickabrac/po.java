@@ -4,7 +4,7 @@
 final class po {
     int field_h;
     String field_g;
-    mf field_b;
+    ResourceArchive field_b;
     String field_d;
     static ad field_e;
     static String field_c;
@@ -54,8 +54,8 @@ final class po {
         try {
           try {
             var9 = kj.field_D.getGraphics();
-            if (eo.field_g == null) {
-              eo.field_g = new java.awt.Font("Helvetica", 1, 13);
+            if (DirectByteStorage.field_g == null) {
+              DirectByteStorage.field_g = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
@@ -75,7 +75,7 @@ final class po {
               var10.setColor(java.awt.Color.black);
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(2 + 3 * param2, 2, -(3 * param2) + 300, 30);
-              var10.setFont(eo.field_g);
+              var10.setFont(DirectByteStorage.field_g);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
               var9.drawImage(oj.field_r, to.field_b / 2 - 152, be.field_g / 2 - 18, (java.awt.image.ImageObserver) null);
@@ -90,12 +90,12 @@ final class po {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(var7 + 1, var8 + 1, 301, 31);
               var9.fillRect(2 + var7 + param2 * 3, var8 + 2, 300 - param2 * 3, 30);
-              var9.setFont(eo.field_g);
+              var9.setFont(DirectByteStorage.field_g);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (-(param0.length() * 6) + 304) / 2, 22 + var8);
             }
             if (LevelSequence.field_g != null) {
-              var9.setFont(eo.field_g);
+              var9.setFont(DirectByteStorage.field_g);
               var9.setColor(java.awt.Color.white);
               var9.drawString(LevelSequence.field_g, to.field_b / 2 - 6 * LevelSequence.field_g.length() / 2, -26 + be.field_g / 2);
             }

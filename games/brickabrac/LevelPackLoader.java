@@ -34,7 +34,7 @@ final class LevelPackLoader {
         di.a((byte) -114);
     }
 
-    final static LevelPack loadLevelPack(byte obfuscationGuard, mf archive, PacketBuffer packet, int archiveSelector, int packId, int completionWord, int scoreOffset) {
+    final static LevelPack loadLevelPack(byte obfuscationGuard, ResourceArchive archive, PacketBuffer packet, int archiveSelector, int packId, int completionWord, int scoreOffset) {
         int dupTemp$1 = 0;
         RuntimeException var7 = null;
         int var8 = 0;
@@ -63,7 +63,7 @@ final class LevelPackLoader {
           for (var9 = 0; var8 > var9; var9++) {
             var10 = ai.readLevelMetadata((byte) -12, packet);
             var12.metadata[var10.levelId] = var10;
-            var13.levelData[var10.levelId] = archive.a(var10.resourceIndex, archiveSelector, 4);
+            var13.levelData[var10.levelId] = archive.takeFile(var10.resourceIndex, archiveSelector, 4);
           }
           var9Lifetime1 = -74 % ((7 - obfuscationGuard) / 52);
           stackIn_5_0 = var13;

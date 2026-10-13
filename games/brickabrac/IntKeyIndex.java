@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lm {
+final class IntKeyIndex {
     static String field_d;
     static String field_a;
     static ta field_c;
     static RgbSprite[] field_e;
     static int field_b;
-    private int[] field_f;
+    private int[] entries;
 
     final static boolean a(int param0, int param1) {
         if (param1 != 0) {
@@ -54,7 +54,7 @@ final class lm {
         field_c = null;
         field_a = null;
         if (!param0) {
-          lm.a(true);
+          IntKeyIndex.a(true);
         }
     }
 
@@ -68,33 +68,33 @@ final class lm {
 
     final static boolean a(byte param0) {
         if (param0 != -10) {
-          lm.a((byte) 35);
+          IntKeyIndex.a((byte) 35);
         }
         return null != pe.gameplayScreen ? true : false;
     }
 
-    final int a(int param0, byte param1) {
-        int var3;
-        int var4;
-        int var5;
-        if (param1 >= -68) {
-          lm.a(47);
+    final int findIndex(int key, byte obfuscationGuard) {
+        int bucketMask;
+        int bucket;
+        int originalIndex;
+        if (obfuscationGuard >= -68) {
+          IntKeyIndex.a(47);
         }
-        var3 = -1 + (this.field_f.length >> 1);
-        var4 = var3 & param0;
+        bucketMask = -1 + (this.entries.length >> 1);
+        bucket = bucketMask & key;
         while (true) {
-          var5 = this.field_f[var4 + var4 + 1];
-          if (-1 == var5) {
+          originalIndex = this.entries[bucket + bucket + 1];
+          if (-1 == originalIndex) {
             return -1;
           }
-          if (param0 == this.field_f[var4 + var4]) {
-            return var5;
+          if (key == this.entries[bucket + bucket]) {
+            return originalIndex;
           }
-          var4 = var3 & var4 + 1;
+          bucket = bucketMask & bucket + 1;
         }
     }
 
-    lm(int[] param0) {
+    IntKeyIndex(int[] keys) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -106,18 +106,18 @@ final class lm {
         int var3Lifetime1;
         try {
           var2_int = 1;
-          while ((param0.length >> 1) + param0.length >= var2_int) {
+          while ((keys.length >> 1) + keys.length >= var2_int) {
             var2_int = var2_int << 1;
           }
-          this.field_f = new int[var2_int + var2_int];
+          this.entries = new int[var2_int + var2_int];
           for (var3 = 0; var3 < var2_int + var2_int; var3++) {
-            this.field_f[var3] = -1;
+            this.entries[var3] = -1;
           }
-          for (var3Lifetime1 = 0; param0.length > var3Lifetime1; var3Lifetime1++) {
-            for (var4 = param0[var3Lifetime1] & -1 + var2_int; this.field_f[var4 + (var4 + 1)] != -1; var4 = var4 + 1 & var2_int - 1) {
+          for (var3Lifetime1 = 0; keys.length > var3Lifetime1; var3Lifetime1++) {
+            for (var4 = keys[var3Lifetime1] & -1 + var2_int; this.entries[var4 + (var4 + 1)] != -1; var4 = var4 + 1 & var2_int - 1) {
             }
-            this.field_f[var4 + var4] = param0[var3Lifetime1];
-            this.field_f[var4 + (var4 + 1)] = var3Lifetime1;
+            this.entries[var4 + var4] = keys[var3Lifetime1];
+            this.entries[var4 + (var4 + 1)] = var3Lifetime1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,7 +125,7 @@ final class lm {
           var2 = decompiledCaughtException;
           stackIn_16_0 = var2;
           stackIn_16_1 = new StringBuilder().append("lm.<init>(");
-          if (param0 == null) {
+          if (keys == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";

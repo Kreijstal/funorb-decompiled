@@ -72,8 +72,8 @@ final class pl {
     public static void a(int param0) {
         field_f = null;
         if (param0 != 0) {
-          mf var2 = (mf) null;
-          pl.loadRgbSpriteByName((String) null, (String) null, (byte) -53, (mf) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          pl.loadRgbSpriteByName((String) null, (String) null, (byte) -53, (ResourceArchive) null);
         }
         field_c = null;
         field_a = null;
@@ -173,8 +173,8 @@ final class pl {
           param0.addMouseListener(lj.mouseInput);
           param0.addMouseMotionListener(lj.mouseInput);
           if (param1 != 7282) {
-            mf var3 = (mf) null;
-            pl.loadRgbSpriteByName((String) null, (String) null, (byte) 8, (mf) null);
+            ResourceArchive var3 = (ResourceArchive) null;
+            pl.loadRgbSpriteByName((String) null, (String) null, (byte) 8, (ResourceArchive) null);
           }
           param0.addFocusListener(lj.mouseInput);
         } catch (RuntimeException runtimeException) {
@@ -214,7 +214,7 @@ final class pl {
         }
     }
 
-    final static RgbSprite loadRgbSpriteByName(String groupName, String fileName, byte obfuscationGuard, mf archive) {
+    final static RgbSprite loadRgbSpriteByName(String groupName, String fileName, byte obfuscationGuard, ResourceArchive archive) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -229,8 +229,8 @@ final class pl {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = archive.a(groupName, false);
-          var5 = archive.a(var4_int, -108, fileName);
+          var4_int = archive.getGroupId(groupName, false);
+          var5 = archive.getFileId(var4_int, -108, fileName);
           var6 = 116 % ((40 - obfuscationGuard) / 57);
           stackIn_1_0 = dk.loadRgbSprite(-873, archive, var4_int, var5);
           return stackIn_1_0;

@@ -200,7 +200,7 @@ final class sq {
         ff.field_d.clear((byte) -83);
         if (!pf.field_f) {
           if (!param0) {
-            if (im.field_g) {
+            if (GzipInflater.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
@@ -211,7 +211,7 @@ final class sq {
             }
           } else {
             sq.a(15);
-            if (im.field_g) {
+            if (GzipInflater.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
@@ -238,7 +238,7 @@ final class sq {
           RankingsScreen.field_u = var1;
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
-            if (im.field_g) {
+            if (GzipInflater.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
@@ -249,7 +249,7 @@ final class sq {
             }
           } else {
             sq.a(15);
-            if (im.field_g) {
+            if (GzipInflater.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
@@ -264,7 +264,7 @@ final class sq {
         if (mk.field_j == var5) {
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
-            if (im.field_g) {
+            if (GzipInflater.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
@@ -275,7 +275,7 @@ final class sq {
             }
           } else {
             sq.a(15);
-            if (im.field_g) {
+            if (GzipInflater.field_g) {
               if (d.field_H != rn.field_c) {
                 bq.field_b.field_l.setLength(0);
                 DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
@@ -296,7 +296,7 @@ final class sq {
         RankingsScreen.field_u = var1;
         ff.field_d.addLast(bj.field_P, (byte) 3);
         if (!param0) {
-          if (im.field_g) {
+          if (GzipInflater.field_g) {
             if (d.field_H != rn.field_c) {
               bq.field_b.field_l.setLength(0);
               DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);
@@ -307,7 +307,7 @@ final class sq {
           }
         } else {
           sq.a(15);
-          if (im.field_g) {
+          if (GzipInflater.field_g) {
             if (d.field_H != rn.field_c) {
               bq.field_b.field_l.setLength(0);
               DelegatingCanvas.a(-9, (long)d.field_H, bq.field_b.field_l);

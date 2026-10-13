@@ -96,7 +96,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         }
     }
 
-    final static void a(boolean param0, mf param1, mf param2, mf param3, int param4) {
+    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         try {
           ma.field_I = rm.a("", 16711935);
           ma.field_I.a(false, 20892);
@@ -116,8 +116,8 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         if (obfuscationGuard == -6) {
           return DualLinkDeque.field_d.field_db;
         }
-        mf var3 = (mf) null;
-        MultiplayerExitScreen.a(false, (mf) null, (mf) null, (mf) null, 63);
+        ResourceArchive var3 = (ResourceArchive) null;
+        MultiplayerExitScreen.a(false, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, 63);
         return DualLinkDeque.field_d.field_db;
     }
 

@@ -19,7 +19,7 @@ abstract class sl extends DualLinkNode {
         field_A = null;
         field_B = null;
         if (param0 != 31434) {
-          sl.a((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (mf) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
+          sl.a((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
         }
         field_C = null;
         field_D = null;
@@ -27,7 +27,7 @@ abstract class sl extends DualLinkNode {
 
     abstract Object g(int param0);
 
-    final static void a(String[][] param0, RgbSprite[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, mf param7, int[] param8, RgbSprite[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
+    final static void a(String[][] param0, RgbSprite[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, ResourceArchive param7, int[] param8, RgbSprite[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
         rk[] array$0 = null;
         rk[] array$1 = null;
         rk[] array$2 = null;
@@ -89,7 +89,7 @@ abstract class sl extends DualLinkNode {
           th.field_a = param3;
           aj.field_c = param1;
           mk.field_c = param0;
-          im.field_c = param6;
+          GzipInflater.field_c = param6;
           ff.field_i = param14;
           pf.field_i = param11;
           ki.field_k = param9;
@@ -127,7 +127,7 @@ abstract class sl extends DualLinkNode {
           kk.field_b = new mh(0L, cd.field_d, ch.field_d);
           la.field_b = new mh(0L, cd.field_d, kc.field_o);
           wh.field_h = new mh(0L, cd.field_d, r.field_v);
-          dp.field_x = new mh(0L, ik.field_a, tl.field_d);
+          dp.field_x = new mh(0L, ik.field_a, ByteStorage.field_d);
           rl.field_e = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           gj.field_b = new mh(0L, fm.field_b, ua.field_e.toUpperCase());
           gj.field_b.field_eb = vd.field_e;
@@ -191,7 +191,7 @@ abstract class sl extends DualLinkNode {
           ij.field_e = new mh(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
           ba.field_v = new mh(0L, qh.field_j);
           rg.field_e = new mh(0L, qb.field_x);
-          jd.field_a = new mh(0L, lj.field_k, bc.field_b.toUpperCase());
+          jd.field_a = new mh(0L, lj.field_k, ArchiveSource.field_b.toUpperCase());
           gb.field_l = new mh[4 + param13];
           MatchCompleteScreen.field_A = new rk[4 + param13][];
           gb.field_l[0] = new mh(0L, wi.field_n, ro.field_H);
@@ -216,7 +216,7 @@ abstract class sl extends DualLinkNode {
             MatchCompleteScreen.field_A[3] = array$1;
             MatchCompleteScreen.field_A[3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < pe.field_t; var17_intLifetime2++) {
-              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, im.field_c[var17_intLifetime2]);
+              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {

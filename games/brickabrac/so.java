@@ -7,8 +7,8 @@ final class so {
     static ke field_f;
     static int field_b;
     static fk field_d;
-    private mf field_g;
-    private mf field_c;
+    private ResourceArchive field_g;
+    private ResourceArchive field_c;
 
     final static RasterCacheSurface a(int param0, int param1, int param2, NodeDeque param3) {
         Object var4 = null;
@@ -74,9 +74,9 @@ final class so {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_g.a(param0, 0, 4);
+          var4 = this.field_g.takeFile(param0, 0, 4);
         } else {
-          var4 = this.field_c.a(32767 & param0, 0, 4);
+          var4 = this.field_c.takeFile(32767 & param0, 0, 4);
         }
         var3 = new kn();
         if (var4 != null) {
@@ -90,7 +90,7 @@ final class so {
         return var3;
     }
 
-    final static void a(mf param0, mf param1, mf param2, int param3, mf param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         int var7_int = 0;
         RgbSprite dupTemp$0 = null;
         RuntimeException stackIn_67_0 = null;
@@ -144,7 +144,7 @@ final class so {
         try {
           RankingsScreen.field_t = uo.loadIndexedSpriteByName((byte) 29, param0, "splash", "basic");
           er.field_b = pl.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
-          var21 = param2.a(-86, "basic", "gamefont");
+          var21 = param2.takeFileByName(-86, "basic", "gamefont");
           var15 = var21;
           var13 = var15;
           var5 = var13;
@@ -154,7 +154,7 @@ final class so {
           ma.field_O.palettes = bg.field_n;
           nn.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
           nn.field_g.palettes = bg.field_n;
-          var22 = param4.a(86, "kartika13", "");
+          var22 = param4.takeFileByName(86, "kartika13", "");
           var17 = var22;
           var14 = var17;
           var5Lifetime1 = var14;
@@ -222,7 +222,7 @@ final class so {
           LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
           kb.field_Ub = cr.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
-          im.field_a = cr.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
+          GzipInflater.field_a = cr.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
           IntrusiveNode.field_f = cr.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
           tf.field_g = cr.loadRgbSpritesByName("basic", param0, "track_heads", 2);
           ef.field_e = cr.loadRgbSpritesByName("basic", param0, "characters_small", 2);
@@ -245,10 +245,10 @@ final class so {
           }
           pa.field_m[24].bindRasterTarget();
           Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
-          mf.field_a = new RgbSprite[pa.field_m.length];
+          ResourceArchive.field_a = new RgbSprite[pa.field_m.length];
           for (var10_intLifetime3 = 0; var10_intLifetime3 < pa.field_m.length; var10_intLifetime3++) {
-            mf.field_a[var10_intLifetime3] = new RgbSprite(pa.field_m[var10_intLifetime3].canvasWidth / 2, pa.field_m[var10_intLifetime3].canvasHeight / 2);
-            mf.field_a[var10_intLifetime3].bindRasterTarget();
+            ResourceArchive.field_a[var10_intLifetime3] = new RgbSprite(pa.field_m[var10_intLifetime3].canvasWidth / 2, pa.field_m[var10_intLifetime3].canvasHeight / 2);
+            ResourceArchive.field_a[var10_intLifetime3].bindRasterTarget();
             pa.field_m[var10_intLifetime3 % 29].a(0, 0);
           }
           kp.field_e = new RgbSprite[dg.field_b.length];
@@ -397,7 +397,7 @@ final class so {
         }
     }
 
-    so(int param0, mf param1, mf param2) {
+    so(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -410,10 +410,10 @@ final class so {
           this.field_c = param2;
           this.field_g = param1;
           if (this.field_g != null) {
-            this.field_g.c(-123, 0);
+            this.field_g.getFileCapacity(-123, 0);
           }
           if (this.field_c != null) {
-            this.field_c.c(-113, 0);
+            this.field_c.getFileCapacity(-113, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -8,7 +8,7 @@ final class og extends mh {
     private char[] field_fc;
     static String field_ac;
     private rk[] field_Qb;
-    static mf field_gc;
+    static ResourceArchive field_gc;
     private int field_Rb;
     private int field_Sb;
     private int field_Tb;
@@ -21,7 +21,7 @@ final class og extends mh {
     private int field_ec;
     static TextFont field_Yb;
 
-    final static void a(String[] args, IndexedSprite[] param1, byte[] param2, RgbSprite[][] param3, byte[] param4, int[] param5, int param6, RgbSprite[][] param7, mf param8, int param9, mf param10, String[][] param11, mf param12, int param13, int[] param14, String[][] param15, boolean param16) {
+    final static void a(String[] args, IndexedSprite[] param1, byte[] param2, RgbSprite[][] param3, byte[] param4, int[] param5, int param6, RgbSprite[][] param7, ResourceArchive param8, int param9, ResourceArchive param10, String[][] param11, ResourceArchive param12, int param13, int[] param14, String[][] param15, boolean param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -301,7 +301,7 @@ final class og extends mh {
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param0 != 28) {
-            field_gc = (mf) null;
+            field_gc = (ResourceArchive) null;
           }
           var2_int = 0;
           var3 = this.field_Qb;
@@ -362,7 +362,7 @@ final class og extends mh {
                   var6 = 1;
                 }
                 if (tm.a(var6, (byte) 18) == 2) {
-                  eo.a(0, param0, 1, var6);
+                  DirectByteStorage.a(0, param0, 1, var6);
                 }
                 c.a(var5_int, DualLinkNode.field_p, (byte) -113, ng.field_b, param3, (String) null);
                 MenuScreen.a(var5_int, 29295, qn.field_n, DualLinkNode.field_p, ng.field_b);
@@ -529,7 +529,7 @@ final class og extends mh {
         }
     }
 
-    final static void a(boolean param0, mf param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         RuntimeException stackIn_793_0 = null;
         StringBuilder stackIn_793_1 = null;
         String stackIn_794_2 = null;
@@ -1326,7 +1326,7 @@ final class og extends mh {
           }
           var2Lifetime151 = gr.a(true, "explain_gauges_miss");
           if (var2Lifetime151 != null) {
-            tl.field_c = MenuButton.a(var2Lifetime151, (byte) 98);
+            ByteStorage.field_c = MenuButton.a(var2Lifetime151, (byte) 98);
           }
           var2Lifetime152 = gr.a(true, "explain_gauges");
           if (var2Lifetime152 != null) {
@@ -1499,7 +1499,7 @@ final class og extends mh {
         RuntimeException var1 = null;
         try {
           if (param0 != 107) {
-            field_gc = (mf) null;
+            field_gc = (ResourceArchive) null;
           }
           LevelPack.b(124);
           if (null != kj.field_D) {

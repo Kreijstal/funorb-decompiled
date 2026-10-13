@@ -55,7 +55,7 @@ final class hm {
           m.field_h = -1;
           MenuSelection.field_i = 0;
           uf.field_c = 0;
-          ko.field_s = -1;
+          ArchiveIndex.field_s = -1;
           if (param6.field_bb == null) {
             param6.field_bb = new NodeDeque();
           }

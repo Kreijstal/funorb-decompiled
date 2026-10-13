@@ -36,7 +36,7 @@ final class hd {
 
     final static void a(int param0, ta param1, int param2, int param3) {
         try {
-          lm.field_c = param1;
+          IntKeyIndex.field_c = param1;
           int var4_int = -108 % ((46 - param0) / 37);
           hn.field_a = param2;
           bh.field_vb = param3;

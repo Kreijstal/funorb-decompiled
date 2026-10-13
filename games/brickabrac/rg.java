@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rg {
-    private mf field_d;
+    private ResourceArchive field_d;
     static tf field_i;
     static String[] field_b;
     private to field_h;
     static String[] field_k;
     static int field_a;
     static mh field_e;
-    private mf field_j;
+    private ResourceArchive field_j;
     static RgbSprite field_f;
     static int[] field_g;
     static mh field_c;
@@ -21,9 +21,9 @@ final class rg {
           return var3;
         }
         if (param0 < 32768) {
-          var4 = this.field_j.a(param0, 1, 4);
+          var4 = this.field_j.takeFile(param0, 1, 4);
         } else {
-          var4 = this.field_d.a(param0 & 32767, 1, 4);
+          var4 = this.field_d.takeFile(param0 & 32767, 1, 4);
         }
         var3 = new wd();
         if (var4 != null) {
@@ -46,7 +46,7 @@ final class rg {
         return var3;
     }
 
-    final static boolean a(mf param0, byte param1) {
+    final static boolean a(ResourceArchive param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -57,7 +57,7 @@ final class rg {
           if (param1 <= 45) {
             field_i = (tf) null;
           }
-          stackIn_3_0 = param0.a(96);
+          stackIn_3_0 = param0.ensureAllGroupsAvailable(96);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class rg {
         }
     }
 
-    rg(int param0, mf param1, mf param2, bp param3) {
+    rg(int param0, ResourceArchive param1, ResourceArchive param2, bp param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -101,12 +101,12 @@ final class rg {
           this.field_j = param1;
           this.field_d = param2;
           if (this.field_j != null) {
-            this.field_j.c(-123, 1);
+            this.field_j.getFileCapacity(-123, 1);
           }
           if (this.field_d == null) {
             return;
           }
-          this.field_d.c(-124, 1);
+          this.field_d.getFileCapacity(-124, 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

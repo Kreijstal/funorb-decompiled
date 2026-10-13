@@ -16,7 +16,7 @@ abstract class ki {
     int field_l;
     static int pressedButton;
     static int[] field_i;
-    static mf field_f;
+    static ResourceArchive field_f;
     static RgbSprite[][] field_k;
     static int masterSoundGain;
 
@@ -33,10 +33,10 @@ abstract class ki {
         if (this.field_l < this.field_b.length) {
           var3 = this.field_j[this.field_c[this.field_l]];
           var2 = var3;
-          if (BrickABrac.field_I.a(var2, "", (byte) -121)) {
+          if (BrickABrac.field_I.hasFileName(var2, "", (byte) -121)) {
             this.field_b[this.field_l] = SoundPlayback.field_m.a(var3, "", (byte) 122);
           }
-          if (og.field_gc.a(var2, "", (byte) -121)) {
+          if (og.field_gc.hasFileName(var2, "", (byte) -121)) {
             this.field_b[this.field_l] = SoundPlayback.field_m.a((byte) 28, var3, "");
           }
           if (this.field_b[this.field_l] != null) {
@@ -44,7 +44,7 @@ abstract class ki {
           }
         }
         if (param0 != 0) {
-          field_f = (mf) null;
+          field_f = (ResourceArchive) null;
         }
         return this.field_b;
     }
@@ -55,7 +55,7 @@ abstract class ki {
         if (param0 >= -12) {
           return (RgbSprite[]) null;
         }
-        return im.field_a;
+        return GzipInflater.field_a;
     }
 
     ki(int param0, String param1, String param2, int param3) {

@@ -161,7 +161,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -56);
         al.a(this.screenId, 19);
-        im.a(550, 5, 243, 5, 140, (byte) -91, 45);
+        GzipInflater.a(550, 5, 243, 5, 140, (byte) -91, 45);
         this.a(0);
         this.firstPackCard.draw((byte) 105);
         this.secondPackCard.draw((byte) 116);

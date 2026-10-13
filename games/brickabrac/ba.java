@@ -14,7 +14,7 @@ class ba extends DualLinkNode {
     ba() {
     }
 
-    final static IndexedSprite[] a(int param0, int param1, int param2, mf param3) {
+    final static IndexedSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         IndexedSprite[] stackIn_2_0 = null;
         Object stackIn_5_0 = null;

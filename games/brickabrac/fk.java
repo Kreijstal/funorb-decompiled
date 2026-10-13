@@ -13,7 +13,7 @@ final class fk {
     static RgbSprite field_e;
     static String field_d;
 
-    final static boolean a(mf param0, mf param1, mf param2, int param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -24,19 +24,19 @@ final class fk {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.a((byte) -127)) {
+          if (!param1.ensureIndex((byte) -127)) {
             return false;
           }
-          if (!param1.a("commonui", -28138)) {
+          if (!param1.ensureGroupAvailableByName("commonui", -28138)) {
             return false;
           }
           if (param3 > -63) {
             return true;
           }
-          if (param0.a((byte) -127) &&
-            param0.a("commonui", -28138)) {
-            if (param2.a((byte) -127) &&
-              param2.a("button.gif", -28138)) {
+          if (param0.ensureIndex((byte) -127) &&
+            param0.ensureGroupAvailableByName("commonui", -28138)) {
+            if (param2.ensureIndex((byte) -127) &&
+              param2.ensureGroupAvailableByName("button.gif", -28138)) {
               return true;
             }
             return false;
@@ -258,12 +258,12 @@ final class fk {
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        mf var4 = null;
+        ResourceArchive var4 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param0 != 14114) {
-            var4 = (mf) null;
-            fk.a((mf) null, (mf) null, (mf) null, -121);
+            var4 = (ResourceArchive) null;
+            fk.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
           }
           var1 = k.field_h;
           while (ik.a(104)) {

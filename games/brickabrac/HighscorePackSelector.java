@@ -6,7 +6,7 @@ final class HighscorePackSelector {
     private int buttonIndex;
     private int lastPointerY;
     int selectedPackIndex;
-    static mf field_c;
+    static ResourceArchive field_c;
     private HighscoresScreen owner;
     private int lastPointerX;
     static String field_g;

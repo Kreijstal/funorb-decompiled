@@ -3,7 +3,7 @@
  */
 final class ic {
     static long field_b;
-    static mf field_a;
+    static ResourceArchive field_a;
     static fj field_c;
 
     final static void a(boolean param0, om param1) {

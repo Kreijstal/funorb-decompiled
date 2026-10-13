@@ -13,7 +13,7 @@ final class wd extends DualLinkNode {
     static String field_x;
     static int field_z;
     static mh field_w;
-    static mf field_C;
+    static ResourceArchive field_C;
 
     final void g(int param0) {
         int var2 = 0;
@@ -207,7 +207,7 @@ final class wd extends DualLinkNode {
           var14 = ef.field_b[1];
           var29Lifetime3 = var14;
           var29Lifetime4 = var14;
-          var13 = eo.field_l;
+          var13 = DirectByteStorage.field_l;
           var12.field_d.a(var13, 105, 12, var14);
           var15 = bm.field_d;
           var17 = ef.field_b[2];

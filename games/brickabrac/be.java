@@ -45,7 +45,7 @@ final class be {
           return this;
         }
         String var4 = (String) null;
-        be.a((mf) null, (String) null, -112, (String) null);
+        be.a((ResourceArchive) null, (String) null, -112, (String) null);
         return this;
     }
 
@@ -59,7 +59,7 @@ final class be {
         return this;
     }
 
-    final static String a(mf param0, String param1, int param2, String param3) {
+    final static String a(ResourceArchive param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_3_0 = null;
@@ -74,11 +74,11 @@ final class be {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 94 % ((param2 - 52) / 42);
-          if (!param0.a((byte) -127)) {
+          if (!param0.ensureIndex((byte) -127)) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;
           }
-          stackIn_5_0 = param3 + " - " + param0.b(-4126) + "%";
+          stackIn_5_0 = param3 + " - " + param0.getProgress(-4126) + "%";
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,10 +269,10 @@ final class be {
         }
     }
 
-    final static byte[] a(boolean param0, Object param1, boolean param2) {
+    final static byte[] readArchiveBytes(boolean obfuscationGuard, Object storage, boolean copy) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        tl var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_8_0 = null;
         byte[] stackIn_11_0 = null;
@@ -282,39 +282,39 @@ final class be {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == null) {
+          if (storage == null) {
             return null;
           }
-          if (param1 instanceof byte[]) {
-            var3 = (byte[]) (param1);
-            if (!param2) {
+          if (storage instanceof byte[]) {
+            var3 = (byte[]) (storage);
+            if (!copy) {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = ke.a(false, var3);
+            stackIn_6_0 = ke.copyBytes(false, var3);
             return stackIn_6_0;
           }
-          if (param0) {
+          if (obfuscationGuard) {
             stackIn_11_0 = (byte[]) null;
             return stackIn_11_0;
           }
-          if (!(param1 instanceof tl)) {
+          if (!(storage instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var4 = (tl) (param1);
-          stackIn_14_0 = var4.b(16616);
+          var4 = (ByteStorage) (storage);
+          stackIn_14_0 = var4.toByteArray(16616);
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("be.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("be.G(").append(obfuscationGuard).append(',');
+          if (storage == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(copy).append(')').toString());
         }
     }
 
@@ -341,7 +341,7 @@ final class be {
         try {
           if (param0) {
             Object var4 = (Object) null;
-            be.a(true, (Object) null, true);
+            be.readArchiveBytes(true, (Object) null, true);
           }
           param1.field_k = this.field_k;
           param1.field_i = this.field_i;

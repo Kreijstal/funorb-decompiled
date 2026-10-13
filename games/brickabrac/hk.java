@@ -71,7 +71,7 @@ final class hk extends ib implements hf, en {
         }
     }
 
-    final static void a(TextFont param0, byte param1, mf param2) {
+    final static void a(TextFont param0, byte param1, ResourceArchive param2) {
         int var8 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -95,8 +95,8 @@ final class hk extends ib implements hf, en {
             rk.a("QC1", (Throwable) null, param1 ^ 118);
             return;
           }
-          param2.field_l = 0;
-          param2.field_b = false;
+          param2.decodedFilePolicy = 0;
+          param2.discardPackedGroups = false;
           pj.field_c = new so(var3_int, param2, param2);
           nh.field_c = new rg(var3_int, param2, param2, new rm());
           var4 = gj.b(0);
@@ -106,7 +106,7 @@ final class hk extends ib implements hf, en {
           }
           hb.a(var4, false);
           var10 = (TextFont) null;
-          ko.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
+          ArchiveIndex.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
           nb.field_e = ug.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
           cp.field_K = ug.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
           var5 = Rasterizer2D.width;
@@ -121,7 +121,7 @@ final class hk extends ib implements hf, en {
             hk.i((byte) 86);
           }
           Rasterizer2D.bind(var14, var5, var6);
-          fe.field_kb = e.a(nb.field_e, ko.field_j, var4, 4, cp.field_K);
+          fe.field_kb = e.a(nb.field_e, ArchiveIndex.field_j, var4, 4, cp.field_K);
           wd.field_w.field_bb = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -202,7 +202,7 @@ final class hk extends ib implements hf, en {
         }
     }
 
-    final static void initializeMenuScreens(byte obfuscationGuard, mf archive) {
+    final static void initializeMenuScreens(byte obfuscationGuard, ResourceArchive archive) {
         try {
           pg.menuScreens = new MenuScreen[22];
           GameCanvas.registerMenuScreen(-74, new MainMenuScreen());

@@ -7,7 +7,7 @@ abstract class ag extends oc implements sd {
     oc[] field_H;
     static int[] field_M;
     static String field_I;
-    static mf field_G;
+    static ResourceArchive field_G;
     static String[] buttonLabels;
     static String field_J;
     static int[] field_L;

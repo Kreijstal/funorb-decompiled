@@ -328,7 +328,7 @@ final class HighscoresScreen extends MenuScreen {
           var22 = null;
           var12 = BrickABrac.field_J ? 1 : 0;
           try {
-            var13 = (bg) (mf.field_i.first(-48));
+            var13 = (bg) (ResourceArchive.field_i.first(-48));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -656,17 +656,17 @@ final class HighscoresScreen extends MenuScreen {
         al.a(this.screenId, 19);
         this.a(0);
         if (og.h(-26090)) {
-          im.a(550, 5, 243, 5, 140, (byte) -108, 45);
+          GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);
           fj.a(243, na.field_N, 140, nn.field_g, -15531, 2);
           return;
         }
-        im.a(475, 5, 33, 5, 140, (byte) -101, 120);
+        GzipInflater.a(475, 5, 33, 5, 140, (byte) -101, 120);
         nn.field_g.drawCentered(qn.packNames[this.packIndex], 357, 1 + (-nn.field_g.xHeight + 178), 0, -1);
         da.packSelectorIcons[this.packIndex].e(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
           field_v = -65;
         }
-        im.a(475, 5, 243, 5, 178, (byte) -57, 120);
+        GzipInflater.a(475, 5, 243, 5, 178, (byte) -57, 120);
         var2 = 149 + nn.field_g.capHeight + 38;
         var3 = 0;
         nn.field_g.drawLeft(DualLinkIterator.field_i, -fk.field_g + lq.field_b[0] + 12, var2, var3, -1);

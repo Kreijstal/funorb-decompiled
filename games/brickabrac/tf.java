@@ -32,7 +32,7 @@ final class tf {
                 param0 = gi.field_u;
               }
               param2 = 2;
-              eo.field_k.a(70, GameScreen.field_d);
+              DirectByteStorage.field_k.a(70, GameScreen.field_d);
             }
             if (param2 == 10) {
               RectangleBody.c(116);
@@ -52,7 +52,7 @@ final class tf {
                 return;
               }
               if (!cg.field_l) {
-                eo.field_k.h(-113);
+                DirectByteStorage.field_k.h(-113);
                 return;
               }
             }

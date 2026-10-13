@@ -37,7 +37,7 @@ final class nn {
               if (param2 != 11) {
                 if (param2 != 12) {
                   if (13 == param2) {
-                    eo.a(0, param0, 2, this.field_a);
+                    DirectByteStorage.a(0, param0, 2, this.field_a);
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -63,13 +63,13 @@ final class nn {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  eo.a(0, param0, 1, this.field_a);
+                  DirectByteStorage.a(0, param0, 1, this.field_a);
                   if (var5 != 0) {
-                    eo.a(0, param0, 0, this.field_a);
+                    DirectByteStorage.a(0, param0, 0, this.field_a);
                   }
                 }
               } else {
-                eo.a(0, param0, 0, this.field_a);
+                DirectByteStorage.a(0, param0, 0, this.field_a);
               }
             }}
           return true;
@@ -165,7 +165,7 @@ final class nn {
         }
     }
 
-    final static void a(mf param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2599_0;
             StringBuilder stackIn_2599_1;
@@ -175,10 +175,10 @@ final class nn {
             RuntimeException var2_ref;
             int var3;
             int var4;
-            mf param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(mf initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2599_0 = null;
@@ -310,7 +310,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_x_entered_game", (byte) 69);
                 if (null != var2) {
-                  lm.field_d = MenuButton.a(var2, (byte) 82);
+                  IntKeyIndex.field_d = MenuButton.a(var2, (byte) 82);
                 }
                 var2 = nk.a("mu_x_joined_your_game", (byte) 98);
                 if (var2 != null) {
@@ -410,7 +410,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_lobby_location", (byte) 8);
                 if (var2 != null) {
-                  bc.field_c = MenuButton.a(var2, (byte) 89);
+                  ArchiveSource.field_c = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("mu_gamelist_all_games", (byte) -116);
                 if (null != var2) {
@@ -438,7 +438,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_gamelist_elapsed_time", (byte) -14);
                 if (null != var2) {
-                  tl.field_d = MenuButton.a(var2, (byte) 84);
+                  ByteStorage.field_d = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = nk.a("mu_play_rated", (byte) 60);
                 if (var2 != null) {
@@ -450,7 +450,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_options", (byte) -120);
                 if (var2 != null) {
-                  bc.field_b = MenuButton.a(var2, (byte) 93);
+                  ArchiveSource.field_b = MenuButton.a(var2, (byte) 93);
                 }
                 var2 = nk.a("mu_options_whocanjoin", (byte) -121);
                 if (var2 != null) {
@@ -578,7 +578,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_lobby_friends", (byte) 16);
                 if (null != var2) {
-                  eo.field_l = MenuButton.a(var2, (byte) 76);
+                  DirectByteStorage.field_l = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("mu_chat_lobby_hide", (byte) -126);
                 if (null != var2) {
@@ -786,7 +786,7 @@ final class nn {
                 }
                 var2 = nk.a("you_can_join", (byte) -112);
                 if (null != var2) {
-                  bc.field_d = MenuButton.a(var2, (byte) 124);
+                  ArchiveSource.field_d = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("you_can_ask_to_join", (byte) 35);
                 if (null != var2) {
@@ -1680,7 +1680,7 @@ final class nn {
                 }
                 var2 = nk.a("create_password_tooltip", (byte) -19);
                 if (var2 != null) {
-                  lm.field_a = MenuButton.a(var2, (byte) 119);
+                  IntKeyIndex.field_a = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("create_password_hint", (byte) -128);
                 if (var2 != null) {
@@ -1696,7 +1696,7 @@ final class nn {
                 }
                 var2 = nk.a("create_email_confirm_tooltip", (byte) -113);
                 if (var2 != null) {
-                  mf.field_e = MenuButton.a(var2, (byte) 107);
+                  ResourceArchive.field_e = MenuButton.a(var2, (byte) 107);
                 }
                 var2 = nk.a("create_age_tooltip", (byte) -124);
                 if (null != var2) {
@@ -2606,7 +2606,7 @@ final class nn {
                 }
                 var2 = nk.a("mp_showchat_unread2", (byte) -106);
                 if (var2 != null) {
-                  bc.field_a = MenuButton.a(var2, (byte) 78);
+                  ArchiveSource.field_a = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = nk.a("click_to_quickchat", (byte) -119);
                 if (null != var2) {
@@ -2726,11 +2726,11 @@ final class nn {
                 }
                 var2 = nk.a("members_expansion_price_top", (byte) -121);
                 if (null != var2) {
-                  tl.field_a = MenuButton.a(var2, (byte) 80);
+                  ByteStorage.field_a = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("members_expansion_price_bottom", (byte) -124);
                 if (var2 != null) {
-                  ko.field_q = MenuButton.a(var2, (byte) 125);
+                  ArchiveIndex.field_q = MenuButton.a(var2, (byte) 125);
                 }
                 var2 = nk.a("reconnect_lost_seq,0", (byte) -106);
                 if (var2 != null) {
@@ -2856,7 +2856,7 @@ final class nn {
                 }
                 var2 = nk.a("fs_timeout", (byte) 40);
                 if (null != var2) {
-                  eo.field_h = MenuButton.a(var2, (byte) 119);
+                  DirectByteStorage.field_h = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("fs_button_tryagain", (byte) -118);
                 if (null != var2) {
@@ -3099,7 +3099,7 @@ final class nn {
                   MultiplayerExitScreen.savePrompts[2] = MenuButton.a(var2, (byte) 81);
                 }
                 if (param1 <= 89) {
-                  nn.a((mf) null, -113);
+                  nn.a((ResourceArchive) null, -113);
                 }
                 var2 = nk.a("mustlogin_alternate,3", (byte) -120);
                 if (null != var2) {

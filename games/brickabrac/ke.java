@@ -227,7 +227,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           MovingBody.shuffleValues(-122, param0, 5, param2);
           if (param1 != 39) {
-            ke.a(false, (byte[]) null);
+            ke.copyBytes(false, (byte[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -690,7 +690,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    final static byte[] a(boolean param0, byte[] param1) {
+    final static byte[] copyBytes(boolean obfuscationGuard, byte[] data) {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
@@ -700,20 +700,20 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             field_e = (mh) null;
           }
-          var2_int = param1.length;
+          var2_int = data.length;
           var3 = new byte[var2_int];
-          pm.a(param1, 0, var3, 0, var2_int);
+          pm.a(data, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("ke.R(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("ke.R(").append(obfuscationGuard).append(',');
+          if (data == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

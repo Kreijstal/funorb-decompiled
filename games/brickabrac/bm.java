@@ -154,7 +154,7 @@ final class bm {
         }
     }
 
-    final static void a(byte param0, mf param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -168,7 +168,7 @@ final class bm {
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2 = new BitPacketBuffer(param1.a(-72, "logo.fo3d", ""));
+          var2 = new BitPacketBuffer(param1.takeFileByName(-72, "logo.fo3d", ""));
           var3 = var2.readUnsignedByte(param0 + 325);
           var2.beginBitRead(param0 - 47);
           um.field_o = rk.a(var2, 24);
@@ -408,7 +408,7 @@ final class bm {
         }
     }
 
-    final static void a(mf param0, mf param1, int param2, mf param3, wp param4, mf param5, mf param6) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3, wp param4, ResourceArchive param5, ResourceArchive param6) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

@@ -208,14 +208,14 @@ final class il extends CircleBody {
     final static void a(ie param0, tg param1, int param2, int param3, int param4, int param5, java.awt.Component param6, boolean param7) {
         try {
           PcmPlayer.a(param2, param7, 10);
-          eo.field_f = PcmPlayer.a(param1, param6, 0, param4);
+          DirectByteStorage.field_f = PcmPlayer.a(param1, param6, 0, param4);
           jk.field_w = PcmPlayer.a(param1, param6, 1, param3);
           ob.soundMixer = new AudioMixer();
           AchievementBrowserScreen.field_u = param5 * param3 / param2;
           jk.field_w.setRootStream(ob.soundMixer);
           m.field_f = param0;
           m.field_f.a(ScorePopup.field_p, false);
-          eo.field_f.setRootStream(m.field_f);
+          DirectByteStorage.field_f.setRootStream(m.field_f);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

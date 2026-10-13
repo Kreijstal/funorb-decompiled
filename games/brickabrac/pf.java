@@ -165,7 +165,7 @@ final class pf implements ub {
         field_h = null;
     }
 
-    final static void a(int param0, byte[] param1, mf param2, String[] param3, int param4, boolean param5, RgbSprite[][] param6, mf param7, int param8, int[] param9, String[] param10, RgbSprite[][] param11, IndexedSprite[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, mf param19) {
+    final static void a(int param0, byte[] param1, ResourceArchive param2, String[] param3, int param4, boolean param5, RgbSprite[][] param6, ResourceArchive param7, int param8, int[] param9, String[] param10, RgbSprite[][] param11, IndexedSprite[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, ResourceArchive param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -352,7 +352,7 @@ final class pf implements ub {
     }
 
     final static boolean a(boolean param0, int param1) {
-        mf var3;
+        ResourceArchive var3;
         if (!param0) {
           if (null == hd.pendingScreen &&
             param1 == lp.currentScreen.screenId) {
@@ -366,8 +366,8 @@ final class pf implements ub {
           }
           return true;
         }
-        var3 = (mf) null;
-        pf.a(97, (byte[]) null, (mf) null, (String[]) null, 18, true, (RgbSprite[][]) null, (mf) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (mf) null);
+        var3 = (ResourceArchive) null;
+        pf.a(97, (byte[]) null, (ResourceArchive) null, (String[]) null, 18, true, (RgbSprite[][]) null, (ResourceArchive) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (ResourceArchive) null);
         if (null == hd.pendingScreen &&
           param1 == lp.currentScreen.screenId) {
           return true;

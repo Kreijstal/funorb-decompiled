@@ -113,7 +113,7 @@ final class ri extends ib implements en {
           return;
         }
         aa.a((byte) 96);
-        ko.a(-32120);
+        ArchiveIndex.a(-32120);
     }
 
     final boolean a(int param0, byte param1, oc param2, char param3) {

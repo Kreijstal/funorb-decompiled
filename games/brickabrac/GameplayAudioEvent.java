@@ -9,7 +9,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
     static volatile boolean field_i;
     static int mouseWheelDelta;
     int detailId;
-    static mf field_k;
+    static ResourceArchive field_k;
     int eventCode;
 
     final static oh a(String param0, int param1) {

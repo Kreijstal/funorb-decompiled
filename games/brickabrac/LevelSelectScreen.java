@@ -93,9 +93,9 @@ final class LevelSelectScreen extends MenuScreen {
         int var6;
         super.drawScreen((byte) -101);
         al.a(13, 19);
-        im.a(550, 5, 33, 5, 140, (byte) -106, 45);
-        im.a(160, 5, 243, 5, 178, (byte) -88, 45);
-        im.a(385, 5, 243, 5, 178, (byte) -124, 210);
+        GzipInflater.a(550, 5, 33, 5, 140, (byte) -106, 45);
+        GzipInflater.a(160, 5, 243, 5, 178, (byte) -88, 45);
+        GzipInflater.a(385, 5, 243, 5, 178, (byte) -124, 210);
         nn.field_g.drawCentered(qn.packNames[this.pack.packId], 320, 1 + (178 - nn.field_g.xHeight), 0, -1);
         da.packSelectorIcons[this.pack.packId].e(565, 140, -2048, 4096);
         if (this.levelList.selectedLevelIndex >= 0 &&

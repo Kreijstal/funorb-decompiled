@@ -69,7 +69,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           gr.pointerIdleTicks = 0;
-          eo.livePointerX = event.getX();
+          DirectByteStorage.livePointerX = event.getX();
           ep.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
@@ -129,7 +129,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         try {
           if (lj.mouseInput != null) {
             gr.pointerIdleTicks = 0;
-            eo.livePointerX = -1;
+            DirectByteStorage.livePointerX = -1;
             ep.livePointerY = -1;
             kn.livePointerChanged = true;
           }
@@ -232,7 +232,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           gr.pointerIdleTicks = 0;
-          eo.livePointerX = event.getX();
+          DirectByteStorage.livePointerX = event.getX();
           ep.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
@@ -261,7 +261,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             return;
           }
           gr.pointerIdleTicks = 0;
-          eo.livePointerX = event.getX();
+          DirectByteStorage.livePointerX = event.getX();
           ep.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;

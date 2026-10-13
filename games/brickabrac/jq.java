@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jq extends bc {
+final class jq extends ArchiveSource {
     static int[] field_t;
     static TextFont field_y;
     private ve field_B;
@@ -10,7 +10,7 @@ final class jq extends bc {
     private hb field_s;
     private int field_A;
     private IntrusiveHashTable field_l;
-    private ko field_v;
+    private ArchiveIndex field_v;
     private byte[] field_e;
     private ve field_g;
     static NodeDeque field_n;
@@ -27,9 +27,9 @@ final class jq extends bc {
     private long field_q;
     private boolean field_w;
 
-    final int a(byte param0, int param1) {
-        hb var3 = (hb) (this.field_l.get(-117, (long)param1));
-        if (param0 >= -60) {
+    final int getGroupProgress(byte obfuscationGuard, int groupId) {
+        hb var3 = (hb) (this.field_l.get(-117, (long)groupId));
+        if (obfuscationGuard >= -60) {
           this.field_k = true;
         }
         if (var3 != null) {
@@ -122,7 +122,7 @@ final class jq extends bc {
         if (param0 != 20312) {
           this.field_o = -97;
         }
-        if (this.b((byte) -112) == null) {
+        if (this.getIndex((byte) -112) == null) {
           return;
         }
         IntrusiveNode var2 = this.field_x.first(-9);
@@ -131,10 +131,10 @@ final class jq extends bc {
           if (var3 < 0) {
             var2.unlink((byte) 111);
           } else {
-            if (this.field_v.field_f <= var3) {
+            if (this.field_v.groupCapacity <= var3) {
               var2.unlink((byte) 111);
             } else {
-              if (this.field_v.field_m[var3] == 0) {
+              if (this.field_v.fileCounts[var3] == 0) {
                 var2.unlink((byte) 111);
               } else {
                 if (this.field_e[var3] == 0) {
@@ -155,7 +155,7 @@ final class jq extends bc {
 
     final void f(int param0) {
         if (param0 != -10476) {
-          this.field_v = (ko) null;
+          this.field_v = (ArchiveIndex) null;
         }
         if (null == this.field_B) {
           return;
@@ -171,9 +171,9 @@ final class jq extends bc {
         cb.a(uc.e((byte) -119), 9);
     }
 
-    final byte[] a(int param0, byte param1) {
-        hb var3 = this.a(0, param0, (byte) -110);
-        if (param1 > -33) {
+    final byte[] getPackedGroup(int groupId, byte obfuscationGuard) {
+        hb var3 = this.a(0, groupId, (byte) -110);
+        if (obfuscationGuard > -33) {
           this.field_h = 38;
         }
         if (var3 == null) {
@@ -202,7 +202,7 @@ final class jq extends bc {
         boolean decompiledFrameRemainder0 = true;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (null != this.field_z) {
-          if (this.b((byte) -112) == null) {
+          if (this.getIndex((byte) -112) == null) {
             return;
           }
           if (this.field_k) {
@@ -220,8 +220,8 @@ final class jq extends bc {
               }
               var3 = this.field_z.next((byte) 116);
             }
-            while (this.field_m < this.field_v.field_m.length) {
-              if (0 == this.field_v.field_m[this.field_m]) {
+            while (this.field_m < this.field_v.fileCounts.length) {
+              if (0 == this.field_v.fileCounts[this.field_m]) {
                 this.field_m = this.field_m + 1;
                 continue;
               }
@@ -264,8 +264,8 @@ final class jq extends bc {
                 var3Lifetime1 = this.field_z.next((byte) 116);
               }
               scanLoop1: while (true) {
-                if (this.field_v.field_m.length > this.field_m) {
-                  if (this.field_v.field_m[this.field_m] != 0) {
+                if (this.field_v.fileCounts.length > this.field_m) {
+                  if (this.field_v.fileCounts[this.field_m] != 0) {
                     if (this.field_j.d((byte) 101)) {
                       var2_intLifetime1 = 0;
                       break scanLoop1;
@@ -399,12 +399,12 @@ final class jq extends bc {
               fq.field_a.reset();
               fq.field_a.update(var5, 0, -2 + var18.length);
               var6_int = (int)fq.field_a.getValue();
-              if (var6_int != this.field_v.field_p[param1]) {
+              if (var6_int != this.field_v.groupCrcs[param1]) {
                 throw new RuntimeException();
               }
-              if (this.field_v.field_c != null &&
-                this.field_v.field_c[param1] != null) {
-                var28 = this.field_v.field_c[param1];
+              if (this.field_v.groupDigests != null &&
+                this.field_v.groupDigests[param1] != null) {
+                var28 = this.field_v.groupDigests[param1];
                 var27 = jd.a(var5, 0, -14970, -2 + var18.length);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (var27[var9] != var28[var9]) {
@@ -413,7 +413,7 @@ final class jq extends bc {
                 }
               }
               var7 = ((var5[-2 + var18.length] & 255) << 8) + (255 & var5[var18.length - 1]);
-              if (var7 != (65535 & this.field_v.field_r[param1])) {
+              if (var7 != (65535 & this.field_v.groupVersions[param1])) {
                 throw new RuntimeException();
               }
               if (this.field_e[param1] != 1) {
@@ -447,12 +447,12 @@ final class jq extends bc {
             fq.field_a.reset();
             fq.field_a.update(var5, 0, -2 + var18.length);
             var6_int = (int)fq.field_a.getValue();
-            if (var6_int != this.field_v.field_p[param1]) {
+            if (var6_int != this.field_v.groupCrcs[param1]) {
               throw new RuntimeException();
             }
-            if (this.field_v.field_c != null &&
-              this.field_v.field_c[param1] != null) {
-              var29 = this.field_v.field_c[param1];
+            if (this.field_v.groupDigests != null &&
+              this.field_v.groupDigests[param1] != null) {
+              var29 = this.field_v.groupDigests[param1];
               var30 = jd.a(var5, 0, -14970, -2 + var18.length);
               var11 = 0;
               var9 = var11;
@@ -482,8 +482,8 @@ final class jq extends bc {
           }
           return null;
         }
-        var5[var18.length - 2] = (byte)(this.field_v.field_r[param1] >>> 8);
-        var5[var18.length - 1] = (byte)this.field_v.field_r[param1];
+        var5[var18.length - 2] = (byte)(this.field_v.groupVersions[param1] >>> 8);
+        var5[var18.length - 1] = (byte)this.field_v.groupVersions[param1];
         if (this.field_B != null) {
           this.field_u.a(param1, false, var18, this.field_B);
           if (this.field_e[param1] != 1) {
@@ -496,7 +496,7 @@ final class jq extends bc {
         return (hb) (var4);
     }
 
-    final ko b(byte param0) {
+    final ArchiveIndex getIndex(byte obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -526,18 +526,18 @@ final class jq extends bc {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_v = new ko(var7, this.field_A, this.field_i);
-            if (this.field_o != this.field_v.field_a) {
+            this.field_v = new ArchiveIndex(var7, this.field_A, this.field_i);
+            if (this.field_o != this.field_v.revision) {
               throw new RuntimeException();
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
             this.field_v = null;
-            if (this.field_j.a(param0 ^ -110)) {
+            if (this.field_j.a(obfuscationGuard ^ -110)) {
               this.field_s = null;
             } else {
-              this.field_s = (hb) ((Object) this.field_j.a(param0 ^ 952050480, 255, (byte) 0, this.field_h, true));
+              this.field_s = (hb) ((Object) this.field_j.a(obfuscationGuard ^ 952050480, 255, (byte) 0, this.field_h, true));
             }
             return null;
           }
@@ -546,7 +546,7 @@ final class jq extends bc {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_v = new ko(var7, this.field_A, this.field_i);
+            this.field_v = new ArchiveIndex(var7, this.field_A, this.field_i);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
@@ -564,9 +564,9 @@ final class jq extends bc {
           }
         }
         if (null != this.field_B) {
-          this.field_e = new byte[this.field_v.field_f];
+          this.field_e = new byte[this.field_v.groupCapacity];
         }
-        if (param0 != -112) {
+        if (obfuscationGuard != -112) {
           this.f(-85);
         }
         this.field_s = null;

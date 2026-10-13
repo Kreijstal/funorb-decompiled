@@ -13,7 +13,7 @@ final class jg {
     private long field_l;
     private long field_i;
     private long field_o;
-    static mf field_d;
+    static ResourceArchive field_d;
     private long field_j;
     static String field_q;
     private byte[] field_g;
@@ -394,7 +394,7 @@ final class jg {
 
     final long a(byte param0) {
         if (param0 <= 20) {
-          field_d = (mf) null;
+          field_d = (ResourceArchive) null;
         }
         return this.field_m;
     }

@@ -11,8 +11,8 @@ final class ce {
     static PaletteFont field_e;
 
     final static void a(int param0) {
-        if (mf.field_f != null) {
-          mf.field_f.i((byte) -36);
+        if (ResourceArchive.field_f != null) {
+          ResourceArchive.field_f.i((byte) -36);
           if (param0 != 224) {
             field_d = -126;
             if (null != sj.field_b) {

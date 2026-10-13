@@ -65,7 +65,7 @@ final class dp extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("halloween", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("halloween", -28138)) {
           return false;
         }
         nf.field_U = pl.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);

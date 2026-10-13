@@ -47,10 +47,10 @@ final class bk extends IntrusiveNode {
         return var0;
     }
 
-    private final static boolean a(mf param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_p) {
-          var1 = param0.a(0, 0, 4);
+          var1 = param0.takeFile(0, 0, 4);
           if (var1 == null) {
             return false;
           }
@@ -59,14 +59,14 @@ final class bk extends IntrusiveNode {
         return true;
     }
 
-    final static bk a(mf param0, int param1, int param2) {
+    final static bk a(ResourceArchive param0, int param1, int param2) {
         try {
           bk var4_ref = null;
           if (!bk.a(param0)) {
-            param0.a(param2, param1, (byte) 102);
+            param0.ensureFileAvailable(param2, param1, (byte) 102);
             return null;
           }
-          byte[] var3 = param0.a(param2, param1, 4);
+          byte[] var3 = param0.takeFile(param2, param1, 4);
           if (var3 == null) {
             return null;
           }
@@ -377,14 +377,14 @@ final class bk extends IntrusiveNode {
         field_x = null;
     }
 
-    final static bk a(mf param0, String param1, String param2) {
+    final static bk a(ResourceArchive param0, String param1, String param2) {
         try {
           bk var4_ref = null;
           if (!bk.a(param0)) {
-            param0.a(param2, param1, 0);
+            param0.ensureFileAvailableByName(param2, param1, 0);
             return null;
           }
-          byte[] var3 = param0.a(85, param1, param2);
+          byte[] var3 = param0.takeFileByName(85, param1, param2);
           if (var3 == null) {
             return null;
           }

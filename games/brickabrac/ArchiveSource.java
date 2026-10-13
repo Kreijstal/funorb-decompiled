@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bc {
+abstract class ArchiveSource {
     static String field_a;
     static String field_d;
     static String field_b;
     static String field_c;
 
-    abstract ko b(byte param0);
+    abstract ArchiveIndex getIndex(byte obfuscationGuard);
 
     final static boolean a(String param0, String param1, String param2, int param3, byte param4, dk param5, boolean param6) {
         RuntimeException var7 = null;
@@ -24,13 +24,13 @@ abstract class bc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 > -102) {
-            bc.a(51);
+            ArchiveSource.a(51);
           }
           if (ik.field_g != ej.field_P) {
             return false;
           }
-          var8 = new qf(mf.field_f, param5);
-          mf.field_f.a(-102, var8);
+          var8 = new qf(ResourceArchive.field_f, param5);
+          ResourceArchive.field_f.a(-102, var8);
           if (LevelPackLoader.a((byte) -56)) {
             var8.c(true);
             return true;
@@ -104,15 +104,15 @@ abstract class bc {
           ih.field_d = gb.a(var3, 71);
           return;
         }
-        bc.a(49, -113L);
+        ArchiveSource.a(49, -113L);
         tb.field_cb = jl.field_e.readCp1252String(-1);
         CharSequence var2 = (CharSequence) ((Object) tb.field_cb);
         ih.field_d = gb.a(var2, 71);
     }
 
-    abstract byte[] a(int param0, byte param1);
+    abstract byte[] getPackedGroup(int groupId, byte obfuscationGuard);
 
-    abstract int a(byte param0, int param1);
+    abstract int getGroupProgress(byte obfuscationGuard, int groupId);
 
     public static void a(byte param0) {
         field_b = null;
@@ -120,7 +120,7 @@ abstract class bc {
         field_d = null;
         field_c = null;
         if (param0 != -59) {
-          bc.a(-15, -86L);
+          ArchiveSource.a(-15, -86L);
         }
     }
 

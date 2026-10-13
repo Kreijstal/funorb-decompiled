@@ -110,7 +110,7 @@ final class ai extends ki {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!AchievementIcon.field_m.a("paris", -28138)) {
+          if (!AchievementIcon.field_m.ensureGroupAvailableByName("paris", -28138)) {
             return false;
           }
           qa.field_y = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.field_m);

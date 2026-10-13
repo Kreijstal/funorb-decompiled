@@ -19,7 +19,7 @@ final class aj {
         field_b = null;
     }
 
-    final static mf a(int param0, boolean param1) {
+    final static ResourceArchive a(int param0, boolean param1) {
         if (param1) {
           return go.a(false, param0, false, 1, true, true);
         }

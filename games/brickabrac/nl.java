@@ -4,7 +4,7 @@
 final class nl {
     static int decodedSpriteCount;
     static RgbSprite field_d;
-    static mf field_a;
+    static ResourceArchive field_a;
     static om field_f;
     static RgbSprite field_e;
     static RgbSprite field_b;
@@ -185,7 +185,7 @@ final class nl {
             discarded$4 = var14.append((char) var7);
           }
         }
-        field_a = (mf) null;
+        field_a = (ResourceArchive) null;
         var8Lifetime1 = 0;
         if (param3 < 0L) {
           param3 = -param3;

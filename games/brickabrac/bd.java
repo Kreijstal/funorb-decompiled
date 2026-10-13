@@ -101,7 +101,7 @@ final class bd implements ub {
         }
     }
 
-    final static RgbSprite[] loadRgbSpritesByName(String groupName, String fileName, mf archive, byte obfuscationGuard) {
+    final static RgbSprite[] loadRgbSpritesByName(String groupName, String fileName, ResourceArchive archive, byte obfuscationGuard) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -116,12 +116,12 @@ final class bd implements ub {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = archive.a(groupName, false);
+          var4_int = archive.getGroupId(groupName, false);
           if (obfuscationGuard != -8) {
             stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
-          var5 = archive.a(var4_int, -46, fileName);
+          var5 = archive.getFileId(var4_int, -46, fileName);
           stackIn_4_0 = qa.loadRgbSprites(var5, var4_int, archive, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

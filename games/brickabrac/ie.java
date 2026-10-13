@@ -715,7 +715,7 @@ final class ie extends AudioStream {
         this.b(param1 ^ -8246, param0);
     }
 
-    final synchronized boolean a(int param0, vm param1, int param2, mf param3, wp param4) {
+    final synchronized boolean a(int param0, vm param1, int param2, ResourceArchive param3, wp param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;

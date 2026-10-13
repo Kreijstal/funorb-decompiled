@@ -66,7 +66,7 @@ final class SoundPlayback extends IntrusiveNode {
         RuntimeException var3 = null;
         try {
           if (1 == param2) {
-            stackIn_2_0 = rd.a(lm.field_d, new String[]{param1}, (byte) 103);
+            stackIn_2_0 = rd.a(IntKeyIndex.field_d, new String[]{param1}, (byte) 103);
             return stackIn_2_0;
           }
           if (param2 == 2) {

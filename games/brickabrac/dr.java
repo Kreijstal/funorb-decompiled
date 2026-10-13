@@ -6,8 +6,8 @@ final class dr {
     private int field_c;
     private int field_a;
 
-    final static dr a(mf param0, int param1, int param2) {
-        byte[] var3 = param0.a(param2, param1, 4);
+    final static dr a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.takeFile(param2, param1, 4);
         if (var3 == null) {
           return null;
         }

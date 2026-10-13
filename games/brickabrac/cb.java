@@ -21,17 +21,17 @@ final class cb extends k {
         }
         if (null == ej.field_I) {
           var1 = p.a(-123);
-          eo.field_k = new hk(var1, (String) null, true, false, false);
-          mf.field_f.a(-126, rj.field_c);
-          rj.field_c.b((byte) 108, eo.field_k);
+          DirectByteStorage.field_k = new hk(var1, (String) null, true, false, false);
+          ResourceArchive.field_f.a(-126, rj.field_c);
+          rj.field_c.b((byte) 108, DirectByteStorage.field_k);
           rj.field_c.j(20);
           return;
         }
         ej.field_I.m(17);
         var1Lifetime1 = p.a(-123);
-        eo.field_k = new hk(var1Lifetime1, (String) null, true, false, false);
-        mf.field_f.a(-126, rj.field_c);
-        rj.field_c.b((byte) 108, eo.field_k);
+        DirectByteStorage.field_k = new hk(var1Lifetime1, (String) null, true, false, false);
+        ResourceArchive.field_f.a(-126, rj.field_c);
+        rj.field_c.b((byte) 108, DirectByteStorage.field_k);
         rj.field_c.j(20);
     }
 

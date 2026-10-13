@@ -11,7 +11,7 @@ final class gq extends mh {
     private int field_Tb;
     static int field_Yb;
     static RgbSprite[] field_Ub;
-    static mf field_Rb;
+    static ResourceArchive field_Rb;
 
     final int a(boolean param0, byte param1) {
         StringBuilder discarded$0 = null;

@@ -56,7 +56,7 @@ final class gi extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (AchievementIcon.field_m.a("desert", -28138)) {
+        if (AchievementIcon.field_m.ensureGroupAvailableByName("desert", -28138)) {
           wn.field_b = pl.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.field_m);
           lj.field_q = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
           OptionsScreen.field_B = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
@@ -64,10 +64,10 @@ final class gi extends ki {
           lq.field_d = jh.a(0, wn.field_b);
           oc.field_x = jh.a(0, lj.field_q);
           pp.field_b = jh.a(0, OptionsScreen.field_B);
-          im.field_f[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
+          GzipInflater.field_f[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
           pk.field_e[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
           um.field_l[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
-          im.field_f[1] = ig.a(im.field_f[0], param0);
+          GzipInflater.field_f[1] = ig.a(GzipInflater.field_f[0], param0);
           pk.field_e[1] = ig.a(pk.field_e[0], false);
           um.field_l[1] = pl.a(-16371, um.field_l[0]);
           return true;
@@ -85,7 +85,7 @@ final class gi extends ki {
 
     final RgbSprite[] a(byte param0, int param1) {
         int var3 = 105 % ((param0 - 65) / 49);
-        return im.field_f[param1 - 1];
+        return GzipInflater.field_f[param1 - 1];
     }
 
     final RgbSprite[] a(int param0, boolean param1) {
@@ -143,7 +143,7 @@ final class gi extends ki {
     gi(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-          im.field_f = new RgbSprite[2][];
+          GzipInflater.field_f = new RgbSprite[2][];
           um.field_l = new RgbSprite[2];
           pk.field_e = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
@@ -166,7 +166,7 @@ final class gi extends ki {
           if (ce.field_c == null) {
             return false;
           }
-          if (im.field_f == null) {
+          if (GzipInflater.field_f == null) {
             return false;
           }
           if (pk.field_e != null) {
@@ -186,7 +186,7 @@ final class gi extends ki {
         if (ce.field_c == null) {
           return false;
         }
-        if (im.field_f == null) {
+        if (GzipInflater.field_f == null) {
           return false;
         }
         if (pk.field_e != null) {

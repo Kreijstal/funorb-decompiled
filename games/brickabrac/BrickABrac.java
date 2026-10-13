@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public final class BrickABrac extends sa {
-    static mf field_I;
+    static ResourceArchive field_I;
     static String field_G;
     static mk field_F;
     static int[] field_K;
@@ -36,7 +36,7 @@ public final class BrickABrac extends sa {
         }
         var3 = (IntNode) (kp.achievementNotifications.first(-123));
         if (param0 != 16769381) {
-          field_I = (mf) null;
+          field_I = (ResourceArchive) null;
         }
         if (var3 != null) {
           var5 = ok.field_c;
@@ -262,7 +262,7 @@ public final class BrickABrac extends sa {
             if (hb.field_y) {
               var5_int = ea.a(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
-                if (eo.isBitSet(var35, var6, (byte) -75)) {
+                if (DirectByteStorage.isBitSet(var35, var6, (byte) -75)) {
                   kp.achievementNotifications.addLast(new IntNode(var6), (byte) 3);
                 }
               }
@@ -523,7 +523,7 @@ public final class BrickABrac extends sa {
     public final boolean a(int param0, char param1, int param2) {
         if (cf.a((byte) 62)) {
           if (param0 == 5) {
-            im.field_g = !im.field_g ? true : false;
+            GzipInflater.field_g = !GzipInflater.field_g ? true : false;
             return true;
           }
           if (6 == param0) {
@@ -595,7 +595,7 @@ public final class BrickABrac extends sa {
         ad.b(-16637);
         MouseInput.a((byte) 24);
         MouseWheelSource.a(102);
-        mf.a(false);
+        ResourceArchive.a(false);
         t.a(-11470);
         wm.a(108);
         PacketBuffer.clearStaticStrings(0);
@@ -711,9 +711,9 @@ public final class BrickABrac extends sa {
         qa.d((byte) -119);
         PcmPlayer.g();
         tn.c(-52);
-        ko.a((byte) 117);
-        im.a(-32);
-        bc.a((byte) -59);
+        ArchiveIndex.a((byte) 117);
+        GzipInflater.a(-32);
+        ArchiveSource.a((byte) -59);
         MainMenuScreen.c(!param0 ? true : false);
         FramedMenuScreen.f((byte) -101);
         HighscoresScreen.f(-5);
@@ -777,8 +777,8 @@ public final class BrickABrac extends sa {
         pl.a(0);
         DelegatingCanvas.a(!param0 ? true : false);
         nd.a((byte) 121);
-        lm.a(true);
-        tl.a(10);
+        IntKeyIndex.a(true);
+        ByteStorage.a(10);
         tc.a();
         ro.a((byte) -102);
         bg.a(6);
@@ -844,7 +844,7 @@ public final class BrickABrac extends sa {
         sl.f(31434);
         dn.a(1);
         jb.i((byte) -116);
-        eo.c(7301);
+        DirectByteStorage.c(7301);
         c.a(true);
         th.a(125);
         ej.h(928072);

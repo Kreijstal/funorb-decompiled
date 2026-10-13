@@ -15,7 +15,7 @@ final class LevelList {
     private int buttonIndex;
     private int maxScrollOffset;
     static RgbSprite[] field_e;
-    static mf field_o;
+    static ResourceArchive field_o;
     private int rowGap;
     private MenuButton viewport;
     private int contentHeight;
@@ -304,7 +304,7 @@ final class LevelList {
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param1) {
-            field_o = (mf) null;
+            field_o = (ResourceArchive) null;
           }
           var2_int = param0.length();
           var3 = new byte[var2_int];

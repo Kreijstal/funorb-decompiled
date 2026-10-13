@@ -137,18 +137,18 @@ final class RankingsScreen extends MenuScreen {
         var3 = 582;
         var4 = 182;
         var5 = (-var4 + (var3 - var2)) / 5;
-        mf.field_d = new int[var8.length];
+        ResourceArchive.field_d = new int[var8.length];
         if (var5 < 0) {
           var5 = 0;
         }
-        for (var6 = 0; var6 < mf.field_d.length; var6++) {
-          mf.field_d[var6] = var5 + nn.field_g.measureText(var8[var6]);
+        for (var6 = 0; var6 < ResourceArchive.field_d.length; var6++) {
+          ResourceArchive.field_d[var6] = var5 + nn.field_g.measureText(var8[var6]);
           if (0 < var6) {
-            mf.field_d[var6] = mf.field_d[var6] + mf.field_d[var6 - 1];
+            ResourceArchive.field_d[var6] = ResourceArchive.field_d[var6] + ResourceArchive.field_d[var6 - 1];
           }
         }
-        for (var6Lifetime1 = 0; mf.field_d.length > var6Lifetime1; var6Lifetime1++) {
-          mf.field_d[var6Lifetime1] = mf.field_d[var6Lifetime1] + var4;
+        for (var6Lifetime1 = 0; ResourceArchive.field_d.length > var6Lifetime1; var6Lifetime1++) {
+          ResourceArchive.field_d[var6Lifetime1] = ResourceArchive.field_d[var6Lifetime1] + var4;
         }
     }
 
@@ -219,7 +219,7 @@ final class RankingsScreen extends MenuScreen {
         Object var4Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -101);
-        im.a(550, 5, 243, 5, 140, (byte) -62, 45);
+        GzipInflater.a(550, 5, 243, 5, 140, (byte) -62, 45);
         al.a(this.screenId, 19);
         this.a(0);
         if (og.h(-26090)) {
@@ -229,14 +229,14 @@ final class RankingsScreen extends MenuScreen {
         var2 = 149 + nn.field_g.capHeight;
         var3 = 0;
         nn.field_g.drawLeft(DualLinkIterator.field_i, 66, var2, var3, -1);
-        nn.field_g.drawRight(so.field_e, mf.field_d[0], var2, var3, -1);
-        nn.field_g.drawRight(NodeDeque.field_c, mf.field_d[1], var2, var3, -1);
+        nn.field_g.drawRight(so.field_e, ResourceArchive.field_d[0], var2, var3, -1);
+        nn.field_g.drawRight(NodeDeque.field_c, ResourceArchive.field_d[1], var2, var3, -1);
         if (obfuscationGuard >= -14) {
           this.advanceScreen(false, true, 9);
         }
-        nn.field_g.drawRight(be.field_e, mf.field_d[2], var2, var3, -1);
-        nn.field_g.drawRight(hj.field_Vb, mf.field_d[3], var2, var3, -1);
-        nn.field_g.drawRight(jg.field_p, mf.field_d[4], var2, var3, -1);
+        nn.field_g.drawRight(be.field_e, ResourceArchive.field_d[2], var2, var3, -1);
+        nn.field_g.drawRight(hj.field_Vb, ResourceArchive.field_d[3], var2, var3, -1);
+        nn.field_g.drawRight(jg.field_p, ResourceArchive.field_d[4], var2, var3, -1);
         var2Lifetime1 = 149 + (nn.field_g.capHeight + nn.field_g.descent) * 5 / 2;
         var4 = null;
         if (ch.field_h != null &&

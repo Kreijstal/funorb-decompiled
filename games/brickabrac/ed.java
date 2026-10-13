@@ -16,9 +16,9 @@ final class ed {
         }
     }
 
-    final static void a(boolean param0, mf param1, mf param2, byte param3) {
+    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         try {
-          ai.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, im.field_d, wi.field_n, DualLinkNode.field_t, ad.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
+          ai.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, GzipInflater.field_d, wi.field_n, DualLinkNode.field_t, ad.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
           if (param3 < 74) {
             ed.b(2, -57);
           }

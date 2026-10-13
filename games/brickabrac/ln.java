@@ -48,7 +48,7 @@ final class ln extends IntrusiveNode {
         int var1 = -16 % ((62 - param0) / 48);
     }
 
-    final static void a(mf param0, wp param1, mf param2, mf param3, mf param4, int param5, mf param6) {
+    final static void a(ResourceArchive param0, wp param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4, int param5, ResourceArchive param6) {
         int var7_int = 0;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -129,7 +129,7 @@ final class ln extends IntrusiveNode {
         }
     }
 
-    final static boolean decodeSpritesFromArchive(int obfuscationGuard, int fileId, mf archive, int groupId) {
+    final static boolean decodeSpritesFromArchive(int obfuscationGuard, int fileId, ResourceArchive archive, int groupId) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -141,7 +141,7 @@ final class ln extends IntrusiveNode {
           if (obfuscationGuard >= -87) {
             field_j = (RgbSprite[]) null;
           }
-          var5 = archive.a(fileId, groupId, 4);
+          var5 = archive.takeFile(fileId, groupId, 4);
           var4 = var5;
           if (var5 == null) {
             return false;

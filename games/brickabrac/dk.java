@@ -161,7 +161,7 @@ final class dk extends ib implements ha, en, vf {
           var2 = Integer.parseInt(this.field_S.field_A);
         } catch (NumberFormatException numberFormatException) {
         }
-        return bc.a(this.field_J.field_A, this.field_O.field_A, this.field_M.field_A, var2, (byte) -126, this, this.field_N.field_F);
+        return ArchiveSource.a(this.field_J.field_A, this.field_O.field_A, this.field_M.field_A, var2, (byte) -126, this, this.field_N.field_F);
     }
 
     private final String c(boolean param0) {
@@ -171,7 +171,7 @@ final class dk extends ib implements ha, en, vf {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static RgbSprite loadRgbSprite(int obfuscationGuard, mf archive, int groupId, int fileId) {
+    final static RgbSprite loadRgbSprite(int obfuscationGuard, ResourceArchive archive, int groupId, int fileId) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -593,8 +593,8 @@ final class dk extends ib implements ha, en, vf {
         this.field_P = new d(se.field_l, (uh) null);
         this.field_J.field_z = hh.field_a;
         this.field_M.field_z = rf.field_d;
-        this.field_H.field_z = mf.field_e;
-        this.field_O.field_z = lm.field_a;
+        this.field_H.field_z = ResourceArchive.field_e;
+        this.field_O.field_z = IntKeyIndex.field_a;
         this.field_L.field_z = rn.field_b;
         this.field_S.field_z = hc.field_d;
         this.field_N.field_z = ok.field_e;

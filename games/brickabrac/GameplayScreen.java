@@ -80,7 +80,7 @@ final class GameplayScreen extends GameScreen {
     }
 
     private final boolean recordAchievement(int achievementId, int pendingBit) {
-        if (eo.isBitSet(mk.earnedAchievementMask, achievementId, (byte) -75)) {
+        if (DirectByteStorage.isBitSet(mk.earnedAchievementMask, achievementId, (byte) -75)) {
           return true;
         }
         int[] var5 = mk.earnedAchievementMask;
@@ -882,7 +882,7 @@ final class GameplayScreen extends GameScreen {
           r.field_A &&
           ka.a((byte) 113)) {
           if (84 == obfuscationGuard) {
-            im.b(-8);
+            GzipInflater.b(-8);
           }
           return true;
         }

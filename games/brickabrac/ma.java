@@ -11,7 +11,7 @@ final class ma extends h {
     static String field_G;
     private int field_N;
     static PaletteFont field_O;
-    static mf field_P;
+    static ResourceArchive field_P;
 
     final void a(int param0, int param1, int param2, byte param3) {
         int var5 = this.field_o + param1;

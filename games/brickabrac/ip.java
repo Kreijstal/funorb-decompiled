@@ -365,9 +365,9 @@ final class ip extends ki {
                 }
                 else {
                   if (var6Lifetime2 != 0) {
-                    mf.field_c = mf.field_c ^ var6Lifetime2;
+                    ResourceArchive.field_c = ResourceArchive.field_c ^ var6Lifetime2;
                   } else {
-                    mf.field_c = 0;
+                    ResourceArchive.field_c = 0;
                   }
                 }
               }
@@ -380,11 +380,11 @@ final class ip extends ki {
                 stackIn_142_0.field_Nb = stackIn_143_1;
               } else if (0 == var6Lifetime2) {
                 stackIn_148_0 = var28;
-                stackIn_149_1 = (mf.field_c == 0);
+                stackIn_149_1 = (ResourceArchive.field_c == 0);
                 stackIn_148_0.field_Nb = stackIn_149_1;
               } else {
                 stackIn_153_0 = var28;
-                stackIn_154_1 = (0 != (mf.field_c & var6Lifetime2));
+                stackIn_154_1 = (0 != (ResourceArchive.field_c & var6Lifetime2));
                 stackIn_153_0.field_Nb = stackIn_154_1;
               }
               var6Lifetime2++;
@@ -488,7 +488,7 @@ final class ip extends ki {
                     MatchResultScreen.field_v[var7] != null) {
                     var16Lifetime2 = MatchResultScreen.field_v[var7][var9];
                     if (0 < var16Lifetime2 &&
-                      ko.field_s < var16Lifetime2) {
+                      ArchiveIndex.field_s < var16Lifetime2) {
                       var11 = 1;
                     }
                     if (0 != var16Lifetime2 &&
@@ -612,7 +612,7 @@ final class ip extends ki {
                   if (var13 == 0) {
                     if (var10 == 0) {
                       if (var11 != 0) {
-                        var22_int = MatchResultScreen.field_v[var7][var9] - ko.field_s;
+                        var22_int = MatchResultScreen.field_v[var7][var9] - ArchiveIndex.field_s;
                         if (var22_int != 1) {
                           var21 = rd.a(tq.field_e, new String[]{Integer.toString(var22_int)}, (byte) 103);
                         } else {
@@ -922,7 +922,7 @@ final class ip extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("jungle", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("jungle", -28138)) {
           return false;
         }
         ch.field_f = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);

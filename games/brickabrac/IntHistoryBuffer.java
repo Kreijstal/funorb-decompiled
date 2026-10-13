@@ -4,7 +4,7 @@
 final class IntHistoryBuffer extends IntrusiveNode {
     int latestIndex;
     static String field_k;
-    static mf field_i;
+    static ResourceArchive field_i;
     private int[] entries;
     static RgbSprite[] field_l;
     private int capacity;

@@ -84,7 +84,7 @@ final class MainMenuScreen extends MenuScreen {
         TooltipSprite var4 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         super.drawScreen((byte) -68);
-        im.a(this.buttonRight + (-this.buttonLeft + 30), 0, 468, 0, 6, (byte) -90, -15 + this.buttonLeft);
+        GzipInflater.a(this.buttonRight + (-this.buttonLeft + 30), 0, 468, 0, 6, (byte) -90, -15 + this.buttonLeft);
         MovingBody.a((byte) -105);
         this.a(0);
         if (obfuscationGuard > -14) {
@@ -121,7 +121,7 @@ final class MainMenuScreen extends MenuScreen {
             }
             IntrusiveHashTable.field_k = rd.a(0, (byte) 19);
             hc.field_h = 2 * hi.field_w.nextBoundedInt(-37880252, 2);
-            im.field_e = 50;
+            GzipInflater.field_e = 50;
           }
         }
         if (!pg.c(112)) {

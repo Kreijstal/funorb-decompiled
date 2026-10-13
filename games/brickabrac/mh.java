@@ -47,7 +47,7 @@ class mh extends ba {
     RgbSprite field_wb;
     boolean field_kb;
     NodeDeque field_bb;
-    static mf field_lb;
+    static ResourceArchive field_lb;
     static tf field_ab;
     static RgbSprite field_ib;
     int field_N;

@@ -42,7 +42,7 @@ final class e extends IntrusiveNode {
         int var15 = 0;
         wd var16 = null;
         int var17 = 0;
-        mf var18 = null;
+        ResourceArchive var18 = null;
         int[] var19 = null;
         char[] var20 = null;
         int[] var21 = null;
@@ -69,8 +69,8 @@ final class e extends IntrusiveNode {
           var7 = var5_int + var6;
           var8 = new String[var7];
           if (param3 != 4) {
-            var18 = (mf) null;
-            e.a((mf) null, 30);
+            var18 = (ResourceArchive) null;
+            e.a((ResourceArchive) null, 30);
           }
           var22 = new char[var7];
           var20 = var22;
@@ -169,12 +169,12 @@ final class e extends IntrusiveNode {
         field_q = null;
     }
 
-    final static void a(mf param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param0.a(104, "final_frame.jpg", ""), (java.awt.Component) ((Object) kj.field_D));
+          var2 = new RgbSprite(param0.takeFileByName(104, "final_frame.jpg", ""), (java.awt.Component) ((Object) kj.field_D));
           var3 = var2.width;
           int var5 = -121 % ((-17 - param1) / 52);
           var4 = var2.height;

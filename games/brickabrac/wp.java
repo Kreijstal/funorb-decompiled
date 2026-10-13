@@ -3,10 +3,10 @@
  */
 final class wp {
     static String field_i;
-    private mf field_j;
+    private ResourceArchive field_j;
     static TextFont field_c;
     static mh field_k;
-    private mf field_g;
+    private ResourceArchive field_g;
     static NodeDeque field_f;
     private IntrusiveHashTable field_a;
     static char field_h;
@@ -81,7 +81,7 @@ final class wp {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_j.a(param3, false);
+          var5_int = this.field_j.getGroupId(param3, false);
           if (var5_int < 0) {
             return null;
           }
@@ -89,7 +89,7 @@ final class wp {
             var7 = (String) null;
             this.a((byte) -29, (String) null, (String) null);
           }
-          var6 = this.field_j.a(var5_int, -100, param1);
+          var6 = this.field_j.getFileId(var5_int, -100, param1);
           if (var6 >= 0) {
             stackIn_9_0 = this.a(var6, 0, var5_int, param0);
             return stackIn_9_0;
@@ -387,7 +387,7 @@ final class wp {
               if (IntrusiveHashTable.field_a == 7) {
                 IntrusiveHashTable.field_a = 3;
               }
-              eo.field_e = jl.field_e.readCp1252String(-1);
+              DirectByteStorage.field_e = jl.field_e.readCp1252String(-1);
               pf.field_d = false;
               stackIn_95_0 = IntrusiveHashTable.field_a;
               return stackIn_95_0;
@@ -395,9 +395,9 @@ final class wp {
             if (eq.field_g == null) {
               if (pf.field_d) {
                 if (30000L >= MembershipBenefitsScreen.f(-6792)) {
-                  eo.field_e = gd.field_e;
+                  DirectByteStorage.field_e = gd.field_e;
                 } else {
-                  eo.field_e = hg.field_b;
+                  DirectByteStorage.field_e = hg.field_b;
                 }
                 pf.field_d = false;
                 stackIn_104_0 = 3;
@@ -463,14 +463,14 @@ final class wp {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_g.a(param0, false);
+          var5_int = this.field_g.getGroupId(param0, false);
           if (var5_int < 0) {
             return null;
           }
           if (param1 >= -45) {
             field_i = (String) null;
           }
-          var6 = this.field_g.a(var5_int, -67, param2);
+          var6 = this.field_g.getFileId(var5_int, -67, param2);
           if (var6 >= 0) {
             stackIn_9_0 = this.a(var6, var5_int, param3, 0);
             return stackIn_9_0;
@@ -562,11 +562,11 @@ final class wp {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_j.c(-97) == 1) {
+          if (this.field_j.getGroupCapacity(-97) == 1) {
             stackIn_2_0 = this.a(param1, 0, 0, param0);
             return stackIn_2_0;
           }
-          if (this.field_j.c(-80, param1) == 1) {
+          if (this.field_j.getFileCapacity(-80, param1) == 1) {
             stackIn_5_0 = this.a(0, 0, param1, param0);
             return stackIn_5_0;
           }
@@ -629,11 +629,11 @@ final class wp {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_g.c(-124) == 1) {
+          if (this.field_g.getGroupCapacity(-124) == 1) {
             stackIn_3_0 = this.a(param0, 0, param1, 0);
             return stackIn_3_0;
           }
-          if (1 == this.field_g.c(-90, param0)) {
+          if (1 == this.field_g.getFileCapacity(-90, param0)) {
             stackIn_6_0 = this.a(0, param0, param1, 0);
             return stackIn_6_0;
           }
@@ -720,7 +720,7 @@ final class wp {
         PcmSound var8Lifetime1;
         try {
           if (param1 != 0) {
-            this.field_j = (mf) null;
+            this.field_j = (ResourceArchive) null;
           }
           var5_int = param0 ^ (param2 >>> 12 | (-1342173185 & param2) << 4);
           var5_int = var5_int | param2 << 16;
@@ -762,7 +762,7 @@ final class wp {
         }
     }
 
-    wp(mf param0, mf param1) {
+    wp(ResourceArchive param0, ResourceArchive param1) {
         this.field_a = new IntrusiveHashTable(256);
         this.field_e = new IntrusiveHashTable(256);
         try {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qb extends ki {
-    static mf field_r;
+    static ResourceArchive field_r;
     static boolean field_u;
     static mh field_x;
     static mh field_v;
@@ -98,7 +98,7 @@ final class qb extends ki {
     }
 
     final boolean a(boolean param0) {
-        if (!AchievementIcon.field_m.a("farm", -28138)) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("farm", -28138)) {
           return false;
         }
         LevelPackCard.field_e = pl.loadRgbSpriteByName("farm", "farm_near", (byte) 103, AchievementIcon.field_m);

@@ -9,22 +9,22 @@ final class wj extends IntrusiveNode {
             return;
           }
           if (0L != param1 % 10L) {
-            bc.a(-29869, param1);
+            ArchiveSource.a(-29869, param1);
             return;
           }
-          bc.a(-29869, -1L + param1);
-          bc.a(-29869, 1L);
+          ArchiveSource.a(-29869, -1L + param1);
+          ArchiveSource.a(-29869, 1L);
           return;
         }
         if (0L >= param1) {
           return;
         }
         if (0L != param1 % 10L) {
-          bc.a(-29869, param1);
+          ArchiveSource.a(-29869, param1);
           return;
         }
-        bc.a(-29869, -1L + param1);
-        bc.a(-29869, 1L);
+        ArchiveSource.a(-29869, -1L + param1);
+        ArchiveSource.a(-29869, 1L);
     }
 
     final static String a(int param0, String param1, char param2, String param3) {
@@ -106,7 +106,7 @@ final class wj extends IntrusiveNode {
         String stackIn_12_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var7 = eo.field_f;
+          var7 = DirectByteStorage.field_f;
           synchronized (var7) {
             m.field_f.e(param2, -1, 16);
             if (param3) {
