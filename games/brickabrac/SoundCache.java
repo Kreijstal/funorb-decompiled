@@ -707,7 +707,7 @@ final class SoundCache {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSound var8 = null;
-        dr var9 = null;
+        SoundEffect var9 = null;
         PcmSound var10 = null;
         PcmSound stackIn_4_0 = null;
         Object stackIn_8_0 = null;
@@ -735,12 +735,12 @@ final class SoundCache {
             stackIn_8_0 = null;
             return (PcmSound) (stackIn_8_0);
           }
-          var9 = dr.a(this.soundEffectArchive, groupId, fileId);
+          var9 = SoundEffect.load(this.soundEffectArchive, groupId, fileId);
           if (var9 == null) {
             stackIn_11_0 = null;
             return (PcmSound) (stackIn_11_0);
           }
-          var10 = var9.a();
+          var10 = var9.toPcmSound();
           var8Lifetime1 = var10;
           this.decodedSounds.put(obfuscationGuard ^ 34, var8Lifetime1, var6);
           if (budget != null) {

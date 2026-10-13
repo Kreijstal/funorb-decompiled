@@ -809,7 +809,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ByteArrayNode.a(84);
         MusicPatch.a((byte) 118);
         MusicEnvelope.b((byte) 31);
-        qq.a();
+        SoundTone.releaseScratch();
         bm.a((byte) -116);
         ar.a(-1);
         ma.c(false);
@@ -849,7 +849,7 @@ public final class BrickABrac extends InteractiveGameClient {
         th.a(125);
         ej.h(928072);
         wi.b((byte) -54);
-        ho.a();
+        AudioFilter.releaseScratch();
         ja.a(2);
         ik.c(-93);
         DualLinkIterator.a((byte) 84);
