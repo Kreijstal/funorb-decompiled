@@ -323,12 +323,12 @@ final class MapRepository {
           var21 = -param6[0] + param5[0];
           var22 = -param6[1] + param5[1];
           var23 = param5[2] - param6[2];
-          var9 = param6[5] * var23 + (param6[4] * var22 + param6[3] * var21) >> -fn.field_M + 16;
+          var9 = param6[5] * var23 + (param6[4] * var22 + param6[3] * var21) >> -EditableTextWidget.field_M + 16;
           if (!param2) {
             return;
           }
           var11 = var23 * param6[11] + var22 * param6[10] + var21 * param6[9] >> 16;
-          var10 = param6[6] * var21 + param6[7] * var22 + param6[8] * var23 >> -fn.field_M + 16;
+          var10 = param6[6] * var21 + param6[7] * var22 + param6[8] * var23 >> -EditableTextWidget.field_M + 16;
           var21 = TriangleRasterizer.projectionCenterX;
           var22 = TriangleRasterizer.projectionCenterY;
           var23 = 0;
@@ -337,8 +337,8 @@ final class MapRepository {
               var24 = param0.field_z[var23];
               var25 = param0.field_y[var23];
               var26 = param0.field_o[var23];
-              var27 = (var18 * var26 + (var24 * var12 + var25 * var15) >> -fn.field_M + 16) + var9;
-              var28 = (var13 * var24 + var25 * var16 + var19 * var26 >> -fn.field_M + 16) + var10;
+              var27 = (var18 * var26 + (var24 * var12 + var25 * var15) >> -EditableTextWidget.field_M + 16) + var9;
+              var28 = (var13 * var24 + var25 * var16 + var19 * var26 >> -EditableTextWidget.field_M + 16) + var10;
               var29 = (var26 * var20 + var25 * var17 + var14 * var24 >> 16) + var11;
               stackIn_59_0 = 50;
               stackIn_59_1 = var29;
@@ -372,8 +372,8 @@ final class MapRepository {
                 }
               }
               if (param4) {
-                uh.field_f[var23] = var27 >> fn.field_M;
-                ArchiveProvider.field_a[var23] = var28 >> fn.field_M;
+                uh.field_f[var23] = var27 >> EditableTextWidget.field_M;
+                ArchiveProvider.field_a[var23] = var28 >> EditableTextWidget.field_M;
                 qt.field_c[var23] = var29;
               }
               var23++;

@@ -6629,7 +6629,7 @@ final class GameplayController {
                         break regionExit3;
                       }
                     } else {
-                      var2 = fn.field_S;
+                      var2 = EditableTextWidget.field_S;
                       if (var20 == 0) {
                         break regionExit3;
                       }

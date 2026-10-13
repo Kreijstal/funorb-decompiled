@@ -455,7 +455,7 @@ final class InstructionsPanel {
           return;
         }
         if (param4 >= 0 &&
-          fn.field_Q.length > param4) {
+          EditableTextWidget.field_Q.length > param4) {
           var7 = this.illustrationCounter.elapsedTicks;
           if (param3 != -25713) {
             return;
@@ -463,7 +463,7 @@ final class InstructionsPanel {
           if (var7 < 0) {
             var7 = 0;
           }
-          var8 = fn.field_Q[param4];
+          var8 = EditableTextWidget.field_Q[param4];
           if (var8 < 0) {
             return;
           }

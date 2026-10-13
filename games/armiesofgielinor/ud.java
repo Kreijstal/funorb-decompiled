@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends sf implements he {
+final class ud extends sf implements WidgetActivationListener {
     static String field_Y;
     static String field_Z;
     static String field_W;
     static RgbSprite[] field_X;
     static String field_ab;
-    private fw field_bb;
+    private InteractiveWidget field_bb;
 
     final static void setChatFilter(int filterValue, boolean obfuscationGuard, int channelId, int packetOpcode) {
         if (obfuscationGuard) {
@@ -65,12 +65,12 @@ final class ud extends sf implements he {
         SocketResourceClient.a(896, packetOpcode);
     }
 
-    private final fw a(String param0, qo param1, int param2) {
-        fw var4 = null;
+    private final InteractiveWidget a(String param0, WidgetListener param1, int param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        fw stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -78,7 +78,7 @@ final class ud extends sf implements he {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fw(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.painter = (WidgetPainter) ((Object) new nu());
           var5 = this.height - 6;
           this.height = this.height + 38;
@@ -137,14 +137,14 @@ final class ud extends sf implements he {
           } else {
             var3 = NodeHashIterator.field_a;
           }
-          var4 = new Widget((String) (var3), (qo) null);
+          var4 = new Widget((String) (var3), (WidgetListener) null);
           var4.x = 0;
           var4.y = 50;
           var4.width = this.width;
           var4.height = 80;
           var4.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var4);
-          this.field_bb = this.a(pd.field_f, (qo) (this), 93);
+          this.field_bb = this.a(pd.field_f, (WidgetListener) (this), 93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -166,17 +166,17 @@ final class ud extends sf implements he {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             field_Z = (String) null;
           }
-          if (param4 != this.field_bb) {
+          if (widget != this.field_bb) {
             return;
           }
           this.i((byte) 60);
@@ -185,8 +185,8 @@ final class ud extends sf implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_7_0 = var6;
-          stackIn_7_1 = new StringBuilder().append("ud.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_7_1 = new StringBuilder().append("ud.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";

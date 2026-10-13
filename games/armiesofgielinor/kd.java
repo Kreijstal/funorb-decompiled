@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd extends tj implements nq, he, mf {
+final class kd extends tj implements TextHotspotListener, WidgetActivationListener, mf {
     static String field_U;
     kv field_T;
     static ClientUiComponent field_M;
@@ -9,8 +9,8 @@ final class kd extends tj implements nq, he, mf {
     static PlatformTask field_J;
     private ma field_I;
     private ma field_K;
-    private hv field_W;
-    private fw field_bb;
+    private HotspotTextWidget field_W;
+    private InteractiveWidget field_bb;
     private ma field_H;
     private ma field_O;
     static String field_Y;
@@ -23,7 +23,7 @@ final class kd extends tj implements nq, he, mf {
     static String field_L;
     static String field_S;
     static String field_E;
-    private fw field_G;
+    private InteractiveWidget field_G;
     private ma field_N;
 
     public final void a(int param0, String param1) {
@@ -36,7 +36,7 @@ final class kd extends tj implements nq, he, mf {
           }
           var3 = this.field_O;
           var4 = param1;
-          ((fn) ((Object) var3)).a(false, var4, -27934);
+          ((EditableTextWidget) ((Object) var3)).setText(false, var4, -27934);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -172,30 +172,30 @@ final class kd extends tj implements nq, he, mf {
 
     public kd() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_O = new ma("", (qo) null, 12);
-        this.field_I = new ma("", (qo) null, 100);
-        this.field_H = new ma("", (qo) null, 100);
-        this.field_V = new ma("", (qo) null, 20);
-        this.field_K = new ma("", (qo) null, 20);
-        this.field_N = new ma("", (qo) null, 3);
+        this.field_O = new ma("", (WidgetListener) null, 12);
+        this.field_I = new ma("", (WidgetListener) null, 100);
+        this.field_H = new ma("", (WidgetListener) null, 100);
+        this.field_V = new ma("", (WidgetListener) null, 20);
+        this.field_K = new ma("", (WidgetListener) null, 20);
+        this.field_N = new ma("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_ab = new vu("", (qo) null, var1 != 0);
-        this.field_bb = new fw(ed.field_c, (qo) null);
-        this.field_G = new fw(pt.field_Y, (qo) null);
-        this.field_O.field_s = DualLinkedNode.field_m;
-        this.field_I.field_s = NodeIterator.field_d;
-        this.field_H.field_s = AccountNamePrompt.field_Jb;
-        this.field_V.field_s = CachedArchiveProvider.field_k;
-        this.field_K.field_s = WeightedScoreStrategy.field_i;
-        this.field_N.field_s = StrongCacheEntry.field_A;
-        this.field_ab.field_s = rd.field_g;
+        this.field_ab = new vu("", (WidgetListener) null, var1 != 0);
+        this.field_bb = new InteractiveWidget(ed.field_c, (WidgetListener) null);
+        this.field_G = new InteractiveWidget(pt.field_Y, (WidgetListener) null);
+        this.field_O.tooltipText = DualLinkedNode.field_m;
+        this.field_I.tooltipText = NodeIterator.field_d;
+        this.field_H.tooltipText = AccountNamePrompt.field_Jb;
+        this.field_V.tooltipText = CachedArchiveProvider.field_k;
+        this.field_K.tooltipText = WeightedScoreStrategy.field_i;
+        this.field_N.tooltipText = StrongCacheEntry.field_A;
+        this.field_ab.tooltipText = rd.field_g;
         this.field_O.a((byte) 16, new uj(this.field_O));
         this.field_I.a((byte) 16, new vl(this.field_I));
         this.field_H.a((byte) 16, new kt(this.field_H, this.field_I));
         this.field_V.a((byte) 16, new ib(this.field_V, this.field_O, this.field_I));
         this.field_K.a((byte) 16, new di(this.field_K, this.field_V));
         this.field_N.a((byte) 16, new jh(this.field_N));
-        this.field_bb.field_I = false;
+        this.field_bb.enabled = false;
         this.field_bb.painter = (WidgetPainter) ((Object) new nu());
         this.field_G.painter = (WidgetPainter) ((Object) new td());
         this.field_O.painter = (WidgetPainter) ((Object) new lu(10000536));
@@ -219,20 +219,20 @@ final class kd extends tj implements nq, he, mf {
         this.a((byte) 10, (Widget) (var4));
         var3 = var3 + var4.height;
         BitmapTextWidgetPainter var5 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 0, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
-        this.field_W = new hv(var2, var5);
-        this.field_W.field_s = "";
-        this.field_W.a(DiskCacheRequest.field_I, false, 0);
-        this.field_W.a(DiskCacheRequest.field_I, false, 1);
-        this.field_W.field_x = (qo) (this);
-        this.field_W.a(this.width - 90, 9567, 46, var3);
+        this.field_W = new HotspotTextWidget(var2, var5);
+        this.field_W.tooltipText = "";
+        this.field_W.setHotspotTooltip(DiskCacheRequest.field_I, false, 0);
+        this.field_W.setHotspotTooltip(DiskCacheRequest.field_I, false, 1);
+        this.field_W.listener = (WidgetListener) (this);
+        this.field_W.setTextBounds(this.width - 90, 9567, 46, var3);
         var3 = var3 + (this.field_W.height + 15);
         this.a((byte) 10, (Widget) (this.field_W));
         int var6 = 4;
         int var7 = 200;
         this.field_bb.setBounds(496 - var7 >> 1, var7, var3, 8192, 40);
         this.field_G.setBounds(var6 + 3, 60, 15 + var3, 8192, 40);
-        this.field_G.field_x = (qo) (this);
-        this.field_bb.field_x = (qo) (this);
+        this.field_G.listener = (WidgetListener) (this);
+        this.field_bb.listener = (WidgetListener) (this);
         this.a((byte) 10, (Widget) (this.field_bb));
         this.a((byte) 10, (Widget) (this.field_G));
         this.field_T = new kv((mf) (this));
@@ -306,7 +306,7 @@ final class kd extends tj implements nq, he, mf {
         field_J = null;
     }
 
-    public final void a(int param0, int param1, byte param2, hv param3) {
+    public final void hotspotActivated(int hotspotId, int button, byte obfuscationGuard, HotspotTextWidget widget) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -315,16 +315,16 @@ final class kd extends tj implements nq, he, mf {
         RuntimeException var5 = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param2 < 102) {
+          if (obfuscationGuard < 102) {
             field_F = (ClientUiComponent) null;
           }
-          if (0 == param0) {
+          if (0 == hotspotId) {
             BitmapTextLayout.a("terms.ws", (byte) -106);
           } else {
-            if (param0 == 1) {
+            if (hotspotId == 1) {
               BitmapTextLayout.a("privacy.ws", (byte) -81);
             } else {
-              if (param0 == 2) {
+              if (hotspotId == 2) {
                 BitmapTextLayout.a("conduct.ws", (byte) -98);
               }
             }
@@ -334,8 +334,8 @@ final class kd extends tj implements nq, he, mf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("kd.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_12_1 = new StringBuilder().append("kd.H(").append(hotspotId).append(',').append(button).append(',').append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -388,7 +388,7 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -396,13 +396,13 @@ final class kd extends tj implements nq, he, mf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             this.field_I = (ma) null;
           }
-          if (this.field_G == param4) {
+          if (this.field_G == widget) {
             PrintCoatConsoleCommand.g(111);
           } else {
-            if (param4 == this.field_bb) {
+            if (widget == this.field_bb) {
               discarded$1 = this.a(-1);
             }
           }
@@ -411,8 +411,8 @@ final class kd extends tj implements nq, he, mf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_10_0 = var6;
-          stackIn_10_1 = new StringBuilder().append("kd.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_10_1 = new StringBuilder().append("kd.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -421,12 +421,12 @@ final class kd extends tj implements nq, he, mf {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_bb.field_I = this.k(param0 ^ 32673);
+          super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
+          this.field_bb.enabled = this.k(obfuscationGuard ^ 32673);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kd.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -454,7 +454,7 @@ final class kd extends tj implements nq, he, mf {
         return false;
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -463,29 +463,29 @@ final class kd extends tj implements nq, he, mf {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(rootWidget, keyCode, character, obfuscationGuard)) {
             return true;
           }
-          if (param1 == 98) {
-            stackIn_7_0 = this.a(false, param0);
+          if (keyCode == 98) {
+            stackIn_7_0 = this.a(false, rootWidget);
             return stackIn_7_0;
           }
-          if (99 != param1) {
+          if (99 != keyCode) {
             return false;
           }
-          stackIn_11_0 = this.b((byte) -123, param0);
+          stackIn_11_0 = this.b((byte) -123, rootWidget);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_14_0 = var5;
           stackIn_14_1 = new StringBuilder().append("kd.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -513,7 +513,7 @@ final class kd extends tj implements nq, he, mf {
           var10 = new ta(20, param6, 120 + param1, 25, param2, param0, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
           this.a((byte) 10, (Widget) (var10));
           var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.height + param6, param1 + 50, param4);
-          var9.field_x = (qo) (this);
+          var9.listener = (WidgetListener) (this);
           this.a((byte) 10, (Widget) (var9));
           stackIn_1_0 = var10.height + var9.height;
           return stackIn_1_0;
@@ -600,7 +600,7 @@ final class kd extends tj implements nq, he, mf {
           var6 = new ta(20, param1, param2 + 120, 25, param4, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param0);
           this.a((byte) 10, (Widget) (var6));
           if (param3 != 18) {
-            this.field_G = (fw) null;
+            this.field_G = (InteractiveWidget) null;
           }
           stackIn_3_0 = var6.height;
           return stackIn_3_0;
@@ -681,7 +681,7 @@ final class kd extends tj implements nq, he, mf {
           var2 = Integer.parseInt(this.field_N.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return BattleUnitRenderer.a(this.field_ab.field_K, this, this.field_V.text, this.field_I.text, var2, (byte) -110, this.field_O.text);
+        return BattleUnitRenderer.a(this.field_ab.active, this, this.field_V.text, this.field_I.text, var2, (byte) -110, this.field_O.text);
     }
 
     static {

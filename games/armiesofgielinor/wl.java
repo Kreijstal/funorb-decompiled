@@ -68,16 +68,16 @@ abstract class wl extends tj {
         field_J = null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         if (0 == this.field_H) {
           return;
         }
         if (this.field_H >= 256) {
-          if (param3 != 0) {
+          if (renderLayer != 0) {
             return;
           }
-          this.b(this.x + param0, 1851680193, param1 + this.y);
-          super.a(param0, param1, (byte) -121, param3);
+          this.b(this.x + originX, 1851680193, originY + this.y);
+          super.drawWidget(originX, originY, (byte) -121, renderLayer);
           return;
         }
         if (TutorialLayout.field_b == null ||
@@ -88,12 +88,12 @@ abstract class wl extends tj {
         CombatSandbox.a(TutorialLayout.field_b, 3);
         SoftwareRaster.b();
         this.b(0, 1851680193, 0);
-        super.a(-param0 - this.x, -param1 - this.y, (byte) -106, param3);
+        super.drawWidget(-originX - this.x, -originY - this.y, (byte) -106, renderLayer);
         QuickChatPhraseRepository.popRasterState(-18862);
-        if (param2 >= -82) {
+        if (obfuscationGuard >= -82) {
           field_J = (String) null;
         }
-        TutorialLayout.field_b.e(this.x + param0, this.y + param1, this.field_H);
+        TutorialLayout.field_b.e(this.x + originX, this.y + originY, this.field_H);
     }
 
     final static int bitLength(int value, int obfuscationGuard) {

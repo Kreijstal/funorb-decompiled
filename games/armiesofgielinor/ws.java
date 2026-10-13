@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ws extends fw {
+final class ws extends InteractiveWidget {
     static int field_O;
     static ClientUiComponent field_P;
     int field_L;
@@ -12,7 +12,7 @@ final class ws extends fw {
     int field_M;
     static String field_T;
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -24,15 +24,15 @@ final class ws extends fw {
         int var12 = 0;
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, 120, param4, param5, param6)) {
-            if (param3 >= 103) {
+          if (!super.pointerPressed(pointerX, originX, originY, 120, rootWidget, pointerY, button)) {
+            if (obfuscationGuard >= 103) {
               return false;
             }
             field_O = 36;
             return false;
           }
-          var8_int = param0 + (-this.x + (-param1 - this.field_S));
-          var9 = param5 - this.field_M + (-this.y - param2);
+          var8_int = pointerX + (-this.x + (-originX - this.field_S));
+          var9 = pointerY - this.field_M + (-this.y - originY);
           if (var8_int * var8_int + var9 * var9 < this.field_Q * this.field_Q) {
             var10 = Math.atan2((double)var9, (double)var8_int) - BattleCharacter.field_b;
             if (!(0.0 > var10)) {
@@ -55,13 +55,13 @@ final class ws extends fw {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_21_0 = var8;
-          stackIn_21_1 = new StringBuilder().append("ws.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_21_1 = new StringBuilder().append("ws.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 

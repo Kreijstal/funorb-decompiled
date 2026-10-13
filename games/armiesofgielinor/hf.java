@@ -71,7 +71,7 @@ final class hf {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var3_int = param2; param1.length > var3_int; var3_int++) {
-            fn.a(8678, param0, 0, param1[var3_int]);
+            EditableTextWidget.a(8678, param0, 0, param1[var3_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

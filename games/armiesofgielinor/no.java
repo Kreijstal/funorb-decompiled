@@ -7,12 +7,12 @@ final class no extends en {
     static ClientUiComponent field_M;
     static RgbSprite field_P;
     static int field_J;
-    private fn field_Q;
+    private EditableTextWidget field_Q;
     static int responseTargetChannel;
-    private fn field_O;
+    private EditableTextWidget field_O;
     static ClientUiComponent field_T;
     private boolean field_R;
-    private fn field_L;
+    private EditableTextWidget field_L;
     static String cachedConsoleSource;
 
     final int l(int param0) {
@@ -123,12 +123,12 @@ final class no extends en {
     final void a(byte param0, sb param1) {
         try {
           super.a((byte) -108, param1);
-          this.field_L.field_x = (qo) ((Object) param1);
-          this.field_Q.field_x = (qo) ((Object) param1);
+          this.field_L.listener = (WidgetListener) ((Object) param1);
+          this.field_Q.listener = (WidgetListener) ((Object) param1);
           if (param0 > -21) {
             this.k(-25);
           }
-          this.field_O.field_x = (qo) ((Object) param1);
+          this.field_O.listener = (WidgetListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "no.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -163,15 +163,15 @@ final class no extends en {
         }
     }
 
-    final String h(int param0) {
-        String var2 = this.field_Q.h(param0 ^ 0);
+    final String getTooltipText(int obfuscationGuard) {
+        String var2 = this.field_Q.getTooltipText(obfuscationGuard ^ 0);
         if (var2 != null) {
           return var2;
         }
-        if (this.field_t) {
-          return this.field_s == null ? this.text : this.field_s;
+        if (this.hovered) {
+          return this.tooltipText == null ? this.text : this.tooltipText;
         }
-        if (param0 != 21384) {
+        if (obfuscationGuard != 21384) {
           roomSetup = (LobbyRoom) null;
           return null;
         }
@@ -185,17 +185,17 @@ final class no extends en {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) -84, param3);
-        if (0 != param3) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        super.drawWidget(originX, originY, (byte) -84, renderLayer);
+        if (0 != renderLayer) {
           return;
         }
-        if (param2 < -82) {
-          param0 = param0 + this.x;
-          param1 = param1 + this.y;
-          this.a(MusicPatchNode.field_z, this.field_L, param1, 16777215, param0);
-          this.a(eb.field_e, this.field_Q, param1, 16777215, param0);
-          this.a(BattleTutorial.field_l, this.field_O, param1, 16777215, param0);
+        if (obfuscationGuard < -82) {
+          originX = originX + this.x;
+          originY = originY + this.y;
+          this.a(MusicPatchNode.field_z, this.field_L, originY, 16777215, originX);
+          this.a(eb.field_e, this.field_Q, originY, 16777215, originX);
+          this.a(BattleTutorial.field_l, this.field_O, originY, 16777215, originX);
           return;
         }
     }
@@ -217,9 +217,9 @@ final class no extends en {
     private no(WidgetPainter param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_L = (fn) ((Object) new ma("", (qo) null, 2));
-          this.field_Q = (fn) ((Object) new ma("", (qo) null, 2));
-          this.field_O = (fn) ((Object) new ma("", (qo) null, 4));
+          this.field_L = (EditableTextWidget) ((Object) new ma("", (WidgetListener) null, 2));
+          this.field_Q = (EditableTextWidget) ((Object) new ma("", (WidgetListener) null, 2));
+          this.field_O = (EditableTextWidget) ((Object) new ma("", (WidgetListener) null, 4));
           this.field_O.painter = param0;
           this.field_Q.painter = param0;
           this.field_L.painter = param0;

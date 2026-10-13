@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends fw {
+final class pi extends InteractiveWidget {
     private fh field_Q;
     int field_R;
     private int field_L;
@@ -32,7 +32,7 @@ final class pi extends fw {
         return this.field_Q.a(param0 ^ 85);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         int var12 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
@@ -47,13 +47,13 @@ final class pi extends fw {
         int var14 = 0;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param3 <= 103) {
+          if (obfuscationGuard <= 103) {
             field_N = (ClientUiComponent) null;
           }
-          if (!super.a(param0, param1, param2, 122, param4, param5, param6)) {
+          if (!super.pointerPressed(pointerX, originX, originY, 122, rootWidget, pointerY, button)) {
             return false;
           }
-          var8_int = -param1 + (param0 - this.field_R);
+          var8_int = -originX + (pointerX - this.field_R);
           var9 = -(this.field_R * 2) + this.width;
           if (var8_int > var9) {
             var8_int = var9;
@@ -62,8 +62,8 @@ final class pi extends fw {
             var8_int = 0;
           }
           var8_int = this.field_L * var8_int / var9;
-          if (param6 != 1) {
-            if (param6 != 2) {
+          if (button != 1) {
+            if (button != 2) {
               return true;
             }
             var10 = 2147483647;
@@ -87,13 +87,13 @@ final class pi extends fw {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_32_0 = var8;
-          stackIn_32_1 = new StringBuilder().append("pi.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_32_1 = new StringBuilder().append("pi.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class pi extends fw {
           return this.field_L;
         }
         Widget var3 = (Widget) null;
-        this.a(104, -75, 118, -4, (Widget) null, 10, 30);
+        this.pointerPressed(104, -75, 118, -4, (Widget) null, 10, 30);
         return this.field_L;
     }
 

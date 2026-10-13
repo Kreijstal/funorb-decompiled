@@ -16,7 +16,7 @@ abstract class nl extends Widget implements gw {
         }
         if (!param0) {
           Widget var3 = (Widget) null;
-          this.a(-121, -73, 76, 99, (Widget) null, -116, -36);
+          this.pointerPressed(-121, -73, 76, 99, (Widget) null, -116, -36);
         }
     }
 
@@ -29,9 +29,9 @@ abstract class nl extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param5 < 93) {
-            this.a(87, -41, (byte) 121, -47);
+            this.drawWidget(87, -41, (byte) 121, -47);
           }
-          stackIn_7_0 = (null != this.field_E) && (this.field_E.a(false)) && (this.field_E.a(param0, param1, param2, param3, param4, 96, param6));
+          stackIn_7_0 = (null != this.field_E) && (this.field_E.isFocused(false)) && (this.field_E.a(param0, param1, param2, param3, param4, 96, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -47,7 +47,7 @@ abstract class nl extends Widget implements gw {
         }
     }
 
-    void a(int param0, int param1, int param2, Widget param3) {
+    void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         Widget var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -55,21 +55,21 @@ abstract class nl extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0 + 0, param1, param2, param3);
-          if (param0 != 32722) {
+          super.updatePointer(obfuscationGuard + 0, originX, originY, rootWidget);
+          if (obfuscationGuard != 32722) {
             var6 = (Widget) null;
-            this.a(-74, (Widget) null, -57, (byte) -35, 30, 107);
+            this.pointerReleased(-74, (Widget) null, -57, (byte) -35, 30, 107);
           }
           if (this.field_E != null) {
-            this.field_E.a(32722, this.x + param1, param2 + this.y, param3);
+            this.field_E.updatePointer(32722, this.x + originX, originY + this.y, rootWidget);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_7_0 = var5;
-          stackIn_7_1 = new StringBuilder().append("nl.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_7_1 = new StringBuilder().append("nl.P(").append(obfuscationGuard).append(',').append(originX).append(',').append(originY).append(',');
+          if (rootWidget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -78,7 +78,7 @@ abstract class nl extends Widget implements gw {
         }
     }
 
-    void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
+    void pointerReleased(int originY, Widget rootWidget, int pointerX, byte obfuscationGuard, int pointerY, int originX) {
         int var7_int = 0;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -86,30 +86,30 @@ abstract class nl extends Widget implements gw {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          var7_int = -82 % ((param3 + 58) / 53);
+          var7_int = -82 % ((obfuscationGuard + 58) / 53);
           if (this.field_E != null) {
-            this.field_E.a(param0 + this.y, param1, param2, (byte) 109, param4, this.x + param5);
+            this.field_E.pointerReleased(originY + this.y, rootWidget, pointerX, (byte) 109, pointerY, this.x + originX);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_5_0 = var7;
-          stackIn_5_1 = new StringBuilder().append("nl.JA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_5_1 = new StringBuilder().append("nl.JA(").append(originY).append(',');
+          if (rootWidget == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(pointerX).append(',').append(obfuscationGuard).append(',').append(pointerY).append(',').append(originX).append(')').toString());
         }
     }
 
-    final void f(int param0) {
+    final void blur(int obfuscationGuard) {
         if (null != this.field_E) {
-          this.field_E.f(1);
+          this.field_E.blur(1);
         }
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           iw var3 = (iw) null;
           nl.a(-28, -106, (iw) null);
         }
@@ -206,16 +206,16 @@ abstract class nl extends Widget implements gw {
     final int g(int param0) {
         if (param0 != -31989) {
           Widget var3 = (Widget) null;
-          this.a(87, 114, -83, (Widget) null);
+          this.updatePointer(87, 114, -83, (Widget) null);
         }
         return this.field_E != null ? this.field_E.g(-31989) : 0;
     }
 
-    nl(int param0, int param1, int param2, int param3, WidgetPainter param4, qo param5) {
+    nl(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -223,22 +223,22 @@ abstract class nl extends Widget implements gw {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 <= 103) {
+          if (obfuscationGuard <= 103) {
             field_C = (String) null;
           }
-          stackIn_6_0 = (null != this.field_E) && (this.field_E.a(param0, param1 + this.x, param2 + this.y, 125, param4, param5, param6));
+          stackIn_6_0 = (null != this.field_E) && (this.field_E.pointerPressed(pointerX, originX + this.x, originY + this.y, 125, rootWidget, pointerY, button));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_9_0 = var8;
-          stackIn_9_1 = new StringBuilder().append("nl.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_9_1 = new StringBuilder().append("nl.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 
@@ -341,7 +341,7 @@ abstract class nl extends Widget implements gw {
           r.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
           ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
           CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
-          bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, fw.field_H);
+          bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, InteractiveWidget.field_H);
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, hs.field_D);
           wl.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
@@ -582,7 +582,7 @@ abstract class nl extends Widget implements gw {
     Widget a(int param0) {
         Widget var2 = this.field_E;
         if (var2 != null &&
-          var2.a(false)) {
+          var2.isFocused(false)) {
           return var2;
         }
         if (param0 == -1848) {
@@ -593,34 +593,34 @@ abstract class nl extends Widget implements gw {
         return null;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
-        if (param3 == 0 &&
+    void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        if (renderLayer == 0 &&
           this.painter != null) {
-          this.painter.paintWidget((Widget) (this), param0, -94, true, param1);
+          this.painter.paintWidget((Widget) (this), originX, -94, true, originY);
         }
-        if (param2 > -82) {
+        if (obfuscationGuard > -82) {
           return;
         }
         if (this.field_E != null) {
-          this.field_E.a(this.x + param0, this.y + param1, (byte) -118, param3);
+          this.field_E.drawWidget(this.x + originX, this.y + originY, (byte) -118, renderLayer);
         }
     }
 
-    final boolean a(boolean param0) {
-        if (param0) {
+    final boolean isFocused(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           field_D = (String) null;
         }
         return this.a(-1848) != null ? true : false;
     }
 
-    String h(int param0) {
+    String getTooltipText(int obfuscationGuard) {
         String var3 = null;
-        if (param0 != 21384) {
+        if (obfuscationGuard != 21384) {
           return (String) null;
         }
-        String var2 = super.h(param0 + 0);
+        String var2 = super.getTooltipText(obfuscationGuard + 0);
         if (this.field_E != null) {
-          var3 = this.field_E.h(21384);
+          var3 = this.field_E.getTooltipText(21384);
           if (var3 != null) {
             return var3;
           }
@@ -649,7 +649,7 @@ abstract class nl extends Widget implements gw {
           if (param0 != 4) {
             return true;
           }
-          stackIn_8_0 = (null != this.field_E) && (!this.field_E.a(false)) && (this.field_E.a(11, param1));
+          stackIn_8_0 = (null != this.field_E) && (!this.field_E.isFocused(false)) && (this.field_E.takeFocus(11, param1));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -665,7 +665,7 @@ abstract class nl extends Widget implements gw {
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         int var5_int = 0;
         RuntimeException var5 = null;
         String[] var6 = null;
@@ -675,23 +675,23 @@ abstract class nl extends Widget implements gw {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             var6 = (String[]) null;
             nl.a((byte[]) null, 101, 110, (String[]) null, (String[][]) null, (byte[]) null, (String[][]) null, (ResourceArchive) null, (RgbSprite[][]) null, (RgbSprite[][]) null, (String[]) null, (int[]) null, (String[]) null, true, 39);
           }
           if (this.field_E != null &&
-            this.field_E.a(false) &&
-            this.field_E.a(param0, param1, param2, -12215)) {
+            this.field_E.isFocused(false) &&
+            this.field_E.handleKey(rootWidget, keyCode, character, -12215)) {
             return true;
           }
-          var5_int = param1;
+          var5_int = keyCode;
           if (80 != var5_int) {
             return false;
           }
           if (!br.heldKeys[81]) {
-            stackIn_12_0 = this.a(param0, (byte) 107);
+            stackIn_12_0 = this.a(rootWidget, (byte) 107);
           } else {
-            stackIn_12_0 = this.b(4, param0);
+            stackIn_12_0 = this.b(4, rootWidget);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -699,12 +699,12 @@ abstract class nl extends Widget implements gw {
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
           stackIn_15_1 = new StringBuilder().append("nl.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -813,7 +813,7 @@ abstract class nl extends Widget implements gw {
         }
     }
 
-    final boolean a(int param0, Widget param1) {
+    final boolean takeFocus(int obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -821,17 +821,17 @@ abstract class nl extends Widget implements gw {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 11) {
+          if (obfuscationGuard != 11) {
             field_C = (String) null;
           }
-          stackIn_6_0 = (null != this.field_E) && (this.field_E.a(param0 + 0, param1));
+          stackIn_6_0 = (null != this.field_E) && (this.field_E.takeFocus(obfuscationGuard + 0, rootWidget));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("nl.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("nl.M(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -851,7 +851,7 @@ abstract class nl extends Widget implements gw {
           if (param1 != 107) {
             return false;
           }
-          stackIn_8_0 = (null != this.field_E) && (!this.field_E.a(false)) && (this.field_E.a(11, param0));
+          stackIn_8_0 = (null != this.field_E) && (!this.field_E.isFocused(false)) && (this.field_E.takeFocus(11, param0));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

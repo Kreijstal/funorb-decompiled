@@ -107,7 +107,7 @@ final class kt extends mk {
         field_m = null;
     }
 
-    kt(fn param0, fn param1) {
+    kt(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         this.field_k = "";
         this.field_j = false;

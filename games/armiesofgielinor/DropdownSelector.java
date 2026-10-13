@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class DropdownSelector extends tj implements he {
+final class DropdownSelector extends tj implements WidgetActivationListener {
     static String field_P;
     private int collapsedHeight;
     String typedPrefix;
     private boolean field_F;
     static RgbSprite field_M;
     BitmapFont font;
-    private fw textButton;
+    private InteractiveWidget textButton;
     boolean expanded;
     DropdownOptionList optionList;
-    private fw arrowButton;
+    private InteractiveWidget arrowButton;
     private int maximumDropdownHeight;
     ai dropdownViewport;
 
@@ -43,12 +43,12 @@ final class DropdownSelector extends tj implements he {
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean isFocused(boolean obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0) {
+        if (obfuscationGuard) {
           this.collapsedHeight = -22;
         }
-        stackIn_7_0 = (this.field_F) || (super.a(false));
+        stackIn_7_0 = (this.field_F) || (super.isFocused(false));
         return stackIn_7_0;
     }
 
@@ -62,30 +62,30 @@ final class DropdownSelector extends tj implements he {
         }
     }
 
-    final boolean a(int param0, Widget param1) {
+    final boolean takeFocus(int obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param1.f(1);
-          if (param0 != 11) {
+          rootWidget.blur(1);
+          if (obfuscationGuard != 11) {
             return true;
           }
           this.typedPrefix = "";
           this.field_F = true;
-          if (null != this.field_x &&
-            this.field_x instanceof ie) {
-            ((ie) (this.field_x)).a((Widget) (this), this.field_F, (byte) -41);
+          if (null != this.listener &&
+            this.listener instanceof WidgetFocusListener) {
+            ((WidgetFocusListener) (this.listener)).focusChanged((Widget) (this), this.field_F, (byte) -41);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("gh.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("gh.M(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -95,8 +95,8 @@ final class DropdownSelector extends tj implements he {
     }
 
     final void g(byte param0) {
-        if (this.field_x instanceof rp) {
-          ((rp) ((Object) this.field_x)).a(-109, this);
+        if (this.listener instanceof rp) {
+          ((rp) ((Object) this.listener)).a(-109, this);
         }
         if (param0 <= 4) {
           DropdownSelector.a(-40);
@@ -106,7 +106,7 @@ final class DropdownSelector extends tj implements he {
     final boolean isExpanded(int obfuscationGuard) {
         if (obfuscationGuard != 11180) {
           Widget var3 = (Widget) null;
-          this.a(-2, 83, 58, (Widget) null);
+          this.updatePointer(-2, 83, 58, (Widget) null);
         }
         return this.expanded;
     }
@@ -118,12 +118,12 @@ final class DropdownSelector extends tj implements he {
         try {
           this.optionList = new DropdownOptionList(this, this.font, options, selectedIndex);
           this.expanded = false;
-          this.optionList.field_x = (qo) (this);
+          this.optionList.listener = (WidgetListener) (this);
           this.maximumDropdownHeight = maximumDropdownHeight;
-          this.textButton = new fw("", new fk(this), (qo) (this));
-          this.arrowButton = new fw();
+          this.textButton = new InteractiveWidget("", new fk(this), (WidgetListener) (this));
+          this.arrowButton = new InteractiveWidget();
           this.arrowButton.painter = (WidgetPainter) ((Object) new DropdownArrowPainter());
-          this.arrowButton.field_x = (qo) (this);
+          this.arrowButton.listener = (WidgetListener) (this);
           this.a((byte) 10, (Widget) (this.textButton));
           this.a((byte) 10, (Widget) (this.arrowButton));
         } catch (RuntimeException runtimeException) {
@@ -145,28 +145,28 @@ final class DropdownSelector extends tj implements he {
         this.dropdownViewport.unlink(124);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             this.font = (BitmapFont) null;
           }
           if (this.isExpanded(11180)) {
             this.closeDropdown(-128);
           } else {
-            this.openDropdown(param1 - 11);
+            this.openDropdown(obfuscationGuard - 11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_8_0 = var6;
-          stackIn_8_1 = new StringBuilder().append("gh.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_8_1 = new StringBuilder().append("gh.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -175,15 +175,15 @@ final class DropdownSelector extends tj implements he {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "gh.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -191,22 +191,22 @@ final class DropdownSelector extends tj implements he {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 <= 103) {
-            this.f(-3);
+          if (obfuscationGuard <= 103) {
+            this.blur(-3);
           }
-          stackIn_3_0 = super.a(param0, param1, param2, 107, param4, param5, param6);
+          stackIn_3_0 = super.pointerPressed(pointerX, originX, originY, 107, rootWidget, pointerY, button);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_6_0 = var8;
-          stackIn_6_1 = new StringBuilder().append("gh.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_6_1 = new StringBuilder().append("gh.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class DropdownSelector extends tj implements he {
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         boolean stackIn_60_0 = false;
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
@@ -381,17 +381,17 @@ final class DropdownSelector extends tj implements he {
         int var6_intLifetime1;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!this.a(false)) {
+          if (!this.isFocused(false)) {
             return false;
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.optionList.options != null) {
             var5_int = this.optionList.options.length;
-            if (param1 != 99 &&
-              param1 != 98) {
-              if (param1 != 105 &&
-                param1 != 104) {
-                if (param1 == 84) {
+            if (keyCode != 99 &&
+              keyCode != 98) {
+              if (keyCode != 105 &&
+                keyCode != 104) {
+                if (keyCode == 84) {
                   if (!this.expanded) {
                     this.openDropdown(0);
                   } else {
@@ -399,7 +399,7 @@ final class DropdownSelector extends tj implements he {
                   }
                   return true;
                 }
-                if (param1 == 85) {
+                if (keyCode == 85) {
                   var6_int = this.typedPrefix.length();
                   if (var6_int <= 0) {
                     return true;
@@ -407,20 +407,20 @@ final class DropdownSelector extends tj implements he {
                   this.typedPrefix = this.typedPrefix.substring(0, var6_int - 1);
                   return true;
                 }
-                decompiledFrameRemainder0 = !(32 > param2);
+                decompiledFrameRemainder0 = !(32 > character);
                 if ((decompiledFrameRemainder0) &&
-                  (decompiledFrameRemainder0 = !(param2 >= 128))) {
-                  var6 = this.typedPrefix + param2;
+                  (decompiledFrameRemainder0 = !(character >= 128))) {
+                  var6 = this.typedPrefix + character;
                   this.a(true, var6);
                   return true;
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!this.isExpanded(param3 + 23395)) {
+                if (!this.isExpanded(obfuscationGuard + 23395)) {
                   this.openDropdown(0);
                 }
                 var6_intLifetime1 = this.dropdownViewport.field_S.height / this.optionList.rowHeight;
-                if (105 != param1) {
+                if (105 != keyCode) {
                   this.optionList.selectedIndex = this.optionList.selectedIndex - var6_intLifetime1;
                 } else {
                   this.optionList.selectedIndex = this.optionList.selectedIndex + var6_intLifetime1;
@@ -431,7 +431,7 @@ final class DropdownSelector extends tj implements he {
                 if (var5_int <= this.optionList.selectedIndex) {
                   this.optionList.selectedIndex = -1 + var5_int;
                 }
-                this.ensureSelectionVisible(param3 ^ -107796053);
+                this.ensureSelectionVisible(obfuscationGuard ^ -107796053);
                 return true;
               }
             }
@@ -439,7 +439,7 @@ final class DropdownSelector extends tj implements he {
               if (!this.isExpanded(11180)) {
                 this.openDropdown(0);
               }
-              if (param1 != 99) {
+              if (keyCode != 99) {
                 this.optionList.selectedIndex = this.optionList.selectedIndex - 1;
               } else {
                 this.optionList.selectedIndex = this.optionList.selectedIndex + 1;
@@ -454,27 +454,27 @@ final class DropdownSelector extends tj implements he {
               return true;
             }
           }
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             var8 = (Widget) null;
-            this.a((Widget) null, -8, 'd', 65);
+            this.handleKey((Widget) null, -8, 'd', 65);
           }
-          if (param1 != 80) {
-            stackIn_60_0 = super.a(param0, param1, param2, -12215);
+          if (keyCode != 80) {
+            stackIn_60_0 = super.handleKey(rootWidget, keyCode, character, -12215);
             return stackIn_60_0;
           }
-          this.closeDropdown(param3 + 12094);
+          this.closeDropdown(obfuscationGuard + 12094);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_63_0 = var5;
           stackIn_63_1 = new StringBuilder().append("gh.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_64_2 = "null";
           } else {
             stackIn_64_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_63_0), ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -515,22 +515,22 @@ final class DropdownSelector extends tj implements he {
         }
     }
 
-    final String h(int param0) {
-        if (!this.field_t) {
+    final String getTooltipText(int obfuscationGuard) {
+        if (!this.hovered) {
           return null;
         }
-        if (param0 != 21384) {
+        if (obfuscationGuard != 21384) {
           return (String) null;
         }
         if (this.isExpanded(11180) &&
-          this.dropdownViewport.field_t &&
+          this.dropdownViewport.hovered &&
           -1 != this.optionList.hoveredIndex) {
           return this.optionList.options[this.optionList.hoveredIndex].toString();
         }
         if (this.optionList.getSelectedOption(-6508) != null) {
           return this.optionList.getSelectedOption(-6508).toString();
         }
-        return super.h(param0 + 0);
+        return super.getTooltipText(obfuscationGuard + 0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, nr param12, int param13, nr param14, int param15, int param16, int param17, nr param18, BitmapFont param19) {
@@ -617,10 +617,10 @@ final class DropdownSelector extends tj implements he {
         this.ensureSelectionVisible(107805154);
     }
 
-    final void f(int param0) {
+    final void blur(int obfuscationGuard) {
         this.field_F = false;
-        super.f(param0 + 0);
-        if (param0 != 1) {
+        super.blur(obfuscationGuard + 0);
+        if (obfuscationGuard != 1) {
           this.maximumDropdownHeight = -4;
         }
     }

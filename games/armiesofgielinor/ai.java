@@ -16,14 +16,14 @@ final class ai extends hs {
     static String field_N;
     nv field_K;
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!super.a(param0, param1, param2, param3)) {
+          if (!super.handleKey(rootWidget, keyCode, character, obfuscationGuard)) {
             return false;
           }
           this.e((byte) -110);
@@ -33,12 +33,12 @@ final class ai extends hs {
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("ai.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class ai extends hs {
           if (param5 <= 93) {
             field_T = (ResourceProtocolClient) null;
           }
-          stackIn_9_0 = (this.a(false)) && (this.c(param4, 959449104));
+          stackIn_9_0 = (this.isFocused(false)) && (this.c(param4, 959449104));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,16 +112,16 @@ final class ai extends hs {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
-        super.a(param0 + 0, param1, param2, param3);
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
+        super.updatePointer(obfuscationGuard + 0, originX, originY, rootWidget);
         this.f((byte) -3);
-        if (param0 != 32722) {
+        if (obfuscationGuard != 32722) {
           return;
         }
         try {
           this.e((byte) -116);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ai.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ai.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 

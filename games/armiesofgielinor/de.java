@@ -379,7 +379,7 @@ final class de {
                     return stackIn_200_0;
                   }
                   if (3 != var7.getUnitCategory(0)) {
-                    stackIn_204_0 = hv.field_O;
+                    stackIn_204_0 = HotspotTextWidget.field_O;
                     return stackIn_204_0;
                   }
                 }

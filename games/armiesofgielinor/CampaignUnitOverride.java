@@ -283,7 +283,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_avg_rating");
                 if (var2 != null) {
-                  fw.field_H = uu.a(var2, (byte) -102);
+                  InteractiveWidget.field_H = uu.a(var2, (byte) -102);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_options");
                 if (null != var2) {
@@ -1685,7 +1685,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "unable_to_add_ignore");
                 if (var2 != null) {
-                  ct.field_m = uu.a(var2, (byte) 34);
+                  TextHotspotRegion.field_m = uu.a(var2, (byte) 34);
                 }
                 var2 = NodeIterator.a(50, "unable_to_delete_friend");
                 if (null != var2) {

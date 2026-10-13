@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mk extends rb implements fb {
-    private fn field_g;
+abstract class mk extends rb implements EditableTextWidgetListener {
+    private EditableTextWidget field_g;
     static String field_f;
     static String field_d;
     static int currentThemeId;
@@ -24,16 +24,16 @@ abstract class mk extends rb implements fb {
 
     abstract gu a(int param0, String param1);
 
-    public final void b(fn param0, int param1) {
+    public final void textChanged(EditableTextWidget widget, int obfuscationGuard) {
         try {
           this.a(126);
-          int var3_int = 59 % ((-80 - param1) / 33);
+          int var3_int = 59 % ((-80 - obfuscationGuard) / 33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mk.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mk.FA(" + (widget != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    mk(fn param0) {
+    mk(EditableTextWidget param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
@@ -56,13 +56,13 @@ abstract class mk extends rb implements fb {
         return this.a(-3137, this.field_g.text);
     }
 
-    public final void a(fn param0, int param1) {
+    public final void textSubmitted(EditableTextWidget widget, int obfuscationGuard) {
         try {
-          if (param1 != 80) {
+          if (obfuscationGuard != 80) {
             field_i = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mk.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "mk.EA(" + (widget != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

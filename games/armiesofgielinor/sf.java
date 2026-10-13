@@ -314,7 +314,7 @@ abstract class sf extends wl {
             if (vs.field_e[param4].hasCorpse(-121)) {
               fe.a(wf.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);
             }
-            var9 = fn.field_Q[vs.field_e[param4].terrainType];
+            var9 = EditableTextWidget.field_Q[vs.field_e[param4].terrainType];
             if (var9 > -1) {
               if (2 == var9) {
                 fe.a(oq.activeStructureShadows[17], -10 + param3, param5 - 25);

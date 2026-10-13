@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv extends hs implements he {
-    private fw field_U;
-    private fw field_P;
-    private fw field_Z;
+final class nv extends hs implements WidgetActivationListener {
+    private InteractiveWidget field_U;
+    private InteractiveWidget field_P;
+    private InteractiveWidget field_Z;
     static String field_bb;
     private boolean field_M;
     private boolean field_N;
@@ -18,51 +18,51 @@ final class nv extends hs implements he {
     private int field_S;
     private wc field_O;
     private boolean field_V;
-    private fw field_ab;
+    private InteractiveWidget field_ab;
     private int field_R;
-    private fw field_Y;
+    private InteractiveWidget field_Y;
 
     private final void b(byte param0, boolean param1) {
-        fw stackIn_8_0 = null;
-        fw stackIn_14_0 = null;
+        InteractiveWidget stackIn_8_0 = null;
+        InteractiveWidget stackIn_14_0 = null;
         boolean stackIn_15_1 = false;
-        fw stackIn_19_0 = null;
+        InteractiveWidget stackIn_19_0 = null;
         boolean stackIn_22_1 = false;
-        fw stackIn_29_0 = null;
+        InteractiveWidget stackIn_29_0 = null;
         boolean stackIn_30_1 = false;
-        fw stackIn_36_0 = null;
+        InteractiveWidget stackIn_36_0 = null;
         boolean stackIn_37_1 = false;
-        fw stackIn_42_0 = null;
+        InteractiveWidget stackIn_42_0 = null;
         boolean stackIn_43_1 = false;
-        fw stackIn_47_0 = null;
+        InteractiveWidget stackIn_47_0 = null;
         boolean stackIn_49_1 = false;
-        fw stackIn_56_0 = null;
+        InteractiveWidget stackIn_56_0 = null;
         boolean stackIn_57_1 = false;
-        fw stackIn_62_0 = null;
+        InteractiveWidget stackIn_62_0 = null;
         boolean stackIn_63_1 = false;
-        fw stackIn_72_0 = null;
+        InteractiveWidget stackIn_72_0 = null;
         boolean stackIn_73_1 = false;
-        fw stackIn_77_0 = null;
+        InteractiveWidget stackIn_77_0 = null;
         boolean stackIn_79_1 = false;
-        fw stackIn_83_0 = null;
+        InteractiveWidget stackIn_83_0 = null;
         boolean stackIn_84_1 = false;
-        fw stackIn_89_0 = null;
+        InteractiveWidget stackIn_89_0 = null;
         boolean stackIn_90_1 = false;
-        fw stackIn_99_0 = null;
+        InteractiveWidget stackIn_99_0 = null;
         boolean stackIn_100_1 = false;
         stackIn_47_0 = this.field_P;
         if (param1) {
           stackIn_49_1 = true;
         } else {
           if (this.field_V) {
-            stackIn_47_0.field_I = true;
-            if (this.field_O.field_E instanceof fw) {
-              stackIn_19_0 = (fw) (this.field_O.field_E);
+            stackIn_47_0.enabled = true;
+            if (this.field_O.field_E instanceof InteractiveWidget) {
+              stackIn_19_0 = (InteractiveWidget) (this.field_O.field_E);
               if (param1) {
-                stackIn_19_0.field_I = true;
+                stackIn_19_0.enabled = true;
                 if (this.field_Z != null) {
                   stackIn_8_0 = this.field_Z;
-                  stackIn_8_0.field_I = true;
+                  stackIn_8_0.enabled = true;
                 }
                 if (param0 <= 123) {
                   return;
@@ -70,12 +70,12 @@ final class nv extends hs implements he {
                 if (this.field_ab != null) {
                   stackIn_14_0 = this.field_ab;
                   stackIn_15_1 = (!param1) ? false : true;
-                  stackIn_14_0.field_I = stackIn_15_1;
+                  stackIn_14_0.enabled = stackIn_15_1;
                 }
                 return;
               }
               stackIn_22_1 = (!this.field_V) ? false : true;
-              stackIn_19_0.field_I = stackIn_22_1;
+              stackIn_19_0.enabled = stackIn_22_1;
             }
             if (this.field_Z == null) {
               if (param0 <= 123) {
@@ -84,33 +84,33 @@ final class nv extends hs implements he {
               if (this.field_ab != null) {
                 stackIn_29_0 = this.field_ab;
                 stackIn_30_1 = (!param1) ? false : true;
-                stackIn_29_0.field_I = stackIn_30_1;
+                stackIn_29_0.enabled = stackIn_30_1;
               }
               return;
             }
             stackIn_36_0 = this.field_Z;
             stackIn_37_1 = (!param1) ? false : true;
-            stackIn_36_0.field_I = stackIn_37_1;
+            stackIn_36_0.enabled = stackIn_37_1;
             if (param0 <= 123) {
               return;
             }
             if (this.field_ab != null) {
               stackIn_42_0 = this.field_ab;
               stackIn_43_1 = (!param1) ? false : true;
-              stackIn_42_0.field_I = stackIn_43_1;
+              stackIn_42_0.enabled = stackIn_43_1;
             }
             return;
           }
           stackIn_49_1 = false;
         }
-        stackIn_47_0.field_I = stackIn_49_1;
-        if (this.field_O.field_E instanceof fw) {
-          stackIn_77_0 = (fw) (this.field_O.field_E);
+        stackIn_47_0.enabled = stackIn_49_1;
+        if (this.field_O.field_E instanceof InteractiveWidget) {
+          stackIn_77_0 = (InteractiveWidget) (this.field_O.field_E);
           if (param1) {
             stackIn_79_1 = true;
           } else {
             if (this.field_V) {
-              stackIn_77_0.field_I = true;
+              stackIn_77_0.enabled = true;
               if (this.field_Z == null) {
                 if (param0 <= 123) {
                   return;
@@ -118,26 +118,26 @@ final class nv extends hs implements he {
                 if (this.field_ab != null) {
                   stackIn_72_0 = this.field_ab;
                   stackIn_73_1 = (!param1) ? false : true;
-                  stackIn_72_0.field_I = stackIn_73_1;
+                  stackIn_72_0.enabled = stackIn_73_1;
                 }
                 return;
               }
               stackIn_56_0 = this.field_Z;
               stackIn_57_1 = (!param1) ? false : true;
-              stackIn_56_0.field_I = stackIn_57_1;
+              stackIn_56_0.enabled = stackIn_57_1;
               if (param0 <= 123) {
                 return;
               }
               if (this.field_ab != null) {
                 stackIn_62_0 = this.field_ab;
                 stackIn_63_1 = (!param1) ? false : true;
-                stackIn_62_0.field_I = stackIn_63_1;
+                stackIn_62_0.enabled = stackIn_63_1;
               }
               return;
             }
             stackIn_79_1 = false;
           }
-          stackIn_77_0.field_I = stackIn_79_1;
+          stackIn_77_0.enabled = stackIn_79_1;
         }
         if (this.field_Z == null) {
           if (param0 <= 123) {
@@ -146,63 +146,63 @@ final class nv extends hs implements he {
           if (this.field_ab != null) {
             stackIn_99_0 = this.field_ab;
             stackIn_100_1 = (!param1) ? false : true;
-            stackIn_99_0.field_I = stackIn_100_1;
+            stackIn_99_0.enabled = stackIn_100_1;
           }
           return;
         }
         stackIn_83_0 = this.field_Z;
         stackIn_84_1 = (!param1) ? false : true;
-        stackIn_83_0.field_I = stackIn_84_1;
+        stackIn_83_0.enabled = stackIn_84_1;
         if (param0 <= 123) {
           return;
         }
         if (this.field_ab != null) {
           stackIn_89_0 = this.field_ab;
           stackIn_90_1 = (!param1) ? false : true;
-          stackIn_89_0.field_I = stackIn_90_1;
+          stackIn_89_0.enabled = stackIn_90_1;
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException stackIn_49_0 = null;
         StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (super.a(param0, param1, param2, param3 ^ 0)) {
+          if (super.handleKey(rootWidget, keyCode, character, obfuscationGuard ^ 0)) {
             return true;
           }
           if (this.field_N &&
-            this.field_O.a(false)) {
-            if (98 == param1) {
+            this.field_O.isFocused(false)) {
+            if (98 == keyCode) {
               this.d(this.field_W - this.field_Q, 0);
               return true;
             }
-            if (param1 == 99) {
+            if (keyCode == 99) {
               this.d(this.field_Q + this.field_W, 0);
               return true;
             }
-            if (96 == param1) {
+            if (96 == keyCode) {
               this.a(this.field_T - this.field_K, (byte) 125);
               return true;
             }
-            if (param1 == 97) {
+            if (keyCode == 97) {
               this.a(this.field_T + this.field_K, (byte) 111);
               return true;
             }
-            if (param1 == 104) {
+            if (keyCode == 104) {
               this.d(this.field_W - this.b(true), 0);
               return true;
             }
-            if (param1 == 105) {
+            if (keyCode == 105) {
               this.d(this.field_W + this.b(true), 0);
               return true;
             }
-            if (param1 == 102) {
+            if (keyCode == 102) {
               if (this.field_M &&
                 br.heldKeys[82]) {
-                this.d(0, param3 ^ -12215);
+                this.d(0, obfuscationGuard ^ -12215);
                 return true;
               }
               if (this.field_V) {
@@ -210,10 +210,10 @@ final class nv extends hs implements he {
                 return true;
               }
             } else {
-              if (param1 == 103) {
+              if (keyCode == 103) {
                 if (this.field_M &&
                   br.heldKeys[82]) {
-                  this.d(65536, param3 + 12215);
+                  this.d(65536, obfuscationGuard + 12215);
                   return true;
                 }
                 if (this.field_V) {
@@ -223,7 +223,7 @@ final class nv extends hs implements he {
               }
             }
           }
-          if (param3 == -12215) {
+          if (obfuscationGuard == -12215) {
             return false;
           }
           field_bb = (String) null;
@@ -233,19 +233,19 @@ final class nv extends hs implements he {
           var5 = decompiledCaughtException;
           stackIn_49_0 = var5;
           stackIn_49_1 = new StringBuilder().append("nv.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_50_2 = "null";
           } else {
             stackIn_50_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     nv(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetPainter param5, WidgetPainter param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
         wc dupTemp$0 = null;
-        fw dupTemp$1 = null;
+        InteractiveWidget dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -268,10 +268,10 @@ final class nv extends hs implements he {
         this.field_S = 8192;
         try {
           this.field_C = new Widget[6];
-          dupTemp$0 = new wc(param0, param1, param7, param8, (WidgetPainter) null, (qo) null, new fw(0, 0, param7, param8, param6, (qo) null), false, false);
+          dupTemp$0 = new wc(param0, param1, param7, param8, (WidgetPainter) null, (WidgetListener) null, new InteractiveWidget(0, 0, param7, param8, param6, (WidgetListener) null), false, false);
           this.field_O = dupTemp$0;
           this.field_C[0] = (Widget) ((Object) dupTemp$0);
-          dupTemp$1 = new fw(param0, param1, param7, param8, param5, (qo) null);
+          dupTemp$1 = new InteractiveWidget(param0, param1, param7, param8, param5, (WidgetListener) null);
           this.field_P = dupTemp$1;
           this.field_C[1] = (Widget) ((Object) dupTemp$1);
           stackIn_4_1 = (param12);
@@ -320,7 +320,7 @@ final class nv extends hs implements he {
         }
     }
 
-    final boolean a(int param0, Widget param1) {
+    final boolean takeFocus(int obfuscationGuard, Widget rootWidget) {
         wc var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_11_0 = null;
@@ -328,12 +328,12 @@ final class nv extends hs implements he {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 11) {
+          if (obfuscationGuard != 11) {
             return false;
           }
           var3 = this.field_O;
           if (var3 != null &&
-            ((Widget) ((Object) var3)).a(param0 ^ 0, param1)) {
+            ((Widget) ((Object) var3)).takeFocus(obfuscationGuard ^ 0, rootWidget)) {
             return true;
           }
           return false;
@@ -341,8 +341,8 @@ final class nv extends hs implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
-          stackIn_11_1 = new StringBuilder().append("nv.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("nv.M(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -413,7 +413,7 @@ final class nv extends hs implements he {
         this.m(1681504464);
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -426,15 +426,15 @@ final class nv extends hs implements he {
         int var5_intLifetime2;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
-          if ((!(this.field_O.field_E instanceof fw) ||
-            ((fw) (this.field_O.field_E)).field_I) && this.field_O.field_q == 1) {
+          super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
+          if ((!(this.field_O.field_E instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_O.field_E)).enabled) && this.field_O.pressedButton == 1) {
             if (this.field_V) {
               var5_int = this.field_T;
               this.k(115);
               if (this.field_T != var5_int &&
-                this.field_x instanceof jw) {
-                ((jw) (this.field_x)).a(this.field_T, this.field_T, (byte) -39, this);
+                this.listener instanceof jw) {
+                ((jw) (this.listener)).a(this.field_T, this.field_T, (byte) -39, this);
               }
             } else {
               this.m(1681504464);
@@ -443,22 +443,22 @@ final class nv extends hs implements he {
               var5_intLifetime2 = this.field_W;
               this.j(0);
               if (this.field_W != var5_intLifetime2 &&
-                this.field_x instanceof jw) {
-                ((jw) (this.field_x)).a(this.field_T, this.field_W, (byte) -39, this);
+                this.listener instanceof jw) {
+                ((jw) (this.listener)).a(this.field_T, this.field_W, (byte) -39, this);
               }
             } else {
               this.n(16695);
             }
           }
-          if (this.field_P.field_I &&
-            this.field_P.field_G == 1) {
+          if (this.field_P.enabled &&
+            this.field_P.lastActivationButton == 1) {
             if (this.field_M) {
               if (this.field_V) {
-                var5_intLifetime1 = -this.x - param1 + (AiPlanningStrategy.pointerX - (this.field_O.x + (this.field_O.width >> 1)));
-                var6 = -param2 + ko.pointerY - (this.y + this.field_O.y + (this.field_O.height >> 1));
+                var5_intLifetime1 = -this.x - originX + (AiPlanningStrategy.pointerX - (this.field_O.x + (this.field_O.width >> 1)));
+                var6 = -originY + ko.pointerY - (this.y + this.field_O.y + (this.field_O.height >> 1));
                 if (Math.abs(var6) > Math.abs(var5_intLifetime1)) {
                   if (0 < var6) {
-                    this.d(this.field_R + this.field_W, param0 ^ 32722);
+                    this.d(this.field_R + this.field_W, obfuscationGuard ^ 32722);
                   } else {
                     this.d(-this.field_R + this.field_W, 0);
                   }
@@ -470,15 +470,15 @@ final class nv extends hs implements he {
                   }
                 }
               } else {
-                if ((this.field_O.height >> 1) + (param2 + this.field_O.y) >= ko.pointerY) {
-                  this.d(-this.field_R + this.field_W, param0 ^ 32722);
+                if ((this.field_O.height >> 1) + (originY + this.field_O.y) >= ko.pointerY) {
+                  this.d(-this.field_R + this.field_W, obfuscationGuard ^ 32722);
                 } else {
                   this.d(this.field_R + this.field_W, 0);
                 }
               }
             } else {
               if (this.field_V) {
-                if (param1 + (this.field_O.x + (this.field_O.width >> 1)) >= AiPlanningStrategy.pointerX) {
+                if (originX + (this.field_O.x + (this.field_O.width >> 1)) >= AiPlanningStrategy.pointerX) {
                   this.a(this.field_T - this.field_S, (byte) 84);
                 } else {
                   this.a(this.field_T + this.field_S, (byte) 110);
@@ -491,8 +491,8 @@ final class nv extends hs implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_41_0 = var5;
-          stackIn_41_1 = new StringBuilder().append("nv.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_41_1 = new StringBuilder().append("nv.P(").append(obfuscationGuard).append(',').append(originX).append(',').append(originY).append(',');
+          if (rootWidget == null) {
             stackIn_42_2 = "null";
           } else {
             stackIn_42_2 = "{...}";
@@ -502,51 +502,51 @@ final class nv extends hs implements he {
     }
 
     private final void a(byte param0, boolean param1) {
-        fw stackIn_8_0 = null;
-        fw stackIn_13_0 = null;
+        InteractiveWidget stackIn_8_0 = null;
+        InteractiveWidget stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
-        fw stackIn_18_0 = null;
+        InteractiveWidget stackIn_18_0 = null;
         boolean stackIn_21_1 = false;
-        fw stackIn_27_0 = null;
+        InteractiveWidget stackIn_27_0 = null;
         boolean stackIn_28_1 = false;
-        fw stackIn_34_0 = null;
+        InteractiveWidget stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
-        fw stackIn_39_0 = null;
+        InteractiveWidget stackIn_39_0 = null;
         boolean stackIn_40_1 = false;
-        fw stackIn_45_0 = null;
+        InteractiveWidget stackIn_45_0 = null;
         boolean stackIn_47_1 = false;
-        fw stackIn_54_0 = null;
+        InteractiveWidget stackIn_54_0 = null;
         boolean stackIn_55_1 = false;
-        fw stackIn_59_0 = null;
+        InteractiveWidget stackIn_59_0 = null;
         boolean stackIn_60_1 = false;
-        fw stackIn_68_0 = null;
+        InteractiveWidget stackIn_68_0 = null;
         boolean stackIn_69_1 = false;
-        fw stackIn_74_0 = null;
+        InteractiveWidget stackIn_74_0 = null;
         boolean stackIn_76_1 = false;
-        fw stackIn_80_0 = null;
+        InteractiveWidget stackIn_80_0 = null;
         boolean stackIn_81_1 = false;
-        fw stackIn_85_0 = null;
+        InteractiveWidget stackIn_85_0 = null;
         boolean stackIn_86_1 = false;
-        fw stackIn_95_0 = null;
+        InteractiveWidget stackIn_95_0 = null;
         boolean stackIn_96_1 = false;
         stackIn_45_0 = this.field_P;
         if (param1) {
           stackIn_47_1 = true;
         } else {
           if (this.field_M) {
-            stackIn_45_0.field_I = true;
-            if (this.field_O.field_E instanceof fw) {
-              stackIn_18_0 = (fw) (this.field_O.field_E);
+            stackIn_45_0.enabled = true;
+            if (this.field_O.field_E instanceof InteractiveWidget) {
+              stackIn_18_0 = (InteractiveWidget) (this.field_O.field_E);
               if (param1) {
-                stackIn_18_0.field_I = true;
+                stackIn_18_0.enabled = true;
                 if (null != this.field_U) {
                   stackIn_8_0 = this.field_U;
-                  stackIn_8_0.field_I = true;
+                  stackIn_8_0.enabled = true;
                 }
                 if (this.field_Y != null) {
                   stackIn_13_0 = this.field_Y;
                   stackIn_14_1 = (!param1) ? false : true;
-                  stackIn_13_0.field_I = stackIn_14_1;
+                  stackIn_13_0.enabled = stackIn_14_1;
                 }
                 if (param0 != 11) {
                   this.field_K = 42;
@@ -554,13 +554,13 @@ final class nv extends hs implements he {
                 return;
               }
               stackIn_21_1 = (!this.field_M) ? false : true;
-              stackIn_18_0.field_I = stackIn_21_1;
+              stackIn_18_0.enabled = stackIn_21_1;
             }
             if (null == this.field_U) {
               if (this.field_Y != null) {
                 stackIn_27_0 = this.field_Y;
                 stackIn_28_1 = (!param1) ? false : true;
-                stackIn_27_0.field_I = stackIn_28_1;
+                stackIn_27_0.enabled = stackIn_28_1;
               }
               if (param0 != 11) {
                 this.field_K = 42;
@@ -569,11 +569,11 @@ final class nv extends hs implements he {
             }
             stackIn_34_0 = this.field_U;
             stackIn_35_1 = (!param1) ? false : true;
-            stackIn_34_0.field_I = stackIn_35_1;
+            stackIn_34_0.enabled = stackIn_35_1;
             if (this.field_Y != null) {
               stackIn_39_0 = this.field_Y;
               stackIn_40_1 = (!param1) ? false : true;
-              stackIn_39_0.field_I = stackIn_40_1;
+              stackIn_39_0.enabled = stackIn_40_1;
             }
             if (param0 == 11) {
               return;
@@ -583,31 +583,31 @@ final class nv extends hs implements he {
           }
           stackIn_47_1 = false;
         }
-        stackIn_45_0.field_I = stackIn_47_1;
+        stackIn_45_0.enabled = stackIn_47_1;
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_O.field_E instanceof fw) {
-          stackIn_74_0 = (fw) (this.field_O.field_E);
+        if (this.field_O.field_E instanceof InteractiveWidget) {
+          stackIn_74_0 = (InteractiveWidget) (this.field_O.field_E);
           if (param1) {
             stackIn_76_1 = true;
           } else {
             if (this.field_M) {
-              stackIn_74_0.field_I = true;
+              stackIn_74_0.enabled = true;
               if (null == this.field_U) {
                 if (this.field_Y != null) {
                   stackIn_68_0 = this.field_Y;
                   stackIn_69_1 = (!param1) ? false : true;
-                  stackIn_68_0.field_I = stackIn_69_1;
+                  stackIn_68_0.enabled = stackIn_69_1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 stackIn_54_0 = this.field_U;
                 stackIn_55_1 = (!param1) ? false : true;
-                stackIn_54_0.field_I = stackIn_55_1;
+                stackIn_54_0.enabled = stackIn_55_1;
                 if (this.field_Y != null) {
                   stackIn_59_0 = this.field_Y;
                   stackIn_60_1 = (!param1) ? false : true;
-                  stackIn_59_0.field_I = stackIn_60_1;
+                  stackIn_59_0.enabled = stackIn_60_1;
                 }
                 if (param0 != 11) {
                   this.field_K = 42;
@@ -620,7 +620,7 @@ final class nv extends hs implements he {
             }
           }
           if (decompiledFrameRemainder0) {
-            stackIn_74_0.field_I = stackIn_76_1;
+            stackIn_74_0.enabled = stackIn_76_1;
           }
         }
         if (decompiledFrameRemainder0) {
@@ -628,16 +628,16 @@ final class nv extends hs implements he {
             if (this.field_Y != null) {
               stackIn_95_0 = this.field_Y;
               stackIn_96_1 = (!param1) ? false : true;
-              stackIn_95_0.field_I = stackIn_96_1;
+              stackIn_95_0.enabled = stackIn_96_1;
             }
           } else {
             stackIn_80_0 = this.field_U;
             stackIn_81_1 = (!param1) ? false : true;
-            stackIn_80_0.field_I = stackIn_81_1;
+            stackIn_80_0.enabled = stackIn_81_1;
             if (this.field_Y != null) {
               stackIn_85_0 = this.field_Y;
               stackIn_86_1 = (!param1) ? false : true;
-              stackIn_85_0.field_I = stackIn_86_1;
+              stackIn_85_0.enabled = stackIn_86_1;
             }
           }
         }
@@ -647,7 +647,7 @@ final class nv extends hs implements he {
         this.field_K = 42;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -656,29 +656,29 @@ final class nv extends hs implements he {
         RuntimeException var6 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param2 == 1 &&
+          if (button == 1 &&
             this.field_N) {
             if (this.field_M &&
-              param4 == this.field_Z) {
+              widget == this.field_Z) {
               this.d(this.field_W - this.field_Q, 0);
             } else {
               if (this.field_M &&
-                this.field_ab == param4) {
+                this.field_ab == widget) {
                 this.d(this.field_W + this.field_Q, 0);
               } else {
                 if (this.field_V &&
-                  this.field_U == param4) {
+                  this.field_U == widget) {
                   this.a(-this.field_K + this.field_T, (byte) 121);
                 } else {
                   if (this.field_V &&
-                    this.field_Y == param4) {
+                    this.field_Y == widget) {
                     this.a(this.field_T + this.field_K, (byte) 118);
                   }
                 }
               }
             }
           }
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             field_bb = (String) null;
           }
           return;
@@ -686,8 +686,8 @@ final class nv extends hs implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_22_0 = var6;
-          stackIn_22_1 = new StringBuilder().append("nv.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_22_1 = new StringBuilder().append("nv.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
@@ -711,31 +711,31 @@ final class nv extends hs implements he {
         if (param1 != 0) {
           field_J = (String) null;
           this.a((byte) -123, param0);
-          if (this.field_x instanceof jw) {
-            ((jw) (this.field_x)).a((byte) -112, this, this.field_W, this.field_W);
+          if (this.listener instanceof jw) {
+            ((jw) (this.listener)).a((byte) -112, this, this.field_W, this.field_W);
             return;
           }
           return;
         }
         this.a((byte) -123, param0);
-        if (!(this.field_x instanceof jw)) {
+        if (!(this.listener instanceof jw)) {
           return;
         }
-        ((jw) (this.field_x)).a((byte) -112, this, this.field_W, this.field_W);
+        ((jw) (this.listener)).a((byte) -112, this, this.field_W, this.field_W);
     }
 
     private final void a(int param0, byte param1) {
         if (param1 >= 47) {
           this.e(-114, param0);
-          if (this.field_x instanceof jw) {
-            ((jw) (this.field_x)).a((byte) -109, this, this.field_W, this.field_T);
+          if (this.listener instanceof jw) {
+            ((jw) (this.listener)).a((byte) -109, this, this.field_W, this.field_T);
           }
           return;
         }
-        this.field_P = (fw) null;
+        this.field_P = (InteractiveWidget) null;
         this.e(-114, param0);
-        if (this.field_x instanceof jw) {
-          ((jw) (this.field_x)).a((byte) -109, this, this.field_W, this.field_T);
+        if (this.listener instanceof jw) {
+          ((jw) (this.listener)).a((byte) -109, this, this.field_W, this.field_T);
         }
     }
 
@@ -902,7 +902,7 @@ final class nv extends hs implements he {
           this.field_O.x = var2 + ((-var2 + var3) * this.field_T >> 16);
           return;
         }
-        this.field_P = (fw) null;
+        this.field_P = (InteractiveWidget) null;
         var2Lifetime1 = null == this.field_U ? this.field_P.x : this.field_U.x + this.field_U.width;
         var3Lifetime1 = null != this.field_Y ? -this.field_O.width + this.field_Y.x : this.field_P.width + this.field_P.x - this.field_O.width;
         this.field_O.x = var2Lifetime1 + ((-var2Lifetime1 + var3Lifetime1) * this.field_T >> 16);

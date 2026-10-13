@@ -139,7 +139,7 @@ final class uj extends mk {
         return new QuickChatCommandDefinition[]{jk.field_b, na.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, lg.field_e, du.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
     }
 
-    uj(fn param0) {
+    uj(EditableTextWidget param0) {
         super(param0);
         this.field_k = false;
     }

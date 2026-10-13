@@ -163,24 +163,24 @@ abstract class pt extends sf {
         }
     }
 
-    boolean a(Widget param0, int param1, char param2, int param3) {
+    boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(rootWidget, keyCode, character, obfuscationGuard)) {
             return true;
           }
           if (null == this.field_cb) {
             return false;
           }
-          if (98 == param1) {
-            this.field_cb.a(param3 ^ -12222, param0);
+          if (98 == keyCode) {
+            this.field_cb.takeFocus(obfuscationGuard ^ -12222, rootWidget);
           }
-          if (param1 == 99) {
-            this.field_cb.a(11, param0);
+          if (keyCode == 99) {
+            this.field_cb.takeFocus(11, rootWidget);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,12 +188,12 @@ abstract class pt extends sf {
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
           stackIn_15_1 = new StringBuilder().append("pt.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

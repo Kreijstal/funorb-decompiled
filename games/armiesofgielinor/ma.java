@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends fn implements eg {
+final class ma extends EditableTextWidget implements eg {
     static boolean field_Z;
     private int field_W;
     private n field_bb;
@@ -9,28 +9,28 @@ final class ma extends fn implements eg {
     static String field_X;
     static long responseTargetAccountId;
 
-    final void d(byte param0) {
-        if (param0 >= -114) {
+    final void notifyTextChanged(byte obfuscationGuard) {
+        if (obfuscationGuard >= -114) {
           this.a(-106);
         }
-        super.d((byte) -117);
+        super.notifyTextChanged((byte) -117);
         if (null != this.field_bb) {
           this.field_bb.a(124);
         }
     }
 
-    final String h(int param0) {
-        if (!this.field_t) {
+    final String getTooltipText(int obfuscationGuard) {
+        if (!this.hovered) {
           return null;
         }
-        if (this.field_s == null) {
+        if (this.tooltipText == null) {
           return null;
         }
         ip.a(ko.pointerY, this.width - this.field_W + AiPlanningStrategy.pointerX, (byte) 113);
-        if (param0 != 21384) {
+        if (obfuscationGuard != 21384) {
           return (String) null;
         }
-        return this.field_s;
+        return this.tooltipText;
     }
 
     final static ls[] a(int param0, PlatformTaskService param1) {
@@ -109,7 +109,7 @@ final class ma extends fn implements eg {
         return ((param2 & 1) == 0 ? param0 : -param0) + ((param2 & 2) != 0 ? -param3 : param3);
     }
 
-    ma(String param0, qo param1, int param2) {
+    ma(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -125,15 +125,15 @@ final class ma extends fn implements eg {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
-          if (param0 != 32722) {
+          if (obfuscationGuard != 32722) {
             this.field_W = 103;
           }
-          super.a(param0 + 0, param1, param2, param3);
-          this.field_W = AiPlanningStrategy.pointerX - this.x - param1;
+          super.updatePointer(obfuscationGuard + 0, originX, originY, rootWidget);
+          this.field_W = AiPlanningStrategy.pointerX - this.x - originX;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ma.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ma.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 

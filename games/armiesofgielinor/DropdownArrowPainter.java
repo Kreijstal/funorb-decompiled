@@ -59,7 +59,7 @@ final class DropdownArrowPainter implements WidgetPainter {
         try {
           TriangleRasterizer.useRasterClip();
           KeyboardInputListener.field_a = new int[260];
-          fn.field_M = 11;
+          EditableTextWidget.field_M = 11;
           var1_int = 0;
           var2 = -93 / ((-68 - param0) / 57);
           while (256 > var1_int) {

@@ -171,7 +171,7 @@ final class fk implements WidgetPainter {
           var6_int = originX + widget.x;
           var7 = originY + widget.y;
           StateChangeEvent.a(widget.width, var6_int, widget.height, -127, var7);
-          if (widget.a(false)) {
+          if (widget.isFocused(false)) {
             na.c(-4 + widget.width, 2 + var6_int, -67, widget.height - 4, 2 + var7);
           }
           SoftwareRaster.setClip(var6_int, var7, var6_int + widget.width - 2, widget.height + var7);
@@ -179,7 +179,7 @@ final class fk implements WidgetPainter {
           if (var8 != null) {
             var9 = var8.toString();
             this.field_c.font.drawText(var9, 2 + var6_int, -1 + var7 + (widget.height + this.field_c.font.maxAscent >> 1), 10000536, -1);
-            if (this.field_c.a(false) &&
+            if (this.field_c.isFocused(false) &&
               var9.startsWith(this.field_c.typedPrefix)) {
               var10 = this.field_c.font.textWidth(this.field_c.typedPrefix);
               SoftwareRaster.b(var6_int + 2, 2 + var7, var10, -4 + widget.height, 2188450, 100);

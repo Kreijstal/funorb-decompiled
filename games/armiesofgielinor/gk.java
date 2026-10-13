@@ -13,22 +13,22 @@ final class gk extends nl {
     static String field_P;
 
     public gk() {
-        super(0, 0, SoundPlaybackHandle.field_l, DebugConsole.field_x, (WidgetPainter) null, (qo) null);
+        super(0, 0, SoundPlaybackHandle.field_l, DebugConsole.field_x, (WidgetPainter) null, (WidgetListener) null);
         this.field_M = new NodeDeque();
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.painter != null) {
-          this.painter.paintWidget((Widget) (this), param0, -80, true, param1);
+          this.painter.paintWidget((Widget) (this), originX, -80, true, originY);
         }
         NodeIterator var5 = new NodeIterator(this.field_M);
-        if (param2 > -82) {
+        if (obfuscationGuard > -82) {
           decodedChatAccountId = -21L;
         }
         Widget var6 = (Widget) (var5.last(50));
         while (var6 != null) {
-          var6.a(this.x + param0, this.y + param1, (byte) -121, param3);
+          var6.drawWidget(this.x + originX, this.y + originY, (byte) -121, renderLayer);
           var6 = (Widget) (var5.previous((byte) -112));
         }
     }
@@ -77,7 +77,7 @@ final class gk extends nl {
         NodeIterator var6 = new NodeIterator(this.field_M);
         wl var7 = (wl) (var6.first(50));
         if (param2 != -14) {
-          this.a(-19, 39, (byte) 87, 16);
+          this.drawWidget(-19, 39, (byte) 87, 16);
         }
         while (var7 != null) {
           var7.y = var7.y + var5;
@@ -158,7 +158,7 @@ final class gk extends nl {
           var3 = (wl) (param0);
           this.field_M.addFirst(750, var3);
           var3.field_L = true;
-          var3.a(11, (Widget) (this));
+          var3.takeFocus(11, (Widget) (this));
           if (param1 != 0) {
             this.field_M = (NodeDeque) null;
           }

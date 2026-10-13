@@ -203,7 +203,7 @@ final class SpellMenuGroup {
           this.spellIds = spellIds;
           this.description = description;
           for (spellIndex = 0; this.spellIds.length > spellIndex; spellIndex++) {
-            ct.spellMenuById[this.spellIds[spellIndex]] = this;
+            TextHotspotRegion.spellMenuById[this.spellIds[spellIndex]] = this;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

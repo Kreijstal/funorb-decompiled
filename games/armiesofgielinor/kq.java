@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kq extends fw {
+class kq extends InteractiveWidget {
     static int field_L;
     private Widget field_Q;
     static QuickChatCommandDefinition field_M;
@@ -207,7 +207,7 @@ class kq extends fw {
         }
     }
 
-    final boolean a(int param0, Widget param1) {
+    final boolean takeFocus(int obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -215,17 +215,17 @@ class kq extends fw {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 11) {
+          if (obfuscationGuard != 11) {
             field_L = 76;
           }
-          stackIn_3_0 = this.field_Q.a(param0 + 0, param1);
+          stackIn_3_0 = this.field_Q.takeFocus(obfuscationGuard + 0, rootWidget);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("kq.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("kq.M(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

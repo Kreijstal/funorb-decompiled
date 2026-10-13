@@ -15,7 +15,7 @@ final class wc extends nl {
     static RgbSprite field_J;
     private int field_M;
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_8_0 = 0;
@@ -24,40 +24,40 @@ final class wc extends nl {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8_int = super.a(param0, param1, param2, 108, param4, param5, param6) ? 1 : 0;
-          if (param3 < 103) {
+          var8_int = super.pointerPressed(pointerX, originX, originY, 108, rootWidget, pointerY, button) ? 1 : 0;
+          if (obfuscationGuard < 103) {
             this.field_N = 62;
           }
           if (var8_int != 0 &&
             this.field_I) {
             return true;
           }
-          if (!this.containsPointer(1, param1, param5, param0, param2)) {
+          if (!this.containsPointer(1, originX, pointerY, pointerX, originY)) {
             stackIn_8_0 = var8_int;
             return stackIn_8_0 != 0;
           }
-          if (1 == param6) {
-            this.field_L = -this.y + (param5 - param2);
+          if (1 == button) {
+            this.field_L = -this.y + (pointerY - originY);
             bn.field_f = this;
-            this.field_N = -param1 - this.x + param0;
+            this.field_N = -originX - this.x + pointerX;
           }
-          this.field_q = param6;
+          this.pressedButton = button;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_16_0 = var8;
-          stackIn_16_1 = new StringBuilder().append("wc.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_16_1 = new StringBuilder().append("wc.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         int stackIn_18_1 = 0;
         int stackIn_19_2 = 0;
         int stackIn_25_1 = 0;
@@ -70,22 +70,22 @@ final class wc extends nl {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_E instanceof fw) ||
-            ((fw) (this.field_E)).field_I) &&
-            this.field_q == 1) {
-            var5_int = -param1 + (AiPlanningStrategy.pointerX - this.field_N);
-            var6 = -this.field_L + (ko.pointerY - param2);
+          if ((!(this.field_E instanceof InteractiveWidget) ||
+            ((InteractiveWidget) (this.field_E)).enabled) &&
+            this.pressedButton == 1) {
+            var5_int = -originX + (AiPlanningStrategy.pointerX - this.field_N);
+            var6 = -this.field_L + (ko.pointerY - originY);
             if (this.x != var5_int ||
               this.y != var6) {
               this.x = var5_int;
               this.y = var6;
-              if (this.field_x instanceof fr) {
-                ((fr) (this.field_x)).a(this, param2, param0 ^ -32678, param1);
+              if (this.listener instanceof fr) {
+                ((fr) (this.listener)).a(this, originY, obfuscationGuard ^ -32678, originX);
               }
             }
           } else {
             if (!this.field_P) {
-              super.a(param0, param1, param2, param3);
+              super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
               return;
             }
             if (this.field_O != this.x) {
@@ -117,14 +117,14 @@ final class wc extends nl {
               this.y = stackIn_25_1 + stackIn_26_2;
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_31_0 = var5;
-          stackIn_31_1 = new StringBuilder().append("wc.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_31_1 = new StringBuilder().append("wc.P(").append(obfuscationGuard).append(',').append(originX).append(',').append(originY).append(',');
+          if (rootWidget == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
@@ -167,13 +167,13 @@ final class wc extends nl {
         this.field_O = this.x;
     }
 
-    final void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
+    final void pointerReleased(int originY, Widget rootWidget, int pointerX, byte obfuscationGuard, int pointerY, int originX) {
         try {
-          int var7_int = -116 / ((-58 - param3) / 53);
-          super.a(param0, param1, param2, (byte) 73, param4, param5);
-          this.field_q = 0;
+          int var7_int = -116 / ((-58 - obfuscationGuard) / 53);
+          super.pointerReleased(originY, rootWidget, pointerX, (byte) 73, pointerY, originX);
+          this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wc.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wc.JA(" + originY + ',' + (rootWidget != null ? "{...}" : "null") + ',' + pointerX + ',' + obfuscationGuard + ',' + pointerY + ',' + originX + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class wc extends nl {
         qh.a(param0, 0);
     }
 
-    wc(int param0, int param1, int param2, int param3, WidgetPainter param4, qo param5, Widget param6, boolean param7, boolean param8) {
+    wc(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, Widget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_O = 2147483647;
         this.field_M = 2147483647;

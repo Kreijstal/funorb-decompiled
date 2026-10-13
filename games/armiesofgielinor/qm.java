@@ -16,7 +16,7 @@ final class qm extends nl {
     }
 
     qm(int param0, int param1, int param2, int param3, WidgetPainter param4, Widget param5) {
-        super(param0, param1, param2, param3, param4, (qo) null);
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
         try {
           this.field_E = param5;
         } catch (RuntimeException runtimeException) {
@@ -24,17 +24,17 @@ final class qm extends nl {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        if (param2 > -82) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        if (obfuscationGuard > -82) {
           return;
         }
-        if (0 != param3) {
+        if (0 != renderLayer) {
           if (this.width == 0) {
             return;
           }
           if (this.height != 0) {
-            t.field_c.a(this.y + param1 + this.height, this.x + param0 + this.width, this.y + param1, -101, this.x + param0);
-            this.field_E.a(this.x + param0, this.y + param1, (byte) -110, param3);
+            t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+            this.field_E.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
             t.field_c.a(58);
             return;
           }
@@ -45,26 +45,26 @@ final class qm extends nl {
             return;
           }
           if (this.height != 0) {
-            t.field_c.a(this.y + param1 + this.height, this.x + param0 + this.width, this.y + param1, -101, this.x + param0);
-            this.field_E.a(this.x + param0, this.y + param1, (byte) -110, param3);
+            t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+            this.field_E.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
             t.field_c.a(58);
             return;
           }
           return;
         }
-        this.painter.paintWidget((Widget) (this), param0, -102, true, param1);
+        this.painter.paintWidget((Widget) (this), originX, -102, true, originY);
         if (this.width == 0) {
           return;
         }
         if (this.height != 0) {
-          t.field_c.a(this.y + param1 + this.height, this.x + param0 + this.width, this.y + param1, -101, this.x + param0);
-          this.field_E.a(this.x + param0, this.y + param1, (byte) -110, param3);
+          t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+          this.field_E.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
           t.field_c.a(58);
           return;
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -72,22 +72,22 @@ final class qm extends nl {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 <= 103) {
+          if (obfuscationGuard <= 103) {
             lobbyRoomsById = (DualNodeHashTable) null;
           }
-          stackIn_6_0 = (this.containsPointer(1, param1, param5, param0, param2)) && (super.a(param0, param1, param2, 127, param4, param5, param6));
+          stackIn_6_0 = (this.containsPointer(1, originX, pointerY, pointerX, originY)) && (super.pointerPressed(pointerX, originX, originY, 127, rootWidget, pointerY, button));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_9_0 = var8;
-          stackIn_9_1 = new StringBuilder().append("qm.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_9_1 = new StringBuilder().append("qm.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 

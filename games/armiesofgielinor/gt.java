@@ -58,7 +58,7 @@ final class gt {
             0 != param0.length()) {
             var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_8_0 = hv.field_N;
+              stackIn_8_0 = HotspotTextWidget.field_N;
               return stackIn_8_0;
             }
             var3 = param0.substring(0, var2_int);

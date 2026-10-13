@@ -41,7 +41,7 @@ final class pb {
         var3 = param0.field_w;
         var4 = param0.field_a;
         var5 = param0.field_E;
-        var15 = fw.field_J;
+        var15 = InteractiveWidget.field_J;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_j;
@@ -143,7 +143,7 @@ final class pb {
         param0.field_w = var3;
         param0.field_a = var4;
         param0.field_E = var5;
-        fw.field_J = var6;
+        InteractiveWidget.field_J = var6;
         param0.field_j = var7;
         param0.field_v = var8;
         param0.field_i = var9;
@@ -264,8 +264,8 @@ final class pb {
         var24 = null;
         var25 = null;
         param0.field_g = 1;
-        if (fw.field_J == null) {
-          fw.field_J = new int[param0.field_g * 100000];
+        if (InteractiveWidget.field_J == null) {
+          InteractiveWidget.field_J = new int[param0.field_g * 100000];
         }
         var26 = 1;
         while (true) {
@@ -436,14 +436,14 @@ final class pb {
                 param0.field_B[var4] = param0.field_B[var4] + param0.field_B[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(fw.field_J[var4] & 255);
+                var1 = (byte)(InteractiveWidget.field_J[var4] & 255);
                 dupTemp$1 = param0.field_B[var1 & 255];
-                fw.field_J[dupTemp$1] = fw.field_J[dupTemp$1] | var4 << 8;
+                InteractiveWidget.field_J[dupTemp$1] = InteractiveWidget.field_J[dupTemp$1] | var4 << 8;
                 param0.field_B[var1 & 255] = param0.field_B[var1 & 255] + 1;
               }
-              param0.field_j = fw.field_J[param0.field_f] >> 8;
+              param0.field_j = InteractiveWidget.field_J[param0.field_f] >> 8;
               param0.field_a = 0;
-              param0.field_j = fw.field_J[param0.field_j];
+              param0.field_j = InteractiveWidget.field_J[param0.field_j];
               param0.field_E = (byte)(param0.field_j & 255);
               param0.field_j = param0.field_j >> 8;
               param0.field_a = param0.field_a + 1;
@@ -507,7 +507,7 @@ final class pb {
               }
               dupTemp$0 = param0.field_n[var1 & 255] & 255;
               param0.field_u[dupTemp$0] = param0.field_u[dupTemp$0] + 1;
-              fw.field_J[var14] = param0.field_n[var1 & 255] & 255;
+              InteractiveWidget.field_J[var14] = param0.field_n[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -564,7 +564,7 @@ final class pb {
             var1 = param0.field_n[param0.field_o[param0.field_h[0]] & 255];
             param0.field_u[var1 & 255] = param0.field_u[var1 & 255] + var15;
             while (var15 > 0) {
-              fw.field_J[var14] = var1 & 255;
+              InteractiveWidget.field_J[var14] = var1 & 255;
               var14++;
               var15--;
             }

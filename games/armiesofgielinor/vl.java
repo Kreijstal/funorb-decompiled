@@ -116,7 +116,7 @@ final class vl extends mk {
         field_k = null;
     }
 
-    vl(fn param0) {
+    vl(EditableTextWidget param0) {
         super(param0);
     }
 

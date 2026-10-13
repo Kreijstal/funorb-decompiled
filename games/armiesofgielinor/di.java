@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class di extends mk {
-    private fn field_k;
+    private EditableTextWidget field_k;
     static String field_j;
     static ClientUiComponent field_l;
 
@@ -64,7 +64,7 @@ final class di extends mk {
         }
     }
 
-    di(fn param0, fn param1) {
+    di(EditableTextWidget param0, EditableTextWidget param1) {
         super(param0);
         try {
           this.field_k = param1;

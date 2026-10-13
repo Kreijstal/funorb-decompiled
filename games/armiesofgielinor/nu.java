@@ -159,14 +159,14 @@ final class nu extends BitmapTextWidgetPainter {
         int var8 = 0;
         Widget var9 = null;
         try {
-          if (!widget.field_t) {
-            stackIn_6_0 = (widget.a(false)) ? 1 : 0;
+          if (!widget.hovered) {
+            stackIn_6_0 = (widget.isFocused(false)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (widget instanceof fw) {
-            renderFlag = renderFlag & ((fw) (widget)).field_I;
+          if (widget instanceof InteractiveWidget) {
+            renderFlag = renderFlag & ((InteractiveWidget) (widget)).enabled;
           }
           if (obfuscationGuard > -79) {
             var9 = (Widget) null;

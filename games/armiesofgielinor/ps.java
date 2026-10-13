@@ -86,13 +86,13 @@ final class ps extends BitmapTextWidgetPainter {
             field_A = (String) null;
           }
           if (renderFlag) {
-            stackIn_8_0 = (((fw) (widget)).field_K) ? 1 : 0;
+            stackIn_8_0 = (((InteractiveWidget) (widget)).active) ? 1 : 0;
           } else {
             stackIn_8_0 = 0;
           }
           var6_int = stackIn_8_0;
           if (renderFlag) {
-            stackIn_14_0 = (widget.a(false)) ? 1 : 0;
+            stackIn_14_0 = (widget.isFocused(false)) ? 1 : 0;
           } else {
             stackIn_14_0 = 0;
           }

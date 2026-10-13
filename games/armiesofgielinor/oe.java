@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oe extends ro implements he {
+final class oe extends ro implements WidgetActivationListener {
     private boolean field_Ab;
     private kd field_xb;
     static NodeDeque field_Bb;
@@ -84,16 +84,16 @@ final class oe extends ro implements he {
         ManaEvent.a(param2, param6, param3, param4, param7, param5, SoftwareRaster.pixels, param1, (byte) 20);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         if (this.field_yb) {
           td.a(false, true, 21);
           return;
         }
         try {
-          bt.b(param1 ^ param1);
+          bt.b(obfuscationGuard ^ obfuscationGuard);
           this.b(true);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "oe.N(" + pointerX + ',' + obfuscationGuard + ',' + button + ',' + pointerY + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class oe extends ro implements he {
               this.a(new qd(this), (byte) -81);
               return;
             }
-            var5.a(ro.field_kb, (qo) (this), (byte) -61);
+            var5.a(ro.field_kb, (WidgetListener) (this), (byte) -61);
           } else {
             if (!this.field_yb) {
               if (param2.field_d != 5) {
@@ -147,7 +147,7 @@ final class oe extends ro implements he {
                 var5.a(dt.field_c, 17, 1);
               }
             } else {
-              var5.a(ro.field_kb, (qo) (this), (byte) 110);
+              var5.a(ro.field_kb, (WidgetListener) (this), (byte) 110);
             }
             if (param2.field_d == 3) {
               var5.a(SoundPlaybackHandle.field_m, 7, 1);

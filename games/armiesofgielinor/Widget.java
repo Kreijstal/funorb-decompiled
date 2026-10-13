@@ -7,17 +7,17 @@ class Widget extends IntrusiveNode {
     static int field_A;
     static int[] field_o;
     int y;
-    qo field_x;
+    WidgetListener listener;
     static QuickChatCommandDefinition field_y;
-    boolean field_t;
+    boolean hovered;
     int width;
     int contentOffsetY;
     WidgetPainter painter;
     int height;
-    int field_q;
+    int pressedButton;
     int x;
     TextLayout textLayout;
-    String field_s;
+    String tooltipText;
     String text;
     int contentOffsetX;
     static int field_n;
@@ -26,7 +26,7 @@ class Widget extends IntrusiveNode {
     boolean containsPointer(int obfuscationGuard, int originX, int pointerY, int pointerX, int originY) {
         boolean stackIn_18_0 = false;
         if (obfuscationGuard != 1) {
-          this.a(27, 29, 59, (Widget) null);
+          this.updatePointer(27, 29, 59, (Widget) null);
           if (originX + this.x > pointerX) {
             return false;
           }
@@ -51,17 +51,17 @@ class Widget extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
+    void pointerReleased(int originY, Widget rootWidget, int pointerX, byte obfuscationGuard, int pointerY, int originX) {
         try {
-          this.field_q = 0;
-          int var7_int = 122 / ((param3 + 58) / 53);
+          this.pressedButton = 0;
+          int var7_int = 122 / ((obfuscationGuard + 58) / 53);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kb.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kb.JA(" + originY + ',' + (rootWidget != null ? "{...}" : "null") + ',' + pointerX + ',' + obfuscationGuard + ',' + pointerY + ',' + originX + ')');
         }
     }
 
-    boolean a(boolean param0) {
-        if (param0) {
+    boolean isFocused(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           this.a((Hashtable) null, 105, (byte) 68, (StringBuilder) null);
           return false;
         }
@@ -91,13 +91,13 @@ class Widget extends IntrusiveNode {
           if (this.text != null) {
             discarded$1 = param3.append(" text=\"").append(this.text).append('"');
           }
-          if (this.field_t) {
+          if (this.hovered) {
             discarded$2 = param3.append(" mouseover");
           }
           if (!param2) {
             return;
           }
-          if (this.a(false)) {
+          if (this.isFocused(false)) {
             discarded$3 = param3.append(" focused");
           }
           if (this.painter != null) {
@@ -111,15 +111,15 @@ class Widget extends IntrusiveNode {
               discarded$5 = param3.append(this.painter);
             }
           }
-          if (null != this.field_x) {
+          if (null != this.listener) {
             discarded$6 = param3.append(" listener=");
-            if (this.field_x instanceof Widget) {
+            if (this.listener instanceof Widget) {
               param3 = this.a(1 + param0, param3, 26477, param1);
               if (var6 == 0) {
                 return;
               }
             }
-            discarded$7 = param3.append(this.field_x);
+            discarded$7 = param3.append(this.listener);
             return;
           }
           return;
@@ -150,32 +150,32 @@ class Widget extends IntrusiveNode {
         return 0;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 < 103) {
+          if (obfuscationGuard < 103) {
             field_A = -35;
           }
-          if (!this.containsPointer(1, param1, param5, param0, param2)) {
+          if (!this.containsPointer(1, originX, pointerY, pointerX, originY)) {
             return false;
           }
-          this.field_q = param6;
+          this.pressedButton = button;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_8_0 = var8;
-          stackIn_8_1 = new StringBuilder().append("kb.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_8_1 = new StringBuilder().append("kb.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 
@@ -218,17 +218,17 @@ class Widget extends IntrusiveNode {
         this.setBounds(this.x, this.width, this.y, 8192, this.height);
     }
 
-    Widget(String param0, qo param1) {
+    Widget(String param0, WidgetListener param1) {
         this(param0, t.field_c.field_t, param1);
     }
 
     final boolean a(int param0, char param1, int param2) {
         int var4 = 0;
         int var4Lifetime1;
-        if (!this.a(false)) {
+        if (!this.isFocused(false)) {
           var4 = param0;
           if (var4 == 80) {
-            return this.a(param2 ^ 91, this);
+            return this.takeFocus(param2 ^ 91, this);
           }
           if (param2 == 80) {
             return false;
@@ -236,12 +236,12 @@ class Widget extends IntrusiveNode {
           field_y = (QuickChatCommandDefinition) null;
           return false;
         }
-        if (this.a(this, param0, param1, param2 - 12295)) {
+        if (this.handleKey(this, param0, param1, param2 - 12295)) {
           return true;
         }
         var4Lifetime1 = param0;
         if (var4Lifetime1 == 80) {
-          return this.a(param2 ^ 91, this);
+          return this.takeFocus(param2 ^ 91, this);
         }
         if (param2 == 80) {
           return false;
@@ -250,12 +250,12 @@ class Widget extends IntrusiveNode {
         return false;
     }
 
-    String h(int param0) {
-        if (param0 == 21384) {
-          return !this.field_t ? null : this.field_s;
+    String getTooltipText(int obfuscationGuard) {
+        if (obfuscationGuard == 21384) {
+          return !this.hovered ? null : this.tooltipText;
         }
         this.width = 36;
-        return !this.field_t ? null : this.field_s;
+        return !this.hovered ? null : this.tooltipText;
     }
 
     StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
@@ -309,116 +309,116 @@ class Widget extends IntrusiveNode {
         wc var27;
         wc var28;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.a(32722, param2, param3, this);
+        this.updatePointer(32722, param2, param3, this);
         if (param1 == -6226) {
           regionExit1: {
-            var5 = this.a(false) ? 1 : 0;
+            var5 = this.isFocused(false) ? 1 : 0;
             if (param0) {
               if (el.field_d != 0) {
                 if (var5 == 0) {
                   if (DeployEvent.pointerPressButton != 0) {
-                    if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
+                    if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                       if (ro.pointerButton != 0) {
                         LobbyRoom.field_Ob = ro.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                       if (LobbyRoom.field_Ob == 0) {
                         LobbyRoom.field_Ob = ro.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
-                      this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                      this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                       var21 = bn.field_f;
                       if (var21 != null) {
-                        if (var21.field_x instanceof ch) {
-                          ((ch) (var21.field_x)).a(var21, -14486, (ku) null);
+                        if (var21.listener instanceof ch) {
+                          ((ch) (var21.listener)).a(var21, -14486, (ku) null);
                         }
                         bn.field_f = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
                         DeployEvent.pointerPressButton != 0) {
-                        this.f(1);
+                        this.blur(1);
                       }
                       LobbyRoom.field_Ob = ro.pointerButton;
-                      OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                      OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                       return param0;
                     }
                     param0 = false;
                   }
                   if (ro.pointerButton != 0) {
                     LobbyRoom.field_Ob = ro.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (LobbyRoom.field_Ob == 0) {
                     LobbyRoom.field_Ob = ro.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
-                  this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                  this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                   var23 = bn.field_f;
                   if (var23 != null) {
-                    if (var23.field_x instanceof ch) {
-                      ((ch) (var23.field_x)).a(var23, -14486, (ku) null);
+                    if (var23.listener instanceof ch) {
+                      ((ch) (var23.listener)).a(var23, -14486, (ku) null);
                     }
                     bn.field_f = null;
                   }
                   if (var7 == 0) {
                     LobbyRoom.field_Ob = ro.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (var5 == 0) {
                     LobbyRoom.field_Ob = ro.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
                   if (DeployEvent.pointerPressButton == 0) {
                     LobbyRoom.field_Ob = ro.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
-                  this.f(1);
+                  this.blur(1);
                   LobbyRoom.field_Ob = ro.pointerButton;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                  OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
                 this.a(AiPlanningStrategy.pointerX, param2, param3, ko.pointerY, el.field_d, param1 + 6327, this);
               }
               if (DeployEvent.pointerPressButton != 0) {
-                if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
+                if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 == 0) {
                     if (ro.pointerButton == 0) {
                       if (LobbyRoom.field_Ob == 0) {
                         LobbyRoom.field_Ob = ro.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
-                      this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                      this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                       var27 = bn.field_f;
                       var6 = var27;
                       if (var27 != null) {
-                        if (var27.field_x instanceof ch) {
-                          ((ch) (var27.field_x)).a(var27, -14486, (ku) null);
+                        if (var27.listener instanceof ch) {
+                          ((ch) (var27.listener)).a(var27, -14486, (ku) null);
                         }
                         bn.field_f = null;
                       }
                       if (var7 != 0 &&
                         var5 != 0 &&
                         DeployEvent.pointerPressButton != 0) {
-                        this.f(1);
+                        this.blur(1);
                         LobbyRoom.field_Ob = ro.pointerButton;
-                        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                         return param0;
                       }
                     }
                     LobbyRoom.field_Ob = ro.pointerButton;
-                    OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                    OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                     return param0;
                   }
-                  this.f(1);
+                  this.blur(1);
                   if (var7 != 0) {
                     param0 = false;
                   }
@@ -431,14 +431,14 @@ class Widget extends IntrusiveNode {
               }
               if (LobbyRoom.field_Ob == 0) {
                 LobbyRoom.field_Ob = ro.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
               var28 = bn.field_f;
               if (var28 != null) {
-                if (var28.field_x instanceof ch) {
-                  ((ch) (var28.field_x)).a(var28, -14486, (ku) null);
+                if (var28.listener instanceof ch) {
+                  ((ch) (var28.listener)).a(var28, -14486, (ku) null);
                 }
                 bn.field_f = null;
               }
@@ -448,21 +448,21 @@ class Widget extends IntrusiveNode {
             }
             if (var5 != 0 &&
               DeployEvent.pointerPressButton != 0) {
-              this.f(1);
+              this.blur(1);
               LobbyRoom.field_Ob = ro.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
           }
         } else {
           field_n = 69;
-          var5 = this.a(false) ? 1 : 0;
+          var5 = this.isFocused(false) ? 1 : 0;
           if (param0) {
             if (el.field_d == 0) {
               if (DeployEvent.pointerPressButton != 0) {
-                if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
+                if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
                   if (var5 != 0) {
-                    this.f(1);
+                    this.blur(1);
                     if (var7 != 0) {
                       param0 = false;
                     }
@@ -473,30 +473,30 @@ class Widget extends IntrusiveNode {
               }
               if (ro.pointerButton != 0) {
                 LobbyRoom.field_Ob = ro.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               if (LobbyRoom.field_Ob == 0) {
                 LobbyRoom.field_Ob = ro.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
               var8 = bn.field_f;
               var6 = var8;
               if (var8 != null) {
-                if (var8.field_x instanceof ch) {
-                  ((ch) (var8.field_x)).a(var8, -14486, (ku) null);
+                if (var8.listener instanceof ch) {
+                  ((ch) (var8.listener)).a(var8, -14486, (ku) null);
                 }
                 bn.field_f = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
                 DeployEvent.pointerPressButton != 0) {
-                this.f(1);
+                this.blur(1);
               }
               LobbyRoom.field_Ob = ro.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             if (var5 != 0) {
@@ -505,62 +505,62 @@ class Widget extends IntrusiveNode {
             if (DeployEvent.pointerPressButton == 0) {
               if (ro.pointerButton != 0) {
                 LobbyRoom.field_Ob = ro.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
               if (LobbyRoom.field_Ob == 0) {
                 LobbyRoom.field_Ob = ro.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
-              this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+              this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
               var10 = bn.field_f;
               var6 = var10;
               if (var10 != null) {
-                if (var10.field_x instanceof ch) {
-                  ((ch) (var10.field_x)).a(var10, -14486, (ku) null);
+                if (var10.listener instanceof ch) {
+                  ((ch) (var10.listener)).a(var10, -14486, (ku) null);
                 }
                 bn.field_f = null;
               }
               if (var7 != 0 &&
                 var5 != 0 &&
                 DeployEvent.pointerPressButton != 0) {
-                this.f(1);
+                this.blur(1);
               }
               LobbyRoom.field_Ob = ro.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
-            if (!this.a(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
+            if (!this.pointerPressed(BattleTutorial.pointerPressX, param2, param3, 113, this, TeleportAction.pointerPressY, DeployEvent.pointerPressButton)) {
               if (var5 == 0) {
                 if (ro.pointerButton != 0) {
                   LobbyRoom.field_Ob = ro.pointerButton;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                  OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
                 if (LobbyRoom.field_Ob == 0) {
                   LobbyRoom.field_Ob = ro.pointerButton;
-                  OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                  OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                   return param0;
                 }
-                this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+                this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
                 var15 = bn.field_f;
                 if (var15 != null) {
-                  if (var15.field_x instanceof ch) {
-                    ((ch) (var15.field_x)).a(var15, -14486, (ku) null);
+                  if (var15.listener instanceof ch) {
+                    ((ch) (var15.listener)).a(var15, -14486, (ku) null);
                   }
                   bn.field_f = null;
                 }
                 if (var7 != 0 &&
                   var5 != 0 &&
                   DeployEvent.pointerPressButton != 0) {
-                  this.f(1);
+                  this.blur(1);
                 }
                 LobbyRoom.field_Ob = ro.pointerButton;
-                OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+                OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
                 return param0;
               }
-              this.f(1);
+              this.blur(1);
               if (var7 != 0) {
                 param0 = false;
               }
@@ -569,41 +569,41 @@ class Widget extends IntrusiveNode {
             }
             if (ro.pointerButton != 0) {
               LobbyRoom.field_Ob = ro.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
             if (LobbyRoom.field_Ob == 0) {
               LobbyRoom.field_Ob = ro.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
-            this.a(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
+            this.pointerReleased(param3, this, AiPlanningStrategy.pointerX, (byte) -127, ko.pointerY, param2);
             var18 = bn.field_f;
             if (var18 != null) {
-              if (var18.field_x instanceof ch) {
-                ((ch) (var18.field_x)).a(var18, -14486, (ku) null);
+              if (var18.listener instanceof ch) {
+                ((ch) (var18.listener)).a(var18, -14486, (ku) null);
               }
               bn.field_f = null;
             }
             if (var7 == 0) {
               LobbyRoom.field_Ob = ro.pointerButton;
-              OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+              OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
               return param0;
             }
           }
           if (var5 != 0 &&
             DeployEvent.pointerPressButton != 0) {
-            this.f(1);
+            this.blur(1);
           }
         }
         LobbyRoom.field_Ob = ro.pointerButton;
-        OwnerChangeEvent.a(param1 ^ 6225, this.h(21384));
+        OwnerChangeEvent.a(param1 ^ 6225, this.getTooltipText(21384));
         return param0;
     }
 
-    void f(int param0) {
-        if (param0 != 1) {
-          this.h(93);
+    void blur(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
+          this.getTooltipText(93);
         }
     }
 
@@ -660,31 +660,31 @@ class Widget extends IntrusiveNode {
         this.height = height;
     }
 
-    void a(int param0, int param1, byte param2, int param3) {
-        if (0 == param3) {
+    void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        if (0 == renderLayer) {
           if (this.painter == null) {
-            if (param2 > -82) {
-              this.field_t = false;
+            if (obfuscationGuard > -82) {
+              this.hovered = false;
               return;
             }
             return;
           }
-          this.painter.paintWidget(this, param0, -89, true, param1);
+          this.painter.paintWidget(this, originX, -89, true, originY);
         }
-        if (param2 <= -82) {
+        if (obfuscationGuard <= -82) {
           return;
         }
-        this.field_t = false;
+        this.hovered = false;
     }
 
-    boolean a(Widget param0, int param1, char param2, int param3) {
+    boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 == -12215) {
+          if (obfuscationGuard == -12215) {
             return false;
           }
           this.contentOffsetY = -5;
@@ -694,23 +694,23 @@ class Widget extends IntrusiveNode {
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
           stackIn_6_1 = new StringBuilder().append("kb.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    boolean a(int param0, Widget param1) {
+    boolean takeFocus(int obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 11) {
+          if (obfuscationGuard == 11) {
             return false;
           }
           return true;
@@ -718,8 +718,8 @@ class Widget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("kb.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("kb.M(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -728,7 +728,7 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, Widget param3) {
+    void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         int var5_int = 0;
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
@@ -739,22 +739,22 @@ class Widget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (param0 != 32722) {
+          if (obfuscationGuard != 32722) {
             return;
           }
-          var5_int = this.containsPointer(param0 - 32721, param1, ko.pointerY, AiPlanningStrategy.pointerX, param2) ? 1 : 0;
+          var5_int = this.containsPointer(obfuscationGuard - 32721, originX, ko.pointerY, AiPlanningStrategy.pointerX, originY) ? 1 : 0;
           stackIn_4_0 = var5_int;
-          if (this.field_t) {
+          if (this.hovered) {
             stackIn_5_1 = 0;
           } else {
             stackIn_5_1 = 1;
           }
           if (stackIn_4_0 == stackIn_5_1) {
             stackIn_9_1 = (var5_int != 0);
-            this.field_t = stackIn_9_1;
-            if (null != this.field_x &&
-              this.field_x instanceof o) {
-              ((o) (this.field_x)).a(var5_int != 0, false, this);
+            this.hovered = stackIn_9_1;
+            if (null != this.listener &&
+              this.listener instanceof WidgetHoverListener) {
+              ((WidgetHoverListener) (this.listener)).hoverChanged(var5_int != 0, false, this);
               return;
             }
           }
@@ -763,8 +763,8 @@ class Widget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("kb.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_15_1 = new StringBuilder().append("kb.P(").append(obfuscationGuard).append(',').append(originX).append(',').append(originY).append(',');
+          if (rootWidget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -788,7 +788,7 @@ class Widget extends IntrusiveNode {
           var4 = this.g(-31989);
           var5_int = 0;
           while (var5_int <= var4) {
-            this.a(param0, param2, (byte) -115, var5_int);
+            this.drawWidget(param0, param2, (byte) -115, var5_int);
             var5_int++;
             if (var6 == 0) {
               continue;
@@ -806,7 +806,7 @@ class Widget extends IntrusiveNode {
           var4 = this.g(-31989);
           var5_int = 0;
           while (var5_int <= var4) {
-            this.a(param0, param2, (byte) -115, var5_int);
+            this.drawWidget(param0, param2, (byte) -115, var5_int);
             var5_int++;
             if (var6 == 0) {
               continue;
@@ -830,7 +830,7 @@ class Widget extends IntrusiveNode {
         this.contentOffsetX = 0;
     }
 
-    Widget(String param0, WidgetPainter param1, qo param2) {
+    Widget(String param0, WidgetPainter param1, WidgetListener param2) {
         RuntimeException runtimeException = null;
         TextWidgetPainter var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -846,7 +846,7 @@ class Widget extends IntrusiveNode {
         try {
           this.painter = param1;
           this.text = param0;
-          this.field_x = param2;
+          this.listener = param2;
           if (this.painter instanceof TextWidgetPainter) {
             var4 = (TextWidgetPainter) ((Object) this.painter);
             this.width = var4.getPreferredWidth(this, (byte) -120);
@@ -879,7 +879,7 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    Widget(int x, int y, int width, int height, WidgetPainter painter, qo listener) {
+    Widget(int x, int y, int width, int height, WidgetPainter painter, WidgetListener listener) {
         this.contentOffsetY = 0;
         this.contentOffsetX = 0;
         try {
@@ -887,7 +887,7 @@ class Widget extends IntrusiveNode {
           this.y = y;
           this.width = width;
           this.height = height;
-          this.field_x = listener;
+          this.listener = listener;
           this.painter = painter;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kb.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (painter != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');

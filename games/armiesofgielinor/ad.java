@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ad extends tj implements he {
+final class ad extends tj implements WidgetActivationListener {
     private ro field_L;
     private BitmapFont field_J;
     static gu field_K;
     private String field_G;
     private int field_E;
     private int[] field_F;
-    private fw[] field_H;
+    private InteractiveWidget[] field_H;
     static String field_I;
 
-    final fw a(String param0, qo param1, byte param2) {
-        fw var4 = null;
+    final InteractiveWidget a(String param0, WidgetListener param1, byte param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        fw stackIn_1_0 = null;
+        InteractiveWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -24,7 +24,7 @@ final class ad extends tj implements he {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fw(param0, param1);
+          var4 = new InteractiveWidget(param0, param1);
           var4.painter = (WidgetPainter) ((Object) new nu());
           var5 = this.height - 2;
           var6 = -98 / ((24 - param2) / 44);
@@ -60,8 +60,8 @@ final class ad extends tj implements he {
           return;
         }
         int var4 = -57 % ((44 - param1) / 34);
-        fw[] var8 = new fw[param0];
-        fw[] var3 = var8;
+        InteractiveWidget[] var8 = new InteractiveWidget[param0];
+        InteractiveWidget[] var3 = var8;
         int[] var5 = new int[param0];
         for (var6 = 0; var6 < this.field_E; var6++) {
           var8[var6] = this.field_H[var6];
@@ -80,13 +80,13 @@ final class ad extends tj implements he {
         field_I = null;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           for (var6_int = 0; this.field_E > var6_int; var6_int++) {
-            if (this.field_H[var6_int] == param4) {
+            if (this.field_H[var6_int] == widget) {
               var7 = this.field_F[var6_int];
               if (var7 != -1) {
                 gl.a(123, this.field_F[var6_int]);
@@ -96,11 +96,11 @@ final class ad extends tj implements he {
               break;
             }
           }
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             this.field_F = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.N(" + pointerX + ',' + obfuscationGuard + ',' + button + ',' + pointerY + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,10 +119,10 @@ final class ad extends tj implements he {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) -123, param3);
-        this.field_J.drawParagraph(this.field_G, 14 + param0 + this.x, this.y + param1 + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_J.maxAscent);
-        if (param2 > -82) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        super.drawWidget(originX, originY, (byte) -123, renderLayer);
+        this.field_J.drawParagraph(this.field_G, 14 + originX + this.x, this.y + originY + 10, -28 + this.width, this.height, 16777215, -1, 0, 0, this.field_J.maxAscent);
+        if (obfuscationGuard > -82) {
           ad.a((byte) 73);
         }
     }
@@ -192,7 +192,7 @@ final class ad extends tj implements he {
         try {
           var4_int = this.field_E;
           this.b(var4_int + param2, -104);
-          this.field_H[var4_int] = this.a(param0, (qo) (this), (byte) 104);
+          this.field_H[var4_int] = this.a(param0, (WidgetListener) (this), (byte) 104);
           this.field_F[var4_int] = param1;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ad.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

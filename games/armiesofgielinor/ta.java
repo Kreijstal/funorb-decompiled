@@ -15,23 +15,23 @@ final class ta extends nl {
     private boolean field_J;
     private BitmapFont field_P;
 
-    final String h(int param0) {
+    final String getTooltipText(int obfuscationGuard) {
         int var2 = 0;
         String var3 = null;
         String var3Lifetime1;
         int var2Lifetime1;
-        if (param0 == 21384) {
-          var2 = this.field_E.field_t ? 1 : 0;
-          this.field_E.field_t = this.field_t;
-          var3 = this.field_E.h(param0 + 0);
-          this.field_E.field_t = var2 != 0 ? true : false;
+        if (obfuscationGuard == 21384) {
+          var2 = this.field_E.hovered ? 1 : 0;
+          this.field_E.hovered = this.hovered;
+          var3 = this.field_E.getTooltipText(obfuscationGuard + 0);
+          this.field_E.hovered = var2 != 0 ? true : false;
           return var3;
         }
         this.field_J = true;
-        var2Lifetime1 = this.field_E.field_t ? 1 : 0;
-        this.field_E.field_t = this.field_t;
-        var3Lifetime1 = this.field_E.h(param0 + 0);
-        this.field_E.field_t = var2Lifetime1 != 0 ? true : false;
+        var2Lifetime1 = this.field_E.hovered ? 1 : 0;
+        this.field_E.hovered = this.hovered;
+        var3Lifetime1 = this.field_E.getTooltipText(obfuscationGuard + 0);
+        this.field_E.hovered = var2Lifetime1 != 0 ? true : false;
         return var3Lifetime1;
     }
 
@@ -91,7 +91,7 @@ final class ta extends nl {
     }
 
     ta(int param0, int param1, int param2, int param3, Widget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (WidgetPainter) null, (qo) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null, (WidgetListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -156,16 +156,16 @@ final class ta extends nl {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        int var5 = this.x + param0;
-        int var6 = param1 + this.y;
-        super.a(param0, param1, (byte) -90, param3);
-        if (param3 != 0) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        int var5 = this.x + originX;
+        int var6 = originY + this.y;
+        super.drawWidget(originX, originY, (byte) -90, renderLayer);
+        if (renderLayer != 0) {
           return;
         }
         int var7 = this.field_J ? -(2 * this.field_H) + (-this.field_S + this.width) : 0;
         this.field_P.drawParagraph(this.field_K, this.field_H + var7 + var5, this.field_H + var6, this.field_S - this.field_H, -(this.field_H * 2) + this.height, this.field_I, -1, !this.field_J ? 2 : 0, 1, this.field_P.maxAscent);
-        if (param2 <= -82) {
+        if (obfuscationGuard <= -82) {
           return;
         }
         field_Q = (String) null;

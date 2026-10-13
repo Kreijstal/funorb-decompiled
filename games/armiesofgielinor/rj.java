@@ -194,15 +194,15 @@ final class rj extends Widget {
         field_Q = null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        if (param2 >= -82) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        if (obfuscationGuard >= -82) {
           return;
         }
-        if (0 != param3) {
+        if (0 != renderLayer) {
           return;
         }
-        int var5 = this.x + param0;
-        int var6 = param1 + this.y;
+        int var5 = this.x + originX;
+        int var6 = originY + this.y;
         this.a(-77, var6, this.field_O[0], var5);
         if (65536 > this.field_D) {
           CampaignUnitOverride.a((this.width * this.field_D >> 16) + var5, var5 + this.width, this.height + var6, var6, (byte) 74);
@@ -211,7 +211,7 @@ final class rj extends Widget {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         RgbSprite discarded$1 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -225,7 +225,7 @@ final class rj extends Widget {
               this.field_N = this.field_N - this.field_C * 2;
             }
           }
-          if (param0 != 32722) {
+          if (obfuscationGuard != 32722) {
             discarded$1 = this.b(11, 65, -18);
           }
           return;
@@ -233,8 +233,8 @@ final class rj extends Widget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("rj.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_10_1 = new StringBuilder().append("rj.P(").append(obfuscationGuard).append(',').append(originX).append(',').append(originY).append(',');
+          if (rootWidget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

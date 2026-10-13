@@ -166,7 +166,7 @@ final class ob extends hs {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, Widget param4, int param5, int param6) {
+    final boolean pointerPressed(int pointerX, int originX, int originY, int obfuscationGuard, Widget rootWidget, int pointerY, int button) {
         RuntimeException var8 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -174,8 +174,8 @@ final class ob extends hs {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 > 103) {
-            stackIn_4_0 = super.a(param0, param1, param2, 123, param4, param5, param6);
+          if (obfuscationGuard > 103) {
+            stackIn_4_0 = super.pointerPressed(pointerX, originX, originY, 123, rootWidget, pointerY, button);
             return stackIn_4_0;
           }
           return true;
@@ -183,13 +183,13 @@ final class ob extends hs {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_7_0 = var8;
-          stackIn_7_1 = new StringBuilder().append("ob.NA(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_7_1 = new StringBuilder().append("ob.NA(").append(pointerX).append(',').append(originX).append(',').append(originY).append(',').append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(pointerY).append(',').append(button).append(')').toString());
         }
     }
 
@@ -288,7 +288,7 @@ final class ob extends hs {
         this.field_C = var5;
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_12_0 = false;
@@ -303,27 +303,27 @@ final class ob extends hs {
         int[] var7 = null;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (super.a(param0, param1, param2, param3 ^ 0)) {
+          if (super.handleKey(rootWidget, keyCode, character, obfuscationGuard ^ 0)) {
             return true;
           }
-          var5_int = param1;
+          var5_int = keyCode;
           if (98 == var5_int) {
-            stackIn_12_0 = this.a((byte) 106, param0, this.field_K.length);
+            stackIn_12_0 = this.a((byte) 106, rootWidget, this.field_K.length);
             return stackIn_12_0;
           }
           if (99 == var5_int) {
-            stackIn_14_0 = this.a(param0, this.field_K.length, true);
+            stackIn_14_0 = this.a(rootWidget, this.field_K.length, true);
             return stackIn_14_0;
           }
           if (96 == var5_int) {
-            stackIn_16_0 = this.a((byte) 88, param0);
+            stackIn_16_0 = this.a((byte) 88, rootWidget);
             return stackIn_16_0;
           }
           if (var5_int == 97) {
-            stackIn_18_0 = this.b(param3 ^ -12286, param0);
+            stackIn_18_0 = this.b(obfuscationGuard ^ -12286, rootWidget);
             return stackIn_18_0;
           }
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             var7 = (int[]) null;
             this.a(14, (int[]) null);
           }
@@ -333,12 +333,12 @@ final class ob extends hs {
           var5 = decompiledCaughtException;
           stackIn_25_0 = var5;
           stackIn_25_1 = new StringBuilder().append("ob.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -385,7 +385,7 @@ final class ob extends hs {
         }
         if (param0 < 84) {
           var7 = (Widget) null;
-          this.a(-86, 103, -38, 9, (Widget) null, 3, 102);
+          this.pointerPressed(-86, 103, -38, 9, (Widget) null, 3, 102);
         }
     }
 

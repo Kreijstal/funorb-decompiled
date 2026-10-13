@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vu extends fw {
+final class vu extends InteractiveWidget {
     static SpellMenuGroup field_O;
     static ClientUiComponent field_Q;
     static java.applet.Applet field_L;
@@ -9,12 +9,12 @@ final class vu extends fw {
     static int[] field_N;
     static LobbyRoom currentRoom;
 
-    final void a(int param0, int param1, int param2, boolean param3) {
-        this.field_K = !this.field_K ? true : false;
-        super.a(param0, param1, param2, param3);
+    final void activate(int button, int pointerX, int pointerY, boolean notifyListener) {
+        this.active = !this.active ? true : false;
+        super.activate(button, pointerX, pointerY, notifyListener);
     }
 
-    private vu(String param0, WidgetPainter param1, qo param2) {
+    private vu(String param0, WidgetPainter param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
           this.painter = t.field_c.field_i;
@@ -49,7 +49,7 @@ final class vu extends fw {
         return FixedQuaternion.isOnlineFriendOrRoomMember(dj.chatRecipientAccountId, wm.chatRecipientNameKey, (byte) -116);
     }
 
-    private vu(String param0, qo param1) {
+    private vu(String param0, WidgetListener param1) {
         this(param0, t.field_c.field_j, param1);
         try {
           this.painter = t.field_c.field_i;
@@ -116,10 +116,10 @@ final class vu extends fw {
         }
     }
 
-    vu(String param0, qo param1, boolean param2) {
+    vu(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
-          this.field_K = param2 ? true : false;
+          this.active = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

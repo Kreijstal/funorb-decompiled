@@ -651,8 +651,8 @@ final class CombatPresentation implements EventPresentation {
                   }
                 }
                 boolean decompiledFrameCompleted7 = true;
-                fn.a(this.field_d, this.field_c, obfuscationGuard - 32653);
-                fn.a(this.field_d, this.field_a, obfuscationGuard ^ -32619);
+                EditableTextWidget.a(this.field_d, this.field_c, obfuscationGuard - 32653);
+                EditableTextWidget.a(this.field_d, this.field_a, obfuscationGuard ^ -32619);
                 if (this.field_c == 34 &&
                   var3.attackerDeployed) {
                   this.attackers = new BattleCharacter[6];
@@ -4136,8 +4136,8 @@ final class CombatPresentation implements EventPresentation {
             }
           }
           boolean decompiledFrameCompleted7 = true;
-          fn.a(this.field_d, this.field_c, -32596);
-          fn.a(this.field_d, this.field_a, -32596);
+          EditableTextWidget.a(this.field_d, this.field_c, -32596);
+          EditableTextWidget.a(this.field_d, this.field_a, -32596);
           if ((param4.unitType == 7 ||
             param4.unitType == 34) && param4.packedFlag8) {
             this.attackers = new BattleCharacter[6];

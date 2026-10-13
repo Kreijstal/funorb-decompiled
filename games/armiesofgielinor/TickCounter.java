@@ -1419,7 +1419,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_VINE");
                 if (null != var2) {
-                  fn.field_S = uu.a(var2, (byte) -111);
+                  EditableTextWidget.field_S = uu.a(var2, (byte) -111);
                 }
                 var2 = fk.a(false, "ACTION_CANNON");
                 if (null != var2) {
@@ -5185,7 +5185,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TERROR_HATNOMAGIC");
                 if (null != var2) {
-                  hv.field_O = uu.a(var2, (byte) 68);
+                  HotspotTextWidget.field_O = uu.a(var2, (byte) 68);
                 }
                 var2 = fk.a(false, "TERROR_TALONSGROUNDED");
                 if (var2 != null) {
@@ -5721,7 +5721,7 @@ final class TickCounter {
               MatchSetupPanel.a(var10, false, 20 + param3, param7 + 40, var11, true);
             }
             regionExit1: {
-              var10 = fn.field_Q[vs.field_e[param4].terrainType];
+              var10 = EditableTextWidget.field_Q[vs.field_e[param4].terrainType];
               if (var10 > -1) {
                 var11 = vs.field_e[param4].ownerPlayer;
                 if (CipherPacketBuffer.currentBattlefield != null) {

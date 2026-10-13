@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends hv {
+final class pk extends HotspotTextWidget {
     private n field_Z;
     private RgbSprite field_Y;
     private int field_U;
@@ -12,8 +12,8 @@ final class pk extends hv {
     static String field_V;
     private String field_L;
 
-    final String h(int param0) {
-        if (param0 == 21384) {
+    final String getTooltipText(int obfuscationGuard) {
+        if (obfuscationGuard == 21384) {
           return null;
         }
         this.field_U = -103;
@@ -57,7 +57,7 @@ final class pk extends hv {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         String var5;
         gu var6;
         int var13;
@@ -87,16 +87,16 @@ final class pk extends hv {
         }
         if (!var5.equals(this.text)) {
           this.text = var5;
-          this.a(-128);
+          this.rebuildHotspots(-128);
         }
-        super.a(param0, param1, (byte) -114, param3);
-        if (param2 > -82) {
+        super.drawWidget(originX, originY, (byte) -114, renderLayer);
+        if (obfuscationGuard > -82) {
           field_W = (String) null;
         }
         var6Lifetime1 = this.field_Z.a(false);
         var8 = (TextWidgetPainter) ((Object) this.painter);
-        var9 = param0 + this.x;
-        var10 = var8.getTextTop(-18033, param1, (Widget) (this)) + (var8.getTextLayout(-69, (Widget) (this)).getHeight((byte) 27) >> 1);
+        var9 = originX + this.x;
+        var10 = var8.getTextTop(-18033, originY, (Widget) (this)) + (var8.getTextLayout(-69, (Widget) (this)).getHeight((byte) 27) >> 1);
         if (var6Lifetime1 == ad.field_K) {
           var18 = db.field_a[0];
           var11 = var18.canvasWidth << 1;
@@ -163,14 +163,14 @@ final class pk extends hv {
         return;
     }
 
-    final boolean a(int param0, Widget param1) {
+    final boolean takeFocus(int obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 11) {
+          if (obfuscationGuard != 11) {
             pk.a(56, -104, -60, 38, -92, -10, 85, -99);
           }
           return false;
@@ -178,8 +178,8 @@ final class pk extends hv {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("pk.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("pk.M(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -325,12 +325,12 @@ final class pk extends hv {
         field_V = null;
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
           this.field_U = this.field_U + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pk.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pk.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 

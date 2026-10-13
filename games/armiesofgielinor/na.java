@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends tj implements mf, he {
+final class na extends tj implements mf, WidgetActivationListener {
     static QuickChatCommandDefinition field_G;
     private ma field_P;
     static int field_E;
     kv field_M;
     static String field_K;
-    private fw field_L;
+    private InteractiveWidget field_L;
     static String field_I;
     static int field_F;
-    private fw field_O;
+    private InteractiveWidget field_O;
     static String field_N;
     static int[] field_J;
 
     public na() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_P = new ma("", (qo) null, 12);
+        this.field_P = new ma("", (WidgetListener) null, 12);
         BitmapTextWidgetPainter var1 = new BitmapTextWidgetPainter(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
-        Widget var2 = new Widget(BattleTutorial.field_u, var1, (qo) null);
-        this.field_O = new fw(LineOfSightGrid.field_f, (qo) null);
-        this.field_L = new fw(ac.field_s, (qo) null);
-        this.field_P.field_s = DualLinkedNode.field_m;
+        Widget var2 = new Widget(BattleTutorial.field_u, var1, (WidgetListener) null);
+        this.field_O = new InteractiveWidget(LineOfSightGrid.field_f, (WidgetListener) null);
+        this.field_L = new InteractiveWidget(ac.field_s, (WidgetListener) null);
+        this.field_P.tooltipText = DualLinkedNode.field_m;
         this.field_P.a((byte) 16, new uj(this.field_P));
-        this.field_O.field_I = false;
+        this.field_O.enabled = false;
         this.field_O.painter = (WidgetPainter) ((Object) new nu());
         this.field_L.painter = (WidgetPainter) ((Object) new td());
         this.field_P.painter = (WidgetPainter) ((Object) new lu(10000536));
@@ -36,8 +36,8 @@ final class na extends tj implements mf, he {
         var3 = var3 + (5 + this.a(-124, MusicPatchEnvelope.field_k, ScrollContainer.field_Ob, 170, var3, this.field_P));
         this.field_O.setBounds(496 - var5 >> 1, var5, var3, 8192, 40);
         this.field_L.setBounds(var4 + 3, 60, var3 + 15, 8192, 40);
-        this.field_L.field_x = (qo) (this);
-        this.field_O.field_x = (qo) (this);
+        this.field_L.listener = (WidgetListener) (this);
+        this.field_O.listener = (WidgetListener) (this);
         this.a((byte) 10, (Widget) (this.field_O));
         this.a((byte) 10, (Widget) (this.field_L));
         this.field_M = new kv((mf) (this));
@@ -46,21 +46,21 @@ final class na extends tj implements mf, he {
         this.setBounds(0, 496, 0, 8192, var4 + var3 + 55);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 11) {
-            this.field_L = (fw) null;
+          if (obfuscationGuard != 11) {
+            this.field_L = (InteractiveWidget) null;
           }
-          if (param4 == this.field_L) {
+          if (widget == this.field_L) {
             MapRepository.b((byte) 115);
             return;
           }
-          if (param4 != this.field_O) {
+          if (widget != this.field_O) {
             return;
           }
           this.b(false);
@@ -69,8 +69,8 @@ final class na extends tj implements mf, he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_9_0 = var6;
-          stackIn_9_1 = new StringBuilder().append("na.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_9_1 = new StringBuilder().append("na.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -88,15 +88,15 @@ final class na extends tj implements mf, he {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
-          super.a(param0 ^ 0, param1, param2, param3);
-          if (param0 != 32722) {
-            this.field_O = (fw) null;
+          super.updatePointer(obfuscationGuard ^ 0, originX, originY, rootWidget);
+          if (obfuscationGuard != 32722) {
+            this.field_O = (InteractiveWidget) null;
           }
-          this.field_O.field_I = this.a(-29967);
+          this.field_O.enabled = this.a(-29967);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "na.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "na.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -284,7 +284,7 @@ final class na extends tj implements mf, he {
           var10 = new ta(20, param0, 120 + param4, 25, param3, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param2);
           this.a((byte) 10, (Widget) (var10));
           var9 = new pk(((eg) ((Object) param3)).a(-918933630), param5, 126, param0 + var10.height, param4 + 25, param1);
-          var9.field_x = (qo) (this);
+          var9.listener = (WidgetListener) (this);
           this.a((byte) 10, (Widget) (var9));
           if (param6 < -59) {
             stackIn_4_0 = var9.height + var10.height;
@@ -419,12 +419,12 @@ final class na extends tj implements mf, he {
         try {
           var3 = this.field_P;
           var4 = param1;
-          ((fn) ((Object) var3)).a(false, var4, -27934);
+          ((EditableTextWidget) ((Object) var3)).setText(false, var4, -27934);
           if (param0 == -1) {
             return;
           }
           var5 = (Widget) null;
-          this.a((Widget) null, 40, '\034', 104);
+          this.handleKey((Widget) null, 40, '\034', 104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -520,7 +520,7 @@ final class na extends tj implements mf, he {
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
@@ -529,32 +529,32 @@ final class na extends tj implements mf, he {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3 + 0)) {
+          if (super.handleKey(rootWidget, keyCode, character, obfuscationGuard + 0)) {
             return true;
           }
-          if (param1 == 98) {
-            stackIn_6_0 = this.a(false, param0);
+          if (keyCode == 98) {
+            stackIn_6_0 = this.a(false, rootWidget);
             return stackIn_6_0;
           }
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             field_F = -74;
           }
-          if (param1 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_12_0 = this.b((byte) -127, param0);
+          stackIn_12_0 = this.b((byte) -127, rootWidget);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
           stackIn_15_1 = new StringBuilder().append("na.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -142,7 +142,7 @@ abstract class ArchiveProvider {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = hv.field_N;
+            stackIn_3_0 = HotspotTextWidget.field_N;
             return stackIn_3_0;
           }
           if (var2_int > 255) {
@@ -152,7 +152,7 @@ abstract class ArchiveProvider {
           var3 = 82 / ((param1 - 50) / 49);
           var4 = dj.splitText(32, '.', param0);
           if (var4.length < 2) {
-            stackIn_11_0 = hv.field_N;
+            stackIn_11_0 = HotspotTextWidget.field_N;
             return stackIn_11_0;
           }
           var5 = var4;

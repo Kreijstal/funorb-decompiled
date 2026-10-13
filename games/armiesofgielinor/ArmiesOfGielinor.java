@@ -1381,7 +1381,7 @@ public final class ArmiesOfGielinor extends wf {
           vq.a((byte) 107);
           sf.h((byte) 58);
           DropdownSelector.a(param0 - 11763);
-          fw.i(0);
+          InteractiveWidget.i(0);
           ob.e((byte) 68);
           tj.d((byte) -89);
           hs.i(0);
@@ -1465,11 +1465,11 @@ public final class ArmiesOfGielinor extends wf {
           MusicPatchEnvelope.a((byte) 99);
           ta.j(-12819);
           ma.g((byte) -127);
-          fn.m(32);
+          EditableTextWidget.m(32);
           pt.i(param0);
           rj.a((byte) -85);
           kv.b(true);
-          hv.b(true);
+          HotspotTextWidget.b(true);
           kw.b(true);
           pk.c(false);
           vu.a(58);
@@ -1589,7 +1589,7 @@ public final class ArmiesOfGielinor extends wf {
           jh.h(-117);
           di.g(49);
           tv.a((byte) -126);
-          ct.a(135);
+          TextHotspotRegion.a(135);
           gu.b(-16356);
           rb.d(65280);
           rn.a(false);
@@ -1717,7 +1717,7 @@ public final class ArmiesOfGielinor extends wf {
           ReportAbuseDialog.field_Lb = nu.a(18, true);
           ce.field_M = nu.a(19, true);
           ChannelBaseVolumeConsoleCommand.field_M = nu.a(20, true);
-          fw.field_F = nu.a(22, true);
+          InteractiveWidget.field_F = nu.a(22, true);
           MusicPatchUsage.backgroundArchive = DamageEvent.a(0, 21, (byte) 127, false, false);
           AiInfluenceMap.field_f = nu.a(23, true);
           return;
@@ -1959,8 +1959,8 @@ public final class ArmiesOfGielinor extends wf {
                                         ce.field_M.ensureAllGroupsAvailable(-27927)) {
                                         if (ChannelBaseVolumeConsoleCommand.field_M.ensureIndex((byte) 82) &&
                                           ChannelBaseVolumeConsoleCommand.field_M.ensureAllGroupsAvailable(-27927)) {
-                                          if (fw.field_F.ensureIndex((byte) 82) &&
-                                            fw.field_F.ensureAllGroupsAvailable(-27927)) {
+                                          if (InteractiveWidget.field_F.ensureIndex((byte) 82) &&
+                                            InteractiveWidget.field_F.ensureAllGroupsAvailable(-27927)) {
                                             if (AiInfluenceMap.field_f.ensureIndex((byte) 82) &&
                                               AiInfluenceMap.field_f.ensureAllGroupsAvailable(-27927)) {
                                               if (MusicPatchUsage.backgroundArchive.ensureIndex((byte) 82) &&
@@ -2024,7 +2024,7 @@ public final class ArmiesOfGielinor extends wf {
                                             bn.a((byte) -24, 66.0f, ao.a(cr.field_eb, true, en.field_G, AiInfluenceMap.field_f));
                                             return false;
                                           }
-                                          bn.a((byte) -24, 63.0f, ao.a(cr.field_eb, true, en.field_G, fw.field_F));
+                                          bn.a((byte) -24, 63.0f, ao.a(cr.field_eb, true, en.field_G, InteractiveWidget.field_F));
                                           return false;
                                         }
                                         bn.a((byte) -24, 61.0f, ao.a(cr.field_eb, true, en.field_G, ChannelBaseVolumeConsoleCommand.field_M));
@@ -2152,9 +2152,9 @@ public final class ArmiesOfGielinor extends wf {
               ChannelBaseVolumeConsoleCommand.field_M = null;
               return false;
             }
-            if (null != fw.field_F) {
-              CampaignMenu.a(fw.field_F, 0, 28);
-              fw.field_F = null;
+            if (null != InteractiveWidget.field_F) {
+              CampaignMenu.a(InteractiveWidget.field_F, 0, 28);
+              InteractiveWidget.field_F = null;
               return false;
             }
             if (AiInfluenceMap.field_f != null) {
@@ -2224,7 +2224,7 @@ public final class ArmiesOfGielinor extends wf {
           tn.a((byte) 80, UnitModelPreview.field_d);
           hf.a(128, ce.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
-          fn.a(8678, 256, 15, TeamRoster.field_e);
+          EditableTextWidget.a(8678, 256, 15, TeamRoster.field_e);
           tn.a((byte) 105, ce.field_F);
           tn.a((byte) 124, BufferedFile.field_k);
           ol.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);

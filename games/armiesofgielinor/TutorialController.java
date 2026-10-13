@@ -247,14 +247,14 @@ final class TutorialController {
                       if (ClientContextMenu.field_k != 0) {
                         ab.field_a = ev.field_d;
                         ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
-                        TextLineLayout.currentSpellMenu = ct.spellMenuById[ev.field_d];
+                        TextLineLayout.currentSpellMenu = TextHotspotRegion.spellMenuById[ev.field_d];
                         this.a((byte) 96, ev.field_d, (SpellMenuGroup) null);
                         return;
                       }
                       wj.field_q = 248;
                       ab.field_a = ev.field_d;
                       ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
-                      MidiPcmStream.field_p = ct.spellMenuById[ev.field_d];
+                      MidiPcmStream.field_p = TextHotspotRegion.spellMenuById[ev.field_d];
                       this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
                       if (TextLineLayout.currentSpellMenu != MidiPcmStream.field_p) {
                         RadialSummonMenu.playDefaultSoundWithIntGuard(127, MoveAttackRequest.field_v[44]);

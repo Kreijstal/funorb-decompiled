@@ -458,7 +458,7 @@ final class ng {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_3_0 = hv.field_N;
+            stackIn_3_0 = HotspotTextWidget.field_N;
             return stackIn_3_0;
           }
           if (64 < var2_int) {

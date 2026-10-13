@@ -504,7 +504,7 @@ final class QuickChatCategoryRepository {
               cs.field_db[var3Lifetime1] = null;
             }
           }
-          fn.a(false, 76, -32596);
+          EditableTextWidget.a(false, 76, -32596);
           TriangleRasterizer.b(0.75f);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

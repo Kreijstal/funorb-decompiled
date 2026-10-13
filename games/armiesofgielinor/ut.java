@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ut extends sf implements he {
-    private fw field_bb;
+final class ut extends sf implements WidgetActivationListener {
+    private InteractiveWidget field_bb;
     static String field_ib;
-    private fw field_ab;
-    private fw field_mb;
-    private fw field_Y;
-    private fw field_Z;
+    private InteractiveWidget field_ab;
+    private InteractiveWidget field_mb;
+    private InteractiveWidget field_Y;
+    private InteractiveWidget field_Z;
     private DropdownSelector field_lb;
     private boolean field_hb;
     static byte[][] field_W;
@@ -16,10 +16,10 @@ final class ut extends sf implements he {
     static int decodedChatContextId;
     static String[] field_cb;
     static int field_fb;
-    private fw[] field_kb;
+    private InteractiveWidget[] field_kb;
     private ls[] field_db;
     private boolean field_nb;
-    private fw field_X;
+    private InteractiveWidget field_X;
 
     ut(gk param0) {
         super(param0, 430, 254);
@@ -52,7 +52,7 @@ final class ut extends sf implements he {
         String[] var5_ref_String__ = null;
         int var6_int = 0;
         String var6 = null;
-        fw var6_ref = null;
+        InteractiveWidget var6_ref = null;
         Widget var7 = null;
         ls var8 = null;
         String var10 = null;
@@ -146,17 +146,17 @@ final class ut extends sf implements he {
           this.field_gb.field_Q = 83;
           this.field_gb.d(5, 57, 5);
           this.a((byte) 10, (Widget) (this.field_gb));
-          this.field_mb = this.a((qo) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
+          this.field_mb = this.a((WidgetListener) (this), oq.field_j, ToggleTurnSkipConsoleCommand.field_H, false);
           if (var2_intLifetime1 != 0) {
-            this.field_Z = this.a((qo) (this), Unit.field_n, HuffmanCodec.field_e, false);
+            this.field_Z = this.a((WidgetListener) (this), Unit.field_n, HuffmanCodec.field_e, false);
           }
-          this.field_bb = this.a((qo) (this), oo.field_e, ClientContextMenu.field_b, false);
+          this.field_bb = this.a((WidgetListener) (this), oo.field_e, ClientContextMenu.field_b, false);
           if (var2_intLifetime1 != 0) {
             stackIn_57_1 = 3;
           } else {
             stackIn_57_1 = 2;
           }
-          this.field_kb = new fw[stackIn_57_1];
+          this.field_kb = new InteractiveWidget[stackIn_57_1];
           this.field_kb[0] = this.field_mb;
           if (var2_intLifetime1 != 0) {
             this.field_kb[2] = this.field_Z;
@@ -179,12 +179,12 @@ final class ut extends sf implements he {
             this.field_lb.setBounds(this.field_bb.x + this.field_gb.x, 126, this.field_bb.height + this.field_bb.y + (this.field_gb.y - 19), 8192, 18);
             this.field_D.addFirst(750, this.field_lb);
           }
-          this.field_X = this.a((byte) 38, VineGrowthAction.field_w, (qo) (this));
+          this.field_X = this.a((byte) 38, VineGrowthAction.field_w, (WidgetListener) (this));
           var5Lifetime1 = this.field_X.width / 2 + this.field_X.x;
           this.field_X.width = 150;
           this.field_X.x = -this.field_X.width - 20 + var5Lifetime1;
-          this.field_ab = this.a((byte) 38, nr.field_f, (qo) (this));
-          this.field_ab.field_I = false;
+          this.field_ab = this.a((byte) 38, nr.field_f, (WidgetListener) (this));
+          this.field_ab.enabled = false;
           this.field_ab.x = var5Lifetime1 + 20;
           this.field_ab.width = this.field_X.width;
           if (var2_intLifetime1 != 0 ||
@@ -196,7 +196,7 @@ final class ut extends sf implements he {
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new Widget(var10, (qo) null);
+            var7 = new Widget(var10, (WidgetListener) null);
             var7.y = 163;
             var7.x = 0;
             var7.width = this.width;
@@ -207,7 +207,7 @@ final class ut extends sf implements he {
           this.field_nb = false;
           var6_ref = this.o(-1);
           if (var6_ref != null) {
-            var6_ref.field_K = true;
+            var6_ref.active = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,9 +224,9 @@ final class ut extends sf implements he {
         }
     }
 
-    private final fw o(int param0) {
+    private final InteractiveWidget o(int param0) {
         if (param0 != -1) {
-          return (fw) null;
+          return (InteractiveWidget) null;
         }
         if (FixedQuaternion.field_a != null) {
           return this.field_bb;
@@ -239,8 +239,8 @@ final class ut extends sf implements he {
         return this.field_mb;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
-        fw discarded$0 = null;
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
+        InteractiveWidget discarded$0 = null;
         int stackIn_14_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -252,28 +252,28 @@ final class ut extends sf implements he {
         IndexedSprite[] var8 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             var8 = (IndexedSprite[]) null;
-            discarded$0 = this.a((qo) null, (String) null, (IndexedSprite[]) null, true);
+            discarded$0 = this.a((WidgetListener) null, (String) null, (IndexedSprite[]) null, true);
           }
-          if (param4 == this.field_X) {
+          if (widget == this.field_X) {
             this.n(118);
           } else {
-            if (param4 == this.field_ab) {
-              this.r(param1 - 12);
+            if (widget == this.field_ab) {
+              this.r(obfuscationGuard - 12);
             } else {
-              if (param4 == this.field_mb) {
-                this.a(param4, (byte) 34);
+              if (widget == this.field_mb) {
+                this.a(widget, (byte) 34);
               } else {
-                if (param4 != this.field_Z) {
+                if (widget != this.field_Z) {
                   if (this.field_lb != null) {
-                    stackIn_14_0 = (this.field_lb.field_t) ? 1 : 0;
+                    stackIn_14_0 = (this.field_lb.hovered) ? 1 : 0;
                   } else {
                     stackIn_14_0 = 0;
                   }
                   var6_int = stackIn_14_0;
                   if (var6_int == 0 &&
-                    param4 == this.field_bb) {
+                    widget == this.field_bb) {
                     if (!this.field_jb) {
                       this.field_G.a(new ud(this.field_G, PlayerProfile.field_h), 0);
                       return;
@@ -282,11 +282,11 @@ final class ut extends sf implements he {
                       this.field_G.a(new tn(this.field_G), 0);
                       return;
                     }
-                    this.a(param4, (byte) 34);
+                    this.a(widget, (byte) 34);
                     return;
                   }
                 } else {
-                  this.a(param4, (byte) 34);
+                  this.a(widget, (byte) 34);
                 }
               }
             }
@@ -296,8 +296,8 @@ final class ut extends sf implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_28_0 = var6;
-          stackIn_28_1 = new StringBuilder().append("ut.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_28_1 = new StringBuilder().append("ut.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
@@ -339,20 +339,20 @@ final class ut extends sf implements he {
           }
         }
         if (param0 != -1) {
-          this.field_Y = (fw) null;
+          this.field_Y = (InteractiveWidget) null;
         }
-        this.field_ab.field_I = false;
+        this.field_ab.enabled = false;
     }
 
     private final void q(int param0) {
         int var3 = 0;
-        fw var4 = null;
+        InteractiveWidget var4 = null;
         int var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        fw[] var6 = this.field_kb;
-        fw[] var2 = var6;
+        InteractiveWidget[] var6 = this.field_kb;
+        InteractiveWidget[] var2 = var6;
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
-          var4.field_K = this.field_Y == var4 ? true : false;
+          var4.active = this.field_Y == var4 ? true : false;
         }
         if (param0 > -37) {
           this.field_nb = true;
@@ -503,12 +503,12 @@ final class ut extends sf implements he {
         }
     }
 
-    private final void a(fw param0, byte param1) {
-        fw var3 = null;
+    private final void a(InteractiveWidget param0, byte param1) {
+        InteractiveWidget var3 = null;
         int var4 = 0;
         ls var5 = null;
         Widget var6 = null;
-        fw stackIn_4_0 = null;
+        InteractiveWidget stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -518,14 +518,14 @@ final class ut extends sf implements he {
         try {
           if (param1 != 34) {
             var6 = (Widget) null;
-            this.a(91, 13, -99, (Widget) null);
+            this.updatePointer(91, 13, -99, (Widget) null);
           }
           this.field_Y = param0;
-          param0.a(11, (Widget) (this));
+          param0.takeFocus(11, (Widget) (this));
           var3 = this.o(-1);
           stackIn_4_0 = this.field_ab;
           stackIn_5_1 = (var3 != param0);
-          stackIn_4_0.field_I = stackIn_5_1;
+          stackIn_4_0.enabled = stackIn_5_1;
           if (this.field_bb == param0) {
             if (var3 == param0) {
               if (this.field_lb != null) {
@@ -533,7 +533,7 @@ final class ut extends sf implements he {
                 var5 = this.field_db[var4];
                 if (ActionSpell.field_e.field_f != var5.field_b ||
                   ActionSpell.field_e.field_n != var5.field_a) {
-                  this.field_ab.field_I = true;
+                  this.field_ab.enabled = true;
                 }
                 this.q(-108);
               } else {
@@ -560,11 +560,11 @@ final class ut extends sf implements he {
         }
     }
 
-    private final fw a(byte param0, String param1, qo param2) {
-        fw var4 = null;
+    private final InteractiveWidget a(byte param0, String param1, WidgetListener param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        fw stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -572,7 +572,7 @@ final class ut extends sf implements he {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fw(param1, param2);
+          var4 = new InteractiveWidget(param1, param2);
           var4.painter = (WidgetPainter) ((Object) new nu());
           if (param0 != 38) {
             decodedChatContextId = 126;
@@ -602,12 +602,12 @@ final class ut extends sf implements he {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         int var6 = 0;
-        fw[] var5 = null;
-        fw var7 = null;
+        InteractiveWidget[] var5 = null;
+        InteractiveWidget var7 = null;
         int var8 = 0;
-        fw[] var9 = null;
+        InteractiveWidget[] var9 = null;
         boolean stackIn_14_0 = false;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -617,15 +617,15 @@ final class ut extends sf implements he {
         RuntimeException var5_ref = null;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
           if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
-            param3.f(1);
+            rootWidget.blur(1);
             var9 = this.field_kb;
             var5 = var9;
             for (var6 = 0; var6 < var9.length; var6++) {
               var7 = var9[var6];
-              if (var7.field_t) {
-                var7.a(param0 ^ 32729, (Widget) (this));
+              if (var7.hovered) {
+                var7.takeFocus(obfuscationGuard ^ 32729, (Widget) (this));
               }
             }
           }
@@ -652,8 +652,8 @@ final class ut extends sf implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_20_0 = var5_ref;
-          stackIn_20_1 = new StringBuilder().append("ut.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_20_1 = new StringBuilder().append("ut.P(").append(obfuscationGuard).append(',').append(originX).append(',').append(originY).append(',');
+          if (rootWidget == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -664,7 +664,7 @@ final class ut extends sf implements he {
 
     private final void n(int param0) {
         if (param0 < 79) {
-          this.field_bb = (fw) null;
+          this.field_bb = (InteractiveWidget) null;
         }
         if (!this.field_L) {
           return;
@@ -672,7 +672,7 @@ final class ut extends sf implements he {
         this.field_L = false;
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         boolean stackIn_74_0 = false;
         Object stackIn_77_0 = null;
         StringBuilder stackIn_77_1 = null;
@@ -684,26 +684,26 @@ final class ut extends sf implements he {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var5 = null;
-          if (!this.field_mb.a(false)) {
+          if (!this.field_mb.isFocused(false)) {
             if (this.field_Z != null &&
-              this.field_Z.a(false)) {
+              this.field_Z.isFocused(false)) {
               var5 = this.field_Z;
             } else {
-              if (this.field_bb.a(false)) {
+              if (this.field_bb.isFocused(false)) {
                 var5 = this.field_bb;
               } else {
-                if (!this.field_X.a(false)) {
-                  if (this.field_ab.a(false)) {
+                if (!this.field_X.isFocused(false)) {
+                  if (this.field_ab.isFocused(false)) {
                     var5 = this.field_ab;
                   } else {
-                    if (this.field_mb.field_K) {
+                    if (this.field_mb.active) {
                       var5 = this.field_mb;
                     } else {
                       if (null != this.field_Z &&
-                        this.field_Z.field_K) {
+                        this.field_Z.active) {
                         var5 = this.field_Z;
                       } else {
-                        if (this.field_bb.field_K) {
+                        if (this.field_bb.active) {
                           var5 = this.field_bb;
                         }
                       }
@@ -717,45 +717,45 @@ final class ut extends sf implements he {
           } else {
             var5 = this.field_mb;
           }
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             ut.i((byte) 84);
           }
-          var6 = param1;
+          var6 = keyCode;
           switch (var6) {
             case 96:
               if (var5 == this.field_bb) {
                 if (this.field_Z != null) {
-                  this.field_Z.a(11, (Widget) (this));
+                  this.field_Z.takeFocus(11, (Widget) (this));
                   return true;
                 }
-                this.field_mb.a(param3 + 12226, (Widget) (this));
+                this.field_mb.takeFocus(obfuscationGuard + 12226, (Widget) (this));
                 return true;
               }
               if (var5 == this.field_Z) {
-                this.field_mb.a(11, (Widget) (this));
+                this.field_mb.takeFocus(11, (Widget) (this));
                 return true;
               }
               if (this.field_ab == var5) {
-                this.field_X.a(11, (Widget) (this));
+                this.field_X.takeFocus(11, (Widget) (this));
                 return true;
               }
               break;
             case 97:
               if (this.field_mb == var5) {
                 if (this.field_Z == null) {
-                  this.field_bb.a(11, (Widget) (this));
+                  this.field_bb.takeFocus(11, (Widget) (this));
                 } else {
-                  this.field_Z.a(11, (Widget) (this));
+                  this.field_Z.takeFocus(11, (Widget) (this));
                 }
                 return true;
               }
               if (this.field_Z == var5) {
-                this.field_bb.a(11, (Widget) (this));
+                this.field_bb.takeFocus(11, (Widget) (this));
                 return true;
               }
               if (var5 == this.field_X &&
-                this.field_ab.field_I) {
-                this.field_ab.a(11, (Widget) (this));
+                this.field_ab.enabled) {
+                this.field_ab.takeFocus(11, (Widget) (this));
                 return true;
               }
               break;
@@ -765,50 +765,50 @@ final class ut extends sf implements he {
                 if (var5 != this.field_bb) {
                   break;
                 }
-                if (!this.field_ab.field_I) {
-                  this.field_X.a(param3 ^ -12222, (Widget) (this));
+                if (!this.field_ab.enabled) {
+                  this.field_X.takeFocus(obfuscationGuard ^ -12222, (Widget) (this));
                 } else {
-                  this.field_ab.a(11, (Widget) (this));
+                  this.field_ab.takeFocus(11, (Widget) (this));
                 }
                 return true;
               }
-              this.field_X.a(11, (Widget) (this));
+              this.field_X.takeFocus(11, (Widget) (this));
               return true;
             case 98:
               if (var5 == this.field_X) {
-                this.field_mb.a(11, (Widget) (this));
+                this.field_mb.takeFocus(11, (Widget) (this));
                 return true;
               }
               if (this.field_ab == var5) {
-                this.field_bb.a(param3 + 12226, (Widget) (this));
+                this.field_bb.takeFocus(obfuscationGuard + 12226, (Widget) (this));
                 return true;
               }
               break;
             default:
               break;
           }
-          stackIn_74_0 = super.a(param0, param1, param2, -12215);
+          stackIn_74_0 = super.handleKey(rootWidget, keyCode, character, -12215);
           return stackIn_74_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_77_0 = var5;
           stackIn_77_1 = new StringBuilder().append("ut.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_78_2 = "null";
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) (stackIn_77_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final fw a(qo param0, String param1, IndexedSprite[] param2, boolean param3) {
-        fw var5 = null;
+    private final InteractiveWidget a(WidgetListener param0, String param1, IndexedSprite[] param2, boolean param3) {
+        InteractiveWidget var5 = null;
         RuntimeException var5_ref = null;
         ob var6 = null;
-        fw var7 = null;
-        fw stackIn_3_0 = null;
+        InteractiveWidget var7 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -818,7 +818,7 @@ final class ut extends sf implements he {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new fw(param1, param0);
+          var5 = new InteractiveWidget(param1, param0);
           var5.painter = (WidgetPainter) ((Object) new ps(param2));
           if (param3) {
             field_W = (byte[][]) null;

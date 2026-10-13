@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kw extends fw {
+final class kw extends InteractiveWidget {
     static int[][] field_P;
     static String field_N;
     private n field_O;
@@ -10,14 +10,14 @@ final class kw extends fw {
     static int[] awtToClientKeyCodes;
     static int campaignPacketWord0;
 
-    final boolean a(int param0, Widget param1) {
+    final boolean takeFocus(int obfuscationGuard, Widget rootWidget) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 11) {
+          if (obfuscationGuard == 11) {
             return false;
           }
           return true;
@@ -25,8 +25,8 @@ final class kw extends fw {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("kw.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("kw.M(").append(obfuscationGuard).append(',');
+          if (rootWidget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -35,34 +35,34 @@ final class kw extends fw {
         }
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
           this.field_L = this.field_L + 1;
-          super.a(param0 ^ 0, param1, param2, param3);
-          if (param0 != 32722) {
+          super.updatePointer(obfuscationGuard ^ 0, originX, originY, rootWidget);
+          if (obfuscationGuard != 32722) {
             Widget var6 = (Widget) null;
-            this.a(107, (Widget) null);
+            this.takeFocus(107, (Widget) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kw.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "kw.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String h(int param0) {
-        if (param0 != 21384) {
+    final String getTooltipText(int obfuscationGuard) {
+        if (obfuscationGuard != 21384) {
           kw.b(true);
-          if (this.field_t) {
+          if (this.hovered) {
             return this.field_O.a((byte) 55);
           }
           return null;
         }
-        if (this.field_t) {
+        if (this.hovered) {
           return this.field_O.a((byte) 55);
         }
         return null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         int var5;
         int var6;
         gu var8;
@@ -83,13 +83,13 @@ final class kw extends fw {
         int var10Lifetime2;
         gu var8Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        super.a(param0, param1, (byte) -120, param3);
-        if (param3 != 0) {
+        super.drawWidget(originX, originY, (byte) -120, renderLayer);
+        if (renderLayer != 0) {
           return;
         }
-        var5 = this.x + (param0 + (this.width >> 1));
-        var6 = this.y + param1 + (this.height >> 1);
-        if (param2 <= -82) {
+        var5 = this.x + (originX + (this.width >> 1));
+        var6 = this.y + originY + (this.height >> 1);
+        if (obfuscationGuard <= -82) {
           var8 = this.field_O.a(false);
           if (ad.field_K != var8 &&
             so.field_e != var8) {
@@ -130,7 +130,7 @@ final class kw extends fw {
           PreparedAction.field_p.f(-var21.canvasWidth + var5, -var21.canvasHeight + var6, 256);
           return;
         }
-        this.a(105, -107, (byte) -98, -86);
+        this.drawWidget(105, -107, (byte) -98, -86);
         var8Lifetime1 = this.field_O.a(false);
         if (ad.field_K == var8Lifetime1) {
           var15 = db.field_a[0];

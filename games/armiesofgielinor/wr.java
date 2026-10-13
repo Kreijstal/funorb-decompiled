@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wr extends hs implements he {
+final class wr extends hs implements WidgetActivationListener {
     static int decodedSpriteCanvasHeight;
     private no field_M;
     static int campaignPacketWord3;
-    private fw field_K;
+    private InteractiveWidget field_K;
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) -114, param3);
-        if (param2 >= -82) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        super.drawWidget(originX, originY, (byte) -114, renderLayer);
+        if (obfuscationGuard >= -82) {
           Widget var6 = (Widget) null;
-          this.a(51, -1, -80, (Widget) null);
+          this.updatePointer(51, -1, -80, (Widget) null);
         }
-        gl.field_e.drawText(QuickChatMenu.field_Nb, param0 - (-this.x - 4), 4 + (param1 + this.y) + gl.field_e.maxAscent, 16777215, -1);
+        gl.field_e.drawText(QuickChatMenu.field_Nb, originX - (-this.x - 4), 4 + (originY + this.y) + gl.field_e.maxAscent, 16777215, -1);
     }
 
     wr(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_M = new no(new lu(10000536), c.field_c, 0, 0, 140, 25);
         this.field_M.a((byte) -101, new sb());
-        this.field_K = new fw(ro.field_kb, (qo) (this));
+        this.field_K = new InteractiveWidget(ro.field_kb, (WidgetListener) (this));
         this.field_C = new Widget[]{(Widget) ((Object) this.field_M), (Widget) ((Object) this.field_K)};
         this.field_K.painter = (WidgetPainter) ((Object) new nu());
         this.e(0);
@@ -59,17 +59,17 @@ final class wr extends hs implements he {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         if (this.field_M.a(-918933630).a(false) != oo.field_g) {
           return;
         }
-        if (param1 != 11) {
+        if (obfuscationGuard != 11) {
           return;
         }
         try {
-          BitmapTextLayout.a(this.field_M.l(param1 ^ 35), this.field_M.m(-26458), this.field_M.a((byte) -77), 30);
+          BitmapTextLayout.a(this.field_M.l(obfuscationGuard ^ 35), this.field_M.m(-26458), this.field_M.a((byte) -77), 30);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.N(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.N(" + pointerX + ',' + obfuscationGuard + ',' + button + ',' + pointerY + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -82,12 +82,12 @@ final class wr extends hs implements he {
         return stackIn_8_0;
     }
 
-    final void a(int param0, int param1, int param2, Widget param3) {
+    final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_K.field_I = this.field_M.a(-918933630).a(false) == oo.field_g ? true : false;
+          super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
+          this.field_K.enabled = this.field_M.a(-918933630).a(false) == oo.field_g ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ro extends pt implements he {
+class ro extends pt implements WidgetActivationListener {
     private rj field_tb;
     private boolean field_sb;
     static String field_kb;
@@ -58,7 +58,7 @@ class ro extends pt implements he {
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -66,11 +66,11 @@ class ro extends pt implements he {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             field_pb = 103;
           }
-          if (param1 != 13) {
-            stackIn_6_0 = super.a(param0, param1, param2, -12215);
+          if (keyCode != 13) {
+            stackIn_6_0 = super.handleKey(rootWidget, keyCode, character, -12215);
             return stackIn_6_0;
           }
           this.b(true);
@@ -80,12 +80,12 @@ class ro extends pt implements he {
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("ro.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -319,7 +319,7 @@ class ro extends pt implements he {
         return true;
     }
 
-    public void a(int param0, int param1, int param2, int param3, fw param4) {
+    public void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -332,7 +332,7 @@ class ro extends pt implements he {
           } else {
             ActionSpell.a(CombatEvent.d((byte) -125), -113, "tochangedisplayname.ws");
           }
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             ro.n(46);
           }
           return;
@@ -340,8 +340,8 @@ class ro extends pt implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_8_0 = var6;
-          stackIn_8_1 = new StringBuilder().append("ro.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_8_1 = new StringBuilder().append("ro.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -397,7 +397,7 @@ class ro extends pt implements he {
               }
               ((ad) (Object) stackIn_12_0).a(stackIn_13_1, -1, param1 ^ 99);
             } else {
-              var6.a(RegionAnchor.field_k, (qo) (this), (byte) -89);
+              var6.a(RegionAnchor.field_k, (WidgetListener) (this), (byte) -89);
             }
           }
           if (param0 == 3) {
@@ -406,7 +406,7 @@ class ro extends pt implements he {
             if (param0 != 4) {
               if (param0 != 6) {
                 if (param0 == 9) {
-                  var6.a(BattleTutorial.field_b, (qo) (this), (byte) -55);
+                  var6.a(BattleTutorial.field_b, (WidgetListener) (this), (byte) -55);
                 }
               } else {
                 var6.a(CombatEvent.field_O, 9, 1);

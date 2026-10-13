@@ -17,8 +17,8 @@ final class StateChangeEvent extends GameEvent {
         if (param0 >= -73) {
           field_y = (String) null;
         }
-        if (ib.field_j != -fw.field_C + 0 &&
-          250 - fw.field_C == ib.field_j) {
+        if (ib.field_j != -InteractiveWidget.field_C + 0 &&
+          250 - InteractiveWidget.field_C == ib.field_j) {
         }
         ib.field_j = ib.field_j + 1;
     }

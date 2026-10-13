@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class df extends tj implements fb, he {
+final class df extends tj implements EditableTextWidgetListener, WidgetActivationListener {
     private boolean field_H;
-    private fw field_O;
-    private fn field_Q;
+    private InteractiveWidget field_O;
+    private EditableTextWidget field_Q;
     static int field_E;
     static int field_T;
-    private fw field_N;
+    private InteractiveWidget field_N;
     static int field_M;
-    private fw field_R;
+    private InteractiveWidget field_R;
     private boolean field_P;
     private String field_I;
-    private fn field_S;
+    private EditableTextWidget field_S;
     private boolean field_F;
     static ClientUiComponent field_K;
 
     final void a(int param0, String param1) {
-        fn var3 = null;
+        EditableTextWidget var3 = null;
         String var4 = null;
         try {
           var3 = this.field_Q;
           var4 = param1;
-          var3.a(false, var4, -27934);
+          var3.setText(false, var4, -27934);
           if (param0 != -17376) {
-            this.field_O = (fw) null;
+            this.field_O = (InteractiveWidget) null;
           }
-          this.field_S.k(110);
+          this.field_S.clearText(110);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -49,10 +49,10 @@ final class df extends tj implements fb, he {
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        fw stackIn_18_1 = null;
-        fw stackIn_18_2 = null;
-        fw stackIn_19_1 = null;
-        fw stackIn_19_2 = null;
+        InteractiveWidget stackIn_18_1 = null;
+        InteractiveWidget stackIn_18_2 = null;
+        InteractiveWidget stackIn_19_1 = null;
+        InteractiveWidget stackIn_19_2 = null;
         String stackIn_19_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -79,10 +79,10 @@ final class df extends tj implements fb, he {
             this.field_F)) {
             throw new IllegalStateException();
           }
-          this.field_Q = (fn) ((Object) new ma(param0, (qo) (this), 100));
-          this.field_S = (fn) ((Object) new ma("", (qo) (this), 20));
+          this.field_Q = (EditableTextWidget) ((Object) new ma(param0, (WidgetListener) (this), 100));
+          this.field_S = (EditableTextWidget) ((Object) new ma("", (WidgetListener) (this), 20));
           if (!this.field_P) {
-            this.field_O = new fw(ResourceRequest.field_v, (qo) null);
+            this.field_O = new InteractiveWidget(ResourceRequest.field_v, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.field_F) {
@@ -94,14 +94,14 @@ final class df extends tj implements fb, he {
               stackIn_19_2 = null;
               stackIn_19_3 = pi.field_O;
             }
-            this.field_N = new fw(stackIn_19_3, (qo) null);
+            this.field_N = new InteractiveWidget(stackIn_19_3, (WidgetListener) null);
             if (this.field_H) {
-              this.field_R = new fw(li.field_p, (qo) (this));
+              this.field_R = new InteractiveWidget(li.field_p, (WidgetListener) (this));
             }
           } else {
-            this.field_O = new fw(RegionAnchor.field_k, (qo) null);
-            this.field_N = new fw(dt.field_c, (qo) null);
-            this.field_Q.field_I = false;
+            this.field_O = new InteractiveWidget(RegionAnchor.field_k, (WidgetListener) null);
+            this.field_N = new InteractiveWidget(dt.field_c, (WidgetListener) null);
+            this.field_Q.enabled = false;
           }
           this.field_Q.painter = (WidgetPainter) ((Object) new lu(10000536));
           this.field_S.painter = (WidgetPainter) ((Object) new ol(10000536));
@@ -113,19 +113,19 @@ final class df extends tj implements fb, he {
           if (this.field_R != null) {
             this.field_R.painter = (WidgetPainter) ((Object) var6);
           }
-          this.field_Q.field_s = de.field_d;
+          this.field_Q.tooltipText = de.field_d;
           if (null != this.field_R) {
-            this.field_R.field_s = hb.field_b;
+            this.field_R.tooltipText = hb.field_b;
           }
           if (!this.field_P) {
             if (this.field_F) {
-              this.field_N.field_s = CombatSandbox.field_e;
+              this.field_N.tooltipText = CombatSandbox.field_e;
               this.field_N.painter = (WidgetPainter) ((Object) new td());
             } else {
               this.field_N.painter = (WidgetPainter) ((Object) new td());
             }
           } else {
-            this.field_N.field_s = VineGrowthAction.field_v;
+            this.field_N.tooltipText = VineGrowthAction.field_v;
           }
           this.y = 15;
           var7 = ArmiesOfGielinor.field_J;
@@ -148,13 +148,13 @@ final class df extends tj implements fb, he {
           dupTemp$1 = new ta(10, this.y, -20 + this.width, 25, this.field_S, false, 80, 3, var7, 16777215, jj.field_h);
           var13 = dupTemp$1;
           this.a((byte) 10, (Widget) (dupTemp$1));
-          this.field_O.field_x = (qo) (this);
+          this.field_O.listener = (WidgetListener) (this);
           this.y = this.y + (5 + ((Widget) ((Object) var13)).height);
           if (this.field_R != null) {
-            this.field_R.field_x = (qo) (this);
+            this.field_R.listener = (WidgetListener) (this);
           }
           if (this.field_N != null) {
-            this.field_N.field_x = (qo) (this);
+            this.field_N.listener = (WidgetListener) (this);
           }
           if (null == this.field_R) {
             this.field_O.setBounds(8, -10 + (this.width - 6), this.y, 8192, 30);
@@ -206,22 +206,22 @@ final class df extends tj implements fb, he {
         }
     }
 
-    public final void a(fn param0, int param1) {
-        fn var4 = null;
+    public final void textSubmitted(EditableTextWidget widget, int obfuscationGuard) {
+        EditableTextWidget var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_Q == param0) {
-            this.field_S.a(11, (Widget) (this));
+          if (this.field_Q == widget) {
+            this.field_S.takeFocus(11, (Widget) (this));
           }
-          if (param1 != 80) {
-            var4 = (fn) null;
-            this.a((fn) null, -76);
+          if (obfuscationGuard != 80) {
+            var4 = (EditableTextWidget) null;
+            this.textSubmitted((EditableTextWidget) null, -76);
           }
-          if (this.field_S == param0) {
+          if (this.field_S == widget) {
             this.c(false);
           }
           return;
@@ -230,29 +230,29 @@ final class df extends tj implements fb, he {
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("df.EA(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        if (param2 > -82) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        if (obfuscationGuard > -82) {
           df.a(-77);
         }
         if (null != this.field_I) {
-          ArmiesOfGielinor.field_J.drawParagraph(this.field_I, param0 - (-this.x - 20), 15 + param1 + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
+          ArmiesOfGielinor.field_J.drawParagraph(this.field_I, originX - (-this.x - 20), 15 + originY + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
         }
         if (this.field_R != null) {
-          SoftwareRaster.e(10 + param0, 134 + param1, -20 + this.width, 4210752);
+          SoftwareRaster.e(10 + originX, 134 + originY, -20 + this.width, 4210752);
         }
-        super.a(param0, param1, (byte) -104, param3);
+        super.drawWidget(originX, originY, (byte) -104, renderLayer);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -261,17 +261,17 @@ final class df extends tj implements fb, he {
         RuntimeException var6 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             this.m(64);
           }
-          if (this.field_O != param4) {
-            if (this.field_R != param4) {
-              if (param4 == this.field_N) {
+          if (this.field_O != widget) {
+            if (this.field_R != widget) {
+              if (widget == this.field_N) {
                 if (this.field_P) {
                   IntPair.e(17);
                 } else {
                   if (!this.field_F) {
-                    QuickChatCommandDefinition.a(param1 ^ 26573);
+                    QuickChatCommandDefinition.a(obfuscationGuard ^ 26573);
                   } else {
                     PrintCoatConsoleCommand.g(89);
                   }
@@ -288,8 +288,8 @@ final class df extends tj implements fb, he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_17_0 = var6;
-          stackIn_17_1 = new StringBuilder().append("df.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_17_1 = new StringBuilder().append("df.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -312,11 +312,11 @@ final class df extends tj implements fb, he {
         return fh.field_i;
     }
 
-    public final void b(fn param0, int param1) {
+    public final void textChanged(EditableTextWidget widget, int obfuscationGuard) {
         try {
-          int var3_int = 14 % ((param1 + 80) / 33);
+          int var3_int = 14 % ((obfuscationGuard + 80) / 33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "df.FA(" + (widget != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -406,14 +406,14 @@ final class df extends tj implements fb, he {
     }
 
     final void a(byte param0) {
-        this.field_Q.k(104);
+        this.field_Q.clearText(104);
         if (param0 >= -2) {
           return;
         }
-        this.field_S.k(-79);
+        this.field_S.clearText(-79);
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -422,29 +422,29 @@ final class df extends tj implements fb, he {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(rootWidget, keyCode, character, obfuscationGuard)) {
             return true;
           }
-          if (98 == param1) {
-            stackIn_6_0 = this.a(false, param0);
+          if (98 == keyCode) {
+            stackIn_6_0 = this.a(false, rootWidget);
             return stackIn_6_0;
           }
-          if (param1 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.b((byte) -128, param0);
+          stackIn_10_0 = this.b((byte) -128, rootWidget);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
           stackIn_13_1 = new StringBuilder().append("df.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

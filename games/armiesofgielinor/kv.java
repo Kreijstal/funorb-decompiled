@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kv extends tj implements he {
+final class kv extends tj implements WidgetActivationListener {
     private String[] field_H;
     static String field_J;
-    private fw[] field_E;
+    private InteractiveWidget[] field_E;
     private mf field_G;
     static String field_I;
     static int field_F;
@@ -31,15 +31,15 @@ final class kv extends tj implements he {
               this.field_H[var4_int] = ug.a(GrowthEvent.bitwiseXor(param0, 116), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new td(ArmiesOfGielinor.field_J, 0, 1);
-            this.field_E = new fw[var3_int + 1];
+            this.field_E = new InteractiveWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_E[var5] = new fw(this.field_H[var5], (qo) (this));
+              this.field_E[var5] = new InteractiveWidget(this.field_H[var5], (WidgetListener) (this));
               this.field_E[var5].painter = (WidgetPainter) ((Object) var4);
-              this.field_E[var5].field_s = wl.field_J;
+              this.field_E[var5].tooltipText = wl.field_J;
               this.field_E[var5].setBounds(0, 80, 20 + 16 * var5, 8192, 15);
               this.a((byte) 10, (Widget) (this.field_E[var5]));
             }
-            this.field_E[var3_int] = new fw(h.field_h, (qo) (this));
+            this.field_E[var3_int] = new InteractiveWidget(h.field_h, (WidgetListener) (this));
             this.field_E[var3_int].painter = (WidgetPainter) ((Object) var4);
             this.field_E[var3_int].setBounds(0, param0, var3_int * 16 + 16 + 20, param0 ^ 8292, 15);
             this.a((byte) 10, (Widget) (this.field_E[var3_int]));
@@ -95,17 +95,17 @@ final class kv extends tj implements he {
         return iv.field_b;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        super.a(param0, param1, (byte) -95, param3);
-        if (0 != param3) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        super.drawWidget(originX, originY, (byte) -95, renderLayer);
+        if (0 != renderLayer) {
           return;
         }
         BitmapFont var5 = ArmiesOfGielinor.field_J;
-        if (param2 > -82) {
+        if (obfuscationGuard > -82) {
           kv.b(true);
         }
         if (this.field_H != null) {
-          var5.drawParagraph(we.field_i, param0 + this.x, param1 + this.y, this.width, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
+          var5.drawParagraph(we.field_i, originX + this.x, originY + this.y, this.width, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
     }
 
@@ -151,7 +151,7 @@ final class kv extends tj implements he {
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
@@ -160,32 +160,32 @@ final class kv extends tj implements he {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             return false;
           }
-          if (super.a(param0, param1, param2, param3 ^ 0)) {
+          if (super.handleKey(rootWidget, keyCode, character, obfuscationGuard ^ 0)) {
             return true;
           }
-          if (98 == param1) {
-            stackIn_8_0 = this.a(false, param0);
+          if (98 == keyCode) {
+            stackIn_8_0 = this.a(false, rootWidget);
             return stackIn_8_0;
           }
-          if (param1 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_12_0 = this.b((byte) -125, param0);
+          stackIn_12_0 = this.b((byte) -125, rootWidget);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
           stackIn_15_1 = new StringBuilder().append("kv.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class kv extends tj implements he {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -208,15 +208,15 @@ final class kv extends tj implements he {
         RuntimeException var6 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             kv.a(false, (CharSequence) null, 'ﾪ');
           }
           for (var6_int = 0; this.field_H.length > var6_int; var6_int++) {
-            if (param4 == this.field_E[var6_int]) {
+            if (widget == this.field_E[var6_int]) {
               this.field_G.a(-1, this.field_H[var6_int]);
             }
           }
-          if (this.field_E[this.field_H.length] == param4) {
+          if (this.field_E[this.field_H.length] == widget) {
             this.field_G.a((byte) -116);
           }
           return;
@@ -224,8 +224,8 @@ final class kv extends tj implements he {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("kv.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_15_1 = new StringBuilder().append("kv.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";

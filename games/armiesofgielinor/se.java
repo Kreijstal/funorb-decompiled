@@ -41,7 +41,7 @@ final class se {
             return stackIn_8_0;
           }
           if (2 != th.socialListState) {
-            stackIn_11_0 = ct.field_m;
+            stackIn_11_0 = TextHotspotRegion.field_m;
             return stackIn_11_0;
           }
           if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {

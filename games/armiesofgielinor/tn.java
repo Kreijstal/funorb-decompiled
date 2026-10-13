@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends sf implements he {
-    private fw field_bb;
+final class tn extends sf implements WidgetActivationListener {
+    private InteractiveWidget field_bb;
     static rn field_ab;
-    private fw field_fb;
+    private InteractiveWidget field_fb;
     static RgbSprite[] activeFoliageShadows;
     static jl field_cb;
     static byte[] field_db;
@@ -31,7 +31,7 @@ final class tn extends sf implements he {
         super(param0, 200, 130);
         Widget var2 = null;
         try {
-          var2 = new Widget(SummonRequest.field_z, (qo) null);
+          var2 = new Widget(SummonRequest.field_z, (WidgetListener) null);
           var2.height = 80;
           var2.width = this.width;
           var2.x = 0;
@@ -39,39 +39,39 @@ final class tn extends sf implements he {
           var2.painter = (WidgetPainter) ((Object) new BitmapTextWidgetPainter(gl.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a((byte) 10, var2);
           if (DamageEvent.g(98)) {
-            this.field_fb = this.a((qo) (this), true, ClientContextMenu.field_j);
+            this.field_fb = this.a((WidgetListener) (this), true, ClientContextMenu.field_j);
           }
-          this.field_bb = this.a((qo) (this), true, pd.field_f);
+          this.field_bb = this.a((WidgetListener) (this), true, pd.field_f);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "tn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, fw param4) {
+    public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param1 != 11) {
+          if (obfuscationGuard != 11) {
             field_W = (int[][]) null;
           }
-          if (param4 != this.field_fb) {
-            if (param4 == this.field_bb) {
+          if (widget != this.field_fb) {
+            if (widget == this.field_bb) {
               this.o(1);
             }
           } else {
             ed.a(false);
-            this.o(param1 - 10);
+            this.o(obfuscationGuard - 10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_10_0 = var6;
-          stackIn_10_1 = new StringBuilder().append("tn.N(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_10_1 = new StringBuilder().append("tn.N(").append(pointerX).append(',').append(obfuscationGuard).append(',').append(button).append(',').append(pointerY).append(',');
+          if (widget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -91,11 +91,11 @@ final class tn extends sf implements he {
         this.field_L = false;
     }
 
-    private final fw a(qo param0, boolean param1, String param2) {
-        fw var4 = null;
+    private final InteractiveWidget a(WidgetListener param0, boolean param1, String param2) {
+        InteractiveWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        fw stackIn_3_0 = null;
+        InteractiveWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -103,7 +103,7 @@ final class tn extends sf implements he {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new fw(param2, param0);
+          var4 = new InteractiveWidget(param2, param0);
           if (!param1) {
             tn.a(false, -22, 101);
           }
@@ -135,7 +135,7 @@ final class tn extends sf implements he {
         }
     }
 
-    final boolean a(Widget param0, int param1, char param2, int param3) {
+    final boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -143,34 +143,34 @@ final class tn extends sf implements he {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (98 == param1) {
+          if (98 == keyCode) {
             if (this.field_fb == null) {
-              this.field_bb.a(11, (Widget) (this));
+              this.field_bb.takeFocus(11, (Widget) (this));
               return true;
             }
-            this.field_fb.a(11, (Widget) (this));
+            this.field_fb.takeFocus(11, (Widget) (this));
             return true;
           }
-          if (param3 != -12215) {
+          if (obfuscationGuard != -12215) {
             return true;
           }
-          if (param1 != 99) {
-            stackIn_12_0 = super.a(param0, param1, param2, param3 + 0);
+          if (keyCode != 99) {
+            stackIn_12_0 = super.handleKey(rootWidget, keyCode, character, obfuscationGuard + 0);
             return stackIn_12_0;
           }
-          this.field_bb.a(11, (Widget) (this));
+          this.field_bb.takeFocus(11, (Widget) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
           stackIn_15_1 = new StringBuilder().append("tn.F(");
-          if (param0 == null) {
+          if (rootWidget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(keyCode).append(',').append(character).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

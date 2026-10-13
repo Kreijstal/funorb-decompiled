@@ -80,7 +80,7 @@ final class ChatMessage {
     ChatMessage(boolean retainResponsePhraseIds) {
         this.text = BattleGraphicsAssets.decodedChatText;
         if (retainResponsePhraseIds) {
-          this.responsePhraseIds = hv.decodedChatResponsePhraseIds;
+          this.responsePhraseIds = HotspotTextWidget.decodedChatResponsePhraseIds;
         } else {
           this.responsePhraseIds = null;
         }

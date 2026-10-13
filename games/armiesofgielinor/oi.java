@@ -89,11 +89,11 @@ final class oi implements WidgetPainter {
           var7 = widget.y + originY;
           StateChangeEvent.a(widget.width, var6_int, widget.height, -52, var7);
           var8 = db.field_a[1];
-          if (widget instanceof fw &&
-            ((fw) (widget)).field_K) {
+          if (widget instanceof InteractiveWidget &&
+            ((InteractiveWidget) (widget)).active) {
             var8.f((widget.width - var8.canvasWidth >> 1) + (1 + var6_int), (-var8.canvasHeight + widget.height >> 1) + (1 + var7), 256);
           }
-          if (!widget.a(false)) {
+          if (!widget.isFocused(false)) {
             return;
           }
           na.c(widget.width - 4, var6_int + 2, 124, -4 + widget.height, 2 + var7);

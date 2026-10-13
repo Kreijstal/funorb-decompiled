@@ -79,38 +79,38 @@ final class ao extends BitmapTextWidgetPainter {
         RuntimeException var6 = null;
         ip var7 = null;
         ip var9 = null;
-        fw var10 = null;
+        InteractiveWidget var10 = null;
         ip var11 = null;
         ip var12 = null;
         ip var13 = null;
         ip var14 = null;
         try {
-          if (widget instanceof fw) {
+          if (widget instanceof InteractiveWidget) {
             stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
-          var10 = (fw) (stackIn_3_0);
+          var10 = (InteractiveWidget) (stackIn_3_0);
           CampaignUnitOverride.a(originX + widget.x, widget.width + (widget.x + originX), widget.y + (originY + widget.height), originY + widget.y, (byte) 72);
           if (obfuscationGuard >= -79) {
             return;
           }
           if (var10 != null) {
-            renderFlag = renderFlag & var10.field_I;
+            renderFlag = renderFlag & var10.enabled;
           }
           var7 = this.field_w[0];
           this.field_v.a(false);
           var7.a(-10265, this.field_v, originX, this, originY, widget);
           if (var10 != null) {
-            if (var10.field_K) {
+            if (var10.active) {
               var11 = this.field_w[1];
               if (var11 != null) {
                 var11.a(-10265, this.field_v, originX, this, originY, widget);
               }
             }
-            if (var10.field_t) {
+            if (var10.hovered) {
               var12 = this.field_w[3];
-              if (0 != var10.field_q &&
+              if (0 != var10.pressedButton &&
                 var12 != null) {
                 var12.a(-10265, this.field_v, originX, this, originY, widget);
               } else {
@@ -121,7 +121,7 @@ final class ao extends BitmapTextWidgetPainter {
               }
             }
           }
-          if (widget.a(false)) {
+          if (widget.isFocused(false)) {
             var13 = this.field_w[5];
             if (var13 != null) {
               var13.a(-10265, this.field_v, originX, this, originY, widget);

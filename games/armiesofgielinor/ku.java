@@ -29,28 +29,28 @@ final class ku extends nl {
         return null;
     }
 
-    final void a(int param0, Widget param1, int param2, byte param3, int param4, int param5) {
+    final void pointerReleased(int originY, Widget rootWidget, int pointerX, byte obfuscationGuard, int pointerY, int originX) {
         wc var9 = null;
         try {
-          super.a(param0, param1, param2, (byte) 42, param4, param5);
-          int var8 = -111 % ((-58 - param3) / 53);
+          super.pointerReleased(originY, rootWidget, pointerX, (byte) 42, pointerY, originX);
+          int var8 = -111 % ((-58 - obfuscationGuard) / 53);
           var9 = bn.field_f;
           if (var9 != null &&
-            this.containsPointer(1, param5, param4, param2, param0)) {
-            if (!(this.field_x instanceof ch)) {
-              if (!(var9.field_x instanceof ch)) {
+            this.containsPointer(1, originX, pointerY, pointerX, originY)) {
+            if (!(this.listener instanceof ch)) {
+              if (!(var9.listener instanceof ch)) {
                 return;
               }
-              ((ch) (var9.field_x)).a(var9, -14486, this);
+              ((ch) (var9.listener)).a(var9, -14486, this);
               bn.field_f = null;
               return;
             }
-            ((ch) (this.field_x)).a(var9, -14486, this);
+            ((ch) (this.listener)).a(var9, -14486, this);
             bn.field_f = null;
             return;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ku.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ku.JA(" + originY + ',' + (rootWidget != null ? "{...}" : "null") + ',' + pointerX + ',' + obfuscationGuard + ',' + pointerY + ',' + originX + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class ku extends nl {
         }
     }
 
-    private ku(int param0, int param1, int param2, int param3, WidgetPainter param4, qo param5, Widget param6) {
+    private ku(int param0, int param1, int param2, int param3, WidgetPainter param4, WidgetListener param5, Widget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_E = param6;

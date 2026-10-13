@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ct extends IntrusiveNode {
-    int field_l;
-    int field_n;
+final class TextHotspotRegion extends IntrusiveNode {
+    int top;
+    int hotspotId;
     static String field_m;
-    int field_r;
+    int left;
     static SpellMenuGroup[] spellMenuById;
-    int field_q;
-    ct field_k;
-    int field_p;
+    int height;
+    TextHotspotRegion nextRegion;
+    int width;
 
     public static void a(int param0) {
         field_m = null;
@@ -21,12 +21,12 @@ final class ct extends IntrusiveNode {
         spellMenuById = null;
     }
 
-    ct(int param0, int param1, int param2, int param3, int param4) {
-        this.field_q = param4;
-        this.field_n = param0;
-        this.field_l = param2;
-        this.field_p = param3;
-        this.field_r = param1;
+    TextHotspotRegion(int hotspotId, int left, int top, int width, int height) {
+        this.height = height;
+        this.hotspotId = hotspotId;
+        this.top = top;
+        this.width = width;
+        this.left = left;
     }
 
     static {

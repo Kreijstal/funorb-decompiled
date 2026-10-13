@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends rb implements fb, rp {
+final class sb extends rb implements EditableTextWidgetListener, rp {
     en field_j;
     static int[] field_g;
     static ClientUiComponent field_i;
@@ -10,12 +10,12 @@ final class sb extends rb implements fb, rp {
     static int consoleArgumentCommaKind;
     static ResourceArchive field_e;
 
-    public final void b(fn param0, int param1) {
+    public final void textChanged(EditableTextWidget widget, int obfuscationGuard) {
         try {
-          int var3_int = -12 / ((-80 - param1) / 33);
+          int var3_int = -12 / ((-80 - obfuscationGuard) / 33);
           this.a(127);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.FA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.FA(" + (widget != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class sb extends rb implements fb, rp {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_4_0 = hv.field_N;
+            stackIn_4_0 = HotspotTextWidget.field_N;
             return stackIn_4_0;
           }
           if (var2_int > 63) {
@@ -186,13 +186,13 @@ final class sb extends rb implements fb, rp {
         return this.field_j.k(-22339);
     }
 
-    public final void a(fn param0, int param1) {
+    public final void textSubmitted(EditableTextWidget widget, int obfuscationGuard) {
         try {
-          if (param1 != 80) {
+          if (obfuscationGuard != 80) {
             field_h = (PacketBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.EA(" + (widget != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

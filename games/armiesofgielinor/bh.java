@@ -33,12 +33,12 @@ final class bh extends nl {
     }
 
     public bh() {
-        super(0, 0, 0, 0, (WidgetPainter) null, (qo) null);
+        super(0, 0, 0, 0, (WidgetPainter) null, (WidgetListener) null);
         this.field_K = 256;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        if (param3 != 0) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
+        if (renderLayer != 0) {
           return;
         }
         if (this.field_E == null) {
@@ -48,26 +48,26 @@ final class bh extends nl {
           return;
         }
         if (this.field_K == 256) {
-          this.field_E.a(this.x + param0, param1 + this.y, (byte) -125, param3);
+          this.field_E.drawWidget(this.x + originX, originY + this.y, (byte) -125, renderLayer);
           return;
         }
         RgbSprite var6 = new RgbSprite(this.field_E.width, this.field_E.height);
-        if (param2 < -82) {
+        if (obfuscationGuard < -82) {
           CombatSandbox.a(var6, 3);
-          this.field_E.a(0, 0, (byte) -86, param3);
+          this.field_E.drawWidget(0, 0, (byte) -86, renderLayer);
           QuickChatPhraseRepository.popRasterState(-18862);
-          var6.e(this.x + param0, param1 + this.y, this.field_K);
+          var6.e(this.x + originX, originY + this.y, this.field_K);
           return;
         }
         field_M = (String[]) null;
         CombatSandbox.a(var6, 3);
-        this.field_E.a(0, 0, (byte) -86, param3);
+        this.field_E.drawWidget(0, 0, (byte) -86, renderLayer);
         QuickChatPhraseRepository.popRasterState(-18862);
-        var6.e(this.x + param0, param1 + this.y, this.field_K);
+        var6.e(this.x + originX, originY + this.y, this.field_K);
     }
 
     bh(Widget param0) {
-        super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (qo) null);
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetPainter) null, (WidgetListener) null);
         try {
           param0.setBounds(0, this.width, 0, 8192, this.height);
           this.field_K = 256;

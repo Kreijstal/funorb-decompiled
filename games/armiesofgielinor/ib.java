@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ib extends mk {
-    private fn field_k;
-    private fn field_l;
+    private EditableTextWidget field_k;
+    private EditableTextWidget field_l;
     static int field_j;
 
     final String a(byte param0, String param1) {
@@ -449,7 +449,7 @@ final class ib extends mk {
         }
     }
 
-    ib(fn param0, fn param1, fn param2) {
+    ib(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
         super(param0);
         try {
           this.field_k = param2;

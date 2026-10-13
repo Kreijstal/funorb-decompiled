@@ -93,7 +93,7 @@ final class tk implements WidgetPainter {
           }
           var11 = (vu) (stackIn_3_0);
           if (var11 != null) {
-            renderFlag = renderFlag & var11.field_I;
+            renderFlag = renderFlag & var11.enabled;
           }
           if (obfuscationGuard >= -79) {
             this.field_e = -101;
@@ -107,7 +107,7 @@ final class tk implements WidgetPainter {
           var9 = widget.y + (originY + this.field_m);
           SoftwareRaster.g(var8, var9, this.field_h, this.field_j, 5592405);
           SoftwareRaster.f(var8, var9, this.field_h, this.field_j, var7);
-          if (var11.field_K) {
+          if (var11.active) {
             SoftwareRaster.h(var8, var9, this.field_h + var8, this.field_j + var9, 1);
             SoftwareRaster.h(var8 + this.field_h, var9, var8, this.field_j + var9, 1);
           }

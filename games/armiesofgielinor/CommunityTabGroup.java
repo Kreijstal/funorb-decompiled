@@ -116,7 +116,7 @@ final class CommunityTabGroup {
         }
         if (!quickChat) {
           BattleGraphicsAssets.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
-          hv.decodedChatResponsePhraseIds = null;
+          HotspotTextWidget.decodedChatResponsePhraseIds = null;
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);
           try {
@@ -127,12 +127,12 @@ final class CommunityTabGroup {
             } else {
               responsePhraseIds = phrase.linkedPhraseIds;
             }
-            hv.decodedChatResponsePhraseIds = responsePhraseIds;
+            HotspotTextWidget.decodedChatResponsePhraseIds = responsePhraseIds;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             phraseFailure = (Exception) (Object) decompiledCaughtException;
             af.a((Throwable) ((Object) phraseFailure), -120, "CC1");
-            hv.decodedChatResponsePhraseIds = null;
+            HotspotTextWidget.decodedChatResponsePhraseIds = null;
             BattleGraphicsAssets.decodedChatText = null;
           }
         }
@@ -282,7 +282,7 @@ final class CommunityTabGroup {
         }
         if (!quickChat) {
           BattleGraphicsAssets.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
-          hv.decodedChatResponsePhraseIds = null;
+          HotspotTextWidget.decodedChatResponsePhraseIds = null;
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);
           try {
@@ -293,12 +293,12 @@ final class CommunityTabGroup {
             } else {
               responsePhraseIds = phrase.linkedPhraseIds;
             }
-            hv.decodedChatResponsePhraseIds = responsePhraseIds;
+            HotspotTextWidget.decodedChatResponsePhraseIds = responsePhraseIds;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             phraseFailure = (Exception) (Object) decompiledCaughtException;
             af.a((Throwable) ((Object) phraseFailure), -120, "CC1");
-            hv.decodedChatResponsePhraseIds = null;
+            HotspotTextWidget.decodedChatResponsePhraseIds = null;
             BattleGraphicsAssets.decodedChatText = null;
           }
         }

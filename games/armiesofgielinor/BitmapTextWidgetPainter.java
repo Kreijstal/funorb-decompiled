@@ -98,7 +98,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
         String widgetDescription = null;
         RuntimeException caughtFailure = null;
         try {
-          if (widget.a(false)) {
+          if (widget.isFocused(false)) {
             layout = this.getTextLayout(-75, widget);
             layoutAlias = layout;
             lineIndex = layoutAlias.getLineIndex(obfuscationGuard - 1024, characterIndex);
@@ -510,7 +510,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
           if (endIndex == startIndex) {
             return;
           }
-          if (!widget.a(false)) {
+          if (!widget.isFocused(false)) {
             return;
           }
           layout = this.getTextLayout(-45, widget);

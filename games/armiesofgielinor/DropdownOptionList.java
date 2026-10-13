@@ -73,7 +73,7 @@ final class DropdownOptionList extends kq {
         return null;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         int var5;
         int var6;
         int var7;
@@ -87,12 +87,12 @@ final class DropdownOptionList extends kq {
         int var7Lifetime1;
         int var8Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param3 != 0) {
+        if (renderLayer != 0) {
           return;
         }
-        var5 = param0 + this.x;
-        if (param2 <= -82) {
-          var6 = this.y + param1;
+        var5 = originX + this.x;
+        if (obfuscationGuard <= -82) {
+          var6 = this.y + originY;
           SoftwareRaster.f(var5, var6, this.width, this.height, 0);
           var7 = this.selectedIndex;
           if (-1 != this.hoveredIndex) {
@@ -113,7 +113,7 @@ final class DropdownOptionList extends kq {
           return;
         }
         this.containsPointer(((int[]) (this.options[13]))[3], -51, -121, ((int[]) (this.options[9]))[0], -117);
-        var6Lifetime1 = this.y + param1;
+        var6Lifetime1 = this.y + originY;
         SoftwareRaster.f(var5, var6Lifetime1, this.width, this.height, 0);
         var7Lifetime1 = this.selectedIndex;
         if (-1 != this.hoveredIndex) {
@@ -138,7 +138,7 @@ final class DropdownOptionList extends kq {
         if (!this.selector.expanded) {
           return false;
         }
-        if (!this.selector.dropdownViewport.field_S.field_t) {
+        if (!this.selector.dropdownViewport.field_S.hovered) {
           return false;
         }
         if (this.options == null) {
@@ -169,14 +169,14 @@ final class DropdownOptionList extends kq {
         return true;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
-        super.a(param0, param1, param2, param3);
-        param1 = param1 - this.x;
-        param2 = param2 - this.y;
+    final void activate(int button, int pointerX, int pointerY, boolean notifyListener) {
+        super.activate(button, pointerX, pointerY, notifyListener);
+        pointerX = pointerX - this.x;
+        pointerY = pointerY - this.y;
         if (this.options == null) {
           return;
         }
-        int var5 = param2 / this.rowHeight;
+        int var5 = pointerY / this.rowHeight;
         if (var5 < 0) {
           return;
         }

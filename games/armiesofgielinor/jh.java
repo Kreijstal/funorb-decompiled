@@ -151,7 +151,7 @@ final class jh extends mk {
         }
     }
 
-    jh(fn param0) {
+    jh(EditableTextWidget param0) {
         super(param0);
     }
 
