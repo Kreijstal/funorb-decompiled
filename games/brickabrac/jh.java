@@ -33,7 +33,7 @@ final class jh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class jh {
           param1.field_cb = 0;
           param1.field_C = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

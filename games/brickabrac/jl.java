@@ -113,7 +113,7 @@ final class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "jl.D(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "jl.D(" + param0 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class jl {
             stackIn_7_0 = kd.field_b;
             return stackIn_7_0;
           }
-          if (ci.a(param1, -19)) {
+          if (SpaceBackground.a(param1, -19)) {
             stackIn_11_0 = rj.field_a;
             return stackIn_11_0;
           }
@@ -193,7 +193,7 @@ final class jl {
             return stackIn_21_0;
           }
           if (AchievementBrowserScreen.a(121, param1)) {
-            stackIn_24_0 = rd.a(sn.field_u, new String[]{param1}, (byte) 103);
+            stackIn_24_0 = rd.a(ConstructionBackground.field_u, new String[]{param1}, (byte) 103);
             return stackIn_24_0;
           }
           if (param0 != 24943) {
@@ -218,7 +218,7 @@ final class jl {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

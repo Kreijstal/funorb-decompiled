@@ -3,10 +3,10 @@
  */
 final class sk extends h {
     static String field_G;
-    static RgbSprite[] field_J;
+    static RgbSprite[] constructionCentreSprites;
     static int field_I;
     int field_K;
-    static int field_H;
+    static int pendingMusicLoads;
 
     public sk() {
         super(0, 0, 0, 0, (ub) null, (uh) null);
@@ -78,7 +78,7 @@ final class sk extends h {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -113,7 +113,7 @@ final class sk extends h {
             IntArrayRequest.gameplayScreen = null;
           }
           if (obfuscationGuard > -112) {
-            field_J = (RgbSprite[]) null;
+            constructionCentreSprites = (RgbSprite[]) null;
           }
           if (eb.field_l) {
             fj.field_Ub = null;
@@ -137,17 +137,17 @@ final class sk extends h {
             }
             eb.field_l = false;
           }
-          if (dp.field_y) {
+          if (HalloweenBackground.field_y) {
             eq.a(7);
             bf.a((byte) 119);
             uc.e(-94);
-            dp.field_y = false;
+            HalloweenBackground.field_y = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "sk.B(" + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "sk.B(" + obfuscationGuard + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class sk extends h {
         if (param0 != 51550) {
           field_G = (String) null;
         }
-        field_J = null;
+        constructionCentreSprites = null;
         field_G = null;
     }
 
@@ -206,7 +206,7 @@ final class sk extends h {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ final class sk extends h {
           this.field_K = 256;
           this.field_E = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

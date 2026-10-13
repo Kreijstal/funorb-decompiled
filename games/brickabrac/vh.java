@@ -83,7 +83,7 @@ final class vh extends d {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -98,20 +98,20 @@ final class vh extends d {
         try {
           var1_int = 0;
           while (jl.pollKeyEvent((byte) 5)) {
-            fi.field_r.navigateVertical(param0 - 1);
-            if (!fi.field_r.isActivated((byte) 113)) {
+            ArcticBackground.field_r.navigateVertical(param0 - 1);
+            if (!ArcticBackground.field_r.isActivated((byte) 113)) {
               continue;
             }
             var1_int = 1;
           }
-          fi.field_r.updatePointer(aj.a(param0 + param0, po.pointerY, pq.pointerX), param0 ^ 27479, aj.a(0, qo.pressY, tb.pressX));
-          if (fi.field_r.isActivated((byte) 113)) {
+          ArcticBackground.field_r.updatePointer(aj.a(param0 + param0, po.pointerY, pq.pointerX), param0 ^ 27479, aj.a(0, qo.pressY, tb.pressX));
+          if (ArcticBackground.field_r.isActivated((byte) 113)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            fi.field_r.selectedIndex >= 0) {
-            var2 = hi.field_A[fi.field_r.selectedIndex];
+            ArcticBackground.field_r.selectedIndex >= 0) {
+            var2 = hi.field_A[ArcticBackground.field_r.selectedIndex];
             if (var2 == 2) {
               DualLinkIterator.b((byte) 99);
             }
@@ -121,7 +121,7 @@ final class vh extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
         }
     }
 
@@ -173,7 +173,7 @@ final class vh extends d {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

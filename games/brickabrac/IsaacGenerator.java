@@ -65,7 +65,7 @@ final class IsaacGenerator {
         try {
           NodeDeque.a(param0, -27300, true);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class IsaacGenerator {
           }
           this.initialize(true);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fo.<init>(" + (seed != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fo.<init>(" + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

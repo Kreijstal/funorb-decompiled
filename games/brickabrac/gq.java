@@ -10,7 +10,7 @@ final class gq extends mh {
     private mh field_Pb;
     private int field_Tb;
     static int field_Yb;
-    static RgbSprite[] field_Ub;
+    static RgbSprite[] chocLeverSprites;
     static ResourceArchive field_Rb;
 
     final int a(boolean param0, byte param1) {
@@ -27,7 +27,7 @@ final class gq extends mh {
         if (!param0) {
           this.field_Qb.field_Mb = this.field_Vb.toString();
           if (param0 &&
-            ki.pressedButton != 0 &&
+            BackgroundScene.pressedButton != 0 &&
             this.field_L == 0) {
             this.field_Tb = 1;
           }
@@ -39,7 +39,7 @@ final class gq extends mh {
             if (!param0) {
               return this.field_Tb;
             }
-            if (ki.pressedButton == 0) {
+            if (BackgroundScene.pressedButton == 0) {
               return this.field_Tb;
             }
             if (this.field_L != 0) {
@@ -289,7 +289,7 @@ final class gq extends mh {
           field_Sb = null;
           field_Wb = null;
           field_Xb = null;
-          field_Ub = null;
+          chocLeverSprites = null;
           return;
         }
         gq.d((byte) -20);
@@ -297,7 +297,7 @@ final class gq extends mh {
         field_Sb = null;
         field_Wb = null;
         field_Xb = null;
-        field_Ub = null;
+        chocLeverSprites = null;
     }
 
     final static boolean d(byte param0) {
@@ -351,7 +351,7 @@ final class gq extends mh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "gq.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "gq.B(" + param0 + ')');
         }
     }
 
@@ -438,7 +438,7 @@ final class gq extends mh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

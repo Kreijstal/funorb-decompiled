@@ -43,7 +43,7 @@ final class ri extends ib implements en {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class ri extends ib implements en {
         if (param0 > -69) {
           return false;
         }
-        return null != td.field_t ? true : false;
+        return null != VolcanicBackground.field_t ? true : false;
     }
 
     final void a(byte param0, String[] param1) {
@@ -104,7 +104,7 @@ final class ri extends ib implements en {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class ri extends ib implements en {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class ri extends ib implements en {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -225,9 +225,9 @@ final class ri extends ib implements en {
 
     final static void c(boolean param0) {
         int var1 = 0;
-        if (ki.masterSoundGain < 224) {
-          var1 = ki.masterSoundGain % 32;
-          h.a(13894, ki.masterSoundGain + (32 - var1));
+        if (BackgroundScene.masterSoundGain < 224) {
+          var1 = BackgroundScene.masterSoundGain % 32;
+          h.a(13894, BackgroundScene.masterSoundGain + (32 - var1));
         } else {
           h.a(13894, 256);
         }
@@ -252,7 +252,7 @@ final class ri extends ib implements en {
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

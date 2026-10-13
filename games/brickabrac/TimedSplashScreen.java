@@ -24,7 +24,7 @@ final class TimedSplashScreen extends MenuScreen {
             ng.requestScreen(true, 120, 0);
             return;
           }
-          if (0 == ki.pressedButton) {
+          if (0 == BackgroundScene.pressedButton) {
             return;
           }
           ng.requestScreen(true, 120, 0);
@@ -43,7 +43,7 @@ final class TimedSplashScreen extends MenuScreen {
           ng.requestScreen(true, 120, 0);
           return;
         }
-        if (0 == ki.pressedButton) {
+        if (0 == BackgroundScene.pressedButton) {
           return;
         }
         ng.requestScreen(true, 120, 0);
@@ -86,7 +86,7 @@ final class TimedSplashScreen extends MenuScreen {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -138,7 +138,7 @@ final class AchievementSubmission extends IntrusiveNode {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class AchievementSubmission extends IntrusiveNode {
           BitPacketBuffer.field_t.offsetY = LevelCompleteScreen.field_I.height;
           sc.popRaster(-104);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

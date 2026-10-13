@@ -4,7 +4,7 @@
 final class bf extends d {
     static int[] field_M;
     static RgbSprite field_L;
-    static RgbSprite field_K;
+    static RgbSprite parisFarSprite;
     static NodeDeque field_N;
 
     public static void a(int param0) {
@@ -12,7 +12,7 @@ final class bf extends d {
           return;
         }
         field_N = null;
-        field_K = null;
+        parisFarSprite = null;
         field_M = null;
         field_L = null;
     }
@@ -31,7 +31,7 @@ final class bf extends d {
           Rasterizer2D.clear();
           wc.a(true, -1);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -40,7 +40,7 @@ final class bf extends d {
         try {
           this.field_F = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class bf extends d {
         try {
           this.field_l = bj.field_T.field_o;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class bf extends d {
         try {
           this.field_l = bj.field_T.field_o;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,13 +78,13 @@ final class bf extends d {
           IntKeyIndex.a(-1);
           ResourceArchive.field_f.a(-127);
           if (param2 != -15947) {
-            field_K = (RgbSprite) null;
+            parisFarSprite = (RgbSprite) null;
           }
           DirectByteStorage.field_k = new hk(GameScreen.field_d, (String) null, NanoGameClock.field_l, param0, param1);
           rj.field_c = new bh(ResourceArchive.field_f, DirectByteStorage.field_k);
           ResourceArchive.field_f.a(-117, rj.field_c);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -122,7 +122,7 @@ final class bf extends d {
             eq.field_m = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bf.A(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.A(" + param0 + ')');
         }
     }
 

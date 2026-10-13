@@ -6,7 +6,7 @@ final class IntNode extends IntrusiveNode {
     static th field_i;
     static String field_n;
     static String field_k;
-    static RgbSprite field_o;
+    static RgbSprite constructionSmokeSprite;
     static String field_m;
     static String field_l;
     static NodeDeque queuedLevelResults;
@@ -15,7 +15,7 @@ final class IntNode extends IntrusiveNode {
         field_n = null;
         field_k = null;
         field_m = null;
-        field_o = null;
+        constructionSmokeSprite = null;
         int var1 = 119 / ((param0 - 71) / 51);
         field_l = null;
         queuedLevelResults = null;
@@ -49,7 +49,7 @@ final class IntNode extends IntrusiveNode {
             break;
           }
           if (param0 != -4317) {
-            field_o = (RgbSprite) null;
+            constructionSmokeSprite = (RgbSprite) null;
           }
           try {
             if (param2 != null) {
@@ -76,7 +76,7 @@ final class IntNode extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class IntNode extends IntrusiveNode {
           } else {
             if (param0.field_c == 0 &&
               th.field_d) {
-              var4_ref = "[" + fi.field_u + "] ";
+              var4_ref = "[" + ArcticBackground.field_u + "] ";
             }
             if (param0.field_c == 1) {
               var4_ref = "[" + rd.a(fm.field_a, new String[]{param0.field_p}, (byte) 103) + "] ";
@@ -154,7 +154,7 @@ final class IntNode extends IntrusiveNode {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) (stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -192,7 +192,7 @@ final class IntNode extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

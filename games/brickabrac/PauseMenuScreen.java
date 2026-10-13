@@ -46,7 +46,7 @@ class PauseMenuScreen extends FramedMenuScreen {
         try {
           this.refreshedActionIds = refreshedActionIds;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oq.<init>(" + screenId + ',' + (initialActionIds != null ? "{...}" : "null") + ',' + (refreshedActionIds != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oq.<init>(" + screenId + ',' + (initialActionIds != null ? "{...}" : "null") + ',' + (refreshedActionIds != null ? "{...}" : "null") + ')');
         }
     }
 

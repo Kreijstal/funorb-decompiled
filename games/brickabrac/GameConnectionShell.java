@@ -3,7 +3,7 @@
  */
 abstract class GameConnectionShell extends AppletGameShell {
     private int gameCrc;
-    static RgbSprite[][] field_r;
+    static RgbSprite[][] halloweenSegsSprites;
     String host;
     static RgbSprite[] field_D;
     private int languageId;
@@ -56,7 +56,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             field_D = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qg.EA(" + (gameName != null ? "{...}" : "null") + ',' + gameVersion + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qg.EA(" + (gameName != null ? "{...}" : "null") + ',' + gameVersion + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -70,7 +70,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         GzipInflater.a(param7, this.host, this.memberAccount, this.serverNumber, 5000, 5000, cd.field_e, this.gameCrc, lp.field_ub, (byte) 123, param3, this.instanceId, this.gamePortTwo, this.gamePortOne);
         cr.a(param7, cd.field_e, param0 + 3, this.gamePortOne, lp.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
         BoundedFile.patchJavaKeyCodeMap(59);
-        qa.mouseWheelSource = ea.createMouseWheelSource(60);
+        NinjaBackground.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, CacheIoRequest.field_D);
         nd.field_c = param4;
         LevelPackCard.field_i = param5;
@@ -205,7 +205,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           } else {
             stackIn_51_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_50_0), ((StringBuilder) (Object) stackIn_50_1).append(stackIn_51_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (!hk.field_R) {
           this.a("reconnect", 4000);
         }
-        qb.g(108);
+        FarmBackground.g(108);
         tf.a(DirectByteStorage.field_e, (byte) -61, var2);
         n.field_e = true;
         NanoGameClock.field_i = MonotonicTime.nowMillis(false) + 15000L;
@@ -332,7 +332,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = ek.a(oo.f(param1 ^ 67), sq.a(64), (byte) -16);
+            var5_int = ek.a(ChocolateBackground.f(param1 ^ 67), sq.a(64), (byte) -16);
             if (var5_int != -1) {
               ef.a(DirectByteStorage.field_e, -106, var5_int, co.field_f);
               DirectByteStorage.field_e = null;
@@ -375,7 +375,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
           }
           if (4 == var4) {
-            if (!qb.field_u) {
+            if (!FarmBackground.field_u) {
               AchievementIcon.field_j = 10;
               LevelPackSelectScreen.field_s = true;
             } else {
@@ -386,7 +386,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             nk.a(2048, uc.e((byte) -110));
           }
           if (var4 == 6 &&
-            ci.field_t) {
+            SpaceBackground.field_t) {
             AchievementIcon.field_j = 10;
           }
           if (7 == var4) {
@@ -479,7 +479,7 @@ abstract class GameConnectionShell extends AppletGameShell {
     }
 
     public static void k(int param0) {
-        field_r = (RgbSprite[][]) null;
+        halloweenSegsSprites = (RgbSprite[][]) null;
         field_D = null;
         if (param0 > -103) {
           field_D = (RgbSprite[]) null;
@@ -634,7 +634,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(gameVersion).append(',').append(width).append(',').append(height).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(gameVersion).append(',').append(width).append(',').append(height).append(')').toString());
         }
     }
 
@@ -682,7 +682,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -715,8 +715,8 @@ abstract class GameConnectionShell extends AppletGameShell {
           AchievementIcon.field_j != 11) {
           GameplayAudioEvent.c(27144);
         }
-        if (qa.mouseWheelSource != null) {
-          GameplayAudioEvent.mouseWheelDelta = qa.mouseWheelSource.pollRotation(500);
+        if (NinjaBackground.mouseWheelSource != null) {
+          GameplayAudioEvent.mouseWheelDelta = NinjaBackground.mouseWheelSource.pollRotation(500);
         }
         if (ik.a(false)) {
           var3 = wn.a((byte) -98) * 1200;
@@ -725,8 +725,8 @@ abstract class GameConnectionShell extends AppletGameShell {
             !(var3 >= so.a((byte) -35))) {
             this.reconnectRequested = false;
             hn.a((byte) 91);
-            qb.g(120);
-            tf.a(qa.field_s, (byte) -113, 2);
+            FarmBackground.g(120);
+            tf.a(NinjaBackground.field_s, (byte) -113, 2);
             rj.b(guardCode ^ -111);
             n.field_e = true;
             NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
@@ -752,7 +752,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           tm.field_a != 0) {
           if (10 <= clientStage) {
             if (10 <= AchievementIcon.field_j) {
-              qb.g(114);
+              FarmBackground.g(114);
               if (tm.field_a == 3) {
                 tf.a(nk.field_d, (byte) -49, 256);
               } else {
@@ -844,9 +844,9 @@ abstract class GameConnectionShell extends AppletGameShell {
           rg.a(ja.field_c, (byte) 101)) {
           ui.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
-          ci.field_t = false;
+          SpaceBackground.field_t = false;
           ri.field_N = cm.field_t;
-          MultiplayerExitScreen.a(qb.field_u, ja.field_c, ma.field_P, vh.field_S, guardCode ^ 23);
+          MultiplayerExitScreen.a(FarmBackground.field_u, ja.field_c, ma.field_P, vh.field_S, guardCode ^ 23);
           if (cb.field_k ||
             null != LevelDecoder.field_a) {
             stackIn_99_0 = !(cb.field_k);
@@ -878,7 +878,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (clientStage == 11) {
           if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.ensureIndex((byte) -127) ||
             !GameplayAudioEvent.field_k.ensureAllGroupsAvailable(98))) {
-            ai.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, d.field_C));
+            ParisBackground.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, d.field_C));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -895,7 +895,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (bh.field_tb != null) {
             stackIn_132_0 = (!bh.field_tb.d(-115)) ? 0 : 1;
             var3Lifetime2 = stackIn_132_0;
-            ai.a((byte) 24, bh.field_tb.field_e, bh.field_tb.field_g);
+            ParisBackground.a((byte) 24, bh.field_tb.field_e, bh.field_tb.field_g);
           }
           if (var3Lifetime2 != 0) {
             clientStage = 20;

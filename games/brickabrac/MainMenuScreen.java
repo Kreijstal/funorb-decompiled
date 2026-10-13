@@ -65,7 +65,7 @@ final class MainMenuScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var6), "rp.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var6), "rp.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -117,9 +117,9 @@ final class MainMenuScreen extends MenuScreen {
             pa.a(true);
             sc.popRaster(-96);
             if (IntrusiveHashTable.field_k != null) {
-              IntArrayRequest.field_n = IntrusiveHashTable.field_k.field_m;
+              IntArrayRequest.lastBackgroundId = IntrusiveHashTable.field_k.sceneId;
             }
-            IntrusiveHashTable.field_k = rd.a(0, (byte) 19);
+            IntrusiveHashTable.field_k = rd.selectBackground(0, (byte) 19);
             hc.field_h = 2 * hi.field_w.nextBoundedInt(-37880252, 2);
             GzipInflater.field_e = 50;
           }
@@ -272,7 +272,7 @@ final class MainMenuScreen extends MenuScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param9).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param9).append(')').toString());
         }
     }
 

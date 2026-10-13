@@ -1,0 +1,256 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class HalloweenBackground extends BackgroundScene {
+    static mh field_x;
+    static String field_s;
+    static int[] field_r;
+    static String field_t;
+    private static RgbSprite field_u;
+    static mh[] field_w;
+    static boolean field_y;
+    static co field_v;
+
+    final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
+        int var5 = 0;
+        int var5Lifetime1;
+        if (colorIndex <= -1) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 7829367, 22953);
+          if (this.hasSprites((byte) -115)) {
+            LevelPackLoader.halloweenSmallSprite.drawTransparent(destinationX, destinationY);
+          }
+          var5 = 36 % ((obfuscationGuard + 28) / 43);
+          return;
+        }
+        Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
+        if (this.hasSprites((byte) -115)) {
+          LevelPackLoader.halloweenSmallSprite.drawTransparent(destinationX, destinationY);
+        }
+        var5Lifetime1 = 36 % ((obfuscationGuard + 28) / 43);
+    }
+
+    final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
+        RasterCacheSurface var7 = null;
+        if (!obfuscationGuard) {
+          this.a(-127, false);
+          if (!this.hasSprites((byte) -106)) {
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
+            return;
+          }
+          var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            s.a(ch.field_m, 1, colorIndex, th.field_j, var7, 0, (byte) -86, va.field_b);
+            var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
+          }
+          qh.a(1, 0, ni.halloweenMidSprite, scroll16, nf.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
+          return;
+        }
+        if (!this.hasSprites((byte) -106)) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
+          return;
+        }
+        RasterCacheSurface var8 = PowerUp.a(this.sceneId, colorIndex, -20777);
+        if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+          s.a(ch.field_m, 1, colorIndex, th.field_j, var8, 0, (byte) -86, va.field_b);
+          var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
+        }
+        qh.a(1, 0, ni.halloweenMidSprite, scroll16, nf.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
+    }
+
+    final RgbSprite[] a(int param0, boolean param1) {
+        if (!param1) {
+          return (RgbSprite[]) null;
+        }
+        return GameConnectionShell.halloweenSegsSprites[param0 - 1];
+    }
+
+    final boolean loadSprites(boolean obfuscationGuard) {
+        if (!AchievementIcon.field_m.ensureGroupAvailableByName("halloween", -28138)) {
+          return false;
+        }
+        nf.halloweenNearSprite = pl.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);
+        ni.halloweenMidSprite = pl.loadRgbSpriteByName("halloween", "halloween_mid", (byte) 116, AchievementIcon.field_m);
+        GameClock.halloweenFarSprite = pl.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.field_m);
+        LevelPackLoader.halloweenSmallSprite = pl.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.field_m);
+        MotionWaypoint.halloweenMoonSprite = pl.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.field_m);
+        va.field_b = jh.a(0, nf.halloweenNearSprite);
+        field_u = jh.a(0, ni.halloweenMidSprite);
+        ch.field_m = jh.a(0, GameClock.halloweenFarSprite);
+        th.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
+        ba.halloweenCharacterSprite = pl.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
+        ej.halloweenCapsSprites[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
+        GameConnectionShell.halloweenSegsSprites[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
+        ap.halloweenCentreSprites[0] = pl.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.field_m);
+        ej.halloweenCapsSprites[1] = ig.a(ej.halloweenCapsSprites[0], obfuscationGuard);
+        GameConnectionShell.halloweenSegsSprites[1] = ig.a(GameConnectionShell.halloweenSegsSprites[0], obfuscationGuard);
+        ap.halloweenCentreSprites[1] = pl.a(-16371, ap.halloweenCentreSprites[0]);
+        return true;
+    }
+
+    final int c(int param0) {
+        if (param0 >= -72) {
+          return 2;
+        }
+        return 128;
+    }
+
+    final static void a(int param0, int param1, boolean param2, int param3, RgbSprite param4, RasterCacheSurface param5) {
+        try {
+          IndexedSpriteGeometry.pushSpriteRaster(-95, param5.sprite);
+          Rasterizer2D.clear();
+          param4.b(-(60 / param0) + (-param4.canvasWidth + param5.width) / 2, -param4.canvasHeight + param1 - (-param5.height + 130 / param0), 0, 208);
+          la.a(0, 0, param5.width, param5.height, 0, nj.field_G[param3], 96);
+          if (param2) {
+            RasterCacheSurface var7 = (RasterCacheSurface) null;
+            HalloweenBackground.a(82, 29, true, -26, (RgbSprite) null, (RasterCacheSurface) null);
+          }
+          sc.popRaster(-80);
+        } catch (RuntimeException runtimeException) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final boolean hasSprites(byte obfuscationGuard) {
+        boolean stackIn_19_0 = false;
+        boolean stackIn_40_0 = false;
+        RasterCacheSurface var3;
+        if (obfuscationGuard <= -91) {
+          if (nf.halloweenNearSprite == null) {
+            return false;
+          }
+          if (null == ni.halloweenMidSprite) {
+            return false;
+          }
+          if (GameClock.halloweenFarSprite == null) {
+            return false;
+          }
+          if (LevelPackLoader.halloweenSmallSprite == null) {
+            return false;
+          }
+          if (null == MotionWaypoint.halloweenMoonSprite) {
+            return false;
+          }
+          if (null == ba.halloweenCharacterSprite) {
+            return false;
+          }
+          if (null == ej.halloweenCapsSprites) {
+            return false;
+          }
+          if (null == GameConnectionShell.halloweenSegsSprites) {
+            return false;
+          }
+          stackIn_40_0 = (ap.halloweenCentreSprites != null);
+          return stackIn_40_0;
+        }
+        var3 = (RasterCacheSurface) null;
+        HalloweenBackground.a(62, -82, true, -61, (RgbSprite) null, (RasterCacheSurface) null);
+        if (nf.halloweenNearSprite == null) {
+          return false;
+        }
+        if (null == ni.halloweenMidSprite) {
+          return false;
+        }
+        if (GameClock.halloweenFarSprite == null) {
+          return false;
+        }
+        if (LevelPackLoader.halloweenSmallSprite == null) {
+          return false;
+        }
+        if (null == MotionWaypoint.halloweenMoonSprite) {
+          return false;
+        }
+        if (null == ba.halloweenCharacterSprite) {
+          return false;
+        }
+        if (null == ej.halloweenCapsSprites) {
+          return false;
+        }
+        if (null == GameConnectionShell.halloweenSegsSprites) {
+          return false;
+        }
+        stackIn_19_0 = (ap.halloweenCentreSprites != null);
+        return stackIn_19_0;
+    }
+
+    HalloweenBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
+        super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
+        try {
+          GameConnectionShell.halloweenSegsSprites = new RgbSprite[2][];
+          ej.halloweenCapsSprites = new RgbSprite[2][];
+          ap.halloweenCentreSprites = new RgbSprite[2];
+        } catch (RuntimeException runtimeException) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dp.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectPrefix != null ? "{...}" : "null") + ',' + soundEffectCount + ')');
+        }
+    }
+
+    final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
+        RasterCacheSurface var7 = null;
+        if (obfuscationGuard >= -84) {
+          this.loadSprites(true);
+          if (!this.hasSprites((byte) -126)) {
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
+            return;
+          }
+          var7 = kd.a(this.sceneId, colorIndex, (byte) 116);
+          if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            s.a(ch.field_m, 2, colorIndex, th.field_j, var7, -13, (byte) -96, va.field_b);
+            var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
+            qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+            return;
+          }
+          qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+          return;
+        }
+        if (!this.hasSprites((byte) -126)) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
+          return;
+        }
+        RasterCacheSurface var8 = kd.a(this.sceneId, colorIndex, (byte) 116);
+        if (var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+          qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+          return;
+        }
+        s.a(ch.field_m, 2, colorIndex, th.field_j, var8, -13, (byte) -96, va.field_b);
+        var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
+        qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+    }
+
+    final RgbSprite a(boolean param0, int param1) {
+        if (!param0) {
+          field_u = (RgbSprite) null;
+          return ap.halloweenCentreSprites[-1 + param1];
+        }
+        return ap.halloweenCentreSprites[-1 + param1];
+    }
+
+    final RgbSprite c(byte param0) {
+        if (param0 > -74) {
+          field_y = false;
+          return ba.halloweenCharacterSprite;
+        }
+        return ba.halloweenCharacterSprite;
+    }
+
+    public static void f(int param0) {
+        field_r = null;
+        field_t = null;
+        field_s = null;
+        field_w = null;
+        field_u = null;
+        field_v = null;
+        field_x = null;
+        if (param0 != 1) {
+          field_w = (mh[]) null;
+        }
+    }
+
+    final RgbSprite[] a(byte param0, int param1) {
+        int var3 = -12 % ((65 - param0) / 49);
+        return ej.halloweenCapsSprites[-1 + param1];
+    }
+
+    static {
+        field_s = "Back";
+        field_r = new int[]{100, 350, 750, 10, 25, 15, 30, 30000, 60000, 30, 60, 10, 10, 25, 5, 10, 1, 1, 3, 10, 20, 30, 7, 1, 2, 3, 1, 1, 1, 10, 5, 10, 5, 10, 100, 500, 2500, 5000, 15000, 1000, 135000, 5};
+    }
+}

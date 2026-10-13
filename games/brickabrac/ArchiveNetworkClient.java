@@ -26,11 +26,11 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         RgbSprite var9 = null;
         RgbSprite var10 = null;
         try {
-          if (oa.field_Sb == null) {
+          if (oa.currentBackground == null) {
             return;
           }
           var3_int = 256 * MenuScreen.field_i / 32;
-          var4 = oa.field_Sb.c((byte) -123);
+          var4 = oa.currentBackground.c((byte) -123);
           if (var4 != null) {
             if (MenuScreen.field_i == 0) {
               var4.drawTransparent(-var4.canvasWidth + 640, 470 - var4.canvasHeight);
@@ -50,7 +50,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
             var5.drawTransparent(-3 + (640 - (var4.canvasWidth + var5.canvasWidth) / 2), -var4.canvasHeight + 480 - 10 + 45);
           }
           var6 = kb.a(param1, 0, 100, param2);
-          var7 = oa.field_Sb.b(param0 ^ -746);
+          var7 = oa.currentBackground.b(param0 ^ -746);
           if (var7 != null) {
             var9 = var7[var6];
             var9.drawTransparent(-20 + (-var9.canvasWidth + 640), 520 - var9.canvasHeight);
@@ -79,7 +79,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -385,7 +385,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -422,12 +422,12 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         RuntimeException var1 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = fi.field_w[0];
+          var1_int = ArcticBackground.field_w[0];
           if (param0 != 94) {
             ArchiveNetworkClient.f((byte) 52);
           }
-          for (var2 = 1; fi.field_w.length > var2; var2++) {
-            var3 = fi.field_w[var2];
+          for (var2 = 1; ArcticBackground.field_w.length > var2; var2++) {
+            var3 = ArcticBackground.field_w[var2];
             pm.a(ek.field_jb, var2 << 4, ek.field_jb, var1_int, var3);
             var1_int = var1_int + var3;
           }
@@ -435,7 +435,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "a.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "a.F(" + param0 + ')');
         }
     }
 
@@ -521,7 +521,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(connectionMode).append(',').append(obfuscationGuard).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(connectionMode).append(',').append(obfuscationGuard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -81,7 +81,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(obfuscationGuard).append(',').append(length).append(',').append(offset).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(obfuscationGuard).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(length).append(',').append(offset).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -310,7 +310,7 @@ final class BufferedSocket implements Runnable {
           this.output = this.socket.getOutputStream();
           this.bufferCapacity = bufferCapacity;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (socket != null ? "{...}" : "null") + ',' + (taskScheduler != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (socket != null ? "{...}" : "null") + ',' + (taskScheduler != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
         }
     }
 

@@ -142,7 +142,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         int var4 = ib.a(pl.pendingAchievementMask, -1) ? 1 : 0;
         if (obfuscationGuard >= 96) {
           var5 = null != fj.field_Ub ? 1 : 0;
-          this.promptText = PauseMenuScreen.field_w + " " + wj.a(-1, rd.a(AchievementBrowserScreen.buildSavePrompt(var4 != 0, var5 != 0, false, 126), new String[]{gi.field_r}, (byte) 103), '#', "<br><br>");
+          this.promptText = PauseMenuScreen.field_w + " " + wj.a(-1, rd.a(AchievementBrowserScreen.buildSavePrompt(var4 != 0, var5 != 0, false, 126), new String[]{DesertBackground.field_r}, (byte) 103), '#', "<br><br>");
           return;
         }
     }
@@ -211,7 +211,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3_ref), "hq.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3_ref), "hq.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

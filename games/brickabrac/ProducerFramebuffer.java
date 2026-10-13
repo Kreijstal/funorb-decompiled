@@ -19,7 +19,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
             this.consumer = null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jo.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
             this.initialize((java.awt.Component) null, 25, false, -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.B(" + y + ',' + x + ',' + obfuscationGuard + ',' + (graphics != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jo.B(" + y + ',' + x + ',' + obfuscationGuard + ',' + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -63,7 +63,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
           component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
           this.bindRaster((byte) 100);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.D(" + (component != null ? "{...}" : "null") + ',' + height + ',' + obfuscationGuard + ',' + width + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jo.D(" + (component != null ? "{...}" : "null") + ',' + height + ',' + obfuscationGuard + ',' + width + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
           param0.setColorModel(this.colorModel);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jo.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,7 +117,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
         try {
           this.addConsumer(param0);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jo.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -334,7 +334,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_86_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -50,7 +50,7 @@ final class so {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class so {
           var13 = var15;
           var5 = var13;
           var16 = PacketBuffer.a("basic", param0, "gamefont", param3 - 946744493);
-          sn.a(param3 ^ 29068, var21, 1);
+          ConstructionBackground.a(param3 ^ 29068, var21, 1);
           ma.field_O = IndexedSpriteGeometry.a(0, var21, 0, var16, 0, 1);
           ma.field_O.palettes = bg.field_n;
           nn.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
@@ -313,8 +313,8 @@ final class so {
           for (var10_intLifetime10 = 0; nd.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
             nd.field_f[var10_intLifetime10] = 14;
           }
-          jk.field_u = lg.a(2, mo.field_N, -1);
-          ClientException.field_b = lg.a(2, ci.field_s.toUpperCase(), -1);
+          UnderwaterBackground.field_u = lg.a(2, mo.field_N, -1);
+          ClientException.field_b = lg.a(2, SpaceBackground.field_s.toUpperCase(), -1);
           ed.field_b = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
             ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
@@ -336,15 +336,15 @@ final class so {
           BallPulseEffect.framebuffer.bindRaster((byte) 118);
           var10 = pl.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
           hc.field_a = new RgbSprite[2][4];
-          ip.field_v = new RgbSprite[2][4];
+          JungleBackground.field_v = new RgbSprite[2][4];
           for (var11 = 0; var11 < 4; var11++) {
-            ip.field_v[0][var11] = new RgbSprite(var10.canvasWidth - var11, var10.canvasHeight);
-            ip.field_v[0][var11].bindRasterTarget();
+            JungleBackground.field_v[0][var11] = new RgbSprite(var10.canvasWidth - var11, var10.canvasHeight);
+            JungleBackground.field_v[0][var11].bindRasterTarget();
             var10.a(0, 0, -var11 + var10.canvasWidth, var10.canvasHeight);
-            ip.field_v[1][var11] = ip.field_v[0][var11].copyFlippedHorizontal();
-            hc.field_a[0][var11] = new RgbSprite(ip.field_v[0][var11].canvasWidth / 2, ip.field_v[0][var11].canvasHeight / 2);
+            JungleBackground.field_v[1][var11] = JungleBackground.field_v[0][var11].copyFlippedHorizontal();
+            hc.field_a[0][var11] = new RgbSprite(JungleBackground.field_v[0][var11].canvasWidth / 2, JungleBackground.field_v[0][var11].canvasHeight / 2);
             hc.field_a[0][var11].bindRasterTarget();
-            var10.a(0, 0, ip.field_v[0][var11].canvasWidth / 2, ip.field_v[0][var11].canvasHeight / 2);
+            var10.a(0, 0, JungleBackground.field_v[0][var11].canvasWidth / 2, JungleBackground.field_v[0][var11].canvasHeight / 2);
             hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 127);
@@ -393,7 +393,7 @@ final class so {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 
@@ -432,7 +432,7 @@ final class so {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

@@ -77,7 +77,7 @@ final class TableRowSubmission extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class TableRowSubmission extends IntrusiveNode {
           qf.tableSubmissionSequence = qf.tableSubmissionSequence + 1;
           this.requestId = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + tableId + ',' + tableWord + ',' + resultWordOne + ',' + resultWordTwo + ',' + resultWordThree + ',' + resultWordFour + ',' + (values != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + tableId + ',' + tableWord + ',' + resultWordOne + ',' + resultWordTwo + ',' + resultWordThree + ',' + resultWordFour + ',' + (values != null ? "{...}" : "null") + ')');
         }
     }
 

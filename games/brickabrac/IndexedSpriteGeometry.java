@@ -20,7 +20,7 @@ abstract class IndexedSpriteGeometry {
             IndexedSpriteGeometry.a(79, (byte[]) null, 74, (IndexedSprite[]) null, -94, -115);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fc.K(" + obfuscationGuard + ',' + (sprite != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fc.K(" + obfuscationGuard + ',' + (sprite != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -195,7 +195,7 @@ abstract class IndexedSpriteGeometry {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

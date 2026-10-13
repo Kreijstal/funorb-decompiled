@@ -39,7 +39,7 @@ final class gr {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -65,7 +65,7 @@ final class gr {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "gr.D(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "gr.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -83,7 +83,7 @@ final class gr {
           nj.field_l = ResourceArchive.field_a;
           fq.field_d = LevelPackSelectScreen.field_z;
         } else {
-          bq.field_e = ip.field_v;
+          bq.field_e = JungleBackground.field_v;
           ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
           tf.field_c = dg.field_b;
           Ball.field_w = dg.field_e;

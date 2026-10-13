@@ -171,7 +171,7 @@ final class PlayerBoard extends IntrusiveNode {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ final class PlayerBoard extends IntrusiveNode {
           } else {
             stackIn_101_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_100_0), ((StringBuilder) (Object) stackIn_100_1).append(stackIn_101_2).append(')').toString());
         }
     }
 
@@ -466,7 +466,7 @@ final class PlayerBoard extends IntrusiveNode {
             this.field_hb = -123;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "j.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -609,7 +609,7 @@ final class PlayerBoard extends IntrusiveNode {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(boardMode).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(boardMode).append(')').toString());
         }
     }
 
@@ -671,7 +671,7 @@ final class PlayerBoard extends IntrusiveNode {
             PlayerBoard.a((PcmSound) null, -15, 82);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "j.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -854,7 +854,7 @@ final class PlayerBoard extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -862,7 +862,7 @@ final class PlayerBoard extends IntrusiveNode {
         try {
           this.addScore(param0, false, param1.x256 + param1.width256 / 2, param1.height256 / param2 + param1.y256);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "j.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -870,7 +870,7 @@ final class PlayerBoard extends IntrusiveNode {
         try {
           this.addScore(param0, false, param1.x256 + param1.width256 / param2, -12800 + param1.y256);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "j.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -944,7 +944,7 @@ final class PlayerBoard extends IntrusiveNode {
           HighscoresScreen.field_w[0][2] = aq.field_e;
           HighscoresScreen.field_w[0][0] = ac.field_f;
           HighscoresScreen.field_w[0][1] = fq.field_b;
-          HighscoresScreen.field_w[1][2] = td.field_u;
+          HighscoresScreen.field_w[1][2] = VolcanicBackground.field_u;
           HighscoresScreen.field_w[1][1] = ce.field_d;
           HighscoresScreen.field_w[1][0] = jl.field_b;
         }

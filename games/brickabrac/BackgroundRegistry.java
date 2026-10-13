@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fd {
+final class BackgroundRegistry {
     static String field_b;
-    static ki[] field_d;
+    static BackgroundScene[] scenes;
     static java.awt.Frame field_e;
     static String field_a;
     static int field_c;
@@ -13,21 +13,21 @@ final class fd {
         if (param0 == 0) {
           field_e = null;
           field_a = null;
-          field_d = null;
+          scenes = null;
           field_b = null;
           return;
         }
         field_e = (java.awt.Frame) null;
         field_e = null;
         field_a = null;
-        field_d = null;
+        scenes = null;
         field_b = null;
     }
 
     static {
         field_z = "fd.A(";
         field_b = "This password contains your Player Name, and would be easy to guess";
-        field_d = new ki[12];
+        scenes = new BackgroundScene[12];
         field_a = "Exploiting a bug";
         field_c = 0;
     }

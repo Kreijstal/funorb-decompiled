@@ -118,7 +118,7 @@ final class f {
                     firstPartitionRows++;
                   }
                   if (name != null &&
-                    ci.a(name, obfuscationGuard ^ -88)) {
+                    SpaceBackground.a(name, obfuscationGuard ^ -88)) {
                     names[1][playerPartitionRows] = tb.field_cb;
                     secondaryLabels[1][playerPartitionRows] = null;
                     rowIds[1][playerPartitionRows] = rowId;
@@ -176,7 +176,7 @@ final class f {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "f.B(" + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "f.B(" + obfuscationGuard + ')');
         }
     }
 

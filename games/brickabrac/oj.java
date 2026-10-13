@@ -41,7 +41,7 @@ final class oj extends ep {
           var8.field_g[param0.length()] = param3 + (var7 >> 1);
           dn.a(25293, param0, var8, 0, param2);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -109,7 +109,7 @@ final class oj extends ep {
         if (ml.field_b <= 0) {
           if (IntArrayRequest.field_j > 0) {
             if (null == c.field_e) {
-              stackIn_60_0 = qa.field_w;
+              stackIn_60_0 = NinjaBackground.field_w;
               stackIn_60_1 = true;
               stackIn_61_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_61_2);
@@ -118,8 +118,8 @@ final class oj extends ep {
               stackIn_65_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_64_0).a(stackIn_64_1, stackIn_65_2);
             } else {
-              c.field_e.drawAt(qa.field_w.field_P, 0);
-              stackIn_69_0 = qa.field_w;
+              c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+              stackIn_69_0 = NinjaBackground.field_w;
               stackIn_69_1 = true;
               stackIn_70_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_69_0).a(stackIn_69_1, stackIn_70_2);
@@ -131,7 +131,7 @@ final class oj extends ep {
           } else {
             if (TableDataRequest.field_m > 0) {
               if (null == c.field_e) {
-                stackIn_82_0 = qa.field_w;
+                stackIn_82_0 = NinjaBackground.field_w;
                 stackIn_82_1 = true;
                 stackIn_83_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_82_0).a(stackIn_82_1, stackIn_83_2);
@@ -140,8 +140,8 @@ final class oj extends ep {
                 stackIn_87_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
               } else {
-                c.field_e.drawAt(qa.field_w.field_P, 0);
-                stackIn_91_0 = qa.field_w;
+                c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+                stackIn_91_0 = NinjaBackground.field_w;
                 stackIn_91_1 = true;
                 stackIn_92_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_91_0).a(stackIn_91_1, stackIn_92_2);
@@ -169,7 +169,7 @@ final class oj extends ep {
         ((mh) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
         if (IntArrayRequest.field_j > 0) {
           if (null == c.field_e) {
-            stackIn_17_0 = qa.field_w;
+            stackIn_17_0 = NinjaBackground.field_w;
             stackIn_17_1 = true;
             stackIn_18_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
@@ -178,8 +178,8 @@ final class oj extends ep {
             stackIn_22_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
           } else {
-            c.field_e.drawAt(qa.field_w.field_P, 0);
-            stackIn_26_0 = qa.field_w;
+            c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+            stackIn_26_0 = NinjaBackground.field_w;
             stackIn_26_1 = true;
             stackIn_27_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2);
@@ -198,7 +198,7 @@ final class oj extends ep {
           return;
         }
         if (null == c.field_e) {
-          stackIn_39_0 = qa.field_w;
+          stackIn_39_0 = NinjaBackground.field_w;
           stackIn_39_1 = true;
           stackIn_40_2 = (param0) && (!hc.field_c);
           ((mh) (Object) stackIn_39_0).a(stackIn_39_1, stackIn_40_2);
@@ -210,8 +210,8 @@ final class oj extends ep {
           var2Lifetime3 = -63 / ((70 - param1) / 49);
           return;
         }
-        c.field_e.drawAt(qa.field_w.field_P, 0);
-        stackIn_48_0 = qa.field_w;
+        c.field_e.drawAt(NinjaBackground.field_w.field_P, 0);
+        stackIn_48_0 = NinjaBackground.field_w;
         stackIn_48_1 = true;
         stackIn_49_2 = (param0) && (!hc.field_c);
         ((mh) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
@@ -246,7 +246,7 @@ final class oj extends ep {
           var8.field_g[param3.length()] = param0.measureText(param3) + param2;
           dn.a(param4 ^ 25293, param3, var8, 0, param0);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
@@ -275,23 +275,23 @@ final class oj extends ep {
         int var12_intLifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (oa.field_Sb != null) {
-            stackIn_4_0 = oa.field_Sb.a((byte) -89, param2);
+          if (oa.currentBackground != null) {
+            stackIn_4_0 = oa.currentBackground.a((byte) -89, param2);
           } else {
             stackIn_4_0 = null;
           }
           var14 = stackIn_4_0;
           var7 = var14;
-          if (oa.field_Sb != null) {
-            stackIn_7_0 = oa.field_Sb.a(param2, true);
+          if (oa.currentBackground != null) {
+            stackIn_7_0 = oa.currentBackground.a(param2, true);
           } else {
             stackIn_7_0 = null;
           }
           var8 = stackIn_7_0;
-          if (oa.field_Sb == null) {
+          if (oa.currentBackground == null) {
             stackIn_10_0 = null;
           } else {
-            stackIn_10_0 = oa.field_Sb.a(true, param2);
+            stackIn_10_0 = oa.currentBackground.a(true, param2);
           }
           var9 = stackIn_10_0;
           if (param4 < 54) {
@@ -300,7 +300,7 @@ final class oj extends ep {
           var10 = param1.y256 >> 8;
           var11 = param1.x256 >> 8;
           if (param0 == 2) {
-            var15 = bq.field_e[1][oo.field_w.nextBoundedInt(-37880252, bq.field_e[1].length)];
+            var15 = bq.field_e[1][ChocolateBackground.field_w.nextBoundedInt(-37880252, bq.field_e[1].length)];
             var12 = var15;
             var12.f((var11 + param6 * param2 - var15.canvasWidth * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
           }
@@ -329,7 +329,7 @@ final class oj extends ep {
             var11 += 6;
           }
           if (0 == param0) {
-            var12Lifetime1 = bq.field_e[0][oo.field_w.nextBoundedInt(-37880252, bq.field_e[0].length)];
+            var12Lifetime1 = bq.field_e[0][ChocolateBackground.field_w.nextBoundedInt(-37880252, bq.field_e[0].length)];
             var12Lifetime1.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 + var10) / param2, 196);
           }
           tf.field_c[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
@@ -354,7 +354,7 @@ final class oj extends ep {
           } else {
             stackIn_48_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -396,7 +396,7 @@ final class oj extends ep {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ final class oj extends ep {
           var10.field_g[param0.length()] = param2;
           dn.a(25293, param0, var10, 0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -636,7 +636,7 @@ final class oj extends ep {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(')').toString());
         }
     }
 

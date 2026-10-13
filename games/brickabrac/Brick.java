@@ -16,7 +16,7 @@ final class Brick extends RectangleBody {
     int segmentElapsedTicks;
     int motionElapsedTicks;
     private int pathDurationTicks;
-    static RgbSprite[][] field_I;
+    static RgbSprite[][] chocCapsSprites;
     static int field_E;
     static CacheIoWorker field_x;
     static byte[] field_O;
@@ -24,7 +24,7 @@ final class Brick extends RectangleBody {
     static String field_z;
     int pendingTypeId;
     int destinationWaypointIndex;
-    static RgbSprite field_w;
+    static RgbSprite jungleSmallSprite;
 
     final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         StringBuilder discarded$4 = null;
@@ -63,7 +63,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class Brick extends RectangleBody {
           }
           this.segmentElapsedTicks = -segmentStartTick + this.motionElapsedTicks;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "on.Q(" + (path != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "on.Q(" + (path != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -159,7 +159,7 @@ final class Brick extends RectangleBody {
             Brick.a((byte) -120, -81);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "on.P(" + (path != null ? "{...}" : "null") + ',' + includeVelocity + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "on.P(" + (path != null ? "{...}" : "null") + ',' + includeVelocity + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -185,8 +185,8 @@ final class Brick extends RectangleBody {
 
     public static void d(int param0) {
         field_D = null;
-        field_w = null;
-        field_I = (RgbSprite[][]) null;
+        jungleSmallSprite = null;
+        chocCapsSprites = (RgbSprite[][]) null;
         field_A = null;
         field_z = null;
         if (param0 != 4641) {
@@ -346,7 +346,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(')').toString());
         }
     }
 
@@ -384,7 +384,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -484,7 +484,7 @@ final class Brick extends RectangleBody {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

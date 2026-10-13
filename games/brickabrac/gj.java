@@ -62,7 +62,7 @@ final class gj {
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (submission.rowId == table.rowIds[partition][var6] &&
-                ci.a(table.names[partition][var6], -46)) {
+                SpaceBackground.a(table.names[partition][var6], -46)) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (submission.values[var7] != table.values[partition][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;
@@ -97,7 +97,7 @@ final class gj {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(obfuscationGuard).append(',').append(partition).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(obfuscationGuard).append(',').append(partition).append(')').toString());
         }
     }
 

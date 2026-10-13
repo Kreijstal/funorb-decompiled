@@ -23,7 +23,7 @@ final class sg extends k {
           po.pointerY = ep.livePointerY;
           kb.pointerChanged = kn.livePointerChanged;
           kn.livePointerChanged = false;
-          ki.pressedButton = mi.livePressedButton;
+          BackgroundScene.pressedButton = mi.livePressedButton;
           tb.pressX = SoundPlayback.livePressX;
           qo.pressY = va.livePressY;
           mi.livePressedButton = 0;
@@ -72,7 +72,7 @@ final class sg extends k {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class sg extends k {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

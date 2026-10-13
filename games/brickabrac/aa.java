@@ -40,7 +40,7 @@ final class aa {
         RuntimeException decompiledCaughtException = null;
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-109, param4.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, fj.field_Sb[param3], 0);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, fj.ninjaBackgroundColors[param3], 0);
           stackIn_2_0 = -120;
           if (param5 == 1) {
             stackIn_3_1 = 13;
@@ -75,7 +75,7 @@ final class aa {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -146,7 +146,7 @@ final class aa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

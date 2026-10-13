@@ -228,7 +228,7 @@ public final class BrickABrac extends InteractiveGameClient {
               ng.requestScreen(false, obfuscationGuard + 43, 0);
               MonotonicTime.field_c = false;
               NewAchievementsScreen.discardGameplayOnTransition = true;
-              dp.field_y = true;
+              HalloweenBackground.field_y = true;
             }
             ed.field_d = false;
             pf.field_p = false;
@@ -406,7 +406,7 @@ public final class BrickABrac extends InteractiveGameClient {
           repeatMode = packet.readByte(true);
           configuration = new LevelSequence(tq.field_d, var49, repeatMode);
           backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
-          oa.field_Sb = rd.a(backgroundSelector, (byte) 19);
+          oa.currentBackground = rd.selectBackground(backgroundSelector, (byte) 19);
           characterOrder = id.createCharacterOrder(matchRandom, false);
           fj.field_Ub = null;
           if (0 <= localPlayerId) {
@@ -441,7 +441,7 @@ public final class BrickABrac extends InteractiveGameClient {
           } else {
             stackIn_138_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(obfuscationGuard).append(',').append(opcode).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(obfuscationGuard).append(',').append(opcode).append(')').toString());
         }
     }
 
@@ -486,7 +486,7 @@ public final class BrickABrac extends InteractiveGameClient {
         var4 = field_J ? 1 : 0;
         if (param1 != param0) {
           if (MonotonicTime.field_c) {
-            dp.field_y = true;
+            HalloweenBackground.field_y = true;
             NewAchievementsScreen.discardGameplayOnTransition = true;
             if (IntArrayRequest.gameplayScreen != null &&
               !IntArrayRequest.gameplayScreen.c(param1 + 94)) {
@@ -558,7 +558,7 @@ public final class BrickABrac extends InteractiveGameClient {
         BrickABrac.s(-65);
         ea.a((byte) -42);
         b.a(true);
-        fd.a(0);
+        BackgroundRegistry.a(0);
         LevelSequence.a((byte) 70);
         MenuScreen.b(-107);
         MessageScreen.f((byte) 88);
@@ -642,7 +642,7 @@ public final class BrickABrac extends InteractiveGameClient {
         nl.a(-106);
         MenuSelection.b((byte) -60);
         ed.a(-104);
-        ki.a((byte) 7);
+        BackgroundScene.a((byte) 7);
         rb.a((byte) -116);
         BufferedFile.a(-54);
         hc.a(-61);
@@ -696,19 +696,19 @@ public final class BrickABrac extends InteractiveGameClient {
         mo.d(false);
         rh.a(121);
         IndexedSpriteGeometry.b(31797);
-        fi.d((byte) -31);
-        oo.d((byte) -61);
-        sn.f(94);
+        ArcticBackground.d((byte) -31);
+        ChocolateBackground.d((byte) -61);
+        ConstructionBackground.f(94);
         er.a((byte) -121);
-        gi.f(-417029247);
-        ip.b(false);
-        ai.f(0);
-        ci.d((byte) 21);
-        td.f(0);
-        jk.d((byte) -46);
-        dp.f(1);
-        qb.f(0);
-        qa.d((byte) -119);
+        DesertBackground.f(-417029247);
+        JungleBackground.b(false);
+        ParisBackground.f(0);
+        SpaceBackground.d((byte) 21);
+        VolcanicBackground.f(0);
+        UnderwaterBackground.d((byte) -46);
+        HalloweenBackground.f(1);
+        FarmBackground.f(0);
+        NinjaBackground.d((byte) -119);
         PcmPlayer.g();
         tn.c(-52);
         ArchiveIndex.a((byte) 117);

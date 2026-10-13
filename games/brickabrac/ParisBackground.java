@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends ki {
+final class ParisBackground extends BackgroundScene {
     static String field_t;
     static char[] cp1252Extensions;
     static boolean field_s;
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = -51 % ((-28 - param0) / 43);
-          if (-1 < param1) {
-            Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, bg.field_u[param1], 928072);
+          var5_int = -51 % ((-28 - obfuscationGuard) / 43);
+          if (-1 < colorIndex) {
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, bg.parisBackgroundColors[colorIndex], 928072);
           }
-          if (-1 >= param1 ||
+          if (-1 >= colorIndex ||
             BrickABrac.field_J) {
-            Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 7829367, 928072);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 7829367, 928072);
           }
-          if (this.b((byte) -105)) {
-            pl.field_a.drawTransparent(param2, param3);
+          if (this.hasSprites((byte) -105)) {
+            pl.parisSmallSprite.drawTransparent(destinationX, destinationY);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ai.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ai.G(" + obfuscationGuard + ',' + colorIndex + ',' + destinationX + ',' + destinationY + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class ai extends ki {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -74) {
-            stackIn_4_0 = BallPulseEffect.field_p;
+            stackIn_4_0 = BallPulseEffect.parisCharacterSprite;
             return stackIn_4_0;
           }
           stackIn_2_0 = (RgbSprite) null;
@@ -45,7 +45,7 @@ final class ai extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "ai.H(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ai.H(" + param0 + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class ai extends ki {
         try {
           ri.field_N = param2;
           if (param0 != 24) {
-            ai.readLevelMetadata((byte) 116, (PacketBuffer) null);
+            ParisBackground.readLevelMetadata((byte) 116, (PacketBuffer) null);
           }
           ep.field_a = param1;
           return;
@@ -72,7 +72,7 @@ final class ai extends ki {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class ai extends ki {
         try {
           var2 = new LevelMetadata();
           if (obfuscationGuard != -12) {
-            ai.a((byte) -119, 0.37269747257232666f, (String) null);
+            ParisBackground.a((byte) -119, 0.37269747257232666f, (String) null);
           }
           var2.readMetadata(obfuscationGuard - 12976, packet);
           stackIn_4_0 = var2;
@@ -102,87 +102,87 @@ final class ai extends ki {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean loadSprites(boolean obfuscationGuard) {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (!AchievementIcon.field_m.ensureGroupAvailableByName("paris", -28138)) {
             return false;
           }
-          qa.field_y = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
-          th.field_c = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
-          bf.field_K = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
-          pl.field_a = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
-          BallPulseEffect.field_p = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
-          IntrusiveHashTable.field_i = jh.a(0, qa.field_y);
-          if (param0) {
-            ai.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
+          NinjaBackground.parisNearSprite = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
+          th.parisMidSprite = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
+          bf.parisFarSprite = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
+          pl.parisSmallSprite = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
+          BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
+          IntrusiveHashTable.field_i = jh.a(0, NinjaBackground.parisNearSprite);
+          if (obfuscationGuard) {
+            ParisBackground.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 19, false, (fj) null, (mh) null);
           }
-          jk.field_t = jh.a(0, th.field_c);
-          MembershipBenefitsScreen.field_s = jh.a(0, bf.field_K);
-          uq.b(th.field_c);
-          uq.b(jk.field_t);
-          uq.b(qa.field_y);
+          UnderwaterBackground.field_t = jh.a(0, th.parisMidSprite);
+          MembershipBenefitsScreen.field_s = jh.a(0, bf.parisFarSprite);
+          uq.b(th.parisMidSprite);
+          uq.b(UnderwaterBackground.field_t);
+          uq.b(NinjaBackground.parisNearSprite);
           uq.b(IntrusiveHashTable.field_i);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "ai.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ai.F(" + obfuscationGuard + ')');
         }
     }
 
-    ai(int param0, String param1, String param2, int param3) {
-        super(param0, param1, param2, param3);
+    ParisBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
+        super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
         try {
-          boolean decompiledSharedTail0 = !(!this.b((byte) -124));
+          boolean decompiledSharedTail0 = !(!this.hasSprites((byte) -124));
           if (!decompiledSharedTail0) {
-            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, bg.field_u[param3], 928072);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, bg.parisBackgroundColors[colorIndex], 928072);
             decompiledSharedTail0 = (BrickABrac.field_J);
           }
           if (decompiledSharedTail0) {
-            var6 = kd.a(this.field_m, param3, (byte) -34);
-            if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-              ej.a(0, MembershipBenefitsScreen.field_s, 2, 0, param3, var6);
-              var6.setCacheKeys(this.field_m, param3, (byte) 78);
+            var6 = kd.a(this.sceneId, colorIndex, (byte) -34);
+            if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+              ej.a(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
+              var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            wo.a(param0, param4, jk.field_t, 118, 306, 0, param2, 2, IntrusiveHashTable.field_i, var6.sprite, param3);
+            wo.a(destinationY, scroll16, UnderwaterBackground.field_t, 118, 306, 0, destinationX, 2, IntrusiveHashTable.field_i, var6.sprite, colorIndex);
           }
-          if (param1 >= -84) {
-            ai.a((byte) -61, -0.03386414423584938f, (String) null);
+          if (obfuscationGuard >= -84) {
+            ParisBackground.a((byte) -61, -0.03386414423584938f, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var6_ref), "ai.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var6_ref), "ai.C(" + destinationY + ',' + obfuscationGuard + ',' + destinationX + ',' + colorIndex + ',' + scroll16 + ')');
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean hasSprites(byte obfuscationGuard) {
         RuntimeException var2 = null;
         boolean stackIn_19_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 >= -91) {
-            this.a(false, 87, -76, -86, -25);
+          if (obfuscationGuard >= -91) {
+            this.drawFullBackground(false, 87, -76, -86, -25);
           }
-          stackIn_19_0 = (qa.field_y != null) && (null != th.field_c) && (bf.field_K != null) && (pl.field_a != null) && (null != BallPulseEffect.field_p);
+          stackIn_19_0 = (NinjaBackground.parisNearSprite != null) && (null != th.parisMidSprite) && (bf.parisFarSprite != null) && (pl.parisSmallSprite != null) && (null != BallPulseEffect.parisCharacterSprite);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "ai.E(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ai.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -194,7 +194,7 @@ final class ai extends ki {
         try {
           cp1252Extensions = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ai.N(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ai.N(" + param0 + ')');
         }
     }
 
@@ -237,19 +237,19 @@ final class ai extends ki {
         try {
           th.field_d = param9;
           sj.field_a = param6;
-          ki.field_i[0] = 16764000;
-          ki.field_i[3] = 16736511;
-          ki.field_i[1] = 6356832;
+          BackgroundScene.field_i[0] = 16764000;
+          BackgroundScene.field_i[3] = 16736511;
+          BackgroundScene.field_i[1] = 6356832;
           CachedArchiveSource.field_y = param1;
-          ki.field_i[4] = 16711935;
-          ki.field_i[2] = 9474303;
+          BackgroundScene.field_i[4] = 16711935;
+          BackgroundScene.field_i[2] = 9474303;
           r.field_C[2] = 16736352;
-          ki.field_i[4] = 16711935;
+          BackgroundScene.field_i[4] = 16711935;
           cn.field_d = 8421504;
           r.field_C[3] = 16736511;
           r.field_C[0] = 16764000;
           if (param8 != 61) {
-            ai.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 97, false, (fj) null, (mh) null);
+            ParisBackground.a((mh) null, (TextFont) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 97, false, (fj) null, (mh) null);
           }
           r.field_C[1] = 6356832;
           var12 = new RgbSprite(4, 4);
@@ -278,7 +278,7 @@ final class ai extends ki {
           ap.field_e = new mh(0L, (mh) null);
           ap.field_e.field_Jb = var16;
           BallPulseEffect.field_n.a(ap.field_e, 0);
-          dp.field_w = new mh[5];
+          HalloweenBackground.field_w = new mh[5];
           vj.field_a = new mh[5];
           wd.field_F = new mh[5];
           ik.field_i = new mh[5];
@@ -302,18 +302,18 @@ final class ai extends ki {
                 if (!th.field_d) {
                   stackIn_30_0 = kb.field_Wb;
                 } else {
-                  stackIn_30_0 = fi.field_u;
+                  stackIn_30_0 = ArcticBackground.field_u;
                 }
                 var19 = stackIn_30_0;
               }
               if (decompiledFrameRemainder0) {
                 ik.field_i[var18] = new mh(0L, param11);
-                dp.field_w[var18] = new mh(0L, sj.field_a, var19);
+                HalloweenBackground.field_w[var18] = new mh(0L, sj.field_a, var19);
                 vj.field_a[var18] = new mh(0L, (mh) null);
                 vj.field_a[var18].field_Q = 1;
                 wd.field_F[var18] = new mh(0L, sj.field_a);
                 wd.field_F[var18].field_Q = 1;
-                ik.field_i[var18].a(dp.field_w[var18], 0);
+                ik.field_i[var18].a(HalloweenBackground.field_w[var18], 0);
                 ik.field_i[var18].a(vj.field_a[var18], 0);
                 ik.field_i[var18].a(wd.field_F[var18], 0);
                 ik.field_i[var18].c(true);
@@ -401,35 +401,35 @@ final class ai extends ki {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(')').toString());
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6_ref = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             cp1252Extensions = (char[]) null;
           }
-          if (!this.b((byte) -97)) {
-            Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, bg.field_u[param3], 928072);
+          if (!this.hasSprites((byte) -97)) {
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, bg.parisBackgroundColors[colorIndex], 928072);
             if (!BrickABrac.field_J) {
               return;
             }
           }
-          var6 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            ej.a(0, bf.field_K, 1, 0, param3, var6);
-            var6.setCacheKeys(this.field_m, param3, (byte) 78);
+          var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            ej.a(0, bf.parisFarSprite, 1, 0, colorIndex, var6);
+            var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          wo.a(param2, param1, th.field_c, 127, 640, 0, param4, 1, qa.field_y, var6.sprite, param3);
+          wo.a(destinationY, scroll16, th.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var6_ref), "ai.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var6_ref), "ai.K(" + obfuscationGuard + ',' + scroll16 + ',' + destinationY + ',' + colorIndex + ',' + destinationX + ')');
         }
     }
 

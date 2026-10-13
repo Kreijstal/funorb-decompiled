@@ -29,7 +29,7 @@ final class SecondaryNodeQueue {
           node.secondaryPrevious.secondaryNext = node;
           node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lq.I(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lq.I(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class SecondaryNodeQueue {
             field_a = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,7 +160,7 @@ final class SecondaryNodeQueue {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

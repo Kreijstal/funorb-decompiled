@@ -71,7 +71,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;
             }
-            td.a(false, param2);
+            VolcanicBackground.a(false, param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -89,7 +89,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

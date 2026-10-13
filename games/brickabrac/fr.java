@@ -70,7 +70,7 @@ final class fr {
         mh var3 = null;
         try {
           ok.field_g = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, param0);
-          GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
+          GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, ChocolateBackground.field_y);
           f.field_c = new hj(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
           rg.field_c = new mh(0L, (mh) null);
           sj.field_d = new mh(0L, CappedUrlRequest.field_l);
@@ -96,7 +96,7 @@ final class fr {
           f.field_c.field_Qb.field_Qb.field_Q = 1;
           var3.field_S = 1;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class fr {
           }
           tn.a(param1.capHeight, param1.descent + param1.capHeight, 256, param2.capHeight, param2.descent + param2.capHeight);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class fr {
           DirectByteStorage.field_k = new hk(param2, param1, false, true, param0);
           rj.field_c.b((byte) 114, DirectByteStorage.field_k);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

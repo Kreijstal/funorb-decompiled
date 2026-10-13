@@ -10,15 +10,15 @@ final class ed {
     static int[] field_e;
 
     final static void a(int param0, int param1) {
-        IntrusiveHashTable.field_k.a(true, MouseInput.field_b, 0, param1, param0);
-        if (IntrusiveHashTable.field_k.field_m == 7) {
+        IntrusiveHashTable.field_k.drawFullBackground(true, MouseInput.field_b, 0, param1, param0);
+        if (IntrusiveHashTable.field_k.sceneId == 7) {
           SaveResultsPromptScreen.b(true, true, param0);
         }
     }
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         try {
-          ai.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, GzipInflater.field_d, wi.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
+          ParisBackground.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, GzipInflater.field_d, wi.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
           if (param3 < 74) {
             ed.b(2, -57);
           }
@@ -28,7 +28,7 @@ final class ed {
           rh.field_e[1] = AchievementSubmission.field_j;
           hk.a(rd.field_e, (byte) 90, param2);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ed.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ed.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

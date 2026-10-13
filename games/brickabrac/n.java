@@ -3,7 +3,7 @@
  */
 final class n {
     static boolean field_e;
-    static RgbSprite field_c;
+    static RgbSprite waterFarSprite;
     static boolean field_d;
     static String field_b;
     static String field_a;
@@ -30,8 +30,8 @@ final class n {
             BubbleDistortion.field_B[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; mm.field_Sb > var2_intLifetime1; var2_intLifetime1++) {
-            if (param1.field_c == jk.field_s[var2_intLifetime1].field_c) {
-              dupTemp$3 = jk.field_s[var2_intLifetime1].a(true);
+            if (param1.field_c == UnderwaterBackground.field_s[var2_intLifetime1].field_c) {
+              dupTemp$3 = UnderwaterBackground.field_s[var2_intLifetime1].a(true);
               BubbleDistortion.field_B[dupTemp$3] = BubbleDistortion.field_B[dupTemp$3] + 1;
             }
           }
@@ -40,8 +40,8 @@ final class n {
           var2_intLifetime2 = param0;
           for (var3 = 0; mm.field_Sb > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param1.field_c == jk.field_s[var3].field_c) {
-              var4 = jk.field_s[var3].a(true);
+            if (param1.field_c == UnderwaterBackground.field_s[var3].field_c) {
+              var4 = UnderwaterBackground.field_s[var3].a(true);
               if (eh.field_k < BubbleDistortion.field_B[var4]) {
                 BubbleDistortion.field_B[var4] = BubbleDistortion.field_B[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -50,13 +50,13 @@ final class n {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              jk.field_s[incrementValue$2] = jk.field_s[var3];
+              UnderwaterBackground.field_s[incrementValue$2] = UnderwaterBackground.field_s[var3];
             }
           }
           mm.field_Sb = var2_intLifetime2;
           fieldTemp$1 = mm.field_Sb;
           mm.field_Sb = mm.field_Sb + 1;
-          jk.field_s[fieldTemp$1] = param1;
+          UnderwaterBackground.field_s[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,7 +68,7 @@ final class n {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class n {
 
     public static void b(int param0) {
         field_a = null;
-        field_c = null;
+        waterFarSprite = null;
         if (param0 != -2) {
           return;
         }
@@ -306,7 +306,7 @@ final class n {
               }
             }
           }
-          stackIn_73_0 = qa.field_w;
+          stackIn_73_0 = NinjaBackground.field_w;
           stackIn_74_1 = (param1) && (!param2) && (!hc.field_c);
           ((mh) (Object) stackIn_73_0).a(stackIn_74_1, -15211);
           stackIn_78_0 = MultiplayerMatch.field_d;
@@ -322,18 +322,18 @@ final class n {
             }
             if (dn.field_K.field_L != 0) {
               if (!fh.field_d) {
-                jk.a(param0, (byte) 98);
+                UnderwaterBackground.a(param0, (byte) 98);
               } else {
                 um.a(param3 + 276, param0);
               }
             }
-            ip.a(param0, nl.field_f, true, false);
+            JungleBackground.a(param0, nl.field_f, true, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var4), "n.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "n.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

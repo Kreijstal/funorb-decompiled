@@ -15,7 +15,7 @@ final class o {
         if (param0 != -572695519) {
           return false;
         }
-        return dp.field_v.a(false);
+        return HalloweenBackground.field_v.a(false);
     }
 
     final static void c(int param0) {

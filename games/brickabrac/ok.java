@@ -14,7 +14,7 @@ final class ok {
         if (!LevelPackSelectScreen.field_s) {
           throw new IllegalStateException();
         }
-        ci.field_t = true;
+        SpaceBackground.field_t = true;
         RankingsScreen.a((byte) -78, false);
         AchievementIcon.field_j = param0;
     }

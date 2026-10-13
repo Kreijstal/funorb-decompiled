@@ -86,7 +86,7 @@ final class w {
           }
           if (ll.field_c != null) {
             var4 = 0;
-            if (ki.pressedButton != 0 &&
+            if (BackgroundScene.pressedButton != 0 &&
               qo.pressY > 257 &&
               290 > qo.pressY) {
               if (tb.pressX > 9 &&
@@ -150,7 +150,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3), "w.H(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "w.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "w.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "w.B(" + param0 + ')');
         }
     }
 
@@ -249,7 +249,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "w.I(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.I(" + param0 + ')');
         }
     }
 
@@ -357,7 +357,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "w.M(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "w.M(" + param0 + ')');
         }
     }
 
@@ -368,7 +368,7 @@ final class w {
         RuntimeException var2_ref = null;
         try {
           try {
-            oo.a(uc.e((byte) -86), 0);
+            ChocolateBackground.a(uc.e((byte) -86), 0);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (Exception) (Object) decompiledCaughtException;
@@ -379,7 +379,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "w.K(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "w.K(" + param0 + ')');
         }
     }
 
@@ -414,7 +414,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "w.L(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "w.L(" + param0 + ')');
         }
     }
 
@@ -491,7 +491,7 @@ final class w {
             stackIn_20_0 = stackIn_16_0;
             stackIn_20_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -572,7 +572,7 @@ final class w {
             stackIn_31_0 = stackIn_27_0;
             stackIn_31_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -597,7 +597,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3), "w.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "w.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ final class w {
           }
           field_n = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "w.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.C(" + param0 + ')');
         }
     }
 
@@ -625,7 +625,7 @@ final class w {
           rg.field_k = null;
           ik.field_b = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');
         }
     }
 
@@ -662,7 +662,7 @@ final class w {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -726,7 +726,7 @@ final class w {
             stackIn_21_0 = stackIn_17_0;
             stackIn_21_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -764,7 +764,7 @@ final class w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var4), "w.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "w.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -829,7 +829,7 @@ final class w {
             stackIn_19_0 = stackIn_15_0;
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 

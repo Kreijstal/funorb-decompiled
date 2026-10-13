@@ -6,7 +6,7 @@ final class rd {
     static hl field_e;
     static String field_c;
     static boolean field_a;
-    static RgbSprite[][] field_d;
+    static RgbSprite[][] constructionCapsSprites;
 
     final static void a(int param0) {
         TooltipSprite.field_p = false;
@@ -85,30 +85,30 @@ final class rd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "rd.E(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "rd.E(" + param0 + ')');
         }
     }
 
-    final static ki a(int param0, byte param1) {
+    final static BackgroundScene selectBackground(int selector, byte obfuscationGuard) {
         int var3 = 0;
         Object var2 = null;
-        if (param1 != 19) {
+        if (obfuscationGuard != 19) {
           rd.a((byte) -86);
         }
-        gb.field_n = hi.field_w.nextBoundedInt(-37880252, 2);
-        if (param0 == 0) {
+        gb.backgroundVariant = hi.field_w.nextBoundedInt(-37880252, 2);
+        if (selector == 0) {
           var3 = hi.field_w.nextBoundedInt(-37880252, 11);
-          if (var3 + 1 == IntArrayRequest.field_n) {
+          if (var3 + 1 == IntArrayRequest.lastBackgroundId) {
             var3 = (1 + var3) % 11;
           }
-          IntArrayRequest.field_n = var3 + 1;
-          param0 = var3 + 1;
+          IntArrayRequest.lastBackgroundId = var3 + 1;
+          selector = var3 + 1;
         }
-        if (param0 == 7) {
+        if (selector == 7) {
           lg.h(0);
         }
-        ki var2_ref = fd.field_d[param0];
-        var2_ref.e(param1 - 18);
+        BackgroundScene var2_ref = BackgroundRegistry.scenes[selector];
+        var2_ref.ensureSprites(obfuscationGuard - 18);
         return var2_ref;
     }
 
@@ -221,7 +221,7 @@ final class rd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -256,7 +256,7 @@ final class rd {
           rd.c(110);
         }
         field_c = null;
-        field_d = (RgbSprite[][]) null;
+        constructionCapsSprites = (RgbSprite[][]) null;
     }
 
     static {

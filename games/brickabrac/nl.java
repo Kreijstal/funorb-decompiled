@@ -3,7 +3,7 @@
  */
 final class nl {
     static int decodedSpriteCount;
-    static RgbSprite field_d;
+    static RgbSprite chocolateNearSprite;
     static ResourceArchive field_a;
     static om field_f;
     static RgbSprite field_e;
@@ -11,7 +11,7 @@ final class nl {
 
     public static void a(int param0) {
         field_a = null;
-        field_d = null;
+        chocolateNearSprite = null;
         field_f = null;
         field_e = null;
         field_b = null;
@@ -107,7 +107,7 @@ final class nl {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -216,13 +216,13 @@ final class uf {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var2_int = param1; var2_int < param0; var2_int++) {
-            LevelCompleteScreen.a(5 + ip.field_r.nextBoundedInt(-37880252, 2), 1273378209, ip.field_r.nextBoundedInt(-37880252, 3) + 9);
+            LevelCompleteScreen.a(5 + JungleBackground.field_r.nextBoundedInt(-37880252, 2), 1273378209, JungleBackground.field_r.nextBoundedInt(-37880252, 3) + 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "uf.D(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "uf.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -287,7 +287,7 @@ final class uf {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 

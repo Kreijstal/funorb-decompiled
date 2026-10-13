@@ -52,7 +52,7 @@ final class uo {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class uo {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(opcode).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(opcode).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class uo {
               var3 = 98 / ((89 - param1) / 35);
               var2 = "tuhstatbut";
               var4 = (String) (ne.a("getcookies", -126, param0));
-              var5 = qb.a((byte) -103, var4, ';');
+              var5 = FarmBackground.a((byte) -103, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -160,7 +160,7 @@ final class uo {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -191,7 +191,7 @@ final class uo {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

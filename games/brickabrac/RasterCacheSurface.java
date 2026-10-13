@@ -4,7 +4,7 @@
 final class RasterCacheSurface extends IntrusiveNode {
     private int cacheKeyOne;
     int height;
-    static RgbSprite field_j;
+    static RgbSprite volcanicNearSprite;
     int width;
     static String field_o;
     static String field_l;
@@ -14,7 +14,7 @@ final class RasterCacheSurface extends IntrusiveNode {
 
     final boolean matchesCacheKeys(byte obfuscationGuard, int cacheKeyOne, int cacheKeyTwo) {
         if (obfuscationGuard != -84) {
-          field_j = (RgbSprite) null;
+          volcanicNearSprite = (RgbSprite) null;
           if (cacheKeyTwo != this.cacheKeyTwo) {
             return false;
           }
@@ -38,10 +38,10 @@ final class RasterCacheSurface extends IntrusiveNode {
         field_l = null;
         if (param0 < 22) {
           field_l = (String) null;
-          field_j = null;
+          volcanicNearSprite = null;
           return;
         }
-        field_j = null;
+        volcanicNearSprite = null;
     }
 
     final void setCacheKeys(int cacheKeyTwo, int cacheKeyOne, byte obfuscationGuard) {

@@ -97,11 +97,11 @@ final class RankingsScreen extends MenuScreen {
           if (param5 < 39) {
             RankingsScreen.a(true, 49, true);
           }
-          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, CacheIoWorker.field_i[param4], 16777215);
+          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, CacheIoWorker.desertBackgroundColors[param4], 16777215);
           param3.b((-param3.canvasWidth + param0.width) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.height) + param2, 55, 83);
           sc.popRaster(-94);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -120,7 +120,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     RankingsScreen() {
-        super(6, 38, 460, 402, 35, td.field_s);
+        super(6, 38, 460, 402, 35, VolcanicBackground.field_s);
         int var2;
         int var3;
         int var4;
@@ -251,7 +251,7 @@ final class RankingsScreen extends MenuScreen {
             for (var8 = 0; var8 < 10; var8++) {
               if (var5[var8] != null) {
                 var3Lifetime1 = 2;
-                if (ci.a(var5[var8], -15)) {
+                if (SpaceBackground.a(var5[var8], -15)) {
                   var3Lifetime1 = 1;
                   var7 = 1;
                 }

@@ -60,14 +60,14 @@ final class NanoGameClock extends GameClock {
         la.field_b.a(30, 5, 205, 48, (byte) 64);
         int var2 = vd.field_e ? 250 : 200;
         BufferedSocket.field_h.a(30, 5, 5 + var2, -var2 + 363, (byte) 64);
-        dp.field_x.a(30, 5, 370, rm.field_a.field_Ib - 10 - 365, (byte) 64);
+        HalloweenBackground.field_x.a(30, 5, 370, rm.field_a.field_Ib - 10 - 365, (byte) 64);
         rl.field_e.a(2, (byte) -128, -5 + (ll.field_e.field_Ib - 5), 5, 37, ec.field_J, -5 + (-5 + ll.field_e.field_cb - 32));
         int var3 = (rm.field_a.field_Ib + 2) / 2;
         gj.field_b.a(40, -40 + rm.field_a.field_cb, 0, var3 - 2, (byte) 64);
         if (!vd.field_e) {
           var3 = 0;
         }
-        td.field_v.a(40, rm.field_a.field_cb - 40, var3, -var3 + rm.field_a.field_Ib, (byte) 64);
+        VolcanicBackground.field_v.a(40, rm.field_a.field_cb - 40, var3, -var3 + rm.field_a.field_Ib, (byte) 64);
     }
 
     final static int a(int param0, byte[] param1, byte param2) {
@@ -93,7 +93,7 @@ final class NanoGameClock extends GameClock {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -202,7 +202,7 @@ final class NanoGameClock extends GameClock {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(includeVelocity).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(includeVelocity).append(')').toString());
         }
     }
 

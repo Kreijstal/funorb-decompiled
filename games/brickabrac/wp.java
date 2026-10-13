@@ -118,7 +118,7 @@ final class wp {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class wp {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ final class wp {
             if (rf.field_b == rq.field_c &&
               vd.ensureGamePacketBytes(20, 1)) {
               var6_intLifetime1 = jl.incomingPackets.readUnsignedByte(255);
-              ai.field_t = null;
+              ParisBackground.field_t = null;
               IntrusiveHashTable.currentPacketOpcode = var6_intLifetime1;
               jl.incomingPackets.position = 0;
               if (var6_intLifetime1 != 0 &&
@@ -312,7 +312,7 @@ final class wp {
                 stackIn_44_0 = ((8 & var7) != 0);
                 um.field_e = stackIn_44_0;
                 stackIn_47_0 = ((4 & var7) != 0);
-                oo.field_r = stackIn_47_0;
+                ChocolateBackground.field_r = stackIn_47_0;
                 if (um.field_e) {
                   qo.field_I = true;
                 }
@@ -346,7 +346,7 @@ final class wp {
                 ui.a(-70, uc.e((byte) -112), var11);
               }
               if (0 >= go.field_c &&
-                !oo.field_r) {
+                !ChocolateBackground.field_r) {
                 try {
                   ne.a("unzap", -121, uc.e((byte) -100));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -362,7 +362,7 @@ final class wp {
                 }
               }
               if (go.field_c > 0) {
-                qb.field_u = true;
+                FarmBackground.field_u = true;
               }
               k.outgoingPackets.initializeOpcodeCipher(LevelPackCard.field_a, -98);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -426,7 +426,7 @@ final class wp {
             } else {
               stackIn_113_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_109_0), ((StringBuilder) (Object) stackIn_112_1).append(stackIn_113_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -444,7 +444,7 @@ final class wp {
           var6 = new gb(param5, param4, param1, param2, param3);
           n.a(0, var6);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wp.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -499,7 +499,7 @@ final class wp {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -510,7 +510,7 @@ final class wp {
         try {
           TimedSplashScreen.playSound(obfuscationGuard ^ 100, sound);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wp.A(" + obfuscationGuard + ',' + (sound != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.A(" + obfuscationGuard + ',' + (sound != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -548,7 +548,7 @@ final class wp {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -585,7 +585,7 @@ final class wp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -616,7 +616,7 @@ final class wp {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "wp.G(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "wp.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -651,7 +651,7 @@ final class wp {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -698,7 +698,7 @@ final class wp {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -758,7 +758,7 @@ final class wp {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -769,7 +769,7 @@ final class wp {
           this.field_j = param0;
           this.field_g = param1;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

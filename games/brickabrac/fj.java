@@ -13,7 +13,7 @@ final class fj extends mh {
     private mh field_Wb;
     static String field_Rb;
     private mh field_Xb;
-    static int[] field_Sb;
+    static int[] ninjaBackgroundColors;
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         int var9 = -128 % ((-55 - param3) / 47);
@@ -166,7 +166,7 @@ final class fj extends mh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class fj extends mh {
     }
 
     public static void e(byte param0) {
-        field_Sb = null;
+        ninjaBackgroundColors = null;
         field_Rb = null;
         field_Ub = null;
         field_Qb = null;
@@ -386,7 +386,7 @@ final class fj extends mh {
           }
           InteractiveGameClient.a(param2, param3, param1, 320, param0, param5, -126);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -414,6 +414,6 @@ final class fj extends mh {
     static {
         field_Ub = null;
         field_Rb = "Return to Main Menu";
-        field_Sb = new int[]{15091200, 16494651, 3781573, 12658477, 26679};
+        ninjaBackgroundColors = new int[]{15091200, 16494651, 3781573, 12658477, 26679};
     }
 }

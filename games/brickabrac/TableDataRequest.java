@@ -65,7 +65,7 @@ final class TableDataRequest extends IntrusiveNode {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(copy).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(copy).append(')').toString());
         }
     }
 

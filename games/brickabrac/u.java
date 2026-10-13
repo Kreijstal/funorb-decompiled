@@ -7,12 +7,12 @@ final class u {
     static String field_f;
     static int field_d;
     static String field_e;
-    static RgbSprite field_c;
+    static RgbSprite chocolateSmallFarSprite;
     static int field_a;
     private static String field_z;
 
     public static void a(int param0) {
-        field_c = null;
+        chocolateSmallFarSprite = null;
         field_e = null;
         field_b = null;
         if (param0 != 2) {

@@ -24,7 +24,7 @@ final class BubbleDistortion extends CircleBody {
           int var3_int = 73 / ((-34 - obfuscationGuard) / 43);
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.O(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (before != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "il.O(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (before != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class BubbleDistortion extends CircleBody {
           this.oscillationStep = packet.readUnsignedShort(65280);
           this.oscillationAmplitude = packet.readUnsignedShort(65280);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "il.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -209,15 +209,15 @@ final class BubbleDistortion extends CircleBody {
         try {
           PcmPlayer.a(param2, param7, 10);
           DirectByteStorage.field_f = PcmPlayer.a(param1, param6, 0, param4);
-          jk.field_w = PcmPlayer.a(param1, param6, 1, param3);
+          UnderwaterBackground.field_w = PcmPlayer.a(param1, param6, 1, param3);
           ob.soundMixer = new AudioMixer();
           AchievementBrowserScreen.field_u = param5 * param3 / param2;
-          jk.field_w.setRootStream(ob.soundMixer);
+          UnderwaterBackground.field_w.setRootStream(ob.soundMixer);
           m.field_f = param0;
           m.field_f.a(ScorePopup.field_p, false);
           DirectByteStorage.field_f.setRootStream(m.field_f);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "il.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class BubbleDistortion extends CircleBody {
           param1.drawTransparent(-(5 / param3) + ((param0 * 20 >> 16) + ((param11 - param1.canvasWidth) / 2 + param9)), -param1.canvasHeight + (480 + param6 + param8));
           og.a(-121, 16, 0, param10, 16777215, -(5 / param3) + ((param0 * 2 >> 16) + ((param11 - param10.canvasWidth) / param4 + param9)), 480 + (param8 + param6 - param10.canvasHeight));
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "il.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "il.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');
         }
     }
 
@@ -294,7 +294,7 @@ final class BubbleDistortion extends CircleBody {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

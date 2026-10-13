@@ -7,7 +7,7 @@ final class ch {
     static RgbSprite[] field_k;
     static RgbSprite field_l;
     static tf field_a;
-    static RgbSprite field_f;
+    static RgbSprite jungleNearSprite;
     static hl field_c;
     static int[] incomingPacketLengths;
     static String field_j;
@@ -163,7 +163,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "ch.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "ch.C(" + param0 + ')');
         }
     }
 
@@ -185,12 +185,12 @@ final class ch {
           field_l = null;
           field_m = null;
           field_h = null;
-          field_f = null;
+          jungleNearSprite = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "ch.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ch.B(" + param0 + ')');
         }
     }
 
@@ -204,7 +204,7 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var4), "ch.A(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "ch.A(" + param0 + ',' + param1 + ')');
         }
     }
 

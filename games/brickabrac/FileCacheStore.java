@@ -56,7 +56,7 @@ final class FileCacheStore {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(length).append(',').append(entryId).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(length).append(',').append(entryId).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class FileCacheStore {
             } else {
               stackIn_72_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(entryId).append(',').append(reuseSectors).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(entryId).append(',').append(reuseSectors).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -405,7 +405,7 @@ final class FileCacheStore {
           this.indexFile = indexFile;
           this.dataFile = dataFile;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ve.<init>(" + storeId + ',' + (dataFile != null ? "{...}" : "null") + ',' + (indexFile != null ? "{...}" : "null") + ',' + maxEntryBytes + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ve.<init>(" + storeId + ',' + (dataFile != null ? "{...}" : "null") + ',' + (indexFile != null ? "{...}" : "null") + ',' + maxEntryBytes + ')');
         }
     }
 

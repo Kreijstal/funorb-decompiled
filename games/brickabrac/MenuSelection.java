@@ -3,7 +3,7 @@
  */
 final class MenuSelection {
     private int pressCode;
-    static RgbSprite field_h;
+    static RgbSprite constructionSmallSprite;
     static int field_g;
     private int keyCode;
     int itemCount;
@@ -23,7 +23,7 @@ final class MenuSelection {
 
     public static void b(byte param0) {
         if (param0 == -60) {
-          field_h = null;
+          constructionSmallSprite = null;
           field_m = null;
           field_a = null;
           field_f = null;
@@ -305,7 +305,7 @@ final class MenuSelection {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "re.P(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "re.P(" + param0 + ')');
         }
     }
 
@@ -329,16 +329,16 @@ final class MenuSelection {
         if (obfuscationGuard != 27479) {
           this.pressCode = -88;
           this.activationCode = 0;
-          if (ki.pressedButton != 0) {
+          if (BackgroundScene.pressedButton != 0) {
             this.field_o = vd.field_c;
             this.selectedIndex = pressedIndex;
-            this.pressCode = ki.pressedButton;
-            this.activationCode = ki.pressedButton;
-            this.heldCode = ki.pressedButton;
+            this.pressCode = BackgroundScene.pressedButton;
+            this.activationCode = BackgroundScene.pressedButton;
+            this.heldCode = BackgroundScene.pressedButton;
             this.pointerDriven = true;
           }
           if (0 == this.heldCode) {
-            if (ki.pressedButton == 0 &&
+            if (BackgroundScene.pressedButton == 0 &&
               cb.heldButton == 0) {
               this.heldCode = 0;
             }
@@ -364,7 +364,7 @@ final class MenuSelection {
             return;
           }
           if (cb.heldButton == 0) {
-            if (ki.pressedButton == 0 &&
+            if (BackgroundScene.pressedButton == 0 &&
               cb.heldButton == 0) {
               this.heldCode = 0;
             }
@@ -394,7 +394,7 @@ final class MenuSelection {
             this.field_o = IntArrayRequest.field_q;
           }
           this.field_o = this.field_o - 1;
-          if (ki.pressedButton == 0 &&
+          if (BackgroundScene.pressedButton == 0 &&
             cb.heldButton == 0) {
             this.heldCode = 0;
           }
@@ -420,17 +420,17 @@ final class MenuSelection {
           return;
         }
         this.activationCode = 0;
-        if (ki.pressedButton != 0) {
+        if (BackgroundScene.pressedButton != 0) {
           this.field_o = vd.field_c;
           this.selectedIndex = pressedIndex;
-          this.pressCode = ki.pressedButton;
-          this.activationCode = ki.pressedButton;
-          this.heldCode = ki.pressedButton;
+          this.pressCode = BackgroundScene.pressedButton;
+          this.activationCode = BackgroundScene.pressedButton;
+          this.heldCode = BackgroundScene.pressedButton;
           this.pointerDriven = true;
         }
         if (0 == this.heldCode) {
           boolean decompiledFrameRemainder1 = true;
-          if (ki.pressedButton == 0) {
+          if (BackgroundScene.pressedButton == 0) {
             if (cb.heldButton != 0) {
               if (this.heldCode != 0) {
                 return;
@@ -469,7 +469,7 @@ final class MenuSelection {
         }
         if (cb.heldButton == 0) {
           boolean decompiledFrameRemainder0 = true;
-          if (ki.pressedButton == 0) {
+          if (BackgroundScene.pressedButton == 0) {
             if (cb.heldButton != 0) {
               if (this.heldCode != 0) {
                 return;
@@ -511,7 +511,7 @@ final class MenuSelection {
           this.field_o = IntArrayRequest.field_q;
         }
         this.field_o = this.field_o - 1;
-        if (ki.pressedButton == 0) {
+        if (BackgroundScene.pressedButton == 0) {
           if (cb.heldButton != 0) {
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&

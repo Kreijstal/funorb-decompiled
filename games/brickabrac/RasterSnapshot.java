@@ -28,7 +28,7 @@ final class RasterSnapshot extends IntrusiveNode {
         try {
           this.pixels = pixels;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ii.A(" + (pixels != null ? "{...}" : "null") + ',' + clipLeft + ',' + width + ',' + height + ',' + obfuscationGuard + ',' + clipRight + ',' + clipTop + ',' + clipBottom + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ii.A(" + (pixels != null ? "{...}" : "null") + ',' + clipLeft + ',' + width + ',' + height + ',' + obfuscationGuard + ',' + clipRight + ',' + clipTop + ',' + clipBottom + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class ce {
     static String field_g;
     static br field_b;
-    static RgbSprite field_c;
+    static RgbSprite desertSmallSprite;
     static int[][] field_a;
     static char[] field_f;
     static int field_d;
@@ -52,7 +52,7 @@ final class ce {
         }
         wd.field_w.a(param0, -15211);
         var4 = hd.field_a.i(28) ? 1 : 0;
-        if (0 != ki.pressedButton) {
+        if (0 != BackgroundScene.pressedButton) {
           if (var4 != 0) {
             if (!param0) {
               wd.field_w.a(param0, -15211);
@@ -138,7 +138,7 @@ final class ce {
         }
         field_f = null;
         field_b = null;
-        field_c = null;
+        desertSmallSprite = null;
         field_a = (int[][]) null;
         field_g = null;
     }

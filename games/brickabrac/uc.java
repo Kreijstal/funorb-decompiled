@@ -61,7 +61,7 @@ final class uc extends k {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -83,7 +83,7 @@ final class uc extends k {
           if (this.a(param1, (byte) 106) != lp.field_xb) {
             return to.field_l;
           }
-          stackIn_6_0 = sn.field_s;
+          stackIn_6_0 = ConstructionBackground.field_s;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,7 +95,7 @@ final class uc extends k {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class uc extends k {
         try {
           this.field_p = new cb(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -144,11 +144,11 @@ final class uc extends k {
           }
           LevelMetadata.field_m = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "uc.G(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "uc.G(" + param0 + ')');
         }
     }
 
-    final static String[] a(int param0, String param1, byte param2) {
+    final static String[] createSoundEffectNames(int count, String prefix, byte obfuscationGuard) {
         int var4 = 0;
         String[] var3 = null;
         RuntimeException var3_ref = null;
@@ -161,13 +161,13 @@ final class uc extends k {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = new String[param0];
-          if (param2 != -1) {
+          var3 = new String[count];
+          if (obfuscationGuard != -1) {
             stackIn_3_0 = (String[]) null;
             return stackIn_3_0;
           }
-          for (var4 = 0; var4 < param0; var4++) {
-            var3[var4] = param1 + "_0" + var4;
+          for (var4 = 0; var4 < count; var4++) {
+            var3[var4] = prefix + "_0" + var4;
           }
           stackIn_8_0 = var3;
           return stackIn_8_0;
@@ -175,13 +175,13 @@ final class uc extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
-          stackIn_11_1 = new StringBuilder().append("uc.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("uc.E(").append(count).append(',');
+          if (prefix == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

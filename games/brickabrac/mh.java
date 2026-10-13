@@ -131,23 +131,23 @@ class mh extends ba {
         var12 = 0;
         if (!wc.field_d &&
           param5 &&
-          ki.pressedButton != 0 &&
+          BackgroundScene.pressedButton != 0 &&
           Rasterizer2D.clipLeft <= tb.pressX &&
           Rasterizer2D.clipRight > tb.pressX &&
           qo.pressY >= Rasterizer2D.clipTop &&
           Rasterizer2D.clipBottom > qo.pressY) {
-          this.field_L = ki.pressedButton;
+          this.field_L = BackgroundScene.pressedButton;
           this.field_U = -this.field_Eb + tb.pressX;
-          this.field_Ob = ki.pressedButton;
+          this.field_Ob = BackgroundScene.pressedButton;
           var12 = 1;
           this.field_yb = -this.field_db + qo.pressY;
         } else {
           this.field_L = 0;
-          if (0 != ki.pressedButton) {
+          if (0 != BackgroundScene.pressedButton) {
             this.field_Ob = 0;
           }
         }
-        stackIn_31_1 = (!qa.field_u) && (Rasterizer2D.clipLeft <= pq.pointerX) && (Rasterizer2D.clipRight > pq.pointerX) && (po.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.pointerY);
+        stackIn_31_1 = (!NinjaBackground.field_u) && (Rasterizer2D.clipLeft <= pq.pointerX) && (Rasterizer2D.clipRight > pq.pointerX) && (po.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.pointerY);
         this.field_G = stackIn_31_1;
         if (0 == cb.heldButton) {
           this.field_Ob = 0;
@@ -162,7 +162,7 @@ class mh extends ba {
           }
         }
         if (this.field_G) {
-          qa.field_u = true;
+          NinjaBackground.field_u = true;
         }
         if (var12 != 0) {
           wc.field_d = true;
@@ -510,7 +510,7 @@ class mh extends ba {
           } else {
             stackIn_103_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_102_0), ((StringBuilder) (Object) stackIn_102_1).append(stackIn_103_2).append(')').toString());
         }
     }
 
@@ -611,7 +611,7 @@ class mh extends ba {
     }
 
     final void a(boolean param0, int param1) {
-        qa.field_u = !param0 ? true : false;
+        NinjaBackground.field_u = !param0 ? true : false;
         if (param1 == -15211) {
           wc.field_d = !param0 ? true : false;
           this.a(Rasterizer2D.width, 886229954, 0, Rasterizer2D.height, 0, true);
@@ -673,7 +673,7 @@ class mh extends ba {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -702,7 +702,7 @@ class mh extends ba {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -774,7 +774,7 @@ class mh extends ba {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

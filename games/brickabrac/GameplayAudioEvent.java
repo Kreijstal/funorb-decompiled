@@ -50,7 +50,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw qb.addExceptionContext((Throwable) ((Object) var1), "qc.E(" + param0 + ')');
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "qc.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -142,7 +142,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "qc.D(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "qc.D(" + param0 + ')');
         }
     }
 

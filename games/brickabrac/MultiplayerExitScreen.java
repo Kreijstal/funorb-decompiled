@@ -5,7 +5,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     static long wallRollbackMillis;
     static int[] field_x;
     static String field_A;
-    static RgbSprite field_z;
+    static RgbSprite farmSmallSprite;
     static String[] savePrompts;
     static String field_y;
     static long field_E;
@@ -15,7 +15,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         int var1 = 63 % ((-67 - param0) / 54);
         field_A = null;
         field_x = null;
-        field_z = null;
+        farmSmallSprite = null;
         savePrompts = null;
     }
 
@@ -29,7 +29,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           var3.writeByte(-113, param1.field_m);
           var3.writeByte(param0 ^ 21215, param1.field_s);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -92,7 +92,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           ka.field_l = ej.field_P;
           ik.field_g = ej.field_P;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "gn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "gn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

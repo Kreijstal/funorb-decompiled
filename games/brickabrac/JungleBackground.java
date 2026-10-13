@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ip extends ki {
+final class JungleBackground extends BackgroundScene {
     static RgbSprite[][] field_v;
     static String field_t;
     static IsaacGenerator field_r;
     static NodeDeque field_s;
     static String[] field_u;
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var7;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_v = (RgbSprite[][]) null;
         }
-        if (!this.b((byte) -99)) {
-          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, ro.field_x[param3], 16777215);
+        if (!this.hasSprites((byte) -99)) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, ro.jungleBackgroundColors[colorIndex], 16777215);
           if (BrickABrac.field_J) {
-            var7 = PowerUp.a(this.field_m, param3, -20777);
-            if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-              ArchiveFetchClient.a(var7, np.field_d, param3, 1, 0, true);
-              var7.setCacheKeys(this.field_m, param3, (byte) 78);
+            var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+            if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+              ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
+              var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ef.a(var7.sprite, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
+            ef.a(var7.sprite, dg.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
           }
         } else {
-          var7 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            ArchiveFetchClient.a(var7, np.field_d, param3, 1, 0, true);
-            var7.setCacheKeys(this.field_m, param3, (byte) 78);
+          var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
+            var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ef.a(var7.sprite, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
+          ef.a(var7.sprite, dg.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
         }
     }
 
     final RgbSprite[] a(byte param0, int param1) {
         int var3 = -53 / ((65 - param0) / 49);
-        return DualLinkNode.field_l[-1 + param1];
+        return DualLinkNode.jungleCapsSprites[-1 + param1];
     }
 
     final RgbSprite a(boolean param0, int param1) {
         if (!param0) {
-          this.b((byte) -1);
+          this.hasSprites((byte) -1);
         }
-        return up.field_A[param1 - 1];
+        return up.jungleCentreSprites[param1 - 1];
     }
 
     final static void a(int param0, om param1, boolean param2, boolean param3) {
@@ -221,7 +221,7 @@ final class ip extends ki {
                 break;
               }
               if (!hn.b((byte) 7)) {
-                ep.field_e = rd.a(oo.field_t, new String[]{o.field_e.field_Fc}, (byte) 103);
+                ep.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.field_e.field_Fc}, (byte) 103);
                 if (var26 == 0) {
                   break;
                 }
@@ -802,23 +802,23 @@ final class ip extends ki {
           } else {
             stackIn_416_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_415_0), ((StringBuilder) (Object) stackIn_415_1).append(stackIn_416_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_415_0), ((StringBuilder) (Object) stackIn_415_1).append(stackIn_416_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean hasSprites(byte obfuscationGuard) {
         boolean stackIn_13_0 = false;
         om var3;
-        if (param0 >= -91) {
+        if (obfuscationGuard >= -91) {
           var3 = (om) null;
-          ip.a(81, (om) null, true, true);
+          JungleBackground.a(81, (om) null, true, true);
         }
-        stackIn_13_0 = (null != ch.field_f) && (null != dg.field_g) && (np.field_d != null) && (null != Brick.field_w) && (null != ep.field_h) && (DualLinkNode.field_l != null) && (DualLinkIterator.field_g != null) && (null != up.field_A);
+        stackIn_13_0 = (null != ch.jungleNearSprite) && (null != dg.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != ep.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != up.jungleCentreSprites);
         return stackIn_13_0;
     }
 
-    ip(int param0, String param1, String param2, int param3) {
-        super(param0, param1, param2, param3);
+    JungleBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
+        super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -829,30 +829,30 @@ final class ip extends ki {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          DualLinkNode.field_l = new RgbSprite[2][];
-          up.field_A = new RgbSprite[2];
-          DualLinkIterator.field_g = new RgbSprite[2][];
+          DualLinkNode.jungleCapsSprites = new RgbSprite[2][];
+          up.jungleCentreSprites = new RgbSprite[2];
+          DualLinkIterator.jungleSegsSprites = new RgbSprite[2][];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("ip.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ip.<init>(").append(sceneId).append(',');
+          if (musicName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_10_0 = stackIn_6_0;
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param2 == null) {
+          if (soundEffectPrefix == null) {
             stackIn_11_0 = stackIn_10_0;
             stackIn_11_2 = "null";
           } else {
             stackIn_11_0 = stackIn_6_0;
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(soundEffectCount).append(')').toString());
         }
     }
 
@@ -860,29 +860,29 @@ final class ip extends ki {
         if (!param1) {
           field_t = (String) null;
         }
-        return DualLinkIterator.field_g[param0 - 1];
+        return DualLinkIterator.jungleSegsSprites[param0 - 1];
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
+    final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         int var5;
-        if (param1 > -1) {
-          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, ro.field_x[param1], 16777215);
+        if (colorIndex > -1) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, ro.jungleBackgroundColors[colorIndex], 16777215);
         }
-        if (param1 <= -1 ||
+        if (colorIndex <= -1 ||
           BrickABrac.field_J) {
-          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 16777215, 11184810);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 16777215, 11184810);
         }
-        if (this.b((byte) -125)) {
-          Brick.field_w.drawTransparent(param2, param3);
+        if (this.hasSprites((byte) -125)) {
+          Brick.jungleSmallSprite.drawTransparent(destinationX, destinationY);
         }
-        var5 = 107 / ((param0 + 28) / 43);
+        var5 = 107 / ((obfuscationGuard + 28) / 43);
     }
 
     final RgbSprite c(byte param0) {
         if (param0 > -74) {
-          this.b((byte) -112);
+          this.hasSprites((byte) -112);
         }
-        return ep.field_h;
+        return ep.jungleCharacterSprite;
     }
 
     public static void b(boolean param0) {
@@ -896,49 +896,49 @@ final class ip extends ki {
         field_r = null;
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var7;
-        if (!this.b((byte) -95)) {
-          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, ro.field_x[param3], 16777215);
+        if (!this.hasSprites((byte) -95)) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, ro.jungleBackgroundColors[colorIndex], 16777215);
           if (BrickABrac.field_J) {
-            var7 = kd.a(this.field_m, param3, (byte) -121);
-            if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-              ArchiveFetchClient.a(var7, ib.field_E, param3, 2, -13, true);
-              var7.setCacheKeys(this.field_m, param3, (byte) 78);
+            var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
+            if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+              ArchiveFetchClient.a(var7, ib.field_E, colorIndex, 2, -13, true);
+              var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ef.a(var7.sprite, HuffmanCodec.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
+            ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, sl.field_D);
           }
         } else {
-          var7 = kd.a(this.field_m, param3, (byte) -121);
-          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            ArchiveFetchClient.a(var7, ib.field_E, param3, 2, -13, true);
-            var7.setCacheKeys(this.field_m, param3, (byte) 78);
+          var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
+          if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            ArchiveFetchClient.a(var7, ib.field_E, colorIndex, 2, -13, true);
+            var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ef.a(var7.sprite, HuffmanCodec.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
+          ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, sl.field_D);
         }
-        if (param1 >= -84) {
+        if (obfuscationGuard >= -84) {
           field_t = (String) null;
         }
     }
 
-    final boolean a(boolean param0) {
+    final boolean loadSprites(boolean obfuscationGuard) {
         if (!AchievementIcon.field_m.ensureGroupAvailableByName("jungle", -28138)) {
           return false;
         }
-        ch.field_f = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);
-        dg.field_g = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
-        np.field_d = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
-        Brick.field_w = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
-        sl.field_D = jh.a(0, ch.field_f);
-        HuffmanCodec.field_e = jh.a(0, dg.field_g);
-        ib.field_E = jh.a(0, np.field_d);
-        ep.field_h = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
-        DualLinkNode.field_l[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
-        DualLinkIterator.field_g[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
-        up.field_A[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
-        DualLinkNode.field_l[1] = ig.a(DualLinkNode.field_l[0], false);
-        DualLinkIterator.field_g[1] = ig.a(DualLinkIterator.field_g[0], param0);
-        up.field_A[1] = pl.a(-16371, up.field_A[0]);
+        ch.jungleNearSprite = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);
+        dg.jungleMidSprite = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
+        np.jungleFarSprite = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
+        Brick.jungleSmallSprite = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
+        sl.field_D = jh.a(0, ch.jungleNearSprite);
+        HuffmanCodec.field_e = jh.a(0, dg.jungleMidSprite);
+        ib.field_E = jh.a(0, np.jungleFarSprite);
+        ep.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
+        DualLinkNode.jungleCapsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
+        DualLinkIterator.jungleSegsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
+        up.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
+        DualLinkNode.jungleCapsSprites[1] = ig.a(DualLinkNode.jungleCapsSprites[0], false);
+        DualLinkIterator.jungleSegsSprites[1] = ig.a(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
+        up.jungleCentreSprites[1] = pl.a(-16371, up.jungleCentreSprites[0]);
         return true;
     }
 

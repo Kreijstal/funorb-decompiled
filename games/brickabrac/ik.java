@@ -104,7 +104,7 @@ final class ik implements Iterator {
               if (~param1.field_k != ~oc.field_p) {
                 var2_intLifetime1 = r.field_C[param1.field_c];
               } else {
-                var2_intLifetime1 = ki.field_i[param1.field_c];
+                var2_intLifetime1 = BackgroundScene.field_i[param1.field_c];
               }
             } else {
               var2_intLifetime1 = r.field_C[param1.field_c];
@@ -113,7 +113,7 @@ final class ik implements Iterator {
             if (!param1.field_e) {
               if (param1.field_f == 0 &&
                 param1.field_d == 0) {
-                var2_intLifetime1 = ki.field_i[param1.field_c];
+                var2_intLifetime1 = BackgroundScene.field_i[param1.field_c];
               } else {
                 var2_intLifetime1 = r.field_C[param1.field_c];
               }
@@ -137,7 +137,7 @@ final class ik implements Iterator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class ik implements Iterator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "ik.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "ik.C(" + param0 + ')');
         }
     }
 
@@ -212,7 +212,7 @@ final class ik implements Iterator {
           this.field_e = param0;
           this.b(-101);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

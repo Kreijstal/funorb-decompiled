@@ -4,18 +4,18 @@
 final class aj {
     static RgbSprite[][] field_c;
     static String field_b;
-    static RgbSprite[][] field_a;
+    static RgbSprite[][] chocSegsSprites;
 
     public static void b(int param0) {
         if (param0 == -789103103) {
           field_c = (RgbSprite[][]) null;
-          field_a = (RgbSprite[][]) null;
+          chocSegsSprites = (RgbSprite[][]) null;
           field_b = null;
           return;
         }
         aj.a(57, -37, 115);
         field_c = (RgbSprite[][]) null;
-        field_a = (RgbSprite[][]) null;
+        chocSegsSprites = (RgbSprite[][]) null;
         field_b = null;
     }
 
@@ -71,7 +71,7 @@ final class aj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3), "aj.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "aj.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

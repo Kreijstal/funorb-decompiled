@@ -11,7 +11,7 @@ final class DualLinkIterator implements Iterator {
     static String field_i;
     private DualLinkNode lastReturned;
     static qh field_c;
-    static RgbSprite[][] field_g;
+    static RgbSprite[][] jungleSegsSprites;
     static int field_f;
 
     public static void a(byte param0) {
@@ -21,7 +21,7 @@ final class DualLinkIterator implements Iterator {
         if (param0 < 55) {
           return;
         }
-        field_g = (RgbSprite[][]) null;
+        jungleSegsSprites = (RgbSprite[][]) null;
     }
 
     final static void b(byte param0) {
@@ -83,7 +83,7 @@ final class DualLinkIterator implements Iterator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class DualLinkIterator implements Iterator {
           this.nextNode = this.owner.sentinel.secondaryNext;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ae.<init>(" + (owner != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ae.<init>(" + (owner != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -5,7 +5,7 @@ final class se extends IntrusiveNode {
     static int[] field_j;
     static String field_l;
     byte[] field_i;
-    static RgbSprite field_k;
+    static RgbSprite volcanicFarSprite;
 
     final static RgbSprite[] a(int param0, byte param1, int param2) {
         if (param1 == -18) {
@@ -19,7 +19,7 @@ final class se extends IntrusiveNode {
     public static void a(int param0) {
         field_j = null;
         int var1 = 10 / ((param0 + 33) / 35);
-        field_k = null;
+        volcanicFarSprite = null;
         field_l = null;
     }
 
@@ -46,7 +46,7 @@ final class se extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class se extends IntrusiveNode {
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "se.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -54,7 +54,7 @@ final class sm {
               var2 = new PacketBuffer(13);
               c.a(vb.field_S, 12, SoftwareFramebuffer.field_a, u.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);
-              var2.writeInt(fi.field_t, (byte) -79);
+              var2.writeInt(ArcticBackground.field_t, (byte) -79);
               MouseInput.field_d.write(var2.data, true, 13, 0);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
               ff.field_b = MonotonicTime.nowMillis(false) + 30000L;

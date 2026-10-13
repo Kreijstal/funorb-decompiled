@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class td extends ki {
+final class VolcanicBackground extends BackgroundScene {
     static mh field_t;
     static String field_r;
     static String field_w;
@@ -13,71 +13,71 @@ final class td extends ki {
         if (!param0) {
           return (RgbSprite) null;
         }
-        return LevelList.field_e[-1 + param1];
+        return LevelList.volcanicCentreSprites[-1 + param1];
     }
 
-    td(int param0, String param1, String param2, int param3) {
-        super(param0, param1, param2, param3);
+    VolcanicBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
+        super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
-          LevelList.field_e = new RgbSprite[2];
-          np.field_c = new RgbSprite[2][];
-          CacheIoWorker.field_a = new RgbSprite[2][];
+          LevelList.volcanicCentreSprites = new RgbSprite[2];
+          np.volcanicSegsSprites = new RgbSprite[2][];
+          CacheIoWorker.volcanicCapsSprites = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectPrefix != null ? "{...}" : "null") + ',' + soundEffectCount + ')');
         }
     }
 
-    final boolean b(byte param0) {
-        if (param0 > -91) {
+    final boolean hasSprites(byte obfuscationGuard) {
+        if (obfuscationGuard > -91) {
           return true;
         }
-        if (RasterCacheSurface.field_j == null) {
+        if (RasterCacheSurface.volcanicNearSprite == null) {
           return false;
         }
-        if (null == cp.field_I) {
+        if (null == cp.volcanicMidSprite) {
           return false;
         }
-        if (null == se.field_k) {
+        if (null == se.volcanicFarSprite) {
           return false;
         }
-        if (mc.field_f == null) {
+        if (mc.volcanicSmallSprite == null) {
           return false;
         }
         return true;
     }
 
-    final boolean a(boolean param0) {
+    final boolean loadSprites(boolean obfuscationGuard) {
         if (!AchievementIcon.field_m.ensureGroupAvailableByName("volcanic", -28138)) {
           return false;
         }
-        RasterCacheSurface.field_j = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
-        cp.field_I = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
-        se.field_k = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
-        mc.field_f = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
-        NanoGameClock.field_q = jh.a(0, RasterCacheSurface.field_j);
-        gq.field_Sb = jh.a(0, cp.field_I);
-        RectangleBody.field_p = jh.a(0, se.field_k);
-        CacheIoWorker.field_a[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
-        np.field_c[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
-        LevelList.field_e[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
-        CacheIoWorker.field_a[1] = ig.a(CacheIoWorker.field_a[0], false);
-        np.field_c[1] = ig.a(np.field_c[0], param0);
-        LevelList.field_e[1] = pl.a(-16371, LevelList.field_e[0]);
+        RasterCacheSurface.volcanicNearSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
+        cp.volcanicMidSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
+        se.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
+        mc.volcanicSmallSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
+        NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
+        gq.field_Sb = jh.a(0, cp.volcanicMidSprite);
+        RectangleBody.field_p = jh.a(0, se.volcanicFarSprite);
+        CacheIoWorker.volcanicCapsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
+        np.volcanicSegsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
+        LevelList.volcanicCentreSprites[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
+        CacheIoWorker.volcanicCapsSprites[1] = ig.a(CacheIoWorker.volcanicCapsSprites[0], false);
+        np.volcanicSegsSprites[1] = ig.a(np.volcanicSegsSprites[0], obfuscationGuard);
+        LevelList.volcanicCentreSprites[1] = pl.a(-16371, LevelList.volcanicCentreSprites[0]);
         return true;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        int var5 = 9 / ((param0 + 28) / 43);
-        if (param1 > -1) {
-          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, hh.field_c[param1], 10792131);
-          if (this.b((byte) -125)) {
-            mc.field_f.drawTransparent(param2, param3);
+    final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
+        int var5 = 9 / ((obfuscationGuard + 28) / 43);
+        if (colorIndex > -1) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, hh.volcanicBackgroundColors[colorIndex], 10792131);
+          if (this.hasSprites((byte) -125)) {
+            mc.volcanicSmallSprite.drawTransparent(destinationX, destinationY);
           }
           return;
         }
-        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 16777215, 11184810);
-        if (this.b((byte) -125)) {
-          mc.field_f.drawTransparent(param2, param3);
+        Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 16777215, 11184810);
+        if (this.hasSprites((byte) -125)) {
+          mc.volcanicSmallSprite.drawTransparent(destinationX, destinationY);
         }
     }
 
@@ -94,19 +94,19 @@ final class td extends ki {
         field_s = null;
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var6 = null;
-        if (!this.b((byte) -92)) {
-          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, hh.field_c[param3], 10792131);
+        if (!this.hasSprites((byte) -92)) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, hh.volcanicBackgroundColors[colorIndex], 10792131);
         } else {
-          var6 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            BitPacketBuffer.a(se.field_k, var6, param3, 1, (byte) 18, 0);
-            var6.setCacheKeys(this.field_m, param3, (byte) 78);
+          var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            BitPacketBuffer.a(se.volcanicFarSprite, var6, colorIndex, 1, (byte) 18, 0);
+            var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ArchiveIndex.a(-91, -7, RasterCacheSurface.field_j, param1, var6.sprite, param3, 640, 1, param4, param2, cp.field_I);
+          ArchiveIndex.a(-91, -7, RasterCacheSurface.volcanicNearSprite, scroll16, var6.sprite, colorIndex, 640, 1, destinationX, destinationY, cp.volcanicMidSprite);
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_v = (mh) null;
           return;
         }
@@ -169,7 +169,7 @@ final class td extends ki {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -177,27 +177,27 @@ final class td extends ki {
         if (!param1) {
           return (RgbSprite[]) null;
         }
-        return np.field_c[-1 + param0];
+        return np.volcanicSegsSprites[-1 + param0];
     }
 
     final RgbSprite[] a(byte param0, int param1) {
         int var3 = -91 / ((65 - param0) / 49);
-        return CacheIoWorker.field_a[param1 - 1];
+        return CacheIoWorker.volcanicCapsSprites[param1 - 1];
     }
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var6 = null;
-        if (!this.b((byte) -120)) {
-          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, hh.field_c[param3], 10792131);
+        if (!this.hasSprites((byte) -120)) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, hh.volcanicBackgroundColors[colorIndex], 10792131);
         } else {
-          var6 = kd.a(this.field_m, param3, (byte) -111);
-          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            BitPacketBuffer.a(RectangleBody.field_p, var6, param3, 2, (byte) 119, -14);
-            var6.setCacheKeys(this.field_m, param3, (byte) 78);
+          var6 = kd.a(this.sceneId, colorIndex, (byte) -111);
+          if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            BitPacketBuffer.a(RectangleBody.field_p, var6, colorIndex, 2, (byte) 119, -14);
+            var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ArchiveIndex.a(-113, -14, NanoGameClock.field_q, param4, var6.sprite, param3, 306, 2, param2, param0, gq.field_Sb);
+          ArchiveIndex.a(-113, -14, NanoGameClock.field_q, scroll16, var6.sprite, colorIndex, 306, 2, destinationX, destinationY, gq.field_Sb);
         }
-        if (param1 >= -84) {
+        if (obfuscationGuard >= -84) {
           field_v = (mh) null;
           return;
         }
@@ -221,7 +221,7 @@ final class td extends ki {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "td.M(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "td.M(" + param0 + ')');
         }
     }
 
@@ -239,7 +239,7 @@ final class td extends ki {
             try {
               var4 = param1.getCodeBase();
               if (param0) {
-                td.g(-95);
+                VolcanicBackground.g(-95);
               }
               var3 = hg.a(param1, var4, -1).getFile();
               ne.a(new Object[]{"home", var3 + "home.ws"}, 111, param1, "updatelinks");
@@ -263,7 +263,7 @@ final class td extends ki {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

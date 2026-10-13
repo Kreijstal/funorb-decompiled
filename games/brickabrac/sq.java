@@ -52,7 +52,7 @@ final class sq {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -135,7 +135,7 @@ final class sq {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class sq {
         if (var3 != null) {
           bm.field_d.a(true, false);
           var4_ref_nn = bm.field_d;
-          var5_ref_String = oo.field_y;
+          var5_ref_String = ChocolateBackground.field_y;
           var4_ref_nn.field_d.a(var5_ref_String, 5, (byte) 104);
           var4_ref_nnLifetime1 = bm.field_d;
           var5 = tb.pressX;

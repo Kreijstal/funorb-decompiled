@@ -62,7 +62,7 @@ final class wl extends d {
           this.field_P = this.field_P + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wl.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wl.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -87,7 +87,7 @@ final class wl extends d {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class wl extends d {
               var7[0][var10 * 4 + 1] = RankingsScreen.field_r[var11];
               var7[0][2 + var10 * 4] = ObjectHistoryBuffer.field_p[var11];
               var7[0][4 * var10 + 3] = ib.field_D[var11];
-              if (ci.a(LevelCompleteScreen.field_B[var11], -40) &&
+              if (SpaceBackground.a(LevelCompleteScreen.field_B[var11], -40) &&
                 0 == ObjectHistoryBuffer.field_p[var11] + RankingsScreen.field_r[var11] + ib.field_D[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -185,7 +185,7 @@ final class wl extends d {
               var7[1][1 + var13 * 4] = RankingsScreen.field_r[var11Lifetime1];
               var7[1][2 + 4 * var13] = ObjectHistoryBuffer.field_p[var11Lifetime1];
               var7[1][var13 * 4 + 3] = ib.field_D[var11Lifetime1];
-              if (ci.a(LevelCompleteScreen.field_B[var11Lifetime1], -31) &&
+              if (SpaceBackground.a(LevelCompleteScreen.field_B[var11Lifetime1], -31) &&
                 RankingsScreen.field_r[var11Lifetime1] + ObjectHistoryBuffer.field_p[var11Lifetime1] + ib.field_D[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;
@@ -203,7 +203,7 @@ final class wl extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "wl.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "wl.C(" + param0 + ')');
         }
     }
 
@@ -412,7 +412,7 @@ final class wl extends d {
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ final class wl extends d {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -476,7 +476,7 @@ final class wl extends d {
         try {
           this.field_M = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -5,7 +5,7 @@ class ba extends DualLinkNode {
     static th field_B;
     static String field_x;
     static mh field_v;
-    static RgbSprite field_A;
+    static RgbSprite halloweenCharacterSprite;
     static String field_z;
     static int field_w;
     static String field_y;
@@ -44,7 +44,7 @@ class ba extends DualLinkNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ class ba extends DualLinkNode {
           var1.unlink((byte) 111);
           return;
         }
-        field_A = (RgbSprite) null;
+        halloweenCharacterSprite = (RgbSprite) null;
         var1.unlink((byte) 111);
     }
 
@@ -107,12 +107,12 @@ class ba extends DualLinkNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     public static void a(byte param0) {
-        field_A = null;
+        halloweenCharacterSprite = null;
         field_B = null;
         field_x = null;
         field_z = null;

@@ -182,7 +182,7 @@ final class hi extends um {
             if (ng.field_b == 0) {
               if (o.field_e == null &&
                 th.field_d) {
-                var7Lifetime15 = "[" + fi.field_u + "] ";
+                var7Lifetime15 = "[" + ArcticBackground.field_u + "] ";
               }
               if (null != o.field_e) {
                 if (PowerUp.field_v &&
@@ -287,7 +287,7 @@ final class hi extends um {
                 if (ng.field_b == 0) {
                   if (o.field_e == null &&
                     th.field_d) {
-                    var7Lifetime1Lifetime6 = "[" + fi.field_u + "] ";
+                    var7Lifetime1Lifetime6 = "[" + ArcticBackground.field_u + "] ";
                   }
                   if (null != o.field_e) {
                     if (PowerUp.field_v &&
@@ -409,7 +409,7 @@ final class hi extends um {
           }
           if (o.field_e == null &&
             th.field_d) {
-            var7Lifetime9 = "[" + fi.field_u + "] ";
+            var7Lifetime9 = "[" + ArcticBackground.field_u + "] ";
           }
           if (null == o.field_e) {
             var20Lifetime2Lifetime1 = var7Lifetime9 + var19Lifetime2 + ": ";
@@ -513,7 +513,7 @@ final class hi extends um {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -527,7 +527,7 @@ final class hi extends um {
             field_A = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hi.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hi.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

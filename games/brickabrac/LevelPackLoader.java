@@ -10,11 +10,11 @@ final class LevelPackLoader {
     static IndexedSprite[] field_b;
     static int field_g;
     static PlatformServices field_e;
-    static RgbSprite field_f;
+    static RgbSprite halloweenSmallSprite;
 
     public static void b(int param0) {
         field_i = null;
-        field_f = null;
+        halloweenSmallSprite = null;
         field_c = null;
         field_d = null;
         field_h = null;
@@ -61,7 +61,7 @@ final class LevelPackLoader {
           var13.levelData = new byte[var8][];
           var13.metadata = new LevelMetadata[var8];
           for (var9 = 0; var8 > var9; var9++) {
-            var10 = ai.readLevelMetadata((byte) -12, packet);
+            var10 = ParisBackground.readLevelMetadata((byte) -12, packet);
             var12.metadata[var10.levelId] = var10;
             var13.levelData[var10.levelId] = archive.takeFile(var10.resourceIndex, archiveSelector, 4);
           }
@@ -84,7 +84,7 @@ final class LevelPackLoader {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(archiveSelector).append(',').append(packId).append(',').append(completionWord).append(',').append(scoreOffset).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(archiveSelector).append(',').append(packId).append(',').append(completionWord).append(',').append(scoreOffset).append(')').toString());
         }
     }
 

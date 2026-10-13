@@ -3,7 +3,7 @@
  */
 final class hk extends ib implements hf, en {
     static String field_L;
-    static RgbSprite field_Q;
+    static RgbSprite waterMidSprite;
     private String field_N;
     static boolean field_R;
     private d field_M;
@@ -11,7 +11,7 @@ final class hk extends ib implements hf, en {
     private boolean field_V;
     private boolean field_K;
     private d field_U;
-    static RgbSprite field_I;
+    static RgbSprite arcticFarSprite;
     private vb field_P;
     static int field_W;
     static String field_J;
@@ -67,7 +67,7 @@ final class hk extends ib implements hf, en {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class hk extends ib implements hf, en {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class hk extends ib implements hf, en {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -198,7 +198,7 @@ final class hk extends ib implements hf, en {
           var3.a(var4, -12592, false);
           this.field_T.c(false);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -228,9 +228,9 @@ final class hk extends ib implements hf, en {
           GameCanvas.registerMenuScreen(-91, new MatchCompleteScreen());
           int var2_int = -5 / ((obfuscationGuard - 70) / 42);
           GameCanvas.registerMenuScreen(-73, new TimedSplashScreen());
-          IntrusiveHashTable.field_k = rd.a(0, (byte) 19);
+          IntrusiveHashTable.field_k = rd.selectBackground(0, (byte) 19);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hk.E(" + obfuscationGuard + ',' + (archive != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.E(" + obfuscationGuard + ',' + (archive != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class hk extends ib implements hf, en {
             this.h(68);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -293,7 +293,7 @@ final class hk extends ib implements hf, en {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ final class hk extends ib implements hf, en {
             if (!this.field_S) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = dp.field_s;
+              stackIn_19_3 = HalloweenBackground.field_s;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -469,7 +469,7 @@ final class hk extends ib implements hf, en {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -478,8 +478,8 @@ final class hk extends ib implements hf, en {
         if (param0 != 88) {
           return;
         }
-        field_I = null;
-        field_Q = null;
+        arcticFarSprite = null;
+        waterMidSprite = null;
         field_L = null;
     }
 

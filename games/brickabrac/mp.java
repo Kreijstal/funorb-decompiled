@@ -175,7 +175,7 @@ final class mp extends mh {
               var32 = 65280 & var30;
               var33 = (var28 * var31 & -16711791) >>> 8 | (var32 * var28 & 16711898) >>> 8;
               var33 = var33 + var29 * 65793;
-              ki.a(var33 >> 1 & 8355711, var23, var26, var22, var25, var27, var24, 116);
+              BackgroundScene.a(var33 >> 1 & 8355711, var23, var26, var22, var25, var27, var24, 116);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -211,7 +211,7 @@ final class mp extends mh {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -263,7 +263,7 @@ final class mp extends mh {
           k.outgoingPackets.writeInt(MainMenuScreen.field_x, (byte) -79);
           k.outgoingPackets.writeLong(-23054, LevelSelectScreen.field_E);
           var6 = 0;
-          if (qb.field_u) {
+          if (FarmBackground.field_u) {
             var6 = var6 | 1;
           }
           if (ec.field_O) {
@@ -272,7 +272,7 @@ final class mp extends mh {
           if (param3) {
             var6 = var6 | 8;
           }
-          if (ai.field_t != null) {
+          if (ParisBackground.field_t != null) {
             var6 = var6 | 16;
           }
           if (param4) {
@@ -284,8 +284,8 @@ final class mp extends mh {
             var7 = "";
           }
           k.outgoingPackets.writeCp1252String(var7, -1);
-          if (null != ai.field_t) {
-            k.outgoingPackets.writePrefixedCp1252String(0, ai.field_t);
+          if (null != ParisBackground.field_t) {
+            k.outgoingPackets.writePrefixedCp1252String(0, ParisBackground.field_t);
           }
           LevelDecoder.a(k.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
           k.outgoingPackets.backfillShortLength(k.outgoingPackets.position - var5_int, 255);
@@ -301,7 +301,7 @@ final class mp extends mh {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

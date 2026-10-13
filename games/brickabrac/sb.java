@@ -970,7 +970,7 @@ final class sb implements vc {
                 stackIn_22_0 = (0 <= pq.pointerX) && (pq.pointerX < var5) && (DualLinkDeque.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.field_db > po.pointerY);
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
-                  ki.pressedButton == 1) {
+                  BackgroundScene.pressedButton == 1) {
                   stackIn_27_0 = !(pf.field_p);
                   pf.field_p = stackIn_27_0;
                   if (pf.field_p) {
@@ -990,7 +990,7 @@ final class sb implements vc {
               }
               var5Lifetime5 = 400 - this.field_a * this.field_a;
               var6 = var5Lifetime5 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-              sn.b((byte) -118, var6);
+              ConstructionBackground.b((byte) -118, var6);
               nh.a(0);
               if (o.field_e != null) {
                 stackIn_43_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
@@ -1033,7 +1033,7 @@ final class sb implements vc {
         if (!this.d(76)) {
           var5Lifetime1 = 400 - this.field_a * this.field_a;
           var6Lifetime1 = var5Lifetime1 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-          sn.b((byte) -118, var6Lifetime1);
+          ConstructionBackground.b((byte) -118, var6Lifetime1);
           nh.a(0);
           if (o.field_e != null) {
             stackIn_62_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
@@ -1071,7 +1071,7 @@ final class sb implements vc {
           if (!n.field_d) {
             var5Lifetime3 = 400 - this.field_a * this.field_a;
             var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            sn.b((byte) -118, var6Lifetime2);
+            ConstructionBackground.b((byte) -118, var6Lifetime2);
             nh.a(0);
             if (o.field_e != null) {
               stackIn_88_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
@@ -1098,7 +1098,7 @@ final class sb implements vc {
             if ((stackIn_102_0 ? 1 : 0) != stackIn_103_1) {
               var5Lifetime3 = 400 - this.field_a * this.field_a;
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-              sn.b((byte) -118, var6Lifetime2);
+              ConstructionBackground.b((byte) -118, var6Lifetime2);
               nh.a(0);
               if (o.field_e != null) {
                 stackIn_128_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
@@ -1123,7 +1123,7 @@ final class sb implements vc {
               wp.playUiSound(8, ta.uiSounds[0]);
               var5Lifetime3 = 400 - this.field_a * this.field_a;
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-              sn.b((byte) -118, var6Lifetime2);
+              ConstructionBackground.b((byte) -118, var6Lifetime2);
               nh.a(0);
               if (o.field_e != null) {
                 stackIn_110_0 = (IntKeyIndex.a(o.field_e.field_cc, 0)) ? 1 : 0;
@@ -1156,7 +1156,7 @@ final class sb implements vc {
           }
           return;
         }
-        if (ki.pressedButton != 1) {
+        if (BackgroundScene.pressedButton != 1) {
           regionExit1: {
             if (n.field_d) {
               stackIn_231_0 = n.field_d;
@@ -1164,7 +1164,7 @@ final class sb implements vc {
               if ((stackIn_231_0 ? 1 : 0) != stackIn_232_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-                sn.b((byte) -118, var6Lifetime3);
+                ConstructionBackground.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
                   stackIn_238_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
@@ -1191,7 +1191,7 @@ final class sb implements vc {
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            sn.b((byte) -118, var6Lifetime3);
+            ConstructionBackground.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
               stackIn_257_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
@@ -1224,7 +1224,7 @@ final class sb implements vc {
               if ((stackIn_149_0 ? 1 : 0) != stackIn_150_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-                sn.b((byte) -118, var6Lifetime3);
+                ConstructionBackground.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
                   stackIn_156_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
@@ -1259,7 +1259,7 @@ final class sb implements vc {
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            sn.b((byte) -118, var6Lifetime3);
+            ConstructionBackground.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
               stackIn_174_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
@@ -1289,7 +1289,7 @@ final class sb implements vc {
               if ((stackIn_190_0 ? 1 : 0) != stackIn_191_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-                sn.b((byte) -118, var6Lifetime3);
+                ConstructionBackground.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
                   stackIn_197_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
@@ -1324,7 +1324,7 @@ final class sb implements vc {
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
-            sn.b((byte) -118, var6Lifetime3);
+            ConstructionBackground.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
               stackIn_215_0 = (!IntKeyIndex.a(o.field_e.field_cc, 0)) ? 0 : 1;
@@ -1398,7 +1398,7 @@ final class sb implements vc {
           var7 = new PacketBuffer(param1.takeFileByName(-88, "single", ""));
           na.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, param1, var7, var3_int, 1, 1, var4);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sb.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sb.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -6,12 +6,12 @@ final class dc {
     int field_a;
     static tn field_e;
     static int currentKeyCode;
-    static RgbSprite field_c;
+    static RgbSprite chocolateCharacterSprite;
     static String field_d;
     static boolean field_g;
 
     public static void a(int param0) {
-        field_c = null;
+        chocolateCharacterSprite = null;
         field_d = null;
         field_e = null;
         if (param0 != -9669) {
@@ -49,7 +49,7 @@ final class dc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class be {
     private int field_l;
     static boolean field_a;
     static int uiBootstrapStage;
-    static RgbSprite field_d;
+    static RgbSprite arcticSmallSprite;
     private int field_b;
     static String field_n;
     static int field_j;
@@ -26,7 +26,7 @@ final class be {
         field_n = null;
         field_o = null;
         field_e = null;
-        field_d = null;
+        arcticSmallSprite = null;
     }
 
     final be b(int param0, byte param1) {
@@ -102,7 +102,7 @@ final class be {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class be {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -265,7 +265,7 @@ final class be {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class be {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(copy).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(copy).append(')').toString());
         }
     }
 
@@ -352,7 +352,7 @@ final class be {
           param1.field_f = this.field_f;
           param1.field_l = this.field_l;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "be.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "be.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -383,7 +383,7 @@ final class be {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -16,11 +16,11 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
     final static void f(int param0) {
         if (param0 != 967) {
           discardGameplayOnTransition = false;
-          qa.e((byte) -95);
+          NinjaBackground.e((byte) -95);
           bd.a(4, true);
           return;
         }
-        qa.e((byte) -95);
+        NinjaBackground.e((byte) -95);
         bd.a(4, true);
     }
 

@@ -36,14 +36,14 @@ final class ro {
     byte field_L;
     int field_z;
     static String field_m;
-    static int[] field_x;
+    static int[] jungleBackgroundColors;
     static String field_v;
     static String field_H;
     private static String field_J;
 
     public static void a(byte param0) {
         field_r = null;
-        field_x = null;
+        jungleBackgroundColors = null;
         field_v = null;
         if (param0 <= -95) {
           field_H = null;
@@ -77,7 +77,7 @@ final class ro {
     static {
         field_J = "ro.A(";
         field_r = new th(2, 4, 4, 0);
-        field_x = new int[]{30870, 12658477, 16494651, 26679, 16711935};
+        jungleBackgroundColors = new int[]{30870, 12658477, 16494651, 26679, 16711935};
         field_H = "Who can join";
         field_m = "Show all lobby chat";
         field_v = "<br><br>Press <img=6> to close this message.";

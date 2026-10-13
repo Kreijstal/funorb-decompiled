@@ -9,7 +9,7 @@ final class OptionsScreen extends FramedMenuScreen {
     static String field_w;
     static IntArrayRequest[] progressRequests;
     static mh field_v;
-    static RgbSprite field_B;
+    static RgbSprite desertFarSprite;
 
     final static RgbSprite a(int param0, int param1, String param2, boolean param3) {
         int var11 = 0;
@@ -68,7 +68,7 @@ final class OptionsScreen extends FramedMenuScreen {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class OptionsScreen extends FramedMenuScreen {
     }
 
     public static void c(boolean param0) {
-        field_B = null;
+        desertFarSprite = null;
         field_u = null;
         progressRequests = null;
         field_v = null;

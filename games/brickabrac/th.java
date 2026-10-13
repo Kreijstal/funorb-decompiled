@@ -9,7 +9,7 @@ final class th {
     static boolean field_d;
     static RgbSprite field_i;
     static boolean field_h;
-    static RgbSprite field_c;
+    static RgbSprite parisMidSprite;
     int field_e;
     static boolean field_b;
 
@@ -18,7 +18,7 @@ final class th {
         field_f = null;
         field_a = null;
         field_i = null;
-        field_c = null;
+        parisMidSprite = null;
         field_j = null;
     }
 
@@ -66,7 +66,7 @@ final class th {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class th {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

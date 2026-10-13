@@ -61,7 +61,7 @@ final class HighscorePackSelector {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class HighscorePackSelector {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class HighscorePackSelector {
           this.buttonIndex = buttonIndex;
           this.owner = owner;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jf.<init>(" + (owner != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packCount + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jf.<init>(" + (owner != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packCount + ')');
         }
     }
 

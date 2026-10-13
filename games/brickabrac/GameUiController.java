@@ -48,12 +48,12 @@ final class GameUiController implements GameUiLifecycle {
         c.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
         KeyboardInput.a(new sb(), 0);
-        td.g(0);
+        VolcanicBackground.g(0);
         qn.a(240, 0, 640, 0, -6532);
-        bm.a(NodeDequeCursor.field_i, qb.field_r, 24876, LevelList.field_o, GameScreen.field_e, ki.field_f, AchievementIcon.field_s);
+        bm.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
         oc.a(1, ob.field_D);
         hk.h((byte) 55);
-        hk.initializeMenuScreens((byte) 115, ki.field_f);
+        hk.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         lp.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
         co.a((byte) -79, cd.field_g);
     }
@@ -63,7 +63,7 @@ final class GameUiController implements GameUiLifecycle {
           return (GameScreen) ((Object) IntArrayRequest.gameplayScreen);
         }
         if (screenId == -2) {
-          return (GameScreen) ((Object) ki.field_p);
+          return (GameScreen) ((Object) BackgroundScene.field_p);
         }
         if (obfuscationGuard > -5) {
           field_e = (mh) null;
@@ -148,9 +148,9 @@ final class GameUiController implements GameUiLifecycle {
           hc.b(2);
         }
         uf.field_a = aj.a(3, true);
-        ki.field_f = bq.a(-6, 0, false, 5, true);
+        BackgroundScene.field_f = bq.a(-6, 0, false, 5, true);
         ScorePopup.field_l = aj.a(6, true);
-        qb.field_r = aj.a(7, true);
+        FarmBackground.field_r = aj.a(7, true);
         AchievementIcon.field_s = aj.a(8, obfuscationGuard);
         LevelList.field_o = aj.a(9, true);
         NodeDequeCursor.field_i = aj.a(10, true);
@@ -163,10 +163,10 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(tm.field_e, "lobby", 126, ib.field_F, gq.field_Rb);
         bh.field_tb.a(tm.field_e, "lobby", 124, ib.field_F, wn.field_c);
         bh.field_tb.a(tm.field_e, "kartika13", 125, ib.field_F, gq.field_Rb);
-        bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, ki.field_f);
+        bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, BackgroundScene.field_f);
         bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
         bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
-        bh.field_tb.a(qb.field_r, false, MovingBody.field_n, wl.field_Q);
+        bh.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, sg.field_m);
         bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, bb.field_a);
@@ -188,7 +188,7 @@ final class GameUiController implements GameUiLifecycle {
             if (var3 != 2) {
               if (3 != var3) {
                 if (4 == var3) {
-                  ai.a((byte) 24, 92.0f, Ball.field_x);
+                  ParisBackground.a((byte) 24, 92.0f, Ball.field_x);
                   sl.field_C.renderClient(121);
                   sb.a(nl.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
@@ -199,24 +199,24 @@ final class GameUiController implements GameUiLifecycle {
                   uf.field_a = null;
                 }
               } else {
-                ai.a((byte) 24, 90.0f, MessageScreen.field_u);
+                ParisBackground.a((byte) 24, 90.0f, MessageScreen.field_u);
                 sl.field_C.renderClient(106);
-                so.a(ki.field_f, gq.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
+                so.a(BackgroundScene.field_f, gq.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }
             } else {
-              ai.a((byte) 24, 88.0f, sf.field_bb);
+              ParisBackground.a((byte) 24, 88.0f, sf.field_bb);
               sl.field_C.renderClient(124);
               var2 = var2 != 0 & wo.a(2) ? 1 : 0;
             }
           } else {
-            ai.a((byte) 24, 82.0f, BitPacketBuffer.field_s);
+            ParisBackground.a((byte) 24, 82.0f, BitPacketBuffer.field_s);
             sl.field_C.renderClient(123);
             o.c(123);
           }
         } else {
           mc.a((byte) 115);
           LevelList.a(-1);
-          SecondaryNodeQueue.a(LevelList.field_o, NodeDequeCursor.field_i, (byte) -38, AchievementIcon.field_s, qb.field_r);
+          SecondaryNodeQueue.a(LevelList.field_o, NodeDequeCursor.field_i, (byte) -38, AchievementIcon.field_s, FarmBackground.field_r);
         }
         if (var2 != 0) {
           be.uiBootstrapStage = be.uiBootstrapStage + 1;

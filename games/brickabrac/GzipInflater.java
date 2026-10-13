@@ -10,7 +10,7 @@ final class GzipInflater {
     static boolean field_g;
     static mh field_d;
     static int field_e;
-    static RgbSprite[][] field_f;
+    static RgbSprite[][] desertCapsSprites;
     static String[] field_c;
 
     private GzipInflater(int param0, int param1, int param2) {
@@ -46,7 +46,7 @@ final class GzipInflater {
             tq.field_h = param1;
             FramedMenuScreen.field_s = param8;
             ArchiveIndex.field_e = param0;
-            qb.field_u = param2;
+            FarmBackground.field_u = param2;
             MainMenuScreen.field_x = param7;
             if (param9 <= 121) {
               GzipInflater.b(47);
@@ -83,7 +83,7 @@ final class GzipInflater {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -93,7 +93,7 @@ final class GzipInflater {
     }
 
     public static void a(int param0) {
-        field_f = (RgbSprite[][]) null;
+        desertCapsSprites = (RgbSprite[][]) null;
         field_c = null;
         if (param0 != -32) {
           return;
@@ -131,7 +131,7 @@ final class GzipInflater {
             }
             this.inflater.reset();
           } catch (RuntimeException runtimeException) {
-            throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "im.A(" + (output != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "im.A(" + (output != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

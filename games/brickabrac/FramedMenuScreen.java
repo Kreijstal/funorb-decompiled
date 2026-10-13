@@ -178,7 +178,7 @@ class FramedMenuScreen extends MenuScreen {
             } else {
               stackIn_53_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -199,7 +199,7 @@ class FramedMenuScreen extends MenuScreen {
         if (param0 != -44) {
           return 92;
         }
-        return ki.masterSoundGain;
+        return BackgroundScene.masterSoundGain;
     }
 
     static {

@@ -174,7 +174,7 @@ final class tn extends AudioStream {
           } else {
             stackIn_70_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(offset).append(',').append(frames).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(offset).append(',').append(frames).append(')').toString());
         }
     }
 
@@ -350,7 +350,7 @@ final class tn extends AudioStream {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ final class tn extends AudioStream {
             this.field_E = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "tn.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "tn.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

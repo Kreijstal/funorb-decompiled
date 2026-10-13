@@ -39,7 +39,7 @@ class oc extends IntrusiveNode {
             field_y = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oc.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -197,7 +197,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ class oc extends IntrusiveNode {
             ka.a(this.d(15), 22546);
             return param3;
           }
-          if (ki.pressedButton == 0) {
+          if (BackgroundScene.pressedButton == 0) {
             var6Lifetime6 = -57 % ((56 - param2) / 43);
             hj.field_Pb = cb.heldButton;
             ka.a(this.d(15), 22546);
@@ -258,8 +258,8 @@ class oc extends IntrusiveNode {
             var5 != 0) {
             this.a(GameplayAudioEvent.mouseWheelDelta, pq.pointerX, param0, -127, po.pointerY, this, param1);
           }
-          if (ki.pressedButton != 0) {
-            if (this.a(this, tb.pressX, param1, param0, ki.pressedButton, qo.pressY, 0)) {
+          if (BackgroundScene.pressedButton != 0) {
+            if (this.a(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
               param3 = false;
             }
             this.b(false);
@@ -292,8 +292,8 @@ class oc extends IntrusiveNode {
         if (0 != GameplayAudioEvent.mouseWheelDelta) {
           if (var5 == 0) {
             regionExit1: {
-              if (ki.pressedButton != 0) {
-                if (this.a(this, tb.pressX, param1, param0, ki.pressedButton, qo.pressY, 0)) {
+              if (BackgroundScene.pressedButton != 0) {
+                if (this.a(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
                   param3 = false;
                   if (var7 == 0) {
                     break regionExit1;
@@ -346,8 +346,8 @@ class oc extends IntrusiveNode {
           this.a(GameplayAudioEvent.mouseWheelDelta, pq.pointerX, param0, -127, po.pointerY, this, param1);
         }
         regionExit2: {
-          if (ki.pressedButton != 0) {
-            if (this.a(this, tb.pressX, param1, param0, ki.pressedButton, qo.pressY, 0)) {
+          if (BackgroundScene.pressedButton != 0) {
+            if (this.a(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
               param3 = false;
               if (var7 == 0) {
                 break regionExit2;
@@ -439,7 +439,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -453,7 +453,7 @@ class oc extends IntrusiveNode {
           }
           ff.field_d = new NodeDeque();
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -515,7 +515,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -554,7 +554,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -616,7 +616,7 @@ class oc extends IntrusiveNode {
             field_y = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oc.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -661,7 +661,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -686,7 +686,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -718,7 +718,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -799,7 +799,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -841,7 +841,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -904,7 +904,7 @@ class oc extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -941,7 +941,7 @@ class oc extends IntrusiveNode {
             this.field_s = var4.a(this, 46695);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -956,7 +956,7 @@ class oc extends IntrusiveNode {
           this.field_w = param1;
           this.field_s = param3;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

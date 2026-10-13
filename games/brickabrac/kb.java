@@ -56,7 +56,7 @@ final class kb extends mh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -64,7 +64,7 @@ final class kb extends mh {
         if (param0 < 63) {
           kb.h(-91);
           this.a(true, -15211);
-          if (ki.pressedButton == 0) {
+          if (BackgroundScene.pressedButton == 0) {
             return this.field_ac.field_L != 0 ? true : false;
           }
           if (this.field_L != 0) {
@@ -73,7 +73,7 @@ final class kb extends mh {
           return true;
         }
         this.a(true, -15211);
-        if (ki.pressedButton != 0) {
+        if (BackgroundScene.pressedButton != 0) {
           if (this.field_L == 0) {
             return true;
           }
@@ -158,7 +158,7 @@ final class kb extends mh {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -264,7 +264,7 @@ final class kb extends mh {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class kb extends mh {
           int var2_int = 81 % ((param1 - 86) / 38);
           pq.a(0, ep.field_d, false);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -354,7 +354,7 @@ final class kb extends mh {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

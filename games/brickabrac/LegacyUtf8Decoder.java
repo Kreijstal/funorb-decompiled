@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyUtf8Decoder {
-    static RgbSprite field_d;
+    static RgbSprite ninjaNearSprite;
     static mh field_c;
     static String field_b;
     static String field_a;
@@ -12,7 +12,7 @@ final class LegacyUtf8Decoder {
         field_a = null;
         int var1 = -69 / ((obfuscationGuard - 66) / 57);
         field_b = null;
-        field_d = null;
+        ninjaNearSprite = null;
     }
 
     final static String decode(byte obfuscationGuard, int length, int offset, byte[] data) {
@@ -144,13 +144,13 @@ final class LegacyUtf8Decoder {
           } else {
             stackIn_46_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_45_0), ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(')').toString());
         }
     }
 
     final static boolean a(byte param0) {
         int var1 = 5 / ((41 - param0) / 62);
-        return null == ua.field_d ? qa.frameFocus : true;
+        return null == ua.field_d ? NinjaBackground.frameFocus : true;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {

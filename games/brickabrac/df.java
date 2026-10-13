@@ -36,7 +36,7 @@ final class df {
             if (var8 != 0) {
               if (var8 >= 128 &&
                 var8 < 160) {
-                var9 = ai.cp1252Extensions[-128 + var8];
+                var9 = ParisBackground.cp1252Extensions[-128 + var8];
                 if (var9 == 0) {
                   var9 = 63;
                 }
@@ -59,7 +59,7 @@ final class df {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(offset).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class df {
           na.pendingAchievementSubmissions.addLast(submission, (byte) 3);
           LevelSelectScreen.sendAchievementSubmission(opcode, submission, (byte) 119);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "df.D(" + (submission != null ? "{...}" : "null") + ',' + opcode + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "df.D(" + (submission != null ? "{...}" : "null") + ',' + opcode + ',' + obfuscationGuard + ')');
         }
     }
 

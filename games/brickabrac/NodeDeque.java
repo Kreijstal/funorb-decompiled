@@ -86,7 +86,7 @@ final class NodeDeque {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -114,7 +114,7 @@ final class NodeDeque {
           }
           node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "vl.F(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vl.F(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,15 +187,15 @@ final class NodeDeque {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final static void a(boolean param0, int param1) {
         sb.field_c = !param0 ? new vj(mh.field_Z, ji.field_b) : new vj(ie.field_u, t.field_f);
-        qa.field_w = new mh(0L, (mh) null);
-        qa.field_w.a(sb.field_c.field_d, 0);
-        qa.field_w.a(GameUiController.field_e, 0);
+        NinjaBackground.field_w = new mh(0L, (mh) null);
+        NinjaBackground.field_w.a(sb.field_c.field_d, 0);
+        NinjaBackground.field_w.a(GameUiController.field_e, 0);
         wi.field_j = new mh(0L, MenuSelection.field_m);
         MembershipBenefitsScreen.field_t = new mh(0L, (mh) null);
         wi.field_j.a(TableNameEntry.field_h, 0);
@@ -300,7 +300,7 @@ final class NodeDeque {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -345,7 +345,7 @@ final class NodeDeque {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -368,7 +368,7 @@ final class NodeDeque {
             field_a = (boolean[][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "vl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

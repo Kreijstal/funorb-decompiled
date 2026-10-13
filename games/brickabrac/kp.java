@@ -29,7 +29,7 @@ final class kp {
           packet.appendCrc32(3, payloadStart);
           packet.backfillByteLength((byte) 124, -payloadStart + packet.position);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kp.B(" + opcode + ',' + obfuscationGuard + ',' + (result != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kp.B(" + opcode + ',' + obfuscationGuard + ',' + (result != null ? "{...}" : "null") + ')');
         }
     }
 

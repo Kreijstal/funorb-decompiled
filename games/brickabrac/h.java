@@ -42,7 +42,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ abstract class h extends oc implements sd {
         SoundPlayback var2Lifetime1;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          ki.masterSoundGain = param1;
+          BackgroundScene.masterSoundGain = param1;
           if (param0 != 13894) {
             h.a(-92, -23);
           }
@@ -64,7 +64,7 @@ abstract class h extends oc implements sd {
             if (!var2.sourceNode.isLinked(0)) {
               var2.unlink((byte) 111);
             } else {
-              var2.stream.setGain(ki.masterSoundGain * var2.baseGain + 128 >> 8);
+              var2.stream.setGain(BackgroundScene.masterSoundGain * var2.baseGain + 128 >> 8);
             }
             var2 = (SoundPlayback) (wd.soundPlaybacks.next((byte) 116));
           }
@@ -73,7 +73,7 @@ abstract class h extends oc implements sd {
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.sourceNode.isLinked(0);
               if (stackIn_14_0) {
-                var2Lifetime1.stream.setGain(var2Lifetime1.baseGain * ki.masterSoundGain + 128 >> 8);
+                var2Lifetime1.stream.setGain(var2Lifetime1.baseGain * BackgroundScene.masterSoundGain + 128 >> 8);
               } else {
                 var2Lifetime1.unlink((byte) 111);
               }
@@ -85,7 +85,7 @@ abstract class h extends oc implements sd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "h.V(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "h.V(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -127,7 +127,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -217,7 +217,7 @@ abstract class h extends oc implements sd {
             this.field_E.a(param0, (byte) 0, param2 + this.field_o, param3 + this.field_w);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "h.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "h.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -272,7 +272,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -298,10 +298,10 @@ abstract class h extends oc implements sd {
             field_F = (String[]) null;
           }
           while (true) {
-            if (var5_int >= fi.field_w.length) {
+            if (var5_int >= ArcticBackground.field_w.length) {
               return;
             }
-            param0 = fi.field_w[var5_int];
+            param0 = ArcticBackground.field_w[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param0;
@@ -335,7 +335,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -410,7 +410,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -484,7 +484,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -511,7 +511,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -602,7 +602,7 @@ abstract class h extends oc implements sd {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (-1 == qa.field_v.indexOf(var5Lifetime1)) {
+              if (-1 == NinjaBackground.field_v.indexOf(var5Lifetime1)) {
                 stackIn_42_0 = GameCanvas.field_c;
                 return stackIn_42_0;
               }
@@ -620,7 +620,7 @@ abstract class h extends oc implements sd {
           } else {
             stackIn_49_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -633,7 +633,7 @@ abstract class h extends oc implements sd {
           RectangleBody.field_q.a(dn.field_N, 0);
         }
         RectangleBody.field_q.a(Ball.field_A, 0);
-        ap.field_b = new vj(fi.field_u, RectangleBody.field_q);
+        ap.field_b = new vj(ArcticBackground.field_u, RectangleBody.field_q);
         fe.field_gb = new mh(0L, (mh) null);
         fe.field_gb.a(ap.field_b.field_d, 0);
         fe.field_gb.a(HighscorePackSelector.field_k, 0);

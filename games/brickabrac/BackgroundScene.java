@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ki {
-    private String field_h;
-    int field_m;
+abstract class BackgroundScene {
+    private String musicName;
+    int sceneId;
     static int field_a;
     static String field_g;
-    vm field_n;
+    vm musicData;
     static String field_o;
     static BlankScreen field_p;
-    private int[] field_c;
-    private PcmSound[] field_b;
-    private String[] field_j;
-    boolean field_q;
-    int field_l;
+    private int[] soundEffectOrder;
+    private PcmSound[] soundEffects;
+    private String[] soundEffectNames;
+    boolean musicReady;
+    int loadedSoundCount;
     static int pressedButton;
     static int[] field_i;
     static ResourceArchive field_f;
@@ -24,32 +24,32 @@ abstract class ki {
         if (param0 > -74) {
           return (RgbSprite) null;
         }
-        return kb.field_Ub[gb.field_n];
+        return kb.field_Ub[gb.backgroundVariant];
     }
 
-    final PcmSound[] a(int param0) {
+    final PcmSound[] pollSoundEffects(int obfuscationGuard) {
         String var3 = null;
         String var2 = null;
-        if (this.field_l < this.field_b.length) {
-          var3 = this.field_j[this.field_c[this.field_l]];
+        if (this.loadedSoundCount < this.soundEffects.length) {
+          var3 = this.soundEffectNames[this.soundEffectOrder[this.loadedSoundCount]];
           var2 = var3;
           if (BrickABrac.field_I.hasFileName(var2, "", (byte) -121)) {
-            this.field_b[this.field_l] = SoundPlayback.field_m.a(var3, "", (byte) 122);
+            this.soundEffects[this.loadedSoundCount] = SoundPlayback.field_m.a(var3, "", (byte) 122);
           }
           if (og.field_gc.hasFileName(var2, "", (byte) -121)) {
-            this.field_b[this.field_l] = SoundPlayback.field_m.a((byte) 28, var3, "");
+            this.soundEffects[this.loadedSoundCount] = SoundPlayback.field_m.a((byte) 28, var3, "");
           }
-          if (this.field_b[this.field_l] != null) {
-            this.field_l = this.field_l + 1;
+          if (this.soundEffects[this.loadedSoundCount] != null) {
+            this.loadedSoundCount = this.loadedSoundCount + 1;
           }
         }
-        if (param0 != 0) {
+        if (obfuscationGuard != 0) {
           field_f = (ResourceArchive) null;
         }
-        return this.field_b;
+        return this.soundEffects;
     }
 
-    abstract void a(boolean param0, int param1, int param2, int param3, int param4);
+    abstract void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX);
 
     RgbSprite[] b(int param0) {
         if (param0 >= -12) {
@@ -58,8 +58,8 @@ abstract class ki {
         return GzipInflater.field_a;
     }
 
-    ki(int param0, String param1, String param2, int param3) {
-        this(param0, param1, uc.a(param3, param2, (byte) -1));
+    BackgroundScene(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
+        this(sceneId, musicName, uc.createSoundEffectNames(soundEffectCount, soundEffectPrefix, (byte) -1));
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -90,13 +90,13 @@ abstract class ki {
         var8 = 88 % ((-60 - param7) / 62);
     }
 
-    final void e(int param0) {
-        if (!this.b((byte) -99)) {
-          this.a(false);
+    final void ensureSprites(int obfuscationGuard) {
+        if (!this.hasSprites((byte) -99)) {
+          this.loadSprites(false);
         }
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           String var3 = (String) null;
-          ki.a((java.applet.Applet) null, 122, (String) null);
+          BackgroundScene.a((java.applet.Applet) null, 122, (String) null);
         }
     }
 
@@ -105,9 +105,9 @@ abstract class ki {
         return null;
     }
 
-    abstract boolean a(boolean param0);
+    abstract boolean loadSprites(boolean obfuscationGuard);
 
-    abstract boolean b(byte param0);
+    abstract boolean hasSprites(byte obfuscationGuard);
 
     RgbSprite a(boolean param0, int param1) {
         if (param0) {
@@ -117,7 +117,7 @@ abstract class ki {
         return null;
     }
 
-    abstract void a(byte param0, int param1, int param2, int param3);
+    abstract void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY);
 
     public static void a(byte param0) {
         if (param0 != 7) {
@@ -131,29 +131,29 @@ abstract class ki {
         field_f = null;
     }
 
-    final void d(int param0) {
+    final void pollMusicPreparation(int obfuscationGuard) {
         vm dupTemp$0 = null;
         int fieldTemp$1 = 0;
-        if (this.field_n == null) {
-          dupTemp$0 = vm.a(mh.field_lb, "", this.field_h);
-          this.field_n = dupTemp$0;
+        if (this.musicData == null) {
+          dupTemp$0 = vm.a(mh.field_lb, "", this.musicName);
+          this.musicData = dupTemp$0;
           if (dupTemp$0 == null) {
             return;
           }
         }
-        if (!m.field_f.a(param0 ^ -74, this.field_n, 22050, ji.field_a, SoundPlayback.field_m)) {
+        if (!m.field_f.a(obfuscationGuard ^ -74, this.musicData, 22050, ji.field_a, SoundPlayback.field_m)) {
           return;
         }
-        if (sk.field_H > 0) {
-          fieldTemp$1 = sk.field_H - 1;
-          sk.field_H = sk.field_H - 1;
+        if (sk.pendingMusicLoads > 0) {
+          fieldTemp$1 = sk.pendingMusicLoads - 1;
+          sk.pendingMusicLoads = sk.pendingMusicLoads - 1;
           if (0 == fieldTemp$1) {
             m.field_f.a((byte) 118);
           }
         }
-        this.field_q = true;
-        if (param0 != 59) {
-          this.a(-106);
+        this.musicReady = true;
+        if (obfuscationGuard != 59) {
+          this.pollSoundEffects(-106);
         }
     }
 
@@ -178,10 +178,10 @@ abstract class ki {
           try {
             try {
               if (param1 < 74) {
-                ki.a((byte) 0);
+                BackgroundScene.a((byte) 0);
               }
               var3 = (String) (ne.a("getcookies", -127, param0));
-              var4 = qb.a((byte) 122, var3, ';');
+              var4 = FarmBackground.a((byte) 122, var3, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -212,7 +212,7 @@ abstract class ki {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -228,7 +228,7 @@ abstract class ki {
         return 256;
     }
 
-    abstract void a(int param0, byte param1, int param2, int param3, int param4);
+    abstract void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16);
 
     RgbSprite[] a(int param0, boolean param1) {
         if (param1) {
@@ -237,20 +237,20 @@ abstract class ki {
         return (RgbSprite[]) null;
     }
 
-    private ki(int param0, String param1, String[] param2) {
+    private BackgroundScene(int sceneId, String musicName, String[] soundEffectNames) {
         int var4_int = 0;
         try {
-          this.field_h = param1;
-          this.field_m = param0;
-          this.field_j = param2;
-          this.field_b = new PcmSound[this.field_j.length];
-          this.field_c = new int[this.field_j.length];
-          for (var4_int = 0; this.field_c.length > var4_int; var4_int++) {
-            this.field_c[var4_int] = var4_int;
+          this.musicName = musicName;
+          this.sceneId = sceneId;
+          this.soundEffectNames = soundEffectNames;
+          this.soundEffects = new PcmSound[this.soundEffectNames.length];
+          this.soundEffectOrder = new int[this.soundEffectNames.length];
+          for (var4_int = 0; this.soundEffectOrder.length > var4_int; var4_int++) {
+            this.soundEffectOrder[var4_int] = var4_int;
           }
-          AppletGameShell.shuffleFivePasses(this.field_c, (byte) 39, hi.field_w);
+          AppletGameShell.shuffleFivePasses(this.soundEffectOrder, (byte) 39, hi.field_w);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ki.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ki.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectNames != null ? "{...}" : "null") + ')');
         }
     }
 

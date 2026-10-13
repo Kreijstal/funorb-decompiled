@@ -3,14 +3,14 @@
  */
 final class mc {
     static n field_e;
-    static RgbSprite field_f;
+    static RgbSprite volcanicSmallSprite;
     static int field_d;
     static String field_b;
     static int field_c;
     static String field_a;
 
     public static void a(int param0) {
-        field_f = null;
+        volcanicSmallSprite = null;
         field_a = null;
         field_e = null;
         if (param0 > -46) {

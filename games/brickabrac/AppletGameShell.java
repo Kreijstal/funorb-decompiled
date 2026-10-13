@@ -45,7 +45,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "ke.getDocumentBase()");
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ke.getDocumentBase()");
         }
     }
 
@@ -68,14 +68,14 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           }
           focusLock = this;
           synchronized (focusLock) {
-            qa.frameFocus = CircleBody.liveFocus;
+            NinjaBackground.frameFocus = CircleBody.liveFocus;
           }
           this.updateClient(-107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.S(" + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ke.S(" + obfuscationGuard + ')');
         }
     }
 
@@ -159,7 +159,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             } else {
               stackIn_22_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param6).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -189,7 +189,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "ke.getAppletContext()");
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ke.getAppletContext()");
         }
     }
 
@@ -212,7 +212,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -246,7 +246,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (so.field_f == this &&
-            !ai.field_s) {
+            !ParisBackground.field_s) {
             GameplayAudioEvent.redrawRequested = true;
             if (tf.field_h &&
               -er.field_c + MonotonicTime.nowMillis(false) > 1000L) {
@@ -287,7 +287,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -448,7 +448,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw qb.addExceptionContext((Throwable) (var1), "ke.run()");
+            throw FarmBackground.addExceptionContext((Throwable) (var1), "ke.run()");
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -483,7 +483,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
             CacheIoRequest.field_D.setVisible(true);
             if (null != cb.field_o &&
-              null == fd.field_e) {
+              null == BackgroundRegistry.field_e) {
               insets = cb.field_o.getInsets();
               CacheIoRequest.field_D.setLocation(insets.left + to.field_i, insets.top + hk.field_W);
               if (BrickABrac.field_J) {
@@ -498,7 +498,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.W(" + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ke.W(" + obfuscationGuard + ')');
         }
     }
 
@@ -525,19 +525,19 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
     public final void stop() {
         if (so.field_f != this ||
-          ai.field_s) {
+          ParisBackground.field_s) {
           return;
         }
         try {
           BufferedFile.shutdownDeadlineMillis = MonotonicTime.nowMillis(false) + 4000L;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.stop()");
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ke.stop()");
         }
     }
 
@@ -558,7 +558,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "ke.O(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ke.O(" + param0 + ')');
         }
     }
 
@@ -576,10 +576,10 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         try {
           var3 = this;
           synchronized (var3) {
-            if (ai.field_s) {
+            if (ParisBackground.field_s) {
               return;
             }
-            ai.field_s = true;
+            ParisBackground.field_s = true;
           }
           if (null != sl.field_x) {
             sl.field_x.destroy();
@@ -622,7 +622,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.BA(" + clean + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ke.BA(" + clean + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -639,7 +639,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             CacheIoRequest.field_D.getParent().remove((java.awt.Component) ((Object) CacheIoRequest.field_D));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (fd.field_e == null) {
+          if (BackgroundRegistry.field_e == null) {
             if (null != cb.field_o) {
               var2 = cb.field_o;
               decompiledFrameRemainder0 = (var4 != 0);
@@ -649,17 +649,17 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 var2 = so.field_f;
                 if (var4 != 0) {
                   var2 = sl.field_x;
-                  var2 = fd.field_e;
+                  var2 = BackgroundRegistry.field_e;
                 }
               } else {
                 var2 = sl.field_x;
                 if (var4 != 0) {
-                  var2 = fd.field_e;
+                  var2 = BackgroundRegistry.field_e;
                 }
               }
             }
           } else {
-            var2 = fd.field_e;
+            var2 = BackgroundRegistry.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           CacheIoRequest.field_D = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
@@ -678,7 +678,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           CacheIoRequest.field_D.addFocusListener((java.awt.event.FocusListener) (this));
           CacheIoRequest.field_D.requestFocus();
           CircleBody.liveFocus = true;
-          qa.frameFocus = true;
+          NinjaBackground.frameFocus = true;
           GameplayAudioEvent.redrawRequested = true;
           tn.field_A = param0;
           er.field_c = MonotonicTime.nowMillis(false);
@@ -686,7 +686,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) (var2), "ke.DA(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) (var2), "ke.DA(" + param0 + ')');
         }
     }
 
@@ -718,7 +718,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -741,7 +741,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -786,7 +786,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -802,7 +802,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == so.field_f &&
-            !ai.field_s) {
+            !ParisBackground.field_s) {
             BufferedFile.shutdownDeadlineMillis = MonotonicTime.nowMillis(false);
             wj.sleepMillis(-127, 5000L);
             LevelPackLoader.field_e = null;
@@ -813,7 +813,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.destroy()");
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ke.destroy()");
         }
     }
 
@@ -844,12 +844,12 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           }
           var8 = field_n.get(12);
           var9 = field_n.get(13);
-          stackIn_4_0 = ip.field_u[-1 + var3_int] + ", " + var4 / 10 + var4 % 10 + "-" + ek.field_eb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          stackIn_4_0 = JungleBackground.field_u[-1 + var3_int] + ", " + var4 / 10 + var4 % 10 + "-" + ek.field_eb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3), "ke.P(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "ke.P(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -877,19 +877,19 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
     public final void start() {
         if (so.field_f != this ||
-          ai.field_s) {
+          ParisBackground.field_s) {
           return;
         }
         try {
           BufferedFile.shutdownDeadlineMillis = 0L;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.start()");
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ke.start()");
         }
     }
 
@@ -932,7 +932,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -989,7 +989,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1012,7 +1012,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

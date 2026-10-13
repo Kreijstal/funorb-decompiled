@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hh {
-    static int[] field_c;
+    static int[] volcanicBackgroundColors;
     static String field_e;
     static double field_d;
     static String field_f;
@@ -10,7 +10,7 @@ final class hh {
     static String field_a;
 
     public static void a(boolean param0) {
-        field_c = null;
+        volcanicBackgroundColors = null;
         if (param0) {
           field_a = null;
           field_e = null;
@@ -37,7 +37,7 @@ final class hh {
         RuntimeException var7 = null;
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-72, param3.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param3.width, param3.height, um.field_u[param5], 928072);
+          Rasterizer2D.fillVerticalGradient(0, 0, param3.width, param3.height, um.underwaterBackgroundColors[param5], 928072);
           og.a(-124, 128, 8, param0, 16777215, (-param0.canvasWidth + param3.width) / 2, 85 + (param1 - param0.canvasHeight));
           if (param4 != -8562) {
             return;
@@ -67,7 +67,7 @@ final class hh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -102,14 +102,14 @@ final class hh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
         field_e = "+<%0>";
         field_f = "Yes";
-        field_c = new int[]{12658477, 3952770, 16494651, 26679, 16711935};
+        volcanicBackgroundColors = new int[]{12658477, 3952770, 16494651, 26679, 16711935};
         field_d = Math.atan2(1.0, 0.0);
         field_a = "Enter the name you'd prefer. This is the name displayed to other players.";
         unlockedLevelCounts = new int[2];

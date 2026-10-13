@@ -4,7 +4,7 @@
 final class ja {
     static ResourceArchive field_c;
     static String field_b;
-    static RgbSprite[][] field_a;
+    static RgbSprite[][] arcticSegsSprites;
 
     final static void a(int param0, int param1, int param2, int param3, TextFont param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, TextFont param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, RgbSprite[] param19, RgbSprite[] param20) {
         RuntimeException stackIn_6_0 = null;
@@ -22,7 +22,7 @@ final class ja {
         RuntimeException var21 = null;
         try {
           if (param7 != -111) {
-            field_a = (RgbSprite[][]) null;
+            arcticSegsSprites = (RgbSprite[][]) null;
           }
           pa.a(param6, param18, param15, param4, param3, param5, param13, new ta(param10), param1, param14, param12, param9, param0, new ta(param19), param2, param8, param11, new ta(param20), param16, param17, 10);
           return;
@@ -60,7 +60,7 @@ final class ja {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -68,13 +68,13 @@ final class ja {
         if (param0 == 2) {
           field_b = null;
           field_c = null;
-          field_a = (RgbSprite[][]) null;
+          arcticSegsSprites = (RgbSprite[][]) null;
           return;
         }
-        field_a = (RgbSprite[][]) null;
+        arcticSegsSprites = (RgbSprite[][]) null;
         field_b = null;
         field_c = null;
-        field_a = (RgbSprite[][]) null;
+        arcticSegsSprites = (RgbSprite[][]) null;
     }
 
     final static void a(byte param0, RgbSprite param1, int param2, int param3, PlayerBoard param4) {
@@ -133,7 +133,7 @@ final class ja {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class ja {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

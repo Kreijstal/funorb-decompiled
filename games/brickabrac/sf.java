@@ -9,8 +9,8 @@ final class sf extends vb implements je {
     static String field_X;
     static RgbSprite[] field_U;
     private ia field_W;
-    static RgbSprite field_cb;
-    static RgbSprite field_Y;
+    static RgbSprite constructionFarSprite;
+    static RgbSprite constructionNearSprite;
 
     final void n(int param0) {
         if (param0 >= 7) {
@@ -34,7 +34,7 @@ final class sf extends vb implements je {
           }
           this.field_W = param0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sf.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sf.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class sf extends vb implements je {
           super.a(param0, param1, param2, param3);
           this.field_ab = -param2 - this.field_o + pq.pointerX;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -76,10 +76,10 @@ final class sf extends vb implements je {
 
     public static void o(int param0) {
         field_U = null;
-        field_cb = null;
+        constructionFarSprite = null;
         field_bb = null;
         field_X = null;
-        field_Y = null;
+        constructionNearSprite = null;
         if (param0 == -16124) {
           field_V = null;
           return;

@@ -92,7 +92,7 @@ abstract class sl extends DualLinkNode {
           GzipInflater.field_c = param6;
           ff.field_i = param14;
           pf.field_i = param11;
-          ki.field_k = param9;
+          BackgroundScene.field_k = param9;
           GameClock.field_f = cr.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
           bq.field_c = cr.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
           uo.field_c = cr.loadRgbSpritesByName("lobby", param7, "opentome", 2);
@@ -104,10 +104,10 @@ abstract class sl extends DualLinkNode {
           AchievementsScreen.field_H[4] = bq.field_a;
           AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
           Ball.field_A = new mh(0L, (mh) null);
-          qb.field_v = new mh(0L, MainMenuScreen.field_t, n.field_a);
+          FarmBackground.field_v = new mh(0L, MainMenuScreen.field_t, n.field_a);
           GameUiController.field_a = new mh(0L, ik.field_a, pf.field_c);
           IsaacGenerator.field_b = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
-          Ball.field_A.a(qb.field_v, 0);
+          Ball.field_A.a(FarmBackground.field_v, 0);
           if (vd.field_e) {
             Ball.field_A.a(GameUiController.field_a, 0);
           }
@@ -121,13 +121,13 @@ abstract class sl extends DualLinkNode {
           dn.field_N.field_S = 1;
           HighscorePackSelector.field_k = new mh(0L, MatchCompleteScreen.field_x, fj.field_Rb.toUpperCase());
           sc.field_b = new mh(0L, qh.field_j, rl.field_c.toUpperCase());
-          ll.field_e = new mh(0L, qb.field_x);
+          ll.field_e = new mh(0L, FarmBackground.field_x);
           nk.field_g = new mh(0L, MainMenuScreen.field_t, nk.field_b);
-          nk.field_a = new mh(0L, cd.field_d, td.field_r);
+          nk.field_a = new mh(0L, cd.field_d, VolcanicBackground.field_r);
           kk.field_b = new mh(0L, cd.field_d, ch.field_d);
           la.field_b = new mh(0L, cd.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new mh(0L, cd.field_d, r.field_v);
-          dp.field_x = new mh(0L, ik.field_a, ByteStorage.field_d);
+          HalloweenBackground.field_x = new mh(0L, ik.field_a, ByteStorage.field_d);
           rl.field_e = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           gj.field_b = new mh(0L, fm.field_b, ua.field_e.toUpperCase());
           gj.field_b.field_eb = vd.field_e;
@@ -142,9 +142,9 @@ abstract class sl extends DualLinkNode {
           } else {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
-            stackIn_7_4 = jk.field_v;
+            stackIn_7_4 = UnderwaterBackground.field_v;
           }
-          td.field_v = new mh(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
+          VolcanicBackground.field_v = new mh(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           rm.field_a = new mh(0L, (mh) null);
           rm.field_a.a(sc.field_b, 0);
           rm.field_a.a(ll.field_e, 0);
@@ -158,12 +158,12 @@ abstract class sl extends DualLinkNode {
             ll.field_e.a(la.field_b, 0);
           }
           ll.field_e.a(BufferedSocket.field_h, 0);
-          ll.field_e.a(dp.field_x, 0);
+          ll.field_e.a(HalloweenBackground.field_x, 0);
           ll.field_e.a(rl.field_e, 0);
           if (vd.field_e) {
             rm.field_a.a(gj.field_b, 0);
           }
-          rm.field_a.a(td.field_v, 0);
+          rm.field_a.a(VolcanicBackground.field_v, 0);
           Brick.field_A = new mh(0L, CappedUrlRequest.field_l);
           Brick.field_A.field_S = 1;
           Brick.field_A.field_Q = 0;
@@ -190,7 +190,7 @@ abstract class sl extends DualLinkNode {
           ji.field_b.a(TimedSplashScreen.field_u, 0);
           GameUiController.field_e = new mh(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
           ba.field_v = new mh(0L, qh.field_j);
-          rg.field_e = new mh(0L, qb.field_x);
+          rg.field_e = new mh(0L, FarmBackground.field_x);
           jd.field_a = new mh(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           gb.field_l = new mh[4 + param13];
           MatchCompleteScreen.field_A = new rk[4 + param13][];
@@ -225,11 +225,11 @@ abstract class sl extends DualLinkNode {
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
             MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new rk(0L, AchievementMaskRequest.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {
-              if (ki.field_k != null) {
-                if (ki.field_k[var17_intLifetime3] == null) {
+              if (BackgroundScene.field_k != null) {
+                if (BackgroundScene.field_k[var17_intLifetime3] == null) {
                   var19_ref = null;
                 } else {
-                  var19_ref = ki.field_k[var17_intLifetime3][var18];
+                  var19_ref = BackgroundScene.field_k[var17_intLifetime3][var18];
                 }
               } else {
                 var19_ref = null;
@@ -358,7 +358,7 @@ abstract class sl extends DualLinkNode {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
         }
     }
 

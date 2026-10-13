@@ -5,8 +5,8 @@ final class np {
     static String field_e;
     static String field_f;
     static int field_b;
-    static RgbSprite field_d;
-    static RgbSprite[][] field_c;
+    static RgbSprite jungleFarSprite;
+    static RgbSprite[][] volcanicSegsSprites;
     static int field_a;
 
     final static void b(boolean param0) {
@@ -23,9 +23,9 @@ final class np {
 
     public static void a(boolean param0) {
         field_f = null;
-        field_d = null;
+        jungleFarSprite = null;
         field_e = null;
-        field_c = (RgbSprite[][]) null;
+        volcanicSegsSprites = (RgbSprite[][]) null;
         if (!param0) {
           np.a(false);
         }

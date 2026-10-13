@@ -70,7 +70,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (var4 < 0) {
               var5 = qh.field_d;
             } else {
-              if (fi.field_r.selectedIndex != var4) {
+              if (ArcticBackground.field_r.selectedIndex != var4) {
                 var5 = ug.field_I;
               } else {
                 var5 = om.field_hc;
@@ -84,7 +84,7 @@ final class CachedArchiveSource extends ArchiveSource {
             var8 = NewAchievementsScreen.field_J - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + GameClock.field_g;
-              if (fi.field_r.selectedIndex != var4) {
+              if (ArcticBackground.field_r.selectedIndex != var4) {
                 stackIn_17_0 = ag.field_F;
               } else {
                 stackIn_17_0 = uc.field_l;
@@ -107,7 +107,7 @@ final class CachedArchiveSource extends ArchiveSource {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "jq.J(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "jq.J(" + param0 + ')');
         }
     }
 
@@ -656,7 +656,7 @@ final class CachedArchiveSource extends ArchiveSource {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(expectedIndexRevision).append(',').append(cleanupEnabled).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(expectedIndexRevision).append(',').append(cleanupEnabled).append(')').toString());
         }
     }
 

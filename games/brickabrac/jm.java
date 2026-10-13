@@ -58,7 +58,7 @@ final class jm {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(width).append(',').append(obfuscationGuard).append(',').append(height).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(width).append(',').append(obfuscationGuard).append(',').append(height).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -197,7 +197,7 @@ final class jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3), "jm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "jm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class jm {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -288,11 +288,11 @@ final class jm {
           }
           if (var2 == 1) {
             var4 = var10.readSignedSmart(-1342);
-            levelResult = (LevelResultSubmission) (qa.pendingLevelResults.first(-19));
+            levelResult = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.first(-19));
             while (levelResult != null) {
               if (requestId != levelResult.packId ||
                 var4 != levelResult.levelIndex) {
-                levelResult = (LevelResultSubmission) (qa.pendingLevelResults.next((byte) 116));
+                levelResult = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.next((byte) 116));
                 continue;
               }
               break;
@@ -310,7 +310,7 @@ final class jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "jm.D(" + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "jm.D(" + obfuscationGuard + ')');
         }
     }
 

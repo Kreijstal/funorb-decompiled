@@ -5,7 +5,7 @@ final class cp extends h {
     private NodeDeque field_J;
     static mh field_K;
     static String field_G;
-    static RgbSprite field_I;
+    static RgbSprite volcanicMidSprite;
     static String field_H;
 
     final static void a(boolean param0, int param1) {
@@ -56,7 +56,7 @@ final class cp extends h {
     }
 
     public static void j(byte param0) {
-        field_I = null;
+        volcanicMidSprite = null;
         field_G = null;
         if (param0 > -91) {
           ta var2 = (ta) null;
@@ -94,7 +94,7 @@ final class cp extends h {
           var3.field_N = true;
           var3.a(true, (oc) (this));
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "cp.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -167,7 +167,7 @@ final class cp extends h {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class cp extends h {
           jb.field_H = param0;
           c.field_l = param2;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "cp.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
@@ -312,7 +312,7 @@ final class cp extends h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "cp.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "cp.F(" + param0 + ')');
         }
     }
 
@@ -374,7 +374,7 @@ final class cp extends h {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

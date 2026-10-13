@@ -212,7 +212,7 @@ final class BufferedFile {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ final class BufferedFile {
           }
           this.readFully(data.length, 0, 127, data);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jg.J(" + (data != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jg.J(" + (data != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -380,7 +380,7 @@ final class BufferedFile {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(offset).append(',').append(length).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(offset).append(',').append(length).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class BufferedFile {
           this.writeBuffer = new byte[writeBufferSize];
           this.position = 0L;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jg.<init>(" + (file != null ? "{...}" : "null") + ',' + readBufferSize + ',' + writeBufferSize + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jg.<init>(" + (file != null ? "{...}" : "null") + ',' + readBufferSize + ',' + writeBufferSize + ')');
         }
     }
 
@@ -474,7 +474,7 @@ final class BufferedFile {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(scaleDivisor).append(',').append(entryTicks).append(',').append(destinationY).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(scaleDivisor).append(',').append(entryTicks).append(',').append(destinationY).append(')').toString());
         }
     }
 

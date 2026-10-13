@@ -33,7 +33,7 @@ final class bd implements ub {
           }
           AppletGameShell.sendTableRow(opcode, submission, obfuscationGuard + 14964);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bd.F(" + opcode + ',' + obfuscationGuard + ',' + (submission != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bd.F(" + opcode + ',' + obfuscationGuard + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ final class bd implements ub {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -122,7 +122,7 @@ final class bd implements ub {
             return stackIn_2_0;
           }
           var5 = archive.getFileId(var4_int, -46, fileName);
-          stackIn_4_0 = qa.loadRgbSprites(var5, var4_int, archive, true);
+          stackIn_4_0 = NinjaBackground.loadRgbSprites(var5, var4_int, archive, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class bd implements ub {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class bd implements ub {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
         }
     }
 

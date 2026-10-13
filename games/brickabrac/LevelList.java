@@ -14,7 +14,7 @@ final class LevelList {
     private int labelBaselineOffset;
     private int buttonIndex;
     private int maxScrollOffset;
-    static RgbSprite[] field_e;
+    static RgbSprite[] volcanicCentreSprites;
     static ResourceArchive field_o;
     private int rowGap;
     private MenuButton viewport;
@@ -23,7 +23,7 @@ final class LevelList {
 
     public static void a(boolean param0) {
         field_o = null;
-        field_e = null;
+        volcanicCentreSprites = null;
         if (!param0) {
           CharSequence var2 = (CharSequence) null;
           LevelList.a((CharSequence) null, false);
@@ -68,7 +68,7 @@ final class LevelList {
         sl.field_A[4] = tm.field_d;
         ag.buttonLabels[14] = pl.field_c[0];
         sl.field_A[3] = sj.field_e;
-        ag.buttonLabels[39] = ki.field_o;
+        ag.buttonLabels[39] = BackgroundScene.field_o;
         ag.buttonLabels[23] = mh.field_mb;
         ag.buttonLabels[21] = ArchiveNetworkClient.field_r;
         ag.buttonLabels[17] = LevelCompleteScreen.field_E[0];
@@ -77,14 +77,14 @@ final class LevelList {
           return;
         }
         ag.buttonLabels[34] = f.field_b;
-        ag.buttonLabels[28] = sn.field_r;
+        ag.buttonLabels[28] = ConstructionBackground.field_r;
         ag.buttonLabels[19] = HighscorePackSelector.field_g;
         ag.buttonLabels[35] = LevelPackLoader.field_d;
         ag.buttonLabels[20] = LevelResultSubmission.field_q;
         ag.buttonLabels[33] = t.field_c;
         ag.buttonLabels[32] = hk.field_L;
         ag.buttonLabels[25] = ck.field_i;
-        ag.buttonLabels[24] = gi.field_r;
+        ag.buttonLabels[24] = DesertBackground.field_r;
         ag.buttonLabels[42] = oc.field_u;
         ag.buttonLabels[37] = LevelPackLoader.field_i;
         sl.field_A[7] = AppletGameShell.field_f;
@@ -170,7 +170,7 @@ final class LevelList {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class LevelList {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -439,7 +439,7 @@ final class LevelList {
           }
           this.scrollStep = 3 * this.rowHeight / 2;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "uj.<init>(" + rowHeight + ',' + rowGap + ',' + buttonIndex + ',' + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + (pack != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "uj.<init>(" + rowHeight + ',' + rowGap + ',' + buttonIndex + ',' + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + (pack != null ? "{...}" : "null") + ')');
         }
     }
 

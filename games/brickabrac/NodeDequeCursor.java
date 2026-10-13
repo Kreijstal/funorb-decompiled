@@ -6,7 +6,7 @@ final class NodeDequeCursor {
     static int[][] field_e;
     private NodeDeque deque;
     static int screenTransitionTick;
-    static RgbSprite[][] field_d;
+    static RgbSprite[][] constructionSegsSprites;
     static int[][] field_c;
     static ResourceArchive field_i;
     static int[][] field_h;
@@ -15,7 +15,7 @@ final class NodeDequeCursor {
     public static void c(int param0) {
         field_b = null;
         field_i = null;
-        field_d = (RgbSprite[][]) null;
+        constructionSegsSprites = (RgbSprite[][]) null;
         field_h = (int[][]) null;
         field_e = (int[][]) null;
         if (param0 > 23) {
@@ -62,7 +62,7 @@ final class NodeDequeCursor {
         try {
           this.deque = deque;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kh.<init>(" + (deque != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kh.<init>(" + (deque != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class NodeDequeCursor {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class NodeDequeCursor {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

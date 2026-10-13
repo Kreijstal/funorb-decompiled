@@ -5,7 +5,7 @@ class DualLinkNode extends IntrusiveNode {
     static String field_o;
     static mh field_t;
     static int field_q;
-    static RgbSprite[][] field_l;
+    static RgbSprite[][] jungleCapsSprites;
     static int field_r;
     static String field_m;
     static byte[] field_k;
@@ -106,7 +106,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ class DualLinkNode extends IntrusiveNode {
           field_p = (String) null;
         }
         field_m = null;
-        field_l = (RgbSprite[][]) null;
+        jungleCapsSprites = (RgbSprite[][]) null;
         field_k = null;
         field_i = null;
         field_t = null;
@@ -146,7 +146,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ class DualLinkNode extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

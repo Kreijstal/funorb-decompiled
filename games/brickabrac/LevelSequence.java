@@ -15,9 +15,9 @@ final class LevelSequence {
           return;
         }
         try {
-          td.decodeLevelBytes(brickGroups, this.pack.levelData[this.order[levelIndex % this.period]], levelState, motionPaths, unusedContext, 10792131);
+          VolcanicBackground.decodeLevelBytes(brickGroups, this.pack.levelData[this.order[levelIndex % this.period]], levelState, motionPaths, unusedContext, 10792131);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "oi.G(" + (unusedContext != null ? "{...}" : "null") + ',' + (levelState != null ? "{...}" : "null") + ',' + (motionPaths != null ? "{...}" : "null") + ',' + levelIndex + ',' + obfuscationGuard + ',' + (brickGroups != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oi.G(" + (unusedContext != null ? "{...}" : "null") + ',' + (levelState != null ? "{...}" : "null") + ',' + (motionPaths != null ? "{...}" : "null") + ',' + levelIndex + ',' + obfuscationGuard + ',' + (brickGroups != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class LevelSequence {
         if (na.j((byte) -60)) {
           return true;
         }
-        if (qa.a(param3, param0, (byte) 108, param2)) {
+        if (NinjaBackground.a(param3, param0, (byte) 108, param2)) {
           return true;
         }
         return false;
@@ -122,7 +122,7 @@ final class LevelSequence {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(period).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(period).append(')').toString());
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ga extends IntrusiveNode {
-    static RgbSprite[] field_k;
+    static RgbSprite[] arcticCentreSprites;
     static int field_i;
     static int incomingPacketLength;
     static boolean[] field_l;
@@ -58,16 +58,16 @@ final class ga extends IntrusiveNode {
         int var1 = 0;
         int var1Lifetime1;
         int var1Lifetime2;
-        if (ki.masterSoundGain <= 32) {
+        if (BackgroundScene.masterSoundGain <= 32) {
           h.a(13894, 0);
           var1 = -2 % ((-60 - param0) / 34);
           return;
         }
-        var1Lifetime1 = ki.masterSoundGain % 32;
+        var1Lifetime1 = BackgroundScene.masterSoundGain % 32;
         if (0 == var1Lifetime1) {
           var1Lifetime1 = 32;
         }
-        h.a(13894, ki.masterSoundGain - var1Lifetime1);
+        h.a(13894, BackgroundScene.masterSoundGain - var1Lifetime1);
         var1Lifetime2 = -2 % ((-60 - param0) / 34);
     }
 
@@ -82,11 +82,11 @@ final class ga extends IntrusiveNode {
         if (param0 != 0) {
           ga.a(51);
           field_l = null;
-          field_k = null;
+          arcticCentreSprites = null;
           return;
         }
         field_l = null;
-        field_k = null;
+        arcticCentreSprites = null;
     }
 
     static {

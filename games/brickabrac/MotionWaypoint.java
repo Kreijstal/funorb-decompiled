@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MotionWaypoint extends MovingBody {
-    static RgbSprite field_p;
+    static RgbSprite halloweenMoonSprite;
     static int field_q;
     static mh field_s;
     int durationTicks;
@@ -39,7 +39,7 @@ final class MotionWaypoint extends MovingBody {
           gg.decodedSpriteHeights = null;
           return;
         }
-        field_p = (RgbSprite) null;
+        halloweenMoonSprite = (RgbSprite) null;
         cn.decodedSpriteIndices = (byte[][]) null;
         jh.decodedSpriteWidths = null;
         qp.decodedSpritePalette = null;
@@ -51,10 +51,10 @@ final class MotionWaypoint extends MovingBody {
           super.readBodySnapshot(100, packet);
           this.durationTicks = packet.readUnsignedShort(65280);
           if (obfuscationGuard <= 89) {
-            field_p = (RgbSprite) null;
+            halloweenMoonSprite = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ee.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ee.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -94,14 +94,14 @@ final class MotionWaypoint extends MovingBody {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
     public static void e(int param0) {
         int var1 = -7 / ((param0 - 17) / 34);
         field_s = null;
-        field_p = null;
+        halloweenMoonSprite = null;
         field_r = (boolean[][]) null;
     }
 

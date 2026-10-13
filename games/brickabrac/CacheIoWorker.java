@@ -4,13 +4,13 @@
 final class CacheIoWorker implements Runnable {
     private SecondaryNodeQueue queue;
     static String field_b;
-    static int[] field_i;
-    static RgbSprite[][] field_a;
+    static int[] desertBackgroundColors;
+    static RgbSprite[][] volcanicCapsSprites;
     static String field_e;
     static String[] field_h;
     private boolean shutdownRequested;
     int queuedCount;
-    static int[] field_d;
+    static int[] halloweenBackgroundColors;
     private Thread thread;
 
     final void shutdown(byte obfuscationGuard) {
@@ -87,7 +87,7 @@ final class CacheIoWorker implements Runnable {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(entryId).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(entryId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class CacheIoWorker implements Runnable {
               var7Lifetime1 = -var14 + 3 + (var12 * (2 + (DualLinkDeque.field_d.field_cb - 6)) / (fe.field_pb + 1) - 2);
               if (5 > var13) {
                 ik.field_i[var13].a(var7Lifetime1, var14, var6_int, var9, (byte) 64);
-                dp.field_w[var13].a(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);
+                HalloweenBackground.field_w[var13].a(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);
                 vj.field_a[var13].a(-param5 + (var7Lifetime1 - param5), param5, var10, param2, (byte) 64);
                 wd.field_F[var13].a(-param5 - param5 + var7Lifetime1, param5, var11, -var11 + var9 - param1, (byte) 64);
               } else {
@@ -149,7 +149,7 @@ final class CacheIoWorker implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var6), "kg.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var6), "kg.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -185,7 +185,7 @@ final class CacheIoWorker implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class CacheIoWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -320,22 +320,22 @@ final class CacheIoWorker implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
     public static void b(int param0) {
         field_b = null;
-        field_i = null;
-        field_a = (RgbSprite[][]) null;
+        desertBackgroundColors = null;
+        volcanicCapsSprites = (RgbSprite[][]) null;
         field_h = null;
         if (param0 == 26679) {
-          field_d = null;
+          halloweenBackgroundColors = null;
           field_e = null;
           return;
         }
         field_h = (String[]) null;
-        field_d = null;
+        halloweenBackgroundColors = null;
         field_e = null;
     }
 
@@ -354,15 +354,15 @@ final class CacheIoWorker implements Runnable {
           }
           this.thread = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
         field_b = "Hide game chat";
-        field_i = new int[]{16494651, 27571, 12658477, 26679, 16711935};
+        desertBackgroundColors = new int[]{16494651, 27571, 12658477, 26679, 16711935};
         field_e = "Enter name of player to add to list";
         field_h = new String[16];
-        field_d = new int[]{12658477, 22953, 16494651, 26679, 16711935};
+        halloweenBackgroundColors = new int[]{12658477, 22953, 16494651, 26679, 16711935};
     }
 }

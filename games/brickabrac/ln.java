@@ -39,7 +39,7 @@ final class ln extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class ln extends IntrusiveNode {
           og.field_gc = param0;
           ji.field_a = param6;
           for (var7_int = 0; var7_int < 2; var7_int++) {
-            ip.field_s.addLast(new RasterCacheSurface(960, 480), (byte) 3);
+            JungleBackground.field_s.addLast(new RasterCacheSurface(960, 480), (byte) 3);
           }
           for (var7_intLifetime1 = 0; var7_intLifetime1 < 2; var7_intLifetime1++) {
             cr.field_N.addLast(new RasterCacheSurface(1280, 480), (byte) 3);
@@ -125,7 +125,7 @@ final class ln extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class ln extends IntrusiveNode {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(groupId).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(groupId).append(')').toString());
         }
     }
 

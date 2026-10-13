@@ -86,7 +86,7 @@ final class TooltipSprite extends IntrusiveNode {
           sc.popRaster(-81);
           sf.field_U = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -102,8 +102,8 @@ final class TooltipSprite extends IntrusiveNode {
         if (DirectByteStorage.field_f != null) {
           DirectByteStorage.field_f.f();
         }
-        if (jk.field_w != null) {
-          jk.field_w.f();
+        if (UnderwaterBackground.field_w != null) {
+          UnderwaterBackground.field_w.f();
         }
         if (param0 < 39) {
           TooltipSprite.resendPendingAchievements(-13, -69);
@@ -151,7 +151,7 @@ final class TooltipSprite extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nq.C(" + opcode + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nq.C(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class TooltipSprite extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -219,9 +219,9 @@ final class TooltipSprite extends IntrusiveNode {
           this.y = y;
           this.tooltipText = tooltipText.toLowerCase();
           this.tooltipWidth = 2 * IntKeyIndex.field_b + ob.field_D.measureText(this.tooltipText);
-          this.tooltipHeight = ob.field_D.descent + 2 * ki.field_a + ob.field_D.ascent;
+          this.tooltipHeight = ob.field_D.descent + 2 * BackgroundScene.field_a + ob.field_D.ascent;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nq.<init>(" + x + ',' + y + ',' + (sprite != null ? "{...}" : "null") + ',' + (tooltipText != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nq.<init>(" + x + ',' + y + ',' + (sprite != null ? "{...}" : "null") + ',' + (tooltipText != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -231,7 +231,7 @@ final class TooltipSprite extends IntrusiveNode {
           return;
         }
         if (this.hovered) {
-          hj.a(-IntKeyIndex.field_b + pq.pointerX, -ki.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
+          hj.a(-IntKeyIndex.field_b + pq.pointerX, -BackgroundScene.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
         }
     }
 

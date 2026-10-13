@@ -3,11 +3,11 @@
  */
 final class hn {
     static int field_a;
-    static RgbSprite field_b;
+    static RgbSprite ninjaFarSprite;
 
     public static void a(int param0) {
         int var1 = 125 % ((28 - param0) / 60);
-        field_b = null;
+        ninjaFarSprite = null;
     }
 
     final static boolean b(byte param0) {
@@ -53,7 +53,7 @@ final class hn {
           eq.gameTransport = null;
         }
         if (param0 < 49) {
-          field_b = (RgbSprite) null;
+          ninjaFarSprite = (RgbSprite) null;
           return;
         }
     }
@@ -77,7 +77,7 @@ final class hn {
           CachedArchiveSource.field_n = param0.field_bb;
           uc.e(108);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -10,7 +10,7 @@ final class oa extends mh {
     private mh[] field_Qb;
     static String field_Pb;
     static int field_Ub;
-    static ki field_Sb;
+    static BackgroundScene currentBackground;
     static String field_Tb;
 
     final static void a(String[] args, RgbSprite[][] param1, int param2, String[][] param3, byte[] param4, ResourceArchive param5, RgbSprite[][] param6, ResourceArchive param7, boolean param8, int param9, int[] param10, String[][] param11, ResourceArchive param12, byte[] param13, int param14) {
@@ -117,7 +117,7 @@ final class oa extends mh {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param14).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class oa extends mh {
     }
 
     public static void h(int param0) {
-        field_Sb = null;
+        currentBackground = null;
         field_Pb = null;
         field_Tb = null;
         int var1 = 120 / ((-3 - param0) / 47);
@@ -259,7 +259,7 @@ final class oa extends mh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -317,7 +317,7 @@ final class oa extends mh {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(')').toString());
         }
     }
 

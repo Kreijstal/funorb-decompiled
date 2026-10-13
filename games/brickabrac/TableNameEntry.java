@@ -3,11 +3,11 @@
  */
 final class TableNameEntry {
     String secondaryLabel;
-    static RgbSprite[][] field_e;
+    static RgbSprite[][] desertSegsSprites;
     boolean partitionSeen;
     static String field_g;
-    static RgbSprite field_a;
-    static RgbSprite field_f;
+    static RgbSprite waterSmallSprite;
+    static RgbSprite spaceCharacterSprite;
     static mh field_h;
     String name;
 
@@ -17,9 +17,9 @@ final class TableNameEntry {
         if (param0 >= -51) {
           return;
         }
-        field_e = (RgbSprite[][]) null;
-        field_f = null;
-        field_a = null;
+        desertSegsSprites = (RgbSprite[][]) null;
+        spaceCharacterSprite = null;
+        waterSmallSprite = null;
     }
 
     final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
@@ -67,7 +67,7 @@ final class TableNameEntry {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -35,7 +35,7 @@ final class om extends mh {
     boolean field_Pb;
     int field_kc;
     mh field_mc;
-    static RgbSprite field_fc;
+    static RgbSprite spaceNearSprite;
     static int field_hc;
     mh field_gc;
     mh field_ec;
@@ -149,7 +149,7 @@ final class om extends mh {
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -271,7 +271,7 @@ final class om extends mh {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -282,7 +282,7 @@ final class om extends mh {
           MultiplayerMatch var2 = (MultiplayerMatch) null;
           om.$cfr$intArgs$a$687785aae666(true, -24, 25, true, (PlayerBoard) null, 48, -120, false, (MultiplayerMatch) null);
         }
-        field_fc = null;
+        spaceNearSprite = null;
         field_pc = null;
     }
 
@@ -420,7 +420,7 @@ final class om extends mh {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qb extends ki {
+final class FarmBackground extends BackgroundScene {
     static ResourceArchive field_r;
     static boolean field_u;
     static mh field_x;
@@ -11,37 +11,37 @@ final class qb extends ki {
     static int field_w;
     static String field_t;
 
-    final void a(int param0, byte param1, int param2, int param3, int param4) {
+    final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var6 = null;
-        if (param1 >= -84) {
+        if (obfuscationGuard >= -84) {
           field_v = (mh) null;
         }
-        if (this.b((byte) -122)) {
-          var6 = kd.a(this.field_m, param3, (byte) -36);
-          if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            qf.a(param3, var6, 2, MainMenuScreen.field_w, -13, false);
-            var6.setCacheKeys(this.field_m, param3, (byte) 78);
+        if (this.hasSprites((byte) -122)) {
+          var6 = kd.a(this.sceneId, colorIndex, (byte) -36);
+          if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            qf.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
+            var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          dg.a(-899814320, 306, param2, cr.field_D, var6.sprite, param0, 2, ep.field_b, param4, -13);
+          dg.a(-899814320, 306, destinationX, cr.field_D, var6.sprite, destinationY, 2, ep.field_b, scroll16, -13);
         } else {
-          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, rm.field_d[param3], 22953);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, rm.farmBackgroundColors[colorIndex], 22953);
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4) {
+    final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var7 = null;
-        if (this.b((byte) -106)) {
-          var7 = PowerUp.a(this.field_m, param3, -20777);
-          if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            qf.a(param3, var7, 1, MouseInput.field_f, 0, !param0 ? true : false);
-            var7.setCacheKeys(this.field_m, param3, (byte) 78);
+        if (this.hasSprites((byte) -106)) {
+          var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
+            qf.a(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
+            var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          dg.a(-899814320, 640, param4, LevelPackCard.field_e, var7.sprite, param2, 1, rm.field_f, param1, 0);
+          dg.a(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, rm.farmMidSprite, scroll16, 0);
         } else {
-          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, rm.field_d[param3], 22953);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, rm.farmBackgroundColors[colorIndex], 22953);
         }
-        if (!param0) {
-          this.a((byte) -27, 96, -30, 88);
+        if (!obfuscationGuard) {
+          this.drawPreview((byte) -27, 96, -30, 88);
         }
     }
 
@@ -80,50 +80,50 @@ final class qb extends ki {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    qb(int param0, String param1, String param2, int param3) {
-        super(param0, param1, param2, param3);
+    FarmBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
+        super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
     }
 
-    final boolean b(byte param0) {
+    final boolean hasSprites(byte obfuscationGuard) {
         boolean stackIn_8_0 = false;
-        if (param0 > -91) {
+        if (obfuscationGuard > -91) {
           field_u = true;
         }
-        stackIn_8_0 = (null != LevelPackCard.field_e) && (rm.field_f != null) && (MouseInput.field_f != null) && (null != MultiplayerExitScreen.field_z);
+        stackIn_8_0 = (null != LevelPackCard.farmNearSprite) && (rm.farmMidSprite != null) && (MouseInput.farmFarSprite != null) && (null != MultiplayerExitScreen.farmSmallSprite);
         return stackIn_8_0;
     }
 
-    final boolean a(boolean param0) {
+    final boolean loadSprites(boolean obfuscationGuard) {
         if (!AchievementIcon.field_m.ensureGroupAvailableByName("farm", -28138)) {
           return false;
         }
-        LevelPackCard.field_e = pl.loadRgbSpriteByName("farm", "farm_near", (byte) 103, AchievementIcon.field_m);
-        rm.field_f = pl.loadRgbSpriteByName("farm", "farm_mid", (byte) -63, AchievementIcon.field_m);
-        MouseInput.field_f = pl.loadRgbSpriteByName("farm", "farm_far", (byte) -78, AchievementIcon.field_m);
-        MultiplayerExitScreen.field_z = pl.loadRgbSpriteByName("farm", "farm_small", (byte) 106, AchievementIcon.field_m);
-        if (param0) {
-          qb.g(-29);
+        LevelPackCard.farmNearSprite = pl.loadRgbSpriteByName("farm", "farm_near", (byte) 103, AchievementIcon.field_m);
+        rm.farmMidSprite = pl.loadRgbSpriteByName("farm", "farm_mid", (byte) -63, AchievementIcon.field_m);
+        MouseInput.farmFarSprite = pl.loadRgbSpriteByName("farm", "farm_far", (byte) -78, AchievementIcon.field_m);
+        MultiplayerExitScreen.farmSmallSprite = pl.loadRgbSpriteByName("farm", "farm_small", (byte) 106, AchievementIcon.field_m);
+        if (obfuscationGuard) {
+          FarmBackground.g(-29);
         }
-        cr.field_D = jh.a(0, LevelPackCard.field_e);
-        ep.field_b = jh.a(0, rm.field_f);
-        MainMenuScreen.field_w = jh.a(0, MouseInput.field_f);
+        cr.field_D = jh.a(0, LevelPackCard.farmNearSprite);
+        ep.field_b = jh.a(0, rm.farmMidSprite);
+        MainMenuScreen.field_w = jh.a(0, MouseInput.farmFarSprite);
         return true;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        if (param1 > -1) {
-          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, rm.field_d[param1], 22953);
+    final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
+        if (colorIndex > -1) {
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, rm.farmBackgroundColors[colorIndex], 22953);
         } else {
-          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 7829367, 22953);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 7829367, 22953);
         }
-        if (this.b((byte) -109)) {
-          MultiplayerExitScreen.field_z.drawTransparent(param2, param3);
+        if (this.hasSprites((byte) -109)) {
+          MultiplayerExitScreen.farmSmallSprite.drawTransparent(destinationX, destinationY);
         }
-        int var5 = -18 / ((-28 - param0) / 43);
+        int var5 = -18 / ((-28 - obfuscationGuard) / 43);
     }
 
     final static String[] a(byte param0, String param1, char param2) {
@@ -172,7 +172,7 @@ final class qb extends ki {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class qb extends ki {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 
@@ -278,7 +278,7 @@ final class qb extends ki {
         field_y = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          qb.addExceptionContext((Throwable) null, (String) null);
+          FarmBackground.addExceptionContext((Throwable) null, (String) null);
         }
         field_x = null;
         field_r = null;
@@ -303,7 +303,7 @@ final class qb extends ki {
           AchievementIcon.field_j = 11;
         }
         if (param0 < 105) {
-          qb.f(-80);
+          FarmBackground.f(-80);
         }
         LevelCompleteScreen.field_C = true;
     }

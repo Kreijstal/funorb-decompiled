@@ -172,7 +172,7 @@ final class SecondaryHashTable {
           node.secondaryNext.secondaryPrevious = node;
           node.secondaryKey = key;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "mk.B(" + key + ',' + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mk.B(" + key + ',' + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

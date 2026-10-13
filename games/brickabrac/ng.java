@@ -5,7 +5,7 @@ final class ng {
     static String field_f;
     static int field_b;
     static IndexedSprite[] field_d;
-    static RgbSprite field_a;
+    static RgbSprite spaceFarSprite;
     static String field_e;
     static String field_c;
 
@@ -28,7 +28,7 @@ final class ng {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        spaceFarSprite = null;
         field_d = null;
         field_e = null;
         if (param0 == -49) {

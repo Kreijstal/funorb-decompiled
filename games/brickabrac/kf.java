@@ -90,7 +90,7 @@ final class kf extends k {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(')').toString());
         }
     }
 
@@ -134,7 +134,7 @@ final class kf extends k {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -153,7 +153,7 @@ final class kf extends k {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param1, (byte) 106) == lp.field_xb) {
-            stackIn_3_0 = qb.field_y;
+            stackIn_3_0 = FarmBackground.field_y;
             return stackIn_3_0;
           }
           var3_int = -11 / ((param0 + 16) / 50);
@@ -169,7 +169,7 @@ final class kf extends k {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ final class kf extends k {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class kf extends k {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -323,8 +323,8 @@ final class kf extends k {
           var6[1].canvasWidth = var6[1].width;
           var6[5].canvasHeight = var6[5].height;
           var6[7].canvasWidth = var6[7].width;
-          var6[1] = qb.a(var6[1], false, 8);
-          var6[7] = qb.a(var6[7], false, 8);
+          var6[1] = FarmBackground.a(var6[1], false, 8);
+          var6[7] = FarmBackground.a(var6[7], false, 8);
           var6[3] = k.a(var6[3], 101, 8);
           var6[5] = k.a(var6[5], 89, 8);
           var5 = -92 / ((-45 - param3) / 34);
@@ -352,7 +352,7 @@ final class kf extends k {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 

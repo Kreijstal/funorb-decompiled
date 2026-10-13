@@ -42,7 +42,7 @@ final class ScorePopup extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "ul.D(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ul.D(" + param0 + ')');
         }
     }
 
@@ -69,7 +69,7 @@ final class ScorePopup extends IntrusiveNode {
           dc.field_e.a(param2, !param3 ? true : false, param0, (byte) 22, 1000000, param1);
           int var5_int = 88 / ((-16 - param4) / 38);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ul.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

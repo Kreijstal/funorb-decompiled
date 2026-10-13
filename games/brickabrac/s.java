@@ -3,7 +3,7 @@
  */
 final class s {
     String field_g;
-    static RgbSprite field_d;
+    static RgbSprite arcticNearSprite;
     private int field_b;
     private int field_c;
     float field_e;
@@ -18,7 +18,7 @@ final class s {
           }
           this.a((String) null, param2, param3, param0, -1, 99);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "s.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "s.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -27,7 +27,7 @@ final class s {
         po var4;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param0 > -94) {
-          field_d = (RgbSprite) null;
+          arcticNearSprite = (RgbSprite) null;
         }
         while (this.field_c < this.field_b) {
           var4 = this.field_f[this.field_c];
@@ -62,7 +62,7 @@ final class s {
           this.a(param1, param0, param3, param4, -1, -90);
           int var6_int = -82 / ((73 - param2) / 51);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "s.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "s.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -91,7 +91,7 @@ final class s {
           this.field_b = this.field_b + 1;
           this.field_f[fieldTemp$0] = var9;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "s.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "s.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class s {
     }
 
     final static void b(int param0) {
-        qb.field_v.a(18, 0, 0, -(!vd.field_e ? 0 : 2 + (ec.field_J + 2) + 40) + Ball.field_A.field_Ib, (byte) 64);
+        FarmBackground.field_v.a(18, 0, 0, -(!vd.field_e ? 0 : 2 + (ec.field_J + 2) + 40) + Ball.field_A.field_Ib, (byte) 64);
         GameUiController.field_a.a(18, 0, -42 + Ball.field_A.field_Ib - ec.field_J, 42 + ec.field_J, (byte) 64);
         if (param0 >= 122) {
           IsaacGenerator.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
@@ -136,7 +136,7 @@ final class s {
         RuntimeException var8 = null;
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-72, param4.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, CacheIoWorker.field_d[param2], 22953);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, CacheIoWorker.halloweenBackgroundColors[param2], 22953);
           param3.drawTransparent((-param3.canvasWidth + param4.width) / 2 - 147 / param1, 480 + param5 - param7.canvasHeight);
           param0.b(-(80 / param1) + (param4.width - param0.canvasWidth) / 2, -(201 / param1) + (param4.height + param5) - param0.canvasHeight, 41, 110);
           var8_int = -97 / ((param6 - 54) / 61);
@@ -170,7 +170,7 @@ final class s {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -181,7 +181,7 @@ final class s {
 
     public static void c(int param0) {
         field_a = null;
-        field_d = null;
+        arcticNearSprite = null;
         if (param0 == 4862) {
           return;
         }
@@ -217,7 +217,7 @@ final class s {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

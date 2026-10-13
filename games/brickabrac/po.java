@@ -121,7 +121,7 @@ final class po {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -145,8 +145,8 @@ final class po {
         try {
           var4 = IntArrayRequest.gameplayScreen.match;
           var5 = var4;
-          ec.field_Q = oa.field_Sb;
-          ci.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
+          ec.field_Q = oa.currentBackground;
+          SpaceBackground.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
           TableDataRequest.field_k = IntArrayRequest.gameplayScreen.c(124);
           cb.field_n = IntArrayRequest.gameplayScreen.field_n;
           sk.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
@@ -162,7 +162,7 @@ final class po {
           for (var2Lifetime2 = 0; var2Lifetime2 < sk.field_I; var2Lifetime2++) {
             ArchiveNetworkRequest.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].characterIndex;
           }
-          stackIn_13_0 = !(ci.field_r);
+          stackIn_13_0 = !(SpaceBackground.field_r);
           LevelMetadata.field_p = stackIn_13_0;
           if (!TableDataRequest.field_k) {
             for (var2Lifetime3 = 0; BitPacketBuffer.field_o.length > var2Lifetime3; var2Lifetime3++) {
@@ -171,7 +171,7 @@ final class po {
               LevelMetadata.field_p = stackIn_18_0 | stackIn_19_1;
             }
           }
-          if (ci.field_r) {
+          if (SpaceBackground.field_r) {
             if (cb.field_n) {
               stackIn_25_0 = hm.field_b;
             } else {
@@ -192,7 +192,7 @@ final class po {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "po.A(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "po.A(" + param0 + ')');
         }
     }
 

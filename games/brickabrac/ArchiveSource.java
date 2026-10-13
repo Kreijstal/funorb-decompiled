@@ -35,7 +35,7 @@ abstract class ArchiveSource {
             var8.c(true);
             return true;
           }
-          td.field_w = param0;
+          VolcanicBackground.field_w = param0;
           ik.field_g = jm.field_f;
           tf.field_i = param6;
           fj.field_Qb = param1;
@@ -71,7 +71,7 @@ abstract class ArchiveSource {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param6).append(')').toString());
         }
     }
 

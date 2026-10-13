@@ -5,7 +5,7 @@ final class PowerUpWarning extends IntrusiveNode {
     static int[] field_n;
     int ageTicks;
     int typeId;
-    static RgbSprite field_q;
+    static RgbSprite desertMidSprite;
     static byte[] field_p;
     static int[] field_l;
     static MouseInput mouseInput;
@@ -73,7 +73,7 @@ final class PowerUpWarning extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class PowerUpWarning extends IntrusiveNode {
         field_n = null;
         field_k = null;
         field_p = null;
-        field_q = null;
+        desertMidSprite = null;
     }
 
     final static void a(int param0) {
@@ -100,7 +100,7 @@ final class PowerUpWarning extends IntrusiveNode {
         RuntimeException var1_ref = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = fi.field_w;
+          var5 = ArcticBackground.field_w;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;
@@ -118,7 +118,7 @@ final class PowerUpWarning extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "lj.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "lj.C(" + param0 + ')');
         }
     }
 
@@ -140,7 +140,7 @@ final class PowerUpWarning extends IntrusiveNode {
           if (param0.field_f != 0 ||
             0 != param0.field_d) {
             for (var2_int = 0; mm.field_Sb > var2_int; var2_int++) {
-              var3 = jk.field_s[var2_int];
+              var3 = UnderwaterBackground.field_s[var2_int];
               if (var3.field_c == 2 &&
                 var3.field_f == param0.field_f &&
                 var3.field_d == param0.field_d) {
@@ -167,7 +167,7 @@ final class PowerUpWarning extends IntrusiveNode {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class PowerUpWarning extends IntrusiveNode {
           int var5_int = -82 % ((param3 - 81) / 41);
           MenuScreen.a(param2, param1, param4, param0, true, 5, 1);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

@@ -47,7 +47,7 @@ abstract class MenuScreen extends GameScreen {
           }
           this.layoutButtons(true);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "km.Q(" + (actionIds != null ? "{...}" : "null") + ',' + startIndex + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "km.Q(" + (actionIds != null ? "{...}" : "null") + ',' + startIndex + ')');
         }
     }
 
@@ -136,7 +136,7 @@ abstract class MenuScreen extends GameScreen {
           this.buttonLeft = buttonLeft;
           this.initializeButtons(actionIds, 0);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "km.<init>(" + screenId + ',' + buttonLeft + ',' + buttonRight + ',' + buttonTop + ',' + buttonSpacing + ',' + (actionIds != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "km.<init>(" + screenId + ',' + buttonLeft + ',' + buttonRight + ',' + buttonTop + ',' + buttonSpacing + ',' + (actionIds != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -188,7 +188,7 @@ abstract class MenuScreen extends GameScreen {
         int var7;
         MenuButton[] var8;
         var7 = BrickABrac.field_J ? 1 : 0;
-        IntrusiveHashTable.field_k.e(1);
+        IntrusiveHashTable.field_k.ensureSprites(1);
         var8 = this.buttons;
         var4_ref_q__ = var8;
         for (var5 = 0; var8.length > var5; var5++) {
@@ -276,7 +276,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -646,7 +646,7 @@ abstract class MenuScreen extends GameScreen {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -691,7 +691,7 @@ abstract class MenuScreen extends GameScreen {
             MenuScreen.b(48);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "km.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "km.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

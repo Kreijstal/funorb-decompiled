@@ -77,17 +77,17 @@ final class g extends k {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     final static void submitLevelResult(LevelResultSubmission result, int opcode, byte obfuscationGuard) {
         try {
-          qa.pendingLevelResults.addLast(result, (byte) 3);
+          NinjaBackground.pendingLevelResults.addLast(result, (byte) 3);
           kp.sendLevelResult(opcode, (byte) -99, result);
           int var3_int = -88 % ((obfuscationGuard + 37) / 48);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "g.D(" + (result != null ? "{...}" : "null") + ',' + opcode + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "g.D(" + (result != null ? "{...}" : "null") + ',' + opcode + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class g extends k {
             return stackIn_33_0;
           }
           if (MenuButton.a(var6, 0, var7)) {
-            stackIn_23_0 = fd.field_b;
+            stackIn_23_0 = BackgroundRegistry.field_b;
             return stackIn_23_0;
           }
           if (ll.a(var6, (byte) 125, var7)) {
@@ -148,7 +148,7 @@ final class g extends k {
           if (!ep.a(var6, (byte) 73, var7)) {
             return sc.field_a;
           }
-          stackIn_31_0 = fd.field_b;
+          stackIn_31_0 = BackgroundRegistry.field_b;
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ final class g extends k {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(')').toString());
         }
     }
 
@@ -170,7 +170,7 @@ final class g extends k {
           this.field_p = param1;
           this.field_k = param2;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class g extends k {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -3,13 +3,13 @@
  */
 final class wm {
     static TextFont field_a;
-    static RgbSprite field_b;
+    static RgbSprite waterNearSprite;
     private static String field_z;
 
     public static void a(int param0) {
         field_a = null;
         int var1 = -11 / ((-26 - param0) / 61);
-        field_b = null;
+        waterNearSprite = null;
     }
 
     static {

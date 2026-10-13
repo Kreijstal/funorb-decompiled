@@ -68,7 +68,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -334,7 +334,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         try {
           kp.field_d.insertElementAt(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "op.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "op.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -379,7 +379,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           }
           event.consume();
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "op.keyTyped(" + (event != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "op.keyTyped(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -407,7 +407,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3), "op.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "op.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -417,7 +417,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             pl.keyChangeWriteIndex = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "op.focusLost(" + (event != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "op.focusLost(" + (event != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -54,7 +54,7 @@ final class BoundedFile {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(length).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(length).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class BoundedFile {
         try {
           this.position = this.position + (long)length;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "rn.C(" + offset + ',' + obfuscationGuard + ',' + (data != null ? "{...}" : "null") + ',' + length + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "rn.C(" + offset + ',' + obfuscationGuard + ',' + (data != null ? "{...}" : "null") + ',' + length + ')');
         }
     }
 
@@ -158,7 +158,7 @@ final class BoundedFile {
           }
           this.file.seek(0L);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "rn.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maxLength + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "rn.<init>(" + (path != null ? "{...}" : "null") + ',' + (mode != null ? "{...}" : "null") + ',' + maxLength + ')');
         }
     }
 

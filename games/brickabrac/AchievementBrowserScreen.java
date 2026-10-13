@@ -11,7 +11,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
     private NodeDeque visibleIcons;
     int[] achievementMask;
     private NodeDeque departingIcons;
-    static RgbSprite field_D;
+    static RgbSprite constructionMidSprite;
     private int[] descriptionWidths;
     private NodeDeque[] achievementPages;
     private int pageCount;
@@ -97,7 +97,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           if (var6 == 0) {
             stackIn_20_1 = po.field_c;
           } else {
-            stackIn_20_1 = gi.field_s;
+            stackIn_20_1 = DesertBackground.field_s;
           }
           ((PaletteFont) (Object) stackIn_19_0).drawLeft(stackIn_20_1, 209, 2 * var5 + 246 + 2, 2, -1);
           if (var6 != 0) {
@@ -108,7 +108,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var7 = 246 + 5 * var5 / 2;
           var8 = var7 + var5;
           var9 = var7 - (-(7 * var4) + ob.field_D.ascent);
-          var10 = ob.field_D.wrapText(rd.a(mp.field_bc[var3], new String[]{nl.a(true, true, 0, (long)dp.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
+          var10 = ob.field_D.wrapText(rd.a(mp.field_bc[var3], new String[]{nl.a(true, true, 0, (long)HalloweenBackground.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
           for (var11 = 0; var11 < var10; var11++) {
             ob.field_D.drawLeft(this.descriptionLines[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
@@ -250,7 +250,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -261,7 +261,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         if (param0 >= -92) {
           return;
         }
-        field_D = null;
+        constructionMidSprite = null;
         field_r = null;
         field_s = null;
         field_B = null;
@@ -283,7 +283,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           param9.drawTransparent(-(220 / param8) + (10 * param2 >> 16) + (param1 + (param4 - param9.canvasWidth) / 2), -param9.canvasHeight + (480 + 37 / param8));
           param0.drawTransparent(param1 + ((param4 - param0.canvasWidth) / 2 + (20 * param2 >> 16)) - 5 / param8, 480 - param0.canvasHeight);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "af.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "af.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');
         }
     }
 
@@ -300,13 +300,13 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
           this.descriptionWidths = new int[]{373};
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "af.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "af.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ')');
         }
     }
 
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
         if (obfuscationGuard != 1) {
-          field_D = (RgbSprite) null;
+          constructionMidSprite = (RgbSprite) null;
         }
         return this.buttonTop;
     }
@@ -432,7 +432,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -465,7 +465,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

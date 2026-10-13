@@ -97,7 +97,7 @@ class PacketBuffer extends IntrusiveNode {
           }
           this.writeBytes(var8, obfuscationGuard - 19776, 0, var8.length);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wq.FA(" + (exponent != null ? "{...}" : "null") + ',' + (modulus != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wq.FA(" + (exponent != null ? "{...}" : "null") + ',' + (modulus != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -159,7 +159,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.data[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wq.OA(" + (text != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wq.OA(" + (text != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -311,7 +311,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(sourceOffset).append(',').append(length).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(sourceOffset).append(',').append(length).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
         }
     }
 
@@ -469,7 +469,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.data[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wq.BA(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wq.BA(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -512,7 +512,7 @@ class PacketBuffer extends IntrusiveNode {
           var7Lifetime1 = 103 / ((obfuscationGuard + 1) / 55);
           this.position = var5_int;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wq.O(" + (key != null ? "{...}" : "null") + ',' + startOffset + ',' + endOffset + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wq.O(" + (key != null ? "{...}" : "null") + ',' + startOffset + ',' + endOffset + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -599,7 +599,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -691,7 +691,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -821,7 +821,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.data = data;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wq.<init>(" + (data != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wq.<init>(" + (data != null ? "{...}" : "null") + ')');
         }
     }
 

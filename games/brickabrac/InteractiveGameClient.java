@@ -85,7 +85,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         }
         if (!um.field_t &&
           !og.h(-26090)) {
-          ai.a((byte) 24, 100.0f, qm.field_e);
+          ParisBackground.a((byte) 24, 100.0f, qm.field_e);
           kn.a(true, var2);
           return;
         }
@@ -134,7 +134,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             kp.field_d = new Vector();
             KeyboardInput.a((vc) (this), 0);
           } catch (RuntimeException runtimeException) {
-            throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sa.HB(" + obfuscationGuard + ',' + (lifecycle != null ? "{...}" : "null") + ')');
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sa.HB(" + obfuscationGuard + ',' + (lifecycle != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -152,7 +152,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           int var8 = -69 / ((param6 + 85) / 40);
           nn.field_g.drawCentered(param2, param3, var7_int + nn.field_g.capHeight, param5, -1);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sa.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sa.NB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -351,7 +351,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
 
     abstract boolean q(int param0);
 
-    final static void a(byte param0, RgbSprite param1, int param2, int param3, RgbSprite param4, RgbSprite param5, int param6, int param7, int param8, int param9) {
+    final static void drawParallaxLayers(byte obfuscationGuard, RgbSprite nearSprite, int destinationY, int scaleDivisor, RgbSprite midSprite, RgbSprite farSprite, int scroll16, int viewportWidth, int verticalOffset, int destinationX) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -363,37 +363,37 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         RuntimeException var10 = null;
         RgbSprite var11 = null;
         try {
-          param5.drawAt((param6 * 5 >> 16) + ((-param5.canvasWidth + param7) / 2 + param9), param2);
-          param4.drawTransparent(param9 + (param7 - param4.canvasWidth) / 2 - (-(param6 * 10 >> 16) - 10 / param3), 480 + (param8 + (param2 - param4.canvasHeight)));
-          if (param0 <= 79) {
+          farSprite.drawAt((scroll16 * 5 >> 16) + ((-farSprite.canvasWidth + viewportWidth) / 2 + destinationX), destinationY);
+          midSprite.drawTransparent(destinationX + (viewportWidth - midSprite.canvasWidth) / 2 - (-(scroll16 * 10 >> 16) - 10 / scaleDivisor), 480 + (verticalOffset + (destinationY - midSprite.canvasHeight)));
+          if (obfuscationGuard <= 79) {
             var11 = (RgbSprite) null;
-            InteractiveGameClient.a((byte) 75, (RgbSprite) null, -80, -107, (RgbSprite) null, (RgbSprite) null, 10, 97, -30, 44);
+            InteractiveGameClient.drawParallaxLayers((byte) 75, (RgbSprite) null, -80, -107, (RgbSprite) null, (RgbSprite) null, 10, 97, -30, 44);
           }
-          param1.drawTransparent(10 / param3 + (param9 - (-((-param1.canvasWidth + param7) / 2) - (20 * param6 >> 16))), 480 + (param2 + param8 - param1.canvasHeight));
+          nearSprite.drawTransparent(10 / scaleDivisor + (destinationX - (-((-nearSprite.canvasWidth + viewportWidth) / 2) - (20 * scroll16 >> 16))), 480 + (destinationY + verticalOffset - nearSprite.canvasHeight));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
           stackIn_6_0 = var10;
-          stackIn_6_1 = new StringBuilder().append("sa.MB(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("sa.MB(").append(obfuscationGuard).append(',');
+          if (nearSprite == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(destinationY).append(',').append(scaleDivisor).append(',');
+          if (midSprite == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param5 == null) {
+          if (farSprite == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(scroll16).append(',').append(viewportWidth).append(',').append(verticalOffset).append(',').append(destinationX).append(')').toString());
         }
     }
 
@@ -480,7 +480,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             var3 = 0;
           }
           if (var3 != 0) {
-            qb.g(115);
+            FarmBackground.g(115);
           }
         }
     }

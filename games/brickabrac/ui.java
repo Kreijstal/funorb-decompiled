@@ -98,7 +98,7 @@ final class ui {
           } else {
             stackIn_37_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -110,10 +110,10 @@ final class ui {
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = (LevelResultSubmission) (qa.pendingLevelResults.first(-14));
+          var4 = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.first(-14));
           while (var4 != null) {
             kp.sendLevelResult(param0, (byte) 112, var4);
-            var4 = (LevelResultSubmission) (qa.pendingLevelResults.next((byte) 116));
+            var4 = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.next((byte) 116));
           }
           var5 = (IntArrayRequest) (ob.pendingIntArrayRequests.first(-61));
           while (var5 != null) {
@@ -127,7 +127,7 @@ final class ui {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "ui.F(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "ui.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -171,10 +171,10 @@ final class ui {
               ne.a(param1, "document.cookie=\"" + var5Lifetime6 + "\"", 5797);
             } catch (Throwable throwable) {
             }
-            td.a(false, param1);
+            VolcanicBackground.a(false, param1);
             int var3_int = -23 / ((0 - param0) / 43);
           } catch (RuntimeException runtimeException) {
-            throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

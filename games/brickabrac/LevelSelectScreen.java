@@ -186,7 +186,7 @@ final class LevelSelectScreen extends MenuScreen {
           }
         }
         this.previewPaths.clear((byte) -78);
-        td.decodeLevelBytes(this.previewBrickGroups, this.pack.levelData[levelIndex], this.previewState, this.previewPaths, this.field_s, 10792131);
+        VolcanicBackground.decodeLevelBytes(this.previewBrickGroups, this.pack.levelData[levelIndex], this.previewState, this.previewPaths, this.field_s, 10792131);
         NanoGameClock.attachBrickMotionPaths(this.previewBrickGroups, (byte) 35, this.previewPaths, false);
         this.previewTop256 = 122880;
         this.previewLeft256 = 163840;
@@ -245,7 +245,7 @@ final class LevelSelectScreen extends MenuScreen {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class LevelSelectScreen extends MenuScreen {
 
     final static String d(boolean param0) {
         if (jm.field_f == ik.field_g) {
-          return td.field_w;
+          return VolcanicBackground.field_w;
         }
         if (ka.field_l == jm.field_f) {
           return om.field_pc;
@@ -317,7 +317,7 @@ final class LevelSelectScreen extends MenuScreen {
           this.layoutButtons(true);
           this.levelList = new LevelList(20, 0, 1, (MenuScreen) (this), this.buttons[1], this.pack);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ud.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ',' + packIndex + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ud.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ',' + packIndex + ')');
         }
     }
 
@@ -382,7 +382,7 @@ final class LevelSelectScreen extends MenuScreen {
           packet.appendCrc32(3, payloadStart);
           packet.backfillByteLength((byte) 117, packet.position - payloadStart);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ud.C(" + opcode + ',' + (submission != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ud.C(" + opcode + ',' + (submission != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

@@ -68,7 +68,7 @@ final class nj extends IntrusiveNode {
               }
               else {
                 if (this.field_p == 0) {
-                  this.field_p = ip.field_r.nextBoundedInt(-37880252, 3) - 1;
+                  this.field_p = JungleBackground.field_r.nextBoundedInt(-37880252, 3) - 1;
                 } else {
                   this.field_p = -this.field_p;
                 }
@@ -144,15 +144,15 @@ final class nj extends IntrusiveNode {
         this.field_w = this.field_H * this.field_L;
         this.field_s = param2 << 8;
         this.field_N = param3 << 8;
-        this.field_K = 30 + ip.field_r.nextBoundedInt(-37880252, 30);
-        this.field_u = 100 + ip.field_r.nextBoundedInt(-37880252, 30);
-        this.field_I = ip.field_r.nextBoundedInt(-37880252, 5) + 12;
-        this.field_B = 19 + ip.field_r.nextBoundedInt(-37880252, 3);
-        this.field_q = ip.field_r.nextBoundedInt(-37880252, 10) + 25;
-        this.field_t = ip.field_r.nextBoundedInt(-37880252, 15) + 80;
-        this.field_o = 2 * ip.field_r.nextBoundedInt(-37880252, this.field_u);
-        this.field_O = ip.field_r.nextBoundedInt(-37880252, 2) << 1;
-        this.field_p = ip.field_r.nextBoundedInt(-37880252, 3) - 1;
+        this.field_K = 30 + JungleBackground.field_r.nextBoundedInt(-37880252, 30);
+        this.field_u = 100 + JungleBackground.field_r.nextBoundedInt(-37880252, 30);
+        this.field_I = JungleBackground.field_r.nextBoundedInt(-37880252, 5) + 12;
+        this.field_B = 19 + JungleBackground.field_r.nextBoundedInt(-37880252, 3);
+        this.field_q = JungleBackground.field_r.nextBoundedInt(-37880252, 10) + 25;
+        this.field_t = JungleBackground.field_r.nextBoundedInt(-37880252, 15) + 80;
+        this.field_o = 2 * JungleBackground.field_r.nextBoundedInt(-37880252, this.field_u);
+        this.field_O = JungleBackground.field_r.nextBoundedInt(-37880252, 2) << 1;
+        this.field_p = JungleBackground.field_r.nextBoundedInt(-37880252, 3) - 1;
         this.field_D = new int[this.field_w][this.field_u];
         this.field_y = new int[this.field_w];
         this.field_n = new int[this.field_w];
@@ -162,23 +162,23 @@ final class nj extends IntrusiveNode {
         this.field_r = new int[this.field_w];
         this.field_m = new int[this.field_w][this.field_u];
         int var5 = 0;
-        int var6 = ip.field_r.nextBoundedInt(-37880252, 64) + 192;
+        int var6 = JungleBackground.field_r.nextBoundedInt(-37880252, 64) + 192;
         int var7 = 8192 / this.field_H;
         int var8 = 0;
         for (var11 = 0; this.field_L > var11; var11++) {
-          var9 = ip.field_r.nextBoundedInt(-37880252, eb.field_q.length);
-          var10 = ip.field_r.nextBoundedInt(-37880252, eb.field_q.length);
+          var9 = JungleBackground.field_r.nextBoundedInt(-37880252, eb.field_q.length);
+          var10 = JungleBackground.field_r.nextBoundedInt(-37880252, eb.field_q.length);
           for (var12 = 0; this.field_H > var12; var12++) {
-            var8 = ip.field_r.nextBoundedInt(-37880252, 800);
-            this.field_A[var5] = this.field_s + (ip.field_r.nextBoundedInt(-37880252, 4) - 2 << 8);
-            this.field_C[var5] = this.field_N + (-2 + ip.field_r.nextBoundedInt(-37880252, 4) << 8);
+            var8 = JungleBackground.field_r.nextBoundedInt(-37880252, 800);
+            this.field_A[var5] = this.field_s + (JungleBackground.field_r.nextBoundedInt(-37880252, 4) - 2 << 8);
+            this.field_C[var5] = this.field_N + (-2 + JungleBackground.field_r.nextBoundedInt(-37880252, 4) << 8);
             this.field_r[var5] = (InteractiveGameClient.sine8192(var12 * var7 + var8, -4097) >> 8) * var6 >> 8;
             this.field_y[var5] = var6 * (BrickABrac.c(2048, var8 + var12 * var7) >> 8) >> 8;
             this.field_n[var5] = var9;
             this.field_P[var5] = var10;
             var5++;
           }
-          var6 = var6 + (128 + ip.field_r.nextBoundedInt(-37880252, 64));
+          var6 = var6 + (128 + JungleBackground.field_r.nextBoundedInt(-37880252, 64));
         }
         this.field_E = 165 / (this.field_u - this.field_t);
         this.field_i = 64 / (this.field_u - this.field_t);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveHashTable {
-    static ki field_k;
+    static BackgroundScene field_k;
     private IntrusiveNode lookupCursor;
     static int currentPacketOpcode;
     static th field_o;
@@ -71,7 +71,7 @@ final class IntrusiveHashTable {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class IntrusiveHashTable {
           node.next.previous = node;
           node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "si.H(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "si.H(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ',' + key + ')');
         }
     }
 

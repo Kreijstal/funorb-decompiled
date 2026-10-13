@@ -83,8 +83,8 @@ final class bm {
                       } else {
                         stackIn_22_0 = var15 >> var7;
                       }
-                      var16 = -stackIn_22_0 + (fi.field_w.length - 1);
-                      var17 = fi.field_w[var16];
+                      var16 = -stackIn_22_0 + (ArcticBackground.field_w.length - 1);
+                      var17 = ArcticBackground.field_w[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -94,14 +94,14 @@ final class bm {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = fi.field_w[var16];
+                          var17 = ArcticBackground.field_w[var16];
                           continue;
                         }
                         stackIn_32_0Lifetime1 = var16 << 4;
                         stackIn_32_1Lifetime1 = var17;
                         var18 = stackIn_32_0Lifetime1 + stackIn_32_1Lifetime1;
                         ek.field_jb[var18] = var8;
-                        fi.field_w[var16] = var17 + 1;
+                        ArcticBackground.field_w[var16] = var17 + 1;
                         if (param4.field_A > 0 &&
                           param4.field_p != null) {
                           dupTemp$0 = param4.field_p[var8];
@@ -150,7 +150,7 @@ final class bm {
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_58_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class bm {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class bm {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -303,7 +303,7 @@ final class bm {
               if (stackIn_74_0 != var6.eventCode) {
                 if (var6.eventCode != 0) {
                   if (var6.eventCode == 2) {
-                    var7_ref = fr.field_e[oo.field_w.nextBoundedInt(-37880252, fr.field_e.length)];
+                    var7_ref = fr.field_e[ChocolateBackground.field_w.nextBoundedInt(-37880252, fr.field_e.length)];
                   } else {
                     if (var6.eventCode != 4) {
                       if (var6.eventCode == 5) {
@@ -328,7 +328,7 @@ final class bm {
                                     var7_ref = ta.uiSounds[12];
                                   } else {
                                     if (var6.eventCode == 11) {
-                                      var7_ref = NanoGameClock.field_p[oo.field_w.nextBoundedInt(-37880252, NanoGameClock.field_p.length)];
+                                      var7_ref = NanoGameClock.field_p[ChocolateBackground.field_w.nextBoundedInt(-37880252, NanoGameClock.field_p.length)];
                                     } else {
                                       if (var6.eventCode == 12) {
                                         var7_ref = ta.uiSounds[13];
@@ -356,13 +356,13 @@ final class bm {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7_ref = mh.field_ob[oo.field_w.nextBoundedInt(-37880252, mh.field_ob.length)];
+                  var7_ref = mh.field_ob[ChocolateBackground.field_w.nextBoundedInt(-37880252, mh.field_ob.length)];
                 }
               } else {
-                if (oa.field_Sb != null) {
-                  var8_ref_oe__ = oa.field_Sb.a(0);
-                  if (0 < oa.field_Sb.field_l) {
-                    var7_ref = var8_ref_oe__[oo.field_w.nextBoundedInt(-37880252, oa.field_Sb.field_l)];
+                if (oa.currentBackground != null) {
+                  var8_ref_oe__ = oa.currentBackground.pollSoundEffects(0);
+                  if (0 < oa.currentBackground.loadedSoundCount) {
+                    var7_ref = var8_ref_oe__[ChocolateBackground.field_w.nextBoundedInt(-37880252, oa.currentBackground.loadedSoundCount)];
                   }
                 }
               }
@@ -392,7 +392,7 @@ final class bm {
           if ((var8 - var9) > var7) {
             var7 = var8 - var9;
           }
-          var6_ref.setVolume(ki.masterSoundGain * var7 / 256);
+          var6_ref.setVolume(BackgroundScene.masterSoundGain * var7 / 256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -404,7 +404,7 @@ final class bm {
           } else {
             stackIn_90_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(')').toString());
         }
     }
 
@@ -426,28 +426,28 @@ final class bm {
         RuntimeException var7 = null;
         try {
           ln.a(param6, param4, param0, param5, param1, param2 ^ -24870, param3);
-          fd.field_d[1] = (ki) ((Object) new fi(1, "BaB_arctic", "BaB_block_arctic", 6));
-          fd.field_d[2] = (ki) ((Object) new oo(2, "BaB_chocolate", "BaB_block_chocolate", 8));
-          fd.field_d[3] = (ki) ((Object) new sn(3, "BaB_construction", "BaB_block_construction", 8));
-          fd.field_d[4] = (ki) ((Object) new gi(4, "BaB_desert", "BaB_block_desert", 4));
-          fd.field_d[6] = (ki) ((Object) new ip(6, "BaB_jungle", "BaB_block_jungle", 4));
-          fd.field_d[7] = (ki) ((Object) new ai(7, "BaB_city_paris", "BaB_block_city", 5));
-          fd.field_d[8] = (ki) ((Object) new ci(8, "BaB_space", "BaB_block_space", 8));
-          fd.field_d[9] = (ki) ((Object) new td(9, "BaB_volcano", "BaB_block_volcano", 6));
-          fd.field_d[10] = (ki) ((Object) new jk(10, "BaB_underthesea", "BaB_block_underwater", 5));
+          BackgroundRegistry.scenes[1] = (BackgroundScene) ((Object) new ArcticBackground(1, "BaB_arctic", "BaB_block_arctic", 6));
+          BackgroundRegistry.scenes[2] = (BackgroundScene) ((Object) new ChocolateBackground(2, "BaB_chocolate", "BaB_block_chocolate", 8));
+          BackgroundRegistry.scenes[3] = (BackgroundScene) ((Object) new ConstructionBackground(3, "BaB_construction", "BaB_block_construction", 8));
+          BackgroundRegistry.scenes[4] = (BackgroundScene) ((Object) new DesertBackground(4, "BaB_desert", "BaB_block_desert", 4));
+          BackgroundRegistry.scenes[6] = (BackgroundScene) ((Object) new JungleBackground(6, "BaB_jungle", "BaB_block_jungle", 4));
+          BackgroundRegistry.scenes[7] = (BackgroundScene) ((Object) new ParisBackground(7, "BaB_city_paris", "BaB_block_city", 5));
+          BackgroundRegistry.scenes[8] = (BackgroundScene) ((Object) new SpaceBackground(8, "BaB_space", "BaB_block_space", 8));
+          BackgroundRegistry.scenes[9] = (BackgroundScene) ((Object) new VolcanicBackground(9, "BaB_volcano", "BaB_block_volcano", 6));
+          BackgroundRegistry.scenes[10] = (BackgroundScene) ((Object) new UnderwaterBackground(10, "BaB_underthesea", "BaB_block_underwater", 5));
           boolean decompiledSharedTail0 = !(!LevelPackCard.hasFeatureBit(0, param2 ^ -24881));
           if (!decompiledSharedTail0) {
-            fd.field_d[5] = (ki) ((Object) new qb(5, "BaB_farmyard", "BaB_block_farmyard", 7));
+            BackgroundRegistry.scenes[5] = (BackgroundScene) ((Object) new FarmBackground(5, "BaB_farmyard", "BaB_block_farmyard", 7));
             decompiledSharedTail0 = (BrickABrac.field_J);
           }
           if (decompiledSharedTail0) {
-            fd.field_d[5] = (ki) ((Object) new dp(5, "BaB_halloween", "BaB_block_halloween", 8));
+            BackgroundRegistry.scenes[5] = (BackgroundScene) ((Object) new HalloweenBackground(5, "BaB_halloween", "BaB_block_halloween", 8));
           }
           if (param2 != 24876) {
             bm.a((byte) 96);
           }
-          fd.field_d[11] = (ki) ((Object) new qa(11, "BAB_ninja", "BaB_block_ninja", 7));
-          sk.field_H = 11;
+          BackgroundRegistry.scenes[11] = (BackgroundScene) ((Object) new NinjaBackground(11, "BAB_ninja", "BaB_block_ninja", 7));
+          sk.pendingMusicLoads = 11;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -489,7 +489,7 @@ final class bm {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -502,7 +502,7 @@ final class bm {
           int var1_int = -21 / ((param0 + 44) / 60);
           field_a = (byte[][][]) null;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bm.F(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bm.F(" + param0 + ')');
         }
     }
 

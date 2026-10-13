@@ -7,7 +7,7 @@ final class hc {
     static int field_h;
     static boolean field_c;
     static int field_f;
-    static RgbSprite field_g;
+    static RgbSprite ninjaSmallSprite;
     static String field_b;
     static int[] field_e;
 
@@ -88,7 +88,7 @@ final class hc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -100,7 +100,7 @@ final class hc {
         if (param0 >= -59) {
           field_c = true;
         }
-        field_g = null;
+        ninjaSmallSprite = null;
     }
 
     final static void b(int param0) {
@@ -120,7 +120,7 @@ final class hc {
           }
           c.cyclesDue = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ')');
         }
     }
 
@@ -282,17 +282,17 @@ final class hc {
           vb.field_K.a((byte) -72, DualLinkNode.field_t);
           var16 = cr.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
           ce.field_b = new br(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.field_a);
-          fi.field_s = new mh(0L, DualLinkNode.field_t);
-          fi.field_s.field_E = 1;
-          fi.field_s.field_ub = 1;
-          fi.field_s.field_N = 1;
-          fi.field_s.field_Gb = var16;
-          fi.field_s.field_Jb = var13;
-          fi.field_s.field_rb = 1;
-          fi.field_s.field_D = cr.loadRgbSpritesByName("lobby", param3, "button_mouseheld", 2);
-          fi.field_s.field_pb = cr.loadRgbSpritesByName("lobby", param3, "button_active", 2);
-          fi.field_s.field_Ab = cr.loadRgbSpritesByName("lobby", param3, "button_disabled", 2);
-          fi.field_s.field_S = 1;
+          ArcticBackground.field_s = new mh(0L, DualLinkNode.field_t);
+          ArcticBackground.field_s.field_E = 1;
+          ArcticBackground.field_s.field_ub = 1;
+          ArcticBackground.field_s.field_N = 1;
+          ArcticBackground.field_s.field_Gb = var16;
+          ArcticBackground.field_s.field_Jb = var13;
+          ArcticBackground.field_s.field_rb = 1;
+          ArcticBackground.field_s.field_D = cr.loadRgbSpritesByName("lobby", param3, "button_mouseheld", 2);
+          ArcticBackground.field_s.field_pb = cr.loadRgbSpritesByName("lobby", param3, "button_active", 2);
+          ArcticBackground.field_s.field_Ab = cr.loadRgbSpritesByName("lobby", param3, "button_disabled", 2);
+          ArcticBackground.field_s.field_S = 1;
           eh.field_n = new mh(0L, DualLinkNode.field_t);
           eh.field_n.field_S = 1;
           eh.field_n.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
@@ -300,8 +300,8 @@ final class hc {
           eh.field_n.field_pb = var14;
           hd.field_c = new mh(0L, (mh) null);
           hd.field_c.field_Jb = na.a(false, 1127256, 3, 1856141, 206, -1);
-          qb.field_x = new mh(0L, (mh) null);
-          qb.field_x.field_Jb = na.a(false, 6052956, 3, 11579568, 290, -1);
+          FarmBackground.field_x = new mh(0L, (mh) null);
+          FarmBackground.field_x.field_Jb = na.a(false, 6052956, 3, 11579568, 290, -1);
           fm.field_b = new mh(0L, var15);
           fm.field_b.field_rb = 1;
           fm.field_b.field_N = 1;
@@ -372,17 +372,17 @@ final class hc {
           RankingsScreen.field_s.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
           RankingsScreen.field_s.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseheld", 2), (byte) -120);
           RankingsScreen.field_s.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_disabled", 2), (byte) -123);
-          oo.field_u = new mh(0L, (mh) null);
-          oo.field_u.field_wb = pl.loadRgbSpriteByName("lobby", "upbutton", (byte) -90, param3);
-          oo.field_u.field_T = pl.loadRgbSpriteByName("lobby", "upbutton_mouseover", (byte) -125, param3);
-          oo.field_u.field_tb = pl.loadRgbSpriteByName("lobby", "upbutton_mouseheld", (byte) 125, param3);
-          oo.field_u.field_Hb = pl.loadRgbSpriteByName("lobby", "upbutton_disabled", (byte) -114, param3);
+          ChocolateBackground.field_u = new mh(0L, (mh) null);
+          ChocolateBackground.field_u.field_wb = pl.loadRgbSpriteByName("lobby", "upbutton", (byte) -90, param3);
+          ChocolateBackground.field_u.field_T = pl.loadRgbSpriteByName("lobby", "upbutton_mouseover", (byte) -125, param3);
+          ChocolateBackground.field_u.field_tb = pl.loadRgbSpriteByName("lobby", "upbutton_mouseheld", (byte) 125, param3);
+          ChocolateBackground.field_u.field_Hb = pl.loadRgbSpriteByName("lobby", "upbutton_disabled", (byte) -114, param3);
           MessageScreen.field_s = new mh(0L, (mh) null);
           MessageScreen.field_s.field_wb = pl.loadRgbSpriteByName("lobby", "downbutton", (byte) 99, param3);
           MessageScreen.field_s.field_T = pl.loadRgbSpriteByName("lobby", "downbutton_mouseover", (byte) -109, param3);
           MessageScreen.field_s.field_tb = pl.loadRgbSpriteByName("lobby", "downbutton_mouseheld", (byte) 97, param3);
           MessageScreen.field_s.field_Hb = pl.loadRgbSpriteByName("lobby", "downbutton_disabled", (byte) 104, param3);
-          ic.field_c = new fj(0L, oo.field_u, MessageScreen.field_s, kb.field_Vb, RankingsScreen.field_s);
+          ic.field_c = new fj(0L, ChocolateBackground.field_u, MessageScreen.field_s, kb.field_Vb, RankingsScreen.field_s);
           rq.field_b = new hj(0L, (mh) null, am.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -413,7 +413,7 @@ final class hc {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
         }
     }
 

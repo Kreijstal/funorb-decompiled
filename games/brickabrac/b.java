@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class b {
-    static RgbSprite[] field_b;
+    static RgbSprite[] spaceLeverSprites;
     static int field_a;
     static int field_c;
 
@@ -16,12 +16,12 @@ final class b {
           param1.removeFocusListener(PowerUpWarning.mouseInput);
           kb.liveHeldButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "b.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "b.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public static void a(boolean param0) {
-        field_b = null;
+        spaceLeverSprites = null;
         if (!param0) {
           field_a = 50;
         }

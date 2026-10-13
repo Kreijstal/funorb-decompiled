@@ -5,8 +5,8 @@ abstract class GameClock {
     static int field_d;
     static String field_h;
     static RgbSprite[] field_f;
-    static RgbSprite field_e;
-    static RgbSprite field_a;
+    static RgbSprite halloweenFarSprite;
+    static RgbSprite chocolateSmallNearSprite;
     static int field_g;
     static RectangleBody field_c;
     static int field_b;
@@ -90,11 +90,11 @@ abstract class GameClock {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        chocolateSmallNearSprite = null;
         field_f = null;
         field_c = null;
         field_h = null;
-        field_e = null;
+        halloweenFarSprite = null;
         int var1 = 25 % ((param0 + 34) / 58);
     }
 
@@ -130,7 +130,7 @@ abstract class GameClock {
               }
               var3 = var10 + "settings";
               var4 = (String) (ne.a("getcookies", -125, param1));
-              var5 = qb.a((byte) 123, var4, ';');
+              var5 = FarmBackground.a((byte) 123, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&
@@ -158,7 +158,7 @@ abstract class GameClock {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -170,7 +170,7 @@ abstract class GameClock {
     final static void b(byte param0) {
         kd.field_d = new String[rg.field_a];
         kd.field_d[18] = ta.field_c;
-        kd.field_d[4] = fd.field_a;
+        kd.field_d[4] = BackgroundRegistry.field_a;
         kd.field_d[16] = oj.field_o;
         kd.field_d[21] = br.field_Rb;
         kd.field_d[5] = k.field_i;

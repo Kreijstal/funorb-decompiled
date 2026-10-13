@@ -6,7 +6,7 @@ final class LevelResultSubmission extends IntrusiveNode {
     int resultWordFour;
     int levelIndex;
     int packId;
-    static RgbSprite field_m;
+    static RgbSprite spaceMidSprite;
     int resultWordThree;
     static String field_j;
     int resultWordTwo;
@@ -25,7 +25,7 @@ final class LevelResultSubmission extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "pn.D(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "pn.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               if (0 == var6) {
                 if (null == o.field_e &&
                   th.field_d) {
-                  var4 = "[" + fi.field_u + "] ";
+                  var4 = "[" + ArcticBackground.field_u + "] ";
                 }
                 if (null != o.field_e) {
                   var6 = 1;
@@ -149,7 +149,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                 }
               }
             }
-            na.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, ki.field_i[var6]);
+            na.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, BackgroundScene.field_i[var6]);
             if (!MatchResultScreen.field_s) {
               ap.field_e.field_kb = false;
             }
@@ -162,13 +162,13 @@ final class LevelResultSubmission extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) (var1), "pn.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) (var1), "pn.B(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
         try {
-          field_m = null;
+          spaceMidSprite = null;
           field_s = null;
           field_i = null;
           field_q = null;
@@ -178,7 +178,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             LevelResultSubmission.a(-11);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pn.C(" + param0 + ')');
         }
     }
 
@@ -192,12 +192,12 @@ final class LevelResultSubmission extends IntrusiveNode {
           if (param0 > -4) {
             LevelResultSubmission.c(104);
           }
-          jk.field_s = new gb[param1 * 15];
+          UnderwaterBackground.field_s = new gb[param1 * 15];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "pn.A(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "pn.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -210,7 +210,7 @@ final class LevelResultSubmission extends IntrusiveNode {
           this.resultWordThree = resultWordThree;
           this.resultWordFour = resultWordFour;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pn.<init>(" + packId + ',' + levelIndex + ',' + resultWordOne + ',' + resultWordTwo + ',' + resultWordThree + ',' + resultWordFour + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pn.<init>(" + packId + ',' + levelIndex + ',' + resultWordOne + ',' + resultWordTwo + ',' + resultWordThree + ',' + resultWordFour + ')');
         }
     }
 

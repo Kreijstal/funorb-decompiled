@@ -10,7 +10,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegate = delegate;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "od.<init>(" + (delegate != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "od.<init>(" + (delegate != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -18,7 +18,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegate.paint(graphics);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "od.paint(" + (graphics != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "od.paint(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegate.update(graphics);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "od.update(" + (graphics != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "od.update(" + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -155,7 +155,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             return true;
           }
           if (character != 0) {
-            var6 = ai.cp1252Extensions;
+            var6 = ParisBackground.cp1252Extensions;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {
@@ -174,7 +174,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "od.D(" + character + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "od.D(" + character + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

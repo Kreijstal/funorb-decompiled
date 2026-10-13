@@ -4,15 +4,15 @@
 final class rm implements bp {
     static String field_b;
     static mh field_a;
-    static RgbSprite field_f;
-    static int[] field_d;
+    static RgbSprite farmMidSprite;
+    static int[] farmBackgroundColors;
     static String field_c;
     static String field_e;
 
     public static void a(int param0) {
         field_a = null;
-        field_d = null;
-        field_f = null;
+        farmBackgroundColors = null;
+        farmMidSprite = null;
         field_e = null;
         field_b = null;
         if (param0 < -2) {
@@ -56,7 +56,7 @@ final class rm implements bp {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -69,7 +69,7 @@ final class rm implements bp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 16711935) {
-            field_d = (int[]) null;
+            farmBackgroundColors = (int[]) null;
           }
           stackIn_3_0 = new ac(param0);
           return stackIn_3_0;
@@ -83,13 +83,13 @@ final class rm implements bp {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_b = "Withdraw request to join <%0>'s game";
-        field_d = new int[]{12658477, 22953, 16494651, 26679, 16711935};
+        farmBackgroundColors = new int[]{12658477, 22953, 16494651, 26679, 16711935};
         field_c = "Your rating is <%0>";
         field_e = "(<%0>/<%1>)";
     }

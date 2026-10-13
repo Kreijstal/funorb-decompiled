@@ -3,10 +3,10 @@
  */
 final class ObjectHistoryBuffer extends IntrusiveNode {
     static String field_l;
-    static RgbSprite field_q;
+    static RgbSprite ninjaCharacterSprite;
     static int[] field_k;
     static String field_j;
-    static RgbSprite[][] field_o;
+    static RgbSprite[][] arcticCapsSprites;
     static int[] field_p;
     int latestIndex;
     private Object[] entries;
@@ -14,8 +14,8 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
 
     public static void a(int param0) {
         field_j = null;
-        field_o = (RgbSprite[][]) null;
-        field_q = null;
+        arcticCapsSprites = (RgbSprite[][]) null;
+        ninjaCharacterSprite = null;
         field_p = null;
         if (param0 <= 36) {
           return;
@@ -98,7 +98,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
           this.latestIndex = this.latestIndex + 1;
           this.entries[nextIndex % this.capacity] = value;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ao.A(" + (value != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ao.A(" + (value != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

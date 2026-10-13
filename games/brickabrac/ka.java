@@ -40,9 +40,9 @@ final class ka extends IntrusiveNode {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           go.field_e = go.field_e + 1;
-          if (-1 == oo.field_v &&
+          if (-1 == ChocolateBackground.field_v &&
             ll.field_b == -1) {
-            oo.field_v = pq.pointerX;
+            ChocolateBackground.field_v = pq.pointerX;
             ll.field_b = po.pointerY;
           }
           if (param1 != 22546) {
@@ -83,13 +83,13 @@ final class ka extends IntrusiveNode {
             } else {
               th.field_h = false;
             }
-            b.field_a = oo.field_v;
+            b.field_a = ChocolateBackground.field_v;
           }
           LevelCompleteScreen.field_J = param0;
           if (!th.field_h &&
             go.field_e < MonotonicTime.field_e &&
             kb.pointerChanged) {
-            b.field_a = oo.field_v;
+            b.field_a = ChocolateBackground.field_v;
             go.field_e = 0;
             CappedUrlRequest.field_j = ll.field_b;
           }
@@ -99,7 +99,7 @@ final class ka extends IntrusiveNode {
             go.field_e = 0;
           }
           ll.field_b = -1;
-          oo.field_v = -1;
+          ChocolateBackground.field_v = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -332,7 +332,7 @@ final class ka extends IntrusiveNode {
                   var13.field_Vb.field_Mb = ea.field_f;
                 } else {
                   var13.field_Rb.field_Mb = rd.a(ce.field_g, new String[]{var21}, (byte) 103);
-                  var13.field_Vb.field_Mb = ip.field_t;
+                  var13.field_Vb.field_Mb = JungleBackground.field_t;
                   var13.field_cc.field_Mb = gq.field_Wb;
                 }
               } else {
@@ -569,7 +569,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_372_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_371_0), ((StringBuilder) (Object) stackIn_371_1).append(stackIn_372_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_371_0), ((StringBuilder) (Object) stackIn_371_1).append(stackIn_372_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ final class ka extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ka.A(" + param0 + ')');
         }
     }
 
@@ -601,7 +601,7 @@ final class ka extends IntrusiveNode {
         try {
           this.field_G = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ka.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ka.B(" + param0 + ')');
         }
     }
 
@@ -629,7 +629,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -646,7 +646,7 @@ final class ka extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "ka.E(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ka.E(" + param0 + ')');
         }
     }
 
@@ -781,7 +781,7 @@ final class ka extends IntrusiveNode {
                   var26Lifetime1 = param5.field_O[var23Lifetime2];
                   nj.field_v[var23Lifetime2] = (var15 * var25Lifetime1 + (var12 * var24Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
                   nd.field_e[var23Lifetime2] = var10 + (var16 * var25Lifetime1 + (var24Lifetime1 * var13 + var26Lifetime1 * var19) >> 16);
-                  jk.field_r[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var25Lifetime1 * var17) - var20 * var26Lifetime1) >> 16) + var11;
+                  UnderwaterBackground.field_r[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var25Lifetime1 * var17) - var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param5.field_I[var23Lifetime2];
                   var25Lifetime1 = param5.field_D[var23Lifetime2];
                   var26Lifetime1 = param5.field_u[var23Lifetime2];
@@ -858,7 +858,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param6).append(')').toString());
         }
     }
 

@@ -65,7 +65,7 @@ final class aq implements Runnable {
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), field_z);
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), field_z);
         }
     }
 

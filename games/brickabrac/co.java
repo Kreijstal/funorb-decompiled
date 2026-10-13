@@ -105,7 +105,7 @@ final class co {
         int var2 = (-640 + kp.field_a) / 2;
         int var3 = hj.field_Yb * hj.field_Yb;
         int var4 = -(param0 * param0) + var3;
-        qa.field_w.a(Rasterizer2D.height - 120 - 4 - 90, 90, var2 - var4 * 199 / var3, 199, (byte) 64);
+        NinjaBackground.field_w.a(Rasterizer2D.height - 120 - 4 - 90, 90, var2 - var4 * 199 / var3, 199, (byte) 64);
         MultiplayerMatch.field_d.a(-4 + (Rasterizer2D.height - 120), 0, 438 * var4 / var3 + (202 + var2), 438, (byte) 64);
         if (param1) {
           field_e = (String) null;
@@ -173,7 +173,7 @@ final class co {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class co {
             this.field_c = this.field_a.request(-952050528, 255, (byte) 0, 255, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class co {
             field_d = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "co.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "co.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

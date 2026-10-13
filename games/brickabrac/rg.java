@@ -10,7 +10,7 @@ final class rg {
     static int field_a;
     static mh field_e;
     private ResourceArchive field_j;
-    static RgbSprite field_f;
+    static RgbSprite chocolateFarSprite;
     static int[] field_g;
     static mh field_c;
 
@@ -69,7 +69,7 @@ final class rg {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -78,7 +78,7 @@ final class rg {
         field_i = null;
         field_e = null;
         field_c = null;
-        field_f = null;
+        chocolateFarSprite = null;
         field_b = null;
         field_k = null;
         if (param0 != 64) {
@@ -130,7 +130,7 @@ final class rg {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

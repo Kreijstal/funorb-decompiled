@@ -7,7 +7,7 @@ final class bg extends IntrusiveNode {
     static java.security.SecureRandom field_p;
     PlatformTask[] field_j;
     int[] field_q;
-    static int[] field_u;
+    static int[] parisBackgroundColors;
     static int field_r;
     int[] field_t;
     static String field_o;
@@ -42,7 +42,7 @@ final class bg extends IntrusiveNode {
         }
         field_n = (int[][]) null;
         field_o = null;
-        field_u = null;
+        parisBackgroundColors = null;
         field_p = null;
     }
 
@@ -84,7 +84,7 @@ final class bg extends IntrusiveNode {
     static {
         field_o = "Awesome!";
         field_n = new int[9][];
-        field_u = new int[]{31114, 12658477, 16494651, 26679, 16711935};
+        parisBackgroundColors = new int[]{31114, 12658477, 16494651, 26679, 16711935};
         field_n[3] = new int[]{1, 4473924, 1};
         field_n[5] = new int[]{1, 128, 1};
         field_n[4] = new int[]{1, 255, 1};

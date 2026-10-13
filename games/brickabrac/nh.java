@@ -211,7 +211,7 @@ final class nh {
           } else {
             stackIn_89_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -267,7 +267,7 @@ final class nh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -391,7 +391,7 @@ final class nh {
                 }
               }
               dn.field_K.a(40, MultiplayerMatch.field_d.field_cb - 40, var9, MultiplayerMatch.field_d.field_Ib - var9, (byte) 64);
-              dn.field_K.field_Mb = sn.field_r.toUpperCase();
+              dn.field_K.field_Mb = ConstructionBackground.field_r.toUpperCase();
               var8 = dn.field_K;
               stackIn_23_0 = dn.field_K;
               stackIn_24_1 = (param4) && (ic.field_b == 0L);
@@ -538,7 +538,7 @@ final class nh {
                     var13_ref_String = eq.field_b;
                     boolean decompiledSharedTail0 = (var12 == 0);
                     if (!decompiledSharedTail0) {
-                      var14_ref_String = ki.field_g + (String) (var11_ref);
+                      var14_ref_String = BackgroundScene.field_g + (String) (var11_ref);
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
@@ -681,7 +681,7 @@ final class nh {
             }
             um.field_b.field_Mb = rd.a(rl.field_d, new String[]{Integer.toString(o.field_e.field_cc), Integer.toString(o.field_e.field_jc)}, (byte) 103);
           }
-          stackIn_174_0 = qa.field_w;
+          stackIn_174_0 = NinjaBackground.field_w;
           stackIn_175_1 = (param2) && (!param1) && (!hc.field_c);
           ((mh) (Object) stackIn_174_0).a(stackIn_175_1, -15211);
           stackIn_179_0 = MultiplayerMatch.field_d;
@@ -708,13 +708,13 @@ final class nh {
             if (0 != nd.field_a.field_L) {
               hc.field_c = false;
             }
-            ip.a(param3, o.field_e, false, false);
+            JungleBackground.a(param3, o.field_e, false, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var5), "nh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var5), "nh.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -818,7 +818,7 @@ final class nh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref2), "nh.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref2), "nh.B(" + param0 + ')');
         }
     }
 

@@ -5,8 +5,8 @@ final class BallPulseEffect extends IntrusiveNode {
     static String field_i;
     private int y256;
     private int ageTicks;
-    static RgbSprite field_r;
-    static RgbSprite field_p;
+    static RgbSprite arcticMidSprite;
+    static RgbSprite parisCharacterSprite;
     static SoftwareFramebuffer framebuffer;
     static ResourceArchive field_j;
     static mh field_n;
@@ -16,9 +16,9 @@ final class BallPulseEffect extends IntrusiveNode {
     public static void a(int param0) {
         field_n = null;
         field_o = null;
-        field_p = null;
+        parisCharacterSprite = null;
         int var1 = 82 % ((param0 - 35) / 55);
-        field_r = null;
+        arcticMidSprite = null;
         field_i = null;
         field_j = null;
         framebuffer = null;
@@ -51,7 +51,7 @@ final class BallPulseEffect extends IntrusiveNode {
           fl.e(-41);
           MatchResultScreen.field_t = -BoundedFile.field_i + 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -116,11 +116,11 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        dp.field_t = var8.readCp1252String(-1);
+        HalloweenBackground.field_t = var8.readCp1252String(-1);
         if (var4 != 0) {
           nd.field_g = var8.readCp1252String(-1);
         } else {
-          nd.field_g = dp.field_t;
+          nd.field_g = HalloweenBackground.field_t;
         }
         if (1 != gj.field_a &&
           4 != gj.field_a) {
@@ -201,11 +201,11 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         stackIn_11_0 = (var8.readUnsignedByte(255) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        dp.field_t = var8.readCp1252String(-1);
+        HalloweenBackground.field_t = var8.readCp1252String(-1);
         if (var4 != 0) {
           nd.field_g = var8.readCp1252String(-1);
         } else {
-          nd.field_g = dp.field_t;
+          nd.field_g = HalloweenBackground.field_t;
         }
         if (1 != gj.field_a &&
           4 != gj.field_a) {

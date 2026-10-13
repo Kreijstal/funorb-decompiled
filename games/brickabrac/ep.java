@@ -9,7 +9,7 @@ abstract class ep {
     static String field_e;
     static int resultCounterTwo;
     static RgbSprite field_j;
-    static RgbSprite field_h;
+    static RgbSprite jungleCharacterSprite;
     static float field_a;
     static String field_d;
     static RgbSprite field_b;
@@ -108,7 +108,7 @@ abstract class ep {
         }
         field_b = null;
         field_e = null;
-        field_h = null;
+        jungleCharacterSprite = null;
         field_j = null;
         field_d = null;
     }
@@ -174,7 +174,7 @@ abstract class ep {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ abstract class ep {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(')').toString());
         }
     }
 

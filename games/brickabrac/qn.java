@@ -119,7 +119,7 @@ final class qn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "qn.I(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "qn.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -135,13 +135,13 @@ final class qn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ip.field_r = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
+        JungleBackground.field_r = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         PauseMenuScreen.field_x = param1;
         if (param4 == -6532) {
           fr.field_k = param3;
           lg.field_L = param2;
           wo.field_a = param0;
-          qb.field_w = lg.field_L - PauseMenuScreen.field_x;
+          FarmBackground.field_w = lg.field_L - PauseMenuScreen.field_x;
           ag.field_E = -fr.field_k + wo.field_a;
           return;
         }
@@ -149,7 +149,7 @@ final class qn {
         fr.field_k = param3;
         lg.field_L = param2;
         wo.field_a = param0;
-        qb.field_w = lg.field_L - PauseMenuScreen.field_x;
+        FarmBackground.field_w = lg.field_L - PauseMenuScreen.field_x;
         ag.field_E = -fr.field_k + wo.field_a;
     }
 

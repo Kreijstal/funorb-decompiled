@@ -133,7 +133,7 @@ final class CacheIoRequest extends ResourceRequest {
             stackIn_4_0 = IntArrayRequest.field_j;
           }
           co.a(stackIn_4_0, false);
-          sb.field_c.a(qa.field_w.field_Ib, 0, 88, 0, -40 + qa.field_w.field_cb - 2);
+          sb.field_c.a(NinjaBackground.field_w.field_Ib, 0, 88, 0, -40 + NinjaBackground.field_w.field_cb - 2);
           um.field_b.a(np.field_a, 0, 0, ji.field_b.field_Ib, (byte) 64);
           stackIn_6_0 = BoundedFile.field_g;
           stackIn_6_1 = 18;
@@ -151,7 +151,7 @@ final class CacheIoRequest extends ResourceRequest {
           }
           wd.field_E.a(18, np.field_a + 2, -40 + (-2 + ji.field_b.field_Ib) - ec.field_J, 42 + ec.field_J, (byte) 64);
           TimedSplashScreen.field_u.a(2, (byte) -109, ji.field_b.field_Ib, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.field_cb - (np.field_a + 20));
-          GameUiController.field_e.a(40, -40 + qa.field_w.field_cb, 0, qa.field_w.field_Ib, (byte) 64);
+          GameUiController.field_e.a(40, -40 + NinjaBackground.field_w.field_cb, 0, NinjaBackground.field_w.field_Ib, (byte) 64);
           ba.field_v.a(30, 0, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
           rg.field_e.a(-2 + (-40 + MultiplayerMatch.field_d.field_cb) - 30, 30, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
           var2_int = cq.field_p + 3;
@@ -266,7 +266,7 @@ final class CacheIoRequest extends ResourceRequest {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "kj.E(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "kj.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -310,7 +310,7 @@ final class CacheIoRequest extends ResourceRequest {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

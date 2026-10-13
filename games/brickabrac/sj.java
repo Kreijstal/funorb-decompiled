@@ -36,7 +36,7 @@ final class sj {
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + mm.field_Sb; var7 >= 0; var7--) {
-          var8_ref_gb = jk.field_s[var7];
+          var8_ref_gb = UnderwaterBackground.field_s[var7];
           var9 = 0;
           if (!um.field_e &&
             var5 < eh.field_k) {
@@ -69,7 +69,7 @@ final class sj {
         }
         var7Lifetime1 = 0;
         for (var8 = 0; mm.field_Sb > var8; var8++) {
-          var9_ref_gb = jk.field_s[var8];
+          var9_ref_gb = UnderwaterBackground.field_s[var8];
           if (null != var9_ref_gb.field_b) {
             AchievementIcon.field_q.field_Rb.a(var9_ref_gb.field_b, 0);
             var9_ref_gb.field_b.a(param1, var7Lifetime1, param0, var9_ref_gb.field_b.g(87), (byte) 64);
@@ -175,7 +175,7 @@ final class sj {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -534,7 +534,7 @@ final class sj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "sj.A(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "sj.A(" + param0 + ')');
         }
     }
 

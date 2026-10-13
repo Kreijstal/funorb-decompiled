@@ -39,7 +39,7 @@ final class cq extends IntrusiveNode {
           return (char)var2;
         }
         if (var2 < 160) {
-          var3 = ai.cp1252Extensions[-128 + var2];
+          var3 = ParisBackground.cp1252Extensions[-128 + var2];
           if (var3 == 0) {
             var3 = 63;
           }
@@ -132,7 +132,7 @@ final class cq extends IntrusiveNode {
           if (param0 != 16727) {
             tickTimeCursor = 49;
           }
-          oa.field_Sb = rd.a(param3.pack.metadata[param2].attributeByte, (byte) 19);
+          oa.currentBackground = rd.selectBackground(param3.pack.metadata[param2].attributeByte, (byte) 19);
           sk.a(var5, param2, param3, 1, param1, -12665);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -145,7 +145,7 @@ final class cq extends IntrusiveNode {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

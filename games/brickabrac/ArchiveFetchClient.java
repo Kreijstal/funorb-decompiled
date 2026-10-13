@@ -62,7 +62,7 @@ abstract class ArchiveFetchClient {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -81,7 +81,7 @@ abstract class ArchiveFetchClient {
           g.field_m = param0;
           bd.a(param1, true);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -105,7 +105,7 @@ abstract class ArchiveFetchClient {
     final static void a(RasterCacheSurface param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-77, param0.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, ro.field_x[param2], 16777215);
+          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, ro.jungleBackgroundColors[param2], 16777215);
           param1.b((-param1.canvasWidth + param0.width) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.height - 200 / param3), 55, 110);
           sc.popRaster(-117);
           if (!param5) {
@@ -113,7 +113,7 @@ abstract class ArchiveFetchClient {
             ArchiveFetchClient.a((RasterCacheSurface) null, (RgbSprite) null, 100, 125, 72, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ abstract class ArchiveFetchClient {
         try {
           pq.a(0, ep.field_d, param0);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ih.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

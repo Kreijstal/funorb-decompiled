@@ -11,7 +11,7 @@ final class nf extends lg {
     private RgbSprite field_X;
     private ia field_R;
     static String field_T;
-    static RgbSprite field_U;
+    static RgbSprite halloweenNearSprite;
 
     final boolean a(boolean param0, oc param1) {
         RuntimeException var3 = null;
@@ -34,7 +34,7 @@ final class nf extends lg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -52,7 +52,7 @@ final class nf extends lg {
           this.field_S = param1;
           this.a(param5, param2, param3, (byte) -119, param4);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class nf extends lg {
 
     public static void f(byte param0) {
         field_W = null;
-        field_U = null;
+        halloweenNearSprite = null;
         field_T = null;
         if (param0 >= -18) {
           nf.a((byte) 48);
@@ -514,7 +514,7 @@ final class nf extends lg {
           this.field_Q = this.field_Q + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

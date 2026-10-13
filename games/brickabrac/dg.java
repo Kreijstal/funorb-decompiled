@@ -9,14 +9,14 @@ final class dg implements ub {
     static RgbSprite field_e;
     private int field_c;
     private int field_a;
-    static RgbSprite field_g;
+    static RgbSprite jungleMidSprite;
     static RgbSprite[] field_b;
     private int field_f;
     static int field_d;
     private int field_l;
 
     public static void a(int param0) {
-        field_g = null;
+        jungleMidSprite = null;
         field_b = null;
         field_e = null;
         field_k = null;
@@ -73,7 +73,7 @@ final class dg implements ub {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ final class dg implements ub {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class dg implements ub {
           this.field_c = param5;
           this.field_l = param3;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

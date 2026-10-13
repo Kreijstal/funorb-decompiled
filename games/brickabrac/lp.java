@@ -42,7 +42,7 @@ class lp extends fe implements en {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ class lp extends fe implements en {
 
     final void i(byte param0) {
         this.field_qb.b(2121792, 4210752, 2);
-        ec var2 = new ec(this, this.field_sb, qb.field_t);
+        ec var2 = new ec(this, this.field_sb, FarmBackground.field_t);
         if (param0 < -11) {
           var2.a(false, pj.field_e, 15);
           this.b((byte) 110, var2);
@@ -104,7 +104,7 @@ class lp extends fe implements en {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -144,7 +144,7 @@ class lp extends fe implements en {
               if (this.field_vb) {
                 stackIn_15_2 = oa.field_Tb;
               } else {
-                stackIn_15_2 = dp.field_s;
+                stackIn_15_2 = HalloweenBackground.field_s;
               }
               ((ec) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, -1);
             }
@@ -179,7 +179,7 @@ class lp extends fe implements en {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -195,7 +195,7 @@ class lp extends fe implements en {
           this.field_qb.field_J = true;
           this.a(this.field_qb, true);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 

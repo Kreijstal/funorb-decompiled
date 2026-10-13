@@ -36,10 +36,10 @@ final class t {
           if (param0) {
             return;
           }
-          if (null == qa.mouseWheelSource) {
+          if (null == NinjaBackground.mouseWheelSource) {
             return;
           }
-          qa.mouseWheelSource.detach((java.awt.Component) ((Object) param1), -117);
+          NinjaBackground.mouseWheelSource.detach((java.awt.Component) ((Object) param1), -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ final class t {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

@@ -19,7 +19,7 @@ final class SoundPlayback extends IntrusiveNode {
             SoundPlayback.a(-125, 69, (RasterCacheSurface) null, 30, 70, (RgbSprite) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "l.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "l.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -78,7 +78,7 @@ final class SoundPlayback extends IntrusiveNode {
             return stackIn_9_0;
           }
           if (param2 == 4) {
-            stackIn_13_0 = rd.a(fi.field_v, new String[]{param1}, (byte) 103);
+            stackIn_13_0 = rd.a(ArcticBackground.field_v, new String[]{param1}, (byte) 103);
             return stackIn_13_0;
           }
           if (5 == param2) {
@@ -123,7 +123,7 @@ final class SoundPlayback extends IntrusiveNode {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -132,9 +132,9 @@ final class SoundPlayback extends IntrusiveNode {
           this.stream = stream;
           this.baseGain = stream.getGain();
           this.sourceNode = sourceNode;
-          this.stream.setGain(128 + this.baseGain * ki.masterSoundGain >> 8);
+          this.stream.setGain(128 + this.baseGain * BackgroundScene.masterSoundGain >> 8);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "l.<init>(" + (stream != null ? "{...}" : "null") + ',' + (sourceNode != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "l.<init>(" + (stream != null ? "{...}" : "null") + ',' + (sourceNode != null ? "{...}" : "null") + ')');
         }
     }
 

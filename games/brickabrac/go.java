@@ -8,13 +8,13 @@ final class go {
     static String field_f;
     static int field_c;
     static int field_e;
-    static RgbSprite field_d;
+    static RgbSprite waterRaysSprite;
     static BufferedFile field_a;
 
     public static void a(int param0) {
         field_f = null;
         field_a = null;
-        field_d = null;
+        waterRaysSprite = null;
         if (param0 != -7393) {
           currentKeyCharacter = '￾';
         }
@@ -53,7 +53,7 @@ final class go {
             if (!param5) {
               go.a(78);
             }
-            var8 = dp.field_v.a(81, param2, (FileCacheStore) (var6), param1, (FileCacheStore) (var7));
+            var8 = HalloweenBackground.field_v.a(81, param2, (FileCacheStore) (var6), param1, (FileCacheStore) (var7));
             if (param0) {
               var8.startPrefetch(-10476);
             }

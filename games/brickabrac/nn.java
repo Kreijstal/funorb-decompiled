@@ -76,7 +76,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var4), "nn.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nn.L(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.L(" + param0 + ')');
         }
     }
 
@@ -152,7 +152,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nn.M(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.M(" + param0 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class nn {
           this.field_d.a(true, param1);
           int var3_int = 11 % ((param0 + 91) / 34);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nn.H(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class nn {
                 }
                 var2 = nk.a("idlemessage20min", (byte) -107);
                 if (null != var2) {
-                  qa.field_s = MenuButton.a(var2, (byte) 104);
+                  NinjaBackground.field_s = MenuButton.a(var2, (byte) 104);
                 }
                 var2 = nk.a("error_js5crc", (byte) -111);
                 if (null != var2) {
@@ -286,7 +286,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_lobby", (byte) -8);
                 if (null != var2) {
-                  fi.field_u = MenuButton.a(var2, (byte) 98);
+                  ArcticBackground.field_u = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = nk.a("mu_chat_public", (byte) 15);
                 if (null != var2) {
@@ -322,7 +322,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_x_left_lobby", (byte) -125);
                 if (null != var2) {
-                  fi.field_v = MenuButton.a(var2, (byte) 111);
+                  ArcticBackground.field_v = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("mu_x_lost_con", (byte) -123);
                 if (var2 != null) {
@@ -398,7 +398,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_lobby_friend_rm", (byte) 72);
                 if (var2 != null) {
-                  oo.field_y = MenuButton.a(var2, (byte) 91);
+                  ChocolateBackground.field_y = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = nk.a("mu_lobby_name_add", (byte) -19);
                 if (null != var2) {
@@ -422,7 +422,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_gamelist_owner", (byte) -119);
                 if (null != var2) {
-                  td.field_r = MenuButton.a(var2, (byte) 105);
+                  VolcanicBackground.field_r = MenuButton.a(var2, (byte) 105);
                 }
                 var2 = nk.a("mu_gamelist_players", (byte) 76);
                 if (var2 != null) {
@@ -558,7 +558,7 @@ final class nn {
                 }
                 var2 = nk.a("report_x_for_abuse", (byte) -108);
                 if (var2 != null) {
-                  gi.field_t = MenuButton.a(var2, (byte) 74);
+                  DesertBackground.field_t = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("unable_to_send_message_password_a", (byte) 64);
                 if (var2 != null) {
@@ -734,7 +734,7 @@ final class nn {
                 }
                 var2 = nk.a("accept", (byte) 80);
                 if (var2 != null) {
-                  ip.field_t = MenuButton.a(var2, (byte) 78);
+                  JungleBackground.field_t = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = nk.a("reject", (byte) -113);
                 if (var2 != null) {
@@ -782,7 +782,7 @@ final class nn {
                 }
                 var2 = nk.a("who_can_join", (byte) 47);
                 if (var2 != null) {
-                  qb.field_s = MenuButton.a(var2, (byte) 100);
+                  FarmBackground.field_s = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("you_can_join", (byte) -112);
                 if (null != var2) {
@@ -918,7 +918,7 @@ final class nn {
                 }
                 var2 = nk.a("thisisrunescapeclan_notowner", (byte) 46);
                 if (var2 != null) {
-                  oo.field_t = MenuButton.a(var2, (byte) 115);
+                  ChocolateBackground.field_t = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("runescapeclan", (byte) -112);
                 if (null != var2) {
@@ -1040,7 +1040,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_pleaseselectoption2", (byte) -128);
                 if (null != var2) {
-                  ki.field_g = MenuButton.a(var2, (byte) 119);
+                  BackgroundScene.field_g = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("gameopt_badnumplayers", (byte) -19);
                 if (var2 != null) {
@@ -1112,7 +1112,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_0_5", (byte) -128);
                 if (null != var2) {
-                  fd.field_a = MenuButton.a(var2, (byte) 123);
+                  BackgroundRegistry.field_a = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = nk.a("rule_pillar_1", (byte) 51);
                 if (null != var2) {
@@ -1176,7 +1176,7 @@ final class nn {
                 }
                 var2 = nk.a("invaliduserorpass", (byte) 42);
                 if (var2 != null) {
-                  gi.field_u = MenuButton.a(var2, (byte) 86);
+                  DesertBackground.field_u = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = nk.a("pleasetryagain", (byte) 48);
                 if (null != var2) {
@@ -1284,7 +1284,7 @@ final class nn {
                 }
                 var2 = nk.a("back", (byte) -114);
                 if (var2 != null) {
-                  dp.field_s = MenuButton.a(var2, (byte) 75);
+                  HalloweenBackground.field_s = MenuButton.a(var2, (byte) 75);
                 }
                 var2 = nk.a("exitfullscreenmode", (byte) -112);
                 if (null != var2) {
@@ -1296,7 +1296,7 @@ final class nn {
                 }
                 var2 = nk.a("connectionrestored", (byte) -113);
                 if (null != var2) {
-                  qb.field_t = MenuButton.a(var2, (byte) 78);
+                  FarmBackground.field_t = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = nk.a("warning_ifyouquit", (byte) -107);
                 if (var2 != null) {
@@ -1768,7 +1768,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_passcontainsname", (byte) -107);
                 if (null != var2) {
-                  fd.field_b = MenuButton.a(var2, (byte) 93);
+                  BackgroundRegistry.field_b = MenuButton.a(var2, (byte) 93);
                 }
                 var2 = nk.a("create_alert_passcontainsemail", (byte) 45);
                 if (var2 != null) {
@@ -1788,7 +1788,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_email_unavailable", (byte) -124);
                 if (var2 != null) {
-                  sn.field_s = MenuButton.a(var2, (byte) 74);
+                  ConstructionBackground.field_s = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("create_alert_invaliddate", (byte) -116);
                 if (null != var2) {
@@ -1796,7 +1796,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_invalidage", (byte) -114);
                 if (null != var2) {
-                  qb.field_y = MenuButton.a(var2, (byte) 115);
+                  FarmBackground.field_y = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("create_alert_yearrange", (byte) -122);
                 if (null != var2) {
@@ -1868,7 +1868,7 @@ final class nn {
                 }
                 var2 = nk.a("removeignorefirst", (byte) -113);
                 if (null != var2) {
-                  sn.field_u = MenuButton.a(var2, (byte) 104);
+                  ConstructionBackground.field_u = MenuButton.a(var2, (byte) 104);
                 }
                 var2 = nk.a("removefriendfirst", (byte) -111);
                 if (var2 != null) {
@@ -2134,11 +2134,11 @@ final class nn {
                 }
                 var2 = nk.a("startgame", (byte) -124);
                 if (null != var2) {
-                  sn.field_r = MenuButton.a(var2, (byte) 124);
+                  ConstructionBackground.field_r = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("newgame", (byte) 113);
                 if (var2 != null) {
-                  jk.field_v = MenuButton.a(var2, (byte) 101);
+                  UnderwaterBackground.field_v = MenuButton.a(var2, (byte) 101);
                 }
                 var2 = nk.a("resumegame", (byte) -119);
                 if (null != var2) {
@@ -2418,7 +2418,7 @@ final class nn {
                 }
                 var2 = nk.a("achieved", (byte) -125);
                 if (null != var2) {
-                  gi.field_s = MenuButton.a(var2, (byte) 88);
+                  DesertBackground.field_s = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("orbpoints", (byte) 16);
                 if (null != var2) {
@@ -2590,7 +2590,7 @@ final class nn {
                 }
                 var2 = nk.a("gameover", (byte) 68);
                 if (var2 != null) {
-                  ci.field_s = MenuButton.a(var2, (byte) 90);
+                  SpaceBackground.field_s = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("mp_hidechat", (byte) 4);
                 if (null != var2) {
@@ -2848,7 +2848,7 @@ final class nn {
                 }
                 var2 = nk.a("fs_focus", (byte) -106);
                 if (null != var2) {
-                  oo.field_s = MenuButton.a(var2, (byte) 79);
+                  ChocolateBackground.field_s = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = nk.a("fs_focus_or_resolution", (byte) -124);
                 if (null != var2) {
@@ -3056,7 +3056,7 @@ final class nn {
                 }
                 var2 = nk.a("discard", (byte) -116);
                 if (null != var2) {
-                  gi.field_r = MenuButton.a(var2, (byte) 86);
+                  DesertBackground.field_r = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = nk.a("mustlogin4,1", (byte) -110);
                 if (null != var2) {
@@ -3200,7 +3200,7 @@ final class nn {
                   } else {
                     stackIn_2600_2 = "{...}";
                   }
-                  throw qb.addExceptionContext((Throwable) ((Object) stackIn_2599_0), ((StringBuilder) (Object) stackIn_2599_1).append(stackIn_2600_2).append(',').append(param1).append(')').toString());
+                  throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_2599_0), ((StringBuilder) (Object) stackIn_2599_1).append(stackIn_2600_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = AppletGameShell.field_l;
@@ -3271,7 +3271,7 @@ final class nn {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -3328,7 +3328,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var3_ref), "nn.C(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3_ref), "nn.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3343,13 +3343,13 @@ final class nn {
           if (null != this.field_e &&
             this.field_i != oc.field_p) {
             var2 = this.c(-12688);
-            this.field_d.a(rd.a(gi.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
+            this.field_d.a(rd.a(DesertBackground.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2_ref), "nn.K(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "nn.K(" + param0 + ')');
         }
     }
 
@@ -3366,7 +3366,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var2), "nn.N(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "nn.N(" + param0 + ')');
         }
     }
 
@@ -3391,7 +3391,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var6), "nn.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var6), "nn.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -3429,7 +3429,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref2 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var4_ref2), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4_ref2), "nn.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3486,7 +3486,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var4), "nn.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.G(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3499,7 +3499,7 @@ final class nn {
         try {
           field_g = null;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nn.A(" + param0 + ')');
         }
     }
 
@@ -3518,7 +3518,7 @@ final class nn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var4), "nn.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "nn.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -3573,7 +3573,7 @@ final class nn {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -3620,7 +3620,7 @@ final class nn {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 

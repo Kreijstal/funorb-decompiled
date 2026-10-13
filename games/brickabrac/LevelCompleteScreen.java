@@ -32,9 +32,9 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         if (param1 != 1273378209) {
           field_E = (String[]) null;
         }
-        int var3 = 4 + ip.field_r.nextBoundedInt(-37880252, -4 + param0);
-        int var4 = ip.field_r.nextBoundedInt(-37880252, -8 + param2) + 8;
-        ob.field_E.addLast(new nj(var3, var4, PauseMenuScreen.field_x + ip.field_r.nextBoundedInt(-37880252, qb.field_w), fr.field_k + ip.field_r.nextBoundedInt(-37880252, ag.field_E)), (byte) 3);
+        int var3 = 4 + JungleBackground.field_r.nextBoundedInt(-37880252, -4 + param0);
+        int var4 = JungleBackground.field_r.nextBoundedInt(-37880252, -8 + param2) + 8;
+        ob.field_E.addLast(new nj(var3, var4, PauseMenuScreen.field_x + JungleBackground.field_r.nextBoundedInt(-37880252, FarmBackground.field_w), fr.field_k + JungleBackground.field_r.nextBoundedInt(-37880252, ag.field_E)), (byte) 3);
         dl.field_f = dl.field_f + 1;
     }
 

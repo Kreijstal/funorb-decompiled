@@ -10,7 +10,7 @@ final class IntArrayRequest extends IntrusiveNode {
     static int field_t;
     static int field_q;
     static int field_s;
-    static int field_n;
+    static int lastBackgroundId;
     int requestId;
     static RgbSprite[] field_k;
     int[] values;
@@ -39,7 +39,7 @@ final class IntArrayRequest extends IntrusiveNode {
 
     final static int a(byte param0) {
         int var1 = 119 % ((param0 + 15) / 60);
-        return ci.field_u - np.field_b;
+        return SpaceBackground.field_u - np.field_b;
     }
 
     IntArrayRequest() {
@@ -48,7 +48,7 @@ final class IntArrayRequest extends IntrusiveNode {
     static {
         heldKeys = new boolean[112];
         field_i = true;
-        field_n = 0;
+        lastBackgroundId = 0;
         field_q = 4;
         field_p = "Full";
     }

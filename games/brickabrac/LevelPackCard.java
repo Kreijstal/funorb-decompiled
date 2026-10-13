@@ -9,7 +9,7 @@ final class LevelPackCard {
     private MenuButton viewport;
     static int[] field_n;
     private boolean focused;
-    static RgbSprite field_e;
+    static RgbSprite farmNearSprite;
     private int packIndex;
     private MenuScreen owner;
     private int buttonIndex;
@@ -161,7 +161,7 @@ final class LevelPackCard {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param18).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(',').append(param18).append(')').toString());
         }
     }
 
@@ -189,12 +189,12 @@ final class LevelPackCard {
         field_a = null;
         if (param0 == 32156) {
           field_l = null;
-          field_e = null;
+          farmNearSprite = null;
           return;
         }
         LevelPackCard.a(-115);
         field_l = null;
-        field_e = null;
+        farmNearSprite = null;
     }
 
     final void updateFocus(byte obfuscationGuard) {
@@ -222,7 +222,7 @@ final class LevelPackCard {
           this.caption = qn.packNames[this.packIndex].toLowerCase();
           this.icon = SaveResultsPromptScreen.packCardIcons[this.packIndex];
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lc.<init>(" + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packIndex + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lc.<init>(" + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packIndex + ')');
         }
     }
 

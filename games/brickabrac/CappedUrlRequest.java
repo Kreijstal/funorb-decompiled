@@ -10,7 +10,7 @@ final class CappedUrlRequest implements Runnable {
     private PacketBuffer packet;
     private int phase;
     private PlatformServices services;
-    static RgbSprite field_b;
+    static RgbSprite chocolateSpiresSprite;
     static um field_e;
     private PlatformTask urlTask;
     static int field_j;
@@ -233,7 +233,7 @@ final class CappedUrlRequest implements Runnable {
     public static void b(int param0) {
         field_e = null;
         field_l = null;
-        field_b = null;
+        chocolateSpiresSprite = null;
         if (param0 != -16637) {
           CappedUrlRequest.a(true, 13);
         }
@@ -259,7 +259,7 @@ final class CappedUrlRequest implements Runnable {
           this.url = url;
           this.packet = new PacketBuffer(capacity);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (services != null ? "{...}" : "null") + ',' + (url != null ? "{...}" : "null") + ',' + capacity + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ad.<init>(" + (services != null ? "{...}" : "null") + ',' + (url != null ? "{...}" : "null") + ',' + capacity + ')');
         }
     }
 

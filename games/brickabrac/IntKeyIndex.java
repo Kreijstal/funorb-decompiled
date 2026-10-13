@@ -5,13 +5,13 @@ final class IntKeyIndex {
     static String field_d;
     static String field_a;
     static ta field_c;
-    static RgbSprite[] field_e;
+    static RgbSprite[] chocCentreSprites;
     static int field_b;
     private int[] entries;
 
     final static boolean a(int param0, int param1) {
         if (param1 != 0) {
-          field_e = (RgbSprite[]) null;
+          chocCentreSprites = (RgbSprite[]) null;
         }
         return param0 >= 2 ? true : false;
     }
@@ -44,13 +44,13 @@ final class IntKeyIndex {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
     public static void a(boolean param0) {
         field_d = null;
-        field_e = null;
+        chocCentreSprites = null;
         field_c = null;
         field_a = null;
         if (!param0) {
@@ -130,7 +130,7 @@ final class IntKeyIndex {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

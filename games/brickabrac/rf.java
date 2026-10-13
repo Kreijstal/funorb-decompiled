@@ -6,7 +6,7 @@ final class rf {
     static mh field_c;
     static boolean field_f;
     static String field_e;
-    static RgbSprite field_a;
+    static RgbSprite spaceSmallSprite;
     static TableDataRequest field_g;
     static n field_b;
 
@@ -31,7 +31,7 @@ final class rf {
         if (param0 != 98) {
           return;
         }
-        field_a = null;
+        spaceSmallSprite = null;
         field_e = null;
         field_b = null;
     }

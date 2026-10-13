@@ -13,11 +13,11 @@ final class qf extends lp implements en {
             tableSubmissionSequence = -58;
           }
           IndexedSpriteGeometry.pushSpriteRaster(-77, param1.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, rm.field_d[param0], 22953);
+          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, rm.farmBackgroundColors[param0], 22953);
           param3.b((-param3.canvasWidth + param1.width) / 2 - 80 / param2, -param3.canvasHeight + (param1.height + param4 - 201 / param2), 41, 110);
           sc.popRaster(-107);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -52,7 +52,7 @@ final class qf extends lp implements en {
         try {
           this.field_Eb = param1;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class qf extends lp implements en {
           ek.l(64);
           this.m(17);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class qf extends lp implements en {
               var5.a((byte) -37, ri.field_L, (uh) (this));
             } else {
               if (param1.field_d != 5) {
-                var5.a(false, dp.field_s, -1);
+                var5.a(false, HalloweenBackground.field_s, -1);
               } else {
                 var5.a(false, ec.field_L, 11);
                 var5.a(false, wc.field_a, 17);
@@ -153,7 +153,7 @@ final class qf extends lp implements en {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -64,7 +64,7 @@ final class an extends pj implements hf, ph {
             field_i = (th) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "an.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -75,7 +75,7 @@ final class an extends pj implements hf, ph {
             this.c(113);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "an.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -120,14 +120,14 @@ final class an extends pj implements hf, ph {
         int var2 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var1_int = 0; var1_int < mm.field_Sb; var1_int++) {
-            jk.field_s[var1_int] = null;
+            UnderwaterBackground.field_s[var1_int] = null;
           }
           if (param0 != -56) {
             field_i = (th) null;
           }
           mm.field_Sb = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "an.R(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.R(" + param0 + ')');
         }
     }
 

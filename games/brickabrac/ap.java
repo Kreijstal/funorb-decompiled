@@ -3,15 +3,15 @@
  */
 final class ap {
     static mh field_e;
-    static RgbSprite[] field_c;
+    static RgbSprite[] halloweenCentreSprites;
     static RgbSprite field_a;
-    static RgbSprite field_f;
+    static RgbSprite ninjaMidSprite;
     static String field_d;
     static vj field_b;
 
     final static void a(int param0, int param1, byte param2) {
         ll.field_b = param1;
-        oo.field_v = param0;
+        ChocolateBackground.field_v = param0;
         if (param2 < 72) {
           field_e = (mh) null;
         }
@@ -45,7 +45,7 @@ final class ap {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -95,8 +95,8 @@ final class ap {
     }
 
     public static void a(boolean param0) {
-        field_c = null;
-        field_f = null;
+        halloweenCentreSprites = null;
+        ninjaMidSprite = null;
         field_a = null;
         field_e = null;
         field_d = null;
@@ -118,10 +118,10 @@ final class ap {
           }
           InstructionsScreen.attachKeyboardInput(-118, (java.awt.Component) ((Object) param1));
           pl.a((java.awt.Component) ((Object) param1), 7282);
-          if (null == qa.mouseWheelSource) {
+          if (null == NinjaBackground.mouseWheelSource) {
             return;
           }
-          qa.mouseWheelSource.attach((byte) 44, (java.awt.Component) ((Object) param1));
+          NinjaBackground.mouseWheelSource.attach((byte) 44, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class ap {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -17,7 +17,7 @@ final class gb {
     String field_j;
     long field_k;
     int field_f;
-    static int field_n;
+    static int backgroundVariant;
     boolean field_e;
 
     final static String a(CharSequence param0, int param1) {
@@ -98,7 +98,7 @@ final class gb {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -138,7 +138,7 @@ final class gb {
         } else {
           this.field_g = null;
         }
-        this.field_q = dp.field_t;
+        this.field_q = HalloweenBackground.field_t;
         this.field_p = sl.field_y;
         this.field_a = nh.field_b;
         this.field_k = an.field_k;
@@ -164,7 +164,7 @@ final class gb {
           this.field_o = param2;
           this.field_a = 0;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "gb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "gb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

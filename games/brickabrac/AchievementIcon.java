@@ -38,7 +38,7 @@ final class AchievementIcon extends IntrusiveNode {
           ob.field_D.drawRight(param0 + "%", ResourceArchive.field_d[3], param1, param5, -1);
           ob.field_D.drawRight(param7 + "%", ResourceArchive.field_d[4], param1, param5, -1);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "i.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "i.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class AchievementIcon extends IntrusiveNode {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class AchievementIcon extends IntrusiveNode {
           var3.writeByte(-126, 0);
           var3.writeByte(73, request.requestId);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "i.I(" + opcode + ',' + (request != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "i.I(" + opcode + ',' + (request != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -159,7 +159,7 @@ final class AchievementIcon extends IntrusiveNode {
           rk.achievementTransitionMask = rk.achievementTransitionMask & this.transitionKeepMask;
           if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, pq.pointerX, this.y)) {
             nf.hoveredAchievementId = this.achievementId;
-            if (1 == ki.pressedButton &&
+            if (1 == BackgroundScene.pressedButton &&
               bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
               if (nf.selectedAchievementId != this.achievementId) {
                 nf.selectedAchievementId = this.achievementId;
@@ -171,7 +171,7 @@ final class AchievementIcon extends IntrusiveNode {
               }
             }
           } else {
-            if (1 == ki.pressedButton &&
+            if (1 == BackgroundScene.pressedButton &&
               bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
               if (nf.selectedAchievementId != this.achievementId) {
                 nf.selectedAchievementId = this.achievementId;
@@ -247,7 +247,7 @@ final class AchievementIcon extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
