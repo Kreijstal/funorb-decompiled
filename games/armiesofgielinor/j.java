@@ -431,7 +431,7 @@ final class j {
           this.field_i = new FixedQuaternion();
           this.a(105);
           this.field_g = param0 << 16;
-          this.field_k = ev.b(-55, this.field_g, so.sqrtFixed16(196608, -129));
+          this.field_k = RasterViewportResizeHandler.multiplyFixed16(-55, this.field_g, so.sqrtFixed16(196608, -129));
           this.a(2, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

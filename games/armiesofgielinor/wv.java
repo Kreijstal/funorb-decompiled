@@ -45,8 +45,8 @@ class wv extends af {
           }
           DeployAction.field_A = false;
           ac.field_n = false;
-          if (qc.loginProgressDialog != null &&
-            qc.loginProgressDialog.open) {
+          if (GameClock.loginProgressDialog != null &&
+            GameClock.loginProgressDialog.open) {
             if (8 != param2) {
             } else {
               if (!fh.field_i) {
@@ -69,7 +69,7 @@ class wv extends af {
               if (se.field_f) {
                 param0 = SummonAction.field_D;
               }
-              qc.loginProgressDialog.showResult(param2, (byte) 98, param0);
+              GameClock.loginProgressDialog.showResult(param2, (byte) 98, param0);
             }
             if (param2 != 256 &&
               10 != param2 &&

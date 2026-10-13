@@ -135,7 +135,7 @@ final class oo {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_l = this.field_l + 65536;
-          while (ev.b(-101, qk.field_d, this.field_l) >= 65536) {
+          while (RasterViewportResizeHandler.multiplyFixed16(-101, qk.field_d, this.field_l) >= 65536) {
             this.field_l = this.field_l - qk.field_d;
             this.field_f = this.field_f + 1;
           }

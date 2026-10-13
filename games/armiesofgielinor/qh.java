@@ -234,7 +234,7 @@ final class qh {
 
     final static void a(byte param0) {
         lq.field_e = -1;
-        ev.field_a = 0;
+        RasterViewportResizeHandler.field_a = 0;
         BoundedFile.field_b = false;
         TextLineLayout.field_a = null;
         int var1 = 110 % ((66 - param0) / 44);

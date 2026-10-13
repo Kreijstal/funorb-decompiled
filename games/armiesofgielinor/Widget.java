@@ -4,7 +4,7 @@
 import java.util.*;
 
 class Widget extends IntrusiveNode {
-    static int field_A;
+    static int ticksThisFrame;
     static int[] field_o;
     int y;
     WidgetListener listener;
@@ -158,7 +158,7 @@ class Widget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 103) {
-            field_A = -35;
+            ticksThisFrame = -35;
           }
           if (!this.containsPointer(1, originX, pointerY, pointerX, originY)) {
             return false;
@@ -802,7 +802,7 @@ class Widget extends IntrusiveNode {
           var9Lifetime1 = var5;
           var5 = var9Lifetime1;
         } else {
-          field_A = 34;
+          ticksThisFrame = 34;
           var4 = this.getMaximumRenderLayer(-31989);
           var5_int = 0;
           while (var5_int <= var4) {

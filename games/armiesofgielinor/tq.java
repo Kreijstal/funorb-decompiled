@@ -3,7 +3,7 @@
  */
 final class tq {
     static int field_c;
-    static volatile boolean field_a;
+    static volatile boolean canvasRebuildRequested;
     static String field_d;
     static int gameOptionCount;
 
@@ -86,7 +86,7 @@ final class tq {
     }
 
     static {
-        field_a = false;
+        canvasRebuildRequested = false;
         field_d = "Private";
     }
 }

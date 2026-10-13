@@ -10,24 +10,24 @@ final class ek {
     static ClientUiComponent field_a;
 
     final static void a(byte param0) {
-        if (qc.loginProgressDialog != null) {
-          qc.loginProgressDialog.closeDialog(true);
+        if (GameClock.loginProgressDialog != null) {
+          GameClock.loginProgressDialog.closeDialog(true);
           DequeWidgetContainer.field_C = new AccountNameSelectionForm();
           if (param0 > -22) {
             ek.a(-112);
-            lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+            BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
             return;
           }
-          lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+          BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
         DequeWidgetContainer.field_C = new AccountNameSelectionForm();
         if (param0 <= -22) {
-          lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+          BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
         ek.a(-112);
-        lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+        BattleViewportResizeHandler.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
     }
 
     final static int[] a(int param0, int param1, int param2) {

@@ -231,8 +231,8 @@ final class RadialSummonItem {
           if (null == param1.children) {
             param1.children = new NodeDeque();
           }
-          qc.lobbyRoomOrder = param1.children;
-          qc.lobbyRoomOrder.clear(120);
+          GameClock.lobbyRoomOrder = param1.children;
+          GameClock.lobbyRoomOrder.clear(120);
           ClippedWidgetContainer.lobbyRoomsById = new DualNodeHashTable(param6);
           if (null == param5.children) {
             param5.children = new NodeDeque();

@@ -12,7 +12,7 @@ final class fj {
     private int field_o;
     private int field_p;
     static String field_u;
-    private ok field_k;
+    private ViewportResizeListener field_k;
     private int field_e;
     private int field_j;
     private float field_v;
@@ -111,7 +111,7 @@ final class fj {
         }
     }
 
-    fj(ok param0) {
+    fj(ViewportResizeListener param0) {
         this(640, 480, 1280, 1024, 640, 480, 122, 16, param0);
     }
 
@@ -161,7 +161,7 @@ final class fj {
     }
 
     final void b(int param0) {
-        this.field_k.a(this.field_j, -32263, this.field_e);
+        this.field_k.viewportResized(this.field_j, -32263, this.field_e);
         if (param0 >= 114) {
           return;
         }
@@ -238,7 +238,7 @@ final class fj {
           dt.field_a == this.field_s) {
           return;
         }
-        this.field_k.a(this.field_s, -32263, this.field_t);
+        this.field_k.viewportResized(this.field_s, -32263, this.field_t);
     }
 
     final rd c(int param0) {
@@ -248,8 +248,8 @@ final class fj {
         if (param0 != -1) {
           fj.b((byte) -86);
           this.field_e = bn.field_b;
-          this.field_k.a(this.field_n, param0 ^ 32262, this.field_f);
-          tq.field_a = false;
+          this.field_k.viewportResized(this.field_n, param0 ^ 32262, this.field_f);
+          tq.canvasRebuildRequested = false;
           var2 = dj.a(this.field_f, 0, IntPair.field_m, -71, 0, this.field_n);
           if (var2 == null) {
             this.b(124);
@@ -258,8 +258,8 @@ final class fj {
           return var2;
         }
         this.field_e = bn.field_b;
-        this.field_k.a(this.field_n, param0 ^ 32262, this.field_f);
-        tq.field_a = false;
+        this.field_k.viewportResized(this.field_n, param0 ^ 32262, this.field_f);
+        tq.canvasRebuildRequested = false;
         var2Lifetime1 = dj.a(this.field_f, 0, IntPair.field_m, -71, 0, this.field_n);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
@@ -328,10 +328,10 @@ final class fj {
             }
           }
           if (bn.field_b != var2) {
-            this.field_k.a(var3, -32263, var2);
+            this.field_k.viewportResized(var3, -32263, var2);
           } else {
             if (dt.field_a != var3) {
-              this.field_k.a(var3, -32263, var2);
+              this.field_k.viewportResized(var3, -32263, var2);
             }
           }
           if (this.field_m <= 0) {
@@ -367,7 +367,7 @@ final class fj {
           }
           if (bn.field_b != var2 ||
             dt.field_a != var3Lifetime1) {
-            this.field_k.a(var3Lifetime1, -32263, var2);
+            this.field_k.viewportResized(var3Lifetime1, -32263, var2);
           }
           if (this.field_m <= 0) {
             return;
@@ -380,10 +380,10 @@ final class fj {
         }
         if (!(0.0f < this.field_v)) {
           if (bn.field_b != var2) {
-            this.field_k.a(var3Lifetime1, -32263, var2);
+            this.field_k.viewportResized(var3Lifetime1, -32263, var2);
           } else {
             if (dt.field_a != var3Lifetime1) {
-              this.field_k.a(var3Lifetime1, -32263, var2);
+              this.field_k.viewportResized(var3Lifetime1, -32263, var2);
             }
           }
           if (this.field_m <= 0) {
@@ -401,10 +401,10 @@ final class fj {
           }
         }
         if (bn.field_b != var2) {
-          this.field_k.a(var3Lifetime1, -32263, var2);
+          this.field_k.viewportResized(var3Lifetime1, -32263, var2);
         } else {
           if (dt.field_a != var3Lifetime1) {
-            this.field_k.a(var3Lifetime1, -32263, var2);
+            this.field_k.viewportResized(var3Lifetime1, -32263, var2);
           }
         }
         if (this.field_m <= 0) {
@@ -414,7 +414,7 @@ final class fj {
         return;
     }
 
-    private fj(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ok param8) {
+    private fj(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ViewportResizeListener param8) {
         try {
           this.field_v = 0.0f;
           this.field_k = param8;

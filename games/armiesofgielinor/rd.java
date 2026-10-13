@@ -12,7 +12,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     static ClientUiComponent field_e;
     java.awt.Frame field_c;
     static GameplayController gameplayController;
-    static long field_i;
+    static long tickDurationNanos;
 
     public static void a(int param0) {
         field_g = null;
@@ -73,7 +73,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
         keyEventFrameEndIndex = 0;
         field_f = "The game options are not all set.";
         field_a = "Spells to impose your will upon the world.";
-        field_i = 20000000L;
+        tickDurationNanos = 20000000L;
         field_g = "Updates will sent to the email address you've given";
     }
 }

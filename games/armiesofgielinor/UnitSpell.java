@@ -234,14 +234,14 @@ final class UnitSpell extends Spell {
         }
     }
 
-    final static void a(int param0, ok param1) {
+    final static void installViewportResizeListener(int obfuscationGuard, ViewportResizeListener listener) {
         try {
-          PreparedAction.a((byte) 111, new fj(param1));
-          if (param0 < 8) {
+          PreparedAction.a((byte) 111, new fj(listener));
+          if (obfuscationGuard < 8) {
             field_h = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wa.T(" + obfuscationGuard + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -483,8 +483,8 @@ final class UnitSpell extends Spell {
     final static void a(int param0, int param1, aj param2) {
         try {
           if (param1 != 1) {
-            ok var4 = (ok) null;
-            UnitSpell.a(-25, (ok) null);
+            ViewportResizeListener var4 = (ViewportResizeListener) null;
+            UnitSpell.installViewportResizeListener(-25, (ViewportResizeListener) null);
           }
           GameEvent.field_r.addLast((byte) -119, (IntrusiveNode) (param2));
           BirthDateChatEnableForm.a((byte) -57, param2, param0);

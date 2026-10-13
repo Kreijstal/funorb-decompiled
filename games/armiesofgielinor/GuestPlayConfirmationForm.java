@@ -8,7 +8,7 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
     static String field_H;
     static int field_J;
     private InteractiveWidget backButton;
-    static int field_N;
+    static int canvasWidth;
     private InteractiveWidget guestPlayButton;
     static ResourceArchive field_M;
     static int field_Q;

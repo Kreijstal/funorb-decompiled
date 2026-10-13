@@ -150,11 +150,11 @@ final class DraggableWidgetContainer extends SingleChildWidgetContainer {
         }
     }
 
-    final static qc c(boolean param0) {
-        if (param0) {
+    final static GameClock createGameClock(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           field_R = (String) null;
         }
-        return (qc) ((Object) new uk());
+        return (GameClock) ((Object) new NanoGameClock());
     }
 
     final void layoutChild(boolean obfuscationGuard) {

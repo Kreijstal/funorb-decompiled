@@ -37,10 +37,10 @@ final class ConsoleTextNode extends IntrusiveNode {
         IsaacRandom.field_g = new AccountRegistrationForm();
         if (obfuscationGuard) {
           ConsoleTextNode.pushRasterState((byte) 79);
-          lt.loginDialog.replaceContent(IsaacRandom.field_g, (byte) 78);
+          BattleViewportResizeHandler.loginDialog.replaceContent(IsaacRandom.field_g, (byte) 78);
           return;
         }
-        lt.loginDialog.replaceContent(IsaacRandom.field_g, (byte) 78);
+        BattleViewportResizeHandler.loginDialog.replaceContent(IsaacRandom.field_g, (byte) 78);
     }
 
     ConsoleTextNode(String text) {

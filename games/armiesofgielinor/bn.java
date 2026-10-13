@@ -98,7 +98,7 @@ final class bn {
           stackIn_63_1 = true;
           stackIn_64_2 = (param0) && (!param1) && (!bw.field_g) && (ToggleWidget.currentRoom == null) && (NumericDateInputWidget.roomSetup == null);
           ((ClientUiComponent) (Object) stackIn_63_0).updateInput(stackIn_63_1, stackIn_64_2);
-          stackIn_68_0 = qc.field_c;
+          stackIn_68_0 = GameClock.field_c;
           stackIn_68_1 = true;
           stackIn_69_2 = (param0) && (!param1) && (bw.field_g);
           ((ClientUiComponent) (Object) stackIn_68_0).updateInput(stackIn_68_1, stackIn_69_2);
@@ -135,7 +135,7 @@ final class bn {
           stackIn_14_1 = true;
           stackIn_15_2 = (param0) && (!param1) && (!bw.field_g) && (ToggleWidget.currentRoom == null) && (NumericDateInputWidget.roomSetup == null);
           ((ClientUiComponent) (Object) stackIn_14_0).updateInput(stackIn_14_1, stackIn_15_2);
-          stackIn_19_0 = qc.field_c;
+          stackIn_19_0 = GameClock.field_c;
           stackIn_19_1 = true;
           stackIn_20_2 = (param0) && (!param1) && (bw.field_g);
           ((ClientUiComponent) (Object) stackIn_19_0).updateInput(stackIn_19_1, stackIn_20_2);

@@ -197,7 +197,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           if (var9_int == -3 &&
             -param8 + param3 + 40 > param1 &&
-            uk.field_q > dd.field_e) {
+            NanoGameClock.field_q > dd.field_e) {
             if (param0) {
               fe.a(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             } else {

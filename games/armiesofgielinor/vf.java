@@ -367,9 +367,9 @@ abstract class vf {
                   ep.field_p[var7][var9]) {
                   var10 = 1;
                 }
-                if (null != iv.field_e &&
-                  null != iv.field_e[var7]) {
-                  var16 = iv.field_e[var7][var9];
+                if (null != GameAppletShell.field_e &&
+                  null != GameAppletShell.field_e[var7]) {
+                  var16 = GameAppletShell.field_e[var7][var9];
                   if (0 != var16 &&
                     !bj.field_k &&
                     LoginForm.field_M <= 0) {
@@ -523,7 +523,7 @@ abstract class vf {
                       }
                     }
                     if (var12 != 0) {
-                      var31 = EmailCheckResult.a(4800, AnimationSequence.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(iv.field_e[var7][var9])});
+                      var31 = EmailCheckResult.a(4800, AnimationSequence.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(GameAppletShell.field_e[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;

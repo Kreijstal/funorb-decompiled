@@ -236,7 +236,7 @@ final class OwnerChangeEvent extends GameEvent {
         int var3 = 0;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ev.field_a = ev.field_a + 1;
+          RasterViewportResizeHandler.field_a = RasterViewportResizeHandler.field_a + 1;
           if (QuickChatCommandDefinition.field_e == -1 &&
             LobbyPlayer.field_Ib == -1) {
             LobbyPlayer.field_Ib = ko.pointerY;
@@ -250,8 +250,8 @@ final class OwnerChangeEvent extends GameEvent {
           }
           if (decompiledFrameRemainder0) {
             if (!BoundedFile.field_b) {
-              if (NodeIterator.field_c <= ev.field_a) {
-                stackIn_17_0 = (NodeIterator.field_c + ps.field_E > ev.field_a) ? 1 : 0;
+              if (NodeIterator.field_c <= RasterViewportResizeHandler.field_a) {
+                stackIn_17_0 = (NodeIterator.field_c + ps.field_E > RasterViewportResizeHandler.field_a) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -260,15 +260,15 @@ final class OwnerChangeEvent extends GameEvent {
             }
             var2_int = stackIn_17_0;
             if (param1 == null) {
-              ev.field_a = 0;
+              RasterViewportResizeHandler.field_a = 0;
             } else {
               if (BoundedFile.field_b) {
-                ev.field_a = NodeIterator.field_c;
+                RasterViewportResizeHandler.field_a = NodeIterator.field_c;
               } else {
                 if (var2_int != 0) {
-                  ev.field_a = NodeIterator.field_c;
+                  RasterViewportResizeHandler.field_a = NodeIterator.field_c;
                 } else {
-                  ev.field_a = 0;
+                  RasterViewportResizeHandler.field_a = 0;
                 }
               }
             }
@@ -283,19 +283,19 @@ final class OwnerChangeEvent extends GameEvent {
             lq.field_e = QuickChatCommandDefinition.field_e;
           }
           if (!BoundedFile.field_b &&
-            ev.field_a < NodeIterator.field_c &&
+            RasterViewportResizeHandler.field_a < NodeIterator.field_c &&
             BitmapTextWidgetPainter.pointerChangedSnapshot) {
             cc.field_b = LobbyPlayer.field_Ib;
             lq.field_e = QuickChatCommandDefinition.field_e;
-            ev.field_a = 0;
+            RasterViewportResizeHandler.field_a = 0;
           }
           TextLineLayout.field_a = param1;
           QuickChatCommandDefinition.field_e = param0;
           LobbyPlayer.field_Ib = -1;
           if (BoundedFile.field_b &&
-            GuestPlayConfirmationForm.field_J == ev.field_a) {
+            GuestPlayConfirmationForm.field_J == RasterViewportResizeHandler.field_a) {
             BoundedFile.field_b = false;
-            ev.field_a = 0;
+            RasterViewportResizeHandler.field_a = 0;
             return;
           }
           return;

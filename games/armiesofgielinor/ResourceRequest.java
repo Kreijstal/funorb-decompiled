@@ -43,7 +43,7 @@ abstract class ResourceRequest extends DualLinkedNode {
           var3 = new CampaignParticipant();
           var3.participantId = packet.readUnsignedByte(0);
           var3.displayName = packet.readNullCircumfixedString((byte) 121);
-          var3.availableUnitTypes = ev.readNullableUnsignedByteArray(packet, (byte) -98);
+          var3.availableUnitTypes = RasterViewportResizeHandler.readNullableUnsignedByteArray(packet, (byte) -98);
           var3.coatOfArms = CacheEntry.readSignedCoatOfArms(packet, false);
           var3.godFavourLevels = gt.readSixUnsignedBytes(-2, packet);
           var3.equippedSpellIds = DateInputWidget.readUnsignedByteArray(packet, (byte) -24);

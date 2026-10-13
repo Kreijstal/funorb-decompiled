@@ -123,7 +123,7 @@ final class ug extends IOException {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2 = lt.decodeBase37DisplayName(0, DraggableWidgetContainer.a(param1, 0));
+          var2 = BattleViewportResizeHandler.decodeBase37DisplayName(0, DraggableWidgetContainer.a(param1, 0));
           if (var2 == null) {
             var2 = "";
           }

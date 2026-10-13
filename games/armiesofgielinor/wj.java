@@ -5,7 +5,7 @@ final class wj extends IntrusiveNode {
     int[][] field_m;
     static PlatformTaskService field_n;
     int field_p;
-    static volatile boolean field_l;
+    static volatile boolean canvasFocused;
     boolean field_o;
     int field_k;
     int field_r;
@@ -69,10 +69,10 @@ final class wj extends IntrusiveNode {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
-          if (null != le.field_d) {
+          if (null != GameCanvas.field_d) {
             try {
-              le.field_d.seek(-1, 0L);
-              le.field_d.write(24, ByteStorage.incomingPacket.position, (byte) 46, ByteStorage.incomingPacket.payload);
+              GameCanvas.field_d.seek(-1, 0L);
+              GameCanvas.field_d.write(24, ByteStorage.incomingPacket.position, (byte) 46, ByteStorage.incomingPacket.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -90,7 +90,7 @@ final class wj extends IntrusiveNode {
     }
 
     static {
-        field_l = true;
+        canvasFocused = true;
         field_q = 0;
     }
 }

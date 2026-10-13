@@ -120,7 +120,7 @@ abstract class CacheEntry extends DualLinkedNode {
                 tf.a((byte) -99, CombatEvent.d((byte) -127));
                 BitmapTextWidgetPainter.field_r = CampaignMission.field_s;
                 dj.a((byte) -128);
-                ev.field_b = false;
+                RasterViewportResizeHandler.field_b = false;
                 stackIn_31_0 = var9Lifetime1;
                 return stackIn_31_0;
               }
@@ -146,7 +146,7 @@ abstract class CacheEntry extends DualLinkedNode {
                   br.field_b[var12] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);
                 }
                 dj.a((byte) -128);
-                ev.field_b = false;
+                RasterViewportResizeHandler.field_b = false;
                 stackIn_44_0 = 100 + var11;
                 return stackIn_44_0;
               }
@@ -163,7 +163,7 @@ abstract class CacheEntry extends DualLinkedNode {
               BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
             }
             dj.a((byte) -127);
-            ev.field_b = false;
+            RasterViewportResizeHandler.field_b = false;
             stackIn_53_0 = MusicCrossfadeStream.deliveredOpcode;
             return stackIn_53_0;
           }
@@ -171,19 +171,19 @@ abstract class CacheEntry extends DualLinkedNode {
             field_v = (String) null;
           }
           if (MoveAttackRequest.sessionSocket == null) {
-            if (ev.field_b) {
+            if (RasterViewportResizeHandler.field_b) {
               if (TileMetadata.b(0) > 30000L) {
                 BitmapTextWidgetPainter.field_r = ValidationState.field_a;
               } else {
                 BitmapTextWidgetPainter.field_r = DamageEvent.field_y;
               }
-              ev.field_b = false;
+              RasterViewportResizeHandler.field_b = false;
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
             var9Lifetime3 = rn.field_d;
             rn.field_d = AiPlanningStrategy.field_c;
-            ev.field_b = true;
+            RasterViewportResizeHandler.field_b = true;
             AiPlanningStrategy.field_c = var9Lifetime3;
           }
           stackIn_65_0 = -1;

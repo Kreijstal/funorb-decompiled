@@ -1599,7 +1599,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATUS_EFFECTEXPAND");
                 if (var2 != null) {
-                  qc.field_f = uu.a(var2, (byte) -123);
+                  GameClock.field_f = uu.a(var2, (byte) -123);
                 }
                 var2 = fk.a(false, "STATUS_VAMPIRE");
                 if (var2 != null) {
@@ -3167,7 +3167,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "QUALITY_LOW");
                 if (null != var2) {
-                  uk.field_k = uu.a(var2, (byte) 26);
+                  NanoGameClock.field_k = uu.a(var2, (byte) 26);
                 }
                 var2 = fk.a(false, "SKIP_ON");
                 if (var2 != null) {
@@ -4747,7 +4747,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_EQUIPMENT");
                 if (var2 != null) {
-                  qc.field_i = uu.a(var2, (byte) 60);
+                  GameClock.field_i = uu.a(var2, (byte) 60);
                 }
                 var2 = fk.a(false, "TTREEN_SPELLS");
                 if (null != var2) {
@@ -4859,7 +4859,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_CURSE");
                 if (null != var2) {
-                  iv.field_m = uu.a(var2, (byte) -121);
+                  GameAppletShell.field_m = uu.a(var2, (byte) -121);
                 }
                 var2 = fk.a(false, "TTREEN_SOURCERY");
                 if (var2 != null) {
@@ -5209,7 +5209,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRINKET_WORTH");
                 if (null != var2) {
-                  lt.field_f = uu.a(var2, (byte) -102);
+                  BattleViewportResizeHandler.field_f = uu.a(var2, (byte) -102);
                 }
                 var2 = fk.a(false, "TRT_TEXT,0");
                 if (var2 != null) {
@@ -5614,8 +5614,8 @@ final class TickCounter {
                   throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_4826_0), ((StringBuilder) (Object) stackIn_4826_1).append(stackIn_4827_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_4835_0 = (!iv.field_k);
-                  iv.field_k = stackIn_4835_0;
+                  stackIn_4835_0 = (!GameAppletShell.field_k);
+                  GameAppletShell.field_k = stackIn_4835_0;
                 }
             }
         }

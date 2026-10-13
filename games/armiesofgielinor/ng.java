@@ -763,15 +763,15 @@ final class ng {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ds.field_a = new RgbSprite[op.field_c[param1].length];
-          le.field_c = new RgbSprite[op.field_c[0].length];
+          GameCanvas.field_c = new RgbSprite[op.field_c[0].length];
           DiskCacheWorker.field_d = param0;
           ClientUiNode.field_y = param2;
           for (var3_int = 0; op.field_c[0].length > var3_int; var3_int++) {
             ds.field_a[var3_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
-            le.field_c[var3_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
+            GameCanvas.field_c[var3_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
             ds.field_a[var3_int].b();
             DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var3_int]);
-            le.field_c[var3_int].b();
+            GameCanvas.field_c[var3_int].b();
             ClientUiNode.field_y.b(0, 0, op.field_c[0][var3_int]);
           }
           return;

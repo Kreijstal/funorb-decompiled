@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ev implements ok {
+class RasterViewportResizeHandler implements ViewportResizeListener {
     static String field_e;
     static int field_d;
     static boolean field_b;
@@ -11,7 +11,7 @@ class ev implements ok {
     public static void a(int param0) {
         if (param0 != 960112080) {
           PacketBuffer var2 = (PacketBuffer) null;
-          ev.readNullableUnsignedByteArray((PacketBuffer) null, (byte) 105);
+          RasterViewportResizeHandler.readNullableUnsignedByteArray((PacketBuffer) null, (byte) 105);
         }
         field_e = null;
     }
@@ -38,7 +38,7 @@ class ev implements ok {
             var3[var4] = packet.readUnsignedByte(0);
           }
           if (obfuscationGuard != -98) {
-            ev.a(4);
+            RasterViewportResizeHandler.a(4);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;
@@ -56,22 +56,22 @@ class ev implements ok {
         }
     }
 
-    public void a(int param0, int param1, int param2) {
-        if (param1 != -32263) {
+    public void viewportResized(int height, int obfuscationGuard, int width) {
+        if (obfuscationGuard != -32263) {
           return;
         }
-        ActionSpell.a(param2, param1 ^ -9688, param0);
+        ActionSpell.resizeRasterViewport(width, obfuscationGuard ^ -9688, height);
     }
 
-    final static int b(int param0, int param1, int param2) {
-        int var3 = param2 >> 16;
-        if (param0 >= -33) {
+    final static int multiplyFixed16(int obfuscationGuard, int left, int right) {
+        int rightInteger = right >> 16;
+        if (obfuscationGuard >= -33) {
           field_e = (String) null;
         }
-        int var4 = 65535 & param2;
-        int var5 = param1 >> 16;
-        int var6 = param1 & 65535;
-        return var5 * var4 + param1 * var3 + (var6 * var4 >> 16);
+        int rightFraction = 65535 & right;
+        int leftInteger = left >> 16;
+        int leftFraction = left & 65535;
+        return leftInteger * rightFraction + left * rightInteger + (leftFraction * rightFraction >> 16);
     }
 
     static {

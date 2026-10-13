@@ -9,7 +9,7 @@ final class la {
     private AnimationPlayer field_a;
     int field_f;
     static int field_d;
-    static java.applet.Applet field_g;
+    static java.applet.Applet loaderApplet;
 
     private final int c(byte param0) {
         int var3 = 0;
@@ -29,7 +29,7 @@ final class la {
     }
 
     public static void b(byte param0) {
-        field_g = null;
+        loaderApplet = null;
         field_e = null;
         if (param0 >= -106) {
           la.d((byte) -100);
@@ -89,7 +89,7 @@ final class la {
         }
         DeployEvent.updateIgnoreListControls(-115, enableCapture, visibleRows);
         if (obfuscationGuard != -1) {
-          field_g = (java.applet.Applet) null;
+          loaderApplet = (java.applet.Applet) null;
         }
     }
 
@@ -171,7 +171,7 @@ final class la {
         try {
           param1 = param1 | param1 << 8;
           if (param5) {
-            field_g = (java.applet.Applet) null;
+            loaderApplet = (java.applet.Applet) null;
           }
           var6_int = param1 ^ param1 >> 1;
           for (var9 = 0; var9 < 4; var9++) {

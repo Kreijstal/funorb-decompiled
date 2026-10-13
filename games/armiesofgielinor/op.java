@@ -101,7 +101,7 @@ final class op {
             return stackIn_2_0;
           }
           if (2 != th.socialListState) {
-            stackIn_6_0 = iv.field_c;
+            stackIn_6_0 = GameAppletShell.field_c;
             return stackIn_6_0;
           }
           if (gt.isLocalAccountName(name, (byte) -89)) {

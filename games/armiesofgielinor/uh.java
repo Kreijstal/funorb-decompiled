@@ -5,7 +5,7 @@ final class uh {
     static String field_a;
     static int[] field_f;
     static String field_c;
-    static int field_d;
+    static int canvasRefreshCounter;
     static String field_b;
     static int[][] field_e;
 
@@ -57,7 +57,7 @@ final class uh {
     static {
         field_f = new int[8192];
         field_a = "Rated games are available to members only. To become a member, please visit the 'Account' section of the website.";
-        field_d = 500;
+        canvasRefreshCounter = 500;
         field_c = "Score: <%0>";
         field_b = "Medium";
         field_e = new int[][]{new int[]{128, 144}, new int[]{80, 224}, new int[]{80, 224}, new int[]{224, 48}, new int[]{160, 80}, new int[]{96, 112}};

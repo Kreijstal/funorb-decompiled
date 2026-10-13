@@ -221,7 +221,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           if (param1 != -10) {
             mu.field_a = new cg();
           }
-          qc.field_j = 0;
+          GameClock.field_j = 0;
           if (MusicCrossfadeStream.a(jt.field_a, true)) {
             ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
           }
@@ -232,7 +232,7 @@ final class CipherPacketBuffer extends PacketBuffer {
             if (param1 != -10) {
               mu.field_a = new cg();
             }
-            qc.field_j = 0;
+            GameClock.field_j = 0;
             if (MusicCrossfadeStream.a(jt.field_a, true)) {
               ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
             }
@@ -240,12 +240,12 @@ final class CipherPacketBuffer extends PacketBuffer {
             DualNodeDeque.field_c = 0;
             if (param1 != -10) {
               mu.field_a = new cg();
-              qc.field_j = 0;
+              GameClock.field_j = 0;
               if (MusicCrossfadeStream.a(jt.field_a, true)) {
                 ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
               }
             } else {
-              qc.field_j = 0;
+              GameClock.field_j = 0;
               if (!MusicCrossfadeStream.a(jt.field_a, true)) {
                 if (!MusicCrossfadeStream.a(param1, true)) {
                   if (jt.field_a == 16) {

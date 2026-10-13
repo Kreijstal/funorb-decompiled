@@ -453,7 +453,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           mu.field_a = null;
-          qc.field_j = 0;
+          GameClock.field_j = 0;
           if (vs.field_j) {
             rd.gameplayController = null;
             vs.field_j = false;

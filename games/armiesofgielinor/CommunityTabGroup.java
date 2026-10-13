@@ -115,7 +115,7 @@ final class CommunityTabGroup {
           }
         }
         if (!quickChat) {
-          BattleGraphicsAssets.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
+          BattleGraphicsAssets.decodedChatText = GameCanvas.readCompressedChatText(80, (byte) -25, packet);
           HotspotTextWidget.decodedChatResponsePhraseIds = null;
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);
@@ -281,7 +281,7 @@ final class CommunityTabGroup {
           }
         }
         if (!quickChat) {
-          BattleGraphicsAssets.decodedChatText = le.readCompressedChatText(80, (byte) -25, packet);
+          BattleGraphicsAssets.decodedChatText = GameCanvas.readCompressedChatText(80, (byte) -25, packet);
           HotspotTextWidget.decodedChatResponsePhraseIds = null;
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);

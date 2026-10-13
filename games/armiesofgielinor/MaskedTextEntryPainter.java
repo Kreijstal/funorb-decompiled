@@ -6,7 +6,7 @@ final class MaskedTextEntryPainter extends TextEntryWidgetPainter {
     static int field_A;
     static RgbSprite field_y;
     static ConsoleExpression[] cachedConsoleTokens;
-    static volatile boolean field_z;
+    static volatile boolean redrawRequested;
     static String field_x;
     static boolean field_C;
 
@@ -60,6 +60,6 @@ final class MaskedTextEntryPainter extends TextEntryWidgetPainter {
     static {
         field_A = 5;
         field_x = "Please select options in the following rows:  ";
-        field_z = true;
+        redrawRequested = true;
     }
 }

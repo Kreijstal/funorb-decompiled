@@ -6,7 +6,7 @@ final class AiActionCandidate extends IntrusiveNode {
     int targetX;
     static String field_n;
     int destinationX;
-    static long[] field_u;
+    static long[] renderTimestampsMillis;
     float score;
     int targetY;
     int executionResult;
@@ -28,7 +28,7 @@ final class AiActionCandidate extends IntrusiveNode {
     public static void f(int param0) {
         field_p = null;
         int var1 = -70 / ((-47 - param0) / 52);
-        field_u = null;
+        renderTimestampsMillis = null;
         field_v = null;
         field_n = null;
     }
@@ -151,7 +151,7 @@ final class AiActionCandidate extends IntrusiveNode {
     }
 
     static {
-        field_u = new long[32];
+        renderTimestampsMillis = new long[32];
         field_v = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
         field_n = "Dragonhide armour deflects fire and acts as a barrier to heat.";
         field_p = new int[8192];

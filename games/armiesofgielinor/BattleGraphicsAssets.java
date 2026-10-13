@@ -17,7 +17,7 @@ final class BattleGraphicsAssets {
         int var1Lifetime1;
         int var2Lifetime1;
         if (AccountRegistrationForm.field_X < 0) {
-          uk.field_q = -1;
+          NanoGameClock.field_q = -1;
           return;
         }
         if (param0 == -61) {
@@ -27,9 +27,9 @@ final class BattleGraphicsAssets {
           var2 = stackIn_12_0 + stackIn_13_1;
           var2 = (var2 / 2 + var2 % 2) * 80;
           if (-80 + (var1 + 8) >= var2) {
-            uk.field_q = -1;
+            NanoGameClock.field_q = -1;
           } else {
-            uk.field_q = 8 + (var2 - var1 + 80);
+            NanoGameClock.field_q = 8 + (var2 - var1 + 80);
           }
           return;
         }
@@ -40,9 +40,9 @@ final class BattleGraphicsAssets {
         var2Lifetime1 = stackIn_5_0 + stackIn_6_1;
         var2Lifetime1 = (var2Lifetime1 / 2 + var2Lifetime1 % 2) * 80;
         if (-80 + (var1Lifetime1 + 8) >= var2Lifetime1) {
-          uk.field_q = -1;
+          NanoGameClock.field_q = -1;
         } else {
-          uk.field_q = 8 + (var2Lifetime1 - var1Lifetime1 + 80);
+          NanoGameClock.field_q = 8 + (var2Lifetime1 - var1Lifetime1 + 80);
         }
     }
 

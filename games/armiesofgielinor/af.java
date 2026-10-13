@@ -143,14 +143,14 @@ abstract class af {
             stackIn_12_2 = null;
             stackIn_12_3 = ToggleWidget.field_L.getCodeBase();
             stackIn_12_4 = new StringBuilder().append("clienterror.ws?c=").append(SummonRequest.field_B).append("&u=");
-            if (uk.field_l == null) {
+            if (NanoGameClock.field_l == null) {
               stackIn_13_1 = null;
               stackIn_13_2 = null;
               stackIn_13_5 = "" + ck.field_b;
             } else {
               stackIn_13_1 = null;
               stackIn_13_2 = null;
-              stackIn_13_5 = uk.field_l;
+              stackIn_13_5 = NanoGameClock.field_l;
             }
             var5 = ((PlatformTaskService) (Object) stackIn_12_0).openUrlStreamAsync(new java.net.URL(stackIn_12_3, ((StringBuilder) (Object) stackIn_12_4).append(stackIn_13_5).append("&v1=").append(PlatformTaskService.javaVendor).append("&v2=").append(PlatformTaskService.javaVersion).append("&e=").append(var11).toString()), false);
             while (var5.status == 0) {
@@ -181,8 +181,8 @@ abstract class af {
         try {
           se.field_f = closeFlowB;
           ac.field_n = true;
-          qc.loginProgressDialog = new ProgressMessageDialog(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, message, fh.field_i, se.field_f);
-          KingBlackDragonEvent.field_C.showDialog(qc.loginProgressDialog, obfuscationGuard ^ obfuscationGuard);
+          GameClock.loginProgressDialog = new ProgressMessageDialog(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, message, fh.field_i, se.field_f);
+          KingBlackDragonEvent.field_C.showDialog(GameClock.loginProgressDialog, obfuscationGuard ^ obfuscationGuard);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + closeFlowB + ',' + (message != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }

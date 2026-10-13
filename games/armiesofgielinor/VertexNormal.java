@@ -86,7 +86,7 @@ final class VertexNormal {
           var7 = 0;
           var8 = 0;
           if (ToggleWidget.currentRoom != null && (null != ep.field_p ||
-            iv.field_e != null ||
+            GameAppletShell.field_e != null ||
             jv.field_d != null ||
             CombatPresentation.field_j != null)) {
             for (var9 = 0; var9 < tq.gameOptionCount; var9++) {
@@ -96,9 +96,9 @@ final class VertexNormal {
                 ep.field_p[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (null != iv.field_e &&
-                null != iv.field_e[var9]) {
-                var11_int = iv.field_e[var9][var10_int];
+              if (null != GameAppletShell.field_e &&
+                null != GameAppletShell.field_e[var9]) {
+                var11_int = GameAppletShell.field_e[var9][var10_int];
                 if (var11_int > var6) {
                   var6 = var11_int;
                 }
@@ -400,9 +400,9 @@ final class VertexNormal {
                     !var12.packedFlag0) {
                     var29 = 1;
                   }
-                  if (null != iv.field_e &&
-                    null != iv.field_e[var27_int]) {
-                    var30_int = iv.field_e[var27_int][var28];
+                  if (null != GameAppletShell.field_e &&
+                    null != GameAppletShell.field_e[var27_int]) {
+                    var30_int = GameAppletShell.field_e[var27_int][var28];
                     if (var30_int != 0 &&
                       !bj.field_k &&
                       !var12.packedFlag0) {

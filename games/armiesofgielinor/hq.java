@@ -47,7 +47,7 @@ final class hq {
             ng.field_v = param6;
             if (null != wj.field_n.randomDataFile) {
               try {
-                le.field_d = new BufferedFile(wj.field_n.randomDataFile, 64, 0);
+                GameCanvas.field_d = new BufferedFile(wj.field_n.randomDataFile, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

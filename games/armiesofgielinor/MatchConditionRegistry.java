@@ -109,7 +109,7 @@ final class MatchConditionRegistry {
                   return stackIn_19_0;
                 }
               } else {
-                if (lt.field_h[var5].b(EditableTextField.field_Vb[var5][0], EditableTextField.field_Vb[var5][1], param1, param0)) {
+                if (BattleViewportResizeHandler.field_h[var5].b(EditableTextField.field_Vb[var5][0], EditableTextField.field_Vb[var5][1], param1, param0)) {
                   stackIn_16_0 = var5;
                   return stackIn_16_0;
                 }

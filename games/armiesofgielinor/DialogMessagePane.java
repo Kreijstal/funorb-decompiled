@@ -150,7 +150,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
             }
             var1 = (LobbyPlayer) (SummonAction.lobbyPlayerOrder.next((byte) 123));
           }
-          var1_ref = (LobbyRoom) (qc.lobbyRoomOrder.first((byte) 89));
+          var1_ref = (LobbyRoom) (GameClock.lobbyRoomOrder.first((byte) 89));
           while (var1_ref != null) {
             if (0 < var1_ref.notificationTicks) {
               var1_ref.notificationTicks = var1_ref.notificationTicks - 1;
@@ -161,7 +161,7 @@ final class DialogMessagePane extends DequeWidgetContainer implements WidgetActi
                 }
               }
             }
-            var1_ref = (LobbyRoom) (qc.lobbyRoomOrder.next((byte) 123));
+            var1_ref = (LobbyRoom) (GameClock.lobbyRoomOrder.next((byte) 123));
           }
           var2 = -62 % ((obfuscationGuard + 41) / 60);
           var1Lifetime1 = (LobbyPlayer) (ModalDialog.currentRoomPlayers.first((byte) 115));

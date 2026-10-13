@@ -186,7 +186,7 @@ abstract class AiPlanningStrategy {
               } else {
                 decompiledFrameRemainder0 = (0 != ListMissionsConsoleCommand.field_E.addButton.pressedButton);
                 if (decompiledFrameRemainder0) {
-                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, iv.field_a, kq.field_N, eq.field_h, eq.field_h);
+                  EffectPresentation.field_e = new AccountNamePrompt(ListMissionsConsoleCommand.field_E.addButton.screenX, ListMissionsConsoleCommand.field_E.addButton.screenY, ListMissionsConsoleCommand.field_E.addButton.width, ListMissionsConsoleCommand.field_E.addButton.height, GameAppletShell.field_a, kq.field_N, eq.field_h, eq.field_h);
                 }
               }
               if (decompiledFrameRemainder0) {

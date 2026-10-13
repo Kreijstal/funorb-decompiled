@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qc {
+abstract class GameClock {
     static ProgressMessageDialog loginProgressDialog;
     static String field_b;
     static UiSelectionState field_d;
-    static qc field_h;
+    static GameClock gameClock;
     static String field_i;
     static int field_j;
     static ClientUiComponent field_e;
@@ -22,7 +22,7 @@ abstract class qc {
           loginProgressDialog = null;
           field_d = null;
           lobbyRoomOrder = null;
-          field_h = null;
+          gameClock = null;
           field_f = null;
           return;
         }
@@ -31,7 +31,7 @@ abstract class qc {
         loginProgressDialog = null;
         field_d = null;
         lobbyRoomOrder = null;
-        field_h = null;
+        gameClock = null;
         field_f = null;
     }
 
@@ -39,7 +39,7 @@ abstract class qc {
         BattlefieldTheme var2 = null;
         BattlefieldTheme var2Lifetime1;
         if (param1 != 8806) {
-          field_h = (qc) null;
+          gameClock = (GameClock) null;
           if (MusicPatchUsage.backgroundArchive == null) {
             return null;
           }
@@ -65,23 +65,23 @@ abstract class qc {
         return null;
     }
 
-    abstract int a(long param0, int param1);
+    abstract int advanceTicks(long tickDurationNanos, int obfuscationGuard);
 
-    final int a(int param0, long param1) {
-        long var4 = 0L;
-        if (param0 < -124) {
-          var4 = this.b((byte) -103);
-          if (var4 > 0L) {
-            SpriteButtonPainter.a(var4, 0);
+    final int waitAndAdvance(int obfuscationGuard, long tickDurationNanos) {
+        long delayMillis = 0L;
+        if (obfuscationGuard < -124) {
+          delayMillis = this.getDelayMillis((byte) -103);
+          if (delayMillis > 0L) {
+            SpriteButtonPainter.a(delayMillis, 0);
           }
-          return this.a(param1, 0);
+          return this.advanceTicks(tickDurationNanos, 0);
         }
         return -53;
     }
 
-    abstract long b(byte param0);
+    abstract long getDelayMillis(byte obfuscationGuard);
 
-    abstract void a(int param0);
+    abstract void resetClock(int obfuscationGuard);
 
     static {
         field_b = "Solicitation";

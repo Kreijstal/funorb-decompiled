@@ -71,7 +71,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         if (param0 != -28541) {
           field_F = 18;
         }
-        le.field_b = new cg();
+        GameCanvas.field_b = new cg();
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.b(0.75f);
     }
@@ -80,19 +80,19 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         if (param0 != 5) {
           field_J = (String) null;
         }
-        if (iv.field_b == null) {
-          iv.field_b = new fl();
-          iv.field_b.a(13421772, ArmiesOfGielinor.field_J);
-          iv.field_b.field_s = 7697781;
-          iv.field_b.field_o = 14;
-          iv.field_b.field_h = 0;
-          iv.field_b.field_c = 2763306;
-          iv.field_b.field_m = gl.field_e;
-          iv.field_b.field_d = 4;
-          iv.field_b.field_x = 6;
-          iv.field_b.field_r = 5;
+        if (GameAppletShell.field_b == null) {
+          GameAppletShell.field_b = new fl();
+          GameAppletShell.field_b.a(13421772, ArmiesOfGielinor.field_J);
+          GameAppletShell.field_b.field_s = 7697781;
+          GameAppletShell.field_b.field_o = 14;
+          GameAppletShell.field_b.field_h = 0;
+          GameAppletShell.field_b.field_c = 2763306;
+          GameAppletShell.field_b.field_m = gl.field_e;
+          GameAppletShell.field_b.field_d = 4;
+          GameAppletShell.field_b.field_x = 6;
+          GameAppletShell.field_b.field_r = 5;
         }
-        return iv.field_b;
+        return GameAppletShell.field_b;
     }
 
     final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {

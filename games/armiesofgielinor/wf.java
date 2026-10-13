@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wf extends iv {
+abstract class wf extends GameAppletShell {
     static RgbSprite[] boneShadowSprites;
     static String field_u;
     static int[] field_y;
@@ -87,7 +87,7 @@ abstract class wf extends iv {
 
     final int h(byte param0) {
         int var2;
-        if (this.field_i) {
+        if (this.errorReported) {
           return -1;
         }
         if (!MovementPresentation.j(-11)) {
@@ -115,7 +115,7 @@ abstract class wf extends iv {
         }
         if (var2 != 1) {
           if (!TurnEffectEvent.field_C) {
-            this.a("reconnect", (byte) -81);
+            this.reportGameError("reconnect", (byte) -81);
           }
           er.b(-11);
           wv.a(BitmapTextWidgetPainter.field_r, 10, var2);
@@ -565,20 +565,20 @@ abstract class wf extends iv {
           ModalDialogHost.field_K != 0) {
           if (StrongCacheEntry.field_E < 10) {
             if (3 == ModalDialogHost.field_K) {
-              this.a("js5crc", (byte) -107);
+              this.reportGameError("js5crc", (byte) -107);
             } else {
               if (ModalDialogHost.field_K != 4) {
                 if (ModalDialogHost.field_K == 2) {
-                  this.a("js5connect_full", (byte) -37);
+                  this.reportGameError("js5connect_full", (byte) -37);
                 } else {
                   if (ModalDialogHost.field_K == 5) {
-                    this.a("outofdate", (byte) -67);
+                    this.reportGameError("outofdate", (byte) -67);
                   } else {
-                    this.a("js5connect", (byte) -41);
+                    this.reportGameError("js5connect", (byte) -41);
                   }
                 }
               } else {
-                this.a("js5io", (byte) -113);
+                this.reportGameError("js5io", (byte) -113);
               }
             }
           } else {
@@ -717,9 +717,9 @@ abstract class wf extends iv {
           }
         }
         if (!param1 &&
-          tq.field_a) {
+          tq.canvasRebuildRequested) {
           dt.a(IndexedSpriteBase.field_b, 23678);
-          this.c((byte) 87);
+          this.recreateCanvas((byte) 87);
           BitmapTextWidgetPainter.a(123, IndexedSpriteBase.field_b);
         }
         if (tk.field_f[8]) {
@@ -774,13 +774,13 @@ abstract class wf extends iv {
               this.field_n = Integer.parseInt(var9);
             }
             hc.field_i = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(param3, 32, param4, 10, this.field_G, param0, param2);
+            this.startAppletShell(param3, 32, param4, 10, this.field_G, param0, param2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
             af.a((Throwable) ((Object) var6_ref), 98, (String) null);
-            this.a("crash", (byte) -40);
+            this.reportGameError("crash", (byte) -40);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

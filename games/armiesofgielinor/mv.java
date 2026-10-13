@@ -53,7 +53,7 @@ final class mv {
               }
             }
             if (param3 >= 0) {
-              le.field_c[param3].f(param0 - (-10 - var9) + (int)((double)var8 * Math.sin((double)(10 + var6 + param2 * 3) * 3.141592653589793 / (double)(230 + 4 * var5_int))), param4 + var6, var7 >> 1);
+              GameCanvas.field_c[param3].f(param0 - (-10 - var9) + (int)((double)var8 * Math.sin((double)(10 + var6 + param2 * 3) * 3.141592653589793 / (double)(230 + 4 * var5_int))), param4 + var6, var7 >> 1);
             } else {
               ClientUiNode.field_y.f(var9 + 10 + (param0 + (int)(Math.sin((double)(var6 + param2 * 3 + 10) * 3.141592653589793 / (double)(var5_int * 4 + 230)) * (double)var8)), var6 + param4, var7 >> 1);
             }

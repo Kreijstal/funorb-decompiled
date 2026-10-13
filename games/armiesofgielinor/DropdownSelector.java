@@ -548,7 +548,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          uk.field_s = param4;
+          NanoGameClock.field_s = param4;
           AiPlanner.field_G = param19;
           kq.a(param3, param17, (byte) 87, param10, param2);
           CampaignMenu.a((byte) 123, param18, param5, param16);

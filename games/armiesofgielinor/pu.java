@@ -81,9 +81,9 @@ final class pu {
           if (param0 > -86) {
             return;
           }
-          if (null != qc.lobbyRoomOrder) {
-            qc.lobbyRoomOrder.clear(94);
-            qc.lobbyRoomOrder = null;
+          if (null != GameClock.lobbyRoomOrder) {
+            GameClock.lobbyRoomOrder.clear(94);
+            GameClock.lobbyRoomOrder = null;
           }
           ClippedWidgetContainer.lobbyRoomsById = null;
           if (ModalDialog.currentRoomPlayers != null) {

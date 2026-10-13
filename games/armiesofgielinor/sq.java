@@ -17,7 +17,7 @@ final class sq extends IntrusiveNode {
         if (!fs.a(false)) {
           return false;
         }
-        if ((uk.field_n & 8) == 0) {
+        if ((NanoGameClock.field_n & 8) == 0) {
           return true;
         }
         return false;

@@ -67,11 +67,11 @@ final class UpkeepEvent extends GameEvent {
     final static void a(ResourceArchive param0, int param1) {
         try {
           SectorCacheStore.field_j = new IndexedSprite[6][];
-          lt.field_h = new RgbSprite[6];
-          lt.field_h[1] = GameplayController.a("coatofarms_lbarespace", (byte) 51, "basic", param0);
-          lt.field_h[2] = GameplayController.a("coatofarms_rbarespace", (byte) 51, "basic", param0);
-          lt.field_h[5] = GameplayController.a("coatofarms_iconspace", (byte) 51, "basic", param0);
-          lt.field_h[4] = GameplayController.a("coatofarms_topperspace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h = new RgbSprite[6];
+          BattleViewportResizeHandler.field_h[1] = GameplayController.a("coatofarms_lbarespace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h[2] = GameplayController.a("coatofarms_rbarespace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h[5] = GameplayController.a("coatofarms_iconspace", (byte) 51, "basic", param0);
+          BattleViewportResizeHandler.field_h[4] = GameplayController.a("coatofarms_topperspace", (byte) 51, "basic", param0);
           SectorCacheStore.field_j[0] = MapLayout.loadIndexedSpritesByName("coatofarms_bases", -28106, "basic", param0);
           if (param1 <= 20) {
             ResourceArchive var3 = (ResourceArchive) null;

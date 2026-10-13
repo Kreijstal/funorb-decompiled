@@ -72,7 +72,7 @@ final class ClientConnectionState {
           gl var3 = (gl) null;
           ClientConnectionState.a(false, (gl) null, (gl) null);
         }
-        rd.field_i = 1000000000L / (long)param0;
+        rd.tickDurationNanos = 1000000000L / (long)param0;
     }
 
     final static int a(boolean param0, gl param1, gl param2) {

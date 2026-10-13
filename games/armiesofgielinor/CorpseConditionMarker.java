@@ -25,12 +25,12 @@ final class CorpseConditionMarker extends PreparedAction {
         if (param0 != -28309) {
           defaultMusicProfile = (ChannelGainProfile) null;
         }
-        if (uk.field_q < dd.field_e &&
-          -1 < uk.field_q) {
-          dd.field_e = uk.field_q;
+        if (NanoGameClock.field_q < dd.field_e &&
+          -1 < NanoGameClock.field_q) {
+          dd.field_e = NanoGameClock.field_q;
           Widget.field_n = 0;
         } else {
-          if (uk.field_q == -1) {
+          if (NanoGameClock.field_q == -1) {
             dd.field_e = 0;
           }
         }

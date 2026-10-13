@@ -925,7 +925,7 @@ final class GameplayController {
             stackIn_17_1 = param3;
             stackIn_17_2 = param2;
             stackIn_17_3 = param1;
-            if (uk.field_n % (2 * var13) < var13) {
+            if (NanoGameClock.field_n % (2 * var13) < var13) {
               stackIn_18_4 = var7_int;
             } else {
               stackIn_18_4 = 15724527;
@@ -947,7 +947,7 @@ final class GameplayController {
           param2 = this.battlefield.i(param0, -12710) * param2 / this.battlefield.collectedManaTarget;
           SoftwareRaster.f(param4, param3, param2, param1, var7_int);
           if (this.field_Mb) {
-            SoftwareRaster.b(var10 - 1, var11 - 1, var8 + 2, var9 + 2, 16777215, (int)(64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) + 128.0));
+            SoftwareRaster.b(var10 - 1, var11 - 1, var8 + 2, var9 + 2, 16777215, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1219,7 +1219,7 @@ final class GameplayController {
           this.a(this.battlefield.getPlayerTeamIndex(var2_int, param0 - 108), var6, 3 * var6 + (this.o(126) - 133), 15, 90, -111, 9, -6 + var6 >> 1);
           SpellConfirmationDialog.field_j.g(20, this.o(127) - 180);
           if (this.field_fc) {
-            SoftwareRaster.b(4, var4, 99, var5, 16777215, (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0));
+            SoftwareRaster.b(4, var4, 99, var5, 16777215, (int)(Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1236,7 +1236,7 @@ final class GameplayController {
         }
         try {
           if (this.battlefield.currentPlayer == this.controlledPlayerId) {
-            var2_int = uk.field_n - this.field_Hb;
+            var2_int = NanoGameClock.field_n - this.field_Hb;
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 73);
             EmailValidator.outgoingPacket.writeByte(1, 0);
             EmailValidator.outgoingPacket.writeShort(true, var2_int);
@@ -2834,7 +2834,7 @@ final class GameplayController {
             this.startEquipmentTutorial((byte) 125);
           }
           SoftwareRaster.setClip(db.a(true, 374), MatchConditionEntry.a(33 + param0, (byte) 94), db.a(true, 591), MatchConditionEntry.a(192 + (param0 + 33), (byte) 94));
-          var6Lifetime1 = -(uk.field_n / 3) % pc.field_j.pixelHeight;
+          var6Lifetime1 = -(NanoGameClock.field_n / 3) % pc.field_j.pixelHeight;
           pc.field_j.f(db.a(true, 374), MatchConditionEntry.a(var6Lifetime1 + param0 + 33, (byte) 94));
           pc.field_j.f(db.a(true, 374), MatchConditionEntry.a(pc.field_j.pixelHeight + var6Lifetime1 + (param0 + 33), (byte) 94));
           SoftwareRaster.a();
@@ -3333,7 +3333,7 @@ final class GameplayController {
               EmailValidator.outgoingPacket.writeCipheredOpcode(param1 ^ 32165, 74);
             }
             this.field_db = param0;
-            this.field_zb = uk.field_n;
+            this.field_zb = NanoGameClock.field_n;
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
             }
@@ -3670,7 +3670,7 @@ final class GameplayController {
               this.field_V = false;
               this.field_j = 0;
               mu.field_a = new cg();
-              qc.field_j = 0;
+              GameClock.field_j = 0;
               return;
             }
             if (decompiledFrameRemainder3) {
@@ -3697,7 +3697,7 @@ final class GameplayController {
                     if (this.field_Sb == 0) {
                       mu.field_a = new cg();
                       ValidatedTextWidget.field_Z = false;
-                      qc.field_j = 0;
+                      GameClock.field_j = 0;
                     }
                   }
                 }
@@ -3707,7 +3707,7 @@ final class GameplayController {
               if (this.field_Sb == 0) {
                 mu.field_a = new cg();
                 ValidatedTextWidget.field_Z = false;
-                qc.field_j = 0;
+                GameClock.field_j = 0;
               }
             }
           }
@@ -3950,7 +3950,7 @@ final class GameplayController {
               if (this.field_Sb == 0 &&
                 null == this.battlefield.campaignMission) {
                 mu.field_a = new cg();
-                qc.field_j = 0;
+                GameClock.field_j = 0;
               }
             }
             stackIn_405_0 = ~this.field_pb;
@@ -4129,7 +4129,7 @@ final class GameplayController {
           if (this.battlefield.campaignMission == null) {
             this.turnTimerDial.draw(15, 15, (byte) 121);
             if (this.field_ac) {
-              TrianglePulse.field_d.d(0, 0, 134, 134, (int)(64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) + 128.0));
+              TrianglePulse.field_d.d(0, 0, 134, 134, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
             }
           }
           if (this.controlledPlayerId > -1) {
@@ -4152,7 +4152,7 @@ final class GameplayController {
             ip.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, bu.field_c, 67, GrowthEvent.field_I, this.field_Fb);
             if (this.field_jc &&
               var2_int != 0) {
-              TrianglePulse.field_d.d(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0));
+              TrianglePulse.field_d.d(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
             }
             MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, DateInputWidget.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
           }
@@ -4250,7 +4250,7 @@ final class GameplayController {
           SoftwareRaster.b();
           DateInputWidget.field_E.drawParagraph(ScrollContainer.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
           DateInputWidget.field_E.drawText(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
-          var7 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
+          var7 = (int)(Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
           var7 = var7 << 16 | 65283 & var7 << 6;
           stackIn_4_0 = bw.unitDefinitions[param1][2];
           if (param2 > bw.unitDefinitions[param1][1]) {
@@ -4952,7 +4952,7 @@ final class GameplayController {
                 km.field_h[1].g(var6 - 23, var7 - 23);
               }
               if (~var2_int == ~this.field_Jb) {
-                TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0)));
+                TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
               }
               var2_int++;
             }
@@ -4970,7 +4970,7 @@ final class GameplayController {
           BattleCharacter.field_h[170].g(111, -20 + (-95 + this.o(125)));
           km.field_h[1].g(107, -118 + this.o(param0 + 132));
           if (this.field_Jb == 255) {
-            TrianglePulse.field_d.d(95, -95 + this.o(125) - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0)));
+            TrianglePulse.field_d.d(95, -95 + this.o(125) - 35, 70, 70, (int)(128.0 + 64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0)));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5130,7 +5130,7 @@ final class GameplayController {
           }
           if (decompiledFrameCompleted0) {
             SoftwareRaster.setClip(4 + param0, param2 + 33, param0 + 4 + 217, param2 + 33 + 192);
-            var6Lifetime1 = -(uk.field_n / param1) % pc.field_j.pixelHeight;
+            var6Lifetime1 = -(NanoGameClock.field_n / param1) % pc.field_j.pixelHeight;
             pc.field_j.f(param0 + 3, var6Lifetime1 + (param2 + 33));
             pc.field_j.f(param0 + 3, pc.field_j.pixelHeight + (33 + param2) + var6Lifetime1);
             SoftwareRaster.a();
@@ -6575,7 +6575,7 @@ final class GameplayController {
                           break;
                         }
                         if (IterableDualNodeDeque.isPointerInBounds(-33, -(30 * (var16 & 3)) + 487, -(30 * (3 & var16)) + 517, 39 + (var16 >> 2) * 30, 79 + (var16 >> 2) * 30)) {
-                          var2 = qc.field_f;
+                          var2 = GameClock.field_f;
                         }
                         var16++;
                         break;
@@ -7341,7 +7341,7 @@ final class GameplayController {
               while (var5 < var2.length) {
                 var6 = 50 * (-1 + var5) + so.field_b.field_a / 2;
                 var7 = var4 - 30;
-                TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) + 128.0));
+                TrianglePulse.field_d.d(-35 + var6, var7 - 35, 70, 70, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
                 var5++;
                 if (var11 != 0) {
                   decompiledFrameCompleted0 = false;
@@ -7539,7 +7539,7 @@ final class GameplayController {
               var7 = 0;
               if (this.field_lb) {
                 if (s.field_d > 0 &&
-                  uk.field_n % 40 < 20) {
+                  NanoGameClock.field_n % 40 < 20) {
                   stackIn_36_0 = 1;
                 } else {
                   stackIn_36_0 = 0;
@@ -7671,7 +7671,7 @@ final class GameplayController {
             }
             if (this.field_lb) {
               if (s.field_d > 0 &&
-                uk.field_n % 40 < 20) {
+                NanoGameClock.field_n % 40 < 20) {
                 stackIn_136_0 = 1;
               } else {
                 stackIn_136_0 = 0;
@@ -8172,7 +8172,7 @@ final class GameplayController {
               this.field_j = 0;
               this.field_V = false;
               mu.field_a = new cg();
-              qc.field_j = 0;
+              GameClock.field_j = 0;
               return;
             }
             if (18 == param0) {
@@ -9026,7 +9026,7 @@ final class GameplayController {
             if (!this.field_z) {
               this.field_V = true;
               mu.field_a = new cg();
-              qc.field_j = 0;
+              GameClock.field_j = 0;
               var3 = this.battlefield.currentPlayer;
               if (var3 > -1) {
                 this.field_kc = (Unit) (this.battlefield.unitsByPlayer[var3].first((byte) 112));
@@ -9206,7 +9206,7 @@ final class GameplayController {
                     var7 = stackIn_73_0[stackIn_74_1][this.battlefield.tiles[var2_int].occupant.ownerPlayer];
                     AttackEvent.field_y[this.battlefield.mapSizeSetting + 4].b(var8, var9, var7);
                     if (this.battlefield.tiles[var2_int].occupant.hasMovementFlag1(false)) {
-                      var10 = -(80 * SocketResourceClient.b(uk.field_n << 8, 100) >> 16) + 255;
+                      var10 = -(80 * SocketResourceClient.b(NanoGameClock.field_n << 8, 100) >> 16) + 255;
                       AttackEvent.field_y[4 + this.battlefield.mapSizeSetting].f(var8, var9, var10);
                     }
                   }
@@ -10217,7 +10217,7 @@ final class GameplayController {
           fe.b(param3 + 0, -76 - (-param5 - param0), 309, 71, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
           SoftwareRaster.b(7 + param3, param5 - 70 + param0, 25, 25, 0, 128);
           if (-1 < param4.ownerPlayer) {
-            wb.a(7816226, -8 + param3, param4.ownerPlayer, uk.field_n, -52 + param5 + param0);
+            wb.a(7816226, -8 + param3, param4.ownerPlayer, NanoGameClock.field_n, -52 + param5 + param0);
           }
           SoftwareRaster.b(param3 + 37, param0 + param5 - 70, 265, 25, 0, 128);
           var9 = param4.getDisplayName((byte) 124).toLowerCase();
@@ -10419,7 +10419,7 @@ final class GameplayController {
           var6_int = 200;
           var7 = ActionRequest.field_l[param0];
           if (this.battlefield.runeCapOption != 4) {
-            var7 = var7 + EmailCheckResult.a(4800, lt.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
+            var7 = var7 + EmailCheckResult.a(4800, BattleViewportResizeHandler.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
           }
           var8 = DateInputWidget.field_E.getParagraphHeight(var7, var6_int - 20, 0);
           var9 = (nr.field_e.getParagraphHeight(MusicPatchEnvelope.field_f[param0], -20 + var6_int << 1, 0) >> 1) - 30;
@@ -11064,7 +11064,7 @@ final class GameplayController {
                     this.e((byte) 77);
                     this.field_V = true;
                     mu.field_a = new cg();
-                    qc.field_j = 0;
+                    GameClock.field_j = 0;
                     this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
                   }
                 }
@@ -11380,7 +11380,7 @@ final class GameplayController {
           if (this.battlefield.currentPlayer == this.controlledPlayerId) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(param1 + 32217, 73);
             EmailValidator.outgoingPacket.writeByte(1, param0);
-            EmailValidator.outgoingPacket.writeShort(true, uk.field_n - this.field_zb);
+            EmailValidator.outgoingPacket.writeShort(true, NanoGameClock.field_n - this.field_zb);
             this.field_Tb = false;
           }
           this.field_db = 0;
@@ -11579,7 +11579,7 @@ final class GameplayController {
                     var11 = stackIn_105_0[stackIn_106_1][this.battlefield.tiles[var2_int].occupant.ownerPlayer];
                     SkeletonLimitMarker.field_s[this.battlefield.mapSizeSetting + 4].b(var12, var13, var11);
                     if (this.battlefield.tiles[var2_int].occupant.hasMovementFlag1(false)) {
-                      var14 = 255 - (80 * SocketResourceClient.b(uk.field_n << 8, 100) >> 16);
+                      var14 = 255 - (80 * SocketResourceClient.b(NanoGameClock.field_n << 8, 100) >> 16);
                       SkeletonLimitMarker.field_s[4 + this.battlefield.mapSizeSetting].f(var12, var13, var14);
                     }
                   }
@@ -11781,7 +11781,7 @@ final class GameplayController {
           param4 = this.battlefield.i(param0, -12710) * param4 / this.battlefield.collectedManaTarget;
           SoftwareRaster.f(param6, param2, param4, param1, var14);
           if (this.field_Mb) {
-            SoftwareRaster.b(var12, var13, var10, var11, 16777215, (int)(128.0 + Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0));
+            SoftwareRaster.b(var12, var13, var10, var11, 16777215, (int)(128.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) * 64.0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

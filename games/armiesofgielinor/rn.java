@@ -49,8 +49,8 @@ final class rn {
           if (obfuscationGuard != 3) {
             field_d = -55;
           }
-          lt.loginDialog = new StandardContentDialog(KingBlackDragonEvent.field_C, ContextActionMenu.loginForm);
-          KingBlackDragonEvent.field_C.showDialog(lt.loginDialog, 0);
+          BattleViewportResizeHandler.loginDialog = new StandardContentDialog(KingBlackDragonEvent.field_C, ContextActionMenu.loginForm);
+          KingBlackDragonEvent.field_C.showDialog(BattleViewportResizeHandler.loginDialog, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rn.B(" + obfuscationGuard + ',' + (unusedText != null ? "{...}" : "null") + ',' + showRegistration + ',' + offerGuestPlay + ')');
         }

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class iv extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static fl field_b;
     static String field_a;
     static String field_m;
     static int[][] field_e;
     static String field_c;
-    boolean field_i;
+    boolean errorReported;
     public static boolean field_k;
     public static boolean field_g;
     public static int field_f;
@@ -38,9 +38,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (la.field_g != null &&
-            this != la.field_g) {
-            stackIn_8_0 = la.field_g.getParameter(param0);
+          if (la.loaderApplet != null &&
+            this != la.loaderApplet) {
+            stackIn_8_0 = la.loaderApplet.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -60,43 +60,43 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final synchronized void paint(java.awt.Graphics param0) {
-        java.awt.Rectangle var2 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
+        java.awt.Rectangle clipBounds = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String graphicsDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
-          if (this == IntKeyLookup.field_a &&
+          if (this == IntKeyLookup.activeGameShell &&
             !PcmPlayerService.clientShutdownStarted) {
-            MaskedTextEntryPainter.field_z = true;
+            MaskedTextEntryPainter.redrawRequested = true;
             if (se.field_c &&
-              -AttackEvent.field_P + vi.monotonicMillis(62) > 1000L) {
-              var2 = param0.getClipBounds();
-              if (null != var2) {
-                if (GuestPlayConfirmationForm.field_N > var2.width) {
+              -AttackEvent.lastCanvasRebuildMillis + vi.monotonicMillis(62) > 1000L) {
+              clipBounds = param0.getClipBounds();
+              if (null != clipBounds) {
+                if (GuestPlayConfirmationForm.canvasWidth > clipBounds.width) {
                   return;
                 }
-                if (MatchSetupPanel.field_D > var2.height) {
+                if (MatchSetupPanel.canvasHeight > clipBounds.height) {
                   return;
                 }
               }
-              tq.field_a = true;
+              tq.canvasRebuildRequested = true;
             }
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_25_0 = var2_ref;
-          stackIn_25_1 = new StringBuilder().append("iv.paint(");
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("iv.paint(");
           if (param0 == null) {
-            stackIn_26_2 = "null";
+            graphicsDescription = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            graphicsDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(graphicsDescription).append(')').toString());
         }
     }
 
@@ -107,12 +107,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (IntKeyLookup.field_a == this &&
+          if (IntKeyLookup.activeGameShell == this &&
             !PcmPlayerService.clientShutdownStarted) {
-            ActionRequest.field_s = vi.monotonicMillis(-46);
+            ActionRequest.shutdownDeadlineMillis = vi.monotonicMillis(-46);
             SpriteButtonPainter.a(5000L, 0);
             PacketBuffer.field_s = null;
-            this.a(false, -1251);
+            this.shutdownShell(false, -1251);
             return;
           }
           return;
@@ -153,7 +153,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          la.field_g = param0;
+          la.loaderApplet = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,12 +170,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void stop() {
-        if (IntKeyLookup.field_a != this ||
+        if (IntKeyLookup.activeGameShell != this ||
           PcmPlayerService.clientShutdownStarted) {
           return;
         }
         try {
-          ActionRequest.field_s = 4000L + vi.monotonicMillis(-62);
+          ActionRequest.shutdownDeadlineMillis = 4000L + vi.monotonicMillis(-62);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iv.stop()");
         }
@@ -185,7 +185,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         return true;
     }
 
-    final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6) {
+    final void startAppletShell(int width, int requestedCacheStoreId, String requestedCacheName, int obfuscationGuard, int revision, int cacheIndexCount, int height) {
         try {
           PlatformTaskService dupTemp$0 = null;
           RuntimeException stackIn_25_0 = null;
@@ -199,34 +199,34 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
-              if (IntKeyLookup.field_a != null) {
+              if (IntKeyLookup.activeGameShell != null) {
                 DropdownArrowPainter.field_b = DropdownArrowPainter.field_b + 1;
                 if (DropdownArrowPainter.field_b >= 3) {
-                  this.a("alreadyloaded", (byte) -85);
+                  this.reportGameError("alreadyloaded", (byte) -85);
                   return;
                 }
                 this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                 return;
               }
               mh.field_c = 0;
-              bn.field_b = param0;
-              GuestPlayConfirmationForm.field_N = param0;
+              bn.field_b = width;
+              GuestPlayConfirmationForm.canvasWidth = width;
               DualNodeIterator.field_b = 0;
-              SummonRequest.field_B = param4;
-              dt.field_a = param6;
-              MatchSetupPanel.field_D = param6;
-              IntKeyLookup.field_a = this;
-              if (param3 != 10) {
+              SummonRequest.field_B = revision;
+              dt.field_a = height;
+              MatchSetupPanel.canvasHeight = height;
+              IntKeyLookup.activeGameShell = this;
+              if (obfuscationGuard != 10) {
                 return;
               }
               ToggleWidget.field_L = CombatEvent.d((byte) 10);
-              dupTemp$0 = new PlatformTaskService(param1, param2, param5, true);
+              dupTemp$0 = new PlatformTaskService(requestedCacheStoreId, requestedCacheName, cacheIndexCount, true);
               IntPair.field_m = dupTemp$0;
               PacketBuffer.field_s = dupTemp$0;
               var8 = IntPair.field_m.startThreadAsync(1, 0, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  SpriteButtonPainter.a(10L, param3 ^ 10);
+                  SpriteButtonPainter.a(10L, obfuscationGuard ^ 10);
                   if (var9 == 0) {
                     continue;
                   }
@@ -236,21 +236,21 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              af.a(var8_ref, param3 - 118, (String) null);
-              this.a("crash", (byte) -62);
+              af.a(var8_ref, obfuscationGuard - 118, (String) null);
+              this.reportGameError("crash", (byte) -62);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var8_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_25_0 = var8_ref2;
-            stackIn_25_1 = new StringBuilder().append("iv.AB(").append(param0).append(',').append(param1).append(',');
-            if (param2 == null) {
+            stackIn_25_1 = new StringBuilder().append("iv.AB(").append(width).append(',').append(requestedCacheStoreId).append(',');
+            if (requestedCacheName == null) {
               stackIn_26_2 = "null";
             } else {
               stackIn_26_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(obfuscationGuard).append(',').append(revision).append(',').append(cacheIndexCount).append(',').append(height).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -259,42 +259,42 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void b(int param0) {
-        RuntimeException runtimeException = null;
-        long var2_long = 0L;
-        long var4 = 0L;
-        Throwable decompiledCaughtException = null;
-        Object var6 = null;
+    private final void runClientTick(int obfuscationGuard) {
+        RuntimeException failure = null;
+        long nowMillis = 0L;
+        long previousTimestamp = 0L;
+        Throwable caughtFailure = null;
+        Object focusMonitor = null;
         try {
-          var2_long = vi.monotonicMillis(120);
-          var4 = CampaignMission.field_r[MusicPatchPcmStream.field_o];
-          CampaignMission.field_r[MusicPatchPcmStream.field_o] = var2_long;
-          if (0L != var4 &&
-            var4 >= var2_long) {
+          nowMillis = vi.monotonicMillis(120);
+          previousTimestamp = CampaignMission.tickTimestampsMillis[MusicPatchPcmStream.tickTimestampIndex];
+          CampaignMission.tickTimestampsMillis[MusicPatchPcmStream.tickTimestampIndex] = nowMillis;
+          if (0L != previousTimestamp &&
+            previousTimestamp >= nowMillis) {
           }
-          if (param0 != 17684) {
+          if (obfuscationGuard != 17684) {
             this.destroy();
           }
-          MusicPatchPcmStream.field_o = 1 + MusicPatchPcmStream.field_o & 31;
-          var6 = this;
-          synchronized (var6) {
-            ph.field_f = wj.field_l;
+          MusicPatchPcmStream.tickTimestampIndex = 1 + MusicPatchPcmStream.tickTimestampIndex & 31;
+          focusMonitor = this;
+          synchronized (focusMonitor) {
+            ph.tickFocusSnapshot = wj.canvasFocused;
           }
-          this.a((byte) -120);
+          this.tickClient((byte) -120);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iv.WA(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = (RuntimeException) (Object) caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "iv.WA(" + obfuscationGuard + ')');
         }
     }
 
-    abstract void b(byte param0);
+    abstract void shutdownClient(byte obfuscationGuard);
 
     public final void windowClosed(java.awt.event.WindowEvent param0) {
     }
 
-    final void a(String param0, byte param1) {
+    final void reportGameError(String errorCode, byte obfuscationGuard) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -304,11 +304,11 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           Exception var3_ref = null;
           RuntimeException var3_ref2 = null;
           try {
-            if (this.field_i) {
+            if (this.errorReported) {
               return;
             }
-            this.field_i = true;
-            System.out.println("error_game_" + param0);
+            this.errorReported = true;
+            System.out.println("error_game_" + errorCode);
             try {
               lj.a("loggedout", (byte) -121, CombatEvent.d((byte) -123));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -316,10 +316,10 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               var3 = decompiledCaughtException;
             }
             try {
-              if (param1 >= -35) {
+              if (obfuscationGuard >= -35) {
                 return;
               }
-              this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + param0 + ".ws"), "_top");
+              this.getAppletContext().showDocument(new java.net.URL(this.getCodeBase(), "error_game_" + errorCode + ".ws"), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref = (Exception) (Object) decompiledCaughtException;
@@ -330,12 +330,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_15_0 = var3_ref2;
             stackIn_15_1 = new StringBuilder().append("iv.TA(");
-            if (param0 == null) {
+            if (errorCode == null) {
               stackIn_16_2 = "null";
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -344,9 +344,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void a(boolean param0);
+    abstract void initializeClient(boolean obfuscationGuard);
 
-    private final void a(boolean param0, int param1) {
+    private final void shutdownShell(boolean clean, int obfuscationGuard) {
         Exception exception = null;
         Throwable throwable = null;
         RuntimeException runtimeException = null;
@@ -360,13 +360,13 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             }
             PcmPlayerService.clientShutdownStarted = true;
           }
-          if (la.field_g != null) {
-            la.field_g.destroy();
+          if (la.loaderApplet != null) {
+            la.loaderApplet.destroy();
           }
           try {
-            this.b((byte) 103);
-            if (param1 != -1251) {
-              this.c((byte) 114);
+            this.shutdownClient((byte) 103);
+            if (obfuscationGuard != -1251) {
+              this.recreateCanvas((byte) 114);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -389,7 +389,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.d((byte) -72);
+          this.finishShutdown((byte) -72);
           if (null != ContextualRuntimeException.field_f) {
             try {
               System.exit(0);
@@ -398,16 +398,16 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               throwable = decompiledCaughtException;
             }
           }
-          System.out.println("Shutdown complete - clean:" + param0);
+          System.out.println("Shutdown complete - clean:" + clean);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iv.CB(" + param0 + ',' + param1 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iv.CB(" + clean + ',' + obfuscationGuard + ')');
         }
     }
 
-    abstract void a(byte param0);
+    abstract void tickClient(byte obfuscationGuard);
 
     final static void a(boolean param0, boolean param1, java.awt.Canvas param2) {
         int var3_int = 0;
@@ -434,8 +434,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   TaggedMapData.a(240, 320, -121);
                   ContentTransitionDialog.a(0, 12, param2, 0);
                   var3_int = 0;
-                  if (MaskedTextEntryPainter.field_z) {
-                    MaskedTextEntryPainter.field_z = false;
+                  if (MaskedTextEntryPainter.redrawRequested) {
+                    MaskedTextEntryPainter.redrawRequested = false;
                     var3_int = 1;
                   }
                   NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
@@ -447,8 +447,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               ContentTransitionDialog.a(0, 12, param2, 0);
               if (var4 != 0) {
                 var3_int = 0;
-                if (MaskedTextEntryPainter.field_z) {
-                  MaskedTextEntryPainter.field_z = false;
+                if (MaskedTextEntryPainter.redrawRequested) {
+                  MaskedTextEntryPainter.redrawRequested = false;
                   var3_int = 1;
                 }
                 NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
@@ -456,8 +456,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             }
           } else {
             var3_int = 0;
-            if (MaskedTextEntryPainter.field_z) {
-              MaskedTextEntryPainter.field_z = false;
+            if (MaskedTextEntryPainter.redrawRequested) {
+              MaskedTextEntryPainter.redrawRequested = false;
               var3_int = 1;
             }
             NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
@@ -485,9 +485,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         if (null != ContextualRuntimeException.field_f) {
           return null;
         }
-        if (la.field_g != null &&
-          la.field_g != this) {
-          return la.field_g.getCodeBase();
+        if (la.loaderApplet != null &&
+          la.loaderApplet != this) {
+          return la.loaderApplet.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -530,7 +530,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     var2.equals("1.5") ||
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
-                    this.a("wrongjava", (byte) -39);
+                    this.reportGameError("wrongjava", (byte) -39);
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder3) &&
@@ -552,7 +552,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                       var4 = var2.substring(6, var3);
                       if (vv.a(-45, (CharSequence) ((Object) var4)) &&
                         !(HuffmanCodec.a(107, (CharSequence) ((Object) var4)) >= 10)) {
-                        this.a("wrongjava", (byte) -101);
+                        this.reportGameError("wrongjava", (byte) -101);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
                     }
@@ -594,9 +594,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = IntKeyLookup.field_a;
-                if (null != la.field_g) {
-                  var1 = la.field_g;
+                var1 = IntKeyLookup.activeGameShell;
+                if (null != la.loaderApplet) {
+                  var1 = la.loaderApplet;
                 }
                 var2_ref = PlatformTaskService.field_x;
                 if (var2_ref != null) {
@@ -608,14 +608,14 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   }
                 }
                 AgeValidator.c((byte) -76);
-                this.c((byte) 87);
+                this.recreateCanvas((byte) 87);
                 so.field_b = StripedProgressWidget.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
-                this.a(false);
-                qc.field_h = DraggableWidgetContainer.c(false);
+                this.initializeClient(false);
+                GameClock.gameClock = DraggableWidgetContainer.createGameClock(false);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != ActionRequest.field_s) {
-                    stackIn_102_0 = $cfr$lcmp(ActionRequest.field_s, vi.monotonicMillis(-56));
+                  if (0L != ActionRequest.shutdownDeadlineMillis) {
+                    stackIn_102_0 = $cfr$lcmp(ActionRequest.shutdownDeadlineMillis, vi.monotonicMillis(-56));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_102_0 <= 0)) {
@@ -623,17 +623,17 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    Widget.field_A = qc.field_h.a(-125, rd.field_i);
+                    Widget.ticksThisFrame = GameClock.gameClock.waitAndAdvance(-125, rd.tickDurationNanos);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;
                   do {
-                    if (!(Widget.field_A > var3)) {
-                      this.c(-11);
+                    if (!(Widget.ticksThisFrame > var3)) {
+                      this.runRenderFrame(-11);
                       MapTile.a(IntPair.field_m, IndexedSpriteBase.field_b, true);
                       break;
                     }
-                    this.b(17684);
+                    this.runClientTick(17684);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -642,9 +642,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
               af.a((Throwable) (var1), -102, (String) null);
-              this.a("crash", (byte) -121);
+              this.reportGameError("crash", (byte) -121);
             }
-            this.a(true, -1251);
+            this.shutdownShell(true, -1251);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -682,12 +682,12 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
     }
 
     public final void start() {
-        if (IntKeyLookup.field_a != this ||
+        if (IntKeyLookup.activeGameShell != this ||
           PcmPlayerService.clientShutdownStarted) {
           return;
         }
         try {
-          ActionRequest.field_s = 0L;
+          ActionRequest.shutdownDeadlineMillis = 0L;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iv.start()");
         }
@@ -700,8 +700,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wj.field_l = true;
-          MaskedTextEntryPainter.field_z = true;
+          wj.canvasFocused = true;
+          MaskedTextEntryPainter.redrawRequested = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -717,7 +717,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void d(byte param0);
+    abstract void finishShutdown(byte obfuscationGuard);
 
     public final java.net.URL getDocumentBase() {
         RuntimeException var1 = null;
@@ -730,9 +730,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (null != la.field_g &&
-            this != la.field_g) {
-            stackIn_12_0 = la.field_g.getDocumentBase();
+          if (null != la.loaderApplet &&
+            this != la.loaderApplet) {
+            stackIn_12_0 = la.loaderApplet.getDocumentBase();
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getDocumentBase();
@@ -755,9 +755,9 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (la.field_g != null &&
-            la.field_g != this) {
-            stackIn_10_0 = la.field_g.getAppletContext();
+          if (la.loaderApplet != null &&
+            la.loaderApplet != this) {
+            stackIn_10_0 = la.loaderApplet.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();
@@ -769,40 +769,40 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void a(int param0);
+    abstract void renderClient(int obfuscationGuard);
 
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    private final void c(int param0) {
-        int fieldTemp$1 = 0;
-        RuntimeException runtimeException = null;
-        long var2_long = 0L;
-        long var4 = 0L;
-        int var6_int = 0;
-        java.awt.Insets var6 = null;
-        RuntimeException decompiledCaughtException = null;
+    private final void runRenderFrame(int obfuscationGuard) {
+        int previousRefreshCounter = 0;
+        RuntimeException failure = null;
+        long nowMillis = 0L;
+        long previousTimestamp = 0L;
+        int elapsedMillis = 0;
+        java.awt.Insets frameInsets = null;
+        RuntimeException caughtFailure = null;
         try {
-          var2_long = vi.monotonicMillis(94);
-          var4 = AiActionCandidate.field_u[MidiPcmStream.field_ab];
-          AiActionCandidate.field_u[MidiPcmStream.field_ab] = var2_long;
-          MidiPcmStream.field_ab = MidiPcmStream.field_ab + 1 & 31;
-          if (0L != var4 &&
-            var4 < var2_long) {
-            var6_int = (int)(-var4 + var2_long);
-            UnitModelPreview.field_i = (32000 + (var6_int >> 1)) / var6_int;
+          nowMillis = vi.monotonicMillis(94);
+          previousTimestamp = AiActionCandidate.renderTimestampsMillis[MidiPcmStream.renderTimestampIndex];
+          AiActionCandidate.renderTimestampsMillis[MidiPcmStream.renderTimestampIndex] = nowMillis;
+          MidiPcmStream.renderTimestampIndex = MidiPcmStream.renderTimestampIndex + 1 & 31;
+          if (0L != previousTimestamp &&
+            previousTimestamp < nowMillis) {
+            elapsedMillis = (int)(-previousTimestamp + nowMillis);
+            UnitModelPreview.field_i = (32000 + (elapsedMillis >> 1)) / elapsedMillis;
           }
-          fieldTemp$1 = uh.field_d;
-          uh.field_d = uh.field_d + 1;
-          if (fieldTemp$1 > 50) {
-            uh.field_d = uh.field_d - 50;
-            MaskedTextEntryPainter.field_z = true;
+          previousRefreshCounter = uh.canvasRefreshCounter;
+          uh.canvasRefreshCounter = uh.canvasRefreshCounter + 1;
+          if (previousRefreshCounter > 50) {
+            uh.canvasRefreshCounter = uh.canvasRefreshCounter - 50;
+            MaskedTextEntryPainter.redrawRequested = true;
             IndexedSpriteBase.field_b.setSize(bn.field_b, dt.field_a);
             IndexedSpriteBase.field_b.setVisible(true);
             if (null != ContextualRuntimeException.field_f &&
               cs.field_bb == null) {
-              var6 = ContextualRuntimeException.field_f.getInsets();
-              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b + var6.left, mh.field_c + var6.top);
+              frameInsets = ContextualRuntimeException.field_f.getInsets();
+              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b + frameInsets.left, mh.field_c + frameInsets.top);
               if (ArmiesOfGielinor.obfuscationControl) {
                 IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
               }
@@ -810,22 +810,22 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
             }
           }
-          if (param0 != -11) {
+          if (obfuscationGuard != -11) {
             this.start();
           }
-          this.a(0);
+          this.renderClient(0);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "iv.UA(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "iv.UA(" + obfuscationGuard + ')');
         }
     }
 
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
 
-    final synchronized void c(byte param0) {
+    final synchronized void recreateCanvas(byte obfuscationGuard) {
         Object var2 = null;
         java.awt.Insets var3 = null;
         int var4 = 0;
@@ -846,29 +846,29 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             if (ContextualRuntimeException.field_f != null) {
               var2 = ContextualRuntimeException.field_f;
               if (var4 != 0) {
-                if (la.field_g != null) {
-                  var2 = la.field_g;
-                  var2 = IntKeyLookup.field_a;
+                if (la.loaderApplet != null) {
+                  var2 = la.loaderApplet;
+                  var2 = IntKeyLookup.activeGameShell;
                 } else {
-                  var2 = IntKeyLookup.field_a;
+                  var2 = IntKeyLookup.activeGameShell;
                 }
               }
             } else {
-              if (la.field_g != null) {
-                var2 = la.field_g;
+              if (la.loaderApplet != null) {
+                var2 = la.loaderApplet;
                 if (var4 != 0) {
-                  var2 = IntKeyLookup.field_a;
+                  var2 = IntKeyLookup.activeGameShell;
                 }
               } else {
-                var2 = IntKeyLookup.field_a;
+                var2 = IntKeyLookup.activeGameShell;
               }
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          IndexedSpriteBase.field_b = (java.awt.Canvas) ((Object) new le((java.awt.Component) (this)));
+          IndexedSpriteBase.field_b = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) IndexedSpriteBase.field_b));
           IndexedSpriteBase.field_b.setSize(bn.field_b, dt.field_a);
-          if (param0 != 87) {
+          if (obfuscationGuard != 87) {
             return;
           }
           IndexedSpriteBase.field_b.setVisible(true);
@@ -883,16 +883,16 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           }
           IndexedSpriteBase.field_b.addFocusListener((java.awt.event.FocusListener) (this));
           IndexedSpriteBase.field_b.requestFocus();
-          ph.field_f = true;
-          wj.field_l = true;
-          MaskedTextEntryPainter.field_z = true;
-          tq.field_a = false;
-          AttackEvent.field_P = vi.monotonicMillis(param0 + 7);
+          ph.tickFocusSnapshot = true;
+          wj.canvasFocused = true;
+          MaskedTextEntryPainter.redrawRequested = true;
+          tq.canvasRebuildRequested = false;
+          AttackEvent.lastCanvasRebuildMillis = vi.monotonicMillis(obfuscationGuard + 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "iv.RA(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) (var2), "iv.RA(" + obfuscationGuard + ')');
         }
     }
 
@@ -903,7 +903,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          wj.field_l = false;
+          wj.canvasFocused = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -919,8 +919,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected iv() {
-        this.field_i = false;
+    protected GameAppletShell() {
+        this.errorReported = false;
     }
 
     public static void d(int param0) {

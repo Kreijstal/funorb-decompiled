@@ -50,10 +50,10 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
           if (param0 < 27) {
             decodedSpriteCanvasHeight = -20;
           }
-          qc.field_c.setBounds(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int - 320) / 2);
-          qc.field_c.skinSprites = tq.a(11579568, false, qc.field_c.height, 2105376, 3, 8421504);
-          ToggleWidget.field_Q.setBounds(-20 + (qc.field_c.height - 24), -20500, qc.field_c.width - 48, 16, 24);
-          LinkButtonPainter.field_g.setBounds(24, -20500, 80, qc.field_c.height - 20 - 24, 120);
+          GameClock.field_c.setBounds(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int - 320) / 2);
+          GameClock.field_c.skinSprites = tq.a(11579568, false, GameClock.field_c.height, 2105376, 3, 8421504);
+          ToggleWidget.field_Q.setBounds(-20 + (GameClock.field_c.height - 24), -20500, GameClock.field_c.width - 48, 16, 24);
+          LinkButtonPainter.field_g.setBounds(24, -20500, 80, GameClock.field_c.height - 20 - 24, 120);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

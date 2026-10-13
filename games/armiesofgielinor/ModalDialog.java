@@ -233,14 +233,14 @@ abstract class ModalDialog extends DequeWidgetContainer {
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;
         try {
-          qc.field_h.a(param0);
+          GameClock.gameClock.resetClock(param0);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            AiActionCandidate.field_u[var1_int] = 0L;
+            AiActionCandidate.renderTimestampsMillis[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            CampaignMission.field_r[var1_intLifetime1] = 0L;
+            CampaignMission.tickTimestampsMillis[var1_intLifetime1] = 0L;
           }
-          Widget.field_A = 0;
+          Widget.ticksThisFrame = 0;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wl.GA(" + param0 + ')');
         }

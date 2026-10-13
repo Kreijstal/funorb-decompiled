@@ -3892,7 +3892,7 @@ final class CombatPresentation implements EventPresentation {
           if (param0 != 54) {
             return;
           }
-          this.field_A = qc.a(param1, 8806);
+          this.field_A = GameClock.a(param1, 8806);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

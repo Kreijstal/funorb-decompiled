@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lt extends ev {
+final class BattleViewportResizeHandler extends RasterViewportResizeHandler {
     static String field_f;
     static StandardContentDialog loginDialog;
     static RgbSprite[] field_h;
@@ -48,11 +48,11 @@ final class lt extends ev {
         return null;
     }
 
-    public lt() {
+    public BattleViewportResizeHandler() {
     }
 
-    public final void a(int param0, int param1, int param2) {
-        super.a(param0, param1, param2);
+    public final void viewportResized(int height, int obfuscationGuard, int width) {
+        super.viewportResized(height, obfuscationGuard, width);
         if (AiInfluenceMap.field_d != null) {
           AiInfluenceMap.field_d.refreshViewportGrid(-128);
         }

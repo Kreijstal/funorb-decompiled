@@ -381,9 +381,9 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ToggleWidget.field_Q.horizontalAlignment = 1;
           ToggleWidget.field_Q.verticalAlignment = 0;
           LinkButtonPainter.field_g = new ClientUiComponent(0L, bw.field_h, LineOfSightGrid.field_f.toUpperCase());
-          qc.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
-          qc.field_c.addChild(ToggleWidget.field_Q, 116);
-          qc.field_c.addChild(LinkButtonPainter.field_g, 89);
+          GameClock.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
+          GameClock.field_c.addChild(ToggleWidget.field_Q, 116);
+          GameClock.field_c.addChild(LinkButtonPainter.field_g, 89);
           AccountNameAvailabilityValidator.field_l = new ClientUiComponent(0L, ConsoleEvaluationException.field_c);
           AccountNameAvailabilityValidator.field_l.applyStyle(0, eq.field_h);
           AccountNameAvailabilityValidator.field_l.verticalAlignment = 1;

@@ -251,7 +251,7 @@ final class CombatSandbox {
           var23 = (var17 - var22) * (fk.matchupDamagePercent[var21][var20] * WeightedLruCache.terrainDamageTakenPercent[var10]) / 10000;
           this.combatPresentation = new CombatPresentation((Battlefield) null, (BattleCamera) null, (EventPresenter) null);
           this.combatPresentation.a(var22, var19, var23, true, var18);
-          le.field_b = new cg();
+          GameCanvas.field_b = new cg();
         }
     }
 
@@ -340,8 +340,8 @@ final class CombatSandbox {
         if (obfuscationGuard != 2) {
           return;
         }
-        if (null != le.field_b) {
-          le.field_b.a(8, this.field_c);
+        if (null != GameCanvas.field_b) {
+          GameCanvas.field_b.a(8, this.field_c);
         }
     }
 
@@ -398,10 +398,10 @@ final class CombatSandbox {
         if (obfuscationGuard != 5) {
           this.field_c = 0;
         }
-        if (le.field_b != null) {
+        if (GameCanvas.field_b != null) {
           this.field_c = this.field_c + 1;
           if (50 < this.field_c) {
-            le.field_b = null;
+            GameCanvas.field_b = null;
             this.field_c = 0;
           }
         }
@@ -409,7 +409,7 @@ final class CombatSandbox {
           this.combatPresentation.advanceFrame((GameEvent) null, (byte) -121);
           if (this.combatPresentation.isFinished(8865)) {
             this.combatPresentation = null;
-            le.field_b = new cg();
+            GameCanvas.field_b = new cg();
           }
           return;
         }

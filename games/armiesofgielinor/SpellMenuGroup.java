@@ -140,14 +140,14 @@ final class SpellMenuGroup {
                   hoveredSelection = 50 + spellIndex;
                   TeamRoster.field_e.f(db.a(true, -35 + iconX), MatchConditionEntry.a(-35 + iconY, (byte) 94), 128);
                 }
-                if (ev.field_d == this.spellIds[spellIndex]) {
+                if (RasterViewportResizeHandler.field_d == this.spellIds[spellIndex]) {
                   TeamRoster.field_e.f(db.a(true, -35 + iconX), MatchConditionEntry.a(iconY - 35, (byte) 94), selectionFade);
                 }
                 if (this.spellIds[spellIndex] == ab.field_a) {
                   TeamRoster.field_e.f(db.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 256 - selectionFade);
                 }
                 BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].g(db.a(true, iconX - 20), MatchConditionEntry.a(-20 + iconY, (byte) 94));
-                if (ev.field_d == this.spellIds[spellIndex]) {
+                if (RasterViewportResizeHandler.field_d == this.spellIds[spellIndex]) {
                   BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].f(db.a(true, -20 + iconX), MatchConditionEntry.a(iconY - 20, (byte) 94), selectionFade);
                 }
                 if (this.spellIds[spellIndex] == ab.field_a) {

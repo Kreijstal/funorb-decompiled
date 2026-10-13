@@ -11,7 +11,7 @@ final class AttackEvent extends GameEvent {
     private int attackerAnimationCount;
     private int defenderAnimationCount;
     static String field_D;
-    static volatile long field_P;
+    static volatile long lastCanvasRebuildMillis;
     private Unit targetUnit;
     static RgbSprite field_E;
     static String field_K;
@@ -160,21 +160,21 @@ final class AttackEvent extends GameEvent {
         if (!fh.field_i) {
           throw new IllegalStateException();
         }
-        if (null != qc.loginProgressDialog) {
-          qc.loginProgressDialog.closeDialog(true);
+        if (null != GameClock.loginProgressDialog) {
+          GameClock.loginProgressDialog.closeDialog(true);
         }
         String var1 = BattleGraphicsAssets.a(-123);
         ContextActionMenu.loginForm = new LoginForm(var1, (String) null, true, false, false);
         if (param0 >= 75) {
-          KingBlackDragonEvent.field_C.showDialog(lt.loginDialog, 0);
-          lt.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) 55);
-          lt.loginDialog.finishResize(105);
+          KingBlackDragonEvent.field_C.showDialog(BattleViewportResizeHandler.loginDialog, 0);
+          BattleViewportResizeHandler.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) 55);
+          BattleViewportResizeHandler.loginDialog.finishResize(105);
           return;
         }
         AttackEvent.a(true);
-        KingBlackDragonEvent.field_C.showDialog(lt.loginDialog, 0);
-        lt.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) 55);
-        lt.loginDialog.finishResize(105);
+        KingBlackDragonEvent.field_C.showDialog(BattleViewportResizeHandler.loginDialog, 0);
+        BattleViewportResizeHandler.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) 55);
+        BattleViewportResizeHandler.loginDialog.finishResize(105);
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
@@ -292,7 +292,7 @@ final class AttackEvent extends GameEvent {
     static {
         mapNamesByThemeAndSize = new String[][][]{new String[][]{new String[]{"green_small_2_king_of_my_castle.lev", "small_tom.lev", "islands.lev", "Green_small_2_mf1.lev"}, new String[]{"Green_medium_4_MF4.lev", "Green_medium_4_MF3.lev", "Green_medium_4_MF2.lev", "Green_medium_4_MF1.lev"}, new String[]{"Green_large_6_mf1.lev", "Green_large_6_mf2.lev", "Green_large_6_mf3.lev", "Green_large_6_mf4.lev"}}, new String[][]{new String[]{"desert_small_2_dead_sea.lev", "desert_small_2_oasis.lev", "Desert_small_2_mf1.lev", "Desert_small_2_mf2.lev", "Desert_small_2_mf3.lev"}, new String[]{"Desert_medium_4_MF4.lev", "Desert_medium_4_MF3.lev", "Desert_medium_4_MF2.lev", "Desert_medium_4_MF1.lev"}, new String[]{"Desert_large_6_mf1.lev", "Desert_large_6_mf2.lev", "Desert_large_6_mf3.lev", "Desert_large_6_mf4.lev"}}, new String[][]{new String[]{"winter_small_2_mountain_clearing.lev", "winter_small_2_river_valley.lev", "Frozen_small_2_mf1.lev", "Frozen_small_2_mf2.lev", "Frozen_small_2_mf3.lev", "Frozen_small_2_mf4.lev"}, new String[]{"Frozen_medium_4_MF4.lev", "Frozen_medium_4_MF3.lev", "Frozen_medium_4_MF2.lev", "Frozen_medium_4_MF1.lev"}, new String[]{"Frozen_large_6_mf1.lev", "Frozen_large_6_mf2.lev", "Frozen_large_6_mf3.lev", "Frozen_large_6_mf4.lev"}}, new String[][]{new String[]{"Green_small_2_WaterbirthIsle.lev", "Green_2_Small_Swampnsea.lev", "Green_small_2_EmbryoIsles.lev", "Green_small_2_urborg.lev"}, new String[]{"Green_2_Medium_Swamp_Star.lev", "Green_medium_4_sludge_grind.lev", "Green_medium_4_fortress_isle.lev", "Green_medium_4_staggered.lev"}, new String[]{"Green_large_6_crux.lev", "Green_large_6_TheCrossing.lev", "Green_6_Large_Swampcircle.lev", "Green_6_Large_Chambers.lev"}}};
         field_D = "Invite only";
-        field_P = 0L;
+        lastCanvasRebuildMillis = 0L;
         field_K = "You can join this game";
         field_F = "Your rating is <%0>";
     }

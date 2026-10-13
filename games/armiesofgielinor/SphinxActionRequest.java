@@ -137,8 +137,8 @@ final class SphinxActionRequest extends ActionRequest {
           SummonAction.field_y.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("heading", (byte) -126, param1, "lobby"));
           ClientUiNode.field_x = new ClientUiComponent(0L, (ClientUiComponent) null);
           ClientUiNode.field_x.skinSprites = SetCoatConsoleCommand.a(false, 4210752, -20600, 120, false, 8421504);
-          qc.field_e = new ClientUiComponent(0L, (ClientUiComponent) null);
-          qc.field_e.skinSprites = tq.a(6316128, false, 114, 1, 3, 6316128);
+          GameClock.field_e = new ClientUiComponent(0L, (ClientUiComponent) null);
+          GameClock.field_e.skinSprites = tq.a(6316128, false, 114, 1, 3, 6316128);
           kq.field_N = new ClientUiComponent(0L, (ClientUiComponent) null);
           kq.field_N.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("popup", (byte) -127, param1, "lobby"));
           var12 = wj.a(-12310, fk.loadRgbSpritesByName("popup_mouseover", (byte) -124, param1, "lobby"));

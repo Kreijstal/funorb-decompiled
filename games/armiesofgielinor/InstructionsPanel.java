@@ -481,8 +481,8 @@ final class InstructionsPanel {
                   !(param2 < ds.field_a.length)) {
                   var9 = 0;
                 }
-                if (null == le.field_c ||
-                  !(param2 < le.field_c.length)) {
+                if (null == GameCanvas.field_c ||
+                  !(param2 < GameCanvas.field_c.length)) {
                   var9 = 0;
                 }
                 if (var9 != 0) {
@@ -2398,7 +2398,7 @@ final class InstructionsPanel {
                 }
                 else {
                   dj.a((byte) -126);
-                  ev.field_b = false;
+                  RasterViewportResizeHandler.field_b = false;
                   stackIn_30_0 = var6_intLifetime1;
                   return stackIn_30_0;
                 }
@@ -2472,7 +2472,7 @@ final class InstructionsPanel {
               } else {
                 CombatSandbox.emailLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -127));
               }
-              ev.field_b = false;
+              RasterViewportResizeHandler.field_b = false;
               if (var6 != null) {
                 ph.a(var6, CombatEvent.d((byte) -117), false);
               }
@@ -2486,7 +2486,7 @@ final class InstructionsPanel {
                 }
               } else {
                 try {
-                  lj.a(CombatEvent.d((byte) -115), "zap", new Object[]{lt.decodeBase37DisplayName(param0 + 53, dc.field_o)}, 106);
+                  lj.a(CombatEvent.d((byte) -115), "zap", new Object[]{BattleViewportResizeHandler.decodeBase37DisplayName(param0 + 53, dc.field_o)}, 106);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -2507,8 +2507,8 @@ final class InstructionsPanel {
               AgeValidator.isPacketPayloadReady(2)) {
               dj.a((byte) -128);
               if (MusicCrossfadeStream.deliveredOpcode == 7 &&
-                !ev.field_b) {
-                ev.field_b = true;
+                !RasterViewportResizeHandler.field_b) {
+                RasterViewportResizeHandler.field_b = true;
                 stackIn_101_0 = -1;
                 return stackIn_101_0;
               }
@@ -2516,25 +2516,25 @@ final class InstructionsPanel {
                 MusicCrossfadeStream.deliveredOpcode = 3;
               }
               BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
-              ev.field_b = false;
+              RasterViewportResizeHandler.field_b = false;
               stackIn_99_0 = MusicCrossfadeStream.deliveredOpcode;
               return stackIn_99_0;
             }
             if (null == MoveAttackRequest.sessionSocket) {
-              if (ev.field_b) {
+              if (RasterViewportResizeHandler.field_b) {
                 if (TileMetadata.b(0) <= 30000L) {
                   BitmapTextWidgetPainter.field_r = DamageEvent.field_y;
                 } else {
                   BitmapTextWidgetPainter.field_r = ValidationState.field_a;
                 }
-                ev.field_b = false;
+                RasterViewportResizeHandler.field_b = false;
                 stackIn_109_0 = 3;
                 return stackIn_109_0;
               }
               var6_intLifetime2 = rn.field_d;
               rn.field_d = AiPlanningStrategy.field_c;
               AiPlanningStrategy.field_c = var6_intLifetime2;
-              ev.field_b = true;
+              RasterViewportResizeHandler.field_b = true;
             }
             stackIn_112_0 = -1;
             return stackIn_112_0;

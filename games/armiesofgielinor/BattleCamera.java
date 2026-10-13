@@ -744,10 +744,10 @@ final class BattleCamera {
         int var4 = 0;
         int var5 = 0;
         int var6 = so.sqrtFixed16(327680, -129);
-        var4 = var4 + ev.b(-48, var2 << 14, var6);
-        var5 = var5 + ev.b(-70, var2 << 14, var6);
-        var4 = var4 - ev.b(-94, var2 << 15, var6);
-        var5 = var5 + ev.b(-51, var3 << 15, var6);
+        var4 = var4 + RasterViewportResizeHandler.multiplyFixed16(-48, var2 << 14, var6);
+        var5 = var5 + RasterViewportResizeHandler.multiplyFixed16(-70, var2 << 14, var6);
+        var4 = var4 - RasterViewportResizeHandler.multiplyFixed16(-94, var2 << 15, var6);
+        var5 = var5 + RasterViewportResizeHandler.multiplyFixed16(-51, var3 << 15, var6);
         this.transformedPosition[0] = var4;
         this.transformedPosition[1] = var5;
         int var7 = -48 % ((19 - obfuscationGuard) / 36);

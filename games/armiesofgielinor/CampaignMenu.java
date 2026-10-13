@@ -347,7 +347,7 @@ final class CampaignMenu {
             }
             if (decompiledSharedTail0) {
               ChannelGainProfile.campaignBackgrounds[this.selectedCampaignEntry.entryId].g(var4, var5);
-              this.selectedCampaignEntry.previewSprite.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, uk.field_n << 5) * 100 >> 16) + 80);
+              this.selectedCampaignEntry.previewSprite.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, NanoGameClock.field_n << 5) * 100 >> 16) + 80);
             }
             QuickChatPhraseRepository.popRasterState(param0 ^ -18466);
             var6 = 5;
@@ -460,13 +460,13 @@ final class CampaignMenu {
             var9Lifetime1 = stackIn_5_0 + 1;
             if (ArmiesOfGielinor.obfuscationControl) {
               if (param3) {
-                var8 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 6.0) * 20.0 + 235.0);
+                var8 = (int)(Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 6.0) * 20.0 + 235.0);
               }
               var9Lifetime1 = 1 + param2.godId;
             }
           } else {
             if (param3) {
-              var8 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 6.0) * 20.0 + 235.0);
+              var8 = (int)(Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 6.0) * 20.0 + 235.0);
             }
             var9Lifetime1 = 1 + param2.godId;
           }
@@ -619,7 +619,7 @@ final class CampaignMenu {
                 param3.highlightSprite = param3.previewSprite.g();
                 param3.highlightSprite.c(228, 130, 4);
               }
-              param3.highlightSprite.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.b(uk.field_n << 6, 100) >> 12) + 22);
+              param3.highlightSprite.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.b(NanoGameClock.field_n << 6, 100) >> 12) + 22);
             }
             if (!param2 ||
               var13 != 0) {
@@ -1741,7 +1741,7 @@ final class CampaignMenu {
                 if (!br.heldKeys[81]) {
                   return;
                 }
-                pg.playerProfile.campaignProgress.setResult(65535, ((CampaignMenuEntry) (var2)).entryId, uk.field_n % 10 + ((CampaignMenuEntry) (var2)).entryId * 10, this.campaignIndex, ((CampaignMenuEntry) (var2)).entryId * 200 + uk.field_n % 200);
+                pg.playerProfile.campaignProgress.setResult(65535, ((CampaignMenuEntry) (var2)).entryId, NanoGameClock.field_n % 10 + ((CampaignMenuEntry) (var2)).entryId * 10, this.campaignIndex, ((CampaignMenuEntry) (var2)).entryId * 200 + NanoGameClock.field_n % 200);
                 this.openCampaign(this.campaignIndex, true);
                 if (var7 == 0) {
                   return;

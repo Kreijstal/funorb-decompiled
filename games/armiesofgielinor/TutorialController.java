@@ -245,17 +245,17 @@ final class TutorialController {
                         return;
                       }
                       if (ClientContextMenu.field_k != 0) {
-                        ab.field_a = ev.field_d;
-                        ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
-                        TextLineLayout.currentSpellMenu = TextHotspotRegion.spellMenuById[ev.field_d];
-                        this.a((byte) 96, ev.field_d, (SpellMenuGroup) null);
+                        ab.field_a = RasterViewportResizeHandler.field_d;
+                        RasterViewportResizeHandler.field_d = pg.playerProfile.equippedSpellIds[var2_int];
+                        TextLineLayout.currentSpellMenu = TextHotspotRegion.spellMenuById[RasterViewportResizeHandler.field_d];
+                        this.a((byte) 96, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                         return;
                       }
                       wj.field_q = 248;
-                      ab.field_a = ev.field_d;
-                      ev.field_d = pg.playerProfile.equippedSpellIds[var2_int];
-                      MidiPcmStream.field_p = TextHotspotRegion.spellMenuById[ev.field_d];
-                      this.a((byte) 88, ev.field_d, (SpellMenuGroup) null);
+                      ab.field_a = RasterViewportResizeHandler.field_d;
+                      RasterViewportResizeHandler.field_d = pg.playerProfile.equippedSpellIds[var2_int];
+                      MidiPcmStream.field_p = TextHotspotRegion.spellMenuById[RasterViewportResizeHandler.field_d];
+                      this.a((byte) 88, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                       if (TextLineLayout.currentSpellMenu != MidiPcmStream.field_p) {
                         RadialSummonMenu.playDefaultSoundWithIntGuard(127, MoveAttackRequest.field_v[44]);
                         return;
@@ -284,14 +284,14 @@ final class TutorialController {
               }
               if (ClientContextMenu.field_k == 0) {
                 if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
-                  if (ev.field_d > -1 &&
-                    ev.field_d < 135 &&
-                    pg.playerProfile.spellQuantities[ev.field_d] < 250 &&
-                    pg.playerProfile.tryDebitRunes(uc.spellDefinitions[ev.field_d][0], (byte) 103)) {
+                  if (RasterViewportResizeHandler.field_d > -1 &&
+                    RasterViewportResizeHandler.field_d < 135 &&
+                    pg.playerProfile.spellQuantities[RasterViewportResizeHandler.field_d] < 250 &&
+                    pg.playerProfile.tryDebitRunes(uc.spellDefinitions[RasterViewportResizeHandler.field_d][0], (byte) 103)) {
                     EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
-                    EmailValidator.outgoingPacket.writeShort(true, ev.field_d + 2000);
-                    pg.playerProfile.spellQuantities[ev.field_d] = pg.playerProfile.spellQuantities[ev.field_d] + 1;
-                    this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
+                    EmailValidator.outgoingPacket.writeShort(true, RasterViewportResizeHandler.field_d + 2000);
+                    pg.playerProfile.spellQuantities[RasterViewportResizeHandler.field_d] = pg.playerProfile.spellQuantities[RasterViewportResizeHandler.field_d] + 1;
+                    this.a((byte) 48, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(58, ClientUiNode.field_v[2]);
                   }
                   return;
@@ -304,8 +304,8 @@ final class TutorialController {
                     TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.parent;
                     this.a((byte) 51, -1, TextLineLayout.currentSpellMenu);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(118, MoveAttackRequest.field_v[43]);
-                    ab.field_a = ev.field_d;
-                    ev.field_d = -1;
+                    ab.field_a = RasterViewportResizeHandler.field_d;
+                    RasterViewportResizeHandler.field_d = -1;
                   }
                   return;
                 }
@@ -332,8 +332,8 @@ final class TutorialController {
                       KingBlackDragonEvent.field_A = 248;
                       this.a((byte) 92, -1, TextLineLayout.currentSpellMenu);
                       RadialSummonMenu.playDefaultSoundWithIntGuard(79, MoveAttackRequest.field_v[42]);
-                      ab.field_a = ev.field_d;
-                      ev.field_d = -1;
+                      ab.field_a = RasterViewportResizeHandler.field_d;
+                      RasterViewportResizeHandler.field_d = -1;
                       return;
                     }
                     var4++;
@@ -361,11 +361,11 @@ final class TutorialController {
                       var4Lifetime3++;
                       continue;
                     }
-                    ab.field_a = ev.field_d;
-                    ev.field_d = TextLineLayout.currentSpellMenu.spellIds[var4Lifetime3];
+                    ab.field_a = RasterViewportResizeHandler.field_d;
+                    RasterViewportResizeHandler.field_d = TextLineLayout.currentSpellMenu.spellIds[var4Lifetime3];
                     wj.field_q = 248;
                     TelepopEvent.field_D = true;
-                    this.a((byte) 90, ev.field_d, (SpellMenuGroup) null);
+                    this.a((byte) 90, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(113, MoveAttackRequest.field_v[45]);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(124, ClientUiNode.field_v[12]);
                     return;
@@ -397,7 +397,7 @@ final class TutorialController {
               if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(param0, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94))) {
                 var4Lifetime1 = 4;
                 while (var4Lifetime1 >= 0) {
-                  if (~pg.playerProfile.equippedSpellIds[var4Lifetime1] == ~ev.field_d) {
+                  if (~pg.playerProfile.equippedSpellIds[var4Lifetime1] == ~RasterViewportResizeHandler.field_d) {
                     pg.playerProfile.equippedSpellIds[var4Lifetime1] = -1;
                     AttackEvent.b(false);
                     return;
@@ -416,7 +416,7 @@ final class TutorialController {
               var4Lifetime2 = 0;
               while (var4Lifetime2 < 5) {
                 if (pg.playerProfile.equippedSpellIds[var4Lifetime2] == -1) {
-                  pg.playerProfile.equippedSpellIds[var4Lifetime2] = ev.field_d;
+                  pg.playerProfile.equippedSpellIds[var4Lifetime2] = RasterViewportResizeHandler.field_d;
                   AttackEvent.b(false);
                   return;
                 }
@@ -971,11 +971,11 @@ final class TutorialController {
             }
             if ((decompiledFrameCompleted1) &&
               (decompiledFrameCompleted0)) {
-              ab.field_a = ev.field_d;
-              ev.field_d = param0.spellIds[var7_intLifetime1];
+              ab.field_a = RasterViewportResizeHandler.field_d;
+              RasterViewportResizeHandler.field_d = param0.spellIds[var7_intLifetime1];
               TelepopEvent.field_D = true;
               TextLineLayout.currentSpellMenu = param0;
-              this.a((byte) 62, ev.field_d, (SpellMenuGroup) null);
+              this.a((byte) 62, RasterViewportResizeHandler.field_d, (SpellMenuGroup) null);
               RadialSummonMenu.playDefaultSoundWithIntGuard(59, MoveAttackRequest.field_v[45]);
               RadialSummonMenu.playDefaultSoundWithIntGuard(38, ClientUiNode.field_v[12]);
               stackIn_42_0 = -1;
@@ -1834,11 +1834,11 @@ final class TutorialController {
                                                                       return;
                                                                     }
                                                                     if (this.selectionState.isPointerPressed(false) &&
-                                                                      uk.field_n <= pn.field_h) {
+                                                                      NanoGameClock.field_n <= pn.field_h) {
                                                                       return;
                                                                     }
                                                                     RadialSummonMenu.playDefaultSoundWithIntGuard(33, ClientUiNode.field_v[0]);
-                                                                    pn.field_h = 20 + uk.field_n;
+                                                                    pn.field_h = 20 + NanoGameClock.field_n;
                                                                     if (var9 == 0) {
                                                                       return;
                                                                     }
@@ -2238,7 +2238,7 @@ final class TutorialController {
             if (!this.selectionState.hasActivationInput((byte) 88)) {
               return;
             }
-            this.a((byte) 93, ev.field_d, TextLineLayout.currentSpellMenu);
+            this.a((byte) 93, RasterViewportResizeHandler.field_d, TextLineLayout.currentSpellMenu);
             var6Lifetime2 = param0 ? 1 : 0;
             CipherPacketBuffer.a(var6Lifetime2 != 0, 18, 1, 0);
             if (var9 == 0) {
@@ -3792,7 +3792,7 @@ final class TutorialController {
           }
           fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-          this.g(ev.field_d, -118);
+          this.g(RasterViewportResizeHandler.field_d, -118);
           var5Lifetime1 = 40 + (nr.field_e.textWidth(AnimationSkeleton.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
           fe.a(AnimationSkeleton.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
@@ -3800,7 +3800,7 @@ final class TutorialController {
             AccountNameSelectionForm.field_F = 45;
           }
           if (TelepopEvent.field_D) {
-            BattleCharacter.field_h[uc.spellDefinitions[ev.field_d][2]].h(12 + AiPlanningStrategy.pointerX, ko.pointerY + 12);
+            BattleCharacter.field_h[uc.spellDefinitions[RasterViewportResizeHandler.field_d][2]].h(12 + AiPlanningStrategy.pointerX, ko.pointerY + 12);
             km.field_h[0].h(AiPlanningStrategy.pointerX + 10, 10 + ko.pointerY);
           }
           return;
@@ -3846,7 +3846,7 @@ final class TutorialController {
           if (36 == itemId) {
             stackIn_25_0 = new StringBuilder().append(DisplacedUnitMarker.field_t[36]);
             if (!cu.field_a) {
-              stackIn_26_1 = uk.field_k;
+              stackIn_26_1 = NanoGameClock.field_k;
             } else {
               stackIn_26_1 = dc.field_s;
             }
@@ -4133,7 +4133,7 @@ final class TutorialController {
           lm.field_c = -1;
           ac.field_p = fallbackIndex;
           pn.field_m = fallbackIndex;
-          pn.field_h = uk.field_n;
+          pn.field_h = NanoGameClock.field_n;
           if (this.tutorialStage == 22 ||
             21 == this.tutorialStage) {
             rd.gameplayController = null;
@@ -5014,7 +5014,7 @@ final class TutorialController {
                   stackIn_40_1 = MatchConditionEntry.a(-3 + (var9Lifetime1 + 60), (byte) 94);
                   stackIn_40_2 = 51;
                   stackIn_40_3 = 63;
-                  if (param1.spellIds[var8Lifetime1] != ev.field_d) {
+                  if (param1.spellIds[var8Lifetime1] != RasterViewportResizeHandler.field_d) {
                     stackIn_41_4 = 2236962;
                   } else {
                     stackIn_41_4 = 5592405;
@@ -5214,7 +5214,7 @@ final class TutorialController {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.b(true);
-          if (ev.field_d < 0) {
+          if (RasterViewportResizeHandler.field_d < 0) {
             return;
           }
           var3_int = 44 % ((-32 - param1) / 61);
@@ -5248,7 +5248,7 @@ final class TutorialController {
                   if (stackIn_47_0 == stackIn_47_1) {
                     var5 = 1;
                   }
-                  if (pg.playerProfile.equippedSpellIds[var6] == ev.field_d) {
+                  if (pg.playerProfile.equippedSpellIds[var6] == RasterViewportResizeHandler.field_d) {
                     var4Lifetime1 = 1;
                   }
                   var6++;
@@ -5898,7 +5898,7 @@ final class TutorialController {
               return;
             }
             if (TabbedPanel.a(MatchConditionEntry.a(98, (byte) 94), db.a(true, 350 + 55 * var2_int), 22, false)) {
-              pg.playerProfile.equippedSpellIds[var2_int] = ev.field_d;
+              pg.playerProfile.equippedSpellIds[var2_int] = RasterViewportResizeHandler.field_d;
               RadialSummonMenu.playDefaultSoundWithIntGuard(51, MoveAttackRequest.field_v[44]);
               AttackEvent.b(false);
               return;
@@ -5931,10 +5931,10 @@ final class TutorialController {
           if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + var3_int * 50 + 30), 10, false)) {
             MidiPcmStream.field_p = param0;
             this.a((byte) 116, -1, param0);
-            if (-1 != ev.field_d) {
+            if (-1 != RasterViewportResizeHandler.field_d) {
               wj.field_q = 248;
             }
-            ab.field_a = ev.field_d;
+            ab.field_a = RasterViewportResizeHandler.field_d;
           }
           stackIn_11_0 = 1 + var3_int;
           return stackIn_11_0;

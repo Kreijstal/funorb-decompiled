@@ -118,20 +118,20 @@ final class QuickChatPhraseRepository {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           room.unlink(76);
-          var2 = (LobbyRoom) (qc.lobbyRoomOrder.first((byte) 92));
+          var2 = (LobbyRoom) (GameClock.lobbyRoomOrder.first((byte) 92));
           if (obfuscationGuard > -66) {
             var4 = (java.applet.Applet) null;
             QuickChatPhraseRepository.a(-6, (java.applet.Applet) null);
           }
           while (var2 != null) {
             if (var2.sortsBefore((byte) -76, room)) {
-              var2 = (LobbyRoom) (qc.lobbyRoomOrder.next((byte) 123));
+              var2 = (LobbyRoom) (GameClock.lobbyRoomOrder.next((byte) 123));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            qc.lobbyRoomOrder.addLast((byte) -119, (IntrusiveNode) (room));
+            GameClock.lobbyRoomOrder.addLast((byte) -119, (IntrusiveNode) (room));
             return;
           }
           stackIn_9_0 = -123;

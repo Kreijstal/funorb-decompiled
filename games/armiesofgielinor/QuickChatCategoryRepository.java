@@ -25,10 +25,10 @@ final class QuickChatCategoryRepository {
         if (BoundedFile.field_b) {
           return null;
         }
-        if (ev.field_a < NodeIterator.field_c) {
+        if (RasterViewportResizeHandler.field_a < NodeIterator.field_c) {
           return null;
         }
-        if (!(ps.field_E + NodeIterator.field_c <= ev.field_a)) {
+        if (!(ps.field_E + NodeIterator.field_c <= RasterViewportResizeHandler.field_a)) {
           return TextLineLayout.field_a;
         }
         return null;
@@ -194,11 +194,11 @@ final class QuickChatCategoryRepository {
                       }
                     } else {
                       if (var2 == 10) {
-                        var33 = (LobbyRoom) (qc.lobbyRoomOrder.first((byte) 105));
+                        var33 = (LobbyRoom) (GameClock.lobbyRoomOrder.first((byte) 105));
                         while (var33 != null) {
                           var33.unlink(-112);
                           var33.unlinkSecondary((byte) -76);
-                          var33 = (LobbyRoom) (qc.lobbyRoomOrder.next((byte) 123));
+                          var33 = (LobbyRoom) (GameClock.lobbyRoomOrder.next((byte) 123));
                         }
                       } else {
                         if (var2 != 11 &&

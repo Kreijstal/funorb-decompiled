@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntKeyLookup {
-    static iv field_a;
+    static GameAppletShell activeGameShell;
     private int[] keyIndexSlots;
 
     IntKeyLookup(int[] keys) {
@@ -118,6 +118,6 @@ final class IntKeyLookup {
     }
 
     static {
-        field_a = null;
+        activeGameShell = null;
     }
 }

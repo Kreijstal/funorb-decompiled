@@ -4,7 +4,7 @@
 final class MusicPatchPcmStream extends PcmStream {
     NodeDeque notes;
     private MidiPcmStream sequencer;
-    static int field_o;
+    static int tickTimestampIndex;
     PcmStreamMixer fadingStreams;
     static String field_q;
 
@@ -278,7 +278,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (param0 == 1048575) {
           return;
         }
-        field_o = 68;
+        tickTimestampIndex = 68;
     }
 
     static {

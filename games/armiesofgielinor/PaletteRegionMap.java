@@ -79,10 +79,10 @@ final class PaletteRegionMap {
             }
             var7 = new byte[24];
             var2 = var7;
-            if (le.field_d != null) {
+            if (GameCanvas.field_d != null) {
               try {
-                le.field_d.seek(-1, 0L);
-                le.field_d.readArray(0, var7);
+                GameCanvas.field_d.seek(-1, 0L);
+                GameCanvas.field_d.readArray(0, var7);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

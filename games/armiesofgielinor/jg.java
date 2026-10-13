@@ -198,7 +198,7 @@ final class jg extends IntrusiveNode {
               var12.addChild(var12.optionIconContainer, param0 ^ 63);
               var12.optionIcons = new ClientUiComponent[tq.gameOptionCount];
               var12.gameTypeIcon = new ClientUiComponent(0L, (ClientUiComponent) null);
-              if (0 != (var14 & 1 << ev.field_c)) {
+              if (0 != (var14 & 1 << RasterViewportResizeHandler.field_c)) {
                 var12.optionIconContainer.addChild(var12.gameTypeIcon, param0 + 62);
               }
               var12.field_ec = new ClientUiComponent(0L, (ClientUiComponent) null);
@@ -392,7 +392,7 @@ final class jg extends IntrusiveNode {
               var33_intLifetime1 = stackIn_72_0;
               var12.optionIconContainer.setBounds(jn.field_d, param0 ^ -20500, 365 - var33_intLifetime1 - 2, var31, var33_intLifetime1);
               var34_int = MusicPatch.field_n;
-              if ((1 << ev.field_c & var14Lifetime1) != 0) {
+              if ((1 << RasterViewportResizeHandler.field_c & var14Lifetime1) != 0) {
                 var50_ref = rs.field_p[var12.gameType];
                 var12.gameTypeIcon.sprite = var50_ref;
                 var12.gameTypeIcon.setBounds(var12.optionIconContainer.height, param0 ^ -20500, var50_ref.canvasWidth, 0, var34_int);

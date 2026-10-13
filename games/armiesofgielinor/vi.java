@@ -11,15 +11,15 @@ final class vi {
 
     final static void showLoginWithDescription(String accountIdentifier, int obfuscationGuard, String description) {
         try {
-          if (null != qc.loginProgressDialog) {
-            qc.loginProgressDialog.closeDialog(true);
+          if (null != GameClock.loginProgressDialog) {
+            GameClock.loginProgressDialog.closeDialog(true);
           }
           if (obfuscationGuard != 640) {
             String var4 = (String) null;
             vi.showLoginWithDescription((String) null, -8, (String) null);
           }
           ContextActionMenu.loginForm = new LoginForm(accountIdentifier, description, false, true, true);
-          lt.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) -77);
+          BattleViewportResizeHandler.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) -77);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vi.D(" + (accountIdentifier != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (description != null ? "{...}" : "null") + ')');
         }

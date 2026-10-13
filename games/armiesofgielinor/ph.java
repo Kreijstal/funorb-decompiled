@@ -7,7 +7,7 @@ final class ph {
     static int[][][] field_e;
     static String[] field_b;
     static String field_a;
-    static boolean field_f;
+    static boolean tickFocusSnapshot;
 
     final static boolean isAccountNameCharacter(int obfuscationGuard, char character) {
         char[] var2 = null;

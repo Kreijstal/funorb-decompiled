@@ -5,7 +5,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     int flags;
     int rewardSpellId;
     static String field_s;
-    static long[] field_r;
+    static long[] tickTimestampsMillis;
     int mapTheme;
     int musicId;
     private MapLayout cachedLayout;
@@ -245,12 +245,12 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     }
 
     public static void f(int param0) {
-        field_r = null;
+        tickTimestampsMillis = null;
         field_I = null;
         field_s = null;
         field_p = null;
         if (param0 != 0) {
-          field_r = (long[]) null;
+          tickTimestampsMillis = (long[]) null;
         }
     }
 
@@ -399,6 +399,6 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
     static {
         field_s = "Unfortunately we are unable to create an account for you at this time.";
         field_p = "Blue_Team";
-        field_r = new long[32];
+        tickTimestampsMillis = new long[32];
     }
 }

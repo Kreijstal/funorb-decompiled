@@ -81,7 +81,7 @@ final class jj {
         try {
           var4 = param2[param3][param1];
           var6 = -73 / ((12 - param0) / 61);
-          if (le.a((byte) -125, var4)) {
+          if (GameCanvas.a((byte) -125, var4)) {
             var5 = var4;
           } else {
             if (CampaignMenuButton.a(30, var4)) {

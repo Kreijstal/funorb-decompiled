@@ -186,28 +186,28 @@ final class ActionSpell extends Spell {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        bn.field_b = param0;
-        GuestPlayConfirmationForm.field_N = param0;
-        dt.field_a = param2;
-        MatchSetupPanel.field_D = param2;
-        tq.field_a = true;
+    final static void resizeRasterViewport(int width, int obfuscationGuard, int height) {
+        bn.field_b = width;
+        GuestPlayConfirmationForm.canvasWidth = width;
+        dt.field_a = height;
+        MatchSetupPanel.canvasHeight = height;
+        tq.canvasRebuildRequested = true;
         so.field_b = null;
         int[] var4 = (int[]) null;
         SoftwareRaster.setTarget((int[]) null, 0, 0);
-        so.field_b = StripedProgressWidget.a(param0, param2, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
-        so.field_b.a(param1 - 17900);
-        ContextualRuntimeException.a((byte) -85, param0 / 2, param2 / 2);
-        if (param1 == 23505) {
-          MeshObject.a(-8994, param0, param2);
-          CampaignMission.a(param2, -22696, param0);
-          ContentTransitionDialog.c(param0 / 2, param2 / 2, 9);
+        so.field_b = StripedProgressWidget.a(width, height, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+        so.field_b.a(obfuscationGuard - 17900);
+        ContextualRuntimeException.a((byte) -85, width / 2, height / 2);
+        if (obfuscationGuard == 23505) {
+          MeshObject.a(-8994, width, height);
+          CampaignMission.a(height, -22696, width);
+          ContentTransitionDialog.c(width / 2, height / 2, 9);
           return;
         }
-        ActionSpell.a(-106, -34, -122);
-        MeshObject.a(-8994, param0, param2);
-        CampaignMission.a(param2, -22696, param0);
-        ContentTransitionDialog.c(param0 / 2, param2 / 2, 9);
+        ActionSpell.resizeRasterViewport(-106, -34, -122);
+        MeshObject.a(-8994, width, height);
+        CampaignMission.a(height, -22696, width);
+        ContentTransitionDialog.c(width / 2, height / 2, 9);
     }
 
     ActionSpell(int spellId, ActionRequest request) {

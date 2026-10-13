@@ -29,7 +29,7 @@ class MidiPcmStream extends PcmStream {
     static String field_R;
     private int[] channelGain;
     private int[] channelParameterSelection;
-    static int field_ab;
+    static int renderTimestampIndex;
     static String field_X;
     private long playbackTime;
     private int nextTrackIndex;

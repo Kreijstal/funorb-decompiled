@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le extends java.awt.Canvas {
+final class GameCanvas extends java.awt.Canvas {
     static cg field_b;
     static RgbSprite[] field_c;
     static BufferedFile field_d;
-    private java.awt.Component field_a;
+    private java.awt.Component target;
 
     public static void a(int param0) {
         field_c = null;
         if (param0 < 43) {
-          le.a(-119);
+          GameCanvas.a(-119);
           field_b = null;
           field_d = null;
           return;
@@ -34,7 +34,7 @@ final class le extends java.awt.Canvas {
             return false;
           }
           var3 = (PacketBuffer) null;
-          le.readCompressedChatText(94, (byte) 20, (PacketBuffer) null);
+          GameCanvas.readCompressedChatText(94, (byte) 20, (PacketBuffer) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,17 +52,17 @@ final class le extends java.awt.Canvas {
 
     public final void update(java.awt.Graphics param0) {
         try {
-          this.field_a.update(param0);
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "le.update(" + (param0 != null ? "{...}" : "null") + ')');
+          this.target.update(param0);
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "le.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     public final void paint(java.awt.Graphics param0) {
         try {
-          this.field_a.paint(param0);
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "le.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          this.target.paint(param0);
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "le.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -114,11 +114,11 @@ final class le extends java.awt.Canvas {
         }
     }
 
-    le(java.awt.Component param0) {
+    GameCanvas(java.awt.Component target) {
         try {
-          this.field_a = param0;
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "le.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          this.target = target;
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "le.<init>(" + (target != null ? "{...}" : "null") + ')');
         }
     }
 

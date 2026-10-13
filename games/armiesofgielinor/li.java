@@ -31,7 +31,7 @@ final class li extends IntrusiveNode {
             stackIn_4_0 = CipherPacketBuffer.currentBattlefield.localPlayer;
           }
           MapTile.field_i = stackIn_4_0;
-          GameplayController.field_f = (int)(106.0 + Math.sin((double)uk.field_n / 3.141592653589793 / (double)param0) * 50.0);
+          GameplayController.field_f = (int)(106.0 + Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / (double)param0) * 50.0);
           if (!cu.field_a) {
             ResourceArchive.field_a.g(200);
             return;

@@ -31,7 +31,7 @@ final class MatchSetupPanel {
     private int field_p;
     private String field_R;
     private int playerCount;
-    static int field_D;
+    static int canvasHeight;
     private int computerPlayerCount;
     private int field_P;
     private IntPair field_S;
@@ -112,10 +112,10 @@ final class MatchSetupPanel {
               return;
             }
             var6_int = param0 - this.field_n;
-            if (lt.field_i != null &&
+            if (BattleViewportResizeHandler.field_i != null &&
               var6_int >= 0 &&
-              lt.field_i.length > var6_int) {
-              var7 = lt.field_i[var6_int];
+              BattleViewportResizeHandler.field_i.length > var6_int) {
+              var7 = BattleViewportResizeHandler.field_i[var6_int];
               if (param3 <= 36) {
                 return;
               }
@@ -952,7 +952,7 @@ final class MatchSetupPanel {
                 VerticalScrollbar.field_Rb.combatPresentation.framebuffer = null;
                 VerticalScrollbar.field_Rb.combatPresentation.field_A = null;
               }
-              le.field_b = null;
+              GameCanvas.field_b = null;
               if (VerticalScrollbar.field_Rb.combatPresentation != null) {
                 VerticalScrollbar.field_Rb.combatPresentation = null;
               }
@@ -1135,14 +1135,14 @@ final class MatchSetupPanel {
             }
             if (param2[var14] <= -1) {
               if (var14 == param3) {
-                lt.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, EditableTextField.field_Vb[var14][1] + param10, 256);
+                BattleViewportResizeHandler.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, EditableTextField.field_Vb[var14][1] + param10, 256);
               } else {
                 if (var14 != var12_int) {
                   if (param1 > -1) {
-                    lt.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 128);
+                    BattleViewportResizeHandler.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 128);
                   }
                 } else {
-                  lt.field_h[var14].f(param8 + EditableTextField.field_Vb[var14][0], EditableTextField.field_Vb[var14][1] + param10, 128);
+                  BattleViewportResizeHandler.field_h[var14].f(param8 + EditableTextField.field_Vb[var14][0], EditableTextField.field_Vb[var14][1] + param10, 128);
                 }
               }
             } else {

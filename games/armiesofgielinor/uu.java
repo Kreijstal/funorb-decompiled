@@ -232,7 +232,7 @@ final class uu {
               }
               if ((var10 >= 2) &&
                 (decompiledFrameRemainder1 = (ep.field_p != null ||
-                null != iv.field_e ||
+                null != GameAppletShell.field_e ||
                 jv.field_d != null ||
                 null != CombatPresentation.field_j))) {
                 var11_int = 0;
@@ -250,9 +250,9 @@ final class uu {
                       ep.field_p[var16][var17_int]) {
                       var11_int = 1;
                     }
-                    if (null != iv.field_e &&
-                      iv.field_e[var16] != null) {
-                      var18_int = iv.field_e[var16][var17_int];
+                    if (null != GameAppletShell.field_e &&
+                      GameAppletShell.field_e[var16] != null) {
+                      var18_int = GameAppletShell.field_e[var16][var17_int];
                       if (var18_int > var13_int) {
                         var13_int = var18_int;
                       }

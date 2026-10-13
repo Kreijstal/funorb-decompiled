@@ -163,7 +163,7 @@ final class rv {
             if (null != ProgressMessageDialog.field_lb) {
               for (var4_int = 0; var4_int < ProgressMessageDialog.field_lb.length; var4_int++) {
                 if (~param3 == ~ProgressMessageDialog.field_lb[var4_int]) {
-                  TrianglePulse.field_d.d(param2, param1, 80, 40, (int)(64.0 * Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) + 128.0));
+                  TrianglePulse.field_d.d(param2, param1, 80, 40, (int)(64.0 * Math.sin((double)NanoGameClock.field_n / 3.141592653589793 / 2.0) + 128.0));
                 }
               }
             }

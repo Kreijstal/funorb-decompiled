@@ -379,7 +379,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "join_xs_game");
                 if (null != var2) {
-                  ev.field_e = uu.a(var2, (byte) 122);
+                  RasterViewportResizeHandler.field_e = uu.a(var2, (byte) 122);
                 }
                 var2 = NodeIterator.a(50, "join_request_xs_game");
                 if (null != var2) {
@@ -977,7 +977,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_1_1");
                 if (var2 != null) {
-                  qc.field_b = uu.a(var2, (byte) 87);
+                  GameClock.field_b = uu.a(var2, (byte) 87);
                 }
                 var2 = NodeIterator.a(50, "rule_1_2");
                 if (var2 != null) {
@@ -1681,7 +1681,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "unable_to_add_friend");
                 if (null != var2) {
-                  iv.field_c = uu.a(var2, (byte) -113);
+                  GameAppletShell.field_c = uu.a(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "unable_to_add_ignore");
                 if (var2 != null) {
@@ -1729,7 +1729,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "enterfriend_add");
                 if (null != var2) {
-                  iv.field_a = uu.a(var2, (byte) -110);
+                  GameAppletShell.field_a = uu.a(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "enterfriend_del");
                 if (var2 != null) {
@@ -3055,7 +3055,7 @@ final class CampaignUnitOverride {
                   }
                   throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_2613_0), ((StringBuilder) (Object) stackIn_2613_1).append(stackIn_2614_2).append(')').toString());
                 }
-                if (iv.field_k) {
+                if (GameAppletShell.field_k) {
                   ArmiesOfGielinor.obfuscationControl = (var3 == 0);
                 }
             }

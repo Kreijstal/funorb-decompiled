@@ -40,7 +40,7 @@ final class PrintCoatConsoleCommand extends ConsoleCommand {
         if (obfuscationGuard < 68) {
           return;
         }
-        lt.loginDialog.replaceContent(new GuestPlayConfirmationForm(), (byte) 66);
+        BattleViewportResizeHandler.loginDialog.replaceContent(new GuestPlayConfirmationForm(), (byte) 66);
     }
 
     public static void i(int param0) {

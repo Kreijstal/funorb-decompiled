@@ -57,7 +57,7 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
           localGodId = packet.readUnsignedByte(obfuscationGuard - 23948);
           localPlayerName = packet.readNullCircumfixedString((byte) 121);
           description = packet.readNullCircumfixedString((byte) 121);
-          initialUnitTypes = ev.readNullableUnsignedByteArray(packet, (byte) -98);
+          initialUnitTypes = RasterViewportResizeHandler.readNullableUnsignedByteArray(packet, (byte) -98);
           campaign = new CampaignDefinition(campaignName);
           campaign.description = description;
           campaign.campaignIndex = campaignIndex;
