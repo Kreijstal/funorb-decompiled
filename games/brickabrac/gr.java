@@ -70,8 +70,8 @@ final class gr {
     }
 
     final static void b(int param0, int param1) {
-        tn.field_C = param0;
-        if (tn.field_C != 1) {
+        MusicCrossfadeStream.field_C = param0;
+        if (MusicCrossfadeStream.field_C != 1) {
           ArchiveNetworkClient.field_s = ln.field_j;
           jc.field_J = mh.field_ib;
           tf.field_c = kp.field_e;

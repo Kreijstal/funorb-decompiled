@@ -109,7 +109,7 @@ final class fr {
           if (!param3) {
             field_k = -98;
           }
-          tn.a(param1.capHeight, param1.descent + param1.capHeight, 256, param2.capHeight, param2.descent + param2.capHeight);
+          MusicCrossfadeStream.a(param1.capHeight, param1.descent + param1.capHeight, 256, param2.capHeight, param2.descent + param2.capHeight);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

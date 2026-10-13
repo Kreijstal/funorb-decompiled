@@ -26,7 +26,7 @@ final class pa extends ta {
         RuntimeException var21 = null;
         try {
           fr.a(param6, param16, param3, true);
-          tn.a(param11, param14, 256, param18, param0);
+          MusicCrossfadeStream.a(param11, param14, 256, param18, param0);
           pp.a(param5, param4, (byte) 19);
           cp.a(param15, param2, param13, 73, param17, param19);
           hd.a(117, param7, param10, param1);

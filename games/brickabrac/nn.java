@@ -2062,7 +2062,7 @@ final class nn {
                 }
                 var2 = nk.a("highscores", (byte) 76);
                 if (null != var2) {
-                  tn.field_B = MenuButton.a(var2, (byte) 107);
+                  MusicCrossfadeStream.field_B = MenuButton.a(var2, (byte) 107);
                 }
                 var2 = nk.a("rankings", (byte) 113);
                 if (var2 != null) {

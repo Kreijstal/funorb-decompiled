@@ -7,7 +7,7 @@ final class me {
     static IndexedSprite[] field_a;
     static int[][] field_e;
     static boolean[] field_f;
-    static PcmStream field_d;
+    static PcmStream alternateActivityLoop;
 
     final void a(int param0, java.applet.Applet param1) {
         try {
@@ -25,7 +25,7 @@ final class me {
         field_f = null;
         field_a = null;
         field_b = null;
-        field_d = null;
+        alternateActivityLoop = null;
         if (param0 != 100) {
           field_a = (IndexedSprite[]) null;
         }

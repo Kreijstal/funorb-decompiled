@@ -1378,7 +1378,7 @@ final class og extends mh {
           }
           var2Lifetime164 = gr.a(true, "explain_speedup");
           if (var2Lifetime164 != null) {
-            tn.field_w = MenuButton.a(var2Lifetime164, (byte) 99);
+            MusicCrossfadeStream.field_w = MenuButton.a(var2Lifetime164, (byte) 99);
           }
           var2Lifetime165 = gr.a(true, "explain_control");
           if (null != var2Lifetime165) {

@@ -134,18 +134,18 @@ final class na extends ug {
     final static boolean j(byte param0) {
         if (param0 != -60) {
           na.a(true, 76, -125, -71, 104, -123);
-          if (tn.field_m == null) {
+          if (MusicCrossfadeStream.field_m == null) {
             return false;
           }
-          if (tn.field_m.h(param0 ^ -55)) {
+          if (MusicCrossfadeStream.field_m.h(param0 ^ -55)) {
             return true;
           }
           return false;
         }
-        if (tn.field_m == null) {
+        if (MusicCrossfadeStream.field_m == null) {
           return false;
         }
-        if (tn.field_m.h(param0 ^ -55)) {
+        if (MusicCrossfadeStream.field_m.h(param0 ^ -55)) {
           return true;
         }
         return false;

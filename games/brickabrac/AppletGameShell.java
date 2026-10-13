@@ -272,7 +272,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                   return;
                 }
               }
-              tn.field_A = true;
+              MusicCrossfadeStream.field_A = true;
             }
             return;
           }
@@ -680,7 +680,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           CircleBody.liveFocus = true;
           NinjaBackground.frameFocus = true;
           GameplayAudioEvent.redrawRequested = true;
-          tn.field_A = param0;
+          MusicCrossfadeStream.field_A = param0;
           er.field_c = MonotonicTime.nowMillis(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

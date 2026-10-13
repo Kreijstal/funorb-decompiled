@@ -157,7 +157,7 @@ final class qn {
         this.field_d = be.field_g;
         this.field_l = to.field_b;
         this.field_e.a(this.field_q, this.field_s, -93);
-        tn.field_A = false;
+        MusicCrossfadeStream.field_A = false;
         GameCanvas var2 = ff.a(0, 0, this.field_q, this.field_s, param0, lp.field_ub);
         if (var2 == null) {
           this.a(102);

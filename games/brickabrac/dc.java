@@ -4,7 +4,7 @@
 final class dc {
     static n field_f;
     int field_a;
-    static tn field_e;
+    static MusicCrossfadeStream musicCrossfadeStream;
     static int currentKeyCode;
     static RgbSprite chocolateCharacterSprite;
     static String field_d;
@@ -13,7 +13,7 @@ final class dc {
     public static void a(int param0) {
         chocolateCharacterSprite = null;
         field_d = null;
-        field_e = null;
+        musicCrossfadeStream = null;
         if (param0 != -9669) {
           field_d = (String) null;
           field_f = null;

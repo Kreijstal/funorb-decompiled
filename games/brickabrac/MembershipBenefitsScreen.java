@@ -37,14 +37,14 @@ final class MembershipBenefitsScreen extends MenuScreen {
 
     final static void a(boolean param0, boolean param1) {
         if (!param1) {
-          if (null != tn.field_m) {
-            tn.field_m.a(true, param0);
+          if (null != MusicCrossfadeStream.field_m) {
+            MusicCrossfadeStream.field_m.a(true, param0);
           }
           return;
         }
         MembershipBenefitsScreen.f(-8);
-        if (null != tn.field_m) {
-          tn.field_m.a(true, param0);
+        if (null != MusicCrossfadeStream.field_m) {
+          MusicCrossfadeStream.field_m.a(true, param0);
         }
     }
 

@@ -902,7 +902,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
         }
         if (!obfuscationGuard &&
-          tn.field_A) {
+          MusicCrossfadeStream.field_A) {
           t.a(false, CacheIoRequest.field_D);
           this.c(false);
           ap.a((byte) 117, CacheIoRequest.field_D);

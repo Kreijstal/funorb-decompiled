@@ -663,15 +663,15 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    final static void a(PcmSound param0, int param1, int param2) {
+    final static void playGameplaySound(PcmSound sound, int obfuscationGuard, int volume) {
         try {
-          hm.a(0, param0, param2);
-          if (param1 > -29) {
+          hm.playSoundAtVolume(0, sound, volume);
+          if (obfuscationGuard > -29) {
             PcmSound var4 = (PcmSound) null;
-            PlayerBoard.a((PcmSound) null, -15, 82);
+            PlayerBoard.playGameplaySound((PcmSound) null, -15, 82);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.P(" + (sound != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + volume + ')');
         }
     }
 

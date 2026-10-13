@@ -70,7 +70,7 @@ abstract class MenuScreen extends GameScreen {
     private final void c(boolean param0, int param1) {
         if (this.selection.selectedIndex != -1 &&
           param1 != this.selection.selectedIndex) {
-          PlayerBoard.a(ta.uiSounds[0], -106, FramedMenuScreen.g((byte) -44) / 4);
+          PlayerBoard.playGameplaySound(ta.uiSounds[0], -106, FramedMenuScreen.g((byte) -44) / 4);
         }
         if (!param0) {
           this.buttonLeft = -36;

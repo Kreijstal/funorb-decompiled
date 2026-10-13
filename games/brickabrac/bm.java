@@ -270,74 +270,74 @@ final class bm {
         }
     }
 
-    final static void playGameplayAudioEvents(int volume, int tempoScale256, boolean alternateMusicTrack, int obfuscationGuard, NodeDeque events) {
-        int stackIn_74_0 = 0;
-        PcmStream stackIn_78_0 = null;
-        RuntimeException stackIn_89_0 = null;
-        StringBuilder stackIn_89_1 = null;
-        String stackIn_90_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        GameplayAudioEvent var6 = null;
-        PcmStream var6_ref = null;
-        Object var7_ref = null;
-        int var7 = 0;
-        PcmSound[] var8_ref_oe__ = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = BrickABrac.field_J ? 1 : 0;
+    final static void playGameplayAudioEvents(int volume, int activityVolumePerEvent, boolean alternateActivityLoop, int obfuscationGuard, NodeDeque events) {
+        int alternateLoopFlag = 0;
+        PcmStream selectedLoop = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String eventsSummary = null;
+        RuntimeException caughtFailure = null;
+        int activityEvents = 0;
+        RuntimeException failure = null;
+        GameplayAudioEvent event = null;
+        PcmStream activityLoop = null;
+        Object sound = null;
+        int targetVolume = 0;
+        PcmSound[] sceneSounds = null;
+        int currentVolume = 0;
+        int maximumVolumeStep = 0;
+        int gameFlag = 0;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var5_int = 0;
+          activityEvents = 0;
           if (obfuscationGuard != -30791) {
             bm.playGameplayAudioEvents(98, -116, false, -50, (NodeDeque) null);
           }
-          var6 = (GameplayAudioEvent) (events.first(-65));
-          boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var6 == null))) {
-            var7_ref = null;
-            stackIn_74_0 = 1;
-            if (var10 == 0) {
-              boolean decompiledFrameRemainder0 = true;
-              if (stackIn_74_0 != var6.eventCode) {
-                if (var6.eventCode != 0) {
-                  if (var6.eventCode == 2) {
-                    var7_ref = fr.field_e[ChocolateBackground.field_w.nextBoundedInt(-37880252, fr.field_e.length)];
+          event = (GameplayAudioEvent) (events.first(-65));
+          boolean eventsExhausted = false;
+          while (!(eventsExhausted = (event == null))) {
+            sound = null;
+            alternateLoopFlag = 1;
+            if (gameFlag == 0) {
+              boolean unusedRemainder = true;
+              if (alternateLoopFlag != event.eventCode) {
+                if (event.eventCode != 0) {
+                  if (event.eventCode == 2) {
+                    sound = fr.field_e[ChocolateBackground.field_w.nextBoundedInt(-37880252, fr.field_e.length)];
                   } else {
-                    if (var6.eventCode != 4) {
-                      if (var6.eventCode == 5) {
-                        var7_ref = ta.uiSounds[5];
+                    if (event.eventCode != 4) {
+                      if (event.eventCode == 5) {
+                        sound = ta.uiSounds[5];
                       } else {
-                        if (6 == var6.eventCode) {
-                          var7_ref = ta.uiSounds[6];
+                        if (6 == event.eventCode) {
+                          sound = ta.uiSounds[6];
                         } else {
-                          if (var6.eventCode == 7) {
-                            var7_ref = ta.uiSounds[7];
+                          if (event.eventCode == 7) {
+                            sound = ta.uiSounds[7];
                           } else {
-                            if (3 == var6.eventCode) {
-                              var7_ref = ef.field_a[var6.detailId];
+                            if (3 == event.eventCode) {
+                              sound = ef.field_a[event.detailId];
                             } else {
-                              if (8 == var6.eventCode) {
-                                var7_ref = ta.uiSounds[10];
+                              if (8 == event.eventCode) {
+                                sound = ta.uiSounds[10];
                               } else {
-                                if (9 == var6.eventCode) {
-                                  var7_ref = ta.uiSounds[11];
+                                if (9 == event.eventCode) {
+                                  sound = ta.uiSounds[11];
                                 } else {
-                                  if (var6.eventCode == 10) {
-                                    var7_ref = ta.uiSounds[12];
+                                  if (event.eventCode == 10) {
+                                    sound = ta.uiSounds[12];
                                   } else {
-                                    if (var6.eventCode == 11) {
-                                      var7_ref = NanoGameClock.field_p[ChocolateBackground.field_w.nextBoundedInt(-37880252, NanoGameClock.field_p.length)];
+                                    if (event.eventCode == 11) {
+                                      sound = NanoGameClock.field_p[ChocolateBackground.field_w.nextBoundedInt(-37880252, NanoGameClock.field_p.length)];
                                     } else {
-                                      if (var6.eventCode == 12) {
-                                        var7_ref = ta.uiSounds[13];
+                                      if (event.eventCode == 12) {
+                                        sound = ta.uiSounds[13];
                                       } else {
-                                        if (var6.eventCode == 14) {
-                                          var7_ref = ta.uiSounds[14];
+                                        if (event.eventCode == 14) {
+                                          sound = ta.uiSounds[14];
                                         } else {
-                                          if ((var6.eventCode == 13)) {
-                                            var7_ref = ta.uiSounds[15];
+                                          if ((event.eventCode == 13)) {
+                                            sound = ta.uiSounds[15];
                                           }
                                         }
                                       }
@@ -350,61 +350,61 @@ final class bm {
                         }
                       }
                     } else {
-                      var5_int++;
+                      activityEvents++;
                     }
                   }
-                  decompiledFrameRemainder0 = false;
+                  unusedRemainder = false;
                 }
                 else {
-                  var7_ref = mh.field_ob[ChocolateBackground.field_w.nextBoundedInt(-37880252, mh.field_ob.length)];
+                  sound = mh.field_ob[ChocolateBackground.field_w.nextBoundedInt(-37880252, mh.field_ob.length)];
                 }
               } else {
                 if (oa.currentBackground != null) {
-                  var8_ref_oe__ = oa.currentBackground.pollSoundEffects(0);
+                  sceneSounds = oa.currentBackground.pollSoundEffects(0);
                   if (0 < oa.currentBackground.loadedSoundCount) {
-                    var7_ref = var8_ref_oe__[ChocolateBackground.field_w.nextBoundedInt(-37880252, oa.currentBackground.loadedSoundCount)];
+                    sound = sceneSounds[ChocolateBackground.field_w.nextBoundedInt(-37880252, oa.currentBackground.loadedSoundCount)];
                   }
                 }
               }
-              if (null != var7_ref) {
-                PlayerBoard.a((PcmSound) (var7_ref), -56, volume);
+              if (null != sound) {
+                PlayerBoard.playGameplaySound((PcmSound) (sound), -56, volume);
               }
-              var6 = (GameplayAudioEvent) (events.next((byte) 116));
+              event = (GameplayAudioEvent) (events.next((byte) 116));
               continue;
             }
             break;
           }
-          if (decompiledNaturalLoopExit0) {
-            stackIn_74_0 = alternateMusicTrack ? 1 : 0;
+          if (eventsExhausted) {
+            alternateLoopFlag = alternateActivityLoop ? 1 : 0;
           }
-          if (stackIn_74_0 == 0) {
-            stackIn_78_0 = to.field_k;
+          if (alternateLoopFlag == 0) {
+            selectedLoop = to.primaryActivityLoop;
           } else {
-            stackIn_78_0 = me.field_d;
+            selectedLoop = me.alternateActivityLoop;
           }
-          var6_ref = stackIn_78_0;
-          var7 = var5_int * tempoScale256;
-          var8 = var6_ref.getVolume();
-          var9 = var5_int + 1 << 2;
-          if (var8 + var9 < var7) {
-            var7 = var8 + var9;
+          activityLoop = selectedLoop;
+          targetVolume = activityEvents * activityVolumePerEvent;
+          currentVolume = activityLoop.getVolume();
+          maximumVolumeStep = activityEvents + 1 << 2;
+          if (currentVolume + maximumVolumeStep < targetVolume) {
+            targetVolume = currentVolume + maximumVolumeStep;
           }
-          if ((var8 - var9) > var7) {
-            var7 = var8 - var9;
+          if ((currentVolume - maximumVolumeStep) > targetVolume) {
+            targetVolume = currentVolume - maximumVolumeStep;
           }
-          var6_ref.setVolume(BackgroundScene.masterSoundGain * var7 / 256);
+          activityLoop.setVolume(BackgroundScene.masterSoundGain * targetVolume / 256);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_89_0 = var5;
-          stackIn_89_1 = new StringBuilder().append("bm.D(").append(volume).append(',').append(tempoScale256).append(',').append(alternateMusicTrack).append(',').append(obfuscationGuard).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("bm.D(").append(volume).append(',').append(activityVolumePerEvent).append(',').append(alternateActivityLoop).append(',').append(obfuscationGuard).append(',');
           if (events == null) {
-            stackIn_90_2 = "null";
+            eventsSummary = "null";
           } else {
-            stackIn_90_2 = "{...}";
+            eventsSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_89_0), ((StringBuilder) (Object) stackIn_89_1).append(stackIn_90_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(eventsSummary).append(')').toString());
         }
     }
 

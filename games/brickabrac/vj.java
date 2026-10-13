@@ -51,7 +51,7 @@ final class vj {
         Throwable decompiledCaughtException = null;
         try {
           var4_int = -2 / ((41 - param2) / 40);
-          if (null != dc.field_e) {
+          if (null != dc.musicCrossfadeStream) {
             ScorePopup.a(1048576, param3, param1, param0, -104);
           }
           if (null == m.musicSynthesizer) {
@@ -63,7 +63,7 @@ final class vj {
             if (param3 == IsaacGenerator.field_a) {
               return;
             }
-            m.musicSynthesizer.f(-24774);
+            m.musicSynthesizer.stopTrack(-24774);
             DirectByteStorage.field_f.b();
             IsaacGenerator.field_a = param3;
             if (null != IsaacGenerator.field_a) {

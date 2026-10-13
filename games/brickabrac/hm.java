@@ -118,7 +118,7 @@ final class hm {
         try {
           if (param2 != 0) {
             var4 = (PcmSound) null;
-            hm.a(-91, (PcmSound) null, 44);
+            hm.playSoundAtVolume(-91, (PcmSound) null, 44);
           }
           if (param0) {
             stackIn_6_0 = kp.field_b.measureText(param1);
@@ -140,7 +140,7 @@ final class hm {
         }
     }
 
-    final static SoundPlayback a(int param0, PcmSound param1, int param2) {
+    final static SoundPlayback playSoundAtVolume(int obfuscationGuard, PcmSound sound, int volume) {
         RuntimeException var3 = null;
         SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -148,22 +148,22 @@ final class hm {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             field_b = (String[]) null;
           }
-          stackIn_3_0 = sk.queueSoundPlayback((byte) -9, PcmStream.createAtRate(param1, 100, param2));
+          stackIn_3_0 = sk.queueSoundPlayback((byte) -9, PcmStream.createAtRate(sound, 100, volume));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("hm.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("hm.D(").append(obfuscationGuard).append(',');
+          if (sound == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(volume).append(')').toString());
         }
     }
 

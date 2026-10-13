@@ -23,7 +23,7 @@ final class CacheIoRequest extends ResourceRequest {
         }
         if (value >= 32768) {
           if (value < 131072) {
-            return tn.field_n[-32768 + value];
+            return MusicCrossfadeStream.field_n[-32768 + value];
           }
           if (33554432 > value) {
             if (value < 2097152) {
@@ -39,7 +39,7 @@ final class CacheIoRequest extends ResourceRequest {
             }
           }
           value = value >> (var2 << 1);
-          return tn.field_n[-32768 + value] << var2;
+          return MusicCrossfadeStream.field_n[-32768 + value] << var2;
         }
         if (value >= 128) {
           if (value >= 2048) {
@@ -62,7 +62,7 @@ final class CacheIoRequest extends ResourceRequest {
           }
         }
         value = value << (var2Lifetime1 << 1);
-        return tn.field_n[value - 32768] >> var2Lifetime1;
+        return MusicCrossfadeStream.field_n[value - 32768] >> var2Lifetime1;
     }
 
     public static void h(int param0) {

@@ -24,18 +24,18 @@ final class SoundCache {
         Object var6Lifetime1;
         Object var6Lifetime2;
         var3 = -76 / ((81 - param0) / 37);
-        if (tn.field_m != null) {
-          var4 = tn.field_m.a(param2, (byte) 95);
+        if (MusicCrossfadeStream.field_m != null) {
+          var4 = MusicCrossfadeStream.field_m.a(param2, (byte) 95);
           if (var4 != 0) {
             if (2 == var4 &&
-              tn.field_m.field_Mb != null &&
-              !tn.field_m.field_Mb.equals("")) {
-              if (tn.field_m.field_Mb.charAt(0) == 91) {
-                var5 = tn.field_m.field_Mb;
+              MusicCrossfadeStream.field_m.field_Mb != null &&
+              !MusicCrossfadeStream.field_m.field_Mb.equals("")) {
+              if (MusicCrossfadeStream.field_m.field_Mb.charAt(0) == 91) {
+                var5 = MusicCrossfadeStream.field_m.field_Mb;
                 var6 = var5;
                 var6Lifetime2 = var5;
               } else {
-                var8 = (CharSequence) ((Object) tn.field_m.field_Mb);
+                var8 = (CharSequence) ((Object) MusicCrossfadeStream.field_m.field_Mb);
                 var5 = gb.a(var8, 57);
               }
               var6Lifetime1 = null;
@@ -56,10 +56,10 @@ final class SoundCache {
                 SoundCache.a((byte) 92, 0, (String) null, (String) (var6Lifetime1), var5, 2);
               }
               GameUiController.field_d = -1;
-              tn.field_m = null;
+              MusicCrossfadeStream.field_m = null;
             } else {
               GameUiController.field_d = -1;
-              tn.field_m = null;
+              MusicCrossfadeStream.field_m = null;
             }
           }
         }
@@ -190,8 +190,8 @@ final class SoundCache {
         if (null != m.musicSynthesizer) {
           m.musicSynthesizer.setMasterGain(param1, false);
         }
-        if (null != dc.field_e) {
-          dc.field_e.a(true, param1);
+        if (null != dc.musicCrossfadeStream) {
+          dc.musicCrossfadeStream.setMasterGain(true, param1);
         }
         if (param0 != 1) {
           field_i = (String) null;

@@ -627,8 +627,8 @@ final class GameplayScreen extends GameScreen {
     final void a(boolean param0, byte param1) {
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        rj.a((byte) 80, to.field_k);
-        rj.a((byte) 80, me.field_d);
+        rj.a((byte) 80, to.primaryActivityLoop);
+        rj.a((byte) 80, me.alternateActivityLoop);
         if (!(this.match.playerCount <= 1) ||
           9 != this.match.playerBoards[0].boardState) {
           ji.a(25459, true, cd.field_g, 1, 1, true);
@@ -1666,7 +1666,7 @@ final class GameplayScreen extends GameScreen {
         }
         var6Lifetime1 = this.viewedPlayerId;
         for (var7Lifetime2 = 0; var7Lifetime2 < this.match.playerCount; var7Lifetime2++) {
-          if (~tn.field_C != ~var5[var7Lifetime2]) {
+          if (~MusicCrossfadeStream.field_C != ~var5[var7Lifetime2]) {
             gr.b(var5[var7Lifetime2], -28463);
           }
           BitPacketBuffer.drawBoard((byte) 90, var6Lifetime1, var5[var7Lifetime2], var15[var7Lifetime2], this.match, var14[var7Lifetime2]);
@@ -1855,14 +1855,14 @@ final class GameplayScreen extends GameScreen {
             ChocolateBackground.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           }
           MenuScreen.field_i = 0;
-          to.field_k = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
-          me.field_d = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
-          to.field_k.setLoopCount(-1);
-          me.field_d.setLoopCount(-1);
-          sk.queueSoundPlayback((byte) 125, to.field_k);
-          sk.queueSoundPlayback((byte) 5, me.field_d);
-          tn.field_C = 1;
-          gr.b(tn.field_C, -28463);
+          to.primaryActivityLoop = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
+          me.alternateActivityLoop = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
+          to.primaryActivityLoop.setLoopCount(-1);
+          me.alternateActivityLoop.setLoopCount(-1);
+          sk.queueSoundPlayback((byte) 125, to.primaryActivityLoop);
+          sk.queueSoundPlayback((byte) 5, me.alternateActivityLoop);
+          MusicCrossfadeStream.field_C = 1;
+          gr.b(MusicCrossfadeStream.field_C, -28463);
           DelayedPacket.field_m = -1;
           GameClock.field_b = -1;
           if (ProducerFramebuffer.field_j == null) {

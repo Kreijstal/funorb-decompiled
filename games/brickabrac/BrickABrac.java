@@ -710,7 +710,7 @@ public final class BrickABrac extends InteractiveGameClient {
         FarmBackground.f(0);
         NinjaBackground.d((byte) -119);
         PcmPlayer.g();
-        tn.c(-52);
+        MusicCrossfadeStream.c(-52);
         ArchiveIndex.a((byte) 117);
         GzipInflater.a(-32);
         ArchiveSource.a((byte) -59);

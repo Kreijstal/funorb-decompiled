@@ -49,7 +49,7 @@ final class LevelList {
         }
         ag.buttonLabels = new String[46];
         ag.buttonLabels[5] = gg.field_l;
-        ag.buttonLabels[3] = tn.field_B;
+        ag.buttonLabels[3] = MusicCrossfadeStream.field_B;
         ag.buttonLabels[4] = pp.field_c;
         ag.buttonLabels[9] = LevelPackLoader.field_d;
         ag.buttonLabels[1] = ArchiveNetworkRequest.field_H;
@@ -61,7 +61,7 @@ final class LevelList {
         ag.buttonLabels[13] = di.field_a;
         ag.buttonLabels[27] = MatchResultScreen.field_r;
         ag.buttonLabels[2] = pj.field_e;
-        sl.field_A[11] = tn.field_w;
+        sl.field_A[11] = MusicCrossfadeStream.field_w;
         sl.field_A[5] = ef.field_c;
         sl.field_A[6] = ch.field_i;
         sl.field_A[9] = SecondaryHashTable.field_a;

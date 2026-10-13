@@ -1193,9 +1193,9 @@ final class MidiSynthesizer extends AudioStream {
         field_o = null;
     }
 
-    final synchronized void f(int param0) {
-        this.a(true, param0 ^ -16582);
-        if (param0 != -24774) {
+    final synchronized void stopTrack(int obfuscationGuard) {
+        this.a(true, obfuscationGuard ^ -16582);
+        if (obfuscationGuard != -24774) {
           this.channelSampleOffset = (int[]) null;
         }
     }
