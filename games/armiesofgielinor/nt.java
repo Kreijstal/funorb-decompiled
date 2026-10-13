@@ -66,7 +66,7 @@ final class nt extends IntrusiveNode {
               } else {
                 var8Lifetime1 = var7 - 64 >> 1;
               }
-              stackIn_16_0 = vf.smokeSprites[var5_int];
+              stackIn_16_0 = TileableNoiseGenerator.smokeSprites[var5_int];
               stackIn_16_1 = param3;
               stackIn_16_2 = param4 - var7 / 4;
               if (cu.field_a) {
@@ -76,7 +76,7 @@ final class nt extends IntrusiveNode {
               }
               GradientUiRenderer.multiplySpriteWithOpacity(stackIn_16_0, stackIn_16_1, stackIn_16_2, stackIn_17_3 * (-var8Lifetime1 + 128));
               param1 = param1 >> 2;
-              stackIn_19_0 = vf.smokeSprites[4 + var5_int];
+              stackIn_19_0 = TileableNoiseGenerator.smokeSprites[4 + var5_int];
               stackIn_19_1 = var5_int + param3;
               stackIn_19_2 = -(var7 / 4) + param4;
               stackIn_19_3 = 64 - var8Lifetime1 / 2;
@@ -90,9 +90,9 @@ final class nt extends IntrusiveNode {
               var6++;
             }
           }
-          GradientUiRenderer.multiplySprite(vf.smokeSprites[3 & param1], param3, param4);
+          GradientUiRenderer.multiplySprite(TileableNoiseGenerator.smokeSprites[3 & param1], param3, param4);
           param1 = param1 >> 2;
-          vf.smokeSprites[(3 & param1) + 4].drawAdditive(param3, -4 + param4, 128);
+          TileableNoiseGenerator.smokeSprites[(3 & param1) + 4].drawAdditive(param3, -4 + param4, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

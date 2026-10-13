@@ -1993,12 +1993,12 @@ final class TutorialController {
                                                   this.tutorialStage != 28) {
                                                   return;
                                                 }
-                                                vf.a(0, this.tutorialStage);
+                                                TileableNoiseGenerator.a(0, this.tutorialStage);
                                                 if (var9 == 0) {
                                                   return;
                                                 }
                                               }
-                                              vf.a(0, 9);
+                                              TileableNoiseGenerator.a(0, 9);
                                               if (var9 == 0) {
                                                 return;
                                               }
@@ -3954,7 +3954,7 @@ final class TutorialController {
                 li.field_q = -1 + var2_int;
                 tf.field_k = 256;
                 RadialSummonMenu.playDefaultSoundWithIntGuard(91, ClientUiNode.field_v[11]);
-                vf.field_f = SetCoatConsoleCommand.field_F;
+                TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                 kq.field_L = 0;
                 SetCoatConsoleCommand.field_F = -1;
                 WeightedLruCache.field_d = GlobalSpell.field_h;
@@ -3989,13 +3989,13 @@ final class TutorialController {
               ep.field_o = 0;
               if (var4Lifetime1 != SetCoatConsoleCommand.field_F) {
                 MoveAttackAction.field_s = li.field_q;
-                vf.field_f = SetCoatConsoleCommand.field_F;
+                TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                 SetCoatConsoleCommand.field_F = var4Lifetime1;
                 b.field_n = new la(AnimationFrameSet.unitUnlockGroups[li.field_q + 1][SetCoatConsoleCommand.field_F]);
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 GlobalSpell.field_h = 256;
               } else {
-                vf.field_f = SetCoatConsoleCommand.field_F;
+                TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                 MoveAttackAction.field_s = li.field_q;
                 WeightedLruCache.field_d = GlobalSpell.field_h;
                 kq.field_L = 0;
@@ -4248,7 +4248,7 @@ final class TutorialController {
             if (var7Lifetime2 < AnimationFrameSet.unitUnlockGroups[1 + MoveAttackAction.field_s].length) {
               var8Lifetime1 = 135 + ((int)(Math.sin(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[1 + MoveAttackAction.field_s].length) * (double)(100 + var5 * 150 / 256)) + 30);
               var9Lifetime1 = 285 + (int)(-(Math.cos(3.141592653589793 * (double)var7Lifetime2 * 2.0 / (double)AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1].length) * (double)(100 + var5 * 150 / 256)));
-              stackIn_43_0 = vf.field_f;
+              stackIn_43_0 = TileableNoiseGenerator.field_f;
               stackIn_43_1 = var7Lifetime2;
               if (var10 != 0) {
                 if (stackIn_43_0 < stackIn_43_1) {
@@ -4302,7 +4302,7 @@ final class TutorialController {
                 if (~SetCoatConsoleCommand.field_F == ~var7Lifetime2) {
                   TeamRoster.field_e.drawAdditive(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var3);
                 }
-                if (vf.field_f == var7Lifetime2 &&
+                if (TileableNoiseGenerator.field_f == var7Lifetime2 &&
                   MoveAttackAction.field_s == li.field_q) {
                   TeamRoster.field_e.drawAdditive(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
                 }
@@ -4679,7 +4679,7 @@ final class TutorialController {
                   this.tutorialStage == 12 &&
                   tf.field_k == 0) {
                   MoveAttackAction.field_s = li.field_q;
-                  vf.field_f = SetCoatConsoleCommand.field_F;
+                  TileableNoiseGenerator.field_f = SetCoatConsoleCommand.field_F;
                   WeightedLruCache.field_d = GlobalSpell.field_h;
                   SetCoatConsoleCommand.field_F = -1;
                   li.field_q = li.field_q + 1;

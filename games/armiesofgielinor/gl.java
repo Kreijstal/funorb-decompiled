@@ -22,7 +22,7 @@ final class gl {
         if (param0 < 119) {
           return;
         }
-        cn.field_r = param1;
+        OctaveNoiseMap.field_r = param1;
     }
 
     gl(String param0) {

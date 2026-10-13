@@ -102,11 +102,11 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         return this.validationSource;
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
-        if (param1 != 3) {
-          ValidatedTextWidget.a(71, -15, 73, 84);
+    final static int diagonalNoiseGradient12(int offsetX12, int obfuscationGuard, int hash, int offsetY12) {
+        if (obfuscationGuard != 3) {
+          ValidatedTextWidget.diagonalNoiseGradient12(71, -15, 73, 84);
         }
-        return ((param2 & 1) == 0 ? param0 : -param0) + ((param2 & 2) != 0 ? -param3 : param3);
+        return ((hash & 1) == 0 ? offsetX12 : -offsetX12) + ((hash & 2) != 0 ? -offsetY12 : offsetY12);
     }
 
     ValidatedTextWidget(String text, WidgetListener listener, int maximumLength) {

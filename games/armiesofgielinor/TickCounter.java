@@ -4875,7 +4875,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREEN_TOXINS");
                 if (null != var2) {
-                  vf.field_h = uu.a(var2, (byte) -93);
+                  TileableNoiseGenerator.field_h = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "TTREEN_POLYMORPHICS");
                 if (var2 != null) {
@@ -4987,11 +4987,11 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_RAYS");
                 if (var2 != null) {
-                  cn.field_q = uu.a(var2, (byte) 89);
+                  OctaveNoiseMap.field_q = uu.a(var2, (byte) 89);
                 }
                 var2 = fk.a(false, "TTREED_AURAS");
                 if (var2 != null) {
-                  cn.field_s = uu.a(var2, (byte) -110);
+                  OctaveNoiseMap.field_s = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "TTREED_BOLTS");
                 if (var2 != null) {

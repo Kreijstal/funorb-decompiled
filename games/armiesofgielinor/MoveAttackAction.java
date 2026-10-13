@@ -113,7 +113,7 @@ final class MoveAttackAction extends PreparedAction {
             if (stackIn_38_1 <= -1) {
               stackIn_41_1 = jg.field_k;
             } else {
-              stackIn_41_1 = cn.field_o;
+              stackIn_41_1 = OctaveNoiseMap.field_o;
             }
             DualLinkedNode.field_r = stackIn_38_0 + stackIn_41_1;
             var8Lifetime2++;

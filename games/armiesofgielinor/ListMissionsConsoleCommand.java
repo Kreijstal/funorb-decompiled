@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ListMissionsConsoleCommand extends ConsoleCommand {
-    static int[] field_F;
+    static int[] noiseFade12;
     static SocialListPanel field_E;
 
     public static void g(int param0) {
-        field_F = null;
+        noiseFade12 = null;
         field_E = null;
         if (param0 != 12600) {
           field_E = (SocialListPanel) null;
@@ -111,7 +111,7 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -63) {
-            field_F = (int[]) null;
+            noiseFade12 = (int[]) null;
           }
           var1_int = MoveAttackRequest.field_K[0];
           for (var2 = 1; MoveAttackRequest.field_K.length > var2; var2++) {
@@ -129,9 +129,9 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
 
     static {
         int var0 = 0;
-        field_F = new int[4096];
+        noiseFade12 = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-          field_F[var0] = ki.a(var0, -111);
+          noiseFade12[var0] = ki.quinticNoiseFade12(var0, -111);
         }
     }
 }

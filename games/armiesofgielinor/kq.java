@@ -164,7 +164,7 @@ class kq extends InteractiveWidget {
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         StandardContentDialog.field_mb = param4;
         jg.field_k = param0;
-        cn.field_o = param1;
+        OctaveNoiseMap.field_o = param1;
         SpriteFramedLabel.field_g = param3;
         if (param2 != 87) {
           Battlefield var6 = (Battlefield) null;

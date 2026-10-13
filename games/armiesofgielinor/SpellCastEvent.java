@@ -95,7 +95,7 @@ final class SpellCastEvent extends GameEvent {
               var2 = var2 + (jg.field_k + QuickChatPhrase.field_w + FullscreenFocusCanvas.field_b);
             } else {
               AiPlanner.field_G.drawText(var6, var8, var2 + StandardContentDialog.field_mb, var5, -1);
-              var2 = var2 + cn.field_o;
+              var2 = var2 + OctaveNoiseMap.field_o;
             }
           }
           return;

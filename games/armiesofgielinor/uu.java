@@ -114,7 +114,7 @@ final class uu {
               if (0 < AnimationPlayer.pendingJoinRequestCount) {
                 boolean decompiledSharedTail0 = (1 != AnimationPlayer.pendingJoinRequestCount);
                 if (!decompiledSharedTail0) {
-                  var10_ref_String = vf.field_c;
+                  var10_ref_String = TileableNoiseGenerator.field_c;
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
@@ -445,7 +445,7 @@ final class uu {
             if (ConsolePanel.field_m.pressedButton != 0) {
               ChannelGainProfile.field_f = false;
             }
-            vf.a(param3 + 1, false, param2, ToggleWidget.currentRoom);
+            TileableNoiseGenerator.updateRoomOptionControls(param3 + 1, false, param2, ToggleWidget.currentRoom);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

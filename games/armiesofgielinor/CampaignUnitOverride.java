@@ -207,7 +207,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_entered_other_game");
                 if (var2 != null) {
-                  vf.field_e = uu.a(var2, (byte) -98);
+                  TileableNoiseGenerator.field_e = uu.a(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "mu_game_is_full");
                 if (var2 != null) {
@@ -343,7 +343,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "add_x_to_friends");
                 if (var2 != null) {
-                  vf.field_l = uu.a(var2, (byte) 88);
+                  TileableNoiseGenerator.field_l = uu.a(var2, (byte) 88);
                 }
                 var2 = NodeIterator.a(50, "add_x_to_ignore");
                 if (null != var2) {
@@ -531,7 +531,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "join_requests_one");
                 if (null != var2) {
-                  vf.field_c = uu.a(var2, (byte) -122);
+                  TileableNoiseGenerator.field_c = uu.a(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "join_requests_many");
                 if (null != var2) {

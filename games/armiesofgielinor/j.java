@@ -407,7 +407,7 @@ final class j {
                 DropdownArrowPainter.a(param3, -8006);
               }
             }
-            vf.a(1, true, param3, NumericDateInputWidget.roomSetup);
+            TileableNoiseGenerator.updateRoomOptionControls(1, true, param3, NumericDateInputWidget.roomSetup);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -91,7 +91,7 @@ final class LeaderEscortCondition implements MatchCondition {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 3) {
-            stackIn_3_0 = vf.field_e;
+            stackIn_3_0 = TileableNoiseGenerator.field_e;
             return stackIn_3_0;
           }
           if (param1 == param0) {

@@ -125,7 +125,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                   if (decompiledFrameRemainder0) {
                     var2_int = PrintCoatConsoleCommand.h(-124);
                     if (1 == var2_int) {
-                      vf.a(0, 0);
+                      TileableNoiseGenerator.a(0, 0);
                     }
                     this.d(0, true);
                     decompiledFrameRemainder0 = (var11 != 0);
@@ -1295,7 +1295,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           OwnerChangeEvent.g(-19269);
           SpellCastEvent.a(true);
           UpkeepEvent.g(10);
-          cn.f(123);
+          OctaveNoiseMap.f(123);
           ab.a((byte) 32);
           vv.b((byte) 82);
           bu.a(-128);
@@ -1482,7 +1482,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           BestScoreStrategy.c((byte) 110);
           AiActionCandidate.f(obfuscationGuard ^ -123);
           WeightedScoreStrategy.c(-104);
-          vf.c(obfuscationGuard ^ 18);
+          TileableNoiseGenerator.c(obfuscationGuard ^ 18);
           FixedQuaternion.a((byte) -57);
           MovementPresentation.g(67);
           EffectPresentation.c(obfuscationGuard ^ 40);

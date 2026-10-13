@@ -112,7 +112,7 @@ final class BattleGraphicsAssets {
         LobbyPlayer.cannotMoveSprites = MapLayout.loadIndexedSpritesByName("cantmove", -28106, "basic", this.basicArchive);
         bk.attackTargetSprites = MapLayout.loadIndexedSpritesByName("attacktargets", -28106, "basic", this.basicArchive);
         hq.surroundTileSprites = MapLayout.loadIndexedSpritesByName("surround_tiles", -28106, "basic", this.basicArchive);
-        vf.smokeSprites = fk.loadRgbSpritesByName("smoke", (byte) -124, this.basicArchive, "basic");
+        TileableNoiseGenerator.smokeSprites = fk.loadRgbSpritesByName("smoke", (byte) -124, this.basicArchive, "basic");
         SetCoatConsoleCommand.kalphiteSprites = fk.loadRgbSpritesByName("kalphites", (byte) -124, this.basicArchive, "basic");
         for (spriteIndex = obfuscationGuard; SetCoatConsoleCommand.kalphiteSprites.length > spriteIndex; spriteIndex++) {
           SetCoatConsoleCommand.kalphiteSprites[spriteIndex].normalizeCanvas();

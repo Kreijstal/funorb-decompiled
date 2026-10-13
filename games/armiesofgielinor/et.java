@@ -173,7 +173,7 @@ final class et {
           }
           do {
             if (!Unit.pollKeyEvent((byte) 80)) {
-              if (cn.field_r == -1) {
+              if (OctaveNoiseMap.field_r == -1) {
                 if (ac.field_n) {
                   stackIn_18_0 = 3;
                   return stackIn_18_0;
@@ -197,7 +197,7 @@ final class et {
             }
             KingBlackDragonEvent.field_C.a(rs.keyCode, DualNodeDeque.typedCharacter, 80);
           } while (var2 == 0);
-          var1_int = cn.field_r;
+          var1_int = OctaveNoiseMap.field_r;
           gl.a(param0 ^ -127, -1);
           stackIn_13_0 = var1_int;
           return stackIn_13_0;

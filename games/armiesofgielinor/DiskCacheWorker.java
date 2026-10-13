@@ -183,7 +183,7 @@ final class DiskCacheWorker implements Runnable {
           while (var4 < SpriteScrollBar.field_h.length) {
             var6 = DirectByteStorage.field_k[var4];
             if (var6 < 0) {
-              var5 = var5 + cn.field_o;
+              var5 = var5 + OctaveNoiseMap.field_o;
             } else {
               var7 = lp.a(SpriteScrollBar.field_h[var4], true, false);
               var5 = var5 + QuickChatPhrase.field_w;

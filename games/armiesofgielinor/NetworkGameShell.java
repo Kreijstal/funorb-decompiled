@@ -231,7 +231,7 @@ abstract class NetworkGameShell extends GameAppletShell {
             }
           }
           if (2 == actionCode) {
-            actionTwoResult = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), cn.e(488997228), lb.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.a(-1));
+            actionTwoResult = DiskCacheWorker.a((byte) -46, CombatPresentation.i(-4938), OctaveNoiseMap.e(488997228), lb.b(0), this.affiliateId, DefeatPlayerWithMetricsConsoleCommand.e((byte) -127), RadialSummonItem.a(-1));
             if (actionTwoResult != -1) {
               CampaignMenuEntry.a(BitmapTextWidgetPainter.field_r, -14, br.field_b, actionTwoResult);
               BitmapTextWidgetPainter.field_r = null;

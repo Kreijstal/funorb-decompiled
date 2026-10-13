@@ -24,14 +24,14 @@ final class ki {
         return null;
     }
 
-    final static int a(int param0, int param1) {
-        int var2 = (param0 * param0 >> 12) * param0 >> 12;
-        int var3 = param0 * 6 - 61440;
-        int var4 = (var3 * param0 >> 12) + 40960;
-        if (param1 < -26) {
+    final static int quinticNoiseFade12(int fraction12, int obfuscationGuard) {
+        int var2 = (fraction12 * fraction12 >> 12) * fraction12 >> 12;
+        int var3 = fraction12 * 6 - 61440;
+        int var4 = (var3 * fraction12 >> 12) + 40960;
+        if (obfuscationGuard < -26) {
           return var4 * var2 >> 12;
         }
-        ki.a(85, -2);
+        ki.quinticNoiseFade12(85, -2);
         return var4 * var2 >> 12;
     }
 

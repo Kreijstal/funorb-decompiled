@@ -207,7 +207,7 @@ final class MoveEvent extends GameEvent {
               }
               var11_int = stackIn_23_0;
               while (var10.length > var11_int) {
-                var10[var11_int] = vf.a(var7[var11_int], -13546, var5[var9]);
+                var10[var11_int] = TileableNoiseGenerator.shareSpriteWithPalette(var7[var11_int], -13546, var5[var9]);
                 var11_int++;
               }
               var9++;

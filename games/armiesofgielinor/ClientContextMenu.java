@@ -529,7 +529,7 @@ final class ClientContextMenu {
             var6 = IndexedSpriteBase.isIgnoredAccount(this.accountName, -3404) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.menu.addTextAction(4, EmailCheckResult.a(4800, vf.field_l, new String[]{var7}), (byte) -125);
+              this.menu.addTextAction(4, EmailCheckResult.a(4800, TileableNoiseGenerator.field_l, new String[]{var7}), (byte) -125);
               this.menu.addTextAction(6, EmailCheckResult.a(4800, sq.field_o, new String[]{var7}), (byte) -100);
               if (quickChatContext != null &&
                 chatChannel != 2 &&
