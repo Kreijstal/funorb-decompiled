@@ -84,7 +84,7 @@ abstract class sl extends DualLinkNode {
           w.field_n = param8;
           pe.field_t = param4;
           Brick.field_O = param5;
-          dm.field_c = param10;
+          MouseInput.field_c = param10;
           rg.field_b = param12;
           th.field_a = param3;
           aj.field_c = param1;
@@ -221,10 +221,10 @@ abstract class sl extends DualLinkNode {
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
             gb.field_l[var17_intLifetime3 + 4] = new mh(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
-            array$2 = new rk[ik.a((int) dm.field_c[var17_intLifetime3], 255) + 1];
+            array$2 = new rk[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             ab.field_A[4 + var17_intLifetime3] = array$2;
             ab.field_A[4 + var17_intLifetime3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
-            for (var18 = 0; (255 & dm.field_c[var17_intLifetime3]) > var18; var18++) {
+            for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {
               if (ki.field_k != null) {
                 if (ki.field_k[var17_intLifetime3] == null) {
                   var19_ref = null;

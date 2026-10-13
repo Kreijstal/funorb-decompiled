@@ -157,10 +157,10 @@ final class i extends IntrusiveNode {
           this.field_i = this.field_i + var2Lifetime1;
         } else {
           rk.field_Qb = rk.field_Qb & this.field_x;
-          if (bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 47, po.field_a, pq.field_k, this.field_n)) {
+          if (bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 47, po.pointerY, pq.pointerX, this.field_n)) {
             nf.field_Y = this.field_r;
-            if (1 == ki.field_e &&
-              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.field_O, tb.field_fb, this.field_n)) {
+            if (1 == ki.pressedButton &&
+              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.pressY, tb.pressX, this.field_n)) {
               if (nf.field_P != this.field_r) {
                 nf.field_P = this.field_r;
               } else {
@@ -171,8 +171,8 @@ final class i extends IntrusiveNode {
               }
             }
           } else {
-            if (1 == ki.field_e &&
-              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.field_O, tb.field_fb, this.field_n)) {
+            if (1 == ki.pressedButton &&
+              bg.containsRectanglePoint(this.field_i, this.field_w, this.field_u, (byte) 33, qo.pressY, tb.pressX, this.field_n)) {
               if (nf.field_P != this.field_r) {
                 nf.field_P = this.field_r;
               } else {

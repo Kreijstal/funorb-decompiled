@@ -170,13 +170,13 @@ final class pl {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.addMouseListener(lj.field_j);
-          param0.addMouseMotionListener(lj.field_j);
+          param0.addMouseListener(lj.mouseInput);
+          param0.addMouseMotionListener(lj.mouseInput);
           if (param1 != 7282) {
             mf var3 = (mf) null;
             pl.a((String) null, (String) null, (byte) 8, (mf) null);
           }
-          param0.addFocusListener(lj.field_j);
+          param0.addFocusListener(lj.mouseInput);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "pl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

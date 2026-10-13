@@ -177,8 +177,8 @@ final class jm {
               var13_ref_String = ng.field_e;
               var16.field_d.a(var13_ref_String, 7, (byte) 126);
               var17 = bm.field_d;
-              var13 = tb.field_fb;
-              var14 = qo.field_O;
+              var13 = tb.pressX;
+              var14 = qo.pressY;
               var17.field_d.a(var14, -126, 0, 0, var13);
             }
             var5 = var6;

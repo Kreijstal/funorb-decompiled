@@ -511,7 +511,7 @@ final class am extends mh {
           return -1;
         }
         if (param0 &&
-          0 != ki.field_e &&
+          0 != ki.pressedButton &&
           this.field_L == 0) {
           return -1;
         }

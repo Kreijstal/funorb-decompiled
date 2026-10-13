@@ -390,7 +390,7 @@ final class MultiplayerMatch {
               }
             }
             if (var8 != 0) {
-              var9_ref = (BrickMotionPath) (param0.field_v.first(-120));
+              var9_ref = (BrickMotionPath) (param0.motionPaths.first(-120));
               while (var9_ref != null) {
                 var22Lifetime2 = var9_ref.waypoints;
                 var11_ref_ee = (MotionWaypoint) (var22Lifetime2.first(-125));
@@ -398,7 +398,7 @@ final class MultiplayerMatch {
                   var11_ref_ee.y256 = var11_ref_ee.y256 + 256;
                   var11_ref_ee = (MotionWaypoint) (var22Lifetime2.next((byte) 116));
                 }
-                var9_ref = (BrickMotionPath) (param0.field_v.next((byte) 116));
+                var9_ref = (BrickMotionPath) (param0.motionPaths.next((byte) 116));
               }
             }
             for (var9_int = 0; param0.brickGroups.length > var9_int; var9_int++) {

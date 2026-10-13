@@ -7,7 +7,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
     static RgbSprite[] field_l;
     static NodeDeque field_n;
     static volatile boolean field_i;
-    static int field_o;
+    static int mouseWheelDelta;
     int detailId;
     static mf field_k;
     int eventCode;

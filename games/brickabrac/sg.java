@@ -11,23 +11,23 @@ final class sg extends k {
         super(param0);
     }
 
-    final static void e(int param0) {
+    final static void snapshotMouseInput(int obfuscationGuard) {
         int var2 = 0;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = lj.field_j;
+        var1 = lj.mouseInput;
         synchronized (var1) {
-          cb.field_q = kb.field_Pb;
-          gr.field_a = gr.field_a + 1;
-          pq.field_k = eo.field_i;
-          po.field_a = ep.field_g;
-          kb.field_Xb = kn.field_C;
-          kn.field_C = false;
-          ki.field_e = mi.field_c;
-          tb.field_fb = l.field_l;
-          qo.field_O = va.field_e;
-          mi.field_c = 0;
-          var2 = 54 / ((param0 + 49) / 63);
+          cb.heldButton = kb.liveHeldButton;
+          gr.pointerIdleTicks = gr.pointerIdleTicks + 1;
+          pq.pointerX = eo.livePointerX;
+          po.pointerY = ep.livePointerY;
+          kb.pointerChanged = kn.livePointerChanged;
+          kn.livePointerChanged = false;
+          ki.pressedButton = mi.livePressedButton;
+          tb.pressX = l.livePressX;
+          qo.pressY = va.livePressY;
+          mi.livePressedButton = 0;
+          var2 = 54 / ((obfuscationGuard + 49) / 63);
         }
     }
 
@@ -35,7 +35,7 @@ final class sg extends k {
         field_l = null;
         field_m = null;
         if (param0 <= 122) {
-          sg.e(23);
+          sg.snapshotMouseInput(23);
           field_k = null;
           return;
         }

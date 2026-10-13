@@ -967,10 +967,10 @@ final class sb implements vc {
               n.field_d = false;
               if (this.d(76)) {
                 var5 = si.field_l + nn.field_g.c(nn.field_f);
-                stackIn_22_0 = (0 <= pq.field_k) && (pq.field_k < var5) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.field_a) && (gp.field_d.field_db > po.field_a);
+                stackIn_22_0 = (0 <= pq.pointerX) && (pq.pointerX < var5) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (gp.field_d.field_db > po.pointerY);
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
-                  ki.field_e == 1) {
+                  ki.pressedButton == 1) {
                   stackIn_27_0 = !(pf.field_p);
                   pf.field_p = stackIn_27_0;
                   if (pf.field_p) {
@@ -1001,7 +1001,7 @@ final class sb implements vc {
               stackIn_45_0 = 15;
               stackIn_46_1 = (this.b(109)) ? false : true;
               stackIn_48_2 = 11;
-              stackIn_48_3 = GameplayAudioEvent.field_o;
+              stackIn_48_3 = GameplayAudioEvent.mouseWheelDelta;
               stackIn_48_4 = 0;
               stackIn_48_5 = 16777215;
               stackIn_48_6 = true;
@@ -1044,7 +1044,7 @@ final class sb implements vc {
           stackIn_64_0 = 15;
           stackIn_65_1 = (this.b(109)) ? false : true;
           stackIn_67_2 = 11;
-          stackIn_67_3 = GameplayAudioEvent.field_o;
+          stackIn_67_3 = GameplayAudioEvent.mouseWheelDelta;
           stackIn_67_4 = 0;
           stackIn_67_5 = 16777215;
           stackIn_67_6 = true;
@@ -1065,7 +1065,7 @@ final class sb implements vc {
           return;
         }
         var5Lifetime2 = si.field_l + nn.field_g.c(nn.field_f);
-        stackIn_80_0 = (0 <= pq.field_k) && (pq.field_k < var5Lifetime2) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.field_a) && (gp.field_d.field_db > po.field_a);
+        stackIn_80_0 = (0 <= pq.pointerX) && (pq.pointerX < var5Lifetime2) && (gp.field_d.field_db - LevelSelectScreen.field_w <= po.pointerY) && (gp.field_d.field_db > po.pointerY);
         n.field_d = stackIn_80_0;
         if (!n.field_d) {
           if (!n.field_d) {
@@ -1082,7 +1082,7 @@ final class sb implements vc {
             stackIn_90_0 = 15;
             stackIn_91_1 = (this.b(109)) ? false : true;
             stackIn_93_2 = 11;
-            stackIn_93_3 = GameplayAudioEvent.field_o;
+            stackIn_93_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_93_4 = 0;
             stackIn_93_5 = 16777215;
             stackIn_93_6 = true;
@@ -1109,7 +1109,7 @@ final class sb implements vc {
               stackIn_130_0 = 15;
               stackIn_131_1 = (this.b(109)) ? false : true;
               stackIn_133_2 = 11;
-              stackIn_133_3 = GameplayAudioEvent.field_o;
+              stackIn_133_3 = GameplayAudioEvent.mouseWheelDelta;
               stackIn_133_4 = 0;
               stackIn_133_5 = 16777215;
               stackIn_133_6 = true;
@@ -1134,7 +1134,7 @@ final class sb implements vc {
               stackIn_112_0 = 15;
               stackIn_113_1 = (this.b(109)) ? false : true;
               stackIn_115_2 = 11;
-              stackIn_115_3 = GameplayAudioEvent.field_o;
+              stackIn_115_3 = GameplayAudioEvent.mouseWheelDelta;
               stackIn_115_4 = 0;
               stackIn_115_5 = 16777215;
               stackIn_115_6 = true;
@@ -1156,7 +1156,7 @@ final class sb implements vc {
           }
           return;
         }
-        if (ki.field_e != 1) {
+        if (ki.pressedButton != 1) {
           regionExit1: {
             if (n.field_d) {
               stackIn_231_0 = n.field_d;
@@ -1175,7 +1175,7 @@ final class sb implements vc {
                 stackIn_240_0 = 15;
                 stackIn_241_1 = (this.b(109)) ? false : true;
                 stackIn_243_2 = 11;
-                stackIn_243_3 = GameplayAudioEvent.field_o;
+                stackIn_243_3 = GameplayAudioEvent.mouseWheelDelta;
                 stackIn_243_4 = 0;
                 stackIn_243_5 = 16777215;
                 stackIn_243_6 = true;
@@ -1202,7 +1202,7 @@ final class sb implements vc {
             stackIn_259_0 = 15;
             stackIn_260_1 = (this.b(109)) ? false : true;
             stackIn_262_2 = 11;
-            stackIn_262_3 = GameplayAudioEvent.field_o;
+            stackIn_262_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_262_4 = 0;
             stackIn_262_5 = 16777215;
             stackIn_262_6 = true;
@@ -1235,7 +1235,7 @@ final class sb implements vc {
                 stackIn_158_0 = 15;
                 stackIn_159_1 = (this.b(109)) ? false : true;
                 stackIn_161_2 = 11;
-                stackIn_161_3 = GameplayAudioEvent.field_o;
+                stackIn_161_3 = GameplayAudioEvent.mouseWheelDelta;
                 stackIn_161_4 = 0;
                 stackIn_161_5 = 16777215;
                 stackIn_161_6 = true;
@@ -1270,7 +1270,7 @@ final class sb implements vc {
             stackIn_176_0 = 15;
             stackIn_177_1 = (this.b(109)) ? false : true;
             stackIn_179_2 = 11;
-            stackIn_179_3 = GameplayAudioEvent.field_o;
+            stackIn_179_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_179_4 = 0;
             stackIn_179_5 = 16777215;
             stackIn_179_6 = true;
@@ -1300,7 +1300,7 @@ final class sb implements vc {
                 stackIn_199_0 = 15;
                 stackIn_200_1 = (this.b(109)) ? false : true;
                 stackIn_202_2 = 11;
-                stackIn_202_3 = GameplayAudioEvent.field_o;
+                stackIn_202_3 = GameplayAudioEvent.mouseWheelDelta;
                 stackIn_202_4 = 0;
                 stackIn_202_5 = 16777215;
                 stackIn_202_6 = true;
@@ -1335,7 +1335,7 @@ final class sb implements vc {
             stackIn_217_0 = 15;
             stackIn_218_1 = (this.b(109)) ? false : true;
             stackIn_220_2 = 11;
-            stackIn_220_3 = GameplayAudioEvent.field_o;
+            stackIn_220_3 = GameplayAudioEvent.mouseWheelDelta;
             stackIn_220_4 = 0;
             stackIn_220_5 = 16777215;
             stackIn_220_6 = true;

@@ -33,7 +33,7 @@ final class qb extends ki {
         if (this.b((byte) -106)) {
           var7 = PowerUp.a(this.field_m, param3, -20777);
           if (!var7.a((byte) -84, param3, this.field_m)) {
-            qf.a(param3, var7, 1, dm.field_f, 0, !param0 ? true : false);
+            qf.a(param3, var7, 1, MouseInput.field_f, 0, !param0 ? true : false);
             var7.a(this.field_m, param3, (byte) 78);
           }
           dg.a(-899814320, 640, param4, lc.field_e, var7.field_p, param2, 1, rm.field_f, param1, 0);
@@ -93,7 +93,7 @@ final class qb extends ki {
         if (param0 > -91) {
           field_u = true;
         }
-        stackIn_8_0 = (null != lc.field_e) && (rm.field_f != null) && (dm.field_f != null) && (null != gn.field_z);
+        stackIn_8_0 = (null != lc.field_e) && (rm.field_f != null) && (MouseInput.field_f != null) && (null != gn.field_z);
         return stackIn_8_0;
     }
 
@@ -103,14 +103,14 @@ final class qb extends ki {
         }
         lc.field_e = pl.a("farm", "farm_near", (byte) 103, i.field_m);
         rm.field_f = pl.a("farm", "farm_mid", (byte) -63, i.field_m);
-        dm.field_f = pl.a("farm", "farm_far", (byte) -78, i.field_m);
+        MouseInput.field_f = pl.a("farm", "farm_far", (byte) -78, i.field_m);
         gn.field_z = pl.a("farm", "farm_small", (byte) 106, i.field_m);
         if (param0) {
           qb.g(-29);
         }
         cr.field_D = jh.a(0, lc.field_e);
         ep.field_b = jh.a(0, rm.field_f);
-        MainMenuScreen.field_w = jh.a(0, dm.field_f);
+        MainMenuScreen.field_w = jh.a(0, MouseInput.field_f);
         return true;
     }
 

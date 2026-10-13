@@ -36,10 +36,10 @@ final class t {
           if (param0) {
             return;
           }
-          if (null == qa.field_x) {
+          if (null == qa.mouseWheelSource) {
             return;
           }
-          qa.field_x.a((java.awt.Component) ((Object) param1), -117);
+          qa.mouseWheelSource.detach((java.awt.Component) ((Object) param1), -117);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -9,7 +9,7 @@ final class kn extends DualLinkNode {
     String field_D;
     static int field_y;
     char[] field_u;
-    static volatile boolean field_C;
+    static volatile boolean livePointerChanged;
     int[] field_v;
     char[] field_w;
 
@@ -176,6 +176,6 @@ final class kn extends DualLinkNode {
     }
 
     static {
-        field_C = false;
+        livePointerChanged = false;
     }
 }

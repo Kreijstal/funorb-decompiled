@@ -6,7 +6,7 @@ final class cb extends k {
     static boolean field_k;
     static boolean field_n;
     static java.awt.Frame field_o;
-    static int field_q;
+    static int heldButton;
     static String field_p;
     private vb field_m;
 
@@ -175,7 +175,7 @@ final class cb extends k {
     static {
         field_l = "Searching for an opponent";
         field_k = false;
-        field_q = 0;
+        heldButton = 0;
         field_p = "To Customer Support";
     }
 }

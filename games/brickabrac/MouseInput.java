@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static mi field_e;
     static RgbSprite field_f;
     static String field_a;
@@ -18,20 +18,20 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.field_j != null) {
-            gr.field_a = 0;
-            l.field_l = param0.getX();
-            va.field_e = param0.getY();
+          if (lj.mouseInput != null) {
+            gr.pointerIdleTicks = 0;
+            l.livePressX = param0.getX();
+            va.livePressY = param0.getY();
             ue.a(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              mi.field_c = 2;
-              kb.field_Pb = 2;
+              mi.livePressedButton = 2;
+              kb.liveHeldButton = 2;
             } else {
-              mi.field_c = 1;
-              kb.field_Pb = 1;
+              mi.livePressedButton = 1;
+              kb.liveHeldButton = 1;
             }
             var2_int = param0.getModifiers();
-            kn.field_C = true;
+            kn.livePointerChanged = true;
             if ((8 & var2_int) == 0) {
             }
             if (0 != (4 & var2_int)) {
@@ -65,13 +65,13 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.field_j == null) {
+          if (lj.mouseInput == null) {
             return;
           }
-          gr.field_a = 0;
-          eo.field_i = param0.getX();
-          ep.field_g = param0.getY();
-          kn.field_C = true;
+          gr.pointerIdleTicks = 0;
+          eo.livePointerX = param0.getX();
+          ep.livePointerY = param0.getY();
+          kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,10 +94,10 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.field_j == null) {
+          if (lj.mouseInput == null) {
             return;
           }
-          kb.field_Pb = 0;
+          kb.liveHeldButton = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,11 +127,11 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (lj.field_j != null) {
-            gr.field_a = 0;
-            eo.field_i = -1;
-            ep.field_g = -1;
-            kn.field_C = true;
+          if (lj.mouseInput != null) {
+            gr.pointerIdleTicks = 0;
+            eo.livePointerX = -1;
+            ep.livePointerY = -1;
+            kn.livePointerChanged = true;
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "dm.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
@@ -146,10 +146,10 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != lj.field_j) {
-            gr.field_a = 0;
-            kb.field_Pb = 0;
-            kn.field_C = true;
+          if (null != lj.mouseInput) {
+            gr.pointerIdleTicks = 0;
+            kb.liveHeldButton = 0;
+            kn.livePointerChanged = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 8) != 0) {
             }
@@ -215,7 +215,7 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var6 = 65535 & param0;
           return (var6 * var4 >> 16) + var5 * var4 + var3 * param0;
         }
-        dm.a(-92, 104, -112);
+        MouseInput.a(-92, 104, -112);
         var5Lifetime1 = param0 >> 16;
         var6Lifetime1 = 65535 & param0;
         return (var6Lifetime1 * var4 >> 16) + var5Lifetime1 * var4 + var3 * param0;
@@ -228,13 +228,13 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (lj.field_j == null) {
+          if (lj.mouseInput == null) {
             return;
           }
-          gr.field_a = 0;
-          eo.field_i = param0.getX();
-          ep.field_g = param0.getY();
-          kn.field_C = true;
+          gr.pointerIdleTicks = 0;
+          eo.livePointerX = param0.getX();
+          ep.livePointerY = param0.getY();
+          kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,13 +257,13 @@ final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == lj.field_j) {
+          if (null == lj.mouseInput) {
             return;
           }
-          gr.field_a = 0;
-          eo.field_i = param0.getX();
-          ep.field_g = param0.getY();
-          kn.field_C = true;
+          gr.pointerIdleTicks = 0;
+          eo.livePointerX = param0.getX();
+          ep.livePointerY = param0.getY();
+          kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

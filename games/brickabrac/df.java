@@ -88,13 +88,13 @@ final class df {
         return var1;
     }
 
-    final static int a(int param0, byte param1, int param2) {
-        int var3 = param2 >>> 31;
-        if (param1 == 15) {
-          return (param2 + var3) / param0 - var3;
+    final static int divideFloorPositive(int divisor, byte obfuscationGuard, int dividend) {
+        int var3 = dividend >>> 31;
+        if (obfuscationGuard == 15) {
+          return (dividend + var3) / divisor - var3;
         }
         field_c = (String) null;
-        return (param2 + var3) / param0 - var3;
+        return (dividend + var3) / divisor - var3;
     }
 
     final static void a(e param0, int param1, int param2) {

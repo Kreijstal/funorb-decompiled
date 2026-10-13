@@ -10,22 +10,22 @@ final class sh {
     final static eh a(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (null != dm.field_g) {
+        if (null != MouseInput.field_g) {
           var1 = 89 / ((param0 - 32) / 44);
-          return dm.field_g;
+          return MouseInput.field_g;
         }
-        dm.field_g = new eh();
-        dm.field_g.a(a.field_u, 13421772);
-        dm.field_g.field_p = 2763306;
-        dm.field_g.field_h = 6;
-        dm.field_g.field_a = 4;
-        dm.field_g.field_g = 0;
-        dm.field_g.field_f = 5;
-        dm.field_g.field_j = 7697781;
-        dm.field_g.field_m = 14;
-        dm.field_g.field_l = og.field_Yb;
+        MouseInput.field_g = new eh();
+        MouseInput.field_g.a(a.field_u, 13421772);
+        MouseInput.field_g.field_p = 2763306;
+        MouseInput.field_g.field_h = 6;
+        MouseInput.field_g.field_a = 4;
+        MouseInput.field_g.field_g = 0;
+        MouseInput.field_g.field_f = 5;
+        MouseInput.field_g.field_j = 7697781;
+        MouseInput.field_g.field_m = 14;
+        MouseInput.field_g.field_l = og.field_Yb;
         var1Lifetime1 = 89 / ((param0 - 32) / 44);
-        return dm.field_g;
+        return MouseInput.field_g;
     }
 
     final static boolean a(boolean param0, int param1, CharSequence param2, int param3) {

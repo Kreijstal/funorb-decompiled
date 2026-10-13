@@ -8,7 +8,7 @@ final class pq extends IntrusiveNode {
     static String field_q;
     short[] field_j;
     byte[] field_p;
-    static int field_k;
+    static int pointerX;
     static String field_m;
     byte[] field_i;
     private int[] field_s;
@@ -184,7 +184,7 @@ final class pq extends IntrusiveNode {
         try {
           ln.field_l = param2;
           if (param0 != 0) {
-            field_k = 121;
+            pointerX = 121;
           }
           t.field_g = true;
           ej.field_I = new lp(mf.field_f, wm.field_a, param1, cg.field_l, ln.field_l);
@@ -601,7 +601,7 @@ final class pq extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = var28 * (-var27Lifetime6Lifetime1 + var30) + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = df.a(var30 - var27Lifetime6Lifetime1, (byte) 15, var32);
+                var34 = df.divideFloorPositive(var30 - var27Lifetime6Lifetime1, (byte) 15, var32);
                 var32 = var32 + (var31 - var28);
                 this.field_p[var33] = (byte)(this.field_p[var33] * var34 + 32 >> 6);
               }
@@ -640,7 +640,7 @@ final class pq extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = df.a(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 15, var32Lifetime1);
+                var34Lifetime1 = df.divideFloorPositive(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 15, var32Lifetime1);
                 var35 = (this.field_r[var37] & 255) + var34Lifetime1;
                 if (var35 < 0) {
                   var35 = 0;
@@ -713,7 +713,7 @@ final class pq extends IntrusiveNode {
     }
 
     static {
-        field_k = 0;
+        pointerX = 0;
         field_m = "Accept rematch";
         field_q = "Grow: makes your paddle longer.";
         field_n = "Names cannot contain consecutive spaces";

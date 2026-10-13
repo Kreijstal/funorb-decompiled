@@ -12,7 +12,7 @@ final class qo extends ib implements vf, en {
     private d field_Q;
     static String[] field_M;
     ri field_R;
-    static int field_O;
+    static int pressY;
 
     private final int a(int param0, String param1, oc param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
@@ -75,7 +75,7 @@ final class qo extends ib implements vf, en {
           var3_int = 0;
           var4 = jq.field_r;
           if (param0 != 120) {
-            field_O = -69;
+            pressY = -69;
           }
           while (qh.field_i.length > var3_int) {
             var5 = BrickABrac.field_K[var3_int];
@@ -377,6 +377,6 @@ final class qo extends ib implements vf, en {
         field_H = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
         field_P = "Curses!";
         field_M = new String[]{"[BACKSPACE]", "[HOME]", "[F9]", "[F10]", "[F11]", "[ESC]"};
-        field_O = 0;
+        pressY = 0;
     }
 }

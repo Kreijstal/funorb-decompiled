@@ -30,7 +30,7 @@ final class PlayerBoard extends IntrusiveNode {
     int nextPowerUpIndex;
     int field_hb;
     NodeDeque[] brickGroups;
-    NodeDeque field_v;
+    NodeDeque motionPaths;
     int levelIndex;
     int field_u;
     private int randomCallCount;
@@ -102,12 +102,12 @@ final class PlayerBoard extends IntrusiveNode {
           this.field_S = 0;
           this.brickGroups = param2;
           this.field_L = 0;
-          this.field_v = param0;
+          this.motionPaths = param0;
           if (this.brickGroups == null) {
             return;
           }
-          if (this.field_v != null) {
-            cg.a(this.brickGroups, (byte) 35, this.field_v, true);
+          if (this.motionPaths != null) {
+            cg.attachBrickMotionPaths(this.brickGroups, (byte) 35, this.motionPaths, true);
           }
           if (param1 != 9) {
             return;
@@ -348,14 +348,14 @@ final class PlayerBoard extends IntrusiveNode {
           if (var3_int != 0) {
             discarded$11 = param1.append("6. " + Integer.toString(var4, 16) + "\n");
           }
-          if (this.field_v != null) {
+          if (this.motionPaths != null) {
             var5 = 7;
-            var12 = (BrickMotionPath) (this.field_v.first(-104));
+            var12 = (BrickMotionPath) (this.motionPaths.first(-104));
             while (var12 != null) {
               var5 = 6 + var5 * 3 + 5 & 31;
               var7_int = var12.computeSyncChecksum(108, param1);
               var4 = var4 ^ (var7_int << var5 | var5 >>> -var5 + 32);
-              var12 = (BrickMotionPath) (this.field_v.next((byte) 116));
+              var12 = (BrickMotionPath) (this.motionPaths.next((byte) 116));
             }
           }
           if (var3_int != 0) {
@@ -829,7 +829,7 @@ final class PlayerBoard extends IntrusiveNode {
           }
           param2.y256 = -(2 * param2.radius256) + var5.y256;
           var6 = this.nextRandomBoundedInt(65536, (byte) 62);
-          var7 = dm.a(var6, -1, 33554432) + dm.a(-var6 + 65536, -1, 67108864);
+          var7 = MouseInput.a(var6, -1, 33554432) + MouseInput.a(-var6 + 65536, -1, 67108864);
           var7 = var7 >> 16;
           if (param2.velocityX256 < 0) {
             var7 = -var7;

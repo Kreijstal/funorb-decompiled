@@ -4,7 +4,7 @@
 final class qa extends ki {
     static String field_s;
     static NodeDeque field_t;
-    static gk field_x;
+    static MouseWheelSource mouseWheelSource;
     static mh field_w;
     static RgbSprite field_y;
     static boolean field_r;
@@ -62,7 +62,7 @@ final class qa extends ki {
     public static void d(byte param0) {
         field_s = null;
         field_v = null;
-        field_x = null;
+        mouseWheelSource = null;
         int var1 = -103 % ((-61 - param0) / 57);
         field_t = null;
         field_w = null;

@@ -27,7 +27,7 @@ final class gq extends mh {
         if (!param0) {
           this.field_Qb.field_Mb = this.field_Vb.toString();
           if (param0 &&
-            ki.field_e != 0 &&
+            ki.pressedButton != 0 &&
             this.field_L == 0) {
             this.field_Tb = 1;
           }
@@ -39,7 +39,7 @@ final class gq extends mh {
             if (!param0) {
               return this.field_Tb;
             }
-            if (ki.field_e == 0) {
+            if (ki.pressedButton == 0) {
               return this.field_Tb;
             }
             if (this.field_L != 0) {

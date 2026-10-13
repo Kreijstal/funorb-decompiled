@@ -26,7 +26,7 @@ abstract class fe extends bj {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_eb = param1;
-          if (dm.field_e != this.field_nb) {
+          if (MouseInput.field_e != this.field_nb) {
             if (this.field_nb != bh.field_qb) {
               this.field_nb = bh.field_qb;
               this.field_fb = 0;
@@ -104,7 +104,7 @@ abstract class fe extends bj {
             this.field_mb.field_K = 256 - (this.field_fb << 8) / this.field_cb;
             return super.h(0);
           }
-          this.field_nb = dm.field_e;
+          this.field_nb = MouseInput.field_e;
           this.a((byte) -116, this.field_lb, this.field_eb.field_s + (this.field_db + 12), 12 + this.field_eb.field_t);
           this.field_mb.field_K = 0;
           this.field_fb = 0;
@@ -133,7 +133,7 @@ abstract class fe extends bj {
           this.field_mb.field_K = 256 - (this.field_fb << 8) / this.field_cb;
           return super.h(0);
         }
-        this.field_nb = dm.field_e;
+        this.field_nb = MouseInput.field_e;
         this.a((byte) -116, this.field_lb, this.field_eb.field_s + (this.field_db + 12), 12 + this.field_eb.field_t);
         this.field_mb.field_K = 0;
         this.field_fb = 0;

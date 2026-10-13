@@ -11,21 +11,21 @@ final class LevelSelectScreen extends MenuScreen {
     static String field_t;
     private IntNode previewState;
     private ga field_s;
-    private int field_B;
-    private int field_H;
-    private int field_G;
-    private uj levelList;
+    private int previewBottom256;
+    private int previewLevelIndex;
+    private int maxNumberLabelWidth;
+    private LevelList levelList;
     private LevelPack pack;
-    private String field_C;
-    private int field_D;
-    private int field_u;
-    private int field_I;
+    private String emptySelectionText;
+    private int previewRight256;
+    private int previewLeft256;
+    private int previewTop256;
 
     final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (obfuscationGuard != -120) {
-          this.field_H = -61;
+          this.previewLevelIndex = -61;
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.selection.selectedIndex >= 0) {
@@ -34,11 +34,11 @@ final class LevelSelectScreen extends MenuScreen {
               keyCode != 96) {
               if (keyCode == 98) {
                 this.selection.setSelectedIndex(false, 1);
-                this.levelList.b((byte) -100);
+                this.levelList.selectLast((byte) -100);
               } else {
                 if ((99 == keyCode)) {
                   this.selection.setSelectedIndex(false, 1);
-                  this.levelList.a((byte) -95);
+                  this.levelList.selectFirst((byte) -95);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -51,7 +51,7 @@ final class LevelSelectScreen extends MenuScreen {
           } else {
             if (4 != this.selection.selectedIndex) {
               if (1 == this.selection.selectedIndex &&
-                this.levelList.a(-28088, keyCode, (int) character)) {
+                this.levelList.handleNavigationKey(-28088, keyCode, (int) character)) {
                 this.selection.setSelectedIndex(false, 3);
               }
             } else {
@@ -59,11 +59,11 @@ final class LevelSelectScreen extends MenuScreen {
                 keyCode != 96) {
                 if (98 == keyCode) {
                   this.selection.setSelectedIndex(false, 1);
-                  this.levelList.b((byte) -63);
+                  this.levelList.selectLast((byte) -63);
                 } else {
                   if ((keyCode == 99)) {
                     this.selection.setSelectedIndex(false, 1);
-                    this.levelList.a((byte) -114);
+                    this.levelList.selectFirst((byte) -114);
                   }
                 }
                 decompiledFrameRemainder0 = false;
@@ -98,25 +98,25 @@ final class LevelSelectScreen extends MenuScreen {
         im.a(385, 5, 243, 5, 178, (byte) -124, 210);
         nn.field_g.b(qn.field_u[this.pack.packId], 320, 1 + (178 - nn.field_g.field_L), 0, -1);
         da.field_E[this.pack.packId].e(565, 140, -2048, 4096);
-        if (this.levelList.field_q >= 0 &&
-          this.levelList.field_q < this.pack.levelCount) {
+        if (this.levelList.selectedLevelIndex >= 0 &&
+          this.levelList.selectedLevelIndex < this.pack.levelCount) {
           var2 = nn.field_g.field_B + 2;
-          var3 = this.levelList.field_q;
-          if (var3 != this.field_H) {
-            this.c(-6845, var3);
-            this.field_H = var3;
+          var3 = this.levelList.selectedLevelIndex;
+          if (var3 != this.previewLevelIndex) {
+            this.loadPreview(-6845, var3);
+            this.previewLevelIndex = var3;
           }
           if (qg.field_t ||
-            !(this.field_H >= 3 + hh.field_b[this.pack.packId])) {
+            !(this.previewLevelIndex >= 3 + hh.field_b[this.pack.packId])) {
             this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
           }
           if (qg.field_t ||
-            !(hh.field_b[this.pack.packId] < this.field_H)) {
-            nn.field_g.b(this.pack.metadata[this.field_H].title, 402, 421 - var2, 0, -1);
+            !(hh.field_b[this.pack.packId] < this.previewLevelIndex)) {
+            nn.field_g.b(this.pack.metadata[this.previewLevelIndex].title, 402, 421 - var2, 0, -1);
           }
           if (!qg.field_t &&
-            !(this.field_H <= hh.field_b[this.pack.packId])) {
-            if (this.field_H < 3 + hh.field_b[this.pack.packId]) {
+            !(this.previewLevelIndex <= hh.field_b[this.pack.packId])) {
+            if (this.previewLevelIndex < 3 + hh.field_b[this.pack.packId]) {
               stackIn_17_0 = 210;
               stackIn_17_1 = 178;
               stackIn_17_2 = 385;
@@ -135,13 +135,13 @@ final class LevelSelectScreen extends MenuScreen {
             var4.b(var5, var6, 196);
           }
         } else {
-          nn.field_g.b(this.field_C, 402, 299 + nn.field_g.field_P, 0, -1);
-          this.field_H = -1;
+          nn.field_g.b(this.emptySelectionText, 402, 299 + nn.field_g.field_P, 0, -1);
+          this.previewLevelIndex = -1;
         }
-        this.levelList.c((byte) 28);
+        this.levelList.draw((byte) 28);
         this.a(0);
         if (obfuscationGuard >= -14) {
-          this.field_D = -125;
+          this.previewRight256 = -125;
         }
     }
 
@@ -155,11 +155,11 @@ final class LevelSelectScreen extends MenuScreen {
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         super.onEnter(usePointer, 1, 104);
-        this.levelList.b(0);
+        this.levelList.setScrollOffset(0);
         if (!usePointer) {
-          this.levelList.a((byte) -90);
+          this.levelList.selectFirst((byte) -90);
         }
-        this.field_H = -1;
+        this.previewLevelIndex = -1;
         if (obfuscationGuard < 96) {
           this.refreshMenu(37);
         }
@@ -172,47 +172,47 @@ final class LevelSelectScreen extends MenuScreen {
         return ag.buttonLabels[pg.c(61) ? 7 : 39];
     }
 
-    private final void c(int param0, int param1) {
-        int var3;
-        Brick var4;
-        int var5;
-        int var3Lifetime1;
-        var5 = BrickABrac.field_J ? 1 : 0;
-        for (var3 = 0; this.previewBrickGroups.length > var3; var3++) {
-          if (this.previewBrickGroups[var3] != null) {
-            this.previewBrickGroups[var3].clear((byte) -80);
+    private final void loadPreview(int obfuscationGuard, int levelIndex) {
+        int clearGroupIndex;
+        Brick previewBrick;
+        int clientBranchFlag;
+        int boundsGroupIndex;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        for (clearGroupIndex = 0; this.previewBrickGroups.length > clearGroupIndex; clearGroupIndex++) {
+          if (this.previewBrickGroups[clearGroupIndex] != null) {
+            this.previewBrickGroups[clearGroupIndex].clear((byte) -80);
           } else {
-            this.previewBrickGroups[var3] = new NodeDeque();
+            this.previewBrickGroups[clearGroupIndex] = new NodeDeque();
           }
         }
         this.previewPaths.clear((byte) -78);
-        td.decodeLevelBytes(this.previewBrickGroups, this.pack.levelData[param1], this.previewState, this.previewPaths, this.field_s, 10792131);
-        cg.a(this.previewBrickGroups, (byte) 35, this.previewPaths, false);
-        this.field_I = 122880;
-        this.field_u = 163840;
-        this.field_D = 0;
-        if (param0 != -6845) {
+        td.decodeLevelBytes(this.previewBrickGroups, this.pack.levelData[levelIndex], this.previewState, this.previewPaths, this.field_s, 10792131);
+        cg.attachBrickMotionPaths(this.previewBrickGroups, (byte) 35, this.previewPaths, false);
+        this.previewTop256 = 122880;
+        this.previewLeft256 = 163840;
+        this.previewRight256 = 0;
+        if (obfuscationGuard != -6845) {
           this.getParentScreenId(false);
         }
-        this.field_B = 0;
-        for (var3Lifetime1 = 0; this.previewBrickGroups.length > var3Lifetime1; var3Lifetime1++) {
-          var4 = (Brick) (this.previewBrickGroups[var3Lifetime1].first(param0 + 6735));
-          while (var4 != null) {
-            if ((1 & var4.flags) == 0) {
-              if (this.field_D < var4.x256 + var4.width256) {
-                this.field_D = var4.x256 + var4.width256;
+        this.previewBottom256 = 0;
+        for (boundsGroupIndex = 0; this.previewBrickGroups.length > boundsGroupIndex; boundsGroupIndex++) {
+          previewBrick = (Brick) (this.previewBrickGroups[boundsGroupIndex].first(obfuscationGuard + 6735));
+          while (previewBrick != null) {
+            if ((1 & previewBrick.flags) == 0) {
+              if (this.previewRight256 < previewBrick.x256 + previewBrick.width256) {
+                this.previewRight256 = previewBrick.x256 + previewBrick.width256;
               }
-              if (this.field_I > var4.y256) {
-                this.field_I = var4.y256;
+              if (this.previewTop256 > previewBrick.y256) {
+                this.previewTop256 = previewBrick.y256;
               }
-              if (var4.y256 + var4.height256 > this.field_B) {
-                this.field_B = var4.height256 + var4.y256;
+              if (previewBrick.y256 + previewBrick.height256 > this.previewBottom256) {
+                this.previewBottom256 = previewBrick.height256 + previewBrick.y256;
               }
-              if (var4.x256 < this.field_u) {
-                this.field_u = var4.x256;
+              if (previewBrick.x256 < this.previewLeft256) {
+                this.previewLeft256 = previewBrick.x256;
               }
             }
-            var4 = (Brick) (this.previewBrickGroups[var3Lifetime1].next((byte) 116));
+            previewBrick = (Brick) (this.previewBrickGroups[boundsGroupIndex].next((byte) 116));
           }
         }
     }
@@ -304,18 +304,18 @@ final class LevelSelectScreen extends MenuScreen {
         this.previewPaths = new NodeDeque();
         this.previewState = new IntNode();
         this.field_s = new ga();
-        this.field_G = 0;
+        this.maxNumberLabelWidth = 0;
         try {
-          this.field_C = oj.field_s.toLowerCase();
+          this.emptySelectionText = oj.field_s.toLowerCase();
           this.pack = na.field_L[packIndex];
           for (var4_int = 0; this.pack.levelCount > var4_int; var4_int++) {
             var5 = nn.field_g.c(this.pack.metadata[var4_int].numberLabel);
-            if (var5 > this.field_G) {
-              this.field_G = var5;
+            if (var5 > this.maxNumberLabelWidth) {
+              this.maxNumberLabelWidth = var5;
             }
           }
           this.layoutButtons(true);
-          this.levelList = new uj(20, 0, 1, (MenuScreen) (this), this.buttons[1], this.pack);
+          this.levelList = new LevelList(20, 0, 1, (MenuScreen) (this), this.buttons[1], this.pack);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ud.<init>(" + screenId + ',' + (actionIds != null ? "{...}" : "null") + ',' + packIndex + ')');
         }
@@ -335,20 +335,20 @@ final class LevelSelectScreen extends MenuScreen {
         var6 = var5;
         if (var6 == 31) {
           if (this.selection.isActivated((byte) 113) &&
-            0 <= this.levelList.field_q) {
+            0 <= this.levelList.selectedLevelIndex) {
             if (!qg.field_t &&
-              hh.field_b[this.pack.packId] < this.levelList.field_q) {
+              hh.field_b[this.pack.packId] < this.levelList.selectedLevelIndex) {
               return false;
             }
-            if (this.levelList.field_q < this.pack.levelCount) {
-              cq.a(16727, inputFlag, this.levelList.field_q, new LevelSequence(this.pack));
+            if (this.levelList.selectedLevelIndex < this.pack.levelCount) {
+              cq.a(16727, inputFlag, this.levelList.selectedLevelIndex, new LevelSequence(this.pack));
             }
           }
         } else {
           if (var6 == 29) {
             if (inputFlag &&
               this.selection.isPressActivated((byte) 108)) {
-              this.levelList.a(-this.levelList.field_h, true);
+              this.levelList.scrollBy(-this.levelList.scrollStep, true);
             }
           } else {
             if (var6 != 30) {
@@ -356,7 +356,7 @@ final class LevelSelectScreen extends MenuScreen {
             }
             if (inputFlag &&
               this.selection.isPressActivated((byte) -13)) {
-              this.levelList.a(this.levelList.field_h, true);
+              this.levelList.scrollBy(this.levelList.scrollStep, true);
             }
           }
         }
@@ -406,15 +406,15 @@ final class LevelSelectScreen extends MenuScreen {
         if (param4 != 85) {
           this.field_s = (ga) null;
         }
-        int var6 = this.field_D - this.field_u >> 9;
+        int var6 = this.previewRight256 - this.previewLeft256 >> 9;
         param2 = param2 + (-var6 + param3) / 2;
-        int var7 = -this.field_I + this.field_B >> 9;
+        int var7 = -this.previewTop256 + this.previewBottom256 >> 9;
         param0 = param0 + (param1 - var7) / 2;
         for (var8 = 0; var8 < this.previewBrickGroups.length; var8++) {
           var9 = (Brick) (this.previewBrickGroups[var8].first(-109));
           while (var9 != null) {
             if ((1 & var9.flags) == 0) {
-              pa.field_m[var9.typeId].a((var9.x256 - this.field_u >> 9) + param2, (var9.y256 - this.field_I >> 9) + param0, 17, 8);
+              pa.field_m[var9.typeId].a((var9.x256 - this.previewLeft256 >> 9) + param2, (var9.y256 - this.previewTop256 >> 9) + param0, 17, 8);
             }
             var9 = (Brick) (this.previewBrickGroups[var8].next((byte) 116));
           }
@@ -446,10 +446,10 @@ final class LevelSelectScreen extends MenuScreen {
         }
         var10 = this.buttons[0];
         var11 = var10;
-        var11.x = (-this.field_G + 140) / 2 + 55;
+        var11.x = (-this.maxNumberLabelWidth + 140) / 2 + 55;
         var11.height = 22;
         var11.y = 188;
-        var10.width = this.field_G;
+        var10.width = this.maxNumberLabelWidth;
         var3 = this.buttons[2];
         var3.width = var11.width;
         var3.y = 389;
@@ -490,7 +490,7 @@ final class LevelSelectScreen extends MenuScreen {
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         super.advanceScreen(updateFlag, inputEnabled, -113);
-        this.levelList.b(false);
+        this.levelList.updatePointerSelection(false);
         if (obfuscationGuard >= -52) {
           field_v = -8;
         }

@@ -70,7 +70,7 @@ abstract class qg extends ke {
         im.a(param7, this.field_x, this.field_q, this.field_B, 5000, 5000, cd.field_e, this.field_o, lp.field_ub, (byte) 123, param3, this.field_w, this.field_p, this.field_v);
         cr.a(param7, cd.field_e, param0 + 3, this.field_v, lp.field_ub, this.field_x, this.field_p, this.field_o, this.field_B);
         rn.a(59);
-        qa.field_x = ea.a(60);
+        qa.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, kj.field_D);
         nd.field_c = param4;
         lc.field_i = param5;
@@ -327,7 +327,7 @@ abstract class qg extends ke {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = BrickABrac.field_J ? 1 : 0;
-          var4 = df.a(-27790, GameplayAudioEvent.field_o, cd.field_e, param0);
+          var4 = df.a(-27790, GameplayAudioEvent.mouseWheelDelta, cd.field_e, param0);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -469,7 +469,7 @@ abstract class qg extends ke {
               if (i.field_j == 0) {
                 discarded$2 = this.a(false, (byte) 46, false);
               } else {
-                gk.a(GameplayAudioEvent.field_o, (byte) 124);
+                MouseWheelSource.a(GameplayAudioEvent.mouseWheelDelta, (byte) 124);
               }
             } else {
               hk.a((byte) -122);
@@ -710,13 +710,13 @@ abstract class qg extends ke {
           jj.field_a.c(param1 + 118);
         }
         wn.b((byte) -97);
-        sg.e(70);
+        sg.snapshotMouseInput(70);
         if (!r.c((byte) -114) &&
           i.field_j != 11) {
           GameplayAudioEvent.c(27144);
         }
-        if (qa.field_x != null) {
-          GameplayAudioEvent.field_o = qa.field_x.b(500);
+        if (qa.mouseWheelSource != null) {
+          GameplayAudioEvent.mouseWheelDelta = qa.mouseWheelSource.pollRotation(500);
         }
         if (ik.a(false)) {
           var3 = wn.a((byte) -98) * 1200;

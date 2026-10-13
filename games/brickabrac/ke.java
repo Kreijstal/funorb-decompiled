@@ -475,11 +475,11 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             var6_int = (int)(var2_long - var4);
             d.field_H = (32000 + (var6_int >> 1)) / var6_int;
           }
-          fieldTemp$1 = gk.field_a;
-          gk.field_a = gk.field_a + 1;
+          fieldTemp$1 = MouseWheelSource.field_a;
+          MouseWheelSource.field_a = MouseWheelSource.field_a + 1;
           if (50 < fieldTemp$1) {
             GameplayAudioEvent.field_i = true;
-            gk.field_a = gk.field_a - 50;
+            MouseWheelSource.field_a = MouseWheelSource.field_a - 50;
             kj.field_D.setSize(to.field_b, be.field_g);
             kj.field_D.setVisible(true);
             if (null != cb.field_o &&

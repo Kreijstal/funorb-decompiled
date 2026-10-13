@@ -173,8 +173,8 @@ final class sq {
           var5_ref_String = oo.field_y;
           var4_ref_nn.field_d.a(var5_ref_String, 5, (byte) 104);
           var4_ref_nnLifetime1 = bm.field_d;
-          var5 = tb.field_fb;
-          var6 = qo.field_O;
+          var5 = tb.pressX;
+          var6 = qo.pressY;
           var4_ref_nnLifetime1.field_d.a(var6, -98, 0, 0, var5);
         }
         int var4 = -44 % ((-3 - param2) / 50);

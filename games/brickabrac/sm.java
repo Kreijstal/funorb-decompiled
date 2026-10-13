@@ -50,18 +50,18 @@ final class sm {
               }
             }
             if (GameplayScreen.field_j == 2) {
-              dm.field_d = new wh((java.net.Socket) (fc.field_e.field_e), ec.field_P);
+              MouseInput.field_d = new wh((java.net.Socket) (fc.field_e.field_e), ec.field_P);
               var2 = new PacketBuffer(13);
               c.a(vb.field_S, 12, nb.field_a, u.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);
               var2.writeInt(fi.field_t, (byte) -79);
-              dm.field_d.a(var2.data, true, 13, 0);
+              MouseInput.field_d.a(var2.data, true, 13, 0);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
               ff.field_b = ue.a(false) + 30000L;
             }
             if (GameplayScreen.field_j == 3) {
-              if (dm.field_d.d(10434) > 0) {
-                var1_int = dm.field_d.e(0);
+              if (MouseInput.field_d.d(10434) > 0) {
+                var1_int = MouseInput.field_d.e(0);
                 if (var1_int != 0) {
                   stackIn_31_0 = Brick.a((byte) 90, var1_int);
                   return stackIn_31_0;
@@ -78,8 +78,8 @@ final class sm {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            vd.field_f.a(dm.field_d, rd.field_a, 12);
-            dm.field_d = null;
+            vd.field_f.a(MouseInput.field_d, rd.field_a, 12);
+            MouseInput.field_d = null;
             GameplayScreen.field_j = 0;
             fc.field_e = null;
             stackIn_35_0 = 0;

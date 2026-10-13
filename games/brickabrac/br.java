@@ -69,7 +69,7 @@ final class br extends mh {
             return this.field_cc[var4];
           }
         }
-        if (ki.field_e != 0) {
+        if (ki.pressedButton != 0) {
           return -1;
         }
         return this.field_dc;

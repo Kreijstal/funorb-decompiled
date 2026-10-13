@@ -13,13 +13,13 @@ final class td extends ki {
         if (!param0) {
           return (RgbSprite) null;
         }
-        return uj.field_e[-1 + param1];
+        return LevelList.field_e[-1 + param1];
     }
 
     td(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-          uj.field_e = new RgbSprite[2];
+          LevelList.field_e = new RgbSprite[2];
           np.field_c = new RgbSprite[2][];
           kg.field_a = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
@@ -59,10 +59,10 @@ final class td extends ki {
         RectangleBody.field_p = jh.a(0, se.field_k);
         kg.field_a[0] = cr.a("volcanic", i.field_m, "volcanic_caps", 2);
         np.field_c[0] = cr.a("volcanic", i.field_m, "volcanic_segs", 2);
-        uj.field_e[0] = pl.a("volcanic", "volcanic_centre", (byte) -67, i.field_m);
+        LevelList.field_e[0] = pl.a("volcanic", "volcanic_centre", (byte) -67, i.field_m);
         kg.field_a[1] = ig.a(kg.field_a[0], false);
         np.field_c[1] = ig.a(np.field_c[0], param0);
-        uj.field_e[1] = pl.a(-16371, uj.field_e[0]);
+        LevelList.field_e[1] = pl.a(-16371, LevelList.field_e[0]);
         return true;
     }
 

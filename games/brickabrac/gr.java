@@ -3,7 +3,7 @@
  */
 final class gr {
     static RgbSprite field_c;
-    static volatile int field_a;
+    static volatile int pointerIdleTicks;
     static RgbSprite[] field_d;
     static String field_b;
 
@@ -95,12 +95,12 @@ final class gr {
           field_c = MenuSelection.field_k;
         }
         if (param1 != -28463) {
-          field_a = -38;
+          pointerIdleTicks = -38;
         }
     }
 
     static {
-        field_a = 0;
+        pointerIdleTicks = 0;
         field_b = "<%0> has dropped out.";
     }
 }

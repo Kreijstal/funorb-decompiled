@@ -5,7 +5,7 @@ final class l extends IntrusiveNode {
     static wp field_m;
     int field_i;
     kl field_j;
-    static volatile int field_l;
+    static volatile int livePressX;
     static String field_k;
     IntrusiveNode field_n;
 
@@ -139,7 +139,7 @@ final class l extends IntrusiveNode {
     }
 
     static {
-        field_l = 0;
+        livePressX = 0;
         field_k = "Password is valid";
     }
 }

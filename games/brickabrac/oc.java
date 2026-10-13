@@ -237,46 +237,46 @@ class oc extends IntrusiveNode {
         if (!param3) {
           if (var5 == 0) {
             var6 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.field_q;
+            hj.field_Pb = cb.heldButton;
             ka.a(this.d(15), 22546);
             return param3;
           }
-          if (ki.field_e == 0) {
+          if (ki.pressedButton == 0) {
             var6Lifetime6 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.field_q;
+            hj.field_Pb = cb.heldButton;
             ka.a(this.d(15), 22546);
             return param3;
           }
           this.b(false);
           if (var7 == 0) {
             var6Lifetime7 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.field_q;
+            hj.field_Pb = cb.heldButton;
             ka.a(this.d(15), 22546);
             return param3;
           }
-          if (0 != GameplayAudioEvent.field_o &&
+          if (0 != GameplayAudioEvent.mouseWheelDelta &&
             var5 != 0) {
-            this.a(GameplayAudioEvent.field_o, pq.field_k, param0, -127, po.field_a, this, param1);
+            this.a(GameplayAudioEvent.mouseWheelDelta, pq.pointerX, param0, -127, po.pointerY, this, param1);
           }
-          if (ki.field_e != 0) {
-            if (this.a(this, tb.field_fb, param1, param0, ki.field_e, qo.field_O, 0)) {
+          if (ki.pressedButton != 0) {
+            if (this.a(this, tb.pressX, param1, param0, ki.pressedButton, qo.pressY, 0)) {
               param3 = false;
             }
             this.b(false);
           }
-          if (0 != cb.field_q) {
+          if (0 != cb.heldButton) {
             var6Lifetime8 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.field_q;
+            hj.field_Pb = cb.heldButton;
             ka.a(this.d(15), 22546);
             return param3;
           }
           if (hj.field_Pb == 0) {
             var6Lifetime9 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.field_q;
+            hj.field_Pb = cb.heldButton;
             ka.a(this.d(15), 22546);
             return param3;
           }
-          this.a(po.field_a, pq.field_k, param0, this, 19223, param1);
+          this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
           var8 = gd.field_c;
           if (var8 != null) {
             if (var8.field_i instanceof em) {
@@ -285,23 +285,23 @@ class oc extends IntrusiveNode {
             gd.field_c = null;
           }
           var6Lifetime10 = -57 % ((56 - param2) / 43);
-          hj.field_Pb = cb.field_q;
+          hj.field_Pb = cb.heldButton;
           ka.a(this.d(15), 22546);
           return param3;
         }
-        if (0 != GameplayAudioEvent.field_o) {
+        if (0 != GameplayAudioEvent.mouseWheelDelta) {
           if (var5 == 0) {
             regionExit1: {
-              if (ki.field_e != 0) {
-                if (this.a(this, tb.field_fb, param1, param0, ki.field_e, qo.field_O, 0)) {
+              if (ki.pressedButton != 0) {
+                if (this.a(this, tb.pressX, param1, param0, ki.pressedButton, qo.pressY, 0)) {
                   param3 = false;
                   if (var7 == 0) {
                     break regionExit1;
                   }
                 }
-                if (0 == cb.field_q &&
+                if (0 == cb.heldButton &&
                   hj.field_Pb != 0) {
-                  this.a(po.field_a, pq.field_k, param0, this, 19223, param1);
+                  this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
                   var9 = gd.field_c;
                   if (var9 != null) {
                     if (!(var9.field_i instanceof em)) {
@@ -313,24 +313,24 @@ class oc extends IntrusiveNode {
                   }
                 }
                 var6Lifetime1 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.field_q;
+                hj.field_Pb = cb.heldButton;
                 ka.a(this.d(15), 22546);
                 return param3;
               }
             }
-            if (0 != cb.field_q) {
+            if (0 != cb.heldButton) {
               var6Lifetime1Lifetime1 = -57 % ((56 - param2) / 43);
-              hj.field_Pb = cb.field_q;
+              hj.field_Pb = cb.heldButton;
               ka.a(this.d(15), 22546);
               return param3;
             }
             if (hj.field_Pb == 0) {
               var6Lifetime1Lifetime2 = -57 % ((56 - param2) / 43);
-              hj.field_Pb = cb.field_q;
+              hj.field_Pb = cb.heldButton;
               ka.a(this.d(15), 22546);
               return param3;
             }
-            this.a(po.field_a, pq.field_k, param0, this, 19223, param1);
+            this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
             var10 = gd.field_c;
             if (var10 != null) {
               if (var10.field_i instanceof em) {
@@ -339,71 +339,71 @@ class oc extends IntrusiveNode {
               gd.field_c = null;
             }
             var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.field_q;
+            hj.field_Pb = cb.heldButton;
             ka.a(this.d(15), 22546);
             return param3;
           }
-          this.a(GameplayAudioEvent.field_o, pq.field_k, param0, -127, po.field_a, this, param1);
+          this.a(GameplayAudioEvent.mouseWheelDelta, pq.pointerX, param0, -127, po.pointerY, this, param1);
         }
         regionExit2: {
-          if (ki.field_e != 0) {
-            if (this.a(this, tb.field_fb, param1, param0, ki.field_e, qo.field_O, 0)) {
+          if (ki.pressedButton != 0) {
+            if (this.a(this, tb.pressX, param1, param0, ki.pressedButton, qo.pressY, 0)) {
               param3 = false;
               if (var7 == 0) {
                 break regionExit2;
               }
             }
             if (var5 == 0) {
-              if (0 != cb.field_q) {
+              if (0 != cb.heldButton) {
                 var6Lifetime2 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.field_q;
+                hj.field_Pb = cb.heldButton;
                 ka.a(this.d(15), 22546);
                 return param3;
               }
               if (hj.field_Pb == 0) {
                 var6Lifetime2Lifetime1 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.field_q;
+                hj.field_Pb = cb.heldButton;
                 ka.a(this.d(15), 22546);
                 return param3;
               }
-              this.a(po.field_a, pq.field_k, param0, this, 19223, param1);
+              this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
               var11 = gd.field_c;
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.field_q;
+                hj.field_Pb = cb.heldButton;
                 ka.a(this.d(15), 22546);
                 return param3;
               }
               if (!(var11.field_i instanceof em)) {
                 gd.field_c = null;
                 var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.field_q;
+                hj.field_Pb = cb.heldButton;
                 ka.a(this.d(15), 22546);
                 return param3;
               }
               ((em) (var11.field_i)).a(-24178, var11, (jb) null);
               gd.field_c = null;
               var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
-              hj.field_Pb = cb.field_q;
+              hj.field_Pb = cb.heldButton;
               ka.a(this.d(15), 22546);
               return param3;
             }
             this.b(false);
           }
         }
-        if (0 != cb.field_q) {
+        if (0 != cb.heldButton) {
           var6Lifetime3 = -57 % ((56 - param2) / 43);
-          hj.field_Pb = cb.field_q;
+          hj.field_Pb = cb.heldButton;
           ka.a(this.d(15), 22546);
           return param3;
         }
         if (hj.field_Pb == 0) {
           var6Lifetime4 = -57 % ((56 - param2) / 43);
-          hj.field_Pb = cb.field_q;
+          hj.field_Pb = cb.heldButton;
           ka.a(this.d(15), 22546);
           return param3;
         }
-        this.a(po.field_a, pq.field_k, param0, this, 19223, param1);
+        this.a(po.pointerY, pq.pointerX, param0, this, 19223, param1);
         var12 = gd.field_c;
         if (var12 != null) {
           if (var12.field_i instanceof em) {
@@ -412,7 +412,7 @@ class oc extends IntrusiveNode {
           gd.field_c = null;
         }
         var6Lifetime5 = -57 % ((56 - param2) / 43);
-        hj.field_Pb = cb.field_q;
+        hj.field_Pb = cb.heldButton;
         ka.a(this.d(15), 22546);
         return param3;
     }
@@ -819,7 +819,7 @@ class oc extends IntrusiveNode {
           if (param1 != 0) {
             field_u = (String) null;
           }
-          var5_int = this.a(po.field_a, param3, param2, 3, pq.field_k) ? 1 : 0;
+          var5_int = this.a(po.pointerY, param3, param2, 3, pq.pointerX) ? 1 : 0;
           if ((this.field_q ? 1 : 0) != var5_int) {
             stackIn_7_1 = (var5_int != 0);
             this.field_q = stackIn_7_1;

@@ -20,11 +20,11 @@ final class TimedSplashScreen extends MenuScreen {
             ng.requestScreen(true, 120, 0);
             return;
           }
-          if (cb.field_q != 0) {
+          if (cb.heldButton != 0) {
             ng.requestScreen(true, 120, 0);
             return;
           }
-          if (0 == ki.field_e) {
+          if (0 == ki.pressedButton) {
             return;
           }
           ng.requestScreen(true, 120, 0);
@@ -39,11 +39,11 @@ final class TimedSplashScreen extends MenuScreen {
           ng.requestScreen(true, 120, 0);
           return;
         }
-        if (cb.field_q != 0) {
+        if (cb.heldButton != 0) {
           ng.requestScreen(true, 120, 0);
           return;
         }
-        if (0 == ki.field_e) {
+        if (0 == ki.pressedButton) {
           return;
         }
         ng.requestScreen(true, 120, 0);

@@ -94,8 +94,8 @@ final class nq extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        this.field_j = oh.a(pq.field_k, po.field_a, (byte) -24, this.field_r, this.field_m, this.field_s);
-        this.field_j = this.field_s.containsPixel(this.field_m, this.field_r, pq.field_k, po.field_a);
+        this.field_j = oh.a(pq.pointerX, po.pointerY, (byte) -24, this.field_r, this.field_m, this.field_s);
+        this.field_j = this.field_s.containsPixel(this.field_m, this.field_r, pq.pointerX, po.pointerY);
     }
 
     final static void e(int param0) {
@@ -231,7 +231,7 @@ final class nq extends IntrusiveNode {
           return;
         }
         if (this.field_j) {
-          hj.a(-lm.field_b + pq.field_k, -ki.field_a + po.field_a, this.field_o, this.field_q, this.field_l, 16777215);
+          hj.a(-lm.field_b + pq.pointerX, -ki.field_a + po.pointerY, this.field_o, this.field_q, this.field_l, 16777215);
         }
     }
 

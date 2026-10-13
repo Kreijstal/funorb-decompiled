@@ -52,7 +52,7 @@ final class ce {
         }
         wd.field_w.a(param0, -15211);
         var4 = hd.field_a.i(28) ? 1 : 0;
-        if (0 != ki.field_e) {
+        if (0 != ki.pressedButton) {
           if (var4 != 0) {
             if (!param0) {
               wd.field_w.a(param0, -15211);

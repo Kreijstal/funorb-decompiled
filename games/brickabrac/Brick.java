@@ -10,7 +10,7 @@ final class Brick extends RectangleBody {
     private int sourceWaypointIndex;
     private static int[] field_y;
     static int[] field_L;
-    int field_M;
+    int motionPathIndex;
     MotionWaypoint[] waypoints;
     static RgbSprite field_K;
     int segmentElapsedTicks;
@@ -46,10 +46,10 @@ final class Brick extends RectangleBody {
           if (diagnostics != null) {
             discarded$4 = diagnostics.append(this.x256 + " " + this.y256 + " ");
             discarded$5 = diagnostics.append(this.velocityX256 + " " + " " + this.velocityY256 + " ");
-            discarded$6 = diagnostics.append(this.pathDurationTicks + " " + this.motionElapsedTicks + " " + this.segmentElapsedTicks + " " + this.field_M + " ");
+            discarded$6 = diagnostics.append(this.pathDurationTicks + " " + this.motionElapsedTicks + " " + this.segmentElapsedTicks + " " + this.motionPathIndex + " ");
             discarded$7 = diagnostics.append(this.pendingTypeId + "\n");
           }
-          var3_int = var3_int ^ (this.motionElapsedTicks * 19 + this.pathDurationTicks * 23 - (-(this.segmentElapsedTicks * 17) - 4641) ^ 405 + 27 * this.flags << 21 ^ 47802 + this.field_M * 3 << 4 ^ 4643 + this.pendingTypeId * 23 << 8);
+          var3_int = var3_int ^ (this.motionElapsedTicks * 19 + this.pathDurationTicks * 23 - (-(this.segmentElapsedTicks * 17) - 4641) ^ 405 + 27 * this.flags << 21 ^ 47802 + this.motionPathIndex * 3 << 4 ^ 4643 + this.pendingTypeId * 23 << 8);
           var3_int = var3_int ^ this.portalIndex * 7 + 35 << 2;
           stackIn_5_0 = var3_int;
           return stackIn_5_0;
@@ -115,7 +115,7 @@ final class Brick extends RectangleBody {
         this.pendingTypeId = -1;
         this.motionElapsedTicks = motionElapsedTicks;
         this.flags = brickFlags;
-        this.field_M = brickState;
+        this.motionPathIndex = brickState;
     }
 
     private final void dropPowerUp(PlayerBoard board, int obfuscationGuard) {
@@ -421,7 +421,7 @@ final class Brick extends RectangleBody {
     final static int a(byte param0, int param1) {
         int var4 = BrickABrac.field_J ? 1 : 0;
         GameplayScreen.field_j = 0;
-        dm.field_d = null;
+        MouseInput.field_d = null;
         fc.field_e = null;
         int var2 = gd.field_a;
         gd.field_a = up.field_z;
@@ -470,7 +470,7 @@ final class Brick extends RectangleBody {
           }
           this.flags = packet.readUnsignedByte(255) & 255;
           if ((4 & this.flags) != 0) {
-            this.field_M = packet.readUnsignedByte(255);
+            this.motionPathIndex = packet.readUnsignedByte(255);
             this.motionElapsedTicks = packet.readUnsignedShort(65280);
           }
           return;

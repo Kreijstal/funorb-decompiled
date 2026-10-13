@@ -104,7 +104,7 @@ final class vh extends d {
             }
             var1_int = 1;
           }
-          fi.field_r.updatePointer(aj.a(param0 + param0, po.field_a, pq.field_k), param0 ^ 27479, aj.a(0, qo.field_O, tb.field_fb));
+          fi.field_r.updatePointer(aj.a(param0 + param0, po.pointerY, pq.pointerX), param0 ^ 27479, aj.a(0, qo.pressY, tb.pressX));
           if (fi.field_r.isActivated((byte) 113)) {
             var1_int = 1;
           }

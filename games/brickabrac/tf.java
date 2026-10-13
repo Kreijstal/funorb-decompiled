@@ -128,8 +128,8 @@ final class tf {
             }
           }
           var15 = bm.field_d;
-          var6 = tb.field_fb;
-          var7 = qo.field_O;
+          var6 = tb.pressX;
+          var7 = qo.pressY;
           var15.field_d.a(var7, -102, 0, 0, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

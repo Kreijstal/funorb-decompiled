@@ -4,7 +4,7 @@
 final class tb extends bj {
     private boolean field_hb;
     private String field_jb;
-    static int field_fb;
+    static int pressX;
     private boolean field_gb;
     private cr field_bb;
     private String field_ib;
@@ -41,7 +41,7 @@ final class tb extends bj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 111) {
-            field_fb = -88;
+            pressX = -88;
           }
           if (ln.a(-104, param4, param2, param1)) {
             stackIn_6_0 = jm.a(param3.a(param4, param1, 4), (byte) -14);
@@ -250,6 +250,6 @@ final class tb extends bj {
 
     static {
         field_db = "Catch this with your paddle.<br><br>A positive power-up is worth 100 points and will help you. A negative one will hinder you, but is worth 500 points!";
-        field_fb = 0;
+        pressX = 0;
     }
 }

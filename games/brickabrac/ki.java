@@ -14,7 +14,7 @@ abstract class ki {
     private String[] field_j;
     boolean field_q;
     int field_l;
-    static int field_e;
+    static int pressedButton;
     static int[] field_i;
     static mf field_f;
     static RgbSprite[][] field_k;
@@ -258,7 +258,7 @@ abstract class ki {
         field_g = "Please select options in the following rows:  ";
         field_a = 1;
         field_o = "World select";
-        field_e = 0;
+        pressedButton = 0;
         field_p = new BlankScreen();
         field_i = new int[5];
         field_d = 256;

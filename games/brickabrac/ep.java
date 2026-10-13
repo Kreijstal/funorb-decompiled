@@ -5,7 +5,7 @@ abstract class ep {
     static int[] field_f;
     static int field_k;
     ml[] field_c;
-    static volatile int field_g;
+    static volatile int livePointerY;
     static String field_e;
     static int field_i;
     static RgbSprite field_j;
@@ -237,7 +237,7 @@ abstract class ep {
 
     static {
         field_f = new int[8192];
-        field_g = -1;
+        livePointerY = -1;
         field_d = "Logging in...";
     }
 }

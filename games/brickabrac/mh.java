@@ -131,28 +131,28 @@ class mh extends ba {
         var12 = 0;
         if (!wc.field_d &&
           param5 &&
-          ki.field_e != 0 &&
-          Rasterizer2D.clipLeft <= tb.field_fb &&
-          Rasterizer2D.clipRight > tb.field_fb &&
-          qo.field_O >= Rasterizer2D.clipTop &&
-          Rasterizer2D.clipBottom > qo.field_O) {
-          this.field_L = ki.field_e;
-          this.field_U = -this.field_Eb + tb.field_fb;
-          this.field_Ob = ki.field_e;
+          ki.pressedButton != 0 &&
+          Rasterizer2D.clipLeft <= tb.pressX &&
+          Rasterizer2D.clipRight > tb.pressX &&
+          qo.pressY >= Rasterizer2D.clipTop &&
+          Rasterizer2D.clipBottom > qo.pressY) {
+          this.field_L = ki.pressedButton;
+          this.field_U = -this.field_Eb + tb.pressX;
+          this.field_Ob = ki.pressedButton;
           var12 = 1;
-          this.field_yb = -this.field_db + qo.field_O;
+          this.field_yb = -this.field_db + qo.pressY;
         } else {
           this.field_L = 0;
-          if (0 != ki.field_e) {
+          if (0 != ki.pressedButton) {
             this.field_Ob = 0;
           }
         }
-        stackIn_31_1 = (!qa.field_u) && (Rasterizer2D.clipLeft <= pq.field_k) && (Rasterizer2D.clipRight > pq.field_k) && (po.field_a >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.field_a);
+        stackIn_31_1 = (!qa.field_u) && (Rasterizer2D.clipLeft <= pq.pointerX) && (Rasterizer2D.clipRight > pq.pointerX) && (po.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.pointerY);
         this.field_G = stackIn_31_1;
-        if (0 == cb.field_q) {
+        if (0 == cb.heldButton) {
           this.field_Ob = 0;
         }
-        stackIn_39_1 = (this.field_G) && (this.field_Ob == cb.field_q) && (param5);
+        stackIn_39_1 = (this.field_G) && (this.field_Ob == cb.heldButton) && (param5);
         this.field_kb = stackIn_39_1;
         if (this.field_bb != null) {
           var13 = (mh) (this.field_bb.last(param1 ^ 886229954));
@@ -170,8 +170,8 @@ class mh extends ba {
         Rasterizer2D.setClip(var8, var9, var10, var11);
         if (this.field_Ob != 0 &&
           this.field_nb) {
-          this.field_zb = po.field_a - this.field_yb - param4;
-          this.field_P = -this.field_U + pq.field_k - param2;
+          this.field_zb = po.pointerY - this.field_yb - param4;
+          this.field_P = -this.field_U + pq.pointerX - param2;
           if (0 > this.field_P) {
             this.field_P = 0;
           }

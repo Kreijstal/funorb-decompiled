@@ -1,45 +1,45 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj {
-    private int field_i;
-    private int field_f;
-    private int field_g;
-    private MenuScreen field_m;
-    private LevelPack field_l;
-    private int field_n;
-    int field_h;
-    private int field_b;
-    private boolean field_d;
-    private int field_j;
-    private int field_a;
-    private int field_k;
+final class LevelList {
+    private int rowSpacing;
+    private int rowHeight;
+    private int scrollOffset;
+    private MenuScreen owner;
+    private LevelPack pack;
+    private int lastPointerY;
+    int scrollStep;
+    private int lastPointerX;
+    private boolean keyboardSelection;
+    private int labelBaselineOffset;
+    private int buttonIndex;
+    private int maxScrollOffset;
     static RgbSprite[] field_e;
     static mf field_o;
-    private int field_c;
-    private MenuButton field_p;
-    private int field_r;
-    int field_q;
+    private int rowGap;
+    private MenuButton viewport;
+    private int contentHeight;
+    int selectedLevelIndex;
 
     public static void a(boolean param0) {
         field_o = null;
         field_e = null;
         if (!param0) {
           CharSequence var2 = (CharSequence) null;
-          uj.a((CharSequence) null, false);
+          LevelList.a((CharSequence) null, false);
         }
     }
 
-    final void a(int param0, boolean param1) {
-        this.field_g = this.field_g + param0;
-        if (!param1) {
+    final void scrollBy(int deltaPixels, boolean clamp) {
+        this.scrollOffset = this.scrollOffset + deltaPixels;
+        if (!clamp) {
           return;
         }
-        if (this.field_g < 0) {
-          this.field_g = 0;
+        if (this.scrollOffset < 0) {
+          this.scrollOffset = 0;
         }
-        if (this.field_g > this.field_k) {
-          this.field_g = this.field_k;
+        if (this.scrollOffset > this.maxScrollOffset) {
+          this.scrollOffset = this.maxScrollOffset;
         }
     }
 
@@ -174,40 +174,40 @@ final class uj {
         }
     }
 
-    final void a(byte param0) {
-        this.field_b = pq.field_k;
-        this.field_g = 0;
-        this.field_n = po.field_a;
-        this.field_d = true;
-        this.field_q = 0;
-        int var2 = 125 % ((-49 - param0) / 41);
+    final void selectFirst(byte obfuscationGuard) {
+        this.lastPointerX = pq.pointerX;
+        this.scrollOffset = 0;
+        this.lastPointerY = po.pointerY;
+        this.keyboardSelection = true;
+        this.selectedLevelIndex = 0;
+        int var2 = 125 % ((-49 - obfuscationGuard) / 41);
     }
 
-    final void c(byte param0) {
-        int var3 = 0;
-        int var2;
-        int var4;
-        int var5;
-        var5 = BrickABrac.field_J ? 1 : 0;
-        MovingBody.a((byte) 70, this.field_p.x + this.field_p.width, this.field_p.x, this.field_p.y, this.field_p.y + this.field_p.height);
-        var2 = df.a(this.field_i, (byte) 15, this.field_g - this.field_c);
-        if (param0 != 28) {
+    final void draw(byte obfuscationGuard) {
+        int rowBaselineY = 0;
+        int levelIndex;
+        int labelStyle;
+        int clientBranchFlag;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        MovingBody.a((byte) 70, this.viewport.x + this.viewport.width, this.viewport.x, this.viewport.y, this.viewport.y + this.viewport.height);
+        levelIndex = df.divideFloorPositive(this.rowSpacing, (byte) 15, this.scrollOffset - this.rowGap);
+        if (obfuscationGuard != 28) {
           return;
         }
-        for (var3 = this.field_p.y + (-this.field_g + this.field_c + this.field_j) + var2 * this.field_i; this.field_p.height + (10 + this.field_p.y) > var3; var3 = var3 + this.field_i) {
-          if (this.field_l.levelCount > var2) {
-            if (0 <= var2) {
-              var4 = 3;
-              if (hh.field_b[this.field_l.packId] < var2) {
-                if (this.field_q == var2) {
-                  var4 = 0;
+        for (rowBaselineY = this.viewport.y + (-this.scrollOffset + this.rowGap + this.labelBaselineOffset) + levelIndex * this.rowSpacing; this.viewport.height + (10 + this.viewport.y) > rowBaselineY; rowBaselineY = rowBaselineY + this.rowSpacing) {
+          if (this.pack.levelCount > levelIndex) {
+            if (0 <= levelIndex) {
+              labelStyle = 3;
+              if (hh.field_b[this.pack.packId] < levelIndex) {
+                if (this.selectedLevelIndex == levelIndex) {
+                  labelStyle = 0;
                 }
               } else {
-                var4 = (var2 != this.field_q) ? 2 : 1;
+                labelStyle = (levelIndex != this.selectedLevelIndex) ? 2 : 1;
               }
-              nn.field_g.b(this.field_l.metadata[var2].numberLabel, (this.field_p.x * 2 + this.field_p.width) / 2, var3, var4, -1);
+              nn.field_g.b(this.pack.metadata[levelIndex].numberLabel, (this.viewport.x * 2 + this.viewport.width) / 2, rowBaselineY, labelStyle, -1);
             }
-            var2++;
+            levelIndex++;
             continue;
           }
           break;
@@ -216,76 +216,76 @@ final class uj {
         return;
     }
 
-    final boolean a(int param0, int param1, int param2) {
-        int var4;
-        var4 = df.a(this.field_f, (byte) 15, this.field_g - this.field_c) + this.field_p.height / (2 * this.field_i);
-        if (param0 != -28088) {
-          this.field_r = -121;
+    final boolean handleNavigationKey(int obfuscationGuard, int keyCode, int characterCode) {
+        int centerLevelIndex;
+        centerLevelIndex = df.divideFloorPositive(this.rowHeight, (byte) 15, this.scrollOffset - this.rowGap) + this.viewport.height / (2 * this.rowSpacing);
+        if (obfuscationGuard != -28088) {
+          this.contentHeight = -121;
         }
-        if (param1 == 99) {
-          this.field_d = true;
-          this.field_q = this.field_q + 1;
-          if (this.field_q > var4) {
-            this.a(this.field_i, true);
+        if (keyCode == 99) {
+          this.keyboardSelection = true;
+          this.selectedLevelIndex = this.selectedLevelIndex + 1;
+          if (this.selectedLevelIndex > centerLevelIndex) {
+            this.scrollBy(this.rowSpacing, true);
           }
         } else {
-          if (param1 == 98) {
-            this.field_q = this.field_q - 1;
-            this.field_d = true;
-            if (this.field_q <= var4 - 1) {
-              this.a(-this.field_i, true);
+          if (keyCode == 98) {
+            this.selectedLevelIndex = this.selectedLevelIndex - 1;
+            this.keyboardSelection = true;
+            if (this.selectedLevelIndex <= centerLevelIndex - 1) {
+              this.scrollBy(-this.rowSpacing, true);
             }
           }
         }
-        if (this.field_q >= 0 &&
-          this.field_l.levelCount > this.field_q) {
+        if (this.selectedLevelIndex >= 0 &&
+          this.pack.levelCount > this.selectedLevelIndex) {
           return false;
         }
-        this.field_q = -1;
-        this.field_d = false;
+        this.selectedLevelIndex = -1;
+        this.keyboardSelection = false;
         return true;
     }
 
-    final void b(byte param0) {
-        this.field_d = true;
-        this.field_q = -1 + this.field_l.levelCount;
-        this.field_g = this.field_k;
-        if (param0 >= -39) {
-          this.a(47, false);
+    final void selectLast(byte obfuscationGuard) {
+        this.keyboardSelection = true;
+        this.selectedLevelIndex = -1 + this.pack.levelCount;
+        this.scrollOffset = this.maxScrollOffset;
+        if (obfuscationGuard >= -39) {
+          this.scrollBy(47, false);
         }
-        this.field_n = po.field_a;
-        this.field_b = pq.field_k;
+        this.lastPointerY = po.pointerY;
+        this.lastPointerX = pq.pointerX;
     }
 
-    final void b(int param0) {
-        this.field_g = param0;
+    final void setScrollOffset(int offsetPixels) {
+        this.scrollOffset = offsetPixels;
     }
 
-    final void b(boolean param0) {
-        if (this.field_a != this.field_m.selection.selectedIndex) {
-          this.field_q = -1;
-          this.field_b = -1;
-          this.field_n = -1;
-          this.field_d = false;
+    final void updatePointerSelection(boolean obfuscationGuard) {
+        if (this.buttonIndex != this.owner.selection.selectedIndex) {
+          this.selectedLevelIndex = -1;
+          this.lastPointerX = -1;
+          this.lastPointerY = -1;
+          this.keyboardSelection = false;
         } else {
-          this.a(GameplayAudioEvent.field_o * this.field_h, true);
-          this.field_d = this.field_d & (GameplayAudioEvent.field_o == 0 ? true : false);
-          if (!this.field_d ||
-            pq.field_k != this.field_b ||
-            this.field_n != po.field_a) {
-            this.field_q = df.a(this.field_i, (byte) 15, po.field_a - (this.field_p.y - (-this.field_c + this.field_g)));
-            if (this.field_q < 0) {
-              this.field_q = 0;
+          this.scrollBy(GameplayAudioEvent.mouseWheelDelta * this.scrollStep, true);
+          this.keyboardSelection = this.keyboardSelection & (GameplayAudioEvent.mouseWheelDelta == 0 ? true : false);
+          if (!this.keyboardSelection ||
+            pq.pointerX != this.lastPointerX ||
+            this.lastPointerY != po.pointerY) {
+            this.selectedLevelIndex = df.divideFloorPositive(this.rowSpacing, (byte) 15, po.pointerY - (this.viewport.y - (-this.rowGap + this.scrollOffset)));
+            if (this.selectedLevelIndex < 0) {
+              this.selectedLevelIndex = 0;
             }
-            if (!(this.field_l.levelCount >= this.field_q)) {
-              this.field_q = this.field_l.levelCount;
+            if (!(this.pack.levelCount >= this.selectedLevelIndex)) {
+              this.selectedLevelIndex = this.pack.levelCount;
             }
           }
-          this.field_n = po.field_a;
-          this.field_b = pq.field_k;
+          this.lastPointerY = po.pointerY;
+          this.lastPointerX = pq.pointerX;
         }
-        if (param0) {
-          this.field_p = (MenuButton) null;
+        if (obfuscationGuard) {
+          this.viewport = (MenuButton) null;
         }
     }
 
@@ -421,25 +421,25 @@ final class uj {
         }
     }
 
-    uj(int param0, int param1, int param2, MenuScreen param3, MenuButton param4, LevelPack param5) {
-        this.field_q = -1;
+    LevelList(int rowHeight, int rowGap, int buttonIndex, MenuScreen owner, MenuButton viewport, LevelPack pack) {
+        this.selectedLevelIndex = -1;
         try {
-          this.field_i = param0 + param1;
-          this.field_m = param3;
-          this.field_p = param4;
-          this.field_a = param2;
-          this.field_l = param5;
-          this.field_j = nn.field_g.field_L + (nn.field_g.field_B - 5);
-          this.field_c = param1;
-          this.field_f = param0;
-          this.field_r = this.field_c + this.field_l.levelCount * this.field_i;
-          this.field_k = -this.field_p.height + this.field_r + 5;
-          if (0 > this.field_k) {
-            this.field_k = 0;
+          this.rowSpacing = rowHeight + rowGap;
+          this.owner = owner;
+          this.viewport = viewport;
+          this.buttonIndex = buttonIndex;
+          this.pack = pack;
+          this.labelBaselineOffset = nn.field_g.field_L + (nn.field_g.field_B - 5);
+          this.rowGap = rowGap;
+          this.rowHeight = rowHeight;
+          this.contentHeight = this.rowGap + this.pack.levelCount * this.rowSpacing;
+          this.maxScrollOffset = -this.viewport.height + this.contentHeight + 5;
+          if (0 > this.maxScrollOffset) {
+            this.maxScrollOffset = 0;
           }
-          this.field_h = 3 * this.field_f / 2;
+          this.scrollStep = 3 * this.rowHeight / 2;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "uj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "uj.<init>(" + rowHeight + ',' + rowGap + ',' + buttonIndex + ',' + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + (pack != null ? "{...}" : "null") + ')');
         }
     }
 

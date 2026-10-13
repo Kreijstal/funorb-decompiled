@@ -34,7 +34,7 @@ final class fj extends mh {
             this.field_Tb = this.field_Tb - 1;
           }
           if (this.field_Tb == 0 &&
-            this.field_Vb.field_db + this.field_Vb.field_Db > po.field_a) {
+            this.field_Vb.field_db + this.field_Vb.field_Db > po.pointerY) {
             this.field_Tb = 3;
             return true;
           }
@@ -70,7 +70,7 @@ final class fj extends mh {
           if (this.field_Tb != 0) {
             return false;
           }
-          if (this.field_Vb.field_C + this.field_Vb.field_cb + (this.field_Vb.field_db + this.field_Vb.field_Db) <= po.field_a) {
+          if (this.field_Vb.field_C + this.field_Vb.field_cb + (this.field_Vb.field_db + this.field_Vb.field_Db) <= po.pointerY) {
             this.field_Tb = 3;
             return true;
           }
@@ -79,7 +79,7 @@ final class fj extends mh {
         if (this.field_Tb != 0) {
           return false;
         }
-        if (this.field_Vb.field_C + this.field_Vb.field_cb + (this.field_Vb.field_db + this.field_Vb.field_Db) <= po.field_a) {
+        if (this.field_Vb.field_C + this.field_Vb.field_cb + (this.field_Vb.field_db + this.field_Vb.field_Db) <= po.pointerY) {
           this.field_Tb = 3;
           return true;
         }

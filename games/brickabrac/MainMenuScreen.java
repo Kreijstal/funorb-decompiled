@@ -90,7 +90,7 @@ final class MainMenuScreen extends MenuScreen {
         if (obfuscationGuard > -14) {
           field_s = (RgbSprite) null;
         }
-        si.a(pq.field_k, (byte) -118, po.field_a, hc.field_h);
+        si.a(pq.pointerX, (byte) -118, po.pointerY, hc.field_h);
         if (!pg.c(77)) {
           var4 = (nq) (this.field_v.first(-90));
           while (var4 != null) {

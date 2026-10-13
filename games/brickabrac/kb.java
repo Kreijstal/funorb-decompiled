@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kb extends mh {
-    static boolean field_Xb;
+    static boolean pointerChanged;
     static String field_Wb;
     static String field_Rb;
     private mh field_ac;
-    static volatile int field_Pb;
+    static volatile int liveHeldButton;
     static boolean field_Sb;
     static String field_Tb;
     static RgbSprite[] field_Ub;
@@ -64,7 +64,7 @@ final class kb extends mh {
         if (param0 < 63) {
           kb.h(-91);
           this.a(true, -15211);
-          if (ki.field_e == 0) {
+          if (ki.pressedButton == 0) {
             return this.field_ac.field_L != 0 ? true : false;
           }
           if (this.field_L != 0) {
@@ -73,7 +73,7 @@ final class kb extends mh {
           return true;
         }
         this.a(true, -15211);
-        if (ki.field_e != 0) {
+        if (ki.pressedButton != 0) {
           if (this.field_L == 0) {
             return true;
           }
@@ -360,8 +360,8 @@ final class kb extends mh {
 
     static {
         field_Wb = "Public";
-        field_Xb = false;
-        field_Pb = 0;
+        pointerChanged = false;
+        liveHeldButton = 0;
         field_Tb = "Your ball fell out of play! Try to catch it with your paddle.";
         field_Rb = "Try changing the following settings:  ";
     }

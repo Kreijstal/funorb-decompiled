@@ -166,8 +166,8 @@ class lg extends d {
           super.a(param0, param1, param2, param3);
           this.field_N = null;
           if (this.field_q) {
-            var5_int = -param2 + (pq.field_k - this.field_o);
-            var6 = -param3 + (po.field_a - this.field_w);
+            var5_int = -param2 + (pq.pointerX - this.field_o);
+            var6 = -param3 + (po.pointerY - this.field_w);
             this.field_N = this.b(var6, 0, var5_int);
           }
           return;

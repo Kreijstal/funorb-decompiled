@@ -104,16 +104,16 @@ final class ea {
         return (java.awt.Container) ((Object) cb.field_o);
     }
 
-    final static gk a(int param0) {
+    final static MouseWheelSource createMouseWheelSource(int obfuscationGuard) {
         try {
           Throwable var1 = null;
-          gk stackIn_3_0 = null;
+          MouseWheelSource stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param0 <= 59) {
+            if (obfuscationGuard <= 59) {
               field_b = -61;
             }
-            stackIn_3_0 = (gk) (Class.forName("qk").newInstance());
+            stackIn_3_0 = (MouseWheelSource) (Class.forName("MouseWheelInput").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

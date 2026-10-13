@@ -52,7 +52,7 @@ final class sf extends vb implements je {
     final void a(oc param0, byte param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_ab = -param2 - this.field_o + pq.field_k;
+          this.field_ab = -param2 - this.field_o + pq.pointerX;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "sf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -66,11 +66,11 @@ final class sf extends vb implements je {
           return null;
         }
         if (param0 >= 6) {
-          ap.a(-this.field_ab - (-this.field_t - pq.field_k), po.field_a, (byte) 79);
+          ap.a(-this.field_ab - (-this.field_t - pq.pointerX), po.pointerY, (byte) 79);
           return this.field_z;
         }
         this.field_ab = -5;
-        ap.a(-this.field_ab - (-this.field_t - pq.field_k), po.field_a, (byte) 79);
+        ap.a(-this.field_ab - (-this.field_t - pq.pointerX), po.pointerY, (byte) 79);
         return this.field_z;
     }
 

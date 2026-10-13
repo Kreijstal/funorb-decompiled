@@ -73,11 +73,11 @@ final class jl {
           var7Lifetime1 = 0;
           var8Lifetime1 = sa.a(var6Lifetime1, -4097) >> 8;
           var9Lifetime1 = BrickABrac.c(2048, var6Lifetime1) >> 8;
-          if (-1 != pq.field_k &&
-            -1 != po.field_a) {
-            var8Lifetime1 = -po.field_a + 240;
+          if (-1 != pq.pointerX &&
+            -1 != po.pointerY) {
+            var8Lifetime1 = -po.pointerY + 240;
             var9Lifetime1 = -128;
-            var7Lifetime1 = pq.field_k - 320;
+            var7Lifetime1 = pq.pointerX - 320;
           }
           var10 = 256.0 / Math.sqrt((double)(var9Lifetime1 * var9Lifetime1 + var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);

@@ -135,7 +135,7 @@ final class pn extends IntrusiveNode {
               var9 = jq.field_y.c(var4);
               if (!ri.a(-112)) {
                 if (g.field_n.field_kb &&
-                  (-g.field_n.field_Eb + pq.field_k) < var9) {
+                  (-g.field_n.field_Eb + pq.pointerX) < var9) {
                   if (!um.field_e) {
                     var1 = MainMenuScreen.field_y;
                   } else {

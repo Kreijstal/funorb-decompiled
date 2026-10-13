@@ -199,11 +199,11 @@ abstract class MenuScreen extends GameScreen {
           this.onEnter(true, -79, -10);
         }
         var4 = this.selection.selectedIndex;
-        dm.field_b = sa.a(MembershipBenefitsScreen.field_x * 20, -4097);
+        MouseInput.field_b = sa.a(MembershipBenefitsScreen.field_x * 20, -4097);
         if (inputEnabled &&
           !vh.field_L &&
           !ed.field_d) {
-          this.selection.updatePointer(this.findButtonAt(po.field_a, (byte) -106, pq.field_k), 27479, this.findButtonAt(qo.field_O, (byte) -80, tb.field_fb));
+          this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, pq.pointerX), 27479, this.findButtonAt(qo.pressY, (byte) -80, tb.pressX));
           if (this.a(true, (byte) -117)) {
             wp.a(8, ta.field_e[0]);
           }
@@ -405,7 +405,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (this.selection.isHeld(false)) {
                   var8 = -120 + var5.width + var5.x + var5.x + dg.field_d >> 1;
-                  var9 = pq.field_k - var8;
+                  var9 = pq.pointerX - var8;
                   var10 = var9 * MenuSelection.e((byte) 51) / 120;
                   if (var10 <= 0) {
                     ma.a((byte) -114, 0);
@@ -440,7 +440,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (!(!this.selection.isHeld(false))) {
                   var8 = -120 + (dg.field_d + (var5.x + var5.width) + var5.x) >> 1;
-                  var9 = -var8 + pq.field_k;
+                  var9 = -var8 + pq.pointerX;
                   var10 = 256 * var9 / 120;
                   if (var10 <= 0) {
                     il.a((byte) 86, 0);
@@ -709,7 +709,7 @@ abstract class MenuScreen extends GameScreen {
         if (obfuscationGuard <= 96) {
           this.handleKey('F', -76, -96);
         }
-        this.selection.initializeSelection(this.findButtonAt(po.field_a, (byte) -106, pq.field_k), initialSelection, usePointer, (byte) -127);
+        this.selection.initializeSelection(this.findButtonAt(po.pointerY, (byte) -106, pq.pointerX), initialSelection, usePointer, (byte) -127);
     }
 
     void onExit(byte obfuscationGuard) {

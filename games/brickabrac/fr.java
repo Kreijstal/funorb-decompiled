@@ -75,11 +75,11 @@ final class fr {
           rg.field_c = new mh(0L, (mh) null);
           sj.field_d = new mh(0L, ad.field_l);
           sj.field_d.field_S = 1;
-          gk.field_c = new mh(0L, MainMenuScreen.field_t, n.field_a);
+          MouseWheelSource.field_c = new mh(0L, MainMenuScreen.field_t, n.field_a);
           GameplayScreen.field_u = new mh(0L, ik.field_a, bc.field_c);
           mo.field_R = new mh(0L, DualLinkNode.field_t);
           rg.field_c.a(sj.field_d, 0);
-          rg.field_c.a(gk.field_c, 0);
+          rg.field_c.a(MouseWheelSource.field_c, 0);
           rg.field_c.a(GameplayScreen.field_u, 0);
           rg.field_c.a(GameScreen.field_f, 0);
           rg.field_c.a(mo.field_R, 0);

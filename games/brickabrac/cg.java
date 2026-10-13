@@ -103,7 +103,7 @@ final class cg extends dj {
         }
         if (param0 != 1) {
           NodeDeque var3 = (NodeDeque) null;
-          cg.a((NodeDeque[]) null, (byte) 16, (NodeDeque) null, true);
+          cg.attachBrickMotionPaths((NodeDeque[]) null, (byte) 16, (NodeDeque) null, true);
         }
         this.field_k = 0L;
     }
@@ -141,7 +141,7 @@ final class cg extends dj {
         return var6 / (long)this.field_j;
     }
 
-    final static void a(NodeDeque[] param0, byte param1, NodeDeque param2, boolean param3) {
+    final static void attachBrickMotionPaths(NodeDeque[] brickGroups, byte obfuscationGuard, NodeDeque motionPaths, boolean includeVelocity) {
         int incrementValue$1 = 0;
         int var4_int = 0;
         BrickMotionPath[] var5 = null;
@@ -160,26 +160,26 @@ final class cg extends dj {
         int var6Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = param2.size(param1 ^ 88);
+          var4_int = motionPaths.size(obfuscationGuard ^ 88);
           var5 = new BrickMotionPath[var4_int];
           var6 = 0;
-          var7 = (BrickMotionPath) (param2.first(-79));
+          var7 = (BrickMotionPath) (motionPaths.first(-79));
           while (var7 != null) {
             incrementValue$1 = var6;
             var6++;
             var5[incrementValue$1] = var7;
-            var7 = (BrickMotionPath) (param2.next((byte) 116));
+            var7 = (BrickMotionPath) (motionPaths.next((byte) 116));
           }
           var6Lifetime1 = 0;
-          if (param1 != 35) {
+          if (obfuscationGuard != 35) {
             return;
           }
-          while (var6Lifetime1 < param0.length) {
-            var10 = param0[var6Lifetime1];
-            var8 = (Brick) (var10.first(param1 - 159));
+          while (var6Lifetime1 < brickGroups.length) {
+            var10 = brickGroups[var6Lifetime1];
+            var8 = (Brick) (var10.first(obfuscationGuard - 159));
             while (var8 != null) {
               if ((var8.flags & 4) != 0) {
-                var8.setMotionPath(var5[var8.field_M], param3, 4);
+                var8.setMotionPath(var5[var8.motionPathIndex], includeVelocity, 4);
               }
               var8 = (Brick) (var10.next((byte) 116));
             }
@@ -191,18 +191,18 @@ final class cg extends dj {
           var4 = decompiledCaughtException;
           stackIn_17_0 = var4;
           stackIn_17_1 = new StringBuilder().append("cg.M(");
-          if (param0 == null) {
+          if (brickGroups == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(',');
+          if (motionPaths == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(includeVelocity).append(')').toString());
         }
     }
 

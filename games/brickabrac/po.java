@@ -8,7 +8,7 @@ final class po {
     String field_d;
     static ad field_e;
     static String field_c;
-    static int field_a;
+    static int pointerY;
     String field_f;
 
     final static void a(boolean param0) {
@@ -197,7 +197,7 @@ final class po {
     }
 
     static {
-        field_a = 0;
+        pointerY = 0;
         field_c = "Not yet achieved";
     }
 }

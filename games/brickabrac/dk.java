@@ -118,7 +118,7 @@ final class dk extends ib implements ha, en, vf {
             var8Lifetime2++;
           }
           mi.field_d = ea.field_e - (bg.field_r >> 1);
-          fi.field_r.initializeSelection(aj.a(param4 - 46, po.field_a, pq.field_k), 0, param3, (byte) -127);
+          fi.field_r.initializeSelection(aj.a(param4 - 46, po.pointerY, pq.pointerX), 0, param3, (byte) -127);
           if (param4 != 46) {
             field_R = (RgbSprite) null;
             return;

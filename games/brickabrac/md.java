@@ -39,7 +39,7 @@ final class md extends MenuScreen {
             var8 = (java.awt.Component) null;
             md.a(22, (java.awt.Component) null);
           }
-          mh.field_H.updatePointer(qo.b(120, po.field_a, pq.field_k), param0 + 27355, qo.b(param0 - 4, qo.field_O, tb.field_fb));
+          mh.field_H.updatePointer(qo.b(120, po.pointerY, pq.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
           if (mh.field_H.isActivated((byte) 113)) {
             var1_int = 1;
           }
@@ -92,7 +92,7 @@ final class md extends MenuScreen {
         try {
           var3_int = param2.position;
           var5 = (CharSequence) ((Object) param1);
-          var4 = uj.a(var5, false);
+          var4 = LevelList.a(var5, false);
           param2.writeUnsignedSmart(-1, var4.length);
           param2.position = param2.position + so.field_d.a((byte) -119, var4.length, 0, param2.data, param2.position, var4);
           if (param0 == 26152) {

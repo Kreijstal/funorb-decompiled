@@ -542,7 +542,7 @@ final class nh {
                       decompiledSharedTail0 = (var19 != 0);
                     }
                     if (decompiledSharedTail0) {
-                      var14_ref_String = rd.a(gk.field_b, new String[]{(String) (var11_ref)}, (byte) 103);
+                      var14_ref_String = rd.a(MouseWheelSource.field_b, new String[]{(String) (var11_ref)}, (byte) 103);
                     }
                   }
                   ep.field_e = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;

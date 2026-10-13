@@ -80,7 +80,7 @@ final class fl extends k {
             return stackIn_13_0;
           }
           var4 = 21 / ((-16 - param0) / 50);
-          stackIn_15_0 = gk.field_d;
+          stackIn_15_0 = MouseWheelSource.field_d;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -118,10 +118,10 @@ final class ap {
           }
           md.a(-118, (java.awt.Component) ((Object) param1));
           pl.a((java.awt.Component) ((Object) param1), 7282);
-          if (null == qa.field_x) {
+          if (null == qa.mouseWheelSource) {
             return;
           }
-          qa.field_x.a((byte) 44, (java.awt.Component) ((Object) param1));
+          qa.mouseWheelSource.attach((byte) 44, (java.awt.Component) ((Object) param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

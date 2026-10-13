@@ -64,7 +64,7 @@ final class so {
         if (param0 != -35) {
           return 43;
         }
-        return gr.field_a;
+        return gr.pointerIdleTicks;
     }
 
     final kn a(int param0, byte param1) {

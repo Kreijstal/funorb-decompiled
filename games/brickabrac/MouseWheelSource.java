@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gk {
+abstract class MouseWheelSource {
     static int field_a;
     static String field_d;
     static String field_b;
     static mh field_c;
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component component, int obfuscationGuard);
 
     public static void a(int param0) {
         field_d = null;
@@ -18,16 +18,16 @@ abstract class gk {
         }
     }
 
-    abstract int b(int param0);
+    abstract int pollRotation(int obfuscationGuard);
 
     final static void a(int param0, byte param1) {
         MovingBody.c((byte) -109);
         if (param1 <= 111) {
-          gk.a(-66, (byte) -49);
+          MouseWheelSource.a(-66, (byte) -49);
         }
     }
 
-    abstract void a(byte param0, java.awt.Component param1);
+    abstract void attach(byte obfuscationGuard, java.awt.Component component);
 
     static {
         field_a = 500;

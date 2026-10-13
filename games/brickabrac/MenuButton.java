@@ -232,7 +232,7 @@ final class MenuButton {
         }
         if (this.actionId == 29 ||
           30 == this.actionId) {
-          stackIn_12_1 = (var2.isHeld(false)) && (this.containsPoint(pq.field_k, po.field_a, -56));
+          stackIn_12_1 = (var2.isHeld(false)) && (this.containsPoint(pq.pointerX, po.pointerY, -56));
           this.pressed = stackIn_12_1;
         }
     }

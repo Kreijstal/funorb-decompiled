@@ -4,7 +4,7 @@
 final class mi {
     static int[] field_b;
     static int field_d;
-    static volatile int field_c;
+    static volatile int livePressedButton;
     static String field_a;
     static String[] field_e;
 
@@ -120,6 +120,6 @@ final class mi {
         field_b = new int[]{44, 45, 8};
         field_e = new String[]{"Connection lost - attempting to reconnect", "Connection lost - attempting to reconnect.", "Connection lost - attempting to reconnect..", "Connection lost - attempting to reconnect..."};
         field_a = "Cancel unrated rematch";
-        field_c = 0;
+        livePressedButton = 0;
     }
 }

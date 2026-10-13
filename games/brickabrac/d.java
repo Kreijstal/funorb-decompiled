@@ -212,12 +212,12 @@ class d extends oc {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_n != 0 &&
-            cb.field_q != this.field_n) {
-            if (this.a(po.field_a, param3, param2, param1 + 3, pq.field_k) &&
-              cb.field_q == 0) {
-              this.a(po.field_a - param3, this.field_n, -79, -param2 + pq.field_k);
+            cb.heldButton != this.field_n) {
+            if (this.a(po.pointerY, param3, param2, param1 + 3, pq.pointerX) &&
+              cb.heldButton == 0) {
+              this.a(po.pointerY - param3, this.field_n, -79, -param2 + pq.pointerX);
             }
-            this.a(po.field_a, pq.field_k, param3, param0, 19223, param2);
+            this.a(po.pointerY, pq.pointerX, param3, param0, 19223, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "d.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

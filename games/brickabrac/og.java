@@ -1142,7 +1142,7 @@ final class og extends mh {
           }
           var2Lifetime105 = gr.a(!param0, "n_of_unlimited");
           if (null != var2Lifetime105) {
-            dm.field_a = MenuButton.a(var2Lifetime105, (byte) 112);
+            MouseInput.field_a = MenuButton.a(var2Lifetime105, (byte) 112);
           }
           var2Lifetime106 = gr.a(!param0, "plus_something");
           if (var2Lifetime106 != null) {

@@ -111,8 +111,8 @@ final class pg extends IntrusiveNode {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = pq.field_k;
-          var3 = po.field_a;
+          var2_int = pq.pointerX;
+          var3 = po.pointerY;
           if (param0) {
             String var9 = (String) null;
             pg.a(false, (String) null);

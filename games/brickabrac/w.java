@@ -41,7 +41,7 @@ final class w {
             return stackIn_3_0;
           }
           this.field_o = this.field_o + 65536;
-          while (dm.a(IsaacGenerator.field_c, -1, this.field_o) >= 65536) {
+          while (MouseInput.a(IsaacGenerator.field_c, -1, this.field_o) >= 65536) {
             this.field_i = this.field_i + 1;
             this.field_o = this.field_o - IsaacGenerator.field_c;
           }
@@ -86,17 +86,17 @@ final class w {
           }
           if (ll.field_c != null) {
             var4 = 0;
-            if (ki.field_e != 0 &&
-              qo.field_O > 257 &&
-              290 > qo.field_O) {
-              if (tb.field_fb > 9 &&
-                tb.field_fb < 82) {
+            if (ki.pressedButton != 0 &&
+              qo.pressY > 257 &&
+              290 > qo.pressY) {
+              if (tb.pressX > 9 &&
+                tb.pressX < 82) {
                 this.field_a = false;
                 this.field_j = IsaacGenerator.field_f;
                 var4 = 1;
               }
-              if (tb.field_fb > 558 &&
-                tb.field_fb < 631) {
+              if (tb.pressX > 558 &&
+                tb.pressX < 631) {
                 this.field_j = IsaacGenerator.field_f;
                 var4 = 1;
                 this.field_a = true;
@@ -104,14 +104,14 @@ final class w {
             }
             if (var4 == 0 &&
               IsaacGenerator.field_n < this.field_j &&
-              qo.field_O > 257 &&
-              qo.field_O < 290) {
-              if (pq.field_k > 9 &&
-                pq.field_k < 82) {
+              qo.pressY > 257 &&
+              qo.pressY < 290) {
+              if (pq.pointerX > 9 &&
+                pq.pointerX < 82) {
                 this.field_j = IsaacGenerator.field_n;
               }
-              if (pq.field_k > 558 &&
-                pq.field_k < 631) {
+              if (pq.pointerX > 558 &&
+                pq.pointerX < 631) {
                 this.field_j = IsaacGenerator.field_n;
               }
             }
@@ -120,7 +120,7 @@ final class w {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.field_g.updatePointer(this.a(po.field_a, -636, pq.field_k), 27479, this.a(qo.field_O, -636, tb.field_fb));
+          this.field_g.updatePointer(this.a(po.pointerY, -636, pq.pointerX), 27479, this.a(qo.pressY, -636, tb.pressX));
           var4Lifetime1 = 0;
           if (this.field_g.isActivated((byte) 113)) {
             if (this.field_g.selectedIndex == 0) {
@@ -315,19 +315,19 @@ final class w {
           if (null != ll.field_c) {
             ll.field_c.drawTransparent(9, 257);
             ll.field_c.f(558, 257);
-            if (po.field_a > 257 &&
-              po.field_a < 290) {
+            if (po.pointerY > 257 &&
+              po.pointerY < 290) {
               var2_intLifetime2 = 40 + (di.a((byte) 124, this.field_i << 4) * 40 >> 16);
               if (0 < var2_intLifetime2) {
-                if (9 < pq.field_k &&
-                  pq.field_k < 82) {
+                if (9 < pq.pointerX &&
+                  pq.pointerX < 82) {
                   ll.field_c.f(8, 256, var2_intLifetime2);
                   ll.field_c.f(10, 256, var2_intLifetime2);
                   ll.field_c.f(8, 258, var2_intLifetime2);
                   ll.field_c.f(10, 258, var2_intLifetime2);
                 } else {
-                  if (558 < pq.field_k &&
-                    pq.field_k < 631) {
+                  if (558 < pq.pointerX &&
+                    pq.pointerX < 631) {
                     ll.field_c.flipHorizontal();
                     ll.field_c.f(557, 256, var2_intLifetime2);
                     ll.field_c.f(559, 256, var2_intLifetime2);

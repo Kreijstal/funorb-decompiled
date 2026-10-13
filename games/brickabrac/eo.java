@@ -6,7 +6,7 @@ final class eo extends tl {
     static hk field_k;
     static tj field_f;
     static java.awt.Font field_g;
-    static volatile int field_i;
+    static volatile int livePointerX;
     static String field_e;
     private java.nio.ByteBuffer field_j;
     static String field_l;
@@ -131,6 +131,6 @@ final class eo extends tl {
     static {
         field_h = "Fullscreen mode was cancelled after a delay of 10 seconds. If you were unable to accept fullscreen mode during this time, there may be a problem with your configuration. You could try restarting your browser and trying again.";
         field_l = "Show lobby chat from my friends";
-        field_i = -1;
+        livePointerX = -1;
     }
 }

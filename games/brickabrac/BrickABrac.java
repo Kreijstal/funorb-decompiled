@@ -593,8 +593,8 @@ public final class BrickABrac extends sa {
         wo.b(78);
         ke.d(19254);
         ad.b(-16637);
-        dm.a((byte) 24);
-        gk.a(102);
+        MouseInput.a((byte) 24);
+        MouseWheelSource.a(102);
         mf.a(false);
         t.a(-11470);
         wm.a(108);
@@ -855,7 +855,7 @@ public final class BrickABrac extends sa {
         ae.a((byte) 84);
         LevelMetadata.a((byte) 127);
         LevelPack.a(0);
-        uj.a(true);
+        LevelList.a(true);
         ab.f((byte) -112);
         gn.i(61);
         ac.c(0);

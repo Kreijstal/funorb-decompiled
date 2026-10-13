@@ -70,10 +70,10 @@ final class ve {
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (lj.field_j != null) {
-          var1 = lj.field_j;
+        if (lj.mouseInput != null) {
+          var1 = lj.mouseInput;
           synchronized (var1) {
-            lj.field_j = null;
+            lj.mouseInput = null;
           }
         }
         if (param0 != 5) {

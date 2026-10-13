@@ -169,20 +169,20 @@ final class jf {
         } else {
           var7 = this.field_a.buttons[this.field_h];
           if (!this.field_b ||
-            pq.field_k != this.field_e ||
-            this.field_j != po.field_a) {
+            pq.pointerX != this.field_e ||
+            this.field_j != po.pointerY) {
             var3 = var7.x;
             var4 = var7.y;
             for (var5 = 0; this.field_f > var5; var5++) {
-              if (da.field_E[var5].containsPixel(var3, var4, pq.field_k, po.field_a)) {
+              if (da.field_E[var5].containsPixel(var3, var4, pq.pointerX, po.pointerY)) {
                 this.field_i = var5;
                 break;
               }
               var4 = var4 + (da.field_E[var5].canvasHeight + 20);
             }
           }
-          this.field_e = pq.field_k;
-          this.field_j = po.field_a;
+          this.field_e = pq.pointerX;
+          this.field_j = po.pointerY;
         }
         if (param0 <= 84) {
           this.field_h = 25;
@@ -201,18 +201,18 @@ final class jf {
 
     final void c(int param0) {
         this.field_i = param0 + this.field_f;
-        this.field_j = po.field_a;
-        this.field_e = pq.field_k;
+        this.field_j = po.pointerY;
+        this.field_e = pq.pointerX;
         this.field_b = true;
     }
 
     final void a(byte param0) {
         this.field_b = true;
-        this.field_j = po.field_a;
+        this.field_j = po.pointerY;
         if (param0 <= 32) {
           return;
         }
-        this.field_e = pq.field_k;
+        this.field_e = pq.pointerX;
         this.field_i = 0;
     }
 

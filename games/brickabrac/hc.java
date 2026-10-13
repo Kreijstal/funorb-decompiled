@@ -35,32 +35,32 @@ final class hc {
           var4 = eo.a(false, param1) ? 1 : 0;
           var5 = new fr();
           var5.field_w = (short)param1.readBits(16, (byte) -114);
-          var5.field_B = uj.a((byte) -67, var5.field_B, param1, 16);
-          var5.field_Q = uj.a((byte) -117, var5.field_Q, param1, 16);
-          var5.field_P = uj.a((byte) -110, var5.field_P, param1, param0);
+          var5.field_B = LevelList.a((byte) -67, var5.field_B, param1, 16);
+          var5.field_Q = LevelList.a((byte) -117, var5.field_Q, param1, 16);
+          var5.field_P = LevelList.a((byte) -110, var5.field_P, param1, param0);
           var5.field_C = (short)param1.readBits(16, (byte) 79);
-          var5.field_G = uj.a((byte) -64, var5.field_G, param1, 16);
-          var5.field_b = uj.a((byte) -74, var5.field_b, param1, 16);
-          var5.field_c = uj.a((byte) -124, var5.field_c, param1, 16);
+          var5.field_G = LevelList.a((byte) -64, var5.field_G, param1, 16);
+          var5.field_b = LevelList.a((byte) -74, var5.field_b, param1, 16);
+          var5.field_c = LevelList.a((byte) -124, var5.field_c, param1, 16);
           if (var3 != 0) {
             var5.field_o = (short)param1.readBits(16, (byte) 52);
-            var5.field_n = uj.a((byte) -107, var5.field_n, param1, 16);
-            var5.field_H = uj.a((byte) -77, var5.field_H, param1, 16);
-            var5.field_a = uj.a((byte) -117, var5.field_a, param1, 16);
-            var5.field_v = uj.a((byte) -68, var5.field_v, param1, 16);
-            var5.field_h = uj.a((byte) -80, var5.field_h, param1, 16);
-            var5.field_t = uj.a((byte) -61, var5.field_t, param1, 16);
+            var5.field_n = LevelList.a((byte) -107, var5.field_n, param1, 16);
+            var5.field_H = LevelList.a((byte) -77, var5.field_H, param1, 16);
+            var5.field_a = LevelList.a((byte) -117, var5.field_a, param1, 16);
+            var5.field_v = LevelList.a((byte) -68, var5.field_v, param1, 16);
+            var5.field_h = LevelList.a((byte) -80, var5.field_h, param1, 16);
+            var5.field_t = LevelList.a((byte) -61, var5.field_t, param1, 16);
           }
           if (var4 != 0) {
             param1.readBits(16, (byte) 101);
-            var5.field_z = uj.a((byte) -122, var5.field_z, param1, 16);
-            var5.field_m = uj.a((byte) -92, var5.field_m, param1, 16);
-            var5.field_K = uj.a((byte) -123, var5.field_K, param1, 16);
-            var5.field_j = uj.a((byte) -104, var5.field_j, param1, 16);
-            var5.field_J = uj.a((byte) -124, var5.field_J, param1, 16);
+            var5.field_z = LevelList.a((byte) -122, var5.field_z, param1, 16);
+            var5.field_m = LevelList.a((byte) -92, var5.field_m, param1, 16);
+            var5.field_K = LevelList.a((byte) -123, var5.field_K, param1, 16);
+            var5.field_j = LevelList.a((byte) -104, var5.field_j, param1, 16);
+            var5.field_J = LevelList.a((byte) -124, var5.field_J, param1, 16);
           }
           if (eo.a(false, param1)) {
-            var5.field_L = uj.a((byte) -65, var5.field_L, param1, 16);
+            var5.field_L = LevelList.a((byte) -65, var5.field_L, param1, 16);
           }
           if (eo.a(false, param1)) {
             var5.field_p = ri.a(var5.field_p, 16, param1, 20);

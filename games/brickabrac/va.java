@@ -6,7 +6,7 @@ final class va {
     static boolean field_a;
     static RgbSprite field_b;
     static String field_d;
-    static volatile int field_e;
+    static volatile int livePressY;
     private static String field_z;
 
     public static void a(int param0) {
@@ -26,7 +26,7 @@ final class va {
         field_z = "va.A(";
         field_d = "Press <img=2> or <img=5> to launch the ball!";
         field_c = "Become a member to get this expansion and...";
-        field_e = 0;
+        livePressY = 0;
         field_a = false;
     }
 }

@@ -1036,7 +1036,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_pleaseselectoption1", (byte) 9);
                 if (var2 != null) {
-                  gk.field_b = MenuButton.a(var2, (byte) 122);
+                  MouseWheelSource.field_b = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = nk.a("gameopt_pleaseselectoption2", (byte) -128);
                 if (null != var2) {
@@ -1736,7 +1736,7 @@ final class nn {
                 }
                 var2 = nk.a("create_username_available", (byte) 74);
                 if (var2 != null) {
-                  gk.field_d = MenuButton.a(var2, (byte) 124);
+                  MouseWheelSource.field_d = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("create_alert_namelength", (byte) 6);
                 if (var2 != null) {

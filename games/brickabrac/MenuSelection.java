@@ -329,22 +329,22 @@ final class MenuSelection {
         if (obfuscationGuard != 27479) {
           this.pressCode = -88;
           this.activationCode = 0;
-          if (ki.field_e != 0) {
+          if (ki.pressedButton != 0) {
             this.field_o = vd.field_c;
             this.selectedIndex = pressedIndex;
-            this.pressCode = ki.field_e;
-            this.activationCode = ki.field_e;
-            this.heldCode = ki.field_e;
+            this.pressCode = ki.pressedButton;
+            this.activationCode = ki.pressedButton;
+            this.heldCode = ki.pressedButton;
             this.pointerDriven = true;
           }
           if (0 == this.heldCode) {
-            if (ki.field_e == 0 &&
-              cb.field_q == 0) {
+            if (ki.pressedButton == 0 &&
+              cb.heldButton == 0) {
               this.heldCode = 0;
             }
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !kb.field_Xb) {
+                !kb.pointerChanged) {
                 return;
               }
               if (heldIndex < 0) {
@@ -363,14 +363,14 @@ final class MenuSelection {
             }
             return;
           }
-          if (cb.field_q == 0) {
-            if (ki.field_e == 0 &&
-              cb.field_q == 0) {
+          if (cb.heldButton == 0) {
+            if (ki.pressedButton == 0 &&
+              cb.heldButton == 0) {
               this.heldCode = 0;
             }
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !kb.field_Xb) {
+                !kb.pointerChanged) {
                 return;
               }
               if (heldIndex < 0) {
@@ -394,13 +394,13 @@ final class MenuSelection {
             this.field_o = pe.field_q;
           }
           this.field_o = this.field_o - 1;
-          if (ki.field_e == 0 &&
-            cb.field_q == 0) {
+          if (ki.pressedButton == 0 &&
+            cb.heldButton == 0) {
             this.heldCode = 0;
           }
           if (this.heldCode == 0) {
             if (!this.pointerDriven &&
-              !kb.field_Xb) {
+              !kb.pointerChanged) {
               return;
             }
             if (heldIndex < 0) {
@@ -420,23 +420,23 @@ final class MenuSelection {
           return;
         }
         this.activationCode = 0;
-        if (ki.field_e != 0) {
+        if (ki.pressedButton != 0) {
           this.field_o = vd.field_c;
           this.selectedIndex = pressedIndex;
-          this.pressCode = ki.field_e;
-          this.activationCode = ki.field_e;
-          this.heldCode = ki.field_e;
+          this.pressCode = ki.pressedButton;
+          this.activationCode = ki.pressedButton;
+          this.heldCode = ki.pressedButton;
           this.pointerDriven = true;
         }
         if (0 == this.heldCode) {
           boolean decompiledFrameRemainder1 = true;
-          if (ki.field_e == 0) {
-            if (cb.field_q != 0) {
+          if (ki.pressedButton == 0) {
+            if (cb.heldButton != 0) {
               if (this.heldCode != 0) {
                 return;
               }
               if (!this.pointerDriven &&
-                !kb.field_Xb) {
+                !kb.pointerChanged) {
                 return;
               }
               decompiledFrameRemainder1 = false;
@@ -450,7 +450,7 @@ final class MenuSelection {
               return;
             }
             if (!this.pointerDriven &&
-              !kb.field_Xb) {
+              !kb.pointerChanged) {
               return;
             }
           }
@@ -467,15 +467,15 @@ final class MenuSelection {
           this.selectedIndex = heldIndex;
           return;
         }
-        if (cb.field_q == 0) {
+        if (cb.heldButton == 0) {
           boolean decompiledFrameRemainder0 = true;
-          if (ki.field_e == 0) {
-            if (cb.field_q != 0) {
+          if (ki.pressedButton == 0) {
+            if (cb.heldButton != 0) {
               if (this.heldCode != 0) {
                 return;
               }
               if (!this.pointerDriven &&
-                !kb.field_Xb) {
+                !kb.pointerChanged) {
                 return;
               }
               decompiledFrameRemainder0 = false;
@@ -489,7 +489,7 @@ final class MenuSelection {
               return;
             }
             if (!this.pointerDriven &&
-              !kb.field_Xb) {
+              !kb.pointerChanged) {
               return;
             }
           }
@@ -511,11 +511,11 @@ final class MenuSelection {
           this.field_o = pe.field_q;
         }
         this.field_o = this.field_o - 1;
-        if (ki.field_e == 0) {
-          if (cb.field_q != 0) {
+        if (ki.pressedButton == 0) {
+          if (cb.heldButton != 0) {
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
-                !kb.field_Xb) {
+                !kb.pointerChanged) {
                 return;
               }
               if (heldIndex >= 0) {
@@ -551,7 +551,7 @@ final class MenuSelection {
             }
             this.selectedIndex = -1;
           } else {
-            if (kb.field_Xb) {
+            if (kb.pointerChanged) {
               if (heldIndex < 0) {
                 if (!this.pointerDriven) {
                   return;

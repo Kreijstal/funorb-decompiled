@@ -42,8 +42,8 @@ final class ka extends IntrusiveNode {
           go.field_e = go.field_e + 1;
           if (-1 == oo.field_v &&
             ll.field_b == -1) {
-            oo.field_v = pq.field_k;
-            ll.field_b = po.field_a;
+            oo.field_v = pq.pointerX;
+            ll.field_b = po.pointerY;
           }
           if (param1 != 22546) {
             return;
@@ -88,7 +88,7 @@ final class ka extends IntrusiveNode {
           vq.field_J = param0;
           if (!th.field_h &&
             go.field_e < ue.field_e &&
-            kb.field_Xb) {
+            kb.pointerChanged) {
             b.field_a = oo.field_v;
             go.field_e = 0;
             ad.field_j = ll.field_b;
@@ -407,7 +407,7 @@ final class ka extends IntrusiveNode {
                 if (var13.field_cc.field_L != 0) {
                   rf.a(param2, var13.field_gc, true);
                 } else {
-                  SpriteGeometry.a(0, qo.field_O, var13, param1, (byte) 58, tb.field_fb, 0);
+                  SpriteGeometry.a(0, qo.pressY, var13, param1, (byte) 58, tb.pressX, 0);
                 }
                 decompiledFrameRemainder0 = false;
               }
