@@ -14,14 +14,14 @@ abstract class pj implements ia {
         if (this.a((byte) -119)) {
           return null;
         }
-        if (ue.a(false) >= (350L + this.field_f)) {
+        if (MonotonicTime.nowMillis(false) >= (350L + this.field_f)) {
           return this.b(28600);
         }
         return null;
     }
 
     public final void a(boolean param0) {
-        this.field_f = ue.a(param0);
+        this.field_f = MonotonicTime.nowMillis(param0);
     }
 
     public static void d(int param0) {
@@ -44,12 +44,12 @@ abstract class pj implements ia {
         }
         if (param0 != -31) {
           pj.d(100);
-          if (ue.a(false) >= this.field_f + 350L) {
+          if (MonotonicTime.nowMillis(false) >= this.field_f + 350L) {
             return this.c(4);
           }
           return m.field_c;
         }
-        if (ue.a(false) >= this.field_f + 350L) {
+        if (MonotonicTime.nowMillis(false) >= this.field_f + 350L) {
           return this.c(4);
         }
         return m.field_c;

@@ -86,7 +86,7 @@ final class id extends mh {
           if (param1) {
             field_Sb = (String) null;
           }
-          ke.a(var3, (byte) 39, param0);
+          AppletGameShell.a(var3, (byte) 39, param0);
           stackIn_9_0 = var3;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

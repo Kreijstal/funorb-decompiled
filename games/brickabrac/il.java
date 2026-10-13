@@ -88,7 +88,7 @@ final class il extends CircleBody {
             this.stateWord = this.stateWord + 1;
             return;
           }
-          this.field_v = (this.field_y * sa.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
+          this.field_v = (this.field_y * InteractiveGameClient.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
           if (this.stateWord == 532) {
             this.field_C = 2;
             this.field_x = this.field_v / 32;
@@ -140,7 +140,7 @@ final class il extends CircleBody {
             this.stateWord = this.stateWord + 1;
             return;
           }
-          this.field_v = (this.field_y * sa.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
+          this.field_v = (this.field_y * InteractiveGameClient.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
           if (this.stateWord == 532) {
             this.field_C = 2;
             this.field_x = this.field_v / 32;
@@ -195,7 +195,7 @@ final class il extends CircleBody {
           this.stateWord = this.stateWord + 1;
           return;
         }
-        this.field_v = (this.field_y * sa.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
+        this.field_v = (this.field_y * InteractiveGameClient.a(this.field_E + this.stateWord * this.field_w, param0 ^ 2081174780) >> 16) + 16000;
         if (this.stateWord != 532) {
           this.stateWord = this.stateWord + 1;
           return;

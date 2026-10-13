@@ -106,15 +106,15 @@ final class LevelSelectScreen extends MenuScreen {
             this.loadPreview(-6845, var3);
             this.previewLevelIndex = var3;
           }
-          if (qg.field_t ||
+          if (GameConnectionShell.field_t ||
             !(this.previewLevelIndex >= 3 + hh.field_b[this.pack.packId])) {
             this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
           }
-          if (qg.field_t ||
+          if (GameConnectionShell.field_t ||
             !(hh.field_b[this.pack.packId] < this.previewLevelIndex)) {
             nn.field_g.drawCentered(this.pack.metadata[this.previewLevelIndex].title, 402, 421 - var2, 0, -1);
           }
-          if (!qg.field_t &&
+          if (!GameConnectionShell.field_t &&
             !(this.previewLevelIndex <= hh.field_b[this.pack.packId])) {
             if (this.previewLevelIndex < 3 + hh.field_b[this.pack.packId]) {
               stackIn_17_0 = 210;
@@ -187,7 +187,7 @@ final class LevelSelectScreen extends MenuScreen {
         }
         this.previewPaths.clear((byte) -78);
         td.decodeLevelBytes(this.previewBrickGroups, this.pack.levelData[levelIndex], this.previewState, this.previewPaths, this.field_s, 10792131);
-        cg.attachBrickMotionPaths(this.previewBrickGroups, (byte) 35, this.previewPaths, false);
+        NanoGameClock.attachBrickMotionPaths(this.previewBrickGroups, (byte) 35, this.previewPaths, false);
         this.previewTop256 = 122880;
         this.previewLeft256 = 163840;
         this.previewRight256 = 0;
@@ -249,15 +249,15 @@ final class LevelSelectScreen extends MenuScreen {
         }
     }
 
-    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
-        if (keyCode <= 98) {
+    final boolean handleKey(char character, int obfuscationGuard, int keyCode) {
+        if (obfuscationGuard <= 98) {
           this.getParentScreenId(true);
         }
-        if (obfuscationGuard != 48) {
-          return super.handleKey(character, 100, obfuscationGuard);
+        if (keyCode != 48) {
+          return super.handleKey(character, 100, keyCode);
         }
         if (cf.a((byte) 62)) {
-          qg.field_t = true;
+          GameConnectionShell.field_t = true;
           return true;
         }
         return true;
@@ -336,7 +336,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (var6 == 31) {
           if (this.selection.isActivated((byte) 113) &&
             0 <= this.levelList.selectedLevelIndex) {
-            if (!qg.field_t &&
+            if (!GameConnectionShell.field_t &&
               hh.field_b[this.pack.packId] < this.levelList.selectedLevelIndex) {
               return false;
             }

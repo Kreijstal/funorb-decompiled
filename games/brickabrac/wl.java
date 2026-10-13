@@ -273,7 +273,7 @@ final class wl extends d {
               k.field_h.writeByte(53, 18);
               k.field_h.position = k.field_h.position + 2;
               var10 = k.field_h.position;
-              var11_ref_String = dj.a(true, uc.e((byte) -75));
+              var11_ref_String = GameClock.a(true, uc.e((byte) -75));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }

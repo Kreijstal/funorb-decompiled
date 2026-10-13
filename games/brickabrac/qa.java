@@ -7,7 +7,7 @@ final class qa extends ki {
     static MouseWheelSource mouseWheelSource;
     static mh field_w;
     static RgbSprite field_y;
-    static boolean field_r;
+    static boolean frameFocus;
     static String field_v;
     static boolean field_u;
 
@@ -142,7 +142,7 @@ final class qa extends ki {
           ResourceArchive.field_f.a(-76, sj.field_b);
           return;
         }
-        sj.field_b = new tb(ResourceArchive.field_f, ke.field_b);
+        sj.field_b = new tb(ResourceArchive.field_f, AppletGameShell.field_b);
         ResourceArchive.field_f.a(-76, sj.field_b);
     }
 
@@ -203,7 +203,7 @@ final class qa extends ki {
           return vd.field_a.a(go.currentKeyCharacter, dc.currentKeyCode, true);
         }
         if (TooltipSprite.field_p) {
-          return sa.a(param1, 102, param0);
+          return InteractiveGameClient.a(param1, 102, param0);
         }
         if (ln.a(param1, 11, param0)) {
           return true;

@@ -239,13 +239,13 @@ final class wp {
             if (BitPacketBuffer.field_u == rf.field_b) {
               if (param1) {
                 var10 = (String) null;
-                cg.field_s = he.a(sl.field_v, 20, false, param5, (String) null);
+                NanoGameClock.field_s = he.a(sl.field_v, 20, false, param5, (String) null);
               } else {
-                cg.field_s = ArchiveFetchClient.a(param0, false, param5, (byte) -109);
+                NanoGameClock.field_s = ArchiveFetchClient.a(param0, false, param5, (byte) -109);
               }
               k.field_h.position = 0;
               k.field_h.writeByte(28, 14);
-              k.field_h.writeByte(107, cg.field_s.a(13).field_a);
+              k.field_h.writeByte(107, NanoGameClock.field_s.a(13).field_a);
               cr.a(-1, 10000);
               rf.field_b = GameScreen.field_c;
             }
@@ -265,7 +265,7 @@ final class wp {
               vd.a(20, 8)) {
               bj.field_ab = jl.field_e.readLong(-32768);
               jl.field_e.position = 0;
-              mp.a(param4, cg.field_s, param1, param3, false);
+              mp.a(param4, NanoGameClock.field_s, param1, param3, false);
               rf.field_b = rq.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -334,10 +334,10 @@ final class wp {
               ArchiveFetchClient.field_d = gb.a(var12, 65);
               OptionsScreen.field_x = jl.field_e.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
-              if (cg.field_s.a(13) == vh.field_X) {
+              if (NanoGameClock.field_s.a(13) == vh.field_X) {
                 uc.field_k.a(100, uc.e((byte) -66));
               } else {
-                if (cg.field_s.a(13) == MembershipBenefitsScreen.field_v) {
+                if (NanoGameClock.field_s.a(13) == MembershipBenefitsScreen.field_v) {
                   ll.field_d.a(112, uc.e((byte) -81));
                 }
               }

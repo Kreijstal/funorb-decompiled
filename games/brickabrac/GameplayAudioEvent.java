@@ -6,7 +6,7 @@ import java.io.*;
 final class GameplayAudioEvent extends IntrusiveNode {
     static RgbSprite[] field_l;
     static NodeDeque field_n;
-    static volatile boolean field_i;
+    static volatile boolean redrawRequested;
     static int mouseWheelDelta;
     int detailId;
     static ResourceArchive field_k;
@@ -197,7 +197,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
     }
 
     static {
-        field_i = true;
+        redrawRequested = true;
         field_n = new NodeDeque();
     }
 }

@@ -56,7 +56,7 @@ final class ob extends r {
             var4 = (oc) null;
             this.a((oc) null, false);
           }
-          stackIn_3_0 = sa.a('*', 122, param0.field_A.length());
+          stackIn_3_0 = InteractiveGameClient.a('*', 122, param0.field_A.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

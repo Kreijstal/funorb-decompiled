@@ -146,11 +146,11 @@ abstract class MenuScreen extends GameScreen {
         }
     }
 
-    boolean handleKey(char character, int keyCode, int obfuscationGuard) {
+    boolean handleKey(char character, int obfuscationGuard, int keyCode) {
         int var4 = 0;
-        if (13 != obfuscationGuard) {
+        if (13 != keyCode) {
           var4 = this.selection.selectedIndex;
-          this.handleNavigationKey(-120, obfuscationGuard, character);
+          this.handleNavigationKey(-120, keyCode, character);
           this.selection.pollKeyboardCode((byte) -124);
           if (this.a(false, (byte) 126)) {
             wp.playUiSound(8, ta.uiSounds[0]);
@@ -159,7 +159,7 @@ abstract class MenuScreen extends GameScreen {
         } else {
           this.navigateBack(-1);
         }
-        if (keyCode <= 98) {
+        if (obfuscationGuard <= 98) {
           return true;
         }
         return true;
@@ -199,7 +199,7 @@ abstract class MenuScreen extends GameScreen {
           this.onEnter(true, -79, -10);
         }
         var4 = this.selection.selectedIndex;
-        MouseInput.field_b = sa.a(MembershipBenefitsScreen.field_x * 20, -4097);
+        MouseInput.field_b = InteractiveGameClient.a(MembershipBenefitsScreen.clientTick * 20, -4097);
         if (inputEnabled &&
           !vh.field_L &&
           !ed.field_d) {
@@ -419,9 +419,9 @@ abstract class MenuScreen extends GameScreen {
                   var7 = 1;
                 }
                 if (((var7 != 0)) && ((!(this.selection.isHeld(false)) ||
-                  !(MembershipBenefitsScreen.field_x <= ea.field_d)))) {
+                  !(MembershipBenefitsScreen.clientTick <= ea.field_d)))) {
                   wp.playUiSound(8, ta.uiSounds[1]);
-                  ea.field_d = MembershipBenefitsScreen.field_x + 20;
+                  ea.field_d = MembershipBenefitsScreen.clientTick + 20;
                 }
                 break regionExit1;
               }
@@ -468,7 +468,7 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 9) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   pe.gameplayScreen.a((byte) 40, inputFlag);
-                  NewAchievementsScreen.field_G = true;
+                  NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
                 break regionExit1;
               }
@@ -535,7 +535,7 @@ abstract class MenuScreen extends GameScreen {
                     var8 = 15;
                   }
                   ng.requestScreen(inputFlag, obfuscationGuard ^ 25, var8);
-                  NewAchievementsScreen.field_G = true;
+                  NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
                 break regionExit1;
               }
@@ -545,7 +545,7 @@ abstract class MenuScreen extends GameScreen {
                     break regionExit1;
                   }
                   pe.gameplayScreen.a(inputFlag, (byte) 69);
-                  NewAchievementsScreen.field_G = true;
+                  NewAchievementsScreen.discardGameplayOnTransition = true;
                   break regionExit1;
                 default:
                   break regionExit1;

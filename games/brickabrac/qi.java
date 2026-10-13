@@ -86,7 +86,7 @@ final class qi extends d {
         RuntimeException var1_ref = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = ke.field_m;
+          var5 = AppletGameShell.field_m;
           var1 = var5;
           var2 = 0;
           if (param0 != 109) {

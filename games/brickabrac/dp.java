@@ -61,7 +61,7 @@ final class dp extends ki {
         if (!param1) {
           return (RgbSprite[]) null;
         }
-        return qg.field_r[param0 - 1];
+        return GameConnectionShell.field_r[param0 - 1];
     }
 
     final boolean a(boolean param0) {
@@ -70,19 +70,19 @@ final class dp extends ki {
         }
         nf.field_U = pl.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);
         ni.field_Ub = pl.loadRgbSpriteByName("halloween", "halloween_mid", (byte) 116, AchievementIcon.field_m);
-        dj.field_e = pl.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.field_m);
+        GameClock.field_e = pl.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.field_m);
         LevelPackLoader.field_f = pl.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.field_m);
         MotionWaypoint.field_p = pl.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.field_m);
         va.field_b = jh.a(0, nf.field_U);
         field_u = jh.a(0, ni.field_Ub);
-        ch.field_m = jh.a(0, dj.field_e);
+        ch.field_m = jh.a(0, GameClock.field_e);
         th.field_j = jh.a(0, MotionWaypoint.field_p);
         ba.field_A = pl.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
         ej.field_L[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
-        qg.field_r[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
+        GameConnectionShell.field_r[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
         ap.field_c[0] = pl.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.field_m);
         ej.field_L[1] = ig.a(ej.field_L[0], param0);
-        qg.field_r[1] = ig.a(qg.field_r[0], param0);
+        GameConnectionShell.field_r[1] = ig.a(GameConnectionShell.field_r[0], param0);
         ap.field_c[1] = pl.a(-16371, ap.field_c[0]);
         return true;
     }
@@ -121,7 +121,7 @@ final class dp extends ki {
           if (null == ni.field_Ub) {
             return false;
           }
-          if (dj.field_e == null) {
+          if (GameClock.field_e == null) {
             return false;
           }
           if (LevelPackLoader.field_f == null) {
@@ -136,7 +136,7 @@ final class dp extends ki {
           if (null == ej.field_L) {
             return false;
           }
-          if (null == qg.field_r) {
+          if (null == GameConnectionShell.field_r) {
             return false;
           }
           stackIn_40_0 = (ap.field_c != null);
@@ -150,7 +150,7 @@ final class dp extends ki {
         if (null == ni.field_Ub) {
           return false;
         }
-        if (dj.field_e == null) {
+        if (GameClock.field_e == null) {
           return false;
         }
         if (LevelPackLoader.field_f == null) {
@@ -165,7 +165,7 @@ final class dp extends ki {
         if (null == ej.field_L) {
           return false;
         }
-        if (null == qg.field_r) {
+        if (null == GameConnectionShell.field_r) {
           return false;
         }
         stackIn_19_0 = (ap.field_c != null);
@@ -175,7 +175,7 @@ final class dp extends ki {
     dp(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-          qg.field_r = new RgbSprite[2][];
+          GameConnectionShell.field_r = new RgbSprite[2][];
           ej.field_L = new RgbSprite[2][];
           ap.field_c = new RgbSprite[2];
         } catch (RuntimeException runtimeException) {

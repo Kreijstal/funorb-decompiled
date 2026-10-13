@@ -743,7 +743,7 @@ final class ResourceArchive {
             stackIn_34_0 = var11_ref_RuntimeException;
             stackIn_34_1 = new StringBuilder();
             stackIn_35_2 = (xteaKey != null);
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(cg.a(packedBytes.length, packedBytes, (byte) -86)).append(" ").append(cg.a(packedBytes.length - 2, packedBytes, (byte) -86)).append(" ").append(this.index.groupCrcs[groupId]).append(" ").append(this.index.indexCrc).toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(groupId).append(" ").append(packedBytes.length).append(" ").append(NanoGameClock.a(packedBytes.length, packedBytes, (byte) -86)).append(" ").append(NanoGameClock.a(packedBytes.length - 2, packedBytes, (byte) -86)).append(" ").append(this.index.groupCrcs[groupId]).append(" ").append(this.index.indexCrc).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[groupId] = null;

@@ -75,8 +75,8 @@ final class ec extends ib implements en {
 
     final static void h(int param0) {
         IntKeyIndex.a(-1);
-        cg.field_l = true;
-        sa.field_E = true;
+        NanoGameClock.field_l = true;
+        InteractiveGameClient.field_E = true;
         ResourceArchive.field_f.a(-126);
         if (param0 != 6846) {
           ec.a(-62);

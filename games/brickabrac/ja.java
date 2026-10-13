@@ -166,13 +166,13 @@ final class ja {
         }
     }
 
-    final static dj a(byte param0) {
-        if (param0 >= 105) {
-          return (dj) ((Object) new cg());
+    final static GameClock createGameClock(byte obfuscationGuard) {
+        if (obfuscationGuard >= 105) {
+          return (GameClock) ((Object) new NanoGameClock());
         }
         LevelSequence var2 = (LevelSequence) null;
         ja.a(64, (LevelSequence) null, 69, false);
-        return (dj) ((Object) new cg());
+        return (GameClock) ((Object) new NanoGameClock());
     }
 
     static {

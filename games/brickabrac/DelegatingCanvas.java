@@ -37,7 +37,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 fieldTemp$0 = jl.field_a - 1;
                 jl.field_a = jl.field_a - 1;
                 if (0 == fieldTemp$0) {
-                  SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
+                  SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                   tb.field_eb = SaveResultsPromptScreen.field_y;
                   pp.field_a = -1;
                   jl.field_a = 250;
@@ -55,7 +55,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     ga.field_i = 1;
                     jl.field_a = 250;
                     c.field_i = un.field_e;
-                    SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
+                    SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                     tb.field_eb = va.field_d;
                   }
                 }
@@ -113,7 +113,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               fieldTemp$4 = jl.field_a - 1;
               jl.field_a = jl.field_a - 1;
               if (0 == fieldTemp$4) {
-                SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
+                SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 pp.field_a = -1;
                 c.field_i = un.field_e;
                 tb.field_eb = sb.field_d;

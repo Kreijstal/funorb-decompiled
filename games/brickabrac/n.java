@@ -178,12 +178,12 @@ final class n {
             var5 = dn.field_K;
             dn.field_K.field_cb = 0;
             var5.field_Ib = 0;
-            var6 = ke.field_e;
-            ke.field_e.field_cb = 0;
+            var6 = AppletGameShell.field_e;
+            AppletGameShell.field_e.field_cb = 0;
             var6.field_Ib = 0;
             ba.field_v.field_Mb = pg.field_n.toUpperCase();
             var7 = (MultiplayerMatch.field_d.field_Ib + 2) / 2;
-            ke.field_e.a(40, -40 + MultiplayerMatch.field_d.field_cb, 0, var7 - 2, (byte) 64);
+            AppletGameShell.field_e.a(40, -40 + MultiplayerMatch.field_d.field_cb, 0, var7 - 2, (byte) 64);
             dn.field_K.a(40, MultiplayerMatch.field_d.field_cb - 40, var7, MultiplayerMatch.field_d.field_Ib - var7, (byte) 64);
             if (1 == w.field_n.length &&
               w.field_n[0] == 2) {
@@ -227,19 +227,19 @@ final class n {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = ke.field_e.field_O.measureText(var16) + ke.field_e.field_O.getAdvance('.') * 3;
-              ke.field_e.field_S = 0;
+              var10Lifetime1 = AppletGameShell.field_e.field_O.measureText(var16) + AppletGameShell.field_e.field_O.getAdvance('.') * 3;
+              AppletGameShell.field_e.field_S = 0;
               if (16 == (an.field_h & 48)) {
                 var9 = var16 + ".";
               }
-              ke.field_e.field_V = (-var10Lifetime1 + ke.field_e.field_Ib) / 2;
+              AppletGameShell.field_e.field_V = (-var10Lifetime1 + AppletGameShell.field_e.field_Ib) / 2;
               if ((48 & an.field_h) == 32) {
                 var9 = (String) (var9) + "..";
               }
               if ((an.field_h & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              ke.field_e.field_Mb = (String) (var9);
+              AppletGameShell.field_e.field_Mb = (String) (var9);
               dn.field_K.field_Mb = wl.field_L.toUpperCase();
             } else {
               stackIn_28_0 = dn.field_K;
@@ -257,7 +257,7 @@ final class n {
               }
               stackIn_31_0.field_Mb = rd.a(stackIn_32_1, new String[]{dn.field_K.field_Mb}, (byte) 103);
               dc.field_g = true;
-              ke.field_e.field_Mb = mp.field_Pb;
+              AppletGameShell.field_e.field_Mb = mp.field_Pb;
               ij.field_e.field_eb = true;
               if (br.field_bc != null) {
                 if (null == qo.field_J) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qg extends ke {
+abstract class GameConnectionShell extends AppletGameShell {
     private int field_o;
     static RgbSprite[][] field_r;
     String field_x;
@@ -237,7 +237,7 @@ abstract class qg extends ke {
         qb.g(108);
         tf.a(DirectByteStorage.field_e, (byte) -61, var2);
         n.field_e = true;
-        cg.field_i = ue.a(false) + 15000L;
+        NanoGameClock.field_i = MonotonicTime.nowMillis(false) + 15000L;
         return var2;
     }
 
@@ -686,7 +686,7 @@ abstract class qg extends ke {
         }
     }
 
-    qg() {
+    GameConnectionShell() {
     }
 
     final void b(boolean param0, int param1) {
@@ -729,7 +729,7 @@ abstract class qg extends ke {
             tf.a(qa.field_s, (byte) -113, 2);
             rj.b(param1 ^ -111);
             n.field_e = true;
-            cg.field_i = 15000L + ue.a(false);
+            NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
           }
         }
         if (tm.field_a == -1 ||
@@ -745,7 +745,7 @@ abstract class qg extends ke {
           }
           if (-1 != tm.field_a &&
             tm.field_a != 0) {
-            cg.field_i = 15000L + ue.a(false);
+            NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
           }
         }
         if (tm.field_a != -1 &&
@@ -764,7 +764,7 @@ abstract class qg extends ke {
                       tf.a(np.field_e, (byte) -55, 256);
                     }
                   } else {
-                    tf.a(ke.field_k, (byte) -54, 256);
+                    tf.a(AppletGameShell.field_k, (byte) -54, 256);
                   }
                 } else {
                   tf.a(vh.field_M, (byte) -103, 256);
@@ -795,7 +795,7 @@ abstract class qg extends ke {
         if ((tm.field_a != -1 &&
           0 != tm.field_a ||
           ui.a(false)) &&
-          cg.field_i <= ue.a(false)) {
+          NanoGameClock.field_i <= MonotonicTime.nowMillis(false)) {
           n.field_e = false;
           if (tm.field_a != -1 &&
             0 != tm.field_a) {

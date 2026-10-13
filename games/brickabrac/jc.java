@@ -266,16 +266,16 @@ abstract class jc extends ib {
           if (1 == param1) {
             MatchCompleteScreen.field_E = MatchCompleteScreen.field_E + 1;
             if ((param0 & 2) != 0) {
-              dj.field_d = dj.field_d + 1;
+              GameClock.field_d = GameClock.field_d + 1;
             }
             if (pp.field_a != 3) {
               return;
             }
             if (MatchCompleteScreen.field_E <= 2 &&
-              dj.field_d <= 0) {
+              GameClock.field_d <= 0) {
               return;
             }
-            SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
+            SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
             ga.field_i = 4;
             tb.field_eb = o.field_a;
             pp.field_a = -1;
@@ -298,7 +298,7 @@ abstract class jc extends ib {
             pp.field_a = -1;
             BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
             kb.field_Sb = true;
-            SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
+            SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
             return;
           }
           if (param1 == 3) {
@@ -333,7 +333,7 @@ abstract class jc extends ib {
                 ga.field_i = 12;
                 pp.field_a = -1;
                 tb.field_eb = rh.field_a;
-                SpriteGeometry.field_v = MembershipBenefitsScreen.field_x;
+                SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 return;
               }
             } else {

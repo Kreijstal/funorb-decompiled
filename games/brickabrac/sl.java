@@ -93,7 +93,7 @@ abstract class sl extends DualLinkNode {
           ff.field_i = param14;
           pf.field_i = param11;
           ki.field_k = param9;
-          dj.field_f = cr.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
+          GameClock.field_f = cr.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
           bq.field_c = cr.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
           uo.field_c = cr.loadRgbSpritesByName("lobby", param7, "opentome", 2);
           Ball.field_K = cr.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
@@ -197,7 +197,7 @@ abstract class sl extends DualLinkNode {
           gb.field_l[0] = new mh(0L, wi.field_n, ro.field_H);
           MatchCompleteScreen.field_A[0] = new rk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, dj.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
+            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
             gb.field_l[1] = new mh(0L, wi.field_n, og.field_ac);
@@ -261,10 +261,10 @@ abstract class sl extends DualLinkNode {
           }
           pf.field_h = new mh(0L, fm.field_b);
           dn.field_K = new mh(0L, fm.field_b);
-          ke.field_e = new mh(0L, Paddle.field_C);
-          ke.field_e.a((byte) -125, ad.field_l);
-          var17 = ke.field_e;
-          ke.field_e.field_Q = 1;
+          AppletGameShell.field_e = new mh(0L, Paddle.field_C);
+          AppletGameShell.field_e.a((byte) -125, ad.field_l);
+          var17 = AppletGameShell.field_e;
+          AppletGameShell.field_e.field_Q = 1;
           var17.field_S = 1;
           MultiplayerMatch.field_d = new mh(0L, (mh) null);
           MultiplayerMatch.field_d.a(ba.field_v, 0);
@@ -284,7 +284,7 @@ abstract class sl extends DualLinkNode {
           }
           MultiplayerMatch.field_d.a(pf.field_h, 0);
           MultiplayerMatch.field_d.a(dn.field_K, 0);
-          MultiplayerMatch.field_d.a(ke.field_e, 0);
+          MultiplayerMatch.field_d.a(AppletGameShell.field_e, 0);
           pk.field_h = new mh(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
           nd.field_a = new mh(0L, ij.field_b, fh.field_e.toUpperCase());
           return;

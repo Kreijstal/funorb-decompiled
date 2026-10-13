@@ -16,7 +16,7 @@ final class tf {
         int var3_int = 0;
         try {
           t.field_g = false;
-          sa.field_E = false;
+          InteractiveGameClient.field_E = false;
           if (param1 >= -43) {
             field_c = (RgbSprite[]) null;
           }
@@ -26,7 +26,7 @@ final class tf {
             }
             var3_int = 1;
             if (param2 == 8) {
-              if (cg.field_l) {
+              if (NanoGameClock.field_l) {
                 param0 = TooltipSprite.field_n;
               } else {
                 param0 = gi.field_u;
@@ -39,7 +39,7 @@ final class tf {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (sa.field_E) {
+              if (InteractiveGameClient.field_E) {
                 param0 = rd.a(wi.field_h, new String[]{param0}, (byte) 103);
               }
               if (ln.field_l) {
@@ -51,7 +51,7 @@ final class tf {
               if (10 == param2) {
                 return;
               }
-              if (!cg.field_l) {
+              if (!NanoGameClock.field_l) {
                 DirectByteStorage.field_k.h(-113);
                 return;
               }

@@ -348,15 +348,15 @@ final class nh {
             dn.field_K.field_cb = 0;
             var6 = dn.field_K;
             var6.field_Ib = 0;
-            var7 = ke.field_e;
-            ke.field_e.field_cb = 0;
+            var7 = AppletGameShell.field_e;
+            AppletGameShell.field_e.field_cb = 0;
             var7.field_Ib = 0;
             if (!hn.b((byte) 7)) {
               var9_ref_String = o.field_e.field_Fc;
               ba.field_v.field_Mb = rd.a(fm.field_a, new String[]{var9_ref_String}, (byte) 103).toUpperCase();
-              ke.field_e.a(40, MultiplayerMatch.field_d.field_cb - 40, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
-              ke.field_e.field_Mb = rd.a(IntrusiveNode.field_a, new String[]{var9_ref_String}, (byte) 103);
-              var8 = ke.field_e;
+              AppletGameShell.field_e.a(40, MultiplayerMatch.field_d.field_cb - 40, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
+              AppletGameShell.field_e.field_Mb = rd.a(IntrusiveNode.field_a, new String[]{var9_ref_String}, (byte) 103);
+              var8 = AppletGameShell.field_e;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
@@ -672,7 +672,7 @@ final class nh {
               }
             }
             if (0L != ic.field_b) {
-              var9 = (int)(ic.field_b - ue.a(false));
+              var9 = (int)(ic.field_b - MonotonicTime.nowMillis(false));
               var9 = (var9 + 999) / 1000;
               if (1 > var9) {
                 var9 = 1;

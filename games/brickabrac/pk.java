@@ -35,11 +35,11 @@ final class pk {
           if (param0 < 24) {
             return;
           }
-          if (qg.field_A < 10) {
+          if (GameConnectionShell.field_A < 10) {
             var3_int = 0;
-            if (GameplayAudioEvent.field_i) {
+            if (GameplayAudioEvent.redrawRequested) {
               var3_int = 1;
-              GameplayAudioEvent.field_i = false;
+              GameplayAudioEvent.redrawRequested = false;
             }
             po.a(ArchiveNetworkRequest.d((byte) 103), sb.field_f, oj.b(false), var3_int != 0, 0);
             return;

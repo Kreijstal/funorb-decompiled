@@ -5,7 +5,7 @@ final class kh {
     private IntrusiveNode field_f;
     static int[][] field_e;
     private NodeDeque field_g;
-    static int field_a;
+    static int screenTransitionTick;
     static RgbSprite[][] field_d;
     static int[][] field_c;
     static ResourceArchive field_i;

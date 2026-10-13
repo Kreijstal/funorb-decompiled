@@ -10,7 +10,7 @@ class d extends oc {
     static String field_D;
     boolean field_F;
     static String field_G;
-    static int field_H;
+    static int recentRenderRate;
     boolean field_J;
 
     public static void g(int param0) {
@@ -290,7 +290,7 @@ class d extends oc {
 
     static {
         field_D = "Achievements";
-        field_H = 0;
+        recentRenderRate = 0;
         field_G = "Join <%0>'s game";
     }
 }

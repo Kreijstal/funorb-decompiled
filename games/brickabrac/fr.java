@@ -50,7 +50,7 @@ final class fr {
         if (param0 <= 33) {
           fr.d(-80);
         }
-        return cg.field_l;
+        return NanoGameClock.field_l;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

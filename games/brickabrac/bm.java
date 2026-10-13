@@ -105,7 +105,7 @@ final class bm {
                         if (param4.field_A > 0 &&
                           param4.field_p != null) {
                           dupTemp$0 = param4.field_p[var8];
-                          ke.field_m[dupTemp$0] = ke.field_m[dupTemp$0] + 1;
+                          AppletGameShell.field_m[dupTemp$0] = AppletGameShell.field_m[dupTemp$0] + 1;
                         }
                         mc.field_c = mc.field_c + 1;
                         break;
@@ -129,9 +129,9 @@ final class bm {
             param4.field_p != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= ke.field_m.length)) {
-              var10Lifetime1 = ke.field_m[var9Lifetime1];
-              ke.field_m[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= AppletGameShell.field_m.length)) {
+              var10Lifetime1 = AppletGameShell.field_m[var9Lifetime1];
+              AppletGameShell.field_m[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {
@@ -328,7 +328,7 @@ final class bm {
                                     var7_ref = ta.uiSounds[12];
                                   } else {
                                     if (var6.eventCode == 11) {
-                                      var7_ref = cg.field_p[oo.field_w.nextBoundedInt(-37880252, cg.field_p.length)];
+                                      var7_ref = NanoGameClock.field_p[oo.field_w.nextBoundedInt(-37880252, NanoGameClock.field_p.length)];
                                     } else {
                                       if (var6.eventCode == 12) {
                                         var7_ref = ta.uiSounds[13];

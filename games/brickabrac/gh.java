@@ -42,7 +42,7 @@ final class gh {
           lj.a(param16, param13, param12, 0, param4);
           ka.a(param0, -28, param5, param11);
           cd.a(param10, param1, param19, 7, param18, param2);
-          qg.a(param3, param9, (byte) -119);
+          GameConnectionShell.a(param3, param9, (byte) -119);
           fq.a((byte) 94, param15, param17, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

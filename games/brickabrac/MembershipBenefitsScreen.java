@@ -6,9 +6,9 @@ final class MembershipBenefitsScreen extends MenuScreen {
     private IndexedSprite[] screenshots;
     static mh field_t;
     private ResourceArchive archive;
-    static int field_x;
+    static int clientTick;
     static RgbSprite field_s;
-    static int field_w;
+    static int renderTimeCursor;
 
     public static void g(int param0) {
         field_v = null;
@@ -51,9 +51,9 @@ final class MembershipBenefitsScreen extends MenuScreen {
     final static long f(int param0) {
         if (param0 != -6792) {
           field_s = (RgbSprite) null;
-          return ue.a(false) - oj.field_t;
+          return MonotonicTime.nowMillis(false) - oj.field_t;
         }
-        return ue.a(false) - oj.field_t;
+        return MonotonicTime.nowMillis(false) - oj.field_t;
     }
 
     private final boolean c(int param0, int param1) {
@@ -98,8 +98,8 @@ final class MembershipBenefitsScreen extends MenuScreen {
         ff.field_c = new w(sl.field_C, oc.field_u, this.screenshots, false, SaveResultsPromptScreen.field_u);
     }
 
-    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
-        if (keyCode <= 98) {
+    final boolean handleKey(char character, int obfuscationGuard, int keyCode) {
+        if (obfuscationGuard <= 98) {
           return false;
         }
         if (null != ff.field_c) {

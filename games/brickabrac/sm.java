@@ -6,10 +6,10 @@ import java.io.*;
 final class sm {
     static int field_b;
     static int field_a;
-    static long[] field_c;
+    static long[] tickTimes;
 
     public static void a(int param0) {
-        field_c = null;
+        tickTimes = null;
         if (param0 != 30000) {
           sm.a(21);
         }
@@ -57,7 +57,7 @@ final class sm {
               var2.writeInt(fi.field_t, (byte) -79);
               MouseInput.field_d.write(var2.data, true, 13, 0);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
-              ff.field_b = ue.a(false) + 30000L;
+              ff.field_b = MonotonicTime.nowMillis(false) + 30000L;
             }
             if (GameplayScreen.field_j == 3) {
               if (MouseInput.field_d.available(10434) > 0) {
@@ -68,7 +68,7 @@ final class sm {
                 }
                 GameplayScreen.field_j = GameplayScreen.field_j + 1;
               } else {
-                if (ff.field_b < ue.a(false)) {
+                if (ff.field_b < MonotonicTime.nowMillis(false)) {
                   stackIn_27_0 = Brick.a((byte) -85, -2);
                   return stackIn_27_0;
                 }
@@ -99,6 +99,6 @@ final class sm {
     static {
         field_a = 0;
         field_b = field_a;
-        field_c = new long[32];
+        tickTimes = new long[32];
     }
 }

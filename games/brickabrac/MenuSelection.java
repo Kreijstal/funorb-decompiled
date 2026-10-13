@@ -7,7 +7,7 @@ final class MenuSelection {
     static int field_g;
     private int keyCode;
     int itemCount;
-    static dj field_b;
+    static GameClock gameClock;
     private int activationCode;
     static int[] field_q;
     static String field_f;
@@ -27,7 +27,7 @@ final class MenuSelection {
           field_m = null;
           field_a = null;
           field_f = null;
-          field_b = null;
+          gameClock = null;
           field_q = null;
           field_k = null;
           field_p = null;
@@ -571,7 +571,7 @@ final class MenuSelection {
 
     final void pollKeyboardCode(byte obfuscationGuard) {
         if (obfuscationGuard != -124) {
-          field_b = (dj) null;
+          gameClock = (GameClock) null;
           this.keyCode = 0;
           this.pressCode = 0;
           this.activationCode = 0;

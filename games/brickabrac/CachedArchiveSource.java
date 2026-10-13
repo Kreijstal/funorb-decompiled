@@ -83,7 +83,7 @@ final class CachedArchiveSource extends ArchiveSource {
             var7 = pl.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
             var8 = NewAchievementsScreen.field_J - (var7 >> 1);
             if (var4 >= 0) {
-              var2 = var2 + dj.field_g;
+              var2 = var2 + GameClock.field_g;
               if (fi.field_r.selectedIndex != var4) {
                 stackIn_17_0 = ag.field_F;
               } else {
@@ -97,7 +97,7 @@ final class CachedArchiveSource extends ArchiveSource {
             }
             if (var4 >= 0) {
               lj.field_r.drawLeft(var6, var8, lj.field_i + var2, var5, -1);
-              var2 = var2 + (TooltipSprite.field_i + dj.field_g + GameCanvas.field_f);
+              var2 = var2 + (TooltipSprite.field_i + GameClock.field_g + GameCanvas.field_f);
             } else {
               oc.field_m.drawLeft(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
               var2 = var2 + BufferedSocket.field_m;
@@ -297,7 +297,7 @@ final class CachedArchiveSource extends ArchiveSource {
           }
         }
         if (this.cleanupEnabled &&
-          this.nextCleanupMillis <= ue.a(false)) {
+          this.nextCleanupMillis <= MonotonicTime.nowMillis(false)) {
           var2 = (ResourceRequest) (this.requests.first(-15519));
           while (var2 != null) {
             if (!var2.pending) {
@@ -312,7 +312,7 @@ final class CachedArchiveSource extends ArchiveSource {
             }
             var2 = (ResourceRequest) (this.requests.next(true));
           }
-          this.nextCleanupMillis = ue.a(false) + 1000L;
+          this.nextCleanupMillis = MonotonicTime.nowMillis(false) + 1000L;
         }
         if (obfuscationGuard != 1) {
           this.processQueuedGroups(-33);

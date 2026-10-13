@@ -75,13 +75,13 @@ abstract class ArchiveSource {
         }
     }
 
-    final static void a(int param0, long param1) {
+    final static void sleepOnce(int obfuscationGuard, long millis) {
         try {
           Throwable decompiledCaughtException = null;
           InterruptedException var3 = null;
           try {
-            Thread.sleep(param1);
-            if (param0 != -29869) {
+            Thread.sleep(millis);
+            if (obfuscationGuard != -29869) {
               field_a = (String) null;
               return;
             }
@@ -104,7 +104,7 @@ abstract class ArchiveSource {
           ArchiveFetchClient.field_d = gb.a(var3, 71);
           return;
         }
-        ArchiveSource.a(49, -113L);
+        ArchiveSource.sleepOnce(49, -113L);
         tb.field_cb = jl.field_e.readCp1252String(-1);
         CharSequence var2 = (CharSequence) ((Object) tb.field_cb);
         ArchiveFetchClient.field_d = gb.a(var2, 71);
@@ -120,7 +120,7 @@ abstract class ArchiveSource {
         field_d = null;
         field_c = null;
         if (param0 != -59) {
-          ArchiveSource.a(-15, -86L);
+          ArchiveSource.sleepOnce(-15, -86L);
         }
     }
 

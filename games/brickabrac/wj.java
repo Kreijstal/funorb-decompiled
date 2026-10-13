@@ -2,29 +2,29 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj extends IntrusiveNode {
-    final static void a(int param0, long param1) {
-        if (param0 > -123) {
-          wj.a(112, -29L);
-          if (0L >= param1) {
+    final static void sleepMillis(int obfuscationGuard, long millis) {
+        if (obfuscationGuard > -123) {
+          wj.sleepMillis(112, -29L);
+          if (0L >= millis) {
             return;
           }
-          if (0L != param1 % 10L) {
-            ArchiveSource.a(-29869, param1);
+          if (0L != millis % 10L) {
+            ArchiveSource.sleepOnce(-29869, millis);
             return;
           }
-          ArchiveSource.a(-29869, -1L + param1);
-          ArchiveSource.a(-29869, 1L);
+          ArchiveSource.sleepOnce(-29869, -1L + millis);
+          ArchiveSource.sleepOnce(-29869, 1L);
           return;
         }
-        if (0L >= param1) {
+        if (0L >= millis) {
           return;
         }
-        if (0L != param1 % 10L) {
-          ArchiveSource.a(-29869, param1);
+        if (0L != millis % 10L) {
+          ArchiveSource.sleepOnce(-29869, millis);
           return;
         }
-        ArchiveSource.a(-29869, -1L + param1);
-        ArchiveSource.a(-29869, 1L);
+        ArchiveSource.sleepOnce(-29869, -1L + millis);
+        ArchiveSource.sleepOnce(-29869, 1L);
     }
 
     final static String a(int param0, String param1, char param2, String param3) {

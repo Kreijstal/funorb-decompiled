@@ -12,7 +12,7 @@ final class c {
     static vm field_j;
     static th field_m;
     private int field_b;
-    static int field_a;
+    static int cyclesDue;
     static String field_d;
     static RgbSprite field_e;
     static String field_n;
@@ -91,8 +91,8 @@ final class c {
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
             }
-            ke.field_e.field_S = 1;
-            ke.field_e.field_V = Paddle.field_C.field_V;
+            AppletGameShell.field_e.field_S = 1;
+            AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
             if (0 < pe.field_j) {
               n.a(param2, param8, param3, (byte) -76);
             }
@@ -114,8 +114,8 @@ final class c {
             pq.a(-128, param3);
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
-              ke.field_e.field_S = 1;
-              ke.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.field_S = 1;
+              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -133,8 +133,8 @@ final class c {
                 ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
-              ke.field_e.field_S = 1;
-              ke.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.field_S = 1;
+              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -169,7 +169,7 @@ final class c {
                 if (null != nl.field_f) {
                   CacheIoRequest.a(true, true);
                 } else {
-                  cg.b(31);
+                  NanoGameClock.b(31);
                 }
               }
             }
@@ -179,8 +179,8 @@ final class c {
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
-              ke.field_e.field_S = 1;
-              ke.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.field_S = 1;
+              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -203,8 +203,8 @@ final class c {
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
-              ke.field_e.field_S = 1;
-              ke.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.field_S = 1;
+              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -236,7 +236,7 @@ final class c {
                 if (null != nl.field_f) {
                   CacheIoRequest.a(true, true);
                 } else {
-                  cg.b(31);
+                  NanoGameClock.b(31);
                 }
               }
             }
@@ -246,8 +246,8 @@ final class c {
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
-              ke.field_e.field_S = 1;
-              ke.field_e.field_V = Paddle.field_C.field_V;
+              AppletGameShell.field_e.field_S = 1;
+              AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -269,8 +269,8 @@ final class c {
               pq.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
-                ke.field_e.field_S = 1;
-                ke.field_e.field_V = Paddle.field_C.field_V;
+                AppletGameShell.field_e.field_S = 1;
+                AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
                 if (0 < pe.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
@@ -288,8 +288,8 @@ final class c {
                   ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 }
               } else {
-                ke.field_e.field_S = 1;
-                ke.field_e.field_V = Paddle.field_C.field_V;
+                AppletGameShell.field_e.field_S = 1;
+                AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
                 if (0 < pe.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }

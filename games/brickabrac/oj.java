@@ -446,7 +446,7 @@ final class oj extends ep {
     }
 
     final static int b(boolean param0) {
-        if (qg.field_A < 2) {
+        if (GameConnectionShell.field_A < 2) {
           return 0;
         }
         if (cd.field_e == 0) {

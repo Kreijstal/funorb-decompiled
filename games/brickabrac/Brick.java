@@ -289,7 +289,7 @@ final class Brick extends RectangleBody {
                 } else {
                   board.field_l = board.field_l + 1;
                 }
-                this.pendingTypeId = ue.field_b[this.typeId];
+                this.pendingTypeId = MonotonicTime.field_b[this.typeId];
                 dupTemp$0 = rb.field_a[this.typeId];
                 this.transitionCode = dupTemp$0;
                 if (dupTemp$0 < 0) {

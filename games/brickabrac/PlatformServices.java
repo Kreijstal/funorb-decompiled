@@ -141,7 +141,7 @@ final class PlatformServices implements Runnable {
                     var8.result = var18;
                     break;
                   case 4:
-                    if (ue.a(false) < field_f) {
+                    if (MonotonicTime.nowMillis(false) < field_f) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.payload)).openStream());
@@ -268,13 +268,13 @@ final class PlatformServices implements Runnable {
                         }
                         break;
                       case 21:
-                        if (ue.a(false) < field_f) {
+                        if (MonotonicTime.nowMillis(false) < field_f) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.payload)).getAddress();
                         break;
                       case 3:
-                        if (ue.a(false) < field_f) {
+                        if (MonotonicTime.nowMillis(false) < field_f) {
                           throw new IOException();
                         }
                         var9 = (255 & var8.argumentOne >> 24) + "." + (var8.argumentOne >> 16 & 255) + "." + ((65391 & var8.argumentOne) >> 8) + "." + (255 & var8.argumentOne);
@@ -283,7 +283,7 @@ final class PlatformServices implements Runnable {
                     }
                     break;
                   case 22:
-                    if (field_f > ue.a(false)) {
+                    if (field_f > MonotonicTime.nowMillis(false)) {
                       throw new IOException();
                     }
                     try {
@@ -297,7 +297,7 @@ final class PlatformServices implements Runnable {
                     }
                     break;
                   case 1:
-                    if (ue.a(false) < field_f) {
+                    if (MonotonicTime.nowMillis(false) < field_f) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.payload)), var8.argumentOne);

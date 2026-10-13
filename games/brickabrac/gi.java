@@ -14,14 +14,14 @@ final class gi extends ki {
           if (!var6.matchesCacheKeys((byte) -84, param3, this.field_m)) {
             RankingsScreen.a(var6, 1, 0, OptionsScreen.field_B, param3, 100);
             var6.setCacheKeys(this.field_m, param3, (byte) 78);
-            sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
+            InteractiveGameClient.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
             if (!param0) {
               field_u = (String) null;
               return;
             }
             return;
           }
-          sa.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
+          InteractiveGameClient.a((byte) 119, wn.field_b, param2, 1, lj.field_q, var6.sprite, param1, 640, 0, param4);
           if (!param0) {
             field_u = (String) null;
             return;
@@ -119,10 +119,10 @@ final class gi extends ki {
             RankingsScreen.a(var7, 2, -13, pp.field_b, param3, 102);
             var7.setCacheKeys(this.field_m, param3, (byte) 78);
           } else {
-            sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
+            InteractiveGameClient.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
             return;
           }
-          sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
+          InteractiveGameClient.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
           return;
         }
         if (!this.b((byte) -123)) {
@@ -134,10 +134,10 @@ final class gi extends ki {
           RankingsScreen.a(var8, 2, -13, pp.field_b, param3, 102);
           var8.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
+          InteractiveGameClient.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
           return;
         }
-        sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
+        InteractiveGameClient.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
     }
 
     gi(int param0, String param1, String param2, int param3) {

@@ -12,14 +12,14 @@ abstract class GameScreen {
 
     abstract void drawScreen(byte obfuscationGuard);
 
-    final boolean a(byte param0) {
-        if (param0 != -51) {
+    final boolean supportsTransition(byte obfuscationGuard) {
+        if (obfuscationGuard != -51) {
           return true;
         }
         return true;
     }
 
-    abstract boolean handleKey(char character, int keyCode, int obfuscationGuard);
+    abstract boolean handleKey(char character, int obfuscationGuard, int keyCode);
 
     abstract void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard);
 

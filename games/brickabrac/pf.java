@@ -207,7 +207,7 @@ final class pf implements ub {
           }
           sl.a(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
           ed.a(param5, param7, param2, (byte) 104);
-          dj.b((byte) 13);
+          GameClock.b((byte) 13);
           h.g((byte) -24);
           nb.b((byte) 40);
           return;

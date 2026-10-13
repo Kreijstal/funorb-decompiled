@@ -30,7 +30,7 @@ final class jj {
           if (m.a(2)) {
             var1 = 1;
             pe.c(126);
-            if (!dj.c((byte) 119)) {
+            if (!GameClock.c((byte) 119)) {
               if (me.b(param0 + 39)) {
                 var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
@@ -42,7 +42,7 @@ final class jj {
             }
             if (!lg.a(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+              ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.frameFocus : true);
               if (me.b(param0 + 39)) {
                 var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
@@ -67,10 +67,10 @@ final class jj {
               var1 = 1;
               gi.g(param0 ^ -11184849);
             }
-            if (dj.c((byte) 119) &&
+            if (GameClock.c((byte) 119) &&
               !lg.a(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+              ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.frameFocus : true);
             }
             if (me.b(param0 + 39)) {
               var2Lifetime4 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -83,10 +83,10 @@ final class jj {
           }
           o.a(-24435);
           var1 = 1;
-          if (dj.c((byte) 119) &&
+          if (GameClock.c((byte) 119) &&
             !lg.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.frameFocus : true);
           }
           if (me.b(param0 + 39)) {
             var2Lifetime5 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -100,10 +100,10 @@ final class jj {
         if (m.a(2)) {
           var1 = 1;
           pe.c(126);
-          if (dj.c((byte) 119) &&
+          if (GameClock.c((byte) 119) &&
             !lg.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.frameFocus : true);
           }
           if (me.b(param0 + 39)) {
             var2Lifetime1 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -120,10 +120,10 @@ final class jj {
             var1 = 1;
             gi.g(param0 ^ -11184849);
           }
-          if (dj.c((byte) 119) &&
+          if (GameClock.c((byte) 119) &&
             !lg.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.frameFocus : true);
           }
           if (me.b(param0 + 39)) {
             var2Lifetime2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -136,10 +136,10 @@ final class jj {
         }
         o.a(-24435);
         var1Lifetime1 = 1;
-        if (dj.c((byte) 119) &&
+        if (GameClock.c((byte) 119) &&
           !lg.a(9)) {
           var1Lifetime1 = 1;
-          ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+          ArchiveFetchClient.a((byte) -118, ua.field_d == null ? qa.frameFocus : true);
         }
         if (me.b(param0 + 39)) {
           var2Lifetime3 = (CachedArchiveSource.field_p - 1 << 8) / 16;

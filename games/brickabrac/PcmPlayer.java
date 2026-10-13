@@ -37,7 +37,7 @@ class PcmPlayer {
           if (this.field_d) {
             return;
           }
-          var1 = ue.a(false);
+          var1 = MonotonicTime.nowMillis(false);
           try {
             if (var1 > this.field_m + 6000L) {
               this.field_m = var1 - 6000L;
@@ -45,7 +45,7 @@ class PcmPlayer {
             while (var1 > this.field_m + 5000L) {
               this.a(256);
               this.field_m = this.field_m + (long)(256000 / sampleRate);
-              var1 = ue.a(false);
+              var1 = MonotonicTime.nowMillis(false);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,7 +242,7 @@ class PcmPlayer {
         if (this.rootStream != null) {
           this.rootStream.fill(param0, 0, param1);
         }
-        this.field_m = ue.a(false);
+        this.field_m = MonotonicTime.nowMillis(false);
     }
 
     public static void g() {
@@ -379,7 +379,7 @@ class PcmPlayer {
           if (var1 != 0) {
             field_c.field_a = true;
             while (field_c.field_b) {
-              wj.a(-125, 50L);
+              wj.sleepMillis(-125, 50L);
             }
             field_c = null;
           }
@@ -411,7 +411,7 @@ class PcmPlayer {
             this.h();
           } catch (Exception exception) {
             this.d();
-            this.field_r = ue.a(false) + 2000L;
+            this.field_r = MonotonicTime.nowMillis(false) + 2000L;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -423,7 +423,7 @@ class PcmPlayer {
     PcmPlayer() {
         this.field_j = 32;
         this.field_d = false;
-        this.field_m = ue.a(false);
+        this.field_m = MonotonicTime.nowMillis(false);
         this.field_r = 0L;
         this.priorityHeads = new AudioStream[8];
         this.field_b = 0L;

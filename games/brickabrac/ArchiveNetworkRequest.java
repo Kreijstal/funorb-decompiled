@@ -109,7 +109,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
     }
 
     final static String d(byte param0) {
-        if (!(2 <= qg.field_A)) {
+        if (!(2 <= GameConnectionShell.field_A)) {
           return kd.field_c;
         }
         if (null != wl.field_K) {

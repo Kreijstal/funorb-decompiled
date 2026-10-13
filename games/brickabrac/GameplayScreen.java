@@ -288,7 +288,7 @@ final class GameplayScreen extends GameScreen {
             po.a((byte) -97);
             if (!this.field_p) {
               ng.requestScreen(false, 62, 20);
-              NewAchievementsScreen.field_G = true;
+              NewAchievementsScreen.discardGameplayOnTransition = true;
             } else {
               if (KeyboardInput.field_a) {
                 if (null == hd.pendingScreen ||
@@ -418,7 +418,7 @@ final class GameplayScreen extends GameScreen {
         if (this.match.playerCount == 1) {
           var20 = this.match.playerBoards[0];
           if (var20.levelIndex > this.field_i) {
-            var9_long = ue.a(false);
+            var9_long = MonotonicTime.nowMillis(false);
             this.a(gq.field_Yb, this.field_i, var9_long - fl.field_l, true, 1000);
             fl.field_l = var9_long;
             this.field_i = var20.levelIndex;
@@ -535,9 +535,9 @@ final class GameplayScreen extends GameScreen {
               this.b(21, 109, 234);
             }
           }
-          if (dj.field_b != var20.score) {
-            dj.field_b = var20.score;
-            vd.field_d = Integer.toString(dj.field_b);
+          if (GameClock.field_b != var20.score) {
+            GameClock.field_b = var20.score;
+            vd.field_d = Integer.toString(GameClock.field_b);
           }
           if (pg.field_m != 1 + pp.a(var20, (byte) 59, this.match)) {
             pg.field_m = pp.a(var20, (byte) -100, this.match) + 1;
@@ -605,7 +605,7 @@ final class GameplayScreen extends GameScreen {
             !this.field_s) {
             this.a(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.e(0);
-            this.a(gq.field_Yb, this.field_r, -fl.field_l + ue.a(false), false, 1000);
+            this.a(gq.field_Yb, this.field_r, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
             jj.field_d = jj.field_d | ja.a(this.field_t, this.match.configuration, -1 + this.field_r, true);
             stackIn_8_0 = (hh.field_b[0] == 0);
             be.field_a = stackIn_8_0;
@@ -756,7 +756,7 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
+    final boolean handleKey(char character, int obfuscationGuard, int keyCode) {
         int fieldTemp$0 = 0;
         boolean stackIn_152_0 = false;
         int var4;
@@ -798,7 +798,7 @@ final class GameplayScreen extends GameScreen {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
           ep.field_i = ep.field_i - 2 * og.field_Wb;
         }
-        if (keyCode <= 98) {
+        if (obfuscationGuard <= 98) {
           return false;
         }
         if (6 == var4) {
@@ -837,7 +837,7 @@ final class GameplayScreen extends GameScreen {
           tm.field_g = tm.field_g + 1;
           ek.field_kb = ek.field_kb + qm.field_a;
         }
-        if (obfuscationGuard == 13) {
+        if (keyCode == 13) {
           boolean decompiledFrameRemainder0 = true;
           var4Lifetime2 = 1;
           if (this.field_p) {
@@ -881,7 +881,7 @@ final class GameplayScreen extends GameScreen {
         if (this.match.playerCount == 1 &&
           r.field_A &&
           ka.a((byte) 113)) {
-          if (84 == obfuscationGuard) {
+          if (84 == keyCode) {
             GzipInflater.b(-8);
           }
           return true;
@@ -890,41 +890,41 @@ final class GameplayScreen extends GameScreen {
           this.field_y) {
           var7 = this.match.playerBoards[0];
           var8 = var7;
-          if (48 == obfuscationGuard) {
+          if (48 == keyCode) {
             this.field_s = true;
             var7.field_m = dp.field_r[0] - 5;
             return true;
           }
-          if (obfuscationGuard == 68) {
+          if (keyCode == 68) {
             var7.field_m = dp.field_r[1] - 5;
             this.field_s = true;
             return true;
           }
-          if (66 == obfuscationGuard) {
+          if (66 == keyCode) {
             var7.field_m = -5 + dp.field_r[2];
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 50) {
+          if (keyCode == 50) {
             this.field_t = -dp.field_r[3] + (var8.levelIndex + 1);
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 34) {
+          if (keyCode == 34) {
             this.field_s = true;
             this.field_t = var7.levelIndex + 1 - dp.field_r[4];
             return true;
           }
-          if (51 == obfuscationGuard) {
+          if (51 == keyCode) {
             var7.score = dp.field_r[7] - 20;
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 52) {
+          if (keyCode == 52) {
             this.field_s = true;
             var7.score = -20 + dp.field_r[8];
           }
-          if (obfuscationGuard == 53) {
+          if (keyCode == 53) {
             var5_ref_vn = (Ball) (var8.activeBalls.first(-19));
             while (var5_ref_vn != null) {
               var5_ref_vn.brickBounceCount = dp.field_r[9] - 2;
@@ -933,7 +933,7 @@ final class GameplayScreen extends GameScreen {
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 39) {
+          if (keyCode == 39) {
             var5_ref_vnLifetime1 = (Ball) (var8.activeBalls.first(-114));
             while (var5_ref_vnLifetime1 != null) {
               var5_ref_vnLifetime1.brickBounceCount = dp.field_r[10] - 2;
@@ -942,7 +942,7 @@ final class GameplayScreen extends GameScreen {
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 54) {
+          if (keyCode == 54) {
             fieldTemp$0 = var8.levelIndex + 1;
             var8.levelIndex = var8.levelIndex + 1;
             if (DualLinkNode.field_q > fieldTemp$0) {
@@ -954,7 +954,7 @@ final class GameplayScreen extends GameScreen {
             var8.field_P = 0;
             return true;
           }
-          if (obfuscationGuard == 55) {
+          if (keyCode == 55) {
             for (var5Lifetime2 = 0; 29 > var5Lifetime2; var5Lifetime2++) {
               if (to.field_f[var5Lifetime2] > -1) {
                 var7.field_o[var5Lifetime2] = (byte)(-1 + to.field_f[var5Lifetime2]);
@@ -963,14 +963,14 @@ final class GameplayScreen extends GameScreen {
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 56) {
+          if (keyCode == 56) {
             var8.field_rb = 5;
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard >= 16 &&
-            25 >= obfuscationGuard) {
-            var5Lifetime2Lifetime1 = -16 - (-obfuscationGuard - 1);
+          if (keyCode >= 16 &&
+            25 >= keyCode) {
+            var5Lifetime2Lifetime1 = -16 - (-keyCode - 1);
             this.field_s = true;
             if (pe.heldKeys[81]) {
               var5Lifetime2Lifetime1 += 10;
@@ -980,47 +980,47 @@ final class GameplayScreen extends GameScreen {
               return true;
             }
           }
-          if (70 == obfuscationGuard) {
+          if (70 == keyCode) {
             var8.field_l = 6;
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 69) {
+          if (keyCode == 69) {
             this.field_s = true;
             var7.field_hb = -1 + dp.field_r[29];
             return true;
           }
-          if (obfuscationGuard == 40) {
+          if (keyCode == 40) {
             var7.field_u = -1 + dp.field_r[30];
             this.field_s = true;
             return true;
           }
-          if (41 == obfuscationGuard) {
+          if (41 == keyCode) {
             var7.field_u = dp.field_r[31] - 1;
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 32) {
+          if (keyCode == 32) {
             var7.field_N = dp.field_r[32] - 1;
             this.field_s = true;
             return true;
           }
-          if (obfuscationGuard == 35) {
+          if (keyCode == 35) {
             var7.field_N = -1 + dp.field_r[33];
             this.field_s = true;
             return true;
           }
-          if (49 == obfuscationGuard) {
+          if (49 == keyCode) {
             this.field_s = true;
             var7.field_m = dp.field_r[39] - 5;
             return true;
           }
-          if (obfuscationGuard == 36) {
+          if (keyCode == 36) {
             this.field_s = true;
             var7.score = dp.field_r[40] - 20;
             return true;
           }
-          if (38 == obfuscationGuard) {
+          if (38 == keyCode) {
             var8.field_Z = 0;
             this.field_s = true;
             var8.field_P = 0;
@@ -1297,10 +1297,10 @@ final class GameplayScreen extends GameScreen {
               if (this.field_p) {
                 var8_int = var16.simulationTick - var16.field_E;
                 decompiledFrameRemainder0 = (!(var8_int > 30) ||
-                  0 != MembershipBenefitsScreen.field_x % 10);
+                  0 != MembershipBenefitsScreen.clientTick % 10);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (!(40 < var8_int) ||
-                  0 != MembershipBenefitsScreen.field_x % 5))) {
+                  0 != MembershipBenefitsScreen.clientTick % 5))) {
                   decompiledFrameRemainder0 = (50 != var8_int);
                 }
               }
@@ -1398,7 +1398,7 @@ final class GameplayScreen extends GameScreen {
                 var6.field_Z == 9) {
                 this.a((byte) 40, false);
                 if (8 != var6.field_Z) {
-                  NewAchievementsScreen.field_G = true;
+                  NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
               }
             } else {
@@ -1852,7 +1852,7 @@ final class GameplayScreen extends GameScreen {
           }
           this.field_m = stackIn_23_1;
           if (oo.field_w == null) {
-            oo.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
+            oo.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           }
           MenuScreen.field_i = 0;
           to.field_k = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
@@ -1864,14 +1864,14 @@ final class GameplayScreen extends GameScreen {
           tn.field_C = 1;
           gr.b(tn.field_C, -28463);
           pg.field_m = -1;
-          dj.field_b = -1;
+          GameClock.field_b = -1;
           if (jo.field_j == null) {
             jo.field_j = rd.a(cm.field_p, new String[]{""}, (byte) 103).toLowerCase();
             ff.field_j = pn.field_j.toLowerCase();
           }
           be.field_j = 0;
           KeyboardInput.field_a = false;
-          fl.field_l = ue.a(false);
+          fl.field_l = MonotonicTime.nowMillis(false);
           gq.field_Yb = param5.pack.packId;
           DualLinkNode.field_q = param5.getPeriod(96);
           return;

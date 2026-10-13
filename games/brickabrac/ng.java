@@ -11,7 +11,7 @@ final class ng {
 
     final static void requestScreen(boolean usePointer, int obfuscationGuard, int screenId) {
         if (hd.pendingScreen != null) {
-          sk.i((byte) -127);
+          sk.finishScreenTransition((byte) -127);
         }
         if (lp.currentScreen.screenId == screenId) {
           return;
@@ -23,7 +23,7 @@ final class ng {
         if (obfuscationGuard < 52) {
           ng.requestScreen(true, 107, -22);
         }
-        kh.field_a = 0;
+        kh.screenTransitionTick = 0;
         wp.playUiSound(8, ta.uiSounds[8]);
     }
 

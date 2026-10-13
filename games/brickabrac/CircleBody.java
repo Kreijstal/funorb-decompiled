@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class CircleBody extends MovingBody {
-    static volatile boolean field_r;
+    static volatile boolean liveFocus;
     static String field_q;
     static String field_s;
     static RgbSprite[][] field_t;
@@ -50,7 +50,7 @@ class CircleBody extends MovingBody {
     }
 
     static {
-        field_r = true;
+        liveFocus = true;
         field_q = "Unfortunately you are not eligible to create an account.";
         field_s = "Chat is currently disabled.";
     }

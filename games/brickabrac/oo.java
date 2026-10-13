@@ -22,7 +22,7 @@ final class oo extends ki {
         } else {
           la.a(u.field_c, param2, param3, MatchCompleteScreen.field_C[param1]);
         }
-        dj.field_a.drawTransparent(param2, param3);
+        GameClock.field_a.drawTransparent(param2, param3);
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -80,7 +80,7 @@ final class oo extends ki {
         ek.field_hb = jh.a(0, field_x);
         up.field_w = jh.a(0, ad.field_b);
         u.field_c = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
-        dj.field_a = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
+        GameClock.field_a = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
         dc.field_c = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
         Brick.field_I[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
         aj.field_a[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
@@ -194,7 +194,7 @@ final class oo extends ki {
           if (u.field_c == null) {
             return false;
           }
-          if (null != dj.field_a) {
+          if (null != GameClock.field_a) {
             return null != dc.field_c ? true : false;
           }
           return false;
@@ -214,7 +214,7 @@ final class oo extends ki {
         if (u.field_c == null) {
           return false;
         }
-        if (null != dj.field_a) {
+        if (null != GameClock.field_a) {
           return null != dc.field_c ? true : false;
         }
         return false;

@@ -293,7 +293,7 @@ final class kb extends mh {
         if (AchievementIcon.field_j < 10) {
           return false;
         }
-        if (qg.field_A >= 13) {
+        if (GameConnectionShell.field_A >= 13) {
           return true;
         }
         return false;

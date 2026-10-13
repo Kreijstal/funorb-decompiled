@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public abstract class ke extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class AppletGameShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static mh field_e;
     static String field_k;
     boolean field_d;
@@ -22,7 +22,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void f(int param0);
+    abstract void updateClient(int obfuscationGuard);
 
     public final java.net.URL getDocumentBase() {
         RuntimeException var1 = null;
@@ -49,33 +49,33 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void c(int param0) {
+    private final void runClientTick(int obfuscationGuard) {
         RuntimeException runtimeException = null;
-        long var2_long = 0L;
-        long var4 = 0L;
+        long nowMillis = 0L;
+        long previousTickMillis = 0L;
         Throwable decompiledCaughtException = null;
-        Object var6 = null;
+        Object focusLock = null;
         try {
-          var2_long = ue.a(false);
-          if (param0 != 26573) {
+          nowMillis = MonotonicTime.nowMillis(false);
+          if (obfuscationGuard != 26573) {
             field_f = (String) null;
           }
-          var4 = sm.field_c[cq.field_t];
-          sm.field_c[cq.field_t] = var2_long;
-          cq.field_t = 31 & 1 + cq.field_t;
-          if (0L != var4 &&
-            var4 < var2_long) {
+          previousTickMillis = sm.tickTimes[cq.tickTimeCursor];
+          sm.tickTimes[cq.tickTimeCursor] = nowMillis;
+          cq.tickTimeCursor = 31 & 1 + cq.tickTimeCursor;
+          if (0L != previousTickMillis &&
+            previousTickMillis < nowMillis) {
           }
-          var6 = this;
-          synchronized (var6) {
-            qa.field_r = CircleBody.field_r;
+          focusLock = this;
+          synchronized (focusLock) {
+            qa.frameFocus = CircleBody.liveFocus;
           }
-          this.f(-107);
+          this.updateClient(-107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.S(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.S(" + obfuscationGuard + ')');
         }
     }
 
@@ -135,7 +135,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               var9 = lp.field_ub.startThread(1, (Runnable) (this), (byte) -124);
               while (true) {
                 if (var9.status == 0) {
-                  wj.a(-125, 10L);
+                  wj.sleepMillis(-125, 10L);
                   if (var10 == 0) {
                     continue;
                   }
@@ -227,7 +227,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           MovingBody.shuffleValues(-122, param0, 5, param2);
           if (param1 != 39) {
-            ke.copyBytes(false, (byte[]) null);
+            AppletGameShell.copyBytes(false, (byte[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -260,9 +260,9 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           if (so.field_f == this &&
             !ai.field_s) {
-            GameplayAudioEvent.field_i = true;
+            GameplayAudioEvent.redrawRequested = true;
             if (tf.field_h &&
-              -er.field_c + ue.a(false) > 1000L) {
+              -er.field_c + MonotonicTime.nowMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < u.field_d) {
@@ -409,12 +409,12 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 sh.b(1);
                 this.c(false);
                 kc.field_q = jm.a((java.awt.Component) ((Object) CacheIoRequest.field_D), to.field_b, -2414, be.field_g);
-                this.b(false);
-                MenuSelection.field_b = ja.a((byte) 123);
+                this.initializeClient(false);
+                MenuSelection.gameClock = ja.createGameClock((byte) 123);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (0L != BufferedFile.field_k) {
-                    stackIn_98_0 = $cfr$lcmp(BufferedFile.field_k, ue.a(false));
+                  if (0L != BufferedFile.shutdownDeadlineMillis) {
+                    stackIn_98_0 = $cfr$lcmp(BufferedFile.shutdownDeadlineMillis, MonotonicTime.nowMillis(false));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_98_0 <= 0)) {
@@ -422,17 +422,17 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    c.field_a = MenuSelection.field_b.a(ResourceRequest.field_x, (byte) -71);
+                    c.cyclesDue = MenuSelection.gameClock.waitAndAdvance(ResourceRequest.tickDurationNanos, (byte) -71);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
                   do {
-                    if (!(c.field_a > var3)) {
-                      this.h(0);
+                    if (!(c.cyclesDue > var3)) {
+                      this.runRenderFrame(0);
                       IntNode.a(-4317, lp.field_ub, CacheIoRequest.field_D);
                       break;
                     }
-                    this.c(26573);
+                    this.runClientTick(26573);
                     var3++;
                   } while (var5 == 0);
                 } while (var5 == 0);
@@ -443,7 +443,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               rk.a((String) null, (Throwable) (var1), 77);
               this.a("crash", 4000);
             }
-            this.a(true, -93);
+            this.shutdown(true, -93);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -457,35 +457,35 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    private final void h(int param0) {
+    private final void runRenderFrame(int obfuscationGuard) {
         int fieldTemp$1 = 0;
         RuntimeException runtimeException = null;
-        long var2_long = 0L;
-        long var4 = 0L;
-        int var6_int = 0;
-        java.awt.Insets var6 = null;
+        long nowMillis = 0L;
+        long previousRenderMillis = 0L;
+        int renderSpanMillis = 0;
+        java.awt.Insets insets = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_long = ue.a(false);
-          var4 = ig.field_M[MembershipBenefitsScreen.field_w];
-          ig.field_M[MembershipBenefitsScreen.field_w] = var2_long;
-          MembershipBenefitsScreen.field_w = 31 & 1 + MembershipBenefitsScreen.field_w;
-          if ((long)param0 != var4 &&
-            var2_long > var4) {
-            var6_int = (int)(var2_long - var4);
-            d.field_H = (32000 + (var6_int >> 1)) / var6_int;
+          nowMillis = MonotonicTime.nowMillis(false);
+          previousRenderMillis = ig.renderTimes[MembershipBenefitsScreen.renderTimeCursor];
+          ig.renderTimes[MembershipBenefitsScreen.renderTimeCursor] = nowMillis;
+          MembershipBenefitsScreen.renderTimeCursor = 31 & 1 + MembershipBenefitsScreen.renderTimeCursor;
+          if ((long)obfuscationGuard != previousRenderMillis &&
+            nowMillis > previousRenderMillis) {
+            renderSpanMillis = (int)(nowMillis - previousRenderMillis);
+            d.recentRenderRate = (32000 + (renderSpanMillis >> 1)) / renderSpanMillis;
           }
-          fieldTemp$1 = MouseWheelSource.field_a;
-          MouseWheelSource.field_a = MouseWheelSource.field_a + 1;
+          fieldTemp$1 = MouseWheelSource.resizeFrameCounter;
+          MouseWheelSource.resizeFrameCounter = MouseWheelSource.resizeFrameCounter + 1;
           if (50 < fieldTemp$1) {
-            GameplayAudioEvent.field_i = true;
-            MouseWheelSource.field_a = MouseWheelSource.field_a - 50;
+            GameplayAudioEvent.redrawRequested = true;
+            MouseWheelSource.resizeFrameCounter = MouseWheelSource.resizeFrameCounter - 50;
             CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
             CacheIoRequest.field_D.setVisible(true);
             if (null != cb.field_o &&
               null == fd.field_e) {
-              var6 = cb.field_o.getInsets();
-              CacheIoRequest.field_D.setLocation(var6.left + to.field_i, var6.top + hk.field_W);
+              insets = cb.field_o.getInsets();
+              CacheIoRequest.field_D.setLocation(insets.left + to.field_i, insets.top + hk.field_W);
               if (BrickABrac.field_J) {
                 CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
               }
@@ -493,12 +493,12 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
             }
           }
-          this.g(param0 + 102);
+          this.renderClient(obfuscationGuard + 102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.W(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.W(" + obfuscationGuard + ')');
         }
     }
 
@@ -512,8 +512,8 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          CircleBody.field_r = true;
-          GameplayAudioEvent.field_i = true;
+          CircleBody.liveFocus = true;
+          GameplayAudioEvent.redrawRequested = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -535,7 +535,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          BufferedFile.field_k = ue.a(false) + 4000L;
+          BufferedFile.shutdownDeadlineMillis = MonotonicTime.nowMillis(false) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.stop()");
         }
@@ -547,7 +547,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           field_m = null;
           if (param0 != 19254) {
-            ke.a((int[]) null, (byte) -57, (IsaacGenerator) null);
+            AppletGameShell.a((int[]) null, (byte) -57, (IsaacGenerator) null);
           }
           field_b = null;
           field_f = null;
@@ -565,7 +565,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
     public final void windowActivated(java.awt.event.WindowEvent param0) {
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void shutdown(boolean clean, int obfuscationGuard) {
         Exception exception = null;
         Exception var4_ref = null;
         RuntimeException runtimeException = null;
@@ -585,12 +585,12 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             sl.field_x.destroy();
           }
           try {
-            this.a(false);
+            this.stopClientServices(false);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          var3_int = -40 % ((-22 - param1) / 54);
+          var3_int = -40 % ((-22 - obfuscationGuard) / 54);
           if (CacheIoRequest.field_D != null) {
             try {
               CacheIoRequest.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -608,7 +608,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               var4_ref = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.d(true);
+          this.clearClientResources(true);
           if (null != cb.field_o) {
             try {
               System.exit(0);
@@ -617,12 +617,12 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               var4 = decompiledCaughtException;
             }
           }
-          System.out.println("Shutdown complete - clean:" + param0);
+          System.out.println("Shutdown complete - clean:" + clean);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
           decompiledCaughtException = decompiledCaughtParameter4;
           runtimeException = (RuntimeException) (Object) decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.BA(" + param0 + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.BA(" + clean + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -677,11 +677,11 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           }
           CacheIoRequest.field_D.addFocusListener((java.awt.event.FocusListener) (this));
           CacheIoRequest.field_D.requestFocus();
-          CircleBody.field_r = true;
-          qa.field_r = true;
-          GameplayAudioEvent.field_i = true;
+          CircleBody.liveFocus = true;
+          qa.frameFocus = true;
+          GameplayAudioEvent.redrawRequested = true;
           tn.field_A = param0;
-          er.field_c = ue.a(false);
+          er.field_c = MonotonicTime.nowMillis(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -729,7 +729,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          CircleBody.field_r = false;
+          CircleBody.liveFocus = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -795,7 +795,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void b(boolean param0);
+    abstract void initializeClient(boolean obfuscationGuard);
 
     public final void destroy() {
         RuntimeException runtimeException = null;
@@ -803,10 +803,10 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           if (this == so.field_f &&
             !ai.field_s) {
-            BufferedFile.field_k = ue.a(false);
-            wj.a(-127, 5000L);
+            BufferedFile.shutdownDeadlineMillis = MonotonicTime.nowMillis(false);
+            wj.sleepMillis(-127, 5000L);
             LevelPackLoader.field_e = null;
-            this.a(false, 46);
+            this.shutdown(false, 46);
             return;
           }
           return;
@@ -817,9 +817,9 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void a(boolean param0);
+    abstract void stopClientServices(boolean obfuscationGuard);
 
-    abstract void d(boolean param0);
+    abstract void clearClientResources(boolean obfuscationGuard);
 
     final static String a(byte param0, long param1) {
         int var3_int = 0;
@@ -840,7 +840,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           var6 = field_n.get(1);
           var7 = field_n.get(11);
           if (param0 != -75) {
-            ke.a((int[]) null, (byte) -75, (IsaacGenerator) null);
+            AppletGameShell.a((int[]) null, (byte) -75, (IsaacGenerator) null);
           }
           var8 = field_n.get(12);
           var9 = field_n.get(13);
@@ -853,7 +853,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    abstract void g(int param0);
+    abstract void renderClient(int obfuscationGuard);
 
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
@@ -887,7 +887,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           return;
         }
         try {
-          BufferedFile.field_k = 0L;
+          BufferedFile.shutdownDeadlineMillis = 0L;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ke.start()");
         }
@@ -936,7 +936,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected ke() {
+    protected AppletGameShell() {
         this.field_d = false;
     }
 

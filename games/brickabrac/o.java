@@ -25,13 +25,13 @@ final class o {
         ta.uiSounds[10] = GameScreen.field_e.a("BaB_teleport_00", "", (byte) 108);
         ta.uiSounds[11] = GameScreen.field_e.a("BaB_transform_block", "", (byte) 111);
         ta.uiSounds[13] = GameScreen.field_e.a("BaB_indestructable_block_destroy", "", (byte) 110);
-        cg.field_p[0] = GameScreen.field_e.a("BaB_indestructable_block_00", "", (byte) 124);
-        cg.field_p[1] = GameScreen.field_e.a("BaB_indestructable_block_01", "", (byte) 108);
-        cg.field_p[2] = GameScreen.field_e.a("BaB_indestructable_block_02", "", (byte) 117);
+        NanoGameClock.field_p[0] = GameScreen.field_e.a("BaB_indestructable_block_00", "", (byte) 124);
+        NanoGameClock.field_p[1] = GameScreen.field_e.a("BaB_indestructable_block_01", "", (byte) 108);
+        NanoGameClock.field_p[2] = GameScreen.field_e.a("BaB_indestructable_block_02", "", (byte) 117);
         if (param0 <= 122) {
           o.c(-9);
         }
-        cg.field_p[3] = GameScreen.field_e.a("BaB_indestructable_block_03", "", (byte) 118);
+        NanoGameClock.field_p[3] = GameScreen.field_e.a("BaB_indestructable_block_03", "", (byte) 118);
         ef.field_a[5] = GameScreen.field_e.a("bab_powerup_extralife", "", (byte) 115);
         ef.field_a[7] = GameScreen.field_e.a("bab_powerup_paddle_shrink", "", (byte) 127);
         ef.field_a[9] = GameScreen.field_e.a("bab_powerup_wipeout", "", (byte) 109);

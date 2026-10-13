@@ -520,7 +520,7 @@ final class la {
               var8++;
               incrementValue$4 = param6;
               param6++;
-              pa.field_i[incrementValue$3] = var15 + (var11 * sa.a(mh.field_F[incrementValue$4], -4097) >> 16);
+              pa.field_i[incrementValue$3] = var15 + (var11 * InteractiveGameClient.a(mh.field_F[incrementValue$4], -4097) >> 16);
               incrementValue$5 = var8;
               var8++;
               incrementValue$6 = param6;

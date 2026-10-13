@@ -147,7 +147,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           ArchiveNetworkRequest var2Lifetime1;
           var16 = BrickABrac.field_J ? 1 : 0;
           if (this.transport != null) {
-            var2_long = ue.a(false);
+            var2_long = MonotonicTime.nowMillis(false);
             var4 = (int)(var2_long - this.lastPollMillis);
             if (var4 > 200) {
               var4 = 200;
@@ -509,7 +509,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
               }
             }
             this.idleMillis = 0;
-            this.lastPollMillis = ue.a(false);
+            this.lastPollMillis = MonotonicTime.nowMillis(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;

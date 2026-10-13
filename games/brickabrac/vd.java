@@ -42,7 +42,7 @@ final class vd {
               var2_int = -jl.field_e.position + param1;
             }
             eq.field_g.readFully(param0 + 25806, jl.field_e.data, var2_int, jl.field_e.position);
-            oj.field_t = ue.a(false);
+            oj.field_t = MonotonicTime.nowMillis(false);
             jl.field_e.position = jl.field_e.position + var2_int;
             if (param1 > jl.field_e.position) {
               return false;

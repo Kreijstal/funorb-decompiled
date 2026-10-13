@@ -93,7 +93,7 @@ final class eb extends ff {
           stackIn_29_0 = ((var4_int & 2) == 0) ? 0 : 1;
           var6 = stackIn_29_0;
           param0.field_vc = param1.readUnsignedShort(65280);
-          param0.field_qc = ue.a(false) - (long)param1.readInt(255);
+          param0.field_qc = MonotonicTime.nowMillis(false) - (long)param1.readInt(255);
           if (var5 != 0) {
             param0.field_yc = param1.readInt(255);
           } else {

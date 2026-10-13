@@ -231,7 +231,7 @@ final class cp extends h {
             cp.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
           }
           if (ArchiveFetchClient.field_p == 2) {
-            var3_long = -un.field_g + ue.a(false);
+            var3_long = -un.field_g + MonotonicTime.nowMillis(false);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
               var2 = 0;

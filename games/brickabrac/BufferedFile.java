@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class BufferedFile {
-    static long field_k;
+    static long shutdownDeadlineMillis;
     private byte[] writeBuffer;
     private long physicalLength;
     static String field_p;
@@ -479,7 +479,7 @@ final class BufferedFile {
     }
 
     static {
-        field_k = 0L;
+        shutdownDeadlineMillis = 0L;
         field_q = "OFF";
         field_p = "Drawn";
     }

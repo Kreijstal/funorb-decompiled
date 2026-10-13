@@ -308,7 +308,7 @@ final class qo extends ib implements vf, en {
         var2.a(50, 20, var3, (byte) -119, 270);
         var3 += 50;
         this.a(var2, true);
-        var3 = var3 + (this.a(-14, BlankScreen.field_j, this.field_L, dj.field_h, var3, 170) + 5);
+        var3 = var3 + (this.a(-14, BlankScreen.field_j, this.field_L, GameClock.field_h, var3, 170) + 5);
         this.field_Q.a(40, 496 - var5 >> 1, var3, (byte) -119, var5);
         this.field_K.a(40, var4 + 3, var3 + 15, (byte) -119, 60);
         this.field_K.field_i = (uh) (this);

@@ -52,7 +52,7 @@ class lp extends fe implements en {
           if (!LegacyUtf8Decoder.a((byte) -80)) {
             return false;
           }
-          if (0 == (MembershipBenefitsScreen.field_x & 8)) {
+          if (0 == (MembershipBenefitsScreen.clientTick & 8)) {
             return true;
           }
           return false;
@@ -60,7 +60,7 @@ class lp extends fe implements en {
         if (!LegacyUtf8Decoder.a((byte) -80)) {
           return false;
         }
-        if (0 == (MembershipBenefitsScreen.field_x & 8)) {
+        if (0 == (MembershipBenefitsScreen.clientTick & 8)) {
           return true;
         }
         return false;
@@ -162,7 +162,7 @@ class lp extends fe implements en {
                 }
               }
             } else {
-              var6.a(param1, ue.field_f, 8);
+              var6.a(param1, MonotonicTime.field_f, 8);
             }
           } else {
             var6.a(false, Ball.field_H, 7);

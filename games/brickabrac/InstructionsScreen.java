@@ -60,7 +60,7 @@ final class InstructionsScreen extends MenuScreen {
           }
           if (var3 == 0 &&
             ArchiveFetchClient.field_p == 2) {
-            var4 = ue.a(false) - un.field_g;
+            var4 = MonotonicTime.nowMillis(false) - un.field_g;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               bq.a(true, 5, (byte) 104);

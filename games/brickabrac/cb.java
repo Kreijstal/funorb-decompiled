@@ -13,7 +13,7 @@ final class cb extends k {
     final static void e(byte param0) {
         String var1 = null;
         String var1Lifetime1;
-        if (!cg.field_l) {
+        if (!NanoGameClock.field_l) {
           throw new IllegalStateException();
         }
         if (param0 >= -34) {

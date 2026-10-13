@@ -43,7 +43,7 @@ final class IntNode extends IntrusiveNode {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != param1.eventQueue.peekEvent()) {
-              wj.a(param0 + 4192, 1L);
+              wj.sleepMillis(param0 + 4192, 1L);
               continue;
             }
             break;

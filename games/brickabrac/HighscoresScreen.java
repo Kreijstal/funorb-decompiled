@@ -712,7 +712,7 @@ final class HighscoresScreen extends MenuScreen {
           var4_ref = kd.field_a;
         }
         if (var4_ref != null) {
-          sa.a(178, nn.field_g, var4_ref, 357, 243, 2, 15);
+          InteractiveGameClient.a(178, nn.field_g, var4_ref, 357, 243, 2, 15);
         }
         this.packSelector.draw(117);
     }

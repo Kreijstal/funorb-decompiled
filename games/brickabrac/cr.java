@@ -323,12 +323,12 @@ final class cr extends oc {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (MenuButton.field_i == rf.field_b);
               if ((decompiledFrameRemainder0) && (k.field_h.position == 0 &&
-                BrickMotionPath.field_q + 10000L < ue.a(false))) {
+                BrickMotionPath.field_q + 10000L < MonotonicTime.nowMillis(false))) {
                 k.field_h.writeCipheredOpcode(-13413, param0);
               }
             } else {
               if (k.field_h.position == 0 &&
-                BrickMotionPath.field_q + 10000L < ue.a(false)) {
+                BrickMotionPath.field_q + 10000L < MonotonicTime.nowMillis(false)) {
                 k.field_h.writeCipheredOpcode(-13413, param0);
               }
             }
@@ -339,7 +339,7 @@ final class cr extends oc {
               if (0 < k.field_h.position) {
                 try {
                   eq.field_g.write(k.field_h.data, true, k.field_h.position, 0);
-                  BrickMotionPath.field_q = ue.a(false);
+                  BrickMotionPath.field_q = MonotonicTime.nowMillis(false);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;

@@ -4,7 +4,7 @@
 final class ig extends ib implements ha, en {
     private d field_L;
     private qf field_I;
-    static long[] field_M;
+    static long[] renderTimes;
     static int field_N;
     private lg field_O;
     static String field_K;
@@ -140,8 +140,8 @@ final class ig extends ib implements ha, en {
           var4 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
           this.field_O = new lg(var7, var4);
           this.field_O.field_z = "";
-          this.field_O.a(qg.field_z, 0, (byte) -98);
-          this.field_O.a(qg.field_z, 1, (byte) -98);
+          this.field_O.a(GameConnectionShell.field_z, 0, (byte) -98);
+          this.field_O.a(GameConnectionShell.field_z, 1, (byte) -98);
           this.field_O.field_i = (uh) (this);
           this.field_O.field_t = -40 + this.field_t;
           this.field_O.a(26, (byte) 46, -40 + this.field_t, var3);
@@ -170,7 +170,7 @@ final class ig extends ib implements ha, en {
         if (param0 != 12127) {
           field_J = (String) null;
         }
-        field_M = null;
+        renderTimes = null;
         field_J = null;
         field_K = null;
     }
@@ -251,7 +251,7 @@ final class ig extends ib implements ha, en {
 
     static {
         field_N = 0;
-        field_M = new long[32];
+        renderTimes = new long[32];
         field_J = "Please enter a year between <%0> and <%1>";
     }
 }

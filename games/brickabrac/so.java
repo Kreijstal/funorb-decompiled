@@ -4,7 +4,7 @@
 final class so {
     static String field_e;
     private to field_a;
-    static ke field_f;
+    static AppletGameShell field_f;
     static int field_b;
     static fk field_d;
     private ResourceArchive field_g;
@@ -165,7 +165,7 @@ final class so {
           ce.field_e.palettes = bg.field_n;
           gj.field_c = bd.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
-            gj.field_c[var7_int] = qg.a(gj.field_c[var7_int], 1);
+            gj.field_c[var7_int] = GameConnectionShell.a(gj.field_c[var7_int], 1);
             if (gj.field_c[var7_int].width == 0 ||
               gj.field_c[var7_int].height == 0) {
               gj.field_c[var7_int] = null;
@@ -216,7 +216,7 @@ final class so {
           Ball.field_D = pl.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
           h.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
           dg.field_b = cr.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
-          qg.field_D = cr.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
+          GameConnectionShell.field_D = cr.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
           dk.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
           gg.field_p = cr.loadRgbSpritesByName("basic", param0, "powerup", 2);
           LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
@@ -257,11 +257,11 @@ final class so {
             kp.field_e[var10_intLifetime4].bindRasterTarget();
             dg.field_b[var10_intLifetime4].a(0, 0);
           }
-          LevelPackSelectScreen.field_z = new RgbSprite[qg.field_D.length];
-          for (var10_intLifetime5 = 0; qg.field_D.length > var10_intLifetime5; var10_intLifetime5++) {
-            LevelPackSelectScreen.field_z[var10_intLifetime5] = new RgbSprite(qg.field_D[var10_intLifetime5].canvasWidth / 2, qg.field_D[var10_intLifetime5].canvasHeight / 2);
+          LevelPackSelectScreen.field_z = new RgbSprite[GameConnectionShell.field_D.length];
+          for (var10_intLifetime5 = 0; GameConnectionShell.field_D.length > var10_intLifetime5; var10_intLifetime5++) {
+            LevelPackSelectScreen.field_z[var10_intLifetime5] = new RgbSprite(GameConnectionShell.field_D[var10_intLifetime5].canvasWidth / 2, GameConnectionShell.field_D[var10_intLifetime5].canvasHeight / 2);
             LevelPackSelectScreen.field_z[var10_intLifetime5].bindRasterTarget();
-            qg.field_D[var10_intLifetime5].a(0, 0);
+            GameConnectionShell.field_D[var10_intLifetime5].a(0, 0);
           }
           ep.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
           ep.field_j.bindRasterTarget();

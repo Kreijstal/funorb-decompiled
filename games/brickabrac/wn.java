@@ -407,7 +407,7 @@ final class wn {
           if (param0 != -98) {
             field_b = (RgbSprite) null;
           }
-          stackIn_4_0 = (int)(1000000000L / ResourceRequest.field_x);
+          stackIn_4_0 = (int)(1000000000L / ResourceRequest.tickDurationNanos);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

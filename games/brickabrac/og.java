@@ -1166,7 +1166,7 @@ final class og extends mh {
           }
           var2Lifetime111 = gr.a(true, "neat");
           if (null != var2Lifetime111) {
-            ue.field_a = MenuButton.a(var2Lifetime111, (byte) 127);
+            MonotonicTime.field_a = MenuButton.a(var2Lifetime111, (byte) 127);
           }
           var2Lifetime112 = gr.a(true, "nice");
           if (var2Lifetime112 != null) {
@@ -1362,7 +1362,7 @@ final class og extends mh {
           }
           var2Lifetime160 = gr.a(true, "explain_shrink");
           if (null != var2Lifetime160) {
-            ke.field_f = MenuButton.a(var2Lifetime160, (byte) 112);
+            AppletGameShell.field_f = MenuButton.a(var2Lifetime160, (byte) 112);
           }
           var2Lifetime161 = gr.a(true, "explain_trampoline");
           if (var2Lifetime161 != null) {
@@ -1445,7 +1445,7 @@ final class og extends mh {
           }
           throw qb.addExceptionContext((Throwable) ((Object) stackIn_793_0), ((StringBuilder) (Object) stackIn_793_1).append(stackIn_794_2).append(')').toString());
         }
-        if (ke.field_l != 0) {
+        if (AppletGameShell.field_l != 0) {
           BrickABrac.field_J = (var3 == 0);
         }
     }

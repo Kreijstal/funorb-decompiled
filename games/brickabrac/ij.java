@@ -189,7 +189,7 @@ final class ij implements wb {
               if (3 != var3) {
                 if (4 == var3) {
                   ai.a((byte) 24, 92.0f, Ball.field_x);
-                  sl.field_C.g(121);
+                  sl.field_C.renderClient(121);
                   sb.a(nl.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
                   if (var3 != 5) {
@@ -200,17 +200,17 @@ final class ij implements wb {
                 }
               } else {
                 ai.a((byte) 24, 90.0f, MessageScreen.field_u);
-                sl.field_C.g(106);
+                sl.field_C.renderClient(106);
                 so.a(ki.field_f, gq.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }
             } else {
               ai.a((byte) 24, 88.0f, sf.field_bb);
-              sl.field_C.g(124);
+              sl.field_C.renderClient(124);
               var2 = var2 != 0 & wo.a(2) ? 1 : 0;
             }
           } else {
             ai.a((byte) 24, 82.0f, BitPacketBuffer.field_s);
-            sl.field_C.g(123);
+            sl.field_C.renderClient(123);
             o.c(123);
           }
         } else {

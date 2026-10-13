@@ -63,7 +63,7 @@ final class ad implements Runnable {
           if (qm.field_d.status == 0) {
             return false;
           }
-          dupTemp$1 = ue.a(false);
+          dupTemp$1 = MonotonicTime.nowMillis(false);
           BrickMotionPath.field_q = dupTemp$1;
           oj.field_t = dupTemp$1;
           if (qm.field_d.status != 1) {

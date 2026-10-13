@@ -457,7 +457,7 @@ final class eh {
           }
           var11 = param1.a(param0, -35, param2, param4, param5);
           while (0 == var11.status) {
-            wj.a(-126, 10L);
+            wj.sleepMillis(-126, 10L);
           }
           var7 = (java.awt.Frame) (var11.result);
           if (param3 <= 80) {

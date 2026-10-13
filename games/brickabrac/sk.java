@@ -58,7 +58,7 @@ final class sk extends h {
           pe.gameplayScreen.field_q = true;
           stackIn_10_0 = pe.gameplayScreen;
           stackIn_10_1 = pe.gameplayScreen.field_s;
-          stackIn_11_2 = (kb.field_Yb >= 2) && (param3 == 1) && (qg.field_t);
+          stackIn_11_2 = (kb.field_Yb >= 2) && (param3 == 1) && (GameConnectionShell.field_t);
           stackIn_10_0.field_s = stackIn_10_1 | stackIn_11_2;
           ng.requestScreen(param4, 103, -1);
           return;
@@ -82,7 +82,7 @@ final class sk extends h {
         }
     }
 
-    final static void i(byte param0) {
+    final static void finishScreenTransition(byte obfuscationGuard) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -107,12 +107,12 @@ final class sk extends h {
           }
           lp.currentScreen = hd.pendingScreen;
           hd.pendingScreen = null;
-          kh.field_a = 0;
-          if (NewAchievementsScreen.field_G) {
-            NewAchievementsScreen.field_G = false;
+          kh.screenTransitionTick = 0;
+          if (NewAchievementsScreen.discardGameplayOnTransition) {
+            NewAchievementsScreen.discardGameplayOnTransition = false;
             pe.gameplayScreen = null;
           }
-          if (param0 > -112) {
+          if (obfuscationGuard > -112) {
             field_J = (RgbSprite[]) null;
           }
           if (eb.field_l) {
@@ -147,7 +147,7 @@ final class sk extends h {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "sk.B(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1_ref), "sk.B(" + obfuscationGuard + ')');
         }
     }
 

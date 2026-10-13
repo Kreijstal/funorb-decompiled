@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelSource {
-    static int field_a;
+    static int resizeFrameCounter;
     static String field_d;
     static String field_b;
     static mh field_c;
@@ -14,7 +14,7 @@ abstract class MouseWheelSource {
         field_c = null;
         field_b = null;
         if (param0 < 72) {
-          field_a = 14;
+          resizeFrameCounter = 14;
         }
     }
 
@@ -30,7 +30,7 @@ abstract class MouseWheelSource {
     abstract void attach(byte obfuscationGuard, java.awt.Component component);
 
     static {
-        field_a = 500;
+        resizeFrameCounter = 500;
         field_b = "Please select an option in the '<%0>' row.";
         field_d = "Name is available";
     }

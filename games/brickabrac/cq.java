@@ -9,7 +9,7 @@ final class cq extends IntrusiveNode {
     static String field_q;
     int field_l;
     boolean field_v;
-    static int field_t;
+    static int tickTimeCursor;
     int field_j;
     int[][] field_u;
     static RgbSprite field_o;
@@ -130,7 +130,7 @@ final class cq extends IntrusiveNode {
             }
           }
           if (param0 != 16727) {
-            field_t = 49;
+            tickTimeCursor = 49;
           }
           oa.field_Sb = rd.a(param3.pack.metadata[param2].attributeByte, (byte) 19);
           sk.a(var5, param2, param3, 1, param1, -12665);

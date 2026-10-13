@@ -12,7 +12,7 @@ final class NodeDeque {
         if (param0 <= 11) {
           return;
         }
-        ResourceRequest.field_x = 1000000000L / (long)param1;
+        ResourceRequest.tickDurationNanos = 1000000000L / (long)param1;
     }
 
     final IntrusiveNode last(int obfuscationGuard) {

@@ -63,7 +63,7 @@ class r extends um {
     final static boolean c(byte param0) {
         if (param0 >= -80) {
           r.c((byte) 16);
-          if (qg.field_A < 20) {
+          if (GameConnectionShell.field_A < 20) {
             return true;
           }
           if (!kb.i(7457)) {
@@ -77,7 +77,7 @@ class r extends um {
           }
           return false;
         }
-        if (qg.field_A < 20) {
+        if (GameConnectionShell.field_A < 20) {
           return true;
         }
         if (!kb.i(7457)) {

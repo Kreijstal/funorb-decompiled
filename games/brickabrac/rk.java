@@ -133,7 +133,7 @@ final class rk extends mh {
             }
             var4 = ((PlatformServices) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(PlatformServices.javaVendor).append("&v2=").append(PlatformServices.javaVersion).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
-              wj.a(-125, 1L);
+              wj.sleepMillis(-125, 1L);
             }
             if (var4.status == 1) {
               var5 = (DataInputStream) (var4.result);
@@ -281,7 +281,7 @@ final class rk extends mh {
               param0.readBits(12, (byte) -112);
               var4[var5] = var6;
             } else {
-              var6_int = param0.readBits(dj.a(-1 + var5, 15), (byte) 98);
+              var6_int = param0.readBits(GameClock.a(-1 + var5, 15), (byte) 98);
               var4[var5] = var4[var6_int];
             }
           }

@@ -321,7 +321,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] data, int expectedCrc, byte[] expectedDigest) {
         int var4_int = 0;
         try {
-          this.indexCrc = cg.a(data.length, data, (byte) -86);
+          this.indexCrc = NanoGameClock.a(data.length, data, (byte) -86);
           if (expectedCrc != this.indexCrc) {
             throw new RuntimeException();
           }

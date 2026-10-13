@@ -164,7 +164,7 @@ final class ui {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param2.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + ke.a((byte) -75, 94608000000L + ue.a(false)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + AppletGameShell.a((byte) -75, 94608000000L + MonotonicTime.nowMillis(false)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

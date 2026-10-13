@@ -60,7 +60,7 @@ final class IntKeyIndex {
 
     final static void a(int param0) {
         t.field_g = false;
-        cg.field_l = false;
+        NanoGameClock.field_l = false;
         bd.a(param0, true);
         ka.field_l = ej.field_P;
         ik.field_g = ej.field_P;

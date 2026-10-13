@@ -243,7 +243,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.writerTask != null) {
             while (this.writerTask.status == 0) {
-              wj.a(-127, 1L);
+              wj.sleepMillis(-127, 1L);
             }
             if (this.writerTask.status == 1) {
               try {

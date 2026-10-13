@@ -56,8 +56,8 @@ final class ka extends IntrusiveNode {
           }
           if (decompiledFrameRemainder0) {
             if (!th.field_h &&
-              go.field_e >= ue.field_e &&
-              ue.field_e + jh.field_a > go.field_e) {
+              go.field_e >= MonotonicTime.field_e &&
+              MonotonicTime.field_e + jh.field_a > go.field_e) {
               stackIn_28_0 = 1;
             } else {
               stackIn_28_0 = 0;
@@ -65,7 +65,7 @@ final class ka extends IntrusiveNode {
             var2_int = stackIn_28_0;
             if (param0 != null && (th.field_h ||
               var2_int != 0)) {
-              go.field_e = ue.field_e;
+              go.field_e = MonotonicTime.field_e;
               if (var3 != 0) {
                 go.field_e = 0;
               }
@@ -87,7 +87,7 @@ final class ka extends IntrusiveNode {
           }
           LevelCompleteScreen.field_J = param0;
           if (!th.field_h &&
-            go.field_e < ue.field_e &&
+            go.field_e < MonotonicTime.field_e &&
             kb.pointerChanged) {
             b.field_a = oo.field_v;
             go.field_e = 0;

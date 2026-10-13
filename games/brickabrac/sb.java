@@ -14,7 +14,7 @@ final class sb implements vc {
         int var2;
         GameplayScreen var3;
         MultiplayerMatch var4;
-        if (!ue.field_c) {
+        if (!MonotonicTime.field_c) {
           return false;
         }
         if (pf.a(false, -2)) {
@@ -42,7 +42,7 @@ final class sb implements vc {
         return stackIn_18_0;
     }
 
-    public final void a(int param0) {
+    public final void renderGameLayer(int obfuscationGuard) {
         int stackIn_10_0 = 0;
         int stackIn_20_0 = 0;
         RgbSprite stackIn_26_0 = null;
@@ -210,9 +210,9 @@ final class sb implements vc {
         int var5Lifetime9;
         int var5Lifetime10;
         int var5Lifetime11;
-        if (param0 == 16769381) {
+        if (obfuscationGuard == 16769381) {
           if (LegacyUtf8Decoder.a((byte) 121)) {
-            stackIn_300_0 = (!lp.n(param0 - 16769386)) ? 0 : 1;
+            stackIn_300_0 = (!lp.n(obfuscationGuard - 16769386)) ? 0 : 1;
           } else {
             stackIn_300_0 = 0;
           }
@@ -220,7 +220,7 @@ final class sb implements vc {
           var3 = DualLinkDeque.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E &&
-              20 > MembershipBenefitsScreen.field_x % 40) {
+              20 > MembershipBenefitsScreen.clientTick % 40) {
               var4 = 1;
               if (var4 != 0) {
                 stackIn_309_0 = 1;
@@ -349,7 +349,7 @@ final class sb implements vc {
           var3Lifetime1 = DualLinkDeque.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E) {
-              stackIn_10_0 = (20 > MembershipBenefitsScreen.field_x % 40) ? 1 : 0;
+              stackIn_10_0 = (20 > MembershipBenefitsScreen.clientTick % 40) ? 1 : 0;
             } else {
               stackIn_10_0 = 0;
             }
@@ -384,12 +384,12 @@ final class sb implements vc {
           }
           return;
         }
-        if (!lp.n(param0 - 16769386)) {
+        if (!lp.n(obfuscationGuard - 16769386)) {
           var2Lifetime2 = 0;
           var3Lifetime2 = DualLinkDeque.field_d.field_db;
           if (!n.field_d) {
             if (0 < Brick.field_E &&
-              20 > MembershipBenefitsScreen.field_x % 40) {
+              20 > MembershipBenefitsScreen.clientTick % 40) {
               var4Lifetime2 = 1;
               if (var4Lifetime2 != 0) {
                 stackIn_46_0 = 1;
@@ -657,7 +657,7 @@ final class sb implements vc {
           }
           return;
         }
-        if (20 > MembershipBenefitsScreen.field_x % 40) {
+        if (20 > MembershipBenefitsScreen.clientTick % 40) {
           var4Lifetime5 = 1;
           if (var4Lifetime5 == 0) {
             if (!pf.field_p) {
@@ -754,8 +754,8 @@ final class sb implements vc {
         }
     }
 
-    public final boolean a(int param0, char param1, int param2) {
-        if (param2 > -58) {
+    public final boolean handleGameKey(int keyCode, char character, int obfuscationGuard) {
+        if (obfuscationGuard > -58) {
           field_d = (String) null;
           if (this.c(-25437)) {
             return LevelSequence.a(13, -1, 12, 15);
@@ -768,7 +768,7 @@ final class sb implements vc {
         return false;
     }
 
-    public final void a(boolean param0, byte param1) {
+    public final void updateGameLayer(boolean inputEnabled, byte obfuscationGuard) {
         boolean stackIn_22_0 = false;
         boolean stackIn_27_0 = false;
         boolean stackIn_33_0 = false;
@@ -945,8 +945,8 @@ final class sb implements vc {
         int var7Lifetime3;
         int var5Lifetime5;
         var8 = BrickABrac.field_J ? 1 : 0;
-        var3 = -86 / ((param1 + 61) / 47);
-        if (!ue.field_c) {
+        var3 = -86 / ((obfuscationGuard + 61) / 47);
+        if (!MonotonicTime.field_c) {
           ri.h(-111);
           this.field_a = 0;
           return;
@@ -1007,7 +1007,7 @@ final class sb implements vc {
               stackIn_48_6 = true;
               stackIn_48_7 = 14;
               stackIn_48_8 = var7;
-              stackIn_48_9 = param0;
+              stackIn_48_9 = inputEnabled;
               stackIn_48_10 = 13;
               stackIn_49_11 = (so.a((byte) -35) <= 50) ? false : true;
               dc.a(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
@@ -1050,7 +1050,7 @@ final class sb implements vc {
           stackIn_67_6 = true;
           stackIn_67_7 = 14;
           stackIn_67_8 = var7Lifetime1;
-          stackIn_67_9 = param0;
+          stackIn_67_9 = inputEnabled;
           stackIn_67_10 = 13;
           stackIn_68_11 = (so.a((byte) -35) <= 50) ? false : true;
           dc.a(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
@@ -1088,7 +1088,7 @@ final class sb implements vc {
             stackIn_93_6 = true;
             stackIn_93_7 = 14;
             stackIn_93_8 = var7Lifetime2;
-            stackIn_93_9 = param0;
+            stackIn_93_9 = inputEnabled;
             stackIn_93_10 = 13;
             stackIn_94_11 = (so.a((byte) -35) <= 50) ? false : true;
             dc.a(stackIn_90_0, stackIn_91_1, stackIn_93_2, stackIn_93_3, stackIn_93_4, stackIn_93_5, stackIn_93_6, stackIn_93_7, stackIn_93_8 != 0, stackIn_93_9, stackIn_93_10, stackIn_94_11);
@@ -1115,7 +1115,7 @@ final class sb implements vc {
               stackIn_133_6 = true;
               stackIn_133_7 = 14;
               stackIn_133_8 = var7Lifetime2;
-              stackIn_133_9 = param0;
+              stackIn_133_9 = inputEnabled;
               stackIn_133_10 = 13;
               stackIn_134_11 = (so.a((byte) -35) <= 50) ? false : true;
               dc.a(stackIn_130_0, stackIn_131_1, stackIn_133_2, stackIn_133_3, stackIn_133_4, stackIn_133_5, stackIn_133_6, stackIn_133_7, stackIn_133_8 != 0, stackIn_133_9, stackIn_133_10, stackIn_134_11);
@@ -1140,7 +1140,7 @@ final class sb implements vc {
               stackIn_115_6 = true;
               stackIn_115_7 = 14;
               stackIn_115_8 = var7Lifetime2;
-              stackIn_115_9 = param0;
+              stackIn_115_9 = inputEnabled;
               stackIn_115_10 = 13;
               stackIn_116_11 = (so.a((byte) -35) <= 50) ? false : true;
               dc.a(stackIn_112_0, stackIn_113_1, stackIn_115_2, stackIn_115_3, stackIn_115_4, stackIn_115_5, stackIn_115_6, stackIn_115_7, stackIn_115_8 != 0, stackIn_115_9, stackIn_115_10, stackIn_116_11);
@@ -1181,7 +1181,7 @@ final class sb implements vc {
                 stackIn_243_6 = true;
                 stackIn_243_7 = 14;
                 stackIn_243_8 = var7Lifetime3;
-                stackIn_243_9 = param0;
+                stackIn_243_9 = inputEnabled;
                 stackIn_243_10 = 13;
                 stackIn_244_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_240_0, stackIn_241_1, stackIn_243_2, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7, stackIn_243_8 != 0, stackIn_243_9, stackIn_243_10, stackIn_244_11);
@@ -1208,7 +1208,7 @@ final class sb implements vc {
             stackIn_262_6 = true;
             stackIn_262_7 = 14;
             stackIn_262_8 = var7Lifetime3;
-            stackIn_262_9 = param0;
+            stackIn_262_9 = inputEnabled;
             stackIn_262_10 = 13;
             stackIn_263_11 = (so.a((byte) -35) <= 50) ? false : true;
             dc.a(stackIn_259_0, stackIn_260_1, stackIn_262_2, stackIn_262_3, stackIn_262_4, stackIn_262_5, stackIn_262_6, stackIn_262_7, stackIn_262_8 != 0, stackIn_262_9, stackIn_262_10, stackIn_263_11);
@@ -1241,7 +1241,7 @@ final class sb implements vc {
                 stackIn_161_6 = true;
                 stackIn_161_7 = 14;
                 stackIn_161_8 = var7Lifetime3;
-                stackIn_161_9 = param0;
+                stackIn_161_9 = inputEnabled;
                 stackIn_161_10 = 13;
                 stackIn_162_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
@@ -1276,7 +1276,7 @@ final class sb implements vc {
             stackIn_179_6 = true;
             stackIn_179_7 = 14;
             stackIn_179_8 = var7Lifetime3;
-            stackIn_179_9 = param0;
+            stackIn_179_9 = inputEnabled;
             stackIn_179_10 = 13;
             stackIn_180_11 = (so.a((byte) -35) <= 50) ? false : true;
             dc.a(stackIn_176_0, stackIn_177_1, stackIn_179_2, stackIn_179_3, stackIn_179_4, stackIn_179_5, stackIn_179_6, stackIn_179_7, stackIn_179_8 != 0, stackIn_179_9, stackIn_179_10, stackIn_180_11);
@@ -1306,7 +1306,7 @@ final class sb implements vc {
                 stackIn_202_6 = true;
                 stackIn_202_7 = 14;
                 stackIn_202_8 = var7Lifetime3;
-                stackIn_202_9 = param0;
+                stackIn_202_9 = inputEnabled;
                 stackIn_202_10 = 13;
                 stackIn_203_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
@@ -1341,7 +1341,7 @@ final class sb implements vc {
             stackIn_220_6 = true;
             stackIn_220_7 = 14;
             stackIn_220_8 = var7Lifetime3;
-            stackIn_220_9 = param0;
+            stackIn_220_9 = inputEnabled;
             stackIn_220_10 = 13;
             stackIn_221_11 = (so.a((byte) -35) <= 50) ? false : true;
             dc.a(stackIn_217_0, stackIn_218_1, stackIn_220_2, stackIn_220_3, stackIn_220_4, stackIn_220_5, stackIn_220_6, stackIn_220_7, stackIn_220_8 != 0, stackIn_220_9, stackIn_220_10, stackIn_221_11);
@@ -1405,7 +1405,7 @@ final class sb implements vc {
     public final boolean b(int param0) {
         if (param0 < 36) {
           field_d = (String) null;
-          if (!ue.field_c) {
+          if (!MonotonicTime.field_c) {
             return false;
           }
           if (pf.a(false, -2)) {
@@ -1413,7 +1413,7 @@ final class sb implements vc {
           }
           return false;
         }
-        if (!ue.field_c) {
+        if (!MonotonicTime.field_c) {
           return false;
         }
         if (pf.a(false, -2)) {

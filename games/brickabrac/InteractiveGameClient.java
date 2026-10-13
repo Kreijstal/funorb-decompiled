@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-abstract class sa extends qg implements vc {
+abstract class InteractiveGameClient extends GameConnectionShell implements vc {
     static boolean field_E;
 
-    public abstract void a(boolean param0, byte param1);
+    public abstract void updateGameLayer(boolean inputEnabled, byte obfuscationGuard);
 
     private final void j(boolean param0) {
         int var3;
@@ -15,7 +15,7 @@ abstract class sa extends qg implements vc {
         var3 = BrickABrac.field_J ? 1 : 0;
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!nl.a(ch.field_g, (byte) 64)))) {
-          stackIn_11_0 = this.a(jl.field_e, (byte) 47, IntrusiveHashTable.field_a);
+          stackIn_11_0 = this.handleGamePacket(jl.field_e, (byte) 47, IntrusiveHashTable.field_a);
           if (var3 == 0) {
             if (stackIn_11_0) {
               continue;
@@ -57,19 +57,19 @@ abstract class sa extends qg implements vc {
         return stackIn_10_0;
     }
 
-    public abstract void a(int param0);
+    public abstract void renderGameLayer(int obfuscationGuard);
 
     abstract void b(int param0, int param1);
 
-    public abstract boolean a(int param0, char param1, int param2);
+    public abstract boolean handleGameKey(int keyCode, char character, int obfuscationGuard);
 
     private final void i(boolean param0) {
         if (param0) {
-          this.f(-67);
+          this.updateClient(-67);
         }
     }
 
-    final void g(int param0) {
+    final void renderClient(int obfuscationGuard) {
         java.awt.Canvas var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -93,12 +93,12 @@ abstract class sa extends qg implements vc {
         var3 = kp.field_d.size() - 1;
         do {
           if (var3 < 0) {
-            if (param0 <= 93) {
+            if (obfuscationGuard <= 93) {
               field_E = false;
             }
             break;
           }
-          ((vc) (kp.field_d.elementAt(var3))).a(16769381);
+          ((vc) (kp.field_d.elementAt(var3))).renderGameLayer(16769381);
           var3--;
         } while (var4 == 0);
         if (pe.field_i) {
@@ -112,7 +112,7 @@ abstract class sa extends qg implements vc {
         return;
     }
 
-    protected sa() {
+    protected InteractiveGameClient() {
     }
 
     final void a(int param0, wb param1) {
@@ -143,7 +143,7 @@ abstract class sa extends qg implements vc {
         }
     }
 
-    abstract boolean a(BitPacketBuffer param0, byte param1, int param2);
+    abstract boolean handleGamePacket(BitPacketBuffer packet, byte obfuscationGuard, int opcode);
 
     final static void a(int param0, PaletteFont param1, String param2, int param3, int param4, int param5, int param6) {
         int var7_int = 0;
@@ -197,7 +197,7 @@ abstract class sa extends qg implements vc {
                   LevelPack.b(102);
                   break;
               }
-              this.a(false, (byte) 69);
+              this.updateGameLayer(false, (byte) 69);
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -206,7 +206,7 @@ abstract class sa extends qg implements vc {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (dj.c((byte) -33)) {
+            if (GameClock.c((byte) -33)) {
               stackIn_20_1 = (ua.field_d != null);
               var3 = this.b(stackIn_20_1, (byte) -118);
               if (1 == var3 ||
@@ -218,7 +218,7 @@ abstract class sa extends qg implements vc {
                   nk.a(param0 ^ 2058, uc.e((byte) -85));
                 }
               }
-              this.a(false, (byte) 81);
+              this.updateGameLayer(false, (byte) 81);
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -228,7 +228,7 @@ abstract class sa extends qg implements vc {
                   if (1 == var3) {
                     he.a(LevelPackLoader.field_a, true, (byte) 97);
                   }
-                  this.a(false, (byte) 7);
+                  this.updateGameLayer(false, (byte) 7);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -248,7 +248,7 @@ abstract class sa extends qg implements vc {
                       if (var5 != 0) {
                         if (stackIn_76_0 < stackIn_76_1) {
                           var6 = (vc) (kp.field_d.elementAt(var3));
-                          var6.a(var2 != 0, (byte) -126);
+                          var6.updateGameLayer(var2 != 0, (byte) -126);
                           decompiledFrameCompleted1 = false;
                           break;
                         }
@@ -269,7 +269,7 @@ abstract class sa extends qg implements vc {
                       }
                       var4 = 0;
                       while (var4 < kp.field_d.size()) {
-                        stackIn_39_0 = ((vc) (kp.field_d.elementAt(var4))).a(dc.currentKeyCode, go.currentKeyCharacter, -81);
+                        stackIn_39_0 = ((vc) (kp.field_d.elementAt(var4))).handleGameKey(dc.currentKeyCode, go.currentKeyCharacter, -81);
                         if (!stackIn_39_0) {
                           var4++;
                           continue;
@@ -284,26 +284,26 @@ abstract class sa extends qg implements vc {
                     (decompiledFrameCompleted0) &&
                     (var5 != 0)) {
                     nk.a(114);
-                    this.a(false, (byte) 28);
+                    this.updateGameLayer(false, (byte) 28);
                   }
                 } else {
                   nk.a(114);
                   if (var5 != 0) {
-                    this.a(false, (byte) 28);
+                    this.updateGameLayer(false, (byte) 28);
                   }
                 }
               }
             }
           }
         } else {
-          this.a(false, (byte) 28);
+          this.updateGameLayer(false, (byte) 28);
         }
         if ((decompiledFrameCompleted1) &&
           (decompiledFrameCompleted0)) {
           var3 = 0;
           while (!(var3 >= kp.field_d.size())) {
             var6 = (vc) (kp.field_d.elementAt(var3));
-            var6.a(var2 != 0, (byte) -126);
+            var6.updateGameLayer(var2 != 0, (byte) -126);
             if (var5 != 0) {
               break;
             }
@@ -367,7 +367,7 @@ abstract class sa extends qg implements vc {
           param4.drawTransparent(param9 + (param7 - param4.canvasWidth) / 2 - (-(param6 * 10 >> 16) - 10 / param3), 480 + (param8 + (param2 - param4.canvasHeight)));
           if (param0 <= 79) {
             var11 = (RgbSprite) null;
-            sa.a((byte) 75, (RgbSprite) null, -80, -107, (RgbSprite) null, (RgbSprite) null, 10, 97, -30, 44);
+            InteractiveGameClient.a((byte) 75, (RgbSprite) null, -80, -107, (RgbSprite) null, (RgbSprite) null, 10, 97, -30, 44);
           }
           param1.drawTransparent(10 / param3 + (param9 - (-((-param1.canvasWidth + param7) / 2) - (20 * param6 >> 16))), 480 + (param2 + param8 - param1.canvasHeight));
           return;
@@ -397,7 +397,7 @@ abstract class sa extends qg implements vc {
         }
     }
 
-    final void f(int param0) {
+    final void updateClient(int obfuscationGuard) {
         boolean stackIn_7_1 = false;
         int var2 = 0;
         int var3 = 0;
@@ -411,7 +411,7 @@ abstract class sa extends qg implements vc {
         }
         stackIn_7_1 = (ua.field_d != null);
         this.b(stackIn_7_1, 1);
-        if (param0 >= -34) {
+        if (obfuscationGuard >= -34) {
           field_E = false;
         }
         if (lo.field_d) {

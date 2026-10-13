@@ -172,7 +172,7 @@ final class nj extends IntrusiveNode {
             var8 = ip.field_r.nextBoundedInt(-37880252, 800);
             this.field_A[var5] = this.field_s + (ip.field_r.nextBoundedInt(-37880252, 4) - 2 << 8);
             this.field_C[var5] = this.field_N + (-2 + ip.field_r.nextBoundedInt(-37880252, 4) << 8);
-            this.field_r[var5] = (sa.a(var12 * var7 + var8, -4097) >> 8) * var6 >> 8;
+            this.field_r[var5] = (InteractiveGameClient.a(var12 * var7 + var8, -4097) >> 8) * var6 >> 8;
             this.field_y[var5] = var6 * (BrickABrac.c(2048, var8 + var12 * var7) >> 8) >> 8;
             this.field_n[var5] = var9;
             this.field_P[var5] = var10;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jl {
-    static long field_c;
+    static long lastWallMillis;
     static int field_b;
     static BitPacketBuffer field_e;
     static RgbSprite field_d;
@@ -71,7 +71,7 @@ final class jl {
           var5Lifetime1 = kk.field_e[11] >> 8;
           var6Lifetime1 = MatchResultScreen.field_t << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = sa.a(var6Lifetime1, -4097) >> 8;
+          var8Lifetime1 = InteractiveGameClient.a(var6Lifetime1, -4097) >> 8;
           var9Lifetime1 = BrickABrac.c(2048, var6Lifetime1) >> 8;
           if (-1 != pq.pointerX &&
             -1 != po.pointerY) {
@@ -197,7 +197,7 @@ final class jl {
             return stackIn_24_0;
           }
           if (param0 != 24943) {
-            field_c = -99L;
+            lastWallMillis = -99L;
           }
           var5 = k.field_h;
           var5.writeCipheredOpcode(-13413, param2);

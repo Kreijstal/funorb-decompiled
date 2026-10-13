@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dj {
+abstract class GameClock {
     static int field_d;
     static String field_h;
     static RgbSprite[] field_f;
@@ -11,17 +11,17 @@ abstract class dj {
     static RectangleBody field_c;
     static int field_b;
 
-    final int a(long param0, byte param1) {
-        long var4 = this.d((byte) 107);
+    final int waitAndAdvance(long tickDurationNanos, byte obfuscationGuard) {
+        long var4 = this.getSleepMillis((byte) 107);
         if (var4 > 0L) {
-          wj.a(-124, var4);
-          if (param1 == -71) {
-            return this.a(15, param0);
+          wj.sleepMillis(-124, var4);
+          if (obfuscationGuard == -71) {
+            return this.advanceCycles(15, tickDurationNanos);
           }
           return 106;
         }
-        if (param1 == -71) {
-          return this.a(15, param0);
+        if (obfuscationGuard == -71) {
+          return this.advanceCycles(15, tickDurationNanos);
         }
         return 106;
     }
@@ -80,12 +80,12 @@ abstract class dj {
         return var2Lifetime1;
     }
 
-    abstract void a(int param0);
+    abstract void reset(int obfuscationGuard);
 
     final static boolean c(byte param0) {
         int var1 = 15 % ((81 - param0) / 36);
         hk.field_R = true;
-        cg.field_i = 15000L + ue.a(false);
+        NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
         return AchievementIcon.field_j == 11 ? true : false;
     }
 
@@ -98,9 +98,9 @@ abstract class dj {
         int var1 = 25 % ((param0 + 34) / 58);
     }
 
-    abstract long d(byte param0);
+    abstract long getSleepMillis(byte obfuscationGuard);
 
-    abstract int a(int param0, long param1);
+    abstract int advanceCycles(int obfuscationGuard, long tickDurationNanos);
 
     final static String a(boolean param0, java.applet.Applet param1) {
         try {
@@ -126,7 +126,7 @@ abstract class dj {
               var10 = param1.getParameter("cookieprefix");
               if (!param0) {
                 var9 = (java.applet.Applet) null;
-                dj.a(true, (java.applet.Applet) null);
+                GameClock.a(true, (java.applet.Applet) null);
               }
               var3 = var10 + "settings";
               var4 = (String) (ne.a("getcookies", -125, param1));

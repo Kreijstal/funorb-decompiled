@@ -1,42 +1,42 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends dj {
-    private int field_o;
+final class NanoGameClock extends GameClock {
+    private int sampleCursor;
     static boolean field_l;
     static RgbSprite field_q;
     static ff field_s;
     static PcmSound[] field_p;
-    private long field_m;
-    private long field_r;
-    private int field_j;
+    private long nextTickNanos;
+    private long elapsedNanos;
+    private int sampleCount;
     static long field_i;
-    private long field_k;
-    private long[] field_n;
+    private long lastSampleNanos;
+    private long[] samples;
 
-    final int a(int param0, long param1) {
-        int var4;
-        int var5;
-        var5 = BrickABrac.field_J ? 1 : 0;
-        if (param0 != 15) {
+    final int advanceCycles(int obfuscationGuard, long tickDurationNanos) {
+        int cycles;
+        int clientBranchFlag;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        if (obfuscationGuard != 15) {
           return -72;
         }
-        if (this.field_m > this.field_r) {
-          this.field_k = this.field_k + (this.field_m - this.field_r);
-          this.field_r = this.field_r + (-this.field_r + this.field_m);
-          this.field_m = this.field_m + param1;
+        if (this.nextTickNanos > this.elapsedNanos) {
+          this.lastSampleNanos = this.lastSampleNanos + (this.nextTickNanos - this.elapsedNanos);
+          this.elapsedNanos = this.elapsedNanos + (-this.elapsedNanos + this.nextTickNanos);
+          this.nextTickNanos = this.nextTickNanos + tickDurationNanos;
           return 1;
         }
-        var4 = 0;
+        cycles = 0;
         do {
-          var4++;
-          this.field_m = this.field_m + param1;
-        } while (var4 < 10 &&
-          this.field_r > this.field_m);
-        if (this.field_m < this.field_r) {
-          this.field_m = this.field_r;
+          cycles++;
+          this.nextTickNanos = this.nextTickNanos + tickDurationNanos;
+        } while (cycles < 10 &&
+          this.elapsedNanos > this.nextTickNanos);
+        if (this.nextTickNanos < this.elapsedNanos) {
+          this.nextTickNanos = this.elapsedNanos;
         }
-        return var4;
+        return cycles;
     }
 
     final static void b(int param0) {
@@ -97,48 +97,48 @@ final class cg extends dj {
         }
     }
 
-    final void a(int param0) {
-        if (this.field_m > this.field_r) {
-          this.field_r = this.field_r + (-this.field_r + this.field_m);
+    final void reset(int obfuscationGuard) {
+        if (this.nextTickNanos > this.elapsedNanos) {
+          this.elapsedNanos = this.elapsedNanos + (-this.elapsedNanos + this.nextTickNanos);
         }
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           NodeDeque var3 = (NodeDeque) null;
-          cg.attachBrickMotionPaths((NodeDeque[]) null, (byte) 16, (NodeDeque) null, true);
+          NanoGameClock.attachBrickMotionPaths((NodeDeque[]) null, (byte) 16, (NodeDeque) null, true);
         }
-        this.field_k = 0L;
+        this.lastSampleNanos = 0L;
     }
 
-    final long d(byte param0) {
-        int var2 = 116 / ((param0 + 1) / 38);
-        this.field_r = this.field_r + this.e((byte) -64);
-        if (this.field_r < this.field_m) {
-          return (-this.field_r + this.field_m) / 1000000L;
+    final long getSleepMillis(byte obfuscationGuard) {
+        int var2 = 116 / ((obfuscationGuard + 1) / 38);
+        this.elapsedNanos = this.elapsedNanos + this.sampleDelta((byte) -64);
+        if (this.elapsedNanos < this.nextTickNanos) {
+          return (-this.elapsedNanos + this.nextTickNanos) / 1000000L;
         }
         return 0L;
     }
 
-    private final long e(byte param0) {
-        int var8 = 0;
-        int var9 = BrickABrac.field_J ? 1 : 0;
-        long var2 = System.nanoTime();
-        long var4 = -this.field_k + var2;
-        this.field_k = var2;
-        if (var4 > -5000000000L &&
-          var4 < 5000000000L) {
-          this.field_n[this.field_o] = var4;
-          if (this.field_j < 1) {
-            this.field_j = this.field_j + 1;
+    private final long sampleDelta(byte obfuscationGuard) {
+        int sampleIndex = 0;
+        int clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        long nowNanos = System.nanoTime();
+        long deltaNanos = -this.lastSampleNanos + nowNanos;
+        this.lastSampleNanos = nowNanos;
+        if (deltaNanos > -5000000000L &&
+          deltaNanos < 5000000000L) {
+          this.samples[this.sampleCursor] = deltaNanos;
+          if (this.sampleCount < 1) {
+            this.sampleCount = this.sampleCount + 1;
           }
-          this.field_o = (1 + this.field_o) % 10;
+          this.sampleCursor = (1 + this.sampleCursor) % 10;
         }
-        if (param0 >= -19) {
+        if (obfuscationGuard >= -19) {
           field_q = (RgbSprite) null;
         }
-        long var6 = 0L;
-        for (var8 = 1; var8 <= this.field_j; var8++) {
-          var6 = var6 + this.field_n[(10 + this.field_o - var8) % 10];
+        long sumNanos = 0L;
+        for (sampleIndex = 1; sampleIndex <= this.sampleCount; sampleIndex++) {
+          sumNanos = sumNanos + this.samples[(10 + this.sampleCursor - sampleIndex) % 10];
         }
-        return var6 / (long)this.field_j;
+        return sumNanos / (long)this.sampleCount;
     }
 
     final static void attachBrickMotionPaths(NodeDeque[] brickGroups, byte obfuscationGuard, NodeDeque motionPaths, boolean includeVelocity) {
@@ -215,15 +215,15 @@ final class cg extends dj {
         field_p = null;
     }
 
-    cg() {
-        this.field_o = 0;
-        this.field_r = 0L;
-        this.field_m = 0L;
-        this.field_k = 0L;
-        this.field_n = new long[10];
-        this.field_j = 1;
-        this.field_r = System.nanoTime();
-        this.field_m = System.nanoTime();
+    NanoGameClock() {
+        this.sampleCursor = 0;
+        this.elapsedNanos = 0L;
+        this.nextTickNanos = 0L;
+        this.lastSampleNanos = 0L;
+        this.samples = new long[10];
+        this.sampleCount = 1;
+        this.elapsedNanos = System.nanoTime();
+        this.nextTickNanos = System.nanoTime();
     }
 
     static {

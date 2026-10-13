@@ -87,7 +87,7 @@ final class LevelList {
         ag.buttonLabels[24] = gi.field_r;
         ag.buttonLabels[42] = oc.field_u;
         ag.buttonLabels[37] = LevelPackLoader.field_i;
-        sl.field_A[7] = ke.field_f;
+        sl.field_A[7] = AppletGameShell.field_f;
         sl.field_A[8] = PauseMenuScreen.field_v;
         ag.buttonLabels[15] = pl.field_c[1];
         ag.buttonLabels[16] = pl.field_c[2];
@@ -104,7 +104,7 @@ final class LevelList {
         ar.field_a = new String[]{kk.field_a};
         sl.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{ff.field_g, pq.field_m, bm.field_b, RectangleBody.field_t};
-        ml.field_e = new String[]{qi.field_N, bg.field_o, ue.field_a, eb.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
+        ml.field_e = new String[]{qi.field_N, bg.field_o, MonotonicTime.field_a, eb.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
         sl.field_A[17] = pq.field_q;
         sl.field_A[14] = vh.field_V;
         sl.field_A[18] = GameScreen.field_g;

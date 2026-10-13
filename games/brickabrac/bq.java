@@ -262,7 +262,7 @@ final class bq {
               }
               stackIn_81_0[stackIn_81_1] = stackIn_84_2;
             }
-            un.field_g = ue.a(false);
+            un.field_g = MonotonicTime.nowMillis(false);
           }
           mh.field_H.itemCount = ri.field_I.length;
           var3_intLifetime1 = 0;

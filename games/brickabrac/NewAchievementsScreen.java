@@ -6,7 +6,7 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
     static int field_H;
     static int[] field_I;
     static int field_J;
-    static boolean field_G;
+    static boolean discardGameplayOnTransition;
 
     NewAchievementsScreen() {
         super(9, oc.field_y);
@@ -15,7 +15,7 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
 
     final static void f(int param0) {
         if (param0 != 967) {
-          field_G = false;
+          discardGameplayOnTransition = false;
           qa.e((byte) -95);
           bd.a(4, true);
           return;

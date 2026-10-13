@@ -39,7 +39,7 @@ final class lj extends IntrusiveNode {
           }
           var8 = param1.a(0);
           while (var8.status == 0) {
-            wj.a(-128, 10L);
+            wj.sleepMillis(-128, 10L);
           }
           if (var8.status == 2) {
             stackIn_10_0 = new hg[]{};

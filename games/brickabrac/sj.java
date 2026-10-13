@@ -145,7 +145,7 @@ final class sj {
               if (0L > param4) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + ke.a((byte) -75, ue.a(false) + param4 * 1000L) + "; Max-Age=" + param4;
+                var7Lifetime4 = var9 + "; Expires=" + AppletGameShell.a((byte) -75, MonotonicTime.nowMillis(false) + param4 * 1000L) + "; Max-Age=" + param4;
               }
               ne.a(param0, "document.cookie=\"" + var7Lifetime4 + "\"", 5797);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -263,7 +263,7 @@ final class sj {
                   var8 = new id(var29, var30, var3);
                   eq.field_m.a(var3, var8, 86);
                 }
-                var8.field_Xb = ue.a(false) - (long)((PacketBuffer) ((Object) var1)).readInt(255);
+                var8.field_Xb = MonotonicTime.nowMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(255);
                 var8.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                 var10 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 110);
                 var8.field_ac = var10 >> 1;
@@ -400,7 +400,7 @@ final class sj {
                                   case 21:
                                     var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                                     if (var3_int != 0) {
-                                      ic.field_b = (long)var3_int + ue.a(false);
+                                      ic.field_b = (long)var3_int + MonotonicTime.nowMillis(false);
                                       break regionExit1;
                                     }
                                     ic.field_b = 0L;

@@ -57,7 +57,7 @@ class vb extends d {
           this.field_Q = param2;
           this.a(param0, -12592, true);
           this.field_N = true;
-          this.field_O = ue.a(false);
+          this.field_O = MonotonicTime.nowMillis(false);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -199,7 +199,7 @@ class vb extends d {
                 this.field_T = var6;
               }
             }
-            this.field_O = ue.a(false);
+            this.field_O = MonotonicTime.nowMillis(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -357,7 +357,7 @@ class vb extends d {
             if (this.field_T != this.field_L) {
               var5.a(-15964, param0, param1, this.field_L, this.field_T, (oc) (this));
             }
-            var6 = ue.a(false);
+            var6 = MonotonicTime.nowMillis(false);
             if ((var6 - this.field_O) % 1000L < 500L) {
               var5.a((oc) (this), param1, this.field_T, param0, (byte) 123);
             }
@@ -384,7 +384,7 @@ class vb extends d {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_O = ue.a(false);
+          this.field_O = MonotonicTime.nowMillis(false);
           if (param1 != 110) {
             field_S = 20;
           }
@@ -539,7 +539,7 @@ class vb extends d {
             stackIn_7_1 = var8_int;
           }
           this.a(stackIn_7_1, 81);
-          var8_long = ue.a(false);
+          var8_long = MonotonicTime.nowMillis(false);
           stackIn_10_1 = !(-this.field_P + var8_long >= 250L);
           this.field_M = stackIn_10_1;
           if (this.field_M) {

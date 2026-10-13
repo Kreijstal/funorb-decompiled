@@ -82,19 +82,19 @@ final class ei implements ub {
         if (param0 != 0) {
           return;
         }
-        ke.field_b = null;
+        AppletGameShell.field_b = null;
         t.field_g = false;
-        if (cg.field_l) {
+        if (NanoGameClock.field_l) {
           ej.field_I.i((byte) -104);
         } else {
           var1 = OptionsScreen.field_x;
           if (var1 > 0) {
             if (var1 != 1) {
-              ke.field_b = rd.a(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);
+              AppletGameShell.field_b = rd.a(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);
             } else {
-              ke.field_b = ib.field_C;
+              AppletGameShell.field_b = ib.field_C;
             }
-            ke.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) ke.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
+            AppletGameShell.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) AppletGameShell.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
           }
           ej.field_I.m(param0 + 17);
           qa.e((byte) -117);

@@ -3,7 +3,7 @@
  */
 final class ok {
     static String field_a;
-    static int field_c;
+    static int achievementNotificationTick;
     static String[] field_b;
     static RgbSprite field_g;
     static String field_e;
@@ -54,6 +54,6 @@ final class ok {
         field_a = "Log in";
         field_b = new String[24];
         field_e = "Updates will sent to the email address you've given";
-        field_c = 0;
+        achievementNotificationTick = 0;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue {
+final class MonotonicTime {
     static int field_d;
     static int[] field_b;
     static String field_f;
@@ -18,16 +18,16 @@ final class ue {
         field_f = null;
     }
 
-    final synchronized static long a(boolean param0) {
-        long var1 = System.currentTimeMillis();
-        if (!(jl.field_c <= var1)) {
-          MultiplayerExitScreen.field_C = MultiplayerExitScreen.field_C + (jl.field_c - var1);
+    final synchronized static long nowMillis(boolean obfuscationGuard) {
+        long wallMillis = System.currentTimeMillis();
+        if (!(jl.lastWallMillis <= wallMillis)) {
+          MultiplayerExitScreen.wallRollbackMillis = MultiplayerExitScreen.wallRollbackMillis + (jl.lastWallMillis - wallMillis);
         }
-        jl.field_c = var1;
-        if (param0) {
-          ue.a(false);
+        jl.lastWallMillis = wallMillis;
+        if (obfuscationGuard) {
+          MonotonicTime.nowMillis(false);
         }
-        return MultiplayerExitScreen.field_C + var1;
+        return MultiplayerExitScreen.wallRollbackMillis + wallMillis;
     }
 
     static {

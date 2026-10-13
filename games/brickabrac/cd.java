@@ -21,7 +21,7 @@ final class cd {
         int var5Lifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
         if (param0 < -126) {
-          var1 = ue.a(false);
+          var1 = MonotonicTime.nowMillis(false);
           var3 = -ob.field_G + var1;
           if (var3 > 30000L) {
             GameplayScreen.field_h = 0;
@@ -48,7 +48,7 @@ final class cd {
           return true;
         }
         field_d = (mh) null;
-        var1Lifetime1 = ue.a(false);
+        var1Lifetime1 = MonotonicTime.nowMillis(false);
         var3Lifetime1 = -ob.field_G + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
           GameplayScreen.field_h = 0;
@@ -96,7 +96,7 @@ final class cd {
     }
 
     final static void a(ta param0, ta param1, int param2, int param3, int param4, int param5) {
-        dj.field_g = param2;
+        GameClock.field_g = param2;
         if (param3 != 7) {
           return;
         }

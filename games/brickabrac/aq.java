@@ -33,7 +33,7 @@ final class aq implements Runnable {
                     var2.c();
                   }
                 }
-                wj.a(-128, 10L);
+                wj.sleepMillis(-128, 10L);
                 var5 = (Object) null;
                 IntNode.a(-4317, this.field_c, (Object) null);
               }

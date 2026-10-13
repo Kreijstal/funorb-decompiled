@@ -291,7 +291,7 @@ final class be {
               stackIn_8_0 = var3;
               return stackIn_8_0;
             }
-            stackIn_6_0 = ke.copyBytes(false, var3);
+            stackIn_6_0 = AppletGameShell.copyBytes(false, var3);
             return stackIn_6_0;
           }
           if (obfuscationGuard) {

@@ -24,7 +24,7 @@ final class bf extends d {
             bf.a((String) null, 67, -0.11976710706949234f, true);
           }
           if (sj.field_b == null) {
-            sj.field_b = new tb(ResourceArchive.field_f, ke.field_b);
+            sj.field_b = new tb(ResourceArchive.field_f, AppletGameShell.field_b);
             ResourceArchive.field_f.a(param1 - 8287, sj.field_b);
           }
           sj.field_b.a(param2, param0, param3, (byte) 86);
@@ -80,7 +80,7 @@ final class bf extends d {
           if (param2 != -15947) {
             field_K = (RgbSprite) null;
           }
-          DirectByteStorage.field_k = new hk(GameScreen.field_d, (String) null, cg.field_l, param0, param1);
+          DirectByteStorage.field_k = new hk(GameScreen.field_d, (String) null, NanoGameClock.field_l, param0, param1);
           rj.field_c = new bh(ResourceArchive.field_f, DirectByteStorage.field_k);
           ResourceArchive.field_f.a(-117, rj.field_c);
         } catch (RuntimeException runtimeException) {

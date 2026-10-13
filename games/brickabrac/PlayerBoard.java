@@ -107,7 +107,7 @@ final class PlayerBoard extends IntrusiveNode {
             return;
           }
           if (this.motionPaths != null) {
-            cg.attachBrickMotionPaths(this.brickGroups, (byte) 35, this.motionPaths, true);
+            NanoGameClock.attachBrickMotionPaths(this.brickGroups, (byte) 35, this.motionPaths, true);
           }
           if (param1 != 9) {
             return;

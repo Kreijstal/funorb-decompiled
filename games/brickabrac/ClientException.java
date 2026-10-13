@@ -54,7 +54,7 @@ final class ClientException extends RuntimeException {
             if (0 == (1 << var6_int & (param3.playerMaskTwo | param3.playerMaskOne | param3.playerMaskThree))) {
               var7 = param3.playerBoards[var6_int];
               var8 = 1414 * var7.field_G / (30 * param3.playerCount);
-              var8 = var8 + (MembershipBenefitsScreen.field_x + 294 << 7);
+              var8 = var8 + (MembershipBenefitsScreen.clientTick + 294 << 7);
               var8 = var8 >> 8;
               stackIn_7_0 = var7.field_H;
               stackIn_7_1 = false;

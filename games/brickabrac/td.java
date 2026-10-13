@@ -54,7 +54,7 @@ final class td extends ki {
         cp.field_I = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
         se.field_k = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
         mc.field_f = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
-        cg.field_q = jh.a(0, RasterCacheSurface.field_j);
+        NanoGameClock.field_q = jh.a(0, RasterCacheSurface.field_j);
         gq.field_Sb = jh.a(0, cp.field_I);
         RectangleBody.field_p = jh.a(0, se.field_k);
         CacheIoWorker.field_a[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
@@ -195,7 +195,7 @@ final class td extends ki {
             BitPacketBuffer.a(RectangleBody.field_p, var6, param3, 2, (byte) 119, -14);
             var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ArchiveIndex.a(-113, -14, cg.field_q, param4, var6.sprite, param3, 306, 2, param2, param0, gq.field_Sb);
+          ArchiveIndex.a(-113, -14, NanoGameClock.field_q, param4, var6.sprite, param3, 306, 2, param2, param0, gq.field_Sb);
         }
         if (param1 >= -84) {
           field_v = (mh) null;
@@ -212,7 +212,7 @@ final class td extends ki {
         RuntimeException var1_ref = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = new IsaacGenerator(new int[]{(int)ue.a(false)});
+          var4 = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           var1 = var4;
           for (var2 = param0; var2 < mh.field_F.length; var2++) {
             mh.field_F[var2] = var4.nextInt(101);

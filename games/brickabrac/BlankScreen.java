@@ -45,8 +45,8 @@ final class BlankScreen extends GameScreen {
         }
     }
 
-    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
-        if (keyCode < 98) {
+    final boolean handleKey(char character, int obfuscationGuard, int keyCode) {
+        if (obfuscationGuard < 98) {
           field_j = (String) null;
           return false;
         }
@@ -60,10 +60,10 @@ final class BlankScreen extends GameScreen {
         if (th.field_h) {
           return null;
         }
-        if (ue.field_e > go.field_e) {
+        if (MonotonicTime.field_e > go.field_e) {
           return null;
         }
-        if (go.field_e < jh.field_a + ue.field_e) {
+        if (go.field_e < jh.field_a + MonotonicTime.field_e) {
           return LevelCompleteScreen.field_J;
         }
         return null;

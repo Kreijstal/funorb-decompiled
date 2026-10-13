@@ -153,15 +153,15 @@ final class TimedSplashScreen extends MenuScreen {
         return (RgbSprite[]) null;
     }
 
-    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
-        if (keyCode >= 98) {
-          if (obfuscationGuard >= 0) {
+    final boolean handleKey(char character, int obfuscationGuard, int keyCode) {
+        if (obfuscationGuard >= 98) {
+          if (keyCode >= 0) {
             ng.requestScreen(false, 99, 0);
           }
           return true;
         }
         this.remainingTicks = -100;
-        if (obfuscationGuard >= 0) {
+        if (keyCode >= 0) {
           ng.requestScreen(false, 99, 0);
           return true;
         }

@@ -3,7 +3,7 @@
  */
 abstract class ResourceRequest extends DualLinkNode {
     static boolean field_y;
-    static long field_x;
+    static long tickDurationNanos;
     static int[] field_z;
     static int keyEventWriteIndex;
     boolean priority;
@@ -78,7 +78,7 @@ abstract class ResourceRequest extends DualLinkNode {
     }
 
     static {
-        field_x = 20000000L;
+        tickDurationNanos = 20000000L;
         keyEventWriteIndex = 0;
         field_A = "Invite <%0> to this game";
     }

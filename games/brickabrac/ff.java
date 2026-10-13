@@ -83,7 +83,7 @@ abstract class ff {
         try {
           var4 = (sp) (tm.field_f.first(-84));
           while (var4 != null) {
-            ke.a(param1, var4, 14989);
+            AppletGameShell.a(param1, var4, 14989);
             var4 = (sp) (tm.field_f.next((byte) 116));
           }
           if (param0 > -34) {

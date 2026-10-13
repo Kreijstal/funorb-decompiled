@@ -870,7 +870,7 @@ class um implements ub, qe {
           stackIn_4_6 = (rl.field_e == o.field_b);
           var7_int = ((mm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var8 = rl.field_e.field_Rb.field_bb;
-          var9 = ue.a(false);
+          var9 = MonotonicTime.nowMillis(false);
           var12 = -30 / ((param6 + 26) / 55);
           var11 = null;
           var13 = (om) (var8.first(-64));
@@ -1106,7 +1106,7 @@ class um implements ub, qe {
               var13.field_ec.a(np.field_a, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
               var35_int = kn.field_z;
               if ((var15Lifetime1 & 1 << fd.field_c) != 0) {
-                var51_ref = dj.field_f[var13.field_kc];
+                var51_ref = GameClock.field_f[var13.field_kc];
                 var13.field_sc.field_wb = var51_ref;
                 var13.field_sc.a(var13.field_ec.field_cb, 0, var35_int, var51_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var51_ref.canvasWidth + kn.field_z);

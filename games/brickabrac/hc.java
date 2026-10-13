@@ -108,17 +108,17 @@ final class hc {
         int var2 = BrickABrac.field_J ? 1 : 0;
         int var1_intLifetime1;
         try {
-          MenuSelection.field_b.a(1);
+          MenuSelection.gameClock.reset(1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            ig.field_M[var1_int] = 0L;
+            ig.renderTimes[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-            sm.field_c[var1_intLifetime1] = 0L;
+            sm.tickTimes[var1_intLifetime1] = 0L;
           }
           if (param0 != 2) {
             field_c = false;
           }
-          c.field_a = 0;
+          c.cyclesDue = 0;
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ')');
         }
@@ -229,16 +229,16 @@ final class hc {
           var10.field_Q = 1;
           var11.field_S = 1;
           qh.field_j = new mh(0L, var8);
-          qh.field_j.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
+          qh.field_j.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
           lp.field_Ab = new mh(0L, (mh) null);
           lp.field_Ab.field_Jb = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
           f.field_a = new mh(0L, (mh) null);
           f.field_a.field_Jb = na.a(false, 6316128, 3, 6316128, 114, 1);
           ij.field_c = new mh(0L, (mh) null);
-          ij.field_c.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
-          var12 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
+          ij.field_c.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
+          var12 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
           var13 = cr.loadRgbSpritesByName("lobby", param3, "button", 2);
-          var14 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "tab_active", 2), (byte) -110);
+          var14 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_active", 2), (byte) -110);
           rf.field_c = new mh(0L, var8);
           rf.field_c.field_Jb = var14;
           am.field_Zb = new mh(0L, (mh) null);
@@ -295,8 +295,8 @@ final class hc {
           fi.field_s.field_S = 1;
           eh.field_n = new mh(0L, DualLinkNode.field_t);
           eh.field_n.field_S = 1;
-          eh.field_n.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
-          eh.field_n.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
+          eh.field_n.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
+          eh.field_n.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
           eh.field_n.field_pb = var14;
           hd.field_c = new mh(0L, (mh) null);
           hd.field_c.field_Jb = na.a(false, 1127256, 3, 1856141, 206, -1);
@@ -321,43 +321,43 @@ final class hc {
           GzipInflater.field_d = new mh(0L, MessageScreen.field_r);
           OptionsScreen.field_u = new mh(0L, MessageScreen.field_r);
           al.field_n = new mh(0L, MessageScreen.field_r);
-          MessageScreen.field_r.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton", 2), (byte) -119);
-          MessageScreen.field_r.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_mouseover", 2), (byte) -114);
-          dupTemp$0 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_active", 2), (byte) -102);
+          MessageScreen.field_r.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton", 2), (byte) -119);
+          MessageScreen.field_r.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_mouseover", 2), (byte) -114);
+          dupTemp$0 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_active", 2), (byte) -102);
           MessageScreen.field_r.field_pb = dupTemp$0;
           MessageScreen.field_r.field_D = dupTemp$0;
-          MessageScreen.field_r.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_disabled", 2), (byte) -120);
-          ij.field_b.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton", 2), (byte) -102);
-          ij.field_b.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseover", 2), (byte) -105);
-          ij.field_b.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseheld", 2), (byte) -123);
-          fm.field_b.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton", 2), (byte) -114);
-          fm.field_b.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
-          fm.field_b.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
-          fm.field_b.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
-          ok.field_d.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton", 2), (byte) -127);
-          ok.field_d.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
-          ok.field_d.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
-          MotionWaypoint.field_s.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton", 2), (byte) -105);
-          MotionWaypoint.field_s.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
-          MotionWaypoint.field_s.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
-          MatchCompleteScreen.field_x.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton", 2), (byte) -127);
-          MatchCompleteScreen.field_x.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
-          MatchCompleteScreen.field_x.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);
-          MatchCompleteScreen.field_x.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_disabled", 2), (byte) -107);
-          al.field_n.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton", 2), (byte) -115);
-          al.field_n.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
-          dupTemp$1 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_active", 2), (byte) -112);
+          MessageScreen.field_r.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "smallbutton_disabled", 2), (byte) -120);
+          ij.field_b.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton", 2), (byte) -102);
+          ij.field_b.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseover", 2), (byte) -105);
+          ij.field_b.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseheld", 2), (byte) -123);
+          fm.field_b.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton", 2), (byte) -114);
+          fm.field_b.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
+          fm.field_b.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
+          fm.field_b.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
+          ok.field_d.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton", 2), (byte) -127);
+          ok.field_d.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
+          ok.field_d.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
+          MotionWaypoint.field_s.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton", 2), (byte) -105);
+          MotionWaypoint.field_s.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
+          MotionWaypoint.field_s.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
+          MatchCompleteScreen.field_x.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton", 2), (byte) -127);
+          MatchCompleteScreen.field_x.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
+          MatchCompleteScreen.field_x.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);
+          MatchCompleteScreen.field_x.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "backbutton_disabled", 2), (byte) -107);
+          al.field_n.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton", 2), (byte) -115);
+          al.field_n.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_mouseover", 2), (byte) -114);
+          dupTemp$1 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_active", 2), (byte) -112);
           al.field_n.field_pb = dupTemp$1;
           al.field_n.field_D = dupTemp$1;
-          al.field_n.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
-          GzipInflater.field_d.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
-          GzipInflater.field_d.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
-          dupTemp$2 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_active", 2), (byte) -125);
+          al.field_n.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "gameoptionbutton_disabled", 2), (byte) -116);
+          GzipInflater.field_d.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton", 2), (byte) -103);
+          GzipInflater.field_d.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_mouseover", 2), (byte) -113);
+          dupTemp$2 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatbutton_active", 2), (byte) -125);
           GzipInflater.field_d.field_pb = dupTemp$2;
           GzipInflater.field_d.field_D = dupTemp$2;
-          OptionsScreen.field_u.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton", 2), (byte) -119);
-          OptionsScreen.field_u.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_mouseover", 2), (byte) -106);
-          dupTemp$3 = qg.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_active", 2), (byte) -105);
+          OptionsScreen.field_u.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton", 2), (byte) -119);
+          OptionsScreen.field_u.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_mouseover", 2), (byte) -106);
+          dupTemp$3 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "chatfilterbutton_active", 2), (byte) -105);
           OptionsScreen.field_u.field_pb = dupTemp$3;
           OptionsScreen.field_u.field_D = dupTemp$3;
           var17 = cr.loadRgbSpritesByName("lobby", param3, "checkbox", 2);
@@ -368,10 +368,10 @@ final class hc {
           kb.field_Vb.field_D = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseheld", (byte) 118, param3), -86);
           kb.field_Vb.field_Ab = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_disabled", (byte) -47, param3), -39);
           RankingsScreen.field_s = new mh(0L, (mh) null);
-          RankingsScreen.field_s.field_Jb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar", 2), (byte) -102);
-          RankingsScreen.field_s.field_Gb = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
-          RankingsScreen.field_s.field_D = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseheld", 2), (byte) -120);
-          RankingsScreen.field_s.field_Ab = qg.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_disabled", 2), (byte) -123);
+          RankingsScreen.field_s.field_Jb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar", 2), (byte) -102);
+          RankingsScreen.field_s.field_Gb = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseover", 2), (byte) -119);
+          RankingsScreen.field_s.field_D = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_mouseheld", 2), (byte) -120);
+          RankingsScreen.field_s.field_Ab = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "dragbar_disabled", 2), (byte) -123);
           oo.field_u = new mh(0L, (mh) null);
           oo.field_u.field_wb = pl.loadRgbSpriteByName("lobby", "upbutton", (byte) -90, param3);
           oo.field_u.field_T = pl.loadRgbSpriteByName("lobby", "upbutton_mouseover", (byte) -125, param3);

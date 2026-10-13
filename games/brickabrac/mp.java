@@ -83,7 +83,7 @@ final class mp extends mh {
           if (null != var44.field_p &&
             var44.field_A > 1) {
             var60 = var44.field_p;
-            h.a(0, 0, (byte) 114, var60, ke.field_m);
+            h.a(0, 0, (byte) 114, var60, AppletGameShell.field_m);
           } else {
             ArchiveNetworkClient.f((byte) 94);
           }
@@ -279,7 +279,7 @@ final class mp extends mh {
             return;
           }
           k.field_h.writeByte(-105, var6);
-          var7 = dj.a(true, uc.e((byte) -101));
+          var7 = GameClock.a(true, uc.e((byte) -101));
           if (var7 == null) {
             var7 = "";
           }

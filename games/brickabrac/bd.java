@@ -31,7 +31,7 @@ final class bd implements ub {
           if (param1 != 25) {
             bd.a(20, false);
           }
-          ke.a(param0, param2, param1 + 14964);
+          AppletGameShell.a(param0, param2, param1 + 14964);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "bd.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

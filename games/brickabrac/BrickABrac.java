@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class BrickABrac extends sa {
+public final class BrickABrac extends InteractiveGameClient {
     static ResourceArchive field_I;
     static String field_G;
     static mk field_F;
@@ -9,67 +9,67 @@ public final class BrickABrac extends sa {
     static String field_H;
     public static boolean field_J;
 
-    public final void a(int param0) {
-        int var2;
-        IntNode var3;
-        int var4;
-        int var5;
-        int var6;
+    public final void renderGameLayer(int obfuscationGuard) {
+        int transitionActive;
+        IntNode notification;
+        int notificationY;
+        int notificationTick;
+        int clientBranchFlag;
         int stackIn_6_0 = 0;
-        var6 = field_J ? 1 : 0;
+        clientBranchFlag = field_J ? 1 : 0;
         if (null != hd.pendingScreen) {
-          stackIn_6_0 = (lp.currentScreen.a((byte) -51)) ? 1 : 0;
+          stackIn_6_0 = (lp.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
-        var2 = stackIn_6_0;
-        if (var2 != 0) {
-          if (16 > kh.field_a) {
+        transitionActive = stackIn_6_0;
+        if (transitionActive != 0) {
+          if (16 > kh.screenTransitionTick) {
             lp.currentScreen.drawScreen((byte) -75);
-            jn.a(kh.field_a + 1, 256, 16769381, false, false);
+            PixelBlockEffect.pixelate(kh.screenTransitionTick + 1, 256, 16769381, false, false);
           } else {
             hd.pendingScreen.drawScreen((byte) -85);
-            jn.a(32 - (kh.field_a - 1), 256, 16769381, false, false);
+            PixelBlockEffect.pixelate(32 - (kh.screenTransitionTick - 1), 256, 16769381, false, false);
           }
         } else {
           lp.currentScreen.drawScreen((byte) -63);
         }
-        var3 = (IntNode) (kp.achievementNotifications.first(-123));
-        if (param0 != 16769381) {
+        notification = (IntNode) (kp.achievementNotifications.first(-123));
+        if (obfuscationGuard != 16769381) {
           field_I = (ResourceArchive) null;
         }
-        if (var3 != null) {
-          var5 = ok.field_c;
-          if (var5 < 80) {
-            var4 = -32 + var5 / 2;
+        if (notification != null) {
+          notificationTick = ok.achievementNotificationTick;
+          if (notificationTick < 80) {
+            notificationY = -32 + notificationTick / 2;
           } else {
-            if (230 > var5) {
-              var4 = 8;
+            if (230 > notificationTick) {
+              notificationY = 8;
             } else {
-              var4 = 123 - var5 / 2;
+              notificationY = 123 - notificationTick / 2;
             }
           }
-          IntrusiveHashTable.achievementSourceIcons[var3.value].drawQuarter(8, var4);
-          nn.field_g.drawLeft(AchievementBrowserScreen.field_s[var3.value], 48, var4 + nn.field_g.ascent, 0, -1);
+          IntrusiveHashTable.achievementSourceIcons[notification.value].drawQuarter(8, notificationY);
+          nn.field_g.drawLeft(AchievementBrowserScreen.field_s[notification.value], 48, notificationY + nn.field_g.ascent, 0, -1);
         }
         if (cf.a((byte) 62)) {
           rd.b(-79);
         }
     }
 
-    public final void a(boolean param0, byte param1) {
+    public final void updateGameLayer(boolean inputEnabled, byte obfuscationGuard) {
         int fieldTemp$0 = 0;
         int stackIn_10_0 = 0;
         GameScreen stackIn_17_0 = null;
         boolean stackIn_17_1 = false;
         boolean stackIn_18_2 = false;
-        int var3;
+        int transitionActive;
         int var4;
-        int var5;
+        int clientBranchFlag;
         pn var6;
-        var5 = field_J ? 1 : 0;
+        clientBranchFlag = field_J ? 1 : 0;
         vd.a(-127);
-        MembershipBenefitsScreen.field_x = MembershipBenefitsScreen.field_x + 1;
+        MembershipBenefitsScreen.clientTick = MembershipBenefitsScreen.clientTick + 1;
         if (!og.h(-26090)) {
           while (true) {
             var6 = (pn) (IntNode.field_j.removeFirst(3));
@@ -80,28 +80,28 @@ public final class BrickABrac extends sa {
           }
         }
         if (hd.pendingScreen != null) {
-          stackIn_10_0 = (lp.currentScreen.a((byte) -51)) ? 1 : 0;
+          stackIn_10_0 = (lp.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
         } else {
           stackIn_10_0 = 0;
         }
-        var3 = stackIn_10_0;
+        transitionActive = stackIn_10_0;
         if (pe.gameplayScreen != lp.currentScreen ||
           pe.gameplayScreen.field_p ||
-          var3 == 0) {
+          transitionActive == 0) {
           stackIn_17_0 = lp.currentScreen;
           stackIn_17_1 = true;
-          stackIn_18_2 = (param0) && (var3 == 0);
+          stackIn_18_2 = (inputEnabled) && (transitionActive == 0);
           ((GameScreen) (Object) stackIn_17_0).advanceScreen(stackIn_17_1, stackIn_18_2, -104);
         }
-        if (var3 != 0) {
+        if (transitionActive != 0) {
           if ((pe.gameplayScreen != hd.pendingScreen ||
             pe.gameplayScreen.field_p) &&
             hd.pendingScreen != null) {
             hd.pendingScreen.advanceScreen(false, false, -82);
           }
-          kh.field_a = kh.field_a + 1;
-          if (32 == kh.field_a) {
-            sk.i((byte) -126);
+          kh.screenTransitionTick = kh.screenTransitionTick + 1;
+          if (32 == kh.screenTransitionTick) {
+            sk.finishScreenTransition((byte) -126);
           }
         } else {
           if (pe.gameplayScreen != null &&
@@ -111,25 +111,25 @@ public final class BrickABrac extends sa {
           }
         }
         if (null != kp.achievementNotifications.first(-8)) {
-          fieldTemp$0 = ok.field_c + 1;
-          ok.field_c = ok.field_c + 1;
+          fieldTemp$0 = ok.achievementNotificationTick + 1;
+          ok.achievementNotificationTick = ok.achievementNotificationTick + 1;
           if (fieldTemp$0 == 335) {
-            ok.field_c = 0;
+            ok.achievementNotificationTick = 0;
             kp.achievementNotifications.removeFirst(3);
           }
         }
-        if (ok.field_c == 50) {
+        if (ok.achievementNotificationTick == 50) {
           wp.playUiSound(8, ta.uiSounds[9]);
         }
         if (cf.a((byte) 62)) {
           sq.a(false);
         }
-        var4 = 46 / ((-61 - param1) / 47);
+        var4 = 46 / ((-61 - obfuscationGuard) / 47);
     }
 
-    final void b(boolean param0) {
-        this.a((byte) 39, 0, 2, param0, 1, 4, 14, 65);
-        hi.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
+    final void initializeClient(boolean obfuscationGuard) {
+        this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
+        hi.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         nk.field_c = new RgbSprite(640, 480);
         oc.a(lp.field_ub, (byte) 60, CacheIoRequest.field_D);
         this.a(3160, new ij());
@@ -141,11 +141,11 @@ public final class BrickABrac extends sa {
         if (param0 != 73) {
           return false;
         }
-        stackIn_8_0 = (ue.field_c) || (vh.field_L) || (ed.field_d);
+        stackIn_8_0 = (MonotonicTime.field_c) || (vh.field_L) || (ed.field_d);
         return stackIn_8_0;
     }
 
-    final boolean a(BitPacketBuffer param0, byte param1, int param2) {
+    final boolean handleGamePacket(BitPacketBuffer packet, byte obfuscationGuard, int opcode) {
         int var8_int = 0;
         int fieldTemp$0 = 0;
         int var10 = 0;
@@ -205,29 +205,29 @@ public final class BrickABrac extends sa {
         int var6Lifetime1;
         var16 = field_J ? 1 : 0;
         try {
-          if (9 == param2) {
-            sk.i((byte) -113);
+          if (9 == opcode) {
+            sk.finishScreenTransition((byte) -113);
             vh.field_L = false;
-            ng.requestScreen(false, param1 + 66, 11);
-            kk.setMessageText(true, param0.readCp1252String(-1));
+            ng.requestScreen(false, obfuscationGuard + 66, 11);
+            kk.setMessageText(true, packet.readCp1252String(-1));
             return true;
           }
-          if (14 == param2) {
-            sk.i((byte) -116);
-            hm.a(LevelPack.c(param1 ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, fj.a(2000, (byte) -54), aj.a(1345), fj.a(8, (byte) -53), 1024, jb.field_I.length);
-            hn.a(FramedMenuScreen.f(115), kb.h(param1 - 45), param1 ^ 12);
+          if (14 == opcode) {
+            sk.finishScreenTransition((byte) -116);
+            hm.a(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, fj.a(2000, (byte) -54), aj.a(1345), fj.a(8, (byte) -53), 1024, jb.field_I.length);
+            hn.a(FramedMenuScreen.f(115), kb.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             vh.field_L = false;
-            ue.field_c = true;
+            MonotonicTime.field_c = true;
             ng.requestScreen(false, 113, -2);
             return true;
           }
-          if (param2 == 15) {
-            if (ue.field_c) {
+          if (opcode == 15) {
+            if (MonotonicTime.field_c) {
               eq.a(7);
               an.d((byte) -56);
-              ng.requestScreen(false, param1 + 43, 0);
-              ue.field_c = false;
-              NewAchievementsScreen.field_G = true;
+              ng.requestScreen(false, obfuscationGuard + 43, 0);
+              MonotonicTime.field_c = false;
+              NewAchievementsScreen.discardGameplayOnTransition = true;
               dp.field_y = true;
             }
             ed.field_d = false;
@@ -235,18 +235,18 @@ public final class BrickABrac extends sa {
             vh.field_L = false;
             return true;
           }
-          if (param2 == 10 &&
-            ue.field_c) {
+          if (opcode == 10 &&
+            MonotonicTime.field_c) {
             sj.a((byte) 33);
             return true;
           }
-          if (param2 == 72) {
+          if (opcode == 72) {
             var35 = Ball.d(8);
             var27 = var35;
             var4 = var27;
             var18 = var4;
             var5_array = var18;
-            var25 = param0;
+            var25 = packet;
             var7 = ((PacketBuffer) ((Object) var25)).readUnsignedByte(255);
             for (var8_int = 0; var7 > var8_int; var8_int++) {
               var18[var8_int] = ((PacketBuffer) ((Object) var25)).readInt(255);
@@ -296,7 +296,7 @@ public final class BrickABrac extends sa {
               } else {
                 fieldTemp$0 = pe.gameplayScreen.field_x;
                 pe.gameplayScreen.field_x = pe.gameplayScreen.field_x + 1;
-                pe.gameplayScreen.match.playerBoards[fieldTemp$0].a(false, param0, pe.gameplayScreen.match.playerCount);
+                pe.gameplayScreen.match.playerBoards[fieldTemp$0].a(false, packet, pe.gameplayScreen.match.playerCount);
                 stackIn_74_0 = pe.gameplayScreen;
                 stackIn_75_1 = (pe.gameplayScreen.field_x == pe.gameplayScreen.match.playerCount);
                 stackIn_74_0.field_q = stackIn_75_1;
@@ -311,12 +311,12 @@ public final class BrickABrac extends sa {
             }
             if (66 == IntrusiveHashTable.field_a) {
               if (pe.gameplayScreen != null) {
-                sk.i((byte) -123);
+                sk.finishScreenTransition((byte) -123);
                 if (!pe.gameplayScreen.c(123)) {
                   pe.gameplayScreen.a((byte) 40, false);
                 }
                 pe.gameplayScreen.a(false, (byte) 69);
-                NewAchievementsScreen.field_G = true;
+                NewAchievementsScreen.discardGameplayOnTransition = true;
                 pf.field_p = true;
                 Brick.field_E = 0;
                 ng.requestScreen(false, 125, -2);
@@ -327,33 +327,33 @@ public final class BrickABrac extends sa {
             boolean decompiledFrameRemainder0 = true;
             if (null != pe.gameplayScreen) {
               if (76 == IntrusiveHashTable.field_a) {
-                pe.gameplayScreen.a(param0, (byte) 74);
+                pe.gameplayScreen.a(packet, (byte) 74);
                 return true;
               }
               if (73 != IntrusiveHashTable.field_a &&
                 IntrusiveHashTable.field_a != 74) {
                 if (IntrusiveHashTable.field_a == 75) {
-                  pe.gameplayScreen.a((byte) 33, param0);
+                  pe.gameplayScreen.a((byte) 33, packet);
                   return true;
                 }
                 if (77 == IntrusiveHashTable.field_a) {
-                  pe.gameplayScreen.a(param0, false, 87);
+                  pe.gameplayScreen.a(packet, false, 87);
                   return true;
                 }
                 if (IntrusiveHashTable.field_a == 78) {
-                  pe.gameplayScreen.a(param0, true, 118);
+                  pe.gameplayScreen.a(packet, true, 118);
                   return true;
                 }
                 if (IntrusiveHashTable.field_a == 67) {
-                  pe.gameplayScreen.a(param0, param1 - 47);
+                  pe.gameplayScreen.a(packet, obfuscationGuard - 47);
                   return true;
                 }
                 if (IntrusiveHashTable.field_a == 69) {
-                  pe.gameplayScreen.a(18504, param0);
+                  pe.gameplayScreen.a(18504, packet);
                   return true;
                 }
                 if (IntrusiveHashTable.field_a == 70) {
-                  pe.gameplayScreen.match.field_j = param0.readUnsignedByte(255);
+                  pe.gameplayScreen.match.field_j = packet.readUnsignedByte(255);
                   if (pe.gameplayScreen != null) {
                     fr.a(1);
                   }
@@ -361,7 +361,7 @@ public final class BrickABrac extends sa {
                 }
                 decompiledFrameRemainder0 = (IntrusiveHashTable.field_a == 71);
                 if (decompiledFrameRemainder0) {
-                  pe.gameplayScreen.field_v = param0.readUnsignedByte(255);
+                  pe.gameplayScreen.field_v = packet.readUnsignedByte(255);
                   if (pe.gameplayScreen != null) {
                     fr.a(1);
                   }
@@ -371,30 +371,30 @@ public final class BrickABrac extends sa {
               if (decompiledFrameRemainder0) {
                 stackIn_99_0 = pe.gameplayScreen;
                 stackIn_99_1 = -15;
-                stackIn_99_2 = (BitPacketBuffer) (param0);
+                stackIn_99_2 = (BitPacketBuffer) (packet);
                 stackIn_100_3 = (IntrusiveHashTable.field_a == 74);
                 ((GameplayScreen) (Object) stackIn_99_0).a((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
                 return true;
               }
             }
-            if (param1 == 47) {
+            if (obfuscationGuard == 47) {
               return false;
             }
             return true;
           }
-          sk.i((byte) -125);
-          stackIn_44_0 = (param0.readUnsignedByte(255) == 0) ? 0 : 1;
+          sk.finishScreenTransition((byte) -125);
+          stackIn_44_0 = (packet.readUnsignedByte(255) == 0) ? 0 : 1;
           var4_int = stackIn_44_0;
-          var30 = new String[param0.readUnsignedByte(255)];
+          var30 = new String[packet.readUnsignedByte(255)];
           var5 = var30;
-          var6Lifetime1 = param0.readByte(true);
+          var6Lifetime1 = packet.readByte(true);
           for (var7 = 0; var30.length > var7; var7++) {
-            var5[var7] = param0.readPrefixedCp1252String(255);
+            var5[var7] = packet.readPrefixedCp1252String(255);
           }
           if (var6Lifetime1 < 0) {
             var6Lifetime1 = -2;
           }
-          var7 = param0.readInt(param1 ^ 208);
+          var7 = packet.readInt(obfuscationGuard ^ 208);
           var8 = new IsaacGenerator(new int[]{var7});
           var39 = new int[var30.length];
           var32 = var39;
@@ -403,7 +403,7 @@ public final class BrickABrac extends sa {
             var9[var10] = var8.nextInt(105);
           }
           var49 = kk.createIndexOrder(false, tq.field_d.levelCount, var8);
-          var11 = param0.readByte(true);
+          var11 = packet.readByte(true);
           var12 = new LevelSequence(tq.field_d, var49, var11);
           var13 = var8.nextBoundedInt(-37880252, 11);
           oa.field_Sb = rd.a(var13, (byte) 19);
@@ -417,31 +417,31 @@ public final class BrickABrac extends sa {
           var15 = stackIn_56_0;
           pe.gameplayScreen = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
           stackIn_58_0 = pe.gameplayScreen;
-          stackIn_59_1 = (param0.readUnsignedByte(255) == 0);
+          stackIn_59_1 = (packet.readUnsignedByte(255) == 0);
           stackIn_58_0.field_q = stackIn_59_1;
           if (!pe.gameplayScreen.field_q) {
             pe.gameplayScreen.field_x = 0;
           }
           if (IntrusiveHashTable.field_a == 64) {
             AchievementIcon.c((byte) 32);
-            fr.a(param1 ^ 46);
+            fr.a(obfuscationGuard ^ 46);
           }
           ed.field_d = false;
           r.field_A = false;
           pf.field_p = false;
-          ng.requestScreen(false, param1 ^ 105, -1);
+          ng.requestScreen(false, obfuscationGuard ^ 105, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_137_0 = var4_ref;
           stackIn_137_1 = new StringBuilder().append("BrickABrac.K(");
-          if (param0 == null) {
+          if (packet == null) {
             stackIn_138_2 = "null";
           } else {
             stackIn_138_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(obfuscationGuard).append(',').append(opcode).append(')').toString());
         }
     }
 
@@ -485,9 +485,9 @@ public final class BrickABrac extends sa {
         int var4;
         var4 = field_J ? 1 : 0;
         if (param1 != param0) {
-          if (ue.field_c) {
+          if (MonotonicTime.field_c) {
             dp.field_y = true;
-            NewAchievementsScreen.field_G = true;
+            NewAchievementsScreen.discardGameplayOnTransition = true;
             if (pe.gameplayScreen != null &&
               !pe.gameplayScreen.c(param1 + 94)) {
               kk.setMessageText(true, sg.field_k);
@@ -498,7 +498,7 @@ public final class BrickABrac extends sa {
             if (lp.currentScreen instanceof MenuScreen) {
               ((MenuScreen) (lp.currentScreen)).onEnter(false, 0, param1 + 116);
             }
-            ue.field_c = false;
+            MonotonicTime.field_c = false;
           }
           vh.field_L = false;
           ed.field_d = false;
@@ -512,35 +512,35 @@ public final class BrickABrac extends sa {
         this.a("brickabrac", 15, 1686);
     }
 
-    final void a(boolean param0) {
+    final void stopClientServices(boolean obfuscationGuard) {
         rl.b(18);
-        if (param0) {
+        if (obfuscationGuard) {
           field_G = (String) null;
         }
         og.d((byte) 107);
     }
 
-    public final boolean a(int param0, char param1, int param2) {
+    public final boolean handleGameKey(int keyCode, char character, int obfuscationGuard) {
         if (cf.a((byte) 62)) {
-          if (param0 == 5) {
+          if (keyCode == 5) {
             GzipInflater.field_g = !GzipInflater.field_g ? true : false;
             return true;
           }
-          if (6 == param0) {
+          if (6 == keyCode) {
             pf.field_f = !pf.field_f ? true : false;
             return true;
           }
-          if (param0 == 7) {
+          if (keyCode == 7) {
             return true;
           }
         }
-        if (param2 > -58) {
+        if (obfuscationGuard > -58) {
           this.b(78, 8);
         }
         if (null != hd.pendingScreen) {
           return false;
         }
-        return null != lp.currentScreen ? lp.currentScreen.handleKey(param1, 106, param0) : false;
+        return null != lp.currentScreen ? lp.currentScreen.handleKey(character, 106, keyCode) : false;
     }
 
     final static int c(int param0, int param1) {
@@ -554,7 +554,7 @@ public final class BrickABrac extends sa {
         return 2048 > param1 ? um.field_j[-param1 + 2048] : -um.field_j[-2048 + param1];
     }
 
-    final void d(boolean param0) {
+    final void clearClientResources(boolean obfuscationGuard) {
         BrickABrac.s(-65);
         ea.a((byte) -42);
         b.a(true);
@@ -571,11 +571,11 @@ public final class BrickABrac extends sa {
         NodeDeque.b((byte) 100);
         IsaacGenerator.a(2);
         sc.a(81);
-        ue.a((byte) -114);
+        MonotonicTime.a((byte) -114);
         BitPacketBuffer.clearStaticReferences(60);
-        ap.a(!param0 ? true : false);
+        ap.a(!obfuscationGuard ? true : false);
         nh.b(120);
-        qg.k(-113);
+        GameConnectionShell.k(-113);
         nk.a((byte) 121);
         aj.b(-789103103);
         sj.a(11);
@@ -589,9 +589,9 @@ public final class BrickABrac extends sa {
         hm.a(8);
         Rasterizer2D.clearStaticReferences();
         mc.a(-128);
-        tm.a(param0);
+        tm.a(obfuscationGuard);
         wo.b(78);
-        ke.d(19254);
+        AppletGameShell.d(19254);
         ad.b(-16637);
         MouseInput.a((byte) 24);
         MouseWheelSource.a(102);
@@ -604,9 +604,9 @@ public final class BrickABrac extends sa {
         rd.a((byte) 46);
         cn.a(117);
         gb.a(0);
-        kd.a(param0);
+        kd.a(obfuscationGuard);
         fq.a((byte) 15);
-        dj.a((byte) 66);
+        GameClock.a((byte) 66);
         nb.a(-125);
         s.c(4862);
         GameCanvas.a(0);
@@ -619,7 +619,7 @@ public final class BrickABrac extends sa {
         IntrusiveNode.a(true);
         SpriteGeometry.f(2);
         DualLinkNode.a(-2);
-        un.a(!param0 ? true : false);
+        un.a(!obfuscationGuard ? true : false);
         ie.c(-1);
         wp.a((byte) -117);
         RectangleBody.d((byte) -106);
@@ -714,7 +714,7 @@ public final class BrickABrac extends sa {
         ArchiveIndex.a((byte) 117);
         GzipInflater.a(-32);
         ArchiveSource.a((byte) -59);
-        MainMenuScreen.c(!param0 ? true : false);
+        MainMenuScreen.c(!obfuscationGuard ? true : false);
         FramedMenuScreen.f((byte) -101);
         HighscoresScreen.f(-5);
         RankingsScreen.g(-118);
@@ -739,8 +739,8 @@ public final class BrickABrac extends sa {
         qo.h(-106);
         eh.a(-31063);
         ua.a(2);
-        ll.a(!param0 ? true : false);
-        ek.c(param0);
+        ll.a(!obfuscationGuard ? true : false);
+        ek.c(obfuscationGuard);
         kp.a(-68);
         ArchiveFetchClient.c(-12200);
         CacheIoWorker.b(26679);
@@ -765,7 +765,7 @@ public final class BrickABrac extends sa {
         ag.c(false);
         d.g(-66);
         oc.c(-14711);
-        ep.a(param0);
+        ep.a(obfuscationGuard);
         kb.d((byte) 98);
         jl.a(31186);
         bj.i(111);
@@ -775,14 +775,14 @@ public final class BrickABrac extends sa {
         h.f((byte) -102);
         qm.a((byte) -120);
         pl.a(0);
-        DelegatingCanvas.a(!param0 ? true : false);
+        DelegatingCanvas.a(!obfuscationGuard ? true : false);
         nd.a((byte) 121);
         IntKeyIndex.a(true);
         ByteStorage.a(10);
         tc.a();
         ro.a((byte) -102);
         bg.a(6);
-        gd.a(!param0 ? true : false);
+        gd.a(!obfuscationGuard ? true : false);
         rl.a(-18657);
         ei.a(1);
         up.b(3);
@@ -799,7 +799,7 @@ public final class BrickABrac extends sa {
         lk.c(2143);
         dl.b(-9125);
         ef.b(10);
-        cg.f((byte) -124);
+        NanoGameClock.f((byte) -124);
         jo.b(11);
         rq.a((byte) -118);
         hg.a((byte) 19);

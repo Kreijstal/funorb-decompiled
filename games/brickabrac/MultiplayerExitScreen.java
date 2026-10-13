@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MultiplayerExitScreen extends MatchResultScreen {
-    static long field_C;
+    static long wallRollbackMillis;
     static int[] field_x;
     static String field_A;
     static RgbSprite field_z;
@@ -36,7 +36,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     final boolean isButtonEnabled(byte obfuscationGuard, int buttonIndex) {
         int var3 = this.buttons[buttonIndex].actionId;
         if (obfuscationGuard < 80) {
-          field_C = -10L;
+          wallRollbackMillis = -10L;
           if (eg.field_k) {
             return var3 != 12 ? true : false;
           }

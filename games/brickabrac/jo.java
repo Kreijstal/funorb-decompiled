@@ -202,8 +202,8 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                       ka.a((byte) 89) &&
                       4 == ga.field_i &&
                       (2 & var14.flags) != 0) {
-                      var17 = MembershipBenefitsScreen.field_x - SpriteGeometry.field_v;
-                      var16.f(var7_int, var8, 64 + (sa.a(200 * var17, param5 ^ -4127) >> 10));
+                      var17 = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
+                      var16.f(var7_int, var8, 64 + (InteractiveGameClient.a(200 * var17, param5 ^ -4127) >> 10));
                     }
                   }
                 } else {

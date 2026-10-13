@@ -53,7 +53,7 @@ final class eg extends IntrusiveNode {
             stackIn_14_0 = (byte[]) (data);
             return stackIn_14_0;
           }
-          stackIn_12_0 = ke.copyBytes(false, data);
+          stackIn_12_0 = AppletGameShell.copyBytes(false, data);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

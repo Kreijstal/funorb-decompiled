@@ -43,8 +43,8 @@ final class nl {
           if (param1 != 64) {
             field_f = (om) null;
           }
-          var2_long = ue.a(false);
-          if (0 != ue.field_d &&
+          var2_long = MonotonicTime.nowMillis(false);
+          if (0 != MonotonicTime.field_d &&
             ob.field_I < 0) {
             var4_ref_pg = (pg) (al.field_m.first(-124));
             if (var4_ref_pg != null &&
@@ -75,7 +75,7 @@ final class nl {
             if (!um.b((byte) -104)) {
               return false;
             }
-            if (ue.field_d == 0) {
+            if (MonotonicTime.field_d == 0) {
               r.field_z = we.field_a;
               we.field_a = mh.field_gb;
               mh.field_gb = IntrusiveHashTable.field_a;
@@ -83,7 +83,7 @@ final class nl {
               ob.field_I = -1;
               return true;
             }
-            var4 = ue.field_d;
+            var4 = MonotonicTime.field_d;
             if (0.0 != ej.field_J) {
               var4 = (int)((double)var4 + ji.field_e.nextGaussian() * ej.field_J);
               if (0 > var4) {

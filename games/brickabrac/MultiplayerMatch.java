@@ -315,7 +315,7 @@ final class MultiplayerMatch {
                           if (var15 != 0) {
                             stackIn_142_0 = (var14.pendingTypeId != 0) ? 0 : 1;
                             var16 = stackIn_142_0;
-                            var14.pendingTypeId = ue.field_b[var14.typeId];
+                            var14.pendingTypeId = MonotonicTime.field_b[var14.typeId];
                             var14.transitionCode = rb.field_a[var14.typeId];
                             var14.stateWord = 0;
                             if (19 == var14.typeId ||
@@ -891,7 +891,7 @@ final class MultiplayerMatch {
               var6.resolveCircleCollision(param0, (byte) 119);
               var6 = (Brick) (var5.previous(-126));
             }
-            if (dj.field_c != null) {
+            if (GameClock.field_c != null) {
               break;
             }
           }
@@ -1024,7 +1024,7 @@ final class MultiplayerMatch {
           if (param3 > -125) {
             return false;
           }
-          if (null != dj.field_c) {
+          if (null != GameClock.field_c) {
             if (r.field_A) {
               if (wl.field_N) {
                 if (!cm.field_s &&
@@ -1039,7 +1039,7 @@ final class MultiplayerMatch {
               param1 != null) {
               param1.addLast(new GameplayAudioEvent(5), (byte) 3);
             }
-            if (param0.paddle == dj.field_c) {
+            if (param0.paddle == GameClock.field_c) {
               if (param0.paddle.catchTicks > 0) {
                 if (param1 != null) {
                   param1.addLast(new GameplayAudioEvent(10), (byte) 3);
@@ -1057,8 +1057,8 @@ final class MultiplayerMatch {
               param0.paddle.onCircleContact((byte) 53, param0, param4);
               param4.destroyedBrickStreak = 0;
             } else {
-              dj.field_c.onCircleContact((byte) 53, param0, param4);
-              var9 = (Brick) (dj.field_c);
+              GameClock.field_c.onCircleContact((byte) 53, param0, param4);
+              var9 = (Brick) (GameClock.field_c);
               if (param1 != null) {
                 boolean decompiledFrameRemainder0 = true;
                 var7 = 1;
@@ -1116,16 +1116,16 @@ final class MultiplayerMatch {
             }
           }
           this.a(param4, -1, param0);
-          if (dj.field_c == null) {
+          if (GameClock.field_c == null) {
             return false;
           }
           if (param4.phaseTicks == 0) {
             return true;
           }
-          if (dj.field_c == param0.paddle) {
+          if (GameClock.field_c == param0.paddle) {
             return true;
           }
-          var10 = (Brick) (dj.field_c);
+          var10 = (Brick) (GameClock.field_c);
           stackIn_99_0 = ((1 & var10.flags) != 0);
           return stackIn_99_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

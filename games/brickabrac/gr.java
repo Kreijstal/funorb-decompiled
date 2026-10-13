@@ -90,7 +90,7 @@ final class gr {
           jc.field_J = Ball.field_D;
           gg.field_o = dk.field_R;
           nj.field_l = pa.field_m;
-          fq.field_d = qg.field_D;
+          fq.field_d = GameConnectionShell.field_D;
           we.field_b = gg.field_p;
           field_c = MenuSelection.field_k;
         }

@@ -218,7 +218,7 @@ final class nn {
                 }
                 var2 = nk.a("error_js5connect_full", (byte) -119);
                 if (null != var2) {
-                  ke.field_k = MenuButton.a(var2, (byte) 106);
+                  AppletGameShell.field_k = MenuButton.a(var2, (byte) 106);
                 }
                 var2 = nk.a("error_js5connect", (byte) -114);
                 if (var2 != null) {
@@ -1188,7 +1188,7 @@ final class nn {
                 }
                 var2 = nk.a("playfreeversion", (byte) 117);
                 if (var2 != null) {
-                  ue.field_f = MenuButton.a(var2, (byte) 94);
+                  MonotonicTime.field_f = MenuButton.a(var2, (byte) 94);
                 }
                 var2 = nk.a("reloadgame", (byte) -18);
                 if (null != var2) {
@@ -1440,7 +1440,7 @@ final class nn {
                 }
                 var2 = nk.a("openinpopupwindow", (byte) 109);
                 if (null != var2) {
-                  qg.field_z = MenuButton.a(var2, (byte) 110);
+                  GameConnectionShell.field_z = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("create", (byte) 61);
                 if (null != var2) {
@@ -1676,7 +1676,7 @@ final class nn {
                 }
                 var2 = nk.a("create_displayname_hint", (byte) -119);
                 if (var2 != null) {
-                  dj.field_h = MenuButton.a(var2, (byte) 72);
+                  GameClock.field_h = MenuButton.a(var2, (byte) 72);
                 }
                 var2 = nk.a("create_password_tooltip", (byte) -19);
                 if (var2 != null) {
@@ -3203,9 +3203,9 @@ final class nn {
                   throw qb.addExceptionContext((Throwable) ((Object) stackIn_2599_0), ((StringBuilder) (Object) stackIn_2599_1).append(stackIn_2600_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = ke.field_l;
+                  var4 = AppletGameShell.field_l;
                   var4++;
-                  ke.field_l = var4;
+                  AppletGameShell.field_l = var4;
                 }
             }
         }

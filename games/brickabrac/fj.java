@@ -384,7 +384,7 @@ final class fj extends mh {
           if (param4 != -15531) {
             fj.e((byte) 21);
           }
-          sa.a(param2, param3, param1, 320, param0, param5, -126);
+          InteractiveGameClient.a(param2, param3, param1, 320, param0, param5, -126);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "fj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

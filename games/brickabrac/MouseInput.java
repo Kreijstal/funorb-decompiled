@@ -22,7 +22,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             gr.pointerIdleTicks = 0;
             SoundPlayback.livePressX = event.getX();
             va.livePressY = event.getY();
-            ue.a(false);
+            MonotonicTime.nowMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               mi.livePressedButton = 2;
               kb.liveHeldButton = 2;
