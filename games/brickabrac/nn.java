@@ -630,7 +630,7 @@ final class nn {
                 }
                 var2 = nk.a("rated_game", (byte) -110);
                 if (var2 != null) {
-                  pg.field_n = MenuButton.a(var2, (byte) 111);
+                  DelayedPacket.field_n = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("unrated_game", (byte) -125);
                 if (var2 != null) {
@@ -1092,7 +1092,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_0_0", (byte) 13);
                 if (var2 != null) {
-                  pg.field_i = MenuButton.a(var2, (byte) 82);
+                  DelayedPacket.field_i = MenuButton.a(var2, (byte) 82);
                 }
                 var2 = nk.a("rule_0_1", (byte) -114);
                 if (var2 != null) {
@@ -1568,7 +1568,7 @@ final class nn {
                 }
                 var2 = nk.a("create_email_confirm", (byte) -125);
                 if (null != var2) {
-                  pg.field_o = MenuButton.a(var2, (byte) 73);
+                  DelayedPacket.field_o = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = nk.a("create_age", (byte) 96);
                 if (null != var2) {
@@ -1776,7 +1776,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_passcontainsname_partial", (byte) 51);
                 if (var2 != null) {
-                  ij.field_f = MenuButton.a(var2, (byte) 117);
+                  GameUiController.field_f = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = nk.a("create_alert_checkname", (byte) 55);
                 if (var2 != null) {
@@ -3508,7 +3508,7 @@ final class nn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 17) {
-            CircleBody.field_p = new am(this.field_j.field_Eb, this.field_j.field_db, this.field_j.field_Ib, this.field_j.field_cb, param2, MenuSelection.field_m, rf.field_c, am.field_Zb, ad.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
+            CircleBody.field_p = new am(this.field_j.field_Eb, this.field_j.field_db, this.field_j.field_Ib, this.field_j.field_cb, param2, MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
             return true;
           }
           if (param0 < 121) {

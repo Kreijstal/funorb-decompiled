@@ -51,9 +51,9 @@ final class MembershipBenefitsScreen extends MenuScreen {
     final static long f(int param0) {
         if (param0 != -6792) {
           field_s = (RgbSprite) null;
-          return MonotonicTime.nowMillis(false) - oj.field_t;
+          return MonotonicTime.nowMillis(false) - oj.lastGameReadMillis;
         }
-        return MonotonicTime.nowMillis(false) - oj.field_t;
+        return MonotonicTime.nowMillis(false) - oj.lastGameReadMillis;
     }
 
     private final boolean c(int param0, int param1) {

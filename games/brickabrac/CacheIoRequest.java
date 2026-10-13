@@ -151,7 +151,7 @@ final class CacheIoRequest extends ResourceRequest {
           }
           wd.field_E.a(18, np.field_a + 2, -40 + (-2 + ji.field_b.field_Ib) - ec.field_J, 42 + ec.field_J, (byte) 64);
           TimedSplashScreen.field_u.a(2, (byte) -109, ji.field_b.field_Ib, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.field_cb - (np.field_a + 20));
-          ij.field_e.a(40, -40 + qa.field_w.field_cb, 0, qa.field_w.field_Ib, (byte) 64);
+          GameUiController.field_e.a(40, -40 + qa.field_w.field_cb, 0, qa.field_w.field_Ib, (byte) 64);
           ba.field_v.a(30, 0, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
           rg.field_e.a(-2 + (-40 + MultiplayerMatch.field_d.field_cb) - 30, 30, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
           var2_int = cq.field_p + 3;

@@ -42,7 +42,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         if (og.h(-26090)) {
           return;
         }
-        BitPacketBuffer var4 = k.field_h;
+        BitPacketBuffer var4 = k.outgoingPackets;
         var4.writeCipheredOpcode(-13413, 16);
         var4.position = var4.position + 1;
         int var5 = var4.position;
@@ -154,7 +154,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = k.field_h;
+          var3 = k.outgoingPackets;
           var3.writeCipheredOpcode(-13413, param1);
           var3.writeByte(85, param0.field_i);
           var3.writeShort((byte) 122, param0.field_k);

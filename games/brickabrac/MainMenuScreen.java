@@ -91,7 +91,7 @@ final class MainMenuScreen extends MenuScreen {
           field_s = (RgbSprite) null;
         }
         IntrusiveHashTable.a(pq.pointerX, (byte) -118, po.pointerY, hc.field_h);
-        if (!pg.c(77)) {
+        if (!DelayedPacket.c(77)) {
           var4 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var4 != null) {
             var4.draw(2);
@@ -124,7 +124,7 @@ final class MainMenuScreen extends MenuScreen {
             GzipInflater.field_e = 50;
           }
         }
-        if (!pg.c(112)) {
+        if (!DelayedPacket.c(112)) {
           var6 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var6 != null) {
             var6.updateHover(0);
@@ -140,7 +140,7 @@ final class MainMenuScreen extends MenuScreen {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (pg.c(117)) {
+        if (DelayedPacket.c(117)) {
           if (this.selection.selectedIndex == 9) {
             if (keyCode == 99) {
               this.selection.setSelectedIndex(false, 0);
@@ -201,7 +201,7 @@ final class MainMenuScreen extends MenuScreen {
         if (obfuscationGuard > -60) {
           MainMenuScreen.c(false);
         }
-        if (!pg.c(102)) {
+        if (!DelayedPacket.c(102)) {
           this.initializeButtons(g.field_o, 0);
         }
     }

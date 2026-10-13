@@ -11,7 +11,7 @@ final class oj extends ep {
     static vm field_q;
     static String field_o;
     private boolean field_x;
-    static long field_t;
+    static long lastGameReadMillis;
     private int field_p;
     private TextFont field_u;
     private int field_v;
@@ -408,7 +408,7 @@ final class oj extends ep {
           field_o = null;
           return;
         }
-        field_t = -70L;
+        lastGameReadMillis = -70L;
         field_q = null;
         field_r = null;
         field_s = null;
@@ -446,7 +446,7 @@ final class oj extends ep {
     }
 
     final static int b(boolean param0) {
-        if (GameConnectionShell.field_A < 2) {
+        if (GameConnectionShell.clientStage < 2) {
           return 0;
         }
         if (cd.field_e == 0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ob extends r {
-    static int field_I;
+    static int pendingPacketOpcode;
     static AudioMixer soundMixer;
     static String field_H;
     static PaletteFont field_D;
@@ -78,7 +78,7 @@ final class ob extends r {
 
     static {
         field_H = "Add <%0> to ignore list";
-        field_I = -1;
+        pendingPacketOpcode = -1;
         field_E = new NodeDeque();
         field_F = new NodeDeque();
     }

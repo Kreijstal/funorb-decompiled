@@ -195,7 +195,7 @@ final class NodeDeque {
         sb.field_c = !param0 ? new vj(mh.field_Z, ji.field_b) : new vj(ie.field_u, t.field_f);
         qa.field_w = new mh(0L, (mh) null);
         qa.field_w.a(sb.field_c.field_d, 0);
-        qa.field_w.a(ij.field_e, 0);
+        qa.field_w.a(GameUiController.field_e, 0);
         wi.field_j = new mh(0L, MenuSelection.field_m);
         MembershipBenefitsScreen.field_t = new mh(0L, (mh) null);
         wi.field_j.a(pk.field_h, 0);

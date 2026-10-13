@@ -539,12 +539,12 @@ final class GameplayScreen extends GameScreen {
             GameClock.field_b = var20.score;
             vd.field_d = Integer.toString(GameClock.field_b);
           }
-          if (pg.field_m != 1 + pp.a(var20, (byte) 59, this.match)) {
-            pg.field_m = pp.a(var20, (byte) -100, this.match) + 1;
-            if (pg.field_m < 10) {
-              stackIn_210_0 = "0" + pg.field_m;
+          if (DelayedPacket.field_m != 1 + pp.a(var20, (byte) 59, this.match)) {
+            DelayedPacket.field_m = pp.a(var20, (byte) -100, this.match) + 1;
+            if (DelayedPacket.field_m < 10) {
+              stackIn_210_0 = "0" + DelayedPacket.field_m;
             } else {
-              stackIn_210_0 = Integer.toString(pg.field_m);
+              stackIn_210_0 = Integer.toString(DelayedPacket.field_m);
             }
             SecondaryNodeQueue.field_e = stackIn_210_0;
           }
@@ -744,15 +744,15 @@ final class GameplayScreen extends GameScreen {
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
         int var4 = 17 % ((29 - param0) / 57);
-        k.field_h.writeCipheredOpcode(-13413, !param2 ? 68 : 69);
-        k.field_h.beginBitWrite(62);
+        k.outgoingPackets.writeCipheredOpcode(-13413, !param2 ? 68 : 69);
+        k.outgoingPackets.beginBitWrite(62);
         PlayerBoard var5 = this.match.playerBoards[param1];
         for (var6 = 0; var6 < 5; var6++) {
-          k.field_h.writeBits(3, -17566, var5.field_vb[var6]);
+          k.outgoingPackets.writeBits(3, -17566, var5.field_vb[var6]);
         }
-        k.field_h.finishBitWrite(-105);
+        k.outgoingPackets.finishBitWrite(-105);
         if (param2) {
-          k.field_h.writeInt(var5.a(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
+          k.outgoingPackets.writeInt(var5.a(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
         }
     }
 
@@ -1050,7 +1050,7 @@ final class GameplayScreen extends GameScreen {
         }
         this.match.playerMaskOne = this.match.playerMaskOne | 1 << this.field_k;
         int var2 = 116 % ((param0 + 55) / 62);
-        k.field_h.writeCipheredOpcode(-13413, 66);
+        k.outgoingPackets.writeCipheredOpcode(-13413, 66);
     }
 
     private final void a(boolean param0, int param1, int param2) {
@@ -1094,7 +1094,7 @@ final class GameplayScreen extends GameScreen {
 
     final static void b(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
-        String[] var3 = new String[]{tb.field_cb == null ? we.field_c : tb.field_cb, pg.field_q};
+        String[] var3 = new String[]{tb.field_cb == null ? we.field_c : tb.field_cb, DelayedPacket.field_q};
         LevelSequence var4 = new LevelSequence(qh.field_b, kk.createIndexOrder(false, qh.field_b.levelCount, hi.field_w), 3);
         r.field_A = false;
         oa.field_Sb = rd.a(0, (byte) 19);
@@ -1788,7 +1788,7 @@ final class GameplayScreen extends GameScreen {
         if (!this.field_p) {
           throw new IllegalStateException();
         }
-        k.field_h.writeCipheredOpcode(-13413, 67);
+        k.outgoingPackets.writeCipheredOpcode(-13413, 67);
         int var2 = 68 % ((param0 + 65) / 59);
     }
 
@@ -1863,7 +1863,7 @@ final class GameplayScreen extends GameScreen {
           sk.queueSoundPlayback((byte) 5, me.field_d);
           tn.field_C = 1;
           gr.b(tn.field_C, -28463);
-          pg.field_m = -1;
+          DelayedPacket.field_m = -1;
           GameClock.field_b = -1;
           if (jo.field_j == null) {
             jo.field_j = rd.a(cm.field_p, new String[]{""}, (byte) 103).toLowerCase();

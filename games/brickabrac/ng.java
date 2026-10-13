@@ -16,7 +16,7 @@ final class ng {
         if (lp.currentScreen.screenId == screenId) {
           return;
         }
-        hd.pendingScreen = ij.a(screenId, (byte) -128);
+        hd.pendingScreen = GameUiController.getScreen(screenId, (byte) -128);
         if (hd.pendingScreen instanceof MenuScreen) {
           ((MenuScreen) (hd.pendingScreen)).onEnter(usePointer, 0, 125);
         }

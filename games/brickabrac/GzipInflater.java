@@ -40,8 +40,8 @@ final class GzipInflater {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            jl.field_e = new BitPacketBuffer(param4);
-            k.field_h = new BitPacketBuffer(param5);
+            jl.incomingPackets = new BitPacketBuffer(param4);
+            k.outgoingPackets = new BitPacketBuffer(param5);
             fe.field_ob = param6;
             tq.field_h = param1;
             FramedMenuScreen.field_s = param8;

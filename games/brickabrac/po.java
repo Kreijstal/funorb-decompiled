@@ -6,7 +6,7 @@ final class po {
     String field_g;
     ResourceArchive field_b;
     String field_d;
-    static ad field_e;
+    static CappedUrlRequest countryListRequest;
     static String field_c;
     static int pointerY;
     String field_f;
@@ -15,11 +15,11 @@ final class po {
         if (!param0) {
           return;
         }
-        sq.field_c = new kb(MenuSelection.field_m, rf.field_c, am.field_Zb, ad.field_l, BlankScreen.field_k, DualLinkNode.field_t);
+        sq.field_c = new kb(MenuSelection.field_m, rf.field_c, am.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
     }
 
     public static void b(int param0) {
-        field_e = null;
+        countryListRequest = null;
         field_c = null;
         int var1 = -88 % ((param0 - 44) / 45);
     }

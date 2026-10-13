@@ -14,7 +14,7 @@ final class kp {
         BitPacketBuffer var6 = null;
         int var5 = 0;
         try {
-          var6 = k.field_h;
+          var6 = k.outgoingPackets;
           int var4 = 107 / ((44 - param1) / 45);
           var6.writeCipheredOpcode(-13413, param0);
           var6.position = var6.position + 1;

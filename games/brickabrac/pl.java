@@ -48,7 +48,7 @@ final class pl {
         int var7 = 0;
         int var8 = 0;
         try {
-          var6 = k.field_h;
+          var6 = k.outgoingPackets;
           var6.writeCipheredOpcode(-13413, param0);
           var6.position = var6.position + 1;
           var7 = var6.position;

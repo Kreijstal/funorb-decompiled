@@ -169,7 +169,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (param0 <= 53) {
           return (String) null;
         }
-        return ag.buttonLabels[pg.c(61) ? 7 : 39];
+        return ag.buttonLabels[DelayedPacket.c(61) ? 7 : 39];
     }
 
     private final void loadPreview(int obfuscationGuard, int levelIndex) {
@@ -367,7 +367,7 @@ final class LevelSelectScreen extends MenuScreen {
         BitPacketBuffer var6 = null;
         int var4 = 0;
         try {
-          var6 = k.field_h;
+          var6 = k.outgoingPackets;
           var6.writeCipheredOpcode(-13413, param0);
           var6.position = var6.position + 1;
           var4 = var6.position;
@@ -500,7 +500,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (!obfuscationGuard) {
           this.field_s = (ga) null;
         }
-        return !pg.c(73) ? 16 : 0;
+        return !DelayedPacket.c(73) ? 16 : 0;
     }
 
     static {

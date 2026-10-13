@@ -78,7 +78,7 @@ final class me {
             stackIn_19_0 = rd.a(tq.field_a, new String[]{param0}, (byte) 103);
             return stackIn_19_0;
           }
-          var5 = k.field_h;
+          var5 = k.outgoingPackets;
           var5.writeCipheredOpcode(-13413, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;

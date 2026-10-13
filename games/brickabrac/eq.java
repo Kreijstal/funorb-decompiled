@@ -13,13 +13,13 @@ final class eq {
     private int field_j;
     private long[] field_a;
     static String field_i;
-    static BufferedSocket field_g;
+    static BufferedSocket gameTransport;
     static mk field_m;
 
     final static void a(int param0) {
         cr.f((byte) -45);
         if (param0 != 7) {
-          field_g = (BufferedSocket) null;
+          gameTransport = (BufferedSocket) null;
         }
         SecondaryNodeQueue.d(125);
         CircleBody.field_p = null;
@@ -57,13 +57,13 @@ final class eq {
         if (param0 >= -58) {
           eq.c((byte) -29);
         }
-        var6 = "(" + r.field_z + " " + we.field_a + " " + mh.field_gb + ") " + IntrusiveHashTable.field_a;
+        var6 = "(" + r.thirdPreviousPacketOpcode + " " + we.secondPreviousPacketOpcode + " " + mh.previousPacketOpcode + ") " + IntrusiveHashTable.currentPacketOpcode;
         var1 = var6;
-        if (ga.field_j > 0) {
+        if (ga.incomingPacketLength > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < ga.field_j; var2++) {
+          for (var2 = 0; var2 < ga.incomingPacketLength; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & jl.field_e.data[var2];
+            var3 = 255 & jl.incomingPackets.data[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {
@@ -308,7 +308,7 @@ final class eq {
     public static void b(int param0) {
         field_m = null;
         field_b = null;
-        field_g = null;
+        gameTransport = null;
         field_i = null;
         if (param0 != -1) {
           field_m = (mk) null;

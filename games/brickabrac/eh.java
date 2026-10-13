@@ -301,7 +301,7 @@ final class eh {
     }
 
     final static void a(boolean param0, int param1) {
-        BitPacketBuffer var2 = k.field_h;
+        BitPacketBuffer var2 = k.outgoingPackets;
         var2.writeCipheredOpcode(-13413, param1);
         if (!param0) {
           eh.a('￪', (byte) -120);

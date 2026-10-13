@@ -176,7 +176,7 @@ abstract class GameClock {
         kd.field_d[5] = k.field_i;
         kd.field_d[15] = DualLinkNode.field_i;
         kd.field_d[9] = sh.field_b;
-        kd.field_d[6] = pg.field_i;
+        kd.field_d[6] = DelayedPacket.field_i;
         kd.field_d[20] = c.field_n;
         kd.field_d[7] = nk.field_i;
         kd.field_d[17] = RasterCacheSurface.field_l;

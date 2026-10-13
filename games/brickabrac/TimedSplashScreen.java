@@ -108,7 +108,7 @@ final class TimedSplashScreen extends MenuScreen {
           return;
         }
         RankingsScreen.field_t.drawOpaque(0, 0);
-        pg.d(0);
+        DelayedPacket.d(0);
         MovingBody.a((byte) -115);
     }
 

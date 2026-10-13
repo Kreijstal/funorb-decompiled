@@ -17,97 +17,97 @@ final class nl {
         field_b = null;
         if (param0 > -68) {
           int[] var2 = (int[]) null;
-          nl.a((int[]) null, (byte) -73);
+          nl.readNextGamePacket((int[]) null, (byte) -73);
           return;
         }
     }
 
-    final static boolean a(int[] param0, byte param1) {
-        int var5_int = 0;
-        int var6 = 0;
+    final static boolean readNextGamePacket(int[] packetLengths, byte obfuscationGuard) {
+        int queuedByteIndex = 0;
+        int receivedByteIndex = 0;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
-        long var2_long = 0L;
+        long nowMillis = 0L;
         RuntimeException var2 = null;
-        pg var4_ref_pg = null;
-        int var4 = 0;
-        pg var5 = null;
-        int var7 = 0;
-        var7 = BrickABrac.field_J ? 1 : 0;
+        DelayedPacket queuedPacket = null;
+        int delayMillis = 0;
+        DelayedPacket delayedPacket = null;
+        int clientBranchFlag = 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (MenuButton.field_i != rf.field_b) {
             return false;
           }
-          if (param1 != 64) {
+          if (obfuscationGuard != 64) {
             field_f = (om) null;
           }
-          var2_long = MonotonicTime.nowMillis(false);
-          if (0 != MonotonicTime.field_d &&
-            ob.field_I < 0) {
-            var4_ref_pg = (pg) (al.field_m.first(-124));
-            if (var4_ref_pg != null &&
-              var2_long > var4_ref_pg.field_j) {
-              var4_ref_pg.unlink((byte) 111);
-              ga.field_j = var4_ref_pg.field_l.length;
-              jl.field_e.position = 0;
-              for (var5_int = 0; ga.field_j > var5_int; var5_int++) {
-                jl.field_e.data[var5_int] = var4_ref_pg.field_l[var5_int];
+          nowMillis = MonotonicTime.nowMillis(false);
+          if (0 != MonotonicTime.packetDelayMillis &&
+            ob.pendingPacketOpcode < 0) {
+            queuedPacket = (DelayedPacket) (al.delayedPackets.first(-124));
+            if (queuedPacket != null &&
+              nowMillis > queuedPacket.deliverAfterMillis) {
+              queuedPacket.unlink((byte) 111);
+              ga.incomingPacketLength = queuedPacket.data.length;
+              jl.incomingPackets.position = 0;
+              for (queuedByteIndex = 0; ga.incomingPacketLength > queuedByteIndex; queuedByteIndex++) {
+                jl.incomingPackets.data[queuedByteIndex] = queuedPacket.data[queuedByteIndex];
               }
-              r.field_z = we.field_a;
-              we.field_a = mh.field_gb;
-              mh.field_gb = IntrusiveHashTable.field_a;
-              IntrusiveHashTable.field_a = var4_ref_pg.field_r;
+              r.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
+              we.secondPreviousPacketOpcode = mh.previousPacketOpcode;
+              mh.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
+              IntrusiveHashTable.currentPacketOpcode = queuedPacket.opcode;
               return true;
             }
           }
           while (true) {
-            if (0 > ob.field_I) {
-              jl.field_e.position = 0;
-              if (!vd.a(20, 1)) {
+            if (0 > ob.pendingPacketOpcode) {
+              jl.incomingPackets.position = 0;
+              if (!vd.ensureGamePacketBytes(20, 1)) {
                 return false;
               }
-              ob.field_I = jl.field_e.readCipheredOpcode(true);
-              jl.field_e.position = 0;
-              ga.field_j = param0[ob.field_I];
+              ob.pendingPacketOpcode = jl.incomingPackets.readCipheredOpcode(true);
+              jl.incomingPackets.position = 0;
+              ga.incomingPacketLength = packetLengths[ob.pendingPacketOpcode];
             }
-            if (!um.b((byte) -104)) {
+            if (!um.ensureGamePacketBody((byte) -104)) {
               return false;
             }
-            if (MonotonicTime.field_d == 0) {
-              r.field_z = we.field_a;
-              we.field_a = mh.field_gb;
-              mh.field_gb = IntrusiveHashTable.field_a;
-              IntrusiveHashTable.field_a = ob.field_I;
-              ob.field_I = -1;
+            if (MonotonicTime.packetDelayMillis == 0) {
+              r.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
+              we.secondPreviousPacketOpcode = mh.previousPacketOpcode;
+              mh.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
+              IntrusiveHashTable.currentPacketOpcode = ob.pendingPacketOpcode;
+              ob.pendingPacketOpcode = -1;
               return true;
             }
-            var4 = MonotonicTime.field_d;
-            if (0.0 != ej.field_J) {
-              var4 = (int)((double)var4 + ji.field_e.nextGaussian() * ej.field_J);
-              if (0 > var4) {
-                var4 = 0;
+            delayMillis = MonotonicTime.packetDelayMillis;
+            if (0.0 != ej.packetDelayJitter) {
+              delayMillis = (int)((double)delayMillis + ji.packetDelayRandom.nextGaussian() * ej.packetDelayJitter);
+              if (0 > delayMillis) {
+                delayMillis = 0;
               }
             }
-            var5 = new pg(var2_long + (long)var4, ob.field_I, new byte[ga.field_j]);
-            for (var6 = 0; ga.field_j > var6; var6++) {
-              var5.field_l[var6] = jl.field_e.data[var6];
+            delayedPacket = new DelayedPacket(nowMillis + (long)delayMillis, ob.pendingPacketOpcode, new byte[ga.incomingPacketLength]);
+            for (receivedByteIndex = 0; ga.incomingPacketLength > receivedByteIndex; receivedByteIndex++) {
+              delayedPacket.data[receivedByteIndex] = jl.incomingPackets.data[receivedByteIndex];
             }
-            al.field_m.addLast(var5, (byte) 3);
-            ob.field_I = -1;
+            al.delayedPackets.addLast(delayedPacket, (byte) 3);
+            ob.pendingPacketOpcode = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_38_0 = var2;
           stackIn_38_1 = new StringBuilder().append("nl.A(");
-          if (param0 == null) {
+          if (packetLengths == null) {
             stackIn_39_2 = "null";
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

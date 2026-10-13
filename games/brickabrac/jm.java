@@ -185,14 +185,14 @@ final class jm {
             var6 = (mp) (var4.next((byte) 116));
           }
           if (f.field_c.field_Tb.field_L != 0) {
-            tn.field_m = new gq(f.field_c.field_Tb.field_Eb, f.field_c.field_Tb.field_db, f.field_c.field_Tb.field_Ib, f.field_c.field_Tb.field_cb, CacheIoWorker.field_e, ij.field_c, ad.field_l, ad.field_l);
-            ij.field_d = 2;
+            tn.field_m = new gq(f.field_c.field_Tb.field_Eb, f.field_c.field_Tb.field_db, f.field_c.field_Tb.field_Ib, f.field_c.field_Tb.field_cb, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+            GameUiController.field_d = 2;
           }
           if (0 == f.field_c.field_Wb.field_L) {
             return;
           }
-          tn.field_m = new gq(f.field_c.field_Wb.field_Eb, f.field_c.field_Wb.field_db, f.field_c.field_Wb.field_Ib, f.field_c.field_Wb.field_cb, MultiplayerExitScreen.field_A, ij.field_c, ad.field_l, ad.field_l);
-          ij.field_d = 3;
+          tn.field_m = new gq(f.field_c.field_Wb.field_Eb, f.field_c.field_Wb.field_db, f.field_c.field_Wb.field_Ib, f.field_c.field_Wb.field_cb, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          GameUiController.field_d = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -260,7 +260,7 @@ final class jm {
         int[] var12 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var10 = jl.field_e;
+          var10 = jl.incomingPackets;
           if (param0 != 22) {
             field_l = (String) null;
           }
@@ -272,7 +272,7 @@ final class jm {
               hn.a((byte) 57);
               return;
             }
-            var5_int = ga.field_j - var10.position;
+            var5_int = ga.incomingPacketLength - var10.position;
             var12 = var4_ref_pe.field_m;
             var11 = var12;
             var6 = var11;

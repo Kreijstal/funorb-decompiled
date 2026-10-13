@@ -37,7 +37,7 @@ final class c {
         BitPacketBuffer var9 = null;
         int var8 = 0;
         try {
-          var9 = k.field_h;
+          var9 = k.outgoingPackets;
           BitPacketBuffer var6 = var9;
           int var7 = -44 / ((-59 - param2) / 38);
           var9.writeCipheredOpcode(-13413, param4);

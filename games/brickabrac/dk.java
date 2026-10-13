@@ -411,8 +411,8 @@ final class dk extends ib implements ha, en, vf {
           if (param0 > -59) {
             field_R = (RgbSprite) null;
           }
-          for (var1_int = 0; var1_int < pg.menuScreens.length; var1_int++) {
-            var2 = pg.menuScreens[var1_int];
+          for (var1_int = 0; var1_int < DelayedPacket.menuScreens.length; var1_int++) {
+            var2 = DelayedPacket.menuScreens[var1_int];
             if (var2 != null) {
               var2.refreshMenu(-88);
             }
@@ -619,7 +619,7 @@ final class dk extends ib implements ha, en, vf {
         String var2 = rd.a(ch.field_e, new String[]{this.c(true), this.j(-987472479)}, (byte) 103);
         int var3 = 20;
         var3 = var3 + this.a(IntNode.field_l, this.field_M, var3, 37, 170);
-        var3 = var3 + (this.a(this.field_H, var3, "", 20, 170, pg.field_o, 170) + 5);
+        var3 = var3 + (this.a(this.field_H, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
         var3 = var3 + this.a(wc.field_c, this.field_O, var3, 84, 170);
         var3 = var3 + (this.a(170, InstructionsScreen.field_x, cp.field_G, -3, this.field_L, var3) + 5);
         var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.field_J, var3) + 5);

@@ -4,7 +4,7 @@
 final class jl {
     static long lastWallMillis;
     static int field_b;
-    static BitPacketBuffer field_e;
+    static BitPacketBuffer incomingPackets;
     static RgbSprite field_d;
     static int field_a;
 
@@ -140,7 +140,7 @@ final class jl {
     }
 
     public static void a(int param0) {
-        field_e = null;
+        incomingPackets = null;
         field_d = null;
         if (param0 != 31186) {
           String var2 = (String) null;
@@ -199,7 +199,7 @@ final class jl {
           if (param0 != 24943) {
             lastWallMillis = -99L;
           }
-          var5 = k.field_h;
+          var5 = k.outgoingPackets;
           var5.writeCipheredOpcode(-13413, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;

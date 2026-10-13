@@ -952,7 +952,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         int var6 = 0;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = k.field_h;
+          var3 = k.outgoingPackets;
           var3.writeCipheredOpcode(param2 ^ -3818, param0);
           var3.position = var3.position + 1;
           var4 = var3.position;

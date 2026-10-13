@@ -7,7 +7,7 @@ final class be {
     private boolean field_p;
     private int field_l;
     static boolean field_a;
-    static int field_c;
+    static int uiBootstrapStage;
     static RgbSprite field_d;
     private int field_b;
     static String field_n;
@@ -412,7 +412,7 @@ final class be {
     }
 
     static {
-        field_c = 0;
+        uiBootstrapStage = 0;
         field_a = true;
         field_e = "Won";
         field_n = "You can ask to join this game";

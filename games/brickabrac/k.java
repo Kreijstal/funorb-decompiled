@@ -3,7 +3,7 @@
  */
 abstract class k extends pj implements hf {
     static String field_i;
-    static BitPacketBuffer field_h;
+    static BitPacketBuffer outgoingPackets;
     static String field_j;
     private vb field_g;
 
@@ -33,7 +33,7 @@ abstract class k extends pj implements hf {
         RuntimeException var3 = null;
         try {
           if (param1 > -39) {
-            field_h = (BitPacketBuffer) null;
+            outgoingPackets = (BitPacketBuffer) null;
             this.a(false);
           } else {
             this.a(false);
@@ -309,7 +309,7 @@ abstract class k extends pj implements hf {
     public static void c(byte param0) {
         field_i = null;
         field_j = null;
-        field_h = null;
+        outgoingPackets = null;
         if (param0 > -73) {
           field_i = (String) null;
         }

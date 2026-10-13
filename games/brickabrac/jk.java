@@ -100,7 +100,7 @@ final class jk extends ki {
     }
 
     final static void a(int param0, byte param1) {
-        BitPacketBuffer var2 = k.field_h;
+        BitPacketBuffer var2 = k.outgoingPackets;
         var2.writeCipheredOpcode(param1 ^ -13319, param0);
         var2.position = var2.position + 1;
         int var3 = var2.position;

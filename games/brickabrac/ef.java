@@ -14,7 +14,7 @@ final class ef extends IOException {
     final static void a(int param0, int param1) {
         BitPacketBuffer var2 = null;
         if (param0 == -22809) {
-          var2 = k.field_h;
+          var2 = k.outgoingPackets;
           var2.writeCipheredOpcode(-13413, param1);
           var2.writeByte(-5, 1);
           var2.writeByte(param0 ^ 22903, 1);

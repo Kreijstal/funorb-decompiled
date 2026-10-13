@@ -174,12 +174,12 @@ final class wn {
             }
             if (decompiledFrameCompleted0) {
               if (GameScreen.field_f.field_Tb.field_L != 0) {
-                tn.field_m = new gq(GameScreen.field_f.field_Tb.field_Eb, GameScreen.field_f.field_Tb.field_db, GameScreen.field_f.field_Tb.field_Ib, GameScreen.field_f.field_Tb.field_cb, ArchiveNetworkClient.field_t, ij.field_c, ad.field_l, ad.field_l);
-                ij.field_d = 0;
+                tn.field_m = new gq(GameScreen.field_f.field_Tb.field_Eb, GameScreen.field_f.field_Tb.field_db, GameScreen.field_f.field_Tb.field_Ib, GameScreen.field_f.field_Tb.field_cb, ArchiveNetworkClient.field_t, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+                GameUiController.field_d = 0;
               }
               if (0 != GameScreen.field_f.field_Wb.field_L) {
-                tn.field_m = new gq(GameScreen.field_f.field_Wb.field_Eb, GameScreen.field_f.field_Wb.field_db, GameScreen.field_f.field_Wb.field_Ib, GameScreen.field_f.field_Wb.field_cb, eg.field_j, ij.field_c, ad.field_l, ad.field_l);
-                ij.field_d = 1;
+                tn.field_m = new gq(GameScreen.field_f.field_Wb.field_Eb, GameScreen.field_f.field_Wb.field_db, GameScreen.field_f.field_Wb.field_Ib, GameScreen.field_f.field_Wb.field_cb, eg.field_j, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+                GameUiController.field_d = 1;
               }
             }
           } else {

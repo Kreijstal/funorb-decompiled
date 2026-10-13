@@ -99,13 +99,13 @@ abstract class ArchiveSource {
     final static void a(int param0) {
         CharSequence var3 = null;
         if (param0 == 27423) {
-          tb.field_cb = jl.field_e.readCp1252String(-1);
+          tb.field_cb = jl.incomingPackets.readCp1252String(-1);
           var3 = (CharSequence) ((Object) tb.field_cb);
           ArchiveFetchClient.field_d = gb.a(var3, 71);
           return;
         }
         ArchiveSource.sleepOnce(49, -113L);
-        tb.field_cb = jl.field_e.readCp1252String(-1);
+        tb.field_cb = jl.incomingPackets.readCp1252String(-1);
         CharSequence var2 = (CharSequence) ((Object) tb.field_cb);
         ArchiveFetchClient.field_d = gb.a(var2, 71);
     }

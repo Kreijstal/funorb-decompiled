@@ -9,7 +9,7 @@ final class ch {
     static tf field_a;
     static RgbSprite field_f;
     static hl field_c;
-    static int[] field_g;
+    static int[] incomingPacketLengths;
     static String field_j;
     static String field_e;
     static cq field_h;
@@ -40,7 +40,7 @@ final class ch {
         mp var6Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = jl.field_e;
+          var1 = jl.incomingPackets;
           var2 = var1.readUnsignedByte(255);
           if (0 == var2) {
             if (null == tf.field_d) {
@@ -178,7 +178,7 @@ final class ch {
           field_e = null;
           field_a = null;
           field_k = null;
-          field_g = null;
+          incomingPacketLengths = null;
           if (param0 != 20623) {
             field_b = -11;
           }
@@ -211,7 +211,7 @@ final class ch {
     static {
         field_b = -1;
         field_a = new tf();
-        field_g = new int[256];
+        incomingPacketLengths = new int[256];
         field_j = "Genius!";
         field_e = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_d = "Players";

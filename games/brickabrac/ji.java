@@ -6,7 +6,7 @@ import java.util.*;
 final class ji implements Iterable {
     static boolean field_f;
     private IntrusiveNode field_h;
-    static Random field_e;
+    static Random packetDelayRandom;
     static String field_g;
     IntrusiveNode[] field_d;
     int field_c;
@@ -20,10 +20,10 @@ final class ji implements Iterable {
         if (param0 != 24968) {
           vm var2 = (vm) null;
           ji.a(-14, true, (vm) null, -51, -100, true);
-          field_e = null;
+          packetDelayRandom = null;
           return;
         }
-        field_e = null;
+        packetDelayRandom = null;
     }
 
     final IntrusiveNode a(long param0, int param1) {
@@ -198,6 +198,6 @@ final class ji implements Iterable {
 
     static {
         field_g = "Friends";
-        field_e = new Random();
+        packetDelayRandom = new Random();
     }
 }

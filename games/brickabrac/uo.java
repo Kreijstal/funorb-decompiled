@@ -69,7 +69,7 @@ final class uo {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = k.field_h;
+          var3 = k.outgoingPackets;
           var3.writeCipheredOpcode(-13413, param1);
           var3.writeByte(58, 5);
           var3.writeByte(param2 ^ -55, 0);

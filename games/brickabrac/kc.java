@@ -96,7 +96,7 @@ final class kc extends IntrusiveNode {
         BitPacketBuffer var8 = null;
         wd var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
-        var8 = jl.field_e;
+        var8 = jl.incomingPackets;
         var2 = var8;
         var3 = var8.readUnsignedByte(param0 + 188);
         gj.field_a = 127 & var3;
@@ -181,7 +181,7 @@ final class kc extends IntrusiveNode {
         BitPacketBuffer var8 = null;
         wd var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
-        var8 = jl.field_e;
+        var8 = jl.incomingPackets;
         var2 = var8;
         var3 = var8.readUnsignedByte(param0 + 188);
         gj.field_a = 127 & var3;

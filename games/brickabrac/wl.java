@@ -116,7 +116,7 @@ final class wl extends d {
         int var11Lifetime1;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          var14 = jl.field_e;
+          var14 = jl.incomingPackets;
           var2 = var14.readUnsignedByte(255);
           var3 = (cq) (fk.field_f.first(-7));
           while (var3 != null) {
@@ -247,13 +247,13 @@ final class wl extends d {
         try {
           var14 = param3.b(2);
           var8 = param5.b(2);
-          if (eq.field_g == null &&
-            !ad.a(false, param6 ^ 10004)) {
+          if (eq.gameTransport == null &&
+            !CappedUrlRequest.a(false, param6 ^ 10004)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
           if (rf.field_b == BitPacketBuffer.field_u) {
-            k.field_h.position = 0;
+            k.outgoingPackets.position = 0;
             AchievementBrowserScreen.field_r = null;
             if (param0 != null) {
               var9 = 0;
@@ -261,8 +261,8 @@ final class wl extends d {
                 var9 = var9 | 1;
               }
               tq.field_f.position = 0;
-              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
-              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
               tq.field_f.writePrefixedCp1252String(param6 ^ 4, var14);
               tq.field_f.writePrefixedCp1252String(0, var8);
               var15 = (CharSequence) ((Object) param0);
@@ -270,20 +270,20 @@ final class wl extends d {
               tq.field_f.writeShort((byte) 113, param4);
               tq.field_f.writeByte(89, param2);
               tq.field_f.writeByte(127, var9);
-              k.field_h.writeByte(53, 18);
-              k.field_h.position = k.field_h.position + 2;
-              var10 = k.field_h.position;
+              k.outgoingPackets.writeByte(53, 18);
+              k.outgoingPackets.position = k.outgoingPackets.position + 2;
+              var10 = k.outgoingPackets.position;
               var11_ref_String = GameClock.a(true, uc.e((byte) -75));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              k.field_h.writeCp1252String(var11_ref_String, -1);
-              LevelDecoder.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-              k.field_h.backfillShortLength(-var10 + k.field_h.position, 255);
+              k.outgoingPackets.writeCp1252String(var11_ref_String, -1);
+              LevelDecoder.a(k.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              k.outgoingPackets.backfillShortLength(-var10 + k.outgoingPackets.position, 255);
             } else {
               tq.field_f.position = 0;
-              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
-              tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
               stackIn_11_0 = tq.field_f;
               stackIn_11_1 = 0;
               if (!param3.a((byte) 116)) {
@@ -300,19 +300,19 @@ final class wl extends d {
                 stackIn_15_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_14_0).writePrefixedCp1252String(stackIn_14_1, stackIn_15_2);
-              k.field_h.writeByte(-10, 16);
-              k.field_h.position = k.field_h.position + 1;
-              var9 = k.field_h.position;
-              LevelDecoder.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-              k.field_h.backfillByteLength((byte) 119, k.field_h.position - var9);
+              k.outgoingPackets.writeByte(-10, 16);
+              k.outgoingPackets.position = k.outgoingPackets.position + 1;
+              var9 = k.outgoingPackets.position;
+              LevelDecoder.a(k.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              k.outgoingPackets.backfillByteLength((byte) 119, k.outgoingPackets.position - var9);
             }
             cr.a(-1, 10000);
             rf.field_b = ck.field_k;
           }
           if (ck.field_k == rf.field_b &&
-            vd.a(20, 1)) {
-            var9Lifetime1 = jl.field_e.readUnsignedByte(255);
-            jl.field_e.position = 0;
+            vd.ensureGamePacketBytes(20, 1)) {
+            var9Lifetime1 = jl.incomingPackets.readUnsignedByte(255);
+            jl.incomingPackets.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               rf.field_b = o.field_g;
@@ -327,25 +327,25 @@ final class wl extends d {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                vd.a(20, oc.d((byte) -59));
-                AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, jl.field_e));
-                jl.field_e.position = 0;
+                vd.ensureGamePacketBytes(20, oc.d((byte) -59));
+                AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, jl.incomingPackets));
+                jl.incomingPackets.position = 0;
               } else {
-                IntrusiveHashTable.field_a = var9Lifetime1;
+                IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
                 rf.field_b = vj.field_e;
-                ga.field_j = -1;
+                ga.incomingPacketLength = -1;
               }
             }
           }
           if (rf.field_b == o.field_g) {
             var9Lifetime2 = 2;
-            if (vd.a(20, var9Lifetime2)) {
-              var10Lifetime1 = jl.field_e.readUnsignedShort(65280);
-              jl.field_e.position = 0;
-              if (vd.a(20, var10Lifetime1)) {
+            if (vd.ensureGamePacketBytes(20, var9Lifetime2)) {
+              var10Lifetime1 = jl.incomingPackets.readUnsignedShort(65280);
+              jl.incomingPackets.position = 0;
+              if (vd.ensureGamePacketBytes(20, var10Lifetime1)) {
                 var11 = co.field_f.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  co.field_f[var12] = jl.field_e.readPrefixedCp1252String(pn.a(param6, 251));
+                  co.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(pn.a(param6, 251));
                 }
                 hn.a((byte) 79);
                 pf.field_d = false;
@@ -355,24 +355,24 @@ final class wl extends d {
             }
           }
           if (vj.field_e == rf.field_b &&
-            um.b((byte) -92)) {
-            if (IntrusiveHashTable.field_a == 255) {
-              var9_ref_String = jl.field_e.readNullableCp1252String(param6 - 4);
+            um.ensureGamePacketBody((byte) -92)) {
+            if (IntrusiveHashTable.currentPacketOpcode == 255) {
+              var9_ref_String = jl.incomingPackets.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {
                 ui.a(param6 ^ -55, uc.e((byte) -120), var9_ref_String);
               }
             } else {
-              DirectByteStorage.field_e = jl.field_e.readCp1252String(-1);
+              DirectByteStorage.field_e = jl.incomingPackets.readCp1252String(-1);
             }
             hn.a((byte) 106);
             pf.field_d = false;
-            stackIn_51_0 = IntrusiveHashTable.field_a;
+            stackIn_51_0 = IntrusiveHashTable.currentPacketOpcode;
             return stackIn_51_0;
           }
           if (param6 != 4) {
             field_N = false;
           }
-          if (null == eq.field_g) {
+          if (null == eq.gameTransport) {
             if (pf.field_d) {
               if (MembershipBenefitsScreen.f(param6 ^ -6788) > 30000L) {
                 DirectByteStorage.field_e = hg.field_b;

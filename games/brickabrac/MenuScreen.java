@@ -32,7 +32,7 @@ abstract class MenuScreen extends GameScreen {
         if (obfuscationGuard >= -14) {
           return;
         }
-        pg.d(0);
+        DelayedPacket.d(0);
     }
 
     final void initializeButtons(int[] actionIds, int startIndex) {
@@ -578,7 +578,7 @@ abstract class MenuScreen extends GameScreen {
             if (this.selection.isActivated((byte) 113)) {
               stackIn_47_0 = inputFlag;
               stackIn_47_1 = obfuscationGuard - 44;
-              if (pg.c(72)) {
+              if (DelayedPacket.c(72)) {
                 stackIn_48_2 = 13;
               } else {
                 stackIn_48_2 = 16;

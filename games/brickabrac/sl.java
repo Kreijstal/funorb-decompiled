@@ -105,19 +105,19 @@ abstract class sl extends DualLinkNode {
           AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
           Ball.field_A = new mh(0L, (mh) null);
           qb.field_v = new mh(0L, MainMenuScreen.field_t, n.field_a);
-          ij.field_a = new mh(0L, ik.field_a, pf.field_c);
+          GameUiController.field_a = new mh(0L, ik.field_a, pf.field_c);
           IsaacGenerator.field_b = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           Ball.field_A.a(qb.field_v, 0);
           if (vd.field_e) {
-            Ball.field_A.a(ij.field_a, 0);
+            Ball.field_A.a(GameUiController.field_a, 0);
           }
           Ball.field_A.a(IsaacGenerator.field_b, 0);
-          IsaacGenerator.field_b.field_Qb.a((byte) -74, ad.field_l);
+          IsaacGenerator.field_b.field_Qb.a((byte) -74, CappedUrlRequest.field_l);
           IsaacGenerator.field_b.field_Qb.field_Q = 1;
           var23 = IsaacGenerator.field_b.field_Qb;
           var24 = var23;
           var24.field_S = 1;
-          dn.field_N = new mh(0L, ad.field_l);
+          dn.field_N = new mh(0L, CappedUrlRequest.field_l);
           dn.field_N.field_S = 1;
           HighscorePackSelector.field_k = new mh(0L, MatchCompleteScreen.field_x, fj.field_Rb.toUpperCase());
           sc.field_b = new mh(0L, qh.field_j, rl.field_c.toUpperCase());
@@ -164,20 +164,20 @@ abstract class sl extends DualLinkNode {
             rm.field_a.a(gj.field_b, 0);
           }
           rm.field_a.a(td.field_v, 0);
-          Brick.field_A = new mh(0L, ad.field_l);
+          Brick.field_A = new mh(0L, CappedUrlRequest.field_l);
           Brick.field_A.field_S = 1;
           Brick.field_A.field_Q = 0;
-          nh.field_a = new mh(0L, ij.field_b, k.field_j.toUpperCase());
+          nh.field_a = new mh(0L, GameUiController.field_b, k.field_j.toUpperCase());
           qp.field_f = new mh(0L, MenuSelection.field_m);
           qp.field_f.a(Brick.field_A, 0);
           qp.field_f.a(nh.field_a, 0);
           t.field_f = new mh(0L, am.field_Qb);
-          t.field_f.a((byte) -83, ad.field_l);
+          t.field_f.a((byte) -83, CappedUrlRequest.field_l);
           t.field_f.field_Q = 1;
           var16 = t.field_f;
           var16.field_S = 1;
           ji.field_b = new mh(0L, (mh) null);
-          um.field_b = new mh(0L, ad.field_l);
+          um.field_b = new mh(0L, CappedUrlRequest.field_l);
           um.field_b.field_S = 1;
           BoundedFile.field_g = new mh(0L, MainMenuScreen.field_t, n.field_a);
           wd.field_E = new mh(0L, ik.field_a, pf.field_c);
@@ -188,7 +188,7 @@ abstract class sl extends DualLinkNode {
             ji.field_b.a(wd.field_E, 0);
           }
           ji.field_b.a(TimedSplashScreen.field_u, 0);
-          ij.field_e = new mh(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
+          GameUiController.field_e = new mh(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
           ba.field_v = new mh(0L, qh.field_j);
           rg.field_e = new mh(0L, qb.field_x);
           jd.field_a = new mh(0L, lj.field_k, ArchiveSource.field_b.toUpperCase());
@@ -262,7 +262,7 @@ abstract class sl extends DualLinkNode {
           pf.field_h = new mh(0L, fm.field_b);
           dn.field_K = new mh(0L, fm.field_b);
           AppletGameShell.field_e = new mh(0L, Paddle.field_C);
-          AppletGameShell.field_e.a((byte) -125, ad.field_l);
+          AppletGameShell.field_e.a((byte) -125, CappedUrlRequest.field_l);
           var17 = AppletGameShell.field_e;
           AppletGameShell.field_e.field_Q = 1;
           var17.field_S = 1;
@@ -286,7 +286,7 @@ abstract class sl extends DualLinkNode {
           MultiplayerMatch.field_d.a(dn.field_K, 0);
           MultiplayerMatch.field_d.a(AppletGameShell.field_e, 0);
           pk.field_h = new mh(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
-          nd.field_a = new mh(0L, ij.field_b, fh.field_e.toUpperCase());
+          nd.field_a = new mh(0L, GameUiController.field_b, fh.field_e.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

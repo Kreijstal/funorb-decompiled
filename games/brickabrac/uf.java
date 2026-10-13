@@ -4,7 +4,7 @@
 final class uf {
     static int field_c;
     static ResourceArchive field_a;
-    static boolean[] field_d;
+    static boolean[] enabledCommonPackets;
     static int field_b;
     static RgbSprite field_e;
 
@@ -14,7 +14,7 @@ final class uf {
           return;
         }
         field_e = null;
-        field_d = null;
+        enabledCommonPackets = null;
     }
 
     final static boolean b(int param0, int param1) {
@@ -262,7 +262,7 @@ final class uf {
           var8.unlink((byte) 111);
           var8.unlinkSecondary(3);
           IsaacGenerator.field_h = IsaacGenerator.field_h - 1;
-          var6 = k.field_h;
+          var6 = k.outgoingPackets;
           var6.writeCipheredOpcode(-13413, param1);
           var6.position = var6.position + 1;
           var7 = var6.position;
@@ -292,6 +292,6 @@ final class uf {
     }
 
     static {
-        field_d = new boolean[64];
+        enabledCommonPackets = new boolean[64];
     }
 }

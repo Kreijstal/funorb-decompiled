@@ -109,13 +109,13 @@ final class tm {
         RuntimeException var2 = null;
         int var4 = 0;
         int var6 = 0;
-        pg var6_ref_pg = null;
+        DelayedPacket var6_ref_pg = null;
         int var7 = 0;
         byte[] var8 = null;
-        pg var9 = null;
+        DelayedPacket var9 = null;
         int var10 = 0;
         byte[] var11 = null;
-        pg var13 = null;
+        DelayedPacket var13 = null;
         byte[] var14 = null;
         byte[] var17 = null;
         int var6Lifetime1;
@@ -125,35 +125,35 @@ final class tm {
             var2_long = MonotonicTime.nowMillis(false);
             var4 = oa.field_Ub;
             if (fk.field_b != 0.0) {
-              var4 = (int)((double)var4 + ji.field_e.nextGaussian() * fk.field_b);
+              var4 = (int)((double)var4 + ji.packetDelayRandom.nextGaussian() * fk.field_b);
               if (0 > var4) {
                 var4 = 0;
               }
             }
-            if (0 < k.field_h.position) {
-              var14 = new byte[k.field_h.position];
+            if (0 < k.outgoingPackets.position) {
+              var14 = new byte[k.outgoingPackets.position];
               var11 = var14;
               var8 = var11;
               var17 = var8;
               for (var6 = 0; var14.length > var6; var6++) {
-                var8[var6] = k.field_h.data[var6];
+                var8[var6] = k.outgoingPackets.data[var6];
               }
-              var6_ref_pg = new pg(var2_long + (long)var4, k.field_h.position, var17);
+              var6_ref_pg = new DelayedPacket(var2_long + (long)var4, k.outgoingPackets.position, var17);
               hg.field_a.addLast(var6_ref_pg, (byte) 3);
-              k.field_h.position = 0;
+              k.outgoingPackets.position = 0;
             }
-            var9 = (pg) (hg.field_a.first(-62));
+            var9 = (DelayedPacket) (hg.field_a.first(-62));
             var13 = var9;
             if (var13 != null &&
-              var13.field_j < var2_long) {
+              var13.deliverAfterMillis < var2_long) {
               var13.unlink((byte) 111);
               var10 = 0;
               var6Lifetime1 = var10;
-              while (var10 < var13.field_r) {
-                k.field_h.data[var10] = var9.field_l[var10];
+              while (var10 < var13.opcode) {
+                k.outgoingPackets.data[var10] = var9.data[var10];
                 var10++;
               }
-              k.field_h.position = var13.field_r;
+              k.outgoingPackets.position = var13.opcode;
             }
           }
           if (param0 != 110) {

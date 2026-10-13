@@ -62,7 +62,7 @@ class ba extends DualLinkNode {
           hn.a((byte) 106);
           return;
         }
-        BitPacketBuffer var2 = jl.field_e;
+        BitPacketBuffer var2 = jl.incomingPackets;
         var2.readInt(255);
         var2.readInt(255);
         var2.readInt(255);

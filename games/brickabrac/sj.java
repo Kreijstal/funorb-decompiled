@@ -239,7 +239,7 @@ final class sj {
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
           regionExit1: {
-            var1 = jl.field_e;
+            var1 = jl.incomingPackets;
             var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
             if (var2 != 0 &&
               var2 != 1 &&

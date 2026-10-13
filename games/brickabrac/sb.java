@@ -1012,11 +1012,11 @@ final class sb implements vc {
               stackIn_49_11 = (so.a((byte) -35) <= 50) ? false : true;
               dc.a(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
               if (sl.field_w) {
-                k.field_h.writeCipheredOpcode(-13413, 64);
+                k.outgoingPackets.writeCipheredOpcode(-13413, 64);
                 sl.field_w = false;
               }
               if (tq.field_c) {
-                k.field_h.writeCipheredOpcode(-13413, 10);
+                k.outgoingPackets.writeCipheredOpcode(-13413, 10);
                 tq.field_c = false;
               }
               return;
@@ -1055,11 +1055,11 @@ final class sb implements vc {
           stackIn_68_11 = (so.a((byte) -35) <= 50) ? false : true;
           dc.a(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
           if (sl.field_w) {
-            k.field_h.writeCipheredOpcode(-13413, 64);
+            k.outgoingPackets.writeCipheredOpcode(-13413, 64);
             sl.field_w = false;
           }
           if (tq.field_c) {
-            k.field_h.writeCipheredOpcode(-13413, 10);
+            k.outgoingPackets.writeCipheredOpcode(-13413, 10);
             tq.field_c = false;
           }
           return;
@@ -1147,11 +1147,11 @@ final class sb implements vc {
             }
           }
           if (sl.field_w) {
-            k.field_h.writeCipheredOpcode(-13413, 64);
+            k.outgoingPackets.writeCipheredOpcode(-13413, 64);
             sl.field_w = false;
           }
           if (tq.field_c) {
-            k.field_h.writeCipheredOpcode(-13413, 10);
+            k.outgoingPackets.writeCipheredOpcode(-13413, 10);
             tq.field_c = false;
           }
           return;
@@ -1246,11 +1246,11 @@ final class sb implements vc {
                 stackIn_162_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
                 if (sl.field_w) {
-                  k.field_h.writeCipheredOpcode(-13413, 64);
+                  k.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   sl.field_w = false;
                 }
                 if (tq.field_c) {
-                  k.field_h.writeCipheredOpcode(-13413, 10);
+                  k.outgoingPackets.writeCipheredOpcode(-13413, 10);
                   tq.field_c = false;
                 }
                 return;
@@ -1311,11 +1311,11 @@ final class sb implements vc {
                 stackIn_203_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
                 if (sl.field_w) {
-                  k.field_h.writeCipheredOpcode(-13413, 64);
+                  k.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   sl.field_w = false;
                 }
                 if (tq.field_c) {
-                  k.field_h.writeCipheredOpcode(-13413, 10);
+                  k.outgoingPackets.writeCipheredOpcode(-13413, 10);
                   tq.field_c = false;
                 }
                 return;
@@ -1348,13 +1348,13 @@ final class sb implements vc {
           }
         }
         if (sl.field_w) {
-          k.field_h.writeCipheredOpcode(-13413, 64);
+          k.outgoingPackets.writeCipheredOpcode(-13413, 64);
           sl.field_w = false;
         }
         if (!tq.field_c) {
           return;
         }
-        k.field_h.writeCipheredOpcode(-13413, 10);
+        k.outgoingPackets.writeCipheredOpcode(-13413, 10);
         tq.field_c = false;
     }
 

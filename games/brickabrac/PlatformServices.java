@@ -55,9 +55,9 @@ final class PlatformServices implements Runnable {
         return null != this.field_u ? true : false;
     }
 
-    final PlatformTask a(byte param0, java.net.URL param1) {
-        int var3 = 36 / ((param0 - 3) / 40);
-        return this.enqueue(true, 0, param1, 4, 0);
+    final PlatformTask openUrl(byte obfuscationGuard, java.net.URL url) {
+        int var3 = 36 / ((obfuscationGuard - 3) / 40);
+        return this.enqueue(true, 0, url, 4, 0);
     }
 
     final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {

@@ -1114,7 +1114,7 @@ final class og extends mh {
           }
           var2Lifetime98 = gr.a(true, "player_two");
           if (null != var2Lifetime98) {
-            pg.field_q = MenuButton.a(var2Lifetime98, (byte) 76);
+            DelayedPacket.field_q = MenuButton.a(var2Lifetime98, (byte) 76);
           }
           var2Lifetime99 = gr.a(true, "end_of_free");
           if (null != var2Lifetime99) {
@@ -1509,7 +1509,7 @@ final class og extends mh {
           FileCacheStore.a(5);
           GameplayAudioEvent.a(param0 + 14569);
           if (vg.a(param0 - 104)) {
-            k.field_h.writeCipheredOpcode(-13413, 1);
+            k.outgoingPackets.writeCipheredOpcode(-13413, 1);
             cr.a(0, 10000);
           }
           hn.a((byte) 53);

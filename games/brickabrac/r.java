@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class r extends um {
-    static int field_z;
+    static int thirdPreviousPacketOpcode;
     static String field_B;
     static int field_w;
     static int field_x;
@@ -63,7 +63,7 @@ class r extends um {
     final static boolean c(byte param0) {
         if (param0 >= -80) {
           r.c((byte) 16);
-          if (GameConnectionShell.field_A < 20) {
+          if (GameConnectionShell.clientStage < 20) {
             return true;
           }
           if (!kb.i(7457)) {
@@ -77,7 +77,7 @@ class r extends um {
           }
           return false;
         }
-        if (GameConnectionShell.field_A < 20) {
+        if (GameConnectionShell.clientStage < 20) {
           return true;
         }
         if (!kb.i(7457)) {
@@ -129,7 +129,7 @@ class r extends um {
     }
 
     static {
-        field_z = -1;
+        thirdPreviousPacketOpcode = -1;
         field_w = 480;
         field_y = "You are invited to <%0>'s game.";
         field_v = "Options";

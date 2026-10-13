@@ -204,7 +204,7 @@ final class hk extends ib implements hf, en {
 
     final static void initializeMenuScreens(byte obfuscationGuard, ResourceArchive archive) {
         try {
-          pg.menuScreens = new MenuScreen[22];
+          DelayedPacket.menuScreens = new MenuScreen[22];
           GameCanvas.registerMenuScreen(-74, new MainMenuScreen());
           GameCanvas.registerMenuScreen(-68, cf.createPauseMenu(1, -2635));
           GameCanvas.registerMenuScreen(-90, cf.createPauseMenu(2, -2635));

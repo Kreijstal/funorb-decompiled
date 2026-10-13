@@ -340,7 +340,7 @@ final class nh {
           co.a(stackIn_3_0, stackIn_4_1);
           if (o.field_e != null) {
             boolean decompiledFrameRemainder1 = true;
-            ij.field_e.field_eb = true;
+            GameUiController.field_e.field_eb = true;
             var23 = pf.field_h;
             var27 = var23;
             pf.field_h.field_cb = 0;
@@ -696,7 +696,7 @@ final class nh {
           }
           sb.field_c.field_d.i(0);
           if (null != o.field_e) {
-            if (ij.field_e.field_L != 0) {
+            if (GameUiController.field_e.field_L != 0) {
               vg.a(o.field_e.e((byte) 123), false, param3);
             }
             if (pf.field_h.field_L != 0) {

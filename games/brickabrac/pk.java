@@ -35,7 +35,7 @@ final class pk {
           if (param0 < 24) {
             return;
           }
-          if (GameConnectionShell.field_A < 10) {
+          if (GameConnectionShell.clientStage < 10) {
             var3_int = 0;
             if (GameplayAudioEvent.redrawRequested) {
               var3_int = 1;

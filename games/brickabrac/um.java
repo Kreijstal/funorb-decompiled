@@ -398,31 +398,31 @@ class um implements ub, qe {
         if (param0 != 200) {
           field_b = (mh) null;
         }
-        BitPacketBuffer var2 = k.field_h;
+        BitPacketBuffer var2 = k.outgoingPackets;
         var2.writeCipheredOpcode(param0 ^ -13485, param1);
         var2.writeByte(87, 1);
         var2.writeByte(-121, 3);
     }
 
-    final static boolean b(byte param0) {
-        if (ga.field_j == -1) {
-          if (!vd.a(20, 1)) {
+    final static boolean ensureGamePacketBody(byte obfuscationGuard) {
+        if (ga.incomingPacketLength == -1) {
+          if (!vd.ensureGamePacketBytes(20, 1)) {
             return false;
           }
-          ga.field_j = jl.field_e.readUnsignedByte(255);
-          jl.field_e.position = 0;
+          ga.incomingPacketLength = jl.incomingPackets.readUnsignedByte(255);
+          jl.incomingPackets.position = 0;
         }
-        if (param0 > -40) {
+        if (obfuscationGuard > -40) {
           field_l = (RgbSprite[]) null;
         }
-        if (-2 == ga.field_j) {
-          if (!vd.a(20, 2)) {
+        if (-2 == ga.incomingPacketLength) {
+          if (!vd.ensureGamePacketBytes(20, 2)) {
             return false;
           }
-          ga.field_j = jl.field_e.readUnsignedShort(65280);
-          jl.field_e.position = 0;
+          ga.incomingPacketLength = jl.incomingPackets.readUnsignedShort(65280);
+          jl.incomingPackets.position = 0;
         }
-        return vd.a(20, ga.field_j);
+        return vd.ensureGamePacketBytes(20, ga.incomingPacketLength);
     }
 
     public final int b(oc param0, int param1) {
@@ -962,7 +962,7 @@ class um implements ub, qe {
               var13.a(var13.field_ic, 0);
               var13.field_Sb = new mh(0L, DualLinkNode.field_t);
               var13.a(var13.field_Sb, 0);
-              var13.field_gc = new mh(0L, ad.field_l);
+              var13.field_gc = new mh(0L, CappedUrlRequest.field_l);
               var13.a(var13.field_gc, 0);
               var13.c(true);
               var13.field_nc = new mh(0L, ok.field_d);
@@ -1258,7 +1258,7 @@ class um implements ub, qe {
             }
             if (var13.field_lc.field_kb) {
               if (var13.field_ac) {
-                stackIn_148_0 = pg.field_n;
+                stackIn_148_0 = DelayedPacket.field_n;
               } else {
                 stackIn_148_0 = rl.field_b;
               }

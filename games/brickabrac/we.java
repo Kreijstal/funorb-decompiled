@@ -3,7 +3,7 @@
  */
 final class we {
     static String field_c;
-    static int field_a;
+    static int secondPreviousPacketOpcode;
     static RgbSprite[] field_b;
 
     final static void a(byte param0) {
@@ -24,7 +24,7 @@ final class we {
     }
 
     static {
-        field_a = -1;
+        secondPreviousPacketOpcode = -1;
         field_c = "Player One";
     }
 }

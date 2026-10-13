@@ -240,8 +240,8 @@ final class mp extends mh {
         int var6 = 0;
         String var7 = null;
         try {
-          LevelPackCard.field_a[0] = ji.field_e.nextInt();
-          LevelPackCard.field_a[1] = ji.field_e.nextInt();
+          LevelPackCard.field_a[0] = ji.packetDelayRandom.nextInt();
+          LevelPackCard.field_a[1] = ji.packetDelayRandom.nextInt();
           tq.field_f.position = 0;
           LevelPackCard.field_a[3] = (int)bj.field_ab;
           LevelPackCard.field_a[2] = (int)(bj.field_ab >> 32);
@@ -252,16 +252,16 @@ final class mp extends mh {
           he.a(tq.field_f, (byte) -95);
           tq.field_f.writeShort((byte) 113, param0);
           param1.a(0, tq.field_f);
-          k.field_h.position = 0;
+          k.outgoingPackets.position = 0;
           if (!param2) {
-            k.field_h.writeByte(94, 16);
+            k.outgoingPackets.writeByte(94, 16);
           } else {
-            k.field_h.writeByte(-4, 18);
+            k.outgoingPackets.writeByte(-4, 18);
           }
-          k.field_h.position = k.field_h.position + 2;
-          var5_int = k.field_h.position;
-          k.field_h.writeInt(MainMenuScreen.field_x, (byte) -79);
-          k.field_h.writeLong(-23054, LevelSelectScreen.field_E);
+          k.outgoingPackets.position = k.outgoingPackets.position + 2;
+          var5_int = k.outgoingPackets.position;
+          k.outgoingPackets.writeInt(MainMenuScreen.field_x, (byte) -79);
+          k.outgoingPackets.writeLong(-23054, LevelSelectScreen.field_E);
           var6 = 0;
           if (qb.field_u) {
             var6 = var6 | 1;
@@ -278,17 +278,17 @@ final class mp extends mh {
           if (param4) {
             return;
           }
-          k.field_h.writeByte(-105, var6);
+          k.outgoingPackets.writeByte(-105, var6);
           var7 = GameClock.a(true, uc.e((byte) -101));
           if (var7 == null) {
             var7 = "";
           }
-          k.field_h.writeCp1252String(var7, -1);
+          k.outgoingPackets.writeCp1252String(var7, -1);
           if (null != ai.field_t) {
-            k.field_h.writePrefixedCp1252String(0, ai.field_t);
+            k.outgoingPackets.writePrefixedCp1252String(0, ai.field_t);
           }
-          LevelDecoder.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-          k.field_h.backfillShortLength(k.field_h.position - var5_int, 255);
+          LevelDecoder.a(k.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+          k.outgoingPackets.backfillShortLength(k.outgoingPackets.position - var5_int, 255);
           cr.a(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

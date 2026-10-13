@@ -8,7 +8,7 @@ final class ej extends sl {
     static NodeDeque field_F;
     static lp field_I;
     static int[] field_E;
-    static double field_J;
+    static double packetDelayJitter;
     static String field_K;
     static int field_O;
     static RgbSprite[][] field_L;
@@ -77,7 +77,7 @@ final class ej extends sl {
         field_E[12] = 7;
         field_E[4] = 5;
         field_E[10] = 2;
-        field_J = 0.0;
+        packetDelayJitter = 0.0;
         field_F = new NodeDeque();
         field_K = "Only show game chat from my friends";
         field_O = 480;

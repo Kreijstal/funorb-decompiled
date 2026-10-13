@@ -151,7 +151,7 @@ final class qi extends d {
         al var15 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var14 = jl.field_e;
+          var14 = jl.incomingPackets;
           var2 = var14.readUnsignedByte(255);
           if (param0 == ~var2) {
             var11 = Ball.d(8);

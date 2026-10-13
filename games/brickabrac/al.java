@@ -3,20 +3,20 @@
  */
 final class al extends IntrusiveNode {
     int[] field_k;
-    static NodeDeque field_m;
+    static NodeDeque delayedPackets;
     boolean field_i;
     static mh field_n;
-    static wb field_j;
+    static GameUiLifecycle uiLifecycle;
     static String field_l;
 
     public static void a(int param0) {
-        field_j = null;
+        uiLifecycle = null;
         field_n = null;
         field_l = null;
         if (param0 != 28391) {
           return;
         }
-        field_m = null;
+        delayedPackets = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

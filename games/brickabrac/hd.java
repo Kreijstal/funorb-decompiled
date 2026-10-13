@@ -22,7 +22,7 @@ final class hd {
     }
 
     final static void a(long param0, int param1, int param2) {
-        BitPacketBuffer var4 = k.field_h;
+        BitPacketBuffer var4 = k.outgoingPackets;
         var4.writeCipheredOpcode(-13413, param2);
         var4.position = var4.position + 1;
         int var5 = var4.position;

@@ -122,14 +122,14 @@ final class ma extends h {
         BitPacketBuffer var2 = null;
         BitPacketBuffer var2Lifetime1;
         if (param0 <= -49) {
-          var2 = k.field_h;
+          var2 = k.outgoingPackets;
           var2.writeCipheredOpcode(-13413, param1);
           var2.writeByte(27, 1);
           var2.writeByte(127, 2);
           return;
         }
         ma.b((byte) -23, -84);
-        var2Lifetime1 = k.field_h;
+        var2Lifetime1 = k.outgoingPackets;
         var2Lifetime1.writeCipheredOpcode(-13413, param1);
         var2Lifetime1.writeByte(27, 1);
         var2Lifetime1.writeByte(127, 2);

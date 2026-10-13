@@ -72,7 +72,7 @@ final class ka extends IntrusiveNode {
             } else {
               go.field_e = 0;
             }
-            ad.field_j = ll.field_b;
+            CappedUrlRequest.field_j = ll.field_b;
             if (null == param0) {
               if (var2_int != 0) {
                 th.field_h = true;
@@ -91,7 +91,7 @@ final class ka extends IntrusiveNode {
             kb.pointerChanged) {
             b.field_a = oo.field_v;
             go.field_e = 0;
-            ad.field_j = ll.field_b;
+            CappedUrlRequest.field_j = ll.field_b;
           }
           if (th.field_h &&
             go.field_e == LevelPackSelectScreen.field_y) {
@@ -253,7 +253,7 @@ final class ka extends IntrusiveNode {
                 var13.a(var13.field_dc, 0);
               }
               var13.field_dc.field_S = 2;
-              var13.field_Tb = new mh(0L, ad.field_l);
+              var13.field_Tb = new mh(0L, CappedUrlRequest.field_l);
               var13.a(var13.field_Tb, 0);
               var13.c(true);
               var13.field_Vb = new mh(0L, ok.field_d);

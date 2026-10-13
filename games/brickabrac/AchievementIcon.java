@@ -130,7 +130,7 @@ final class AchievementIcon extends IntrusiveNode {
     final static void a(int param0, pe param1, int param2) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = k.field_h;
+          var3 = k.outgoingPackets;
           var3.writeCipheredOpcode(-13413, param0);
           int var4 = 29 / ((-57 - param2) / 59);
           var3.writeByte(114, 2);

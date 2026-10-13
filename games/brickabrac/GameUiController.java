@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ij implements wb {
+final class GameUiController implements GameUiLifecycle {
     static mh field_b;
     static int field_d;
     static mh field_c;
@@ -9,11 +9,11 @@ final class ij implements wb {
     static String field_f;
     static mh field_a;
 
-    private final boolean d(boolean param0) {
+    private final boolean pollRequiredData(boolean obfuscationGuard) {
         if (rf.field_g == null) {
           rf.field_g = cp.b(-2, 0, 2, 10, 3);
         }
-        if (!param0) {
+        if (!obfuscationGuard) {
           return false;
         }
         if (rf.field_g.field_o) {
@@ -30,15 +30,15 @@ final class ij implements wb {
         return false;
     }
 
-    public final void a(boolean param0) {
+    public final void initializeUi(boolean obfuscationGuard) {
         boolean discarded$0 = false;
         NodeDeque.a(127, 50);
         pa var2 = new pa(cd.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
         ie.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
-        if (param0) {
-          discarded$0 = this.b((byte) -1);
+        if (obfuscationGuard) {
+          discarded$0 = this.pollRequiredFonts((byte) -1);
         }
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
@@ -58,49 +58,49 @@ final class ij implements wb {
         co.a((byte) -79, cd.field_g);
     }
 
-    final static GameScreen a(int param0, byte param1) {
-        if (-1 == param0) {
+    final static GameScreen getScreen(int screenId, byte obfuscationGuard) {
+        if (-1 == screenId) {
           return (GameScreen) ((Object) pe.gameplayScreen);
         }
-        if (param0 == -2) {
+        if (screenId == -2) {
           return (GameScreen) ((Object) ki.field_p);
         }
-        if (param1 > -5) {
+        if (obfuscationGuard > -5) {
           field_e = (mh) null;
         }
-        return (GameScreen) ((Object) bq.a(param0, 28472));
+        return (GameScreen) ((Object) bq.a(screenId, 28472));
     }
 
     public static void c(boolean param0) {
         field_f = null;
         field_e = null;
         if (param0) {
-          ij.c(true);
+          GameUiController.c(true);
         }
         field_c = null;
         field_b = null;
         field_a = null;
     }
 
-    public final boolean a(int param0) {
+    public final boolean pollUiReady(int obfuscationGuard) {
         boolean stackIn_15_0 = false;
         if (!ResourceRequest.field_y) {
           ResourceRequest.field_y = gq.d((byte) -126);
         }
         if (!jc.field_H) {
-          jc.field_H = this.b((byte) 127);
+          jc.field_H = this.pollRequiredFonts((byte) 127);
         }
-        if (param0 != 23570) {
-          this.a(true);
+        if (obfuscationGuard != 23570) {
+          this.initializeUi(true);
         }
         if (!th.field_b) {
-          th.field_b = this.d(true);
+          th.field_b = this.pollRequiredData(true);
         }
         stackIn_15_0 = (ResourceRequest.field_y) && (jc.field_H) && (th.field_b);
         return stackIn_15_0;
     }
 
-    private final boolean b(byte param0) {
+    private final boolean pollRequiredFonts(byte obfuscationGuard) {
         int var2;
         int var3;
         int var4;
@@ -114,7 +114,7 @@ final class ij implements wb {
         }
         var2Lifetime1 = 1;
         var3 = 0;
-        if (param0 != 127) {
+        if (obfuscationGuard != 127) {
           return true;
         }
         while (var3 < 2) {
@@ -126,7 +126,7 @@ final class ij implements wb {
                 hh.field_b[var3] = OptionsScreen.field_y[var3].field_m[0];
               }
               jj.field_d = jj.field_d | ln.a(na.field_L[var3], 0, true, hh.field_b[var3]);
-              if (!pg.c(param0 ^ 27)) {
+              if (!DelayedPacket.c(obfuscationGuard ^ 27)) {
                 hh.field_b[var3] = 0;
               } else {
                 hh.field_b[var3] = 0;
@@ -141,9 +141,9 @@ final class ij implements wb {
         return var2Lifetime1 != 0;
     }
 
-    public final void b(boolean param0) {
+    public final void prepareUiAssets(boolean obfuscationGuard) {
         if (null != GameplayAudioEvent.field_k) {
-          og.a(!param0 ? true : false, GameplayAudioEvent.field_k);
+          og.a(!obfuscationGuard ? true : false, GameplayAudioEvent.field_k);
           GameplayAudioEvent.field_k = null;
           hc.b(2);
         }
@@ -151,7 +151,7 @@ final class ij implements wb {
         ki.field_f = bq.a(-6, 0, false, 5, true);
         ScorePopup.field_l = aj.a(6, true);
         qb.field_r = aj.a(7, true);
-        AchievementIcon.field_s = aj.a(8, param0);
+        AchievementIcon.field_s = aj.a(8, obfuscationGuard);
         LevelList.field_o = aj.a(9, true);
         kh.field_i = aj.a(10, true);
         nl.field_a = aj.a(11, true);
@@ -172,17 +172,17 @@ final class ij implements wb {
         bh.field_tb.a(kh.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
         bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
-        bh.field_tb.a(wd.field_C, !param0 ? true : false, IntHistoryBuffer.field_k, qm.field_e);
+        bh.field_tb.a(wd.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
         bh.field_tb.a(uf.field_a, false, IntHistoryBuffer.field_k, qm.field_e);
     }
 
-    public final boolean a(byte param0) {
+    public final boolean pollUiBootstrap(byte obfuscationGuard) {
         int var2;
         int var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = 1;
-        var3 = be.field_c;
+        var3 = be.uiBootstrapStage;
         if (0 != var3) {
           if (var3 != 1) {
             if (var3 != 2) {
@@ -219,10 +219,10 @@ final class ij implements wb {
           SecondaryNodeQueue.a(LevelList.field_o, kh.field_i, (byte) -38, AchievementIcon.field_s, qb.field_r);
         }
         if (var2 != 0) {
-          be.field_c = be.field_c + 1;
+          be.uiBootstrapStage = be.uiBootstrapStage + 1;
         }
         hc.b(2);
-        if (param0 < -41) {
+        if (obfuscationGuard < -41) {
           return false;
         }
         field_a = (mh) null;

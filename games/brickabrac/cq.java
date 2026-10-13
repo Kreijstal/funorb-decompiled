@@ -53,7 +53,7 @@ final class cq extends IntrusiveNode {
         LevelSequence var3;
         if (param1 < -118) {
           if (null != ep.field_e) {
-            pg.a(false, ep.field_e);
+            DelayedPacket.a(false, ep.field_e);
           }
           if (bm.field_d != null) {
             bm.field_d.a((byte) -126, param0);
@@ -68,7 +68,7 @@ final class cq extends IntrusiveNode {
         var3 = (LevelSequence) null;
         cq.a(103, true, 42, (LevelSequence) null);
         if (null != ep.field_e) {
-          pg.a(false, ep.field_e);
+          DelayedPacket.a(false, ep.field_e);
         }
         if (bm.field_d != null) {
           bm.field_d.a((byte) -126, param0);

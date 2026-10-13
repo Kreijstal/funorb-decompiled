@@ -43,7 +43,7 @@ final class ml {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = k.field_h;
+        BitPacketBuffer var2 = k.outgoingPackets;
         var2.writeCipheredOpcode(-13413, param0);
         var2.writeByte(-21, 1);
         if (param1 != -1) {

@@ -74,11 +74,11 @@ final class oo extends ki {
         }
         nl.field_d = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.field_m);
         field_x = pl.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.field_m);
-        ad.field_b = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
+        CappedUrlRequest.field_b = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
         rg.field_f = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
         th.field_i = jh.a(0, nl.field_d);
         ek.field_hb = jh.a(0, field_x);
-        up.field_w = jh.a(0, ad.field_b);
+        up.field_w = jh.a(0, CappedUrlRequest.field_b);
         u.field_c = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
         GameClock.field_a = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
         dc.field_c = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
@@ -146,7 +146,7 @@ final class oo extends ki {
             SoundPlayback.a(0, 26746, var6, param3, 1, rg.field_f);
             var6.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ua.a(nl.field_d, param4, 640, param2, field_x, 95, var6.sprite, param1, param3, 1, ad.field_b, 0);
+          ua.a(nl.field_d, param4, 640, param2, field_x, 95, var6.sprite, param1, param3, 1, CappedUrlRequest.field_b, 0);
           if (!param0) {
             field_t = (String) null;
             return;
@@ -188,7 +188,7 @@ final class oo extends ki {
           if (rg.field_f == null) {
             return false;
           }
-          if (ad.field_b == null) {
+          if (CappedUrlRequest.field_b == null) {
             return false;
           }
           if (u.field_c == null) {
@@ -208,7 +208,7 @@ final class oo extends ki {
         if (rg.field_f == null) {
           return false;
         }
-        if (ad.field_b == null) {
+        if (CappedUrlRequest.field_b == null) {
           return false;
         }
         if (u.field_c == null) {

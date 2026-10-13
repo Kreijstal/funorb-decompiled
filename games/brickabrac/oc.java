@@ -77,7 +77,7 @@ class oc extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        bj.field_T.a(true, ad.field_j, b.field_a, var5);
+        bj.field_T.a(true, CappedUrlRequest.field_j, b.field_a, var5);
     }
 
     final static void a(int param0, int param1, int param2, PlayerBoard param3, MultiplayerMatch param4, byte param5) {
@@ -875,13 +875,13 @@ class oc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          k.field_h.writeCipheredOpcode(-13413, param1);
-          k.field_h.position = k.field_h.position + 1;
-          var7_int = k.field_h.position;
-          k.field_h.writeLong(-23054, param2);
-          k.field_h.writeCp1252String(param5, param3 - 2);
-          k.field_h.writeByte(31, param0);
-          stackIn_2_0 = k.field_h;
+          k.outgoingPackets.writeCipheredOpcode(-13413, param1);
+          k.outgoingPackets.position = k.outgoingPackets.position + 1;
+          var7_int = k.outgoingPackets.position;
+          k.outgoingPackets.writeLong(-23054, param2);
+          k.outgoingPackets.writeCp1252String(param5, param3 - 2);
+          k.outgoingPackets.writeByte(31, param0);
+          stackIn_2_0 = k.outgoingPackets;
           stackIn_2_1 = -105;
           if (!param4) {
             stackIn_3_2 = 0;
@@ -889,7 +889,7 @@ class oc extends IntrusiveNode {
             stackIn_3_2 = 1;
           }
           ((BitPacketBuffer) (Object) stackIn_2_0).writeByte(stackIn_2_1, stackIn_3_2);
-          k.field_h.backfillByteLength((byte) 114, -var7_int + k.field_h.position);
+          k.outgoingPackets.backfillByteLength((byte) 114, -var7_int + k.outgoingPackets.position);
           if (param3 != 1) {
             field_k = (BufferedFile) null;
           }

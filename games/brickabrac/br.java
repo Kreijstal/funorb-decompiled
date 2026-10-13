@@ -30,7 +30,7 @@ final class br extends mh {
             var7.field_Qb = null;
           }
           MenuSelection.field_i = param2;
-          var4 = k.field_h;
+          var4 = k.outgoingPackets;
           var4.writeCipheredOpcode(-13413, param0);
           var4.writeByte(-29, 3);
           var4.writeByte(-127, 11);

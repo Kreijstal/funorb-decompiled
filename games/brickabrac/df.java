@@ -116,35 +116,35 @@ final class df {
         if (param1 == 103) {
           tq.field_f.position = 0;
           tq.field_f.writeByte(-112, 12);
-          tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
-          tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+          tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+          tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
           tq.field_f.writeByte(-104, param2);
           tq.field_f.writeByte(50, param3);
           tq.field_f.writeShort((byte) 124, param0);
           tq.field_f.applyRsa(Ball.field_F, to.field_g, param1 + 19672);
-          k.field_h.writeCipheredOpcode(param1 ^ -13316, 18);
-          fieldTemp$0 = k.field_h.position + 1;
-          k.field_h.position = k.field_h.position + 1;
+          k.outgoingPackets.writeCipheredOpcode(param1 ^ -13316, 18);
+          fieldTemp$0 = k.outgoingPackets.position + 1;
+          k.outgoingPackets.position = k.outgoingPackets.position + 1;
           var4 = fieldTemp$0;
-          k.field_h.writeBytes(tq.field_f.data, -1, 0, tq.field_f.position);
-          k.field_h.backfillByteLength((byte) 125, k.field_h.position - var4);
+          k.outgoingPackets.writeBytes(tq.field_f.data, -1, 0, tq.field_f.position);
+          k.outgoingPackets.backfillByteLength((byte) 125, k.outgoingPackets.position - var4);
           return;
         }
         field_c = (String) null;
         tq.field_f.position = 0;
         tq.field_f.writeByte(-112, 12);
-        tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
-        tq.field_f.writeInt(ji.field_e.nextInt(), (byte) -79);
+        tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+        tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
         tq.field_f.writeByte(-104, param2);
         tq.field_f.writeByte(50, param3);
         tq.field_f.writeShort((byte) 124, param0);
         tq.field_f.applyRsa(Ball.field_F, to.field_g, param1 + 19672);
-        k.field_h.writeCipheredOpcode(param1 ^ -13316, 18);
-        int fieldTemp$1 = k.field_h.position + 1;
-        k.field_h.position = k.field_h.position + 1;
+        k.outgoingPackets.writeCipheredOpcode(param1 ^ -13316, 18);
+        int fieldTemp$1 = k.outgoingPackets.position + 1;
+        k.outgoingPackets.position = k.outgoingPackets.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        k.field_h.writeBytes(tq.field_f.data, -1, 0, tq.field_f.position);
-        k.field_h.backfillByteLength((byte) 125, k.field_h.position - var4Lifetime1);
+        k.outgoingPackets.writeBytes(tq.field_f.data, -1, 0, tq.field_f.position);
+        k.outgoingPackets.backfillByteLength((byte) 125, k.outgoingPackets.position - var4Lifetime1);
     }
 
     static {

@@ -182,13 +182,13 @@ final class so {
           pe.field_k = kf.a("button_depressed", "basic", param0, -104);
           IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
           LevelCompleteScreen.field_F = pl.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
-          pg.field_p = pl.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
+          DelayedPacket.field_p = pl.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
           pl.loadRgbSpriteByName("basic", "locked", (byte) -45, param1);
           nj.field_z = new RgbSprite(32, 32);
           nj.field_z.bindRasterTarget();
-          pg.field_p.c(0, 0, 32, 32);
+          DelayedPacket.field_p.c(0, 0, 32, 32);
           kc.field_q.a((byte) 91);
-          pg.field_p = null;
+          DelayedPacket.field_p = null;
           var19 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           var19.bindRasterTarget();
           LevelCompleteScreen.field_F.e(0, 0);
@@ -325,7 +325,7 @@ final class so {
           }
           lk.field_n = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < lk.field_n.length; var10_intLifetime13++) {
-            lk.field_n[var10_intLifetime13] = pg.a(tf.field_g[var10_intLifetime13], 20, pn.a(param3, -13351));
+            lk.field_n[var10_intLifetime13] = DelayedPacket.a(tf.field_g[var10_intLifetime13], 20, pn.a(param3, -13351));
           }
           rk.field_Sb = ap.field_a.copy();
           rk.field_Sb.rotateCounterclockwise();
@@ -358,7 +358,7 @@ final class so {
           }
           cm.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {
-            cm.field_r[var11Lifetime2] = pg.a(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
+            cm.field_r[var11Lifetime2] = DelayedPacket.a(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
           }
           ik.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {

@@ -42,7 +42,7 @@ class mh extends ba {
     int field_L;
     static int[] field_F;
     boolean field_nb;
-    static int field_gb;
+    static int previousPacketOpcode;
     RgbSprite[] field_Ab;
     RgbSprite field_wb;
     boolean field_kb;
@@ -546,7 +546,7 @@ class mh extends ba {
           if (param0) {
             return false;
           }
-          field_gb = -56;
+          previousPacketOpcode = -56;
           return false;
         }
         return true;
@@ -821,7 +821,7 @@ class mh extends ba {
     static {
         field_H = new MenuSelection(1);
         field_Z = "Game";
-        field_gb = -1;
+        previousPacketOpcode = -1;
         field_mb = "Log in / Create account";
         field_F = new int[9000];
         field_ob = new PcmSound[8];

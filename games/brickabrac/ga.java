@@ -4,7 +4,7 @@
 final class ga extends IntrusiveNode {
     static RgbSprite[] field_k;
     static int field_i;
-    static int field_j;
+    static int incomingPacketLength;
     static boolean[] field_l;
 
     public ga() {

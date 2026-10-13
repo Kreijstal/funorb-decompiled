@@ -10,7 +10,7 @@ final class vg {
         if (param0 != 3) {
           return true;
         }
-        if (eq.field_g == null) {
+        if (eq.gameTransport == null) {
           return false;
         }
         if (!rf.field_b.c(-26774)) {
@@ -20,7 +20,7 @@ final class vg {
     }
 
     final static void a(int param0, boolean param1, int param2) {
-        BitPacketBuffer var3 = k.field_h;
+        BitPacketBuffer var3 = k.outgoingPackets;
         var3.writeCipheredOpcode(-13413, param2);
         var3.writeByte(-29, 3);
         var3.writeByte(-127, 9);

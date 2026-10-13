@@ -51,7 +51,7 @@ final class f {
           if (param0 != 7) {
             f.a(-30);
           }
-          var27 = jl.field_e;
+          var27 = jl.incomingPackets;
           var2 = var27.readUnsignedByte(255);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(65280);

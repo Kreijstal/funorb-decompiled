@@ -144,7 +144,7 @@ abstract class MatchResultScreen extends MenuScreen {
           break;
         }
         this.a(0);
-        pg.d(0);
+        DelayedPacket.d(0);
         return;
     }
 

@@ -69,7 +69,7 @@ final class ea {
 
     final static void a(int param0, int param1) {
         int var4 = 0;
-        BitPacketBuffer var2 = k.field_h;
+        BitPacketBuffer var2 = k.outgoingPackets;
         int var4Lifetime1;
         var2.writeCipheredOpcode(-13413, param1);
         var2.position = var2.position + 1;

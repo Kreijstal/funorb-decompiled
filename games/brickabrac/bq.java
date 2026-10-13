@@ -31,7 +31,7 @@ final class bq {
         if (param1 != 28472) {
           return (MenuScreen) null;
         }
-        return pg.menuScreens[param0];
+        return DelayedPacket.menuScreens[param0];
     }
 
     final static void a(boolean param0, int param1, byte param2) {

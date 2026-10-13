@@ -131,7 +131,7 @@ final class rk extends mh {
               stackIn_17_3 = null;
               stackIn_17_6 = ua.field_a;
             }
-            var4 = ((PlatformServices) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(PlatformServices.javaVendor).append("&v2=").append(PlatformServices.javaVersion).append("&e=").append(var10).toString()));
+            var4 = ((PlatformServices) (Object) stackIn_16_0).openUrl((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(PlatformServices.javaVendor).append("&v2=").append(PlatformServices.javaVersion).append("&e=").append(var10).toString()));
             while (var4.status == 0) {
               wj.sleepMillis(-125, 1L);
             }

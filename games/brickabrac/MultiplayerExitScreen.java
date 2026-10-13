@@ -20,7 +20,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     }
 
     final static void a(int param0, cq param1, int param2) {
-        BitPacketBuffer var3 = k.field_h;
+        BitPacketBuffer var3 = k.outgoingPackets;
         if (param0 != -21167) {
           return;
         }
@@ -61,7 +61,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = k.field_h;
+          var5 = k.outgoingPackets;
           var3 = var5;
           var5.writeCipheredOpcode(-13413, param0);
           var5.position = var5.position + 1;

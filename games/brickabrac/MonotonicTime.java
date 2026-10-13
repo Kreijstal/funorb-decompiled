@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MonotonicTime {
-    static int field_d;
+    static int packetDelayMillis;
     static int[] field_b;
     static String field_f;
     static String field_a;
@@ -31,7 +31,7 @@ final class MonotonicTime {
     }
 
     static {
-        field_d = 0;
+        packetDelayMillis = 0;
         field_b = new int[29];
         field_f = "Play free version";
         field_e = 50;

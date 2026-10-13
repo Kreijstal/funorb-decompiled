@@ -2,22 +2,22 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class GameConnectionShell extends AppletGameShell {
-    private int field_o;
+    private int gameCrc;
     static RgbSprite[][] field_r;
-    String field_x;
+    String host;
     static RgbSprite[] field_D;
-    private int field_u;
-    private int field_C;
-    static int field_A;
-    private long field_w;
+    private int languageId;
+    private int affiliateId;
+    static int clientStage;
+    private long instanceId;
     static String field_z;
-    private boolean field_y;
-    private boolean field_s;
-    private boolean field_q;
-    private int field_v;
+    private boolean reconnectRequested;
+    private boolean jagexHost;
+    private boolean memberAccount;
+    private int gamePortOne;
     static boolean field_t;
-    private int field_B;
-    private int field_p;
+    private int serverNumber;
+    private int gamePortTwo;
 
     private final void f(boolean param0) {
         String var2 = go.a((byte) 120);
@@ -27,36 +27,36 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
     }
 
-    private final void m(int param0) {
-        ch.field_g[6] = -2;
-        if (param0 <= 116) {
+    private final void initializePacketLengths(int obfuscationGuard) {
+        ch.incomingPacketLengths[6] = -2;
+        if (obfuscationGuard <= 116) {
           return;
         }
-        ch.field_g[1] = 16;
-        ch.field_g[18] = 1;
-        ch.field_g[11] = -1;
-        ch.field_g[9] = -1;
-        ch.field_g[2] = -2;
-        ch.field_g[5] = -1;
-        ch.field_g[10] = -1;
-        ch.field_g[7] = -1;
-        ch.field_g[12] = -1;
-        ch.field_g[13] = -1;
-        ch.field_g[17] = -1;
-        ch.field_g[8] = -2;
-        ch.field_g[4] = -1;
-        ch.field_g[3] = -1;
-        ch.field_g[16] = -1;
+        ch.incomingPacketLengths[1] = 16;
+        ch.incomingPacketLengths[18] = 1;
+        ch.incomingPacketLengths[11] = -1;
+        ch.incomingPacketLengths[9] = -1;
+        ch.incomingPacketLengths[2] = -2;
+        ch.incomingPacketLengths[5] = -1;
+        ch.incomingPacketLengths[10] = -1;
+        ch.incomingPacketLengths[7] = -1;
+        ch.incomingPacketLengths[12] = -1;
+        ch.incomingPacketLengths[13] = -1;
+        ch.incomingPacketLengths[17] = -1;
+        ch.incomingPacketLengths[8] = -2;
+        ch.incomingPacketLengths[4] = -1;
+        ch.incomingPacketLengths[3] = -1;
+        ch.incomingPacketLengths[16] = -1;
     }
 
-    final void a(String param0, int param1, int param2) {
+    final void initializeApplet(String gameName, int gameVersion, int obfuscationGuard) {
         try {
-          this.a(103, param0, param1, 640, 480);
-          if (param2 != 1686) {
+          this.loadAppletParameters(103, gameName, gameVersion, 640, 480);
+          if (obfuscationGuard != 1686) {
             field_D = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qg.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "qg.EA(" + (gameName != null ? "{...}" : "null") + ',' + gameVersion + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -65,10 +65,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        cd.field_e = this.field_u;
+        cd.field_e = this.languageId;
         hk.a(cd.field_e, (byte) 125);
-        GzipInflater.a(param7, this.field_x, this.field_q, this.field_B, 5000, 5000, cd.field_e, this.field_o, lp.field_ub, (byte) 123, param3, this.field_w, this.field_p, this.field_v);
-        cr.a(param7, cd.field_e, param0 + 3, this.field_v, lp.field_ub, this.field_x, this.field_p, this.field_o, this.field_B);
+        GzipInflater.a(param7, this.host, this.memberAccount, this.serverNumber, 5000, 5000, cd.field_e, this.gameCrc, lp.field_ub, (byte) 123, param3, this.instanceId, this.gamePortTwo, this.gamePortOne);
+        cr.a(param7, cd.field_e, param0 + 3, this.gamePortOne, lp.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
         BoundedFile.patchJavaKeyCodeMap(59);
         qa.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, CacheIoRequest.field_D);
@@ -80,7 +80,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (param0 != 39) {
           this.g(false);
         }
-        this.m(123);
+        this.initializePacketLengths(123);
         oc.c((byte) -35);
     }
 
@@ -219,7 +219,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (n.field_e) {
           return -1;
         }
-        int var2 = wp.a(LevelSelectScreen.d(true), true, true, this.field_s, this.field_C, MotionWaypoint.b(false));
+        int var2 = wp.a(LevelSelectScreen.d(true), true, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
         if (var2 == param0) {
           return -1;
         }
@@ -241,10 +241,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         return var2;
     }
 
-    final void l(int param0) {
-        uf.field_d[1] = true;
-        if (param0 != 12) {
-          this.field_C = 30;
+    final void enablePacketOne(int obfuscationGuard) {
+        uf.enabledCommonPackets[1] = true;
+        if (obfuscationGuard != 12) {
+          this.affiliateId = 30;
         }
     }
 
@@ -252,25 +252,25 @@ abstract class GameConnectionShell extends AppletGameShell {
         int var2 = this.n(-1);
         if (var2 == 0 ||
           var2 == 1) {
-          if (uf.field_d[1]) {
+          if (uf.enabledCommonPackets[1]) {
             ie.a(2, (byte) -46);
           }
-          if (uf.field_d[2]) {
+          if (uf.enabledCommonPackets[2]) {
             ff.a((byte) -61, 3);
           }
-          if (uf.field_d[3]) {
+          if (uf.enabledCommonPackets[3]) {
             TooltipSprite.a(4, 13330);
           }
-          if (uf.field_d[4]) {
+          if (uf.enabledCommonPackets[4]) {
             ui.a(5, (byte) 115);
           }
-          if (uf.field_d[5]) {
+          if (uf.enabledCommonPackets[5]) {
             hj.b(6, 0);
           }
-          if (uf.field_d[6]) {
+          if (uf.enabledCommonPackets[6]) {
             qn.a((byte) 119, 7);
           }
-          if (uf.field_d[8]) {
+          if (uf.enabledCommonPackets[8]) {
             we.a((byte) -46);
           }
         }
@@ -285,20 +285,20 @@ abstract class GameConnectionShell extends AppletGameShell {
         return this.a(param0, (byte) 46, true);
     }
 
-    final void j(int param0) {
-        if (param0 <= 28) {
-          this.m(-5);
+    final void enablePacketSix(int obfuscationGuard) {
+        if (obfuscationGuard <= 28) {
+          this.initializePacketLengths(-5);
         }
-        uf.field_d[6] = true;
+        uf.enabledCommonPackets[6] = true;
     }
 
-    final void c(byte param0) {
-        uf.field_d[12] = true;
-        uf.field_d[11] = true;
-        if (param0 != -19) {
+    final void enablePacketsElevenToThirteen(byte obfuscationGuard) {
+        uf.enabledCommonPackets[12] = true;
+        uf.enabledCommonPackets[11] = true;
+        if (obfuscationGuard != -19) {
           return;
         }
-        uf.field_d[13] = true;
+        uf.enabledCommonPackets[13] = true;
     }
 
     final static void a(int param0, int param1, byte param2) {
@@ -309,8 +309,8 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
     }
 
-    final void e(boolean param0) {
-        uf.field_d[5] = param0;
+    final void enablePacketFive(boolean enabled) {
+        uf.enabledCommonPackets[5] = enabled;
     }
 
     private final int a(boolean param0, byte param1, boolean param2) {
@@ -344,7 +344,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.field_C);
+            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.affiliateId);
             if (-1 != var5_intLifetime1) {
               vh.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, co.field_f);
               DirectByteStorage.field_e = null;
@@ -358,7 +358,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               pp.a((byte) 79);
             }
             if (!param2) {
-              var5_intLifetime2 = wp.a(LevelSelectScreen.d(true), false, true, this.field_s, this.field_C, MotionWaypoint.b(false));
+              var5_intLifetime2 = wp.a(LevelSelectScreen.d(true), false, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   tf.a(DirectByteStorage.field_e, (byte) -77, var5_intLifetime2);
@@ -393,7 +393,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             pf.a(uc.e((byte) -76), false);
           }
           if (param1 != 46) {
-            this.field_o = 120;
+            this.gameCrc = 120;
           }
           if (var4 == 8) {
             jc.a(uc.e((byte) -70), (byte) 97);
@@ -402,7 +402,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             NodeDeque.a(uc.e((byte) -108), (byte) -106);
           }
           if (var4 == 10) {
-            k.field_h.writeCipheredOpcode(-13413, 17);
+            k.outgoingPackets.writeCipheredOpcode(-13413, 17);
           }
           if (var4 == 11) {
             mi.a((byte) -123, uc.e((byte) -93));
@@ -412,11 +412,11 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           if (var4 == 13) {
             try {
-              if (null == po.field_e) {
-                po.field_e = new ad(lp.field_ub, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (null == po.countryListRequest) {
+                po.countryListRequest = new CappedUrlRequest(lp.field_ub, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (po.field_e.a(1)) {
-                var12 = po.field_e.a((byte) 100);
+              if (po.countryListRequest.poll(1)) {
+                var12 = po.countryListRequest.getResult((byte) 100);
                 if (var12 != null) {
                   var7 = df.decodeCp1252(var12.position, 97, var12.data, 0);
                   hi.a(85, var7);
@@ -424,14 +424,14 @@ abstract class GameConnectionShell extends AppletGameShell {
                   var9 = (String) null;
                   hi.a(85, (String) null);
                 }
-                po.field_e = null;
+                po.countryListRequest = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
               rk.a("S1", (Throwable) ((Object) var5), 28);
               hi.a(param1 ^ 123, (String) null);
-              po.field_e = null;
+              po.countryListRequest = null;
             }
           }
           if (var4 == 15) {
@@ -458,13 +458,13 @@ abstract class GameConnectionShell extends AppletGameShell {
         boolean stackIn_13_1 = false;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param0) {
-          this.field_B = -15;
+          this.serverNumber = -15;
         }
         if (kb.i(7457)) {
           stackIn_13_1 = (ua.field_d != null);
           discarded$1 = this.a(stackIn_13_1, (byte) 46, false);
         } else {
-          if (field_A >= 10) {
+          if (clientStage >= 10) {
             if (il.e((byte) -126)) {
               if (AchievementIcon.field_j == 0) {
                 discarded$2 = this.a(false, (byte) 46, false);
@@ -487,7 +487,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         field_z = null;
     }
 
-    final void h(boolean param0) {
+    final void dispatchCommonPacket(boolean obfuscationGuard) {
         boolean stackIn_22_1 = false;
         int stackIn_31_0 = 0;
         boolean stackIn_32_1 = false;
@@ -495,10 +495,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         gb var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = IntrusiveHashTable.field_a;
+        var2 = IntrusiveHashTable.currentPacketOpcode;
         if (var2 < 64 &&
-          uf.field_d[var2]) {
-          if (param0) {
+          uf.enabledCommonPackets[var2]) {
+          if (obfuscationGuard) {
             return;
           }
           if (0 == var2) {
@@ -526,7 +526,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                                 return;
                               }
                               if (var2 == 17) {
-                                this.a((byte) 120);
+                                this.handleBrowserPayload((byte) 120);
                                 return;
                               }
                               if (var2 == 18) {
@@ -543,10 +543,10 @@ abstract class GameConnectionShell extends AppletGameShell {
                             lj.a(var3, 79);
                           }
                         } else {
-                          um.a(ga.field_j, jl.field_e, (byte) 107, lp.field_ub);
+                          um.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, lp.field_ub);
                         }
                       } else {
-                        stackIn_22_1 = !(param0);
+                        stackIn_22_1 = !(obfuscationGuard);
                         this.f(stackIn_22_1);
                       }
                     } else {
@@ -569,53 +569,53 @@ abstract class GameConnectionShell extends AppletGameShell {
         hn.a((byte) 71);
     }
 
-    private final void a(int param0, String param1, int param2, int param3, int param4) {
+    private final void loadAppletParameters(int obfuscationGuard, String gameName, int gameVersion, int width, int height) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         Throwable decompiledCaughtException = null;
-        String var6 = null;
+        String hostLowercase = null;
         Exception var6_ref = null;
         RuntimeException var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
+        String serverParameter = null;
+        String languageParameter = null;
+        String affiliateParameter = null;
         String var10 = null;
         try {
           try {
             if (!this.e(-128)) {
               return;
             }
-            this.field_x = this.getCodeBase().getHost();
-            var6 = this.field_x.toLowerCase();
-            stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
-            this.field_s = stackIn_7_1;
-            this.field_v = Integer.parseInt(this.getParameter("gameport1"));
-            if (param0 < 86) {
-              field_A = -93;
+            this.host = this.getCodeBase().getHost();
+            hostLowercase = this.host.toLowerCase();
+            stackIn_7_1 = (hostLowercase.equals("jagex.com")) || (hostLowercase.endsWith(".jagex.com"));
+            this.jagexHost = stackIn_7_1;
+            this.gamePortOne = Integer.parseInt(this.getParameter("gameport1"));
+            if (obfuscationGuard < 86) {
+              clientStage = -93;
             }
-            this.field_p = Integer.parseInt(this.getParameter("gameport2"));
-            var7 = this.getParameter("servernum");
-            if (var7 != null) {
-              this.field_B = Integer.parseInt(var7);
+            this.gamePortTwo = Integer.parseInt(this.getParameter("gameport2"));
+            serverParameter = this.getParameter("servernum");
+            if (serverParameter != null) {
+              this.serverNumber = Integer.parseInt(serverParameter);
             }
-            this.field_o = Integer.parseInt(this.getParameter("gamecrc"));
-            this.field_w = Long.parseLong(this.getParameter("instanceid"));
-            this.field_q = this.getParameter("member").equals("yes");
-            var8 = this.getParameter("lang");
-            if (var8 != null) {
-              this.field_u = Integer.parseInt(var8);
+            this.gameCrc = Integer.parseInt(this.getParameter("gamecrc"));
+            this.instanceId = Long.parseLong(this.getParameter("instanceid"));
+            this.memberAccount = this.getParameter("member").equals("yes");
+            languageParameter = this.getParameter("lang");
+            if (languageParameter != null) {
+              this.languageId = Integer.parseInt(languageParameter);
             }
-            if (this.field_u >= 5) {
-              this.field_u = 0;
+            if (this.languageId >= 5) {
+              this.languageId = 0;
             }
-            var9 = this.getParameter("affid");
-            if (var9 != null) {
-              this.field_C = Integer.parseInt(var9);
+            affiliateParameter = this.getParameter("affid");
+            if (affiliateParameter != null) {
+              this.affiliateId = Integer.parseInt(affiliateParameter);
             }
             MatchResultScreen.field_u = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
-            this.a(32, 123, param4, param3, this.field_o, param1, param2);
+            this.a(32, 123, height, width, this.gameCrc, gameName, gameVersion);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
@@ -628,24 +628,24 @@ abstract class GameConnectionShell extends AppletGameShell {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_24_0 = var6_ref2;
-          stackIn_24_1 = new StringBuilder().append("qg.LA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_24_1 = new StringBuilder().append("qg.LA(").append(obfuscationGuard).append(',');
+          if (gameName == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(gameVersion).append(',').append(width).append(',').append(height).append(')').toString());
         }
     }
 
-    final void a(int param0, boolean param1) {
-        uf.field_d[16] = true;
-        uf.field_d[param0] = param1;
-        uf.field_d[7] = true;
-        uf.field_d[0] = true;
-        uf.field_d[3] = true;
-        uf.field_d[18] = true;
-        uf.field_d[17] = true;
+    final void configureCommonPackets(int opcode, boolean enabled) {
+        uf.enabledCommonPackets[16] = true;
+        uf.enabledCommonPackets[opcode] = enabled;
+        uf.enabledCommonPackets[7] = true;
+        uf.enabledCommonPackets[0] = true;
+        uf.enabledCommonPackets[3] = true;
+        uf.enabledCommonPackets[18] = true;
+        uf.enabledCommonPackets[17] = true;
     }
 
     final static RgbSprite[] a(RgbSprite[] param0, byte param1) {
@@ -689,7 +689,7 @@ abstract class GameConnectionShell extends AppletGameShell {
     GameConnectionShell() {
     }
 
-    final void b(boolean param0, int param1) {
+    final void updateConnection(boolean obfuscationGuard, int guardCode) {
         int stackIn_23_0 = 0;
         boolean stackIn_99_0 = false;
         boolean stackIn_102_1 = false;
@@ -707,7 +707,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             var4 = var6.getSize();
             jj.field_a.a(44, var4.width, var4.height);
           }
-          jj.field_a.c(param1 + 118);
+          jj.field_a.c(guardCode + 118);
         }
         wn.snapshotKeyboardInput((byte) -97);
         sg.snapshotMouseInput(70);
@@ -720,14 +720,14 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (ik.a(false)) {
           var3 = wn.a((byte) -98) * 1200;
-          if (this.field_y ||
+          if (this.reconnectRequested ||
             !(wi.c(1) <= var3) &&
             !(var3 >= so.a((byte) -35))) {
-            this.field_y = false;
+            this.reconnectRequested = false;
             hn.a((byte) 91);
             qb.g(120);
             tf.a(qa.field_s, (byte) -113, 2);
-            rj.b(param1 ^ -111);
+            rj.b(guardCode ^ -111);
             n.field_e = true;
             NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
           }
@@ -750,7 +750,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (tm.field_a != -1 &&
           tm.field_a != 0) {
-          if (10 <= field_A) {
+          if (10 <= clientStage) {
             if (10 <= AchievementIcon.field_j) {
               qb.g(114);
               if (tm.field_a == 3) {
@@ -807,11 +807,11 @@ abstract class GameConnectionShell extends AppletGameShell {
           !ui.a(false)) {
           LevelCompleteScreen.field_C = false;
         }
-        if (0 == field_A &&
-          o.d(param1 ^ -572695520)) {
-          field_A = 1;
+        if (0 == clientStage &&
+          o.d(guardCode ^ -572695520)) {
+          clientStage = 1;
         }
-        if (field_A == param1) {
+        if (clientStage == guardCode) {
           if (cd.field_e != 0) {
             wl.field_K = aj.a(PacketBuffer.field_j, true);
           }
@@ -819,10 +819,10 @@ abstract class GameConnectionShell extends AppletGameShell {
           vh.field_S = bq.a(-6, 1, true, ea.field_c, false);
           ja.field_c = bq.a(-6, 1, true, o.field_f, false);
           wn.field_c = vh.field_S;
-          field_A = 2;
+          clientStage = 2;
           gq.field_Rb = ma.field_P;
         }
-        if (2 == field_A) {
+        if (2 == clientStage) {
           if (null != wl.field_K &&
             wl.field_K.ensureIndex((byte) -127)) {
             if (!wl.field_K.hasGroupName(113, "")) {
@@ -831,27 +831,27 @@ abstract class GameConnectionShell extends AppletGameShell {
               if (wl.field_K.ensureGroupAvailableByName("", -28138)) {
                 nn.a(wl.field_K, 122);
                 wl.field_K = null;
-                hc.b(param1 ^ 3);
+                hc.b(guardCode ^ 3);
               }
             }
           }
           if (wl.field_K == null) {
-            field_A = 3;
+            clientStage = 3;
           }
         }
-        if (3 == field_A &&
+        if (3 == clientStage &&
           fk.a(vh.field_S, ma.field_P, ja.field_c, -111) &&
           rg.a(ja.field_c, (byte) 101)) {
           ui.a(384920353);
-          CacheIoWorker.a(param1 + 21677);
+          CacheIoWorker.a(guardCode + 21677);
           ci.field_t = false;
           ri.field_N = cm.field_t;
-          MultiplayerExitScreen.a(qb.field_u, ja.field_c, ma.field_P, vh.field_S, param1 ^ 23);
+          MultiplayerExitScreen.a(qb.field_u, ja.field_c, ma.field_P, vh.field_S, guardCode ^ 23);
           if (cb.field_k ||
             null != LevelDecoder.field_a) {
             stackIn_99_0 = !(cb.field_k);
             stackIn_102_1 = !(cb.field_k);
-            bf.a(stackIn_99_0, stackIn_102_1, param1 ^ -15948, LevelDecoder.field_a);
+            bf.a(stackIn_99_0, stackIn_102_1, guardCode ^ -15948, LevelDecoder.field_a);
           }
           if (MatchResultScreen.field_u) {
             NewAchievementsScreen.f(967);
@@ -866,31 +866,31 @@ abstract class GameConnectionShell extends AppletGameShell {
           ja.field_c = null;
           MenuScreen.a((java.applet.Applet) (this), -90);
           hc.b(2);
-          field_A = 10;
+          clientStage = 10;
         }
-        if (10 == field_A) {
+        if (10 == clientStage) {
           if (0 != cd.field_e) {
             GameplayAudioEvent.field_k = aj.a(LevelPackCard.field_i, true);
           }
-          field_A = 11;
+          clientStage = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (field_A == 11) {
+        if (clientStage == 11) {
           if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.ensureIndex((byte) -127) ||
             !GameplayAudioEvent.field_k.ensureAllGroupsAvailable(98))) {
             ai.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, d.field_C));
             decompiledFrameRemainder0 = false;
           }
           else {
-            field_A = 12;
+            clientStage = 12;
             lo.field_d = true;
           }
         }
-        if (field_A == 12 &&
+        if (clientStage == 12 &&
           !lo.field_d) {
-          field_A = 13;
+          clientStage = 13;
         }
-        if (field_A == 13) {
+        if (clientStage == 13) {
           var3Lifetime2 = 1;
           if (bh.field_tb != null) {
             stackIn_132_0 = (!bh.field_tb.d(-115)) ? 0 : 1;
@@ -898,40 +898,40 @@ abstract class GameConnectionShell extends AppletGameShell {
             ai.a((byte) 24, bh.field_tb.field_e, bh.field_tb.field_g);
           }
           if (var3Lifetime2 != 0) {
-            field_A = 20;
+            clientStage = 20;
           }
         }
-        if (!param0 &&
+        if (!obfuscationGuard &&
           tn.field_A) {
           t.a(false, CacheIoRequest.field_D);
           this.c(false);
           ap.a((byte) 117, CacheIoRequest.field_D);
         }
-        if (uf.field_d[8]) {
+        if (uf.enabledCommonPackets[8]) {
           fk.a(14114);
         }
     }
 
-    final void b(byte param0) {
-        if (param0 != -67) {
+    final void enablePacketFour(byte obfuscationGuard) {
+        if (obfuscationGuard != -67) {
           return;
         }
-        uf.field_d[4] = true;
+        uf.enabledCommonPackets[4] = true;
     }
 
-    final void i(int param0) {
-        uf.field_d[param0] = true;
+    final void enableCommonPacket(int opcode) {
+        uf.enabledCommonPackets[opcode] = true;
     }
 
-    private final void a(byte param0) {
-        int var2 = jl.field_e.readUnsignedByte(255);
+    private final void handleBrowserPayload(byte obfuscationGuard) {
+        int var2 = jl.incomingPackets.readUnsignedByte(255);
         int var3 = (1 & var2) != 0 ? 1 : 0;
-        int var4 = -1 + ga.field_j;
+        int var4 = -1 + ga.incomingPacketLength;
         byte[] var5 = new byte[var4];
-        if (param0 != 120) {
+        if (obfuscationGuard != 120) {
           return;
         }
-        jl.field_e.readCipheredBytes(false, 0, var4, var5);
+        jl.incomingPackets.readCipheredBytes(false, 0, var4, var5);
         fk.a((byte) 114, uc.e((byte) -73), MenuButton.a(var5, (byte) 70), var3 != 0);
     }
 

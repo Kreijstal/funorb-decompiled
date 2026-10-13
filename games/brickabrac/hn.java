@@ -48,9 +48,9 @@ final class hn {
     }
 
     final static void a(byte param0) {
-        if (eq.field_g != null) {
-          eq.field_g.close((byte) 113);
-          eq.field_g = null;
+        if (eq.gameTransport != null) {
+          eq.gameTransport.close((byte) 113);
+          eq.gameTransport = null;
         }
         if (param0 < 49) {
           field_b = (RgbSprite) null;

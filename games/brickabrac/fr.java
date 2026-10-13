@@ -73,7 +73,7 @@ final class fr {
           GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
           f.field_c = new hj(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
           rg.field_c = new mh(0L, (mh) null);
-          sj.field_d = new mh(0L, ad.field_l);
+          sj.field_d = new mh(0L, CappedUrlRequest.field_l);
           sj.field_d.field_S = 1;
           MouseWheelSource.field_c = new mh(0L, MainMenuScreen.field_t, n.field_a);
           GameplayScreen.field_u = new mh(0L, ik.field_a, ArchiveSource.field_c);
@@ -83,7 +83,7 @@ final class fr {
           rg.field_c.a(GameplayScreen.field_u, 0);
           rg.field_c.a(GameScreen.field_f, 0);
           rg.field_c.a(mo.field_R, 0);
-          GameScreen.field_f.field_Qb.field_Qb.a((byte) -102, ad.field_l);
+          GameScreen.field_f.field_Qb.field_Qb.a((byte) -102, CappedUrlRequest.field_l);
           var5 = GameScreen.field_f.field_Qb.field_Qb;
           var6 = var5;
           GameScreen.field_f.field_Qb.field_Qb.field_Q = 1;
@@ -91,7 +91,7 @@ final class fr {
             field_k = 109;
           }
           var6.field_S = 1;
-          f.field_c.field_Qb.field_Qb.a((byte) -115, ad.field_l);
+          f.field_c.field_Qb.field_Qb.a((byte) -115, CappedUrlRequest.field_l);
           var3 = f.field_c.field_Qb.field_Qb;
           f.field_c.field_Qb.field_Qb.field_Q = 1;
           var3.field_S = 1;

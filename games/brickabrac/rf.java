@@ -11,7 +11,7 @@ final class rf {
     static n field_b;
 
     final static void a(int param0, long param1, boolean param2) {
-        BitPacketBuffer var4 = k.field_h;
+        BitPacketBuffer var4 = k.outgoingPackets;
         var4.writeCipheredOpcode(-13413, param0);
         var4.position = var4.position + 1;
         int var5 = var4.position;

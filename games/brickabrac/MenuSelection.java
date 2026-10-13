@@ -259,7 +259,7 @@ final class MenuSelection {
           if (param0 != -71) {
             return;
           }
-          var9 = jl.field_e;
+          var9 = jl.incomingPackets;
           var2 = var9.readUnsignedByte(255);
           if (0 != var2) {
             if (var2 == 1) {

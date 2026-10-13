@@ -47,7 +47,7 @@ final class jb extends h {
     }
 
     final static void b(int param0, int param1, int param2) {
-        BitPacketBuffer var3 = k.field_h;
+        BitPacketBuffer var3 = k.outgoingPackets;
         var3.writeCipheredOpcode(-13413, param1);
         var3.writeByte(-115, 3);
         if (param2 == 11912) {

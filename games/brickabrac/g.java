@@ -24,12 +24,12 @@ final class g extends k {
     final static void e(byte param0) {
         if (param0 <= -77) {
           um.field_e = false;
-          qo.field_I = jl.field_e.readUnsignedByte(255) == 0 ? true : false;
+          qo.field_I = jl.incomingPackets.readUnsignedByte(255) == 0 ? true : false;
           return;
         }
         field_m = (String) null;
         um.field_e = false;
-        qo.field_I = jl.field_e.readUnsignedByte(255) == 0 ? true : false;
+        qo.field_I = jl.incomingPackets.readUnsignedByte(255) == 0 ? true : false;
     }
 
     private final boolean b(int param0, String param1) {
@@ -142,7 +142,7 @@ final class g extends k {
             return stackIn_23_0;
           }
           if (ll.a(var6, (byte) 125, var7)) {
-            stackIn_27_0 = ij.field_f;
+            stackIn_27_0 = GameUiController.field_f;
             return stackIn_27_0;
           }
           if (!ep.a(var6, (byte) 73, var7)) {

@@ -77,14 +77,14 @@ final class n {
           if (go.field_a != null) {
             try {
               go.field_a.seek(0, 0L);
-              go.field_a.write(jl.field_e.data, jl.field_e.position, 24, -1);
+              go.field_a.write(jl.incomingPackets.data, jl.incomingPackets.position, 24, -1);
             } catch (Exception exception) {
             }
           }
           if (param0 != -1) {
             field_a = (String) null;
           }
-          jl.field_e.position = jl.field_e.position + 24;
+          jl.incomingPackets.position = jl.incomingPackets.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -181,7 +181,7 @@ final class n {
             var6 = AppletGameShell.field_e;
             AppletGameShell.field_e.field_cb = 0;
             var6.field_Ib = 0;
-            ba.field_v.field_Mb = pg.field_n.toUpperCase();
+            ba.field_v.field_Mb = DelayedPacket.field_n.toUpperCase();
             var7 = (MultiplayerMatch.field_d.field_Ib + 2) / 2;
             AppletGameShell.field_e.a(40, -40 + MultiplayerMatch.field_d.field_cb, 0, var7 - 2, (byte) 64);
             dn.field_K.a(40, MultiplayerMatch.field_d.field_cb - 40, var7, MultiplayerMatch.field_d.field_Ib - var7, (byte) 64);
@@ -216,7 +216,7 @@ final class n {
             }
             dn.field_K.field_eb = true;
             if (fh.field_d) {
-              ij.field_e.field_eb = false;
+              GameUiController.field_e.field_eb = false;
               t.field_f.field_Mb = gh.field_a;
               if (var8 != 0) {
                 stackIn_61_0 = nj.field_F;
@@ -258,7 +258,7 @@ final class n {
               stackIn_31_0.field_Mb = rd.a(stackIn_32_1, new String[]{dn.field_K.field_Mb}, (byte) 103);
               dc.field_g = true;
               AppletGameShell.field_e.field_Mb = mp.field_Pb;
-              ij.field_e.field_eb = true;
+              GameUiController.field_e.field_eb = true;
               if (br.field_bc != null) {
                 if (null == qo.field_J) {
                   qo.field_J = new byte[cq.field_p];
@@ -317,7 +317,7 @@ final class n {
           ((mh) (Object) stackIn_83_0).a(stackIn_84_1, -15211);
           sb.field_c.field_d.i(0);
           if (nl.field_f != null) {
-            if (ij.field_e.field_L != 0) {
+            if (GameUiController.field_e.field_L != 0) {
               ef.a(-22809, param0);
             }
             if (dn.field_K.field_L != 0) {

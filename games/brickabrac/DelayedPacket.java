@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends IntrusiveNode {
+final class DelayedPacket extends IntrusiveNode {
     static RgbSprite field_p;
     static String field_i;
     static String field_q;
     static String field_n;
-    int field_r;
+    int opcode;
     static int field_m;
     static String field_o;
-    byte[] field_l;
-    long field_j;
+    byte[] data;
+    long deliverAfterMillis;
     static MenuScreen[] menuScreens;
 
     final static boolean c(int param0) {
@@ -43,7 +43,7 @@ final class pg extends IntrusiveNode {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param2 != -17912) {
-            pg.c(-48);
+            DelayedPacket.c(-48);
           }
           var6 = new RgbSprite(param1 * 2 + param0.width, 2 * param1 + param0.height);
           var6.bindRasterTarget();
@@ -92,13 +92,13 @@ final class pg extends IntrusiveNode {
         nh.a(642, 482, -40, -1, cd.field_h, -1);
     }
 
-    pg(long param0, int param1, byte[] param2) {
+    DelayedPacket(long deliverAfterMillis, int opcode, byte[] data) {
         try {
-          this.field_r = param1;
-          this.field_l = param2;
-          this.field_j = param0;
+          this.opcode = opcode;
+          this.data = data;
+          this.deliverAfterMillis = deliverAfterMillis;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pg.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pg.<init>(" + deliverAfterMillis + ',' + opcode + ',' + (data != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -115,16 +115,16 @@ final class pg extends IntrusiveNode {
           var3 = po.pointerY;
           if (param0) {
             String var9 = (String) null;
-            pg.a(false, (String) null);
+            DelayedPacket.a(false, (String) null);
           }
-          var4 = ad.field_l.field_O.countWrappedLines(param1, 500);
-          var5 = ad.field_l.field_O.measureWrappedWidth(param1, 500) + 6;
+          var4 = CappedUrlRequest.field_l.field_O.countWrappedLines(param1, 500);
+          var5 = CappedUrlRequest.field_l.field_O.measureWrappedWidth(param1, 500) + 6;
           var6 = 2 + np.field_a * var4;
           var7 = OptionsScreen.a(-1, var5, var2_int, 12);
           var8 = br.a(var6, var3, 20, -30);
           Rasterizer2D.drawRectangle(var7, var8, var5, var6, 0);
           Rasterizer2D.fillRectangle(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
-          ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.ascent + (1 + var8) + ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
+          CappedUrlRequest.field_l.field_O.a(param1, 3 + var7, -CappedUrlRequest.field_l.field_O.ascent + (1 + var8) + ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

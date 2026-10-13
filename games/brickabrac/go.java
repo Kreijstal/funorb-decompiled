@@ -22,7 +22,7 @@ final class go {
 
     final static String a(byte param0) {
         int var1 = -46 % ((53 - param0) / 63);
-        return jl.field_e.readCp1252String(-1);
+        return jl.incomingPackets.readCp1252String(-1);
     }
 
     final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4, boolean param5) {

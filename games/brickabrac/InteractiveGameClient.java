@@ -8,26 +8,26 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
 
     public abstract void updateGameLayer(boolean inputEnabled, byte obfuscationGuard);
 
-    private final void j(boolean param0) {
+    private final void dispatchIncomingPackets(boolean obfuscationGuard) {
         int var3;
         boolean stackIn_9_1 = false;
         boolean stackIn_11_0 = false;
         var3 = BrickABrac.field_J ? 1 : 0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!nl.a(ch.field_g, (byte) 64)))) {
-          stackIn_11_0 = this.handleGamePacket(jl.field_e, (byte) 47, IntrusiveHashTable.field_a);
+        while (!(decompiledNaturalLoopExit0 = (!nl.readNextGamePacket(ch.incomingPacketLengths, (byte) 64)))) {
+          stackIn_11_0 = this.handleGamePacket(jl.incomingPackets, (byte) 47, IntrusiveHashTable.currentPacketOpcode);
           if (var3 == 0) {
             if (stackIn_11_0) {
               continue;
             }
-            stackIn_9_1 = !(param0);
-            this.h(stackIn_9_1);
+            stackIn_9_1 = !(obfuscationGuard);
+            this.dispatchCommonPacket(stackIn_9_1);
             continue;
           }
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          stackIn_11_0 = param0;
+          stackIn_11_0 = obfuscationGuard;
         }
         if (!stackIn_11_0) {
           field_E = false;
@@ -115,26 +115,26 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
     protected InteractiveGameClient() {
     }
 
-    final void a(int param0, wb param1) {
+    final void registerUiLifecycle(int obfuscationGuard, GameUiLifecycle lifecycle) {
         try {
-          al.field_j = param1;
-          this.a(8, true);
-          this.l(param0 ^ 3156);
-          this.i(2);
-          this.e(true);
-          this.b((byte) -67);
-          if (param0 != 3160) {
+          al.uiLifecycle = lifecycle;
+          this.configureCommonPackets(8, true);
+          this.enablePacketOne(obfuscationGuard ^ 3156);
+          this.enableCommonPacket(2);
+          this.enablePacketFive(true);
+          this.enablePacketFour((byte) -67);
+          if (obfuscationGuard != 3160) {
             return;
           }
           try {
-            this.j(64);
-            this.c((byte) -19);
-            ch.field_g[9] = -1;
-            ch.field_g[10] = -1;
+            this.enablePacketSix(64);
+            this.enablePacketsElevenToThirteen((byte) -19);
+            ch.incomingPacketLengths[9] = -1;
+            ch.incomingPacketLengths[10] = -1;
             kp.field_d = new Vector();
             KeyboardInput.a((vc) (this), 0);
           } catch (RuntimeException runtimeException) {
-            throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sa.HB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+            throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sa.HB(" + obfuscationGuard + ',' + (lifecycle != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -410,12 +410,12 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           MotionWaypoint.c(4);
         }
         stackIn_7_1 = (ua.field_d != null);
-        this.b(stackIn_7_1, 1);
+        this.updateConnection(stackIn_7_1, 1);
         if (obfuscationGuard >= -34) {
           field_E = false;
         }
         if (lo.field_d) {
-          al.field_j.b(true);
+          al.uiLifecycle.prepareUiAssets(true);
           lo.field_d = false;
         }
         if (r.c((byte) -87)) {
@@ -425,12 +425,12 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        this.j(true);
+        this.dispatchIncomingPackets(true);
         if (!un.field_f) {
           MouseWheelSource.a(GameplayAudioEvent.mouseWheelDelta, (byte) 112);
-          decompiledFrameRemainder0 = !(!al.field_j.a((byte) -54));
+          decompiledFrameRemainder0 = !(!al.uiLifecycle.pollUiBootstrap((byte) -54));
           if (decompiledFrameRemainder0) {
-            al.field_j.a(false);
+            al.uiLifecycle.initializeUi(false);
             un.field_f = true;
             decompiledFrameRemainder0 = (var4 != 0);
           }
@@ -443,7 +443,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             decompiledSharedTail0 = (var4 != 0);
           }
           if ((decompiledSharedTail0) &&
-            (al.field_j.a(23570))) {
+            (al.uiLifecycle.pollUiReady(23570))) {
             um.field_t = true;
             this.p(1);
             mc.a((byte) 126);

@@ -11,43 +11,43 @@ final class vd {
     static int field_c;
     static ArchiveFetchClient field_f;
 
-    final static boolean a(int param0, int param1) {
+    final static boolean ensureGamePacketBytes(int obfuscationGuard, int length) {
         try {
-          int var2_int = 0;
+          int availableBytes = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (param0 != 20) {
+          if (obfuscationGuard != 20) {
             vd.a(-79);
           }
-          if (param1 <= jl.field_e.position) {
+          if (length <= jl.incomingPackets.position) {
             return true;
           }
-          if (null == eq.field_g) {
+          if (null == eq.gameTransport) {
             return false;
           }
           try {
-            var2_int = eq.field_g.available(10434);
-            if (0 >= var2_int) {
-              if (var2_int < 0) {
+            availableBytes = eq.gameTransport.available(10434);
+            if (0 >= availableBytes) {
+              if (availableBytes < 0) {
                 hn.a((byte) 123);
                 return false;
               }
-              if (MembershipBenefitsScreen.f(param0 - 6812) <= 30000L) {
+              if (MembershipBenefitsScreen.f(obfuscationGuard - 6812) <= 30000L) {
                 return false;
               }
               hn.a((byte) 123);
               return false;
             }
-            if (var2_int > param1 - jl.field_e.position) {
-              var2_int = -jl.field_e.position + param1;
+            if (availableBytes > length - jl.incomingPackets.position) {
+              availableBytes = -jl.incomingPackets.position + length;
             }
-            eq.field_g.readFully(param0 + 25806, jl.field_e.data, var2_int, jl.field_e.position);
-            oj.field_t = MonotonicTime.nowMillis(false);
-            jl.field_e.position = jl.field_e.position + var2_int;
-            if (param1 > jl.field_e.position) {
+            eq.gameTransport.readFully(obfuscationGuard + 25806, jl.incomingPackets.data, availableBytes, jl.incomingPackets.position);
+            oj.lastGameReadMillis = MonotonicTime.nowMillis(false);
+            jl.incomingPackets.position = jl.incomingPackets.position + availableBytes;
+            if (length > jl.incomingPackets.position) {
               return false;
             }
-            jl.field_e.position = 0;
+            jl.incomingPackets.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

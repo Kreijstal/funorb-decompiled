@@ -232,10 +232,10 @@ final class dn extends h {
         if (param0 != -23009) {
           field_J = (String) null;
         }
-        if (ad.field_e == null) {
-          ad.field_e = new um(og.field_Yb, 20, 0, 0, 0, 11579568, -1, 0, 0, og.field_Yb.ascent, -1, 2147483647, true);
+        if (CappedUrlRequest.field_e == null) {
+          CappedUrlRequest.field_e = new um(og.field_Yb, 20, 0, 0, 0, 11579568, -1, 0, 0, og.field_Yb.ascent, -1, 2147483647, true);
         }
-        return ad.field_e;
+        return CappedUrlRequest.field_e;
     }
 
     final void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
@@ -249,7 +249,7 @@ final class dn extends h {
 
     final static void b(int param0, int param1, int param2) {
         int var3 = -51 / ((-23 - param1) / 62);
-        BitPacketBuffer var4 = k.field_h;
+        BitPacketBuffer var4 = k.outgoingPackets;
         var4.writeCipheredOpcode(-13413, param2);
         var4.writeByte(-100, 3);
         var4.writeByte(-15, 10);

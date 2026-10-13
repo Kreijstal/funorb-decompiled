@@ -13,7 +13,7 @@ final class fl extends k {
         go.field_e = 0;
         th.field_h = false;
         b.field_a = -1;
-        ad.field_j = -1;
+        CappedUrlRequest.field_j = -1;
     }
 
     final static void e(int param0) {
