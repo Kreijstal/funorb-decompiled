@@ -237,20 +237,20 @@ class oc extends IntrusiveNode {
         if (!param3) {
           if (var5 == 0) {
             var6 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.heldButton;
+            ScrollPaneWithFooter.field_Pb = cb.heldButton;
             MusicVoice.a(this.d(15), 22546);
             return param3;
           }
           if (BackgroundScene.pressedButton == 0) {
             var6Lifetime6 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.heldButton;
+            ScrollPaneWithFooter.field_Pb = cb.heldButton;
             MusicVoice.a(this.d(15), 22546);
             return param3;
           }
           this.b(false);
           if (var7 == 0) {
             var6Lifetime7 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.heldButton;
+            ScrollPaneWithFooter.field_Pb = cb.heldButton;
             MusicVoice.a(this.d(15), 22546);
             return param3;
           }
@@ -266,13 +266,13 @@ class oc extends IntrusiveNode {
           }
           if (0 != cb.heldButton) {
             var6Lifetime8 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.heldButton;
+            ScrollPaneWithFooter.field_Pb = cb.heldButton;
             MusicVoice.a(this.d(15), 22546);
             return param3;
           }
-          if (hj.field_Pb == 0) {
+          if (ScrollPaneWithFooter.field_Pb == 0) {
             var6Lifetime9 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.heldButton;
+            ScrollPaneWithFooter.field_Pb = cb.heldButton;
             MusicVoice.a(this.d(15), 22546);
             return param3;
           }
@@ -285,7 +285,7 @@ class oc extends IntrusiveNode {
             gd.field_c = null;
           }
           var6Lifetime10 = -57 % ((56 - param2) / 43);
-          hj.field_Pb = cb.heldButton;
+          ScrollPaneWithFooter.field_Pb = cb.heldButton;
           MusicVoice.a(this.d(15), 22546);
           return param3;
         }
@@ -300,7 +300,7 @@ class oc extends IntrusiveNode {
                   }
                 }
                 if (0 == cb.heldButton &&
-                  hj.field_Pb != 0) {
+                  ScrollPaneWithFooter.field_Pb != 0) {
                   this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
                   var9 = gd.field_c;
                   if (var9 != null) {
@@ -313,20 +313,20 @@ class oc extends IntrusiveNode {
                   }
                 }
                 var6Lifetime1 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.heldButton;
+                ScrollPaneWithFooter.field_Pb = cb.heldButton;
                 MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
             }
             if (0 != cb.heldButton) {
               var6Lifetime1Lifetime1 = -57 % ((56 - param2) / 43);
-              hj.field_Pb = cb.heldButton;
+              ScrollPaneWithFooter.field_Pb = cb.heldButton;
               MusicVoice.a(this.d(15), 22546);
               return param3;
             }
-            if (hj.field_Pb == 0) {
+            if (ScrollPaneWithFooter.field_Pb == 0) {
               var6Lifetime1Lifetime2 = -57 % ((56 - param2) / 43);
-              hj.field_Pb = cb.heldButton;
+              ScrollPaneWithFooter.field_Pb = cb.heldButton;
               MusicVoice.a(this.d(15), 22546);
               return param3;
             }
@@ -339,7 +339,7 @@ class oc extends IntrusiveNode {
               gd.field_c = null;
             }
             var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
-            hj.field_Pb = cb.heldButton;
+            ScrollPaneWithFooter.field_Pb = cb.heldButton;
             MusicVoice.a(this.d(15), 22546);
             return param3;
           }
@@ -356,13 +356,13 @@ class oc extends IntrusiveNode {
             if (var5 == 0) {
               if (0 != cb.heldButton) {
                 var6Lifetime2 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.heldButton;
+                ScrollPaneWithFooter.field_Pb = cb.heldButton;
                 MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
-              if (hj.field_Pb == 0) {
+              if (ScrollPaneWithFooter.field_Pb == 0) {
                 var6Lifetime2Lifetime1 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.heldButton;
+                ScrollPaneWithFooter.field_Pb = cb.heldButton;
                 MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
@@ -370,21 +370,21 @@ class oc extends IntrusiveNode {
               var11 = gd.field_c;
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.heldButton;
+                ScrollPaneWithFooter.field_Pb = cb.heldButton;
                 MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
               if (!(var11.field_i instanceof em)) {
                 gd.field_c = null;
                 var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
-                hj.field_Pb = cb.heldButton;
+                ScrollPaneWithFooter.field_Pb = cb.heldButton;
                 MusicVoice.a(this.d(15), 22546);
                 return param3;
               }
               ((em) (var11.field_i)).a(-24178, var11, (jb) null);
               gd.field_c = null;
               var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
-              hj.field_Pb = cb.heldButton;
+              ScrollPaneWithFooter.field_Pb = cb.heldButton;
               MusicVoice.a(this.d(15), 22546);
               return param3;
             }
@@ -393,13 +393,13 @@ class oc extends IntrusiveNode {
         }
         if (0 != cb.heldButton) {
           var6Lifetime3 = -57 % ((56 - param2) / 43);
-          hj.field_Pb = cb.heldButton;
+          ScrollPaneWithFooter.field_Pb = cb.heldButton;
           MusicVoice.a(this.d(15), 22546);
           return param3;
         }
-        if (hj.field_Pb == 0) {
+        if (ScrollPaneWithFooter.field_Pb == 0) {
           var6Lifetime4 = -57 % ((56 - param2) / 43);
-          hj.field_Pb = cb.heldButton;
+          ScrollPaneWithFooter.field_Pb = cb.heldButton;
           MusicVoice.a(this.d(15), 22546);
           return param3;
         }
@@ -412,7 +412,7 @@ class oc extends IntrusiveNode {
           gd.field_c = null;
         }
         var6Lifetime5 = -57 % ((56 - param2) / 43);
-        hj.field_Pb = cb.heldButton;
+        ScrollPaneWithFooter.field_Pb = cb.heldButton;
         MusicVoice.a(this.d(15), 22546);
         return param3;
     }

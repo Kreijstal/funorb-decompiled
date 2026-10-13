@@ -40,7 +40,7 @@ final class aa {
         RuntimeException decompiledCaughtException = null;
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-109, param4.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, fj.ninjaBackgroundColors[param3], 0);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, VerticalScrollbar.ninjaBackgroundColors[param3], 0);
           stackIn_2_0 = -120;
           if (param5 == 1) {
             stackIn_3_1 = 13;

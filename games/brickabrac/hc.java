@@ -361,7 +361,7 @@ final class hc {
           OptionsScreen.field_u.selectedFrameSprites = dupTemp$3;
           OptionsScreen.field_u.capturedFrameSprites = dupTemp$3;
           var17 = cr.loadRgbSpritesByName("lobby", param3, "checkbox", 2);
-          BlankScreen.field_k = new ni(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
+          BlankScreen.field_k = new StateIconLabel(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
           kb.field_Vb = new UiComponent(0L, (UiComponent) null);
           kb.field_Vb.frameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion", (byte) -95, param3), -52);
           kb.field_Vb.activeFrameSprites = HighscorePackSelector.a(pl.loadRgbSpriteByName("lobby", "slideregion_mouseover", (byte) 104, param3), -71);
@@ -382,8 +382,8 @@ final class hc {
           MessageScreen.field_s.activeSprite = pl.loadRgbSpriteByName("lobby", "downbutton_mouseover", (byte) -109, param3);
           MessageScreen.field_s.capturedSprite = pl.loadRgbSpriteByName("lobby", "downbutton_mouseheld", (byte) 97, param3);
           MessageScreen.field_s.disabledSprite = pl.loadRgbSpriteByName("lobby", "downbutton_disabled", (byte) 104, param3);
-          ic.field_c = new fj(0L, ChocolateBackground.field_u, MessageScreen.field_s, kb.field_Vb, RankingsScreen.field_s);
-          rq.field_b = new hj(0L, (UiComponent) null, am.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
+          ic.field_c = new VerticalScrollbar(0L, ChocolateBackground.field_u, MessageScreen.field_s, kb.field_Vb, RankingsScreen.field_s);
+          rq.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, am.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

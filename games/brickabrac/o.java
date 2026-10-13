@@ -6,7 +6,7 @@ final class o {
     static om field_e;
     static int field_f;
     static String field_a;
-    static mm field_b;
+    static ScrollPane field_b;
     static th field_h;
     static int enabledFeatureMask;
     static dk field_c;
@@ -98,7 +98,7 @@ final class o {
           cp.h(param0 ^ 8147);
           return;
         }
-        field_b = (mm) null;
+        field_b = (ScrollPane) null;
         cp.h(param0 ^ 8147);
     }
 

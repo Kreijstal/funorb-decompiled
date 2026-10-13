@@ -131,7 +131,7 @@ final class RankingsScreen extends MenuScreen {
         int var6Lifetime1;
         this.sortIndex = 0;
         qo.field_N = 10 + ob.field_D.measureText("10. ");
-        var8 = new String[]{so.field_e, NodeDeque.field_c, be.field_e, hj.field_Vb, BufferedFile.field_p};
+        var8 = new String[]{so.field_e, NodeDeque.field_c, be.field_e, ScrollPaneWithFooter.field_Vb, BufferedFile.field_p};
         var9 = var8;
         var2 = nn.field_g.measureText(IntrusiveNode.a((CharSequence[]) ((Object) var9), true));
         var3 = 582;
@@ -235,7 +235,7 @@ final class RankingsScreen extends MenuScreen {
           this.advanceScreen(false, true, 9);
         }
         nn.field_g.drawRight(be.field_e, ResourceArchive.field_d[2], var2, var3, -1);
-        nn.field_g.drawRight(hj.field_Vb, ResourceArchive.field_d[3], var2, var3, -1);
+        nn.field_g.drawRight(ScrollPaneWithFooter.field_Vb, ResourceArchive.field_d[3], var2, var3, -1);
         nn.field_g.drawRight(BufferedFile.field_p, ResourceArchive.field_d[4], var2, var3, -1);
         var2Lifetime1 = 149 + (nn.field_g.capHeight + nn.field_g.descent) * 5 / 2;
         var4 = null;

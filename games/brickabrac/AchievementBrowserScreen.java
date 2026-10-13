@@ -411,7 +411,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var10 = 0;
           while (var9 != null) {
             this.visibleIcons.addLast(cn.acquireAchievementIcon(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, columnDivisor - 1), (byte) 3);
-            rk.achievementTransitionMask = rk.achievementTransitionMask | 1 << var10;
+            AlignedIconLabel.achievementTransitionMask = AlignedIconLabel.achievementTransitionMask | 1 << var10;
             var9 = (IntNode) (achievementIds.next((byte) 116));
             var10++;
             if (var10 != 8) {
@@ -489,7 +489,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
           if (this.selection.isActivated((byte) 113) &&
             this.isButtonEnabled((byte) 90, buttonIndex) &&
-            rk.achievementTransitionMask == 0) {
+            AlignedIconLabel.achievementTransitionMask == 0) {
             fieldTemp$0 = this.pageIndex + 1;
             this.pageIndex = this.pageIndex + 1;
             if (fieldTemp$0 >= this.pageCount) {
@@ -504,7 +504,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         } else {
           if (this.selection.isActivated((byte) 113) &&
             this.isButtonEnabled((byte) 86, buttonIndex)) {
-            if (rk.achievementTransitionMask != 0) {
+            if (AlignedIconLabel.achievementTransitionMask != 0) {
               return false;
             }
             fieldTemp$1 = this.pageIndex - 1;

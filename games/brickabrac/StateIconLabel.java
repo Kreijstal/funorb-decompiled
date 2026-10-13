@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ni extends UiComponent {
+final class StateIconLabel extends UiComponent {
     static String field_Pb;
-    private UiComponent field_Qb;
+    private UiComponent label;
     static oh field_Rb;
     static String field_Tb;
     static RgbSprite halloweenMidSprite;
     static boolean field_Sb;
     static TextFont field_Wb;
-    private UiComponent field_Vb;
+    private UiComponent icon;
 
-    final int a(byte param0, int param1) {
-        if (param0 != 11) {
+    final int measureIconLabelWidth(byte obfuscationGuard, int gap) {
+        if (obfuscationGuard != 11) {
           field_Tb = (String) null;
         }
-        return this.field_Vb.getContentWidth(param0 + 90) + (param1 + this.field_Qb.getContentWidth(91));
+        return this.icon.getContentWidth(obfuscationGuard + 90) + (gap + this.label.getContentWidth(91));
     }
 
     final static int hashArchiveName(int obfuscationGuard, CharSequence name) {
@@ -67,28 +67,28 @@ final class ni extends UiComponent {
         return stackIn_10_0;
     }
 
-    ni(long param0, RgbSprite param1, RgbSprite param2, int param3, UiComponent param4, String param5) {
-        this(param0, (UiComponent) null, param4, param5);
+    StateIconLabel(long id, RgbSprite selectedSprite, RgbSprite normalSprite, int iconVerticalAlignment, UiComponent labelStyle, String text) {
+        this(id, (UiComponent) null, labelStyle, text);
         try {
-          this.field_Vb.selectedSprite = param1;
-          this.field_Vb.verticalAlignment = param3;
-          this.field_Vb.sprite = param2;
+          this.icon.selectedSprite = selectedSprite;
+          this.icon.verticalAlignment = iconVerticalAlignment;
+          this.icon.sprite = normalSprite;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ni.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ni.<init>(" + id + ',' + (selectedSprite != null ? "{...}" : "null") + ',' + (normalSprite != null ? "{...}" : "null") + ',' + iconVerticalAlignment + ',' + (labelStyle != null ? "{...}" : "null") + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
-    private ni(long param0, UiComponent param1, UiComponent param2, String param3) {
-        super(param0, (UiComponent) null);
+    private StateIconLabel(long id, UiComponent iconStyle, UiComponent labelStyle, String text) {
+        super(id, (UiComponent) null);
         try {
-          this.field_Vb = new UiComponent(0L, param1);
-          this.field_Qb = new UiComponent(0L, param2);
-          this.field_Qb.text = param3;
-          this.addChild(this.field_Vb, 0);
-          this.addChild(this.field_Qb, 0);
+          this.icon = new UiComponent(0L, iconStyle);
+          this.label = new UiComponent(0L, labelStyle);
+          this.label.text = text;
+          this.addChild(this.icon, 0);
+          this.addChild(this.label, 0);
           this.markDescendantsToInheritVisualState(true);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ni.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ni.<init>(" + id + ',' + (iconStyle != null ? "{...}" : "null") + ',' + (labelStyle != null ? "{...}" : "null") + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -110,25 +110,25 @@ final class ni extends UiComponent {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
-        this.setBounds(param2, param3, param5, param0, (byte) 64);
-        this.b(-32434, param1);
-        if (!param4) {
-          ni.d(false);
+    final void setIconLabelBounds(int width, int gap, int height, int y, boolean obfuscationGuard, int x) {
+        this.setBounds(height, y, x, width, (byte) 64);
+        this.layoutIconLabel(-32434, gap);
+        if (!obfuscationGuard) {
+          StateIconLabel.d(false);
         }
     }
 
-    ni(long param0, ni param1, String param2) {
-        this(param0, param1.field_Vb, param1.field_Qb, param2);
+    StateIconLabel(long id, StateIconLabel styleTemplate, String text) {
+        this(id, styleTemplate.icon, styleTemplate.label, text);
     }
 
-    private final void b(int param0, int param1) {
-        this.field_Vb.setBounds(this.height, 0, 0, this.field_Vb.getContentWidth(118), (byte) 64);
-        int var3 = this.field_Vb.width + param1;
-        if (param0 != -32434) {
+    private final void layoutIconLabel(int obfuscationGuard, int gap) {
+        this.icon.setBounds(this.height, 0, 0, this.icon.getContentWidth(118), (byte) 64);
+        int labelX = this.icon.width + gap;
+        if (obfuscationGuard != -32434) {
           halloweenMidSprite = (RgbSprite) null;
         }
-        this.field_Qb.setBounds(this.height, 0, var3, this.width - var3, (byte) 64);
+        this.label.setBounds(this.height, 0, labelX, this.width - labelX, (byte) 64);
     }
 
     static {

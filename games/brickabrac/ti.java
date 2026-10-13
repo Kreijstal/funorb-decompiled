@@ -39,7 +39,7 @@ final class ti {
             var9 = param0;
             var10 = param1;
             for (var11 = param6; param2 > var11; var11++) {
-              var12 = fj.field_Pb[var11];
+              var12 = VerticalScrollbar.field_Pb[var11];
               if (param3) {
                 stackIn_25_0 = ec.field_N[var12];
               } else {
@@ -47,13 +47,13 @@ final class ti {
               }
               var13 = stackIn_25_0;
               if (var7_int < var13) {
-                fj.field_Pb[var11] = fj.field_Pb[var8];
+                VerticalScrollbar.field_Pb[var11] = VerticalScrollbar.field_Pb[var8];
                 if (var13 < var9) {
                   var9 = var13;
                 }
                 incrementValue$0 = var8;
                 var8++;
-                fj.field_Pb[incrementValue$0] = var12;
+                VerticalScrollbar.field_Pb[incrementValue$0] = var12;
               } else {
                 if (var10 < var13) {
                   var10 = var13;
@@ -66,11 +66,11 @@ final class ti {
           }
           for (var7_intLifetime1 = -1 + param2; var7_intLifetime1 > param6; var7_intLifetime1--) {
             for (var8Lifetime1 = param6; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
-              var9Lifetime1 = fj.field_Pb[var8Lifetime1];
-              var10Lifetime1 = fj.field_Pb[var8Lifetime1 + 1];
+              var9Lifetime1 = VerticalScrollbar.field_Pb[var8Lifetime1];
+              var10Lifetime1 = VerticalScrollbar.field_Pb[var8Lifetime1 + 1];
               if (nd.a(true, var10Lifetime1, var9Lifetime1, param3)) {
-                fj.field_Pb[var8Lifetime1] = var10Lifetime1;
-                fj.field_Pb[1 + var8Lifetime1] = var9Lifetime1;
+                VerticalScrollbar.field_Pb[var8Lifetime1] = var10Lifetime1;
+                VerticalScrollbar.field_Pb[1 + var8Lifetime1] = var9Lifetime1;
               }
             }
           }

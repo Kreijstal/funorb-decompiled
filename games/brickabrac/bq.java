@@ -82,7 +82,7 @@ final class bq {
           ik.field_j = true;
           ArchiveFetchClient.field_p = param1;
           if (0 == ArchiveFetchClient.field_p) {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, up.field_x);
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, up.field_x);
             var4 = 3 + var3_int;
             BrickABrac.field_K = new int[var4];
             qh.field_i = new String[var4];
@@ -101,7 +101,7 @@ final class bq {
             BrickABrac.field_K[-1 + var4] = 1;
             ri.field_I[1] = 5;
           } else if (1 == ArchiveFetchClient.field_p) {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, ni.field_Wb, up.field_x);
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, up.field_x);
             var4 = 2 + var3_int;
             BrickABrac.field_K = new int[var4];
             qh.field_i = new String[var4];
@@ -119,9 +119,9 @@ final class bq {
           } else if (2 != ArchiveFetchClient.field_p) {
             if (3 == ArchiveFetchClient.field_p) {
               if (lp.field_ub.privilegedMode) {
-                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, ff.field_a);
+                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, ff.field_a);
               } else {
-                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, ni.field_Wb, df.field_d);
+                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, df.field_d);
               }
               var4 = 2 + var3_int;
               qh.field_i = new String[var4];
@@ -138,7 +138,7 @@ final class bq {
               BrickABrac.field_K[-1 + var4] = 0;
               ri.field_I[0] = 5;
             } else if (ArchiveFetchClient.field_p == 4) {
-              var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, ChocolateBackground.field_s);
+              var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, ChocolateBackground.field_s);
               var4 = var3_int + 2;
               qh.field_i = new String[var4];
               BrickABrac.field_K = new int[var4];
@@ -157,7 +157,7 @@ final class bq {
               if (ArchiveFetchClient.field_p != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, DirectByteStorage.field_h);
+              var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, DirectByteStorage.field_h);
               var4 = 3 + var3_int;
               BrickABrac.field_K = new int[var4];
               qh.field_i = new String[var4];
@@ -177,7 +177,7 @@ final class bq {
               ri.field_I[1] = 5;
             }
           } else {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(CacheIoWorker.field_h[var5])) {
@@ -193,7 +193,7 @@ final class bq {
             ArrayOperations.copy(CacheIoWorker.field_h, 0, rg.field_k, 0, var4);
             h.field_F = new String[-1 - var4 + var3_int];
             ArrayOperations.copy(CacheIoWorker.field_h, 1 + var4, h.field_F, 0, -1 + (-var4 + var3_int));
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(CacheIoWorker.field_h[var5])) {

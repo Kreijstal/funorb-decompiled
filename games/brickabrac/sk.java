@@ -33,7 +33,7 @@ final class sk extends h {
         int[] var15 = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          fj.field_Ub = null;
+          VerticalScrollbar.field_Ub = null;
           ep.resultCounterTwo = 23;
           OptionsScreen.resultCounterOne = 57;
           DelegatingCanvas.field_c = 13;
@@ -116,7 +116,7 @@ final class sk extends h {
             constructionCentreSprites = (RgbSprite[]) null;
           }
           if (eb.field_l) {
-            fj.field_Ub = null;
+            VerticalScrollbar.field_Ub = null;
             lp.queuedAchievementSubmissions.clear((byte) -121);
             var9 = SecondaryHashTable.earnedAchievementMask;
             var7 = var9;

@@ -174,7 +174,7 @@ final class bd implements ub {
           if (!param3.f(param1 ^ 20732)) {
             return;
           }
-          hj.a(var7 + 2, var6_int + 2, 124, -4 + param3.field_s, -4 + param3.field_t);
+          ScrollPaneWithFooter.a(var7 + 2, var6_int + 2, 124, -4 + param3.field_s, -4 + param3.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

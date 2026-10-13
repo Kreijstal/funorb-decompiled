@@ -521,7 +521,7 @@ final class HuffmanCodec {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              rk.a("MGR1: " + param2, (Throwable) null, 77);
+              AlignedIconLabel.a("MGR1: " + param2, (Throwable) null, 77);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

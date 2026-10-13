@@ -143,19 +143,19 @@ final class vh extends d {
           ik.field_g = up.field_v;
           if (param0 != 255) {
             if (param0 < 100) {
-              ni.field_Rb = AchievementIcon.a(param0, -126, param2);
+              StateIconLabel.field_Rb = AchievementIcon.a(param0, -126, param2);
               return;
             }
             if (param0 > 105) {
-              ni.field_Rb = AchievementIcon.a(param0, -126, param2);
+              StateIconLabel.field_Rb = AchievementIcon.a(param0, -126, param2);
               return;
             }
-            ni.field_Rb = IntKeyIndex.a(-2079, param3);
+            StateIconLabel.field_Rb = IntKeyIndex.a(-2079, param3);
             return;
           }
           stackIn_4_0 = true;
           stackIn_5_1 = !(Paddle.field_x >= 13);
-          ni.field_Rb = cd.a(stackIn_4_0, stackIn_5_1);
+          StateIconLabel.field_Rb = cd.a(stackIn_4_0, stackIn_5_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

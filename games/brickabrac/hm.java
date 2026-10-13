@@ -124,7 +124,7 @@ final class hm {
             stackIn_6_0 = kp.field_b.measureText(param1);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ni.field_Wb.measureText(param1);
+          stackIn_4_0 = StateIconLabel.field_Wb.measureText(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

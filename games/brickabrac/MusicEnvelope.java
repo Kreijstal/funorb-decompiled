@@ -68,7 +68,7 @@ final class MusicEnvelope {
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
-        mm stackIn_3_0;
+        ScrollPane stackIn_3_0;
         int stackIn_3_1;
         int stackIn_3_2;
         int stackIn_3_3;
@@ -97,27 +97,27 @@ final class MusicEnvelope {
         nn var17 = null;
         var15 = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_3_0 = f.field_c.field_Qb;
+          stackIn_3_0 = f.field_c.scrollPane;
           stackIn_3_1 = 2;
           stackIn_3_2 = param2 * (np.field_a * 3 + 6);
           stackIn_3_3 = np.field_a + 2;
           stackIn_3_4 = 22676;
           stackIn_3_5 = param0;
-          stackIn_4_6 = (o.field_b == f.field_c.field_Qb);
-          var3_int = ((mm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
-          var4 = f.field_c.field_Xb.children;
+          stackIn_4_6 = (o.field_b == f.field_c.scrollPane);
+          var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
+          var4 = f.field_c.content.children;
           if (!param1) {
             return;
           }
           if (LevelMetadata.field_m != 2 &&
             LevelMetadata.field_m != 1) {
             f.field_c.enabled = false;
-            f.field_c.field_Qb.field_Qb.text = cm.field_t;
-            jh.a(param1, f.field_c.field_Xb);
+            f.field_c.scrollPane.viewport.text = cm.field_t;
+            jh.a(param1, f.field_c.content);
             return;
           }
           f.field_c.enabled = true;
-          f.field_c.field_Qb.field_Qb.text = null;
+          f.field_c.scrollPane.viewport.text = null;
           var5 = null;
           var6 = (mp) (var4.first(-57));
           while (var6 != null) {
@@ -130,7 +130,7 @@ final class MusicEnvelope {
               var6.markDescendantsToInheritVisualState(param1);
               var7 = 1;
             }
-            var6.width = f.field_c.field_Xb.width;
+            var6.width = f.field_c.content.width;
             var6.field_Xb.setBounds(np.field_a, 0, 0, var6.width, (byte) 64);
             var8 = 0;
             if (null != var6.field_Qb &&
@@ -160,7 +160,7 @@ final class MusicEnvelope {
               var6.remainingHeight = np.field_a - var6.height;
             }
             if (var7 != 0) {
-              f.field_c.field_Xb.placeBelow((UiComponent) (var5), 2, var6, 17290);
+              f.field_c.content.placeBelow((UiComponent) (var5), 2, var6, 17290);
             }
             if (null != var6.field_Yb &&
               var6.field_Yb.activeInside) {
@@ -172,7 +172,7 @@ final class MusicEnvelope {
               }
             }
             if (var6.pressedButton != 0) {
-              SpriteGeometry.a(-1, var6, f.field_c.field_Qb, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
+              SpriteGeometry.a(-1, var6, f.field_c.scrollPane, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
               var16 = bm.field_d;
               var13_ref_String = ng.field_e;
               var16.field_d.a(var13_ref_String, 7, (byte) 126);
@@ -184,14 +184,14 @@ final class MusicEnvelope {
             var5 = var6;
             var6 = (mp) (var4.next((byte) 116));
           }
-          if (f.field_c.field_Tb.pressedButton != 0) {
-            MusicCrossfadeStream.field_m = new gq(f.field_c.field_Tb.screenX, f.field_c.field_Tb.screenY, f.field_c.field_Tb.width, f.field_c.field_Tb.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          if (f.field_c.leftFooter.pressedButton != 0) {
+            MusicCrossfadeStream.field_m = new gq(f.field_c.leftFooter.screenX, f.field_c.leftFooter.screenY, f.field_c.leftFooter.width, f.field_c.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
             GameUiController.field_d = 2;
           }
-          if (0 == f.field_c.field_Wb.pressedButton) {
+          if (0 == f.field_c.rightFooter.pressedButton) {
             return;
           }
-          MusicCrossfadeStream.field_m = new gq(f.field_c.field_Wb.screenX, f.field_c.field_Wb.screenY, f.field_c.field_Wb.width, f.field_c.field_Wb.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          MusicCrossfadeStream.field_m = new gq(f.field_c.rightFooter.screenX, f.field_c.rightFooter.screenY, f.field_c.rightFooter.width, f.field_c.rightFooter.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
           GameUiController.field_d = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ final class MusicEnvelope {
             hn.a((byte) 110);
             return;
           }
-          rk.a("LR1: " + eq.c((byte) -96), (Throwable) null, 53);
+          AlignedIconLabel.a("LR1: " + eq.c((byte) -96), (Throwable) null, 53);
           hn.a((byte) 52);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

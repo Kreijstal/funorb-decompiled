@@ -127,7 +127,7 @@ final class MusicPatch extends IntrusiveNode {
                 if (TableDataRequest.field_m > 0) {
                   TableDataRequest.field_m = TableDataRequest.field_m - 1;
                 } else {
-                  if (ml.field_b < hj.field_Yb) {
+                  if (ml.field_b < ScrollPaneWithFooter.field_Yb) {
                     if (ml.field_b == 0) {
                       h.g((byte) -24);
                     }
@@ -142,7 +142,7 @@ final class MusicPatch extends IntrusiveNode {
                 if (0 < TableDataRequest.field_m) {
                   TableDataRequest.field_m = TableDataRequest.field_m - 1;
                 } else {
-                  if (hj.field_Yb > IntArrayRequest.field_j) {
+                  if (ScrollPaneWithFooter.field_Yb > IntArrayRequest.field_j) {
                     if (IntArrayRequest.field_j == 0) {
                       NodeDeque.a(true, -122);
                     }
@@ -154,7 +154,7 @@ final class MusicPatch extends IntrusiveNode {
           } else {
             if (ml.field_b <= 0) {
               if (0 >= IntArrayRequest.field_j) {
-                if (hj.field_Yb > TableDataRequest.field_m) {
+                if (ScrollPaneWithFooter.field_Yb > TableDataRequest.field_m) {
                   if (TableDataRequest.field_m == 0) {
                     NodeDeque.a(false, -64);
                   }

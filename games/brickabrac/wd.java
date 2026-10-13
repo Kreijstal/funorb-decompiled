@@ -195,7 +195,7 @@ final class wd extends DualLinkNode {
         RgbSprite var29Lifetime4;
         RgbSprite var29Lifetime5;
         RgbSprite var29Lifetime6;
-        SpriteGeometry.a(param1, param2, (mm) null, (int[]) null, (String) null, -1, (byte) -58, 0L, (String) null);
+        SpriteGeometry.a(param1, param2, (ScrollPane) null, (int[]) null, (String) null, -1, (byte) -58, 0L, (String) null);
         if (param1 == 0) {
           var9 = bm.field_d;
           var11 = ef.field_b[0];

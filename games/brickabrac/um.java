@@ -756,7 +756,7 @@ class um implements ub, qe {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        mm stackIn_3_0;
+        ScrollPane stackIn_3_0;
         int stackIn_3_1;
         int stackIn_3_2;
         int stackIn_3_3;
@@ -868,8 +868,8 @@ class um implements ub, qe {
           stackIn_3_4 = 22676;
           stackIn_3_5 = param2;
           stackIn_4_6 = (rl.field_e == o.field_b);
-          var7_int = ((mm) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
-          var8 = rl.field_e.field_Rb.children;
+          var7_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
+          var8 = rl.field_e.content.children;
           var9 = MonotonicTime.nowMillis(false);
           var12 = -30 / ((param6 + 26) / 55);
           var11 = null;
@@ -923,7 +923,7 @@ class um implements ub, qe {
                 var13.field_ec.addChild(var13.field_Bc, 0);
               }
               var13.field_lc = new UiComponent(0L, (UiComponent) null);
-              if ((1 << mm.field_Pb & var15) != 0) {
+              if ((1 << ScrollPane.field_Pb & var15) != 0) {
                 var13.field_ec.addChild(var13.field_lc, 0);
               }
               var46 = var13.field_sc;
@@ -1041,7 +1041,7 @@ class um implements ub, qe {
             var31 = var13.field_gc;
             var13.field_gc.height = 0;
             var31.width = 0;
-            var13.width = rl.field_e.field_Rb.width;
+            var13.width = rl.field_e.content.width;
             var32 = 0;
             var33 = var13.field_Fc;
             if (!var13.h(107)) {
@@ -1135,7 +1135,7 @@ class um implements ub, qe {
                 var13.field_Bc.setBounds(var13.field_ec.height, 0, var35_int, var53_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var53_ref.canvasWidth + kn.field_z);
               }
-              if ((var15Lifetime1 & 1 << mm.field_Pb) != 0) {
+              if ((var15Lifetime1 & 1 << ScrollPane.field_Pb) != 0) {
                 stackIn_87_0 = bq.field_c;
                 if (var13.field_ac) {
                   stackIn_88_1 = 1;
@@ -1228,7 +1228,7 @@ class um implements ub, qe {
               var13.remainingHeight = -var13.height + var32;
             }
             if (var14 != 0) {
-              rl.field_e.field_Rb.placeBelow((UiComponent) (var11), 2, var13, 17290);
+              rl.field_e.content.placeBelow((UiComponent) (var11), 2, var13, 17290);
             }
             for (var35_intLifetime2 = 0; cq.field_p > var35_intLifetime2; var35_intLifetime2++) {
               if (var13.field_Ec[var35_intLifetime2].activeInside) {

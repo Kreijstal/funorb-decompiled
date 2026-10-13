@@ -4,7 +4,7 @@
 final class ic {
     static long field_b;
     static ResourceArchive field_a;
-    static fj field_c;
+    static VerticalScrollbar field_c;
 
     final static void a(boolean param0, om param1) {
         om var2 = null;

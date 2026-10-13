@@ -265,7 +265,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             ui.a(5, (byte) 115);
           }
           if (uf.enabledCommonPackets[5]) {
-            hj.b(6, 0);
+            ScrollPaneWithFooter.b(6, 0);
           }
           if (uf.enabledCommonPackets[6]) {
             qn.a((byte) 119, 7);
@@ -429,7 +429,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              rk.a("S1", (Throwable) ((Object) var5), 28);
+              AlignedIconLabel.a("S1", (Throwable) ((Object) var5), 28);
               hi.a(param1 ^ 123, (String) null);
               po.countryListRequest = null;
             }
@@ -533,7 +533,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                                 g.e((byte) -114);
                                 return;
                               }
-                              rk.a("MGS1: " + eq.c((byte) -71), (Throwable) null, 119);
+                              AlignedIconLabel.a("MGS1: " + eq.c((byte) -71), (Throwable) null, 119);
                               hn.a((byte) 101);
                               return;
                             }
@@ -565,7 +565,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           return;
         }
-        rk.a("MGS2: " + eq.c((byte) -66), (Throwable) null, 89);
+        AlignedIconLabel.a("MGS2: " + eq.c((byte) -66), (Throwable) null, 89);
         hn.a((byte) 71);
     }
 
@@ -620,7 +620,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            rk.a((String) null, (Throwable) ((Object) var6_ref), 58);
+            AlignedIconLabel.a((String) null, (Throwable) ((Object) var6_ref), 58);
             this.a("crash", 4000);
           }
           return;
@@ -857,7 +857,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             NewAchievementsScreen.f(967);
           }
           if (null == sg.field_l) {
-            sg.field_l = ni.h(114);
+            sg.field_l = StateIconLabel.h(114);
             ri.field_M = ar.a((byte) 120);
           }
           BallPulseEffect.a(ja.field_c, sg.field_l, ri.field_M, 107);

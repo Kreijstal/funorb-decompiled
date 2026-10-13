@@ -250,7 +250,7 @@ final class ek extends bj implements en {
     }
 
     final static void l(int param0) {
-        ArchiveFetchClient.a(true, am.field_cc, fj.field_Qb, 2);
+        ArchiveFetchClient.a(true, am.field_cc, VerticalScrollbar.field_Qb, 2);
         ln.field_l = true;
         int var1 = -31 / ((-11 - param0) / 62);
     }

@@ -139,7 +139,7 @@ final class PowerUpWarning extends IntrusiveNode {
           }
           if (param0.field_f != 0 ||
             0 != param0.field_d) {
-            for (var2_int = 0; mm.field_Sb > var2_int; var2_int++) {
+            for (var2_int = 0; ScrollPane.field_Sb > var2_int; var2_int++) {
               var3 = UnderwaterBackground.field_s[var2_int];
               if (var3.field_c == 2 &&
                 var3.field_f == param0.field_f &&

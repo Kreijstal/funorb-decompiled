@@ -148,7 +148,7 @@ final class BallPulseEffect extends IntrusiveNode {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          rk.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
+          AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
           BoundedFile.field_m = null;
           gd.field_d = null;
           return new gb(param1);
@@ -233,7 +233,7 @@ final class BallPulseEffect extends IntrusiveNode {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          rk.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
+          AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
           BoundedFile.field_m = null;
           gd.field_d = null;
           return new gb(param1);

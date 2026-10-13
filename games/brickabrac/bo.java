@@ -36,7 +36,7 @@ class bo extends ff {
 
     final static void a(byte param0, String param1) {
         try {
-          fj.a(243, param1, 140, nn.field_g, -15531, 2);
+          VerticalScrollbar.a(243, param1, 140, nn.field_g, -15531, 2);
           if (param0 <= 93) {
             bo.b(99);
           }

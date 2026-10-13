@@ -65,7 +65,7 @@ final class pd extends PcmPlayer {
           this.field_y = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (ob.b((byte) -94, param0) != 1) {
-            this.b(fj.a(param0, (byte) -64));
+            this.b(VerticalScrollbar.a(param0, (byte) -64));
             return;
           }
           this.field_z = null;

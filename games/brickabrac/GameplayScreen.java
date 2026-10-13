@@ -589,11 +589,11 @@ final class GameplayScreen extends GameScreen {
         if (this.suppressResultSubmission) {
           return;
         }
-        if (null == fj.field_Ub &&
+        if (null == VerticalScrollbar.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
-          fj.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.field_r});
+          VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.field_r});
           if (!og.h(-26090)) {
-            bd.submitTableRow(3, (byte) 25, fj.field_Ub);
+            bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
           }
         }
     }
@@ -641,14 +641,14 @@ final class GameplayScreen extends GameScreen {
         }
         if (og.h(-26090)) {
           if (!ib.a(pl.pendingAchievementMask, -1) &&
-            fj.field_Ub == null) {
+            VerticalScrollbar.field_Ub == null) {
             ng.requestScreen(param0, 121, 0);
           } else {
             ng.requestScreen(param0, 68, 10);
           }
         } else {
           if (!ib.a(pl.pendingAchievementMask, -1)) {
-            if (fj.field_Ub != null) {
+            if (VerticalScrollbar.field_Ub != null) {
               ng.requestScreen(param0, 68, 5);
             } else {
               ng.requestScreen(param0, 100, 0);
@@ -674,7 +674,7 @@ final class GameplayScreen extends GameScreen {
         try {
           playerId = packet.readUnsignedByte(255);
           if (this.match.playerCount <= playerId) {
-            rk.a("K1: (" + playerId + "/" + packet.position + ") " + eq.c((byte) -110), (Throwable) null, obfuscationGuard + 125);
+            AlignedIconLabel.a("K1: (" + playerId + "/" + packet.position + ") " + eq.c((byte) -110), (Throwable) null, obfuscationGuard + 125);
             hn.a((byte) 89);
             return;
           }
@@ -1283,7 +1283,7 @@ final class GameplayScreen extends GameScreen {
                       expectedChecksum = inputBoard.computeBoardChecksum(obfuscationGuard, (StringBuilder) (var11)) ^ inputBoard.nextRandomInt(120);
                       if (inputBatch.maskedChecksum != expectedChecksum) {
                         hn.a((byte) 91);
-                        rk.a("T2 " + inputBatch.maskedChecksum + " " + expectedChecksum + " ", (Throwable) null, 54);
+                        AlignedIconLabel.a("T2 " + inputBatch.maskedChecksum + " " + expectedChecksum + " ", (Throwable) null, 54);
                         cf.checksumMismatchCount = cf.checksumMismatchCount + 1;
                       }
                     }

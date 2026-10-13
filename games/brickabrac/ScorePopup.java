@@ -61,7 +61,7 @@ final class ScorePopup extends IntrusiveNode {
         if (param2 <= 34) {
           ScorePopup.initializeMeshLighting(19);
         }
-        return hj.a(1, (byte) -110, param1, param3, param0);
+        return ScrollPaneWithFooter.a(1, (byte) -110, param1, param3, param0);
     }
 
     final static void a(int param0, MusicTrack param1, int param2, boolean param3, int param4) {

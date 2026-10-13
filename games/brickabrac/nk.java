@@ -36,8 +36,8 @@ final class nk {
         }
         if (sm.field_b == RasterSnapshot.field_q) {
           if (!og.h(-26090)) {
-            if (fj.field_Ub != null) {
-              bd.submitTableRow(3, (byte) 25, fj.field_Ub);
+            if (VerticalScrollbar.field_Ub != null) {
+              bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
             }
             DualLinkIterator.b((byte) 117);
             if (wi.field_g) {

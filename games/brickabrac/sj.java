@@ -32,10 +32,10 @@ final class sj {
         int var9Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         var4 = null;
-        AchievementIcon.field_q.field_Rb.children.clear((byte) -61);
+        AchievementIcon.field_q.content.children.clear((byte) -61);
         var5 = 0;
         var6 = 0;
-        for (var7 = -1 + mm.field_Sb; var7 >= 0; var7--) {
+        for (var7 = -1 + ScrollPane.field_Sb; var7 >= 0; var7--) {
           var8_ref_gb = UnderwaterBackground.field_s[var7];
           var9 = 0;
           if (!um.field_e &&
@@ -68,10 +68,10 @@ final class sj {
           }
         }
         var7Lifetime1 = 0;
-        for (var8 = 0; mm.field_Sb > var8; var8++) {
+        for (var8 = 0; ScrollPane.field_Sb > var8; var8++) {
           var9_ref_gb = UnderwaterBackground.field_s[var8];
           if (null != var9_ref_gb.field_b) {
-            AchievementIcon.field_q.field_Rb.addChild(var9_ref_gb.field_b, 0);
+            AchievementIcon.field_q.content.addChild(var9_ref_gb.field_b, 0);
             var9_ref_gb.field_b.setBounds(param1, var7Lifetime1, param0, var9_ref_gb.field_b.getContentWidth(87), (byte) 64);
             if (var9_ref_gb.field_b.pressedButton != 0) {
               var4 = var9_ref_gb;
@@ -79,18 +79,18 @@ final class sj {
             var7Lifetime1 = var7Lifetime1 + param1;
           }
         }
-        var8Lifetime1 = AchievementIcon.field_q.field_Rb.remainingHeight + AchievementIcon.field_q.field_Rb.height - (-var6 + var7Lifetime1);
-        AchievementIcon.field_q.field_Rb.height = AchievementIcon.field_q.field_Rb.height - var8Lifetime1;
-        AchievementIcon.field_q.field_Rb.localY = AchievementIcon.field_q.field_Rb.localY + var8Lifetime1;
+        var8Lifetime1 = AchievementIcon.field_q.content.remainingHeight + AchievementIcon.field_q.content.height - (-var6 + var7Lifetime1);
+        AchievementIcon.field_q.content.height = AchievementIcon.field_q.content.height - var8Lifetime1;
+        AchievementIcon.field_q.content.localY = AchievementIcon.field_q.content.localY + var8Lifetime1;
         if (LevelSequence.field_d) {
-          AchievementIcon.field_q.field_Rb.height = var7Lifetime1;
+          AchievementIcon.field_q.content.height = var7Lifetime1;
         }
-        AchievementIcon.field_q.field_Rb.remainingHeight = var7Lifetime1 - AchievementIcon.field_q.field_Rb.height;
+        AchievementIcon.field_q.content.remainingHeight = var7Lifetime1 - AchievementIcon.field_q.content.height;
         if (LevelSequence.field_d) {
           LevelSequence.field_d = false;
-          AchievementIcon.field_q.field_Rb.localY = AchievementIcon.field_q.field_Qb.height - AchievementIcon.field_q.field_Rb.height;
+          AchievementIcon.field_q.content.localY = AchievementIcon.field_q.viewport.height - AchievementIcon.field_q.content.height;
           nd.field_b = true;
-          AchievementIcon.field_q.field_Rb.remainingY = 0;
+          AchievementIcon.field_q.content.remainingY = 0;
         }
         if (param2 != -13294) {
           field_d = (UiComponent) null;
@@ -102,12 +102,12 @@ final class sj {
             nd.field_b = true;
           }
         }
-        var9Lifetime1 = AchievementIcon.field_q.field_Qb.height - (AchievementIcon.field_q.field_Rb.height + AchievementIcon.field_q.field_Rb.remainingHeight);
+        var9Lifetime1 = AchievementIcon.field_q.viewport.height - (AchievementIcon.field_q.content.height + AchievementIcon.field_q.content.remainingHeight);
         if (nd.field_b) {
-          AchievementIcon.field_q.field_Rb.remainingY = var9Lifetime1 - AchievementIcon.field_q.field_Rb.localY;
+          AchievementIcon.field_q.content.remainingY = var9Lifetime1 - AchievementIcon.field_q.content.localY;
         }
-        AchievementIcon.field_q.a(true, param1, true, 2 * (param1 * param3));
-        stackIn_50_0 = (var9Lifetime1 == AchievementIcon.field_q.field_Rb.remainingY + AchievementIcon.field_q.field_Rb.localY);
+        AchievementIcon.field_q.updateScroll(true, param1, true, 2 * (param1 * param3));
+        stackIn_50_0 = (var9Lifetime1 == AchievementIcon.field_q.content.remainingY + AchievementIcon.field_q.content.localY);
         nd.field_b = stackIn_50_0;
         return (gb) (var4);
     }
@@ -413,7 +413,7 @@ final class sj {
                                     oc.field_p = ((PacketBuffer) ((Object) var1)).readLong(-32768);
                                     break regionExit1;
                                   default:
-                                    rk.a("L1: " + eq.c((byte) -121), (Throwable) null, 108);
+                                    AlignedIconLabel.a("L1: " + eq.c((byte) -121), (Throwable) null, 108);
                                     hn.a((byte) 84);
                                     break regionExit1;
                                 }

@@ -101,11 +101,11 @@ final class c {
             }
             if (hc.field_c &&
               o.field_e.field_jc <= o.field_e.field_cc) {
-              IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+              IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
               Ball.field_A.enabled = false;
-              jh.a(true, IsaacGenerator.field_b.field_Rb);
+              jh.a(true, IsaacGenerator.field_b.content);
             } else {
-              IsaacGenerator.field_b.field_Qb.text = null;
+              IsaacGenerator.field_b.viewport.text = null;
               Ball.field_A.enabled = true;
               MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
             }
@@ -124,11 +124,11 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
-                jh.a(true, IsaacGenerator.field_b.field_Rb);
+                jh.a(true, IsaacGenerator.field_b.content);
               } else {
-                IsaacGenerator.field_b.field_Qb.text = null;
+                IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
@@ -142,18 +142,18 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
-                IsaacGenerator.field_b.field_Qb.text = null;
+                IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
-                  IsaacGenerator.field_b.field_Qb.text = null;
+                  IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                  IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
-                  jh.a(true, IsaacGenerator.field_b.field_Rb);
+                  jh.a(true, IsaacGenerator.field_b.content);
                 }
               }
             }
@@ -189,11 +189,11 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
-                jh.a(true, IsaacGenerator.field_b.field_Rb);
+                jh.a(true, IsaacGenerator.field_b.content);
               } else {
-                IsaacGenerator.field_b.field_Qb.text = null;
+                IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
@@ -212,18 +212,18 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
-                IsaacGenerator.field_b.field_Qb.text = null;
+                IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
-                  IsaacGenerator.field_b.field_Qb.text = null;
+                  IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                  IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
-                  jh.a(true, IsaacGenerator.field_b.field_Rb);
+                  jh.a(true, IsaacGenerator.field_b.content);
                 }
               }
             }
@@ -256,11 +256,11 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
-                jh.a(true, IsaacGenerator.field_b.field_Rb);
+                jh.a(true, IsaacGenerator.field_b.content);
               } else {
-                IsaacGenerator.field_b.field_Qb.text = null;
+                IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
@@ -279,11 +279,11 @@ final class c {
                 }
                 if (hc.field_c &&
                   o.field_e.field_jc <= o.field_e.field_cc) {
-                  IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                  IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
-                  jh.a(true, IsaacGenerator.field_b.field_Rb);
+                  jh.a(true, IsaacGenerator.field_b.content);
                 } else {
-                  IsaacGenerator.field_b.field_Qb.text = null;
+                  IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 }
@@ -297,18 +297,18 @@ final class c {
                   nh.a(true, param3, param8, param2, param7);
                 }
                 if (!hc.field_c) {
-                  IsaacGenerator.field_b.field_Qb.text = null;
+                  IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   if (o.field_e.field_jc > o.field_e.field_cc) {
-                    IsaacGenerator.field_b.field_Qb.text = null;
+                    IsaacGenerator.field_b.viewport.text = null;
                     Ball.field_A.enabled = true;
                     MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                   } else {
-                    IsaacGenerator.field_b.field_Qb.text = GameCanvas.field_d;
+                    IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                     Ball.field_A.enabled = false;
-                    jh.a(true, IsaacGenerator.field_b.field_Rb);
+                    jh.a(true, IsaacGenerator.field_b.content);
                   }
                 }
               }

@@ -103,7 +103,7 @@ final class co {
 
     final static void a(int param0, boolean param1) {
         int var2 = (-640 + kp.field_a) / 2;
-        int var3 = hj.field_Yb * hj.field_Yb;
+        int var3 = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
         int var4 = -(param0 * param0) + var3;
         NinjaBackground.field_w.setBounds(Rasterizer2D.height - 120 - 4 - 90, 90, var2 - var4 * 199 / var3, 199, (byte) 64);
         MultiplayerMatch.field_d.setBounds(-4 + (Rasterizer2D.height - 120), 0, 438 * var4 / var3 + (202 + var2), 438, (byte) 64);

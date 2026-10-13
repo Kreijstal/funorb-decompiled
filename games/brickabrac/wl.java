@@ -161,7 +161,7 @@ final class wl extends d {
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {
-              var11 = fj.field_Pb[var9];
+              var11 = VerticalScrollbar.field_Pb[var9];
               var6[0][var10] = LevelCompleteScreen.field_B[var11];
               var7[0][4 * var10] = ec.field_N[var11];
               var7[0][var10 * 4 + 1] = RankingsScreen.field_r[var11];
@@ -179,7 +179,7 @@ final class wl extends d {
             var13 = 0;
             var10Lifetime1 = var13;
             while (var8 > var9Lifetime1) {
-              var11Lifetime1 = fj.field_Pb[var9Lifetime1 + var5];
+              var11Lifetime1 = VerticalScrollbar.field_Pb[var9Lifetime1 + var5];
               var6[1][var13] = LevelCompleteScreen.field_B[var11Lifetime1];
               var7[1][var13 * 4] = ec.field_N[var11Lifetime1];
               var7[1][1 + var13 * 4] = RankingsScreen.field_r[var11Lifetime1];

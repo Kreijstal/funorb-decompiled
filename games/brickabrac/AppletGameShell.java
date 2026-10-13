@@ -145,7 +145,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8 = decompiledCaughtException;
-              rk.a((String) null, var8, 52);
+              AlignedIconLabel.a((String) null, var8, 52);
               this.a("crash", 4000);
             }
             return;
@@ -440,7 +440,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              rk.a((String) null, (Throwable) (var1), 77);
+              AlignedIconLabel.a((String) null, (Throwable) (var1), 77);
               this.a("crash", 4000);
             }
             this.shutdown(true, -93);

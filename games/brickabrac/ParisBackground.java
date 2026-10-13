@@ -120,7 +120,7 @@ final class ParisBackground extends BackgroundScene {
           BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
           IntrusiveHashTable.field_i = jh.a(0, NinjaBackground.parisNearSprite);
           if (obfuscationGuard) {
-            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (fj) null, (UiComponent) null);
+            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
           }
           UnderwaterBackground.field_t = jh.a(0, th.parisMidSprite);
           MembershipBenefitsScreen.field_s = jh.a(0, bf.parisFarSprite);
@@ -198,7 +198,7 @@ final class ParisBackground extends BackgroundScene {
         }
     }
 
-    final static void a(UiComponent param0, TextFont param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, byte param8, boolean param9, fj param10, UiComponent param11) {
+    final static void a(UiComponent param0, TextFont param1, UiComponent param2, UiComponent param3, UiComponent param4, UiComponent param5, UiComponent param6, UiComponent param7, byte param8, boolean param9, VerticalScrollbar param10, UiComponent param11) {
         String stackIn_30_0 = null;
         int stackIn_34_0 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -249,7 +249,7 @@ final class ParisBackground extends BackgroundScene {
           r.field_C[3] = 16736511;
           r.field_C[0] = 16764000;
           if (param8 != 61) {
-            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 97, false, (fj) null, (UiComponent) null);
+            ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 97, false, (VerticalScrollbar) null, (UiComponent) null);
           }
           r.field_C[1] = 6356832;
           var12 = new RgbSprite(4, 4);
@@ -267,7 +267,7 @@ final class ParisBackground extends BackgroundScene {
           DualLinkDeque.field_d.addChild(sh.field_d, 0);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.children = new NodeDeque();
-          AchievementIcon.field_q = new mm(0L, var17, param5, param10);
+          AchievementIcon.field_q = new ScrollPane(0L, var17, param5, param10);
           sh.field_d.addChild(AchievementIcon.field_q, param8 - 61);
           BallPulseEffect.field_n = new UiComponent(0L, param3);
           sh.field_d.addChild(BallPulseEffect.field_n, 0);

@@ -29,7 +29,7 @@ final class n {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             BubbleDistortion.field_B[var2_int] = 0;
           }
-          for (var2_intLifetime1 = 0; mm.field_Sb > var2_intLifetime1; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; ScrollPane.field_Sb > var2_intLifetime1; var2_intLifetime1++) {
             if (param1.field_c == UnderwaterBackground.field_s[var2_intLifetime1].field_c) {
               dupTemp$3 = UnderwaterBackground.field_s[var2_intLifetime1].a(true);
               BubbleDistortion.field_B[dupTemp$3] = BubbleDistortion.field_B[dupTemp$3] + 1;
@@ -38,7 +38,7 @@ final class n {
           dupTemp$0 = param1.a(true);
           BubbleDistortion.field_B[dupTemp$0] = BubbleDistortion.field_B[dupTemp$0] + 1;
           var2_intLifetime2 = param0;
-          for (var3 = 0; mm.field_Sb > var3; var3++) {
+          for (var3 = 0; ScrollPane.field_Sb > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_c == UnderwaterBackground.field_s[var3].field_c) {
               var4 = UnderwaterBackground.field_s[var3].a(true);
@@ -53,9 +53,9 @@ final class n {
               UnderwaterBackground.field_s[incrementValue$2] = UnderwaterBackground.field_s[var3];
             }
           }
-          mm.field_Sb = var2_intLifetime2;
-          fieldTemp$1 = mm.field_Sb;
-          mm.field_Sb = mm.field_Sb + 1;
+          ScrollPane.field_Sb = var2_intLifetime2;
+          fieldTemp$1 = ScrollPane.field_Sb;
+          ScrollPane.field_Sb = ScrollPane.field_Sb + 1;
           UnderwaterBackground.field_s[fieldTemp$1] = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

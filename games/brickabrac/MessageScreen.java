@@ -32,7 +32,7 @@ final class MessageScreen extends MenuScreen {
         int var7Lifetime2;
         if (param3 == -19824) {
           cf.field_c[wi.field_m] = param2;
-          fj.field_Pb[wi.field_m] = wi.field_m;
+          VerticalScrollbar.field_Pb[wi.field_m] = wi.field_m;
           ec.field_N[wi.field_m] = param0;
           if (param0 <= BoundedFile.field_l) {
             if (IntArrayRequest.field_u > param0) {
@@ -85,7 +85,7 @@ final class MessageScreen extends MenuScreen {
         var8 = (StringBuilder) null;
         MessageScreen.a('￰', (StringBuilder) null, -124, false);
         cf.field_c[wi.field_m] = param2;
-        fj.field_Pb[wi.field_m] = wi.field_m;
+        VerticalScrollbar.field_Pb[wi.field_m] = wi.field_m;
         ec.field_N[wi.field_m] = param0;
         if (param0 <= BoundedFile.field_l) {
           if (IntArrayRequest.field_u > param0) {

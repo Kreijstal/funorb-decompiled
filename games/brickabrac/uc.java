@@ -127,7 +127,7 @@ final class uc extends k {
         DualLinkNode var2Lifetime1;
         try {
           int var1_int = 9 % ((-59 - param0) / 35);
-          rk.field_Tb = null;
+          AlignedIconLabel.field_Tb = null;
           IsaacGenerator.field_h = 0;
           LevelPackSelectScreen.field_w = 0;
           bf.field_N.clear((byte) -72);

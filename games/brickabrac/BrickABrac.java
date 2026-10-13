@@ -214,7 +214,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (14 == opcode) {
             sk.finishScreenTransition((byte) -116);
-            hm.a(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, fj.a(2000, (byte) -54), aj.a(1345), fj.a(8, (byte) -53), 1024, jb.field_I.length);
+            hm.a(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, jb.field_I.length);
             hn.a(FramedMenuScreen.f(115), kb.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             vh.field_L = false;
             MonotonicTime.field_c = true;
@@ -292,7 +292,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 return true;
               }
               if (IntArrayRequest.gameplayScreen.snapshotsReady) {
-                rk.a("T3", (Throwable) null, 44);
+                AlignedIconLabel.a("T3", (Throwable) null, 44);
               } else {
                 fieldTemp$0 = IntArrayRequest.gameplayScreen.loadedBoardSnapshots;
                 IntArrayRequest.gameplayScreen.loadedBoardSnapshots = IntArrayRequest.gameplayScreen.loadedBoardSnapshots + 1;
@@ -408,7 +408,7 @@ public final class BrickABrac extends InteractiveGameClient {
           backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
           oa.currentBackground = rd.selectBackground(backgroundSelector, (byte) 19);
           characterOrder = id.createCharacterOrder(matchRandom, false);
-          fj.field_Ub = null;
+          VerticalScrollbar.field_Ub = null;
           if (0 <= localPlayerId) {
             stackIn_56_0 = 1 << localPlayerId;
           } else {
@@ -655,12 +655,12 @@ public final class BrickABrac extends InteractiveGameClient {
         we.a(-8495);
         sm.a(30000);
         fh.a(-29988);
-        ni.d(true);
-        fj.e((byte) 33);
+        StateIconLabel.d(true);
+        VerticalScrollbar.e((byte) 33);
         ba.a((byte) -115);
         UiComponent.c((byte) 88);
         br.h(21);
-        hj.h(-48);
+        ScrollPaneWithFooter.h(-48);
         nn.a(0);
         am.k(8421504);
         id.h(-56);
@@ -685,7 +685,7 @@ public final class BrickABrac extends InteractiveGameClient {
         aa.b(118);
         ic.a(false);
         ga.a(0);
-        rk.d((byte) 21);
+        AlignedIconLabel.d((byte) 21);
         u.a(2);
         oa.h(47);
         gq.d(false);

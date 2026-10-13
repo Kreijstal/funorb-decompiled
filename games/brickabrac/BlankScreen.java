@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BlankScreen extends GameScreen {
-    static ni field_k;
+    static StateIconLabel field_k;
     static String field_j;
     static String field_h;
     static SecondaryHashTable field_i;

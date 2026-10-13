@@ -115,8 +115,8 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, mm param1, int param2, int param3, int param4) {
-        mm stackIn_68_0;
+    final static void a(boolean param0, ScrollPane param1, int param2, int param3, int param4) {
+        ScrollPane stackIn_68_0;
         int stackIn_68_1;
         int stackIn_68_2;
         int stackIn_68_3;
@@ -227,16 +227,16 @@ final class MusicVoice extends IntrusiveNode {
             }
           }
           if (decompiledFrameCompleted0) {
-            stackIn_68_0 = (mm) (param1);
+            stackIn_68_0 = (ScrollPane) (param1);
             stackIn_68_1 = 2;
             stackIn_68_2 = param3 * 4 * (2 + np.field_a);
             stackIn_68_3 = np.field_a * 2 + 4;
             stackIn_68_4 = 22676;
             stackIn_68_5 = param0;
             stackIn_69_6 = (param1 == o.field_b);
-            var9 = ((mm) (Object) stackIn_68_0).a(stackIn_68_1, stackIn_68_2, stackIn_68_3, stackIn_68_4, stackIn_68_5, stackIn_69_6) ? 1 : 0;
+            var9 = ((ScrollPane) (Object) stackIn_68_0).updateContentLayout(stackIn_68_1, stackIn_68_2, stackIn_68_3, stackIn_68_4, stackIn_68_5, stackIn_69_6) ? 1 : 0;
           }
-          var10 = param1.field_Rb.children;
+          var10 = param1.content.children;
           var11Lifetime1 = 73 % ((param4 - 41) / 57);
           var12 = null;
           var13 = (id) (var10.first(-67));
@@ -282,7 +282,7 @@ final class MusicVoice extends IntrusiveNode {
             var19 = var13.field_Tb;
             var13.field_Tb.height = 0;
             var19.width = 0;
-            var13.width = param1.field_Rb.width;
+            var13.width = param1.content.width;
             var20 = 0;
             var21 = var13.field_Yb;
             var22 = 72;
@@ -398,7 +398,7 @@ final class MusicVoice extends IntrusiveNode {
               var13.remainingHeight = var20 - var13.height;
             }
             if (var14 != 0) {
-              param1.field_Rb.placeBelow((UiComponent) (var12), 2, var13, 17290);
+              param1.content.placeBelow((UiComponent) (var12), 2, var13, 17290);
             }
             boolean decompiledFrameRemainder0 = true;
             if (var13.pressedButton != 0 &&

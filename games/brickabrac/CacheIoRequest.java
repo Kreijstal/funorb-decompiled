@@ -102,7 +102,7 @@ final class CacheIoRequest extends ResourceRequest {
         int stackIn_6_4;
         int stackIn_7_5 = 0;
         Object stackIn_37_0 = null;
-        rk stackIn_37_1 = null;
+        AlignedIconLabel stackIn_37_1 = null;
         int stackIn_52_0 = 0;
         UiComponent stackIn_78_0 = null;
         boolean stackIn_79_1 = false;
@@ -116,10 +116,10 @@ final class CacheIoRequest extends ResourceRequest {
         int var7_int = 0;
         int var8 = 0;
         UiComponent var8_ref_mh = null;
-        rk var9 = null;
+        AlignedIconLabel var9 = null;
         int var9_int = 0;
         int var10 = 0;
-        rk var10_ref_rk = null;
+        AlignedIconLabel var10_ref_rk = null;
         int var12 = 0;
         int var13 = 0;
         UiComponent var14 = null;
@@ -150,7 +150,7 @@ final class CacheIoRequest extends ResourceRequest {
             field_D = (java.awt.Canvas) null;
           }
           wd.field_E.setBounds(18, np.field_a + 2, -40 + (-2 + ji.field_b.width) - ec.field_J, 42 + ec.field_J, (byte) 64);
-          TimedSplashScreen.field_u.a(2, (byte) -109, ji.field_b.width, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.height - (np.field_a + 20));
+          TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, ji.field_b.width, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.height - (np.field_a + 20));
           GameUiController.field_e.setBounds(40, -40 + NinjaBackground.field_w.height, 0, NinjaBackground.field_w.width, (byte) 64);
           ba.field_v.setBounds(30, 0, 0, MultiplayerMatch.field_d.width, (byte) 64);
           rg.field_e.setBounds(-2 + (-40 + MultiplayerMatch.field_d.height) - 30, 30, 0, MultiplayerMatch.field_d.width, (byte) 64);
@@ -239,14 +239,14 @@ final class CacheIoRequest extends ResourceRequest {
                       var9.width = 0;
                     }
                   } else {
-                    MatchCompleteScreen.field_A[var6][0].a(-10411, var5, 2, kn.field_z, var8, var3, 38);
+                    MatchCompleteScreen.field_A[var6][0].setIconLabelBounds(-10411, var5, 2, kn.field_z, var8, var3, 38);
                     var8 += 40;
                   }
                   var9_int = 2 + (MultiplayerMatch.field_d.width - (5 + var8));
                   var10 = MatchCompleteScreen.field_A[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    MatchCompleteScreen.field_A[var6][1 + var11].a(-10411, var5, 2, kn.field_z, var12 + var8, var3, var9_int * (var11 + 1) / var10 - 2 - var12);
+                    MatchCompleteScreen.field_A[var6][1 + var11].setIconLabelBounds(-10411, var5, 2, kn.field_z, var12 + var8, var3, var9_int * (var11 + 1) / var10 - 2 - var12);
                   }
                   var5 = var5 + (var3 + 2);
                 }

@@ -462,7 +462,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_options_dontmind", (byte) 19);
                 if (null != var2) {
-                  ni.field_Pb = MenuButton.a(var2, (byte) 89);
+                  StateIconLabel.field_Pb = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("mu_options_allow_spectate", (byte) -107);
                 if (var2 != null) {
@@ -1772,7 +1772,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_passcontainsemail", (byte) 45);
                 if (var2 != null) {
-                  ni.field_Tb = MenuButton.a(var2, (byte) 116);
+                  StateIconLabel.field_Tb = MenuButton.a(var2, (byte) 116);
                 }
                 var2 = nk.a("create_alert_passcontainsname_partial", (byte) 51);
                 if (var2 != null) {
@@ -1792,7 +1792,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_invaliddate", (byte) -116);
                 if (null != var2) {
-                  hj.field_Rb = MenuButton.a(var2, (byte) 73);
+                  ScrollPaneWithFooter.field_Rb = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = nk.a("create_alert_invalidage", (byte) -114);
                 if (null != var2) {
@@ -1836,7 +1836,7 @@ final class nn {
                 }
                 var2 = nk.a("unable_to_delete_friend", (byte) 35);
                 if (null != var2) {
-                  hj.field_Ub = MenuButton.a(var2, (byte) 81);
+                  ScrollPaneWithFooter.field_Ub = MenuButton.a(var2, (byte) 81);
                 }
                 var2 = nk.a("unable_to_delete_ignore", (byte) 34);
                 if (null != var2) {
@@ -2098,7 +2098,7 @@ final class nn {
                 }
                 var2 = nk.a("returntomainmenu", (byte) -4);
                 if (null != var2) {
-                  fj.field_Rb = MenuButton.a(var2, (byte) 118);
+                  VerticalScrollbar.field_Rb = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("returntopausemenu", (byte) -5);
                 if (null != var2) {
@@ -2694,7 +2694,7 @@ final class nn {
                 }
                 var2 = nk.a("rating_lost", (byte) -126);
                 if (var2 != null) {
-                  hj.field_Vb = MenuButton.a(var2, (byte) 84);
+                  ScrollPaneWithFooter.field_Vb = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = nk.a("rating_drawn", (byte) 62);
                 if (null != var2) {

@@ -29,7 +29,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             return stackIn_3_0;
           }
           if (LevelMetadata.field_m != 2) {
-            stackIn_6_0 = hj.field_Ub;
+            stackIn_6_0 = ScrollPaneWithFooter.field_Ub;
             return stackIn_6_0;
           }
           var8 = pf.a(param1, param2);

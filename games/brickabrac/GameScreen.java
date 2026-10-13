@@ -7,7 +7,7 @@ abstract class GameScreen {
     static String field_d;
     static n field_c;
     static String field_b;
-    static hj field_f;
+    static ScrollPaneWithFooter field_f;
     static String field_g;
 
     abstract void drawScreen(byte obfuscationGuard);

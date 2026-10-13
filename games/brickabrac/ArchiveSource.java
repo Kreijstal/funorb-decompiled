@@ -38,9 +38,9 @@ abstract class ArchiveSource {
           VolcanicBackground.field_w = param0;
           ik.field_g = MusicEnvelope.field_f;
           tf.field_i = param6;
-          fj.field_Qb = param1;
+          VerticalScrollbar.field_Qb = param1;
           am.field_cc = param2;
-          ni.field_Rb = null;
+          StateIconLabel.field_Rb = null;
           Paddle.field_x = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

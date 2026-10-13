@@ -51,12 +51,12 @@ final class ResourceArchive {
           fileName = fileName.toLowerCase();
           var5 = 110 % ((obfuscationGuard - 33) / 51);
           var7 = (CharSequence) ((Object) groupName);
-          var4_int = this.index.groupNameIndex.findIndex(ni.hashArchiveName(-128, var7), (byte) -94);
+          var4_int = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(-128, var7), (byte) -94);
           if (!this.isValidGroup(0, var4_int)) {
             return null;
           }
           var8 = (CharSequence) ((Object) fileName);
-          var6 = this.index.fileNameIndexes[var4_int].findIndex(ni.hashArchiveName(-110, var8), (byte) -106);
+          var6 = this.index.fileNameIndexes[var4_int].findIndex(StateIconLabel.hashArchiveName(-110, var8), (byte) -106);
           stackIn_7_0 = this.takeFile(var6, var4_int, 4);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class ResourceArchive {
             field_a = (RgbSprite[]) null;
           }
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameIndex.findIndex(ni.hashArchiveName(obfuscationGuard + 28015, var4), (byte) -85);
+          var3_int = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(obfuscationGuard + 28015, var4), (byte) -85);
           stackIn_7_0 = this.ensureGroupAvailable(obfuscationGuard + 15055, var3_int);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -184,7 +184,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           var5 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameIndex.findIndex(ni.hashArchiveName(-121, var5), (byte) -86);
+          var3_int = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(-121, var5), (byte) -86);
           if (this.isValidGroup(0, var3_int)) {
             stackIn_10_0 = var3_int;
             return stackIn_10_0;
@@ -225,12 +225,12 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) groupName);
-          var4_int = this.index.groupNameIndex.findIndex(ni.hashArchiveName(-112, var6), (byte) -91);
+          var4_int = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(-112, var6), (byte) -91);
           if (!this.isValidGroup(obfuscationGuard, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) fileName);
-          var5 = this.index.fileNameIndexes[var4_int].findIndex(ni.hashArchiveName(-109, var7), (byte) -114);
+          var5 = this.index.fileNameIndexes[var4_int].findIndex(StateIconLabel.hashArchiveName(-109, var7), (byte) -114);
           stackIn_9_0 = this.ensureFileAvailable(var5, var4_int, (byte) 102);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -336,7 +336,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           var4 = (CharSequence) ((Object) groupName);
-          var3_int = this.index.groupNameIndex.findIndex(ni.hashArchiveName(-120, var4), (byte) -94);
+          var3_int = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(-120, var4), (byte) -94);
           stackIn_7_0 = this.getGroupProgress(var3_int, -27509);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -369,7 +369,7 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           var3_int = 12 % ((obfuscationGuard - 59) / 33);
           var5 = (CharSequence) ((Object) groupName);
-          var4 = this.index.groupNameIndex.findIndex(ni.hashArchiveName(-128, var5), (byte) -84);
+          var4 = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(-128, var5), (byte) -84);
           if (var4 >= 0) {
             return true;
           }
@@ -561,7 +561,7 @@ final class ResourceArchive {
           }
           fileName = fileName.toLowerCase();
           var5 = (CharSequence) ((Object) fileName);
-          var4_int = this.index.fileNameIndexes[groupId].findIndex(ni.hashArchiveName(-115, var5), (byte) -109);
+          var4_int = this.index.fileNameIndexes[groupId].findIndex(StateIconLabel.hashArchiveName(-115, var5), (byte) -109);
           if (!this.isValidFile(true, var4_int, groupId)) {
             stackIn_5_0 = -1;
             return stackIn_5_0;
@@ -914,12 +914,12 @@ final class ResourceArchive {
           groupName = groupName.toLowerCase();
           fileName = fileName.toLowerCase();
           var6 = (CharSequence) ((Object) groupName);
-          var4_int = this.index.groupNameIndex.findIndex(ni.hashArchiveName(obfuscationGuard ^ 4, var6), (byte) -114);
+          var4_int = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(obfuscationGuard ^ 4, var6), (byte) -114);
           if (var4_int < 0) {
             return false;
           }
           var7 = (CharSequence) ((Object) fileName);
-          var5 = this.index.fileNameIndexes[var4_int].findIndex(ni.hashArchiveName(-120, var7), (byte) -105);
+          var5 = this.index.fileNameIndexes[var4_int].findIndex(StateIconLabel.hashArchiveName(-120, var7), (byte) -105);
           if (0 > var5) {
             return false;
           }

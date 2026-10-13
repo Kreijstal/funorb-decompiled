@@ -3,49 +3,49 @@
  */
 import java.io.*;
 
-final class rk extends UiComponent {
-    UiComponent field_Rb;
+final class AlignedIconLabel extends UiComponent {
+    UiComponent label;
     static String field_Tb;
     static RgbSprite field_Sb;
-    private UiComponent field_Pb;
+    private UiComponent icon;
     static int achievementTransitionMask;
 
-    private final void b(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        var4 = -param2;
-        var5 = -param2;
-        if (this.field_Pb != null) {
-          var4 = this.field_Pb.getContentWidth(71);
+    private final void layoutIconLabel(int obfuscationGuard, int inset, int gap) {
+        int iconWidth;
+        int labelWidth;
+        int combinedWidth;
+        int guardDivision;
+        iconWidth = -gap;
+        labelWidth = -gap;
+        if (this.icon != null) {
+          iconWidth = this.icon.getContentWidth(71);
         }
-        if (null != this.field_Rb) {
-          var5 = this.field_Rb.measureContentWidth(-param1 + (-param1 + this.width) - (var4 + param2), 0);
+        if (null != this.label) {
+          labelWidth = this.label.measureContentWidth(-inset + (-inset + this.width) - (iconWidth + gap), 0);
         }
-        var7 = 40 / ((-47 - param0) / 42);
-        var6 = param2 + var4 + param1 + (var5 + param1);
-        if (this.width < var6) {
-          var5 = var5 + (this.width - var6);
-          var6 = this.width;
+        guardDivision = 40 / ((-47 - obfuscationGuard) / 42);
+        combinedWidth = gap + iconWidth + inset + (labelWidth + inset);
+        if (this.width < combinedWidth) {
+          labelWidth = labelWidth + (this.width - combinedWidth);
+          combinedWidth = this.width;
         }
         if (this.horizontalAlignment == 1) {
-          param1 = param1 + (this.width - var6) / 2;
+          inset = inset + (this.width - combinedWidth) / 2;
         }
         if (2 == this.horizontalAlignment) {
-          param1 = param1 + (-var6 + this.width);
+          inset = inset + (-combinedWidth + this.width);
         }
-        if (null != this.field_Pb) {
-          this.field_Pb.setBounds(this.height, 0, param1, var4, (byte) 64);
-          this.field_Pb.verticalAlignment = this.verticalAlignment;
+        if (null != this.icon) {
+          this.icon.setBounds(this.height, 0, inset, iconWidth, (byte) 64);
+          this.icon.verticalAlignment = this.verticalAlignment;
         }
-        if (null != this.field_Rb) {
-          this.field_Rb.setBounds(this.height, 0, param2 + (param1 + var4), var5, (byte) 64);
-          this.field_Rb.verticalAlignment = this.verticalAlignment;
-          if (null != this.field_Pb) {
-            this.field_Rb.horizontalAlignment = 0;
+        if (null != this.label) {
+          this.label.setBounds(this.height, 0, gap + (inset + iconWidth), labelWidth, (byte) 64);
+          this.label.verticalAlignment = this.verticalAlignment;
+          if (null != this.icon) {
+            this.label.horizontalAlignment = 0;
           } else {
-            this.field_Rb.horizontalAlignment = this.horizontalAlignment;
+            this.label.horizontalAlignment = this.horizontalAlignment;
           }
         }
     }
@@ -68,7 +68,7 @@ final class rk extends UiComponent {
         field_Tb = null;
         field_Sb = null;
         if (param0 != 21) {
-          rk.d((byte) -26);
+          AlignedIconLabel.d((byte) -26);
         }
     }
 
@@ -96,7 +96,7 @@ final class rk extends UiComponent {
           var6 = BrickABrac.field_J ? 1 : 0;
           try {
             if (param2 <= 27) {
-              rk.a((byte) -93, 'K');
+              AlignedIconLabel.a((byte) -93, 'K');
             }
             var3 = "";
             if (param1 != null) {
@@ -151,32 +151,32 @@ final class rk extends UiComponent {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
-        if (param1 != 24) {
-          rk.a((byte) 108, '￱');
+    final int measureIconLabelWidth(int gap, int obfuscationGuard, int inset) {
+        if (obfuscationGuard != 24) {
+          AlignedIconLabel.a((byte) 108, '￱');
         }
-        int var4 = -param0;
-        if (this.field_Pb != null) {
-          var4 = this.field_Pb.getContentWidth(107);
+        int iconWidth = -gap;
+        if (this.icon != null) {
+          iconWidth = this.icon.getContentWidth(107);
         }
-        int var5 = -param0;
-        if (null != this.field_Rb) {
-          var5 = this.field_Rb.getContentWidth(64);
+        int labelWidth = -gap;
+        if (null != this.label) {
+          labelWidth = this.label.getContentWidth(64);
         }
-        return param2 + var4 + (param0 + var5) + param2;
+        return inset + iconWidth + (gap + labelWidth) + inset;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (param0 != -10411) {
+    final void setIconLabelBounds(int obfuscationGuard, int y, int inset, int gap, int x, int height, int width) {
+        if (obfuscationGuard != -10411) {
           Throwable var9 = (Throwable) null;
-          rk.a((String) null, (Throwable) null, 64);
+          AlignedIconLabel.a((String) null, (Throwable) null, 64);
         }
-        this.setBounds(param5, param1, param4, param6, (byte) 64);
-        this.b(param0 ^ 10436, param2, param3);
+        this.setBounds(height, y, x, width, (byte) 64);
+        this.layoutIconLabel(obfuscationGuard ^ 10436, inset, gap);
     }
 
-    rk(long param0, UiComponent param1, UiComponent param2, UiComponent param3, RgbSprite param4, String param5) {
-        super(param0, param1);
+    AlignedIconLabel(long id, UiComponent styleTemplate, UiComponent iconStyle, UiComponent labelStyle, RgbSprite sprite, String text) {
+        super(id, styleTemplate);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -191,14 +191,14 @@ final class rk extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var8 = null;
         try {
-          if (param4 != null) {
-            this.field_Pb = new UiComponent(0L, param2);
-            this.field_Pb.sprite = param4;
-            this.addChild(this.field_Pb, 0);
+          if (sprite != null) {
+            this.icon = new UiComponent(0L, iconStyle);
+            this.icon.sprite = sprite;
+            this.addChild(this.icon, 0);
           }
-          if (param5 != null) {
-            this.field_Rb = new UiComponent(0L, param3, param5);
-            this.addChild(this.field_Rb, 0);
+          if (text != null) {
+            this.label = new UiComponent(0L, labelStyle, text);
+            this.addChild(this.label, 0);
             this.markDescendantsToInheritVisualState(true);
           } else {
             this.markDescendantsToInheritVisualState(true);
@@ -208,32 +208,32 @@ final class rk extends UiComponent {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_9_0 = var8;
-          stackIn_9_1 = new StringBuilder().append("rk.<init>(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("rk.<init>(").append(id).append(',');
+          if (styleTemplate == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
           stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param2 == null) {
+          if (iconStyle == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param3 == null) {
+          if (labelStyle == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param4 == null) {
+          if (sprite == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
           stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param5 == null) {
+          if (text == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";

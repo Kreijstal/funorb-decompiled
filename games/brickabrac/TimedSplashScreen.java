@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TimedSplashScreen extends MenuScreen {
-    static mm field_u;
+    static ScrollPane field_u;
     static String field_s;
     static char[] keyEventCharacters;
     private int remainingTicks;
@@ -72,7 +72,7 @@ final class TimedSplashScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 75) {
-            field_u = (mm) null;
+            field_u = (ScrollPane) null;
           }
           stackIn_3_0 = sk.queueSoundPlayback((byte) 117, PcmStream.createAtRate(sound, 100, 96));
           return stackIn_3_0;

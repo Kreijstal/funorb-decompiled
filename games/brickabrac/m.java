@@ -51,7 +51,7 @@ final class m {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (rk.a((byte) -125, param1)) {
+          if (AlignedIconLabel.a((byte) -125, param1)) {
             return true;
           }
           if (!param0) {

@@ -98,12 +98,12 @@ final class ch {
             if (var2 == 4) {
               LevelMetadata.field_m = 1;
               var3 = var1.readCp1252String(-1);
-              rk.field_Tb = ((String) (var3)).intern();
+              AlignedIconLabel.field_Tb = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte(255);
               wn.a(2, var4);
               return;
             }
-            rk.a("F1: " + eq.c((byte) -104), (Throwable) null, 58);
+            AlignedIconLabel.a("F1: " + eq.c((byte) -104), (Throwable) null, 58);
             hn.a((byte) 98);
             if (param0 < 52) {
               ch.a((byte) -91);

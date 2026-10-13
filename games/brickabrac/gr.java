@@ -55,7 +55,7 @@ final class gr {
             gr.a(22, -5);
           }
           for (var2_int = 0; var2_int < wi.field_m; var2_int++) {
-            fj.field_Pb[var2_int + param1] = var2_int;
+            VerticalScrollbar.field_Pb[var2_int + param1] = var2_int;
           }
           ti.a(uf.field_b, ba.field_w, param1 + wi.field_m, false, 118, param1 + param1, param1);
           if (param1 < wi.field_m) {

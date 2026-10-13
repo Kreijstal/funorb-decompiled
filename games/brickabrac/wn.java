@@ -7,7 +7,7 @@ final class wn {
     static ResourceArchive field_c;
 
     final static mp a(boolean param0, int param1, int param2) {
-        mm stackIn_4_0;
+        ScrollPane stackIn_4_0;
         int stackIn_4_1;
         int stackIn_4_2;
         int stackIn_4_3;
@@ -45,24 +45,24 @@ final class wn {
         String var18Lifetime1;
         var19 = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_4_0 = GameScreen.field_f.field_Qb;
+          stackIn_4_0 = GameScreen.field_f.scrollPane;
           stackIn_4_1 = 2;
           stackIn_4_2 = param1 * (6 + 3 * np.field_a);
           stackIn_4_3 = np.field_a + 2;
           stackIn_4_4 = 22676;
           stackIn_4_5 = param0;
-          stackIn_5_6 = (GameScreen.field_f.field_Qb == o.field_b);
-          var3_int = ((mm) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_5_6) ? 1 : 0;
+          stackIn_5_6 = (GameScreen.field_f.scrollPane == o.field_b);
+          var3_int = ((ScrollPane) (Object) stackIn_4_0).updateContentLayout(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_5_6) ? 1 : 0;
           if (param2 > -12) {
             wn.a((byte) 96);
           }
           boolean decompiledFrameCompleted0 = true;
-          var4 = GameScreen.field_f.field_Xb.children;
+          var4 = GameScreen.field_f.content.children;
           var5 = null;
           if (LevelMetadata.field_m == 2) {
             rg.field_c.enabled = true;
-            sj.field_d.text = rd.a(LevelDecoder.field_c, new String[]{rk.field_Tb}, (byte) 103);
-            GameScreen.field_f.field_Qb.field_Qb.text = null;
+            sj.field_d.text = rd.a(LevelDecoder.field_c, new String[]{AlignedIconLabel.field_Tb}, (byte) 103);
+            GameScreen.field_f.scrollPane.viewport.text = null;
             var6 = null;
             var7 = (mp) (var4.first(-76));
             while (var7 != null) {
@@ -85,12 +85,12 @@ final class wn {
                 var8 = 1;
                 var7.markDescendantsToInheritVisualState(true);
               }
-              var7.width = GameScreen.field_f.field_Xb.width;
+              var7.width = GameScreen.field_f.content.width;
               var9 = 0;
               if (var7.field_Ub == null) {
                 var10 = 13369344;
                 var11 = 16737894;
-              } else if (var7.field_Ub != rk.field_Tb) {
+              } else if (var7.field_Ub != AlignedIconLabel.field_Tb) {
                 var10 = 13421568;
                 var11 = 16777062;
               } else {
@@ -142,7 +142,7 @@ final class wn {
                 var7.remainingHeight = var9 - var7.height;
               }
               if (var8 != 0) {
-                GameScreen.field_f.field_Xb.placeBelow((UiComponent) (var6), 2, var7, 17290);
+                GameScreen.field_f.content.placeBelow((UiComponent) (var6), 2, var7, 17290);
               }
               var6 = var7;
               if (null != var7.field_Yb &&
@@ -155,7 +155,7 @@ final class wn {
                 }
               } else {
                 var16 = var7.field_Rb;
-                SpriteGeometry.a(-1, var7, GameScreen.field_f.field_Qb, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
+                SpriteGeometry.a(-1, var7, GameScreen.field_f.scrollPane, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
                 if (null != var7.field_Ub &&
                   !m.a(13134, bm.field_d.field_e) &&
                   !um.field_e) {
@@ -173,12 +173,12 @@ final class wn {
               var7 = (mp) (var4.next((byte) 116));
             }
             if (decompiledFrameCompleted0) {
-              if (GameScreen.field_f.field_Tb.pressedButton != 0) {
-                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.field_Tb.screenX, GameScreen.field_f.field_Tb.screenY, GameScreen.field_f.field_Tb.width, GameScreen.field_f.field_Tb.height, ArchiveNetworkClient.field_t, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+              if (GameScreen.field_f.leftFooter.pressedButton != 0) {
+                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.leftFooter.screenX, GameScreen.field_f.leftFooter.screenY, GameScreen.field_f.leftFooter.width, GameScreen.field_f.leftFooter.height, ArchiveNetworkClient.field_t, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
                 GameUiController.field_d = 0;
               }
-              if (0 != GameScreen.field_f.field_Wb.pressedButton) {
-                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.field_Wb.screenX, GameScreen.field_f.field_Wb.screenY, GameScreen.field_f.field_Wb.width, GameScreen.field_f.field_Wb.height, TableDataRequest.field_j, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+              if (0 != GameScreen.field_f.rightFooter.pressedButton) {
+                MusicCrossfadeStream.field_m = new gq(GameScreen.field_f.rightFooter.screenX, GameScreen.field_f.rightFooter.screenY, GameScreen.field_f.rightFooter.width, GameScreen.field_f.rightFooter.height, TableDataRequest.field_j, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
                 GameUiController.field_d = 1;
               }
             }
@@ -186,14 +186,14 @@ final class wn {
             sj.field_d.text = kd.field_a;
             rg.field_c.enabled = false;
             if (LevelMetadata.field_m == 1) {
-              GameScreen.field_f.field_Qb.field_Qb.text = cd.field_f;
+              GameScreen.field_f.scrollPane.viewport.text = cd.field_f;
               if (var19 != 0) {
-                GameScreen.field_f.field_Qb.field_Qb.text = cm.field_t;
+                GameScreen.field_f.scrollPane.viewport.text = cm.field_t;
               }
             } else {
-              GameScreen.field_f.field_Qb.field_Qb.text = cm.field_t;
+              GameScreen.field_f.scrollPane.viewport.text = cm.field_t;
             }
-            jh.a(true, GameScreen.field_f.field_Xb);
+            jh.a(true, GameScreen.field_f.content);
           }
           if (decompiledFrameCompleted0) {
             stackIn_101_0 = var5;

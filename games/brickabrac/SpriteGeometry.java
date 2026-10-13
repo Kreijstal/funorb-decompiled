@@ -20,12 +20,12 @@ abstract class SpriteGeometry extends DualLinkNode {
         field_u = null;
         if (param0 != 2) {
           String var2 = (String) null;
-          SpriteGeometry.a(9, (UiComponent) null, (mm) null, (int[]) null, (String) null, 53, (byte) -45, 67L, (String) null);
+          SpriteGeometry.a(9, (UiComponent) null, (ScrollPane) null, (int[]) null, (String) null, 53, (byte) -45, 67L, (String) null);
         }
         field_w = null;
     }
 
-    final static void a(int param0, int param1, id param2, mm param3, byte param4, int param5, int param6) {
+    final static void a(int param0, int param1, id param2, ScrollPane param3, byte param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -93,7 +93,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         }
     }
 
-    final static void a(int param0, UiComponent param1, mm param2, int[] param3, String param4, int param5, byte param6, long param7, String param8) {
+    final static void a(int param0, UiComponent param1, ScrollPane param2, int[] param3, String param4, int param5, byte param6, long param7, String param8) {
         try {
           o.field_b = param2;
           if (param6 != -58) {

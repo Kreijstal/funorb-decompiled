@@ -13,7 +13,7 @@ final class MotionWaypoint extends MovingBody {
           return (String) null;
         }
         if (MusicEnvelope.field_f == ik.field_g) {
-          return fj.field_Qb;
+          return VerticalScrollbar.field_Qb;
         }
         return dl.field_e;
     }

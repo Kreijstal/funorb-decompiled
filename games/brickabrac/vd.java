@@ -63,7 +63,7 @@ final class vd {
     }
 
     final static void a(int param0) {
-        mm.h(-29448);
+        ScrollPane.h(-29448);
         if (param0 >= -126) {
           field_a = (mo) null;
         }

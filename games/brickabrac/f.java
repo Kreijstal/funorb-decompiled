@@ -4,7 +4,7 @@
 final class f {
     static String field_b;
     static UiComponent field_a;
-    static hj field_c;
+    static ScrollPaneWithFooter field_c;
 
     final static void handleTableResponse(byte obfuscationGuard) {
         int dictionaryIndex = 0;
@@ -170,7 +170,7 @@ final class f {
             rowSubmission.unlink((byte) 111);
             return;
           }
-          rk.a("HS1: " + eq.c((byte) -96), (Throwable) null, obfuscationGuard ^ 102);
+          AlignedIconLabel.a("HS1: " + eq.c((byte) -96), (Throwable) null, obfuscationGuard ^ 102);
           hn.a((byte) 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -327,8 +327,8 @@ final class so {
           for (var10_intLifetime13 = 0; var10_intLifetime13 < MusicVoiceMixer.field_n.length; var10_intLifetime13++) {
             MusicVoiceMixer.field_n[var10_intLifetime13] = DelayedPacket.a(tf.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
           }
-          rk.field_Sb = ap.field_a.copy();
-          rk.field_Sb.rotateCounterclockwise();
+          AlignedIconLabel.field_Sb = ap.field_a.copy();
+          AlignedIconLabel.field_Sb.rotateCounterclockwise();
           dg.field_e = pl.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
           cq.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
           cq.field_o.bindRasterTarget();

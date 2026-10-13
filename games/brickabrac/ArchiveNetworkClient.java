@@ -351,7 +351,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = param2.field_Sb - param1.field_Sb;
-          if (rk.field_Tb != param2.field_Ub) {
+          if (AlignedIconLabel.field_Tb != param2.field_Ub) {
             if (null == param2.field_Ub) {
               var3_int += 200;
             }
@@ -361,7 +361,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           if (param0 != 200) {
             return false;
           }
-          if (rk.field_Tb == param1.field_Ub) {
+          if (AlignedIconLabel.field_Tb == param1.field_Ub) {
             var3_int += 200;
           } else {
             if (param1.field_Ub == null) {

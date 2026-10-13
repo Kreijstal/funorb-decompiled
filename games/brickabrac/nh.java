@@ -601,7 +601,7 @@ final class nh {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = TimedSplashScreen.field_u.field_Rb.children;
+                var17 = TimedSplashScreen.field_u.content.children;
                 var18_ref = (id) (var17.first(-97));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;

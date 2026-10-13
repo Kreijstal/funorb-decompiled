@@ -16,7 +16,7 @@ final class AchievementIcon extends IntrusiveNode {
     static String field_o;
     private boolean thumbnailIsPlaceholder;
     static int field_j;
-    static mm field_q;
+    static ScrollPane field_q;
     int y;
 
     final static void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -156,7 +156,7 @@ final class AchievementIcon extends IntrusiveNode {
           this.remainingOffset = this.remainingOffset - offsetStep;
           this.x = this.x + offsetStep;
         } else {
-          rk.achievementTransitionMask = rk.achievementTransitionMask & this.transitionKeepMask;
+          AlignedIconLabel.achievementTransitionMask = AlignedIconLabel.achievementTransitionMask & this.transitionKeepMask;
           if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
             nf.hoveredAchievementId = this.achievementId;
             if (1 == BackgroundScene.pressedButton &&

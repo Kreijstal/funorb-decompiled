@@ -196,7 +196,7 @@ class RectangleBody extends MovingBody {
           DualLinkIterator.field_b = var32;
           GameClock.field_c = this;
           sh.field_a = var15Lifetime1;
-          mm.field_Tb = -circle.radius256 + var14Lifetime1;
+          ScrollPane.field_Tb = -circle.radius256 + var14Lifetime1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -297,7 +297,7 @@ class RectangleBody extends MovingBody {
             this.resolveCircleCollision((CircleBody) null, (byte) 44);
           }
           circle.x256 = oh.field_f;
-          circle.y256 = mm.field_Tb;
+          circle.y256 = ScrollPane.field_Tb;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bn.E(" + obfuscationGuard + ',' + (board != null ? "{...}" : "null") + ',' + (circle != null ? "{...}" : "null") + ')');
         }

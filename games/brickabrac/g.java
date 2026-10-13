@@ -130,7 +130,7 @@ final class g extends k {
             return stackIn_14_0;
           }
           if (this.b(0, param1)) {
-            stackIn_18_0 = ni.field_Tb;
+            stackIn_18_0 = StateIconLabel.field_Tb;
             return stackIn_18_0;
           }
           if (var7.length() <= 0) {

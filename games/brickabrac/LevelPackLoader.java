@@ -97,7 +97,7 @@ final class LevelPackLoader {
         if (param0 != 0) {
           return (UiComponent) null;
         }
-        return IsaacGenerator.field_b.field_Rb;
+        return IsaacGenerator.field_b.content;
     }
 
     final static AchievementMaskRequest requestAchievementMask(byte obfuscationGuard, int opcode) {

@@ -657,7 +657,7 @@ final class HighscoresScreen extends MenuScreen {
         this.a(0);
         if (og.h(-26090)) {
           GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);
-          fj.a(243, na.field_N, 140, nn.field_g, -15531, 2);
+          VerticalScrollbar.a(243, na.field_N, 140, nn.field_g, -15531, 2);
           return;
         }
         GzipInflater.a(475, 5, 33, 5, 140, (byte) -101, 120);
@@ -683,7 +683,7 @@ final class HighscoresScreen extends MenuScreen {
             var4_ref = ArchiveNetworkRequest.field_J;
             var5 = rf.field_g.names[this.scoreFilterIndex];
             var13 = rf.field_g.values[this.scoreFilterIndex];
-            var7 = gj.findTableRow(rf.field_g, fj.field_Ub, -87, this.scoreFilterIndex);
+            var7 = gj.findTableRow(rf.field_g, VerticalScrollbar.field_Ub, -87, this.scoreFilterIndex);
             for (var8 = 0; 10 > var8; var8++) {
               if (var5[var8] != null) {
                 stackIn_17_0 = (var7 == var8) ? 1 : 2;
@@ -699,9 +699,9 @@ final class HighscoresScreen extends MenuScreen {
               }
               var2Lifetime1 += 18;
             }
-            if (fj.field_Ub != null &&
+            if (VerticalScrollbar.field_Ub != null &&
               var7 < 0) {
-              var16 = fj.field_Ub.values;
+              var16 = VerticalScrollbar.field_Ub.values;
               var8Lifetime1 = var16[0];
               var9Lifetime1 = var16[1] >> 16 & 65535;
               var10Lifetime1 = 65535 & var16[1];

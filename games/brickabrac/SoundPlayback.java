@@ -29,7 +29,7 @@ final class SoundPlayback extends IntrusiveNode {
         }
         if (ik.field_g == up.field_v) {
           ik.field_g = ej.field_P;
-          return ni.field_Rb;
+          return StateIconLabel.field_Rb;
         }
         if (param0 <= 17) {
           return (oh) null;

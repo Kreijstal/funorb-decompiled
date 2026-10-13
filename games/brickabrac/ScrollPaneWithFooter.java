@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hj extends UiComponent {
-    UiComponent field_Wb;
+final class ScrollPaneWithFooter extends UiComponent {
+    UiComponent rightFooter;
     static th field_Sb;
-    mm field_Qb;
-    UiComponent field_Xb;
-    UiComponent field_Tb;
+    ScrollPane scrollPane;
+    UiComponent content;
+    UiComponent leftFooter;
     static int field_Pb;
     static String field_Rb;
     static String field_Ub;
@@ -69,7 +69,7 @@ final class hj extends UiComponent {
           } else {
             stackIn_3_5 = 0;
           }
-          SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (mm) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.field_k, param1.field_q);
+          SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.field_k, param1.field_q);
           if (param1.field_c == 0 &&
             !cb.e(-91) &&
             null == o.field_e &&
@@ -120,32 +120,32 @@ final class hj extends UiComponent {
         }
     }
 
-    hj(long param0, UiComponent param1, UiComponent param2, fj param3, UiComponent param4, String param5, String param6) {
-        super(param0, param1);
+    ScrollPaneWithFooter(long id, UiComponent styleTemplate, UiComponent viewportStyle, VerticalScrollbar scrollbarStyle, UiComponent footerStyle, String leftText, String rightText) {
+        super(id, styleTemplate);
         try {
-          this.field_Xb = new UiComponent(0L, (UiComponent) null);
-          this.field_Qb = new mm(0L, this.field_Xb, param2, param3);
-          this.field_Tb = new UiComponent(0L, param4);
-          this.field_Wb = new UiComponent(0L, param4);
-          this.field_Tb.text = param5;
-          this.field_Wb.text = param6;
-          this.addChild(this.field_Qb, 0);
-          this.addChild(this.field_Tb, 0);
-          this.addChild(this.field_Wb, 0);
+          this.content = new UiComponent(0L, (UiComponent) null);
+          this.scrollPane = new ScrollPane(0L, this.content, viewportStyle, scrollbarStyle);
+          this.leftFooter = new UiComponent(0L, footerStyle);
+          this.rightFooter = new UiComponent(0L, footerStyle);
+          this.leftFooter.text = leftText;
+          this.rightFooter.text = rightText;
+          this.addChild(this.scrollPane, 0);
+          this.addChild(this.leftFooter, 0);
+          this.addChild(this.rightFooter, 0);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.<init>(" + id + ',' + (styleTemplate != null ? "{...}" : "null") + ',' + (viewportStyle != null ? "{...}" : "null") + ',' + (scrollbarStyle != null ? "{...}" : "null") + ',' + (footerStyle != null ? "{...}" : "null") + ',' + (leftText != null ? "{...}" : "null") + ',' + (rightText != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (!param0) {
+    final void setPaneFooterBounds(boolean obfuscationGuard, int scrollbarWidth, int width, int x, int y, int contentRightInset, int footerHeight, int height) {
+        if (!obfuscationGuard) {
           return;
         }
-        this.width = param2;
-        this.height = param7;
-        this.localX = param3;
-        this.localY = param4;
-        this.a(param6, -779, param5, param1);
+        this.width = width;
+        this.height = height;
+        this.localX = x;
+        this.localY = y;
+        this.layoutPaneFooter(footerHeight, -779, contentRightInset, scrollbarWidth);
     }
 
     public static void h(int param0) {
@@ -153,7 +153,7 @@ final class hj extends UiComponent {
         field_Sb = null;
         if (param0 > -15) {
           gb var2 = (gb) null;
-          hj.a(-63, (gb) null);
+          ScrollPaneWithFooter.a(-63, (gb) null);
         }
         field_Vb = null;
         field_Rb = null;
@@ -455,25 +455,25 @@ final class hj extends UiComponent {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        int var5 = (param3 + this.width) / 2;
-        int var6 = -param0 + this.height;
-        this.field_Qb.a(param3, (byte) -111, this.width, 0, 0, param2, var6 - param3);
-        this.field_Tb.height = param0;
-        this.field_Tb.localX = 0;
-        this.field_Tb.width = -param3 + var5;
-        this.field_Tb.localY = var6;
-        this.field_Wb.localY = var6;
-        this.field_Wb.width = -var5 + this.width;
-        this.field_Wb.localX = var5;
-        this.field_Wb.height = param0;
-        if (param1 != -779) {
-          this.field_Tb = (UiComponent) null;
+    final void layoutPaneFooter(int footerHeight, int obfuscationGuard, int contentRightInset, int scrollbarWidth) {
+        int footerSplitX = (scrollbarWidth + this.width) / 2;
+        int footerY = -footerHeight + this.height;
+        this.scrollPane.setScrollPaneBounds(scrollbarWidth, (byte) -111, this.width, 0, 0, contentRightInset, footerY - scrollbarWidth);
+        this.leftFooter.height = footerHeight;
+        this.leftFooter.localX = 0;
+        this.leftFooter.width = -scrollbarWidth + footerSplitX;
+        this.leftFooter.localY = footerY;
+        this.rightFooter.localY = footerY;
+        this.rightFooter.width = -footerSplitX + this.width;
+        this.rightFooter.localX = footerSplitX;
+        this.rightFooter.height = footerHeight;
+        if (obfuscationGuard != -779) {
+          this.leftFooter = (UiComponent) null;
         }
     }
 
-    hj(long param0, hj param1, String param2, String param3) {
-        this(param0, param1, param1.field_Qb.field_Qb, param1.field_Qb.field_Ub, param1.field_Tb, param2, param3);
+    ScrollPaneWithFooter(long id, ScrollPaneWithFooter styleTemplate, String leftText, String rightText) {
+        this(id, styleTemplate, styleTemplate.scrollPane.viewport, styleTemplate.scrollPane.scrollbar, styleTemplate.leftFooter, leftText, rightText);
     }
 
     static {

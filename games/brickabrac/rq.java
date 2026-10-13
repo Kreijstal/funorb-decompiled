@@ -3,7 +3,7 @@
  */
 final class rq {
     static NodeDeque field_a;
-    static hj field_b;
+    static ScrollPaneWithFooter field_b;
     static String field_d;
     static n field_c;
     private static String field_z;

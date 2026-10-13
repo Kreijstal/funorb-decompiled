@@ -112,20 +112,20 @@ final class an extends pj implements hf, ph {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
         }
-        return hj.field_Rb;
+        return ScrollPaneWithFooter.field_Rb;
     }
 
     final static void d(byte param0) {
         int var1_int = 0;
         int var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var1_int = 0; var1_int < mm.field_Sb; var1_int++) {
+          for (var1_int = 0; var1_int < ScrollPane.field_Sb; var1_int++) {
             UnderwaterBackground.field_s[var1_int] = null;
           }
           if (param0 != -56) {
             field_i = (th) null;
           }
-          mm.field_Sb = 0;
+          ScrollPane.field_Sb = 0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.R(" + param0 + ')');
         }

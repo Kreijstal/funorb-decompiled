@@ -183,7 +183,7 @@ final class qi extends d {
             return;
           }
           if (responseType != 2) {
-            rk.a("A1: " + eq.c((byte) -92), (Throwable) null, 88);
+            AlignedIconLabel.a("A1: " + eq.c((byte) -92), (Throwable) null, 88);
             hn.a((byte) 52);
             return;
           }

@@ -502,7 +502,7 @@ abstract class MenuScreen extends GameScreen {
                     if (ib.a(pl.pendingAchievementMask, -1)) {
                       sl.field_z = 9;
                     } else {
-                      stackIn_143_0 = (null != fj.field_Ub) ? 5 : 0;
+                      stackIn_143_0 = (null != VerticalScrollbar.field_Ub) ? 5 : 0;
                       sl.field_z = stackIn_143_0;
                     }
                   }

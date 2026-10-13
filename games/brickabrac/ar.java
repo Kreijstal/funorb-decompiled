@@ -5,7 +5,7 @@ final class ar {
     static String[] field_a;
 
     final static void a(boolean param0, om param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        rk[][] stackIn_33_0 = null;
+        AlignedIconLabel[][] stackIn_33_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_53_0 = 0;
         int stackIn_54_1 = 0;
@@ -15,7 +15,7 @@ final class ar {
         StringBuilder stackIn_100_1 = null;
         String stackIn_101_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rk[] var8 = null;
+        AlignedIconLabel[] var8 = null;
         int var8_int = 0;
         RuntimeException var8_ref = null;
         int var9 = 0;
@@ -23,13 +23,13 @@ final class ar {
         int[] var10_ref_int__ = null;
         int var11 = 0;
         int var12 = 0;
-        rk var13 = null;
+        AlignedIconLabel var13 = null;
         int var13_int = 0;
         int var14 = 0;
         int var15 = 0;
-        rk[] var16 = null;
+        AlignedIconLabel[] var16 = null;
         int[] var17 = null;
-        rk[] var18 = null;
+        AlignedIconLabel[] var18 = null;
         int[] var19 = null;
         int var10Lifetime1;
         int var13_intLifetime1;

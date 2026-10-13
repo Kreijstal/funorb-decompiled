@@ -129,7 +129,7 @@ final class uo {
           RuntimeException var2_ref2 = null;
           var8 = BrickABrac.field_J ? 1 : 0;
           try {
-            if (ni.field_Sb) {
+            if (StateIconLabel.field_Sb) {
               return true;
             }
             try {

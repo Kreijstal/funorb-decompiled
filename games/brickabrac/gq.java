@@ -110,7 +110,7 @@ final class gq extends UiComponent {
               0 < this.field_Vb.length()) {
               discarded$6 = this.field_Vb.append((char) var2);
             }
-            if (ni.b(true, (char) var2)) {
+            if (StateIconLabel.b(true, (char) var2)) {
               discarded$7 = this.field_Vb.append((char) var2);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
@@ -165,7 +165,7 @@ final class gq extends UiComponent {
               0 < this.field_Vb.length()) {
               discarded$3 = this.field_Vb.append((char) var2Lifetime1);
             }
-            if (ni.b(true, (char) var2Lifetime1)) {
+            if (StateIconLabel.b(true, (char) var2Lifetime1)) {
               discarded$4 = this.field_Vb.append((char) var2Lifetime1);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.field_Vb.length() > 0) {
@@ -234,7 +234,7 @@ final class gq extends UiComponent {
           0 < this.field_Vb.length()) {
           discarded$0 = this.field_Vb.append((char) var2Lifetime2);
         }
-        if (ni.b(true, (char) var2Lifetime2)) {
+        if (StateIconLabel.b(true, (char) var2Lifetime2)) {
           discarded$2 = this.field_Vb.append((char) var2Lifetime2);
           if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.field_Vb.length() > 0) {

@@ -44,7 +44,7 @@ final class NinjaBackground extends BackgroundScene {
           return;
         }
         if (!this.hasSprites((byte) -110)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, fj.ninjaBackgroundColors[colorIndex], 0);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, VerticalScrollbar.ninjaBackgroundColors[colorIndex], 0);
           return;
         }
         RasterCacheSurface var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
@@ -151,7 +151,7 @@ final class NinjaBackground extends BackgroundScene {
         ResourceArchive var7Lifetime1;
         ResourceArchive var7Lifetime2;
         if (!this.hasSprites((byte) -127)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, fj.ninjaBackgroundColors[colorIndex], 0);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, VerticalScrollbar.ninjaBackgroundColors[colorIndex], 0);
           if (obfuscationGuard > -84) {
             var7 = (ResourceArchive) null;
             NinjaBackground.loadRgbSprites(90, 38, (ResourceArchive) null, true);
@@ -184,7 +184,7 @@ final class NinjaBackground extends BackgroundScene {
         int var5 = 0;
         int var5Lifetime1;
         if (-1 < colorIndex) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, fj.ninjaBackgroundColors[colorIndex], 0);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, VerticalScrollbar.ninjaBackgroundColors[colorIndex], 0);
           var5 = 110 / ((obfuscationGuard + 28) / 43);
           if (this.hasSprites((byte) -97)) {
             hc.ninjaSmallSprite.drawTransparent(destinationX, destinationY);

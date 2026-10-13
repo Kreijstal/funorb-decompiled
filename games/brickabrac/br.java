@@ -10,7 +10,7 @@ final class br extends UiComponent {
     private int field_Zb;
     static int[][] field_bc;
     private int field_Qb;
-    private rk[] field_Xb;
+    private AlignedIconLabel[] field_Xb;
     static String field_ac;
     private int field_Wb;
     private int[] field_cc;
@@ -41,13 +41,13 @@ final class br extends UiComponent {
 
     final void a(String param0, int param1, byte param2) {
         try {
-          this.field_Xb[this.field_Wb] = new rk(0L, (UiComponent) null, (UiComponent) null, this.field_ec, (RgbSprite) null, param0);
+          this.field_Xb[this.field_Wb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_ec, (RgbSprite) null, param0);
           this.field_Xb[this.field_Wb].activeFrameSprites = this.field_Tb;
           this.field_Xb[this.field_Wb].useParentFrameBounds = true;
           this.field_Xb[this.field_Wb].verticalAlignment = 1;
           this.addChild(this.field_Xb[this.field_Wb], 0);
           if (param2 < 70) {
-            this.field_Xb = (rk[]) null;
+            this.field_Xb = (AlignedIconLabel[]) null;
           }
           this.field_cc[this.field_Wb] = param1;
           this.field_Wb = this.field_Wb + 1;
@@ -77,7 +77,7 @@ final class br extends UiComponent {
 
     final void a(String param0, int param1, int param2, RgbSprite param3) {
         try {
-          this.field_Xb[this.field_Wb] = new rk(0L, (UiComponent) null, (UiComponent) null, this.field_ec, param3, param0);
+          this.field_Xb[this.field_Wb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_ec, param3, param0);
           this.field_Xb[this.field_Wb].activeFrameSprites = this.field_Tb;
           this.field_Xb[this.field_Wb].useParentFrameBounds = true;
           this.field_Xb[this.field_Wb].verticalAlignment = 1;
@@ -119,7 +119,7 @@ final class br extends UiComponent {
 
     br(UiComponent param0, RgbSprite[] param1, UiComponent param2, UiComponent param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
-        this.field_Xb = new rk[256];
+        this.field_Xb = new AlignedIconLabel[256];
         this.field_dc = -2;
         this.field_cc = new int[256];
         try {
@@ -176,7 +176,7 @@ final class br extends UiComponent {
           var6 = 0;
           if (param1 < -49) {
             for (var7 = 0; this.field_Wb > var7; var7++) {
-              var8 = this.field_Xb[var7].a(this.field_Yb, 24, this.field_Qb);
+              var8 = this.field_Xb[var7].measureIconLabelWidth(this.field_Yb, 24, this.field_Qb);
               if (var6 < var8) {
                 var6 = var8;
               }
@@ -187,13 +187,13 @@ final class br extends UiComponent {
             var9 = br.a(var7Lifetime4, param0, param2, 122);
             this.setBounds(var7Lifetime4, var9, var8Lifetime4, var6, (byte) 64);
             for (var10 = 0; var10 < this.field_Wb; var10++) {
-              this.field_Xb[var10].a(-10411, this.field_Zb * var10 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
+              this.field_Xb[var10].setIconLabelBounds(-10411, this.field_Zb * var10 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
             }
             return;
           }
           this.field_Zb = -94;
           for (var7Lifetime2 = 0; this.field_Wb > var7Lifetime2; var7Lifetime2++) {
-            var8Lifetime2 = this.field_Xb[var7Lifetime2].a(this.field_Yb, 24, this.field_Qb);
+            var8Lifetime2 = this.field_Xb[var7Lifetime2].measureIconLabelWidth(this.field_Yb, 24, this.field_Qb);
             if (var6 < var8Lifetime2) {
               var6 = var8Lifetime2;
             }
@@ -204,11 +204,11 @@ final class br extends UiComponent {
           var9Lifetime2 = br.a(var7Lifetime3, param0, param2, 122);
           this.setBounds(var7Lifetime3, var9Lifetime2, var8Lifetime3, var6, (byte) 64);
           for (var10Lifetime2 = 0; var10Lifetime2 < this.field_Wb; var10Lifetime2++) {
-            this.field_Xb[var10Lifetime2].a(-10411, this.field_Zb * var10Lifetime2 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
+            this.field_Xb[var10Lifetime2].setIconLabelBounds(-10411, this.field_Zb * var10Lifetime2 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6 - 2 * this.field_Vb);
           }
           return;
         }
-        this.field_Xb[this.field_Wb] = new rk(0L, (UiComponent) null, (UiComponent) null, this.field_Pb, (RgbSprite) null, gg.field_m);
+        this.field_Xb[this.field_Wb] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.field_Pb, (RgbSprite) null, gg.field_m);
         this.field_Xb[this.field_Wb].verticalAlignment = 1;
         this.addChild(this.field_Xb[this.field_Wb], 0);
         this.field_cc[this.field_Wb] = -1;
@@ -216,7 +216,7 @@ final class br extends UiComponent {
         var6Lifetime1 = 0;
         if (param1 < -49) {
           for (var7Lifetime1 = 0; this.field_Wb > var7Lifetime1; var7Lifetime1++) {
-            var8Lifetime1 = this.field_Xb[var7Lifetime1].a(this.field_Yb, 24, this.field_Qb);
+            var8Lifetime1 = this.field_Xb[var7Lifetime1].measureIconLabelWidth(this.field_Yb, 24, this.field_Qb);
             if (var6Lifetime1 < var8Lifetime1) {
               var6Lifetime1 = var8Lifetime1;
             }
@@ -227,12 +227,12 @@ final class br extends UiComponent {
           var9Lifetime1 = br.a(var7Lifetime1, param0, param2, 122);
           this.setBounds(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
           for (var10Lifetime1 = 0; var10Lifetime1 < this.field_Wb; var10Lifetime1++) {
-            this.field_Xb[var10Lifetime1].a(-10411, this.field_Zb * var10Lifetime1 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6Lifetime1 - 2 * this.field_Vb);
+            this.field_Xb[var10Lifetime1].setIconLabelBounds(-10411, this.field_Zb * var10Lifetime1 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6Lifetime1 - 2 * this.field_Vb);
           }
         } else {
           this.field_Zb = -94;
           for (var7Lifetime1 = 0; this.field_Wb > var7Lifetime1; var7Lifetime1++) {
-            var8Lifetime1 = this.field_Xb[var7Lifetime1].a(this.field_Yb, 24, this.field_Qb);
+            var8Lifetime1 = this.field_Xb[var7Lifetime1].measureIconLabelWidth(this.field_Yb, 24, this.field_Qb);
             if (var6Lifetime1 < var8Lifetime1) {
               var6Lifetime1 = var8Lifetime1;
             }
@@ -243,7 +243,7 @@ final class br extends UiComponent {
           var9Lifetime1 = br.a(var7Lifetime1, param0, param2, 122);
           this.setBounds(var7Lifetime1, var9Lifetime1, var8Lifetime1, var6Lifetime1, (byte) 64);
           for (var10Lifetime1 = 0; var10Lifetime1 < this.field_Wb; var10Lifetime1++) {
-            this.field_Xb[var10Lifetime1].a(-10411, this.field_Zb * var10Lifetime1 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6Lifetime1 - 2 * this.field_Vb);
+            this.field_Xb[var10Lifetime1].setIconLabelBounds(-10411, this.field_Zb * var10Lifetime1 + this.field_Sb, this.field_Qb, this.field_Yb, this.field_Vb, this.field_Zb, var6Lifetime1 - 2 * this.field_Vb);
           }
         }
     }

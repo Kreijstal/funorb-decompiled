@@ -12,7 +12,7 @@ final class IsaacGenerator {
     private int[] memory;
     private int lastResult;
     static int field_i;
-    static mm field_b;
+    static ScrollPane field_b;
     static int field_n;
     static int field_c;
     static int field_f;

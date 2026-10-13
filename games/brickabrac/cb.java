@@ -159,7 +159,7 @@ final class cb extends k {
         String var3 = null;
         long var4 = 0L;
         try {
-          ni.field_Sb = true;
+          StateIconLabel.field_Sb = true;
           if (param1 != 9) {
             cb.f(-31);
           }

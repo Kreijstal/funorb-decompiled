@@ -210,7 +210,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            rk.a((String) null, (Throwable) ((Object) var1_ref), 105);
+            AlignedIconLabel.a((String) null, (Throwable) ((Object) var1_ref), 105);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -70,8 +70,8 @@ final class Mesh3D {
         UiComponent var3 = null;
         try {
           ok.field_g = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, param0);
-          GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, ChocolateBackground.field_y);
-          f.field_c = new hj(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
+          GameScreen.field_f = new ScrollPaneWithFooter(0L, rq.field_b, hk.field_J, ChocolateBackground.field_y);
+          f.field_c = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
           rg.field_c = new UiComponent(0L, (UiComponent) null);
           sj.field_d = new UiComponent(0L, CappedUrlRequest.field_l);
           sj.field_d.horizontalAlignment = 1;
@@ -83,17 +83,17 @@ final class Mesh3D {
           rg.field_c.addChild(GameplayScreen.field_u, 0);
           rg.field_c.addChild(GameScreen.field_f, 0);
           rg.field_c.addChild(mo.field_R, 0);
-          GameScreen.field_f.field_Qb.field_Qb.copyStyle((byte) -102, CappedUrlRequest.field_l);
-          var5 = GameScreen.field_f.field_Qb.field_Qb;
+          GameScreen.field_f.scrollPane.viewport.copyStyle((byte) -102, CappedUrlRequest.field_l);
+          var5 = GameScreen.field_f.scrollPane.viewport;
           var6 = var5;
-          GameScreen.field_f.field_Qb.field_Qb.verticalAlignment = 1;
+          GameScreen.field_f.scrollPane.viewport.verticalAlignment = 1;
           if (param1 <= 58) {
             field_k = 109;
           }
           var6.horizontalAlignment = 1;
-          f.field_c.field_Qb.field_Qb.copyStyle((byte) -115, CappedUrlRequest.field_l);
-          var3 = f.field_c.field_Qb.field_Qb;
-          f.field_c.field_Qb.field_Qb.verticalAlignment = 1;
+          f.field_c.scrollPane.viewport.copyStyle((byte) -115, CappedUrlRequest.field_l);
+          var3 = f.field_c.scrollPane.viewport;
+          f.field_c.scrollPane.viewport.verticalAlignment = 1;
           var3.horizontalAlignment = 1;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -104,7 +104,7 @@ final class Mesh3D {
         try {
           m.field_b = param0;
           kp.field_b = param1;
-          ni.field_Wb = param2;
+          StateIconLabel.field_Wb = param2;
           pp.a(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
           if (!param3) {
             field_k = -98;

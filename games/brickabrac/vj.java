@@ -19,8 +19,8 @@ final class vj {
           sj.field_d.setBounds(np.field_a, 0, 0, rg.field_c.width, (byte) 64);
           MouseWheelSource.field_c.setBounds(18, 2 + np.field_a, 0, -82 + (rg.field_c.width - ec.field_J - 2), (byte) 64);
           GameplayScreen.field_u.setBounds(18, 2 + np.field_a, -2 + (-ec.field_J + (rg.field_c.width - 80)), 82 + ec.field_J, (byte) 64);
-          GameScreen.field_f.a(true, 2, rg.field_c.width, 0, 20 + (np.field_a + 2), ec.field_J, 20, -2 + (-np.field_a + rg.field_c.height) - 20);
-          f.field_c.a(20, -779, ec.field_J, 2);
+          GameScreen.field_f.setPaneFooterBounds(true, 2, rg.field_c.width, 0, 20 + (np.field_a + 2), ec.field_J, 20, -2 + (-np.field_a + rg.field_c.height) - 20);
+          f.field_c.layoutPaneFooter(20, -779, ec.field_J, 2);
           return;
         }
     }

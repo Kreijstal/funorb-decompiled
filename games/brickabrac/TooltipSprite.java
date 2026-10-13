@@ -231,7 +231,7 @@ final class TooltipSprite extends IntrusiveNode {
           return;
         }
         if (this.hovered) {
-          hj.a(-IntKeyIndex.field_b + MusicPatch.pointerX, -BackgroundScene.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
+          ScrollPaneWithFooter.a(-IntKeyIndex.field_b + MusicPatch.pointerX, -BackgroundScene.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
         }
     }
 

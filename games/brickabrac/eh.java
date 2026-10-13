@@ -82,7 +82,7 @@ final class eh {
           }
           var5[4] = (RgbSprite) ((Object) var18);
           var4.b(4, 121).a(true, false).a(var5, -2147483648);
-          var4.b(5, param1 ^ 13421757).a(fj.a(0, 0, 65793, 1, 0), param1 ^ -2134061876).a(true, false).a(false, -1);
+          var4.b(5, param1 ^ 13421757).a(VerticalScrollbar.a(0, 0, 65793, 1, 0), param1 ^ -2134061876).a(true, false).a(false, -1);
           this.field_q = (ub) ((Object) var4);
           var6 = new up(var4, true);
           var6.field_f = 0;

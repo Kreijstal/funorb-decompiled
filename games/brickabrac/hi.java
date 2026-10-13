@@ -125,7 +125,7 @@ final class hi extends um {
             } else {
               if (OptionsScreen.field_A.length() > 0) {
                 var4_ref_String = OptionsScreen.field_A.toString();
-                if (mm.a(var4_ref_String, (byte) -128)) {
+                if (ScrollPane.a(var4_ref_String, (byte) -128)) {
                   var13 = (String) null;
                   var12 = (String) null;
                   SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
@@ -231,7 +231,7 @@ final class hi extends um {
               } else {
                 if (OptionsScreen.field_A.length() > 0) {
                   var4_ref_StringLifetime1 = OptionsScreen.field_A.toString();
-                  if (mm.a(var4_ref_StringLifetime1, (byte) -128)) {
+                  if (ScrollPane.a(var4_ref_StringLifetime1, (byte) -128)) {
                     var13Lifetime1 = (String) null;
                     var12Lifetime1 = (String) null;
                     SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
@@ -340,7 +340,7 @@ final class hi extends um {
               var4_ref_StringLifetime2 = OptionsScreen.field_A.toString();
               var7Lifetime2 = var4_ref_StringLifetime2;
               var7Lifetime2Lifetime1 = var4_ref_StringLifetime2;
-              if (mm.a(var4_ref_StringLifetime2, (byte) -128)) {
+              if (ScrollPane.a(var4_ref_StringLifetime2, (byte) -128)) {
                 var13Lifetime2 = (String) null;
                 var12Lifetime2 = (String) null;
                 SoundCache.a((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);

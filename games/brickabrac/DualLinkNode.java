@@ -202,9 +202,9 @@ class DualLinkNode extends IntrusiveNode {
           !(pj.field_b.length >= param1)) {
           pj.field_b = new int[2 * param1];
         }
-        if (fj.field_Pb == null ||
-          !(param2 + param1 <= fj.field_Pb.length)) {
-          fj.field_Pb = new int[2 * (param2 + param1)];
+        if (VerticalScrollbar.field_Pb == null ||
+          !(param2 + param1 <= VerticalScrollbar.field_Pb.length)) {
+          VerticalScrollbar.field_Pb = new int[2 * (param2 + param1)];
         }
         if (null == ga.field_l ||
           !(ga.field_l.length >= param1)) {

@@ -92,7 +92,7 @@ final class hk extends ib implements hf, en {
           var3_int = cd.field_e;
           wd.field_w = new UiComponent(0L, (UiComponent) null);
           if (param2 == null) {
-            rk.a("QC1", (Throwable) null, param1 ^ 118);
+            AlignedIconLabel.a("QC1", (Throwable) null, param1 ^ 118);
             return;
           }
           param2.decodedFilePolicy = 0;
@@ -101,7 +101,7 @@ final class hk extends ib implements hf, en {
           nh.field_c = new rg(var3_int, param2, param2, new rm());
           var4 = gj.b(0);
           if (var4 == null) {
-            rk.a("QC2", (Throwable) null, param1 - 14);
+            AlignedIconLabel.a("QC2", (Throwable) null, param1 - 14);
             return;
           }
           ResourceRequest.a(var4, false);

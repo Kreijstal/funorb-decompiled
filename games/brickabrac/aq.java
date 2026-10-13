@@ -42,7 +42,7 @@ final class aq implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              rk.a((String) null, (Throwable) ((Object) var1), 96);
+              AlignedIconLabel.a((String) null, (Throwable) ((Object) var1), 96);
               decompiledRegionSelector0 = 1;
             }
             if (decompiledRegionSelector0 == 0) {

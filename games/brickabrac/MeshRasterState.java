@@ -23,7 +23,7 @@ final class MeshRasterState {
         viewportHeight = bottom - top;
         MeshRasterState.updateProjectionCenter();
         if (rowOffsets.length < viewportHeight) {
-          rowOffsets = new int[fj.a(viewportHeight, (byte) 108)];
+          rowOffsets = new int[VerticalScrollbar.a(viewportHeight, (byte) 108)];
         }
         int var4 = top * Rasterizer2D.width + left;
         for (var5 = 0; var5 < viewportHeight; var5++) {

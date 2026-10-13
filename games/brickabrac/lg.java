@@ -304,7 +304,7 @@ class lg extends d {
           var7 = var9.a((oc) (this), (byte) 77, param1);
           var8 = var9.a(param0, (byte) -100, (oc) (this));
           do {
-            hj.a(-2 + (var8 + var6.field_s), var7 - (-var6.field_j + 2), param3 + 132, var6.field_n + 2, 2 + var6.field_r);
+            ScrollPaneWithFooter.a(-2 + (var8 + var6.field_s), var7 - (-var6.field_j + 2), param3 + 132, var6.field_n + 2, 2 + var6.field_r);
             var6 = var6.field_k;
           } while (var6 != null);
         }

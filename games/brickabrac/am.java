@@ -7,7 +7,7 @@ final class am extends UiComponent {
     static String field_cc;
     private UiComponent[] field_Sb;
     private UiComponent field_Ub;
-    private ni field_bc;
+    private StateIconLabel field_bc;
     private UiComponent field_Pb;
     private int field_ac;
     static UiComponent field_Qb;
@@ -150,7 +150,7 @@ final class am extends UiComponent {
         return stackIn_6_0;
     }
 
-    am(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, ni param9, UiComponent param10, String param11, long param12) {
+    am(int param0, int param1, int param2, int param3, int param4, UiComponent param5, UiComponent param6, UiComponent param7, UiComponent param8, StateIconLabel param9, UiComponent param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
         int var15_int = 0;
@@ -168,13 +168,13 @@ final class am extends UiComponent {
         int var26 = 0;
         UiComponent[] var28 = null;
         Object stackIn_8_0;
-        ni stackIn_8_1;
-        ni stackIn_8_2;
+        StateIconLabel stackIn_8_1;
+        StateIconLabel stackIn_8_2;
         long stackIn_8_3;
-        ni stackIn_8_4;
+        StateIconLabel stackIn_8_4;
         Object stackIn_9_0;
-        ni stackIn_9_1;
-        ni stackIn_9_2;
+        StateIconLabel stackIn_9_1;
+        StateIconLabel stackIn_9_2;
         String stackIn_9_5;
         UiComponent stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
@@ -196,11 +196,11 @@ final class am extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15_ref = null;
         Object stackIn_8_0Lifetime1;
-        ni stackIn_8_1Lifetime1;
-        ni stackIn_8_2Lifetime1;
+        StateIconLabel stackIn_8_1Lifetime1;
+        StateIconLabel stackIn_8_2Lifetime1;
         Object stackIn_9_0Lifetime1;
-        ni stackIn_9_1Lifetime1;
-        ni stackIn_9_2Lifetime1;
+        StateIconLabel stackIn_9_1Lifetime1;
+        StateIconLabel stackIn_9_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -248,7 +248,7 @@ final class am extends UiComponent {
                 stackIn_8_1 = null;
                 stackIn_8_2 = null;
                 stackIn_8_3 = 0L;
-                stackIn_8_4 = (ni) (param9);
+                stackIn_8_4 = (StateIconLabel) (param9);
                 if (gh.field_f < 7) {
                   stackIn_8_0Lifetime1 = this;
                   stackIn_8_1Lifetime1 = null;
@@ -266,7 +266,7 @@ final class am extends UiComponent {
                 stackIn_9_2Lifetime1 = null;
                 stackIn_9_5 = ek.field_gb;
               }
-              this.field_bc = new ni(stackIn_8_3, stackIn_8_4, stackIn_9_5);
+              this.field_bc = new StateIconLabel(stackIn_8_3, stackIn_8_4, stackIn_9_5);
               this.field_Xb.addChild(this.field_bc, 0);
             }
             var28 = new UiComponent[3];
@@ -353,7 +353,7 @@ final class am extends UiComponent {
               var19 = var20;
             }
             if (this.field_bc != null) {
-              var20Lifetime2 = this.field_bc.a((byte) 11, 4);
+              var20Lifetime2 = this.field_bc.measureIconLabelWidth((byte) 11, 4);
               if (var20Lifetime2 > var19) {
                 var19 = var20Lifetime2;
               }
@@ -368,8 +368,8 @@ final class am extends UiComponent {
             this.field_Yb.setBounds(np.field_a, var21, 0, 0, (byte) 64);
             var21 = var21 + (10 + np.field_a);
             if (this.field_bc != null) {
-              var20Lifetime3 = this.field_bc.a((byte) 11, 4);
-              this.field_bc.a(var20Lifetime3, 4, np.field_a, var21, true, (-var20Lifetime3 + var19) / 2 + 13);
+              var20Lifetime3 = this.field_bc.measureIconLabelWidth((byte) 11, 4);
+              this.field_bc.setIconLabelBounds(var20Lifetime3, 4, np.field_a, var21, true, (-var20Lifetime3 + var19) / 2 + 13);
               var21 = var21 + (np.field_a + 10);
             }
             var28[0].setBounds(var17Lifetime5, var21, 13, var16Lifetime2, (byte) 64);
@@ -475,7 +475,7 @@ final class am extends UiComponent {
 
     final int b(boolean param0, int param1) {
         int var3 = 0;
-        ni stackIn_9_0 = null;
+        StateIconLabel stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         UiComponent stackIn_18_0 = null;
         boolean stackIn_19_1 = false;

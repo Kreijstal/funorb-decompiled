@@ -279,7 +279,7 @@ final class MenuSelection {
               var4.unlink((byte) 111);
               return;
             }
-            rk.a("A1: " + eq.c((byte) -101), (Throwable) null, 123);
+            AlignedIconLabel.a("A1: " + eq.c((byte) -101), (Throwable) null, 123);
             hn.a((byte) 60);
           } else {
             var3_ref_wj = (wj) (uc.field_q.first(-110));

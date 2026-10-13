@@ -132,7 +132,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         gb var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (hj.field_Yb > hc.field_f) {
+          if (ScrollPaneWithFooter.field_Yb > hc.field_f) {
             hc.field_f = hc.field_f + 1;
           }
           if (BallPulseEffect.framebuffer.height != ej.field_O) {
@@ -167,7 +167,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           }
           var9 = sj.a(om.field_oc, np.field_a, -13294, param0);
           if (var9 != null) {
-            hj.a(0, var9);
+            ScrollPaneWithFooter.a(0, var9);
           }
           var8 = LevelResultSubmission.c(-9235);
           if (var8 == null) {

@@ -7,12 +7,12 @@ final class MatchCompleteScreen extends MatchResultScreen {
     static String[] field_y;
     static String field_F;
     static int field_E;
-    static rk[][] field_A;
+    static AlignedIconLabel[][] field_A;
     static UiComponent field_x;
 
     public static void f(byte param0) {
         field_z = null;
-        field_A = (rk[][]) null;
+        field_A = (AlignedIconLabel[][]) null;
         field_C = (int[][]) null;
         field_x = null;
         int var1 = 55 / ((-70 - param0) / 41);
@@ -106,7 +106,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
         try {
           for (var2_int = param1; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!ni.b(true, (char) var3) &&
+            if (!StateIconLabel.b(true, (char) var3) &&
               !eh.a((char) var3, (byte) 95)) {
               return true;
             }

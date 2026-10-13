@@ -28,9 +28,9 @@ abstract class sl extends DualLinkNode {
     abstract Object g(int param0);
 
     final static void a(String[][] param0, RgbSprite[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, ResourceArchive param7, int[] param8, RgbSprite[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
-        rk[] array$0 = null;
-        rk[] array$1 = null;
-        rk[] array$2 = null;
+        AlignedIconLabel[] array$0 = null;
+        AlignedIconLabel[] array$1 = null;
+        AlignedIconLabel[] array$2 = null;
         int var19 = 0;
         UiComponent stackIn_6_0;
         UiComponent stackIn_6_1;
@@ -106,20 +106,20 @@ abstract class sl extends DualLinkNode {
           Ball.field_A = new UiComponent(0L, (UiComponent) null);
           FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
           GameUiController.field_a = new UiComponent(0L, ik.field_a, pf.field_c);
-          IsaacGenerator.field_b = new mm(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
           Ball.field_A.addChild(FarmBackground.field_v, 0);
           if (vd.field_e) {
             Ball.field_A.addChild(GameUiController.field_a, 0);
           }
           Ball.field_A.addChild(IsaacGenerator.field_b, 0);
-          IsaacGenerator.field_b.field_Qb.copyStyle((byte) -74, CappedUrlRequest.field_l);
-          IsaacGenerator.field_b.field_Qb.verticalAlignment = 1;
-          var23 = IsaacGenerator.field_b.field_Qb;
+          IsaacGenerator.field_b.viewport.copyStyle((byte) -74, CappedUrlRequest.field_l);
+          IsaacGenerator.field_b.viewport.verticalAlignment = 1;
+          var23 = IsaacGenerator.field_b.viewport;
           var24 = var23;
           var24.horizontalAlignment = 1;
           dn.field_N = new UiComponent(0L, CappedUrlRequest.field_l);
           dn.field_N.horizontalAlignment = 1;
-          HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, fj.field_Rb.toUpperCase());
+          HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, VerticalScrollbar.field_Rb.toUpperCase());
           sc.field_b = new UiComponent(0L, qh.field_j, rl.field_c.toUpperCase());
           ll.field_e = new UiComponent(0L, FarmBackground.field_x);
           nk.field_g = new UiComponent(0L, MainMenuScreen.field_t, nk.field_b);
@@ -128,7 +128,7 @@ abstract class sl extends DualLinkNode {
           la.field_b = new UiComponent(0L, cd.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, cd.field_d, r.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, ik.field_a, ByteStorage.field_d);
-          rl.field_e = new mm(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
           gj.field_b = new UiComponent(0L, fm.field_b, ua.field_e.toUpperCase());
           gj.field_b.enabled = vd.field_e;
           stackIn_6_0 = null;
@@ -181,7 +181,7 @@ abstract class sl extends DualLinkNode {
           um.field_b.horizontalAlignment = 1;
           BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
           wd.field_E = new UiComponent(0L, ik.field_a, pf.field_c);
-          TimedSplashScreen.field_u = new mm(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
+          TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), am.field_Qb, ic.field_c);
           ji.field_b.addChild(um.field_b, 0);
           ji.field_b.addChild(BoundedFile.field_g, 0);
           if (vd.field_e) {
@@ -193,37 +193,37 @@ abstract class sl extends DualLinkNode {
           rg.field_e = new UiComponent(0L, FarmBackground.field_x);
           jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           gb.field_l = new UiComponent[4 + param13];
-          MatchCompleteScreen.field_A = new rk[4 + param13][];
+          MatchCompleteScreen.field_A = new AlignedIconLabel[4 + param13][];
           gb.field_l[0] = new UiComponent(0L, wi.field_n, ro.field_H);
-          MatchCompleteScreen.field_A[0] = new rk[6];
+          MatchCompleteScreen.field_A[0] = new AlignedIconLabel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            MatchCompleteScreen.field_A[0][1 + var17_int] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
+            MatchCompleteScreen.field_A[0][1 + var17_int] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
             gb.field_l[1] = new UiComponent(0L, wi.field_n, og.field_ac);
-            array$0 = new rk[1 + w.field_n.length];
+            array$0 = new AlignedIconLabel[1 + w.field_n.length];
             MatchCompleteScreen.field_A[1] = array$0;
-            MatchCompleteScreen.field_A[1][0] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[1][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < w.field_n.length; var17_intLifetime1++) {
-              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
+              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
             }
           }
           gb.field_l[2] = new UiComponent(0L, wi.field_n, PlayerInputBatch.field_j);
-          MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
+          MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < IntArrayRequest.field_t) {
             gb.field_l[3] = new UiComponent(0L, wi.field_n, uc.field_r);
-            array$1 = new rk[IntArrayRequest.field_t + 1];
+            array$1 = new AlignedIconLabel[IntArrayRequest.field_t + 1];
             MatchCompleteScreen.field_A[3] = array$1;
-            MatchCompleteScreen.field_A[3][0] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < IntArrayRequest.field_t; var17_intLifetime2++) {
-              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
+              MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
             gb.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
-            array$2 = new rk[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
+            array$2 = new AlignedIconLabel[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
-            MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
+            MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
             for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {
               if (BackgroundScene.field_k != null) {
                 if (BackgroundScene.field_k[var17_intLifetime3] == null) {
@@ -243,7 +243,7 @@ abstract class sl extends DualLinkNode {
               } else {
                 var20 = null;
               }
-              MatchCompleteScreen.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
+              MatchCompleteScreen.field_A[4 + var17_intLifetime3][var18 + 1] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param13 > var17_intLifetime4; var17_intLifetime4++) {
@@ -253,8 +253,8 @@ abstract class sl extends DualLinkNode {
             if (null != MatchCompleteScreen.field_A[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; var18Lifetime1 < MatchCompleteScreen.field_A[var17_intLifetime4].length; var18Lifetime1++) {
                 if (null != MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1] &&
-                  null != MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].field_Rb) {
-                  MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].field_Rb.lineSpacing = 11;
+                  null != MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].label) {
+                  MatchCompleteScreen.field_A[var17_intLifetime4][var18Lifetime1].label.lineSpacing = 11;
                 }
               }
             }

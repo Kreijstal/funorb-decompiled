@@ -7,7 +7,7 @@ final class og extends UiComponent {
     private int field_dc;
     private char[] field_fc;
     static String field_ac;
-    private rk[] field_Qb;
+    private AlignedIconLabel[] field_Qb;
     static ResourceArchive field_gc;
     private int field_Rb;
     private int field_Sb;
@@ -175,9 +175,9 @@ final class og extends UiComponent {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         og var4 = null;
-        rk var5 = null;
+        AlignedIconLabel var5 = null;
         int var6 = 0;
-        rk stackIn_13_0 = null;
+        AlignedIconLabel stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
         int stackIn_17_0 = 0;
         int stackIn_17_1 = 0;
@@ -245,16 +245,16 @@ final class og extends UiComponent {
 
     final void f(byte param0) {
         RuntimeException runtimeException = null;
-        rk[] var2 = null;
+        AlignedIconLabel[] var2 = null;
         int var3 = 0;
-        rk var4 = null;
+        AlignedIconLabel var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           var2 = this.field_Qb;
           if (param0 != 41) {
-            this.field_Qb = (rk[]) null;
+            this.field_Qb = (AlignedIconLabel[]) null;
           }
           var3 = 0;
           scanLoop1: while (true) {
@@ -289,9 +289,9 @@ final class og extends UiComponent {
     final boolean i(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        rk[] var3 = null;
+        AlignedIconLabel[] var3 = null;
         int var4 = 0;
-        rk var5 = null;
+        AlignedIconLabel var5 = null;
         int var6 = 0;
         int stackIn_13_1 = 0;
         int stackIn_17_0 = 0;
@@ -401,7 +401,7 @@ final class og extends UiComponent {
             this.a(0, (byte) -81);
           }
           if (param2 != 0) {
-            this.field_Qb = (rk[]) null;
+            this.field_Qb = (AlignedIconLabel[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -448,7 +448,7 @@ final class og extends UiComponent {
           this.field_dc = var10.descent + (var10.ascent + 2);
           this.field_Pb = this.field_dc * this.field_cc;
           this.field_Rb = 0;
-          this.field_Qb = new rk[this.field_cc];
+          this.field_Qb = new AlignedIconLabel[this.field_cc];
           var11 = "<col=999999>";
           var12 = "</col>";
           var13 = 0;
@@ -463,7 +463,7 @@ final class og extends UiComponent {
                 this.field_Ub[var13] == -1) {
                 var14 = uf.field_e;
               }
-              this.field_Qb[var13] = new rk(0L, param2, (UiComponent) null, param3, (RgbSprite) (var14), param6[var13]);
+              this.field_Qb[var13] = new AlignedIconLabel(0L, param2, (UiComponent) null, param3, (RgbSprite) (var14), param6[var13]);
               this.addChild(this.field_Qb[var13], 0);
               var15 = var10.measureText(param6[var13]);
               if (var15 > this.field_Rb) {
@@ -1467,7 +1467,7 @@ final class og extends UiComponent {
           }
           var7_int = param0;
           while (var7_int < this.field_cc) {
-            this.field_Qb[var7_int].a(-10411, this.field_Qb[var7_int].localY, param4, param3, 0, this.field_dc, this.field_Xb);
+            this.field_Qb[var7_int].setIconLabelBounds(-10411, this.field_Qb[var7_int].localY, param4, param3, 0, this.field_dc, this.field_Xb);
             var7_int++;
             if (var9 != 0) {
               return;

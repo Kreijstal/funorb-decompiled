@@ -271,9 +271,9 @@ final class kb extends UiComponent {
     final static UiComponent h(int param0) {
         if (param0 != 2) {
           field_Vb = (UiComponent) null;
-          return GameScreen.field_f.field_Xb;
+          return GameScreen.field_f.content;
         }
-        return GameScreen.field_f.field_Xb;
+        return GameScreen.field_f.content;
     }
 
     final static void a(String param0, int param1) {

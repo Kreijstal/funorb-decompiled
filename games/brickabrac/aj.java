@@ -30,9 +30,9 @@ final class aj {
     final static UiComponent a(int param0) {
         if (param0 != 1345) {
           aj.b(94);
-          return rl.field_e.field_Rb;
+          return rl.field_e.content;
         }
-        return rl.field_e.field_Rb;
+        return rl.field_e.content;
     }
 
     final static int a(int param0, int param1, int param2) {

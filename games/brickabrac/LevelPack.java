@@ -71,7 +71,7 @@ final class LevelPack {
 
     final static UiComponent c(int param0) {
         int var1 = -61 / ((param0 + 36) / 63);
-        return TimedSplashScreen.field_u.field_Rb;
+        return TimedSplashScreen.field_u.content;
     }
 
     LevelPack(int packId, int scoreOffset, int completionWord) {
