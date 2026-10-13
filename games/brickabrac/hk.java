@@ -3,7 +3,7 @@
  */
 final class hk extends ib implements hf, en {
     static String field_L;
-    static jp field_Q;
+    static RgbSprite field_Q;
     private String field_N;
     static boolean field_R;
     private d field_M;
@@ -11,7 +11,7 @@ final class hk extends ib implements hf, en {
     private boolean field_V;
     private boolean field_K;
     private d field_U;
-    static jp field_I;
+    static RgbSprite field_I;
     private vb field_P;
     static int field_W;
     static String field_J;
@@ -31,7 +31,7 @@ final class hk extends ib implements hf, en {
           a.field_u.a(this.field_N, this.field_o + (param1 + 20), param0 - (-this.field_w - 15), -40 + this.field_t, this.field_s, 16777215, -1, 1, 0, a.field_u.field_F);
         }
         if (null != this.field_O) {
-          lb.c(param1 + 10, param0 + 134, this.field_t - 20, 4210752);
+          Rasterizer2D.drawHorizontalLine(param1 + 10, param0 + 134, this.field_t - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -109,18 +109,18 @@ final class hk extends ib implements hf, en {
           ko.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (dh) null, 0, 65793, 2245737, 8947848);
           nb.field_e = ug.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
           cp.field_K = ug.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
-          var5 = lb.field_c;
-          var6 = lb.field_d;
-          var14 = lb.field_l;
-          uf.field_e = new jp(10, 14);
-          uf.field_e.g();
+          var5 = Rasterizer2D.width;
+          var6 = Rasterizer2D.height;
+          var14 = Rasterizer2D.pixels;
+          uf.field_e = new RgbSprite(10, 14);
+          uf.field_e.bindRasterTarget();
           for (var8 = 2; 7 > var8; var8++) {
-            lb.g(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            Rasterizer2D.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           if (param1 != 90) {
             hk.i((byte) 86);
           }
-          lb.a(var14, var5, var6);
+          Rasterizer2D.bind(var14, var5, var6);
           fe.field_kb = e.a(nb.field_e, ko.field_j, var4, 4, cp.field_K);
           wd.field_w.field_bb = new NodeDeque();
           return;

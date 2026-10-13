@@ -5,9 +5,9 @@ import java.io.*;
 
 final class ef extends IOException {
     static String field_f;
-    static jp[] field_b;
+    static RgbSprite[] field_b;
     static oe[] field_a;
-    static jp[] field_e;
+    static RgbSprite[] field_e;
     static int[] field_d;
     static String field_c;
 
@@ -38,14 +38,14 @@ final class ef extends IOException {
         super(param0);
     }
 
-    final static void a(jp param0, jp param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, jp param10) {
-        param0.d((-param0.field_x + param9) / 2 + (param2 + (param4 * 5 >> 16)), param5);
-        param1.c((10 * param4 >> 16) + (param2 - (-((-param1.field_x + param9) / 2) - 10 / param8)), -(22 / param8) + param5 + (param6 + 480 - param1.field_z));
+    final static void a(RgbSprite param0, RgbSprite param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite param10) {
+        param0.drawAt((-param0.canvasWidth + param9) / 2 + (param2 + (param4 * 5 >> 16)), param5);
+        param1.drawTransparent((10 * param4 >> 16) + (param2 - (-((-param1.canvasWidth + param9) / 2) - 10 / param8)), -(22 / param8) + param5 + (param6 + 480 - param1.canvasHeight));
         if (param3) {
           return;
         }
         try {
-          param10.c((-param10.field_x + param9) / 2 + param2 + ((20 * param4 >> 16) + 10 / param8), 480 + (param5 + param6 - param10.field_z));
+          param10.drawTransparent((-param10.canvasWidth + param9) / 2 + param2 + ((20 * param4 >> 16) + 10 / param8), 480 + (param5 + param6 - param10.canvasHeight));
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ef.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ')');
         }

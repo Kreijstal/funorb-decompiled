@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fb extends jp {
-    fb(int param0, int param1) {
-        super(param0, param1);
+final class ArgbSprite extends RgbSprite {
+    ArgbSprite(int width, int height) {
+        super(width, height);
     }
 
     private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -69,35 +69,35 @@ final class fb extends jp {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_E;
-        param1 = param1 + (this.field_z - this.field_C - this.field_F);
-        int var3 = param0 + (param1 + this.field_C - 1) * lb.field_c;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + (this.canvasHeight - this.height - this.offsetY);
+        int var3 = param0 + (param1 + this.height - 1) * Rasterizer2D.width;
         int var4 = 0;
-        int var5 = this.field_C;
-        int var6 = this.field_D;
-        int var7 = -lb.field_c - var6;
+        int var5 = this.height;
+        int var6 = this.width;
+        int var7 = -Rasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < lb.field_b) {
-          var5 = var5 - (lb.field_b - param1);
-          param1 = lb.field_b;
+        if (param1 < Rasterizer2D.clipTop) {
+          var5 = var5 - (Rasterizer2D.clipTop - param1);
+          param1 = Rasterizer2D.clipTop;
         }
-        if (param1 + var5 > lb.field_j) {
-          var9 = param1 + var5 - lb.field_j;
+        if (param1 + var5 > Rasterizer2D.clipBottom) {
+          var9 = param1 + var5 - Rasterizer2D.clipBottom;
           var5 = var5 - var9;
-          var3 = var3 - var9 * lb.field_c;
+          var3 = var3 - var9 * Rasterizer2D.width;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < lb.field_i) {
-          var9Lifetime1 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = lb.field_i;
+          param0 = Rasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > lb.field_f) {
-          var9Lifetime2 = param0 + var6 - lb.field_f;
+        if (param0 + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -106,7 +106,7 @@ final class fb extends jp {
           var5 <= 0) {
           return;
         }
-        fb.d(lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -147,39 +147,39 @@ final class fb extends jp {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void drawTransparent(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_E;
-        param1 = param1 + this.field_F;
-        int var3 = param0 + param1 * lb.field_c;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * Rasterizer2D.width;
         int var4 = 0;
-        int var5 = this.field_C;
-        int var6 = this.field_D;
-        int var7 = lb.field_c - var6;
+        int var5 = this.height;
+        int var6 = this.width;
+        int var7 = Rasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < lb.field_b) {
-          var9 = lb.field_b - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - y;
           var5 = var5 - var9;
-          param1 = lb.field_b;
+          y = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * lb.field_c;
+          var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > lb.field_j) {
-          var5 = var5 - (param1 + var5 - lb.field_j);
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (y + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var9Lifetime1 = lb.field_i - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = lb.field_i;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > lb.field_f) {
-          var9Lifetime2 = param0 + var6 - lb.field_f;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -188,7 +188,7 @@ final class fb extends jp {
           var5 <= 0) {
           return;
         }
-        fb.d(lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -223,35 +223,35 @@ final class fb extends jp {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_E;
-        param1 = param1 + this.field_F;
-        int var4 = param0 + param1 * lb.field_c;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * Rasterizer2D.width;
         int var5 = 0;
-        int var6 = this.field_C;
-        int var7 = this.field_D;
-        int var8 = lb.field_c - var7;
+        int var6 = this.height;
+        int var7 = this.width;
+        int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < lb.field_b) {
-          var10 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - param1;
           var6 = var6 - var10;
-          param1 = lb.field_b;
+          param1 = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lb.field_c;
+          var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > lb.field_j) {
-          var6 = var6 - (param1 + var6 - lb.field_j);
+        if (param1 + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var10Lifetime1 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lb.field_i;
+          param0 = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lb.field_f) {
-          var10Lifetime2 = param0 + var7 - lb.field_f;
+        if (param0 + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -260,7 +260,7 @@ final class fb extends jp {
           var6 <= 0) {
           return;
         }
-        fb.b(0, 0, 0, lb.field_l, this.field_G, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.b(0, 0, 0, Rasterizer2D.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     private final static void f(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -347,37 +347,37 @@ final class fb extends jp {
         int var13Lifetime1;
         int var14Lifetime1;
         int var19Lifetime1;
-        var3 = this.field_D >> 1;
-        var4 = this.field_C >> 1;
-        param0 = param0 + this.field_E / 2;
-        param1 = param1 + this.field_F / 2;
-        if (param0 >= lb.field_i) {
+        var3 = this.width >> 1;
+        var4 = this.height >> 1;
+        param0 = param0 + this.offsetX / 2;
+        param1 = param1 + this.offsetY / 2;
+        if (param0 >= Rasterizer2D.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = lb.field_i - param0 << 1;
+          stackIn_3_0 = Rasterizer2D.clipLeft - param0 << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= lb.field_f) {
-          stackIn_6_0 = this.field_D - 2;
+        if (param0 + var3 <= Rasterizer2D.clipRight) {
+          stackIn_6_0 = this.width - 2;
         } else {
-          stackIn_6_0 = (lb.field_f - param0 << 1) - 2;
+          stackIn_6_0 = (Rasterizer2D.clipRight - param0 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= lb.field_b) {
+        if (param1 >= Rasterizer2D.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = lb.field_b - param1 << 1;
+          stackIn_9_0 = Rasterizer2D.clipTop - param1 << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= lb.field_j) {
-          stackIn_12_0 = this.field_C - 2;
+        if (param1 + var4 <= Rasterizer2D.clipBottom) {
+          stackIn_12_0 = this.height - 2;
         } else {
-          stackIn_12_0 = (lb.field_j - param1 << 1) - 2;
+          stackIn_12_0 = (Rasterizer2D.clipBottom - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
-          var10 = var9 * this.field_D + var5;
-          var11 = (param1 + (var9 >> 1)) * lb.field_c + (param0 + (var5 >> 1));
+          var10 = var9 * this.width + var5;
+          var11 = (param1 + (var9 >> 1)) * Rasterizer2D.width + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -387,12 +387,12 @@ final class fb extends jp {
             var17 = 0;
             var18 = 0;
             for (var19 = 0; var19 < 4; var19++) {
-              stackIn_20_0 = this.field_G;
+              stackIn_20_0 = this.pixels;
               stackIn_20_1 = var10 + (var19 & 1);
               if ((var19 & 2) != 0) {
                 stackIn_21_2 = 0;
               } else {
-                stackIn_21_2 = this.field_D;
+                stackIn_21_2 = this.width;
               }
               var13Lifetime1 = stackIn_20_0[stackIn_20_1 + stackIn_21_2];
               var14Lifetime1 = var13Lifetime1 >>> 24;
@@ -406,8 +406,8 @@ final class fb extends jp {
               var16 = var16 / var18 << 8;
               var19Lifetime1 = var18 >> 2;
               var20 = 256 - var19Lifetime1;
-              var21 = lb.field_l[var11];
-              lb.field_l[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = Rasterizer2D.pixels[var11];
+              Rasterizer2D.pixels[var11] = (var19Lifetime1 * var15 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var16 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
             var12 += 2;
             var11++;
@@ -447,32 +447,32 @@ final class fb extends jp {
         int var15Lifetime1;
         int var19Lifetime1;
         int[] var23Lifetime1;
-        var3 = this.field_D >> 2;
-        var4 = this.field_C >> 2;
-        param0 = param0 + this.field_E / 4;
-        param1 = param1 + this.field_F / 4;
-        if (param0 >= lb.field_i) {
+        var3 = this.width >> 2;
+        var4 = this.height >> 2;
+        param0 = param0 + this.offsetX / 4;
+        param1 = param1 + this.offsetY / 4;
+        if (param0 >= Rasterizer2D.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = lb.field_i - param0 << 2;
+          stackIn_3_0 = Rasterizer2D.clipLeft - param0 << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= lb.field_f) {
-          stackIn_6_0 = this.field_D - 4;
+        if (param0 + var3 <= Rasterizer2D.clipRight) {
+          stackIn_6_0 = this.width - 4;
         } else {
-          stackIn_6_0 = (lb.field_f - param0 << 2) - 4;
+          stackIn_6_0 = (Rasterizer2D.clipRight - param0 << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= lb.field_b) {
+        if (param1 >= Rasterizer2D.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = lb.field_b - param1 << 2;
+          stackIn_9_0 = Rasterizer2D.clipTop - param1 << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= lb.field_j) {
-          stackIn_12_0 = this.field_C - 4;
+        if (param1 + var4 <= Rasterizer2D.clipBottom) {
+          stackIn_12_0 = this.height - 4;
         } else {
-          stackIn_12_0 = (lb.field_j - param1 << 2) - 4;
+          stackIn_12_0 = (Rasterizer2D.clipBottom - param1 << 2) - 4;
         }
         var8 = stackIn_12_0;
         var23 = new int[16];
@@ -480,11 +480,11 @@ final class fb extends jp {
         var9 = var22;
         for (var10 = var7; var10 <= var8; var10 += 4) {
           for (var11 = var5; var11 <= var6; var11 += 4) {
-            var12 = var10 * this.field_D + var11;
-            var13 = (param1 + (var10 >> 2)) * lb.field_c + (param0 + (var11 >> 2));
+            var12 = var10 * this.width + var11;
+            var13 = (param1 + (var10 >> 2)) * Rasterizer2D.width + (param0 + (var11 >> 2));
             for (var14 = 0; var14 < 4; var14++) {
               for (var15 = 0; var15 < 4; var15++) {
-                var9[(var14 << 2) + var15] = this.field_G[var12 + var14 * this.field_D + var15];
+                var9[(var14 << 2) + var15] = this.pixels[var12 + var14 * this.width + var15];
               }
             }
             var23Lifetime1 = var22;
@@ -505,8 +505,8 @@ final class fb extends jp {
               var17 = var17 / var15Lifetime1 << 8;
               var19Lifetime1 = var15Lifetime1 >> 4;
               var20 = 256 - var19Lifetime1;
-              var21 = lb.field_l[var13];
-              lb.field_l[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
+              var21 = Rasterizer2D.pixels[var13];
+              Rasterizer2D.pixels[var13] = (var19Lifetime1 * var16 + var20 * (var21 & 16711935) & -16711936) + (var19Lifetime1 * var17 + var20 * (var21 & 65280) & 16711680) >>> 8;
             }
           }
         }
@@ -523,23 +523,23 @@ final class fb extends jp {
           param3 <= 0) {
           return;
         }
-        int var5 = this.field_D;
-        int var6 = this.field_C;
+        int var5 = this.width;
+        int var6 = this.height;
         int var7 = 0;
         int var8 = 0;
-        int var9 = this.field_x;
-        int var10 = this.field_z;
+        int var9 = this.canvasWidth;
+        int var10 = this.canvasHeight;
         int var11 = (var9 << 16) / param2;
         int var12 = (var10 << 16) / param3;
-        if (this.field_E > 0) {
-          var13 = ((this.field_E << 16) + var11 - 1) / var11;
+        if (this.offsetX > 0) {
+          var13 = ((this.offsetX << 16) + var11 - 1) / var11;
           param0 = param0 + var13;
-          var7 = var7 + (var13 * var11 - (this.field_E << 16));
+          var7 = var7 + (var13 * var11 - (this.offsetX << 16));
         }
-        if (this.field_F > 0) {
-          var13Lifetime1 = ((this.field_F << 16) + var12 - 1) / var12;
+        if (this.offsetY > 0) {
+          var13Lifetime1 = ((this.offsetY << 16) + var12 - 1) / var12;
           param1 = param1 + var13Lifetime1;
-          var8 = var8 + (var13Lifetime1 * var12 - (this.field_F << 16));
+          var8 = var8 + (var13Lifetime1 * var12 - (this.offsetY << 16));
         }
         if (var5 < var9) {
           param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
@@ -547,30 +547,30 @@ final class fb extends jp {
         if (var6 < var10) {
           param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
         }
-        var13Lifetime2 = param0 + param1 * lb.field_c;
-        int var14 = lb.field_c - param2;
-        if (param1 + param3 > lb.field_j) {
-          param3 = param3 - (param1 + param3 - lb.field_j);
+        var13Lifetime2 = param0 + param1 * Rasterizer2D.width;
+        int var14 = Rasterizer2D.width - param2;
+        if (param1 + param3 > Rasterizer2D.clipBottom) {
+          param3 = param3 - (param1 + param3 - Rasterizer2D.clipBottom);
         }
-        if (param1 < lb.field_b) {
-          var15 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var15 = Rasterizer2D.clipTop - param1;
           param3 = param3 - var15;
-          var13Lifetime2 = var13Lifetime2 + var15 * lb.field_c;
+          var13Lifetime2 = var13Lifetime2 + var15 * Rasterizer2D.width;
           var8 = var8 + var12 * var15;
         }
-        if (param0 + param2 > lb.field_f) {
-          var15Lifetime1 = param0 + param2 - lb.field_f;
+        if (param0 + param2 > Rasterizer2D.clipRight) {
+          var15Lifetime1 = param0 + param2 - Rasterizer2D.clipRight;
           param2 = param2 - var15Lifetime1;
           var14 = var14 + var15Lifetime1;
         }
-        if (param0 < lb.field_i) {
-          var15Lifetime2 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var15Lifetime2 = Rasterizer2D.clipLeft - param0;
           param2 = param2 - var15Lifetime2;
           var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        fb.c(lb.field_l, this.field_G, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        ArgbSprite.c(Rasterizer2D.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -578,38 +578,38 @@ final class fb extends jp {
         int var10Lifetime1;
         int var10Lifetime2;
         if (param2 == 256) {
-          this.c(param0, param1);
+          this.drawTransparent(param0, param1);
           return;
         }
-        param0 = param0 + this.field_E;
-        param1 = param1 + this.field_F;
-        int var4 = param0 + param1 * lb.field_c;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * Rasterizer2D.width;
         int var5 = 0;
-        int var6 = this.field_C;
-        int var7 = this.field_D;
-        int var8 = lb.field_c - var7;
+        int var6 = this.height;
+        int var7 = this.width;
+        int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < lb.field_b) {
-          var10 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - param1;
           var6 = var6 - var10;
-          param1 = lb.field_b;
+          param1 = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lb.field_c;
+          var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > lb.field_j) {
-          var6 = var6 - (param1 + var6 - lb.field_j);
+        if (param1 + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var10Lifetime1 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lb.field_i;
+          param0 = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lb.field_f) {
-          var10Lifetime2 = param0 + var7 - lb.field_f;
+        if (param0 + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -618,46 +618,46 @@ final class fb extends jp {
           var6 <= 0) {
           return;
         }
-        fb.d(lb.field_l, this.field_G, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    fb(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        super(param0, param1, param2, param3, param4, param5, param6);
+    ArgbSprite(int canvasWidth, int canvasHeight, int offsetX, int offsetY, int width, int height, int[] pixels) {
+        super(canvasWidth, canvasHeight, offsetX, offsetY, width, height, pixels);
     }
 
     final void f(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + (this.field_x - this.field_D - this.field_E);
-        param1 = param1 + this.field_F;
-        int var3 = param0 + param1 * lb.field_c;
-        int var4 = this.field_D - 1;
-        int var5 = this.field_C;
-        int var6 = this.field_D;
-        int var7 = lb.field_c - var6;
+        param0 = param0 + (this.canvasWidth - this.width - this.offsetX);
+        param1 = param1 + this.offsetY;
+        int var3 = param0 + param1 * Rasterizer2D.width;
+        int var4 = this.width - 1;
+        int var5 = this.height;
+        int var6 = this.width;
+        int var7 = Rasterizer2D.width - var6;
         int var8 = var6 + var6;
-        if (param1 < lb.field_b) {
-          var9 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - param1;
           var5 = var5 - var9;
-          param1 = lb.field_b;
+          param1 = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * lb.field_c;
+          var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > lb.field_j) {
-          var5 = var5 - (param1 + var5 - lb.field_j);
+        if (param1 + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (param1 + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var9Lifetime1 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = lb.field_i;
+          param0 = Rasterizer2D.clipLeft;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > lb.field_f) {
-          var9Lifetime2 = param0 + var6 - lb.field_f;
+        if (param0 + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -666,7 +666,7 @@ final class fb extends jp {
           var5 <= 0) {
           return;
         }
-        fb.e(lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.e(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void b(int param0, int param1, int param2, int param3, int param4) {
@@ -680,23 +680,23 @@ final class fb extends jp {
           param3 <= 0) {
           return;
         }
-        int var6 = this.field_D;
-        int var7 = this.field_C;
+        int var6 = this.width;
+        int var7 = this.height;
         int var8 = 0;
         int var9 = 0;
-        int var10 = this.field_x;
-        int var11 = this.field_z;
+        int var10 = this.canvasWidth;
+        int var11 = this.canvasHeight;
         int var12 = (var10 << 16) / param2;
         int var13 = (var11 << 16) / param3;
-        if (this.field_E > 0) {
-          var14 = ((this.field_E << 16) + var12 - 1) / var12;
+        if (this.offsetX > 0) {
+          var14 = ((this.offsetX << 16) + var12 - 1) / var12;
           param0 = param0 + var14;
-          var8 = var8 + (var14 * var12 - (this.field_E << 16));
+          var8 = var8 + (var14 * var12 - (this.offsetX << 16));
         }
-        if (this.field_F > 0) {
-          var14Lifetime1 = ((this.field_F << 16) + var13 - 1) / var13;
+        if (this.offsetY > 0) {
+          var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
           param1 = param1 + var14Lifetime1;
-          var9 = var9 + (var14Lifetime1 * var13 - (this.field_F << 16));
+          var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
         }
         if (var6 < var10) {
           param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
@@ -704,65 +704,65 @@ final class fb extends jp {
         if (var7 < var11) {
           param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
         }
-        var14Lifetime2 = param0 + param1 * lb.field_c;
-        int var15 = lb.field_c - param2;
-        if (param1 + param3 > lb.field_j) {
-          param3 = param3 - (param1 + param3 - lb.field_j);
+        var14Lifetime2 = param0 + param1 * Rasterizer2D.width;
+        int var15 = Rasterizer2D.width - param2;
+        if (param1 + param3 > Rasterizer2D.clipBottom) {
+          param3 = param3 - (param1 + param3 - Rasterizer2D.clipBottom);
         }
-        if (param1 < lb.field_b) {
-          var16 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var16 = Rasterizer2D.clipTop - param1;
           param3 = param3 - var16;
-          var14Lifetime2 = var14Lifetime2 + var16 * lb.field_c;
+          var14Lifetime2 = var14Lifetime2 + var16 * Rasterizer2D.width;
           var9 = var9 + var13 * var16;
         }
-        if (param0 + param2 > lb.field_f) {
-          var16Lifetime1 = param0 + param2 - lb.field_f;
+        if (param0 + param2 > Rasterizer2D.clipRight) {
+          var16Lifetime1 = param0 + param2 - Rasterizer2D.clipRight;
           param2 = param2 - var16Lifetime1;
           var15 = var15 + var16Lifetime1;
         }
-        if (param0 < lb.field_i) {
-          var16Lifetime2 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var16Lifetime2 = Rasterizer2D.clipLeft - param0;
           param2 = param2 - var16Lifetime2;
           var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
           var8 = var8 + var12 * var16Lifetime2;
           var15 = var15 + var16Lifetime2;
         }
-        fb.b(lb.field_l, this.field_G, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+        ArgbSprite.b(Rasterizer2D.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
     }
 
-    final void d(int param0, int param1) {
+    final void drawAt(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_E;
-        param1 = param1 + this.field_F;
-        int var3 = param0 + param1 * lb.field_c;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * Rasterizer2D.width;
         int var4 = 0;
-        int var5 = this.field_C;
-        int var6 = this.field_D;
-        int var7 = lb.field_c - var6;
+        int var5 = this.height;
+        int var6 = this.width;
+        int var7 = Rasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < lb.field_b) {
-          var9 = lb.field_b - param1;
+        if (y < Rasterizer2D.clipTop) {
+          var9 = Rasterizer2D.clipTop - y;
           var5 = var5 - var9;
-          param1 = lb.field_b;
+          y = Rasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * lb.field_c;
+          var3 = var3 + var9 * Rasterizer2D.width;
         }
-        if (param1 + var5 > lb.field_j) {
-          var5 = var5 - (param1 + var5 - lb.field_j);
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var5 = var5 - (y + var5 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var9Lifetime1 = lb.field_i - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = lb.field_i;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > lb.field_f) {
-          var9Lifetime2 = param0 + var6 - lb.field_f;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -771,7 +771,7 @@ final class fb extends jp {
           var5 <= 0) {
           return;
         }
-        fb.d(lb.field_l, this.field_G, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -837,35 +837,35 @@ final class fb extends jp {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_E;
-        param1 = param1 + this.field_F;
-        int var4 = param0 + param1 * lb.field_c;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * Rasterizer2D.width;
         int var5 = 0;
-        int var6 = this.field_C;
-        int var7 = this.field_D;
-        int var8 = lb.field_c - var7;
+        int var6 = this.height;
+        int var7 = this.width;
+        int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < lb.field_b) {
-          var10 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - param1;
           var6 = var6 - var10;
-          param1 = lb.field_b;
+          param1 = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lb.field_c;
+          var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > lb.field_j) {
-          var6 = var6 - (param1 + var6 - lb.field_j);
+        if (param1 + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var10Lifetime1 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lb.field_i;
+          param0 = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lb.field_f) {
-          var10Lifetime2 = param0 + var7 - lb.field_f;
+        if (param0 + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -874,42 +874,42 @@ final class fb extends jp {
           var6 <= 0) {
           return;
         }
-        fb.d(lb.field_l, this.field_G, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.d(Rasterizer2D.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
     }
 
     final void e(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_E;
-        param1 = param1 + this.field_F;
-        int var4 = param0 + param1 * lb.field_c;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * Rasterizer2D.width;
         int var5 = 0;
-        int var6 = this.field_C;
-        int var7 = this.field_D;
-        int var8 = lb.field_c - var7;
+        int var6 = this.height;
+        int var7 = this.width;
+        int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < lb.field_b) {
-          var10 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - param1;
           var6 = var6 - var10;
-          param1 = lb.field_b;
+          param1 = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lb.field_c;
+          var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > lb.field_j) {
-          var6 = var6 - (param1 + var6 - lb.field_j);
+        if (param1 + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var10Lifetime1 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lb.field_i;
+          param0 = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lb.field_f) {
-          var10Lifetime2 = param0 + var7 - lb.field_f;
+        if (param0 + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -918,42 +918,42 @@ final class fb extends jp {
           var6 <= 0) {
           return;
         }
-        fb.f(lb.field_l, this.field_G, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.f(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_E;
-        param1 = param1 + this.field_F;
-        int var4 = param0 + param1 * lb.field_c;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
+        int var4 = param0 + param1 * Rasterizer2D.width;
         int var5 = 0;
-        int var6 = this.field_C;
-        int var7 = this.field_D;
-        int var8 = lb.field_c - var7;
+        int var6 = this.height;
+        int var7 = this.width;
+        int var8 = Rasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < lb.field_b) {
-          var10 = lb.field_b - param1;
+        if (param1 < Rasterizer2D.clipTop) {
+          var10 = Rasterizer2D.clipTop - param1;
           var6 = var6 - var10;
-          param1 = lb.field_b;
+          param1 = Rasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * lb.field_c;
+          var4 = var4 + var10 * Rasterizer2D.width;
         }
-        if (param1 + var6 > lb.field_j) {
-          var6 = var6 - (param1 + var6 - lb.field_j);
+        if (param1 + var6 > Rasterizer2D.clipBottom) {
+          var6 = var6 - (param1 + var6 - Rasterizer2D.clipBottom);
         }
-        if (param0 < lb.field_i) {
-          var10Lifetime1 = lb.field_i - param0;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var10Lifetime1 = Rasterizer2D.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = lb.field_i;
+          param0 = Rasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > lb.field_f) {
-          var10Lifetime2 = param0 + var7 - lb.field_f;
+        if (param0 + var7 > Rasterizer2D.clipRight) {
+          var10Lifetime2 = param0 + var7 - Rasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -962,7 +962,7 @@ final class fb extends jp {
           var6 <= 0) {
           return;
         }
-        fb.e(lb.field_l, this.field_G, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.e(Rasterizer2D.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1, int param2, int param3) {
@@ -981,47 +981,47 @@ final class fb extends jp {
         int var15;
         int var16;
         int var17;
-        if (this.field_C == 0) {
+        if (this.height == 0) {
           return;
         }
-        var5 = this.field_C;
-        var6 = this.field_D;
+        var5 = this.height;
+        var6 = this.width;
         var7 = param2 << 8;
         var8 = (param3 - param2 << 8) / var5;
         var9 = 0;
-        if (param0 < lb.field_i) {
-          var6 = var6 - (lb.field_i - param0);
-          var9 = var9 + (lb.field_i - param0);
-          param0 = lb.field_i;
+        if (param0 < Rasterizer2D.clipLeft) {
+          var6 = var6 - (Rasterizer2D.clipLeft - param0);
+          var9 = var9 + (Rasterizer2D.clipLeft - param0);
+          param0 = Rasterizer2D.clipLeft;
         }
-        if (param1 < lb.field_b) {
-          var7 = var7 + (lb.field_b - param1) * var8;
-          var5 = var5 - (lb.field_b - param1);
-          var9 = var9 + (lb.field_b - param1) * lb.field_c;
-          param1 = lb.field_b;
+        if (param1 < Rasterizer2D.clipTop) {
+          var7 = var7 + (Rasterizer2D.clipTop - param1) * var8;
+          var5 = var5 - (Rasterizer2D.clipTop - param1);
+          var9 = var9 + (Rasterizer2D.clipTop - param1) * Rasterizer2D.width;
+          param1 = Rasterizer2D.clipTop;
         }
-        if (param0 + var6 > lb.field_f) {
-          var6 = lb.field_f - param0;
+        if (param0 + var6 > Rasterizer2D.clipRight) {
+          var6 = Rasterizer2D.clipRight - param0;
         }
-        if (param1 + var5 > lb.field_j) {
-          var5 = lb.field_j - param1;
+        if (param1 + var5 > Rasterizer2D.clipBottom) {
+          var5 = Rasterizer2D.clipBottom - param1;
         }
-        var10 = lb.field_c - var6;
-        var11 = this.field_D - var6;
-        var12 = param0 + param1 * lb.field_c;
+        var10 = Rasterizer2D.width - var6;
+        var11 = this.width - var6;
+        var12 = param0 + param1 * Rasterizer2D.width;
         for (param1 = -var5; param1 < 0; param1++) {
           var13 = var7 >> 8;
           if (var13 >= 0) {
             for (param0 = -var6; param0 < 0; param0++) {
-              var14 = (this.field_G[var9] >>> 24) * var13 >> 8;
+              var14 = (this.pixels[var9] >>> 24) * var13 >> 8;
               var15 = 256 - var14;
               incrementValue$0 = var9;
               var9++;
-              var16 = this.field_G[incrementValue$0];
-              var17 = lb.field_l[var12];
+              var16 = this.pixels[incrementValue$0];
+              var17 = Rasterizer2D.pixels[var12];
               incrementValue$1 = var12;
               var12++;
-              lb.field_l[incrementValue$1] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
+              Rasterizer2D.pixels[incrementValue$1] = ((var16 & 16711935) * var14 + (var17 & 16711935) * var15 & -16711936) + ((var16 & 65280) * var14 + (var17 & 65280) * var15 & 16711680) >>> 8;
             }
             var12 = var12 + var10;
             var9 = var9 + var11;

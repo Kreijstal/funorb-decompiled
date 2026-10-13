@@ -58,7 +58,7 @@ abstract class ld extends km {
     }
 
     final void drawScreen(byte obfuscationGuard) {
-        jp[] stackIn_27_0 = null;
+        RgbSprite[] stackIn_27_0 = null;
         int var2;
         int var3;
         int var4;
@@ -68,18 +68,18 @@ abstract class ld extends km {
         int var7;
         int var8;
         int var9;
-        jp var10;
+        RgbSprite var10;
         int var11;
-        jp var12;
+        RgbSprite var12;
         var11 = BrickABrac.field_J ? 1 : 0;
         if (null != ec.field_Q) {
           ec.field_Q.a(true, 0, 0, 0, 0);
         }
-        lb.b(0, 0, 640, 480);
+        Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         gh.a(120, true);
         if (LevelMetadata.field_p) {
           var12 = qh.field_e;
-          var12.c((640 - var12.field_x) / 2, 20);
+          var12.drawTransparent((640 - var12.canvasWidth) / 2, 20);
         }
         var2 = -qp.field_e[0].field_h + 480;
         var3 = this.f(-6);
@@ -131,7 +131,7 @@ abstract class ld extends km {
                 stackIn_27_0 = BrickMotionPath.field_r;
               }
               var10 = stackIn_27_0[da.field_C[var7]];
-              var10.c(var8 - var10.field_x / 2, var9 - var10.field_z);
+              var10.drawTransparent(var8 - var10.canvasWidth / 2, var9 - var10.canvasHeight);
               ce.field_e.b(fh.field_h[var7], var8, var2 + 85, 0, -1);
               var5++;
               if (var5 == 3) {

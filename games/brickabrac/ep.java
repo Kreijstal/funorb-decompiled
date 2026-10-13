@@ -8,11 +8,11 @@ abstract class ep {
     static volatile int field_g;
     static String field_e;
     static int field_i;
-    static jp field_j;
-    static jp field_h;
+    static RgbSprite field_j;
+    static RgbSprite field_h;
     static float field_a;
     static String field_d;
-    static jp field_b;
+    static RgbSprite field_b;
 
     final int a(int param0, boolean param1) {
         int var3 = 0;
@@ -104,7 +104,7 @@ abstract class ep {
     public static void a(boolean param0) {
         field_f = null;
         if (!param0) {
-          field_b = (jp) null;
+          field_b = (RgbSprite) null;
         }
         field_b = null;
         field_e = null;

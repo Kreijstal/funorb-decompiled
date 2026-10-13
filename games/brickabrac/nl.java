@@ -3,11 +3,11 @@
  */
 final class nl {
     static int field_c;
-    static jp field_d;
+    static RgbSprite field_d;
     static mf field_a;
     static om field_f;
-    static jp field_e;
-    static jp field_b;
+    static RgbSprite field_e;
+    static RgbSprite field_b;
 
     public static void a(int param0) {
         field_a = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class jc extends ib {
-    static jp field_J;
+    static RgbSprite field_J;
     static int field_K;
     static boolean field_H;
     private int field_L;
@@ -83,12 +83,12 @@ abstract class jc extends ib {
             return;
           }
           if (nl.field_e == null ||
-            !(this.field_t <= nl.field_e.field_D) ||
-            !(this.field_s <= nl.field_e.field_C)) {
-            nl.field_e = new jp(this.field_t, this.field_s);
+            !(this.field_t <= nl.field_e.width) ||
+            !(this.field_s <= nl.field_e.height)) {
+            nl.field_e = new RgbSprite(this.field_t, this.field_s);
           }
           fc.a(-109, nl.field_e);
-          lb.d();
+          Rasterizer2D.clear();
           this.b(0, param3 ^ -281, 0);
           super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);
           sc.b(-117);
@@ -121,7 +121,7 @@ abstract class jc extends ib {
     }
 
     jc(cp param0, int param1, int param2) {
-        super(mn.field_y - param1 >> 1, -param2 + r.field_w >> 1, param1, param2, (ub) null);
+        super(SpriteGeometry.field_y - param1 >> 1, -param2 + r.field_w >> 1, param1, param2, (ub) null);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -151,7 +151,7 @@ abstract class jc extends ib {
           if (!param0) {
             field_H = false;
           }
-          this.a(param1, -param2 + mn.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
+          this.a(param1, -param2 + SpriteGeometry.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
@@ -275,7 +275,7 @@ abstract class jc extends ib {
               dj.field_d <= 0) {
               return;
             }
-            mn.field_v = de.field_x;
+            SpriteGeometry.field_v = de.field_x;
             ga.field_i = 4;
             tb.field_eb = o.field_a;
             pp.field_a = -1;
@@ -298,7 +298,7 @@ abstract class jc extends ib {
             pp.field_a = -1;
             BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
             kb.field_Sb = true;
-            mn.field_v = de.field_x;
+            SpriteGeometry.field_v = de.field_x;
             return;
           }
           if (param1 == 3) {
@@ -333,7 +333,7 @@ abstract class jc extends ib {
                 ga.field_i = 12;
                 pp.field_a = -1;
                 tb.field_eb = rh.field_a;
-                mn.field_v = de.field_x;
+                SpriteGeometry.field_v = de.field_x;
                 return;
               }
             } else {

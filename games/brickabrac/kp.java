@@ -6,7 +6,7 @@ import java.util.*;
 final class kp {
     static NodeDeque field_c;
     static dh field_b;
-    static jp[] field_e;
+    static RgbSprite[] field_e;
     static int field_a;
     static Vector field_d;
 

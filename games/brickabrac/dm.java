@@ -3,7 +3,7 @@
  */
 final class dm implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static mi field_e;
-    static jp field_f;
+    static RgbSprite field_f;
     static String field_a;
     static wh field_d;
     static eh field_g;

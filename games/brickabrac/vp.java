@@ -112,45 +112,45 @@ final class vp extends km {
         MovingBody.a((byte) -115);
     }
 
-    final static jp[] a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
-        jp var13 = null;
-        jp var14 = null;
-        int[] var16 = lb.field_l;
+    final static RgbSprite[] a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
+        RgbSprite var13 = null;
+        RgbSprite var14 = null;
+        int[] var16 = Rasterizer2D.pixels;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = lb.field_c;
-        int var8 = lb.field_d;
-        jp var9 = new jp(16, param3);
-        var9.g();
-        lb.g(0, 0, 16, param3, param2, param4);
+        int var7 = Rasterizer2D.width;
+        int var8 = Rasterizer2D.height;
+        RgbSprite var9 = new RgbSprite(16, param3);
+        var9.bindRasterTarget();
+        Rasterizer2D.fillVerticalGradient(0, 0, 16, param3, param2, param4);
         Object var10 = null;
         if (param0) {
-          var13 = var9.e();
+          var13 = var9.copy();
           var10 = var13;
-          var13.g();
-          lb.c(0, 0, 5, 0);
-          lb.c(0, 1, 3, 0);
-          lb.c(0, 2, 2, 0);
-          lb.c(0, 3, 1, 0);
-          lb.c(0, 4, 1, 0);
+          var13.bindRasterTarget();
+          Rasterizer2D.drawHorizontalLine(0, 0, 5, 0);
+          Rasterizer2D.drawHorizontalLine(0, 1, 3, 0);
+          Rasterizer2D.drawHorizontalLine(0, 2, 2, 0);
+          Rasterizer2D.drawHorizontalLine(0, 3, 1, 0);
+          Rasterizer2D.drawHorizontalLine(0, 4, 1, 0);
         }
         Object var11 = null;
         if (param5) {
-          var14 = var9.e();
+          var14 = var9.copy();
           var11 = var14;
-          var14.g();
-          lb.c(11, 0, 5, 0);
-          lb.c(13, 1, 3, 0);
-          lb.c(14, 2, 2, 0);
-          lb.c(15, 3, 1, 0);
-          lb.c(15, 4, 1, 0);
+          var14.bindRasterTarget();
+          Rasterizer2D.drawHorizontalLine(11, 0, 5, 0);
+          Rasterizer2D.drawHorizontalLine(13, 1, 3, 0);
+          Rasterizer2D.drawHorizontalLine(14, 2, 2, 0);
+          Rasterizer2D.drawHorizontalLine(15, 3, 1, 0);
+          Rasterizer2D.drawHorizontalLine(15, 4, 1, 0);
         }
         if (param1 >= 32) {
-          lb.a(var16, var7, var8);
-          return new jp[]{null, null, null, (jp) (var10), var9, (jp) (var11), null, null, null};
+          Rasterizer2D.bind(var16, var7, var8);
+          return new RgbSprite[]{null, null, null, (RgbSprite) (var10), var9, (RgbSprite) (var11), null, null, null};
         }
-        return (jp[]) null;
+        return (RgbSprite[]) null;
     }
 
     final boolean handleKey(char character, int keyCode, int obfuscationGuard) {

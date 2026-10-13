@@ -4,7 +4,7 @@
 final class we {
     static String field_c;
     static int field_a;
-    static jp[] field_b;
+    static RgbSprite[] field_b;
 
     final static void a(byte param0) {
         mf.field_i = new NodeDeque();

@@ -11,14 +11,14 @@ final class ej extends sl {
     static double field_J;
     static String field_K;
     static int field_O;
-    static jp[][] field_L;
+    static RgbSprite[][] field_L;
     static String field_H;
 
-    final static void a(int param0, jp param1, int param2, int param3, int param4, pb param5) {
+    final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, pb param5) {
         try {
           fc.a(-53, param5.field_p);
-          lb.g(param0, 0, param5.field_i, param5.field_q, bg.field_u[param4], 928072);
-          param1.b(-(30 / param2) + (param5.field_i - param1.field_x) / 2, -(66 / param2) + (-param1.field_z + param3 + param5.field_q), 0, 208);
+          Rasterizer2D.fillVerticalGradient(param0, 0, param5.field_i, param5.field_q, bg.field_u[param4], 928072);
+          param1.b(-(30 / param2) + (param5.field_i - param1.canvasWidth) / 2, -(66 / param2) + (-param1.canvasHeight + param3 + param5.field_q), 0, 208);
           sc.b(-101);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ej.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
@@ -35,7 +35,7 @@ final class ej extends sl {
     public static void h(int param0) {
         field_I = null;
         field_M = null;
-        field_L = (jp[][]) null;
+        field_L = (RgbSprite[][]) null;
         field_P = null;
         field_F = null;
         if (param0 == 928072) {
@@ -60,7 +60,7 @@ final class ej extends sl {
           return this.field_N;
         }
         pb var3 = (pb) null;
-        ej.a(-50, (jp) null, -35, 2, 119, (pb) null);
+        ej.a(-50, (RgbSprite) null, -35, 2, 119, (pb) null);
         return this.field_N;
     }
 

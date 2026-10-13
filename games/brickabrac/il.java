@@ -243,12 +243,12 @@ final class il extends CircleBody {
         wp.a(param0 ^ 87, param1);
     }
 
-    final static void a(int param0, jp param1, jp param2, int param3, int param4, jp param5, int param6, int param7, int param8, int param9, jp param10, int param11) {
+    final static void a(int param0, RgbSprite param1, RgbSprite param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, RgbSprite param10, int param11) {
         try {
-          param2.d(param9 + ((-param2.field_x + param11) / 2 + (param0 * 5 >> 16)), param8);
-          param5.c((10 * param0 >> 16) + ((-param5.field_x + param11) / 2 + param9 - 87 / param3), -(80 / param3) + (-param5.field_z + 480 + (param6 + param8)));
-          param1.c(-(5 / param3) + ((param0 * 20 >> 16) + ((param11 - param1.field_x) / 2 + param9)), -param1.field_z + (480 + param6 + param8));
-          og.a(-121, 16, 0, param10, 16777215, -(5 / param3) + ((param0 * 2 >> 16) + ((param11 - param10.field_x) / param4 + param9)), 480 + (param8 + param6 - param10.field_z));
+          param2.drawAt(param9 + ((-param2.canvasWidth + param11) / 2 + (param0 * 5 >> 16)), param8);
+          param5.drawTransparent((10 * param0 >> 16) + ((-param5.canvasWidth + param11) / 2 + param9 - 87 / param3), -(80 / param3) + (-param5.canvasHeight + 480 + (param6 + param8)));
+          param1.drawTransparent(-(5 / param3) + ((param0 * 20 >> 16) + ((param11 - param1.canvasWidth) / 2 + param9)), -param1.canvasHeight + (480 + param6 + param8));
+          og.a(-121, 16, 0, param10, 16777215, -(5 / param3) + ((param0 * 2 >> 16) + ((param11 - param10.canvasWidth) / param4 + param9)), 480 + (param8 + param6 - param10.canvasHeight));
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "il.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');
         }
@@ -302,8 +302,8 @@ final class il extends CircleBody {
         if (param0 < -77) {
           return ld.field_t > 250 ? true : false;
         }
-        jp var2 = (jp) null;
-        il.a(-62, (jp) null, (jp) null, 105, -38, (jp) null, 49, -61, 61, -69, (jp) null, 126);
+        RgbSprite var2 = (RgbSprite) null;
+        il.a(-62, (RgbSprite) null, (RgbSprite) null, 105, -38, (RgbSprite) null, 49, -61, 61, -69, (RgbSprite) null, 126);
         return ld.field_t > 250 ? true : false;
     }
 

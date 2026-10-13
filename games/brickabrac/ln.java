@@ -3,7 +3,7 @@
  */
 final class ln extends IntrusiveNode {
     static boolean field_l;
-    static jp[] field_j;
+    static RgbSprite[] field_j;
     int field_m;
     byte[] field_i;
     static boolean field_k;
@@ -72,7 +72,7 @@ final class ln extends IntrusiveNode {
           BrickABrac.field_I = param4;
           i.field_m = param3;
           if (param5 != -10) {
-            field_j = (jp[]) null;
+            field_j = (RgbSprite[]) null;
           }
           mh.field_lb = param2;
           l.field_m = param1;
@@ -139,7 +139,7 @@ final class ln extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -87) {
-            field_j = (jp[]) null;
+            field_j = (RgbSprite[]) null;
           }
           var5 = param2.a(param1, param3, 4);
           var4 = var5;

@@ -5,7 +5,7 @@ final class da extends hb {
     static byte[][] field_L;
     PacketBuffer field_D;
     static int field_G;
-    static jp[] field_E;
+    static RgbSprite[] field_E;
     static int[] field_C;
     static int[] field_M;
     int field_K;
@@ -29,14 +29,14 @@ final class da extends hb {
           vg.a(o.field_e.e((byte) 31), false, 11);
           ed.field_d = true;
           if (param0 != 122) {
-            field_E = (jp[]) null;
+            field_E = (RgbSprite[]) null;
             return;
           }
           return;
         }
         dn.b(0, -108, 11);
         if (param0 != 122) {
-          field_E = (jp[]) null;
+          field_E = (RgbSprite[]) null;
           return;
         }
     }

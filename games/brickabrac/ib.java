@@ -5,7 +5,7 @@ import java.util.*;
 
 class ib extends oc implements sd {
     static int[] field_D;
-    static jp field_E;
+    static RgbSprite field_E;
     static String field_F;
     static String field_C;
     NodeDeque field_G;
@@ -371,7 +371,7 @@ class ib extends oc implements sd {
         int var7;
         int var8;
         int var9_int;
-        jp var9;
+        RgbSprite var9;
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime3;
@@ -431,13 +431,13 @@ class ib extends oc implements sd {
           var8 = 8 - (sa.a(var9_intLifetime3, -4097) * 3 >> 16);
         }
         var9 = tf.field_g[param0];
-        param6 = param6 + (-(var9.field_x / 2) + var7);
-        param5 = param5 + (-(var9.field_z / 2) + var8);
+        param6 = param6 + (-(var9.canvasWidth / 2) + var7);
+        param5 = param5 + (-(var9.canvasHeight / 2) + var8);
         if (param4) {
           nb.a(-111, param5, param6, lk.field_n[param0]);
           rn.field_a[param0].f(param6, param5, 256);
         }
-        var9.c(param6, param5);
+        var9.drawTransparent(param6, param5);
         return;
     }
 

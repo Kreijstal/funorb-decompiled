@@ -10,7 +10,7 @@ final class rg {
     static int field_a;
     static mh field_e;
     private mf field_j;
-    static jp field_f;
+    static RgbSprite field_f;
     static int[] field_g;
     static mh field_c;
 

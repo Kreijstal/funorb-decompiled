@@ -5,7 +5,7 @@ final class kg implements Runnable {
     private lq field_f;
     static String field_b;
     static int[] field_i;
-    static jp[][] field_a;
+    static RgbSprite[][] field_a;
     static String field_e;
     static String[] field_h;
     private boolean field_j;
@@ -60,7 +60,7 @@ final class kg implements Runnable {
           synchronized (var5_ref_Object) {
             var6 = (kj) (this.field_f.a(true));
             while (var6 != null) {
-              if (~(long)param1 == ~var6.field_j &&
+              if (~(long)param1 == ~var6.secondaryKey &&
                 var6.field_G == param0 &&
                 var6.field_F == 2) {
                 var4.field_u = false;
@@ -171,7 +171,7 @@ final class kg implements Runnable {
             this.a(26, true, (byte[]) null, (ve) null);
           }
           var4.field_G = param1;
-          var4.field_j = (long)param0;
+          var4.secondaryKey = (long)param0;
           this.a(var4, -3);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -255,11 +255,11 @@ final class kg implements Runnable {
             }
             try {
               if (var7.field_F == 2) {
-                var7.field_G.a((byte) -123, var7.field_E, var7.field_E.length, (int)var7.field_j);
+                var7.field_G.a((byte) -123, var7.field_E, var7.field_E.length, (int)var7.secondaryKey);
                 var7.field_u = false;
               } else {
                 if (var7.field_F == 3) {
-                  var7.field_E = var7.field_G.a(0, (int)var7.field_j);
+                  var7.field_E = var7.field_G.a(0, (int)var7.secondaryKey);
                   var7.field_u = false;
                 } else {
                   var7.field_u = false;
@@ -296,7 +296,7 @@ final class kg implements Runnable {
           var5 = new kj();
           var5.field_E = param2;
           var5.field_G = param3;
-          var5.field_j = (long)param0;
+          var5.secondaryKey = (long)param0;
           var5.field_F = 2;
           stackIn_2_0 = var5;
           stackIn_3_1 = (param1);
@@ -327,7 +327,7 @@ final class kg implements Runnable {
     public static void b(int param0) {
         field_b = null;
         field_i = null;
-        field_a = (jp[][]) null;
+        field_a = (RgbSprite[][]) null;
         field_h = null;
         if (param0 == 26679) {
           field_d = null;

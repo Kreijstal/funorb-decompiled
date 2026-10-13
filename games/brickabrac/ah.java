@@ -123,7 +123,7 @@ final class ah extends km {
             ob.field_D.a(param0 + 1 + ". ", lq.field_b[0], param2, param3, -1);
           }
           ob.field_D.c(param7, lq.field_b[0], param2, param3, -1);
-          ob.field_D.b(Integer.toString(1 + param1), lq.field_b[1] - nn.field_g.c(mn.field_u) / 2, param2, param3, -1);
+          ob.field_D.b(Integer.toString(1 + param1), lq.field_b[1] - nn.field_g.c(SpriteGeometry.field_u) / 2, param2, param3, -1);
           ob.field_D.b(Integer.toString(1 + param4), lq.field_b[2] - nn.field_g.c(ba.field_u) / 2, param2, param3, -1);
           ob.field_D.a(Integer.toString(param6), lq.field_b[3], param2, param3, -1);
           int var9_int = 102 % ((param5 + 15) / 45);
@@ -270,8 +270,8 @@ final class ah extends km {
           var8 = this.field_m[this.field_m.length - 1];
           var10 = var8;
           var5 = var10;
-          var8.field_j = hq.field_s[0].field_x;
-          var8.field_d = hq.field_s[0].field_z * 2;
+          var8.field_j = hq.field_s[0].canvasWidth;
+          var8.field_d = hq.field_s[0].canvasHeight * 2;
           var5.field_c = (-var10.field_j + 240) / 4;
           var5.field_a = 140;
         } else {
@@ -670,7 +670,7 @@ final class ah extends km {
         var2 = 149 + nn.field_g.field_B + 38;
         var3 = 0;
         nn.field_g.c(ae.field_i, -fk.field_g + lq.field_b[0] + 12, var2, var3, -1);
-        nn.field_g.a(mn.field_u, lq.field_b[1], var2, var3, -1);
+        nn.field_g.a(SpriteGeometry.field_u, lq.field_b[1], var2, var3, -1);
         nn.field_g.a(ba.field_u, lq.field_b[2], var2, var3, -1);
         nn.field_g.a(pj.field_d, lq.field_b[3], var2, var3, -1);
         var2Lifetime1 = 5 * (nn.field_g.field_P + nn.field_g.field_B) / 2 + 187;
@@ -692,7 +692,7 @@ final class ah extends km {
                 var10 = var13[2 * var8 + 1] >> 16 & 65535;
                 var11 = var13[1 + 2 * var8] & 65535;
                 if ((1 & var8) == 0) {
-                  lb.d(125, var2Lifetime1 - 15, 465, 18, 16777215, 16);
+                  Rasterizer2D.fillRectangleAlpha(125, var2Lifetime1 - 15, 465, 18, 16777215, 16);
                 }
                 var4_ref = "";
                 this.a(var8, var10, var2Lifetime1, var3Lifetime1, var11, 105, var9, var5[var8]);

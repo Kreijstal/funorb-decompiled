@@ -9,7 +9,7 @@ final class kb extends mh {
     static volatile int field_Pb;
     static boolean field_Sb;
     static String field_Tb;
-    static jp[] field_Ub;
+    static RgbSprite[] field_Ub;
     static int field_Yb;
     static mh field_Vb;
     static long field_Zb;

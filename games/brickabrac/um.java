@@ -10,7 +10,7 @@ class um implements ub, qe {
     int field_h;
     int field_c;
     static mh field_b;
-    static jp field_p;
+    static RgbSprite field_p;
     static boolean field_t;
     int field_r;
     int field_m;
@@ -21,7 +21,7 @@ class um implements ub, qe {
     int field_f;
     int field_s;
     int field_d;
-    static jp[] field_l;
+    static RgbSprite[] field_l;
     private boolean field_n;
 
     final static void a(int param0, PacketBuffer param1, byte param2, tg param3) {
@@ -413,7 +413,7 @@ class um implements ub, qe {
           jl.field_e.position = 0;
         }
         if (param0 > -40) {
-          field_l = (jp[]) null;
+          field_l = (RgbSprite[]) null;
         }
         if (-2 == ga.field_j) {
           if (!vd.a(20, 2)) {
@@ -507,11 +507,11 @@ class um implements ub, qe {
         }
     }
 
-    final static jp a(String param0, String param1, int param2, mf param3) {
+    final static RgbSprite a(String param0, String param1, int param2, mf param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        jp stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -523,7 +523,7 @@ class um implements ub, qe {
         try {
           var4_int = param3.a(param0, false);
           if (param2 != 1593955777) {
-            field_p = (jp) null;
+            field_p = (RgbSprite) null;
           }
           var5 = param3.a(var4_int, param2 - 1593955846, param1);
           stackIn_3_0 = ml.a(param3, var4_int, var5, 1);
@@ -782,9 +782,9 @@ class um implements ub, qe {
         int stackIn_32_0 = 0;
         int stackIn_66_0 = 0;
         int stackIn_77_0 = 0;
-        jp[] stackIn_79_0 = null;
+        RgbSprite[] stackIn_79_0 = null;
         int stackIn_80_1 = 0;
-        jp[] stackIn_87_0 = null;
+        RgbSprite[] stackIn_87_0 = null;
         int stackIn_88_1 = 0;
         String stackIn_148_0 = null;
         String stackIn_158_0 = null;
@@ -827,7 +827,7 @@ class um implements ub, qe {
         int var40 = 0;
         int var41 = 0;
         int var42 = 0;
-        jp var43 = null;
+        RgbSprite var43 = null;
         mh var44 = null;
         mh var45 = null;
         mh var46 = null;
@@ -836,14 +836,14 @@ class um implements ub, qe {
         mh var49 = null;
         mh var50 = null;
         Object var51 = null;
-        jp var51_ref = null;
+        RgbSprite var51_ref = null;
         Object var52 = null;
-        jp var52_ref = null;
+        RgbSprite var52_ref = null;
         Object var53 = null;
-        jp var53_ref = null;
+        RgbSprite var53_ref = null;
         Object var54 = null;
-        jp var54_ref = null;
-        jp var55 = null;
+        RgbSprite var54_ref = null;
+        RgbSprite var55 = null;
         String var35Lifetime1;
         String var35Lifetime2;
         int var15Lifetime1;
@@ -958,9 +958,9 @@ class um implements ub, qe {
               var13.field_zc.field_S = 2;
               var13.field_Ub = new mh(0L, vb.field_K);
               var13.a(var13.field_Ub, 0);
-              var13.field_ic = new mh(0L, tk.field_t);
+              var13.field_ic = new mh(0L, DualLinkNode.field_t);
               var13.a(var13.field_ic, 0);
-              var13.field_Sb = new mh(0L, tk.field_t);
+              var13.field_Sb = new mh(0L, DualLinkNode.field_t);
               var13.a(var13.field_Sb, 0);
               var13.field_gc = new mh(0L, ad.field_l);
               var13.a(var13.field_gc, 0);
@@ -1108,8 +1108,8 @@ class um implements ub, qe {
               if ((var15Lifetime1 & 1 << fd.field_c) != 0) {
                 var51_ref = dj.field_f[var13.field_kc];
                 var13.field_sc.field_wb = var51_ref;
-                var13.field_sc.a(var13.field_ec.field_cb, 0, var35_int, var51_ref.field_x, (byte) 64);
-                var35_int = var35_int + (var51_ref.field_x + kn.field_z);
+                var13.field_sc.a(var13.field_ec.field_cb, 0, var35_int, var51_ref.canvasWidth, (byte) 64);
+                var35_int = var35_int + (var51_ref.canvasWidth + kn.field_z);
               }
               if ((var15Lifetime1 & 1 << MotionWaypoint.field_q) != 0) {
                 if (!var13.field_uc) {
@@ -1126,14 +1126,14 @@ class um implements ub, qe {
                 }
                 var52_ref = stackIn_79_0[stackIn_80_1];
                 var13.field_Yb.field_wb = var52_ref;
-                var13.field_Yb.a(var13.field_ec.field_cb, 0, var35_int, var52_ref.field_x, (byte) 64);
-                var35_int = var35_int + (var52_ref.field_x + kn.field_z);
+                var13.field_Yb.a(var13.field_ec.field_cb, 0, var35_int, var52_ref.canvasWidth, (byte) 64);
+                var35_int = var35_int + (var52_ref.canvasWidth + kn.field_z);
               }
               if ((1 << u.field_a & var15Lifetime1) != 0) {
                 var53_ref = Ball.field_K[var13.field_wc - 1];
                 var13.field_Bc.field_wb = var53_ref;
-                var13.field_Bc.a(var13.field_ec.field_cb, 0, var35_int, var53_ref.field_x, (byte) 64);
-                var35_int = var35_int + (var53_ref.field_x + kn.field_z);
+                var13.field_Bc.a(var13.field_ec.field_cb, 0, var35_int, var53_ref.canvasWidth, (byte) 64);
+                var35_int = var35_int + (var53_ref.canvasWidth + kn.field_z);
               }
               if ((var15Lifetime1 & 1 << mm.field_Pb) != 0) {
                 stackIn_87_0 = bq.field_c;
@@ -1144,8 +1144,8 @@ class um implements ub, qe {
                 }
                 var54_ref = stackIn_87_0[stackIn_88_1];
                 var13.field_lc.field_wb = var54_ref;
-                var13.field_lc.a(var13.field_ec.field_cb, 0, var35_int, var54_ref.field_x, (byte) 64);
-                var35_int = var35_int + (kn.field_z + var54_ref.field_x);
+                var13.field_lc.a(var13.field_ec.field_cb, 0, var35_int, var54_ref.canvasWidth, (byte) 64);
+                var35_int = var35_int + (kn.field_z + var54_ref.canvasWidth);
               }
               if (null != aj.field_c) {
                 for (var37Lifetime1 = 0; var37Lifetime1 < cq.field_p; var37Lifetime1++) {
@@ -1154,8 +1154,8 @@ class um implements ub, qe {
                     var43 = aj.field_c[var37Lifetime1][255 & var13.field_Tb[var37Lifetime1]];
                     var55 = var43;
                     var13.field_Ec[var37Lifetime1].field_wb = var43;
-                    var13.field_Ec[var37Lifetime1].a(var13.field_ec.field_cb, 0, var35_int, var55.field_x, (byte) 64);
-                    var35_int = var35_int + (kn.field_z + var55.field_x);
+                    var13.field_Ec[var37Lifetime1].a(var13.field_ec.field_cb, 0, var35_int, var55.canvasWidth, (byte) 64);
+                    var35_int = var35_int + (kn.field_z + var55.canvasWidth);
                   }
                 }
               }

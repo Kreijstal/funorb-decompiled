@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gq extends mh {
-    static jp field_Sb;
+    static RgbSprite field_Sb;
     static String field_Wb;
     private mh field_Qb;
     static mi field_Xb;
@@ -10,7 +10,7 @@ final class gq extends mh {
     private mh field_Pb;
     private int field_Tb;
     static int field_Yb;
-    static jp[] field_Ub;
+    static RgbSprite[] field_Ub;
     static mf field_Rb;
 
     final int a(boolean param0, byte param1) {

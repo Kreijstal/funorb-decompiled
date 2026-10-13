@@ -19,7 +19,7 @@ class oc extends IntrusiveNode {
     int field_o;
     ub field_l;
     static int[] field_y;
-    static jp field_x;
+    static RgbSprite field_x;
     int field_B;
     uh field_i;
     String field_z;
@@ -124,24 +124,24 @@ class oc extends IntrusiveNode {
             stackIn_13_1 = 1;
           }
           var6_intLifetime1 = stackIn_11_0 & stackIn_13_1;
-          var7 = de.field_x - mn.field_v;
-          gg.field_p[param1].c(param2, param0);
+          var7 = de.field_x - SpriteGeometry.field_v;
+          gg.field_p[param1].drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {
             gg.field_p[param1].f(param2, param0, 64 + (sa.a(200 * var7, -4097) >> 10));
           }
           param2 += 7;
           param0--;
-          var8 = ol.field_r.field_D + param2 - 5;
-          lb.g(var8, param0 + 1, 4, ol.field_r.field_C - 2, 16777215);
+          var8 = ol.field_r.width + param2 - 5;
+          Rasterizer2D.fillRectangle(var8, param0 + 1, 4, ol.field_r.height - 2, 16777215);
           if (param5 <= 106) {
             oc.a(120, (dh) null);
           }
           var9 = param3.field_cb[param1] >> 8;
-          var10 = ol.field_r.field_C + (param0 - 1);
+          var10 = ol.field_r.height + (param0 - 1);
           if (var9 > 0) {
             stackIn_22_0 = (var9 <= 3) ? var9 : 3;
             var11 = stackIn_22_0;
-            lb.g(var8, var10 - var11, 4, var11, 16735667);
+            Rasterizer2D.fillRectangle(var8, var10 - var11, 4, var11, 16735667);
             var10 -= 3;
           }
           if (var9 > 3) {
@@ -151,7 +151,7 @@ class oc extends IntrusiveNode {
               stackIn_27_0 = -3 + var9;
             }
             var11Lifetime1 = stackIn_27_0;
-            lb.g(var8, -var11Lifetime1 + var10, 4, var11Lifetime1, 15876234);
+            Rasterizer2D.fillRectangle(var8, -var11Lifetime1 + var10, 4, var11Lifetime1, 15876234);
             var10 -= 4;
           }
           if (7 < var9) {
@@ -161,7 +161,7 @@ class oc extends IntrusiveNode {
               stackIn_32_0 = -7 + var9;
             }
             var11Lifetime2 = stackIn_32_0;
-            lb.g(var8, -var11Lifetime2 + var10, 4, var11Lifetime2, 15410040);
+            Rasterizer2D.fillRectangle(var8, -var11Lifetime2 + var10, 4, var11Lifetime2, 15410040);
             var10 -= 6;
           }
           if (var9 > 13) {
@@ -171,12 +171,12 @@ class oc extends IntrusiveNode {
               stackIn_38_0 = 7;
             }
             var11Lifetime3 = stackIn_38_0;
-            lb.g(var8, var10 - var11Lifetime3, 4, var11Lifetime3, 13245286);
+            Rasterizer2D.fillRectangle(var8, var10 - var11Lifetime3, 4, var11Lifetime3, 13245286);
           }
           if (var9 >= 20) {
-            lb.d(var8, param0 + ol.field_r.field_C - 21, 4, 20, 16777215, (sa.a(200 * de.field_x, -4097) >> 10) + 64);
+            Rasterizer2D.fillRectangleAlpha(var8, param0 + ol.field_r.height - 21, 4, 20, 16777215, (sa.a(200 * de.field_x, -4097) >> 10) + 64);
           }
-          ol.field_r.c(param2, param0);
+          ol.field_r.drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {
             ol.field_r.f(param2, param0, (sa.a(400 * var7, -4097) >> 10) + 64);
           }

@@ -92,7 +92,7 @@ final class so {
 
     final static void a(mf param0, mf param1, mf param2, int param3, mf param4) {
         int var7_int = 0;
-        jp dupTemp$0 = null;
+        RgbSprite dupTemp$0 = null;
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_68_2 = null;
@@ -105,13 +105,13 @@ final class so {
         RuntimeException decompiledCaughtException = null;
         byte[] var5 = null;
         RuntimeException var5_ref = null;
-        jp[] var7 = null;
+        RgbSprite[] var7 = null;
         Object var8 = null;
         Object var9 = null;
         int var10_int = 0;
-        jp var10 = null;
+        RgbSprite var10 = null;
         int var11 = 0;
-        jp var11_ref_jp = null;
+        RgbSprite var11_ref_jp = null;
         int var12 = 0;
         byte[] var13 = null;
         byte[] var14 = null;
@@ -119,8 +119,8 @@ final class so {
         tp[] var16 = null;
         byte[] var17 = null;
         tp[] var18 = null;
-        jp var19 = null;
-        jp var20 = null;
+        RgbSprite var19 = null;
+        RgbSprite var20 = null;
         byte[] var21 = null;
         byte[] var22 = null;
         byte[] var5Lifetime1;
@@ -166,8 +166,8 @@ final class so {
           gj.field_c = bd.a("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
             gj.field_c[var7_int] = qg.a(gj.field_c[var7_int], 1);
-            if (gj.field_c[var7_int].field_D == 0 ||
-              gj.field_c[var7_int].field_C == 0) {
+            if (gj.field_c[var7_int].width == 0 ||
+              gj.field_c[var7_int].height == 0) {
               gj.field_c[var7_int] = null;
             }
           }
@@ -184,30 +184,30 @@ final class so {
           vq.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
           pg.field_p = pl.a("basic", "orbcoin", (byte) 122, param1);
           pl.a("basic", "locked", (byte) -45, param1);
-          nj.field_z = new jp(32, 32);
-          nj.field_z.g();
+          nj.field_z = new RgbSprite(32, 32);
+          nj.field_z.bindRasterTarget();
           pg.field_p.c(0, 0, 32, 32);
           kc.field_q.a((byte) 91);
           pg.field_p = null;
-          var19 = new jp(vq.field_F.field_x / 4, vq.field_F.field_z / 4);
-          var19.g();
+          var19 = new RgbSprite(vq.field_F.canvasWidth / 4, vq.field_F.canvasHeight / 4);
+          var19.bindRasterTarget();
           vq.field_F.e(0, 0);
           kc.field_q.a((byte) 113);
           bf.field_L = p.a(-12, var19, 8, 9838226);
           qh.field_c = p.a(-12, var19, 12, 9838226);
           var8 = null;
-          e.field_l = new jp[si.field_c.length];
-          pa.field_h = new jp[si.field_c.length];
-          var20 = new jp(vq.field_F.field_x / 4, vq.field_F.field_z / 4);
+          e.field_l = new RgbSprite[si.field_c.length];
+          pa.field_h = new RgbSprite[si.field_c.length];
+          var20 = new RgbSprite(vq.field_F.canvasWidth / 4, vq.field_F.canvasHeight / 4);
           for (var10_int = 0; var10_int < si.field_c.length; var10_int++) {
-            var20.g();
-            lb.d();
+            var20.bindRasterTarget();
+            Rasterizer2D.clear();
             si.field_c[var10_int].c(0, 0);
             kc.field_q.a((byte) 101);
             e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
             pa.field_h[var10_int] = p.a(pn.a(param3, -29147), var20, 12, 9838226);
           }
-          CircleBody.field_t = new jp[lo.field_c.length][];
+          CircleBody.field_t = new RgbSprite[lo.field_c.length][];
           var9 = null;
           for (var10_intLifetime1 = 0; lo.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
             CircleBody.field_t[var10_intLifetime1] = cr.a("basic", param0, lo.field_c[var10_intLifetime1], 2);
@@ -239,54 +239,54 @@ final class so {
           BrickMotionPath.field_r = cr.a("basic", param0, "podium_happy", 2);
           e.field_q = cr.a("basic", param0, "podium_sad", param3 ^ 29139);
           qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
-          pa.field_m = new jp[h.field_C.length];
+          pa.field_m = new RgbSprite[h.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
             pa.field_m[var10_intLifetime2] = h.field_C[var10_intLifetime2].a();
           }
-          pa.field_m[24].g();
-          lb.a(0, 0, lb.field_c, lb.field_d);
-          mf.field_a = new jp[pa.field_m.length];
+          pa.field_m[24].bindRasterTarget();
+          Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
+          mf.field_a = new RgbSprite[pa.field_m.length];
           for (var10_intLifetime3 = 0; var10_intLifetime3 < pa.field_m.length; var10_intLifetime3++) {
-            mf.field_a[var10_intLifetime3] = new jp(pa.field_m[var10_intLifetime3].field_x / 2, pa.field_m[var10_intLifetime3].field_z / 2);
-            mf.field_a[var10_intLifetime3].g();
+            mf.field_a[var10_intLifetime3] = new RgbSprite(pa.field_m[var10_intLifetime3].canvasWidth / 2, pa.field_m[var10_intLifetime3].canvasHeight / 2);
+            mf.field_a[var10_intLifetime3].bindRasterTarget();
             pa.field_m[var10_intLifetime3 % 29].a(0, 0);
           }
-          kp.field_e = new jp[dg.field_b.length];
+          kp.field_e = new RgbSprite[dg.field_b.length];
           for (var10_intLifetime4 = 0; dg.field_b.length > var10_intLifetime4; var10_intLifetime4++) {
-            kp.field_e[var10_intLifetime4] = new jp(dg.field_b[var10_intLifetime4].field_x / 2, dg.field_b[var10_intLifetime4].field_z / 2);
-            kp.field_e[var10_intLifetime4].g();
+            kp.field_e[var10_intLifetime4] = new RgbSprite(dg.field_b[var10_intLifetime4].canvasWidth / 2, dg.field_b[var10_intLifetime4].canvasHeight / 2);
+            kp.field_e[var10_intLifetime4].bindRasterTarget();
             dg.field_b[var10_intLifetime4].a(0, 0);
           }
-          ol.field_z = new jp[qg.field_D.length];
+          ol.field_z = new RgbSprite[qg.field_D.length];
           for (var10_intLifetime5 = 0; qg.field_D.length > var10_intLifetime5; var10_intLifetime5++) {
-            ol.field_z[var10_intLifetime5] = new jp(qg.field_D[var10_intLifetime5].field_x / 2, qg.field_D[var10_intLifetime5].field_z / 2);
-            ol.field_z[var10_intLifetime5].g();
+            ol.field_z[var10_intLifetime5] = new RgbSprite(qg.field_D[var10_intLifetime5].canvasWidth / 2, qg.field_D[var10_intLifetime5].canvasHeight / 2);
+            ol.field_z[var10_intLifetime5].bindRasterTarget();
             qg.field_D[var10_intLifetime5].a(0, 0);
           }
-          ep.field_j = new jp(dk.field_R.field_x / 2, dk.field_R.field_z / 2);
-          ep.field_j.g();
+          ep.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
+          ep.field_j.bindRasterTarget();
           dk.field_R.a(0, 0);
-          p.field_i = new jp(re.field_k.field_x / 2, re.field_k.field_z / 2);
-          p.field_i.g();
+          p.field_i = new RgbSprite(re.field_k.canvasWidth / 2, re.field_k.canvasHeight / 2);
+          p.field_i.bindRasterTarget();
           re.field_k.a(0, 0);
-          mh.field_ib = new jp(Ball.field_D.field_x / 2, Ball.field_D.field_z / 2);
-          mh.field_ib.g();
+          mh.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
+          mh.field_ib.bindRasterTarget();
           Ball.field_D.a(0, 0);
-          ch.field_k = new jp[gg.field_p.length];
+          ch.field_k = new RgbSprite[gg.field_p.length];
           if (param3 != 29137) {
             so.a((byte) -25);
           }
           for (var10_intLifetime6 = 0; ch.field_k.length > var10_intLifetime6; var10_intLifetime6++) {
-            ch.field_k[var10_intLifetime6] = new jp(gg.field_p[var10_intLifetime6].field_x / 2, gg.field_p[var10_intLifetime6].field_z / 2);
-            ch.field_k[var10_intLifetime6].g();
+            ch.field_k[var10_intLifetime6] = new RgbSprite(gg.field_p[var10_intLifetime6].canvasWidth / 2, gg.field_p[var10_intLifetime6].canvasHeight / 2);
+            ch.field_k[var10_intLifetime6].bindRasterTarget();
             gg.field_p[var10_intLifetime6].a(0, 0);
           }
           kc.field_q.a((byte) 79);
           for (var10_intLifetime7 = 0; var10_intLifetime7 < ln.field_j.length; var10_intLifetime7++) {
-            ln.field_j[var10_intLifetime7].d();
+            ln.field_j[var10_intLifetime7].trimTransparentBorders();
           }
           for (var10_intLifetime8 = 0; IntHistoryBuffer.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
-            IntHistoryBuffer.field_l[var10_intLifetime8].d();
+            IntHistoryBuffer.field_l[var10_intLifetime8].trimTransparentBorders();
           }
           um.field_p = pl.a("basic", "character_menu", (byte) -62, param0);
           pa.field_j = pl.a("basic", "character_menu_eyes", (byte) -120, param0);
@@ -294,12 +294,12 @@ final class so {
           nl.field_b = um.a("basic", "logo", 1593955777, param0);
           g.field_l = cr.a("basic", param0, "sliders", 2);
           mp.field_Vb = cr.a("basic", param0, "arrow_level", param3 ^ 29139);
-          pa.field_l = new jp[mp.field_Vb.length];
+          pa.field_l = new RgbSprite[mp.field_Vb.length];
           for (var10_intLifetime9 = 0; mp.field_Vb.length > var10_intLifetime9; var10_intLifetime9++) {
-            dupTemp$0 = mp.field_Vb[var10_intLifetime9].e();
+            dupTemp$0 = mp.field_Vb[var10_intLifetime9].copy();
             pa.field_l[var10_intLifetime9] = dupTemp$0;
             var11_ref_jp = dupTemp$0;
-            var11_ref_jp.b();
+            var11_ref_jp.rotateCounterclockwise();
           }
           un.field_e = new tp[7];
           un.field_e[0] = uo.a((byte) 29, param0, "p1_key_right", "basic");
@@ -315,52 +315,52 @@ final class so {
           }
           jk.field_u = lg.a(2, mo.field_N, -1);
           v.field_b = lg.a(2, ci.field_s.toUpperCase(), -1);
-          ed.field_b = new jp[3];
+          ed.field_b = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
             ed.field_b[var10_intLifetime11] = fp.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
-          rn.field_a = new jp[tf.field_g.length];
+          rn.field_a = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime12 = 0; rn.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
             rn.field_a[var10_intLifetime12] = p.a(pn.a(param3, -29147), tf.field_g[var10_intLifetime12], 14, 16755200);
           }
-          lk.field_n = new jp[tf.field_g.length];
+          lk.field_n = new RgbSprite[tf.field_g.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < lk.field_n.length; var10_intLifetime13++) {
             lk.field_n[var10_intLifetime13] = pg.a(tf.field_g[var10_intLifetime13], 20, pn.a(param3, -13351));
           }
-          rk.field_Sb = ap.field_a.e();
-          rk.field_Sb.b();
+          rk.field_Sb = ap.field_a.copy();
+          rk.field_Sb.rotateCounterclockwise();
           dg.field_e = pl.a("basic", "shutter", (byte) 110, param0);
-          cq.field_o = new jp(dg.field_e.field_x / 2, dg.field_e.field_z / 2);
-          cq.field_o.g();
+          cq.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
+          cq.field_o.bindRasterTarget();
           dg.field_e.a(0, 0);
           kc.field_q.a((byte) 118);
           var10 = pl.a("basic", "flame", (byte) 107, param0);
-          hc.field_a = new jp[2][4];
-          ip.field_v = new jp[2][4];
+          hc.field_a = new RgbSprite[2][4];
+          ip.field_v = new RgbSprite[2][4];
           for (var11 = 0; var11 < 4; var11++) {
-            ip.field_v[0][var11] = new jp(var10.field_x - var11, var10.field_z);
-            ip.field_v[0][var11].g();
-            var10.a(0, 0, -var11 + var10.field_x, var10.field_z);
-            ip.field_v[1][var11] = ip.field_v[0][var11].c();
-            hc.field_a[0][var11] = new jp(ip.field_v[0][var11].field_x / 2, ip.field_v[0][var11].field_z / 2);
-            hc.field_a[0][var11].g();
-            var10.a(0, 0, ip.field_v[0][var11].field_x / 2, ip.field_v[0][var11].field_z / 2);
-            hc.field_a[1][var11] = hc.field_a[0][var11].c();
+            ip.field_v[0][var11] = new RgbSprite(var10.canvasWidth - var11, var10.canvasHeight);
+            ip.field_v[0][var11].bindRasterTarget();
+            var10.a(0, 0, -var11 + var10.canvasWidth, var10.canvasHeight);
+            ip.field_v[1][var11] = ip.field_v[0][var11].copyFlippedHorizontal();
+            hc.field_a[0][var11] = new RgbSprite(ip.field_v[0][var11].canvasWidth / 2, ip.field_v[0][var11].canvasHeight / 2);
+            hc.field_a[0][var11].bindRasterTarget();
+            var10.a(0, 0, ip.field_v[0][var11].canvasWidth / 2, ip.field_v[0][var11].canvasHeight / 2);
+            hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
           }
           kc.field_q.a((byte) 127);
           hq.field_s = bd.a("basic", "expansion_icons", param0, (byte) -8);
-          da.field_E = new jp[hq.field_s.length];
+          da.field_E = new RgbSprite[hq.field_s.length];
           for (var11Lifetime1 = 0; var11Lifetime1 < hq.field_s.length; var11Lifetime1++) {
-            da.field_E[var11Lifetime1] = new jp(hq.field_s[var11Lifetime1].field_x / 2, hq.field_s[var11Lifetime1].field_z / 2);
+            da.field_E[var11Lifetime1] = new RgbSprite(hq.field_s[var11Lifetime1].canvasWidth / 2, hq.field_s[var11Lifetime1].canvasHeight / 2);
             fc.a(-59, da.field_E[var11Lifetime1]);
             hq.field_s[var11Lifetime1].a(0, 0);
             sc.b(-89);
           }
-          cm.field_r = new jp[hq.field_s.length];
+          cm.field_r = new RgbSprite[hq.field_s.length];
           for (var11Lifetime2 = 0; hq.field_s.length > var11Lifetime2; var11Lifetime2++) {
             cm.field_r[var11Lifetime2] = pg.a(da.field_E[var11Lifetime2], 20, -17912);
           }
-          ik.field_f = new jp[hq.field_s.length];
+          ik.field_f = new RgbSprite[hq.field_s.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < hq.field_s.length; var11Lifetime3++) {
             ik.field_f[var11Lifetime3] = p.a(pn.a(param3, -29147), da.field_E[var11Lifetime3], 14, 16777215);
           }

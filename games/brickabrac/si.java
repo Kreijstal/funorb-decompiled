@@ -11,7 +11,7 @@ final class si {
     private int field_g;
     static char[] field_n;
     private IntrusiveNode field_e;
-    static jp field_i;
+    static RgbSprite field_i;
     static byte[][] field_b;
     static int[] field_d;
     static tp[] field_c;
@@ -191,27 +191,27 @@ final class si {
         int var8 = 0;
         int var9 = 0;
         int var10 = BrickABrac.field_J ? 1 : 0;
-        int var4 = -5 + (640 - um.field_p.field_x);
-        int var5 = -20 + (480 - um.field_p.field_z + 15);
+        int var4 = -5 + (640 - um.field_p.canvasWidth);
+        int var5 = -20 + (480 - um.field_p.canvasHeight + 15);
         int var8Lifetime1;
         int var8Lifetime2;
         int var8Lifetime3;
         int var9Lifetime1;
         int var9Lifetime2;
-        um.field_p.c(var4, var5);
+        um.field_p.drawTransparent(var4, var5);
         if (param1 >= -115) {
           si.a(75, (byte) 65, 92, -101);
         }
-        int var6 = var4 + (um.field_p.field_x - pa.field_j.field_x) / 2;
+        int var6 = var4 + (um.field_p.canvasWidth - pa.field_j.canvasWidth) / 2;
         int var7 = 64 + var5;
         if ((param2 | param0) <= 0) {
-          pa.field_j.c(var6, var7);
-          var8 = -20 + ((-gr.field_d[param3].field_x + um.field_p.field_x) / 2 + var4);
-          var9 = 480 - gr.field_d[param3].field_z + 60;
-          gr.field_d[param3].c(var8, var9);
+          pa.field_j.drawTransparent(var6, var7);
+          var8 = -20 + ((-gr.field_d[param3].canvasWidth + um.field_p.canvasWidth) / 2 + var4);
+          var9 = 480 - gr.field_d[param3].canvasHeight + 60;
+          gr.field_d[param3].drawTransparent(var8, var9);
           return;
         }
-        var8Lifetime1 = -param2 + pa.field_j.field_z / 2 + var7;
+        var8Lifetime1 = -param2 + pa.field_j.canvasHeight / 2 + var7;
         if (var8Lifetime1 > 0) {
           var7 = var7 - 6 * var8Lifetime1 / (var8Lifetime1 + param2);
         } else {
@@ -219,23 +219,23 @@ final class si {
             var7 = var7 - 12 * var8Lifetime1 / (param2 + var8Lifetime1);
           }
         }
-        var9Lifetime1 = -param0 + pa.field_j.field_x / 2 + var6;
+        var9Lifetime1 = -param0 + pa.field_j.canvasWidth / 2 + var6;
         if (0 >= var9Lifetime1) {
           if (var9Lifetime1 >= 0) {
-            pa.field_j.c(var6, var7);
-            var8Lifetime2 = -20 + ((-gr.field_d[param3].field_x + um.field_p.field_x) / 2 + var4);
-            var9Lifetime1 = 480 - gr.field_d[param3].field_z + 60;
-            gr.field_d[param3].c(var8Lifetime2, var9Lifetime1);
+            pa.field_j.drawTransparent(var6, var7);
+            var8Lifetime2 = -20 + ((-gr.field_d[param3].canvasWidth + um.field_p.canvasWidth) / 2 + var4);
+            var9Lifetime1 = 480 - gr.field_d[param3].canvasHeight + 60;
+            gr.field_d[param3].drawTransparent(var8Lifetime2, var9Lifetime1);
             return;
           }
           var6 = var6 - var9Lifetime1 * 36 / (var9Lifetime1 + param0);
         } else {
           var6 = var6 - 6 * var9Lifetime1 / (var9Lifetime1 + param0);
         }
-        pa.field_j.c(var6, var7);
-        var8Lifetime3 = -20 + ((-gr.field_d[param3].field_x + um.field_p.field_x) / 2 + var4);
-        var9Lifetime2 = 480 - gr.field_d[param3].field_z + 60;
-        gr.field_d[param3].c(var8Lifetime3, var9Lifetime2);
+        pa.field_j.drawTransparent(var6, var7);
+        var8Lifetime3 = -20 + ((-gr.field_d[param3].canvasWidth + um.field_p.canvasWidth) / 2 + var4);
+        var9Lifetime2 = 480 - gr.field_d[param3].canvasHeight + 60;
+        gr.field_d[param3].drawTransparent(var8Lifetime3, var9Lifetime2);
     }
 
     final void a(int param0, IntrusiveNode param1, long param2) {

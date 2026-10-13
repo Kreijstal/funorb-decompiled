@@ -5,7 +5,7 @@ final class i extends IntrusiveNode {
     static mf field_s;
     int field_i;
     af field_t;
-    private jp field_k;
+    private RgbSprite field_k;
     int field_u;
     int field_w;
     int field_p;
@@ -269,9 +269,9 @@ final class i extends IntrusiveNode {
 
     final void a(byte param0) {
         int var3;
-        jp var6;
-        jp var7;
-        jp var10;
+        RgbSprite var6;
+        RgbSprite var7;
+        RgbSprite var10;
         tp var11;
         tp var12;
         tp var13;
@@ -282,7 +282,7 @@ final class i extends IntrusiveNode {
             if (this.field_k == null ||
               this.field_v) {
               var12 = si.field_c[this.field_r];
-              this.field_k = new jp(var12.field_f / 4, var12.field_h / 4);
+              this.field_k = new RgbSprite(var12.field_f / 4, var12.field_h / 4);
               fc.a(-119, this.field_k);
               var12.c(0, 0);
               sc.b(-89);
@@ -294,7 +294,7 @@ final class i extends IntrusiveNode {
               if (this.field_k == null ||
                 this.field_v) {
                 var11 = si.field_c[this.field_r];
-                this.field_k = new jp(var11.field_f / 4, var11.field_h / 4);
+                this.field_k = new RgbSprite(var11.field_f / 4, var11.field_h / 4);
                 fc.a(-119, this.field_k);
                 var11.c(0, 0);
                 sc.b(-89);
@@ -304,7 +304,7 @@ final class i extends IntrusiveNode {
               if (this.field_k == null ||
                 this.field_v) {
                 var13 = si.field_c[this.field_r];
-                this.field_k = new jp(var13.field_f / 4, var13.field_h / 4);
+                this.field_k = new RgbSprite(var13.field_f / 4, var13.field_h / 4);
                 fc.a(-119, this.field_k);
                 var13.c(0, 0);
                 sc.b(-89);
@@ -317,7 +317,7 @@ final class i extends IntrusiveNode {
             if (nf.field_Y != this.field_r) {
               if (this.field_k == null) {
                 var6 = vq.field_F;
-                this.field_k = new jp(var6.field_x / 4, var6.field_z / 4);
+                this.field_k = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
                 fc.a(-76, this.field_k);
                 var6.e(0, 0);
                 sc.b(-110);
@@ -325,7 +325,7 @@ final class i extends IntrusiveNode {
               } else {
                 if (!this.field_v) {
                   var7 = vq.field_F;
-                  this.field_k = new jp(var7.field_x / 4, var7.field_z / 4);
+                  this.field_k = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
                   fc.a(-76, this.field_k);
                   var7.e(0, 0);
                   sc.b(-110);
@@ -335,7 +335,7 @@ final class i extends IntrusiveNode {
               if (param0 < 87) {
                 return;
               }
-              this.field_k.c(this.field_i, this.field_n);
+              this.field_k.drawTransparent(this.field_i, this.field_n);
               return;
             }
             bf.field_L.f(this.field_i, this.field_n, 256);
@@ -344,7 +344,7 @@ final class i extends IntrusiveNode {
           }
           if (this.field_k == null) {
             var10 = vq.field_F;
-            this.field_k = new jp(var10.field_x / 4, var10.field_z / 4);
+            this.field_k = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
             fc.a(-76, this.field_k);
             var10.e(0, 0);
             sc.b(-110);
@@ -352,7 +352,7 @@ final class i extends IntrusiveNode {
           } else {
             if (!this.field_v) {
               var10 = vq.field_F;
-              this.field_k = new jp(var10.field_x / 4, var10.field_z / 4);
+              this.field_k = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
               fc.a(-76, this.field_k);
               var10.e(0, 0);
               sc.b(-110);
@@ -363,7 +363,7 @@ final class i extends IntrusiveNode {
         if (param0 < 87) {
           return;
         }
-        this.field_k.c(this.field_i, this.field_n);
+        this.field_k.drawTransparent(this.field_i, this.field_n);
     }
 
     i() {

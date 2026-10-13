@@ -37,7 +37,7 @@ final class od extends java.awt.Canvas {
                 fieldTemp$0 = jl.field_a - 1;
                 jl.field_a = jl.field_a - 1;
                 if (0 == fieldTemp$0) {
-                  mn.field_v = de.field_x;
+                  SpriteGeometry.field_v = de.field_x;
                   tb.field_eb = hq.field_y;
                   pp.field_a = -1;
                   jl.field_a = 250;
@@ -55,7 +55,7 @@ final class od extends java.awt.Canvas {
                     ga.field_i = 1;
                     jl.field_a = 250;
                     c.field_i = un.field_e;
-                    mn.field_v = de.field_x;
+                    SpriteGeometry.field_v = de.field_x;
                     tb.field_eb = va.field_d;
                   }
                 }
@@ -113,7 +113,7 @@ final class od extends java.awt.Canvas {
               fieldTemp$4 = jl.field_a - 1;
               jl.field_a = jl.field_a - 1;
               if (0 == fieldTemp$4) {
-                mn.field_v = de.field_x;
+                SpriteGeometry.field_v = de.field_x;
                 pp.field_a = -1;
                 c.field_i = un.field_e;
                 tb.field_eb = sb.field_d;

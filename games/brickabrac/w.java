@@ -4,22 +4,22 @@
 final class w {
     private int field_h;
     private tp[] field_q;
-    private jp field_p;
-    static jp field_r;
+    private RgbSprite field_p;
+    static RgbSprite field_r;
     private int field_b;
     private String field_f;
     private boolean field_a;
     private String[] field_d;
     static int field_k;
     static String field_m;
-    private jp field_e;
+    private RgbSprite field_e;
     static int[] field_n;
     private int field_c;
     private int field_j;
     private re field_g;
     private int field_o;
     private int field_i;
-    private jp field_l;
+    private RgbSprite field_l;
 
     final int a(boolean param0, boolean param1) {
         int stackIn_3_0 = 0;
@@ -209,7 +209,7 @@ final class w {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         int var3 = 0;
-        jp var5 = null;
+        RgbSprite var5 = null;
         String var6 = null;
         String var7 = null;
         int[] var16 = null;
@@ -218,30 +218,30 @@ final class w {
         try {
           if (this.field_l == null &&
             null != co.field_j) {
-            this.field_l = new jp(622, 47);
+            this.field_l = new RgbSprite(622, 47);
             fc.a(-49, this.field_l);
-            lb.g(0, 0, 622, 47, 4540749, 65793);
+            Rasterizer2D.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
             var16 = lk.a(param0 - 580, var2_int, var3);
             this.a(47, 0, this.field_f, var16, co.field_j, 622, 0, 0);
             sc.b(param0 - 592);
-            this.field_e = new jp(param0, 24);
+            this.field_e = new RgbSprite(param0, 24);
             this.a(co.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
             var17 = lk.a(-124, 526344, 526344);
-            var5 = new jp(121, 122);
+            var5 = new RgbSprite(121, 122);
             fc.a(param0 ^ -388, var5);
-            lb.g(0, 0, var5.field_D, var5.field_C / 2, 16180917, 16306250);
-            lb.g(0, var5.field_C / 2, var5.field_D, var5.field_C, 16306250, 15568919);
+            Rasterizer2D.fillVerticalGradient(0, 0, var5.width, var5.height / 2, 16180917, 16306250);
+            Rasterizer2D.fillVerticalGradient(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
             var6 = tl.field_a;
             var7 = ko.field_q;
-            this.a(co.field_j, -16, 0.5f, (byte) 118, var5.field_D, var6, var17, var5.field_C, var5, 0);
-            this.a(co.field_j, 20, 0.5f, (byte) 105, var5.field_D, var7, var17, var5.field_C, var5, 0);
-            this.a(co.field_j, -co.field_j.field_F + (var5.field_C / 2 + 12), 0.699999988079071f, (byte) 62, var5.field_D, uo.field_e[this.field_c], var17, var5.field_C / 3, var5, 0);
+            this.a(co.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
+            this.a(co.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
+            this.a(co.field_j, -co.field_j.field_F + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
             sc.b(-119);
-            this.field_p = new jp(121, 122);
+            this.field_p = new RgbSprite(121, 122);
             fc.a(-115, this.field_p);
-            var5.e(this.field_p.field_D / 2, this.field_p.field_C / 2, -2048, 4096);
+            var5.e(this.field_p.width / 2, this.field_p.height / 2, -2048, 4096);
             sc.b(-108);
             return;
           }
@@ -264,13 +264,13 @@ final class w {
         int var3Lifetime1;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          lb.g(9, 9, 622, 47, 4540749, 65793);
-          lb.g(9, 257, 622, 33, 2585);
-          lb.g(9, 265, 622, 11, 2585, 1515566);
+          Rasterizer2D.fillVerticalGradient(9, 9, 622, 47, 4540749, 65793);
+          Rasterizer2D.fillRectangle(9, 257, 622, 33, 2585);
+          Rasterizer2D.fillVerticalGradient(9, 265, 622, 11, 2585, 1515566);
           var2_int = 0;
           var3 = 14;
           while (4 > var2_int) {
-            lb.g(var3, 331, 117, 90, 460551, 3881787);
+            Rasterizer2D.fillVerticalGradient(var3, 331, 117, 90, 460551, 3881787);
             var2_int++;
             var3 += 121;
           }
@@ -280,8 +280,8 @@ final class w {
           var2_intLifetime1 = 0;
           var3Lifetime1 = 299;
           while (2 > var2_intLifetime1) {
-            lb.g(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-            lb.g(508, 42 + var3Lifetime1, 127, 42, 12410);
+            Rasterizer2D.fillVerticalGradient(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+            Rasterizer2D.fillRectangle(508, 42 + var3Lifetime1, 127, 42, 12410);
             var3Lifetime1 += 91;
             var2_intLifetime1++;
           }
@@ -309,11 +309,11 @@ final class w {
           if (null == bl.field_J) {
             return;
           }
-          this.field_p.c(376, 339);
-          this.field_l.c(9, 9);
+          this.field_p.drawTransparent(376, 339);
+          this.field_l.drawTransparent(9, 9);
           bl.field_J.a(0, 0);
           if (null != ll.field_c) {
-            ll.field_c.c(9, 257);
+            ll.field_c.drawTransparent(9, 257);
             ll.field_c.f(558, 257);
             if (po.field_a > 257 &&
               po.field_a < 290) {
@@ -328,29 +328,29 @@ final class w {
                 } else {
                   if (558 < pq.field_k &&
                     pq.field_k < 631) {
-                    ll.field_c.a();
+                    ll.field_c.flipHorizontal();
                     ll.field_c.f(557, 256, var2_intLifetime2);
                     ll.field_c.f(559, 256, var2_intLifetime2);
                     ll.field_c.f(557, 258, var2_intLifetime2);
                     ll.field_c.f(559, 258, var2_intLifetime2);
-                    ll.field_c.a();
+                    ll.field_c.flipHorizontal();
                   }
                 }
               }
             }
           }
-          this.field_e.c(16, 302);
+          this.field_e.drawTransparent(16, 302);
           ch.field_c.a(this.field_d[this.field_h], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-          rp.field_u.c(30, 330);
+          rp.field_u.drawTransparent(30, 330);
           ch.field_c.a(ab.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(ab.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(ab.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          LevelPack.field_e.c((-LevelPack.field_e.field_x + 127) / 2 + 508, 315);
+          LevelPack.field_e.drawTransparent((-LevelPack.field_e.canvasWidth + 127) / 2 + 508, 315);
           if (0 == this.field_g.field_j) {
-            sf.field_V[0].c(508, 299);
+            sf.field_V[0].drawTransparent(508, 299);
           } else {
             if (this.field_g.field_j == 1) {
-              sf.field_V[1].c(508, 387);
+              sf.field_V[1].drawTransparent(508, 387);
             }
           }
           return;
@@ -418,7 +418,7 @@ final class w {
         }
     }
 
-    private final void a(dh param0, int param1, float param2, byte param3, int param4, String param5, int[] param6, int param7, jp param8, int param9) {
+    private final void a(dh param0, int param1, float param2, byte param3, int param4, String param5, int[] param6, int param7, RgbSprite param8, int param9) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -438,16 +438,16 @@ final class w {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        jp var13 = null;
+        RgbSprite var13 = null;
         try {
           var11_int = (int)((float)param4 / param2);
           if (param3 < 56) {
             this.field_o = -54;
           }
           var12 = (int)((float)param7 / param2);
-          var13 = new jp(var11_int, var12);
+          var13 = new RgbSprite(var11_int, var12);
           fc.a(-116, var13);
-          param8.a((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.field_D / param2), (int)((float)param8.field_C / param2));
+          param8.a((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.width / param2), (int)((float)param8.height / param2));
           this.a(var12, 0, param5, param6, param0, var11_int, 0, 0);
           sc.b(-104);
           fc.a(-126, param8);
@@ -606,7 +606,7 @@ final class w {
           field_r = null;
           field_m = null;
           if (param0 < 82) {
-            field_r = (jp) null;
+            field_r = (RgbSprite) null;
           }
           field_n = null;
         } catch (RuntimeException runtimeException) {
@@ -645,7 +645,7 @@ final class w {
           var2_int = param1.length();
           var3 = new char[var2_int];
           if (param0 <= 4) {
-            field_r = (jp) null;
+            field_r = (RgbSprite) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             var3[-1 + (var2_int - var4)] = param1.charAt(var4);
@@ -691,7 +691,7 @@ final class w {
             return;
           }
           for (var9_int = param6; param0 > var9_int; var9_int++) {
-            lb.e(param1, var9_int, param5, 1 + var9_int);
+            Rasterizer2D.setClip(param1, var9_int, param5, 1 + var9_int);
             var10 = var9_int * param3.length / param0;
             var11 = param3[param3.length - (var10 + 1)];
             param4.a(param2, param1, param6, param5, param0, var11, -1, 1, 1, 0);

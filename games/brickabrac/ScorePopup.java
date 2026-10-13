@@ -5,12 +5,12 @@ final class ScorePopup extends IntrusiveNode {
     static String field_j;
     String text;
     int y256;
-    static jp[] field_r;
+    static RgbSprite[] field_r;
     int x256;
     static mf field_l;
     static hl field_m;
     static int field_p;
-    static jp[] field_k;
+    static RgbSprite[] field_k;
     int remainingTicks;
 
     final static void a(int param0) {
@@ -57,7 +57,7 @@ final class ScorePopup extends IntrusiveNode {
         field_j = null;
     }
 
-    final static jp[] a(int param0, int param1, byte param2, int param3) {
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3) {
         if (param2 <= 34) {
           ScorePopup.a(19);
         }
@@ -75,7 +75,7 @@ final class ScorePopup extends IntrusiveNode {
 
     final static int a(int param0, int param1) {
         if (param0 != 255) {
-          field_k = (jp[]) null;
+          field_k = (RgbSprite[]) null;
         }
         return la.a(param1, 255, 255);
     }

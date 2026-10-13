@@ -6,8 +6,8 @@ class IntrusiveNode {
     IntrusiveNode next;
     static th field_c;
     static String field_a;
-    static jp[] field_f;
-    static jp field_d;
+    static RgbSprite[] field_f;
+    static RgbSprite field_d;
     static int[] field_h;
     long key;
 

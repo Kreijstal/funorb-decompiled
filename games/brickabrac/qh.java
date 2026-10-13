@@ -8,9 +8,9 @@ final class qh {
     static int field_d;
     static byte[] field_h;
     static int field_f;
-    static jp field_e;
+    static RgbSprite field_e;
     static String[] field_i;
-    static jp field_c;
+    static RgbSprite field_c;
     static String field_g;
 
     public final String toString() {
@@ -28,12 +28,12 @@ final class qh {
           field_b = null;
           return;
         }
-        field_c = (jp) null;
+        field_c = (RgbSprite) null;
         field_h = null;
         field_b = null;
     }
 
-    final static void a(int param0, int param1, jp param2, int param3, jp param4, int param5, int param6, int param7, jp param8, int param9) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, RgbSprite param4, int param5, int param6, int param7, RgbSprite param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -44,12 +44,12 @@ final class qh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
         try {
-          param8.d((param3 * 5 >> 16) + ((-param8.field_x + param6) / 2 + param7), param9);
-          param2.c(param7 - (-((param6 - param2.field_x) / 2) - (10 * param3 >> 16)), -param2.field_z + param1 + param9 + 480);
+          param8.drawAt((param3 * 5 >> 16) + ((-param8.canvasWidth + param6) / 2 + param7), param9);
+          param2.drawTransparent(param7 - (-((param6 - param2.canvasWidth) / 2) - (10 * param3 >> 16)), -param2.canvasHeight + param1 + param9 + 480);
           if (param5 < 2) {
             return;
           }
-          param4.c((20 * param3 >> 16) + param7 + (param6 - param4.field_x) / 2, param9 - (-param1 - 480) - param4.field_z);
+          param4.drawTransparent((20 * param3 >> 16) + param7 + (param6 - param4.canvasWidth) / 2, param9 - (-param1 - 480) - param4.canvasHeight);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

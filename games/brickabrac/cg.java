@@ -4,7 +4,7 @@
 final class cg extends dj {
     private int field_o;
     static boolean field_l;
-    static jp field_q;
+    static RgbSprite field_q;
     static ff field_s;
     static oe[] field_p;
     private long field_m;
@@ -40,8 +40,8 @@ final class cg extends dj {
     }
 
     final static void b(int param0) {
-        IsaacGenerator.field_i = lb.field_d;
-        kp.field_a = lb.field_c;
+        IsaacGenerator.field_i = Rasterizer2D.height;
+        kp.field_a = Rasterizer2D.width;
         Brick.e(-67);
         ap.field_b.a(fe.field_gb.field_Ib, 0, 80, 0, fe.field_gb.field_cb - 40 - 2);
         dn.field_N.a(np.field_a, 0, 0, RectangleBody.field_q.field_Ib, (byte) 64);
@@ -132,7 +132,7 @@ final class cg extends dj {
           this.field_o = (1 + this.field_o) % 10;
         }
         if (param0 >= -19) {
-          field_q = (jp) null;
+          field_q = (RgbSprite) null;
         }
         long var6 = 0L;
         for (var8 = 1; var8 <= this.field_j; var8++) {
@@ -208,7 +208,7 @@ final class cg extends dj {
 
     public static void f(byte param0) {
         if (param0 > -89) {
-          field_q = (jp) null;
+          field_q = (RgbSprite) null;
         }
         field_s = null;
         field_q = null;

@@ -7,7 +7,7 @@ final class nh {
     static int field_b;
     static rg field_c;
 
-    final static void a(int param0, int param1, int param2, int param3, jp[] param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
@@ -46,7 +46,7 @@ final class nh {
           if (param0 > 0 &&
             param1 > 0) {
             if (param4[3] != null) {
-              stackIn_10_0 = param4[3].field_x;
+              stackIn_10_0 = param4[3].canvasWidth;
             } else {
               stackIn_10_0 = 0;
             }
@@ -54,7 +54,7 @@ final class nh {
             if (param4[5] == null) {
               stackIn_13_0 = 0;
             } else {
-              stackIn_13_0 = param4[5].field_x;
+              stackIn_13_0 = param4[5].canvasWidth;
             }
             var7 = stackIn_13_0;
             if (param2 != -40) {
@@ -63,11 +63,11 @@ final class nh {
             if (null == param4[1]) {
               stackIn_18_0 = 0;
             } else {
-              stackIn_18_0 = param4[1].field_z;
+              stackIn_18_0 = param4[1].canvasHeight;
             }
             var8 = stackIn_18_0;
             if (param4[7] != null) {
-              stackIn_21_0 = param4[7].field_z;
+              stackIn_21_0 = param4[7].canvasHeight;
             } else {
               stackIn_21_0 = 0;
             }
@@ -90,99 +90,99 @@ final class nh {
               var19 = param1 * var8 / (var8 + var9) + param5;
               var18 = param1 * var8 / (var8 + var9) + param5;
             }
-            lb.a(rg.field_g);
+            Rasterizer2D.saveClip(rg.field_g);
             if (null != param4[0]) {
-              lb.d(param3, param5, var16, var18);
-              param4[0].c(param3, param5);
-              lb.b(rg.field_g);
+              Rasterizer2D.intersectClip(param3, param5, var16, var18);
+              param4[0].drawTransparent(param3, param5);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (null != param4[2]) {
-              lb.d(var17, param5, var10, var18);
-              param4[2].c(var13, param5);
-              lb.b(rg.field_g);
+              Rasterizer2D.intersectClip(var17, param5, var10, var18);
+              param4[2].drawTransparent(var13, param5);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (null != param4[6]) {
-              lb.d(param3, var19, var16, var11);
-              param4[6].c(param3, var15);
-              lb.b(rg.field_g);
+              Rasterizer2D.intersectClip(param3, var19, var16, var11);
+              param4[6].drawTransparent(param3, var15);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (param4[8] != null) {
-              lb.d(var17, var19, var10, var11);
-              param4[8].c(var13, var15);
-              lb.b(rg.field_g);
+              Rasterizer2D.intersectClip(var17, var19, var10, var11);
+              param4[8].drawTransparent(var13, var15);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             boolean decompiledFrameCompleted3 = true;
             if (param4[1] != null &&
-              0 != param4[1].field_x) {
-              lb.d(var16, param5, var17, var18);
+              0 != param4[1].canvasWidth) {
+              Rasterizer2D.intersectClip(var16, param5, var17, var18);
               var20 = var12;
               while (var13 > var20) {
-                param4[1].c(var20, param5);
-                var20 = var20 + param4[1].field_x;
+                param4[1].drawTransparent(var20, param5);
+                var20 = var20 + param4[1].canvasWidth;
                 if (var22 != 0) {
                   decompiledFrameCompleted3 = false;
                   break;
                 }
               }
               if (decompiledFrameCompleted3) {
-                lb.b(rg.field_g);
+                Rasterizer2D.restoreClip(rg.field_g);
               }
             }
             boolean decompiledFrameCompleted2 = true;
             if (param4[7] != null &&
-              param4[7].field_x != 0) {
-              lb.d(var16, var19, var17, var11);
+              param4[7].canvasWidth != 0) {
+              Rasterizer2D.intersectClip(var16, var19, var17, var11);
               var20Lifetime1 = var12;
               while (var13 > var20Lifetime1) {
-                param4[7].c(var20Lifetime1, var15);
-                var20Lifetime1 = var20Lifetime1 + param4[7].field_x;
+                param4[7].drawTransparent(var20Lifetime1, var15);
+                var20Lifetime1 = var20Lifetime1 + param4[7].canvasWidth;
                 if (var22 != 0) {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
               }
               if (decompiledFrameCompleted2) {
-                lb.b(rg.field_g);
+                Rasterizer2D.restoreClip(rg.field_g);
               }
             }
             boolean decompiledFrameCompleted1 = true;
             if (param4[3] != null &&
-              param4[3].field_z != 0) {
-              lb.d(param3, var18, var16, var19);
+              param4[3].canvasHeight != 0) {
+              Rasterizer2D.intersectClip(param3, var18, var16, var19);
               var20Lifetime2 = var14;
               while (var20Lifetime2 < var15) {
-                param4[3].c(param3, var20Lifetime2);
-                var20Lifetime2 = var20Lifetime2 + param4[3].field_z;
+                param4[3].drawTransparent(param3, var20Lifetime2);
+                var20Lifetime2 = var20Lifetime2 + param4[3].canvasHeight;
                 if (var22 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
               }
               if (decompiledFrameCompleted1) {
-                lb.b(rg.field_g);
+                Rasterizer2D.restoreClip(rg.field_g);
               }
             }
             boolean decompiledFrameCompleted0 = true;
             if (null != param4[5] &&
-              param4[5].field_z != 0) {
-              lb.d(var17, var18, var10, var19);
+              param4[5].canvasHeight != 0) {
+              Rasterizer2D.intersectClip(var17, var18, var10, var19);
               var20Lifetime3 = var14;
               while (var15 > var20Lifetime3) {
-                param4[5].c(var13, var20Lifetime3);
-                var20Lifetime3 = var20Lifetime3 + param4[5].field_z;
+                param4[5].drawTransparent(var13, var20Lifetime3);
+                var20Lifetime3 = var20Lifetime3 + param4[5].canvasHeight;
                 if (var22 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
               }
               if (decompiledFrameCompleted0) {
-                lb.b(rg.field_g);
+                Rasterizer2D.restoreClip(rg.field_g);
               }
             }
             if (null != param4[4] &&
-              param4[4].field_x != 0 &&
-              param4[4].field_z != 0) {
-              lb.d(var16, var18, var17, var19);
+              param4[4].canvasWidth != 0 &&
+              param4[4].canvasHeight != 0) {
+              Rasterizer2D.intersectClip(var16, var18, var17, var19);
               var20Lifetime4 = var14;
               while (var20Lifetime4 < var15) {
                 if (var22 != 0) {
@@ -190,12 +190,12 @@ final class nh {
                 }
                 var21 = var12;
                 while (var21 < var13) {
-                  param4[4].c(var21, var20Lifetime4);
-                  var21 = var21 + param4[4].field_x;
+                  param4[4].drawTransparent(var21, var20Lifetime4);
+                  var21 = var21 + param4[4].canvasWidth;
                 }
-                var20Lifetime4 = var20Lifetime4 + param4[4].field_z;
+                var20Lifetime4 = var20Lifetime4 + param4[4].canvasHeight;
               }
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
               return;
             }
             return;
@@ -215,7 +215,7 @@ final class nh {
         }
     }
 
-    final static void a(jp[] param0, int param1, int param2, int param3, int param4, dh param5, int param6, int param7, int param8, jp[] param9, int param10, jp[] param11, int param12, byte param13, int param14) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, dh param5, int param6, int param7, int param8, RgbSprite[] param9, int param10, RgbSprite[] param11, int param12, byte param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -229,13 +229,13 @@ final class nh {
         int var15_int = 0;
         RuntimeException var15 = null;
         int var16 = 0;
-        jp[] var17 = null;
+        RgbSprite[] var17 = null;
         try {
           var15_int = param5.field_B + param5.field_P;
           var16 = param5.field_B;
           if (param13 != -110) {
-            var17 = (jp[]) null;
-            nh.a((jp[]) null, -71, 62, -50, 61, (dh) null, 97, 90, 79, (jp[]) null, 117, (jp[]) null, 81, (byte) 46, -119);
+            var17 = (RgbSprite[]) null;
+            nh.a((RgbSprite[]) null, -71, 62, -50, 61, (dh) null, 97, 90, 79, (RgbSprite[]) null, 117, (RgbSprite[]) null, 81, (byte) 46, -119);
           }
           oa.a(param3, var15_int, param10, param2, var15_int, param12, param1, param7, param4, param0, param5, param11, param8, param6, var16, false, param14, param9, param5, var16);
           return;
@@ -320,7 +320,7 @@ final class nh {
         int var18_int = 0;
         id var18_ref = null;
         int var19 = 0;
-        jp[] var20 = null;
+        RgbSprite[] var20 = null;
         int[] var21 = null;
         mh var23 = null;
         int[] var24 = null;
@@ -677,7 +677,7 @@ final class nh {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.field_Mb = rd.a(mn.field_w, new String[]{Integer.toString(var9)}, (byte) 103);
+              var8.field_Mb = rd.a(SpriteGeometry.field_w, new String[]{Integer.toString(var9)}, (byte) 103);
             }
             um.field_b.field_Mb = rd.a(rl.field_d, new String[]{Integer.toString(o.field_e.field_cc), Integer.toString(o.field_e.field_jc)}, (byte) 103);
           }
@@ -691,8 +691,8 @@ final class nh {
           stackIn_185_1 = (param2) && (!param1) && (hc.field_c);
           ((mh) (Object) stackIn_184_0).a(stackIn_185_1, -15211);
           if (!param0) {
-            var20 = (jp[]) null;
-            nh.a(-9, -55, 119, -100, (jp[]) null, -102);
+            var20 = (RgbSprite[]) null;
+            nh.a(-9, -55, 119, -100, (RgbSprite[]) null, -102);
           }
           sb.field_c.field_d.i(0);
           if (null != o.field_e) {

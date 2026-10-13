@@ -101,12 +101,12 @@ final class bd implements ub {
         }
     }
 
-    final static jp[] a(String param0, String param1, mf param2, byte param3) {
+    final static RgbSprite[] a(String param0, String param1, mf param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        jp[] stackIn_2_0 = null;
-        jp[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_2_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -118,7 +118,7 @@ final class bd implements ub {
         try {
           var4_int = param2.a(param0, false);
           if (param3 != -8) {
-            stackIn_2_0 = (jp[]) null;
+            stackIn_2_0 = (RgbSprite[]) null;
             return stackIn_2_0;
           }
           var5 = param2.a(var4_int, -46, param1);
@@ -158,7 +158,7 @@ final class bd implements ub {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        jp var8 = null;
+        RgbSprite var8 = null;
         try {
           var6_int = param3.field_o + param2;
           var7 = param3.field_w + param4;
@@ -169,7 +169,7 @@ final class bd implements ub {
           var8 = df.field_a[1];
           if (param3 instanceof d &&
             ((d) (param3)).field_F) {
-            var8.f((-var8.field_x + param3.field_t >> 1) + 1 + var6_int, (-var8.field_z + param3.field_s >> 1) + 1 + var7, 256);
+            var8.f((-var8.canvasWidth + param3.field_t >> 1) + 1 + var6_int, (-var8.canvasHeight + param3.field_s >> 1) + 1 + var7, 256);
           }
           if (!param3.f(param1 ^ 20732)) {
             return;

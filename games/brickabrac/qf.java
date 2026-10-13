@@ -7,14 +7,14 @@ final class qf extends lp implements en {
     static int field_Cb;
     private boolean field_Fb;
 
-    final static void a(int param0, pb param1, int param2, jp param3, int param4, boolean param5) {
+    final static void a(int param0, pb param1, int param2, RgbSprite param3, int param4, boolean param5) {
         try {
           if (param5) {
             field_Cb = -58;
           }
           fc.a(-77, param1.field_p);
-          lb.g(0, 0, param1.field_i, param1.field_q, rm.field_d[param0], 22953);
-          param3.b((-param3.field_x + param1.field_i) / 2 - 80 / param2, -param3.field_z + (param1.field_q + param4 - 201 / param2), 41, 110);
+          Rasterizer2D.fillVerticalGradient(0, 0, param1.field_i, param1.field_q, rm.field_d[param0], 22953);
+          param3.b((-param3.canvasWidth + param1.field_i) / 2 - 80 / param2, -param3.canvasHeight + (param1.field_q + param4 - 201 / param2), 41, 110);
           sc.b(-107);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');

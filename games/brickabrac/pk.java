@@ -3,11 +3,11 @@
  */
 final class pk {
     String field_b;
-    static jp[][] field_e;
+    static RgbSprite[][] field_e;
     boolean field_d;
     static String field_g;
-    static jp field_a;
-    static jp field_f;
+    static RgbSprite field_a;
+    static RgbSprite field_f;
     static mh field_h;
     String field_c;
 
@@ -17,7 +17,7 @@ final class pk {
         if (param0 >= -51) {
           return;
         }
-        field_e = (jp[][]) null;
+        field_e = (RgbSprite[][]) null;
         field_f = null;
         field_a = null;
     }
@@ -45,7 +45,7 @@ final class pk {
             return;
           }
           if (!il.e((byte) -94)) {
-            lb.d();
+            Rasterizer2D.clear();
             dg.a(false, 240, 320);
             ck.a(param1, 0, 14209, 0);
             return;

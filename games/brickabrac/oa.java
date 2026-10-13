@@ -13,7 +13,7 @@ final class oa extends mh {
     static ki field_Sb;
     static String field_Tb;
 
-    final static void a(String[] args, jp[][] param1, int param2, String[][] param3, byte[] param4, mf param5, jp[][] param6, mf param7, boolean param8, int param9, int[] param10, String[][] param11, mf param12, byte[] param13, int param14) {
+    final static void a(String[] args, RgbSprite[][] param1, int param2, String[][] param3, byte[] param4, mf param5, RgbSprite[][] param6, mf param7, boolean param8, int param9, int[] param10, String[][] param11, mf param12, byte[] param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -43,7 +43,7 @@ final class oa extends mh {
         try {
           if (param14 != 22287) {
             var16 = (dh) null;
-            oa.a(56, 101, -86, 51, -89, 7, -10, 119, -103, (jp[]) null, (dh) null, (jp[]) null, -32, 111, 0, true, -111, (jp[]) null, (dh) null, 2);
+            oa.a(56, 101, -86, 51, -89, 7, -10, 119, -103, (RgbSprite[]) null, (dh) null, (RgbSprite[]) null, -32, 111, 0, true, -111, (RgbSprite[]) null, (dh) null, 2);
           }
           og.a(args, (tp[]) null, param13, param6, param4, param10, param14 - 22286, param1, param12, param9, param5, param3, param7, param2, (int[]) null, param11, param8);
           return;
@@ -159,7 +159,7 @@ final class oa extends mh {
         this.field_P = param1;
         if (param6 < 44) {
           dh var9 = (dh) null;
-          oa.a(23, 14, 2, 105, -34, -65, 67, 44, -119, (jp[]) null, (dh) null, (jp[]) null, -66, -50, -90, false, 92, (jp[]) null, (dh) null, -101);
+          oa.a(23, 14, 2, 105, -34, -65, 67, 44, -119, (RgbSprite[]) null, (dh) null, (RgbSprite[]) null, -66, -50, -90, false, 92, (RgbSprite[]) null, (dh) null, -101);
         }
         this.field_cb = param4;
         this.a(param3, param0, -117);
@@ -263,7 +263,7 @@ final class oa extends mh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, jp[] param9, dh param10, jp[] param11, int param12, int param13, int param14, boolean param15, int param16, jp[] param17, dh param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, RgbSprite[] param9, dh param10, RgbSprite[] param11, int param12, int param13, int param14, boolean param15, int param16, RgbSprite[] param17, dh param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

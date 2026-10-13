@@ -25,7 +25,7 @@ final class hh {
         field_b = null;
     }
 
-    final static void a(jp param0, int param1, int param2, pb param3, int param4, int param5, jp param6) {
+    final static void a(RgbSprite param0, int param1, int param2, pb param3, int param4, int param5, RgbSprite param6) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -37,12 +37,12 @@ final class hh {
         RuntimeException var7 = null;
         try {
           fc.a(-72, param3.field_p);
-          lb.g(0, 0, param3.field_i, param3.field_q, um.field_u[param5], 928072);
-          og.a(-124, 128, 8, param0, 16777215, (-param0.field_x + param3.field_i) / 2, 85 + (param1 - param0.field_z));
+          Rasterizer2D.fillVerticalGradient(0, 0, param3.field_i, param3.field_q, um.field_u[param5], 928072);
+          og.a(-124, 128, 8, param0, 16777215, (-param0.canvasWidth + param3.field_i) / 2, 85 + (param1 - param0.canvasHeight));
           if (param4 != -8562) {
             return;
           }
-          og.a(-113, 8, 128, param6, 16777215, (param3.field_i - param0.field_x) / 2, 480 + param1 + (-param0.field_z + 60 / param2));
+          og.a(-113, 8, 128, param6, 16777215, (param3.field_i - param0.canvasWidth) / 2, 480 + param1 + (-param0.canvasHeight + 60 / param2));
           sc.b(-90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

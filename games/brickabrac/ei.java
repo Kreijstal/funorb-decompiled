@@ -43,17 +43,17 @@ final class ei implements ub {
           if (param0) {
             var7 = 16777215;
           }
-          lb.g(param3.field_o + param2, param4 + param3.field_w, param3.field_t, param3.field_s, this.field_b);
+          Rasterizer2D.fillRectangle(param3.field_o + param2, param4 + param3.field_w, param3.field_t, param3.field_s, this.field_b);
           var8 = this.field_m + param2 + param3.field_o;
           var9 = this.field_h + param4 + param3.field_w;
-          lb.a(var8, var9, this.field_l, this.field_d, 5592405);
+          Rasterizer2D.a(var8, var9, this.field_l, this.field_d, 5592405);
           if (param1 != -20618) {
             this.field_h = 116;
           }
-          lb.g(var8, var9, this.field_l, this.field_d, var7);
+          Rasterizer2D.fillRectangle(var8, var9, this.field_l, this.field_d, var7);
           if (var11.field_F) {
-            lb.d(var8, var9, this.field_l + var8, var9 + this.field_d, 1);
-            lb.d(var8 + this.field_l, var9, var8, var9 + this.field_d, 1);
+            Rasterizer2D.drawLine(var8, var9, this.field_l + var8, var9 + this.field_d, 1);
+            Rasterizer2D.drawLine(var8 + this.field_l, var9, var8, var9 + this.field_d, 1);
           }
           if (null == this.field_n) {
             return;

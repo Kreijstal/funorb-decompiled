@@ -12,8 +12,8 @@ final class mp extends mh {
     String field_Qb;
     static String[] field_bc;
     String field_ac;
-    static jp[] field_Vb;
-    static jp field_Zb;
+    static RgbSprite[] field_Vb;
+    static RgbSprite field_Zb;
     mh field_Yb;
 
     final static void a(int param0, int param1, int param2, int param3, fr param4, byte param5, int param6, int param7) {

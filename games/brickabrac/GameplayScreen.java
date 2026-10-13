@@ -5,7 +5,7 @@ final class GameplayScreen extends GameScreen {
     boolean field_p;
     static int field_h;
     MultiplayerMatch match;
-    static jp field_l;
+    static RgbSprite field_l;
     int field_v;
     int field_r;
     private int field_i;
@@ -96,7 +96,7 @@ final class GameplayScreen extends GameScreen {
     }
 
     final void drawScreen(byte obfuscationGuard) {
-        lb.a();
+        Rasterizer2D.resetClip();
         if (!this.field_q) {
           return;
         }
@@ -449,7 +449,7 @@ final class GameplayScreen extends GameScreen {
           }
           if (var20.field_tb) {
             var9_int = (33423360 - 2 * (var20.paddle.x256 + var20.paddle.width256 / 2 << 8)) / 510;
-            nk.field_c.g();
+            nk.field_c.bindRasterTarget();
             oa.field_Sb.a(true, var9_int, 0, 0, 0);
             kc.field_q.a((byte) 78);
             ih.field_k = oa.field_Sb.c((byte) -116);
@@ -945,7 +945,7 @@ final class GameplayScreen extends GameScreen {
           if (obfuscationGuard == 54) {
             fieldTemp$0 = var8.levelIndex + 1;
             var8.levelIndex = var8.levelIndex + 1;
-            if (tk.field_q > fieldTemp$0) {
+            if (DualLinkNode.field_q > fieldTemp$0) {
               var8.field_Z = 0;
             } else {
               var8.field_Z = 5;
@@ -1585,7 +1585,7 @@ final class GameplayScreen extends GameScreen {
         int var7;
         PlayerBoard var7_ref_j;
         int var8_int;
-        jp var8;
+        RgbSprite var8;
         int var9;
         int var10;
         int var11;
@@ -1597,7 +1597,7 @@ final class GameplayScreen extends GameScreen {
         int[] var17;
         int[] var18;
         int[] var19;
-        jp var20;
+        RgbSprite var20;
         int[] var21;
         int[] var22;
         int var6Lifetime1;
@@ -1660,7 +1660,7 @@ final class GameplayScreen extends GameScreen {
           if (this.match.playerCount > 2) {
             for (var7Lifetime1 = this.match.playerCount; var7Lifetime1 < 5; var7Lifetime1++) {
               oa.field_Sb.a((byte) -79, -1, var14[var7Lifetime1], var15[var7Lifetime1]);
-              lb.d(var14[var7Lifetime1], var15[var7Lifetime1], 153, 233, 0, 160);
+              Rasterizer2D.fillRectangleAlpha(var14[var7Lifetime1], var15[var7Lifetime1], 153, 233, 0, 160);
             }
           }
         }
@@ -1734,10 +1734,10 @@ final class GameplayScreen extends GameScreen {
         } else {
           var7_ref_j = this.match.playerBoards[0];
           nh.a(526, 482, -40, -1, cd.field_h, -1);
-          lb.d(7, 473, 510, 7, 0, 96);
-          lb.d(524, 0, 116, 480, 0, 96);
+          Rasterizer2D.fillRectangleAlpha(7, 473, 510, 7, 0, 96);
+          Rasterizer2D.fillRectangleAlpha(524, 0, 116, 480, 0, 96);
           nh.a(125, 482, -40, 516, cd.field_h, -1);
-          tk.a(130, this.match, nn.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
+          DualLinkNode.a(130, this.match, nn.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
           nh.a(125, 9, -40, 516, cd.field_h, 137);
           if (!r.field_A ||
             wc.field_b) {
@@ -1771,8 +1771,8 @@ final class GameplayScreen extends GameScreen {
             var20 = ScorePopup.field_k[this.match.playerBoards[var6Lifetime2].field_H];
             var8 = var20;
             var9Lifetime2 = ob.field_D.field_F + ob.field_D.field_P;
-            lb.d(var18[var7Lifetime4], 235 + var19[var7Lifetime4] - 23, 153, var9Lifetime2, 0, 141);
-            var8.c(-var20.field_x + (153 + var18[var7Lifetime4]), 0 + (-var20.field_z + var19[var7Lifetime4]) + 233);
+            Rasterizer2D.fillRectangleAlpha(var18[var7Lifetime4], 235 + var19[var7Lifetime4] - 23, 153, var9Lifetime2, 0, 141);
+            var8.drawTransparent(-var20.canvasWidth + (153 + var18[var7Lifetime4]), 0 + (-var20.canvasHeight + var19[var7Lifetime4]) + 233);
             ce.field_e.c(this.match.playerNames[var6Lifetime2], var18[var7Lifetime4] + 4, 2 + var19[var7Lifetime4] + 223, 2, -1);
           }
           var6Lifetime2++;
@@ -1873,7 +1873,7 @@ final class GameplayScreen extends GameScreen {
           op.field_a = false;
           fl.field_l = ue.a(false);
           gq.field_Yb = param5.pack.packId;
-          tk.field_q = param5.getPeriod(96);
+          DualLinkNode.field_q = param5.getPeriod(96);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,7 +7,7 @@ final class de extends km {
     static mh field_t;
     private mf field_u;
     static int field_x;
-    static jp field_s;
+    static RgbSprite field_s;
     static int field_w;
 
     public static void g(int param0) {
@@ -22,7 +22,7 @@ final class de extends km {
     }
 
     final void drawScreen(byte obfuscationGuard) {
-        lb.d();
+        Rasterizer2D.clear();
         if (obfuscationGuard <= -14) {
           if (ff.field_c != null) {
             ff.field_c.e((byte) -93);
@@ -50,7 +50,7 @@ final class de extends km {
 
     final static long f(int param0) {
         if (param0 != -6792) {
-          field_s = (jp) null;
+          field_s = (RgbSprite) null;
           return ue.a(false) - oj.field_t;
         }
         return ue.a(false) - oj.field_t;

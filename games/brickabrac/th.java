@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class th {
-    static jp field_j;
+    static RgbSprite field_j;
     int field_g;
     static String field_f;
     static String[] field_a;
     static boolean field_d;
-    static jp field_i;
+    static RgbSprite field_i;
     static boolean field_h;
-    static jp field_c;
+    static RgbSprite field_c;
     int field_e;
     static boolean field_b;
 
@@ -39,7 +39,7 @@ final class th {
           if (param2 == 1) {
             param2 = 0;
           }
-          tk.field_p = param4;
+          DualLinkNode.field_p = param4;
           ng.field_b = param2;
           var7 = (CharSequence) ((Object) param4);
           kb.field_Qb = gb.a(var7, 64);

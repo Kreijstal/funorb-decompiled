@@ -3,7 +3,7 @@
  */
 final class sk extends h {
     static String field_G;
-    static jp[] field_J;
+    static RgbSprite[] field_J;
     static int field_I;
     int field_K;
     static int field_H;
@@ -113,7 +113,7 @@ final class sk extends h {
             pe.field_o = null;
           }
           if (param0 > -112) {
-            field_J = (jp[]) null;
+            field_J = (RgbSprite[]) null;
           }
           if (eb.field_l) {
             fj.field_Ub = null;
@@ -165,7 +165,7 @@ final class sk extends h {
           this.field_E.a(param0 + this.field_w, param1 + this.field_o, param2, (byte) -11);
           return;
         }
-        jp var6 = new jp(this.field_E.field_t, this.field_E.field_s);
+        RgbSprite var6 = new RgbSprite(this.field_E.field_t, this.field_E.field_s);
         fc.a(-113, var6);
         this.field_E.a(0, 0, param2, param3);
         sc.b(param3 ^ 119);

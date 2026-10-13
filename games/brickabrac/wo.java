@@ -30,7 +30,7 @@ final class wo {
         int var1;
         int var2;
         int var3;
-        jp var4;
+        RgbSprite var4;
         int var1Lifetime1;
         int var1Lifetime2;
         int var2Lifetime1;
@@ -88,8 +88,8 @@ final class wo {
           }
           return false;
         }
-        var4 = (jp) null;
-        wo.a(-99, -77, (jp) null, -107, -18, 45, 120, 4, (jp) null, (jp) null, 24);
+        var4 = (RgbSprite) null;
+        wo.a(-99, -77, (RgbSprite) null, -107, -18, 45, 120, 4, (RgbSprite) null, (RgbSprite) null, 24);
         var1Lifetime1 = 1;
         var2Lifetime1 = m.field_i;
         if (var2Lifetime1 == 0) {
@@ -142,14 +142,14 @@ final class wo {
         return false;
     }
 
-    final static void a(int param0, int param1, jp param2, int param3, int param4, int param5, int param6, int param7, jp param8, jp param9, int param10) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, int param4, int param5, int param6, int param7, RgbSprite param8, RgbSprite param9, int param10) {
         try {
-          param9.d((param4 - param9.field_x) / 2 + (param6 + (param1 * 5 >> 16)), param0);
-          uq.a(param2, 5 / param7 + (10 * param1 >> 16) + ((param4 - param2.field_x) / 2 + param6), 53 / param7 - param2.field_z + (param5 + param0 + 480));
-          uq.a(param8, -(5 / param7) + (param6 - (-((param4 - param8.field_x) / 2) - (param1 * 20 >> 16))), 480 - param8.field_z);
+          param9.drawAt((param4 - param9.canvasWidth) / 2 + (param6 + (param1 * 5 >> 16)), param0);
+          uq.a(param2, 5 / param7 + (10 * param1 >> 16) + ((param4 - param2.canvasWidth) / 2 + param6), 53 / param7 - param2.canvasHeight + (param5 + param0 + 480));
+          uq.a(param8, -(5 / param7) + (param6 - (-((param4 - param8.canvasWidth) / 2) - (param1 * 20 >> 16))), 480 - param8.canvasHeight);
           if (param3 <= 108) {
-            jp var12 = (jp) null;
-            wo.a(25, -97, (jp) null, -16, -115, 10, -8, 2, (jp) null, (jp) null, -69);
+            RgbSprite var12 = (RgbSprite) null;
+            wo.a(25, -97, (RgbSprite) null, -16, -115, 10, -8, 2, (RgbSprite) null, (RgbSprite) null, -69);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "wo.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');

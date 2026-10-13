@@ -9,13 +9,13 @@ final class cr extends oc {
     static NodeDeque field_N;
     private int field_K;
     private int field_M;
-    private jp field_C;
-    private jp[] field_P;
+    private RgbSprite field_C;
+    private RgbSprite[] field_P;
     private int field_I;
     private int field_F;
-    static jp field_D;
-    private jp field_O;
-    private jp field_G;
+    static RgbSprite field_D;
+    private RgbSprite field_O;
+    private RgbSprite field_G;
     private int field_H;
     private int field_E;
 
@@ -49,7 +49,7 @@ final class cr extends oc {
         }
     }
 
-    private final void a(int param0, int param1, jp param2, int param3) {
+    private final void a(int param0, int param1, RgbSprite param2, int param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -62,33 +62,33 @@ final class cr extends oc {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var5_int = param0 + this.field_t;
-          MovingBody.a((byte) 107, var5_int - this.field_G.field_D, param0 + this.field_G.field_D, param1, param1 + this.field_s);
+          MovingBody.a((byte) 107, var5_int - this.field_G.width, param0 + this.field_G.width, param1, param1 + this.field_s);
           var6 = param0 - this.field_K;
           if (param3 > -56) {
-            this.field_C = (jp) null;
+            this.field_C = (RgbSprite) null;
           }
           while (var5_int > var6) {
-            param2.c(var6, param1);
-            var6 = var6 + param2.field_D;
+            param2.drawTransparent(var6, param1);
+            var6 = var6 + param2.width;
           }
           sc.b(-103);
-          if (param0 + this.field_G.field_D >= lb.field_i) {
+          if (param0 + this.field_G.width >= Rasterizer2D.clipLeft) {
             fc.a(-112, this.field_C);
-            param2.c(-this.field_K, 0);
-            param2.c(this.field_H * 2 - this.field_K, 0);
+            param2.drawTransparent(-this.field_K, 0);
+            param2.drawTransparent(this.field_H * 2 - this.field_K, 0);
             this.field_O.b(0, 0);
             sc.b(-109);
-            this.field_C.c(param0, param1);
+            this.field_C.drawTransparent(param0, param1);
           }
-          if (lb.field_f >= var5_int - this.field_G.field_D) {
+          if (Rasterizer2D.clipRight >= var5_int - this.field_G.width) {
             fc.a(-51, this.field_C);
-            for (var7 = this.field_t - this.field_G.field_D + this.field_K; var7 > 2 * this.field_H; var7 = var7 - this.field_H * 2) {
+            for (var7 = this.field_t - this.field_G.width + this.field_K; var7 > 2 * this.field_H; var7 = var7 - this.field_H * 2) {
             }
-            param2.c(-var7, 0);
-            param2.c(-var7 + 2 * this.field_H, 0);
+            param2.drawTransparent(-var7, 0);
+            param2.drawTransparent(-var7 + 2 * this.field_H, 0);
             this.field_G.b(0, 0);
             sc.b(-117);
-            this.field_C.c(var5_int - this.field_G.field_D, param1);
+            this.field_C.drawTransparent(var5_int - this.field_G.width, param1);
             return;
           }
           return;
@@ -126,10 +126,10 @@ final class cr extends oc {
     }
 
     private final void g(int param0) {
-        this.field_P = new jp[]{this.a(this.field_E, (byte) -41, this.field_F), this.a(this.field_I, (byte) 107, this.field_M)};
+        this.field_P = new RgbSprite[]{this.a(this.field_E, (byte) -41, this.field_F), this.a(this.field_I, (byte) 107, this.field_M)};
         this.field_G = this.a(16711422);
-        this.field_O = this.field_G.c();
-        this.field_C = new jp(this.field_s >> 1, this.field_s);
+        this.field_O = this.field_G.copyFlippedHorizontal();
+        this.field_C = new RgbSprite(this.field_s >> 1, this.field_s);
         if (param0 != -1847795903) {
           this.field_F = 58;
         }
@@ -179,7 +179,7 @@ final class cr extends oc {
         }
     }
 
-    private final jp a(int param0) {
+    private final RgbSprite a(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -187,9 +187,9 @@ final class cr extends oc {
         int var9 = BrickABrac.field_J ? 1 : 0;
         int var2 = this.field_s >> 1;
         if (param0 != 16711422) {
-          return (jp) null;
+          return (RgbSprite) null;
         }
-        jp var3 = new jp(var2, this.field_s);
+        RgbSprite var3 = new RgbSprite(var2, this.field_s);
         fc.a(-67, var3);
         for (var4 = 0; this.field_s > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -199,14 +199,14 @@ final class cr extends oc {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(255.0 * var6) : 255;
             }
-            lb.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
+            Rasterizer2D.setPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
         sc.b(-111);
         return var3;
     }
 
-    private final jp a(int param0, byte param1, int param2) {
+    private final RgbSprite a(int param0, byte param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -216,7 +216,7 @@ final class cr extends oc {
         int var13 = 0;
         int var14 = BrickABrac.field_J ? 1 : 0;
         int var4 = 93 % ((11 - param1) / 37);
-        jp var5 = new jp(2 * this.field_H, this.field_s);
+        RgbSprite var5 = new RgbSprite(2 * this.field_H, this.field_s);
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
@@ -229,23 +229,23 @@ final class cr extends oc {
           var11 = var7 - var6;
           var12 = 128 + (int)(128.0 * (Math.sqrt((double)(var6 * var6 - var11 * var11)) / (double)var6));
           var13 = var12 < 256 ? (var12 * var10 & 16711680 | var9 * var12 & -16711936) >>> 8 : var9 | var10;
-          lb.c(var8, var7, this.field_H, var13);
+          Rasterizer2D.drawHorizontalLine(var8, var7, this.field_H, var13);
           var10Lifetime1 = 65280 & param0;
-          lb.c(-(2 * this.field_H) + var8, var7, this.field_H, var13);
+          Rasterizer2D.drawHorizontalLine(-(2 * this.field_H) + var8, var7, this.field_H, var13);
           var9Lifetime1 = 16711935 & param0;
           var13Lifetime1 = var12 >= 256 ? var9Lifetime1 | var10Lifetime1 : (-16711936 & var9Lifetime1 * var12 | 16711680 & var10Lifetime1 * var12) >>> 8;
-          lb.c(this.field_H + var8, var7, this.field_H, var13Lifetime1);
-          lb.c(var8 - this.field_H, var7, this.field_H, var13Lifetime1);
+          Rasterizer2D.drawHorizontalLine(this.field_H + var8, var7, this.field_H, var13Lifetime1);
+          Rasterizer2D.drawHorizontalLine(var8 - this.field_H, var7, this.field_H, var13Lifetime1);
         }
         sc.b(-110);
         return var5;
     }
 
-    final static jp[] a(String param0, mf param1, String param2, int param3) {
+    final static RgbSprite[] a(String param0, mf param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        jp[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

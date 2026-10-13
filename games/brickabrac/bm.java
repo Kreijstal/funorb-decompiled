@@ -238,8 +238,8 @@ final class bm {
             var9 = 0.0;
           }
           var9 = var9 / (double)param5;
-          Ball.field_w.d(param0 - 7 / param5, -(7 / param5) + (param1 - (int)var9));
-          Ball.field_w.g(-(7 / param5) + param0, (int)var9 - 7 / param5 + (param1 + Ball.field_w.field_z));
+          Ball.field_w.drawAt(param0 - 7 / param5, -(7 / param5) + (param1 - (int)var9));
+          Ball.field_w.g(-(7 / param5) + param0, (int)var9 - 7 / param5 + (param1 + Ball.field_w.canvasHeight));
           if (var8_int >= 130) {
             var11 = var8_int - 130;
             if (var11 > 100) {

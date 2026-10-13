@@ -3,8 +3,8 @@
  */
 final class bf extends d {
     static int[] field_M;
-    static jp field_L;
-    static jp field_K;
+    static RgbSprite field_L;
+    static RgbSprite field_K;
     static NodeDeque field_N;
 
     public static void a(int param0) {
@@ -28,7 +28,7 @@ final class bf extends d {
             mf.field_f.a(param1 - 8287, sj.field_b);
           }
           sj.field_b.a(param2, param0, param3, (byte) 86);
-          lb.d();
+          Rasterizer2D.clear();
           wc.a(true, -1);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -59,7 +59,7 @@ final class bf extends d {
           super.a(param0, param1, -69, param3);
           return;
         }
-        field_L = (jp) null;
+        field_L = (RgbSprite) null;
         this.field_F = !this.field_F ? true : false;
         super.a(param0, param1, -69, param3);
     }
@@ -78,7 +78,7 @@ final class bf extends d {
           lm.a(-1);
           mf.field_f.a(-127);
           if (param2 != -15947) {
-            field_K = (jp) null;
+            field_K = (RgbSprite) null;
           }
           eo.field_k = new hk(GameScreen.field_d, (String) null, cg.field_l, param0, param1);
           rj.field_c = new bh(mf.field_f, eo.field_k);
@@ -116,7 +116,7 @@ final class bf extends d {
           if (eq.field_m != null) {
             var3 = (id) (eq.field_m.b((byte) 120));
             while (var3 != null) {
-              var3.d(3);
+              var3.unlinkSecondary(3);
               var3 = (id) (eq.field_m.a(false));
             }
             eq.field_m = null;

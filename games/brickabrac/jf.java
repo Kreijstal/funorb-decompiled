@@ -34,19 +34,19 @@ final class jf {
         return false;
     }
 
-    final static jp[] a(jp param0, int param1) {
-        jp[] var2 = null;
+    final static RgbSprite[] a(RgbSprite param0, int param1) {
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        jp[] var4 = null;
-        jp[] stackIn_1_0 = null;
+        RgbSprite[] var4 = null;
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = 48 / ((param1 - 55) / 32);
-          var4 = new jp[9];
+          var4 = new RgbSprite[9];
           var2 = var4;
           var4[4] = param0;
           stackIn_1_0 = var2;
@@ -73,7 +73,7 @@ final class jf {
         if (var1 == null) {
           var1 = new ii();
         }
-        var1.a(lb.field_l, lb.field_i, lb.field_c, lb.field_d, param0 ^ 194, lb.field_f, lb.field_b, lb.field_j);
+        var1.a(Rasterizer2D.pixels, Rasterizer2D.clipLeft, Rasterizer2D.width, Rasterizer2D.height, param0 ^ 194, Rasterizer2D.clipRight, Rasterizer2D.clipTop, Rasterizer2D.clipBottom);
         hi.field_v.addLast(var1, (byte) 3);
     }
 
@@ -149,8 +149,8 @@ final class jf {
             nb.a(-111, var5, var4, cm.field_r[var6]);
             ik.field_f[var6].f(var4, var5 - 1, 256);
           }
-          da.field_E[var6].c(var4, var5);
-          var5 = var5 + (20 + da.field_E[var6].field_z);
+          da.field_E[var6].drawTransparent(var4, var5);
+          var5 = var5 + (20 + da.field_E[var6].canvasHeight);
         }
     }
 
@@ -174,11 +174,11 @@ final class jf {
             var3 = var7.field_c;
             var4 = var7.field_a;
             for (var5 = 0; this.field_f > var5; var5++) {
-              if (da.field_E[var5].d(var3, var4, pq.field_k, po.field_a)) {
+              if (da.field_E[var5].containsPixel(var3, var4, pq.field_k, po.field_a)) {
                 this.field_i = var5;
                 break;
               }
-              var4 = var4 + (da.field_E[var5].field_z + 20);
+              var4 = var4 + (da.field_E[var5].canvasHeight + 20);
             }
           }
           this.field_e = pq.field_k;

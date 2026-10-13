@@ -9,7 +9,7 @@ final class ek extends bj implements en {
     static String field_gb;
     static int field_cb;
     static int field_db;
-    static jp field_hb;
+    static RgbSprite field_hb;
     private d field_ib;
     static String[] field_eb;
     static String field_fb;

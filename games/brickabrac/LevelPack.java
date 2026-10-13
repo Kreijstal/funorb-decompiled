@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LevelPack {
-    static jp field_e;
+    static RgbSprite field_e;
     int levelCount;
     byte[][] levelData;
     static int field_g;

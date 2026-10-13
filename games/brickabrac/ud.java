@@ -88,7 +88,7 @@ final class ud extends km {
         int stackIn_18_5;
         int var2;
         int var3;
-        jp var4;
+        RgbSprite var4;
         int var5;
         int var6;
         super.drawScreen((byte) -101);
@@ -127,11 +127,11 @@ final class ud extends km {
               } else {
                 stackIn_18_5 = 128;
               }
-              lb.d(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
+              Rasterizer2D.fillRectangleAlpha(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
             }
             var4 = vq.field_F;
-            var5 = 210 + (385 - var4.field_x) / 2;
-            var6 = (243 - var4.field_z) / 2 + 178;
+            var5 = 210 + (385 - var4.canvasWidth) / 2;
+            var6 = (243 - var4.canvasHeight) / 2 + 178;
             var4.b(var5, var6, 196);
           }
         } else {

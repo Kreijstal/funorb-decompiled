@@ -241,12 +241,12 @@ final class fj extends mh {
         return var5;
     }
 
-    final static jp[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 == 1) {
-          return mn.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
+          return SpriteGeometry.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
         }
         field_Ub = (sp) null;
-        return mn.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
+        return SpriteGeometry.a(param0, 1, 1, 9361, param2, 1, 3, param4, param1);
     }
 
     final void a(int param0, int param1, int param2, int param3) {

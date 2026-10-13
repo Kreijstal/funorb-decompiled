@@ -13,14 +13,14 @@ final class ai extends ki {
         try {
           var5_int = -51 % ((-28 - param0) / 43);
           if (-1 < param1) {
-            lb.g(param2, param3, 153, 238, bg.field_u[param1], 928072);
+            Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, bg.field_u[param1], 928072);
           }
           if (-1 >= param1 ||
             BrickABrac.field_J) {
-            lb.g(param2, param3, 153, 238, 7829367, 928072);
+            Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 7829367, 928072);
           }
           if (this.b((byte) -105)) {
-            pl.field_a.c(param2, param3);
+            pl.field_a.drawTransparent(param2, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -30,17 +30,17 @@ final class ai extends ki {
         }
     }
 
-    final jp c(byte param0) {
+    final RgbSprite c(byte param0) {
         RuntimeException var2 = null;
-        jp stackIn_2_0 = null;
-        jp stackIn_4_0 = null;
+        RgbSprite stackIn_2_0 = null;
+        RgbSprite stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -74) {
             stackIn_4_0 = kc.field_p;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (jp) null;
+          stackIn_2_0 = (RgbSprite) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -147,7 +147,7 @@ final class ai extends ki {
         try {
           boolean decompiledSharedTail0 = !(!this.b((byte) -124));
           if (!decompiledSharedTail0) {
-            lb.g(param2, param0, 306, 480, bg.field_u[param3], 928072);
+            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, bg.field_u[param3], 928072);
             decompiledSharedTail0 = (BrickABrac.field_J);
           }
           if (decompiledSharedTail0) {
@@ -223,12 +223,12 @@ final class ai extends ki {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jp var12 = null;
+        RgbSprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        jp[] var16 = null;
+        RgbSprite[] var16 = null;
         mh var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -252,15 +252,15 @@ final class ai extends ki {
             ai.a((mh) null, (dh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (mh) null, (byte) 97, false, (fj) null, (mh) null);
           }
           r.field_C[1] = 6356832;
-          var12 = new jp(4, 4);
-          var13 = var12.field_G;
-          var14 = var12.field_G;
-          var15 = var12.field_G;
-          var12.field_G[15] = 7368816;
+          var12 = new RgbSprite(4, 4);
+          var13 = var12.pixels;
+          var14 = var12.pixels;
+          var15 = var12.pixels;
+          var12.pixels[15] = 7368816;
           var15[8] = 7368816;
           var13[2] = 7368816;
           var14[5] = 7368816;
-          var16 = new jp[9];
+          var16 = new RgbSprite[9];
           var16[4] = var12;
           gp.field_d = new mh(0L, param0);
           sh.field_d = new mh(0L, param2);
@@ -414,7 +414,7 @@ final class ai extends ki {
             cp1252Extensions = (char[]) null;
           }
           if (!this.b((byte) -97)) {
-            lb.g(param4, param2, 640, 480, bg.field_u[param3], 928072);
+            Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, bg.field_u[param3], 928072);
             if (!BrickABrac.field_J) {
               return;
             }

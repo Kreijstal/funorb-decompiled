@@ -17,24 +17,24 @@ final class fl extends k {
     }
 
     final static void e(int param0) {
-        jp var1 = null;
-        jp var3 = null;
+        RgbSprite var1 = null;
+        RgbSprite var3 = null;
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = new jp(540, 140);
+          var1 = new RgbSprite(540, 140);
           int var2 = 5 / ((16 - param0) / 50);
           fc.a(-89, var1);
           mg.c();
-          lb.d();
+          Rasterizer2D.clear();
           ld.field_t = 0;
           jl.b(-115);
-          var3 = var1.e();
+          var3 = var1.copy();
           for (var4 = 0; 15 > var4; var4++) {
             var3.d(-2, -2, 16777215);
-            lb.e(4, 4, 0, 0, 540, 140);
+            Rasterizer2D.e(4, 4, 0, 0, 540, 140);
           }
-          aa.field_b.g();
+          aa.field_b.bindRasterTarget();
           var1.a(0, 0);
           sc.b(-123);
         } catch (RuntimeException runtimeException) {

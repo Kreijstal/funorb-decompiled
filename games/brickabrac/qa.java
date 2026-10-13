@@ -6,12 +6,12 @@ final class qa extends ki {
     static NodeDeque field_t;
     static gk field_x;
     static mh field_w;
-    static jp field_y;
+    static RgbSprite field_y;
     static boolean field_r;
     static String field_v;
     static boolean field_u;
 
-    final jp c(byte param0) {
+    final RgbSprite c(byte param0) {
         if (param0 >= -74) {
           this.a((byte) 57, -62, 109, 2);
           return ObjectHistoryBuffer.field_q;
@@ -44,7 +44,7 @@ final class qa extends ki {
           return;
         }
         if (!this.b((byte) -110)) {
-          lb.g(param4, param2, 640, 480, fj.field_Sb[param3], 0);
+          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, fj.field_Sb[param3], 0);
           return;
         }
         pb var6 = PowerUp.a(this.field_m, param3, -20777);
@@ -101,11 +101,11 @@ final class qa extends ki {
         return false;
     }
 
-    final static jp[] a(int param0, int param1, mf param2, boolean param3) {
+    final static RgbSprite[] a(int param0, int param1, mf param2, boolean param3) {
         RuntimeException var4 = null;
         mf var5 = null;
         Object stackIn_4_0 = null;
-        jp[] stackIn_6_0 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -120,7 +120,7 @@ final class qa extends ki {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (jp[]) (stackIn_4_0);
+          return (RgbSprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -151,7 +151,7 @@ final class qa extends ki {
         mf var7Lifetime1;
         mf var7Lifetime2;
         if (!this.b((byte) -127)) {
-          lb.g(param2, param0, 306, 480, fj.field_Sb[param3], 0);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, fj.field_Sb[param3], 0);
           if (param1 > -84) {
             var7 = (mf) null;
             qa.a(90, 38, (mf) null, true);
@@ -184,17 +184,17 @@ final class qa extends ki {
         int var5 = 0;
         int var5Lifetime1;
         if (-1 < param1) {
-          lb.g(param2, param3, 153, 238, fj.field_Sb[param1], 0);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, fj.field_Sb[param1], 0);
           var5 = 110 / ((param0 + 28) / 43);
           if (this.b((byte) -97)) {
-            hc.field_g.c(param2, param3);
+            hc.field_g.drawTransparent(param2, param3);
           }
           return;
         }
-        lb.g(param2, param3, 153, 238, 7829367, 928072);
+        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 7829367, 928072);
         var5Lifetime1 = 110 / ((param0 + 28) / 43);
         if (this.b((byte) -97)) {
-          hc.field_g.c(param2, param3);
+          hc.field_g.drawTransparent(param2, param3);
         }
     }
 
@@ -214,7 +214,7 @@ final class qa extends ki {
         if (param2 == 108) {
           return hi.a(false, param3, param1);
         }
-        field_y = (jp) null;
+        field_y = (RgbSprite) null;
         return hi.a(false, param3, param1);
     }
 

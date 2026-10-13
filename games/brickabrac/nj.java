@@ -5,11 +5,11 @@ final class nj extends IntrusiveNode {
     private int field_I;
     static int[] field_G;
     private int[][] field_D;
-    static jp[] field_l;
+    static RgbSprite[] field_l;
     private int field_k;
     private int field_w;
     private int field_H;
-    static jp field_z;
+    static RgbSprite field_z;
     private int[][] field_m;
     private int field_o;
     private int field_K;
@@ -115,10 +115,10 @@ final class nj extends IntrusiveNode {
         }
         for (var3 = 0; this.field_w > var3; var3++) {
           for (var4 = 0; var4 < this.field_J; var4++) {
-            lb.a((this.field_D[var3][var4] >> 4) + param1, this.field_m[var3][var4] >> 4, 48, -(this.field_i * this.field_j) + 64, eb.field_r[this.field_P[var3]]);
+            Rasterizer2D.a((this.field_D[var3][var4] >> 4) + param1, this.field_m[var3][var4] >> 4, 48, -(this.field_i * this.field_j) + 64, eb.field_r[this.field_P[var3]]);
           }
-          lb.a(param1 + (this.field_A[var3] >> 4), this.field_C[var3] >> 4, 224, -(this.field_j * this.field_E) + 165, eb.field_r[this.field_n[var3]]);
-          lb.a((this.field_A[var3] >> 4) + param1, this.field_C[var3] >> 4, 64, -(this.field_x * this.field_j) + 250, eb.field_r[this.field_n[var3]]);
+          Rasterizer2D.a(param1 + (this.field_A[var3] >> 4), this.field_C[var3] >> 4, 224, -(this.field_j * this.field_E) + 165, eb.field_r[this.field_n[var3]]);
+          Rasterizer2D.a((this.field_A[var3] >> 4) + param1, this.field_C[var3] >> 4, 64, -(this.field_x * this.field_j) + 250, eb.field_r[this.field_n[var3]]);
         }
         return;
     }

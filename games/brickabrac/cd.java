@@ -9,7 +9,7 @@ final class cd {
     static tp[] field_b;
     int field_a;
     static int field_e;
-    static jp[] field_h;
+    static RgbSprite[] field_h;
 
     final static boolean a(int param0) {
         long var1;

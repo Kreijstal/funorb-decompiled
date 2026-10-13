@@ -7,10 +7,10 @@ final class nk {
     static String field_f;
     static String field_i;
     static mh field_a;
-    static jp field_h;
+    static RgbSprite field_h;
     static String field_b;
     static mh field_g;
-    static jp field_c;
+    static RgbSprite field_c;
 
     final static void a(int param0) {
         int fieldTemp$0 = 0;
@@ -31,7 +31,7 @@ final class nk {
           if (param0 >= 20) {
             return;
           }
-          field_c = (jp) null;
+          field_c = (RgbSprite) null;
           return;
         }
         if (sm.field_b == ii.field_q) {
@@ -49,14 +49,14 @@ final class nk {
           if (param0 >= 20) {
             return;
           }
-          field_c = (jp) null;
+          field_c = (RgbSprite) null;
           return;
         }
         if (NodeDeque.field_d != sm.field_b) {
           if (param0 >= 20) {
             return;
           }
-          field_c = (jp) null;
+          field_c = (RgbSprite) null;
           return;
         }
         fieldTemp$1 = jq.field_p;
@@ -67,7 +67,7 @@ final class nk {
         if (param0 >= 20) {
           return;
         }
-        field_c = (jp) null;
+        field_c = (RgbSprite) null;
         return;
     }
 

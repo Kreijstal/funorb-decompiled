@@ -126,7 +126,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_15_1 = 0;
-        jp stackIn_18_0 = null;
+        RgbSprite stackIn_18_0 = null;
         int stackIn_35_0 = 0;
         int stackIn_35_1 = 0;
         int stackIn_36_2 = 0;
@@ -140,12 +140,12 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        jp var10 = null;
+        RgbSprite var10 = null;
         int var11 = 0;
         NodeDeque var13 = null;
         Brick var14 = null;
         int var15 = 0;
-        jp var16 = null;
+        RgbSprite var16 = null;
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
@@ -159,12 +159,12 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
           }
           var8 = 0;
           var24 = new int[4];
-          lb.a(var24);
-          var10 = new jp(nj.field_l[0].field_x, nj.field_l[0].field_z);
-          var10.g();
+          Rasterizer2D.saveClip(var24);
+          var10 = new RgbSprite(nj.field_l[0].canvasWidth, nj.field_l[0].canvasHeight);
+          var10.bindRasterTarget();
           nj.field_l[24].c(0, 0, ScorePopup.a(255, param1.simulationTick % 360 << 8));
           kc.field_q.a((byte) 105);
-          lb.b(var24);
+          Rasterizer2D.restoreClip(var24);
           stackIn_6_0 = ((1 << param2 & (param3.playerMaskThree | (param3.playerMaskOne | param3.playerMaskTwo))) != 0) ? 0 : 1;
           var11 = stackIn_6_0;
           for (var12 = 0; var12 < param1.brickGroups.length; var12++) {
@@ -197,12 +197,12 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                     decompiledFrameRemainder0 = false;
                   }
                   else {
-                    var16.c(var7_int, var8);
+                    var16.drawTransparent(var7_int, var8);
                     if (r.field_A &&
                       ka.a((byte) 89) &&
                       4 == ga.field_i &&
                       (2 & var14.flags) != 0) {
-                      var17 = de.field_x - mn.field_v;
+                      var17 = de.field_x - SpriteGeometry.field_v;
                       var16.f(var7_int, var8, 64 + (sa.a(200 * var17, param5 ^ -4127) >> 10));
                     }
                   }
@@ -221,12 +221,12 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                     var18 = stackIn_35_0 - stackIn_35_1 * stackIn_36_2;
                   }
                   if (var17 == 12) {
-                    var16.c(var7_int, var8);
-                    lb.e(var7_int, var8, var7_int + var16.field_x, var16.field_z + var8);
+                    var16.drawTransparent(var7_int, var8);
+                    Rasterizer2D.setClip(var7_int, var8, var7_int + var16.canvasWidth, var16.canvasHeight + var8);
                     for (var19 = 0; var19 < 10; var19++) {
                       if (var19 <= 5 ||
                         var19 >= 8) {
-                        lb.f(var7_int + (var19 + var14.stateWord * 2), var8 + var16.field_z, 10 + var7_int + var19 + 2 * var14.stateWord, var8, 16777215, var18);
+                        Rasterizer2D.f(var7_int + (var19 + var14.stateWord * 2), var8 + var16.canvasHeight, 10 + var7_int + var19 + 2 * var14.stateWord, var8, 16777215, var18);
                       }
                     }
                   } else {
@@ -239,19 +239,19 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                         break;
                       case 2:
                         var19 = -(2 * var14.stateWord) + 34;
-                        var16.a(var14.stateWord / param0 + var7_int, var8, var19 / param0, var16.field_z);
+                        var16.a(var14.stateWord / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
                         break;
                       case 9:
-                        var16.b(var7_int, var8, var16.field_x, var16.field_z, -(var14.stateWord * 4) + 64);
-                        lb.e(var7_int, var8, var7_int + (var16.field_x - var14.stateWord * 2 / param0), var16.field_z + var8);
-                        var16.c(var7_int, var8);
+                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(var14.stateWord * 4) + 64);
+                        Rasterizer2D.setClip(var7_int, var8, var7_int + (var16.canvasWidth - var14.stateWord * 2 / param0), var16.canvasHeight + var8);
+                        var16.drawTransparent(var7_int, var8);
                         break;
                       case 4:
                         var19 = 16 - var14.stateWord;
                         var16.a(var7_int, var8 + var14.stateWord / (param0 * 2), 34 / param0, var19 / param0);
                         break;
                       default:
-                        lb.b(var24);
+                        Rasterizer2D.restoreClip(var24);
                         var14 = (Brick) (var13.next((byte) 116));
                         continue;
                       case 14:
@@ -265,53 +265,53 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                         if (var19 > 0) {
                           var19 = 0;
                         }
-                        var16.a(var7_int + var19 / param0, var19 / param0 + var8, var16.field_x - 2 * var19 / param0, -(var19 * 2 / param0) + var16.field_z);
+                        var16.a(var7_int + var19 / param0, var19 / param0 + var8, var16.canvasWidth - 2 * var19 / param0, -(var19 * 2 / param0) + var16.canvasHeight);
                         break;
                       case 3:
-                        lb.e(-(var14.stateWord / param0) + var7_int, -(var14.stateWord / param0) + var8, var16.field_x / 2 - var14.stateWord / param0 + var7_int, var16.field_z / 2 + var8 - var14.stateWord / param0);
+                        Rasterizer2D.setClip(-(var14.stateWord / param0) + var7_int, -(var14.stateWord / param0) + var8, var16.canvasWidth / 2 - var14.stateWord / param0 + var7_int, var16.canvasHeight / 2 + var8 - var14.stateWord / param0);
                         var16.b(-(var14.stateWord / param0) + var7_int, -(var14.stateWord / param0) + var8, var18);
-                        lb.e(var16.field_x / 2 + var14.stateWord / param0 + var7_int, var8 - var14.stateWord / param0, var14.stateWord / param0 + (var7_int + var16.field_x), -(var14.stateWord / param0) + var8 + var16.field_z / 2);
+                        Rasterizer2D.setClip(var16.canvasWidth / 2 + var14.stateWord / param0 + var7_int, var8 - var14.stateWord / param0, var14.stateWord / param0 + (var7_int + var16.canvasWidth), -(var14.stateWord / param0) + var8 + var16.canvasHeight / 2);
                         var16.b(var14.stateWord / param0 + var7_int, var8 - var14.stateWord / param0, var18);
-                        lb.e(-(var14.stateWord / param0) + var7_int, var14.stateWord / param0 + (var8 + var16.field_z / 2), -(var14.stateWord / param0) + var7_int + var16.field_x / 2, var16.field_z + var8 + var14.stateWord / param0);
+                        Rasterizer2D.setClip(-(var14.stateWord / param0) + var7_int, var14.stateWord / param0 + (var8 + var16.canvasHeight / 2), -(var14.stateWord / param0) + var7_int + var16.canvasWidth / 2, var16.canvasHeight + var8 + var14.stateWord / param0);
                         var16.b(var7_int - var14.stateWord / param0, var14.stateWord / param0 + var8, var18);
-                        lb.e(var16.field_x / 2 + var14.stateWord / param0 + var7_int, var14.stateWord / param0 + var8 + var16.field_z / 2, var7_int + var14.stateWord / param0 + var16.field_x, var8 + var14.stateWord / param0 + var16.field_z);
+                        Rasterizer2D.setClip(var16.canvasWidth / 2 + var14.stateWord / param0 + var7_int, var14.stateWord / param0 + var8 + var16.canvasHeight / 2, var7_int + var14.stateWord / param0 + var16.canvasWidth, var8 + var14.stateWord / param0 + var16.canvasHeight);
                         var16.b(var7_int + var14.stateWord / param0, var8 + var14.stateWord / param0, var18);
                         break;
                       case 1:
                         var19 = var14.stateWord - 6;
-                        var16.b(var7_int + var19 / param0, var19 / param0 + var8, -(var19 * 2 / param0) + var16.field_x, var16.field_z - var19 * 2 / param0, var18);
+                        var16.b(var7_int + var19 / param0, var19 / param0 + var8, -(var19 * 2 / param0) + var16.canvasWidth, var16.canvasHeight - var19 * 2 / param0, var18);
                         break;
                       case 8:
-                        var16.b(var7_int, var8, var16.field_x, var16.field_z, -(var14.stateWord * 4) + 64);
-                        lb.e(var7_int + var14.stateWord * 2 / param0, var8, var7_int + var16.field_x, var16.field_z + var8);
-                        var16.c(var7_int, var8);
+                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(var14.stateWord * 4) + 64);
+                        Rasterizer2D.setClip(var7_int + var14.stateWord * 2 / param0, var8, var7_int + var16.canvasWidth, var16.canvasHeight + var8);
+                        var16.drawTransparent(var7_int, var8);
                         break;
                       case 7:
-                        var16.b(var7_int, var8, var16.field_x, var16.field_z, -(4 * var14.stateWord) + 64);
-                        lb.e(var7_int, var8, var7_int + var16.field_x, var8 + (var16.field_z - var14.stateWord / param0));
-                        var16.c(var7_int, var8);
+                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(4 * var14.stateWord) + 64);
+                        Rasterizer2D.setClip(var7_int, var8, var7_int + var16.canvasWidth, var8 + (var16.canvasHeight - var14.stateWord / param0));
+                        var16.drawTransparent(var7_int, var8);
                         break;
                       case 6:
-                        var16.b(var7_int, var8, var16.field_x, var16.field_z, -(4 * var14.stateWord) + 64);
-                        lb.e(var7_int, var14.stateWord / param0 + var8, var16.field_x + var7_int, var8 + var16.field_z);
-                        var16.c(var7_int, var8);
+                        var16.b(var7_int, var8, var16.canvasWidth, var16.canvasHeight, -(4 * var14.stateWord) + 64);
+                        Rasterizer2D.setClip(var7_int, var14.stateWord / param0 + var8, var16.canvasWidth + var7_int, var8 + var16.canvasHeight);
+                        var16.drawTransparent(var7_int, var8);
                         break;
                       case 10:
                         if (var14.stateWord < 8) {
                           var19 = 34 - var14.stateWord * 4;
-                          var16.a(var14.stateWord * 2 / param0 + var7_int, var8, var19 / param0, var16.field_z);
+                          var16.a(var14.stateWord * 2 / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
                         } else {
                           var19 = -26 + var14.stateWord * 4;
-                          nj.field_l[var14.pendingTypeId].a((-(2 * var14.stateWord) + 30) / param0 + var7_int, var8, var19 / param0, var16.field_z);
+                          nj.field_l[var14.pendingTypeId].a((-(2 * var14.stateWord) + 30) / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
                         }
                         break;
                       case 11:
-                        nj.field_l[var14.pendingTypeId].c(var7_int, var8);
+                        nj.field_l[var14.pendingTypeId].drawTransparent(var7_int, var8);
                         var16.b(var7_int, var8, var18);
                         break;
                     }
                   }
-                  lb.b(var24);
+                  Rasterizer2D.restoreClip(var24);
                 }
               }
               var14 = (Brick) (var13.next((byte) 116));

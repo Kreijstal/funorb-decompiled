@@ -4,7 +4,7 @@
 final class br extends mh {
     private int field_Vb;
     private int field_dc;
-    private jp[] field_Tb;
+    private RgbSprite[] field_Tb;
     private int field_Yb;
     private int field_Sb;
     private int field_Zb;
@@ -41,7 +41,7 @@ final class br extends mh {
 
     final void a(String param0, int param1, byte param2) {
         try {
-          this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_ec, (jp) null, param0);
+          this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_ec, (RgbSprite) null, param0);
           this.field_Xb[this.field_Wb].field_Gb = this.field_Tb;
           this.field_Xb[this.field_Wb].field_Lb = true;
           this.field_Xb[this.field_Wb].field_Q = 1;
@@ -75,7 +75,7 @@ final class br extends mh {
         return this.field_dc;
     }
 
-    final void a(String param0, int param1, int param2, jp param3) {
+    final void a(String param0, int param1, int param2, RgbSprite param3) {
         try {
           this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_ec, param3, param0);
           this.field_Xb[this.field_Wb].field_Gb = this.field_Tb;
@@ -108,16 +108,16 @@ final class br extends mh {
 
     final static int a(int param0, int param1, int param2, int param3) {
         int var4 = 33 % ((param3 - 75) / 45);
-        if (lb.field_d >= param1 + param2 + param0) {
+        if (Rasterizer2D.height >= param1 + param2 + param0) {
           return param1 + param2;
         }
         if (0 <= param1 - param0) {
           return param1 - param0;
         }
-        return lb.field_d - param0;
+        return Rasterizer2D.height - param0;
     }
 
-    br(mh param0, jp[] param1, mh param2, mh param3, int param4, int param5, int param6, int param7, int param8) {
+    br(mh param0, RgbSprite[] param1, mh param2, mh param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Xb = new rk[256];
         this.field_dc = -2;
@@ -208,7 +208,7 @@ final class br extends mh {
           }
           return;
         }
-        this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_Pb, (jp) null, gg.field_m);
+        this.field_Xb[this.field_Wb] = new rk(0L, (mh) null, (mh) null, this.field_Pb, (RgbSprite) null, gg.field_m);
         this.field_Xb[this.field_Wb].field_Q = 1;
         this.a(this.field_Xb[this.field_Wb], 0);
         this.field_cc[this.field_Wb] = -1;

@@ -3,8 +3,8 @@
  */
 final class er {
     static String field_e;
-    static jp field_b;
-    static jp field_d;
+    static RgbSprite field_b;
+    static RgbSprite field_d;
     static volatile long field_c;
     static String field_a;
 

@@ -8,14 +8,14 @@ final class nq extends IntrusiveNode {
     private int field_r;
     private int field_m;
     private int field_q;
-    private jp field_s;
+    private RgbSprite field_s;
     static String field_n;
     private String field_l;
     static int field_i;
     private boolean field_j;
 
     final static void a(mf param0, mf param1, byte param2, mf param3) {
-        jp var17 = null;
+        RgbSprite var17 = null;
         tp[] var5 = null;
         tp[][] var6 = null;
         int[][] var19 = null;
@@ -23,10 +23,10 @@ final class nq extends IntrusiveNode {
         int[][] var7 = null;
         tp[] var14 = null;
         int var11_int = 0;
-        jp var15 = null;
-        jp var18 = null;
-        jp var11 = null;
-        jp var12 = null;
+        RgbSprite var15 = null;
+        RgbSprite var18 = null;
+        RgbSprite var11 = null;
+        RgbSprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = BrickABrac.field_J ? 1 : 0;
@@ -41,7 +41,7 @@ final class nq extends IntrusiveNode {
           og.field_Yb = (dh) ((Object) si.a((byte) -118, "commonui", "arezzo12", param3, param0));
           a.field_u = (dh) ((Object) si.a((byte) -108, "commonui", "arezzo14", param3, param0));
           wm.field_a = (dh) ((Object) si.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
-          var17 = new jp(param1.a(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
+          var17 = new RgbSprite(param1.a(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
           uo.a((byte) 29, param3, "dropdown", "commonui");
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
           LevelPackLoader.field_b = new tp[4];
@@ -66,25 +66,25 @@ final class nq extends IntrusiveNode {
               var14[var11_int] = ek.a(var5[var9], (byte) -85, var19[var11_int]);
             }
           }
-          var9Lifetime1 = var17.field_C;
+          var9Lifetime1 = var17.height;
           jf.d(param2 ^ 88);
-          var17.g();
-          lb.a(0, 0, lb.field_c, lb.field_d);
-          var15 = new jp(var9Lifetime1, var9Lifetime1);
+          var17.bindRasterTarget();
+          Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
+          var15 = new RgbSprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.g();
-          var17.d(0, 0);
-          var11 = new jp(var9Lifetime1, var9Lifetime1);
-          var11.g();
+          var18.bindRasterTarget();
+          var17.drawAt(0, 0);
+          var11 = new RgbSprite(var9Lifetime1, var9Lifetime1);
+          var11.bindRasterTarget();
           if (param2 != -59) {
             nq.d(-50);
           }
-          var17.d(var9Lifetime1 - var17.field_D, 0);
-          var12 = new jp(-(var9Lifetime1 * 2) + var17.field_D, var9Lifetime1);
-          var12.g();
-          var17.d(-var9Lifetime1, 0);
+          var17.drawAt(var9Lifetime1 - var17.width, 0);
+          var12 = new RgbSprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
+          var12.bindRasterTarget();
+          var17.drawAt(-var9Lifetime1, 0);
           sc.b(-81);
-          sf.field_U = new jp[]{var15, var12, var11};
+          sf.field_U = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "nq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -95,7 +95,7 @@ final class nq extends IntrusiveNode {
           return;
         }
         this.field_j = oh.a(pq.field_k, po.field_a, (byte) -24, this.field_r, this.field_m, this.field_s);
-        this.field_j = this.field_s.d(this.field_m, this.field_r, pq.field_k, po.field_a);
+        this.field_j = this.field_s.containsPixel(this.field_m, this.field_r, pq.field_k, po.field_a);
     }
 
     final static void e(int param0) {
@@ -212,7 +212,7 @@ final class nq extends IntrusiveNode {
         }
     }
 
-    nq(int param0, int param1, jp param2, String param3) {
+    nq(int param0, int param1, RgbSprite param2, String param3) {
         try {
           this.field_s = param2;
           this.field_m = param0;
@@ -226,7 +226,7 @@ final class nq extends IntrusiveNode {
     }
 
     final void a(int param0) {
-        this.field_s.c(this.field_m, this.field_r);
+        this.field_s.drawTransparent(this.field_m, this.field_r);
         if (param0 != 2) {
           return;
         }

@@ -3,7 +3,7 @@
  */
 final class wm {
     static dh field_a;
-    static jp field_b;
+    static RgbSprite field_b;
     private static String field_z;
 
     public static void a(int param0) {

@@ -3,7 +3,7 @@
  */
 final class me {
     private String field_c;
-    static jp field_b;
+    static RgbSprite field_b;
     static tp[] field_a;
     static int[][] field_e;
     static boolean[] field_f;
@@ -54,7 +54,7 @@ final class me {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param0);
-          if (!tk.a(var6, false)) {
+          if (!DualLinkNode.a(var6, false)) {
             stackIn_2_0 = om.field_Xb;
             return stackIn_2_0;
           }
@@ -117,7 +117,7 @@ final class me {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 56) {
-            field_b = (jp) null;
+            field_b = (RgbSprite) null;
           }
           stackIn_3_0 = this.field_c.equals(param0);
           return stackIn_3_0;
@@ -148,6 +148,6 @@ final class me {
     }
 
     static {
-        field_b = new jp(540, 140);
+        field_b = new RgbSprite(540, 140);
     }
 }

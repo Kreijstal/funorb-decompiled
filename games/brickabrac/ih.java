@@ -5,7 +5,7 @@ abstract class ih {
     static String field_d;
     static String[] field_j;
     static int field_p;
-    static jp field_k;
+    static RgbSprite field_k;
     lq field_g;
     lq field_n;
     lq field_a;
@@ -102,15 +102,15 @@ abstract class ih {
         field_d = null;
     }
 
-    final static void a(pb param0, jp param1, int param2, int param3, int param4, boolean param5) {
+    final static void a(pb param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {
         try {
           fc.a(-77, param0.field_p);
-          lb.g(0, 0, param0.field_i, param0.field_q, ro.field_x[param2], 16777215);
-          param1.b((-param1.field_x + param0.field_i) / 2 - 30 / param3, -param1.field_z + param4 + (param0.field_q - 200 / param3), 55, 110);
+          Rasterizer2D.fillVerticalGradient(0, 0, param0.field_i, param0.field_q, ro.field_x[param2], 16777215);
+          param1.b((-param1.canvasWidth + param0.field_i) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.field_q - 200 / param3), 55, 110);
           sc.b(-117);
           if (!param5) {
-            jp var7 = (jp) null;
-            ih.a((pb) null, (jp) null, 100, 125, 72, false);
+            RgbSprite var7 = (RgbSprite) null;
+            ih.a((pb) null, (RgbSprite) null, 100, 125, 72, false);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -133,7 +133,7 @@ abstract class ih {
         if (param0 != -952050528) {
           this.field_f = 5;
         }
-        var8.field_j = var6;
+        var8.secondaryKey = var6;
         if (!param4) {
           if (20 <= this.c((byte) -42)) {
             throw new RuntimeException();

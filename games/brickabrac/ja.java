@@ -4,9 +4,9 @@
 final class ja {
     static mf field_c;
     static String field_b;
-    static jp[][] field_a;
+    static RgbSprite[][] field_a;
 
-    final static void a(int param0, int param1, int param2, int param3, dh param4, int param5, int param6, int param7, int param8, int param9, jp[] param10, dh param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, jp[] param19, jp[] param20) {
+    final static void a(int param0, int param1, int param2, int param3, dh param4, int param5, int param6, int param7, int param8, int param9, RgbSprite[] param10, dh param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, RgbSprite[] param19, RgbSprite[] param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -22,7 +22,7 @@ final class ja {
         RuntimeException var21 = null;
         try {
           if (param7 != -111) {
-            field_a = (jp[][]) null;
+            field_a = (RgbSprite[][]) null;
           }
           pa.a(param6, param18, param15, param4, param3, param5, param13, new ta(param10), param1, param14, param12, param9, param0, new ta(param19), param2, param8, param11, new ta(param20), param16, param17, 10);
           return;
@@ -68,16 +68,16 @@ final class ja {
         if (param0 == 2) {
           field_b = null;
           field_c = null;
-          field_a = (jp[][]) null;
+          field_a = (RgbSprite[][]) null;
           return;
         }
-        field_a = (jp[][]) null;
+        field_a = (RgbSprite[][]) null;
         field_b = null;
         field_c = null;
-        field_a = (jp[][]) null;
+        field_a = (RgbSprite[][]) null;
     }
 
-    final static void a(byte param0, jp param1, int param2, int param3, PlayerBoard param4) {
+    final static void a(byte param0, RgbSprite param1, int param2, int param3, PlayerBoard param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -89,7 +89,7 @@ final class ja {
         RuntimeException var5 = null;
         int var6 = 0;
         double var7 = 0.0;
-        jp var9 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
         try {
           if (param0 > -13) {
@@ -99,7 +99,7 @@ final class ja {
           stackIn_5_0 = (var5_int >= 96) ? 96 : var5_int;
           var6 = stackIn_5_0;
           var5_int -= 50;
-          lb.d(7, 7, param2, param3, 0, var6);
+          Rasterizer2D.fillRectangleAlpha(7, 7, param2, param3, 0, var6);
           if (var5_int <= 0) {
             return;
           }
@@ -108,13 +108,13 @@ final class ja {
             var7 = 0.0;
           }
           var9 = nl.field_b;
-          var9.c((-var9.field_x + param2) / 2 + 7, -(int)var7 + 125);
+          var9.drawTransparent((-var9.canvasWidth + param2) / 2 + 7, -(int)var7 + 125);
           if (var5_int > 95) {
             var10 = -95 + var5_int;
             if (96 < var10) {
               var10 = 96;
             }
-            param1.b(7 + (-param1.field_x + param2) / 2, 260, var10 * 256 / 96);
+            param1.b(7 + (-param1.canvasWidth + param2) / 2, 260, var10 * 256 / 96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

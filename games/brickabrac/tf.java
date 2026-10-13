@@ -4,9 +4,9 @@
 final class tf {
     static String[] field_f;
     static boolean field_h;
-    static jp[] field_g;
+    static RgbSprite[] field_g;
     static byte[] field_b;
-    static jp[] field_c;
+    static RgbSprite[] field_c;
     static int[] field_a;
     static mk field_d;
     static String[] field_e;
@@ -18,7 +18,7 @@ final class tf {
           t.field_g = false;
           sa.field_E = false;
           if (param1 >= -43) {
-            field_c = (jp[]) null;
+            field_c = (RgbSprite[]) null;
           }
           if (null != ej.field_I) {
             if (!ej.field_I.field_N) {
@@ -108,7 +108,7 @@ final class tf {
         nn var15 = null;
         try {
           var4_int = 47 / ((param2 + 13) / 51);
-          mn.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.e((byte) -14), (byte) -58, 0L, (String) null);
+          SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.e((byte) -14), (byte) -58, 0L, (String) null);
           if (param0.field_Rb && (param0.field_wc == 2 ||
             !(kb.field_Yb < 2))) {
             var9 = bm.field_d;
@@ -152,12 +152,12 @@ final class tf {
         }
     }
 
-    final static void a(int param0, int param1, pb param2, int param3, int param4, jp param5) {
+    final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
         try {
           fc.a(-68, param2.field_p);
-          lb.g(0, 0, param2.field_i, param2.field_q, 16777215);
+          Rasterizer2D.fillRectangle(0, 0, param2.field_i, param2.field_q, 16777215);
           int var6_int = -110 / ((param4 - 62) / 39);
-          param5.c((-param5.field_x + param2.field_i) / 2, param2.field_q + (param0 - (param5.field_z - 5 / param3)));
+          param5.drawTransparent((-param5.canvasWidth + param2.field_i) / 2, param2.field_q + (param0 - (param5.canvasHeight - 5 / param3)));
           la.a(0, 0, param2.field_i, param2.field_q, IntrusiveNode.field_h[param1], 11970969, 152);
           sc.b(-112);
         } catch (RuntimeException runtimeException) {

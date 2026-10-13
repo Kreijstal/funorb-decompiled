@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dk extends ib implements ha, en, vf {
-    static jp field_R;
+    static RgbSprite field_R;
     private bf field_N;
     private lg field_I;
     private sf field_M;
@@ -120,7 +120,7 @@ final class dk extends ib implements ha, en, vf {
           mi.field_d = ea.field_e - (bg.field_r >> 1);
           fi.field_r.a(aj.a(param4 - 46, po.field_a, pq.field_k), 0, param3, (byte) -127);
           if (param4 != 46) {
-            field_R = (jp) null;
+            field_R = (RgbSprite) null;
             return;
           }
           return;
@@ -141,7 +141,7 @@ final class dk extends ib implements ha, en, vf {
     public static void a(int param0) {
         field_R = null;
         if (param0 != -11310) {
-          field_R = (jp) null;
+          field_R = (RgbSprite) null;
         }
     }
 
@@ -171,7 +171,7 @@ final class dk extends ib implements ha, en, vf {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final static jp a(int param0, mf param1, int param2, int param3) {
+    final static RgbSprite a(int param0, mf param1, int param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -179,7 +179,7 @@ final class dk extends ib implements ha, en, vf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -873) {
-            field_R = (jp) null;
+            field_R = (RgbSprite) null;
           }
           if (ln.a(-123, param3, param1, param2)) {
             return n.a((byte) 21);
@@ -409,7 +409,7 @@ final class dk extends ib implements ha, en, vf {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param0 > -59) {
-            field_R = (jp) null;
+            field_R = (RgbSprite) null;
           }
           for (var1_int = 0; var1_int < pg.field_k.length; var1_int++) {
             var2 = pg.field_k[var1_int];
@@ -456,14 +456,14 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    final static void a(int param0, int param1, pb param2, int param3, int param4, jp param5) {
+    final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
         fc.a(-85, param2.field_p);
-        lb.g(0, 0, param2.field_i, param2.field_q, pf.field_b[param1], 16777215);
+        Rasterizer2D.fillVerticalGradient(0, 0, param2.field_i, param2.field_q, pf.field_b[param1], 16777215);
         if (param4 != 23275) {
           return;
         }
         try {
-          param5.b((-param5.field_x + param2.field_i) / 2, -(342 / param0) + (-param5.field_z + param2.field_q), 55, 83);
+          param5.b((-param5.canvasWidth + param2.field_i) / 2, -(342 / param0) + (-param5.canvasHeight + param2.field_q), 55, 83);
           sc.b(-84);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "dk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

@@ -3,7 +3,7 @@
  */
 final class s {
     String field_g;
-    static jp field_d;
+    static RgbSprite field_d;
     private int field_b;
     private int field_c;
     float field_e;
@@ -27,7 +27,7 @@ final class s {
         po var4;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param0 > -94) {
-          field_d = (jp) null;
+          field_d = (RgbSprite) null;
         }
         while (this.field_c < this.field_b) {
           var4 = this.field_f[this.field_c];
@@ -111,8 +111,8 @@ final class s {
           IsaacGenerator.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
           return;
         }
-        jp var2 = (jp) null;
-        s.a((jp) null, -53, 56, (jp) null, (pb) null, -22, (byte) -5, (jp) null);
+        RgbSprite var2 = (RgbSprite) null;
+        s.a((RgbSprite) null, -53, 56, (RgbSprite) null, (pb) null, -22, (byte) -5, (RgbSprite) null);
         IsaacGenerator.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
     }
 
@@ -121,7 +121,7 @@ final class s {
         return tn.field_m != null ? true : false;
     }
 
-    final static void a(jp param0, int param1, int param2, jp param3, pb param4, int param5, byte param6, jp param7) {
+    final static void a(RgbSprite param0, int param1, int param2, RgbSprite param3, pb param4, int param5, byte param6, RgbSprite param7) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -136,9 +136,9 @@ final class s {
         RuntimeException var8 = null;
         try {
           fc.a(-72, param4.field_p);
-          lb.g(0, 0, param4.field_i, param4.field_q, kg.field_d[param2], 22953);
-          param3.c((-param3.field_x + param4.field_i) / 2 - 147 / param1, 480 + param5 - param7.field_z);
-          param0.b(-(80 / param1) + (param4.field_i - param0.field_x) / 2, -(201 / param1) + (param4.field_q + param5) - param0.field_z, 41, 110);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.field_i, param4.field_q, kg.field_d[param2], 22953);
+          param3.drawTransparent((-param3.canvasWidth + param4.field_i) / 2 - 147 / param1, 480 + param5 - param7.canvasHeight);
+          param0.b(-(80 / param1) + (param4.field_i - param0.canvasWidth) / 2, -(201 / param1) + (param4.field_q + param5) - param0.canvasHeight, 41, 110);
           var8_int = -97 / ((param6 - 54) / 61);
           sc.b(-95);
           return;

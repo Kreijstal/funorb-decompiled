@@ -19,7 +19,7 @@ final class oh {
         return g.field_m;
     }
 
-    final static boolean a(int param0, int param1, byte param2, int param3, int param4, jp param5) {
+    final static boolean a(int param0, int param1, byte param2, int param3, int param4, RgbSprite param5) {
         RuntimeException var6 = null;
         boolean stackIn_16_0 = false;
         RuntimeException stackIn_19_0 = null;
@@ -27,20 +27,20 @@ final class oh {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0 = param0 - (param5.field_E + param4);
+          param0 = param0 - (param5.offsetX + param4);
           if (param0 < 0) {
             return false;
           }
-          if (param5.field_D <= param0) {
+          if (param5.width <= param0) {
             return false;
           }
-          param1 = param1 - (param3 + param5.field_F);
+          param1 = param1 - (param3 + param5.offsetY);
           if (param1 >= 0 &&
-            param1 < param5.field_C) {
+            param1 < param5.height) {
             if (param2 != -24) {
               field_f = 13;
             }
-            param4 = param5.field_G[param0 + param5.field_D * param1];
+            param4 = param5.pixels[param0 + param5.width * param1];
             stackIn_16_0 = (param4 != 0) && ((-16777216 & param4) != 0);
             return stackIn_16_0;
           }

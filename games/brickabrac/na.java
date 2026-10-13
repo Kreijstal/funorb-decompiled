@@ -70,42 +70,42 @@ final class na extends ug {
         }
     }
 
-    final static jp[] a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
-        jp var16 = null;
-        int[] var18 = lb.field_l;
+    final static RgbSprite[] a(boolean param0, int param1, int param2, int param3, int param4, int param5) {
+        RgbSprite var16 = null;
+        int[] var18 = Rasterizer2D.pixels;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = lb.field_c;
-        int var8 = lb.field_d;
-        jp var9 = new jp(param2, param4 - param2 * 2);
-        var9.g();
-        lb.g(0, 0, param2, param4 - param2 * 2, param3, param1);
-        jp var10 = new jp(param2, param2);
-        var10.g();
-        lb.g(0, 0, param2, param2, param3);
-        jp var11 = new jp(16, param2);
-        var11.g();
-        lb.g(0, 0, 16, param2, param3);
-        jp var12 = new jp(param2, param2);
-        var12.g();
-        lb.g(0, 0, param2, param2, param1);
-        jp var13 = new jp(16, param2);
-        var13.g();
-        lb.g(0, 0, 16, param2, param1);
+        int var7 = Rasterizer2D.width;
+        int var8 = Rasterizer2D.height;
+        RgbSprite var9 = new RgbSprite(param2, param4 - param2 * 2);
+        var9.bindRasterTarget();
+        Rasterizer2D.fillVerticalGradient(0, 0, param2, param4 - param2 * 2, param3, param1);
+        RgbSprite var10 = new RgbSprite(param2, param2);
+        var10.bindRasterTarget();
+        Rasterizer2D.fillRectangle(0, 0, param2, param2, param3);
+        RgbSprite var11 = new RgbSprite(16, param2);
+        var11.bindRasterTarget();
+        Rasterizer2D.fillRectangle(0, 0, 16, param2, param3);
+        RgbSprite var12 = new RgbSprite(param2, param2);
+        var12.bindRasterTarget();
+        Rasterizer2D.fillRectangle(0, 0, param2, param2, param1);
+        RgbSprite var13 = new RgbSprite(16, param2);
+        var13.bindRasterTarget();
+        Rasterizer2D.fillRectangle(0, 0, 16, param2, param1);
         Object var14 = null;
         if (0 < param5) {
-          var16 = new jp(16, 16);
+          var16 = new RgbSprite(16, 16);
           var14 = var16;
-          var16.g();
-          lb.g(0, 0, 16, 16, param5);
+          var16.bindRasterTarget();
+          Rasterizer2D.fillRectangle(0, 0, 16, 16, param5);
         }
-        lb.a(var18, var7, var8);
+        Rasterizer2D.bind(var18, var7, var8);
         if (!param0) {
-          return new jp[]{var10, var11, var10, var9, (jp) (var14), var9, var12, var13, var12};
+          return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
         }
         na.a(false, 118, 124, -92, 47, -40);
-        return new jp[]{var10, var11, var10, var9, (jp) (var14), var9, var12, var13, var12};
+        return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
     }
 
     private na(ub param0, boolean param1) {

@@ -9,14 +9,14 @@ final class l extends IntrusiveNode {
     static String field_k;
     IntrusiveNode field_n;
 
-    final static void a(int param0, int param1, pb param2, int param3, int param4, jp param5) {
+    final static void a(int param0, int param1, pb param2, int param3, int param4, RgbSprite param5) {
         try {
           fc.a(-89, param2.field_p);
-          la.a(param5, (-param5.field_x + param2.field_i) / 2, -param5.field_z + (param0 + param2.field_q), ab.field_C[param3]);
+          la.a(param5, (-param5.canvasWidth + param2.field_i) / 2, -param5.canvasHeight + (param0 + param2.field_q), ab.field_C[param3]);
           sc.b(-95);
           if (param1 != 26746) {
-            jp var7 = (jp) null;
-            l.a(-125, 69, (pb) null, 30, 70, (jp) null);
+            RgbSprite var7 = (RgbSprite) null;
+            l.a(-125, 69, (pb) null, 30, 70, (RgbSprite) null);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "l.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
@@ -86,7 +86,7 @@ final class l extends IntrusiveNode {
             return stackIn_17_0;
           }
           if (param2 == 6) {
-            stackIn_20_0 = rd.a(mn.field_B, new String[]{param1}, (byte) 103);
+            stackIn_20_0 = rd.a(SpriteGeometry.field_B, new String[]{param1}, (byte) 103);
             return stackIn_20_0;
           }
           if (param2 == 7) {

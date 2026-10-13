@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sl extends tk {
+abstract class sl extends DualLinkNode {
     static long field_v;
     static java.applet.Applet field_x;
     static BrickABrac field_C;
     static int field_z;
-    static jp field_D;
+    static RgbSprite field_D;
     static th field_B;
     static String field_y;
     int field_u;
@@ -19,7 +19,7 @@ abstract class sl extends tk {
         field_A = null;
         field_B = null;
         if (param0 != 31434) {
-          sl.a((String[][]) null, (jp[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (mf) null, (int[]) null, (jp[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
+          sl.a((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (mf) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
         }
         field_C = null;
         field_D = null;
@@ -27,7 +27,7 @@ abstract class sl extends tk {
 
     abstract Object g(int param0);
 
-    final static void a(String[][] param0, jp[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, mf param7, int[] param8, jp[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
+    final static void a(String[][] param0, RgbSprite[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, mf param7, int[] param8, RgbSprite[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
         rk[] array$0 = null;
         rk[] array$1 = null;
         rk[] array$2 = null;
@@ -197,33 +197,33 @@ abstract class sl extends tk {
           gb.field_l[0] = new mh(0L, wi.field_n, ro.field_H);
           ab.field_A[0] = new rk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            ab.field_A[0][1 + var17_int] = new rk(0L, al.field_n, (mh) null, tk.field_t, dj.field_f[var17_int], bl.field_H[var17_int]);
+            ab.field_A[0][1 + var17_int] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, dj.field_f[var17_int], bl.field_H[var17_int]);
           }
           if (2 <= w.field_n.length) {
             gb.field_l[1] = new mh(0L, wi.field_n, og.field_ac);
             array$0 = new rk[1 + w.field_n.length];
             ab.field_A[1] = array$0;
-            ab.field_A[1][0] = new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, ni.field_Pb);
+            ab.field_A[1][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < w.field_n.length; var17_intLifetime1++) {
-              ab.field_A[1][var17_intLifetime1 + 1] = new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, Integer.toString(w.field_n[var17_intLifetime1]));
+              ab.field_A[1][var17_intLifetime1 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
             }
           }
           gb.field_l[2] = new mh(0L, wi.field_n, p.field_j);
-          ab.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, tk.field_t, Ball.field_K[0], re.field_a), new rk(0L, al.field_n, (mh) null, tk.field_t, Ball.field_K[1], hh.field_f)};
+          ab.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], re.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < pe.field_t) {
             gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);
             array$1 = new rk[pe.field_t + 1];
             ab.field_A[3] = array$1;
-            ab.field_A[3][0] = new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, ni.field_Pb);
+            ab.field_A[3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < pe.field_t; var17_intLifetime2++) {
-              ab.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, im.field_c[var17_intLifetime2]);
+              ab.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, im.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
             gb.field_l[var17_intLifetime3 + 4] = new mh(0L, wi.field_n, rg.field_b[var17_intLifetime3]);
             array$2 = new rk[ik.a((int) dm.field_c[var17_intLifetime3], 255) + 1];
             ab.field_A[4 + var17_intLifetime3] = array$2;
-            ab.field_A[4 + var17_intLifetime3][0] = new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, ni.field_Pb);
+            ab.field_A[4 + var17_intLifetime3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
             for (var18 = 0; (255 & dm.field_c[var17_intLifetime3]) > var18; var18++) {
               if (ki.field_k != null) {
                 if (ki.field_k[var17_intLifetime3] == null) {
@@ -243,7 +243,7 @@ abstract class sl extends tk {
               } else {
                 var20 = null;
               }
-              ab.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) (var19_ref), (String) (var20));
+              ab.field_A[4 + var17_intLifetime3][var18 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param13 > var17_intLifetime4; var17_intLifetime4++) {

@@ -199,9 +199,9 @@ class lg extends d {
         return ik.field_j;
     }
 
-    final static jp a(int param0, String param1, int param2) {
+    final static RgbSprite a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
-        jp stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gr {
-    static jp field_c;
+    static RgbSprite field_c;
     static volatile int field_a;
-    static jp[] field_d;
+    static RgbSprite[] field_d;
     static String field_b;
 
     public static void a(byte param0) {
@@ -25,7 +25,7 @@ final class gr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            field_c = (jp) null;
+            field_c = (RgbSprite) null;
           }
           stackIn_3_0 = hq.field_t.a(-61, "", param1);
           return stackIn_3_0;

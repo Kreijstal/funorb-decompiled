@@ -4,7 +4,7 @@
 class RectangleBody extends MovingBody {
     int height256;
     static String field_t;
-    static jp field_p;
+    static RgbSprite field_p;
     int width256;
     static mh field_q;
     static PacketBuffer field_r;
@@ -192,7 +192,7 @@ class RectangleBody extends MovingBody {
           }
           oh.field_f = var13Lifetime1 - circle.radius256;
           ea.field_b = var10Lifetime1;
-          mn.field_A = var31;
+          SpriteGeometry.field_A = var31;
           ae.field_b = var32;
           dj.field_c = this;
           sh.field_a = var15Lifetime1;

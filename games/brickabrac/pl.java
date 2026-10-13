@@ -6,25 +6,25 @@ final class pl {
     static int[] field_b;
     static String field_e;
     static String[] field_c;
-    static jp field_a;
+    static RgbSprite field_a;
     static int field_d;
 
-    final static jp a(int param0, jp param1) {
-        jp var2 = null;
+    final static RgbSprite a(int param0, RgbSprite param1) {
+        RgbSprite var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        jp stackIn_3_0 = null;
+        RgbSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new jp(param1.field_x / 2, param1.field_z / 2);
+          var2 = new RgbSprite(param1.canvasWidth / 2, param1.canvasHeight / 2);
           if (param0 != -16371) {
             var3 = (byte[]) null;
             pl.a(-81, (byte[]) null, 117, false, 81, (byte) 40);
           }
-          var2.g();
+          var2.bindRasterTarget();
           param1.a(0, 0);
           kc.field_q.a((byte) 103);
           stackIn_3_0 = var2;
@@ -81,7 +81,7 @@ final class pl {
         field_b = null;
     }
 
-    final static void a(jp param0, int param1) {
+    final static void a(RgbSprite param0, int param1) {
         int var5_int = 0;
         int var8 = 0;
         int incrementValue$2 = 0;
@@ -108,41 +108,41 @@ final class pl {
         int var6Lifetime2;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var13 = new int[param0.field_C];
+          var13 = new int[param0.height];
           var12 = var13;
           var11 = var12;
           var2 = var11;
           var3 = 0;
           var4 = 0;
-          for (var5_int = param1; var5_int < param0.field_C; var5_int++) {
-            var11[var5_int] = var4 + param0.field_C;
+          for (var5_int = param1; var5_int < param0.height; var5_int++) {
+            var11[var5_int] = var4 + param0.height;
             var6 = 0;
             var7 = 0;
-            for (var8 = 0; param0.field_D > var8; var8++) {
+            for (var8 = 0; param0.width > var8; var8++) {
               incrementValue$2 = var3;
               var3++;
-              var9 = param0.field_G[incrementValue$2];
+              var9 = param0.pixels[incrementValue$2];
               if (var9 == 0) {
                 if (0 < var6) {
                   var6 = 0;
                   var4++;
                 }
                 var7++;
-                param0.field_G[var4] = -var7;
+                param0.pixels[var4] = -var7;
               } else {
                 if (0 < var7) {
                   var4++;
                   var7 = 0;
                 }
                 var6++;
-                param0.field_G[var4] = var6;
+                param0.pixels[var4] = var6;
               }
             }
             var4++;
           }
           var3Lifetime1 = 0;
-          var5 = new int[var4 + param0.field_C];
-          for (var6Lifetime1 = 0; param0.field_C > var6Lifetime1; var6Lifetime1++) {
+          var5 = new int[var4 + param0.height];
+          for (var6Lifetime1 = 0; param0.height > var6Lifetime1; var6Lifetime1++) {
             incrementValue$1 = var3Lifetime1;
             var3Lifetime1++;
             var5[incrementValue$1] = var13[var6Lifetime1];
@@ -150,9 +150,9 @@ final class pl {
           for (var6Lifetime2 = 0; var4 > var6Lifetime2; var6Lifetime2++) {
             incrementValue$0 = var3Lifetime1;
             var3Lifetime1++;
-            var5[incrementValue$0] = param0.field_G[var6Lifetime2];
+            var5[incrementValue$0] = param0.pixels[var6Lifetime2];
           }
-          param0.field_G = var5;
+          param0.pixels = var5;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,12 +214,12 @@ final class pl {
         }
     }
 
-    final static jp a(String param0, String param1, byte param2, mf param3) {
+    final static RgbSprite a(String param0, String param1, byte param2, mf param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        jp stackIn_1_0 = null;
+        RgbSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

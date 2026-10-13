@@ -268,7 +268,7 @@ final class wh implements Runnable {
           return;
         }
         if (nq.field_p) {
-          lb.b(lb.field_i, lb.field_b, -lb.field_i + lb.field_f, -lb.field_b + lb.field_j);
+          Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, -Rasterizer2D.clipLeft + Rasterizer2D.clipRight, -Rasterizer2D.clipTop + Rasterizer2D.clipBottom);
           wd.field_w.a(true, false);
         }
     }

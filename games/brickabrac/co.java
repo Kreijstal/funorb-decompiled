@@ -105,8 +105,8 @@ final class co {
         int var2 = (-640 + kp.field_a) / 2;
         int var3 = hj.field_Yb * hj.field_Yb;
         int var4 = -(param0 * param0) + var3;
-        qa.field_w.a(lb.field_d - 120 - 4 - 90, 90, var2 - var4 * 199 / var3, 199, (byte) 64);
-        MultiplayerMatch.field_d.a(-4 + (lb.field_d - 120), 0, 438 * var4 / var3 + (202 + var2), 438, (byte) 64);
+        qa.field_w.a(Rasterizer2D.height - 120 - 4 - 90, 90, var2 - var4 * 199 / var3, 199, (byte) 64);
+        MultiplayerMatch.field_d.a(-4 + (Rasterizer2D.height - 120), 0, 438 * var4 / var3 + (202 + var2), 438, (byte) 64);
         if (param1) {
           field_e = (String) null;
         }

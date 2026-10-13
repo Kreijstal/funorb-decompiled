@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ta {
-    private jp[] field_b;
+    private RgbSprite[] field_b;
     static int field_f;
     static String field_a;
     static oe[] field_e;
@@ -10,7 +10,7 @@ class ta {
     static String field_d;
     static String field_c;
 
-    final static jp b(int param0) {
+    final static RgbSprite b(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var1;
@@ -33,7 +33,7 @@ class ta {
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = qp.field_c[ik.a((int) var16[var5_int], 255)];
           }
-          var3 = new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var8);
+          var3 = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var8);
         } else {
           var17 = bj.field_S[0];
           var13 = new int[var1];
@@ -42,10 +42,10 @@ class ta {
           for (var6 = 0; var6 < var1; var6++) {
             var5[var6] = ud.d(qp.field_c[ik.a((int) var16[var6], 255)], ik.a(-16777216, var17[var6] << 24));
           }
-          var3 = new fb(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var13);
+          var3 = new ArgbSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var13);
         }
         MotionWaypoint.d((byte) 96);
-        return (jp) (var3);
+        return (RgbSprite) (var3);
     }
 
     public static void a(int param0) {
@@ -74,12 +74,12 @@ class ta {
           return;
         }
         if (param0) {
-          lb.d(0, 0, lb.field_c, lb.field_d, 0, 192);
+          Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 192);
         }
         wo.field_b.a(0, 0, 0);
     }
 
-    ta(jp[] param0) {
+    ta(RgbSprite[] param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

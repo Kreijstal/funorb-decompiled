@@ -6,7 +6,7 @@ final class dc {
     int field_a;
     static tn field_e;
     static int field_b;
-    static jp field_c;
+    static RgbSprite field_c;
     static String field_d;
     static boolean field_g;
 

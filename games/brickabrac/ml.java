@@ -10,10 +10,10 @@ final class ml {
     int[] field_g;
     static int field_b;
 
-    final static jp a(mf param0, int param1, int param2, int param3) {
+    final static RgbSprite a(mf param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        jp stackIn_5_0 = null;
-        jp stackIn_7_0 = null;
+        RgbSprite stackIn_5_0 = null;
+        RgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -26,7 +26,7 @@ final class ml {
             stackIn_7_0 = ta.b(param3 ^ 13875);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (jp) null;
+          stackIn_5_0 = (RgbSprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,22 +119,22 @@ final class ml {
           if (param2 <= 80) {
             field_e = (String[]) null;
           }
-          var8 = param3 * lb.field_c + param4;
+          var8 = param3 * Rasterizer2D.width + param4;
           var9 = 0;
           var10 = param1.field_a;
           var11 = param1.field_d;
-          var12 = lb.field_c - var11;
+          var12 = Rasterizer2D.width - var11;
           var13 = 0;
-          if (param3 < lb.field_b) {
-            var14 = -param3 + lb.field_b;
+          if (param3 < Rasterizer2D.clipTop) {
+            var14 = -param3 + Rasterizer2D.clipTop;
             var9 = var9 + var11 * var14;
             var10 = var10 - var14;
-            param3 = lb.field_b;
-            var8 = var8 + lb.field_c * var14;
+            param3 = Rasterizer2D.clipTop;
+            var8 = var8 + Rasterizer2D.width * var14;
           }
-          if (param4 < lb.field_i) {
-            var14Lifetime1 = -param4 + lb.field_i;
-            param4 = lb.field_i;
+          if (param4 < Rasterizer2D.clipLeft) {
+            var14Lifetime1 = -param4 + Rasterizer2D.clipLeft;
+            param4 = Rasterizer2D.clipLeft;
             var9 = var9 + var14Lifetime1;
             var13 = var13 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
@@ -142,11 +142,11 @@ final class ml {
             var7 = var7 + var14Lifetime1 * var6_int;
             var8 = var8 + var14Lifetime1;
           }
-          if (var10 + param3 > lb.field_j) {
-            var10 = var10 - (param3 - (-var10 + lb.field_j));
+          if (var10 + param3 > Rasterizer2D.clipBottom) {
+            var10 = var10 - (param3 - (-var10 + Rasterizer2D.clipBottom));
           }
-          if (lb.field_f < param4 + var11) {
-            var14Lifetime2 = param4 + (var11 - lb.field_f);
+          if (Rasterizer2D.clipRight < param4 + var11) {
+            var14Lifetime2 = param4 + (var11 - Rasterizer2D.clipRight);
             var12 = var12 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
@@ -165,11 +165,11 @@ final class ml {
                   var17 = param1.field_j[255 & param1.field_i[incrementValue$0]];
                   if (var17 != 0) {
                     if (var15 > 255) {
-                      lb.field_l[var8] = var17;
+                      Rasterizer2D.pixels[var8] = var17;
                     } else {
-                      var18 = lb.field_l[var8];
+                      var18 = Rasterizer2D.pixels[var8];
                       var19 = (16711935 & var18) * var16 + (var17 & 16711935) * var15 >> 8 & 16711935;
-                      lb.field_l[var8] = ik.a(65280, var16 * ik.a(var18, 65280) + var15 * ik.a(65280, var17) >> 8) + var19;
+                      Rasterizer2D.pixels[var8] = ik.a(65280, var16 * ik.a(var18, 65280) + var15 * ik.a(65280, var17) >> 8) + var19;
                     }
                   }
                   var8++;

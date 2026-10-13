@@ -11,7 +11,7 @@ final class ci extends ki {
         pb var8 = null;
         if (param0) {
           if (!this.b((byte) -102)) {
-            lb.g(param4, param2, 640, 480, 0);
+            Rasterizer2D.fillRectangle(param4, param2, 640, 480, 0);
           } else {
             var8 = PowerUp.a(this.field_m, param3, -20777);
             if (!var8.a((byte) -84, param3, this.field_m)) {
@@ -24,7 +24,7 @@ final class ci extends ki {
         }
         this.c((byte) 70);
         if (!this.b((byte) -102)) {
-          lb.g(param4, param2, 640, 480, 0);
+          Rasterizer2D.fillRectangle(param4, param2, 640, 480, 0);
           return;
         }
         pb var7 = PowerUp.a(this.field_m, param3, -20777);
@@ -35,7 +35,7 @@ final class ci extends ki {
         af.a(om.field_fc, param4, param1, param3, 640, 0, 0, var7.field_p, 1, pn.field_m, param2);
     }
 
-    final jp[] b(int param0) {
+    final RgbSprite[] b(int param0) {
         if (param0 > -12) {
           this.b((byte) 4);
           return b.field_b;
@@ -48,7 +48,7 @@ final class ci extends ki {
         pb var7 = null;
         if (param1 <= -84) {
           if (!this.b((byte) -101)) {
-            lb.g(param2, param0, 306, 480, 0);
+            Rasterizer2D.fillRectangle(param2, param0, 306, 480, 0);
           } else {
             var8 = kd.a(this.field_m, param3, (byte) 125);
             if (!var8.a((byte) -84, param3, this.field_m)) {
@@ -61,7 +61,7 @@ final class ci extends ki {
         }
         field_s = (String) null;
         if (!this.b((byte) -101)) {
-          lb.g(param2, param0, 306, 480, 0);
+          Rasterizer2D.fillRectangle(param2, param0, 306, 480, 0);
         } else {
           var7 = kd.a(this.field_m, param3, (byte) 125);
           if (!var7.a((byte) -84, param3, this.field_m)) {
@@ -76,16 +76,16 @@ final class ci extends ki {
         int var5 = 0;
         int var5Lifetime1;
         if (param1 <= -1) {
-          lb.g(param2, param3, 153, 238, 7829367, 11184810);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 7829367, 11184810);
           if (this.b((byte) -103)) {
-            rf.field_a.c(param2, param3);
+            rf.field_a.drawTransparent(param2, param3);
           }
           var5 = -77 % ((-28 - param0) / 43);
           return;
         }
         la.a(param2, param3, 153, 238, 0, nj.field_G[param1], 96);
         if (this.b((byte) -103)) {
-          rf.field_a.c(param2, param3);
+          rf.field_a.drawTransparent(param2, param3);
         }
         var5Lifetime1 = -77 % ((-28 - param0) / 43);
     }
@@ -98,8 +98,8 @@ final class ci extends ki {
         pn.field_m = pl.a("space", "space_mid", (byte) 115, i.field_m);
         ng.field_a = pl.a("space", "space_far", (byte) -98, i.field_m);
         rf.field_a = pl.a("space", "space_small", (byte) -90, i.field_m);
-        ng.field_a.g();
-        lb.a(7136, 6592, 1600, 128, sq.field_b);
+        ng.field_a.bindRasterTarget();
+        Rasterizer2D.a(7136, 6592, 1600, 128, sq.field_b);
         if (!param0) {
           kc.field_q.a((byte) 100);
           pk.field_f = pl.a("space", "space_character", (byte) -50, i.field_m);
@@ -116,7 +116,7 @@ final class ci extends ki {
         super(param0, param1, param2, param3);
     }
 
-    final jp c(byte param0) {
+    final RgbSprite c(byte param0) {
         if (param0 > -74) {
           String var3 = (String) null;
           ci.a((String) null, -110);

@@ -25,7 +25,7 @@ final class al extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1) {
-        gj.field_c[param0].c((640 - gj.field_c[param0].field_x) / 2, param1);
+        gj.field_c[param0].drawTransparent((640 - gj.field_c[param0].canvasWidth) / 2, param1);
     }
 
     al() {

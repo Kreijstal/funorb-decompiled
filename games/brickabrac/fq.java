@@ -5,12 +5,12 @@ import java.util.*;
 
 final class fq {
     static java.util.zip.CRC32 field_a;
-    static jp[] field_d;
-    static jp[] field_c;
+    static RgbSprite[] field_d;
+    static RgbSprite[] field_c;
     static int[] field_e;
     static int field_b;
 
-    final static void a(int param0, int param1, int param2, jp[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, RgbSprite[] param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -29,19 +29,19 @@ final class fq {
             if (param2 != 743) {
               fq.a((byte) 123);
             }
-            var5_int = param3[0].field_x;
-            var6 = param3[2].field_x;
-            var7 = param3[1].field_x;
-            param3[0].c(param4, param1);
-            param3[2].c(param4 + param0 - var6, param1);
-            lb.a(pb.field_n);
-            lb.d(param4 + var5_int, param1, param0 + param4 - var6, param3[1].field_z + param1);
+            var5_int = param3[0].canvasWidth;
+            var6 = param3[2].canvasWidth;
+            var7 = param3[1].canvasWidth;
+            param3[0].drawTransparent(param4, param1);
+            param3[2].drawTransparent(param4 + param0 - var6, param1);
+            Rasterizer2D.saveClip(pb.field_n);
+            Rasterizer2D.intersectClip(param4 + var5_int, param1, param0 + param4 - var6, param3[1].canvasHeight + param1);
             var8 = param4 + var5_int;
             var9 = param4 - (-param0 + var6);
             for (param4 = var8; var9 > param4; param4 = param4 + var7) {
-              param3[1].c(param4, param1);
+              param3[1].drawTransparent(param4, param1);
             }
-            lb.b(pb.field_n);
+            Rasterizer2D.restoreClip(pb.field_n);
             return;
           }
           return;

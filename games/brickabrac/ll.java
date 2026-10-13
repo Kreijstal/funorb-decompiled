@@ -6,7 +6,7 @@ final class ll {
     static me field_d;
     static int field_b;
     static mh field_e;
-    static jp field_c;
+    static RgbSprite field_c;
 
     final static boolean a(String param0, byte param1, String param2) {
         String var3 = null;

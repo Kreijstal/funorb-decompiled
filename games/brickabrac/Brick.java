@@ -12,11 +12,11 @@ final class Brick extends RectangleBody {
     static int[] field_L;
     int field_M;
     MotionWaypoint[] waypoints;
-    static jp field_K;
+    static RgbSprite field_K;
     int segmentElapsedTicks;
     int motionElapsedTicks;
     private int pathDurationTicks;
-    static jp[][] field_I;
+    static RgbSprite[][] field_I;
     static int field_E;
     static kg field_x;
     static byte[] field_O;
@@ -24,7 +24,7 @@ final class Brick extends RectangleBody {
     static String field_z;
     int pendingTypeId;
     int destinationWaypointIndex;
-    static jp field_w;
+    static RgbSprite field_w;
 
     final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         StringBuilder discarded$4 = null;
@@ -186,7 +186,7 @@ final class Brick extends RectangleBody {
     public static void d(int param0) {
         field_D = null;
         field_w = null;
-        field_I = (jp[][]) null;
+        field_I = (RgbSprite[][]) null;
         field_A = null;
         field_z = null;
         if (param0 != 4641) {
@@ -241,7 +241,7 @@ final class Brick extends RectangleBody {
               }
             } else {
               var7.velocityX256 = -var7.velocityX256;
-              var5 = mn.field_A * (this.velocityX256 - var7.velocityX256);
+              var5 = SpriteGeometry.field_A * (this.velocityX256 - var7.velocityX256);
               if (0 > var5) {
                 var7.velocityX256 = this.velocityX256;
               }
@@ -392,11 +392,11 @@ final class Brick extends RectangleBody {
         int var1 = (-640 + kp.field_a) / 2;
         int var2 = hj.field_Yb * hj.field_Yb;
         int var3 = var2 - ml.field_b * ml.field_b;
-        fe.field_gb.a(-124 + (lb.field_d - 90), 90, -(199 * var3 / var2) + var1, 199, (byte) 64);
+        fe.field_gb.a(-124 + (Rasterizer2D.height - 90), 90, -(199 * var3 / var2) + var1, 199, (byte) 64);
         if (param0 >= -50) {
           Brick.d(61);
         }
-        rm.field_a.a(-4 + lb.field_d - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
+        rm.field_a.a(-4 + Rasterizer2D.height - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
     }
 
     Brick(int param0, int param1, int param2, int param3, int param4) {

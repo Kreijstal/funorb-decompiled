@@ -16,49 +16,49 @@ final class tq {
         if (param9 < -51) {
           if (param8 < param14) {
             if (param14 < param6) {
-              MovingBody.a(param12, param2, param8, (byte) -111, param4, param1, param3, param11, param13, lb.field_l, param5, param0, param7, param10, param14, param6, param15);
+              MovingBody.a(param12, param2, param8, (byte) -111, param4, param1, param3, param11, param13, Rasterizer2D.pixels, param5, param0, param7, param10, param14, param6, param15);
               return;
             }
             if (param6 <= param8) {
-              MovingBody.a(param0, param4, param6, (byte) -111, param11, param7, param1, param2, param5, lb.field_l, param15, param10, param3, param12, param8, param14, param13);
+              MovingBody.a(param0, param4, param6, (byte) -111, param11, param7, param1, param2, param5, Rasterizer2D.pixels, param15, param10, param3, param12, param8, param14, param13);
               return;
             }
-            MovingBody.a(param12, param4, param8, (byte) -111, param2, param1, param7, param11, param5, lb.field_l, param13, param10, param3, param0, param6, param14, param15);
+            MovingBody.a(param12, param4, param8, (byte) -111, param2, param1, param7, param11, param5, Rasterizer2D.pixels, param13, param10, param3, param0, param6, param14, param15);
             return;
           }
           if (param8 < param6) {
-            MovingBody.a(param10, param2, param14, (byte) -111, param11, param3, param1, param4, param13, lb.field_l, param15, param0, param7, param12, param8, param6, param5);
+            MovingBody.a(param10, param2, param14, (byte) -111, param11, param3, param1, param4, param13, Rasterizer2D.pixels, param15, param0, param7, param12, param8, param6, param5);
             return;
           }
           if (param6 > param14) {
-            MovingBody.a(param10, param11, param14, (byte) -111, param2, param3, param7, param4, param15, lb.field_l, param13, param12, param1, param0, param6, param8, param5);
+            MovingBody.a(param10, param11, param14, (byte) -111, param2, param3, param7, param4, param15, Rasterizer2D.pixels, param13, param12, param1, param0, param6, param8, param5);
             return;
           }
-          MovingBody.a(param0, param11, param6, (byte) -111, param4, param7, param3, param2, param15, lb.field_l, param5, param12, param1, param10, param14, param8, param13);
+          MovingBody.a(param0, param11, param6, (byte) -111, param4, param7, param3, param2, param15, Rasterizer2D.pixels, param5, param12, param1, param10, param14, param8, param13);
           return;
         }
         tq.a(82);
         if (param8 < param14) {
           if (param14 < param6) {
-            MovingBody.a(param12, param2, param8, (byte) -111, param4, param1, param3, param11, param13, lb.field_l, param5, param0, param7, param10, param14, param6, param15);
+            MovingBody.a(param12, param2, param8, (byte) -111, param4, param1, param3, param11, param13, Rasterizer2D.pixels, param5, param0, param7, param10, param14, param6, param15);
             return;
           }
           if (param6 <= param8) {
-            MovingBody.a(param0, param4, param6, (byte) -111, param11, param7, param1, param2, param5, lb.field_l, param15, param10, param3, param12, param8, param14, param13);
+            MovingBody.a(param0, param4, param6, (byte) -111, param11, param7, param1, param2, param5, Rasterizer2D.pixels, param15, param10, param3, param12, param8, param14, param13);
             return;
           }
-          MovingBody.a(param12, param4, param8, (byte) -111, param2, param1, param7, param11, param5, lb.field_l, param13, param10, param3, param0, param6, param14, param15);
+          MovingBody.a(param12, param4, param8, (byte) -111, param2, param1, param7, param11, param5, Rasterizer2D.pixels, param13, param10, param3, param0, param6, param14, param15);
           return;
         }
         if (param8 < param6) {
-          MovingBody.a(param10, param2, param14, (byte) -111, param11, param3, param1, param4, param13, lb.field_l, param15, param0, param7, param12, param8, param6, param5);
+          MovingBody.a(param10, param2, param14, (byte) -111, param11, param3, param1, param4, param13, Rasterizer2D.pixels, param15, param0, param7, param12, param8, param6, param5);
           return;
         }
         if (param6 > param14) {
-          MovingBody.a(param10, param11, param14, (byte) -111, param2, param3, param7, param4, param15, lb.field_l, param13, param12, param1, param0, param6, param8, param5);
+          MovingBody.a(param10, param11, param14, (byte) -111, param2, param3, param7, param4, param15, Rasterizer2D.pixels, param13, param12, param1, param0, param6, param8, param5);
           return;
         }
-        MovingBody.a(param0, param11, param6, (byte) -111, param4, param7, param3, param2, param15, lb.field_l, param5, param12, param1, param10, param14, param8, param13);
+        MovingBody.a(param0, param11, param6, (byte) -111, param4, param7, param3, param2, param15, Rasterizer2D.pixels, param5, param12, param1, param10, param14, param8, param13);
     }
 
     public final String toString() {

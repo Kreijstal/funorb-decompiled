@@ -8,7 +8,7 @@ final class p extends IntrusiveNode {
     static String field_j;
     int[] field_n;
     int field_k;
-    static jp field_i;
+    static RgbSprite field_i;
     int field_m;
 
     final boolean c(int param0) {
@@ -65,7 +65,7 @@ final class p extends IntrusiveNode {
           }
           return var1;
         }
-        field_i = (jp) null;
+        field_i = (RgbSprite) null;
         if (0 == var1.length()) {
           var1 = dg.b(100);
         }
@@ -84,30 +84,30 @@ final class p extends IntrusiveNode {
         }
     }
 
-    final static jp a(int param0, jp param1, int param2, int param3) {
+    final static RgbSprite a(int param0, RgbSprite param1, int param2, int param3) {
         int var5 = 0;
         RuntimeException var4 = null;
         int var6 = 0;
-        jp var7 = null;
-        jp stackIn_7_0 = null;
+        RgbSprite var7 = null;
+        RgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var7 = new jp(param1.field_D + param2 * 2, param1.field_C + param2 * 2);
-          var7.g();
+          var7 = new RgbSprite(param1.width + param2 * 2, param1.height + param2 * 2);
+          var7.bindRasterTarget();
           for (var5 = 0; param2 > var5; var5++) {
-            param1.d(param2 - param1.field_E, -param1.field_F + param2, param3);
-            lb.e(1, 1, 0, 0, var7.field_D, var7.field_C);
+            param1.d(param2 - param1.offsetX, -param1.offsetY + param2, param3);
+            Rasterizer2D.e(1, 1, 0, 0, var7.width, var7.height);
           }
           kc.field_q.a((byte) 104);
-          var7.field_F = -param2 + param1.field_F;
+          var7.offsetY = -param2 + param1.offsetY;
           if (param0 != -12) {
             field_j = (String) null;
           }
-          var7.field_E = param1.field_E - param2;
+          var7.offsetX = param1.offsetX - param2;
           stackIn_7_0 = var7;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

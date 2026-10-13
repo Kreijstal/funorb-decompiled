@@ -12,7 +12,7 @@ final class of extends GameScreen {
     }
 
     final void drawScreen(byte obfuscationGuard) {
-        lb.d();
+        Rasterizer2D.clear();
         if (obfuscationGuard > -14) {
           of.a(-57);
         }

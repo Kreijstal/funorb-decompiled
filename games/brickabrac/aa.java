@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class aa {
-    static jp field_b;
+    static RgbSprite field_b;
     static NodeDeque field_a;
     static String field_c;
 
@@ -27,7 +27,7 @@ final class aa {
         return Paddle.field_x;
     }
 
-    final static void a(int param0, jp param1, boolean param2, int param3, pb param4, int param5) {
+    final static void a(int param0, RgbSprite param1, boolean param2, int param3, pb param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_3_1 = 0;
@@ -40,7 +40,7 @@ final class aa {
         RuntimeException decompiledCaughtException = null;
         try {
           fc.a(-109, param4.field_p);
-          lb.g(0, 0, param4.field_i, param4.field_q, fj.field_Sb[param3], 0);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.field_i, param4.field_q, fj.field_Sb[param3], 0);
           stackIn_2_0 = -120;
           if (param5 == 1) {
             stackIn_3_1 = 13;
@@ -52,7 +52,7 @@ final class aa {
           } else {
             stackIn_6_2 = 20;
           }
-          og.a(stackIn_2_0, stackIn_3_1, stackIn_6_2, param1, 16777215, (param4.field_i - param1.field_x) / 2, 10 / param5 - param1.field_z + (480 + param0));
+          og.a(stackIn_2_0, stackIn_3_1, stackIn_6_2, param1, 16777215, (param4.field_i - param1.canvasWidth) / 2, 10 / param5 - param1.canvasHeight + (480 + param0));
           sc.b(-86);
           if (param2) {
             return;
@@ -95,7 +95,7 @@ final class aa {
           return;
         }
         var2 = (pb) null;
-        aa.a(90, (jp) null, false, 114, (pb) null, 94);
+        aa.a(90, (RgbSprite) null, false, 114, (pb) null, 94);
         if (hc.field_f > 0) {
           hc.field_f = hc.field_f - 1;
         }
@@ -124,7 +124,7 @@ final class aa {
             throw new IllegalArgumentException();
           }
           if (!param2) {
-            field_b = (jp) null;
+            field_b = (RgbSprite) null;
           }
           if (wn.a(param0, (byte) -6)) {
             stackIn_7_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> 32);
@@ -151,7 +151,7 @@ final class aa {
     }
 
     static {
-        field_b = new jp(270, 70);
+        field_b = new RgbSprite(270, 70);
         field_c = "Use this alternative as your account name";
         field_a = new NodeDeque();
     }

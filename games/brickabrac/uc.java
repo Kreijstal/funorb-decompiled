@@ -122,9 +122,9 @@ final class uc extends k {
     }
 
     final static void e(int param0) {
-        tk var2 = null;
+        DualLinkNode var2 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
-        tk var2Lifetime1;
+        DualLinkNode var2Lifetime1;
         try {
           int var1_int = 9 % ((-59 - param0) / 35);
           rk.field_Tb = null;
@@ -134,12 +134,12 @@ final class uc extends k {
           jq.field_n.clear((byte) -92);
           var2 = of.field_i.b((byte) 74);
           while (var2 != null) {
-            var2.d(3);
+            var2.unlinkSecondary(3);
             var2 = of.field_i.a(false);
           }
           var2Lifetime1 = tf.field_d.b((byte) 122);
           while (var2Lifetime1 != null) {
-            var2Lifetime1.d(3);
+            var2Lifetime1.unlinkSecondary(3);
             var2Lifetime1 = tf.field_d.a(false);
           }
           LevelMetadata.field_m = 0;

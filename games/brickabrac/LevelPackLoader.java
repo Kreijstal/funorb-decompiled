@@ -10,7 +10,7 @@ final class LevelPackLoader {
     static tp[] field_b;
     static int field_g;
     static tg field_e;
-    static jp field_f;
+    static RgbSprite field_f;
 
     public static void b(int param0) {
         field_i = null;

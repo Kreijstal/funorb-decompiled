@@ -3,7 +3,7 @@
  */
 final class mc {
     static n field_e;
-    static jp field_f;
+    static RgbSprite field_f;
     static int field_d;
     static String field_b;
     static int field_c;

@@ -5,7 +5,7 @@ class mh extends ba {
     boolean field_Lb;
     int field_X;
     int field_rb;
-    jp[] field_D;
+    RgbSprite[] field_D;
     int field_Fb;
     private int field_J;
     boolean field_Nb;
@@ -13,7 +13,7 @@ class mh extends ba {
     int field_R;
     private int field_W;
     private int field_M;
-    jp field_T;
+    RgbSprite field_T;
     private int field_qb;
     int field_db;
     dh field_O;
@@ -29,11 +29,11 @@ class mh extends ba {
     boolean field_G;
     int field_Ob;
     int field_Q;
-    jp field_K;
+    RgbSprite field_K;
     int field_Ib;
-    jp[] field_Gb;
+    RgbSprite[] field_Gb;
     int field_U;
-    jp[] field_pb;
+    RgbSprite[] field_pb;
     int field_cb;
     private boolean field_fb;
     int field_zb;
@@ -43,13 +43,13 @@ class mh extends ba {
     static int[] field_F;
     boolean field_nb;
     static int field_gb;
-    jp[] field_Ab;
-    jp field_wb;
+    RgbSprite[] field_Ab;
+    RgbSprite field_wb;
     boolean field_kb;
     NodeDeque field_bb;
     static mf field_lb;
     static tf field_ab;
-    static jp field_ib;
+    static RgbSprite field_ib;
     int field_N;
     String field_Mb;
     private int field_xb;
@@ -61,12 +61,12 @@ class mh extends ba {
     int field_V;
     static String field_mb;
     int field_vb;
-    jp field_tb;
+    RgbSprite field_tb;
     int field_P;
-    jp[] field_Jb;
+    RgbSprite[] field_Jb;
     int field_C;
     static oe[] field_ob;
-    jp field_Hb;
+    RgbSprite field_Hb;
 
     mh(long param0, mh param1) {
         this(param0, param1, 0, 0, 0, 0, (String) null);
@@ -123,19 +123,19 @@ class mh extends ba {
         this.field_cb = this.field_cb + var7Lifetime3;
         this.field_Eb = param2 + this.field_P;
         param5 = param5 & this.field_eb;
-        var8 = lb.field_i;
-        var9 = lb.field_b;
-        var10 = lb.field_f;
-        var11 = lb.field_j;
-        lb.d(this.field_Eb, this.field_db, this.field_Ib + this.field_Eb, this.field_cb + this.field_db);
+        var8 = Rasterizer2D.clipLeft;
+        var9 = Rasterizer2D.clipTop;
+        var10 = Rasterizer2D.clipRight;
+        var11 = Rasterizer2D.clipBottom;
+        Rasterizer2D.intersectClip(this.field_Eb, this.field_db, this.field_Ib + this.field_Eb, this.field_cb + this.field_db);
         var12 = 0;
         if (!wc.field_d &&
           param5 &&
           ki.field_e != 0 &&
-          lb.field_i <= tb.field_fb &&
-          lb.field_f > tb.field_fb &&
-          qo.field_O >= lb.field_b &&
-          lb.field_j > qo.field_O) {
+          Rasterizer2D.clipLeft <= tb.field_fb &&
+          Rasterizer2D.clipRight > tb.field_fb &&
+          qo.field_O >= Rasterizer2D.clipTop &&
+          Rasterizer2D.clipBottom > qo.field_O) {
           this.field_L = ki.field_e;
           this.field_U = -this.field_Eb + tb.field_fb;
           this.field_Ob = ki.field_e;
@@ -147,7 +147,7 @@ class mh extends ba {
             this.field_Ob = 0;
           }
         }
-        stackIn_31_1 = (!qa.field_u) && (lb.field_i <= pq.field_k) && (lb.field_f > pq.field_k) && (po.field_a >= lb.field_b) && (lb.field_j > po.field_a);
+        stackIn_31_1 = (!qa.field_u) && (Rasterizer2D.clipLeft <= pq.field_k) && (Rasterizer2D.clipRight > pq.field_k) && (po.field_a >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.field_a);
         this.field_G = stackIn_31_1;
         if (0 == cb.field_q) {
           this.field_Ob = 0;
@@ -167,7 +167,7 @@ class mh extends ba {
         if (var12 != 0) {
           wc.field_d = true;
         }
-        lb.e(var8, var9, var10, var11);
+        Rasterizer2D.setClip(var8, var9, var10, var11);
         if (this.field_Ob != 0 &&
           this.field_nb) {
           this.field_zb = po.field_a - this.field_yb - param4;
@@ -198,8 +198,8 @@ class mh extends ba {
         int var14;
         int var15;
         int var16;
-        jp[] var17;
-        jp var18;
+        RgbSprite[] var17;
+        RgbSprite var18;
         int var19;
         int var20;
         int var21;
@@ -217,11 +217,11 @@ class mh extends ba {
         this.field_Eb = this.field_P + param9;
         this.field_db = param1 + this.field_zb;
         var13 = -125 / ((param2 - 22) / 33);
-        var12 = lb.field_i;
-        var14 = lb.field_b;
-        var15 = lb.field_f;
-        var16 = lb.field_j;
-        lb.d(this.field_Eb, this.field_db, this.field_Eb + this.field_Ib, this.field_db + this.field_cb);
+        var12 = Rasterizer2D.clipLeft;
+        var14 = Rasterizer2D.clipTop;
+        var15 = Rasterizer2D.clipRight;
+        var16 = Rasterizer2D.clipBottom;
+        Rasterizer2D.intersectClip(this.field_Eb, this.field_db, this.field_Eb + this.field_Ib, this.field_db + this.field_cb);
         if (!this.field_Kb) {
           param0 = this.field_Nb;
           param4 = this.field_kb;
@@ -307,21 +307,21 @@ class mh extends ba {
           var24_int = var22 + this.field_Eb;
           var25 = var23 + this.field_db;
           if (1 == this.field_S) {
-            var24_int = var24_int + (this.field_Ib - var18.field_x) / 2;
+            var24_int = var24_int + (this.field_Ib - var18.canvasWidth) / 2;
           }
           if (2 == this.field_S) {
-            var24_int = var24_int + (-var18.field_x + this.field_Ib);
+            var24_int = var24_int + (-var18.canvasWidth + this.field_Ib);
           }
           if (1 == this.field_Q) {
-            var25 = var25 + (this.field_cb - var18.field_z) / 2;
+            var25 = var25 + (this.field_cb - var18.canvasHeight) / 2;
           }
           if (this.field_Q == 2) {
-            var25 = var25 + (this.field_cb - var18.field_z);
+            var25 = var25 + (this.field_cb - var18.canvasHeight);
           }
           if (256 > this.field_W) {
             var18.b(var24_int, var25, this.field_W);
           } else {
-            var18.c(var24_int, var25);
+            var18.drawTransparent(var24_int, var25);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -370,7 +370,7 @@ class mh extends ba {
             var24_ref = (mh) (this.field_bb.next((byte) 116));
           }
         }
-        lb.e(var12, var14, var15, var16);
+        Rasterizer2D.setClip(var12, var14, var15, var16);
     }
 
     final void a(byte param0, mh param1) {
@@ -614,13 +614,13 @@ class mh extends ba {
         qa.field_u = !param0 ? true : false;
         if (param1 == -15211) {
           wc.field_d = !param0 ? true : false;
-          this.a(lb.field_c, 886229954, 0, lb.field_d, 0, true);
+          this.a(Rasterizer2D.width, 886229954, 0, Rasterizer2D.height, 0, true);
           return;
         }
     }
 
     final void a(boolean param0, boolean param1) {
-        this.a(false, 0, -109, lb.field_c, false, param0, false, lb.field_d, param1, 0, false);
+        this.a(false, 0, -109, Rasterizer2D.width, false, param0, false, Rasterizer2D.height, param1, 0, false);
     }
 
     final void a(int param0, int param1, int param2, int param3, byte param4) {
@@ -793,7 +793,7 @@ class mh extends ba {
           }
         }
         if (this.field_wb != null) {
-          var4_intLifetime1 = this.field_wb.field_x;
+          var4_intLifetime1 = this.field_wb.canvasWidth;
           if (var4_intLifetime1 > var3) {
             var3 = var4_intLifetime1;
           }

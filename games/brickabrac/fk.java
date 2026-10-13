@@ -10,7 +10,7 @@ final class fk {
     static double field_b;
     static String field_c;
     private int[] field_a;
-    static jp field_e;
+    static RgbSprite field_e;
     static String field_d;
 
     final static boolean a(mf param0, mf param1, mf param2, int param3) {

@@ -3,9 +3,9 @@
  */
 final class ap {
     static mh field_e;
-    static jp[] field_c;
-    static jp field_a;
-    static jp field_f;
+    static RgbSprite[] field_c;
+    static RgbSprite field_a;
+    static RgbSprite field_f;
     static String field_d;
     static vj field_b;
 

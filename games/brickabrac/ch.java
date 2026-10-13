@@ -3,11 +3,11 @@
  */
 final class ch {
     static int field_b;
-    static jp field_m;
-    static jp[] field_k;
-    static jp field_l;
+    static RgbSprite field_m;
+    static RgbSprite[] field_k;
+    static RgbSprite field_l;
     static tf field_a;
-    static jp field_f;
+    static RgbSprite field_f;
     static hl field_c;
     static int[] field_g;
     static String field_j;

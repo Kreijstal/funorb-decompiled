@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LegacyUtf8Decoder {
-    static jp field_d;
+    static RgbSprite field_d;
     static mh field_c;
     static String field_b;
     static String field_a;

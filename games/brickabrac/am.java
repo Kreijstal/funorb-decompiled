@@ -293,7 +293,7 @@ final class am extends mh {
               discarded$1 = this.field_Tb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_O.c(tk.field_o);
+            var17 = param6.field_O.c(DualLinkNode.field_o);
             if (var17 > var16Lifetime2) {
               var16Lifetime2 = var17;
             }
@@ -319,7 +319,7 @@ final class am extends mh {
             var17Lifetime5 = 0;
             var18Lifetime2 = 0;
             var18Lifetime3 = 0;
-            var18Lifetime3 = this.a(var18Lifetime3, param6, var16Lifetime2, tk.field_o, var28[0], (byte) -53);
+            var18Lifetime3 = this.a(var18Lifetime3, param6, var16Lifetime2, DualLinkNode.field_o, var28[0], (byte) -53);
             var18Lifetime3 = this.a(var28[0], (byte) -128, var18Lifetime3, this.field_Sb[6], var16Lifetime2);
             var18Lifetime3 = this.a(var28[0], (byte) -21, var18Lifetime3, this.field_Sb[9], var16Lifetime2);
             var18Lifetime3 = this.a(var28[0], (byte) -119, var18Lifetime3, this.field_Sb[5], var16Lifetime2);

@@ -5,7 +5,7 @@ final class ok {
     static String field_a;
     static int field_c;
     static String[] field_b;
-    static jp field_g;
+    static RgbSprite field_g;
     static String field_e;
     static int field_f;
     static mh field_d;

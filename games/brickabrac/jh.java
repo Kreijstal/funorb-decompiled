@@ -5,21 +5,21 @@ final class jh {
     static String[] field_e;
     static int field_a;
     static int[] field_b;
-    static jp field_d;
+    static RgbSprite field_d;
     static String field_c;
 
-    final static jp a(int param0, jp param1) {
-        jp var2 = null;
+    final static RgbSprite a(int param0, RgbSprite param1) {
+        RgbSprite var2 = null;
         RuntimeException var2_ref = null;
-        jp stackIn_1_0 = null;
+        RgbSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new jp(param1.field_x / 2, param1.field_z / 2);
-          var2.g();
-          param1.a(param0, 0, param1.field_x / 2, param1.field_z / 2);
+          var2 = new RgbSprite(param1.canvasWidth / 2, param1.canvasHeight / 2);
+          var2.bindRasterTarget();
+          param1.a(param0, 0, param1.canvasWidth / 2, param1.canvasHeight / 2);
           kc.field_q.a((byte) 102);
           stackIn_1_0 = var2;
           return stackIn_1_0;

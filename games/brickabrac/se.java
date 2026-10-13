@@ -5,9 +5,9 @@ final class se extends IntrusiveNode {
     static int[] field_j;
     static String field_l;
     byte[] field_i;
-    static jp field_k;
+    static RgbSprite field_k;
 
-    final static jp[] a(int param0, byte param1, int param2) {
+    final static RgbSprite[] a(int param0, byte param1, int param2) {
         if (param1 == -18) {
           return hn.a(param2, param0, 1, param1 ^ 24);
         }

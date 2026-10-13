@@ -3,7 +3,7 @@
  */
 final class n {
     static boolean field_e;
-    static jp field_c;
+    static RgbSprite field_c;
     static boolean field_d;
     static String field_b;
     static String field_a;
@@ -96,7 +96,7 @@ final class n {
         throw new IllegalStateException();
     }
 
-    final static jp a(byte param0) {
+    final static RgbSprite a(byte param0) {
         int var4_int = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var1 = jh.field_b[0] * gg.field_t[0];
@@ -108,7 +108,7 @@ final class n {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = qp.field_c[ik.a(255, (int) var2[var4_int])];
         }
-        jp var4 = new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var3);
+        RgbSprite var4 = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var3);
         MotionWaypoint.d((byte) 96);
         return var4;
     }

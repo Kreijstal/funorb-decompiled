@@ -5,7 +5,7 @@ final class v extends RuntimeException {
     static jg[] field_g;
     Throwable field_f;
     String field_d;
-    static jp field_b;
+    static RgbSprite field_b;
     static int field_e;
     static String field_c;
     static int[] field_a;
@@ -79,11 +79,11 @@ final class v extends RuntimeException {
         }
     }
 
-    final static jp[] a(int param0) {
+    final static RgbSprite[] a(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        jp[] var1;
+        RgbSprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -97,7 +97,7 @@ final class v extends RuntimeException {
         byte[] var21;
         int[] var22;
         var8 = BrickABrac.field_J ? 1 : 0;
-        var1 = new jp[nl.field_c];
+        var1 = new RgbSprite[nl.field_c];
         if (param0 != -835) {
           v.a(false);
         }
@@ -110,7 +110,7 @@ final class v extends RuntimeException {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = qp.field_c[ik.a((int) var21[var6], 255)];
             }
-            var1[var2] = new jp(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var22);
+            var1[var2] = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var22);
           } else {
             var15 = bj.field_S[var2];
             var11 = var15;
@@ -122,7 +122,7 @@ final class v extends RuntimeException {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = ud.d(ik.a(255, (int) var15[var7]) << 24, qp.field_c[ik.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (jp) ((Object) new fb(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var17));
           }
         }
         MotionWaypoint.d((byte) 96);

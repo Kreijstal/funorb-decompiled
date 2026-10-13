@@ -8,7 +8,7 @@ final class to {
     private int field_d;
     static String field_l;
     private ji field_c;
-    static jp field_e;
+    static RgbSprite field_e;
     private gp field_j;
     static int[] field_f;
     static kl field_k;
@@ -24,21 +24,21 @@ final class to {
         Object var5 = var4.g(1);
         if (var5 == null) {
           var4.unlink((byte) 111);
-          var4.d(3);
+          var4.unlinkSecondary(3);
           this.field_d = this.field_d + var4.field_u;
           return null;
         }
         if (!var4.b(param1)) {
           this.field_j.a(var4, (byte) -126);
-          var4.field_j = 0L;
+          var4.secondaryKey = 0L;
           return var5;
         }
         ej var6 = new ej(var5, var4.field_u);
         this.field_c.a((byte) 44, var4.key, var6);
         this.field_j.a(var6, (byte) -119);
-        ((sl) ((Object) var6)).field_j = 0L;
+        ((sl) ((Object) var6)).secondaryKey = 0L;
         var4.unlink((byte) 111);
-        var4.d(3);
+        var4.unlinkSecondary(3);
         return var5;
     }
 
@@ -71,7 +71,7 @@ final class to {
           return;
         }
         try {
-          ((sl) ((Object) var6_ref)).field_j = 0L;
+          ((sl) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "to.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -121,7 +121,7 @@ final class to {
             return;
           }
           param1.unlink((byte) 111);
-          param1.d(3);
+          param1.unlinkSecondary(3);
           this.field_d = this.field_d + param1.field_u;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

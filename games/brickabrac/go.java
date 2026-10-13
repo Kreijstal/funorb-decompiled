@@ -8,7 +8,7 @@ final class go {
     static String field_f;
     static int field_c;
     static int field_e;
-    static jp field_d;
+    static RgbSprite field_d;
     static jg field_a;
 
     public static void a(int param0) {

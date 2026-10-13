@@ -4,17 +4,17 @@
 final class pb extends IntrusiveNode {
     private int field_k;
     int field_q;
-    static jp field_j;
+    static RgbSprite field_j;
     int field_i;
     static String field_o;
     static String field_l;
     private int field_m;
-    jp field_p;
+    RgbSprite field_p;
     static int[] field_n;
 
     final boolean a(byte param0, int param1, int param2) {
         if (param0 != -84) {
-          field_j = (jp) null;
+          field_j = (RgbSprite) null;
           if (param2 != this.field_m) {
             return false;
           }
@@ -65,7 +65,7 @@ final class pb extends IntrusiveNode {
     pb(int param0, int param1) {
         this.field_i = param0;
         this.field_q = param1;
-        this.field_p = new jp(this.field_i, this.field_q);
+        this.field_p = new RgbSprite(this.field_i, this.field_q);
         this.a(-2, -2, (byte) 78);
     }
 

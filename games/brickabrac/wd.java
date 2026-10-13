@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd extends tk {
+final class wd extends DualLinkNode {
     int[] field_u;
     private int[][] field_A;
     private int[] field_B;
@@ -161,41 +161,41 @@ final class wd extends tk {
 
     final static void a(int param0, int param1, mh param2) {
         nn var9 = null;
-        jp var11 = null;
+        RgbSprite var11 = null;
         String var10 = null;
         nn var12 = null;
-        jp var14 = null;
+        RgbSprite var14 = null;
         String var13 = null;
         nn var15 = null;
-        jp var17 = null;
+        RgbSprite var17 = null;
         String var16 = null;
         nn var18 = null;
-        jp var20 = null;
+        RgbSprite var20 = null;
         String var19 = null;
         nn var21 = null;
-        jp var23 = null;
+        RgbSprite var23 = null;
         String var22 = null;
         nn var24 = null;
-        jp var26 = null;
+        RgbSprite var26 = null;
         String var25 = null;
         nn var27 = null;
         String var28 = null;
         nn var30 = null;
-        jp var32 = null;
+        RgbSprite var32 = null;
         String var31 = null;
         nn var33 = null;
-        jp var35 = null;
+        RgbSprite var35 = null;
         String var34 = null;
         int var6 = 0;
         int var7 = 0;
-        jp var29 = null;
-        jp var29Lifetime1;
-        jp var29Lifetime2;
-        jp var29Lifetime3;
-        jp var29Lifetime4;
-        jp var29Lifetime5;
-        jp var29Lifetime6;
-        mn.a(param1, param2, (mm) null, (int[]) null, (String) null, -1, (byte) -58, 0L, (String) null);
+        RgbSprite var29 = null;
+        RgbSprite var29Lifetime1;
+        RgbSprite var29Lifetime2;
+        RgbSprite var29Lifetime3;
+        RgbSprite var29Lifetime4;
+        RgbSprite var29Lifetime5;
+        RgbSprite var29Lifetime6;
+        SpriteGeometry.a(param1, param2, (mm) null, (int[]) null, (String) null, -1, (byte) -58, 0L, (String) null);
         if (param1 == 0) {
           var9 = bm.field_d;
           var11 = ef.field_b[0];
@@ -223,7 +223,7 @@ final class wd extends tk {
           var18.field_d.a(var19, param0 ^ 864, 11, var20);
           var21 = bm.field_d;
           var23 = ef.field_b[1];
-          var22 = tk.field_m;
+          var22 = DualLinkNode.field_m;
           var21.field_d.a(var22, 123, 12, var23);
           var24 = bm.field_d;
           var26 = ef.field_b[2];

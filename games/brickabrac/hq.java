@@ -9,7 +9,7 @@ final class hq extends km {
     static qh field_z;
     static String field_x;
     static String[] field_u;
-    static jp[] field_s;
+    static RgbSprite[] field_s;
     static String field_y;
 
     final void b(boolean param0) {
@@ -54,7 +54,7 @@ final class hq extends km {
           var4.backfillByteLength((byte) 121, -var5 + var4.position);
           return;
         }
-        field_s = (jp[]) null;
+        field_s = (RgbSprite[]) null;
         var4.writeShort((byte) 127, param3);
         var4.backfillByteLength((byte) 121, -var5 + var4.position);
     }

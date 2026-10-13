@@ -142,7 +142,7 @@ abstract class MovingBody extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          mf.field_f.a(v.field_e, tk.field_r, -114, true);
+          mf.field_f.a(v.field_e, DualLinkNode.field_r, -114, true);
           mf.field_f.i(79);
           while (jl.a((byte) 5)) {
             mf.field_f.a(go.field_b, dc.field_b, true);
@@ -183,7 +183,7 @@ abstract class MovingBody extends IntrusiveNode {
         if (param0 >= -81) {
           field_n = (String) null;
         }
-        nl.field_b.c((640 - nl.field_b.field_x) / 2, 19);
+        nl.field_b.drawTransparent((640 - nl.field_b.canvasWidth) / 2, 19);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
@@ -407,7 +407,7 @@ abstract class MovingBody extends IntrusiveNode {
                     return;
                   }
                   var22 = var22 + var24;
-                  var36Lifetime2 = var36Lifetime2 + lb.field_c;
+                  var36Lifetime2 = var36Lifetime2 + Rasterizer2D.width;
                   var26 = var26 + var28;
                   var18 = var18 + var20;
                   var25 = var25 + var27;
@@ -497,7 +497,7 @@ abstract class MovingBody extends IntrusiveNode {
               var26 = var26 + var28;
               var22 = var22 + var24;
               var25 = var25 + var27;
-              var35Lifetime1 = var35Lifetime1 + lb.field_c;
+              var35Lifetime1 = var35Lifetime1 + Rasterizer2D.width;
               var18 = var18 + var20;
               var21 = var21 + var23;
               var30 = var30 + var32;
@@ -557,7 +557,7 @@ abstract class MovingBody extends IntrusiveNode {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         jf.d(-99);
-        lb.d(param2, param3, param1, param4);
+        Rasterizer2D.intersectClip(param2, param3, param1, param4);
         if (param0 < 68) {
           field_n = (String) null;
         }

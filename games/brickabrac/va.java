@@ -4,7 +4,7 @@
 final class va {
     static String field_c;
     static boolean field_a;
-    static jp field_b;
+    static RgbSprite field_b;
     static String field_d;
     static volatile int field_e;
     private static String field_z;
@@ -16,7 +16,7 @@ final class va {
           field_b = null;
           return;
         }
-        field_b = (jp) null;
+        field_b = (RgbSprite) null;
         field_c = null;
         field_d = null;
         field_b = null;

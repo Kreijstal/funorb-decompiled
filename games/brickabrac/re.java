@@ -3,7 +3,7 @@
  */
 final class re {
     private int field_l;
-    static jp field_h;
+    static RgbSprite field_h;
     static int field_g;
     private int field_e;
     int field_r;
@@ -14,7 +14,7 @@ final class re {
     static String field_a;
     static int field_i;
     private int field_o;
-    static jp field_k;
+    static RgbSprite field_k;
     private boolean field_d;
     static String[] field_p;
     static mh field_m;
@@ -227,7 +227,7 @@ final class re {
         this.field_d = param2 ? true : false;
         this.field_n = 0;
         if (param3 >= -126) {
-          field_k = (jp) null;
+          field_k = (RgbSprite) null;
           if (!this.field_d) {
             this.field_j = param1;
             return;
@@ -313,7 +313,7 @@ final class re {
         if (param0 == -98) {
           return this.field_e == 97 ? true : false;
         }
-        field_k = (jp) null;
+        field_k = (RgbSprite) null;
         return this.field_e == 97 ? true : false;
     }
 

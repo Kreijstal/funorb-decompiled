@@ -6,7 +6,7 @@ final class qi extends d {
     static String field_N;
     int field_M;
     private c field_O;
-    static jp[] field_K;
+    static RgbSprite[] field_K;
     int field_L;
 
     final static me a(java.applet.Applet param0, int param1) {

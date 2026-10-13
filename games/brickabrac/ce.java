@@ -4,7 +4,7 @@
 final class ce {
     static String field_g;
     static br field_b;
-    static jp field_c;
+    static RgbSprite field_c;
     static int[][] field_a;
     static char[] field_f;
     static int field_d;

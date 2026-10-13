@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tk extends IntrusiveNode {
+class DualLinkNode extends IntrusiveNode {
     static String field_o;
     static mh field_t;
     static int field_q;
-    static jp[][] field_l;
+    static RgbSprite[][] field_l;
     static int field_r;
     static String field_m;
     static byte[] field_k;
-    long field_j;
+    long secondaryKey;
     static String field_i;
-    tk field_n;
+    DualLinkNode secondaryPrevious;
     static String field_p;
-    tk field_s;
+    DualLinkNode secondaryNext;
 
-    final void d(int param0) {
-        if (null == this.field_n) {
+    final void unlinkSecondary(int obfuscationGuard) {
+        if (null == this.secondaryPrevious) {
           return;
         }
-        this.field_n.field_s = this.field_s;
-        this.field_s.field_n = this.field_n;
-        this.field_n = null;
-        if (param0 != 3) {
-          this.field_s = (tk) null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious = null;
+        if (obfuscationGuard != 3) {
+          this.secondaryNext = (DualLinkNode) null;
         }
-        this.field_s = null;
+        this.secondaryNext = null;
     }
 
     final static void a(int param0, MultiplayerMatch param1, bi param2, PlayerBoard param3, byte param4, int param5, int param6, int param7) {
@@ -72,14 +72,14 @@ class tk extends IntrusiveNode {
             if (var13 < -2 + param3.field_rb) {
               ch.field_l.a(var11, var12, 196);
             } else {
-              ch.field_l.e(ch.field_l.field_x / 2 + var11, var12 + ch.field_l.field_z / 2, 0, 4480 + (BrickABrac.c(2048, 200 * de.field_x) * 384 >> 16));
+              ch.field_l.e(ch.field_l.canvasWidth / 2 + var11, var12 + ch.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.c(2048, 200 * de.field_x) * 384 >> 16));
             }
-            var11 = var11 + ch.field_l.field_D / 2;
-            if (param5 + param7 < var11 + ch.field_l.field_D) {
-              var12 = var12 + (ch.field_l.field_C + 2);
+            var11 = var11 + ch.field_l.width / 2;
+            if (param5 + param7 < var11 + ch.field_l.width) {
+              var12 = var12 + (ch.field_l.height + 2);
               var11 = param5 + var8_int - 2;
             }
-            if (var12 + ch.field_l.field_C > param6 - (-param0 + var9)) {
+            if (var12 + ch.field_l.height > param6 - (-param0 + var9)) {
               return;
             }
           }
@@ -117,7 +117,7 @@ class tk extends IntrusiveNode {
           field_p = (String) null;
         }
         field_m = null;
-        field_l = (jp[][]) null;
+        field_l = (RgbSprite[][]) null;
         field_k = null;
         field_i = null;
         field_t = null;
@@ -150,31 +150,31 @@ class tk extends IntrusiveNode {
         }
     }
 
-    final long e(int param0) {
-        if (param0 != -19451) {
-          this.field_s = (tk) null;
+    final long getSecondaryKey(int obfuscationGuard) {
+        if (obfuscationGuard != -19451) {
+          this.secondaryNext = (DualLinkNode) null;
         }
-        return this.field_j;
+        return this.secondaryKey;
     }
 
-    final boolean c(int param0) {
-        if (param0 != 2) {
-          tk.a((byte) 86, 25, 9);
+    final boolean isSecondaryLinked(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
+          DualLinkNode.a((byte) 86, 25, 9);
         }
-        if (null == this.field_n) {
+        if (null == this.secondaryPrevious) {
           return false;
         }
         return true;
     }
 
-    final void a(long param0, int param1) {
-        if (this.field_n != null) {
+    final void setSecondaryKey(long key, int obfuscationGuard) {
+        if (this.secondaryPrevious != null) {
           throw new RuntimeException();
         }
-        if (param1 >= -62) {
+        if (obfuscationGuard >= -62) {
           field_k = (byte[]) null;
         }
-        this.field_j = param0;
+        this.secondaryKey = key;
     }
 
     final static void a(byte param0, int param1, int param2) {
@@ -237,7 +237,7 @@ class tk extends IntrusiveNode {
           var2_int = 0;
           if (param1) {
             var4 = (CharSequence) null;
-            tk.a((CharSequence) null, false);
+            DualLinkNode.a((CharSequence) null, false);
           }
           while (true) {
             if (param0.length() <= var2_int) {
@@ -264,7 +264,7 @@ class tk extends IntrusiveNode {
         }
     }
 
-    protected tk() {
+    protected DualLinkNode() {
     }
 
     static {

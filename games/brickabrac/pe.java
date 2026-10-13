@@ -12,7 +12,7 @@ final class pe extends IntrusiveNode {
     static int field_s;
     static int field_n;
     int field_w;
-    static jp[] field_k;
+    static RgbSprite[] field_k;
     int[] field_m;
     static int field_j;
     static int field_r;

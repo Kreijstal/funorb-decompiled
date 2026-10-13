@@ -9,7 +9,7 @@ final class cm extends bo {
     static boolean field_s;
     static String field_t;
     static String field_p;
-    static jp[] field_r;
+    static RgbSprite[] field_r;
 
     cm(long param0, String param1) {
         super(param0, param1);
@@ -31,7 +31,7 @@ final class cm extends bo {
 
     final cd a(int param0) {
         if (param0 != 13) {
-          field_r = (jp[]) null;
+          field_r = (RgbSprite[]) null;
           return bj.field_Y;
         }
         return bj.field_Y;

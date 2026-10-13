@@ -8,7 +8,7 @@ final class ig extends ib implements ha, en {
     static int field_N;
     private lg field_O;
     static String field_K;
-    static jp field_P;
+    static RgbSprite field_P;
     static String field_J;
 
     private final String h(int param0) {
@@ -68,21 +68,21 @@ final class ig extends ib implements ha, en {
         RuntimeException var5 = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          lb.c(param1, param3, param2 + 1, 10000536);
-          lb.c(param1, param3 + param0, param2 + 1, 12105912);
+          Rasterizer2D.drawHorizontalLine(param1, param3, param2 + 1, 10000536);
+          Rasterizer2D.drawHorizontalLine(param1, param3 + param0, param2 + 1, 12105912);
           var5_int = 1;
           var6 = param0;
-          if (var5_int + param3 < lb.field_b) {
-            var5_int = -param3 + lb.field_b;
+          if (var5_int + param3 < Rasterizer2D.clipTop) {
+            var5_int = -param3 + Rasterizer2D.clipTop;
           }
-          if (lb.field_j < param3 + var6) {
-            var6 = -param3 + lb.field_j;
+          if (Rasterizer2D.clipBottom < param3 + var6) {
+            var6 = -param3 + Rasterizer2D.clipBottom;
           }
           for (var7 = var5_int; var7 < var6; var7++) {
             var8 = 48 * var7 / param0 + 152;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            lb.field_l[param1 + (param3 + var7) * lb.field_c] = var9;
-            lb.field_l[param2 + (param1 + (param3 + var7) * lb.field_c)] = var9;
+            Rasterizer2D.pixels[param1 + (param3 + var7) * Rasterizer2D.width] = var9;
+            Rasterizer2D.pixels[param2 + (param1 + (param3 + var7) * Rasterizer2D.width)] = var9;
           }
           if (param4 != -17634) {
             ig.b(-122, -110, 30, -70, -97);
@@ -160,7 +160,7 @@ final class ig extends ib implements ha, en {
 
     private final String a(byte param0) {
         if (param0 != 34) {
-          field_P = (jp) null;
+          field_P = (RgbSprite) null;
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -175,24 +175,24 @@ final class ig extends ib implements ha, en {
         field_K = null;
     }
 
-    final static jp[] a(jp[] param0, boolean param1) {
+    final static RgbSprite[] a(RgbSprite[] param0, boolean param1) {
         int var3 = 0;
-        jp[] var2 = null;
+        RgbSprite[] var2 = null;
         RuntimeException var2_ref = null;
         int var4 = 0;
-        jp[] var5 = null;
-        jp[] stackIn_3_0 = null;
-        jp[] stackIn_8_0 = null;
+        RgbSprite[] var5 = null;
+        RgbSprite[] stackIn_3_0 = null;
+        RgbSprite[] stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = new jp[param0.length];
+          var5 = new RgbSprite[param0.length];
           var2 = var5;
           if (param1) {
-            stackIn_3_0 = (jp[]) null;
+            stackIn_3_0 = (RgbSprite[]) null;
             return stackIn_3_0;
           }
           for (var3 = 0; param0.length > var3; var3++) {

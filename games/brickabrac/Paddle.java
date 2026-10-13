@@ -147,7 +147,7 @@ final class Paddle extends RectangleBody {
               return;
             }
             circle.velocityX256 = -circle.velocityX256;
-            var5 = (this.velocityX256 - circle.velocityX256) * mn.field_A;
+            var5 = (this.velocityX256 - circle.velocityX256) * SpriteGeometry.field_A;
             if (var5 >= 0) {
               return;
             }

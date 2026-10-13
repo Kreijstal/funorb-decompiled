@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mn extends tk {
-    int field_C;
-    int field_D;
-    int field_F;
+abstract class SpriteGeometry extends DualLinkNode {
+    int height;
+    int width;
+    int offsetY;
     static int field_v;
-    int field_x;
+    int canvasWidth;
     static String field_u;
-    int field_E;
+    int offsetX;
     static String field_B;
     static int field_A;
-    int field_z;
+    int canvasHeight;
     static String field_w;
     static int field_y;
 
@@ -20,7 +20,7 @@ abstract class mn extends tk {
         field_u = null;
         if (param0 != 2) {
           String var2 = (String) null;
-          mn.a(9, (mh) null, (mm) null, (int[]) null, (String) null, 53, (byte) -45, 67L, (String) null);
+          SpriteGeometry.a(9, (mh) null, (mm) null, (int[]) null, (String) null, 53, (byte) -45, 67L, (String) null);
         }
         field_w = null;
     }
@@ -30,7 +30,7 @@ abstract class mn extends tk {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        mn.a(-1, param2, param3, (int[]) null, param2.field_hc, -1, (byte) -58, param2.field_gc, param2.field_Yb);
+        SpriteGeometry.a(-1, param2, param3, (int[]) null, param2.field_hc, -1, (byte) -58, param2.field_gc, param2.field_Yb);
         bm.field_d.a(true, true);
         bm.field_d.a((int[]) null, (byte) -120, 0);
         bm.field_d.a((byte) -93);
@@ -49,7 +49,7 @@ abstract class mn extends tk {
         }
     }
 
-    final static void a(jp param0, int param1, int param2, int param3, int param4, int param5, jp param6, int param7, jp param8, int param9, int param10) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, RgbSprite param6, int param7, RgbSprite param8, int param9, int param10) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -63,9 +63,9 @@ abstract class mn extends tk {
           if (param9 != 1) {
             return;
           }
-          param0.d((param1 - param0.field_x) / 2 + (param3 + (param5 * 5 >> 16)), param2);
-          param8.c(param3 + (-param8.field_x + param1) / 2 + (10 * param5 >> 16), -param8.field_z + 480 + param10 + (param2 - 35 / param7));
-          param6.c((param5 * 20 >> 16) + (-param6.field_x + param1) / 2 + param3, -param6.field_z + (480 + param2) + param10);
+          param0.drawAt((param1 - param0.canvasWidth) / 2 + (param3 + (param5 * 5 >> 16)), param2);
+          param8.drawTransparent(param3 + (-param8.canvasWidth + param1) / 2 + (10 * param5 >> 16), -param8.canvasHeight + 480 + param10 + (param2 - 35 / param7));
+          param6.drawTransparent((param5 * 20 >> 16) + (-param6.canvasWidth + param1) / 2 + param3, -param6.canvasHeight + (480 + param2) + param10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,14 +105,14 @@ abstract class mn extends tk {
         }
     }
 
-    final static jp[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        jp[] var10;
-        jp[] var11_ref_jp__;
+        RgbSprite[] var10;
+        RgbSprite[] var11_ref_jp__;
         int var11;
         int var12;
-        jp var13;
+        RgbSprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -123,12 +123,12 @@ abstract class mn extends tk {
         int var12Lifetime4;
         var15 = BrickABrac.field_J ? 1 : 0;
         var9 = param5 + (param2 + param1);
-        var10 = new jp[]{new jp(var9, var9), new jp(param6, var9), new jp(var9, var9), new jp(var9, param6), new jp(64, 64), new jp(var9, param6), new jp(var9, var9), new jp(param6, var9), new jp(var9, var9)};
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param6, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param6), new RgbSprite(64, 64), new RgbSprite(var9, param6), new RgbSprite(var9, var9), new RgbSprite(param6, var9), new RgbSprite(var9, var9)};
         var11_ref_jp__ = var10;
         for (var12 = 0; var11_ref_jp__.length > var12; var12++) {
           var13 = var11_ref_jp__[var12];
-          for (var14 = 0; var13.field_G.length > var14; var14++) {
-            var13.field_G[var14] = param0;
+          for (var14 = 0; var13.pixels.length > var14; var14++) {
+            var13.pixels[var14] = param0;
           }
         }
         if (param3 != 9361) {
@@ -136,42 +136,42 @@ abstract class mn extends tk {
         }
         for (var11 = 0; var11 < param2; var11++) {
           for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {
-            var10[6].field_G[var12Lifetime1 + (-1 + var9 - var11) * var9] = param8;
-            var10[8].field_G[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param8;
-            var10[2].field_G[-var11 + var9 - 1 + var9 * var12Lifetime1] = param8;
-            var10[8].field_G[var9 - (1 + var11) + var9 * var12Lifetime1] = param8;
+            var10[6].pixels[var12Lifetime1 + (-1 + var9 - var11) * var9] = param8;
+            var10[8].pixels[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param8;
+            var10[2].pixels[-var11 + var9 - 1 + var9 * var12Lifetime1] = param8;
+            var10[8].pixels[var9 - (1 + var11) + var9 * var12Lifetime1] = param8;
           }
         }
         for (var11Lifetime1 = 0; param2 > var11Lifetime1; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
-            var10[0].field_G[var11Lifetime1 * var9 + var12Lifetime2] = param7;
-            var10[0].field_G[var11Lifetime1 + var12Lifetime2 * var9] = param7;
+            var10[0].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param7;
+            var10[0].pixels[var11Lifetime1 + var12Lifetime2 * var9] = param7;
             if (var12Lifetime2 < var9 - var11Lifetime1) {
-              var10[2].field_G[var12Lifetime2 + var9 * var11Lifetime1] = param7;
-              var10[6].field_G[var9 * var12Lifetime2 + var11Lifetime1] = param7;
+              var10[2].pixels[var12Lifetime2 + var9 * var11Lifetime1] = param7;
+              var10[6].pixels[var9 * var12Lifetime2 + var11Lifetime1] = param7;
             }
           }
         }
         for (var11Lifetime2 = 0; param6 > var11Lifetime2; var11Lifetime2++) {
           for (var12Lifetime3 = 0; param2 > var12Lifetime3; var12Lifetime3++) {
-            var10[7].field_G[var11Lifetime2 + (-1 + (var9 - var12Lifetime3)) * param6] = param8;
-            var10[5].field_G[var9 * var11Lifetime2 + var9 - (1 + var12Lifetime3)] = param8;
-            var10[1].field_G[var12Lifetime3 * param6 + var11Lifetime2] = param7;
-            var10[3].field_G[var12Lifetime3 + var11Lifetime2 * var9] = param7;
+            var10[7].pixels[var11Lifetime2 + (-1 + (var9 - var12Lifetime3)) * param6] = param8;
+            var10[5].pixels[var9 * var11Lifetime2 + var9 - (1 + var12Lifetime3)] = param8;
+            var10[1].pixels[var12Lifetime3 * param6 + var11Lifetime2] = param7;
+            var10[3].pixels[var12Lifetime3 + var11Lifetime2 * var9] = param7;
           }
         }
         for (var11Lifetime3 = 0; param6 >> 1 > var11Lifetime3; var11Lifetime3++) {
           for (var12Lifetime4 = 0; var12Lifetime4 < param1; var12Lifetime4++) {
-            var10[1].field_G[param6 * (-var12Lifetime4 + (var9 - 1)) + var11Lifetime3] = param4;
-            var10[3].field_G[var11Lifetime3 * var9 + (var9 - (1 + var12Lifetime4))] = param4;
-            var10[7].field_G[var12Lifetime4 * param6 + var11Lifetime3] = param4;
-            var10[5].field_G[var12Lifetime4 + var9 * var11Lifetime3] = param4;
+            var10[1].pixels[param6 * (-var12Lifetime4 + (var9 - 1)) + var11Lifetime3] = param4;
+            var10[3].pixels[var11Lifetime3 * var9 + (var9 - (1 + var12Lifetime4))] = param4;
+            var10[7].pixels[var12Lifetime4 * param6 + var11Lifetime3] = param4;
+            var10[5].pixels[var12Lifetime4 + var9 * var11Lifetime3] = param4;
           }
         }
         return var10;
     }
 
-    mn() {
+    SpriteGeometry() {
     }
 
     static {

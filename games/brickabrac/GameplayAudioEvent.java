@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class GameplayAudioEvent extends IntrusiveNode {
-    static jp[] field_l;
+    static RgbSprite[] field_l;
     static NodeDeque field_n;
     static volatile boolean field_i;
     static int field_o;

@@ -5,7 +5,7 @@ final class gn extends ld {
     static long field_C;
     static int[] field_x;
     static String field_A;
-    static jp field_z;
+    static RgbSprite field_z;
     static String[] field_D;
     static String field_y;
     static long field_E;

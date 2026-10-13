@@ -3,12 +3,12 @@
  */
 final class lk extends qd {
     static th field_o;
-    static jp field_t;
+    static RgbSprite field_t;
     private ie field_r;
     NodeDeque field_v;
     static int field_p;
     static boolean field_s;
-    static jp[] field_n;
+    static RgbSprite[] field_n;
     static int[] field_u;
     static String field_q;
     ra field_m;

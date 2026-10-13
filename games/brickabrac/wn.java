@@ -3,7 +3,7 @@
  */
 final class wn {
     static String field_a;
-    static jp field_b;
+    static RgbSprite field_b;
     static mf field_c;
 
     final static mp a(boolean param0, int param1, int param2) {
@@ -102,7 +102,7 @@ final class wn {
                 !var7.field_Qb.equals("")) {
                 var7.field_Yb.field_wb = ok.field_g;
                 var7.field_Yb.field_Y = var11;
-                var7.field_Yb.a(np.field_a, var9, 0, 3 + ok.field_g.field_x, (byte) 64);
+                var7.field_Yb.a(np.field_a, var9, 0, 3 + ok.field_g.canvasWidth, (byte) 64);
                 var12 = 1;
               }
               var7.field_Wb.field_Fb = var11;
@@ -116,7 +116,7 @@ final class wn {
               var13 = 0;
               var14 = -80 + (var7.field_Ib - 2);
               if (var12 != 0) {
-                var13 = 3 + ok.field_g.field_x;
+                var13 = 3 + ok.field_g.canvasWidth;
                 var14 = var14 - var13;
               }
               stackIn_33_0 = var7.field_Xb;
@@ -155,7 +155,7 @@ final class wn {
                 }
               } else {
                 var16 = var7.field_Rb;
-                mn.a(-1, var7, GameScreen.field_f.field_Qb, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
+                SpriteGeometry.a(-1, var7, GameScreen.field_f.field_Qb, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
                 if (null != var7.field_Ub &&
                   !m.a(13134, bm.field_d.field_e) &&
                   !um.field_e) {
@@ -405,7 +405,7 @@ final class wn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -98) {
-            field_b = (jp) null;
+            field_b = (RgbSprite) null;
           }
           stackIn_4_0 = (int)(1000000000L / hb.field_x);
           return stackIn_4_0;

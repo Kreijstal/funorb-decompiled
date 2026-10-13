@@ -3,7 +3,7 @@
  */
 final class BrickMotionPath extends MovingBody {
     static long field_q;
-    static jp[] field_r;
+    static RgbSprite[] field_r;
     private int waypointCount;
     NodeDeque waypoints;
     static String field_s;

@@ -53,25 +53,25 @@ abstract class k extends pj implements hf {
         }
     }
 
-    final static jp a(jp param0, int param1, int param2) {
+    final static RgbSprite a(RgbSprite param0, int param1, int param2) {
         int var4 = 0;
-        jp var3 = null;
+        RgbSprite var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        jp stackIn_7_0 = null;
+        RgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = new jp(param0.field_x, param2 * param0.field_z);
-          var3.g();
+          var3 = new RgbSprite(param0.canvasWidth, param2 * param0.canvasHeight);
+          var3.bindRasterTarget();
           if (param1 <= 74) {
             field_i = (String) null;
           }
           for (var4 = 0; var4 < param2; var4++) {
-            param0.c(0, param0.field_z * var4);
+            param0.drawTransparent(0, param0.canvasHeight * var4);
           }
           kc.field_q.a((byte) 89);
           stackIn_7_0 = var3;
@@ -196,7 +196,7 @@ abstract class k extends pj implements hf {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + lb.field_c;
+                  var16Lifetime2 = var16Lifetime2 + Rasterizer2D.width;
                   var10 = var10 + var12;
                 }
               } else if (param5 >= 0) {
@@ -230,7 +230,7 @@ abstract class k extends pj implements hf {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + lb.field_c;
+                  var16Lifetime2 = var16Lifetime2 + Rasterizer2D.width;
                   var10 = var10 + var12;
                 }
               } else {
@@ -285,7 +285,7 @@ abstract class k extends pj implements hf {
               if (param2 >= mg.field_b) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + lb.field_c;
+              var15Lifetime1 = var15Lifetime1 + Rasterizer2D.width;
               var9_int = var9_int + var11;
               var10 = var10 + var12;
             }

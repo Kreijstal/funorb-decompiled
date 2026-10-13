@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dh extends tk {
+abstract class dh extends DualLinkNode {
     private int[] field_A;
     int field_L;
     private int[] field_T;
@@ -63,7 +63,7 @@ abstract class dh extends tk {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_Q = tk.a(16, (byte) -55, var7);
+                                field_Q = DualLinkNode.a(16, (byte) -55, var7);
                               }
                             } else {
                               field_u = -1;
@@ -73,7 +73,7 @@ abstract class dh extends tk {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_u = tk.a(16, (byte) -55, var6);
+                          field_u = DualLinkNode.a(16, (byte) -55, var6);
                         }
                       } else {
                         field_x = -1;
@@ -83,7 +83,7 @@ abstract class dh extends tk {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_x = tk.a(16, (byte) -55, var5);
+                    field_x = DualLinkNode.a(16, (byte) -55, var5);
                   }
                 } else {
                   field_J = field_w;
@@ -97,7 +97,7 @@ abstract class dh extends tk {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_I = tk.a(16, (byte) -55, var3);
+            field_I = DualLinkNode.a(16, (byte) -55, var3);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -477,10 +477,10 @@ abstract class dh extends tk {
               }
               param1 = param1 + this.field_T[var8];
               if (field_x != -1) {
-                lb.c(var11, param2 + (int)((double)this.field_N * 0.7), param1 - var11, field_x);
+                Rasterizer2D.drawHorizontalLine(var11, param2 + (int)((double)this.field_N * 0.7), param1 - var11, field_x);
               }
               if (field_u != -1) {
-                lb.c(var11, param2 + this.field_N + 1, param1 - var11, field_u);
+                Rasterizer2D.drawHorizontalLine(var11, param2 + this.field_N + 1, param1 - var11, field_u);
               }
               var5 = var8;
             }

@@ -5,13 +5,13 @@ final class lm {
     static String field_d;
     static String field_a;
     static ta field_c;
-    static jp[] field_e;
+    static RgbSprite[] field_e;
     static int field_b;
     private int[] field_f;
 
     final static boolean a(int param0, int param1) {
         if (param1 != 0) {
-          field_e = (jp[]) null;
+          field_e = (RgbSprite[]) null;
         }
         return param0 >= 2 ? true : false;
     }

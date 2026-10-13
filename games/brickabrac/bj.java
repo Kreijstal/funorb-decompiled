@@ -169,15 +169,15 @@ abstract class bj extends jc {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = BrickABrac.field_J ? 1 : 0;
-        lb.g(param0 + 6, param2 + 35, -12 + this.field_t, this.field_s - 40, 2105376, 0);
+        Rasterizer2D.fillVerticalGradient(param0 + 6, param2 + 35, -12 + this.field_t, this.field_s - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (lb.field_b <= var8 &&
-            var8 < lb.field_j) {
+          if (Rasterizer2D.clipTop <= var8 &&
+            var8 < Rasterizer2D.clipBottom) {
             var9 = var7 * (-var5 + var6) / var4 + var5;
             var10 = 0;
             var11 = this.field_t;
@@ -190,7 +190,7 @@ abstract class bj extends jc {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  lb.field_l[var10 + var8 * lb.field_c + param0] = var13;
+                  Rasterizer2D.pixels[var10 + var8 * Rasterizer2D.width + param0] = var13;
                 }
                 var10++;
               }
@@ -204,7 +204,7 @@ abstract class bj extends jc {
                   if (var14 >= 420) {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    lb.field_l[var11 + (lb.field_c * var8 + param0)] = var15;
+                    Rasterizer2D.pixels[var11 + (Rasterizer2D.width * var8 + param0)] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -216,7 +216,7 @@ abstract class bj extends jc {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            lb.c(var10 + param0, var8, -var10 + var11, var9);
+            Rasterizer2D.drawHorizontalLine(var10 + param0, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -229,15 +229,15 @@ abstract class bj extends jc {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          lb.c(param0, var8Lifetime1, 6, var9Lifetime1);
-          lb.c(this.field_t + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer2D.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer2D.drawHorizontalLine(this.field_t + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
         if (param1 != 274) {
           field_P = (ck) null;
         }
-        ka.field_n.c(param0 + this.field_t - 90, 10 + param2);
+        ka.field_n.drawTransparent(param0 + this.field_t - 90, 10 + param2);
         fq.a(this.field_t - 10, 35 + param2, param1 ^ 1013, nf.field_W, 5 + param0);
         fq.a(this.field_t, -22 + param2 + this.field_s, param1 + 469, GameplayAudioEvent.field_l, param0);
         var5Lifetime2 = 169;
@@ -248,8 +248,8 @@ abstract class bj extends jc {
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          lb.c(param0, var8Lifetime2, 6, var9Lifetime2);
-          lb.c(param0 + this.field_t - 6, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer2D.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer2D.drawHorizontalLine(param0 + this.field_t - 6, var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

@@ -7,7 +7,7 @@ final class ka extends IntrusiveNode {
     int field_s;
     int field_z;
     static tq field_l;
-    static jp field_n;
+    static RgbSprite field_n;
     int field_o;
     static String field_C;
     jm field_G;
@@ -407,7 +407,7 @@ final class ka extends IntrusiveNode {
                 if (var13.field_cc.field_L != 0) {
                   rf.a(param2, var13.field_gc, true);
                 } else {
-                  mn.a(0, qo.field_O, var13, param1, (byte) 58, tb.field_fb, 0);
+                  SpriteGeometry.a(0, qo.field_O, var13, param1, (byte) 58, tb.field_fb, 0);
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -580,7 +580,7 @@ final class ka extends IntrusiveNode {
           field_l = null;
           field_C = null;
           if (param0 != 67) {
-            field_n = (jp) null;
+            field_n = (RgbSprite) null;
           }
           field_n = null;
           return;

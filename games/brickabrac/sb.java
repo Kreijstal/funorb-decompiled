@@ -45,138 +45,138 @@ final class sb implements vc {
     public final void a(int param0) {
         int stackIn_10_0 = 0;
         int stackIn_20_0 = 0;
-        jp stackIn_26_0 = null;
+        RgbSprite stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_26_2 = 0;
         int stackIn_27_3;
         int stackIn_46_0 = 0;
-        jp stackIn_52_0 = null;
+        RgbSprite stackIn_52_0 = null;
         int stackIn_52_1 = 0;
         int stackIn_52_2 = 0;
         int stackIn_53_3;
         int stackIn_56_0 = 0;
         int stackIn_59_0 = 0;
         int stackIn_63_0 = 0;
-        jp stackIn_69_0 = null;
+        RgbSprite stackIn_69_0 = null;
         int stackIn_69_1 = 0;
         int stackIn_69_2 = 0;
         int stackIn_70_3;
-        jp stackIn_79_0 = null;
+        RgbSprite stackIn_79_0 = null;
         int stackIn_79_1 = 0;
         int stackIn_79_2 = 0;
         int stackIn_80_3;
-        jp stackIn_89_0 = null;
+        RgbSprite stackIn_89_0 = null;
         int stackIn_89_1 = 0;
         int stackIn_89_2 = 0;
         int stackIn_90_3;
-        jp stackIn_98_0 = null;
+        RgbSprite stackIn_98_0 = null;
         int stackIn_98_1 = 0;
         int stackIn_98_2 = 0;
         int stackIn_99_3;
-        jp stackIn_108_0 = null;
+        RgbSprite stackIn_108_0 = null;
         int stackIn_108_1 = 0;
         int stackIn_108_2 = 0;
         int stackIn_109_3;
         int stackIn_116_0 = 0;
         int stackIn_120_0 = 0;
-        jp stackIn_126_0 = null;
+        RgbSprite stackIn_126_0 = null;
         int stackIn_126_1 = 0;
         int stackIn_126_2 = 0;
         int stackIn_127_3;
-        jp stackIn_136_0 = null;
+        RgbSprite stackIn_136_0 = null;
         int stackIn_136_1 = 0;
         int stackIn_136_2 = 0;
         int stackIn_137_3;
-        jp stackIn_146_0 = null;
+        RgbSprite stackIn_146_0 = null;
         int stackIn_146_1 = 0;
         int stackIn_146_2 = 0;
         int stackIn_147_3;
-        jp stackIn_155_0 = null;
+        RgbSprite stackIn_155_0 = null;
         int stackIn_155_1 = 0;
         int stackIn_155_2 = 0;
         int stackIn_156_3;
-        jp stackIn_165_0 = null;
+        RgbSprite stackIn_165_0 = null;
         int stackIn_165_1 = 0;
         int stackIn_165_2 = 0;
         int stackIn_166_3;
         int stackIn_172_0 = 0;
         int stackIn_181_0 = 0;
-        jp stackIn_188_0 = null;
+        RgbSprite stackIn_188_0 = null;
         int stackIn_188_1 = 0;
         int stackIn_188_2 = 0;
         int stackIn_189_3;
         int stackIn_194_0 = 0;
         int stackIn_198_0 = 0;
-        jp stackIn_204_0 = null;
+        RgbSprite stackIn_204_0 = null;
         int stackIn_204_1 = 0;
         int stackIn_204_2 = 0;
         int stackIn_205_3;
-        jp stackIn_214_0 = null;
+        RgbSprite stackIn_214_0 = null;
         int stackIn_214_1 = 0;
         int stackIn_214_2 = 0;
         int stackIn_215_3;
-        jp stackIn_225_0 = null;
+        RgbSprite stackIn_225_0 = null;
         int stackIn_225_1 = 0;
         int stackIn_225_2 = 0;
         int stackIn_226_3;
         int stackIn_229_0 = 0;
-        jp stackIn_236_0 = null;
+        RgbSprite stackIn_236_0 = null;
         int stackIn_236_1 = 0;
         int stackIn_236_2 = 0;
         int stackIn_237_3;
         int stackIn_243_0 = 0;
         int stackIn_247_0 = 0;
-        jp stackIn_253_0 = null;
+        RgbSprite stackIn_253_0 = null;
         int stackIn_253_1 = 0;
         int stackIn_253_2 = 0;
         int stackIn_254_3;
-        jp stackIn_263_0 = null;
+        RgbSprite stackIn_263_0 = null;
         int stackIn_263_1 = 0;
         int stackIn_263_2 = 0;
         int stackIn_264_3;
-        jp stackIn_273_0 = null;
+        RgbSprite stackIn_273_0 = null;
         int stackIn_273_1 = 0;
         int stackIn_273_2 = 0;
         int stackIn_274_3;
-        jp stackIn_282_0 = null;
+        RgbSprite stackIn_282_0 = null;
         int stackIn_282_1 = 0;
         int stackIn_282_2 = 0;
         int stackIn_283_3;
-        jp stackIn_292_0 = null;
+        RgbSprite stackIn_292_0 = null;
         int stackIn_292_1 = 0;
         int stackIn_292_2 = 0;
         int stackIn_293_3;
         int stackIn_300_0 = 0;
         int stackIn_309_0 = 0;
         int stackIn_313_0 = 0;
-        jp stackIn_319_0 = null;
+        RgbSprite stackIn_319_0 = null;
         int stackIn_319_1 = 0;
         int stackIn_319_2 = 0;
         int stackIn_320_3;
-        jp stackIn_329_0 = null;
+        RgbSprite stackIn_329_0 = null;
         int stackIn_329_1 = 0;
         int stackIn_329_2 = 0;
         int stackIn_330_3;
-        jp stackIn_339_0 = null;
+        RgbSprite stackIn_339_0 = null;
         int stackIn_339_1 = 0;
         int stackIn_339_2 = 0;
         int stackIn_340_3;
-        jp stackIn_348_0 = null;
+        RgbSprite stackIn_348_0 = null;
         int stackIn_348_1 = 0;
         int stackIn_348_2 = 0;
         int stackIn_349_3;
-        jp stackIn_358_0 = null;
+        RgbSprite stackIn_358_0 = null;
         int stackIn_358_1 = 0;
         int stackIn_358_2 = 0;
         int stackIn_359_3;
         int stackIn_362_0 = 0;
         int stackIn_365_0 = 0;
-        jp stackIn_378_0 = null;
+        RgbSprite stackIn_378_0 = null;
         int stackIn_378_1 = 0;
         int stackIn_378_2 = 0;
         int stackIn_379_3;
         int stackIn_382_0 = 0;
-        jp stackIn_389_0 = null;
+        RgbSprite stackIn_389_0 = null;
         int stackIn_389_1 = 0;
         int stackIn_389_2 = 0;
         int stackIn_390_3;
@@ -234,7 +234,7 @@ final class sb implements vc {
                   stackIn_358_1 = 10;
                   stackIn_358_2 = -8 + var3;
                   stackIn_359_3 = (var5 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_358_0).b(stackIn_358_1, stackIn_358_2, stackIn_359_3);
+                  ((RgbSprite) (Object) stackIn_358_0).b(stackIn_358_1, stackIn_358_2, stackIn_359_3);
                 }
                 return;
               }
@@ -250,7 +250,7 @@ final class sb implements vc {
                   stackIn_319_1 = 10;
                   stackIn_319_2 = -8 + var3;
                   stackIn_320_3 = (var5Lifetime8 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_319_0).b(stackIn_319_1, stackIn_319_2, stackIn_320_3);
+                  ((RgbSprite) (Object) stackIn_319_0).b(stackIn_319_1, stackIn_319_2, stackIn_320_3);
                 }
                 return;
               }
@@ -265,7 +265,7 @@ final class sb implements vc {
                   stackIn_329_1 = 10;
                   stackIn_329_2 = -8 + var3;
                   stackIn_330_3 = (var5Lifetime9 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_329_0).b(stackIn_329_1, stackIn_329_2, stackIn_330_3);
+                  ((RgbSprite) (Object) stackIn_329_0).b(stackIn_329_1, stackIn_329_2, stackIn_330_3);
                 }
                 return;
               }
@@ -280,7 +280,7 @@ final class sb implements vc {
                   stackIn_348_1 = 10;
                   stackIn_348_2 = -8 + var3;
                   stackIn_349_3 = (var5Lifetime10 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_348_0).b(stackIn_348_1, stackIn_348_2, stackIn_349_3);
+                  ((RgbSprite) (Object) stackIn_348_0).b(stackIn_348_1, stackIn_348_2, stackIn_349_3);
                 }
                 return;
               }
@@ -294,7 +294,7 @@ final class sb implements vc {
                 stackIn_339_1 = 10;
                 stackIn_339_2 = -8 + var3;
                 stackIn_340_3 = (var5Lifetime11 != 0) ? 256 : 128;
-                ((jp) (Object) stackIn_339_0).b(stackIn_339_1, stackIn_339_2, stackIn_340_3);
+                ((RgbSprite) (Object) stackIn_339_0).b(stackIn_339_1, stackIn_339_2, stackIn_340_3);
               }
               return;
             }
@@ -317,7 +317,7 @@ final class sb implements vc {
                   stackIn_378_1 = 10;
                   stackIn_378_2 = -8 + var3;
                   stackIn_379_3 = (var5Lifetime7 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_378_0).b(stackIn_378_1, stackIn_378_2, stackIn_379_3);
+                  ((RgbSprite) (Object) stackIn_378_0).b(stackIn_378_1, stackIn_378_2, stackIn_379_3);
                 }
                 return;
               }
@@ -339,7 +339,7 @@ final class sb implements vc {
             stackIn_389_1 = 10;
             stackIn_389_2 = -8 + var3;
             stackIn_390_3 = (var5Lifetime7 != 0) ? 256 : 128;
-            ((jp) (Object) stackIn_389_0).b(stackIn_389_1, stackIn_389_2, stackIn_390_3);
+            ((RgbSprite) (Object) stackIn_389_0).b(stackIn_389_1, stackIn_389_2, stackIn_390_3);
           }
           return;
         }
@@ -380,7 +380,7 @@ final class sb implements vc {
             stackIn_26_1 = 10;
             stackIn_26_2 = -8 + var3Lifetime1;
             stackIn_27_3 = (var5Lifetime1 != 0) ? 256 : 128;
-            ((jp) (Object) stackIn_26_0).b(stackIn_26_1, stackIn_26_2, stackIn_27_3);
+            ((RgbSprite) (Object) stackIn_26_0).b(stackIn_26_1, stackIn_26_2, stackIn_27_3);
           }
           return;
         }
@@ -414,7 +414,7 @@ final class sb implements vc {
                 stackIn_52_1 = 10;
                 stackIn_52_2 = -8 + var3Lifetime2;
                 stackIn_53_3 = (var5Lifetime2 != 0) ? 256 : 128;
-                ((jp) (Object) stackIn_52_0).b(stackIn_52_1, stackIn_52_2, stackIn_53_3);
+                ((RgbSprite) (Object) stackIn_52_0).b(stackIn_52_1, stackIn_52_2, stackIn_53_3);
               }
               return;
             }
@@ -435,7 +435,7 @@ final class sb implements vc {
               stackIn_108_1 = 10;
               stackIn_108_2 = -8 + var3Lifetime2;
               stackIn_109_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-              ((jp) (Object) stackIn_108_0).b(stackIn_108_1, stackIn_108_2, stackIn_109_3);
+              ((RgbSprite) (Object) stackIn_108_0).b(stackIn_108_1, stackIn_108_2, stackIn_109_3);
             }
           } else {
             if (pf.field_p) {
@@ -450,7 +450,7 @@ final class sb implements vc {
                 stackIn_69_1 = 10;
                 stackIn_69_2 = -8 + var3Lifetime2;
                 stackIn_70_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                ((jp) (Object) stackIn_69_0).b(stackIn_69_1, stackIn_69_2, stackIn_70_3);
+                ((RgbSprite) (Object) stackIn_69_0).b(stackIn_69_1, stackIn_69_2, stackIn_70_3);
               }
             } else {
               if (pe.field_o == null) {
@@ -464,7 +464,7 @@ final class sb implements vc {
                   stackIn_79_1 = 10;
                   stackIn_79_2 = -8 + var3Lifetime2;
                   stackIn_80_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_79_0).b(stackIn_79_1, stackIn_79_2, stackIn_80_3);
+                  ((RgbSprite) (Object) stackIn_79_0).b(stackIn_79_1, stackIn_79_2, stackIn_80_3);
                 }
               } else {
                 if (pe.field_o.match.field_c) {
@@ -478,7 +478,7 @@ final class sb implements vc {
                     stackIn_98_1 = 10;
                     stackIn_98_2 = -8 + var3Lifetime2;
                     stackIn_99_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                    ((jp) (Object) stackIn_98_0).b(stackIn_98_1, stackIn_98_2, stackIn_99_3);
+                    ((RgbSprite) (Object) stackIn_98_0).b(stackIn_98_1, stackIn_98_2, stackIn_99_3);
                   }
                 } else {
                   var5Lifetime2Lifetime1 = 0;
@@ -491,7 +491,7 @@ final class sb implements vc {
                     stackIn_89_1 = 10;
                     stackIn_89_2 = -8 + var3Lifetime2;
                     stackIn_90_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
-                    ((jp) (Object) stackIn_89_0).b(stackIn_89_1, stackIn_89_2, stackIn_90_3);
+                    ((RgbSprite) (Object) stackIn_89_0).b(stackIn_89_1, stackIn_89_2, stackIn_90_3);
                   }
                 }
               }
@@ -515,7 +515,7 @@ final class sb implements vc {
               stackIn_292_1 = 10;
               stackIn_292_2 = -8 + var3Lifetime3;
               stackIn_293_3 = (var5Lifetime3 != 0) ? 256 : 128;
-              ((jp) (Object) stackIn_292_0).b(stackIn_292_1, stackIn_292_2, stackIn_293_3);
+              ((RgbSprite) (Object) stackIn_292_0).b(stackIn_292_1, stackIn_292_2, stackIn_293_3);
             }
           } else {
             if (pf.field_p) {
@@ -530,7 +530,7 @@ final class sb implements vc {
                 stackIn_253_1 = 10;
                 stackIn_253_2 = -8 + var3Lifetime3;
                 stackIn_254_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                ((jp) (Object) stackIn_253_0).b(stackIn_253_1, stackIn_253_2, stackIn_254_3);
+                ((RgbSprite) (Object) stackIn_253_0).b(stackIn_253_1, stackIn_253_2, stackIn_254_3);
               }
             } else {
               if (pe.field_o == null) {
@@ -544,7 +544,7 @@ final class sb implements vc {
                   stackIn_263_1 = 10;
                   stackIn_263_2 = -8 + var3Lifetime3;
                   stackIn_264_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_263_0).b(stackIn_263_1, stackIn_263_2, stackIn_264_3);
+                  ((RgbSprite) (Object) stackIn_263_0).b(stackIn_263_1, stackIn_263_2, stackIn_264_3);
                 }
               } else {
                 if (!pe.field_o.match.field_c) {
@@ -558,7 +558,7 @@ final class sb implements vc {
                     stackIn_282_1 = 10;
                     stackIn_282_2 = -8 + var3Lifetime3;
                     stackIn_283_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                    ((jp) (Object) stackIn_282_0).b(stackIn_282_1, stackIn_282_2, stackIn_283_3);
+                    ((RgbSprite) (Object) stackIn_282_0).b(stackIn_282_1, stackIn_282_2, stackIn_283_3);
                   }
                 } else {
                   var5Lifetime3 = 1;
@@ -571,7 +571,7 @@ final class sb implements vc {
                     stackIn_273_1 = 10;
                     stackIn_273_2 = -8 + var3Lifetime3;
                     stackIn_274_3 = (var5Lifetime3 != 0) ? 256 : 128;
-                    ((jp) (Object) stackIn_273_0).b(stackIn_273_1, stackIn_273_2, stackIn_274_3);
+                    ((RgbSprite) (Object) stackIn_273_0).b(stackIn_273_1, stackIn_273_2, stackIn_274_3);
                   }
                 }
               }
@@ -593,7 +593,7 @@ final class sb implements vc {
               stackIn_165_1 = 10;
               stackIn_165_2 = -8 + var3Lifetime3;
               stackIn_166_3 = (var5Lifetime4 != 0) ? 256 : 128;
-              ((jp) (Object) stackIn_165_0).b(stackIn_165_1, stackIn_165_2, stackIn_166_3);
+              ((RgbSprite) (Object) stackIn_165_0).b(stackIn_165_1, stackIn_165_2, stackIn_166_3);
             }
           } else {
             if (pf.field_p) {
@@ -608,7 +608,7 @@ final class sb implements vc {
                 stackIn_126_1 = 10;
                 stackIn_126_2 = -8 + var3Lifetime3;
                 stackIn_127_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                ((jp) (Object) stackIn_126_0).b(stackIn_126_1, stackIn_126_2, stackIn_127_3);
+                ((RgbSprite) (Object) stackIn_126_0).b(stackIn_126_1, stackIn_126_2, stackIn_127_3);
               }
             } else {
               if (pe.field_o == null) {
@@ -622,7 +622,7 @@ final class sb implements vc {
                   stackIn_136_1 = 10;
                   stackIn_136_2 = -8 + var3Lifetime3;
                   stackIn_137_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                  ((jp) (Object) stackIn_136_0).b(stackIn_136_1, stackIn_136_2, stackIn_137_3);
+                  ((RgbSprite) (Object) stackIn_136_0).b(stackIn_136_1, stackIn_136_2, stackIn_137_3);
                 }
               } else {
                 if (pe.field_o.match.field_c) {
@@ -636,7 +636,7 @@ final class sb implements vc {
                     stackIn_155_1 = 10;
                     stackIn_155_2 = -8 + var3Lifetime3;
                     stackIn_156_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                    ((jp) (Object) stackIn_155_0).b(stackIn_155_1, stackIn_155_2, stackIn_156_3);
+                    ((RgbSprite) (Object) stackIn_155_0).b(stackIn_155_1, stackIn_155_2, stackIn_156_3);
                   }
                 } else {
                   var5Lifetime4 = 0;
@@ -649,7 +649,7 @@ final class sb implements vc {
                     stackIn_146_1 = 10;
                     stackIn_146_2 = -8 + var3Lifetime3;
                     stackIn_147_3 = (var5Lifetime4 != 0) ? 256 : 128;
-                    ((jp) (Object) stackIn_146_0).b(stackIn_146_1, stackIn_146_2, stackIn_147_3);
+                    ((RgbSprite) (Object) stackIn_146_0).b(stackIn_146_1, stackIn_146_2, stackIn_147_3);
                   }
                 }
               }
@@ -683,7 +683,7 @@ final class sb implements vc {
             stackIn_188_1 = 10;
             stackIn_188_2 = -8 + var3Lifetime3;
             stackIn_189_3 = (var5Lifetime5 != 0) ? 256 : 128;
-            ((jp) (Object) stackIn_188_0).b(stackIn_188_1, stackIn_188_2, stackIn_189_3);
+            ((RgbSprite) (Object) stackIn_188_0).b(stackIn_188_1, stackIn_188_2, stackIn_189_3);
           }
           return;
         }
@@ -701,7 +701,7 @@ final class sb implements vc {
               stackIn_204_1 = 10;
               stackIn_204_2 = -8 + var3Lifetime3;
               stackIn_205_3 = (var5Lifetime6 != 0) ? 256 : 128;
-              ((jp) (Object) stackIn_204_0).b(stackIn_204_1, stackIn_204_2, stackIn_205_3);
+              ((RgbSprite) (Object) stackIn_204_0).b(stackIn_204_1, stackIn_204_2, stackIn_205_3);
             }
             return;
           }
@@ -716,7 +716,7 @@ final class sb implements vc {
               stackIn_214_1 = 10;
               stackIn_214_2 = -8 + var3Lifetime3;
               stackIn_215_3 = (var5Lifetime6 != 0) ? 256 : 128;
-              ((jp) (Object) stackIn_214_0).b(stackIn_214_1, stackIn_214_2, stackIn_215_3);
+              ((RgbSprite) (Object) stackIn_214_0).b(stackIn_214_1, stackIn_214_2, stackIn_215_3);
             }
             return;
           }
@@ -731,7 +731,7 @@ final class sb implements vc {
               stackIn_225_1 = 10;
               stackIn_225_2 = -8 + var3Lifetime3;
               stackIn_226_3 = (var5Lifetime6 != 0) ? 256 : 128;
-              ((jp) (Object) stackIn_225_0).b(stackIn_225_1, stackIn_225_2, stackIn_226_3);
+              ((RgbSprite) (Object) stackIn_225_0).b(stackIn_225_1, stackIn_225_2, stackIn_226_3);
             }
             return;
           }
@@ -750,7 +750,7 @@ final class sb implements vc {
           stackIn_236_1 = 10;
           stackIn_236_2 = -8 + var3Lifetime3;
           stackIn_237_3 = (var5Lifetime6 != 0) ? 256 : 128;
-          ((jp) (Object) stackIn_236_0).b(stackIn_236_1, stackIn_236_2, stackIn_237_3);
+          ((RgbSprite) (Object) stackIn_236_0).b(stackIn_236_1, stackIn_236_2, stackIn_237_3);
         }
     }
 
@@ -1423,8 +1423,8 @@ final class sb implements vc {
     }
 
     sb() {
-        ud.field_w = nn.field_g.field_P + (qi.field_K[0].field_C + qi.field_K[6].field_C) + nn.field_g.field_B;
-        si.field_l = qi.field_K[2].field_D + (3 + qi.field_K[0].field_D);
+        ud.field_w = nn.field_g.field_P + (qi.field_K[0].height + qi.field_K[6].height) + nn.field_g.field_B;
+        si.field_l = qi.field_K[2].width + (3 + qi.field_K[0].width);
     }
 
     private final boolean c(int param0) {

@@ -5,7 +5,7 @@ final class gj {
     static int field_a;
     static mh field_b;
     static String field_d;
-    static jp[] field_c;
+    static RgbSprite[] field_c;
 
     final static kn b(int param0) {
         int var1_int = 0;
@@ -104,7 +104,7 @@ final class gj {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -27956) {
-          field_c = (jp[]) null;
+          field_c = (RgbSprite[]) null;
         }
         field_d = null;
         field_c = null;

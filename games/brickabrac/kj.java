@@ -125,8 +125,8 @@ final class kj extends hb {
         mh var14 = null;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          kp.field_a = lb.field_c;
-          IsaacGenerator.field_i = lb.field_d;
+          kp.field_a = Rasterizer2D.width;
+          IsaacGenerator.field_i = Rasterizer2D.height;
           if (!param1) {
             stackIn_4_0 = eg.field_m;
           } else {
@@ -253,7 +253,7 @@ final class kj extends hb {
               }
             }
           }
-          wi.field_j.a(-10 + (-120 + lb.field_d) - 4 - 10, 10, -360 + lb.field_c >> 1, 360, (byte) 64);
+          wi.field_j.a(-10 + (-120 + Rasterizer2D.height) - 4 - 10, 10, -360 + Rasterizer2D.width >> 1, 360, (byte) 64);
           pk.field_h.a(24, 0, 0, wi.field_j.field_Ib, (byte) 64);
           de.field_t.a(-24 + wi.field_j.field_cb, 24, 0, wi.field_j.field_Ib, (byte) 64);
           stackIn_78_0 = de.field_t;

@@ -9,11 +9,11 @@ final class lc {
     private q field_d;
     static int[] field_n;
     private boolean field_g;
-    static jp field_e;
+    static RgbSprite field_e;
     private int field_m;
     private km field_h;
     private int field_b;
-    private jp field_j;
+    private RgbSprite field_j;
     static int field_i;
     private String field_c;
 
@@ -31,7 +31,7 @@ final class lc {
         return (1 << param0 & o.field_d) != 0 ? true : false;
     }
 
-    final static void a(String[][] param0, tp[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, mf param7, mf param8, mf param9, int[] param10, jp[][] param11, int param12, boolean param13, jp[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {
+    final static void a(String[][] param0, tp[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, mf param7, mf param8, mf param9, int[] param10, RgbSprite[][] param11, int param12, boolean param13, RgbSprite[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -70,7 +70,7 @@ final class lc {
           pf.a(param18, param15, param8, param3, -27460, param13, param14, param7, param12, param10, (String[]) null, param11, param1, 1, param16, param0, param5, param6, param17, param9);
           if (param2 != 47) {
             var20 = (int[]) null;
-            lc.a((String[][]) null, (tp[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (mf) null, (mf) null, (mf) null, (int[]) null, (jp[][]) null, 5, true, (jp[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
+            lc.a((String[][]) null, (tp[]) null, (byte) -33, (String[]) null, 104, (String[]) null, (String[][]) null, (mf) null, (mf) null, (mf) null, (int[]) null, (RgbSprite[][]) null, 5, true, (RgbSprite[][]) null, (byte[]) null, (byte[]) null, (int[]) null, -25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -170,17 +170,17 @@ final class lc {
         int var2Lifetime1;
         if (param0 > 89) {
           var2 = sa.a(100 * (-this.field_f + de.field_x), -4097) + 65536 >> 12;
-          lb.a(this.field_d.field_c - 2, -2 + this.field_d.field_a, 4 + this.field_d.field_j, this.field_d.field_d + 4, 20, 16777215, (this.field_g ? var2 : 0) + 32);
-          lb.b(this.field_d.field_c, this.field_d.field_a, this.field_d.field_j, this.field_d.field_d, 20, 0);
-          this.field_j.c(this.field_d.field_c + 30, this.field_d.field_a + 20);
+          Rasterizer2D.a(this.field_d.field_c - 2, -2 + this.field_d.field_a, 4 + this.field_d.field_j, this.field_d.field_d + 4, 20, 16777215, (this.field_g ? var2 : 0) + 32);
+          Rasterizer2D.b(this.field_d.field_c, this.field_d.field_a, this.field_d.field_j, this.field_d.field_d, 20, 0);
+          this.field_j.drawTransparent(this.field_d.field_c + 30, this.field_d.field_a + 20);
           nn.field_g.b(this.field_c, (this.field_d.field_j + this.field_d.field_c * 2) / 2, this.field_d.field_a - (-this.field_d.field_d + 13), !this.field_g ? 0 : 1, -1);
           return;
         }
         this.field_d = (q) null;
         var2Lifetime1 = sa.a(100 * (-this.field_f + de.field_x), -4097) + 65536 >> 12;
-        lb.a(this.field_d.field_c - 2, -2 + this.field_d.field_a, 4 + this.field_d.field_j, this.field_d.field_d + 4, 20, 16777215, (this.field_g ? var2Lifetime1 : 0) + 32);
-        lb.b(this.field_d.field_c, this.field_d.field_a, this.field_d.field_j, this.field_d.field_d, 20, 0);
-        this.field_j.c(this.field_d.field_c + 30, this.field_d.field_a + 20);
+        Rasterizer2D.a(this.field_d.field_c - 2, -2 + this.field_d.field_a, 4 + this.field_d.field_j, this.field_d.field_d + 4, 20, 16777215, (this.field_g ? var2Lifetime1 : 0) + 32);
+        Rasterizer2D.b(this.field_d.field_c, this.field_d.field_a, this.field_d.field_j, this.field_d.field_d, 20, 0);
+        this.field_j.drawTransparent(this.field_d.field_c + 30, this.field_d.field_a + 20);
         nn.field_g.b(this.field_c, (this.field_d.field_j + this.field_d.field_c * 2) / 2, this.field_d.field_a - (-this.field_d.field_d + 13), !this.field_g ? 0 : 1, -1);
     }
 

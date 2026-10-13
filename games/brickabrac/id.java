@@ -107,7 +107,7 @@ final class id extends mh {
         if (param0 != 0) {
           return false;
         }
-        return !this.c(2) ? true : false;
+        return !this.isSecondaryLinked(2) ? true : false;
     }
 
     final boolean a(id param0, int param1) {

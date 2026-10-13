@@ -5,8 +5,8 @@ final class uo {
     static String[] field_e;
     static qh field_f;
     static String field_b;
-    static jp field_d;
-    static jp[] field_c;
+    static RgbSprite field_d;
+    static RgbSprite[] field_c;
     static String field_a;
 
     final static tp a(byte param0, mf param1, String param2, String param3) {
@@ -79,7 +79,7 @@ final class uo {
           if (param2 == 68) {
             return;
           }
-          field_d = (jp) null;
+          field_d = (RgbSprite) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,9 +3,9 @@
  */
 abstract class qg extends ke {
     private int field_o;
-    static jp[][] field_r;
+    static RgbSprite[][] field_r;
     String field_x;
-    static jp[] field_D;
+    static RgbSprite[] field_D;
     private int field_u;
     private int field_C;
     static int field_A;
@@ -53,7 +53,7 @@ abstract class qg extends ke {
         try {
           this.a(103, param0, param1, 640, 480);
           if (param2 != 1686) {
-            field_D = (jp[]) null;
+            field_D = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "qg.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -84,11 +84,11 @@ abstract class qg extends ke {
         oc.c((byte) -35);
     }
 
-    final static jp a(jp param0, int param1) {
+    final static RgbSprite a(RgbSprite param0, int param1) {
         int var12 = 0;
         int var13 = 0;
-        jp stackIn_39_0 = null;
-        jp stackIn_47_0 = null;
+        RgbSprite stackIn_39_0 = null;
+        RgbSprite stackIn_47_0 = null;
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -113,9 +113,9 @@ abstract class qg extends ke {
         int var9Lifetime1;
         var14 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param0.field_C;
-          var3 = param0.field_D;
-          var4 = param0.field_G;
+          var2_int = param0.height;
+          var3 = param0.width;
+          var4 = param0.pixels;
           var5 = var2_int - 1;
           scanLoop1: while (true) {
             if (var5 >= 0) {
@@ -177,7 +177,7 @@ abstract class qg extends ke {
             var7Lifetime2 == var3 - 1 &&
             var6Lifetime1 == 0 &&
             var2_int - 1 == var5) {
-            stackIn_39_0 = (jp) (param0);
+            stackIn_39_0 = (RgbSprite) (param0);
             return stackIn_39_0;
           }
           var9Lifetime1 = -var8Lifetime2 + (1 + var7Lifetime2);
@@ -188,12 +188,12 @@ abstract class qg extends ke {
               var11[var9Lifetime1 * var12 + var13] = var4[var3 * (var12 + var6Lifetime1) + var8Lifetime2 + var13];
             }
           }
-          param0.field_D = var9Lifetime1;
-          param0.field_E = param0.field_E + var8Lifetime2;
-          param0.field_C = var10;
-          param0.field_G = var11;
-          param0.field_F = param0.field_F + var6Lifetime1;
-          stackIn_47_0 = (jp) (param0);
+          param0.width = var9Lifetime1;
+          param0.offsetX = param0.offsetX + var8Lifetime2;
+          param0.height = var10;
+          param0.pixels = var11;
+          param0.offsetY = param0.offsetY + var6Lifetime1;
+          stackIn_47_0 = (RgbSprite) (param0);
           return stackIn_47_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -479,10 +479,10 @@ abstract class qg extends ke {
     }
 
     public static void k(int param0) {
-        field_r = (jp[][]) null;
+        field_r = (RgbSprite[][]) null;
         field_D = null;
         if (param0 > -103) {
-          field_D = (jp[]) null;
+          field_D = (RgbSprite[]) null;
         }
         field_z = null;
     }
@@ -648,12 +648,12 @@ abstract class qg extends ke {
         uf.field_d[17] = true;
     }
 
-    final static jp[] a(jp[] param0, byte param1) {
+    final static RgbSprite[] a(RgbSprite[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        jp var3 = null;
+        RgbSprite var3 = null;
         int var4 = 0;
-        jp[] stackIn_7_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -661,16 +661,16 @@ abstract class qg extends ke {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param1 > -101) {
-            field_D = (jp[]) null;
+            field_D = (RgbSprite[]) null;
           }
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             var3 = param0[var2_int];
-            param0[var2_int].field_F = 0;
-            var3.field_E = 0;
-            param0[var2_int].field_x = param0[var2_int].field_D;
-            param0[var2_int].field_z = param0[var2_int].field_C;
+            param0[var2_int].offsetY = 0;
+            var3.offsetX = 0;
+            param0[var2_int].canvasWidth = param0[var2_int].width;
+            param0[var2_int].canvasHeight = param0[var2_int].height;
           }
-          stackIn_7_0 = (jp[]) (param0);
+          stackIn_7_0 = (RgbSprite[]) (param0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

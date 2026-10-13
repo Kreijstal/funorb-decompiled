@@ -6,7 +6,7 @@ final class rd {
     static hl field_e;
     static String field_c;
     static boolean field_a;
-    static jp[][] field_d;
+    static RgbSprite[][] field_d;
 
     final static void a(int param0) {
         nq.field_p = false;
@@ -60,10 +60,10 @@ final class rd {
             }
             var3 += 28;
             var3 = -(var3 % 100) + (100 + var3);
-            lb.d(-var3 + 626, 14, var3, var2, 0, 180);
+            Rasterizer2D.fillRectangleAlpha(-var3 + 626, 14, var3, var2, 0, 180);
             for (var4 = 0; var4 < 12; var4++) {
               var5_intLifetime1 = (-var4 + 12) * 20;
-              lb.a(626 - var3 + var4, 14 + var4, -var4 - var4 + var3, -var4 - var4 + var2, 0, var5_intLifetime1);
+              Rasterizer2D.drawRectangleAlpha(626 - var3 + var4, 14 + var4, -var4 - var4 + var3, -var4 - var4 + var2, 0, var5_intLifetime1);
             }
             var4Lifetime1 = 41;
             var5 = (ck) (ff.field_d.first(-80));
@@ -225,14 +225,14 @@ final class rd {
         }
     }
 
-    final static jp[] c(int param0) {
+    final static RgbSprite[] c(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
-        jp[] var1 = new jp[nl.field_c];
+        RgbSprite[] var1 = new RgbSprite[nl.field_c];
         for (var2 = 0; var2 < nl.field_c; var2++) {
           var3 = jh.field_b[var2] * gg.field_t[var2];
           var4 = cn.field_a[var2];
@@ -240,10 +240,10 @@ final class rd {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = qp.field_c[ik.a((int) var4[var6], 255)];
           }
-          var1[var2] = new jp(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var5);
+          var1[var2] = new RgbSprite(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var5);
         }
         if (param0 < 93) {
-          return (jp[]) null;
+          return (RgbSprite[]) null;
         }
         MotionWaypoint.d((byte) 96);
         return var1;
@@ -256,7 +256,7 @@ final class rd {
           rd.c(110);
         }
         field_c = null;
-        field_d = (jp[][]) null;
+        field_d = (RgbSprite[][]) null;
     }
 
     static {

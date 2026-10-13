@@ -5,7 +5,7 @@ final class vj {
     static n field_e;
     oa field_d;
     static int field_c;
-    static jp field_b;
+    static RgbSprite field_b;
     static mh[] field_a;
     static int[] field_f;
 

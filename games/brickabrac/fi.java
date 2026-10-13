@@ -14,46 +14,46 @@ final class fi extends ki {
         if (param1 >= -84) {
           this.a(false, 56, -90, -99, 75);
           if (!this.b((byte) -111)) {
-            lb.g(param2, param0, 306, 480, pf.field_b[param3], 16777215);
+            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, pf.field_b[param3], 16777215);
             return;
           }
           var8 = kd.a(this.field_m, param3, (byte) 107);
           if (!var8.a((byte) -84, param3, this.field_m)) {
             dk.a(2, param3, var8, -35, 23275, Brick.field_K);
             var8.a(this.field_m, param3, (byte) 78);
-            mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+            SpriteGeometry.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
             return;
           }
-          mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+          SpriteGeometry.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
           return;
         }
         if (!this.b((byte) -111)) {
-          lb.g(param2, param0, 306, 480, pf.field_b[param3], 16777215);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, pf.field_b[param3], 16777215);
           return;
         }
         pb var9 = kd.a(this.field_m, param3, (byte) 107);
         if (var9.a((byte) -84, param3, this.field_m)) {
-          mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+          SpriteGeometry.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
           return;
         }
         dk.a(2, param3, var9, -35, 23275, Brick.field_K);
         var9.a(this.field_m, param3, (byte) 78);
-        mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
+        SpriteGeometry.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 22 % ((param0 + 28) / 43);
         if (param1 > -1) {
-          lb.g(param2, param3, 160, 238, pf.field_b[param1], 16777215);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 160, 238, pf.field_b[param1], 16777215);
           if (this.b((byte) -107)) {
-            be.field_d.c(param2, param3);
+            be.field_d.drawTransparent(param2, param3);
             return;
           }
           return;
         }
-        lb.g(param2, param3, 153, 240, 16777215, 11184810);
+        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 240, 16777215, 11184810);
         if (this.b((byte) -107)) {
-          be.field_d.c(param2, param3);
+          be.field_d.drawTransparent(param2, param3);
           return;
         }
     }
@@ -93,9 +93,9 @@ final class fi extends ki {
     fi(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-          ga.field_k = new jp[2];
-          ObjectHistoryBuffer.field_o = new jp[2][];
-          ja.field_a = new jp[2][];
+          ga.field_k = new RgbSprite[2];
+          ObjectHistoryBuffer.field_o = new RgbSprite[2][];
+          ja.field_a = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "fi.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -112,7 +112,7 @@ final class fi extends ki {
         field_w = null;
     }
 
-    final jp[] a(int param0, boolean param1) {
+    final RgbSprite[] a(int param0, boolean param1) {
         if (!param1) {
           field_u = (String) null;
           return ja.field_a[param0 - 1];
@@ -120,12 +120,12 @@ final class fi extends ki {
         return ja.field_a[param0 - 1];
     }
 
-    final jp[] a(byte param0, int param1) {
+    final RgbSprite[] a(byte param0, int param1) {
         int var3 = 84 % ((65 - param0) / 49);
         return ObjectHistoryBuffer.field_o[-1 + param1];
     }
 
-    final jp a(boolean param0, int param1) {
+    final RgbSprite a(boolean param0, int param1) {
         if (param0) {
           return ga.field_k[-1 + param1];
         }
@@ -135,7 +135,7 @@ final class fi extends ki {
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         if (!this.b((byte) -125)) {
-          lb.g(param4, param2, 640, 480, pf.field_b[param3], 16777215);
+          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, pf.field_b[param3], 16777215);
           if (!param0) {
             this.a(false);
             return;
@@ -147,14 +147,14 @@ final class fi extends ki {
           dk.a(1, param3, var6, 0, 23275, hk.field_I);
           var6.a(this.field_m, param3, (byte) 78);
         } else {
-          mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+          SpriteGeometry.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
           if (!param0) {
             this.a(false);
             return;
           }
           return;
         }
-        mn.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
+        SpriteGeometry.a(var6.field_p, 640, param2, param4, param3, param1, s.field_d, 1, kc.field_r, 1, 0);
         if (param0) {
           return;
         }

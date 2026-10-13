@@ -4,9 +4,9 @@
 abstract class dj {
     static int field_d;
     static String field_h;
-    static jp[] field_f;
-    static jp field_e;
-    static jp field_a;
+    static RgbSprite[] field_f;
+    static RgbSprite field_e;
+    static RgbSprite field_a;
     static int field_g;
     static RectangleBody field_c;
     static int field_b;
@@ -174,7 +174,7 @@ abstract class dj {
         kd.field_d[16] = oj.field_o;
         kd.field_d[21] = br.field_Rb;
         kd.field_d[5] = k.field_i;
-        kd.field_d[15] = tk.field_i;
+        kd.field_d[15] = DualLinkNode.field_i;
         kd.field_d[9] = sh.field_b;
         kd.field_d[6] = pg.field_i;
         kd.field_d[20] = c.field_n;

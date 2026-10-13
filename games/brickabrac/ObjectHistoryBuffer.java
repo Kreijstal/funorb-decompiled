@@ -3,10 +3,10 @@
  */
 final class ObjectHistoryBuffer extends IntrusiveNode {
     static String field_l;
-    static jp field_q;
+    static RgbSprite field_q;
     static int[] field_k;
     static String field_j;
-    static jp[][] field_o;
+    static RgbSprite[][] field_o;
     static int[] field_p;
     int latestIndex;
     private Object[] entries;
@@ -14,7 +14,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
 
     public static void a(int param0) {
         field_j = null;
-        field_o = (jp[][]) null;
+        field_o = (RgbSprite[][]) null;
         field_q = null;
         field_p = null;
         if (param0 <= 36) {

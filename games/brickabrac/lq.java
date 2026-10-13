@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lq {
-    static jp field_d;
+    static RgbSprite field_d;
     static String field_c;
     static int[] field_b;
-    private tk field_g;
-    private tk field_f;
+    private DualLinkNode field_g;
+    private DualLinkNode field_f;
     static String field_e;
     static String field_a;
 
@@ -15,82 +15,82 @@ final class lq {
         int var1 = -1 / ((42 - param0) / 59);
     }
 
-    final void a(tk param0, boolean param1) {
+    final void a(DualLinkNode param0, boolean param1) {
         try {
-          if (param0.field_n != null) {
-            param0.d(3);
+          if (param0.secondaryPrevious != null) {
+            param0.unlinkSecondary(3);
           }
           if (param1) {
             mf var4 = (mf) null;
             lq.a(-17, 78, 86, (mf) null);
           }
-          param0.field_s = this.field_g;
-          param0.field_n = this.field_g.field_n;
-          param0.field_n.field_s = param0;
-          param0.field_s.field_n = param0;
+          param0.secondaryNext = this.field_g;
+          param0.secondaryPrevious = this.field_g.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "lq.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final tk a(int param0) {
-        tk var2 = null;
-        tk var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 25609) {
-          this.field_g = (tk) null;
-          var2 = this.field_g.field_s;
+          this.field_g = (DualLinkNode) null;
+          var2 = this.field_g.secondaryNext;
           if (this.field_g != var2) {
-            var2.d(param0 ^ 25610);
+            var2.unlinkSecondary(param0 ^ 25610);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_g.field_s;
+        var2Lifetime1 = this.field_g.secondaryNext;
         if (this.field_g != var2Lifetime1) {
-          var2Lifetime1.d(param0 ^ 25610);
+          var2Lifetime1.unlinkSecondary(param0 ^ 25610);
           return var2Lifetime1;
         }
         return null;
     }
 
-    final tk e(int param0) {
-        tk var2 = this.field_f;
+    final DualLinkNode e(int param0) {
+        DualLinkNode var2 = this.field_f;
         if (var2 == this.field_g) {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2.field_s;
+        this.field_f = var2.secondaryNext;
         if (param0 == -8394) {
           return var2;
         }
-        tk var3 = (tk) null;
-        this.a((tk) null, true);
+        DualLinkNode var3 = (DualLinkNode) null;
+        this.a((DualLinkNode) null, true);
         return var2;
     }
 
-    final tk a(boolean param0) {
+    final DualLinkNode a(boolean param0) {
         if (!param0) {
-          return (tk) null;
+          return (DualLinkNode) null;
         }
-        tk var2 = this.field_g.field_s;
+        DualLinkNode var2 = this.field_g.secondaryNext;
         if (this.field_g == var2) {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2.field_s;
+        this.field_f = var2.secondaryNext;
         return var2;
     }
 
     final int c(int param0) {
         int var4 = BrickABrac.field_J ? 1 : 0;
         int var2 = 0;
-        tk var3 = this.field_g.field_s;
+        DualLinkNode var3 = this.field_g.secondaryNext;
         if (param0 != -25906) {
           return 88;
         }
         while (this.field_g != var3) {
           var2++;
-          var3 = var3.field_s;
+          var3 = var3.secondaryNext;
         }
         return var2;
     }
@@ -165,9 +165,9 @@ final class lq {
     }
 
     public lq() {
-        this.field_g = new tk();
-        this.field_g.field_s = this.field_g;
-        this.field_g.field_n = this.field_g;
+        this.field_g = new DualLinkNode();
+        this.field_g.secondaryNext = this.field_g;
+        this.field_g.secondaryPrevious = this.field_g;
     }
 
     static {

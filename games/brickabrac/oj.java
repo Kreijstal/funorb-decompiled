@@ -105,7 +105,7 @@ final class oj extends ep {
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
-        MovingBody.a((byte) 74, 640 + lb.field_c >> 1, -640 + lb.field_c >> 1, 0, lb.field_d);
+        MovingBody.a((byte) 74, 640 + Rasterizer2D.width >> 1, -640 + Rasterizer2D.width >> 1, 0, Rasterizer2D.height);
         if (ml.field_b <= 0) {
           if (pe.field_j > 0) {
             if (null == c.field_e) {
@@ -118,7 +118,7 @@ final class oj extends ep {
               stackIn_65_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_64_0).a(stackIn_64_1, stackIn_65_2);
             } else {
-              c.field_e.d(qa.field_w.field_P, 0);
+              c.field_e.drawAt(qa.field_w.field_P, 0);
               stackIn_69_0 = qa.field_w;
               stackIn_69_1 = true;
               stackIn_70_2 = (param0) && (!hc.field_c);
@@ -140,7 +140,7 @@ final class oj extends ep {
                 stackIn_87_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
               } else {
-                c.field_e.d(qa.field_w.field_P, 0);
+                c.field_e.drawAt(qa.field_w.field_P, 0);
                 stackIn_91_0 = qa.field_w;
                 stackIn_91_1 = true;
                 stackIn_92_2 = (param0) && (!hc.field_c);
@@ -157,7 +157,7 @@ final class oj extends ep {
           return;
         }
         if (null != c.field_e) {
-          c.field_e.d(fe.field_gb.field_P, 0);
+          c.field_e.drawAt(fe.field_gb.field_P, 0);
         }
         stackIn_7_0 = fe.field_gb;
         stackIn_7_1 = true;
@@ -178,7 +178,7 @@ final class oj extends ep {
             stackIn_22_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
           } else {
-            c.field_e.d(qa.field_w.field_P, 0);
+            c.field_e.drawAt(qa.field_w.field_P, 0);
             stackIn_26_0 = qa.field_w;
             stackIn_26_1 = true;
             stackIn_27_2 = (param0) && (!hc.field_c);
@@ -210,7 +210,7 @@ final class oj extends ep {
           var2Lifetime3 = -63 / ((70 - param1) / 49);
           return;
         }
-        c.field_e.d(qa.field_w.field_P, 0);
+        c.field_e.drawAt(qa.field_w.field_P, 0);
         stackIn_48_0 = qa.field_w;
         stackIn_48_1 = true;
         stackIn_49_2 = (param0) && (!hc.field_c);
@@ -251,27 +251,27 @@ final class oj extends ep {
     }
 
     final static void a(int param0, Paddle param1, int param2, int param3, byte param4, PlayerBoard param5, int param6) {
-        jp[] stackIn_4_0 = null;
-        jp[] stackIn_7_0 = null;
-        jp stackIn_10_0 = null;
+        RgbSprite[] stackIn_4_0 = null;
+        RgbSprite[] stackIn_7_0 = null;
+        RgbSprite stackIn_10_0 = null;
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
         StringBuilder stackIn_47_1 = null;
         String stackIn_48_2 = null;
         RuntimeException decompiledCaughtException = null;
-        jp[] var7 = null;
+        RgbSprite[] var7 = null;
         RuntimeException var7_ref = null;
-        jp[] var8 = null;
-        jp var9 = null;
+        RgbSprite[] var8 = null;
+        RgbSprite var9 = null;
         int var10 = 0;
         int var11 = 0;
-        jp var12 = null;
+        RgbSprite var12 = null;
         int var12_int = 0;
         int var13 = 0;
-        jp[] var14 = null;
-        jp var15 = null;
-        jp var12Lifetime1;
+        RgbSprite[] var14 = null;
+        RgbSprite var15 = null;
+        RgbSprite var12Lifetime1;
         int var12_intLifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -302,29 +302,29 @@ final class oj extends ep {
           if (param0 == 2) {
             var15 = bq.field_e[1][oo.field_w.nextBoundedInt(-37880252, bq.field_e[1].length)];
             var12 = var15;
-            var12.f((var11 + param6 * param2 - var15.field_x * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
+            var12.f((var11 + param6 * param2 - var15.canvasWidth * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
           }
-          tf.field_c[0].c(var11 / param2 + param6, var10 / param2 + param3);
+          tf.field_c[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
           if (var7 != null) {
-            var14[0].c(param6 + var11 / param2, param3 + var10 / param2);
+            var14[0].drawTransparent(param6 + var11 / param2, param3 + var10 / param2);
           }
           var11 += 16;
           for (var12_int = 0; param1.sizeStage / 2 > var12_int; var12_int++) {
-            fq.field_d[0].c(var11 / param2 + param6, param3 + var10 / param2);
+            fq.field_d[0].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
             if (null != var8) {
-              var8[0].c(var11 / param2 + param6, var10 / param2 + param3);
+              var8[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
             }
             var11 += 6;
           }
-          gg.field_o.c(param6 + var11 / param2, var10 / param2 + param3);
+          gg.field_o.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           if (var9 != null) {
-            var9.c(param6 + var11 / param2, var10 / param2 + param3);
+            var9.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           }
           var11 += 8;
           for (var12_intLifetime1 = 0; param1.sizeStage / 2 > var12_intLifetime1; var12_intLifetime1++) {
-            fq.field_d[1].c(var11 / param2 + param6, var10 / param2 + param3);
+            fq.field_d[1].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
             if (null != var8) {
-              var8[1].c(var11 / param2 + param6, param3 + var10 / param2);
+              var8[1].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
             }
             var11 += 6;
           }
@@ -332,11 +332,11 @@ final class oj extends ep {
             var12Lifetime1 = bq.field_e[0][oo.field_w.nextBoundedInt(-37880252, bq.field_e[0].length)];
             var12Lifetime1.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 + var10) / param2, 196);
           }
-          tf.field_c[1].c(param6 + var11 / param2, var10 / param2 + param3);
+          tf.field_c[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           if (var7 == null) {
             return;
           }
-          var14[1].c(param6 + var11 / param2, param3 + var10 / param2);
+          var14[1].drawTransparent(param6 + var11 / param2, param3 + var10 / param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

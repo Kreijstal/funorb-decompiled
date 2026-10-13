@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hb extends tk {
+abstract class hb extends DualLinkNode {
     static boolean field_y;
     static long field_x;
     static int[] field_z;

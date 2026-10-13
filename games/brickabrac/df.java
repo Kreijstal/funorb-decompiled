@@ -5,7 +5,7 @@ final class df {
     static String field_b;
     static String field_d;
     static String field_c;
-    static jp[] field_a;
+    static RgbSprite[] field_a;
 
     final static String decodeCp1252(int length, int obfuscationGuard, byte[] data, int offset) {
         int var7 = 0;

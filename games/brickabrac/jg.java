@@ -8,7 +8,7 @@ final class jg {
     private byte[] field_e;
     private long field_h;
     static String field_p;
-    static jp field_a;
+    static RgbSprite field_a;
     private long field_m;
     private long field_l;
     private long field_i;
@@ -420,7 +420,7 @@ final class jg {
     final static void a(int param0, PlayerBoard param1, lj param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
-        jp var8 = null;
+        RgbSprite var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var13 = 0;
@@ -454,8 +454,8 @@ final class jg {
               var9Lifetime1 = 128;
             }
           }
-          var11 = (var10 * var8.field_D >> 7) / param3;
-          var12 = (var10 * var8.field_C >> 7) / param3;
+          var11 = (var10 * var8.width >> 7) / param3;
+          var12 = (var10 * var8.height >> 7) / param3;
           var8.b(-(var11 >> 1) + var6_int, var7 - (var12 >> 1), var11, var12, var9Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,25 +5,25 @@ final class sn extends ki {
     static String field_s;
     static String field_u;
     static String field_r;
-    static jp field_t;
+    static RgbSprite field_t;
 
-    private final static void a(jp param0, int param1, int param2, int param3, int param4, jp param5, int param6, int param7, int param8, int param9, jp param10, int param11, jp param12) {
+    private final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, RgbSprite param5, int param6, int param7, int param8, int param9, RgbSprite param10, int param11, RgbSprite param12) {
         try {
-          param12.d(-((-param3 + param12.field_x) / 2) + (param6 + (param2 * param7 >> 16)), param8);
-          og.a(-121, 144, 128, param10, 11970969, (param2 * 9 >> 16) + (-param10.field_x + param3) / 2 + param6 - 35 / param1, -(120 / param1) - param10.field_z + (param9 + param4) + param8);
-          param5.c(-(23 / param1) + (10 * param2 >> 16) + (param6 + (-param5.field_z + param3) / 2), -param5.field_z + param9 + (param8 + param4));
-          param0.c(-(279 / param1) + (param3 - param0.field_z) / 2 + (param6 + (20 * param2 >> 16)), -param0.field_z + param9 + (param8 + param4));
+          param12.drawAt(-((-param3 + param12.canvasWidth) / 2) + (param6 + (param2 * param7 >> 16)), param8);
+          og.a(-121, 144, 128, param10, 11970969, (param2 * 9 >> 16) + (-param10.canvasWidth + param3) / 2 + param6 - 35 / param1, -(120 / param1) - param10.canvasHeight + (param9 + param4) + param8);
+          param5.drawTransparent(-(23 / param1) + (10 * param2 >> 16) + (param6 + (-param5.canvasHeight + param3) / 2), -param5.canvasHeight + param9 + (param8 + param4));
+          param0.drawTransparent(-(279 / param1) + (param3 - param0.canvasHeight) / 2 + (param6 + (20 * param2 >> 16)), -param0.canvasHeight + param9 + (param8 + param4));
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "sn.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final jp[] a(byte param0, int param1) {
+    final RgbSprite[] a(byte param0, int param1) {
         int var3 = -31 / ((param0 - 65) / 49);
         return rd.field_d[-1 + param1];
     }
 
-    final jp a(boolean param0, int param1) {
+    final RgbSprite a(boolean param0, int param1) {
         if (!param0) {
           this.a((byte) 31, 89, 39, 72);
         }
@@ -40,9 +40,9 @@ final class sn extends ki {
         field_u = null;
     }
 
-    final jp[] a(int param0, boolean param1) {
+    final RgbSprite[] a(int param0, boolean param1) {
         if (!param1) {
-          return (jp[]) null;
+          return (RgbSprite[]) null;
         }
         return kh.field_d[param0 - 1];
     }
@@ -50,9 +50,9 @@ final class sn extends ki {
     sn(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-          sk.field_J = new jp[2];
-          rd.field_d = new jp[2][];
-          kh.field_d = new jp[2][];
+          sk.field_J = new RgbSprite[2];
+          rd.field_d = new RgbSprite[2][];
+          kh.field_d = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "sn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -61,15 +61,15 @@ final class sn extends ki {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 110 % ((param0 + 28) / 43);
         if (param1 > -1) {
-          lb.g(param2, param3, 153, 240, 16777215);
+          Rasterizer2D.fillRectangle(param2, param3, 153, 240, 16777215);
         } else {
-          lb.g(param2, param3, 153, 240, 16777215, 11184810);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 240, 16777215, 11184810);
         }
         if (param1 > -1) {
           la.a(param2, param3, 153, 240, IntrusiveNode.field_h[param1], 11970969, 152);
         }
         if (this.b((byte) -112)) {
-          re.field_h.c(param2, param3);
+          re.field_h.drawTransparent(param2, param3);
         }
     }
 
@@ -83,7 +83,7 @@ final class sn extends ki {
           }
           sn.a(t.field_a, 2, param4, 306, -10, IntrusiveNode.field_d, param2, 5, param0, 480, er.field_d, param3, var6.field_p);
         } else {
-          lb.g(param2, param0, 306, 480, 16777215);
+          Rasterizer2D.fillRectangle(param2, param0, 306, 480, 16777215);
         }
         if (param1 > -84) {
           field_r = (String) null;
@@ -96,7 +96,7 @@ final class sn extends ki {
           sn.b((byte) -60, 50);
         }
         if (!this.b((byte) -124)) {
-          lb.g(param4, param2, 640, 480, 16777215);
+          Rasterizer2D.fillRectangle(param4, param2, 640, 480, 16777215);
         } else {
           var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
@@ -143,8 +143,8 @@ final class sn extends ki {
         gp.field_d.a(120, param1, qh.field_f, 640, (byte) 64);
         fj.a(kn.field_z, 5, ej.field_O - 24, 640, om.field_oc, 0, (byte) 94);
         if (param0 > -70) {
-          jp var4 = (jp) null;
-          sn.a((jp) null, 67, 35, -28, -34, (jp) null, -56, 62, -67, 118, (jp) null, -55, (jp) null);
+          RgbSprite var4 = (RgbSprite) null;
+          sn.a((RgbSprite) null, 67, 35, -28, -34, (RgbSprite) null, -56, 62, -67, 118, (RgbSprite) null, -55, (RgbSprite) null);
         }
     }
 

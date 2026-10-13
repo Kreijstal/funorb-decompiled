@@ -6,11 +6,11 @@ final class dg implements ub {
     static String field_k;
     private int field_i;
     private int field_h;
-    static jp field_e;
+    static RgbSprite field_e;
     private int field_c;
     private int field_a;
-    static jp field_g;
-    static jp[] field_b;
+    static RgbSprite field_g;
+    static RgbSprite[] field_b;
     private int field_f;
     static int field_d;
     private int field_l;
@@ -46,15 +46,15 @@ final class dg implements ub {
             stackIn_4_0 = null;
           }
           var12 = (qi) (stackIn_4_0);
-          lb.g(param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, this.field_i);
+          Rasterizer2D.fillRectangle(param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, this.field_i);
           if (var12 != null) {
           }
           var7 = param3.field_t - 2 * var12.field_L;
           var8 = param2 - (-param3.field_o - var12.field_L);
           var9 = var12.field_M + param3.field_w + param4;
-          lb.d(var8, var9, var7 + var8, var9, this.field_l);
+          Rasterizer2D.drawLine(var8, var9, var7 + var8, var9, this.field_l);
           for (var10 = var12.c(false) - 1; var10 >= 0; var10--) {
-            lb.f(var8 + var12.a(var10, false) * var7 / var12.h(-119), var9, this.field_c, this.field_a);
+            Rasterizer2D.f(var8 + var12.a(var10, false) * var7 / var12.h(-119), var9, this.field_c, this.field_a);
           }
           if (param1 != -20618) {
             dg.a(46);
@@ -114,10 +114,10 @@ final class dg implements ub {
         fc.a(-90, me.field_b);
         mg.c();
         if (!param0) {
-          lb.d();
+          Rasterizer2D.clear();
           jl.b(-120);
           if (256 > var5) {
-            lb.d(0, 0, lb.field_c, lb.field_d, 0, 256 - var5);
+            Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
           }
           sc.b(-96);
           if (ld.field_t < 150) {
@@ -151,10 +151,10 @@ final class dg implements ub {
           return;
         }
         dg.a(-70);
-        lb.d();
+        Rasterizer2D.clear();
         jl.b(-120);
         if (256 > var5) {
-          lb.d(0, 0, lb.field_c, lb.field_d, 0, 256 - var5);
+          Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
         }
         sc.b(-96);
         if (ld.field_t < 150) {
@@ -199,7 +199,7 @@ final class dg implements ub {
         bd.a(17, param0);
     }
 
-    final static void a(int param0, int param1, int param2, jp param3, jp param4, int param5, int param6, jp param7, int param8, int param9) {
+    final static void a(int param0, int param1, int param2, RgbSprite param3, RgbSprite param4, int param5, int param6, RgbSprite param7, int param8, int param9) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -210,9 +210,9 @@ final class dg implements ub {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
         try {
-          param4.d((param8 * 5 >> 16) + param2 + (param1 - param4.field_x) / 2, param5);
-          param7.c((-param7.field_x + param1) / 2 + (param2 + (10 * param8 >> 16)), -param7.field_z + 480 + (param9 + param5));
-          param3.c((20 * param8 >> 16) + (param1 - param3.field_x) / 2 + param2, -param3.field_z + (480 + param5) + param9);
+          param4.drawAt((param8 * 5 >> 16) + param2 + (param1 - param4.canvasWidth) / 2, param5);
+          param7.drawTransparent((-param7.canvasWidth + param1) / 2 + (param2 + (10 * param8 >> 16)), -param7.canvasHeight + 480 + (param9 + param5));
+          param3.drawTransparent((20 * param8 >> 16) + (param1 - param3.canvasWidth) / 2 + param2, -param3.canvasHeight + (480 + param5) + param9);
           if (param0 != -899814320) {
             dg.a(-80);
           }

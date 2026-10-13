@@ -17,15 +17,15 @@ abstract class tl {
           field_b = null;
           return;
         }
-        jp var2 = (jp) null;
-        tl.a((jp) null, (byte) 73, 53, -72, (jp) null, (jp) null, 93, 73, -92, 81, -52);
+        RgbSprite var2 = (RgbSprite) null;
+        tl.a((RgbSprite) null, (byte) 73, 53, -72, (RgbSprite) null, (RgbSprite) null, 93, 73, -92, 81, -52);
         field_c = null;
         field_b = null;
     }
 
     abstract void a(int param0, byte[] param1);
 
-    final static void a(jp param0, byte param1, int param2, int param3, jp param4, jp param5, int param6, int param7, int param8, int param9, int param10) {
+    final static void a(RgbSprite param0, byte param1, int param2, int param3, RgbSprite param4, RgbSprite param5, int param6, int param7, int param8, int param9, int param10) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -39,9 +39,9 @@ abstract class tl {
           if (param1 != -78) {
             field_c = (String) null;
           }
-          param0.d((-param0.field_x + param3) / 2 + (param9 + (param6 * 5 >> 16)), param2);
-          param5.c(-(8 / param10) + ((param6 * 10 >> 16) + ((param3 - param5.field_x) / 2 + param9)), -(30 / param10) + (param2 + (param7 + 480) - param5.field_z));
-          param4.c((20 * param6 >> 16) + ((param3 - param4.field_x) / 2 + param9), 480 - param4.field_z);
+          param0.drawAt((-param0.canvasWidth + param3) / 2 + (param9 + (param6 * 5 >> 16)), param2);
+          param5.drawTransparent(-(8 / param10) + ((param6 * 10 >> 16) + ((param3 - param5.canvasWidth) / 2 + param9)), -(30 / param10) + (param2 + (param7 + 480) - param5.canvasHeight));
+          param4.drawTransparent((20 * param6 >> 16) + ((param3 - param4.canvasWidth) / 2 + param9), 480 - param4.canvasHeight);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

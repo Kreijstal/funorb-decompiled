@@ -11,10 +11,10 @@ abstract class fc {
     int field_d;
     int field_f;
 
-    final static void a(int param0, jp param1) {
+    final static void a(int param0, RgbSprite param1) {
         try {
           jf.d(-99);
-          lb.a(param1.field_G, param1.field_x, param1.field_z);
+          Rasterizer2D.bind(param1.pixels, param1.canvasWidth, param1.canvasHeight);
           if (param0 > -46) {
             tp[] var3 = (tp[]) null;
             fc.a(79, (byte[]) null, 74, (tp[]) null, -94, -115);
@@ -119,11 +119,11 @@ abstract class fc {
           var40 = new byte[256][];
           var33 = var40;
           var11 = var33;
-          var45 = lb.field_l;
-          var13 = lb.field_c;
-          var14 = lb.field_d;
+          var45 = Rasterizer2D.pixels;
+          var13 = Rasterizer2D.width;
+          var14 = Rasterizer2D.height;
           var44 = new int[4];
-          lb.a(var44);
+          Rasterizer2D.saveClip(var44);
           for (var16_int = 0; var16_int < 256; var16_int++) {
             var6[var16_int] = -param0 + param3[var16_int].field_b;
             var7[var16_int] = -param0 + param3[var16_int].field_g;
@@ -137,19 +137,19 @@ abstract class fc {
             var20 = param3[var16_int].field_a;
             var21 = var36[var16_int];
             var22 = -var19 + var21;
-            lb.a(new int[var36[var16_int] * var37[var16_int]], var36[var16_int], var37[var16_int]);
+            Rasterizer2D.bind(new int[var36[var16_int] * var37[var16_int]], var36[var16_int], var37[var16_int]);
             var23 = 0;
             for (var24 = 0; var20 > var24; var24++) {
               for (var25 = 0; var19 > var25; var25++) {
                 incrementValue$3 = var23;
                 var23++;
                 if (0 != var18[incrementValue$3]) {
-                  lb.f(var25 + param0, param0 + var24, param0, 2);
+                  Rasterizer2D.f(var25 + param0, param0 + var24, param0, 2);
                 }
               }
             }
             for (var24Lifetime1 = 0; var24Lifetime1 < var17.length; var24Lifetime1++) {
-              var17[var24Lifetime1] = (byte)lb.field_l[var24Lifetime1];
+              var17[var24Lifetime1] = (byte)Rasterizer2D.pixels[var24Lifetime1];
             }
             var23Lifetime1 = 0;
             var24Lifetime2 = (1 + var36[var16_int]) * param0;
@@ -175,8 +175,8 @@ abstract class fc {
             return stackIn_28_0;
           }
           var16.field_L = var16.field_L - param0;
-          lb.a(var45, var13, var14);
-          lb.b(var44);
+          Rasterizer2D.bind(var45, var13, var14);
+          Rasterizer2D.restoreClip(var44);
           stackIn_30_0 = var16;
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

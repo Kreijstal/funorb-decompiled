@@ -5,12 +5,12 @@ final class bq {
     static String field_a;
     static ck field_b;
     static int field_d;
-    static jp[] field_c;
+    static RgbSprite[] field_c;
     static String field_f;
-    static jp[][] field_e;
+    static RgbSprite[][] field_e;
 
     public static void a(boolean param0) {
-        field_e = (jp[][]) null;
+        field_e = (RgbSprite[][]) null;
         field_f = null;
         field_c = null;
         field_b = null;
@@ -22,7 +22,7 @@ final class bq {
 
     final static mf a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param0 != -6) {
-          field_c = (jp[]) null;
+          field_c = (RgbSprite[]) null;
         }
         return go.a(param4, param3, false, param1, param2, true);
     }

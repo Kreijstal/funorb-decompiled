@@ -34,7 +34,7 @@ final class jj {
               if (me.b(param0 + 39)) {
                 var2 = (jq.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
-                  lb.d(0, 0, lb.field_c, lb.field_d, 0, var2);
+                  Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2);
                   var1 = 1;
                 }
               }
@@ -46,7 +46,7 @@ final class jj {
               if (me.b(param0 + 39)) {
                 var2 = (jq.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
-                  lb.d(0, 0, lb.field_c, lb.field_d, 0, var2);
+                  Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2);
                   var1 = 1;
                 }
               }
@@ -55,7 +55,7 @@ final class jj {
             if (me.b(param0 + 39)) {
               var2 = (jq.field_p - 1 << 8) / 16;
               if (var2 > 0) {
-                lb.d(0, 0, lb.field_c, lb.field_d, 0, var2);
+                Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2);
                 var1 = 1;
               }
             }
@@ -63,7 +63,7 @@ final class jj {
           }
           if (!lg.a(9)) {
             if (uc.f(21651)) {
-              lb.b(0, 0, lb.field_c, lb.field_d);
+              Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
               var1 = 1;
               gi.g(param0 ^ -11184849);
             }
@@ -75,7 +75,7 @@ final class jj {
             if (me.b(param0 + 39)) {
               var2Lifetime4 = (jq.field_p - 1 << 8) / 16;
               if (var2Lifetime4 > 0) {
-                lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime4);
+                Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime4);
                 var1 = 1;
               }
             }
@@ -91,7 +91,7 @@ final class jj {
           if (me.b(param0 + 39)) {
             var2Lifetime5 = (jq.field_p - 1 << 8) / 16;
             if (var2Lifetime5 > 0) {
-              lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime5);
+              Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime5);
               var1 = 1;
             }
           }
@@ -108,7 +108,7 @@ final class jj {
           if (me.b(param0 + 39)) {
             var2Lifetime1 = (jq.field_p - 1 << 8) / 16;
             if (var2Lifetime1 > 0) {
-              lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime1);
+              Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime1);
               var1 = 1;
             }
           }
@@ -116,7 +116,7 @@ final class jj {
         }
         if (!lg.a(9)) {
           if (uc.f(21651)) {
-            lb.b(0, 0, lb.field_c, lb.field_d);
+            Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
             var1 = 1;
             gi.g(param0 ^ -11184849);
           }
@@ -128,7 +128,7 @@ final class jj {
           if (me.b(param0 + 39)) {
             var2Lifetime2 = (jq.field_p - 1 << 8) / 16;
             if (var2Lifetime2 > 0) {
-              lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime2);
+              Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime2);
               var1 = 1;
             }
           }
@@ -144,7 +144,7 @@ final class jj {
         if (me.b(param0 + 39)) {
           var2Lifetime3 = (jq.field_p - 1 << 8) / 16;
           if (var2Lifetime3 > 0) {
-            lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime3);
+            Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, var2Lifetime3);
             var1Lifetime1 = 1;
           }
         }

@@ -6,16 +6,16 @@ final class kh {
     static int[][] field_e;
     private NodeDeque field_g;
     static int field_a;
-    static jp[][] field_d;
+    static RgbSprite[][] field_d;
     static int[][] field_c;
     static mf field_i;
     static int[][] field_h;
-    static jp field_b;
+    static RgbSprite field_b;
 
     public static void c(int param0) {
         field_b = null;
         field_i = null;
-        field_d = (jp[][]) null;
+        field_d = (RgbSprite[][]) null;
         field_h = (int[][]) null;
         field_e = (int[][]) null;
         if (param0 > 23) {

@@ -52,7 +52,7 @@ class oq extends lh {
 
     void drawScreen(byte obfuscationGuard) {
         pe.field_o.drawScreen((byte) -116);
-        lb.b(0, 0, 640, 480);
+        Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         this.g(102);
         pg.d(0);
         if (obfuscationGuard <= -14) {

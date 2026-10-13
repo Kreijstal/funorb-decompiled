@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Ball extends CircleBody {
-    static jp field_w;
+    static RgbSprite field_w;
     static mh field_A;
     static String field_H;
     int brickBounceCount;
     static java.math.BigInteger field_F;
-    static jp[] field_G;
+    static RgbSprite[] field_G;
     private int launchAngle;
-    static jp[] field_K;
+    static RgbSprite[] field_K;
     IntHistoryBuffer centerXHistory256;
     int penetrationTicks;
     static String field_x;
     int contactCount;
     int phaseTicks;
-    static jp field_D;
+    static RgbSprite field_D;
     int destroyedBrickStreak;
     IntHistoryBuffer centerYHistory256;
 
@@ -205,7 +205,7 @@ final class Ball extends CircleBody {
           this.phaseTicks = 0;
           return;
         }
-        field_K = (jp[]) null;
+        field_K = (RgbSprite[]) null;
         this.penetrationTicks = this.penetrationTicks + ticks;
         this.phaseTicks = 0;
     }

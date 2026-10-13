@@ -12,9 +12,9 @@ final class ik implements Iterator {
     private IntrusiveNode field_h;
     private IntrusiveNode field_k;
     static mh[] field_i;
-    static jp[] field_f;
+    static RgbSprite[] field_f;
     static String[] field_b;
-    static jp field_c;
+    static RgbSprite field_c;
 
     static int a(int param0, int param1) {
         return param0 & param1;

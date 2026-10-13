@@ -29,9 +29,9 @@ final class q {
 
     final void a(byte param0, boolean param1) {
         String[] array$0 = null;
-        jp[] stackIn_16_0 = null;
+        RgbSprite[] stackIn_16_0 = null;
         int stackIn_17_1 = 0;
-        jp[] stackIn_26_0 = null;
+        RgbSprite[] stackIn_26_0 = null;
         int stackIn_27_1 = 0;
         String stackIn_36_0;
         String[] stackIn_36_1;
@@ -40,21 +40,21 @@ final class q {
         String stackIn_37_4;
         int stackIn_47_0 = 0;
         int stackIn_56_0 = 0;
-        jp stackIn_59_0 = null;
-        jp[] var3;
+        RgbSprite stackIn_59_0 = null;
+        RgbSprite[] var3;
         String var4;
-        jp var4_ref;
+        RgbSprite var4_ref;
         int var5;
         int var6;
         int var7;
         String var8_ref_String;
         int var8;
         int var9_int;
-        jp var9;
+        RgbSprite var9;
         int var10;
-        jp var11;
-        jp var12;
-        jp var4_refLifetime1;
+        RgbSprite var11;
+        RgbSprite var12;
+        RgbSprite var4_refLifetime1;
         var10 = BrickABrac.field_J ? 1 : 0;
         if (31 != this.field_f &&
           40 != this.field_f &&
@@ -114,9 +114,9 @@ final class q {
               if (this.field_f == 20 ||
                 this.field_f == 21) {
                 var6 = var6 + dg.field_d;
-                lb.c(var6, this.field_d / 2 + this.field_a - 1, 121, 11184810);
-                lb.c(var6, this.field_a + this.field_d / 2, 121, 0);
-                lb.c(var6, this.field_d / 2 + this.field_a + 1, 121, 11184810);
+                Rasterizer2D.drawHorizontalLine(var6, this.field_d / 2 + this.field_a - 1, 121, 11184810);
+                Rasterizer2D.drawHorizontalLine(var6, this.field_a + this.field_d / 2, 121, 0);
+                Rasterizer2D.drawHorizontalLine(var6, this.field_d / 2 + this.field_a + 1, 121, 11184810);
                 if (20 != this.field_f) {
                   stackIn_56_0 = qi.i(-29946) * 120 / 256;
                 } else {
@@ -129,7 +129,7 @@ final class q {
                   stackIn_59_0 = g.field_l[1];
                 }
                 var9 = stackIn_59_0;
-                var9.c(var8 + (var6 + (-1 - var9.field_x / 2)), (-var9.field_z + this.field_d) / 2 + this.field_a);
+                var9.drawTransparent(var8 + (var6 + (-1 - var9.canvasWidth / 2)), (-var9.canvasHeight + this.field_d) / 2 + this.field_a);
               }
               if (param0 != 4) {
                 this.a(-113, 101, -34);
@@ -141,9 +141,9 @@ final class q {
             var12 = stackIn_26_0[stackIn_27_1];
             var4_ref = var12;
             if (44 == this.field_f) {
-              var4_ref.c((this.field_j - var12.field_x) / 2 + this.field_c, this.field_a + (-var12.field_z + this.field_d) / 2);
+              var4_ref.drawTransparent((this.field_j - var12.canvasWidth) / 2 + this.field_c, this.field_a + (-var12.canvasHeight + this.field_d) / 2);
             } else {
-              var4_ref.f((-var12.field_x + this.field_j) / 2 + this.field_c, this.field_a + (-var12.field_z + this.field_d) / 2);
+              var4_ref.f((-var12.canvasWidth + this.field_j) / 2 + this.field_c, this.field_a + (-var12.canvasHeight + this.field_d) / 2);
             }
             return;
           }
@@ -152,9 +152,9 @@ final class q {
           var11 = stackIn_16_0[stackIn_17_1];
           var4_refLifetime1 = var11;
           if (this.field_f == 29) {
-            var4_refLifetime1.c(this.field_c + (this.field_j - var11.field_x) / 2, this.field_a + (-var11.field_z + this.field_d) / 2);
+            var4_refLifetime1.drawTransparent(this.field_c + (this.field_j - var11.canvasWidth) / 2, this.field_a + (-var11.canvasHeight + this.field_d) / 2);
           } else {
-            var4_refLifetime1.g((-var11.field_x + this.field_j) / 2 + this.field_c, this.field_a + (-var11.field_z + this.field_d) / 2);
+            var4_refLifetime1.g((-var11.canvasWidth + this.field_j) / 2 + this.field_c, this.field_a + (-var11.canvasHeight + this.field_d) / 2);
           }
           return;
         }

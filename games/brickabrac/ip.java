@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ip extends ki {
-    static jp[][] field_v;
+    static RgbSprite[][] field_v;
     static String field_t;
     static IsaacGenerator field_r;
     static NodeDeque field_s;
@@ -11,10 +11,10 @@ final class ip extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var7;
         if (!param0) {
-          field_v = (jp[][]) null;
+          field_v = (RgbSprite[][]) null;
         }
         if (!this.b((byte) -99)) {
-          lb.g(param4, param2, 640, 480, ro.field_x[param3], 16777215);
+          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, ro.field_x[param3], 16777215);
           if (BrickABrac.field_J) {
             var7 = PowerUp.a(this.field_m, param3, -20777);
             if (!var7.a((byte) -84, param3, this.field_m)) {
@@ -33,12 +33,12 @@ final class ip extends ki {
         }
     }
 
-    final jp[] a(byte param0, int param1) {
+    final RgbSprite[] a(byte param0, int param1) {
         int var3 = -53 / ((65 - param0) / 49);
-        return tk.field_l[-1 + param1];
+        return DualLinkNode.field_l[-1 + param1];
     }
 
-    final jp a(boolean param0, int param1) {
+    final RgbSprite a(boolean param0, int param1) {
         if (!param0) {
           this.b((byte) -1);
         }
@@ -813,7 +813,7 @@ final class ip extends ki {
           var3 = (om) null;
           ip.a(81, (om) null, true, true);
         }
-        stackIn_13_0 = (null != ch.field_f) && (null != dg.field_g) && (np.field_d != null) && (null != Brick.field_w) && (null != ep.field_h) && (tk.field_l != null) && (ae.field_g != null) && (null != up.field_A);
+        stackIn_13_0 = (null != ch.field_f) && (null != dg.field_g) && (np.field_d != null) && (null != Brick.field_w) && (null != ep.field_h) && (DualLinkNode.field_l != null) && (ae.field_g != null) && (null != up.field_A);
         return stackIn_13_0;
     }
 
@@ -829,9 +829,9 @@ final class ip extends ki {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          tk.field_l = new jp[2][];
-          up.field_A = new jp[2];
-          ae.field_g = new jp[2][];
+          DualLinkNode.field_l = new RgbSprite[2][];
+          up.field_A = new RgbSprite[2];
+          ae.field_g = new RgbSprite[2][];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -856,7 +856,7 @@ final class ip extends ki {
         }
     }
 
-    final jp[] a(int param0, boolean param1) {
+    final RgbSprite[] a(int param0, boolean param1) {
         if (!param1) {
           field_t = (String) null;
         }
@@ -866,19 +866,19 @@ final class ip extends ki {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5;
         if (param1 > -1) {
-          lb.g(param2, param3, 153, 238, ro.field_x[param1], 16777215);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, ro.field_x[param1], 16777215);
         }
         if (param1 <= -1 ||
           BrickABrac.field_J) {
-          lb.g(param2, param3, 153, 238, 16777215, 11184810);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 16777215, 11184810);
         }
         if (this.b((byte) -125)) {
-          Brick.field_w.c(param2, param3);
+          Brick.field_w.drawTransparent(param2, param3);
         }
         var5 = 107 / ((param0 + 28) / 43);
     }
 
-    final jp c(byte param0) {
+    final RgbSprite c(byte param0) {
         if (param0 > -74) {
           this.b((byte) -112);
         }
@@ -888,10 +888,10 @@ final class ip extends ki {
     public static void b(boolean param0) {
         field_t = null;
         field_u = null;
-        field_v = (jp[][]) null;
+        field_v = (RgbSprite[][]) null;
         field_s = null;
         if (param0) {
-          field_v = (jp[][]) null;
+          field_v = (RgbSprite[][]) null;
         }
         field_r = null;
     }
@@ -899,7 +899,7 @@ final class ip extends ki {
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         pb var7;
         if (!this.b((byte) -95)) {
-          lb.g(param2, param0, 306, 480, ro.field_x[param3], 16777215);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, ro.field_x[param3], 16777215);
           if (BrickABrac.field_J) {
             var7 = kd.a(this.field_m, param3, (byte) -121);
             if (!var7.a((byte) -84, param3, this.field_m)) {
@@ -933,10 +933,10 @@ final class ip extends ki {
         fk.field_e = jh.a(0, dg.field_g);
         ib.field_E = jh.a(0, np.field_d);
         ep.field_h = pl.a("jungle", "jungle_character", (byte) -119, i.field_m);
-        tk.field_l[0] = cr.a("jungle", i.field_m, "jungle_caps", 2);
+        DualLinkNode.field_l[0] = cr.a("jungle", i.field_m, "jungle_caps", 2);
         ae.field_g[0] = cr.a("jungle", i.field_m, "jungle_segs", 2);
         up.field_A[0] = pl.a("jungle", "jungle_centre", (byte) -110, i.field_m);
-        tk.field_l[1] = ig.a(tk.field_l[0], false);
+        DualLinkNode.field_l[1] = ig.a(DualLinkNode.field_l[0], false);
         ae.field_g[1] = ig.a(ae.field_g[0], param0);
         up.field_A[1] = pl.a(-16371, up.field_A[0]);
         return true;

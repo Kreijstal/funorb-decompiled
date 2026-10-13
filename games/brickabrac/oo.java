@@ -8,7 +8,7 @@ final class oo extends ki {
     static mh field_u;
     static String field_s;
     static boolean field_r;
-    private static jp field_x;
+    private static RgbSprite field_x;
     static int field_v;
 
     final void a(byte param0, int param1, int param2, int param3) {
@@ -18,11 +18,11 @@ final class oo extends ki {
           return;
         }
         if (-1 >= param1) {
-          u.field_c.c(param2, param3);
+          u.field_c.drawTransparent(param2, param3);
         } else {
           la.a(u.field_c, param2, param3, ab.field_C[param1]);
         }
-        dj.field_a.c(param2, param3);
+        dj.field_a.drawTransparent(param2, param3);
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -30,7 +30,7 @@ final class oo extends ki {
         if (param1 > -84) {
           this.b(33);
           if (!this.b((byte) -128)) {
-            lb.g(param2, param0, 306, 480, 16777215);
+            Rasterizer2D.fillRectangle(param2, param0, 306, 480, 16777215);
             return;
           }
           var7 = kd.a(this.field_m, param3, (byte) -50);
@@ -45,7 +45,7 @@ final class oo extends ki {
           return;
         }
         if (!this.b((byte) -128)) {
-          lb.g(param2, param0, 306, 480, 16777215);
+          Rasterizer2D.fillRectangle(param2, param0, 306, 480, 16777215);
           return;
         }
         pb var8 = kd.a(this.field_m, param3, (byte) -50);
@@ -59,7 +59,7 @@ final class oo extends ki {
         ua.a(th.field_i, param2, 306, param0, ek.field_hb, 79, var8.field_p, param4, param3, 2, up.field_w, -35);
     }
 
-    final jp a(boolean param0, int param1) {
+    final RgbSprite a(boolean param0, int param1) {
         if (param0) {
           return lm.field_e[param1 - 1];
         }
@@ -92,7 +92,7 @@ final class oo extends ki {
         return true;
     }
 
-    final jp c(byte param0) {
+    final RgbSprite c(byte param0) {
         if (param0 >= -74) {
           this.a(false, 35, 0, 38, 68);
           return dc.field_c;
@@ -100,7 +100,7 @@ final class oo extends ki {
         return dc.field_c;
     }
 
-    final jp[] a(int param0, boolean param1) {
+    final RgbSprite[] a(int param0, boolean param1) {
         if (!param1) {
           field_t = (String) null;
           return aj.field_a[-1 + param0];
@@ -130,7 +130,7 @@ final class oo extends ki {
         return new m(ud.d(true), la.b((byte) 118));
     }
 
-    final jp[] b(int param0) {
+    final RgbSprite[] b(int param0) {
         if (param0 >= -12) {
           field_r = false;
           return gq.field_Ub;
@@ -153,14 +153,14 @@ final class oo extends ki {
           }
           return;
         }
-        lb.g(param4, param2, 640, 480, 16777215);
+        Rasterizer2D.fillRectangle(param4, param2, 640, 480, 16777215);
         if (!param0) {
           field_t = (String) null;
           return;
         }
     }
 
-    final jp[] a(byte param0, int param1) {
+    final RgbSprite[] a(byte param0, int param1) {
         int var3 = -63 % ((65 - param0) / 49);
         return Brick.field_I[-1 + param1];
     }
@@ -168,9 +168,9 @@ final class oo extends ki {
     oo(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-          aj.field_a = new jp[2][];
-          lm.field_e = new jp[2];
-          Brick.field_I = new jp[2][];
+          aj.field_a = new RgbSprite[2][];
+          lm.field_e = new RgbSprite[2];
+          Brick.field_I = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -232,7 +232,7 @@ final class oo extends ki {
           try {
             try {
               if (param1 != 0) {
-                field_x = (jp) null;
+                field_x = (RgbSprite) null;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
               param0.getAppletContext().showDocument(hg.a(param0, var2, -1), "_top");

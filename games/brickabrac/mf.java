@@ -12,7 +12,7 @@ final class mf {
     static cp field_f;
     static String field_e;
     boolean field_b;
-    static jp[] field_a;
+    static RgbSprite[] field_a;
     static int[] field_d;
 
     public static void a(boolean param0) {
@@ -131,7 +131,7 @@ final class mf {
           }
           param0 = param0.toLowerCase();
           if (param1 != -28138) {
-            field_a = (jp[]) null;
+            field_a = (RgbSprite[]) null;
           }
           var4 = (CharSequence) ((Object) param0);
           var3_int = this.field_k.field_n.a(ni.a(param1 + 28015, var4), (byte) -85);
@@ -258,7 +258,7 @@ final class mf {
           return 0;
         }
         if (param1 != -27509) {
-          field_a = (jp[]) null;
+          field_a = (RgbSprite[]) null;
         }
         if (null != this.field_j[param0]) {
           return 100;

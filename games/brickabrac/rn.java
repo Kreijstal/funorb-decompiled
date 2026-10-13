@@ -16,7 +16,7 @@ final class rn {
     static String field_b;
     private long field_j;
     static int field_h;
-    static jp[] field_a;
+    static RgbSprite[] field_a;
     private RandomAccessFile field_f;
 
     protected final void finalize() throws Throwable {
@@ -108,7 +108,7 @@ final class rn {
           field_m = null;
           return;
         }
-        field_a = (jp[]) null;
+        field_a = (RgbSprite[]) null;
         field_b = null;
         field_d = null;
         field_a = null;

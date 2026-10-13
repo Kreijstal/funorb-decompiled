@@ -8,7 +8,7 @@ final class un {
     static int field_a;
     static String field_h;
     static String[] field_c;
-    static jp field_d;
+    static RgbSprite field_d;
     static long field_g;
     static boolean field_f;
     static th field_b;

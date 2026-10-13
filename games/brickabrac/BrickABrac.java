@@ -130,7 +130,7 @@ public final class BrickABrac extends sa {
     final void b(boolean param0) {
         this.a((byte) 39, 0, 2, param0, 1, 4, 14, 65);
         hi.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
-        nk.field_c = new jp(640, 480);
+        nk.field_c = new RgbSprite(640, 480);
         oc.a(lp.field_ub, (byte) 60, kj.field_D);
         this.a(3160, new ij());
         am.a(ch.field_g, 1);
@@ -587,7 +587,7 @@ public final class BrickABrac extends sa {
         gh.a(-21727);
         vj.a(true);
         hm.a(8);
-        lb.c();
+        Rasterizer2D.clearStaticReferences();
         mc.a(-128);
         tm.a(param0);
         wo.b(78);
@@ -617,8 +617,8 @@ public final class BrickABrac extends sa {
         GameplayScreen.d(81);
         Brick.d(4641);
         IntrusiveNode.a(true);
-        mn.f(2);
-        tk.a(-2);
+        SpriteGeometry.f(2);
+        DualLinkNode.a(-2);
         un.a(!param0 ? true : false);
         ie.c(-1);
         wp.a((byte) -117);

@@ -25,15 +25,15 @@ final class mg {
         if (field_g.length < field_b) {
           field_g = new int[fj.a(field_b, (byte) 108)];
         }
-        int var4 = param1 * lb.field_c + param0;
+        int var4 = param1 * Rasterizer2D.width + param0;
         for (var5 = 0; var5 < field_b; var5++) {
           field_g[var5] = var4;
-          var4 = var4 + lb.field_c;
+          var4 = var4 + Rasterizer2D.width;
         }
     }
 
     final static void c() {
-        mg.a(lb.field_i, lb.field_b, lb.field_f, lb.field_j);
+        mg.a(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, Rasterizer2D.clipRight, Rasterizer2D.clipBottom);
     }
 
     public static void b() {

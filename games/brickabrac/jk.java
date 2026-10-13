@@ -4,10 +4,10 @@
 final class jk extends ki {
     static String field_v;
     static int[] field_r;
-    static jp field_t;
+    static RgbSprite field_t;
     static tj field_w;
     static gb[] field_s;
-    static jp field_u;
+    static RgbSprite field_u;
 
     final boolean b(byte param0) {
         if (param0 > -91) {
@@ -64,7 +64,7 @@ final class jk extends ki {
           n.field_c = pl.a("water", "water_far", (byte) -121, i.field_m);
           pk.field_a = pl.a("water", "water_small", (byte) 112, i.field_m);
           sn.field_t = pl.a("water", "water_character", (byte) -43, i.field_m);
-          vj.field_b = new jp(n.field_c.field_x, n.field_c.field_z);
+          vj.field_b = new RgbSprite(n.field_c.canvasWidth, n.field_c.canvasHeight);
           fc.a(-49, vj.field_b);
           n.field_c.g(0, 0);
           sc.b(-81);
@@ -72,9 +72,9 @@ final class jk extends ki {
           GameplayScreen.field_l = jh.a(0, hk.field_Q);
           jg.field_a = jh.a(0, n.field_c);
           ig.field_P = jh.a(0, vj.field_b);
-          uo.field_d = new jp(go.field_d.field_x / 2, go.field_d.field_z);
+          uo.field_d = new RgbSprite(go.field_d.canvasWidth / 2, go.field_d.canvasHeight);
           fc.a(-83, uo.field_d);
-          go.field_d.a(0, 0, go.field_d.field_x / 2, go.field_d.field_z);
+          go.field_d.a(0, 0, go.field_d.canvasWidth / 2, go.field_d.canvasHeight);
           sc.b(-114);
           pl.a(n.field_c, 0);
           pl.a(vj.field_b, 0);
@@ -87,9 +87,9 @@ final class jk extends ki {
         return false;
     }
 
-    final jp c(byte param0) {
+    final RgbSprite c(byte param0) {
         if (param0 >= -74) {
-          field_t = (jp) null;
+          field_t = (RgbSprite) null;
           return sn.field_t;
         }
         return sn.field_t;
@@ -123,7 +123,7 @@ final class jk extends ki {
         if (param1 > -84) {
           this.a((byte) -90, 97, -35, 25);
           if (!this.b((byte) -95)) {
-            lb.g(param2, param0, 306, 480, um.field_u[param3], 928072);
+            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, um.field_u[param3], 928072);
             return;
           }
           var8 = kd.a(this.field_m, param3, (byte) 106);
@@ -135,7 +135,7 @@ final class jk extends ki {
           return;
         }
         if (!this.b((byte) -95)) {
-          lb.g(param2, param0, 306, 480, um.field_u[param3], 928072);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, um.field_u[param3], 928072);
           return;
         }
         pb var9 = kd.a(this.field_m, param3, (byte) 106);
@@ -151,7 +151,7 @@ final class jk extends ki {
         if (!param0) {
           field_w = (tj) null;
           if (!this.b((byte) -112)) {
-            lb.g(param4, param2, 640, 480, um.field_u[param3], 928072);
+            Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, um.field_u[param3], 928072);
             return;
           }
           var7 = PowerUp.a(this.field_m, param3, -20777);
@@ -163,7 +163,7 @@ final class jk extends ki {
           return;
         }
         if (!this.b((byte) -112)) {
-          lb.g(param4, param2, 640, 480, um.field_u[param3], 928072);
+          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, um.field_u[param3], 928072);
           return;
         }
         pb var8 = PowerUp.a(this.field_m, param3, -20777);
@@ -180,18 +180,18 @@ final class jk extends ki {
         int var5Lifetime2;
         int var5Lifetime3;
         if (param1 <= -1) {
-          lb.g(param2, param3, 153, 238, 16777215, 11184810);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 16777215, 11184810);
           if (this.b((byte) -98)) {
-            pk.field_a.c(param2, param3);
+            pk.field_a.drawTransparent(param2, param3);
             var5 = 14 / ((param0 + 28) / 43);
             return;
           }
           var5Lifetime3 = 14 / ((param0 + 28) / 43);
           return;
         }
-        lb.g(param2, param3, 153, 238, um.field_u[param1], 928072);
+        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, um.field_u[param1], 928072);
         if (this.b((byte) -98)) {
-          pk.field_a.c(param2, param3);
+          pk.field_a.drawTransparent(param2, param3);
           var5Lifetime1 = 14 / ((param0 + 28) / 43);
           return;
         }

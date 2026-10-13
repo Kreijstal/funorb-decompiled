@@ -24,7 +24,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
-          if (!tk.a(var10, param1)) {
+          if (!DualLinkNode.a(var10, param1)) {
             stackIn_3_0 = om.field_Xb;
             return stackIn_3_0;
           }
@@ -47,7 +47,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
             break;
           }
           var8.unlink((byte) 111);
-          var8.d(3);
+          var8.unlinkSecondary(3);
           ol.field_w = ol.field_w - 1;
           var9 = k.field_h;
           var9.writeCipheredOpcode(-13413, param0);
@@ -72,7 +72,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static void a(int param0, jp[] param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6) {
         int var22 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -112,7 +112,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
             param4 > 0 &&
             param5 != 0) {
             if (null != param1[3]) {
-              stackIn_12_0 = param1[3].field_x;
+              stackIn_12_0 = param1[3].canvasWidth;
             } else {
               stackIn_12_0 = 0;
             }
@@ -120,19 +120,19 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (null == param1[5]) {
               stackIn_15_0 = 0;
             } else {
-              stackIn_15_0 = param1[5].field_x;
+              stackIn_15_0 = param1[5].canvasWidth;
             }
             var8 = stackIn_15_0;
             if (null == param1[1]) {
               stackIn_18_0 = 0;
             } else {
-              stackIn_18_0 = param1[1].field_z;
+              stackIn_18_0 = param1[1].canvasHeight;
             }
             var9 = stackIn_18_0;
             if (null == param1[7]) {
               stackIn_21_0 = 0;
             } else {
-              stackIn_21_0 = param1[7].field_z;
+              stackIn_21_0 = param1[7].canvasHeight;
             }
             var10 = stackIn_21_0;
             var11 = param2 + param0;
@@ -153,69 +153,69 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var20 = param4 * var9 / (var9 + var10) + param6;
               var19 = param4 * var9 / (var9 + var10) + param6;
             }
-            lb.a(rg.field_g);
+            Rasterizer2D.saveClip(rg.field_g);
             if (param1[0] != null) {
-              lb.d(param0, param6, var17, var19);
+              Rasterizer2D.intersectClip(param0, param6, var17, var19);
               param1[0].b(param0, param6, param5);
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (null != param1[2]) {
-              lb.d(var18, param6, var11, var19);
+              Rasterizer2D.intersectClip(var18, param6, var11, var19);
               param1[2].b(var14, param6, param5);
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (null != param1[param3]) {
-              lb.d(param0, var20, var17, var12);
+              Rasterizer2D.intersectClip(param0, var20, var17, var12);
               param1[6].b(param0, var16, param5);
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (param1[8] != null) {
-              lb.d(var18, var20, var11, var12);
+              Rasterizer2D.intersectClip(var18, var20, var11, var12);
               param1[8].b(var14, var16, param5);
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (param1[1] != null &&
-              param1[1].field_x != 0) {
-              lb.d(var17, param6, var18, var19);
-              for (var21 = var13; var14 > var21; var21 = var21 + param1[1].field_x) {
+              param1[1].canvasWidth != 0) {
+              Rasterizer2D.intersectClip(var17, param6, var18, var19);
+              for (var21 = var13; var14 > var21; var21 = var21 + param1[1].canvasWidth) {
                 param1[1].b(var21, param6, param5);
               }
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (param1[7] != null &&
-              param1[7].field_x != 0) {
-              lb.d(var17, var20, var18, var12);
-              for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param1[7].field_x) {
+              param1[7].canvasWidth != 0) {
+              Rasterizer2D.intersectClip(var17, var20, var18, var12);
+              for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param1[7].canvasWidth) {
                 param1[7].b(var21Lifetime1, var16, param5);
               }
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (param1[3] != null &&
-              param1[3].field_z != 0) {
-              lb.d(param0, var19, var17, var20);
-              for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param1[3].field_z) {
+              param1[3].canvasHeight != 0) {
+              Rasterizer2D.intersectClip(param0, var19, var17, var20);
+              for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param1[3].canvasHeight) {
                 param1[3].b(param0, var21Lifetime2, param5);
               }
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (param1[5] != null &&
-              param1[5].field_z != 0) {
-              lb.d(var18, var19, var11, var20);
-              for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param1[5].field_z) {
+              param1[5].canvasHeight != 0) {
+              Rasterizer2D.intersectClip(var18, var19, var11, var20);
+              for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param1[5].canvasHeight) {
                 param1[5].b(var14, var21Lifetime3, param5);
               }
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
             }
             if (null != param1[4] &&
-              param1[4].field_x != 0 &&
-              0 != param1[4].field_z) {
-              lb.d(var17, var19, var18, var20);
-              for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param1[4].field_z) {
-                for (var22 = var13; var22 < var14; var22 = var22 + param1[4].field_x) {
+              param1[4].canvasWidth != 0 &&
+              0 != param1[4].canvasHeight) {
+              Rasterizer2D.intersectClip(var17, var19, var18, var20);
+              for (var21Lifetime4 = var15; var16 > var21Lifetime4; var21Lifetime4 = var21Lifetime4 + param1[4].canvasHeight) {
+                for (var22 = var13; var22 < var14; var22 = var22 + param1[4].canvasWidth) {
                   param1[4].b(var22, var21Lifetime4, param5);
                 }
               }
-              lb.b(rg.field_g);
+              Rasterizer2D.restoreClip(rg.field_g);
               return;
             }
             return;

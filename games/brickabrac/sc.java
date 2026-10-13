@@ -25,8 +25,8 @@ final class sc {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        lb.a(var1.field_i, var1.field_m, var1.field_p);
-        lb.e(var1.field_n, var1.field_o, var1.field_t, var1.field_k);
+        Rasterizer2D.bind(var1.field_i, var1.field_m, var1.field_p);
+        Rasterizer2D.setClip(var1.field_n, var1.field_o, var1.field_t, var1.field_k);
         var1.field_i = null;
         fr.field_M.addLast(var1, (byte) 3);
     }

@@ -23,10 +23,10 @@ abstract class km extends GameScreen {
           var2 = (-50 + im.field_e) * 640 / 50;
           if (0 != hc.field_h) {
             ed.a(-640 - var2, 0);
-            rp.field_s.d(-var2, 0);
+            rp.field_s.drawAt(-var2, 0);
           } else {
             ed.a(640 + var2, 0);
-            rp.field_s.d(var2, 0);
+            rp.field_s.drawAt(var2, 0);
           }
         }
         if (obfuscationGuard >= -14) {

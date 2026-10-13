@@ -1341,7 +1341,7 @@ final class ie extends qd {
         }
     }
 
-    final static void a(int param0, jp[] param1, jp[] param2, int param3, jp[] param4, int param5, int param6, dh param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, RgbSprite[] param1, RgbSprite[] param2, int param3, RgbSprite[] param4, int param5, int param6, dh param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

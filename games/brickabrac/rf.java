@@ -6,7 +6,7 @@ final class rf {
     static mh field_c;
     static boolean field_f;
     static String field_e;
-    static jp field_a;
+    static RgbSprite field_a;
     static eg field_g;
     static n field_b;
 

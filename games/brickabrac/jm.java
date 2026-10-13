@@ -138,12 +138,12 @@ final class jm {
               var6.field_Yb.field_wb = ok.field_g;
               var6.field_Yb.field_Y = 16737894;
               var8 = 1;
-              var6.field_Yb.a(np.field_a, 0, 0, ok.field_g.field_x + 3, (byte) 64);
+              var6.field_Yb.a(np.field_a, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
             }
             var9 = 0;
             var10 = var6.field_Ib;
             if (var8 != 0) {
-              var9 = ok.field_g.field_x + 3;
+              var9 = ok.field_g.canvasWidth + 3;
               var10 = var10 - var9;
             }
             stackIn_20_0 = var6.field_Xb;
@@ -172,7 +172,7 @@ final class jm {
               }
             }
             if (var6.field_L != 0) {
-              mn.a(-1, var6, f.field_c.field_Qb, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
+              SpriteGeometry.a(-1, var6, f.field_c.field_Qb, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
               var16 = bm.field_d;
               var13_ref_String = ng.field_e;
               var16.field_d.a(var13_ref_String, 7, (byte) 126);

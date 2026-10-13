@@ -6,11 +6,11 @@ import java.util.*;
 
 final class im {
     private java.util.zip.Inflater field_b;
-    static jp[] field_a;
+    static RgbSprite[] field_a;
     static boolean field_g;
     static mh field_d;
     static int field_e;
-    static jp[][] field_f;
+    static RgbSprite[][] field_f;
     static String[] field_c;
 
     private im(int param0, int param1, int param2) {
@@ -93,7 +93,7 @@ final class im {
     }
 
     public static void a(int param0) {
-        field_f = (jp[][]) null;
+        field_f = (RgbSprite[][]) null;
         field_c = null;
         if (param0 != -32) {
           return;

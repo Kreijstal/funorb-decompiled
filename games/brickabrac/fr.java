@@ -77,7 +77,7 @@ final class fr {
           sj.field_d.field_S = 1;
           gk.field_c = new mh(0L, rp.field_t, n.field_a);
           GameplayScreen.field_u = new mh(0L, ik.field_a, bc.field_c);
-          mo.field_R = new mh(0L, tk.field_t);
+          mo.field_R = new mh(0L, DualLinkNode.field_t);
           rg.field_c.a(sj.field_d, 0);
           rg.field_c.a(gk.field_c, 0);
           rg.field_c.a(GameplayScreen.field_u, 0);
@@ -105,7 +105,7 @@ final class fr {
           m.field_b = param0;
           kp.field_b = param1;
           ni.field_Wb = param2;
-          pp.a(lb.field_c / 2, lb.field_d / 2, (byte) 19);
+          pp.a(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
           if (!param3) {
             field_k = -98;
           }

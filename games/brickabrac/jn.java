@@ -26,29 +26,29 @@ final class jn {
         if (!param3) {
           var6 = 0;
         } else {
-          var6 = (lb.field_c - 1) % param0;
+          var6 = (Rasterizer2D.width - 1) % param0;
           var8 = var8 + (param0 - 1);
         }
         if (!param4) {
           var7 = 0;
         } else {
-          var7 = (lb.field_d - 1) % param0;
-          var8 = var8 + (param0 - 1) * lb.field_c;
+          var7 = (Rasterizer2D.height - 1) % param0;
+          var8 = var8 + (param0 - 1) * Rasterizer2D.width;
         }
-        var9 = var7 * lb.field_c + var6;
-        var10 = lb.field_c * param0 - (lb.field_c + param0 - 1) / param0 * param0;
-        for (var11 = var7; var11 < lb.field_d; var11 = var11 + param0) {
-          for (var12 = var6; var12 < lb.field_c; var12 = var12 + param0) {
-            var13 = lb.field_l[var9];
+        var9 = var7 * Rasterizer2D.width + var6;
+        var10 = Rasterizer2D.width * param0 - (Rasterizer2D.width + param0 - 1) / param0 * param0;
+        for (var11 = var7; var11 < Rasterizer2D.height; var11 = var11 + param0) {
+          for (var12 = var6; var12 < Rasterizer2D.width; var12 = var12 + param0) {
+            var13 = Rasterizer2D.pixels[var9];
             var14 = (var13 & 16711935) * param1 >>> 8 & 16711935;
             var13 = (var14 | (var13 & 65280) * param1 >>> 8 & 65280) + param2;
             var15 = param0;
             var16 = param0;
             var17 = var9 - var8;
-            var18 = lb.field_c;
+            var18 = Rasterizer2D.width;
             if (!param3) {
-              if (var15 > lb.field_c - var12) {
-                var15 = lb.field_c - var12;
+              if (var15 > Rasterizer2D.width - var12) {
+                var15 = Rasterizer2D.width - var12;
               }
             } else {
               if (var15 > var12 + 1) {
@@ -57,8 +57,8 @@ final class jn {
               }
             }
             if (!param4) {
-              if (var16 > lb.field_d - var11) {
-                var16 = lb.field_d - var11;
+              if (var16 > Rasterizer2D.height - var11) {
+                var16 = Rasterizer2D.height - var11;
               }
             } else {
               if (var16 > var11 + 1) {
@@ -73,7 +73,7 @@ final class jn {
               for (var20 = var15; var20 < 0; var20++) {
                 incrementValue$0 = var17;
                 var17++;
-                lb.field_l[incrementValue$0] = var13;
+                Rasterizer2D.pixels[incrementValue$0] = var13;
               }
               var17 = var17 + var18;
             }

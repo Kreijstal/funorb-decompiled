@@ -24,7 +24,7 @@ final class qb extends ki {
           }
           dg.a(-899814320, 306, param2, cr.field_D, var6.field_p, param0, 2, ep.field_b, param4, -13);
         } else {
-          lb.g(param2, param0, 306, 480, rm.field_d[param3], 22953);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, rm.field_d[param3], 22953);
         }
     }
 
@@ -38,20 +38,20 @@ final class qb extends ki {
           }
           dg.a(-899814320, 640, param4, lc.field_e, var7.field_p, param2, 1, rm.field_f, param1, 0);
         } else {
-          lb.g(param4, param2, 640, 480, rm.field_d[param3], 22953);
+          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, rm.field_d[param3], 22953);
         }
         if (!param0) {
           this.a((byte) -27, 96, -30, 88);
         }
     }
 
-    final static jp a(jp param0, boolean param1, int param2) {
+    final static RgbSprite a(RgbSprite param0, boolean param1, int param2) {
         int var4 = 0;
-        jp var3 = null;
+        RgbSprite var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        jp stackIn_3_0 = null;
-        jp stackIn_8_0 = null;
+        RgbSprite stackIn_3_0 = null;
+        RgbSprite stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -59,13 +59,13 @@ final class qb extends ki {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param1) {
-            stackIn_3_0 = (jp) null;
+            stackIn_3_0 = (RgbSprite) null;
             return stackIn_3_0;
           }
-          var3 = new jp(param0.field_x * param2, param0.field_z);
-          var3.g();
+          var3 = new RgbSprite(param0.canvasWidth * param2, param0.canvasHeight);
+          var3.bindRasterTarget();
           for (var4 = 0; param2 > var4; var4++) {
-            param0.c(param0.field_x * var4, 0);
+            param0.drawTransparent(param0.canvasWidth * var4, 0);
           }
           kc.field_q.a((byte) 116);
           stackIn_8_0 = var3;
@@ -116,12 +116,12 @@ final class qb extends ki {
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (param1 > -1) {
-          lb.g(param2, param3, 153, 238, rm.field_d[param1], 22953);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, rm.field_d[param1], 22953);
         } else {
-          lb.g(param2, param3, 153, 238, 7829367, 22953);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 7829367, 22953);
         }
         if (this.b((byte) -109)) {
-          gn.field_z.c(param2, param3);
+          gn.field_z.drawTransparent(param2, param3);
         }
         int var5 = -18 / ((-28 - param0) / 43);
     }

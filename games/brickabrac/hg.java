@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hg {
-    static jp field_g;
+    static RgbSprite field_g;
     int field_c;
     static String field_b;
     int field_f;
@@ -74,7 +74,7 @@ final class hg {
             ma.field_I = rm.a(param1, 16711935);
           }
           if (param0 != 0) {
-            field_g = (jp) null;
+            field_g = (RgbSprite) null;
           }
           stackIn_7_0 = ma.field_I;
           return stackIn_7_0;
@@ -108,7 +108,7 @@ final class hg {
         if (param0 != -1) {
           return;
         }
-        mn.field_A = 0;
+        SpriteGeometry.field_A = 0;
         dj.field_c = null;
         ea.field_b = 0;
         ae.field_b = 0;

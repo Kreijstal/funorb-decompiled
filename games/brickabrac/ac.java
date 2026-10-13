@@ -68,7 +68,7 @@ final class ac {
         }
     }
 
-    final static void a(jp[] param0, int param1, int param2, int param3, int param4, byte param5) {
+    final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4, byte param5) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -84,13 +84,13 @@ final class ac {
         try {
           if (param0 != null &&
             param3 > 0) {
-            var6_int = param0[0].field_x;
-            var7 = param0[2].field_x;
-            var8 = param0[1].field_x;
+            var6_int = param0[0].canvasWidth;
+            var7 = param0[2].canvasWidth;
+            var8 = param0[1].canvasWidth;
             param0[0].e(param2, param1, param4);
             param0[2].e(param3 + (param2 - var7), param1, param4);
-            lb.a(pb.field_n);
-            lb.d(param2 + var6_int, param1, -var7 + param2 + param3, param1 + param0[1].field_z);
+            Rasterizer2D.saveClip(pb.field_n);
+            Rasterizer2D.intersectClip(param2 + var6_int, param1, -var7 + param2 + param3, param1 + param0[1].canvasHeight);
             var9 = param2 + var6_int;
             var10 = -var7 + param3 + param2;
             if (param5 <= 121) {
@@ -99,7 +99,7 @@ final class ac {
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param0[1].e(param2, param1, param4);
             }
-            lb.b(pb.field_n);
+            Rasterizer2D.restoreClip(pb.field_n);
             return;
           }
           return;

@@ -18,9 +18,9 @@ final class wl extends d {
         int var9;
         int var10;
         int var11;
-        jp var12;
-        jp var13;
-        jp var14;
+        RgbSprite var12;
+        RgbSprite var13;
+        RgbSprite var14;
         var11 = BrickABrac.field_J ? 1 : 0;
         super.a(param0, param1, param2, param3);
         if (param2 != 0) {
@@ -33,27 +33,27 @@ final class wl extends d {
           hq.field_z != var8) {
           if (lp.field_xb == var8) {
             var13 = df.field_a[2];
-            var13.f(-(var13.field_D >> 1) + var5, -(var13.field_C >> 1) + var6, 256);
+            var13.f(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
           } else if (ae.field_c == var8) {
             var14 = df.field_a[1];
-            var14.f(var5 - (var14.field_D >> 1), -(var14.field_C >> 1) + var6, 256);
+            var14.f(var5 - (var14.width >> 1), -(var14.height >> 1) + var6, 256);
           }
         } else {
           var12 = df.field_a[0];
-          var9 = var12.field_x << 1;
-          var10 = var12.field_z << 1;
+          var9 = var12.canvasWidth << 1;
+          var10 = var12.canvasHeight << 1;
           if (ik.field_c != null &&
-            ik.field_c.field_D >= var9 &&
-            var10 <= ik.field_c.field_C) {
+            ik.field_c.width >= var9 &&
+            var10 <= ik.field_c.height) {
             fc.a(-114, ik.field_c);
-            lb.d();
+            Rasterizer2D.clear();
           } else {
-            ik.field_c = new jp(var9, var10);
+            ik.field_c = new RgbSprite(var9, var10);
             fc.a(-87, ik.field_c);
           }
-          var12.a(112, 144, var12.field_x << 4, var12.field_z << 4, -this.field_P << 10, 4096);
+          var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.field_P << 10, 4096);
           sc.b(-104);
-          ik.field_c.f(-var12.field_x + var5, -var12.field_z + var6, 256);
+          ik.field_c.f(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
         }
     }
 
@@ -137,7 +137,7 @@ final class wl extends d {
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               vq.field_B[var6_int] = var14.readCp1252String(-1);
             }
-            tk.a((byte) 75, var4, var5);
+            DualLinkNode.a((byte) 75, var4, var5);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               un.a((byte) -122, var14);
               if (var6_intLifetime1 == 0) {

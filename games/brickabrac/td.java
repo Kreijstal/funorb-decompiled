@@ -9,9 +9,9 @@ final class td extends ki {
     static int field_u;
     static mh field_v;
 
-    final jp a(boolean param0, int param1) {
+    final RgbSprite a(boolean param0, int param1) {
         if (!param0) {
-          return (jp) null;
+          return (RgbSprite) null;
         }
         return uj.field_e[-1 + param1];
     }
@@ -19,9 +19,9 @@ final class td extends ki {
     td(int param0, String param1, String param2, int param3) {
         super(param0, param1, param2, param3);
         try {
-          uj.field_e = new jp[2];
-          np.field_c = new jp[2][];
-          kg.field_a = new jp[2][];
+          uj.field_e = new RgbSprite[2];
+          np.field_c = new RgbSprite[2][];
+          kg.field_a = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -69,15 +69,15 @@ final class td extends ki {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = 9 / ((param0 + 28) / 43);
         if (param1 > -1) {
-          lb.g(param2, param3, 153, 238, hh.field_c[param1], 10792131);
+          Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, hh.field_c[param1], 10792131);
           if (this.b((byte) -125)) {
-            mc.field_f.c(param2, param3);
+            mc.field_f.drawTransparent(param2, param3);
           }
           return;
         }
-        lb.g(param2, param3, 153, 238, 16777215, 11184810);
+        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, 16777215, 11184810);
         if (this.b((byte) -125)) {
-          mc.field_f.c(param2, param3);
+          mc.field_f.drawTransparent(param2, param3);
         }
     }
 
@@ -97,7 +97,7 @@ final class td extends ki {
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
         pb var6 = null;
         if (!this.b((byte) -92)) {
-          lb.g(param4, param2, 640, 480, hh.field_c[param3], 10792131);
+          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, hh.field_c[param3], 10792131);
         } else {
           var6 = PowerUp.a(this.field_m, param3, -20777);
           if (!var6.a((byte) -84, param3, this.field_m)) {
@@ -173,14 +173,14 @@ final class td extends ki {
         }
     }
 
-    final jp[] a(int param0, boolean param1) {
+    final RgbSprite[] a(int param0, boolean param1) {
         if (!param1) {
-          return (jp[]) null;
+          return (RgbSprite[]) null;
         }
         return np.field_c[-1 + param0];
     }
 
-    final jp[] a(byte param0, int param1) {
+    final RgbSprite[] a(byte param0, int param1) {
         int var3 = -91 / ((65 - param0) / 49);
         return kg.field_a[param1 - 1];
     }
@@ -188,7 +188,7 @@ final class td extends ki {
     final void a(int param0, byte param1, int param2, int param3, int param4) {
         pb var6 = null;
         if (!this.b((byte) -120)) {
-          lb.g(param2, param0, 306, 480, hh.field_c[param3], 10792131);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, hh.field_c[param3], 10792131);
         } else {
           var6 = kd.a(this.field_m, param3, (byte) -111);
           if (!var6.a((byte) -84, param3, this.field_m)) {

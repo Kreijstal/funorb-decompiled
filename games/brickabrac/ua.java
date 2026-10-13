@@ -28,19 +28,19 @@ final class ua {
           field_e = null;
           return;
         }
-        jp var2 = (jp) null;
-        ua.a((jp) null, 90, -100, 66, (jp) null, 58, (jp) null, 15, 124, -102, (jp) null, 52);
+        RgbSprite var2 = (RgbSprite) null;
+        ua.a((RgbSprite) null, 90, -100, 66, (RgbSprite) null, 58, (RgbSprite) null, 15, 124, -102, (RgbSprite) null, 52);
         field_a = null;
         field_b = null;
         field_e = null;
     }
 
-    final static void a(jp param0, int param1, int param2, int param3, jp param4, int param5, jp param6, int param7, int param8, int param9, jp param10, int param11) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, RgbSprite param4, int param5, RgbSprite param6, int param7, int param8, int param9, RgbSprite param10, int param11) {
         try {
-          param6.d((param7 * 5 >> 16) + ((-param6.field_x + param2) / 2 + param1), param3);
-          param10.c(param1 + ((-param10.field_x + param2) / 2 + (param7 * 5 >> 16) + 10), param11 + (-(23 / param9) + (-param10.field_z + param3) + 480));
-          param4.c((param2 - param4.field_x) / 2 + param1 + (param7 * 10 >> 16), param11 - 43 / param9 - param4.field_z + (480 + param3));
-          param0.c(param1 + ((param2 - param0.field_x) / 2 + (param7 * 20 >> 16)), param11 + 47 / param9 + (-param0.field_z + param3 + 480));
+          param6.drawAt((param7 * 5 >> 16) + ((-param6.canvasWidth + param2) / 2 + param1), param3);
+          param10.drawTransparent(param1 + ((-param10.canvasWidth + param2) / 2 + (param7 * 5 >> 16) + 10), param11 + (-(23 / param9) + (-param10.canvasHeight + param3) + 480));
+          param4.drawTransparent((param2 - param4.canvasWidth) / 2 + param1 + (param7 * 10 >> 16), param11 - 43 / param9 - param4.canvasHeight + (480 + param3));
+          param0.drawTransparent(param1 + ((param2 - param0.canvasWidth) / 2 + (param7 * 20 >> 16)), param11 + 47 / param9 + (-param0.canvasHeight + param3 + 480));
           int var12_int = 115 / ((5 - param5) / 61);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + (param10 != null ? "{...}" : "null") + ',' + param11 + ')');

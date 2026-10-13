@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pa extends ta {
-    static jp[] field_l;
+    static RgbSprite[] field_l;
     static th field_k;
-    static jp[] field_h;
-    static jp[] field_m;
+    static RgbSprite[] field_h;
+    static RgbSprite[] field_m;
     static int[] field_i;
-    static jp field_j;
+    static RgbSprite field_j;
     static int field_n;
 
     final static void a(int param0, int param1, int param2, dh param3, int param4, int param5, int param6, ta param7, int param8, int param9, int param10, int param11, int param12, ta param13, int param14, int param15, dh param16, ta param17, int param18, int param19, int param20) {
@@ -74,7 +74,7 @@ final class pa extends ta {
     }
 
     final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        lb.d(param2 + 1, 1 + param4, param0 - 2, param1 - 2, 0, 128);
+        Rasterizer2D.fillRectangleAlpha(param2 + 1, 1 + param4, param0 - 2, param1 - 2, 0, 128);
         super.a(param0, param1, param2, param3, param4);
     }
 
@@ -88,7 +88,7 @@ final class pa extends ta {
         ed.a(0, 0);
     }
 
-    pa(jp[] param0) {
+    pa(RgbSprite[] param0) {
         super(param0);
     }
 

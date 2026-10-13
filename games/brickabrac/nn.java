@@ -330,7 +330,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_x_cannot_join_full", (byte) 7);
                 if (null != var2) {
-                  mn.field_B = q.a(var2, (byte) 110);
+                  SpriteGeometry.field_B = q.a(var2, (byte) 110);
                 }
                 var2 = nk.a("mu_x_cannot_join_inprogress", (byte) 102);
                 if (var2 != null) {
@@ -594,7 +594,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_game_friends", (byte) -128);
                 if (var2 != null) {
-                  tk.field_m = q.a(var2, (byte) 91);
+                  DualLinkNode.field_m = q.a(var2, (byte) 91);
                 }
                 var2 = nk.a("mu_chat_game_hide", (byte) 126);
                 if (var2 != null) {
@@ -694,7 +694,7 @@ final class nn {
                 }
                 var2 = nk.a("game_options_changed", (byte) -108);
                 if (null != var2) {
-                  mn.field_w = q.a(var2, (byte) 71);
+                  SpriteGeometry.field_w = q.a(var2, (byte) 71);
                 }
                 var2 = nk.a("players_x_of_y", (byte) -114);
                 if (null != var2) {
@@ -1088,7 +1088,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_pillar_0", (byte) -117);
                 if (null != var2) {
-                  tk.field_o = q.a(var2, (byte) 115);
+                  DualLinkNode.field_o = q.a(var2, (byte) 115);
                 }
                 var2 = nk.a("rule_0_0", (byte) 13);
                 if (var2 != null) {
@@ -1108,7 +1108,7 @@ final class nn {
                 }
                 var2 = nk.a("rule_0_4", (byte) -117);
                 if (null != var2) {
-                  tk.field_i = q.a(var2, (byte) 111);
+                  DualLinkNode.field_i = q.a(var2, (byte) 111);
                 }
                 var2 = nk.a("rule_0_5", (byte) -128);
                 if (null != var2) {
@@ -3508,7 +3508,7 @@ final class nn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 17) {
-            CircleBody.field_p = new am(this.field_j.field_Eb, this.field_j.field_db, this.field_j.field_Ib, this.field_j.field_cb, param2, re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, tk.field_t, this.field_e, this.field_i);
+            CircleBody.field_p = new am(this.field_j.field_Eb, this.field_j.field_db, this.field_j.field_Ib, this.field_j.field_cb, param2, re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, DualLinkNode.field_t, this.field_e, this.field_i);
             return true;
           }
           if (param0 < 121) {

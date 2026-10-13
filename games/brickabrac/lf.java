@@ -91,14 +91,14 @@ final class lf extends km {
         }
     }
 
-    final static void a(pb param0, int param1, int param2, jp param3, int param4, int param5) {
+    final static void a(pb param0, int param1, int param2, RgbSprite param3, int param4, int param5) {
         try {
           fc.a(-59, param0.field_p);
           if (param5 < 39) {
             lf.a(true, 49, true);
           }
-          lb.g(0, 0, param0.field_i, param0.field_q, kg.field_i[param4], 16777215);
-          param3.b((-param3.field_x + param0.field_i) / 2 - 50 / param1, -(189 / param1) + (-param3.field_z + param0.field_q) + param2, 55, 83);
+          Rasterizer2D.fillVerticalGradient(0, 0, param0.field_i, param0.field_q, kg.field_i[param4], 16777215);
+          param3.b((-param3.canvasWidth + param0.field_i) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.field_q) + param2, 55, 83);
           sc.b(-94);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
@@ -154,8 +154,8 @@ final class lf extends km {
 
     final static void f(int param0) {
         if (param0 != -1) {
-          jp var2 = (jp) null;
-          lf.a((pb) null, -117, -10, (jp) null, -120, 52);
+          RgbSprite var2 = (RgbSprite) null;
+          lf.a((pb) null, -117, -10, (RgbSprite) null, -120, 52);
         }
         ag.f((byte) 122);
     }
@@ -165,9 +165,9 @@ final class lf extends km {
           lf.a((byte) -69, false);
         }
         if (param2) {
-          lb.d(0, 0, lb.field_c, lb.field_d, 0, 192);
+          Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 192);
         } else {
-          lb.d();
+          Rasterizer2D.clear();
         }
         wc.a(param2, -1);
     }
@@ -256,7 +256,7 @@ final class lf extends km {
                   var7 = 1;
                 }
                 if (0 == (1 & var8)) {
-                  lb.d(50, -15 + var2Lifetime1, 540, 18, 16777215, 16);
+                  Rasterizer2D.fillRectangleAlpha(50, -15 + var2Lifetime1, 540, 18, 16777215, 16);
                 }
                 var4Lifetime1 = null;
                 i.a(var6[4 * var8 + 3], var2Lifetime1, var5[var8], var6[var8 * 4 + 1], var6[4 * var8], var3Lifetime1, -1, var6[var8 * 4 + 2], var8);

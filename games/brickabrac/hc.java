@@ -3,11 +3,11 @@
  */
 final class hc {
     static String field_d;
-    static jp[][] field_a;
+    static RgbSprite[][] field_a;
     static int field_h;
     static boolean field_c;
     static int field_f;
-    static jp field_g;
+    static RgbSprite field_g;
     static String field_b;
     static int[] field_e;
 
@@ -94,7 +94,7 @@ final class hc {
 
     public static void a(int param0) {
         field_e = null;
-        field_a = (jp[][]) null;
+        field_a = (RgbSprite[][]) null;
         field_d = null;
         field_b = null;
         if (param0 >= -59) {
@@ -125,10 +125,10 @@ final class hc {
     }
 
     final static void a(byte param0, tp[] param1, int[] param2, mf param3, mf param4) {
-        jp[] dupTemp$0 = null;
-        jp[] dupTemp$1 = null;
-        jp[] dupTemp$2 = null;
-        jp[] dupTemp$3 = null;
+        RgbSprite[] dupTemp$0 = null;
+        RgbSprite[] dupTemp$1 = null;
+        RgbSprite[] dupTemp$2 = null;
+        RgbSprite[] dupTemp$3 = null;
         tp[] var5 = null;
         tp[] var6 = null;
         int[] var6_array = null;
@@ -156,12 +156,12 @@ final class hc {
         mh var9 = null;
         mh var10 = null;
         mh var11 = null;
-        jp[] var12 = null;
-        jp[] var13 = null;
-        jp[] var14 = null;
+        RgbSprite[] var12 = null;
+        RgbSprite[] var13 = null;
+        RgbSprite[] var14 = null;
         mh var15 = null;
-        jp[] var16 = null;
-        jp[] var17 = null;
+        RgbSprite[] var16 = null;
+        RgbSprite[] var17 = null;
         int var7_intLifetime1;
         int var7_intLifetime2;
         int var7_intLifetime3;
@@ -260,13 +260,13 @@ final class hc {
           ad.field_l.field_O = (dh) ((Object) rd.field_e);
           ad.field_l.field_R = np.field_a;
           ad.field_l.field_X = 13421772;
-          tk.field_t = new mh(0L, ad.field_l);
-          tk.field_t.field_Fb = 16777215;
-          tk.field_t.field_I = 8421504;
-          tk.field_t.field_X = 16764006;
-          tk.field_t.field_Y = 16777215;
-          tk.field_t.field_vb = 16777215;
-          var15 = new mh(0L, tk.field_t);
+          DualLinkNode.field_t = new mh(0L, ad.field_l);
+          DualLinkNode.field_t.field_Fb = 16777215;
+          DualLinkNode.field_t.field_I = 8421504;
+          DualLinkNode.field_t.field_X = 16764006;
+          DualLinkNode.field_t.field_Y = 16777215;
+          DualLinkNode.field_t.field_vb = 16777215;
+          var15 = new mh(0L, DualLinkNode.field_t);
           var15.field_O = (dh) ((Object) var7);
           var15.field_X = 16777215;
           var15.field_R = np.field_a;
@@ -277,12 +277,12 @@ final class hc {
           wi.field_n.field_Jb = vp.a(false, (byte) 80, 1513239, 16, 1513239, false);
           wi.field_n.field_V = 2;
           fp.field_v = new mh(0L, Paddle.field_C);
-          fp.field_v.a((byte) -82, tk.field_t);
+          fp.field_v.a((byte) -82, DualLinkNode.field_t);
           vb.field_K = new mh(0L, wi.field_n);
-          vb.field_K.a((byte) -72, tk.field_t);
+          vb.field_K.a((byte) -72, DualLinkNode.field_t);
           var16 = cr.a("lobby", param3, "button_mouseover", 2);
-          ce.field_b = new br(ij.field_c, var12, ad.field_l, tk.field_t, 3, 2, kn.field_z, 3, np.field_a);
-          fi.field_s = new mh(0L, tk.field_t);
+          ce.field_b = new br(ij.field_c, var12, ad.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.field_a);
+          fi.field_s = new mh(0L, DualLinkNode.field_t);
           fi.field_s.field_E = 1;
           fi.field_s.field_ub = 1;
           fi.field_s.field_N = 1;
@@ -293,7 +293,7 @@ final class hc {
           fi.field_s.field_pb = cr.a("lobby", param3, "button_active", 2);
           fi.field_s.field_Ab = cr.a("lobby", param3, "button_disabled", 2);
           fi.field_s.field_S = 1;
-          eh.field_n = new mh(0L, tk.field_t);
+          eh.field_n = new mh(0L, DualLinkNode.field_t);
           eh.field_n.field_S = 1;
           eh.field_n.field_Jb = qg.a(cr.a("lobby", param3, "tab_inactive", 2), (byte) -119);
           eh.field_n.field_Gb = qg.a(cr.a("lobby", param3, "tab_mouseover", 2), (byte) -124);
@@ -309,7 +309,7 @@ final class hc {
           fm.field_b.field_S = 1;
           fm.field_b.field_ub = 1;
           ij.field_b = new mh(0L, fm.field_b);
-          uk.field_r = new mh(0L, tk.field_t);
+          uk.field_r = new mh(0L, DualLinkNode.field_t);
           uk.field_r.field_N = 1;
           uk.field_r.field_S = 1;
           uk.field_r.field_E = 1;
@@ -361,7 +361,7 @@ final class hc {
           fp.field_u.field_pb = dupTemp$3;
           fp.field_u.field_D = dupTemp$3;
           var17 = cr.a("lobby", param3, "checkbox", 2);
-          of.field_k = new ni(0L, var17[1], var17[0], 1, tk.field_t, (String) null);
+          of.field_k = new ni(0L, var17[1], var17[0], 1, DualLinkNode.field_t, (String) null);
           kb.field_Vb = new mh(0L, (mh) null);
           kb.field_Vb.field_Jb = jf.a(pl.a("lobby", "slideregion", (byte) -95, param3), -52);
           kb.field_Vb.field_Gb = jf.a(pl.a("lobby", "slideregion_mouseover", (byte) 104, param3), -71);

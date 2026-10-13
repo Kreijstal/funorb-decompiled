@@ -12,7 +12,7 @@ final class cq extends IntrusiveNode {
     static int field_t;
     int field_j;
     int[][] field_u;
-    static jp field_o;
+    static RgbSprite field_o;
     static int field_p;
     int field_m;
     int field_k;

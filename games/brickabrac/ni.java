@@ -6,7 +6,7 @@ final class ni extends mh {
     private mh field_Qb;
     static oh field_Rb;
     static String field_Tb;
-    static jp field_Ub;
+    static RgbSprite field_Ub;
     static boolean field_Sb;
     static dh field_Wb;
     private mh field_Vb;
@@ -34,7 +34,7 @@ final class ni extends mh {
           var2_int = param1.length();
           var3 = 0;
           if (param0 > -103) {
-            field_Ub = (jp) null;
+            field_Ub = (RgbSprite) null;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var3 = (var3 << 5) - var3 + na.a(-8250, param1.charAt(var4));
@@ -67,7 +67,7 @@ final class ni extends mh {
         return stackIn_10_0;
     }
 
-    ni(long param0, jp param1, jp param2, int param3, mh param4, String param5) {
+    ni(long param0, RgbSprite param1, RgbSprite param2, int param3, mh param4, String param5) {
         this(param0, (mh) null, param4, param5);
         try {
           this.field_Vb.field_K = param1;
@@ -126,7 +126,7 @@ final class ni extends mh {
         this.field_Vb.a(this.field_cb, 0, 0, this.field_Vb.g(118), (byte) 64);
         int var3 = this.field_Vb.field_Ib + param1;
         if (param0 != -32434) {
-          field_Ub = (jp) null;
+          field_Ub = (RgbSprite) null;
         }
         this.field_Qb.a(this.field_cb, 0, var3, this.field_Ib - var3, (byte) 64);
     }

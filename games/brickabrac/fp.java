@@ -9,21 +9,21 @@ final class fp extends lh {
     static String field_w;
     static pe[] field_y;
     static mh field_v;
-    static jp field_B;
+    static RgbSprite field_B;
 
-    final static jp a(int param0, int param1, String param2, boolean param3) {
+    final static RgbSprite a(int param0, int param1, String param2, boolean param3) {
         int var11 = 0;
         int var12 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        jp var6 = null;
-        jp var7 = null;
+        RgbSprite var6 = null;
+        RgbSprite var7 = null;
         int var8 = 0;
         int var9 = 0;
         int[] var10 = null;
         int var13 = 0;
-        jp stackIn_11_0 = null;
+        RgbSprite stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -32,29 +32,29 @@ final class fp extends lh {
         try {
           var4_int = ma.field_O.c(param2) + 2;
           var5 = ma.field_O.field_N;
-          var6 = new jp(var4_int, var5);
-          var6.g();
+          var6 = new RgbSprite(var4_int, var5);
+          var6.bindRasterTarget();
           ma.field_O.b(param2, var4_int / param0, 2 + ma.field_O.field_F, 0, -1);
           kc.field_q.a((byte) 124);
-          var7 = new jp(var4_int * param1, var5 * param1);
-          var7.g();
+          var7 = new RgbSprite(var4_int * param1, var5 * param1);
+          var7.bindRasterTarget();
           var6.a(0, 0, param1 * var4_int, param1 * var5);
           gp.a(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
           kc.field_q.a((byte) 126);
           if (param3) {
-            var8 = var7.field_D;
+            var8 = var7.width;
             var9 = 2 + ma.field_O.field_B * param1;
             var10 = new int[var8 * var9];
             for (var11 = 0; var9 > var11; var11++) {
               for (var12 = 0; var12 < var8; var12++) {
-                var10[var8 * var11 + var12] = var7.field_G[(var11 + var7.field_C - var9) * var7.field_D + (0 + var12)];
+                var10[var8 * var11 + var12] = var7.pixels[(var11 + var7.height - var9) * var7.width + (0 + var12)];
               }
             }
-            var7.field_G = var10;
-            var7.field_F = var7.field_F + var9 / 2;
-            var7.field_E = var7.field_E + 0;
-            var7.field_D = var8;
-            var7.field_C = var9;
+            var7.pixels = var10;
+            var7.offsetY = var7.offsetY + var9 / 2;
+            var7.offsetX = var7.offsetX + 0;
+            var7.width = var8;
+            var7.height = var9;
           }
           stackIn_11_0 = var7;
           return stackIn_11_0;
@@ -73,13 +73,13 @@ final class fp extends lh {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (lb.field_c >= param2 + param1) {
+        if (Rasterizer2D.width >= param2 + param1) {
           return param2;
         }
         if (param0 >= ~(-param1 + (param2 + param3))) {
           return param2 + param3 - param1;
         }
-        return lb.field_c - param1;
+        return Rasterizer2D.width - param1;
     }
 
     fp() {

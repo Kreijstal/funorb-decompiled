@@ -164,7 +164,7 @@ final class ec extends ib implements en {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        jp var17 = null;
+        RgbSprite var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -188,18 +188,18 @@ final class ec extends ib implements en {
           var8_int = param2 + (-param1 - param7);
           var9 = -param7 + param4 - param1;
           var10 = param1 + (param2 + param7);
-          if (lb.field_f < var10) {
-            var10 = lb.field_f;
+          if (Rasterizer2D.clipRight < var10) {
+            var10 = Rasterizer2D.clipRight;
           }
-          if (lb.field_i > var8_int) {
-            var8_int = lb.field_i;
+          if (Rasterizer2D.clipLeft > var8_int) {
+            var8_int = Rasterizer2D.clipLeft;
           }
           var11 = param4 + param1 + param7;
-          if (var9 < lb.field_b) {
-            var9 = lb.field_b;
+          if (var9 < Rasterizer2D.clipTop) {
+            var9 = Rasterizer2D.clipTop;
           }
-          if (var11 > lb.field_j) {
-            var11 = lb.field_j;
+          if (var11 > Rasterizer2D.clipBottom) {
+            var11 = Rasterizer2D.clipBottom;
           }
           var33 = new int[32];
           var32 = var33;
@@ -218,7 +218,7 @@ final class ec extends ib implements en {
           }
           if (var15Lifetime1 > 0 &&
             var16Lifetime1 > 0) {
-            var17 = new jp(var15Lifetime1, var16Lifetime1);
+            var17 = new RgbSprite(var15Lifetime1, var16Lifetime1);
             var18 = param1 * param1;
             var19 = (param7 + param1) * (param7 + param1);
             var20 = 0;
@@ -238,21 +238,21 @@ final class ec extends ib implements en {
                     var30 = var28 - ((-BrickABrac.c(2048, (var29 << 7) / param1) + 65536) * param5 >> 11);
                     var26 = var21 * var30 / var28 + param4;
                     var27 = var30 * var23 / var28 + param2;
-                    if (lb.field_i > var27) {
-                      var27 = lb.field_i;
+                    if (Rasterizer2D.clipLeft > var27) {
+                      var27 = Rasterizer2D.clipLeft;
                     }
-                    if (lb.field_b > var26) {
-                      var26 = lb.field_b;
+                    if (Rasterizer2D.clipTop > var26) {
+                      var26 = Rasterizer2D.clipTop;
                     }
-                    if (var27 >= lb.field_f) {
-                      var27 = lb.field_f;
+                    if (var27 >= Rasterizer2D.clipRight) {
+                      var27 = Rasterizer2D.clipRight;
                     }
-                    if (var26 >= lb.field_j) {
-                      var26 = lb.field_j;
+                    if (var26 >= Rasterizer2D.clipBottom) {
+                      var26 = Rasterizer2D.clipBottom;
                     }
                   } else {
                     if (var19 <= var24) {
-                      var17.field_G[var20] = lb.field_l[lb.field_c * var26 + var27];
+                      var17.pixels[var20] = Rasterizer2D.pixels[Rasterizer2D.width * var26 + var27];
                       var20++;
                       var23++;
                       var25++;
@@ -264,21 +264,21 @@ final class ec extends ib implements en {
                     var30 = var28 - (param5 * (-BrickABrac.c(2048, (var29 << 7) / param7) + 65536) >> 11);
                     var27 = param2 + var23 * var30 / var28;
                     var26 = var30 * var21 / var28 + param4;
-                    if (lb.field_i > var27) {
-                      var27 = lb.field_i;
+                    if (Rasterizer2D.clipLeft > var27) {
+                      var27 = Rasterizer2D.clipLeft;
                     }
-                    if (lb.field_b > var26) {
-                      var26 = lb.field_b;
+                    if (Rasterizer2D.clipTop > var26) {
+                      var26 = Rasterizer2D.clipTop;
                     }
-                    if (lb.field_j <= var26) {
-                      var26 = lb.field_j;
+                    if (Rasterizer2D.clipBottom <= var26) {
+                      var26 = Rasterizer2D.clipBottom;
                     }
-                    if (var27 >= lb.field_f) {
-                      var27 = lb.field_f;
+                    if (var27 >= Rasterizer2D.clipRight) {
+                      var27 = Rasterizer2D.clipRight;
                     }
                   }
                 }
-                var17.field_G[var20] = lb.field_l[lb.field_c * var26 + var27];
+                var17.pixels[var20] = Rasterizer2D.pixels[Rasterizer2D.width * var26 + var27];
                 var20++;
                 var23++;
                 var25++;
@@ -287,8 +287,8 @@ final class ec extends ib implements en {
               var22++;
               var21++;
             }
-            var17.d(var8_int, var9);
-            lb.b(param2 << 4, param4 << 4, param7 + param1 << 4, 255, var33);
+            var17.drawAt(var8_int, var9);
+            Rasterizer2D.b(param2 << 4, param4 << 4, param7 + param1 << 4, 255, var33);
             return;
           }
           return;

@@ -6,7 +6,7 @@ final class uf {
     static mf field_a;
     static boolean[] field_d;
     static int field_b;
-    static jp field_e;
+    static RgbSprite field_e;
 
     public static void a(byte param0) {
         field_a = null;
@@ -245,7 +245,7 @@ final class uf {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = (CharSequence) ((Object) param0);
-          if (!tk.a(var9, false)) {
+          if (!DualLinkNode.a(var9, false)) {
             stackIn_2_0 = om.field_Xb;
             return stackIn_2_0;
           }
@@ -260,7 +260,7 @@ final class uf {
             return stackIn_9_0;
           }
           var8.unlink((byte) 111);
-          var8.d(3);
+          var8.unlinkSecondary(3);
           IsaacGenerator.field_h = IsaacGenerator.field_h - 1;
           var6 = k.field_h;
           var6.writeCipheredOpcode(-13413, param1);

@@ -10,7 +10,7 @@ final class ad implements Runnable {
     private PacketBuffer field_f;
     private int field_c;
     private tg field_g;
-    static jp field_b;
+    static RgbSprite field_b;
     static um field_e;
     private ql field_d;
     static int field_j;

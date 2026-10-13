@@ -5,8 +5,8 @@ final class np {
     static String field_e;
     static String field_f;
     static int field_b;
-    static jp field_d;
-    static jp[][] field_c;
+    static RgbSprite field_d;
+    static RgbSprite[][] field_c;
     static int field_a;
 
     final static void b(boolean param0) {
@@ -25,7 +25,7 @@ final class np {
         field_f = null;
         field_d = null;
         field_e = null;
-        field_c = (jp[][]) null;
+        field_c = (RgbSprite[][]) null;
         if (!param0) {
           np.a(false);
         }

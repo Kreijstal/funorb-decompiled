@@ -44,31 +44,31 @@ final class bi extends dh {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * lb.field_c;
-        var10 = lb.field_c - param3;
+        var9 = param1 + param2 * Rasterizer2D.width;
+        var10 = Rasterizer2D.width - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < lb.field_b) {
-          var13 = lb.field_b - param2;
+        if (param2 < Rasterizer2D.clipTop) {
+          var13 = Rasterizer2D.clipTop - param2;
           param4 = param4 - var13;
-          param2 = lb.field_b;
+          param2 = Rasterizer2D.clipTop;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * lb.field_c;
+          var9 = var9 + var13 * Rasterizer2D.width;
         }
-        if (param2 + param4 > lb.field_j) {
-          param4 = param4 - (param2 + param4 - lb.field_j);
+        if (param2 + param4 > Rasterizer2D.clipBottom) {
+          param4 = param4 - (param2 + param4 - Rasterizer2D.clipBottom);
         }
-        if (param1 < lb.field_i) {
-          var13Lifetime1 = lb.field_i - param1;
+        if (param1 < Rasterizer2D.clipLeft) {
+          var13Lifetime1 = Rasterizer2D.clipLeft - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = lb.field_i;
+          param1 = Rasterizer2D.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > lb.field_f) {
-          var13Lifetime2 = param1 + param3 - lb.field_f;
+        if (param1 + param3 > Rasterizer2D.clipRight) {
+          var13Lifetime2 = param1 + param3 - Rasterizer2D.clipRight;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -76,9 +76,9 @@ final class bi extends dh {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            bi.a(0, lb.field_l, this.field_U[param0], this.field_M[param5], var12, var9, param3, param4, var10, var11, param6);
+            bi.a(0, Rasterizer2D.pixels, this.field_U[param0], this.field_M[param5], var12, var9, param3, param4, var10, var11, param6);
           } else {
-            hl.a(lb.field_l, this.field_U[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            hl.a(Rasterizer2D.pixels, this.field_U[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -187,31 +187,31 @@ final class bi extends dh {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * lb.field_c;
-        var9 = lb.field_c - param3;
+        var8 = param1 + param2 * Rasterizer2D.width;
+        var9 = Rasterizer2D.width - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < lb.field_b) {
-          var12 = lb.field_b - param2;
+        if (param2 < Rasterizer2D.clipTop) {
+          var12 = Rasterizer2D.clipTop - param2;
           param4 = param4 - var12;
-          param2 = lb.field_b;
+          param2 = Rasterizer2D.clipTop;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * lb.field_c;
+          var8 = var8 + var12 * Rasterizer2D.width;
         }
-        if (param2 + param4 > lb.field_j) {
-          param4 = param4 - (param2 + param4 - lb.field_j);
+        if (param2 + param4 > Rasterizer2D.clipBottom) {
+          param4 = param4 - (param2 + param4 - Rasterizer2D.clipBottom);
         }
-        if (param1 < lb.field_i) {
-          var12Lifetime1 = lb.field_i - param1;
+        if (param1 < Rasterizer2D.clipLeft) {
+          var12Lifetime1 = Rasterizer2D.clipLeft - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = lb.field_i;
+          param1 = Rasterizer2D.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > lb.field_f) {
-          var12Lifetime2 = param1 + param3 - lb.field_f;
+        if (param1 + param3 > Rasterizer2D.clipRight) {
+          var12Lifetime2 = param1 + param3 - Rasterizer2D.clipRight;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -219,9 +219,9 @@ final class bi extends dh {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            bi.a(0, lb.field_l, this.field_U[param0], this.field_M[param5], var11, var8, param3, param4, var9, var10);
+            bi.a(0, Rasterizer2D.pixels, this.field_U[param0], this.field_M[param5], var11, var8, param3, param4, var9, var10);
           } else {
-            hl.a(lb.field_l, this.field_U[param0], param5, var11, var8, param3, param4, var9, var10);
+            hl.a(Rasterizer2D.pixels, this.field_U[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }

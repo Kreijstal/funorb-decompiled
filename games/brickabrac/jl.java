@@ -5,7 +5,7 @@ final class jl {
     static long field_c;
     static int field_b;
     static BitPacketBuffer field_e;
-    static jp field_d;
+    static RgbSprite field_d;
     static int field_a;
 
     final static void b(int param0) {
@@ -167,7 +167,7 @@ final class jl {
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!tk.a(var6, false)) {
+          if (!DualLinkNode.a(var6, false)) {
             stackIn_3_0 = om.field_Xb;
             return stackIn_3_0;
           }

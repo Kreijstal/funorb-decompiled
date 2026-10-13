@@ -4,14 +4,14 @@
 import java.util.*;
 
 final class ae implements Iterator {
-    private tk field_e;
+    private DualLinkNode field_e;
     static int field_b;
     static im field_d;
     private gp field_a;
     static String field_i;
-    private tk field_h;
+    private DualLinkNode field_h;
     static qh field_c;
-    static jp[][] field_g;
+    static RgbSprite[][] field_g;
     static int field_f;
 
     public static void a(byte param0) {
@@ -21,7 +21,7 @@ final class ae implements Iterator {
         if (param0 < 55) {
           return;
         }
-        field_g = (jp[][]) null;
+        field_g = (RgbSprite[][]) null;
     }
 
     final static void b(byte param0) {
@@ -35,7 +35,7 @@ final class ae implements Iterator {
         if (null == this.field_h) {
           throw new IllegalStateException();
         }
-        this.field_h.d(3);
+        this.field_h.unlinkSecondary(3);
         this.field_h = null;
     }
 
@@ -45,9 +45,9 @@ final class ae implements Iterator {
           var1 = null;
           this.field_e = null;
         } else {
-          this.field_e = ((tk) (var1)).field_s;
+          this.field_e = ((DualLinkNode) (var1)).secondaryNext;
         }
-        this.field_h = (tk) (var1);
+        this.field_h = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -55,10 +55,10 @@ final class ae implements Iterator {
         return this.field_a.field_a != this.field_e;
     }
 
-    final static jp[] a(int param0, int param1, int param2, mf param3) {
+    final static RgbSprite[] a(int param0, int param1, int param2, mf param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        jp[] stackIn_6_0 = null;
+        RgbSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -72,7 +72,7 @@ final class ae implements Iterator {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (jp[]) (stackIn_4_0);
+          return (RgbSprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -91,7 +91,7 @@ final class ae implements Iterator {
         this.field_h = null;
         try {
           this.field_a = param0;
-          this.field_e = this.field_a.field_a.field_s;
+          this.field_e = this.field_a.field_a.secondaryNext;
           this.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ae.<init>(" + (param0 != null ? "{...}" : "null") + ')');

@@ -5,13 +5,13 @@ final class vq extends oq {
     static int field_H;
     static int field_A;
     static int[] field_D;
-    static jp field_F;
+    static RgbSprite field_F;
     static String field_z;
     static String[] field_E;
     static String[] field_B;
     static String field_J;
     static boolean field_C;
-    static jp field_I;
+    static RgbSprite field_I;
     static int[] field_G;
 
     public static void h(int param0) {
@@ -43,7 +43,7 @@ final class vq extends oq {
         if (obfuscationGuard > -14) {
           field_J = (String) null;
         }
-        lb.b(0, 0, 640, 480);
+        Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         this.g(124);
         pg.d(0);
         this.a(0);

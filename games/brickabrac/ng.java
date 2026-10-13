@@ -5,7 +5,7 @@ final class ng {
     static String field_f;
     static int field_b;
     static tp[] field_d;
-    static jp field_a;
+    static RgbSprite field_a;
     static String field_e;
     static String field_c;
 

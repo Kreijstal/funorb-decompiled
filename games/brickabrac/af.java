@@ -5,13 +5,13 @@ abstract class af extends km {
     static char[] field_B;
     static int field_u;
     static Boolean field_r;
-    static jp[] field_A;
+    static RgbSprite[] field_A;
     private String[] field_E;
     static String[] field_s;
     private NodeDeque field_C;
     int[] field_t;
     private NodeDeque field_v;
-    static jp field_D;
+    static RgbSprite field_D;
     private int[] field_y;
     private NodeDeque[] field_z;
     private int field_x;
@@ -103,7 +103,7 @@ abstract class af extends km {
           if (var6 != 0) {
             si.field_c[var3].a(54, 242);
           } else {
-            vq.field_F.c(54, 242);
+            vq.field_F.drawTransparent(54, 242);
           }
           var7 = 246 + 5 * var5 / 2;
           var8 = var7 + var5;
@@ -113,13 +113,13 @@ abstract class af extends km {
             ob.field_D.c(this.field_E[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
           }
-          ob.field_D.c(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.field_C / 2), 2, -1);
+          ob.field_D.c(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.height / 2), 2, -1);
           ob.field_D.c(fl.field_m, 209, -nn.field_g.field_P + var9, 2, -1);
           var11Lifetime1 = ob.field_D.c(fl.field_m) + 209;
-          var12 = -(nj.field_z.field_z / 2) + var9;
+          var12 = -(nj.field_z.canvasHeight / 2) + var9;
           for (var13 = 0; fq.field_e[var3] > var13; var13++) {
             nj.field_z.a(var11Lifetime1, var12);
-            var11Lifetime1 = var11Lifetime1 + nj.field_z.field_D / 3;
+            var11Lifetime1 = var11Lifetime1 + nj.field_z.width / 3;
           }
         } else {
           nn.field_g.c(jo.field_h, 209, 246 + nn.field_g.field_B, 2, -1);
@@ -149,7 +149,7 @@ abstract class af extends km {
 
     final void a(int param0, int param1, char param2) {
         int var5;
-        jp var6;
+        RgbSprite var6;
         boolean decompiledFrameRemainder0 = true;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (this.field_h.field_j < 0) {
@@ -222,8 +222,8 @@ abstract class af extends km {
           }
         }
         if (param0 != -120) {
-          var6 = (jp) null;
-          af.a((jp) null, -23, 26, 101, 46, -121, -33, (jp) null, 118, (jp) null, -100);
+          var6 = (RgbSprite) null;
+          af.a((RgbSprite) null, -23, 26, 101, 46, -121, -33, (RgbSprite) null, 118, (RgbSprite) null, -100);
         }
     }
 
@@ -267,21 +267,21 @@ abstract class af extends km {
         field_B = null;
     }
 
-    final static void a(jp param0, int param1, int param2, int param3, int param4, int param5, int param6, jp param7, int param8, jp param9, int param10) {
+    final static void a(RgbSprite param0, int param1, int param2, int param3, int param4, int param5, int param6, RgbSprite param7, int param8, RgbSprite param9, int param10) {
         if (param5 != 0) {
           return;
         }
         try {
-          param7.d((5 * param2 >> 16) + param1 + (param4 - param7.field_x) / 2, param10);
+          param7.drawAt((5 * param2 >> 16) + param1 + (param4 - param7.canvasWidth) / 2, param10);
           if (param8 == 1) {
-            lb.a(100 / param8 << 4, 1600, 64, 128, sq.field_b);
-            lb.a(200 / param8 << 4, 800, 48, 192, sq.field_b);
-            lb.a(300 / param8 << 4, 1920, 64, 128, sq.field_b);
-            lb.a(370 / param8 << 4, 2720, 48, 128, sq.field_b);
-            lb.a(480 / param8 << 4, 1120, 48, 192, sq.field_b);
+            Rasterizer2D.a(100 / param8 << 4, 1600, 64, 128, sq.field_b);
+            Rasterizer2D.a(200 / param8 << 4, 800, 48, 192, sq.field_b);
+            Rasterizer2D.a(300 / param8 << 4, 1920, 64, 128, sq.field_b);
+            Rasterizer2D.a(370 / param8 << 4, 2720, 48, 128, sq.field_b);
+            Rasterizer2D.a(480 / param8 << 4, 1120, 48, 192, sq.field_b);
           }
-          param9.c(-(220 / param8) + (10 * param2 >> 16) + (param1 + (param4 - param9.field_x) / 2), -param9.field_z + (480 + 37 / param8));
-          param0.c(param1 + ((param4 - param0.field_x) / 2 + (20 * param2 >> 16)) - 5 / param8, 480 - param0.field_z);
+          param9.drawTransparent(-(220 / param8) + (10 * param2 >> 16) + (param1 + (param4 - param9.canvasWidth) / 2), -param9.canvasHeight + (480 + 37 / param8));
+          param0.drawTransparent(param1 + ((param4 - param0.canvasWidth) / 2 + (20 * param2 >> 16)) - 5 / param8, 480 - param0.canvasHeight);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "af.MA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + (param9 != null ? "{...}" : "null") + ',' + param10 + ')');
         }
@@ -306,7 +306,7 @@ abstract class af extends km {
 
     final int b(int param0, int param1) {
         if (param1 != 1) {
-          field_D = (jp) null;
+          field_D = (RgbSprite) null;
         }
         return this.field_p;
     }

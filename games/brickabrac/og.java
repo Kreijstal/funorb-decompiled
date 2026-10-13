@@ -21,7 +21,7 @@ final class og extends mh {
     private int field_ec;
     static dh field_Yb;
 
-    final static void a(String[] args, tp[] param1, byte[] param2, jp[][] param3, byte[] param4, int[] param5, int param6, jp[][] param7, mf param8, int param9, mf param10, String[][] param11, mf param12, int param13, int[] param14, String[][] param15, boolean param16) {
+    final static void a(String[] args, tp[] param1, byte[] param2, RgbSprite[][] param3, byte[] param4, int[] param5, int param6, RgbSprite[][] param7, mf param8, int param9, mf param10, String[][] param11, mf param12, int param13, int[] param14, String[][] param15, boolean param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -364,8 +364,8 @@ final class og extends mh {
                 if (tm.a(var6, (byte) 18) == 2) {
                   eo.a(0, param0, 1, var6);
                 }
-                c.a(var5_int, tk.field_p, (byte) -113, ng.field_b, param3, (String) null);
-                km.a(var5_int, 29295, qn.field_n, tk.field_p, ng.field_b);
+                c.a(var5_int, DualLinkNode.field_p, (byte) -113, ng.field_b, param3, (String) null);
+                km.a(var5_int, 29295, qn.field_n, DualLinkNode.field_p, ng.field_b);
                 rd.a(-1);
                 bh.m(-69);
                 decompiledFrameRemainder0 = (var7 != 0);
@@ -463,7 +463,7 @@ final class og extends mh {
                 this.field_Ub[var13] == -1) {
                 var14 = uf.field_e;
               }
-              this.field_Qb[var13] = new rk(0L, param2, (mh) null, param3, (jp) (var14), param6[var13]);
+              this.field_Qb[var13] = new rk(0L, param2, (mh) null, param3, (RgbSprite) (var14), param6[var13]);
               this.a(this.field_Qb[var13], 0);
               var15 = var10.c(param6[var13]);
               if (var15 > this.field_Rb) {
@@ -475,7 +475,7 @@ final class og extends mh {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            this.field_Rb = this.field_Rb + (10 + uf.field_e.field_x);
+            this.field_Rb = this.field_Rb + (10 + uf.field_e.canvasWidth);
           }
           this.a(12, (byte) -81);
           return;
@@ -1258,7 +1258,7 @@ final class og extends mh {
           }
           var2Lifetime134 = gr.a(true, "from_level");
           if (var2Lifetime134 != null) {
-            mn.field_u = q.a(var2Lifetime134, (byte) 80);
+            SpriteGeometry.field_u = q.a(var2Lifetime134, (byte) 80);
           }
           var2Lifetime135 = gr.a(true, "to_level");
           if (null != var2Lifetime135) {
@@ -1623,7 +1623,7 @@ final class og extends mh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, jp param3, int param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, RgbSprite param3, int param4, int param5, int param6) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -1640,12 +1640,12 @@ final class og extends mh {
         int var15 = 0;
         int var16 = 0;
         try {
-          param5 = param5 + param3.field_E;
-          param6 = param6 + param3.field_F;
-          var7_int = param5 + param6 * lb.field_c;
-          var8 = param3.field_C;
-          var9 = param3.field_C;
-          var10 = param3.field_D;
+          param5 = param5 + param3.offsetX;
+          param6 = param6 + param3.offsetY;
+          var7_int = param5 + param6 * Rasterizer2D.width;
+          var8 = param3.height;
+          var9 = param3.height;
+          var10 = param3.width;
           var11 = 0;
           var12 = -var10;
           var13 = 0;
@@ -1654,28 +1654,28 @@ final class og extends mh {
           }
           var14 = param1 << 8;
           var15 = (param2 - param1 << 8) / var9;
-          if (lb.field_b > param6) {
-            var16 = lb.field_b - param6;
-            param6 = lb.field_b;
+          if (Rasterizer2D.clipTop > param6) {
+            var16 = Rasterizer2D.clipTop - param6;
+            param6 = Rasterizer2D.clipTop;
             var14 = var14 + var16 * var15;
             if (var16 < var9) {
-              var8 = param3.field_G[var16];
+              var8 = param3.pixels[var16];
             }
             var9 = var9 - var16;
-            var7_int = var7_int + lb.field_c * var16;
+            var7_int = var7_int + Rasterizer2D.width * var16;
           }
-          if (var10 + param5 > lb.field_f) {
-            var13 = var13 - (var10 + param5 - lb.field_f);
+          if (var10 + param5 > Rasterizer2D.clipRight) {
+            var13 = var13 - (var10 + param5 - Rasterizer2D.clipRight);
           }
-          if (var9 + param6 > lb.field_j) {
-            var9 = var9 - (-lb.field_j + var9 + param6);
+          if (var9 + param6 > Rasterizer2D.clipBottom) {
+            var9 = var9 - (-Rasterizer2D.clipBottom + var9 + param6);
           }
-          if (param5 < lb.field_i) {
-            var12 = var12 + (-param5 + lb.field_i);
+          if (param5 < Rasterizer2D.clipLeft) {
+            var12 = var12 + (-param5 + Rasterizer2D.clipLeft);
           }
           if (var12 < var13 &&
             0 < var9) {
-            kf.a(lb.field_l, var15, var13, var11, var9, var14, param3.field_G, var10, var12, var8, 8, param4, var7_int);
+            kf.a(Rasterizer2D.pixels, var15, var13, var11, var9, var14, param3.pixels, var10, var12, var8, 8, param4, var7_int);
             return;
           }
           return;

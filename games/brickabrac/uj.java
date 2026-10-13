@@ -14,7 +14,7 @@ final class uj {
     private int field_j;
     private int field_a;
     private int field_k;
-    static jp[] field_e;
+    static RgbSprite[] field_e;
     static mf field_o;
     private int field_c;
     private q field_p;

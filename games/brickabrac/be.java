@@ -8,14 +8,14 @@ final class be {
     private int field_l;
     static boolean field_a;
     static int field_c;
-    static jp field_d;
+    static RgbSprite field_d;
     private int field_b;
     static String field_n;
     static int field_j;
     static int[] field_o;
     private int field_h;
-    jp[] field_f;
-    jp field_k;
+    RgbSprite[] field_f;
+    RgbSprite field_k;
     static int field_g;
     private int field_i;
 
@@ -137,19 +137,19 @@ final class be {
           if (null != this.field_k) {
             var6_int = this.field_i + param2.field_o + param4;
             if (param1.field_f == 1) {
-              var6_int = var6_int + (param2.field_t - this.field_k.field_x) / 2;
+              var6_int = var6_int + (param2.field_t - this.field_k.canvasWidth) / 2;
             }
             var7 = this.field_m + (param0 + param2.field_w);
             if (param1.field_m == 1) {
-              var7 = var7 + (-this.field_k.field_z + param2.field_s) / 2;
+              var7 = var7 + (-this.field_k.canvasHeight + param2.field_s) / 2;
             }
             if (2 == param1.field_f) {
-              var6_int = var6_int + (param2.field_t - this.field_k.field_x);
+              var6_int = var6_int + (param2.field_t - this.field_k.canvasWidth);
             }
             if (param1.field_m == 2) {
-              var7 = var7 + (param2.field_s - this.field_k.field_z);
+              var7 = var7 + (param2.field_s - this.field_k.canvasHeight);
             }
-            this.field_k.c(var6_int, var7);
+            this.field_k.drawTransparent(var6_int, var7);
           }
           var6 = param1.a(param2, true);
           var7Lifetime1 = 3 % ((param3 - 13) / 43);
@@ -361,7 +361,7 @@ final class be {
         return tf.field_i;
     }
 
-    final be a(jp[] param0, int param1) {
+    final be a(RgbSprite[] param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

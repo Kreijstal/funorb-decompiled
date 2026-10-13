@@ -34,21 +34,21 @@ final class eh {
     final void a(dh param0, int param1) {
         um var17 = null;
         up var4 = null;
-        jp[] var5 = null;
-        fb var16 = null;
-        fb var18 = null;
+        RgbSprite[] var5 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         up var6 = null;
         up var7 = null;
         pf discarded$0 = null;
         dg discarded$1 = null;
         up var8 = null;
-        jp[] var9 = null;
-        jp[] var10 = null;
-        jp dupTemp$2 = null;
+        RgbSprite[] var9 = null;
+        RgbSprite[] var10 = null;
+        RgbSprite dupTemp$2 = null;
         up var11 = null;
         up var12 = null;
-        jp var13 = null;
+        RgbSprite var13 = null;
         up var14 = null;
         up var19 = null;
         int var15 = BrickABrac.field_J ? 1 : 0;
@@ -74,13 +74,13 @@ final class eh {
           var4.b(0, 113).a(false, 15658734).a(ScorePopup.a(7829367, 10066329, (byte) 66, 8947848), -2147483648);
           var4.b(1, 110).a(ScorePopup.a(13421772, 10066329, (byte) 115, 11184810), -2147483648);
           var4.b(3, 118).a(ScorePopup.a(10066329, 7829367, (byte) 115, 8947848), param1 ^ -2134061876).b(1, (byte) -50).a(0, 1);
-          var5 = new jp[9];
-          var16 = new fb(32, 32);
+          var5 = new RgbSprite[9];
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
-          for (var7_int = 0; var18.field_G.length > var7_int; var7_int++) {
-            var16.field_G[var7_int] = 1077952576;
+          for (var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
+            var16.pixels[var7_int] = 1077952576;
           }
-          var5[4] = (jp) ((Object) var18);
+          var5[4] = (RgbSprite) ((Object) var18);
           var4.b(4, 121).a(true, false).a(var5, -2147483648);
           var4.b(5, param1 ^ 13421757).a(fj.a(0, 0, 65793, 1, 0), param1 ^ -2134061876).a(true, false).a(false, -1);
           this.field_q = (ub) ((Object) var4);
@@ -98,28 +98,28 @@ final class eh {
           var8.b(0, 105).a(ScorePopup.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).a(false, 1118481).a(-1, (byte) -69);
           var8.b(4, 108).a(true, false).a(var5, -2147483648);
           this.field_b = (ub) ((Object) var8);
-          var9 = new jp[9];
-          var9[4] = new jp(2, 1);
-          var10 = new jp[9];
-          var10[4] = new jp(1, 2);
+          var9 = new RgbSprite[9];
+          var9[4] = new RgbSprite(2, 1);
+          var10 = new RgbSprite[9];
+          var10[4] = new RgbSprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_G = new int[]{6710886, 7829367};
-          var10[4].field_G = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new up();
           var12 = new up();
           var11.a(true, 0, var9);
           var12.a(true, 0, var10);
-          var13 = new jp(7, 4);
-          var13.field_G = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, param1, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13 = new RgbSprite(7, 4);
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, param1, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new up(var4, true);
-          var14.a(-1553, var13.e());
-          var13.f();
+          var14.a(-1553, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new up(var4, true);
-          var14Lifetime1.a(-1553, var13.e());
-          var13.f();
+          var14Lifetime1.a(-1553, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new up(var4, true);
-          var14Lifetime2.a(-1553, var13.e());
-          var13.f();
+          var14Lifetime2.a(-1553, var13.copy());
+          var13.rotateClockwise();
           var19 = new up(var4, true);
           var19.a(-1553, var13);
         } catch (RuntimeException runtimeException) {
@@ -313,7 +313,7 @@ final class eh {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = -9 % ((11 - param3) / 49);
-        lb.d(param1, param2, param5, param4, param0);
+        Rasterizer2D.drawLine(param1, param2, param5, param4, param0);
     }
 
     private final void a(int param0, String param1, int param2, int param3) {
@@ -333,15 +333,15 @@ final class eh {
             return;
           }
           var7 = param3;
-          if (lb.field_c < 6 + var7 + var5_int) {
-            var7 = -6 + (lb.field_c - var5_int);
+          if (Rasterizer2D.width < 6 + var7 + var5_int) {
+            var7 = -6 + (Rasterizer2D.width - var5_int);
           }
           var8 = param2 - (this.field_l.field_B - 32);
-          if (6 + (var8 + var6) > lb.field_d) {
-            var8 = -var6 + lb.field_d - 6;
+          if (6 + (var8 + var6) > Rasterizer2D.height) {
+            var8 = -var6 + Rasterizer2D.height - 6;
           }
-          lb.e(var7, var8, var5_int + 6, var6 + 6, this.field_c);
-          lb.g(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_p);
+          Rasterizer2D.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_c);
+          Rasterizer2D.fillRectangle(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_p);
           this.field_l.c(param1, var7 + 3, this.field_l.field_B + var8 + 3, this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -399,12 +399,12 @@ final class eh {
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int var8 = 115 / ((param5 + 18) / 63);
-        lb.d(param3, param0, param6, param4, param2, param1);
+        Rasterizer2D.fillRectangleAlpha(param3, param0, param6, param4, param2, param1);
     }
 
     final static void a(boolean param0, boolean param1) {
         if (sq.field_c != null) {
-          lb.b(lb.field_i, lb.field_b, lb.field_f - lb.field_i, lb.field_j - lb.field_b);
+          Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, Rasterizer2D.clipRight - Rasterizer2D.clipLeft, Rasterizer2D.clipBottom - Rasterizer2D.clipTop);
           sq.field_c.a(true, param0);
         }
         if (!param1) {
@@ -518,7 +518,7 @@ final class eh {
           if (var7 == -1) {
             var7 = this.field_l.field_F + this.field_l.field_P;
           }
-          var8 = lb.field_c >> 2;
+          var8 = Rasterizer2D.width >> 2;
           var9 = this.field_l.c(param0);
           var10 = this.field_l.field_P + this.field_l.field_F;
           var11 = 1;
@@ -544,15 +544,15 @@ final class eh {
             }
           }
           var12 = param3;
-          if (var12 + var9 + var5_int > lb.field_c) {
-            var12 = lb.field_c - var9 - var5_int;
+          if (var12 + var9 + var5_int > Rasterizer2D.width) {
+            var12 = Rasterizer2D.width - var9 - var5_int;
           }
           var13Lifetime1 = -this.field_l.field_B + (param2 + 32);
-          if (var13Lifetime1 + var10 + var6 > lb.field_d) {
+          if (var13Lifetime1 + var10 + var6 > Rasterizer2D.height) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
-          lb.e(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_j);
-          lb.g(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_p);
+          Rasterizer2D.drawRectangle(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_j);
+          Rasterizer2D.fillRectangle(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_p);
           this.field_l.a(param0, this.field_h + var12, var13Lifetime1 + this.field_g, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

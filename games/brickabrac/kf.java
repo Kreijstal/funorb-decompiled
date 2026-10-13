@@ -69,7 +69,7 @@ final class kf extends k {
                 var13_int++;
               }
             }
-            param12 = param12 + lb.field_c;
+            param12 = param12 + Rasterizer2D.width;
             param5 = param5 + param1;
             var15++;
           }
@@ -302,12 +302,12 @@ final class kf extends k {
         }
     }
 
-    final static jp[] a(String param0, String param1, mf param2, int param3) {
-        jp[] var4 = null;
+    final static RgbSprite[] a(String param0, String param1, mf param2, int param3) {
+        RgbSprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        jp[] var6 = null;
-        jp[] stackIn_1_0 = null;
+        RgbSprite[] var6 = null;
+        RgbSprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -319,10 +319,10 @@ final class kf extends k {
         try {
           var6 = cr.a(param1, param2, param0, 2);
           var4 = var6;
-          var6[3].field_z = var6[3].field_C;
-          var6[1].field_x = var6[1].field_D;
-          var6[5].field_z = var6[5].field_C;
-          var6[7].field_x = var6[7].field_D;
+          var6[3].canvasHeight = var6[3].height;
+          var6[1].canvasWidth = var6[1].width;
+          var6[5].canvasHeight = var6[5].height;
+          var6[7].canvasWidth = var6[7].width;
           var6[1] = qb.a(var6[1], false, 8);
           var6[7] = qb.a(var6[7], false, 8);
           var6[3] = k.a(var6[3], 101, 8);

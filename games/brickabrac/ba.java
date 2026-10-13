@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ba extends tk {
+class ba extends DualLinkNode {
     static th field_B;
     static String field_x;
     static mh field_v;
-    static jp field_A;
+    static RgbSprite field_A;
     static String field_z;
     static int field_w;
     static String field_y;
@@ -71,7 +71,7 @@ class ba extends tk {
           var1.unlink((byte) 111);
           return;
         }
-        field_A = (jp) null;
+        field_A = (RgbSprite) null;
         var1.unlink((byte) 111);
     }
 

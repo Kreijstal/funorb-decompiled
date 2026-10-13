@@ -13,19 +13,19 @@ final class hj extends mh {
     static int field_Yb;
     static String field_Vb;
 
-    final static jp[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static RgbSprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 >= -62) {
           field_Pb = -111;
         }
-        jp[] var6 = new jp[9];
-        jp[] var5 = var6;
-        jp dupTemp$0 = hd.a(param2, param0, (byte) -6);
+        RgbSprite[] var6 = new RgbSprite[9];
+        RgbSprite[] var5 = var6;
+        RgbSprite dupTemp$0 = hd.a(param2, param0, (byte) -6);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        jp dupTemp$1 = hd.a(param4, param0, (byte) -6);
+        RgbSprite dupTemp$1 = hd.a(param4, param0, (byte) -6);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -69,7 +69,7 @@ final class hj extends mh {
           } else {
             stackIn_3_5 = 0;
           }
-          mn.a(stackIn_2_0, stackIn_2_1, (mm) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.field_k, param1.field_q);
+          SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (mm) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.field_k, param1.field_q);
           if (param1.field_c == 0 &&
             !cb.e(-91) &&
             null == o.field_e &&
@@ -190,8 +190,8 @@ final class hj extends mh {
 
     final static void a(int param0, int param1, int param2, int param3, String param4, int param5) {
         try {
-          lb.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
-          lb.c(param0, -param2 + param1, param3, param2, 3, param5);
+          Rasterizer2D.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
+          Rasterizer2D.c(param0, -param2 + param1, param3, param2, 3, param5);
           ob.field_D.c(param4, pq.field_k, -1 + (-ob.field_D.field_P + po.field_a - ob.field_D.field_P), 2, -1);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
@@ -369,81 +369,81 @@ final class hj extends mh {
             field_Ub = (String) null;
           }
           var6 = param0 + param3;
-          if (lb.field_i >= param1) {
-            stackIn_6_0 = lb.field_i;
+          if (Rasterizer2D.clipLeft >= param1) {
+            stackIn_6_0 = Rasterizer2D.clipLeft;
           } else {
             stackIn_6_0 = param1;
           }
           var7 = stackIn_6_0;
-          if (lb.field_b < param0) {
+          if (Rasterizer2D.clipTop < param0) {
             stackIn_9_0 = param0;
           } else {
-            stackIn_9_0 = lb.field_b;
+            stackIn_9_0 = Rasterizer2D.clipTop;
           }
           var8 = stackIn_9_0;
-          if (lb.field_f > var5_int) {
+          if (Rasterizer2D.clipRight > var5_int) {
             stackIn_12_0 = var5_int;
           } else {
-            stackIn_12_0 = lb.field_f;
+            stackIn_12_0 = Rasterizer2D.clipRight;
           }
           var9 = stackIn_12_0;
-          if (lb.field_j <= var6) {
-            stackIn_15_0 = lb.field_j;
+          if (Rasterizer2D.clipBottom <= var6) {
+            stackIn_15_0 = Rasterizer2D.clipBottom;
           } else {
             stackIn_15_0 = var6;
           }
           var10 = stackIn_15_0;
-          if (lb.field_i <= param1 &&
-            param1 < lb.field_f) {
-            var11 = var8 * lb.field_c + param1;
+          if (Rasterizer2D.clipLeft <= param1 &&
+            param1 < Rasterizer2D.clipRight) {
+            var11 = var8 * Rasterizer2D.width + param1;
             var12 = -var8 + 1 + var10 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              lb.field_l[var11] = 16777215;
-              var11 = var11 + 2 * lb.field_c;
+              Rasterizer2D.pixels[var11] = 16777215;
+              var11 = var11 + 2 * Rasterizer2D.width;
             }
           }
-          if (param0 >= lb.field_b &&
-            lb.field_j > var6) {
-            var11Lifetime1 = var7 + param0 * lb.field_c;
+          if (param0 >= Rasterizer2D.clipTop &&
+            Rasterizer2D.clipBottom > var6) {
+            var11Lifetime1 = var7 + param0 * Rasterizer2D.width;
             var12Lifetime1 = -var7 + 1 + var9 >> 1;
             while (true) {
               var12Lifetime1--;
               if (0 > var12Lifetime1) {
                 break;
               }
-              lb.field_l[var11Lifetime1] = 16777215;
+              Rasterizer2D.pixels[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (lb.field_i <= var5_int &&
-            lb.field_f > var5_int) {
-            var11Lifetime2 = var5_int + ((1 & -param1 + var5_int) + var8) * lb.field_c;
+          if (Rasterizer2D.clipLeft <= var5_int &&
+            Rasterizer2D.clipRight > var5_int) {
+            var11Lifetime2 = var5_int + ((1 & -param1 + var5_int) + var8) * Rasterizer2D.width;
             var12Lifetime2 = -var8 + (1 + var10) >> 1;
             while (true) {
               var12Lifetime2--;
               if (0 > var12Lifetime2) {
                 break;
               }
-              lb.field_l[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + lb.field_c * 2;
+              Rasterizer2D.pixels[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + Rasterizer2D.width * 2;
             }
           }
-          if (lb.field_b <= param0) {
-            if (lb.field_j <= var6) {
+          if (Rasterizer2D.clipTop <= param0) {
+            if (Rasterizer2D.clipBottom <= var6) {
               return;
             }
-            var11Lifetime3 = (var6 - param0 & 1) + (var7 + var6 * lb.field_c);
+            var11Lifetime3 = (var6 - param0 & 1) + (var7 + var6 * Rasterizer2D.width);
             var12Lifetime3 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 break;
               }
-              lb.field_l[var11Lifetime3] = 16777215;
+              Rasterizer2D.pixels[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }

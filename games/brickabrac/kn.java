@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kn extends tk {
+final class kn extends DualLinkNode {
     boolean field_A;
     int[] field_x;
     static int field_z;

@@ -8,7 +8,7 @@ final class hi extends um {
     private int field_y;
     private int field_x;
     static IsaacGenerator field_w;
-    private jp[] field_B;
+    private RgbSprite[] field_B;
 
     final static boolean a(boolean param0, int param1, int param2) {
         StringBuilder discarded$2 = null;
@@ -141,7 +141,7 @@ final class hi extends um {
                   if (tm.a(var5, (byte) 18) == 2) {
                     eo.a(0, param2, 1, var5);
                   }
-                  c.a(-1, tk.field_p, (byte) -106, ng.field_b, param1, var4_ref_String);
+                  c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_String);
                 }
               }
               fl.b(true);
@@ -196,7 +196,7 @@ final class hi extends um {
             var20 = var7Lifetime15 + var19 + ": ";
             var5Lifetime4 = var5Lifetime4 - jq.field_y.c(var20);
           } else {
-            var24 = (CharSequence) ((Object) tk.field_p);
+            var24 = (CharSequence) ((Object) DualLinkNode.field_p);
             var18 = rd.a(hq.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
             var7Lifetime15 = var18;
             var7Lifetime15 = var18;
@@ -248,7 +248,7 @@ final class hi extends um {
                     if (tm.a(var5Lifetime1, (byte) 18) == 2) {
                       eo.a(0, param2, 1, var5Lifetime1);
                     }
-                    c.a(-1, tk.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime1);
+                    c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime1);
                     fl.b(true);
                   }
                 } else {
@@ -303,7 +303,7 @@ final class hi extends um {
                 var7Lifetime1Lifetime6 = var20Lifetime1;
                 var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - jq.field_y.c(var20Lifetime1);
               } else {
-                var25 = (CharSequence) ((Object) tk.field_p);
+                var25 = (CharSequence) ((Object) DualLinkNode.field_p);
                 var18Lifetime1 = rd.a(hq.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var7Lifetime1Lifetime6 = var18Lifetime1;
@@ -356,7 +356,7 @@ final class hi extends um {
                 if (tm.a(var5Lifetime2, (byte) 18) == 2) {
                   eo.a(0, param2, 1, var5Lifetime2);
                 }
-                c.a(-1, tk.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime2);
+                c.a(-1, DualLinkNode.field_p, (byte) -106, ng.field_b, param1, var4_ref_StringLifetime2);
               }
             }
             fl.b(true);
@@ -441,7 +441,7 @@ final class hi extends um {
           var20Lifetime2Lifetime4 = var7Lifetime9 + var19Lifetime2 + ": ";
           var5Lifetime3 = var5Lifetime3 - jq.field_y.c(var20Lifetime2Lifetime4);
         } else {
-          var26 = (CharSequence) ((Object) tk.field_p);
+          var26 = (CharSequence) ((Object) DualLinkNode.field_p);
           var18Lifetime2 = rd.a(hq.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
           var7Lifetime9 = var18Lifetime2;
           var7Lifetime9 = var18Lifetime2;
@@ -495,7 +495,7 @@ final class hi extends um {
             }
           }
           var7 = stackIn_14_0;
-          ac.a(this.field_B, param3.field_w + param4 + (param3.field_s - this.field_B[0].field_z >> 1), param3.field_o + param2, param3.field_t, var7, (byte) 122);
+          ac.a(this.field_B, param3.field_w + param4 + (param3.field_s - this.field_B[0].canvasHeight >> 1), param3.field_o + param2, param3.field_t, var7, (byte) 122);
           stackIn_17_0 = (!param0) ? 7105644 : 16777215;
           var8 = stackIn_17_0;
           if (param1 != -20618) {

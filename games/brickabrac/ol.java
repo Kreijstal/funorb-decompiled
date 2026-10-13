@@ -4,8 +4,8 @@
 final class ol extends km {
     private lc field_u;
     static String field_x;
-    static jp[] field_z;
-    static jp field_r;
+    static RgbSprite[] field_z;
+    static RgbSprite field_r;
     static int[] field_v;
     private lc field_t;
     static int field_y;
@@ -87,7 +87,7 @@ final class ol extends km {
         field_v = null;
         field_x = null;
         if (param0 != 14529) {
-          field_z = (jp[]) null;
+          field_z = (RgbSprite[]) null;
         }
         field_z = null;
     }
@@ -140,7 +140,7 @@ final class ol extends km {
         }
         var8 = this.field_m[1];
         var12 = var8;
-        var8.field_j = hq.field_s[0].field_x + 60;
+        var8.field_j = hq.field_s[0].canvasWidth + 60;
         var12.field_d = var12.field_j;
         var12.field_c = (600 - 2 * var12.field_j) / 2;
         var12.field_a = (523 - var12.field_d) / 2;
@@ -166,7 +166,7 @@ final class ol extends km {
         this.field_u.a((byte) 105);
         this.field_t.a((byte) 116);
         if (obfuscationGuard >= -14) {
-          field_z = (jp[]) null;
+          field_z = (RgbSprite[]) null;
         }
     }
 
@@ -175,7 +175,7 @@ final class ol extends km {
         this.field_u.b((byte) -75);
         this.field_t.b((byte) -75);
         if (obfuscationGuard > -52) {
-          field_r = (jp) null;
+          field_r = (RgbSprite) null;
         }
     }
 

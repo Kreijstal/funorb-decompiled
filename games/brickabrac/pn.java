@@ -6,7 +6,7 @@ final class pn extends IntrusiveNode {
     int field_k;
     int field_n;
     int field_p;
-    static jp field_m;
+    static RgbSprite field_m;
     int field_l;
     static String field_j;
     int field_r;
@@ -61,11 +61,11 @@ final class pn extends IntrusiveNode {
             !ve.b(-21835160)) {
             boolean decompiledSharedTail2 = !(LevelPack.a(0, kb.field_Qb));
             if (!decompiledSharedTail2) {
-              var2 = rd.a(ScorePopup.field_j, new String[]{tk.field_p}, (byte) 103);
+              var2 = rd.a(ScorePopup.field_j, new String[]{DualLinkNode.field_p}, (byte) 103);
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
-              var2 = rd.a(kk.field_c, new String[]{tk.field_p}, (byte) 103);
+              var2 = rd.a(kk.field_c, new String[]{DualLinkNode.field_p}, (byte) 103);
             }
             if (nq.field_p) {
               wp.a((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
@@ -87,7 +87,7 @@ final class pn extends IntrusiveNode {
             var6 = ng.field_b;
             var7 = 0;
             if (2 == var6) {
-              var4 = rd.a(hq.field_x, new String[]{tk.field_p}, (byte) 103);
+              var4 = rd.a(hq.field_x, new String[]{DualLinkNode.field_p}, (byte) 103);
               var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
               var7 = -485 + g.field_n.field_Ib + ap.field_e.field_Ib - (-jq.field_y.c(var8) + jq.field_y.c(var4));
               if (0 > var7) {
@@ -154,7 +154,7 @@ final class pn extends IntrusiveNode {
               ap.field_e.field_kb = false;
             }
             if (ap.field_e.field_kb) {
-              var1 = rd.a(df.field_b, new String[]{var3, tk.field_p}, (byte) 103);
+              var1 = rd.a(df.field_b, new String[]{var3, DualLinkNode.field_p}, (byte) 103);
             }
           }
           stackIn_96_0 = var1;

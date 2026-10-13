@@ -17,12 +17,12 @@ abstract class ki {
     static int field_e;
     static int[] field_i;
     static mf field_f;
-    static jp[][] field_k;
+    static RgbSprite[][] field_k;
     static int field_d;
 
-    jp c(byte param0) {
+    RgbSprite c(byte param0) {
         if (param0 > -74) {
-          return (jp) null;
+          return (RgbSprite) null;
         }
         return kb.field_Ub[gb.field_n];
     }
@@ -51,9 +51,9 @@ abstract class ki {
 
     abstract void a(boolean param0, int param1, int param2, int param3, int param4);
 
-    jp[] b(int param0) {
+    RgbSprite[] b(int param0) {
         if (param0 >= -12) {
-          return (jp[]) null;
+          return (RgbSprite[]) null;
         }
         return im.field_a;
     }
@@ -69,21 +69,21 @@ abstract class ki {
         if (param4 > param1) {
           if (param4 >= param5) {
             if (param5 > param1) {
-              k.a(param2, param6, param1, lb.field_l, param4, param5, param0, param3, 0);
+              k.a(param2, param6, param1, Rasterizer2D.pixels, param4, param5, param0, param3, 0);
             } else {
-              k.a(param3, param6, param5, lb.field_l, param4, param1, param0, param2, 0);
+              k.a(param3, param6, param5, Rasterizer2D.pixels, param4, param1, param0, param2, 0);
             }
           } else {
-            k.a(param6, param2, param1, lb.field_l, param5, param4, param0, param3, 0);
+            k.a(param6, param2, param1, Rasterizer2D.pixels, param5, param4, param0, param3, 0);
           }
         } else {
           if (param5 > param1) {
-            k.a(param3, param2, param4, lb.field_l, param5, param1, param0, param6, 0);
+            k.a(param3, param2, param4, Rasterizer2D.pixels, param5, param1, param0, param6, 0);
           } else {
             if (param4 < param5) {
-              k.a(param2, param3, param4, lb.field_l, param1, param5, param0, param6, 0);
+              k.a(param2, param3, param4, Rasterizer2D.pixels, param1, param5, param0, param6, 0);
             } else {
-              k.a(param6, param3, param5, lb.field_l, param1, param4, param0, param2, 0);
+              k.a(param6, param3, param5, Rasterizer2D.pixels, param1, param4, param0, param2, 0);
             }
           }
         }
@@ -100,7 +100,7 @@ abstract class ki {
         }
     }
 
-    jp[] a(byte param0, int param1) {
+    RgbSprite[] a(byte param0, int param1) {
         int var3 = -89 % ((param0 - 65) / 49);
         return null;
     }
@@ -109,7 +109,7 @@ abstract class ki {
 
     abstract boolean b(byte param0);
 
-    jp a(boolean param0, int param1) {
+    RgbSprite a(boolean param0, int param1) {
         if (param0) {
           return null;
         }
@@ -127,7 +127,7 @@ abstract class ki {
         field_i = null;
         field_p = null;
         field_g = null;
-        field_k = (jp[][]) null;
+        field_k = (RgbSprite[][]) null;
         field_f = null;
     }
 
@@ -230,11 +230,11 @@ abstract class ki {
 
     abstract void a(int param0, byte param1, int param2, int param3, int param4);
 
-    jp[] a(int param0, boolean param1) {
+    RgbSprite[] a(int param0, boolean param1) {
         if (param1) {
           return null;
         }
-        return (jp[]) null;
+        return (RgbSprite[]) null;
     }
 
     private ki(int param0, String param1, String[] param2) {

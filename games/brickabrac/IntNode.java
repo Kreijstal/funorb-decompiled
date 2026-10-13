@@ -6,7 +6,7 @@ final class IntNode extends IntrusiveNode {
     static th field_i;
     static String field_n;
     static String field_k;
-    static jp field_o;
+    static RgbSprite field_o;
     static String field_m;
     static String field_l;
     static NodeDeque field_j;
@@ -49,7 +49,7 @@ final class IntNode extends IntrusiveNode {
             break;
           }
           if (param0 != -4317) {
-            field_o = (jp) null;
+            field_o = (RgbSprite) null;
           }
           try {
             if (param2 != null) {
@@ -170,12 +170,12 @@ final class IntNode extends IntrusiveNode {
         try {
           if (0 >= param0.penetrationTicks) {
             if (param0.phaseTicks <= 0) {
-              gr.field_c.c(param3 + (param0.x256 >> 8) / param2, (param0.y256 >> 8) / param2 + param4);
+              gr.field_c.drawTransparent(param3 + (param0.x256 >> 8) / param2, (param0.y256 >> 8) / param2 + param4);
             } else {
               gr.field_c.b(param3 + (param0.x256 >> 8) / param2, param4 + (param0.y256 >> 8) / param2, 128);
             }
           } else {
-            jc.field_J.c((param0.x256 >> 8) / param2 + param3, param4 + (param0.y256 >> 8) / param2);
+            jc.field_J.drawTransparent((param0.x256 >> 8) / param2 + param3, param4 + (param0.y256 >> 8) / param2);
           }
           if (param1 != -119) {
             var7 = (Object) null;

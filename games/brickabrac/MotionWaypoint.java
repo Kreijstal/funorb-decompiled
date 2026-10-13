@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MotionWaypoint extends MovingBody {
-    static jp field_p;
+    static RgbSprite field_p;
     static int field_q;
     static mh field_s;
     int durationTicks;
@@ -39,7 +39,7 @@ final class MotionWaypoint extends MovingBody {
           gg.field_t = null;
           return;
         }
-        field_p = (jp) null;
+        field_p = (RgbSprite) null;
         cn.field_a = (byte[][]) null;
         jh.field_b = null;
         qp.field_c = null;
@@ -51,7 +51,7 @@ final class MotionWaypoint extends MovingBody {
           super.readBodySnapshot(100, packet);
           this.durationTicks = packet.readUnsignedShort(65280);
           if (obfuscationGuard <= 89) {
-            field_p = (jp) null;
+            field_p = (RgbSprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ee.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');

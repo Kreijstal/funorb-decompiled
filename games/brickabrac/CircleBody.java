@@ -5,7 +5,7 @@ class CircleBody extends MovingBody {
     static volatile boolean field_r;
     static String field_q;
     static String field_s;
-    static jp[][] field_t;
+    static RgbSprite[][] field_t;
     int radius256;
     static am field_p;
 
@@ -16,7 +16,7 @@ class CircleBody extends MovingBody {
 
     public static void d(byte param0) {
         field_s = null;
-        field_t = (jp[][]) null;
+        field_t = (RgbSprite[][]) null;
         int var1 = -78 % ((-14 - param0) / 61);
         field_q = null;
         field_p = null;

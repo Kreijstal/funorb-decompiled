@@ -5,7 +5,7 @@ final class lj extends IntrusiveNode {
     static int[] field_n;
     int field_m;
     int field_o;
-    static jp field_q;
+    static RgbSprite field_q;
     static byte[] field_p;
     static int[] field_l;
     static dm field_j;

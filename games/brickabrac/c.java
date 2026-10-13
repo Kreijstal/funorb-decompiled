@@ -14,7 +14,7 @@ final class c {
     private int field_b;
     static int field_a;
     static String field_d;
-    static jp field_e;
+    static RgbSprite field_e;
     static String field_n;
 
     public static void a(boolean param0) {
@@ -159,10 +159,10 @@ final class c {
             }
           }
         } else {
-          if (lb.field_c == kp.field_a) {
-            if (lb.field_d != IsaacGenerator.field_i &&
-              lb.field_d == kc.field_q.field_f &&
-              lb.field_c == kc.field_q.field_g) {
+          if (Rasterizer2D.width == kp.field_a) {
+            if (Rasterizer2D.height != IsaacGenerator.field_i &&
+              Rasterizer2D.height == kc.field_q.field_f &&
+              Rasterizer2D.width == kc.field_q.field_g) {
               if (o.field_e != null) {
                 kj.a(true, false);
               } else {
@@ -228,8 +228,8 @@ final class c {
               }
             }
           } else {
-            if (lb.field_d == kc.field_q.field_f &&
-              lb.field_c == kc.field_q.field_g) {
+            if (Rasterizer2D.height == kc.field_q.field_f &&
+              Rasterizer2D.width == kc.field_q.field_g) {
               if (o.field_e != null) {
                 kj.a(true, false);
               } else {

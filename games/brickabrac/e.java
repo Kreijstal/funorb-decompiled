@@ -3,14 +3,14 @@
  */
 final class e extends IntrusiveNode {
     int field_k;
-    static jp[] field_l;
+    static RgbSprite[] field_l;
     static String field_j;
     int field_o;
     int field_p;
     int field_n;
     int field_m;
     int field_i;
-    static jp[] field_q;
+    static RgbSprite[] field_q;
 
     final static og a(mh param0, mh param1, kn param2, int param3, mh param4) {
         int var14 = 0;
@@ -170,22 +170,22 @@ final class e extends IntrusiveNode {
     }
 
     final static void a(mf param0, int param1) {
-        jp var2 = null;
+        RgbSprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new jp(param0.a(104, "final_frame.jpg", ""), (java.awt.Component) ((Object) kj.field_D));
-          var3 = var2.field_D;
+          var2 = new RgbSprite(param0.a(104, "final_frame.jpg", ""), (java.awt.Component) ((Object) kj.field_D));
+          var3 = var2.width;
           int var5 = -121 % ((-17 - param1) / 52);
-          var4 = var2.field_C;
+          var4 = var2.height;
           jf.d(-99);
-          vq.field_I = new jp(var3, var4 * 3 / 4);
-          vq.field_I.g();
-          var2.d(0, 0);
-          BitPacketBuffer.field_t = new jp(var3, -vq.field_I.field_C + var4);
-          BitPacketBuffer.field_t.g();
-          var2.d(0, -vq.field_I.field_C);
-          BitPacketBuffer.field_t.field_F = vq.field_I.field_C;
+          vq.field_I = new RgbSprite(var3, var4 * 3 / 4);
+          vq.field_I.bindRasterTarget();
+          var2.drawAt(0, 0);
+          BitPacketBuffer.field_t = new RgbSprite(var3, -vq.field_I.height + var4);
+          BitPacketBuffer.field_t.bindRasterTarget();
+          var2.drawAt(0, -vq.field_I.height);
+          BitPacketBuffer.field_t.offsetY = vq.field_I.height;
           sc.b(-104);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

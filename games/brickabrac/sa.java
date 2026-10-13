@@ -351,7 +351,7 @@ abstract class sa extends qg implements vc {
 
     abstract boolean q(int param0);
 
-    final static void a(byte param0, jp param1, int param2, int param3, jp param4, jp param5, int param6, int param7, int param8, int param9) {
+    final static void a(byte param0, RgbSprite param1, int param2, int param3, RgbSprite param4, RgbSprite param5, int param6, int param7, int param8, int param9) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -361,15 +361,15 @@ abstract class sa extends qg implements vc {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        jp var11 = null;
+        RgbSprite var11 = null;
         try {
-          param5.d((param6 * 5 >> 16) + ((-param5.field_x + param7) / 2 + param9), param2);
-          param4.c(param9 + (param7 - param4.field_x) / 2 - (-(param6 * 10 >> 16) - 10 / param3), 480 + (param8 + (param2 - param4.field_z)));
+          param5.drawAt((param6 * 5 >> 16) + ((-param5.canvasWidth + param7) / 2 + param9), param2);
+          param4.drawTransparent(param9 + (param7 - param4.canvasWidth) / 2 - (-(param6 * 10 >> 16) - 10 / param3), 480 + (param8 + (param2 - param4.canvasHeight)));
           if (param0 <= 79) {
-            var11 = (jp) null;
-            sa.a((byte) 75, (jp) null, -80, -107, (jp) null, (jp) null, 10, 97, -30, 44);
+            var11 = (RgbSprite) null;
+            sa.a((byte) 75, (RgbSprite) null, -80, -107, (RgbSprite) null, (RgbSprite) null, 10, 97, -30, 44);
           }
-          param1.c(10 / param3 + (param9 - (-((-param1.field_x + param7) / 2) - (20 * param6 >> 16))), 480 + (param2 + param8 - param1.field_z));
+          param1.drawTransparent(10 / param3 + (param9 - (-((-param1.canvasWidth + param7) / 2) - (20 * param6 >> 16))), 480 + (param2 + param8 - param1.canvasHeight));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

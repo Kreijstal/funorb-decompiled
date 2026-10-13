@@ -266,7 +266,7 @@ final class ko {
         }
     }
 
-    final static void a(int param0, int param1, jp param2, int param3, jp param4, int param5, int param6, int param7, int param8, int param9, jp param10) {
+    final static void a(int param0, int param1, RgbSprite param2, int param3, RgbSprite param4, int param5, int param6, int param7, int param8, int param9, RgbSprite param10) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -277,12 +277,12 @@ final class ko {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var11 = null;
         try {
-          param4.d(param8 - (-((-param4.field_x + param6) / 2) - (5 * param3 >> 16)), param9);
+          param4.drawAt(param8 - (-((-param4.canvasWidth + param6) / 2) - (5 * param3 >> 16)), param9);
           if (param0 > -20) {
             field_s = 123;
           }
-          param10.c(-(30 / param7) + (param8 + ((-param10.field_x + param6) / 2 + (param3 * 10 >> 16))), 37 / param7 + (-param10.field_z + 480 + param9) + param1);
-          param2.c(param8 - (-((param6 - param2.field_x) / 2) - (20 * param3 >> 16)) - 5 / param7, -param2.field_z + 480 + (param9 + param1));
+          param10.drawTransparent(-(30 / param7) + (param8 + ((-param10.canvasWidth + param6) / 2 + (param3 * 10 >> 16))), 37 / param7 + (-param10.canvasHeight + 480 + param9) + param1);
+          param2.drawTransparent(param8 - (-((param6 - param2.canvasWidth) / 2) - (20 * param3 >> 16)) - 5 / param7, -param2.canvasHeight + 480 + (param9 + param1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

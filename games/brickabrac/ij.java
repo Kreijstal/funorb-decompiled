@@ -34,16 +34,16 @@ final class ij implements wb {
         boolean discarded$0 = false;
         NodeDeque.a(127, 50);
         pa var2 = new pa(cd.field_h);
-        jp[] var3 = (jp[]) null;
-        ie.a(1, (jp[]) null, Ball.field_G, 240, af.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
+        RgbSprite[] var3 = (RgbSprite[]) null;
+        ie.a(1, (RgbSprite[]) null, Ball.field_G, 240, af.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
         if (param0) {
           discarded$0 = this.b((byte) -1);
         }
-        jp[] var4 = (jp[]) null;
-        nh.a((jp[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, af.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
+        RgbSprite[] var4 = (RgbSprite[]) null;
+        nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, af.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         ka.a(20, -97, 20, var2);
-        oa.a(jf.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, tk.field_k, wn.field_c, (jp[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
+        oa.a(jf.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         pn.b(-9, 200);

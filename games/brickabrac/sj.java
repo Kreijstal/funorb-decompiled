@@ -290,14 +290,14 @@ final class sj {
                     var21.field_kc = var5;
                     var21.field_ic = cm.field_o;
                   }
-                  var21.d(param0 ^ 34);
+                  var21.unlinkSecondary(param0 ^ 34);
                 }
               } else {
                 if (var2 == 7) {
                   var34 = (id) (ua.field_c.first(-61));
                   while (var34 != null) {
                     var34.unlink((byte) 111);
-                    var34.d(3);
+                    var34.unlinkSecondary(3);
                     var34 = (id) (ua.field_c.next((byte) 116));
                   }
                   uf.field_c = 0;
@@ -323,14 +323,14 @@ final class sj {
                           var32.field_Zb = var4;
                           var32.field_Wb = cm.field_o;
                         }
-                        var32.d(3);
+                        var32.unlinkSecondary(3);
                       }
                     } else {
                       if (var2 == 10) {
                         var33 = (om) (rq.field_a.first(-62));
                         while (var33 != null) {
                           var33.unlink((byte) 111);
-                          var33.d(3);
+                          var33.unlinkSecondary(3);
                           var33 = (om) (rq.field_a.next((byte) 116));
                         }
                       } else {
@@ -391,7 +391,7 @@ final class sj {
                                       var14.field_ic = cm.field_o;
                                       var14.field_kc = var5;
                                     }
-                                    var25.d(param0 - 30);
+                                    var25.unlinkSecondary(param0 - 30);
                                     o.field_e.field_cc = o.field_e.field_cc - 1;
                                     break regionExit1;
                                   case 20:
@@ -476,7 +476,7 @@ final class sj {
             var3_ref_id = (id) (mp.field_Tb.first(-8));
             while (var3_ref_id != null) {
               var3_ref_id.unlink((byte) 111);
-              var3_ref_id.d(param0 - 30);
+              var3_ref_id.unlinkSecondary(param0 - 30);
               var3_ref_id = (id) (mp.field_Tb.next((byte) 116));
             }
             var3_ref_id = (id) (eq.field_m.b((byte) 89));
@@ -499,7 +499,7 @@ final class sj {
             if (4 == var2) {
               var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
               o.field_e = new om(cq.field_p);
-              o.field_e.a((long)var3_int, -105);
+              o.field_e.setSecondaryKey((long)var3_int, -105);
               eb.a(o.field_e, var1, 0, false);
               ic.field_b = 0L;
             } else {

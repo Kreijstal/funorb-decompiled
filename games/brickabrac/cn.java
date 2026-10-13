@@ -4,7 +4,7 @@
 final class cn {
     static int field_c;
     static byte[][] field_a;
-    static jp[] field_e;
+    static RgbSprite[] field_e;
     static int field_d;
     static String field_b;
 

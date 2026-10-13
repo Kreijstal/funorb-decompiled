@@ -35,7 +35,7 @@ final class om extends mh {
     boolean field_Pb;
     int field_kc;
     mh field_mc;
-    static jp field_fc;
+    static RgbSprite field_fc;
     static int field_hc;
     mh field_gc;
     mh field_ec;
@@ -48,7 +48,7 @@ final class om extends mh {
 
     final boolean h(int param0) {
         int var2 = -35 / ((74 - param0) / 32);
-        return !this.c(2) ? true : false;
+        return !this.isSecondaryLinked(2) ? true : false;
     }
 
     final boolean a(om param0, boolean param1) {
@@ -164,11 +164,11 @@ final class om extends mh {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
-        jp var11 = null;
+        RgbSprite var11 = null;
         int var12_int = 0;
-        jp[] var12 = null;
+        RgbSprite[] var12 = null;
         int var13_int = 0;
-        jp var13 = null;
+        RgbSprite var13 = null;
         int var14_int = 0;
         String var14 = null;
         int var15_int = 0;
@@ -176,8 +176,8 @@ final class om extends mh {
         String var15_ref = null;
         String var16_ref_String = null;
         int var16 = 0;
-        jp var17 = null;
-        jp var18 = null;
+        RgbSprite var17 = null;
+        RgbSprite var18 = null;
         int var10Lifetime1;
         try {
           stackIn_3_0 = ((1 << param6 & (param8.playerMaskTwo | param8.playerMaskOne | param8.playerMaskThree)) == 0) ? 0 : 1;
@@ -188,8 +188,8 @@ final class om extends mh {
             var10 = param4.simulationTick / 50;
             var17 = ed.field_b[var10];
             var12_int = param4.simulationTick - 50 * var10;
-            var13_int = (50 + var12_int * 2) * var17.field_x / 50;
-            var14_int = var17.field_z * (50 + var12_int * 3) / 50;
+            var13_int = (50 + var12_int * 2) * var17.canvasWidth / 50;
+            var14_int = var17.canvasHeight * (50 + var12_int * 3) / 50;
             var15_int = var12_int;
             if (4 * var12_int < 150) {
               var15_int = var12_int / 2;
@@ -199,7 +199,7 @@ final class om extends mh {
           param2 -= 7;
           param5 -= 7;
           var10Lifetime1 = 445 + param5;
-          lb.d(7 + param2, var10Lifetime1, 306, 28, 0, 96);
+          Rasterizer2D.fillRectangleAlpha(7 + param2, var10Lifetime1, 306, 28, 0, 96);
           nh.a(322, 482, -40, param2 - 1, cd.field_h, param5 - 1);
           nh.a(322, 44, -40, param2 - 1, cd.field_h, -7 + var10Lifetime1 - 1);
           param2 += 7;
@@ -207,7 +207,7 @@ final class om extends mh {
           param2 += 306;
           var18 = ef.field_e[param4.field_H];
           var11 = var18;
-          var11.c(-var18.field_x + param2 + 5, 480 - var18.field_z);
+          var11.drawTransparent(-var18.canvasWidth + param2 + 5, 480 - var18.canvasHeight);
           if (param4.field_H != 2) {
             if (param4.field_H != 5) {
               var12 = cn.field_e;
@@ -218,7 +218,7 @@ final class om extends mh {
             var12 = ScorePopup.field_r;
           }
           var13 = var12[kb.a(param8, param6, 87, param4)];
-          var13.c(-8 + param2 - (var18.field_x + var13.field_x) / 2, -var13.field_z + 480 + 10);
+          var13.drawTransparent(-8 + param2 - (var18.canvasWidth + var13.canvasWidth) / 2, -var13.canvasHeight + 480 + 10);
           if (param1 != -103) {
             field_hc = 38;
           }
@@ -242,7 +242,7 @@ final class om extends mh {
               }
             }
             var16_ref_String = rd.a(BrickABrac.field_H, new String[]{var14, var15_ref}, (byte) 103);
-            ce.field_e.a(var16_ref_String, -var18.field_x + (param2 - 9), ce.field_e.field_F + var10Lifetime1, 2, -1);
+            ce.field_e.a(var16_ref_String, -var18.canvasWidth + (param2 - 9), ce.field_e.field_F + var10Lifetime1, 2, -1);
           }
           if (param7 &&
             var9_int == 0) {
@@ -250,9 +250,9 @@ final class om extends mh {
               return;
             }
             var16 = nn.field_g.c(param4.field_fb) + 20;
-            nh.a(var16, 24, param1 + 63, param2 + (-var18.field_x + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
-            rk.field_Sb.c(param2 - var18.field_x - 13, 6 + var10Lifetime1);
-            ob.field_D.b(param4.field_fb, -(var16 / 2) + param2 + (-var18.field_x - 9), 6 + (var10Lifetime1 + ob.field_D.field_F), 6, -1);
+            nh.a(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
+            rk.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
+            ob.field_D.b(param4.field_fb, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.field_F), 6, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,7 +288,7 @@ final class om extends mh {
 
     final int e(byte param0) {
         int var2 = -51 % ((param0 - 66) / 35);
-        return (int)this.e(-19451);
+        return (int)this.getSecondaryKey(-19451);
     }
 
     om(int param0) {
@@ -313,11 +313,11 @@ final class om extends mh {
         int var9_int = 0;
         RuntimeException var9 = null;
         int var10 = 0;
-        jp var11 = null;
+        RgbSprite var11 = null;
         int var12_int = 0;
-        jp[] var12 = null;
+        RgbSprite[] var12 = null;
         int var13_int = 0;
-        jp var13 = null;
+        RgbSprite var13 = null;
         int var14_int = 0;
         String var14 = null;
         int var15_int = 0;
@@ -325,8 +325,8 @@ final class om extends mh {
         String var15_ref = null;
         String var16_ref_String = null;
         int var16 = 0;
-        jp var17 = null;
-        jp var18 = null;
+        RgbSprite var17 = null;
+        RgbSprite var18 = null;
         int var10Lifetime1;
         try {
           stackIn_3_0 = ((1 << param6 & (param8.playerMaskTwo | param8.playerMaskOne | param8.playerMaskThree)) == 0) ? 0 : 1;
@@ -337,8 +337,8 @@ final class om extends mh {
             var10 = param4.simulationTick / 50;
             var17 = ed.field_b[var10];
             var12_int = param4.simulationTick - 50 * var10;
-            var13_int = (50 + var12_int * 2) * var17.field_x / 50;
-            var14_int = var17.field_z * (50 + var12_int * 3) / 50;
+            var13_int = (50 + var12_int * 2) * var17.canvasWidth / 50;
+            var14_int = var17.canvasHeight * (50 + var12_int * 3) / 50;
             var15_int = var12_int;
             if (4 * var12_int < 150) {
               var15_int = var12_int / 2;
@@ -348,7 +348,7 @@ final class om extends mh {
           param2 -= 7;
           param5 -= 7;
           var10Lifetime1 = 445 + param5;
-          lb.d(7 + param2, var10Lifetime1, 306, 28, 0, 96);
+          Rasterizer2D.fillRectangleAlpha(7 + param2, var10Lifetime1, 306, 28, 0, 96);
           nh.a(322, 482, -40, param2 - 1, cd.field_h, param5 - 1);
           nh.a(322, 44, -40, param2 - 1, cd.field_h, -7 + var10Lifetime1 - 1);
           param2 += 7;
@@ -356,7 +356,7 @@ final class om extends mh {
           param2 += 306;
           var18 = ef.field_e[param4.field_H];
           var11 = var18;
-          var11.c(-var18.field_x + param2 + 5, 480 - var18.field_z);
+          var11.drawTransparent(-var18.canvasWidth + param2 + 5, 480 - var18.canvasHeight);
           if (param4.field_H != 2) {
             if (param4.field_H != 5) {
               var12 = cn.field_e;
@@ -367,7 +367,7 @@ final class om extends mh {
             var12 = ScorePopup.field_r;
           }
           var13 = var12[kb.a(param8, param6, 87, param4)];
-          var13.c(-8 + param2 - (var18.field_x + var13.field_x) / 2, -var13.field_z + 480 + 10);
+          var13.drawTransparent(-8 + param2 - (var18.canvasWidth + var13.canvasWidth) / 2, -var13.canvasHeight + 480 + 10);
           if (param1 != -103) {
             field_hc = 38;
           }
@@ -391,7 +391,7 @@ final class om extends mh {
               }
             }
             var16_ref_String = rd.a(BrickABrac.field_H, new String[]{var14, var15_ref}, (byte) 103);
-            ce.field_e.a(var16_ref_String, -var18.field_x + (param2 - 9), ce.field_e.field_F + var10Lifetime1, 2, -1);
+            ce.field_e.a(var16_ref_String, -var18.canvasWidth + (param2 - 9), ce.field_e.field_F + var10Lifetime1, 2, -1);
           }
           if (param7 &&
             var9_int == 0) {
@@ -399,9 +399,9 @@ final class om extends mh {
               return;
             }
             var16 = nn.field_g.c(param4.field_fb) + 20;
-            nh.a(var16, 24, param1 + 63, param2 + (-var18.field_x + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
-            rk.field_Sb.c(param2 - var18.field_x - 13, 6 + var10Lifetime1);
-            ob.field_D.b(param4.field_fb, -(var16 / 2) + param2 + (-var18.field_x - 9), 6 + (var10Lifetime1 + ob.field_D.field_F), 6, -1);
+            nh.a(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
+            rk.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
+            ob.field_D.b(param4.field_fb, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.field_F), 6, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg extends IntrusiveNode {
-    static jp field_p;
+    static RgbSprite field_p;
     static String field_i;
     static String field_q;
     static String field_n;
@@ -30,12 +30,12 @@ final class pg extends IntrusiveNode {
         return true;
     }
 
-    final static jp a(jp param0, int param1, int param2) {
+    final static RgbSprite a(RgbSprite param0, int param1, int param2) {
         int var4 = 0;
         RuntimeException var3 = null;
         int var5 = 0;
-        jp var6 = null;
-        jp stackIn_7_0 = null;
+        RgbSprite var6 = null;
+        RgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -45,18 +45,18 @@ final class pg extends IntrusiveNode {
           if (param2 != -17912) {
             pg.c(-48);
           }
-          var6 = new jp(param1 * 2 + param0.field_D, 2 * param1 + param0.field_C);
-          var6.g();
-          lb.g(0, 0, var6.field_D, var6.field_C, 16777215);
+          var6 = new RgbSprite(param1 * 2 + param0.width, 2 * param1 + param0.height);
+          var6.bindRasterTarget();
+          Rasterizer2D.fillRectangle(0, 0, var6.width, var6.height, 16777215);
           for (var4 = 0; param1 > var4; var4++) {
-            param0.d(-param0.field_E + param1, -param0.field_F + param1, 0);
-            lb.e(1, 1, 0, 0, var6.field_D, var6.field_C);
+            param0.d(-param0.offsetX + param1, -param0.offsetY + param1, 0);
+            Rasterizer2D.e(1, 1, 0, 0, var6.width, var6.height);
           }
-          var6.h();
-          param0.d(-param0.field_E + param1, param1 - param0.field_F, 0);
+          var6.replaceZeroWithOne();
+          param0.d(-param0.offsetX + param1, param1 - param0.offsetY, 0);
           kc.field_q.a((byte) 109);
-          var6.field_F = param0.field_F - param1;
-          var6.field_E = -param1 + param0.field_E;
+          var6.offsetY = param0.offsetY - param1;
+          var6.offsetX = -param1 + param0.offsetX;
           stackIn_7_0 = var6;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,7 +81,7 @@ final class pg extends IntrusiveNode {
         field_q = null;
         field_n = null;
         if (param0 > -123) {
-          field_p = (jp) null;
+          field_p = (RgbSprite) null;
         }
     }
 
@@ -122,8 +122,8 @@ final class pg extends IntrusiveNode {
           var6 = 2 + np.field_a * var4;
           var7 = fp.a(-1, var5, var2_int, 12);
           var8 = br.a(var6, var3, 20, -30);
-          lb.e(var7, var8, var5, var6, 0);
-          lb.g(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
+          Rasterizer2D.drawRectangle(var7, var8, var5, var6, 0);
+          Rasterizer2D.fillRectangle(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
           ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.field_F + (1 + var8) + ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

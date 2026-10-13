@@ -6,7 +6,7 @@ import java.io.*;
 final class rk extends mh {
     mh field_Rb;
     static String field_Tb;
-    static jp field_Sb;
+    static RgbSprite field_Sb;
     private mh field_Pb;
     static int field_Qb;
 
@@ -175,7 +175,7 @@ final class rk extends mh {
         this.b(param0 ^ 10436, param2, param3);
     }
 
-    rk(long param0, mh param1, mh param2, mh param3, jp param4, String param5) {
+    rk(long param0, mh param1, mh param2, mh param3, RgbSprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

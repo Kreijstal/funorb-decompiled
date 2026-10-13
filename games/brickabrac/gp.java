@@ -5,7 +5,7 @@ import java.util.*;
 
 final class gp implements Iterable {
     static op field_c;
-    tk field_a;
+    DualLinkNode field_a;
     static mh field_d;
     static int field_b;
 
@@ -81,23 +81,23 @@ final class gp implements Iterable {
         param4 += 2;
         param1 += 2;
         param0 -= 4;
-        int var5 = lb.field_c * param1 + param4;
-        int var6 = lb.field_c - param2;
-        la.a(lb.field_l, var5, 0, 0, 0, param3, param2, param0, var6);
+        int var5 = Rasterizer2D.width * param1 + param4;
+        int var6 = Rasterizer2D.width - param2;
+        la.a(Rasterizer2D.pixels, var5, 0, 0, 0, param3, param2, param0, var6);
     }
 
-    final void a(tk param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
-          if (null != param0.field_n) {
-            param0.d(3);
+          if (null != param0.secondaryPrevious) {
+            param0.unlinkSecondary(3);
           }
-          param0.field_s = this.field_a;
+          param0.secondaryNext = this.field_a;
           if (param1 > -112) {
             field_d = (mh) null;
           }
-          param0.field_n = this.field_a.field_n;
-          param0.field_n.field_s = param0;
-          param0.field_s.field_n = param0;
+          param0.secondaryPrevious = this.field_a.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "gp.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -108,9 +108,9 @@ final class gp implements Iterable {
     }
 
     gp() {
-        this.field_a = new tk();
-        this.field_a.field_n = this.field_a;
-        this.field_a.field_s = this.field_a;
+        this.field_a = new DualLinkNode();
+        this.field_a.secondaryPrevious = this.field_a;
+        this.field_a.secondaryNext = this.field_a;
     }
 
     public static void b(int param0) {
@@ -121,12 +121,12 @@ final class gp implements Iterable {
         }
     }
 
-    final tk a(boolean param0) {
-        tk var2 = this.field_a.field_s;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_a.secondaryNext;
         if (var2 == this.field_a) {
           return null;
         }
-        var2.d(3);
+        var2.unlinkSecondary(3);
         if (!param0) {
           return var2;
         }
@@ -140,7 +140,7 @@ final class gp implements Iterable {
         }
         oj.a(param0, (byte) 123);
         if (nf.field_V) {
-          lb.b(sb.field_c.field_d.field_P, sb.field_c.field_d.field_zb, sb.field_c.field_d.field_Ib, sb.field_c.field_d.field_cb);
+          Rasterizer2D.darkenRectangle(sb.field_c.field_d.field_P, sb.field_c.field_d.field_zb, sb.field_c.field_d.field_Ib, sb.field_c.field_d.field_cb);
           sb.field_c.field_d.a(true, param0);
         }
         if (!param1) {

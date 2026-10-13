@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BitPacketBuffer extends PacketBuffer {
-    static jp field_t;
+    static RgbSprite field_t;
     private IsaacGenerator opcodeCipher;
     private int writeBitsRemaining;
     static String field_s;
@@ -107,7 +107,7 @@ final class BitPacketBuffer extends PacketBuffer {
           var7 = var24.paddle;
           var8 = var24.boardWidth;
           var9 = var24.field_wb;
-          lb.e(destinationX, destinationY, destinationX + var8 / scaleDivisor, var9 / scaleDivisor + destinationY);
+          Rasterizer2D.setClip(destinationX, destinationY, destinationX + var8 / scaleDivisor, var9 / scaleDivisor + destinationY);
           if (var24.brickGroups != null) {
             jo.a(scaleDivisor, var24, playerId, match, destinationX, 30, destinationY);
           }
@@ -115,7 +115,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var10_double = (double)(500 - var24.field_M);
             var10_double = (var10_double / 666.0 + 1.0) * (var10_double / 10.0);
             var10_double = 30.0 * Math.sin(var10_double) + 60.0;
-            lb.d(destinationX, destinationY, var8 / scaleDivisor, var9 - scaleDivisor, 16724787, (int)var10_double);
+            Rasterizer2D.fillRectangleAlpha(destinationX, destinationY, var8 / scaleDivisor, var9 - scaleDivisor, 16724787, (int)var10_double);
           }
           stackIn_8_0 = (((match.playerMaskTwo | match.playerMaskOne | match.playerMaskThree) & 1 << playerId) == 0) ? 0 : 1;
           var10 = stackIn_8_0;
@@ -139,7 +139,7 @@ final class BitPacketBuffer extends PacketBuffer {
                 if (var18 < var14) {
                   var19 = var12_ref_vn.centerXHistory256.get(var13, 1);
                   var20 = var12_ref_vn.centerYHistory256.get(var13, 1);
-                  lb.a((destinationX << 4) + (var19 >> 4) / scaleDivisor, (var20 >> 4) / scaleDivisor + (destinationY << 4), var17 / scaleDivisor >> 4, var15, ag.field_M);
+                  Rasterizer2D.a((destinationX << 4) + (var19 >> 4) / scaleDivisor, (var20 >> 4) / scaleDivisor + (destinationY << 4), var17 / scaleDivisor >> 4, var15, ag.field_M);
                   var15 = var15 - var16;
                   var17 = var17 * 252 >> 8;
                   var13--;
@@ -162,7 +162,7 @@ final class BitPacketBuffer extends PacketBuffer {
             }
             var12_ref_ge = (PowerUp) (var24.fallingPowerUps.first(-113));
             while (var12_ref_ge != null) {
-              we.field_b[var12_ref_ge.typeId].c(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
+              we.field_b[var12_ref_ge.typeId].drawTransparent(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
               var12_ref_ge = (PowerUp) (var24.fallingPowerUps.next((byte) 116));
             }
             var12_ref_il = (il) (var24.field_C.first(-20));
@@ -193,8 +193,8 @@ final class BitPacketBuffer extends PacketBuffer {
                 var12 = var12 * 256 / 15;
               }
             }
-            lb.d(7, 280, 510, 45, 0, 96 * var12 / 256);
-            w.field_r.b(7 + (-w.field_r.field_D + 510) / 2, 260, var12);
+            Rasterizer2D.fillRectangleAlpha(7, 280, 510, 45, 0, 96 * var12 / 256);
+            w.field_r.b(7 + (-w.field_r.width + 510) / 2, 260, var12);
           }
           if (3 == var24.field_Z) {
             ja.a((byte) -113, v.field_b, var8, var9, var24);
@@ -225,7 +225,7 @@ final class BitPacketBuffer extends PacketBuffer {
           if ((match.playerMaskOne & 1 << playerId) != 0) {
             bm.a(destinationX, destinationY, var9, var24, var8, scaleDivisor, t.field_h.toLowerCase(), (byte) 76);
           }
-          lb.a();
+          Rasterizer2D.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -283,7 +283,7 @@ final class BitPacketBuffer extends PacketBuffer {
         this.position = (this.bitPosition + 7) / 8;
         if (obfuscationGuard < 69) {
           pb var3 = (pb) null;
-          BitPacketBuffer.a((jp) null, (pb) null, 39, 118, (byte) 103, -79);
+          BitPacketBuffer.a((RgbSprite) null, (pb) null, 39, 118, (byte) 103, -79);
         }
     }
 
@@ -325,11 +325,11 @@ final class BitPacketBuffer extends PacketBuffer {
         }
     }
 
-    final static void a(jp param0, pb param1, int param2, int param3, byte param4, int param5) {
+    final static void a(RgbSprite param0, pb param1, int param2, int param3, byte param4, int param5) {
         try {
           fc.a(-102, param1.field_p);
-          lb.g(0, 0, param1.field_i, param1.field_q, hh.field_c[param2], 10792131);
-          param0.c((param1.field_i - param0.field_x) / 2, -(75 / param3) - param0.field_z + (param5 + param1.field_q));
+          Rasterizer2D.fillVerticalGradient(0, 0, param1.field_i, param1.field_q, hh.field_c[param2], 10792131);
+          param0.drawTransparent((param1.field_i - param0.canvasWidth) / 2, -(75 / param3) - param0.canvasHeight + (param5 + param1.field_q));
           sc.b(-102);
           if (param4 < 6) {
             BitPacketBuffer.clearStaticReferences(102);
@@ -377,7 +377,7 @@ final class BitPacketBuffer extends PacketBuffer {
           return;
         }
         try {
-          tk.field_p = param1;
+          DualLinkNode.field_p = param1;
           var5 = (CharSequence) ((Object) param1);
           kb.field_Qb = gb.a(var5, 96);
           qn.field_n = param2;

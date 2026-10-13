@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sf extends vb implements je {
-    static jp[] field_V;
+    static RgbSprite[] field_V;
     static int field_Z;
     private int field_ab;
     static String field_bb;
     static String field_X;
-    static jp[] field_U;
+    static RgbSprite[] field_U;
     private ia field_W;
-    static jp field_cb;
-    static jp field_Y;
+    static RgbSprite field_cb;
+    static RgbSprite field_Y;
 
     final void n(int param0) {
         if (param0 >= 7) {

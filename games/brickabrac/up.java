@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class up extends um {
-    static jp[] field_A;
+    static RgbSprite[] field_A;
     static tq field_v;
     private be field_B;
     private be[] field_y;
     static String field_x;
-    static jp field_w;
+    static RgbSprite field_w;
     static int field_z;
 
-    final void a(boolean param0, int param1, jp[] param2) {
+    final void a(boolean param0, int param1, RgbSprite[] param2) {
         int var4_int = 0;
         if (!param0) {
           return;
@@ -40,15 +40,15 @@ final class up extends um {
         be var5 = null;
         be var6 = null;
         int var7 = 0;
-        jp var8 = null;
+        RgbSprite var8 = null;
         be var6Lifetime1;
         be var6Lifetime2;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           super.a(-35, param1);
           if (!param0) {
-            var8 = (jp) null;
-            this.a(54, (jp) null);
+            var8 = (RgbSprite) null;
+            this.a(54, (RgbSprite) null);
           }
           if (param2) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
@@ -89,7 +89,7 @@ final class up extends um {
         }
     }
 
-    final void a(jp[] param0, boolean param1) {
+    final void a(RgbSprite[] param0, boolean param1) {
         int var4 = 0;
         be[] var3 = null;
         be var5 = null;
@@ -245,7 +245,7 @@ final class up extends um {
         var1.a(-2147483648);
     }
 
-    final void a(int param0, jp param1) {
+    final void a(int param0, RgbSprite param1) {
         int var4 = 0;
         be[] var3 = null;
         be var5 = null;

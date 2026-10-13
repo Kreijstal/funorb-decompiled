@@ -6,12 +6,12 @@ final class nf extends lg {
     static int field_P;
     private String field_S;
     static int field_Y;
-    static jp[] field_W;
+    static RgbSprite[] field_W;
     static boolean field_V;
-    private jp field_X;
+    private RgbSprite field_X;
     private ia field_R;
     static String field_T;
-    static jp field_U;
+    static RgbSprite field_U;
 
     final boolean a(boolean param0, oc param1) {
         RuntimeException var3 = null;
@@ -80,8 +80,8 @@ final class nf extends lg {
         String var17;
         Object var18;
         qe var18_ref;
-        jp var19;
-        jp var20;
+        RgbSprite var19;
+        RgbSprite var20;
         Object var22;
         Object var27;
         Object var31;
@@ -92,38 +92,38 @@ final class nf extends lg {
         String var5;
         int var11;
         int var12;
-        jp var16;
-        jp var21;
+        RgbSprite var16;
+        RgbSprite var21;
         qe var22_ref;
-        jp var23;
-        jp var24;
-        jp var25;
+        RgbSprite var23;
+        RgbSprite var24;
+        RgbSprite var25;
         String var26;
         qe var27_ref;
-        jp var28;
-        jp var29;
-        jp var30;
+        RgbSprite var28;
+        RgbSprite var29;
+        RgbSprite var30;
         qe var31_ref;
-        jp var32;
-        jp var33;
-        jp var34;
+        RgbSprite var32;
+        RgbSprite var33;
+        RgbSprite var34;
         String var35;
         qe var36_ref;
-        jp var37;
-        jp var38;
-        jp var39;
+        RgbSprite var37;
+        RgbSprite var38;
+        RgbSprite var39;
         qe var40_ref;
-        jp var41;
-        jp var42;
-        jp var43;
+        RgbSprite var41;
+        RgbSprite var42;
+        RgbSprite var43;
         qe var44_ref;
-        jp var45;
-        jp var46;
-        jp var47;
+        RgbSprite var45;
+        RgbSprite var46;
+        RgbSprite var47;
         qe var50_ref;
-        jp var51;
-        jp var52;
-        jp var53;
+        RgbSprite var51;
+        RgbSprite var52;
+        RgbSprite var53;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -181,31 +181,31 @@ final class nf extends lg {
               var6 != hq.field_z) {
               if (lp.field_xb == var6) {
                 var19 = df.field_a[2];
-                var19.f(var9, var10 - (var19.field_C >> 1), 256);
+                var19.f(var9, var10 - (var19.height >> 1), 256);
                 return;
               }
               if (ae.field_c != var6) {
                 return;
               }
               var20 = df.field_a[1];
-              var20.f(var9, -(var20.field_C >> 1) + var10, 256);
+              var20.f(var9, -(var20.height >> 1) + var10, 256);
               return;
             }
             var21 = df.field_a[0];
-            var11 = var21.field_x << 1;
-            var12 = var21.field_z << 1;
+            var11 = var21.canvasWidth << 1;
+            var12 = var21.canvasHeight << 1;
             if (this.field_X != null &&
-              var11 <= this.field_X.field_D &&
-              this.field_X.field_C >= var12) {
+              var11 <= this.field_X.width &&
+              this.field_X.height >= var12) {
               fc.a(-70, this.field_X);
-              lb.d();
+              Rasterizer2D.clear();
             } else {
-              this.field_X = new jp(var11, var12);
+              this.field_X = new RgbSprite(var11, var12);
               fc.a(-86, this.field_X);
             }
-            var21.a(112, 144, var21.field_x << 4, var21.field_z << 4, -this.field_Q << 10, 4096);
+            var21.a(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.field_Q << 10, 4096);
             sc.b(-111);
-            this.field_X.f(-(var21.field_x >> 1) + var9, -var21.field_z + var10, 256);
+            this.field_X.f(-(var21.canvasWidth >> 1) + var9, -var21.canvasHeight + var10, 256);
             return;
           }
           super.a(param0, param1, param2, param3);
@@ -217,39 +217,39 @@ final class nf extends lg {
             var6 != hq.field_z) {
             if (lp.field_xb == var6) {
               var23 = df.field_a[2];
-              var23.f(var9Lifetime5, var10Lifetime5 - (var23.field_C >> 1), 256);
+              var23.f(var9Lifetime5, var10Lifetime5 - (var23.height >> 1), 256);
               return;
             }
             if (ae.field_c != var6) {
               return;
             }
             var24 = df.field_a[1];
-            var24.f(var9Lifetime5, -(var24.field_C >> 1) + var10Lifetime5, 256);
+            var24.f(var9Lifetime5, -(var24.height >> 1) + var10Lifetime5, 256);
             return;
           }
           var25 = df.field_a[0];
-          var11Lifetime5 = var25.field_x << 1;
-          var12Lifetime5 = var25.field_z << 1;
+          var11Lifetime5 = var25.canvasWidth << 1;
+          var12Lifetime5 = var25.canvasHeight << 1;
           if (this.field_X == null) {
-            this.field_X = new jp(var11Lifetime5, var12Lifetime5);
+            this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
             fc.a(-86, this.field_X);
           } else {
-            if (var11Lifetime5 > this.field_X.field_D) {
-              this.field_X = new jp(var11Lifetime5, var12Lifetime5);
+            if (var11Lifetime5 > this.field_X.width) {
+              this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
               fc.a(-86, this.field_X);
             } else {
-              if (this.field_X.field_C >= var12Lifetime5) {
+              if (this.field_X.height >= var12Lifetime5) {
                 fc.a(-70, this.field_X);
-                lb.d();
+                Rasterizer2D.clear();
               } else {
-                this.field_X = new jp(var11Lifetime5, var12Lifetime5);
+                this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
                 fc.a(-86, this.field_X);
               }
             }
           }
-          var25.a(112, 144, var25.field_x << 4, var25.field_z << 4, -this.field_Q << 10, 4096);
+          var25.a(112, 144, var25.canvasWidth << 4, var25.canvasHeight << 4, -this.field_Q << 10, 4096);
           sc.b(-111);
-          this.field_X.f(-(var25.field_x >> 1) + var9Lifetime5, -var25.field_z + var10Lifetime5, 256);
+          this.field_X.f(-(var25.canvasWidth >> 1) + var9Lifetime5, -var25.canvasHeight + var10Lifetime5, 256);
           return;
         }
         if (var6 == hq.field_z) {
@@ -266,31 +266,31 @@ final class nf extends lg {
               var6 != hq.field_z) {
               if (lp.field_xb == var6) {
                 var28 = df.field_a[2];
-                var28.f(var9Lifetime1, var10Lifetime1 - (var28.field_C >> 1), 256);
+                var28.f(var9Lifetime1, var10Lifetime1 - (var28.height >> 1), 256);
                 return;
               }
               if (ae.field_c != var6) {
                 return;
               }
               var29 = df.field_a[1];
-              var29.f(var9Lifetime1, -(var29.field_C >> 1) + var10Lifetime1, 256);
+              var29.f(var9Lifetime1, -(var29.height >> 1) + var10Lifetime1, 256);
               return;
             }
             var30 = df.field_a[0];
-            var11Lifetime1 = var30.field_x << 1;
-            var12Lifetime1 = var30.field_z << 1;
+            var11Lifetime1 = var30.canvasWidth << 1;
+            var12Lifetime1 = var30.canvasHeight << 1;
             if (this.field_X != null &&
-              var11Lifetime1 <= this.field_X.field_D &&
-              this.field_X.field_C >= var12Lifetime1) {
+              var11Lifetime1 <= this.field_X.width &&
+              this.field_X.height >= var12Lifetime1) {
               fc.a(-70, this.field_X);
-              lb.d();
+              Rasterizer2D.clear();
             } else {
-              this.field_X = new jp(var11Lifetime1, var12Lifetime1);
+              this.field_X = new RgbSprite(var11Lifetime1, var12Lifetime1);
               fc.a(-86, this.field_X);
             }
-            var30.a(112, 144, var30.field_x << 4, var30.field_z << 4, -this.field_Q << 10, 4096);
+            var30.a(112, 144, var30.canvasWidth << 4, var30.canvasHeight << 4, -this.field_Q << 10, 4096);
             sc.b(-111);
-            this.field_X.f(-(var30.field_x >> 1) + var9Lifetime1, -var30.field_z + var10Lifetime1, 256);
+            this.field_X.f(-(var30.canvasWidth >> 1) + var9Lifetime1, -var30.canvasHeight + var10Lifetime1, 256);
             return;
           }
           super.a(param0, param1, param2, param3);
@@ -302,39 +302,39 @@ final class nf extends lg {
             var6 != hq.field_z) {
             if (lp.field_xb == var6) {
               var32 = df.field_a[2];
-              var32.f(var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - (var32.field_C >> 1), 256);
+              var32.f(var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - (var32.height >> 1), 256);
               return;
             }
             if (ae.field_c != var6) {
               return;
             }
             var33 = df.field_a[1];
-            var33.f(var9Lifetime1Lifetime1, -(var33.field_C >> 1) + var10Lifetime1Lifetime1, 256);
+            var33.f(var9Lifetime1Lifetime1, -(var33.height >> 1) + var10Lifetime1Lifetime1, 256);
             return;
           }
           var34 = df.field_a[0];
-          var11Lifetime1Lifetime1 = var34.field_x << 1;
-          var12Lifetime1Lifetime1 = var34.field_z << 1;
+          var11Lifetime1Lifetime1 = var34.canvasWidth << 1;
+          var12Lifetime1Lifetime1 = var34.canvasHeight << 1;
           if (this.field_X == null) {
-            this.field_X = new jp(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+            this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
             fc.a(-86, this.field_X);
           } else {
-            if (var11Lifetime1Lifetime1 > this.field_X.field_D) {
-              this.field_X = new jp(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+            if (var11Lifetime1Lifetime1 > this.field_X.width) {
+              this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
               fc.a(-86, this.field_X);
             } else {
-              if (this.field_X.field_C >= var12Lifetime1Lifetime1) {
+              if (this.field_X.height >= var12Lifetime1Lifetime1) {
                 fc.a(-70, this.field_X);
-                lb.d();
+                Rasterizer2D.clear();
               } else {
-                this.field_X = new jp(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+                this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
                 fc.a(-86, this.field_X);
               }
             }
           }
-          var34.a(112, 144, var34.field_x << 4, var34.field_z << 4, -this.field_Q << 10, 4096);
+          var34.a(112, 144, var34.canvasWidth << 4, var34.canvasHeight << 4, -this.field_Q << 10, 4096);
           sc.b(-111);
-          this.field_X.f(-(var34.field_x >> 1) + var9Lifetime1Lifetime1, -var34.field_z + var10Lifetime1Lifetime1, 256);
+          this.field_X.f(-(var34.canvasWidth >> 1) + var9Lifetime1Lifetime1, -var34.canvasHeight + var10Lifetime1Lifetime1, 256);
           return;
         }
         var5 = this.field_R.a(-118);
@@ -349,31 +349,31 @@ final class nf extends lg {
               var6Lifetime1 != hq.field_z) {
               if (lp.field_xb == var6Lifetime1) {
                 var51 = df.field_a[2];
-                var51.f(var9Lifetime2, var10Lifetime2 - (var51.field_C >> 1), 256);
+                var51.f(var9Lifetime2, var10Lifetime2 - (var51.height >> 1), 256);
                 return;
               }
               if (ae.field_c != var6Lifetime1) {
                 return;
               }
               var52 = df.field_a[1];
-              var52.f(var9Lifetime2, -(var52.field_C >> 1) + var10Lifetime2, 256);
+              var52.f(var9Lifetime2, -(var52.height >> 1) + var10Lifetime2, 256);
               return;
             }
             var53 = df.field_a[0];
-            var11Lifetime2 = var53.field_x << 1;
-            var12Lifetime2 = var53.field_z << 1;
+            var11Lifetime2 = var53.canvasWidth << 1;
+            var12Lifetime2 = var53.canvasHeight << 1;
             if (this.field_X != null &&
-              var11Lifetime2 <= this.field_X.field_D &&
-              this.field_X.field_C >= var12Lifetime2) {
+              var11Lifetime2 <= this.field_X.width &&
+              this.field_X.height >= var12Lifetime2) {
               fc.a(-70, this.field_X);
-              lb.d();
+              Rasterizer2D.clear();
             } else {
-              this.field_X = new jp(var11Lifetime2, var12Lifetime2);
+              this.field_X = new RgbSprite(var11Lifetime2, var12Lifetime2);
               fc.a(-86, this.field_X);
             }
-            var53.a(112, 144, var53.field_x << 4, var53.field_z << 4, -this.field_Q << 10, 4096);
+            var53.a(112, 144, var53.canvasWidth << 4, var53.canvasHeight << 4, -this.field_Q << 10, 4096);
             sc.b(-111);
-            this.field_X.f(-(var53.field_x >> 1) + var9Lifetime2, -var53.field_z + var10Lifetime2, 256);
+            this.field_X.f(-(var53.canvasWidth >> 1) + var9Lifetime2, -var53.canvasHeight + var10Lifetime2, 256);
             return;
           }
           this.field_A = var5;
@@ -387,40 +387,40 @@ final class nf extends lg {
             var6Lifetime1Lifetime1 != hq.field_z) {
             if (lp.field_xb == var6Lifetime1Lifetime1) {
               var45 = df.field_a[2];
-              var45.f(var9Lifetime2Lifetime1, var10Lifetime2Lifetime1 - (var45.field_C >> 1), 256);
+              var45.f(var9Lifetime2Lifetime1, var10Lifetime2Lifetime1 - (var45.height >> 1), 256);
               return;
             }
             if (ae.field_c != var6Lifetime1Lifetime1) {
               return;
             }
             var46 = df.field_a[1];
-            var46.f(var9Lifetime2Lifetime1, -(var46.field_C >> 1) + var10Lifetime2Lifetime1, 256);
+            var46.f(var9Lifetime2Lifetime1, -(var46.height >> 1) + var10Lifetime2Lifetime1, 256);
             return;
           }
           var47 = df.field_a[0];
           var16 = var47;
-          var11Lifetime2Lifetime1 = var47.field_x << 1;
-          var12Lifetime2Lifetime1 = var47.field_z << 1;
+          var11Lifetime2Lifetime1 = var47.canvasWidth << 1;
+          var12Lifetime2Lifetime1 = var47.canvasHeight << 1;
           if (this.field_X == null) {
-            this.field_X = new jp(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+            this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
             fc.a(-86, this.field_X);
           } else {
-            if (var11Lifetime2Lifetime1 > this.field_X.field_D) {
-              this.field_X = new jp(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+            if (var11Lifetime2Lifetime1 > this.field_X.width) {
+              this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
               fc.a(-86, this.field_X);
             } else {
-              if (this.field_X.field_C >= var12Lifetime2Lifetime1) {
+              if (this.field_X.height >= var12Lifetime2Lifetime1) {
                 fc.a(-70, this.field_X);
-                lb.d();
+                Rasterizer2D.clear();
               } else {
-                this.field_X = new jp(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+                this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
                 fc.a(-86, this.field_X);
               }
             }
           }
-          var47.a(112, 144, var47.field_x << 4, var47.field_z << 4, -this.field_Q << 10, 4096);
+          var47.a(112, 144, var47.canvasWidth << 4, var47.canvasHeight << 4, -this.field_Q << 10, 4096);
           sc.b(-111);
-          this.field_X.f(-(var47.field_x >> 1) + var9Lifetime2Lifetime1, -var47.field_z + var10Lifetime2Lifetime1, 256);
+          this.field_X.f(-(var47.canvasWidth >> 1) + var9Lifetime2Lifetime1, -var47.canvasHeight + var10Lifetime2Lifetime1, 256);
           return;
         }
         var35 = this.field_S;
@@ -437,31 +437,31 @@ final class nf extends lg {
             var6Lifetime2 != hq.field_z) {
             if (lp.field_xb == var6Lifetime2) {
               var37 = df.field_a[2];
-              var37.f(var9Lifetime3, var10Lifetime3 - (var37.field_C >> 1), 256);
+              var37.f(var9Lifetime3, var10Lifetime3 - (var37.height >> 1), 256);
               return;
             }
             if (ae.field_c != var6Lifetime2) {
               return;
             }
             var38 = df.field_a[1];
-            var38.f(var9Lifetime3, -(var38.field_C >> 1) + var10Lifetime3, 256);
+            var38.f(var9Lifetime3, -(var38.height >> 1) + var10Lifetime3, 256);
             return;
           }
           var39 = df.field_a[0];
-          var11Lifetime3 = var39.field_x << 1;
-          var12Lifetime3 = var39.field_z << 1;
+          var11Lifetime3 = var39.canvasWidth << 1;
+          var12Lifetime3 = var39.canvasHeight << 1;
           if (this.field_X != null &&
-            var11Lifetime3 <= this.field_X.field_D &&
-            this.field_X.field_C >= var12Lifetime3) {
+            var11Lifetime3 <= this.field_X.width &&
+            this.field_X.height >= var12Lifetime3) {
             fc.a(-70, this.field_X);
-            lb.d();
+            Rasterizer2D.clear();
           } else {
-            this.field_X = new jp(var11Lifetime3, var12Lifetime3);
+            this.field_X = new RgbSprite(var11Lifetime3, var12Lifetime3);
             fc.a(-86, this.field_X);
           }
-          var39.a(112, 144, var39.field_x << 4, var39.field_z << 4, -this.field_Q << 10, 4096);
+          var39.a(112, 144, var39.canvasWidth << 4, var39.canvasHeight << 4, -this.field_Q << 10, 4096);
           sc.b(-111);
-          this.field_X.f(-(var39.field_x >> 1) + var9Lifetime3, -var39.field_z + var10Lifetime3, 256);
+          this.field_X.f(-(var39.canvasWidth >> 1) + var9Lifetime3, -var39.canvasHeight + var10Lifetime3, 256);
           return;
         }
         super.a(param0, param1, param2, param3);
@@ -473,39 +473,39 @@ final class nf extends lg {
           var6Lifetime3 != hq.field_z) {
           if (lp.field_xb == var6Lifetime3) {
             var41 = df.field_a[2];
-            var41.f(var9Lifetime4, var10Lifetime4 - (var41.field_C >> 1), 256);
+            var41.f(var9Lifetime4, var10Lifetime4 - (var41.height >> 1), 256);
             return;
           }
           if (ae.field_c != var6Lifetime3) {
             return;
           }
           var42 = df.field_a[1];
-          var42.f(var9Lifetime4, -(var42.field_C >> 1) + var10Lifetime4, 256);
+          var42.f(var9Lifetime4, -(var42.height >> 1) + var10Lifetime4, 256);
           return;
         }
         var43 = df.field_a[0];
-        var11Lifetime4 = var43.field_x << 1;
-        var12Lifetime4 = var43.field_z << 1;
+        var11Lifetime4 = var43.canvasWidth << 1;
+        var12Lifetime4 = var43.canvasHeight << 1;
         if (this.field_X == null) {
-          this.field_X = new jp(var11Lifetime4, var12Lifetime4);
+          this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
           fc.a(-86, this.field_X);
         } else {
-          if (var11Lifetime4 > this.field_X.field_D) {
-            this.field_X = new jp(var11Lifetime4, var12Lifetime4);
+          if (var11Lifetime4 > this.field_X.width) {
+            this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
             fc.a(-86, this.field_X);
           } else {
-            if (this.field_X.field_C < var12Lifetime4) {
-              this.field_X = new jp(var11Lifetime4, var12Lifetime4);
+            if (this.field_X.height < var12Lifetime4) {
+              this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
               fc.a(-86, this.field_X);
             } else {
               fc.a(-70, this.field_X);
-              lb.d();
+              Rasterizer2D.clear();
             }
           }
         }
-        var43.a(112, 144, var43.field_x << 4, var43.field_z << 4, -this.field_Q << 10, 4096);
+        var43.a(112, 144, var43.canvasWidth << 4, var43.canvasHeight << 4, -this.field_Q << 10, 4096);
         sc.b(-111);
-        this.field_X.f(-(var43.field_x >> 1) + var9Lifetime4, -var43.field_z + var10Lifetime4, 256);
+        this.field_X.f(-(var43.canvasWidth >> 1) + var9Lifetime4, -var43.canvasHeight + var10Lifetime4, 256);
         return;
     }
 

@@ -6,7 +6,7 @@ final class gg extends IntrusiveNode {
     int field_j;
     int field_r;
     int field_s;
-    static jp field_o;
+    static RgbSprite field_o;
     static fr[] field_i;
     gg field_k;
     static byte[] field_q;
@@ -14,7 +14,7 @@ final class gg extends IntrusiveNode {
     int field_n;
     int field_u;
     static String field_m;
-    static jp[] field_p;
+    static RgbSprite[] field_p;
 
     public static void a(byte param0) {
         int var1 = 127 % ((-74 - param0) / 42);

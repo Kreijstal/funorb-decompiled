@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class pp {
-    static jp field_b;
+    static RgbSprite field_b;
     static String field_c;
     static int field_a;
 
@@ -136,7 +136,7 @@ final class pp {
           var4 = param2.length();
           var5 = 0;
           if (param0 != 120) {
-            field_b = (jp) null;
+            field_b = (RgbSprite) null;
           }
           while (var4 > var5) {
             if (param1 == param2.charAt(var5)) {
@@ -236,7 +236,7 @@ final class pp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            field_b = (jp) null;
+            field_b = (RgbSprite) null;
           }
           if (param0 != null &&
             param0.length() >= pa.field_n &&

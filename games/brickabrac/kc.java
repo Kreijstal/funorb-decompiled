@@ -5,8 +5,8 @@ final class kc extends IntrusiveNode {
     static String field_i;
     private int field_l;
     private int field_k;
-    static jp field_r;
-    static jp field_p;
+    static RgbSprite field_r;
+    static RgbSprite field_p;
     static nb field_q;
     static mf field_j;
     static mh field_n;
@@ -65,9 +65,9 @@ final class kc extends IntrusiveNode {
         this.c((byte) -61);
     }
 
-    final static jp[] a(int param0, boolean param1) {
-        jp[] var3 = new jp[9];
-        jp[] var2 = var3;
+    final static RgbSprite[] a(int param0, boolean param1) {
+        RgbSprite[] var3 = new RgbSprite[9];
+        RgbSprite[] var2 = var3;
         if (!param1) {
           var3[4] = hd.a(param0, 64, (byte) -6);
           return var2;

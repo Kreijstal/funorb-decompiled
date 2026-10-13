@@ -7,7 +7,7 @@ final class u {
     static String field_f;
     static int field_d;
     static String field_e;
-    static jp field_c;
+    static RgbSprite field_c;
     static int field_a;
     private static String field_z;
 

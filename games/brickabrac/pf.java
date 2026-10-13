@@ -104,24 +104,24 @@ final class pf implements ub {
           var14 = (vh) (stackIn_3_0);
           if (var14 != null) {
           }
-          lb.g(param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, this.field_o);
+          Rasterizer2D.fillRectangle(param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, this.field_o);
           var7 = var14.field_Z + param2 + param3.field_o;
           var8 = var14.field_R + (param4 + param3.field_w);
-          lb.f(var7, var8, var14.field_W, this.field_e);
+          Rasterizer2D.f(var7, var8, var14.field_W, this.field_e);
           if (var14.field_Q != -1) {
             var9 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_W);
             var12 = (int)(Math.cos(var9) * (double)var14.field_W);
-            lb.f(var7 + var11, var12 + var8, 1, this.field_m);
+            Rasterizer2D.f(var7 + var11, var12 + var8, 1, this.field_m);
           }
-          lb.f(var7, var8, 2, 1);
+          Rasterizer2D.f(var7, var8, 2, 1);
           if (param1 != -20618) {
             return;
           }
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_O) / (double)var14.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_W);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_W);
-          lb.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          Rasterizer2D.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_l == null) {
             return;
           }
@@ -165,7 +165,7 @@ final class pf implements ub {
         field_h = null;
     }
 
-    final static void a(int param0, byte[] param1, mf param2, String[] param3, int param4, boolean param5, jp[][] param6, mf param7, int param8, int[] param9, String[] param10, jp[][] param11, tp[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, mf param19) {
+    final static void a(int param0, byte[] param1, mf param2, String[] param3, int param4, boolean param5, RgbSprite[][] param6, mf param7, int param8, int[] param9, String[] param10, RgbSprite[][] param11, tp[] param12, int param13, byte[] param14, String[][] param15, String[] param16, String[][] param17, int[] param18, mf param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -367,7 +367,7 @@ final class pf implements ub {
           return true;
         }
         var3 = (mf) null;
-        pf.a(97, (byte[]) null, (mf) null, (String[]) null, 18, true, (jp[][]) null, (mf) null, -121, (int[]) null, (String[]) null, (jp[][]) null, (tp[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (mf) null);
+        pf.a(97, (byte[]) null, (mf) null, (String[]) null, 18, true, (RgbSprite[][]) null, (mf) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (tp[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (mf) null);
         if (null == hd.field_d &&
           param1 == lp.field_rb.field_a) {
           return true;

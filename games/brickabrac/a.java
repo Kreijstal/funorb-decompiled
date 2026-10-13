@@ -6,7 +6,7 @@ import java.io.*;
 final class a extends ih {
     static dh field_u;
     static String field_t;
-    static jp[] field_s;
+    static RgbSprite[] field_s;
     private wh field_q;
     static String field_r;
 
@@ -19,12 +19,12 @@ final class a extends ih {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        jp var4 = null;
-        jp var5 = null;
+        RgbSprite var4 = null;
+        RgbSprite var5 = null;
         int var6 = 0;
-        jp[] var7 = null;
-        jp var9 = null;
-        jp var10 = null;
+        RgbSprite[] var7 = null;
+        RgbSprite var9 = null;
+        RgbSprite var10 = null;
         try {
           if (oa.field_Sb == null) {
             return;
@@ -33,9 +33,9 @@ final class a extends ih {
           var4 = oa.field_Sb.c((byte) -123);
           if (var4 != null) {
             if (km.field_i == 0) {
-              var4.c(-var4.field_x + 640, 470 - var4.field_z);
+              var4.drawTransparent(-var4.canvasWidth + 640, 470 - var4.canvasHeight);
             } else {
-              var4.b(-var4.field_x + 640, 470 - var4.field_z, 256 - var3_int);
+              var4.b(-var4.canvasWidth + 640, 470 - var4.canvasHeight, 256 - var3_int);
             }
           }
           if (param0 != 640) {
@@ -43,24 +43,24 @@ final class a extends ih {
           }
           if (km.field_i > 0 &&
             ih.field_k != null) {
-            ih.field_k.b(640 - ih.field_k.field_x, 480 - ih.field_k.field_z - 10, var3_int);
+            ih.field_k.b(640 - ih.field_k.canvasWidth, 480 - ih.field_k.canvasHeight - 10, var3_int);
           }
           var5 = IntrusiveNode.field_f[param2.field_y];
           if (var4 != null) {
-            var5.c(-3 + (640 - (var4.field_x + var5.field_x) / 2), -var4.field_z + 480 - 10 + 45);
+            var5.drawTransparent(-3 + (640 - (var4.canvasWidth + var5.canvasWidth) / 2), -var4.canvasHeight + 480 - 10 + 45);
           }
           var6 = kb.a(param1, 0, 100, param2);
           var7 = oa.field_Sb.b(param0 ^ -746);
           if (var7 != null) {
             var9 = var7[var6];
-            var9.c(-20 + (-var9.field_x + 640), 520 - var9.field_z);
+            var9.drawTransparent(-20 + (-var9.canvasWidth + 640), 520 - var9.canvasHeight);
           }
           if (km.field_i > 0) {
             if (null == fq.field_c) {
               return;
             }
             var10 = fq.field_c[var6];
-            var10.b(-var10.field_x + 620, 40 + (-var10.field_z + 480), var3_int);
+            var10.b(-var10.canvasWidth + 620, 40 + (-var10.canvasHeight + 480), var3_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -179,7 +179,7 @@ final class a extends ih {
             while (var2 != null) {
               this.field_m.position = 0;
               this.field_m.writeByte(-102, 1);
-              this.field_m.writeLong40(var2.field_j, (byte) -32);
+              this.field_m.writeLong40(var2.secondaryKey, (byte) -32);
               this.field_q.a(this.field_m.data, true, this.field_m.data.length, 0);
               this.field_n.a(var2, false);
               var2 = (da) (this.field_g.e(-8394));
@@ -188,7 +188,7 @@ final class a extends ih {
             while (var2Lifetime1 != null) {
               this.field_m.position = 0;
               this.field_m.writeByte(-128, 0);
-              this.field_m.writeLong40(var2Lifetime1.field_j, (byte) -32);
+              this.field_m.writeLong40(var2Lifetime1.secondaryKey, (byte) -32);
               this.field_q.a(this.field_m.data, true, this.field_m.data.length, 0);
               this.field_c.a(var2Lifetime1, false);
               var2Lifetime1 = (da) (this.field_a.e(-8394));
@@ -233,7 +233,7 @@ final class a extends ih {
                       this.field_e.field_K = 0;
                     }
                   } else {
-                    this.field_e.d(3);
+                    this.field_e.unlinkSecondary(3);
                     this.field_e.field_u = false;
                     this.field_e = null;
                   }
@@ -266,7 +266,7 @@ final class a extends ih {
                       if (var11 == 0) {
                         var14_ref = (da) (this.field_n.a(true));
                         while (var14_ref != null) {
-                          if (var14_ref.field_j == var12) {
+                          if (var14_ref.secondaryKey == var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -278,7 +278,7 @@ final class a extends ih {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (da) (this.field_c.a(true));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_j) {
+                          if (var12 == var14_ref.secondaryKey) {
                             break;
                           }
                           var14_ref = (da) (this.field_c.e(-8394));

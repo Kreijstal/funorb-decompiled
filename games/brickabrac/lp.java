@@ -8,7 +8,7 @@ class lp extends fe implements en {
     private boolean field_tb;
     private cr field_qb;
     private boolean field_zb;
-    static jp[] field_yb;
+    static RgbSprite[] field_yb;
     static mh field_Ab;
     static qh field_xb;
     private dh field_sb;
@@ -48,7 +48,7 @@ class lp extends fe implements en {
 
     final static boolean n(int param0) {
         if (param0 != -5) {
-          field_yb = (jp[]) null;
+          field_yb = (RgbSprite[]) null;
           if (!LegacyUtf8Decoder.a((byte) -80)) {
             return false;
           }

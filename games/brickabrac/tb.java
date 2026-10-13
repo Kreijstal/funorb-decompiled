@@ -17,14 +17,14 @@ final class tb extends bj {
         wm.field_a.b(this.field_jb, param0 + (this.field_t >> 1), param2 + 103, 16777215, -1);
         if (param1 == 274) {
           if (this.field_ib != null) {
-            lb.c(20 + param0, 120 + param2 - 7, 260, 8421504);
+            Rasterizer2D.drawHorizontalLine(20 + param0, 120 + param2 - 7, 260, 8421504);
             wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.field_F);
           }
           return;
         }
         this.field_gb = false;
         if (this.field_ib != null) {
-          lb.c(20 + param0, 120 + param2 - 7, 260, 8421504);
+          Rasterizer2D.drawHorizontalLine(20 + param0, 120 + param2 - 7, 260, 8421504);
           wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.field_F);
         }
     }

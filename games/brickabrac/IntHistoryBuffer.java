@@ -6,7 +6,7 @@ final class IntHistoryBuffer extends IntrusiveNode {
     static String field_k;
     static mf field_i;
     private int[] entries;
-    static jp[] field_l;
+    static RgbSprite[] field_l;
     private int capacity;
     static int field_m;
 
@@ -34,7 +34,7 @@ final class IntHistoryBuffer extends IntrusiveNode {
         field_l = null;
         field_k = null;
         if (param0 != 67108864) {
-          field_l = (jp[]) null;
+          field_l = (RgbSprite[]) null;
         }
     }
 

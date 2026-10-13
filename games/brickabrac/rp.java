@@ -3,13 +3,13 @@
  */
 final class rp extends km {
     static String field_r;
-    static jp field_s;
+    static RgbSprite field_s;
     private NodeDeque field_v;
     static mh field_t;
     static int field_x;
-    static jp field_w;
+    static RgbSprite field_w;
     static String field_z;
-    static jp field_u;
+    static RgbSprite field_u;
     static String field_y;
 
     final int b(int param0, int param1) {
@@ -33,28 +33,28 @@ final class rp extends km {
         int var9 = 0;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (lb.field_i > param0) {
-            param2 = param2 - (-param0 + lb.field_i);
-            param0 = lb.field_i;
+          if (Rasterizer2D.clipLeft > param0) {
+            param2 = param2 - (-param0 + Rasterizer2D.clipLeft);
+            param0 = Rasterizer2D.clipLeft;
           }
-          if (param5 < lb.field_b) {
-            param4 = param4 - (-param5 + lb.field_b);
-            param5 = lb.field_b;
+          if (param5 < Rasterizer2D.clipTop) {
+            param4 = param4 - (-param5 + Rasterizer2D.clipTop);
+            param5 = Rasterizer2D.clipTop;
           }
-          if (param0 + param2 > lb.field_f) {
-            param2 = -param0 + lb.field_f;
+          if (param0 + param2 > Rasterizer2D.clipRight) {
+            param2 = -param0 + Rasterizer2D.clipRight;
           }
-          if (lb.field_j < param4 + param5) {
-            param4 = lb.field_j - param5;
+          if (Rasterizer2D.clipBottom < param4 + param5) {
+            param4 = Rasterizer2D.clipBottom - param5;
           }
-          var6_int = -param2 + lb.field_c;
-          var7 = lb.field_c * param5 + param0;
+          var6_int = -param2 + Rasterizer2D.width;
+          var7 = Rasterizer2D.width * param5 + param0;
           for (param5 = 0; param4 > param5; param5++) {
             for (param0 = -param2; param0 < 0; param0++) {
-              var8 = lb.field_l[var7];
+              var8 = Rasterizer2D.pixels[var7];
               incrementValue$0 = var7;
               var7++;
-              lb.field_l[incrementValue$0] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 8;
+              Rasterizer2D.pixels[incrementValue$0] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 8;
             }
             var7 = var7 + var6_int;
           }
@@ -72,7 +72,7 @@ final class rp extends km {
     final int a(boolean param0, int param1) {
         int var3 = this.field_m[param1].field_f;
         if (!param0) {
-          field_s = (jp) null;
+          field_s = (RgbSprite) null;
         }
         if (var3 != 42) {
           return super.a(true, param1);
@@ -88,7 +88,7 @@ final class rp extends km {
         MovingBody.a((byte) -105);
         this.a(0);
         if (obfuscationGuard > -14) {
-          field_s = (jp) null;
+          field_s = (RgbSprite) null;
         }
         si.a(pq.field_k, (byte) -118, po.field_a, hc.field_h);
         if (!pg.c(77)) {
@@ -208,7 +208,7 @@ final class rp extends km {
 
     final int a(int param0, int param1) {
         if (param0 > -71) {
-          field_u = (jp) null;
+          field_u = (RgbSprite) null;
         }
         int var3 = this.field_m[param1].field_f;
         if (var3 == 42) {
@@ -221,7 +221,7 @@ final class rp extends km {
         super(0, 180, 460, 150, 35, hc.field_e);
         this.field_v = new NodeDeque();
         int var1 = 468;
-        var1 = var1 - da.field_E[1].field_z;
+        var1 = var1 - da.field_E[1].canvasHeight;
         this.field_v.addLast(new nq(12, var1, da.field_E[1], rd.a(ii.field_s, new String[]{qn.field_u[1]}, (byte) 103)), (byte) 3);
     }
 
@@ -287,7 +287,7 @@ final class rp extends km {
 
     static {
         field_r = "Invite only";
-        field_s = new jp(640, 480);
+        field_s = new RgbSprite(640, 480);
         field_z = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_y = "Click or press F10 to open Quick Chat";
     }

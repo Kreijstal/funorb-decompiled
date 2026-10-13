@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aj {
-    static jp[][] field_c;
+    static RgbSprite[][] field_c;
     static String field_b;
-    static jp[][] field_a;
+    static RgbSprite[][] field_a;
 
     public static void b(int param0) {
         if (param0 == -789103103) {
-          field_c = (jp[][]) null;
-          field_a = (jp[][]) null;
+          field_c = (RgbSprite[][]) null;
+          field_a = (RgbSprite[][]) null;
           field_b = null;
           return;
         }
         aj.a(57, -37, 115);
-        field_c = (jp[][]) null;
-        field_a = (jp[][]) null;
+        field_c = (RgbSprite[][]) null;
+        field_a = (RgbSprite[][]) null;
         field_b = null;
     }
 

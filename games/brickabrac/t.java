@@ -4,10 +4,10 @@
 final class t {
     static String field_h;
     static String field_b;
-    static jp[] field_d;
+    static RgbSprite[] field_d;
     static String field_e;
     static String field_c;
-    static jp field_a;
+    static RgbSprite field_a;
     static mh field_f;
     static boolean field_g;
 

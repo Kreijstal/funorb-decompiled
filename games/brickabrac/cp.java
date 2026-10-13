@@ -5,7 +5,7 @@ final class cp extends h {
     private NodeDeque field_J;
     static mh field_K;
     static String field_G;
-    static jp field_I;
+    static RgbSprite field_I;
     static String field_H;
 
     final static void a(boolean param0, int param1) {
@@ -114,7 +114,7 @@ final class cp extends h {
     }
 
     public cp() {
-        super(0, 0, mn.field_y, r.field_w, (ub) null, (uh) null);
+        super(0, 0, SpriteGeometry.field_y, r.field_w, (ub) null, (uh) null);
         this.field_J = new NodeDeque();
     }
 
@@ -328,7 +328,7 @@ final class cp extends h {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        jp var9 = null;
+        RgbSprite var9 = null;
         int var8Lifetime1;
         try {
           if (param4.field_U < 50) {
@@ -347,7 +347,7 @@ final class cp extends h {
           } else {
             stackIn_8_3 = 35;
           }
-          lb.d(stackIn_7_0, stackIn_7_1, stackIn_7_2, -stackIn_8_3 + param2 / param6, 0, var8);
+          Rasterizer2D.fillRectangleAlpha(stackIn_7_0, stackIn_7_1, stackIn_7_2, -stackIn_8_3 + param2 / param6, 0, var8);
           if (150 < var7_int * 2 &&
             param4.field_zb > 0 &&
             param4.field_zb - 1 < a.field_s.length) {
@@ -357,7 +357,7 @@ final class cp extends h {
             }
             var8Lifetime1 = 256 * var8Lifetime1 / 50;
             var9 = a.field_s[param4.field_zb - 1];
-            var9.b(param0 + (param1 - param6 * var9.field_x) / (param6 * 2), param5 + (param2 - var9.field_z * param6) / (param6 * 2), var8Lifetime1);
+            var9.b(param0 + (param1 - param6 * var9.canvasWidth) / (param6 * 2), param5 + (param2 - var9.canvasHeight * param6) / (param6 * 2), var8Lifetime1);
             lo.a(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
           }
           if (param3 < 118) {
