@@ -73,7 +73,7 @@ final class up extends um {
             }
             return;
           }
-          pm.a(this.field_y, 0, param1.field_y, 0, 6);
+          ArrayOperations.copy(this.field_y, 0, param1.field_y, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

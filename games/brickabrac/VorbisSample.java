@@ -61,26 +61,26 @@ final class VorbisSample extends IntrusiveNode {
 
     final static VorbisSample load(ResourceArchive archive, int groupId, int fileId) {
         try {
-          VorbisSample var4_ref = null;
+          VorbisSample sample = null;
           if (!VorbisSample.ensureSetup(archive)) {
             archive.ensureFileAvailable(fileId, groupId, (byte) 102);
             return null;
           }
-          byte[] var3 = archive.takeFile(fileId, groupId, 4);
-          if (var3 == null) {
+          byte[] data = archive.takeFile(fileId, groupId, 4);
+          if (data == null) {
             return null;
           }
-          Object var4 = null;
+          Object unusedSampleObject = null;
           try {
-            var4_ref = new VorbisSample(var3);
-          } catch (IOException iOException) {
-            iOException.printStackTrace();
+            sample = new VorbisSample(data);
+          } catch (IOException invalidContainer) {
+            invalidContainer.printStackTrace();
           }
-          return var4_ref;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+          return sample;
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 
@@ -250,9 +250,9 @@ final class VorbisSample extends IntrusiveNode {
             trigC[2 * trigCIndex + 1] = -(float)Math.sin((double)(4 * trigCIndex + 2) * 3.141592653589793 / (double)blockSize);
           }
           bitReverse = new int[eighthBlock];
-          permutationBits = ed.b(9, eighthBlock - 1);
+          permutationBits = ed.unsignedBitLength(9, eighthBlock - 1);
           for (permutationIndex = 0; permutationIndex < eighthBlock; permutationIndex++) {
-            bitReverse[permutationIndex] = KeyboardInput.a(permutationBits, permutationIndex, -1);
+            bitReverse[permutationIndex] = KeyboardInput.reverseLowBits(permutationBits, permutationIndex, -1);
           }
           if (blockKind == 0) {
             shortTrigA = trigA;
@@ -379,31 +379,31 @@ final class VorbisSample extends IntrusiveNode {
 
     final static VorbisSample loadByName(ResourceArchive archive, String groupName, String fileName) {
         try {
-          VorbisSample var4_ref = null;
+          VorbisSample sample = null;
           if (!VorbisSample.ensureSetup(archive)) {
             archive.ensureFileAvailableByName(fileName, groupName, 0);
             return null;
           }
-          byte[] var3 = archive.takeFileByName(85, groupName, fileName);
-          if (var3 == null) {
+          byte[] data = archive.takeFileByName(85, groupName, fileName);
+          if (data == null) {
             return null;
           }
-          Object var4 = null;
+          Object unusedSampleObject = null;
           try {
-            var4_ref = new VorbisSample(var3);
-          } catch (IOException iOException) {
-            iOException.printStackTrace();
+            sample = new VorbisSample(data);
+          } catch (IOException invalidContainer) {
+            invalidContainer.printStackTrace();
           }
-          return var4_ref;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+          return sample;
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 
     private final float[] decodePacket(int packetIndex) {
-        int var32_int = 0;
+        int butterflyIndex = 0;
         int selectedBlockSize = 0;
         int previousLongFlag = 0;
         int nextLongFlag = 0;
@@ -440,28 +440,28 @@ final class VorbisSample extends IntrusiveNode {
         float[] trigB;
         float[] trigC;
         int[] bitReverse;
-        int blockBits;
-        int var26;
-        float var26_float;
-        float var27;
-        int var27_int;
-        float var28;
-        int var28_int;
-        float var29;
-        int var29_int;
-        float var30;
-        int var30_int;
-        float var31;
-        int var31_int;
-        float var32;
-        float var33;
-        int var33_int;
-        float var34;
-        float var35;
-        float var36;
-        float var37;
-        float var38;
-        float var39;
+        int preRotateIndex;
+        int stage;
+        float outerDifference;
+        float innerDifference;
+        int groupSpan;
+        float preRotateCos;
+        int trigStride;
+        float preRotateNegSin;
+        int group;
+        float mergeCos;
+        int leftBase;
+        float mergeNegSin;
+        int rightBase;
+        float reflectedOdd;
+        float combinedEven;
+        int butterflyOffset;
+        float leftOdd1;
+        float leftOdd3;
+        float rightOdd1;
+        float rightOdd3;
+        float stageCos;
+        float stageNegSin;
         float[] overlapSamples;
         int mirrorIndex;
         VorbisResidue residue;
@@ -475,48 +475,48 @@ final class VorbisSample extends IntrusiveNode {
         int skipResidue;
         int submapIndex;
         int appliedSubmap;
-        int var17_intLifetime3;
+        int halfBlock;
         int previousTailSample;
         int currentOverlapIndex;
         int unusedMirrorIndex;
-        int var25Lifetime1;
-        int var25Lifetime2;
-        int var26Lifetime1;
-        int var26Lifetime2;
-        int var26Lifetime3;
-        int var26Lifetime4;
-        int var26Lifetime5;
-        int var26Lifetime6;
-        int var26Lifetime7;
-        int var26Lifetime8;
-        int var26Lifetime9;
+        int mergeIndex;
+        int blockBits;
+        int reverseIndex;
+        int compactIndex;
+        int scatterIndex;
+        int postRotateIndex;
+        int finalRotateIndex;
+        int negativeTailIndex;
+        int shiftQuarterIndex;
+        int negativeQuarterIndex;
+        int reflectHalfIndex;
         int leftWindowSample;
         int rightWindowSample;
-        float var26_floatLifetime1;
-        float var27Lifetime1;
-        float var27Lifetime2;
+        float upperOdd3;
+        float upperOdd1;
+        float postRotateCos;
         float leftWindowSine;
         float rightWindowSine;
-        int var27_intLifetime1;
-        float var28Lifetime1;
-        float var28Lifetime2;
-        int var28_intLifetime1;
-        float var29Lifetime1;
-        float var29Lifetime2;
-        int var29_intLifetime1;
-        float var30Lifetime1;
-        float var30Lifetime2;
-        float var31Lifetime1;
-        float var33Lifetime1;
+        int reversedIndex;
+        float lowerOdd3;
+        float postRotateNegSin;
+        int reverseSource;
+        float lowerOdd1;
+        float forwardEven;
+        int reverseDestination;
+        float swapOdd1;
+        float forwardOdd;
+        float reflectedEven;
+        float combinedOdd;
         int currentHeadSample;
-        float var30Lifetime1Lifetime1;
-        float var30Lifetime1Lifetime2;
-        float var30Lifetime1Lifetime3;
+        float swapOdd3;
+        float swapOdd5;
+        float swapOdd7;
         int quarterBlock;
         int overlapLength;
         VorbisSample.setBitInput(this.packets[packetIndex], 0);
         VorbisSample.readBit();
-        mode = VorbisSample.readBits(ed.b(9, modeMappings.length - 1));
+        mode = VorbisSample.readBits(ed.unsignedBitLength(9, modeMappings.length - 1));
         longBlock = longBlockModes[mode] ? 1 : 0;
         if (longBlock == 0) {
           selectedBlockSize = shortBlockSize;
@@ -570,20 +570,20 @@ final class VorbisSample extends IntrusiveNode {
           floors[appliedFloor].apply(blockScratch, blockSize >> 1);
         }
         if (silent != 0) {
-          for (var17_intLifetime3 = blockSize >> 1; var17_intLifetime3 < blockSize; var17_intLifetime3++) {
-            blockScratch[var17_intLifetime3] = 0.0f;
+          for (halfBlock = blockSize >> 1; halfBlock < blockSize; halfBlock++) {
+            blockScratch[halfBlock] = 0.0f;
           }
         } else {
-          var17_intLifetime3 = blockSize >> 1;
+          halfBlock = blockSize >> 1;
           quarterBlock = blockSize >> 2;
           eighthBlock = blockSize >> 3;
           transformStorage = blockScratch;
           transformAlias = transformStorage;
           transformBlock = transformAlias;
-          for (prescaleIndex = 0; prescaleIndex < var17_intLifetime3; prescaleIndex++) {
+          for (prescaleIndex = 0; prescaleIndex < halfBlock; prescaleIndex++) {
             transformBlock[prescaleIndex] = transformBlock[prescaleIndex] * 0.5f;
           }
-          mirrorIndex = var17_intLifetime3;
+          mirrorIndex = halfBlock;
           unusedMirrorIndex = mirrorIndex;
           while (mirrorIndex < blockSize) {
             transformBlock[mirrorIndex] = -transformBlock[blockSize - mirrorIndex - 1];
@@ -615,105 +615,105 @@ final class VorbisSample extends IntrusiveNode {
           bitReverseAlias = selectedBitReverse;
           bitReverseStorage = bitReverseAlias;
           bitReverse = bitReverseStorage;
-          for (blockBits = 0; blockBits < quarterBlock; blockBits++) {
-            var26_float = transformBlock[4 * blockBits] - transformBlock[blockSize - 4 * blockBits - 1];
-            var27 = transformBlock[4 * blockBits + 2] - transformBlock[blockSize - 4 * blockBits - 3];
-            var28 = trigA[2 * blockBits];
-            var29 = trigA[2 * blockBits + 1];
-            transformBlock[blockSize - 4 * blockBits - 1] = var26_float * var28 - var27 * var29;
-            transformBlock[blockSize - 4 * blockBits - 3] = var26_float * var29 + var27 * var28;
+          for (preRotateIndex = 0; preRotateIndex < quarterBlock; preRotateIndex++) {
+            outerDifference = transformBlock[4 * preRotateIndex] - transformBlock[blockSize - 4 * preRotateIndex - 1];
+            innerDifference = transformBlock[4 * preRotateIndex + 2] - transformBlock[blockSize - 4 * preRotateIndex - 3];
+            preRotateCos = trigA[2 * preRotateIndex];
+            preRotateNegSin = trigA[2 * preRotateIndex + 1];
+            transformBlock[blockSize - 4 * preRotateIndex - 1] = outerDifference * preRotateCos - innerDifference * preRotateNegSin;
+            transformBlock[blockSize - 4 * preRotateIndex - 3] = outerDifference * preRotateNegSin + innerDifference * preRotateCos;
           }
-          for (var25Lifetime1 = 0; var25Lifetime1 < eighthBlock; var25Lifetime1++) {
-            var26_floatLifetime1 = transformBlock[var17_intLifetime3 + 3 + 4 * var25Lifetime1];
-            var27Lifetime1 = transformBlock[var17_intLifetime3 + 1 + 4 * var25Lifetime1];
-            var28Lifetime1 = transformBlock[4 * var25Lifetime1 + 3];
-            var29Lifetime1 = transformBlock[4 * var25Lifetime1 + 1];
-            transformBlock[var17_intLifetime3 + 3 + 4 * var25Lifetime1] = var26_floatLifetime1 + var28Lifetime1;
-            transformBlock[var17_intLifetime3 + 1 + 4 * var25Lifetime1] = var27Lifetime1 + var29Lifetime1;
-            var30 = trigA[var17_intLifetime3 - 4 - 4 * var25Lifetime1];
-            var31 = trigA[var17_intLifetime3 - 3 - 4 * var25Lifetime1];
-            transformBlock[4 * var25Lifetime1 + 3] = (var26_floatLifetime1 - var28Lifetime1) * var30 - (var27Lifetime1 - var29Lifetime1) * var31;
-            transformBlock[4 * var25Lifetime1 + 1] = (var27Lifetime1 - var29Lifetime1) * var30 + (var26_floatLifetime1 - var28Lifetime1) * var31;
+          for (mergeIndex = 0; mergeIndex < eighthBlock; mergeIndex++) {
+            upperOdd3 = transformBlock[halfBlock + 3 + 4 * mergeIndex];
+            upperOdd1 = transformBlock[halfBlock + 1 + 4 * mergeIndex];
+            lowerOdd3 = transformBlock[4 * mergeIndex + 3];
+            lowerOdd1 = transformBlock[4 * mergeIndex + 1];
+            transformBlock[halfBlock + 3 + 4 * mergeIndex] = upperOdd3 + lowerOdd3;
+            transformBlock[halfBlock + 1 + 4 * mergeIndex] = upperOdd1 + lowerOdd1;
+            mergeCos = trigA[halfBlock - 4 - 4 * mergeIndex];
+            mergeNegSin = trigA[halfBlock - 3 - 4 * mergeIndex];
+            transformBlock[4 * mergeIndex + 3] = (upperOdd3 - lowerOdd3) * mergeCos - (upperOdd1 - lowerOdd1) * mergeNegSin;
+            transformBlock[4 * mergeIndex + 1] = (upperOdd1 - lowerOdd1) * mergeCos + (upperOdd3 - lowerOdd3) * mergeNegSin;
           }
-          var25Lifetime2 = ed.b(9, blockSize - 1);
-          for (var26 = 0; var26 < var25Lifetime2 - 3; var26++) {
-            var27_int = blockSize >> var26 + 2;
-            var28_int = 8 << var26;
-            for (var29_int = 0; var29_int < 2 << var26; var29_int++) {
-              var30_int = blockSize - var27_int * 2 * var29_int;
-              var31_int = blockSize - var27_int * (2 * var29_int + 1);
-              for (var32_int = 0; var32_int < blockSize >> var26 + 4; var32_int++) {
-                var33_int = 4 * var32_int;
-                var34 = transformBlock[var30_int - 1 - var33_int];
-                var35 = transformBlock[var30_int - 3 - var33_int];
-                var36 = transformBlock[var31_int - 1 - var33_int];
-                var37 = transformBlock[var31_int - 3 - var33_int];
-                transformBlock[var30_int - 1 - var33_int] = var34 + var36;
-                transformBlock[var30_int - 3 - var33_int] = var35 + var37;
-                var38 = trigA[var32_int * var28_int];
-                var39 = trigA[var32_int * var28_int + 1];
-                transformBlock[var31_int - 1 - var33_int] = (var34 - var36) * var38 - (var35 - var37) * var39;
-                transformBlock[var31_int - 3 - var33_int] = (var35 - var37) * var38 + (var34 - var36) * var39;
+          blockBits = ed.unsignedBitLength(9, blockSize - 1);
+          for (stage = 0; stage < blockBits - 3; stage++) {
+            groupSpan = blockSize >> stage + 2;
+            trigStride = 8 << stage;
+            for (group = 0; group < 2 << stage; group++) {
+              leftBase = blockSize - groupSpan * 2 * group;
+              rightBase = blockSize - groupSpan * (2 * group + 1);
+              for (butterflyIndex = 0; butterflyIndex < blockSize >> stage + 4; butterflyIndex++) {
+                butterflyOffset = 4 * butterflyIndex;
+                leftOdd1 = transformBlock[leftBase - 1 - butterflyOffset];
+                leftOdd3 = transformBlock[leftBase - 3 - butterflyOffset];
+                rightOdd1 = transformBlock[rightBase - 1 - butterflyOffset];
+                rightOdd3 = transformBlock[rightBase - 3 - butterflyOffset];
+                transformBlock[leftBase - 1 - butterflyOffset] = leftOdd1 + rightOdd1;
+                transformBlock[leftBase - 3 - butterflyOffset] = leftOdd3 + rightOdd3;
+                stageCos = trigA[butterflyIndex * trigStride];
+                stageNegSin = trigA[butterflyIndex * trigStride + 1];
+                transformBlock[rightBase - 1 - butterflyOffset] = (leftOdd1 - rightOdd1) * stageCos - (leftOdd3 - rightOdd3) * stageNegSin;
+                transformBlock[rightBase - 3 - butterflyOffset] = (leftOdd3 - rightOdd3) * stageCos + (leftOdd1 - rightOdd1) * stageNegSin;
               }
             }
           }
-          for (var26Lifetime1 = 1; var26Lifetime1 < eighthBlock - 1; var26Lifetime1++) {
-            var27_intLifetime1 = bitReverseAlias[var26Lifetime1];
-            if (var26Lifetime1 < var27_intLifetime1) {
-              var28_intLifetime1 = 8 * var26Lifetime1;
-              var29_intLifetime1 = 8 * var27_intLifetime1;
-              var30Lifetime1 = transformBlock[var28_intLifetime1 + 1];
-              transformBlock[var28_intLifetime1 + 1] = transformBlock[var29_intLifetime1 + 1];
-              transformBlock[var29_intLifetime1 + 1] = var30Lifetime1;
-              var30Lifetime1Lifetime1 = transformBlock[var28_intLifetime1 + 3];
-              transformBlock[var28_intLifetime1 + 3] = transformBlock[var29_intLifetime1 + 3];
-              transformBlock[var29_intLifetime1 + 3] = var30Lifetime1Lifetime1;
-              var30Lifetime1Lifetime2 = transformBlock[var28_intLifetime1 + 5];
-              transformBlock[var28_intLifetime1 + 5] = transformBlock[var29_intLifetime1 + 5];
-              transformBlock[var29_intLifetime1 + 5] = var30Lifetime1Lifetime2;
-              var30Lifetime1Lifetime3 = transformBlock[var28_intLifetime1 + 7];
-              transformBlock[var28_intLifetime1 + 7] = transformBlock[var29_intLifetime1 + 7];
-              transformBlock[var29_intLifetime1 + 7] = var30Lifetime1Lifetime3;
+          for (reverseIndex = 1; reverseIndex < eighthBlock - 1; reverseIndex++) {
+            reversedIndex = bitReverseAlias[reverseIndex];
+            if (reverseIndex < reversedIndex) {
+              reverseSource = 8 * reverseIndex;
+              reverseDestination = 8 * reversedIndex;
+              swapOdd1 = transformBlock[reverseSource + 1];
+              transformBlock[reverseSource + 1] = transformBlock[reverseDestination + 1];
+              transformBlock[reverseDestination + 1] = swapOdd1;
+              swapOdd3 = transformBlock[reverseSource + 3];
+              transformBlock[reverseSource + 3] = transformBlock[reverseDestination + 3];
+              transformBlock[reverseDestination + 3] = swapOdd3;
+              swapOdd5 = transformBlock[reverseSource + 5];
+              transformBlock[reverseSource + 5] = transformBlock[reverseDestination + 5];
+              transformBlock[reverseDestination + 5] = swapOdd5;
+              swapOdd7 = transformBlock[reverseSource + 7];
+              transformBlock[reverseSource + 7] = transformBlock[reverseDestination + 7];
+              transformBlock[reverseDestination + 7] = swapOdd7;
             }
           }
-          for (var26Lifetime2 = 0; var26Lifetime2 < var17_intLifetime3; var26Lifetime2++) {
-            transformBlock[var26Lifetime2] = transformBlock[2 * var26Lifetime2 + 1];
+          for (compactIndex = 0; compactIndex < halfBlock; compactIndex++) {
+            transformBlock[compactIndex] = transformBlock[2 * compactIndex + 1];
           }
-          for (var26Lifetime3 = 0; var26Lifetime3 < eighthBlock; var26Lifetime3++) {
-            transformBlock[blockSize - 1 - 2 * var26Lifetime3] = transformBlock[4 * var26Lifetime3];
-            transformBlock[blockSize - 2 - 2 * var26Lifetime3] = transformBlock[4 * var26Lifetime3 + 1];
-            transformBlock[blockSize - quarterBlock - 1 - 2 * var26Lifetime3] = transformBlock[4 * var26Lifetime3 + 2];
-            transformBlock[blockSize - quarterBlock - 2 - 2 * var26Lifetime3] = transformBlock[4 * var26Lifetime3 + 3];
+          for (scatterIndex = 0; scatterIndex < eighthBlock; scatterIndex++) {
+            transformBlock[blockSize - 1 - 2 * scatterIndex] = transformBlock[4 * scatterIndex];
+            transformBlock[blockSize - 2 - 2 * scatterIndex] = transformBlock[4 * scatterIndex + 1];
+            transformBlock[blockSize - quarterBlock - 1 - 2 * scatterIndex] = transformBlock[4 * scatterIndex + 2];
+            transformBlock[blockSize - quarterBlock - 2 - 2 * scatterIndex] = transformBlock[4 * scatterIndex + 3];
           }
-          for (var26Lifetime4 = 0; var26Lifetime4 < eighthBlock; var26Lifetime4++) {
-            var27Lifetime2 = trigC[2 * var26Lifetime4];
-            var28Lifetime2 = trigC[2 * var26Lifetime4 + 1];
-            var29Lifetime2 = transformBlock[var17_intLifetime3 + 2 * var26Lifetime4];
-            var30Lifetime2 = transformBlock[var17_intLifetime3 + 2 * var26Lifetime4 + 1];
-            var31Lifetime1 = transformBlock[blockSize - 2 - 2 * var26Lifetime4];
-            var32 = transformBlock[blockSize - 1 - 2 * var26Lifetime4];
-            var33 = var28Lifetime2 * (var29Lifetime2 - var31Lifetime1) + var27Lifetime2 * (var30Lifetime2 + var32);
-            transformBlock[var17_intLifetime3 + 2 * var26Lifetime4] = (var29Lifetime2 + var31Lifetime1 + var33) * 0.5f;
-            transformBlock[blockSize - 2 - 2 * var26Lifetime4] = (var29Lifetime2 + var31Lifetime1 - var33) * 0.5f;
-            var33Lifetime1 = var28Lifetime2 * (var30Lifetime2 + var32) - var27Lifetime2 * (var29Lifetime2 - var31Lifetime1);
-            transformBlock[var17_intLifetime3 + 2 * var26Lifetime4 + 1] = (var30Lifetime2 - var32 + var33Lifetime1) * 0.5f;
-            transformBlock[blockSize - 1 - 2 * var26Lifetime4] = (-var30Lifetime2 + var32 + var33Lifetime1) * 0.5f;
+          for (postRotateIndex = 0; postRotateIndex < eighthBlock; postRotateIndex++) {
+            postRotateCos = trigC[2 * postRotateIndex];
+            postRotateNegSin = trigC[2 * postRotateIndex + 1];
+            forwardEven = transformBlock[halfBlock + 2 * postRotateIndex];
+            forwardOdd = transformBlock[halfBlock + 2 * postRotateIndex + 1];
+            reflectedEven = transformBlock[blockSize - 2 - 2 * postRotateIndex];
+            reflectedOdd = transformBlock[blockSize - 1 - 2 * postRotateIndex];
+            combinedEven = postRotateNegSin * (forwardEven - reflectedEven) + postRotateCos * (forwardOdd + reflectedOdd);
+            transformBlock[halfBlock + 2 * postRotateIndex] = (forwardEven + reflectedEven + combinedEven) * 0.5f;
+            transformBlock[blockSize - 2 - 2 * postRotateIndex] = (forwardEven + reflectedEven - combinedEven) * 0.5f;
+            combinedOdd = postRotateNegSin * (forwardOdd + reflectedOdd) - postRotateCos * (forwardEven - reflectedEven);
+            transformBlock[halfBlock + 2 * postRotateIndex + 1] = (forwardOdd - reflectedOdd + combinedOdd) * 0.5f;
+            transformBlock[blockSize - 1 - 2 * postRotateIndex] = (-forwardOdd + reflectedOdd + combinedOdd) * 0.5f;
           }
-          for (var26Lifetime5 = 0; var26Lifetime5 < quarterBlock; var26Lifetime5++) {
-            transformBlock[var26Lifetime5] = transformBlock[2 * var26Lifetime5 + var17_intLifetime3] * trigB[2 * var26Lifetime5] + transformBlock[2 * var26Lifetime5 + 1 + var17_intLifetime3] * trigB[2 * var26Lifetime5 + 1];
-            transformBlock[var17_intLifetime3 - 1 - var26Lifetime5] = transformBlock[2 * var26Lifetime5 + var17_intLifetime3] * trigB[2 * var26Lifetime5 + 1] - transformBlock[2 * var26Lifetime5 + 1 + var17_intLifetime3] * trigB[2 * var26Lifetime5];
+          for (finalRotateIndex = 0; finalRotateIndex < quarterBlock; finalRotateIndex++) {
+            transformBlock[finalRotateIndex] = transformBlock[2 * finalRotateIndex + halfBlock] * trigB[2 * finalRotateIndex] + transformBlock[2 * finalRotateIndex + 1 + halfBlock] * trigB[2 * finalRotateIndex + 1];
+            transformBlock[halfBlock - 1 - finalRotateIndex] = transformBlock[2 * finalRotateIndex + halfBlock] * trigB[2 * finalRotateIndex + 1] - transformBlock[2 * finalRotateIndex + 1 + halfBlock] * trigB[2 * finalRotateIndex];
           }
-          for (var26Lifetime6 = 0; var26Lifetime6 < quarterBlock; var26Lifetime6++) {
-            transformBlock[blockSize - quarterBlock + var26Lifetime6] = -transformStorage[var26Lifetime6];
+          for (negativeTailIndex = 0; negativeTailIndex < quarterBlock; negativeTailIndex++) {
+            transformBlock[blockSize - quarterBlock + negativeTailIndex] = -transformStorage[negativeTailIndex];
           }
-          for (var26Lifetime7 = 0; var26Lifetime7 < quarterBlock; var26Lifetime7++) {
-            transformBlock[var26Lifetime7] = transformBlock[quarterBlock + var26Lifetime7];
+          for (shiftQuarterIndex = 0; shiftQuarterIndex < quarterBlock; shiftQuarterIndex++) {
+            transformBlock[shiftQuarterIndex] = transformBlock[quarterBlock + shiftQuarterIndex];
           }
-          for (var26Lifetime8 = 0; var26Lifetime8 < quarterBlock; var26Lifetime8++) {
-            transformBlock[quarterBlock + var26Lifetime8] = -transformBlock[quarterBlock - var26Lifetime8 - 1];
+          for (negativeQuarterIndex = 0; negativeQuarterIndex < quarterBlock; negativeQuarterIndex++) {
+            transformBlock[quarterBlock + negativeQuarterIndex] = -transformBlock[quarterBlock - negativeQuarterIndex - 1];
           }
-          for (var26Lifetime9 = 0; var26Lifetime9 < quarterBlock; var26Lifetime9++) {
-            transformBlock[var17_intLifetime3 + var26Lifetime9] = transformBlock[blockSize - var26Lifetime9 - 1];
+          for (reflectHalfIndex = 0; reflectHalfIndex < quarterBlock; reflectHalfIndex++) {
+            transformBlock[halfBlock + reflectHalfIndex] = transformBlock[blockSize - reflectHalfIndex - 1];
           }
           for (leftWindowSample = leftWindowStart; leftWindowSample < leftWindowEnd; leftWindowSample++) {
             leftWindowSine = (float)Math.sin(((double)(leftWindowSample - leftWindowStart) + 0.5) / (double)leftWindowLength * 0.5 * 3.141592653589793);

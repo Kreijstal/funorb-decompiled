@@ -185,7 +185,7 @@ final class eq {
             this.field_c = this.field_c + 1;
             this.field_h[fieldTemp$1] = (byte) 0;
           }
-          pm.a(this.field_d, 0, this.field_h, 32, 32);
+          ArrayOperations.copy(this.field_d, 0, this.field_h, 32, 32);
           this.a((byte) 47);
           var5 = 0;
           var6 = param2;

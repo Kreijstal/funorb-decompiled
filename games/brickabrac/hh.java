@@ -71,38 +71,38 @@ final class hh {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+    final static int integerPower(int exponent, int obfuscationGuard, int base) {
+        int product = 0;
+        RuntimeException failure = null;
+        int unusedGameFlag = 0;
+        int invalidGuardResult = 0;
+        int finalProduct = 0;
+        int nonpositiveProduct = 0;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != 29605) {
-            stackIn_3_0 = -85;
-            return stackIn_3_0;
+          if (obfuscationGuard != 29605) {
+            invalidGuardResult = -85;
+            return invalidGuardResult;
           }
-          var3_int = 1;
-          while (param0 > 1) {
-            if (0 != (param0 & 1)) {
-              var3_int = var3_int * param2;
+          product = 1;
+          while (exponent > 1) {
+            if (0 != (exponent & 1)) {
+              product = product * base;
             }
-            param2 = param2 * param2;
-            param0 = param0 >> 1;
+            base = base * base;
+            exponent = exponent >> 1;
           }
-          if (1 != param0) {
-            stackIn_15_0 = var3_int;
-            return stackIn_15_0;
+          if (1 != exponent) {
+            nonpositiveProduct = product;
+            return nonpositiveProduct;
           }
-          stackIn_13_0 = param2 * var3_int;
-          return stackIn_13_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "hh.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          finalProduct = base * product;
+          return finalProduct;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "hh.A(" + exponent + ',' + obfuscationGuard + ',' + base + ')');
         }
     }
 

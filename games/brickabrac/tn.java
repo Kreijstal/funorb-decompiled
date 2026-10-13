@@ -111,8 +111,8 @@ final class tn extends AudioStream {
               if (256 != var5) {
                 if (this.field_q != null &&
                   var6 <= this.field_q.length) {
-                  pm.a(this.field_q, 0, var6);
-                  pm.a(this.field_G, 0, var6);
+                  ArrayOperations.clearInts(this.field_q, 0, var6);
+                  ArrayOperations.clearInts(this.field_G, 0, var6);
                 } else {
                   this.field_q = new int[var6];
                   this.field_G = new int[var6];
@@ -143,7 +143,7 @@ final class tn extends AudioStream {
             }
             if (this.field_q != null &&
               this.field_q.length >= var6) {
-              pm.a(this.field_q, 0, var6);
+              ArrayOperations.clearInts(this.field_q, 0, var6);
             } else {
               this.field_G = new int[var6];
               this.field_q = new int[var6];

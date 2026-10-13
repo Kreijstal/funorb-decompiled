@@ -428,7 +428,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           }
           for (var2 = 1; ArcticBackground.field_w.length > var2; var2++) {
             var3 = ArcticBackground.field_w[var2];
-            pm.a(ek.field_jb, var2 << 4, ek.field_jb, var1_int, var3);
+            ArrayOperations.copy(ek.field_jb, var2 << 4, ek.field_jb, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

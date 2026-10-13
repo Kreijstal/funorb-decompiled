@@ -730,9 +730,9 @@ final class Rasterizer2D {
         var29 = field_k;
         var26 = var29;
         var11 = var26;
-        pm.a(var27, 0, param8);
-        pm.a(var28, 0, param8);
-        pm.a(var29, 0, param8);
+        ArrayOperations.clearInts(var27, 0, param8);
+        ArrayOperations.clearInts(var28, 0, param8);
+        ArrayOperations.clearInts(var29, 0, param8);
         var12 = 16384 / (2 * param3 + 1);
         var13 = param4 - param3;
         if (var13 < 0) {

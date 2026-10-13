@@ -1164,7 +1164,7 @@ final class MultiplayerMatch {
           this.markResultsReady(false);
         } else {
           if (wn.a(var2, (byte) -6)) {
-            this.field_h = ed.b(9, var2 - 1);
+            this.field_h = ed.unsignedBitLength(9, var2 - 1);
             this.playerMaskThree = this.playerMaskThree | 1 << this.field_h;
             this.markResultsReady(false);
           }

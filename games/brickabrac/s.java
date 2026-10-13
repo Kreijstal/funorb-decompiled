@@ -75,7 +75,7 @@ final class s {
           if (this.field_b >= this.field_f.length) {
             var10 = new po[2 * this.field_b];
             po[] var7 = var10;
-            pm.a(this.field_f, 0, var10, 0, this.field_b);
+            ArrayOperations.copy(this.field_f, 0, var10, 0, this.field_b);
             this.field_f = var10;
           }
           var9 = new po();

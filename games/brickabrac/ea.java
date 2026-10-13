@@ -40,7 +40,7 @@ final class ea {
             }
             break;
           }
-          stackIn_7_0 = -1 + (ed.b(9, param1[var2_int]) + (var2_int << 5));
+          stackIn_7_0 = -1 + (ed.unsignedBitLength(9, param1[var2_int]) + (var2_int << 5));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

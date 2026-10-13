@@ -383,31 +383,31 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+    final static int reverseLowBits(int count, int value, int obfuscationGuard) {
+        int reversed = 0;
+        RuntimeException failure = null;
+        int unusedGameFlag = 0;
+        int invalidGuardResult = 0;
+        int result = 0;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = 0;
-          if (param2 != -1) {
-            stackIn_3_0 = 59;
-            return stackIn_3_0;
+          reversed = 0;
+          if (obfuscationGuard != -1) {
+            invalidGuardResult = 59;
+            return invalidGuardResult;
           }
-          while (param0 > 0) {
-            var3_int = 1 & param1 | var3_int << 1;
-            param0--;
-            param1 = param1 >>> 1;
+          while (count > 0) {
+            reversed = 1 & value | reversed << 1;
+            count--;
+            value = value >>> 1;
           }
-          stackIn_7_0 = var3_int;
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "op.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          result = reversed;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "op.D(" + count + ',' + value + ',' + obfuscationGuard + ')');
         }
     }
 

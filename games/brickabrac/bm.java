@@ -44,7 +44,7 @@ final class bm {
         int var13Lifetime1;
         var19 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5_int = ed.b(9, 3 * (-param1 + param2));
+          var5_int = ed.unsignedBitLength(9, 3 * (-param1 + param2));
           var6 = param1 * 3;
           PowerUpWarning.a(0);
           var7 = var5_int - 10;

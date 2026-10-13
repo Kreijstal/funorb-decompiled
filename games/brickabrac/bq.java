@@ -190,9 +190,9 @@ final class bq {
               throw new IllegalStateException();
             }
             rg.field_k = new String[var4];
-            pm.a(CacheIoWorker.field_h, 0, rg.field_k, 0, var4);
+            ArrayOperations.copy(CacheIoWorker.field_h, 0, rg.field_k, 0, var4);
             h.field_F = new String[-1 - var4 + var3_int];
-            pm.a(CacheIoWorker.field_h, 1 + var4, h.field_F, 0, -1 + (-var4 + var3_int));
+            ArrayOperations.copy(CacheIoWorker.field_h, 1 + var4, h.field_F, 0, -1 + (-var4 + var3_int));
             var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -206,9 +206,9 @@ final class bq {
               throw new IllegalStateException();
             }
             ik.field_b = new String[var4];
-            pm.a(CacheIoWorker.field_h, 0, ik.field_b, 0, var4);
+            ArrayOperations.copy(CacheIoWorker.field_h, 0, ik.field_b, 0, var4);
             HuffmanCodec.field_h = new String[var3_int - (var4 + 1)];
-            pm.a(CacheIoWorker.field_h, var4 + 1, HuffmanCodec.field_h, 0, -1 + (var3_int - var4));
+            ArrayOperations.copy(CacheIoWorker.field_h, var4 + 1, HuffmanCodec.field_h, 0, -1 + (var3_int - var4));
             if (ik.field_b.length > rg.field_k.length) {
               stackIn_66_0 = ik.field_b.length;
             } else {

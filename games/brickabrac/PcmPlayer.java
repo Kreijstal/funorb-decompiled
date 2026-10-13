@@ -148,7 +148,7 @@ class PcmPlayer {
         if (stereo) {
           var3 = var3 << 1;
         }
-        pm.a(param0, 0, var3);
+        ArrayOperations.clearInts(param0, 0, var3);
         this.field_i = this.field_i - param1;
         if (this.rootStream != null &&
           this.field_i <= 0) {

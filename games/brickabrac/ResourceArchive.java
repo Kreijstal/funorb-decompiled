@@ -790,7 +790,7 @@ final class ResourceArchive {
                     var21 = presentFileIds[var20];
                   }
                   if (requestedFileId == var21) {
-                    pm.a(splitData, var17, requestedBytes, requestedWriteOffset, var19);
+                    ArrayOperations.copy(splitData, var17, requestedBytes, requestedWriteOffset, var19);
                     requestedWriteOffset = requestedWriteOffset + var19;
                   }
                   var17 = var17 + var19;
@@ -828,7 +828,7 @@ final class ResourceArchive {
                 var18 = 0;
                 for (var19 = 0; fileCount > var19; var19++) {
                   var18 = var18 + allFilesChunkTable.readInt(255);
-                  pm.a(splitData, var16, fileBytes[var19], fileSizes[var19], var18);
+                  ArrayOperations.copy(splitData, var16, fileBytes[var19], fileSizes[var19], var18);
                   var16 = var16 + var18;
                   fileSizesAndOffsets[var19] = fileSizesAndOffsets[var19] + var18;
                 }

@@ -339,7 +339,7 @@ final class VorbisFloor1 {
         pointCount = this.xList.length;
         System.arraycopy(this.xList, 0, xScratch, 0, pointCount);
         range = rangeTable[this.multiplier - 1];
-        rangeBits = ed.b(9, range - 1);
+        rangeBits = ed.unsignedBitLength(9, range - 1);
         yScratch[0] = VorbisSample.readBits(rangeBits);
         yScratch[1] = VorbisSample.readBits(rangeBits);
         nextPoint = 2;

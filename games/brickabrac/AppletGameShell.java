@@ -705,7 +705,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           }
           var2_int = data.length;
           var3 = new byte[var2_int];
-          pm.a(data, 0, var3, 0, var2_int);
+          ArrayOperations.copy(data, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

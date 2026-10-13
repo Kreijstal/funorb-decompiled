@@ -66,7 +66,7 @@ final class c {
           throw new ArrayIndexOutOfBoundsException(param1);
         }
         if (param1 != this.field_h) {
-          pm.a(this.field_k, 1 + param1, this.field_k, param1, -param1 + this.field_h);
+          ArrayOperations.copy(this.field_k, 1 + param1, this.field_k, param1, -param1 + this.field_h);
           this.field_h = this.field_h - 1;
           if (param0 != 46) {
             field_c = (String) null;
@@ -360,7 +360,7 @@ final class c {
     private final void a(int param0, int param1) {
         int[] var4 = new int[this.b(1, param0)];
         int[] var3 = var4;
-        pm.a(this.field_k, 0, var4, 0, this.field_k.length);
+        ArrayOperations.copy(this.field_k, 0, var4, 0, this.field_k.length);
         this.field_k = var4;
         if (param1 != -7877) {
           this.field_k = (int[]) null;

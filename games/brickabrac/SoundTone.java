@@ -104,7 +104,7 @@ final class SoundTone {
         int startupFeedbackIndex;
         int feedbackIndex;
         int tailFeedbackIndex;
-        pm.a(sampleScratch, 0, sampleCount);
+        ArrayOperations.clearInts(sampleScratch, 0, sampleCount);
         if (durationMillis < 10) {
           return sampleScratch;
         }

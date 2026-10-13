@@ -94,7 +94,7 @@ final class BufferedFile {
             if (this.writeBufferStart != -1L &&
               this.position >= this.writeBufferStart &&
               (long)this.writeBufferLength + this.writeBufferStart >= this.position + (long)length) {
-              pm.a(this.writeBuffer, (int)(this.position - this.writeBufferStart), data, offset, length);
+              ArrayOperations.copy(this.writeBuffer, (int)(this.position - this.writeBufferStart), data, offset, length);
               this.position = this.position + (long)length;
               return;
             }
@@ -111,7 +111,7 @@ final class BufferedFile {
               if (cachedReadCount > length) {
                 cachedReadCount = length;
               }
-              pm.a(this.readBuffer, (int)(this.position - this.readBufferStart), data, offset, cachedReadCount);
+              ArrayOperations.copy(this.readBuffer, (int)(this.position - this.readBufferStart), data, offset, cachedReadCount);
               this.position = this.position + (long)cachedReadCount;
               offset = offset + cachedReadCount;
               length = length - cachedReadCount;
@@ -142,7 +142,7 @@ final class BufferedFile {
               if (refillReadCount > this.readBufferLength) {
                 refillReadCount = this.readBufferLength;
               }
-              pm.a(this.readBuffer, 0, data, offset, refillReadCount);
+              ArrayOperations.copy(this.readBuffer, 0, data, offset, refillReadCount);
               length = length - refillReadCount;
               offset = offset + refillReadCount;
               this.position = this.position + (long)refillReadCount;
@@ -185,7 +185,7 @@ final class BufferedFile {
               if (-1L < overlapStart &&
                 overlapEnd > overlapStart) {
                 overlapLength = (int)(-overlapStart + overlapEnd);
-                pm.a(this.writeBuffer, (int)(overlapStart - this.writeBufferStart), data, targetStart + (int)(overlapStart - readStart), overlapLength);
+                ArrayOperations.copy(this.writeBuffer, (int)(overlapStart - this.writeBufferStart), data, targetStart + (int)(overlapStart - readStart), overlapLength);
                 if (overlapEnd > this.position) {
                   length = (int)((long)length - (overlapEnd - this.position));
                   this.position = overlapEnd;
@@ -255,7 +255,7 @@ final class BufferedFile {
           if (overlapStart > -1L &&
             overlapEnd > overlapStart) {
             overlapLength = (int)(-overlapStart + overlapEnd);
-            pm.a(this.writeBuffer, (int)(-this.writeBufferStart + overlapStart), this.readBuffer, (int)(overlapStart - this.readBufferStart), overlapLength);
+            ArrayOperations.copy(this.writeBuffer, (int)(-this.writeBufferStart + overlapStart), this.readBuffer, (int)(overlapStart - this.readBufferStart), overlapLength);
           }
           this.writeBufferLength = 0;
           this.writeBufferStart = -1L;
@@ -307,7 +307,7 @@ final class BufferedFile {
             if (-1L != this.writeBufferStart &&
               ((long)this.writeBuffer.length + this.writeBufferStart) < (this.position + (long)length)) {
               bufferedCount = (int)(-this.position + this.writeBufferStart + (long)this.writeBuffer.length);
-              pm.a(data, offset, this.writeBuffer, (int)(this.position - this.writeBufferStart), bufferedCount);
+              ArrayOperations.copy(data, offset, this.writeBuffer, (int)(this.position - this.writeBufferStart), bufferedCount);
               length = length - bufferedCount;
               this.position = this.position + (long)bufferedCount;
               offset = offset + bufferedCount;
@@ -321,7 +321,7 @@ final class BufferedFile {
               if (this.writeBufferStart == -1L) {
                 this.writeBufferStart = this.position;
               }
-              pm.a(data, offset, this.writeBuffer, (int)(this.position - this.writeBufferStart), length);
+              ArrayOperations.copy(data, offset, this.writeBuffer, (int)(this.position - this.writeBufferStart), length);
               this.position = this.position + (long)length;
               if ((long)this.writeBufferLength < this.position - this.writeBufferStart) {
                 this.writeBufferLength = (int)(this.position - this.writeBufferStart);
@@ -360,7 +360,7 @@ final class BufferedFile {
             if (-1L < overlapStart &&
               overlapStart < overlapEnd) {
               overlapLength = (int)(overlapEnd - overlapStart);
-              pm.a(data, (int)(overlapStart + ((long)offset - this.position)), this.readBuffer, (int)(-this.readBufferStart + overlapStart), overlapLength);
+              ArrayOperations.copy(data, (int)(overlapStart + ((long)offset - this.position)), this.readBuffer, (int)(-this.readBufferStart + overlapStart), overlapLength);
             }
             this.position = this.position + (long)length;
             return;

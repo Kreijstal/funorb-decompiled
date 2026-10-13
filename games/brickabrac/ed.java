@@ -20,7 +20,7 @@ final class ed {
         try {
           ParisBackground.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, GzipInflater.field_d, wi.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
           if (param3 < 74) {
-            ed.b(2, -57);
+            ed.unsignedBitLength(2, -57);
           }
           ef.field_b = cr.loadRgbSpritesByName("lobby", param1, "chatfilter", 2);
           rh.field_e[0] = mc.field_a;
@@ -32,70 +32,70 @@ final class ed {
         }
     }
 
-    final static int b(int param0, int param1) {
-        int var2 = 0;
-        if (param0 != 9) {
-          ed.b(-83, -74);
+    final static int unsignedBitLength(int obfuscationGuard, int value) {
+        int shiftCount = 0;
+        if (obfuscationGuard != 9) {
+          ed.unsignedBitLength(-83, -74);
         }
-        if (param1 < 0) {
-          var2 += 16;
-          param1 = param1 >>> 16;
-          if (256 <= param1) {
-            param1 = param1 >>> 8;
-            var2 += 8;
+        if (value < 0) {
+          shiftCount += 16;
+          value = value >>> 16;
+          if (256 <= value) {
+            value = value >>> 8;
+            shiftCount += 8;
           }
-          if (16 <= param1) {
-            param1 = param1 >>> 4;
-            var2 += 4;
+          if (16 <= value) {
+            value = value >>> 4;
+            shiftCount += 4;
           }
-          if (4 <= param1) {
-            param1 = param1 >>> 2;
-            var2 += 2;
+          if (4 <= value) {
+            value = value >>> 2;
+            shiftCount += 2;
           }
-          if (param1 >= 1) {
-            param1 = param1 >>> 1;
-            var2++;
+          if (value >= 1) {
+            value = value >>> 1;
+            shiftCount++;
           }
-          return var2 + param1;
+          return shiftCount + value;
         }
-        if (param1 < 65536) {
-          if (256 <= param1) {
-            param1 = param1 >>> 8;
-            var2 += 8;
+        if (value < 65536) {
+          if (256 <= value) {
+            value = value >>> 8;
+            shiftCount += 8;
           }
-          if (16 <= param1) {
-            param1 = param1 >>> 4;
-            var2 += 4;
+          if (16 <= value) {
+            value = value >>> 4;
+            shiftCount += 4;
           }
-          if (4 <= param1) {
-            param1 = param1 >>> 2;
-            var2 += 2;
+          if (4 <= value) {
+            value = value >>> 2;
+            shiftCount += 2;
           }
-          if (param1 >= 1) {
-            param1 = param1 >>> 1;
-            var2++;
+          if (value >= 1) {
+            value = value >>> 1;
+            shiftCount++;
           }
-          return var2 + param1;
+          return shiftCount + value;
         }
-        var2 += 16;
-        param1 = param1 >>> 16;
-        if (256 <= param1) {
-          param1 = param1 >>> 8;
-          var2 += 8;
+        shiftCount += 16;
+        value = value >>> 16;
+        if (256 <= value) {
+          value = value >>> 8;
+          shiftCount += 8;
         }
-        if (16 <= param1) {
-          param1 = param1 >>> 4;
-          var2 += 4;
+        if (16 <= value) {
+          value = value >>> 4;
+          shiftCount += 4;
         }
-        if (4 <= param1) {
-          param1 = param1 >>> 2;
-          var2 += 2;
+        if (4 <= value) {
+          value = value >>> 2;
+          shiftCount += 2;
         }
-        if (param1 >= 1) {
-          param1 = param1 >>> 1;
-          var2++;
+        if (value >= 1) {
+          value = value >>> 1;
+          shiftCount++;
         }
-        return var2 + param1;
+        return shiftCount + value;
     }
 
     public static void a(int param0) {
