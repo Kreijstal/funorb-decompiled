@@ -1,46 +1,46 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc {
+final class LevelPack {
     static jp field_e;
-    int field_i;
-    byte[][] field_j;
+    int levelCount;
+    byte[][] levelData;
     static int field_g;
-    wk[] field_c;
+    LevelMetadata[] metadata;
     static int field_k;
     static String field_f;
-    int field_d;
-    int field_h;
-    int field_b;
+    int completionWord;
+    int packId;
+    int scoreOffset;
     static int[] field_a;
 
-    final void a(nc param0, boolean param1) {
+    final void appendLevelData(LevelPack extra, boolean obfuscationGuard) {
         int var7 = 0;
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var4Lifetime1;
-        if (!(param0.field_h < 0)) {
+        if (!(extra.packId < 0)) {
           throw new RuntimeException();
         }
-        byte[][] var6 = new byte[this.field_i + param0.field_i][];
+        byte[][] var6 = new byte[this.levelCount + extra.levelCount][];
         byte[][] var3 = var6;
-        if (param1) {
+        if (obfuscationGuard) {
           return;
         }
         try {
-          for (var4 = 0; var4 < this.field_i; var4++) {
-            var6[var4] = this.field_j[var4];
+          for (var4 = 0; var4 < this.levelCount; var4++) {
+            var6[var4] = this.levelData[var4];
           }
           var7 = 0;
           var4Lifetime1 = var7;
-          while (param0.field_i > var7) {
-            var3[var7 + this.field_i] = param0.field_j[var7];
+          while (extra.levelCount > var7) {
+            var3[var7 + this.levelCount] = extra.levelData[var7];
             var7++;
           }
-          this.field_i = this.field_i + param0.field_i;
-          this.field_j = var3;
+          this.levelCount = this.levelCount + extra.levelCount;
+          this.levelData = var3;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "nc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "nc.D(" + (extra != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -74,10 +74,10 @@ final class nc {
         return vp.field_u.field_Rb;
     }
 
-    nc(int param0, int param1, int param2) {
-        this.field_b = param1;
-        this.field_h = param0;
-        this.field_d = param2;
+    LevelPack(int packId, int scoreOffset, int completionWord) {
+        this.scoreOffset = scoreOffset;
+        this.packId = packId;
+        this.completionWord = completionWord;
     }
 
     final static boolean a(int param0, String param1) {
@@ -89,7 +89,7 @@ final class nc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            nc.b(-40);
+            LevelPack.b(-40);
           }
           stackIn_5_0 = (pf.a(false, param1) != null);
           return stackIn_5_0;

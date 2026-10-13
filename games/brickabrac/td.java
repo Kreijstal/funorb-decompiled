@@ -112,7 +112,7 @@ final class td extends ki {
         }
     }
 
-    final static int a(NodeDeque[] param0, byte[] param1, kq param2, NodeDeque param3, ga param4, int param5) {
+    final static int decodeLevelBytes(NodeDeque[] brickGroups, byte[] data, IntNode levelState, NodeDeque motionPaths, ga unusedContext, int obfuscationGuard) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -129,8 +129,8 @@ final class td extends ki {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param5 == 10792131) {
-            stackIn_4_0 = dq.a(param0, true, new PacketBuffer(param1), param3, param2, param4);
+          if (obfuscationGuard == 10792131) {
+            stackIn_4_0 = LevelDecoder.decodeLevel(brickGroups, true, new PacketBuffer(data), motionPaths, levelState, unusedContext);
             return stackIn_4_0;
           }
           stackIn_2_0 = 21;
@@ -140,36 +140,36 @@ final class td extends ki {
           var6 = decompiledCaughtException;
           stackIn_7_0 = var6;
           stackIn_7_1 = new StringBuilder().append("td.I(");
-          if (param0 == null) {
+          if (brickGroups == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (data == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
           stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (levelState == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
           stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param3 == null) {
+          if (motionPaths == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
           stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param4 == null) {
+          if (unusedContext == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param5).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

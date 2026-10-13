@@ -77,7 +77,7 @@ abstract class ld extends km {
         }
         lb.b(0, 0, 640, 480);
         gh.a(120, true);
-        if (wk.field_p) {
+        if (LevelMetadata.field_p) {
           var12 = qh.field_e;
           var12.c((640 - var12.field_x) / 2, 20);
         }

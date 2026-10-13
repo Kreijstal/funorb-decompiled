@@ -9,13 +9,13 @@ final class ud extends km {
     static int field_v;
     static int field_w;
     static String field_t;
-    private kq field_r;
+    private IntNode field_r;
     private ga field_s;
     private int field_B;
     private int field_H;
     private int field_G;
     private uj field_y;
-    private nc field_A;
+    private LevelPack field_A;
     private String field_C;
     private int field_D;
     private int field_u;
@@ -96,10 +96,10 @@ final class ud extends km {
         im.a(550, 5, 33, 5, 140, (byte) -106, 45);
         im.a(160, 5, 243, 5, 178, (byte) -88, 45);
         im.a(385, 5, 243, 5, 178, (byte) -124, 210);
-        nn.field_g.b(qn.field_u[this.field_A.field_h], 320, 1 + (178 - nn.field_g.field_L), 0, -1);
-        da.field_E[this.field_A.field_h].e(565, 140, -2048, 4096);
+        nn.field_g.b(qn.field_u[this.field_A.packId], 320, 1 + (178 - nn.field_g.field_L), 0, -1);
+        da.field_E[this.field_A.packId].e(565, 140, -2048, 4096);
         if (this.field_y.field_q >= 0 &&
-          this.field_y.field_q < this.field_A.field_i) {
+          this.field_y.field_q < this.field_A.levelCount) {
           var2 = nn.field_g.field_B + 2;
           var3 = this.field_y.field_q;
           if (var3 != this.field_H) {
@@ -107,16 +107,16 @@ final class ud extends km {
             this.field_H = var3;
           }
           if (qg.field_t ||
-            !(this.field_H >= 3 + hh.field_b[this.field_A.field_h])) {
+            !(this.field_H >= 3 + hh.field_b[this.field_A.packId])) {
             this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
           }
           if (qg.field_t ||
-            !(hh.field_b[this.field_A.field_h] < this.field_H)) {
-            nn.field_g.b(this.field_A.field_c[this.field_H].field_j, 402, 421 - var2, 0, -1);
+            !(hh.field_b[this.field_A.packId] < this.field_H)) {
+            nn.field_g.b(this.field_A.metadata[this.field_H].title, 402, 421 - var2, 0, -1);
           }
           if (!qg.field_t &&
-            !(this.field_H <= hh.field_b[this.field_A.field_h])) {
-            if (this.field_H < 3 + hh.field_b[this.field_A.field_h]) {
+            !(this.field_H <= hh.field_b[this.field_A.packId])) {
+            if (this.field_H < 3 + hh.field_b[this.field_A.packId]) {
               stackIn_17_0 = 210;
               stackIn_17_1 = 178;
               stackIn_17_2 = 385;
@@ -186,7 +186,7 @@ final class ud extends km {
           }
         }
         this.field_z.clear((byte) -78);
-        td.a(this.field_F, this.field_A.field_j[param1], this.field_r, this.field_z, this.field_s, 10792131);
+        td.decodeLevelBytes(this.field_F, this.field_A.levelData[param1], this.field_r, this.field_z, this.field_s, 10792131);
         cg.a(this.field_F, (byte) 35, this.field_z, false);
         this.field_I = 122880;
         this.field_u = 163840;
@@ -302,14 +302,14 @@ final class ud extends km {
         int var5 = 0;
         this.field_F = new NodeDeque[3];
         this.field_z = new NodeDeque();
-        this.field_r = new kq();
+        this.field_r = new IntNode();
         this.field_s = new ga();
         this.field_G = 0;
         try {
           this.field_C = oj.field_s.toLowerCase();
           this.field_A = na.field_L[param2];
-          for (var4_int = 0; this.field_A.field_i > var4_int; var4_int++) {
-            var5 = nn.field_g.c(this.field_A.field_c[var4_int].field_o);
+          for (var4_int = 0; this.field_A.levelCount > var4_int; var4_int++) {
+            var5 = nn.field_g.c(this.field_A.metadata[var4_int].numberLabel);
             if (var5 > this.field_G) {
               this.field_G = var5;
             }
@@ -337,11 +337,11 @@ final class ud extends km {
           if (this.field_h.a((byte) 113) &&
             0 <= this.field_y.field_q) {
             if (!qg.field_t &&
-              hh.field_b[this.field_A.field_h] < this.field_y.field_q) {
+              hh.field_b[this.field_A.packId] < this.field_y.field_q) {
               return false;
             }
-            if (this.field_y.field_q < this.field_A.field_i) {
-              cq.a(16727, param1, this.field_y.field_q, new oi(this.field_A));
+            if (this.field_y.field_q < this.field_A.levelCount) {
+              cq.a(16727, param1, this.field_y.field_q, new LevelSequence(this.field_A));
             }
           }
         } else {

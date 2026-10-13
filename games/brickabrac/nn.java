@@ -47,7 +47,7 @@ final class nn {
                     }
                     if (decompiledFrameRemainder0) {
                       if (param2 == 20) {
-                        mq.a(4252);
+                        LevelPackLoader.a(4252);
                         decompiledFrameRemainder0 = (var5 != 0);
                       }
                       if (decompiledFrameRemainder0) {
@@ -346,7 +346,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_x_removed", (byte) -119);
                 if (null != var2) {
-                  nc.field_f = q.a(var2, (byte) 121);
+                  LevelPack.field_f = q.a(var2, (byte) 121);
                 }
                 var2 = nk.a("mu_x_dropped_out", (byte) -112);
                 if (null != var2) {
@@ -626,7 +626,7 @@ final class nn {
                 }
                 var2 = nk.a("you_are_on_x_server", (byte) -125);
                 if (null != var2) {
-                  dq.field_c = q.a(var2, (byte) 90);
+                  LevelDecoder.field_c = q.a(var2, (byte) 90);
                 }
                 var2 = nk.a("rated_game", (byte) -110);
                 if (var2 != null) {
@@ -682,7 +682,7 @@ final class nn {
                 }
                 var2 = nk.a("join_requests_many", (byte) 50);
                 if (var2 != null) {
-                  mq.field_h = q.a(var2, (byte) 121);
+                  LevelPackLoader.field_h = q.a(var2, (byte) 121);
                 }
                 var2 = nk.a("xs_game", (byte) -12);
                 if (null != var2) {
@@ -994,7 +994,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_playerhasntunlocked", (byte) 21);
                 if (var2 != null) {
-                  kq.field_m = q.a(var2, (byte) 117);
+                  IntNode.field_m = q.a(var2, (byte) 117);
                 }
                 var2 = nk.a("gameopt_youhaventunlocked", (byte) 79);
                 if (var2 != null) {
@@ -1168,7 +1168,7 @@ final class nn {
                 }
                 var2 = nk.a("pleaselogin", (byte) 121);
                 if (var2 != null) {
-                  mq.field_a = q.a(var2, (byte) 99);
+                  LevelPackLoader.field_a = q.a(var2, (byte) 99);
                 }
                 var2 = nk.a("pleaselogin_member", (byte) 60);
                 if (null != var2) {
@@ -1564,7 +1564,7 @@ final class nn {
                 }
                 var2 = nk.a("create_email", (byte) 29);
                 if (var2 != null) {
-                  kq.field_l = q.a(var2, (byte) 74);
+                  IntNode.field_l = q.a(var2, (byte) 74);
                 }
                 var2 = nk.a("create_email_confirm", (byte) -125);
                 if (null != var2) {
@@ -2038,7 +2038,7 @@ final class nn {
                 }
                 var2 = nk.a("tutorial", (byte) -120);
                 if (null != var2) {
-                  mq.field_i = q.a(var2, (byte) 122);
+                  LevelPackLoader.field_i = q.a(var2, (byte) 122);
                 }
                 var2 = nk.a("playtutorial", (byte) 113);
                 if (null != var2) {
@@ -2170,7 +2170,7 @@ final class nn {
                 }
                 var2 = nk.a("endgame", (byte) -116);
                 if (var2 != null) {
-                  mq.field_d = q.a(var2, (byte) 82);
+                  LevelPackLoader.field_d = q.a(var2, (byte) 82);
                 }
                 var2 = nk.a("endtutorial", (byte) 118);
                 if (var2 != null) {
@@ -2430,7 +2430,7 @@ final class nn {
                 }
                 var2 = nk.a("orbpoints_colon", (byte) -123);
                 if (null != var2) {
-                  mq.field_c = q.a(var2, (byte) 117);
+                  LevelPackLoader.field_c = q.a(var2, (byte) 117);
                 }
                 var2 = nk.a("orbcoins_colon", (byte) -7);
                 if (null != var2) {
@@ -2832,7 +2832,7 @@ final class nn {
                 }
                 var2 = nk.a("fs_button_close", (byte) -116);
                 if (var2 != null) {
-                  oi.field_a = q.a(var2, (byte) 82);
+                  LevelSequence.field_a = q.a(var2, (byte) 82);
                 }
                 var2 = nk.a("fs_button_members", (byte) -123);
                 if (null != var2) {
@@ -3224,7 +3224,7 @@ final class nn {
         int var6 = 0;
         try {
           if (null != this.field_e && (oc.field_p != this.field_i ||
-            param2 == 2) && 2 == wk.field_m) {
+            param2 == 2) && 2 == LevelMetadata.field_m) {
             var4 = this.c(-12688);
             var5 = pf.a(false, this.field_e);
             var6 = af.a(121, this.field_e) ? 1 : 0;

@@ -97,7 +97,7 @@ final class ek extends bj implements en {
           var4.field_o = 0;
           var4.field_l = (ub) ((Object) new um(og.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, true);
-          this.field_ib = this.a(oi.field_a, 101, (uh) (this));
+          this.field_ib = this.a(LevelSequence.field_a, 101, (uh) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

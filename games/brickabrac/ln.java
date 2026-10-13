@@ -8,7 +8,7 @@ final class ln extends IntrusiveNode {
     byte[] field_i;
     static boolean field_k;
 
-    final static int a(nc param0, int param1, boolean param2, int param3) {
+    final static int a(LevelPack param0, int param1, boolean param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -25,7 +25,7 @@ final class ln extends IntrusiveNode {
             field_k = false;
           }
           for (var5 = param1; param3 > var5; var5++) {
-            var4_int = var4_int | param0.field_c[var5].field_i;
+            var4_int = var4_int | param0.metadata[var5].attributeWord;
           }
           stackIn_7_0 = var4_int;
           return stackIn_7_0;
@@ -176,7 +176,7 @@ final class ln extends IntrusiveNode {
           if (var3 != 0) {
             return false;
           }
-          mq.a(4252);
+          LevelPackLoader.a(4252);
           return true;
         }
         if (dc.field_b == param1) {

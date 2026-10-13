@@ -249,7 +249,7 @@ final class uf {
             stackIn_2_0 = om.field_Xb;
             return stackIn_2_0;
           }
-          if (2 != wk.field_m) {
+          if (2 != LevelMetadata.field_m) {
             stackIn_6_0 = hd.field_b;
             return stackIn_6_0;
           }

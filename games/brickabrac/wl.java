@@ -278,7 +278,7 @@ final class wl extends d {
                 var11_ref_String = "";
               }
               k.field_h.writeCp1252String(var11_ref_String, -1);
-              dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              LevelDecoder.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
               k.field_h.backfillShortLength(-var10 + k.field_h.position, 255);
             } else {
               tq.field_f.position = 0;
@@ -303,7 +303,7 @@ final class wl extends d {
               k.field_h.writeByte(-10, 16);
               k.field_h.position = k.field_h.position + 1;
               var9 = k.field_h.position;
-              dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              LevelDecoder.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
               k.field_h.backfillByteLength((byte) 119, k.field_h.position - var9);
             }
             cr.a(-1, 10000);

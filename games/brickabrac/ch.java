@@ -84,19 +84,19 @@ final class ch {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (wk.field_m == 1) {
-                wk.field_m = 2;
+              if (LevelMetadata.field_m == 1) {
+                LevelMetadata.field_m = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (wk.field_m == 2) {
-                wk.field_m = 1;
+              if (LevelMetadata.field_m == 2) {
+                LevelMetadata.field_m = 1;
               }
               return;
             }
             if (var2 == 4) {
-              wk.field_m = 1;
+              LevelMetadata.field_m = 1;
               var3 = var1.readCp1252String(-1);
               rk.field_Tb = ((String) (var3)).intern();
               var4 = var1.readUnsignedByte(255);

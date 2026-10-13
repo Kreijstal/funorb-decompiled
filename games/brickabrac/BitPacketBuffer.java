@@ -152,12 +152,12 @@ final class BitPacketBuffer extends PacketBuffer {
                 al.a((var12_ref_vn.radius256 >> 8) / scaleDivisor + (destinationY + (var12_ref_vn.y256 >> 8) / scaleDivisor), 40 / scaleDivisor, 256, sa.a(100 * de.field_x, -4097) * 10 >> 16, 123, 20 / scaleDivisor, (var12_ref_vn.x256 >> 8) / scaleDivisor + destinationX + (var12_ref_vn.radius256 >> 8) / scaleDivisor);
                 la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / scaleDivisor + (destinationX << 4), (destinationY << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / scaleDivisor, (var12_ref_vn.radius256 >> 3) / scaleDivisor, 4, 3, lj.field_n, var24.simulationTick / 5);
               }
-              kq.a(var12_ref_vn, (byte) -119, scaleDivisor, destinationX, destinationY);
+              IntNode.a(var12_ref_vn, (byte) -119, scaleDivisor, destinationX, destinationY);
               var12_ref_vn = (Ball) (var24.activeBalls.next((byte) 116));
             }
             var26 = (Ball) (var24.queuedBalls.first(-76));
             while (var26 != null) {
-              kq.a(var26, (byte) -119, scaleDivisor, destinationX, destinationY);
+              IntNode.a(var26, (byte) -119, scaleDivisor, destinationX, destinationY);
               var26 = (Ball) (var24.queuedBalls.next((byte) 116));
             }
             var12_ref_ge = (PowerUp) (var24.fallingPowerUps.first(-113));

@@ -293,7 +293,7 @@ final class ka extends IntrusiveNode {
             stackIn_90_0 = (var21.equals(var13.field_Yb)) ? 0 : 1;
             var23 = stackIn_90_0;
             if (4 <= var13.field_Zb) {
-              var21 = "<img=" + (mq.field_g - 4 + var13.field_Zb) + ">" + var21;
+              var21 = "<img=" + (LevelPackLoader.field_g - 4 + var13.field_Zb) + ">" + var21;
             } else {
               if (0 < var13.field_Zb) {
                 var21 = "<img=" + (-1 + var13.field_Zb) + ">" + var21;
@@ -458,7 +458,7 @@ final class ka extends IntrusiveNode {
                     } else {
                       if ((var8 & ~var13.field_Ub) != 0) {
                         var26_int = r.a((byte) -82, ~var13.field_Ub & var8);
-                        var25 = rd.a(kq.field_m, new String[]{var21}, (byte) 103);
+                        var25 = rd.a(IntNode.field_m, new String[]{var21}, (byte) 103);
                         if (var26_int > 0 &&
                           null != eb.field_p &&
                           var26_int <= eb.field_p.length &&

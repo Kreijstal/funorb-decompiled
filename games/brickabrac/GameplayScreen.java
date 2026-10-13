@@ -91,7 +91,7 @@ final class GameplayScreen extends GameScreen {
         var3 = var6;
         var4 = param0;
         var6[var4 >> 5] = ud.d(var6[var4 >> 5], param1 << ik.a(var4, 31));
-        kp.field_c.addLast(new kq(param0), (byte) 3);
+        kp.field_c.addLast(new IntNode(param0), (byte) 3);
         return false;
     }
 
@@ -163,7 +163,7 @@ final class GameplayScreen extends GameScreen {
         if (!this.field_s) {
           var4 = this.match.playerBoards[0].score;
           ep.field_i = ep.field_i - (var4 + this.field_t);
-          var5 = this.match.playerBoards[0].field_qb;
+          var5 = this.match.playerBoards[0].levelIndex;
           fp.field_z = fp.field_z + var5;
           lp.field_wb.addLast(new e(param2, param0, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
           fp.field_z = fp.field_z + (var4 + this.field_t);
@@ -417,14 +417,14 @@ final class GameplayScreen extends GameScreen {
         bm.playGameplayAudioEvents(48, 48, true, -30791, var7);
         if (this.match.playerCount == 1) {
           var20 = this.match.playerBoards[0];
-          if (var20.field_qb > this.field_i) {
+          if (var20.levelIndex > this.field_i) {
             var9_long = ue.a(false);
             this.a(gq.field_Yb, this.field_i, var9_long - fl.field_l, true, 1000);
             fl.field_l = var9_long;
-            this.field_i = var20.field_qb;
-            this.a(this.match.configuration.field_b, var20.score, (byte) -125, var20.field_qb);
+            this.field_i = var20.levelIndex;
+            this.a(this.match.configuration.pack, var20.score, (byte) -125, var20.levelIndex);
             if (this.field_i == 1 &&
-              0 == this.match.configuration.field_b.field_h) {
+              0 == this.match.configuration.pack.packId) {
               var11 = var20;
               var20.field_Q = 0;
               var11.field_m = 0;
@@ -438,13 +438,13 @@ final class GameplayScreen extends GameScreen {
               }
             }
             if ((this.field_i > 1 ||
-              this.match.configuration.field_b.field_h == 1) &&
+              this.match.configuration.pack.packId == 1) &&
               (lc.a(0, -119) &&
               oa.field_Sb instanceof dp)) {
               this.a(false, 239, 16);
             }
-            if (this.field_i < this.match.configuration.a(95)) {
-              w.field_r = lg.a(2, this.match.configuration.a(this.field_i, (byte) -122), -1);
+            if (this.field_i < this.match.configuration.getPeriod(95)) {
+              w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.field_i, (byte) -122), -1);
             }
           }
           if (var20.field_tb) {
@@ -454,13 +454,13 @@ final class GameplayScreen extends GameScreen {
             kc.field_q.a((byte) 78);
             ih.field_k = oa.field_Sb.c((byte) -116);
             fq.field_c = oa.field_Sb.b(-102);
-            oa.field_Sb = rd.a(var20.field_ab.field_p, (byte) 19);
+            oa.field_Sb = rd.a(var20.levelState.value, (byte) 19);
             km.field_i = 32;
             var20.field_tb = false;
-            pe.field_n = var20.field_ab.field_p;
+            pe.field_n = var20.levelState.value;
           }
-          if (!(var20.field_qb <= 0) ||
-            this.match.configuration.field_b.field_h != 0) {
+          if (!(var20.levelIndex <= 0) ||
+            this.match.configuration.pack.packId != 0) {
             if (dp.field_r[0] <= var20.field_m) {
               this.b(0, -64, 255);
             }
@@ -473,16 +473,16 @@ final class GameplayScreen extends GameScreen {
             if (dp.field_r[39] <= var20.field_m) {
               this.b(39, 109, 216);
             }
-            if (var20.field_qb - this.field_t >= dp.field_r[3]) {
+            if (var20.levelIndex - this.field_t >= dp.field_r[3]) {
               this.a(false, 252, 3);
             }
-            if (var20.field_qb - this.field_t >= dp.field_r[4]) {
+            if (var20.levelIndex - this.field_t >= dp.field_r[4]) {
               this.a(false, 251, 4);
             }
-            if (var20.field_qb >= dp.field_r[5] - 1) {
+            if (var20.levelIndex >= dp.field_r[5] - 1) {
               this.a(250, 67, 5);
             }
-            if (-1 + dp.field_r[6] <= var20.field_qb &&
+            if (-1 + dp.field_r[6] <= var20.levelIndex &&
               var20.field_Z == 5) {
               this.a(249, 67, 6);
             }
@@ -591,7 +591,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (null == fj.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
-          fj.field_Ub = new sp(this.match.configuration.field_b.field_d, 65535 ^ this.match.configuration.field_b.field_d, fp.field_z, ep.field_i, od.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.field_t << 16 | this.field_r});
+          fj.field_Ub = new sp(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, fp.field_z, ep.field_i, od.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.field_t << 16 | this.field_r});
           if (!og.h(-26090)) {
             bd.a(3, (byte) 25, fj.field_Ub);
           }
@@ -906,13 +906,13 @@ final class GameplayScreen extends GameScreen {
             return true;
           }
           if (obfuscationGuard == 50) {
-            this.field_t = -dp.field_r[3] + (var8.field_qb + 1);
+            this.field_t = -dp.field_r[3] + (var8.levelIndex + 1);
             this.field_s = true;
             return true;
           }
           if (obfuscationGuard == 34) {
             this.field_s = true;
-            this.field_t = var7.field_qb + 1 - dp.field_r[4];
+            this.field_t = var7.levelIndex + 1 - dp.field_r[4];
             return true;
           }
           if (51 == obfuscationGuard) {
@@ -943,8 +943,8 @@ final class GameplayScreen extends GameScreen {
             return true;
           }
           if (obfuscationGuard == 54) {
-            fieldTemp$0 = var8.field_qb + 1;
-            var8.field_qb = var8.field_qb + 1;
+            fieldTemp$0 = var8.levelIndex + 1;
+            var8.levelIndex = var8.levelIndex + 1;
             if (tk.field_q > fieldTemp$0) {
               var8.field_Z = 0;
             } else {
@@ -1064,7 +1064,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (!this.field_s) {
           var4 = this.match.playerBoards[0].score;
-          var5 = this.match.playerBoards[0].field_qb;
+          var5 = this.match.playerBoards[0].levelIndex;
           fp.field_z = fp.field_z - (this.field_t + var4);
           ep.field_i = ep.field_i + (-this.field_t + var5);
           lp.field_wb.addLast(new e(param2, param1, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
@@ -1081,21 +1081,21 @@ final class GameplayScreen extends GameScreen {
           return;
         }
         for (var3 = 0; var3 < this.match.playerBoards.length; var3++) {
-          this.match.playerBoards[var3].field_qb = param1;
+          this.match.playerBoards[var3].levelIndex = param1;
         }
         if (this.match.playerCount == 1) {
           this.field_t = param1;
           this.field_i = param1;
           var3Lifetime1 = param1;
           fp.field_z = fp.field_z + var3Lifetime1;
-          w.field_r = lg.a(2, this.match.configuration.a(this.field_i, (byte) -122), -1);
+          w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.field_i, (byte) -122), -1);
         }
     }
 
     final static void b(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
         String[] var3 = new String[]{tb.field_cb == null ? we.field_c : tb.field_cb, pg.field_q};
-        oi var4 = new oi(qh.field_b, kk.a(false, qh.field_b.field_i, hi.field_w), 3);
+        LevelSequence var4 = new LevelSequence(qh.field_b, kk.createIndexOrder(false, qh.field_b.levelCount, hi.field_w), 3);
         r.field_A = false;
         oa.field_Sb = rd.a(0, (byte) 19);
         sk.a(var3, 0, var4, 2, param1, -12665);
@@ -1446,7 +1446,7 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    private final void a(nc param0, int param1, byte param2, int param3) {
+    private final void a(LevelPack param0, int param1, byte param2, int param3) {
         pn var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -1457,17 +1457,17 @@ final class GameplayScreen extends GameScreen {
           if (this.field_s) {
             return;
           }
-          ep.field_i = ep.field_i + (param3 + param0.field_b);
+          ep.field_i = ep.field_i + (param3 + param0.scoreOffset);
           if (param2 > -87) {
             this.field_p = true;
           }
           fp.field_z = fp.field_z - (param1 + this.field_t);
-          var5 = new pn(param0.field_h, -1 + param3, fp.field_z, ep.field_i, od.field_c, og.field_Wb);
-          kq.field_j.addLast(var5, (byte) 3);
-          fp.field_z = fp.field_z - (param0.field_b + param3);
+          var5 = new pn(param0.packId, -1 + param3, fp.field_z, ep.field_i, od.field_c, og.field_Wb);
+          IntNode.field_j.addLast(var5, (byte) 3);
+          fp.field_z = fp.field_z - (param0.scoreOffset + param3);
           ep.field_i = ep.field_i + (param1 + this.field_t);
-          if (hh.field_b[param0.field_h] < param3) {
-            hh.field_b[param0.field_h] = param3;
+          if (hh.field_b[param0.packId] < param3) {
+            hh.field_b[param0.packId] = param3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1780,7 +1780,7 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    GameplayScreen(String[] param0, int param1, int param2, oi param3, int[] param4, int[] param5) {
+    GameplayScreen(String[] param0, int param1, int param2, LevelSequence param3, int[] param4, int[] param5) {
         this(false, false, param0, param1, param2, param3, param4, param5);
     }
 
@@ -1792,7 +1792,7 @@ final class GameplayScreen extends GameScreen {
         int var2 = 68 % ((param0 + 65) / 59);
     }
 
-    GameplayScreen(boolean param0, boolean param1, String[] param2, int param3, int param4, oi param5, int[] param6, int[] param7) {
+    GameplayScreen(boolean param0, boolean param1, String[] param2, int param3, int param4, LevelSequence param5, int[] param6, int[] param7) {
         super(-1);
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -1872,8 +1872,8 @@ final class GameplayScreen extends GameScreen {
           be.field_j = 0;
           op.field_a = false;
           fl.field_l = ue.a(false);
-          gq.field_Yb = param5.field_b.field_h;
-          tk.field_q = param5.a(96);
+          gq.field_Yb = param5.pack.packId;
+          tk.field_q = param5.getPeriod(96);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -41,14 +41,14 @@ final class eo extends tl {
     final static void a(int param0, int param1, int param2, int param3) {
         if (param3 == param0 &&
           md.field_r != param2) {
-          oi.field_d = true;
+          LevelSequence.field_d = true;
           md.field_r = param2;
           eh.a(true, param1);
         }
         if (param3 == 1 &&
           md.field_v != param2) {
           md.field_v = param2;
-          oi.field_d = true;
+          LevelSequence.field_d = true;
           eh.a(true, param1);
         }
         if (2 != param3) {
@@ -57,7 +57,7 @@ final class eo extends tl {
         if (param2 == to.field_a) {
           return;
         }
-        oi.field_d = true;
+        LevelSequence.field_d = true;
         to.field_a = param2;
         eh.a(true, param1);
     }

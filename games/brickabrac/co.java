@@ -206,7 +206,7 @@ final class co {
         if (param0 != -53) {
           field_j = (mb) null;
         }
-        return lk.field_p - nc.field_k;
+        return lk.field_p - LevelPack.field_k;
     }
 
     static {

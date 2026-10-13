@@ -31,7 +31,7 @@ abstract class bc {
           }
           var8 = new qf(mf.field_f, param5);
           mf.field_f.a(-102, var8);
-          if (mq.a((byte) -56)) {
+          if (LevelPackLoader.a((byte) -56)) {
             var8.c(true);
             return true;
           }

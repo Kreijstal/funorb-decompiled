@@ -131,7 +131,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
               mk.field_i = uc.e((byte) -64);
               dupTemp$0 = new tg(param0, param5, param6, true);
               lp.field_ub = dupTemp$0;
-              mq.field_e = dupTemp$0;
+              LevelPackLoader.field_e = dupTemp$0;
               var9 = lp.field_ub.a(1, (Runnable) (this), (byte) -124);
               while (true) {
                 if (var9.field_f == 0) {
@@ -429,7 +429,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                   do {
                     if (!(c.field_a > var3)) {
                       this.h(0);
-                      kq.a(-4317, lp.field_ub, kj.field_D);
+                      IntNode.a(-4317, lp.field_ub, kj.field_D);
                       break;
                     }
                     this.c(26573);
@@ -805,7 +805,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             !ai.field_s) {
             jg.field_k = ue.a(false);
             wj.a(-127, 5000L);
-            mq.field_e = null;
+            LevelPackLoader.field_e = null;
             this.a(false, 46);
             return;
           }

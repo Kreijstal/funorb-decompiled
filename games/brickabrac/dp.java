@@ -17,14 +17,14 @@ final class dp extends ki {
         if (param1 <= -1) {
           lb.g(param2, param3, 153, 238, 7829367, 22953);
           if (this.b((byte) -115)) {
-            mq.field_f.c(param2, param3);
+            LevelPackLoader.field_f.c(param2, param3);
           }
           var5 = 36 % ((param0 + 28) / 43);
           return;
         }
         lb.g(param2, param3, 153, 238, kg.field_d[param1], 22953);
         if (this.b((byte) -115)) {
-          mq.field_f.c(param2, param3);
+          LevelPackLoader.field_f.c(param2, param3);
         }
         var5Lifetime1 = 36 % ((param0 + 28) / 43);
     }
@@ -71,7 +71,7 @@ final class dp extends ki {
         nf.field_U = pl.a("halloween", "halloween_near", (byte) -116, i.field_m);
         ni.field_Ub = pl.a("halloween", "halloween_mid", (byte) 116, i.field_m);
         dj.field_e = pl.a("halloween", "halloween_far", (byte) 120, i.field_m);
-        mq.field_f = pl.a("halloween", "halloween_small", (byte) 105, i.field_m);
+        LevelPackLoader.field_f = pl.a("halloween", "halloween_small", (byte) 105, i.field_m);
         MotionWaypoint.field_p = pl.a("halloween", "halloween_moon", (byte) 102, i.field_m);
         va.field_b = jh.a(0, nf.field_U);
         field_u = jh.a(0, ni.field_Ub);
@@ -124,7 +124,7 @@ final class dp extends ki {
           if (dj.field_e == null) {
             return false;
           }
-          if (mq.field_f == null) {
+          if (LevelPackLoader.field_f == null) {
             return false;
           }
           if (null == MotionWaypoint.field_p) {
@@ -153,7 +153,7 @@ final class dp extends ki {
         if (dj.field_e == null) {
           return false;
         }
-        if (mq.field_f == null) {
+        if (LevelPackLoader.field_f == null) {
           return false;
         }
         if (null == MotionWaypoint.field_p) {

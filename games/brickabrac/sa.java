@@ -194,7 +194,7 @@ abstract class sa extends qg implements vc {
                     break;
                   }
                 case 2:
-                  nc.b(102);
+                  LevelPack.b(102);
                   break;
               }
               this.a(false, (byte) 69);
@@ -212,7 +212,7 @@ abstract class sa extends qg implements vc {
               if (1 == var3 ||
                 var3 == 2) {
                 if (null != ua.field_d) {
-                  nc.b(118);
+                  LevelPack.b(118);
                 }
                 if (var3 == 2) {
                   nk.a(param0 ^ 2058, uc.e((byte) -85));
@@ -226,7 +226,7 @@ abstract class sa extends qg implements vc {
                 if (!me.b(param0 ^ -16)) {
                   var3 = vh.h(0);
                   if (1 == var3) {
-                    he.a(mq.field_a, true, (byte) 97);
+                    he.a(LevelPackLoader.field_a, true, (byte) 97);
                   }
                   this.a(false, (byte) 7);
                   decompiledFrameRemainder0 = (var5 != 0);
@@ -406,7 +406,7 @@ abstract class sa extends qg implements vc {
         var4 = BrickABrac.field_J ? 1 : 0;
         if (null != ua.field_d &&
           ua.field_d.field_e) {
-          nc.b(84);
+          LevelPack.b(84);
           MotionWaypoint.c(4);
         }
         stackIn_7_1 = (ua.field_d != null);

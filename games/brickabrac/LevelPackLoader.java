@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mq {
+final class LevelPackLoader {
     static String field_h;
     static String field_a;
     static String field_c;
@@ -34,16 +34,16 @@ final class mq {
         di.a((byte) -114);
     }
 
-    final static nc a(byte param0, mf param1, PacketBuffer param2, int param3, int param4, int param5, int param6) {
+    final static LevelPack loadLevelPack(byte obfuscationGuard, mf archive, PacketBuffer packet, int archiveSelector, int packId, int completionWord, int scoreOffset) {
         int dupTemp$1 = 0;
         RuntimeException var7 = null;
         int var8 = 0;
         int var9 = 0;
-        wk var10 = null;
+        LevelMetadata var10 = null;
         int var11 = 0;
-        nc var12 = null;
-        nc var13 = null;
-        nc stackIn_5_0 = null;
+        LevelPack var12 = null;
+        LevelPack var13 = null;
+        LevelPack stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -53,38 +53,38 @@ final class mq {
         int var9Lifetime1;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          var12 = new nc(param4, param6, param5);
+          var12 = new LevelPack(packId, scoreOffset, completionWord);
           var13 = var12;
-          dupTemp$1 = param2.readUnsignedShort(65280);
-          var13.field_i = dupTemp$1;
+          dupTemp$1 = packet.readUnsignedShort(65280);
+          var13.levelCount = dupTemp$1;
           var8 = dupTemp$1;
-          var13.field_j = new byte[var8][];
-          var13.field_c = new wk[var8];
+          var13.levelData = new byte[var8][];
+          var13.metadata = new LevelMetadata[var8];
           for (var9 = 0; var8 > var9; var9++) {
-            var10 = ai.a((byte) -12, param2);
-            var12.field_c[var10.field_n] = var10;
-            var13.field_j[var10.field_n] = param1.a(var10.field_q, param3, 4);
+            var10 = ai.readLevelMetadata((byte) -12, packet);
+            var12.metadata[var10.levelId] = var10;
+            var13.levelData[var10.levelId] = archive.a(var10.resourceIndex, archiveSelector, 4);
           }
-          var9Lifetime1 = -74 % ((7 - param0) / 52);
+          var9Lifetime1 = -74 % ((7 - obfuscationGuard) / 52);
           stackIn_5_0 = var13;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("mq.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("mq.C(").append(obfuscationGuard).append(',');
+          if (archive == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (packet == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(archiveSelector).append(',').append(packId).append(',').append(completionWord).append(',').append(scoreOffset).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class mq {
           ma.b((byte) -112, param1);
           return var2;
         }
-        mq.a((byte) -67, -39);
+        LevelPackLoader.a((byte) -67, -39);
         var2Lifetime1 = new al();
         ej.field_F.addLast(var2Lifetime1, (byte) 3);
         ma.b((byte) -112, param1);

@@ -113,7 +113,7 @@ abstract class af extends km {
             ob.field_D.c(this.field_E[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
           }
-          ob.field_D.c(mq.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.field_C / 2), 2, -1);
+          ob.field_D.c(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.field_C / 2), 2, -1);
           ob.field_D.c(fl.field_m, 209, -nn.field_g.field_P + var9, 2, -1);
           var11Lifetime1 = ob.field_D.c(fl.field_m) + 209;
           var12 = -(nj.field_z.field_z / 2) + var9;
@@ -361,7 +361,7 @@ abstract class af extends km {
         var4 = 0;
         for (var5 = 0; var5 < field_s.length; var5++) {
           if (!this.a(var5, (byte) 38)) {
-            this.field_z[this.field_x].addLast(new kq(var5), (byte) 3);
+            this.field_z[this.field_x].addLast(new IntNode(var5), (byte) 3);
             var4++;
             if (var4 == 16) {
               var4 = 0;
@@ -389,7 +389,7 @@ abstract class af extends km {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        kq var9 = null;
+        IntNode var9 = null;
         int var10 = 0;
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
@@ -407,12 +407,12 @@ abstract class af extends km {
           var6 = 82;
           var7 = (24 + var6 * 2) / param0;
           var8 = 150;
-          var9 = (kq) (param2.first(-74));
+          var9 = (IntNode) (param2.first(-74));
           var10 = 0;
           while (var9 != null) {
-            this.field_C.addLast(cn.a(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.field_p, param0 - 1), (byte) 3);
+            this.field_C.addLast(cn.a(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, param0 - 1), (byte) 3);
             rk.field_Qb = rk.field_Qb | 1 << var10;
-            var9 = (kq) (param2.next((byte) 116));
+            var9 = (IntNode) (param2.next((byte) 116));
             var10++;
             if (var10 != 8) {
               var7 += 56;

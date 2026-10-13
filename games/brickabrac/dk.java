@@ -65,7 +65,7 @@ final class dk extends ib implements ha, en, vf {
             kn.field_E[var8 - 2] = var6;
             re.field_q[-2 + var8] = 0;
             hi.field_A[0] = 1;
-            kn.field_E[-1 + var8] = oi.field_a;
+            kn.field_E[-1 + var8] = LevelSequence.field_a;
             re.field_q[var8 - 1] = 1;
             hi.field_A[1] = 2;
           } else {
@@ -84,7 +84,7 @@ final class dk extends ib implements ha, en, vf {
               kn.field_E[var9] = ii.field_r[var9];
             }
             kn.field_E[var8 - 2] = "";
-            kn.field_E[-1 + var8] = oi.field_a;
+            kn.field_E[-1 + var8] = LevelSequence.field_a;
             re.field_q[-1 + var8] = 0;
             hi.field_A[0] = 2;
           }
@@ -104,7 +104,7 @@ final class dk extends ib implements ha, en, vf {
           }
           lk.field_p = var7Lifetime1 + (cc.field_J - (var7Lifetime1 >> 1));
           bg.field_r = fi.field_r.field_r * (wg.field_f + dj.field_g << 1);
-          nc.field_k = cc.field_J - (var7Lifetime1 >> 1);
+          LevelPack.field_k = cc.field_J - (var7Lifetime1 >> 1);
           var8Lifetime2 = 0;
           while (kn.field_E.length > var8Lifetime2) {
             stackIn_38_0 = bg.field_r;
@@ -618,7 +618,7 @@ final class dk extends ib implements ha, en, vf {
         this.field_O.field_l = (ub) ((Object) dupTemp$1);
         String var2 = rd.a(ch.field_e, new String[]{this.c(true), this.j(-987472479)}, (byte) 103);
         int var3 = 20;
-        var3 = var3 + this.a(kq.field_l, this.field_M, var3, 37, 170);
+        var3 = var3 + this.a(IntNode.field_l, this.field_M, var3, 37, 170);
         var3 = var3 + (this.a(this.field_H, var3, "", 20, 170, pg.field_o, 170) + 5);
         var3 = var3 + this.a(wc.field_c, this.field_O, var3, 84, 170);
         var3 = var3 + (this.a(170, md.field_x, cp.field_G, -3, this.field_L, var3) + 5);

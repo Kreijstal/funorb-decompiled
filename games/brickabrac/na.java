@@ -6,7 +6,7 @@ final class na extends ug {
     private vb field_R;
     private vb field_O;
     private vb field_M;
-    static nc[] field_L;
+    static LevelPack[] field_L;
     static String field_N;
     static NodeDeque field_Q;
 

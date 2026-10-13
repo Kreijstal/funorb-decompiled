@@ -142,7 +142,7 @@ final class uc extends k {
             var2Lifetime1.d(3);
             var2Lifetime1 = tf.field_d.a(false);
           }
-          wk.field_m = 0;
+          LevelMetadata.field_m = 0;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "uc.G(" + param0 + ')');
         }

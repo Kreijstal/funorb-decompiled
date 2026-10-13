@@ -59,7 +59,7 @@ final class pn extends IntrusiveNode {
           }
           if (2 == ng.field_b &&
             !ve.b(-21835160)) {
-            boolean decompiledSharedTail2 = !(nc.a(0, kb.field_Qb));
+            boolean decompiledSharedTail2 = !(LevelPack.a(0, kb.field_Qb));
             if (!decompiledSharedTail2) {
               var2 = rd.a(ScorePopup.field_j, new String[]{tk.field_p}, (byte) 103);
               decompiledSharedTail2 = (var10 != 0);
@@ -145,7 +145,7 @@ final class pn extends IntrusiveNode {
                 if (g.field_n.field_L != 0 &&
                   var9 > g.field_n.field_U &&
                   !um.field_e) {
-                  mq.a(param0 ^ -13455);
+                  LevelPackLoader.a(param0 ^ -13455);
                 }
               }
             }

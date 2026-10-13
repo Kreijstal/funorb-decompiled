@@ -62,7 +62,7 @@ final class me {
             stackIn_5_0 = rj.field_a;
             return stackIn_5_0;
           }
-          if (param2 != wk.field_m) {
+          if (param2 != LevelMetadata.field_m) {
             stackIn_9_0 = df.field_c;
             return stackIn_9_0;
           }
@@ -74,7 +74,7 @@ final class me {
             stackIn_15_0 = ap.field_d;
             return stackIn_15_0;
           }
-          if (nc.a(param2 - 2, param0)) {
+          if (LevelPack.a(param2 - 2, param0)) {
             stackIn_19_0 = rd.a(tq.field_a, new String[]{param0}, (byte) 103);
             return stackIn_19_0;
           }

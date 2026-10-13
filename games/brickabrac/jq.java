@@ -57,13 +57,13 @@ final class jq extends bc {
         int var10 = 0;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = -nc.field_k + lk.field_p;
+          var1_int = -LevelPack.field_k + lk.field_p;
           if (param0 != -16085) {
             return;
           }
-          nc.field_k = cc.field_J - (var1_int >> 1);
+          LevelPack.field_k = cc.field_J - (var1_int >> 1);
           mi.field_d = ea.field_e - (bg.field_r >> 1);
-          lk.field_p = var1_int + nc.field_k;
+          lk.field_p = var1_int + LevelPack.field_k;
           var2 = mi.field_d;
           for (var3 = 0; var3 < kn.field_E.length; var3++) {
             var4 = re.field_q[var3];

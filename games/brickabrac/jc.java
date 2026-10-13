@@ -306,7 +306,7 @@ abstract class jc extends ib {
               ga.field_i = 8;
               jl.field_a = 250;
               pp.field_a = -1;
-              tb.field_eb = rd.a(kq.field_n, new String[]{ui.field_b}, (byte) 103);
+              tb.field_eb = rd.a(IntNode.field_n, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }

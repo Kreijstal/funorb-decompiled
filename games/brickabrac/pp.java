@@ -186,15 +186,15 @@ final class pp {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.configuration.field_c) {
-            stackIn_3_0 = param0.field_qb;
+          if (param2.configuration.repeats) {
+            stackIn_3_0 = param0.levelIndex;
             return stackIn_3_0;
           }
           var3_int = 44 / ((param1 + 59) / 34);
-          if (param0.field_qb >= param2.configuration.a(-30)) {
-            stackIn_7_0 = -1 + param2.configuration.a(79);
+          if (param0.levelIndex >= param2.configuration.getPeriod(-30)) {
+            stackIn_7_0 = -1 + param2.configuration.getPeriod(79);
           } else {
-            stackIn_7_0 = param0.field_qb;
+            stackIn_7_0 = param0.levelIndex;
           }
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

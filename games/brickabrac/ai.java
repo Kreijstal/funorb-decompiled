@@ -58,7 +58,7 @@ final class ai extends ki {
         try {
           ri.field_N = param2;
           if (param0 != 24) {
-            ai.a((byte) 116, (PacketBuffer) null);
+            ai.readLevelMetadata((byte) 116, (PacketBuffer) null);
           }
           ep.field_a = param1;
           return;
@@ -76,28 +76,28 @@ final class ai extends ki {
         }
     }
 
-    final static wk a(byte param0, PacketBuffer param1) {
-        wk var2 = null;
+    final static LevelMetadata readLevelMetadata(byte obfuscationGuard, PacketBuffer packet) {
+        LevelMetadata var2 = null;
         RuntimeException var2_ref = null;
-        wk stackIn_4_0 = null;
+        LevelMetadata stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new wk();
-          if (param0 != -12) {
+          var2 = new LevelMetadata();
+          if (obfuscationGuard != -12) {
             ai.a((byte) -119, 0.37269747257232666f, (String) null);
           }
-          var2.a(param0 - 12976, param1);
+          var2.readMetadata(obfuscationGuard - 12976, packet);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_8_0 = var2_ref;
-          stackIn_8_1 = new StringBuilder().append("ai.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("ai.A(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

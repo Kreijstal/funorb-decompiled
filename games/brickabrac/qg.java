@@ -848,10 +848,10 @@ abstract class qg extends ke {
           ri.field_N = cm.field_t;
           gn.a(qb.field_u, ja.field_c, ma.field_P, vh.field_S, param1 ^ 23);
           if (cb.field_k ||
-            null != dq.field_a) {
+            null != LevelDecoder.field_a) {
             stackIn_99_0 = !(cb.field_k);
             stackIn_102_1 = !(cb.field_k);
-            bf.a(stackIn_99_0, stackIn_102_1, param1 ^ -15948, dq.field_a);
+            bf.a(stackIn_99_0, stackIn_102_1, param1 ^ -15948, LevelDecoder.field_a);
           }
           if (ld.field_u) {
             cc.f(967);

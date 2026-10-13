@@ -1322,7 +1322,7 @@ final class og extends mh {
           }
           var2Lifetime150 = gr.a(!param0, "explain_gauges_intercept");
           if (var2Lifetime150 != null) {
-            kq.field_n = q.a(var2Lifetime150, (byte) 100);
+            IntNode.field_n = q.a(var2Lifetime150, (byte) 100);
           }
           var2Lifetime151 = gr.a(true, "explain_gauges_miss");
           if (var2Lifetime151 != null) {
@@ -1501,7 +1501,7 @@ final class og extends mh {
           if (param0 != 107) {
             field_gc = (mf) null;
           }
-          nc.b(124);
+          LevelPack.b(124);
           if (null != kj.field_D) {
             t.a(false, kj.field_D);
           }

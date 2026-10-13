@@ -51,11 +51,11 @@ final class sj {
           } else {
             var5++;
             if (var8_ref_gb.field_b == null ||
-              oi.field_d) {
+              LevelSequence.field_d) {
               if (null == var8_ref_gb.field_b) {
                 Brick.field_E = Brick.field_E + 1;
               }
-              var10 = kq.a(var8_ref_gb, (byte) 91);
+              var10 = IntNode.a(var8_ref_gb, (byte) 91);
               var11 = var10 + dh.b(var8_ref_gb.field_j);
               var12 = ik.a(-31126, var8_ref_gb);
               var8_ref_gb.field_b = new mh(0L, field_a, var11);
@@ -82,12 +82,12 @@ final class sj {
         var8Lifetime1 = i.field_q.field_Rb.field_C + i.field_q.field_Rb.field_cb - (-var6 + var7Lifetime1);
         i.field_q.field_Rb.field_cb = i.field_q.field_Rb.field_cb - var8Lifetime1;
         i.field_q.field_Rb.field_zb = i.field_q.field_Rb.field_zb + var8Lifetime1;
-        if (oi.field_d) {
+        if (LevelSequence.field_d) {
           i.field_q.field_Rb.field_cb = var7Lifetime1;
         }
         i.field_q.field_Rb.field_C = var7Lifetime1 - i.field_q.field_Rb.field_cb;
-        if (oi.field_d) {
-          oi.field_d = false;
+        if (LevelSequence.field_d) {
+          LevelSequence.field_d = false;
           i.field_q.field_Rb.field_zb = i.field_q.field_Qb.field_cb - i.field_q.field_Rb.field_cb;
           nd.field_b = true;
           i.field_q.field_Rb.field_Db = 0;

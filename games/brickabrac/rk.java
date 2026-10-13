@@ -116,7 +116,7 @@ final class rk extends mh {
             if (null == mk.field_i) {
               return;
             }
-            stackIn_16_0 = mq.field_e;
+            stackIn_16_0 = LevelPackLoader.field_e;
             stackIn_16_1 = -49;
             stackIn_16_2 = null;
             stackIn_16_3 = null;

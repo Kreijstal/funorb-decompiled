@@ -11,7 +11,7 @@ public final class BrickABrac extends sa {
 
     public final void a(int param0) {
         int var2;
-        kq var3;
+        IntNode var3;
         int var4;
         int var5;
         int var6;
@@ -34,7 +34,7 @@ public final class BrickABrac extends sa {
         } else {
           lp.field_rb.drawScreen((byte) -63);
         }
-        var3 = (kq) (kp.field_c.first(-123));
+        var3 = (IntNode) (kp.field_c.first(-123));
         if (param0 != 16769381) {
           field_I = (mf) null;
         }
@@ -49,8 +49,8 @@ public final class BrickABrac extends sa {
               var4 = 123 - var5 / 2;
             }
           }
-          si.field_c[var3.field_p].c(8, var4);
-          nn.field_g.c(af.field_s[var3.field_p], 48, var4 + nn.field_g.field_F, 0, -1);
+          si.field_c[var3.value].c(8, var4);
+          nn.field_g.c(af.field_s[var3.value], 48, var4 + nn.field_g.field_F, 0, -1);
         }
         if (cf.a((byte) 62)) {
           rd.b(-79);
@@ -72,7 +72,7 @@ public final class BrickABrac extends sa {
         de.field_x = de.field_x + 1;
         if (!og.h(-26090)) {
           while (true) {
-            var6 = (pn) (kq.field_j.removeFirst(3));
+            var6 = (pn) (IntNode.field_j.removeFirst(3));
             if (var6 == null) {
               break;
             }
@@ -174,7 +174,7 @@ public final class BrickABrac extends sa {
         IsaacGenerator var8 = null;
         int[] var9 = null;
         int var11 = 0;
-        oi var12 = null;
+        LevelSequence var12 = null;
         int var13 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -214,7 +214,7 @@ public final class BrickABrac extends sa {
           }
           if (14 == param2) {
             sk.i((byte) -116);
-            hm.a(nc.c(param1 ^ -71), (byte) 86, qh.field_h, mq.c(0), 150, fj.a(2000, (byte) -54), aj.a(1345), fj.a(8, (byte) -53), 1024, jb.field_I.length);
+            hm.a(LevelPack.c(param1 ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, fj.a(2000, (byte) -54), aj.a(1345), fj.a(8, (byte) -53), 1024, jb.field_I.length);
             hn.a(lh.f(115), kb.h(param1 - 45), param1 ^ 12);
             vh.field_L = false;
             ue.field_c = true;
@@ -263,7 +263,7 @@ public final class BrickABrac extends sa {
               var5_int = ea.a(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
                 if (eo.a(var35, var6, (byte) -75)) {
-                  kp.field_c.addLast(new kq(var6), (byte) 3);
+                  kp.field_c.addLast(new IntNode(var6), (byte) 3);
                 }
               }
             }
@@ -402,9 +402,9 @@ public final class BrickABrac extends sa {
           for (var10 = 0; var10 < var30.length; var10++) {
             var9[var10] = var8.nextInt(105);
           }
-          var49 = kk.a(false, tq.field_d.field_i, var8);
+          var49 = kk.createIndexOrder(false, tq.field_d.levelCount, var8);
           var11 = param0.readByte(true);
-          var12 = new oi(tq.field_d, var49, var11);
+          var12 = new LevelSequence(tq.field_d, var49, var11);
           var13 = var8.nextBoundedInt(-37880252, 11);
           oa.field_Sb = rd.a(var13, (byte) 19);
           var50 = id.a(var8, false);
@@ -559,7 +559,7 @@ public final class BrickABrac extends sa {
         ea.a((byte) -42);
         b.a(true);
         fd.a(0);
-        oi.a((byte) 70);
+        LevelSequence.a((byte) 70);
         km.b(-107);
         uk.f((byte) 88);
         ud.f((byte) -115);
@@ -567,7 +567,7 @@ public final class BrickABrac extends sa {
         la.a((byte) -75);
         v.a(false);
         op.a((byte) -42);
-        kq.a((byte) -115);
+        IntNode.a((byte) -115);
         NodeDeque.b((byte) 100);
         IsaacGenerator.a(2);
         sc.a(81);
@@ -753,7 +753,7 @@ public final class BrickABrac extends sa {
         sh.a(125);
         fm.a((byte) 68);
         gj.a(-27956);
-        mq.b(-30593);
+        LevelPackLoader.b(-30593);
         rm.a(-41);
         uo.a((byte) 66);
         og.d(true);
@@ -826,7 +826,7 @@ public final class BrickABrac extends sa {
         go.a(-7393);
         ig.a(12127);
         uf.a((byte) 85);
-        dq.a((byte) 89);
+        LevelDecoder.a((byte) 89);
         a.h((byte) -128);
         lq.b(true);
         da.e((byte) 102);
@@ -853,8 +853,8 @@ public final class BrickABrac extends sa {
         ja.a(2);
         ik.c(-93);
         ae.a((byte) 84);
-        wk.a((byte) 127);
-        nc.a(0);
+        LevelMetadata.a((byte) 127);
+        LevelPack.a(0);
         uj.a(true);
         ab.f((byte) -112);
         gn.i(61);

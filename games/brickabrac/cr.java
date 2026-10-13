@@ -32,7 +32,7 @@ final class cr extends oc {
         ec.field_P = param4;
         fi.field_t = param7;
         vb.field_S = param0;
-        wk.field_k = param5;
+        LevelMetadata.field_k = param5;
         if (param2 <= 17) {
           return;
         }

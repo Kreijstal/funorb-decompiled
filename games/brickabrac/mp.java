@@ -287,7 +287,7 @@ final class mp extends mh {
           if (null != ai.field_t) {
             k.field_h.writePrefixedCp1252String(0, ai.field_t);
           }
-          dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+          LevelDecoder.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
           k.field_h.backfillShortLength(k.field_h.position - var5_int, 255);
           cr.a(-1, 10000);
           return;

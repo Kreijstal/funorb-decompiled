@@ -171,7 +171,7 @@ final class jl {
             stackIn_3_0 = om.field_Xb;
             return stackIn_3_0;
           }
-          if (wk.field_m != 2) {
+          if (LevelMetadata.field_m != 2) {
             stackIn_7_0 = kd.field_b;
             return stackIn_7_0;
           }
@@ -179,7 +179,7 @@ final class jl {
             stackIn_11_0 = rj.field_a;
             return stackIn_11_0;
           }
-          if (nc.a(0, param1)) {
+          if (LevelPack.a(0, param1)) {
             stackIn_14_0 = rd.a(gh.field_d, new String[]{param1}, (byte) 103);
             return stackIn_14_0;
           }

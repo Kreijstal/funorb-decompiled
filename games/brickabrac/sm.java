@@ -37,7 +37,7 @@ final class sm {
           }
           try {
             if (param0 == ~GameplayScreen.field_j) {
-              fc.field_e = ec.field_P.a(wk.field_k, (byte) 120, gd.field_a);
+              fc.field_e = ec.field_P.a(LevelMetadata.field_k, (byte) 120, gd.field_a);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
             }
             if (1 == GameplayScreen.field_j) {

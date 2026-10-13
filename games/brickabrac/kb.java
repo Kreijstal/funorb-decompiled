@@ -141,7 +141,7 @@ final class kb extends mh {
                 return stackIn_17_0;
               }
             } else {
-              if (kq.field_k.indexOf(var4) == -1) {
+              if (IntNode.field_k.indexOf(var4) == -1) {
                 stackIn_20_0 = wg.field_c;
                 return stackIn_20_0;
               }

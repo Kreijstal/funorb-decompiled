@@ -235,8 +235,8 @@ final class om extends mh {
                 var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.field_V)}, (byte) 103);
               }
             } else {
-              if (!param8.configuration.field_c) {
-                var15_ref = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(param4, (byte) 66, param8) + 1), Integer.toString(param8.configuration.a(-103))}, (byte) 103);
+              if (!param8.configuration.repeats) {
+                var15_ref = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(param4, (byte) 66, param8) + 1), Integer.toString(param8.configuration.getPeriod(-103))}, (byte) 103);
               } else {
                 var15_ref = rd.a(dm.field_a, new String[]{Integer.toString(1 + pp.a(param4, (byte) 97, param8))}, (byte) 103);
               }
@@ -384,8 +384,8 @@ final class om extends mh {
                 var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.field_V)}, (byte) 103);
               }
             } else {
-              if (!param8.configuration.field_c) {
-                var15_ref = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(param4, (byte) 66, param8) + 1), Integer.toString(param8.configuration.a(-103))}, (byte) 103);
+              if (!param8.configuration.repeats) {
+                var15_ref = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(param4, (byte) 66, param8) + 1), Integer.toString(param8.configuration.getPeriod(-103))}, (byte) 103);
               } else {
                 var15_ref = rd.a(dm.field_a, new String[]{Integer.toString(1 + pp.a(param4, (byte) 97, param8))}, (byte) 103);
               }

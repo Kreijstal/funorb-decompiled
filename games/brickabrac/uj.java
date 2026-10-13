@@ -6,7 +6,7 @@ final class uj {
     private int field_f;
     private int field_g;
     private km field_m;
-    private nc field_l;
+    private LevelPack field_l;
     private int field_n;
     int field_h;
     private int field_b;
@@ -51,7 +51,7 @@ final class uj {
         ag.field_D[5] = gg.field_l;
         ag.field_D[3] = tn.field_B;
         ag.field_D[4] = pp.field_c;
-        ag.field_D[9] = mq.field_d;
+        ag.field_D[9] = LevelPackLoader.field_d;
         ag.field_D[1] = da.field_H;
         ag.field_D[11] = ej.field_H;
         ag.field_D[7] = jj.field_b;
@@ -79,14 +79,14 @@ final class uj {
         ag.field_D[34] = f.field_b;
         ag.field_D[28] = sn.field_r;
         ag.field_D[19] = jf.field_g;
-        ag.field_D[35] = mq.field_d;
+        ag.field_D[35] = LevelPackLoader.field_d;
         ag.field_D[20] = pn.field_q;
         ag.field_D[33] = t.field_c;
         ag.field_D[32] = hk.field_L;
         ag.field_D[25] = ck.field_i;
         ag.field_D[24] = gi.field_r;
         ag.field_D[42] = oc.field_u;
-        ag.field_D[37] = mq.field_i;
+        ag.field_D[37] = LevelPackLoader.field_i;
         sl.field_A[7] = ke.field_f;
         sl.field_A[8] = oq.field_v;
         ag.field_D[15] = pl.field_c[1];
@@ -195,17 +195,17 @@ final class uj {
           return;
         }
         for (var3 = this.field_p.field_a + (-this.field_g + this.field_c + this.field_j) + var2 * this.field_i; this.field_p.field_d + (10 + this.field_p.field_a) > var3; var3 = var3 + this.field_i) {
-          if (this.field_l.field_i > var2) {
+          if (this.field_l.levelCount > var2) {
             if (0 <= var2) {
               var4 = 3;
-              if (hh.field_b[this.field_l.field_h] < var2) {
+              if (hh.field_b[this.field_l.packId] < var2) {
                 if (this.field_q == var2) {
                   var4 = 0;
                 }
               } else {
                 var4 = (var2 != this.field_q) ? 2 : 1;
               }
-              nn.field_g.b(this.field_l.field_c[var2].field_o, (this.field_p.field_c * 2 + this.field_p.field_j) / 2, var3, var4, -1);
+              nn.field_g.b(this.field_l.metadata[var2].numberLabel, (this.field_p.field_c * 2 + this.field_p.field_j) / 2, var3, var4, -1);
             }
             var2++;
             continue;
@@ -238,7 +238,7 @@ final class uj {
           }
         }
         if (this.field_q >= 0 &&
-          this.field_l.field_i > this.field_q) {
+          this.field_l.levelCount > this.field_q) {
           return false;
         }
         this.field_q = -1;
@@ -248,7 +248,7 @@ final class uj {
 
     final void b(byte param0) {
         this.field_d = true;
-        this.field_q = -1 + this.field_l.field_i;
+        this.field_q = -1 + this.field_l.levelCount;
         this.field_g = this.field_k;
         if (param0 >= -39) {
           this.a(47, false);
@@ -277,8 +277,8 @@ final class uj {
             if (this.field_q < 0) {
               this.field_q = 0;
             }
-            if (!(this.field_l.field_i >= this.field_q)) {
-              this.field_q = this.field_l.field_i;
+            if (!(this.field_l.levelCount >= this.field_q)) {
+              this.field_q = this.field_l.levelCount;
             }
           }
           this.field_n = po.field_a;
@@ -421,7 +421,7 @@ final class uj {
         }
     }
 
-    uj(int param0, int param1, int param2, km param3, q param4, nc param5) {
+    uj(int param0, int param1, int param2, km param3, q param4, LevelPack param5) {
         this.field_q = -1;
         try {
           this.field_i = param0 + param1;
@@ -432,7 +432,7 @@ final class uj {
           this.field_j = nn.field_g.field_L + (nn.field_g.field_B - 5);
           this.field_c = param1;
           this.field_f = param0;
-          this.field_r = this.field_c + this.field_l.field_i * this.field_i;
+          this.field_r = this.field_c + this.field_l.levelCount * this.field_i;
           this.field_k = -this.field_p.field_d + this.field_r + 5;
           if (0 > this.field_k) {
             this.field_k = 0;

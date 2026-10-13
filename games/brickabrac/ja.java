@@ -137,7 +137,7 @@ final class ja {
         }
     }
 
-    final static int a(int param0, oi param1, int param2, boolean param3) {
+    final static int a(int param0, LevelSequence param1, int param2, boolean param3) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -147,7 +147,7 @@ final class ja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            stackIn_4_0 = ln.a(param1.field_b, param0, true, param2);
+            stackIn_4_0 = ln.a(param1.pack, param0, true, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = -123;
@@ -170,8 +170,8 @@ final class ja {
         if (param0 >= 105) {
           return (dj) ((Object) new cg());
         }
-        oi var2 = (oi) null;
-        ja.a(64, (oi) null, 69, false);
+        LevelSequence var2 = (LevelSequence) null;
+        ja.a(64, (LevelSequence) null, 69, false);
         return (dj) ((Object) new cg());
     }
 

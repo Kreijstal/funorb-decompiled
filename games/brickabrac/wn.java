@@ -59,9 +59,9 @@ final class wn {
           boolean decompiledFrameCompleted0 = true;
           var4 = GameScreen.field_f.field_Xb.field_bb;
           var5 = null;
-          if (wk.field_m == 2) {
+          if (LevelMetadata.field_m == 2) {
             rg.field_c.field_eb = true;
-            sj.field_d.field_Mb = rd.a(dq.field_c, new String[]{rk.field_Tb}, (byte) 103);
+            sj.field_d.field_Mb = rd.a(LevelDecoder.field_c, new String[]{rk.field_Tb}, (byte) 103);
             GameScreen.field_f.field_Qb.field_Qb.field_Mb = null;
             var6 = null;
             var7 = (mp) (var4.first(-76));
@@ -185,7 +185,7 @@ final class wn {
           } else {
             sj.field_d.field_Mb = kd.field_a;
             rg.field_c.field_eb = false;
-            if (wk.field_m == 1) {
+            if (LevelMetadata.field_m == 1) {
               GameScreen.field_f.field_Qb.field_Qb.field_Mb = cd.field_f;
               if (var19 != 0) {
                 GameScreen.field_f.field_Qb.field_Qb.field_Mb = cm.field_t;

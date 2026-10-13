@@ -317,7 +317,7 @@ abstract class km extends GameScreen {
               if (var8 == 37) {
                 if (!(!this.field_h.a((byte) 113))) {
                   be.field_a = true;
-                  cq.a(16727, param1, 0, new oi(na.field_L[0]));
+                  cq.a(16727, param1, 0, new LevelSequence(na.field_L[0]));
                 }
                 break regionExit1;
               }
@@ -460,7 +460,7 @@ abstract class km extends GameScreen {
                   if (null == ua.field_d) {
                     cp.a(param1, 21543);
                   } else {
-                    nc.b(82);
+                    LevelPack.b(82);
                   }
                 }
                 break regionExit1;
@@ -494,7 +494,7 @@ abstract class km extends GameScreen {
               if (var8 == 23) {
                 if (!(!this.field_h.a((byte) 113))) {
                   if (this.field_a != 10) {
-                    he.a(mq.field_a, true, (byte) 126);
+                    he.a(LevelPackLoader.field_a, true, (byte) 126);
                     sl.field_z = 2147483647;
                   } else {
                     var12 = (String) null;

@@ -758,12 +758,12 @@ final class sb implements vc {
         if (param2 > -58) {
           field_d = (String) null;
           if (this.c(-25437)) {
-            return oi.a(13, -1, 12, 15);
+            return LevelSequence.a(13, -1, 12, 15);
           }
           return false;
         }
         if (this.c(-25437)) {
-          return oi.a(13, -1, 12, 15);
+          return LevelSequence.a(13, -1, 12, 15);
         }
         return false;
     }
@@ -989,7 +989,7 @@ final class sb implements vc {
                 }
               }
               var5Lifetime5 = 400 - this.field_a * this.field_a;
-              var6 = var5Lifetime5 * (480 - nc.field_g) / 400 + nc.field_g;
+              var6 = var5Lifetime5 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               sn.b((byte) -118, var6);
               nh.a(0);
               if (o.field_e != null) {
@@ -1032,7 +1032,7 @@ final class sb implements vc {
         n.field_d = false;
         if (!this.d(76)) {
           var5Lifetime1 = 400 - this.field_a * this.field_a;
-          var6Lifetime1 = var5Lifetime1 * (480 - nc.field_g) / 400 + nc.field_g;
+          var6Lifetime1 = var5Lifetime1 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
           sn.b((byte) -118, var6Lifetime1);
           nh.a(0);
           if (o.field_e != null) {
@@ -1070,7 +1070,7 @@ final class sb implements vc {
         if (!n.field_d) {
           if (!n.field_d) {
             var5Lifetime3 = 400 - this.field_a * this.field_a;
-            var6Lifetime2 = var5Lifetime3 * (480 - nc.field_g) / 400 + nc.field_g;
+            var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             sn.b((byte) -118, var6Lifetime2);
             nh.a(0);
             if (o.field_e != null) {
@@ -1097,7 +1097,7 @@ final class sb implements vc {
             stackIn_103_1 = (var4Lifetime1 != 0) ? 0 : 1;
             if ((stackIn_102_0 ? 1 : 0) != stackIn_103_1) {
               var5Lifetime3 = 400 - this.field_a * this.field_a;
-              var6Lifetime2 = var5Lifetime3 * (480 - nc.field_g) / 400 + nc.field_g;
+              var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               sn.b((byte) -118, var6Lifetime2);
               nh.a(0);
               if (o.field_e != null) {
@@ -1122,7 +1122,7 @@ final class sb implements vc {
             } else {
               wp.a(8, ta.field_e[0]);
               var5Lifetime3 = 400 - this.field_a * this.field_a;
-              var6Lifetime2 = var5Lifetime3 * (480 - nc.field_g) / 400 + nc.field_g;
+              var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               sn.b((byte) -118, var6Lifetime2);
               nh.a(0);
               if (o.field_e != null) {
@@ -1163,7 +1163,7 @@ final class sb implements vc {
               stackIn_232_1 = (var4Lifetime1 != 0) ? 0 : 1;
               if ((stackIn_231_0 ? 1 : 0) != stackIn_232_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
-                var6Lifetime3 = var5Lifetime4 * (480 - nc.field_g) / 400 + nc.field_g;
+                var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
                 sn.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
@@ -1190,7 +1190,7 @@ final class sb implements vc {
               wp.a(8, ta.field_e[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
-            var6Lifetime3 = var5Lifetime4 * (480 - nc.field_g) / 400 + nc.field_g;
+            var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             sn.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
@@ -1223,7 +1223,7 @@ final class sb implements vc {
               stackIn_150_1 = (var4Lifetime1 != 0) ? 0 : 1;
               if ((stackIn_149_0 ? 1 : 0) != stackIn_150_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
-                var6Lifetime3 = var5Lifetime4 * (480 - nc.field_g) / 400 + nc.field_g;
+                var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
                 sn.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
@@ -1258,7 +1258,7 @@ final class sb implements vc {
               wp.a(8, ta.field_e[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
-            var6Lifetime3 = var5Lifetime4 * (480 - nc.field_g) / 400 + nc.field_g;
+            var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             sn.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
@@ -1288,7 +1288,7 @@ final class sb implements vc {
               stackIn_191_1 = (var4Lifetime1 != 0) ? 0 : 1;
               if ((stackIn_190_0 ? 1 : 0) != stackIn_191_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
-                var6Lifetime3 = var5Lifetime4 * (480 - nc.field_g) / 400 + nc.field_g;
+                var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
                 sn.b((byte) -118, var6Lifetime3);
                 nh.a(0);
                 if (o.field_e != null) {
@@ -1323,7 +1323,7 @@ final class sb implements vc {
               wp.a(8, ta.field_e[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
-            var6Lifetime3 = var5Lifetime4 * (480 - nc.field_g) / 400 + nc.field_g;
+            var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             sn.b((byte) -118, var6Lifetime3);
             nh.a(0);
             if (o.field_e != null) {
@@ -1383,20 +1383,20 @@ final class sb implements vc {
           return;
         }
         try {
-          na.field_L = new nc[2];
+          na.field_L = new LevelPack[2];
           var4 = 0;
           var8 = new PacketBuffer(param0.a(param2 ^ 118, "single", ""));
           var9 = var8;
-          na.field_L[0] = mq.a((byte) 76, param0, var9, var3_int, 0, 0, var4);
-          var4 = var4 + na.field_L[0].field_i;
+          na.field_L[0] = LevelPackLoader.loadLevelPack((byte) 76, param0, var9, var3_int, 0, 0, var4);
+          var4 = var4 + na.field_L[0].levelCount;
           var10 = new PacketBuffer(param0.a(121, "hotseat", ""));
-          qh.field_b = mq.a((byte) -115, param0, var10, var3_int, -1, -1, -1);
+          qh.field_b = LevelPackLoader.loadLevelPack((byte) -115, param0, var10, var3_int, -1, -1, -1);
           var11 = new PacketBuffer(param0.a(100, "multiplayer", ""));
-          tq.field_d = mq.a((byte) -97, param0, var11, var3_int, -1, -1, -1);
-          tq.field_d.a(qh.field_b, false);
+          tq.field_d = LevelPackLoader.loadLevelPack((byte) -97, param0, var11, var3_int, -1, -1, -1);
+          tq.field_d.appendLevelData(qh.field_b, false);
           var3_int = param1.a("", false);
           var7 = new PacketBuffer(param1.a(-88, "single", ""));
-          na.field_L[1] = mq.a((byte) 94, param1, var7, var3_int, 1, 1, var4);
+          na.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, param1, var7, var3_int, 1, 1, var4);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "sb.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

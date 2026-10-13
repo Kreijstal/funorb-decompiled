@@ -109,8 +109,8 @@ final class jm {
           if (!param1) {
             return;
           }
-          if (wk.field_m != 2 &&
-            wk.field_m != 1) {
+          if (LevelMetadata.field_m != 2 &&
+            LevelMetadata.field_m != 1) {
             f.field_c.field_eb = false;
             f.field_c.field_Qb.field_Qb.field_Mb = cm.field_t;
             jh.a(param1, f.field_c.field_Xb);

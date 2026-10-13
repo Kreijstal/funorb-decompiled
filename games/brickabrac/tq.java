@@ -6,7 +6,7 @@ final class tq {
     static PacketBuffer field_f;
     static String field_b;
     static String field_a;
-    static nc field_d;
+    static LevelPack field_d;
     static String field_h;
     static String field_g;
     static String field_e;

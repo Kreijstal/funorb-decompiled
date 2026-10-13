@@ -50,7 +50,7 @@ final class cq extends IntrusiveNode {
     }
 
     final static void a(boolean param0, byte param1) {
-        oi var3;
+        LevelSequence var3;
         if (param1 < -118) {
           if (null != ep.field_e) {
             pg.a(false, ep.field_e);
@@ -65,8 +65,8 @@ final class cq extends IntrusiveNode {
           eh.a(param0, true);
           return;
         }
-        var3 = (oi) null;
-        cq.a(103, true, 42, (oi) null);
+        var3 = (LevelSequence) null;
+        cq.a(103, true, 42, (LevelSequence) null);
         if (null != ep.field_e) {
           pg.a(false, ep.field_e);
         }
@@ -81,7 +81,7 @@ final class cq extends IntrusiveNode {
         return;
     }
 
-    final static void a(int param0, boolean param1, int param2, oi param3) {
+    final static void a(int param0, boolean param1, int param2, LevelSequence param3) {
         String[] array$0 = null;
         String[] var5 = null;
         String[] stackIn_2_0 = null;
@@ -119,7 +119,7 @@ final class cq extends IntrusiveNode {
             hd.a(true);
             BitPacketBuffer.field_q = jj.field_d;
           } else {
-            if (param3.field_b.field_h != 0) {
+            if (param3.pack.packId != 0) {
               hd.a(true);
               BitPacketBuffer.field_q = jj.field_d;
             } else {
@@ -132,7 +132,7 @@ final class cq extends IntrusiveNode {
           if (param0 != 16727) {
             field_t = 49;
           }
-          oa.field_Sb = rd.a(param3.field_b.field_c[param2].field_l, (byte) 19);
+          oa.field_Sb = rd.a(param3.pack.metadata[param2].attributeByte, (byte) 19);
           sk.a(var5, param2, param3, 1, param1, -12665);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

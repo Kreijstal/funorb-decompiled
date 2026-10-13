@@ -13,7 +13,7 @@ final class sk extends h {
         this.field_K = 256;
     }
 
-    final static void a(String[] args, int param1, oi param2, int param3, boolean param4, int param5) {
+    final static void a(String[] args, int param1, LevelSequence param2, int param3, boolean param4, int param5) {
         int var8 = 0;
         GameplayScreen stackIn_10_0 = null;
         boolean stackIn_10_1 = false;

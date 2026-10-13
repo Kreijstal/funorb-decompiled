@@ -26,12 +26,12 @@ final class PlayerBoard extends IntrusiveNode {
     NodeDeque field_C;
     ObjectHistoryBuffer powerUpHistory;
     int field_N;
-    kq field_ab;
+    IntNode levelState;
     int nextPowerUpIndex;
     int field_hb;
     NodeDeque[] brickGroups;
     NodeDeque field_v;
-    int field_qb;
+    int levelIndex;
     int field_u;
     private int randomCallCount;
     int field_m;
@@ -308,10 +308,10 @@ final class PlayerBoard extends IntrusiveNode {
             discarded$2 = param1.append("1. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$3 = param1.append("Score, Level, Lives: " + this.score + " " + this.field_qb + " " + this.field_rb + "\n");
+            discarded$3 = param1.append("Score, Level, Lives: " + this.score + " " + this.levelIndex + " " + this.field_rb + "\n");
           }
           var4 = var4 ^ 65535 + this.score * 29;
-          var4 = var4 ^ 15601376 + 67 * this.field_qb << 3;
+          var4 = var4 ^ 15601376 + 67 * this.levelIndex << 3;
           var4 = var4 ^ this.field_rb * 61 + 961453 << 10;
           if (var3_int != 0) {
             discarded$4 = param1.append("2. " + Integer.toString(var4, 16) + "\n");
@@ -527,7 +527,7 @@ final class PlayerBoard extends IntrusiveNode {
           this.simulationTick = param1.readInt(255);
           this.snapshotHistory.latestIndex = -1 + this.simulationTick / 5;
           this.score = param1.readUnsignedMedium((byte) -34);
-          this.field_qb = param1.readUnsignedByte(255);
+          this.levelIndex = param1.readUnsignedByte(255);
           this.field_rb = param1.readUnsignedByte(255);
           this.field_m = param1.readUnsignedShort(65280);
           this.field_Q = param1.readUnsignedShort(65280);
@@ -597,7 +597,7 @@ final class PlayerBoard extends IntrusiveNode {
           this.field_p = param1.readInt(255);
           this.field_G = this.field_p + this.boardOffset << 8;
           stackIn_30_0 = (1 == param2) ? 15 : 9;
-          kj.a(stackIn_30_0, this.brickGroups[2], 16);
+          kj.addBoardBorders(stackIn_30_0, this.brickGroups[2], 16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -701,7 +701,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.field_Z = 3;
         this.field_P = 0;
         if (param0 != 22) {
-          this.field_ab = (kq) null;
+          this.levelState = (IntNode) null;
         }
     }
 
@@ -919,7 +919,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.fallingPowerUps = new NodeDeque();
         this.field_C = new NodeDeque();
         this.powerUpHistory = new ObjectHistoryBuffer(500);
-        this.field_ab = new kq();
+        this.levelState = new IntNode();
         this.field_G = -1;
         this.field_o = new byte[29];
         this.field_B = new Random();

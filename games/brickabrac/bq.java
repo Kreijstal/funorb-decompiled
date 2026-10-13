@@ -97,7 +97,7 @@ final class bq {
             qh.field_i[var4 - 2] = g.field_q;
             BrickABrac.field_K[var4 - 2] = 0;
             ri.field_I[0] = 4;
-            qh.field_i[-1 + var4] = oi.field_a;
+            qh.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 1;
             ri.field_I[1] = 5;
           } else if (1 == ih.field_p) {
@@ -113,7 +113,7 @@ final class bq {
               qh.field_i[var5] = kg.field_h[var5];
             }
             qh.field_i[var4 - 2] = "";
-            qh.field_i[-1 + var4] = oi.field_a;
+            qh.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 0;
             ri.field_I[0] = 5;
           } else if (2 != ih.field_p) {
@@ -134,7 +134,7 @@ final class bq {
                 qh.field_i[var5] = kg.field_h[var5];
               }
               qh.field_i[var4 - 2] = "";
-              qh.field_i[var4 - 1] = oi.field_a;
+              qh.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
               ri.field_I[0] = 5;
             } else if (ih.field_p == 4) {
@@ -150,7 +150,7 @@ final class bq {
                 qh.field_i[var5] = kg.field_h[var5];
               }
               qh.field_i[var4 - 2] = "";
-              qh.field_i[var4 - 1] = oi.field_a;
+              qh.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
               ri.field_I[0] = 5;
             } else {
@@ -172,7 +172,7 @@ final class bq {
               qh.field_i[var4 - 2] = ja.field_b;
               BrickABrac.field_K[var4 - 2] = 0;
               ri.field_I[0] = 3;
-              qh.field_i[var4 - 1] = oi.field_a;
+              qh.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 1;
               ri.field_I[1] = 5;
             }

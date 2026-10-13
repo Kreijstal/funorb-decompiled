@@ -50,7 +50,7 @@ final class kk {
         }
     }
 
-    final static int[] a(boolean param0, int param1, IsaacGenerator param2) {
+    final static int[] createIndexOrder(boolean obfuscationGuard, int count, IsaacGenerator random) {
         int var4 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -64,27 +64,27 @@ final class kk {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var6 = new int[param1];
+          var6 = new int[count];
           var3 = var6;
-          for (var4 = 0; param1 > var4; var4++) {
+          for (var4 = 0; count > var4; var4++) {
             var6[var4] = var4;
           }
-          if (param2 == null) {
+          if (random == null) {
             stackIn_7_0 = var3;
             return stackIn_7_0;
           }
-          if (param0) {
+          if (obfuscationGuard) {
             field_e = (int[]) null;
           }
-          ke.a(var3, (byte) 39, param2);
+          ke.a(var3, (byte) 39, random);
           stackIn_11_0 = var3;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
-          stackIn_14_1 = new StringBuilder().append("kk.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = new StringBuilder().append("kk.C(").append(obfuscationGuard).append(',').append(count).append(',');
+          if (random == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

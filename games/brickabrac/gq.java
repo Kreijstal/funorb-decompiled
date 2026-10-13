@@ -321,7 +321,7 @@ final class gq extends mh {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           if (bd.field_b == null) {
-            bd.field_b = mq.a((byte) 107, 4);
+            bd.field_b = LevelPackLoader.a((byte) 107, 4);
           }
           if (!bd.field_b.field_i) {
             var1_int = -62 / ((param0 + 18) / 47);

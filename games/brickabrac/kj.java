@@ -270,7 +270,7 @@ final class kj extends hb {
         }
     }
 
-    final static void a(int param0, NodeDeque param1, int param2) {
+    final static void addBoardBorders(int columns, NodeDeque destination, int obfuscationGuard) {
         int var4 = 0;
         int var3_int = 0;
         int var7 = 0;
@@ -284,17 +284,17 @@ final class kj extends hb {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = -1;
-          if (param2 != 16) {
+          if (obfuscationGuard != 16) {
             field_D = (java.awt.Canvas) null;
           }
-          while (var3_int < param0 + 1) {
+          while (var3_int < columns + 1) {
             for (var4 = -1; 31 > var4; var4++) {
               if (var4 == -1 ||
                 var3_int == -1 ||
-                param0 == var3_int) {
+                columns == var3_int) {
                 var5 = var3_int * 34 << 8;
                 var6 = 16 * var4 << 8;
-                param1.addLast(new Brick(var5, var6, 0, 0, 1, 1, 0, 0), (byte) 3);
+                destination.addLast(new Brick(var5, var6, 0, 0, 1, 1, 0, 0), (byte) 3);
               }
             }
             var3_int++;
@@ -304,13 +304,13 @@ final class kj extends hb {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_17_0 = var3;
-          stackIn_17_1 = new StringBuilder().append("kj.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("kj.A(").append(columns).append(',');
+          if (destination == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

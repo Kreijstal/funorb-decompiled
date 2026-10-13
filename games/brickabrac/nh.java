@@ -382,7 +382,7 @@ final class nh {
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = rd.a(mq.field_h, new String[]{Integer.toString(uf.field_c)}, (byte) 103);
+                  var10_ref_String = rd.a(LevelPackLoader.field_h, new String[]{Integer.toString(uf.field_c)}, (byte) 103);
                 }
                 pf.field_h.field_Mb = pf.field_h.field_Mb + "<br>" + var10_ref_String;
                 if ((an.field_h & 16) == 0 &&

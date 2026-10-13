@@ -28,7 +28,7 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
             stackIn_3_0 = om.field_Xb;
             return stackIn_3_0;
           }
-          if (wk.field_m != 2) {
+          if (LevelMetadata.field_m != 2) {
             stackIn_6_0 = hj.field_Ub;
             return stackIn_6_0;
           }

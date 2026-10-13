@@ -60,11 +60,11 @@ final class gd {
         byte[] var3Lifetime4;
         if (100 != param0) {
           if (param0 == 5000 &&
-            dq.field_b > 0) {
-            fieldTemp$2 = dq.field_b - 1;
-            dq.field_b = dq.field_b - 1;
+            LevelDecoder.field_b > 0) {
+            fieldTemp$2 = LevelDecoder.field_b - 1;
+            LevelDecoder.field_b = LevelDecoder.field_b - 1;
             var2_ref_byte__ = da.field_L[fieldTemp$2];
-            da.field_L[dq.field_b] = null;
+            da.field_L[LevelDecoder.field_b] = null;
             return var2_ref_byte__;
           }
           if (param0 != 30000) {
@@ -146,11 +146,11 @@ final class gd {
           }
           return new byte[param0];
         }
-        if (dq.field_b > 0) {
-          fieldTemp$13 = dq.field_b - 1;
-          dq.field_b = dq.field_b - 1;
+        if (LevelDecoder.field_b > 0) {
+          fieldTemp$13 = LevelDecoder.field_b - 1;
+          LevelDecoder.field_b = LevelDecoder.field_b - 1;
           var2_ref_byte__Lifetime3 = da.field_L[fieldTemp$13];
-          da.field_L[dq.field_b] = null;
+          da.field_L[LevelDecoder.field_b] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (param0 != 30000) {

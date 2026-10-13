@@ -169,14 +169,14 @@ final class hc {
         try {
           var20 = PacketBuffer.a("lobby", param3, "crowns", -946715356);
           var5 = var20;
-          mq.field_g = var20.length;
+          LevelPackLoader.field_g = var20.length;
           if (param1 != null) {
-            var6 = new tp[mq.field_g + param1.length];
-            for (var7_int = 0; mq.field_g > var7_int; var7_int++) {
+            var6 = new tp[LevelPackLoader.field_g + param1.length];
+            for (var7_int = 0; LevelPackLoader.field_g > var7_int; var7_int++) {
               var6[var7_int] = var20[var7_int];
             }
             for (var7_intLifetime3 = 0; param1.length > var7_intLifetime3; var7_intLifetime3++) {
-              var6[mq.field_g + var7_intLifetime3] = param1[var7_intLifetime3];
+              var6[LevelPackLoader.field_g + var7_intLifetime3] = param1[var7_intLifetime3];
             }
             var5 = var6;
           }
@@ -186,17 +186,17 @@ final class hc {
           var24 = var19;
           var22 = var24;
           var6_array = var22;
-          for (var7_intLifetime1 = 0; mq.field_g > var7_intLifetime1; var7_intLifetime1++) {
+          for (var7_intLifetime1 = 0; LevelPackLoader.field_g > var7_intLifetime1; var7_intLifetime1++) {
             var23[var7_intLifetime1] = 10;
           }
           if (param1 != null) {
             if (param2 != null) {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param1.length; var7_intLifetime2++) {
-                var6_array[mq.field_g + var7_intLifetime2] = param2[var7_intLifetime2];
+                var6_array[LevelPackLoader.field_g + var7_intLifetime2] = param2[var7_intLifetime2];
               }
             } else {
               for (var7_intLifetime2 = 0; var7_intLifetime2 < param1.length; var7_intLifetime2++) {
-                var6_array[mq.field_g + var7_intLifetime2] = param1[var7_intLifetime2].field_h;
+                var6_array[LevelPackLoader.field_g + var7_intLifetime2] = param1[var7_intLifetime2].field_h;
               }
             }
           }

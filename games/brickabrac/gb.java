@@ -113,8 +113,8 @@ final class gb {
           if (this.field_k == oc.field_p) {
             return 1;
           }
-          if (wk.field_m == 2 &&
-            nc.a(0, this.field_m)) {
+          if (LevelMetadata.field_m == 2 &&
+            LevelPack.a(0, this.field_m)) {
             return 1;
           }
           return 0;

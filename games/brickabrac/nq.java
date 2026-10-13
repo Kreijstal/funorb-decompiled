@@ -44,10 +44,10 @@ final class nq extends IntrusiveNode {
           var17 = new jp(param1.a(122, "button.gif", ""), (java.awt.Component) ((Object) kj.field_D));
           uo.a((byte) 29, param3, "dropdown", "commonui");
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
-          mq.field_b = new tp[4];
+          LevelPackLoader.field_b = new tp[4];
           cd.field_b = new tp[4];
           ng.field_d = new tp[4];
-          var6 = new tp[][]{mq.field_b, ng.field_d, cd.field_b};
+          var6 = new tp[][]{LevelPackLoader.field_b, ng.field_d, cd.field_b};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

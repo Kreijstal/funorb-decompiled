@@ -94,10 +94,10 @@ final class po {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (-(param0.length() * 6) + 304) / 2, 22 + var8);
             }
-            if (oi.field_g != null) {
+            if (LevelSequence.field_g != null) {
               var9.setFont(eo.field_g);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(oi.field_g, to.field_b / 2 - 6 * oi.field_g.length() / 2, -26 + be.field_g / 2);
+              var9.drawString(LevelSequence.field_g, to.field_b / 2 - 6 * LevelSequence.field_g.length() / 2, -26 + be.field_g / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -163,12 +163,12 @@ final class po {
             da.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].field_H;
           }
           stackIn_13_0 = !(ci.field_r);
-          wk.field_p = stackIn_13_0;
+          LevelMetadata.field_p = stackIn_13_0;
           if (!eg.field_k) {
             for (var2Lifetime3 = 0; BitPacketBuffer.field_o.length > var2Lifetime3; var2Lifetime3++) {
-              stackIn_18_0 = wk.field_p;
+              stackIn_18_0 = LevelMetadata.field_p;
               stackIn_19_1 = (~pe.field_o.field_k == ~var5.field_m[var2Lifetime3]);
-              wk.field_p = stackIn_18_0 | stackIn_19_1;
+              LevelMetadata.field_p = stackIn_18_0 | stackIn_19_1;
             }
           }
           if (ci.field_r) {

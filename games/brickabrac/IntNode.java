@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kq extends IntrusiveNode {
-    int field_p;
+final class IntNode extends IntrusiveNode {
+    int value;
     static th field_i;
     static String field_n;
     static String field_k;
@@ -22,7 +22,7 @@ final class kq extends IntrusiveNode {
         field_i = null;
     }
 
-    public kq() {
+    public IntNode() {
     }
 
     final static void a(int param0, tg param1, Object param2) {
@@ -179,7 +179,7 @@ final class kq extends IntrusiveNode {
           }
           if (param1 != -119) {
             var7 = (Object) null;
-            kq.a(-14, (tg) null, (Object) null);
+            IntNode.a(-14, (tg) null, (Object) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -196,8 +196,8 @@ final class kq extends IntrusiveNode {
         }
     }
 
-    kq(int param0) {
-        this.field_p = param0;
+    IntNode(int value) {
+        this.value = value;
     }
 
     static {

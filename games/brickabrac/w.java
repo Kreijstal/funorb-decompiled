@@ -300,7 +300,7 @@ final class w {
             ch.field_c = nq.a((byte) -37, "arialish12", jg.field_d, fe.field_jb, "");
             co.field_j = si.a((byte) -107, "pump32", "", jg.field_d, fe.field_jb);
             rp.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, jg.field_d);
-            nc.field_e = um.a("members_expansion_screen", "button_text", 1593955777, jg.field_d);
+            LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, jg.field_d);
             sf.field_V = bd.a("members_expansion_screen", "button_highlights", jg.field_d, (byte) -8);
             fe.field_jb = null;
             jg.field_d = null;
@@ -345,7 +345,7 @@ final class w {
           ch.field_c.a(ab.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(ab.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(ab.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          nc.field_e.c((-nc.field_e.field_x + 127) / 2 + 508, 315);
+          LevelPack.field_e.c((-LevelPack.field_e.field_x + 127) / 2 + 508, 315);
           if (0 == this.field_g.field_j) {
             sf.field_V[0].c(508, 299);
           } else {

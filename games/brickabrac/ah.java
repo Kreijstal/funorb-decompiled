@@ -12,7 +12,7 @@ final class ah extends km {
     private int field_t;
 
     final void a(boolean param0, int param1, int param2) {
-        oi var4;
+        LevelSequence var4;
         if (param2 < 96) {
           return;
         }
@@ -22,7 +22,7 @@ final class ah extends km {
         if (pe.field_o != null &&
           !pe.field_o.field_p) {
           var4 = pe.field_o.match.configuration;
-          if (var4.field_b.field_h == 1) {
+          if (var4.pack.packId == 1) {
             this.field_s = 1;
           }
         }
@@ -547,7 +547,7 @@ final class ah extends km {
     }
 
     ah() {
-        super(5, 38, 460, 402, 35, nc.field_a);
+        super(5, 38, 460, 402, 35, LevelPack.field_a);
         this.field_s = 0;
         this.field_t = 0;
         fk.field_g = ob.field_D.c("10. ") + 10;

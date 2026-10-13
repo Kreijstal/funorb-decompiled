@@ -13,7 +13,7 @@ final class MultiplayerMatch {
     int field_h;
     String[] playerNames;
     int playerMaskThree;
-    oi configuration;
+    LevelSequence configuration;
     int playerMaskTwo;
     int field_j;
 
@@ -541,10 +541,10 @@ final class MultiplayerMatch {
                   if (1 == this.playerCount) {
                     param0.addScore(250, false, 65280, var7.y256 - 12800);
                   }
-                  fieldTemp$5 = param0.field_qb + 1;
-                  param0.field_qb = param0.field_qb + 1;
-                  if (fieldTemp$5 >= this.configuration.a(param3 - 125) &&
-                    !this.configuration.field_c) {
+                  fieldTemp$5 = param0.levelIndex + 1;
+                  param0.levelIndex = param0.levelIndex + 1;
+                  if (fieldTemp$5 >= this.configuration.getPeriod(param3 - 125) &&
+                    !this.configuration.repeats) {
                     if (this.playerCount != 1) {
                       param0.field_Z = 7;
                     } else {
@@ -726,13 +726,13 @@ final class MultiplayerMatch {
                 var8_ref_vl__[var9_int] = new NodeDeque();
               }
               var18 = new NodeDeque();
-              var10 = param0.field_ab.field_p;
-              this.configuration.a(new ga(), param0.field_ab, var18, param0.field_qb, (byte) -118, var8_ref_vl__);
+              var10 = param0.levelState.value;
+              this.configuration.decodeLevel(new ga(), param0.levelState, var18, param0.levelIndex, (byte) -118, var8_ref_vl__);
               param0.a(var18, param3 + 9, var8_ref_vl__);
               param0.a(26496, false);
               if (this.playerCount == 1 &&
-                0 < param0.field_r && (param0.field_ab.field_p == 0 ||
-                var10 != param0.field_ab.field_p)) {
+                0 < param0.field_r && (param0.levelState.value == 0 ||
+                var10 != param0.levelState.value)) {
                 param0.field_tb = true;
               }
               if (param0.field_r != 0) {
@@ -755,7 +755,7 @@ final class MultiplayerMatch {
               if (param0.field_P == 0) {
                 if (this.playerCount == 1) {
                   param0.field_lb = null;
-                  param0.field_fb = this.configuration.a((byte) 115, param0.field_qb);
+                  param0.field_fb = this.configuration.getLevelNumberLabel((byte) 115, param0.levelIndex);
                   param0.field_i = 100;
                 }
                 if (param1 != null) {
@@ -990,8 +990,8 @@ final class MultiplayerMatch {
             if (param0.activeBalls.isEmpty(false) &&
               param0.queuedBalls.isEmpty(false)) {
               if (1 == this.playerCount && (!r.field_A ||
-                0 != this.configuration.field_b.field_h ||
-                !(0 >= param0.field_qb))) {
+                0 != this.configuration.pack.packId ||
+                !(0 >= param0.levelIndex))) {
                 param0.field_rb = param0.field_rb - 1;
               }
               if (param0.field_rb <= 0) {
@@ -1172,7 +1172,7 @@ final class MultiplayerMatch {
         return this.field_c;
     }
 
-    MultiplayerMatch(String[] param0, int param1, oi param2, int[] param3, int[] param4) {
+    MultiplayerMatch(String[] param0, int param1, LevelSequence param2, int[] param3, int[] param4) {
         int var8 = 0;
         int stackIn_4_0 = 0;
         Paddle stackIn_8_0 = null;
