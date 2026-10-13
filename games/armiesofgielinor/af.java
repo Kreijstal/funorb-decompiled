@@ -177,14 +177,14 @@ abstract class af {
 
     abstract h a(byte param0);
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void openLoginProgress(boolean closeFlowB, String message, int obfuscationGuard) {
         try {
-          se.field_f = param0;
+          se.field_f = closeFlowB;
           ac.field_n = true;
-          qc.field_a = new ProgressMessageDialog(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, param1, fh.field_i, se.field_f);
-          KingBlackDragonEvent.field_C.showDialog(qc.field_a, param2 ^ param2);
+          qc.loginProgressDialog = new ProgressMessageDialog(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, message, fh.field_i, se.field_f);
+          KingBlackDragonEvent.field_C.showDialog(qc.loginProgressDialog, obfuscationGuard ^ obfuscationGuard);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + closeFlowB + ',' + (message != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

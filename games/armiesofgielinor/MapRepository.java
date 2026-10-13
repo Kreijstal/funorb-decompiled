@@ -64,7 +64,7 @@ final class MapRepository {
               archiveGroup != 1) {
               return;
             }
-            if (df.field_M <= 0 &&
+            if (LoginForm.field_M <= 0 &&
               archiveGroup == 1 &&
               !this.bypassMembershipChecks) {
               return;
@@ -87,14 +87,14 @@ final class MapRepository {
         }
     }
 
-    final static void b(byte param0) {
-        if (param0 <= 114) {
+    final static void showEmptyLogin(byte obfuscationGuard) {
+        if (obfuscationGuard <= 114) {
           return;
         }
         try {
-          vi.a("", 640, (String) null);
+          vi.showLoginWithDescription("", 640, (String) null);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.D(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ou.D(" + obfuscationGuard + ')');
         }
     }
 
@@ -215,7 +215,7 @@ final class MapRepository {
                 AttackEvent.mapNamesByThemeAndSize[mapTheme].length == this.mapsByThemeAndSize[mapTheme].length) {
                 if (mapTheme == 1 &&
                   !this.bypassMembershipChecks &&
-                  df.field_M < 0) {
+                  LoginForm.field_M < 0) {
                   stackIn_42_0 = null;
                   return (MapLayout) (stackIn_42_0);
                 }
@@ -569,7 +569,7 @@ final class MapRepository {
               }
               if (archiveGroup == 1 &&
                 !this.bypassMembershipChecks &&
-                0 >= df.field_M) {
+                0 >= LoginForm.field_M) {
                 stackIn_30_0 = null;
                 return (ResourceArchive) (stackIn_30_0);
               }
@@ -632,7 +632,7 @@ final class MapRepository {
             archiveGroup != 1) {
             return;
           }
-          if (0 >= df.field_M &&
+          if (0 >= LoginForm.field_M &&
             archiveGroup == 1 &&
             !this.bypassMembershipChecks) {
             return;

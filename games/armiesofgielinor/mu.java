@@ -59,7 +59,7 @@ final class mu {
           param2.discardPackedGroups = false;
           param2.fileRetentionMode = 0;
           SocialListPanel.quickChatCategories = new QuickChatCategoryRepository(var3_int, param2, param2);
-          ce.quickChatPhrases = new QuickChatPhraseRepository(var3_int, param2, param2, new cu());
+          GuestPlayConfirmationForm.quickChatPhrases = new QuickChatPhraseRepository(var3_int, param2, param2, new cu());
           var4 = ps.findQuickChatRootCategory((byte) -83);
           if (var4 == null) {
             var11 = (Throwable) null;

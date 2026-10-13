@@ -10,24 +10,24 @@ final class ek {
     static ClientUiComponent field_a;
 
     final static void a(byte param0) {
-        if (qc.field_a != null) {
-          qc.field_a.closeDialog(true);
+        if (qc.loginProgressDialog != null) {
+          qc.loginProgressDialog.closeDialog(true);
           DequeWidgetContainer.field_C = new AccountNameSelectionForm();
           if (param0 > -22) {
             ek.a(-112);
-            lt.field_g.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+            lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
             return;
           }
-          lt.field_g.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+          lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
         DequeWidgetContainer.field_C = new AccountNameSelectionForm();
         if (param0 <= -22) {
-          lt.field_g.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+          lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
           return;
         }
         ek.a(-112);
-        lt.field_g.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
+        lt.loginDialog.replaceContent(DequeWidgetContainer.field_C, (byte) -88);
     }
 
     final static int[] a(int param0, int param1, int param2) {

@@ -548,6 +548,6 @@ final class MoveEvent extends GameEvent {
         EquipmentBattleTutorial.configureTutorialStage(30, 16, 532, 633, 390, 420, new int[]{39}, -36);
         EquipmentBattleTutorial.configureTutorialStage(30, 17, 180, 460, 100, 400, new int[]{2, 17, 18, 36, 37, 38, 43}, -63);
         EquipmentBattleTutorial.configureTutorialStage(30, 18, 60, 580, 440, 470, new int[]{41, 24, 44, 7}, -87);
-        df.a(-20);
+        LoginForm.a(-20);
     }
 }

@@ -120,7 +120,7 @@ final class CommunityTabGroup {
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);
           try {
-            phrase = ce.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
+            phrase = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
             BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
             if (gp.decodedChatAccountName.equals(mv.localAccountName)) {
               responsePhraseIds = null;
@@ -140,54 +140,54 @@ final class CommunityTabGroup {
         return new ChatMessage(quickChat);
     }
 
-    final static pf a(int param0, java.applet.Applet param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        pf[] var3 = null;
-        int var4 = 0;
-        pf var5 = null;
-        int var6 = 0;
-        pf stackIn_3_0 = null;
-        pf stackIn_8_0 = null;
-        pf stackIn_11_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static LoginMethod readLastLoginMethod(int obfuscationGuard, java.applet.Applet applet) {
+        String cookieValue = null;
+        RuntimeException failure = null;
+        LoginMethod[] methods = null;
+        int methodIndex = 0;
+        LoginMethod method = null;
+        int obfuscationControl = 0;
+        LoginMethod defaultWithoutCookie = null;
+        LoginMethod matchingMethod = null;
+        LoginMethod defaultUnrecognized = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String appletDescription = null;
+        RuntimeException caughtFailure = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2 = fk.a((byte) 102, param1, "jagex-last-login-method");
-          if (var2 == null) {
-            stackIn_3_0 = MatchConditionEntry.field_l;
-            return stackIn_3_0;
+          cookieValue = fk.readBrowserCookie((byte) 102, applet, "jagex-last-login-method");
+          if (cookieValue == null) {
+            defaultWithoutCookie = MatchConditionEntry.defaultLoginMethod;
+            return defaultWithoutCookie;
           }
-          var3 = TileMetadata.c(0);
-          var4 = param0;
+          methods = TileMetadata.getLoginMethods(0);
+          methodIndex = obfuscationGuard;
           while (true) {
-            if (var4 >= var3.length) {
-              stackIn_11_0 = MatchConditionEntry.field_l;
-              return stackIn_11_0;
+            if (methodIndex >= methods.length) {
+              defaultUnrecognized = MatchConditionEntry.defaultLoginMethod;
+              return defaultUnrecognized;
             }
-            var5 = var3[var4];
-            if (!var5.a((byte) -106, var2)) {
-              var4++;
+            method = methods[methodIndex];
+            if (!method.matchesCookieValue((byte) -106, cookieValue)) {
+              methodIndex++;
               continue;
             }
             break;
           }
-          stackIn_8_0 = var5;
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_14_0 = var2_ref;
-          stackIn_14_1 = new StringBuilder().append("ea.E(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_15_2 = "null";
+          matchingMethod = method;
+          return matchingMethod;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ea.E(").append(obfuscationGuard).append(',');
+          if (applet == null) {
+            appletDescription = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            appletDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(appletDescription).append(')').toString());
         }
     }
 
@@ -286,7 +286,7 @@ final class CommunityTabGroup {
         } else {
           phraseIdOrGuardRemainder = packet.readUnsignedShort((byte) -104);
           try {
-            phrase = ce.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
+            phrase = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(phraseIdOrGuardRemainder, -124);
             BattleGraphicsAssets.decodedChatText = phrase.getPreviewText((byte) 97);
             if (gp.decodedChatAccountName.equals(mv.localAccountName)) {
               responsePhraseIds = null;

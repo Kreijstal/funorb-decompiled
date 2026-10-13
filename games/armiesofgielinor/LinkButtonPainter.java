@@ -114,7 +114,7 @@ final class LinkButtonPainter implements WidgetPainter {
 
     final static void a(boolean param0, boolean param1, int param2) {
         String var4 = (String) null;
-        rn.a(3, (String) null, param0, param1);
+        rn.openLoginDialog(3, (String) null, param0, param1);
         if (param2 <= 4) {
           LinkButtonPainter.a(46, (byte) -104);
         }

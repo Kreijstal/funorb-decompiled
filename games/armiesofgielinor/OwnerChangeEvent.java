@@ -293,7 +293,7 @@ final class OwnerChangeEvent extends GameEvent {
           QuickChatCommandDefinition.field_e = param0;
           LobbyPlayer.field_Ib = -1;
           if (BoundedFile.field_b &&
-            ce.field_J == ev.field_a) {
+            GuestPlayConfirmationForm.field_J == ev.field_a) {
             BoundedFile.field_b = false;
             ev.field_a = 0;
             return;

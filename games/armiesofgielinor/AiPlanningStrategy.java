@@ -453,7 +453,7 @@ abstract class AiPlanningStrategy {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (0 >= df.field_M) {
+          if (0 >= LoginForm.field_M) {
             if (DamageEvent.g(80)) {
               var2_int = 0;
               decompiledFrameRemainder0 = (var3 != 0);

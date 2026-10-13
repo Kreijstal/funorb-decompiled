@@ -160,21 +160,21 @@ final class AttackEvent extends GameEvent {
         if (!fh.field_i) {
           throw new IllegalStateException();
         }
-        if (null != qc.field_a) {
-          qc.field_a.closeDialog(true);
+        if (null != qc.loginProgressDialog) {
+          qc.loginProgressDialog.closeDialog(true);
         }
         String var1 = BattleGraphicsAssets.a(-123);
-        ContextActionMenu.field_Qb = new df(var1, (String) null, true, false, false);
+        ContextActionMenu.loginForm = new LoginForm(var1, (String) null, true, false, false);
         if (param0 >= 75) {
-          KingBlackDragonEvent.field_C.showDialog(lt.field_g, 0);
-          lt.field_g.replaceContent(ContextActionMenu.field_Qb, (byte) 55);
-          lt.field_g.finishResize(105);
+          KingBlackDragonEvent.field_C.showDialog(lt.loginDialog, 0);
+          lt.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) 55);
+          lt.loginDialog.finishResize(105);
           return;
         }
         AttackEvent.a(true);
-        KingBlackDragonEvent.field_C.showDialog(lt.field_g, 0);
-        lt.field_g.replaceContent(ContextActionMenu.field_Qb, (byte) 55);
-        lt.field_g.finishResize(105);
+        KingBlackDragonEvent.field_C.showDialog(lt.loginDialog, 0);
+        lt.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) 55);
+        lt.loginDialog.finishResize(105);
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {

@@ -432,7 +432,7 @@ final class ep {
         if (param1 != 4592) {
           this.field_m = -45;
         }
-        return (so.field_b.field_a - ce.field_Q >> 1) + param0;
+        return (so.field_b.field_a - GuestPlayConfirmationForm.field_Q >> 1) + param0;
     }
 
     public static void a(byte param0) {
@@ -471,7 +471,7 @@ final class ep {
         if (param1 != 16) {
           discarded$0 = this.b(-62, 105);
         }
-        return (double)(-ce.field_Q + so.field_b.field_a >> 1) + param0;
+        return (double)(-GuestPlayConfirmationForm.field_Q + so.field_b.field_a >> 1) + param0;
     }
 
     static {

@@ -676,10 +676,10 @@ class ClientUiComponent extends ClientUiNode {
           }
           LabeledWidgetContainer.field_R.setBounds(-134 + (SoftwareRaster.height - 10), -20500, 360, 10, SoftwareRaster.width - 360 >> 1);
           bk.field_f.setBounds(24, -20500, LabeledWidgetContainer.field_R.width, 0, 0);
-          df.field_K.setBounds(-24 + LabeledWidgetContainer.field_R.height, -20500, LabeledWidgetContainer.field_R.width, 24, 0);
-          df.field_K.skinSprites = tq.a(11579568, false, df.field_K.height, 1, 3, 8421504);
-          IconTextComponent.field_Kb.setBounds(df.field_K.height - 36, -20500, df.field_K.width - 10, 5, 5);
-          ConsolePanel.field_m.setBounds(24, -20500, 80, -24 + df.field_K.height - 5, (df.field_K.width - 80) / 2);
+          LoginForm.field_K.setBounds(-24 + LabeledWidgetContainer.field_R.height, -20500, LabeledWidgetContainer.field_R.width, 24, 0);
+          LoginForm.field_K.skinSprites = tq.a(11579568, false, LoginForm.field_K.height, 1, 3, 8421504);
+          IconTextComponent.field_Kb.setBounds(LoginForm.field_K.height - 36, -20500, LoginForm.field_K.width - 10, 5, 5);
+          ConsolePanel.field_m.setBounds(24, -20500, 80, -24 + LoginForm.field_K.height - 5, (LoginForm.field_K.width - 80) / 2);
           mj.a((byte) 120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

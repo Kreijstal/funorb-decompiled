@@ -118,11 +118,11 @@ final class TileMetadata implements TaggedFieldReader {
         return -CampaignMenuButton.lastPacketReadMillis + vi.monotonicMillis(-53);
     }
 
-    final static pf[] c(int param0) {
-        if (param0 != 0) {
-          TileMetadata.c(-90);
+    final static LoginMethod[] getLoginMethods(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
+          TileMetadata.getLoginMethods(-90);
         }
-        return new pf[]{CombatSandbox.field_j, ps.field_y, MatchConditionEntry.field_l};
+        return new LoginMethod[]{CombatSandbox.emailLoginMethod, ps.usernameLoginMethod, MatchConditionEntry.defaultLoginMethod};
     }
 
     final static void a(int param0, boolean param1) {

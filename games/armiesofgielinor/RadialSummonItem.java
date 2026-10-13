@@ -27,7 +27,7 @@ final class RadialSummonItem {
         if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return qk.field_b;
         }
-        return ah.field_d;
+        return ah.loginPassword;
     }
 
     public static void b(int param0) {

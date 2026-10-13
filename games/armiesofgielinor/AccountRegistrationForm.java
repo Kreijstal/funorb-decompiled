@@ -400,7 +400,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
             this.emailInput = (ValidatedTextWidget) null;
           }
           if (this.backButton == widget) {
-            PrintCoatConsoleCommand.g(111);
+            PrintCoatConsoleCommand.showGuestPlayConfirmation(111);
           } else {
             if (widget == this.submitButton) {
               discarded$1 = this.submitRegistration(-1);

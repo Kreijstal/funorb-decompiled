@@ -4,13 +4,13 @@
 final class ah {
     static String field_c;
     static int field_b;
-    static String field_d;
+    static String loginPassword;
     static CoatOfArms localCoat;
 
     public static void a(byte param0) {
         field_c = null;
         localCoat = null;
-        field_d = null;
+        loginPassword = null;
         if (param0 == 32) {
           return;
         }

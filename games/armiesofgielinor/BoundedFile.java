@@ -259,7 +259,7 @@ final class BoundedFile {
     static {
         field_i = "Allies";
         field_b = false;
-        field_e = ce.a(-104);
+        field_e = GuestPlayConfirmationForm.a(-104);
         lastPointerPressY = 0;
     }
 }

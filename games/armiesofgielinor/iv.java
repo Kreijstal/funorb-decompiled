@@ -74,7 +74,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               -AttackEvent.field_P + vi.monotonicMillis(62) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (ce.field_N > var2.width) {
+                if (GuestPlayConfirmationForm.field_N > var2.width) {
                   return;
                 }
                 if (MatchSetupPanel.field_D > var2.height) {
@@ -210,7 +210,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               }
               mh.field_c = 0;
               bn.field_b = param0;
-              ce.field_N = param0;
+              GuestPlayConfirmationForm.field_N = param0;
               DualNodeIterator.field_b = 0;
               SummonRequest.field_B = param4;
               dt.field_a = param6;

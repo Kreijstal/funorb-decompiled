@@ -137,14 +137,14 @@ final class CampaignProgress {
         }
     }
 
-    final static void a(String param0, int param1, String param2) {
+    final static void beginCredentialLogin(String password, int obfuscationGuard, String accountIdentifier) {
         try {
-          if (param1 != 0) {
+          if (obfuscationGuard != 0) {
             CampaignProgress.b(false);
           }
-          wb.a(false, (byte) 32, param2, param0);
+          wb.stageLoginCredentials(false, (byte) 32, accountIdentifier, password);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cm.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cm.D(" + (password != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (accountIdentifier != null ? "{...}" : "null") + ')');
         }
     }
 

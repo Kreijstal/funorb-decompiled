@@ -90,7 +90,7 @@ final class br {
 
     final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         try {
-          pf.field_d = param1;
+          LoginMethod.field_d = param1;
           TaggedMapData.field_b = param0;
           AiInfluenceMap.field_h = param3;
           ContentTransitionDialog.c(SoftwareRaster.width / 2, SoftwareRaster.height / 2, 75);

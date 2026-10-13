@@ -97,7 +97,7 @@ final class MoveAttackAction extends PreparedAction {
             stackIn_26_1 = !(DirectByteStorage.field_k[var8Lifetime1] < 0);
             var9Lifetime1 = lp.a(stackIn_25_0, stackIn_26_1, false);
             if (DirectByteStorage.field_k[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + df.field_E * 2;
+              var9Lifetime1 = var9Lifetime1 + LoginForm.field_E * 2;
             }
             if (var9Lifetime1 > var7Lifetime1) {
               var7Lifetime1 = var9Lifetime1;

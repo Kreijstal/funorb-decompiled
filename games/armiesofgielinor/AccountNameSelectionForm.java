@@ -57,7 +57,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
             this.cancelButton = (InteractiveWidget) null;
           }
           if (widget == this.cancelButton) {
-            MapRepository.b((byte) 115);
+            MapRepository.showEmptyLogin((byte) 115);
             return;
           }
           if (widget != this.submitButton) {
@@ -457,7 +457,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
           }
           var2_int = param0.readInt(1);
           param0.beginBitReading(117);
-          var3 = pf.a(var2_int, (byte) 6, param0);
+          var3 = LoginMethod.a(var2_int, (byte) 6, param0);
           param0.endBitReading(-2);
           stackIn_4_0 = var3;
           return stackIn_4_0;

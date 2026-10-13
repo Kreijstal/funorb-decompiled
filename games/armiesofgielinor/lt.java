@@ -3,47 +3,47 @@
  */
 final class lt extends ev {
     static String field_f;
-    static StandardContentDialog field_g;
+    static StandardContentDialog loginDialog;
     static RgbSprite[] field_h;
     static RgbSprite[] field_i;
 
-    final static String a(int param0, long param1) {
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        StringBuilder discarded$0 = null;
-        int var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param1 <= 0L) {
+    final static String decodeBase37DisplayName(int obfuscationGuard, long encodedName) {
+        int digitCount = 0;
+        long remainingDigits = 0L;
+        StringBuilder reversedName = null;
+        long previousValue = 0L;
+        int characterCode = 0;
+        int nextCharacterIndex = 0;
+        StringBuilder appendedName = null;
+        int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        if (encodedName <= 0L) {
           return null;
         }
-        if (param1 >= 6582952005840035281L) {
+        if (encodedName >= 6582952005840035281L) {
           return null;
         }
-        if (param1 % 37L != 0L) {
-          var3 = 0;
-          var4 = param1;
-          while (var4 != 0L) {
-            var4 = var4 / 37L;
-            var3++;
+        if (encodedName % 37L != 0L) {
+          digitCount = 0;
+          remainingDigits = encodedName;
+          while (remainingDigits != 0L) {
+            remainingDigits = remainingDigits / 37L;
+            digitCount++;
           }
-          var6 = new StringBuilder(var3);
-          while (param1 != 0L) {
-            var7 = param1;
-            param1 = param1 / 37L;
-            var9 = hq.field_b[(int)(var7 - 37L * param1)];
-            if (var9 == 95) {
-              var10 = var6.length() - 1;
-              var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
-              var9 = 160;
+          reversedName = new StringBuilder(digitCount);
+          while (encodedName != 0L) {
+            previousValue = encodedName;
+            encodedName = encodedName / 37L;
+            characterCode = hq.base37Alphabet[(int)(previousValue - 37L * encodedName)];
+            if (characterCode == 95) {
+              nextCharacterIndex = reversedName.length() - 1;
+              reversedName.setCharAt(nextCharacterIndex, Character.toUpperCase(reversedName.charAt(nextCharacterIndex)));
+              characterCode = 160;
             }
-            discarded$0 = var6.append((char) var9);
+            appendedName = reversedName.append((char) characterCode);
           }
-          var6.reverse();
-          var6.setCharAt(0, Character.toUpperCase(var6.charAt(param0)));
-          return var6.toString();
+          reversedName.reverse();
+          reversedName.setCharAt(0, Character.toUpperCase(reversedName.charAt(obfuscationGuard)));
+          return reversedName.toString();
         }
         return null;
     }
@@ -60,7 +60,7 @@ final class lt extends ev {
 
     public static void b(int param0) {
         field_f = null;
-        field_g = null;
+        loginDialog = null;
         field_i = null;
         if (param0 >= -8) {
           field_h = (RgbSprite[]) null;

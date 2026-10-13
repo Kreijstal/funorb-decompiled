@@ -278,7 +278,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
                       this.host.showDialog(new ud(this.host, PlayerProfile.field_h), 0);
                       return;
                     }
-                    if (df.field_M <= 0) {
+                    if (LoginForm.field_M <= 0) {
                       this.host.showDialog(new tn(this.host), 0);
                       return;
                     }
@@ -363,7 +363,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         DropdownOptionList.field_R[EmailConfirmationValidator.field_p] = param5;
         vt.field_m[EmailConfirmationValidator.field_p] = EmailConfirmationValidator.field_p;
         NumericDateInputWidget.field_U[EmailConfirmationValidator.field_p] = param2;
-        if (df.field_T < param2) {
+        if (LoginForm.field_T < param2) {
           se.field_e = param2;
         }
         if (param2 < pd.field_e) {

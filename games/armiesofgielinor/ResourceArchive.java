@@ -841,7 +841,7 @@ final class ResourceArchive {
                 if (0 != this.fileRetentionMode) {
                   fileSlots[var18] = splitFiles[var17];
                 } else {
-                  fileSlots[var18] = pf.storeBytes(obfuscationGuard + 0, splitFiles[var17], false);
+                  fileSlots[var18] = LoginMethod.storeBytes(obfuscationGuard + 0, splitFiles[var17], false);
                 }
               }
             }
@@ -855,7 +855,7 @@ final class ResourceArchive {
               fileSlots[var11] = groupData;
               return true;
             }
-            fileSlots[var11] = pf.storeBytes(0, splitData, false);
+            fileSlots[var11] = LoginMethod.storeBytes(0, splitData, false);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -941,7 +941,7 @@ final class ResourceArchive {
           this.packedGroups = (Object[]) (this.packedGroups[2]);
         }
         if (!this.discardPackedGroups) {
-          this.packedGroups[groupId] = pf.storeBytes(0, this.provider.getEncodedGroup(groupId, 4), false);
+          this.packedGroups[groupId] = LoginMethod.storeBytes(0, this.provider.getEncodedGroup(groupId, 4), false);
         } else {
           this.packedGroups[groupId] = this.provider.getEncodedGroup(groupId, 4);
         }

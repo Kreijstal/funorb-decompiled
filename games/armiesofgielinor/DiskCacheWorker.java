@@ -188,7 +188,7 @@ final class DiskCacheWorker implements Runnable {
               var7 = lp.a(nb.field_h[var4], true, false);
               var5 = var5 + QuickChatPhrase.field_w;
               var8 = bt.field_g - (var7 >> 1);
-              if (mu.a(param2, jg.field_k + (rd.field_b << 1), param1, -df.field_E + var8, 5138823, (df.field_E << 1) + var7, var5)) {
+              if (mu.a(param2, jg.field_k + (rd.field_b << 1), param1, -LoginForm.field_E + var8, 5138823, (LoginForm.field_E << 1) + var7, var5)) {
                 stackIn_6_0 = var6;
                 return stackIn_6_0;
               }

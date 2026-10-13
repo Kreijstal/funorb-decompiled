@@ -2418,7 +2418,7 @@ final class InstructionsPanel {
               ModalDialog.field_I = param3;
               BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
               tf.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);
-              df.field_M = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+              LoginForm.field_M = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
               var6 = ByteStorage.incomingPacket.c((byte) -125);
               var7 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               if ((var7 & 1) != 0) {
@@ -2467,16 +2467,16 @@ final class InstructionsPanel {
               ov.connectionState = ResourceArchive.connectedState;
               if (CampaignRewardPreview.field_g.a((byte) 50) != ContentTransitionDialog.field_db) {
                 if (CampaignRewardPreview.field_g.a((byte) -11) == fl.field_u) {
-                  ps.field_y.a(param0 - 84, CombatEvent.d((byte) -120));
+                  ps.usernameLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -120));
                 }
               } else {
-                CombatSandbox.field_j.a(param0 - 84, CombatEvent.d((byte) -127));
+                CombatSandbox.emailLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -127));
               }
               ev.field_b = false;
               if (var6 != null) {
                 ph.a(var6, CombatEvent.d((byte) -117), false);
               }
-              if (df.field_M <= 0 &&
+              if (LoginForm.field_M <= 0 &&
                 !LineOfSightGrid.field_m) {
                 try {
                   lj.a("unzap", (byte) -52, CombatEvent.d((byte) -128));
@@ -2486,13 +2486,13 @@ final class InstructionsPanel {
                 }
               } else {
                 try {
-                  lj.a(CombatEvent.d((byte) -115), "zap", new Object[]{lt.a(param0 + 53, dc.field_o)}, 106);
+                  lj.a(CombatEvent.d((byte) -115), "zap", new Object[]{lt.decodeBase37DisplayName(param0 + 53, dc.field_o)}, 106);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (df.field_M > 0) {
+              if (LoginForm.field_M > 0) {
                 BestScoreStrategy.field_l = true;
               }
               EmailValidator.outgoingPacket.initializeOpcodeCipher(CombatEvent.field_L, -106);

@@ -150,7 +150,7 @@ final class RasterState extends IntrusiveNode {
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = ce.quickChatPhrases.getPhrase(responsePhraseIds[var10_int], 81);
+              var11 = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(responsePhraseIds[var10_int], 81);
               var6[var10_int] = var11.getPreviewText((byte) 97);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

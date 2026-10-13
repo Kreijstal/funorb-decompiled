@@ -75,7 +75,7 @@ final class j {
           DisplacedUnitMarker.field_t[17] = su.field_c;
           DisplacedUnitMarker.field_t[23] = ClientConnectionState.field_e;
           DisplacedUnitMarker.field_t[27] = NodeHashTable.field_b;
-          DisplacedUnitMarker.field_t[30] = pf.field_e;
+          DisplacedUnitMarker.field_t[30] = LoginMethod.field_e;
           DisplacedUnitMarker.field_t[20] = NodeHashIterator.field_h;
           DisplacedUnitMarker.field_t[18] = InstructionsPanel.field_c;
           DisplacedUnitMarker.field_t[14] = DelayedPacket.field_s[0];
@@ -104,7 +104,7 @@ final class j {
           DisplacedUnitMarker.field_t[41] = CorpseConditionMarker.field_x;
           DisplacedUnitMarker.field_t[45] = ToggleTurnSkipConsoleCommand.field_G;
           DisplacedUnitMarker.field_t[50] = GameEvent.field_u;
-          DisplacedUnitMarker.field_t[34] = pf.field_e;
+          DisplacedUnitMarker.field_t[34] = LoginMethod.field_e;
           DisplacedUnitMarker.field_t[29] = ClippedWidgetContainer.field_I;
           DisplacedUnitMarker.field_t[39] = StateChangeEvent.field_y;
           wb.field_b = new String[29];

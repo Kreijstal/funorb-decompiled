@@ -28,12 +28,12 @@ final class bn {
             return 29;
           }
           if (obfuscationGuard < -7) {
-            return ce.field_I[monthIndex];
+            return GuestPlayConfirmationForm.field_I[monthIndex];
           }
           return 111;
         }
         if (obfuscationGuard < -7) {
-          return ce.field_I[monthIndex];
+          return GuestPlayConfirmationForm.field_I[monthIndex];
         }
         return 111;
     }
@@ -113,7 +113,7 @@ final class bn {
             if (bj.field_k) {
               ValidationState.a(-61, param3);
             } else {
-              if (df.field_M > 0) {
+              if (LoginForm.field_M > 0) {
                 ValidationState.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j &&
@@ -150,7 +150,7 @@ final class bn {
             if (bj.field_k) {
               ValidationState.a(-61, param3);
             } else {
-              if (df.field_M > 0) {
+              if (LoginForm.field_M > 0) {
                 ValidationState.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j) {

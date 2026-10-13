@@ -380,7 +380,7 @@ final class GameplayController {
             }
             var2 = stackIn_10_0;
             if (this.battlefield.currentPlayer == this.controlledPlayerId) {
-              stackIn_14_0 = ce.field_H;
+              stackIn_14_0 = GuestPlayConfirmationForm.field_H;
             } else {
               stackIn_14_0 = var2;
             }
@@ -1240,7 +1240,7 @@ final class GameplayController {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 73);
             EmailValidator.outgoingPacket.writeByte(1, 0);
             EmailValidator.outgoingPacket.writeShort(true, var2_int);
-            this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+            this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
             this.field_Tb = false;
           }
         } catch (RuntimeException runtimeException) {
@@ -3743,7 +3743,7 @@ final class GameplayController {
                     if (3 == ((ManaEvent) (var3)).manaTypeCode) {
                       var5 = ((ManaEvent) (var3)).manaPoints;
                       var6 = 0;
-                      var7 = ce.turnDurationTicks[this.battlefield.turnDurationOption] / 50;
+                      var7 = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption] / 50;
                       if (var5 < this.turnTimerDial.sweepPosition / 50) {
                         var6 = -var5 + this.turnTimerDial.sweepPosition / 50;
                       }
@@ -5898,7 +5898,7 @@ final class GameplayController {
         }
         try {
           this.field_j = 100;
-          this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+          this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
           this.field_jc = false;
           this.field_Pb = true;
           this.field_bc = false;
@@ -9003,7 +9003,7 @@ final class GameplayController {
                 stackIn_29_0 = this.battlefield;
                 stackIn_30_1 = !(this.field_z);
                 ((Battlefield) (Object) stackIn_29_0).b(stackIn_30_1, false, 30156);
-                this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+                this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
                 this.field_ic = -1;
                 this.field_nc = -1;
                 this.field_gc = -1;
@@ -11065,7 +11065,7 @@ final class GameplayController {
                     this.field_V = true;
                     mu.field_a = new cg();
                     qc.field_j = 0;
-                    this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+                    this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
                   }
                 }
                 this.battlefield.field_Cb = true;
@@ -11319,7 +11319,7 @@ final class GameplayController {
           this.battlefield.playerCoats[1] = new CoatOfArms(GrowthEvent.field_E, su.field_a);
           this.battlefield.currentPlayer = 0;
           this.field_V = false;
-          this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+          this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11967,7 +11967,7 @@ final class GameplayController {
           this.battlefield.playerCoats[1] = new CoatOfArms(GrowthEvent.field_E, su.field_a);
           this.battlefield.currentPlayer = 0;
           this.field_V = false;
-          this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+          this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
           if (param0 >= -108) {
             discarded$0 = this.n((byte) -1);
           }
@@ -12214,7 +12214,7 @@ final class GameplayController {
             var15[var16_int] = 0;
             var16_int++;
           } while (var26 == 0);
-          if (0 >= df.field_M) {
+          if (0 >= LoginForm.field_M) {
             this.field_Y = Widget.field_o;
             if (var26 != 0) {
               this.field_Y = pg.playerProfile.unitUnlockMasks;
@@ -12363,12 +12363,12 @@ final class GameplayController {
             if (!this.field_lb) {
               this.movementPlanner = new MovementPlanner(this.battlefield);
             }
-            this.turnTimerDial = new TurnTimerDial(ce.turnDurationTicks[this.battlefield.turnDurationOption]);
+            this.turnTimerDial = new TurnTimerDial(GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption]);
             if (l.activeCampaignMission != null) {
               this.rebuildSummonMenus(true);
               this.field_V = true;
               this.battlefield.applyTurnChange(true, 0, 0);
-              this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+              this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
               this.e((byte) 77);
               this.battlefield.field_Cb = true;
               decompiledFrameRemainder5 = (var26 != 0);
@@ -12417,7 +12417,7 @@ final class GameplayController {
             if (!this.field_lb) {
               this.field_V = true;
               this.battlefield.applyTurnChange(true, 0, 0);
-              this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
+              this.remainingTurnTicks = GuestPlayConfirmationForm.turnDurationTicks[this.battlefield.turnDurationOption];
               this.e((byte) 77);
             }
             this.battlefield.field_Cb = true;

@@ -363,7 +363,7 @@ abstract class vf {
                 }
                 if (ep.field_p != null &&
                   null != ep.field_p[var7] &&
-                  df.field_M <= 0 &&
+                  LoginForm.field_M <= 0 &&
                   ep.field_p[var7][var9]) {
                   var10 = 1;
                 }
@@ -372,7 +372,7 @@ abstract class vf {
                   var16 = iv.field_e[var7][var9];
                   if (0 != var16 &&
                     !bj.field_k &&
-                    df.field_M <= 0) {
+                    LoginForm.field_M <= 0) {
                     var10 = 1;
                   }
                   if (0 < var16 &&
@@ -389,7 +389,7 @@ abstract class vf {
                   }
                   if (var16Lifetime2 != 0 &&
                     !bj.field_k &&
-                    df.field_M <= 0) {
+                    LoginForm.field_M <= 0) {
                     var10 = 1;
                   }
                 }

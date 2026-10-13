@@ -1005,7 +1005,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_2_2");
                 if (null != var2) {
-                  pf.field_f = uu.a(var2, (byte) -110);
+                  LoginMethod.field_f = uu.a(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "createafreeaccount");
                 if (var2 != null) {

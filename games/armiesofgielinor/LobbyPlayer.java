@@ -122,7 +122,7 @@ final class LobbyPlayer extends ClientUiComponent {
 
     final static void d(byte param0) {
         String var2 = (String) null;
-        vi.a(cd.field_e, 640, (String) null);
+        vi.showLoginWithDescription(cd.field_e, 640, (String) null);
         if (param0 != -24) {
           LobbyPlayer.d((byte) -75);
         }

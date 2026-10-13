@@ -6,7 +6,7 @@ final class CombatSandbox {
     CombatPresentation combatPresentation;
     private RgbSprite[] field_f;
     private int field_c;
-    static pf field_j;
+    static LoginMethod emailLoginMethod;
     private ia field_d;
     private ia field_a;
     private r[] field_l;
@@ -37,7 +37,7 @@ final class CombatSandbox {
           return this.field_d.c(-29408);
         }
         if (param1 != -42) {
-          field_j = (pf) null;
+          emailLoginMethod = (LoginMethod) null;
         }
         if (param0 == 1) {
           return this.field_l[0].n(-18332);
@@ -417,7 +417,7 @@ final class CombatSandbox {
     }
 
     public static void a(byte param0) {
-        field_j = null;
+        emailLoginMethod = null;
         if (param0 != -8) {
           field_e = (String) null;
         }
@@ -428,6 +428,6 @@ final class CombatSandbox {
     static {
         field_g = "Most kills";
         field_e = "Play the game without logging in just yet";
-        field_j = new pf("email");
+        emailLoginMethod = new LoginMethod("email");
     }
 }

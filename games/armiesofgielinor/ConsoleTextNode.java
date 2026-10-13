@@ -33,14 +33,14 @@ final class ConsoleTextNode extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0) {
+    final static void showAccountRegistration(boolean obfuscationGuard) {
         IsaacRandom.field_g = new AccountRegistrationForm();
-        if (param0) {
+        if (obfuscationGuard) {
           ConsoleTextNode.pushRasterState((byte) 79);
-          lt.field_g.replaceContent(IsaacRandom.field_g, (byte) 78);
+          lt.loginDialog.replaceContent(IsaacRandom.field_g, (byte) 78);
           return;
         }
-        lt.field_g.replaceContent(IsaacRandom.field_g, (byte) 78);
+        lt.loginDialog.replaceContent(IsaacRandom.field_g, (byte) 78);
     }
 
     ConsoleTextNode(String text) {
@@ -52,7 +52,7 @@ final class ConsoleTextNode extends IntrusiveNode {
     }
 
     static {
-        field_n = ce.a(-68);
+        field_n = GuestPlayConfirmationForm.a(-68);
         field_o = "Invalid password.";
         field_p = new TutorialController[29];
     }

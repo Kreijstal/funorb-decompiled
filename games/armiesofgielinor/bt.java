@@ -12,12 +12,12 @@ final class bt {
 
     final static void b(int param0) {
         if (param0 == 0) {
-          wb.a(true, (byte) 32, cd.field_e, qk.field_b);
+          wb.stageLoginCredentials(true, (byte) 32, cd.field_e, qk.field_b);
           se.field_f = true;
           return;
         }
         bt.c(83);
-        wb.a(true, (byte) 32, cd.field_e, qk.field_b);
+        wb.stageLoginCredentials(true, (byte) 32, cd.field_e, qk.field_b);
         se.field_f = true;
     }
 

@@ -30,14 +30,14 @@ final class QuickChatPhraseRepository {
         if (param0 != 27875) {
           field_d = (ClientUiComponent) null;
           if (!DamageEvent.g(81)) {
-            return df.field_M <= 0 ? true : false;
+            return LoginForm.field_M <= 0 ? true : false;
           }
           return true;
         }
         if (DamageEvent.g(81)) {
           return true;
         }
-        if (df.field_M > 0) {
+        if (LoginForm.field_M > 0) {
           return false;
         }
         return true;

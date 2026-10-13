@@ -166,7 +166,7 @@ final class fk implements WidgetPainter {
         try {
           if (obfuscationGuard > -79) {
             var11 = (String) null;
-            fk.a((byte) -28, (java.applet.Applet) null, (String) null);
+            fk.readBrowserCookie((byte) -28, (java.applet.Applet) null, (String) null);
           }
           var6_int = originX + widget.x;
           var7 = originY + widget.y;
@@ -286,7 +286,7 @@ final class fk implements WidgetPainter {
         }
     }
 
-    final static String a(byte param0, java.applet.Applet param1, String param2) {
+    final static String readBrowserCookie(byte obfuscationGuard, java.applet.Applet applet, String cookieName) {
         try {
           int var5 = 0;
           String var3 = null;
@@ -307,8 +307,8 @@ final class fk implements WidgetPainter {
           var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
           try {
             try {
-              var3 = (String) (lj.a("getcookies", (byte) -105, param1));
-              if (param0 < 76) {
+              var3 = (String) (lj.a("getcookies", (byte) -105, applet));
+              if (obfuscationGuard < 76) {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;
               }
@@ -316,7 +316,7 @@ final class fk implements WidgetPainter {
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
-                  var4[var5].substring(0, var6).trim().equals(param2)) {
+                  var4[var5].substring(0, var6).trim().equals(cookieName)) {
                   stackIn_9_0 = var4[var5].substring(var6 + 1).trim();
                   return stackIn_9_0;
                 }
@@ -331,14 +331,14 @@ final class fk implements WidgetPainter {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_17_0 = var3_ref2;
-            stackIn_17_1 = new StringBuilder().append("fk.B(").append(param0).append(',');
-            if (param1 == null) {
+            stackIn_17_1 = new StringBuilder().append("fk.B(").append(obfuscationGuard).append(',');
+            if (applet == null) {
               stackIn_18_2 = "null";
             } else {
               stackIn_18_2 = "{...}";
             }
             stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
-            if (param2 == null) {
+            if (cookieName == null) {
               stackIn_21_2 = "null";
             } else {
               stackIn_21_2 = "{...}";

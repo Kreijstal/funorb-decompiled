@@ -146,7 +146,7 @@ final class fj {
           if (this.field_o > hq.field_f) {
             return false;
           }
-          if (df.field_M > 0) {
+          if (LoginForm.field_M > 0) {
             return true;
           }
           return false;
@@ -154,7 +154,7 @@ final class fj {
         if (this.field_o > hq.field_f) {
           return false;
         }
-        if (df.field_M > 0) {
+        if (LoginForm.field_M > 0) {
           return true;
         }
         return false;
@@ -185,7 +185,7 @@ final class fj {
     final boolean d(byte param0) {
         if (param0 <= 38) {
           field_w = (String) null;
-          if (df.field_M <= 0) {
+          if (LoginForm.field_M <= 0) {
             return false;
           }
           if (this.field_o > hq.field_f) {
@@ -193,7 +193,7 @@ final class fj {
           }
           return false;
         }
-        if (df.field_M <= 0) {
+        if (LoginForm.field_M <= 0) {
           return false;
         }
         if (this.field_o > hq.field_f) {
@@ -207,7 +207,7 @@ final class fj {
         if (null != FixedQuaternion.field_a) {
           return;
         }
-        if (df.field_M <= 0) {
+        if (LoginForm.field_M <= 0) {
           this.field_h = false;
         }
         if (this.field_h) {

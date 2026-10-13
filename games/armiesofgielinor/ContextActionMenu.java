@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ContextActionMenu extends ClientUiComponent {
-    static df field_Qb;
+    static LoginForm loginForm;
     private IconTextComponent[] items;
     private int pendingResult;
     static int field_Wb;
@@ -135,7 +135,7 @@ final class ContextActionMenu extends ClientUiComponent {
     }
 
     public static void e(byte param0) {
-        field_Qb = null;
+        loginForm = null;
         if (param0 != 5) {
           ContextActionMenu.openPublicQuickChat(-69);
         }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf {
+final class LoginMethod {
     static String field_f;
     static int field_b;
     static String[] field_a;
     static int field_d;
-    private String field_c;
+    private String cookieValue;
     static String field_e;
 
     final static void a(byte param0) {
@@ -31,7 +31,7 @@ final class pf {
           if (param0 >= 10) {
             return;
           }
-          pf.a(29);
+          LoginMethod.a(29);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,30 +40,30 @@ final class pf {
         }
     }
 
-    final boolean a(byte param0, String param1) {
-        RuntimeException var3 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final boolean matchesCookieValue(byte obfuscationGuard, String candidate) {
+        RuntimeException failure = null;
+        boolean matches = false;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String candidateDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 > -61) {
+          if (obfuscationGuard > -61) {
             field_d = 60;
           }
-          stackIn_3_0 = this.field_c.equals(param1);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("pf.A(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          matches = this.cookieValue.equals(candidate);
+          return matches;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("pf.A(").append(obfuscationGuard).append(',');
+          if (candidate == null) {
+            candidateDescription = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            candidateDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(candidateDescription).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class pf {
           return;
         }
         byte[] var2 = (byte[]) null;
-        pf.storeBytes(-6, (byte[]) null, false);
+        LoginMethod.storeBytes(-6, (byte[]) null, false);
         field_f = null;
         field_a = null;
     }
@@ -131,7 +131,7 @@ final class pf {
         try {
           if (obfuscationGuard != 0) {
             var4 = (byte[]) null;
-            pf.storeBytes(113, (byte[]) null, true);
+            LoginMethod.storeBytes(113, (byte[]) null, true);
           }
           if (bytes == null) {
             return null;
@@ -162,14 +162,14 @@ final class pf {
         }
     }
 
-    final void a(int param0, java.applet.Applet param1) {
+    final void persistLoginMethod(int obfuscationGuard, java.applet.Applet applet) {
         try {
-          IntrusiveNode.a(param1, this.field_c, (byte) 29, "jagex-last-login-method", 31536000L);
-          if (param0 != -137) {
-            pf.a((byte) 95);
+          IntrusiveNode.a(applet, this.cookieValue, (byte) 29, "jagex-last-login-method", 31536000L);
+          if (obfuscationGuard != -137) {
+            LoginMethod.a((byte) 95);
           }
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "pf.B(" + obfuscationGuard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -189,11 +189,11 @@ final class pf {
         }
     }
 
-    pf(String param0) {
+    LoginMethod(String cookieValue) {
         try {
-          this.field_c = param0;
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          this.cookieValue = cookieValue;
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "pf.<init>(" + (cookieValue != null ? "{...}" : "null") + ')');
         }
     }
 

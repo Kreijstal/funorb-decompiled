@@ -276,7 +276,7 @@ final class DelayedPacket extends IntrusiveNode {
         }
         pd.field_e = 2147483647;
         sq.field_k = 2147483647;
-        df.field_T = -2147483648;
+        LoginForm.field_T = -2147483648;
         se.field_e = -2147483648;
     }
 

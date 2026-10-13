@@ -30,7 +30,7 @@ final class hf {
         ConsoleParseException.field_d[18] = ResizableModalDialog.field_Q;
         ConsoleParseException.field_d[17] = qc.field_b;
         ConsoleParseException.field_d[19] = MidiPcmStream.field_X;
-        ConsoleParseException.field_d[11] = pf.field_f;
+        ConsoleParseException.field_d[11] = LoginMethod.field_f;
         ConsoleParseException.field_d[6] = bs.field_c;
         ConsoleParseException.field_d[13] = EffectPresentation.field_b;
         ConsoleParseException.field_d[7] = vs.field_d;

@@ -9,19 +9,19 @@ final class vi {
     static String field_b;
     static String field_f;
 
-    final static void a(String param0, int param1, String param2) {
+    final static void showLoginWithDescription(String accountIdentifier, int obfuscationGuard, String description) {
         try {
-          if (null != qc.field_a) {
-            qc.field_a.closeDialog(true);
+          if (null != qc.loginProgressDialog) {
+            qc.loginProgressDialog.closeDialog(true);
           }
-          if (param1 != 640) {
+          if (obfuscationGuard != 640) {
             String var4 = (String) null;
-            vi.a((String) null, -8, (String) null);
+            vi.showLoginWithDescription((String) null, -8, (String) null);
           }
-          ContextActionMenu.field_Qb = new df(param0, param2, false, true, true);
-          lt.field_g.replaceContent(ContextActionMenu.field_Qb, (byte) -77);
+          ContextActionMenu.loginForm = new LoginForm(accountIdentifier, description, false, true, true);
+          lt.loginDialog.replaceContent(ContextActionMenu.loginForm, (byte) -77);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vi.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vi.D(" + (accountIdentifier != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (description != null ? "{...}" : "null") + ')');
         }
     }
 

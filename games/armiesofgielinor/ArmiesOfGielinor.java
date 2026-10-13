@@ -1227,8 +1227,8 @@ public final class ArmiesOfGielinor extends wf {
           StandardContentDialog.j((byte) 49);
           ProgressMessageDialog.n(0);
           AccountRegistrationForm.f((byte) 19);
-          ce.k(param0 ^ -11944);
-          df.b(true);
+          GuestPlayConfirmationForm.k(param0 ^ -11944);
+          LoginForm.b(true);
           AccountNameSelectionForm.f((byte) -117);
           gl.a(true);
           fl.a((byte) 82);
@@ -1556,7 +1556,7 @@ public final class ArmiesOfGielinor extends wf {
           RasterState.a(-22856);
           CampaignResult.a((byte) -116);
           RegionAnchor.a(true);
-          pf.b((byte) -49);
+          LoginMethod.b((byte) -49);
           wv.c((byte) -3);
           oq.a(120);
           eq.a(true);
@@ -1715,7 +1715,7 @@ public final class ArmiesOfGielinor extends wf {
           bi.field_f = SpriteButtonPainter.a(14, true);
           MusicCrossfadeStream.field_s = SpriteButtonPainter.a(param0, true);
           ReportAbuseDialog.field_Lb = SpriteButtonPainter.a(18, true);
-          ce.field_M = SpriteButtonPainter.a(19, true);
+          GuestPlayConfirmationForm.field_M = SpriteButtonPainter.a(19, true);
           ChannelBaseVolumeConsoleCommand.field_M = SpriteButtonPainter.a(20, true);
           InteractiveWidget.field_F = SpriteButtonPainter.a(22, true);
           MusicPatchUsage.backgroundArchive = DamageEvent.a(0, 21, (byte) 127, false, false);
@@ -1955,8 +1955,8 @@ public final class ArmiesOfGielinor extends wf {
                                     bt.field_e.ensureAllGroupsAvailable(-27927)) {
                                     if (CorpseConditionMarker.field_w.ensureIndex((byte) 82) &&
                                       CorpseConditionMarker.field_w.ensureAllGroupsAvailable(-27927)) {
-                                      if (ce.field_M.ensureIndex((byte) 82) &&
-                                        ce.field_M.ensureAllGroupsAvailable(-27927)) {
+                                      if (GuestPlayConfirmationForm.field_M.ensureIndex((byte) 82) &&
+                                        GuestPlayConfirmationForm.field_M.ensureAllGroupsAvailable(-27927)) {
                                         if (ChannelBaseVolumeConsoleCommand.field_M.ensureIndex((byte) 82) &&
                                           ChannelBaseVolumeConsoleCommand.field_M.ensureAllGroupsAvailable(-27927)) {
                                           if (InteractiveWidget.field_F.ensureIndex((byte) 82) &&
@@ -2030,7 +2030,7 @@ public final class ArmiesOfGielinor extends wf {
                                         bn.a((byte) -24, 61.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
                                         return false;
                                       }
-                                      bn.a((byte) -24, 58.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, ce.field_M));
+                                      bn.a((byte) -24, 58.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, GuestPlayConfirmationForm.field_M));
                                       return false;
                                     }
                                     bn.a((byte) -24, 56.0f, ao.a(ProgressDialog.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
@@ -2048,7 +2048,7 @@ public final class ArmiesOfGielinor extends wf {
                             bn.a((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, is.field_d, "", PacketBuffer.field_m));
                             return false;
                           }
-                          bn.a((byte) -24, 33.0f, df.a(is.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
+                          bn.a((byte) -24, 33.0f, LoginForm.a(is.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
                         bn.a((byte) -24, 28.0f, EmailValidator.a(SpellConfirmationDialog.field_f, 0, ds.field_b, "", ResourceProtocolClient.field_k));
@@ -2145,10 +2145,10 @@ public final class ArmiesOfGielinor extends wf {
               ModalDialog.a(0);
               return false;
             }
-            if (null != ce.field_M &&
+            if (null != GuestPlayConfirmationForm.field_M &&
               ChannelBaseVolumeConsoleCommand.field_M != null) {
-              ArchiveProvider.mapRepository = new MapRepository(ce.field_M, ChannelBaseVolumeConsoleCommand.field_M, false);
-              ce.field_M = null;
+              ArchiveProvider.mapRepository = new MapRepository(GuestPlayConfirmationForm.field_M, ChannelBaseVolumeConsoleCommand.field_M, false);
+              GuestPlayConfirmationForm.field_M = null;
               ChannelBaseVolumeConsoleCommand.field_M = null;
               return false;
             }
@@ -2219,13 +2219,13 @@ public final class ArmiesOfGielinor extends wf {
           pg.field_c = DiskCacheRequest.loadRgbSpriteByName("bigorbring", "basic", iw.field_l, false);
           UnitModelPreview.field_d = ac.a(iw.field_l, "godorbs", (byte) -4, "basic");
           gt.field_c = ac.a(iw.field_l, "godframes", (byte) -4, "basic");
-          ce.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
+          GuestPlayConfirmationForm.field_F = ac.a(iw.field_l, "godglows", (byte) -4, "basic");
           BufferedFile.field_k = ac.a(iw.field_l, "godframeglows", (byte) -4, "basic");
           tn.a((byte) 80, UnitModelPreview.field_d);
-          hf.a(128, ce.field_F, 0);
+          hf.a(128, GuestPlayConfirmationForm.field_F, 0);
           TeamRoster.field_e = new RgbSprite(71, 71);
           EditableTextWidget.a(8678, 256, 15, TeamRoster.field_e);
-          tn.a((byte) 105, ce.field_F);
+          tn.a((byte) 105, GuestPlayConfirmationForm.field_F);
           tn.a((byte) 124, BufferedFile.field_k);
           MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);
           km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
@@ -2312,7 +2312,7 @@ public final class ArmiesOfGielinor extends wf {
           } while (var18 == 0);
           if (!LabeledWidgetContainer.field_L) {
             dh.field_k = GameplayController.a("lobby_game_logo", (byte) 51, "basic", iw.field_l);
-            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, pf.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, pf.field_a.length, DropTargetWidgetContainer.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
+            QuickChatPhrase.a(var16, bs.field_b, (byte) 53, MoveAttackRequest.field_B, 4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, CipherPacketBuffer.field_A, LoginMethod.field_a, new int[]{10, 10, 10, 10, 10, 10, 10, 10, 10, 10}, true, LoginMethod.field_a.length, DropTargetWidgetContainer.field_L, km.field_c, CorpseConditionMarker.field_w, ki.field_d, var16);
             la.initializeChatHistory((byte) 30, 200);
             ps.a(124, ResourceRequest.field_A, PrintVictoryConditionsConsoleCommand.field_K);
           }

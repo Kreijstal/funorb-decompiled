@@ -488,7 +488,7 @@ final class MapTile implements TaggedFieldReader {
           }
         }
         if (this.hasModifierFlag4((byte) -120)) {
-          var2 = var2 + " " + ce.field_P;
+          var2 = var2 + " " + GuestPlayConfirmationForm.field_P;
         }
         if (obfuscationGuard < 30) {
           this.ownerPlayer = -35;

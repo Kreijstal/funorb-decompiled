@@ -2802,7 +2802,7 @@ final class TutorialController {
                 if (!DebouncedValidator.a(var6, var5, 1)) {
                   if (!(param0)) {
                     if (pn.field_n[var6] &&
-                      df.field_M <= 0) {
+                      LoginForm.field_M <= 0) {
                       stackIn_35_0 = DeathEvent.field_A;
                     } else {
                       stackIn_35_0 = MoveAttackRequest.field_A;
@@ -2856,7 +2856,7 @@ final class TutorialController {
             DelayedPacket.field_k[var6].draw(db.a(true, 82), -14 + var10);
             if (var17 != 0) {
               if (!pn.field_n[var6] ||
-                !(df.field_M <= 0)) {
+                !(LoginForm.field_M <= 0)) {
                 MoveAttackRequest.field_A.g(db.a(true, 82), -14 + var10);
                 DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
               } else {
@@ -2865,7 +2865,7 @@ final class TutorialController {
             }
           } else {
             if (!pn.field_n[var6] ||
-              !(df.field_M <= 0)) {
+              !(LoginForm.field_M <= 0)) {
               MoveAttackRequest.field_A.g(db.a(true, 82), -14 + var10);
               if (var17 != 0) {
                 DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
@@ -4231,8 +4231,8 @@ final class TutorialController {
             stackIn_18_0 = db.a(true, 34);
           }
           SoftwareRaster.setClip(stackIn_18_0, MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
-          ce.field_F[li.field_q + 1].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
-          ce.field_F[1 + MoveAttackAction.field_s].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var5);
+          GuestPlayConfirmationForm.field_F[li.field_q + 1].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
+          GuestPlayConfirmationForm.field_F[1 + MoveAttackAction.field_s].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var5);
           if (null != b.field_n) {
             TriangleRasterizer.setClip(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             TriangleRasterizer.centerProjection();

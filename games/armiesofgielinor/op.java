@@ -34,7 +34,7 @@ final class op {
 
     final static void a(int param0, int param1, nr param2, nr param3, int param4, int param5) {
         try {
-          df.field_E = param1;
+          LoginForm.field_E = param1;
           QuickChatPhrase.field_w = param0;
           ed.field_d = param3;
           rd.field_b = param5;
@@ -113,7 +113,7 @@ final class op {
             return stackIn_13_0;
           }
           if (dj.friendCount >= 100 &&
-            df.field_M <= 0) {
+            LoginForm.field_M <= 0) {
             stackIn_18_0 = MapLayout.field_m;
             return stackIn_18_0;
           }

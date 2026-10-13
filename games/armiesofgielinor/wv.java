@@ -45,8 +45,8 @@ class wv extends af {
           }
           DeployAction.field_A = false;
           ac.field_n = false;
-          if (qc.field_a != null &&
-            qc.field_a.open) {
+          if (qc.loginProgressDialog != null &&
+            qc.loginProgressDialog.open) {
             if (8 != param2) {
             } else {
               if (!fh.field_i) {
@@ -55,7 +55,7 @@ class wv extends af {
                 param0 = ConsoleTextNode.field_o;
               }
               param2 = 2;
-              ContextActionMenu.field_Qb.a(-17376, IsaacRandom.field_d);
+              ContextActionMenu.loginForm.setAccountAndClearPassword(-17376, IsaacRandom.loginAccountIdentifier);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -69,12 +69,12 @@ class wv extends af {
               if (se.field_f) {
                 param0 = SummonAction.field_D;
               }
-              qc.field_a.showResult(param2, (byte) 98, param0);
+              qc.loginProgressDialog.showResult(param2, (byte) 98, param0);
             }
             if (param2 != 256 &&
               10 != param2 &&
               !fh.field_i) {
-              ContextActionMenu.field_Qb.a((byte) -111);
+              ContextActionMenu.loginForm.clearCredentials((byte) -111);
               return;
             }
           }

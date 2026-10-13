@@ -669,6 +669,6 @@ final class ReportAbuseDialog extends ClientUiComponent {
 
     static {
         field_Ob = "<%0> is already on your friend list.";
-        field_Nb = ce.a(-30);
+        field_Nb = GuestPlayConfirmationForm.a(-30);
     }
 }

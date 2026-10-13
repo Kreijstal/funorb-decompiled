@@ -48,16 +48,16 @@ final class wb {
         field_b = null;
     }
 
-    final static void a(boolean param0, byte param1, String param2, String param3) {
-        ah.field_d = param3;
-        IsaacRandom.field_d = param2;
-        if (param1 != 32) {
+    final static void stageLoginCredentials(boolean closeFlowB, byte obfuscationGuard, String accountIdentifier, String password) {
+        ah.loginPassword = password;
+        IsaacRandom.loginAccountIdentifier = accountIdentifier;
+        if (obfuscationGuard != 32) {
           return;
         }
         try {
-          af.a(param0, MapLayout.field_o, param1 ^ -33);
+          af.openLoginProgress(closeFlowB, MapLayout.field_o, obfuscationGuard ^ -33);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wb.A(" + closeFlowB + ',' + obfuscationGuard + ',' + (accountIdentifier != null ? "{...}" : "null") + ',' + (password != null ? "{...}" : "null") + ')');
         }
     }
 

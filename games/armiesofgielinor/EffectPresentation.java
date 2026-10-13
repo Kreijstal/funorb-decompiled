@@ -47,7 +47,7 @@ final class EffectPresentation implements EventPresentation {
         if (param0 != 7) {
           EffectPresentation.c(101);
         }
-        af.a(false, CachedArchiveProvider.field_z, -1);
+        af.openLoginProgress(false, CachedArchiveProvider.field_z, -1);
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3, byte param4, int param5) {

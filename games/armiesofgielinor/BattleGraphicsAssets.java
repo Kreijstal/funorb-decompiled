@@ -49,8 +49,8 @@ final class BattleGraphicsAssets {
     final static String a(int param0) {
         String var1 = "";
         if (param0 <= -69) {
-          if (null != ContextActionMenu.field_Qb) {
-            var1 = ContextActionMenu.field_Qb.m(-15056);
+          if (null != ContextActionMenu.loginForm) {
+            var1 = ContextActionMenu.loginForm.getAccountIdentifier(-15056);
           }
           if (var1.length() == 0) {
             var1 = rn.b(true);
@@ -61,8 +61,8 @@ final class BattleGraphicsAssets {
           return var1;
         }
         field_a = (String) null;
-        if (null != ContextActionMenu.field_Qb) {
-          var1 = ContextActionMenu.field_Qb.m(-15056);
+        if (null != ContextActionMenu.loginForm) {
+          var1 = ContextActionMenu.loginForm.getAccountIdentifier(-15056);
         }
         if (var1.length() == 0) {
           var1 = rn.b(true);

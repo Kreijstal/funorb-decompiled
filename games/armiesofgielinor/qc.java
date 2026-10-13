@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qc {
-    static ProgressMessageDialog field_a;
+    static ProgressMessageDialog loginProgressDialog;
     static String field_b;
     static UiSelectionState field_d;
     static qc field_h;
@@ -19,7 +19,7 @@ abstract class qc {
         field_e = null;
         if (param0 == -108) {
           field_c = null;
-          field_a = null;
+          loginProgressDialog = null;
           field_d = null;
           lobbyRoomOrder = null;
           field_h = null;
@@ -28,7 +28,7 @@ abstract class qc {
         }
         field_c = (ClientUiComponent) null;
         field_c = null;
-        field_a = null;
+        loginProgressDialog = null;
         field_d = null;
         lobbyRoomOrder = null;
         field_h = null;

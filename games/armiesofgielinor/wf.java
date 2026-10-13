@@ -44,7 +44,7 @@ abstract class wf extends iv {
         ModalDialog.field_E = param1;
         DualLinkedNode.field_t = param4;
         this.f((byte) -51);
-        df.l(0);
+        LoginForm.l(0);
     }
 
     final static void g(int param0) {
@@ -303,10 +303,10 @@ abstract class wf extends iv {
                 var12 = MusicPatchEnvelope.field_h.a(3);
                 if (var12 != null) {
                   var7 = BattlefieldTheme.decodeSingleByteText(0, var12.position, -127, var12.payload);
-                  df.a(var7, -73);
+                  LoginForm.a(var7, -73);
                 } else {
                   var9 = (String) null;
-                  df.a((String) null, -108);
+                  LoginForm.a((String) null, -108);
                 }
                 MusicPatchEnvelope.field_h = null;
               }
@@ -315,7 +315,7 @@ abstract class wf extends iv {
               var5 = (Exception) (Object) decompiledCaughtException;
               af.a((Throwable) ((Object) var5), -99, "S1");
               var10 = (String) null;
-              df.a((String) null, -119);
+              LoginForm.a((String) null, -119);
               MusicPatchEnvelope.field_h = null;
             }
           }
@@ -526,7 +526,7 @@ abstract class wf extends iv {
         }
         if (!PopupPresentation.h(31337) &&
           SoundCache.field_b != 11) {
-          pf.a((byte) 73);
+          LoginMethod.a((byte) 73);
         }
         if (CampaignMission.field_I != null) {
           el.field_d = CampaignMission.field_I.a(9);
@@ -666,7 +666,7 @@ abstract class wf extends iv {
             stackIn_96_1 = pd.field_b;
             stackIn_97_2 = !(ChatMessage.field_r);
             stackIn_100_3 = !(ChatMessage.field_r);
-            rn.a(stackIn_96_0, stackIn_96_1, stackIn_97_2, stackIn_100_3);
+            rn.openLoginDialog(stackIn_96_0, stackIn_96_1, stackIn_97_2, stackIn_100_3);
           }
           if (hc.field_i) {
             MatchingTextValidator.c((byte) -128);

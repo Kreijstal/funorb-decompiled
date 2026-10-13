@@ -188,7 +188,7 @@ final class ActionSpell extends Spell {
 
     final static void a(int param0, int param1, int param2) {
         bn.field_b = param0;
-        ce.field_N = param0;
+        GuestPlayConfirmationForm.field_N = param0;
         dt.field_a = param2;
         MatchSetupPanel.field_D = param2;
         tq.field_a = true;

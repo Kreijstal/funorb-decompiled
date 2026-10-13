@@ -164,11 +164,11 @@ final class RadialSummonMenu {
         BitmapTextWidgetPainter.field_a.addChild(DebugConsole.field_w.tabs, 126);
         BitmapTextWidgetPainter.field_a.addChild(SocialListPanel.field_Lb, 97);
         LabeledWidgetContainer.field_R = new ClientUiComponent(0L, ArchiveIndex.field_b);
-        df.field_K = new ClientUiComponent(0L, (ClientUiComponent) null);
+        LoginForm.field_K = new ClientUiComponent(0L, (ClientUiComponent) null);
         LabeledWidgetContainer.field_R.addChild(bk.field_f, 54);
-        LabeledWidgetContainer.field_R.addChild(df.field_K, 70);
-        df.field_K.addChild(IconTextComponent.field_Kb, 112);
-        df.field_K.addChild(ConsolePanel.field_m, 74);
+        LabeledWidgetContainer.field_R.addChild(LoginForm.field_K, 70);
+        LoginForm.field_K.addChild(IconTextComponent.field_Kb, 112);
+        LoginForm.field_K.addChild(ConsolePanel.field_m, 74);
         ClientUiComponent.a(27, param1);
     }
 

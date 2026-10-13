@@ -41,18 +41,18 @@ final class rn {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, String param1, boolean param2, boolean param3) {
+    final static void openLoginDialog(int obfuscationGuard, String unusedText, boolean showRegistration, boolean offerGuestPlay) {
         try {
           MapRepository.a(true);
-          KingBlackDragonEvent.field_C.closeAllDialogs(param0 ^ -124);
-          ContextActionMenu.field_Qb = new df(IsaacRandom.field_d, (String) null, fh.field_i, param2, param3);
-          if (param0 != 3) {
+          KingBlackDragonEvent.field_C.closeAllDialogs(obfuscationGuard ^ -124);
+          ContextActionMenu.loginForm = new LoginForm(IsaacRandom.loginAccountIdentifier, (String) null, fh.field_i, showRegistration, offerGuestPlay);
+          if (obfuscationGuard != 3) {
             field_d = -55;
           }
-          lt.field_g = new StandardContentDialog(KingBlackDragonEvent.field_C, ContextActionMenu.field_Qb);
-          KingBlackDragonEvent.field_C.showDialog(lt.field_g, 0);
+          lt.loginDialog = new StandardContentDialog(KingBlackDragonEvent.field_C, ContextActionMenu.loginForm);
+          KingBlackDragonEvent.field_C.showDialog(lt.loginDialog, 0);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rn.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rn.B(" + obfuscationGuard + ',' + (unusedText != null ? "{...}" : "null") + ',' + showRegistration + ',' + offerGuestPlay + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class rn {
           return;
         }
         String var2 = (String) null;
-        rn.a(-107, (String) null, true, true);
+        rn.openLoginDialog(-107, (String) null, true, true);
         validationInvalid = null;
         field_b = null;
         field_a = null;

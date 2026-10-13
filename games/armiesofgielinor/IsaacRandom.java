@@ -11,7 +11,7 @@ final class IsaacRandom {
     private int lastResult;
     static AccountRegistrationForm field_g;
     private int remainingResults;
-    static String field_d;
+    static String loginAccountIdentifier;
     private int generationCounter;
 
     private final void b(boolean param0) {
@@ -144,7 +144,7 @@ final class IsaacRandom {
     public static void b(int param0) {
         int var1 = -102 / ((param0 - 45) / 43);
         field_i = null;
-        field_d = null;
+        loginAccountIdentifier = null;
         field_g = null;
         field_k = null;
         field_a = null;

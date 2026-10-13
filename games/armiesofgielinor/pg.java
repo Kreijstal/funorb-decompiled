@@ -56,7 +56,7 @@ final class pg {
           dt.a(IndexedSpriteBase.field_b, 23678);
         }
         BufferedSocket.disableKeyboard((byte) 41);
-        pf.a(-15291);
+        LoginMethod.a(-15291);
         DequeWidgetContainer.j(-118);
         if (fh.b((byte) -88)) {
           EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 1);

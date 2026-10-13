@@ -251,7 +251,7 @@ final class ArchiveIndex {
         RuntimeException var2 = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          PacketBuffer.a(0, df.field_T, false, pd.field_e, EmailConfirmationValidator.field_p, param0, true);
+          PacketBuffer.a(0, LoginForm.field_T, false, pd.field_e, EmailConfirmationValidator.field_p, param0, true);
           for (var2_int = param1; EmailConfirmationValidator.field_p > var2_int; var2_int++) {
             vt.field_m[param0 + var2_int] = var2_int;
           }

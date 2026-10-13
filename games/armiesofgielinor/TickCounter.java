@@ -569,27 +569,27 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "gameoptlabels,0");
                 if (var2 != null) {
-                  pf.field_a[0] = uu.a(var2, (byte) -122);
+                  LoginMethod.field_a[0] = uu.a(var2, (byte) -122);
                 }
                 var2 = fk.a(false, "gameoptlabels,1");
                 if (var2 != null) {
-                  pf.field_a[1] = uu.a(var2, (byte) -93);
+                  LoginMethod.field_a[1] = uu.a(var2, (byte) -93);
                 }
                 var2 = fk.a(false, "gameoptlabels,2");
                 if (null != var2) {
-                  pf.field_a[2] = uu.a(var2, (byte) 68);
+                  LoginMethod.field_a[2] = uu.a(var2, (byte) 68);
                 }
                 var2 = fk.a(false, "gameoptlabels,3");
                 if (var2 != null) {
-                  pf.field_a[3] = uu.a(var2, (byte) 51);
+                  LoginMethod.field_a[3] = uu.a(var2, (byte) 51);
                 }
                 var2 = fk.a(false, "gameoptlabels,4");
                 if (null != var2) {
-                  pf.field_a[4] = uu.a(var2, (byte) 76);
+                  LoginMethod.field_a[4] = uu.a(var2, (byte) 76);
                 }
                 var2 = fk.a(false, "gameoptlabels,5");
                 if (null != var2) {
-                  pf.field_a[5] = uu.a(var2, (byte) -96);
+                  LoginMethod.field_a[5] = uu.a(var2, (byte) -96);
                 }
                 var2 = fk.a(false, "gameoptnames,0,0");
                 if (null != var2) {
@@ -1721,7 +1721,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "HOVER_ANNOUNCEYOU");
                 if (var2 != null) {
-                  ce.field_H = uu.a(var2, (byte) 50);
+                  GuestPlayConfirmationForm.field_H = uu.a(var2, (byte) 50);
                 }
                 var2 = fk.a(false, "ANNOUNCE_WINNER");
                 if (var2 != null) {
@@ -1905,7 +1905,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "EXIT");
                 if (null != var2) {
-                  ce.field_P = uu.a(var2, (byte) -110);
+                  GuestPlayConfirmationForm.field_P = uu.a(var2, (byte) -110);
                 }
                 var2 = fk.a(false, "UN_OWNED");
                 if (var2 != null) {
@@ -3235,7 +3235,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_COATOFARMS");
                 if (null != var2) {
-                  pf.field_e = uu.a(var2, (byte) -97);
+                  LoginMethod.field_e = uu.a(var2, (byte) -97);
                 }
                 var2 = fk.a(false, "LABEL_OPTIONS");
                 if (var2 != null) {

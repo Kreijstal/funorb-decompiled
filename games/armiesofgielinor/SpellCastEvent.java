@@ -86,7 +86,7 @@ final class SpellCastEvent extends GameEvent {
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((byte) -111, (rd.field_b << 1) + jg.field_k, var8 - df.field_E, (df.field_E << 1) + var7, var2);
+                var9.a((byte) -111, (rd.field_b << 1) + jg.field_k, var8 - LoginForm.field_E, (LoginForm.field_E << 1) + var7, var2);
               }
               var2 = var2 + rd.field_b;
             }

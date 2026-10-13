@@ -2684,7 +2684,7 @@ final class CombatPresentation implements EventPresentation {
             return stackIn_8_0;
           }
           if (se.emailCheckResult.isComplete((byte) -47)) {
-            stackIn_13_0 = IsaacRandom.field_d;
+            stackIn_13_0 = IsaacRandom.loginAccountIdentifier;
             return stackIn_13_0;
           }
           stackIn_11_0 = AgeValidator.requestedAccountName;

@@ -36,11 +36,11 @@ final class PrintCoatConsoleCommand extends ConsoleCommand {
         super(commandName, parameterTypes, description);
     }
 
-    final static void g(int param0) {
-        if (param0 < 68) {
+    final static void showGuestPlayConfirmation(int obfuscationGuard) {
+        if (obfuscationGuard < 68) {
           return;
         }
-        lt.field_g.replaceContent(new ce(), (byte) 66);
+        lt.loginDialog.replaceContent(new GuestPlayConfirmationForm(), (byte) 66);
     }
 
     public static void i(int param0) {

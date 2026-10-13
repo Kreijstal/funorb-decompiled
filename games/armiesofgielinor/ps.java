@@ -8,7 +8,7 @@ final class ps extends BitmapTextWidgetPainter {
     static String field_x;
     private IndexedSprite[] field_B;
     static int[] field_D;
-    static pf field_y;
+    static LoginMethod usernameLoginMethod;
     static String field_A;
     static boolean field_v;
     static String field_z;
@@ -44,7 +44,7 @@ final class ps extends BitmapTextWidgetPainter {
     }
 
     public static void c(boolean param0) {
-        field_y = null;
+        usernameLoginMethod = null;
         field_w = null;
         field_A = null;
         if (!param0) {
@@ -170,7 +170,7 @@ final class ps extends BitmapTextWidgetPainter {
         field_D = new int[]{100, 100, 200, 100, 100, 100, 200, 200, 200, 200, 300, 200, 200, 200, 300, 500, 100, 100, 100, 200, 300, 300, 100, 100, 100, 100, 100, 100, 100, 100, 200, 200, 200, 200, 200, 200, 200, 200, 200, 300, 500, 300, 300, 500, 200, 300, 500, 300, 300, 500, 200, 300, 500, 200, 300, 500};
         field_E = 250;
         field_x = "This ground produces no Mana";
-        field_y = new pf("usename");
+        usernameLoginMethod = new LoginMethod("usename");
         field_A = "You are on <%0>";
         field_z = "Click or press F10 to open Quick Chat";
         field_C = new int[]{2, 2, 2, 2, 2};

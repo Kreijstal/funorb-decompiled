@@ -88,7 +88,7 @@ final class l {
             for (var14 = 0; category.phraseIds.length > var14; var14++) {
               var15 = category.phraseIds[var14];
               if (var15 != -1) {
-                var16 = ce.quickChatPhrases.getPhrase(var15, 98);
+                var16 = GuestPlayConfirmationForm.quickChatPhrases.getPhrase(var15, 98);
                 var8[var12Lifetime1 + var14] = var16.getPreviewText((byte) 97);
                 var9[var14 + var12Lifetime1] = category.phraseShortcuts[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {

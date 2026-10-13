@@ -1842,7 +1842,7 @@ final class CampaignMenu {
           var3.godId = campaign.localGodId;
           var3.description = campaign.description;
           stackIn_11_0 = var3;
-          stackIn_14_1 = (campaign.c((byte) -45)) || !(0 >= df.field_M) || !(BufferedSocket.field_j < 2);
+          stackIn_14_1 = (campaign.c((byte) -45)) || !(0 >= LoginForm.field_M) || !(BufferedSocket.field_j < 2);
           boolean decompiledFrameCompleted0 = true;
           stackIn_11_0.selectable = stackIn_14_1;
           if (var3.selectable) {

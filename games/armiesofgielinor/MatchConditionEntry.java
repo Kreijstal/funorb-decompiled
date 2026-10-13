@@ -3,7 +3,7 @@
  */
 final class MatchConditionEntry extends IntrusiveNode {
     MatchCondition condition;
-    static pf field_l;
+    static LoginMethod defaultLoginMethod;
     static int[][] field_o;
     static CombatViewTransition field_p;
     static IndexedSprite field_n;
@@ -199,7 +199,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           }
           field_n = null;
           field_p = null;
-          field_l = null;
+          defaultLoginMethod = null;
           field_o = (int[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,7 +233,7 @@ final class MatchConditionEntry extends IntrusiveNode {
     }
 
     static {
-        field_l = new pf("");
+        defaultLoginMethod = new LoginMethod("");
         field_o = new int[][]{new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 120}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 120}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 120}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 180}, new int[]{0, 120}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}, new int[]{0, 0}};
     }
 }

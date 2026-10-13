@@ -24,7 +24,7 @@ final class cn extends vf {
           if (du.nameCheckPending == mh.accountNameCheckState) {
             return se.emailCheckResult.getEmail(true);
           }
-          return IsaacRandom.field_d;
+          return IsaacRandom.loginAccountIdentifier;
         }
         if (!se.emailCheckResult.isComplete((byte) 126)) {
           return se.emailCheckResult.getEmail(true);
@@ -32,7 +32,7 @@ final class cn extends vf {
         if (du.nameCheckPending == mh.accountNameCheckState) {
           return se.emailCheckResult.getEmail(true);
         }
-        return IsaacRandom.field_d;
+        return IsaacRandom.loginAccountIdentifier;
     }
 
     final void a(int param0) {
