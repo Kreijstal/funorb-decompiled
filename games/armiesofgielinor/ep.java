@@ -208,7 +208,7 @@ final class ep {
             var8Lifetime1 = this.field_q << 2;
             stackIn_48_0 = (var8Lifetime1 <= 256) ? var8Lifetime1 : 256;
             var8Lifetime1Lifetime1 = stackIn_48_0;
-            MaskedTextEntryPainter.field_y.e(this.a(-(int)this.field_k + 3002, 4592), this.a((byte) -81, 90), var8Lifetime1Lifetime1);
+            MaskedTextEntryPainter.field_y.drawWithOpacity(this.a(-(int)this.field_k + 3002, 4592), this.a((byte) -81, 90), var8Lifetime1Lifetime1);
             if (var7 >= 160000) {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);
             }
@@ -223,15 +223,15 @@ final class ep {
             SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32 >> 2, fe.field_o[1]);
             var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
-              MidiPcmStream.field_H.e((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
+              MidiPcmStream.field_H.drawWithOpacity((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
             }
             var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 2, 100) - 65536);
             if (var7 > 0) {
-              MidiPcmStream.field_H.e((int)((double)this.a(2516, 4592) - var3), this.a((byte) -119, 206), var7);
+              MidiPcmStream.field_H.drawWithOpacity((int)((double)this.a(2516, 4592) - var3), this.a((byte) -119, 206), var7);
             }
             var7 = -65536 + SocketResourceClient.b(var6Lifetime1 / 3, 100) + 256;
             if (var7 > 0) {
-              MidiPcmStream.field_H.e((int)((double)this.a(2665, param0 + 4336) - var3), this.a((byte) -53, 168), var7);
+              MidiPcmStream.field_H.drawWithOpacity((int)((double)this.a(2665, param0 + 4336) - var3), this.a((byte) -53, 168), var7);
             }
           }
         }

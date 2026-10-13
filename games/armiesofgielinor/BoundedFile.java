@@ -140,7 +140,7 @@ final class BoundedFile {
                                     NodeHashIterator.b((byte) -90);
                                   } else {
                                     if (!param2) {
-                                      jg.field_m.f(so.field_b.field_a / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + so.field_b.field_g / 2);
+                                      jg.field_m.drawPixels(so.field_b.field_a / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + so.field_b.field_g / 2);
                                     } else {
                                       ModalDialog.a(61, false);
                                     }

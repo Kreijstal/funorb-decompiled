@@ -162,10 +162,10 @@ final class fe {
         int var6;
         int var7;
         int var8;
-        param4[0].e(param0, param1, param5);
-        param4[1].e(param0 + param2 - param4[0].pixelWidth, param1, param5);
-        param4[2].e(param0, param1 + param3 - param4[0].pixelHeight, param5);
-        param4[3].e(param0 + param2 - param4[0].pixelWidth, param1 + param3 - param4[0].pixelHeight, param5);
+        param4[0].drawWithOpacity(param0, param1, param5);
+        param4[1].drawWithOpacity(param0 + param2 - param4[0].pixelWidth, param1, param5);
+        param4[2].drawWithOpacity(param0, param1 + param3 - param4[0].pixelHeight, param5);
+        param4[3].drawWithOpacity(param0 + param2 - param4[0].pixelWidth, param1 + param3 - param4[0].pixelHeight, param5);
         var6 = param1;
         var7 = param3 - param4[0].pixelHeight;
         var8 = param2 - param4[0].pixelWidth;

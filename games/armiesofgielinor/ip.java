@@ -63,7 +63,7 @@ final class ip {
             if (param4.verticalAlignment == 2) {
               var7 = var7 + (param0.height - this.field_j.canvasHeight);
             }
-            this.field_j.g(var6_int, var7);
+            this.field_j.drawTransparent(var6_int, var7);
           }
           var6 = param4.getDisplayText(0, param0);
           if (param1 < 44) {

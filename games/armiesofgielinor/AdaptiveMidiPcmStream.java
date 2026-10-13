@@ -115,8 +115,8 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             var6_int = param1[0].canvasWidth;
             var7 = param1[2].canvasWidth;
             var8 = param1[1].canvasWidth;
-            param1[0].b(param3, param4, param0);
-            param1[2].b(-var7 + param2 + param3, param4, param0);
+            param1[0].drawShadedGrayscale(param3, param4, param0);
+            param1[2].drawShadedGrayscale(-var7 + param2 + param3, param4, param0);
             SoftwareRaster.b(DefeatPlayerConsoleCommand.field_H);
             SoftwareRaster.b(var6_int + param3, param4, param3 + param2 - var7, param1[1].canvasHeight + param4);
             if (param5 != -3225) {
@@ -125,7 +125,7 @@ final class AdaptiveMidiPcmStream extends MidiPcmStream {
             var9 = var6_int + param3;
             var10 = -var7 + param2 + param3;
             for (param3 = var9; var10 > param3; param3 = param3 + var8) {
-              param1[1].b(param3, param4, param0);
+              param1[1].drawShadedGrayscale(param3, param4, param0);
             }
             SoftwareRaster.a(DefeatPlayerConsoleCommand.field_H);
             return;

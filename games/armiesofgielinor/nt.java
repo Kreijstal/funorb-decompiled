@@ -85,14 +85,14 @@ final class nt extends IntrusiveNode {
               } else {
                 stackIn_20_4 = 2;
               }
-              ((RgbSprite) (Object) stackIn_19_0).f(stackIn_19_1, stackIn_19_2, stackIn_19_3 * stackIn_20_4);
+              ((RgbSprite) (Object) stackIn_19_0).drawAdditive(stackIn_19_1, stackIn_19_2, stackIn_19_3 * stackIn_20_4);
               var5_int = 3 & (var5_int ^ param1);
               var6++;
             }
           }
           fe.a(vf.smokeSprites[3 & param1], param3, param4);
           param1 = param1 >> 2;
-          vf.smokeSprites[(3 & param1) + 4].f(param3, -4 + param4, 128);
+          vf.smokeSprites[(3 & param1) + 4].drawAdditive(param3, -4 + param4, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -70,9 +70,9 @@ abstract class PreparedAction extends IntrusiveNode {
 
     final static void a(int param0, boolean param1, int param2, RgbSprite[] param3, int param4, int param5) {
         try {
-          param3[0].e(param2, param5, param0);
-          param3[1].c(param2 + param3[1].pixelWidth, param5, param4 - (param3[2].pixelWidth << 1), param3[2].pixelHeight, param0);
-          param3[2].e(param4 + (param2 - param3[2].pixelWidth), param5, param0);
+          param3[0].drawWithOpacity(param2, param5, param0);
+          param3[1].drawScaledWithOpacity(param2 + param3[1].pixelWidth, param5, param4 - (param3[2].pixelWidth << 1), param3[2].pixelHeight, param0);
+          param3[2].drawWithOpacity(param4 + (param2 - param3[2].pixelWidth), param5, param0);
           if (!param1) {
             field_p = (RgbSprite) null;
           }

@@ -77,7 +77,7 @@ final class RasterState extends IntrusiveNode {
                 }
                 ValidationStatusWidget.a(param3, param0, param1, var7, var8, -29403, var9, param5);
                 if (Unit.field_L) {
-                  ChannelBaseVolumeConsoleCommand.field_I.g(param5, param3);
+                  ChannelBaseVolumeConsoleCommand.field_I.drawTransparent(param5, param3);
                 }
               }
             } else {

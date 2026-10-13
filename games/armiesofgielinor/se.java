@@ -122,7 +122,7 @@ final class se {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = AccountRegistrationDialog.bitwiseOr(MovementPresentation.decodedSpritePalette[rn.bitwiseAnd((int) var20[var7], 255)], rn.bitwiseAnd((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new nj(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var16));
           }
         }
         if (param0 != 32) {

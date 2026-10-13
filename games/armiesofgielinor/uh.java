@@ -44,7 +44,7 @@ final class uh {
           SoftwareRaster.b();
           MatchSetupPanel.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
           NumericDateInputWidget.field_P.b();
-          DropTargetWidgetContainer.field_J.g(param6, param0);
+          DropTargetWidgetContainer.field_J.drawTransparent(param6, param0);
           if (!param1) {
             int[] var8 = (int[]) null;
             uh.a((int[]) null, -31);

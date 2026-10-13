@@ -42,7 +42,7 @@ final class bj extends IntrusiveNode {
           for (var6 = 0; var6 < var1; var6++) {
             var5_ref_int__[var6] = AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(255, (int) var16[var6]) << 24, MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var17[var6])]);
           }
-          var3 = new nj(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var13);
+          var3 = new ArgbSprite(lg.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[0], CampaignMenuButton.decodedSpriteOffsetYs[0], ClippedWidgetContainer.decodedSpriteWidths[0], c.decodedSpriteHeights[0], var13);
         }
         StripedProgressWidget.releaseSpriteDecodeBuffers((byte) 113);
         return (RgbSprite) (var3);

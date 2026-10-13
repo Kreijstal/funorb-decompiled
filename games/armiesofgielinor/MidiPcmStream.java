@@ -5,7 +5,7 @@ class MidiPcmStream extends PcmStream {
     private MidiFileReader midiReader;
     private int[] channelModulation;
     static int[] field_E;
-    static nj field_H;
+    static ArgbSprite field_H;
     private MusicPatchNode[][] notesByGroup;
     int[] channelRetriggerSteps;
     private int[] channelPortamentoTime;

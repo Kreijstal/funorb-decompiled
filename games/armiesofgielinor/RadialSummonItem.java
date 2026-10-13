@@ -51,20 +51,20 @@ final class RadialSummonItem {
         if (!this.unitChoice) {
           if (availability > 0) {
             if (this.containsPoint(112, AiPlanningStrategy.pointerX, originY, originX, ko.pointerY)) {
-              UnitModelPreview.field_d[this.godGroupId].g(this.offsetX + originX - 25, originY + (this.offsetY - 25));
-              UnitModelPreview.field_d[0].f(originX + (this.offsetX - 25), -25 + this.offsetY + originY, 256);
+              UnitModelPreview.field_d[this.godGroupId].drawTransparent(this.offsetX + originX - 25, originY + (this.offsetY - 25));
+              UnitModelPreview.field_d[0].drawAdditive(originX + (this.offsetX - 25), -25 + this.offsetY + originY, 256);
               if (var6 != 0) {
-                UnitModelPreview.field_d[this.godGroupId].g(this.offsetX + originX - 25, originY + (this.offsetY - 25));
-                UnitModelPreview.field_d[this.godGroupId].g(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
+                UnitModelPreview.field_d[this.godGroupId].drawTransparent(this.offsetX + originX - 25, originY + (this.offsetY - 25));
+                UnitModelPreview.field_d[this.godGroupId].drawWithBrightness(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
               }
             } else {
-              UnitModelPreview.field_d[this.godGroupId].g(this.offsetX + originX - 25, originY + (this.offsetY - 25));
+              UnitModelPreview.field_d[this.godGroupId].drawTransparent(this.offsetX + originX - 25, originY + (this.offsetY - 25));
               if (var6 != 0) {
-                UnitModelPreview.field_d[this.godGroupId].g(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
+                UnitModelPreview.field_d[this.godGroupId].drawWithBrightness(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
               }
             }
           } else {
-            UnitModelPreview.field_d[this.godGroupId].g(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
+            UnitModelPreview.field_d[this.godGroupId].drawWithBrightness(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
           }
           fe.a(this.offsetX + originX, originY + this.offsetY, this.godGroupId, availability, fe.field_b);
           if (var6 == 0) {
@@ -73,48 +73,48 @@ final class RadialSummonItem {
         }
         if (0 < availability) {
           if (this.containsPoint(31, AiPlanningStrategy.pointerX, originY, originX, ko.pointerY)) {
-            StandardContentDialog.field_ob.b(originX - (-this.offsetX + 20), -20 + (this.offsetY + originY), TutorialLayout.field_g[this.godGroupId]);
+            StandardContentDialog.field_ob.drawShadedGrayscale(originX - (-this.offsetX + 20), -20 + (this.offsetY + originY), TutorialLayout.field_g[this.godGroupId]);
             if (var6 == 0) {
               if (this.choiceId != 81) {
-                DeployAction.field_x[this.choiceId].g(this.offsetX + originX - 20, this.offsetY + originY - 20);
-                km.field_h[0].g(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+                DeployAction.field_x[this.choiceId].drawTransparent(this.offsetX + originX - 20, this.offsetY + originY - 20);
+                km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
                 return;
               }
-              DeployAction.field_x[4].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
-              km.field_h[0].g(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+              DeployAction.field_x[4].drawTransparent(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
+              km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
               return;
             }
           }
-          StandardContentDialog.field_ob.d(-20 + this.offsetX + originX, originY + this.offsetY - 20, TutorialLayout.field_g[this.godGroupId]);
+          StandardContentDialog.field_ob.drawTintedGrayscale(-20 + this.offsetX + originX, originY + this.offsetY - 20, TutorialLayout.field_g[this.godGroupId]);
           if (this.choiceId == 81) {
-            DeployAction.field_x[4].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
+            DeployAction.field_x[4].drawTransparent(-20 + this.offsetX + originX, -20 + (originY + this.offsetY));
             if (var6 != 0) {
-              DeployAction.field_x[this.choiceId].g(this.offsetX + originX - 20, this.offsetY + originY - 20);
+              DeployAction.field_x[this.choiceId].drawTransparent(this.offsetX + originX - 20, this.offsetY + originY - 20);
             }
           } else {
-            DeployAction.field_x[this.choiceId].g(this.offsetX + originX - 20, this.offsetY + originY - 20);
+            DeployAction.field_x[this.choiceId].drawTransparent(this.offsetX + originX - 20, this.offsetY + originY - 20);
           }
-          km.field_h[0].g(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
+          km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
           if (var6 != 0) {
-            StandardContentDialog.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+            StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
             if (this.choiceId != 81) {
-              DeployAction.field_x[this.choiceId].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
+              DeployAction.field_x[this.choiceId].drawWithBrightness(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
             }
-            DeployAction.field_x[4].g(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
-            km.field_h[0].g(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
+            DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
+            km.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
           }
           return;
         }
-        StandardContentDialog.field_ob.d(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+        StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
         if (this.choiceId == 81) {
-          DeployAction.field_x[4].g(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
+          DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
         } else {
-          DeployAction.field_x[this.choiceId].g(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
+          DeployAction.field_x[this.choiceId].drawWithBrightness(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
           if (var6 != 0) {
-            DeployAction.field_x[4].g(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
+            DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
           }
         }
-        km.field_h[0].g(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
+        km.field_h[0].drawWithBrightness(-23 + originX + this.offsetX, -23 + (originY + this.offsetY), 10);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
@@ -139,7 +139,7 @@ final class RadialSummonItem {
             var10 = (param0 + param3 / (4 + (param0 & 3))) % 3;
             param0 = param0 >> 1;
             var5_int = var5_int >> 1;
-            SetCoatConsoleCommand.kalphiteSprites[var10].h(60 + var6, 50 + var7);
+            SetCoatConsoleCommand.kalphiteSprites[var10].drawHalfSize(60 + var6, 50 + var7);
             var9++;
             if (var11 != 0) {
               return;

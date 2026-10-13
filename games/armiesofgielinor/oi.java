@@ -91,7 +91,7 @@ final class oi implements WidgetPainter {
           var8 = db.validationStatusIcons[1];
           if (widget instanceof InteractiveWidget &&
             ((InteractiveWidget) (widget)).active) {
-            var8.f((widget.width - var8.canvasWidth >> 1) + (1 + var6_int), (-var8.canvasHeight + widget.height >> 1) + (1 + var7), 256);
+            var8.drawAdditive((widget.width - var8.canvasWidth >> 1) + (1 + var6_int), (-var8.canvasHeight + widget.height >> 1) + (1 + var7), 256);
           }
           if (!widget.isFocused(false)) {
             return;

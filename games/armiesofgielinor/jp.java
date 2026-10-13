@@ -51,9 +51,9 @@ final class jp {
           if (param5 != -8991) {
             field_g = (int[]) null;
           }
-          param3[0].g(param0, param1, param4);
-          param3[1].b(param3[1].pixelWidth + param0, param1, -(param3[2].pixelWidth << 1) + param2, param3[2].pixelHeight, param4);
-          param3[2].g(-param3[2].pixelWidth + (param2 + param0), param1, param4);
+          param3[0].drawWithBrightness(param0, param1, param4);
+          param3[1].drawScaledWithBrightness(param3[1].pixelWidth + param0, param1, -(param3[2].pixelWidth << 1) + param2, param3[2].pixelHeight, param4);
+          param3[2].drawWithBrightness(-param3[2].pixelWidth + (param2 + param0), param1, param4);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jp.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

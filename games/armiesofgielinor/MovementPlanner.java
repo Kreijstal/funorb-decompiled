@@ -476,7 +476,7 @@ final class MovementPlanner {
           }
           var3_int = camera.screenPosition[0];
           var4 = camera.screenPosition[1];
-          TaggedMapData.field_f[10].g(var3_int, var4);
+          TaggedMapData.field_f[10].drawTransparent(var3_int, var4);
           camera.gridPosition[1] = this.targetY;
           camera.gridPosition[0] = this.targetX;
           camera.projectModelAnchor(obfuscationGuard + 9470341);
@@ -515,12 +515,12 @@ final class MovementPlanner {
                       var12 = -5;
                     }
                   }
-                  TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var3_int, var4, 128);
-                  TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var11 + var3_int, var4 + var12, 128);
-                  TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var3_int + (var11 << 1), (var12 << 1) + var4, 128);
+                  TaggedMapData.field_f[this.pathDirections[var10] + var9].drawWithOpacity(var3_int, var4, 128);
+                  TaggedMapData.field_f[this.pathDirections[var10] + var9].drawWithOpacity(var11 + var3_int, var4 + var12, 128);
+                  TaggedMapData.field_f[this.pathDirections[var10] + var9].drawWithOpacity(var3_int + (var11 << 1), (var12 << 1) + var4, 128);
                   if (var10 < this.pathDirections.length - 1 &&
                     this.pathDirections[1 + var10] == this.pathDirections[var10]) {
-                    TaggedMapData.field_f[this.pathDirections[var10] + var9].e(var3_int + 3 * var11, 3 * var12 + var4, 128);
+                    TaggedMapData.field_f[this.pathDirections[var10] + var9].drawWithOpacity(var3_int + 3 * var11, 3 * var12 + var4, 128);
                   }
                   var4 = var4 + (var12 << 2);
                   var3_int = var3_int + (var11 << 2);
@@ -536,7 +536,7 @@ final class MovementPlanner {
                   }
                 }
               }
-              TaggedMapData.field_f[var9 + 5].e(var5, var6, 128);
+              TaggedMapData.field_f[var9 + 5].drawWithOpacity(var5, var6, 128);
             }
           } else {
             stackIn_6_0 = TaggedMapData.field_f;
@@ -546,7 +546,7 @@ final class MovementPlanner {
             } else {
               stackIn_7_2 = 6;
             }
-            ((RgbSprite) (Object) stackIn_6_0[stackIn_6_1 + stackIn_7_2]).g(var5, var6);
+            ((RgbSprite) (Object) stackIn_6_0[stackIn_6_1 + stackIn_7_2]).drawTransparent(var5, var6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

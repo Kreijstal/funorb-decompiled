@@ -343,7 +343,7 @@ final class r extends vt {
           return;
         }
         int var7 = var6 + this.field_K;
-        var2.g(var5, var7);
+        var2.drawTransparent(var5, var7);
     }
 
     private final void d(int param0, int param1, int param2) {

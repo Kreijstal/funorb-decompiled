@@ -90,27 +90,27 @@ final class StripedProgressWidget extends Widget {
           tileX = -this.stripeOffset + x;
           guardQuotient = -123 / ((obfuscationGuard + 26) / 40);
           while (tileX < rightX) {
-            texture.g(tileX, y);
+            texture.drawTransparent(tileX, y);
             tileX = tileX + texture.pixelWidth;
           }
           QuickChatPhraseRepository.popRasterState(-18862);
           if (SoftwareRaster.clipLeft <= x + this.rightCapMask.pixelWidth) {
             CombatSandbox.a(this.capScratch, 3);
-            texture.g(-this.stripeOffset, 0);
-            texture.g(this.stripeWidth * 2 - this.stripeOffset, 0);
+            texture.drawTransparent(-this.stripeOffset, 0);
+            texture.drawTransparent(this.stripeWidth * 2 - this.stripeOffset, 0);
             this.leftCapMask.b(0, 0);
             QuickChatPhraseRepository.popRasterState(-18862);
-            this.capScratch.g(x, y);
+            this.capScratch.drawTransparent(x, y);
           }
           if (-this.rightCapMask.pixelWidth + rightX <= SoftwareRaster.clipRight) {
             CombatSandbox.a(this.capScratch, 3);
             for (rightTileOffset = -this.rightCapMask.pixelWidth + this.width + this.stripeOffset; rightTileOffset > this.stripeWidth * 2; rightTileOffset = rightTileOffset - this.stripeWidth * 2) {
             }
-            texture.g(-rightTileOffset, 0);
-            texture.g(-rightTileOffset + this.stripeWidth * 2, 0);
+            texture.drawTransparent(-rightTileOffset, 0);
+            texture.drawTransparent(-rightTileOffset + this.stripeWidth * 2, 0);
             this.rightCapMask.b(0, 0);
             QuickChatPhraseRepository.popRasterState(-18862);
-            this.capScratch.g(rightX - this.rightCapMask.pixelWidth, y);
+            this.capScratch.drawTransparent(rightX - this.rightCapMask.pixelWidth, y);
             return;
           }
           return;

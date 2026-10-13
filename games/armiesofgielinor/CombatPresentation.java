@@ -2817,7 +2817,7 @@ final class CombatPresentation implements EventPresentation {
               return;
             }
           }
-          this.framebuffer.f(0, 0);
+          this.framebuffer.drawPixels(0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3083,12 +3083,12 @@ final class CombatPresentation implements EventPresentation {
             }
           }
           if (param3 < 0) {
-            this.field_A.f(param1, param2);
+            this.field_A.drawPixels(param1, param2);
             if (var6 == 0) {
               return;
             }
           }
-          this.field_A.e(param1, param2, param3);
+          this.field_A.drawWithOpacity(param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

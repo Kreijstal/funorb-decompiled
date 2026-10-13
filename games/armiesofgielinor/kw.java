@@ -95,14 +95,14 @@ final class kw extends InteractiveWidget {
             so.validationChecking != var8) {
             if (var8 == rn.validationInvalid) {
               var19 = db.validationStatusIcons[2];
-              var19.f(-(var19.pixelWidth >> 1) + var5, -(var19.pixelHeight >> 1) + var6, 256);
+              var19.drawAdditive(-(var19.pixelWidth >> 1) + var5, -(var19.pixelHeight >> 1) + var6, 256);
               return;
             }
             if (var8 != oo.validationValid) {
               return;
             }
             var20 = db.validationStatusIcons[1];
-            var20.f(-(var20.pixelWidth >> 1) + var5, var6 - (var20.pixelHeight >> 1), 256);
+            var20.drawAdditive(-(var20.pixelWidth >> 1) + var5, var6 - (var20.pixelHeight >> 1), 256);
             return;
           }
           var21 = db.validationStatusIcons[0];
@@ -127,7 +127,7 @@ final class kw extends InteractiveWidget {
           }
           var21.b(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.field_L << 10, 4096);
           QuickChatPhraseRepository.popRasterState(-18862);
-          PreparedAction.field_p.f(-var21.canvasWidth + var5, -var21.canvasHeight + var6, 256);
+          PreparedAction.field_p.drawAdditive(-var21.canvasWidth + var5, -var21.canvasHeight + var6, 256);
           return;
         }
         this.drawWidget(105, -107, (byte) -98, -86);
@@ -147,20 +147,20 @@ final class kw extends InteractiveWidget {
           }
           var15.b(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.field_L << 10, 4096);
           QuickChatPhraseRepository.popRasterState(-18862);
-          PreparedAction.field_p.f(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
+          PreparedAction.field_p.drawAdditive(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
           return;
         }
         if (so.validationChecking != var8Lifetime1) {
           if (var8Lifetime1 == rn.validationInvalid) {
             var17 = db.validationStatusIcons[2];
-            var17.f(-(var17.pixelWidth >> 1) + var5, -(var17.pixelHeight >> 1) + var6, 256);
+            var17.drawAdditive(-(var17.pixelWidth >> 1) + var5, -(var17.pixelHeight >> 1) + var6, 256);
             return;
           }
           if (var8Lifetime1 != oo.validationValid) {
             return;
           }
           var18 = db.validationStatusIcons[1];
-          var18.f(-(var18.pixelWidth >> 1) + var5, var6 - (var18.pixelHeight >> 1), 256);
+          var18.drawAdditive(-(var18.pixelWidth >> 1) + var5, var6 - (var18.pixelHeight >> 1), 256);
           return;
         }
         var16 = db.validationStatusIcons[0];
@@ -186,7 +186,7 @@ final class kw extends InteractiveWidget {
         }
         var16.b(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.field_L << 10, 4096);
         QuickChatPhraseRepository.popRasterState(-18862);
-        PreparedAction.field_p.f(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
+        PreparedAction.field_p.drawAdditive(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
     }
 
     kw(ValidationSource param0) {

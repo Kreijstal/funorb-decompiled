@@ -34,7 +34,7 @@ final class ConsoleEvaluationException extends Exception {
           if (var11 > 0) {
             var13 = var6_int + (param4 << 9) / var11;
             var14 = (var10 << 9) / var11 + var7;
-            param1.f(var13, var14, param2);
+            param1.drawAdditive(var13, var14, param2);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

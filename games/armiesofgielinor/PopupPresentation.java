@@ -514,15 +514,15 @@ final class PopupPresentation implements EventPresentation {
         }
         int var3 = this.field_m > 0 ? this.field_m : -this.field_m;
         if (var3 != 1) {
-          od.field_d[param0].c(this.field_f + (40 + (this.presenter.screenX - var3 * 5)), this.field_r + (this.presenter.screenY + (-20 - var3 * 5) - this.elapsedFrames), this.field_m * 10, var3 * 10, 40 - this.elapsedFrames << 2);
+          od.field_d[param0].drawScaledWithOpacity(this.field_f + (40 + (this.presenter.screenX - var3 * 5)), this.field_r + (this.presenter.screenY + (-20 - var3 * 5) - this.elapsedFrames), this.field_m * 10, var3 * 10, 40 - this.elapsedFrames << 2);
         } else {
-          od.field_d[param0].e(this.field_f + 35 + this.presenter.screenX, -this.elapsedFrames + (this.presenter.screenY - 25) + this.field_r, -this.elapsedFrames + 40 << 2);
+          od.field_d[param0].drawWithOpacity(this.field_f + 35 + this.presenter.screenX, -this.elapsedFrames + (this.presenter.screenY - 25) + this.field_r, -this.elapsedFrames + 40 << 2);
         }
     }
 
     private final void c(int param0) {
         SoftwareRaster.a(this.presenter.screenX + 40, -20 + this.presenter.screenY, 10, this.field_i);
-        mv.field_a[this.field_a ? 1 : 0].g(20 + this.presenter.screenX, this.presenter.screenY - 35);
+        mv.field_a[this.field_a ? 1 : 0].drawTransparent(20 + this.presenter.screenX, this.presenter.screenY - 35);
         if (param0 != 3) {
           this.drawBaseLayer((byte) -24);
         }

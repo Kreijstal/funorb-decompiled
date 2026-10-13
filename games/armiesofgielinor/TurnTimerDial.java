@@ -26,7 +26,7 @@ final class TurnTimerDial {
         int var10;
         var14 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (!this.useSweepMask) {
-          vg.field_q[0].g(screenX, screenY);
+          vg.field_q[0].drawTransparent(screenX, screenY);
         } else {
           var4 = 0;
           var5 = SoftwareRaster.width * screenY + screenX;

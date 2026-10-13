@@ -103,29 +103,29 @@ final class ReportAbuseDialog extends ClientUiComponent {
             SoftwareRaster.b(pd.field_g);
             if (null != sprites[0]) {
               SoftwareRaster.b(x, y, var16, var18);
-              sprites[0].g(x, y);
+              sprites[0].drawTransparent(x, y);
               SoftwareRaster.a(pd.field_g);
             }
             if (sprites[2] != null) {
               SoftwareRaster.b(var17, y, var10, var18);
-              sprites[2].g(var13, y);
+              sprites[2].drawTransparent(var13, y);
               SoftwareRaster.a(pd.field_g);
             }
             if (sprites[6] != null) {
               SoftwareRaster.b(x, var19, var16, var11);
-              sprites[6].g(x, var15);
+              sprites[6].drawTransparent(x, var15);
               SoftwareRaster.a(pd.field_g);
             }
             if (null != sprites[8]) {
               SoftwareRaster.b(var17, var19, var10, var11);
-              sprites[8].g(var13, var15);
+              sprites[8].drawTransparent(var13, var15);
               SoftwareRaster.a(pd.field_g);
             }
             if (sprites[1] != null &&
               sprites[1].canvasWidth != 0) {
               SoftwareRaster.b(var16, y, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + sprites[1].canvasWidth) {
-                sprites[1].g(var20, y);
+                sprites[1].drawTransparent(var20, y);
               }
               SoftwareRaster.a(pd.field_g);
             }
@@ -133,7 +133,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
               0 != sprites[7].canvasWidth) {
               SoftwareRaster.b(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + sprites[7].canvasWidth) {
-                sprites[7].g(var20Lifetime1, var15);
+                sprites[7].drawTransparent(var20Lifetime1, var15);
               }
               SoftwareRaster.a(pd.field_g);
             }
@@ -141,7 +141,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
               0 != sprites[3].canvasHeight) {
               SoftwareRaster.b(x, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + sprites[3].canvasHeight) {
-                sprites[3].g(x, var20Lifetime2);
+                sprites[3].drawTransparent(x, var20Lifetime2);
               }
               SoftwareRaster.a(pd.field_g);
             }
@@ -149,7 +149,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
               sprites[5].canvasHeight != 0) {
               SoftwareRaster.b(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + sprites[5].canvasHeight) {
-                sprites[5].g(var13, var20Lifetime3);
+                sprites[5].drawTransparent(var13, var20Lifetime3);
               }
               SoftwareRaster.a(pd.field_g);
             }
@@ -161,7 +161,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
               SoftwareRaster.b(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + sprites[4].canvasHeight) {
                 for (var21 = var12; var21 < var13; var21 = var21 + sprites[4].canvasWidth) {
-                  sprites[4].g(var21, var20Lifetime4);
+                  sprites[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
               SoftwareRaster.a(pd.field_g);

@@ -56,14 +56,14 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
           CombatSandbox.a(compositeSprite, 3);
           this.child.drawWidget(0, 0, (byte) -86, renderLayer);
           QuickChatPhraseRepository.popRasterState(-18862);
-          compositeSprite.e(this.x + originX, originY + this.y, this.alpha);
+          compositeSprite.drawWithOpacity(this.x + originX, originY + this.y, this.alpha);
           return;
         }
         field_M = (String[]) null;
         CombatSandbox.a(compositeSprite, 3);
         this.child.drawWidget(0, 0, (byte) -86, renderLayer);
         QuickChatPhraseRepository.popRasterState(-18862);
-        compositeSprite.e(this.x + originX, originY + this.y, this.alpha);
+        compositeSprite.drawWithOpacity(this.x + originX, originY + this.y, this.alpha);
     }
 
     AlphaWidgetContainer(Widget child) {

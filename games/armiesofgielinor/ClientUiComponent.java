@@ -884,9 +884,9 @@ class ClientUiComponent extends ClientUiNode {
             var24 = var24 + (this.height - var17.canvasHeight);
           }
           if (256 <= this.spriteOpacity) {
-            var17.g(var23_int, var24);
+            var17.drawTransparent(var23_int, var24);
           } else {
-            var17.e(var23_int, var24, this.spriteOpacity);
+            var17.drawWithOpacity(var23_int, var24, this.spriteOpacity);
           }
         }
         boolean decompiledFrameRemainder0 = true;

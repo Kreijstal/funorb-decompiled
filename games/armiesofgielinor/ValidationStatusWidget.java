@@ -120,20 +120,20 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           }
           waitingIcon.b(112, 144, waitingIcon.canvasWidth << 4, waitingIcon.canvasHeight << 4, -this.spinnerTick << 10, 4096);
           QuickChatPhraseRepository.popRasterState(-18862);
-          this.spinnerSprite.f(iconX - (waitingIcon.canvasWidth >> 1), -waitingIcon.canvasHeight + iconCenterY, 256);
+          this.spinnerSprite.drawAdditive(iconX - (waitingIcon.canvasWidth >> 1), -waitingIcon.canvasHeight + iconCenterY, 256);
           return;
         }
         if (so.validationChecking != iconState) {
           if (iconState == rn.validationInvalid) {
             invalidIcon = db.validationStatusIcons[2];
-            invalidIcon.f(iconX, -(invalidIcon.pixelHeight >> 1) + iconCenterY, 256);
+            invalidIcon.drawAdditive(iconX, -(invalidIcon.pixelHeight >> 1) + iconCenterY, 256);
             return;
           }
           if (iconState != oo.validationValid) {
             return;
           }
           validIcon = db.validationStatusIcons[1];
-          validIcon.f(iconX, -(validIcon.pixelHeight >> 1) + iconCenterY, 256);
+          validIcon.drawAdditive(iconX, -(validIcon.pixelHeight >> 1) + iconCenterY, 256);
           return;
         }
         checkingIcon = db.validationStatusIcons[0];
@@ -159,7 +159,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         }
         checkingIcon.b(112, 144, checkingIcon.canvasWidth << 4, checkingIcon.canvasHeight << 4, -this.spinnerTick << 10, 4096);
         QuickChatPhraseRepository.popRasterState(-18862);
-        this.spinnerSprite.f(iconX - (checkingIcon.canvasWidth >> 1), -checkingIcon.canvasHeight + iconCenterY, 256);
+        this.spinnerSprite.drawAdditive(iconX - (checkingIcon.canvasWidth >> 1), -checkingIcon.canvasHeight + iconCenterY, 256);
         return;
     }
 

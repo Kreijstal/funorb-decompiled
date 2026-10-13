@@ -114,8 +114,8 @@ final class InstructionsPanel {
               if (null != UnitModelPreview.field_d &&
                 1 + var7 >= 0 &&
                 1 + var7 < UnitModelPreview.field_d.length) {
-                UnitModelPreview.field_d[1 + var7].h(db.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
-                gt.field_c[var7 + 1].h(db.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
+                UnitModelPreview.field_d[1 + var7].drawHalfSize(db.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
+                gt.field_c[var7 + 1].drawHalfSize(db.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
                 if (var8 > 0 &&
                   null != fe.field_o &&
                   0 <= 1 + var7 &&
@@ -669,9 +669,9 @@ final class InstructionsPanel {
           }
           ProgressMessageDialog.field_rb[param5.getUnitCategory(0)].draw(106, 32);
           DateInputWidget.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
-          EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
+          EventPresenter.field_t.drawShadedGrayscale(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(5605);
-          SpellConfirmationDialog.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
+          SpellConfirmationDialog.field_j.drawWithOpacity(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -1081,26 +1081,26 @@ final class InstructionsPanel {
               var19 = BufferedFile.field_k[1 + param1];
               if (var15 != param1) {
                 if (param1 == var16) {
-                  var19.f(0, 0, -var14 + var9);
+                  var19.drawAdditive(0, 0, -var14 + var9);
                 }
               } else {
-                var19.f(0, 0, var9 - var13);
+                var19.drawAdditive(0, 0, var9 - var13);
               }
-              var19.f(0, 0, var9);
+              var19.drawAdditive(0, 0, var9);
               var20 = UnitModelPreview.field_d[param1 + 1];
-              var20.g(-var17, -var18);
+              var20.drawTransparent(-var17, -var18);
               if (var15 != param1) {
                 if (param1 == var16) {
-                  var20.f(-var17, -var18, var9 - var14);
+                  var20.drawAdditive(-var17, -var18, var9 - var14);
                 }
               } else {
-                var20.f(-var17, -var18, -var13 + var9);
+                var20.drawAdditive(-var17, -var18, -var13 + var9);
               }
               var21 = -12;
               var22 = -17;
               var24 = 105 / ((param4 + 25) / 48);
               var23 = gt.field_c[1 + param1];
-              var23.g(var21 - var17, var22 - var18);
+              var23.drawTransparent(var21 - var17, var22 - var18);
               so.field_b.a(5605);
               SoftwareRaster.a(this.field_J);
               SoftwareRaster.b(this.field_J);
@@ -1283,7 +1283,7 @@ final class InstructionsPanel {
           }
           param4 = stackIn_26_0;
           if (param3 != null) {
-            param3.g(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
+            param3.drawTransparent(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           } else {
             if (param5 == null) {
               return null;
@@ -1385,7 +1385,7 @@ final class InstructionsPanel {
           if (param4 != null) {
             param3 = param3 - param4.offsetY;
             if (param4 != null) {
-              param4.h(db.a(true, param2), MatchConditionEntry.a(param3, (byte) 94));
+              param4.drawHalfSize(db.a(true, param2), MatchConditionEntry.a(param3, (byte) 94));
             }
           }
           if (param1 == 26823) {

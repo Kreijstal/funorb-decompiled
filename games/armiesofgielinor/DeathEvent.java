@@ -140,7 +140,7 @@ final class DeathEvent extends GameEvent {
     final static RgbSprite a(int[] param0, int[] param1, String param2, int param3) {
         RuntimeException var4 = null;
         RgbSprite stackIn_2_0 = null;
-        nj stackIn_4_0 = null;
+        ArgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

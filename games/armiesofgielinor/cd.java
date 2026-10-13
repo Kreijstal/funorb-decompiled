@@ -149,8 +149,8 @@ final class cd {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        BattleCharacter.field_h[uc.spellDefinitions[param0][param3]].h(48 + param1, param2 + 12);
-        km.field_h[0].h(param1 + 46, param2 + 10);
+        BattleCharacter.field_h[uc.spellDefinitions[param0][param3]].drawHalfSize(48 + param1, param2 + 12);
+        km.field_h[0].drawHalfSize(param1 + 46, param2 + 10);
     }
 
     public static void a(boolean param0) {

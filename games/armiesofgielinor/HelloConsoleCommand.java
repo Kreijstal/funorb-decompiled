@@ -20,9 +20,9 @@ final class HelloConsoleCommand extends ConsoleCommand {
           if (param2 >= -112) {
             field_E = (String) null;
           }
-          param4[0].f(param1, param0, param5);
+          param4[0].drawAdditive(param1, param0, param5);
           param4[1].d(param4[1].pixelWidth + param1, param0, -(param4[2].pixelWidth << 1) + param3, param4[2].pixelHeight, param5);
-          param4[2].f(param3 + (param1 - param4[2].pixelWidth), param0, param5);
+          param4[2].drawAdditive(param3 + (param1 - param4[2].pixelWidth), param0, param5);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

@@ -113,11 +113,11 @@ final class UnitInfoPopup extends IntrusiveNode {
           }
           ProgressMessageDialog.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
           DateInputWidget.field_E.drawCentered(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
-          EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
+          EventPresenter.field_t.drawShadedGrayscale(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(param2 + 5600);
           var9Lifetime1 = this.screenX - param3 - 75;
           var10 = this.screenY - (param4 + 80);
-          SpellConfirmationDialog.field_j.e(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
+          SpellConfirmationDialog.field_j.drawWithOpacity(var9Lifetime1, var10, -this.fadeOffset + 32 << 3);
           var11 = bw.unitDefinitions[this.unit.unitType][12];
           if (var11 != -1) {
             PreparedAction.a(32 - this.fadeOffset << 3, true, var9Lifetime1 + 96, e.field_b, 40, 60 + var10);
@@ -128,7 +128,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           var12 = this.unit.f(param2 + 11);
           if (var12 != -1) {
             PreparedAction.a(-this.fadeOffset + 32 << 3, true, var9Lifetime1, e.field_b, 40, var10 + 60);
-            ii.field_a[var12].c(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);
+            ii.field_a[var12].drawScaledWithOpacity(var9Lifetime1 + 8, 60 + var10, 24, 24, -this.fadeOffset + 32 << 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

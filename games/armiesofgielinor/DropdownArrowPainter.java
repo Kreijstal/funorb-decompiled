@@ -20,9 +20,9 @@ final class DropdownArrowPainter implements WidgetPainter {
             ds.field_a[var1_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
             GameCanvas.field_c[var1_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
             ds.field_a[var1_int].b();
-            DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var1_int]);
+            DiskCacheWorker.field_d.drawTintedGrayscale(0, 0, op.field_c[0][var1_int]);
             GameCanvas.field_c[var1_int].b();
-            ClientUiNode.field_y.b(0, 0, op.field_c[0][var1_int]);
+            ClientUiNode.field_y.drawShadedGrayscale(0, 0, op.field_c[0][var1_int]);
           }
           QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {

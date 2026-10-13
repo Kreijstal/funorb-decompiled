@@ -53,9 +53,9 @@ final class mv {
               }
             }
             if (param3 >= 0) {
-              GameCanvas.field_c[param3].f(param0 - (-10 - var9) + (int)((double)var8 * Math.sin((double)(10 + var6 + param2 * 3) * 3.141592653589793 / (double)(230 + 4 * var5_int))), param4 + var6, var7 >> 1);
+              GameCanvas.field_c[param3].drawAdditive(param0 - (-10 - var9) + (int)((double)var8 * Math.sin((double)(10 + var6 + param2 * 3) * 3.141592653589793 / (double)(230 + 4 * var5_int))), param4 + var6, var7 >> 1);
             } else {
-              ClientUiNode.field_y.f(var9 + 10 + (param0 + (int)(Math.sin((double)(var6 + param2 * 3 + 10) * 3.141592653589793 / (double)(var5_int * 4 + 230)) * (double)var8)), var6 + param4, var7 >> 1);
+              ClientUiNode.field_y.drawAdditive(var9 + 10 + (param0 + (int)(Math.sin((double)(var6 + param2 * 3 + 10) * 3.141592653589793 / (double)(var5_int * 4 + 230)) * (double)var8)), var6 + param4, var7 >> 1);
             }
           }
           if (param3 < 0) {
@@ -74,15 +74,15 @@ final class mv {
               } else {
                 var6Lifetime1 = -(var6Lifetime1 << 4) + 256;
               }
-              ds.field_a[param3].f(param0 - 5 + (int)((double)var7Lifetime1 * Math.sin((double)(var5_intLifetime1 + param2) * 3.141592653589793 / 236.0)), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
-              ds.field_a[param3].f(param0 + (-20 + (int)((double)var7Lifetime1 * Math.sin(3.141592653589793 * (double)(5 + (param2 + var5_intLifetime1)) / 256.0))), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
-              ds.field_a[param3].f((int)(Math.sin((double)(var5_intLifetime1 + (param2 + 10)) * 3.141592653589793 / 216.0) * (double)var7Lifetime1) + 10 + param0, param4 + var5_intLifetime1, var6Lifetime1 >> 2);
+              ds.field_a[param3].drawAdditive(param0 - 5 + (int)((double)var7Lifetime1 * Math.sin((double)(var5_intLifetime1 + param2) * 3.141592653589793 / 236.0)), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
+              ds.field_a[param3].drawAdditive(param0 + (-20 + (int)((double)var7Lifetime1 * Math.sin(3.141592653589793 * (double)(5 + (param2 + var5_intLifetime1)) / 256.0))), param4 + var5_intLifetime1, var6Lifetime1 >> 2);
+              ds.field_a[param3].drawAdditive((int)(Math.sin((double)(var5_intLifetime1 + (param2 + 10)) * 3.141592653589793 / 216.0) * (double)var7Lifetime1) + 10 + param0, param4 + var5_intLifetime1, var6Lifetime1 >> 2);
             }
             return;
           }
           pv.field_e.b();
           SoftwareRaster.b();
-          TrianglePulse.field_d.d(0, TrianglePulse.field_d.pixelHeight >> 1, op.field_c[0][param3]);
+          TrianglePulse.field_d.drawTintedGrayscale(0, TrianglePulse.field_d.pixelHeight >> 1, op.field_c[0][param3]);
           so.field_b.a(5605);
           pv.field_e.d(-20 + param0, -200 + param4, 75, 210, 255);
           pv.field_e.c();

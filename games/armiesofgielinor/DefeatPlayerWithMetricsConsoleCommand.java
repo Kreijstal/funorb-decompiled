@@ -85,23 +85,23 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
             ConsolePanel.field_k.d(param3 - 20, -15 + param2, 92, 92, 256);
           }
           if (!param5) {
-            param9.g(param3, param2);
+            param9.drawTransparent(param3, param2);
             if (!param1) {
               if (param8) {
                 fe.a(RegionAnchor.field_m[2], param3, param2, 56, 56);
                 RegionAnchor.field_m[2].d(param3, param2, 56, 56, 228);
               } else {
                 if (param4) {
-                  RegionAnchor.field_m[3].e(param3, param2);
+                  RegionAnchor.field_m[3].drawQuarterSize(param3, param2);
                 }
               }
             } else {
-              RegionAnchor.field_m[1].e(param3, param2);
+              RegionAnchor.field_m[1].drawQuarterSize(param3, param2);
             }
           } else {
             DropTargetWidgetContainer.field_J.b();
             SoftwareRaster.b();
-            param9.g(0, 0);
+            param9.drawTransparent(0, 0);
             if (!param1) {
               if (param8) {
                 fe.a(RegionAnchor.field_m[2], 0, 0, 56, 56);
@@ -109,16 +109,16 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
               } else {
                 if (!param4) {
                   NumericDateInputWidget.field_P.b();
-                  DropTargetWidgetContainer.field_J.h(param3, param2);
+                  DropTargetWidgetContainer.field_J.drawHalfSize(param3, param2);
                   return;
                 }
-                RegionAnchor.field_m[3].e(0, 0);
+                RegionAnchor.field_m[3].drawQuarterSize(0, 0);
               }
             } else {
-              RegionAnchor.field_m[1].e(0, 0);
+              RegionAnchor.field_m[1].drawQuarterSize(0, 0);
             }
             NumericDateInputWidget.field_P.b();
-            DropTargetWidgetContainer.field_J.h(param3, param2);
+            DropTargetWidgetContainer.field_J.drawHalfSize(param3, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

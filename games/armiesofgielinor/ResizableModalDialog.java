@@ -106,7 +106,7 @@ abstract class ResizableModalDialog extends ModalDialog {
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        gt.field_e.g(this.width + (x - 90), 10 + y);
+        gt.field_e.drawTransparent(this.width + (x - 90), 10 + y);
         EquipmentBattleTutorial.a(t.field_d, x + 5, y + 35, this.width - 10, 8941);
         EquipmentBattleTutorial.a(ip.field_c, x, -22 + y + this.height, this.width, obfuscationGuard ^ 1851672364);
         var4Lifetime2 = this.height - 79;
@@ -368,7 +368,7 @@ abstract class ResizableModalDialog extends ModalDialog {
                 } else {
                   stackIn_44_4 = 1;
                 }
-                ((RgbSprite) (Object) stackIn_43_0).b(stackIn_43_1, stackIn_43_2, stackIn_43_3[stackIn_44_4][var10]);
+                ((RgbSprite) (Object) stackIn_43_0).drawShadedGrayscale(stackIn_43_1, stackIn_43_2, stackIn_43_3[stackIn_44_4][var10]);
                 ModalDialog.groundShadowSprite.b(var8Lifetime1 - 40, -20 + var9Lifetime1);
               }
             }

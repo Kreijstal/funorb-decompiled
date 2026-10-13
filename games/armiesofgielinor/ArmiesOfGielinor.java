@@ -2231,7 +2231,7 @@ public final class ArmiesOfGielinor extends wf {
           km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
           jv.field_b = fk.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
           AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
-          MidiPcmStream.field_H = (nj) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", iw.field_l, false));
+          MidiPcmStream.field_H = (ArgbSprite) (DiskCacheRequest.loadRgbSpriteByName("shine", "basic", iw.field_l, false));
           CampaignDefinition.field_t = pv.a("basic", "statboxbg", iw.field_l, 24914);
           qt.field_e = pv.a("basic", "popupbg", iw.field_l, 24914);
           vq.field_b = pv.a("basic", "gameinfobg", iw.field_l, 24914);

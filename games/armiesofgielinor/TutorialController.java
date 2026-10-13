@@ -73,14 +73,14 @@ final class TutorialController {
           }
           var12 = this.b((byte) 84, itemIndex);
           if (var12 > -1) {
-            BestScoreStrategy.field_m.f(var12, -2 + var9);
+            BestScoreStrategy.field_m.drawPixels(var12, -2 + var9);
           }
           if (var4_int != 17 &&
             var4_int != 18) {
             return;
           }
           var10 = var10 + AccountRequestResult.field_b;
-          EmailConfirmationValidator.field_o[0].g(var10, var9 + 5);
+          EmailConfirmationValidator.field_o[0].drawTransparent(var10, var9 + 5);
           if (17 == var4_int) {
             stackIn_53_0 = 100 * ResourceProtocolClient.effectsGain / 256;
           } else {
@@ -88,7 +88,7 @@ final class TutorialController {
           }
           var13 = stackIn_53_0;
           SoftwareRaster.setClip(var10, 5 + var9, var10 + var13, var9 + 19);
-          EmailConfirmationValidator.field_o[1].g(var10, 5 + var9);
+          EmailConfirmationValidator.field_o[1].drawTransparent(var10, 5 + var9);
           SoftwareRaster.a();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -490,10 +490,10 @@ final class TutorialController {
             stackIn_26_1 = ah.field_b;
             if (var4 == 0) {
               if (stackIn_26_0 == stackIn_26_1) {
-                TeamRoster.field_e.f(db.a(true, 26 + 57 * var2_int), MatchConditionEntry.a(60, (byte) 94), 256);
+                TeamRoster.field_e.drawAdditive(db.a(true, 26 + 57 * var2_int), MatchConditionEntry.a(60, (byte) 94), 256);
               }
               if (pg.playerProfile.getUnlockLevel(0) <= var2_int) {
-                TeamRoster.field_e.f(db.a(true, var2_int * 57 + 26), MatchConditionEntry.a(60, (byte) 94), 64);
+                TeamRoster.field_e.drawAdditive(db.a(true, var2_int * 57 + 26), MatchConditionEntry.a(60, (byte) 94), 64);
               }
               stackIn_23_0 = ud.field_X[var2_int];
               stackIn_23_1 = db.a(true, 34 + var2_int * 57);
@@ -503,7 +503,7 @@ final class TutorialController {
               } else {
                 stackIn_24_3 = 256;
               }
-              ((RgbSprite) (Object) stackIn_23_0).g(stackIn_23_1, stackIn_23_2, stackIn_24_3);
+              ((RgbSprite) (Object) stackIn_23_0).drawWithBrightness(stackIn_23_1, stackIn_23_2, stackIn_24_3);
               var2_int++;
               continue;
             }
@@ -613,20 +613,20 @@ final class TutorialController {
           boolean decompiledSharedTail0 = !(158 >= BattleUnitRenderer.field_a.pixelHeight);
           if (!decompiledSharedTail0) {
             SoftwareRaster.f(db.a(param0, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 1250067);
-            SocialListPanel.field_Jb.g(db.a(param0, 590), MatchConditionEntry.a(158, (byte) 94), 128);
+            SocialListPanel.field_Jb.drawWithBrightness(db.a(param0, 590), MatchConditionEntry.a(158, (byte) 94), 128);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var2_int = ep.field_o * (-155 + BattleUnitRenderer.field_a.pixelHeight) / 137;
             SoftwareRaster.f(db.a(true, 589), MatchConditionEntry.a(157, (byte) 94), 14, 156, 2302755);
-            SocialListPanel.field_Jb.g(db.a(true, 590), MatchConditionEntry.a(158 + ep.field_o, (byte) 94));
+            SocialListPanel.field_Jb.drawTransparent(db.a(true, 590), MatchConditionEntry.a(158 + ep.field_o, (byte) 94));
           }
           if (!param0) {
             field_b = (String) null;
           }
           if (BattleUnitRenderer.field_a != null) {
             SoftwareRaster.setClip(db.a(true, 314), MatchConditionEntry.a(158, (byte) 94), db.a(param0, 606), MatchConditionEntry.a(311, (byte) 94));
-            BattleUnitRenderer.field_a.g(db.a(true, 326), MatchConditionEntry.a(-var2_int + 154, (byte) 94));
+            BattleUnitRenderer.field_a.drawTransparent(db.a(true, 326), MatchConditionEntry.a(-var2_int + 154, (byte) 94));
           }
           if (1 == fa.field_j) {
             if (ProgressMessageDialog.pointerButton == 1) {
@@ -2392,14 +2392,14 @@ final class TutorialController {
             DateInputWidget.field_E.drawParagraph(EmailCheckResult.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
           fe.a(var4, var8 >> 1, 35, -45 + var8, ConsoleValue.field_b, true);
-          BattleCharacter.field_h[var6].g(-20 + (var8 >> 1), 12 + var11);
+          BattleCharacter.field_h[var6].drawTransparent(-20 + (var8 >> 1), 12 + var11);
           stackIn_32_0 = km.field_h;
           if (var7 == 0) {
             stackIn_33_1 = 0;
           } else {
             stackIn_33_1 = 1;
           }
-          ((RgbSprite) (Object) stackIn_32_0[stackIn_33_1]).g((var8 >> 1) - 23, -3 + (12 + var11));
+          ((RgbSprite) (Object) stackIn_32_0[stackIn_33_1]).drawTransparent((var8 >> 1) - 23, -3 + (12 + var11));
           so.field_b.a(5605);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2705,14 +2705,14 @@ final class TutorialController {
               stackIn_11_2 = param1;
             }
             var5_int = this.a(stackIn_10_1, stackIn_11_2, -124, 256);
-            MoveEvent.field_z.e(db.a(true, 30 + var5_int * 50 + 4), MatchConditionEntry.a(354, (byte) 94), param3);
+            MoveEvent.field_z.drawWithOpacity(db.a(true, 30 + var5_int * 50 + 4), MatchConditionEntry.a(354, (byte) 94), param3);
           }
           if (param2 > -82) {
             stackIn_14_0 = 49;
             return stackIn_14_0;
           }
-          param0.icon.h(db.a(true, var5_int * 50 + 50), MatchConditionEntry.a(348, (byte) 94));
-          km.field_h[1].h(db.a(true, 50 * var5_int + 30 + 19), MatchConditionEntry.a(347, (byte) 94));
+          param0.icon.drawHalfSize(db.a(true, var5_int * 50 + 50), MatchConditionEntry.a(348, (byte) 94));
+          km.field_h[1].drawHalfSize(db.a(true, 50 * var5_int + 30 + 19), MatchConditionEntry.a(347, (byte) 94));
           SoftwareRaster.a(db.a(true, 30 + var5_int * 50 + 30), MatchConditionEntry.a(358, (byte) 94), 12, 2500134, -param3 + 256);
           if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + (50 * var5_int + 30)), 10, false)) {
             AccountNameSelectionForm.field_F = param0.iconIndex + 400;
@@ -2794,10 +2794,10 @@ final class TutorialController {
                 var3_intLifetime1 = db.a(true, qf.field_d[var6]);
                 var4Lifetime1 = MatchConditionEntry.a(GameEvent.field_q[var6], (byte) 94);
                 if (var6 == vs.field_a) {
-                  TeamRoster.field_e.f(var3_intLifetime1 - 20, var4Lifetime1 - 20, 256);
+                  TeamRoster.field_e.drawAdditive(var3_intLifetime1 - 20, var4Lifetime1 - 20, 256);
                 }
                 if (~var6 == ~lm.field_c) {
-                  TeamRoster.field_e.f(var3_intLifetime1 - 20, -20 + var4Lifetime1, 128);
+                  TeamRoster.field_e.drawAdditive(var3_intLifetime1 - 20, -20 + var4Lifetime1, 128);
                 }
                 if (!DebouncedValidator.a(var6, var5, 1)) {
                   if (!(param0)) {
@@ -2808,7 +2808,7 @@ final class TutorialController {
                       stackIn_35_0 = MoveAttackRequest.field_A;
                     }
                     var7_ref_wk = stackIn_35_0;
-                    var7_ref_wk.e(var3_intLifetime1, var4Lifetime1);
+                    var7_ref_wk.drawQuarterSize(var3_intLifetime1, var4Lifetime1);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -2857,21 +2857,21 @@ final class TutorialController {
             if (var17 != 0) {
               if (!pn.field_n[var6] ||
                 !(LoginForm.field_M <= 0)) {
-                MoveAttackRequest.field_A.g(db.a(true, 82), -14 + var10);
-                DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
+                MoveAttackRequest.field_A.drawTransparent(db.a(true, 82), -14 + var10);
+                DeathEvent.field_A.drawTransparent(db.a(true, 82), -14 + var10);
               } else {
-                DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
+                DeathEvent.field_A.drawTransparent(db.a(true, 82), -14 + var10);
               }
             }
           } else {
             if (!pn.field_n[var6] ||
               !(LoginForm.field_M <= 0)) {
-              MoveAttackRequest.field_A.g(db.a(true, 82), -14 + var10);
+              MoveAttackRequest.field_A.drawTransparent(db.a(true, 82), -14 + var10);
               if (var17 != 0) {
-                DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
+                DeathEvent.field_A.drawTransparent(db.a(true, 82), -14 + var10);
               }
             } else {
-              DeathEvent.field_A.g(db.a(true, 82), -14 + var10);
+              DeathEvent.field_A.drawTransparent(db.a(true, 82), -14 + var10);
             }
           }
           var10 = var10 + rs.field_n.maxAscent;
@@ -2904,7 +2904,7 @@ final class TutorialController {
             if (var16 >= AccountNameSelectionForm.field_J[var6]) {
               return;
             }
-            CorpseConditionMarker.field_v.g(var14, var15);
+            CorpseConditionMarker.field_v.drawTransparent(var14, var15);
             var14 = var14 + CorpseConditionMarker.field_v.pixelWidth / 3;
             var16++;
             if (var17 != 0) {
@@ -3711,12 +3711,12 @@ final class TutorialController {
             if (!decompiledSharedTail0) {
               var4 = MapRepository.field_c * (-312 + TrianglePulse.field_c) / 291;
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 2302755);
-              SocialListPanel.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68 + MapRepository.field_c, (byte) 94));
+              SocialListPanel.field_Jb.drawTransparent(db.a(true, 280), MatchConditionEntry.a(68 + MapRepository.field_c, (byte) 94));
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
               SoftwareRaster.f(db.a(true, 279), MatchConditionEntry.a(67, (byte) 94), 14, 310, 1250067);
-              SocialListPanel.field_Jb.g(db.a(true, 280), MatchConditionEntry.a(68, (byte) 94), 128);
+              SocialListPanel.field_Jb.drawWithBrightness(db.a(true, 280), MatchConditionEntry.a(68, (byte) 94), 128);
             }
             discarded$3 = this.a(0, CachedArchiveProvider.spellMenuRoot, true, 0, var4, (byte) 116);
             this.c(0);
@@ -3755,9 +3755,9 @@ final class TutorialController {
                 } else {
                   stackIn_103_3 = 128;
                 }
-                ((RgbSprite) (Object) stackIn_102_0).g(stackIn_102_1, stackIn_102_2, stackIn_103_3);
+                ((RgbSprite) (Object) stackIn_102_0).drawWithBrightness(stackIn_102_1, stackIn_102_2, stackIn_103_3);
               }
-              km.field_h[0].g(db.a(true, var5 * 55 + 327), MatchConditionEntry.a(75, (byte) 94));
+              km.field_h[0].drawTransparent(db.a(true, var5 * 55 + 327), MatchConditionEntry.a(75, (byte) 94));
               stackIn_105_0Lifetime1 = MatchConditionEntry.a(98, (byte) 94);
               stackIn_105_1Lifetime1 = db.a(true, 310 + (var5 * 55 + 40));
               if (TabbedPanel.a(stackIn_105_0Lifetime1, stackIn_105_1Lifetime1, 22, false)) {
@@ -3800,8 +3800,8 @@ final class TutorialController {
             AccountNameSelectionForm.field_F = 45;
           }
           if (TelepopEvent.field_D) {
-            BattleCharacter.field_h[uc.spellDefinitions[RasterViewportResizeHandler.field_d][2]].h(12 + AiPlanningStrategy.pointerX, ko.pointerY + 12);
-            km.field_h[0].h(AiPlanningStrategy.pointerX + 10, 10 + ko.pointerY);
+            BattleCharacter.field_h[uc.spellDefinitions[RasterViewportResizeHandler.field_d][2]].drawHalfSize(12 + AiPlanningStrategy.pointerX, ko.pointerY + 12);
+            km.field_h[0].drawHalfSize(AiPlanningStrategy.pointerX + 10, 10 + ko.pointerY);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4207,19 +4207,19 @@ final class TutorialController {
             stackIn_4_0 = stackOut_3_0;
             if (var10 == 0) {
               if (stackIn_4_0) {
-                BufferedFile.field_k[var7].f(db.a(true, var8 - 19), MatchConditionEntry.a(-22 + var9, (byte) 94), 128);
+                BufferedFile.field_k[var7].drawAdditive(db.a(true, var8 - 19), MatchConditionEntry.a(-22 + var9, (byte) 94), 128);
                 AccountNameSelectionForm.field_F = 2 + var7;
               }
               if (~li.field_q == ~(var7 - 1)) {
-                BufferedFile.field_k[var7].f(db.a(true, var8 - 19), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var4);
-                BufferedFile.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(-22 + var9, (byte) 94), 256 - var4);
+                BufferedFile.field_k[var7].drawAdditive(db.a(true, var8 - 19), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var4);
+                BufferedFile.field_k[var7].drawAdditive(db.a(true, -19 + var8), MatchConditionEntry.a(-22 + var9, (byte) 94), 256 - var4);
               }
               if (~(var7 - 1) == ~MoveAttackAction.field_s) {
-                BufferedFile.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
-                BufferedFile.field_k[var7].f(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
+                BufferedFile.field_k[var7].drawAdditive(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
+                BufferedFile.field_k[var7].drawAdditive(db.a(true, -19 + var8), MatchConditionEntry.a(var9 - 22, (byte) 94), 256 - var5);
               }
-              UnitModelPreview.field_d[var7].g(db.a(true, var8), MatchConditionEntry.a(var9, (byte) 94));
-              gt.field_c[var7].g(db.a(true, -12 + var8), MatchConditionEntry.a(-17 + var9, (byte) 94));
+              UnitModelPreview.field_d[var7].drawTransparent(db.a(true, var8), MatchConditionEntry.a(var9, (byte) 94));
+              gt.field_c[var7].drawTransparent(db.a(true, -12 + var8), MatchConditionEntry.a(-17 + var9, (byte) 94));
               var7++;
               continue;
             }
@@ -4231,8 +4231,8 @@ final class TutorialController {
             stackIn_18_0 = db.a(true, 34);
           }
           SoftwareRaster.setClip(stackIn_18_0, MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
-          GuestPlayConfirmationForm.field_F[li.field_q + 1].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
-          GuestPlayConfirmationForm.field_F[1 + MoveAttackAction.field_s].f(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var5);
+          GuestPlayConfirmationForm.field_F[li.field_q + 1].drawAdditive(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var4);
+          GuestPlayConfirmationForm.field_F[1 + MoveAttackAction.field_s].drawAdditive(db.a(true, 36), MatchConditionEntry.a(156, (byte) 94), 256 - var5);
           if (null != b.field_n) {
             TriangleRasterizer.setClip(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             TriangleRasterizer.centerProjection();
@@ -4263,16 +4263,16 @@ final class TutorialController {
               }
               else {
                 if (stackIn_43_0 == stackIn_43_1) {
-                  TeamRoster.field_e.f(db.a(true, var8Lifetime1 - 35), MatchConditionEntry.a(-35 + var9Lifetime1, (byte) 94), var2_int);
+                  TeamRoster.field_e.drawAdditive(db.a(true, var8Lifetime1 - 35), MatchConditionEntry.a(-35 + var9Lifetime1, (byte) 94), var2_int);
                 }
-                StandardContentDialog.field_ob.d(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
-                km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
+                StandardContentDialog.field_ob.drawTintedGrayscale(db.a(true, var8Lifetime1 - 20), MatchConditionEntry.a(-20 + var9Lifetime1, (byte) 94), TutorialLayout.field_g[MoveAttackAction.field_s + 1]);
+                km.field_h[0].drawTransparent(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[1 + MoveAttackAction.field_s]) > 0) {
-                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
-                  km.field_h[0].g(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].drawTransparent(db.a(true, -19 + var8Lifetime1), MatchConditionEntry.a(-19 + var9Lifetime1, (byte) 94));
+                  km.field_h[0].drawTransparent(db.a(true, var8Lifetime1 - 23), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94));
                 } else {
-                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1 - 19, (byte) 94), 0);
-                  km.field_h[0].g(db.a(true, -23 + var8Lifetime1), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94), 10);
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[MoveAttackAction.field_s + 1][var7Lifetime2]].drawWithBrightness(db.a(true, var8Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1 - 19, (byte) 94), 0);
+                  km.field_h[0].drawWithBrightness(db.a(true, -23 + var8Lifetime1), MatchConditionEntry.a(-23 + var9Lifetime1, (byte) 94), 10);
                 }
                 var7Lifetime2++;
                 continue;
@@ -4296,23 +4296,23 @@ final class TutorialController {
                 }
                 if (stackIn_45_0Lifetime1 &&
                   var4 == 0) {
-                  TeamRoster.field_e.f(db.a(true, -35 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), 128);
+                  TeamRoster.field_e.drawAdditive(db.a(true, -35 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), 128);
                   AccountNameSelectionForm.field_F = 20 + var7Lifetime2;
                 }
                 if (~SetCoatConsoleCommand.field_F == ~var7Lifetime2) {
-                  TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var3);
+                  TeamRoster.field_e.drawAdditive(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var3);
                 }
                 if (vf.field_f == var7Lifetime2 &&
                   MoveAttackAction.field_s == li.field_q) {
-                  TeamRoster.field_e.f(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
+                  TeamRoster.field_e.drawAdditive(db.a(true, var8Lifetime1Lifetime1 - 35), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 35, (byte) 94), var2_int);
                 }
-                StandardContentDialog.field_ob.d(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
+                StandardContentDialog.field_ob.drawTintedGrayscale(db.a(true, var8Lifetime1Lifetime1 - 20), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 20, (byte) 94), TutorialLayout.field_g[1 + li.field_q]);
                 if ((1 << var7Lifetime2 & pg.playerProfile.unitUnlockMasks[li.field_q + 1]) <= 0) {
-                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
-                  km.field_h[0].g(db.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].drawWithBrightness(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94), 0);
+                  km.field_h[0].drawWithBrightness(db.a(true, var8Lifetime1Lifetime1 - 23), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94), 10);
                 } else {
-                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].g(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
-                  km.field_h[0].g(db.a(true, -23 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94));
+                  DeployAction.field_x[AnimationFrameSet.unitUnlockGroups[li.field_q + 1][var7Lifetime2]].drawTransparent(db.a(true, var8Lifetime1Lifetime1 - 19), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 19, (byte) 94));
+                  km.field_h[0].drawTransparent(db.a(true, -23 + var8Lifetime1Lifetime1), MatchConditionEntry.a(var9Lifetime1Lifetime1 - 23, (byte) 94));
                 }
                 var7Lifetime2++;
               }
@@ -5020,8 +5020,8 @@ final class TutorialController {
                     stackIn_41_4 = 5592405;
                   }
                   SoftwareRaster.f(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4);
-                  BattleCharacter.field_h[uc.spellDefinitions[param1.spellIds[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
-                  km.field_h[0].g(db.a(true, (3 & param3) * 58 + 47), MatchConditionEntry.a(60 + var9Lifetime1, (byte) 94));
+                  BattleCharacter.field_h[uc.spellDefinitions[param1.spellIds[var8Lifetime1]][2]].drawTransparent(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
+                  km.field_h[0].drawTransparent(db.a(true, (3 & param3) * 58 + 47), MatchConditionEntry.a(60 + var9Lifetime1, (byte) 94));
                   DateInputWidget.field_E.drawCentered(Integer.toString(pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
                   if (TabbedPanel.a(MatchConditionEntry.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
                     AccountNameSelectionForm.field_F = 200 + param1.spellIds[var8Lifetime1];
@@ -5584,7 +5584,7 @@ final class TutorialController {
                             fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                             fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, MusicPatch.field_m, field_e, 0, 128);
                             var2_int = so.field_b.field_a;
-                            MaskedTextEntryPainter.field_y.g(var2_int / 2 - MaskedTextEntryPainter.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - MaskedTextEntryPainter.field_y.canvasHeight);
+                            MaskedTextEntryPainter.field_y.drawTransparent(var2_int / 2 - MaskedTextEntryPainter.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - MaskedTextEntryPainter.field_y.canvasHeight);
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
                           if (decompiledFrameRemainder0) {
@@ -6063,7 +6063,7 @@ final class TutorialController {
               } else {
                 fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
               }
-              wv.field_h[var3].g(db.a(true, 323), MatchConditionEntry.a(var2_int * var3 + 66, (byte) 94));
+              wv.field_h[var3].drawTransparent(db.a(true, 323), MatchConditionEntry.a(var2_int * var3 + 66, (byte) 94));
               var3++;
               continue;
             }

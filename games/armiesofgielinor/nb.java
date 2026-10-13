@@ -28,8 +28,8 @@ final class nb {
         }
         try {
           param0 -= 16;
-          AttackEvent.field_E.h(param0 + 48, 12 + param1);
-          km.field_h[0].h(46 + param0, param1 + 10);
+          AttackEvent.field_E.drawHalfSize(param0 + 48, 12 + param1);
+          km.field_h[0].drawHalfSize(46 + param0, param1 + 10);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "nb.S(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -350,26 +350,26 @@ final class nb {
             var10 = var9;
             var12 = var10;
             var10Lifetime2 = var9;
-            var9.d(var3, var4);
+            var9.drawHorizontalFlip(var3, var4);
             return;
           }
           if (this.field_l == 1) {
             var10Lifetime1 = this.field_k[var5];
             var12Lifetime2 = var10Lifetime1;
             var12Lifetime2 = var10Lifetime1;
-            var10Lifetime1.c(var3, var4);
+            var10Lifetime1.drawVerticalFlip(var3, var4);
             return;
           }
           return;
         }
         if (this.field_l == 0) {
           var12Lifetime1 = this.field_k[var5];
-          var12Lifetime1.g(var3, var4);
+          var12Lifetime1.drawTransparent(var3, var4);
           return;
         }
         if (1 == this.field_l) {
           var11 = this.field_k[var5];
-          var11.g(var3, var4);
+          var11.drawTransparent(var3, var4);
           return;
         }
     }

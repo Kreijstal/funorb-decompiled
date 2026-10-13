@@ -164,7 +164,7 @@ final class CoatOfArms {
         int var4_int = 0;
         RuntimeException var4 = null;
         String var5 = null;
-        nj stackIn_5_0 = null;
+        ArgbSprite stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -257,17 +257,17 @@ final class CoatOfArms {
           if (!param7) {
             if (!param0) {
               if (param3) {
-                RegionAnchor.field_m[3].g(0, 0);
+                RegionAnchor.field_m[3].drawTransparent(0, 0);
               }
             } else {
               fe.a(RegionAnchor.field_m[2], 0, 0);
-              RegionAnchor.field_m[2].f(0, 0, 228);
+              RegionAnchor.field_m[2].drawAdditive(0, 0, 228);
             }
           } else {
-            RegionAnchor.field_m[1].g(0, 0);
+            RegionAnchor.field_m[1].drawTransparent(0, 0);
           }
           NumericDateInputWidget.field_P.b();
-          DropTargetWidgetContainer.field_J.e(param4, param2);
+          DropTargetWidgetContainer.field_J.drawQuarterSize(param4, param2);
           if (param9 == -19744) {
             return;
           }
@@ -312,15 +312,15 @@ final class CoatOfArms {
             cc.a(0, -1, this.parts, -1, -1, false, -1, param7, this.colourIndices, 0);
           }
           if (param0) {
-            RegionAnchor.field_m[1].g(0, 0);
+            RegionAnchor.field_m[1].drawTransparent(0, 0);
           } else {
             if (!param5) {
               if (param4) {
-                RegionAnchor.field_m[3].g(0, 0);
+                RegionAnchor.field_m[3].drawTransparent(0, 0);
               }
             } else {
               fe.a(RegionAnchor.field_m[2], 0, 0);
-              RegionAnchor.field_m[2].f(0, 0, 228);
+              RegionAnchor.field_m[2].drawAdditive(0, 0, 228);
             }
           }
           if (param2 != 68) {
@@ -328,9 +328,9 @@ final class CoatOfArms {
           }
           ko.field_g.b();
           SoftwareRaster.b();
-          DropTargetWidgetContainer.field_J.e(0, 0);
+          DropTargetWidgetContainer.field_J.drawQuarterSize(0, 0);
           NumericDateInputWidget.field_P.b();
-          ko.field_g.h(param8, param6);
+          ko.field_g.drawHalfSize(param8, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -377,17 +377,17 @@ final class CoatOfArms {
           if (!param3) {
             if (!param2) {
               if (param5) {
-                RegionAnchor.field_m[3].g(0, 0);
+                RegionAnchor.field_m[3].drawTransparent(0, 0);
               }
             } else {
               fe.a(RegionAnchor.field_m[2], 0, 0);
-              RegionAnchor.field_m[2].f(0, 0, 228);
+              RegionAnchor.field_m[2].drawAdditive(0, 0, 228);
             }
           } else {
-            RegionAnchor.field_m[1].g(0, 0);
+            RegionAnchor.field_m[1].drawTransparent(0, 0);
           }
           NumericDateInputWidget.field_P.b();
-          DropTargetWidgetContainer.field_J.h(param0, param4);
+          DropTargetWidgetContainer.field_J.drawHalfSize(param0, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

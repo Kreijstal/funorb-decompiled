@@ -71,15 +71,15 @@ final class SpellMenuGroup {
           opacity = stackIn_14_0;
           if (transition <= 0 &&
             this.parent != null) {
-            TeamRoster.field_e.f(130 + horizontalOffset, 177, opacity);
+            TeamRoster.field_e.drawAdditive(130 + horizontalOffset, 177, opacity);
             if (transition == 0 &&
               TabbedPanel.a(212, 165, 20, false)) {
               vi.field_f = EmailCheckResult.a(4800, rr.field_a, new String[]{this.parent.label});
               hoveredSelection = 40;
-              TeamRoster.field_e.f(db.a(true, 130 + horizontalOffset), MatchConditionEntry.a(177, (byte) 94), 128);
+              TeamRoster.field_e.drawAdditive(db.a(true, 130 + horizontalOffset), MatchConditionEntry.a(177, (byte) 94), 128);
             }
-            this.icon.e(db.a(true, horizontalOffset + 145), MatchConditionEntry.a(192, (byte) 94), opacity);
-            km.field_h[1].e(db.a(true, 142 + horizontalOffset), MatchConditionEntry.a(189, (byte) 94), opacity);
+            this.icon.drawWithOpacity(db.a(true, horizontalOffset + 145), MatchConditionEntry.a(192, (byte) 94), opacity);
+            km.field_h[1].drawWithOpacity(db.a(true, 142 + horizontalOffset), MatchConditionEntry.a(189, (byte) 94), opacity);
           }
           if (null != this.children) {
             entryCount = this.children.length;
@@ -102,11 +102,11 @@ final class SpellMenuGroup {
                 TabbedPanel.a(iconY, iconX, 20, false)) {
                 vi.field_f = this.children[childIndex].label;
                 hoveredSelection = 50 + childIndex;
-                TeamRoster.field_e.f(db.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 128);
+                TeamRoster.field_e.drawAdditive(db.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 128);
               }
               if (transition < 0 &&
                 selectedChild == childIndex) {
-                TeamRoster.field_e.f(db.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), -transition);
+                TeamRoster.field_e.drawAdditive(db.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), -transition);
               }
               stackIn_57_0 = this.children[childIndex].icon;
               stackIn_57_1 = db.a(true, -20 + iconX);
@@ -116,7 +116,7 @@ final class SpellMenuGroup {
               } else {
                 stackIn_58_3 = 256;
               }
-              ((RgbSprite) (Object) stackIn_57_0).e(stackIn_57_1, stackIn_57_2, stackIn_58_3);
+              ((RgbSprite) (Object) stackIn_57_0).drawWithOpacity(stackIn_57_1, stackIn_57_2, stackIn_58_3);
               stackIn_60_0 = km.field_h[1];
               stackIn_60_1 = db.a(true, iconX - 23);
               stackIn_60_2 = MatchConditionEntry.a(-23 + iconY, (byte) 94);
@@ -125,7 +125,7 @@ final class SpellMenuGroup {
               } else {
                 stackIn_61_3 = opacity;
               }
-              ((RgbSprite) (Object) stackIn_60_0).e(stackIn_60_1, stackIn_60_2, stackIn_61_3);
+              ((RgbSprite) (Object) stackIn_60_0).drawWithOpacity(stackIn_60_1, stackIn_60_2, stackIn_61_3);
               childIndex++;
             }
           } else {
@@ -138,22 +138,22 @@ final class SpellMenuGroup {
                   TabbedPanel.a(iconY, iconX, 20, false)) {
                   vi.field_f = MusicPatchEnvelope.field_f[this.spellIds[spellIndex]];
                   hoveredSelection = 50 + spellIndex;
-                  TeamRoster.field_e.f(db.a(true, -35 + iconX), MatchConditionEntry.a(-35 + iconY, (byte) 94), 128);
+                  TeamRoster.field_e.drawAdditive(db.a(true, -35 + iconX), MatchConditionEntry.a(-35 + iconY, (byte) 94), 128);
                 }
                 if (RasterViewportResizeHandler.field_d == this.spellIds[spellIndex]) {
-                  TeamRoster.field_e.f(db.a(true, -35 + iconX), MatchConditionEntry.a(iconY - 35, (byte) 94), selectionFade);
+                  TeamRoster.field_e.drawAdditive(db.a(true, -35 + iconX), MatchConditionEntry.a(iconY - 35, (byte) 94), selectionFade);
                 }
                 if (this.spellIds[spellIndex] == ab.field_a) {
-                  TeamRoster.field_e.f(db.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 256 - selectionFade);
+                  TeamRoster.field_e.drawAdditive(db.a(true, iconX - 35), MatchConditionEntry.a(iconY - 35, (byte) 94), 256 - selectionFade);
                 }
-                BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].g(db.a(true, iconX - 20), MatchConditionEntry.a(-20 + iconY, (byte) 94));
+                BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].drawTransparent(db.a(true, iconX - 20), MatchConditionEntry.a(-20 + iconY, (byte) 94));
                 if (RasterViewportResizeHandler.field_d == this.spellIds[spellIndex]) {
-                  BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].f(db.a(true, -20 + iconX), MatchConditionEntry.a(iconY - 20, (byte) 94), selectionFade);
+                  BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].drawAdditive(db.a(true, -20 + iconX), MatchConditionEntry.a(iconY - 20, (byte) 94), selectionFade);
                 }
                 if (this.spellIds[spellIndex] == ab.field_a) {
-                  BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].f(db.a(true, iconX - 20), MatchConditionEntry.a(iconY - 20, (byte) 94), 256 - selectionFade);
+                  BattleCharacter.field_h[uc.spellDefinitions[this.spellIds[spellIndex]][2]].drawAdditive(db.a(true, iconX - 20), MatchConditionEntry.a(iconY - 20, (byte) 94), 256 - selectionFade);
                 }
-                km.field_h[0].g(db.a(true, -23 + iconX), MatchConditionEntry.a(iconY - 23, (byte) 94));
+                km.field_h[0].drawTransparent(db.a(true, -23 + iconX), MatchConditionEntry.a(iconY - 23, (byte) 94));
               }
             }
           }

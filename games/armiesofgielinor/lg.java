@@ -25,10 +25,10 @@ final class lg {
           ConsoleTextNode.pushRasterState((byte) -56);
           AccountRequestResult.field_k = new RgbSprite(var3, 3 * var4 / 4);
           AccountRequestResult.field_k.b();
-          var2.f(0, 0);
+          var2.drawPixels(0, 0);
           vt.field_k = new RgbSprite(var3, var4 - AccountRequestResult.field_k.pixelHeight);
           vt.field_k.b();
-          var2.f(0, -AccountRequestResult.field_k.pixelHeight);
+          var2.drawPixels(0, -AccountRequestResult.field_k.pixelHeight);
           vt.field_k.offsetY = AccountRequestResult.field_k.pixelHeight;
           QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {

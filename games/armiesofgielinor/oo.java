@@ -431,49 +431,49 @@ final class oo {
           if (UnitLossCondition.field_a == null) {
             return;
           }
-          this.field_b.g(376, 339);
-          this.field_t.g(9, 9);
+          this.field_b.drawTransparent(376, 339);
+          this.field_t.drawTransparent(9, 9);
           UnitLossCondition.field_a.draw(0, 0);
           if (ByteStorage.field_d != null) {
-            ByteStorage.field_d.g(9, 257);
-            ByteStorage.field_d.d(558, 257);
+            ByteStorage.field_d.drawTransparent(9, 257);
+            ByteStorage.field_d.drawHorizontalFlip(558, 257);
             if (ko.pointerY > 257 &&
               ko.pointerY < 290) {
               var2_intLifetime2 = (40 * CombatViewTransition.c(this.field_f << 4, 127) >> 16) + 40;
               if (var2_intLifetime2 > 0) {
                 if (AiPlanningStrategy.pointerX > 9 &&
                   AiPlanningStrategy.pointerX < 82) {
-                  ByteStorage.field_d.f(8, 256, var2_intLifetime2);
-                  ByteStorage.field_d.f(10, 256, var2_intLifetime2);
-                  ByteStorage.field_d.f(8, 258, var2_intLifetime2);
-                  ByteStorage.field_d.f(10, 258, var2_intLifetime2);
+                  ByteStorage.field_d.drawAdditive(8, 256, var2_intLifetime2);
+                  ByteStorage.field_d.drawAdditive(10, 256, var2_intLifetime2);
+                  ByteStorage.field_d.drawAdditive(8, 258, var2_intLifetime2);
+                  ByteStorage.field_d.drawAdditive(10, 258, var2_intLifetime2);
                 } else {
                   if (AiPlanningStrategy.pointerX > 558 &&
                     AiPlanningStrategy.pointerX < 631) {
                     ByteStorage.field_d.h();
-                    ByteStorage.field_d.f(557, 256, var2_intLifetime2);
-                    ByteStorage.field_d.f(559, 256, var2_intLifetime2);
-                    ByteStorage.field_d.f(557, 258, var2_intLifetime2);
-                    ByteStorage.field_d.f(559, 258, var2_intLifetime2);
+                    ByteStorage.field_d.drawAdditive(557, 256, var2_intLifetime2);
+                    ByteStorage.field_d.drawAdditive(559, 256, var2_intLifetime2);
+                    ByteStorage.field_d.drawAdditive(557, 258, var2_intLifetime2);
+                    ByteStorage.field_d.drawAdditive(559, 258, var2_intLifetime2);
                     ByteStorage.field_d.h();
                   }
                 }
               }
             }
           }
-          this.field_m.g(16, 302);
+          this.field_m.drawTransparent(16, 302);
           VerticalScrollbar.field_Sb.drawParagraph(this.field_k[this.field_n], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
-          UnitModelPreview.field_b.g(30, 330);
+          UnitModelPreview.field_b.drawTransparent(30, 330);
           VerticalScrollbar.field_Sb.drawParagraph(db.field_e[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           VerticalScrollbar.field_Sb.drawParagraph(db.field_e[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           VerticalScrollbar.field_Sb.drawParagraph(db.field_e[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          QuickChatPhrase.field_D.g((127 - QuickChatPhrase.field_D.canvasWidth) / 2 + 508, 315);
+          QuickChatPhrase.field_D.drawTransparent((127 - QuickChatPhrase.field_D.canvasWidth) / 2 + 508, 315);
           if (0 != this.field_h.selectedIndex) {
             if (this.field_h.selectedIndex == 1) {
-              DiskCacheRequest.field_G[1].g(508, 387);
+              DiskCacheRequest.field_G[1].drawTransparent(508, 387);
             }
           } else {
-            DiskCacheRequest.field_G[0].g(508, 299);
+            DiskCacheRequest.field_G[0].drawTransparent(508, 299);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -563,7 +563,7 @@ final class oo {
           if (param6 >= -108) {
             oo.b(-32);
           }
-          param0.c((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.pixelWidth / param9), (int)((float)param0.pixelHeight / param9));
+          param0.drawScaled((int)((float)(-param2) / param9), (int)((float)(-param1) / param9), (int)((float)param0.pixelWidth / param9), (int)((float)param0.pixelHeight / param9));
           this.a(param5, var11_int, param3, 0, param4, (byte) 79, var12, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
           CombatSandbox.a(param0, 3);

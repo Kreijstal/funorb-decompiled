@@ -18,9 +18,9 @@ final class fm {
 
     final static void a(RgbSprite[] param0, int param1, int param2, int param3, int param4) {
         try {
-          param0[0].g(param2, param3);
-          param0[1].c(param0[1].pixelWidth + param2, param3, -(param0[2].pixelWidth << 1) + param1, param0[2].pixelHeight);
-          param0[2].g(param2 + param1 - param0[2].pixelWidth, param3);
+          param0[0].drawTransparent(param2, param3);
+          param0[1].drawScaled(param0[1].pixelWidth + param2, param3, -(param0[2].pixelWidth << 1) + param1, param0[2].pixelHeight);
+          param0[2].drawTransparent(param2 + param1 - param0[2].pixelWidth, param3);
           if (param4 > -38) {
             RgbSprite[] var6 = (RgbSprite[]) null;
             fm.a((RgbSprite[]) null, -67, 44, -43, -95);

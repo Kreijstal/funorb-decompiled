@@ -342,12 +342,12 @@ final class CampaignMenu {
             boolean decompiledSharedTail0 = (this.selectedCampaignEntry == null ||
               this.selectedCampaignEntry.entryId != -1);
             if (!decompiledSharedTail0) {
-              this.selectedCampaignEntry.previewSprite.f(-(this.selectedCampaignEntry.previewSprite.pixelWidth / 2) + (var4 + 118), var5);
+              this.selectedCampaignEntry.previewSprite.drawPixels(-(this.selectedCampaignEntry.previewSprite.pixelWidth / 2) + (var4 + 118), var5);
               decompiledSharedTail0 = (var8 != 0);
             }
             if (decompiledSharedTail0) {
-              ChannelGainProfile.campaignBackgrounds[this.selectedCampaignEntry.entryId].g(var4, var5);
-              this.selectedCampaignEntry.previewSprite.f(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, NanoGameClock.field_n << 5) * 100 >> 16) + 80);
+              ChannelGainProfile.campaignBackgrounds[this.selectedCampaignEntry.entryId].drawTransparent(var4, var5);
+              this.selectedCampaignEntry.previewSprite.drawAdditive(var4, var5, Math.abs(ContextualRuntimeException.a(param0 ^ -397, NanoGameClock.field_n << 5) * 100 >> 16) + 80);
             }
             QuickChatPhraseRepository.popRasterState(param0 ^ -18466);
             var6 = 5;
@@ -470,8 +470,8 @@ final class CampaignMenu {
             }
             var9Lifetime1 = 1 + param2.godId;
           }
-          UnitModelPreview.field_d[var9Lifetime1].g(var5_int, var6, var8);
-          gt.field_c[var9Lifetime1].g(-12 + var5_int, var6 - 18, var8);
+          UnitModelPreview.field_d[var9Lifetime1].drawWithBrightness(var5_int, var6, var8);
+          gt.field_c[var9Lifetime1].drawWithBrightness(-12 + var5_int, var6 - 18, var8);
           if (param0 != 13) {
             field_n = (String) null;
           }
@@ -612,14 +612,14 @@ final class CampaignMenu {
               fe.c(param3.previewSprite, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.pixelWidth, var6_int);
             }
             if (param4) {
-              param3.previewSprite.f(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
+              param3.previewSprite.drawAdditive(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
             }
             if (param2) {
               if (null == param3.highlightSprite) {
                 param3.highlightSprite = param3.previewSprite.g();
                 param3.highlightSprite.c(228, 130, 4);
               }
-              param3.highlightSprite.e(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.b(NanoGameClock.field_n << 6, 100) >> 12) + 22);
+              param3.highlightSprite.drawWithOpacity(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), (SocketResourceClient.b(NanoGameClock.field_n << 6, 100) >> 12) + 22);
             }
             if (!param2 ||
               var13 != 0) {
@@ -1069,17 +1069,17 @@ final class CampaignMenu {
               var19_intLifetime1 = this.selectedMissionEntry.score;
               if (1000 >= var19_intLifetime1) {
                 if (var19_intLifetime1 > 500) {
-                  MoveAttackRequest.field_C[1].g(db.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + rs.field_n.maxAscent - rs.field_n.capitalHeight, (byte) 94));
+                  MoveAttackRequest.field_C[1].drawTransparent(db.a(true, 5 + var18Lifetime1 + var5), MatchConditionEntry.a(var6Lifetime1 + rs.field_n.maxAscent - rs.field_n.capitalHeight, (byte) 94));
                 }
                 if ((!(var19_intLifetime1 > 500) ||
                   var29 != 0) &&
                   (!(10 >= var19_intLifetime1))) {
-                  MoveAttackRequest.field_C[2].g(db.a(true, var5 + var18Lifetime1 + 5), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
+                  MoveAttackRequest.field_C[2].drawTransparent(db.a(true, var5 + var18Lifetime1 + 5), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
                   if (var29 != 0) {
-                    MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
+                    MoveAttackRequest.field_C[0].drawTransparent(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
                   }
                 }} else {
-                MoveAttackRequest.field_C[0].g(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
+                MoveAttackRequest.field_C[0].drawTransparent(db.a(true, var5 - (-var18Lifetime1 - 5)), MatchConditionEntry.a(-rs.field_n.capitalHeight + rs.field_n.maxAscent + var6Lifetime1, (byte) 94));
               }
             }
             var6Lifetime1 = var6Lifetime1 + rs.field_n.baselineHeight * (-1 + var16Lifetime1);
@@ -1213,13 +1213,13 @@ final class CampaignMenu {
           var10 = (13 * param3 + fe.field_b + param7 * 57) % 100;
           if (param6 == (float)param5) {
             if (param0 != null) {
-              StandardContentDialog.field_ob.g(1 + (param7 - var9_int / 2), -(var9_int / 2) + (param3 + 1));
+              StandardContentDialog.field_ob.drawTransparent(1 + (param7 - var9_int / 2), -(var9_int / 2) + (param3 + 1));
             }
             if (null != param4) {
-              param4.g(-(var9_int / 2) + param7 + 1, 1 - var9_int / 2 + param3);
+              param4.drawTransparent(-(var9_int / 2) + param7 + 1, 1 - var9_int / 2 + param3);
             }
             if (param0 != null) {
-              param0.g(-22 + param7, param3 - 22);
+              param0.drawTransparent(-22 + param7, param3 - 22);
             }
             if (param2 <= 0) {
               return;
@@ -1235,13 +1235,13 @@ final class CampaignMenu {
             var13 = (int)(param6 * 40.0f);
             var14 = (int)(96.0f * param6);
             if (param0 != null) {
-              StandardContentDialog.field_ob.c(param7 - var11 / 2, -(var11 / 2) + param3, var11, var11);
+              StandardContentDialog.field_ob.drawScaled(param7 - var11 / 2, -(var11 / 2) + param3, var11, var11);
             }
             if (null != param4) {
-              param4.c(-(var11 / 2) + param7, -(var11 / 2) + param3, var11, var11);
+              param4.drawScaled(-(var11 / 2) + param7, -(var11 / 2) + param3, var11, var11);
             }
             if (param0 != null) {
-              param0.c(param7 - var12 / 2, param3 - var12 / 2, var12, var12);
+              param0.drawScaled(param7 - var12 / 2, param3 - var12 / 2, var12, var12);
             }
             if (param2 > 0) {
               fe.a(param7, param3, param1, param2, var10, var13, var14);
@@ -1251,13 +1251,13 @@ final class CampaignMenu {
             }
           }
           if (param0 != null) {
-            StandardContentDialog.field_ob.h(-(var9_int / 4) + (param7 + 1), param3 - var9_int / 4 + 1);
+            StandardContentDialog.field_ob.drawHalfSize(-(var9_int / 4) + (param7 + 1), param3 - var9_int / 4 + 1);
           }
           if (null != param4) {
-            param4.h(-(var9_int / 4) + param7 + 1, 1 + (-(var9_int / 4) + param3));
+            param4.drawHalfSize(-(var9_int / 4) + param7 + 1, 1 + (-(var9_int / 4) + param3));
           }
           if (param0 != null) {
-            param0.h(-11 + param7, -11 + param3);
+            param0.drawHalfSize(-11 + param7, -11 + param3);
           }
           if (param2 > 0) {
             fe.a(param7, param3, param1, param2, var10, 20, 48);
@@ -1867,7 +1867,7 @@ final class CampaignMenu {
               var6 = ps.field_w[var3.entryId];
               var7 = new RgbSprite(var6.canvasWidth, var6.canvasHeight);
               CombatSandbox.a(var7, 3);
-              var6.f(0, 0);
+              var6.drawPixels(0, 0);
               var8 = 18;
               boolean decompiledSharedTail0 = (var3.entryId == 1);
               if (!decompiledSharedTail0) {

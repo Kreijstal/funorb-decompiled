@@ -119,7 +119,7 @@ final class MatchSetupPanel {
               if (param3 <= 36) {
                 return;
               }
-              var7.f(db.a(true, param2.first), MatchConditionEntry.a(param2.second, (byte) 94));
+              var7.drawPixels(db.a(true, param2.first), MatchConditionEntry.a(param2.second, (byte) 94));
               var8 = 0;
               if (this.selectedPreviewIndex == var6_int) {
                 var8 = 1;
@@ -1135,14 +1135,14 @@ final class MatchSetupPanel {
             }
             if (param2[var14] <= -1) {
               if (var14 == param3) {
-                BattleViewportResizeHandler.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, EditableTextField.field_Vb[var14][1] + param10, 256);
+                BattleViewportResizeHandler.field_h[var14].drawAdditive(EditableTextField.field_Vb[var14][0] + param8, EditableTextField.field_Vb[var14][1] + param10, 256);
               } else {
                 if (var14 != var12_int) {
                   if (param1 > -1) {
-                    BattleViewportResizeHandler.field_h[var14].f(EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 128);
+                    BattleViewportResizeHandler.field_h[var14].drawAdditive(EditableTextField.field_Vb[var14][0] + param8, param10 + EditableTextField.field_Vb[var14][1], 128);
                   }
                 } else {
-                  BattleViewportResizeHandler.field_h[var14].f(param8 + EditableTextField.field_Vb[var14][0], EditableTextField.field_Vb[var14][1] + param10, 128);
+                  BattleViewportResizeHandler.field_h[var14].drawAdditive(param8 + EditableTextField.field_Vb[var14][0], EditableTextField.field_Vb[var14][1] + param10, 128);
                 }
               }
             } else {

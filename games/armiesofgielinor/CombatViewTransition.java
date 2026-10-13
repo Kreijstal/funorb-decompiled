@@ -94,9 +94,9 @@ final class CombatViewTransition {
             var4Lifetime1 = var4Lifetime1 - (var6Lifetime1 >> 1);
             var3_intLifetime1 = var3_intLifetime1 - (var5Lifetime1 >> 1);
             if (256 == var7) {
-              param1.c(var3_intLifetime1, var4Lifetime1, var5Lifetime1, var6Lifetime1);
+              param1.drawScaled(var3_intLifetime1, var4Lifetime1, var5Lifetime1, var6Lifetime1);
             } else {
-              param1.c(var3_intLifetime1, var4Lifetime1, var5Lifetime1, var6Lifetime1, var7);
+              param1.drawScaledWithOpacity(var3_intLifetime1, var4Lifetime1, var5Lifetime1, var6Lifetime1, var7);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

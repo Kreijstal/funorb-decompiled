@@ -590,7 +590,7 @@ final class ng {
             SoftwareRaster.c(4, 4, 0, 0, 540, 140);
           }
           kq.field_P.b();
-          var1.h(0, 0);
+          var1.drawHalfSize(0, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ng.V(" + param0 + ')');
@@ -770,9 +770,9 @@ final class ng {
             ds.field_a[var3_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
             GameCanvas.field_c[var3_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
             ds.field_a[var3_int].b();
-            DiskCacheWorker.field_d.d(0, 0, op.field_c[0][var3_int]);
+            DiskCacheWorker.field_d.drawTintedGrayscale(0, 0, op.field_c[0][var3_int]);
             GameCanvas.field_c[var3_int].b();
-            ClientUiNode.field_y.b(0, 0, op.field_c[0][var3_int]);
+            ClientUiNode.field_y.drawShadedGrayscale(0, 0, op.field_c[0][var3_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

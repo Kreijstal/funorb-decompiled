@@ -8,10 +8,10 @@ abstract class ArchiveProvider {
     static ClientUiComponent field_d;
     static String field_c;
 
-    final static nj a(byte param0, RgbSprite param1) {
+    final static ArgbSprite a(byte param0, RgbSprite param1) {
         int var9 = 0;
         int var19 = 0;
-        nj stackIn_24_0 = null;
+        ArgbSprite stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -22,7 +22,7 @@ abstract class ArchiveProvider {
         int[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        nj var7 = null;
+        ArgbSprite var7 = null;
         int[] var8 = null;
         int var10 = 0;
         int var11 = 0;
@@ -50,7 +50,7 @@ abstract class ArchiveProvider {
             var21 = (String) null;
             ArchiveProvider.a((String) null, (byte) 84);
           }
-          var7 = new nj(var5, var6);
+          var7 = new ArgbSprite(var5, var6);
           var23 = var7.pixels;
           var22 = var23;
           var8 = var22;

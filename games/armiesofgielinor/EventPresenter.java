@@ -302,13 +302,13 @@ final class EventPresenter extends IntrusiveNode {
         stackIn_14_2 = var5 + 5;
         stackIn_14_3 = op.field_c;
         stackIn_15_4 = (this.battlefield.teamGame) ? 1 : 0;
-        ((RgbSprite) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_14_2, stackIn_14_3[stackIn_15_4][this.event.unit.ownerPlayer]);
+        ((RgbSprite) (Object) stackIn_14_0).drawShadedGrayscale(stackIn_14_1, stackIn_14_2, stackIn_14_3[stackIn_15_4][this.event.unit.ownerPlayer]);
         if (obfuscationGuard != 31785) {
           this.acknowledged = false;
         }
         if (this.controller.selectedUnit == this.event.unit ||
           this.controller.field_oc == this.event.unit) {
-          TeamRoster.playerRingSprite.f(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)frameNumber / 3.141592653589793)));
+          TeamRoster.playerRingSprite.drawAdditive(var4 + 10, 5 + var5, 128 + (int)(64.0 * Math.sin((double)frameNumber / 3.141592653589793)));
         }
         this.event.unit.modelPreview.drawAtStoredPosition((byte) -72, false);
         return;

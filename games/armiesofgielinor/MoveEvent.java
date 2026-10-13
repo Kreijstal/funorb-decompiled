@@ -222,13 +222,13 @@ final class MoveEvent extends GameEvent {
           SoftwareRaster.c(stackIn_23_0, 0, SoftwareRaster.width, SoftwareRaster.height);
           var10_ref = new RgbSprite(var9, var9);
           var10_ref.b();
-          var4.f(0, 0);
+          var4.drawPixels(0, 0);
           var11 = new RgbSprite(var9, var9);
           var11.b();
-          var4.f(-var4.pixelWidth + var9, 0);
+          var4.drawPixels(-var4.pixelWidth + var9, 0);
           var12 = new RgbSprite(-(var9 * 2) + var4.pixelWidth, var9);
           var12.b();
-          var4.f(-var9, 0);
+          var4.drawPixels(-var9, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
           NodeIterator.field_b = new RgbSprite[]{var10_ref, var12, var11};
           return;

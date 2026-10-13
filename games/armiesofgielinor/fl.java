@@ -214,8 +214,8 @@ final class fl {
         BitmapTextWidgetPainter var17 = null;
         ao var4 = null;
         RgbSprite[] var5 = null;
-        nj var16 = null;
-        nj var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         ao var6 = null;
         ao var7 = null;
@@ -254,7 +254,7 @@ final class fl {
           var4.a(1, (byte) -119).a(BufferedFile.a(10066329, 11184810, 1, 13421772), 31);
           var4.a(3, (byte) -128).a(BufferedFile.a(7829367, 8947848, 1, 10066329), -128).a(1, 1).a((byte) 81, 1);
           var5 = new RgbSprite[9];
-          var16 = new nj(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
             var16.pixels[var7_int] = 1077952576;

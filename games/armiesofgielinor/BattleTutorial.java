@@ -1639,7 +1639,7 @@ class BattleTutorial {
           this.expandedPanelHeight = -21;
         }
         if (this.stage == 0) {
-          MaskedTextEntryPainter.field_y.g(db.a(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
+          MaskedTextEntryPainter.field_y.drawTransparent(db.a(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
           fe.b(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
           fe.c(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
           this.panelHeight = 40;

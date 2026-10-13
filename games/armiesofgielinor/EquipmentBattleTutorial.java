@@ -1280,14 +1280,14 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             var5_int = param0[0].canvasWidth;
             var6 = param0[2].canvasWidth;
             var7 = param0[1].canvasWidth;
-            param0[0].g(param1, param2);
-            param0[2].g(param3 + (param1 - var6), param2);
+            param0[0].drawTransparent(param1, param2);
+            param0[2].drawTransparent(param3 + (param1 - var6), param2);
             SoftwareRaster.b(DefeatPlayerConsoleCommand.field_H);
             SoftwareRaster.b(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].canvasHeight + param2);
             var8 = var5_int + param1;
             var9 = param3 + param1 - var6;
             for (param1 = var8; var9 > param1; param1 = param1 + var7) {
-              param0[1].g(param1, param2);
+              param0[1].drawTransparent(param1, param2);
             }
             if (param4 != 8941) {
               EquipmentBattleTutorial.a((RgbSprite[]) null, -52, 126, 81, -73);

@@ -93,7 +93,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         if (obfuscationGuard >= -82) {
           field_J = (String) null;
         }
-        TutorialLayout.field_b.e(this.x + originX, this.y + originY, this.alpha);
+        TutorialLayout.field_b.drawWithOpacity(this.x + originX, this.y + originY, this.alpha);
     }
 
     final static int bitLength(int value, int obfuscationGuard) {

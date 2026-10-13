@@ -216,8 +216,8 @@ final class vv {
               if (var12.ownerPlayer == MapTile.field_i &&
                 !var12.movementSpent &&
                 NetworkResourceRequest.field_C.field_L > 0) {
-                TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-                TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                TeamRoster.playerRingSprite.drawAdditive(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                TeamRoster.playerRingSprite.drawAdditive(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
               }
               if (var9.isStructure(false) &&
                 !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -272,8 +272,8 @@ final class vv {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
                   NetworkResourceRequest.field_C.field_L > 0) {
-                  TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-                  TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.drawAdditive(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.drawAdditive(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -327,8 +327,8 @@ final class vv {
                 if (var12.ownerPlayer == MapTile.field_i &&
                   !var12.movementSpent &&
                   NetworkResourceRequest.field_C.field_L > 0) {
-                  TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-                  TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.drawAdditive(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+                  TeamRoster.playerRingSprite.drawAdditive(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
                 }
                 if (var9.isStructure(false) &&
                   !CipherPacketBuffer.currentBattlefield.arePlayersAllied(var9.ownerPlayer, -16985, var12.ownerPlayer) &&
@@ -500,8 +500,8 @@ final class vv {
           }
           return;
         }
-        TeamRoster.playerRingSprite.f(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
-        TeamRoster.playerRingSprite.f(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.playerRingSprite.drawAdditive(10 + param0, param5 + 5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
+        TeamRoster.playerRingSprite.drawAdditive(10 + param0, 5 + param5, (int)(256.0 * Math.sin((double)NetworkResourceRequest.field_C.field_L * 3.141592653589793 / 200.0)));
         if (!var9.isStructure(false)) {
           if (param4 <= 0) {
             return;

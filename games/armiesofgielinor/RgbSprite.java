@@ -4,39 +4,39 @@
 class RgbSprite extends RgbSpriteBase {
     int[] pixels;
 
-    void d(int param0, int param1) {
+    void drawHorizontalFlip(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + (this.canvasWidth - this.pixelWidth - this.offsetX);
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * SoftwareRaster.width;
+        x = x + (this.canvasWidth - this.pixelWidth - this.offsetX);
+        y = y + this.offsetY;
+        int var3 = x + y * SoftwareRaster.width;
         int var4 = this.pixelWidth - 1;
         int var5 = this.pixelHeight;
         int var6 = this.pixelWidth;
         int var7 = SoftwareRaster.width - var6;
         int var8 = var6 + var6;
-        if (param1 < SoftwareRaster.clipTop) {
-          var9 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var9 = SoftwareRaster.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRaster.width;
         }
-        if (param1 + var5 > SoftwareRaster.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRaster.clipBottom);
+        if (y + var5 > SoftwareRaster.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var4 = var4 - var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 - var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
+        if (x + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = x + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 - var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -50,39 +50,39 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    void b(int param0, int param1, int param2) {
+    void drawShadedGrayscale(int x, int y, int tintColour) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRaster.width;
         int var5 = 0;
         int var6 = this.pixelHeight;
         int var7 = this.pixelWidth;
         int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
+        if (y + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
+        if (x + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = x + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -91,12 +91,12 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, tintColour);
           return;
         }
     }
 
-    void b(int param0, int param1, int param2, int param3, int param4) {
+    void drawScaledWithBrightness(int x, int y, int width, int height, int brightness) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -112,12 +112,12 @@ class RgbSprite extends RgbSpriteBase {
         int var14Lifetime2;
         int var16Lifetime1;
         int var16Lifetime2;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        if (width > 0) {
+          if (height <= 0) {
             return;
           }
-          if (param4 == 256) {
-            this.c(param0, param1, param2, param3);
+          if (brightness == 256) {
+            this.drawScaled(x, y, width, height);
             return;
           }
           var6 = this.pixelWidth;
@@ -126,48 +126,48 @@ class RgbSprite extends RgbSpriteBase {
           var9 = 0;
           var10 = this.canvasWidth;
           var11 = this.canvasHeight;
-          var12 = (var10 << 16) / param2;
-          var13 = (var11 << 16) / param3;
+          var12 = (var10 << 16) / width;
+          var13 = (var11 << 16) / height;
           if (this.offsetX > 0) {
             var14 = ((this.offsetX << 16) + var12 - 1) / var12;
-            param0 = param0 + var14;
+            x = x + var14;
             var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
           if (this.offsetY > 0) {
             var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
-            param1 = param1 + var14Lifetime1;
+            y = y + var14Lifetime1;
             var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
-            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+            width = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
           if (var7 < var11) {
-            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+            height = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * SoftwareRaster.width;
-          var15 = SoftwareRaster.width - param2;
-          if (param1 + param3 > SoftwareRaster.clipBottom) {
-            param3 = param3 - (param1 + param3 - SoftwareRaster.clipBottom);
+          var14Lifetime2 = x + y * SoftwareRaster.width;
+          var15 = SoftwareRaster.width - width;
+          if (y + height > SoftwareRaster.clipBottom) {
+            height = height - (y + height - SoftwareRaster.clipBottom);
           }
-          if (param1 < SoftwareRaster.clipTop) {
-            var16 = SoftwareRaster.clipTop - param1;
-            param3 = param3 - var16;
+          if (y < SoftwareRaster.clipTop) {
+            var16 = SoftwareRaster.clipTop - y;
+            height = height - var16;
             var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.width;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > SoftwareRaster.clipRight) {
-            var16Lifetime1 = param0 + param2 - SoftwareRaster.clipRight;
-            param2 = param2 - var16Lifetime1;
+          if (x + width > SoftwareRaster.clipRight) {
+            var16Lifetime1 = x + width - SoftwareRaster.clipRight;
+            width = width - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < SoftwareRaster.clipLeft) {
-            var16Lifetime2 = SoftwareRaster.clipLeft - param0;
-            param2 = param2 - var16Lifetime2;
+          if (x < SoftwareRaster.clipLeft) {
+            var16Lifetime2 = SoftwareRaster.clipLeft - x;
+            width = width - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, width, height, var12, var13, var6, brightness);
           return;
         }
     }
@@ -1000,14 +1000,14 @@ class RgbSprite extends RgbSpriteBase {
         this.offsetY = 0;
     }
 
-    void h(int param0, int param1) {
-        param0 = param0 + (this.offsetX >> 1);
-        param1 = param1 + (this.offsetY >> 1);
-        int var3 = param0 < SoftwareRaster.clipLeft ? SoftwareRaster.clipLeft - param0 << 1 : 0;
-        int var4 = param0 + (this.pixelWidth >> 1) > SoftwareRaster.clipRight ? SoftwareRaster.clipRight - param0 << 1 : this.pixelWidth;
-        int var5 = param1 < SoftwareRaster.clipTop ? SoftwareRaster.clipTop - param1 << 1 : 0;
-        int var6 = param1 + (this.pixelHeight >> 1) > SoftwareRaster.clipBottom ? SoftwareRaster.clipBottom - param1 << 1 : this.pixelHeight;
-        RgbSprite.a(this.pixels, var5 * this.pixelWidth + var3, (param1 + (var5 >> 1)) * SoftwareRaster.width + (param0 + (var3 >> 1)), (this.pixelWidth << 1) - (var4 - var3) + (this.pixelWidth & 1), SoftwareRaster.width - (var4 - var3 >> 1), this.pixelWidth, var4 - var3 >> 1, var6 - var5 >> 1);
+    void drawHalfSize(int x, int y) {
+        x = x + (this.offsetX >> 1);
+        y = y + (this.offsetY >> 1);
+        int var3 = x < SoftwareRaster.clipLeft ? SoftwareRaster.clipLeft - x << 1 : 0;
+        int var4 = x + (this.pixelWidth >> 1) > SoftwareRaster.clipRight ? SoftwareRaster.clipRight - x << 1 : this.pixelWidth;
+        int var5 = y < SoftwareRaster.clipTop ? SoftwareRaster.clipTop - y << 1 : 0;
+        int var6 = y + (this.pixelHeight >> 1) > SoftwareRaster.clipBottom ? SoftwareRaster.clipBottom - y << 1 : this.pixelHeight;
+        RgbSprite.a(this.pixels, var5 * this.pixelWidth + var3, (y + (var5 >> 1)) * SoftwareRaster.width + (x + (var3 >> 1)), (this.pixelWidth << 1) - (var4 - var3) + (this.pixelWidth & 1), SoftwareRaster.width - (var4 - var3 >> 1), this.pixelWidth, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void g(int param0) {
@@ -1130,39 +1130,39 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    void f(int param0, int param1) {
+    void drawPixels(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * SoftwareRaster.width;
         int var4 = 0;
         int var5 = this.pixelHeight;
         int var6 = this.pixelWidth;
         int var7 = SoftwareRaster.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var9 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var9 = SoftwareRaster.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRaster.width;
         }
-        if (param1 + var5 > SoftwareRaster.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRaster.clipBottom);
+        if (y + var5 > SoftwareRaster.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
+        if (x + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = x + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1176,7 +1176,7 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    void e(int param0, int param1) {
+    void drawQuarterSize(int x, int y) {
         int var9 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -1199,35 +1199,35 @@ class RgbSprite extends RgbSpriteBase {
         int var13Lifetime1;
         var3 = this.pixelWidth >> 2;
         var4 = this.pixelHeight >> 2;
-        param0 = param0 + this.offsetX / 4;
-        param1 = param1 + this.offsetY / 4;
-        if (param0 >= SoftwareRaster.clipLeft) {
+        x = x + this.offsetX / 4;
+        y = y + this.offsetY / 4;
+        if (x >= SoftwareRaster.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRaster.clipLeft - param0 << 2;
+          stackIn_3_0 = SoftwareRaster.clipLeft - x << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRaster.clipRight) {
+        if (x + var3 <= SoftwareRaster.clipRight) {
           stackIn_6_0 = this.pixelWidth - 4;
         } else {
-          stackIn_6_0 = (SoftwareRaster.clipRight - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRaster.clipRight - x << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRaster.clipTop) {
+        if (y >= SoftwareRaster.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRaster.clipTop - param1 << 2;
+          stackIn_9_0 = SoftwareRaster.clipTop - y << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRaster.clipBottom) {
+        if (y + var4 <= SoftwareRaster.clipBottom) {
           stackIn_12_0 = this.pixelHeight - 4;
         } else {
-          stackIn_12_0 = (SoftwareRaster.clipBottom - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRaster.clipBottom - y << 2) - 4;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 4) {
           var10 = var9 * this.pixelWidth + var5;
-          var11 = (param1 + (var9 >> 2)) * SoftwareRaster.width + (param0 + (var5 >> 2));
+          var11 = (y + (var9 >> 2)) * SoftwareRaster.width + (x + (var5 >> 2));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;
@@ -1515,39 +1515,39 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    void f(int param0, int param1, int param2) {
+    void drawAdditive(int x, int y, int opacity) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRaster.width;
         int var5 = 0;
         int var6 = this.pixelHeight;
         int var7 = this.pixelWidth;
         int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
+        if (y + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
+        if (x + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = x + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1556,10 +1556,10 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          if (param2 == 256) {
+          if (opacity == 256) {
             RgbSprite.a(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            RgbSprite.a(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            RgbSprite.a(0, 0, 0, SoftwareRaster.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, opacity);
           }
           return;
         }
@@ -1759,39 +1759,39 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    void d(int param0, int param1, int param2) {
+    void drawTintedGrayscale(int x, int y, int tintColour) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRaster.width;
         int var5 = 0;
         int var6 = this.pixelHeight;
         int var7 = this.pixelWidth;
         int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
+        if (y + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
+        if (x + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = x + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1800,12 +1800,12 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, tintColour);
           return;
         }
     }
 
-    void c(int param0, int param1, int param2, int param3, int param4) {
+    void drawScaledWithOpacity(int x, int y, int width, int height, int opacity) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1821,8 +1821,8 @@ class RgbSprite extends RgbSpriteBase {
         int var14Lifetime2;
         int var16Lifetime1;
         int var16Lifetime2;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        if (width > 0) {
+          if (height <= 0) {
             return;
           }
           var6 = this.pixelWidth;
@@ -1831,53 +1831,53 @@ class RgbSprite extends RgbSpriteBase {
           var9 = 0;
           var10 = this.canvasWidth;
           var11 = this.canvasHeight;
-          var12 = (var10 << 16) / param2;
-          var13 = (var11 << 16) / param3;
+          var12 = (var10 << 16) / width;
+          var13 = (var11 << 16) / height;
           if (this.offsetX > 0) {
             var14 = ((this.offsetX << 16) + var12 - 1) / var12;
-            param0 = param0 + var14;
+            x = x + var14;
             var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
           if (this.offsetY > 0) {
             var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
-            param1 = param1 + var14Lifetime1;
+            y = y + var14Lifetime1;
             var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
-            param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
+            width = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
           if (var7 < var11) {
-            param3 = ((var7 << 16) - var9 + var13 - 1) / var13;
+            height = ((var7 << 16) - var9 + var13 - 1) / var13;
           }
-          var14Lifetime2 = param0 + param1 * SoftwareRaster.width;
-          var15 = SoftwareRaster.width - param2;
-          if (param1 + param3 > SoftwareRaster.clipBottom) {
-            param3 = param3 - (param1 + param3 - SoftwareRaster.clipBottom);
+          var14Lifetime2 = x + y * SoftwareRaster.width;
+          var15 = SoftwareRaster.width - width;
+          if (y + height > SoftwareRaster.clipBottom) {
+            height = height - (y + height - SoftwareRaster.clipBottom);
           }
-          if (param1 < SoftwareRaster.clipTop) {
-            var16 = SoftwareRaster.clipTop - param1;
-            param3 = param3 - var16;
+          if (y < SoftwareRaster.clipTop) {
+            var16 = SoftwareRaster.clipTop - y;
+            height = height - var16;
             var14Lifetime2 = var14Lifetime2 + var16 * SoftwareRaster.width;
             var9 = var9 + var13 * var16;
           }
-          if (param0 + param2 > SoftwareRaster.clipRight) {
-            var16Lifetime1 = param0 + param2 - SoftwareRaster.clipRight;
-            param2 = param2 - var16Lifetime1;
+          if (x + width > SoftwareRaster.clipRight) {
+            var16Lifetime1 = x + width - SoftwareRaster.clipRight;
+            width = width - var16Lifetime1;
             var15 = var15 + var16Lifetime1;
           }
-          if (param0 < SoftwareRaster.clipLeft) {
-            var16Lifetime2 = SoftwareRaster.clipLeft - param0;
-            param2 = param2 - var16Lifetime2;
+          if (x < SoftwareRaster.clipLeft) {
+            var16Lifetime2 = SoftwareRaster.clipLeft - x;
+            width = width - var16Lifetime2;
             var14Lifetime2 = var14Lifetime2 + var16Lifetime2;
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          RgbSprite.a(SoftwareRaster.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, width, height, var12, var13, var6, opacity);
           return;
         }
     }
 
-    void c(int param0, int param1, int param2, int param3) {
+    void drawScaled(int x, int y, int width, int height) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1893,8 +1893,8 @@ class RgbSprite extends RgbSpriteBase {
         int var13Lifetime2;
         int var15Lifetime1;
         int var15Lifetime2;
-        if (param2 > 0) {
-          if (param3 <= 0) {
+        if (width > 0) {
+          if (height <= 0) {
             return;
           }
           var5 = this.pixelWidth;
@@ -1903,48 +1903,48 @@ class RgbSprite extends RgbSpriteBase {
           var8 = 0;
           var9 = this.canvasWidth;
           var10 = this.canvasHeight;
-          var11 = (var9 << 16) / param2;
-          var12 = (var10 << 16) / param3;
+          var11 = (var9 << 16) / width;
+          var12 = (var10 << 16) / height;
           if (this.offsetX > 0) {
             var13 = ((this.offsetX << 16) + var11 - 1) / var11;
-            param0 = param0 + var13;
+            x = x + var13;
             var7 = var7 + (var13 * var11 - (this.offsetX << 16));
           }
           if (this.offsetY > 0) {
             var13Lifetime1 = ((this.offsetY << 16) + var12 - 1) / var12;
-            param1 = param1 + var13Lifetime1;
+            y = y + var13Lifetime1;
             var8 = var8 + (var13Lifetime1 * var12 - (this.offsetY << 16));
           }
           if (var5 < var9) {
-            param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
+            width = ((var5 << 16) - var7 + var11 - 1) / var11;
           }
           if (var6 < var10) {
-            param3 = ((var6 << 16) - var8 + var12 - 1) / var12;
+            height = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param0 + param1 * SoftwareRaster.width;
-          var14 = SoftwareRaster.width - param2;
-          if (param1 + param3 > SoftwareRaster.clipBottom) {
-            param3 = param3 - (param1 + param3 - SoftwareRaster.clipBottom);
+          var13Lifetime2 = x + y * SoftwareRaster.width;
+          var14 = SoftwareRaster.width - width;
+          if (y + height > SoftwareRaster.clipBottom) {
+            height = height - (y + height - SoftwareRaster.clipBottom);
           }
-          if (param1 < SoftwareRaster.clipTop) {
-            var15 = SoftwareRaster.clipTop - param1;
-            param3 = param3 - var15;
+          if (y < SoftwareRaster.clipTop) {
+            var15 = SoftwareRaster.clipTop - y;
+            height = height - var15;
             var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRaster.width;
             var8 = var8 + var12 * var15;
           }
-          if (param0 + param2 > SoftwareRaster.clipRight) {
-            var15Lifetime1 = param0 + param2 - SoftwareRaster.clipRight;
-            param2 = param2 - var15Lifetime1;
+          if (x + width > SoftwareRaster.clipRight) {
+            var15Lifetime1 = x + width - SoftwareRaster.clipRight;
+            width = width - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param0 < SoftwareRaster.clipLeft) {
-            var15Lifetime2 = SoftwareRaster.clipLeft - param0;
-            param2 = param2 - var15Lifetime2;
+          if (x < SoftwareRaster.clipLeft) {
+            var15Lifetime2 = SoftwareRaster.clipLeft - x;
+            width = width - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, width, height, var11, var12, var5);
           return;
         }
     }
@@ -2142,43 +2142,43 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    void g(int param0, int param1, int param2) {
+    void drawWithBrightness(int x, int y, int brightness) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        if (param2 == 256) {
-          this.g(param0, param1);
+        if (brightness == 256) {
+          this.drawTransparent(x, y);
           return;
         }
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRaster.width;
         int var5 = 0;
         int var6 = this.pixelHeight;
         int var7 = this.pixelWidth;
         int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
+        if (y + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
+        if (x + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = x + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -2187,7 +2187,7 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.b(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, brightness);
           return;
         }
     }
@@ -2334,39 +2334,39 @@ class RgbSprite extends RgbSpriteBase {
         }
     }
 
-    void e(int param0, int param1, int param2) {
+    void drawWithOpacity(int x, int y, int opacity) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var4 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var4 = x + y * SoftwareRaster.width;
         int var5 = 0;
         int var6 = this.pixelHeight;
         int var7 = this.pixelWidth;
         int var8 = SoftwareRaster.width - var7;
         int var9 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var10 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var10 = SoftwareRaster.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRaster.width;
         }
-        if (param1 + var6 > SoftwareRaster.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRaster.clipBottom);
+        if (y + var6 > SoftwareRaster.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var10Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var10Lifetime1 = SoftwareRaster.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRaster.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRaster.clipRight;
+        if (x + var7 > SoftwareRaster.clipRight) {
+          var10Lifetime2 = x + var7 - SoftwareRaster.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -2375,44 +2375,44 @@ class RgbSprite extends RgbSpriteBase {
           if (var6 <= 0) {
             return;
           }
-          RgbSprite.c(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+          RgbSprite.c(SoftwareRaster.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, opacity);
           return;
         }
     }
 
-    void c(int param0, int param1) {
+    void drawVerticalFlip(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + (this.canvasHeight - this.pixelHeight - this.offsetY);
-        int var3 = param0 + (param1 + this.pixelHeight - 1) * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + (this.canvasHeight - this.pixelHeight - this.offsetY);
+        int var3 = x + (y + this.pixelHeight - 1) * SoftwareRaster.width;
         int var4 = 0;
         int var5 = this.pixelHeight;
         int var6 = this.pixelWidth;
         int var7 = -SoftwareRaster.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var5 = var5 - (SoftwareRaster.clipTop - param1);
-          param1 = SoftwareRaster.clipTop;
+        if (y < SoftwareRaster.clipTop) {
+          var5 = var5 - (SoftwareRaster.clipTop - y);
+          y = SoftwareRaster.clipTop;
         }
-        if (param1 + var5 > SoftwareRaster.clipBottom) {
-          var9 = param1 + var5 - SoftwareRaster.clipBottom;
+        if (y + var5 > SoftwareRaster.clipBottom) {
+          var9 = y + var5 - SoftwareRaster.clipBottom;
           var5 = var5 - var9;
           var3 = var3 - var9 * SoftwareRaster.width;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
+        if (x + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = x + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -2480,39 +2480,39 @@ class RgbSprite extends RgbSpriteBase {
         return false;
     }
 
-    void g(int param0, int param1) {
+    void drawTransparent(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var3 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var3 = x + y * SoftwareRaster.width;
         int var4 = 0;
         int var5 = this.pixelHeight;
         int var6 = this.pixelWidth;
         int var7 = SoftwareRaster.width - var6;
         int var8 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var9 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var9 = SoftwareRaster.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRaster.width;
         }
-        if (param1 + var5 > SoftwareRaster.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRaster.clipBottom);
+        if (y + var5 > SoftwareRaster.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var9Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var9Lifetime1 = SoftwareRaster.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRaster.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRaster.clipRight;
+        if (x + var6 > SoftwareRaster.clipRight) {
+          var9Lifetime2 = x + var6 - SoftwareRaster.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;

@@ -475,7 +475,7 @@ final class BattleCamera {
                   var19 = 0;
                 }
                 if (var19 < 256) {
-                  pi.field_T.e(-6 + var15, -3 + var17, -var19 + 256);
+                  pi.field_T.drawWithOpacity(-6 + var15, -3 + var17, -var19 + 256);
                 }
               }
             }
