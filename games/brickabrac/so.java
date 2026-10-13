@@ -236,7 +236,7 @@ final class so {
           IntHistoryBuffer.field_l = bd.a("basic", "rosette_lrg", param0, (byte) -8);
           me.field_a = wq.a("basic", param0, "podium2", -946715356);
           pl.field_f = wq.a("basic", param0, "podium3", param3 ^ -946719499);
-          cl.field_r = cr.a("basic", param0, "podium_happy", 2);
+          BrickMotionPath.field_r = cr.a("basic", param0, "podium_happy", 2);
           e.field_q = cr.a("basic", param0, "podium_sad", param3 ^ 29139);
           qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
           pa.field_m = new jp[h.field_C.length];

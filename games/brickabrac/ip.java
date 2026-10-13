@@ -498,9 +498,9 @@ final class ip extends ki {
                     }
                   }
                   if (param2 &&
-                    ee.field_r != null &&
-                    null != ee.field_r[var7] &&
-                    ee.field_r[var7][var9]) {
+                    MotionWaypoint.field_r != null &&
+                    null != MotionWaypoint.field_r[var7] &&
+                    MotionWaypoint.field_r[var7][var9]) {
                     stackIn_248_0 = 1;
                   } else {
                     stackIn_248_0 = 0;

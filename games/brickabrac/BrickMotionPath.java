@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends MovingBody {
+final class BrickMotionPath extends MovingBody {
     static long field_q;
     static jp[] field_r;
-    private int field_u;
-    NodeDeque field_p;
+    private int waypointCount;
+    NodeDeque waypoints;
     static String field_s;
-    int field_t;
+    int durationTicks;
 
     public static void b(boolean param0) {
         field_r = null;
         if (!param0) {
-          cl.b(true);
+          BrickMotionPath.b(true);
           field_s = null;
           return;
         }
@@ -22,7 +22,7 @@ final class cl extends MovingBody {
     final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        ee var4 = null;
+        MotionWaypoint var4 = null;
         int var5 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -32,15 +32,15 @@ final class cl extends MovingBody {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = -1437511254;
-          var3_int = var3_int + (73 + this.field_u * 71 << 3);
-          var3_int = var3_int ^ this.field_t * 21 + 29298 << 9;
+          var3_int = var3_int + (73 + this.waypointCount * 71 << 3);
+          var3_int = var3_int ^ this.durationTicks * 21 + 29298 << 9;
           if (obfuscationGuard < 79) {
-            this.field_u = 98;
+            this.waypointCount = 98;
           }
-          var4 = (ee) (this.field_p.first(-103));
+          var4 = (MotionWaypoint) (this.waypoints.first(-103));
           while (var4 != null) {
             var3_int = var3_int ^ var4.computeSyncChecksum(92, diagnostics);
-            var4 = (ee) (this.field_p.next((byte) 116));
+            var4 = (MotionWaypoint) (this.waypoints.next((byte) 116));
           }
           stackIn_7_0 = var3_int;
           return stackIn_7_0;
@@ -58,14 +58,14 @@ final class cl extends MovingBody {
         }
     }
 
-    cl() {
+    BrickMotionPath() {
         super(0, 0, 0, 0, 0);
-        this.field_p = new NodeDeque();
+        this.waypoints = new NodeDeque();
     }
 
     final void readBodySnapshot(int obfuscationGuard, wq packet) {
         int var3_int = 0;
-        ee var4 = null;
+        MotionWaypoint var4 = null;
         int var5 = 0;
         wq var6 = null;
         RuntimeException stackIn_8_0 = null;
@@ -75,19 +75,19 @@ final class cl extends MovingBody {
         RuntimeException var3 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_u = packet.l(255);
-          this.field_p.clear((byte) -72);
-          this.field_t = 0;
+          this.waypointCount = packet.l(255);
+          this.waypoints.clear((byte) -72);
+          this.durationTicks = 0;
           var3_int = 0;
           if (obfuscationGuard < 89) {
             var6 = (wq) null;
             this.readBodySnapshot(-40, (wq) null);
           }
-          while (this.field_u > var3_int) {
-            var4 = new ee();
+          while (this.waypointCount > var3_int) {
+            var4 = new MotionWaypoint();
             var4.readBodySnapshot(91, packet);
-            this.field_p.addLast(var4, (byte) 3);
-            this.field_t = this.field_t + var4.field_t;
+            this.waypoints.addLast(var4, (byte) 3);
+            this.durationTicks = this.durationTicks + var4.durationTicks;
             var3_int++;
           }
           return;

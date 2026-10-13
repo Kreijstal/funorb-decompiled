@@ -144,9 +144,9 @@ final class cg extends dj {
     final static void a(NodeDeque[] param0, byte param1, NodeDeque param2, boolean param3) {
         int incrementValue$1 = 0;
         int var4_int = 0;
-        cl[] var5 = null;
+        BrickMotionPath[] var5 = null;
         int var6 = 0;
-        cl var7 = null;
+        BrickMotionPath var7 = null;
         Brick var8 = null;
         int var9 = 0;
         NodeDeque var10 = null;
@@ -161,14 +161,14 @@ final class cg extends dj {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           var4_int = param2.size(param1 ^ 88);
-          var5 = new cl[var4_int];
+          var5 = new BrickMotionPath[var4_int];
           var6 = 0;
-          var7 = (cl) (param2.first(-79));
+          var7 = (BrickMotionPath) (param2.first(-79));
           while (var7 != null) {
             incrementValue$1 = var6;
             var6++;
             var5[incrementValue$1] = var7;
-            var7 = (cl) (param2.next((byte) 116));
+            var7 = (BrickMotionPath) (param2.next((byte) 116));
           }
           var6Lifetime1 = 0;
           if (param1 != 35) {
@@ -178,8 +178,8 @@ final class cg extends dj {
             var10 = param0[var6Lifetime1];
             var8 = (Brick) (var10.first(param1 - 159));
             while (var8 != null) {
-              if ((var8.field_N & 4) != 0) {
-                var8.a(var5[var8.field_M], param3, 4);
+              if ((var8.flags & 4) != 0) {
+                var8.setMotionPath(var5[var8.field_M], param3, 4);
               }
               var8 = (Brick) (var10.next((byte) 116));
             }

@@ -60,7 +60,7 @@ final class NodeDeque {
             return stackIn_12_0;
           }
           if (param0 == 9) {
-            stackIn_15_0 = cl.field_s;
+            stackIn_15_0 = BrickMotionPath.field_s;
             return stackIn_15_0;
           }
           if (param0 == 10) {

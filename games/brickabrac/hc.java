@@ -316,7 +316,7 @@ final class hc {
           uk.field_r.field_rb = 1;
           uk.field_r.field_ub = 1;
           ok.field_d = new mh(0L, uk.field_r);
-          ee.field_s = new mh(0L, uk.field_r);
+          MotionWaypoint.field_s = new mh(0L, uk.field_r);
           ab.field_x = new mh(0L, fm.field_b);
           im.field_d = new mh(0L, uk.field_r);
           fp.field_u = new mh(0L, uk.field_r);
@@ -337,9 +337,9 @@ final class hc {
           ok.field_d.field_Jb = qg.a(cr.a("lobby", param3, "greenbutton", 2), (byte) -127);
           ok.field_d.field_Gb = qg.a(cr.a("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
           ok.field_d.field_D = qg.a(cr.a("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
-          ee.field_s.field_Jb = qg.a(cr.a("lobby", param3, "redbutton", 2), (byte) -105);
-          ee.field_s.field_Gb = qg.a(cr.a("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
-          ee.field_s.field_D = qg.a(cr.a("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
+          MotionWaypoint.field_s.field_Jb = qg.a(cr.a("lobby", param3, "redbutton", 2), (byte) -105);
+          MotionWaypoint.field_s.field_Gb = qg.a(cr.a("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
+          MotionWaypoint.field_s.field_D = qg.a(cr.a("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
           ab.field_x.field_Jb = qg.a(cr.a("lobby", param3, "backbutton", 2), (byte) -127);
           ab.field_x.field_Gb = qg.a(cr.a("lobby", param3, "backbutton_mouseover", 2), (byte) -103);
           ab.field_x.field_D = qg.a(cr.a("lobby", param3, "backbutton_mouseheld", 2), (byte) -122);

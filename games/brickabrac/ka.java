@@ -258,7 +258,7 @@ final class ka extends IntrusiveNode {
               var13.c(true);
               var13.field_Vb = new mh(0L, ok.field_d);
               var13.a(var13.field_Vb, 0);
-              var13.field_cc = new mh(0L, ee.field_s);
+              var13.field_cc = new mh(0L, MotionWaypoint.field_s);
               var13.a(var13.field_cc, 0);
               var14 = 1;
             }

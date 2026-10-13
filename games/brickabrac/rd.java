@@ -245,7 +245,7 @@ final class rd {
         if (param0 < 93) {
           return (jp[]) null;
         }
-        ee.d((byte) 96);
+        MotionWaypoint.d((byte) 96);
         return var1;
     }
 

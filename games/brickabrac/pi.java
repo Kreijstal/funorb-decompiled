@@ -108,7 +108,7 @@ final class pi extends wq {
           var8 = var24.boardWidth;
           var9 = var24.field_wb;
           lb.e(param5, param3, param5 + var8 / param2, var9 / param2 + param3);
-          if (var24.field_z != null) {
+          if (var24.brickGroups != null) {
             jo.a(param2, var24, param1, param4, param5, 30, param3);
           }
           if (var24.field_M != -1) {
@@ -125,13 +125,13 @@ final class pi extends wq {
             var12_ref_vn = (Ball) (var24.activeBalls.first(-7));
             while (var12_ref_vn != null) {
               var13 = var12_ref_vn.centerXHistory256.latestIndex;
-              if (var12_ref_vn.field_C < 40) {
-                stackIn_16_0 = (18 + var12_ref_vn.field_C) / (var11 * 3);
+              if (var12_ref_vn.contactCount < 40) {
+                stackIn_16_0 = (18 + var12_ref_vn.contactCount) / (var11 * 3);
               } else {
                 stackIn_16_0 = 19 / var11;
               }
               var14 = stackIn_16_0;
-              var15 = (var12_ref_vn.field_C + 3) * 256 / (var12_ref_vn.field_C + 6);
+              var15 = (var12_ref_vn.contactCount + 3) * 256 / (var12_ref_vn.contactCount + 6);
               var16 = var15 / (1 + var14);
               var17 = var12_ref_vn.radius256;
               var18 = 0;
@@ -148,7 +148,7 @@ final class pi extends wq {
                 }
                 break;
               }
-              if (var12_ref_vn.field_C >= 40) {
+              if (var12_ref_vn.contactCount >= 40) {
                 al.a((var12_ref_vn.radius256 >> 8) / param2 + (param3 + (var12_ref_vn.y256 >> 8) / param2), 40 / param2, 256, sa.a(100 * de.field_x, -4097) * 10 >> 16, 123, 20 / param2, (var12_ref_vn.x256 >> 8) / param2 + param5 + (var12_ref_vn.radius256 >> 8) / param2);
                 la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / param2 + (param5 << 4), (param3 << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / param2, (var12_ref_vn.radius256 >> 3) / param2, 4, 3, lj.field_n, var24.simulationTick / 5);
               }

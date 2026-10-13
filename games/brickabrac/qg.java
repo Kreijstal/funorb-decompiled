@@ -219,7 +219,7 @@ abstract class qg extends ke {
         if (n.field_e) {
           return -1;
         }
-        int var2 = wp.a(ud.d(true), true, true, this.field_s, this.field_C, ee.b(false));
+        int var2 = wp.a(ud.d(true), true, true, this.field_s, this.field_C, MotionWaypoint.b(false));
         if (var2 == param0) {
           return -1;
         }
@@ -344,7 +344,7 @@ abstract class qg extends ke {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = wg.a(ee.b(false), (byte) -74, be.a((byte) -44), fc.a(param1 ^ 115), aa.a(480), ud.d(true), this.field_C);
+            var5_intLifetime1 = wg.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), fc.a(param1 ^ 115), aa.a(480), ud.d(true), this.field_C);
             if (-1 != var5_intLifetime1) {
               vh.a(var5_intLifetime1, (byte) -123, eo.field_e, co.field_f);
               eo.field_e = null;
@@ -358,7 +358,7 @@ abstract class qg extends ke {
               pp.a((byte) 79);
             }
             if (!param2) {
-              var5_intLifetime2 = wp.a(ud.d(true), false, true, this.field_s, this.field_C, ee.b(false));
+              var5_intLifetime2 = wp.a(ud.d(true), false, true, this.field_s, this.field_C, MotionWaypoint.b(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   tf.a(eo.field_e, (byte) -77, var5_intLifetime2);

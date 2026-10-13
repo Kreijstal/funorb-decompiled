@@ -128,7 +128,7 @@ abstract class ld extends km {
               if (var5 != 0) {
                 stackIn_27_0 = e.field_q;
               } else {
-                stackIn_27_0 = cl.field_r;
+                stackIn_27_0 = BrickMotionPath.field_r;
               }
               var10 = stackIn_27_0[da.field_C[var7]];
               var10.c(var8 - var10.field_x / 2, var9 - var10.field_z);

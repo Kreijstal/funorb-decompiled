@@ -167,16 +167,16 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
           lb.b(var24);
           stackIn_6_0 = ((1 << param2 & (param3.playerMaskThree | (param3.playerMaskOne | param3.playerMaskTwo))) != 0) ? 0 : 1;
           var11 = stackIn_6_0;
-          for (var12 = 0; var12 < param1.field_z.length; var12++) {
-            var13 = param1.field_z[var12];
+          for (var12 = 0; var12 < param1.brickGroups.length; var12++) {
+            var13 = param1.brickGroups[var12];
             var14 = (Brick) (var13.first(-105));
             while (var14 != null) {
               boolean decompiledFrameRemainder0 = true;
-              if ((1 & var14.field_N) == 0) {
+              if ((1 & var14.flags) == 0) {
                 var8 = param6 + (var14.y256 >> 8) / param0;
                 var7_int = (var14.x256 >> 8) / param0 + param4;
                 stackIn_14_0 = var14.typeId;
-                if ((var14.field_N & 2) != 0) {
+                if ((var14.flags & 2) != 0) {
                   stackIn_15_1 = 29;
                 } else {
                   stackIn_15_1 = 0;
@@ -188,7 +188,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                   stackIn_18_0 = var10;
                 }
                 var16 = stackIn_18_0;
-                if (var14.field_R < 0) {
+                if (var14.pendingTypeId < 0) {
                   if (param3.playerCount != 1 &&
                     var11 == 0) {
                     if (!(param1.field_U >= 50)) {
@@ -201,13 +201,13 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                     if (r.field_A &&
                       ka.a((byte) 89) &&
                       4 == ga.field_i &&
-                      (2 & var14.field_N) != 0) {
+                      (2 & var14.flags) != 0) {
                       var17 = de.field_x - mn.field_v;
                       var16.f(var7_int, var8, 64 + (sa.a(200 * var17, param5 ^ -4127) >> 10));
                     }
                   }
                 } else {
-                  var17 = var14.field_B;
+                  var17 = var14.transitionCode;
                   var18 = -(var14.stateWord * 16) + 256;
                   if (var11 == 0) {
                     var19 = var14.stateWord + param1.field_U;
@@ -302,11 +302,11 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
                           var16.a(var14.stateWord * 2 / param0 + var7_int, var8, var19 / param0, var16.field_z);
                         } else {
                           var19 = -26 + var14.stateWord * 4;
-                          nj.field_l[var14.field_R].a((-(2 * var14.stateWord) + 30) / param0 + var7_int, var8, var19 / param0, var16.field_z);
+                          nj.field_l[var14.pendingTypeId].a((-(2 * var14.stateWord) + 30) / param0 + var7_int, var8, var19 / param0, var16.field_z);
                         }
                         break;
                       case 11:
-                        nj.field_l[var14.field_R].c(var7_int, var8);
+                        nj.field_l[var14.pendingTypeId].c(var7_int, var8);
                         var16.b(var7_int, var8, var18);
                         break;
                     }

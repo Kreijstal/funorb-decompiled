@@ -72,11 +72,11 @@ final class dp extends ki {
         ni.field_Ub = pl.a("halloween", "halloween_mid", (byte) 116, i.field_m);
         dj.field_e = pl.a("halloween", "halloween_far", (byte) 120, i.field_m);
         mq.field_f = pl.a("halloween", "halloween_small", (byte) 105, i.field_m);
-        ee.field_p = pl.a("halloween", "halloween_moon", (byte) 102, i.field_m);
+        MotionWaypoint.field_p = pl.a("halloween", "halloween_moon", (byte) 102, i.field_m);
         va.field_b = jh.a(0, nf.field_U);
         field_u = jh.a(0, ni.field_Ub);
         ch.field_m = jh.a(0, dj.field_e);
-        th.field_j = jh.a(0, ee.field_p);
+        th.field_j = jh.a(0, MotionWaypoint.field_p);
         ba.field_A = pl.a("halloween", "halloween_character", (byte) -106, i.field_m);
         ej.field_L[0] = cr.a("halloween", i.field_m, "halloween_caps", 2);
         qg.field_r[0] = cr.a("halloween", i.field_m, "halloween_segs", 2);
@@ -127,7 +127,7 @@ final class dp extends ki {
           if (mq.field_f == null) {
             return false;
           }
-          if (null == ee.field_p) {
+          if (null == MotionWaypoint.field_p) {
             return false;
           }
           if (null == ba.field_A) {
@@ -156,7 +156,7 @@ final class dp extends ki {
         if (mq.field_f == null) {
           return false;
         }
-        if (null == ee.field_p) {
+        if (null == MotionWaypoint.field_p) {
           return false;
         }
         if (null == ba.field_A) {

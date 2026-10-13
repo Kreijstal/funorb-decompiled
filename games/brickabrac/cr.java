@@ -323,12 +323,12 @@ final class cr extends oc {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (q.field_i == rf.field_b);
               if ((decompiledFrameRemainder0) && (k.field_h.field_l == 0 &&
-                cl.field_q + 10000L < ue.a(false))) {
+                BrickMotionPath.field_q + 10000L < ue.a(false))) {
                 k.field_h.e(-13413, param0);
               }
             } else {
               if (k.field_h.field_l == 0 &&
-                cl.field_q + 10000L < ue.a(false)) {
+                BrickMotionPath.field_q + 10000L < ue.a(false)) {
                 k.field_h.e(-13413, param0);
               }
             }
@@ -339,7 +339,7 @@ final class cr extends oc {
               if (0 < k.field_h.field_l) {
                 try {
                   eq.field_g.a(k.field_h.field_k, true, k.field_h.field_l, 0);
-                  cl.field_q = ue.a(false);
+                  BrickMotionPath.field_q = ue.a(false);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;

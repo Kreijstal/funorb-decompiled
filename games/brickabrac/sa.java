@@ -407,7 +407,7 @@ abstract class sa extends qg implements vc {
         if (null != ua.field_d &&
           ua.field_d.field_e) {
           nc.b(84);
-          ee.c(4);
+          MotionWaypoint.c(4);
         }
         stackIn_7_1 = (ua.field_d != null);
         this.b(stackIn_7_1, 1);

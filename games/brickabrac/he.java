@@ -259,7 +259,7 @@ final class he extends ib implements en {
             he.a((wq) null, (byte) -62);
           }
           if (this.field_K == param4) {
-            ee.d(-117);
+            MotionWaypoint.d(-117);
           } else {
             if (this.field_I == param4) {
               fr.d(-1);

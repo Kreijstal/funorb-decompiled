@@ -290,16 +290,16 @@ class RectangleBody extends MovingBody {
         }
     }
 
-    void a(byte param0, PlayerBoard param1, CircleBody param2) {
+    void onCircleContact(byte obfuscationGuard, PlayerBoard board, CircleBody circle) {
         try {
-          if (param0 != 53) {
+          if (obfuscationGuard != 53) {
             CircleBody var5 = (CircleBody) null;
             this.resolveCircleCollision((CircleBody) null, (byte) 44);
           }
-          param2.x256 = oh.field_f;
-          param2.y256 = mm.field_Tb;
+          circle.x256 = oh.field_f;
+          circle.y256 = mm.field_Tb;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "bn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "bn.E(" + obfuscationGuard + ',' + (board != null ? "{...}" : "null") + ',' + (circle != null ? "{...}" : "null") + ')');
         }
     }
 

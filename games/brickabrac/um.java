@@ -915,7 +915,7 @@ class um implements ub, qe {
                 var13.field_ec.a(var13.field_sc, 0);
               }
               var13.field_Yb = new mh(0L, (mh) null);
-              if ((1 << ee.field_q & var15) != 0) {
+              if ((1 << MotionWaypoint.field_q & var15) != 0) {
                 var13.field_ec.a(var13.field_Yb, 0);
               }
               var13.field_Bc = new mh(0L, (mh) null);
@@ -1111,7 +1111,7 @@ class um implements ub, qe {
                 var13.field_sc.a(var13.field_ec.field_cb, 0, var35_int, var51_ref.field_x, (byte) 64);
                 var35_int = var35_int + (var51_ref.field_x + kn.field_z);
               }
-              if ((var15Lifetime1 & 1 << ee.field_q) != 0) {
+              if ((var15Lifetime1 & 1 << MotionWaypoint.field_q) != 0) {
                 if (!var13.field_uc) {
                   stackIn_77_0 = (var13.field_Pb) ? 1 : 0;
                 } else {

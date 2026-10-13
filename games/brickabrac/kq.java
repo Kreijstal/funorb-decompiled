@@ -168,8 +168,8 @@ final class kq extends IntrusiveNode {
         Object var7 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (0 >= param0.field_v) {
-            if (param0.field_J <= 0) {
+          if (0 >= param0.penetrationTicks) {
+            if (param0.phaseTicks <= 0) {
               gr.field_c.c(param3 + (param0.x256 >> 8) / param2, (param0.y256 >> 8) / param2 + param4);
             } else {
               gr.field_c.b(param3 + (param0.x256 >> 8) / param2, param4 + (param0.y256 >> 8) / param2, 128);

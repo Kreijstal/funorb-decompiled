@@ -219,7 +219,7 @@ final class jm {
             return stackIn_5_0;
           }
           var2 = new mb(param0, ag.field_K, dl.field_d, jh.field_b, gg.field_t, qp.field_c, cn.field_a);
-          ee.d((byte) 96);
+          MotionWaypoint.d((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

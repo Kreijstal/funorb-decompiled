@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Paddle extends RectangleBody {
-    int field_z;
-    private int field_D;
+    int catchTicks;
+    private int reboundSpeedStage;
     int controlMode;
     int field_w;
     int boardSpan256;
@@ -25,7 +25,7 @@ final class Paddle extends RectangleBody {
 
     Paddle(int centerX256, int y256, int controlMode, int boardSpan256) {
         super(0, y256, 0, 0, 22528, 3840, 0);
-        this.field_D = 1;
+        this.reboundSpeedStage = 1;
         this.boardSpan256 = boardSpan256;
         this.centerX256 = centerX256;
         this.controlMode = controlMode;
@@ -49,8 +49,8 @@ final class Paddle extends RectangleBody {
           if (diagnostics != null) {
             discarded$4 = diagnostics.append("base checksum for paddle: " + Integer.toString(var3_int, 16) + "\n");
             discarded$5 = diagnostics.append(this.x256 + " " + this.y256 + " " + this.velocityX256 + " " + this.velocityY256 + " " + " " + this.typeId + " " + this.stateWord + "\n");
-            discarded$6 = diagnostics.append(this.controlMode + " " + this.boardSpan256 + " " + this.centerX256 + " " + this.sizeStage + " " + " " + this.field_w + " " + this.field_z + "\n");
-            discarded$7 = diagnostics.append(this.field_D + " " + this.field_H + "\n");
+            discarded$6 = diagnostics.append(this.controlMode + " " + this.boardSpan256 + " " + this.centerX256 + " " + this.sizeStage + " " + " " + this.field_w + " " + this.catchTicks + "\n");
+            discarded$7 = diagnostics.append(this.reboundSpeedStage + " " + this.field_H + "\n");
           }
           var3_int = var3_int ^ (this.boardSpan256 * 41 << 5) + (this.controlMode * 37 << 1);
           var3_int = var3_int + (64175 + this.centerX256 * 11);
@@ -59,8 +59,8 @@ final class Paddle extends RectangleBody {
           if (obfuscationGuard <= 79) {
             this.field_w = 12;
           }
-          var3_int = var3_int + (this.field_z * 29 << 26);
-          var3_int = var3_int ^ 10 + 13 * this.field_D << 28;
+          var3_int = var3_int + (this.catchTicks * 29 << 26);
+          var3_int = var3_int ^ 10 + 13 * this.reboundSpeedStage << 28;
           var3_int = var3_int ^ this.field_H * 83 + 45050 << 2;
           stackIn_6_0 = var3_int;
           return stackIn_6_0;
@@ -103,17 +103,17 @@ final class Paddle extends RectangleBody {
         field_v = (int[]) null;
     }
 
-    final void b(boolean param0) {
-        if (this.field_D != 8) {
-          this.field_D = this.field_D + 1;
-          if (!param0) {
+    final void increaseReboundSpeed(boolean obfuscationGuard) {
+        if (this.reboundSpeedStage != 8) {
+          this.reboundSpeedStage = this.reboundSpeedStage + 1;
+          if (!obfuscationGuard) {
             field_C = (mh) null;
           }
           return;
         }
     }
 
-    final void a(byte param0, PlayerBoard param1, CircleBody param2) {
+    final void onCircleContact(byte obfuscationGuard, PlayerBoard board, CircleBody circle) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -137,39 +137,39 @@ final class Paddle extends RectangleBody {
         int var5Lifetime2;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          super.a(param0, param1, param2);
-          var14 = (Ball) (param2);
-          var14.field_I = 0;
-          var14.field_C = var14.field_C + 1;
+          super.onCircleContact(obfuscationGuard, board, circle);
+          var14 = (Ball) (circle);
+          var14.brickBounceCount = 0;
+          var14.contactCount = var14.contactCount + 1;
           if (sh.field_a != 1) {
             if (sh.field_a == 2) {
-              param2.velocityY256 = -param2.velocityY256;
+              circle.velocityY256 = -circle.velocityY256;
               return;
             }
-            param2.velocityX256 = -param2.velocityX256;
-            var5 = (this.velocityX256 - param2.velocityX256) * mn.field_A;
+            circle.velocityX256 = -circle.velocityX256;
+            var5 = (this.velocityX256 - circle.velocityX256) * mn.field_A;
             if (var5 >= 0) {
               return;
             }
-            param2.velocityX256 = this.velocityX256;
+            circle.velocityX256 = this.velocityX256;
             return;
           }
-          var5Lifetime1 = kj.a(-w.b(param2.velocityX256, -param2.velocityX256, 93) - w.b(param2.velocityY256, -param2.velocityY256, 114) << 8, param0 - 51) >> 8;
-          var6 = this.field_D * 16 + var5Lifetime1;
+          var5Lifetime1 = kj.approximateSqrt256(-w.b(circle.velocityX256, -circle.velocityX256, 93) - w.b(circle.velocityY256, -circle.velocityY256, 114) << 8, obfuscationGuard - 51) >> 8;
+          var6 = this.reboundSpeedStage * 16 + var5Lifetime1;
           if (3840 < var6) {
             var6 = 3840;
           }
           var7 = 43520;
-          var8 = param2.x256 + param2.radius256 - (this.x256 + (this.width256 >> 1));
-          var9 = -kj.a(w.b(var8, -var8, 113) - w.b(var7, -var7, 111) << 8, 2);
+          var8 = circle.x256 + circle.radius256 - (this.x256 + (this.width256 >> 1));
+          var9 = -kj.approximateSqrt256(w.b(var8, -var8, 113) - w.b(var7, -var7, 111) << 8, 2);
           var9 = var9 / var7;
           var8 = (var8 << 8) / var7;
-          var10 = param2.velocityY256 * var9 + var8 * param2.velocityX256 >> 7;
-          var11 = -(var8 * var10 >> 8) + (param2.velocityX256 + 8) - param1.a(16, (byte) 62);
-          var12 = -(var10 * var9 >> 8) + (param2.velocityY256 + (-param1.a(16, (byte) 62) + 8));
+          var10 = circle.velocityY256 * var9 + var8 * circle.velocityX256 >> 7;
+          var11 = -(var8 * var10 >> 8) + (circle.velocityX256 + 8) - board.a(16, (byte) 62);
+          var12 = -(var10 * var9 >> 8) + (circle.velocityY256 + (-board.a(16, (byte) 62) + 8));
           if (var11 == 0) {
-            param2.velocityY256 = var12;
-            param2.velocityX256 = var11;
+            circle.velocityY256 = var12;
+            circle.velocityX256 = var11;
           } else {
             stackIn_8_0 = 341;
             if (var12 * var11 <= 0) {
@@ -178,28 +178,28 @@ final class Paddle extends RectangleBody {
               stackIn_9_1 = (var12 << 8) / var11 << 8;
             }
             if (stackIn_8_0 < nk.a(stackIn_9_1, 30922)) {
-              param2.velocityY256 = var12;
-              param2.velocityX256 = var11;
+              circle.velocityY256 = var12;
+              circle.velocityX256 = var11;
             } else {
-              param2.velocityY256 = -param2.velocityY256;
+              circle.velocityY256 = -circle.velocityY256;
             }
           }
-          var5Lifetime2 = kj.a(-w.b(param2.velocityX256, -param2.velocityX256, param0 ^ 85) - w.b(param2.velocityY256, -param2.velocityY256, 95) << 8, param0 ^ 55) >> 8;
-          param2.velocityX256 = var6 * param2.velocityX256 / var5Lifetime2;
-          param2.velocityY256 = param2.velocityY256 * var6 / var5Lifetime2;
+          var5Lifetime2 = kj.approximateSqrt256(-w.b(circle.velocityX256, -circle.velocityX256, obfuscationGuard ^ 85) - w.b(circle.velocityY256, -circle.velocityY256, 95) << 8, obfuscationGuard ^ 55) >> 8;
+          circle.velocityX256 = var6 * circle.velocityX256 / var5Lifetime2;
+          circle.velocityY256 = circle.velocityY256 * var6 / var5Lifetime2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_21_0 = var4;
-          stackIn_21_1 = new StringBuilder().append("vo.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("vo.E(").append(obfuscationGuard).append(',');
+          if (board == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
           stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
-          if (param2 == null) {
+          if (circle == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
@@ -209,7 +209,7 @@ final class Paddle extends RectangleBody {
     }
 
     final void resetSize(int resetState) {
-        this.field_D = 1;
+        this.reboundSpeedStage = 1;
         this.x256 = this.centerX256 - 11264;
         this.sizeStage = 8;
         this.width256 = 22528;
@@ -245,10 +245,10 @@ final class Paddle extends RectangleBody {
           return;
         }
         try {
-          this.field_D = 15 & this.sizeStage >> 4;
+          this.reboundSpeedStage = 15 & this.sizeStage >> 4;
           this.sizeStage = this.sizeStage & 15;
           this.field_w = packet.i(65280);
-          this.field_z = packet.i(65280);
+          this.catchTicks = packet.i(65280);
           this.field_H = packet.i(65280);
           this.width256 = 32 + (6 * this.sizeStage + 8) << 8;
         } catch (RuntimeException runtimeException) {

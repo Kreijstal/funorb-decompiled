@@ -53,7 +53,7 @@ final class dq {
         int var13 = 0;
         java.math.BigInteger var14 = null;
         Brick var15 = null;
-        cl var16 = null;
+        BrickMotionPath var16 = null;
         int var6_intLifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -109,13 +109,13 @@ final class dq {
                 var15.velocityX256 = param2.e(255);
                 var15.velocityY256 = param2.e(255);
                 var15.typeId = param2.e(255);
-                var15.field_N = param2.e(255);
+                var15.flags = param2.e(255);
               }
               param0[0].addLast(var15, (byte) 3);
             }
             var9_ref_on = (Brick) (param0[0].first(-54));
             while (var9_ref_on != null) {
-              if ((var9_ref_on.field_N & 4) != 0) {
+              if ((var9_ref_on.flags & 4) != 0) {
                 param0[1].addLast(var9_ref_on, (byte) 3);
               }
               var9_ref_on = (Brick) (param0[0].next((byte) 116));
@@ -124,7 +124,7 @@ final class dq {
           if (var6_intLifetime1 > 1) {
             var8Lifetime1 = param2.e(255);
             for (var9Lifetime1 = 0; var8Lifetime1 > var9Lifetime1; var9Lifetime1++) {
-              var16 = new cl();
+              var16 = new BrickMotionPath();
               var16.readBodySnapshot(90, param2);
               param3.addLast(var16, (byte) 3);
             }

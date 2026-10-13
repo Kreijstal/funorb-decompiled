@@ -3,27 +3,27 @@
  */
 final class Brick extends RectangleBody {
     static String field_F;
-    int field_H;
-    int field_B;
-    int field_N;
+    int portalIndex;
+    int transitionCode;
+    int flags;
     static int[] field_D;
-    private int field_v;
+    private int sourceWaypointIndex;
     private static int[] field_y;
     static int[] field_L;
     int field_M;
-    ee[] field_P;
+    MotionWaypoint[] waypoints;
     static jp field_K;
-    int field_S;
-    int field_J;
-    private int field_G;
+    int segmentElapsedTicks;
+    int motionElapsedTicks;
+    private int pathDurationTicks;
     static jp[][] field_I;
     static int field_E;
     static kg field_x;
     static byte[] field_O;
     static mh field_A;
     static String field_z;
-    int field_R;
-    int field_C;
+    int pendingTypeId;
+    int destinationWaypointIndex;
     static jp field_w;
 
     final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
@@ -40,17 +40,17 @@ final class Brick extends RectangleBody {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= 79) {
-            this.f(-33);
+            this.advanceMotionSegment(-33);
           }
           var3_int = super.computeSyncChecksum(107, diagnostics);
           if (diagnostics != null) {
             discarded$4 = diagnostics.append(this.x256 + " " + this.y256 + " ");
             discarded$5 = diagnostics.append(this.velocityX256 + " " + " " + this.velocityY256 + " ");
-            discarded$6 = diagnostics.append(this.field_G + " " + this.field_J + " " + this.field_S + " " + this.field_M + " ");
-            discarded$7 = diagnostics.append(this.field_R + "\n");
+            discarded$6 = diagnostics.append(this.pathDurationTicks + " " + this.motionElapsedTicks + " " + this.segmentElapsedTicks + " " + this.field_M + " ");
+            discarded$7 = diagnostics.append(this.pendingTypeId + "\n");
           }
-          var3_int = var3_int ^ (this.field_J * 19 + this.field_G * 23 - (-(this.field_S * 17) - 4641) ^ 405 + 27 * this.field_N << 21 ^ 47802 + this.field_M * 3 << 4 ^ 4643 + this.field_R * 23 << 8);
-          var3_int = var3_int ^ this.field_H * 7 + 35 << 2;
+          var3_int = var3_int ^ (this.motionElapsedTicks * 19 + this.pathDurationTicks * 23 - (-(this.segmentElapsedTicks * 17) - 4641) ^ 405 + 27 * this.flags << 21 ^ 47802 + this.field_M * 3 << 4 ^ 4643 + this.pendingTypeId * 23 << 8);
+          var3_int = var3_int ^ this.portalIndex * 7 + 35 << 2;
           stackIn_5_0 = var3_int;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -67,42 +67,42 @@ final class Brick extends RectangleBody {
         }
     }
 
-    private final void a(cl param0, byte param1) {
-        int var3_int = 0;
-        ee var4_ref_ee = null;
-        int incrementValue$0 = 0;
-        int var4 = 0;
+    private final void attachMotionPath(BrickMotionPath path, byte obfuscationGuard) {
+        int waypointIndex = 0;
+        MotionWaypoint waypoint = null;
+        int copiedIndex = 0;
+        int segmentStartTick = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        int var3_intLifetime1;
-        if (param0.field_p.isEmpty(false)) {
+        int segmentEndTick;
+        if (path.waypoints.isEmpty(false)) {
           return;
         }
-        if (param1 > -87) {
+        if (obfuscationGuard > -87) {
           return;
         }
         try {
-          this.field_G = param0.field_t;
-          this.field_P = new ee[param0.field_p.size(119)];
-          var3_int = 0;
-          var4_ref_ee = (ee) (param0.field_p.first(-38));
-          while (var4_ref_ee != null) {
-            incrementValue$0 = var3_int;
-            var3_int++;
-            this.field_P[incrementValue$0] = var4_ref_ee;
-            var4_ref_ee = (ee) (param0.field_p.next((byte) 116));
+          this.pathDurationTicks = path.durationTicks;
+          this.waypoints = new MotionWaypoint[path.waypoints.size(119)];
+          waypointIndex = 0;
+          waypoint = (MotionWaypoint) (path.waypoints.first(-38));
+          while (waypoint != null) {
+            copiedIndex = waypointIndex;
+            waypointIndex++;
+            this.waypoints[copiedIndex] = waypoint;
+            waypoint = (MotionWaypoint) (path.waypoints.next((byte) 116));
           }
-          this.field_v = -1 + this.field_P.length;
-          this.field_C = 0;
-          var3_intLifetime1 = 0;
-          var4 = 0;
-          while (var3_intLifetime1 <= this.field_J) {
-            var4 = var3_intLifetime1;
-            this.f(68);
-            var3_intLifetime1 = var3_intLifetime1 + this.field_P[this.field_C].field_t;
+          this.sourceWaypointIndex = -1 + this.waypoints.length;
+          this.destinationWaypointIndex = 0;
+          segmentEndTick = 0;
+          segmentStartTick = 0;
+          while (segmentEndTick <= this.motionElapsedTicks) {
+            segmentStartTick = segmentEndTick;
+            this.advanceMotionSegment(68);
+            segmentEndTick = segmentEndTick + this.waypoints[this.destinationWaypointIndex].durationTicks;
           }
-          this.field_S = -var4 + this.field_J;
+          this.segmentElapsedTicks = -segmentStartTick + this.motionElapsedTicks;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "on.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "on.Q(" + (path != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -110,27 +110,27 @@ final class Brick extends RectangleBody {
         this(0, 0, 0, 0, 0);
     }
 
-    Brick(int x256, int y256, int velocityX256, int velocityY256, int typeId, int brickFlags, int brickState, int hitState) {
+    Brick(int x256, int y256, int velocityX256, int velocityY256, int typeId, int brickFlags, int brickState, int motionElapsedTicks) {
         super(x256, y256, velocityX256, velocityY256, 8704, 4096, typeId);
-        this.field_R = -1;
-        this.field_J = hitState;
-        this.field_N = brickFlags;
+        this.pendingTypeId = -1;
+        this.motionElapsedTicks = motionElapsedTicks;
+        this.flags = brickFlags;
         this.field_M = brickState;
     }
 
-    private final void a(PlayerBoard param0, int param1) {
+    private final void dropPowerUp(PlayerBoard board, int obfuscationGuard) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 != 15165) {
-            this.a((byte) -67, false);
+          if (obfuscationGuard != 15165) {
+            this.interpolateMotion((byte) -67, false);
           }
-          if ((this.field_N & 2) != 0 &&
-            param0.a(26, this.typeId)) {
-            param0.fallingPowerUps.addLast(new PowerUp(this.x256 + this.width256 / 2 - 2048, this.y256 + this.height256 * 2, this.typeId), (byte) 3);
+          if ((this.flags & 2) != 0 &&
+            board.a(26, this.typeId)) {
+            board.fallingPowerUps.addLast(new PowerUp(this.x256 + this.width256 / 2 - 2048, this.y256 + this.height256 * 2, this.typeId), (byte) 3);
             if (!r.field_A) {
               return;
             }
@@ -142,41 +142,41 @@ final class Brick extends RectangleBody {
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("on.R(");
-          if (param0 == null) {
+          if (board == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(cl param0, boolean param1, int param2) {
+    final void setMotionPath(BrickMotionPath path, boolean includeVelocity, int obfuscationGuard) {
         try {
-          this.a(param0, (byte) -105);
-          this.a((byte) 36, param1);
-          if (param2 != 4) {
+          this.attachMotionPath(path, (byte) -105);
+          this.interpolateMotion((byte) 36, includeVelocity);
+          if (obfuscationGuard != 4) {
             Brick.a((byte) -120, -81);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "on.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "on.P(" + (path != null ? "{...}" : "null") + ',' + includeVelocity + ',' + obfuscationGuard + ')');
         }
     }
 
-    final void a(byte param0, boolean param1) {
-        ee var6 = this.field_P[this.field_v];
-        ee var4 = this.field_P[this.field_C];
-        this.velocityX256 = -var6.x256 + var4.x256;
-        int var5 = var4.field_t;
-        this.velocityY256 = var4.y256 - var6.y256;
-        if (param0 <= 33) {
-          this.f(-3);
+    final void interpolateMotion(byte obfuscationGuard, boolean includeVelocity) {
+        MotionWaypoint sourceWaypoint = this.waypoints[this.sourceWaypointIndex];
+        MotionWaypoint destinationWaypoint = this.waypoints[this.destinationWaypointIndex];
+        this.velocityX256 = -sourceWaypoint.x256 + destinationWaypoint.x256;
+        int durationTicks = destinationWaypoint.durationTicks;
+        this.velocityY256 = destinationWaypoint.y256 - sourceWaypoint.y256;
+        if (obfuscationGuard <= 33) {
+          this.advanceMotionSegment(-3);
         }
-        this.x256 = this.field_S * this.velocityX256 / var5 + var6.x256;
-        this.y256 = var6.y256 + this.velocityY256 * this.field_S / var5;
-        if (param1) {
-          this.velocityX256 = this.velocityX256 / var5;
-          this.velocityY256 = this.velocityY256 / var5;
+        this.x256 = this.segmentElapsedTicks * this.velocityX256 / durationTicks + sourceWaypoint.x256;
+        this.y256 = sourceWaypoint.y256 + this.velocityY256 * this.segmentElapsedTicks / durationTicks;
+        if (includeVelocity) {
+          this.velocityX256 = this.velocityX256 / durationTicks;
+          this.velocityY256 = this.velocityY256 / durationTicks;
         } else {
           this.velocityX256 = 0;
           this.velocityY256 = 0;
@@ -200,7 +200,7 @@ final class Brick extends RectangleBody {
         field_F = null;
     }
 
-    final void a(byte param0, PlayerBoard param1, CircleBody param2) {
+    final void onCircleContact(byte obfuscationGuard, PlayerBoard board, CircleBody circle) {
         int dupTemp$0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -222,16 +222,16 @@ final class Brick extends RectangleBody {
         int var5Lifetime3;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var7 = (Ball) (param2);
+          var7 = (Ball) (circle);
           if (this.typeId == 28) {
-            param1.a((byte) -63, this, var7);
+            board.a((byte) -63, this, var7);
             return;
           }
           if ((sg.field_n & 1 << this.typeId) != 0 ||
-            var7.field_v == 0 &&
-            var7.field_J == 0) {
-            super.a((byte) 53, param1, param2);
-            var7.field_I = var7.field_I + 1;
+            var7.penetrationTicks == 0 &&
+            var7.phaseTicks == 0) {
+            super.onCircleContact((byte) 53, board, circle);
+            var7.brickBounceCount = var7.brickBounceCount + 1;
             if (sh.field_a != 8 &&
               sh.field_a != 4) {
               var7.velocityY256 = -var7.velocityY256;
@@ -246,13 +246,13 @@ final class Brick extends RectangleBody {
                 var7.velocityX256 = this.velocityX256;
               }
             }
-            var7.field_C = var7.field_C + 1;
-            if ((var7.field_I & 3) == 0) {
-              var7.velocityX256 = var7.velocityX256 + (-param1.a(4, (byte) 62) + 2);
-              var7.velocityY256 = var7.velocityY256 + (2 - param1.a(4, (byte) 62));
+            var7.contactCount = var7.contactCount + 1;
+            if ((var7.brickBounceCount & 3) == 0) {
+              var7.velocityX256 = var7.velocityX256 + (-board.a(4, (byte) 62) + 2);
+              var7.velocityY256 = var7.velocityY256 + (2 - board.a(4, (byte) 62));
             }
           }
-          stackIn_21_0 = (var7.field_J != 0) ? 0 : 1;
+          stackIn_21_0 = (var7.phaseTicks != 0) ? 0 : 1;
           var5Lifetime1 = stackIn_21_0;
           stackIn_24_0 = var5Lifetime1;
           if (this.typeId == 19 &&
@@ -272,61 +272,61 @@ final class Brick extends RectangleBody {
           var5Lifetime3 = stackIn_29_0 & stackIn_31_1;
           if (var5Lifetime3 != 0) {
             if (25 == this.typeId) {
-              param1.a(-27);
+              board.a(-27);
             }
             if (this.typeId != 27 ||
-              this.field_R != 26) {
+              this.pendingTypeId != 26) {
               if (this.typeId == 26 &&
-                this.field_R == 27) {
+                this.pendingTypeId == 27) {
                 this.typeId = 27;
-                this.field_R = 0;
-                this.field_B = 1;
+                this.pendingTypeId = 0;
+                this.transitionCode = 1;
               } else {
-                if (param1.field_l + 1 != ej.field_E[this.typeId]) {
-                  if ((this.field_N & 1) == 0) {
-                    param1.field_l = 0;
+                if (board.field_l + 1 != ej.field_E[this.typeId]) {
+                  if ((this.flags & 1) == 0) {
+                    board.field_l = 0;
                   }
                 } else {
-                  param1.field_l = param1.field_l + 1;
+                  board.field_l = board.field_l + 1;
                 }
-                this.field_R = ue.field_b[this.typeId];
+                this.pendingTypeId = ue.field_b[this.typeId];
                 dupTemp$0 = rb.field_a[this.typeId];
-                this.field_B = dupTemp$0;
+                this.transitionCode = dupTemp$0;
                 if (dupTemp$0 < 0) {
-                  if (param1.a(100, (byte) 62) > 65) {
+                  if (board.a(100, (byte) 62) > 65) {
                     if (sh.field_a != 1) {
                       if (sh.field_a == 2) {
-                        this.field_B = 7;
+                        this.transitionCode = 7;
                       } else {
                         if (sh.field_a != 8) {
-                          this.field_B = 9;
+                          this.transitionCode = 9;
                         } else {
-                          this.field_B = 8;
+                          this.transitionCode = 8;
                         }
                       }
                     } else {
-                      this.field_B = 6;
+                      this.transitionCode = 6;
                     }
                   } else {
-                    this.field_B = param1.a(6, (byte) 62);
+                    this.transitionCode = board.a(6, (byte) 62);
                   }
                 }
-                this.a(param1, 15165);
+                this.dropPowerUp(board, 15165);
               }
               this.stateWord = 0;
             }
           }
           if (19 == this.typeId &&
-            this.field_R < 0) {
-            this.field_R = this.typeId;
-            this.field_B = 12;
+            this.pendingTypeId < 0) {
+            this.pendingTypeId = this.typeId;
+            this.transitionCode = 12;
           }
           if (20 == this.typeId &&
-            this.field_R < 0) {
-            this.field_B = 12;
-            this.field_R = this.typeId;
+            this.pendingTypeId < 0) {
+            this.transitionCode = 12;
+            this.pendingTypeId = this.typeId;
           }
-          if (param0 != 53) {
+          if (obfuscationGuard != 53) {
             field_F = (String) null;
           }
           return;
@@ -334,14 +334,14 @@ final class Brick extends RectangleBody {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_70_0 = var4;
-          stackIn_70_1 = new StringBuilder().append("on.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_70_1 = new StringBuilder().append("on.E(").append(obfuscationGuard).append(',');
+          if (board == null) {
             stackIn_71_2 = "null";
           } else {
             stackIn_71_2 = "{...}";
           }
           stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',');
-          if (param2 == null) {
+          if (circle == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
@@ -359,16 +359,16 @@ final class Brick extends RectangleBody {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 != (4 & this.field_N) &&
-            this.field_P[this.field_v].field_t == 1 &&
-            0 == this.field_S) {
+          if (0 != (4 & this.flags) &&
+            this.waypoints[this.sourceWaypointIndex].durationTicks == 1 &&
+            0 == this.segmentElapsedTicks) {
             return false;
           }
           if ((1 << this.typeId & sg.field_n) == 0 &&
-            0 != ((Ball) (circle)).field_J) {
+            0 != ((Ball) (circle)).phaseTicks) {
             return false;
           }
-          if (this.field_R == 0) {
+          if (this.pendingTypeId == 0) {
             return false;
           }
           var3_int = -83 % ((-29 - obfuscationGuard) / 35);
@@ -403,19 +403,19 @@ final class Brick extends RectangleBody {
         this(param0, param1, param2, param3, param4, 0, 0, 0);
     }
 
-    final void f(int param0) {
-        int fieldTemp$0 = this.field_C + 1;
-        this.field_C = this.field_C + 1;
-        this.field_C = fieldTemp$0 % this.field_P.length;
-        int fieldTemp$1 = this.field_v + 1;
-        this.field_v = this.field_v + 1;
-        this.field_v = fieldTemp$1 % this.field_P.length;
-        if (param0 <= 61) {
+    final void advanceMotionSegment(int obfuscationGuard) {
+        int nextDestinationIndex = this.destinationWaypointIndex + 1;
+        this.destinationWaypointIndex = this.destinationWaypointIndex + 1;
+        this.destinationWaypointIndex = nextDestinationIndex % this.waypoints.length;
+        int nextSourceIndex = this.sourceWaypointIndex + 1;
+        this.sourceWaypointIndex = this.sourceWaypointIndex + 1;
+        this.sourceWaypointIndex = nextSourceIndex % this.waypoints.length;
+        if (obfuscationGuard <= 61) {
           wq var3 = (wq) null;
           this.readBodySnapshot(-99, (wq) null);
         }
-        this.field_J = this.field_J % this.field_G;
-        this.field_S = 0;
+        this.motionElapsedTicks = this.motionElapsedTicks % this.pathDurationTicks;
+        this.segmentElapsedTicks = 0;
     }
 
     final static int a(byte param0, int param1) {
@@ -452,7 +452,7 @@ final class Brick extends RectangleBody {
     }
 
     final void readBodySnapshot(int obfuscationGuard, wq packet) {
-        cl var4 = null;
+        BrickMotionPath var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -460,18 +460,18 @@ final class Brick extends RectangleBody {
         RuntimeException var3 = null;
         try {
           if (obfuscationGuard <= 89) {
-            var4 = (cl) null;
-            this.a((cl) null, (byte) 44);
+            var4 = (BrickMotionPath) null;
+            this.attachMotionPath((BrickMotionPath) null, (byte) 44);
           }
           super.readBodySnapshot(93, packet);
-          this.field_R = packet.b(true);
-          if (this.field_R > 0) {
-            this.field_B = packet.l(255);
+          this.pendingTypeId = packet.b(true);
+          if (this.pendingTypeId > 0) {
+            this.transitionCode = packet.l(255);
           }
-          this.field_N = packet.l(255) & 255;
-          if ((4 & this.field_N) != 0) {
+          this.flags = packet.l(255) & 255;
+          if ((4 & this.flags) != 0) {
             this.field_M = packet.l(255);
-            this.field_J = packet.i(65280);
+            this.motionElapsedTicks = packet.i(65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

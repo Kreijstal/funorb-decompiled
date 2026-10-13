@@ -44,7 +44,7 @@ class ta {
           }
           var3 = new fb(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var13);
         }
-        ee.d((byte) 96);
+        MotionWaypoint.d((byte) 96);
         return (jp) (var3);
     }
 

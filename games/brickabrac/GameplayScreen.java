@@ -433,7 +433,7 @@ final class GameplayScreen extends GameScreen {
               var12.field_N = 0;
               var13 = (Ball) (var20.activeBalls.first(-66));
               while (var13 != null) {
-                var13.field_I = 0;
+                var13.brickBounceCount = 0;
                 var13 = (Ball) (var20.activeBalls.next((byte) 116));
               }
             }
@@ -497,10 +497,10 @@ final class GameplayScreen extends GameScreen {
             }
             var9 = (Ball) (var20.activeBalls.first(-119));
             while (var9 != null) {
-              if (dp.field_r[9] <= var9.field_I) {
+              if (dp.field_r[9] <= var9.brickBounceCount) {
                 this.b(9, 106, 246);
               }
-              if (var9.field_I < dp.field_r[10]) {
+              if (var9.brickBounceCount < dp.field_r[10]) {
                 var9 = (Ball) (var20.activeBalls.next((byte) 116));
                 continue;
               }
@@ -927,7 +927,7 @@ final class GameplayScreen extends GameScreen {
           if (obfuscationGuard == 53) {
             var5_ref_vn = (Ball) (var8.activeBalls.first(-19));
             while (var5_ref_vn != null) {
-              var5_ref_vn.field_I = dp.field_r[9] - 2;
+              var5_ref_vn.brickBounceCount = dp.field_r[9] - 2;
               var5_ref_vn = (Ball) (var8.activeBalls.next((byte) 116));
             }
             this.field_s = true;
@@ -936,7 +936,7 @@ final class GameplayScreen extends GameScreen {
           if (obfuscationGuard == 39) {
             var5_ref_vnLifetime1 = (Ball) (var8.activeBalls.first(-114));
             while (var5_ref_vnLifetime1 != null) {
-              var5_ref_vnLifetime1.field_I = dp.field_r[10] - 2;
+              var5_ref_vnLifetime1.brickBounceCount = dp.field_r[10] - 2;
               var5_ref_vnLifetime1 = (Ball) (var8.activeBalls.next((byte) 116));
             }
             this.field_s = true;

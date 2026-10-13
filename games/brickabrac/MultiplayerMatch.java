@@ -162,7 +162,7 @@ final class MultiplayerMatch {
         NodeDeque[] var8_ref_vl__ = null;
         Ball var9 = null;
         int var9_int = 0;
-        cl var9_ref = null;
+        BrickMotionPath var9_ref = null;
         il var9_ref2 = null;
         Paddle var9_ref3 = null;
         Brick var9_ref4 = null;
@@ -174,7 +174,7 @@ final class MultiplayerMatch {
         Object var11_ref = null;
         int var11 = 0;
         Brick var11_ref_on = null;
-        ee var11_ref_ee = null;
+        MotionWaypoint var11_ref_ee = null;
         Object var12_ref = null;
         int var12 = 0;
         Brick var12_ref_on = null;
@@ -189,7 +189,7 @@ final class MultiplayerMatch {
         NodeDeque var21 = null;
         NodeDeque var22 = null;
         NodeDeque var23 = null;
-        ee var24 = null;
+        MotionWaypoint var24 = null;
         NodeDeque var25 = null;
         NodeDeque var26 = null;
         Ball var9Lifetime1;
@@ -270,18 +270,18 @@ final class MultiplayerMatch {
               if (!param0.activeBalls.isEmpty(false)) {
                 var9 = (Ball) (param0.activeBalls.first(-76));
                 while (var9 != null) {
-                  if (40 <= var9.field_C) {
+                  if (40 <= var9.contactCount) {
                     if (param1 != null) {
                       param1.addLast(new qc(6), (byte) 3);
                     }
                     var8 = 1;
-                    var9.field_C = 0;
+                    var9.contactCount = 0;
                     param0.field_x.addLast(new kc(var9.x256, var9.y256), (byte) 3);
                     param0.field_l = 0;
                     var20 = new CircleBody(var9.radius256 + var9.x256, var9.radius256 + var9.y256, 0, 0, 15360, 0);
                     var11 = 0;
-                    for (var12 = 0; param0.field_z.length > var12; var12++) {
-                      var19 = param0.field_z[var12];
+                    for (var12 = 0; param0.brickGroups.length > var12; var12++) {
+                      var19 = param0.brickGroups[var12];
                       var21 = var19;
                       var22 = var21;
                       var21Lifetime2 = var19;
@@ -313,20 +313,20 @@ final class MultiplayerMatch {
                             var14.typeId = 22;
                           }
                           if (var15 != 0) {
-                            stackIn_142_0 = (var14.field_R != 0) ? 0 : 1;
+                            stackIn_142_0 = (var14.pendingTypeId != 0) ? 0 : 1;
                             var16 = stackIn_142_0;
-                            var14.field_R = ue.field_b[var14.typeId];
-                            var14.field_B = rb.field_a[var14.typeId];
+                            var14.pendingTypeId = ue.field_b[var14.typeId];
+                            var14.transitionCode = rb.field_a[var14.typeId];
                             var14.stateWord = 0;
                             if (19 == var14.typeId ||
                               var14.typeId == 20) {
-                              var14.field_B = 1;
-                              var14.field_R = 0;
+                              var14.transitionCode = 1;
+                              var14.pendingTypeId = 0;
                             }
                             if (1 == this.playerCount &&
-                              var14.field_R == 0 &&
+                              var14.pendingTypeId == 0 &&
                               var16 == 0) {
-                              param0.a(2 * var9.field_B + 10, var14, 2);
+                              param0.a(2 * var9.destroyedBrickStreak + 10, var14, 2);
                               var11++;
                             }
                           }
@@ -370,8 +370,8 @@ final class MultiplayerMatch {
                 var8 = 0;
               } else {
                 if (this.playerCount != 1) {
-                  for (var9_int = 0; param0.field_z.length > var9_int; var9_int++) {
-                    var21Lifetime1 = param0.field_z[var9_int];
+                  for (var9_int = 0; param0.brickGroups.length > var9_int; var9_int++) {
+                    var21Lifetime1 = param0.brickGroups[var9_int];
                     var22Lifetime1 = var21Lifetime1;
                     var22Lifetime1Lifetime1 = var21Lifetime1;
                     var11_ref_on = (Brick) (var21Lifetime1.first(param3 - 91));
@@ -390,32 +390,32 @@ final class MultiplayerMatch {
               }
             }
             if (var8 != 0) {
-              var9_ref = (cl) (param0.field_v.first(-120));
+              var9_ref = (BrickMotionPath) (param0.field_v.first(-120));
               while (var9_ref != null) {
-                var22Lifetime2 = var9_ref.field_p;
-                var11_ref_ee = (ee) (var22Lifetime2.first(-125));
+                var22Lifetime2 = var9_ref.waypoints;
+                var11_ref_ee = (MotionWaypoint) (var22Lifetime2.first(-125));
                 while (var11_ref_ee != null) {
                   var11_ref_ee.y256 = var11_ref_ee.y256 + 256;
-                  var11_ref_ee = (ee) (var22Lifetime2.next((byte) 116));
+                  var11_ref_ee = (MotionWaypoint) (var22Lifetime2.next((byte) 116));
                 }
-                var9_ref = (cl) (param0.field_v.next((byte) 116));
+                var9_ref = (BrickMotionPath) (param0.field_v.next((byte) 116));
               }
             }
-            for (var9_int = 0; param0.field_z.length > var9_int; var9_int++) {
-              var23 = param0.field_z[var9_int];
+            for (var9_int = 0; param0.brickGroups.length > var9_int; var9_int++) {
+              var23 = param0.brickGroups[var9_int];
               var11_ref_onLifetime1 = (Brick) (var23.first(param3 ^ -42));
               while (var11_ref_onLifetime1 != null) {
                 if (var8 != 0 &&
-                  (5 & var11_ref_onLifetime1.field_N) == 0) {
+                  (5 & var11_ref_onLifetime1.flags) == 0) {
                   var11_ref_onLifetime1.y256 = var11_ref_onLifetime1.y256 + 256;
                 }
-                if (0 <= var11_ref_onLifetime1.field_R) {
+                if (0 <= var11_ref_onLifetime1.pendingTypeId) {
                   fieldTemp$6 = var11_ref_onLifetime1.stateWord + 1;
                   var11_ref_onLifetime1.stateWord = var11_ref_onLifetime1.stateWord + 1;
                   if (fieldTemp$6 == 16) {
-                    var11_ref_onLifetime1.field_B = 0;
+                    var11_ref_onLifetime1.transitionCode = 0;
                     var11_ref_onLifetime1.stateWord = 0;
-                    if (0 == var11_ref_onLifetime1.field_R) {
+                    if (0 == var11_ref_onLifetime1.pendingTypeId) {
                       var11_ref_onLifetime1.unlink((byte) 111);
                       if ((1 << var11_ref_onLifetime1.typeId & IntHistoryBuffer.field_m) != 0) {
                         param0.field_L = param0.field_L - 1;
@@ -423,24 +423,24 @@ final class MultiplayerMatch {
                         param0.field_Q = param0.field_Q + 1;
                       }
                       if (r.field_A) {
-                        jc.a(var11_ref_onLifetime1.field_N, 1, (byte) -95);
+                        jc.a(var11_ref_onLifetime1.flags, 1, (byte) -95);
                       }
                     } else {
                       if (var11_ref_onLifetime1.typeId == 0) {
                         param0.field_L = param0.field_L + 1;
                       }
-                      var11_ref_onLifetime1.typeId = var11_ref_onLifetime1.field_R;
-                      var11_ref_onLifetime1.field_R = -1;
+                      var11_ref_onLifetime1.typeId = var11_ref_onLifetime1.pendingTypeId;
+                      var11_ref_onLifetime1.pendingTypeId = -1;
                     }
                   }
                 }
-                if ((4 & var11_ref_onLifetime1.field_N) != 0) {
-                  var11_ref_onLifetime1.a((byte) 58, true);
-                  var11_ref_onLifetime1.field_S = var11_ref_onLifetime1.field_S + 1;
-                  var11_ref_onLifetime1.field_J = var11_ref_onLifetime1.field_J + 1;
-                  var24 = var11_ref_onLifetime1.field_P[var11_ref_onLifetime1.field_C];
-                  if (var24.field_t == var11_ref_onLifetime1.field_S) {
-                    var11_ref_onLifetime1.f(105);
+                if ((4 & var11_ref_onLifetime1.flags) != 0) {
+                  var11_ref_onLifetime1.interpolateMotion((byte) 58, true);
+                  var11_ref_onLifetime1.segmentElapsedTicks = var11_ref_onLifetime1.segmentElapsedTicks + 1;
+                  var11_ref_onLifetime1.motionElapsedTicks = var11_ref_onLifetime1.motionElapsedTicks + 1;
+                  var24 = var11_ref_onLifetime1.waypoints[var11_ref_onLifetime1.destinationWaypointIndex];
+                  if (var24.durationTicks == var11_ref_onLifetime1.segmentElapsedTicks) {
+                    var11_ref_onLifetime1.advanceMotionSegment(105);
                   }
                 }
                 var11_ref_onLifetime1 = (Brick) (var23.next((byte) 116));
@@ -448,11 +448,11 @@ final class MultiplayerMatch {
             }
             var9Lifetime1 = (Ball) (param0.queuedBalls.first(-105));
             while (var9Lifetime1 != null) {
-              if (var9Lifetime1.field_J > 0) {
-                var9Lifetime1.field_J = var9Lifetime1.field_J - 1;
+              if (var9Lifetime1.phaseTicks > 0) {
+                var9Lifetime1.phaseTicks = var9Lifetime1.phaseTicks - 1;
               }
-              if (var9Lifetime1.field_v > 0) {
-                var9Lifetime1.field_v = var9Lifetime1.field_v - 1;
+              if (var9Lifetime1.penetrationTicks > 0) {
+                var9Lifetime1.penetrationTicks = var9Lifetime1.penetrationTicks - 1;
               }
               var9Lifetime1 = (Ball) (param0.queuedBalls.next((byte) 116));
             }
@@ -460,11 +460,11 @@ final class MultiplayerMatch {
             while (var9Lifetime2 != null) {
               var9Lifetime2.centerXHistory256.append(-7255, var9Lifetime2.x256 + var9Lifetime2.radius256);
               var9Lifetime2.centerYHistory256.append(-7255, var9Lifetime2.y256 + var9Lifetime2.radius256);
-              if (var9Lifetime2.field_J > 0) {
-                var9Lifetime2.field_J = var9Lifetime2.field_J - 1;
+              if (var9Lifetime2.phaseTicks > 0) {
+                var9Lifetime2.phaseTicks = var9Lifetime2.phaseTicks - 1;
               }
-              if (var9Lifetime2.field_v > 0) {
-                var9Lifetime2.field_v = var9Lifetime2.field_v - 1;
+              if (var9Lifetime2.penetrationTicks > 0) {
+                var9Lifetime2.penetrationTicks = var9Lifetime2.penetrationTicks - 1;
               }
               var9Lifetime2 = (Ball) (param0.activeBalls.next((byte) 116));
             }
@@ -474,8 +474,8 @@ final class MultiplayerMatch {
             if (var7.field_H > 0) {
               var7.field_H = var7.field_H - 1;
             }
-            if (0 < var7.field_z) {
-              var7.field_z = var7.field_z - 1;
+            if (0 < var7.catchTicks) {
+              var7.catchTicks = var7.catchTicks - 1;
             }
             if (var8 != 0) {
               fieldTemp$3 = param0.field_n - 1;
@@ -487,20 +487,20 @@ final class MultiplayerMatch {
                 for (var11 = 1; var11 <= var9_int; var11++) {
                   dupTemp$4 = new Brick(34 * var11 << 8, 4096, 0, 0, 0);
                   var10_ref_on = dupTemp$4;
-                  param0.field_z[2].addLast(dupTemp$4, (byte) 3);
-                  var10_ref_on.field_R = 2;
-                  var10_ref_on.field_B = 10;
+                  param0.brickGroups[2].addLast(dupTemp$4, (byte) 3);
+                  var10_ref_on.pendingTypeId = 2;
+                  var10_ref_on.transitionCode = 10;
                 }
                 for (var11 = 0; var11 < 3; var11++) {
-                  var25 = param0.field_z[var11];
+                  var25 = param0.brickGroups[var11];
                   var26 = var25;
                   var26Lifetime2 = var25;
                   var10_ref_onLifetime1 = (Brick) (var25.first(-44));
                   while (var10_ref_onLifetime1 != null) {
-                    if ((1 & var10_ref_onLifetime1.field_N) == 0 &&
+                    if ((1 & var10_ref_onLifetime1.flags) == 0 &&
                       81920 < var10_ref_onLifetime1.y256) {
-                      var10_ref_onLifetime1.field_B = 7;
-                      var10_ref_onLifetime1.field_R = 0;
+                      var10_ref_onLifetime1.transitionCode = 7;
+                      var10_ref_onLifetime1.pendingTypeId = 0;
                       var10_ref_onLifetime1.stateWord = 0;
                     }
                     var10_ref_onLifetime1 = (Brick) (var25.next((byte) 116));
@@ -523,12 +523,12 @@ final class MultiplayerMatch {
                 var7.velocityY256 = 0;
                 var9_ref3.velocityX256 = 0;
                 for (var10 = 0; var10 < 3; var10++) {
-                  var11_ref_onLifetime2 = (Brick) (param0.field_z[var10].first(-49));
+                  var11_ref_onLifetime2 = (Brick) (param0.brickGroups[var10].first(-49));
                   while (var11_ref_onLifetime2 != null) {
-                    if ((var11_ref_onLifetime2.field_N & 4) != 0) {
-                      var11_ref_onLifetime2.a((byte) 119, true);
+                    if ((var11_ref_onLifetime2.flags & 4) != 0) {
+                      var11_ref_onLifetime2.interpolateMotion((byte) 119, true);
                     }
-                    var11_ref_onLifetime2 = (Brick) (param0.field_z[var10].next((byte) 116));
+                    var11_ref_onLifetime2 = (Brick) (param0.brickGroups[var10].next((byte) 116));
                   }
                 }
                 boolean decompiledFrameRemainder0 = true;
@@ -565,12 +565,12 @@ final class MultiplayerMatch {
                 var12Lifetime1 = 0;
                 var13 = (Ball) (param0.activeBalls.first(-26));
                 while (var13 != null) {
-                  var12Lifetime1Lifetime1 = var13.field_I;
-                  if (var13.field_I > var10) {
+                  var12Lifetime1Lifetime1 = var13.brickBounceCount;
+                  if (var13.brickBounceCount > var10) {
                     var10 = var12Lifetime1Lifetime1;
                   }
-                  var12Lifetime1Lifetime1 = var13.field_B;
-                  if (var11 < var13.field_B) {
+                  var12Lifetime1Lifetime1 = var13.destroyedBrickStreak;
+                  if (var11 < var13.destroyedBrickStreak) {
                     var11 = var12Lifetime1Lifetime1;
                   }
                   var13 = (Ball) (param0.activeBalls.next((byte) 116));
@@ -674,12 +674,12 @@ final class MultiplayerMatch {
                   var10_ref_vn = (Ball) (param0.activeBalls.next((byte) 116));
                 }
               }
-              for (var10 = 0; param0.field_z.length > var10; var10++) {
-                var26Lifetime1 = param0.field_z[var10];
+              for (var10 = 0; param0.brickGroups.length > var10; var10++) {
+                var26Lifetime1 = param0.brickGroups[var10];
                 var12_ref_on = (Brick) (var26Lifetime1.first(-38));
                 while (var12_ref_on != null) {
-                  if (0 != (var12_ref_on.field_N & 4) &&
-                    1 < var12_ref_on.field_P[var12_ref_on.field_C].field_t) {
+                  if (0 != (var12_ref_on.flags & 4) &&
+                    1 < var12_ref_on.waypoints[var12_ref_on.destinationWaypointIndex].durationTicks) {
                     var12_ref_on.x256 = var12_ref_on.x256 + var12_ref_on.velocityX256 / 8;
                     var12_ref_on.y256 = var12_ref_on.y256 + var12_ref_on.velocityY256 / 8;
                   }
@@ -700,10 +700,10 @@ final class MultiplayerMatch {
                   !(param0.boardWidth << 8 >= var10_ref_vnLifetime1.x256))) {
                   var10_ref_vnLifetime1.setVelocityFromAngle(-1024 + param0.a(2048, (byte) 62), 1536, 105);
                   var10_ref_vnLifetime1.centerXHistory256.latestIndex = -1;
-                  var10_ref_vnLifetime1.field_B = 0;
+                  var10_ref_vnLifetime1.destroyedBrickStreak = 0;
                   var10_ref_vnLifetime1.centerYHistory256.latestIndex = -1;
-                  var10_ref_vnLifetime1.field_I = 0;
-                  var10_ref_vnLifetime1.field_C = 0;
+                  var10_ref_vnLifetime1.brickBounceCount = 0;
+                  var10_ref_vnLifetime1.contactCount = 0;
                   param0.queuedBalls.addLast(var10_ref_vnLifetime1, (byte) 3);
                 }
                 if (!param0.activeBalls.isEmpty(false)) {
@@ -714,7 +714,7 @@ final class MultiplayerMatch {
               }
               var10_ref_vnLifetime2 = (Ball) (param0.queuedBalls.first(-91));
               while (var10_ref_vnLifetime2 != null) {
-                var10_ref_vnLifetime2.a(var7, 0);
+                var10_ref_vnLifetime2.positionOnPaddle(var7, 0);
                 var10_ref_vnLifetime2 = (Ball) (param0.queuedBalls.next((byte) 116));
               }
               var9_int++;
@@ -740,8 +740,8 @@ final class MultiplayerMatch {
                   var12_ref_on = (Brick) (var8_ref_vl__[var11].first(param3 ^ -107));
                   while (var12_ref_on != null) {
                     var12_ref_on.stateWord = 0;
-                    var12_ref_on.field_B = 5;
-                    var12_ref_on.field_R = var12_ref_on.typeId;
+                    var12_ref_on.transitionCode = 5;
+                    var12_ref_on.pendingTypeId = var12_ref_on.typeId;
                     var12_ref_on = (Brick) (var8_ref_vl__[var11].next((byte) 116));
                   }
                 }
@@ -764,18 +764,18 @@ final class MultiplayerMatch {
               }
               if (param0.field_r != 0) {
                 for (var8 = 0; var8 < 3; var8++) {
-                  var9_ref4 = (Brick) (param0.field_z[var8].first(-30));
+                  var9_ref4 = (Brick) (param0.brickGroups[var8].first(-30));
                   while (var9_ref4 != null) {
-                    if (var9_ref4.field_R >= 0) {
+                    if (var9_ref4.pendingTypeId >= 0) {
                       fieldTemp$7 = var9_ref4.stateWord + 1;
                       var9_ref4.stateWord = var9_ref4.stateWord + 1;
                       if (fieldTemp$7 == 16) {
-                        var9_ref4.field_B = 0;
+                        var9_ref4.transitionCode = 0;
                         var9_ref4.stateWord = 0;
-                        var9_ref4.field_R = -1;
+                        var9_ref4.pendingTypeId = -1;
                       }
                     }
-                    var9_ref4 = (Brick) (param0.field_z[var8].next((byte) 116));
+                    var9_ref4 = (Brick) (param0.brickGroups[var8].next((byte) 116));
                   }
                 }
               }
@@ -884,8 +884,8 @@ final class MultiplayerMatch {
         int var7 = BrickABrac.field_J ? 1 : 0;
         try {
           hg.a(param1);
-          for (var4_int = -1 + param2.field_z.length; var4_int > -1; var4_int--) {
-            var5 = param2.field_z[var4_int];
+          for (var4_int = -1 + param2.brickGroups.length; var4_int > -1; var4_int--) {
+            var5 = param2.brickGroups[var4_int];
             var6 = (Brick) (var5.last(~param1));
             while (var6 != null) {
               var6.resolveCircleCollision(param0, (byte) 119);
@@ -1028,25 +1028,25 @@ final class MultiplayerMatch {
             if (r.field_A) {
               if (wl.field_N) {
                 if (!cm.field_s &&
-                  param4.field_C == 39) {
+                  param4.contactCount == 39) {
                   jc.a(0, 6, (byte) -108);
                 }
               } else {
-                param4.field_C = 0;
+                param4.contactCount = 0;
               }
             }
-            if (39 == param4.field_C &&
+            if (39 == param4.contactCount &&
               param1 != null) {
               param1.addLast(new qc(5), (byte) 3);
             }
             if (param0.paddle == dj.field_c) {
-              if (param0.paddle.field_z > 0) {
+              if (param0.paddle.catchTicks > 0) {
                 if (param1 != null) {
                   param1.addLast(new qc(10), (byte) 3);
                 }
-                param0.paddle.a((byte) 53, param0, param4);
+                param0.paddle.onCircleContact((byte) 53, param0, param4);
                 param4.centerXHistory256.latestIndex = -1;
-                param4.field_C = 0;
+                param4.contactCount = 0;
                 param4.centerYHistory256.latestIndex = -1;
                 param0.queuedBalls.addLast(param4, (byte) 3);
                 return false;
@@ -1054,22 +1054,22 @@ final class MultiplayerMatch {
               if (param1 != null) {
                 param1.addLast(new qc(0), (byte) 3);
               }
-              param0.paddle.a((byte) 53, param0, param4);
-              param4.field_B = 0;
+              param0.paddle.onCircleContact((byte) 53, param0, param4);
+              param4.destroyedBrickStreak = 0;
             } else {
-              dj.field_c.a((byte) 53, param0, param4);
+              dj.field_c.onCircleContact((byte) 53, param0, param4);
               var9 = (Brick) (dj.field_c);
               if (param1 != null) {
                 boolean decompiledFrameRemainder0 = true;
                 var7 = 1;
-                if ((var9.field_N & 1) == 0) {
+                if ((var9.flags & 1) == 0) {
                   if (var9.typeId != 28) {
                     if (var9.typeId != 25) {
                       if (var9.typeId != 1 &&
                         var9.typeId != 21 &&
                         22 != var9.typeId) {
                         if (26 == var9.typeId &&
-                          var9.field_R != 27) {
+                          var9.pendingTypeId != 27) {
                           var7 = 11;
                         } else {
                           if (19 == var9.typeId &&
@@ -1081,7 +1081,7 @@ final class MultiplayerMatch {
                               var7 = 11;
                             } else {
                               if (((var9.typeId == 27)) &&
-                                ((var9.field_R != 26))) {
+                                ((var9.pendingTypeId != 26))) {
                                 var7 = 12;
                               }
                             }
@@ -1101,17 +1101,17 @@ final class MultiplayerMatch {
                 } else {
                   var7 = 2;
                 }
-                if (0 == param4.field_J ||
+                if (0 == param4.phaseTicks ||
                   0 != (1 << var9.typeId & sg.field_n)) {
                   param1.addLast(new qc(var7), (byte) 3);
                 }
               }
-              if (param4.field_J == 0 &&
-                var9.field_R == 0) {
+              if (param4.phaseTicks == 0 &&
+                var9.pendingTypeId == 0) {
                 if (1 == this.playerCount) {
-                  param0.a(10 + param4.field_B, var9, 2);
+                  param0.a(10 + param4.destroyedBrickStreak, var9, 2);
                 }
-                param4.field_B = param4.field_B + 1;
+                param4.destroyedBrickStreak = param4.destroyedBrickStreak + 1;
               }
             }
           }
@@ -1119,14 +1119,14 @@ final class MultiplayerMatch {
           if (dj.field_c == null) {
             return false;
           }
-          if (param4.field_J == 0) {
+          if (param4.phaseTicks == 0) {
             return true;
           }
           if (dj.field_c == param0.paddle) {
             return true;
           }
           var10 = (Brick) (dj.field_c);
-          stackIn_99_0 = ((1 & var10.field_N) != 0);
+          stackIn_99_0 = ((1 & var10.flags) != 0);
           return stackIn_99_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

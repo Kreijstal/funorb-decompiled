@@ -29,7 +29,7 @@ final class PlayerBoard extends IntrusiveNode {
     kq field_ab;
     int nextPowerUpIndex;
     int field_hb;
-    NodeDeque[] field_z;
+    NodeDeque[] brickGroups;
     NodeDeque field_v;
     int field_qb;
     int field_u;
@@ -54,7 +54,7 @@ final class PlayerBoard extends IntrusiveNode {
     int field_H;
     int field_k;
     int field_i;
-    private Brick[] bricks;
+    private Brick[] portalBricks;
     lj field_D;
     int field_S;
     int field_r;
@@ -100,21 +100,21 @@ final class PlayerBoard extends IntrusiveNode {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           this.field_S = 0;
-          this.field_z = param2;
+          this.brickGroups = param2;
           this.field_L = 0;
           this.field_v = param0;
-          if (this.field_z == null) {
+          if (this.brickGroups == null) {
             return;
           }
           if (this.field_v != null) {
-            cg.a(this.field_z, (byte) 35, this.field_v, true);
+            cg.a(this.brickGroups, (byte) 35, this.field_v, true);
           }
           if (param1 != 9) {
             return;
           }
           var4_int = 0;
-          for (var5 = 0; var5 < this.field_z.length; var5++) {
-            var9 = this.field_z[var5];
+          for (var5 = 0; var5 < this.brickGroups.length; var5++) {
+            var9 = this.brickGroups[var5];
             var10 = var9;
             var10Lifetime2 = var9;
             var7_ref = (Brick) (var9.first(-94));
@@ -123,11 +123,11 @@ final class PlayerBoard extends IntrusiveNode {
               if (var7_ref.typeId != 1 &&
                 var7_ref.typeId != 25 &&
                 var7_ref.typeId != 28) {
-                if ((var7_ref.field_N & 2) != 0) {
+                if ((var7_ref.flags & 2) != 0) {
                   this.field_S = this.field_S | 1 << var7_ref.typeId;
                 }
                 decompiledFrameRemainder0 = (var7_ref.typeId != 0 ||
-                  2 != var7_ref.field_R);
+                  2 != var7_ref.pendingTypeId);
                 if (decompiledFrameRemainder0) {
                   this.field_L = this.field_L + 1;
                 }
@@ -139,17 +139,17 @@ final class PlayerBoard extends IntrusiveNode {
               var7_ref = (Brick) (var9.next((byte) 116));
             }
           }
-          this.bricks = new Brick[var4_int];
+          this.portalBricks = new Brick[var4_int];
           var4_intLifetime1 = 0;
-          for (var5Lifetime1 = 0; this.field_z.length > var5Lifetime1; var5Lifetime1++) {
-            var10Lifetime1 = this.field_z[var5Lifetime1];
+          for (var5Lifetime1 = 0; this.brickGroups.length > var5Lifetime1; var5Lifetime1++) {
+            var10Lifetime1 = this.brickGroups[var5Lifetime1];
             var7_refLifetime1 = (Brick) (var10Lifetime1.first(-37));
             while (var7_refLifetime1 != null) {
               if (var7_refLifetime1.typeId == 28) {
                 incrementValue$0 = var4_intLifetime1;
                 var4_intLifetime1++;
-                var7_refLifetime1.field_H = incrementValue$0;
-                this.bricks[var7_refLifetime1.field_H] = var7_refLifetime1;
+                var7_refLifetime1.portalIndex = incrementValue$0;
+                this.portalBricks[var7_refLifetime1.portalIndex] = var7_refLifetime1;
               }
               var7_refLifetime1 = (Brick) (var10Lifetime1.next((byte) 116));
             }
@@ -201,14 +201,14 @@ final class PlayerBoard extends IntrusiveNode {
           var4 = 0;
           var5 = (Ball) (this.queuedBalls.first(-98));
           while (var5 != null) {
-            if (var3 > var5.field_J) {
+            if (var3 > var5.phaseTicks) {
               var4 = 1;
             }
             var5 = (Ball) (this.queuedBalls.next((byte) 116));
           }
           var5Lifetime1 = (Ball) (this.activeBalls.first(-95));
           while (var5Lifetime1 != null) {
-            if (var5Lifetime1.field_J < var3) {
+            if (var5Lifetime1.phaseTicks < var3) {
               var4 = 1;
             }
             var5Lifetime1 = (Ball) (this.activeBalls.next((byte) 116));
@@ -284,7 +284,7 @@ final class PlayerBoard extends IntrusiveNode {
         int var9 = 0;
         Ball var10 = null;
         PowerUp var11 = null;
-        cl var12 = null;
+        BrickMotionPath var12 = null;
         il var13 = null;
         Ball var14 = null;
         int var5Lifetime1;
@@ -350,28 +350,28 @@ final class PlayerBoard extends IntrusiveNode {
           }
           if (this.field_v != null) {
             var5 = 7;
-            var12 = (cl) (this.field_v.first(-104));
+            var12 = (BrickMotionPath) (this.field_v.first(-104));
             while (var12 != null) {
               var5 = 6 + var5 * 3 + 5 & 31;
               var7_int = var12.computeSyncChecksum(108, param1);
               var4 = var4 ^ (var7_int << var5 | var5 >>> -var5 + 32);
-              var12 = (cl) (this.field_v.next((byte) 116));
+              var12 = (BrickMotionPath) (this.field_v.next((byte) 116));
             }
           }
           if (var3_int != 0) {
             discarded$12 = param1.append("7. Paths: " + Integer.toString(var4, 16) + "\n");
           }
-          if (this.field_z != null) {
+          if (this.brickGroups != null) {
             var5Lifetime1 = 0;
-            for (var6 = 0; this.field_z.length > var6; var6++) {
+            for (var6 = 0; this.brickGroups.length > var6; var6++) {
               var5Lifetime1Lifetime1 = 31 & 5 + 7 * var6;
-              var7 = (Brick) (this.field_z[var6].first(-94));
+              var7 = (Brick) (this.brickGroups[var6].first(-94));
               while (var7 != null) {
-                if ((1 & var7.field_N) == 0) {
+                if ((1 & var7.flags) == 0) {
                   var8 = var7.computeSyncChecksum(108, param1);
                   var4 = var4 ^ (var8 << var5Lifetime1Lifetime1 | var8 >>> 32 - var5Lifetime1Lifetime1);
                 }
-                var7 = (Brick) (this.field_z[var6].next((byte) 116));
+                var7 = (Brick) (this.brickGroups[var6].next((byte) 116));
               }
             }
           }
@@ -509,7 +509,7 @@ final class PlayerBoard extends IntrusiveNode {
         PowerUp var11 = null;
         int var12 = 0;
         Brick var13 = null;
-        cl var14 = null;
+        BrickMotionPath var14 = null;
         Ball var15 = null;
         Ball var16 = null;
         int var4_intLifetime1;
@@ -555,7 +555,7 @@ final class PlayerBoard extends IntrusiveNode {
           var6 = new NodeDeque();
           var7Lifetime1 = param1.i(65280);
           for (var8Lifetime1 = 0; var8Lifetime1 < var7Lifetime1; var8Lifetime1++) {
-            var14 = new cl();
+            var14 = new BrickMotionPath();
             var14.readBodySnapshot(114, param1);
             var6.addLast(var14, (byte) 3);
           }
@@ -597,7 +597,7 @@ final class PlayerBoard extends IntrusiveNode {
           this.field_p = param1.e(255);
           this.field_G = this.field_p + this.boardOffset << 8;
           stackIn_30_0 = (1 == param2) ? 15 : 9;
-          kj.a(stackIn_30_0, this.field_z[2], 16);
+          kj.a(stackIn_30_0, this.brickGroups[2], 16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -744,47 +744,47 @@ final class PlayerBoard extends IntrusiveNode {
           var5 = (StringBuilder) null;
           this.a(true, (StringBuilder) null);
         }
-        for (var2 = 0; this.field_z.length > var2; var2++) {
-          var3 = (Brick) (this.field_z[var2].first(-81));
+        for (var2 = 0; this.brickGroups.length > var2; var2++) {
+          var3 = (Brick) (this.brickGroups[var2].first(-81));
           while (var3 != null) {
             if (var3.typeId == 26 &&
-              var3.field_R == 26) {
-              var3.field_R = 27;
+              var3.pendingTypeId == 26) {
+              var3.pendingTypeId = 27;
               var3.stateWord = 0;
-              var3.field_B = 10;
+              var3.transitionCode = 10;
             } else if (26 == var3.typeId &&
-              var3.field_R == 27) {
-              var3.field_R = 26;
+              var3.pendingTypeId == 27) {
+              var3.pendingTypeId = 26;
               var3.typeId = 27;
               var3.stateWord = -var3.stateWord + 15;
-              var3.field_B = 10;
+              var3.transitionCode = 10;
             } else if (var3.typeId == 26 &&
-              var3.field_R < 0) {
-              var3.field_B = 10;
-              var3.field_R = 27;
+              var3.pendingTypeId < 0) {
+              var3.transitionCode = 10;
+              var3.pendingTypeId = 27;
               var3.stateWord = 0;
             } else if (var3.typeId == 27 &&
-              var3.field_R == 26) {
+              var3.pendingTypeId == 26) {
               var3.typeId = 26;
               var3.stateWord = 15 - var3.stateWord;
-              var3.field_B = 10;
-              var3.field_R = 27;
+              var3.transitionCode = 10;
+              var3.pendingTypeId = 27;
             } else {
               if (27 == var3.typeId &&
-                var3.field_R == 27) {
+                var3.pendingTypeId == 27) {
                 throw new RuntimeException();
               }
               if (var3.typeId == 27) {
-                if (var3.field_R >= 0) {
-                  var3 = (Brick) (this.field_z[var2].next((byte) 116));
+                if (var3.pendingTypeId >= 0) {
+                  var3 = (Brick) (this.brickGroups[var2].next((byte) 116));
                   continue;
                 }
-                var3.field_R = 26;
-                var3.field_B = 10;
+                var3.pendingTypeId = 26;
+                var3.transitionCode = 10;
                 var3.stateWord = 0;
               }
             }
-            var3 = (Brick) (this.field_z[var2].next((byte) 116));
+            var3 = (Brick) (this.brickGroups[var2].next((byte) 116));
           }
         }
     }
@@ -818,11 +818,11 @@ final class PlayerBoard extends IntrusiveNode {
         int var6 = 0;
         int var7 = 0;
         try {
-          var4_int = this.a(-1 + this.bricks.length, (byte) 62);
-          if (param1.field_H <= var4_int) {
+          var4_int = this.a(-1 + this.portalBricks.length, (byte) 62);
+          if (param1.portalIndex <= var4_int) {
             var4_int++;
           }
-          var5 = this.bricks[var4_int];
+          var5 = this.portalBricks[var4_int];
           param2.x256 = var5.width256 / 2 + var5.x256 - param2.radius256;
           if (param0 != -63) {
             this.field_i = -27;
@@ -833,9 +833,9 @@ final class PlayerBoard extends IntrusiveNode {
           var7 = var7 >> 16;
           if (param2.velocityX256 < 0) {
             var7 = -var7;
-            param2.a(6546, var7);
+            param2.redirectVelocity(6546, var7);
           } else {
-            param2.a(6546, var7);
+            param2.redirectVelocity(6546, var7);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

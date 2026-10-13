@@ -198,7 +198,7 @@ final class ud extends km {
         for (var3Lifetime1 = 0; this.field_F.length > var3Lifetime1; var3Lifetime1++) {
           var4 = (Brick) (this.field_F[var3Lifetime1].first(param0 + 6735));
           while (var4 != null) {
-            if ((1 & var4.field_N) == 0) {
+            if ((1 & var4.flags) == 0) {
               if (this.field_D < var4.x256 + var4.width256) {
                 this.field_D = var4.x256 + var4.width256;
               }
@@ -268,7 +268,7 @@ final class ud extends km {
           return (tp) null;
         }
         tp var1 = new tp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], cn.field_a[0], qp.field_c);
-        ee.d((byte) 96);
+        MotionWaypoint.d((byte) 96);
         return var1;
     }
 
@@ -413,7 +413,7 @@ final class ud extends km {
         for (var8 = 0; var8 < this.field_F.length; var8++) {
           var9 = (Brick) (this.field_F[var8].first(-109));
           while (var9 != null) {
-            if ((1 & var9.field_N) == 0) {
+            if ((1 & var9.flags) == 0) {
               pa.field_m[var9.typeId].a((var9.x256 - this.field_u >> 9) + param2, (var9.y256 - this.field_I >> 9) + param0, 17, 8);
             }
             var9 = (Brick) (this.field_F[var8].next((byte) 116));

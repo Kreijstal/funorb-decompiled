@@ -64,7 +64,7 @@ final class ad implements Runnable {
             return false;
           }
           dupTemp$1 = ue.a(false);
-          cl.field_q = dupTemp$1;
+          BrickMotionPath.field_q = dupTemp$1;
           oj.field_t = dupTemp$1;
           if (qm.field_d.field_f != 1) {
             rf.field_b = mc.field_e;

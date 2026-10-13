@@ -109,7 +109,7 @@ final class n {
           var3[var4_int] = qp.field_c[ik.a(255, (int) var2[var4_int])];
         }
         jp var4 = new jp(cf.field_d, ek.field_db, ag.field_K[0], dl.field_d[0], jh.field_b[0], gg.field_t[0], var3);
-        ee.d((byte) 96);
+        MotionWaypoint.d((byte) 96);
         return var4;
     }
 

@@ -210,7 +210,7 @@ final class qo extends ib implements vf, en {
         RuntimeException var6 = null;
         try {
           if (param4 == this.field_K) {
-            ee.d(-101);
+            MotionWaypoint.d(-101);
           } else {
             if (param4 == this.field_Q) {
               this.a(28462);

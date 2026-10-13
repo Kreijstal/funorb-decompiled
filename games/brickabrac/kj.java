@@ -7,62 +7,62 @@ final class kj extends hb {
     int field_F;
     byte[] field_E;
 
-    final static int a(int param0, int param1) {
+    final static int approximateSqrt256(int value, int obfuscationGuard) {
         int var2;
         int var3;
         int var2Lifetime1;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (param0 == 0) {
+        if (value == 0) {
           return 0;
         }
-        if (0 > param0) {
+        if (0 > value) {
           throw new IllegalArgumentException("");
         }
-        if (param1 != 2) {
+        if (obfuscationGuard != 2) {
           field_D = (java.awt.Canvas) null;
         }
-        if (param0 >= 32768) {
-          if (param0 < 131072) {
-            return tn.field_n[-32768 + param0];
+        if (value >= 32768) {
+          if (value < 131072) {
+            return tn.field_n[-32768 + value];
           }
-          if (33554432 > param0) {
-            if (param0 < 2097152) {
-              var2 = (param0 < 524288) ? 1 : 2;
+          if (33554432 > value) {
+            if (value < 2097152) {
+              var2 = (value < 524288) ? 1 : 2;
             } else {
-              var2 = (param0 >= 8388608) ? 4 : 3;
+              var2 = (value >= 8388608) ? 4 : 3;
             }
           } else {
-            if (param0 >= 536870912) {
+            if (value >= 536870912) {
               var2 = 7;
             } else {
-              var2 = (134217728 <= param0) ? 6 : 5;
+              var2 = (134217728 <= value) ? 6 : 5;
             }
           }
-          param0 = param0 >> (var2 << 1);
-          return tn.field_n[-32768 + param0] << var2;
+          value = value >> (var2 << 1);
+          return tn.field_n[-32768 + value] << var2;
         }
-        if (param0 >= 128) {
-          if (param0 >= 2048) {
-            if (8192 <= param0) {
+        if (value >= 128) {
+          if (value >= 2048) {
+            if (8192 <= value) {
               var2Lifetime1 = 1;
             } else {
               var2Lifetime1 = 2;
             }
           } else {
-            var2Lifetime1 = (param0 < 512) ? 4 : 3;
+            var2Lifetime1 = (value < 512) ? 4 : 3;
           }
         } else {
-          if (param0 >= 8) {
-            var2Lifetime1 = (32 <= param0) ? 5 : 6;
+          if (value >= 8) {
+            var2Lifetime1 = (32 <= value) ? 5 : 6;
           } else {
-            if (2 > param0) {
+            if (2 > value) {
               return 256;
             }
             var2Lifetime1 = 7;
           }
         }
-        param0 = param0 << (var2Lifetime1 << 1);
-        return tn.field_n[param0 - 32768] >> var2Lifetime1;
+        value = value << (var2Lifetime1 << 1);
+        return tn.field_n[value - 32768] >> var2Lifetime1;
     }
 
     public static void h(int param0) {

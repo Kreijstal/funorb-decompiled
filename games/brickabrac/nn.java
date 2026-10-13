@@ -370,7 +370,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_invite_withdrawn", (byte) 73);
                 if (var2 != null) {
-                  cl.field_s = q.a(var2, (byte) 73);
+                  BrickMotionPath.field_s = q.a(var2, (byte) 73);
                 }
                 var2 = nk.a("mu_request_declined", (byte) 113);
                 if (null != var2) {

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends MovingBody {
+final class MotionWaypoint extends MovingBody {
     static jp field_p;
     static int field_q;
     static mh field_s;
-    int field_t;
+    int durationTicks;
     static boolean[][] field_r;
 
     final static String b(boolean param0) {
@@ -18,8 +18,8 @@ final class ee extends MovingBody {
         return dl.field_e;
     }
 
-    private ee(int param0, int param1, int param2, int param3, int param4) {
-        super(param0, param1, param2, param3, param4);
+    private MotionWaypoint(int x256, int y256, int velocityX256, int velocityY256, int typeId) {
+        super(x256, y256, velocityX256, velocityY256, typeId);
     }
 
     final static void c(int param0) {
@@ -49,7 +49,7 @@ final class ee extends MovingBody {
     final void readBodySnapshot(int obfuscationGuard, wq packet) {
         try {
           super.readBodySnapshot(100, packet);
-          this.field_t = packet.i(65280);
+          this.durationTicks = packet.i(65280);
           if (obfuscationGuard <= 89) {
             field_p = (jp) null;
           }
@@ -82,7 +82,7 @@ final class ee extends MovingBody {
           if (obfuscationGuard < 79) {
             field_s = (mh) null;
           }
-          stackIn_3_0 = 1734820418 ^ super.computeSyncChecksum(99, diagnostics) ^ 101 * this.field_t + 42148 << 2;
+          stackIn_3_0 = 1734820418 ^ super.computeSyncChecksum(99, diagnostics) ^ 101 * this.durationTicks + 42148 << 2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,7 +105,7 @@ final class ee extends MovingBody {
         field_r = (boolean[][]) null;
     }
 
-    ee() {
+    MotionWaypoint() {
         this(0, 0, 0, 0, 0);
     }
 

@@ -125,7 +125,7 @@ final class v extends RuntimeException {
             var1[var2] = (jp) ((Object) new fb(cf.field_d, ek.field_db, ag.field_K[var2], dl.field_d[var2], jh.field_b[var2], gg.field_t[var2], var17));
           }
         }
-        ee.d((byte) 96);
+        MotionWaypoint.d((byte) 96);
         return var1;
     }
 

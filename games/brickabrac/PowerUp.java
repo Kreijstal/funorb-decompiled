@@ -115,12 +115,12 @@ final class PowerUp extends CircleBody {
             if (4 == this.typeId) {
               var3_ref = (Ball) (board.queuedBalls.first(-75));
               while (var3_ref != null) {
-                var3_ref.a((byte) 40, 150);
+                var3_ref.extendPenetration((byte) 40, 150);
                 var3_ref = (Ball) (board.queuedBalls.next((byte) 116));
               }
               var3_ref = (Ball) (board.activeBalls.first(-9));
               while (var3_ref != null) {
-                var3_ref.a((byte) 40, 150);
+                var3_ref.extendPenetration((byte) 40, 150);
                 var3_ref = (Ball) (board.activeBalls.next((byte) 116));
               }
             } else {
@@ -130,7 +130,7 @@ final class PowerUp extends CircleBody {
                     board.paddle.shrink((byte) 127);
                   } else {
                     if (this.typeId == 8) {
-                      board.paddle.b(true);
+                      board.paddle.increaseReboundSpeed(true);
                     } else {
                       if (this.typeId == 9) {
                         if (!board.activeBalls.isEmpty(false)) {
@@ -139,8 +139,8 @@ final class PowerUp extends CircleBody {
                           var4 = (31457280 - (var12.y256 << 8)) / var12.velocityY256;
                           var5 = (Ball) (board.activeBalls.first(-8));
                           while (var5 != null) {
-                            var5.field_C = 0;
-                            var5.field_v = 0;
+                            var5.contactCount = 0;
+                            var5.penetrationTicks = 0;
                             var6 = (31457280 - (var5.y256 << 8)) / var5.velocityY256;
                             if (var4 <= var6) {
                               if (var6 > var4) {
@@ -159,8 +159,8 @@ final class PowerUp extends CircleBody {
                             board.queuedBalls.clear((byte) -62);
                           } else {
                             var3_ref = (Ball) (board.queuedBalls.first(obfuscationGuard - 108));
-                            var3_ref.field_C = 0;
-                            var3_ref.field_v = 0;
+                            var3_ref.contactCount = 0;
+                            var3_ref.penetrationTicks = 0;
                             board.queuedBalls.clear((byte) -63);
                             board.queuedBalls.addLast(var3_ref, (byte) 3);
                           }
@@ -169,12 +169,12 @@ final class PowerUp extends CircleBody {
                           board.paddle.shrink((byte) 126);
                         }
                         board.paddle.field_H = 0;
-                        board.paddle.field_z = 0;
+                        board.paddle.catchTicks = 0;
                       } else {
                         if (10 == this.typeId) {
                           if (board.activeBalls.size(118) == 1) {
                             var11 = (Ball) (board.activeBalls.first(obfuscationGuard - 161));
-                            var4 = kj.a(var11.velocityY256 * var11.velocityY256 + var11.velocityX256 * var11.velocityX256, obfuscationGuard ^ 97) >> 8;
+                            var4 = kj.approximateSqrt256(var11.velocityY256 * var11.velocityY256 + var11.velocityX256 * var11.velocityX256, obfuscationGuard ^ 97) >> 8;
                             var5_int = var11.velocityX256;
                             var6 = var11.velocityY256;
                             for (var7 = 0; 7 > var7; var7++) {
@@ -185,7 +185,7 @@ final class PowerUp extends CircleBody {
                             while (var8 != null) {
                               var8.velocityX256 = (15 * BrickABrac.c(obfuscationGuard + 1949, 1024 * var7Lifetime1) >> 8) + var5_int;
                               var8.velocityY256 = var6 + (15 * sa.a(var7Lifetime1 * 1024, -4097) >> 8);
-                              var9 = kj.a(var8.velocityY256 * var8.velocityY256 + var8.velocityX256 * var8.velocityX256, 2) >> 8;
+                              var9 = kj.approximateSqrt256(var8.velocityY256 * var8.velocityY256 + var8.velocityX256 * var8.velocityX256, 2) >> 8;
                               var8.velocityX256 = var4 * var8.velocityX256 / var9;
                               var8.velocityY256 = var4 * var8.velocityY256 / var9;
                               var7Lifetime1++;
@@ -196,7 +196,7 @@ final class PowerUp extends CircleBody {
                           if (this.typeId == 11) {
                             var3_ref = (Ball) (board.activeBalls.first(-54));
                             while (var3_ref != null) {
-                              var3_ref.c(512, 128);
+                              var3_ref.adjustSpeed(512, 128);
                               var3_ref = (Ball) (board.activeBalls.next((byte) 116));
                             }
                           } else {
@@ -206,7 +206,7 @@ final class PowerUp extends CircleBody {
                               if (this.typeId == 13) {
                                 var13 = (Ball) (board.activeBalls.first(obfuscationGuard - 224));
                                 while (var13 != null) {
-                                  var13.c(512, -128);
+                                  var13.adjustSpeed(512, -128);
                                   var13 = (Ball) (board.activeBalls.next((byte) 116));
                                 }
                               } else {
@@ -214,12 +214,12 @@ final class PowerUp extends CircleBody {
                                   if (this.typeId == 15) {
                                     var3_ref = (Ball) (board.queuedBalls.first(-30));
                                     while (var3_ref != null) {
-                                      var3_ref.b(obfuscationGuard - 150, 150);
+                                      var3_ref.extendPhase(obfuscationGuard - 150, 150);
                                       var3_ref = (Ball) (board.queuedBalls.next((byte) 116));
                                     }
                                     var3_ref = (Ball) (board.activeBalls.first(-88));
                                     while (var3_ref != null) {
-                                      var3_ref.b(-128, 150);
+                                      var3_ref.extendPhase(-128, 150);
                                       var3_ref = (Ball) (board.activeBalls.next((byte) 116));
                                     }
                                   } else {
@@ -230,7 +230,7 @@ final class PowerUp extends CircleBody {
                                         if (18 == this.typeId) {
                                           var3_ref = (Ball) (board.activeBalls.first(-73));
                                           while (var3_ref != null) {
-                                            var3_ref.field_C = var3_ref.field_C + 40;
+                                            var3_ref.contactCount = var3_ref.contactCount + 40;
                                             var3_ref = (Ball) (board.activeBalls.next((byte) 116));
                                           }
                                         }
@@ -240,7 +240,7 @@ final class PowerUp extends CircleBody {
                                     }
                                   }
                                 } else {
-                                  board.paddle.field_z = board.paddle.field_z + 150;
+                                  board.paddle.catchTicks = board.paddle.catchTicks + 150;
                                 }
                               }
                             }

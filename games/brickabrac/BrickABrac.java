@@ -626,8 +626,8 @@ public final class BrickABrac extends sa {
         MovingBody.a(34);
         CircleBody.d((byte) 97);
         PlayerBoard.d(-2947);
-        ee.e(-116);
-        cl.b(true);
+        MotionWaypoint.e(-116);
+        BrickMotionPath.b(true);
         ij.c(false);
         cf.a(-12251);
         q.a((byte) -32);

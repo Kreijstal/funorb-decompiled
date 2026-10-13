@@ -5,26 +5,26 @@ final class Ball extends CircleBody {
     static jp field_w;
     static mh field_A;
     static String field_H;
-    int field_I;
+    int brickBounceCount;
     static java.math.BigInteger field_F;
     static jp[] field_G;
-    private int field_z;
+    private int launchAngle;
     static jp[] field_K;
     IntHistoryBuffer centerXHistory256;
-    int field_v;
+    int penetrationTicks;
     static String field_x;
-    int field_C;
-    int field_J;
+    int contactCount;
+    int phaseTicks;
     static jp field_D;
-    int field_B;
+    int destroyedBrickStreak;
     IntHistoryBuffer centerYHistory256;
 
-    private Ball(int param0, int param1) {
+    private Ball(int launchAngle, int speed) {
         super(0, 0, 0, 0, 1536, 0);
         this.centerXHistory256 = new IntHistoryBuffer(50);
         this.centerYHistory256 = new IntHistoryBuffer(50);
-        this.field_z = param0;
-        this.setVelocityFromAngle(this.field_z, param1, 116);
+        this.launchAngle = launchAngle;
+        this.setVelocityFromAngle(this.launchAngle, speed, 116);
     }
 
     final static th a(int param0, byte param1) {
@@ -57,16 +57,16 @@ final class Ball extends CircleBody {
         return null;
     }
 
-    final void a(Paddle param0, int param1) {
+    final void positionOnPaddle(Paddle paddle, int obfuscationGuard) {
         try {
-          this.x256 = -1536 + (param0.x256 + (param0.width256 >> 1));
-          this.y256 = param0.y256 - 3072;
-          this.x256 = this.x256 + param0.width256 * this.field_z / 3072;
-          if (param1 != 0) {
+          this.x256 = -1536 + (paddle.x256 + (paddle.width256 >> 1));
+          this.y256 = paddle.y256 - 3072;
+          this.x256 = this.x256 + paddle.width256 * this.launchAngle / 3072;
+          if (obfuscationGuard != 0) {
             this.centerXHistory256 = (IntHistoryBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vn.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "vn.P(" + (paddle != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -112,26 +112,26 @@ final class Ball extends CircleBody {
         }
     }
 
-    Ball(Paddle param0, int param1, int param2) {
-        this(param1, param2);
+    Ball(Paddle paddle, int launchAngle, int speed) {
+        this(launchAngle, speed);
         try {
-          this.a(param0, 0);
+          this.positionOnPaddle(paddle, 0);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (paddle != null ? "{...}" : "null") + ',' + launchAngle + ',' + speed + ')');
         }
     }
 
     final void readBodySnapshot(int obfuscationGuard, wq packet) {
         super.readBodySnapshot(107, packet);
-        this.field_C = packet.e(255);
+        this.contactCount = packet.e(255);
         if (obfuscationGuard < 89) {
           return;
         }
         try {
-          this.field_v = packet.i(65280);
-          this.field_J = packet.a(126);
-          this.field_z = packet.a(126);
-          this.field_I = packet.c((byte) -82);
+          this.penetrationTicks = packet.i(65280);
+          this.phaseTicks = packet.a(126);
+          this.launchAngle = packet.a(126);
+          this.brickBounceCount = packet.c((byte) -82);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "vn.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
@@ -150,18 +150,18 @@ final class Ball extends CircleBody {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= 79) {
-            this.c(-49, 14);
+            this.adjustSpeed(-49, 14);
           }
           var3_int = -19088744 ^ super.computeSyncChecksum(93, diagnostics);
           if (diagnostics != null) {
             discarded$3 = diagnostics.append("base checksum for ball: " + Integer.toString(var3_int, 16) + "\n");
             discarded$4 = diagnostics.append(this.x256 + " " + this.y256 + " " + this.velocityX256 + " " + this.velocityY256 + " " + " " + this.typeId + " " + this.stateWord + "\n");
-            discarded$5 = diagnostics.append("Ball Info: " + this.field_v + " " + this.field_J + " " + this.field_C + " " + this.field_z + "\n");
+            discarded$5 = diagnostics.append("Ball Info: " + this.penetrationTicks + " " + this.phaseTicks + " " + this.contactCount + " " + this.launchAngle + "\n");
           }
-          var3_int = var3_int ^ this.field_v * 83 + 119 << 12;
-          var3_int = var3_int ^ 57 + this.field_J * 13 << 18;
-          var3_int = var3_int ^ 6483 + this.field_C * 53 << 3;
-          var3_int = var3_int ^ this.field_z * 5 + 289 << 5;
+          var3_int = var3_int ^ this.penetrationTicks * 83 + 119 << 12;
+          var3_int = var3_int ^ 57 + this.phaseTicks * 13 << 18;
+          var3_int = var3_int ^ 6483 + this.contactCount * 53 << 3;
+          var3_int = var3_int ^ this.launchAngle * 5 + 289 << 5;
           stackIn_6_0 = var3_int;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -178,42 +178,42 @@ final class Ball extends CircleBody {
         }
     }
 
-    final void b(int param0, int param1) {
-        this.field_J = this.field_J + param1;
-        this.field_v = 0;
-        if (param0 > -27) {
+    final void extendPhase(int obfuscationGuard, int ticks) {
+        this.phaseTicks = this.phaseTicks + ticks;
+        this.penetrationTicks = 0;
+        if (obfuscationGuard > -27) {
           this.setVelocityFromAngle(119, 71, 24);
         }
     }
 
-    final void c(int param0, int param1) {
-        int var3 = kj.a(this.velocityX256 * this.velocityX256 + this.velocityY256 * this.velocityY256, 2) >> 8;
-        int var4 = param1 + var3;
-        if (var4 < param0) {
-          var4 = 512;
+    final void adjustSpeed(int speedFloorThreshold, int speedDelta) {
+        int currentSpeed = kj.approximateSqrt256(this.velocityX256 * this.velocityX256 + this.velocityY256 * this.velocityY256, 2) >> 8;
+        int targetSpeed = speedDelta + currentSpeed;
+        if (targetSpeed < speedFloorThreshold) {
+          targetSpeed = 512;
         }
-        if (var4 > 3840) {
-          var4 = 3840;
+        if (targetSpeed > 3840) {
+          targetSpeed = 3840;
         }
-        this.velocityX256 = this.velocityX256 * var4 / var3;
-        this.velocityY256 = var4 * this.velocityY256 / var3;
+        this.velocityX256 = this.velocityX256 * targetSpeed / currentSpeed;
+        this.velocityY256 = targetSpeed * this.velocityY256 / currentSpeed;
     }
 
-    final void a(byte param0, int param1) {
-        if (param0 == 40) {
-          this.field_v = this.field_v + param1;
-          this.field_J = 0;
+    final void extendPenetration(byte obfuscationGuard, int ticks) {
+        if (obfuscationGuard == 40) {
+          this.penetrationTicks = this.penetrationTicks + ticks;
+          this.phaseTicks = 0;
           return;
         }
         field_K = (jp[]) null;
-        this.field_v = this.field_v + param1;
-        this.field_J = 0;
+        this.penetrationTicks = this.penetrationTicks + ticks;
+        this.phaseTicks = 0;
     }
 
-    final void a(int param0, int param1) {
-        this.setVelocityFromAngle(param1, kj.a(this.velocityY256 * this.velocityY256 + this.velocityX256 * this.velocityX256, 2) >> 8, 107);
-        if (param0 != 6546) {
-          this.field_v = -29;
+    final void redirectVelocity(int obfuscationGuard, int angle) {
+        this.setVelocityFromAngle(angle, kj.approximateSqrt256(this.velocityY256 * this.velocityY256 + this.velocityX256 * this.velocityX256, 2) >> 8, 107);
+        if (obfuscationGuard != 6546) {
+          this.penetrationTicks = -29;
         }
     }
 
