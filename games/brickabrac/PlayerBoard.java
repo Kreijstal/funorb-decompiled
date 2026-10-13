@@ -33,7 +33,7 @@ final class PlayerBoard extends IntrusiveNode {
     NodeDeque field_v;
     int field_qb;
     int field_u;
-    private int field_W;
+    private int randomCallCount;
     int field_m;
     int boardOffset;
     int field_Q;
@@ -45,7 +45,7 @@ final class PlayerBoard extends IntrusiveNode {
     int field_G;
     private Random field_B;
     int boardWidth;
-    private fo seededRandom;
+    private IsaacGenerator seededRandom;
     private int field_T;
     int field_wb;
     int field_J;
@@ -325,10 +325,10 @@ final class PlayerBoard extends IntrusiveNode {
             discarded$6 = param1.append("3. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$7 = param1.append("PRNG: " + this.randomSeed + " " + this.field_W + "\n");
+            discarded$7 = param1.append("PRNG: " + this.randomSeed + " " + this.randomCallCount + "\n");
           }
           var4 = var4 ^ 5457 + 31 * this.randomSeed << 5;
-          var4 = var4 ^ 43 * this.field_W + 818 << 9;
+          var4 = var4 ^ 43 * this.randomCallCount + 818 << 9;
           if (var3_int != 0) {
             discarded$8 = param1.append("4. " + Integer.toString(var4, 16) + "\n");
           }
@@ -532,11 +532,11 @@ final class PlayerBoard extends IntrusiveNode {
           this.field_m = param1.readUnsignedShort(65280);
           this.field_Q = param1.readUnsignedShort(65280);
           this.field_p = param1.readUnsignedShort(65280);
-          this.field_W = 0;
+          this.randomCallCount = 0;
           var4_int = 0;
           var5_int = param1.readInt(255);
           while (var4_int < var5_int) {
-            this.e(118);
+            this.nextRandomInt(118);
             var4_int++;
           }
           this.field_n = param1.readUnsignedShort(65280);
@@ -625,7 +625,7 @@ final class PlayerBoard extends IntrusiveNode {
         int var5 = 0;
         int var6 = 0;
         int var12 = 0;
-        fo var2;
+        IsaacGenerator var2;
         int var3;
         int var4;
         int var7;
@@ -640,19 +640,19 @@ final class PlayerBoard extends IntrusiveNode {
           if (param0 != 1000) {
             this.field_ib = 95;
           }
-          var2 = new fo(new int[]{this.field_R});
+          var2 = new IsaacGenerator(new int[]{this.field_R});
           var3 = (-68 + this.boardWidth) / 8;
           var4 = 60;
           for (var5 = 0; var5 < 8; var5++) {
             for (var6 = 0; var6 < 8; var6++) {
-              var7 = var3 * var5 + 34 + var2.a(-37880252, var3) << 8;
-              var8 = 480 - (-(var4 * var6) - var2.a(-37880252, var4)) << 8;
+              var7 = var3 * var5 + 34 + var2.nextBoundedInt(-37880252, var3) << 8;
+              var8 = 480 - (-(var4 * var6) - var2.nextBoundedInt(-37880252, var4)) << 8;
               var9 = -768;
-              var10 = 5120 + var2.a(param0 ^ -37880404, 2);
+              var10 = 5120 + var2.nextBoundedInt(param0 ^ -37880404, 2);
               var11 = new il(var7, var8, 0, var9, var10, 0);
-              var11.field_E = var2.a(param0 ^ -37880404, 4096);
-              var11.field_w = var2.a(-37880252, 100) + 300;
-              var11.field_y = 8000 + var2.a(-37880252, 1000);
+              var11.field_E = var2.nextBoundedInt(param0 ^ -37880404, 4096);
+              var11.field_w = var2.nextBoundedInt(-37880252, 100) + 300;
+              var11.field_y = 8000 + var2.nextBoundedInt(-37880252, 1000);
               this.field_C.addLast(var11, (byte) 3);
               for (var12 = 0; this.field_k > var12; var12++) {
                 var11.d(-2081170685);
@@ -694,7 +694,7 @@ final class PlayerBoard extends IntrusiveNode {
         if (param0 != 26496) {
           return;
         }
-        this.a((byte) 85, param1, this.a(2048, (byte) 62) - 1024);
+        this.a((byte) 85, param1, this.nextRandomBoundedInt(2048, (byte) 62) - 1024);
     }
 
     final void a(byte param0) {
@@ -728,10 +728,10 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    final int e(int param0) {
-        int var2 = -93 / ((param0 - 76) / 39);
-        this.field_W = this.field_W + 1;
-        return this.seededRandom.b(115);
+    final int nextRandomInt(int obfuscationGuard) {
+        int var2 = -93 / ((obfuscationGuard - 76) / 39);
+        this.randomCallCount = this.randomCallCount + 1;
+        return this.seededRandom.nextInt(115);
     }
 
     final void a(int param0) {
@@ -789,12 +789,12 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    final int a(int param0, byte param1) {
-        this.field_W = this.field_W + 1;
-        if (param1 != 62) {
+    final int nextRandomBoundedInt(int bound, byte obfuscationGuard) {
+        this.randomCallCount = this.randomCallCount + 1;
+        if (obfuscationGuard != 62) {
           this.field_J = 79;
         }
-        return this.seededRandom.a(-37880252, param0);
+        return this.seededRandom.nextBoundedInt(-37880252, bound);
     }
 
     final void a(int param0, boolean param1, int param2) {
@@ -818,7 +818,7 @@ final class PlayerBoard extends IntrusiveNode {
         int var6 = 0;
         int var7 = 0;
         try {
-          var4_int = this.a(-1 + this.portalBricks.length, (byte) 62);
+          var4_int = this.nextRandomBoundedInt(-1 + this.portalBricks.length, (byte) 62);
           if (param1.portalIndex <= var4_int) {
             var4_int++;
           }
@@ -828,7 +828,7 @@ final class PlayerBoard extends IntrusiveNode {
             this.field_i = -27;
           }
           param2.y256 = -(2 * param2.radius256) + var5.y256;
-          var6 = this.a(65536, (byte) 62);
+          var6 = this.nextRandomBoundedInt(65536, (byte) 62);
           var7 = dm.a(var6, -1, 33554432) + dm.a(-var6 + 65536, -1, 67108864);
           var7 = var7 >> 16;
           if (param2.velocityX256 < 0) {
@@ -877,12 +877,12 @@ final class PlayerBoard extends IntrusiveNode {
     final void addScore(int points, boolean resetStateWord, int x256, int y256) {
         int var6 = 0;
         int var5 = 0;
-        if (100 < this.a(200, (byte) 62)) {
+        if (100 < this.nextRandomBoundedInt(200, (byte) 62)) {
           var5 = points;
           ep.field_i = ep.field_i + var5;
         } else {
           var5 = points;
-          var6 = this.a(50, (byte) 62);
+          var6 = this.nextRandomBoundedInt(50, (byte) 62);
           ep.field_i = ep.field_i - var6 * var5;
           fp.field_z = fp.field_z + (1 + var6) * var5;
         }
@@ -933,7 +933,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.paddle = new Paddle(this.field_T << 8, 0, 0, this.boardWidth << 8);
         this.randomSeed = randomSeed;
         this.field_Z = 0;
-        this.seededRandom = new fo(new int[]{this.randomSeed});
+        this.seededRandom = new IsaacGenerator(new int[]{this.randomSeed});
         this.field_cb = new int[29];
         this.field_xb = new int[29];
         this.snapshotHistory = new ObjectHistoryBuffer(500);

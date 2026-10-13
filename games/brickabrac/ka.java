@@ -286,7 +286,7 @@ final class ka extends IntrusiveNode {
             var20 = 0;
             var21 = var13.field_Yb;
             var22 = 72;
-            if (param1 == fo.field_b) {
+            if (param1 == IsaacGenerator.field_b) {
               var22 += 42;
             }
             var21 = dh.a(var13.field_Rb.field_O, var21, var22);

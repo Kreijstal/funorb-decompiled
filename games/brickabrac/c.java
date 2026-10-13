@@ -101,13 +101,13 @@ final class c {
             }
             if (hc.field_c &&
               o.field_e.field_jc <= o.field_e.field_cc) {
-              fo.field_b.field_Qb.field_Mb = wg.field_d;
+              IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
               Ball.field_A.field_eb = false;
-              jh.a(true, fo.field_b.field_Rb);
+              jh.a(true, IsaacGenerator.field_b.field_Rb);
             } else {
-              fo.field_b.field_Qb.field_Mb = null;
+              IsaacGenerator.field_b.field_Qb.field_Mb = null;
               Ball.field_A.field_eb = true;
-              ka.a(param4, fo.field_b, param2, param0, -108);
+              ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
             }
           } else {
             qh.field_f = (kp.field_a - 640) / 2;
@@ -124,13 +124,13 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                fo.field_b.field_Qb.field_Mb = wg.field_d;
+                IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
                 Ball.field_A.field_eb = false;
-                jh.a(true, fo.field_b.field_Rb);
+                jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
-                fo.field_b.field_Qb.field_Mb = null;
+                IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, fo.field_b, param2, param0, -108);
+                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               ke.field_e.field_S = 1;
@@ -142,25 +142,25 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
-                fo.field_b.field_Qb.field_Mb = null;
+                IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, fo.field_b, param2, param0, -108);
+                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
-                  fo.field_b.field_Qb.field_Mb = null;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, fo.field_b, param2, param0, -108);
+                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  fo.field_b.field_Qb.field_Mb = wg.field_d;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
                   Ball.field_A.field_eb = false;
-                  jh.a(true, fo.field_b.field_Rb);
+                  jh.a(true, IsaacGenerator.field_b.field_Rb);
                 }
               }
             }
           }
         } else {
           if (lb.field_c == kp.field_a) {
-            if (lb.field_d != fo.field_i &&
+            if (lb.field_d != IsaacGenerator.field_i &&
               lb.field_d == kc.field_q.field_f &&
               lb.field_c == kc.field_q.field_g) {
               if (o.field_e != null) {
@@ -189,13 +189,13 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                fo.field_b.field_Qb.field_Mb = wg.field_d;
+                IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
                 Ball.field_A.field_eb = false;
-                jh.a(true, fo.field_b.field_Rb);
+                jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
-                fo.field_b.field_Qb.field_Mb = null;
+                IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, fo.field_b, param2, param0, -108);
+                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               qh.field_f = (kp.field_a - 640) / 2;
@@ -212,18 +212,18 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (!hc.field_c) {
-                fo.field_b.field_Qb.field_Mb = null;
+                IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, fo.field_b, param2, param0, -108);
+                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
-                  fo.field_b.field_Qb.field_Mb = null;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, fo.field_b, param2, param0, -108);
+                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  fo.field_b.field_Qb.field_Mb = wg.field_d;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
                   Ball.field_A.field_eb = false;
-                  jh.a(true, fo.field_b.field_Rb);
+                  jh.a(true, IsaacGenerator.field_b.field_Rb);
                 }
               }
             }
@@ -256,13 +256,13 @@ final class c {
               }
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
-                fo.field_b.field_Qb.field_Mb = wg.field_d;
+                IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
                 Ball.field_A.field_eb = false;
-                jh.a(true, fo.field_b.field_Rb);
+                jh.a(true, IsaacGenerator.field_b.field_Rb);
               } else {
-                fo.field_b.field_Qb.field_Mb = null;
+                IsaacGenerator.field_b.field_Qb.field_Mb = null;
                 Ball.field_A.field_eb = true;
-                ka.a(param4, fo.field_b, param2, param0, -108);
+                ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
               qh.field_f = (kp.field_a - 640) / 2;
@@ -279,13 +279,13 @@ final class c {
                 }
                 if (hc.field_c &&
                   o.field_e.field_jc <= o.field_e.field_cc) {
-                  fo.field_b.field_Qb.field_Mb = wg.field_d;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
                   Ball.field_A.field_eb = false;
-                  jh.a(true, fo.field_b.field_Rb);
+                  jh.a(true, IsaacGenerator.field_b.field_Rb);
                 } else {
-                  fo.field_b.field_Qb.field_Mb = null;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, fo.field_b, param2, param0, -108);
+                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 }
               } else {
                 ke.field_e.field_S = 1;
@@ -297,18 +297,18 @@ final class c {
                   nh.a(true, param3, param8, param2, param7);
                 }
                 if (!hc.field_c) {
-                  fo.field_b.field_Qb.field_Mb = null;
+                  IsaacGenerator.field_b.field_Qb.field_Mb = null;
                   Ball.field_A.field_eb = true;
-                  ka.a(param4, fo.field_b, param2, param0, -108);
+                  ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
                   if (o.field_e.field_jc > o.field_e.field_cc) {
-                    fo.field_b.field_Qb.field_Mb = null;
+                    IsaacGenerator.field_b.field_Qb.field_Mb = null;
                     Ball.field_A.field_eb = true;
-                    ka.a(param4, fo.field_b, param2, param0, -108);
+                    ka.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                   } else {
-                    fo.field_b.field_Qb.field_Mb = wg.field_d;
+                    IsaacGenerator.field_b.field_Qb.field_Mb = wg.field_d;
                     Ball.field_A.field_eb = false;
-                    jh.a(true, fo.field_b.field_Rb);
+                    jh.a(true, IsaacGenerator.field_b.field_Rb);
                   }
                 }
               }

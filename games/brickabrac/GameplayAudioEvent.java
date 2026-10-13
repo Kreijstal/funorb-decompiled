@@ -3,14 +3,14 @@
  */
 import java.io.*;
 
-final class qc extends IntrusiveNode {
+final class GameplayAudioEvent extends IntrusiveNode {
     static jp[] field_l;
     static NodeDeque field_n;
     static volatile boolean field_i;
     static int field_o;
-    int field_j;
+    int detailId;
     static mf field_k;
-    int field_m;
+    int eventCode;
 
     final static oh a(String param0, int param1) {
         RuntimeException var2 = null;
@@ -146,8 +146,8 @@ final class qc extends IntrusiveNode {
         }
     }
 
-    qc(int param0) {
-        this(param0, -1);
+    GameplayAudioEvent(int eventCode) {
+        this(eventCode, -1);
     }
 
     final static String a(long param0, byte param1) {
@@ -167,7 +167,7 @@ final class qc extends IntrusiveNode {
         }
         int var3 = 0;
         if (param1 != 3) {
-          qc.c(21);
+          GameplayAudioEvent.c(21);
         }
         long var4 = param0;
         while (var4 != 0L) {
@@ -191,9 +191,9 @@ final class qc extends IntrusiveNode {
         return var6.toString();
     }
 
-    qc(int param0, int param1) {
-        this.field_j = param1;
-        this.field_m = param0;
+    GameplayAudioEvent(int eventCode, int detailId) {
+        this.detailId = detailId;
+        this.eventCode = eventCode;
     }
 
     static {

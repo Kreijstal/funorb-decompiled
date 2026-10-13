@@ -3,7 +3,7 @@
  */
 final class oo extends ki {
     static String field_y;
-    static fo field_w;
+    static IsaacGenerator field_w;
     static String field_t;
     static mh field_u;
     static String field_s;

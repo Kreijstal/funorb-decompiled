@@ -216,7 +216,7 @@ final class uf {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var2_int = param1; var2_int < param0; var2_int++) {
-            vq.a(5 + ip.field_r.a(-37880252, 2), 1273378209, ip.field_r.a(-37880252, 3) + 9);
+            vq.a(5 + ip.field_r.nextBoundedInt(-37880252, 2), 1273378209, ip.field_r.nextBoundedInt(-37880252, 3) + 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -261,7 +261,7 @@ final class uf {
           }
           var8.unlink((byte) 111);
           var8.d(3);
-          fo.field_h = fo.field_h - 1;
+          IsaacGenerator.field_h = IsaacGenerator.field_h - 1;
           var6 = k.field_h;
           var6.writeCipheredOpcode(-13413, param1);
           var6.position = var6.position + 1;

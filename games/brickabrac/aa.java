@@ -134,7 +134,7 @@ final class aa {
           do {
             var4 = param1.nextInt();
           } while (var3_int <= var4);
-          stackIn_12_0 = er.a(-1560508993, param0, var4);
+          stackIn_12_0 = er.nonnegativeRemainder(-1560508993, param0, var4);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

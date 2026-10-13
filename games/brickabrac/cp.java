@@ -380,12 +380,12 @@ final class cp extends h {
 
     final static eg b(int param0, int param1, int param2, int param3, int param4) {
         int var6 = BrickABrac.field_J ? 1 : 0;
-        eg var5 = (eg) (qc.field_n.first(-91));
+        eg var5 = (eg) (GameplayAudioEvent.field_n.first(-91));
         while (var5 != null) {
           if (~var5.field_l == ~param1) {
             return var5;
           }
-          var5 = (eg) (qc.field_n.next((byte) 116));
+          var5 = (eg) (GameplayAudioEvent.field_n.next((byte) 116));
         }
         eg var7 = new eg();
         var5 = var7;
@@ -395,7 +395,7 @@ final class cp extends h {
           return (eg) null;
         }
         var5.field_l = param1;
-        qc.field_n.addLast(var5, (byte) 3);
+        GameplayAudioEvent.field_n.addLast(var5, (byte) 3);
         uo.a(var5, param4, (byte) 68);
         return var5;
     }

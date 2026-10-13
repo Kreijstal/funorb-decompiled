@@ -165,8 +165,8 @@ final class Paddle extends RectangleBody {
           var9 = var9 / var7;
           var8 = (var8 << 8) / var7;
           var10 = circle.velocityY256 * var9 + var8 * circle.velocityX256 >> 7;
-          var11 = -(var8 * var10 >> 8) + (circle.velocityX256 + 8) - board.a(16, (byte) 62);
-          var12 = -(var10 * var9 >> 8) + (circle.velocityY256 + (-board.a(16, (byte) 62) + 8));
+          var11 = -(var8 * var10 >> 8) + (circle.velocityX256 + 8) - board.nextRandomBoundedInt(16, (byte) 62);
+          var12 = -(var10 * var9 >> 8) + (circle.velocityY256 + (-board.nextRandomBoundedInt(16, (byte) 62) + 8));
           if (var11 == 0) {
             circle.velocityY256 = var12;
             circle.velocityX256 = var11;

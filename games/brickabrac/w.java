@@ -41,9 +41,9 @@ final class w {
             return stackIn_3_0;
           }
           this.field_o = this.field_o + 65536;
-          while (dm.a(fo.field_c, -1, this.field_o) >= 65536) {
+          while (dm.a(IsaacGenerator.field_c, -1, this.field_o) >= 65536) {
             this.field_i = this.field_i + 1;
-            this.field_o = this.field_o - fo.field_c;
+            this.field_o = this.field_o - IsaacGenerator.field_c;
           }
           var3_int = -1;
           if (null != this.field_q) {
@@ -51,23 +51,23 @@ final class w {
           }
           if (var3_int != -1) {
             boolean decompiledFrameRemainder0 = true;
-            if (fo.field_f > this.field_j) {
+            if (IsaacGenerator.field_f > this.field_j) {
               this.field_j = this.field_j + 1;
-              if (fo.field_n < this.field_j && (null == this.field_q ||
+              if (IsaacGenerator.field_n < this.field_j && (null == this.field_q ||
                 this.field_q[this.field_h] == null)) {
                 this.field_j = this.field_j - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (fo.field_f <= this.field_j &&
+                if (IsaacGenerator.field_f <= this.field_j &&
                   null == this.field_q[(this.field_h + 1) % var3_int]) {
                   this.field_j = this.field_j - 1;
                 }
               }
             }
-            if (fo.field_f <= this.field_j) {
+            if (IsaacGenerator.field_f <= this.field_j) {
               this.field_b = this.field_h;
-              this.field_j = this.field_j - fo.field_f;
+              this.field_j = this.field_j - IsaacGenerator.field_f;
               if (!this.field_a) {
                 this.field_h = this.field_h - 1;
                 if (this.field_h < 0) {
@@ -80,7 +80,7 @@ final class w {
                 }
               }
             }
-            if (fo.field_n < this.field_j) {
+            if (IsaacGenerator.field_n < this.field_j) {
               this.field_a = true;
             }
           }
@@ -92,27 +92,27 @@ final class w {
               if (tb.field_fb > 9 &&
                 tb.field_fb < 82) {
                 this.field_a = false;
-                this.field_j = fo.field_f;
+                this.field_j = IsaacGenerator.field_f;
                 var4 = 1;
               }
               if (tb.field_fb > 558 &&
                 tb.field_fb < 631) {
-                this.field_j = fo.field_f;
+                this.field_j = IsaacGenerator.field_f;
                 var4 = 1;
                 this.field_a = true;
               }
             }
             if (var4 == 0 &&
-              fo.field_n < this.field_j &&
+              IsaacGenerator.field_n < this.field_j &&
               qo.field_O > 257 &&
               qo.field_O < 290) {
               if (pq.field_k > 9 &&
                 pq.field_k < 82) {
-                this.field_j = fo.field_n;
+                this.field_j = IsaacGenerator.field_n;
               }
               if (pq.field_k > 558 &&
                 pq.field_k < 631) {
-                this.field_j = fo.field_n;
+                this.field_j = IsaacGenerator.field_n;
               }
             }
           }
@@ -181,11 +181,11 @@ final class w {
           } else {
             var6.a(9, 58);
           }
-          if (this.field_j < fo.field_n) {
+          if (this.field_j < IsaacGenerator.field_n) {
             var7 = this.field_q[this.field_b];
             var2Lifetime1 = var7;
             if (var2Lifetime1 != null) {
-              var3 = (60 + var7.field_f) * this.field_j / fo.field_n;
+              var3 = (60 + var7.field_f) * this.field_j / IsaacGenerator.field_n;
               var4 = var3 - 30;
               if (this.field_a) {
                 ml.a(-256 * var4 / 30, var2Lifetime1, (byte) 101, 58, 9, (-var4 + var7.field_f) * 256 / 30);

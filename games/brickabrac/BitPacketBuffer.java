@@ -3,7 +3,7 @@
  */
 final class BitPacketBuffer extends PacketBuffer {
     static jp field_t;
-    private fo opcodeCipher;
+    private IsaacGenerator opcodeCipher;
     private int writeBitsRemaining;
     static String field_s;
     private int bitPosition;
@@ -26,7 +26,7 @@ final class BitPacketBuffer extends PacketBuffer {
 
     final void initializeOpcodeCipher(int[] seed, int obfuscationGuard) {
         try {
-          this.opcodeCipher = new fo(seed);
+          this.opcodeCipher = new IsaacGenerator(seed);
           int var3_int = -50 / ((obfuscationGuard - 22) / 37);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "pi.UA(" + (seed != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -58,7 +58,7 @@ final class BitPacketBuffer extends PacketBuffer {
     final void writeCipheredOpcode(int obfuscationGuard, int opcode) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.data[fieldTemp$0] = (byte)(opcode + this.opcodeCipher.b(111));
+        this.data[fieldTemp$0] = (byte)(opcode + this.opcodeCipher.nextInt(111));
         if (obfuscationGuard != -13413) {
           this.finishBitRead((byte) -89);
         }
@@ -276,7 +276,7 @@ final class BitPacketBuffer extends PacketBuffer {
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        return 255 & this.data[fieldTemp$0] - this.opcodeCipher.b(99);
+        return 255 & this.data[fieldTemp$0] - this.opcodeCipher.nextInt(99);
     }
 
     final void finishBitRead(byte obfuscationGuard) {
@@ -307,7 +307,7 @@ final class BitPacketBuffer extends PacketBuffer {
           while (var5_int < length) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            destination[destinationOffset + var5_int] = (byte)(this.data[fieldTemp$0] - this.opcodeCipher.b(126));
+            destination[destinationOffset + var5_int] = (byte)(this.data[fieldTemp$0] - this.opcodeCipher.nextInt(126));
             var5_int++;
           }
           return;

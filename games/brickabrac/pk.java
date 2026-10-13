@@ -37,9 +37,9 @@ final class pk {
           }
           if (qg.field_A < 10) {
             var3_int = 0;
-            if (qc.field_i) {
+            if (GameplayAudioEvent.field_i) {
               var3_int = 1;
-              qc.field_i = false;
+              GameplayAudioEvent.field_i = false;
             }
             po.a(da.d((byte) 103), sb.field_f, oj.b(false), var3_int != 0, 0);
             return;

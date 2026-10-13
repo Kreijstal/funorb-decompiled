@@ -50,7 +50,7 @@ final class kk {
         }
     }
 
-    final static int[] a(boolean param0, int param1, fo param2) {
+    final static int[] a(boolean param0, int param1, IsaacGenerator param2) {
         int var4 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;

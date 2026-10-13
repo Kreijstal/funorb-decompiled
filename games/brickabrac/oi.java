@@ -85,7 +85,7 @@ final class oi {
     }
 
     oi(nc param0) {
-        this(param0, kk.a(false, param0.field_i, (fo) null), param0.field_i);
+        this(param0, kk.a(false, param0.field_i, (IsaacGenerator) null), param0.field_i);
     }
 
     oi(nc param0, int[] param1, int param2) {

@@ -41,7 +41,7 @@ final class sk extends h {
             sk.a(122);
           }
           og.field_Wb = 3;
-          hg.field_e = 51550 + (hi.field_w.b(102) << 16);
+          hg.field_e = 51550 + (hi.field_w.nextInt(102) << 16);
           ek.field_kb = 72;
           qm.field_a = 40;
           tm.field_g = 11;
@@ -50,7 +50,7 @@ final class sk extends h {
           var10 = var12;
           var7 = var10;
           for (var8 = 0; param3 > var8; var8++) {
-            var7[var8] = hi.field_w.b(97);
+            var7[var8] = hi.field_w.nextInt(97);
           }
           var15 = id.a(hi.field_w, false);
           pe.field_o = new GameplayScreen(args, -1, var6_int, param2, var12, var15);

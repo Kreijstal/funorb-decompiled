@@ -32,9 +32,9 @@ final class vq extends oq {
         if (param1 != 1273378209) {
           field_E = (String[]) null;
         }
-        int var3 = 4 + ip.field_r.a(-37880252, -4 + param0);
-        int var4 = ip.field_r.a(-37880252, -8 + param2) + 8;
-        ob.field_E.addLast(new nj(var3, var4, oq.field_x + ip.field_r.a(-37880252, qb.field_w), fr.field_k + ip.field_r.a(-37880252, ag.field_E)), (byte) 3);
+        int var3 = 4 + ip.field_r.nextBoundedInt(-37880252, -4 + param0);
+        int var4 = ip.field_r.nextBoundedInt(-37880252, -8 + param2) + 8;
+        ob.field_E.addLast(new nj(var3, var4, oq.field_x + ip.field_r.nextBoundedInt(-37880252, qb.field_w), fr.field_k + ip.field_r.nextBoundedInt(-37880252, ag.field_E)), (byte) 3);
         dl.field_f = dl.field_f + 1;
     }
 

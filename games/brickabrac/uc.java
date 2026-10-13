@@ -128,7 +128,7 @@ final class uc extends k {
         try {
           int var1_int = 9 % ((-59 - param0) / 35);
           rk.field_Tb = null;
-          fo.field_h = 0;
+          IsaacGenerator.field_h = 0;
           ol.field_w = 0;
           bf.field_N.clear((byte) -72);
           jq.field_n.clear((byte) -92);

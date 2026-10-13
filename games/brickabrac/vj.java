@@ -60,14 +60,14 @@ final class vj {
           var5 = eo.field_f;
           synchronized (var5) {
             m.field_f.e(param1, -1, 16);
-            if (param3 == fo.field_a) {
+            if (param3 == IsaacGenerator.field_a) {
               return;
             }
             m.field_f.f(-24774);
             eo.field_f.b();
-            fo.field_a = param3;
-            if (null != fo.field_a) {
-              m.field_f.a(fo.field_a, 127, param0);
+            IsaacGenerator.field_a = param3;
+            if (null != IsaacGenerator.field_a) {
+              m.field_f.a(IsaacGenerator.field_a, 127, param0);
             }
           }
           return;

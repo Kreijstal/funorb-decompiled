@@ -205,17 +205,17 @@ final class td extends ki {
 
     final static void g(int param0) {
         int var2 = 0;
-        fo var1 = null;
+        IsaacGenerator var1 = null;
         int var3 = 0;
-        fo var4 = null;
+        IsaacGenerator var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = new fo(new int[]{(int)ue.a(false)});
+          var4 = new IsaacGenerator(new int[]{(int)ue.a(false)});
           var1 = var4;
           for (var2 = param0; var2 < mh.field_F.length; var2++) {
-            mh.field_F[var2] = var4.b(101);
+            mh.field_F[var2] = var4.nextInt(101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

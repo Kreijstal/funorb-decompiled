@@ -216,7 +216,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    final static void a(int[] param0, byte param1, fo param2) {
+    final static void a(int[] param0, byte param1, IsaacGenerator param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -225,7 +225,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          MovingBody.a(-122, param0, 5, param2);
+          MovingBody.shuffleValues(-122, param0, 5, param2);
           if (param1 != 39) {
             ke.a(false, (byte[]) null);
           }
@@ -260,7 +260,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           if (so.field_f == this &&
             !ai.field_s) {
-            qc.field_i = true;
+            GameplayAudioEvent.field_i = true;
             if (tf.field_h &&
               -er.field_c + ue.a(false) > 1000L) {
               var2 = param0.getClipBounds();
@@ -478,7 +478,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           fieldTemp$1 = gk.field_a;
           gk.field_a = gk.field_a + 1;
           if (50 < fieldTemp$1) {
-            qc.field_i = true;
+            GameplayAudioEvent.field_i = true;
             gk.field_a = gk.field_a - 50;
             kj.field_D.setSize(to.field_b, be.field_g);
             kj.field_D.setVisible(true);
@@ -513,7 +513,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           CircleBody.field_r = true;
-          qc.field_i = true;
+          GameplayAudioEvent.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -547,7 +547,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         try {
           field_m = null;
           if (param0 != 19254) {
-            ke.a((int[]) null, (byte) -57, (fo) null);
+            ke.a((int[]) null, (byte) -57, (IsaacGenerator) null);
           }
           field_b = null;
           field_f = null;
@@ -679,7 +679,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           kj.field_D.requestFocus();
           CircleBody.field_r = true;
           qa.field_r = true;
-          qc.field_i = true;
+          GameplayAudioEvent.field_i = true;
           tn.field_A = param0;
           er.field_c = ue.a(false);
           return;
@@ -840,7 +840,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           var6 = field_n.get(1);
           var7 = field_n.get(11);
           if (param0 != -75) {
-            ke.a((int[]) null, (byte) -75, (fo) null);
+            ke.a((int[]) null, (byte) -75, (IsaacGenerator) null);
           }
           var8 = field_n.get(12);
           var9 = field_n.get(13);

@@ -45,7 +45,7 @@ final class ch {
           if (0 == var2) {
             if (null == tf.field_d) {
               tf.field_d = new mk(128);
-              fo.field_h = 0;
+              IsaacGenerator.field_h = 0;
             }
             stackIn_12_0 = (1 != var1.readUnsignedByte(255)) ? 0 : 1;
             var3_int = stackIn_12_0;
@@ -72,8 +72,8 @@ final class ch {
             if (var6 == null) {
               var6 = new mp();
               tf.field_d.a((long)var8.hashCode(), var6, 120);
-              fieldTemp$1 = fo.field_h;
-              fo.field_h = fo.field_h + 1;
+              fieldTemp$1 = IsaacGenerator.field_h;
+              IsaacGenerator.field_h = IsaacGenerator.field_h + 1;
               var6.field_Sb = fieldTemp$1;
               jq.field_n.addLast(var6, (byte) 3);
             }

@@ -108,12 +108,12 @@ final class s {
         qb.field_v.a(18, 0, 0, -(!vd.field_e ? 0 : 2 + (ec.field_J + 2) + 40) + Ball.field_A.field_Ib, (byte) 64);
         ij.field_a.a(18, 0, -42 + Ball.field_A.field_Ib - ec.field_J, 42 + ec.field_J, (byte) 64);
         if (param0 >= 122) {
-          fo.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
+          IsaacGenerator.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
           return;
         }
         jp var2 = (jp) null;
         s.a((jp) null, -53, 56, (jp) null, (pb) null, -22, (byte) -5, (jp) null);
-        fo.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
+        IsaacGenerator.field_b.a(2, (byte) -118, Ball.field_A.field_Ib, 0, 20, ec.field_J, Ball.field_A.field_cb - 20);
     }
 
     final static boolean a(int param0) {

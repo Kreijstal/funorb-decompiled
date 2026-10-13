@@ -193,7 +193,7 @@ final class co {
 
     final static void a(byte param0, vm param1) {
         try {
-          fo.a(param1, 0);
+          IsaacGenerator.a(param1, 0);
           if (param0 >= -74) {
             field_d = (String) null;
           }

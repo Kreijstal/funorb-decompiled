@@ -40,7 +40,7 @@ final class cg extends dj {
     }
 
     final static void b(int param0) {
-        fo.field_i = lb.field_d;
+        IsaacGenerator.field_i = lb.field_d;
         kp.field_a = lb.field_c;
         Brick.e(-67);
         ap.field_b.a(fe.field_gb.field_Ib, 0, 80, 0, fe.field_gb.field_cb - 40 - 2);

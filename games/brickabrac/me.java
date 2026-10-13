@@ -70,7 +70,7 @@ final class me {
             stackIn_12_0 = rd.a(dn.field_J, new String[]{param0}, (byte) 103);
             return stackIn_12_0;
           }
-          if (fo.field_h >= 100) {
+          if (IsaacGenerator.field_h >= 100) {
             stackIn_15_0 = ap.field_d;
             return stackIn_15_0;
           }

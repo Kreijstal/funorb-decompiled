@@ -89,10 +89,10 @@ abstract class ff {
           if (param0 > -34) {
             return;
           }
-          var5 = (eg) (qc.field_n.first(-71));
+          var5 = (eg) (GameplayAudioEvent.field_n.first(-71));
           while (var5 != null) {
             uo.a(var5, param1, (byte) 68);
-            var5 = (eg) (qc.field_n.next((byte) 116));
+            var5 = (eg) (GameplayAudioEvent.field_n.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

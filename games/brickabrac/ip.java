@@ -4,7 +4,7 @@
 final class ip extends ki {
     static jp[][] field_v;
     static String field_t;
-    static fo field_r;
+    static IsaacGenerator field_r;
     static NodeDeque field_s;
     static String[] field_u;
 

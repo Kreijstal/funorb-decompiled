@@ -7,7 +7,7 @@ final class hi extends um {
     static int[] field_A;
     private int field_y;
     private int field_x;
-    static fo field_w;
+    static IsaacGenerator field_w;
     private jp[] field_B;
 
     final static boolean a(boolean param0, int param1, int param2) {

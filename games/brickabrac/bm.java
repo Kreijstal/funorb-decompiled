@@ -270,7 +270,7 @@ final class bm {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, NodeDeque param4) {
+    final static void playGameplayAudioEvents(int volume, int tempoScale256, boolean alternateMusicTrack, int obfuscationGuard, NodeDeque events) {
         int stackIn_74_0 = 0;
         kl stackIn_78_0 = null;
         RuntimeException stackIn_89_0 = null;
@@ -279,7 +279,7 @@ final class bm {
         RuntimeException decompiledCaughtException = null;
         int var5_int = 0;
         RuntimeException var5 = null;
-        qc var6 = null;
+        GameplayAudioEvent var6 = null;
         kl var6_ref = null;
         Object var7_ref = null;
         int var7 = 0;
@@ -290,53 +290,53 @@ final class bm {
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
           var5_int = 0;
-          if (param3 != -30791) {
-            bm.a(98, -116, false, -50, (NodeDeque) null);
+          if (obfuscationGuard != -30791) {
+            bm.playGameplayAudioEvents(98, -116, false, -50, (NodeDeque) null);
           }
-          var6 = (qc) (param4.first(-65));
+          var6 = (GameplayAudioEvent) (events.first(-65));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6 == null))) {
             var7_ref = null;
             stackIn_74_0 = 1;
             if (var10 == 0) {
               boolean decompiledFrameRemainder0 = true;
-              if (stackIn_74_0 != var6.field_m) {
-                if (var6.field_m != 0) {
-                  if (var6.field_m == 2) {
-                    var7_ref = fr.field_e[oo.field_w.a(-37880252, fr.field_e.length)];
+              if (stackIn_74_0 != var6.eventCode) {
+                if (var6.eventCode != 0) {
+                  if (var6.eventCode == 2) {
+                    var7_ref = fr.field_e[oo.field_w.nextBoundedInt(-37880252, fr.field_e.length)];
                   } else {
-                    if (var6.field_m != 4) {
-                      if (var6.field_m == 5) {
+                    if (var6.eventCode != 4) {
+                      if (var6.eventCode == 5) {
                         var7_ref = ta.field_e[5];
                       } else {
-                        if (6 == var6.field_m) {
+                        if (6 == var6.eventCode) {
                           var7_ref = ta.field_e[6];
                         } else {
-                          if (var6.field_m == 7) {
+                          if (var6.eventCode == 7) {
                             var7_ref = ta.field_e[7];
                           } else {
-                            if (3 == var6.field_m) {
-                              var7_ref = ef.field_a[var6.field_j];
+                            if (3 == var6.eventCode) {
+                              var7_ref = ef.field_a[var6.detailId];
                             } else {
-                              if (8 == var6.field_m) {
+                              if (8 == var6.eventCode) {
                                 var7_ref = ta.field_e[10];
                               } else {
-                                if (9 == var6.field_m) {
+                                if (9 == var6.eventCode) {
                                   var7_ref = ta.field_e[11];
                                 } else {
-                                  if (var6.field_m == 10) {
+                                  if (var6.eventCode == 10) {
                                     var7_ref = ta.field_e[12];
                                   } else {
-                                    if (var6.field_m == 11) {
-                                      var7_ref = cg.field_p[oo.field_w.a(-37880252, cg.field_p.length)];
+                                    if (var6.eventCode == 11) {
+                                      var7_ref = cg.field_p[oo.field_w.nextBoundedInt(-37880252, cg.field_p.length)];
                                     } else {
-                                      if (var6.field_m == 12) {
+                                      if (var6.eventCode == 12) {
                                         var7_ref = ta.field_e[13];
                                       } else {
-                                        if (var6.field_m == 14) {
+                                        if (var6.eventCode == 14) {
                                           var7_ref = ta.field_e[14];
                                         } else {
-                                          if ((var6.field_m == 13)) {
+                                          if ((var6.eventCode == 13)) {
                                             var7_ref = ta.field_e[15];
                                           }
                                         }
@@ -356,26 +356,26 @@ final class bm {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7_ref = mh.field_ob[oo.field_w.a(-37880252, mh.field_ob.length)];
+                  var7_ref = mh.field_ob[oo.field_w.nextBoundedInt(-37880252, mh.field_ob.length)];
                 }
               } else {
                 if (oa.field_Sb != null) {
                   var8_ref_oe__ = oa.field_Sb.a(0);
                   if (0 < oa.field_Sb.field_l) {
-                    var7_ref = var8_ref_oe__[oo.field_w.a(-37880252, oa.field_Sb.field_l)];
+                    var7_ref = var8_ref_oe__[oo.field_w.nextBoundedInt(-37880252, oa.field_Sb.field_l)];
                   }
                 }
               }
               if (null != var7_ref) {
-                PlayerBoard.a((oe) (var7_ref), -56, param0);
+                PlayerBoard.a((oe) (var7_ref), -56, volume);
               }
-              var6 = (qc) (param4.next((byte) 116));
+              var6 = (GameplayAudioEvent) (events.next((byte) 116));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_74_0 = param2 ? 1 : 0;
+            stackIn_74_0 = alternateMusicTrack ? 1 : 0;
           }
           if (stackIn_74_0 == 0) {
             stackIn_78_0 = to.field_k;
@@ -383,7 +383,7 @@ final class bm {
             stackIn_78_0 = me.field_d;
           }
           var6_ref = stackIn_78_0;
-          var7 = var5_int * param1;
+          var7 = var5_int * tempoScale256;
           var8 = var6_ref.h();
           var9 = var5_int + 1 << 2;
           if (var8 + var9 < var7) {
@@ -398,8 +398,8 @@ final class bm {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_89_0 = var5;
-          stackIn_89_1 = new StringBuilder().append("bm.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_89_1 = new StringBuilder().append("bm.D(").append(volume).append(',').append(tempoScale256).append(',').append(alternateMusicTrack).append(',').append(obfuscationGuard).append(',');
+          if (events == null) {
             stackIn_90_2 = "null";
           } else {
             stackIn_90_2 = "{...}";

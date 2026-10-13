@@ -29,7 +29,7 @@ final class ap {
           if (!param0) {
             ap.a(-35, 121, (byte) -8);
           }
-          var2 = qc.a(ah.a(!param0, param1), (byte) 3);
+          var2 = GameplayAudioEvent.a(ah.a(!param0, param1), (byte) 3);
           if (var2 == null) {
             var2 = "";
           }

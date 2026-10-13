@@ -248,8 +248,8 @@ final class Brick extends RectangleBody {
             }
             var7.contactCount = var7.contactCount + 1;
             if ((var7.brickBounceCount & 3) == 0) {
-              var7.velocityX256 = var7.velocityX256 + (-board.a(4, (byte) 62) + 2);
-              var7.velocityY256 = var7.velocityY256 + (2 - board.a(4, (byte) 62));
+              var7.velocityX256 = var7.velocityX256 + (-board.nextRandomBoundedInt(4, (byte) 62) + 2);
+              var7.velocityY256 = var7.velocityY256 + (2 - board.nextRandomBoundedInt(4, (byte) 62));
             }
           }
           stackIn_21_0 = (var7.phaseTicks != 0) ? 0 : 1;
@@ -293,7 +293,7 @@ final class Brick extends RectangleBody {
                 dupTemp$0 = rb.field_a[this.typeId];
                 this.transitionCode = dupTemp$0;
                 if (dupTemp$0 < 0) {
-                  if (board.a(100, (byte) 62) > 65) {
+                  if (board.nextRandomBoundedInt(100, (byte) 62) > 65) {
                     if (sh.field_a != 1) {
                       if (sh.field_a == 2) {
                         this.transitionCode = 7;
@@ -308,7 +308,7 @@ final class Brick extends RectangleBody {
                       this.transitionCode = 6;
                     }
                   } else {
-                    this.transitionCode = board.a(6, (byte) 62);
+                    this.transitionCode = board.nextRandomBoundedInt(6, (byte) 62);
                   }
                 }
                 this.dropPowerUp(board, 15165);

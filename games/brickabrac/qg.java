@@ -327,7 +327,7 @@ abstract class qg extends ke {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = BrickABrac.field_J ? 1 : 0;
-          var4 = df.a(-27790, qc.field_o, cd.field_e, param0);
+          var4 = df.a(-27790, GameplayAudioEvent.field_o, cd.field_e, param0);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -469,7 +469,7 @@ abstract class qg extends ke {
               if (i.field_j == 0) {
                 discarded$2 = this.a(false, (byte) 46, false);
               } else {
-                gk.a(qc.field_o, (byte) 124);
+                gk.a(GameplayAudioEvent.field_o, (byte) 124);
               }
             } else {
               hk.a((byte) -122);
@@ -713,10 +713,10 @@ abstract class qg extends ke {
         sg.e(70);
         if (!r.c((byte) -114) &&
           i.field_j != 11) {
-          qc.c(27144);
+          GameplayAudioEvent.c(27144);
         }
         if (qa.field_x != null) {
-          qc.field_o = qa.field_x.b(500);
+          GameplayAudioEvent.field_o = qa.field_x.b(500);
         }
         if (ik.a(false)) {
           var3 = wn.a((byte) -98) * 1200;
@@ -870,15 +870,15 @@ abstract class qg extends ke {
         }
         if (10 == field_A) {
           if (0 != cd.field_e) {
-            qc.field_k = aj.a(lc.field_i, true);
+            GameplayAudioEvent.field_k = aj.a(lc.field_i, true);
           }
           field_A = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (field_A == 11) {
-          if (null != qc.field_k && (!qc.field_k.a((byte) -127) ||
-            !qc.field_k.a(98))) {
-            ai.a((byte) 24, 0.0f, be.a(qc.field_k, wn.field_a, 125, d.field_C));
+          if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.a((byte) -127) ||
+            !GameplayAudioEvent.field_k.a(98))) {
+            ai.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, d.field_C));
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -55,10 +55,10 @@ final class f {
           var2 = var27.readUnsignedByte(255);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(65280);
-            var4_ref_eg = (eg) (qc.field_n.first(-105));
+            var4_ref_eg = (eg) (GameplayAudioEvent.field_n.first(-105));
             while (var4_ref_eg != null) {
               if (var4_ref_eg.field_l != var3) {
-                var4_ref_eg = (eg) (qc.field_n.next((byte) 116));
+                var4_ref_eg = (eg) (GameplayAudioEvent.field_n.next((byte) 116));
                 continue;
               }
               break;

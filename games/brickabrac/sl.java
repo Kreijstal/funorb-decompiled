@@ -106,15 +106,15 @@ abstract class sl extends tk {
           Ball.field_A = new mh(0L, (mh) null);
           qb.field_v = new mh(0L, rp.field_t, n.field_a);
           ij.field_a = new mh(0L, ik.field_a, pf.field_c);
-          fo.field_b = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
+          IsaacGenerator.field_b = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           Ball.field_A.a(qb.field_v, 0);
           if (vd.field_e) {
             Ball.field_A.a(ij.field_a, 0);
           }
-          Ball.field_A.a(fo.field_b, 0);
-          fo.field_b.field_Qb.a((byte) -74, ad.field_l);
-          fo.field_b.field_Qb.field_Q = 1;
-          var23 = fo.field_b.field_Qb;
+          Ball.field_A.a(IsaacGenerator.field_b, 0);
+          IsaacGenerator.field_b.field_Qb.a((byte) -74, ad.field_l);
+          IsaacGenerator.field_b.field_Qb.field_Q = 1;
+          var23 = IsaacGenerator.field_b.field_Qb;
           var24 = var23;
           var24.field_S = 1;
           dn.field_N = new mh(0L, ad.field_l);

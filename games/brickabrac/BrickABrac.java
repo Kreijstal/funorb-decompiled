@@ -129,7 +129,7 @@ public final class BrickABrac extends sa {
 
     final void b(boolean param0) {
         this.a((byte) 39, 0, 2, param0, 1, 4, 14, 65);
-        hi.field_w = new fo(new int[]{(int)ue.a(false)});
+        hi.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
         nk.field_c = new jp(640, 480);
         oc.a(lp.field_ub, (byte) 60, kj.field_D);
         this.a(3160, new ij());
@@ -171,7 +171,7 @@ public final class BrickABrac extends sa {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        fo var8 = null;
+        IsaacGenerator var8 = null;
         int[] var9 = null;
         int var11 = 0;
         oi var12 = null;
@@ -395,17 +395,17 @@ public final class BrickABrac extends sa {
             var6Lifetime1 = -2;
           }
           var7 = param0.readInt(param1 ^ 208);
-          var8 = new fo(new int[]{var7});
+          var8 = new IsaacGenerator(new int[]{var7});
           var39 = new int[var30.length];
           var32 = var39;
           var9 = var32;
           for (var10 = 0; var10 < var30.length; var10++) {
-            var9[var10] = var8.b(105);
+            var9[var10] = var8.nextInt(105);
           }
           var49 = kk.a(false, tq.field_d.field_i, var8);
           var11 = param0.readByte(true);
           var12 = new oi(tq.field_d, var49, var11);
-          var13 = var8.a(-37880252, 11);
+          var13 = var8.nextBoundedInt(-37880252, 11);
           oa.field_Sb = rd.a(var13, (byte) 19);
           var50 = id.a(var8, false);
           fj.field_Ub = null;
@@ -569,7 +569,7 @@ public final class BrickABrac extends sa {
         op.a((byte) -42);
         kq.a((byte) -115);
         NodeDeque.b((byte) 100);
-        fo.a(2);
+        IsaacGenerator.a(2);
         sc.a(81);
         ue.a((byte) -114);
         BitPacketBuffer.clearStaticReferences(60);
@@ -668,7 +668,7 @@ public final class BrickABrac extends sa {
         mk.c((byte) 85);
         ce.b(46);
         hn.a(122);
-        qc.d(0);
+        GameplayAudioEvent.d(0);
         Ball.c(122);
         il.c(124);
         kc.a(95);

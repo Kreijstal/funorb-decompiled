@@ -189,9 +189,9 @@ final class qo extends ib implements vf, en {
     }
 
     final static void a(int param0, int param1) {
-        fo.field_f = 400 * param1 / param0;
-        fo.field_c = (param1 << 16) / 150;
-        fo.field_n = param1 * 100 / 150;
+        IsaacGenerator.field_f = 400 * param1 / param0;
+        IsaacGenerator.field_c = (param1 << 16) / 150;
+        IsaacGenerator.field_n = param1 * 100 / 150;
     }
 
     public static void h(int param0) {

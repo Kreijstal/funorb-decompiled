@@ -126,7 +126,7 @@ final class kj extends hb {
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
           kp.field_a = lb.field_c;
-          fo.field_i = lb.field_d;
+          IsaacGenerator.field_i = lb.field_d;
           if (!param1) {
             stackIn_4_0 = eg.field_m;
           } else {

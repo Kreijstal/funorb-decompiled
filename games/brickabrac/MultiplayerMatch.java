@@ -254,7 +254,7 @@ final class MultiplayerMatch {
             if (param1 != null &&
               0 != (3 & param0.field_db) &&
               3 != param0.field_db) {
-              param1.addLast(new qc(4), (byte) 3);
+              param1.addLast(new GameplayAudioEvent(4), (byte) 3);
             }
             if (0 < var7.field_w) {
               param0.field_db = param0.field_db ^ 3;
@@ -272,7 +272,7 @@ final class MultiplayerMatch {
                 while (var9 != null) {
                   if (40 <= var9.contactCount) {
                     if (param1 != null) {
-                      param1.addLast(new qc(6), (byte) 3);
+                      param1.addLast(new GameplayAudioEvent(6), (byte) 3);
                     }
                     var8 = 1;
                     var9.contactCount = 0;
@@ -589,7 +589,7 @@ final class MultiplayerMatch {
                 if (var10_ref_ge.y256 > 122880) {
                   stackIn_270_0 = (PlayerBoard) (param0);
                   stackIn_270_1 = 16387;
-                  if (param0.a(100, (byte) 62) > 50) {
+                  if (param0.nextRandomBoundedInt(100, (byte) 62) > 50) {
                     stackIn_271_2 = 4;
                   } else {
                     stackIn_271_2 = 5;
@@ -635,7 +635,7 @@ final class MultiplayerMatch {
                       jc.a(var10_ref_ge.typeId, 3, (byte) -115);
                     }
                     if (param1 != null) {
-                      param1.addLast(new qc(3, var10_ref_ge.typeId), (byte) 3);
+                      param1.addLast(new GameplayAudioEvent(3, var10_ref_ge.typeId), (byte) 3);
                     }
                     stackIn_300_0 = (PlayerBoard) (param0);
                     if (1 >= this.playerCount &&
@@ -698,7 +698,7 @@ final class MultiplayerMatch {
                   !(var10_ref_vnLifetime1.x256 >= 0) ||
                   !(0 <= var10_ref_vnLifetime1.y256) ||
                   !(param0.boardWidth << 8 >= var10_ref_vnLifetime1.x256))) {
-                  var10_ref_vnLifetime1.setVelocityFromAngle(-1024 + param0.a(2048, (byte) 62), 1536, 105);
+                  var10_ref_vnLifetime1.setVelocityFromAngle(-1024 + param0.nextRandomBoundedInt(2048, (byte) 62), 1536, 105);
                   var10_ref_vnLifetime1.centerXHistory256.latestIndex = -1;
                   var10_ref_vnLifetime1.destroyedBrickStreak = 0;
                   var10_ref_vnLifetime1.centerYHistory256.latestIndex = -1;
@@ -759,7 +759,7 @@ final class MultiplayerMatch {
                   param0.field_i = 100;
                 }
                 if (param1 != null) {
-                  param1.addLast(new qc(14), (byte) 3);
+                  param1.addLast(new GameplayAudioEvent(14), (byte) 3);
                 }
               }
               if (param0.field_r != 0) {
@@ -797,7 +797,7 @@ final class MultiplayerMatch {
             if (param0.field_Z == 4) {
               if (param0.field_P == 0 &&
                 param1 != null) {
-                param1.addLast(new qc(13), (byte) 3);
+                param1.addLast(new GameplayAudioEvent(13), (byte) 3);
               }
               fieldTemp$11 = param0.field_P + 1;
               param0.field_P = param0.field_P + 1;
@@ -985,7 +985,7 @@ final class MultiplayerMatch {
           if (122880 < param4.y256) {
             param4.unlink((byte) 111);
             if (param1 != null) {
-              param1.addLast(new qc(7), (byte) 3);
+              param1.addLast(new GameplayAudioEvent(7), (byte) 3);
             }
             if (param0.activeBalls.isEmpty(false) &&
               param0.queuedBalls.isEmpty(false)) {
@@ -1037,12 +1037,12 @@ final class MultiplayerMatch {
             }
             if (39 == param4.contactCount &&
               param1 != null) {
-              param1.addLast(new qc(5), (byte) 3);
+              param1.addLast(new GameplayAudioEvent(5), (byte) 3);
             }
             if (param0.paddle == dj.field_c) {
               if (param0.paddle.catchTicks > 0) {
                 if (param1 != null) {
-                  param1.addLast(new qc(10), (byte) 3);
+                  param1.addLast(new GameplayAudioEvent(10), (byte) 3);
                 }
                 param0.paddle.onCircleContact((byte) 53, param0, param4);
                 param4.centerXHistory256.latestIndex = -1;
@@ -1052,7 +1052,7 @@ final class MultiplayerMatch {
                 return false;
               }
               if (param1 != null) {
-                param1.addLast(new qc(0), (byte) 3);
+                param1.addLast(new GameplayAudioEvent(0), (byte) 3);
               }
               param0.paddle.onCircleContact((byte) 53, param0, param4);
               param4.destroyedBrickStreak = 0;
@@ -1103,7 +1103,7 @@ final class MultiplayerMatch {
                 }
                 if (0 == param4.phaseTicks ||
                   0 != (1 << var9.typeId & sg.field_n)) {
-                  param1.addLast(new qc(var7), (byte) 3);
+                  param1.addLast(new GameplayAudioEvent(var7), (byte) 3);
                 }
               }
               if (param4.phaseTicks == 0 &&

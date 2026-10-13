@@ -291,10 +291,10 @@ final class wp {
               }
               if (decompiledFrameRemainder0) {
                 ga.field_j = -1;
-                rf.field_b = fo.field_g;
+                rf.field_b = IsaacGenerator.field_g;
               }
             }
-            if (rf.field_b == fo.field_g &&
+            if (rf.field_b == IsaacGenerator.field_g &&
               um.b((byte) -80)) {
               sl.field_v = jl.field_e.readLong(-32768);
               gd.field_b = param5;
@@ -355,7 +355,7 @@ final class wp {
                 }
               } else {
                 try {
-                  ne.a(new Object[]{qc.a(sl.field_v, (byte) 3)}, 116, uc.e((byte) -75), "zap");
+                  ne.a(new Object[]{GameplayAudioEvent.a(sl.field_v, (byte) 3)}, 116, uc.e((byte) -75), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -97,7 +97,7 @@ final class mq {
         if (param0 != 0) {
           return (mh) null;
         }
-        return fo.field_b.field_Rb;
+        return IsaacGenerator.field_b.field_Rb;
     }
 
     final static al a(byte param0, int param1) {

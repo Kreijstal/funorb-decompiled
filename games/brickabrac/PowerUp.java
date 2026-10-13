@@ -252,7 +252,7 @@ final class PowerUp extends CircleBody {
                 } else {
                   if (board.field_C.isEmpty(false)) {
                     board.field_k = 0;
-                    board.field_R = board.e(obfuscationGuard + 22);
+                    board.field_R = board.nextRandomInt(obfuscationGuard + 22);
                     board.f(1000);
                   }
                 }

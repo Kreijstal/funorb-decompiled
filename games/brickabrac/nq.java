@@ -34,7 +34,7 @@ final class nq extends IntrusiveNode {
         int var9Lifetime1;
         try {
           nf.field_W = cr.a("commonui", param3, "frame_top", param2 ^ -57);
-          qc.field_l = cr.a("commonui", param3, "frame_bottom", 2);
+          GameplayAudioEvent.field_l = cr.a("commonui", param3, "frame_bottom", 2);
           ka.field_n = pl.a("commonui", "jagex_logo_grey", (byte) -110, param3);
           sf.field_U = cr.a("commonui", param3, "button", 2);
           df.field_a = bd.a("commonui", "validation", param3, (byte) -8);

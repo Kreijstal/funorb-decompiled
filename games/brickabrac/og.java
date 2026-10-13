@@ -1507,7 +1507,7 @@ final class og extends mh {
           }
           ic.a((byte) -79);
           ve.a(5);
-          qc.a(param0 + 14569);
+          GameplayAudioEvent.a(param0 + 14569);
           if (vg.a(param0 - 104)) {
             k.field_h.writeCipheredOpcode(-13413, 1);
             cr.a(0, 10000);

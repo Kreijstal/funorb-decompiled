@@ -304,8 +304,8 @@ final class GameplayScreen extends GameScreen {
         if (obfuscationGuard >= -52) {
           this.match = (MultiplayerMatch) null;
         }
-        var5 = oo.field_w.a(-37880252, 10);
-        var6 = oo.field_w.a(-37880252, 3);
+        var5 = oo.field_w.nextBoundedInt(-37880252, 10);
+        var6 = oo.field_w.nextBoundedInt(-37880252, 3);
         if (var5 == 0) {
           od.field_c = od.field_c + 1;
           fp.field_z = fp.field_z + og.field_Wb;
@@ -346,7 +346,7 @@ final class GameplayScreen extends GameScreen {
           ep.field_i = ep.field_i + var6;
           fp.field_z = fp.field_z - var6;
         }
-        var5Lifetime1 = oo.field_w.a(-37880252, 5);
+        var5Lifetime1 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var5Lifetime1 == 0) {
           hg.field_e = hg.field_e ^ tm.field_g + qm.field_a << 16;
         }
@@ -413,8 +413,8 @@ final class GameplayScreen extends GameScreen {
             }
           }
         }
-        bm.a(96, 96, false, -30791, var19);
-        bm.a(48, 48, true, -30791, var7);
+        bm.playGameplayAudioEvents(96, 96, false, -30791, var19);
+        bm.playGameplayAudioEvents(48, 48, true, -30791, var7);
         if (this.match.playerCount == 1) {
           var20 = this.match.playerBoards[0];
           if (var20.field_qb > this.field_i) {
@@ -752,7 +752,7 @@ final class GameplayScreen extends GameScreen {
         }
         k.field_h.finishBitWrite(-105);
         if (param2) {
-          k.field_h.writeInt(var5.a(true, (StringBuilder) null) ^ var5.e(122), (byte) -79);
+          k.field_h.writeInt(var5.a(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
         }
     }
 
@@ -772,8 +772,8 @@ final class GameplayScreen extends GameScreen {
         int var5Lifetime2Lifetime1;
         Ball var5_ref_vnLifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
-        var4 = oo.field_w.a(-37880252, 10);
-        var5 = oo.field_w.a(-37880252, 5);
+        var4 = oo.field_w.nextBoundedInt(-37880252, 10);
+        var5 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var4 == 0) {
           fp.field_z = fp.field_z + og.field_Wb;
           od.field_c = od.field_c + 1;
@@ -817,7 +817,7 @@ final class GameplayScreen extends GameScreen {
           ep.field_i = ep.field_i + var5;
           fp.field_z = fp.field_z - var5;
         }
-        var4Lifetime1 = oo.field_w.a(-37880252, 5);
+        var4Lifetime1 = oo.field_w.nextBoundedInt(-37880252, 5);
         if (var4Lifetime1 == 0) {
           hg.field_e = hg.field_e ^ tm.field_g + qm.field_a << 16;
         }
@@ -1280,7 +1280,7 @@ final class GameplayScreen extends GameScreen {
                     var16.field_p = var10_ref_p.field_k;
                     if (var10_ref_p.field_l) {
                       var11 = null;
-                      var12 = var16.a(param1, (StringBuilder) (var11)) ^ var16.e(120);
+                      var12 = var16.a(param1, (StringBuilder) (var11)) ^ var16.nextRandomInt(120);
                       if (var10_ref_p.field_m != var12) {
                         hn.a((byte) 91);
                         rk.a("T2 " + var10_ref_p.field_m + " " + var12 + " ", (Throwable) null, 54);
@@ -1852,7 +1852,7 @@ final class GameplayScreen extends GameScreen {
           }
           this.field_m = stackIn_23_1;
           if (oo.field_w == null) {
-            oo.field_w = new fo(new int[]{(int)ue.a(false)});
+            oo.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
           }
           km.field_i = 0;
           to.field_k = kl.a(ta.field_e[2], 256, 0);

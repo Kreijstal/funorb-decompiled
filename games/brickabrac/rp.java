@@ -120,7 +120,7 @@ final class rp extends km {
               pe.field_n = si.field_k.field_m;
             }
             si.field_k = rd.a(0, (byte) 19);
-            hc.field_h = 2 * hi.field_w.a(-37880252, 2);
+            hc.field_h = 2 * hi.field_w.nextBoundedInt(-37880252, 2);
             im.field_e = 50;
           }
         }

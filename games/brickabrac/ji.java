@@ -93,12 +93,12 @@ final class ji implements Iterable {
             if (param0 != 25459) {
               field_g = (String) null;
             }
-            if (fo.field_a == param2) {
+            if (IsaacGenerator.field_a == param2) {
               return;
             }
-            fo.field_a = param2;
-            if (fo.field_a != null) {
-              m.field_f.a(param4, fo.field_a, param3, param1, param0 - 25460, param5);
+            IsaacGenerator.field_a = param2;
+            if (IsaacGenerator.field_a != null) {
+              m.field_f.a(param4, IsaacGenerator.field_a, param3, param1, param0 - 25460, param5);
             }
           }
           return;

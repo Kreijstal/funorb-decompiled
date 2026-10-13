@@ -427,7 +427,7 @@ abstract class sa extends qg implements vc {
         boolean decompiledFrameRemainder0 = true;
         this.j(true);
         if (!un.field_f) {
-          gk.a(qc.field_o, (byte) 112);
+          gk.a(GameplayAudioEvent.field_o, (byte) 112);
           decompiledFrameRemainder0 = !(!al.field_j.a((byte) -54));
           if (decompiledFrameRemainder0) {
             al.field_j.a(false);

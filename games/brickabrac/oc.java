@@ -254,9 +254,9 @@ class oc extends IntrusiveNode {
             ka.a(this.d(15), 22546);
             return param3;
           }
-          if (0 != qc.field_o &&
+          if (0 != GameplayAudioEvent.field_o &&
             var5 != 0) {
-            this.a(qc.field_o, pq.field_k, param0, -127, po.field_a, this, param1);
+            this.a(GameplayAudioEvent.field_o, pq.field_k, param0, -127, po.field_a, this, param1);
           }
           if (ki.field_e != 0) {
             if (this.a(this, tb.field_fb, param1, param0, ki.field_e, qo.field_O, 0)) {
@@ -289,7 +289,7 @@ class oc extends IntrusiveNode {
           ka.a(this.d(15), 22546);
           return param3;
         }
-        if (0 != qc.field_o) {
+        if (0 != GameplayAudioEvent.field_o) {
           if (var5 == 0) {
             regionExit1: {
               if (ki.field_e != 0) {
@@ -343,7 +343,7 @@ class oc extends IntrusiveNode {
             ka.a(this.d(15), 22546);
             return param3;
           }
-          this.a(qc.field_o, pq.field_k, param0, -127, po.field_a, this, param1);
+          this.a(GameplayAudioEvent.field_o, pq.field_k, param0, -127, po.field_a, this, param1);
         }
         regionExit2: {
           if (ki.field_e != 0) {

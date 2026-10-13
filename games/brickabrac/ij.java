@@ -142,9 +142,9 @@ final class ij implements wb {
     }
 
     public final void b(boolean param0) {
-        if (null != qc.field_k) {
-          og.a(!param0 ? true : false, qc.field_k);
-          qc.field_k = null;
+        if (null != GameplayAudioEvent.field_k) {
+          og.a(!param0 ? true : false, GameplayAudioEvent.field_k);
+          GameplayAudioEvent.field_k = null;
           hc.b(2);
         }
         uf.field_a = aj.a(3, true);

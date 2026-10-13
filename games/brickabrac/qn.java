@@ -135,7 +135,7 @@ final class qn {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ip.field_r = new fo(new int[]{(int)ue.a(false)});
+        ip.field_r = new IsaacGenerator(new int[]{(int)ue.a(false)});
         oq.field_x = param1;
         if (param4 == -6532) {
           fr.field_k = param3;

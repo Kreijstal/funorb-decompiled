@@ -268,8 +268,8 @@ final class uj {
           this.field_n = -1;
           this.field_d = false;
         } else {
-          this.a(qc.field_o * this.field_h, true);
-          this.field_d = this.field_d & (qc.field_o == 0 ? true : false);
+          this.a(GameplayAudioEvent.field_o * this.field_h, true);
+          this.field_d = this.field_d & (GameplayAudioEvent.field_o == 0 ? true : false);
           if (!this.field_d ||
             pq.field_k != this.field_b ||
             this.field_n != po.field_a) {

@@ -64,7 +64,7 @@ final class fl extends k {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_k)) {
-            var4_ref_oh = qc.a(param1, 0);
+            var4_ref_oh = GameplayAudioEvent.a(param1, 0);
             if (var4_ref_oh == null) {
               return null;
             }
@@ -142,7 +142,7 @@ final class fl extends k {
             return stackIn_4_0;
           }
           if (!param0.equals(this.field_k)) {
-            var3 = qc.a(param0, 0);
+            var3 = GameplayAudioEvent.a(param0, 0);
             if (var3 != null &&
               var3.field_g == null) {
               this.field_k = param0;

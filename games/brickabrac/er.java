@@ -8,13 +8,13 @@ final class er {
     static volatile long field_c;
     static String field_a;
 
-    final static int a(int param0, int param1, int param2) {
-        int var3 = param2 >> 31 & -1 + param1;
-        if (param0 == -1560508993) {
-          return var3 + ((param2 >>> 31) + param2) % param1;
+    final static int nonnegativeRemainder(int obfuscationGuard, int divisor, int value) {
+        int var3 = value >> 31 & -1 + divisor;
+        if (obfuscationGuard == -1560508993) {
+          return var3 + ((value >>> 31) + value) % divisor;
         }
         field_e = (String) null;
-        return var3 + ((param2 >>> 31) + param2) % param1;
+        return var3 + ((value >>> 31) + value) % divisor;
     }
 
     public static void a(byte param0) {
@@ -25,7 +25,7 @@ final class er {
           field_e = null;
           return;
         }
-        er.a(-124, 122, -66);
+        er.nonnegativeRemainder(-124, 122, -66);
         field_e = null;
     }
 

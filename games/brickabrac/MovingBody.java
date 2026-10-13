@@ -10,7 +10,7 @@ abstract class MovingBody extends IntrusiveNode {
     int typeId;
     static String field_n;
 
-    final static void a(int param0, int[] param1, int param2, fo param3) {
+    final static void shuffleValues(int obfuscationGuard, int[] values, int passes, IsaacGenerator random) {
         int var6 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -27,13 +27,13 @@ abstract class MovingBody extends IntrusiveNode {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           var4_int = 0;
-          var5 = 29 / ((-52 - param0) / 49);
-          while (var4_int < param2) {
-            for (var6 = 0; param1.length > var6; var6++) {
-              var7 = param3.a(-37880252, param1.length);
-              var8 = param1[var7];
-              param1[var7] = param1[var6];
-              param1[var6] = var8;
+          var5 = 29 / ((-52 - obfuscationGuard) / 49);
+          while (var4_int < passes) {
+            for (var6 = 0; values.length > var6; var6++) {
+              var7 = random.nextBoundedInt(-37880252, values.length);
+              var8 = values[var7];
+              values[var7] = values[var6];
+              values[var6] = var8;
             }
             var4_int++;
           }
@@ -42,14 +42,14 @@ abstract class MovingBody extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("vi.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("vi.G(").append(obfuscationGuard).append(',');
+          if (values == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(passes).append(',');
+          if (random == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";

@@ -530,7 +530,7 @@ final class la {
               var8++;
               incrementValue$8 = param6;
               param6++;
-              pa.field_i[incrementValue$7] = 1 + er.a(-1560508993, param4, mh.field_F[incrementValue$8]);
+              pa.field_i[incrementValue$7] = 1 + er.nonnegativeRemainder(-1560508993, param4, mh.field_F[incrementValue$8]);
             }
           }
           var9 = var13;

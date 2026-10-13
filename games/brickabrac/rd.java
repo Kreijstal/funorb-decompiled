@@ -95,9 +95,9 @@ final class rd {
         if (param1 != 19) {
           rd.a((byte) -86);
         }
-        gb.field_n = hi.field_w.a(-37880252, 2);
+        gb.field_n = hi.field_w.nextBoundedInt(-37880252, 2);
         if (param0 == 0) {
-          var3 = hi.field_w.a(-37880252, 11);
+          var3 = hi.field_w.nextBoundedInt(-37880252, 11);
           if (var3 + 1 == pe.field_n) {
             var3 = (1 + var3) % 11;
           }
