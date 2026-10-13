@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends IntrusiveNode {
+final class IntArrayRequest extends IntrusiveNode {
     static String field_p;
     static boolean field_i;
     static int field_u;
@@ -11,12 +11,12 @@ final class pe extends IntrusiveNode {
     static int field_q;
     static int field_s;
     static int field_n;
-    int field_w;
+    int requestId;
     static RgbSprite[] field_k;
-    int[] field_m;
+    int[] values;
     static int field_j;
     static int field_r;
-    boolean field_v;
+    boolean complete;
 
     public static void a(int param0) {
         heldKeys = null;
@@ -26,7 +26,7 @@ final class pe extends IntrusiveNode {
           field_k = null;
           return;
         }
-        pe.a((byte) 91);
+        IntArrayRequest.a((byte) 91);
         field_p = null;
         gameplayScreen = null;
         field_k = null;
@@ -42,7 +42,7 @@ final class pe extends IntrusiveNode {
         return ci.field_u - np.field_b;
     }
 
-    pe() {
+    IntArrayRequest() {
     }
 
     static {

@@ -105,7 +105,7 @@ final class ui {
     final static void a(int param0, byte param1) {
         int var3 = 0;
         pn var4 = null;
-        pe var5 = null;
+        IntArrayRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
@@ -115,10 +115,10 @@ final class ui {
             kp.a(param0, (byte) 112, var4);
             var4 = (pn) (qa.field_t.next((byte) 116));
           }
-          var5 = (pe) (ob.field_F.first(-61));
+          var5 = (IntArrayRequest) (ob.pendingIntArrayRequests.first(-61));
           while (var5 != null) {
-            AchievementIcon.a(param0, var5, 61);
-            var5 = (pe) (ob.field_F.next((byte) 116));
+            AchievementIcon.sendIntArrayRequest(param0, var5, 61);
+            var5 = (IntArrayRequest) (ob.pendingIntArrayRequests.next((byte) 116));
           }
           if (param1 != 115) {
             ui.a(-72);

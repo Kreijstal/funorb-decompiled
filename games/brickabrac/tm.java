@@ -124,8 +124,8 @@ final class tm {
           if (oa.field_Ub != 0) {
             var2_long = MonotonicTime.nowMillis(false);
             var4 = oa.field_Ub;
-            if (fk.field_b != 0.0) {
-              var4 = (int)((double)var4 + ji.packetDelayRandom.nextGaussian() * fk.field_b);
+            if (HuffmanCodec.field_b != 0.0) {
+              var4 = (int)((double)var4 + ji.packetDelayRandom.nextGaussian() * HuffmanCodec.field_b);
               if (0 > var4) {
                 var4 = 0;
               }

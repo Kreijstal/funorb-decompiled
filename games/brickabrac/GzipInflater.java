@@ -55,7 +55,7 @@ final class GzipInflater {
             pj.field_a = param12;
             ec.field_O = param10;
             LevelSelectScreen.field_E = param11;
-            pe.field_r = param3;
+            IntArrayRequest.field_r = param3;
             if (null == FramedMenuScreen.field_s.field_k) {
               return;
             }

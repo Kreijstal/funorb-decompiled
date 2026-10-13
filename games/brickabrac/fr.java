@@ -148,20 +148,20 @@ final class fr {
     final static void a(int param0) {
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (pe.gameplayScreen.c(124)) {
+        if (IntArrayRequest.gameplayScreen.c(124)) {
           return;
         }
         if (param0 != 1) {
           rasterSnapshotPool = (NodeDeque) null;
         }
-        if (pe.gameplayScreen.field_n) {
-          if ((pe.gameplayScreen.match.field_j & 1 << pe.gameplayScreen.field_k) != 0) {
+        if (IntArrayRequest.gameplayScreen.field_n) {
+          if ((IntArrayRequest.gameplayScreen.match.field_j & 1 << IntArrayRequest.gameplayScreen.field_k) != 0) {
             ag.buttonLabels[12] = mi.field_a;
           } else {
-            if (pe.gameplayScreen.match.field_j != 0) {
+            if (IntArrayRequest.gameplayScreen.match.field_j != 0) {
               ag.buttonLabels[12] = qm.field_c;
             } else {
-              if ((1 << pe.gameplayScreen.field_k | pe.gameplayScreen.field_v) != (1 << pe.gameplayScreen.match.playerCount) - 1) {
+              if ((1 << IntArrayRequest.gameplayScreen.field_k | IntArrayRequest.gameplayScreen.field_v) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
                 ag.buttonLabels[12] = s.field_a;
               } else {
                 ag.buttonLabels[12] = oa.field_Pb;
@@ -169,11 +169,11 @@ final class fr {
             }
           }
         } else {
-          if ((1 << pe.gameplayScreen.field_k & pe.gameplayScreen.match.field_j) != 0) {
+          if ((1 << IntArrayRequest.gameplayScreen.field_k & IntArrayRequest.gameplayScreen.match.field_j) != 0) {
             ag.buttonLabels[12] = ff.field_g;
           } else {
-            if (0 == pe.gameplayScreen.match.field_j) {
-              if ((pe.gameplayScreen.field_v | 1 << pe.gameplayScreen.field_k) != -1 + (1 << pe.gameplayScreen.match.playerCount)) {
+            if (0 == IntArrayRequest.gameplayScreen.match.field_j) {
+              if ((IntArrayRequest.gameplayScreen.field_v | 1 << IntArrayRequest.gameplayScreen.field_k) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
                 ag.buttonLabels[12] = RectangleBody.field_t;
               } else {
                 ag.buttonLabels[12] = bm.field_b;

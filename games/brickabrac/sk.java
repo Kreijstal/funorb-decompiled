@@ -53,11 +53,11 @@ final class sk extends h {
             var7[var8] = hi.field_w.nextInt(97);
           }
           var15 = id.a(hi.field_w, false);
-          pe.gameplayScreen = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
-          pe.gameplayScreen.a((byte) 119, param1);
-          pe.gameplayScreen.field_q = true;
-          stackIn_10_0 = pe.gameplayScreen;
-          stackIn_10_1 = pe.gameplayScreen.field_s;
+          IntArrayRequest.gameplayScreen = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
+          IntArrayRequest.gameplayScreen.a((byte) 119, param1);
+          IntArrayRequest.gameplayScreen.field_q = true;
+          stackIn_10_0 = IntArrayRequest.gameplayScreen;
+          stackIn_10_1 = IntArrayRequest.gameplayScreen.field_s;
           stackIn_11_2 = (kb.field_Yb >= 2) && (param3 == 1) && (GameConnectionShell.field_t);
           stackIn_10_0.field_s = stackIn_10_1 | stackIn_11_2;
           ng.requestScreen(param4, 103, -1);
@@ -107,10 +107,10 @@ final class sk extends h {
           }
           lp.currentScreen = hd.pendingScreen;
           hd.pendingScreen = null;
-          kh.screenTransitionTick = 0;
+          NodeDequeCursor.screenTransitionTick = 0;
           if (NewAchievementsScreen.discardGameplayOnTransition) {
             NewAchievementsScreen.discardGameplayOnTransition = false;
-            pe.gameplayScreen = null;
+            IntArrayRequest.gameplayScreen = null;
           }
           if (obfuscationGuard > -112) {
             field_J = (RgbSprite[]) null;

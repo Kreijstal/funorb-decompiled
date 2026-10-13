@@ -15,50 +15,50 @@ final class jm {
     static String field_i;
     int field_k;
 
-    final static nb a(java.awt.Component param0, int param1, int param2, int param3) {
+    final static SoftwareFramebuffer createFramebuffer(java.awt.Component component, int width, int obfuscationGuard, int height) {
         try {
-          Class var4 = null;
+          Class implementationClass = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          nb var5 = null;
-          jo var5_ref = null;
+          SoftwareFramebuffer framebuffer = null;
+          ProducerFramebuffer fallback = null;
           java.awt.Component var6 = null;
-          nb stackIn_3_0 = null;
-          jo stackIn_5_0 = null;
+          SoftwareFramebuffer stackIn_3_0 = null;
+          ProducerFramebuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param2 != -2414) {
+            if (obfuscationGuard != -2414) {
               var6 = (java.awt.Component) null;
-              jm.a((java.awt.Component) null, 85, -118, 37);
+              jm.createFramebuffer((java.awt.Component) null, 85, -118, 37);
             }
             try {
-              var4 = Class.forName("le");
-              var5 = (nb) (var4.newInstance());
-              var5.a(param0, param3, true, param1);
-              stackIn_3_0 = var5;
+              implementationClass = Class.forName("BufferedImageFramebuffer");
+              framebuffer = (SoftwareFramebuffer) (implementationClass.newInstance());
+              framebuffer.initialize(component, height, true, width);
+              stackIn_3_0 = framebuffer;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new jo();
-              ((nb) ((Object) var5_ref)).a(param0, param3, true, param1);
-              stackIn_5_0 = var5_ref;
-              return (nb) ((Object) stackIn_5_0);
+              fallback = new ProducerFramebuffer();
+              ((SoftwareFramebuffer) ((Object) fallback)).initialize(component, height, true, width);
+              stackIn_5_0 = fallback;
+              return (SoftwareFramebuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_8_0 = var4_ref2;
             stackIn_8_1 = new StringBuilder().append("jm.A(");
-            if (param0 == null) {
+            if (component == null) {
               stackIn_9_2 = "null";
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(width).append(',').append(obfuscationGuard).append(',').append(height).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -243,14 +243,14 @@ final class jm {
         return String.valueOf(param1);
     }
 
-    final static void a(byte param0) {
+    final static void handleCommonDataResponse(byte obfuscationGuard) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        pe var4_ref_pe = null;
+        IntArrayRequest var4_ref_pe = null;
         pn var5 = null;
         int var5_int = 0;
         int[] var6 = null;
@@ -261,19 +261,19 @@ final class jm {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var10 = jl.incomingPackets;
-          if (param0 != 22) {
+          if (obfuscationGuard != 22) {
             field_l = (String) null;
           }
           var2 = var10.readUnsignedByte(255);
-          var3 = var10.readUnsignedByte(param0 + 233);
+          var3 = var10.readUnsignedByte(obfuscationGuard + 233);
           if (var2 == 0) {
-            var4_ref_pe = (pe) (ob.field_F.first(-37));
+            var4_ref_pe = (IntArrayRequest) (ob.pendingIntArrayRequests.first(-37));
             if (var4_ref_pe == null) {
               hn.a((byte) 57);
               return;
             }
             var5_int = ga.incomingPacketLength - var10.position;
-            var12 = var4_ref_pe.field_m;
+            var12 = var4_ref_pe.values;
             var11 = var12;
             var6 = var11;
             if (var12.length << 2 < var5_int) {
@@ -282,7 +282,7 @@ final class jm {
             for (var7 = 0; var5_int > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(255) << (ik.a(3, var7) << 8));
             }
-            var4_ref_pe.field_v = true;
+            var4_ref_pe.complete = true;
             var4_ref_pe.unlink((byte) 111);
             return;
           }
@@ -310,7 +310,7 @@ final class jm {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw qb.addExceptionContext((Throwable) ((Object) var1), "jm.D(" + param0 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) var1), "jm.D(" + obfuscationGuard + ')');
         }
     }
 

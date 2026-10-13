@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class jo extends nb implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static String field_k;
     static String field_h;
-    private java.awt.image.ColorModel field_i;
+    private java.awt.image.ColorModel colorModel;
     static String field_j;
-    private java.awt.image.ImageConsumer field_l;
+    private java.awt.image.ImageConsumer consumer;
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
         try {
-          if (this.field_l == param0) {
-            this.field_l = null;
+          if (this.consumer == param0) {
+            this.consumer = null;
           }
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.removeConsumer(" + (param0 != null ? "{...}" : "null") + ')');
@@ -32,43 +32,43 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         field_h = null;
     }
 
-    final void a(int param0, int param1, int param2, java.awt.Graphics param3) {
+    final void draw(int y, int x, int obfuscationGuard, java.awt.Graphics graphics) {
         try {
-          this.c(0);
-          param3.drawImage(this.field_c, param1, param0, (java.awt.image.ImageObserver) (this));
-          if (param2 != -17260) {
+          this.publishPixels(0);
+          graphics.drawImage(this.image, x, y, (java.awt.image.ImageObserver) (this));
+          if (obfuscationGuard != -17260) {
             java.awt.Component var6 = (java.awt.Component) null;
-            this.a((java.awt.Component) null, 25, false, -96);
+            this.initialize((java.awt.Component) null, 25, false, -96);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.B(" + y + ',' + x + ',' + obfuscationGuard + ',' + (graphics != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(java.awt.Component param0, int param1, boolean param2, int param3) {
-        this.field_f = param1;
-        this.field_d = new int[1 + param1 * param3];
-        this.field_g = param3;
-        this.field_i = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-        this.field_c = param0.createImage((java.awt.image.ImageProducer) (this));
-        this.c(0);
-        param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-        this.c(0);
-        param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-        if (!param2) {
+    final void initialize(java.awt.Component component, int height, boolean obfuscationGuard, int width) {
+        this.height = height;
+        this.pixels = new int[1 + height * width];
+        this.width = width;
+        this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+        this.image = component.createImage((java.awt.image.ImageProducer) (this));
+        this.publishPixels(0);
+        component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+        this.publishPixels(0);
+        component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+        if (!obfuscationGuard) {
           return;
         }
         try {
-          this.c(0);
-          param0.prepareImage(this.field_c, (java.awt.image.ImageObserver) (this));
-          this.a((byte) 100);
+          this.publishPixels(0);
+          component.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.bindRaster((byte) 100);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.D(" + (component != null ? "{...}" : "null") + ',' + height + ',' + obfuscationGuard + ',' + width + ')');
         }
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return this.field_l == param0;
+        return this.consumer == param0;
     }
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
@@ -95,22 +95,22 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-          this.field_l = param0;
-          param0.setDimensions(this.field_g, this.field_f);
+          this.consumer = param0;
+          param0.setDimensions(this.width, this.height);
           param0.setProperties((Hashtable) null);
-          param0.setColorModel(this.field_i);
+          param0.setColorModel(this.colorModel);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "jo.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final synchronized void c(int param0) {
-        if (this.field_l == null) {
+    private final synchronized void publishPixels(int offset) {
+        if (this.consumer == null) {
           return;
         }
-        this.field_l.setPixels(0, 0, this.field_g, this.field_f, this.field_i, this.field_d, param0, this.field_g);
-        this.field_l.imageComplete(2);
+        this.consumer.setPixels(0, 0, this.width, this.height, this.colorModel, this.pixels, offset, this.width);
+        this.consumer.imageComplete(2);
     }
 
     public final void startProduction(java.awt.image.ImageConsumer param0) {
@@ -155,7 +155,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         try {
           var7_int = 0;
           if (param5 != 30) {
-            jo.b(42);
+            ProducerFramebuffer.b(42);
           }
           var8 = 0;
           var24 = new int[4];
@@ -163,7 +163,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
           var10 = new RgbSprite(nj.field_l[0].canvasWidth, nj.field_l[0].canvasHeight);
           var10.bindRasterTarget();
           nj.field_l[24].c(0, 0, ScorePopup.a(255, param1.simulationTick % 360 << 8));
-          kc.field_q.a((byte) 105);
+          kc.framebuffer.bindRaster((byte) 105);
           Rasterizer2D.restoreClip(var24);
           stackIn_6_0 = ((1 << param2 & (param3.playerMaskThree | (param3.playerMaskOne | param3.playerMaskTwo))) != 0) ? 0 : 1;
           var11 = stackIn_6_0;
@@ -338,7 +338,7 @@ final class jo extends nb implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    jo() {
+    ProducerFramebuffer() {
     }
 
     static {

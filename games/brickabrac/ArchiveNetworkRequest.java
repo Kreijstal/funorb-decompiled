@@ -25,7 +25,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
     }
 
     final static void f(byte param0) {
-        if (!pe.gameplayScreen.c(95)) {
+        if (!IntArrayRequest.gameplayScreen.c(95)) {
           vg.a(o.field_e.e((byte) 31), false, 11);
           ed.field_d = true;
           if (param0 != 122) {

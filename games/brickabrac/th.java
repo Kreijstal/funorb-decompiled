@@ -44,11 +44,11 @@ final class th {
           var7 = (CharSequence) ((Object) param4);
           kb.field_Qb = gb.a(var7, 64);
           qn.field_n = param1;
-          var6 = SaveResultsPromptScreen.a(param0, cp.field_K, ArchiveIndex.field_j, nb.field_e, (byte) -78);
+          var6 = SaveResultsPromptScreen.a(param0, cp.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
           if (param3) {
             field_f = (String) null;
           }
-          fk.a(105, var6);
+          HuffmanCodec.a(105, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

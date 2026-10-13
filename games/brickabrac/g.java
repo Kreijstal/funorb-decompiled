@@ -122,7 +122,7 @@ final class g extends k {
             return stackIn_6_0;
           }
           if (MatchCompleteScreen.a(var6, 0)) {
-            stackIn_10_0 = fk.field_c;
+            stackIn_10_0 = HuffmanCodec.field_c;
             return stackIn_10_0;
           }
           if (DualLinkDeque.a((byte) 65, var6)) {

@@ -52,7 +52,7 @@ class DualLinkNode extends IntrusiveNode {
           var10 = 3 + param2.capHeight + param2.descent;
           var11 = var8_int + param5;
           var12 = param6 + (var9 + param2.capHeight);
-          param2.drawLeft(jo.field_j, var11, var12, 2, -1);
+          param2.drawLeft(ProducerFramebuffer.field_j, var11, var12, 2, -1);
           var12 = var12 + var10;
           param2.drawLeft(SecondaryNodeQueue.field_e, var11, var12, 1, -1);
           var12 = var12 + var10;
@@ -216,7 +216,7 @@ class DualLinkNode extends IntrusiveNode {
         }
         wi.field_m = 0;
         ba.field_w = 2147483647;
-        pe.field_u = 2147483647;
+        IntArrayRequest.field_u = 2147483647;
         uf.field_b = -2147483648;
     }
 

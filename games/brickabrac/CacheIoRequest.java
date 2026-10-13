@@ -130,7 +130,7 @@ final class CacheIoRequest extends ResourceRequest {
           if (!param1) {
             stackIn_4_0 = eg.field_m;
           } else {
-            stackIn_4_0 = pe.field_j;
+            stackIn_4_0 = IntArrayRequest.field_j;
           }
           co.a(stackIn_4_0, false);
           sb.field_c.a(qa.field_w.field_Ib, 0, 88, 0, -40 + qa.field_w.field_cb - 2);
@@ -174,7 +174,7 @@ final class CacheIoRequest extends ResourceRequest {
           for (var6 = 0; 4 + cq.field_p > var6; var6++) {
             if ((var6 != 1 ||
               !(w.field_n.length < 2)) && (var6 != 3 ||
-              !(pe.field_t <= 1))) {
+              !(IntArrayRequest.field_t <= 1))) {
               if (!param1 &&
                 3 == var6) {
                 dupTemp$0 = gb.field_l[var6];

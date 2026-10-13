@@ -80,7 +80,7 @@ final class qo extends ib implements vf, en {
           while (qh.field_i.length > var3_int) {
             var5 = BrickABrac.field_K[var3_int];
             if (var5 < 0) {
-              var4 = var4 + pe.field_s;
+              var4 = var4 + IntArrayRequest.field_s;
             } else {
               var6 = hm.a(true, qh.field_i[var3_int], 0);
               var4 = var4 + kn.field_y;

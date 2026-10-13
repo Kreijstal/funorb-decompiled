@@ -35,7 +35,7 @@ final class MessageScreen extends MenuScreen {
           fj.field_Pb[wi.field_m] = wi.field_m;
           ec.field_N[wi.field_m] = param0;
           if (param0 <= BoundedFile.field_l) {
-            if (pe.field_u > param0) {
+            if (IntArrayRequest.field_u > param0) {
               ba.field_w = param0;
             }
             RankingsScreen.field_r[wi.field_m] = param5;
@@ -59,7 +59,7 @@ final class MessageScreen extends MenuScreen {
             return;
           }
           uf.field_b = param0;
-          if (pe.field_u > param0) {
+          if (IntArrayRequest.field_u > param0) {
             ba.field_w = param0;
           }
           RankingsScreen.field_r[wi.field_m] = param5;
@@ -88,7 +88,7 @@ final class MessageScreen extends MenuScreen {
         fj.field_Pb[wi.field_m] = wi.field_m;
         ec.field_N[wi.field_m] = param0;
         if (param0 <= BoundedFile.field_l) {
-          if (pe.field_u > param0) {
+          if (IntArrayRequest.field_u > param0) {
             ba.field_w = param0;
           }
           RankingsScreen.field_r[wi.field_m] = param5;
@@ -103,7 +103,7 @@ final class MessageScreen extends MenuScreen {
           var7Lifetime1 = stackIn_8_0;
         } else {
           uf.field_b = param0;
-          if (pe.field_u > param0) {
+          if (IntArrayRequest.field_u > param0) {
             ba.field_w = param0;
           }
           RankingsScreen.field_r[wi.field_m] = param5;

@@ -118,10 +118,10 @@ final class wl extends d {
         try {
           var14 = jl.incomingPackets;
           var2 = var14.readUnsignedByte(255);
-          var3 = (cq) (fk.field_f.first(-7));
+          var3 = (cq) (HuffmanCodec.field_f.first(-7));
           while (var3 != null) {
             if (var3.field_m != var2) {
-              var3 = (cq) (fk.field_f.next((byte) 116));
+              var3 = (cq) (HuffmanCodec.field_f.next((byte) 116));
               continue;
             }
             break;

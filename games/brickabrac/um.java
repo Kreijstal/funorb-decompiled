@@ -1052,7 +1052,7 @@ class um implements ub, qe {
                   if (!var13.field_bc) {
                     var13.field_Ac.field_Mb = hm.field_a;
                   } else {
-                    var13.field_Ac.field_Mb = pe.field_p;
+                    var13.field_Ac.field_Mb = IntArrayRequest.field_p;
                   }
                   decompiledFrameRemainder1 = false;
                 }

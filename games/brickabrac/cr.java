@@ -40,7 +40,7 @@ final class cr extends oc {
           up.field_z = param6;
           gd.field_a = param3;
           u.field_g = param1;
-          nb.field_a = param8;
+          SoftwareFramebuffer.field_a = param8;
           vd.field_f = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
           Brick.field_x = new CacheIoWorker(param4);
           dp.field_v = new co(vd.field_f, Brick.field_x);

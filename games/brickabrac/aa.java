@@ -85,9 +85,9 @@ final class aa {
           if (hc.field_f > 0) {
             hc.field_f = hc.field_f - 1;
           }
-          if (kc.field_q.field_f != ej.field_O) {
-            BoundedFile.field_h = BoundedFile.field_h + (kc.field_q.field_f - ej.field_O);
-            ej.field_O = kc.field_q.field_f;
+          if (kc.framebuffer.height != ej.field_O) {
+            BoundedFile.field_h = BoundedFile.field_h + (kc.framebuffer.height - ej.field_O);
+            ej.field_O = kc.framebuffer.height;
           }
           if (hc.field_f > 0) {
             ef.a(-83);
@@ -99,9 +99,9 @@ final class aa {
         if (hc.field_f > 0) {
           hc.field_f = hc.field_f - 1;
         }
-        if (kc.field_q.field_f != ej.field_O) {
-          BoundedFile.field_h = BoundedFile.field_h + (kc.field_q.field_f - ej.field_O);
-          ej.field_O = kc.field_q.field_f;
+        if (kc.framebuffer.height != ej.field_O) {
+          BoundedFile.field_h = BoundedFile.field_h + (kc.framebuffer.height - ej.field_O);
+          ej.field_O = kc.framebuffer.height;
         }
         if (hc.field_f > 0) {
           ef.a(-83);

@@ -47,19 +47,19 @@ abstract class GameScreen {
         cq var7;
         cq var4Lifetime1;
         var5 = BrickABrac.field_J ? 1 : 0;
-        var4 = (cq) (fk.field_f.first(-55));
+        var4 = (cq) (HuffmanCodec.field_f.first(-55));
         if (param3 < -102) {
           while (var4 != null) {
             if (param1 == var4.field_m) {
               return var4;
             }
-            var4 = (cq) (fk.field_f.next((byte) 116));
+            var4 = (cq) (HuffmanCodec.field_f.next((byte) 116));
           }
           var6 = new cq();
           var4 = var6;
           var6.field_s = param2;
           var6.field_m = param1;
-          fk.field_f.addLast(var6, (byte) 3);
+          HuffmanCodec.field_f.addLast(var6, (byte) 3);
           MultiplayerExitScreen.a(-21167, var6, param0);
           return var6;
         }
@@ -68,13 +68,13 @@ abstract class GameScreen {
           if (param1 == var4.field_m) {
             return var4;
           }
-          var4 = (cq) (fk.field_f.next((byte) 116));
+          var4 = (cq) (HuffmanCodec.field_f.next((byte) 116));
         }
         var7 = new cq();
         var4Lifetime1 = var7;
         var7.field_s = param2;
         var7.field_m = param1;
-        fk.field_f.addLast(var7, (byte) 3);
+        HuffmanCodec.field_f.addLast(var7, (byte) 3);
         MultiplayerExitScreen.a(-21167, var7, param0);
         return var7;
     }

@@ -7,7 +7,7 @@ final class di {
     static String field_c;
 
     final static void a(byte param0) {
-        fk.a(105, fe.field_kb);
+        HuffmanCodec.a(105, fe.field_kb);
         if (param0 >= -76) {
           di.a((byte) -90);
         }

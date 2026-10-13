@@ -70,7 +70,7 @@ final class IntKeyIndex {
         if (param0 != -10) {
           IntKeyIndex.a((byte) 35);
         }
-        return null != pe.gameplayScreen ? true : false;
+        return null != IntArrayRequest.gameplayScreen ? true : false;
     }
 
     final int findIndex(int key, byte obfuscationGuard) {

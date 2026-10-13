@@ -44,11 +44,11 @@ final class cp extends h {
         if (this.field_l != null) {
           this.field_l.a(true, param3 - 20607, param1, (oc) (this), param0);
         }
-        kh var5 = new kh(this.field_J);
-        oc var6 = (oc) (var5.a(true));
+        NodeDequeCursor var5 = new NodeDequeCursor(this.field_J);
+        oc var6 = (oc) (var5.last(true));
         while (var6 != null) {
           var6.a(param0 + this.field_w, param1 + this.field_o, param2, (byte) -11);
-          var6 = (oc) (var5.d(-24706));
+          var6 = (oc) (var5.previous(-24706));
         }
         if (param3 != -11) {
           field_G = (String) null;
@@ -71,11 +71,11 @@ final class cp extends h {
         if (param0 > -119) {
           return;
         }
-        kh var2 = new kh(this.field_J);
-        jc var3 = (jc) (var2.a(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.field_J);
+        jc var3 = (jc) (var2.first(240));
         while (var3 != null) {
           var3.field_N = false;
-          var3 = (jc) (var2.b(7));
+          var3 = (jc) (var2.next(7));
         }
         this.field_E = null;
     }
@@ -100,8 +100,8 @@ final class cp extends h {
 
     final void i(byte param0) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        kh var2 = new kh(this.field_J);
-        jc var3 = (jc) (var2.a(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.field_J);
+        jc var3 = (jc) (var2.first(240));
         if (param0 != -36) {
           return;
         }
@@ -109,7 +109,7 @@ final class cp extends h {
           if (var3.a(-94)) {
             var3.unlink((byte) 111);
           }
-          var3 = (jc) (var2.b(param0 ^ -37));
+          var3 = (jc) (var2.next(param0 ^ -37));
         }
     }
 
@@ -189,13 +189,13 @@ final class cp extends h {
     final void i(int param0) {
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var3 = 18 / ((36 - param0) / 43);
-        kh var2 = new kh(this.field_J);
-        jc var4 = (jc) (var2.a(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.field_J);
+        jc var4 = (jc) (var2.first(240));
         while (var4 != null) {
           if (var4.h(0)) {
             var4.unlink((byte) 111);
           }
-          var4 = (jc) (var2.b(7));
+          var4 = (jc) (var2.next(7));
         }
         this.field_E = (oc) ((Object) this.g(-126));
     }
@@ -257,10 +257,10 @@ final class cp extends h {
                 stackIn_19_0 = ik.field_b.length;
               }
               var7 = stackIn_19_0;
-              if (fk.field_h.length <= h.field_F.length) {
+              if (HuffmanCodec.field_h.length <= h.field_F.length) {
                 stackIn_22_0 = h.field_F.length;
               } else {
-                stackIn_22_0 = fk.field_h.length;
+                stackIn_22_0 = HuffmanCodec.field_h.length;
               }
               var8 = stackIn_22_0;
               if (var3 >= 6 &&
@@ -305,7 +305,7 @@ final class cp extends h {
               var1_int = var1_int + (jb.field_H + (kn.field_y + b.field_c));
             } else {
               ni.field_Wb.drawLeft(var6, var8Lifetime1, var1_int + DualLinkIterator.field_f, var5, -1);
-              var1_int = var1_int + pe.field_s;
+              var1_int = var1_int + IntArrayRequest.field_s;
             }
           }
           return;
@@ -401,39 +401,39 @@ final class cp extends h {
     }
 
     final oc h(byte param0) {
-        kh var2;
+        NodeDequeCursor var2;
         jc var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = new kh(this.field_J);
+        var2 = new NodeDequeCursor(this.field_J);
         if (param0 != 25) {
           cp.j((byte) -34);
         }
-        var3 = (jc) (var2.a(param0 + 215));
+        var3 = (jc) (var2.first(param0 + 215));
         while (var3 != null) {
           if (var3.field_N) {
             return var3.g((byte) -3);
           }
-          var3 = (jc) (var2.b(7));
+          var3 = (jc) (var2.next(7));
         }
         return null;
     }
 
     final jc g(int param0) {
-        kh var2;
+        NodeDequeCursor var2;
         jc var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         if (param0 >= -96) {
           field_G = (String) null;
         }
-        var2 = new kh(this.field_J);
-        var3 = (jc) (var2.a(240));
+        var2 = new NodeDequeCursor(this.field_J);
+        var3 = (jc) (var2.first(240));
         while (var3 != null) {
           if (var3.field_N) {
             return var3;
           }
-          var3 = (jc) (var2.b(7));
+          var3 = (jc) (var2.next(7));
         }
         return null;
     }

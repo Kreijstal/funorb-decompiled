@@ -292,7 +292,7 @@ class vb extends d {
 
     private final void a(int param0, int param1) {
         this.field_T = param0;
-        if (!pe.heldKeys[param1]) {
+        if (!IntArrayRequest.heldKeys[param1]) {
           this.field_L = this.field_T;
         }
     }
@@ -431,7 +431,7 @@ class vb extends d {
                   if (this.field_T <= 0) {
                     return false;
                   }
-                  if (!pe.heldKeys[82]) {
+                  if (!IntArrayRequest.heldKeys[82]) {
                     stackIn_38_1 = this.field_T - 1;
                   } else {
                     stackIn_38_1 = this.d(false);
@@ -441,7 +441,7 @@ class vb extends d {
                 }
                 if (param0 == 97) {
                   if (this.field_T < this.field_A.length()) {
-                    if (!pe.heldKeys[82]) {
+                    if (!IntArrayRequest.heldKeys[82]) {
                       stackIn_69_1 = this.field_T + 1;
                     } else {
                       stackIn_69_1 = this.h((byte) 106);
@@ -462,17 +462,17 @@ class vb extends d {
                     this.j(-66);
                     return true;
                   }
-                  if (pe.heldKeys[82] &&
+                  if (IntArrayRequest.heldKeys[82] &&
                     param0 == 65) {
                     this.g((byte) -49);
                     return true;
                   }
-                  if (pe.heldKeys[82] &&
+                  if (IntArrayRequest.heldKeys[82] &&
                     66 == param0) {
                     this.l(0);
                     return true;
                   }
-                  if (pe.heldKeys[82] &&
+                  if (IntArrayRequest.heldKeys[82] &&
                     67 == param0) {
                     this.m(32);
                     return true;

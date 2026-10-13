@@ -111,7 +111,7 @@ abstract class h extends oc implements sd {
             field_C = (IndexedSprite[]) null;
             return false;
           }
-          if (pe.heldKeys[81]) {
+          if (IntArrayRequest.heldKeys[81]) {
             stackIn_9_0 = this.a(param2, (byte) -35);
           } else {
             stackIn_9_0 = this.b(true, param2);

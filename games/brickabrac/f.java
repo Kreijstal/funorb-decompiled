@@ -70,17 +70,17 @@ final class f {
             var5 = var27.readUnsignedByte(param0 ^ 248);
             if (var5 != 0) {
               var6_int = var4_ref_eg.field_q;
-              nb.field_b[0].field_b = null;
-              nb.field_b[0].field_c = tb.field_cb;
+              SoftwareFramebuffer.field_b[0].field_b = null;
+              SoftwareFramebuffer.field_b[0].field_c = tb.field_cb;
               var7 = var4_ref_eg.field_p;
-              nb.field_b[0].field_d = false;
+              SoftwareFramebuffer.field_b[0].field_d = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                nb.field_b[var8_int].field_c = var27.readCp1252String(-1);
-                nb.field_b[var8_int].field_d = false;
+                SoftwareFramebuffer.field_b[var8_int].field_c = var27.readCp1252String(-1);
+                SoftwareFramebuffer.field_b[var8_int].field_d = false;
                 if (var27.readUnsignedByte(param0 ^ 248) == 1) {
-                  nb.field_b[var8_int].field_b = var27.readCp1252String(-1);
+                  SoftwareFramebuffer.field_b[var8_int].field_b = var27.readCp1252String(-1);
                 } else {
-                  nb.field_b[var8_int].field_b = null;
+                  SoftwareFramebuffer.field_b[var8_int].field_b = null;
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -103,12 +103,12 @@ final class f {
               if (0 < var18) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte(255);
-                  var21 = nb.field_b[var20].field_c;
+                  var21 = SoftwareFramebuffer.field_b[var20].field_c;
                   var22 = var27.readLong(-32768);
                   var24 = var27.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = nb.field_b[var20].field_b;
+                    var9[0][var12] = SoftwareFramebuffer.field_b[var20].field_b;
                     var10[0][var12] = var22;
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$3 = var15;
@@ -131,10 +131,10 @@ final class f {
                     }
                   }
                   if (var14 < var6_int &&
-                    !nb.field_b[var20].field_d) {
-                    nb.field_b[var20].field_d = true;
+                    !SoftwareFramebuffer.field_b[var20].field_d) {
+                    SoftwareFramebuffer.field_b[var20].field_d = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = nb.field_b[var20].field_b;
+                    var9[2][var14] = SoftwareFramebuffer.field_b[var20].field_b;
                     var10[2][var14] = var22;
                     var14++;
                     var27.position = var24;

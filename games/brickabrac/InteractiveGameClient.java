@@ -89,7 +89,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           kn.a(true, var2);
           return;
         }
-        pe.field_i = true;
+        IntArrayRequest.field_i = true;
         var3 = kp.field_d.size() - 1;
         do {
           if (var3 < 0) {
@@ -101,7 +101,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           ((vc) (kp.field_d.elementAt(var3))).renderGameLayer(16769381);
           var3--;
         } while (var4 == 0);
-        if (pe.field_i) {
+        if (IntArrayRequest.field_i) {
           jj.a((byte) -123);
           ck.a(var2, 0, 14209, 0);
           if (var4 == 0) {
@@ -461,7 +461,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             }
           } while (var4 == 0);
         }
-        fk.a(14114);
+        HuffmanCodec.a(14114);
         tm.a((byte) 110, 0);
         if (ui.a(false)) {
           var2 = this.o(-105);

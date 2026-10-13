@@ -8,10 +8,10 @@ final class ob extends r {
     static PaletteFont field_D;
     static NodeDeque field_E;
     static long field_G;
-    static NodeDeque field_F;
+    static NodeDeque pendingIntArrayRequests;
 
     public static void b(int param0) {
-        field_F = null;
+        pendingIntArrayRequests = null;
         field_E = null;
         if (param0 >= -55) {
           return;
@@ -80,6 +80,6 @@ final class ob extends r {
         field_H = "Add <%0> to ignore list";
         pendingPacketOpcode = -1;
         field_E = new NodeDeque();
-        field_F = new NodeDeque();
+        pendingIntArrayRequests = new NodeDeque();
     }
 }

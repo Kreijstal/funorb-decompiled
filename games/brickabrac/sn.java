@@ -44,7 +44,7 @@ final class sn extends ki {
         if (!param1) {
           return (RgbSprite[]) null;
         }
-        return kh.field_d[param0 - 1];
+        return NodeDequeCursor.field_d[param0 - 1];
     }
 
     sn(int param0, String param1, String param2, int param3) {
@@ -52,7 +52,7 @@ final class sn extends ki {
         try {
           sk.field_J = new RgbSprite[2];
           rd.field_d = new RgbSprite[2][];
-          kh.field_d = new RgbSprite[2][];
+          NodeDequeCursor.field_d = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "sn.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -121,10 +121,10 @@ final class sn extends ki {
         hg.field_g = jh.a(0, sf.field_cb);
         er.field_d = jh.a(0, IntNode.field_o);
         rd.field_d[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_caps", 2);
-        kh.field_d[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_segs", 2);
+        NodeDequeCursor.field_d[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_segs", 2);
         sk.field_J[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.field_m);
         rd.field_d[1] = ig.a(rd.field_d[0], false);
-        kh.field_d[1] = ig.a(kh.field_d[0], param0);
+        NodeDequeCursor.field_d[1] = ig.a(NodeDequeCursor.field_d[0], param0);
         sk.field_J[1] = pl.a(-16371, sk.field_J[0]);
         pl.a(IntNode.field_o, 0);
         pl.a(er.field_d, 0);

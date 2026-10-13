@@ -146,7 +146,7 @@ final class HighscorePackSelector {
         int var5 = var2.y;
         for (var6 = 0; var6 < this.packCount; var6++) {
           if (this.selectedPackIndex == var6) {
-            nb.a(-111, var5, var4, cm.field_r[var6]);
+            SoftwareFramebuffer.a(-111, var5, var4, cm.field_r[var6]);
             ik.field_f[var6].f(var4, var5 - 1, 256);
           }
           ArchiveNetworkRequest.packSelectorIcons[var6].drawTransparent(var4, var5);

@@ -7,7 +7,7 @@ final class kc extends IntrusiveNode {
     private int field_k;
     static RgbSprite field_r;
     static RgbSprite field_p;
-    static nb field_q;
+    static SoftwareFramebuffer framebuffer;
     static ResourceArchive field_j;
     static mh field_n;
     private int field_m;
@@ -21,7 +21,7 @@ final class kc extends IntrusiveNode {
         field_r = null;
         field_i = null;
         field_j = null;
-        field_q = null;
+        framebuffer = null;
     }
 
     final boolean c(byte param0) {
@@ -131,7 +131,7 @@ final class kc extends IntrusiveNode {
           sl.field_y = var8.readCp1252String(-1);
         }
         if (!param1) {
-          gd.field_d = bj.a(80, (byte) 76, var8);
+          gd.field_d = bj.readCompressedString(80, (byte) 76, var8);
           BoundedFile.field_m = null;
           return new gb(param1);
         }
@@ -216,7 +216,7 @@ final class kc extends IntrusiveNode {
           sl.field_y = var8.readCp1252String(-1);
         }
         if (!param1) {
-          gd.field_d = bj.a(80, (byte) 76, var8);
+          gd.field_d = bj.readCompressedString(80, (byte) 76, var8);
           BoundedFile.field_m = null;
           return new gb(param1);
         }

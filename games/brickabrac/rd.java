@@ -98,10 +98,10 @@ final class rd {
         gb.field_n = hi.field_w.nextBoundedInt(-37880252, 2);
         if (param0 == 0) {
           var3 = hi.field_w.nextBoundedInt(-37880252, 11);
-          if (var3 + 1 == pe.field_n) {
+          if (var3 + 1 == IntArrayRequest.field_n) {
             var3 = (1 + var3) % 11;
           }
-          pe.field_n = var3 + 1;
+          IntArrayRequest.field_n = var3 + 1;
           param0 = var3 + 1;
         }
         if (param0 == 7) {

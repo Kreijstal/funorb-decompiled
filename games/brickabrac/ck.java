@@ -36,7 +36,7 @@ final class ck extends IntrusiveNode {
               ck.a(53);
             }
             var4 = param0.getGraphics();
-            kc.field_q.a(param3, param1, -17260, var4);
+            kc.framebuffer.draw(param3, param1, -17260, var4);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

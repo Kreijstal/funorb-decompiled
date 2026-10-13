@@ -13,7 +13,7 @@ final class ga extends IntrusiveNode {
     final static void a(boolean param0, int param1) {
         boolean decompiledFrameRemainder0 = true;
         if ((ml.field_b <= 0) &&
-          (decompiledFrameRemainder0 = (!(pe.field_j <= 0) ||
+          (decompiledFrameRemainder0 = (!(IntArrayRequest.field_j <= 0) ||
           !(0 >= eg.field_m))) &&
           (decompiledFrameRemainder0 = !(!hc.field_c))) {
           Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
@@ -27,14 +27,14 @@ final class ga extends IntrusiveNode {
           if (sc.field_c) {
             Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
             qp.field_f.a(true, param0);
-            if ((!(pe.field_j <= 0) ||
+            if ((!(IntArrayRequest.field_j <= 0) ||
               !(0 >= eg.field_m)) &&
               hc.field_c) {
               Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
               wi.field_j.a(true, param0);
             }
           } else {
-            if (pe.field_j > 0) {
+            if (IntArrayRequest.field_j > 0) {
               if (hc.field_c) {
                 Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.field_db);
                 wi.field_j.a(true, param0);

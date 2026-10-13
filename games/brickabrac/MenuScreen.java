@@ -467,21 +467,21 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 9) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  pe.gameplayScreen.a((byte) 40, inputFlag);
+                  IntArrayRequest.gameplayScreen.a((byte) 40, inputFlag);
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
                 break regionExit1;
               }
               if (var8 == 11) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  pe.gameplayScreen.b(29);
+                  IntArrayRequest.gameplayScreen.b(29);
                   ng.requestScreen(inputFlag, 73, -1);
                 }
                 break regionExit1;
               }
               if (var8 == 12) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  pe.gameplayScreen.f(69);
+                  IntArrayRequest.gameplayScreen.f(69);
                 }
                 break regionExit1;
               }
@@ -524,7 +524,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 33) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  cq.a(16727, inputFlag, pe.gameplayScreen.field_r, pe.gameplayScreen.match.configuration);
+                  cq.a(16727, inputFlag, IntArrayRequest.gameplayScreen.field_r, IntArrayRequest.gameplayScreen.match.configuration);
                 }
                 break regionExit1;
               }
@@ -544,7 +544,7 @@ abstract class MenuScreen extends GameScreen {
                   if (!this.selection.isActivated((byte) 113)) {
                     break regionExit1;
                   }
-                  pe.gameplayScreen.a(inputFlag, (byte) 69);
+                  IntArrayRequest.gameplayScreen.a(inputFlag, (byte) 69);
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                   break regionExit1;
                 default:
@@ -564,7 +564,7 @@ abstract class MenuScreen extends GameScreen {
                   be.field_a = stackIn_165_0;
                   r.field_A = stackIn_165_0;
                   if (r.field_A &&
-                    pe.gameplayScreen != null) {
+                    IntArrayRequest.gameplayScreen != null) {
                     hd.a(true);
                   }
                   var4 = 1;

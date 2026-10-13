@@ -48,7 +48,7 @@ final class c {
             var9.writeCp1252String(param1, -1);
           }
           if (param5 != null) {
-            InstructionsScreen.a(26152, param5, var9);
+            InstructionsScreen.writeCompressedString(26152, param5, var9);
           } else {
             var9.writeShort((byte) 123, param0);
           }
@@ -93,7 +93,7 @@ final class c {
             }
             AppletGameShell.field_e.field_S = 1;
             AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-            if (0 < pe.field_j) {
+            if (0 < IntArrayRequest.field_j) {
               n.a(param2, param8, param3, (byte) -76);
             }
             if (eg.field_m > 0) {
@@ -116,7 +116,7 @@ final class c {
               na.a(param8, param3, -94, param2);
               AppletGameShell.field_e.field_S = 1;
               AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-              if (0 < pe.field_j) {
+              if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (eg.field_m > 0) {
@@ -135,7 +135,7 @@ final class c {
             } else {
               AppletGameShell.field_e.field_S = 1;
               AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-              if (0 < pe.field_j) {
+              if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (eg.field_m > 0) {
@@ -161,8 +161,8 @@ final class c {
         } else {
           if (Rasterizer2D.width == kp.field_a) {
             if (Rasterizer2D.height != IsaacGenerator.field_i &&
-              Rasterizer2D.height == kc.field_q.field_f &&
-              Rasterizer2D.width == kc.field_q.field_g) {
+              Rasterizer2D.height == kc.framebuffer.height &&
+              Rasterizer2D.width == kc.framebuffer.width) {
               if (o.field_e != null) {
                 CacheIoRequest.a(true, false);
               } else {
@@ -181,7 +181,7 @@ final class c {
               }
               AppletGameShell.field_e.field_S = 1;
               AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-              if (0 < pe.field_j) {
+              if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (eg.field_m > 0) {
@@ -205,7 +205,7 @@ final class c {
               }
               AppletGameShell.field_e.field_S = 1;
               AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-              if (0 < pe.field_j) {
+              if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (eg.field_m > 0) {
@@ -228,8 +228,8 @@ final class c {
               }
             }
           } else {
-            if (Rasterizer2D.height == kc.field_q.field_f &&
-              Rasterizer2D.width == kc.field_q.field_g) {
+            if (Rasterizer2D.height == kc.framebuffer.height &&
+              Rasterizer2D.width == kc.framebuffer.width) {
               if (o.field_e != null) {
                 CacheIoRequest.a(true, false);
               } else {
@@ -248,7 +248,7 @@ final class c {
               }
               AppletGameShell.field_e.field_S = 1;
               AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-              if (0 < pe.field_j) {
+              if (0 < IntArrayRequest.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (eg.field_m > 0) {
@@ -271,7 +271,7 @@ final class c {
                 na.a(param8, param3, -94, param2);
                 AppletGameShell.field_e.field_S = 1;
                 AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-                if (0 < pe.field_j) {
+                if (0 < IntArrayRequest.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
                 if (eg.field_m > 0) {
@@ -290,7 +290,7 @@ final class c {
               } else {
                 AppletGameShell.field_e.field_S = 1;
                 AppletGameShell.field_e.field_V = Paddle.field_C.field_V;
-                if (0 < pe.field_j) {
+                if (0 < IntArrayRequest.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
                 if (eg.field_m > 0) {

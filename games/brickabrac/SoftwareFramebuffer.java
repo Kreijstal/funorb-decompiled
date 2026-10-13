@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nb {
-    int[] field_d;
-    int field_g;
+abstract class SoftwareFramebuffer {
+    int[] pixels;
+    int width;
     static mh field_e;
-    int field_f;
+    int height;
     static int field_a;
-    java.awt.Image field_c;
+    java.awt.Image image;
     static pk[] field_b;
 
-    abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);
+    abstract void draw(int y, int x, int obfuscationGuard, java.awt.Graphics graphics);
 
     final static void b(byte param0) {
         if (param0 != 40) {
@@ -20,11 +20,11 @@ abstract class nb {
         CacheIoWorker.a((byte) 93, om.field_oc, ef.field_b[0].canvasWidth, np.field_a, ec.field_J, MenuSelection.field_g);
     }
 
-    final void a(byte param0) {
-        if (param0 < 72) {
+    final void bindRaster(byte obfuscationGuard) {
+        if (obfuscationGuard < 72) {
           return;
         }
-        Rasterizer2D.bind(this.field_d, this.field_g, this.field_f);
+        Rasterizer2D.bind(this.pixels, this.width, this.height);
     }
 
     public static void a(int param0) {
@@ -105,7 +105,7 @@ abstract class nb {
         }
     }
 
-    abstract void a(java.awt.Component param0, int param1, boolean param2, int param3);
+    abstract void initialize(java.awt.Component component, int height, boolean obfuscationGuard, int width);
 
     static {
         int var0 = 0;

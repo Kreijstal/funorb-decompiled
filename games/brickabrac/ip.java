@@ -397,9 +397,9 @@ final class ip extends ki {
           }
           boolean decompiledFrameCompleted2 = true;
           if (stackIn_157_0 != 0 &&
-            pe.field_t > 1) {
+            IntArrayRequest.field_t > 1) {
             var6Lifetime2 = 0;
-            while (!(var6Lifetime2 >= pe.field_t + 1)) {
+            while (!(var6Lifetime2 >= IntArrayRequest.field_t + 1)) {
               var29 = MatchCompleteScreen.field_A[3][var6Lifetime2];
               stackIn_184_0 = var4_int;
               if (var26 != 0) {
@@ -508,7 +508,7 @@ final class ip extends ki {
                   var13 = stackIn_248_0;
                 }
                 if (kb.field_Yb >= 2 &&
-                  pe.heldKeys[12]) {
+                  IntArrayRequest.heldKeys[12]) {
                   var11 = 0;
                   var12 = 0;
                   var10 = 0;
@@ -545,7 +545,7 @@ final class ip extends ki {
                     }
                     ar.a(param2, param1, var9, -1, -1, 0, var7, 0);
                     if (2 <= kb.field_Yb &&
-                      pe.heldKeys[12]) {
+                      IntArrayRequest.heldKeys[12]) {
                       dc.field_g = true;
                     }
                     if (dc.field_g) {
@@ -906,7 +906,7 @@ final class ip extends ki {
               ArchiveFetchClient.a(var7, ib.field_E, param3, 2, -13, true);
               var7.setCacheKeys(this.field_m, param3, (byte) 78);
             }
-            ef.a(var7.sprite, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
+            ef.a(var7.sprite, HuffmanCodec.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
           }
         } else {
           var7 = kd.a(this.field_m, param3, (byte) -121);
@@ -914,7 +914,7 @@ final class ip extends ki {
             ArchiveFetchClient.a(var7, ib.field_E, param3, 2, -13, true);
             var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
-          ef.a(var7.sprite, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
+          ef.a(var7.sprite, HuffmanCodec.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
         }
         if (param1 >= -84) {
           field_t = (String) null;
@@ -930,7 +930,7 @@ final class ip extends ki {
         np.field_d = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
         Brick.field_w = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
         sl.field_D = jh.a(0, ch.field_f);
-        fk.field_e = jh.a(0, dg.field_g);
+        HuffmanCodec.field_e = jh.a(0, dg.field_g);
         ib.field_E = jh.a(0, np.field_d);
         ep.field_h = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
         DualLinkNode.field_l[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);

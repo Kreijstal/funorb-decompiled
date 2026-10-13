@@ -6,19 +6,19 @@ final class fa extends IntrusiveNode {
     int field_i;
     static String field_j;
 
-    final static pe a(int param0, byte param1, int param2, int param3) {
-        pe var4 = new pe();
-        var4.field_w = param2;
-        if (param1 <= -68) {
-          var4.field_m = new int[param0];
-          ob.field_F.addLast(var4, (byte) 3);
-          AchievementIcon.a(param3, var4, 108);
+    final static IntArrayRequest requestIntArray(int valueCount, byte obfuscationGuard, int requestId, int opcode) {
+        IntArrayRequest var4 = new IntArrayRequest();
+        var4.requestId = requestId;
+        if (obfuscationGuard <= -68) {
+          var4.values = new int[valueCount];
+          ob.pendingIntArrayRequests.addLast(var4, (byte) 3);
+          AchievementIcon.sendIntArrayRequest(opcode, var4, 108);
           return var4;
         }
         field_j = (String) null;
-        var4.field_m = new int[param0];
-        ob.field_F.addLast(var4, (byte) 3);
-        AchievementIcon.a(param3, var4, 108);
+        var4.values = new int[valueCount];
+        ob.pendingIntArrayRequests.addLast(var4, (byte) 3);
+        AchievementIcon.sendIntArrayRequest(opcode, var4, 108);
         return var4;
     }
 

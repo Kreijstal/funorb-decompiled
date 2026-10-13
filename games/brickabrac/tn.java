@@ -394,7 +394,7 @@ final class tn extends AudioStream {
         }
         so.field_b = param0;
         DualLinkIterator.field_f = param3;
-        pe.field_s = param4;
+        IntArrayRequest.field_s = param4;
     }
 
     private tn() throws Throwable {

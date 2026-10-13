@@ -52,7 +52,7 @@ final class ci extends ki {
           } else {
             var8 = kd.a(this.field_m, param3, (byte) 125);
             if (!var8.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-              dp.a(2, 0, false, param3, kh.field_b, var8);
+              dp.a(2, 0, false, param3, NodeDequeCursor.field_b, var8);
               var8.setCacheKeys(this.field_m, param3, (byte) 78);
             }
             AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var8.sprite, 2, lk.field_t, param0);
@@ -65,7 +65,7 @@ final class ci extends ki {
         } else {
           var7 = kd.a(this.field_m, param3, (byte) 125);
           if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            dp.a(2, 0, false, param3, kh.field_b, var7);
+            dp.a(2, 0, false, param3, NodeDequeCursor.field_b, var7);
             var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
           AchievementBrowserScreen.a(jh.field_d, param2, param4, param3, 306, 0, 0, var7.sprite, 2, lk.field_t, param0);
@@ -101,11 +101,11 @@ final class ci extends ki {
         ng.field_a.bindRasterTarget();
         Rasterizer2D.a(7136, 6592, 1600, 128, sq.field_b);
         if (!param0) {
-          kc.field_q.a((byte) 100);
+          kc.framebuffer.bindRaster((byte) 100);
           pk.field_f = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
           jh.field_d = jh.a(0, om.field_fc);
           lk.field_t = jh.a(0, pn.field_m);
-          kh.field_b = jh.a(0, ng.field_a);
+          NodeDequeCursor.field_b = jh.a(0, ng.field_a);
           b.field_b = cr.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
           return true;
         }

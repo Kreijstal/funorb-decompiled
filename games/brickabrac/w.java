@@ -616,7 +616,7 @@ final class w {
 
     final static void c(byte param0) {
         try {
-          fk.field_h = null;
+          HuffmanCodec.field_h = null;
           if (param0 != 3) {
             field_k = -112;
           }

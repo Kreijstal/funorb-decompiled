@@ -198,7 +198,7 @@ final class LevelList {
           if (this.pack.levelCount > levelIndex) {
             if (0 <= levelIndex) {
               labelStyle = 3;
-              if (hh.field_b[this.pack.packId] < levelIndex) {
+              if (hh.unlockedLevelCounts[this.pack.packId] < levelIndex) {
                 if (this.selectedLevelIndex == levelIndex) {
                   labelStyle = 0;
                 }

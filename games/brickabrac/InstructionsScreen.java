@@ -76,7 +76,7 @@ final class InstructionsScreen extends MenuScreen {
         }
     }
 
-    final static int a(int param0, String param1, PacketBuffer param2) {
+    final static int writeCompressedString(int obfuscationGuard, String text, PacketBuffer packet) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -90,13 +90,13 @@ final class InstructionsScreen extends MenuScreen {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.position;
-          var5 = (CharSequence) ((Object) param1);
+          var3_int = packet.position;
+          var5 = (CharSequence) ((Object) text);
           var4 = LevelList.a(var5, false);
-          param2.writeUnsignedSmart(-1, var4.length);
-          param2.position = param2.position + so.field_d.a((byte) -119, var4.length, 0, param2.data, param2.position, var4);
-          if (param0 == 26152) {
-            stackIn_4_0 = param2.position - var3_int;
+          packet.writeUnsignedSmart(-1, var4.length);
+          packet.position = packet.position + so.textHuffman.compress((byte) -119, var4.length, 0, packet.data, packet.position, var4);
+          if (obfuscationGuard == 26152) {
+            stackIn_4_0 = packet.position - var3_int;
             return stackIn_4_0;
           }
           stackIn_2_0 = -117;
@@ -105,14 +105,14 @@ final class InstructionsScreen extends MenuScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("md.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("md.B(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

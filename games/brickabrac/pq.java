@@ -109,20 +109,20 @@ final class pq extends IntrusiveNode {
           if (ml.field_b > 0) {
             ml.field_b = ml.field_b - 1;
           } else {
-            if (pe.field_j <= 0) {
+            if (IntArrayRequest.field_j <= 0) {
               if (eg.field_m > 0) {
                 eg.field_m = eg.field_m - 1;
               }
             } else {
-              pe.field_j = pe.field_j - 1;
+              IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
             }
           }
         } else {
           if (null == o.field_e) {
             if (nl.field_f == null) {
               hc.field_c = false;
-              if (pe.field_j > 0) {
-                pe.field_j = pe.field_j - 1;
+              if (IntArrayRequest.field_j > 0) {
+                IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
               } else {
                 if (eg.field_m > 0) {
                   eg.field_m = eg.field_m - 1;
@@ -142,18 +142,18 @@ final class pq extends IntrusiveNode {
                 if (0 < eg.field_m) {
                   eg.field_m = eg.field_m - 1;
                 } else {
-                  if (hj.field_Yb > pe.field_j) {
-                    if (pe.field_j == 0) {
+                  if (hj.field_Yb > IntArrayRequest.field_j) {
+                    if (IntArrayRequest.field_j == 0) {
                       NodeDeque.a(true, -122);
                     }
-                    pe.field_j = pe.field_j + 1;
+                    IntArrayRequest.field_j = IntArrayRequest.field_j + 1;
                   }
                 }
               }
             }
           } else {
             if (ml.field_b <= 0) {
-              if (0 >= pe.field_j) {
+              if (0 >= IntArrayRequest.field_j) {
                 if (hj.field_Yb > eg.field_m) {
                   if (eg.field_m == 0) {
                     NodeDeque.a(false, -64);
@@ -161,7 +161,7 @@ final class pq extends IntrusiveNode {
                   eg.field_m = eg.field_m + 1;
                 }
               } else {
-                pe.field_j = pe.field_j - 1;
+                IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
               }
             } else {
               ml.field_b = ml.field_b - 1;

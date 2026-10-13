@@ -169,7 +169,7 @@ final class n {
           if (param3 != -76) {
             return;
           }
-          co.a(pe.field_j, false);
+          co.a(IntArrayRequest.field_j, false);
           if (nl.field_f != null) {
             var15 = pf.field_h;
             var17 = var15;
@@ -274,7 +274,7 @@ final class n {
                 }
                 ar.a(true, nl.field_f, -1, -1, -1, 0, cq.field_p, 0);
                 if (!(kb.field_Yb < 2) &&
-                  pe.heldKeys[12]) {
+                  IntArrayRequest.heldKeys[12]) {
                   dc.field_g = true;
                 }
               }

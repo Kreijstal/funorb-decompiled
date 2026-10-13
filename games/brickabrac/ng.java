@@ -23,7 +23,7 @@ final class ng {
         if (obfuscationGuard < 52) {
           ng.requestScreen(true, 107, -22);
         }
-        kh.screenTransitionTick = 0;
+        NodeDequeCursor.screenTransitionTick = 0;
         wp.playUiSound(8, ta.uiSounds[8]);
     }
 

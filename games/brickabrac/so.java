@@ -6,7 +6,7 @@ final class so {
     private to field_a;
     static AppletGameShell field_f;
     static int field_b;
-    static fk field_d;
+    static HuffmanCodec textHuffman;
     private ResourceArchive field_g;
     private ResourceArchive field_c;
 
@@ -56,7 +56,7 @@ final class so {
 
     public static void b(byte param0) {
         int var1 = 22 % ((param0 - 19) / 35);
-        field_d = null;
+        textHuffman = null;
         field_e = null;
     }
 
@@ -179,7 +179,7 @@ final class so {
           pl.loadRgbSpriteByName("basic", "frame_bracket", (byte) 106, param0);
           AchievementBrowserScreen.field_A = kf.a("button_frame", "basic", param0, -91);
           Ball.field_G = kf.a("button_raised", "basic", param0, 103);
-          pe.field_k = kf.a("button_depressed", "basic", param0, -104);
+          IntArrayRequest.field_k = kf.a("button_depressed", "basic", param0, -104);
           IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
           LevelCompleteScreen.field_F = pl.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
           DelayedPacket.field_p = pl.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
@@ -187,12 +187,12 @@ final class so {
           nj.field_z = new RgbSprite(32, 32);
           nj.field_z.bindRasterTarget();
           DelayedPacket.field_p.c(0, 0, 32, 32);
-          kc.field_q.a((byte) 91);
+          kc.framebuffer.bindRaster((byte) 91);
           DelayedPacket.field_p = null;
           var19 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           var19.bindRasterTarget();
           LevelCompleteScreen.field_F.e(0, 0);
-          kc.field_q.a((byte) 113);
+          kc.framebuffer.bindRaster((byte) 113);
           bf.field_L = p.a(-12, var19, 8, 9838226);
           qh.field_c = p.a(-12, var19, 12, 9838226);
           var8 = null;
@@ -203,7 +203,7 @@ final class so {
             var20.bindRasterTarget();
             Rasterizer2D.clear();
             IntrusiveHashTable.achievementSourceIcons[var10_int].drawQuarter(0, 0);
-            kc.field_q.a((byte) 101);
+            kc.framebuffer.bindRaster((byte) 101);
             e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
             pa.field_h[var10_int] = p.a(pn.a(param3, -29147), var20, 12, 9838226);
           }
@@ -281,7 +281,7 @@ final class so {
             ch.field_k[var10_intLifetime6].bindRasterTarget();
             gg.field_p[var10_intLifetime6].a(0, 0);
           }
-          kc.field_q.a((byte) 79);
+          kc.framebuffer.bindRaster((byte) 79);
           for (var10_intLifetime7 = 0; var10_intLifetime7 < ln.field_j.length; var10_intLifetime7++) {
             ln.field_j[var10_intLifetime7].trimTransparentBorders();
           }
@@ -333,7 +333,7 @@ final class so {
           cq.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
           cq.field_o.bindRasterTarget();
           dg.field_e.a(0, 0);
-          kc.field_q.a((byte) 118);
+          kc.framebuffer.bindRaster((byte) 118);
           var10 = pl.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
           hc.field_a = new RgbSprite[2][4];
           ip.field_v = new RgbSprite[2][4];
@@ -347,7 +347,7 @@ final class so {
             var10.a(0, 0, ip.field_v[0][var11].canvasWidth / 2, ip.field_v[0][var11].canvasHeight / 2);
             hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
           }
-          kc.field_q.a((byte) 127);
+          kc.framebuffer.bindRaster((byte) 127);
           SaveResultsPromptScreen.packCardIcons = bd.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);
           ArchiveNetworkRequest.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {

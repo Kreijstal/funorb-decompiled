@@ -244,8 +244,8 @@ final class ArchiveIndex {
         if (ml.field_b > 0) {
           ml.field_b = ml.field_b - 1;
         } else {
-          if (pe.field_j > 0) {
-            pe.field_j = pe.field_j - 1;
+          if (IntArrayRequest.field_j > 0) {
+            IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
           } else {
             if (eg.field_m > 0) {
               eg.field_m = eg.field_m - 1;
@@ -258,8 +258,8 @@ final class ArchiveIndex {
         if (!(ml.field_b <= 0)) {
           Brick.e(param0 ^ 32040);
         }
-        if (!(pe.field_j <= 0)) {
-          co.a(pe.field_j, false);
+        if (!(IntArrayRequest.field_j <= 0)) {
+          co.a(IntArrayRequest.field_j, false);
         }
         if (eg.field_m > 0) {
           co.a(eg.field_m, false);

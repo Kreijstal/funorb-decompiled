@@ -110,10 +110,10 @@ final class qn {
           if (param0 <= 118) {
             qn.a(17, -27, -12, -54, -92);
           }
-          var4 = (cq) (fk.field_f.first(-99));
+          var4 = (cq) (HuffmanCodec.field_f.first(-99));
           while (var4 != null) {
             MultiplayerExitScreen.a(-21167, var4, param1);
-            var4 = (cq) (fk.field_f.next((byte) 116));
+            var4 = (cq) (HuffmanCodec.field_f.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

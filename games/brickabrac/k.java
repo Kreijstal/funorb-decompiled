@@ -73,7 +73,7 @@ abstract class k extends pj implements hf {
           for (var4 = 0; var4 < param2; var4++) {
             param0.drawTransparent(0, param0.canvasHeight * var4);
           }
-          kc.field_q.a((byte) 89);
+          kc.framebuffer.bindRaster((byte) 89);
           stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

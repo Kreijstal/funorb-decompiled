@@ -766,7 +766,7 @@ final class nn {
                 }
                 var2 = nk.a("status_full", (byte) 47);
                 if (var2 != null) {
-                  pe.field_p = MenuButton.a(var2, (byte) 95);
+                  IntArrayRequest.field_p = MenuButton.a(var2, (byte) 95);
                 }
                 var2 = nk.a("players_in_game", (byte) 112);
                 if (null != var2) {
@@ -1010,7 +1010,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_needchanging1", (byte) 89);
                 if (var2 != null) {
-                  jo.field_k = MenuButton.a(var2, (byte) 80);
+                  ProducerFramebuffer.field_k = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("gameopt_needchanging2", (byte) 121);
                 if (var2 != null) {
@@ -1572,7 +1572,7 @@ final class nn {
                 }
                 var2 = nk.a("create_age", (byte) 96);
                 if (null != var2) {
-                  fk.field_d = MenuButton.a(var2, (byte) 120);
+                  HuffmanCodec.field_d = MenuButton.a(var2, (byte) 120);
                 }
                 var2 = nk.a("create_u13_email", (byte) -125);
                 if (null != var2) {
@@ -1756,7 +1756,7 @@ final class nn {
                 }
                 var2 = nk.a("create_alert_passchars", (byte) -109);
                 if (var2 != null) {
-                  fk.field_c = MenuButton.a(var2, (byte) 102);
+                  HuffmanCodec.field_c = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("create_alert_passrepeated", (byte) -18);
                 if (var2 != null) {
@@ -2410,7 +2410,7 @@ final class nn {
                 }
                 var2 = nk.a("mouseoveranicon", (byte) -107);
                 if (var2 != null) {
-                  jo.field_h = MenuButton.a(var2, (byte) 73);
+                  ProducerFramebuffer.field_h = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = nk.a("notyetachieved", (byte) 55);
                 if (null != var2) {

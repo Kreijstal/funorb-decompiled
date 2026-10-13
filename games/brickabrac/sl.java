@@ -82,7 +82,7 @@ abstract class sl extends DualLinkNode {
         var21 = BrickABrac.field_J ? 1 : 0;
         try {
           w.field_n = param8;
-          pe.field_t = param4;
+          IntArrayRequest.field_t = param4;
           Brick.field_O = param5;
           MouseInput.field_c = param10;
           rg.field_b = param12;
@@ -210,12 +210,12 @@ abstract class sl extends DualLinkNode {
           }
           gb.field_l[2] = new mh(0L, wi.field_n, p.field_j);
           MatchCompleteScreen.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
-          if (1 < pe.field_t) {
+          if (1 < IntArrayRequest.field_t) {
             gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);
-            array$1 = new rk[pe.field_t + 1];
+            array$1 = new rk[IntArrayRequest.field_t + 1];
             MatchCompleteScreen.field_A[3] = array$1;
             MatchCompleteScreen.field_A[3][0] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, ni.field_Pb);
-            for (var17_intLifetime2 = 0; var17_intLifetime2 < pe.field_t; var17_intLifetime2++) {
+            for (var17_intLifetime2 = 0; var17_intLifetime2 < IntArrayRequest.field_t; var17_intLifetime2++) {
               MatchCompleteScreen.field_A[3][var17_intLifetime2 + 1] = new rk(0L, al.field_n, (mh) null, DualLinkNode.field_t, (RgbSprite) null, GzipInflater.field_c[var17_intLifetime2]);
             }
           }
@@ -273,7 +273,7 @@ abstract class sl extends DualLinkNode {
           for (var18Lifetime2 = 0; param13 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(w.field_n.length < 2)) && (var18Lifetime2 != 3 ||
-              !(pe.field_t <= 1))) {
+              !(IntArrayRequest.field_t <= 1))) {
               rg.field_e.a(gb.field_l[var18Lifetime2], 0);
               for (var19 = 0; MatchCompleteScreen.field_A[var18Lifetime2].length > var19; var19++) {
                 if (MatchCompleteScreen.field_A[var18Lifetime2][var19] != null) {

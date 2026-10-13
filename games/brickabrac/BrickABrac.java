@@ -24,12 +24,12 @@ public final class BrickABrac extends InteractiveGameClient {
         }
         transitionActive = stackIn_6_0;
         if (transitionActive != 0) {
-          if (16 > kh.screenTransitionTick) {
+          if (16 > NodeDequeCursor.screenTransitionTick) {
             lp.currentScreen.drawScreen((byte) -75);
-            PixelBlockEffect.pixelate(kh.screenTransitionTick + 1, 256, 16769381, false, false);
+            PixelBlockEffect.pixelate(NodeDequeCursor.screenTransitionTick + 1, 256, 16769381, false, false);
           } else {
             hd.pendingScreen.drawScreen((byte) -85);
-            PixelBlockEffect.pixelate(32 - (kh.screenTransitionTick - 1), 256, 16769381, false, false);
+            PixelBlockEffect.pixelate(32 - (NodeDequeCursor.screenTransitionTick - 1), 256, 16769381, false, false);
           }
         } else {
           lp.currentScreen.drawScreen((byte) -63);
@@ -85,8 +85,8 @@ public final class BrickABrac extends InteractiveGameClient {
           stackIn_10_0 = 0;
         }
         transitionActive = stackIn_10_0;
-        if (pe.gameplayScreen != lp.currentScreen ||
-          pe.gameplayScreen.field_p ||
+        if (IntArrayRequest.gameplayScreen != lp.currentScreen ||
+          IntArrayRequest.gameplayScreen.field_p ||
           transitionActive == 0) {
           stackIn_17_0 = lp.currentScreen;
           stackIn_17_1 = true;
@@ -94,20 +94,20 @@ public final class BrickABrac extends InteractiveGameClient {
           ((GameScreen) (Object) stackIn_17_0).advanceScreen(stackIn_17_1, stackIn_18_2, -104);
         }
         if (transitionActive != 0) {
-          if ((pe.gameplayScreen != hd.pendingScreen ||
-            pe.gameplayScreen.field_p) &&
+          if ((IntArrayRequest.gameplayScreen != hd.pendingScreen ||
+            IntArrayRequest.gameplayScreen.field_p) &&
             hd.pendingScreen != null) {
             hd.pendingScreen.advanceScreen(false, false, -82);
           }
-          kh.screenTransitionTick = kh.screenTransitionTick + 1;
-          if (32 == kh.screenTransitionTick) {
+          NodeDequeCursor.screenTransitionTick = NodeDequeCursor.screenTransitionTick + 1;
+          if (32 == NodeDequeCursor.screenTransitionTick) {
             sk.finishScreenTransition((byte) -126);
           }
         } else {
-          if (pe.gameplayScreen != null &&
-            lp.currentScreen != pe.gameplayScreen &&
-            pe.gameplayScreen.field_p) {
-            pe.gameplayScreen.advanceScreen(false, false, -81);
+          if (IntArrayRequest.gameplayScreen != null &&
+            lp.currentScreen != IntArrayRequest.gameplayScreen &&
+            IntArrayRequest.gameplayScreen.field_p) {
+            IntArrayRequest.gameplayScreen.advanceScreen(false, false, -81);
           }
         }
         if (null != kp.achievementNotifications.first(-8)) {
@@ -288,34 +288,34 @@ public final class BrickABrac extends InteractiveGameClient {
           if (IntrusiveHashTable.currentPacketOpcode != 64 &&
             65 != IntrusiveHashTable.currentPacketOpcode) {
             if (79 == IntrusiveHashTable.currentPacketOpcode) {
-              if (pe.gameplayScreen == null) {
+              if (IntArrayRequest.gameplayScreen == null) {
                 return true;
               }
-              if (pe.gameplayScreen.field_q) {
+              if (IntArrayRequest.gameplayScreen.field_q) {
                 rk.a("T3", (Throwable) null, 44);
               } else {
-                fieldTemp$0 = pe.gameplayScreen.field_x;
-                pe.gameplayScreen.field_x = pe.gameplayScreen.field_x + 1;
-                pe.gameplayScreen.match.playerBoards[fieldTemp$0].a(false, packet, pe.gameplayScreen.match.playerCount);
-                stackIn_74_0 = pe.gameplayScreen;
-                stackIn_75_1 = (pe.gameplayScreen.field_x == pe.gameplayScreen.match.playerCount);
+                fieldTemp$0 = IntArrayRequest.gameplayScreen.field_x;
+                IntArrayRequest.gameplayScreen.field_x = IntArrayRequest.gameplayScreen.field_x + 1;
+                IntArrayRequest.gameplayScreen.match.playerBoards[fieldTemp$0].a(false, packet, IntArrayRequest.gameplayScreen.match.playerCount);
+                stackIn_74_0 = IntArrayRequest.gameplayScreen;
+                stackIn_75_1 = (IntArrayRequest.gameplayScreen.field_x == IntArrayRequest.gameplayScreen.match.playerCount);
                 stackIn_74_0.field_q = stackIn_75_1;
-                if (pe.gameplayScreen.field_q) {
-                  if (pe.gameplayScreen.c(103)) {
+                if (IntArrayRequest.gameplayScreen.field_q) {
+                  if (IntArrayRequest.gameplayScreen.c(103)) {
                     return true;
                   }
-                  pe.gameplayScreen.match.playerBoards[pe.gameplayScreen.field_k].field_E = pe.gameplayScreen.match.playerBoards[pe.gameplayScreen.field_k].simulationTick - 50;
+                  IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.field_k].field_E = IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.field_k].simulationTick - 50;
                 }
               }
               return true;
             }
             if (66 == IntrusiveHashTable.currentPacketOpcode) {
-              if (pe.gameplayScreen != null) {
+              if (IntArrayRequest.gameplayScreen != null) {
                 sk.finishScreenTransition((byte) -123);
-                if (!pe.gameplayScreen.c(123)) {
-                  pe.gameplayScreen.a((byte) 40, false);
+                if (!IntArrayRequest.gameplayScreen.c(123)) {
+                  IntArrayRequest.gameplayScreen.a((byte) 40, false);
                 }
-                pe.gameplayScreen.a(false, (byte) 69);
+                IntArrayRequest.gameplayScreen.a(false, (byte) 69);
                 NewAchievementsScreen.discardGameplayOnTransition = true;
                 pf.field_p = true;
                 Brick.field_E = 0;
@@ -325,51 +325,51 @@ public final class BrickABrac extends InteractiveGameClient {
               return true;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (null != pe.gameplayScreen) {
+            if (null != IntArrayRequest.gameplayScreen) {
               if (76 == IntrusiveHashTable.currentPacketOpcode) {
-                pe.gameplayScreen.a(packet, (byte) 74);
+                IntArrayRequest.gameplayScreen.a(packet, (byte) 74);
                 return true;
               }
               if (73 != IntrusiveHashTable.currentPacketOpcode &&
                 IntrusiveHashTable.currentPacketOpcode != 74) {
                 if (IntrusiveHashTable.currentPacketOpcode == 75) {
-                  pe.gameplayScreen.a((byte) 33, packet);
+                  IntArrayRequest.gameplayScreen.a((byte) 33, packet);
                   return true;
                 }
                 if (77 == IntrusiveHashTable.currentPacketOpcode) {
-                  pe.gameplayScreen.a(packet, false, 87);
+                  IntArrayRequest.gameplayScreen.a(packet, false, 87);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 78) {
-                  pe.gameplayScreen.a(packet, true, 118);
+                  IntArrayRequest.gameplayScreen.a(packet, true, 118);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 67) {
-                  pe.gameplayScreen.a(packet, obfuscationGuard - 47);
+                  IntArrayRequest.gameplayScreen.a(packet, obfuscationGuard - 47);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 69) {
-                  pe.gameplayScreen.a(18504, packet);
+                  IntArrayRequest.gameplayScreen.a(18504, packet);
                   return true;
                 }
                 if (IntrusiveHashTable.currentPacketOpcode == 70) {
-                  pe.gameplayScreen.match.field_j = packet.readUnsignedByte(255);
-                  if (pe.gameplayScreen != null) {
+                  IntArrayRequest.gameplayScreen.match.field_j = packet.readUnsignedByte(255);
+                  if (IntArrayRequest.gameplayScreen != null) {
                     fr.a(1);
                   }
                   return true;
                 }
                 decompiledFrameRemainder0 = (IntrusiveHashTable.currentPacketOpcode == 71);
                 if (decompiledFrameRemainder0) {
-                  pe.gameplayScreen.field_v = packet.readUnsignedByte(255);
-                  if (pe.gameplayScreen != null) {
+                  IntArrayRequest.gameplayScreen.field_v = packet.readUnsignedByte(255);
+                  if (IntArrayRequest.gameplayScreen != null) {
                     fr.a(1);
                   }
                   return true;
                 }
               }
               if (decompiledFrameRemainder0) {
-                stackIn_99_0 = pe.gameplayScreen;
+                stackIn_99_0 = IntArrayRequest.gameplayScreen;
                 stackIn_99_1 = -15;
                 stackIn_99_2 = (BitPacketBuffer) (packet);
                 stackIn_100_3 = (IntrusiveHashTable.currentPacketOpcode == 74);
@@ -415,12 +415,12 @@ public final class BrickABrac extends InteractiveGameClient {
             stackIn_56_0 = 0;
           }
           var15 = stackIn_56_0;
-          pe.gameplayScreen = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
-          stackIn_58_0 = pe.gameplayScreen;
+          IntArrayRequest.gameplayScreen = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
+          stackIn_58_0 = IntArrayRequest.gameplayScreen;
           stackIn_59_1 = (packet.readUnsignedByte(255) == 0);
           stackIn_58_0.field_q = stackIn_59_1;
-          if (!pe.gameplayScreen.field_q) {
-            pe.gameplayScreen.field_x = 0;
+          if (!IntArrayRequest.gameplayScreen.field_q) {
+            IntArrayRequest.gameplayScreen.field_x = 0;
           }
           if (IntrusiveHashTable.currentPacketOpcode == 64) {
             AchievementIcon.c((byte) 32);
@@ -488,8 +488,8 @@ public final class BrickABrac extends InteractiveGameClient {
           if (MonotonicTime.field_c) {
             dp.field_y = true;
             NewAchievementsScreen.discardGameplayOnTransition = true;
-            if (pe.gameplayScreen != null &&
-              !pe.gameplayScreen.c(param1 + 94)) {
+            if (IntArrayRequest.gameplayScreen != null &&
+              !IntArrayRequest.gameplayScreen.c(param1 + 94)) {
               kk.setMessageText(true, sg.field_k);
               ng.requestScreen(false, param1 ^ 118, 11);
             } else {
@@ -607,7 +607,7 @@ public final class BrickABrac extends InteractiveGameClient {
         kd.a(obfuscationGuard);
         fq.a((byte) 15);
         GameClock.a((byte) 66);
-        nb.a(-125);
+        SoftwareFramebuffer.a(-125);
         s.c(4862);
         GameCanvas.a(0);
         qn.b(0);
@@ -636,7 +636,7 @@ public final class BrickABrac extends InteractiveGameClient {
         w.d((byte) 102);
         rj.a(24311);
         bq.a(true);
-        fk.a((byte) -94);
+        HuffmanCodec.a((byte) -94);
         jj.a(true);
         sq.a((byte) -11);
         nl.a(-106);
@@ -771,7 +771,7 @@ public final class BrickABrac extends InteractiveGameClient {
         bj.i(111);
         jc.a((byte) -17);
         ib.f((byte) -67);
-        kh.c(117);
+        NodeDequeCursor.c(117);
         h.f((byte) -102);
         qm.a((byte) -120);
         pl.a(0);
@@ -800,7 +800,7 @@ public final class BrickABrac extends InteractiveGameClient {
         dl.b(-9125);
         ef.b(10);
         NanoGameClock.f((byte) -124);
-        jo.b(11);
+        ProducerFramebuffer.b(11);
         rq.a((byte) -118);
         hg.a((byte) 19);
         IntHistoryBuffer.a(67108864);
@@ -861,7 +861,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ac.c(0);
         n.b(-2);
         DelayedPacket.a(-128);
-        pe.a(112);
+        IntArrayRequest.a(112);
         pn.a(-17432);
         mp.h(-115);
         eg.a(136);

@@ -30,10 +30,10 @@ final class uf {
         if (param0 > -84) {
           return true;
         }
-        if (pe.heldKeys[82]) {
+        if (IntArrayRequest.heldKeys[82]) {
           return false;
         }
-        if (pe.heldKeys[86]) {
+        if (IntArrayRequest.heldKeys[86]) {
           return false;
         }
         if (param1 >= 16) {

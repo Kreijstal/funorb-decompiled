@@ -107,22 +107,22 @@ final class LevelSelectScreen extends MenuScreen {
             this.previewLevelIndex = var3;
           }
           if (GameConnectionShell.field_t ||
-            !(this.previewLevelIndex >= 3 + hh.field_b[this.pack.packId])) {
+            !(this.previewLevelIndex >= 3 + hh.unlockedLevelCounts[this.pack.packId])) {
             this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
           }
           if (GameConnectionShell.field_t ||
-            !(hh.field_b[this.pack.packId] < this.previewLevelIndex)) {
+            !(hh.unlockedLevelCounts[this.pack.packId] < this.previewLevelIndex)) {
             nn.field_g.drawCentered(this.pack.metadata[this.previewLevelIndex].title, 402, 421 - var2, 0, -1);
           }
           if (!GameConnectionShell.field_t &&
-            !(this.previewLevelIndex <= hh.field_b[this.pack.packId])) {
-            if (this.previewLevelIndex < 3 + hh.field_b[this.pack.packId]) {
+            !(this.previewLevelIndex <= hh.unlockedLevelCounts[this.pack.packId])) {
+            if (this.previewLevelIndex < 3 + hh.unlockedLevelCounts[this.pack.packId]) {
               stackIn_17_0 = 210;
               stackIn_17_1 = 178;
               stackIn_17_2 = 385;
               stackIn_17_3 = 233;
               stackIn_17_4 = 0;
-              if (1 != -hh.field_b[0] + var3) {
+              if (1 != -hh.unlockedLevelCounts[0] + var3) {
                 stackIn_18_5 = 190;
               } else {
                 stackIn_18_5 = 128;
@@ -337,7 +337,7 @@ final class LevelSelectScreen extends MenuScreen {
           if (this.selection.isActivated((byte) 113) &&
             0 <= this.levelList.selectedLevelIndex) {
             if (!GameConnectionShell.field_t &&
-              hh.field_b[this.pack.packId] < this.levelList.selectedLevelIndex) {
+              hh.unlockedLevelCounts[this.pack.packId] < this.levelList.selectedLevelIndex) {
               return false;
             }
             if (this.levelList.selectedLevelIndex < this.pack.levelCount) {

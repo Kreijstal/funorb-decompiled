@@ -490,7 +490,7 @@ final class nh {
                   break;
                 }
                 if (!(stackIn_73_0 > kb.field_Yb) &&
-                  pe.heldKeys[12]) {
+                  IntArrayRequest.heldKeys[12]) {
                   var10 = 2;
                 }
               }
@@ -653,7 +653,7 @@ final class nh {
                   break;
                 }
                 if (stackIn_153_0 <= kb.field_Yb &&
-                  pe.heldKeys[12]) {
+                  IntArrayRequest.heldKeys[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {

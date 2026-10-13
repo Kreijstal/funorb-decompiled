@@ -26,7 +26,7 @@ final class pl {
           }
           var2.bindRasterTarget();
           param1.a(0, 0);
-          kc.field_q.a((byte) 103);
+          kc.framebuffer.bindRaster((byte) 103);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

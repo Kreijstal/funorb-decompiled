@@ -102,7 +102,7 @@ final class p extends IntrusiveNode {
             param1.d(param2 - param1.offsetX, -param1.offsetY + param2, param3);
             Rasterizer2D.e(1, 1, 0, 0, var7.width, var7.height);
           }
-          kc.field_q.a((byte) 104);
+          kc.framebuffer.bindRaster((byte) 104);
           var7.offsetY = -param2 + param1.offsetY;
           if (param0 != -12) {
             field_j = (String) null;

@@ -391,7 +391,7 @@ final class MenuSelection {
           }
           if (this.field_o <= 0) {
             this.pressCode = this.heldCode;
-            this.field_o = pe.field_q;
+            this.field_o = IntArrayRequest.field_q;
           }
           this.field_o = this.field_o - 1;
           if (ki.pressedButton == 0 &&
@@ -508,7 +508,7 @@ final class MenuSelection {
         }
         if (this.field_o <= 0) {
           this.pressCode = this.heldCode;
-          this.field_o = pe.field_q;
+          this.field_o = IntArrayRequest.field_q;
         }
         this.field_o = this.field_o - 1;
         if (ki.pressedButton == 0) {

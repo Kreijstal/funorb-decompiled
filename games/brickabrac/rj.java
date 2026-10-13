@@ -23,14 +23,14 @@ final class rj {
         }
     }
 
-    final static void a(fk param0, boolean param1) {
+    final static void installTextHuffman(HuffmanCodec codec, boolean obfuscationGuard) {
         try {
-          so.field_d = param0;
-          if (param1) {
+          so.textHuffman = codec;
+          if (obfuscationGuard) {
             rj.b(-94);
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "rj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "rj.C(" + (codec != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -40,8 +40,8 @@ final class rj {
           field_a = null;
           return;
         }
-        fk var2 = (fk) null;
-        rj.a((fk) null, true);
+        HuffmanCodec var2 = (HuffmanCodec) null;
+        rj.installTextHuffman((HuffmanCodec) null, true);
         field_c = null;
         field_a = null;
     }

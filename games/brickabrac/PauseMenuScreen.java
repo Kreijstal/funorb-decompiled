@@ -51,7 +51,7 @@ class PauseMenuScreen extends FramedMenuScreen {
     }
 
     void drawScreen(byte obfuscationGuard) {
-        pe.gameplayScreen.drawScreen((byte) -116);
+        IntArrayRequest.gameplayScreen.drawScreen((byte) -116);
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         this.drawMenuFrame(102);
         DelayedPacket.d(0);

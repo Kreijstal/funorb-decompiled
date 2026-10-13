@@ -39,7 +39,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
     }
 
     final void drawScreen(byte obfuscationGuard) {
-        pe.gameplayScreen.drawScreen((byte) -19);
+        IntArrayRequest.gameplayScreen.drawScreen((byte) -19);
         if (obfuscationGuard > -14) {
           field_J = (String) null;
         }

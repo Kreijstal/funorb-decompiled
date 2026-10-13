@@ -107,7 +107,7 @@ final class oj extends ep {
         int var2Lifetime4;
         MovingBody.a((byte) 74, 640 + Rasterizer2D.width >> 1, -640 + Rasterizer2D.width >> 1, 0, Rasterizer2D.height);
         if (ml.field_b <= 0) {
-          if (pe.field_j > 0) {
+          if (IntArrayRequest.field_j > 0) {
             if (null == c.field_e) {
               stackIn_60_0 = qa.field_w;
               stackIn_60_1 = true;
@@ -167,7 +167,7 @@ final class oj extends ep {
         stackIn_11_1 = true;
         stackIn_12_2 = (param0) && (!sc.field_c);
         ((mh) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
-        if (pe.field_j > 0) {
+        if (IntArrayRequest.field_j > 0) {
           if (null == c.field_e) {
             stackIn_17_0 = qa.field_w;
             stackIn_17_1 = true;

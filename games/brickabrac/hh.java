@@ -6,7 +6,7 @@ final class hh {
     static String field_e;
     static double field_d;
     static String field_f;
-    static int[] field_b;
+    static int[] unlockedLevelCounts;
     static String field_a;
 
     public static void a(boolean param0) {
@@ -15,14 +15,14 @@ final class hh {
           field_a = null;
           field_e = null;
           field_f = null;
-          field_b = null;
+          unlockedLevelCounts = null;
           return;
         }
-        field_b = (int[]) null;
+        unlockedLevelCounts = (int[]) null;
         field_a = null;
         field_e = null;
         field_f = null;
-        field_b = null;
+        unlockedLevelCounts = null;
     }
 
     final static void a(RgbSprite param0, int param1, int param2, RasterCacheSurface param3, int param4, int param5, RgbSprite param6) {
@@ -112,6 +112,6 @@ final class hh {
         field_c = new int[]{12658477, 3952770, 16494651, 26679, 16711935};
         field_d = Math.atan2(1.0, 0.0);
         field_a = "Enter the name you'd prefer. This is the name displayed to other players.";
-        field_b = new int[2];
+        unlockedLevelCounts = new int[2];
     }
 }

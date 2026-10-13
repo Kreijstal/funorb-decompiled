@@ -11,10 +11,10 @@ class ib extends oc implements sd {
     NodeDeque field_G;
 
     final boolean a(oc param0, byte param1) {
-        kh var3 = null;
+        NodeDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         oc var4 = null;
-        kh var5 = null;
+        NodeDequeCursor var5 = null;
         oc var6 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -26,25 +26,25 @@ class ib extends oc implements sd {
           if (this.field_G.isEmpty(false)) {
             return false;
           }
-          var3 = new kh(this.field_G);
+          var3 = new NodeDequeCursor(this.field_G);
           if (param1 > -115) {
             return false;
           }
-          var4 = (oc) (var3.a(240));
+          var4 = (oc) (var3.first(240));
           while (var4 != null) {
             if (var4.f(-128)) {
-              var5 = new kh(this.field_G);
-              var5.a(122, var4);
-              var6 = (oc) (var5.b(7));
+              var5 = new NodeDequeCursor(this.field_G);
+              var5.firstFrom(122, var4);
+              var6 = (oc) (var5.next(7));
               while (var6 != null) {
                 if (!var6.a(true, param0)) {
-                  var6 = (oc) (var5.b(7));
+                  var6 = (oc) (var5.next(7));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (oc) (var3.b(7));
+            var4 = (oc) (var3.next(7));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,9 +64,9 @@ class ib extends oc implements sd {
     final boolean b(oc param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        kh var4 = null;
+        NodeDequeCursor var4 = null;
         oc var5 = null;
-        kh var6 = null;
+        NodeDequeCursor var6 = null;
         oc var7 = null;
         int var8 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -79,21 +79,21 @@ class ib extends oc implements sd {
           if (this.field_G.isEmpty(false)) {
             return false;
           }
-          var4 = new kh(this.field_G);
-          var5 = (oc) (var4.a(true));
+          var4 = new NodeDequeCursor(this.field_G);
+          var5 = (oc) (var4.last(true));
           while (var5 != null) {
             if (var5.f(-57)) {
-              var6 = new kh(this.field_G);
-              var6.b(16802, var5);
-              var7 = (oc) (var6.d(-24706));
+              var6 = new NodeDequeCursor(this.field_G);
+              var6.lastFrom(16802, var5);
+              var7 = (oc) (var6.previous(-24706));
               while (var7 != null) {
                 if (var7.a(true, param0)) {
                   return true;
                 }
-                var7 = (oc) (var6.d(-24706));
+                var7 = (oc) (var6.previous(-24706));
               }
             }
-            var5 = (oc) (var4.d(-24706));
+            var5 = (oc) (var4.previous(-24706));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,14 +116,14 @@ class ib extends oc implements sd {
           this.field_l != null) {
           this.field_l.a(true, param3 - 20607, param1, (oc) (this), param0);
         }
-        kh var5 = new kh(this.field_G);
+        NodeDequeCursor var5 = new NodeDequeCursor(this.field_G);
         if (param3 != -11) {
           this.field_G = (NodeDeque) null;
         }
-        oc var6 = (oc) (var5.a(true));
+        oc var6 = (oc) (var5.last(true));
         while (var6 != null) {
           var6.a(this.field_w + param0, this.field_o + param1, param2, (byte) -11);
-          var6 = (oc) (var5.d(param3 - 24695));
+          var6 = (oc) (var5.previous(param3 - 24695));
         }
     }
 
@@ -140,17 +140,17 @@ class ib extends oc implements sd {
 
     private final void g(int param0) {
         int var5 = BrickABrac.field_J ? 1 : 0;
-        kh var2 = new kh(this.field_G);
+        NodeDequeCursor var2 = new NodeDequeCursor(this.field_G);
         int var3 = -77 % ((param0 - 69) / 46);
-        oc var4 = (oc) (var2.a(240));
+        oc var4 = (oc) (var2.first(240));
         while (var4 != null) {
           var4.e(1);
-          var4 = (oc) (var2.b(7));
+          var4 = (oc) (var2.next(7));
         }
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, oc param5, int param6) {
-        kh var8 = null;
+        NodeDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         oc var9 = null;
         int var10 = 0;
@@ -160,15 +160,15 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var8 = new kh(this.field_G);
-          var9 = (oc) (var8.a(240));
+          var8 = new NodeDequeCursor(this.field_G);
+          var9 = (oc) (var8.first(240));
           while (var9 != null) {
             if (var9.isLinked(0)) {
               if (var9.f(-65) &&
                 var9.a(param0, param1, param2, -126, param4, param5, param6)) {
                 return true;
               }
-              var9 = (oc) (var8.b(7));
+              var9 = (oc) (var8.next(7));
               continue;
             }
             break;
@@ -201,7 +201,7 @@ class ib extends oc implements sd {
     }
 
     final boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        kh var8 = null;
+        NodeDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         oc var9 = null;
         int var10 = 0;
@@ -211,15 +211,15 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var8 = new kh(this.field_G);
+          var8 = new NodeDequeCursor(this.field_G);
           if (param6 != 0) {
             return true;
           }
-          var9 = (oc) (var8.a(240));
+          var9 = (oc) (var8.first(240));
           while (var9 != null) {
             if (var9.isLinked(param6 ^ 0)) {
               if (!var9.a(param0, param1, param2 + this.field_o, this.field_w + param3, param4, param5, 0)) {
-                var9 = (oc) (var8.b(7));
+                var9 = (oc) (var8.next(7));
                 continue;
               }
               return true;
@@ -243,7 +243,7 @@ class ib extends oc implements sd {
 
     final void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
         RuntimeException runtimeException = null;
-        kh var7 = null;
+        NodeDequeCursor var7 = null;
         oc var8 = null;
         int var9 = 0;
         StringBuilder var10 = null;
@@ -253,8 +253,8 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          var7 = new kh(this.field_G);
-          var8 = (oc) (var7.a(240));
+          var7 = new NodeDequeCursor(this.field_G);
+          var8 = (oc) (var7.first(240));
           if (param4 != 19223) {
             var10 = (StringBuilder) null;
             this.a(-102, (Hashtable) null, 23, (StringBuilder) null);
@@ -262,7 +262,7 @@ class ib extends oc implements sd {
           while (var8 != null) {
             if (var8.isLinked(0)) {
               var8.a(param0, param1, param2 + this.field_w, param3, 19223, param5 + this.field_o);
-              var8 = (oc) (var7.b(7));
+              var8 = (oc) (var7.next(7));
               continue;
             }
             break;
@@ -319,7 +319,7 @@ class ib extends oc implements sd {
         StringBuilder discarded$2 = null;
         int var7 = 0;
         StringBuilder discarded$3 = null;
-        kh var5 = null;
+        NodeDequeCursor var5 = null;
         oc var6 = null;
         int var8 = 0;
         oc var9 = null;
@@ -332,15 +332,15 @@ class ib extends oc implements sd {
         RuntimeException var5_ref = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = new kh(this.field_G);
-          var6 = (oc) (var5.a(240));
+          var5 = new NodeDequeCursor(this.field_G);
+          var6 = (oc) (var5.first(240));
           while (var6 != null) {
             discarded$2 = param0.append('\n');
             for (var7 = 0; param1 >= var7; var7++) {
               discarded$3 = param0.append(' ');
             }
             var6.a(param1 + 1, param3, 24, param0);
-            var6 = (oc) (var5.b(7));
+            var6 = (oc) (var5.next(7));
           }
           if (param2 <= 52) {
             var9 = (oc) null;
@@ -434,7 +434,7 @@ class ib extends oc implements sd {
         param6 = param6 + (-(var9.canvasWidth / 2) + var7);
         param5 = param5 + (-(var9.canvasHeight / 2) + var8);
         if (param4) {
-          nb.a(-111, param5, param6, lk.field_n[param0]);
+          SoftwareFramebuffer.a(-111, param5, param6, lk.field_n[param0]);
           BoundedFile.field_a[param0].f(param6, param5, 256);
         }
         var9.drawTransparent(param6, param5);
@@ -494,13 +494,13 @@ class ib extends oc implements sd {
 
     oc g(byte param0) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        kh var2 = new kh(this.field_G);
-        oc var3 = (oc) (var2.a(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.field_G);
+        oc var3 = (oc) (var2.first(240));
         while (var3 != null) {
           if (var3.f(-83)) {
             return var3;
           }
-          var3 = (oc) (var2.b(7));
+          var3 = (oc) (var2.next(7));
         }
         if (param0 == -3) {
           return null;
@@ -511,22 +511,22 @@ class ib extends oc implements sd {
     }
 
     String d(int param0) {
-        kh var2;
+        NodeDequeCursor var2;
         oc var3;
         String var4;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        var2 = new kh(this.field_G);
+        var2 = new NodeDequeCursor(this.field_G);
         if (param0 < 6) {
           return (String) null;
         }
-        var3 = (oc) (var2.a(240));
+        var3 = (oc) (var2.first(240));
         while (var3 != null) {
           var4 = var3.d(37);
           if (var4 != null) {
             return var4;
           }
-          var3 = (oc) (var2.b(7));
+          var3 = (oc) (var2.next(7));
         }
         return null;
     }
@@ -537,7 +537,7 @@ class ib extends oc implements sd {
         int var7 = 0;
         StringBuilder var8 = null;
         oc var9 = null;
-        kh var10 = null;
+        NodeDequeCursor var10 = null;
         boolean stackIn_17_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -545,15 +545,15 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var10 = new kh(this.field_G);
-          var9 = (oc) (var10.a(param1 + 130));
+          var10 = new NodeDequeCursor(this.field_G);
+          var9 = (oc) (var10.first(param1 + 130));
           while (var9 != null) {
             if (var9.isLinked(0)) {
               if (var9.f(-118) &&
                 var9.a(param0, (byte) 110, param2, param3)) {
                 return true;
               }
-              var9 = (oc) (var10.b(param1 ^ 105));
+              var9 = (oc) (var10.next(param1 ^ 105));
               continue;
             }
             break;
@@ -566,7 +566,7 @@ class ib extends oc implements sd {
           if (var6 != 80) {
             return false;
           }
-          if (pe.heldKeys[81]) {
+          if (IntArrayRequest.heldKeys[81]) {
             stackIn_17_0 = this.b(param2, (byte) -118);
           } else {
             stackIn_17_0 = this.a(param2, (byte) -128);
@@ -591,11 +591,11 @@ class ib extends oc implements sd {
         if (param0) {
           ib.f((byte) 29);
         }
-        kh var2 = new kh(this.field_G);
-        oc var3 = (oc) (var2.a(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.field_G);
+        oc var3 = (oc) (var2.first(240));
         while (var3 != null) {
           var3.b(false);
-          var3 = (oc) (var2.b(7));
+          var3 = (oc) (var2.next(7));
         }
     }
 
@@ -609,20 +609,20 @@ class ib extends oc implements sd {
         int var7 = BrickABrac.field_J ? 1 : 0;
         int var3 = -70 % ((-17 - param0) / 43);
         int var2 = 0;
-        kh var4 = new kh(this.field_G);
-        oc var5 = (oc) (var4.a(240));
+        NodeDequeCursor var4 = new NodeDequeCursor(this.field_G);
+        oc var5 = (oc) (var4.first(240));
         while (var5 != null) {
           var6 = var5.e((byte) -86);
           if (var6 > var2) {
             var2 = var6;
           }
-          var5 = (oc) (var4.b(7));
+          var5 = (oc) (var4.next(7));
         }
         return var2;
     }
 
     final boolean a(boolean param0, oc param1) {
-        kh var3 = null;
+        NodeDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         oc var4 = null;
         int var5 = 0;
@@ -632,17 +632,17 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = new kh(this.field_G);
+          var3 = new NodeDequeCursor(this.field_G);
           if (!param0) {
             return true;
           }
-          var4 = (oc) (var3.a(240));
+          var4 = (oc) (var3.first(240));
           while (true) {
             if (var4 == null) {
               return false;
             }
             if (!var4.a(param0, param1)) {
-              var4 = (oc) (var3.b(7));
+              var4 = (oc) (var3.next(7));
               continue;
             }
             break;
@@ -664,7 +664,7 @@ class ib extends oc implements sd {
 
     void a(oc param0, byte param1, int param2, int param3) {
         RuntimeException runtimeException = null;
-        kh var5 = null;
+        NodeDequeCursor var5 = null;
         oc var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -674,12 +674,12 @@ class ib extends oc implements sd {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          var5 = new kh(this.field_G);
-          var6 = (oc) (var5.a(240));
+          var5 = new NodeDequeCursor(this.field_G);
+          var6 = (oc) (var5.first(240));
           while (var6 != null) {
             if (var6.isLinked(param1 + 0)) {
               var6.a(param0, (byte) 0, this.field_o + param2, this.field_w + param3);
-              var6 = (oc) (var5.b(7));
+              var6 = (oc) (var5.next(7));
               continue;
             }
             break;

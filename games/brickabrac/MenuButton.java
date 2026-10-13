@@ -67,7 +67,7 @@ final class MenuButton {
               var3 = AchievementBrowserScreen.field_A;
             }
           } else {
-            var3 = pe.field_k;
+            var3 = IntArrayRequest.field_k;
           }
           nh.a(this.width, this.height, -40, this.x, var3, this.y);
           if (29 != this.actionId &&

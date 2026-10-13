@@ -29,7 +29,7 @@ final class jj {
           field_a = (qn) null;
           if (m.a(2)) {
             var1 = 1;
-            pe.c(126);
+            IntArrayRequest.c(126);
             if (!GameClock.c((byte) 119)) {
               if (me.b(param0 + 39)) {
                 var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -99,7 +99,7 @@ final class jj {
         }
         if (m.a(2)) {
           var1 = 1;
-          pe.c(126);
+          IntArrayRequest.c(126);
           if (GameClock.c((byte) 119) &&
             !lg.a(9)) {
             var1 = 1;

@@ -109,7 +109,7 @@ final class BitPacketBuffer extends PacketBuffer {
           var9 = var24.field_wb;
           Rasterizer2D.setClip(destinationX, destinationY, destinationX + var8 / scaleDivisor, var9 / scaleDivisor + destinationY);
           if (var24.brickGroups != null) {
-            jo.a(scaleDivisor, var24, playerId, match, destinationX, 30, destinationY);
+            ProducerFramebuffer.a(scaleDivisor, var24, playerId, match, destinationX, 30, destinationY);
           }
           if (var24.field_M != -1) {
             var10_double = (double)(500 - var24.field_M);

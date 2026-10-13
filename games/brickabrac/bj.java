@@ -64,7 +64,7 @@ abstract class bj extends jc {
         this.field_O = this.field_t;
     }
 
-    final static String a(int param0, byte param1, PacketBuffer param2) {
+    final static String readCompressedString(int maximumLength, byte obfuscationGuard, PacketBuffer packet) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -79,16 +79,16 @@ abstract class bj extends jc {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            if (param1 < 36) {
+            if (obfuscationGuard < 36) {
               var6 = (PacketBuffer) null;
-              bj.a(61, (byte) 3, (PacketBuffer) null);
+              bj.readCompressedString(61, (byte) 3, (PacketBuffer) null);
             }
-            var3_int = param2.readUnsignedSmart(-32768);
-            if (param0 < var3_int) {
-              var3_int = param0;
+            var3_int = packet.readUnsignedSmart(-32768);
+            if (maximumLength < var3_int) {
+              var3_int = maximumLength;
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + so.field_d.a(var3_int, 0, param2.position, true, var4, param2.data);
+            packet.position = packet.position + so.textHuffman.decompress(var3_int, 0, packet.position, true, var4, packet.data);
             var5 = df.decodeCp1252(var3_int, -110, var4, 0);
             stackIn_5_0 = var5;
             return stackIn_5_0;
@@ -102,8 +102,8 @@ abstract class bj extends jc {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("bj.UB(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = new StringBuilder().append("bj.UB(").append(maximumLength).append(',').append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

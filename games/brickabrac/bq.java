@@ -207,18 +207,18 @@ final class bq {
             }
             ik.field_b = new String[var4];
             pm.a(CacheIoWorker.field_h, 0, ik.field_b, 0, var4);
-            fk.field_h = new String[var3_int - (var4 + 1)];
-            pm.a(CacheIoWorker.field_h, var4 + 1, fk.field_h, 0, -1 + (var3_int - var4));
+            HuffmanCodec.field_h = new String[var3_int - (var4 + 1)];
+            pm.a(CacheIoWorker.field_h, var4 + 1, HuffmanCodec.field_h, 0, -1 + (var3_int - var4));
             if (ik.field_b.length > rg.field_k.length) {
               stackIn_66_0 = ik.field_b.length;
             } else {
               stackIn_66_0 = rg.field_k.length;
             }
             var5 = stackIn_66_0;
-            if (fk.field_h.length <= h.field_F.length) {
+            if (HuffmanCodec.field_h.length <= h.field_F.length) {
               stackIn_69_0 = h.field_F.length;
             } else {
-              stackIn_69_0 = fk.field_h.length;
+              stackIn_69_0 = HuffmanCodec.field_h.length;
             }
             var6 = stackIn_69_0;
             var7 = var6 + (var5 + 7);
@@ -253,12 +253,12 @@ final class bq {
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_81_0 = qh.field_i;
               stackIn_81_1 = 7 + (var5 + var8Lifetime3);
-              stackIn_81_2 = ~fk.field_h.length;
+              stackIn_81_2 = ~HuffmanCodec.field_h.length;
               stackIn_81_3 = ~var8Lifetime3;
               if (stackIn_81_2 >= stackIn_81_3) {
                 stackIn_84_2 = "";
               } else {
-                stackIn_84_2 = fk.field_h[var8Lifetime3];
+                stackIn_84_2 = HuffmanCodec.field_h[var8Lifetime3];
               }
               stackIn_81_0[stackIn_81_1] = stackIn_84_2;
             }
@@ -303,7 +303,7 @@ final class bq {
             if (BrickABrac.field_K[var4Lifetime2] >= 0) {
               stackIn_119_1 = b.field_c;
             } else {
-              stackIn_119_1 = pe.field_s;
+              stackIn_119_1 = IntArrayRequest.field_s;
             }
             jj.field_c = stackIn_118_0 + stackIn_119_1;
           }
@@ -324,7 +324,7 @@ final class bq {
               var5Lifetime3 = var5Lifetime3 + (kn.field_y + ((jb.field_H << 1) + b.field_c));
               ce.field_a[var4Lifetime3][3] = (jb.field_H << 1) + b.field_c;
             } else {
-              var5Lifetime3 = var5Lifetime3 + pe.field_s;
+              var5Lifetime3 = var5Lifetime3 + IntArrayRequest.field_s;
             }
             var4Lifetime3++;
           }

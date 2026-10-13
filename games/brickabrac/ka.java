@@ -535,7 +535,7 @@ final class ka extends IntrusiveNode {
                   if (param1 != TimedSplashScreen.field_u ||
                     !hn.b((byte) 7)) {
                     if (var27Lifetime1 == 0) {
-                      var25 = (String) (var25) + "<br>" + rd.a(jo.field_k, new String[]{(String) (var26)}, (byte) 103);
+                      var25 = (String) (var25) + "<br>" + rd.a(ProducerFramebuffer.field_k, new String[]{(String) (var26)}, (byte) 103);
                     } else {
                       var25 = (String) (var25) + "<br>" + jm.field_l + (String) (var26);
                     }

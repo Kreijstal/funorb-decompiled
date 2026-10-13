@@ -510,7 +510,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             if (var2 != 2) {
               if (var2 != 3) {
                 if (var2 == 4) {
-                  jm.a((byte) 22);
+                  jm.handleCommonDataResponse((byte) 22);
                 } else {
                   if (var2 != 5) {
                     if (var2 != 6) {
@@ -840,7 +840,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
         }
         if (3 == clientStage &&
-          fk.a(vh.field_S, ma.field_P, ja.field_c, -111) &&
+          HuffmanCodec.a(vh.field_S, ma.field_P, ja.field_c, -111) &&
           rg.a(ja.field_c, (byte) 101)) {
           ui.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
@@ -908,7 +908,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           ap.a((byte) 117, CacheIoRequest.field_D);
         }
         if (uf.enabledCommonPackets[8]) {
-          fk.a(14114);
+          HuffmanCodec.a(14114);
         }
     }
 
@@ -932,7 +932,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           return;
         }
         jl.incomingPackets.readCipheredBytes(false, 0, var4, var5);
-        fk.a((byte) 114, uc.e((byte) -73), MenuButton.a(var5, (byte) 70), var3 != 0);
+        HuffmanCodec.a((byte) 114, uc.e((byte) -73), MenuButton.a(var5, (byte) 70), var3 != 0);
     }
 
     static {

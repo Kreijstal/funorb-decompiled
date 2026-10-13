@@ -229,7 +229,7 @@ final class wn {
               keyIndex = 0;
               while (true) {
                 if (112 > keyIndex) {
-                  pe.heldKeys[keyIndex] = false;
+                  IntArrayRequest.heldKeys[keyIndex] = false;
                   keyIndex++;
                   if (clientBranchFlag == 0) {
                     continue;
@@ -254,9 +254,9 @@ final class wn {
                   break;
                 }
                 if (stackIn_27_0 < 0) {
-                  pe.heldKeys[~keyChange] = false;
+                  IntArrayRequest.heldKeys[~keyChange] = false;
                 } else {
-                  pe.heldKeys[keyChange] = true;
+                  IntArrayRequest.heldKeys[keyChange] = true;
                 }
               }
             }

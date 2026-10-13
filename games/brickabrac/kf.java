@@ -270,7 +270,7 @@ final class kf extends k {
               }
               var3 = new java.net.URL(param2.getCodeBase(), param0);
               var3 = hg.a(param2, var3, -1);
-              fk.a((byte) 94, param2, var3.toString(), true);
+              HuffmanCodec.a((byte) 94, param2, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (Exception) (Object) decompiledCaughtException;

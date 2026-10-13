@@ -220,7 +220,7 @@ abstract class ag extends oc implements sd {
           if (var5_int != 80) {
             return false;
           }
-          if (pe.heldKeys[81]) {
+          if (IntArrayRequest.heldKeys[81]) {
             stackIn_20_0 = this.a(1, param2);
           } else {
             stackIn_20_0 = this.b(true, param2);
@@ -535,12 +535,12 @@ abstract class ag extends oc implements sd {
         int var5 = 0;
         Brick.field_A.field_Mb = param1;
         sc.field_c = true;
-        int var2_int = kc.field_q.field_g;
+        int var2_int = kc.framebuffer.width;
         if (param0 != -83) {
           return;
         }
         try {
-          var3 = kc.field_q.field_f;
+          var3 = kc.framebuffer.height;
           var4 = Brick.field_A.field_O.measureWrappedHeight(param1, 272, Brick.field_A.field_R);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           qp.field_f.a(-(2 * var5) + (-120 + var3), var5, (var2_int - 320) / 2, 320, (byte) 64);

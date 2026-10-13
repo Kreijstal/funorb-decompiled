@@ -19,9 +19,9 @@ final class HighscoresScreen extends MenuScreen {
         super.onEnter(usePointer, initialSelection, 101);
         rf.field_g = null;
         this.packIndex = 0;
-        if (pe.gameplayScreen != null &&
-          !pe.gameplayScreen.field_p) {
-          var4 = pe.gameplayScreen.match.configuration;
+        if (IntArrayRequest.gameplayScreen != null &&
+          !IntArrayRequest.gameplayScreen.field_p) {
+          var4 = IntArrayRequest.gameplayScreen.match.configuration;
           if (var4.pack.packId == 1) {
             this.packIndex = 1;
           }
@@ -550,12 +550,12 @@ final class HighscoresScreen extends MenuScreen {
         super(5, 38, 460, 402, 35, LevelPack.field_a);
         this.packIndex = 0;
         this.scoreFilterIndex = 0;
-        fk.field_g = ob.field_D.measureText("10. ") + 10;
+        HuffmanCodec.field_g = ob.field_D.measureText("10. ") + 10;
         SecondaryNodeQueue.field_b = new int[4];
-        SecondaryNodeQueue.field_b[2] = 125 + fk.field_g + 330;
-        SecondaryNodeQueue.field_b[1] = 125 + fk.field_g + 240;
-        SecondaryNodeQueue.field_b[0] = 125 + fk.field_g;
-        SecondaryNodeQueue.field_b[3] = 50 - (-fk.field_g - 500);
+        SecondaryNodeQueue.field_b[2] = 125 + HuffmanCodec.field_g + 330;
+        SecondaryNodeQueue.field_b[1] = 125 + HuffmanCodec.field_g + 240;
+        SecondaryNodeQueue.field_b[0] = 125 + HuffmanCodec.field_g;
+        SecondaryNodeQueue.field_b[3] = 50 - (-HuffmanCodec.field_g - 500);
         this.packSelector = new HighscorePackSelector(this, ObjectHistoryBuffer.field_k.length - 1, 2);
     }
 
@@ -669,7 +669,7 @@ final class HighscoresScreen extends MenuScreen {
         GzipInflater.a(475, 5, 243, 5, 178, (byte) -57, 120);
         var2 = 149 + nn.field_g.capHeight + 38;
         var3 = 0;
-        nn.field_g.drawLeft(DualLinkIterator.field_i, -fk.field_g + SecondaryNodeQueue.field_b[0] + 12, var2, var3, -1);
+        nn.field_g.drawLeft(DualLinkIterator.field_i, -HuffmanCodec.field_g + SecondaryNodeQueue.field_b[0] + 12, var2, var3, -1);
         nn.field_g.drawRight(SpriteGeometry.field_u, SecondaryNodeQueue.field_b[1], var2, var3, -1);
         nn.field_g.drawRight(ba.field_u, SecondaryNodeQueue.field_b[2], var2, var3, -1);
         nn.field_g.drawRight(pj.field_d, SecondaryNodeQueue.field_b[3], var2, var3, -1);

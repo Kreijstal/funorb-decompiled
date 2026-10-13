@@ -209,7 +209,7 @@ final class pf implements ub {
           ed.a(param5, param7, param2, (byte) 104);
           GameClock.b((byte) 13);
           h.g((byte) -24);
-          nb.b((byte) 40);
+          SoftwareFramebuffer.b((byte) 40);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

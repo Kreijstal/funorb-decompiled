@@ -117,7 +117,7 @@ final class MainMenuScreen extends MenuScreen {
             pa.a(true);
             sc.popRaster(-96);
             if (IntrusiveHashTable.field_k != null) {
-              pe.field_n = IntrusiveHashTable.field_k.field_m;
+              IntArrayRequest.field_n = IntrusiveHashTable.field_k.field_m;
             }
             IntrusiveHashTable.field_k = rd.a(0, (byte) 19);
             hc.field_h = 2 * hi.field_w.nextBoundedInt(-37880252, 2);

@@ -127,17 +127,17 @@ final class AchievementIcon extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, pe param1, int param2) {
+    final static void sendIntArrayRequest(int opcode, IntArrayRequest request, int obfuscationGuard) {
         BitPacketBuffer var3 = null;
         try {
           var3 = k.outgoingPackets;
-          var3.writeCipheredOpcode(-13413, param0);
-          int var4 = 29 / ((-57 - param2) / 59);
+          var3.writeCipheredOpcode(-13413, opcode);
+          int var4 = 29 / ((-57 - obfuscationGuard) / 59);
           var3.writeByte(114, 2);
           var3.writeByte(-126, 0);
-          var3.writeByte(73, param1.field_w);
+          var3.writeByte(73, request.requestId);
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "i.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "i.I(" + opcode + ',' + (request != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -192,11 +192,11 @@ final class AchievementIcon extends IntrusiveNode {
 
     final static void c(byte param0) {
         int var2 = BrickABrac.field_J ? 1 : 0;
-        if (pe.gameplayScreen.c(116)) {
+        if (IntArrayRequest.gameplayScreen.c(116)) {
           return;
         }
-        if ((1 << pe.gameplayScreen.field_k & pe.gameplayScreen.match.field_n) == 0) {
-          if (pe.gameplayScreen.match.field_n != 0) {
+        if ((1 << IntArrayRequest.gameplayScreen.field_k & IntArrayRequest.gameplayScreen.match.field_n) == 0) {
+          if (IntArrayRequest.gameplayScreen.match.field_n != 0) {
             ag.buttonLabels[10] = er.field_a;
             if (param0 != 32) {
               field_o = (String) null;
@@ -221,7 +221,7 @@ final class AchievementIcon extends IntrusiveNode {
     final static oh a(int param0, int param1, String param2) {
         oh var3 = null;
         RuntimeException var3_ref = null;
-        pe var4 = null;
+        IntArrayRequest var4 = null;
         oh stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -232,8 +232,8 @@ final class AchievementIcon extends IntrusiveNode {
           var3.field_d = param0;
           var3.field_g = param2;
           if (param1 > -27) {
-            var4 = (pe) null;
-            AchievementIcon.a(-57, (pe) null, 111);
+            var4 = (IntArrayRequest) null;
+            AchievementIcon.sendIntArrayRequest(-57, (IntArrayRequest) null, 111);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;
@@ -259,8 +259,8 @@ final class AchievementIcon extends IntrusiveNode {
           this.owner = null;
           return;
         }
-        pe var3 = (pe) null;
-        AchievementIcon.a(-1, (pe) null, 57);
+        IntArrayRequest var3 = (IntArrayRequest) null;
+        AchievementIcon.sendIntArrayRequest(-1, (IntArrayRequest) null, 57);
         aa.achievementIconPool.addLast((IntrusiveNode) (this), (byte) 3);
         this.thumbnailIsPlaceholder = false;
         this.cachedThumbnail = null;

@@ -80,7 +80,7 @@ final class CappedUrlRequest implements Runnable {
               mh.previousPacketOpcode = stackIn_11_0;
               rf.field_b = BitPacketBuffer.field_u;
               var5.position = 0;
-              c.a(ArchiveIndex.field_e, 12, pe.field_r, fe.field_ob, k.outgoingPackets);
+              c.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, fe.field_ob, k.outgoingPackets);
               cr.a(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

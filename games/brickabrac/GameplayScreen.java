@@ -60,9 +60,9 @@ final class GameplayScreen extends GameScreen {
         boolean decompiledFrameRemainder1 = true;
         var2Lifetime2 = stackIn_16_0 & stackIn_17_1;
         if (var2Lifetime2 != 0) {
-          if (!pe.heldKeys[fq.field_b] &&
-            !pe.heldKeys[td.field_u]) {
-            if (!(!pe.heldKeys[ac.field_f])) {
+          if (!IntArrayRequest.heldKeys[fq.field_b] &&
+            !IntArrayRequest.heldKeys[td.field_u]) {
+            if (!(!IntArrayRequest.heldKeys[ac.field_f])) {
               fieldTemp$0 = this.field_m - 1;
               this.field_m = this.field_m - 1;
               this.field_m = (this.match.playerCount + fieldTemp$0) % this.match.playerCount;
@@ -75,7 +75,7 @@ final class GameplayScreen extends GameScreen {
             this.field_m = fieldTemp$1 % this.match.playerCount;
           }
         }
-        stackIn_30_0 = (pe.heldKeys[fq.field_b]) || (pe.heldKeys[ac.field_f]) || (pe.heldKeys[td.field_u]);
+        stackIn_30_0 = (IntArrayRequest.heldKeys[fq.field_b]) || (IntArrayRequest.heldKeys[ac.field_f]) || (IntArrayRequest.heldKeys[td.field_u]);
         la.field_c = stackIn_30_0;
     }
 
@@ -451,13 +451,13 @@ final class GameplayScreen extends GameScreen {
             var9_int = (33423360 - 2 * (var20.paddle.x256 + var20.paddle.width256 / 2 << 8)) / 510;
             nk.field_c.bindRasterTarget();
             oa.field_Sb.a(true, var9_int, 0, 0, 0);
-            kc.field_q.a((byte) 78);
+            kc.framebuffer.bindRaster((byte) 78);
             ArchiveFetchClient.field_k = oa.field_Sb.c((byte) -116);
             fq.field_c = oa.field_Sb.b(-102);
             oa.field_Sb = rd.a(var20.levelState.value, (byte) 19);
             MenuScreen.field_i = 32;
             var20.field_tb = false;
-            pe.field_n = var20.levelState.value;
+            IntArrayRequest.field_n = var20.levelState.value;
           }
           if (!(var20.levelIndex <= 0) ||
             this.match.configuration.pack.packId != 0) {
@@ -607,7 +607,7 @@ final class GameplayScreen extends GameScreen {
             this.e(0);
             this.a(gq.field_Yb, this.field_r, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
             jj.field_d = jj.field_d | ja.a(this.field_t, this.match.configuration, -1 + this.field_r, true);
-            stackIn_8_0 = (hh.field_b[0] == 0);
+            stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
             be.field_a = stackIn_8_0;
           }
           if (this.match.playerCount == 1 &&
@@ -621,7 +621,7 @@ final class GameplayScreen extends GameScreen {
         if (param0 != 40) {
           return;
         }
-        pe.field_n = IntrusiveHashTable.field_k.field_m;
+        IntArrayRequest.field_n = IntrusiveHashTable.field_k.field_m;
     }
 
     final void a(boolean param0, byte param1) {
@@ -972,7 +972,7 @@ final class GameplayScreen extends GameScreen {
             25 >= keyCode) {
             var5Lifetime2Lifetime1 = -16 - (-keyCode - 1);
             this.field_s = true;
-            if (pe.heldKeys[81]) {
+            if (IntArrayRequest.heldKeys[81]) {
               var5Lifetime2Lifetime1 += 10;
             }
             if (var5Lifetime2Lifetime1 <= 11) {
@@ -1466,8 +1466,8 @@ final class GameplayScreen extends GameScreen {
           IntNode.field_j.addLast(var5, (byte) 3);
           OptionsScreen.field_z = OptionsScreen.field_z - (param0.scoreOffset + param3);
           ep.field_i = ep.field_i + (param1 + this.field_t);
-          if (hh.field_b[param0.packId] < param3) {
-            hh.field_b[param0.packId] = param3;
+          if (hh.unlockedLevelCounts[param0.packId] < param3) {
+            hh.unlockedLevelCounts[param0.packId] = param3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1510,13 +1510,13 @@ final class GameplayScreen extends GameScreen {
         RuntimeException var3 = null;
         try {
           param1.field_db = 0;
-          if (pe.heldKeys[param1.field_bb]) {
+          if (IntArrayRequest.heldKeys[param1.field_bb]) {
             param1.field_db = param1.field_db | 1;
           }
-          if (pe.heldKeys[param1.field_j]) {
+          if (IntArrayRequest.heldKeys[param1.field_j]) {
             param1.field_db = param1.field_db | 2;
           }
-          if (pe.heldKeys[param1.field_I]) {
+          if (IntArrayRequest.heldKeys[param1.field_I]) {
             param1.field_db = param1.field_db | 4;
           }
           if (param0 <= 50) {
@@ -1524,13 +1524,13 @@ final class GameplayScreen extends GameScreen {
           }
           if (this.match.playerCount == 1 ||
             this.field_p) {
-            if (pe.heldKeys[HighscoresScreen.field_w[1][0]]) {
+            if (IntArrayRequest.heldKeys[HighscoresScreen.field_w[1][0]]) {
               param1.field_db = param1.field_db | 1;
             }
-            if (pe.heldKeys[HighscoresScreen.field_w[1][1]]) {
+            if (IntArrayRequest.heldKeys[HighscoresScreen.field_w[1][1]]) {
               param1.field_db = param1.field_db | 2;
             }
-            if (!pe.heldKeys[HighscoresScreen.field_w[1][2]]) {
+            if (!IntArrayRequest.heldKeys[HighscoresScreen.field_w[1][2]]) {
               return;
             }
             param1.field_db = param1.field_db | 4;
@@ -1613,11 +1613,11 @@ final class GameplayScreen extends GameScreen {
         int var10Lifetime1Lifetime1;
         var11 = BrickABrac.field_J ? 1 : 0;
         var4 = -76 / ((-79 - param0) / 35);
-        var14 = kh.field_c[this.match.playerCount - 1];
+        var14 = NodeDequeCursor.field_c[this.match.playerCount - 1];
         var2 = var14;
-        var15 = kh.field_e[this.match.playerCount - 1];
+        var15 = NodeDequeCursor.field_e[this.match.playerCount - 1];
         var3 = var15;
-        var5 = kh.field_h[-1 + this.match.playerCount];
+        var5 = NodeDequeCursor.field_h[-1 + this.match.playerCount];
         var6 = this.field_m;
         if (null != oa.field_Sb) {
           for (var7 = 0; var7 < this.match.playerCount; var7++) {
@@ -1675,10 +1675,10 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount != 1) {
           if (2 != this.match.playerCount) {
-            var22 = kh.field_e[4];
+            var22 = NodeDequeCursor.field_e[4];
             var17 = var22;
             var3 = var17;
-            var21 = kh.field_c[4];
+            var21 = NodeDequeCursor.field_c[4];
             var16 = var21;
             var2 = var16;
             nh.a(169, 482, -40, -1, cd.field_h, -1);
@@ -1763,9 +1763,9 @@ final class GameplayScreen extends GameScreen {
           0 == (1 << 1 - this.field_m & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
           ClientException.a(var2[1], 424, false, this.match, 1 - this.field_m, var3[1]);
         }
-        var19 = kh.field_e[this.match.playerCount - 1];
+        var19 = NodeDequeCursor.field_e[this.match.playerCount - 1];
         var6Lifetime2 = this.field_m;
-        var18 = kh.field_c[this.match.playerCount - 1];
+        var18 = NodeDequeCursor.field_c[this.match.playerCount - 1];
         for (var7Lifetime4 = 0; this.match.playerCount > var7Lifetime4; var7Lifetime4++) {
           if (var5[var7Lifetime4] == 2) {
             var20 = ScorePopup.field_k[this.match.playerBoards[var6Lifetime2].field_H];
@@ -1865,8 +1865,8 @@ final class GameplayScreen extends GameScreen {
           gr.b(tn.field_C, -28463);
           DelayedPacket.field_m = -1;
           GameClock.field_b = -1;
-          if (jo.field_j == null) {
-            jo.field_j = rd.a(cm.field_p, new String[]{""}, (byte) 103).toLowerCase();
+          if (ProducerFramebuffer.field_j == null) {
+            ProducerFramebuffer.field_j = rd.a(cm.field_p, new String[]{""}, (byte) 103).toLowerCase();
             ff.field_j = pn.field_j.toLowerCase();
           }
           be.field_j = 0;

@@ -7,7 +7,7 @@ final class OptionsScreen extends FramedMenuScreen {
     static int field_z;
     static StringBuilder field_A;
     static String field_w;
-    static pe[] field_y;
+    static IntArrayRequest[] progressRequests;
     static mh field_v;
     static RgbSprite field_B;
 
@@ -35,12 +35,12 @@ final class OptionsScreen extends FramedMenuScreen {
           var6 = new RgbSprite(var4_int, var5);
           var6.bindRasterTarget();
           ma.field_O.drawCentered(param2, var4_int / param0, 2 + ma.field_O.ascent, 0, -1);
-          kc.field_q.a((byte) 124);
+          kc.framebuffer.bindRaster((byte) 124);
           var7 = new RgbSprite(var4_int * param1, var5 * param1);
           var7.bindRasterTarget();
           var6.a(0, 0, param1 * var4_int, param1 * var5);
           DualLinkDeque.a(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
-          kc.field_q.a((byte) 126);
+          kc.framebuffer.bindRaster((byte) 126);
           if (param3) {
             var8 = var7.width;
             var9 = 2 + ma.field_O.capHeight * param1;
@@ -99,7 +99,7 @@ final class OptionsScreen extends FramedMenuScreen {
     public static void c(boolean param0) {
         field_B = null;
         field_u = null;
-        field_y = null;
+        progressRequests = null;
         field_v = null;
         if (param0) {
           return;
@@ -110,7 +110,7 @@ final class OptionsScreen extends FramedMenuScreen {
 
     static {
         field_w = "This game has started.";
-        field_y = null;
+        progressRequests = null;
         field_A = new StringBuilder(80);
     }
 }

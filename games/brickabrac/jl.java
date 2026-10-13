@@ -54,7 +54,7 @@ final class jl {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_fr = gg.field_i[var3];
             var4_ref_fr.c(23);
-            fk.a(var3, (byte) 77);
+            HuffmanCodec.a(var3, (byte) 77);
             var5 = var4_ref_fr.field_f + var4_ref_fr.field_N >> 1;
             var6 = var4_ref_fr.field_d + var4_ref_fr.field_y >> 1;
             var7 = var4_ref_fr.field_x + var4_ref_fr.field_q >> 1;
@@ -102,7 +102,7 @@ final class jl {
             }
             var21[var16] = -2147483648;
             var17 = gg.field_i[var16];
-            fk.a(var16, (byte) 77);
+            HuffmanCodec.a(var16, (byte) 77);
             for (var18 = 0; var18 < 3; var18++) {
               MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.field_e[var15][var18];
             }

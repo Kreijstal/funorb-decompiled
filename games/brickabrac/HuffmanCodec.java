@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk {
-    private byte[] field_i;
+final class HuffmanCodec {
+    private byte[] codeLengths;
     static String[] field_h;
-    private int[] field_j;
+    private int[] decodeTrie;
     static NodeDeque field_f;
     static int field_g;
     static double field_b;
     static String field_c;
-    private int[] field_a;
+    private int[] codewords;
     static RgbSprite field_e;
     static String field_d;
 
@@ -148,7 +148,7 @@ final class fk {
           hd.field_a = param1;
           if (param0 != 105) {
             String var3 = (String) null;
-            fk.a((byte) 84, (java.applet.Applet) null, (String) null, false);
+            HuffmanCodec.a((byte) 84, (java.applet.Applet) null, (String) null, false);
           }
           wd.field_w.field_bb.clear((byte) -72);
           wd.field_w.a(hd.field_a, 0);
@@ -158,7 +158,7 @@ final class fk {
         }
     }
 
-    final int a(byte param0, int param1, int param2, byte[] param3, int param4, byte[] param5) {
+    final int compress(byte obfuscationGuard, int length, int inputOffset, byte[] output, int outputOffset, byte[] input) {
         int dupTemp$0 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -167,82 +167,82 @@ final class fk {
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
+        int pendingByte = 0;
         RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        var15 = BrickABrac.field_J ? 1 : 0;
+        int bitPosition = 0;
+        int symbol = 0;
+        int codeword = 0;
+        int codeLength = 0;
+        int outputByteIndex = 0;
+        int codeShift = 0;
+        int lastOutputByte = 0;
+        int clientBranchFlag = 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var7_int = 0;
-          param1 = param1 + param2;
-          var8 = param4 << 3;
+          pendingByte = 0;
+          length = length + inputOffset;
+          bitPosition = outputOffset << 3;
           while (true) {
-            if (param2 >= param1) {
-              if (param0 >= -91) {
-                fk.a(-104, (byte) 88);
+            if (inputOffset >= length) {
+              if (obfuscationGuard >= -91) {
+                HuffmanCodec.a(-104, (byte) 88);
               }
-              stackIn_22_0 = (7 + var8 >> 3) - param4;
+              stackIn_22_0 = (7 + bitPosition >> 3) - outputOffset;
               return stackIn_22_0;
             }
-            var9 = param5[param2] & 255;
-            var10 = this.field_a[var9];
-            var11 = this.field_i[var9];
-            if (var11 == 0) {
-              throw new RuntimeException("" + var9);
+            symbol = input[inputOffset] & 255;
+            codeword = this.codewords[symbol];
+            codeLength = this.codeLengths[symbol];
+            if (codeLength == 0) {
+              throw new RuntimeException("" + symbol);
             }
-            var12 = var8 >> 3;
-            var13 = var8 & 7;
-            var7_int = var7_int & -var13 >> 31;
-            var14 = var12 + (var13 + (var11 - 1) >> 3);
-            var8 = var8 + var11;
-            var13 += 24;
-            dupTemp$0 = LevelSelectScreen.d(var7_int, var10 >>> var13);
-            var7_int = dupTemp$0;
-            param3[var12] = (byte)dupTemp$0;
-            if (var14 > var12) {
-              var12++;
-              var13 -= 8;
-              var7_int = var10 >>> var13;
-              param3[var12] = (byte)(var10 >>> var13);
-              if (var14 > var12) {
-                var13 -= 8;
-                var12++;
-                var7_int = var10 >>> var13;
-                param3[var12] = (byte)(var10 >>> var13);
-                if (var12 < var14) {
-                  var12++;
-                  var13 -= 8;
-                  var7_int = var10 >>> var13;
-                  param3[var12] = (byte)(var10 >>> var13);
-                  if (var12 < var14) {
-                    var12++;
-                    var13 -= 8;
-                    var7_int = var10 << -var13;
-                    param3[var12] = (byte)(var10 << -var13);
+            outputByteIndex = bitPosition >> 3;
+            codeShift = bitPosition & 7;
+            pendingByte = pendingByte & -codeShift >> 31;
+            lastOutputByte = outputByteIndex + (codeShift + (codeLength - 1) >> 3);
+            bitPosition = bitPosition + codeLength;
+            codeShift += 24;
+            dupTemp$0 = LevelSelectScreen.d(pendingByte, codeword >>> codeShift);
+            pendingByte = dupTemp$0;
+            output[outputByteIndex] = (byte)dupTemp$0;
+            if (lastOutputByte > outputByteIndex) {
+              outputByteIndex++;
+              codeShift -= 8;
+              pendingByte = codeword >>> codeShift;
+              output[outputByteIndex] = (byte)(codeword >>> codeShift);
+              if (lastOutputByte > outputByteIndex) {
+                codeShift -= 8;
+                outputByteIndex++;
+                pendingByte = codeword >>> codeShift;
+                output[outputByteIndex] = (byte)(codeword >>> codeShift);
+                if (outputByteIndex < lastOutputByte) {
+                  outputByteIndex++;
+                  codeShift -= 8;
+                  pendingByte = codeword >>> codeShift;
+                  output[outputByteIndex] = (byte)(codeword >>> codeShift);
+                  if (outputByteIndex < lastOutputByte) {
+                    outputByteIndex++;
+                    codeShift -= 8;
+                    pendingByte = codeword << -codeShift;
+                    output[outputByteIndex] = (byte)(codeword << -codeShift);
                   }
                 }
               }
             }
-            param2++;
+            inputOffset++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_25_0 = var7;
-          stackIn_25_1 = new StringBuilder().append("fk.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_25_1 = new StringBuilder().append("fk.F(").append(obfuscationGuard).append(',').append(length).append(',').append(inputOffset).append(',');
+          if (output == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(outputOffset).append(',');
+          if (input == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
@@ -263,7 +263,7 @@ final class fk {
         try {
           if (param0 != 14114) {
             var4 = (ResourceArchive) null;
-            fk.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
+            HuffmanCodec.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
           }
           var1 = k.outgoingPackets;
           while (ik.a(104)) {
@@ -288,12 +288,12 @@ final class fk {
         field_e = null;
         field_f = null;
         if (param0 != -94) {
-          fk.a(119, (byte) 34);
+          HuffmanCodec.a(119, (byte) 34);
         }
         field_d = null;
     }
 
-    final int a(int param0, int param1, int param2, boolean param3, byte[] param4, byte[] param5) {
+    final int decompress(int length, int outputOffset, int inputOffset, boolean obfuscationGuard, byte[] output, byte[] input) {
         int dupTemp$0 = 0;
         int incrementValue$1 = 0;
         int dupTemp$2 = 0;
@@ -318,12 +318,12 @@ final class fk {
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
+        int trieIndex = 0;
         RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
+        int inputByteIndex = 0;
+        int inputByte = 0;
+        int leaf = 0;
+        int clientBranchFlag = 0;
         int var10Lifetime1;
         int var10Lifetime2;
         int var10Lifetime3;
@@ -331,166 +331,166 @@ final class fk {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = BrickABrac.field_J ? 1 : 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (0 == param0) {
+          if (0 == length) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          if (!param3) {
-            fk.a((byte) 104);
+          if (!obfuscationGuard) {
+            HuffmanCodec.a((byte) 104);
           }
-          param0 = param0 + param1;
-          var7_int = 0;
-          var8 = param2;
+          length = length + outputOffset;
+          trieIndex = 0;
+          inputByteIndex = inputOffset;
           scanLoop1: while (true) {
-            var9 = param5[var8];
-            if (var9 >= 0) {
-              var7_int++;
+            inputByte = input[inputByteIndex];
+            if (inputByte >= 0) {
+              trieIndex++;
             } else {
-              var7_int = this.field_j[var7_int];
+              trieIndex = this.decodeTrie[trieIndex];
             }
-            dupTemp$0 = this.field_j[var7_int];
-            var10 = dupTemp$0;
+            dupTemp$0 = this.decodeTrie[trieIndex];
+            leaf = dupTemp$0;
             if (0 > dupTemp$0) {
-              incrementValue$1 = param1;
-              param1++;
-              param4[incrementValue$1] = (byte)(~var10);
-              if (param1 >= param0) {
+              incrementValue$1 = outputOffset;
+              outputOffset++;
+              output[incrementValue$1] = (byte)(~leaf);
+              if (outputOffset >= length) {
                 break scanLoop1;
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            if (0 != (64 & var9)) {
-              var7_int = this.field_j[var7_int];
+            if (0 != (64 & inputByte)) {
+              trieIndex = this.decodeTrie[trieIndex];
             } else {
-              var7_int++;
+              trieIndex++;
             }
-            dupTemp$2 = this.field_j[var7_int];
+            dupTemp$2 = this.decodeTrie[trieIndex];
             var10Lifetime1 = dupTemp$2;
             if (dupTemp$2 < 0) {
-              incrementValue$3 = param1;
-              param1++;
-              param4[incrementValue$3] = (byte)(~var10Lifetime1);
-              if (param1 >= param0) {
+              incrementValue$3 = outputOffset;
+              outputOffset++;
+              output[incrementValue$3] = (byte)(~var10Lifetime1);
+              if (outputOffset >= length) {
                 break scanLoop1;
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            if ((32 & var9) == 0) {
-              var7_int++;
+            if ((32 & inputByte) == 0) {
+              trieIndex++;
             } else {
-              var7_int = this.field_j[var7_int];
+              trieIndex = this.decodeTrie[trieIndex];
             }
-            dupTemp$4 = this.field_j[var7_int];
+            dupTemp$4 = this.decodeTrie[trieIndex];
             var10Lifetime2 = dupTemp$4;
             if (0 > dupTemp$4) {
-              incrementValue$5 = param1;
-              param1++;
-              param4[incrementValue$5] = (byte)(~var10Lifetime2);
-              if (param0 <= param1) {
+              incrementValue$5 = outputOffset;
+              outputOffset++;
+              output[incrementValue$5] = (byte)(~var10Lifetime2);
+              if (length <= outputOffset) {
                 break scanLoop1;
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            if ((16 & var9) == 0) {
-              var7_int++;
+            if ((16 & inputByte) == 0) {
+              trieIndex++;
             } else {
-              var7_int = this.field_j[var7_int];
+              trieIndex = this.decodeTrie[trieIndex];
             }
-            dupTemp$6 = this.field_j[var7_int];
+            dupTemp$6 = this.decodeTrie[trieIndex];
             var10Lifetime3 = dupTemp$6;
             if (dupTemp$6 < 0) {
-              incrementValue$7 = param1;
-              param1++;
-              param4[incrementValue$7] = (byte)(~var10Lifetime3);
-              if (param0 <= param1) {
+              incrementValue$7 = outputOffset;
+              outputOffset++;
+              output[incrementValue$7] = (byte)(~var10Lifetime3);
+              if (length <= outputOffset) {
                 break scanLoop1;
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            if (0 == (var9 & 8)) {
-              var7_int++;
+            if (0 == (inputByte & 8)) {
+              trieIndex++;
             } else {
-              var7_int = this.field_j[var7_int];
+              trieIndex = this.decodeTrie[trieIndex];
             }
-            dupTemp$8 = this.field_j[var7_int];
+            dupTemp$8 = this.decodeTrie[trieIndex];
             var10Lifetime4 = dupTemp$8;
             if (dupTemp$8 < 0) {
-              incrementValue$9 = param1;
-              param1++;
-              param4[incrementValue$9] = (byte)(~var10Lifetime4);
-              if (param1 >= param0) {
+              incrementValue$9 = outputOffset;
+              outputOffset++;
+              output[incrementValue$9] = (byte)(~var10Lifetime4);
+              if (outputOffset >= length) {
                 break scanLoop1;
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            if ((var9 & 4) != 0) {
-              var7_int = this.field_j[var7_int];
+            if ((inputByte & 4) != 0) {
+              trieIndex = this.decodeTrie[trieIndex];
             } else {
-              var7_int++;
+              trieIndex++;
             }
-            dupTemp$10 = this.field_j[var7_int];
+            dupTemp$10 = this.decodeTrie[trieIndex];
             var10Lifetime5 = dupTemp$10;
             if (dupTemp$10 < 0) {
-              incrementValue$11 = param1;
-              param1++;
-              param4[incrementValue$11] = (byte)(~var10Lifetime5);
-              if (param1 >= param0) {
-                return -param2 + (1 + var8);
+              incrementValue$11 = outputOffset;
+              outputOffset++;
+              output[incrementValue$11] = (byte)(~var10Lifetime5);
+              if (outputOffset >= length) {
+                return -inputOffset + (1 + inputByteIndex);
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            if ((2 & var9) == 0) {
-              var7_int++;
+            if ((2 & inputByte) == 0) {
+              trieIndex++;
             } else {
-              var7_int = this.field_j[var7_int];
+              trieIndex = this.decodeTrie[trieIndex];
             }
-            dupTemp$12 = this.field_j[var7_int];
+            dupTemp$12 = this.decodeTrie[trieIndex];
             var10Lifetime6 = dupTemp$12;
             if (dupTemp$12 < 0) {
-              incrementValue$13 = param1;
-              param1++;
-              param4[incrementValue$13] = (byte)(~var10Lifetime6);
-              if (param1 >= param0) {
+              incrementValue$13 = outputOffset;
+              outputOffset++;
+              output[incrementValue$13] = (byte)(~var10Lifetime6);
+              if (outputOffset >= length) {
                 break scanLoop1;
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            if (0 == (var9 & 1)) {
-              var7_int++;
+            if (0 == (inputByte & 1)) {
+              trieIndex++;
             } else {
-              var7_int = this.field_j[var7_int];
+              trieIndex = this.decodeTrie[trieIndex];
             }
-            dupTemp$14 = this.field_j[var7_int];
+            dupTemp$14 = this.decodeTrie[trieIndex];
             var10Lifetime7 = dupTemp$14;
             if (dupTemp$14 < 0) {
-              incrementValue$15 = param1;
-              param1++;
-              param4[incrementValue$15] = (byte)(~var10Lifetime7);
-              if (param1 >= param0) {
+              incrementValue$15 = outputOffset;
+              outputOffset++;
+              output[incrementValue$15] = (byte)(~var10Lifetime7);
+              if (outputOffset >= length) {
                 break scanLoop1;
               }
-              var7_int = 0;
+              trieIndex = 0;
             }
-            var8++;
+            inputByteIndex++;
             continue;
 
           }
-          stackIn_70_0 = -param2 + (1 + var8);
+          stackIn_70_0 = -inputOffset + (1 + inputByteIndex);
           return stackIn_70_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_73_0 = var7;
-          stackIn_73_1 = new StringBuilder().append("fk.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_73_1 = new StringBuilder().append("fk.A(").append(length).append(',').append(outputOffset).append(',').append(inputOffset).append(',').append(obfuscationGuard).append(',');
+          if (output == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
           }
           stackIn_76_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',');
-          if (param5 == null) {
+          if (input == null) {
             stackIn_77_2 = "null";
           } else {
             stackIn_77_2 = "{...}";
@@ -549,65 +549,65 @@ final class fk {
         }
     }
 
-    fk(byte[] param0) {
-        int var5 = 0;
-        int var14 = 0;
+    HuffmanCodec(byte[] codeLengths) {
+        int symbol = 0;
+        int copyIndex = 0;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
+        int symbolCount = 0;
         RuntimeException var2 = null;
-        int[] var3 = null;
-        int var4 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
+        int[] nextCodeByLength = null;
+        int nextTrieSlot = 0;
+        int codeLength = 0;
+        int carryMask = 0;
+        int codeword = 0;
+        int nextCodeword = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int[] var13 = null;
-        int[] var16 = null;
-        int[] var17 = null;
-        int var10Lifetime1;
-        int var10Lifetime2;
-        int var11Lifetime1;
-        int var12Lifetime1;
+        int[] expandedTrie = null;
+        int[] nextCodesAlias = null;
+        int[] nextCodes = null;
+        int longerLength;
+        int trieIndex;
+        int bitIndex;
+        int bitMask;
         try {
-          var2_int = param0.length;
-          this.field_i = param0;
-          this.field_a = new int[var2_int];
-          var17 = new int[33];
-          var16 = var17;
-          var3 = var16;
-          this.field_j = new int[8];
-          var4 = 0;
-          for (var5 = 0; var5 < var2_int; var5++) {
-            var6 = param0[var5];
-            if (var6 != 0) {
+          symbolCount = codeLengths.length;
+          this.codeLengths = codeLengths;
+          this.codewords = new int[symbolCount];
+          nextCodes = new int[33];
+          nextCodesAlias = nextCodes;
+          nextCodeByLength = nextCodesAlias;
+          this.decodeTrie = new int[8];
+          nextTrieSlot = 0;
+          for (symbol = 0; symbol < symbolCount; symbol++) {
+            codeLength = codeLengths[symbol];
+            if (codeLength != 0) {
               boolean decompiledFrameRemainder0 = true;
               boolean decompiledFrameCompleted1 = true;
               boolean decompiledFrameCompleted0 = true;
-              var7 = 1 << -var6 + 32;
-              var8 = var17[var6];
-              this.field_a[var5] = var8;
-              if ((var8 & var7) == 0) {
-                var9 = var7 | var8;
-                var10 = var6 - 1;
+              carryMask = 1 << -codeLength + 32;
+              codeword = nextCodes[codeLength];
+              this.codewords[symbol] = codeword;
+              if ((codeword & carryMask) == 0) {
+                nextCodeword = carryMask | codeword;
+                var10 = codeLength - 1;
                 while (var10 >= 1) {
-                  var11 = var17[var10];
-                  if (~var8 != ~var11) {
+                  var11 = nextCodes[var10];
+                  if (~codeword != ~var11) {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
                   var12 = 1 << 32 - var10;
                   if ((var12 & var11) != 0) {
-                    var3[var10] = var3[var10 - 1];
+                    nextCodeByLength[var10] = nextCodeByLength[var10 - 1];
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var3[var10] = LevelSelectScreen.d(var12, var11);
+                  nextCodeByLength[var10] = LevelSelectScreen.d(var12, var11);
                   var10--;
                 }
                 if (decompiledFrameCompleted1) {
@@ -617,37 +617,37 @@ final class fk {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted1) &&
                 (decompiledFrameCompleted0)) {
-                var9 = var3[var6 - 1];
+                nextCodeword = nextCodeByLength[codeLength - 1];
               }
-              var17[var6] = var9;
-              for (var10Lifetime1 = var6 + 1; var10Lifetime1 <= 32; var10Lifetime1++) {
-                if (var8 == var17[var10Lifetime1]) {
-                  var17[var10Lifetime1] = var9;
+              nextCodes[codeLength] = nextCodeword;
+              for (longerLength = codeLength + 1; longerLength <= 32; longerLength++) {
+                if (codeword == nextCodes[longerLength]) {
+                  nextCodes[longerLength] = nextCodeword;
                 }
               }
-              var10Lifetime2 = 0;
-              for (var11Lifetime1 = 0; var6 > var11Lifetime1; var11Lifetime1++) {
-                var12Lifetime1 = -2147483648 >>> var11Lifetime1;
-                if ((var8 & var12Lifetime1) == 0) {
-                  var10Lifetime2++;
+              trieIndex = 0;
+              for (bitIndex = 0; codeLength > bitIndex; bitIndex++) {
+                bitMask = -2147483648 >>> bitIndex;
+                if ((codeword & bitMask) == 0) {
+                  trieIndex++;
                 } else {
-                  if (this.field_j[var10Lifetime2] == 0) {
-                    this.field_j[var10Lifetime2] = var4;
+                  if (this.decodeTrie[trieIndex] == 0) {
+                    this.decodeTrie[trieIndex] = nextTrieSlot;
                   }
-                  var10Lifetime2 = this.field_j[var10Lifetime2];
+                  trieIndex = this.decodeTrie[trieIndex];
                 }
-                if (this.field_j.length <= var10Lifetime2) {
-                  var13 = new int[this.field_j.length * 2];
-                  for (var14 = 0; this.field_j.length > var14; var14++) {
-                    var13[var14] = this.field_j[var14];
+                if (this.decodeTrie.length <= trieIndex) {
+                  expandedTrie = new int[this.decodeTrie.length * 2];
+                  for (copyIndex = 0; this.decodeTrie.length > copyIndex; copyIndex++) {
+                    expandedTrie[copyIndex] = this.decodeTrie[copyIndex];
                   }
-                  this.field_j = var13;
+                  this.decodeTrie = expandedTrie;
                 }
-                var12Lifetime1 = var12Lifetime1 >>> 1;
+                bitMask = bitMask >>> 1;
               }
-              this.field_j[var10Lifetime2] = ~var5;
-              if (var10Lifetime2 >= var4) {
-                var4 = 1 + var10Lifetime2;
+              this.decodeTrie[trieIndex] = ~symbol;
+              if (trieIndex >= nextTrieSlot) {
+                nextTrieSlot = 1 + trieIndex;
               }
             }
           }
@@ -657,7 +657,7 @@ final class fk {
           var2 = decompiledCaughtException;
           stackIn_37_0 = var2;
           stackIn_37_1 = new StringBuilder().append("fk.<init>(");
-          if (param0 == null) {
+          if (codeLengths == null) {
             stackIn_38_2 = "null";
           } else {
             stackIn_38_2 = "{...}";

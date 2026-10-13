@@ -38,7 +38,7 @@ final class GameUiController implements GameUiLifecycle {
         ie.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
         if (obfuscationGuard) {
-          discarded$0 = this.pollRequiredFonts((byte) -1);
+          discarded$0 = this.pollSavedProgress((byte) -1);
         }
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
@@ -50,7 +50,7 @@ final class GameUiController implements GameUiLifecycle {
         KeyboardInput.a(new sb(), 0);
         td.g(0);
         qn.a(240, 0, 640, 0, -6532);
-        bm.a(kh.field_i, qb.field_r, 24876, LevelList.field_o, GameScreen.field_e, ki.field_f, AchievementIcon.field_s);
+        bm.a(NodeDequeCursor.field_i, qb.field_r, 24876, LevelList.field_o, GameScreen.field_e, ki.field_f, AchievementIcon.field_s);
         oc.a(1, ob.field_D);
         hk.h((byte) 55);
         hk.initializeMenuScreens((byte) 115, ki.field_f);
@@ -60,7 +60,7 @@ final class GameUiController implements GameUiLifecycle {
 
     final static GameScreen getScreen(int screenId, byte obfuscationGuard) {
         if (-1 == screenId) {
-          return (GameScreen) ((Object) pe.gameplayScreen);
+          return (GameScreen) ((Object) IntArrayRequest.gameplayScreen);
         }
         if (screenId == -2) {
           return (GameScreen) ((Object) ki.field_p);
@@ -88,7 +88,7 @@ final class GameUiController implements GameUiLifecycle {
           ResourceRequest.field_y = gq.d((byte) -126);
         }
         if (!jc.field_H) {
-          jc.field_H = this.pollRequiredFonts((byte) 127);
+          jc.field_H = this.pollSavedProgress((byte) 127);
         }
         if (obfuscationGuard != 23570) {
           this.initializeUi(true);
@@ -100,16 +100,16 @@ final class GameUiController implements GameUiLifecycle {
         return stackIn_15_0;
     }
 
-    private final boolean pollRequiredFonts(byte obfuscationGuard) {
+    private final boolean pollSavedProgress(byte obfuscationGuard) {
         int var2;
         int var3;
         int var4;
         int var2Lifetime1;
         var4 = BrickABrac.field_J ? 1 : 0;
-        if (null == OptionsScreen.field_y) {
-          OptionsScreen.field_y = new pe[2];
+        if (null == OptionsScreen.progressRequests) {
+          OptionsScreen.progressRequests = new IntArrayRequest[2];
           for (var2 = 0; var2 < 2; var2++) {
-            OptionsScreen.field_y[var2] = fa.a(1, (byte) -72, var2, 5);
+            OptionsScreen.progressRequests[var2] = fa.requestIntArray(1, (byte) -72, var2, 5);
           }
         }
         var2Lifetime1 = 1;
@@ -118,25 +118,25 @@ final class GameUiController implements GameUiLifecycle {
           return true;
         }
         while (var3 < 2) {
-          if (OptionsScreen.field_y[var3] != null) {
-            if (!OptionsScreen.field_y[var3].field_v) {
+          if (OptionsScreen.progressRequests[var3] != null) {
+            if (!OptionsScreen.progressRequests[var3].complete) {
               var2Lifetime1 = 0;
             } else {
-              if (OptionsScreen.field_y[var3].field_m[0] > hh.field_b[var3]) {
-                hh.field_b[var3] = OptionsScreen.field_y[var3].field_m[0];
+              if (OptionsScreen.progressRequests[var3].values[0] > hh.unlockedLevelCounts[var3]) {
+                hh.unlockedLevelCounts[var3] = OptionsScreen.progressRequests[var3].values[0];
               }
-              jj.field_d = jj.field_d | ln.a(na.field_L[var3], 0, true, hh.field_b[var3]);
+              jj.field_d = jj.field_d | ln.a(na.field_L[var3], 0, true, hh.unlockedLevelCounts[var3]);
               if (!DelayedPacket.c(obfuscationGuard ^ 27)) {
-                hh.field_b[var3] = 0;
+                hh.unlockedLevelCounts[var3] = 0;
               } else {
-                hh.field_b[var3] = 0;
+                hh.unlockedLevelCounts[var3] = 0;
               }
             }
           }
           var3++;
         }
         if (var2Lifetime1 != 0) {
-          OptionsScreen.field_y = null;
+          OptionsScreen.progressRequests = null;
         }
         return var2Lifetime1 != 0;
     }
@@ -153,7 +153,7 @@ final class GameUiController implements GameUiLifecycle {
         qb.field_r = aj.a(7, true);
         AchievementIcon.field_s = aj.a(8, obfuscationGuard);
         LevelList.field_o = aj.a(9, true);
-        kh.field_i = aj.a(10, true);
+        NodeDequeCursor.field_i = aj.a(10, true);
         nl.field_a = aj.a(11, true);
         IntHistoryBuffer.field_i = aj.a(12, true);
         wd.field_C = aj.a(13, true);
@@ -169,7 +169,7 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(qb.field_r, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(LevelList.field_o, false, kc.field_i, sg.field_m);
-        bh.field_tb.a(kh.field_i, false, cm.field_n, bb.field_a);
+        bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
         bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
         bh.field_tb.a(wd.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
@@ -195,7 +195,7 @@ final class GameUiController implements GameUiLifecycle {
                   if (var3 != 5) {
                     return true;
                   }
-                  rj.a(new fk(uf.field_a.takeFileByName(121, "", "huffman")), false);
+                  rj.installTextHuffman(new HuffmanCodec(uf.field_a.takeFileByName(121, "", "huffman")), false);
                   uf.field_a = null;
                 }
               } else {
@@ -216,7 +216,7 @@ final class GameUiController implements GameUiLifecycle {
         } else {
           mc.a((byte) 115);
           LevelList.a(-1);
-          SecondaryNodeQueue.a(LevelList.field_o, kh.field_i, (byte) -38, AchievementIcon.field_s, qb.field_r);
+          SecondaryNodeQueue.a(LevelList.field_o, NodeDequeCursor.field_i, (byte) -38, AchievementIcon.field_s, qb.field_r);
         }
         if (var2 != 0) {
           be.uiBootstrapStage = be.uiBootstrapStage + 1;
