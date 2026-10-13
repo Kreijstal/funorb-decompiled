@@ -79,11 +79,11 @@ class ClientUiComponent extends ClientUiNode {
           field_K = (int[][]) null;
         }
         if (param0 ||
-          null == vu.currentRoom) {
+          null == ToggleWidget.currentRoom) {
           ChannelGainProfile.field_f = false;
         }
         if (!param0) {
-          if (null != vu.currentRoom) {
+          if (null != ToggleWidget.currentRoom) {
             if (ModalDialogHost.field_J <= 0) {
               if (PreparedAction.field_r <= 0) {
                 if (mj.field_c > InstructionsPanel.field_D) {
@@ -99,7 +99,7 @@ class ClientUiComponent extends ClientUiNode {
               ModalDialogHost.field_J = ModalDialogHost.field_J - 1;
             }
           } else {
-            if (null == no.roomSetup) {
+            if (null == NumericDateInputWidget.roomSetup) {
               ChannelGainProfile.field_f = false;
               if (PreparedAction.field_r > 0) {
                 PreparedAction.field_r = PreparedAction.field_r - 1;
@@ -560,7 +560,7 @@ class ClientUiComponent extends ClientUiNode {
           AnimationSequence.a(stackIn_4_0, -106);
           DebugConsole.field_w.setLayout(-40 + BitmapTextWidgetPainter.field_a.height - 2, (byte) -125, 0, BitmapTextWidgetPainter.field_a.width, 0);
           PrintVictoryConditionsConsoleCommand.field_E.setBounds(jn.field_d, -20500, eb.field_c.width, 0, 0);
-          stackIn_6_0 = di.field_l;
+          stackIn_6_0 = MatchingTextValidator.field_l;
           stackIn_6_1 = 18;
           stackIn_6_2 = -20500;
           stackIn_6_3 = eb.field_c.width;

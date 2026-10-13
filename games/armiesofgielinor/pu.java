@@ -70,8 +70,8 @@ final class pu {
         RuntimeException var1 = null;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          vu.currentRoom = null;
-          no.roomSetup = null;
+          ToggleWidget.currentRoom = null;
+          NumericDateInputWidget.roomSetup = null;
           SpellCastAction.field_s = false;
           if (null != SummonAction.lobbyPlayerOrder) {
             SummonAction.lobbyPlayerOrder.clear(76);
@@ -200,14 +200,14 @@ final class pu {
           if (param0 != 28704) {
             field_h = (String) null;
           }
-          var1 = vl.outgoingPacket;
+          var1 = EmailValidator.outgoingPacket;
           while (ContextualRuntimeException.a(param0 ^ -13083)) {
             var1.writeCipheredOpcode(32161, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             RasterState.a(param0 ^ 28704, var1);
-            vl.outgoingPacket.writeByteLengthPrefix(-var2 + var1.position, param0 - 22774);
+            EmailValidator.outgoingPacket.writeByteLengthPrefix(-var2 + var1.position, param0 - 22774);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

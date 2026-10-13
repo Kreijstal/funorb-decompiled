@@ -17,10 +17,10 @@ final class StateChangeEvent extends GameEvent {
         if (param0 >= -73) {
           field_y = (String) null;
         }
-        if (ib.field_j != -InteractiveWidget.field_C + 0 &&
-          250 - InteractiveWidget.field_C == ib.field_j) {
+        if (PasswordValidator.field_j != -InteractiveWidget.field_C + 0 &&
+          250 - InteractiveWidget.field_C == PasswordValidator.field_j) {
         }
-        ib.field_j = ib.field_j + 1;
+        PasswordValidator.field_j = PasswordValidator.field_j + 1;
     }
 
     final boolean a(NodeDeque param0, byte param1, GameplayController param2) {
@@ -230,10 +230,10 @@ final class StateChangeEvent extends GameEvent {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          wd.field_b = rs.field_n.textWidth(DisplacedUnitMarker.field_t[17]) + 20;
+          AccountNameCheckResult.field_b = rs.field_n.textWidth(DisplacedUnitMarker.field_t[17]) + 20;
           var1_int = rs.field_n.textWidth(DisplacedUnitMarker.field_t[18]);
-          if (wd.field_b < var1_int) {
-            wd.field_b = var1_int;
+          if (AccountNameCheckResult.field_b < var1_int) {
+            AccountNameCheckResult.field_b = var1_int;
           }
           if (MoveEvent.instructionsPanel == null) {
             MoveEvent.instructionsPanel = new InstructionsPanel();
@@ -344,7 +344,7 @@ final class StateChangeEvent extends GameEvent {
         if (DamageEvent.g(98)) {
           return;
         }
-        CipherPacketBuffer var4 = vl.outgoingPacket;
+        CipherPacketBuffer var4 = EmailValidator.outgoingPacket;
         var4.writeCipheredOpcode(32161, 16);
         var4.position = var4.position + 1;
         int var5 = var4.position;
@@ -466,16 +466,16 @@ final class StateChangeEvent extends GameEvent {
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
-        se.field_g = cr.a("", 4210752);
-        se.field_g.a(false, true);
+        se.emailCheckResult = cr.a("", 4210752);
+        se.emailCheckResult.setResult(false, true);
         if (param3 != 0) {
           return;
         }
         try {
           MoveEvent.a(param2, false, param1, param0);
           da.b(-2);
-          ChannelBaseVolumeConsoleCommand.field_L = nb.field_i;
-          mh.field_b = nb.field_i;
+          ChannelBaseVolumeConsoleCommand.field_L = nb.nameCheckResultConsumed;
+          mh.accountNameCheckState = nb.nameCheckResultConsumed;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qq.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

@@ -251,9 +251,9 @@ final class ConsoleTokenCursor {
                 var13 = stackIn_75_0;
               } else {
                 if (param3 == -1) {
-                  stackIn_66_0 = (vu.currentRoom.playerCapacity != lm.field_e[var12]) ? 0 : 1;
+                  stackIn_66_0 = (ToggleWidget.currentRoom.playerCapacity != lm.field_e[var12]) ? 0 : 1;
                 } else {
-                  stackIn_66_0 = ((vu.currentRoom.gameOptions[param3] & 255) != var12) ? 0 : 1;
+                  stackIn_66_0 = ((ToggleWidget.currentRoom.gameOptions[param3] & 255) != var12) ? 0 : 1;
                 }
                 var13 = stackIn_66_0;
               }

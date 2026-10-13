@@ -18,7 +18,7 @@ final class kp implements WidgetPainter {
         int var2 = -125 / ((obfuscationGuard + 11) / 51);
         int var3 = 0;
         if (0 == channelId) {
-          var3 = ol.field_B;
+          var3 = MaskedTextEntryPainter.field_B;
         }
         if (channelId == 1) {
           var3 = QuickChatCategory.field_D;

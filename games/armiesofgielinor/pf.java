@@ -23,7 +23,7 @@ final class pf {
             }
             return;
           }
-          SphinxActionRequest.field_v.a(true, -6226, en.field_F, AiUnitPlanner.field_s);
+          SphinxActionRequest.field_v.a(true, -6226, DateInputWidget.field_F, AiUnitPlanner.field_s);
           SphinxActionRequest.field_v.advanceDialogs((byte) -117);
           while (Unit.pollKeyEvent((byte) 107)) {
             SphinxActionRequest.field_v.a(rs.keyCode, DualNodeDeque.typedCharacter, 80);
@@ -99,7 +99,7 @@ final class pf {
             return null;
           }
           var4 = new CampaignMission();
-          no.readTaggedFields(param2, var4, param0, -24721);
+          NumericDateInputWidget.readTaggedFields(param2, var4, param0, -24721);
           var4.a(true);
           stackIn_4_0 = var4;
           return stackIn_4_0;

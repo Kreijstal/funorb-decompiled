@@ -7,16 +7,16 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
     static ClientUiComponent field_M;
     static int[][] field_Z;
     static PlatformTask field_J;
-    private ma field_I;
-    private ma field_K;
+    private ValidatedTextWidget field_I;
+    private ValidatedTextWidget field_K;
     private HotspotTextWidget field_W;
     private InteractiveWidget field_bb;
-    private ma field_H;
-    private ma field_O;
+    private ValidatedTextWidget field_H;
+    private ValidatedTextWidget field_O;
     static String field_Y;
-    private vu field_ab;
+    private ToggleWidget field_ab;
     static int field_X;
-    private ma field_V;
+    private ValidatedTextWidget field_V;
     static String field_Q;
     static ClientUiComponent field_F;
     static PlatformTask field_R;
@@ -24,10 +24,10 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
     static String field_S;
     static String field_E;
     private InteractiveWidget field_G;
-    private ma field_N;
+    private ValidatedTextWidget field_N;
 
     public final void a(int param0, String param1) {
-        ma var3 = null;
+        ValidatedTextWidget var3 = null;
         String var4 = null;
         try {
           if (param0 != -1) {
@@ -172,14 +172,14 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
 
     public kd() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_O = new ma("", (WidgetListener) null, 12);
-        this.field_I = new ma("", (WidgetListener) null, 100);
-        this.field_H = new ma("", (WidgetListener) null, 100);
-        this.field_V = new ma("", (WidgetListener) null, 20);
-        this.field_K = new ma("", (WidgetListener) null, 20);
-        this.field_N = new ma("", (WidgetListener) null, 3);
+        this.field_O = new ValidatedTextWidget("", (WidgetListener) null, 12);
+        this.field_I = new ValidatedTextWidget("", (WidgetListener) null, 100);
+        this.field_H = new ValidatedTextWidget("", (WidgetListener) null, 100);
+        this.field_V = new ValidatedTextWidget("", (WidgetListener) null, 20);
+        this.field_K = new ValidatedTextWidget("", (WidgetListener) null, 20);
+        this.field_N = new ValidatedTextWidget("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_ab = new vu("", (WidgetListener) null, var1 != 0);
+        this.field_ab = new ToggleWidget("", (WidgetListener) null, var1 != 0);
         this.field_bb = new InteractiveWidget(ed.field_c, (WidgetListener) null);
         this.field_G = new InteractiveWidget(ContentTransitionDialog.field_Y, (WidgetListener) null);
         this.field_O.tooltipText = DualLinkedNode.field_m;
@@ -189,25 +189,25 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         this.field_K.tooltipText = WeightedScoreStrategy.field_i;
         this.field_N.tooltipText = StrongCacheEntry.field_A;
         this.field_ab.tooltipText = rd.field_g;
-        this.field_O.a((byte) 16, new uj(this.field_O));
-        this.field_I.a((byte) 16, new vl(this.field_I));
-        this.field_H.a((byte) 16, new kt(this.field_H, this.field_I));
-        this.field_V.a((byte) 16, new ib(this.field_V, this.field_O, this.field_I));
-        this.field_K.a((byte) 16, new di(this.field_K, this.field_V));
-        this.field_N.a((byte) 16, new jh(this.field_N));
+        this.field_O.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.field_O));
+        this.field_I.setValidationSource((byte) 16, new EmailValidator(this.field_I));
+        this.field_H.setValidationSource((byte) 16, new EmailConfirmationValidator(this.field_H, this.field_I));
+        this.field_V.setValidationSource((byte) 16, new PasswordValidator(this.field_V, this.field_O, this.field_I));
+        this.field_K.setValidationSource((byte) 16, new MatchingTextValidator(this.field_K, this.field_V));
+        this.field_N.setValidationSource((byte) 16, new AgeValidator(this.field_N));
         this.field_bb.enabled = false;
         this.field_bb.painter = (WidgetPainter) ((Object) new nu());
         this.field_G.painter = (WidgetPainter) ((Object) new td());
-        this.field_O.painter = (WidgetPainter) ((Object) new lu(10000536));
-        lu dupTemp$0 = new lu(10000536);
+        this.field_O.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
+        TextEntryWidgetPainter dupTemp$0 = new TextEntryWidgetPainter(10000536);
         this.field_H.painter = (WidgetPainter) ((Object) dupTemp$0);
         this.field_I.painter = (WidgetPainter) ((Object) dupTemp$0);
-        this.field_N.painter = (WidgetPainter) ((Object) new lu(10000536));
+        this.field_N.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
         this.field_ab.painter = (WidgetPainter) ((Object) new oi());
-        ol dupTemp$1 = new ol(10000536);
+        MaskedTextEntryPainter dupTemp$1 = new MaskedTextEntryPainter(10000536);
         this.field_K.painter = (WidgetPainter) ((Object) dupTemp$1);
         this.field_V.painter = (WidgetPainter) ((Object) dupTemp$1);
-        String var2 = fo.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
+        String var2 = EmailCheckResult.a(4800, StateChangeEvent.field_D, new String[]{this.m(150), this.l(29406)});
         int var3 = 20;
         var3 = var3 + this.a(tn.field_X, var3, 170, (byte) 18, this.field_I);
         var3 = var3 + (this.a(false, 170, this.field_H, TrianglePulse.field_j, 20, "", var3) + 5);
@@ -248,10 +248,10 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final boolean a(boolean param0, eg param1) {
-        n var3 = null;
+    private final boolean a(boolean param0, ValidationProvider param1) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        gu var4 = null;
+        ValidationState var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -260,18 +260,18 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
           if (!param0) {
             return false;
           }
-          var3 = param1.a(-918933630);
+          var3 = param1.getValidationSource(-918933630);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a(false);
-          if (var4 == rn.field_e) {
+          var4 = var3.getValidationState(false);
+          if (var4 == rn.validationInvalid) {
             return false;
           }
-          if (var4 == ad.field_K) {
+          if (var4 == ad.validationWaiting) {
             return false;
           }
-          if (lq.field_c != var4) {
+          if (lq.validationEmpty != var4) {
             return true;
           }
           return false;
@@ -363,7 +363,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
             return stackIn_2_0;
           }
           this.addChild((byte) 10, (Widget) (var8));
-          var7 = new kw(((eg) ((Object) param1)).a(-918933630));
+          var7 = new kw(((ValidationProvider) ((Object) param1)).getValidationSource(-918933630));
           this.addChild((byte) 10, (Widget) (var7));
           var7.setBounds(3 + var8.width + var8.x, 15, var8.y + (-15 + var8.height >> 1), 8192, 15);
           stackIn_4_0 = var8.height;
@@ -397,7 +397,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         RuntimeException var6 = null;
         try {
           if (obfuscationGuard != 11) {
-            this.field_I = (ma) null;
+            this.field_I = (ValidatedTextWidget) null;
           }
           if (this.field_G == widget) {
             PrintCoatConsoleCommand.g(111);
@@ -439,12 +439,12 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
 
     private final boolean k(int param0) {
         String var3;
-        if (this.a(true, (eg) (this.field_O)) &&
-          this.a(true, (eg) (this.field_I)) &&
-          this.a(true, (eg) (this.field_H)) &&
-          this.a(true, (eg) (this.field_V)) &&
-          this.a(true, (eg) (this.field_K)) &&
-          this.a(true, (eg) (this.field_N))) {
+        if (this.a(true, (ValidationProvider) (this.field_O)) &&
+          this.a(true, (ValidationProvider) (this.field_I)) &&
+          this.a(true, (ValidationProvider) (this.field_H)) &&
+          this.a(true, (ValidationProvider) (this.field_V)) &&
+          this.a(true, (ValidationProvider) (this.field_K)) &&
+          this.a(true, (ValidationProvider) (this.field_N))) {
           if (param0 <= 96) {
             var3 = (String) null;
             this.a(6, (String) null);
@@ -493,12 +493,12 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         if (param0 != -116) {
           return;
         }
-        ((uj) (this.field_O.a(-918933630))).g(50);
+        ((AccountNameAvailabilityValidator) (this.field_O.getValidationSource(-918933630))).invalidateNameCheck(50);
     }
 
     private final int a(boolean param0, int param1, Widget param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        pk var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -512,7 +512,7 @@ final class kd extends DequeWidgetContainer implements TextHotspotListener, Widg
         try {
           var10 = new LabeledWidgetContainer(20, param6, 120 + param1, 25, param2, param0, 120, 3, ArmiesOfGielinor.field_J, 16777215, param3);
           this.addChild((byte) 10, (Widget) (var10));
-          var9 = new pk(((eg) ((Object) param2)).a(-918933630), param5, 126, var10.height + param6, param1 + 50, param4);
+          var9 = new ValidationStatusWidget(((ValidationProvider) ((Object) param2)).getValidationSource(-918933630), param5, 126, var10.height + param6, param1 + 50, param4);
           var9.listener = (WidgetListener) (this);
           this.addChild((byte) 10, (Widget) (var9));
           stackIn_1_0 = var10.height + var9.height;

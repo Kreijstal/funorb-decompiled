@@ -497,7 +497,7 @@ final class DebugConsole extends ConsolePanel {
           try {
             try {
               if (false) throw (ConsoleParseException) null;
-              tokenDeque = gu.tokenizeConsole(false, source);
+              tokenDeque = ValidationState.tokenizeConsole(false, source);
               if (!executeExpression) {
                 return true;
               }

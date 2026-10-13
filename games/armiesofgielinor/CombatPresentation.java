@@ -512,14 +512,14 @@ final class CombatPresentation implements EventPresentation {
                 var9 = var6.maximumStrength + var6.bonusStrength;
                 this.field_e = var6.ownerPlayer;
                 this.field_J = bw.unitDefinitions[var6.unitType][9];
-                if (0 < vu.field_N[this.field_J] * var8 % var9) {
+                if (0 < ToggleWidget.field_N[this.field_J] * var8 % var9) {
                   stackIn_37_1 = 1;
                 } else {
                   stackIn_37_1 = 0;
                 }
-                this.field_y = stackIn_37_1 + var8 * vu.field_N[this.field_J] / var9;
-                stackIn_40_1 = this.field_y - vu.field_N[this.field_J] * (var8 - var3.defenderDamage) / var9;
-                if ((-var3.defenderDamage + var8) * vu.field_N[this.field_J] % var9 > 0) {
+                this.field_y = stackIn_37_1 + var8 * ToggleWidget.field_N[this.field_J] / var9;
+                stackIn_40_1 = this.field_y - ToggleWidget.field_N[this.field_J] * (var8 - var3.defenderDamage) / var9;
+                if ((-var3.defenderDamage + var8) * ToggleWidget.field_N[this.field_J] % var9 > 0) {
                   stackIn_41_2 = 1;
                 } else {
                   stackIn_41_2 = 0;
@@ -543,18 +543,18 @@ final class CombatPresentation implements EventPresentation {
                 }
                 this.field_g = var7.ownerPlayer;
                 this.field_u = bw.unitDefinitions[var7.unitType][9];
-                if (vu.field_N[this.field_u] * var8Lifetime1 % var9Lifetime1 <= 0) {
+                if (ToggleWidget.field_N[this.field_u] * var8Lifetime1 % var9Lifetime1 <= 0) {
                   stackIn_67_1 = 0;
                 } else {
                   stackIn_67_1 = 1;
                 }
-                this.field_w = stackIn_67_1 + var8Lifetime1 * vu.field_N[this.field_u] / var9Lifetime1;
-                if (0 >= (var8Lifetime1 - var3.attackerDamage) * vu.field_N[this.field_u] % var9Lifetime1) {
+                this.field_w = stackIn_67_1 + var8Lifetime1 * ToggleWidget.field_N[this.field_u] / var9Lifetime1;
+                if (0 >= (var8Lifetime1 - var3.attackerDamage) * ToggleWidget.field_N[this.field_u] % var9Lifetime1) {
                   stackIn_71_1 = 0;
                 } else {
                   stackIn_71_1 = 1;
                 }
-                this.field_O = -stackIn_71_1 - ((var8Lifetime1 - var3.attackerDamage) * vu.field_N[this.field_u] / var9Lifetime1 - this.field_w);
+                this.field_O = -stackIn_71_1 - ((var8Lifetime1 - var3.attackerDamage) * ToggleWidget.field_N[this.field_u] / var9Lifetime1 - this.field_w);
                 if (var7.statusEffectType == 7 ||
                   var7.statusEffectType == 8) {
                   this.field_O = 0;
@@ -667,10 +667,10 @@ final class CombatPresentation implements EventPresentation {
                   }
                   if ((decompiledFrameCompleted7) &&
                     (var10 != 0)) {
-                    this.attackers = new BattleCharacter[vu.field_N[this.field_J]];
+                    this.attackers = new BattleCharacter[ToggleWidget.field_N[this.field_J]];
                   }
                 } else {
-                  this.attackers = new BattleCharacter[vu.field_N[this.field_J]];
+                  this.attackers = new BattleCharacter[ToggleWidget.field_N[this.field_J]];
                 }
                 boolean decompiledFrameCompleted6 = true;
                 if (this.field_q) {
@@ -686,10 +686,10 @@ final class CombatPresentation implements EventPresentation {
                   }
                   if ((decompiledFrameCompleted6) &&
                     (var10 != 0)) {
-                    this.defenders = new BattleCharacter[vu.field_N[this.field_u]];
+                    this.defenders = new BattleCharacter[ToggleWidget.field_N[this.field_u]];
                   }
                 } else {
-                  this.defenders = new BattleCharacter[vu.field_N[this.field_u]];
+                  this.defenders = new BattleCharacter[ToggleWidget.field_N[this.field_u]];
                 }
                 if (this.field_c == 34 &&
                   var3.attackerDeployed) {
@@ -1013,7 +1013,7 @@ final class CombatPresentation implements EventPresentation {
               return;
             }
             if (var2_int < this.field_O) {
-              this.field_D[var2_int] = new km(this.defenders[this.field_b[var2_int]].destinationX, 600 - pk.field_T[this.field_a][0], this.defenders[this.field_b[var2_int]].destinationY, 200 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), this.field_z);
+              this.field_D[var2_int] = new km(this.defenders[this.field_b[var2_int]].destinationX, 600 - ValidationStatusWidget.field_T[this.field_a][0], this.defenders[this.field_b[var2_int]].destinationY, 200 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), this.field_z);
             } else {
               this.field_D[var2_int] = new km(100 + AttackEvent.nextBoundedInt(false, 600, vv.field_b), 600, AttackEvent.nextBoundedInt(false, 850, vv.field_b) + 900, AttackEvent.nextBoundedInt(false, 600, vv.field_b) + 200, this.field_z);
             }
@@ -1086,7 +1086,7 @@ final class CombatPresentation implements EventPresentation {
                   this.attackers[var3].d((byte) 113);
                   if (this.field_E &&
                     this.attackers[var3].field_e) {
-                    this.attackers[var3].a(0, 30, 0, -10, MatchConditionEntry.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
+                    this.attackers[var3].a(0, 30, 0, -10, MatchConditionEntry.field_o[this.field_c][1], ValidationStatusWidget.field_T[this.field_c][1], (byte) 122);
                     this.attackers[var3].field_e = false;
                   }
                   if (this.attackers[var3].field_d) {
@@ -1109,7 +1109,7 @@ final class CombatPresentation implements EventPresentation {
                       this.defenders[var3].d((byte) 113);
                       if (this.field_P &&
                         this.defenders[var3].field_e) {
-                        this.defenders[var3].a(0, 30, 0, 10, MatchConditionEntry.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
+                        this.defenders[var3].a(0, 30, 0, 10, MatchConditionEntry.field_o[this.field_a][1], ValidationStatusWidget.field_T[this.field_a][1], (byte) 122);
                         this.defenders[var3].field_e = false;
                       }
                       if (this.defenders[var3].field_d) {
@@ -2675,19 +2675,19 @@ final class CombatPresentation implements EventPresentation {
           if (param0 != -4938) {
             field_N = (String) null;
           }
-          if (du.field_d == ChannelBaseVolumeConsoleCommand.field_L) {
+          if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
             stackIn_5_0 = BufferedFile.field_a;
             return stackIn_5_0;
           }
-          if (du.field_d == mh.field_b) {
-            stackIn_8_0 = jh.field_j;
+          if (du.nameCheckPending == mh.accountNameCheckState) {
+            stackIn_8_0 = AgeValidator.requestedAccountName;
             return stackIn_8_0;
           }
-          if (se.field_g.a((byte) -47)) {
+          if (se.emailCheckResult.isComplete((byte) -47)) {
             stackIn_13_0 = IsaacRandom.field_d;
             return stackIn_13_0;
           }
-          stackIn_11_0 = jh.field_j;
+          stackIn_11_0 = AgeValidator.requestedAccountName;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3025,7 +3025,7 @@ final class CombatPresentation implements EventPresentation {
                   this.attackers[var2_int].field_l = false;
                   this.a((byte) -84, var2_int);
                   if (this.field_h) {
-                    this.attackers[var2_int].a(0, 30, 1, -10, MatchConditionEntry.field_o[this.field_c][1], pk.field_T[this.field_c][1], (byte) 122);
+                    this.attackers[var2_int].a(0, 30, 1, -10, MatchConditionEntry.field_o[this.field_c][1], ValidationStatusWidget.field_T[this.field_c][1], (byte) 122);
                   }
                 }
               }
@@ -3225,14 +3225,14 @@ final class CombatPresentation implements EventPresentation {
                 break;
               }
               this.attackers[var3Lifetime1 - 1].setAnimationState(2, (byte) -108);
-              this.attackers[var3Lifetime1 - 1].a(0, 30, 1, 0, MatchConditionEntry.field_o[this.field_c][0], pk.field_T[this.field_c][0], (byte) 122);
+              this.attackers[var3Lifetime1 - 1].a(0, 30, 1, 0, MatchConditionEntry.field_o[this.field_c][0], ValidationStatusWidget.field_T[this.field_c][0], (byte) 122);
               this.attackers[var3Lifetime1 - 1].field_d = true;
               this.defenders[0].setAnimationState(1, (byte) -109);
               stackIn_43_0 = this.defenders[0];
             }
             break;
           }
-          ((BattleCharacter) (Object) stackIn_43_0).a(0, 30, 1, 20, MatchConditionEntry.field_o[this.field_a][1], pk.field_T[this.field_a][1], (byte) 122);
+          ((BattleCharacter) (Object) stackIn_43_0).a(0, 30, 1, 20, MatchConditionEntry.field_o[this.field_a][1], ValidationStatusWidget.field_T[this.field_a][1], (byte) 122);
           this.field_v = this.field_v - 1;
           this.field_I = 20 + AttackEvent.nextBoundedInt(false, 20, vv.field_b);
           return;
@@ -3761,7 +3761,7 @@ final class CombatPresentation implements EventPresentation {
           if (var3_int >= this.field_D.length) {
             return;
           }
-          this.field_D[var3_int] = new km(-MatchConditionEntry.field_o[this.field_c][1] + this.attackers[param1].destinationX, 600 - pk.field_T[this.field_c][1], this.attackers[param1].destinationY, 2, this.field_z);
+          this.field_D[var3_int] = new km(-MatchConditionEntry.field_o[this.field_c][1] + this.attackers[param1].destinationX, 600 - ValidationStatusWidget.field_T[this.field_c][1], this.attackers[param1].destinationY, 2, this.field_z);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4012,14 +4012,14 @@ final class CombatPresentation implements EventPresentation {
             param2 = 0;
           }
           this.field_J = bw.unitDefinitions[param4.unitType][9];
-          if (vu.field_N[this.field_J] * param4.strength % param4.maximumStrength <= 0) {
+          if (ToggleWidget.field_N[this.field_J] * param4.strength % param4.maximumStrength <= 0) {
             stackIn_38_1 = 0;
           } else {
             stackIn_38_1 = 1;
           }
-          this.field_y = stackIn_38_1 + param4.strength * vu.field_N[this.field_J] / param4.maximumStrength;
-          stackIn_41_1 = -((-param2 + param4.strength) * vu.field_N[this.field_J] / param4.maximumStrength);
-          if (vu.field_N[this.field_J] * (param4.strength - param2) % param4.maximumStrength > 0) {
+          this.field_y = stackIn_38_1 + param4.strength * ToggleWidget.field_N[this.field_J] / param4.maximumStrength;
+          stackIn_41_1 = -((-param2 + param4.strength) * ToggleWidget.field_N[this.field_J] / param4.maximumStrength);
+          if (ToggleWidget.field_N[this.field_J] * (param4.strength - param2) % param4.maximumStrength > 0) {
             stackIn_42_2 = 1;
           } else {
             stackIn_42_2 = 0;
@@ -4036,20 +4036,20 @@ final class CombatPresentation implements EventPresentation {
             this.field_q = true;
           }
           this.field_u = bw.unitDefinitions[param1.unitType][9];
-          stackIn_62_1 = param1.strength * vu.field_N[this.field_u] / param1.maximumStrength;
-          if (vu.field_N[this.field_u] * param1.strength % param1.maximumStrength <= 0) {
+          stackIn_62_1 = param1.strength * ToggleWidget.field_N[this.field_u] / param1.maximumStrength;
+          if (ToggleWidget.field_N[this.field_u] * param1.strength % param1.maximumStrength <= 0) {
             stackIn_63_2 = 0;
           } else {
             stackIn_63_2 = 1;
           }
           this.field_w = stackIn_62_1 + stackIn_63_2;
           stackIn_66_1 = this.field_w;
-          if ((-param0 + param1.strength) * vu.field_N[this.field_u] % param1.maximumStrength <= 0) {
+          if ((-param0 + param1.strength) * ToggleWidget.field_N[this.field_u] % param1.maximumStrength <= 0) {
             stackIn_67_2 = 0;
           } else {
             stackIn_67_2 = 1;
           }
-          this.field_O = stackIn_66_1 - stackIn_67_2 - vu.field_N[this.field_u] * (param1.strength - param0) / param1.maximumStrength;
+          this.field_O = stackIn_66_1 - stackIn_67_2 - ToggleWidget.field_N[this.field_u] * (param1.strength - param0) / param1.maximumStrength;
           this.field_a = param1.unitType;
           if (this.field_w < this.field_O) {
             this.field_O = this.field_w;
@@ -4152,17 +4152,17 @@ final class CombatPresentation implements EventPresentation {
             }
             if ((decompiledFrameCompleted7) &&
               (var9 != 0)) {
-              this.attackers = new BattleCharacter[vu.field_N[this.field_J]];
+              this.attackers = new BattleCharacter[ToggleWidget.field_N[this.field_J]];
             }
           } else {
-            this.attackers = new BattleCharacter[vu.field_N[this.field_J]];
+            this.attackers = new BattleCharacter[ToggleWidget.field_N[this.field_J]];
           }
           boolean decompiledFrameCompleted6 = true;
           boolean decompiledFrameRemainder2 = true;
           if (param1.unitType != 7 &&
             param1.unitType != 34 ||
             !param1.packedFlag8) {
-            this.defenders = new BattleCharacter[vu.field_N[this.field_u]];
+            this.defenders = new BattleCharacter[ToggleWidget.field_N[this.field_u]];
             decompiledFrameRemainder2 = (var9 != 0);
           }
           if (decompiledFrameRemainder2) {

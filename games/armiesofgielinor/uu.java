@@ -74,7 +74,7 @@ final class uu {
             uu.a((byte) -86);
           }
           AnimationSequence.a(InstructionsPanel.field_D, 125);
-          if (vu.currentRoom != null) {
+          if (ToggleWidget.currentRoom != null) {
             boolean decompiledFrameRemainder1 = true;
             SocialListPanel.field_Lb.inputEnabled = true;
             lm.field_b.height = 0;
@@ -87,11 +87,11 @@ final class uu {
             var7 = pi.field_N;
             pi.field_N.height = 0;
             var7.width = 0;
-            if (!vu.isCurrentRoomOwner(false)) {
-              var9_ref_String = vu.currentRoom.ownerName;
-              kd.field_F.text = fo.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
+            if (!ToggleWidget.isCurrentRoomOwner(false)) {
+              var9_ref_String = ToggleWidget.currentRoom.ownerName;
+              kd.field_F.text = EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
               pi.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
-              pi.field_N.text = fo.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
+              pi.field_N.text = EmailCheckResult.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
               var8 = pi.field_N;
               decompiledFrameRemainder1 = (var19 != 0);
             }
@@ -99,7 +99,7 @@ final class uu {
               kd.field_F.text = DualNodeHashTable.field_f.toUpperCase();
               var9 = (2 + pd.field_c.width) / 2;
               lm.field_b.setBounds(40, -20500, var9 - 2, -40 + pd.field_c.height, 0);
-              if (vu.currentRoom.playerCapacity > vu.currentRoom.playerCount) {
+              if (ToggleWidget.currentRoom.playerCapacity > ToggleWidget.currentRoom.playerCount) {
                 lm.field_b.text = TickCounter.field_d.toUpperCase();
                 lm.field_b.inputEnabled = true;
                 if (var19 != 0) {
@@ -118,7 +118,7 @@ final class uu {
                   decompiledSharedTail0 = (var19 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  var10_ref_String = fo.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.pendingJoinRequestCount)});
+                  var10_ref_String = EmailCheckResult.a(4800, UnitSpell.field_h, new String[]{Integer.toString(AnimationPlayer.pendingJoinRequestCount)});
                 }
                 if (0 == (16 & KeyboardInputListener.field_b) &&
                   !ChannelGainProfile.field_f) {
@@ -173,9 +173,9 @@ final class uu {
                             stackIn_60_1 = ~var15;
                             if (stackIn_60_0 == stackIn_60_1) {
                               if (var10 != 0) {
-                                stackIn_48_0 = vu.currentRoom.playerCount;
+                                stackIn_48_0 = ToggleWidget.currentRoom.playerCount;
                               } else {
-                                stackIn_48_0 = vu.currentRoom.playerCapacity;
+                                stackIn_48_0 = ToggleWidget.currentRoom.playerCapacity;
                               }
                               var17_int = stackIn_48_0;
                               if (var17_int != var16 &&
@@ -183,7 +183,7 @@ final class uu {
                                 break scanLoop2;
                               }
                             } else {
-                              if (var16 != (vu.currentRoom.gameOptions[var15] & 255) &&
+                              if (var16 != (ToggleWidget.currentRoom.gameOptions[var15] & 255) &&
                                 var19 == 0) {
                                 break scanLoop2;
                               }
@@ -243,7 +243,7 @@ final class uu {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(var16 < tq.gameOptionCount)))) {
-                  var17_int = 255 & vu.currentRoom.gameOptions[var16];
+                  var17_int = 255 & ToggleWidget.currentRoom.gameOptions[var16];
                   if (var19 == 0) {
                     if (null != ep.field_p &&
                       null != ep.field_p[var16] &&
@@ -343,7 +343,7 @@ final class uu {
                   so.field_d.inputEnabled = false;
                   if (so.field_d.hovered) {
                     if (DebugConsole.field_w.tabs.activeTab != 0) {
-                      ad.field_I = fo.a(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
+                      ad.field_I = EmailCheckResult.a(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
                       if (var19 != 0) {
                         ad.field_I = ResourceArchive.field_f;
                       }
@@ -387,7 +387,7 @@ final class uu {
                   if (stackIn_155_0 != 0) {
                     var13_ref = l.field_h;
                     if (var12 == 0) {
-                      var14 = fo.a(4800, er.field_c, new String[]{(String) (var11)});
+                      var14 = EmailCheckResult.a(4800, er.field_c, new String[]{(String) (var11)});
                       if (var19 != 0) {
                         var14 = LobbyRoom.field_Jb + (String) (var11);
                       }
@@ -397,12 +397,12 @@ final class uu {
                   } else {
                     var13_ref = rd.field_f;
                     if (var12 == 0) {
-                      var14 = fo.a(param3 ^ 4800, TeamRoster.field_d, new String[]{(String) (var11)});
+                      var14 = EmailCheckResult.a(param3 ^ 4800, TeamRoster.field_d, new String[]{(String) (var11)});
                       if (var19 != 0) {
-                        var14 = ol.field_x + (String) (var11);
+                        var14 = MaskedTextEntryPainter.field_x + (String) (var11);
                       }
                     } else {
-                      var14 = ol.field_x + (String) (var11);
+                      var14 = MaskedTextEntryPainter.field_x + (String) (var11);
                     }
                   }
                   ad.field_I = "<col=A00000>" + var13_ref + "<br>" + var14;
@@ -415,9 +415,9 @@ final class uu {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.text = fo.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
+              var8.text = EmailCheckResult.a(4800, CorpseConditionMarker.field_t, new String[]{Integer.toString(var9)});
             }
-            PrintVictoryConditionsConsoleCommand.field_E.text = fo.a(4800, ws.field_T, new String[]{Integer.toString(vu.currentRoom.playerCount), Integer.toString(vu.currentRoom.playerCapacity)});
+            PrintVictoryConditionsConsoleCommand.field_E.text = EmailCheckResult.a(4800, ws.field_T, new String[]{Integer.toString(ToggleWidget.currentRoom.playerCount), Integer.toString(ToggleWidget.currentRoom.playerCapacity)});
           }
           stackIn_173_0 = BitmapTextWidgetPainter.field_a;
           stackIn_173_1 = true;
@@ -432,9 +432,9 @@ final class uu {
           stackIn_184_2 = (param0) && (!param1) && (ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_183_0).updateInput(stackIn_183_1, stackIn_184_2);
           DebugConsole.field_w.tabs.advanceTabSelection(param3 ^ 10000);
-          if (vu.currentRoom != null) {
+          if (ToggleWidget.currentRoom != null) {
             if (SocialListPanel.field_Lb.pressedButton != 0) {
-              PointerInputHandler.writeRoomAdmissionCancellation(69, vu.currentRoom.getRoomId((byte) -68), param2);
+              PointerInputHandler.writeRoomAdmissionCancellation(69, ToggleWidget.currentRoom.getRoomId((byte) -68), param2);
             }
             if (lm.field_b.pressedButton != 0) {
               ChannelGainProfile.field_f = true;
@@ -445,7 +445,7 @@ final class uu {
             if (ConsolePanel.field_m.pressedButton != 0) {
               ChannelGainProfile.field_f = false;
             }
-            vf.a(param3 + 1, false, param2, vu.currentRoom);
+            vf.a(param3 + 1, false, param2, ToggleWidget.currentRoom);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

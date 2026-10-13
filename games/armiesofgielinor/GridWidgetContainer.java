@@ -511,7 +511,7 @@ final class GridWidgetContainer extends ArrayWidgetContainer {
         if (param0 != -129) {
           heldPointerButton = -78;
         }
-        return mk.field_f;
+        return TextFieldValidator.field_f;
     }
 
     static {

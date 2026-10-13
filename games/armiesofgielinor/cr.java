@@ -12,9 +12,9 @@ final class cr extends ResizableModalDialog {
     private boolean field_db;
     private String field_X;
 
-    final static fo a(String param0, int param1) {
+    final static EmailCheckResult a(String param0, int param1) {
         RuntimeException var2 = null;
-        fo stackIn_3_0 = null;
+        EmailCheckResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -23,7 +23,7 @@ final class cr extends ResizableModalDialog {
           if (param1 != 4210752) {
             field_bb = (String) null;
           }
-          stackIn_3_0 = new fo(param0);
+          stackIn_3_0 = new EmailCheckResult(param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

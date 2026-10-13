@@ -62,7 +62,7 @@ final class ConsoleExpression extends IntrusiveNode {
         if (LeaderEscortCondition.consoleArgumentEndKind == this.kind) {
           return "ArgEnd";
         }
-        if (this.kind == sb.consoleArgumentCommaKind) {
+        if (this.kind == DateOfBirthValidator.consoleArgumentCommaKind) {
           return "ArgComma";
         }
         return "Unknown";

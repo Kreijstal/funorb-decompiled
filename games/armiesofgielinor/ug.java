@@ -18,9 +18,9 @@ final class ug extends IOException {
         }
         try {
           System.out.println("--- STATE DUMP ENDS: " + Integer.toString(RadialSummonMenu.field_d, 16) + " ---");
-          vl.outgoingPacket.writeCipheredOpcode(32161, 72);
-          vl.outgoingPacket.writeInt((byte) -117, RadialSummonMenu.field_d);
-          vl.outgoingPacket.writeInt((byte) -98, var4);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 72);
+          EmailValidator.outgoingPacket.writeInt((byte) -117, RadialSummonMenu.field_d);
+          EmailValidator.outgoingPacket.writeInt((byte) -98, var4);
           if (param2) {
             hb.$cfr$intArgs$a$e9dea5688aa5(116, 0);
             dj.a((byte) -125);
@@ -58,7 +58,7 @@ final class ug extends IOException {
             return null;
           }
           if (param0 == 0) {
-            var11 = ma.a(param2 ^ 109, param3);
+            var11 = ValidatedTextWidget.a(param2 ^ 109, param3);
             var6 = var11;
             if (var6 == null) {
               stackIn_10_0 = null;

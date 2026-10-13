@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lu extends BitmapTextWidgetPainter {
+class TextEntryWidgetPainter extends BitmapTextWidgetPainter {
     static ClientUiComponent field_u;
     static String field_v;
 
-    lu(BitmapFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
+    TextEntryWidgetPainter(BitmapFont font, int textColour) {
+        super(font, 4, 2, 2, 2, textColour, -1, 0, 1, font.maxAscent, -1, 2147483647, false);
     }
 
     public static void a(int param0) {
@@ -17,12 +17,12 @@ class lu extends BitmapTextWidgetPainter {
         }
     }
 
-    lu(int param0) {
-        this(ArmiesOfGielinor.field_J, param0);
+    TextEntryWidgetPainter(int textColour) {
+        this(ArmiesOfGielinor.field_J, textColour);
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.outgoingPacket;
+        CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param1);
         if (param0 < -99) {
           var2.writeByte(1, 1);
@@ -48,7 +48,7 @@ class lu extends BitmapTextWidgetPainter {
           if (obfuscationGuard <= -79) {
             return;
           }
-          lu.a(-66, -37);
+          TextEntryWidgetPainter.a(-66, -37);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

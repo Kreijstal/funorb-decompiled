@@ -59,12 +59,12 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
         int[] var19 = null;
         var16 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.pixelHeight = SoftwareRaster.height;
+          NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           if (param0 != 1) {
             DefeatPlayerWithMetricsConsoleCommand.g(111);
           }
-          no.field_P.pixelWidth = SoftwareRaster.width;
-          no.field_P.pixels = SoftwareRaster.pixels;
+          NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
+          NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           if (param6) {
             if (ConsolePanel.field_k == null ||
               t.field_f != param7) {
@@ -108,7 +108,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
                 RegionAnchor.field_m[2].d(0, 0, 56, 56, 228);
               } else {
                 if (!param4) {
-                  no.field_P.b();
+                  NumericDateInputWidget.field_P.b();
                   DropTargetWidgetContainer.field_J.h(param3, param2);
                   return;
                 }
@@ -117,7 +117,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
             } else {
               RegionAnchor.field_m[1].e(0, 0);
             }
-            no.field_P.b();
+            NumericDateInputWidget.field_P.b();
             DropTargetWidgetContainer.field_J.h(param3, param2);
           }
           return;

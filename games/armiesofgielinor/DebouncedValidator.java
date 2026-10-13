@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rb implements n {
-    private long field_a;
+abstract class DebouncedValidator implements ValidationSource {
+    private long lastChangeMillis;
     static String field_c;
     static ClientUiComponent field_b;
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean passwordContainsNameVariant(String name, String password, int obfuscationGuard) {
         String var3 = null;
         int var4 = 0;
         boolean stackIn_12_0 = false;
@@ -18,37 +18,37 @@ abstract class rb implements n {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var4 = -107 / ((param2 - 41) / 55);
-          var3 = IconTextComponent.a(true, param0);
-          if (param1.indexOf(param0) != -1) {
+          var4 = -107 / ((obfuscationGuard - 41) / 55);
+          var3 = IconTextComponent.a(true, name);
+          if (password.indexOf(name) != -1) {
             return true;
           }
-          if (param1.indexOf(var3) != -1) {
+          if (password.indexOf(var3) != -1) {
             return true;
           }
-          stackIn_12_0 = (param1.startsWith(param0)) || (param1.startsWith(var3)) || (param1.endsWith(param0)) || (param1.endsWith(var3));
+          stackIn_12_0 = (password.startsWith(name)) || (password.startsWith(var3)) || (password.endsWith(name)) || (password.endsWith(var3));
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_15_0 = var3_ref;
           stackIn_15_1 = new StringBuilder().append("rb.L(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param1 == null) {
+          if (password == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    abstract gu c(int param0);
+    abstract ValidationState evaluateState(int obfuscationGuard);
 
     final static boolean canOpenQuickChatResponses(long accountId, String recipientName, int obfuscationGuard, int channelId, int[] responsePhraseIds) {
         RuntimeException var6 = null;
@@ -109,7 +109,7 @@ abstract class rb implements n {
             return (MapTile) (stackIn_2_0);
           }
           var3 = new MapTile();
-          no.readTaggedFields(packet, var3, recordBitLength, -24721);
+          NumericDateInputWidget.readTaggedFields(packet, var3, recordBitLength, -24721);
           var3.j(-78);
           var4 = -72 / ((-5 - obfuscationGuard) / 60);
           stackIn_4_0 = var3;
@@ -189,7 +189,7 @@ abstract class rb implements n {
           var3Lifetime1 = ActionRequest.field_t[param0] >> 8;
           var4 = ActionRequest.field_t[10] >> 8;
           var5Lifetime1 = ActionRequest.field_t[11] >> 8;
-          var6Lifetime1 = ib.field_j << 4;
+          var6Lifetime1 = PasswordValidator.field_j << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = SocketResourceClient.b(var6Lifetime1, 100) >> 8;
           var9Lifetime1 = ContextualRuntimeException.a(param0 - 10, var6Lifetime1) >> 8;
@@ -234,24 +234,24 @@ abstract class rb implements n {
         }
     }
 
-    public final void a(int param0) {
-        if (param0 <= 123) {
+    public final void validationChanged(int obfuscationGuard) {
+        if (obfuscationGuard <= 123) {
           return;
         }
-        this.field_a = vi.monotonicMillis(99);
+        this.lastChangeMillis = vi.monotonicMillis(99);
     }
 
-    public final gu a(boolean param0) {
-        if (param0) {
-          return (gu) null;
+    public final ValidationState getValidationState(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
+          return (ValidationState) null;
         }
-        if (this.b(81)) {
-          return lq.field_c;
+        if (this.isInputEmpty(81)) {
+          return lq.validationEmpty;
         }
-        if (!((350L + this.field_a) <= vi.monotonicMillis(-96))) {
-          return ad.field_K;
+        if (!((350L + this.lastChangeMillis) <= vi.monotonicMillis(-96))) {
+          return ad.validationWaiting;
         }
-        return this.c(118);
+        return this.evaluateState(118);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, IndexedSprite param5) {
@@ -298,7 +298,7 @@ abstract class rb implements n {
             var8 = var8 + SoftwareRaster.width * var14;
           }
           if (param1 != -1708086482) {
-            rb.e(-63);
+            DebouncedValidator.e(-63);
           }
           var13 = 0;
           if (param2 < SoftwareRaster.clipLeft) {
@@ -394,17 +394,17 @@ abstract class rb implements n {
         }
     }
 
-    public final String a(byte param0) {
-        if (this.b(88)) {
+    public final String getValidationMessage(byte obfuscationGuard) {
+        if (this.isInputEmpty(88)) {
           return null;
         }
-        if (vi.monotonicMillis(65) < (350L + this.field_a)) {
+        if (vi.monotonicMillis(65) < (350L + this.lastChangeMillis)) {
           return null;
         }
-        if (param0 != 55) {
-          this.field_a = -82L;
+        if (obfuscationGuard != 55) {
+          this.lastChangeMillis = -82L;
         }
-        return this.b((byte) -71);
+        return this.evaluateMessage((byte) -71);
     }
 
     public static void d(int param0) {
@@ -415,7 +415,7 @@ abstract class rb implements n {
         }
     }
 
-    abstract String b(byte param0);
+    abstract String evaluateMessage(byte obfuscationGuard);
 
     static {
         field_c = "This <%0> is currently wielding the <%2>. Are you sure you wish to replace it with the <%1>? The <%2> will be lost forever if you do this.";

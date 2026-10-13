@@ -40,7 +40,7 @@ final class e {
         field_a = null;
     }
 
-    final static boolean a(int param0, String param1, String param2) {
+    final static boolean nameContainsPasswordVariant(int obfuscationGuard, String name, String password) {
         String var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -52,23 +52,23 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = ia.a(param1, '_', 3, "");
-          var4 = 90 / ((39 - param0) / 35);
-          var3 = IconTextComponent.a(true, param2);
-          stackIn_5_0 = (param1.indexOf(param2) != -1) || (param1.indexOf(var3) != -1);
+          name = ia.a(name, '_', 3, "");
+          var4 = 90 / ((39 - obfuscationGuard) / 35);
+          var3 = IconTextComponent.a(true, password);
+          stackIn_5_0 = (name.indexOf(password) != -1) || (name.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_8_0 = var3_ref;
-          stackIn_8_1 = new StringBuilder().append("e.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("e.C(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
           stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
+          if (password == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";

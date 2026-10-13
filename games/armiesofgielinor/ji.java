@@ -6,40 +6,40 @@ final class ji {
     static String field_b;
     static int[] field_c;
 
-    final static wd a(int param0, String param1) {
-        RuntimeException var2 = null;
-        Object stackIn_4_0 = null;
-        Object stackIn_9_0 = null;
-        wd stackIn_11_0 = null;
+    final static AccountNameCheckResult pollAccountNameCheck(int obfuscationGuard, String name) {
+        RuntimeException failure = null;
+        Object pendingResult = null;
+        Object queuedResult = null;
+        AccountNameCheckResult completedResult = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             field_c = (int[]) null;
           }
-          if (mh.field_b == du.field_d) {
-            stackIn_4_0 = null;
-            return (wd) (stackIn_4_0);
+          if (mh.accountNameCheckState == du.nameCheckPending) {
+            pendingResult = null;
+            return (AccountNameCheckResult) (pendingResult);
           }
-          if (mh.field_b == lm.field_d &&
-            param1.equals(jh.field_j)) {
-            mh.field_b = nb.field_i;
-            stackIn_11_0 = vl.field_k;
-            return stackIn_11_0;
+          if (mh.accountNameCheckState == lm.nameCheckComplete &&
+            name.equals(AgeValidator.requestedAccountName)) {
+            mh.accountNameCheckState = nb.nameCheckResultConsumed;
+            completedResult = EmailValidator.accountNameCheckResult;
+            return completedResult;
           }
-          jh.field_j = param1;
-          mh.field_b = du.field_d;
-          vl.field_k = null;
-          stackIn_9_0 = null;
-          return (wd) (stackIn_9_0);
+          AgeValidator.requestedAccountName = name;
+          mh.accountNameCheckState = du.nameCheckPending;
+          EmailValidator.accountNameCheckResult = null;
+          queuedResult = null;
+          return (AccountNameCheckResult) (queuedResult);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_14_0 = var2;
-          stackIn_14_1 = new StringBuilder().append("ji.B(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_14_0 = failure;
+          stackIn_14_1 = new StringBuilder().append("ji.B(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

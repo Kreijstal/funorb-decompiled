@@ -70,7 +70,7 @@ final class TickCounter {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                sb.field_e = param0;
+                DateOfBirthValidator.field_e = param0;
                 var2 = fk.a(false, "player_config_login_free");
                 if (var2 != null) {
                   uu.a(var2, (byte) 73);
@@ -1291,7 +1291,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "QUICKSAVE_PROGRESS");
                 if (var2 != null) {
-                  wd.field_e = uu.a(var2, (byte) -113);
+                  AccountNameCheckResult.field_e = uu.a(var2, (byte) -113);
                 }
                 var2 = fk.a(false, "QUICKSAVING");
                 if (var2 != null) {
@@ -1331,7 +1331,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "HAVEONGOINGMISSION");
                 if (null != var2) {
-                  sb.field_f = uu.a(var2, (byte) 30);
+                  DateOfBirthValidator.field_f = uu.a(var2, (byte) 30);
                 }
                 var2 = fk.a(false, "CONTINUEMISSION");
                 if (var2 != null) {
@@ -1451,7 +1451,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "ACTION_TOOFAR");
                 if (var2 != null) {
-                  fo.field_a = uu.a(var2, (byte) -106);
+                  EmailCheckResult.field_a = uu.a(var2, (byte) -106);
                 }
                 var2 = fk.a(false, "ACTION_ATTACK");
                 if (null != var2) {
@@ -1773,7 +1773,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "MANA_COUNTER");
                 if (var2 != null) {
-                  lu.field_v = uu.a(var2, (byte) 112);
+                  TextEntryWidgetPainter.field_v = uu.a(var2, (byte) 112);
                 }
                 var2 = fk.a(false, "MANA_COUNTER_VICTORY");
                 if (var2 != null) {
@@ -2409,7 +2409,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "STATS_CANNONRANGE");
                 if (null != var2) {
-                  vl.field_l = uu.a(var2, (byte) 70);
+                  EmailValidator.field_l = uu.a(var2, (byte) 70);
                 }
                 var2 = fk.a(false, "TXT_RANGES");
                 if (var2 != null) {
@@ -2425,7 +2425,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TXT_STRENGTH");
                 if (var2 != null) {
-                  mk.field_i = uu.a(var2, (byte) 101);
+                  TextFieldValidator.field_i = uu.a(var2, (byte) 101);
                 }
                 var2 = fk.a(false, "TXT_SPEED");
                 if (var2 != null) {
@@ -3187,7 +3187,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_UNITS");
                 if (var2 != null) {
-                  ma.field_Y = uu.a(var2, (byte) 42);
+                  ValidatedTextWidget.field_Y = uu.a(var2, (byte) 42);
                 }
                 var2 = fk.a(false, "LABEL_CONFIG");
                 if (null != var2) {
@@ -3239,7 +3239,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "LABEL_OPTIONS");
                 if (var2 != null) {
-                  wd.field_j = uu.a(var2, (byte) 36);
+                  AccountNameCheckResult.field_j = uu.a(var2, (byte) 36);
                 }
                 var2 = fk.a(false, "LABEL_QUALITY");
                 if (null != var2) {
@@ -3641,7 +3641,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "MESSAGE_QUIT");
                 if (null != var2) {
-                  wd.field_g = uu.a(var2, (byte) -126);
+                  AccountNameCheckResult.field_g = uu.a(var2, (byte) -126);
                 }
                 var2 = fk.a(false, "MESSAGE_DEAD");
                 if (var2 != null) {
@@ -4891,7 +4891,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_EQUIPMENT");
                 if (null != var2) {
-                  ma.field_X = uu.a(var2, (byte) 25);
+                  ValidatedTextWidget.field_X = uu.a(var2, (byte) 25);
                 }
                 var2 = fk.a(false, "TTREED_SPELLS");
                 if (null != var2) {
@@ -5560,7 +5560,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TRINKET_WEAPON_CONFIRM");
                 if (null != var2) {
-                  rb.field_c = uu.a(var2, (byte) -108);
+                  DebouncedValidator.field_c = uu.a(var2, (byte) -108);
                 }
                 var2 = fk.a(false, "TRINKET_TURN_LIMIT");
                 if (var2 != null) {
@@ -5582,7 +5582,7 @@ final class TickCounter {
                 if (var2 != null) {
                   ConsolePanel.field_g = uu.a(var2, (byte) -111);
                 }
-                sb.field_e = null;
+                DateOfBirthValidator.field_e = null;
             }
             void run() {
                 var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;

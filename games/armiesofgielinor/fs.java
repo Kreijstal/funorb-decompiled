@@ -212,11 +212,11 @@ final class fs {
           UpkeepEvent.field_z.text = param2;
           UpkeepEvent.field_z.textColour = param0;
           int var5_int = 112 % ((param3 + 51) / 39);
-          UpkeepEvent.field_z.width = UpkeepEvent.field_z.width + rb.field_b.width;
-          rb.field_b.x = rb.field_b.x + rb.field_b.width;
-          rb.field_b.width = param4;
-          UpkeepEvent.field_z.width = UpkeepEvent.field_z.width - rb.field_b.width;
-          rb.field_b.x = rb.field_b.x - rb.field_b.width;
+          UpkeepEvent.field_z.width = UpkeepEvent.field_z.width + DebouncedValidator.field_b.width;
+          DebouncedValidator.field_b.x = DebouncedValidator.field_b.x + DebouncedValidator.field_b.width;
+          DebouncedValidator.field_b.width = param4;
+          UpkeepEvent.field_z.width = UpkeepEvent.field_z.width - DebouncedValidator.field_b.width;
+          DebouncedValidator.field_b.x = DebouncedValidator.field_b.x - DebouncedValidator.field_b.width;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fs.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

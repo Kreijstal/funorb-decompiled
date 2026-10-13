@@ -53,7 +53,7 @@ abstract class CacheEntry extends DualLinkedNode {
             return stackIn_4_0;
           }
           if (ov.connectionState == sg.field_a) {
-            vl.outgoingPacket.position = 0;
+            EmailValidator.outgoingPacket.position = 0;
             CampaignMenu.field_s = null;
             if (param0 != null) {
               var9 = 0;
@@ -70,16 +70,16 @@ abstract class CacheEntry extends DualLinkedNode {
               vd.field_b.writeShort(true, param4);
               vd.field_b.writeByte(1, param3);
               vd.field_b.writeByte(param2 + 20033, var9);
-              vl.outgoingPacket.writeByte(param2 + 20033, 18);
-              vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
-              var10 = vl.outgoingPacket.position;
+              EmailValidator.outgoingPacket.writeByte(param2 + 20033, 18);
+              EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
+              var10 = EmailValidator.outgoingPacket.position;
               var11_ref_String = ByteStorage.a(0, CombatEvent.d((byte) 55));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              vl.outgoingPacket.writeNullTerminatedString(var11_ref_String, param2 + 33883);
-              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
-              vl.outgoingPacket.f(0, -var10 + vl.outgoingPacket.position);
+              EmailValidator.outgoingPacket.writeNullTerminatedString(var11_ref_String, param2 + 33883);
+              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+              EmailValidator.outgoingPacket.f(0, -var10 + EmailValidator.outgoingPacket.position);
             } else {
               vd.field_b.position = 0;
               vd.field_b.writeInt((byte) -57, CampaignMenuButton.connectionRandom.nextInt());
@@ -98,11 +98,11 @@ abstract class CacheEntry extends DualLinkedNode {
                 stackIn_14_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1, 413740432);
-              vl.outgoingPacket.writeByte(1, 16);
-              vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
-              var9 = vl.outgoingPacket.position;
-              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
-              vl.outgoingPacket.writeByteLengthPrefix(vl.outgoingPacket.position - var9, 5930);
+              EmailValidator.outgoingPacket.writeByte(1, 16);
+              EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
+              var9 = EmailValidator.outgoingPacket.position;
+              IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+              EmailValidator.outgoingPacket.writeByteLengthPrefix(EmailValidator.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
             ov.connectionState = DirectByteStorage.field_m;
@@ -153,7 +153,7 @@ abstract class CacheEntry extends DualLinkedNode {
             }
           }
           if (da.field_b == ov.connectionState &&
-            jh.isPacketPayloadReady(2)) {
+            AgeValidator.isPacketPayloadReady(2)) {
             if (MusicCrossfadeStream.deliveredOpcode == 255) {
               var9_ref_String = ByteStorage.incomingPacket.c((byte) -85);
               if (var9_ref_String != null) {
@@ -173,7 +173,7 @@ abstract class CacheEntry extends DualLinkedNode {
           if (MoveAttackRequest.sessionSocket == null) {
             if (ev.field_b) {
               if (TileMetadata.b(0) > 30000L) {
-                BitmapTextWidgetPainter.field_r = gu.field_a;
+                BitmapTextWidgetPainter.field_r = ValidationState.field_a;
               } else {
                 BitmapTextWidgetPainter.field_r = DamageEvent.field_y;
               }

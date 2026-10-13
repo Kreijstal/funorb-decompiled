@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class di extends mk {
-    private EditableTextWidget field_k;
+final class MatchingTextValidator extends TextFieldValidator {
+    private EditableTextWidget primaryInput;
     static String field_j;
     static ClientUiComponent field_l;
 
     final static void c(byte param0) {
         if (param0 > -120) {
-          di.c((byte) 114);
+          MatchingTextValidator.c((byte) 114);
           qf.a(56);
           gl.a(124, 4);
           return;
@@ -23,39 +23,39 @@ final class di extends mk {
         int var1 = -96 / ((param0 + 9) / 42);
     }
 
-    final gu a(int param0, String param1) {
-        n var3 = null;
+    final ValidationState validateText(int obfuscationGuard, String text) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        gu stackIn_5_0 = null;
-        gu stackIn_11_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_k instanceof eg) {
-            var3 = ((eg) ((Object) this.field_k)).a(-918933630);
+          if (this.primaryInput instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.primaryInput)).getValidationSource(-918933630);
             if (var3 != null &&
-              var3.a(false) != oo.field_g) {
-              stackIn_5_0 = rn.field_e;
+              var3.getValidationState(false) != oo.validationValid) {
+              stackIn_5_0 = rn.validationInvalid;
               return stackIn_5_0;
             }
           }
-          if (param0 != -3137) {
+          if (obfuscationGuard != -3137) {
             field_l = (ClientUiComponent) null;
           }
-          if (!param1.equals(this.field_k.text)) {
-            stackIn_11_0 = rn.field_e;
+          if (!text.equals(this.primaryInput.text)) {
+            stackIn_11_0 = rn.validationInvalid;
           } else {
-            stackIn_11_0 = oo.field_g;
+            stackIn_11_0 = oo.validationValid;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
-          stackIn_14_1 = new StringBuilder().append("di.R(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("di.R(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -64,17 +64,17 @@ final class di extends mk {
         }
     }
 
-    di(EditableTextWidget param0, EditableTextWidget param1) {
-        super(param0);
+    MatchingTextValidator(EditableTextWidget input, EditableTextWidget primaryInput) {
+        super(input);
         try {
-          this.field_k = param1;
+          this.primaryInput = primaryInput;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "di.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "di.<init>(" + (input != null ? "{...}" : "null") + ',' + (primaryInput != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String a(byte param0, String param1) {
-        n var3 = null;
+    final String describeText(byte obfuscationGuard, String text) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_7_0 = null;
         String stackIn_9_0 = null;
@@ -84,22 +84,22 @@ final class di extends mk {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_k instanceof eg) {
-            var3 = ((eg) ((Object) this.field_k)).a(-918933630);
+          if (this.primaryInput instanceof ValidationProvider) {
+            var3 = ((ValidationProvider) ((Object) this.primaryInput)).getValidationSource(-918933630);
             if (var3 != null) {
-              if (var3.a(false) == oo.field_g &&
-                !param1.equals(this.field_k.text)) {
+              if (var3.getValidationState(false) == oo.validationValid &&
+                !text.equals(this.primaryInput.text)) {
                 stackIn_7_0 = BitmapTextLayout.field_j;
                 return stackIn_7_0;
               }
-              stackIn_9_0 = var3.a((byte) 55);
+              stackIn_9_0 = var3.getValidationMessage((byte) 55);
               return stackIn_9_0;
             }
           }
-          if (param0 <= 89) {
-            di.c((byte) 94);
+          if (obfuscationGuard <= 89) {
+            MatchingTextValidator.c((byte) 94);
           }
-          if (param1.equals(this.field_k.text)) {
+          if (text.equals(this.primaryInput.text)) {
             return null;
           }
           stackIn_15_0 = BitmapTextLayout.field_j;
@@ -108,8 +108,8 @@ final class di extends mk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_19_0 = var3_ref;
-          stackIn_19_1 = new StringBuilder().append("di.O(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("di.O(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";

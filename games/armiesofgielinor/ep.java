@@ -208,7 +208,7 @@ final class ep {
             var8Lifetime1 = this.field_q << 2;
             stackIn_48_0 = (var8Lifetime1 <= 256) ? var8Lifetime1 : 256;
             var8Lifetime1Lifetime1 = stackIn_48_0;
-            ol.field_y.e(this.a(-(int)this.field_k + 3002, 4592), this.a((byte) -81, 90), var8Lifetime1Lifetime1);
+            MaskedTextEntryPainter.field_y.e(this.a(-(int)this.field_k + 3002, 4592), this.a((byte) -81, 90), var8Lifetime1Lifetime1);
             if (var7 >= 160000) {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);
             }
@@ -418,11 +418,11 @@ final class ep {
           if (!param0) {
             field_p = (boolean[][]) null;
           }
-          var4 = sb.field_i.text;
+          var4 = DateOfBirthValidator.field_i.text;
           String var3 = var4;
-          sb.field_i.text = param1;
+          DateOfBirthValidator.field_i.text = param1;
           UnitCycler.field_g.draw(param2, 20);
-          sb.field_i.text = var4;
+          DateOfBirthValidator.field_i.text = var4;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ep.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

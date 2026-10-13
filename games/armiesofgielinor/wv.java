@@ -64,7 +64,7 @@ class wv extends af {
             }
             if (var3_int != 0) {
               if (DeployAction.field_A) {
-                param0 = fo.a(4800, field_d, new String[]{param0});
+                param0 = EmailCheckResult.a(4800, field_d, new String[]{param0});
               }
               if (se.field_f) {
                 param0 = SummonAction.field_D;

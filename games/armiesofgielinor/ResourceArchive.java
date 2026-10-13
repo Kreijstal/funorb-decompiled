@@ -742,7 +742,7 @@ final class ResourceArchive {
             stackIn_33_0 = decompressionFailure;
             stackIn_33_1 = new StringBuilder();
             stackIn_34_2 = (xteaKey != null);
-            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(groupId).append(" ").append(encodedGroup.length).append(" ").append(pk.a(encodedGroup, encodedGroup.length, 113)).append(" ").append(pk.a(encodedGroup, -2 + encodedGroup.length, 115)).append(" ").append(this.index.groupCrcs[groupId]).append(" ").append(this.index.indexCrc).toString());
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(" ").append(groupId).append(" ").append(encodedGroup.length).append(" ").append(ValidationStatusWidget.a(encodedGroup, encodedGroup.length, 113)).append(" ").append(ValidationStatusWidget.a(encodedGroup, -2 + encodedGroup.length, 115)).append(" ").append(this.index.groupCrcs[groupId]).append(" ").append(this.index.indexCrc).toString());
           }
           if (this.discardPackedGroups) {
             this.packedGroups[groupId] = null;

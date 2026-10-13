@@ -377,26 +377,26 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             ov.field_i.addChild(fj.field_d, 127);
           }
           ov.field_i.addChild(VineGrowthAction.field_x, 93);
-          vu.field_Q = new ClientUiComponent(0L, eq.field_h);
-          vu.field_Q.horizontalAlignment = 1;
-          vu.field_Q.verticalAlignment = 0;
+          ToggleWidget.field_Q = new ClientUiComponent(0L, eq.field_h);
+          ToggleWidget.field_Q.horizontalAlignment = 1;
+          ToggleWidget.field_Q.verticalAlignment = 0;
           td.field_g = new ClientUiComponent(0L, bw.field_h, LineOfSightGrid.field_f.toUpperCase());
           qc.field_c = new ClientUiComponent(0L, ArchiveIndex.field_b);
-          qc.field_c.addChild(vu.field_Q, 116);
+          qc.field_c.addChild(ToggleWidget.field_Q, 116);
           qc.field_c.addChild(td.field_g, 89);
-          uj.field_l = new ClientUiComponent(0L, ConsoleEvaluationException.field_c);
-          uj.field_l.applyStyle(0, eq.field_h);
-          uj.field_l.verticalAlignment = 1;
-          var16 = uj.field_l;
+          AccountNameAvailabilityValidator.field_l = new ClientUiComponent(0L, ConsoleEvaluationException.field_c);
+          AccountNameAvailabilityValidator.field_l.applyStyle(0, eq.field_h);
+          AccountNameAvailabilityValidator.field_l.verticalAlignment = 1;
+          var16 = AccountNameAvailabilityValidator.field_l;
           var16.horizontalAlignment = 1;
           eb.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           PrintVictoryConditionsConsoleCommand.field_E = new ClientUiComponent(0L, eq.field_h);
           PrintVictoryConditionsConsoleCommand.field_E.horizontalAlignment = 1;
-          di.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
+          MatchingTextValidator.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
           SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
           bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           eb.field_c.addChild(PrintVictoryConditionsConsoleCommand.field_E, 72);
-          eb.field_c.addChild(di.field_l, 83);
+          eb.field_c.addChild(MatchingTextValidator.field_l, 83);
           if (fh.field_c) {
             eb.field_c.addChild(SpellCastEvent.field_D, 107);
           }

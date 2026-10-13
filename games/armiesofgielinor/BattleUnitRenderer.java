@@ -240,7 +240,7 @@ final class BattleUnitRenderer {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (nb.field_i != ChannelBaseVolumeConsoleCommand.field_L) {
+          if (nb.nameCheckResultConsumed != ChannelBaseVolumeConsoleCommand.field_L) {
             return false;
           }
           var9 = new oe(KingBlackDragonEvent.field_C, param1);
@@ -250,7 +250,7 @@ final class BattleUnitRenderer {
             SoundCache.field_a = null;
             BufferedFile.field_a = param6;
             MusicCrossfadeStream.field_z = param4;
-            ChannelBaseVolumeConsoleCommand.field_L = du.field_d;
+            ChannelBaseVolumeConsoleCommand.field_L = du.nameCheckPending;
             RadialSummonMenu.field_e = param0;
             qk.field_b = param2;
           } else {

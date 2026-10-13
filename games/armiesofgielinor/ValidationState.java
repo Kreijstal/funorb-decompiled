@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gu {
+final class ValidationState {
     static b field_b;
     static String field_a;
 
@@ -27,7 +27,7 @@ final class gu {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard) {
-            gu.a(102);
+            ValidationState.a(102);
           }
           tokens = new NodeDeque();
           cursor = new TextCursor(source);
@@ -50,7 +50,7 @@ final class gu {
                 tokens.addLast((byte) -119, (IntrusiveNode) (bi.readBareConsoleToken((byte) -118, cursor)));
                 continue;
               }
-              tokens.addLast((byte) -119, (IntrusiveNode) (new ConsoleExpression(sb.consoleArgumentCommaKind, cursor.position - 1)));
+              tokens.addLast((byte) -119, (IntrusiveNode) (new ConsoleExpression(DateOfBirthValidator.consoleArgumentCommaKind, cursor.position - 1)));
               continue;
             }
             tokens.addLast((byte) -119, (IntrusiveNode) (BestScoreStrategy.readQuotedConsoleToken((byte) 121, cursor)));
@@ -80,7 +80,7 @@ final class gu {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.outgoingPacket;
+        CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         if (param0 < -31) {
           var2.writeCipheredOpcode(32161, param1);
           var2.writeByte(1, 1);

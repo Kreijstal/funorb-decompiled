@@ -21,7 +21,7 @@ final class SocketResourceClient extends ResourceProtocolClient {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.outgoingPacket;
+        CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param1);
         var2.writeByte(1, 2);
         var2.writeByte(param0 - 895, 4);

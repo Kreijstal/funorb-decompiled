@@ -47,7 +47,7 @@ final class CampaignUnitOverride {
                 qk.field_e = param1;
                 var2 = NodeIterator.a(param0 + 132, "loginm3");
                 if (null != var2) {
-                  gu.field_a = uu.a(var2, (byte) -118);
+                  ValidationState.field_a = uu.a(var2, (byte) -118);
                 }
                 var2 = NodeIterator.a(param0 + 132, "loginm2");
                 if (null != var2) {
@@ -183,7 +183,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_cannot_join_full");
                 if (null != var2) {
-                  di.field_j = uu.a(var2, (byte) -94);
+                  MatchingTextValidator.field_j = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "mu_x_cannot_join_inprogress");
                 if (var2 != null) {
@@ -407,7 +407,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_gameopt_invite_x_to_game");
                 if (null != var2) {
-                  pk.field_W = uu.a(var2, (byte) -114);
+                  ValidationStatusWidget.field_W = uu.a(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "report_x_for_abuse");
                 if (var2 != null) {
@@ -423,11 +423,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  vl.field_o = uu.a(var2, (byte) 121);
+                  EmailValidator.field_o = uu.a(var2, (byte) 121);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_friends_only");
                 if (null != var2) {
-                  pk.field_S = uu.a(var2, (byte) 20);
+                  ValidationStatusWidget.field_S = uu.a(var2, (byte) 20);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_lobby_friends");
                 if (var2 != null) {
@@ -635,7 +635,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "who_can_join");
                 if (null != var2) {
-                  vu.field_P = uu.a(var2, (byte) 93);
+                  ToggleWidget.field_P = uu.a(var2, (byte) 93);
                 }
                 var2 = NodeIterator.a(50, "you_can_join");
                 if (null != var2) {
@@ -891,7 +891,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_pleaseselectoption2");
                 if (null != var2) {
-                  ol.field_x = uu.a(var2, (byte) 93);
+                  MaskedTextEntryPainter.field_x = uu.a(var2, (byte) 93);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_badnumplayers");
                 if (var2 != null) {
@@ -937,7 +937,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "ra_explanation");
                 if (null != var2) {
-                  mk.field_d = uu.a(var2, (byte) 107);
+                  TextFieldValidator.field_d = uu.a(var2, (byte) 107);
                 }
                 var2 = NodeIterator.a(50, "rule_pillar_0");
                 if (var2 != null) {
@@ -1241,7 +1241,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "checking");
                 if (var2 != null) {
-                  gt.field_h = uu.a(var2, (byte) -92);
+                  gt.validationPendingText = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "create_namealreadytaken");
                 if (null != var2) {
@@ -1839,7 +1839,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "loading_extradata");
                 if (var2 != null) {
-                  en.field_G = uu.a(var2, (byte) 82);
+                  DateInputWidget.field_G = uu.a(var2, (byte) 82);
                 }
                 var2 = NodeIterator.a(50, "loading_languages");
                 if (var2 != null) {
@@ -2274,7 +2274,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "achieved");
                 if (null != var2) {
-                  wd.field_f = uu.a(var2, (byte) -120);
+                  AccountNameCheckResult.field_f = uu.a(var2, (byte) -120);
                 }
                 var2 = NodeIterator.a(50, "orbpoints");
                 if (var2 != null) {
@@ -2470,7 +2470,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "autorespond");
                 if (null != var2) {
-                  kt.field_m = uu.a(var2, (byte) 115);
+                  EmailConfirmationValidator.field_m = uu.a(var2, (byte) 115);
                 }
                 var2 = NodeIterator.a(50, "quickchat_help");
                 if (var2 != null) {
@@ -2534,7 +2534,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "rating_noratings");
                 if (null != var2) {
-                  wd.field_l = uu.a(var2, (byte) 102);
+                  AccountNameCheckResult.field_l = uu.a(var2, (byte) 102);
                 }
                 var2 = NodeIterator.a(50, "rating_rating");
                 if (null != var2) {
@@ -2944,7 +2944,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mustlogin_notloggedin");
                 if (null != var2) {
-                  pk.field_V = uu.a(var2, (byte) -127);
+                  ValidationStatusWidget.field_V = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,1");
                 if (var2 != null) {

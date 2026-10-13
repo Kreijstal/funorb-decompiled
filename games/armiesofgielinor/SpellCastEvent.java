@@ -164,7 +164,7 @@ final class SpellCastEvent extends GameEvent {
           return cr.field_eb;
         }
         if (!h.field_g.ensureAllGroupsAvailable(param0 ^ 20707)) {
-          return en.field_G + " - " + h.field_g.getOverallProgress(0) + "%";
+          return DateInputWidget.field_G + " - " + h.field_g.getOverallProgress(0) + "%";
         }
         return fm.field_c;
     }
@@ -412,7 +412,7 @@ final class SpellCastEvent extends GameEvent {
               var4_int = var4_int != 0 | this.a(var10, 15, param2, param0, var9) ? 1 : 0;
             }
           }
-          LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, RadialSummonItem.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], MusicPatchEnvelope.field_f[this.spell.spellId]}), param2.field_Nb);
+          LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, RadialSummonItem.field_e, new String[]{param2.battlefield.playerNames[this.castingPlayer], MusicPatchEnvelope.field_f[this.spell.spellId]}), param2.field_Nb);
           stackIn_39_0 = var4_int;
           return stackIn_39_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -10,9 +10,9 @@ final class oe extends ro implements WidgetActivationListener {
     static String field_zb;
 
     final boolean advanceDialogAnimation(byte obfuscationGuard) {
-        wd var2;
-        wd var3;
-        wd var2Lifetime1;
+        AccountNameCheckResult var2;
+        AccountNameCheckResult var3;
+        AccountNameCheckResult var2Lifetime1;
         if (obfuscationGuard == -1) {
           if (!this.open) {
             return super.advanceDialogAnimation((byte) -1);
@@ -27,8 +27,8 @@ final class oe extends ro implements WidgetActivationListener {
           this.a(false, (byte) -53, var2);
           return super.advanceDialogAnimation((byte) -1);
         }
-        var3 = (wd) null;
-        this.a(true, (byte) 54, (wd) null);
+        var3 = (AccountNameCheckResult) null;
+        this.a(true, (byte) 54, (AccountNameCheckResult) null);
         if (!this.open) {
           return super.advanceDialogAnimation((byte) -1);
         }
@@ -97,7 +97,7 @@ final class oe extends ro implements WidgetActivationListener {
         }
     }
 
-    private final void a(boolean param0, byte param1, wd param2) {
+    private final void a(boolean param0, byte param1, AccountNameCheckResult param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -109,12 +109,12 @@ final class oe extends ro implements WidgetActivationListener {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           this.field_Ab = true;
-          if (!param2.field_a) {
+          if (!param2.accepted) {
             if (null == param2.field_c) {
-              var4 = param2.field_i;
+              var4 = param2.errorText;
               if (param2.field_d == 248) {
                 if (!param0) {
-                  no.b(false);
+                  NumericDateInputWidget.b(false);
                 }
                 var4 = ResourceProtocolClient.field_m;
                 this.field_yb = true;
@@ -132,7 +132,7 @@ final class oe extends ro implements WidgetActivationListener {
             this.field_xb = (kd) null;
           }
           var5 = new ad((ro) (this), CipherPacketBuffer.field_t, var4);
-          if (param2.field_a) {
+          if (param2.accepted) {
             if (param2.field_h) {
               this.replaceContent(new qd(this), (byte) -81);
               return;

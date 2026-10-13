@@ -70,7 +70,7 @@ final class mu {
           var12 = (BitmapFont) null;
           hf.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
           vs.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
-          uj.field_n = PaletteRegionMap.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
+          AccountNameAvailabilityValidator.field_n = PaletteRegionMap.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
           var5 = SoftwareRaster.width;
           var6 = SoftwareRaster.height;
           var16 = SoftwareRaster.pixels;
@@ -80,7 +80,7 @@ final class mu {
             SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRaster.setTarget(var16, var5, var6);
-          AdaptiveMidiPcmStream.defaultQuickChatMenu = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, uj.field_n);
+          AdaptiveMidiPcmStream.defaultQuickChatMenu = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, AccountNameAvailabilityValidator.field_n);
           OwnerChangeEvent.quickChatMenuHost.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -98,8 +98,8 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         boolean stackIn_14_10 = false;
         int var3;
         ad.advanceLobbyNotifications(-117);
-        if (vu.currentRoom != null) {
-          stackIn_6_0 = (r.c(vu.currentRoom.playerCount, 2)) ? 1 : 0;
+        if (ToggleWidget.currentRoom != null) {
+          stackIn_6_0 = (r.c(ToggleWidget.currentRoom.playerCount, 2)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
@@ -117,11 +117,11 @@ final class GiveTileConsoleCommand extends ConsoleCommand {
         stackIn_14_10 = (fj.field_c) || (ModalDialogHost.field_H);
         hb.a(stackIn_8_0, stackIn_8_1, stackIn_8_2, stackIn_9_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9, stackIn_14_10, param1, var2 != 0, 0);
         if (cp.field_h) {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 64);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 64);
           cp.field_h = false;
         }
         if (cg.field_a) {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 10);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 10);
           cg.field_a = false;
         }
         if (ChatMessage.field_w) {

@@ -111,18 +111,18 @@ final class TabbedPanel extends ClientUiComponent {
           if (param1.playing && (2 == param1.spectatorMode ||
             !(BufferedSocket.field_j < 2))) {
             var8 = tn.activeContextMenu;
-            var9 = fo.a(4800, SectorCacheStore.field_k, new String[]{param3});
+            var9 = EmailCheckResult.a(4800, SectorCacheStore.field_k, new String[]{param3});
             var8.menu.addTextAction(10, var9, (byte) -118);
           }
           tn.activeContextMenu.addRoomAdmissionActions((byte) 96);
           if (param2) {
             if (oo.watchedRoomId != tn.activeContextMenu.roomId) {
               var12 = tn.activeContextMenu;
-              var13 = fo.a(4800, fs.field_a, new String[]{param3});
+              var13 = EmailCheckResult.a(4800, fs.field_a, new String[]{param3});
               var12.menu.addTextAction(15, var13, (byte) -105);
             } else {
               var10 = tn.activeContextMenu;
-              var11 = fo.a(4800, cp.field_g, new String[]{param3});
+              var11 = EmailCheckResult.a(4800, cp.field_g, new String[]{param3});
               var10.menu.addTextAction(16, var11, (byte) -103);
             }
           }

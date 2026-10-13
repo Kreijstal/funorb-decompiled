@@ -33,9 +33,9 @@ final class DeployEvent extends GameEvent {
         if (param0 != 14570) {
           return;
         }
-        no.field_T = new ClientUiComponent(0L, (ClientUiComponent) null);
-        no.field_T.addChild(SpellCastEvent.field_E.tabs, 127);
-        no.field_T.addChild(cp.field_d, 39);
+        NumericDateInputWidget.field_T = new ClientUiComponent(0L, (ClientUiComponent) null);
+        NumericDateInputWidget.field_T.addChild(SpellCastEvent.field_E.tabs, 127);
+        NumericDateInputWidget.field_T.addChild(cp.field_d, 39);
         BitmapTextLayout.b(false);
     }
 

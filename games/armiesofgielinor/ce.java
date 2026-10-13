@@ -129,7 +129,7 @@ final class ce extends DequeWidgetContainer implements WidgetActivationListener 
           } else {
             if (this.field_L != widget) {
               if (this.field_E == widget) {
-                di.c((byte) -127);
+                MatchingTextValidator.c((byte) -127);
               }
             } else {
               ConsoleTextNode.a(false);

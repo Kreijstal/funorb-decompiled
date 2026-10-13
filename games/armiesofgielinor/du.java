@@ -7,7 +7,7 @@ abstract class du {
     String field_a;
     int field_c;
     static QuickChatCommandDefinition field_e;
-    static wm field_d;
+    static wm nameCheckPending;
     static boolean field_h;
     static String field_f;
     static String[] field_b;
@@ -22,7 +22,7 @@ abstract class du {
     }
 
     public static void b(int param0) {
-        field_d = null;
+        nameCheckPending = null;
         field_e = null;
         if (param0 != 16) {
           return;
@@ -43,7 +43,7 @@ abstract class du {
 
     static {
         field_e = new QuickChatCommandDefinition(10, 2, 2, 0);
-        field_d = new wm();
+        nameCheckPending = new wm();
         field_f = "No special attribute";
         field_b = new String[16];
     }

@@ -33,18 +33,18 @@ final class bk {
           PaletteRegionMap.a(vd.field_b, (byte) -84);
           vd.field_b.writeShort(true, param4);
           param2.a(vd.field_b, -11436);
-          vl.outgoingPacket.position = 0;
+          EmailValidator.outgoingPacket.position = 0;
           if (!param1) {
-            vl.outgoingPacket.writeByte(1, 16);
+            EmailValidator.outgoingPacket.writeByte(1, 16);
           }
           if (param1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            vl.outgoingPacket.writeByte(1, 18);
+            EmailValidator.outgoingPacket.writeByte(1, 18);
           }
-          vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
-          var5_int = vl.outgoingPacket.position;
-          vl.outgoingPacket.writeInt((byte) -67, fl.field_e);
-          vl.outgoingPacket.writeLong(DefeatPlayerConsoleCommand.field_E, 38359632);
+          EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
+          var5_int = EmailValidator.outgoingPacket.position;
+          EmailValidator.outgoingPacket.writeInt((byte) -67, fl.field_e);
+          EmailValidator.outgoingPacket.writeLong(DefeatPlayerConsoleCommand.field_E, 38359632);
           var6 = 0;
           if (BestScoreStrategy.field_l) {
             var6 = var6 | 1;
@@ -58,17 +58,17 @@ final class bk {
           if (DropdownSelector.field_P != null) {
             var6 = var6 | 16;
           }
-          vl.outgoingPacket.writeByte(1, var6);
+          EmailValidator.outgoingPacket.writeByte(1, var6);
           var7 = ByteStorage.a(0, CombatEvent.d((byte) -116));
           if (var7 == null) {
             var7 = "";
           }
-          vl.outgoingPacket.writeNullTerminatedString(var7, param3 + 13851);
+          EmailValidator.outgoingPacket.writeNullTerminatedString(var7, param3 + 13851);
           if (DropdownSelector.field_P != null) {
-            vl.outgoingPacket.a(DropdownSelector.field_P, 413740432);
+            EmailValidator.outgoingPacket.a(DropdownSelector.field_P, 413740432);
           }
-          IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, vl.outgoingPacket);
-          vl.outgoingPacket.f(param3 ^ param3, vl.outgoingPacket.position - var5_int);
+          IconLabelControl.a(mu.field_c, cs.field_cb, (byte) 26, vd.field_b, EmailValidator.outgoingPacket);
+          EmailValidator.outgoingPacket.f(param3 ^ param3, EmailValidator.outgoingPacket.position - var5_int);
           hb.$cfr$intArgs$a$e9dea5688aa5(29, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,9 +161,9 @@ final class bk {
           UpkeepEvent.field_z.font = IntrusiveNode.field_e;
           we.field_f.addChild(UpkeepEvent.field_z, 82);
           we.field_f.inheritVisualStateForDescendants(-10027);
-          rb.field_b = new ClientUiComponent(0L, (ClientUiComponent) null);
-          rb.field_b.skinSprites = var16;
-          we.field_f.addChild(rb.field_b, 99);
+          DebouncedValidator.field_b = new ClientUiComponent(0L, (ClientUiComponent) null);
+          DebouncedValidator.field_b.skinSprites = var16;
+          we.field_f.addChild(DebouncedValidator.field_b, 99);
           jj.field_i = new ClientUiComponent[5];
           ResourceProtocolClient.field_j = new ClientUiComponent[5];
           we.field_g = new ClientUiComponent[5];

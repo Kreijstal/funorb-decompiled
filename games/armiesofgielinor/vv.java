@@ -48,11 +48,11 @@ final class vv {
         RuntimeException caughtFailure = null;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (source.equals(no.cachedConsoleSource)) {
-            cachedResult = ol.cachedConsoleTokens;
+          if (source.equals(NumericDateInputWidget.cachedConsoleSource)) {
+            cachedResult = MaskedTextEntryPainter.cachedConsoleTokens;
             return cachedResult;
           }
-          tokenDeque = gu.tokenizeConsole(false, source);
+          tokenDeque = ValidationState.tokenizeConsole(false, source);
           tokens = new ConsoleExpression[tokenDeque.size(false)];
           tokenIndex = 0;
           if (obfuscationGuard <= 109) {
@@ -66,8 +66,8 @@ final class vv {
             tokens[tokenSlot] = token;
             token = (ConsoleExpression) (tokenDeque.next((byte) 123));
           }
-          no.cachedConsoleSource = source;
-          ol.cachedConsoleTokens = tokens;
+          NumericDateInputWidget.cachedConsoleSource = source;
+          MaskedTextEntryPainter.cachedConsoleTokens = tokens;
           newResult = tokens;
           return newResult;
         } catch (java.lang.RuntimeException caughtParameter) {

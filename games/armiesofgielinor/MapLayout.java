@@ -40,10 +40,10 @@ final class MapLayout extends IntrusiveNode {
             }
           }
           if (null != message.responsePhraseIds) {
-            ma.responseTargetAccountId = message.accountId;
+            ValidatedTextWidget.responseTargetAccountId = message.accountId;
             rv.responsePhraseIds = message.responsePhraseIds;
             WeightedScoreStrategy.responseTargetAccountName = message.accountName;
-            no.responseTargetChannel = message.channelId;
+            NumericDateInputWidget.responseTargetChannel = message.channelId;
           }
           SectorCacheStore.appendChatHistory(3208, message);
           return;

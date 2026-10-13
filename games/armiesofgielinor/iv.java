@@ -69,7 +69,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         try {
           if (this == IntKeyLookup.field_a &&
             !PcmPlayerService.clientShutdownStarted) {
-            ol.field_z = true;
+            MaskedTextEntryPainter.field_z = true;
             if (se.field_c &&
               -AttackEvent.field_P + vi.monotonicMillis(62) > 1000L) {
               var2 = param0.getClipBounds();
@@ -219,7 +219,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               if (param3 != 10) {
                 return;
               }
-              vu.field_L = CombatEvent.d((byte) 10);
+              ToggleWidget.field_L = CombatEvent.d((byte) 10);
               dupTemp$0 = new PlatformTaskService(param1, param2, param5, true);
               IntPair.field_m = dupTemp$0;
               PacketBuffer.field_s = dupTemp$0;
@@ -434,8 +434,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                   TaggedMapData.a(240, 320, -121);
                   ContentTransitionDialog.a(0, 12, param2, 0);
                   var3_int = 0;
-                  if (ol.field_z) {
-                    ol.field_z = false;
+                  if (MaskedTextEntryPainter.field_z) {
+                    MaskedTextEntryPainter.field_z = false;
                     var3_int = 1;
                   }
                   NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
@@ -447,8 +447,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
               ContentTransitionDialog.a(0, 12, param2, 0);
               if (var4 != 0) {
                 var3_int = 0;
-                if (ol.field_z) {
-                  ol.field_z = false;
+                if (MaskedTextEntryPainter.field_z) {
+                  MaskedTextEntryPainter.field_z = false;
                   var3_int = 1;
                 }
                 NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
@@ -456,8 +456,8 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
             }
           } else {
             var3_int = 0;
-            if (ol.field_z) {
-              ol.field_z = false;
+            if (MaskedTextEntryPainter.field_z) {
+              MaskedTextEntryPainter.field_z = false;
               var3_int = 1;
             }
             NodeHashIterator.a(-5790, TurnEffectEvent.field_F, SpellCastEvent.g(-15862), var3_int != 0, dd.a(false));
@@ -607,7 +607,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                jh.c((byte) -76);
+                AgeValidator.c((byte) -76);
                 this.c((byte) 87);
                 so.field_b = rj.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
                 this.a(false);
@@ -701,7 +701,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           wj.field_l = true;
-          ol.field_z = true;
+          MaskedTextEntryPainter.field_z = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -796,7 +796,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           uh.field_d = uh.field_d + 1;
           if (fieldTemp$1 > 50) {
             uh.field_d = uh.field_d - 50;
-            ol.field_z = true;
+            MaskedTextEntryPainter.field_z = true;
             IndexedSpriteBase.field_b.setSize(bn.field_b, dt.field_a);
             IndexedSpriteBase.field_b.setVisible(true);
             if (null != ContextualRuntimeException.field_f &&
@@ -885,7 +885,7 @@ public abstract class iv extends java.applet.Applet implements Runnable, java.aw
           IndexedSpriteBase.field_b.requestFocus();
           ph.field_f = true;
           wj.field_l = true;
-          ol.field_z = true;
+          MaskedTextEntryPainter.field_z = true;
           tq.field_a = false;
           AttackEvent.field_P = vi.monotonicMillis(param0 + 7);
           return;

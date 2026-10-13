@@ -6,7 +6,7 @@ final class jt {
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         ConsoleExpression.updateQuickChatHelp(16756, param1);
-        ib.a(40, param1, param3, param2);
+        PasswordValidator.a(40, param1, param3, param2);
         if (param0 != -32216) {
           field_a = 9;
         }

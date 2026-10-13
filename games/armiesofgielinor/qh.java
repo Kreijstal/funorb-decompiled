@@ -20,7 +20,7 @@ final class qh {
             uu.a(param0, param9, param5, param7 + 1, param8);
           }
           if (ChannelGainProfile.field_f &&
-            vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
+            ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
             MapTile.field_f.viewport.text = TelefragEvent.field_y;
             IconTextComponent.field_Kb.inputEnabled = false;
             ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
@@ -47,7 +47,7 @@ final class qh {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
-                vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
+                ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
@@ -71,7 +71,7 @@ final class qh {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
-                vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
+                ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
@@ -88,7 +88,7 @@ final class qh {
           }
           if (so.field_b.field_g == SoftwareRaster.height &&
             SoftwareRaster.width == so.field_b.field_a) {
-            if (null != vu.currentRoom) {
+            if (null != ToggleWidget.currentRoom) {
               ClientUiComponent.a(45, false);
               if (param9) {
                 QuickChatCategory.field_u = ClippedWidgetContainer.field_L;
@@ -108,7 +108,7 @@ final class qh {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
-                vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
+                ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
@@ -122,7 +122,7 @@ final class qh {
               KeyboardInputListener.field_b = KeyboardInputListener.field_b + 1;
               return;
             }
-            if (no.roomSetup != null) {
+            if (NumericDateInputWidget.roomSetup != null) {
               ClientUiComponent.a(108, true);
             } else {
               BitmapTextLayout.b(false);
@@ -143,7 +143,7 @@ final class qh {
               uu.a(param0, param9, param5, param7 + 1, param8);
             }
             if (ChannelGainProfile.field_f &&
-              vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
+              ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
               MapTile.field_f.viewport.text = TelefragEvent.field_y;
               IconTextComponent.field_Kb.inputEnabled = false;
               ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
@@ -166,7 +166,7 @@ final class qh {
                 uu.a(param0, param9, param5, param7 + 1, param8);
               }
               if (ChannelGainProfile.field_f &&
-                vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
+                ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                 MapTile.field_f.viewport.text = TelefragEvent.field_y;
                 IconTextComponent.field_Kb.inputEnabled = false;
                 ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
@@ -189,7 +189,7 @@ final class qh {
                 MapTile.field_f.viewport.text = null;
                 VertexNormal.a(param1, 255, param3, param5, MapTile.field_f);
               } else {
-                if (vu.currentRoom.playerCount >= vu.currentRoom.playerCapacity) {
+                if (ToggleWidget.currentRoom.playerCount >= ToggleWidget.currentRoom.playerCapacity) {
                   MapTile.field_f.viewport.text = TelefragEvent.field_y;
                   IconTextComponent.field_Kb.inputEnabled = false;
                   ArchiveIndex.a(MapTile.field_f.content, param7 - 77);
@@ -227,7 +227,7 @@ final class qh {
           return;
         }
         if (!DamageEvent.g(81)) {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 81);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 81);
           bu.storedQuicksave = null;
         }
     }

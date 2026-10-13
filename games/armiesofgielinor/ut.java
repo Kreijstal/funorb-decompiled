@@ -67,7 +67,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_db = ma.a(-114, IntPair.field_m);
+          this.field_db = ValidatedTextWidget.a(-114, IntPair.field_m);
           if (this.field_db.length > 0) {
             for (var2_int = 0; var2_int < this.field_db.length; var2_int++) {
               if (this.field_db[var2_int] != null) {
@@ -360,22 +360,22 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5) {
-        DropdownOptionList.field_R[kt.field_p] = param5;
-        vt.field_m[kt.field_p] = kt.field_p;
-        no.field_U[kt.field_p] = param2;
+        DropdownOptionList.field_R[EmailConfirmationValidator.field_p] = param5;
+        vt.field_m[EmailConfirmationValidator.field_p] = EmailConfirmationValidator.field_p;
+        NumericDateInputWidget.field_U[EmailConfirmationValidator.field_p] = param2;
         if (df.field_T < param2) {
           se.field_e = param2;
         }
         if (param2 < pd.field_e) {
           sq.field_k = param2;
         }
-        AnimationFrameSet.field_w[kt.field_p] = param3;
-        TutorialController.field_c[kt.field_p] = param0;
-        VineGrowthAction.field_s[kt.field_p] = param1;
+        AnimationFrameSet.field_w[EmailConfirmationValidator.field_p] = param3;
+        TutorialController.field_c[EmailConfirmationValidator.field_p] = param0;
+        VineGrowthAction.field_s[EmailConfirmationValidator.field_p] = param1;
         int var6 = param0 + (param3 + param1);
         int var7 = var6 == 0 ? 0 : 1000 * param3 / var6;
-        EffectPresentation.field_h[kt.field_p] = var7;
-        kt.field_p = kt.field_p + 1;
+        EffectPresentation.field_h[EmailConfirmationValidator.field_p] = var7;
+        EmailConfirmationValidator.field_p = EmailConfirmationValidator.field_p + 1;
         if (!(sq.field_k <= var7)) {
           sq.field_k = var7;
         }
@@ -405,7 +405,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
             return stackIn_5_0;
           }
           var3 = new TaggedMapData();
-          no.readTaggedFields(packet, var3, recordBitLength, -24721);
+          NumericDateInputWidget.readTaggedFields(packet, var3, recordBitLength, -24721);
           stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

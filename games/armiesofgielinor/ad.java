@@ -4,7 +4,7 @@
 final class ad extends DequeWidgetContainer implements WidgetActivationListener {
     private ro field_L;
     private BitmapFont field_J;
-    static gu field_K;
+    static ValidationState validationWaiting;
     private String field_G;
     private int field_E;
     private int[] field_F;
@@ -73,7 +73,7 @@ final class ad extends DequeWidgetContainer implements WidgetActivationListener 
     }
 
     public static void a(byte param0) {
-        field_K = null;
+        validationWaiting = null;
         if (param0 != 63) {
           field_I = (String) null;
         }
@@ -200,6 +200,6 @@ final class ad extends DequeWidgetContainer implements WidgetActivationListener 
     }
 
     static {
-        field_K = new gu();
+        validationWaiting = new ValidationState();
     }
 }

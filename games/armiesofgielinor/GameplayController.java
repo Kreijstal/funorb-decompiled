@@ -268,8 +268,8 @@ final class GameplayController {
           boolean decompiledFrameRemainder0 = true;
           if (!this.battlefield.field_V) {
             var9_ref_String = ah.a(ConsoleExpression.field_m, (byte) 22, var8_int);
-            en.field_E.textWidth(var9_ref_String);
-            stackIn_7_0 = en.field_E;
+            DateInputWidget.field_E.textWidth(var9_ref_String);
+            stackIn_7_0 = DateInputWidget.field_E;
             stackIn_7_1 = var9_ref_String;
             stackIn_7_2 = param3;
             stackIn_7_3 = 2 + (param5 - param2);
@@ -283,8 +283,8 @@ final class GameplayController {
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            en.field_E.textWidth(var8_int + "/" + this.battlefield.turnLimit);
-            stackIn_14_0 = en.field_E;
+            DateInputWidget.field_E.textWidth(var8_int + "/" + this.battlefield.turnLimit);
+            stackIn_14_0 = DateInputWidget.field_E;
             stackIn_14_1 = var8_int + "/" + this.battlefield.turnLimit;
             stackIn_14_2 = param3;
             stackIn_14_3 = 2 + (-param2 + param5);
@@ -299,7 +299,7 @@ final class GameplayController {
           var9 = 0;
           scanLoop1: while (true) {
             if (var9 < 3) {
-              stackIn_32_0 = en.field_E;
+              stackIn_32_0 = DateInputWidget.field_E;
               stackIn_32_1 = this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(param6, -1)][var9] + "/" + this.battlefield.mapStructureTotals[var9];
               stackIn_32_2 = param3;
               stackIn_32_3 = param5 + var9 * param2;
@@ -328,7 +328,7 @@ final class GameplayController {
             if (param1) {
               var9 = 0;
               while (var9 < 3) {
-                stackIn_32_0Lifetime1 = en.field_E;
+                stackIn_32_0Lifetime1 = DateInputWidget.field_E;
                 stackIn_32_1Lifetime1 = Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][var9]);
                 stackIn_32_2Lifetime1 = param0 + (param3 + 5);
                 stackIn_32_3Lifetime1 = param2 * var9 + param5;
@@ -404,7 +404,7 @@ final class GameplayController {
                 ~var2_int == ~this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)) {
                 stackIn_33_0 = DeployEvent.field_y;
               } else {
-                stackIn_33_0 = fo.a(param0 - 20367, SoundCache.field_i, new String[]{var3});
+                stackIn_33_0 = EmailCheckResult.a(param0 - 20367, SoundCache.field_i, new String[]{var3});
               }
             }
             var4 = stackIn_33_0;
@@ -1013,7 +1013,7 @@ final class GameplayController {
               stackIn_27_7 = true;
               stackIn_28_8 = (0 != (this.battlefield.inactivePlayerMask & 1 << var9));
               ((CoatOfArms) (Object) stackIn_19_0).a(stackIn_20_1, stackIn_23_2, stackIn_23_3, stackIn_24_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, false, -19744);
-              en.field_E.drawCentered(var10, db.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
+              DateInputWidget.field_E.drawCentered(var10, db.a(true, var8 + 33), MatchConditionEntry.a(param1 + 125, (byte) 94), 16777215, -1);
               stackIn_32_1 = (~this.field_Rb == ~var9);
               this.a(stackIn_32_1, var9, (byte) 116, var8 + 0, param1 + 128);
               var8 = var8 + var7;
@@ -1116,7 +1116,7 @@ final class GameplayController {
             stackIn_11_3 = 111;
             stackIn_11_4 = MusicPatch.field_m;
             if (param4 <= 2) {
-              stackIn_12_5 = jh.field_k;
+              stackIn_12_5 = AgeValidator.field_k;
             } else {
               stackIn_12_5 = var8;
             }
@@ -1129,7 +1129,7 @@ final class GameplayController {
               if (param4 > 2) {
                 stackIn_19_3 = ConsoleValue.field_b;
               } else {
-                stackIn_19_3 = jh.field_k;
+                stackIn_19_3 = AgeValidator.field_k;
               }
               fe.c(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_19_3, true);
             }
@@ -1142,7 +1142,7 @@ final class GameplayController {
               if (param4 > 2) {
                 stackIn_26_3 = ConsoleValue.field_b;
               } else {
-                stackIn_26_3 = jh.field_k;
+                stackIn_26_3 = AgeValidator.field_k;
               }
               fe.c(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_26_3, true);
             }
@@ -1162,7 +1162,7 @@ final class GameplayController {
             stackIn_42_7 = true;
             stackIn_43_8 = ((1 << var7 & this.battlefield.inactivePlayerMask) != 0);
             ((CoatOfArms) (Object) stackIn_30_0).a(stackIn_31_1, stackIn_38_2, stackIn_38_3, stackIn_39_4, stackIn_42_5, stackIn_42_6, stackIn_42_7, stackIn_43_8, false, param2 + 1033);
-            en.field_E.drawCentered(var6, db.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
+            DateInputWidget.field_E.drawCentered(var6, db.a(true, param0 + 129), MatchConditionEntry.a(17 + param3, (byte) 94), 16777215, -1);
             this.b(var7, param0 + 104, param3 + 21, -12857);
             stackIn_47_1 = (this.field_Rb == 2);
             this.a(stackIn_47_1, var7, (byte) 110, 280, param3 + 80);
@@ -1237,9 +1237,9 @@ final class GameplayController {
         try {
           if (this.battlefield.currentPlayer == this.controlledPlayerId) {
             var2_int = uk.field_n - this.field_Hb;
-            vl.outgoingPacket.writeCipheredOpcode(32161, 73);
-            vl.outgoingPacket.writeByte(1, 0);
-            vl.outgoingPacket.writeShort(true, var2_int);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 73);
+            EmailValidator.outgoingPacket.writeByte(1, 0);
+            EmailValidator.outgoingPacket.writeShort(true, var2_int);
             this.remainingTurnTicks = ce.turnDurationTicks[this.battlefield.turnDurationOption];
             this.field_Tb = false;
           }
@@ -1640,13 +1640,13 @@ final class GameplayController {
         RuntimeException decompiledCaughtException = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 65);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 65);
           var3 = -5 % ((26 - param0) / 37);
           var2_int = 5 + AttackEvent.nextBoundedInt(false, 15, vv.field_b);
-          vl.outgoingPacket.writeByte(1, var2_int);
+          EmailValidator.outgoingPacket.writeByte(1, var2_int);
           var4 = 0;
           while (var4 < var2_int) {
-            vl.outgoingPacket.writeByte(1, AttackEvent.nextBoundedInt(false, 256, vv.field_b));
+            EmailValidator.outgoingPacket.writeByte(1, AttackEvent.nextBoundedInt(false, 256, vv.field_b));
             var4++;
             if (var5 != 0) {
               return;
@@ -1669,8 +1669,8 @@ final class GameplayController {
             GameplayController.a((byte[]) null, -44, (CharSequence) null, 112, -65, (byte) -121);
           }
           if (this.field_lb) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 65);
-            var2 = vl.outgoingPacket;
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 65);
+            var2 = EmailValidator.outgoingPacket;
             ((PacketBuffer) ((Object) var2)).writeByte(1, 2);
             ((PacketBuffer) ((Object) var2)).writeByte(1, this.battlefield.chosenGods[this.controlledPlayerId][0] | 128);
             ((PacketBuffer) ((Object) var2)).writeByte(param0 + 24937, this.battlefield.chosenGods[this.controlledPlayerId][1] << 4 | this.battlefield.chosenGods[this.controlledPlayerId][2]);
@@ -2327,7 +2327,7 @@ final class GameplayController {
               stackIn_92_0 = 18;
               return stackIn_92_0;
             }
-            if (vt.a(67, en.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -121)) {
+            if (vt.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -121)) {
               stackIn_97_0 = 4;
               return stackIn_97_0;
             }
@@ -2464,7 +2464,7 @@ final class GameplayController {
             }
             boolean decompiledFrameRemainder4 = true;
             if (stackIn_201_0 == stackIn_201_1) {
-              if (!kt.field_l) {
+              if (!EmailConfirmationValidator.field_l) {
                 var7Lifetime3 = this.battlefield.mapSizeSetting;
                 if (0 == var7Lifetime3) {
                   if (SpellMenuGroup.field_h[1].b(210, 100, AiPlanningStrategy.pointerX, ko.pointerY)) {
@@ -2815,8 +2815,8 @@ final class GameplayController {
               var11 = stackIn_28_0;
               if (var11 != 0) {
                 var8 += 19;
-                en.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
-                var12 = (en.field_E.textWidth(du.field_g[var10]) >> 1) + 3;
+                DateInputWidget.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
+                var12 = (DateInputWidget.field_E.textWidth(du.field_g[var10]) >> 1) + 3;
                 AttackEvent.field_O.f(-AttackEvent.field_O.pixelWidth + (109 - var12), -10 + var8);
                 AttackEvent.field_O.f(109 + var12, var8 - 10);
               }
@@ -3150,8 +3150,8 @@ final class GameplayController {
               7 == this.selectedUnit.unitType) {
               var4_intLifetime1 = 2;
             }
-            vl.outgoingPacket.writeCipheredOpcode(32161, 65);
-            stackIn_91_0 = vl.outgoingPacket;
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 65);
+            stackIn_91_0 = EmailValidator.outgoingPacket;
             stackIn_91_1 = 1;
             if (var4_intLifetime1 == 2) {
               stackIn_92_2 = 4;
@@ -3159,11 +3159,11 @@ final class GameplayController {
               stackIn_92_2 = 3;
             }
             ((CipherPacketBuffer) (Object) stackIn_91_0).writeByte(stackIn_91_1, stackIn_92_2);
-            vl.outgoingPacket.writeByte(1, var4_intLifetime1 | 96);
-            vl.outgoingPacket.writeByte(1, this.selectedUnit.tileX);
-            vl.outgoingPacket.writeByte(1, this.selectedUnit.tileY);
+            EmailValidator.outgoingPacket.writeByte(1, var4_intLifetime1 | 96);
+            EmailValidator.outgoingPacket.writeByte(1, this.selectedUnit.tileX);
+            EmailValidator.outgoingPacket.writeByte(1, this.selectedUnit.tileY);
             if (var4_intLifetime1 == 2) {
-              vl.outgoingPacket.writeByte(1, param0);
+              EmailValidator.outgoingPacket.writeByte(1, param0);
             }
             if ((var6 != 0) &&
               (!this.selectedUnit.movementSpent)) {
@@ -3330,7 +3330,7 @@ final class GameplayController {
             }
             if (~this.controlledPlayerId == ~this.battlefield.currentPlayer) {
               this.field_Tb = true;
-              vl.outgoingPacket.writeCipheredOpcode(param1 ^ 32165, 74);
+              EmailValidator.outgoingPacket.writeCipheredOpcode(param1 ^ 32165, 74);
             }
             this.field_db = param0;
             this.field_zb = uk.field_n;
@@ -3378,7 +3378,7 @@ final class GameplayController {
           if (param0 != 108) {
             return;
           }
-          vl.outgoingPacket.writeCipheredOpcode(32161, 68);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 68);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3696,7 +3696,7 @@ final class GameplayController {
                     this.field_Sb = this.field_Sb - 1;
                     if (this.field_Sb == 0) {
                       mu.field_a = new cg();
-                      ma.field_Z = false;
+                      ValidatedTextWidget.field_Z = false;
                       qc.field_j = 0;
                     }
                   }
@@ -3706,7 +3706,7 @@ final class GameplayController {
               this.field_Sb = this.field_Sb - 1;
               if (this.field_Sb == 0) {
                 mu.field_a = new cg();
-                ma.field_Z = false;
+                ValidatedTextWidget.field_Z = false;
                 qc.field_j = 0;
               }
             }
@@ -4023,10 +4023,10 @@ final class GameplayController {
           }
           if (this.field_lb) {
             kp.field_k = bn.field_d;
-            if (!ma.field_Z) {
+            if (!ValidatedTextWidget.field_Z) {
               boolean decompiledSharedTail0 = !(s.field_d > 1);
               if (!decompiledSharedTail0) {
-                kp.field_k = fo.a(4800, MovementPlanner.field_s, new String[]{Integer.toString(s.field_d)});
+                kp.field_k = EmailCheckResult.a(4800, MovementPlanner.field_s, new String[]{Integer.toString(s.field_d)});
                 decompiledSharedTail0 = (var10 != 0);
               }
               if (decompiledSharedTail0) {
@@ -4040,7 +4040,7 @@ final class GameplayController {
                 }
               }
             }
-            en.field_E.textWidth(kp.field_k);
+            DateInputWidget.field_E.textWidth(kp.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4145,16 +4145,16 @@ final class GameplayController {
               stackIn_32_0 = 0;
             }
             var2_int = stackIn_32_0;
-            var3 = vt.a(67, en.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
+            var3 = vt.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -128) ? 1 : 0;
             stackIn_38_0 = 6684672;
             stackIn_38_1 = -116;
             stackIn_39_2 = (var3 != 0) && (var2_int != 0);
-            ip.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), en.field_E, bu.field_c, 67, GrowthEvent.field_I, this.field_Fb);
+            ip.a(stackIn_38_0, stackIn_38_1, stackIn_39_2, this.n((byte) 95), DateInputWidget.field_E, bu.field_c, 67, GrowthEvent.field_I, this.field_Fb);
             if (this.field_jc &&
               var2_int != 0) {
               TrianglePulse.field_d.d(0, -12 + this.field_Fb, 134, 50, (int)(128.0 + Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0));
             }
-            MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, en.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
+            MoveAttackAction.a(this.field_Fb, IsaacRandom.field_a, DateInputWidget.field_E, GrowthEvent.field_I, this.n((byte) -69), 67, param0 ^ -25);
           }
           if (param0 != 82) {
             return;
@@ -4242,14 +4242,14 @@ final class GameplayController {
           param3 = 75;
           DraggableWidgetContainer.field_J.d(var5_int - 73, var6 - 73, TutorialLayout.field_g[bw.unitDefinitions[param1][1] + 1]);
           param0 = 75;
-          fe.a(var5_int - 50, -46 + var6, 100, 30, jh.field_l, 128);
-          fe.a(-50 + var5_int, var6 + 1, 100, 15, jh.field_l, 128);
-          fe.a(var5_int - 50, var6 + 18, 100, 15, jh.field_l, 128);
-          fe.a(-50 + var5_int, 35 + var6, 100, 15, jh.field_l, 128);
+          fe.a(var5_int - 50, -46 + var6, 100, 30, AgeValidator.field_l, 128);
+          fe.a(-50 + var5_int, var6 + 1, 100, 15, AgeValidator.field_l, 128);
+          fe.a(var5_int - 50, var6 + 18, 100, 15, AgeValidator.field_l, 128);
+          fe.a(-50 + var5_int, 35 + var6, 100, 15, AgeValidator.field_l, 128);
           SpellConfirmationDialog.field_j.b();
           SoftwareRaster.b();
-          en.field_E.drawParagraph(ScrollContainer.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
-          en.field_E.drawText(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
+          DateInputWidget.field_E.drawParagraph(ScrollContainer.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
+          DateInputWidget.field_E.drawText(UiSelectionState.field_d, param3 - 45, -4 + param0, 16777215, -1);
           var7 = (int)(Math.sin((double)uk.field_n / 3.141592653589793 / 2.0) * 64.0 + 128.0);
           var7 = var7 << 16 | 65283 & var7 << 6;
           stackIn_4_0 = bw.unitDefinitions[param1][2];
@@ -4263,40 +4263,40 @@ final class GameplayController {
           stackIn_13_0 = (bw.unitDefinitions[param1][8] <= this.battlefield.playerMana[this.controlledPlayerId]) ? 0 : 1;
           var9 = stackIn_13_0;
           if (var8 != 0) {
-            en.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, param0 - 4, var7, -1);
+            DateInputWidget.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, param0 - 4, var7, -1);
           }
           if (var8 == 0 ||
             var11 != 0) {
-            en.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, -4 + param0, 7864064, -1);
+            DateInputWidget.field_E.drawText(Integer.toString(bw.unitDefinitions[param1][2]), -13 + param3, -4 + param0, 7864064, -1);
           }
-          en.field_E.drawRightAligned(bt.field_d, 45 + param3, param0 - 4, 16777215, -1);
+          DateInputWidget.field_E.drawRightAligned(bt.field_d, 45 + param3, param0 - 4, 16777215, -1);
           if (var9 == 0) {
-            en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, -4 + param0, 7864064, -1);
+            DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, -4 + param0, 7864064, -1);
           }
           if (var9 != 0 ||
             var11 != 0) {
-            en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, param0 - 4, var7, -1);
+            DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][8]), 28 + param3, param0 - 4, var7, -1);
           }
-          en.field_E.drawText(mk.field_i, param3 - 45, param0 + 12, 16777215, -1);
-          en.field_E.drawText(lq.field_a, param3 - 45, 29 + param0, 16777215, -1);
-          en.field_E.drawText(ChannelGainProfile.field_d, -45 + param3, param0 + 46, 16777215, -1);
-          en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, bw.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
-          en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
+          DateInputWidget.field_E.drawText(TextFieldValidator.field_i, param3 - 45, param0 + 12, 16777215, -1);
+          DateInputWidget.field_E.drawText(lq.field_a, param3 - 45, 29 + param0, 16777215, -1);
+          DateInputWidget.field_E.drawText(ChannelGainProfile.field_d, -45 + param3, param0 + 46, 16777215, -1);
+          DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][4] + this.battlefield.a((byte) 11, bw.unitDefinitions[param1][1], this.controlledPlayerId)), param3 + 45, 12 + param0, 16763904, -1);
+          DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][3]), param3 + 45, param0 + 29, 16763904, -1);
           if (34 != param1) {
             if (bw.unitDefinitions[param1][6] != bw.unitDefinitions[param1][7]) {
-              en.field_E.drawRightAligned(fo.a(4800, td.field_a, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
+              DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(4800, td.field_a, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[param1][7])}), 45 + param3, param0 + 46, 16763904, -1);
               if (var11 != 0) {
-                en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
-                en.field_E.drawRightAligned(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             } else {
-              en.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
+              DateInputWidget.field_E.drawRightAligned(Integer.toString(bw.unitDefinitions[param1][6]), param3 + 45, 46 + param0, 16763904, -1);
               if (var11 != 0) {
-                en.field_E.drawRightAligned(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+                DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
               }
             }
           } else {
-            en.field_E.drawRightAligned(fo.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
+            DateInputWidget.field_E.drawRightAligned(EmailCheckResult.a(param2 ^ 4800, AiPlanningStrategy.field_e, new String[]{Integer.toString(bw.unitDefinitions[param1][6]), Integer.toString(bw.unitDefinitions[75][6]), Integer.toString(bw.unitDefinitions[75][7])}), param3 + 45, 46 + param0, 16763904, -1);
           }
           so.field_b.a(5605);
           SpellConfirmationDialog.field_j.g(1);
@@ -4311,9 +4311,9 @@ final class GameplayController {
           }
           ro.field_rb[bw.unitDefinitions[param1][0]].draw(var5_int - 8, var6 - 71);
           if (null != AlphaWidgetContainer.field_M[param1]) {
-            var10 = en.field_E.getParagraphHeight(AlphaWidgetContainer.field_M[param1], 220, 0);
+            var10 = DateInputWidget.field_E.getParagraphHeight(AlphaWidgetContainer.field_M[param1], 220, 0);
             fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
-            en.field_E.drawParagraph(AlphaWidgetContainer.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
+            DateInputWidget.field_E.drawParagraph(AlphaWidgetContainer.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4372,12 +4372,12 @@ final class GameplayController {
           RadialSummonMenu.playDefaultSoundWithIntGuard(109, ClientUiNode.field_v[12]);
           boolean decompiledSharedTail0 = !(this.field_lb);
           if (!decompiledSharedTail0) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 65);
-            vl.outgoingPacket.writeByte(1, 4);
-            vl.outgoingPacket.writeByte(param1 - 64, 32);
-            vl.outgoingPacket.writeByte(param1 ^ 64, param0);
-            vl.outgoingPacket.writeByte(1, this.field_X);
-            vl.outgoingPacket.writeByte(param1 - 64, this.field_ec);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 65);
+            EmailValidator.outgoingPacket.writeByte(1, 4);
+            EmailValidator.outgoingPacket.writeByte(param1 - 64, 32);
+            EmailValidator.outgoingPacket.writeByte(param1 ^ 64, param0);
+            EmailValidator.outgoingPacket.writeByte(1, this.field_X);
+            EmailValidator.outgoingPacket.writeByte(param1 - 64, this.field_ec);
             decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
           }
           if (decompiledSharedTail0) {
@@ -4409,12 +4409,12 @@ final class GameplayController {
           var3_int = this.battlefield.e(-124, this.controlledPlayerId, param0);
           var4 = -60 % ((param1 + 52) / 49);
           if (var3_int > 0) {
-            stackIn_4_0 = fo.a(4800, kv.field_I, new String[]{Integer.toString(var3_int - (-this.battlefield.playerTurnCounts[this.controlledPlayerId] - 1))});
+            stackIn_4_0 = EmailCheckResult.a(4800, kv.field_I, new String[]{Integer.toString(var3_int - (-this.battlefield.playerTurnCounts[this.controlledPlayerId] - 1))});
             return stackIn_4_0;
           }
           if (this.battlefield.runeCapOption != 4 &&
             this.battlefield.remainingRuneCap[this.controlledPlayerId] < uc.spellDefinitions[param0][0]) {
-            stackIn_10_0 = fo.a(4800, MovementPlanner.field_v, new String[]{Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId]), Integer.toString(uc.spellDefinitions[param0][0])});
+            stackIn_10_0 = EmailCheckResult.a(4800, MovementPlanner.field_v, new String[]{Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId]), Integer.toString(uc.spellDefinitions[param0][0])});
             return stackIn_10_0;
           }
           stackIn_12_0 = null;
@@ -4555,7 +4555,7 @@ final class GameplayController {
           stackIn_32_7 = true;
           stackIn_33_8 = (0 != (1 << var6 & this.battlefield.inactivePlayerMask));
           ((CoatOfArms) (Object) stackIn_20_0).a(stackIn_21_1, stackIn_28_2, stackIn_28_3, stackIn_29_4, stackIn_32_5, stackIn_32_6, stackIn_32_7, stackIn_33_8, false, -19744);
-          en.field_E.drawCentered(var7, db.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
+          DateInputWidget.field_E.drawCentered(var7, db.a(true, 310), MatchConditionEntry.a(var5_int + 74, (byte) 94), 16777215, -1);
           this.b(var6, 285, 78 + var5_int, -12857);
           stackIn_37_1 = (~this.field_Rb == ~param3);
           this.a(stackIn_37_1, var6, (byte) -112, db.a(true, 280), MatchConditionEntry.a(var5_int + 137, (byte) 94));
@@ -5117,8 +5117,8 @@ final class GameplayController {
               var11 = stackIn_26_0;
               if (var11 != 0) {
                 var8 += 19;
-                en.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
-                var12 = 3 + (en.field_E.textWidth(du.field_g[var10]) >> 1);
+                DateInputWidget.field_E.drawCentered(du.field_g[var10], 109, var8, 16777215, -1);
+                var12 = 3 + (DateInputWidget.field_E.textWidth(du.field_g[var10]) >> 1);
                 AttackEvent.field_O.f(109 - var12 - AttackEvent.field_O.pixelWidth, var8 - 10);
                 AttackEvent.field_O.f(109 + var12, -10 + var8);
               }
@@ -5432,8 +5432,8 @@ final class GameplayController {
             this.field_L = 200;
           }
           if (rs.keyCode == 39) {
-            stackIn_212_0 = !(kt.field_l);
-            kt.field_l = stackIn_212_0;
+            stackIn_212_0 = !(EmailConfirmationValidator.field_l);
+            EmailConfirmationValidator.field_l = stackIn_212_0;
           }
           if (rs.keyCode == 34 && (this.battlefield.runeCapOption != 0 ||
             this.field_E)) {
@@ -5914,7 +5914,7 @@ final class GameplayController {
         boolean stackIn_9_0 = false;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!kt.field_l) {
+          if (!EmailConfirmationValidator.field_l) {
             stackIn_4_0 = this.l(false);
             return stackIn_4_0;
           }
@@ -6036,7 +6036,7 @@ final class GameplayController {
                       var9 = this.battlefield.equippedSpellIds[this.controlledPlayerId][var6];
                       if (var9 < 0) {
                         fe.b(TurnEffectEvent.field_y, 320, -100 + this.o(125), true);
-                        fe.c(TurnEffectEvent.field_y, 320, this.o(param0 ^ 7) - 100, jh.field_k, true);
+                        fe.c(TurnEffectEvent.field_y, 320, this.o(param0 ^ 7) - 100, AgeValidator.field_k, true);
                         var5 = 1;
                       } else {
                         var5 = 1;
@@ -6055,7 +6055,7 @@ final class GameplayController {
                           } else {
                             stackIn_31_0 = this;
                             stackIn_35_0 = this;
-                            stackIn_35_4 = jh.field_k;
+                            stackIn_35_4 = AgeValidator.field_k;
                           }
                         }
                         this.a(stackIn_34_1, stackIn_34_2, stackIn_34_3, stackIn_35_4, 11951);
@@ -6111,7 +6111,7 @@ final class GameplayController {
                         stackIn_75_2 = -45 + this.o(125);
                         if (~var7 != ~this.field_gc) {
                           if (0 < this.battlefield.e(26, this.controlledPlayerId, var7)) {
-                            stackIn_79_3 = jh.field_k;
+                            stackIn_79_3 = AgeValidator.field_k;
                           } else {
                             stackIn_79_3 = TutorialController.field_e;
                           }
@@ -6167,7 +6167,7 @@ final class GameplayController {
                       decompiledFrameRemainder11 = (var20 != 0);
                     }
                     if (decompiledFrameRemainder11) {
-                      if (vt.a(67, en.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -123) &&
+                      if (vt.a(67, DateInputWidget.field_E, this.field_Fb, bu.field_c, GrowthEvent.field_I, -123) &&
                         !this.battlefield.field_X &&
                         this.battlefield.currentPlayer == this.controlledPlayerId &&
                         !this.field_bc) {
@@ -6301,7 +6301,7 @@ final class GameplayController {
                               if (var20 != 0) {
                                 var2 = ep.field_a;
                                 var2 = PointerInputHandler.field_e;
-                                var2 = fo.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                                var2 = EmailCheckResult.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                               }
                             }
                           }
@@ -6309,7 +6309,7 @@ final class GameplayController {
                           var2 = ep.field_a;
                           if (var20 != 0) {
                             var2 = PointerInputHandler.field_e;
-                            var2 = fo.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                            var2 = EmailCheckResult.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                           }
                         }
                       }
@@ -6317,11 +6317,11 @@ final class GameplayController {
                   } else {
                     var2 = PointerInputHandler.field_e;
                     if (var20 != 0) {
-                      var2 = fo.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                      var2 = EmailCheckResult.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                     }
                   }
                 } else {
-                  var2 = fo.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
+                  var2 = EmailCheckResult.a(4800, vs.field_h, new String[]{Integer.toString(this.battlefield.playerMana[this.controlledPlayerId])});
                 }
                 if (decompiledFrameCompleted2) {
                   stackIn_252_0 = -162;
@@ -6349,11 +6349,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail5 = (var9 != 0);
                     if (!decompiledSharedTail5) {
-                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.battlefield.currentPlayer]), Integer.toString(this.battlefield.turnLimit)});
+                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.battlefield.currentPlayer]), Integer.toString(this.battlefield.turnLimit)});
                       decompiledSharedTail5 = (var20 != 0);
                     }
                     if (decompiledSharedTail5) {
-                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9])});
+                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.battlefield.currentPlayer, -1)][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9])});
                     }
                   }
                   decompiledFrameRemainder10 = (~this.battlefield.rankedParticipants[0] != ~this.battlefield.currentPlayer);
@@ -6366,7 +6366,7 @@ final class GameplayController {
                     }
                     decompiledFrameRemainder10 = !(var9 <= 0);
                     if (decompiledFrameRemainder10) {
-                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
+                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[var9 + 4], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[-1 + var9]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(param0 ^ 123)});
                       decompiledFrameRemainder10 = (var20 != 0);
                     }
                   }
@@ -6379,11 +6379,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail4 = (var9 != 0);
                     if (!decompiledSharedTail4) {
-                      var2 = fo.a(4800, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.controlledPlayerId]), Integer.toString(this.battlefield.turnLimit)});
+                      var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_f[0], new String[]{Integer.toString(1 + this.battlefield.playerTurnCounts[this.controlledPlayerId]), Integer.toString(this.battlefield.turnLimit)});
                       decompiledSharedTail4 = (var20 != 0);
                     }
                     if (decompiledSharedTail4) {
-                      var2 = fo.a(4800, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)][var9 - 1]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1])});
+                      var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_f[var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, -1)][var9 - 1]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1])});
                     }
                   }
                   if (this.battlefield.rankedParticipants[0] != this.battlefield.getPlayerTeamIndex(this.controlledPlayerId, param0 - 121) &&
@@ -6394,7 +6394,7 @@ final class GameplayController {
                       var9++;
                     }
                     if (0 < var9) {
-                      var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
+                      var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[4 + var9], new String[]{Integer.toString(this.battlefield.teamStructureCounts[this.battlefield.rankedParticipants[0]][-1 + var9]), Integer.toString(this.battlefield.mapStructureTotals[var9 - 1]), this.battlefield.teams[this.battlefield.rankedParticipants[0]].getTeamName(3)});
                     }
                   }
                 }
@@ -6411,7 +6411,7 @@ final class GameplayController {
                 var16_ref_String = Integer.toString(var14);
                 if (null != DiskCacheWorker.field_f ||
                   !(DiskCacheWorker.field_f.length <= 8)) {
-                  var2 = fo.a(param0 ^ 4792, DiskCacheWorker.field_f[8], new String[]{var15_ref_String, var16_ref_String});
+                  var2 = EmailCheckResult.a(param0 ^ 4792, DiskCacheWorker.field_f[8], new String[]{var15_ref_String, var16_ref_String});
                   if (var20 != 0) {
                     var2 = null;
                   }
@@ -6441,9 +6441,9 @@ final class GameplayController {
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 502, 550, 12, 32)) {
                     if (0 < this.selectedUnit.bonusStrength) {
-                      var2 = fo.a(4800, ki.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength), Integer.toString(this.selectedUnit.bonusStrength)});
+                      var2 = EmailCheckResult.a(4800, ki.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength), Integer.toString(this.selectedUnit.bonusStrength)});
                     }
-                    var2 = fo.a(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
+                    var2 = EmailCheckResult.a(param0 ^ 4792, CoatOfArms.field_c, new String[]{Integer.toString(this.selectedUnit.strength), Integer.toString(this.selectedUnit.maximumStrength)});
                   }
                   if (IterableDualNodeDeque.isPointerInBounds(-33, 312, 342, 39, 79)) {
                     var2 = fh.field_f[eb.bitCount((byte) -109, 3 & ~var13)];
@@ -6486,11 +6486,11 @@ final class GameplayController {
                     }
                     boolean decompiledSharedTail3 = (~var18 == ~var17);
                     if (!decompiledSharedTail3) {
-                      var2 = fo.a(param0 ^ 4792, cw.field_a, new String[]{Integer.toString(var17), Integer.toString(var18)});
+                      var2 = EmailCheckResult.a(param0 ^ 4792, cw.field_a, new String[]{Integer.toString(var17), Integer.toString(var18)});
                       decompiledSharedTail3 = (var20 != 0);
                     }
                     if (decompiledSharedTail3) {
-                      var2 = fo.a(param0 ^ 4792, ud.field_Y, new String[]{Integer.toString(var17)});
+                      var2 = EmailCheckResult.a(param0 ^ 4792, ud.field_Y, new String[]{Integer.toString(var17)});
                     }
                   }
                   var16 = 0;
@@ -6532,13 +6532,13 @@ final class GameplayController {
                         }
                         if (stackIn_424_0 != stackIn_424_1) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - (var16 & 3) * 30, 517 - (3 & var16) * 30, 30 * (var16 >> 2) + 39, 79 + 30 * (var16 >> 2))) {
-                            var2 = fo.a(param0 + 4680, PaletteRegionMap.field_a[this.selectedUnit.statusEffectType - 1], new String[]{Integer.toString(this.selectedUnit.statusEffectValue)});
+                            var2 = EmailCheckResult.a(param0 + 4680, PaletteRegionMap.field_a[this.selectedUnit.statusEffectType - 1], new String[]{Integer.toString(this.selectedUnit.statusEffectValue)});
                           }
                           var16++;
                         }
                         if (this.selectedUnit.equipmentDescriptor > -1) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - 30 * (var16 & 3), 517 - 30 * (var16 & 3), (var16 >> 2) * 30 + 39, 79 + (var16 >> 2) * 30)) {
-                            var2 = fo.a(4800, ManaEvent.field_y[this.selectedUnit.getEquipmentId((byte) 81)], new String[]{pg.field_b[this.selectedUnit.getEquipmentCategory(20640)]});
+                            var2 = EmailCheckResult.a(4800, ManaEvent.field_y[this.selectedUnit.getEquipmentId((byte) 81)], new String[]{pg.field_b[this.selectedUnit.getEquipmentCategory(20640)]});
                           }
                           var16++;
                         }
@@ -6551,7 +6551,7 @@ final class GameplayController {
                         if (this.selectedUnit.immobilizedTurns > 0) {
                           if (IterableDualNodeDeque.isPointerInBounds(-33, 487 - 30 * (var16 & 3), 517 - (var16 & 3) * 30, 39 + (var16 >> 2) * 30, 30 * (var16 >> 2) + 79)) {
                             if (this.selectedUnit.immobilizedTurns > 1) {
-                              stackIn_457_0 = fo.a(4800, PrintCoatConsoleCommand.field_E[1], new String[]{Integer.toString(this.selectedUnit.immobilizedTurns)});
+                              stackIn_457_0 = EmailCheckResult.a(4800, PrintCoatConsoleCommand.field_E[1], new String[]{Integer.toString(this.selectedUnit.immobilizedTurns)});
                             } else {
                               stackIn_457_0 = PrintCoatConsoleCommand.field_E[0];
                             }
@@ -6686,9 +6686,9 @@ final class GameplayController {
                       if (var20 != 0) {
                         if (this.controlledPlayerId == var13_ref_ne.ownerPlayer) {
                           var2 = GlobalSpell.field_e;
-                          var2 = fo.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                          var2 = EmailCheckResult.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                         } else {
-                          var2 = fo.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                          var2 = EmailCheckResult.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                         }
                       }
                     } else {
@@ -6698,7 +6698,7 @@ final class GameplayController {
                         decompiledSharedTail2 = (var20 != 0);
                       }
                       if (decompiledSharedTail2) {
-                        var2 = fo.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
+                        var2 = EmailCheckResult.a(param0 + 4680, IterableNodeHashTable.field_h, new String[]{this.battlefield.getPlayerTeam(var13_ref_ne.ownerPlayer, -1).getTeamName(3)});
                       }
                     }
                   }
@@ -6751,7 +6751,7 @@ final class GameplayController {
                     var14 = stackIn_617_0;
                   }
                   if (0 < var14) {
-                    var2 = fo.a(4800, vg.field_t, new String[]{Integer.toString(var14)});
+                    var2 = EmailCheckResult.a(4800, vg.field_t, new String[]{Integer.toString(var14)});
                     if (var20 != 0) {
                       var2 = ps.field_x;
                     }
@@ -6766,7 +6766,7 @@ final class GameplayController {
                     decompiledSharedTail1 = (var20 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var2 = fo.a(4800, ek.field_b[0][17], new String[]{Integer.toString(WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
+                    var2 = EmailCheckResult.a(4800, ek.field_b[0][17], new String[]{Integer.toString(WeightedLruCache.terrainDamageTakenPercent[var13_ref_ne.terrainType])});
                   }
                 }
                 var14 = 23;
@@ -6884,9 +6884,9 @@ final class GameplayController {
                 }
               }
               if (this.field_H == 240 && (IterableDualNodeDeque.isPointerInBounds(-33, 0, 240, 110, 330) &&
-                !kt.field_l ||
+                !EmailConfirmationValidator.field_l ||
                 IterableDualNodeDeque.isPointerInBounds(param0 ^ -89, 0, 410, 110, 370) &&
-                kt.field_l)) {
+                EmailConfirmationValidator.field_l)) {
                 var2 = "";
               }
               boolean decompiledFrameCompleted1 = true;
@@ -6908,7 +6908,7 @@ final class GameplayController {
                     var19 = var13_ref_int__[var16];
                     var4 = 1;
                     if (var19 > -1) {
-                      var2 = fo.a(param0 + 4680, PointerInputHandler.field_c, new String[]{wf.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
+                      var2 = EmailCheckResult.a(param0 + 4680, PointerInputHandler.field_c, new String[]{wf.field_q[var19 + 1], Integer.toString(this.battlefield.godFavourLevels[this.controlledPlayerId][var19])});
                     }
                   }
                   var16++;
@@ -6960,14 +6960,14 @@ final class GameplayController {
                 var15_ref_int__ = this.battlefield.chosenGods[this.controlledPlayerId];
                 if (3 == var15_ref_int__.length) {
                   if (TabbedPanel.a(var14 + 55, var13 + 40, 25, false)) {
-                    var2 = fo.a(param0 ^ 4792, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]]});
+                    var2 = EmailCheckResult.a(param0 ^ 4792, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][1]]});
                   }
                   if (TabbedPanel.a(var14, 80 + var13, 25, false)) {
-                    var2 = fo.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1]});
+                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[this.battlefield.chosenGods[this.controlledPlayerId][2] + 1]});
                   }
                   decompiledFrameRemainder4 = !(!TabbedPanel.a(var14, var13, 25, false));
                   if (decompiledFrameRemainder4) {
-                    var2 = fo.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][0]]});
+                    var2 = EmailCheckResult.a(4800, SpellConfirmationDialog.field_g, new String[]{wf.field_q[1 + this.battlefield.chosenGods[this.controlledPlayerId][0]]});
                     decompiledFrameRemainder4 = (var20 != 0);
                   }
                 }
@@ -6985,7 +6985,7 @@ final class GameplayController {
                       break;
                     }
                     if (stackIn_798_0) {
-                      var2 = fo.a(param0 + 4680, SpellConfirmationDialog.field_g, new String[]{wf.field_q[var15_ref_int__[var18] + 1]});
+                      var2 = EmailCheckResult.a(param0 + 4680, SpellConfirmationDialog.field_g, new String[]{wf.field_q[var15_ref_int__[var18] + 1]});
                     }
                     var17 = var17 + var16;
                     var18++;
@@ -7112,7 +7112,7 @@ final class GameplayController {
                             }
                             if (decompiledFrameRemainder13) {
                               if (var17 == 0) {
-                                var2 = fo.field_a;
+                                var2 = EmailCheckResult.field_a;
                                 decompiledFrameRemainder13 = (var20 != 0);
                               }
                               if (decompiledFrameRemainder13) {
@@ -7183,7 +7183,7 @@ final class GameplayController {
               ((String) (var2)).length() > 0) {
               var6 = 10 + AiPlanningStrategy.pointerX;
               var7 = ko.pointerY + 30;
-              var8 = en.field_E.textWidth((String) (var2));
+              var8 = DateInputWidget.field_E.textWidth((String) (var2));
               if (var4 != 0) {
                 var6 = var6 - (var8 + 12);
                 if (!(6 <= var6)) {
@@ -7210,7 +7210,7 @@ final class GameplayController {
               if (decompiledSharedTail0) {
                 SoftwareRaster.a(-6 + var6, var7 - 11, 12 + var8, 15, 5, 0, 128);
               }
-              en.field_E.drawText((String) (var2), var6, var7, var3, -1);
+              DateInputWidget.field_E.drawText((String) (var2), var6, var7, var3, -1);
             }
             return;
           }
@@ -7461,7 +7461,7 @@ final class GameplayController {
             fe.b(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
             fe.c(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           }
-          en.field_E.drawCentered(var7, db.a(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
+          DateInputWidget.field_E.drawCentered(var7, db.a(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
           this.b(var6_int, 35 + param1, 133 + param0, -12857);
           stackIn_29_1 = (~this.field_Rb == ~param4);
           this.a(stackIn_29_1, var6_int, (byte) 113, param1 + 35, param0 + 194);
@@ -7747,28 +7747,28 @@ final class GameplayController {
                   this.field_Ub.isEmpty(false)) {
                   var4Lifetime1 = 16711680;
                 }
-                en.field_E.drawCentered(Integer.toString(this.field_Bb), 180, 3 * en.field_E.maxAscent + 25, var4Lifetime1, 0);
+                DateInputWidget.field_E.drawCentered(Integer.toString(this.field_Bb), 180, 3 * DateInputWidget.field_E.maxAscent + 25, var4Lifetime1, 0);
               }
               if (this.field_lb) {
                 var4Lifetime1Lifetime1 = this.battlefield.computeStateChecksum(true, this.controlledPlayerId);
                 stackIn_226_0 = (RadialSummonMenu.field_d == var4Lifetime1Lifetime1) ? 0 : 1;
                 var5Lifetime1 = stackIn_226_0;
-                en.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1, 16) + " (client)", 320, 40, 16777215, -1);
-                en.field_E.drawCentered(Integer.toString(RadialSummonMenu.field_d, 16) + " (server)", 320, en.field_E.maxAscent + 40, 16777215, -1);
+                DateInputWidget.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1, 16) + " (client)", 320, 40, 16777215, -1);
+                DateInputWidget.field_E.drawCentered(Integer.toString(RadialSummonMenu.field_d, 16) + " (server)", 320, DateInputWidget.field_E.maxAscent + 40, 16777215, -1);
                 if (var5Lifetime1 != 0) {
                   stackIn_233_0 = (this.a((byte) 101)) ? 8421631 : 16711680;
                   var6Lifetime1 = stackIn_233_0;
-                  en.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1 ^ RadialSummonMenu.field_d, 16) + " (diff)", 320, en.field_E.maxAscent * 2 + 40, var6Lifetime1, -1);
+                  DateInputWidget.field_E.drawCentered(Integer.toString(var4Lifetime1Lifetime1 ^ RadialSummonMenu.field_d, 16) + " (diff)", 320, DateInputWidget.field_E.maxAscent * 2 + 40, var6Lifetime1, -1);
                 }
-                en.field_E.drawCentered(Integer.toString(this.remainingTurnTicks), 64, 35 + en.field_E.maxAscent * 3, 16777215, -1);
-                en.field_E.drawText(Integer.toString(this.field_cc) + "," + Integer.toString(this.field_eb), 20, 150, 16777215, -1);
+                DateInputWidget.field_E.drawCentered(Integer.toString(this.remainingTurnTicks), 64, 35 + DateInputWidget.field_E.maxAscent * 3, 16777215, -1);
+                DateInputWidget.field_E.drawText(Integer.toString(this.field_cc) + "," + Integer.toString(this.field_eb), 20, 150, 16777215, -1);
               }
-              en.field_E.drawText(Integer.toString(this.selectedTileIndex), 20, 140, 16777215, -1);
-              stackIn_238_0 = en.field_E;
+              DateInputWidget.field_E.drawText(Integer.toString(this.selectedTileIndex), 20, 140, 16777215, -1);
+              stackIn_238_0 = DateInputWidget.field_E;
               stackIn_238_1 = new StringBuilder().append("total hurt: ").append(this.battlefield.damageTakenByPlayer[this.controlledPlayerId]).append(" lost a unit? ");
               stackIn_239_2 = !(0 >= this.battlefield.unitLossCounts[this.controlledPlayerId]);
               ((BinaryBitmapFont) (Object) stackIn_238_0).drawText(((StringBuilder) (Object) stackIn_238_1).append(stackIn_239_2).toString(), 20, 460, 16777215, 1);
-              en.field_E.drawText("scroll lock? " + this.cameraFocusPending, 20, 470, 16777215, 1);
+              DateInputWidget.field_E.drawText("scroll lock? " + this.cameraFocusPending, 20, 470, 16777215, 1);
               SoftwareRaster.b(150, 100, 434, 145, 16711935);
             }
             return;
@@ -7827,7 +7827,7 @@ final class GameplayController {
           var7 = Integer.toString(var5);
           var8 = Integer.toString(this.battlefield.getStructureIncome(-99, param1));
           if (!this.battlefield.field_r) {
-            stackIn_4_0 = param0 + " - " + fo.a(param2 + 255074220, ConsoleCommand.field_w, new String[]{var8});
+            stackIn_4_0 = param0 + " - " + EmailCheckResult.a(param2 + 255074220, ConsoleCommand.field_w, new String[]{var8});
             return stackIn_4_0;
           }
           if (param2 != -255069420) {
@@ -7835,15 +7835,15 @@ final class GameplayController {
           }
           var9 = this.a((byte) -70, param1);
           if (var9 == 1) {
-            stackIn_10_0 = param0 + " - " + fo.a(4800, cr.field_bb, new String[]{var6, var7, var8});
+            stackIn_10_0 = param0 + " - " + EmailCheckResult.a(4800, cr.field_bb, new String[]{var6, var7, var8});
             return stackIn_10_0;
           }
           if (var9 <= 3 &&
             var9 > 1) {
-            stackIn_16_0 = param0 + " - " + fo.a(4800, TutorialLayout.field_c, new String[]{var6, var7, var8, Integer.toString(var9)});
+            stackIn_16_0 = param0 + " - " + EmailCheckResult.a(4800, TutorialLayout.field_c, new String[]{var6, var7, var8, Integer.toString(var9)});
             return stackIn_16_0;
           }
-          stackIn_18_0 = param0 + " - " + fo.a(4800, lu.field_v, new String[]{var6, var7, var8});
+          stackIn_18_0 = param0 + " - " + EmailCheckResult.a(4800, TextEntryWidgetPainter.field_v, new String[]{var6, var7, var8});
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8187,8 +8187,8 @@ final class GameplayController {
               return;
             }
             if (param0 == 20) {
-              stackIn_220_0 = !(kt.field_l);
-              kt.field_l = stackIn_220_0;
+              stackIn_220_0 = !(EmailConfirmationValidator.field_l);
+              EmailConfirmationValidator.field_l = stackIn_220_0;
               return;
             }
             if (param0 == 24) {
@@ -8213,9 +8213,9 @@ final class GameplayController {
               return;
             }
             if (param0 == 2) {
-              stackIn_251_0 = !(ma.field_Z);
-              ma.field_Z = stackIn_251_0;
-              if (ma.field_Z) {
+              stackIn_251_0 = !(ValidatedTextWidget.field_Z);
+              ValidatedTextWidget.field_Z = stackIn_251_0;
+              if (ValidatedTextWidget.field_Z) {
                 s.field_d = 0;
               }
               return;
@@ -8915,11 +8915,11 @@ final class GameplayController {
             this.movementPlanner.selectionActive = false;
             if (this.field_lb) {
               if (this.field_oc == null) {
-                this.movementPlanner.writeMovementPacket(true, vl.outgoingPacket);
+                this.movementPlanner.writeMovementPacket(true, EmailValidator.outgoingPacket);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
-                this.movementPlanner.writeAttackMovementPacket(vl.outgoingPacket, (byte) -120, this.field_oc);
+                this.movementPlanner.writeAttackMovementPacket(EmailValidator.outgoingPacket, (byte) -120, this.field_oc);
                 if (var3 != 0) {
                   if (null == this.field_oc) {
                     var2 = this.movementPlanner.createActionRequest(this.controlledPlayerId, 43).prepareAction(90, this.battlefield);
@@ -8981,7 +8981,7 @@ final class GameplayController {
               if (!this.field_a) {
                 var3 = this.battlefield.g(-1);
                 if (var3 > 0) {
-                  MusicPatchEnvelope.a(this.field_Nb, fo.a(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
+                  MusicPatchEnvelope.a(this.field_Nb, EmailCheckResult.a(4800, DeployRequest.field_x, new String[]{Integer.toString(var3)}), 0, true);
                 }
               }
             }
@@ -9525,7 +9525,7 @@ final class GameplayController {
             return;
           }
           if (this.field_lb &&
-            ma.field_Z) {
+            ValidatedTextWidget.field_Z) {
             stackIn_19_0 = 0;
           } else {
             stackIn_19_0 = 1;
@@ -10045,7 +10045,7 @@ final class GameplayController {
             var6++;
           } while (var7 == 0);
           while (var6 < 3) {
-            en.field_E.drawText(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.mapStructureTotals[var6], db.a(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
+            DateInputWidget.field_E.drawText(this.battlefield.teamStructureCounts[param0][var6] + "/" + this.battlefield.mapStructureTotals[var6], db.a(true, 40 + param1), MatchConditionEntry.a(-2 + param2 + (var6 + 1) * var5_int, (byte) 94), 38810, -1);
             var6++;
             if (var7 != 0) {
               return;
@@ -10066,7 +10066,7 @@ final class GameplayController {
           if (!this.field_lb) {
             throw new IllegalStateException();
           }
-          vl.outgoingPacket.writeCipheredOpcode(32161, 66);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 66);
           if (param0 != 69) {
             this.field_wb = (String) null;
           }
@@ -10115,18 +10115,18 @@ final class GameplayController {
             var3 = 1 << var2_int;
             if (var4 == 0) {
               if ((this.field_hb & var3) != 0) {
-                LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, wd.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, AccountNameCheckResult.field_g, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
               } else {
                 if ((this.field_ob & var3) != 0) {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, QuickChatMenu.field_Mb, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               if (0 != (var3 & this.field_x) &&
                 0 == (this.battlefield.eliminatedPlayerMask & var3)) {
                 if (0 == (var3 & this.battlefield.field_C)) {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, TelepopEvent.field_y, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 } else {
-                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, fo.a(4800, bk.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
+                  LineOfSightGrid.$cfr$intArgs$a$5d483ac33914(-80, EmailCheckResult.a(4800, bk.field_h, new String[]{this.battlefield.playerNames[var2_int]}), this.field_Nb);
                 }
               }
               var2_int++;
@@ -10419,15 +10419,15 @@ final class GameplayController {
           var6_int = 200;
           var7 = ActionRequest.field_l[param0];
           if (this.battlefield.runeCapOption != 4) {
-            var7 = var7 + fo.a(4800, lt.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
+            var7 = var7 + EmailCheckResult.a(4800, lt.field_f, new String[]{Integer.toString(uc.spellDefinitions[param0][0]), Integer.toString(this.battlefield.remainingRuneCap[this.controlledPlayerId])});
           }
-          var8 = en.field_E.getParagraphHeight(var7, var6_int - 20, 0);
+          var8 = DateInputWidget.field_E.getParagraphHeight(var7, var6_int - 20, 0);
           var9 = (nr.field_e.getParagraphHeight(MusicPatchEnvelope.field_f[param0], -20 + var6_int << 1, 0) >> 1) - 30;
           if (param4 != 11951) {
             this.field_l = false;
           }
           fe.b(param2 - (var6_int >> 1), -20 + param1 - var8 - var9, var6_int, var8 - (-var9 - 30), MusicPatch.field_m, param3, 0, 192);
-          en.field_E.drawParagraph(var7, param2 - (var6_int >> 1) + 10, param1 - var8, var6_int - 20, var8, 16777215, -1, 1, 0, 0);
+          DateInputWidget.field_E.drawParagraph(var7, param2 - (var6_int >> 1) + 10, param1 - var8, var6_int - 20, var8, 16777215, -1, 1, 0, 0);
           fe.b(MusicPatchEnvelope.field_f[param0], param2, -3 - var8 + param1 - var9, var6_int - 20, true);
           fe.a(MusicPatchEnvelope.field_f[param0], param2, -3 - var9 + (-var8 + param1), -20 + var6_int, param3, true);
           return;
@@ -10500,9 +10500,9 @@ final class GameplayController {
 
     final void i(int param0) {
         try {
-          vl.outgoingPacket.writeCipheredOpcode(param0 ^ 32161, 65);
-          vl.outgoingPacket.writeByte(param0 ^ 1, 1);
-          vl.outgoingPacket.writeByte(param0 + 1, 64);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(param0 ^ 32161, 65);
+          EmailValidator.outgoingPacket.writeByte(param0 ^ 1, 1);
+          EmailValidator.outgoingPacket.writeByte(param0 + 1, 64);
           this.remainingTurnTicks = param0;
           this.field_Tb = true;
         } catch (RuntimeException runtimeException) {
@@ -10778,11 +10778,11 @@ final class GameplayController {
           this.battlefield.spellCastPending = true;
           this.notifyTutorialInteraction(25, ((Spell) (spell)).spellId, -118);
           if (this.field_lb) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 65);
-            vl.outgoingPacket.writeByte(1, 2 + ((Spell) (spell)).getPayloadSize(25365));
-            vl.outgoingPacket.writeByte(1, 160);
-            vl.outgoingPacket.writeByte(1, selectionMode);
-            ((Spell) (spell)).writePayload(-11637, vl.outgoingPacket);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 65);
+            EmailValidator.outgoingPacket.writeByte(1, 2 + ((Spell) (spell)).getPayloadSize(25365));
+            EmailValidator.outgoingPacket.writeByte(1, 160);
+            EmailValidator.outgoingPacket.writeByte(1, selectionMode);
+            ((Spell) (spell)).writePayload(-11637, EmailValidator.outgoingPacket);
             if (var9 == 0) {
               return;
             }
@@ -10803,7 +10803,7 @@ final class GameplayController {
           if (param0 != -22038) {
             this.field_fb = 31;
           }
-          if (!kt.field_l) {
+          if (!EmailConfirmationValidator.field_l) {
             this.g((byte) 118);
             if (!ArmiesOfGielinor.obfuscationControl) {
               return;
@@ -11124,7 +11124,7 @@ final class GameplayController {
                   if (var3 != 0) {
                     SoftwareRaster.a(230 + (var2_int * 45 + this.field_g), -95 + this.o(param0 ^ 11484), 20, 0, 128);
                   }
-                  en.field_E.drawCentered(Integer.toString(var4), 231 - (-(var2_int * 45) - this.field_g), this.o(125) - 60, 16777215, 0);
+                  DateInputWidget.field_E.drawCentered(Integer.toString(var4), 231 - (-(var2_int * 45) - this.field_g), this.o(125) - 60, 16777215, 0);
                 }
               } else if (var2_int == 5) {
                 if (0 > this.field_g) {
@@ -11136,7 +11136,7 @@ final class GameplayController {
                   if (var3 != 0) {
                     SoftwareRaster.a(this.field_g + 230 + var2_int * 45, -95 + this.o(125), 20, 0, 128);
                   }
-                  en.field_E.drawCentered(Integer.toString(var4), this.field_g + 231 + 45 * var2_int, this.o(param0 ^ 11487) - 60, 16777215, 0);
+                  DateInputWidget.field_E.drawCentered(Integer.toString(var4), this.field_g + 231 + 45 * var2_int, this.o(param0 ^ 11487) - 60, 16777215, 0);
                 }
               } else {
                 if (var4 < BattleCharacter.field_h.length) {
@@ -11147,7 +11147,7 @@ final class GameplayController {
                 if (var3 != 0) {
                   SoftwareRaster.a(var2_int * 45 + (230 + this.field_g), this.o(127) - 95, 20, 0, 128);
                 }
-                en.field_E.drawCenteredWithAlpha(Integer.toString(var4), this.field_g + (231 + 45 * var2_int), -60 + this.o(125), 16777215, 0, 256 - this.field_n);
+                DateInputWidget.field_E.drawCenteredWithAlpha(Integer.toString(var4), this.field_g + (231 + 45 * var2_int), -60 + this.o(125), 16777215, 0, 256 - this.field_n);
               }
               var2_int++;
             }
@@ -11252,7 +11252,7 @@ final class GameplayController {
               stackIn_37_7 = true;
               stackIn_38_8 = ((1 << var5 & this.battlefield.inactivePlayerMask) != 0);
               ((CoatOfArms) (Object) stackIn_25_0).a(stackIn_26_1, stackIn_33_2, stackIn_33_3, stackIn_34_4, stackIn_37_5, stackIn_37_6, stackIn_37_7, stackIn_38_8, false, -19744);
-              en.field_E.drawCentered(var6, db.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
+              DateInputWidget.field_E.drawCentered(var6, db.a(true, 98 + var4_int), MatchConditionEntry.a(380, (byte) 94), 16777215, -1);
               stackIn_42_1 = (~this.field_Rb == ~var7);
               this.a(stackIn_42_1, var5, (byte) -64, 66 + var4_int, 385);
               param0++;
@@ -11336,7 +11336,7 @@ final class GameplayController {
         int[] var4Lifetime1;
         int var5Lifetime1;
         try {
-          if (rb.a(param0, BoundedFile.field_e, 1)) {
+          if (DebouncedValidator.a(param0, BoundedFile.field_e, 1)) {
             return;
           }
           if (param1 != 30) {
@@ -11378,9 +11378,9 @@ final class GameplayController {
             throw new RuntimeException((String) null);
           }
           if (this.battlefield.currentPlayer == this.controlledPlayerId) {
-            vl.outgoingPacket.writeCipheredOpcode(param1 + 32217, 73);
-            vl.outgoingPacket.writeByte(1, param0);
-            vl.outgoingPacket.writeShort(true, uk.field_n - this.field_zb);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(param1 + 32217, 73);
+            EmailValidator.outgoingPacket.writeByte(1, param0);
+            EmailValidator.outgoingPacket.writeShort(true, uk.field_n - this.field_zb);
             this.field_Tb = false;
           }
           this.field_db = 0;
@@ -11719,7 +11719,7 @@ final class GameplayController {
           if (!this.field_lb) {
             throw new IllegalStateException();
           }
-          vl.outgoingPacket.writeCipheredOpcode(32161, 67);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 67);
           var2_int = 38 / ((param0 - 53) / 41);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -11899,13 +11899,13 @@ final class GameplayController {
               (param3 + var8) > AiPlanningStrategy.pointerX &&
               ko.pointerY >= param4 &&
               ko.pointerY <= (24 + param4)) {
-              var11 = fo.a(4800, qf.field_b, new String[]{Integer.toString(var7 + pg.playerProfile.progressionCredit)});
+              var11 = EmailCheckResult.a(4800, qf.field_b, new String[]{Integer.toString(var7 + pg.playerProfile.progressionCredit)});
               var12 = AiPlanningStrategy.pointerX;
               var13 = ko.pointerY;
-              var14 = en.field_E.getWrappedWidth(var11, 320);
-              var15 = en.field_E.getParagraphHeight(var11, 320, en.field_E.maxAscent);
+              var14 = DateInputWidget.field_E.getWrappedWidth(var11, 320);
+              var15 = DateInputWidget.field_E.getParagraphHeight(var11, 320, DateInputWidget.field_E.maxAscent);
               SoftwareRaster.a(db.a(true, var12 - 3), MatchConditionEntry.a(-3 + var13, (byte) 94), var14 + 6, 6 + var15, 5, 0, 192);
-              en.field_E.drawParagraph(var11, db.a(true, var12), MatchConditionEntry.a(var13, (byte) 94), var14, var15, 16777215, -1, 0, 0, en.field_E.maxAscent);
+              DateInputWidget.field_E.drawParagraph(var11, db.a(true, var12), MatchConditionEntry.a(var13, (byte) 94), var14, var15, 16777215, -1, 0, 0, DateInputWidget.field_E.maxAscent);
             }
           }
           return;

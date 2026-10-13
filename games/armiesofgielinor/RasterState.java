@@ -75,7 +75,7 @@ final class RasterState extends IntrusiveNode {
                 if (!cu.field_a) {
                   QuickChatMenu.a(param5, var8, var7, param1, param3, var9, 54, param0);
                 }
-                pk.a(param3, param0, param1, var7, var8, -29403, var9, param5);
+                ValidationStatusWidget.a(param3, param0, param1, var7, var8, -29403, var9, param5);
                 if (Unit.field_L) {
                   ChannelBaseVolumeConsoleCommand.field_I.g(param5, param3);
                 }

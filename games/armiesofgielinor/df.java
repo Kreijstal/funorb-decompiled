@@ -79,8 +79,8 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
             this.field_F)) {
             throw new IllegalStateException();
           }
-          this.field_Q = (EditableTextWidget) ((Object) new ma(param0, (WidgetListener) (this), 100));
-          this.field_S = (EditableTextWidget) ((Object) new ma("", (WidgetListener) (this), 20));
+          this.field_Q = (EditableTextWidget) ((Object) new ValidatedTextWidget(param0, (WidgetListener) (this), 100));
+          this.field_S = (EditableTextWidget) ((Object) new ValidatedTextWidget("", (WidgetListener) (this), 20));
           if (!this.field_P) {
             this.field_O = new InteractiveWidget(ResourceRequest.field_v, (WidgetListener) null);
             stackIn_18_1 = null;
@@ -103,8 +103,8 @@ final class df extends DequeWidgetContainer implements EditableTextWidgetListene
             this.field_N = new InteractiveWidget(dt.field_c, (WidgetListener) null);
             this.field_Q.enabled = false;
           }
-          this.field_Q.painter = (WidgetPainter) ((Object) new lu(10000536));
-          this.field_S.painter = (WidgetPainter) ((Object) new ol(10000536));
+          this.field_Q.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
+          this.field_S.painter = (WidgetPainter) ((Object) new MaskedTextEntryPainter(10000536));
           var6 = new nu();
           this.field_O.painter = (WidgetPainter) ((Object) var6);
           if (this.field_N != null) {

@@ -52,7 +52,7 @@ final class MovementPresentation implements EventPresentation {
         int var7 = 0;
         int var8 = 0;
         try {
-          var6 = vl.outgoingPacket;
+          var6 = EmailValidator.outgoingPacket;
           var6.writeCipheredOpcode(32161, param0);
           var6.position = var6.position + 1;
           if (param5 != 5623) {

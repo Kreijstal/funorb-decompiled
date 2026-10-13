@@ -54,14 +54,14 @@ final class HuffmanCodec {
     final static void a(int param0, int param1, String param2, boolean param3, byte param4, int param5) {
         try {
           if (param3) {
-            no.field_P.pixelWidth = SoftwareRaster.width;
-            no.field_P.pixels = SoftwareRaster.pixels;
-            no.field_P.pixelHeight = SoftwareRaster.height;
+            NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
+            NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
+            NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
             DropTargetWidgetContainer.field_J.b();
             SoftwareRaster.b();
             gq.b(SectorCacheStore.field_j[3][0], 0, 0, param1);
             fe.c(DeployRequest.a(param2, (byte) 42), uh.field_e[3][0] >> 1, 20 + (uh.field_e[3][1] >> 1), 2, true);
-            no.field_P.b();
+            NumericDateInputWidget.field_P.b();
             DropTargetWidgetContainer.field_J.h(param0, param5);
           } else {
             gq.b(SectorCacheStore.field_j[3][0], param0, param5, param1);

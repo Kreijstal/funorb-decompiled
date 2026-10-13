@@ -526,7 +526,7 @@ final class PopupPresentation implements EventPresentation {
         if (param0 != 3) {
           this.drawBaseLayer((byte) -24);
         }
-        en.field_E.drawCentered(Integer.toString(this.field_m), this.presenter.screenX + 40, this.presenter.screenY - 15, 16777215, 0);
+        DateInputWidget.field_E.drawCentered(Integer.toString(this.field_m), this.presenter.screenX + 40, this.presenter.screenY - 15, 16777215, 0);
     }
 
     private final void g(int param0) {
@@ -590,7 +590,7 @@ final class PopupPresentation implements EventPresentation {
         }
         boolean decompiledFrameRemainder0 = true;
         if (StrongCacheEntry.field_E >= 20 &&
-          wd.a((byte) 28) && (!(vt.field_n > 0) ||
+          AccountNameCheckResult.a((byte) 28) && (!(vt.field_n > 0) ||
           du.c(10))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;

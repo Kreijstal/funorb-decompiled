@@ -169,7 +169,7 @@ final class MoveEvent extends GameEvent {
           ip.field_c = fk.loadRgbSpritesByName("frame_bottom", (byte) -125, param2, "commonui");
           gt.field_e = GameplayController.a("jagex_logo_grey", (byte) 51, "commonui", param2);
           NodeIterator.field_b = fk.loadRgbSpritesByName("button", (byte) -124, param2, "commonui");
-          db.field_a = ac.a(param2, "validation", (byte) -4, "commonui");
+          db.validationStatusIcons = ac.a(param2, "validation", (byte) -4, "commonui");
           gl.field_e = (BitmapFont) ((Object) it.a("arezzo12", param2, param3, (byte) -87, "commonui"));
           ArmiesOfGielinor.field_J = (BitmapFont) ((Object) it.a("arezzo14", param2, param3, (byte) -87, "commonui"));
           CipherPacketBuffer.field_t = (BitmapFont) ((Object) it.a("arezzo14bold", param2, param3, (byte) -87, "commonui"));

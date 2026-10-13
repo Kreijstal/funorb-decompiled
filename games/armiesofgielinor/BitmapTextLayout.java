@@ -211,7 +211,7 @@ final class BitmapTextLayout extends TextLayout {
 
     final static void a(String param0, byte param1) {
         try {
-          mk.field_f = param0;
+          TextFieldValidator.field_f = param0;
           gl.a(120, 12);
           if (param1 >= -61) {
             field_e = (String) null;
@@ -354,12 +354,12 @@ final class BitmapTextLayout extends TextLayout {
         tq.field_c = SoftwareRaster.width;
         CachedArchiveProvider.field_p = SoftwareRaster.height;
         AlphaWidgetContainer.d(false);
-        SpellCastEvent.field_E.setLayout(-2 + no.field_T.height - 40, (byte) -124, 0, no.field_T.width, 0);
+        SpellCastEvent.field_E.setLayout(-2 + NumericDateInputWidget.field_T.height - 40, (byte) -124, 0, NumericDateInputWidget.field_T.width, 0);
         t.field_g.setBounds(jn.field_d, -20500, GlobalSpell.field_f.width, 0, 0);
         int var1 = 2 + jn.field_d;
         IconTextComponent.field_Kb.setBounds(GlobalSpell.field_f.height - (!fh.field_c ? 0 : var1), -20500, GlobalSpell.field_f.width, !fh.field_c ? 0 : var1, 0);
         mj.a((byte) 91);
-        cp.field_d.setBounds(40, -20500, no.field_T.width, no.field_T.height - 40, 0);
+        cp.field_d.setBounds(40, -20500, NumericDateInputWidget.field_T.width, NumericDateInputWidget.field_T.height - 40, 0);
         ClientContextMenu.field_n.setBounds(30, -20500, ov.field_i.width, 0, 0);
         LobbyPlayer.field_Lb.setBounds(-30 + (-40 + ov.field_i.height) - 2, -20500, ov.field_i.width, 30, 0);
         r.field_v.setBounds(30, -20500, 68, 5, 5);
@@ -391,12 +391,12 @@ final class BitmapTextLayout extends TextLayout {
           vd.field_b.writeByte(1, param1);
           vd.field_b.writeShort(true, param2);
           vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-          vl.outgoingPacket.writeCipheredOpcode(32161, 18);
-          fieldTemp$0 = vl.outgoingPacket.position + 1;
-          vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
+          fieldTemp$0 = EmailValidator.outgoingPacket.position + 1;
+          EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
           var4 = fieldTemp$0;
-          vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-          vl.outgoingPacket.writeByteLengthPrefix(-var4 + vl.outgoingPacket.position, param3 + 5900);
+          EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
+          EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4 + EmailValidator.outgoingPacket.position, param3 + 5900);
           return;
         }
         ResourceArchive var5 = (ResourceArchive) null;
@@ -405,12 +405,12 @@ final class BitmapTextLayout extends TextLayout {
         vd.field_b.writeByte(1, param1);
         vd.field_b.writeShort(true, param2);
         vd.field_b.a(-5247, cs.field_cb, mu.field_c);
-        vl.outgoingPacket.writeCipheredOpcode(32161, 18);
-        int fieldTemp$1 = vl.outgoingPacket.position + 1;
-        vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
+        EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 18);
+        int fieldTemp$1 = EmailValidator.outgoingPacket.position + 1;
+        EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        vl.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
-        vl.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + vl.outgoingPacket.position, param3 + 5900);
+        EmailValidator.outgoingPacket.writeBytes(vd.field_b.payload, 0, vd.field_b.position, param3 + 69);
+        EmailValidator.outgoingPacket.writeByteLengthPrefix(-var4Lifetime1 + EmailValidator.outgoingPacket.position, param3 + 5900);
     }
 
     final static RgbSprite[] b(int param0, int param1) {

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends mk {
+final class AgeValidator extends TextFieldValidator {
     static RgbSprite[] field_l;
-    static String field_j;
+    static String requestedAccountName;
     static int[] field_k;
 
     final static void a(PacketBuffer param0, PlatformTaskService param1, int param2, int param3) {
@@ -151,44 +151,44 @@ final class jh extends mk {
         }
     }
 
-    jh(EditableTextWidget param0) {
-        super(param0);
+    AgeValidator(EditableTextWidget input) {
+        super(input);
     }
 
-    final gu a(int param0, String param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        CharSequence var4 = null;
-        CharSequence var5 = null;
-        gu stackIn_5_0 = null;
-        gu stackIn_10_0 = null;
+    final ValidationState validateText(int obfuscationGuard, String text) {
+        int age = 0;
+        RuntimeException failure = null;
+        CharSequence syntaxText = null;
+        CharSequence numericText = null;
+        ValidationState invalidSyntaxState = null;
+        ValidationState invalidRangeState = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -3137) {
+          if (obfuscationGuard != -3137) {
             field_k = (int[]) null;
           }
-          var4 = (CharSequence) ((Object) param1);
-          if (!vv.a(-66, var4)) {
-            stackIn_5_0 = rn.field_e;
-            return stackIn_5_0;
+          syntaxText = (CharSequence) ((Object) text);
+          if (!vv.a(-66, syntaxText)) {
+            invalidSyntaxState = rn.validationInvalid;
+            return invalidSyntaxState;
           }
-          var5 = (CharSequence) ((Object) param1);
-          var3_int = HuffmanCodec.a(46, var5);
-          if (var3_int > 0 &&
-            var3_int <= 130) {
-            return oo.field_g;
+          numericText = (CharSequence) ((Object) text);
+          age = HuffmanCodec.a(46, numericText);
+          if (age > 0 &&
+            age <= 130) {
+            return oo.validationValid;
           }
-          stackIn_10_0 = rn.field_e;
-          return stackIn_10_0;
+          invalidRangeState = rn.validationInvalid;
+          return invalidRangeState;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("jh.R(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_13_0 = failure;
+          stackIn_13_1 = new StringBuilder().append("jh.R(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -233,7 +233,7 @@ final class jh extends mk {
         }
     }
 
-    final String a(byte param0, String param1) {
+    final String describeText(byte obfuscationGuard, String text) {
         RuntimeException var3 = null;
         String stackIn_5_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -241,10 +241,10 @@ final class jh extends mk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 89) {
+          if (obfuscationGuard <= 89) {
             field_l = (RgbSprite[]) null;
           }
-          if (this.a(-3137, param1) != rn.field_e) {
+          if (this.validateText(-3137, text) != rn.validationInvalid) {
             return null;
           }
           stackIn_5_0 = jg.field_n;
@@ -253,8 +253,8 @@ final class jh extends mk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("jh.O(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("jh.O(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -264,7 +264,7 @@ final class jh extends mk {
     }
 
     public static void h(int param0) {
-        field_j = null;
+        requestedAccountName = null;
         if (param0 >= -45) {
           field_k = (int[]) null;
         }
@@ -285,7 +285,7 @@ final class jh extends mk {
           try {
             var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
             if (param0 >= -64) {
-              jh.isPacketPayloadReady(-70);
+              AgeValidator.isPacketPayloadReady(-70);
             }
             if (var1 != null) {
               try {

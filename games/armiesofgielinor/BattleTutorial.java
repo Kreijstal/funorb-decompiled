@@ -945,7 +945,7 @@ class BattleTutorial {
 
     private final void g(int param0) {
         int var2 = 103 / ((param0 + 42) / 55);
-        uh.a(sb.field_g, 125);
+        uh.a(DateOfBirthValidator.field_g, 125);
     }
 
     private final void g(byte param0) {
@@ -1590,7 +1590,7 @@ class BattleTutorial {
                 break regionExit2;
               }
             }
-            this.message = vl.battleHintMessages[this.messageId];
+            this.message = EmailValidator.battleHintMessages[this.messageId];
             this.buttonMode = 1;
           }
           this.setMessage(this.message, (byte) 112);
@@ -1639,7 +1639,7 @@ class BattleTutorial {
           this.expandedPanelHeight = -21;
         }
         if (this.stage == 0) {
-          ol.field_y.g(db.a(true, 320) - (ol.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
+          MaskedTextEntryPainter.field_y.g(db.a(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
           fe.b(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
           fe.c(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
           this.panelHeight = 40;
@@ -1712,14 +1712,14 @@ class BattleTutorial {
                   (this.buttonMode == 5)) {
                   fe.c(GlobalSpell.field_m, -120 + var2 - 10, var3 - 16, 0, true);
                   if (var5 != 0) {
-                    fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
+                    fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 192, true);
                   }
                 }
               }
             }
           }
         } else {
-          fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, jh.field_k, 0, 192, true);
+          fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 192, true);
         }
         if (this.message != null) {
           SoftwareRaster.setClip(var2 - this.panelWidth, -this.panelHeight + var3, var2 - 10, var3 - 45);

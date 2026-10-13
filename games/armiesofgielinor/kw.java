@@ -4,7 +4,7 @@
 final class kw extends InteractiveWidget {
     static int[][] field_P;
     static String field_N;
-    private n field_O;
+    private ValidationSource field_O;
     static String field_Q;
     private int field_L;
     static int[] awtToClientKeyCodes;
@@ -52,12 +52,12 @@ final class kw extends InteractiveWidget {
         if (obfuscationGuard != 21384) {
           kw.b(true);
           if (this.hovered) {
-            return this.field_O.a((byte) 55);
+            return this.field_O.getValidationMessage((byte) 55);
           }
           return null;
         }
         if (this.hovered) {
-          return this.field_O.a((byte) 55);
+          return this.field_O.getValidationMessage((byte) 55);
         }
         return null;
     }
@@ -65,7 +65,7 @@ final class kw extends InteractiveWidget {
     final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
         int var5;
         int var6;
-        gu var8;
+        ValidationState var8;
         int var9;
         int var10;
         int var11;
@@ -81,7 +81,7 @@ final class kw extends InteractiveWidget {
         int var9Lifetime2;
         int var10Lifetime1;
         int var10Lifetime2;
-        gu var8Lifetime1;
+        ValidationState var8Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         super.drawWidget(originX, originY, (byte) -120, renderLayer);
         if (renderLayer != 0) {
@@ -90,22 +90,22 @@ final class kw extends InteractiveWidget {
         var5 = this.x + (originX + (this.width >> 1));
         var6 = this.y + originY + (this.height >> 1);
         if (obfuscationGuard <= -82) {
-          var8 = this.field_O.a(false);
-          if (ad.field_K != var8 &&
-            so.field_e != var8) {
-            if (var8 == rn.field_e) {
-              var19 = db.field_a[2];
+          var8 = this.field_O.getValidationState(false);
+          if (ad.validationWaiting != var8 &&
+            so.validationChecking != var8) {
+            if (var8 == rn.validationInvalid) {
+              var19 = db.validationStatusIcons[2];
               var19.f(-(var19.pixelWidth >> 1) + var5, -(var19.pixelHeight >> 1) + var6, 256);
               return;
             }
-            if (var8 != oo.field_g) {
+            if (var8 != oo.validationValid) {
               return;
             }
-            var20 = db.field_a[1];
+            var20 = db.validationStatusIcons[1];
             var20.f(-(var20.pixelWidth >> 1) + var5, var6 - (var20.pixelHeight >> 1), 256);
             return;
           }
-          var21 = db.field_a[0];
+          var21 = db.validationStatusIcons[0];
           var9 = var21.canvasWidth << 1;
           var10 = var21.canvasHeight << 1;
           if (null == PreparedAction.field_p) {
@@ -131,9 +131,9 @@ final class kw extends InteractiveWidget {
           return;
         }
         this.drawWidget(105, -107, (byte) -98, -86);
-        var8Lifetime1 = this.field_O.a(false);
-        if (ad.field_K == var8Lifetime1) {
-          var15 = db.field_a[0];
+        var8Lifetime1 = this.field_O.getValidationState(false);
+        if (ad.validationWaiting == var8Lifetime1) {
+          var15 = db.validationStatusIcons[0];
           var9Lifetime1 = var15.canvasWidth << 1;
           var10Lifetime1 = var15.canvasHeight << 1;
           if (null != PreparedAction.field_p &&
@@ -150,20 +150,20 @@ final class kw extends InteractiveWidget {
           PreparedAction.field_p.f(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
           return;
         }
-        if (so.field_e != var8Lifetime1) {
-          if (var8Lifetime1 == rn.field_e) {
-            var17 = db.field_a[2];
+        if (so.validationChecking != var8Lifetime1) {
+          if (var8Lifetime1 == rn.validationInvalid) {
+            var17 = db.validationStatusIcons[2];
             var17.f(-(var17.pixelWidth >> 1) + var5, -(var17.pixelHeight >> 1) + var6, 256);
             return;
           }
-          if (var8Lifetime1 != oo.field_g) {
+          if (var8Lifetime1 != oo.validationValid) {
             return;
           }
-          var18 = db.field_a[1];
+          var18 = db.validationStatusIcons[1];
           var18.f(-(var18.pixelWidth >> 1) + var5, var6 - (var18.pixelHeight >> 1), 256);
           return;
         }
-        var16 = db.field_a[0];
+        var16 = db.validationStatusIcons[0];
         var14 = var16;
         var9Lifetime2 = var16.canvasWidth << 1;
         var10Lifetime2 = var16.canvasHeight << 1;
@@ -189,7 +189,7 @@ final class kw extends InteractiveWidget {
         PreparedAction.field_p.f(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
     }
 
-    kw(n param0) {
+    kw(ValidationSource param0) {
         try {
           this.field_O = param0;
         } catch (RuntimeException runtimeException) {

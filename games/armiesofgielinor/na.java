@@ -3,7 +3,7 @@
  */
 final class na extends DequeWidgetContainer implements mf, WidgetActivationListener {
     static QuickChatCommandDefinition field_G;
-    private ma field_P;
+    private ValidatedTextWidget field_P;
     static int field_E;
     kv field_M;
     static String field_K;
@@ -16,17 +16,17 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
 
     public na() {
         super(0, 0, 496, 0, (WidgetPainter) null);
-        this.field_P = new ma("", (WidgetListener) null, 12);
+        this.field_P = new ValidatedTextWidget("", (WidgetListener) null, 12);
         BitmapTextWidgetPainter var1 = new BitmapTextWidgetPainter(gl.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
         Widget var2 = new Widget(BattleTutorial.field_u, var1, (WidgetListener) null);
         this.field_O = new InteractiveWidget(LineOfSightGrid.field_f, (WidgetListener) null);
         this.field_L = new InteractiveWidget(ac.field_s, (WidgetListener) null);
         this.field_P.tooltipText = DualLinkedNode.field_m;
-        this.field_P.a((byte) 16, new uj(this.field_P));
+        this.field_P.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.field_P));
         this.field_O.enabled = false;
         this.field_O.painter = (WidgetPainter) ((Object) new nu());
         this.field_L.painter = (WidgetPainter) ((Object) new td());
-        this.field_P.painter = (WidgetPainter) ((Object) new lu(10000536));
+        this.field_P.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -81,7 +81,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
 
     public final void a(byte param0) {
         int discarded$0 = 0;
-        ((uj) (this.field_P.a(param0 - 918933514))).g(50);
+        ((AccountNameAvailabilityValidator) (this.field_P.getValidationSource(param0 - 918933514))).invalidateNameCheck(50);
         if (param0 != -116) {
           String var3 = (String) null;
           discarded$0 = this.a(-47, 45, (String) null, (Widget) null, 47, (String) null, -7);
@@ -100,10 +100,10 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         }
     }
 
-    private final boolean a(boolean param0, eg param1) {
-        n var3 = null;
+    private final boolean a(boolean param0, ValidationProvider param1) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        gu var4 = null;
+        ValidationState var4 = null;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -113,12 +113,12 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
           if (!param0) {
             return false;
           }
-          var3 = param1.a(-918933630);
+          var3 = param1.getValidationSource(-918933630);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.a(false);
-          stackIn_10_0 = (var4 == oo.field_g);
+          var4 = var3.getValidationState(false);
+          stackIn_10_0 = (var4 == oo.validationValid);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,7 +138,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         if (param0 != -29967) {
           return false;
         }
-        if (!this.a(true, (eg) (this.field_P))) {
+        if (!this.a(true, (ValidationProvider) (this.field_P))) {
           return false;
         }
         return true;
@@ -268,7 +268,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
 
     private final int a(int param0, int param1, String param2, Widget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        pk var9 = null;
+        ValidationStatusWidget var9 = null;
         LabeledWidgetContainer var10 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -283,7 +283,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
         try {
           var10 = new LabeledWidgetContainer(20, param0, 120 + param4, 25, param3, false, 120, 3, ArmiesOfGielinor.field_J, 16777215, param2);
           this.addChild((byte) 10, (Widget) (var10));
-          var9 = new pk(((eg) ((Object) param3)).a(-918933630), param5, 126, param0 + var10.height, param4 + 25, param1);
+          var9 = new ValidationStatusWidget(((ValidationProvider) ((Object) param3)).getValidationSource(-918933630), param5, 126, param0 + var10.height, param4 + 25, param1);
           var9.listener = (WidgetListener) (this);
           this.addChild((byte) 10, (Widget) (var9));
           if (param6 < -59) {
@@ -408,7 +408,7 @@ final class na extends DequeWidgetContainer implements mf, WidgetActivationListe
     }
 
     public final void a(int param0, String param1) {
-        ma var3 = null;
+        ValidatedTextWidget var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         Widget var5 = null;

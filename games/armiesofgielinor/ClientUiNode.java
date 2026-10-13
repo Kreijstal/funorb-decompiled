@@ -40,13 +40,13 @@ class ClientUiNode extends DualLinkedNode {
     }
 
     final static void b(int param0, int param1) {
-        ol.field_B = (param0 & 51) >> 4;
+        MaskedTextEntryPainter.field_B = (param0 & 51) >> 4;
         if (param1 != -27498) {
           field_x = (ClientUiComponent) null;
         }
         QuickChatCategory.field_D = (param0 & 13) >> 2;
-        if (2 < ol.field_B) {
-          ol.field_B = 2;
+        if (2 < MaskedTextEntryPainter.field_B) {
+          MaskedTextEntryPainter.field_B = 2;
         }
         if (QuickChatCategory.field_D > 2) {
           QuickChatCategory.field_D = 2;

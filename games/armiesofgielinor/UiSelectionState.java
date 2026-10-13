@@ -82,7 +82,7 @@ final class UiSelectionState {
     }
 
     final static void a(byte param0, boolean param1) {
-        se.field_g.a(param1, true);
+        se.emailCheckResult.setResult(param1, true);
         if (param0 != 32) {
           field_c = (int[]) null;
         }
@@ -209,7 +209,7 @@ final class UiSelectionState {
           if (var9 != null) {
             pg.openChatMessageContextMenu(0, var9);
           }
-          var8 = wd.a(false);
+          var8 = AccountNameCheckResult.a(false);
           if (var8 != null) {
             ad.field_I = var8;
           }

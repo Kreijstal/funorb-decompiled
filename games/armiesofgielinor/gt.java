@@ -9,7 +9,7 @@ final class gt {
     static String field_a;
     static int[] keyEventCodes;
     static RgbSprite field_e;
-    static String field_h;
+    static String validationPendingText;
     static String[] field_f;
 
     final static boolean isLocalAccountName(String name, byte obfuscationGuard) {
@@ -98,7 +98,7 @@ final class gt {
         field_e = null;
         keyEventCodes = null;
         if (param0 == 494) {
-          field_h = null;
+          validationPendingText = null;
           return;
         }
     }
@@ -146,6 +146,6 @@ final class gt {
         field_g = "This coat of arms became unlocked at <%0>. All parts of it are available to add to your own coat of arms.";
         field_a = "This game option is only available to members.";
         keyEventCodes = new int[128];
-        field_h = "Checking";
+        validationPendingText = "Checking";
     }
 }

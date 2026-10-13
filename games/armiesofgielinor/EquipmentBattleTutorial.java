@@ -2193,7 +2193,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                   break scanLoop1;
                 }
                 if (stackIn_87_0 == ~this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]) {
-                  this.setMessage(fo.a(4800, r.equipmentTutorialMessages[31], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]}), (byte) 119);
+                  this.setMessage(EmailCheckResult.a(4800, r.equipmentTutorialMessages[31], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]}), (byte) 119);
                   this.buttonMode = 0;
                   this.stage = 9;
                   while (true) {
@@ -2234,12 +2234,12 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                 var7 != 0) {
                 var4 = r.equipmentTutorialMessages[22];
               }
-              var4 = fo.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
+              var4 = EmailCheckResult.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
               this.buttonMode = 1;
               this.stage = 8;
               this.d(-37, this.equipmentSlot);
             }
-            this.setMessage(fo.a(4800, r.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
+            this.setMessage(EmailCheckResult.a(4800, r.equipmentTutorialMessages[3 + this.equipmentSlot], new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], ActionRequest.field_l[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]], var4}), (byte) 109);
             if (var7 == 0) {
               return;
             }
@@ -2249,7 +2249,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             (decompiledFrameRemainder4) &&
             (decompiledFrameRemainder3)) {
             var4 = r.equipmentTutorialMessages[26];
-            var4 = fo.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
+            var4 = EmailCheckResult.a(4800, var4, new String[]{MusicPatchEnvelope.field_f[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]]});
             stackIn_101_1 = 4800;
             stackIn_101_2 = r.equipmentTutorialMessages;
             if (this.controller.field_gc < 0) {
@@ -2257,7 +2257,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             } else {
               stackIn_102_3 = 0;
             }
-            this.setMessage(fo.a(stackIn_101_1, stackIn_101_2[stackIn_102_3 + 32], new String[]{var4}), (byte) 125);
+            this.setMessage(EmailCheckResult.a(stackIn_101_1, stackIn_101_2[stackIn_102_3 + 32], new String[]{var4}), (byte) 125);
             this.d(-122, this.equipmentSlot);
             this.buttonMode = 1;
             if (var7 == 0) {
@@ -2283,7 +2283,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           if (decompiledFrameRemainder6) {
             var5 = us.field_b[this.i(-134)];
             if (this.equipmentSlot == 0) {
-              var5 = fo.a(4800, r.equipmentTutorialMessages[27], new String[]{var5});
+              var5 = EmailCheckResult.a(4800, r.equipmentTutorialMessages[27], new String[]{var5});
             }
             this.setMessage(var5, (byte) 126);
             this.buttonMode = 0;

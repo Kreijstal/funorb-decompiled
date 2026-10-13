@@ -182,11 +182,11 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
           var3 = 0;
         }
         if (0 == rs.outgoingChatChannel &&
-          null != no.roomSetup) {
+          null != NumericDateInputWidget.roomSetup) {
           var3 = 0;
         }
         if (rs.outgoingChatChannel == 2 &&
-          !vu.isChatRecipientAvailable(6)) {
+          !ToggleWidget.isChatRecipientAvailable(6)) {
           var3 = 0;
         }
         if (rs.keyCode == 84) {
@@ -214,7 +214,7 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
           }
           var5 = rs.outgoingChatChannel;
           if (var5 == 0 &&
-            null != vu.currentRoom) {
+            null != ToggleWidget.currentRoom) {
             var5 = 1;
           }
           if (kp.getChatFilter(var5, param1 ^ -97) == 2) {
@@ -253,8 +253,8 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
         var18 = var16;
         if (rs.outgoingChatChannel == 2) {
           var56 = (CharSequence) ((Object) qd.chatRecipientName);
-          var20 = fo.a(4800, LabeledWidgetContainer.field_Q, new String[]{ug.a(16, var56)});
-          var8 = fo.a(4800, ov.field_l, new String[]{var16});
+          var20 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{ug.a(16, var56)});
+          var8 = EmailCheckResult.a(4800, ov.field_l, new String[]{var16});
           var9 = IntrusiveNode.field_e.textWidth(var20);
           var10 = IntrusiveNode.field_e.textWidth(var8);
           if (var9 > var10) {
@@ -280,11 +280,11 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
           }
           return true;
         }
-        if (null == vu.currentRoom &&
+        if (null == ToggleWidget.currentRoom &&
           bq.field_c) {
           var7 = "[" + ClientConnectionState.field_c + "] ";
         }
-        if (vu.currentRoom == null) {
+        if (ToggleWidget.currentRoom == null) {
           var54 = var7 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
@@ -293,7 +293,7 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
           return true;
         }
         if (!TextCursor.field_f) {
-          var7Lifetime1 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
+          var7Lifetime1 = "[" + EmailCheckResult.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
           var54Lifetime1 = var7Lifetime1 + var18 + ": ";
           var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime1);
           if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {
@@ -310,7 +310,7 @@ class ro extends ContentTransitionDialog implements WidgetActivationListener {
           }
           return true;
         }
-        var7Lifetime2 = "[" + fo.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
+        var7Lifetime2 = "[" + EmailCheckResult.a(param1 ^ -4859, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
         var54Lifetime2 = var7Lifetime2 + var18 + ": ";
         var5Lifetime1 = var5Lifetime1 - IntrusiveNode.field_e.textWidth(var54Lifetime2);
         if (IntrusiveNode.field_e.textWidth(UpkeepEvent.chatTextBuffer.toString()) > var5Lifetime1) {

@@ -41,7 +41,7 @@ final class TutorialController {
           var9 = this.getItemTopY(itemIndex, true);
           if (var4_int == 17 ||
             var4_int == 18) {
-            var6 = kt.field_o[0].pixelWidth + wd.field_b;
+            var6 = EmailConfirmationValidator.field_o[0].pixelWidth + AccountNameCheckResult.field_b;
           }
           var10 = -var6 + var7 + var8 >> 1;
           var11 = var10;
@@ -79,8 +79,8 @@ final class TutorialController {
             var4_int != 18) {
             return;
           }
-          var10 = var10 + wd.field_b;
-          kt.field_o[0].g(var10, var9 + 5);
+          var10 = var10 + AccountNameCheckResult.field_b;
+          EmailConfirmationValidator.field_o[0].g(var10, var9 + 5);
           if (17 == var4_int) {
             stackIn_53_0 = 100 * ResourceProtocolClient.effectsGain / 256;
           } else {
@@ -88,7 +88,7 @@ final class TutorialController {
           }
           var13 = stackIn_53_0;
           SoftwareRaster.setClip(var10, 5 + var9, var10 + var13, var9 + 19);
-          kt.field_o[1].g(var10, 5 + var9);
+          EmailConfirmationValidator.field_o[1].g(var10, 5 + var9);
           SoftwareRaster.a();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,8 +114,8 @@ final class TutorialController {
             jt.field_a = 0;
             return;
           }
-          var4 = pk.field_V;
-          var4 = var4 + " " + ia.a(fo.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
+          var4 = ValidationStatusWidget.field_V;
+          var4 = var4 + " " + ia.a(EmailCheckResult.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
           fe.b(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
           rs.field_n.drawParagraph(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
@@ -288,8 +288,8 @@ final class TutorialController {
                     ev.field_d < 135 &&
                     pg.playerProfile.spellQuantities[ev.field_d] < 250 &&
                     pg.playerProfile.tryDebitRunes(uc.spellDefinitions[ev.field_d][0], (byte) 103)) {
-                    vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                    vl.outgoingPacket.writeShort(true, ev.field_d + 2000);
+                    EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
+                    EmailValidator.outgoingPacket.writeShort(true, ev.field_d + 2000);
                     pg.playerProfile.spellQuantities[ev.field_d] = pg.playerProfile.spellQuantities[ev.field_d] + 1;
                     this.a((byte) 48, ev.field_d, (SpellMenuGroup) null);
                     RadialSummonMenu.playDefaultSoundWithIntGuard(58, ClientUiNode.field_v[2]);
@@ -298,7 +298,7 @@ final class TutorialController {
                 }
                 if (TabbedPanel.a(MatchConditionEntry.a(212, (byte) 94), db.a(true, 165), 20, false)) {
                   if (null != TextLineLayout.currentSpellMenu.parent) {
-                    vu.field_O = TextLineLayout.currentSpellMenu;
+                    ToggleWidget.field_O = TextLineLayout.currentSpellMenu;
                     wj.field_q = 248;
                     KingBlackDragonEvent.field_A = -248;
                     TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.parent;
@@ -326,7 +326,7 @@ final class TutorialController {
                       break;
                     }
                     if (stackIn_103_0) {
-                      vu.field_O = TextLineLayout.currentSpellMenu;
+                      ToggleWidget.field_O = TextLineLayout.currentSpellMenu;
                       TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.children[var4];
                       wj.field_q = 248;
                       KingBlackDragonEvent.field_A = 248;
@@ -480,7 +480,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, jh.field_k, 0, 256);
+            fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
             SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(54, (byte) 94), db.a(true, 606), MatchConditionEntry.a(136, (byte) 94));
           }
           var2_int = 0;
@@ -511,7 +511,7 @@ final class TutorialController {
           }
           if (decompiledNaturalLoopExit0) {
             SoftwareRaster.a();
-            fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, jh.field_k, 0, 256);
+            fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
             SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             stackIn_26_0 = pg.playerProfile.getUnlockLevel(0);
             stackIn_26_1 = ah.field_b;
@@ -527,22 +527,22 @@ final class TutorialController {
           stackIn_33_5 = !(pg.playerProfile.getUnlockLevel(0) > ah.field_b);
           uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, db.a(true, 50));
           SoftwareRaster.a();
-          fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
-          fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
+          fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
           fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (BufferedSocket.field_j >= 2) {
             rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           var2_int = 0;
           var3 = 0;
           do {
             if (!(var3 <= ah.field_b)) {
               var3 = -pg.playerProfile.progressionCredit - pg.playerProfile.runeCredit + var2_int;
-              fe.c(fo.a(4800, hf.field_e, new String[]{Integer.toString(1 + ah.field_b)}), db.a(true, 460), MatchConditionEntry.a(190, (byte) 94), ConsoleValue.field_b, true);
+              fe.c(EmailCheckResult.a(4800, hf.field_e, new String[]{Integer.toString(1 + ah.field_b)}), db.a(true, 460), MatchConditionEntry.a(190, (byte) 94), ConsoleValue.field_b, true);
               break;
             }
             var2_int = var2_int + NodeDeque.unlockLevelCosts[var3];
@@ -550,11 +550,11 @@ final class TutorialController {
           } while (var4 == 0);
           boolean decompiledSharedTail1 = !(pg.playerProfile.getUnlockLevel(0) <= ah.field_b);
           if (!decompiledSharedTail1) {
-            rs.field_n.drawParagraph(fo.a(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            rs.field_n.drawParagraph(EmailCheckResult.a(4800, SummonRequest.field_w, new String[]{this.c(param0 ^ 23558, var2_int), this.c(-38, var3)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
             decompiledSharedTail1 = (var4 != 0);
           }
           if (decompiledSharedTail1) {
-            rs.field_n.drawParagraph(fo.a(4800, gt.field_g, new String[]{this.c(-38, var2_int)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
+            rs.field_n.drawParagraph(EmailCheckResult.a(4800, gt.field_g, new String[]{this.c(-38, var2_int)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
           }
           if (pg.playerProfile.getUnlockLevel(param0 ^ param0) < NodeDeque.unlockLevelCosts.length) {
             fe.c(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
@@ -839,7 +839,7 @@ final class TutorialController {
           }
           if (decompiledFrameRemainder0) {
             if (AnimationFrameSet.field_z.field_t != null) {
-              var7 = wd.field_l;
+              var7 = AccountNameCheckResult.field_l;
               var8 = AnimationFrameSet.field_z.field_t[IconTextComponent.field_Mb];
               var9 = AnimationFrameSet.field_z.field_n[IconTextComponent.field_Mb];
               var10 = 0;
@@ -1614,7 +1614,7 @@ final class TutorialController {
                                                                                                   }
                                                                                                   if (fj.field_c ||
                                                                                                     ModalDialogHost.field_H) {
-                                                                                                    ma.field_Z = false;
+                                                                                                    ValidatedTextWidget.field_Z = false;
                                                                                                   }
                                                                                                   DebugConsole.field_y = 0;
                                                                                                   var6 = param0 ? 1 : 0;
@@ -1795,7 +1795,7 @@ final class TutorialController {
                                                                       mh.setEffectsGain(256, (byte) -96);
                                                                     }
                                                                     if (this.selectionState.isPointerPressed(false)) {
-                                                                      var6 = -100 + this.getItemLeftX(true, param2) - (-this.getItemRightX(param2, param1 - 3858) - wd.field_b) >> 1;
+                                                                      var6 = -100 + this.getItemLeftX(true, param2) - (-this.getItemRightX(param2, param1 - 3858) - AccountNameCheckResult.field_b) >> 1;
                                                                       var7Lifetime2 = AiPlanningStrategy.pointerX - var6;
                                                                       var8 = 256 * var7Lifetime2 / 100;
                                                                       if (var8 <= 0) {
@@ -1850,7 +1850,7 @@ final class TutorialController {
                                                                     NetworkResourceRequest.b(256, param1 + 89);
                                                                   }
                                                                   if (this.selectionState.isPointerPressed(false)) {
-                                                                    var6 = -100 + (this.getItemLeftX(true, param2) + this.getItemRightX(param2, -3858) + wd.field_b) >> 1;
+                                                                    var6 = -100 + (this.getItemLeftX(true, param2) + this.getItemRightX(param2, -3858) + AccountNameCheckResult.field_b) >> 1;
                                                                     var7Lifetime1 = -var6 + AiPlanningStrategy.pointerX;
                                                                     var8Lifetime1 = 256 * var7Lifetime1 / 100;
                                                                     if (var8Lifetime1 <= 0) {
@@ -2290,7 +2290,7 @@ final class TutorialController {
           } else {
             stackIn_7_1 = lm.field_f;
           }
-          stackIn_8_0 = fo.a(stackIn_6_0, stackIn_7_1, new String[]{Integer.toString(param1)});
+          stackIn_8_0 = EmailCheckResult.a(stackIn_6_0, stackIn_7_1, new String[]{Integer.toString(param1)});
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2356,7 +2356,7 @@ final class TutorialController {
           }
           var8 = 250;
           var9 = 12;
-          var10 = en.field_E.getParagraphHeight(var5, -20 + var8, var9);
+          var10 = DateInputWidget.field_E.getParagraphHeight(var5, -20 + var8, var9);
           var11 = nr.field_e.getParagraphHeight(var4, var8 - 45 << 1, 0) >> 1;
           stackIn_16_0 = var11 + 40 + var10;
           stackIn_16_1 = -12;
@@ -2375,9 +2375,9 @@ final class TutorialController {
           var16 = 1;
           var17 = 0;
           if (var7 == 0) {
-            fe.a(fo.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, ConsoleValue.field_b, true);
+            fe.a(EmailCheckResult.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, ConsoleValue.field_b, true);
           }
-          stackIn_24_0 = en.field_E;
+          stackIn_24_0 = DateInputWidget.field_E;
           stackIn_24_1 = var5;
           stackIn_24_2 = 10;
           stackIn_24_3 = 52;
@@ -2389,7 +2389,7 @@ final class TutorialController {
           }
           ((BinaryBitmapFont) (Object) stackIn_24_0).drawParagraph(stackIn_24_1, stackIn_24_2, stackIn_24_3 - (stackIn_24_4 - stackIn_25_5), -20 + var8, var13, var14, var15, var16, var17, var9);
           if (var7 == 0) {
-            en.field_E.drawParagraph(fo.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
+            DateInputWidget.field_E.drawParagraph(EmailCheckResult.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
           fe.a(var4, var8 >> 1, 35, -45 + var8, ConsoleValue.field_b, true);
           BattleCharacter.field_h[var6].g(-20 + (var8 >> 1), 12 + var11);
@@ -2717,7 +2717,7 @@ final class TutorialController {
           if (TabbedPanel.a(MatchConditionEntry.a(359, (byte) 94), db.a(true, 30 + (50 * var5_int + 30)), 10, false)) {
             na.field_F = param0.iconIndex + 400;
             if (!param1) {
-              vi.field_f = fo.a(4800, rr.field_a, new String[]{param0.label});
+              vi.field_f = EmailCheckResult.a(4800, rr.field_a, new String[]{param0.label});
               if (var6 != 0) {
                 vi.field_f = param0.label;
               }
@@ -2799,7 +2799,7 @@ final class TutorialController {
                 if (~var6 == ~lm.field_c) {
                   TeamRoster.field_e.f(var3_intLifetime1 - 20, -20 + var4Lifetime1, 128);
                 }
-                if (!rb.a(var6, var5, 1)) {
+                if (!DebouncedValidator.a(var6, var5, 1)) {
                   if (!(param0)) {
                     if (pn.field_n[var6] &&
                       df.field_M <= 0) {
@@ -2842,10 +2842,10 @@ final class TutorialController {
           }
           var7 = rs.field_n.capitalHeight + rs.field_n.maxDescent;
           fe.a(so.field_a[var6], db.a(true, 272), MatchConditionEntry.a(260 - (rs.field_n.maxDescent - rs.field_n.baselineHeight), (byte) 94), ConsoleValue.field_b, true);
-          var8 = rb.a(var6, var5, 1) ? 1 : 0;
+          var8 = DebouncedValidator.a(var6, var5, 1) ? 1 : 0;
           var9 = MatchConditionEntry.a(288, (byte) 94);
           if (var8 != 0) {
-            rs.field_n.drawText(wd.field_f, db.a(true, 272), var9, 65280, -1);
+            rs.field_n.drawText(AccountNameCheckResult.field_f, db.a(true, 272), var9, 65280, -1);
           }
           if (var8 == 0 ||
             var17 != 0) {
@@ -3065,9 +3065,9 @@ final class TutorialController {
           var10 = 17 % ((44 - param4) / 54);
           var11 = "<br>" + param3;
           var12 = "<br>" + param0;
-          var13 = en.field_E.getParagraphHeight(param5, var7_int, var8);
+          var13 = DateInputWidget.field_E.getParagraphHeight(param5, var7_int, var8);
           if (null != param3) {
-            stackIn_12_0 = en.field_E.getParagraphHeight(var11, var7_int, var8);
+            stackIn_12_0 = DateInputWidget.field_E.getParagraphHeight(var11, var7_int, var8);
           } else {
             stackIn_12_0 = 0;
           }
@@ -3075,7 +3075,7 @@ final class TutorialController {
           if (param0 == null) {
             stackIn_16_0 = 0;
           } else {
-            stackIn_16_0 = en.field_E.getParagraphHeight(var12, var7_int, var8);
+            stackIn_16_0 = DateInputWidget.field_E.getParagraphHeight(var12, var7_int, var8);
           }
           var15 = stackIn_16_0;
           var16 = var9 + var14 + (var13 + var15 + 30);
@@ -3087,13 +3087,13 @@ final class TutorialController {
           var20 = 0;
           var21 = 0;
           var22 = 12;
-          en.field_E.drawParagraph(param3, 0, 30, var7_int, var17, var18, var19, var20, var21, var22);
+          DateInputWidget.field_E.drawParagraph(param3, 0, 30, var7_int, var17, var18, var19, var20, var21, var22);
           if (-1 < param1) {
             ro.field_rb[param1].draw(0, var14 + 25);
-            en.field_E.drawText(BufferedSocket.field_m[param1], 23, 30 + var14 + 8, var18, var19);
+            DateInputWidget.field_E.drawText(BufferedSocket.field_m[param1], 23, 30 + var14 + 8, var18, var19);
           }
-          en.field_E.drawParagraph(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
-          en.field_E.drawParagraph(param5, 0, var15 + (var14 + 30) + var9, var7_int, var17, var18, var19, var20, var21, var22);
+          DateInputWidget.field_E.drawParagraph(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
+          DateInputWidget.field_E.drawParagraph(param5, 0, var15 + (var14 + 30) + var9, var7_int, var17, var18, var19, var20, var21, var22);
           fe.c(param2, var7_int >> 1, 30, ConsoleValue.field_b, true);
           so.field_b.a(5605);
           return;
@@ -3334,7 +3334,7 @@ final class TutorialController {
         try {
           var3_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118);
           if (this.tutorialStage == 3 &&
-            ma.field_Z) {
+            ValidatedTextWidget.field_Z) {
             var3_int -= 32;
           }
           if (itemIndex == -1) {
@@ -3604,16 +3604,16 @@ final class TutorialController {
           if (null == pg.playerProfile) {
             return;
           }
-          fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           SoftwareRaster.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 192);
           SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 192);
           if (ClientContextMenu.field_k == 0) {
-            fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+            fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
           if (1 == ClientContextMenu.field_k) {
-            fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+            fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
           boolean decompiledSharedTail2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
@@ -3646,14 +3646,14 @@ final class TutorialController {
             SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
           boolean decompiledFrameRemainder0 = true;
-          fe.b(db.a(true, 30), MatchConditionEntry.a(60, (byte) 94), 270, 324, EffectPresentation.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 30), MatchConditionEntry.a(60, (byte) 94), 270, 324, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           if (ClientContextMenu.field_k == 0) {
             SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
-            if (vu.field_O == null ||
-              TextLineLayout.currentSpellMenu == vu.field_O.parent ||
-              vu.field_O == TextLineLayout.currentSpellMenu.parent) {
+            if (ToggleWidget.field_O == null ||
+              TextLineLayout.currentSpellMenu == ToggleWidget.field_O.parent ||
+              ToggleWidget.field_O == TextLineLayout.currentSpellMenu.parent) {
               if (0 < var2_int) {
-                na.field_F = vu.field_O.drawRadialMenu(-256 + var2_int, var3, 0, 40, this, na.field_F, TextLineLayout.currentSpellMenu.indexInParent);
+                na.field_F = ToggleWidget.field_O.drawRadialMenu(-256 + var2_int, var3, 0, 40, this, na.field_F, TextLineLayout.currentSpellMenu.indexInParent);
               }
               stackIn_56_0 = TextLineLayout.currentSpellMenu;
               stackIn_56_1 = var2_int;
@@ -3662,24 +3662,24 @@ final class TutorialController {
               stackIn_56_4 = 40;
               stackIn_56_5 = this;
               stackIn_56_6 = na.field_F;
-              if (vu.field_O != null) {
-                stackIn_57_7 = vu.field_O.indexInParent;
+              if (ToggleWidget.field_O != null) {
+                stackIn_57_7 = ToggleWidget.field_O.indexInParent;
               } else {
                 stackIn_57_7 = -1;
               }
               na.field_F = ((SpellMenuGroup) (Object) stackIn_56_0).drawRadialMenu(stackIn_56_1, stackIn_56_2, stackIn_56_3, stackIn_56_4, this, stackIn_56_6, stackIn_57_7);
               if (!(var2_int >= 0)) {
-                na.field_F = vu.field_O.drawRadialMenu(256 + var2_int, var3, 0, 40, this, na.field_F, vu.field_O.indexInParent);
+                na.field_F = ToggleWidget.field_O.drawRadialMenu(256 + var2_int, var3, 0, 40, this, na.field_F, ToggleWidget.field_O.indexInParent);
                 if (var8 != 0) {
                   if (0 < var2_int) {
-                    na.field_F = vu.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
+                    na.field_F = ToggleWidget.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
                   }
                   TextLineLayout.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
                 }
               }
             } else {
               if (0 < var2_int) {
-                na.field_F = vu.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
+                na.field_F = ToggleWidget.field_O.drawRadialMenu(0, var3, var2_int - 256, 40, this, na.field_F, -1);
               }
               TextLineLayout.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, na.field_F, -1);
             }
@@ -3691,7 +3691,7 @@ final class TutorialController {
             }
             if (var2_int < 0 ||
               var8 != 0) {
-              discarded$2 = this.a(vu.field_O, true, -127, -var2_int);
+              discarded$2 = this.a(ToggleWidget.field_O, true, -127, -var2_int);
             }
             if (vi.field_f == null) {
               fe.b(TextLineLayout.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
@@ -3725,7 +3725,7 @@ final class TutorialController {
             fe.a(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
           }
           SoftwareRaster.a();
-          fe.b(db.a(true, 310), MatchConditionEntry.a(60, (byte) 94), 300, 80, EffectPresentation.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 310), MatchConditionEntry.a(60, (byte) 94), 300, 80, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           var4Lifetime1 = 1;
           var5 = 0;
           while (true) {
@@ -3774,24 +3774,24 @@ final class TutorialController {
             if (null == TextLineLayout.currentSpellMenu.parent) {
               rs.field_n.drawParagraph(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int + 256, 1, 1, 0);
             }
-            if (null != vu.field_O &&
-              vu.field_O.parent == null) {
+            if (null != ToggleWidget.field_O &&
+              ToggleWidget.field_O.parent == null) {
               rs.field_n.drawParagraph(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int, 1, 1, 0);
             }
           }
           fe.b(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), true);
           fe.c(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), ConsoleValue.field_b, true);
-          fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
-          fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
+          fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
           fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
           fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (2 <= BufferedSocket.field_j &&
             CoatOfArms.field_e) {
             rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           this.g(ev.field_d, -118);
           var5Lifetime1 = 40 + (nr.field_e.textWidth(AnimationSkeleton.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
@@ -4026,8 +4026,8 @@ final class TutorialController {
                 (!(-1 >= li.field_q)) &&
                 (pg.playerProfile.unitUnlockMasks[1 + li.field_q] == 0) &&
                 (pg.playerProfile.tryDebitRunes(50, (byte) 103))) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[li.field_q + 1][0]);
+                EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
+                EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[li.field_q + 1][0]);
                 var2_intLifetime2 = 0;
                 while (true) {
                   if (var2_intLifetime2 < AnimationFrameSet.unitUnlockGroups[li.field_q + 1].length) {
@@ -4049,8 +4049,8 @@ final class TutorialController {
                   0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                   0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
                   pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[SetCoatConsoleCommand.field_F][11])) {
-                  vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                  vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
+                  EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
+                  EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
                   RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
                   pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << SetCoatConsoleCommand.field_F);
                 }
@@ -4060,8 +4060,8 @@ final class TutorialController {
                 0 < pg.playerProfile.unitUnlockMasks[li.field_q + 1] &&
                 0 == (pg.playerProfile.unitUnlockMasks[1 + li.field_q] & 1 << SetCoatConsoleCommand.field_F) &&
                 pg.playerProfile.getAvailableRunes((byte) 91) >= bw.unitDefinitions[SetCoatConsoleCommand.field_F][11]) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, 70);
-                vl.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
+                EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 70);
+                EmailValidator.outgoingPacket.writeShort(true, AnimationFrameSet.unitUnlockGroups[1 + li.field_q][SetCoatConsoleCommand.field_F]);
                 RadialSummonMenu.playDefaultSoundWithIntGuard(62, ClientUiNode.field_v[14]);
                 pg.playerProfile.unitUnlockMasks[1 + li.field_q] = oe.bitwiseOr(pg.playerProfile.unitUnlockMasks[1 + li.field_q], 1 << SetCoatConsoleCommand.field_F);
               }
@@ -4190,7 +4190,7 @@ final class TutorialController {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           na.field_F = -1;
-          fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, jh.field_k, 0, 256);
+          fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           var2_int = (int)(-(128.0 * Math.cos((double)GlobalSpell.field_h * 3.141592653589793 / 256.0)) + 128.0);
           var3 = (int)(128.0 - Math.cos((double)WeightedLruCache.field_d * 3.141592653589793 / 256.0) * 128.0);
           var4 = (int)(128.0 - 128.0 * Math.cos((double)tf.field_k * 3.141592653589793 / 256.0));
@@ -4227,7 +4227,7 @@ final class TutorialController {
           }
           if (decompiledNaturalLoopExit0) {
             SoftwareRaster.a();
-            fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, jh.field_k, 0, 256);
+            fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
             stackIn_18_0 = db.a(true, 34);
           }
           SoftwareRaster.setClip(stackIn_18_0, MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
@@ -4318,9 +4318,9 @@ final class TutorialController {
               }
             }
             SoftwareRaster.a();
-            fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, jh.field_k, 0, 128);
+            fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
             fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
-            fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, jh.field_k, 0, 0);
+            fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
             fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
             stackIn_71_0 = BufferedSocket.field_j;
@@ -4330,8 +4330,8 @@ final class TutorialController {
             CoatOfArms.field_e) {
             rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 96) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
-          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, jh.field_k, 0, 128);
+          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           if (SetCoatConsoleCommand.field_F <= -1) {
             this.d((byte) -35, 1 + li.field_q);
             if (var10 == 0) {
@@ -4609,7 +4609,7 @@ final class TutorialController {
             null == mu.field_a) {
             while (true) {
               if (Unit.pollKeyEvent((byte) 102)) {
-                if (gu.a(121) &&
+                if (ValidationState.a(121) &&
                   var4 == 0) {
                   continue;
                 }
@@ -4785,7 +4785,7 @@ final class TutorialController {
                     }
                     boolean decompiledFrameRemainder2 = true;
                     if (0 == KingBlackDragonEvent.field_A) {
-                      vu.field_O = null;
+                      ToggleWidget.field_O = null;
                       if (MidiPcmStream.field_p != null) {
                         if (TextLineLayout.currentSpellMenu == MidiPcmStream.field_p) {
                           MidiPcmStream.field_p = null;
@@ -4808,7 +4808,7 @@ final class TutorialController {
                             }
                             if ((decompiledFrameRemainder0) &&
                               (decompiledFrameRemainder1 = (var3_ref_rg != null))) {
-                              vu.field_O = TextLineLayout.currentSpellMenu;
+                              ToggleWidget.field_O = TextLineLayout.currentSpellMenu;
                               TextLineLayout.currentSpellMenu = var3_ref_rg;
                               KingBlackDragonEvent.field_A = 240;
                               stackIn_284_0 = TextLineLayout.currentSpellMenu;
@@ -4827,7 +4827,7 @@ final class TutorialController {
                                 break;
                               }
                             }
-                            vu.field_O = TextLineLayout.currentSpellMenu;
+                            ToggleWidget.field_O = TextLineLayout.currentSpellMenu;
                             TextLineLayout.currentSpellMenu = TextLineLayout.currentSpellMenu.parent;
                             KingBlackDragonEvent.field_A = -240;
                             RadialSummonMenu.playDefaultSoundWithIntGuard(41, MoveAttackRequest.field_v[45]);
@@ -5022,7 +5022,7 @@ final class TutorialController {
                   SoftwareRaster.f(stackIn_40_0, stackIn_40_1, stackIn_40_2, stackIn_40_3, stackIn_41_4);
                   BattleCharacter.field_h[uc.spellDefinitions[param1.spellIds[var8Lifetime1]][2]].g(db.a(true, 50 + (param3 & 3) * 58), MatchConditionEntry.a(63 + var9Lifetime1, (byte) 94));
                   km.field_h[0].g(db.a(true, (3 & param3) * 58 + 47), MatchConditionEntry.a(60 + var9Lifetime1, (byte) 94));
-                  en.field_E.drawCentered(Integer.toString(pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
+                  DateInputWidget.field_E.drawCentered(Integer.toString(pg.playerProfile.spellQuantities[param1.spellIds[var8Lifetime1]]), db.a(true, 70 + (3 & param3) * 58), MatchConditionEntry.a(var9Lifetime1 + 60 + 55, (byte) 94), 16777215, 0);
                   if (TabbedPanel.a(MatchConditionEntry.a(60 + var9Lifetime1 + 23, (byte) 94), db.a(true, 70 + (3 & param3) * 58), 22, false)) {
                     na.field_F = 200 + param1.spellIds[var8Lifetime1];
                   }
@@ -5408,7 +5408,7 @@ final class TutorialController {
             stackIn_7_0 = ReportAbuseDialog.field_Nb;
           }
           var3 = stackIn_7_0;
-          stackIn_8_0 = rb.a(param1, var3, 1);
+          stackIn_8_0 = DebouncedValidator.a(param1, var3, 1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5584,7 +5584,7 @@ final class TutorialController {
                             fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                             fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, MusicPatch.field_m, field_e, 0, 128);
                             var2_int = so.field_b.field_a;
-                            ol.field_y.g(var2_int / 2 - ol.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - ol.field_y.canvasHeight);
+                            MaskedTextEntryPainter.field_y.g(var2_int / 2 - MaskedTextEntryPainter.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - MaskedTextEntryPainter.field_y.canvasHeight);
                             decompiledFrameRemainder0 = (var4 != 0);
                           }
                           if (decompiledFrameRemainder0) {
@@ -5615,7 +5615,7 @@ final class TutorialController {
                                       this.tutorialStage != 24) {
                                       var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118);
                                       if (3 == this.tutorialStage &&
-                                        ma.field_Z) {
+                                        ValidatedTextWidget.field_Z) {
                                         var2_int -= 32;
                                       }
                                       fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
@@ -5639,10 +5639,10 @@ final class TutorialController {
                                   }
                                   if (decompiledFrameRemainder0) {
                                     fe.b(db.a(true, 25), MatchConditionEntry.a(33, (byte) 94), 590, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                                    fe.b(db.a(true, 42), MatchConditionEntry.a(48, (byte) 94), 556, 158, MusicPatch.field_m, jh.field_k, 0, 256);
-                                    fe.b(db.a(true, 42), MatchConditionEntry.a(215, (byte) 94), 556, 205, MusicPatch.field_m, jh.field_k, 0, 128);
-                                    fe.b(db.a(true, 52), MatchConditionEntry.a(228, (byte) 94), 191, 180, MusicPatch.field_m, jh.field_k, 0, 128);
-                                    fe.b(db.a(true, 251), MatchConditionEntry.a(228, (byte) 94), 337, 180, MusicPatch.field_m, jh.field_k, 0, 128);
+                                    fe.b(db.a(true, 42), MatchConditionEntry.a(48, (byte) 94), 556, 158, MusicPatch.field_m, AgeValidator.field_k, 0, 256);
+                                    fe.b(db.a(true, 42), MatchConditionEntry.a(215, (byte) 94), 556, 205, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
+                                    fe.b(db.a(true, 52), MatchConditionEntry.a(228, (byte) 94), 191, 180, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
+                                    fe.b(db.a(true, 251), MatchConditionEntry.a(228, (byte) 94), 337, 180, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
                                     fe.b(db.a(!param0, 30), MatchConditionEntry.a(431, (byte) 94), 581, 32, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                                     decompiledFrameRemainder0 = (null != wb.field_b[this.tutorialStage]);
                                     if (decompiledFrameRemainder0) {
@@ -5868,14 +5868,14 @@ final class TutorialController {
             var11 = var8;
             var8 = bw.unitDefinitions[75][6];
             var9 = bw.unitDefinitions[75][7];
-            stackIn_9_0 = fo.a(param1 ^ 4808, vl.field_l, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var11), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
+            stackIn_9_0 = EmailCheckResult.a(param1 ^ 4808, EmailValidator.field_l, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var11), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
             return stackIn_9_0;
           }
           if (~var8 != ~var9) {
-            stackIn_7_0 = fo.a(4800, ContextualRuntimeException.field_e, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
+            stackIn_7_0 = EmailCheckResult.a(4800, ContextualRuntimeException.field_e, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var9), Integer.toString(var10)});
             return stackIn_7_0;
           }
-          stackIn_5_0 = fo.a(4800, Unit.field_y, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var10)});
+          stackIn_5_0 = EmailCheckResult.a(4800, Unit.field_y, new String[]{Integer.toString(var4), Integer.toString(var5), Integer.toString(var6), Integer.toString(var7), Integer.toString(var8), Integer.toString(var10)});
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6037,7 +6037,7 @@ final class TutorialController {
         int var5Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, jh.field_k, 0, 128, false);
+          fe.a(db.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           na.field_F = ah.localCoat.a(db.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.localAccountName, MatchConditionEntry.a(70, (byte) 94), ko.pointerY);
           var2_int = 44;
           var3 = 0;
@@ -6059,7 +6059,7 @@ final class TutorialController {
                 }
                 na.field_F = var3;
               } else if (~wh.field_a != ~var3) {
-                fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, jh.field_k, 0, 128, false);
+                fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
               } else {
                 fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
               }
@@ -6114,7 +6114,7 @@ final class TutorialController {
                     ~(var5Lifetime1 + var4Lifetime1 * 16) == ~var3Lifetime1) {
                     fe.a(var6, var7, 20, 40, EffectPresentation.field_j, field_e, 0, 128, false);
                   } else {
-                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, jh.field_k, 0, 128, false);
+                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
                   }
                   if (-1 < kd.field_X) {
                     SoftwareRaster.f(db.a(true, var5Lifetime1 * 21 + 44), MatchConditionEntry.a(334 + var4Lifetime1 * 42, (byte) 94), 12, 32, PreparedAction.field_q[var5Lifetime1 + var4Lifetime1 * 16]);
@@ -6130,14 +6130,14 @@ final class TutorialController {
             }
             if (stackIn_89_0 > ~kd.field_X) {
               stackIn_96_0 = !(ro.pointerButton <= 0);
-              var4Lifetime1 = ib.a(stackIn_96_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, ah.localCoat.parts[kd.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
+              var4Lifetime1 = PasswordValidator.a(stackIn_96_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, ah.localCoat.parts[kd.field_X], -40, MatchConditionEntry.a(60, (byte) 94));
               if (var8 != 0) {
                 stackIn_103_0 = !(ro.pointerButton <= 0);
-                var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
+                var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
               }
             } else {
               stackIn_103_0 = !(ro.pointerButton <= 0);
-              var4Lifetime1 = ib.a(stackIn_103_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
+              var4Lifetime1 = PasswordValidator.a(stackIn_103_0, 352, db.a(true, 380), ko.pointerY, AiPlanningStrategy.pointerX, 224, -1, -40, MatchConditionEntry.a(60, (byte) 94));
             }
             if (na.field_F > -1) {
               na.field_F = na.field_F + 200;

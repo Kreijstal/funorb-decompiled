@@ -48,16 +48,16 @@ final class BoundedFile {
         }
     }
 
-    final static wd a(int param0, String[] param1) {
-        wd var2 = null;
+    final static AccountNameCheckResult a(int param0, String[] param1) {
+        AccountNameCheckResult var2 = null;
         RuntimeException var2_ref = null;
-        wd stackIn_3_0 = null;
+        AccountNameCheckResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new wd(false);
+          var2 = new AccountNameCheckResult(false);
           var2.field_c = param1;
           if (param0 != 2) {
             BoundedFile.a(33, true, false, true);

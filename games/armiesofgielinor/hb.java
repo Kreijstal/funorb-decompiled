@@ -38,35 +38,35 @@ final class hb {
           if (null != MoveAttackRequest.sessionSocket) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (ResourceArchive.connectedState == ov.connectionState);
-              if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
+              if ((decompiledFrameRemainder0) && (0 == EmailValidator.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60))) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+                EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
-              if (0 == vl.outgoingPacket.position &&
+              if (0 == EmailValidator.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60)) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+                EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param0 < 8) {
                 return;
               }
-              if (vl.outgoingPacket.position > 0) {
+              if (EmailValidator.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.sessionSocket.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
+                  MoveAttackRequest.sessionSocket.write(EmailValidator.outgoingPacket.payload, (byte) 20, 0, EmailValidator.outgoingPacket.position);
                   SummonEvent.field_G = vi.monotonicMillis(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.outgoingPacket.position = 0;
+                EmailValidator.outgoingPacket.position = 0;
               }
               return;
             }
           }
-          vl.outgoingPacket.position = 0;
+          EmailValidator.outgoingPacket.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -88,35 +88,35 @@ final class hb {
           if (null != MoveAttackRequest.sessionSocket) {
             if (param1 >= 0) {
               decompiledFrameRemainder0 = (ResourceArchive.connectedState == ov.connectionState);
-              if ((decompiledFrameRemainder0) && (0 == vl.outgoingPacket.position &&
+              if ((decompiledFrameRemainder0) && (0 == EmailValidator.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60))) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+                EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             } else {
-              if (0 == vl.outgoingPacket.position &&
+              if (0 == EmailValidator.outgoingPacket.position &&
                 (10000L + SummonEvent.field_G) < vi.monotonicMillis(-60)) {
-                vl.outgoingPacket.writeCipheredOpcode(32161, param1);
+                EmailValidator.outgoingPacket.writeCipheredOpcode(32161, param1);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param0 < 8) {
                 return;
               }
-              if (vl.outgoingPacket.position > 0) {
+              if (EmailValidator.outgoingPacket.position > 0) {
                 try {
-                  MoveAttackRequest.sessionSocket.write(vl.outgoingPacket.payload, (byte) 20, 0, vl.outgoingPacket.position);
+                  MoveAttackRequest.sessionSocket.write(EmailValidator.outgoingPacket.payload, (byte) 20, 0, EmailValidator.outgoingPacket.position);
                   SummonEvent.field_G = vi.monotonicMillis(51);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   dj.a((byte) -127);
                 }
-                vl.outgoingPacket.position = 0;
+                EmailValidator.outgoingPacket.position = 0;
               }
               return;
             }
           }
-          vl.outgoingPacket.position = 0;
+          EmailValidator.outgoingPacket.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

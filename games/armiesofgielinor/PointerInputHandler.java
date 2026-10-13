@@ -39,7 +39,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     }
 
     final static void writeRoomAdmissionCancellation(int obfuscationGuard, int roomId, int packetOpcode) {
-        CipherPacketBuffer var3 = vl.outgoingPacket;
+        CipherPacketBuffer var3 = EmailValidator.outgoingPacket;
         var3.writeCipheredOpcode(32161, packetOpcode);
         var3.writeByte(1, 3);
         int var4 = -78 % ((obfuscationGuard - 10) / 46);

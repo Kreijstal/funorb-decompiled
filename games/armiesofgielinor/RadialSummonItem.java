@@ -24,7 +24,7 @@ final class RadialSummonItem {
         if (param0 != -1) {
           return (String) null;
         }
-        if (du.field_d == ChannelBaseVolumeConsoleCommand.field_L) {
+        if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return qk.field_b;
         }
         return ah.field_d;
@@ -200,13 +200,13 @@ final class RadialSummonItem {
           t.field_b = param3;
           ChannelBaseVolumeConsoleCommand.localAccountId = -1L;
           tq.gameOptionCount = param3.length;
-          no.roomSetup = null;
+          NumericDateInputWidget.roomSetup = null;
           SpellCastAction.field_s = false;
           if (param8 >= -52) {
             field_h = (int[][]) null;
           }
           CoatOfArms.field_d = new byte[(SpellConfirmationDialog.field_a + 7) / 8];
-          vu.currentRoom = null;
+          ToggleWidget.currentRoom = null;
           var10_int = 0;
           var11 = 0;
           do {

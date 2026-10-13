@@ -4,7 +4,7 @@
 final class mh {
     static ClientConnectionState field_a;
     static String field_d;
-    static wm field_b;
+    static wm accountNameCheckState;
     static int field_c;
 
     final static void setEffectsGain(int gain, byte obfuscationGuard) {
@@ -58,14 +58,14 @@ final class mh {
         if (obfuscationGuard < -111) {
           return pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
         }
-        field_b = (wm) null;
+        accountNameCheckState = (wm) null;
         return pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, 127, missionIndex);
     }
 
     public static void a(byte param0) {
         field_a = null;
         field_d = null;
-        field_b = null;
+        accountNameCheckState = null;
         if (param0 >= -83) {
           mh.a((byte) 62);
         }

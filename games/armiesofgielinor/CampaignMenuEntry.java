@@ -114,7 +114,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         RuntimeException var4 = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ChannelBaseVolumeConsoleCommand.field_L = lm.field_d;
+          ChannelBaseVolumeConsoleCommand.field_L = lm.nameCheckComplete;
           if (param1 != -14) {
             CampaignMenuEntry.a(7);
           }
@@ -158,7 +158,7 @@ final class CampaignMenuEntry extends IntrusiveNode {
         int var6;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var2 = 0;
-        var3 = ib.field_j;
+        var3 = PasswordValidator.field_j;
         if (var3 >= 5) {
           if (var3 < 105) {
             var2 = (-40960 + var3 * 16384) / 220;

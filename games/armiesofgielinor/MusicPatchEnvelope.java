@@ -157,13 +157,13 @@ final class MusicPatchEnvelope {
           }
           ignoredAccount = db.findIgnoredAccount(displayName, -122);
           if (ignoredAccount == null) {
-            stackIn_10_0 = fo.a(4800, CacheEntry.field_x, new String[]{displayName});
+            stackIn_10_0 = EmailCheckResult.a(4800, CacheEntry.field_x, new String[]{displayName});
             return stackIn_10_0;
           }
           ignoredAccount.unlink(-124);
           ignoredAccount.unlinkSecondary((byte) -76);
           vg.ignoreCount = vg.ignoreCount - 1;
-          packet = vl.outgoingPacket;
+          packet = EmailValidator.outgoingPacket;
           packet.writeCipheredOpcode(32161, packetOpcode);
           packet.position = packet.position + 1;
           payloadStart = packet.position;

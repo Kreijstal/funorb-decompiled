@@ -3,7 +3,7 @@
  */
 final class eb {
     static ClientUiComponent field_a;
-    static int field_b;
+    static int minimumPasswordLength;
     static String field_e;
     static String field_d;
     static ClientUiComponent field_c;
@@ -77,6 +77,6 @@ final class eb {
     static {
         field_d = "Send private message";
         field_e = "Month";
-        field_b = 5;
+        minimumPasswordLength = 5;
     }
 }

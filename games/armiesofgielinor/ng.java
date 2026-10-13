@@ -582,8 +582,8 @@ final class ng {
           }
           TriangleRasterizer.useRasterClip();
           SoftwareRaster.b();
-          ib.field_j = 0;
-          rb.e(9);
+          PasswordValidator.field_j = 0;
+          DebouncedValidator.e(9);
           var2 = var1.g();
           for (var3 = 0; 15 > var3; var3++) {
             var2.a(-2, -2, 16777215);
@@ -738,7 +738,7 @@ final class ng {
         ed.field_e = null;
         if (jl.field_b != null) {
           UpkeepEvent.field_z = jl.field_b;
-          rb.field_b = ArchiveProvider.field_d;
+          DebouncedValidator.field_b = ArchiveProvider.field_d;
           UpkeepEvent.field_z.matchedButtonTextColour = -1;
           UpkeepEvent.field_z.heldPressTextColour = -1;
           jl.field_b = null;
@@ -746,7 +746,7 @@ final class ng {
         }
         UnitCycler.field_g = null;
         hf.textChatActive = true;
-        sb.field_i = null;
+        DateOfBirthValidator.field_i = null;
         int var1 = 89 % ((param0 + 51) / 39);
     }
 

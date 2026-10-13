@@ -10,9 +10,9 @@ final class gi {
     final static boolean a(boolean param0) {
         if (param0) {
           gi.a(11);
-          return du.field_d == mh.field_b ? true : false;
+          return du.nameCheckPending == mh.accountNameCheckState ? true : false;
         }
-        return du.field_d == mh.field_b ? true : false;
+        return du.nameCheckPending == mh.accountNameCheckState ? true : false;
     }
 
     public static void a(int param0) {

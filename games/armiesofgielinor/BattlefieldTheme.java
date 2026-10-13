@@ -45,11 +45,11 @@ final class BattlefieldTheme {
           if (EffectPresentation.field_h[param2] > EffectPresentation.field_h[param1]) {
             return false;
           }
-          if (no.field_U[param1] > no.field_U[param2]) {
+          if (NumericDateInputWidget.field_U[param1] > NumericDateInputWidget.field_U[param2]) {
             return true;
           }
           boolean decompiledFrameRemainder1 = true;
-          if (no.field_U[param1] >= no.field_U[param2]) {
+          if (NumericDateInputWidget.field_U[param1] >= NumericDateInputWidget.field_U[param2]) {
             var4 = VineGrowthAction.field_s[param2] + AnimationFrameSet.field_w[param2] + TutorialController.field_c[param2];
             var5 = VineGrowthAction.field_s[param1] + (AnimationFrameSet.field_w[param1] + TutorialController.field_c[param1]);
             if (var4 < var5) {
@@ -69,10 +69,10 @@ final class BattlefieldTheme {
           }
           return stackIn_16_0;
         }
-        if (no.field_U[param2] < no.field_U[param1]) {
+        if (NumericDateInputWidget.field_U[param2] < NumericDateInputWidget.field_U[param1]) {
           return true;
         }
-        if (no.field_U[param2] > no.field_U[param1]) {
+        if (NumericDateInputWidget.field_U[param2] > NumericDateInputWidget.field_U[param1]) {
           return false;
         }
         if (EffectPresentation.field_h[param1] > EffectPresentation.field_h[param2]) {

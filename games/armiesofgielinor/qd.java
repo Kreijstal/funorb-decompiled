@@ -70,7 +70,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
         }
     }
 
-    final static boolean a(String param0, String param1, boolean param2) {
+    final static boolean isPasswordAllowedForName(String password, String name, boolean obfuscationGuard) {
         RuntimeException var3 = null;
         PcmStreamMixer var4 = null;
         RuntimeException stackIn_30_0 = null;
@@ -80,29 +80,29 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ab.a(param0, 0)) {
+          if (ab.containsNonAlphanumeric(password, 0)) {
             return false;
           }
-          if (ph.a(param0, (byte) 123)) {
+          if (ph.isAllSameCharacter(password, (byte) 123)) {
             return false;
           }
-          if (pd.a(param0, 0)) {
+          if (pd.hasInvalidPasswordLength(password, 0)) {
             return false;
           }
-          if (param1.length() == 0) {
+          if (name.length() == 0) {
             return true;
           }
-          if (rb.a(param1, param0, 113)) {
+          if (DebouncedValidator.passwordContainsNameVariant(name, password, 113)) {
             return false;
           }
-          if (e.a(86, param1, param0)) {
+          if (e.nameContainsPasswordVariant(86, name, password)) {
             return false;
           }
-          if (param2) {
+          if (obfuscationGuard) {
             var4 = (PcmStreamMixer) null;
             qd.a((ResourceArchive) null, (byte) 120, (PcmStreamMixer) null, -19);
           }
-          if (!Battlefield.a(param0, (byte) -26, param1)) {
+          if (!Battlefield.passwordContainsCompactNameVariant(password, (byte) -26, name)) {
             return true;
           }
           return false;
@@ -111,18 +111,18 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
           var3 = decompiledCaughtException;
           stackIn_30_0 = var3;
           stackIn_30_1 = new StringBuilder().append("qd.B(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
           stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param1 == null) {
+          if (name == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -171,9 +171,9 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
           ng.b(true);
           if (param1 <= 70) {
             String var5 = (String) null;
-            qd.a((String) null, (String) null, true);
+            qd.isPasswordAllowedForName((String) null, (String) null, true);
           }
-          ib.field_j = 0 - InteractiveWidget.field_C;
+          PasswordValidator.field_j = 0 - InteractiveWidget.field_C;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -190,7 +190,7 @@ final class qd extends DequeWidgetContainer implements TextHotspotListener, Widg
           this.field_H = param0;
           this.field_M = new InteractiveWidget(ro.field_kb, (WidgetListener) null);
           this.field_M.painter = (WidgetPainter) ((Object) new nu());
-          var7 = fo.a(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
+          var7 = EmailCheckResult.a(4800, MidiPcmStream.field_R, new String[]{this.a(-29442), this.a((byte) -117)});
           var3 = 20;
           var4 = new BitmapTextWidgetPainter(ArmiesOfGielinor.field_J, 0, 0, 0, 0, 16777215, -1, 3, 0, ArmiesOfGielinor.field_J.maxAscent, -1, 2147483647, true);
           this.field_F = new HotspotTextWidget(var7, var4);

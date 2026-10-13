@@ -358,7 +358,7 @@ class PacketBuffer extends IntrusiveNode {
               if (!param6) {
                 stackIn_24_0 = EffectPresentation.field_h[var12];
               } else {
-                stackIn_24_0 = no.field_U[var12];
+                stackIn_24_0 = NumericDateInputWidget.field_U[var12];
               }
               var13 = stackIn_24_0;
               if (var13 <= var7_int) {

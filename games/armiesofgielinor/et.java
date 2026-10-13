@@ -178,15 +178,15 @@ final class et {
                   stackIn_18_0 = 3;
                   return stackIn_18_0;
                 }
-                if (du.field_d == mh.field_b) {
+                if (du.nameCheckPending == mh.accountNameCheckState) {
                   stackIn_21_0 = 1;
                   return stackIn_21_0;
                 }
-                if (!se.field_g.a((byte) -26)) {
+                if (!se.emailCheckResult.isComplete((byte) -26)) {
                   stackIn_24_0 = 1;
                   return stackIn_24_0;
                 }
-                if (ChannelBaseVolumeConsoleCommand.field_L == du.field_d) {
+                if (ChannelBaseVolumeConsoleCommand.field_L == du.nameCheckPending) {
                   stackIn_29_0 = 2;
                   return stackIn_29_0;
                 }

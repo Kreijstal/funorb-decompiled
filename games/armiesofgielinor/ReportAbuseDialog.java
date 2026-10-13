@@ -441,7 +441,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
             this.instructions.horizontalAlignment = 1;
             this.instructions.textColour = 11184810;
             this.content.addChild(this.instructions, 116);
-            this.helpText = new ClientUiComponent(0L, textStyle, mk.field_d);
+            this.helpText = new ClientUiComponent(0L, textStyle, TextFieldValidator.field_d);
             this.helpText.horizontalAlignment = 1;
             this.helpText.textColour = 11184810;
             this.content.addChild(this.helpText, 119);

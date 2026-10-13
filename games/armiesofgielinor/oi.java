@@ -88,7 +88,7 @@ final class oi implements WidgetPainter {
           }
           var7 = widget.y + originY;
           StateChangeEvent.a(widget.width, var6_int, widget.height, -52, var7);
-          var8 = db.field_a[1];
+          var8 = db.validationStatusIcons[1];
           if (widget instanceof InteractiveWidget &&
             ((InteractiveWidget) (widget)).active) {
             var8.f((widget.width - var8.canvasWidth >> 1) + (1 + var6_int), (-var8.canvasHeight + widget.height >> 1) + (1 + var7), 256);

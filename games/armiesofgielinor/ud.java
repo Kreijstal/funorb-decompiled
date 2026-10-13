@@ -28,8 +28,8 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
               SocketResourceClient.a(896, packetOpcode);
             }
           } else {
-            if (filterValue != ol.field_B) {
-              ol.field_B = filterValue;
+            if (filterValue != MaskedTextEntryPainter.field_B) {
+              MaskedTextEntryPainter.field_B = filterValue;
               MoveEvent.field_J = true;
               SocketResourceClient.a(896, packetOpcode);
             }
@@ -42,8 +42,8 @@ final class ud extends ResizableModalDialog implements WidgetActivationListener 
           }
         } else {
           if (channelId == 0 &&
-            filterValue != ol.field_B) {
-            ol.field_B = filterValue;
+            filterValue != MaskedTextEntryPainter.field_B) {
+            MaskedTextEntryPainter.field_B = filterValue;
             MoveEvent.field_J = true;
             SocketResourceClient.a(896, packetOpcode);
           }

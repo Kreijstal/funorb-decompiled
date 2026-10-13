@@ -156,7 +156,7 @@ final class RadialSummonMenu {
     }
 
     final static void a(boolean param0, boolean param1) {
-        DebugConsole.field_w = !param1 ? new CommunityTabGroup(GridWidgetContainer.field_O, eb.field_c) : new CommunityTabGroup(TeleportAction.field_x, uj.field_l);
+        DebugConsole.field_w = !param1 ? new CommunityTabGroup(GridWidgetContainer.field_O, eb.field_c) : new CommunityTabGroup(TeleportAction.field_x, AccountNameAvailabilityValidator.field_l);
         if (param0) {
           return;
         }

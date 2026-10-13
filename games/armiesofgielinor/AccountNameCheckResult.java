@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wd {
+final class AccountNameCheckResult {
     int field_d;
     static RgbSprite field_k;
-    boolean field_a;
+    boolean accepted;
     String[] field_c;
     static String field_l;
     static String field_j;
     static int field_b;
-    String field_i;
+    String errorText;
     boolean field_h;
     static String field_g;
     static String field_e;
@@ -98,7 +98,7 @@ final class wd {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           orderDifference = entry.orderIndex - other.orderIndex;
-          if (vl.currentLocationLabel != entry.locationLabel) {
+          if (EmailValidator.currentLocationLabel != entry.locationLabel) {
             if (entry.locationLabel == null) {
               orderDifference += 200;
               if (obfuscationControl != 0) {
@@ -108,7 +108,7 @@ final class wd {
           } else {
             orderDifference -= 200;
           }
-          if (vl.currentLocationLabel != other.locationLabel) {
+          if (EmailValidator.currentLocationLabel != other.locationLabel) {
             if (null == other.locationLabel) {
               orderDifference -= 200;
               if (obfuscationControl != 0) {
@@ -159,23 +159,23 @@ final class wd {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
-            wd.a((byte) -13);
+            AccountNameCheckResult.a((byte) -13);
           }
           var1 = null;
           var2 = null;
           if (rs.outgoingChatChannel == 0 &&
-            no.roomSetup != null) {
+            NumericDateInputWidget.roomSetup != null) {
             var2 = DraggableWidgetContainer.field_K;
           }
           if (rs.outgoingChatChannel == 2 &&
-            !vu.isChatRecipientAvailable(6)) {
+            !ToggleWidget.isChatRecipientAvailable(6)) {
             if (!jj.isFriend(62, wm.chatRecipientNameKey)) {
-              var2 = fo.a(4800, DiskCacheWorker.field_h, new String[]{qd.chatRecipientName});
+              var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_h, new String[]{qd.chatRecipientName});
               if (var10 != 0) {
-                var2 = fo.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
+                var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
               }
             } else {
-              var2 = fo.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
+              var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{qd.chatRecipientName});
             }
             if (BattleTutorial.quickChatMenuVisible) {
               LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, (String) (var2), 0);
@@ -197,23 +197,23 @@ final class wd {
             var6 = rs.outgoingChatChannel;
             var7 = 0;
             if (var6 == 2) {
-              var4 = fo.a(4800, LabeledWidgetContainer.field_Q, new String[]{qd.chatRecipientName});
-              var8 = fo.a(4800, ov.field_l, new String[]{var3});
-              var7 = rb.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.textWidth(var8) + IntrusiveNode.field_e.textWidth(var4));
+              var4 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{qd.chatRecipientName});
+              var8 = EmailCheckResult.a(4800, ov.field_l, new String[]{var3});
+              var7 = DebouncedValidator.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.textWidth(var8) + IntrusiveNode.field_e.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
             } else {
               if (0 == var6) {
-                if (null == vu.currentRoom &&
+                if (null == ToggleWidget.currentRoom &&
                   bq.field_c) {
                   var4 = "[" + ClientConnectionState.field_c + "] ";
                 }
-                if (null != vu.currentRoom) {
+                if (null != ToggleWidget.currentRoom) {
                   var6 = 1;
                   if (!TextCursor.field_f ||
                     TeleportAction.field_C == null) {
-                    var4 = "[" + fo.a(4800, CampaignMenu.field_m, new String[]{vu.currentRoom.ownerName}) + "] ";
+                    var4 = "[" + EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{ToggleWidget.currentRoom.ownerName}) + "] ";
                     if (var10 != 0) {
                       var4 = "[" + TeleportAction.field_C + "] ";
                     }
@@ -259,10 +259,10 @@ final class wd {
             }
             fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.escapeMarkup(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
             if (!hf.textChatActive) {
-              rb.field_b.heldButtonMatches = false;
+              DebouncedValidator.field_b.heldButtonMatches = false;
             }
-            if (rb.field_b.heldButtonMatches) {
-              var1 = fo.a(4800, MusicPatchPcmStream.field_q, new String[]{var3, qd.chatRecipientName});
+            if (DebouncedValidator.field_b.heldButtonMatches) {
+              var1 = EmailCheckResult.a(4800, MusicPatchPcmStream.field_q, new String[]{var3, qd.chatRecipientName});
             }
           }
           stackIn_96_0 = var1;
@@ -291,11 +291,11 @@ final class wd {
         }
     }
 
-    wd(boolean param0) {
+    AccountNameCheckResult(boolean accepted) {
         try {
-          this.field_a = param0;
+          this.accepted = accepted;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wd.<init>(" + param0 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wd.<init>(" + accepted + ')');
         }
     }
 

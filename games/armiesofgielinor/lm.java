@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lm {
-    static wm field_d;
+    static wm nameCheckComplete;
     static int[] field_e;
     static RgbSprite[] field_h;
     static String field_f;
@@ -18,18 +18,18 @@ final class lm {
         field_a = null;
         field_h = null;
         if (param0 == 1638) {
-          field_d = null;
+          nameCheckComplete = null;
           field_b = null;
           return;
         }
         field_f = (String) null;
-        field_d = null;
+        nameCheckComplete = null;
         field_b = null;
     }
 
     static {
         field_z = "lm.A(";
-        field_d = new wm();
+        nameCheckComplete = new wm();
         field_f = "<%0> runes";
         field_a = "Add name";
     }

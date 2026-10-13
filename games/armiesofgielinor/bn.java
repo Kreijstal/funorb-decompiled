@@ -22,18 +22,18 @@ final class bn {
         }
     }
 
-    final static int a(byte param0, int param1, int param2) {
-        if (param1 == 1) {
-          if (is.a(4, param2)) {
+    final static int getDaysInMonth(byte obfuscationGuard, int monthIndex, int year) {
+        if (monthIndex == 1) {
+          if (is.a(4, year)) {
             return 29;
           }
-          if (param0 < -7) {
-            return ce.field_I[param1];
+          if (obfuscationGuard < -7) {
+            return ce.field_I[monthIndex];
           }
           return 111;
         }
-        if (param0 < -7) {
-          return ce.field_I[param1];
+        if (obfuscationGuard < -7) {
+          return ce.field_I[monthIndex];
         }
         return 111;
     }
@@ -89,14 +89,14 @@ final class bn {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         AlphaWidgetContainer.d(false);
         if (GlobalSpell.field_g >= 0) {
-          t.field_g.text = fo.a(4800, AttackEvent.field_F, new String[]{Integer.toString(GlobalSpell.field_g)});
-          stackIn_56_0 = no.field_T;
+          t.field_g.text = EmailCheckResult.a(4800, AttackEvent.field_F, new String[]{Integer.toString(GlobalSpell.field_g)});
+          stackIn_56_0 = NumericDateInputWidget.field_T;
           stackIn_56_1 = true;
-          stackIn_57_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (null == no.roomSetup);
+          stackIn_57_2 = (param0) && (!param1) && (!bw.field_g) && (ToggleWidget.currentRoom == null) && (null == NumericDateInputWidget.roomSetup);
           ((ClientUiComponent) (Object) stackIn_56_0).updateInput(stackIn_56_1, stackIn_57_2);
           stackIn_63_0 = ov.field_i;
           stackIn_63_1 = true;
-          stackIn_64_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (no.roomSetup == null);
+          stackIn_64_2 = (param0) && (!param1) && (!bw.field_g) && (ToggleWidget.currentRoom == null) && (NumericDateInputWidget.roomSetup == null);
           ((ClientUiComponent) (Object) stackIn_63_0).updateInput(stackIn_63_1, stackIn_64_2);
           stackIn_68_0 = qc.field_c;
           stackIn_68_1 = true;
@@ -111,14 +111,14 @@ final class bn {
           }
           if (fj.field_d.pressedButton != 0) {
             if (bj.field_k) {
-              gu.a(-61, param3);
+              ValidationState.a(-61, param3);
             } else {
               if (df.field_M > 0) {
-                gu.a(-61, param3);
+                ValidationState.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j &&
                   br.heldKeys[12]) {
-                  gu.a(-61, param3);
+                  ValidationState.a(-61, param3);
                 } else {
                   ChatMessage.field_w = true;
                 }
@@ -127,13 +127,13 @@ final class bn {
           }
         } else {
           t.field_g.text = null;
-          stackIn_7_0 = no.field_T;
+          stackIn_7_0 = NumericDateInputWidget.field_T;
           stackIn_7_1 = true;
-          stackIn_8_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (null == no.roomSetup);
+          stackIn_8_2 = (param0) && (!param1) && (!bw.field_g) && (ToggleWidget.currentRoom == null) && (null == NumericDateInputWidget.roomSetup);
           ((ClientUiComponent) (Object) stackIn_7_0).updateInput(stackIn_7_1, stackIn_8_2);
           stackIn_14_0 = ov.field_i;
           stackIn_14_1 = true;
-          stackIn_15_2 = (param0) && (!param1) && (!bw.field_g) && (vu.currentRoom == null) && (no.roomSetup == null);
+          stackIn_15_2 = (param0) && (!param1) && (!bw.field_g) && (ToggleWidget.currentRoom == null) && (NumericDateInputWidget.roomSetup == null);
           ((ClientUiComponent) (Object) stackIn_14_0).updateInput(stackIn_14_1, stackIn_15_2);
           stackIn_19_0 = qc.field_c;
           stackIn_19_1 = true;
@@ -148,14 +148,14 @@ final class bn {
           }
           if (fj.field_d.pressedButton != 0) {
             if (bj.field_k) {
-              gu.a(-61, param3);
+              ValidationState.a(-61, param3);
             } else {
               if (df.field_M > 0) {
-                gu.a(-61, param3);
+                ValidationState.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j) {
                   if (br.heldKeys[12]) {
-                    gu.a(-61, param3);
+                    ValidationState.a(-61, param3);
                   } else {
                     ChatMessage.field_w = true;
                   }

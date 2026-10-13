@@ -7212,7 +7212,7 @@ final class Battlefield {
         }
     }
 
-    final static boolean a(String param0, byte param1, String param2) {
+    final static boolean passwordContainsCompactNameVariant(String password, byte obfuscationGuard, String name) {
         String var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -7223,25 +7223,25 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = ia.a(param2, '_', 3, "");
-          if (param1 != -26) {
+          name = ia.a(name, '_', 3, "");
+          if (obfuscationGuard != -26) {
             return true;
           }
-          var3 = IconTextComponent.a(true, param2);
-          stackIn_8_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
+          var3 = IconTextComponent.a(true, name);
+          stackIn_8_0 = (password.indexOf(name) != -1) || (password.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("ha.ID(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";

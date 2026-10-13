@@ -10,7 +10,7 @@ final class da {
         int var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         DualLinkedNode var1Lifetime1;
         try {
-          vl.currentLocationLabel = null;
+          EmailValidator.currentLocationLabel = null;
           dj.friendCount = 0;
           vg.ignoreCount = 0;
           wh.friendEntries.clear(126);

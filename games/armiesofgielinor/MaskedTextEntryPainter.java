@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ol extends lu {
+final class MaskedTextEntryPainter extends TextEntryWidgetPainter {
     static int field_B;
     static int field_A;
     static RgbSprite field_y;
@@ -19,9 +19,9 @@ final class ol extends lu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
-            ol.b((byte) 38);
+            MaskedTextEntryPainter.b((byte) 38);
           }
-          stackIn_3_0 = no.a('*', true, widget.text.length());
+          stackIn_3_0 = NumericDateInputWidget.repeatCharacter('*', true, widget.text.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,14 +37,14 @@ final class ol extends lu {
         }
     }
 
-    ol(int param0) {
-        this(ArmiesOfGielinor.field_J, param0);
+    MaskedTextEntryPainter(int textColour) {
+        this(ArmiesOfGielinor.field_J, textColour);
     }
 
     public static void b(byte param0) {
         field_y = null;
         if (param0 <= 30) {
-          ol.b((byte) -13);
+          MaskedTextEntryPainter.b((byte) -13);
           field_x = null;
           cachedConsoleTokens = null;
           return;
@@ -53,8 +53,8 @@ final class ol extends lu {
         cachedConsoleTokens = null;
     }
 
-    private ol(BitmapFont param0, int param1) {
-        super(param0, param1);
+    private MaskedTextEntryPainter(BitmapFont font, int textColour) {
+        super(font, textColour);
     }
 
     static {

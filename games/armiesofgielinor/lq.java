@@ -5,7 +5,7 @@ final class lq {
     static int field_e;
     static boolean hasLastQuickChat;
     static int field_b;
-    static gu field_c;
+    static ValidationState validationEmpty;
     static String field_a;
     static String field_f;
 
@@ -81,14 +81,14 @@ final class lq {
         }
         field_a = null;
         field_f = null;
-        field_c = null;
+        validationEmpty = null;
     }
 
     static {
         hasLastQuickChat = false;
         field_e = -1;
         field_b = 0;
-        field_c = new gu();
+        validationEmpty = new ValidationState();
         field_f = "Build cannon - The troop of engineers will build a single, powerful cannon on the tile they're on.";
         field_a = "SPEED";
     }

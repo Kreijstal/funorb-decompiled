@@ -27,7 +27,7 @@ final class WeightedScoreStrategy extends AiPlanningStrategy {
           }
           var2.faceColors[var5] = (short)oe.bitwiseOr(var6, rn.bitwiseAnd(~var4, var3));
         }
-        return var2.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
+        return var2.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
     }
 
     final static boolean a(int param0, int param1) {

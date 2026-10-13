@@ -47,7 +47,7 @@ final class QuickChatCommandDefinition {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!rb.canOpenQuickChatResponses(accountId, recipientName, -17231, channelId, responsePhraseIds)) {
+          if (!DebouncedValidator.canOpenQuickChatResponses(accountId, recipientName, -17231, channelId, responsePhraseIds)) {
             return false;
           }
           if (channelId == 1) {
@@ -58,7 +58,7 @@ final class QuickChatCommandDefinition {
           recipientCharacters = (CharSequence) ((Object) recipientName);
           wm.chatRecipientNameKey = AccountNameNormalizer.normalize(recipientCharacters, false);
           dj.chatRecipientAccountId = accountId;
-          responseMenu = RasterState.buildQuickChatResponseMenu(-11, uj.field_n, responsePhraseIds, vs.field_g, hf.field_f);
+          responseMenu = RasterState.buildQuickChatResponseMenu(-11, AccountNameAvailabilityValidator.field_n, responsePhraseIds, vs.field_g, hf.field_f);
           vs.showQuickChatMenu(256, responseMenu);
           if (obfuscationGuard > 77) {
             return true;

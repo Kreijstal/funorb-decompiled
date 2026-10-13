@@ -464,9 +464,9 @@ final class MusicCrossfadeStream extends PcmStream {
         CampaignUnitOverride.a(-640 + SoftwareRaster.width >> 1, 640 + SoftwareRaster.width >> 1, SoftwareRaster.height, 0, (byte) 91);
         if (ModalDialogHost.field_J > 0) {
           if (null != dh.field_k) {
-            dh.field_k.f(no.field_T.x, 0);
+            dh.field_k.f(NumericDateInputWidget.field_T.x, 0);
           }
-          stackIn_6_0 = no.field_T;
+          stackIn_6_0 = NumericDateInputWidget.field_T;
           stackIn_7_1 = (param1) && (!bw.field_g);
           ((ClientUiComponent) (Object) stackIn_6_0).draw(stackIn_7_1, 20);
           stackIn_10_0 = ov.field_i;

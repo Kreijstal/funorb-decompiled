@@ -49,7 +49,7 @@ final class j {
             return;
           }
           DisplacedUnitMarker.field_t = new String[60];
-          DisplacedUnitMarker.field_t[24] = ma.field_Y;
+          DisplacedUnitMarker.field_t[24] = ValidatedTextWidget.field_Y;
           DisplacedUnitMarker.field_t[11] = tf.field_p;
           DisplacedUnitMarker.field_t[0] = od.field_g;
           DisplacedUnitMarker.field_t[1] = la.field_e;
@@ -88,7 +88,7 @@ final class j {
           DisplacedUnitMarker.field_t[32] = ActionRequest.field_r;
           DisplacedUnitMarker.field_t[36] = rj.field_G;
           DisplacedUnitMarker.field_t[31] = DebugConsole.field_C;
-          DisplacedUnitMarker.field_t[35] = wd.field_j;
+          DisplacedUnitMarker.field_t[35] = AccountNameCheckResult.field_j;
           DisplacedUnitMarker.field_t[47] = qk.field_f;
           DisplacedUnitMarker.field_t[51] = nt.field_p;
           DisplacedUnitMarker.field_t[48] = StandardContentDialog.field_lb;
@@ -142,14 +142,14 @@ final class j {
           wb.field_b[19] = PlayerProfile.field_e;
           wb.field_b[9] = jn.field_e;
           wb.field_b[20] = CorpseConditionMarker.field_x;
-          oi.field_a[10] = fo.a(4800, oi.field_a[10], new String[]{Integer.toString(20)});
-          vl.battleHintMessages = new String[6];
-          vl.battleHintMessages[3] = jj.field_f;
-          vl.battleHintMessages[0] = DeployAction.field_C;
-          vl.battleHintMessages[4] = DropdownOptionList.field_Y;
-          vl.battleHintMessages[2] = qt.field_a;
-          vl.battleHintMessages[1] = bk.field_c;
-          vl.battleHintMessages[5] = fa.field_g;
+          oi.field_a[10] = EmailCheckResult.a(4800, oi.field_a[10], new String[]{Integer.toString(20)});
+          EmailValidator.battleHintMessages = new String[6];
+          EmailValidator.battleHintMessages[3] = jj.field_f;
+          EmailValidator.battleHintMessages[0] = DeployAction.field_C;
+          EmailValidator.battleHintMessages[4] = DropdownOptionList.field_Y;
+          EmailValidator.battleHintMessages[2] = qt.field_a;
+          EmailValidator.battleHintMessages[1] = bk.field_c;
+          EmailValidator.battleHintMessages[5] = fa.field_g;
           var3 = 0;
           var1_intLifetime1 = var3;
           while (jj.field_a.length > var3) {
@@ -243,7 +243,7 @@ final class j {
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           AnimationSequence.a(PreparedAction.field_r, param0 + 114);
-          if (no.roomSetup != null) {
+          if (NumericDateInputWidget.roomSetup != null) {
             var15 = lm.field_b;
             var17 = var15;
             lm.field_b.height = 0;
@@ -296,14 +296,14 @@ final class j {
                 stackIn_33_1 = fk.field_e;
               }
               stackIn_32_0.text = ((String) (Object) stackIn_33_1).toUpperCase();
-              stackIn_35_0 = uj.field_l;
+              stackIn_35_0 = AccountNameAvailabilityValidator.field_l;
               stackIn_35_1 = 4800;
               if (var8 == 0) {
                 stackIn_36_2 = ov.field_k;
               } else {
                 stackIn_36_2 = ConsoleCommand.field_x;
               }
-              stackIn_35_0.text = fo.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.text});
+              stackIn_35_0.text = EmailCheckResult.a(stackIn_35_1, stackIn_36_2, new String[]{so.field_d.text});
               SocialListPanel.field_Lb.inputEnabled = true;
               fc.field_a = true;
               pi.field_N.text = cg.field_i;
@@ -320,7 +320,7 @@ final class j {
                   dt.field_d[var13] = false;
                   var13++;
                 }
-                ConsoleTokenCursor.a(0, tq.gameOptionCount, no.roomSetup, -1, true, -1, (byte) 89, -1);
+                ConsoleTokenCursor.a(0, tq.gameOptionCount, NumericDateInputWidget.roomSetup, -1, true, -1, (byte) 89, -1);
                 if (!(BufferedSocket.field_j < 2) &&
                   br.heldKeys[12]) {
                   fc.field_a = true;
@@ -353,7 +353,7 @@ final class j {
                 }
               }
             } else {
-              uj.field_l.text = AiActionCandidate.field_v;
+              AccountNameAvailabilityValidator.field_l.text = AiActionCandidate.field_v;
               SocialListPanel.field_Lb.inputEnabled = false;
               if (var8 != 0) {
                 stackIn_23_0 = SoundCache.field_f;
@@ -396,9 +396,9 @@ final class j {
           stackIn_77_2 = (param2) && (!param1) && (ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_76_0).updateInput(stackIn_76_1, stackIn_77_2);
           DebugConsole.field_w.tabs.advanceTabSelection(10000);
-          if (null != no.roomSetup) {
+          if (null != NumericDateInputWidget.roomSetup) {
             if (0 != SocialListPanel.field_Lb.pressedButton) {
-              lu.a(-127, param3);
+              TextEntryWidgetPainter.a(-127, param3);
             }
             if (so.field_d.pressedButton != 0) {
               if (SpellCastAction.field_s) {
@@ -407,7 +407,7 @@ final class j {
                 DropdownArrowPainter.a(param3, -8006);
               }
             }
-            vf.a(1, true, param3, no.roomSetup);
+            vf.a(1, true, param3, NumericDateInputWidget.roomSetup);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

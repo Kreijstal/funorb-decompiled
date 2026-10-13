@@ -573,7 +573,7 @@ class BitmapTextWidgetPainter implements WidgetPainter, TextWidgetPainter {
         if (!param0) {
           return true;
         }
-        return ib.field_j > 250 ? true : false;
+        return PasswordValidator.field_j > 250 ? true : false;
     }
 
     private final void drawDefaultText(int originX, int obfuscationGuard, int originY, Widget widget) {

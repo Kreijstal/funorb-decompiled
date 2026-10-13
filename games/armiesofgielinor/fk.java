@@ -122,7 +122,7 @@ final class fk implements WidgetPainter {
                 callResult = expression;
                 return callResult;
               }
-              if (separatorToken.kind != sb.consoleArgumentCommaKind) {
+              if (separatorToken.kind != DateOfBirthValidator.consoleArgumentCommaKind) {
                 throw new ConsoleParseException(separatorToken.sourceOffset);
               }
             }
@@ -211,7 +211,7 @@ final class fk implements WidgetPainter {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_4_0 = sb.field_e.getFileByName(param1, 74, "");
+            stackIn_4_0 = DateOfBirthValidator.field_e.getFileByName(param1, 74, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

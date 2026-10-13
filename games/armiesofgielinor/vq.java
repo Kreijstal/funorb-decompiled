@@ -55,9 +55,9 @@ final class vq {
         int var7Lifetime1Lifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_J = param0;
+          NumericDateInputWidget.field_J = param0;
           ip.field_e = true;
-          if (no.field_J == 0) {
+          if (NumericDateInputWidget.field_J == 0) {
             var3_int = BattleTutorial.a(pf.field_d, SummonRequest.field_z, 7502, TaggedMapData.field_b, du.field_b);
             var4 = 3 + var3_int;
             TileMetadata.field_h = new int[var4];
@@ -76,7 +76,7 @@ final class vq {
             AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
             TileMetadata.field_h[-1 + var4] = 1;
             MusicPatchNode.field_G[1] = 5;
-          } else if (1 == no.field_J) {
+          } else if (1 == NumericDateInputWidget.field_J) {
             var3_int = BattleTutorial.a(pf.field_d, SummonRequest.field_z, 7502, TaggedMapData.field_b, du.field_b);
             var4 = var3_int + 2;
             TileMetadata.field_h = new int[var4];
@@ -92,8 +92,8 @@ final class vq {
             AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
             TileMetadata.field_h[-1 + var4] = 0;
             MusicPatchNode.field_G[0] = 5;
-          } else if (no.field_J != 2) {
-            if (no.field_J == 3) {
+          } else if (NumericDateInputWidget.field_J != 2) {
+            if (NumericDateInputWidget.field_J == 3) {
               if (!IntPair.field_m.privilegedServicesEnabled) {
                 var3_int = BattleTutorial.a(pf.field_d, NodeHashIterator.field_a, 7502, TaggedMapData.field_b, du.field_b);
               } else {
@@ -113,7 +113,7 @@ final class vq {
               AnimationFrameSet.field_v[var4 - 1] = pd.field_f;
               TileMetadata.field_h[-1 + var4] = 0;
               MusicPatchNode.field_G[0] = 5;
-            } else if (no.field_J == 4) {
+            } else if (NumericDateInputWidget.field_J == 4) {
               var3_int = BattleTutorial.a(pf.field_d, MoveAttackRequest.field_y, 7502, TaggedMapData.field_b, du.field_b);
               var4 = 2 + var3_int;
               AnimationFrameSet.field_v = new String[var4];
@@ -130,7 +130,7 @@ final class vq {
               TileMetadata.field_h[-1 + var4] = 0;
               MusicPatchNode.field_G[0] = 5;
             } else {
-              if (no.field_J != 5) {
+              if (NumericDateInputWidget.field_J != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = BattleTutorial.a(pf.field_d, hb.field_a, 7502, TaggedMapData.field_b, du.field_b);
@@ -153,7 +153,7 @@ final class vq {
               MusicPatchNode.field_G[1] = 5;
             }
           } else {
-            var3_int = BattleTutorial.a(pf.field_d, fo.a(4800, db.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
+            var3_int = BattleTutorial.a(pf.field_d, EmailCheckResult.a(4800, db.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(du.field_b[var5])) {
@@ -170,7 +170,7 @@ final class vq {
             KeyboardInputListener.field_d = new String[var3_int + (-var4 - 1)];
             vm.a(du.field_b, 1 + var4, KeyboardInputListener.field_d, 0, -1 + var3_int - var4);
             var4 = -1;
-            var3_int = BattleTutorial.a(pf.field_d, fo.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
+            var3_int = BattleTutorial.a(pf.field_d, EmailCheckResult.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, du.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(du.field_b[var5])) {
                 continue;
@@ -248,7 +248,7 @@ final class vq {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (no.field_J == 2) {
+          if (NumericDateInputWidget.field_J == 2) {
             var10 = ChatMessage.field_i;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -301,7 +301,7 @@ final class vq {
             }
             var4Lifetime3++;
           }
-          if (no.field_J != 2) {
+          if (NumericDateInputWidget.field_J != 2) {
             ug.field_c.restoreSelection(0, param1, TeleportEvent.a(AiPlanningStrategy.pointerX, 120, ko.pointerY), 0);
           } else {
             ug.field_c.restoreSelection(-1, param1, -1, 0);

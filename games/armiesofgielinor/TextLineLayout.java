@@ -51,7 +51,7 @@ final class TextLineLayout {
         int var11 = 0;
         int var12 = 0;
         try {
-          sb.field_i.text = param0;
+          DateOfBirthValidator.field_i.text = param0;
           if (rs.outgoingChatChannel != 2) {
             ed.field_e.text = FixedQuaternion.field_c;
           } else {
@@ -60,16 +60,16 @@ final class TextLineLayout {
           var9_int = 495;
           var10 = 5;
           SummonEvent.field_F.setBounds(param5, -20500, -10 + var9_int, var10, 5);
-          UpkeepEvent.field_z.setBounds(param5, -20500, -rb.field_b.width + SummonEvent.field_F.width, 0, 0);
+          UpkeepEvent.field_z.setBounds(param5, -20500, -DebouncedValidator.field_b.width + SummonEvent.field_F.width, 0, 0);
           var10 = var10 + (param5 + param2);
-          rb.field_b.setBounds(param5, -20500, rb.field_b.width, 0, UpkeepEvent.field_z.width);
+          DebouncedValidator.field_b.setBounds(param5, -20500, DebouncedValidator.field_b.width, 0, UpkeepEvent.field_z.width);
           qf.field_e.setBounds(param4, -20500, qf.field_e.getPreferredWidth(param7 - 15550), var10, 5);
           var11 = ed.field_e.getPreferredWidth(param7 ^ 15717);
           ed.field_e.setBounds(param4, -20500, var11, var10, -5 + (var9_int - var11));
           if (param7 != 15676) {
             TextLineLayout.b(-109);
           }
-          sb.field_i.setBounds(param3, -20500, var9_int, 0, 0);
+          DateOfBirthValidator.field_i.setBounds(param3, -20500, var9_int, 0, 0);
           var12 = 5 + param4 + var10;
           StrongCacheEntry.field_C.setBounds(var12, -20500, var9_int, param3, 0);
           StrongCacheEntry.field_C.skinSprites = tq.a(11579568, false, StrongCacheEntry.field_C.height, 2105376, 3, 8421504);

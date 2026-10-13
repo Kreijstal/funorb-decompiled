@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class so {
-    static gu field_e;
+    static ValidationState validationChecking;
     static String[] field_a;
     static String[] field_c;
     static ClientUiComponent field_d;
@@ -14,7 +14,7 @@ final class so {
           field_b = null;
           field_d = null;
           field_a = null;
-          field_e = null;
+          validationChecking = null;
           return;
         }
         field_d = (ClientUiComponent) null;
@@ -22,7 +22,7 @@ final class so {
         field_b = null;
         field_d = null;
         field_a = null;
-        field_e = null;
+        validationChecking = null;
     }
 
     final static int a(int param0) {
@@ -88,7 +88,7 @@ final class so {
     }
 
     static {
-        field_e = new gu();
+        validationChecking = new ValidationState();
         field_a = new String[]{"Good Learner", "Dawn of Battle", "First Blood", "Saradomin Be With You", "Strength Through Chaos", "Fist of Guthix", "Light of 1,000 Crystals", "Big High War God", "Tumeken Rises This Morn", "Tactically Agnostic", "Bulletproof Monk", "Thinking with Portals", "Armageddon", "Army of Bones", "Got To Get Them All", "Dragonslayer", "Immortal", "Fear of Flying", "Warmonger", "Warlord", "Warmaster", "Tactically Atheistic", "Hail to the Chief", "Fragmentation", "Apocalypse", "Agree to Disagree", "Team Player", "My Sphinx, Therefore, I Can", "Sole Survivor", "Dead Weight", "Multi Faith Society", "Share and Enjoy", "Monster Feast", "Peril of the Plains", "Sire of the Sands", "Wrath of Winter", "Master of the Marshes", "Dread of Destruction", "Zamorak's Supremacy", "Zamorak's Silver", "Zamorak's Gold", "Plucking Feathers", "Push to the East", "Zarosian Purge", "Run, Dwarves, Escape!", "Saradomin's Silver", "Saradomin's Gold", "Peddewa Sieged", "The Brothers March", "Zaros Surrounded", "Beep, Beep", "Guthix's Silver", "Guthix's Gold", "Take a Chair", "Scarecrow", "Twilight of the Gods"};
         field_c = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     }

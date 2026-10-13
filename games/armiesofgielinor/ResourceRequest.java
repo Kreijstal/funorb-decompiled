@@ -46,7 +46,7 @@ abstract class ResourceRequest extends DualLinkedNode {
           var3.availableUnitTypes = ev.readNullableUnsignedByteArray(packet, (byte) -98);
           var3.coatOfArms = CacheEntry.readSignedCoatOfArms(packet, false);
           var3.godFavourLevels = gt.readSixUnsignedBytes(-2, packet);
-          var3.equippedSpellIds = en.readUnsignedByteArray(packet, (byte) -24);
+          var3.equippedSpellIds = DateInputWidget.readUnsignedByteArray(packet, (byte) -24);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

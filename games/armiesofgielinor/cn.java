@@ -13,24 +13,24 @@ final class cn extends vf {
     static int field_o;
 
     final static String e(int param0) {
-        if (du.field_d == ChannelBaseVolumeConsoleCommand.field_L) {
+        if (du.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return cd.field_e;
         }
         if (param0 != 488997228) {
           field_s = (String) null;
-          if (!se.field_g.a((byte) 126)) {
-            return se.field_g.b(true);
+          if (!se.emailCheckResult.isComplete((byte) 126)) {
+            return se.emailCheckResult.getEmail(true);
           }
-          if (du.field_d == mh.field_b) {
-            return se.field_g.b(true);
+          if (du.nameCheckPending == mh.accountNameCheckState) {
+            return se.emailCheckResult.getEmail(true);
           }
           return IsaacRandom.field_d;
         }
-        if (!se.field_g.a((byte) 126)) {
-          return se.field_g.b(true);
+        if (!se.emailCheckResult.isComplete((byte) 126)) {
+          return se.emailCheckResult.getEmail(true);
         }
-        if (du.field_d == mh.field_b) {
-          return se.field_g.b(true);
+        if (du.nameCheckPending == mh.accountNameCheckState) {
+          return se.emailCheckResult.getEmail(true);
         }
         return IsaacRandom.field_d;
     }

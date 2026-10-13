@@ -232,7 +232,7 @@ final class QuickChatCategoryRepository {
                                     if (var7 == null) {
                                       var7 = new LobbyPlayer(var27, var28, var3_long);
                                       UnitCycler.currentRoomPlayersById.put(-1, var3_long, var7);
-                                      vu.currentRoom.playerCount = vu.currentRoom.playerCount + 1;
+                                      ToggleWidget.currentRoom.playerCount = ToggleWidget.currentRoom.playerCount + 1;
                                     }
                                     var7.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
                                     var8 = ((PacketBuffer) ((Object) var1)).readVarInt(120);
@@ -259,10 +259,10 @@ final class QuickChatCategoryRepository {
                                       var14.notificationCode = var5;
                                     }
                                     var29.unlinkSecondary((byte) -76);
-                                    vu.currentRoom.playerCount = vu.currentRoom.playerCount - 1;
+                                    ToggleWidget.currentRoom.playerCount = ToggleWidget.currentRoom.playerCount - 1;
                                     break regionExit1;
                                   case 20:
-                                    TrianglePulse.decodeLobbyRoom(vu.currentRoom, false, var1, 83);
+                                    TrianglePulse.decodeLobbyRoom(ToggleWidget.currentRoom, false, var1, 83);
                                     break regionExit1;
                                   case 21:
                                     var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
@@ -360,24 +360,24 @@ final class QuickChatCategoryRepository {
               var3_ref_of = (LobbyPlayer) (oi.lobbyPlayersById.next(1));
             }
             if (1 == var2 &&
-              vu.currentRoom != null) {
-              PopupPresentation.field_e = vu.currentRoom.ownerName;
+              ToggleWidget.currentRoom != null) {
+              PopupPresentation.field_e = ToggleWidget.currentRoom.ownerName;
             }
             if (4 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort((byte) -104);
-              vu.currentRoom = new LobbyRoom(tq.gameOptionCount);
-              vu.currentRoom.setSecondaryKey(true, (long)var3);
-              TrianglePulse.decodeLobbyRoom(vu.currentRoom, false, var1, 97);
+              ToggleWidget.currentRoom = new LobbyRoom(tq.gameOptionCount);
+              ToggleWidget.currentRoom.setSecondaryKey(true, (long)var3);
+              TrianglePulse.decodeLobbyRoom(ToggleWidget.currentRoom, false, var1, 97);
               ph.field_d = 0L;
             } else {
-              vu.currentRoom = null;
+              ToggleWidget.currentRoom = null;
             }
             if (2 != var2 &&
               var2 != 3) {
-              no.roomSetup = null;
+              NumericDateInputWidget.roomSetup = null;
             } else {
-              if (null == no.roomSetup) {
-                no.roomSetup = new LobbyRoom(tq.gameOptionCount);
+              if (null == NumericDateInputWidget.roomSetup) {
+                NumericDateInputWidget.roomSetup = new LobbyRoom(tq.gameOptionCount);
               }
             }
             if (3 != var2) {
@@ -479,7 +479,7 @@ final class QuickChatCategoryRepository {
                   }
                 }
               }
-              ActionRequest.unitModels[var3][0] = var10.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
+              ActionRequest.unitModels[var3][0] = var10.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
               for (var6Lifetime2 = 1; var6Lifetime2 < ActionRequest.field_m[var3].length; var6Lifetime2++) {
                 ActionRequest.unitModels[var3][var6Lifetime2] = null;
               }
@@ -499,7 +499,7 @@ final class QuickChatCategoryRepository {
                 }
               }
             }
-            cs.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
+            cs.field_db[var3Lifetime1] = var5Lifetime1.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
             if (((ModelMesh) (cs.field_db[var3Lifetime1])).vertexCount == 0) {
               cs.field_db[var3Lifetime1] = null;
             }

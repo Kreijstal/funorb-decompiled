@@ -12,7 +12,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
 
     final static void writePlayerAdmissionCancellation(int packetOpcode, long accountId, byte obfuscationGuard) {
         int var5 = 0;
-        CipherPacketBuffer var4 = vl.outgoingPacket;
+        CipherPacketBuffer var4 = EmailValidator.outgoingPacket;
         int var5Lifetime1;
         if (obfuscationGuard >= 88) {
           var4.writeCipheredOpcode(32161, packetOpcode);
@@ -99,7 +99,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = vl.outgoingPacket;
+          var3 = EmailValidator.outgoingPacket;
           var3.writeCipheredOpcode(32161, param0);
           var3.writeByte(1, param1.field_n);
           var3.writeShort(true, param1.field_m);

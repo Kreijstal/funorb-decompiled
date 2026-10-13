@@ -37,13 +37,13 @@ final class uh {
 
     final static void a(int param0, boolean param1, int[] param2, int[] param3, String param4, boolean param5, int param6) {
         try {
-          no.field_P.pixelWidth = SoftwareRaster.width;
-          no.field_P.pixelHeight = SoftwareRaster.height;
-          no.field_P.pixels = SoftwareRaster.pixels;
+          NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
+          NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
+          NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           MatchSetupPanel.a(-1, -1, param2, -1, param5, param3, -1, false, 0, false, 0, param4);
-          no.field_P.b();
+          NumericDateInputWidget.field_P.b();
           DropTargetWidgetContainer.field_J.g(param6, param0);
           if (!param1) {
             int[] var8 = (int[]) null;

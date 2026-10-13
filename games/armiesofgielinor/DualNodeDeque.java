@@ -43,7 +43,7 @@ final class DualNodeDeque {
             return (TileMetadata) (stackIn_2_0);
           }
           var3 = new TileMetadata();
-          no.readTaggedFields(packet, var3, recordBitLength, -24721);
+          NumericDateInputWidget.readTaggedFields(packet, var3, recordBitLength, -24721);
           var4 = -10 % ((obfuscationGuard + 23) / 54);
           stackIn_4_0 = var3;
           return stackIn_4_0;

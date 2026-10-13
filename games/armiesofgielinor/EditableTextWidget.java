@@ -197,7 +197,7 @@ class EditableTextWidget extends InteractiveWidget {
                     }
                   }
                 }
-                ActionRequest.unitModels[param1][var4] = var6.createModel(SummonAction.field_x, fm.field_a, ol.field_A, BattleCharacter.field_t, MeshObject.field_a);
+                ActionRequest.unitModels[param1][var4] = var6.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
                 if (param1 == 76) {
                   bn.field_a[var4] = ActionRequest.unitModels[param1][var4];
                 }

@@ -113,7 +113,7 @@ final class it {
         CipherPacketBuffer packet = null;
         int payloadStart = 0;
         try {
-          packet = vl.outgoingPacket;
+          packet = EmailValidator.outgoingPacket;
           CipherPacketBuffer packetAlias = packet;
           if (obfuscationGuard > -71) {
             String var8 = (String) null;

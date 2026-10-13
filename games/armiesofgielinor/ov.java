@@ -32,7 +32,7 @@ final class ov {
     }
 
     final static void writeSpectateRoomRequest(int packetOpcode, int payloadLength, int roomId) {
-        CipherPacketBuffer var3 = vl.outgoingPacket;
+        CipherPacketBuffer var3 = EmailValidator.outgoingPacket;
         var3.writeCipheredOpcode(32161, packetOpcode);
         var3.writeByte(payloadLength - 2, payloadLength);
         var3.writeByte(1, 10);

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl extends mk {
-    static wd field_k;
+final class EmailValidator extends TextFieldValidator {
+    static AccountNameCheckResult accountNameCheckResult;
     static int field_j;
     static String field_o;
     static CipherPacketBuffer outgoingPacket;
@@ -68,34 +68,34 @@ final class vl extends mk {
         }
     }
 
-    final gu a(int param0, String param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int stackIn_5_0 = 0;
-        gu stackIn_7_0 = null;
-        gu stackIn_9_0 = null;
+    final ValidationState validateText(int obfuscationGuard, String text) {
+        int syntaxValid = 0;
+        RuntimeException failure = null;
+        int syntaxResult = 0;
+        ValidationState invalidState = null;
+        ValidationState validState = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != -3137) {
+          if (obfuscationGuard != -3137) {
             field_l = (String) null;
           }
-          stackIn_5_0 = (null != gt.b(param1, (byte) -24)) ? 0 : 1;
-          var3_int = stackIn_5_0;
-          if (var3_int != 0) {
-            stackIn_9_0 = oo.field_g;
-            return stackIn_9_0;
+          syntaxResult = (null != gt.b(text, (byte) -24)) ? 0 : 1;
+          syntaxValid = syntaxResult;
+          if (syntaxValid != 0) {
+            validState = oo.validationValid;
+            return validState;
           }
-          stackIn_7_0 = rn.field_e;
-          return stackIn_7_0;
+          invalidState = rn.validationInvalid;
+          return invalidState;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("vl.R(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_12_0 = failure;
+          stackIn_12_1 = new StringBuilder().append("vl.R(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -113,11 +113,11 @@ final class vl extends mk {
         currentLocationLabel = null;
         field_o = null;
         field_l = null;
-        field_k = null;
+        accountNameCheckResult = null;
     }
 
-    vl(EditableTextWidget param0) {
-        super(param0);
+    EmailValidator(EditableTextWidget input) {
+        super(input);
     }
 
     final static void c(byte param0) {
@@ -127,7 +127,7 @@ final class vl extends mk {
         }
     }
 
-    final String a(byte param0, String param1) {
+    final String describeText(byte obfuscationGuard, String text) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;
@@ -136,10 +136,10 @@ final class vl extends mk {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 89) {
-            vl.c((byte) -118);
+          if (obfuscationGuard < 89) {
+            EmailValidator.c((byte) -118);
           }
-          if (this.a(-3137, param1) != rn.field_e) {
+          if (this.validateText(-3137, text) != rn.validationInvalid) {
             stackIn_6_0 = CampaignRewardPreview.field_a;
             return stackIn_6_0;
           }
@@ -149,8 +149,8 @@ final class vl extends mk {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("vl.O(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("vl.O(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";

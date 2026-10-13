@@ -74,7 +74,7 @@ final class SpellMenuGroup {
             TeamRoster.field_e.f(130 + horizontalOffset, 177, opacity);
             if (transition == 0 &&
               TabbedPanel.a(212, 165, 20, false)) {
-              vi.field_f = fo.a(4800, rr.field_a, new String[]{this.parent.label});
+              vi.field_f = EmailCheckResult.a(4800, rr.field_a, new String[]{this.parent.label});
               hoveredSelection = 40;
               TeamRoster.field_e.f(db.a(true, 130 + horizontalOffset), MatchConditionEntry.a(177, (byte) 94), 128);
             }

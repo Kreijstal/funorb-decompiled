@@ -47,7 +47,7 @@ final class ph {
           }
           if (obfuscationGuard >= -8) {
             var6 = (String) null;
-            ph.a((String) null, (byte) -108);
+            ph.isAllSameCharacter((String) null, (byte) -108);
           }
           var13 = MovementPresentation.field_i;
           var11 = var13;
@@ -80,7 +80,7 @@ final class ph {
         field_b = null;
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isAllSameCharacter(String text, byte obfuscationGuard) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -91,13 +91,13 @@ final class ph {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.charAt(0);
-          for (var3 = 1; var3 < param0.length(); var3++) {
-            if (var2_int != param0.charAt(var3)) {
+          var2_int = text.charAt(0);
+          for (var3 = 1; var3 < text.length(); var3++) {
+            if (var2_int != text.charAt(var3)) {
               return false;
             }
           }
-          if (param1 < 41) {
+          if (obfuscationGuard < 41) {
             field_d = 88L;
           }
           return true;
@@ -106,12 +106,12 @@ final class ph {
           var2 = decompiledCaughtException;
           stackIn_14_0 = var2;
           stackIn_14_1 = new StringBuilder().append("ph.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

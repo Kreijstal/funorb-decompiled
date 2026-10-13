@@ -280,7 +280,7 @@ final class DamageEvent extends GameEvent {
           }
           friend = lg.findFriend(name, (byte) -34);
           if (friend == null) {
-            stackIn_10_0 = fo.a(4800, TaggedMapData.field_d, new String[]{name});
+            stackIn_10_0 = EmailCheckResult.a(4800, TaggedMapData.field_d, new String[]{name});
             return stackIn_10_0;
           }
           wh.friendEntries.startForwardAt(true, friend);
@@ -298,7 +298,7 @@ final class DamageEvent extends GameEvent {
           }
           friend.unlinkSecondary((byte) -76);
           dj.friendCount = dj.friendCount - 1;
-          packet = vl.outgoingPacket;
+          packet = EmailValidator.outgoingPacket;
           packet.writeCipheredOpcode(32161, packetOpcode);
           packet.position = packet.position + 1;
           payloadStart = packet.position;

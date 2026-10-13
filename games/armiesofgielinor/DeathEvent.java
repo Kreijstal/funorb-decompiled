@@ -17,7 +17,7 @@ final class DeathEvent extends GameEvent {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = vl.outgoingPacket;
+          var5 = EmailValidator.outgoingPacket;
           var5.writeCipheredOpcode(32161, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
@@ -150,13 +150,13 @@ final class DeathEvent extends GameEvent {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          no.field_P.pixelHeight = SoftwareRaster.height;
-          no.field_P.pixels = SoftwareRaster.pixels;
-          no.field_P.pixelWidth = SoftwareRaster.width;
+          NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
+          NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
+          NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           MatchSetupPanel.a(-1, -1, param1, -1, false, param0, -1, false, 0, false, 0, param2);
-          no.field_P.b();
+          NumericDateInputWidget.field_P.b();
           if (param3 == 17813) {
             stackIn_4_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
             return (RgbSprite) ((Object) stackIn_4_0);

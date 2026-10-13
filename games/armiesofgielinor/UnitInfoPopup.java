@@ -22,7 +22,7 @@ final class UnitInfoPopup extends IntrusiveNode {
         int var4;
         QuickChatCommandDefinition[] var5;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var5 = uj.getQuickChatCommands((byte) 105);
+        var5 = AccountNameAvailabilityValidator.getQuickChatCommands((byte) 105);
         var2 = var5;
         for (var3 = startIndex; var5.length > var3; var3++) {
           if (var5[var3].commandId == commandId) {
@@ -70,7 +70,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
           var7 = this.unit.displayName;
           SoftwareRaster.setClip(5, param2, 95, 23);
-          stackIn_3_0 = en.field_E;
+          stackIn_3_0 = DateInputWidget.field_E;
           stackIn_3_1 = var7;
           stackIn_3_2 = 10 - (this.nameScrollOffset >> 1);
           stackIn_3_3 = 17;
@@ -86,7 +86,7 @@ final class UnitInfoPopup extends IntrusiveNode {
           if (var8 < 0) {
             var8 = 0;
           }
-          stackIn_8_0 = en.field_E;
+          stackIn_8_0 = DateInputWidget.field_E;
           stackIn_8_1 = var8 + "/" + this.unit.maximumStrength;
           stackIn_8_2 = 126;
           stackIn_8_3 = 18;
@@ -112,7 +112,7 @@ final class UnitInfoPopup extends IntrusiveNode {
             }
           }
           ro.field_rb[this.unit.getUnitCategory(0)].draw(106, 32);
-          en.field_E.drawCentered(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
+          DateInputWidget.field_E.drawCentered(-param5.getDamageTakenPercent(param5.mapWidth * this.unit.tileY + this.unit.tileX, param2 - 9, this.unit) + 100 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(param2 + 5600);
           var9Lifetime1 = this.screenX - param3 - 75;

@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends EditableTextWidget implements eg {
+final class ValidatedTextWidget extends EditableTextWidget implements ValidationProvider {
     static boolean field_Z;
-    private int field_W;
-    private n field_bb;
+    private int pointerLocalX;
+    private ValidationSource validationSource;
     static String field_Y;
     static String field_X;
     static long responseTargetAccountId;
 
     final void notifyTextChanged(byte obfuscationGuard) {
         if (obfuscationGuard >= -114) {
-          this.a(-106);
+          this.getValidationSource(-106);
         }
         super.notifyTextChanged((byte) -117);
-        if (null != this.field_bb) {
-          this.field_bb.a(124);
+        if (null != this.validationSource) {
+          this.validationSource.validationChanged(124);
         }
     }
 
@@ -26,7 +26,7 @@ final class ma extends EditableTextWidget implements eg {
         if (this.tooltipText == null) {
           return null;
         }
-        ip.a(ko.pointerY, this.width - this.field_W + AiPlanningStrategy.pointerX, (byte) 113);
+        ip.a(ko.pointerY, this.width - this.pointerLocalX + AiPlanningStrategy.pointerX, (byte) 113);
         if (obfuscationGuard != 21384) {
           return (String) null;
         }
@@ -95,45 +95,45 @@ final class ma extends EditableTextWidget implements eg {
         }
     }
 
-    public final n a(int param0) {
-        if (param0 != -918933630) {
-          this.a(-10);
+    public final ValidationSource getValidationSource(int obfuscationGuard) {
+        if (obfuscationGuard != -918933630) {
+          this.getValidationSource(-10);
         }
-        return this.field_bb;
+        return this.validationSource;
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
         if (param1 != 3) {
-          ma.a(71, -15, 73, 84);
+          ValidatedTextWidget.a(71, -15, 73, 84);
         }
         return ((param2 & 1) == 0 ? param0 : -param0) + ((param2 & 2) != 0 ? -param3 : param3);
     }
 
-    ma(String param0, WidgetListener param1, int param2) {
-        super(param0, param1, param2);
+    ValidatedTextWidget(String text, WidgetListener listener, int maximumLength) {
+        super(text, listener, maximumLength);
     }
 
-    final void a(byte param0, n param1) {
+    final void setValidationSource(byte obfuscationGuard, ValidationSource source) {
         try {
-          this.field_bb = param1;
-          if (param0 != 16) {
-            n var4 = (n) null;
-            this.a((byte) -62, (n) null);
+          this.validationSource = source;
+          if (obfuscationGuard != 16) {
+            ValidationSource var4 = (ValidationSource) null;
+            this.setValidationSource((byte) -62, (ValidationSource) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ma.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ma.G(" + obfuscationGuard + ',' + (source != null ? "{...}" : "null") + ')');
         }
     }
 
     final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
           if (obfuscationGuard != 32722) {
-            this.field_W = 103;
+            this.pointerLocalX = 103;
           }
           super.updatePointer(obfuscationGuard + 0, originX, originY, rootWidget);
-          this.field_W = AiPlanningStrategy.pointerX - this.x - originX;
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ma.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
+          this.pointerLocalX = AiPlanningStrategy.pointerX - this.x - originX;
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "ma.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }
     }
 

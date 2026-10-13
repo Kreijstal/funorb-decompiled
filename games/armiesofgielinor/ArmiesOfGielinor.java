@@ -98,7 +98,7 @@ public final class ArmiesOfGielinor extends wf {
           if (PopupPresentation.h(31337)) {
             this.g((byte) 4);
             if (PopupPresentation.h(31337)) {
-              if (wd.a((byte) 105)) {
+              if (AccountNameCheckResult.a((byte) 105)) {
                 discarded$0 = this.c(-100, false);
               }
               return;
@@ -203,7 +203,7 @@ public final class ArmiesOfGielinor extends wf {
                   RadialSummonItem.a(rs.nextPowerOfTwo((byte) 76, 8), DualNodeIterator.b((byte) -90), 150, CipherPacketBuffer.field_A, rs.nextPowerOfTwo((byte) 95, 1000), et.b(-1), 1024, 6, -84, sh.d((byte) 81));
                   ep.a(lp.b(-126), -72, km.c(0));
                   s.field_d = 0;
-                  ma.field_Z = true;
+                  ValidatedTextWidget.field_Z = true;
                   SpellCastAction.field_t = false;
                   FaceNormal.field_d = true;
                   jt.field_a = -2;
@@ -372,7 +372,7 @@ public final class ArmiesOfGielinor extends wf {
                       null != rd.gameplayController) {
                       rd.gameplayController.d(127, false);
                     }
-                    ma.field_Z = true;
+                    ValidatedTextWidget.field_Z = true;
                     vs.field_j = true;
                     s.field_d = 0;
                     du.field_h = false;
@@ -548,7 +548,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(stackIn_337_0, stackIn_337_1);
           }
-          if (ma.field_Z) {
+          if (ValidatedTextWidget.field_Z) {
             s.field_d = 0;
           }
           if (br.heldKeys[82] &&
@@ -671,19 +671,19 @@ public final class ArmiesOfGielinor extends wf {
                     MusicCrossfadeStream.field_s.ensureAllGroupsAvailable(-27927)) {
                     return true;
                   }
-                  bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, MusicCrossfadeStream.field_s));
+                  bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, MusicCrossfadeStream.field_s));
                   return false;
                 }
-                bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, bi.field_f));
+                bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, bi.field_f));
                 return false;
               }
-              bn.a((byte) -24, 67.0f, vl.a(op.field_b, 0, en.field_G, "", cr.field_eb));
+              bn.a((byte) -24, 67.0f, EmailValidator.a(op.field_b, 0, DateInputWidget.field_G, "", cr.field_eb));
               return false;
             }
-            bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, ReportAbuseDialog.field_Lb));
+            bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ReportAbuseDialog.field_Lb));
             return false;
           }
-          bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, en.field_G, ki.field_b));
+          bn.a((byte) -24, 67.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ki.field_b));
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -742,7 +742,7 @@ public final class ArmiesOfGielinor extends wf {
                   if (decompiledFrameRemainder2) {
                     rd.gameplayController.a(112, true);
                     while (Unit.pollKeyEvent((byte) -89)) {
-                      if (gu.a(param0 + 56)) {
+                      if (ValidationState.a(param0 + 56)) {
                         continue;
                       }
                       rd.gameplayController.g(false);
@@ -814,12 +814,12 @@ public final class ArmiesOfGielinor extends wf {
                 rd.gameplayController.a(param0 + 119, var4 != 0);
               }
               while (Unit.pollKeyEvent((byte) -127)) {
-                if (gu.a(param0 - 126) &&
+                if (ValidationState.a(param0 - 126) &&
                   var8 == 0) {
                   continue;
                 }
                 boolean decompiledFrameRemainder0 = true;
-                if (ma.field_Z) {
+                if (ValidatedTextWidget.field_Z) {
                   if (!fj.field_c) {
                     NodeIterator.a(12, 15, 13, param0 + 50);
                     decompiledFrameRemainder0 = (var8 != 0);
@@ -861,7 +861,7 @@ public final class ArmiesOfGielinor extends wf {
             if (decompiledFrameRemainder1) {
               br.a((byte) -97);
             }
-            if (ma.field_Z) {
+            if (ValidatedTextWidget.field_Z) {
               if (!(mj.field_c <= TelepopEvent.field_F)) {
                 TelepopEvent.field_F = TelepopEvent.field_F + 1;
                 if ((var8 != 0) &&
@@ -890,8 +890,8 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (decompiledFrameRemainder4) {
             if (~DirectByteStorage.field_h == ~pg.field_f) {
-              pk.field_X = pk.field_X + 1;
-              decompiledFrameRemainder4 = (pk.field_X == 16);
+              ValidationStatusWidget.field_X = ValidationStatusWidget.field_X + 1;
+              decompiledFrameRemainder4 = (ValidationStatusWidget.field_X == 16);
               if (decompiledFrameRemainder4) {
                 if (!ke.field_a) {
                   ed.a(false);
@@ -907,8 +907,8 @@ public final class ArmiesOfGielinor extends wf {
             }
             if (decompiledFrameRemainder4) {
               if (or.field_c != pg.field_f) {
-                pk.field_X = pk.field_X - 1;
-                decompiledFrameRemainder4 = (pk.field_X == 0);
+                ValidationStatusWidget.field_X = ValidationStatusWidget.field_X - 1;
+                decompiledFrameRemainder4 = (ValidationStatusWidget.field_X == 0);
                 if (decompiledFrameRemainder4) {
                   pg.field_f = pg.field_e;
                   decompiledFrameRemainder4 = (var8 != 0);
@@ -981,7 +981,7 @@ public final class ArmiesOfGielinor extends wf {
             du.field_h = true;
           }
           if (-4 == jt.field_a) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 9);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 9);
             SpellCastAction.field_t = true;
             TelepopEvent.field_F = mj.field_c;
           }
@@ -993,7 +993,7 @@ public final class ArmiesOfGielinor extends wf {
             }
             if ((decompiledSharedTail0) &&
               (fj.field_c)) {
-              PointerInputHandler.writeRoomAdmissionCancellation(-81, vu.currentRoom.getRoomId((byte) 117), 11);
+              PointerInputHandler.writeRoomAdmissionCancellation(-81, ToggleWidget.currentRoom.getRoomId((byte) 117), 11);
             }
             ScrollContainer.field_Qb = true;
           }
@@ -1024,7 +1024,7 @@ public final class ArmiesOfGielinor extends wf {
             return;
           }
           if (!UiSelectionState.d(param0 + 95)) {
-            bn.a((byte) -24, 100.0f, en.field_G);
+            bn.a((byte) -24, 100.0f, DateInputWidget.field_G);
             PaletteRegionMap.a((byte) 122, var2);
             return;
           }
@@ -1082,7 +1082,7 @@ public final class ArmiesOfGielinor extends wf {
             QuickChatCategoryRepository.a(stackIn_65_0, -5);
           }
           if (~pg.field_f != ~pg.field_e) {
-            var4 = pk.field_X * 256 / 16;
+            var4 = ValidationStatusWidget.field_X * 256 / 16;
             if (var4 > 0) {
               SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, var4);
             }
@@ -1464,16 +1464,16 @@ public final class ArmiesOfGielinor extends wf {
           MusicPatch.a((byte) 52);
           MusicPatchEnvelope.a((byte) 99);
           LabeledWidgetContainer.j(-12819);
-          ma.g((byte) -127);
+          ValidatedTextWidget.g((byte) -127);
           EditableTextWidget.m(32);
           ContentTransitionDialog.i(param0);
           rj.a((byte) -85);
           kv.b(true);
           HotspotTextWidget.b(true);
           kw.b(true);
-          pk.c(false);
-          vu.a(58);
-          mk.f(-1);
+          ValidationStatusWidget.c(false);
+          ToggleWidget.a(58);
+          TextFieldValidator.f(-1);
           qd.k(-15);
           ws.a(param0 + 197);
           pi.a((byte) -63);
@@ -1487,12 +1487,12 @@ public final class ArmiesOfGielinor extends wf {
           MovementPresentation.g(67);
           EffectPresentation.c(param0 ^ 40);
           ph.a((byte) -54);
-          sb.b(false);
-          no.c(false);
+          DateOfBirthValidator.b(false);
+          NumericDateInputWidget.c(false);
           wb.a(false);
           bs.a(true);
           tq.a((byte) -84);
-          en.n(0);
+          DateInputWidget.n(0);
           ScrollWidgetContainer.b(false);
           nb.d((byte) 68);
           DirectByteStorage.c(1);
@@ -1528,8 +1528,8 @@ public final class ArmiesOfGielinor extends wf {
           bj.a(param0 ^ -72);
           nu.a(-26601);
           td.a(-127);
-          lu.a(1);
-          ol.b((byte) 117);
+          TextEntryWidgetPainter.a(1);
+          MaskedTextEntryPainter.b((byte) 117);
           oi.b(true);
           AlphaWidgetContainer.c(false);
           ps.c(false);
@@ -1547,11 +1547,11 @@ public final class ArmiesOfGielinor extends wf {
           TextCursor.a(param0 - 51);
           ConsoleTokenCursor.b(-119);
           TeamRoster.b(-51);
-          fo.a(true);
+          EmailCheckResult.a(true);
           ClientConnectionState.a((byte) 96);
           DelayedPacket.a(param0 + 1);
           wm.a(-10743);
-          wd.a(200);
+          AccountNameCheckResult.a(200);
           ad.a((byte) 63);
           RasterState.a(-22856);
           CampaignResult.a((byte) -116);
@@ -1583,15 +1583,15 @@ public final class ArmiesOfGielinor extends wf {
           fk.a(true);
           kq.a(param0 ^ -3);
           DropdownOptionList.b(false);
-          uj.h(29151);
-          vl.b(true);
-          kt.g(param0 ^ -55);
-          jh.h(-117);
-          di.g(49);
+          AccountNameAvailabilityValidator.h(29151);
+          EmailValidator.b(true);
+          EmailConfirmationValidator.g(param0 ^ -55);
+          AgeValidator.h(-117);
+          MatchingTextValidator.g(49);
           tv.a((byte) -126);
           TextHotspotRegion.a(135);
-          gu.b(-16356);
-          rb.d(65280);
+          ValidationState.b(-16356);
+          DebouncedValidator.d(65280);
           rn.a(false);
           this.field_p = null;
         } catch (RuntimeException runtimeException) {
@@ -2018,58 +2018,58 @@ public final class ArmiesOfGielinor extends wf {
                                                 } while (var18 == 0);
                                                 return false;
                                               }
-                                              bn.a((byte) -24, 69.0f, ao.a(cr.field_eb, true, en.field_G, MusicPatchUsage.backgroundArchive));
+                                              bn.a((byte) -24, 69.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, MusicPatchUsage.backgroundArchive));
                                               return false;
                                             }
-                                            bn.a((byte) -24, 66.0f, ao.a(cr.field_eb, true, en.field_G, AiInfluenceMap.field_f));
+                                            bn.a((byte) -24, 66.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, AiInfluenceMap.field_f));
                                             return false;
                                           }
-                                          bn.a((byte) -24, 63.0f, ao.a(cr.field_eb, true, en.field_G, InteractiveWidget.field_F));
+                                          bn.a((byte) -24, 63.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, InteractiveWidget.field_F));
                                           return false;
                                         }
-                                        bn.a((byte) -24, 61.0f, ao.a(cr.field_eb, true, en.field_G, ChannelBaseVolumeConsoleCommand.field_M));
+                                        bn.a((byte) -24, 61.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ChannelBaseVolumeConsoleCommand.field_M));
                                         return false;
                                       }
-                                      bn.a((byte) -24, 58.0f, ao.a(cr.field_eb, true, en.field_G, ce.field_M));
+                                      bn.a((byte) -24, 58.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, ce.field_M));
                                       return false;
                                     }
-                                    bn.a((byte) -24, 56.0f, ao.a(cr.field_eb, true, en.field_G, CorpseConditionMarker.field_w));
+                                    bn.a((byte) -24, 56.0f, ao.a(cr.field_eb, true, DateInputWidget.field_G, CorpseConditionMarker.field_w));
                                     return false;
                                   }
-                                  bn.a((byte) -24, 54.0f, vl.a(bt.field_e, 0, en.field_G, "", cr.field_eb));
+                                  bn.a((byte) -24, 54.0f, EmailValidator.a(bt.field_e, 0, DateInputWidget.field_G, "", cr.field_eb));
                                   return false;
                                 }
-                                bn.a((byte) -24, 52.0f, vl.a(sh.field_j, 0, QuickChatPhraseRepository.field_a, "basic", is.field_f));
+                                bn.a((byte) -24, 52.0f, EmailValidator.a(sh.field_j, 0, QuickChatPhraseRepository.field_a, "basic", is.field_f));
                                 return false;
                               }
-                              bn.a((byte) -24, 41.0f, vl.a(iw.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
+                              bn.a((byte) -24, 41.0f, EmailValidator.a(iw.field_l, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
                               return false;
                             }
-                            bn.a((byte) -24, 38.0f, vl.a(SummonAction.field_w, 0, is.field_d, "", PacketBuffer.field_m));
+                            bn.a((byte) -24, 38.0f, EmailValidator.a(SummonAction.field_w, 0, is.field_d, "", PacketBuffer.field_m));
                             return false;
                           }
                           bn.a((byte) -24, 33.0f, df.a(is.field_d, 0, ep.field_b, -27638, PacketBuffer.field_m));
                           return false;
                         }
-                        bn.a((byte) -24, 28.0f, vl.a(SpellConfirmationDialog.field_f, 0, ds.field_b, "", ResourceProtocolClient.field_k));
+                        bn.a((byte) -24, 28.0f, EmailValidator.a(SpellConfirmationDialog.field_f, 0, ds.field_b, "", ResourceProtocolClient.field_k));
                         return false;
                       }
-                      bn.a((byte) -24, 23.0f, vl.a(br.field_d, 0, ds.field_b, "", ResourceProtocolClient.field_k));
+                      bn.a((byte) -24, 23.0f, EmailValidator.a(br.field_d, 0, ds.field_b, "", ResourceProtocolClient.field_k));
                       return false;
                     }
-                    bn.a((byte) -24, 21.0f, vl.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, "lobby", is.field_f));
+                    bn.a((byte) -24, 21.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, "lobby", is.field_f));
                     return false;
                   }
-                  bn.a((byte) -24, 18.0f, vl.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
+                  bn.a((byte) -24, 18.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "lobby", TileMetadata.field_i));
                   return false;
                 }
-                bn.a((byte) -24, 16.0f, vl.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, var4, is.field_f));
+                bn.a((byte) -24, 16.0f, EmailValidator.a(ResourceRequest.field_A, 0, QuickChatPhraseRepository.field_a, var4, is.field_f));
                 return false;
               }
-              bn.a((byte) -24, 13.0f, vl.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
+              bn.a((byte) -24, 13.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, var4, TileMetadata.field_i));
               return false;
             }
-            bn.a((byte) -24, 10.0f, vl.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
+            bn.a((byte) -24, 10.0f, EmailValidator.a(PrintVictoryConditionsConsoleCommand.field_K, 0, Battlefield.field_nb, "basic", TileMetadata.field_i));
             return false;
           }
           if (null != SpellConfirmationDialog.field_f) {
@@ -2171,7 +2171,7 @@ public final class ArmiesOfGielinor extends wf {
           bn.a((byte) -24, 90.0f, SectorCacheStore.field_i);
           this.a(0);
           rs.field_n = DropdownArrowPainter.a(var4, PrintVictoryConditionsConsoleCommand.field_K, ResourceRequest.field_A, (byte) -53, "");
-          en.field_E = DropdownArrowPainter.a("basic", iw.field_l, sh.field_j, (byte) -53, "smallfont");
+          DateInputWidget.field_E = DropdownArrowPainter.a("basic", iw.field_l, sh.field_j, (byte) -53, "smallfont");
           TrianglePulse.field_i = it.a("introfont", iw.field_l, sh.field_j, (byte) -87, "basic");
           nr.field_e = TurnEffectEvent.a("runewarsfont", sh.field_j, iw.field_l, "basic", -2088);
           fe.a(nr.field_e);
@@ -2190,7 +2190,7 @@ public final class ArmiesOfGielinor extends wf {
           LineOfSightGrid.field_g = DiskCacheRequest.loadRgbSpriteByName("buttonring", "basic", iw.field_l, false);
           e.field_b = ac.a(iw.field_l, "lozenge", (byte) -4, "basic");
           bu.field_c = fk.loadRgbSpritesByName("endturnlozenge", (byte) -127, iw.field_l, "basic");
-          jh.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
+          AgeValidator.field_l = ac.a(iw.field_l, "summonframe", (byte) -4, "basic");
           EventPresenter.field_t = DiskCacheRequest.loadRgbSpriteByName("bubblepoint", "basic", iw.field_l, false);
           ii.field_a = ac.a(iw.field_l, "actionbuttons", (byte) -4, "basic");
           od.field_a = ac.a(iw.field_l, "info_icons", (byte) -4, "basic");
@@ -2227,7 +2227,7 @@ public final class ArmiesOfGielinor extends wf {
           EditableTextWidget.a(8678, 256, 15, TeamRoster.field_e);
           tn.a((byte) 105, ce.field_F);
           tn.a((byte) 124, BufferedFile.field_k);
-          ol.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);
+          MaskedTextEntryPainter.field_y = DiskCacheRequest.loadRgbSpriteByName("logo", "basic", iw.field_l, false);
           km.field_h = ac.a(iw.field_l, "summonrings", (byte) -4, "basic");
           jv.field_b = fk.loadRgbSpritesByName("chatbubbles", (byte) -128, iw.field_l, "basic");
           AttackEvent.field_O = GameplayController.a("results_award_badge", (byte) 51, "basic", iw.field_l);
@@ -2247,7 +2247,7 @@ public final class ArmiesOfGielinor extends wf {
           cu.field_d = ac.a(iw.field_l, "trinketbuttons", (byte) -4, "basic");
           ChatMessage.field_s = GameplayController.a("wait_icon", (byte) 51, "basic", iw.field_l);
           ChatMessage.field_s.a();
-          kt.field_o = fk.loadRgbSpritesByName("diamondscale", (byte) -128, iw.field_l, "basic");
+          EmailConfirmationValidator.field_o = fk.loadRgbSpritesByName("diamondscale", (byte) -128, iw.field_l, "basic");
           jg.field_m = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("menu_background.jpg", -123, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
           var6_array = UnitLossCondition.battlefieldThemes;
           var7_int = 0;
@@ -2273,7 +2273,7 @@ public final class ArmiesOfGielinor extends wf {
           TutorialController.field_e = jk.a(100, var9, 123, var8_array);
           var10 = new int[]{13421772};
           var11 = new int[]{4473924};
-          jh.field_k = jk.a(100, var11, 125, var10);
+          AgeValidator.field_k = jk.a(100, var11, 125, var10);
           var12 = new int[]{13565952, 10092544};
           var13 = new int[]{16121856, 16646144};
           MoveAttackAction.field_x = jk.a(100, var13, 125, var12);

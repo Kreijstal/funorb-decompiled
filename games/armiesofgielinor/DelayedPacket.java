@@ -81,9 +81,9 @@ final class DelayedPacket extends IntrusiveNode {
     final static void a(int param0, int param1, int param2) {
         if (DropdownOptionList.field_R == null) {
           DropdownOptionList.field_R = new int[param2 * 2];
-          if (no.field_U == null ||
-            !(param2 <= no.field_U.length)) {
-            no.field_U = new int[param2 * 2];
+          if (NumericDateInputWidget.field_U == null ||
+            !(param2 <= NumericDateInputWidget.field_U.length)) {
+            NumericDateInputWidget.field_U = new int[param2 * 2];
           }
           if (AnimationFrameSet.field_w == null ||
             !(param2 <= AnimationFrameSet.field_w.length)) {
@@ -146,9 +146,9 @@ final class DelayedPacket extends IntrusiveNode {
           }
         } else {
           if (DropdownOptionList.field_R.length >= param2) {
-            if (no.field_U == null ||
-              !(param2 <= no.field_U.length)) {
-              no.field_U = new int[param2 * 2];
+            if (NumericDateInputWidget.field_U == null ||
+              !(param2 <= NumericDateInputWidget.field_U.length)) {
+              NumericDateInputWidget.field_U = new int[param2 * 2];
             }
             if (AnimationFrameSet.field_w == null ||
               !(param2 <= AnimationFrameSet.field_w.length)) {
@@ -211,9 +211,9 @@ final class DelayedPacket extends IntrusiveNode {
             }
           } else {
             DropdownOptionList.field_R = new int[param2 * 2];
-            if (no.field_U == null ||
-              !(param2 <= no.field_U.length)) {
-              no.field_U = new int[param2 * 2];
+            if (NumericDateInputWidget.field_U == null ||
+              !(param2 <= NumericDateInputWidget.field_U.length)) {
+              NumericDateInputWidget.field_U = new int[param2 * 2];
             }
             if (AnimationFrameSet.field_w == null ||
               !(param2 <= AnimationFrameSet.field_w.length)) {
@@ -270,7 +270,7 @@ final class DelayedPacket extends IntrusiveNode {
             }
           }
         }
-        kt.field_p = 0;
+        EmailConfirmationValidator.field_p = 0;
         if (param0 != 2) {
           return;
         }

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class db {
-    static RgbSprite[] field_a;
+    static RgbSprite[] validationStatusIcons;
     static String field_c;
-    static int field_g;
+    static int maximumPasswordLength;
     static String field_f;
     static String field_h;
     static String[] field_e;
@@ -15,7 +15,7 @@ final class db {
         if (param0 == -3) {
           field_h = null;
           field_c = null;
-          field_a = null;
+          validationStatusIcons = null;
           field_f = null;
           field_e = null;
           field_b = null;
@@ -25,7 +25,7 @@ final class db {
         field_b = (String) null;
         field_h = null;
         field_c = null;
-        field_a = null;
+        validationStatusIcons = null;
         field_f = null;
         field_e = null;
         field_b = null;
@@ -174,7 +174,7 @@ final class db {
         field_f = "If you do nothing the game will revert to normal view in <%0> second.";
         field_e = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
         field_h = "Offer rematch";
-        field_g = 20;
+        maximumPasswordLength = 20;
         field_d = "AnimateBattle";
     }
 }

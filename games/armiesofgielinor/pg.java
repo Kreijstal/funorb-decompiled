@@ -59,7 +59,7 @@ final class pg {
         pf.a(-15291);
         DequeWidgetContainer.j(-118);
         if (fh.b((byte) -88)) {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 1);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 1);
           hb.$cfr$intArgs$a$e9dea5688aa5(124, 0);
         }
         dj.a((byte) -126);
@@ -103,8 +103,8 @@ final class pg {
           ng.openClientContextMenu((ScrollContainer) (stackIn_2_0), stackIn_2_1, (int[]) (stackIn_2_2), stackIn_2_3, stackIn_3_4, 1, message.channelId, message.accountName, message.accountId);
           if (message.channelId == 0 &&
             !bn.a(false) &&
-            null == vu.currentRoom &&
-            no.roomSetup == null) {
+            null == ToggleWidget.currentRoom &&
+            NumericDateInputWidget.roomSetup == null) {
             if (!vi.field_d) {
               var5 = tn.activeContextMenu;
               var6 = wh.field_b;
@@ -116,8 +116,8 @@ final class pg {
           }
           if (1 == message.channelId &&
             !bn.a(false) &&
-            vu.currentRoom != null &&
-            message.contextId == vu.currentRoom.getRoomId((byte) -88)) {
+            ToggleWidget.currentRoom != null &&
+            message.contextId == ToggleWidget.currentRoom.getRoomId((byte) -88)) {
             if (!vi.field_d) {
               var9 = tn.activeContextMenu;
               var10 = CampaignMenu.field_q;

@@ -132,34 +132,34 @@ final class dh extends bi implements java.awt.image.ImageProducer, java.awt.imag
         return param0 == this.field_m;
     }
 
-    final static fo a(String param0, byte param1) {
-        RuntimeException var2 = null;
-        fo stackIn_6_0 = null;
+    final static EmailCheckResult getEmailCheckResult(String email, byte obfuscationGuard) {
+        RuntimeException failure = null;
+        EmailCheckResult sharedResult = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (se.field_g.a((byte) 124) &&
-            !param0.equals(se.field_g.b(true))) {
-            se.field_g = cr.a(param0, param1 ^ 4210691);
+          if (se.emailCheckResult.isComplete((byte) 124) &&
+            !email.equals(se.emailCheckResult.getEmail(true))) {
+            se.emailCheckResult = cr.a(email, obfuscationGuard ^ 4210691);
           }
-          if (param1 != 67) {
+          if (obfuscationGuard != 67) {
             field_i = (String) null;
           }
-          stackIn_6_0 = se.field_g;
-          return stackIn_6_0;
+          sharedResult = se.emailCheckResult;
+          return sharedResult;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = var2;
+          failure = decompiledCaughtException;
+          stackIn_9_0 = failure;
           stackIn_9_1 = new StringBuilder().append("dh.F(");
-          if (param0 == null) {
+          if (email == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

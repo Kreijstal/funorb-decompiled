@@ -355,20 +355,20 @@ final class MoveAttackAction extends PreparedAction {
           } else {
             this.defenderSnapshot = defender.copyDetached(false);
             var10_int = bw.unitDefinitions[this.movingUnit.unitType][9];
-            stackIn_4_1 = this.movingUnit.strength * vu.field_N[var10_int] / this.movingUnit.maximumStrength;
-            if (this.movingUnit.strength * vu.field_N[var10_int] % this.movingUnit.maximumStrength != 0) {
+            stackIn_4_1 = this.movingUnit.strength * ToggleWidget.field_N[var10_int] / this.movingUnit.maximumStrength;
+            if (this.movingUnit.strength * ToggleWidget.field_N[var10_int] % this.movingUnit.maximumStrength != 0) {
               stackIn_5_2 = 1;
             } else {
               stackIn_5_2 = 0;
             }
             this.attackerAnimationCount = stackIn_4_1 + stackIn_5_2;
             var11 = bw.unitDefinitions[this.defenderSnapshot.unitType][9];
-            if (0 != this.defenderSnapshot.strength * vu.field_N[var11] % this.defenderSnapshot.maximumStrength) {
+            if (0 != this.defenderSnapshot.strength * ToggleWidget.field_N[var11] % this.defenderSnapshot.maximumStrength) {
               stackIn_8_1 = 1;
             } else {
               stackIn_8_1 = 0;
             }
-            this.defenderAnimationCount = stackIn_8_1 + this.defenderSnapshot.strength * vu.field_N[var11] / this.defenderSnapshot.maximumStrength;
+            this.defenderAnimationCount = stackIn_8_1 + this.defenderSnapshot.strength * ToggleWidget.field_N[var11] / this.defenderSnapshot.maximumStrength;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -20,7 +20,7 @@ final class ab {
         field_d = null;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsNonAlphanumeric(String text, int startIndex) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -31,8 +31,8 @@ final class ab {
         RuntimeException decompiledCaughtException = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          for (var2_int = param1; var2_int < param0.length(); var2_int++) {
-            var3 = param0.charAt(var2_int);
+          for (var2_int = startIndex; var2_int < text.length(); var2_int++) {
+            var3 = text.charAt(var2_int);
             if (!MeshObject.a((byte) -105, (char) var3) &&
               !mu.a(28799, (char) var3)) {
               return true;
@@ -44,12 +44,12 @@ final class ab {
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("ab.B(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(startIndex).append(')').toString());
         }
     }
 

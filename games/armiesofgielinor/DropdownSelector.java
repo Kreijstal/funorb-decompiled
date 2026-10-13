@@ -95,8 +95,8 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
     }
 
     final void g(byte param0) {
-        if (this.listener instanceof rp) {
-          ((rp) ((Object) this.listener)).a(-109, this);
+        if (this.listener instanceof DropdownSelectionListener) {
+          ((DropdownSelectionListener) ((Object) this.listener)).selectionChanged(-109, this);
         }
         if (param0 <= 4) {
           DropdownSelector.a(-40);
@@ -233,15 +233,15 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!OwnerChangeEvent.field_B) {
-            if (null == gu.field_b) {
-              gu.field_b = DeployRequest.b(-1, 4);
+            if (null == ValidationState.field_b) {
+              ValidationState.field_b = DeployRequest.b(-1, 4);
             }
-            if (gu.field_b.field_m) {
+            if (ValidationState.field_b.field_m) {
               var12 = BoundedFile.field_e;
               var10 = var12;
               var5 = var10;
               var1 = var5;
-              var16 = gu.field_b.field_l;
+              var16 = ValidationState.field_b.field_l;
               for (var3 = 0; var3 < 8; var3++) {
                 var5[var3] = oe.bitwiseOr(var12[var3], var16[var3]);
               }
@@ -249,17 +249,17 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               var11 = var13;
               var7 = var11;
               var1Lifetime1 = var7;
-              var17 = gu.field_b.field_l;
+              var17 = ValidationState.field_b.field_l;
               var9 = 0;
               var3Lifetime1 = var9;
               while (var9 < 8) {
                 var7[var9] = rn.bitwiseAnd(var13[var9], ~var17[var9]);
                 var9++;
               }
-              gu.field_b = null;
+              ValidationState.field_b = null;
               OwnerChangeEvent.field_B = true;
               Unit.m(77);
-              if (rb.a(0, BoundedFile.field_e, 1)) {
+              if (DebouncedValidator.a(0, BoundedFile.field_e, 1)) {
                 RevivalEvent.d((byte) 125);
               }
             }
@@ -274,12 +274,12 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           }
           if (!ClientUiNode.field_w &&
             !de.field_a) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 69);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 69);
             de.field_a = true;
           }
           if (!ve.field_b &&
             !af.field_c) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 75);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 75);
             af.field_c = true;
           }
           var1_int = -118 / ((16 - param0) / 35);

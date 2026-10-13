@@ -261,7 +261,7 @@ final class RegionAnchor extends IntrusiveNode {
           if (obfuscationGuard <= 31) {
             RegionAnchor.a(96, (byte) -94);
           }
-          no.readTaggedFields(packet, var3, recordBitLength, -24721);
+          NumericDateInputWidget.readTaggedFields(packet, var3, recordBitLength, -24721);
           stackIn_6_0 = var3;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -282,7 +282,7 @@ final class RegionAnchor extends IntrusiveNode {
         if (param1 != -32) {
           field_m = (RgbSprite[]) null;
         }
-        CipherPacketBuffer var2 = vl.outgoingPacket;
+        CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param0);
         var2.writeByte(1, 1);
         var2.writeByte(1, 2);

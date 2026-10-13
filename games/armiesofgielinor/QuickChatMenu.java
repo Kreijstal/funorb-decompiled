@@ -161,7 +161,7 @@ final class QuickChatMenu extends ClientUiComponent {
               var5 = 32768 | this.phraseIds[itemIndex];
               var6 = rs.outgoingChatChannel;
               if (var6 == 0 &&
-                null != vu.currentRoom) {
+                null != ToggleWidget.currentRoom) {
                 var6 = 1;
               }
               if (kp.getChatFilter(var6, 114) == 2) {
@@ -169,7 +169,7 @@ final class QuickChatMenu extends ClientUiComponent {
               }
               String var8 = (String) null;
               it.writeChatMessage(var5, -91, rs.outgoingChatChannel, qd.chatRecipientName, messageContext, (String) null);
-              jh.rememberLastQuickChat(qd.chatRecipientName, dj.chatRecipientAccountId, var5, rs.outgoingChatChannel, obfuscationGuard ^ 4124);
+              AgeValidator.rememberLastQuickChat(qd.chatRecipientName, dj.chatRecipientAccountId, var5, rs.outgoingChatChannel, obfuscationGuard ^ 4124);
               e.closeQuickChatMenu((byte) -126);
               wf.g(-20873);
             }
@@ -303,7 +303,7 @@ final class QuickChatMenu extends ClientUiComponent {
             var10 = dh.field_n[0];
             var28 = var10;
             var28Lifetime3 = var10;
-            var9 = vl.field_o;
+            var9 = EmailValidator.field_o;
             var8.menu.addIconAction(false, var9, 11, var10);
             var11 = tn.activeContextMenu;
             var13 = dh.field_n[1];

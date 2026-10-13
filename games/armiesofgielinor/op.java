@@ -109,7 +109,7 @@ final class op {
             return stackIn_9_0;
           }
           if (jj.isFriend(obfuscationGuard ^ 58, name)) {
-            stackIn_13_0 = fo.a(4800, ReportAbuseDialog.field_Ob, new String[]{name});
+            stackIn_13_0 = EmailCheckResult.a(4800, ReportAbuseDialog.field_Ob, new String[]{name});
             return stackIn_13_0;
           }
           if (dj.friendCount >= 100 &&
@@ -122,10 +122,10 @@ final class op {
             return stackIn_21_0;
           }
           if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
-            stackIn_24_0 = fo.a(4800, km.field_a, new String[]{name});
+            stackIn_24_0 = EmailCheckResult.a(4800, km.field_a, new String[]{name});
             return stackIn_24_0;
           }
-          packet = vl.outgoingPacket;
+          packet = EmailValidator.outgoingPacket;
           packet.writeCipheredOpcode(32161, packetOpcode);
           packet.position = packet.position + 1;
           payloadStart = packet.position;

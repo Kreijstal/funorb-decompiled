@@ -141,12 +141,12 @@ final class AttackEvent extends GameEvent {
         RuntimeException var1 = null;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          vl.outgoingPacket.writeCipheredOpcode(32161, 76);
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 76);
           if (param0) {
             mapNamesByThemeAndSize = (String[][][]) null;
           }
           for (var1_int = 0; 5 > var1_int; var1_int++) {
-            vl.outgoingPacket.writeShort(true, pg.playerProfile.equippedSpellIds[var1_int]);
+            EmailValidator.outgoingPacket.writeShort(true, pg.playerProfile.equippedSpellIds[var1_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -35,9 +35,9 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
             ListMissionsConsoleCommand.g(78);
           }
           we.field_f.setBounds(param4, -20500, 2 + (485 + param2 + param1), -param4 + var7, 5);
-          UpkeepEvent.field_z.setBounds(param4, -20500, -rb.field_b.width + (we.field_f.width - param2), 0, param2);
+          UpkeepEvent.field_z.setBounds(param4, -20500, -DebouncedValidator.field_b.width + (we.field_f.width - param2), 0, param2);
           var7 = var7 - (2 + param4);
-          rb.field_b.setBounds(param4, -20500, rb.field_b.width, 0, param2 + UpkeepEvent.field_z.width);
+          DebouncedValidator.field_b.setBounds(param4, -20500, DebouncedValidator.field_b.width, 0, param2 + UpkeepEvent.field_z.width);
           vq.field_a.setLayout(5, false, 2 + param2 + (485 + param1), 2, param1, 5, -5 + var7);
           if (null != BestScoreStrategy.field_i) {
             BestScoreStrategy.field_i.setBounds(vq.field_a.x, vq.field_a.width, vq.field_a.y, param5 ^ 8193, vq.field_a.height);

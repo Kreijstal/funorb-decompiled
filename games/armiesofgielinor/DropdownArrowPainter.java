@@ -31,7 +31,7 @@ final class DropdownArrowPainter implements WidgetPainter {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = vl.outgoingPacket;
+        CipherPacketBuffer var2 = EmailValidator.outgoingPacket;
         var2.writeCipheredOpcode(32161, param0);
         var2.position = var2.position + 1;
         int var3 = var2.position;
@@ -264,7 +264,7 @@ final class DropdownArrowPainter implements WidgetPainter {
               ByteStorage.incomingPacket.position = 0;
               fk.packetPayloadLength = opcodePayloadLengths[ByteStorage.pendingOpcode];
             }
-            if (!jh.isPacketPayloadReady(2)) {
+            if (!AgeValidator.isPacketPayloadReady(2)) {
               return false;
             }
             if (HuffmanCodec.packetDelayMillis == 0) {

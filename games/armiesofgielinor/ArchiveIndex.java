@@ -251,13 +251,13 @@ final class ArchiveIndex {
         RuntimeException var2 = null;
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          PacketBuffer.a(0, df.field_T, false, pd.field_e, kt.field_p, param0, true);
-          for (var2_int = param1; kt.field_p > var2_int; var2_int++) {
+          PacketBuffer.a(0, df.field_T, false, pd.field_e, EmailConfirmationValidator.field_p, param0, true);
+          for (var2_int = param1; EmailConfirmationValidator.field_p > var2_int; var2_int++) {
             vt.field_m[param0 + var2_int] = var2_int;
           }
-          PacketBuffer.a(param0, se.field_e, false, sq.field_k, kt.field_p + param0, param0 + param0, false);
-          if (param0 < kt.field_p) {
-            kt.field_p = param0;
+          PacketBuffer.a(param0, se.field_e, false, sq.field_k, EmailConfirmationValidator.field_p + param0, param0 + param0, false);
+          if (param0 < EmailConfirmationValidator.field_p) {
+            EmailConfirmationValidator.field_p = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -307,7 +307,7 @@ final class ArchiveIndex {
     ArchiveIndex(byte[] encodedIndex, int expectedCrc, byte[] expectedDigest) {
         int var4_int = 0;
         try {
-          this.indexCrc = pk.a(encodedIndex, encodedIndex.length, 120);
+          this.indexCrc = ValidationStatusWidget.a(encodedIndex, encodedIndex.length, 120);
           if (this.indexCrc != expectedCrc) {
             throw new RuntimeException();
           }

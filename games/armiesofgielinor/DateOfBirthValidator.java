@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb extends rb implements EditableTextWidgetListener, rp {
-    en field_j;
+final class DateOfBirthValidator extends DebouncedValidator implements EditableTextWidgetListener, DropdownSelectionListener {
+    DateInputWidget input;
     static int[] field_g;
     static ClientUiComponent field_i;
     static String field_f;
@@ -13,20 +13,20 @@ final class sb extends rb implements EditableTextWidgetListener, rp {
     public final void textChanged(EditableTextWidget widget, int obfuscationGuard) {
         try {
           int var3_int = -12 / ((-80 - obfuscationGuard) / 33);
-          this.a(127);
+          this.validationChanged(127);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.FA(" + (widget != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    public final void a(int param0, DropdownSelector param1) {
-        if (param0 > -82) {
+    public final void selectionChanged(int obfuscationGuard, DropdownSelector selector) {
+        if (obfuscationGuard > -82) {
           return;
         }
         try {
-          this.a(125);
+          this.validationChanged(125);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sb.N(" + obfuscationGuard + ',' + (selector != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -38,43 +38,43 @@ final class sb extends rb implements EditableTextWidgetListener, rp {
         field_i = null;
         if (param0) {
           String var2 = (String) null;
-          sb.a((String) null, (byte) -81);
+          DateOfBirthValidator.a((String) null, (byte) -81);
         }
     }
 
-    public sb() {
+    public DateOfBirthValidator() {
     }
 
-    final String b(byte param0) {
-        int var2_int = 0;
-        NumberFormatException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String stackIn_6_0 = null;
-        Object stackIn_9_0 = null;
+    final String evaluateMessage(byte obfuscationGuard) {
+        int day = 0;
+        NumberFormatException parseFailure = null;
+        int monthIndex = 0;
+        int year = 0;
+        int currentYear = 0;
+        String yearRangeDiagnostic = null;
+        Object validDiagnostic = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_j.l(97);
-          var3 = this.field_j.m(-26458);
-          if (param0 != -71) {
-            this.c(-41);
+          day = this.input.getDay(97);
+          monthIndex = this.input.getMonthIndex(-26458);
+          if (obfuscationGuard != -71) {
+            this.evaluateState(-41);
           }
-          var4 = this.field_j.a((byte) -77);
-          var5 = ActionSpell.b(true);
-          if (var4 >= 1890 &&
-            var4 <= var5 - 3) {
-            if (dt.a(var4, -24375, var3, var2_int)) {
-              stackIn_9_0 = null;
-              return (String) (stackIn_9_0);
+          year = this.input.getYear((byte) -77);
+          currentYear = ActionSpell.b(true);
+          if (year >= 1890 &&
+            year <= currentYear - 3) {
+            if (dt.isValidDate(year, -24375, monthIndex, day)) {
+              validDiagnostic = null;
+              return (String) (validDiagnostic);
             }
           } else {
-            stackIn_6_0 = fo.a(4800, CampaignMenu.field_r, new String[]{"1890", Integer.toString(-3 + var5)});
-            return stackIn_6_0;
+            yearRangeDiagnostic = EmailCheckResult.a(4800, CampaignMenu.field_r, new String[]{"1890", Integer.toString(-3 + currentYear)});
+            return yearRangeDiagnostic;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          parseFailure = (NumberFormatException) (Object) decompiledCaughtException;
         }
         return StateChangeEvent.field_z;
     }
@@ -125,7 +125,7 @@ final class sb extends rb implements EditableTextWidgetListener, rp {
             return null;
           }
           var6 = (String) null;
-          sb.a((String) null, (byte) -62);
+          DateOfBirthValidator.a((String) null, (byte) -62);
           stackIn_26_0 = null;
           return (rn) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,48 +142,48 @@ final class sb extends rb implements EditableTextWidgetListener, rp {
         }
     }
 
-    final gu c(int param0) {
-        int var2_int = 0;
-        NumberFormatException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        gu stackIn_2_0 = null;
-        gu stackIn_5_0 = null;
-        gu stackIn_8_0 = null;
+    final ValidationState evaluateState(int obfuscationGuard) {
+        int day = 0;
+        NumberFormatException parseFailure = null;
+        int monthIndex = 0;
+        int year = 0;
+        int currentYear = 0;
+        int guardRemainder = 0;
+        ValidationState tooOldState = null;
+        ValidationState tooRecentState = null;
+        ValidationState invalidCalendarState = null;
         Throwable decompiledCaughtException = null;
         try {
-          var2_int = this.field_j.l(50);
-          var3 = this.field_j.m(-26458);
-          var4 = this.field_j.a((byte) -77);
-          var5 = ActionSpell.b(true);
-          if (var4 < 1890) {
-            stackIn_2_0 = rn.field_e;
-            return stackIn_2_0;
+          day = this.input.getDay(50);
+          monthIndex = this.input.getMonthIndex(-26458);
+          year = this.input.getYear((byte) -77);
+          currentYear = ActionSpell.b(true);
+          if (year < 1890) {
+            tooOldState = rn.validationInvalid;
+            return tooOldState;
           }
-          var6 = 26 % ((param0 - 56) / 32);
-          if (var4 > -3 + var5) {
-            stackIn_5_0 = rn.field_e;
-            return stackIn_5_0;
+          guardRemainder = 26 % ((obfuscationGuard - 56) / 32);
+          if (year > -3 + currentYear) {
+            tooRecentState = rn.validationInvalid;
+            return tooRecentState;
           }
-          if (!dt.a(var4, -24375, var3, var2_int)) {
-            stackIn_8_0 = rn.field_e;
-            return stackIn_8_0;
+          if (!dt.isValidDate(year, -24375, monthIndex, day)) {
+            invalidCalendarState = rn.validationInvalid;
+            return invalidCalendarState;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return rn.field_e;
+          parseFailure = (NumberFormatException) (Object) decompiledCaughtException;
+          return rn.validationInvalid;
         }
-        return oo.field_g;
+        return oo.validationValid;
     }
 
-    public final boolean b(int param0) {
-        if (param0 <= 12) {
+    public final boolean isInputEmpty(int obfuscationGuard) {
+        if (obfuscationGuard <= 12) {
           field_g = (int[]) null;
         }
-        return this.field_j.k(-22339);
+        return this.input.isDateEmpty(-22339);
     }
 
     public final void textSubmitted(EditableTextWidget widget, int obfuscationGuard) {

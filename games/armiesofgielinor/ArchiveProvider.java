@@ -158,7 +158,7 @@ abstract class ArchiveProvider {
           var5 = var4;
           for (var6 = 0; var5.length > var6; var6++) {
             var7 = var5[var6];
-            var8 = sb.a(var7, (byte) -107);
+            var8 = DateOfBirthValidator.a(var7, (byte) -107);
             if (var8 != null) {
               stackIn_17_0 = var8;
               return stackIn_17_0;

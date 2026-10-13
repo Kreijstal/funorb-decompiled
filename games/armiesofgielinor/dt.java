@@ -18,18 +18,18 @@ final class dt {
         field_c = null;
     }
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
-        if (param2 < 0) {
+    final static boolean isValidDate(int year, int obfuscationGuard, int monthIndex, int day) {
+        if (monthIndex < 0) {
           return false;
         }
-        if (param2 > 11) {
+        if (monthIndex > 11) {
           return false;
         }
-        if (param1 != -24375) {
+        if (obfuscationGuard != -24375) {
           return true;
         }
-        if (1 <= param3 &&
-          param3 <= bn.a((byte) -84, param2, param0)) {
+        if (1 <= day &&
+          day <= bn.getDaysInMonth((byte) -84, monthIndex, year)) {
           return true;
         }
         return false;

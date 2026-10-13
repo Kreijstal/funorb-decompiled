@@ -170,13 +170,13 @@ final class CoatOfArms {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          no.field_P.pixelHeight = SoftwareRaster.height;
+          NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           if (param1 != -70) {
             var5 = (String) null;
             this.a(false, true, (byte) -47, true, false, true, -69, (String) null, 102);
           }
-          no.field_P.pixels = SoftwareRaster.pixels;
-          no.field_P.pixelWidth = SoftwareRaster.width;
+          NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
+          NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           if (!param2) {
@@ -186,7 +186,7 @@ final class CoatOfArms {
             this.parts[3] = var4_int;
           }
           MatchSetupPanel.a(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
-          no.field_P.b();
+          NumericDateInputWidget.field_P.b();
           stackIn_5_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,9 +223,9 @@ final class CoatOfArms {
         int[] var21 = null;
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.pixelHeight = SoftwareRaster.height;
-          no.field_P.pixels = SoftwareRaster.pixels;
-          no.field_P.pixelWidth = SoftwareRaster.width;
+          NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
+          NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
+          NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           if (param8) {
             if (null == ConsolePanel.field_k ||
               param1 != t.field_f) {
@@ -266,7 +266,7 @@ final class CoatOfArms {
           } else {
             RegionAnchor.field_m[1].g(0, 0);
           }
-          no.field_P.b();
+          NumericDateInputWidget.field_P.b();
           DropTargetWidgetContainer.field_J.e(param4, param2);
           if (param9 == -19744) {
             return;
@@ -298,9 +298,9 @@ final class CoatOfArms {
         int var11 = 0;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          no.field_P.pixelHeight = SoftwareRaster.height;
-          no.field_P.pixels = SoftwareRaster.pixels;
-          no.field_P.pixelWidth = SoftwareRaster.width;
+          NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
+          NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
+          NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           DropTargetWidgetContainer.field_J.b();
           SoftwareRaster.b();
           if (!param3) {
@@ -329,7 +329,7 @@ final class CoatOfArms {
           ko.field_g.b();
           SoftwareRaster.b();
           DropTargetWidgetContainer.field_J.e(0, 0);
-          no.field_P.b();
+          NumericDateInputWidget.field_P.b();
           ko.field_g.h(param8, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -365,9 +365,9 @@ final class CoatOfArms {
           if (param7 <= 16) {
             field_d = (byte[]) null;
           }
-          no.field_P.pixelWidth = SoftwareRaster.width;
-          no.field_P.pixels = SoftwareRaster.pixels;
-          no.field_P.pixelHeight = SoftwareRaster.height;
+          NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
+          NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
+          NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           if (param6) {
             RegionAnchor.field_m[0].d(-40 + param0, -30 + param4, 184, 184, 256);
           }
@@ -386,7 +386,7 @@ final class CoatOfArms {
           } else {
             RegionAnchor.field_m[1].g(0, 0);
           }
-          no.field_P.b();
+          NumericDateInputWidget.field_P.b();
           DropTargetWidgetContainer.field_J.h(param0, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

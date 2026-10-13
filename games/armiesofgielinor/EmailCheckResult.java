@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fo {
-    private String field_d;
-    private boolean field_b;
-    private boolean field_c;
+final class EmailCheckResult {
+    private String email;
+    private boolean complete;
+    private boolean accepted;
     static String field_a;
 
     public static void a(boolean param0) {
         field_a = null;
         if (!param0) {
           String[] var2 = (String[]) null;
-          fo.a(70, (String) null, (String[]) null);
+          EmailCheckResult.a(70, (String) null, (String[]) null);
         }
     }
 
-    final String b(boolean param0) {
-        if (!param0) {
+    final String getEmail(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           field_a = (String) null;
         }
-        return this.field_d;
+        return this.email;
     }
 
-    final boolean a(int param0) {
-        if (param0 <= 8) {
-          fo.a(true);
+    final boolean isAccepted(int obfuscationGuard) {
+        if (obfuscationGuard <= 8) {
+          EmailCheckResult.a(true);
         }
-        return this.field_c;
+        return this.accepted;
     }
 
     final static String a(int param0, String param1, String[] param2) {
@@ -140,23 +140,23 @@ final class fo {
         }
     }
 
-    final void a(boolean param0, boolean param1) {
-        this.field_b = param1 ? true : false;
-        this.field_c = param0 ? true : false;
+    final void setResult(boolean accepted, boolean complete) {
+        this.complete = complete ? true : false;
+        this.accepted = accepted ? true : false;
     }
 
-    final boolean a(byte param0) {
-        int var2 = 91 / ((param0 - 67) / 48);
-        return this.field_b;
+    final boolean isComplete(byte obfuscationGuard) {
+        int var2 = 91 / ((obfuscationGuard - 67) / 48);
+        return this.complete;
     }
 
-    fo(String param0) {
-        this.field_c = false;
-        this.field_b = false;
+    EmailCheckResult(String email) {
+        this.accepted = false;
+        this.complete = false;
         try {
-          this.field_d = param0;
+          this.email = email;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fo.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fo.<init>(" + (email != null ? "{...}" : "null") + ')');
         }
     }
 

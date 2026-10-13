@@ -26,7 +26,7 @@ final class FixedQuaternion {
             var5.locationLabel != null) {
             return true;
           }
-          stackIn_8_0 = (vu.currentRoom != null) && (null != UnitModelPreview.getCurrentRoomPlayer(accountId, -77));
+          stackIn_8_0 = (ToggleWidget.currentRoom != null) && (null != UnitModelPreview.getCurrentRoomPlayer(accountId, -77));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

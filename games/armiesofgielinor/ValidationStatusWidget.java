@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends HotspotTextWidget {
-    private n field_Z;
-    private RgbSprite field_Y;
-    private int field_U;
+final class ValidationStatusWidget extends HotspotTextWidget {
+    private ValidationSource validationSource;
+    private RgbSprite spinnerSprite;
+    private int spinnerTick;
     static String field_S;
     static int field_X;
     static String field_W;
     static int[][] field_T;
     static String field_V;
-    private String field_L;
+    private String fallbackText;
 
     final String getTooltipText(int obfuscationGuard) {
         if (obfuscationGuard == 21384) {
           return null;
         }
-        this.field_U = -103;
+        this.spinnerTick = -103;
         return null;
     }
 
@@ -46,120 +46,120 @@ final class pk extends HotspotTextWidget {
         }
     }
 
-    pk(n param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, ji.a(true));
+    ValidationStatusWidget(ValidationSource validationSource, String fallbackText, int x, int y, int width, int height) {
+        super(fallbackText, ji.a(true));
         try {
-          this.field_Z = param0;
-          this.field_L = param1;
-          this.setBounds(param2, param4, param3, 8192, param5);
+          this.validationSource = validationSource;
+          this.fallbackText = fallbackText;
+          this.setBounds(x, width, y, 8192, height);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pk.<init>(" + (validationSource != null ? "{...}" : "null") + ',' + (fallbackText != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 
     final void drawWidget(int originX, int originY, byte obfuscationGuard, int renderLayer) {
-        String var5;
-        gu var6;
-        int var13;
-        TextWidgetPainter var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        RgbSprite var14;
-        RgbSprite var15;
-        RgbSprite var16;
-        RgbSprite var17;
-        RgbSprite var18;
-        int var11Lifetime1;
-        int var12Lifetime1;
-        gu var6Lifetime1;
-        var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var6 = this.field_Z.a(false);
-        if (ad.field_K != var6 &&
-          var6 != so.field_e) {
-          var5 = this.field_Z.a((byte) 55);
-          if (var5 == null) {
-            var5 = this.field_L;
+        String displayText;
+        ValidationState state;
+        int obfuscationControl;
+        TextWidgetPainter textPainter;
+        int iconX;
+        int iconCenterY;
+        int waitingSpriteWidth;
+        int waitingSpriteHeight;
+        RgbSprite checkingSpriteAlias;
+        RgbSprite validIcon;
+        RgbSprite invalidIcon;
+        RgbSprite checkingIcon;
+        RgbSprite waitingIcon;
+        int checkingSpriteWidth;
+        int checkingSpriteHeight;
+        ValidationState iconState;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        state = this.validationSource.getValidationState(false);
+        if (ad.validationWaiting != state &&
+          state != so.validationChecking) {
+          displayText = this.validationSource.getValidationMessage((byte) 55);
+          if (displayText == null) {
+            displayText = this.fallbackText;
           }
         } else {
-          var5 = gt.field_h;
+          displayText = gt.validationPendingText;
         }
-        if (!var5.equals(this.text)) {
-          this.text = var5;
+        if (!displayText.equals(this.text)) {
+          this.text = displayText;
           this.rebuildHotspots(-128);
         }
         super.drawWidget(originX, originY, (byte) -114, renderLayer);
         if (obfuscationGuard > -82) {
           field_W = (String) null;
         }
-        var6Lifetime1 = this.field_Z.a(false);
-        var8 = (TextWidgetPainter) ((Object) this.painter);
-        var9 = originX + this.x;
-        var10 = var8.getTextTop(-18033, originY, (Widget) (this)) + (var8.getTextLayout(-69, (Widget) (this)).getHeight((byte) 27) >> 1);
-        if (var6Lifetime1 == ad.field_K) {
-          var18 = db.field_a[0];
-          var11 = var18.canvasWidth << 1;
-          var12 = var18.canvasHeight << 1;
-          if (this.field_Y == null) {
-            this.field_Y = new RgbSprite(var11, var12);
-            CombatSandbox.a(this.field_Y, 3);
+        iconState = this.validationSource.getValidationState(false);
+        textPainter = (TextWidgetPainter) ((Object) this.painter);
+        iconX = originX + this.x;
+        iconCenterY = textPainter.getTextTop(-18033, originY, (Widget) (this)) + (textPainter.getTextLayout(-69, (Widget) (this)).getHeight((byte) 27) >> 1);
+        if (iconState == ad.validationWaiting) {
+          waitingIcon = db.validationStatusIcons[0];
+          waitingSpriteWidth = waitingIcon.canvasWidth << 1;
+          waitingSpriteHeight = waitingIcon.canvasHeight << 1;
+          if (this.spinnerSprite == null) {
+            this.spinnerSprite = new RgbSprite(waitingSpriteWidth, waitingSpriteHeight);
+            CombatSandbox.a(this.spinnerSprite, 3);
           } else {
-            if (this.field_Y.pixelWidth < var11) {
-              this.field_Y = new RgbSprite(var11, var12);
-              CombatSandbox.a(this.field_Y, 3);
+            if (this.spinnerSprite.pixelWidth < waitingSpriteWidth) {
+              this.spinnerSprite = new RgbSprite(waitingSpriteWidth, waitingSpriteHeight);
+              CombatSandbox.a(this.spinnerSprite, 3);
             } else {
-              if (var12 > this.field_Y.pixelHeight) {
-                this.field_Y = new RgbSprite(var11, var12);
-                CombatSandbox.a(this.field_Y, 3);
+              if (waitingSpriteHeight > this.spinnerSprite.pixelHeight) {
+                this.spinnerSprite = new RgbSprite(waitingSpriteWidth, waitingSpriteHeight);
+                CombatSandbox.a(this.spinnerSprite, 3);
               } else {
-                CombatSandbox.a(this.field_Y, 3);
+                CombatSandbox.a(this.spinnerSprite, 3);
                 SoftwareRaster.b();
               }
             }
           }
-          var18.b(112, 144, var18.canvasWidth << 4, var18.canvasHeight << 4, -this.field_U << 10, 4096);
+          waitingIcon.b(112, 144, waitingIcon.canvasWidth << 4, waitingIcon.canvasHeight << 4, -this.spinnerTick << 10, 4096);
           QuickChatPhraseRepository.popRasterState(-18862);
-          this.field_Y.f(var9 - (var18.canvasWidth >> 1), -var18.canvasHeight + var10, 256);
+          this.spinnerSprite.f(iconX - (waitingIcon.canvasWidth >> 1), -waitingIcon.canvasHeight + iconCenterY, 256);
           return;
         }
-        if (so.field_e != var6Lifetime1) {
-          if (var6Lifetime1 == rn.field_e) {
-            var16 = db.field_a[2];
-            var16.f(var9, -(var16.pixelHeight >> 1) + var10, 256);
+        if (so.validationChecking != iconState) {
+          if (iconState == rn.validationInvalid) {
+            invalidIcon = db.validationStatusIcons[2];
+            invalidIcon.f(iconX, -(invalidIcon.pixelHeight >> 1) + iconCenterY, 256);
             return;
           }
-          if (var6Lifetime1 != oo.field_g) {
+          if (iconState != oo.validationValid) {
             return;
           }
-          var15 = db.field_a[1];
-          var15.f(var9, -(var15.pixelHeight >> 1) + var10, 256);
+          validIcon = db.validationStatusIcons[1];
+          validIcon.f(iconX, -(validIcon.pixelHeight >> 1) + iconCenterY, 256);
           return;
         }
-        var17 = db.field_a[0];
-        var14 = var17;
-        var11Lifetime1 = var17.canvasWidth << 1;
-        var12Lifetime1 = var17.canvasHeight << 1;
-        if (this.field_Y == null) {
-          this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
-          CombatSandbox.a(this.field_Y, 3);
+        checkingIcon = db.validationStatusIcons[0];
+        checkingSpriteAlias = checkingIcon;
+        checkingSpriteWidth = checkingIcon.canvasWidth << 1;
+        checkingSpriteHeight = checkingIcon.canvasHeight << 1;
+        if (this.spinnerSprite == null) {
+          this.spinnerSprite = new RgbSprite(checkingSpriteWidth, checkingSpriteHeight);
+          CombatSandbox.a(this.spinnerSprite, 3);
         } else {
-          if (this.field_Y.pixelWidth < var11Lifetime1) {
-            this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
-            CombatSandbox.a(this.field_Y, 3);
+          if (this.spinnerSprite.pixelWidth < checkingSpriteWidth) {
+            this.spinnerSprite = new RgbSprite(checkingSpriteWidth, checkingSpriteHeight);
+            CombatSandbox.a(this.spinnerSprite, 3);
           } else {
-            if (var12Lifetime1 > this.field_Y.pixelHeight) {
-              this.field_Y = new RgbSprite(var11Lifetime1, var12Lifetime1);
-              CombatSandbox.a(this.field_Y, 3);
+            if (checkingSpriteHeight > this.spinnerSprite.pixelHeight) {
+              this.spinnerSprite = new RgbSprite(checkingSpriteWidth, checkingSpriteHeight);
+              CombatSandbox.a(this.spinnerSprite, 3);
             } else {
-              CombatSandbox.a(this.field_Y, 3);
+              CombatSandbox.a(this.spinnerSprite, 3);
               SoftwareRaster.b();
             }
           }
         }
-        var17.b(112, 144, var17.canvasWidth << 4, var17.canvasHeight << 4, -this.field_U << 10, 4096);
+        checkingIcon.b(112, 144, checkingIcon.canvasWidth << 4, checkingIcon.canvasHeight << 4, -this.spinnerTick << 10, 4096);
         QuickChatPhraseRepository.popRasterState(-18862);
-        this.field_Y.f(var9 - (var17.canvasWidth >> 1), -var17.canvasHeight + var10, 256);
+        this.spinnerSprite.f(iconX - (checkingIcon.canvasWidth >> 1), -checkingIcon.canvasHeight + iconCenterY, 256);
         return;
     }
 
@@ -171,7 +171,7 @@ final class pk extends HotspotTextWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 11) {
-            pk.a(56, -104, -60, 38, -92, -10, 85, -99);
+            ValidationStatusWidget.a(56, -104, -60, 38, -92, -10, 85, -99);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -327,7 +327,7 @@ final class pk extends HotspotTextWidget {
 
     final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
-          this.field_U = this.field_U + 1;
+          this.spinnerTick = this.spinnerTick + 1;
           super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "pk.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');

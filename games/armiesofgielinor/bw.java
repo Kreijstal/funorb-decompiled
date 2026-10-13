@@ -199,7 +199,7 @@ final class bw {
           if (var7 != null) {
             var7.playerNames = null;
           }
-          var4 = vl.outgoingPacket;
+          var4 = EmailValidator.outgoingPacket;
           var4.writeCipheredOpcode(obfuscationGuard ^ -32211, packetOpcode);
           var4.writeByte(1, 3);
           var4.writeByte(1, 11);

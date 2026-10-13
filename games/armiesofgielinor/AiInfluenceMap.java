@@ -804,13 +804,13 @@ final class AiInfluenceMap {
             dupTemp$1 = new int[2][var5 * 4];
             var3.field_n = dupTemp$1;
             var7 = dupTemp$1;
-            var8 = kt.field_p;
+            var8 = EmailConfirmationValidator.field_p;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
               var11 = vt.field_m[var9];
               var6[0][var10] = LeaderEscortCondition.field_a[var11];
-              var7[0][var10 * 4] = no.field_U[var11];
+              var7[0][var10 * 4] = NumericDateInputWidget.field_U[var11];
               var7[0][1 + 4 * var10] = AnimationFrameSet.field_w[var11];
               var7[0][var10 * 4 + 2] = TutorialController.field_c[var11];
               var7[0][3 + var10 * 4] = VineGrowthAction.field_s[var11];
@@ -828,7 +828,7 @@ final class AiInfluenceMap {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = vt.field_m[var5 + var9Lifetime1];
               var6[1][var13] = LeaderEscortCondition.field_a[var11Lifetime1];
-              var7[1][4 * var13] = no.field_U[var11Lifetime1];
+              var7[1][4 * var13] = NumericDateInputWidget.field_U[var11Lifetime1];
               var7[1][var13 * 4 + 1] = AnimationFrameSet.field_w[var11Lifetime1];
               var7[1][var13 * 4 + 2] = TutorialController.field_c[var11Lifetime1];
               var7[1][var13 * 4 + 3] = VineGrowthAction.field_s[var11Lifetime1];

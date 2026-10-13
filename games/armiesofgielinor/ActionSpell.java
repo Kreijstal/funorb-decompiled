@@ -147,13 +147,13 @@ final class ActionSpell extends Spell {
               }
             }
             pg.playerProfile.campaignProgress.setResult(65535, missionId, turnsTaken, campaignIndex, damageTaken);
-            vl.outgoingPacket.writeCipheredOpcode(32161, 79);
-            vl.outgoingPacket.writeByte(obfuscationGuard - 3, campaignIndex);
-            vl.outgoingPacket.writeByte(1, missionId);
-            vl.outgoingPacket.writeShort(true, candidateScore);
-            vl.outgoingPacket.writeShort(true, turnsTaken);
-            vl.outgoingPacket.writeShort(true, damageTaken);
-            stackIn_32_0 = vl.outgoingPacket;
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 79);
+            EmailValidator.outgoingPacket.writeByte(obfuscationGuard - 3, campaignIndex);
+            EmailValidator.outgoingPacket.writeByte(1, missionId);
+            EmailValidator.outgoingPacket.writeShort(true, candidateScore);
+            EmailValidator.outgoingPacket.writeShort(true, turnsTaken);
+            EmailValidator.outgoingPacket.writeShort(true, damageTaken);
+            stackIn_32_0 = EmailValidator.outgoingPacket;
             stackIn_32_1 = 1;
             if (!hasLostUnit) {
               stackIn_33_2 = 0;
@@ -161,10 +161,10 @@ final class ActionSpell extends Spell {
               stackIn_33_2 = 1;
             }
             ((CipherPacketBuffer) (Object) stackIn_32_0).writeByte(stackIn_32_1, stackIn_33_2);
-            vl.outgoingPacket.writeInt((byte) -108, km.getCampaignPacketWord0(-59));
-            vl.outgoingPacket.writeInt((byte) -124, oq.getCampaignPacketWord1(false));
-            vl.outgoingPacket.writeInt((byte) -59, RadialSummonItem.getCampaignPacketWord2(false));
-            vl.outgoingPacket.writeInt((byte) -50, RevivalEvent.getCampaignPacketWord3(0));
+            EmailValidator.outgoingPacket.writeInt((byte) -108, km.getCampaignPacketWord0(-59));
+            EmailValidator.outgoingPacket.writeInt((byte) -124, oq.getCampaignPacketWord1(false));
+            EmailValidator.outgoingPacket.writeInt((byte) -59, RadialSummonItem.getCampaignPacketWord2(false));
+            EmailValidator.outgoingPacket.writeInt((byte) -50, RevivalEvent.getCampaignPacketWord3(0));
           }
           qh.requestDeleteQuicksave((byte) 27);
           if (obfuscationGuard == 4) {
@@ -299,7 +299,7 @@ final class ActionSpell extends Spell {
     }
 
     final static void writePlayerAdmissionRequest(long accountId, int packetOpcode, int command) {
-        CipherPacketBuffer var4 = vl.outgoingPacket;
+        CipherPacketBuffer var4 = EmailValidator.outgoingPacket;
         var4.writeCipheredOpcode(32161, packetOpcode);
         var4.position = var4.position + 1;
         int var5 = var4.position;

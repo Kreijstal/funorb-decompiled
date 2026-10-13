@@ -86,9 +86,9 @@ final class BattleGraphicsAssets {
         BattlefieldTheme nextTheme = null;
         BattlefieldTheme previousAlias = null;
         BattlefieldTheme nextAlias;
-        if (themeId != mk.currentThemeId) {
-          if (!(minimumThemeIdToRelease > mk.currentThemeId)) {
-            previousTheme = UnitLossCondition.battlefieldThemes[mk.currentThemeId];
+        if (themeId != TextFieldValidator.currentThemeId) {
+          if (!(minimumThemeIdToRelease > TextFieldValidator.currentThemeId)) {
+            previousTheme = UnitLossCondition.battlefieldThemes[TextFieldValidator.currentThemeId];
             previousAlias = previousTheme;
             previousTheme.releaseSprites(0);
           }
@@ -98,7 +98,7 @@ final class BattleGraphicsAssets {
           ac.activeTerrainSprites = nextAlias.terrainSprites;
           tn.activeFoliageShadows = nextAlias.foliageShadowSprites;
           nr.activeFoliageSprites = nextAlias.foliageSprites;
-          mk.currentThemeId = themeId;
+          TextFieldValidator.currentThemeId = themeId;
           l.activeStructureSprites = nextAlias.structureSprites;
           oq.activeStructureShadows = nextTheme.structureShadowSprites;
           dd.activeTerrainSample = ac.activeTerrainSprites[1].toRgbSprite();

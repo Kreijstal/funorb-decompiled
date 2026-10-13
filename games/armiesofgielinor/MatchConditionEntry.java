@@ -118,7 +118,7 @@ final class MatchConditionEntry extends IntrusiveNode {
             }
             th.socialListState = 1;
             initialLocation = packet.readNullTerminatedString(1);
-            vl.currentLocationLabel = ((String) (initialLocation)).intern();
+            EmailValidator.currentLocationLabel = ((String) (initialLocation)).intern();
             chatFilterBits = packet.readUnsignedByte(0);
             ClientUiNode.b(chatFilterBits, obfuscationGuard - 27499);
             return;
@@ -159,7 +159,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != nextFriend) {
-              stackOut_55_0 = wd.isFriendOrderedAfter(false, friendEntry, nextFriend);
+              stackOut_55_0 = AccountNameCheckResult.isFriendOrderedAfter(false, friendEntry, nextFriend);
               stackIn_63_0 = stackOut_55_0 ? 1 : 0;
               stackIn_56_0 = stackOut_55_0;
               decompiledFrameRemainder0 = (obfuscationControl == 0);

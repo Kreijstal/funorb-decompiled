@@ -152,15 +152,15 @@ final class LobbyPlayer extends ClientUiComponent {
         try {
           quicksave = new CampaignQuicksave(campaignIndex, missionId, battlefield, damageTaken, unitLossCount > 0 ? true : false);
           bu.storedQuicksave = quicksave;
-          vl.outgoingPacket.writeCipheredOpcode(32161, 80);
-          vl.outgoingPacket.position = vl.outgoingPacket.position + 2;
+          EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 80);
+          EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 2;
           if (obfuscationGuard != -80) {
             Battlefield var8 = (Battlefield) null;
             LobbyPlayer.uploadQuicksave((Battlefield) null, -98, 73, (byte) 105, 55, -24);
           }
-          payloadStart = vl.outgoingPacket.position;
-          quicksave.write(0, vl.outgoingPacket);
-          vl.outgoingPacket.f(0, vl.outgoingPacket.position - payloadStart);
+          payloadStart = EmailValidator.outgoingPacket.position;
+          quicksave.write(0, EmailValidator.outgoingPacket);
+          EmailValidator.outgoingPacket.f(0, EmailValidator.outgoingPacket.position - payloadStart);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "of.E(" + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + unitLossCount + ',' + obfuscationGuard + ',' + missionId + ',' + campaignIndex + ')');
         }

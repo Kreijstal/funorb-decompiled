@@ -93,7 +93,7 @@ abstract class wf extends iv {
         if (!MovementPresentation.j(-11)) {
           return -1;
         }
-        if (ol.field_C) {
+        if (MaskedTextEntryPainter.field_C) {
           return -1;
         }
         if (param0 >= -15) {
@@ -119,7 +119,7 @@ abstract class wf extends iv {
           }
           er.b(-11);
           wv.a(BitmapTextWidgetPainter.field_r, 10, var2);
-          ol.field_C = true;
+          MaskedTextEntryPainter.field_C = true;
           jl.field_a = vi.monotonicMillis(-111) + 15000L;
         } else {
           if (SoundCache.field_b == 11 &&
@@ -245,7 +245,7 @@ abstract class wf extends iv {
               lb.a((byte) -8);
             }
             if (param1) {
-              ol.field_C = false;
+              MaskedTextEntryPainter.field_C = false;
             } else {
               var5_intLifetime2 = InstructionsPanel.a((byte) -53, this.field_n, this.field_w, RadialSummonItem.a(-1), CombatPresentation.i(-4938), false);
               if (var5_intLifetime2 != -1) {
@@ -286,7 +286,7 @@ abstract class wf extends iv {
             ov.a(CombatEvent.d((byte) 48), 11982);
           }
           if (10 == var4) {
-            vl.outgoingPacket.writeCipheredOpcode(32161, 17);
+            EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 17);
           }
           if (11 == var4) {
             t.a((byte) -118, CombatEvent.d((byte) 7));
@@ -374,7 +374,7 @@ abstract class wf extends iv {
         if (param0 != 4) {
           this.a((byte) 113, true);
         }
-        if (!wd.a((byte) 60)) {
+        if (!AccountNameCheckResult.a((byte) 60)) {
           if (StrongCacheEntry.field_E >= 10) {
             if (!BitmapTextWidgetPainter.b(true)) {
               StateChangeEvent.e((byte) -84);
@@ -444,7 +444,7 @@ abstract class wf extends iv {
                 MapLayout.acceptReceivedChatMessage(var3, -1);
                 break;
               case 8:
-                jh.a(ByteStorage.incomingPacket, IntPair.field_m, fk.packetPayloadLength, param0 - 13);
+                AgeValidator.a(ByteStorage.incomingPacket, IntPair.field_m, fk.packetPayloadLength, param0 - 13);
                 break;
               case 7:
                 this.e((byte) 127);
@@ -541,7 +541,7 @@ abstract class wf extends iv {
             er.b(-11);
             wv.a(LobbyPlayer.field_bc, 10, 2);
             qf.b(56);
-            ol.field_C = true;
+            MaskedTextEntryPainter.field_C = true;
             jl.field_a = 15000L + vi.monotonicMillis(-49);
           }
         }
@@ -601,7 +601,7 @@ abstract class wf extends iv {
               } else {
                 wv.a(oq.field_k, 10, 256);
               }
-              ol.field_C = true;
+              MaskedTextEntryPainter.field_C = true;
             }
           }
         }
@@ -609,7 +609,7 @@ abstract class wf extends iv {
           ModalDialogHost.field_K != 0 ||
           MovementPresentation.j(-11)) &&
           jl.field_a <= vi.monotonicMillis(74)) {
-          ol.field_C = false;
+          MaskedTextEntryPainter.field_C = false;
           if (ModalDialogHost.field_K != -1 &&
             ModalDialogHost.field_K != 0) {
             ModalDialogHost.field_K = -1;
@@ -656,7 +656,7 @@ abstract class wf extends iv {
           wh.a(ps.field_u, (byte) 127, h.field_g, CombatPresentation.field_M) &&
           wh.a(h.field_g, -27701)) {
           cd.a(12);
-          vl.c((byte) 91);
+          EmailValidator.c((byte) 91);
           it.field_b = false;
           UnitSpell.field_e = ConsoleParseException.field_a;
           StateChangeEvent.a(CombatPresentation.field_M, ps.field_u, h.field_g, 0, BestScoreStrategy.field_l);
@@ -669,7 +669,7 @@ abstract class wf extends iv {
             rn.a(stackIn_96_0, stackIn_96_1, stackIn_97_2, stackIn_100_3);
           }
           if (hc.field_i) {
-            di.c((byte) -128);
+            MatchingTextValidator.c((byte) -128);
           }
           if (null == ContentTransitionDialog.field_eb) {
             ContentTransitionDialog.field_eb = MusicPatchEnvelope.getEffectsMixer(18757);

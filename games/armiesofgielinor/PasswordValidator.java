@@ -1,81 +1,81 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ib extends mk {
-    private EditableTextWidget field_k;
-    private EditableTextWidget field_l;
+final class PasswordValidator extends TextFieldValidator {
+    private EditableTextWidget emailInput;
+    private EditableTextWidget accountNameInput;
     static int field_j;
 
-    final String a(byte param0, String param1) {
-        RuntimeException var3 = null;
-        String var4 = null;
-        String var5 = null;
-        String var6 = null;
-        Object stackIn_4_0 = null;
-        String stackIn_7_0 = null;
-        String stackIn_11_0 = null;
-        String stackIn_15_0 = null;
-        String stackIn_19_0 = null;
-        String stackIn_22_0 = null;
-        String stackIn_25_0 = null;
-        String stackIn_29_0 = null;
-        String stackIn_32_0 = null;
-        String stackIn_34_0 = null;
+    final String describeText(byte obfuscationGuard, String text) {
+        RuntimeException failure = null;
+        String lowerPassword = null;
+        String passwordAlias = null;
+        String lowerName = null;
+        Object emptyDiagnostic = null;
+        String lengthDiagnostic = null;
+        String characterDiagnostic = null;
+        String repeatedCharacterDiagnostic = null;
+        String emailDiagnostic = null;
+        String validNoNameDiagnostic = null;
+        String nameContainedDiagnostic = null;
+        String passwordContainedDiagnostic = null;
+        String compactNameDiagnostic = null;
+        String validDiagnostic = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 89) {
-            ib.a(false, -126, -33, 30, 79, -34, 49, -91, -77);
+          if (obfuscationGuard < 89) {
+            PasswordValidator.a(false, -126, -33, 30, 79, -34, 49, -91, -77);
           }
-          var6 = this.field_l.text.toLowerCase();
-          var4 = param1.toLowerCase();
-          if (0 == var4.length()) {
-            stackIn_4_0 = null;
-            return (String) (stackIn_4_0);
+          lowerName = this.accountNameInput.text.toLowerCase();
+          lowerPassword = text.toLowerCase();
+          if (0 == lowerPassword.length()) {
+            emptyDiagnostic = null;
+            return (String) (emptyDiagnostic);
           }
-          var5 = var4;
-          if (pd.a(var5, 0)) {
-            stackIn_7_0 = SocialListPanel.field_Pb;
-            return stackIn_7_0;
+          passwordAlias = lowerPassword;
+          if (pd.hasInvalidPasswordLength(passwordAlias, 0)) {
+            lengthDiagnostic = SocialListPanel.field_Pb;
+            return lengthDiagnostic;
           }
-          if (ab.a(var5, 0)) {
-            stackIn_11_0 = CommunityTabGroup.field_c;
-            return stackIn_11_0;
+          if (ab.containsNonAlphanumeric(passwordAlias, 0)) {
+            characterDiagnostic = CommunityTabGroup.field_c;
+            return characterDiagnostic;
           }
-          if (ph.a(var5, (byte) 113)) {
-            stackIn_15_0 = CampaignMenu.field_v;
-            return stackIn_15_0;
+          if (ph.isAllSameCharacter(passwordAlias, (byte) 113)) {
+            repeatedCharacterDiagnostic = CampaignMenu.field_v;
+            return repeatedCharacterDiagnostic;
           }
-          if (this.a(param1, 127)) {
-            stackIn_19_0 = SoundCache.field_d;
-            return stackIn_19_0;
+          if (this.containsEmailComponent(text, 127)) {
+            emailDiagnostic = SoundCache.field_d;
+            return emailDiagnostic;
           }
-          if (var6.length() <= 0) {
-            stackIn_22_0 = ChannelGainProfile.field_b;
-            return stackIn_22_0;
+          if (lowerName.length() <= 0) {
+            validNoNameDiagnostic = ChannelGainProfile.field_b;
+            return validNoNameDiagnostic;
           }
-          if (rb.a(var6, var5, -76)) {
-            stackIn_25_0 = de.field_c;
-            return stackIn_25_0;
+          if (DebouncedValidator.passwordContainsNameVariant(lowerName, passwordAlias, -76)) {
+            nameContainedDiagnostic = de.field_c;
+            return nameContainedDiagnostic;
           }
-          if (e.a(-110, var6, var5)) {
-            stackIn_29_0 = er.field_b;
-            return stackIn_29_0;
+          if (e.nameContainsPasswordVariant(-110, lowerName, passwordAlias)) {
+            passwordContainedDiagnostic = er.field_b;
+            return passwordContainedDiagnostic;
           }
-          if (!Battlefield.a(var5, (byte) -26, var6)) {
-            stackIn_34_0 = SocialListPanel.field_Pb;
-            return stackIn_34_0;
+          if (!Battlefield.passwordContainsCompactNameVariant(passwordAlias, (byte) -26, lowerName)) {
+            validDiagnostic = SocialListPanel.field_Pb;
+            return validDiagnostic;
           }
-          stackIn_32_0 = de.field_c;
-          return stackIn_32_0;
+          compactNameDiagnostic = de.field_c;
+          return compactNameDiagnostic;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_37_0 = var3;
-          stackIn_37_1 = new StringBuilder().append("ib.O(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_37_0 = failure;
+          stackIn_37_1 = new StringBuilder().append("ib.O(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_38_2 = "null";
           } else {
             stackIn_38_2 = "{...}";
@@ -84,42 +84,42 @@ final class ib extends mk {
         }
     }
 
-    final gu a(int param0, String param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        gu stackIn_3_0 = null;
-        gu stackIn_8_0 = null;
-        gu stackIn_12_0 = null;
+    final ValidationState validateText(int obfuscationGuard, String text) {
+        String lowerName = null;
+        RuntimeException failure = null;
+        String lowerPassword = null;
+        ValidationState emptyInvalidState = null;
+        ValidationState nameInvalidState = null;
+        ValidationState emailInvalidState = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_l.text.toLowerCase();
-          var4 = param1.toLowerCase();
-          if (var4.length() == 0) {
-            stackIn_3_0 = rn.field_e;
-            return stackIn_3_0;
+          lowerName = this.accountNameInput.text.toLowerCase();
+          lowerPassword = text.toLowerCase();
+          if (lowerPassword.length() == 0) {
+            emptyInvalidState = rn.validationInvalid;
+            return emptyInvalidState;
           }
-          if (param0 != -3137) {
+          if (obfuscationGuard != -3137) {
             field_j = 109;
           }
-          if (!qd.a(var4, var3, false)) {
-            stackIn_8_0 = rn.field_e;
-            return stackIn_8_0;
+          if (!qd.isPasswordAllowedForName(lowerPassword, lowerName, false)) {
+            nameInvalidState = rn.validationInvalid;
+            return nameInvalidState;
           }
-          if (!this.a(param1, 127)) {
-            return oo.field_g;
+          if (!this.containsEmailComponent(text, 127)) {
+            return oo.validationValid;
           }
-          stackIn_12_0 = rn.field_e;
-          return stackIn_12_0;
+          emailInvalidState = rn.validationInvalid;
+          return emailInvalidState;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_15_0 = var3_ref;
-          stackIn_15_1 = new StringBuilder().append("ib.R(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_15_0 = failure;
+          stackIn_15_1 = new StringBuilder().append("ib.R(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -181,9 +181,9 @@ final class ib extends mk {
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9_int = fs.a(param3, 24340, param2, param8, param4, param5, param1);
-          fe.a(param2, param8, param5, param1, EffectPresentation.field_j, jh.field_k, 0, 128, false);
-          fe.a(param2 + 4, param8 + 4, param5 - 8, 40, EffectPresentation.field_j, jh.field_k, 0, 128, false);
-          fe.a(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, jh.field_k, 0, 128, false);
+          fe.a(param2, param8, param5, param1, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+          fe.a(param2 + 4, param8 + 4, param5 - 8, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+          fe.a(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           if (var9_int == -3 &&
             param3 - param8 < 40 &&
             0 < dd.field_e) {
@@ -193,7 +193,7 @@ final class ib extends mk {
               fe.a(param2 + 8, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             }
           } else {
-            fe.a(8 + param2, 8 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, jh.field_k, 0, 128, true);
+            fe.a(8 + param2, 8 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 128, true);
           }
           if (var9_int == -3 &&
             -param8 + param3 + 40 > param1 &&
@@ -204,7 +204,7 @@ final class ib extends mk {
               fe.a(8 + param2, -40 + param1 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             }
           } else {
-            fe.a(8 + param2, -40 + param1 + param8, param5 - 16, 32, DisplacedUnitMarker.field_s, jh.field_k, 0, 128, true);
+            fe.a(8 + param2, -40 + param1 + param8, param5 - 16, 32, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 128, true);
           }
           ClientConnectionState.field_a.e(param2 + ((param5 >> 1) - 29), param8 + 14, 128);
           ClientConnectionState.field_a.e(11 + ((param5 >> 1) + param2), 14 + param8, 128);
@@ -250,7 +250,7 @@ final class ib extends mk {
                   if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
                     fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, dh.field_l, 0, 128, false);
                   } else {
-                    fe.a(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, jh.field_k, 0, 128, false);
+                    fe.a(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, AgeValidator.field_k, 0, 128, false);
                   }
                 }
               } else {
@@ -362,7 +362,7 @@ final class ib extends mk {
                       if (0 != (1 << var18 & ve.field_a[kd.field_X][var9_int])) {
                         if (var13Lifetime1 != 0 &&
                           var12 != null) {
-                          var12 = fo.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), so.field_a[var18]});
+                          var12 = EmailCheckResult.a(param7 + 4840, ModalDialogHost.field_L, new String[]{(String) (var12), so.field_a[var18]});
                         } else {
                           var12 = so.field_a[var18];
                         }
@@ -375,12 +375,12 @@ final class ib extends mk {
                   }
                 }
               } else {
-                var12 = fo.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[kd.field_X][var9_int])});
+                var12 = EmailCheckResult.a(4800, VerticalScrollbar.field_Jb, new String[]{Integer.toString(el.field_f[kd.field_X][var9_int])});
               }
               if (var12 != null) {
-                var19 = fo.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
+                var19 = EmailCheckResult.a(4800, BattlefieldTheme.field_s, new String[]{(String) (var12)});
                 var12 = var19;
-                var13Lifetime1Lifetime1 = en.field_E.textWidth(var19);
+                var13Lifetime1Lifetime1 = DateInputWidget.field_E.textWidth(var19);
                 if (var13Lifetime1Lifetime1 + param4 > db.a(true, 620)) {
                   param4 = db.a(true, 620) - var13Lifetime1Lifetime1;
                 }
@@ -388,7 +388,7 @@ final class ib extends mk {
                   param3 -= 30;
                 }
                 SoftwareRaster.a(-6 + param4, param3 - 11, var13Lifetime1Lifetime1 + 12, 15, 5, 0, 128);
-                en.field_E.drawText((String) (var12), param4, param3, 16777215, -1);
+                DateInputWidget.field_E.drawText((String) (var12), param4, param3, 16777215, -1);
               }
             }
           }
@@ -401,35 +401,35 @@ final class ib extends mk {
         }
     }
 
-    private final boolean a(String param0, int param1) {
-        String var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        String var7 = null;
-        String var8 = null;
+    private final boolean containsEmailComponent(String password, int obfuscationGuard) {
+        String lowerEmail = null;
+        RuntimeException failure = null;
+        String lowerPassword = null;
+        int guardQuotient = 0;
+        int atIndex = 0;
+        String localPart = null;
+        String domain = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_k.text.toLowerCase();
-          var4 = param0.toLowerCase();
-          var5 = 53 / ((82 - param1) / 44);
-          if (var3.length() > 0) {
-            if (var4.length() <= 0) {
+          lowerEmail = this.emailInput.text.toLowerCase();
+          lowerPassword = password.toLowerCase();
+          guardQuotient = 53 / ((82 - obfuscationGuard) / 44);
+          if (lowerEmail.length() > 0) {
+            if (lowerPassword.length() <= 0) {
               return false;
             }
-            var6 = var3.lastIndexOf("@");
-            if (var6 >= 0 &&
-              var6 < var3.length() - 1) {
-              var7 = var3.substring(0, var6);
-              var8 = var3.substring(var6 + 1);
-              if (0 <= var4.indexOf(var7)) {
+            atIndex = lowerEmail.lastIndexOf("@");
+            if (atIndex >= 0 &&
+              atIndex < lowerEmail.length() - 1) {
+              localPart = lowerEmail.substring(0, atIndex);
+              domain = lowerEmail.substring(atIndex + 1);
+              if (0 <= lowerPassword.indexOf(localPart)) {
                 return true;
               }
-              if (var4.indexOf(var8) >= 0) {
+              if (lowerPassword.indexOf(domain) >= 0) {
                 return true;
               }
             }
@@ -437,31 +437,31 @@ final class ib extends mk {
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
+          failure = decompiledCaughtException;
+          stackIn_16_0 = failure;
           stackIn_16_1 = new StringBuilder().append("ib.N(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    ib(EditableTextWidget param0, EditableTextWidget param1, EditableTextWidget param2) {
-        super(param0);
+    PasswordValidator(EditableTextWidget input, EditableTextWidget accountNameInput, EditableTextWidget emailInput) {
+        super(input);
         try {
-          this.field_k = param2;
-          this.field_l = param1;
+          this.emailInput = emailInput;
+          this.accountNameInput = accountNameInput;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ib.<init>(" + (input != null ? "{...}" : "null") + ',' + (accountNameInput != null ? "{...}" : "null") + ',' + (emailInput != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
         if (param0 != 40) {
-          ib.a(127, true, 27, -95);
+          PasswordValidator.a(127, true, 27, -95);
         }
         if (!BattleTutorial.quickChatMenuVisible) {
           return;

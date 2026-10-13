@@ -178,7 +178,7 @@ final class InstructionsPanel {
           ds.a(param1, param0, var7, 27066, true, param3, true, var6);
           ds.a(param1, param0, var7, 27066, true, param3, false, var6);
           if (param2 == 3) {
-            vu.a(true, true, param1, param0, param3, 1, param4 ^ 0);
+            ToggleWidget.a(true, true, param1, param0, param3, 1, param4 ^ 0);
           }
           if (param2 == 2) {
             this.a(param3, (byte) 85, 1, true, param1, param0);
@@ -651,8 +651,8 @@ final class InstructionsPanel {
         }
         try {
           SoftwareRaster.b(5, 25, 30, 30, 0, 192);
-          en.field_E.drawText(ScrollContainer.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
-          en.field_E.drawRightAligned(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
+          DateInputWidget.field_E.drawText(ScrollContainer.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
+          DateInputWidget.field_E.drawRightAligned(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
           if (param5.ownerPlayer == param2) {
             SoftwareRaster.b(99, 25, 30, 30, 0, 128);
             SoftwareRaster.b(52, 25, 30, 30, 0, 128);
@@ -668,7 +668,7 @@ final class InstructionsPanel {
             }
           }
           ro.field_rb[param5.getUnitCategory(0)].draw(106, 32);
-          en.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
+          DateInputWidget.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.b(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
           so.field_b.a(5605);
           SpellConfirmationDialog.field_j.e(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
@@ -2357,9 +2357,9 @@ final class InstructionsPanel {
               } else {
                 CampaignRewardPreview.field_g = TabbedPanel.a(false, param4, (byte) 10, param3);
               }
-              vl.outgoingPacket.position = 0;
-              vl.outgoingPacket.writeByte(1, 14);
-              vl.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.a((byte) -16).field_c);
+              EmailValidator.outgoingPacket.position = 0;
+              EmailValidator.outgoingPacket.writeByte(1, 14);
+              EmailValidator.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.a((byte) -16).field_c);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
               ov.connectionState = gi.field_d;
             }
@@ -2413,7 +2413,7 @@ final class InstructionsPanel {
               return stackIn_35_0;
             }
             if (oq.field_m == ov.connectionState &&
-              jh.isPacketPayloadReady(2)) {
+              AgeValidator.isPacketPayloadReady(2)) {
               dc.field_o = ByteStorage.incomingPacket.readLong((byte) -2);
               ModalDialog.field_I = param3;
               BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
@@ -2495,7 +2495,7 @@ final class InstructionsPanel {
               if (df.field_M > 0) {
                 BestScoreStrategy.field_l = true;
               }
-              vl.outgoingPacket.initializeOpcodeCipher(CombatEvent.field_L, -106);
+              EmailValidator.outgoingPacket.initializeOpcodeCipher(CombatEvent.field_L, -106);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 CombatEvent.field_L[var8Lifetime1] = CombatEvent.field_L[var8Lifetime1] + 50;
               }
@@ -2504,7 +2504,7 @@ final class InstructionsPanel {
               return stackIn_88_0;
             }
             if (SummonAction.field_z == ov.connectionState &&
-              jh.isPacketPayloadReady(2)) {
+              AgeValidator.isPacketPayloadReady(2)) {
               dj.a((byte) -128);
               if (MusicCrossfadeStream.deliveredOpcode == 7 &&
                 !ev.field_b) {
@@ -2525,7 +2525,7 @@ final class InstructionsPanel {
                 if (TileMetadata.b(0) <= 30000L) {
                   BitmapTextWidgetPainter.field_r = DamageEvent.field_y;
                 } else {
-                  BitmapTextWidgetPainter.field_r = gu.field_a;
+                  BitmapTextWidgetPainter.field_r = ValidationState.field_a;
                 }
                 ev.field_b = false;
                 stackIn_109_0 = 3;

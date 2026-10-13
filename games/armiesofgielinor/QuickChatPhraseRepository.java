@@ -11,10 +11,10 @@ final class QuickChatPhraseRepository {
 
     final static boolean c(int param0) {
         if (param0 <= -97) {
-          return !se.field_g.a((byte) 125) ? true : false;
+          return !se.emailCheckResult.isComplete((byte) 125) ? true : false;
         }
         field_a = (String) null;
-        return !se.field_g.a((byte) 125) ? true : false;
+        return !se.emailCheckResult.isComplete((byte) 125) ? true : false;
     }
 
     public static void a(byte param0) {

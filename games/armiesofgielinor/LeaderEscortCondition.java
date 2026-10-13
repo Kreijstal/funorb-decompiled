@@ -49,7 +49,7 @@ final class LeaderEscortCondition implements MatchCondition {
         if (param0 != 3) {
           field_i = -52;
         }
-        return (QuickChatCategory.field_D << 2) + (ol.field_B << 4) + cd.field_c;
+        return (QuickChatCategory.field_D << 2) + (MaskedTextEntryPainter.field_B << 4) + cd.field_c;
     }
 
     public final boolean isVictory(int obfuscationGuard) {
@@ -121,7 +121,7 @@ final class LeaderEscortCondition implements MatchCondition {
           if (param0 != 14) {
             return null;
           }
-          stackIn_27_0 = fo.a(param1 ^ 4806, ActionSpell.field_i, new String[]{param2});
+          stackIn_27_0 = EmailCheckResult.a(param1 ^ 4806, ActionSpell.field_i, new String[]{param2});
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

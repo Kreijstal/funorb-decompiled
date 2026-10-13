@@ -12,7 +12,7 @@ final class nb {
     private int field_c;
     private boolean field_s;
     private boolean field_p;
-    static wm field_i;
+    static wm nameCheckResultConsumed;
     private int field_f;
     private int field_b;
     private boolean field_g;
@@ -131,7 +131,7 @@ final class nb {
     public static void d(byte param0) {
         field_h = null;
         int var1 = -89 / ((param0 + 18) / 38);
-        field_i = null;
+        nameCheckResultConsumed = null;
     }
 
     private final boolean a(boolean param0, byte param1) {
@@ -714,6 +714,6 @@ final class nb {
     }
 
     static {
-        field_i = new wm();
+        nameCheckResultConsumed = new wm();
     }
 }

@@ -73,7 +73,7 @@ abstract class AiPlanningStrategy {
           }
           if (decompiledFrameRemainder1) {
             su.field_d.inputEnabled = true;
-            bn.field_c.text = fo.a(4800, ps.field_A, new String[]{vl.currentLocationLabel});
+            bn.field_c.text = EmailCheckResult.a(4800, ps.field_A, new String[]{EmailValidator.currentLocationLabel});
             ListMissionsConsoleCommand.field_E.scrollContainer.viewport.text = null;
             var6 = null;
             var7 = (SocialListEntry) (var4.first((byte) 109));
@@ -96,7 +96,7 @@ abstract class AiPlanningStrategy {
                   var7.width = ListMissionsConsoleCommand.field_E.listContent.width;
                   var9 = 0;
                   if (null != var7.locationLabel) {
-                    if (vl.currentLocationLabel != var7.locationLabel) {
+                    if (EmailValidator.currentLocationLabel != var7.locationLabel) {
                       var11 = 16777062;
                       var10 = 13421568;
                     } else {
@@ -171,11 +171,11 @@ abstract class AiPlanningStrategy {
                       !NodeIterator.field_a) {
                       if (!vi.field_d) {
                         var17 = tn.activeContextMenu;
-                        var18 = fo.a(4800, MusicPatchNode.field_k, new String[]{var16});
+                        var18 = EmailCheckResult.a(4800, MusicPatchNode.field_k, new String[]{var16});
                         var17.menu.addTextAction(8, var18, (byte) -115);
                       }
                       var17Lifetime1 = tn.activeContextMenu;
-                      var18Lifetime1 = fo.a(4800, DeployRequest.field_w, new String[]{var16});
+                      var18Lifetime1 = EmailCheckResult.a(4800, DeployRequest.field_w, new String[]{var16});
                       var17Lifetime1.menu.addTextAction(18, var18Lifetime1, (byte) -100);
                     }
                     var5 = var7;
@@ -319,30 +319,30 @@ abstract class AiPlanningStrategy {
         RuntimeException var4_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          mh.field_b = lm.field_d;
+          mh.accountNameCheckState = lm.nameCheckComplete;
           if (param3 != 255) {
             if (param3 >= 100 &&
               param3 <= 105) {
               var4 = param1;
               InteractiveWidget.a(-1, var4);
-              vl.field_k = BoundedFile.a(2, param1);
+              EmailValidator.accountNameCheckResult = BoundedFile.a(2, param1);
               if (var5 != 0) {
-                vl.field_k = DisplacedUnitMarker.a(-1, param3, param2);
+                EmailValidator.accountNameCheckResult = DisplacedUnitMarker.a(-1, param3, param2);
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-                vl.field_k = dc.a(stackIn_18_0, false);
+                EmailValidator.accountNameCheckResult = dc.a(stackIn_18_0, false);
                 InteractiveWidget.a(-1, (String[]) null);
               }
             } else {
-              vl.field_k = DisplacedUnitMarker.a(-1, param3, param2);
+              EmailValidator.accountNameCheckResult = DisplacedUnitMarker.a(-1, param3, param2);
               if (var5 != 0) {
                 stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-                vl.field_k = dc.a(stackIn_18_0, false);
+                EmailValidator.accountNameCheckResult = dc.a(stackIn_18_0, false);
                 InteractiveWidget.a(-1, (String[]) null);
               }
             }
           } else {
             stackIn_18_0 = !(MusicCrossfadeStream.field_z >= 13);
-            vl.field_k = dc.a(stackIn_18_0, false);
+            EmailValidator.accountNameCheckResult = dc.a(stackIn_18_0, false);
             InteractiveWidget.a(-1, (String[]) null);
           }
           if (param0 <= 28) {

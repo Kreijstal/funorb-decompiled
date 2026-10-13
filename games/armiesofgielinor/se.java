@@ -6,7 +6,7 @@ final class se {
     static int field_e;
     static MusicTrack field_h;
     static boolean field_f;
-    static fo field_g;
+    static EmailCheckResult emailCheckResult;
     static int field_d;
     static int field_a;
     static boolean field_c;
@@ -45,7 +45,7 @@ final class se {
             return stackIn_11_0;
           }
           if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
-            stackIn_14_0 = fo.a(4800, TextLineLayout.field_k, new String[]{name});
+            stackIn_14_0 = EmailCheckResult.a(4800, TextLineLayout.field_k, new String[]{name});
             return stackIn_14_0;
           }
           if (vg.ignoreCount >= 100) {
@@ -53,10 +53,10 @@ final class se {
             return stackIn_17_0;
           }
           if (jj.isFriend(89, name)) {
-            stackIn_20_0 = fo.a(4800, PopupPresentation.field_p, new String[]{name});
+            stackIn_20_0 = EmailCheckResult.a(4800, PopupPresentation.field_p, new String[]{name});
             return stackIn_20_0;
           }
-          packet = vl.outgoingPacket;
+          packet = EmailValidator.outgoingPacket;
           packet.writeCipheredOpcode(32161, packetOpcode);
           packet.position = packet.position + 1;
           payloadStart = packet.position;
@@ -84,7 +84,7 @@ final class se {
           field_f = false;
         }
         field_b = null;
-        field_g = null;
+        emailCheckResult = null;
         field_h = null;
     }
 

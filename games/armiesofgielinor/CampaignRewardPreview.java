@@ -36,18 +36,18 @@ final class CampaignRewardPreview {
 
     final static void writeAbuseReport(String targetName, int offenceId, long accountId, int obfuscationGuard, boolean mute, int packetOpcode) {
         int var7_int = 0;
-        vl.outgoingPacket.writeCipheredOpcode(obfuscationGuard ^ 3982, packetOpcode);
-        vl.outgoingPacket.position = vl.outgoingPacket.position + 1;
+        EmailValidator.outgoingPacket.writeCipheredOpcode(obfuscationGuard ^ 3982, packetOpcode);
+        EmailValidator.outgoingPacket.position = EmailValidator.outgoingPacket.position + 1;
         if (obfuscationGuard != 29231) {
           return;
         }
         try {
-          var7_int = vl.outgoingPacket.position;
-          vl.outgoingPacket.writeLong(accountId, obfuscationGuard ^ 38346879);
-          vl.outgoingPacket.writeNullTerminatedString(targetName, obfuscationGuard ^ 17460);
-          vl.outgoingPacket.writeByte(1, offenceId);
-          vl.outgoingPacket.writeByte(obfuscationGuard - 29230, mute ? 1 : 0);
-          vl.outgoingPacket.writeByteLengthPrefix(-var7_int + vl.outgoingPacket.position, 5930);
+          var7_int = EmailValidator.outgoingPacket.position;
+          EmailValidator.outgoingPacket.writeLong(accountId, obfuscationGuard ^ 38346879);
+          EmailValidator.outgoingPacket.writeNullTerminatedString(targetName, obfuscationGuard ^ 17460);
+          EmailValidator.outgoingPacket.writeByte(1, offenceId);
+          EmailValidator.outgoingPacket.writeByte(obfuscationGuard - 29230, mute ? 1 : 0);
+          EmailValidator.outgoingPacket.writeByteLengthPrefix(-var7_int + EmailValidator.outgoingPacket.position, 5930);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fu.B(" + (targetName != null ? "{...}" : "null") + ',' + offenceId + ',' + accountId + ',' + obfuscationGuard + ',' + mute + ',' + packetOpcode + ')');
         }

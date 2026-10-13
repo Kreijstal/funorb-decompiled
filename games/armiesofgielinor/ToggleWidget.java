@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vu extends InteractiveWidget {
+final class ToggleWidget extends InteractiveWidget {
     static SpellMenuGroup field_O;
     static ClientUiComponent field_Q;
     static java.applet.Applet field_L;
@@ -14,12 +14,12 @@ final class vu extends InteractiveWidget {
         super.activate(button, pointerX, pointerY, notifyListener);
     }
 
-    private vu(String param0, WidgetPainter param1, WidgetListener param2) {
-        super(param0, param1, param2);
+    private ToggleWidget(String text, WidgetPainter initialPainter, WidgetListener listener) {
+        super(text, initialPainter, listener);
         try {
           this.painter = t.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (text != null ? "{...}" : "null") + ',' + (initialPainter != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class vu extends InteractiveWidget {
 
     final static boolean isCurrentRoomOwner(boolean obfuscationGuard) {
         if (obfuscationGuard) {
-          vu.isCurrentRoomOwner(false);
+          ToggleWidget.isCurrentRoomOwner(false);
         }
         return currentRoom.ownerAccountId == ChannelBaseVolumeConsoleCommand.localAccountId ? true : false;
     }
@@ -49,12 +49,12 @@ final class vu extends InteractiveWidget {
         return FixedQuaternion.isOnlineFriendOrRoomMember(dj.chatRecipientAccountId, wm.chatRecipientNameKey, (byte) -116);
     }
 
-    private vu(String param0, WidgetListener param1) {
-        this(param0, t.field_c.field_j, param1);
+    private ToggleWidget(String text, WidgetListener listener) {
+        this(text, t.field_c.field_j, listener);
         try {
           this.painter = t.field_c.field_i;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,12 +116,12 @@ final class vu extends InteractiveWidget {
         }
     }
 
-    vu(String param0, WidgetListener param1, boolean param2) {
-        this(param0, param1);
+    ToggleWidget(String text, WidgetListener listener, boolean active) {
+        this(text, listener);
         try {
-          this.active = param2 ? true : false;
+          this.active = active ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + active + ')');
         }
     }
 

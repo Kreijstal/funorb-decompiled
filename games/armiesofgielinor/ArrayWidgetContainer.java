@@ -178,7 +178,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           }
           if (var11 != var12) {
             SoftwareRaster.b(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
-            fe.c(fo.a(4800, td.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
+            fe.c(EmailCheckResult.a(4800, td.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
           } else {
             SoftwareRaster.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
             fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 + 30)), 16777215, true);
@@ -225,7 +225,7 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
             var13++;
           }
           if (param2.accessoryType > 0) {
-            BattleCharacter.field_h[uj.field_o[param2.accessoryType - 1]].h(-((3 & var13) * 30) + (235 + param4), 30 * (var13 >> 2) - 36 - (-param6 - param7));
+            BattleCharacter.field_h[AccountNameAvailabilityValidator.field_o[param2.accessoryType - 1]].h(-((3 & var13) * 30) + (235 + param4), 30 * (var13 >> 2) - 36 - (-param6 - param7));
             km.field_h[0].h(param4 + 233 - 30 * (3 & var13), (var13 >> 2) * 30 + param7 + param6 - 37);
             var13++;
           }

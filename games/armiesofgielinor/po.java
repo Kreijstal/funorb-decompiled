@@ -62,7 +62,7 @@ final class po {
         String var4Lifetime3;
         String var4Lifetime4;
         String var4Lifetime1Lifetime1;
-        stackIn_3_0 = (null == no.roomSetup) ? 0 : 1;
+        stackIn_3_0 = (null == NumericDateInputWidget.roomSetup) ? 0 : 1;
         var3 = stackIn_3_0;
         if (rs.keyCode != 9) {
           if (obfuscationGuard != 6150) {
@@ -130,14 +130,14 @@ final class po {
           }
           return true;
         }
-        if (rb.canOpenQuickChatResponses(ma.responseTargetAccountId, WeightedScoreStrategy.responseTargetAccountName, -17231, no.responseTargetChannel, rv.responsePhraseIds)) {
-          if (2 == no.responseTargetChannel) {
-            return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.responseTargetAccountName, rv.responsePhraseIds, ma.responseTargetAccountId, no.responseTargetChannel);
+        if (DebouncedValidator.canOpenQuickChatResponses(ValidatedTextWidget.responseTargetAccountId, WeightedScoreStrategy.responseTargetAccountName, -17231, NumericDateInputWidget.responseTargetChannel, rv.responsePhraseIds)) {
+          if (2 == NumericDateInputWidget.responseTargetChannel) {
+            return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.responseTargetAccountName, rv.responsePhraseIds, ValidatedTextWidget.responseTargetAccountId, NumericDateInputWidget.responseTargetChannel);
           }
           if (var3 != 0) {
             return false;
           }
-          return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.responseTargetAccountName, rv.responsePhraseIds, ma.responseTargetAccountId, no.responseTargetChannel);
+          return QuickChatCommandDefinition.openQuickChatResponses(obfuscationGuard ^ 6251, WeightedScoreStrategy.responseTargetAccountName, rv.responsePhraseIds, ValidatedTextWidget.responseTargetAccountId, NumericDateInputWidget.responseTargetChannel);
         }
         if (obfuscationGuard != 6150) {
           field_a = (String) null;

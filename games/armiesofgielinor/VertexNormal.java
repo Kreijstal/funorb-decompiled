@@ -85,12 +85,12 @@ final class VertexNormal {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (vu.currentRoom != null && (null != ep.field_p ||
+          if (ToggleWidget.currentRoom != null && (null != ep.field_p ||
             iv.field_e != null ||
             jv.field_d != null ||
             CombatPresentation.field_j != null)) {
             for (var9 = 0; var9 < tq.gameOptionCount; var9++) {
-              var10_int = vu.currentRoom.gameOptions[var9] & 255;
+              var10_int = ToggleWidget.currentRoom.gameOptions[var9] & 255;
               if (null != ep.field_p &&
                 null != ep.field_p[var9] &&
                 ep.field_p[var9][var10_int]) {
@@ -220,11 +220,11 @@ final class VertexNormal {
               var12.admissionButton.matchedButtonTextColour = var24_int;
               if (bu.field_a != param4) {
                 if (var12.invitationSent) {
-                  var12.nameComponent.text = fo.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
+                  var12.nameComponent.text = EmailCheckResult.a(param1 ^ 4671, AiPlanningStrategy.field_g, new String[]{var20});
                   var12.cancelRejectButton.text = ac.field_s;
                 } else {
                   if (var12.joinRequested) {
-                    var12.nameComponent.text = fo.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
+                    var12.nameComponent.text = EmailCheckResult.a(param1 + 4545, DeployEvent.field_G, new String[]{var20});
                     var12.admissionButton.text = LeaderEscortCondition.field_g;
                     var12.cancelRejectButton.text = SpellConfirmationDialog.field_l;
                   } else {
@@ -232,13 +232,13 @@ final class VertexNormal {
                   }
                 }
               } else {
-                if (!vu.currentRoom.playing) {
+                if (!ToggleWidget.currentRoom.playing) {
                   var12.cancelRejectButton.text = bq.field_a;
                 }
               }
               var25_int = 0;
-              if (null != vu.currentRoom &&
-                vu.isCurrentRoomOwner(false) &&
+              if (null != ToggleWidget.currentRoom &&
+                ToggleWidget.isCurrentRoomOwner(false) &&
                 ChannelBaseVolumeConsoleCommand.localAccountId != var12.accountId) {
                 if (null != var12.admissionButton.text) {
                   var26 = var12.admissionButton.getPreferredWidth(104) + MusicPatchNode.field_l * 2;
@@ -323,7 +323,7 @@ final class VertexNormal {
               if (ChannelBaseVolumeConsoleCommand.localAccountId != var12.accountId) {
                 if (var5_int != 0 &&
                   !var12.packedFlag0) {
-                  var24Lifetime2 = fo.a(param1 + 4545, TickCounter.field_b, new String[]{var20});
+                  var24Lifetime2 = EmailCheckResult.a(param1 + 4545, TickCounter.field_b, new String[]{var20});
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -334,23 +334,23 @@ final class VertexNormal {
                     if (var6 <= var12.rating) {
                       if ((~var12.optionUnlockMask & var8) != 0) {
                         var25_int = fd.a(true, ~var12.optionUnlockMask & var8);
-                        var24Lifetime2 = fo.a(4800, h.field_f, new String[]{var20});
+                        var24Lifetime2 = EmailCheckResult.a(4800, h.field_f, new String[]{var20});
                         if (0 < var25_int &&
                           jl.field_c != null &&
                           jl.field_c.length >= var25_int &&
                           jl.field_c[var25_int - 1] != null) {
-                          var24Lifetime2 = fo.a(4800, jl.field_c[-1 + var25_int][2], new String[]{var20});
+                          var24Lifetime2 = EmailCheckResult.a(4800, jl.field_c[-1 + var25_int][2], new String[]{var20});
                         }
                       }
                     } else {
-                      var24Lifetime2 = fo.a(4800, bk.field_g, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.a(4800, bk.field_g, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.ratedGamesPlayed + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = fo.a(4800, BattlefieldTheme.field_r, new String[]{var20});
+                      var24Lifetime2 = EmailCheckResult.a(4800, BattlefieldTheme.field_r, new String[]{var20});
                     }
-                    var24Lifetime2 = fo.a(4800, AccountNamePrompt.field_Ib, new String[]{var20, Integer.toString(var25_int)});
+                    var24Lifetime2 = EmailCheckResult.a(4800, AccountNamePrompt.field_Ib, new String[]{var20, Integer.toString(var25_int)});
                   }
                 }
               } else {
@@ -363,7 +363,7 @@ final class VertexNormal {
                     if (var25_int == 1) {
                       var24Lifetime2 = tn.field_Y;
                     }
-                    var24Lifetime2 = fo.a(4800, GlobalSpell.field_j, new String[]{null, Integer.toString(var25_int)});
+                    var24Lifetime2 = EmailCheckResult.a(4800, GlobalSpell.field_j, new String[]{null, Integer.toString(var25_int)});
                   } else {
                     if (var6 <= var12.rating) {
                       if (0 != (var8 & ~var12.optionUnlockMask)) {
@@ -377,7 +377,7 @@ final class VertexNormal {
                         }
                       }
                     } else {
-                      var24Lifetime2 = fo.a(4800, vi.field_b, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.a(4800, vi.field_b, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -392,7 +392,7 @@ final class VertexNormal {
                 var25 = null;
                 var26Lifetime1 = 0;
                 for (var27_int = 0; var27_int < tq.gameOptionCount; var27_int++) {
-                  var28 = vu.currentRoom.gameOptions[var27_int] & 255;
+                  var28 = ToggleWidget.currentRoom.gameOptions[var27_int] & 255;
                   var29 = 0;
                   if (ep.field_p != null &&
                     ep.field_p[var27_int] != null &&
@@ -445,23 +445,23 @@ final class VertexNormal {
                   }
                 }
                 if (param4 == bu.field_a &&
-                  vu.isCurrentRoomOwner(false)) {
+                  ToggleWidget.isCurrentRoomOwner(false)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + IterableDualNodeDeque.field_d + (String) (var25);
                   } else {
-                    var24Lifetime2 = var34 + "<br>" + fo.a(4800, DualNodeHashTable.field_c, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + EmailCheckResult.a(4800, DualNodeHashTable.field_c, new String[]{(String) (var25)});
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var34 + "<br>" + fo.a(4800, BufferedFile.field_e, new String[]{(String) (var25)});
+                    var24Lifetime2 = var34 + "<br>" + EmailCheckResult.a(4800, BufferedFile.field_e, new String[]{(String) (var25)});
                   } else {
                     var24Lifetime2 = var34 + "<br>" + MusicCrossfadeStream.field_u + (String) (var25);
                   }
                 }
                 if (param4 == bu.field_a &&
-                  !vu.isCurrentRoomOwner(false)) {
-                  var27 = vu.currentRoom.ownerName;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + fo.a(param1 ^ 4671, DirectByteStorage.field_l, new String[]{var27});
+                  !ToggleWidget.isCurrentRoomOwner(false)) {
+                  var27 = ToggleWidget.currentRoom.ownerName;
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + EmailCheckResult.a(param1 ^ 4671, DirectByteStorage.field_l, new String[]{var27});
                 }
                 ad.field_I = (String) (var24Lifetime2);
               }

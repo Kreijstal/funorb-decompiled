@@ -210,7 +210,7 @@ final class jg extends IntrusiveNode {
                 var12.optionIconContainer.addChild(var12.spectatorIcon, param0 + 121);
               }
               var12.ratedIcon = new ClientUiComponent(0L, (ClientUiComponent) null);
-              if ((var14 & 1 << uj.field_j) != 0) {
+              if ((var14 & 1 << AccountNameAvailabilityValidator.field_j) != 0) {
                 var12.optionIconContainer.addChild(var12.ratedIcon, 86);
               }
               var45 = var12.gameTypeIcon;
@@ -422,7 +422,7 @@ final class jg extends IntrusiveNode {
                 var12.spectatorIcon.setBounds(var12.optionIconContainer.height, -20500, var52_ref.canvasWidth, 0, var34_int);
                 var34_int = var34_int + (var52_ref.canvasWidth + MusicPatch.field_n);
               }
-              if ((1 << uj.field_j & var14Lifetime1) != 0) {
+              if ((1 << AccountNameAvailabilityValidator.field_j & var14Lifetime1) != 0) {
                 stackIn_93_0 = ResourceProtocolClient.field_d;
                 if (!var12.rated) {
                   stackIn_94_1 = 0;
@@ -491,12 +491,12 @@ final class jg extends IntrusiveNode {
                 var31 = var31 + jn.field_d * var39Lifetime1;
               }
               if (var12.invitationReceived) {
-                var12.field_Ib.text = fo.a(4800, sq.field_n, new String[]{var32});
+                var12.field_Ib.text = EmailCheckResult.a(4800, sq.field_n, new String[]{var32});
                 var12.field_Ib.setBounds(jn.field_d, -20500, -(2 * MusicPatchNode.field_l) + var12.width, var31, MusicPatchNode.field_l);
                 var31 = var31 + jn.field_d;
               }
               if (var12.joinRequestSent) {
-                var12.field_sc.text = fo.a(4800, GameplayController.field_A, new String[]{var32});
+                var12.field_sc.text = EmailCheckResult.a(4800, GameplayController.field_A, new String[]{var32});
                 var12.field_sc.setBounds(jn.field_d, -20500, var12.width - 2 * MusicPatchNode.field_l, var31, MusicPatchNode.field_l);
                 var31 = var31 + jn.field_d;
               }
@@ -539,7 +539,7 @@ final class jg extends IntrusiveNode {
               } else {
                 var34 = ResourceRequest.field_u[var12.gameType];
               }
-              ad.field_I = vu.field_P + " - " + var34;
+              ad.field_I = ToggleWidget.field_P + " - " + var34;
             }
             if (var12.ratedIcon.heldButtonMatches) {
               if (var12.rated) {

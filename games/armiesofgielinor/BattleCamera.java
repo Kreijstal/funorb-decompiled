@@ -1070,7 +1070,7 @@ final class BattleCamera {
               stackIn_20_0 = !(40 + var11 >= var7);
               bi.a(stackIn_20_0, var7, var6, param0 ^ 132, var8, var9);
               stackIn_23_0 = !(var7 <= var11 + 120);
-              wd.a(stackIn_23_0, var6, (byte) -128, var9 - 2, -80 + var7, var8 + 2);
+              AccountNameCheckResult.a(stackIn_23_0, var6, (byte) -128, var9 - 2, -80 + var7, var8 + 2);
               stackIn_26_0 = !(var7 <= 200 + var11);
               ActionRequest.a(stackIn_26_0, 4 + var8, var6, (byte) 120, var9 - 4, var7 - 160);
             }

@@ -84,14 +84,14 @@ final class tk implements WidgetPainter {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        vu var11 = null;
+        ToggleWidget var11 = null;
         try {
-          if (widget instanceof vu) {
+          if (widget instanceof ToggleWidget) {
             stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (vu) (stackIn_3_0);
+          var11 = (ToggleWidget) (stackIn_3_0);
           if (var11 != null) {
             renderFlag = renderFlag & var11.enabled;
           }

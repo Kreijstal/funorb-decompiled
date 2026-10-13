@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class en extends DequeWidgetContainer implements eg {
-    private sb field_H;
+abstract class DateInputWidget extends DequeWidgetContainer implements ValidationProvider {
+    private DateOfBirthValidator validator;
     static BinaryBitmapFont field_E;
     static int field_F;
     static String field_G;
 
-    abstract int a(byte param0);
+    abstract int getYear(byte obfuscationGuard);
 
     public static void n(int param0) {
         if (param0 != 0) {
@@ -17,20 +17,20 @@ abstract class en extends DequeWidgetContainer implements eg {
         field_E = null;
     }
 
-    void a(byte param0, sb param1) {
+    void setDateValidator(byte obfuscationGuard, DateOfBirthValidator validator) {
         try {
-          if (param0 >= -21) {
+          if (obfuscationGuard >= -21) {
             PacketBuffer var4 = (PacketBuffer) null;
-            en.readUnsignedByteArray((PacketBuffer) null, (byte) -110);
+            DateInputWidget.readUnsignedByteArray((PacketBuffer) null, (byte) -110);
           }
-          this.field_H = param1;
-          this.field_H.field_j = this;
+          this.validator = validator;
+          this.validator.input = this;
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "en.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "en.I(" + obfuscationGuard + ',' + (validator != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract int l(int param0);
+    abstract int getDay(int obfuscationGuard);
 
     final static int[] readUnsignedByteArray(PacketBuffer packet, byte obfuscationGuard) {
         int var3 = 0;
@@ -46,7 +46,7 @@ abstract class en extends DequeWidgetContainer implements eg {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != -24) {
-            en.n(-95);
+            DateInputWidget.n(-95);
           }
           var5 = new int[packet.readUnsignedByte(obfuscationGuard ^ -24)];
           var2 = var5;
@@ -69,22 +69,22 @@ abstract class en extends DequeWidgetContainer implements eg {
         }
     }
 
-    en(int param0, int param1, int param2, int param3, WidgetPainter param4) {
-        super(param0, param1, param2, param3, param4);
+    DateInputWidget(int x, int y, int width, int height, WidgetPainter painter) {
+        super(x, y, width, height, painter);
     }
 
-    public final n a(int param0) {
-        if (param0 != -918933630) {
+    public final ValidationSource getValidationSource(int obfuscationGuard) {
+        if (obfuscationGuard != -918933630) {
           PacketBuffer var3 = (PacketBuffer) null;
-          en.readUnsignedByteArray((PacketBuffer) null, (byte) 126);
-          return (n) ((Object) this.field_H);
+          DateInputWidget.readUnsignedByteArray((PacketBuffer) null, (byte) 126);
+          return (ValidationSource) ((Object) this.validator);
         }
-        return (n) ((Object) this.field_H);
+        return (ValidationSource) ((Object) this.validator);
     }
 
-    abstract int m(int param0);
+    abstract int getMonthIndex(int obfuscationGuard);
 
-    abstract boolean k(int param0);
+    abstract boolean isDateEmpty(int obfuscationGuard);
 
     static {
         field_G = "Loading extra data";

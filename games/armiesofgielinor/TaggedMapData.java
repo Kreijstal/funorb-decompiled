@@ -26,37 +26,37 @@ final class TaggedMapData implements TaggedFieldReader {
         int var6Lifetime3;
         int var7Lifetime4;
         int var7Lifetime1Lifetime1;
-        if (ib.field_j < 0) {
+        if (PasswordValidator.field_j < 0) {
           return;
         }
         int var3 = -135 + param1;
         int var4 = param0 - 35;
         int var5 = 256;
-        if (!(ib.field_j >= 75)) {
-          var5 = (ib.field_j << 8) / 75;
+        if (!(PasswordValidator.field_j >= 75)) {
+          var5 = (PasswordValidator.field_j << 8) / 75;
         }
-        if (!(ib.field_j <= 200)) {
-          var5 = (250 - ib.field_j << 8) / 50;
+        if (!(PasswordValidator.field_j <= 200)) {
+          var5 = (250 - PasswordValidator.field_j << 8) / 50;
         }
         CombatSandbox.a(dc.field_n, 3);
         TriangleRasterizer.useRasterClip();
         SoftwareRaster.b();
-        rb.e(9);
+        DebouncedValidator.e(9);
         if (var5 < 256) {
           SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, -var5 + 256);
           QuickChatPhraseRepository.popRasterState(-18862);
           if (param2 > -60) {
             return;
           }
-          if (150 <= ib.field_j) {
-            wd.field_k.e(var3 + 15, var4 + 10, var5);
+          if (150 <= PasswordValidator.field_j) {
+            AccountNameCheckResult.field_k.e(var3 + 15, var4 + 10, var5);
           } else {
             dc.field_n.h(var3, var4);
           }
-          var6 = -125 + ib.field_j;
+          var6 = -125 + PasswordValidator.field_j;
           if (var6 > 0) {
             if (50 <= var6) {
-              var6 = ib.field_j - 140;
+              var6 = PasswordValidator.field_j - 140;
               if (var6 > 0) {
                 var7 = 256;
                 if (var6 < 20) {
@@ -76,7 +76,7 @@ final class TaggedMapData implements TaggedFieldReader {
                   kq.field_P.f(var3, var4, var7);
                 }
               }
-              var6 = ib.field_j - 140;
+              var6 = PasswordValidator.field_j - 140;
               if (var6 > 0) {
                 var7 = 256;
                 if (var6 < 20) {
@@ -87,7 +87,7 @@ final class TaggedMapData implements TaggedFieldReader {
             }
             return;
           }
-          var6Lifetime3 = ib.field_j - 140;
+          var6Lifetime3 = PasswordValidator.field_j - 140;
           if (var6Lifetime3 > 0) {
             var7Lifetime4 = 256;
             if (var6Lifetime3 < 20) {
@@ -101,11 +101,11 @@ final class TaggedMapData implements TaggedFieldReader {
         if (param2 > -60) {
           return;
         }
-        if (150 <= ib.field_j) {
-          wd.field_k.e(var3 + 15, var4 + 10, var5);
-          var6Lifetime1 = -125 + ib.field_j;
+        if (150 <= PasswordValidator.field_j) {
+          AccountNameCheckResult.field_k.e(var3 + 15, var4 + 10, var5);
+          var6Lifetime1 = -125 + PasswordValidator.field_j;
           if (var6Lifetime1 <= 0) {
-            var6Lifetime1 = ib.field_j - 140;
+            var6Lifetime1 = PasswordValidator.field_j - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1 = 256;
               if (var6Lifetime1 < 20) {
@@ -116,7 +116,7 @@ final class TaggedMapData implements TaggedFieldReader {
             return;
           }
           if (50 <= var6Lifetime1) {
-            var6Lifetime1 = ib.field_j - 140;
+            var6Lifetime1 = PasswordValidator.field_j - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime1 = 256;
               if (var6Lifetime1 < 20) {
@@ -128,7 +128,7 @@ final class TaggedMapData implements TaggedFieldReader {
             if (20 > var6Lifetime1) {
               var7Lifetime1Lifetime1 = var6Lifetime1 * 256 / 20;
               kq.field_P.f(var3, var4, var7Lifetime1Lifetime1);
-              var6Lifetime1 = ib.field_j - 140;
+              var6Lifetime1 = PasswordValidator.field_j - 140;
               if (var6Lifetime1 > 0) {
                 var7Lifetime1Lifetime1 = 256;
                 if (var6Lifetime1 < 20) {
@@ -141,7 +141,7 @@ final class TaggedMapData implements TaggedFieldReader {
             if (var6Lifetime1 >= 30) {
               var7Lifetime1Lifetime1 = (-var6Lifetime1 + 50) * 256 / 20;
               kq.field_P.f(var3, var4, var7Lifetime1Lifetime1);
-              var6Lifetime1 = ib.field_j - 140;
+              var6Lifetime1 = PasswordValidator.field_j - 140;
               if (var6Lifetime1 > 0) {
                 var7Lifetime1Lifetime1 = 256;
                 if (var6Lifetime1 < 20) {
@@ -152,7 +152,7 @@ final class TaggedMapData implements TaggedFieldReader {
               return;
             }
             kq.field_P.f(var3, var4, 256);
-            var6Lifetime1 = ib.field_j - 140;
+            var6Lifetime1 = PasswordValidator.field_j - 140;
             if (var6Lifetime1 > 0) {
               var7Lifetime1Lifetime1 = 256;
               if (var6Lifetime1 < 20) {
@@ -165,9 +165,9 @@ final class TaggedMapData implements TaggedFieldReader {
           return;
         }
         dc.field_n.h(var3, var4);
-        var6Lifetime2 = -125 + ib.field_j;
+        var6Lifetime2 = -125 + PasswordValidator.field_j;
         if (var6Lifetime2 <= 0) {
-          var6Lifetime2 = ib.field_j - 140;
+          var6Lifetime2 = PasswordValidator.field_j - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime2 = 256;
             if (var6Lifetime2 < 20) {
@@ -178,7 +178,7 @@ final class TaggedMapData implements TaggedFieldReader {
           return;
         }
         if (50 <= var6Lifetime2) {
-          var6Lifetime2 = ib.field_j - 140;
+          var6Lifetime2 = PasswordValidator.field_j - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime3 = 256;
             if (var6Lifetime2 < 20) {
@@ -190,7 +190,7 @@ final class TaggedMapData implements TaggedFieldReader {
           if (20 > var6Lifetime2) {
             var7Lifetime3 = var6Lifetime2 * 256 / 20;
             kq.field_P.f(var3, var4, var7Lifetime3);
-            var6Lifetime2 = ib.field_j - 140;
+            var6Lifetime2 = PasswordValidator.field_j - 140;
             if (var6Lifetime2 > 0) {
               var7Lifetime3 = 256;
               if (var6Lifetime2 < 20) {
@@ -203,7 +203,7 @@ final class TaggedMapData implements TaggedFieldReader {
           if (var6Lifetime2 >= 30) {
             var7Lifetime3 = (-var6Lifetime2 + 50) * 256 / 20;
             kq.field_P.f(var3, var4, var7Lifetime3);
-            var6Lifetime2 = ib.field_j - 140;
+            var6Lifetime2 = PasswordValidator.field_j - 140;
             if (var6Lifetime2 > 0) {
               var7Lifetime3 = 256;
               if (var6Lifetime2 < 20) {
@@ -214,7 +214,7 @@ final class TaggedMapData implements TaggedFieldReader {
             return;
           }
           kq.field_P.f(var3, var4, 256);
-          var6Lifetime2 = ib.field_j - 140;
+          var6Lifetime2 = PasswordValidator.field_j - 140;
           if (var6Lifetime2 > 0) {
             var7Lifetime3 = 256;
             if (var6Lifetime2 < 20) {
@@ -290,7 +290,7 @@ final class TaggedMapData implements TaggedFieldReader {
                   var8 = AiPlanner.readCompactInt(packet, true);
                   var9 = -var7 + packet.getReadBitPosition(false);
                   kq.enterTaggedPayload(var7, -24232, var9, var8, packet);
-                  this.tiles[var6] = rb.readTaggedMapTile(var8, (byte) 70, packet);
+                  this.tiles[var6] = DebouncedValidator.readTaggedMapTile(var8, (byte) 70, packet);
                   ao.finishTaggedPayload(var7, -126, var9, packet, var8);
                 }
               } else {

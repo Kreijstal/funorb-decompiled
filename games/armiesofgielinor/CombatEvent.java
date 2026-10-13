@@ -37,7 +37,7 @@ final class CombatEvent extends GameEvent {
     }
 
     final static void writeRoomAdmissionRequest(int packetOpcode, int obfuscationGuard, int roomId) {
-        CipherPacketBuffer var3 = vl.outgoingPacket;
+        CipherPacketBuffer var3 = EmailValidator.outgoingPacket;
         var3.writeCipheredOpcode(32161, packetOpcode);
         var3.writeByte(1, 3);
         var3.writeByte(1, 8);

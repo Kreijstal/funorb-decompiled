@@ -144,7 +144,7 @@ abstract class vf {
             stackIn_12_0 = (SpellCastAction.field_s) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (vu.isCurrentRoomOwner(false)) {
+            if (ToggleWidget.isCurrentRoomOwner(false)) {
               stackIn_8_0 = (!param3.playing) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -191,8 +191,8 @@ abstract class vf {
               stackIn_41_0.selected = stackIn_42_1;
             }
             if (pu.field_k[0][2].hovered) {
-              if (!vu.isCurrentRoomOwner(false)) {
-                ad.field_I = fo.a(4800, op.field_a, new String[]{vu.currentRoom.ownerName});
+              if (!ToggleWidget.isCurrentRoomOwner(false)) {
+                ad.field_I = EmailCheckResult.a(4800, op.field_a, new String[]{ToggleWidget.currentRoom.ownerName});
               } else {
                 ad.field_I = ActionSpell.field_f;
               }
@@ -517,13 +517,13 @@ abstract class vf {
                     if (var11 != 0) {
                       var22_int = jv.field_d[var7][var9] - SummonAction.field_s;
                       if (var22_int != 1) {
-                        var21 = fo.a(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
+                        var21 = EmailCheckResult.a(4800, ByteStorage.field_a, new String[]{Integer.toString(var22_int)});
                       } else {
                         var21 = bt.field_a;
                       }
                     }
                     if (var12 != 0) {
-                      var31 = fo.a(4800, AnimationSequence.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(iv.field_e[var7][var9])});
+                      var31 = EmailCheckResult.a(4800, AnimationSequence.field_k, new String[]{Integer.toString(GlobalSpell.field_g), Integer.toString(iv.field_e[var7][var9])});
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -581,7 +581,7 @@ abstract class vf {
                     }
                   }
                   if (var23 == 0) {
-                    var21 = fo.a(4800, ab.field_e, new String[]{(String) (var22)});
+                    var21 = EmailCheckResult.a(4800, ab.field_e, new String[]{(String) (var22)});
                   } else {
                     var21 = mj.field_a + (String) (var22);
                   }
@@ -747,11 +747,11 @@ abstract class vf {
               var15 = var5 - 4096;
               var16 = this.field_k[var10];
               var12 = ListMissionsConsoleCommand.field_F[var4];
-              var18 = ma.a(var4, 3, (int) this.field_k[var16 + var8], var5);
-              var19 = ma.a(var14, 3, (int) this.field_k[var9 + var16], var5);
+              var18 = ValidatedTextWidget.a(var4, 3, (int) this.field_k[var16 + var8], var5);
+              var19 = ValidatedTextWidget.a(var14, 3, (int) this.field_k[var9 + var16], var5);
               var20 = (var12 * (var19 - var18) >> 12) + var18;
-              var18Lifetime1 = ma.a(var4, 3, (int) this.field_k[var17 + var8], var15);
-              var19Lifetime1 = ma.a(var14, 3, (int) this.field_k[var17 + var9], var15);
+              var18Lifetime1 = ValidatedTextWidget.a(var4, 3, (int) this.field_k[var17 + var8], var15);
+              var19Lifetime1 = ValidatedTextWidget.a(var14, 3, (int) this.field_k[var17 + var9], var15);
               var21 = var18Lifetime1 + (var12 * (-var18Lifetime1 + var19Lifetime1) >> 12);
               this.b(var24, (var13 * (-var20 + var21) >> 12) + var20, 19699);
             }

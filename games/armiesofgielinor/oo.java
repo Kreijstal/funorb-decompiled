@@ -18,14 +18,14 @@ final class oo {
     private boolean field_s;
     private int field_f;
     static String field_e;
-    static gu field_g;
+    static ValidationState validationValid;
     private int field_q;
     static String field_o;
     static String field_j;
 
     public static void b(int param0) {
         try {
-          field_g = null;
+          validationValid = null;
           field_o = null;
           field_d = (byte[][]) null;
           field_e = null;
@@ -74,7 +74,7 @@ final class oo {
           this.field_i = param2;
           if (null != this.field_i &&
             3 <= this.field_i.length) {
-            mk.field_h = param4;
+            TextFieldValidator.field_h = param4;
             return;
           }
           throw new IllegalArgumentException("");
@@ -226,7 +226,7 @@ final class oo {
                 return stackIn_73_0;
               }
             }
-            if (mk.field_h) {
+            if (TextFieldValidator.field_h) {
               while (Unit.pollKeyEvent((byte) -71)) {
                 var5 = this.c(127);
                 if (0 == var5) {
@@ -420,7 +420,7 @@ final class oo {
             UnitLossCondition.field_a = pv.a("members_expansion_screen", "frame", iw.field_p, 24914);
             ByteStorage.field_d = GameplayController.a("arrow", (byte) 51, "members_expansion_screen", iw.field_p);
             VerticalScrollbar.field_Sb = DropdownArrowPainter.a("arialish12", iw.field_p, AlphaWidgetContainer.field_H, (byte) -53, "");
-            kt.field_n = it.a("", iw.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");
+            EmailConfirmationValidator.field_n = it.a("", iw.field_p, AlphaWidgetContainer.field_H, (byte) -87, "pump32");
             UnitModelPreview.field_b = DiskCacheRequest.loadRgbSpriteByName("benefit_orbs", "members_expansion_screen", iw.field_p, false);
             QuickChatPhrase.field_D = DiskCacheRequest.loadRgbSpriteByName("button_text", "members_expansion_screen", iw.field_p, false);
             DiskCacheRequest.field_G = ac.a(iw.field_p, "button_highlights", (byte) -4, "members_expansion_screen");
@@ -520,9 +520,9 @@ final class oo {
               var3 = this.field_p * (var7.canvasWidth + 60) / qk.field_a;
               var4 = var3 - 30;
               if (!this.field_s) {
-                rb.a(58, -1708086482, 9, 256 * (var7.canvasWidth - var4) / 30, var4 * -256 / 30, var7);
+                DebouncedValidator.a(58, -1708086482, 9, 256 * (var7.canvasWidth - var4) / 30, var4 * -256 / 30, var7);
               } else {
-                rb.a(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.canvasWidth) / 30, var7);
+                DebouncedValidator.a(58, param0 ^ -1708085583, 9, var4 * -256 / 30, 256 * (-var4 + var7.canvasWidth) / 30, var7);
               }
             }
           }
@@ -664,7 +664,7 @@ final class oo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_t == null &&
-            null != kt.field_n) {
+            null != EmailConfirmationValidator.field_n) {
             this.field_t = new RgbSprite(622, 47);
             CombatSandbox.a(this.field_t, 3);
             SoftwareRaster.a(0, 0, 622, 47, 4540749, 65793);
@@ -673,10 +673,10 @@ final class oo {
             var12 = DirectByteStorage.a(var3, var2_int, -60);
             var11 = var12;
             var9 = var11;
-            this.a(var12, 622, this.field_c, 0, kt.field_n, (byte) 66, 47, 0);
+            this.a(var12, 622, this.field_c, 0, EmailConfirmationValidator.field_n, (byte) 66, 47, 0);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.field_m = new RgbSprite(475, 24);
-            this.a(this.field_m, -4, 0, UnitModelPreview.field_h, kt.field_n, var9, -124, 24, 475, 0.75f);
+            this.a(this.field_m, -4, 0, UnitModelPreview.field_h, EmailConfirmationValidator.field_n, var9, -124, 24, 475, 0.75f);
             if (param0 >= -103) {
               var8 = (BitmapFont) null;
               this.a((int[]) null, -60, (String) null, -5, (BitmapFont) null, (byte) 31, 126, -81);
@@ -688,9 +688,9 @@ final class oo {
             SoftwareRaster.a(0, var5.pixelHeight / 2, var5.pixelWidth, var5.pixelHeight, 16306250, 15568919);
             var6 = rv.field_a;
             var7 = AnimationFrameSet.field_B;
-            this.a(var5, -16, 0, var6, kt.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
-            this.a(var5, 20, 0, var7, kt.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
-            this.a(var5, 12 - kt.field_n.maxAscent + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], kt.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
+            this.a(var5, -16, 0, var6, EmailConfirmationValidator.field_n, var10, -112, var5.pixelHeight, var5.pixelWidth, 0.5f);
+            this.a(var5, 20, 0, var7, EmailConfirmationValidator.field_n, var10, -123, var5.pixelHeight, var5.pixelWidth, 0.5f);
+            this.a(var5, 12 - EmailConfirmationValidator.field_n.maxAscent + var5.pixelHeight / 2, 0, AnimationSequence.field_c[this.field_r], EmailConfirmationValidator.field_n, var10, -125, var5.pixelHeight / 3, var5.pixelWidth, 0.699999988079071f);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.field_b = new RgbSprite(121, 122);
             CombatSandbox.a(this.field_b, 3);
@@ -826,7 +826,7 @@ final class oo {
     static {
         field_d = new byte[250][];
         field_e = "Full screen";
-        field_g = new gu();
+        validationValid = new ValidationState();
         field_o = "This <%0> is currently wearing <%2>. Are you sure you wish to replace it with <%1>? The <%2> will be lost forever if you do this.";
         field_j = "Try again";
     }

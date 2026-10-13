@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rn {
-    static gu field_e;
+    static ValidationState validationInvalid;
     static int field_d;
     static ClientUiComponent field_a;
     static int consoleCallKind;
@@ -58,20 +58,20 @@ final class rn {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_e = null;
+          validationInvalid = null;
           field_b = null;
           field_a = null;
           return;
         }
         String var2 = (String) null;
         rn.a(-107, (String) null, true, true);
-        field_e = null;
+        validationInvalid = null;
         field_b = null;
         field_a = null;
     }
 
     static {
-        field_e = new gu();
+        validationInvalid = new ValidationState();
         field_b = "This structure is not captured";
         consoleCallKind = 3;
     }

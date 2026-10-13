@@ -34,19 +34,19 @@ final class pd {
         return -param0 + SoftwareRaster.height;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean hasInvalidPasswordLength(String password, int obfuscationGuard) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != null &&
-            param0.length() >= eb.field_b) {
-            if (param0.length() > db.field_g) {
+          if (password != null &&
+            password.length() >= eb.minimumPasswordLength) {
+            if (password.length() > db.maximumPasswordLength) {
               return true;
             }
-            if (param1 != 0) {
+            if (obfuscationGuard != 0) {
               field_g = (int[]) null;
             }
             return false;
@@ -57,12 +57,12 @@ final class pd {
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("pd.C(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
