@@ -235,10 +235,10 @@ final class QuickChatMenu extends ClientUiComponent {
               gt.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
-          ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
-          ac.activeTerrainSprites[var9 - (-1 - ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
-          ac.activeTerrainSprites[2 + var9 + ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
-          ac.activeTerrainSprites[3 + (var9 + ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -87))].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
+          ac.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -72))].b(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&
             (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {

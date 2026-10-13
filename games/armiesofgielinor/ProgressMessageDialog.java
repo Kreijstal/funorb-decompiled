@@ -194,11 +194,11 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             if (0 == rs.outgoingChatChannel) {
               return true;
             }
-            rd.clearChatText(8445);
+            FullscreenFocusCanvas.clearChatText(8445);
             return true;
           }
           if (UpkeepEvent.chatTextBuffer.length() <= 0) {
-            rd.clearChatText(8445);
+            FullscreenFocusCanvas.clearChatText(8445);
             return true;
           }
           var4_ref_String = UpkeepEvent.chatTextBuffer.toString();
@@ -209,7 +209,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             var15 = (String) null;
             var14 = (String) null;
             LabeledWidgetContainer.appendSystemChatMessage((String) null, 2, -18119, (String) null, ContextualRuntimeException.field_a, 0);
-            rd.clearChatText(8445);
+            FullscreenFocusCanvas.clearChatText(8445);
             return true;
           }
           var5 = rs.outgoingChatChannel;
@@ -221,7 +221,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
             ud.setChatFilter(1, false, var5, param2);
           }
           it.writeChatMessage(-1, -83, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, param0, var4_ref_String);
-          rd.clearChatText(8445);
+          FullscreenFocusCanvas.clearChatText(8445);
           return true;
         }
         if (85 == rs.keyCode) {
@@ -393,7 +393,7 @@ class ProgressMessageDialog extends ContentTransitionDialog implements WidgetAct
               if (this.field_mb) {
                 buttonLabel = RegionAnchor.field_k;
               } else {
-                buttonLabel = fj.field_a;
+                buttonLabel = ViewportManager.field_a;
               }
               ((DialogMessagePane) (Object) paneAlias).addActionButton(buttonLabel, -1, obfuscationGuard ^ 99);
             } else {

@@ -174,7 +174,7 @@ final class ClientContextMenu {
 
     final static void a(ResourceArchive param0, int param1, boolean param2, ResourceArchive param3) {
         try {
-          bk.a(param2, IconLabelControl.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, ClientUiNode.field_x, GameClock.field_e, WeightedLruCache.field_b, PreparedAction.field_o, rd.field_e);
+          bk.a(param2, IconLabelControl.field_Lb, eq.field_h, LeaderEscortCondition.field_f, DualLinkedNode.field_k, -106, ke.field_e, ClientUiNode.field_x, GameClock.field_e, WeightedLruCache.field_b, PreparedAction.field_o, FullscreenFocusCanvas.field_e);
           dh.field_n = fk.loadRgbSpritesByName("chatfilter", (byte) -125, param3, "lobby");
           BattlefieldTheme.field_k[0] = QuickChatPhrase.field_v;
           BattlefieldTheme.field_k[1] = IterableDualNodeDeque.field_a;

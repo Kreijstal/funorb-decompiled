@@ -266,7 +266,7 @@ final class pv {
           var4_int = param2.getGroupId(param0, 124);
           var5 = param2.getFileId((byte) 121, var4_int, param1);
           if (param3 == 24914) {
-            stackIn_4_0 = ls.a(var5, param2, var4_int, -80);
+            stackIn_4_0 = FullscreenDisplayMode.a(var5, param2, var4_int, -80);
             return stackIn_4_0;
           }
           stackIn_2_0 = (IndexedSprite) null;

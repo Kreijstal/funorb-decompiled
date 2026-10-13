@@ -740,8 +740,8 @@ final class oo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          if (rd.gameplayController != null) {
-            ToggleTurnSkipConsoleCommand.selectMusicWithDefaultProfile(90, rd.gameplayController.field_d);
+          if (FullscreenFocusCanvas.gameplayController != null) {
+            ToggleTurnSkipConsoleCommand.selectMusicWithDefaultProfile(90, FullscreenFocusCanvas.gameplayController.field_d);
           } else {
             if (SectorCacheStore.field_a != null) {
               ToggleTurnSkipConsoleCommand.selectMusicWithDefaultProfile(102, SectorCacheStore.field_a.field_d);

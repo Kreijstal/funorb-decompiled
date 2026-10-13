@@ -19,12 +19,12 @@ final class bw {
     final static void d(int param0) {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (rd.gameplayController.field_u) {
-          if (0 == (1 << rd.gameplayController.controlledPlayerId & rd.gameplayController.battlefield.field_i)) {
-            if (rd.gameplayController.battlefield.field_i != 0) {
+        if (FullscreenFocusCanvas.gameplayController.field_u) {
+          if (0 == (1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId & FullscreenFocusCanvas.gameplayController.battlefield.field_i)) {
+            if (FullscreenFocusCanvas.gameplayController.battlefield.field_i != 0) {
               DisplacedUnitMarker.field_t[12] = CampaignUnitOverride.field_c;
             } else {
-              if ((1 << rd.gameplayController.controlledPlayerId | rd.gameplayController.field_hb) != (1 << rd.gameplayController.battlefield.playerCount) - 1) {
+              if ((1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId | FullscreenFocusCanvas.gameplayController.field_hb) != (1 << FullscreenFocusCanvas.gameplayController.battlefield.playerCount) - 1) {
                 DisplacedUnitMarker.field_t[12] = fa.field_e;
               } else {
                 DisplacedUnitMarker.field_t[12] = TabbedPanel.field_Nb;
@@ -34,13 +34,13 @@ final class bw {
             DisplacedUnitMarker.field_t[12] = ti.field_a;
           }
         } else {
-          if (0 != (1 << rd.gameplayController.controlledPlayerId & rd.gameplayController.battlefield.field_i)) {
+          if (0 != (1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId & FullscreenFocusCanvas.gameplayController.battlefield.field_i)) {
             DisplacedUnitMarker.field_t[12] = is.field_c;
           } else {
-            if (rd.gameplayController.battlefield.field_i != 0) {
+            if (FullscreenFocusCanvas.gameplayController.battlefield.field_i != 0) {
               DisplacedUnitMarker.field_t[12] = BitmapTextWidgetPainter.field_s;
             } else {
-              if (-1 + (1 << rd.gameplayController.battlefield.playerCount) != (1 << rd.gameplayController.controlledPlayerId | rd.gameplayController.field_hb)) {
+              if (-1 + (1 << FullscreenFocusCanvas.gameplayController.battlefield.playerCount) != (1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId | FullscreenFocusCanvas.gameplayController.field_hb)) {
                 DisplacedUnitMarker.field_t[12] = db.field_h;
               } else {
                 DisplacedUnitMarker.field_t[12] = ji.field_b;

@@ -3587,7 +3587,7 @@ final class GameplayController {
             this.updateCamera((byte) -42);
             if (!jj.b((byte) -73)) {
               this.b(this.b(true), 123);
-              if (null == rd.gameplayController &&
+              if (null == FullscreenFocusCanvas.gameplayController &&
                 SectorCacheStore.field_a == null) {
                 return;
               }
@@ -5329,7 +5329,7 @@ final class GameplayController {
           }
           if (rs.keyCode == 84 &&
             br.heldKeys[86]) {
-            if (null != FixedQuaternion.field_a) {
+            if (null != FixedQuaternion.fullscreenCanvas) {
               ck.b(-122);
               if (var8 != 0) {
                 ke.field_a = false;
@@ -12214,7 +12214,7 @@ final class GameplayController {
             var15[var16_int] = 0;
             var16_int++;
           } while (var26 == 0);
-          if (0 >= LoginForm.field_M) {
+          if (0 >= LoginForm.memberEntitlementValue) {
             this.field_Y = Widget.field_o;
             if (var26 != 0) {
               this.field_Y = pg.playerProfile.unitUnlockMasks;

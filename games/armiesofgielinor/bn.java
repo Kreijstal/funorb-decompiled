@@ -7,7 +7,7 @@ final class bn {
     static ModelMeshBase[] field_a;
     static DraggableWidgetContainer draggedWidget;
     static String field_d;
-    static int field_b;
+    static int viewportWidth;
     static String field_g;
 
     final static void a(byte param0, float param1, String param2) {
@@ -109,11 +109,11 @@ final class bn {
           if (param2 < 60) {
             return;
           }
-          if (fj.field_d.pressedButton != 0) {
+          if (ViewportManager.field_d.pressedButton != 0) {
             if (bj.field_k) {
               ValidationState.a(-61, param3);
             } else {
-              if (LoginForm.field_M > 0) {
+              if (LoginForm.memberEntitlementValue > 0) {
                 ValidationState.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j &&
@@ -146,11 +146,11 @@ final class bn {
           if (param2 < 60) {
             return;
           }
-          if (fj.field_d.pressedButton != 0) {
+          if (ViewportManager.field_d.pressedButton != 0) {
             if (bj.field_k) {
               ValidationState.a(-61, param3);
             } else {
-              if (LoginForm.field_M > 0) {
+              if (LoginForm.memberEntitlementValue > 0) {
                 ValidationState.a(-61, param3);
               } else {
                 if (2 <= BufferedSocket.field_j) {

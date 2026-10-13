@@ -883,7 +883,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_unselectedoptions");
                 if (null != var2) {
-                  rd.field_f = uu.a(var2, (byte) -92);
+                  FullscreenFocusCanvas.field_f = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "gameopt_pleaseselectoption1");
                 if (var2 != null) {
@@ -1137,7 +1137,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "back");
                 if (null != var2) {
-                  fj.field_a = uu.a(var2, (byte) 11);
+                  ViewportManager.field_a = uu.a(var2, (byte) 11);
                 }
                 var2 = NodeIterator.a(param0 + 132, "exitfullscreenmode");
                 if (null != var2) {
@@ -1341,51 +1341,51 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "monthnames,0");
                 if (var2 != null) {
-                  fj.field_q[0] = uu.a(var2, (byte) -117);
+                  ViewportManager.field_q[0] = uu.a(var2, (byte) -117);
                 }
                 var2 = NodeIterator.a(50, "monthnames,1");
                 if (var2 != null) {
-                  fj.field_q[1] = uu.a(var2, (byte) 26);
+                  ViewportManager.field_q[1] = uu.a(var2, (byte) 26);
                 }
                 var2 = NodeIterator.a(50, "monthnames,2");
                 if (var2 != null) {
-                  fj.field_q[2] = uu.a(var2, (byte) 59);
+                  ViewportManager.field_q[2] = uu.a(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "monthnames,3");
                 if (var2 != null) {
-                  fj.field_q[3] = uu.a(var2, (byte) -106);
+                  ViewportManager.field_q[3] = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "monthnames,4");
                 if (null != var2) {
-                  fj.field_q[4] = uu.a(var2, (byte) -99);
+                  ViewportManager.field_q[4] = uu.a(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "monthnames,5");
                 if (var2 != null) {
-                  fj.field_q[5] = uu.a(var2, (byte) 68);
+                  ViewportManager.field_q[5] = uu.a(var2, (byte) 68);
                 }
                 var2 = NodeIterator.a(50, "monthnames,6");
                 if (var2 != null) {
-                  fj.field_q[6] = uu.a(var2, (byte) 123);
+                  ViewportManager.field_q[6] = uu.a(var2, (byte) 123);
                 }
                 var2 = NodeIterator.a(param0 + 132, "monthnames,7");
                 if (var2 != null) {
-                  fj.field_q[7] = uu.a(var2, (byte) 75);
+                  ViewportManager.field_q[7] = uu.a(var2, (byte) 75);
                 }
                 var2 = NodeIterator.a(50, "monthnames,8");
                 if (var2 != null) {
-                  fj.field_q[8] = uu.a(var2, (byte) 122);
+                  ViewportManager.field_q[8] = uu.a(var2, (byte) 122);
                 }
                 var2 = NodeIterator.a(50, "monthnames,9");
                 if (null != var2) {
-                  fj.field_q[9] = uu.a(var2, (byte) -124);
+                  ViewportManager.field_q[9] = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "monthnames,10");
                 if (var2 != null) {
-                  fj.field_q[10] = uu.a(var2, (byte) 33);
+                  ViewportManager.field_q[10] = uu.a(var2, (byte) 33);
                 }
                 var2 = NodeIterator.a(50, "monthnames,11");
                 if (var2 != null) {
-                  fj.field_q[11] = uu.a(var2, (byte) -127);
+                  ViewportManager.field_q[11] = uu.a(var2, (byte) -127);
                 }
                 var2 = NodeIterator.a(50, "create_welcome");
                 if (null != var2) {
@@ -1557,7 +1557,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_optin_news_tooltip");
                 if (var2 != null) {
-                  rd.field_g = uu.a(var2, (byte) -109);
+                  FullscreenFocusCanvas.field_g = uu.a(var2, (byte) -109);
                 }
                 var2 = NodeIterator.a(50, "create_u13_email_tooltip");
                 if (null != var2) {
@@ -2286,7 +2286,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "orbpoints_colon");
                 if (var2 != null) {
-                  rd.field_h = uu.a(var2, (byte) -124);
+                  FullscreenFocusCanvas.field_h = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "orbcoins_colon");
                 if (null != var2) {
@@ -2718,7 +2718,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "graphics_ui_fs_countdown");
                 if (null != var2) {
-                  ls.field_d = uu.a(var2, (byte) 29);
+                  FullscreenDisplayMode.field_d = uu.a(var2, (byte) 29);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mb_caption_title");
                 if (var2 != null) {
@@ -2824,7 +2824,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "graphics_config_need_memory");
                 if (null != var2) {
-                  fj.field_w = uu.a(var2, (byte) -128);
+                  ViewportManager.field_w = uu.a(var2, (byte) -128);
                 }
                 var2 = NodeIterator.a(50, "pleasewait_dotdotdot");
                 if (var2 != null) {

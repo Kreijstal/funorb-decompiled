@@ -15,10 +15,10 @@ final class SpellConfirmationDialog {
     static ResourceArchive field_f;
     private String prompt;
 
-    final static void a(ls[] param0, int param1) {
+    final static void a(FullscreenDisplayMode[] param0, int param1) {
         int var3 = 0;
         int var2_int = 0;
-        ls var4 = null;
+        FullscreenDisplayMode var4 = null;
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;

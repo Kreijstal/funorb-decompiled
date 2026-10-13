@@ -82,10 +82,10 @@ abstract class ConsolePanel implements ap {
           if (overlayOpacity < 0) {
             overlayOpacity = 0;
           }
-          SoftwareRaster.b(this.panel.screenX, this.panel.screenY + this.panel.height, this.panel.width, -this.panel.height + (-this.panel.screenY + dt.field_a), 0, overlayOpacity >> 1);
+          SoftwareRaster.b(this.panel.screenX, this.panel.screenY + this.panel.height, this.panel.width, -this.panel.height + (-this.panel.screenY + dt.viewportHeight), 0, overlayOpacity >> 1);
           shadowY = 5 + this.panel.y + this.panel.height;
           for (shadowLayer = 0; shadowLayer < 6; shadowLayer++) {
-            SoftwareRaster.e(0, shadowY, bn.field_b, 0, shadowLayer << 5);
+            SoftwareRaster.e(0, shadowY, bn.viewportWidth, 0, shadowLayer << 5);
             shadowY--;
           }
           this.panel.draw(0 == (8 & this.frameTicks) ? true : false, 20);
@@ -208,10 +208,10 @@ abstract class ConsolePanel implements ap {
     final static void a(boolean param0) {
         int var2;
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if ((rd.gameplayController.battlefield.field_C & 1 << rd.gameplayController.controlledPlayerId) != 0) {
+        if ((FullscreenFocusCanvas.gameplayController.battlefield.field_C & 1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId) != 0) {
           DisplacedUnitMarker.field_t[10] = ContextActionMenu.field_Jb;
         } else {
-          if ((~rd.gameplayController.battlefield.eliminatedPlayerMask & rd.gameplayController.battlefield.field_C) == 0) {
+          if ((~FullscreenFocusCanvas.gameplayController.battlefield.eliminatedPlayerMask & FullscreenFocusCanvas.gameplayController.battlefield.field_C) == 0) {
             DisplacedUnitMarker.field_t[10] = uu.field_c;
           } else {
             DisplacedUnitMarker.field_t[10] = MatchSetupPanel.field_O;
@@ -562,7 +562,7 @@ abstract class ConsolePanel implements ap {
           selectionStyle = this.createSelectionStyle((byte) 71, 2263074);
           suggestionStyle = this.createBorderStyle(5592405, 2236962, 65793);
           this.panel = new ClientUiComponent(0L, panelStyle);
-          this.panel.setBounds(200, -20500, bn.field_b, -200, 0);
+          this.panel.setBounds(200, -20500, bn.viewportWidth, -200, 0);
           scrollbar = new VerticalScrollbar(0L, arrowStyle, arrowStyle, trackStyle, thumbStyle);
           outputContent = new ClientUiComponent();
           outputContent.children = new NodeDeque();

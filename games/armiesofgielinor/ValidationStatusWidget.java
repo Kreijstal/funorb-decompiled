@@ -230,34 +230,34 @@ final class ValidationStatusWidget extends HotspotTextWidget {
               QuickChatCategory.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
               gt.field_i = CampaignMenuEntry.field_u[1 + (ResourceRequest.field_y + param3)];
             }
-            ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
             return;
           }
           var8 = var8 * 20;
           if (-1 + ConsoleParseException.field_c <= param1) {
-            ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
             return;
           }
           if (var9 != 0) {
             ChannelBaseVolumeConsoleCommand.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
             QuickChatCategory.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
-            ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
             return;
           }
           QuickChatCategory.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
-          ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-          ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-          ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-          ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
           return;
         }
         if (var9 != 0) {
@@ -270,26 +270,26 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           }
           var8 = var8 * 20;
           if (-1 + ConsoleParseException.field_c <= param1) {
-            ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
             return;
           }
           if (var9 != 0) {
             ChannelBaseVolumeConsoleCommand.field_E = CampaignMenuEntry.field_u[-1 + (param3 + ResourceRequest.field_y)];
             QuickChatCategory.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
-            ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-            ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+            ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
             return;
           }
           QuickChatCategory.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
-          ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-          ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-          ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-          ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+          ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
           return;
         }
         ConsoleTextNode.field_m = CampaignMenuEntry.field_u[-ResourceRequest.field_y + (param3 + 1)];
@@ -305,10 +305,10 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           QuickChatCategory.field_z = CampaignMenuEntry.field_u[ResourceRequest.field_y + param3];
           gt.field_i = CampaignMenuEntry.field_u[1 + (ResourceRequest.field_y + param3)];
         }
-        ac.activeTerrainSprites[ls.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
-        ac.activeTerrainSprites[ls.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
-        ac.activeTerrainSprites[ls.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
-        ac.activeTerrainSprites[ls.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
+        ac.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -83) + (0 + var8)].b(param7, param0, param6, param4);
+        ac.activeTerrainSprites[FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, cs.field_Y, -85) + (var8 + 1)].b(param7, param0, param6, param4);
+        ac.activeTerrainSprites[FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, param5 ^ 29329) + (var8 + 2)].b(param7, param0, param6, param4);
+        ac.activeTerrainSprites[FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, cs.field_Y, -22) + 3 + var8].b(param7, param0, param6, param4);
         return;
 
     }

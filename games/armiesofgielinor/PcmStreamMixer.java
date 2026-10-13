@@ -141,7 +141,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListener(IntrusiveNode before, TimedPcmListener listener) {
         while (true) {
           if (before == this.listeners.sentinel) {
-            fj.$cfr$intArgs$a$f94c566f195c(-123, listener, before);
+            ViewportManager.$cfr$intArgs$a$f94c566f195c(-123, listener, before);
             this.nextListenerFrame = ((TimedPcmListener) (this.listeners.sentinel.next)).framesUntilCallback;
             return;
           }
@@ -151,7 +151,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        fj.$cfr$intArgs$a$f94c566f195c(-123, listener, before);
+        ViewportManager.$cfr$intArgs$a$f94c566f195c(-123, listener, before);
         this.nextListenerFrame = ((TimedPcmListener) (this.listeners.sentinel.next)).framesUntilCallback;
         return;
     }

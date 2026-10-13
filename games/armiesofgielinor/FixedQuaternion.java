@@ -7,7 +7,7 @@ final class FixedQuaternion {
     private int y;
     private int x;
     static String field_c;
-    static rd field_a;
+    static FullscreenFocusCanvas fullscreenCanvas;
     private int z;
 
     final static boolean isOnlineFriendOrRoomMember(long accountId, String name, byte obfuscationGuard) {
@@ -175,7 +175,7 @@ final class FixedQuaternion {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        fullscreenCanvas = null;
         field_g = null;
         if (param0 != -57) {
           return;

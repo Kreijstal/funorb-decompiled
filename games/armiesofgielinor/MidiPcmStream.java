@@ -535,7 +535,7 @@ class MidiPcmStream extends PcmStream {
         NodeDeque units = null;
         Unit unit = null;
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        GameplayController controller = rd.gameplayController;
+        GameplayController controller = FullscreenFocusCanvas.gameplayController;
         if (controller == null) {
           return "No game in progress.";
         }

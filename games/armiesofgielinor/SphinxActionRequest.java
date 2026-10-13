@@ -226,7 +226,7 @@ final class SphinxActionRequest extends ActionRequest {
           QuickChatPhraseRepository.field_d = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           ContentTransitionDialog.field_X = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           AccountRegistrationForm.field_M = new ClientUiComponent(0L, ConsoleValue.field_a);
-          rd.field_e = new ClientUiComponent(0L, ClientUiComponent.field_Q);
+          FullscreenFocusCanvas.field_e = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           PreparedAction.field_o = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           eb.field_a = new ClientUiComponent(0L, ClientUiComponent.field_Q);
           ClientUiComponent.field_Q.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("smallbutton", (byte) -128, param1, "lobby"));
@@ -258,11 +258,11 @@ final class SphinxActionRequest extends ActionRequest {
           eb.field_a.selectedSkinSprites = dupTemp$1;
           eb.field_a.heldPressSkinSprites = dupTemp$1;
           eb.field_a.disabledSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("gameoptionbutton_disabled", (byte) -124, param1, "lobby"));
-          rd.field_e.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("chatbutton", (byte) -125, param1, "lobby"));
-          rd.field_e.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("chatbutton_mouseover", (byte) -127, param1, "lobby"));
+          FullscreenFocusCanvas.field_e.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("chatbutton", (byte) -125, param1, "lobby"));
+          FullscreenFocusCanvas.field_e.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("chatbutton_mouseover", (byte) -127, param1, "lobby"));
           dupTemp$2 = wj.a(-12310, fk.loadRgbSpritesByName("chatbutton_active", (byte) -124, param1, "lobby"));
-          rd.field_e.selectedSkinSprites = dupTemp$2;
-          rd.field_e.heldPressSkinSprites = dupTemp$2;
+          FullscreenFocusCanvas.field_e.selectedSkinSprites = dupTemp$2;
+          FullscreenFocusCanvas.field_e.heldPressSkinSprites = dupTemp$2;
           PreparedAction.field_o.skinSprites = wj.a(-12310, fk.loadRgbSpritesByName("chatfilterbutton", (byte) -127, param1, "lobby"));
           PreparedAction.field_o.matchedButtonSkinSprites = wj.a(-12310, fk.loadRgbSpritesByName("chatfilterbutton_mouseover", (byte) -127, param1, "lobby"));
           dupTemp$3 = wj.a(-12310, fk.loadRgbSpritesByName("chatfilterbutton_active", (byte) -124, param1, "lobby"));

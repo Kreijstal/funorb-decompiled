@@ -175,7 +175,7 @@ final class MatchConditionEntry extends IntrusiveNode {
               }
               stackIn_63_0 = -123;
             }
-            fj.$cfr$intArgs$a$f94c566f195c(stackIn_63_0, friendEntry, nextFriend);
+            ViewportManager.$cfr$intArgs$a$f94c566f195c(stackIn_63_0, friendEntry, nextFriend);
             if (obfuscationControl == 0) {
               return;
             }

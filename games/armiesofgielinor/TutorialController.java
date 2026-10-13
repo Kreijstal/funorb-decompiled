@@ -1597,7 +1597,7 @@ final class TutorialController {
                                                                                                       }
                                                                                                       vs.field_j = true;
                                                                                                       du.field_h = false;
-                                                                                                      rd.gameplayController.r(-128);
+                                                                                                      FullscreenFocusCanvas.gameplayController.r(-128);
                                                                                                       var6 = param0 ? 1 : 0;
                                                                                                       CipherPacketBuffer.a(var6 != 0, -5, 1, jt.field_a);
                                                                                                       if (var9 == 0) {
@@ -1612,7 +1612,7 @@ final class TutorialController {
                                                                                                   if (!this.selectionState.hasActivationInput((byte) 103)) {
                                                                                                     return;
                                                                                                   }
-                                                                                                  if (fj.field_c ||
+                                                                                                  if (ViewportManager.field_c ||
                                                                                                     ModalDialogHost.field_H) {
                                                                                                     ValidatedTextWidget.field_Z = false;
                                                                                                   }
@@ -1896,7 +1896,7 @@ final class TutorialController {
                                                               if (!this.selectionState.hasActivationInput((byte) 111)) {
                                                                 return;
                                                               }
-                                                              rd.gameplayController.d(122, param0);
+                                                              FullscreenFocusCanvas.gameplayController.d(122, param0);
                                                               vs.field_j = true;
                                                               du.field_h = false;
                                                               if (var9 == 0) {
@@ -1906,7 +1906,7 @@ final class TutorialController {
                                                             if (!this.selectionState.hasActivationInput((byte) 117)) {
                                                               return;
                                                             }
-                                                            rd.gameplayController.h((byte) 69);
+                                                            FullscreenFocusCanvas.gameplayController.h((byte) 69);
                                                             var6 = param0 ? 1 : 0;
                                                             CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
                                                             if (var9 == 0) {
@@ -1916,7 +1916,7 @@ final class TutorialController {
                                                           if (!this.selectionState.hasActivationInput((byte) 96)) {
                                                             return;
                                                           }
-                                                          rd.gameplayController.r(122);
+                                                          FullscreenFocusCanvas.gameplayController.r(122);
                                                           var6 = param0 ? 1 : 0;
                                                           CipherPacketBuffer.a(var6 != 0, -1, param1 ^ 1, 0);
                                                           if (var9 == 0) {
@@ -1926,7 +1926,7 @@ final class TutorialController {
                                                         if (!this.selectionState.hasActivationInput((byte) 72)) {
                                                           return;
                                                         }
-                                                        rd.gameplayController.l((byte) 108);
+                                                        FullscreenFocusCanvas.gameplayController.l((byte) 108);
                                                         var6 = param0 ? 1 : 0;
                                                         CipherPacketBuffer.a(var6 != 0, -1, 1, 0);
                                                         if (var9 == 0) {
@@ -1936,8 +1936,8 @@ final class TutorialController {
                                                       if (!this.selectionState.hasActivationInput((byte) 73)) {
                                                         return;
                                                       }
-                                                      if (fj.field_c) {
-                                                        boolean decompiledSharedTail0 = !(!rd.gameplayController.battlefield.field_X);
+                                                      if (ViewportManager.field_c) {
+                                                        boolean decompiledSharedTail0 = !(!FullscreenFocusCanvas.gameplayController.battlefield.field_X);
                                                         if (!decompiledSharedTail0) {
                                                           var6 = param0 ? 1 : 0;
                                                           CipherPacketBuffer.a(var6 != 0, 19, param1 ^ 1, jt.field_a);
@@ -2802,7 +2802,7 @@ final class TutorialController {
                 if (!DebouncedValidator.a(var6, var5, 1)) {
                   if (!(param0)) {
                     if (pn.field_n[var6] &&
-                      LoginForm.field_M <= 0) {
+                      LoginForm.memberEntitlementValue <= 0) {
                       stackIn_35_0 = DeathEvent.field_A;
                     } else {
                       stackIn_35_0 = MoveAttackRequest.field_A;
@@ -2856,7 +2856,7 @@ final class TutorialController {
             DelayedPacket.field_k[var6].draw(db.a(true, 82), -14 + var10);
             if (var17 != 0) {
               if (!pn.field_n[var6] ||
-                !(LoginForm.field_M <= 0)) {
+                !(LoginForm.memberEntitlementValue <= 0)) {
                 MoveAttackRequest.field_A.drawTransparent(db.a(true, 82), -14 + var10);
                 DeathEvent.field_A.drawTransparent(db.a(true, 82), -14 + var10);
               } else {
@@ -2865,7 +2865,7 @@ final class TutorialController {
             }
           } else {
             if (!pn.field_n[var6] ||
-              !(LoginForm.field_M <= 0)) {
+              !(LoginForm.memberEntitlementValue <= 0)) {
               MoveAttackRequest.field_A.drawTransparent(db.a(true, 82), -14 + var10);
               if (var17 != 0) {
                 DeathEvent.field_A.drawTransparent(db.a(true, 82), -14 + var10);
@@ -2889,7 +2889,7 @@ final class TutorialController {
           do {
             if (var14 >= var13) {
               var10 = MatchConditionEntry.a(385, (byte) 94);
-              rs.field_n.drawText(rd.field_h + ps.field_D[var6], db.a(true, 272), var10, 16777215, -1);
+              rs.field_n.drawText(FullscreenFocusCanvas.field_h + ps.field_D[var6], db.a(true, 272), var10, 16777215, -1);
               rs.field_n.drawText(DiskCacheWorker.field_e, db.a(true, 392), var10, 16777215, -1);
               var14 = db.a(true, rs.field_n.textWidth(DiskCacheWorker.field_e) + 392);
               break;
@@ -3871,15 +3871,15 @@ final class TutorialController {
             this.g((byte) 101);
           }
           if (itemId == 9 &&
-            rd.gameplayController != null) {
-            if (rd.gameplayController.field_z) {
+            FullscreenFocusCanvas.gameplayController != null) {
+            if (FullscreenFocusCanvas.gameplayController.field_z) {
               var3 = ac.field_u;
               if ((var4 != 0) &&
-                (rd.gameplayController.battlefield.campaignMission != null)) {
+                (FullscreenFocusCanvas.gameplayController.battlefield.campaignMission != null)) {
                 var3 = jn.field_a;
               }
             } else {
-              if (rd.gameplayController.battlefield.campaignMission != null) {
+              if (FullscreenFocusCanvas.gameplayController.battlefield.campaignMission != null) {
                 var3 = jn.field_a;
               }
             }
@@ -4136,7 +4136,7 @@ final class TutorialController {
           pn.field_h = NanoGameClock.field_n;
           if (this.tutorialStage == 22 ||
             21 == this.tutorialStage) {
-            rd.gameplayController = null;
+            FullscreenFocusCanvas.gameplayController = null;
             System.gc();
             MoveEvent.campaignMenu.loadCampaignResources((byte) -120);
             MoveEvent.campaignMenu.updateMusicProfile(92);
@@ -4590,7 +4590,7 @@ final class TutorialController {
             stackIn_11_1 = !(GlobalSpell.a(false));
             var2_int = ((oo) (Object) stackIn_10_0).a(stackIn_11_1, -121);
             if (var2_int == 3) {
-              if (null != FixedQuaternion.field_a) {
+              if (null != FixedQuaternion.fullscreenCanvas) {
                 ck.b(-99);
               }
               QuickChatPhraseRepository.a(32767, CombatEvent.d((byte) 65));
@@ -4907,11 +4907,11 @@ final class TutorialController {
             }
           }
           if (2 == this.tutorialStage &&
-            null != rd.gameplayController &&
-            rd.gameplayController.field_lb &&
-            0 <= rd.gameplayController.controlledPlayerId &&
-            rd.gameplayController.battlefield != null &&
-            rd.gameplayController.battlefield.field_X) {
+            null != FullscreenFocusCanvas.gameplayController &&
+            FullscreenFocusCanvas.gameplayController.field_lb &&
+            0 <= FullscreenFocusCanvas.gameplayController.controlledPlayerId &&
+            FullscreenFocusCanvas.gameplayController.battlefield != null &&
+            FullscreenFocusCanvas.gameplayController.battlefield.field_X) {
             CipherPacketBuffer.a(false, 3, 1, 0);
           }
           return;
@@ -5069,7 +5069,7 @@ final class TutorialController {
           var2_int = 17 % ((26 - param0) / 35);
           if (rs.keyCode == 84 &&
             br.heldKeys[86]) {
-            if (null != FixedQuaternion.field_a) {
+            if (null != FixedQuaternion.fullscreenCanvas) {
               ck.b(-83);
               if (var3 == 0) {
                 return;

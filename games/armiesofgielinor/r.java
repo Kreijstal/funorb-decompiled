@@ -263,7 +263,7 @@ final class r extends vt {
         try {
           listenerLock = QuickChatCategory.keyboardListener;
           synchronized (listenerLock) {
-            SummonAction.keyEventReadIndex = rd.keyEventFrameEndIndex;
+            SummonAction.keyEventReadIndex = FullscreenFocusCanvas.keyEventFrameEndIndex;
             if (!obfuscationGuard) {
               r.d((byte) 47);
             }
@@ -284,7 +284,7 @@ final class r extends vt {
                 br.heldKeys[keyEvent] = true;
               }
             }
-            rd.keyEventFrameEndIndex = ProgressDialog.keyEventWriteIndex;
+            FullscreenFocusCanvas.keyEventFrameEndIndex = ProgressDialog.keyEventWriteIndex;
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

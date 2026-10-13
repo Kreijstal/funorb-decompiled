@@ -129,12 +129,12 @@ final class cs extends ResizableModalDialog implements WidgetActivationListener 
             this.field_ab.text = "" + var7;
           }
           if (this.open &&
-            null == FixedQuaternion.field_a) {
+            null == FixedQuaternion.fullscreenCanvas) {
             this.n(obfuscationGuard ^ 32728);
             this.host.showDialog(new ud(this.host, SocialListPanel.field_Mb), 0);
           }
-          if (null != FixedQuaternion.field_a &&
-            FixedQuaternion.field_a.field_k) {
+          if (null != FixedQuaternion.fullscreenCanvas &&
+            FixedQuaternion.fullscreenCanvas.focusLost) {
             this.n(10);
             this.host.showDialog(new ud(this.host, SocialListPanel.field_Mb), obfuscationGuard ^ 32722);
             return;

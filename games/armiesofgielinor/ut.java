@@ -17,7 +17,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
     static String[] field_cb;
     static int field_fb;
     private InteractiveWidget[] field_kb;
-    private ls[] field_db;
+    private FullscreenDisplayMode[] field_db;
     private boolean field_nb;
     private InteractiveWidget field_X;
 
@@ -46,7 +46,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        ls[] var3_ref_ls__ = null;
+        FullscreenDisplayMode[] var3_ref_ls__ = null;
         int var4 = 0;
         int var5 = 0;
         String[] var5_ref_String__ = null;
@@ -54,7 +54,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         String var6 = null;
         InteractiveWidget var6_ref = null;
         Widget var7 = null;
-        ls var8 = null;
+        FullscreenDisplayMode var8 = null;
         String var10 = null;
         Object stackIn_51_0Lifetime1;
         GridWidgetContainer stackIn_51_1Lifetime1;
@@ -67,20 +67,20 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_db = ValidatedTextWidget.a(-114, IntPair.field_m);
+          this.field_db = ValidatedTextWidget.getFullscreenDisplayModes(-114, IntPair.field_m);
           if (this.field_db.length > 0) {
             for (var2_int = 0; var2_int < this.field_db.length; var2_int++) {
               if (this.field_db[var2_int] != null) {
                 for (var3 = var2_int + 1; this.field_db.length > var3; var3++) {
                   if (null != this.field_db[var3] &&
-                    this.field_db[var3].field_b == this.field_db[var2_int].field_b &&
-                    this.field_db[var3].field_a == this.field_db[var2_int].field_a) {
+                    this.field_db[var3].width == this.field_db[var2_int].width &&
+                    this.field_db[var3].height == this.field_db[var2_int].height) {
                     this.field_db[var3] = null;
                   }
                 }
-                if (null != ActionSpell.field_e &&
+                if (null != ActionSpell.viewportManager &&
                   null != this.field_db[var2_int] &&
-                  !ActionSpell.field_e.c(this.field_db[var2_int].field_b, 122, this.field_db[var2_int].field_a)) {
+                  !ActionSpell.viewportManager.acceptsDimensions(this.field_db[var2_int].width, 122, this.field_db[var2_int].height)) {
                   this.field_db[var2_int] = null;
                 }
               }
@@ -92,7 +92,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
               }
             }
             var3_ref_ls__ = this.field_db;
-            this.field_db = new ls[var2_int];
+            this.field_db = new FullscreenDisplayMode[var2_int];
             var4 = 0;
             for (var5 = 0; var5 < var3_ref_ls__.length; var5++) {
               if (var3_ref_ls__[var5] != null) {
@@ -112,8 +112,8 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           stackIn_40_0 = (var2_intLifetime1 != 0) ? 3 : 2;
           var3Lifetime1 = stackIn_40_0;
           if (var2_intLifetime1 == 0) {
-            if (null != ActionSpell.field_e) {
-              stackIn_48_0 = (ActionSpell.field_e.d((byte) 122)) ? 1 : 0;
+            if (null != ActionSpell.viewportManager) {
+              stackIn_48_0 = (ActionSpell.viewportManager.isResizeBlockedByHeap((byte) 122)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -168,12 +168,12 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
             var6_int = -1 + var5_ref_String__.length;
             for (var7_int = 0; var7_int < this.field_db.length; var7_int++) {
               var8 = this.field_db[var7_int];
-              if (null != FixedQuaternion.field_a &&
-                var8.field_b == ActionSpell.field_e.field_f &&
-                ActionSpell.field_e.field_n == var8.field_a) {
+              if (null != FixedQuaternion.fullscreenCanvas &&
+                var8.width == ActionSpell.viewportManager.fullscreenWidth &&
+                ActionSpell.viewportManager.fullscreenHeight == var8.height) {
                 var6_int = var7_int;
               }
-              var5_ref_String__[var7_int] = var8.field_b + "<times>" + var8.field_a;
+              var5_ref_String__[var7_int] = var8.width + "<times>" + var8.height;
             }
             this.field_lb = new DropdownSelector(var5_ref_String__, var6_int, 150);
             this.field_lb.setBounds(this.field_bb.x + this.field_gb.x, 126, this.field_bb.height + this.field_bb.y + (this.field_gb.y - 19), 8192, 18);
@@ -192,7 +192,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
             if (var2_intLifetime1 != 0) {
               stackIn_74_0 = GameEvent.field_l;
             } else {
-              stackIn_74_0 = fj.field_w;
+              stackIn_74_0 = ViewportManager.field_w;
             }
             var10 = stackIn_74_0;
             var6 = var10;
@@ -228,11 +228,11 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
         if (param0 != -1) {
           return (InteractiveWidget) null;
         }
-        if (FixedQuaternion.field_a != null) {
+        if (FixedQuaternion.fullscreenCanvas != null) {
           return this.field_bb;
         }
-        if (ActionSpell.field_e != null &&
-          ActionSpell.field_e.field_h &&
+        if (ActionSpell.viewportManager != null &&
+          ActionSpell.viewportManager.resizeEnabled &&
           this.field_Z != null) {
           return this.field_Z;
         }
@@ -278,7 +278,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
                       this.host.showDialog(new ud(this.host, PlayerProfile.field_h), 0);
                       return;
                     }
-                    if (LoginForm.field_M <= 0) {
+                    if (LoginForm.memberEntitlementValue <= 0) {
                       this.host.showDialog(new tn(this.host), 0);
                       return;
                     }
@@ -330,7 +330,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
               if (this.field_lb != null) {
                 var2 = this.field_lb.getSelectedIndex((byte) 71);
                 if (var2 >= 0) {
-                  ActionSpell.field_e.a(this.field_db[var2].field_b, this.field_db[var2].field_a, -8717);
+                  ActionSpell.viewportManager.setFullscreenSize(this.field_db[var2].width, this.field_db[var2].height, -8717);
                 }
               }
               AiPlanningStrategy.a(true, param0 + 8029);
@@ -455,7 +455,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
           mu.field_a = null;
           GameClock.field_j = 0;
           if (vs.field_j) {
-            rd.gameplayController = null;
+            FullscreenFocusCanvas.gameplayController = null;
             vs.field_j = false;
             SectorCacheStore.field_a = null;
             ConsoleParseException.b(-1);
@@ -506,7 +506,7 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
     private final void a(InteractiveWidget param0, byte param1) {
         InteractiveWidget var3 = null;
         int var4 = 0;
-        ls var5 = null;
+        FullscreenDisplayMode var5 = null;
         Widget var6 = null;
         InteractiveWidget stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
@@ -531,8 +531,8 @@ final class ut extends ResizableModalDialog implements WidgetActivationListener 
               if (this.field_lb != null) {
                 var4 = this.field_lb.getSelectedIndex((byte) 71);
                 var5 = this.field_db[var4];
-                if (ActionSpell.field_e.field_f != var5.field_b ||
-                  ActionSpell.field_e.field_n != var5.field_a) {
+                if (ActionSpell.viewportManager.fullscreenWidth != var5.width ||
+                  ActionSpell.viewportManager.fullscreenHeight != var5.height) {
                   this.field_ab.enabled = true;
                 }
                 this.q(-108);

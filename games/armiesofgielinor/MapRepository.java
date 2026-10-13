@@ -64,7 +64,7 @@ final class MapRepository {
               archiveGroup != 1) {
               return;
             }
-            if (LoginForm.field_M <= 0 &&
+            if (LoginForm.memberEntitlementValue <= 0 &&
               archiveGroup == 1 &&
               !this.bypassMembershipChecks) {
               return;
@@ -215,7 +215,7 @@ final class MapRepository {
                 AttackEvent.mapNamesByThemeAndSize[mapTheme].length == this.mapsByThemeAndSize[mapTheme].length) {
                 if (mapTheme == 1 &&
                   !this.bypassMembershipChecks &&
-                  LoginForm.field_M < 0) {
+                  LoginForm.memberEntitlementValue < 0) {
                   stackIn_42_0 = null;
                   return (MapLayout) (stackIn_42_0);
                 }
@@ -359,11 +359,11 @@ final class MapRepository {
                 break scanLoop1;
               }
               if (stackIn_59_0 > stackIn_59_1) {
-                ls.field_c[var23] = -2147483648;
+                FullscreenDisplayMode.field_c[var23] = -2147483648;
               } else {
                 TileMetadata.field_f[var23] = var21 + var27 / var29;
                 fa.field_k[var23] = var28 / var29 + var22;
-                ls.field_c[var23] = var29;
+                FullscreenDisplayMode.field_c[var23] = var29;
                 if (var29 > var8) {
                   var8 = var29;
                 }
@@ -569,7 +569,7 @@ final class MapRepository {
               }
               if (archiveGroup == 1 &&
                 !this.bypassMembershipChecks &&
-                0 >= LoginForm.field_M) {
+                0 >= LoginForm.memberEntitlementValue) {
                 stackIn_30_0 = null;
                 return (ResourceArchive) (stackIn_30_0);
               }
@@ -632,7 +632,7 @@ final class MapRepository {
             archiveGroup != 1) {
             return;
           }
-          if (0 >= LoginForm.field_M &&
+          if (0 >= LoginForm.memberEntitlementValue &&
             archiveGroup == 1 &&
             !this.bypassMembershipChecks) {
             return;

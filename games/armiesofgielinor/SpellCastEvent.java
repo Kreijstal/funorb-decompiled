@@ -86,13 +86,13 @@ final class SpellCastEvent extends GameEvent {
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((byte) -111, (rd.field_b << 1) + jg.field_k, var8 - LoginForm.field_E, (LoginForm.field_E << 1) + var7, var2);
+                var9.a((byte) -111, (FullscreenFocusCanvas.field_b << 1) + jg.field_k, var8 - LoginForm.field_E, (LoginForm.field_E << 1) + var7, var2);
               }
-              var2 = var2 + rd.field_b;
+              var2 = var2 + FullscreenFocusCanvas.field_b;
             }
             if (0 <= var4) {
               NanoGameClock.field_s.drawText(var6, var8, ia.field_g + var2, var5, -1);
-              var2 = var2 + (jg.field_k + QuickChatPhrase.field_w + rd.field_b);
+              var2 = var2 + (jg.field_k + QuickChatPhrase.field_w + FullscreenFocusCanvas.field_b);
             } else {
               AiPlanner.field_G.drawText(var6, var8, var2 + StandardContentDialog.field_mb, var5, -1);
               var2 = var2 + cn.field_o;

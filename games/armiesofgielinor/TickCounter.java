@@ -4967,7 +4967,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_HARMING");
                 if (var2 != null) {
-                  fj.field_u = uu.a(var2, (byte) 52);
+                  ViewportManager.field_u = uu.a(var2, (byte) 52);
                 }
                 var2 = fk.a(false, "TTREED_MOVES");
                 if (var2 != null) {
@@ -4983,7 +4983,7 @@ final class TickCounter {
                 }
                 var2 = fk.a(false, "TTREED_INFLUENCE");
                 if (var2 != null) {
-                  rd.field_a = uu.a(var2, (byte) 61);
+                  FullscreenFocusCanvas.field_a = uu.a(var2, (byte) 61);
                 }
                 var2 = fk.a(false, "TTREED_RAYS");
                 if (var2 != null) {

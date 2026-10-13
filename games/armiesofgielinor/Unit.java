@@ -405,7 +405,7 @@ final class Unit extends IntrusiveNode implements TaggedFieldReader {
         Throwable caughtFailure = null;
         listenerLock = QuickChatCategory.keyboardListener;
         synchronized (listenerLock) {
-          if (rd.keyEventFrameEndIndex == SummonAction.keyEventReadIndex) {
+          if (FullscreenFocusCanvas.keyEventFrameEndIndex == SummonAction.keyEventReadIndex) {
             return false;
           }
           rs.keyCode = gt.keyEventCodes[SummonAction.keyEventReadIndex];

@@ -52,7 +52,7 @@ final class PaletteRegionMap {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -21 % ((param0 + 25) / 55);
-        stackIn_4_0 = (null != ActionSpell.field_e) && (ActionSpell.field_e.a((byte) 103));
+        stackIn_4_0 = (null != ActionSpell.viewportManager) && (ActionSpell.viewportManager.canResize((byte) 103));
         return stackIn_4_0;
     }
 

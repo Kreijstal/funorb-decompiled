@@ -78,7 +78,7 @@ final class CampaignMenu {
           var3 = QuickChatPhrase.getCampaignMission(var2.campaignIndex, var2.missionId, 0);
           TextLineLayout.startCampaignMission(var3, -1, var2);
           var4 = var3.playerSlot;
-          var5 = rd.gameplayController.battlefield.playerTurnCounts[var4];
+          var5 = FullscreenFocusCanvas.gameplayController.battlefield.playerTurnCounts[var4];
           if (~var5 < obfuscationGuard) {
             DiskCacheWorker.reportCampaignTurn(false, 1, var5, var3);
           }
@@ -142,13 +142,13 @@ final class CampaignMenu {
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           ConsoleParseException.b(-1);
-          if (rd.gameplayController != null) {
-            rd.gameplayController.A(111);
+          if (FullscreenFocusCanvas.gameplayController != null) {
+            FullscreenFocusCanvas.gameplayController.A(111);
           }
           if (null != SectorCacheStore.field_a) {
             SectorCacheStore.field_a.A(111);
           }
-          rd.gameplayController = null;
+          FullscreenFocusCanvas.gameplayController = null;
           SectorCacheStore.field_a = null;
           System.gc();
           ChannelGainProfile.campaignBackgrounds[0] = new RgbSprite(MusicPatchUsage.backgroundArchive.getFileByName("campaign_1.jpg", -105, ""), (java.awt.Component) ((Object) VerticalScrollbar.p(0)));
@@ -1842,7 +1842,7 @@ final class CampaignMenu {
           var3.godId = campaign.localGodId;
           var3.description = campaign.description;
           stackIn_11_0 = var3;
-          stackIn_14_1 = (campaign.c((byte) -45)) || !(0 >= LoginForm.field_M) || !(BufferedSocket.field_j < 2);
+          stackIn_14_1 = (campaign.c((byte) -45)) || !(0 >= LoginForm.memberEntitlementValue) || !(BufferedSocket.field_j < 2);
           boolean decompiledFrameCompleted0 = true;
           stackIn_11_0.selectable = stackIn_14_1;
           if (var3.selectable) {

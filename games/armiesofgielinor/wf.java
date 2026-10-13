@@ -387,7 +387,7 @@ abstract class wf extends GameAppletShell {
             }
           }
         } else {
-          stackIn_6_1 = (null != FixedQuaternion.field_a);
+          stackIn_6_1 = (null != FixedQuaternion.fullscreenCanvas);
           discarded$7 = this.a(stackIn_6_1, false, (byte) -97);
         }
     }
@@ -511,13 +511,13 @@ abstract class wf extends GameAppletShell {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (null != ActionSpell.field_e) {
-          if (null == FixedQuaternion.field_a) {
+        if (null != ActionSpell.viewportManager) {
+          if (null == FixedQuaternion.fullscreenCanvas) {
             var6 = DualNodeIterator.a(0);
             var4 = var6.getSize();
-            ActionSpell.field_e.b(var4.height, var4.width, -30514);
+            ActionSpell.viewportManager.setContainerSize(var4.height, var4.width, -30514);
           }
-          ActionSpell.field_e.a(0);
+          ActionSpell.viewportManager.advanceViewport(0);
         }
         r.snapshotKeyboard(true);
         ds.capturePointerInput((byte) 118);

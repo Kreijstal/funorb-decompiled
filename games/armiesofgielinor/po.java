@@ -12,10 +12,10 @@ final class po {
           return;
         }
         oo.a(param4, param2, param5, param7, param3, param1, (byte) -103);
-        ac.activeTerrainSprites[ls.a(CombatViewTransition.a(1 + param7, param1 - 1, 2, (byte) -108), 1, CombatViewTransition.a(param7, -1 + param1, 2, (byte) -109), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -94), -57) + 180].b(param3, param2, param4, param5);
-        ac.activeTerrainSprites[ls.a(CombatViewTransition.a(-1 + param7, param1 - 1, 2, (byte) -113), 1, CombatViewTransition.a(param7, param1 - 1, 2, (byte) -116), CombatViewTransition.a(param7 - 1, param1, 2, (byte) -126), -63) + 181].b(param3, param2, param4, param5);
-        ac.activeTerrainSprites[182 + ls.a(CombatViewTransition.a(param7 + 1, 1 + param1, 2, (byte) -124), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -127), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -122), -94)].b(param3, param2, param4, param5);
-        ac.activeTerrainSprites[183 + ls.a(CombatViewTransition.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -116), CombatViewTransition.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
+        ac.activeTerrainSprites[FullscreenDisplayMode.a(CombatViewTransition.a(1 + param7, param1 - 1, 2, (byte) -108), 1, CombatViewTransition.a(param7, -1 + param1, 2, (byte) -109), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -94), -57) + 180].b(param3, param2, param4, param5);
+        ac.activeTerrainSprites[FullscreenDisplayMode.a(CombatViewTransition.a(-1 + param7, param1 - 1, 2, (byte) -113), 1, CombatViewTransition.a(param7, param1 - 1, 2, (byte) -116), CombatViewTransition.a(param7 - 1, param1, 2, (byte) -126), -63) + 181].b(param3, param2, param4, param5);
+        ac.activeTerrainSprites[182 + FullscreenDisplayMode.a(CombatViewTransition.a(param7 + 1, 1 + param1, 2, (byte) -124), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -127), CombatViewTransition.a(param7 + 1, param1, 2, (byte) -122), -94)].b(param3, param2, param4, param5);
+        ac.activeTerrainSprites[183 + FullscreenDisplayMode.a(CombatViewTransition.a(param7 - 1, param1 + 1, 2, (byte) -122), 1, CombatViewTransition.a(param7, param1 + 1, 2, (byte) -116), CombatViewTransition.a(-1 + param7, param1, 2, (byte) -114), -118)].b(param3, param2, param4, param5);
     }
 
     final static TaggedMapData readLengthPrefixedMap(CipherPacketBuffer packet, int obfuscationGuard) {

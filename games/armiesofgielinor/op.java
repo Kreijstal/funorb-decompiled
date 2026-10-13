@@ -37,7 +37,7 @@ final class op {
           LoginForm.field_E = param1;
           QuickChatPhrase.field_w = param0;
           ed.field_d = param3;
-          rd.field_b = param5;
+          FullscreenFocusCanvas.field_b = param5;
           int var6_int = -13 / ((53 - param4) / 48);
           ov.field_m = param2;
         } catch (RuntimeException runtimeException) {
@@ -113,7 +113,7 @@ final class op {
             return stackIn_13_0;
           }
           if (dj.friendCount >= 100 &&
-            LoginForm.field_M <= 0) {
+            LoginForm.memberEntitlementValue <= 0) {
             stackIn_18_0 = MapLayout.field_m;
             return stackIn_18_0;
           }

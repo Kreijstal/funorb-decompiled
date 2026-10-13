@@ -11,10 +11,10 @@ final class ActionSpell extends Spell {
     static String field_k;
     private PreparedAction preparedAction;
     static String field_f;
-    static fj field_e;
+    static ViewportManager viewportManager;
 
     public static void a(boolean param0) {
-        field_e = null;
+        viewportManager = null;
         if (param0) {
           return;
         }
@@ -187,9 +187,9 @@ final class ActionSpell extends Spell {
     }
 
     final static void resizeRasterViewport(int width, int obfuscationGuard, int height) {
-        bn.field_b = width;
+        bn.viewportWidth = width;
         GuestPlayConfirmationForm.canvasWidth = width;
-        dt.field_a = height;
+        dt.viewportHeight = height;
         MatchSetupPanel.canvasHeight = height;
         tq.canvasRebuildRequested = true;
         so.field_b = null;
@@ -322,6 +322,6 @@ final class ActionSpell extends Spell {
         field_k = "You must capture a village before you can use Fortify on it.";
         field_f = "This is your RuneScape clan if you have one.";
         field_l = "You have been removed from <%0>'s game.";
-        field_e = null;
+        viewportManager = null;
     }
 }

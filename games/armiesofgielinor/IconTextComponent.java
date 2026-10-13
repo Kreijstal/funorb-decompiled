@@ -197,7 +197,7 @@ final class IconTextComponent extends ClientUiComponent {
         }
     }
 
-    final static boolean a(ls param0, ls param1, int param2) {
+    final static boolean a(FullscreenDisplayMode param0, FullscreenDisplayMode param1, int param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -206,11 +206,11 @@ final class IconTextComponent extends ClientUiComponent {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0.field_b < param1.field_b) {
+          if (param0.width < param1.width) {
             return true;
           }
-          if (param0.field_b == param1.field_b &&
-            param0.field_a < param1.field_a) {
+          if (param0.width == param1.width &&
+            param0.height < param1.height) {
             return true;
           }
           if (param2 == 30549) {

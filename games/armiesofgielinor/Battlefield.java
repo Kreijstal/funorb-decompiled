@@ -5012,7 +5012,7 @@ final class Battlefield {
               if (this.campaignMission.missionId != 5) {
                 return;
               }
-              rd.gameplayController.a(50, (byte) 30, 205);
+              FullscreenFocusCanvas.gameplayController.a(50, (byte) 30, 205);
             }
           }
           return;

@@ -16,8 +16,8 @@ final class LoginMethod {
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (!cd.c(9501)) {
-            if (FixedQuaternion.field_a != null &&
-              FixedQuaternion.field_a.field_k) {
+            if (FixedQuaternion.fullscreenCanvas != null &&
+              FixedQuaternion.fullscreenCanvas.focusLost) {
               ck.b(-110);
               SphinxActionRequest.field_v.showDialog(new ud(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
             }

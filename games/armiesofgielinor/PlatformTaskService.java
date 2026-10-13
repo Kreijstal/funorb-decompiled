@@ -36,11 +36,11 @@ final class PlatformTaskService implements Runnable {
         return this.a((byte) 125, port, false, hostname);
     }
 
-    final PlatformTask a(boolean param0, int param1, int param2, int param3, int param4) {
-        if (!param0) {
+    final PlatformTask enterFullscreenAsync(boolean obfuscationGuard, int height, int width, int refreshRate, int bitDepth) {
+        if (!obfuscationGuard) {
           this.cacheIndexFiles = (BoundedFile[]) null;
         }
-        return this.enqueueTask((param4 << 16) + param3, (param2 << 16) + param1, (Object) null, (byte) 81, 6);
+        return this.enqueueTask((bitDepth << 16) + refreshRate, (width << 16) + height, (Object) null, (byte) 81, 6);
     }
 
     private final PlatformTask a(byte param0, int param1, boolean param2, String param3) {

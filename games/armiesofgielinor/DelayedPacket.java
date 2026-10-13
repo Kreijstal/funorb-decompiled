@@ -29,7 +29,7 @@ final class DelayedPacket extends IntrusiveNode {
 
     final static String defeatPlayerForConsole(int playerId, byte obfuscationGuard) {
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        GameplayController controller = rd.gameplayController;
+        GameplayController controller = FullscreenFocusCanvas.gameplayController;
         GameplayController controllerAlias = controller;
         if (controllerAlias == null) {
           return "No game in progress.";

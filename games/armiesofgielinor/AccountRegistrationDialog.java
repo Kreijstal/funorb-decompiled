@@ -141,7 +141,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
           } else {
             if (!this.terminalFailure) {
               if (result.statusCode != 5) {
-                messagePane.addActionButton(fj.field_a, -1, 1);
+                messagePane.addActionButton(ViewportManager.field_a, -1, 1);
               } else {
                 messagePane.addActionButton(QuickChatCommandDefinition.field_d, 11, 1);
                 messagePane.addActionButton(dt.field_c, 17, 1);

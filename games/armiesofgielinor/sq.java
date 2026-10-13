@@ -25,7 +25,7 @@ final class sq extends IntrusiveNode {
 
     final static String defeatPlayerWithMetricsForConsole(int damageTaken, byte obfuscationGuard, int playerId, int turnsTaken) {
         int guardQuotient = -110 / ((obfuscationGuard + 76) / 36);
-        GameplayController controller = rd.gameplayController;
+        GameplayController controller = FullscreenFocusCanvas.gameplayController;
         if (controller == null) {
           return "No game in progress.";
         }

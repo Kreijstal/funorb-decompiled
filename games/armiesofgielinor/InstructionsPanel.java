@@ -140,7 +140,7 @@ final class InstructionsPanel {
         int lineIndex = 0;
         String description = null;
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        GameplayController controller = rd.gameplayController;
+        GameplayController controller = FullscreenFocusCanvas.gameplayController;
         if (controller == null) {
           return "No game in progress.";
         }
@@ -2418,7 +2418,7 @@ final class InstructionsPanel {
               ModalDialog.field_I = param3;
               BufferedSocket.field_j = ByteStorage.incomingPacket.readUnsignedByte(0);
               tf.field_l = ByteStorage.incomingPacket.readUnsignedByte(0);
-              LoginForm.field_M = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+              LoginForm.memberEntitlementValue = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
               var6 = ByteStorage.incomingPacket.c((byte) -125);
               var7 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               if ((var7 & 1) != 0) {
@@ -2476,7 +2476,7 @@ final class InstructionsPanel {
               if (var6 != null) {
                 ph.a(var6, CombatEvent.d((byte) -117), false);
               }
-              if (LoginForm.field_M <= 0 &&
+              if (LoginForm.memberEntitlementValue <= 0 &&
                 !LineOfSightGrid.field_m) {
                 try {
                   lj.a("unzap", (byte) -52, CombatEvent.d((byte) -128));
@@ -2492,7 +2492,7 @@ final class InstructionsPanel {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (LoginForm.field_M > 0) {
+              if (LoginForm.memberEntitlementValue > 0) {
                 BestScoreStrategy.field_l = true;
               }
               EmailValidator.outgoingPacket.initializeOpcodeCipher(CombatEvent.field_L, -106);

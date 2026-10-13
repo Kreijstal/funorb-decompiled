@@ -99,7 +99,7 @@ final class ds {
                   QuickChatCategory.field_G[4] == param7)) {
                   var9 = param7;
                 }
-                var12 = var8_int + (param7 * 20 + ls.a(var11, param7, var10, var9, param3 - 27089));
+                var12 = var8_int + (param7 * 20 + FullscreenDisplayMode.a(var11, param7, var10, var9, param3 - 27089));
                 if (var12 >= 0 &&
                   var12 < ac.activeTerrainSprites.length) {
                   var13 = ac.activeTerrainSprites[var12];

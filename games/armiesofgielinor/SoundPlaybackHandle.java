@@ -41,7 +41,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
         GameplayController controller;
         int guardedSelectedTileIndex;
         if (obfuscationGuard == 128) {
-          controller = rd.gameplayController;
+          controller = FullscreenFocusCanvas.gameplayController;
           controllerAlias = controller;
           if (controllerAlias == null) {
             return "No game in progress.";
@@ -59,7 +59,7 @@ final class SoundPlaybackHandle extends IntrusiveNode {
           return "Please select a tile before using this.";
         }
         dialogViewportWidth = 113;
-        guardedController = rd.gameplayController;
+        guardedController = FullscreenFocusCanvas.gameplayController;
         guardedControllerAlias = guardedController;
         guardedControllerSecondAlias = guardedControllerAlias;
         if (guardedControllerAlias == null) {

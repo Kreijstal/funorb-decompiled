@@ -13,7 +13,7 @@ final class e {
             RegistrationAgreementPane.activeQuickChatMenu.resetSelection((byte) -106);
           }
           if (0 != rs.outgoingChatChannel) {
-            rd.clearChatText(8445);
+            FullscreenFocusCanvas.clearChatText(8445);
             TelefragEvent.field_z = 0;
             return;
           }
@@ -28,7 +28,7 @@ final class e {
           TelefragEvent.field_z = 0;
           return;
         }
-        rd.clearChatText(8445);
+        FullscreenFocusCanvas.clearChatText(8445);
         TelefragEvent.field_z = 0;
     }
 

@@ -107,14 +107,14 @@ final class ck {
     }
 
     final static void b(int param0) {
-        if (FixedQuaternion.field_a == null) {
+        if (FixedQuaternion.fullscreenCanvas == null) {
           return;
         }
-        dt.a(FixedQuaternion.field_a, 23678);
-        FixedQuaternion.field_a.a(-30918, IntPair.field_m);
-        FixedQuaternion.field_a = null;
-        if (null != ActionSpell.field_e) {
-          ActionSpell.field_e.b(124);
+        dt.a(FixedQuaternion.fullscreenCanvas, 23678);
+        FixedQuaternion.fullscreenCanvas.exitFullscreen(-30918, IntPair.field_m);
+        FixedQuaternion.fullscreenCanvas = null;
+        if (null != ActionSpell.viewportManager) {
+          ActionSpell.viewportManager.restoreViewport(124);
         }
         IndexedSpriteBase.field_b.requestFocus();
         if (param0 < -50) {

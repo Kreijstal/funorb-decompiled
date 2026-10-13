@@ -333,9 +333,9 @@ final class VerticalScrollbar extends ClientUiComponent {
     final static java.awt.Canvas p(int param0) {
         if (param0 != 0) {
           field_Jb = (String) null;
-          return FixedQuaternion.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.field_a);
+          return FixedQuaternion.fullscreenCanvas == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.fullscreenCanvas);
         }
-        return FixedQuaternion.field_a == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.field_a);
+        return FixedQuaternion.fullscreenCanvas == null ? IndexedSpriteBase.field_b : (java.awt.Canvas) ((Object) FixedQuaternion.fullscreenCanvas);
     }
 
     final boolean pollPageUp(int obfuscationGuard) {

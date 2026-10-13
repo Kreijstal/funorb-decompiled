@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static String field_a;
-    volatile boolean field_k;
+    volatile boolean focusLost;
     static int keyEventFrameEndIndex;
     static int field_b;
     static String field_g;
     static String field_h;
     static String field_f;
     static ClientUiComponent field_e;
-    java.awt.Frame field_c;
+    java.awt.Frame frame;
     static GameplayController gameplayController;
     static long tickDurationNanos;
 
@@ -31,7 +31,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          this.field_k = true;
+          this.focusLost = true;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rd.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -39,7 +39,7 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void clearChatText(int obfuscationGuard) {
         if (obfuscationGuard != 8445) {
-          rd.clearChatText(33);
+          FullscreenFocusCanvas.clearChatText(33);
           UpkeepEvent.chatTextBuffer.setLength(0);
           rs.outgoingChatChannel = 0;
           return;
@@ -54,18 +54,18 @@ final class rd extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(int param0, PlatformTaskService param1) {
+    final void exitFullscreen(int obfuscationGuard, PlatformTaskService platformService) {
         try {
-          fj.a(this.field_c, param1, param0 ^ 30916);
-          if (param0 != -30918) {
+          ViewportManager.exitFullscreen(this.frame, platformService, obfuscationGuard ^ 30916);
+          if (obfuscationGuard != -30918) {
             field_f = (String) null;
           }
-        } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "rd.B(" + obfuscationGuard + ',' + (platformService != null ? "{...}" : "null") + ')');
         }
     }
 
-    rd() {
+    FullscreenFocusCanvas() {
     }
 
     static {

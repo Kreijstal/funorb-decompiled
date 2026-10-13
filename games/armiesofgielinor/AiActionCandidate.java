@@ -19,8 +19,8 @@ final class AiActionCandidate extends IntrusiveNode {
         if (param0 != 17023) {
           field_p = (int[]) null;
         }
-        if (ActionSpell.field_e != null) {
-          ActionSpell.field_e.field_h = false;
+        if (ActionSpell.viewportManager != null) {
+          ActionSpell.viewportManager.resizeEnabled = false;
         }
         ds.a(0, param0 ^ -16982);
     }

@@ -83,7 +83,7 @@ final class DualNodeHashTable {
         if (obfuscationGuard > -68) {
           return -119;
         }
-        return (int)(1000000000L / rd.tickDurationNanos);
+        return (int)(1000000000L / FullscreenFocusCanvas.tickDurationNanos);
     }
 
     final void put(int obfuscationGuard, long key, DualLinkedNode node) {

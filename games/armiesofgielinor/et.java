@@ -73,11 +73,11 @@ final class et {
               }
               if (!stackIn_11_0 ||
                 !(var17 * var14 - var15 * var16 >= 0)) {
-                var12Lifetime1 = ls.field_c[var9];
+                var12Lifetime1 = FullscreenDisplayMode.field_c[var9];
                 if (-2147483648 != var12Lifetime1) {
-                  var13Lifetime1 = ls.field_c[var10];
+                  var13Lifetime1 = FullscreenDisplayMode.field_c[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = ls.field_c[var11];
+                    var14 = FullscreenDisplayMode.field_c[var11];
                     if (var14 != -2147483648) {
                       var15 = var14 + (var13Lifetime1 + var12Lifetime1) - var6;
                       stackIn_24_0 = -1;

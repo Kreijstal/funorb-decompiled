@@ -226,10 +226,10 @@ final class jj {
     }
 
     final static void a(int param0) {
-        if (null == ActionSpell.field_e) {
+        if (null == ActionSpell.viewportManager) {
           throw new IllegalStateException("NGR");
         }
-        ActionSpell.field_e.field_h = true;
+        ActionSpell.viewportManager.resizeEnabled = true;
         if (param0 != -4223) {
           field_b = (String) null;
           ds.a(1, -54);

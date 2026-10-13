@@ -395,7 +395,7 @@ final class uu {
                       var14 = LobbyRoom.field_Jb + (String) (var11);
                     }
                   } else {
-                    var13_ref = rd.field_f;
+                    var13_ref = FullscreenFocusCanvas.field_f;
                     if (var12 == 0) {
                       var14 = EmailCheckResult.a(param3 ^ 4800, TeamRoster.field_d, new String[]{(String) (var11)});
                       if (var19 != 0) {

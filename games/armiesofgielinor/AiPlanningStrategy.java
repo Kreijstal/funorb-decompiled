@@ -453,7 +453,7 @@ abstract class AiPlanningStrategy {
         var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (0 >= LoginForm.field_M) {
+          if (0 >= LoginForm.memberEntitlementValue) {
             if (DamageEvent.g(80)) {
               var2_int = 0;
               decompiledFrameRemainder0 = (var3 != 0);
@@ -464,19 +464,19 @@ abstract class AiPlanningStrategy {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (ActionSpell.field_e == null) {
-              FixedQuaternion.field_a = dj.a(640, 0, IntPair.field_m, -36, 0, 480);
+            if (ActionSpell.viewportManager == null) {
+              FixedQuaternion.fullscreenCanvas = dj.openFullscreenCanvas(640, 0, IntPair.field_m, -36, 0, 480);
               if (var3 != 0) {
-                FixedQuaternion.field_a = ActionSpell.field_e.c(-1);
+                FixedQuaternion.fullscreenCanvas = ActionSpell.viewportManager.enterFullscreen(-1);
                 ds.a(2, 99);
               }
             } else {
-              FixedQuaternion.field_a = ActionSpell.field_e.c(-1);
+              FixedQuaternion.fullscreenCanvas = ActionSpell.viewportManager.enterFullscreen(-1);
               ds.a(2, 99);
             }
-            if (null != FixedQuaternion.field_a) {
+            if (null != FixedQuaternion.fullscreenCanvas) {
               var2_int = 2;
-              BitmapTextWidgetPainter.a(77, FixedQuaternion.field_a);
+              BitmapTextWidgetPainter.a(77, FixedQuaternion.fullscreenCanvas);
               if (var3 != 0) {
                 var2_int = 3;
               }
@@ -487,7 +487,7 @@ abstract class AiPlanningStrategy {
           if (param1 != 8028) {
             field_e = (String) null;
           }
-          if (null == ActionSpell.field_e &&
+          if (null == ActionSpell.viewportManager &&
             bn.field_e) {
             vq.a(var2_int, param0, (byte) 13);
           }

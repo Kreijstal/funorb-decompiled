@@ -209,11 +209,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               mh.field_c = 0;
-              bn.field_b = width;
+              bn.viewportWidth = width;
               GuestPlayConfirmationForm.canvasWidth = width;
-              DualNodeIterator.field_b = 0;
+              DualNodeIterator.canvasOffsetX = 0;
               SummonRequest.field_B = revision;
-              dt.field_a = height;
+              dt.viewportHeight = height;
               MatchSetupPanel.canvasHeight = height;
               IntKeyLookup.activeGameShell = this;
               if (obfuscationGuard != 10) {
@@ -609,7 +609,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 AgeValidator.c((byte) -76);
                 this.recreateCanvas((byte) 87);
-                so.field_b = StripedProgressWidget.a(bn.field_b, dt.field_a, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+                so.field_b = StripedProgressWidget.a(bn.viewportWidth, dt.viewportHeight, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
                 this.initializeClient(false);
                 GameClock.gameClock = DraggableWidgetContainer.createGameClock(false);
                 do {
@@ -623,7 +623,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    Widget.ticksThisFrame = GameClock.gameClock.waitAndAdvance(-125, rd.tickDurationNanos);
+                    Widget.ticksThisFrame = GameClock.gameClock.waitAndAdvance(-125, FullscreenFocusCanvas.tickDurationNanos);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;
@@ -797,17 +797,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (previousRefreshCounter > 50) {
             uh.canvasRefreshCounter = uh.canvasRefreshCounter - 50;
             MaskedTextEntryPainter.redrawRequested = true;
-            IndexedSpriteBase.field_b.setSize(bn.field_b, dt.field_a);
+            IndexedSpriteBase.field_b.setSize(bn.viewportWidth, dt.viewportHeight);
             IndexedSpriteBase.field_b.setVisible(true);
             if (null != ContextualRuntimeException.field_f &&
               cs.field_bb == null) {
               frameInsets = ContextualRuntimeException.field_f.getInsets();
-              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b + frameInsets.left, mh.field_c + frameInsets.top);
+              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.canvasOffsetX + frameInsets.left, mh.field_c + frameInsets.top);
               if (ArmiesOfGielinor.obfuscationControl) {
-                IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
+                IndexedSpriteBase.field_b.setLocation(DualNodeIterator.canvasOffsetX, mh.field_c);
               }
             } else {
-              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
+              IndexedSpriteBase.field_b.setLocation(DualNodeIterator.canvasOffsetX, mh.field_c);
             }
           }
           if (obfuscationGuard != -11) {
@@ -867,19 +867,19 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           IndexedSpriteBase.field_b = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) IndexedSpriteBase.field_b));
-          IndexedSpriteBase.field_b.setSize(bn.field_b, dt.field_a);
+          IndexedSpriteBase.field_b.setSize(bn.viewportWidth, dt.viewportHeight);
           if (obfuscationGuard != 87) {
             return;
           }
           IndexedSpriteBase.field_b.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == ContextualRuntimeException.field_f);
           if (!decompiledSharedTail0) {
-            IndexedSpriteBase.field_b.setLocation(DualNodeIterator.field_b, mh.field_c);
+            IndexedSpriteBase.field_b.setLocation(DualNodeIterator.canvasOffsetX, mh.field_c);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = ContextualRuntimeException.field_f.getInsets();
-            IndexedSpriteBase.field_b.setLocation(var3.left + DualNodeIterator.field_b, var3.top + mh.field_c);
+            IndexedSpriteBase.field_b.setLocation(var3.left + DualNodeIterator.canvasOffsetX, var3.top + mh.field_c);
           }
           IndexedSpriteBase.field_b.addFocusListener((java.awt.event.FocusListener) (this));
           IndexedSpriteBase.field_b.requestFocus();

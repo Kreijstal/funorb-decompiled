@@ -345,8 +345,8 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, ArrayWidgetContainer.field_D);
           ModalDialog.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
-          fj.field_d = new ClientUiComponent(0L, ConsoleValue.field_a, l.field_f.toUpperCase());
-          fj.field_d.inputEnabled = fh.field_c;
+          ViewportManager.field_d = new ClientUiComponent(0L, ConsoleValue.field_a, l.field_f.toUpperCase());
+          ViewportManager.field_d.inputEnabled = fh.field_c;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
           stackIn_5_2 = 0L;
@@ -374,7 +374,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           LobbyPlayer.field_Lb.addChild(ModalDialog.field_K, 99);
           LobbyPlayer.field_Lb.addChild(CipherPacketBuffer.field_x, 70);
           if (fh.field_c) {
-            ov.field_i.addChild(fj.field_d, 127);
+            ov.field_i.addChild(ViewportManager.field_d, 127);
           }
           ov.field_i.addChild(VineGrowthAction.field_x, 93);
           ToggleWidget.field_Q = new ClientUiComponent(0L, eq.field_h);

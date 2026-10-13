@@ -51,7 +51,7 @@ final class ConsoleParseException extends Exception {
               hf.textChatActive = false;
             }
             if (ed.field_e.pressedButton != 0) {
-              rd.clearChatText(8445);
+              FullscreenFocusCanvas.clearChatText(8445);
               hf.textChatActive = false;
               return;
             }

@@ -81,7 +81,7 @@ abstract class PreparedAction extends IntrusiveNode {
         }
     }
 
-    final static void a(byte param0, fj param1) {
+    final static void a(byte param0, ViewportManager param1) {
         int stackIn_4_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -89,9 +89,9 @@ abstract class PreparedAction extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          ActionSpell.field_e = param1;
-          if (ActionSpell.field_e != null &&
-            ActionSpell.field_e.field_h) {
+          ActionSpell.viewportManager = param1;
+          if (ActionSpell.viewportManager != null &&
+            ActionSpell.viewportManager.resizeEnabled) {
             stackIn_4_0 = 1;
           } else {
             stackIn_4_0 = 0;

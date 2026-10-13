@@ -122,7 +122,7 @@ final class EmailValidator extends TextFieldValidator {
 
     final static void c(byte param0) {
         if (param0 == 91) {
-          ProgressMessageDialog.field_vb = c.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + od.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + TextLineLayout.field_f + "<br>" + "<br>" + ls.field_d;
+          ProgressMessageDialog.field_vb = c.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + od.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + TextLineLayout.field_f + "<br>" + "<br>" + FullscreenDisplayMode.field_d;
           return;
         }
     }

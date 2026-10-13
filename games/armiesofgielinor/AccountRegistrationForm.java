@@ -188,7 +188,7 @@ final class AccountRegistrationForm extends DequeWidgetContainer implements Text
         this.passwordInput.tooltipText = CachedArchiveProvider.field_k;
         this.passwordConfirmationInput.tooltipText = WeightedScoreStrategy.field_i;
         this.ageInput.tooltipText = StrongCacheEntry.field_A;
-        this.emailOptInToggle.tooltipText = rd.field_g;
+        this.emailOptInToggle.tooltipText = FullscreenFocusCanvas.field_g;
         this.nameInput.setValidationSource((byte) 16, new AccountNameAvailabilityValidator(this.nameInput));
         this.emailInput.setValidationSource((byte) 16, new EmailValidator(this.emailInput));
         this.emailConfirmationInput.setValidationSource((byte) 16, new EmailConfirmationValidator(this.emailConfirmationInput, this.emailInput));

@@ -187,48 +187,48 @@ final class dj {
         }
     }
 
-    final static rd a(int param0, int param1, PlatformTaskService param2, int param3, int param4, int param5) {
-        java.awt.Frame var6 = null;
-        RuntimeException var6_ref = null;
-        rd var7 = null;
-        java.awt.Frame var8 = null;
-        Object stackIn_2_0 = null;
-        rd stackIn_5_0 = null;
-        rd stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static FullscreenFocusCanvas openFullscreenCanvas(int width, int refreshRate, PlatformTaskService platformService, int obfuscationGuard, int bitDepth, int height) {
+        java.awt.Frame frameAlias = null;
+        RuntimeException failure = null;
+        FullscreenFocusCanvas canvas = null;
+        java.awt.Frame frame = null;
+        Object unavailableCanvas = null;
+        FullscreenFocusCanvas guardCanvas = null;
+        FullscreenFocusCanvas openedCanvas = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String serviceDescription = null;
+        RuntimeException caughtFailure = null;
         try {
-          var8 = ug.a(param4, param1, -1, param2, param0, param5);
-          var6 = var8;
-          if (var8 == null) {
-            stackIn_2_0 = null;
-            return (rd) (stackIn_2_0);
+          frame = ug.openFullscreenFrame(bitDepth, refreshRate, -1, platformService, width, height);
+          frameAlias = frame;
+          if (frame == null) {
+            unavailableCanvas = null;
+            return (FullscreenFocusCanvas) (unavailableCanvas);
           }
-          var7 = new rd();
-          var7.field_c = var8;
-          var7.field_c.add((java.awt.Component) ((Object) var7));
-          var7.setBounds(0, 0, param0, param5);
-          var7.addFocusListener(var7);
-          var7.requestFocus();
-          if (param3 <= -15) {
-            stackIn_7_0 = var7;
-            return stackIn_7_0;
+          canvas = new FullscreenFocusCanvas();
+          canvas.frame = frame;
+          canvas.frame.add((java.awt.Component) ((Object) canvas));
+          canvas.setBounds(0, 0, width, height);
+          canvas.addFocusListener(canvas);
+          canvas.requestFocus();
+          if (obfuscationGuard <= -15) {
+            openedCanvas = canvas;
+            return openedCanvas;
           }
-          stackIn_5_0 = (rd) null;
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_10_0 = var6_ref;
-          stackIn_10_1 = new StringBuilder().append("dj.A(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_11_2 = "null";
+          guardCanvas = (FullscreenFocusCanvas) null;
+          return guardCanvas;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("dj.A(").append(width).append(',').append(refreshRate).append(',');
+          if (platformService == null) {
+            serviceDescription = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            serviceDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(serviceDescription).append(',').append(obfuscationGuard).append(',').append(bitDepth).append(',').append(height).append(')').toString());
         }
     }
 

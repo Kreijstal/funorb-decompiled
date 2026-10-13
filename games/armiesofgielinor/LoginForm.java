@@ -8,7 +8,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
     static int field_E;
     static int field_T;
     private InteractiveWidget navigationButton;
-    static int field_M;
+    static int memberEntitlementValue;
     private InteractiveWidget registerButton;
     private boolean retryMode;
     private String description;
@@ -88,7 +88,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
             if (!this.offerGuestPlay) {
               discardedButtonC = null;
               discardedButtonD = null;
-              navigationText = fj.field_a;
+              navigationText = ViewportManager.field_a;
             } else {
               discardedButtonC = null;
               discardedButtonD = null;

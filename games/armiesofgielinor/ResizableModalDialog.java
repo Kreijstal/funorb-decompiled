@@ -258,7 +258,7 @@ abstract class ResizableModalDialog extends ModalDialog {
             SummonAction.lobbyPlayerOrder.addLast((byte) -119, (IntrusiveNode) (player));
           } else {
             stackIn_7_0 = -123;
-            fj.$cfr$intArgs$a$f94c566f195c(stackIn_7_0, player, var3);
+            ViewportManager.$cfr$intArgs$a$f94c566f195c(stackIn_7_0, player, var3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

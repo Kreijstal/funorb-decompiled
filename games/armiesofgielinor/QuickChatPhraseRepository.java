@@ -30,14 +30,14 @@ final class QuickChatPhraseRepository {
         if (param0 != 27875) {
           field_d = (ClientUiComponent) null;
           if (!DamageEvent.g(81)) {
-            return LoginForm.field_M <= 0 ? true : false;
+            return LoginForm.memberEntitlementValue <= 0 ? true : false;
           }
           return true;
         }
         if (DamageEvent.g(81)) {
           return true;
         }
-        if (LoginForm.field_M > 0) {
+        if (LoginForm.memberEntitlementValue > 0) {
           return false;
         }
         return true;
@@ -135,7 +135,7 @@ final class QuickChatPhraseRepository {
             return;
           }
           stackIn_9_0 = -123;
-          fj.$cfr$intArgs$a$f94c566f195c(stackIn_9_0, room, var2);
+          ViewportManager.$cfr$intArgs$a$f94c566f195c(stackIn_9_0, room, var2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

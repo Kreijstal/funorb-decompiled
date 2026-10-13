@@ -250,7 +250,7 @@ final class IconLabelControl extends ClientUiComponent {
           if (param2 != 26) {
             field_Lb = (ClientUiComponent) null;
           }
-          ls.a(param4, 0, param0, 6727, param3.position, param1, param3.payload);
+          FullscreenDisplayMode.a(param4, 0, param0, 6727, param3.position, param1, param3.payload);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fp.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

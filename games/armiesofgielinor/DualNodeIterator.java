@@ -8,7 +8,7 @@ final class DualNodeIterator implements Iterator {
     private DualLinkedNode lastReturned;
     private IterableDualNodeDeque deque;
     static String field_g;
-    static int field_b;
+    static int canvasOffsetX;
     private DualLinkedNode cursor;
     static double packetJitterMillis;
 
@@ -117,7 +117,7 @@ final class DualNodeIterator implements Iterator {
     static {
         field_d = "This unit has no use for this accessory.";
         field_g = "Drawn";
-        field_b = 0;
+        canvasOffsetX = 0;
         packetJitterMillis = 0.0;
     }
 }

@@ -33,65 +33,65 @@ final class ValidatedTextWidget extends EditableTextWidget implements Validation
         return this.tooltipText;
     }
 
-    final static ls[] a(int param0, PlatformTaskService param1) {
-        int var5 = 0;
-        ls[] stackIn_3_0 = null;
-        ls[] stackIn_9_0 = null;
-        ls[] stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int[] var3 = null;
-        ls[] var4 = null;
-        ls var6 = null;
-        int var7 = 0;
-        PlatformTask var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static FullscreenDisplayMode[] getFullscreenDisplayModes(int obfuscationGuard, PlatformTaskService platformService) {
+        int modeIndex = 0;
+        FullscreenDisplayMode[] unsupportedModes = null;
+        FullscreenDisplayMode[] failedModes = null;
+        FullscreenDisplayMode[] decodedModes = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String serviceDescription = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int[] modeValues = null;
+        FullscreenDisplayMode[] modes = null;
+        FullscreenDisplayMode mode = null;
+        int obfuscationControl = 0;
+        PlatformTask modeTask = null;
+        int[] modeValuesAlias = null;
+        int[] returnedModeValues = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (!param1.supportsFullscreen(false)) {
-            stackIn_3_0 = new ls[]{};
-            return stackIn_3_0;
+          if (!platformService.supportsFullscreen(false)) {
+            unsupportedModes = new FullscreenDisplayMode[]{};
+            return unsupportedModes;
           }
-          var8 = param1.getDisplayModesAsync(-20681);
-          while (0 == var8.status) {
+          modeTask = platformService.getDisplayModesAsync(-20681);
+          while (0 == modeTask.status) {
             SpriteButtonPainter.a(10L, 0);
           }
-          if (2 == var8.status) {
-            stackIn_9_0 = new ls[]{};
-            return stackIn_9_0;
+          if (2 == modeTask.status) {
+            failedModes = new FullscreenDisplayMode[]{};
+            return failedModes;
           }
-          var10 = (int[]) (var8.result);
-          var9 = var10;
-          var3 = var9;
-          var4 = new ls[var10.length >> 2];
-          if (param0 >= -3) {
+          returnedModeValues = (int[]) (modeTask.result);
+          modeValuesAlias = returnedModeValues;
+          modeValues = modeValuesAlias;
+          modes = new FullscreenDisplayMode[returnedModeValues.length >> 2];
+          if (obfuscationGuard >= -3) {
             field_X = (String) null;
           }
-          for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new ls();
-            var4[var5] = var6;
-            var6.field_b = var3[var5 << 2];
-            var6.field_a = var3[(var5 << 2) + 1];
-            var6.field_f = var3[(var5 << 2) + 2];
-            var6.field_e = var3[(var5 << 2) + 3];
+          for (modeIndex = 0; modeIndex < modes.length; modeIndex++) {
+            mode = new FullscreenDisplayMode();
+            modes[modeIndex] = mode;
+            mode.width = modeValues[modeIndex << 2];
+            mode.height = modeValues[(modeIndex << 2) + 1];
+            mode.bitDepth = modeValues[(modeIndex << 2) + 2];
+            mode.refreshRate = modeValues[(modeIndex << 2) + 3];
           }
-          stackIn_16_0 = var4;
-          return stackIn_16_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_19_0 = var2;
-          stackIn_19_1 = new StringBuilder().append("ma.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_20_2 = "null";
+          decodedModes = modes;
+          return decodedModes;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ma.C(").append(obfuscationGuard).append(',');
+          if (platformService == null) {
+            serviceDescription = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            serviceDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(serviceDescription).append(')').toString());
         }
     }
 

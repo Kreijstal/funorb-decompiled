@@ -704,8 +704,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               if (var7_int != 3) {
                 if (var7_int == 4) {
                   var5 = null;
-                  if (rd.gameplayController != null) {
-                    var7 = rd.gameplayController.selectedUnit;
+                  if (FullscreenFocusCanvas.gameplayController != null) {
+                    var7 = FullscreenFocusCanvas.gameplayController.selectedUnit;
                     if (var7 != null) {
                       var8 = (AiUnitPlanner) (this.unitPlanners.first((byte) 114));
                       while (var8 != null) {
@@ -1645,7 +1645,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var4 = 1;
         }
         if (rs.keyCode == 13) {
-          rd.clearChatText(8445);
+          FullscreenFocusCanvas.clearChatText(8445);
           hf.textChatActive = false;
           var4 = 1;
         }

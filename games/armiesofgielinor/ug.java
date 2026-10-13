@@ -30,82 +30,82 @@ final class ug extends IOException {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, PlatformTaskService param3, int param4, int param5) {
-        int var8 = 0;
-        Object stackIn_10_0 = null;
-        Object stackIn_27_0 = null;
-        Object stackIn_36_0 = null;
-        java.awt.Frame stackIn_38_0 = null;
-        RuntimeException stackIn_41_0 = null;
-        StringBuilder stackIn_41_1 = null;
-        String stackIn_42_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        ls[] var6 = null;
-        RuntimeException var6_ref = null;
-        int var7_int = 0;
-        java.awt.Frame var7 = null;
-        int var9 = 0;
-        CharSequence var10 = null;
-        ls[] var11 = null;
-        PlatformTask var12 = null;
-        var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+    final static java.awt.Frame openFullscreenFrame(int bitDepth, int refreshRate, int obfuscationGuard, PlatformTaskService platformService, int width, int height) {
+        int modeIndex = 0;
+        Object unavailableFrame = null;
+        Object unmatchedFrame = null;
+        Object failedFrame = null;
+        java.awt.Frame openedFrame = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String serviceDescription = null;
+        RuntimeException caughtFailure = null;
+        FullscreenDisplayMode[] displayModes = null;
+        RuntimeException failure = null;
+        int matchedMode = 0;
+        java.awt.Frame frame = null;
+        int obfuscationControl = 0;
+        CharSequence guardText = null;
+        FullscreenDisplayMode[] returnedModes = null;
+        PlatformTask enterTask = null;
+        obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (param2 != -1) {
-            var10 = (CharSequence) null;
+          if (obfuscationGuard != -1) {
+            guardText = (CharSequence) null;
             ug.a(99, (CharSequence) null);
           }
-          if (!param3.supportsFullscreen(false)) {
+          if (!platformService.supportsFullscreen(false)) {
             return null;
           }
-          if (param0 == 0) {
-            var11 = ValidatedTextWidget.a(param2 ^ 109, param3);
-            var6 = var11;
-            if (var6 == null) {
-              stackIn_10_0 = null;
-              return (java.awt.Frame) (stackIn_10_0);
+          if (bitDepth == 0) {
+            returnedModes = ValidatedTextWidget.getFullscreenDisplayModes(obfuscationGuard ^ 109, platformService);
+            displayModes = returnedModes;
+            if (displayModes == null) {
+              unavailableFrame = null;
+              return (java.awt.Frame) (unavailableFrame);
             }
-            var7_int = 0;
-            for (var8 = 0; var11.length > var8; var8++) {
-              if (param4 == var11[var8].field_b &&
-                param5 == var11[var8].field_a && ((param1 == 0 ||
-                var11[var8].field_e == param1) &&
-                (var7_int == 0 ||
-                !(var11[var8].field_f <= param0)))) {
-                param0 = var11[var8].field_f;
-                var7_int = 1;
+            matchedMode = 0;
+            for (modeIndex = 0; returnedModes.length > modeIndex; modeIndex++) {
+              if (width == returnedModes[modeIndex].width &&
+                height == returnedModes[modeIndex].height && ((refreshRate == 0 ||
+                returnedModes[modeIndex].refreshRate == refreshRate) &&
+                (matchedMode == 0 ||
+                !(returnedModes[modeIndex].bitDepth <= bitDepth)))) {
+                bitDepth = returnedModes[modeIndex].bitDepth;
+                matchedMode = 1;
               }
             }
-            if (var7_int == 0) {
-              stackIn_27_0 = null;
-              return (java.awt.Frame) (stackIn_27_0);
+            if (matchedMode == 0) {
+              unmatchedFrame = null;
+              return (java.awt.Frame) (unmatchedFrame);
             }
           }
-          var12 = param3.a(true, param5, param4, param1, param0);
-          while (var12.status == 0) {
+          enterTask = platformService.enterFullscreenAsync(true, height, width, refreshRate, bitDepth);
+          while (enterTask.status == 0) {
             SpriteButtonPainter.a(10L, 0);
           }
-          var7 = (java.awt.Frame) (var12.result);
-          if (var7 == null) {
+          frame = (java.awt.Frame) (enterTask.result);
+          if (frame == null) {
             return null;
           }
-          if (2 != var12.status) {
-            stackIn_38_0 = var7;
-            return stackIn_38_0;
+          if (2 != enterTask.status) {
+            openedFrame = frame;
+            return openedFrame;
           }
-          fj.a(var7, param3, -2);
-          stackIn_36_0 = null;
-          return (java.awt.Frame) (stackIn_36_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_41_0 = var6_ref;
-          stackIn_41_1 = new StringBuilder().append("ug.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_42_2 = "null";
+          ViewportManager.exitFullscreen(frame, platformService, -2);
+          failedFrame = null;
+          return (java.awt.Frame) (failedFrame);
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("ug.A(").append(bitDepth).append(',').append(refreshRate).append(',').append(obfuscationGuard).append(',');
+          if (platformService == null) {
+            serviceDescription = "null";
           } else {
-            stackIn_42_2 = "{...}";
+            serviceDescription = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(serviceDescription).append(',').append(width).append(',').append(height).append(')').toString());
         }
     }
 

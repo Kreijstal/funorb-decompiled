@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dt {
-    static int field_a;
+    static int viewportHeight;
     static boolean[] field_d;
     static String field_c;
     static java.security.SecureRandom field_b;
@@ -45,7 +45,7 @@ final class dt {
           if (param1 != 23678) {
             dt.a(4);
           }
-          fj.detachKeyboard((java.awt.Component) ((Object) param0), (byte) 35);
+          ViewportManager.detachKeyboard((java.awt.Component) ((Object) param0), (byte) 35);
           dc.a((java.awt.Component) ((Object) param0), -37);
           if (CampaignMission.field_I == null) {
             return;

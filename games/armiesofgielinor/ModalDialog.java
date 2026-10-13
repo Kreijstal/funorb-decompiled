@@ -166,7 +166,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         boolean stackIn_25_0 = false;
         String stackIn_25_1 = null;
         boolean stackIn_26_2 = false;
-        if (fj.field_c) {
+        if (ViewportManager.field_c) {
           stackIn_6_0 = (hf.textChatActive) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
@@ -178,8 +178,8 @@ abstract class ModalDialog extends DequeWidgetContainer {
         }
         stackIn_13_0 = (param1) && (sq.c((byte) -103)) && (var2 == 0);
         tq.a(stackIn_13_0, false);
-        if (null != rd.gameplayController) {
-          rd.gameplayController.b(0, param1);
+        if (null != FullscreenFocusCanvas.gameplayController) {
+          FullscreenFocusCanvas.gameplayController.b(0, param1);
         }
         if (null != SectorCacheStore.field_a) {
           SectorCacheStore.field_a.b(0, param1);

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ls {
-    int field_e;
-    int field_a;
-    int field_b;
+final class FullscreenDisplayMode {
+    int refreshRate;
+    int height;
+    int width;
     static int[] field_c;
     static String field_d;
-    int field_f;
+    int bitDepth;
 
     final static int a(int param0, int param1, int param2, int param3, int param4) {
         int var5;

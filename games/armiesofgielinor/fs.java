@@ -185,10 +185,10 @@ final class fs {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          return FixedQuaternion.field_a == null ? ph.tickFocusSnapshot : true;
+          return FixedQuaternion.fullscreenCanvas == null ? ph.tickFocusSnapshot : true;
         }
         fs.a(15, false, true, 64, -122, 113, -41, -38, 58);
-        return FixedQuaternion.field_a == null ? ph.tickFocusSnapshot : true;
+        return FixedQuaternion.fullscreenCanvas == null ? ph.tickFocusSnapshot : true;
     }
 
     public static void a(int param0) {

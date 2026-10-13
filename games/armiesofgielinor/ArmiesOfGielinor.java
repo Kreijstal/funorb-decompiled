@@ -79,13 +79,13 @@ public final class ArmiesOfGielinor extends wf {
           bs.a((byte) -127);
           r.field_u = MusicPatchPcmStream.getPointerIdleTicks(4);
           QuickChatHelpDialog.pumpAudioAndPruneSounds(128);
-          if (FixedQuaternion.field_a != null &&
-            FixedQuaternion.field_a.field_k) {
+          if (FixedQuaternion.fullscreenCanvas != null &&
+            FixedQuaternion.fullscreenCanvas.focusLost) {
             ck.b(-127);
             oi.a(false);
           }
           stackIn_10_1 = 127;
-          stackIn_11_2 = (FixedQuaternion.field_a != null);
+          stackIn_11_2 = (FixedQuaternion.fullscreenCanvas != null);
           this.a(stackIn_10_1, stackIn_11_2);
           if (TextLineLayout.field_l) {
             this.p(17);
@@ -135,11 +135,11 @@ public final class ArmiesOfGielinor extends wf {
                   this.d(0, false);
                   if (var11 != 0) {
                     stackIn_61_1 = 42;
-                    stackIn_62_2 = (null != FixedQuaternion.field_a);
+                    stackIn_62_2 = (null != FixedQuaternion.fullscreenCanvas);
                     var2_int = this.a((byte) stackIn_61_1, stackIn_62_2);
                     if (1 == var2_int ||
                       var2_int == 2) {
-                      if (null != FixedQuaternion.field_a) {
+                      if (null != FixedQuaternion.fullscreenCanvas) {
                         ck.b(-104);
                       }
                       if (var2_int == 2) {
@@ -152,11 +152,11 @@ public final class ArmiesOfGielinor extends wf {
                 }
               } else {
                 stackIn_61_1 = 42;
-                stackIn_62_2 = (null != FixedQuaternion.field_a);
+                stackIn_62_2 = (null != FixedQuaternion.fullscreenCanvas);
                 var2_int = this.a((byte) stackIn_61_1, stackIn_62_2);
                 if (1 == var2_int ||
                   var2_int == 2) {
-                  if (null != FixedQuaternion.field_a) {
+                  if (null != FixedQuaternion.fullscreenCanvas) {
                     ck.b(-104);
                   }
                   if (var2_int == 2) {
@@ -221,7 +221,7 @@ public final class ArmiesOfGielinor extends wf {
                     du.field_h = false;
                     FaceNormal.field_d = false;
                     ModalDialogHost.field_H = false;
-                    fj.field_c = false;
+                    ViewportManager.field_c = false;
                     vs.field_j = true;
                     uc.a(0);
                   }
@@ -241,8 +241,8 @@ public final class ArmiesOfGielinor extends wf {
                   stackIn_120_1 = (12 == MusicCrossfadeStream.deliveredOpcode);
                   var2 = CommunityTabGroup.decodeChatMessageWithIntGuard(stackIn_119_0, stackIn_120_1);
                   if (((ChatMessage) (var2)).channelId == 4) {
-                    if (null != rd.gameplayController) {
-                      NodeHashTable.a(-1, rd.gameplayController.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
+                    if (null != FullscreenFocusCanvas.gameplayController) {
+                      NodeHashTable.a(-1, FullscreenFocusCanvas.gameplayController.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
                     }
                     if (SectorCacheStore.field_a != null) {
                       NodeHashTable.a(-1, SectorCacheStore.field_a.battlefield.a(((ChatMessage) (var2)).displayName, (byte) -64));
@@ -292,10 +292,10 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (79 == MusicCrossfadeStream.deliveredOpcode) {
-                  if (null == rd.gameplayController) {
+                  if (null == FullscreenFocusCanvas.gameplayController) {
                     continue;
                   }
-                  rd.gameplayController.field_Bb = ByteStorage.incomingPacket.readInt(1);
+                  FullscreenFocusCanvas.gameplayController.field_Bb = ByteStorage.incomingPacket.readInt(1);
                   continue;
                 }
                 if (MusicCrossfadeStream.deliveredOpcode == 64 ||
@@ -353,8 +353,8 @@ public final class ArmiesOfGielinor extends wf {
                     SectorCacheStore.field_a = var10;
                     ModalDialogHost.field_H = true;
                   } else {
-                    fj.field_c = true;
-                    rd.gameplayController = var10;
+                    ViewportManager.field_c = true;
+                    FullscreenFocusCanvas.gameplayController = var10;
                     ConsolePanel.a(true);
                     bw.d(7242);
                     pc.b((byte) 16);
@@ -366,18 +366,18 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 if (66 == MusicCrossfadeStream.deliveredOpcode) {
-                  if (fj.field_c ||
+                  if (ViewportManager.field_c ||
                     ModalDialogHost.field_H) {
-                    if (fj.field_c &&
-                      null != rd.gameplayController) {
-                      rd.gameplayController.d(127, false);
+                    if (ViewportManager.field_c &&
+                      null != FullscreenFocusCanvas.gameplayController) {
+                      FullscreenFocusCanvas.gameplayController.d(127, false);
                     }
                     ValidatedTextWidget.field_Z = true;
                     vs.field_j = true;
                     s.field_d = 0;
                     du.field_h = false;
                     CipherPacketBuffer.a(false, -2, 1, jt.field_a);
-                    fj.field_c = false;
+                    ViewportManager.field_c = false;
                     ModalDialogHost.field_H = false;
                     uc.a(0);
                   }
@@ -385,12 +385,12 @@ public final class ArmiesOfGielinor extends wf {
                   continue;
                 }
                 var2 = null;
-                if (!fj.field_c) {
+                if (!ViewportManager.field_c) {
                   if (ModalDialogHost.field_H) {
                     var2 = SectorCacheStore.field_a;
                   }
                 } else {
-                  var2 = rd.gameplayController;
+                  var2 = FullscreenFocusCanvas.gameplayController;
                 }
                 if (var2 != null) {
                   if (MusicCrossfadeStream.deliveredOpcode == 77) {
@@ -498,7 +498,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 70) {
                     ((GameplayController) (var2)).battlefield.field_C = ByteStorage.incomingPacket.readUnsignedByte(0);
-                    if (null == rd.gameplayController) {
+                    if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
                     ConsolePanel.a(true);
@@ -506,7 +506,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 71) {
                     ((GameplayController) (var2)).battlefield.setInactivePlayerMask(0, ByteStorage.incomingPacket.readUnsignedByte(0));
-                    if (rd.gameplayController == null) {
+                    if (FullscreenFocusCanvas.gameplayController == null) {
                       continue;
                     }
                     ConsolePanel.a(true);
@@ -514,7 +514,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 73) {
                     ((GameplayController) (var2)).battlefield.setEliminatedPlayerMask(ByteStorage.incomingPacket.readUnsignedByte(0), -119);
-                    if (null == rd.gameplayController) {
+                    if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
                     ConsolePanel.a(true);
@@ -522,7 +522,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 72) {
                     ((GameplayController) (var2)).battlefield.field_i = ByteStorage.incomingPacket.readUnsignedByte(0);
-                    if (null == rd.gameplayController) {
+                    if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
                     bw.d(7242);
@@ -530,7 +530,7 @@ public final class ArmiesOfGielinor extends wf {
                   }
                   if (MusicCrossfadeStream.deliveredOpcode == 73) {
                     ((GameplayController) (var2)).field_hb = ByteStorage.incomingPacket.readUnsignedByte(0);
-                    if (null == rd.gameplayController) {
+                    if (null == FullscreenFocusCanvas.gameplayController) {
                       continue;
                     }
                     bw.d(7242);
@@ -574,7 +574,7 @@ public final class ArmiesOfGielinor extends wf {
                   du.field_h = false;
                   AiUnitPlanner.field_t = true;
                   vs.field_j = true;
-                  if (!fj.field_c) {
+                  if (!ViewportManager.field_c) {
                     CipherPacketBuffer.a(false, 0, 1, 0);
                     if (var11 != 0) {
                       PaletteRegionMap.field_i = ContextualRuntimeException.field_d;
@@ -587,7 +587,7 @@ public final class ArmiesOfGielinor extends wf {
                   ut.i((byte) 126);
                   ConsoleTextNode.field_p[jt.field_a].restoreStageSelection(100, false, 0);
                   ModalDialogHost.field_H = false;
-                  fj.field_c = false;
+                  ViewportManager.field_c = false;
                   FaceNormal.field_d = false;
                   uc.a(0);
                 }
@@ -637,7 +637,7 @@ public final class ArmiesOfGielinor extends wf {
         RuntimeException var2 = null;
         try {
           mj.shutdownAudioPlayers((byte) -82);
-          if (null != FixedQuaternion.field_a) {
+          if (null != FixedQuaternion.fullscreenCanvas) {
             ck.b(-116);
           }
           pg.a(false);
@@ -735,17 +735,17 @@ public final class ArmiesOfGielinor extends wf {
               boolean decompiledFrameRemainder2 = true;
               if (jt.field_a == -1) {
                 if (!FaceNormal.field_d) {
-                  if (rd.gameplayController == null) {
+                  if (FullscreenFocusCanvas.gameplayController == null) {
                     CipherPacketBuffer.a(false, 0, 1, jt.field_a);
                     decompiledFrameRemainder2 = (var8 != 0);
                   }
                   if (decompiledFrameRemainder2) {
-                    rd.gameplayController.a(112, true);
+                    FullscreenFocusCanvas.gameplayController.a(112, true);
                     while (Unit.pollKeyEvent((byte) -89)) {
                       if (ValidationState.a(param0 + 56)) {
                         continue;
                       }
-                      rd.gameplayController.g(false);
+                      FullscreenFocusCanvas.gameplayController.g(false);
                       if (var8 != 0) {
                         decompiledFrameCompleted1 = false;
                         break;
@@ -801,7 +801,7 @@ public final class ArmiesOfGielinor extends wf {
             if (FaceNormal.field_d &&
               !SpellCastAction.field_t &&
               !ScrollContainer.field_Qb) {
-              if (fj.field_c &&
+              if (ViewportManager.field_c &&
                 hf.textChatActive) {
                 var3_int = 0;
               }
@@ -809,9 +809,9 @@ public final class ArmiesOfGielinor extends wf {
               if (ModalDialogHost.field_H) {
                 SectorCacheStore.field_a.a(109, var4 != 0);
               }
-              if (fj.field_c) {
+              if (ViewportManager.field_c) {
                 PaletteRegionMap.a(320, 180, var4 != 0, 0);
-                rd.gameplayController.a(param0 + 119, var4 != 0);
+                FullscreenFocusCanvas.gameplayController.a(param0 + 119, var4 != 0);
               }
               while (Unit.pollKeyEvent((byte) -127)) {
                 if (ValidationState.a(param0 - 126) &&
@@ -820,7 +820,7 @@ public final class ArmiesOfGielinor extends wf {
                 }
                 boolean decompiledFrameRemainder0 = true;
                 if (ValidatedTextWidget.field_Z) {
-                  if (!fj.field_c) {
+                  if (!ViewportManager.field_c) {
                     NodeIterator.a(12, 15, 13, param0 + 50);
                     decompiledFrameRemainder0 = (var8 != 0);
                   }
@@ -845,10 +845,10 @@ public final class ArmiesOfGielinor extends wf {
                 if (ModalDialogHost.field_H) {
                   SectorCacheStore.field_a.g(false);
                 }
-                if (!fj.field_c) {
+                if (!ViewportManager.field_c) {
                   continue;
                 }
-                rd.gameplayController.g(false);
+                FullscreenFocusCanvas.gameplayController.g(false);
                 if (var8 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -941,7 +941,7 @@ public final class ArmiesOfGielinor extends wf {
           }
           if (jt.field_a == -3) {
             this.a(false, (byte) -62);
-            rd.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime1 = r.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime1 != 0, -1, 1, 0);
             du.field_h = true;
@@ -959,23 +959,23 @@ public final class ArmiesOfGielinor extends wf {
             if (jt.field_a == -10) {
               qh.requestDeleteQuicksave((byte) 27);
             }
-            rd.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime2 = r.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime2 != 0, -1, 1, 0);
             du.field_h = true;
           }
           if (jt.field_a == -8) {
             this.a(true, (byte) -67);
-            rd.gameplayController.k((byte) -113);
-            rd.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.k((byte) -113);
+            FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime3 = r.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime3 != 0, -1, 1, 0);
             du.field_h = true;
           }
           if (jt.field_a == -9) {
             this.a(true, (byte) -90);
-            rd.gameplayController.startEquipmentTutorial((byte) 60);
-            rd.gameplayController.h(true);
+            FullscreenFocusCanvas.gameplayController.startEquipmentTutorial((byte) 60);
+            FullscreenFocusCanvas.gameplayController.h(true);
             var3_intLifetime4 = r.field_s ? 1 : 0;
             CipherPacketBuffer.a(var3_intLifetime4 != 0, -1, 1, 0);
             du.field_h = true;
@@ -992,7 +992,7 @@ public final class ArmiesOfGielinor extends wf {
               decompiledSharedTail0 = (var8 != 0);
             }
             if ((decompiledSharedTail0) &&
-              (fj.field_c)) {
+              (ViewportManager.field_c)) {
               PointerInputHandler.writeRoomAdmissionCancellation(-81, ToggleWidget.currentRoom.getRoomId((byte) 117), 11);
             }
             ScrollContainer.field_Qb = true;
@@ -1028,7 +1028,7 @@ public final class ArmiesOfGielinor extends wf {
             PaletteRegionMap.a((byte) 122, var2);
             return;
           }
-          stackIn_21_0 = ((rd.gameplayController != null ||
+          stackIn_21_0 = ((FullscreenFocusCanvas.gameplayController != null ||
             null != SectorCacheStore.field_a) &&
             jt.field_a == 7);
           MusicPatch.field_w = stackIn_21_0;
@@ -1047,7 +1047,7 @@ public final class ArmiesOfGielinor extends wf {
             !du.field_h) {
             tq.a(sq.c((byte) 54), false);
           }
-          var3 = rd.gameplayController;
+          var3 = FullscreenFocusCanvas.gameplayController;
           if (ModalDialogHost.field_H) {
             var3 = SectorCacheStore.field_a;
           }
@@ -1065,7 +1065,7 @@ public final class ArmiesOfGielinor extends wf {
               SoftwareRaster.d(0, 0, SoftwareRaster.width, SoftwareRaster.height);
               DefeatPlayerConsoleCommand.h(1976460609);
               if (obfuscationControl) {
-                if (FixedQuaternion.field_a == null) {
+                if (FixedQuaternion.fullscreenCanvas == null) {
                   stackIn_65_0 = ph.tickFocusSnapshot;
                 } else {
                   stackIn_65_0 = true;
@@ -1074,7 +1074,7 @@ public final class ArmiesOfGielinor extends wf {
               }
             }
           } else {
-            if (FixedQuaternion.field_a == null) {
+            if (FixedQuaternion.fullscreenCanvas == null) {
               stackIn_65_0 = ph.tickFocusSnapshot;
             } else {
               stackIn_65_0 = true;
@@ -1173,8 +1173,8 @@ public final class ArmiesOfGielinor extends wf {
           GameClock.a((byte) -108);
           bi.b(0);
           jp.a((byte) -82);
-          rd.a(obfuscationGuard ^ -20000072);
-          fj.b((byte) -67);
+          FullscreenFocusCanvas.a(obfuscationGuard ^ -20000072);
+          ViewportManager.b((byte) -67);
           CoatOfArms.a(false);
           BattlefieldTheme.a((byte) -117);
           ep.a((byte) 11);
@@ -1377,7 +1377,7 @@ public final class ArmiesOfGielinor extends wf {
           SingleChildWidgetContainer.i(-98);
           TextLayout.a(obfuscationGuard - 51);
           ut.p(0);
-          ls.a(-121);
+          FullscreenDisplayMode.a(-121);
           vq.a((byte) 107);
           ResizableModalDialog.h((byte) 58);
           DropdownSelector.a(obfuscationGuard - 11763);
@@ -1870,12 +1870,12 @@ public final class ArmiesOfGielinor extends wf {
             stackIn_25_1Lifetime1 = null;
             stackIn_25_14 = false;
           }
-          rd.gameplayController = new GameplayController(stackIn_20_2, (int) stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_20_6, stackIn_20_7, stackIn_21_8, stackIn_24_9, stackIn_24_10, stackIn_24_11, stackIn_24_12, stackIn_24_13, stackIn_25_14, (CampaignMission) null);
-          rd.gameplayController.battlefield.playerCoats = new CoatOfArms[r.field_B];
-          rd.gameplayController.battlefield.field_F = true;
+          FullscreenFocusCanvas.gameplayController = new GameplayController(stackIn_20_2, (int) stackIn_20_3, stackIn_20_4, stackIn_20_5, stackIn_20_6, stackIn_20_7, stackIn_21_8, stackIn_24_9, stackIn_24_10, stackIn_24_11, stackIn_24_12, stackIn_24_13, stackIn_25_14, (CampaignMission) null);
+          FullscreenFocusCanvas.gameplayController.battlefield.playerCoats = new CoatOfArms[r.field_B];
+          FullscreenFocusCanvas.gameplayController.battlefield.field_F = true;
           var5 = 0;
           while (r.field_B > var5) {
-            rd.gameplayController.battlefield.playerCoats[var5] = ah.localCoat;
+            FullscreenFocusCanvas.gameplayController.battlefield.playerCoats[var5] = ah.localCoat;
             var5++;
             if (var6 != 0) {
               return;

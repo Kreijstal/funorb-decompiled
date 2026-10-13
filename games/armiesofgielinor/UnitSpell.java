@@ -236,7 +236,7 @@ final class UnitSpell extends Spell {
 
     final static void installViewportResizeListener(int obfuscationGuard, ViewportResizeListener listener) {
         try {
-          PreparedAction.a((byte) 111, new fj(listener));
+          PreparedAction.a((byte) 111, new ViewportManager(listener));
           if (obfuscationGuard < 8) {
             field_h = (String) null;
           }
