@@ -21,7 +21,7 @@ final class td extends ki {
         try {
           LevelList.field_e = new RgbSprite[2];
           np.field_c = new RgbSprite[2][];
-          kg.field_a = new RgbSprite[2][];
+          CacheIoWorker.field_a = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -57,10 +57,10 @@ final class td extends ki {
         cg.field_q = jh.a(0, RasterCacheSurface.field_j);
         gq.field_Sb = jh.a(0, cp.field_I);
         RectangleBody.field_p = jh.a(0, se.field_k);
-        kg.field_a[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
+        CacheIoWorker.field_a[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
         np.field_c[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
         LevelList.field_e[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
-        kg.field_a[1] = ig.a(kg.field_a[0], false);
+        CacheIoWorker.field_a[1] = ig.a(CacheIoWorker.field_a[0], false);
         np.field_c[1] = ig.a(np.field_c[0], param0);
         LevelList.field_e[1] = pl.a(-16371, LevelList.field_e[0]);
         return true;
@@ -182,7 +182,7 @@ final class td extends ki {
 
     final RgbSprite[] a(byte param0, int param1) {
         int var3 = -91 / ((65 - param0) / 49);
-        return kg.field_a[param1 - 1];
+        return CacheIoWorker.field_a[param1 - 1];
     }
 
     final void a(int param0, byte param1, int param2, int param3, int param4) {

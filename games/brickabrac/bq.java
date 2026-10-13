@@ -80,9 +80,9 @@ final class bq {
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           ik.field_j = true;
-          ih.field_p = param1;
-          if (0 == ih.field_p) {
-            var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, up.field_x);
+          ArchiveFetchClient.field_p = param1;
+          if (0 == ArchiveFetchClient.field_p) {
+            var3_int = qb.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, up.field_x);
             var4 = 3 + var3_int;
             BrickABrac.field_K = new int[var4];
             qh.field_i = new String[var4];
@@ -91,7 +91,7 @@ final class bq {
             }
             ri.field_I = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              qh.field_i[var5] = kg.field_h[var5];
+              qh.field_i[var5] = CacheIoWorker.field_h[var5];
             }
             qh.field_i[var4 - 3] = "";
             qh.field_i[var4 - 2] = g.field_q;
@@ -100,8 +100,8 @@ final class bq {
             qh.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 1;
             ri.field_I[1] = 5;
-          } else if (1 == ih.field_p) {
-            var3_int = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, up.field_x);
+          } else if (1 == ArchiveFetchClient.field_p) {
+            var3_int = qb.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, ni.field_Wb, up.field_x);
             var4 = 2 + var3_int;
             BrickABrac.field_K = new int[var4];
             qh.field_i = new String[var4];
@@ -110,18 +110,18 @@ final class bq {
             }
             ri.field_I = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              qh.field_i[var5] = kg.field_h[var5];
+              qh.field_i[var5] = CacheIoWorker.field_h[var5];
             }
             qh.field_i[var4 - 2] = "";
             qh.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 0;
             ri.field_I[0] = 5;
-          } else if (2 != ih.field_p) {
-            if (3 == ih.field_p) {
+          } else if (2 != ArchiveFetchClient.field_p) {
+            if (3 == ArchiveFetchClient.field_p) {
               if (lp.field_ub.field_i) {
-                var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, ff.field_a);
+                var3_int = qb.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, ff.field_a);
               } else {
-                var3_int = qb.a(kg.field_h, m.field_b, param2 ^ -87, ni.field_Wb, df.field_d);
+                var3_int = qb.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, ni.field_Wb, df.field_d);
               }
               var4 = 2 + var3_int;
               qh.field_i = new String[var4];
@@ -131,14 +131,14 @@ final class bq {
               }
               ri.field_I = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                qh.field_i[var5] = kg.field_h[var5];
+                qh.field_i[var5] = CacheIoWorker.field_h[var5];
               }
               qh.field_i[var4 - 2] = "";
               qh.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
               ri.field_I[0] = 5;
-            } else if (ih.field_p == 4) {
-              var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, oo.field_s);
+            } else if (ArchiveFetchClient.field_p == 4) {
+              var3_int = qb.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, oo.field_s);
               var4 = var3_int + 2;
               qh.field_i = new String[var4];
               BrickABrac.field_K = new int[var4];
@@ -147,17 +147,17 @@ final class bq {
               }
               ri.field_I = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                qh.field_i[var5] = kg.field_h[var5];
+                qh.field_i[var5] = CacheIoWorker.field_h[var5];
               }
               qh.field_i[var4 - 2] = "";
               qh.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
               ri.field_I[0] = 5;
             } else {
-              if (ih.field_p != 5) {
+              if (ArchiveFetchClient.field_p != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, DirectByteStorage.field_h);
+              var3_int = qb.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, DirectByteStorage.field_h);
               var4 = 3 + var3_int;
               BrickABrac.field_K = new int[var4];
               qh.field_i = new String[var4];
@@ -166,7 +166,7 @@ final class bq {
               }
               ri.field_I = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                qh.field_i[var5] = kg.field_h[var5];
+                qh.field_i[var5] = CacheIoWorker.field_h[var5];
               }
               qh.field_i[var4 - 3] = "";
               qh.field_i[var4 - 2] = ja.field_b;
@@ -177,10 +177,10 @@ final class bq {
               ri.field_I[1] = 5;
             }
           } else {
-            var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
+            var3_int = qb.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(kg.field_h[var5])) {
+              if (!"<%0>".equals(CacheIoWorker.field_h[var5])) {
                 continue;
               }
               var4 = var5;
@@ -190,13 +190,13 @@ final class bq {
               throw new IllegalStateException();
             }
             rg.field_k = new String[var4];
-            pm.a(kg.field_h, 0, rg.field_k, 0, var4);
+            pm.a(CacheIoWorker.field_h, 0, rg.field_k, 0, var4);
             h.field_F = new String[-1 - var4 + var3_int];
-            pm.a(kg.field_h, 1 + var4, h.field_F, 0, -1 + (-var4 + var3_int));
-            var3_int = qb.a(kg.field_h, m.field_b, -63, ni.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
+            pm.a(CacheIoWorker.field_h, 1 + var4, h.field_F, 0, -1 + (-var4 + var3_int));
+            var3_int = qb.a(CacheIoWorker.field_h, m.field_b, -63, ni.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
-              if (!"<%0>".equals(kg.field_h[var5])) {
+              if (!"<%0>".equals(CacheIoWorker.field_h[var5])) {
                 continue;
               }
               var4 = var5;
@@ -206,9 +206,9 @@ final class bq {
               throw new IllegalStateException();
             }
             ik.field_b = new String[var4];
-            pm.a(kg.field_h, 0, ik.field_b, 0, var4);
+            pm.a(CacheIoWorker.field_h, 0, ik.field_b, 0, var4);
             fk.field_h = new String[var3_int - (var4 + 1)];
-            pm.a(kg.field_h, var4 + 1, fk.field_h, 0, -1 + (var3_int - var4));
+            pm.a(CacheIoWorker.field_h, var4 + 1, fk.field_h, 0, -1 + (var3_int - var4));
             if (ik.field_b.length > rg.field_k.length) {
               stackIn_66_0 = ik.field_b.length;
             } else {
@@ -276,7 +276,7 @@ final class bq {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (ih.field_p == 2) {
+          if (ArchiveFetchClient.field_p == 2) {
             var10 = rg.field_k;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
@@ -307,10 +307,10 @@ final class bq {
             }
             jj.field_c = stackIn_118_0 + stackIn_119_1;
           }
-          jq.field_r = -(jj.field_c >> 1) + w.field_k;
+          CachedArchiveSource.field_r = -(jj.field_c >> 1) + w.field_k;
           ce.field_a = new int[qh.field_i.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = jq.field_r;
+          var5Lifetime3 = CachedArchiveSource.field_r;
           while (var4Lifetime3 < qh.field_i.length) {
             var6Lifetime1 = BrickABrac.field_K[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
@@ -328,7 +328,7 @@ final class bq {
             }
             var4Lifetime3++;
           }
-          if (ih.field_p != 2) {
+          if (ArchiveFetchClient.field_p != 2) {
             mh.field_H.initializeSelection(qo.b(120, po.pointerY, pq.pointerX), 0, param0, (byte) -127);
           } else {
             mh.field_H.initializeSelection(-1, -1, param0, (byte) -128);

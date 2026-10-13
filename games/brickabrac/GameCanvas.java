@@ -69,12 +69,12 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         if (param0) {
           MenuScreen var2 = (MenuScreen) null;
           GameCanvas.registerMenuScreen(43, (MenuScreen) null);
-          if (vd.field_f.b(72)) {
+          if (vd.field_f.pollTransport(72)) {
             return 0;
           }
           return sm.b(-1);
         }
-        if (vd.field_f.b(72)) {
+        if (vd.field_f.pollTransport(72)) {
           return 0;
         }
         return sm.b(-1);

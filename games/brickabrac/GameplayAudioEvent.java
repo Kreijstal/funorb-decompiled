@@ -74,10 +74,10 @@ final class GameplayAudioEvent extends IntrusiveNode {
           var3 = BrickABrac.field_J ? 1 : 0;
           try {
             if (null != vd.field_f) {
-              vd.field_f.b((byte) 30);
+              vd.field_f.closeTransport((byte) 30);
             }
             if (Brick.field_x != null) {
-              Brick.field_x.a((byte) 68);
+              Brick.field_x.shutdown((byte) 68);
             }
             if (param0 != 14676) {
               return;

@@ -131,7 +131,7 @@ final class uc extends k {
           IsaacGenerator.field_h = 0;
           LevelPackSelectScreen.field_w = 0;
           bf.field_N.clear((byte) -72);
-          jq.field_n.clear((byte) -92);
+          CachedArchiveSource.field_n.clear((byte) -92);
           var2 = BlankScreen.field_i.b((byte) 74);
           while (var2 != null) {
             var2.unlinkSecondary(3);

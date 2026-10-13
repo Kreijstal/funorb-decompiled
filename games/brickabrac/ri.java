@@ -76,7 +76,7 @@ final class ri extends ib implements en {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_J[var4_int] = ap.a(true, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new bb(a.field_u, 0, 1);
+            var4 = new bb(ArchiveNetworkClient.field_u, 0, 1);
             this.field_H = new d[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_H[var5] = new d(this.field_J[var5], (uh) (this));
@@ -241,7 +241,7 @@ final class ri extends ib implements en {
         if (param2 != 0) {
           return;
         }
-        TextFont var5 = a.field_u;
+        TextFont var5 = ArchiveNetworkClient.field_u;
         if (this.field_J != null) {
           var5.a(AchievementIcon.field_l, param1 + this.field_o, this.field_w + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
         }

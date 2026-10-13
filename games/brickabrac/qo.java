@@ -73,7 +73,7 @@ final class qo extends ib implements vf, en {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = jq.field_r;
+          var4 = CachedArchiveSource.field_r;
           if (param0 != 120) {
             pressY = -69;
           }
@@ -153,7 +153,7 @@ final class qo extends ib implements vf, en {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ma(20, param2, param1 + 120, 25, param3, param6, 120, 3, a.field_u, 16777215, param0);
+          var10 = new ma(20, param2, param1 + 120, 25, param3, param6, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
           stackIn_2_1 = var10;
           stackIn_3_2 = !(param6);
           this.a(stackIn_2_1, stackIn_3_2);
@@ -292,7 +292,7 @@ final class qo extends ib implements vf, en {
     public qo() {
         super(0, 0, 496, 0, (ub) null);
         this.field_L = new sf("", (uh) null, 12);
-        um var1 = new um(og.field_Yb, 0, 0, 0, 0, 16777215, -1, 3, 0, a.field_u.ascent, -1, 2147483647, true);
+        um var1 = new um(og.field_Yb, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
         oc var2 = new oc(ac.field_d, var1, (uh) null);
         this.field_Q = new d(k.field_j, (uh) null);
         this.field_K = new d(wl.field_L, (uh) null);

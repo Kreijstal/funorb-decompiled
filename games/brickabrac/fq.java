@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class fq {
-    static java.util.zip.CRC32 field_a;
+    static java.util.zip.CRC32 archiveCrc;
     static RgbSprite[] field_d;
     static RgbSprite[] field_c;
     static int[] field_e;
@@ -76,13 +76,13 @@ final class fq {
         if (param0 != 15) {
           return;
         }
-        field_a = null;
+        archiveCrc = null;
         field_e = null;
         field_c = null;
     }
 
     static {
-        field_a = new java.util.zip.CRC32();
+        archiveCrc = new java.util.zip.CRC32();
         field_b = 97;
         field_e = new int[]{1, 2, 3, 3, 5, 1, 3, 3, 5, 2, 5, 5, 5, 10, 3, 10, 1, 3, 5, 3, 5, 10, 5, 3, 5, 10, 3, 2, 5, 2, 1, 2, 1, 2, 1, 1, 1, 1, 1, 5, 10, 2};
     }

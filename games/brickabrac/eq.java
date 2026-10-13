@@ -13,15 +13,15 @@ final class eq {
     private int field_j;
     private long[] field_a;
     static String field_i;
-    static wh field_g;
+    static BufferedSocket field_g;
     static mk field_m;
 
     final static void a(int param0) {
         cr.f((byte) -45);
         if (param0 != 7) {
-          field_g = (wh) null;
+          field_g = (BufferedSocket) null;
         }
-        lq.d(125);
+        SecondaryNodeQueue.d(125);
         CircleBody.field_p = null;
         rd.a(param0 - 8);
     }

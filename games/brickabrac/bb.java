@@ -74,7 +74,7 @@ final class bb implements ub {
 
     public bb() {
         this.field_d = 1;
-        this.field_b = a.field_u;
+        this.field_b = ArchiveNetworkClient.field_u;
         this.field_f = 1;
     }
 

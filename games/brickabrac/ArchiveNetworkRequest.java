@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends hb {
+final class ArchiveNetworkRequest extends ResourceRequest {
     static byte[][] field_L;
-    PacketBuffer field_D;
+    PacketBuffer packet;
     static int field_G;
     static RgbSprite[] packSelectorIcons;
     static int[] field_C;
     static int[] field_M;
-    int field_K;
-    byte field_F;
+    int blockPosition;
+    byte trailerBytes;
     static String field_H;
     static String field_J;
 
-    final byte[] c(byte param0) {
-        int var2 = -99 % ((4 - param0) / 52);
-        if (this.field_u) {
+    final byte[] getData(byte obfuscationGuard) {
+        int var2 = -99 % ((4 - obfuscationGuard) / 52);
+        if (this.pending) {
           throw new RuntimeException();
         }
-        if (this.field_D.position >= this.field_D.data.length - this.field_F) {
-          return this.field_D.data;
+        if (this.packet.position >= this.packet.data.length - this.trailerBytes) {
+          return this.packet.data;
         }
         throw new RuntimeException();
     }
@@ -142,21 +142,21 @@ final class da extends hb {
         return kd.field_a;
     }
 
-    da() {
+    ArchiveNetworkRequest() {
     }
 
-    final int f(int param0) {
-        if (param0 != -21546) {
-          this.c((byte) 12);
-          if (null == this.field_D) {
+    final int getProgress(int obfuscationGuard) {
+        if (obfuscationGuard != -21546) {
+          this.getData((byte) 12);
+          if (null == this.packet) {
             return 0;
           }
-          return this.field_D.position * 100 / (-this.field_F + this.field_D.data.length);
+          return this.packet.position * 100 / (-this.trailerBytes + this.packet.data.length);
         }
-        if (null == this.field_D) {
+        if (null == this.packet) {
           return 0;
         }
-        return this.field_D.position * 100 / (-this.field_F + this.field_D.data.length);
+        return this.packet.position * 100 / (-this.trailerBytes + this.packet.data.length);
     }
 
     static {

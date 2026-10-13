@@ -408,7 +408,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                 }
                 sh.b(1);
                 this.c(false);
-                kc.field_q = jm.a((java.awt.Component) ((Object) kj.field_D), to.field_b, -2414, be.field_g);
+                kc.field_q = jm.a((java.awt.Component) ((Object) CacheIoRequest.field_D), to.field_b, -2414, be.field_g);
                 this.b(false);
                 MenuSelection.field_b = ja.a((byte) 123);
                 do {
@@ -422,14 +422,14 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    c.field_a = MenuSelection.field_b.a(hb.field_x, (byte) -71);
+                    c.field_a = MenuSelection.field_b.a(ResourceRequest.field_x, (byte) -71);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
                   do {
                     if (!(c.field_a > var3)) {
                       this.h(0);
-                      IntNode.a(-4317, lp.field_ub, kj.field_D);
+                      IntNode.a(-4317, lp.field_ub, CacheIoRequest.field_D);
                       break;
                     }
                     this.c(26573);
@@ -480,17 +480,17 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           if (50 < fieldTemp$1) {
             GameplayAudioEvent.field_i = true;
             MouseWheelSource.field_a = MouseWheelSource.field_a - 50;
-            kj.field_D.setSize(to.field_b, be.field_g);
-            kj.field_D.setVisible(true);
+            CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
+            CacheIoRequest.field_D.setVisible(true);
             if (null != cb.field_o &&
               null == fd.field_e) {
               var6 = cb.field_o.getInsets();
-              kj.field_D.setLocation(var6.left + to.field_i, var6.top + hk.field_W);
+              CacheIoRequest.field_D.setLocation(var6.left + to.field_i, var6.top + hk.field_W);
               if (BrickABrac.field_J) {
-                kj.field_D.setLocation(to.field_i, hk.field_W);
+                CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
               }
             } else {
-              kj.field_D.setLocation(to.field_i, hk.field_W);
+              CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
             }
           }
           this.g(param0 + 102);
@@ -591,10 +591,10 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             exception = (Exception) (Object) decompiledCaughtException;
           }
           var3_int = -40 % ((-22 - param1) / 54);
-          if (kj.field_D != null) {
+          if (CacheIoRequest.field_D != null) {
             try {
-              kj.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
-              kj.field_D.getParent().remove((java.awt.Component) ((Object) kj.field_D));
+              CacheIoRequest.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
+              CacheIoRequest.field_D.getParent().remove((java.awt.Component) ((Object) CacheIoRequest.field_D));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4_ref = (Exception) (Object) decompiledCaughtException;
@@ -633,10 +633,10 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (kj.field_D != null) {
-            kj.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
-            kj.field_D.getParent().setBackground(java.awt.Color.black);
-            kj.field_D.getParent().remove((java.awt.Component) ((Object) kj.field_D));
+          if (CacheIoRequest.field_D != null) {
+            CacheIoRequest.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
+            CacheIoRequest.field_D.getParent().setBackground(java.awt.Color.black);
+            CacheIoRequest.field_D.getParent().remove((java.awt.Component) ((Object) CacheIoRequest.field_D));
           }
           boolean decompiledFrameRemainder0 = true;
           if (fd.field_e == null) {
@@ -662,21 +662,21 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
             var2 = fd.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          kj.field_D = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) kj.field_D));
-          kj.field_D.setSize(to.field_b, be.field_g);
-          kj.field_D.setVisible(true);
+          CacheIoRequest.field_D = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) CacheIoRequest.field_D));
+          CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
+          CacheIoRequest.field_D.setVisible(true);
           if (cb.field_o == var2) {
             var3 = cb.field_o.getInsets();
-            kj.field_D.setLocation(var3.left + to.field_i, var3.top + hk.field_W);
+            CacheIoRequest.field_D.setLocation(var3.left + to.field_i, var3.top + hk.field_W);
             if (var4 != 0) {
-              kj.field_D.setLocation(to.field_i, hk.field_W);
+              CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
             }
           } else {
-            kj.field_D.setLocation(to.field_i, hk.field_W);
+            CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
           }
-          kj.field_D.addFocusListener((java.awt.event.FocusListener) (this));
-          kj.field_D.requestFocus();
+          CacheIoRequest.field_D.addFocusListener((java.awt.event.FocusListener) (this));
+          CacheIoRequest.field_D.requestFocus();
           CircleBody.field_r = true;
           qa.field_r = true;
           GameplayAudioEvent.field_i = true;

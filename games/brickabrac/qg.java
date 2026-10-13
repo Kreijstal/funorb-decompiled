@@ -21,7 +21,7 @@ abstract class qg extends ke {
 
     private final void f(boolean param0) {
         String var2 = go.a((byte) 120);
-        da.a(var2, 70, uc.e((byte) -116));
+        ArchiveNetworkRequest.a(var2, 70, uc.e((byte) -116));
         if (!param0) {
           this.g(false);
         }
@@ -71,7 +71,7 @@ abstract class qg extends ke {
         cr.a(param7, cd.field_e, param0 + 3, this.field_v, lp.field_ub, this.field_x, this.field_p, this.field_o, this.field_B);
         rn.patchJavaKeyCodeMap(59);
         qa.mouseWheelSource = ea.createMouseWheelSource(60);
-        ap.a((byte) 117, kj.field_D);
+        ap.a((byte) 117, CacheIoRequest.field_D);
         nd.field_c = param4;
         LevelPackCard.field_i = param5;
         PacketBuffer.field_j = param1;
@@ -843,7 +843,7 @@ abstract class qg extends ke {
           fk.a(vh.field_S, ma.field_P, ja.field_c, -111) &&
           rg.a(ja.field_c, (byte) 101)) {
           ui.a(384920353);
-          kg.a(param1 + 21677);
+          CacheIoWorker.a(param1 + 21677);
           ci.field_t = false;
           ri.field_N = cm.field_t;
           MultiplayerExitScreen.a(qb.field_u, ja.field_c, ma.field_P, vh.field_S, param1 ^ 23);
@@ -903,9 +903,9 @@ abstract class qg extends ke {
         }
         if (!param0 &&
           tn.field_A) {
-          t.a(false, kj.field_D);
+          t.a(false, CacheIoRequest.field_D);
           this.c(false);
-          ap.a((byte) 117, kj.field_D);
+          ap.a((byte) 117, CacheIoRequest.field_D);
         }
         if (uf.field_d[8]) {
           fk.a(14114);

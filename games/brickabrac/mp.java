@@ -85,7 +85,7 @@ final class mp extends mh {
             var60 = var44.field_p;
             h.a(0, 0, (byte) 114, var60, ke.field_m);
           } else {
-            a.f((byte) 94);
+            ArchiveNetworkClient.f((byte) 94);
           }
           var54 = new int[param4.field_o];
           var49 = var54;
@@ -155,11 +155,11 @@ final class mp extends mh {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = da.field_M[var15Lifetime1];
+            var22 = ArchiveNetworkRequest.field_M[var15Lifetime1];
             var23 = ed.field_e[var15Lifetime1];
-            var24 = da.field_M[var16];
+            var24 = ArchiveNetworkRequest.field_M[var16];
             var25 = ed.field_e[var16];
-            var26 = da.field_M[var17];
+            var26 = ArchiveNetworkRequest.field_M[var17];
             var27 = ed.field_e[var17];
             if (var19 == var18 &&
               var19 == var20) {

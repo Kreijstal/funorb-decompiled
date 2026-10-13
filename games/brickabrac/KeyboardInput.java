@@ -308,11 +308,11 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               }
             }
             if (mappedKeyCode >= 0) {
-              nextWriteIndex = 127 & hb.keyEventWriteIndex + 1;
+              nextWriteIndex = 127 & ResourceRequest.keyEventWriteIndex + 1;
               if (IntrusiveHashTable.keyEventReadIndex != nextWriteIndex) {
-                ef.keyEventCodes[hb.keyEventWriteIndex] = mappedKeyCode;
-                TimedSplashScreen.keyEventCharacters[hb.keyEventWriteIndex] = (char)0;
-                hb.keyEventWriteIndex = nextWriteIndex;
+                ef.keyEventCodes[ResourceRequest.keyEventWriteIndex] = mappedKeyCode;
+                TimedSplashScreen.keyEventCharacters[ResourceRequest.keyEventWriteIndex] = (char)0;
+                ResourceRequest.keyEventWriteIndex = nextWriteIndex;
               }
             }
             modifiers = event.getModifiers();
@@ -369,11 +369,11 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             characterCode = event.getKeyChar();
             if (0 != characterCode && characterCode != 65535 &&
               DelegatingCanvas.isLegacyInputCharacter((char) characterCode, -12)) {
-              nextWriteIndex = 127 & hb.keyEventWriteIndex + 1;
+              nextWriteIndex = 127 & ResourceRequest.keyEventWriteIndex + 1;
               if (IntrusiveHashTable.keyEventReadIndex != nextWriteIndex) {
-                ef.keyEventCodes[hb.keyEventWriteIndex] = -1;
-                TimedSplashScreen.keyEventCharacters[hb.keyEventWriteIndex] = (char)characterCode;
-                hb.keyEventWriteIndex = nextWriteIndex;
+                ef.keyEventCodes[ResourceRequest.keyEventWriteIndex] = -1;
+                TimedSplashScreen.keyEventCharacters[ResourceRequest.keyEventWriteIndex] = (char)characterCode;
+                ResourceRequest.keyEventWriteIndex = nextWriteIndex;
               }
             }
           }

@@ -131,7 +131,7 @@ public final class BrickABrac extends sa {
         this.a((byte) 39, 0, 2, param0, 1, 4, 14, 65);
         hi.field_w = new IsaacGenerator(new int[]{(int)ue.a(false)});
         nk.field_c = new RgbSprite(640, 480);
-        oc.a(lp.field_ub, (byte) 60, kj.field_D);
+        oc.a(lp.field_ub, (byte) 60, CacheIoRequest.field_D);
         this.a(3160, new ij());
         am.a(ch.field_g, 1);
     }
@@ -259,7 +259,7 @@ public final class BrickABrac extends sa {
             for (var7 = 0; var7 < 8; var7++) {
               var19[var7] = ik.a(var34[var7], ~var46[var7]);
             }
-            if (hb.field_y) {
+            if (ResourceRequest.field_y) {
               var5_int = ea.a(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
                 if (DirectByteStorage.isBitSet(var35, var6, (byte) -75)) {
@@ -651,7 +651,7 @@ public final class BrickABrac extends sa {
         hd.a(12);
         cd.a((byte) 65);
         ff.a((byte) 114);
-        wh.b(119);
+        BufferedSocket.b(119);
         we.a(-8495);
         sm.a(30000);
         fh.a(-29988);
@@ -742,8 +742,8 @@ public final class BrickABrac extends sa {
         ll.a(!param0 ? true : false);
         ek.c(param0);
         kp.a(-68);
-        ih.c(-12200);
-        kg.b(26679);
+        ArchiveFetchClient.c(-12200);
+        CacheIoWorker.b(26679);
         co.b(-70);
         um.a(31292);
         mg.b();
@@ -827,13 +827,13 @@ public final class BrickABrac extends sa {
         ig.a(12127);
         uf.a((byte) 85);
         LevelDecoder.a((byte) 89);
-        a.h((byte) -128);
-        lq.b(true);
-        da.e((byte) 102);
-        ve.a((byte) 47);
-        kj.h(-122);
-        jq.c((byte) 56);
-        hb.a((byte) 78);
+        ArchiveNetworkClient.h((byte) -128);
+        SecondaryNodeQueue.b(true);
+        ArchiveNetworkRequest.e((byte) 102);
+        FileCacheStore.a((byte) 47);
+        CacheIoRequest.h(-122);
+        CachedArchiveSource.c((byte) 56);
+        ResourceRequest.a((byte) 78);
         ug.h(0);
         eq.b(-1);
         vh.a(110);

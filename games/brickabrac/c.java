@@ -164,10 +164,10 @@ final class c {
               Rasterizer2D.height == kc.field_q.field_f &&
               Rasterizer2D.width == kc.field_q.field_g) {
               if (o.field_e != null) {
-                kj.a(true, false);
+                CacheIoRequest.a(true, false);
               } else {
                 if (null != nl.field_f) {
-                  kj.a(true, true);
+                  CacheIoRequest.a(true, true);
                 } else {
                   cg.b(31);
                 }
@@ -231,10 +231,10 @@ final class c {
             if (Rasterizer2D.height == kc.field_q.field_f &&
               Rasterizer2D.width == kc.field_q.field_g) {
               if (o.field_e != null) {
-                kj.a(true, false);
+                CacheIoRequest.a(true, false);
               } else {
                 if (null != nl.field_f) {
-                  kj.a(true, true);
+                  CacheIoRequest.a(true, true);
                 } else {
                   cg.b(31);
                 }

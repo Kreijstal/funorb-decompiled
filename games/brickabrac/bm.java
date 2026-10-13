@@ -62,10 +62,10 @@ final class bm {
             stackIn_41_0 = param0;
             if (var19 == 0) {
               if (stackIn_41_0) {
-                var12 = da.field_M[var9];
+                var12 = ArchiveNetworkRequest.field_M[var9];
                 var13 = ed.field_e[var9];
-                var14 = da.field_M[var10] - var12;
-                var15 = -var12 + da.field_M[var11];
+                var14 = ArchiveNetworkRequest.field_M[var10] - var12;
+                var15 = -var12 + ArchiveNetworkRequest.field_M[var11];
                 var16 = ed.field_e[var10] - var13;
                 var17 = -var13 + ed.field_e[var11];
               }

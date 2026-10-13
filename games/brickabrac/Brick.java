@@ -18,7 +18,7 @@ final class Brick extends RectangleBody {
     private int pathDurationTicks;
     static RgbSprite[][] field_I;
     static int field_E;
-    static kg field_x;
+    static CacheIoWorker field_x;
     static byte[] field_O;
     static mh field_A;
     static String field_z;
@@ -190,7 +190,7 @@ final class Brick extends RectangleBody {
         field_A = null;
         field_z = null;
         if (param0 != 4641) {
-          field_x = (kg) null;
+          field_x = (CacheIoWorker) null;
         }
         field_L = null;
         field_y = null;
@@ -427,25 +427,25 @@ final class Brick extends RectangleBody {
         gd.field_a = up.field_z;
         int var3 = -47 / ((param0 + 22) / 61);
         if (param1 == 51) {
-          vd.field_f.field_f = 2;
+          vd.field_f.lastError = 2;
         } else {
           if (param1 != 50) {
-            vd.field_f.field_f = 1;
+            vd.field_f.lastError = 1;
           } else {
-            vd.field_f.field_f = 5;
+            vd.field_f.lastError = 5;
           }
         }
         up.field_z = var2;
-        vd.field_f.field_i = vd.field_f.field_i + 1;
-        if (2 <= vd.field_f.field_i &&
+        vd.field_f.failureCount = vd.field_f.failureCount + 1;
+        if (2 <= vd.field_f.failureCount &&
           param1 == 51) {
           return 2;
         }
-        if (vd.field_f.field_i >= 2 &&
+        if (vd.field_f.failureCount >= 2 &&
           param1 == 50) {
           return 5;
         }
-        if (!(vd.field_f.field_i < 4)) {
+        if (!(vd.field_f.failureCount < 4)) {
           return 1;
         }
         return -1;

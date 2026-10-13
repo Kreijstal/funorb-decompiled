@@ -53,7 +53,7 @@ final class po {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = kj.field_D.getGraphics();
+            var9 = CacheIoRequest.field_D.getGraphics();
             if (DirectByteStorage.field_g == null) {
               DirectByteStorage.field_g = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -66,7 +66,7 @@ final class po {
             }
             try {
               if (null == oj.field_r) {
-                oj.field_r = kj.field_D.createImage(304, 34);
+                oj.field_r = CacheIoRequest.field_D.createImage(304, 34);
               }
               var10 = oj.field_r.getGraphics();
               var10.setColor(param1);
@@ -102,7 +102,7 @@ final class po {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            kj.field_D.repaint();
+            CacheIoRequest.field_D.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -158,9 +158,9 @@ final class po {
           for (var2Lifetime1 = 0; var5.field_m.length > var2Lifetime1; var2Lifetime1++) {
             BitPacketBuffer.field_o[var2Lifetime1] = var5.field_m[var2Lifetime1];
           }
-          da.field_C = new int[sk.field_I];
+          ArchiveNetworkRequest.field_C = new int[sk.field_I];
           for (var2Lifetime2 = 0; var2Lifetime2 < sk.field_I; var2Lifetime2++) {
-            da.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].field_H;
+            ArchiveNetworkRequest.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].field_H;
           }
           stackIn_13_0 = !(ci.field_r);
           LevelMetadata.field_p = stackIn_13_0;
@@ -175,7 +175,7 @@ final class po {
             if (cb.field_n) {
               stackIn_25_0 = hm.field_b;
             } else {
-              stackIn_25_0 = ih.field_j;
+              stackIn_25_0 = ArchiveFetchClient.field_j;
             }
           } else {
             stackIn_25_0 = ar.field_a;

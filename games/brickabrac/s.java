@@ -136,7 +136,7 @@ final class s {
         RuntimeException var8 = null;
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-72, param4.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, kg.field_d[param2], 22953);
+          Rasterizer2D.fillVerticalGradient(0, 0, param4.width, param4.height, CacheIoWorker.field_d[param2], 22953);
           param3.drawTransparent((-param3.canvasWidth + param4.width) / 2 - 147 / param1, 480 + param5 - param7.canvasHeight);
           param0.b(-(80 / param1) + (param4.width - param0.canvasWidth) / 2, -(201 / param1) + (param4.height + param5) - param0.canvasHeight, 41, 110);
           var8_int = -97 / ((param6 - 54) / 61);

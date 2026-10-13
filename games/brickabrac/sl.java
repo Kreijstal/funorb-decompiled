@@ -126,7 +126,7 @@ abstract class sl extends DualLinkNode {
           nk.field_a = new mh(0L, cd.field_d, td.field_r);
           kk.field_b = new mh(0L, cd.field_d, ch.field_d);
           la.field_b = new mh(0L, cd.field_d, kc.field_o);
-          wh.field_h = new mh(0L, cd.field_d, r.field_v);
+          BufferedSocket.field_h = new mh(0L, cd.field_d, r.field_v);
           dp.field_x = new mh(0L, ik.field_a, ByteStorage.field_d);
           rl.field_e = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
           gj.field_b = new mh(0L, fm.field_b, ua.field_e.toUpperCase());
@@ -157,7 +157,7 @@ abstract class sl extends DualLinkNode {
           if (vd.field_e) {
             ll.field_e.a(la.field_b, 0);
           }
-          ll.field_e.a(wh.field_h, 0);
+          ll.field_e.a(BufferedSocket.field_h, 0);
           ll.field_e.a(dp.field_x, 0);
           ll.field_e.a(rl.field_e, 0);
           if (vd.field_e) {
@@ -285,7 +285,7 @@ abstract class sl extends DualLinkNode {
           MultiplayerMatch.field_d.a(pf.field_h, 0);
           MultiplayerMatch.field_d.a(dn.field_K, 0);
           MultiplayerMatch.field_d.a(ke.field_e, 0);
-          pk.field_h = new mh(0L, rf.field_c, lq.field_a.toUpperCase());
+          pk.field_h = new mh(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
           nd.field_a = new mh(0L, ij.field_b, fh.field_e.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

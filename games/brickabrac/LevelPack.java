@@ -66,7 +66,7 @@ final class LevelPack {
         if (null != jj.field_a) {
           jj.field_a.a(-33);
         }
-        kj.field_D.requestFocus();
+        CacheIoRequest.field_D.requestFocus();
     }
 
     final static mh c(int param0) {

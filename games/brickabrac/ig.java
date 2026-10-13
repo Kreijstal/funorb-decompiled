@@ -29,13 +29,13 @@ final class ig extends ib implements ha, en {
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param2 == 0) {
-            ih.a("terms.ws", param1 + 538);
+            ArchiveFetchClient.a("terms.ws", param1 + 538);
           } else {
             if (param2 == 1) {
-              ih.a("privacy.ws", param1 + 538);
+              ArchiveFetchClient.a("privacy.ws", param1 + 538);
             } else {
               if (2 == param2) {
-                ih.a("conduct.ws", param1 + 538);
+                ArchiveFetchClient.a("conduct.ws", param1 + 538);
               }
             }
           }
@@ -137,7 +137,7 @@ final class ig extends ib implements ha, en {
           this.field_L.field_l = (ub) ((Object) new hi());
           var7 = rd.a(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
           var3 = 20;
-          var4 = new um(a.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, a.field_u.ascent, -1, 2147483647, true);
+          var4 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
           this.field_O = new lg(var7, var4);
           this.field_O.field_z = "";
           this.field_O.a(qg.field_z, 0, (byte) -98);

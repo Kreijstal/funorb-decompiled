@@ -53,7 +53,7 @@ final class aj {
           while (kn.field_E.length > var3_int) {
             var5 = MenuSelection.field_q[var3_int];
             if (0 > var5) {
-              var4 = var4 + wh.field_m;
+              var4 = var4 + BufferedSocket.field_m;
             } else {
               var6 = pl.a(0, kn.field_E[var3_int], true);
               var7 = -(var6 >> 1) + NewAchievementsScreen.field_J;

@@ -224,13 +224,13 @@ final class cp extends h {
         int var8Lifetime1;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = jq.field_r;
+          var1_int = CachedArchiveSource.field_r;
           var2 = 0;
           if (param0 != -16546) {
             var11 = (PlayerBoard) null;
             cp.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
           }
-          if (ih.field_p == 2) {
+          if (ArchiveFetchClient.field_p == 2) {
             var3_long = -un.field_g + ue.a(false);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (0 > var2) {
@@ -249,7 +249,7 @@ final class cp extends h {
               }
             }
             var6 = qh.field_i[var3];
-            if (2 == ih.field_p &&
+            if (2 == ArchiveFetchClient.field_p &&
               1 == var2) {
               if (rg.field_k.length >= ik.field_b.length) {
                 stackIn_19_0 = rg.field_k.length;
@@ -350,13 +350,13 @@ final class cp extends h {
           Rasterizer2D.fillRectangleAlpha(stackIn_7_0, stackIn_7_1, stackIn_7_2, -stackIn_8_3 + param2 / param6, 0, var8);
           if (150 < var7_int * 2 &&
             param4.field_zb > 0 &&
-            param4.field_zb - 1 < a.field_s.length) {
+            param4.field_zb - 1 < ArchiveNetworkClient.field_s.length) {
             var8Lifetime1 = -75 + var7_int;
             if (50 < var8Lifetime1) {
               var8Lifetime1 = 50;
             }
             var8Lifetime1 = 256 * var8Lifetime1 / 50;
-            var9 = a.field_s[param4.field_zb - 1];
+            var9 = ArchiveNetworkClient.field_s[param4.field_zb - 1];
             var9.b(param0 + (param1 - param6 * var9.canvasWidth) / (param6 * 2), param5 + (param2 - var9.canvasHeight * param6) / (param6 * 2), var8Lifetime1);
             lo.a(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
           }

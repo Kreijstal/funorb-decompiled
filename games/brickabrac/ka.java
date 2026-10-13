@@ -744,7 +744,7 @@ final class ka extends IntrusiveNode {
               stackIn_65_1 = -51;
               if (var30 == 0) {
                 if (stackIn_65_0 <= stackIn_65_1) {
-                  da.field_M[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
+                  ArchiveNetworkRequest.field_M[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
                   ed.field_e[var23Lifetime2] = var28Lifetime1 / var29Lifetime1 + var22Lifetime2;
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;

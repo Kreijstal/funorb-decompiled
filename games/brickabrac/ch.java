@@ -75,7 +75,7 @@ final class ch {
               fieldTemp$1 = IsaacGenerator.field_h;
               IsaacGenerator.field_h = IsaacGenerator.field_h + 1;
               var6.field_Sb = fieldTemp$1;
-              jq.field_n.addLast(var6, (byte) 3);
+              CachedArchiveSource.field_n.addLast(var6, (byte) 3);
             }
             var6.field_ac = var5;
             var6.field_Qb = var7_ref;
@@ -144,7 +144,7 @@ final class ch {
           var6Lifetime1.unlink((byte) 111);
           var7 = (mp) (bf.field_N.first(-65));
           while (null != var7) {
-            if (a.a(200, var7, var6Lifetime1)) {
+            if (ArchiveNetworkClient.a(200, var7, var6Lifetime1)) {
               var7 = (mp) (bf.field_N.next((byte) 116));
               if (var9 == 0) {
                 continue;

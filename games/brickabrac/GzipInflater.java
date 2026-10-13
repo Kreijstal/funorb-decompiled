@@ -22,11 +22,11 @@ final class GzipInflater {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         if (param5 < -51) {
-          hb.a(param6, param3, param4, 2, 196, param2, param0, 76, param1);
+          ResourceRequest.a(param6, param3, param4, 2, 196, param2, param0, 76, param1);
           return;
         }
         GzipInflater.a(39, -27, -77, 50, -59, (byte) -97, -42);
-        hb.a(param6, param3, param4, 2, 196, param2, param0, 76, param1);
+        ResourceRequest.a(param6, param3, param4, 2, 196, param2, param0, 76, param1);
     }
 
     final static void a(int param0, String param1, boolean param2, int param3, int param4, int param5, int param6, int param7, tg param8, byte param9, boolean param10, long param11, int param12, int param13) {

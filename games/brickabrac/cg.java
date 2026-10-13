@@ -59,7 +59,7 @@ final class cg extends dj {
         kk.field_b.a(30, 5, 155, 48, (byte) 64);
         la.field_b.a(30, 5, 205, 48, (byte) 64);
         int var2 = vd.field_e ? 250 : 200;
-        wh.field_h.a(30, 5, 5 + var2, -var2 + 363, (byte) 64);
+        BufferedSocket.field_h.a(30, 5, 5 + var2, -var2 + 363, (byte) 64);
         dp.field_x.a(30, 5, 370, rm.field_a.field_Ib - 10 - 365, (byte) 64);
         rl.field_e.a(2, (byte) -128, -5 + (ll.field_e.field_Ib - 5), 5, 37, ec.field_J, -5 + (-5 + ll.field_e.field_cb - 32));
         int var3 = (rm.field_a.field_Ib + 2) / 2;

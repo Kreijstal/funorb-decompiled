@@ -28,7 +28,7 @@ final class uo {
             field_a = (String) null;
           }
           var5 = archive.getFileId(var4_int, -86, fileName);
-          stackIn_3_0 = lq.loadIndexedSprite(0, var4_int, var5, archive);
+          stackIn_3_0 = SecondaryNodeQueue.loadIndexedSprite(0, var4_int, var5, archive);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -62,7 +62,7 @@ final class sj {
               var8_ref_gb.field_b.field_Fb = var12 + (-((var12 & 16711422) >> 1) + (field_a.field_Fb >> 1 & 8355711));
               var8_ref_gb.field_b.field_Y = (field_a.field_Y >> 1 & 8355711) - (8355711 & var12 >> 1) + var12;
               var8_ref_gb.field_b.field_X = var12;
-              var8_ref_gb.field_b.field_O = jq.field_y;
+              var8_ref_gb.field_b.field_O = CachedArchiveSource.field_y;
               var6 = var6 + param1;
             }
           }

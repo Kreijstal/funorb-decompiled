@@ -130,7 +130,7 @@ abstract class MatchResultScreen extends MenuScreen {
               } else {
                 stackIn_27_0 = BrickMotionPath.field_r;
               }
-              var10 = stackIn_27_0[da.field_C[var7]];
+              var10 = stackIn_27_0[ArchiveNetworkRequest.field_C[var7]];
               var10.drawTransparent(var8 - var10.canvasWidth / 2, var9 - var10.canvasHeight);
               ce.field_e.drawCentered(fh.field_h[var7], var8, var2 + 85, 0, -1);
               var5++;

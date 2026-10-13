@@ -12,7 +12,7 @@ final class NodeDeque {
         if (param0 <= 11) {
           return;
         }
-        hb.field_x = 1000000000L / (long)param1;
+        ResourceRequest.field_x = 1000000000L / (long)param1;
     }
 
     final IntrusiveNode last(int obfuscationGuard) {
@@ -203,7 +203,7 @@ final class NodeDeque {
         int var2 = -67 / ((1 - param1) / 63);
         MembershipBenefitsScreen.field_t.a(Ball.field_A, 0);
         MembershipBenefitsScreen.field_t.a(nd.field_a, 0);
-        kj.a(true, param0);
+        CacheIoRequest.a(true, param0);
     }
 
     final boolean isEmpty(boolean obfuscationGuard) {

@@ -221,8 +221,8 @@ final class MainMenuScreen extends MenuScreen {
         super(0, 180, 460, 150, 35, hc.field_e);
         this.tooltipSprites = new NodeDeque();
         int var1 = 468;
-        var1 = var1 - da.packSelectorIcons[1].canvasHeight;
-        this.tooltipSprites.addLast(new TooltipSprite(12, var1, da.packSelectorIcons[1], rd.a(RasterSnapshot.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
+        var1 = var1 - ArchiveNetworkRequest.packSelectorIcons[1].canvasHeight;
+        this.tooltipSprites.addLast(new TooltipSprite(12, var1, ArchiveNetworkRequest.packSelectorIcons[1], rd.a(RasterSnapshot.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {

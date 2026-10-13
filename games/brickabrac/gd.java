@@ -22,7 +22,7 @@ final class gd {
 
     final static java.awt.Canvas a(byte param0) {
         int var1 = -97 / ((param0 - 81) / 36);
-        return null == ua.field_d ? kj.field_D : (java.awt.Canvas) ((Object) ua.field_d);
+        return null == ua.field_d ? CacheIoRequest.field_D : (java.awt.Canvas) ((Object) ua.field_d);
     }
 
     final synchronized static byte[] a(int param0, byte param1) {
@@ -63,8 +63,8 @@ final class gd {
             LevelDecoder.field_b > 0) {
             fieldTemp$2 = LevelDecoder.field_b - 1;
             LevelDecoder.field_b = LevelDecoder.field_b - 1;
-            var2_ref_byte__ = da.field_L[fieldTemp$2];
-            da.field_L[LevelDecoder.field_b] = null;
+            var2_ref_byte__ = ArchiveNetworkRequest.field_L[fieldTemp$2];
+            ArchiveNetworkRequest.field_L[LevelDecoder.field_b] = null;
             return var2_ref_byte__;
           }
           if (param0 != 30000) {
@@ -149,8 +149,8 @@ final class gd {
         if (LevelDecoder.field_b > 0) {
           fieldTemp$13 = LevelDecoder.field_b - 1;
           LevelDecoder.field_b = LevelDecoder.field_b - 1;
-          var2_ref_byte__Lifetime3 = da.field_L[fieldTemp$13];
-          da.field_L[LevelDecoder.field_b] = null;
+          var2_ref_byte__Lifetime3 = ArchiveNetworkRequest.field_L[fieldTemp$13];
+          ArchiveNetworkRequest.field_L[LevelDecoder.field_b] = null;
           return var2_ref_byte__Lifetime3;
         }
         if (param0 != 30000) {

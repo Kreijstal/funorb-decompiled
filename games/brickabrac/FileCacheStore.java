@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class ve {
-    private jg field_d;
+final class FileCacheStore {
+    private jg dataFile;
     static String field_e;
-    private int field_c;
-    private int field_b;
-    private jg field_a;
+    private int storeId;
+    private int maxEntryBytes;
+    private jg indexFile;
 
     public static void a(byte param0) {
         field_e = null;
@@ -17,7 +17,7 @@ final class ve {
         }
     }
 
-    final boolean a(byte param0, byte[] param1, int param2, int param3) {
+    final boolean write(byte obfuscationGuard, byte[] data, int length, int entryId) {
         Object var5 = null;
         Object var5_ref = null;
         RuntimeException var5_ref2 = null;
@@ -29,16 +29,16 @@ final class ve {
         String stackIn_18_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var5_ref = this.field_d;
+          var5_ref = this.dataFile;
           synchronized (var5_ref) {
-            if (param2 >= 0 &&
-              this.field_b >= param2) {
-              if (param0 > -116) {
+            if (length >= 0 &&
+              this.maxEntryBytes >= length) {
+              if (obfuscationGuard > -116) {
                 return true;
               }
-              var6 = this.a(param1, param3, true, true, param2) ? 1 : 0;
+              var6 = this.writeSectors(data, entryId, true, true, length) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param1, param3, false, true, param2) ? 1 : 0;
+                var6 = this.writeSectors(data, entryId, false, true, length) ? 1 : 0;
               }
               stackIn_12_0 = var6;
             } else {
@@ -50,19 +50,19 @@ final class ve {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref2 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_17_0 = var5_ref2;
-          stackIn_17_1 = new StringBuilder().append("ve.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("ve.C(").append(obfuscationGuard).append(',');
+          if (data == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(length).append(',').append(entryId).append(')').toString());
         }
     }
 
     final static boolean b(int param0) {
         if (param0 != -21835160) {
-          ve.b(-54);
+          FileCacheStore.b(-54);
         }
         return LevelSelectScreen.a(qn.field_n, kb.field_Qb, 21);
     }
@@ -82,10 +82,10 @@ final class ve {
     }
 
     public final String toString() {
-        return "" + this.field_c;
+        return "" + this.storeId;
     }
 
-    private final boolean a(byte[] param0, int param1, boolean param2, boolean param3, int param4) {
+    private final boolean writeSectors(byte[] data, int entryId, boolean reuseSectors, boolean obfuscationGuard, int length) {
         try {
           RuntimeException stackIn_71_0 = null;
           StringBuilder stackIn_71_1 = null;
@@ -107,48 +107,48 @@ final class ve {
           int var16 = 0;
           var16 = BrickABrac.field_J ? 1 : 0;
           try {
-            var6 = this.field_d;
+            var6 = this.dataFile;
             synchronized (var6) {
               try {
-                if (param2) {
-                  if ((long)(6 + param1 * 6) > this.field_a.a((byte) 115)) {
+                if (reuseSectors) {
+                  if ((long)(6 + entryId * 6) > this.indexFile.a((byte) 115)) {
                     return false;
                   }
-                  this.field_a.a(0, (long)(param1 * 6));
-                  this.field_a.a(6, 0, 120, tf.field_b);
+                  this.indexFile.a(0, (long)(entryId * 6));
+                  this.indexFile.a(6, 0, 120, tf.field_b);
                   var7_int = (255 & tf.field_b[5]) + ((255 & tf.field_b[3]) << 16) + (65280 & tf.field_b[4] << 8);
                   if (0 >= var7_int ||
-                    !((long)var7_int <= this.field_d.a((byte) 71) / 520L)) {
+                    !((long)var7_int <= this.dataFile.a((byte) 71) / 520L)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.field_d.a((byte) 62)) / 520L);
+                  var7_int = (int)((519L + this.dataFile.a((byte) 62)) / 520L);
                   if (0 == var7_int) {
                     var7_int = 1;
                   }
                 }
-                tf.field_b[0] = (byte)(param4 >> 16);
+                tf.field_b[0] = (byte)(length >> 16);
                 tf.field_b[4] = (byte)(var7_int >> 8);
                 tf.field_b[5] = (byte)var7_int;
-                tf.field_b[2] = (byte)param4;
-                if (!param3) {
-                  ve.a((byte) 8);
+                tf.field_b[2] = (byte)length;
+                if (!obfuscationGuard) {
+                  FileCacheStore.a((byte) 8);
                 }
-                tf.field_b[1] = (byte)(param4 >> 8);
+                tf.field_b[1] = (byte)(length >> 8);
                 tf.field_b[3] = (byte)(var7_int >> 16);
-                this.field_a.a(0, (long)(param1 * 6));
-                this.field_a.a(tf.field_b, 0, 6, -1);
+                this.indexFile.a(0, (long)(entryId * 6));
+                this.indexFile.a(tf.field_b, 0, 6, -1);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
-                  if (param4 > var8) {
+                  if (length > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
-                    if (param2) {
-                      this.field_d.a(0, (long)(520 * var7_int));
-                      if (65535 >= param1) {
+                    if (reuseSectors) {
+                      this.dataFile.a(0, (long)(520 * var7_int));
+                      if (65535 >= entryId) {
                         try {
-                          this.field_d.a(8, 0, 121, tf.field_b);
+                          this.dataFile.a(8, 0, 121, tf.field_b);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,7 +164,7 @@ final class ve {
                         var11 = ((255 & tf.field_b[0]) << 8) + (255 & tf.field_b[1]);
                       } else {
                         try {
-                          this.field_d.a(10, 0, 119, tf.field_b);
+                          this.dataFile.a(10, 0, 119, tf.field_b);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -179,11 +179,11 @@ final class ve {
                         var12 = (255 & tf.field_b[5]) + ((255 & tf.field_b[4]) << 8);
                         var13 = tf.field_b[9] & 255;
                       }
-                      if ((param1 == var11 &&
+                      if ((entryId == var11 &&
                         var12 == var9 &&
-                        this.field_c == var13) &&
+                        this.storeId == var13) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= (this.field_d.a((byte) 29) / 520L))))) {
+                        !((long)var10 <= (this.dataFile.a((byte) 29) / 520L))))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -191,8 +191,8 @@ final class ve {
                       }
                     }
                     if (0 == var10) {
-                      var10 = (int)((519L + this.field_d.a((byte) 85)) / 520L);
-                      param2 = false;
+                      var10 = (int)((519L + this.dataFile.a((byte) 85)) / 520L);
+                      reuseSectors = false;
                       if (var10 == 0) {
                         var10++;
                       }
@@ -200,44 +200,44 @@ final class ve {
                         var10++;
                       }
                     }
-                    if (param4 - var8 <= 512) {
+                    if (length - var8 <= 512) {
                       var10 = 0;
                     }
-                    if (param1 <= 65535) {
+                    if (entryId <= 65535) {
                       tf.field_b[6] = (byte)var10;
-                      tf.field_b[1] = (byte)param1;
+                      tf.field_b[1] = (byte)entryId;
                       tf.field_b[5] = (byte)(var10 >> 8);
-                      tf.field_b[0] = (byte)(param1 >> 8);
+                      tf.field_b[0] = (byte)(entryId >> 8);
                       tf.field_b[3] = (byte)var9;
                       tf.field_b[2] = (byte)(var9 >> 8);
-                      tf.field_b[7] = (byte)this.field_c;
+                      tf.field_b[7] = (byte)this.storeId;
                       tf.field_b[4] = (byte)(var10 >> 16);
-                      this.field_d.a(0, (long)(520 * var7_int));
-                      this.field_d.a(tf.field_b, 0, 8, -1);
-                      var11 = param4 - var8;
+                      this.dataFile.a(0, (long)(520 * var7_int));
+                      this.dataFile.a(tf.field_b, 0, 8, -1);
+                      var11 = length - var8;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_d.a(param0, var8, var11, -1);
+                      this.dataFile.a(data, var8, var11, -1);
                       var8 = var8 + var11;
                     } else {
                       tf.field_b[5] = (byte)var9;
                       tf.field_b[8] = (byte)var10;
-                      tf.field_b[1] = (byte)(param1 >> 16);
+                      tf.field_b[1] = (byte)(entryId >> 16);
                       tf.field_b[6] = (byte)(var10 >> 16);
-                      tf.field_b[0] = (byte)(param1 >> 24);
-                      tf.field_b[9] = (byte)this.field_c;
+                      tf.field_b[0] = (byte)(entryId >> 24);
+                      tf.field_b[9] = (byte)this.storeId;
                       tf.field_b[7] = (byte)(var10 >> 8);
-                      tf.field_b[2] = (byte)(param1 >> 8);
-                      tf.field_b[3] = (byte)param1;
+                      tf.field_b[2] = (byte)(entryId >> 8);
+                      tf.field_b[3] = (byte)entryId;
                       tf.field_b[4] = (byte)(var9 >> 8);
-                      this.field_d.a(0, (long)(520 * var7_int));
-                      this.field_d.a(tf.field_b, 0, 10, -1);
-                      var11 = param4 - var8;
+                      this.dataFile.a(0, (long)(520 * var7_int));
+                      this.dataFile.a(tf.field_b, 0, 10, -1);
+                      var11 = length - var8;
                       if (510 < var11) {
                         var11 = 510;
                       }
-                      this.field_d.a(param0, var8, var11, -1);
+                      this.dataFile.a(data, var8, var11, -1);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -258,12 +258,12 @@ final class ve {
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_71_0 = var6_ref;
             stackIn_71_1 = new StringBuilder().append("ve.D(");
-            if (param0 == null) {
+            if (data == null) {
               stackIn_72_2 = "null";
             } else {
               stackIn_72_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(entryId).append(',').append(reuseSectors).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -272,7 +272,7 @@ final class ve {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int obfuscationGuard, int entryId) {
         try {
           int var16 = 0;
           int incrementValue$2 = 0;
@@ -300,44 +300,44 @@ final class ve {
           Object stackIn_53_0 = null;
           Throwable decompiledCaughtException = null;
           var18 = BrickABrac.field_J ? 1 : 0;
-          var3_ref = this.field_d;
+          var3_ref = this.dataFile;
           synchronized (var3_ref) {
             try {
-              if ((long)(6 * param1 + 6) > this.field_a.a((byte) 53)) {
+              if ((long)(6 * entryId + 6) > this.indexFile.a((byte) 53)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_a.a(0, (long)(param1 * 6));
-              this.field_a.a(6, 0, 127, tf.field_b);
+              this.indexFile.a(0, (long)(entryId * 6));
+              this.indexFile.a(6, 0, 127, tf.field_b);
               var4_int = (tf.field_b[2] & 255) + ((tf.field_b[1] & 255) << 8) + (16711680 & tf.field_b[0] << 16);
               var5 = (tf.field_b[5] & 255) + (tf.field_b[3] << 16 & 16711680) + ((tf.field_b[4] & 255) << 8);
               if (var4_int < 0) {
                 return null;
               }
-              if (this.field_b < var4_int) {
+              if (this.maxEntryBytes < var4_int) {
                 return null;
               }
               if (var5 <= 0) {
                 return null;
               }
-              if ((long)var5 > (this.field_d.a((byte) 66) / 520L)) {
+              if ((long)var5 > (this.dataFile.a((byte) 66) / 520L)) {
                 return null;
               }
               var6 = new byte[var4_int];
               var7 = 0;
-              var8 = param0;
+              var8 = obfuscationGuard;
               while (var7 < var4_int) {
                 if (var5 == 0) {
                   return null;
                 }
-                this.field_d.a(0, (long)(520 * var5));
+                this.dataFile.a(0, (long)(520 * var5));
                 var9 = var4_int - var7;
-                if (param1 <= 65535) {
+                if (entryId <= 65535) {
                   if (512 < var9) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_d.a(var9 + var14, 0, 126, tf.field_b);
+                  this.dataFile.a(var9 + var14, 0, 126, tf.field_b);
                   var10 = ((tf.field_b[0] & 255) << 8) + (tf.field_b[1] & 255);
                   var13 = tf.field_b[7] & 255;
                   var11 = (tf.field_b[3] & 255) + ((tf.field_b[2] & 255) << 8);
@@ -347,26 +347,26 @@ final class ve {
                   if (510 < var9) {
                     var9 = 510;
                   }
-                  this.field_d.a(var14 + var9, 0, param0 ^ 117, tf.field_b);
+                  this.dataFile.a(var14 + var9, 0, obfuscationGuard ^ 117, tf.field_b);
                   var11 = ((255 & tf.field_b[4]) << 8) + (255 & tf.field_b[5]);
                   var13 = tf.field_b[9] & 255;
                   var12 = ((255 & tf.field_b[7]) << 8) + ((tf.field_b[6] & 255) << 16) + (tf.field_b[8] & 255);
                   var10 = (tf.field_b[3] & 255) + (((tf.field_b[1] & 255) << 16) + (tf.field_b[0] << 24 & -16777216) + (tf.field_b[2] << 8 & 65280));
                 }
-                if (param1 != var10) {
+                if (entryId != var10) {
                   return null;
                 }
                 if (var8 != var11) {
                   return null;
                 }
-                if (var13 != this.field_c) {
+                if (var13 != this.storeId) {
                   stackIn_37_0 = null;
                   return (byte[]) (stackIn_37_0);
                 }
                 if (var12 < 0) {
                   return null;
                 }
-                if ((long)var12 > this.field_d.a((byte) 70) / 520L) {
+                if ((long)var12 > this.dataFile.a((byte) 70) / 520L) {
                   stackIn_43_0 = null;
                   return (byte[]) (stackIn_43_0);
                 }
@@ -395,17 +395,17 @@ final class ve {
         }
     }
 
-    ve(int param0, jg param1, jg param2, int param3) {
-        this.field_d = null;
-        this.field_b = 65000;
-        this.field_a = null;
+    FileCacheStore(int storeId, jg dataFile, jg indexFile, int maxEntryBytes) {
+        this.dataFile = null;
+        this.maxEntryBytes = 65000;
+        this.indexFile = null;
         try {
-          this.field_b = param3;
-          this.field_c = param0;
-          this.field_a = param2;
-          this.field_d = param1;
+          this.maxEntryBytes = maxEntryBytes;
+          this.storeId = storeId;
+          this.indexFile = indexFile;
+          this.dataFile = dataFile;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ve.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ve.<init>(" + storeId + ',' + (dataFile != null ? "{...}" : "null") + ',' + (indexFile != null ? "{...}" : "null") + ',' + maxEntryBytes + ')');
         }
     }
 

@@ -104,7 +104,7 @@ final class qf extends lp implements en {
               var4 = param1.field_g;
               if (param1.field_d == 248) {
                 if (!param2) {
-                  jq.e(-77);
+                  CachedArchiveSource.e(-77);
                 }
                 this.field_Fb = true;
                 var4 = CircleBody.field_q;

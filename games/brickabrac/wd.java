@@ -227,7 +227,7 @@ final class wd extends DualLinkNode {
           var21.field_d.a(var22, 123, 12, var23);
           var24 = bm.field_d;
           var26 = ef.field_b[2];
-          var25 = kg.field_b;
+          var25 = CacheIoWorker.field_b;
           var24.field_d.a(var25, param0 ^ 843, 13, var26);
         }
         if (param1 == 2) {

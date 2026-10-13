@@ -28,7 +28,7 @@ final class hk extends ib implements hf, en {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (this.field_N != null) {
-          a.field_u.a(this.field_N, this.field_o + (param1 + 20), param0 - (-this.field_w - 15), -40 + this.field_t, this.field_s, 16777215, -1, 1, 0, a.field_u.ascent);
+          ArchiveNetworkClient.field_u.a(this.field_N, this.field_o + (param1 + 20), param0 - (-this.field_w - 15), -40 + this.field_t, this.field_s, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
         }
         if (null != this.field_O) {
           Rasterizer2D.drawHorizontalLine(param1 + 10, param0 + 134, this.field_t - 20, 4210752);
@@ -104,7 +104,7 @@ final class hk extends ib implements hf, en {
             rk.a("QC2", (Throwable) null, param1 - 14);
             return;
           }
-          hb.a(var4, false);
+          ResourceRequest.a(var4, false);
           var10 = (TextFont) null;
           ArchiveIndex.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
           nb.field_e = ug.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
@@ -270,7 +270,7 @@ final class hk extends ib implements hf, en {
                   if (this.field_S) {
                     ln.a(-107);
                   } else {
-                    hb.g(29);
+                    ResourceRequest.g(29);
                   }
                 } else {
                   dg.a(true);
@@ -395,7 +395,7 @@ final class hk extends ib implements hf, en {
             }
           }
           this.field_w = 15;
-          var7 = a.field_u;
+          var7 = ArchiveNetworkClient.field_u;
           if (this.field_N != null) {
             this.field_w = this.field_w + (5 + var7.measureWrappedHeight(this.field_N, -40 + this.field_t, var7.ascent));
           }

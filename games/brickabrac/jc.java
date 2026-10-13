@@ -166,7 +166,7 @@ abstract class jc extends ib {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          da.a("", 121, param0);
+          ArchiveNetworkRequest.a("", 121, param0);
           if (param1 != 97) {
             jc.a((byte) -100);
           }
@@ -292,7 +292,7 @@ abstract class jc extends ib {
               ga.field_i = 5;
               tb.field_eb = tb.field_db + "<br><br>" + sl.field_A[kf.field_k];
             } else {
-              da.field_G = pp.field_a;
+              ArchiveNetworkRequest.field_G = pp.field_a;
               tb.field_eb = sl.field_A[kf.field_k];
             }
             pp.field_a = -1;
@@ -349,7 +349,7 @@ abstract class jc extends ib {
                 if (wl.field_N) {
                   return;
                 }
-                da.field_G = pp.field_a;
+                ArchiveNetworkRequest.field_G = pp.field_a;
                 ga.field_i = 10;
                 rf.field_f = true;
                 tb.field_eb = kb.field_Tb;

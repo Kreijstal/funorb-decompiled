@@ -174,7 +174,7 @@ final class PowerUp extends CircleBody {
                         if (10 == this.typeId) {
                           if (board.activeBalls.size(118) == 1) {
                             var11 = (Ball) (board.activeBalls.first(obfuscationGuard - 161));
-                            var4 = kj.approximateSqrt256(var11.velocityY256 * var11.velocityY256 + var11.velocityX256 * var11.velocityX256, obfuscationGuard ^ 97) >> 8;
+                            var4 = CacheIoRequest.approximateSqrt256(var11.velocityY256 * var11.velocityY256 + var11.velocityX256 * var11.velocityX256, obfuscationGuard ^ 97) >> 8;
                             var5_int = var11.velocityX256;
                             var6 = var11.velocityY256;
                             for (var7 = 0; 7 > var7; var7++) {
@@ -185,7 +185,7 @@ final class PowerUp extends CircleBody {
                             while (var8 != null) {
                               var8.velocityX256 = (15 * BrickABrac.c(obfuscationGuard + 1949, 1024 * var7Lifetime1) >> 8) + var5_int;
                               var8.velocityY256 = var6 + (15 * sa.a(var7Lifetime1 * 1024, -4097) >> 8);
-                              var9 = kj.approximateSqrt256(var8.velocityY256 * var8.velocityY256 + var8.velocityX256 * var8.velocityX256, 2) >> 8;
+                              var9 = CacheIoRequest.approximateSqrt256(var8.velocityY256 * var8.velocityY256 + var8.velocityX256 * var8.velocityX256, 2) >> 8;
                               var8.velocityX256 = var4 * var8.velocityX256 / var9;
                               var8.velocityY256 = var4 * var8.velocityY256 / var9;
                               var7Lifetime1++;

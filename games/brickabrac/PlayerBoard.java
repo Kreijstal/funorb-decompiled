@@ -597,7 +597,7 @@ final class PlayerBoard extends IntrusiveNode {
           this.field_p = param1.readInt(255);
           this.field_G = this.field_p + this.boardOffset << 8;
           stackIn_30_0 = (1 == param2) ? 15 : 9;
-          kj.addBoardBorders(stackIn_30_0, this.brickGroups[2], 16);
+          CacheIoRequest.addBoardBorders(stackIn_30_0, this.brickGroups[2], 16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

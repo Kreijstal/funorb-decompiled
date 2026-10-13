@@ -41,8 +41,8 @@ final class cr extends oc {
           gd.field_a = param3;
           u.field_g = param1;
           nb.field_a = param8;
-          vd.field_f = (ih) ((Object) new a());
-          Brick.field_x = new kg(param4);
+          vd.field_f = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
+          Brick.field_x = new CacheIoWorker(param4);
           dp.field_v = new co(vd.field_f, Brick.field_x);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "cr.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
@@ -338,7 +338,7 @@ final class cr extends oc {
               }
               if (0 < k.field_h.position) {
                 try {
-                  eq.field_g.a(k.field_h.data, true, k.field_h.position, 0);
+                  eq.field_g.write(k.field_h.data, true, k.field_h.position, 0);
                   BrickMotionPath.field_q = ue.a(false);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

@@ -49,7 +49,7 @@ final class hn {
 
     final static void a(byte param0) {
         if (eq.field_g != null) {
-          eq.field_g.a((byte) 113);
+          eq.field_g.close((byte) 113);
           eq.field_g = null;
         }
         if (param0 < 49) {
@@ -74,7 +74,7 @@ final class hn {
             tf.field_d = new mk(64);
           }
           bf.field_N = param1.field_bb;
-          jq.field_n = param0.field_bb;
+          CachedArchiveSource.field_n = param0.field_bb;
           uc.e(108);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

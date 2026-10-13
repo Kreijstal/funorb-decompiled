@@ -367,11 +367,11 @@ final class nh {
                 pf.field_h.field_Mb = GameCanvas.field_d.toUpperCase();
                 pf.field_h.field_eb = false;
                 if (var19 != 0) {
-                  pf.field_h.field_Mb = lq.field_a.toUpperCase();
+                  pf.field_h.field_Mb = SecondaryNodeQueue.field_a.toUpperCase();
                   pf.field_h.field_eb = true;
                 }
               } else {
-                pf.field_h.field_Mb = lq.field_a.toUpperCase();
+                pf.field_h.field_Mb = SecondaryNodeQueue.field_a.toUpperCase();
                 pf.field_h.field_eb = true;
               }
               pf.field_h.field_Jb = fm.field_b.field_Jb;

@@ -149,8 +149,8 @@ final class HighscorePackSelector {
             nb.a(-111, var5, var4, cm.field_r[var6]);
             ik.field_f[var6].f(var4, var5 - 1, 256);
           }
-          da.packSelectorIcons[var6].drawTransparent(var4, var5);
-          var5 = var5 + (20 + da.packSelectorIcons[var6].canvasHeight);
+          ArchiveNetworkRequest.packSelectorIcons[var6].drawTransparent(var4, var5);
+          var5 = var5 + (20 + ArchiveNetworkRequest.packSelectorIcons[var6].canvasHeight);
         }
     }
 
@@ -174,11 +174,11 @@ final class HighscorePackSelector {
             var3 = var7.x;
             var4 = var7.y;
             for (var5 = 0; this.packCount > var5; var5++) {
-              if (da.packSelectorIcons[var5].containsPixel(var3, var4, pq.pointerX, po.pointerY)) {
+              if (ArchiveNetworkRequest.packSelectorIcons[var5].containsPixel(var3, var4, pq.pointerX, po.pointerY)) {
                 this.selectedPackIndex = var5;
                 break;
               }
-              var4 = var4 + (da.packSelectorIcons[var5].canvasHeight + 20);
+              var4 = var4 + (ArchiveNetworkRequest.packSelectorIcons[var5].canvasHeight + 20);
             }
           }
           this.lastPointerX = pq.pointerX;

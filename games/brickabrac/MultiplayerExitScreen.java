@@ -124,10 +124,10 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     final void navigateBack(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
           MultiplayerExitScreen.i(-22);
-          da.f((byte) 122);
+          ArchiveNetworkRequest.f((byte) 122);
           return;
         }
-        da.f((byte) 122);
+        ArchiveNetworkRequest.f((byte) 122);
     }
 
     MultiplayerExitScreen() {

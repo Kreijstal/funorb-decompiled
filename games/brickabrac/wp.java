@@ -241,7 +241,7 @@ final class wp {
                 var10 = (String) null;
                 cg.field_s = he.a(sl.field_v, 20, false, param5, (String) null);
               } else {
-                cg.field_s = ih.a(param0, false, param5, (byte) -109);
+                cg.field_s = ArchiveFetchClient.a(param0, false, param5, (byte) -109);
               }
               k.field_h.position = 0;
               k.field_h.writeByte(28, 14);
@@ -331,7 +331,7 @@ final class wp {
               }
               tb.field_cb = jl.field_e.readCp1252String(-1);
               var12 = (CharSequence) ((Object) tb.field_cb);
-              ih.field_d = gb.a(var12, 65);
+              ArchiveFetchClient.field_d = gb.a(var12, 65);
               OptionsScreen.field_x = jl.field_e.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
               if (cg.field_s.a(13) == vh.field_X) {

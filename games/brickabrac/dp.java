@@ -22,7 +22,7 @@ final class dp extends ki {
           var5 = 36 % ((param0 + 28) / 43);
           return;
         }
-        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, kg.field_d[param1], 22953);
+        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, CacheIoWorker.field_d[param1], 22953);
         if (this.b((byte) -115)) {
           LevelPackLoader.field_f.drawTransparent(param2, param3);
         }
@@ -34,7 +34,7 @@ final class dp extends ki {
         if (!param0) {
           this.a(-127, false);
           if (!this.b((byte) -106)) {
-            Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, kg.field_d[param3], 22953);
+            Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, CacheIoWorker.field_d[param3], 22953);
             return;
           }
           var7 = PowerUp.a(this.field_m, param3, -20777);
@@ -46,7 +46,7 @@ final class dp extends ki {
           return;
         }
         if (!this.b((byte) -106)) {
-          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, kg.field_d[param3], 22953);
+          Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, CacheIoWorker.field_d[param3], 22953);
           return;
         }
         RasterCacheSurface var8 = PowerUp.a(this.field_m, param3, -20777);
@@ -188,7 +188,7 @@ final class dp extends ki {
         if (param1 >= -84) {
           this.a(true);
           if (!this.b((byte) -126)) {
-            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, kg.field_d[param3], 22953);
+            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, CacheIoWorker.field_d[param3], 22953);
             return;
           }
           var7 = kd.a(this.field_m, param3, (byte) 116);
@@ -202,7 +202,7 @@ final class dp extends ki {
           return;
         }
         if (!this.b((byte) -126)) {
-          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, kg.field_d[param3], 22953);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, CacheIoWorker.field_d[param3], 22953);
           return;
         }
         RasterCacheSurface var8 = kd.a(this.field_m, param3, (byte) 116);

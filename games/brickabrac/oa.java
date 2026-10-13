@@ -350,9 +350,9 @@ final class oa extends mh {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_Wb[0][var0] = kg.a(var12, kg.a(kg.a(var8 << 16, kg.a(var10 << 24, kg.a(kg.a(var6 << 40, kg.a(var2 << 48, var2 << 56)), var2 << 32))), var4 << 8));
+            field_Wb[0][var0] = CacheIoWorker.a(var12, CacheIoWorker.a(CacheIoWorker.a(var8 << 16, CacheIoWorker.a(var10 << 24, CacheIoWorker.a(CacheIoWorker.a(var6 << 40, CacheIoWorker.a(var2 << 48, var2 << 56)), var2 << 32))), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_Wb[var14][var0] = kg.a(field_Wb[var14 - 1][var0] << 56, field_Wb[-1 + var14][var0] >>> 8);
+                field_Wb[var14][var0] = CacheIoWorker.a(field_Wb[var14 - 1][var0] << 56, field_Wb[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

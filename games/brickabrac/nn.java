@@ -482,7 +482,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_invite_players", (byte) -108);
                 if (var2 != null) {
-                  lq.field_a = MenuButton.a(var2, (byte) 119);
+                  SecondaryNodeQueue.field_a = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("close", (byte) -17);
                 if (var2 != null) {
@@ -554,7 +554,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_gameopt_invite_x_to_game", (byte) -128);
                 if (null != var2) {
-                  hb.field_A = MenuButton.a(var2, (byte) 79);
+                  ResourceRequest.field_A = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = nk.a("report_x_for_abuse", (byte) -108);
                 if (var2 != null) {
@@ -598,7 +598,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_chat_game_hide", (byte) 126);
                 if (var2 != null) {
-                  kg.field_b = MenuButton.a(var2, (byte) 83);
+                  CacheIoWorker.field_b = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = nk.a("mu_chat_pm_show_all", (byte) -125);
                 if (var2 != null) {
@@ -958,7 +958,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_cannotbecombined2", (byte) -119);
                 if (null != var2) {
-                  ve.field_e = MenuButton.a(var2, (byte) 92);
+                  FileCacheStore.field_e = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("gameopt_playernotmember", (byte) -2);
                 if (null != var2) {
@@ -1876,7 +1876,7 @@ final class nn {
                 }
                 var2 = nk.a("enterfriend_add", (byte) -12);
                 if (null != var2) {
-                  a.field_t = MenuButton.a(var2, (byte) 88);
+                  ArchiveNetworkClient.field_t = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("enterfriend_del", (byte) 37);
                 if (null != var2) {
@@ -1884,7 +1884,7 @@ final class nn {
                 }
                 var2 = nk.a("enterignore_add", (byte) -115);
                 if (null != var2) {
-                  kg.field_e = MenuButton.a(var2, (byte) 118);
+                  CacheIoWorker.field_e = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("enterignore_del", (byte) -107);
                 if (var2 != null) {
@@ -2050,7 +2050,7 @@ final class nn {
                 }
                 var2 = nk.a("music_colon", (byte) 3);
                 if (null != var2) {
-                  a.field_r = MenuButton.a(var2, (byte) 113);
+                  ArchiveNetworkClient.field_r = MenuButton.a(var2, (byte) 113);
                 }
                 var2 = nk.a("fullscreen", (byte) -118);
                 if (var2 != null) {
@@ -2210,7 +2210,7 @@ final class nn {
                 }
                 var2 = nk.a("entermultiplayerlobby", (byte) 104);
                 if (var2 != null) {
-                  da.field_H = MenuButton.a(var2, (byte) 110);
+                  ArchiveNetworkRequest.field_H = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("singleplayergame", (byte) -107);
                 if (var2 != null) {
@@ -2446,7 +2446,7 @@ final class nn {
                 }
                 var2 = nk.a("no_highscores", (byte) 54);
                 if (null != var2) {
-                  da.field_J = MenuButton.a(var2, (byte) 114);
+                  ArchiveNetworkRequest.field_J = MenuButton.a(var2, (byte) 114);
                 }
                 var2 = nk.a("hs_name", (byte) 10);
                 if (null != var2) {
@@ -3321,7 +3321,7 @@ final class nn {
                   return;
                 }
               }
-              this.field_d.a(rd.a(hb.field_A, new String[]{var5}, (byte) 103), 0, (byte) 126);
+              this.field_d.a(rd.a(ResourceRequest.field_A, new String[]{var5}, (byte) 103), 0, (byte) 126);
             }
           }
           return;
@@ -3601,7 +3601,7 @@ final class nn {
             if (InstructionsScreen.field_v == 0) {
               this.field_d.a(ej.field_K, 12, (byte) 107);
             }
-            this.field_d.a(kg.field_b, 13, (byte) 82);
+            this.field_d.a(CacheIoWorker.field_b, 13, (byte) 82);
           }
           if (param0.field_c == 2) {
             if (to.field_a == 0) {

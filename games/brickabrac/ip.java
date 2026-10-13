@@ -18,7 +18,7 @@ final class ip extends ki {
           if (BrickABrac.field_J) {
             var7 = PowerUp.a(this.field_m, param3, -20777);
             if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-              ih.a(var7, np.field_d, param3, 1, 0, true);
+              ArchiveFetchClient.a(var7, np.field_d, param3, 1, 0, true);
               var7.setCacheKeys(this.field_m, param3, (byte) 78);
             }
             ef.a(var7.sprite, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
@@ -26,7 +26,7 @@ final class ip extends ki {
         } else {
           var7 = PowerUp.a(this.field_m, param3, -20777);
           if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            ih.a(var7, np.field_d, param3, 1, 0, true);
+            ArchiveFetchClient.a(var7, np.field_d, param3, 1, 0, true);
             var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
           ef.a(var7.sprite, dg.field_g, param4, false, param1, param2, 0, param3, 1, 640, ch.field_f);
@@ -695,7 +695,7 @@ final class ip extends ki {
                       }
                       stackIn_364_0Lifetime1 = var23;
                       if (stackIn_364_0Lifetime1 != 0) {
-                        var21 = ve.field_e + (String) (var22);
+                        var21 = FileCacheStore.field_e + (String) (var22);
                         break;
                       }
                       var21 = rd.a(fh.field_b, new String[]{(String) (var22)}, (byte) 103);
@@ -903,7 +903,7 @@ final class ip extends ki {
           if (BrickABrac.field_J) {
             var7 = kd.a(this.field_m, param3, (byte) -121);
             if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-              ih.a(var7, ib.field_E, param3, 2, -13, true);
+              ArchiveFetchClient.a(var7, ib.field_E, param3, 2, -13, true);
               var7.setCacheKeys(this.field_m, param3, (byte) 78);
             }
             ef.a(var7.sprite, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);
@@ -911,7 +911,7 @@ final class ip extends ki {
         } else {
           var7 = kd.a(this.field_m, param3, (byte) -121);
           if (!var7.matchesCacheKeys((byte) -84, param3, this.field_m)) {
-            ih.a(var7, ib.field_E, param3, 2, -13, true);
+            ArchiveFetchClient.a(var7, ib.field_E, param3, 2, -13, true);
             var7.setCacheKeys(this.field_m, param3, (byte) 78);
           }
           ef.a(var7.sprite, fk.field_e, param2, false, param4, param0, -13, param3, 2, 306, sl.field_D);

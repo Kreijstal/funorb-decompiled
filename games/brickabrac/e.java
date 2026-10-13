@@ -174,7 +174,7 @@ final class e extends IntrusiveNode {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param0.takeFileByName(104, "final_frame.jpg", ""), (java.awt.Component) ((Object) kj.field_D));
+          var2 = new RgbSprite(param0.takeFileByName(104, "final_frame.jpg", ""), (java.awt.Component) ((Object) CacheIoRequest.field_D));
           var3 = var2.width;
           int var5 = -121 % ((-17 - param1) / 52);
           var4 = var2.height;

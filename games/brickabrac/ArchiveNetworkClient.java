@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class a extends ih {
+final class ArchiveNetworkClient extends ArchiveFetchClient {
     static TextFont field_u;
     static String field_t;
     static RgbSprite[] field_s;
-    private wh field_q;
+    private BufferedSocket transport;
     static String field_r;
 
     final static void a(int param0, MultiplayerMatch param1, PlayerBoard param2) {
@@ -42,8 +42,8 @@ final class a extends ih {
             field_r = (String) null;
           }
           if (MenuScreen.field_i > 0 &&
-            ih.field_k != null) {
-            ih.field_k.b(640 - ih.field_k.canvasWidth, 480 - ih.field_k.canvasHeight - 10, var3_int);
+            ArchiveFetchClient.field_k != null) {
+            ArchiveFetchClient.field_k.b(640 - ArchiveFetchClient.field_k.canvasWidth, 480 - ArchiveFetchClient.field_k.canvasHeight - 10, var3_int);
           }
           var5 = IntrusiveNode.field_f[param2.field_y];
           if (var4 != null) {
@@ -89,28 +89,28 @@ final class a extends ih {
           int var2 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          if (this.field_q == null) {
+          if (this.transport == null) {
             return;
           }
           var2 = 74 % ((param0 - 14) / 57);
           try {
-            this.field_m.position = 0;
-            this.field_m.writeByte(44, 6);
-            this.field_m.writeMedium((byte) 47, 3);
-            this.field_m.writeShort((byte) 125, 0);
-            this.field_q.a(this.field_m.data, true, this.field_m.data.length, 0);
+            this.controlPacket.position = 0;
+            this.controlPacket.writeByte(44, 6);
+            this.controlPacket.writeMedium((byte) 47, 3);
+            this.controlPacket.writeShort((byte) 125, 0);
+            this.transport.write(this.controlPacket.data, true, this.controlPacket.data.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.a((byte) 112);
+              this.transport.close((byte) 112);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_f = -2;
-            this.field_q = null;
-            this.field_i = this.field_i + 1;
+            this.lastError = -2;
+            this.transport = null;
+            this.failureCount = this.failureCount + 1;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -119,14 +119,14 @@ final class a extends ih {
         }
     }
 
-    final boolean b(int param0) {
+    final boolean pollTransport(int obfuscationGuard) {
         try {
           int var2_int = 0;
           int stackIn_50_0 = 0;
           int stackIn_66_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          da var2 = null;
+          ArchiveNetworkRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -141,121 +141,121 @@ final class a extends ih {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          da var14_ref = null;
+          ArchiveNetworkRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          da var2Lifetime1;
+          ArchiveNetworkRequest var2Lifetime1;
           var16 = BrickABrac.field_J ? 1 : 0;
-          if (this.field_q != null) {
+          if (this.transport != null) {
             var2_long = ue.a(false);
-            var4 = (int)(var2_long - this.field_o);
+            var4 = (int)(var2_long - this.lastPollMillis);
             if (var4 > 200) {
               var4 = 200;
             }
-            this.field_o = var2_long;
-            this.field_b = this.field_b + var4;
-            if (this.field_b > 30000) {
+            this.lastPollMillis = var2_long;
+            this.idleMillis = this.idleMillis + var4;
+            if (this.idleMillis > 30000) {
               try {
-                this.field_q.a((byte) 120);
+                this.transport.close((byte) 120);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
               }
-              this.field_q = null;
+              this.transport = null;
             }
           }
-          if (this.field_q == null) {
-            if (0 != this.e((byte) -67)) {
+          if (this.transport == null) {
+            if (0 != this.getPriorityCount((byte) -67)) {
               return false;
             }
-            if (this.c((byte) -105) == 0) {
+            if (this.getBackgroundCount((byte) -105) == 0) {
               return true;
             }
             return false;
           }
           try {
-            this.field_q.c(-1);
-            var2 = (da) (this.field_g.a(true));
+            this.transport.checkWriteError(-1);
+            var2 = (ArchiveNetworkRequest) (this.pendingPriority.first(true));
             while (var2 != null) {
-              this.field_m.position = 0;
-              this.field_m.writeByte(-102, 1);
-              this.field_m.writeLong40(var2.secondaryKey, (byte) -32);
-              this.field_q.a(this.field_m.data, true, this.field_m.data.length, 0);
-              this.field_n.a(var2, false);
-              var2 = (da) (this.field_g.e(-8394));
+              this.controlPacket.position = 0;
+              this.controlPacket.writeByte(-102, 1);
+              this.controlPacket.writeLong40(var2.secondaryKey, (byte) -32);
+              this.transport.write(this.controlPacket.data, true, this.controlPacket.data.length, 0);
+              this.activePriority.addLast(var2, false);
+              var2 = (ArchiveNetworkRequest) (this.pendingPriority.next(-8394));
             }
-            var2Lifetime1 = (da) (this.field_a.a(true));
+            var2Lifetime1 = (ArchiveNetworkRequest) (this.pendingBackground.first(true));
             while (var2Lifetime1 != null) {
-              this.field_m.position = 0;
-              this.field_m.writeByte(-128, 0);
-              this.field_m.writeLong40(var2Lifetime1.secondaryKey, (byte) -32);
-              this.field_q.a(this.field_m.data, true, this.field_m.data.length, 0);
-              this.field_c.a(var2Lifetime1, false);
-              var2Lifetime1 = (da) (this.field_a.e(-8394));
+              this.controlPacket.position = 0;
+              this.controlPacket.writeByte(-128, 0);
+              this.controlPacket.writeLong40(var2Lifetime1.secondaryKey, (byte) -32);
+              this.transport.write(this.controlPacket.data, true, this.controlPacket.data.length, 0);
+              this.activeBackground.addLast(var2Lifetime1, false);
+              var2Lifetime1 = (ArchiveNetworkRequest) (this.pendingBackground.next(-8394));
             }
-            if (param0 <= 10) {
-              a.h((byte) -19);
+            if (obfuscationGuard <= 10) {
+              ArchiveNetworkClient.h((byte) -19);
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
-              var3_int = this.field_q.d(10434);
+              var3_int = this.transport.available(10434);
               if (var3_int < 0) {
                 throw new IOException();
               }
               if (0 != var3_int) {
-                this.field_b = 0;
+                this.idleMillis = 0;
                 var4 = 0;
-                if (null == this.field_e) {
+                if (null == this.currentResponse) {
                   var4 = 10;
                 } else {
-                  if (0 == this.field_e.field_K) {
+                  if (0 == this.currentResponse.blockPosition) {
                     var4 = 1;
                   }
                 }
                 if (var4 <= 0) {
-                  var5 = -this.field_e.field_F + this.field_e.field_D.data.length;
-                  var6 = 512 - this.field_e.field_K;
-                  if (var6 > var5 - this.field_e.field_D.position) {
-                    var6 = var5 - this.field_e.field_D.position;
+                  var5 = -this.currentResponse.trailerBytes + this.currentResponse.packet.data.length;
+                  var6 = 512 - this.currentResponse.blockPosition;
+                  if (var6 > var5 - this.currentResponse.packet.position) {
+                    var6 = var5 - this.currentResponse.packet.position;
                   }
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_q.a(25826, this.field_e.field_D.data, var6, this.field_e.field_D.position);
-                  if (this.field_h != 0) {
+                  this.transport.readFully(25826, this.currentResponse.packet.data, var6, this.currentResponse.packet.position);
+                  if (this.xorKey != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_e.field_D.data[var7 + this.field_e.field_D.position] = (byte)pn.a((int) this.field_e.field_D.data[var7 + this.field_e.field_D.position], (int) this.field_h);
+                      this.currentResponse.packet.data[var7 + this.currentResponse.packet.position] = (byte)pn.a((int) this.currentResponse.packet.data[var7 + this.currentResponse.packet.position], (int) this.xorKey);
                     }
                   }
-                  this.field_e.field_K = this.field_e.field_K + var6;
-                  this.field_e.field_D.position = this.field_e.field_D.position + var6;
-                  if (var5 != this.field_e.field_D.position) {
-                    if (this.field_e.field_K == 512) {
-                      this.field_e.field_K = 0;
+                  this.currentResponse.blockPosition = this.currentResponse.blockPosition + var6;
+                  this.currentResponse.packet.position = this.currentResponse.packet.position + var6;
+                  if (var5 != this.currentResponse.packet.position) {
+                    if (this.currentResponse.blockPosition == 512) {
+                      this.currentResponse.blockPosition = 0;
                     }
                   } else {
-                    this.field_e.unlinkSecondary(3);
-                    this.field_e.field_u = false;
-                    this.field_e = null;
+                    this.currentResponse.unlinkSecondary(3);
+                    this.currentResponse.pending = false;
+                    this.currentResponse = null;
                   }
                 } else {
-                  var5 = var4 - this.field_l.position;
+                  var5 = var4 - this.responseHeader.position;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_q.a(25826, this.field_l.data, var5, this.field_l.position);
-                  if (0 != this.field_h) {
+                  this.transport.readFully(25826, this.responseHeader.data, var5, this.responseHeader.position);
+                  if (0 != this.xorKey) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_l.data[this.field_l.position + var6] = (byte)pn.a((int) this.field_l.data[this.field_l.position + var6], (int) this.field_h);
+                      this.responseHeader.data[this.responseHeader.position + var6] = (byte)pn.a((int) this.responseHeader.data[this.responseHeader.position + var6], (int) this.xorKey);
                     }
                   }
-                  this.field_l.position = this.field_l.position + var5;
-                  if (this.field_l.position >= var4) {
-                    if (null == this.field_e) {
-                      this.field_l.position = 0;
-                      var6 = this.field_l.readUnsignedByte(255);
-                      var7 = this.field_l.readInt(255);
-                      var8 = this.field_l.readUnsignedByte(255);
-                      var9 = this.field_l.readInt(255);
+                  this.responseHeader.position = this.responseHeader.position + var5;
+                  if (this.responseHeader.position >= var4) {
+                    if (null == this.currentResponse) {
+                      this.responseHeader.position = 0;
+                      var6 = this.responseHeader.readUnsignedByte(255);
+                      var7 = this.responseHeader.readInt(255);
+                      var8 = this.responseHeader.readUnsignedByte(255);
+                      var9 = this.responseHeader.readInt(255);
                       var10 = var8 & 127;
                       stackIn_50_0 = (0 == (var8 & 128)) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -264,24 +264,24 @@ final class a extends ih {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (da) (this.field_n.a(true));
+                        var14_ref = (ArchiveNetworkRequest) (this.activePriority.first(true));
                         while (var14_ref != null) {
                           if (var14_ref.secondaryKey == var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (da) (this.field_n.e(-8394));
+                          var14_ref = (ArchiveNetworkRequest) (this.activePriority.next(-8394));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (da) (this.field_c.a(true));
+                        var14_ref = (ArchiveNetworkRequest) (this.activeBackground.first(true));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (da) (this.field_c.e(-8394));
+                          var14_ref = (ArchiveNetworkRequest) (this.activeBackground.next(-8394));
                         }
                       }
                       if (var14_ref == null) {
@@ -289,21 +289,21 @@ final class a extends ih {
                       }
                       stackIn_66_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_66_0;
-                      this.field_e = var14_ref;
-                      this.field_e.field_D = new PacketBuffer(var9 + var15 + this.field_e.field_F);
-                      this.field_e.field_D.writeByte(-107, var10);
-                      this.field_e.field_D.writeInt(var9, (byte) -79);
-                      this.field_e.field_K = 10;
-                      this.field_l.position = 0;
+                      this.currentResponse = var14_ref;
+                      this.currentResponse.packet = new PacketBuffer(var9 + var15 + this.currentResponse.trailerBytes);
+                      this.currentResponse.packet.writeByte(-107, var10);
+                      this.currentResponse.packet.writeInt(var9, (byte) -79);
+                      this.currentResponse.blockPosition = 10;
+                      this.responseHeader.position = 0;
                     } else {
-                      if (0 != this.field_e.field_K) {
+                      if (0 != this.currentResponse.blockPosition) {
                         throw new IOException();
                       }
-                      if (this.field_l.data[0] == -1) {
-                        this.field_l.position = 0;
-                        this.field_e.field_K = 1;
+                      if (this.responseHeader.data[0] == -1) {
+                        this.responseHeader.position = 0;
+                        this.currentResponse.blockPosition = 1;
                       } else {
-                        this.field_e = null;
+                        this.currentResponse = null;
                       }
                     }
                   }
@@ -317,16 +317,16 @@ final class a extends ih {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.a((byte) 119);
+              this.transport.close((byte) 119);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_f = -2;
-            this.field_q = null;
-            this.field_i = this.field_i + 1;
-            if (this.e((byte) -41) == 0 &&
-              0 == this.c((byte) 101)) {
+            this.lastError = -2;
+            this.transport = null;
+            this.failureCount = this.failureCount + 1;
+            if (this.getPriorityCount((byte) -41) == 0 &&
+              0 == this.getBackgroundCount((byte) 101)) {
               return true;
             }
             return false;
@@ -389,24 +389,24 @@ final class a extends ih {
         }
     }
 
-    final void a(byte param0) {
+    final void reportIntegrityFailure(byte obfuscationGuard) {
         try {
-          this.field_q.a((byte) 113);
+          this.transport.close((byte) 113);
         } catch (Exception exception) {
         }
-        this.field_i = this.field_i + 1;
-        if (param0 != 8) {
+        this.failureCount = this.failureCount + 1;
+        if (obfuscationGuard != 8) {
           return;
         }
-        this.field_f = -1;
-        this.field_q = null;
-        this.field_h = (byte)(int)(1.0 + 255.0 * Math.random());
+        this.lastError = -1;
+        this.transport = null;
+        this.xorKey = (byte)(int)(1.0 + 255.0 * Math.random());
     }
 
     public static void h(byte param0) {
         field_r = null;
         if (param0 > -92) {
-          a.h((byte) 64);
+          ArchiveNetworkClient.h((byte) 64);
         }
         field_u = null;
         field_s = null;
@@ -424,7 +424,7 @@ final class a extends ih {
         try {
           var1_int = fi.field_w[0];
           if (param0 != 94) {
-            a.f((byte) 52);
+            ArchiveNetworkClient.f((byte) 52);
           }
           for (var2 = 1; fi.field_w.length > var2; var2++) {
             var3 = fi.field_w[var2];
@@ -439,89 +439,89 @@ final class a extends ih {
         }
     }
 
-    final void a(Object param0, boolean param1, int param2) {
+    final void attachTransport(Object transport, boolean connectionMode, int obfuscationGuard) {
         try {
           RuntimeException stackIn_26_0 = null;
           StringBuilder stackIn_26_1 = null;
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          da var4_ref = null;
+          ArchiveNetworkRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          da var4_refLifetime1;
+          ArchiveNetworkRequest var4_refLifetime1;
           var6 = BrickABrac.field_J ? 1 : 0;
           try {
-            if (this.field_q != null) {
+            if (this.transport != null) {
               try {
-                this.field_q.a((byte) 114);
+                this.transport.close((byte) 114);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
               }
-              this.field_q = null;
+              this.transport = null;
             }
-            this.field_q = (wh) (param0);
+            this.transport = (BufferedSocket) (transport);
             this.g((byte) 116);
-            this.a(param1, false);
-            if (param2 != 12) {
-              this.a((byte) -71);
+            this.a(connectionMode, false);
+            if (obfuscationGuard != 12) {
+              this.reportIntegrityFailure((byte) -71);
             }
-            this.field_l.position = 0;
-            this.field_e = null;
+            this.responseHeader.position = 0;
+            this.currentResponse = null;
             while (true) {
-              var4_ref = (da) (this.field_n.a(25609));
+              var4_ref = (ArchiveNetworkRequest) (this.activePriority.removeFirst(25609));
               if (var4_ref != null) {
-                this.field_g.a(var4_ref, false);
+                this.pendingPriority.addLast(var4_ref, false);
                 continue;
               }
               break;
             }
             while (true) {
-              var4_refLifetime1 = (da) (this.field_c.a(param2 + 25597));
+              var4_refLifetime1 = (ArchiveNetworkRequest) (this.activeBackground.removeFirst(obfuscationGuard + 25597));
               if (var4_refLifetime1 != null) {
-                this.field_a.a(var4_refLifetime1, false);
+                this.pendingBackground.addLast(var4_refLifetime1, false);
                 continue;
               }
               break;
             }
-            if (this.field_h != 0) {
+            if (this.xorKey != 0) {
               try {
-                this.field_m.position = 0;
-                this.field_m.writeByte(param2 + 50, 4);
-                this.field_m.writeByte(40, (int) this.field_h);
-                this.field_m.writeInt(0, (byte) -79);
-                this.field_q.a(this.field_m.data, true, this.field_m.data.length, 0);
+                this.controlPacket.position = 0;
+                this.controlPacket.writeByte(obfuscationGuard + 50, 4);
+                this.controlPacket.writeByte(40, (int) this.xorKey);
+                this.controlPacket.writeInt(0, (byte) -79);
+                this.transport.write(this.controlPacket.data, true, this.controlPacket.data.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_q.a((byte) 116);
+                  this.transport.close((byte) 116);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
                 }
-                this.field_i = this.field_i + 1;
-                this.field_q = null;
-                this.field_f = -2;
+                this.failureCount = this.failureCount + 1;
+                this.transport = null;
+                this.lastError = -2;
               }
             }
-            this.field_b = 0;
-            this.field_o = ue.a(false);
+            this.idleMillis = 0;
+            this.lastPollMillis = ue.a(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var4_ref3 = (RuntimeException) (Object) decompiledCaughtException;
             stackIn_26_0 = var4_ref3;
             stackIn_26_1 = new StringBuilder().append("a.E(");
-            if (param0 == null) {
+            if (transport == null) {
               stackIn_27_2 = "null";
             } else {
               stackIn_27_2 = "{...}";
             }
-            throw qb.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw qb.addExceptionContext((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(connectionMode).append(',').append(obfuscationGuard).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -530,11 +530,11 @@ final class a extends ih {
         }
     }
 
-    final void b(byte param0) {
-        if (this.field_q != null) {
-          this.field_q.a((byte) 111);
+    final void closeTransport(byte obfuscationGuard) {
+        if (this.transport != null) {
+          this.transport.close((byte) 111);
         }
-        if (param0 != 30) {
+        if (obfuscationGuard != 30) {
           this.g((byte) -72);
         }
     }
@@ -547,15 +547,15 @@ final class a extends ih {
           int stackIn_7_2 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          if (this.field_q == null) {
+          if (this.transport == null) {
             return;
           }
           try {
-            this.field_m.position = 0;
+            this.controlPacket.position = 0;
             if (param1) {
               return;
             }
-            stackIn_6_0 = this.field_m;
+            stackIn_6_0 = this.controlPacket;
             stackIn_6_1 = 37;
             if (!param0) {
               stackIn_7_2 = 3;
@@ -563,20 +563,20 @@ final class a extends ih {
               stackIn_7_2 = 2;
             }
             ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
-            this.field_m.writeLong40(0L, (byte) -32);
-            this.field_q.a(this.field_m.data, true, this.field_m.data.length, 0);
+            this.controlPacket.writeLong40(0L, (byte) -32);
+            this.transport.write(this.controlPacket.data, true, this.controlPacket.data.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_q.a((byte) 117);
+              this.transport.close((byte) 117);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_f = -2;
-            this.field_i = this.field_i + 1;
-            this.field_q = null;
+            this.lastError = -2;
+            this.failureCount = this.failureCount + 1;
+            this.transport = null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -585,7 +585,7 @@ final class a extends ih {
         }
     }
 
-    public a() {
+    public ArchiveNetworkClient() {
     }
 
     static {

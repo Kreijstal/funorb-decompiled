@@ -18,8 +18,8 @@ final class nk {
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
         if (oh.field_b == sm.field_b) {
-          fieldTemp$0 = jq.field_p;
-          jq.field_p = jq.field_p + 1;
+          fieldTemp$0 = CachedArchiveSource.field_p;
+          CachedArchiveSource.field_p = CachedArchiveSource.field_p + 1;
           if (fieldTemp$0 >= 16) {
             if (ln.field_k) {
               vb.k(0);
@@ -59,8 +59,8 @@ final class nk {
           field_c = (RgbSprite) null;
           return;
         }
-        fieldTemp$1 = jq.field_p;
-        jq.field_p = jq.field_p - 1;
+        fieldTemp$1 = CachedArchiveSource.field_p;
+        CachedArchiveSource.field_p = CachedArchiveSource.field_p - 1;
         if (fieldTemp$1 <= 0) {
           sm.field_b = sm.field_a;
         }
@@ -93,12 +93,12 @@ final class nk {
         }
         ga.a(param1, -124);
         if (param0 == -25) {
-          wh.a(21862);
+          BufferedSocket.a(21862);
           return;
         }
         java.applet.Applet var3 = (java.applet.Applet) null;
         nk.a(-89, (java.applet.Applet) null);
-        wh.a(21862);
+        BufferedSocket.a(21862);
     }
 
     public static void a(byte param0) {

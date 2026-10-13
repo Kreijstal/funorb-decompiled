@@ -487,7 +487,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (13 == var8) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  da.f((byte) 122);
+                  ArchiveNetworkRequest.f((byte) 122);
                 }
                 break regionExit1;
               }

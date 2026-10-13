@@ -1154,7 +1154,7 @@ final class og extends mh {
           }
           var2Lifetime108 = gr.a(true, "go_exclaim");
           if (var2Lifetime108 != null) {
-            lq.field_c = MenuButton.a(var2Lifetime108, (byte) 77);
+            SecondaryNodeQueue.field_c = MenuButton.a(var2Lifetime108, (byte) 77);
           }
           var2Lifetime109 = gr.a(!param0, "cool");
           if (null != var2Lifetime109) {
@@ -1502,11 +1502,11 @@ final class og extends mh {
             field_gc = (ResourceArchive) null;
           }
           LevelPack.b(124);
-          if (null != kj.field_D) {
-            t.a(false, kj.field_D);
+          if (null != CacheIoRequest.field_D) {
+            t.a(false, CacheIoRequest.field_D);
           }
           ic.disableKeyboardInput((byte) -79);
-          ve.a(5);
+          FileCacheStore.a(5);
           GameplayAudioEvent.a(param0 + 14569);
           if (vg.a(param0 - 104)) {
             k.field_h.writeCipheredOpcode(-13413, 1);

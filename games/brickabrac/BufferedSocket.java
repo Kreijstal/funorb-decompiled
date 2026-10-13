@@ -3,36 +3,36 @@
  */
 import java.io.*;
 
-final class wh implements Runnable {
-    private int field_b;
-    private java.net.Socket field_d;
-    private boolean field_g;
-    private tg field_f;
-    private byte[] field_c;
-    private boolean field_k;
-    private OutputStream field_l;
+final class BufferedSocket implements Runnable {
+    private int writePosition;
+    private java.net.Socket socket;
+    private boolean writeFailed;
+    private tg taskScheduler;
+    private byte[] outputBuffer;
+    private boolean closed;
+    private OutputStream output;
     static int field_m;
-    private int field_j;
-    private InputStream field_e;
-    private ql field_i;
-    private int field_a;
+    private int readPosition;
+    private InputStream input;
+    private ql writerTask;
+    private int bufferCapacity;
     static mh field_h;
 
-    final int e(int param0) throws IOException {
-        if (param0 != 0) {
+    final int readByte(int obfuscationGuard) throws IOException {
+        if (obfuscationGuard != 0) {
           this.finalize();
         }
-        if (this.field_k) {
+        if (this.closed) {
           return 0;
         }
-        return this.field_e.read();
+        return this.input.read();
     }
 
     protected final void finalize() {
-        this.a((byte) 111);
+        this.close((byte) 111);
     }
 
-    final void a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
+    final void write(byte[] data, boolean obfuscationGuard, int length, int offset) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -43,30 +43,30 @@ final class wh implements Runnable {
         int var8 = 0;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_k) {
+          if (this.closed) {
             return;
           }
-          if (!param1) {
+          if (!obfuscationGuard) {
             return;
           }
-          if (this.field_g) {
-            this.field_g = false;
+          if (this.writeFailed) {
+            this.writeFailed = false;
             throw new IOException();
           }
-          if (this.field_c == null) {
-            this.field_c = new byte[this.field_a];
+          if (this.outputBuffer == null) {
+            this.outputBuffer = new byte[this.bufferCapacity];
           }
           var5 = this;
           synchronized (var5) {
-            for (var6 = 0; var6 < param2; var6++) {
-              this.field_c[this.field_b] = param0[param3 + var6];
-              this.field_b = (1 + this.field_b) % this.field_a;
-              if ((this.field_a + this.field_j - 100) % this.field_a == this.field_b) {
+            for (var6 = 0; var6 < length; var6++) {
+              this.outputBuffer[this.writePosition] = data[offset + var6];
+              this.writePosition = (1 + this.writePosition) % this.bufferCapacity;
+              if ((this.bufferCapacity + this.readPosition - 100) % this.bufferCapacity == this.writePosition) {
                 throw new IOException();
               }
             }
-            if (null == this.field_i) {
-              this.field_i = this.field_f.a(3, (Runnable) (this), (byte) -69);
+            if (null == this.writerTask) {
+              this.writerTask = this.taskScheduler.a(3, (Runnable) (this), (byte) -69);
             }
             this.notifyAll();
           }
@@ -76,16 +76,16 @@ final class wh implements Runnable {
           var5_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_27_0 = var5_ref;
           stackIn_27_1 = new StringBuilder().append("wh.B(");
-          if (param0 == null) {
+          if (data == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(obfuscationGuard).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void readFully(int obfuscationGuard, byte[] data, int length, int offset) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -95,32 +95,32 @@ final class wh implements Runnable {
         RuntimeException var5 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_k) {
+          if (this.closed) {
             return;
           }
-          if (param0 != 25826) {
+          if (obfuscationGuard != 25826) {
             return;
           }
-          while (0 < param2) {
-            var5_int = this.field_e.read(param1, param3, param2);
+          while (0 < length) {
+            var5_int = this.input.read(data, offset, length);
             if (var5_int <= 0) {
               throw new EOFException();
             }
-            param2 = param2 - var5_int;
-            param3 = param3 + var5_int;
+            length = length - var5_int;
+            offset = offset + var5_int;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("wh.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("wh.E(").append(obfuscationGuard).append(',');
+          if (data == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 
@@ -143,8 +143,8 @@ final class wh implements Runnable {
               var3 = this;
               synchronized (var3) {
                 boolean decompiledFrameRemainder0 = true;
-                if (this.field_b == this.field_j) {
-                  if (this.field_k) {
+                if (this.writePosition == this.readPosition) {
+                  if (this.closed) {
                     decompiledRegionSelector0 = 0;
                     decompiledFrameRemainder0 = false;
                   }
@@ -158,52 +158,52 @@ final class wh implements Runnable {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  if (this.field_j <= this.field_b) {
-                    var1_int = -this.field_j + this.field_b;
+                  if (this.readPosition <= this.writePosition) {
+                    var1_int = -this.readPosition + this.writePosition;
                   } else {
-                    var1_int = this.field_a - this.field_j;
+                    var1_int = this.bufferCapacity - this.readPosition;
                   }
-                  var2 = this.field_j;
+                  var2 = this.readPosition;
                   decompiledRegionSelector0 = 1;
                 }
               }
               if (decompiledRegionSelector0 == 0) {
                 try {
-                  if (this.field_e != null) {
-                    this.field_e.close();
+                  if (this.input != null) {
+                    this.input.close();
                   }
-                  if (null != this.field_l) {
-                    this.field_l.close();
+                  if (null != this.output) {
+                    this.output.close();
                   }
-                  if (null != this.field_d) {
-                    this.field_d.close();
+                  if (null != this.socket) {
+                    this.socket.close();
                   }
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var1 = (IOException) (Object) decompiledCaughtException;
                 }
-                this.field_c = null;
+                this.outputBuffer = null;
                 break;
               }
               if (var1_int <= 0) {
                 continue;
               }
               try {
-                this.field_l.write(this.field_c, var2, var1_int);
+                this.output.write(this.outputBuffer, var2, var1_int);
               } catch (java.io.IOException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var3_ref = (IOException) (Object) decompiledCaughtException;
-                this.field_g = true;
+                this.writeFailed = true;
               }
-              this.field_j = (var1_int + this.field_j) % this.field_a;
+              this.readPosition = (var1_int + this.readPosition) % this.bufferCapacity;
               try {
-                if (this.field_j == this.field_b) {
-                  this.field_l.flush();
+                if (this.readPosition == this.writePosition) {
+                  this.output.flush();
                 }
               } catch (java.io.IOException decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var3_ref = (IOException) (Object) decompiledCaughtException;
-                this.field_g = true;
+                this.writeFailed = true;
               }
             }
           } catch (java.lang.Exception decompiledCaughtParameter4) {
@@ -219,8 +219,8 @@ final class wh implements Runnable {
         }
     }
 
-    wh(java.net.Socket param0, tg param1) throws IOException {
-        this(param0, param1, 5000);
+    BufferedSocket(java.net.Socket socket, tg taskScheduler) throws IOException {
+        this(socket, taskScheduler, 5000);
     }
 
     public static void b(int param0) {
@@ -230,31 +230,31 @@ final class wh implements Runnable {
         field_h = null;
     }
 
-    final void a(byte param0) {
+    final void close(byte obfuscationGuard) {
         try {
           int var4 = 0;
           var4 = BrickABrac.field_J ? 1 : 0;
-          if (this.field_k) {
+          if (this.closed) {
             return;
           }
           synchronized (this) {
-            this.field_k = true;
+            this.closed = true;
             this.notifyAll();
           }
-          if (this.field_i != null) {
-            while (this.field_i.field_f == 0) {
+          if (this.writerTask != null) {
+            while (this.writerTask.field_f == 0) {
               wj.a(-127, 1L);
             }
-            if (this.field_i.field_f == 1) {
+            if (this.writerTask.field_f == 1) {
               try {
-                ((Thread) (this.field_i.field_e)).join();
+                ((Thread) (this.writerTask.field_e)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
           }
-          this.field_i = null;
-          if (param0 < 110) {
-            this.a((byte) 56);
+          this.writerTask = null;
+          if (obfuscationGuard < 110) {
+            this.close((byte) 56);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -273,44 +273,44 @@ final class wh implements Runnable {
         }
     }
 
-    final void c(int param0) throws IOException {
-        if (this.field_k) {
+    final void checkWriteError(int obfuscationGuard) throws IOException {
+        if (this.closed) {
           return;
         }
-        if (param0 != -1) {
-          this.field_b = -17;
+        if (obfuscationGuard != -1) {
+          this.writePosition = -17;
         }
-        if (this.field_g) {
-          this.field_g = false;
+        if (this.writeFailed) {
+          this.writeFailed = false;
           throw new IOException();
         }
     }
 
-    final int d(int param0) throws IOException {
-        if (this.field_k) {
+    final int available(int obfuscationGuard) throws IOException {
+        if (this.closed) {
           return 0;
         }
-        if (param0 != 10434) {
+        if (obfuscationGuard != 10434) {
           this.finalize();
         }
-        return this.field_e.available();
+        return this.input.available();
     }
 
-    private wh(java.net.Socket param0, tg param1, int param2) throws IOException {
-        this.field_g = false;
-        this.field_k = false;
-        this.field_j = 0;
-        this.field_b = 0;
+    private BufferedSocket(java.net.Socket socket, tg taskScheduler, int bufferCapacity) throws IOException {
+        this.writeFailed = false;
+        this.closed = false;
+        this.readPosition = 0;
+        this.writePosition = 0;
         try {
-          this.field_f = param1;
-          this.field_d = param0;
-          this.field_d.setSoTimeout(30000);
-          this.field_d.setTcpNoDelay(true);
-          this.field_e = this.field_d.getInputStream();
-          this.field_l = this.field_d.getOutputStream();
-          this.field_a = param2;
+          this.taskScheduler = taskScheduler;
+          this.socket = socket;
+          this.socket.setSoTimeout(30000);
+          this.socket.setTcpNoDelay(true);
+          this.input = this.socket.getInputStream();
+          this.output = this.socket.getOutputStream();
+          this.bufferCapacity = bufferCapacity;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "wh.<init>(" + (socket != null ? "{...}" : "null") + ',' + (taskScheduler != null ? "{...}" : "null") + ',' + bufferCapacity + ')');
         }
     }
 

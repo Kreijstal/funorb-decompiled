@@ -97,7 +97,7 @@ final class RankingsScreen extends MenuScreen {
           if (param5 < 39) {
             RankingsScreen.a(true, 49, true);
           }
-          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, kg.field_i[param4], 16777215);
+          Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, CacheIoWorker.field_i[param4], 16777215);
           param3.b((-param3.canvasWidth + param0.width) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.height) + param2, 55, 83);
           sc.popRaster(-94);
         } catch (RuntimeException runtimeException) {

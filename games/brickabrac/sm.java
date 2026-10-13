@@ -26,11 +26,11 @@ final class sm {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (vd.field_f.field_i >= 4) {
-            if (-1 == vd.field_f.field_f) {
+          if (vd.field_f.failureCount >= 4) {
+            if (-1 == vd.field_f.lastError) {
               return 3;
             }
-            if (vd.field_f.field_f != -2) {
+            if (vd.field_f.lastError != -2) {
               return 1;
             }
             return 4;
@@ -50,18 +50,18 @@ final class sm {
               }
             }
             if (GameplayScreen.field_j == 2) {
-              MouseInput.field_d = new wh((java.net.Socket) (IndexedSpriteGeometry.field_e.field_e), ec.field_P);
+              MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.field_e), ec.field_P);
               var2 = new PacketBuffer(13);
               c.a(vb.field_S, 12, nb.field_a, u.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);
               var2.writeInt(fi.field_t, (byte) -79);
-              MouseInput.field_d.a(var2.data, true, 13, 0);
+              MouseInput.field_d.write(var2.data, true, 13, 0);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
               ff.field_b = ue.a(false) + 30000L;
             }
             if (GameplayScreen.field_j == 3) {
-              if (MouseInput.field_d.d(10434) > 0) {
-                var1_int = MouseInput.field_d.e(0);
+              if (MouseInput.field_d.available(10434) > 0) {
+                var1_int = MouseInput.field_d.readByte(0);
                 if (var1_int != 0) {
                   stackIn_31_0 = Brick.a((byte) 90, var1_int);
                   return stackIn_31_0;
@@ -78,7 +78,7 @@ final class sm {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            vd.field_f.a(MouseInput.field_d, rd.field_a, 12);
+            vd.field_f.attachTransport(MouseInput.field_d, rd.field_a, 12);
             MouseInput.field_d = null;
             GameplayScreen.field_j = 0;
             IndexedSpriteGeometry.field_e = null;

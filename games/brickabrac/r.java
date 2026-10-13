@@ -57,7 +57,7 @@ class r extends um {
     }
 
     r(int param0) {
-        this(a.field_u, param0);
+        this(ArchiveNetworkClient.field_u, param0);
     }
 
     final static boolean c(byte param0) {

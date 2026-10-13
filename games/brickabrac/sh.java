@@ -15,7 +15,7 @@ final class sh {
           return MouseInput.field_g;
         }
         MouseInput.field_g = new eh();
-        MouseInput.field_g.a(a.field_u, 13421772);
+        MouseInput.field_g.a(ArchiveNetworkClient.field_u, 13421772);
         MouseInput.field_g.field_p = 2763306;
         MouseInput.field_g.field_h = 6;
         MouseInput.field_g.field_a = 4;

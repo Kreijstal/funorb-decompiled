@@ -5,7 +5,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     static mi field_e;
     static RgbSprite field_f;
     static String field_a;
-    static wh field_d;
+    static BufferedSocket field_d;
     static eh field_g;
     static int field_b;
     static byte[] field_c;
@@ -121,7 +121,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         field_a = null;
         field_f = null;
         if (param0 != 24) {
-          field_d = (wh) null;
+          field_d = (BufferedSocket) null;
         }
     }
 

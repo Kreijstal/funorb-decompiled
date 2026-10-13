@@ -58,7 +58,7 @@ final class pn extends IntrusiveNode {
             var2 = rl.field_a;
           }
           if (2 == ng.field_b &&
-            !ve.b(-21835160)) {
+            !FileCacheStore.b(-21835160)) {
             boolean decompiledSharedTail2 = !(LevelPack.a(0, kb.field_Qb));
             if (!decompiledSharedTail2) {
               var2 = rd.a(ScorePopup.field_j, new String[]{DualLinkNode.field_p}, (byte) 103);
@@ -89,7 +89,7 @@ final class pn extends IntrusiveNode {
             if (2 == var6) {
               var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.field_p}, (byte) 103);
               var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
-              var7 = -485 + g.field_n.field_Ib + ap.field_e.field_Ib - (-jq.field_y.measureText(var8) + jq.field_y.measureText(var4));
+              var7 = -485 + g.field_n.field_Ib + ap.field_e.field_Ib - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -132,7 +132,7 @@ final class pn extends IntrusiveNode {
                 var4 = "<col=999999>" + var4 + MainMenuScreen.field_y + "</col>";
                 var5 = "";
               }
-              var9 = jq.field_y.measureText(var4);
+              var9 = CachedArchiveSource.field_y.measureText(var4);
               if (!ri.a(-112)) {
                 if (g.field_n.field_kb &&
                   (-g.field_n.field_Eb + pq.pointerX) < var9) {

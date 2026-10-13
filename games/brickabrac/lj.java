@@ -152,7 +152,7 @@ final class lj extends IntrusiveNode {
             ig.field_K = param0.field_m;
             kb.field_Zb = param0.field_k;
             r.field_x = param0.field_c;
-            hb.field_z = param0.field_g;
+            ResourceRequest.field_z = param0.field_g;
           }
           n.a(0, param0);
           var2_intLifetime1 = 85 / ((param1 + 11) / 50);
@@ -173,7 +173,7 @@ final class lj extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         DualLinkDeque.field_b = param4;
-        wh.field_m = param2;
+        BufferedSocket.field_m = param2;
         TooltipSprite.field_i = param0;
         if (param3 != 0) {
           tg var6 = (tg) null;

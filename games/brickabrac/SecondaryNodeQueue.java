@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lq {
+final class SecondaryNodeQueue {
     static RgbSprite field_d;
     static String field_c;
     static int[] field_b;
-    private DualLinkNode field_g;
-    private DualLinkNode field_f;
+    private DualLinkNode sentinel;
+    private DualLinkNode cursor;
     static String field_e;
     static String field_a;
 
@@ -15,80 +15,80 @@ final class lq {
         int var1 = -1 / ((42 - param0) / 59);
     }
 
-    final void a(DualLinkNode param0, boolean param1) {
+    final void addLast(DualLinkNode node, boolean obfuscationGuard) {
         try {
-          if (param0.secondaryPrevious != null) {
-            param0.unlinkSecondary(3);
+          if (node.secondaryPrevious != null) {
+            node.unlinkSecondary(3);
           }
-          if (param1) {
+          if (obfuscationGuard) {
             ResourceArchive var4 = (ResourceArchive) null;
-            lq.loadIndexedSprite(-17, 78, 86, (ResourceArchive) null);
+            SecondaryNodeQueue.loadIndexedSprite(-17, 78, 86, (ResourceArchive) null);
           }
-          param0.secondaryNext = this.field_g;
-          param0.secondaryPrevious = this.field_g.secondaryPrevious;
-          param0.secondaryPrevious.secondaryNext = param0;
-          param0.secondaryNext.secondaryPrevious = param0;
+          node.secondaryNext = this.sentinel;
+          node.secondaryPrevious = this.sentinel.secondaryPrevious;
+          node.secondaryPrevious.secondaryNext = node;
+          node.secondaryNext.secondaryPrevious = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lq.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "lq.I(" + (node != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode removeFirst(int obfuscationGuard) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
-        if (param0 != 25609) {
-          this.field_g = (DualLinkNode) null;
-          var2 = this.field_g.secondaryNext;
-          if (this.field_g != var2) {
-            var2.unlinkSecondary(param0 ^ 25610);
+        if (obfuscationGuard != 25609) {
+          this.sentinel = (DualLinkNode) null;
+          var2 = this.sentinel.secondaryNext;
+          if (this.sentinel != var2) {
+            var2.unlinkSecondary(obfuscationGuard ^ 25610);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_g.secondaryNext;
-        if (this.field_g != var2Lifetime1) {
-          var2Lifetime1.unlinkSecondary(param0 ^ 25610);
+        var2Lifetime1 = this.sentinel.secondaryNext;
+        if (this.sentinel != var2Lifetime1) {
+          var2Lifetime1.unlinkSecondary(obfuscationGuard ^ 25610);
           return var2Lifetime1;
         }
         return null;
     }
 
-    final DualLinkNode e(int param0) {
-        DualLinkNode var2 = this.field_f;
-        if (var2 == this.field_g) {
-          this.field_f = null;
+    final DualLinkNode next(int obfuscationGuard) {
+        DualLinkNode var2 = this.cursor;
+        if (var2 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
-        this.field_f = var2.secondaryNext;
-        if (param0 == -8394) {
+        this.cursor = var2.secondaryNext;
+        if (obfuscationGuard == -8394) {
           return var2;
         }
         DualLinkNode var3 = (DualLinkNode) null;
-        this.a((DualLinkNode) null, true);
+        this.addLast((DualLinkNode) null, true);
         return var2;
     }
 
-    final DualLinkNode a(boolean param0) {
-        if (!param0) {
+    final DualLinkNode first(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return (DualLinkNode) null;
         }
-        DualLinkNode var2 = this.field_g.secondaryNext;
-        if (this.field_g == var2) {
-          this.field_f = null;
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (this.sentinel == var2) {
+          this.cursor = null;
           return null;
         }
-        this.field_f = var2.secondaryNext;
+        this.cursor = var2.secondaryNext;
         return var2;
     }
 
-    final int c(int param0) {
+    final int size(int obfuscationGuard) {
         int var4 = BrickABrac.field_J ? 1 : 0;
         int var2 = 0;
-        DualLinkNode var3 = this.field_g.secondaryNext;
-        if (param0 != -25906) {
+        DualLinkNode var3 = this.sentinel.secondaryNext;
+        if (obfuscationGuard != -25906) {
           return 88;
         }
-        while (this.field_g != var3) {
+        while (this.sentinel != var3) {
           var2++;
           var3 = var3.secondaryNext;
         }
@@ -112,7 +112,7 @@ final class lq {
           field_c = null;
           return;
         }
-        lq.b(false);
+        SecondaryNodeQueue.b(false);
         field_e = null;
         field_c = null;
     }
@@ -146,7 +146,7 @@ final class lq {
             return (IndexedSprite) (stackIn_2_0);
           }
           if (obfuscationGuard != 0) {
-            lq.d(-20);
+            SecondaryNodeQueue.d(-20);
           }
           stackIn_6_0 = LevelSelectScreen.buildIndexedSprite(false);
           return stackIn_6_0;
@@ -164,10 +164,10 @@ final class lq {
         }
     }
 
-    public lq() {
-        this.field_g = new DualLinkNode();
-        this.field_g.secondaryNext = this.field_g;
-        this.field_g.secondaryPrevious = this.field_g;
+    public SecondaryNodeQueue() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryNext = this.sentinel;
+        this.sentinel.secondaryPrevious = this.sentinel;
     }
 
     static {

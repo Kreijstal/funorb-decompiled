@@ -174,7 +174,7 @@ final class wn {
             }
             if (decompiledFrameCompleted0) {
               if (GameScreen.field_f.field_Tb.field_L != 0) {
-                tn.field_m = new gq(GameScreen.field_f.field_Tb.field_Eb, GameScreen.field_f.field_Tb.field_db, GameScreen.field_f.field_Tb.field_Ib, GameScreen.field_f.field_Tb.field_cb, a.field_t, ij.field_c, ad.field_l, ad.field_l);
+                tn.field_m = new gq(GameScreen.field_f.field_Tb.field_Eb, GameScreen.field_f.field_Tb.field_db, GameScreen.field_f.field_Tb.field_Ib, GameScreen.field_f.field_Tb.field_cb, ArchiveNetworkClient.field_t, ij.field_c, ad.field_l, ad.field_l);
                 ij.field_d = 0;
               }
               if (0 != GameScreen.field_f.field_Wb.field_L) {
@@ -261,7 +261,7 @@ final class wn {
               }
             }
             if (decompiledFrameCompleted0) {
-              stackIn_27_0 = hb.keyEventWriteIndex;
+              stackIn_27_0 = ResourceRequest.keyEventWriteIndex;
             }
             fm.keyEventFrameEnd = stackIn_27_0;
           }
@@ -407,7 +407,7 @@ final class wn {
           if (param0 != -98) {
             field_b = (RgbSprite) null;
           }
-          stackIn_4_0 = (int)(1000000000L / hb.field_x);
+          stackIn_4_0 = (int)(1000000000L / ResourceRequest.field_x);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -809,7 +809,7 @@ final class MultiplayerMatch {
                   return;
                 }
               }
-              param0.field_lb = lq.field_c;
+              param0.field_lb = SecondaryNodeQueue.field_c;
               stackIn_55_0 = (PlayerBoard) (param0);
               if (param0.field_i > 25) {
                 stackIn_56_1 = 25;

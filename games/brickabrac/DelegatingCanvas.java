@@ -76,14 +76,14 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       pp.field_a != 4 &&
                       pp.field_a != 5) {
                       if (pp.field_a == 6) {
-                        pp.field_a = da.field_G;
-                        ga.field_i = da.field_G;
+                        pp.field_a = ArchiveNetworkRequest.field_G;
+                        ga.field_i = ArchiveNetworkRequest.field_G;
                       } else {
                         if (pp.field_a != 8 &&
                           pp.field_a != 9) {
                           if (pp.field_a == 10) {
-                            ga.field_i = da.field_G;
-                            pp.field_a = da.field_G;
+                            ga.field_i = ArchiveNetworkRequest.field_G;
+                            pp.field_a = ArchiveNetworkRequest.field_G;
                           } else {
                             if (((pp.field_a != 11)) &&
                               (pp.field_a == 12)) {

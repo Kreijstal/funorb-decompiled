@@ -86,7 +86,7 @@ final class LevelDecoder {
             stackIn_21_0 = ((1 & flags) != 0) ? 0 : 1;
             var8 = stackIn_21_0;
             stackIn_24_0 = (var8 != 0) ? 15 : 9;
-            kj.addBoardBorders(stackIn_24_0, brickGroups[2], 16);
+            CacheIoRequest.addBoardBorders(stackIn_24_0, brickGroups[2], 16);
             for (entryIndex = 0; brickGroups.length > entryIndex; entryIndex++) {
               brickCount = packet.readInt(255);
               for (brickIndex = 0; brickCount > brickIndex; brickIndex++) {

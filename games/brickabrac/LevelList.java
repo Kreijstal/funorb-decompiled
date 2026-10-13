@@ -52,7 +52,7 @@ final class LevelList {
         ag.buttonLabels[3] = tn.field_B;
         ag.buttonLabels[4] = pp.field_c;
         ag.buttonLabels[9] = LevelPackLoader.field_d;
-        ag.buttonLabels[1] = da.field_H;
+        ag.buttonLabels[1] = ArchiveNetworkRequest.field_H;
         ag.buttonLabels[11] = ej.field_H;
         ag.buttonLabels[7] = jj.field_b;
         ag.buttonLabels[0] = mo.field_O;
@@ -70,7 +70,7 @@ final class LevelList {
         sl.field_A[3] = sj.field_e;
         ag.buttonLabels[39] = ki.field_o;
         ag.buttonLabels[23] = mh.field_mb;
-        ag.buttonLabels[21] = a.field_r;
+        ag.buttonLabels[21] = ArchiveNetworkClient.field_r;
         ag.buttonLabels[17] = LevelCompleteScreen.field_E[0];
         ag.buttonLabels[38] = kk.field_a;
         if (param0 != -1) {
@@ -103,7 +103,7 @@ final class LevelList {
         eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         sl.field_A[15] = MatchCompleteScreen.field_F;
-        ih.field_j = new String[]{ff.field_g, pq.field_m, bm.field_b, RectangleBody.field_t};
+        ArchiveFetchClient.field_j = new String[]{ff.field_g, pq.field_m, bm.field_b, RectangleBody.field_t};
         ml.field_e = new String[]{qi.field_N, bg.field_o, ue.field_a, eb.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
         sl.field_A[17] = pq.field_q;
         sl.field_A[14] = vh.field_V;

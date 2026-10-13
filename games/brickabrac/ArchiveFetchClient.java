@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ih {
+abstract class ArchiveFetchClient {
     static String field_d;
     static String[] field_j;
     static int field_p;
     static RgbSprite field_k;
-    lq field_g;
-    lq field_n;
-    lq field_a;
-    lq field_c;
-    int field_b;
-    long field_o;
-    PacketBuffer field_m;
-    byte field_h;
-    volatile int field_i;
-    volatile int field_f;
-    PacketBuffer field_l;
-    da field_e;
+    SecondaryNodeQueue pendingPriority;
+    SecondaryNodeQueue activePriority;
+    SecondaryNodeQueue pendingBackground;
+    SecondaryNodeQueue activeBackground;
+    int idleMillis;
+    long lastPollMillis;
+    PacketBuffer controlPacket;
+    byte xorKey;
+    volatile int failureCount;
+    volatile int lastError;
+    PacketBuffer responseHeader;
+    ArchiveNetworkRequest currentResponse;
 
-    abstract void a(byte param0);
+    abstract void reportIntegrityFailure(byte obfuscationGuard);
 
     final static ff a(String param0, boolean param1, String param2, byte param3) {
         long var4_long = 0L;
@@ -66,14 +66,14 @@ abstract class ih {
         }
     }
 
-    abstract void b(byte param0);
+    abstract void closeTransport(byte obfuscationGuard);
 
-    final boolean a(int param0) {
-        if (param0 == 2) {
-          return this.e((byte) -123) >= 20 ? true : false;
+    final boolean isPriorityQueueFull(int obfuscationGuard) {
+        if (obfuscationGuard == 2) {
+          return this.getPriorityCount((byte) -123) >= 20 ? true : false;
         }
-        this.field_c = (lq) null;
-        return this.e((byte) -123) >= 20 ? true : false;
+        this.activeBackground = (SecondaryNodeQueue) null;
+        return this.getPriorityCount((byte) -123) >= 20 ? true : false;
     }
 
     final static void a(String param0, int param1) {
@@ -85,9 +85,9 @@ abstract class ih {
         }
     }
 
-    final int c(byte param0) {
-        int var2 = 88 % ((param0 - 30) / 42);
-        return this.field_a.c(-25906) + this.field_c.c(-25906);
+    final int getBackgroundCount(byte obfuscationGuard) {
+        int var2 = 88 % ((obfuscationGuard - 30) / 42);
+        return this.pendingBackground.size(-25906) + this.activeBackground.size(-25906);
     }
 
     public static void c(int param0) {
@@ -110,50 +110,50 @@ abstract class ih {
           sc.popRaster(-117);
           if (!param5) {
             RgbSprite var7 = (RgbSprite) null;
-            ih.a((RasterCacheSurface) null, (RgbSprite) null, 100, 125, 72, false);
+            ArchiveFetchClient.a((RasterCacheSurface) null, (RgbSprite) null, 100, 125, 72, false);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    abstract void a(Object param0, boolean param1, int param2);
+    abstract void attachTransport(Object transport, boolean connectionMode, int obfuscationGuard);
 
-    final da a(int param0, int param1, byte param2, int param3, boolean param4) {
-        da stackIn_2_0 = null;
+    final ArchiveNetworkRequest request(int obfuscationGuard, int archiveId, byte trailerBytes, int groupId, boolean priority) {
+        ArchiveNetworkRequest stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
-        long var6;
-        da var8;
-        var6 = ((long)param1 << 32) + (long)param3;
-        var8 = new da();
-        stackIn_2_0 = var8;
-        stackIn_3_1 = (!param4) ? false : true;
-        stackIn_2_0.field_B = stackIn_3_1;
-        var8.field_F = param2;
-        if (param0 != -952050528) {
-          this.field_f = 5;
+        long requestKey;
+        ArchiveNetworkRequest request;
+        requestKey = ((long)archiveId << 32) + (long)groupId;
+        request = new ArchiveNetworkRequest();
+        stackIn_2_0 = request;
+        stackIn_3_1 = (!priority) ? false : true;
+        stackIn_2_0.priority = stackIn_3_1;
+        request.trailerBytes = trailerBytes;
+        if (obfuscationGuard != -952050528) {
+          this.lastError = 5;
         }
-        var8.secondaryKey = var6;
-        if (!param4) {
-          if (20 <= this.c((byte) -42)) {
+        request.secondaryKey = requestKey;
+        if (!priority) {
+          if (20 <= this.getBackgroundCount((byte) -42)) {
             throw new RuntimeException();
           }
-          this.field_a.a(var8, false);
-          return var8;
+          this.pendingBackground.addLast(request, false);
+          return request;
         }
-        if (this.e((byte) -42) >= 20) {
+        if (this.getPriorityCount((byte) -42) >= 20) {
           throw new RuntimeException();
         }
-        this.field_g.a(var8, false);
-        return var8;
+        this.pendingPriority.addLast(request, false);
+        return request;
     }
 
-    final boolean d(byte param0) {
-        if (param0 == 101) {
-          return this.c((byte) 105) >= 20 ? true : false;
+    final boolean isBackgroundQueueFull(byte obfuscationGuard) {
+        if (obfuscationGuard == 101) {
+          return this.getBackgroundCount((byte) 105) >= 20 ? true : false;
         }
-        this.field_c = (lq) null;
-        return this.c((byte) 105) >= 20 ? true : false;
+        this.activeBackground = (SecondaryNodeQueue) null;
+        return this.getBackgroundCount((byte) 105) >= 20 ? true : false;
     }
 
     final static void a(boolean param0, String param1, String param2, int param3) {
@@ -169,34 +169,34 @@ abstract class ih {
         }
     }
 
-    final int e(byte param0) {
-        if (param0 >= -33) {
+    final int getPriorityCount(byte obfuscationGuard) {
+        if (obfuscationGuard >= -33) {
           return 20;
         }
-        return this.field_g.c(-25906) + this.field_n.c(-25906);
+        return this.pendingPriority.size(-25906) + this.activePriority.size(-25906);
     }
 
-    abstract boolean b(int param0);
+    abstract boolean pollTransport(int obfuscationGuard);
 
     final static void a(byte param0, boolean param1) {
         if (param0 > -16) {
-          ih.c(-18);
+          ArchiveFetchClient.c(-18);
           RankingsScreen.a(param1, -58, true);
           return;
         }
         RankingsScreen.a(param1, -58, true);
     }
 
-    ih() {
-        this.field_g = new lq();
-        this.field_n = new lq();
-        this.field_a = new lq();
-        this.field_c = new lq();
-        this.field_m = new PacketBuffer(6);
-        this.field_i = 0;
-        this.field_h = (byte) 0;
-        this.field_f = 0;
-        this.field_l = new PacketBuffer(10);
+    ArchiveFetchClient() {
+        this.pendingPriority = new SecondaryNodeQueue();
+        this.activePriority = new SecondaryNodeQueue();
+        this.pendingBackground = new SecondaryNodeQueue();
+        this.activeBackground = new SecondaryNodeQueue();
+        this.controlPacket = new PacketBuffer(6);
+        this.failureCount = 0;
+        this.xorKey = (byte) 0;
+        this.lastError = 0;
+        this.responseHeader = new PacketBuffer(10);
     }
 
     static {

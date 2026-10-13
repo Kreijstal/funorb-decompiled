@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends hb {
-    ve field_G;
+final class CacheIoRequest extends ResourceRequest {
+    FileCacheStore store;
     static java.awt.Canvas field_D;
-    int field_F;
-    byte[] field_E;
+    int operation;
+    byte[] data;
 
     final static int approximateSqrt256(int value, int obfuscationGuard) {
         int var2;
@@ -72,19 +72,19 @@ final class kj extends hb {
         field_D = null;
     }
 
-    final byte[] c(byte param0) {
-        int var2 = -57 % ((4 - param0) / 52);
-        if (this.field_u) {
+    final byte[] getData(byte obfuscationGuard) {
+        int var2 = -57 % ((4 - obfuscationGuard) / 52);
+        if (this.pending) {
           throw new RuntimeException();
         }
-        return this.field_E;
+        return this.data;
     }
 
-    final int f(int param0) {
-        if (param0 != -21546) {
-          this.f(-42);
+    final int getProgress(int obfuscationGuard) {
+        if (obfuscationGuard != -21546) {
+          this.getProgress(-42);
         }
-        if (this.field_u) {
+        if (this.pending) {
           return 0;
         }
         return 100;
@@ -314,7 +314,7 @@ final class kj extends hb {
         }
     }
 
-    kj() {
+    CacheIoRequest() {
     }
 
     static {

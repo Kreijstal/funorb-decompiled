@@ -70,7 +70,7 @@ final class ad implements Runnable {
             rf.field_b = mc.field_e;
           } else {
             try {
-              eq.field_g = new wh((java.net.Socket) (qm.field_d.field_e), FramedMenuScreen.field_s);
+              eq.field_g = new BufferedSocket((java.net.Socket) (qm.field_d.field_e), FramedMenuScreen.field_s);
               k.field_h.position = 0;
               var4 = jl.field_e;
               var5 = var4;

@@ -6,12 +6,12 @@ final class co {
     static String field_d;
     static String[] field_f;
     private java.math.BigInteger field_i;
-    private jq[] field_k;
+    private CachedArchiveSource[] field_k;
     private PacketBuffer field_b;
     static String field_e;
-    private ih field_a;
-    private da field_c;
-    private kg field_h;
+    private ArchiveFetchClient field_a;
+    private ArchiveNetworkRequest field_c;
+    private CacheIoWorker field_h;
     static AlphaFont field_j;
 
     final void a(int param0) {
@@ -27,17 +27,17 @@ final class co {
         }
         for (var2 = 0; this.field_k.length > var2; var2++) {
           if (null != this.field_k[var2]) {
-            this.field_k[var2].b(20312);
+            this.field_k[var2].processQueuedGroups(20312);
           }
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < this.field_k.length; var2Lifetime1++) {
           if (null != this.field_k[var2Lifetime1]) {
-            this.field_k[var2Lifetime1].c(1);
+            this.field_k[var2Lifetime1].maintainGroups(1);
           }
         }
     }
 
-    co(ih param0, kg param1) {
+    co(ArchiveFetchClient param0, CacheIoWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -48,7 +48,7 @@ final class co {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        ve var9;
+        FileCacheStore var9;
         PacketBuffer var11;
         byte[] var12;
         java.math.BigInteger var13;
@@ -59,15 +59,15 @@ final class co {
           return true;
         }
         if (null == this.field_c) {
-          if (this.field_a.a(2)) {
+          if (this.field_a.isPriorityQueueFull(2)) {
             return false;
           }
-          this.field_c = this.field_a.a(-952050528, 255, (byte) 0, 255, true);
+          this.field_c = this.field_a.request(-952050528, 255, (byte) 0, 255, true);
         }
-        if (this.field_c.field_u) {
+        if (this.field_c.pending) {
           return false;
         }
-        var11 = new PacketBuffer(this.field_c.c((byte) 56));
+        var11 = new PacketBuffer(this.field_c.getData((byte) 56));
         var11.position = 5;
         var3 = var11.readUnsignedByte(255);
         var11.position = var11.position + 72 * var3;
@@ -94,10 +94,10 @@ final class co {
         }
         this.field_b = var11;
         if (param0) {
-          var9 = (ve) null;
-          this.a(34, true, (ve) null, -60, (ve) null);
+          var9 = (FileCacheStore) null;
+          this.a(34, true, (FileCacheStore) null, -60, (FileCacheStore) null);
         }
-        this.field_k = new jq[var3];
+        this.field_k = new CachedArchiveSource[var3];
         return true;
     }
 
@@ -120,9 +120,9 @@ final class co {
         field_f = null;
     }
 
-    final jq a(int param0, boolean param1, ve param2, int param3, ve param4) {
-        jq stackIn_9_0 = null;
-        jq stackIn_11_0 = null;
+    final CachedArchiveSource a(int param0, boolean param1, FileCacheStore param2, int param3, FileCacheStore param4) {
+        CachedArchiveSource stackIn_9_0 = null;
+        CachedArchiveSource stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -133,7 +133,7 @@ final class co {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        jq var10 = null;
+        CachedArchiveSource var10 = null;
         byte[] var14 = null;
         try {
           if (null == this.field_b) {
@@ -151,7 +151,7 @@ final class co {
             var8 = this.field_b.readInt(255);
             var14 = new byte[64];
             this.field_b.readBytes(0, var14, 122, 64);
-            var10 = new jq(param3, param4, param2, this.field_a, this.field_h, var7, var14, var8, param1);
+            var10 = new CachedArchiveSource(param3, param4, param2, this.field_a, this.field_h, var7, var14, var8, param1);
             this.field_k[param3] = var10;
             stackIn_11_0 = var10;
             return stackIn_11_0;
@@ -177,14 +177,14 @@ final class co {
         }
     }
 
-    private co(ih param0, kg param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private co(ArchiveFetchClient param0, CacheIoWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_g = param3;
           this.field_i = param2;
           this.field_h = param1;
           this.field_a = param0;
-          if (!this.field_a.a(2)) {
-            this.field_c = this.field_a.a(-952050528, 255, (byte) 0, 255, true);
+          if (!this.field_a.isPriorityQueueFull(2)) {
+            this.field_c = this.field_a.request(-952050528, 255, (byte) 0, 255, true);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -9,7 +9,7 @@ final class vd {
     static boolean field_e;
     static mo field_a;
     static int field_c;
-    static ih field_f;
+    static ArchiveFetchClient field_f;
 
     final static boolean a(int param0, int param1) {
         try {
@@ -26,7 +26,7 @@ final class vd {
             return false;
           }
           try {
-            var2_int = eq.field_g.d(10434);
+            var2_int = eq.field_g.available(10434);
             if (0 >= var2_int) {
               if (var2_int < 0) {
                 hn.a((byte) 123);
@@ -41,7 +41,7 @@ final class vd {
             if (var2_int > param1 - jl.field_e.position) {
               var2_int = -jl.field_e.position + param1;
             }
-            eq.field_g.a(param0 + 25806, jl.field_e.data, var2_int, jl.field_e.position);
+            eq.field_g.readFully(param0 + 25806, jl.field_e.data, var2_int, jl.field_e.position);
             oj.field_t = ue.a(false);
             jl.field_e.position = jl.field_e.position + var2_int;
             if (param1 > jl.field_e.position) {

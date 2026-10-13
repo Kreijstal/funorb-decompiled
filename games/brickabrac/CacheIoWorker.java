@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg implements Runnable {
-    private lq field_f;
+final class CacheIoWorker implements Runnable {
+    private SecondaryNodeQueue queue;
     static String field_b;
     static int[] field_i;
     static RgbSprite[][] field_a;
     static String field_e;
     static String[] field_h;
-    private boolean field_j;
-    int field_c;
+    private boolean shutdownRequested;
+    int queuedCount;
     static int[] field_d;
-    private Thread field_g;
+    private Thread thread;
 
-    final void a(byte param0) {
+    final void shutdown(byte obfuscationGuard) {
         try {
-          this.field_j = true;
-          synchronized (this.field_f) {
-            this.field_f.notifyAll();
+          this.shutdownRequested = true;
+          synchronized (this.queue) {
+            this.queue.notifyAll();
           }
           try {
-            this.field_g.join();
+            this.thread.join();
           } catch (InterruptedException interruptedException) {
           }
-          this.field_g = null;
-          if (param0 >= 38) {
+          this.thread = null;
+          if (obfuscationGuard >= 38) {
             return;
           }
-          this.field_c = -29;
+          this.queuedCount = -29;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -39,42 +39,42 @@ final class kg implements Runnable {
         return param0 | param1;
     }
 
-    final kj a(ve param0, int param1, int param2) {
-        kj var4 = null;
+    final CacheIoRequest readImmediate(FileCacheStore store, int entryId, int obfuscationGuard) {
+        CacheIoRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5_ref_Object = null;
         int var5 = 0;
-        kj var6 = null;
+        CacheIoRequest var6 = null;
         int var8 = 0;
-        kj stackIn_8_0 = null;
-        kj stackIn_15_0 = null;
+        CacheIoRequest stackIn_8_0 = null;
+        CacheIoRequest stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         Throwable decompiledCaughtException = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = new kj();
-          var4.field_F = 1;
-          var5_ref_Object = this.field_f;
+          var4 = new CacheIoRequest();
+          var4.operation = 1;
+          var5_ref_Object = this.queue;
           synchronized (var5_ref_Object) {
-            var6 = (kj) (this.field_f.a(true));
+            var6 = (CacheIoRequest) (this.queue.first(true));
             while (var6 != null) {
-              if (~(long)param1 == ~var6.secondaryKey &&
-                var6.field_G == param0 &&
-                var6.field_F == 2) {
-                var4.field_u = false;
-                var4.field_E = var6.field_E;
+              if (~(long)entryId == ~var6.secondaryKey &&
+                var6.store == store &&
+                var6.operation == 2) {
+                var4.pending = false;
+                var4.data = var6.data;
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (kj) (this.field_f.e(-8394));
+              var6 = (CacheIoRequest) (this.queue.next(-8394));
             }
           }
-          var4.field_E = param0.a(0, param1);
-          var4.field_u = false;
-          var5 = -57 / ((-77 - param2) / 47);
-          var4.field_B = true;
+          var4.data = store.read(0, entryId);
+          var4.pending = false;
+          var5 = -57 / ((-77 - obfuscationGuard) / 47);
+          var4.priority = true;
           stackIn_15_0 = var4;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,18 +82,18 @@ final class kg implements Runnable {
           var4_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_18_0 = var4_ref;
           stackIn_18_1 = new StringBuilder().append("kg.E(");
-          if (param0 == null) {
+          if (store == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(entryId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final static void a(int param0) {
         if (param0 != 21678) {
-          kg.a(-67);
+          CacheIoWorker.a(-67);
         }
     }
 
@@ -153,43 +153,43 @@ final class kg implements Runnable {
         }
     }
 
-    final kj a(int param0, ve param1, byte param2) {
-        kj var4 = null;
+    final CacheIoRequest readAsync(int entryId, FileCacheStore store, byte obfuscationGuard) {
+        CacheIoRequest var4 = null;
         RuntimeException var4_ref = null;
-        ve var5 = null;
-        kj stackIn_3_0 = null;
+        FileCacheStore var5 = null;
+        CacheIoRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new kj();
-          var4.field_F = 3;
-          var4.field_B = false;
-          if (param2 >= -51) {
-            var5 = (ve) null;
-            this.a(26, true, (byte[]) null, (ve) null);
+          var4 = new CacheIoRequest();
+          var4.operation = 3;
+          var4.priority = false;
+          if (obfuscationGuard >= -51) {
+            var5 = (FileCacheStore) null;
+            this.writeAsync(26, true, (byte[]) null, (FileCacheStore) null);
           }
-          var4.field_G = param1;
-          var4.secondaryKey = (long)param0;
-          this.a(var4, -3);
+          var4.store = store;
+          var4.secondaryKey = (long)entryId;
+          this.enqueue(var4, -3);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_6_0 = var4_ref;
-          stackIn_6_1 = new StringBuilder().append("kg.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("kg.A(").append(entryId).append(',');
+          if (store == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void a(kj param0, int param1) {
+    private final void enqueue(CacheIoRequest request, int obfuscationGuard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -197,28 +197,28 @@ final class kg implements Runnable {
         Throwable decompiledCaughtException = null;
         Object var3_ref = null;
         try {
-          var3_ref = this.field_f;
+          var3_ref = this.queue;
           synchronized (var3_ref) {
-            this.field_f.a(param0, false);
-            this.field_c = this.field_c + 1;
-            this.field_f.notifyAll();
+            this.queue.addLast(request, false);
+            this.queuedCount = this.queuedCount + 1;
+            this.queue.notifyAll();
           }
-          if (param1 == -3) {
+          if (obfuscationGuard == -3) {
             return;
           }
-          kg.a((byte) -81, -120, -50, 43, 109, -99);
+          CacheIoWorker.a((byte) -81, -120, -50, 43, 109, -99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_10_0 = var3;
           stackIn_10_1 = new StringBuilder().append("kg.G(");
-          if (param0 == null) {
+          if (request == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw qb.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -226,23 +226,23 @@ final class kg implements Runnable {
         try {
           InterruptedException interruptedException = null;
           int var5 = 0;
-          kj var7 = null;
+          CacheIoRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           Object var2 = null;
           Exception var2_ref = null;
           String var6 = null;
           var5 = BrickABrac.field_J ? 1 : 0;
-          while (!this.field_j) {
-            var2 = this.field_f;
+          while (!this.shutdownRequested) {
+            var2 = this.queue;
             synchronized (var2) {
-              var7 = (kj) (this.field_f.a(25609));
+              var7 = (CacheIoRequest) (this.queue.removeFirst(25609));
               if (var7 != null) {
-                this.field_c = this.field_c - 1;
+                this.queuedCount = this.queuedCount - 1;
                 decompiledRegionSelector0 = 1;
               } else {
                 try {
-                  this.field_f.wait();
+                  this.queue.wait();
                 } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   interruptedException = (InterruptedException) (Object) decompiledCaughtException;
@@ -254,15 +254,15 @@ final class kg implements Runnable {
               continue;
             }
             try {
-              if (var7.field_F == 2) {
-                var7.field_G.a((byte) -123, var7.field_E, var7.field_E.length, (int)var7.secondaryKey);
-                var7.field_u = false;
+              if (var7.operation == 2) {
+                var7.store.write((byte) -123, var7.data, var7.data.length, (int)var7.secondaryKey);
+                var7.pending = false;
               } else {
-                if (var7.field_F == 3) {
-                  var7.field_E = var7.field_G.a(0, (int)var7.secondaryKey);
-                  var7.field_u = false;
+                if (var7.operation == 3) {
+                  var7.data = var7.store.read(0, (int)var7.secondaryKey);
+                  var7.pending = false;
                 } else {
-                  var7.field_u = false;
+                  var7.pending = false;
                 }
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
@@ -270,7 +270,7 @@ final class kg implements Runnable {
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
               rk.a((String) null, (Throwable) ((Object) var2_ref), 35);
-              var7.field_u = false;
+              var7.pending = false;
             }
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -280,12 +280,12 @@ final class kg implements Runnable {
         }
     }
 
-    final kj a(int param0, boolean param1, byte[] param2, ve param3) {
-        kj var5 = null;
+    final CacheIoRequest writeAsync(int entryId, boolean priority, byte[] data, FileCacheStore store) {
+        CacheIoRequest var5 = null;
         RuntimeException var5_ref = null;
-        kj stackIn_2_0 = null;
+        CacheIoRequest stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
-        kj stackIn_4_0 = null;
+        CacheIoRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -293,29 +293,29 @@ final class kg implements Runnable {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new kj();
-          var5.field_E = param2;
-          var5.field_G = param3;
-          var5.secondaryKey = (long)param0;
-          var5.field_F = 2;
+          var5 = new CacheIoRequest();
+          var5.data = data;
+          var5.store = store;
+          var5.secondaryKey = (long)entryId;
+          var5.operation = 2;
           stackIn_2_0 = var5;
-          stackIn_3_1 = (param1);
-          stackIn_2_0.field_B = stackIn_3_1;
-          this.a(var5, -3);
+          stackIn_3_1 = (priority);
+          stackIn_2_0.priority = stackIn_3_1;
+          this.enqueue(var5, -3);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_7_0 = var5_ref;
-          stackIn_7_1 = new StringBuilder().append("kg.F(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = new StringBuilder().append("kg.F(").append(entryId).append(',').append(priority).append(',');
+          if (data == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param3 == null) {
+          if (store == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -339,11 +339,11 @@ final class kg implements Runnable {
         field_e = null;
     }
 
-    kg(tg param0) {
+    CacheIoWorker(tg param0) {
         ql var2 = null;
-        this.field_f = new lq();
-        this.field_j = false;
-        this.field_c = 0;
+        this.queue = new SecondaryNodeQueue();
+        this.shutdownRequested = false;
+        this.queuedCount = 0;
         try {
           var2 = param0.a(5, (Runnable) (this), (byte) -72);
           while (var2.field_f == 0) {
@@ -352,7 +352,7 @@ final class kg implements Runnable {
           if (var2.field_f == 2) {
             throw new RuntimeException();
           }
-          this.field_g = (Thread) (var2.field_e);
+          this.thread = (Thread) (var2.field_e);
         } catch (RuntimeException runtimeException) {
           throw qb.addExceptionContext((Throwable) ((Object) runtimeException), "kg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

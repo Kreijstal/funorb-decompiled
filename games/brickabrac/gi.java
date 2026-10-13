@@ -28,7 +28,7 @@ final class gi extends ki {
           }
           return;
         }
-        Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, kg.field_i[param3], 16777215);
+        Rasterizer2D.fillVerticalGradient(param4, param2, 640, 480, CacheIoWorker.field_i[param3], 16777215);
         if (param0) {
           return;
         }
@@ -47,7 +47,7 @@ final class gi extends ki {
           }
           return;
         }
-        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, kg.field_i[param1], 16777215);
+        Rasterizer2D.fillVerticalGradient(param2, param3, 153, 238, CacheIoWorker.field_i[param1], 16777215);
         var5Lifetime1 = 52 % ((param0 + 28) / 43);
         if (this.b((byte) -106)) {
           ce.field_c.drawTransparent(param2, param3);
@@ -61,7 +61,7 @@ final class gi extends ki {
           lj.field_q = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
           OptionsScreen.field_B = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
           ce.field_c = pl.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.field_m);
-          lq.field_d = jh.a(0, wn.field_b);
+          SecondaryNodeQueue.field_d = jh.a(0, wn.field_b);
           oc.field_x = jh.a(0, lj.field_q);
           pp.field_b = jh.a(0, OptionsScreen.field_B);
           GzipInflater.field_f[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
@@ -111,7 +111,7 @@ final class gi extends ki {
         if (param1 >= -84) {
           field_u = (String) null;
           if (!this.b((byte) -123)) {
-            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, kg.field_i[param3], 16777215);
+            Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, CacheIoWorker.field_i[param3], 16777215);
             return;
           }
           var7 = kd.a(this.field_m, param3, (byte) -74);
@@ -119,14 +119,14 @@ final class gi extends ki {
             RankingsScreen.a(var7, 2, -13, pp.field_b, param3, 102);
             var7.setCacheKeys(this.field_m, param3, (byte) 78);
           } else {
-            sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
+            sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
             return;
           }
-          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
+          sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var7.sprite, param4, 306, -13, param2);
           return;
         }
         if (!this.b((byte) -123)) {
-          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, kg.field_i[param3], 16777215);
+          Rasterizer2D.fillVerticalGradient(param2, param0, 306, 480, CacheIoWorker.field_i[param3], 16777215);
           return;
         }
         RasterCacheSurface var8 = kd.a(this.field_m, param3, (byte) -74);
@@ -134,10 +134,10 @@ final class gi extends ki {
           RankingsScreen.a(var8, 2, -13, pp.field_b, param3, 102);
           var8.setCacheKeys(this.field_m, param3, (byte) 78);
         } else {
-          sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
+          sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
           return;
         }
-        sa.a((byte) 86, lq.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
+        sa.a((byte) 86, SecondaryNodeQueue.field_d, param0, 2, oc.field_x, var8.sprite, param4, 306, -13, param2);
     }
 
     gi(int param0, String param1, String param2, int param3) {
@@ -199,7 +199,7 @@ final class gi extends ki {
         int var1 = co.a((byte) -53);
         int var2 = ba.b(true);
         vg.field_c.a(var1 + (un.field_a << 1), var2 + (Paddle.field_A << 1), LevelPack.field_k - un.field_a, false, mi.field_d - Paddle.field_A);
-        jq.d(-16085);
+        CachedArchiveSource.d(-16085);
         if (param0 == 11184810) {
           return;
         }

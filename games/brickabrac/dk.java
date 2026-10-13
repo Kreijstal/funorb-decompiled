@@ -112,7 +112,7 @@ final class dk extends ib implements ha, en, vf {
             if (stackIn_38_1 >= 0) {
               stackIn_41_1 = TooltipSprite.field_i;
             } else {
-              stackIn_41_1 = wh.field_m;
+              stackIn_41_1 = BufferedSocket.field_m;
             }
             bg.field_r = stackIn_38_0 + stackIn_41_1;
             var8Lifetime2++;
@@ -212,14 +212,14 @@ final class dk extends ib implements ha, en, vf {
             this.field_O = (sf) null;
           }
           if (0 == param2) {
-            ih.a("terms.ws", 12);
+            ArchiveFetchClient.a("terms.ws", 12);
           } else {
             if (1 != param2) {
               if (param2 == 2) {
-                ih.a("conduct.ws", 12);
+                ArchiveFetchClient.a("conduct.ws", 12);
               }
             } else {
-              ih.a("privacy.ws", 12);
+              ArchiveFetchClient.a("privacy.ws", 12);
             }
           }
           return;
@@ -284,7 +284,7 @@ final class dk extends ib implements ha, en, vf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ma(20, param1, param4 + 120, 25, param0, false, 120, 3, a.field_u, 16777215, param5);
+          var10 = new ma(20, param1, param4 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param5);
           this.a(var10, true);
           var9 = new nf(((je) ((Object) param0)).a(-11011), param2, 126, param1 + var10.field_s, param4 + 50, param3);
           var9.field_i = (uh) (this);
@@ -332,7 +332,7 @@ final class dk extends ib implements ha, en, vf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ma(20, param2, 120 + param4, 25, param1, false, 120, 3, a.field_u, 16777215, param0);
+          var6 = new ma(20, param2, 120 + param4, 25, param1, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
           this.a(var6, true);
           var7 = -5 / ((-32 - param3) / 59);
           stackIn_1_0 = var6.field_s;
@@ -373,7 +373,7 @@ final class dk extends ib implements ha, en, vf {
           if (param3 <= 97) {
             discarded$1 = this.i(-122);
           }
-          var8 = new ma(20, param4, param2 + 120, 25, param0, false, 120, 3, a.field_u, 16777215, param1);
+          var8 = new ma(20, param4, param2 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param1);
           this.a(var8, true);
           var7 = new wl(((je) ((Object) param0)).a(-11011));
           this.a(var7, true);
@@ -627,7 +627,7 @@ final class dk extends ib implements ha, en, vf {
         ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, og.field_Yb, 11579568, LevelCompleteScreen.field_z);
         this.a(var4, true);
         var3 = var3 + var4.field_s;
-        um var5 = new um(a.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, a.field_u.ascent, -1, 2147483647, true);
+        um var5 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
         this.field_I = new lg(var2, var5);
         this.field_I.field_z = "";
         this.field_I.a(qg.field_z, 0, (byte) -98);

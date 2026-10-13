@@ -240,7 +240,7 @@ final class ai extends ki {
           ki.field_i[0] = 16764000;
           ki.field_i[3] = 16736511;
           ki.field_i[1] = 6356832;
-          jq.field_y = param1;
+          CachedArchiveSource.field_y = param1;
           ki.field_i[4] = 16711935;
           ki.field_i[2] = 9474303;
           r.field_C[2] = 16736352;
@@ -272,7 +272,7 @@ final class ai extends ki {
           kc.field_n = new mh(0L, param3);
           sh.field_d.a(kc.field_n, 0);
           g.field_n = new mh(0L, param7);
-          g.field_n.field_O = jq.field_y;
+          g.field_n.field_O = CachedArchiveSource.field_y;
           kc.field_n.a(g.field_n, 0);
           kc.field_n.c(true);
           ap.field_e = new mh(0L, (mh) null);

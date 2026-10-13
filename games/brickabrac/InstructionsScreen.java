@@ -54,12 +54,12 @@ final class InstructionsScreen extends MenuScreen {
             }
           } else {
             if (var2 != 0 &&
-              ih.field_p != 2) {
+              ArchiveFetchClient.field_p != 2) {
               w.c((byte) 3);
             }
           }
           if (var3 == 0 &&
-            ih.field_p == 2) {
+            ArchiveFetchClient.field_p == 2) {
             var4 = ue.a(false) - un.field_g;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
@@ -284,7 +284,7 @@ final class InstructionsScreen extends MenuScreen {
         } else {
           ob.field_D.setInlineSprites(un.field_e, vj.field_f);
         }
-        var2 = ob.field_D.wrapText(gh.field_b[this.pageIndex], jq.field_t, ok.field_b);
+        var2 = ob.field_D.wrapText(gh.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
         var3 = 145 - (-m.field_j - 4);
         for (var4 = 0; var2 > var4; var4++) {
           var5 = ob.field_D;

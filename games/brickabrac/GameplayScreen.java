@@ -229,7 +229,7 @@ final class GameplayScreen extends GameScreen {
             MenuScreen.field_i = MenuScreen.field_i - 1;
             if (fieldTemp$0 == 0) {
               fq.field_c = null;
-              ih.field_k = null;
+              ArchiveFetchClient.field_k = null;
             }
           }
         } else {
@@ -238,7 +238,7 @@ final class GameplayScreen extends GameScreen {
             MenuScreen.field_i = MenuScreen.field_i - 1;
             if (fieldTemp$1 == 0) {
               fq.field_c = null;
-              ih.field_k = null;
+              ArchiveFetchClient.field_k = null;
             }
           }
         }
@@ -296,7 +296,7 @@ final class GameplayScreen extends GameScreen {
                   ng.requestScreen(false, 101, 19);
                 }
               } else {
-                da.f((byte) 122);
+                ArchiveNetworkRequest.f((byte) 122);
               }
             }
           }
@@ -452,7 +452,7 @@ final class GameplayScreen extends GameScreen {
             nk.field_c.bindRasterTarget();
             oa.field_Sb.a(true, var9_int, 0, 0, 0);
             kc.field_q.a((byte) 78);
-            ih.field_k = oa.field_Sb.c((byte) -116);
+            ArchiveFetchClient.field_k = oa.field_Sb.c((byte) -116);
             fq.field_c = oa.field_Sb.b(-102);
             oa.field_Sb = rd.a(var20.levelState.value, (byte) 19);
             MenuScreen.field_i = 32;
@@ -546,7 +546,7 @@ final class GameplayScreen extends GameScreen {
             } else {
               stackIn_210_0 = Integer.toString(pg.field_m);
             }
-            lq.field_e = stackIn_210_0;
+            SecondaryNodeQueue.field_e = stackIn_210_0;
           }
         }
         if (this.field_p &&
@@ -1744,7 +1744,7 @@ final class GameplayScreen extends GameScreen {
             ua.a(var7_ref_j, 524, 85, -68, 147, 81, this.match);
           }
           nh.a(125, 9, -40, 516, cd.field_h, 229);
-          a.a(640, this.match, var7_ref_j);
+          ArchiveNetworkClient.a(640, this.match, var7_ref_j);
           if (r.field_A &&
             ka.a((byte) 124)) {
             ui.a(tb.field_eb + ro.field_v, ob.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);

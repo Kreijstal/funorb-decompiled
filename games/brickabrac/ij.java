@@ -84,8 +84,8 @@ final class ij implements wb {
 
     public final boolean a(int param0) {
         boolean stackIn_15_0 = false;
-        if (!hb.field_y) {
-          hb.field_y = gq.d((byte) -126);
+        if (!ResourceRequest.field_y) {
+          ResourceRequest.field_y = gq.d((byte) -126);
         }
         if (!jc.field_H) {
           jc.field_H = this.b((byte) 127);
@@ -96,7 +96,7 @@ final class ij implements wb {
         if (!th.field_b) {
           th.field_b = this.d(true);
         }
-        stackIn_15_0 = (hb.field_y) && (jc.field_H) && (th.field_b);
+        stackIn_15_0 = (ResourceRequest.field_y) && (jc.field_H) && (th.field_b);
         return stackIn_15_0;
     }
 
@@ -216,7 +216,7 @@ final class ij implements wb {
         } else {
           mc.a((byte) 115);
           LevelList.a(-1);
-          lq.a(LevelList.field_o, kh.field_i, (byte) -38, AchievementIcon.field_s, qb.field_r);
+          SecondaryNodeQueue.a(LevelList.field_o, kh.field_i, (byte) -38, AchievementIcon.field_s, qb.field_r);
         }
         if (var2 != 0) {
           be.field_c = be.field_c + 1;

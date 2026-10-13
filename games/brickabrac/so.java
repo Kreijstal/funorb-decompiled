@@ -349,20 +349,20 @@ final class so {
           }
           kc.field_q.a((byte) 127);
           SaveResultsPromptScreen.packCardIcons = bd.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);
-          da.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
+          ArchiveNetworkRequest.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {
-            da.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);
-            IndexedSpriteGeometry.pushSpriteRaster(-59, da.packSelectorIcons[var11Lifetime1]);
+            ArchiveNetworkRequest.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);
+            IndexedSpriteGeometry.pushSpriteRaster(-59, ArchiveNetworkRequest.packSelectorIcons[var11Lifetime1]);
             SaveResultsPromptScreen.packCardIcons[var11Lifetime1].a(0, 0);
             sc.popRaster(-89);
           }
           cm.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {
-            cm.field_r[var11Lifetime2] = pg.a(da.packSelectorIcons[var11Lifetime2], 20, -17912);
+            cm.field_r[var11Lifetime2] = pg.a(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
           }
           ik.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {
-            ik.field_f[var11Lifetime3] = p.a(pn.a(param3, -29147), da.packSelectorIcons[var11Lifetime3], 14, 16777215);
+            ik.field_f[var11Lifetime3] = p.a(pn.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

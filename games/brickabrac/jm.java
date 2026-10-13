@@ -185,7 +185,7 @@ final class jm {
             var6 = (mp) (var4.next((byte) 116));
           }
           if (f.field_c.field_Tb.field_L != 0) {
-            tn.field_m = new gq(f.field_c.field_Tb.field_Eb, f.field_c.field_Tb.field_db, f.field_c.field_Tb.field_Ib, f.field_c.field_Tb.field_cb, kg.field_e, ij.field_c, ad.field_l, ad.field_l);
+            tn.field_m = new gq(f.field_c.field_Tb.field_Eb, f.field_c.field_Tb.field_db, f.field_c.field_Tb.field_Ib, f.field_c.field_Tb.field_cb, CacheIoWorker.field_e, ij.field_c, ad.field_l, ad.field_l);
             ij.field_d = 2;
           }
           if (0 == f.field_c.field_Wb.field_L) {

@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 95 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 105 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -38,6 +38,9 @@ This pass reviews 95 class identities across 420 compiled classes. Other names r
 | [RasterSnapshot](RasterSnapshot.java) / [RasterCacheSurface](RasterCacheSurface.java) / [ClientException](ClientException.java) | Nested raster state, cache surfaces and client exception context. |
 | [ResourceArchive](ResourceArchive.java) / [ArchiveSource](ArchiveSource.java) / [ArchiveIndex](ArchiveIndex.java) / [IntKeyIndex](IntKeyIndex.java) | Indexed resource access, provider, sparse archive metadata and integer name-hash lookup. |
 | [ByteStorage](ByteStorage.java) / [DirectByteStorage](DirectByteStorage.java) / [GzipInflater](GzipInflater.java) | Archive byte storage and fixed-header gzip decoding. |
+| [CachedArchiveSource](CachedArchiveSource.java) / [ResourceRequest](ResourceRequest.java) / [CacheIoRequest](CacheIoRequest.java) / [ArchiveNetworkRequest](ArchiveNetworkRequest.java) | Cached/remote source and resource request lifecycle. |
+| [ArchiveFetchClient](ArchiveFetchClient.java) / [ArchiveNetworkClient](ArchiveNetworkClient.java) / [BufferedSocket](BufferedSocket.java) | Archive fetch queues, block transport and buffered socket boundary. |
+| [CacheIoWorker](CacheIoWorker.java) / [SecondaryNodeQueue](SecondaryNodeQueue.java) / [FileCacheStore](FileCacheStore.java) | Cache I/O scheduler, secondary FIFO and file-sector store. |
 
 | Registered menu ID | Screen |
 | --- | --- |
@@ -80,5 +83,7 @@ Indexed sprite fixtures cover clipping/crop placement, unsigned indices, transpa
 Raster fixtures cover nested pixel/dimension/clip restoration, pooled reference release/reuse, empty-stack rejection and cache keys. Synthetic sprite assets cover row/column layout and optional alpha, palette black-to1 correction, RGB/ARGB choice, indexed sharing and single-RGB alpha omission. Materializers clear six index/palette/geometry arrays but retain alpha planes/flags and scalar metadata. Exception fixtures preserve separate stored throwable/context, standard null message/cause and wrapper reuse. Live archive retrieval, malformed asset recovery, thumbnail regeneration and complete image-backed menus remain unverified.
 
 Archive fixtures decode version5/6/7 indexes with sparse IDs, name/digest flags and large version7 IDs; reject bad encoded CRC; and retrieve multi-chunk groups with all three decoded-file policies, both packed-discard modes and raw/gzip containers. They test unavailable index/group data, progress, case-normalized name lookup, copied direct storage at the136-byte threshold, duplicate/colliding integer keys and actual sprite loading through synthetic archives. Policy0 retains decoded files;1 evicts the requested file;2 extracts only that file and drops its group cache after retrieval. Capacity checks preserve acceptance of sparse holes. Gzip decoding assumes fixed header/trailer lengths and does not validate trailer checksums or completion. Live providers/network/disk, XTEA archive retrieval, bzip decoding, index digest authentication, malformed recovery and full image-backed menus remain unverified.
+
+Provider fixtures inject controlled completed/pending requests into the real CachedArchiveSource. They check CRC rejection/retry, cached-index revision rejection, remote trailer revision replacement, cache-state changes, request release, foreground promotion of pending background requests and two-pass cleanup. Queue fixtures check FIFO transfer/order, priority/background limits including active requests, pending/incomplete result rejection and progress excluding reserved trailers. CacheIoWorker fixtures check queued operations, first matching pending-write forwarding by store/ID and shared bytes, plus shutdown without draining. Stream fixtures run the real ArchiveNetworkClient with in-memory fragmented input and captured output ring: priority/background request bytes, raw/gzip containers,512-byte block boundaries, continuation markers and XOR decoding. They bypass real sockets, writer scheduling and cache I/O; disk sectors, worker execution, live network/reconnect controls, transport timeout/failure paths, digest authentication and full startup remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

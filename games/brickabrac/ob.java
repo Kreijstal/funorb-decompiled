@@ -40,7 +40,7 @@ final class ob extends r {
     }
 
     ob(int param0) {
-        this(a.field_u, param0);
+        this(ArchiveNetworkClient.field_u, param0);
     }
 
     final String a(oc param0, boolean param1) {

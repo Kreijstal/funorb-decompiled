@@ -41,7 +41,7 @@ final class pk {
               var3_int = 1;
               GameplayAudioEvent.field_i = false;
             }
-            po.a(da.d((byte) 103), sb.field_f, oj.b(false), var3_int != 0, 0);
+            po.a(ArchiveNetworkRequest.d((byte) 103), sb.field_f, oj.b(false), var3_int != 0, 0);
             return;
           }
           if (!il.e((byte) -94)) {

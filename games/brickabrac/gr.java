@@ -72,7 +72,7 @@ final class gr {
     final static void b(int param0, int param1) {
         tn.field_C = param0;
         if (tn.field_C != 1) {
-          a.field_s = ln.field_j;
+          ArchiveNetworkClient.field_s = ln.field_j;
           jc.field_J = mh.field_ib;
           tf.field_c = kp.field_e;
           field_c = p.field_i;
@@ -84,7 +84,7 @@ final class gr {
           fq.field_d = LevelPackSelectScreen.field_z;
         } else {
           bq.field_e = ip.field_v;
-          a.field_s = IntHistoryBuffer.field_l;
+          ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
           tf.field_c = dg.field_b;
           Ball.field_w = dg.field_e;
           jc.field_J = Ball.field_D;

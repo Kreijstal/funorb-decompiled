@@ -29,7 +29,7 @@ final class go {
         try {
           Object var6 = null;
           Object var7 = null;
-          jq var8 = null;
+          CachedArchiveSource var8 = null;
           ResourceArchive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
@@ -38,7 +38,7 @@ final class go {
             if (ec.field_P.field_q != null) {
               oc.field_k = new jg(ec.field_P.field_q, 5200, 0);
               ec.field_P.field_q = null;
-              var6 = new ve(255, oc.field_k, new jg(ec.field_P.field_m, 12000, 0), 2097152);
+              var6 = new FileCacheStore(255, oc.field_k, new jg(ec.field_P.field_m, 12000, 0), 2097152);
             }
             if (oc.field_k != null) {
               if (ClientException.field_g == null) {
@@ -48,14 +48,14 @@ final class go {
                 ClientException.field_g[param1] = new jg(ec.field_P.field_s[param1], 12000, 0);
                 ec.field_P.field_s[param1] = null;
               }
-              var7 = new ve(param1, oc.field_k, ClientException.field_g[param1], 2097152);
+              var7 = new FileCacheStore(param1, oc.field_k, ClientException.field_g[param1], 2097152);
             }
             if (!param5) {
               go.a(78);
             }
-            var8 = dp.field_v.a(81, param2, (ve) (var6), param1, (ve) (var7));
+            var8 = dp.field_v.a(81, param2, (FileCacheStore) (var6), param1, (FileCacheStore) (var7));
             if (param0) {
-              var8.f(-10476);
+              var8.startPrefetch(-10476);
             }
             stackIn_14_0 = new ResourceArchive(var8, param4, param3);
             return stackIn_14_0;
