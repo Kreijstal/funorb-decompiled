@@ -747,7 +747,7 @@ public final class BrickABrac extends InteractiveGameClient {
         co.b(-70);
         um.a(31292);
         mg.b();
-        bk.a();
+        VorbisSample.releaseScratch();
         dc.a(-9669);
         fr.b((byte) -52);
         sh.a(125);
@@ -789,7 +789,7 @@ public final class BrickABrac extends InteractiveGameClient {
         pf.a(0);
         dg.a(-51);
         gr.a((byte) 118);
-        fg.a();
+        VorbisFloor1.releaseScratch();
         ui.b(1516);
         wd.f(32463);
         to.a(-125);

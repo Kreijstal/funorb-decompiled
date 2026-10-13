@@ -9,14 +9,14 @@ final class ck extends IntrusiveNode {
     StringBuilder field_l;
 
     final static void a(int param0, ResourceArchive param1) {
-        bk var2 = null;
-        bk.b(param1.takeFileByName(111, "headers.packvorbis", ""));
+        VorbisSample var2 = null;
+        VorbisSample.decodeSetup(param1.takeFileByName(111, "headers.packvorbis", ""));
         if (param0 != -2196) {
           return;
         }
         try {
-          var2 = bk.a(param1, "jagex logo2.packvorbis", "");
-          var2.c();
+          var2 = VorbisSample.loadByName(param1, "jagex logo2.packvorbis", "");
+          var2.toPcmSound();
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ck.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

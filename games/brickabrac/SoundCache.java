@@ -127,7 +127,7 @@ final class SoundCache {
         RuntimeException var5 = null;
         long var6 = 0L;
         PcmSound var8 = null;
-        bk var9 = null;
+        VorbisSample var9 = null;
         PcmSound stackIn_2_0 = null;
         Object stackIn_8_0 = null;
         Object stackIn_17_0 = null;
@@ -154,15 +154,15 @@ final class SoundCache {
             stackIn_8_0 = null;
             return (PcmSound) (stackIn_8_0);
           }
-          var9 = (bk) (this.pendingMusicSamples.get(-87, var6));
+          var9 = (VorbisSample) (this.pendingMusicSamples.get(-87, var6));
           if (var9 == null) {
-            var9 = bk.a(this.musicSampleArchive, groupId, fileId);
+            var9 = VorbisSample.load(this.musicSampleArchive, groupId, fileId);
             if (var9 == null) {
               return null;
             }
             this.pendingMusicSamples.put(34, var9, var6);
           }
-          var8Lifetime1 = var9.a(budget);
+          var8Lifetime1 = var9.toPcmSoundBudgeted(budget);
           if (var8Lifetime1 == null) {
             stackIn_17_0 = null;
             return (PcmSound) (stackIn_17_0);
