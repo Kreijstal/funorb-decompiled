@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vn extends no {
+final class Ball extends CircleBody {
     static jp field_w;
     static mh field_A;
     static String field_H;
@@ -19,12 +19,12 @@ final class vn extends no {
     int field_B;
     hp field_y;
 
-    private vn(int param0, int param1) {
+    private Ball(int param0, int param1) {
         super(0, 0, 0, 0, 1536, 0);
         this.field_E = new hp(50);
         this.field_y = new hp(50);
         this.field_z = param0;
-        this.a(this.field_z, param1, 116);
+        this.setVelocityFromAngle(this.field_z, param1, 116);
     }
 
     final static th a(int param0, byte param1) {
@@ -57,11 +57,11 @@ final class vn extends no {
         return null;
     }
 
-    final void a(vo param0, int param1) {
+    final void a(Paddle param0, int param1) {
         try {
-          this.field_j = -1536 + (param0.field_j + (param0.field_u >> 1));
-          this.field_m = param0.field_m - 3072;
-          this.field_j = this.field_j + param0.field_u * this.field_z / 3072;
+          this.x256 = -1536 + (param0.x256 + (param0.width256 >> 1));
+          this.y256 = param0.y256 - 3072;
+          this.x256 = this.x256 + param0.width256 * this.field_z / 3072;
           if (param1 != 0) {
             this.field_E = (hp) null;
           }
@@ -70,15 +70,15 @@ final class vn extends no {
         }
     }
 
-    vn(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, 1536, 0);
+    Ball(int x256, int y256, int velocityX256, int velocityY256) {
+        super(x256, y256, velocityX256, velocityY256, 1536, 0);
         this.field_E = new hp(50);
         this.field_y = new hp(50);
     }
 
     final static int[] d(int param0) {
         if (param0 != 8) {
-          vn.d(-23);
+          Ball.d(-23);
           return new int[8];
         }
         return new int[8];
@@ -100,19 +100,19 @@ final class vn extends no {
         field_K = null;
     }
 
-    vn() {
+    Ball() {
         this(0, 0, 0, 0);
     }
 
-    final void a(int param0, int param1, int param2) {
-        this.field_k = (sa.a(param0, -4097) >> 8) * param1 >> 8;
-        if (param2 >= 95) {
-          this.field_o = (BrickABrac.c(2048, param0) >> 8) * -param1 >> 8;
+    final void setVelocityFromAngle(int angle, int speed, int obfuscationGuard) {
+        this.velocityX256 = (sa.a(angle, -4097) >> 8) * speed >> 8;
+        if (obfuscationGuard >= 95) {
+          this.velocityY256 = (BrickABrac.c(2048, angle) >> 8) * -speed >> 8;
           return;
         }
     }
 
-    vn(vo param0, int param1, int param2) {
+    Ball(Paddle param0, int param1, int param2) {
         this(param1, param2);
         try {
           this.a(param0, 0);
@@ -121,23 +121,23 @@ final class vn extends no {
         }
     }
 
-    final void a(int param0, wq param1) {
-        super.a(107, param1);
-        this.field_C = param1.e(255);
-        if (param0 < 89) {
+    final void readBodySnapshot(int obfuscationGuard, wq packet) {
+        super.readBodySnapshot(107, packet);
+        this.field_C = packet.e(255);
+        if (obfuscationGuard < 89) {
           return;
         }
         try {
-          this.field_v = param1.i(65280);
-          this.field_J = param1.a(126);
-          this.field_z = param1.a(126);
-          this.field_I = param1.c((byte) -82);
+          this.field_v = packet.i(65280);
+          this.field_J = packet.a(126);
+          this.field_z = packet.a(126);
+          this.field_I = packet.c((byte) -82);
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vn.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "vn.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(int param0, StringBuilder param1) {
+    final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
@@ -149,14 +149,14 @@ final class vn extends no {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 79) {
+          if (obfuscationGuard <= 79) {
             this.c(-49, 14);
           }
-          var3_int = -19088744 ^ super.a(93, param1);
-          if (param1 != null) {
-            discarded$3 = param1.append("base checksum for ball: " + Integer.toString(var3_int, 16) + "\n");
-            discarded$4 = param1.append(this.field_j + " " + this.field_m + " " + this.field_k + " " + this.field_o + " " + " " + this.field_i + " " + this.field_l + "\n");
-            discarded$5 = param1.append("Ball Info: " + this.field_v + " " + this.field_J + " " + this.field_C + " " + this.field_z + "\n");
+          var3_int = -19088744 ^ super.computeSyncChecksum(93, diagnostics);
+          if (diagnostics != null) {
+            discarded$3 = diagnostics.append("base checksum for ball: " + Integer.toString(var3_int, 16) + "\n");
+            discarded$4 = diagnostics.append(this.x256 + " " + this.y256 + " " + this.velocityX256 + " " + this.velocityY256 + " " + " " + this.typeId + " " + this.stateWord + "\n");
+            discarded$5 = diagnostics.append("Ball Info: " + this.field_v + " " + this.field_J + " " + this.field_C + " " + this.field_z + "\n");
           }
           var3_int = var3_int ^ this.field_v * 83 + 119 << 12;
           var3_int = var3_int ^ 57 + this.field_J * 13 << 18;
@@ -168,8 +168,8 @@ final class vn extends no {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("vn.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("vn.A(").append(obfuscationGuard).append(',');
+          if (diagnostics == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -182,12 +182,12 @@ final class vn extends no {
         this.field_J = this.field_J + param1;
         this.field_v = 0;
         if (param0 > -27) {
-          this.a(119, 71, 24);
+          this.setVelocityFromAngle(119, 71, 24);
         }
     }
 
     final void c(int param0, int param1) {
-        int var3 = kj.a(this.field_k * this.field_k + this.field_o * this.field_o, 2) >> 8;
+        int var3 = kj.a(this.velocityX256 * this.velocityX256 + this.velocityY256 * this.velocityY256, 2) >> 8;
         int var4 = param1 + var3;
         if (var4 < param0) {
           var4 = 512;
@@ -195,8 +195,8 @@ final class vn extends no {
         if (var4 > 3840) {
           var4 = 3840;
         }
-        this.field_k = this.field_k * var4 / var3;
-        this.field_o = var4 * this.field_o / var3;
+        this.velocityX256 = this.velocityX256 * var4 / var3;
+        this.velocityY256 = var4 * this.velocityY256 / var3;
     }
 
     final void a(byte param0, int param1) {
@@ -211,7 +211,7 @@ final class vn extends no {
     }
 
     final void a(int param0, int param1) {
-        this.a(param1, kj.a(this.field_o * this.field_o + this.field_k * this.field_k, 2) >> 8, 107);
+        this.setVelocityFromAngle(param1, kj.a(this.velocityY256 * this.velocityY256 + this.velocityX256 * this.velocityX256, 2) >> 8, 107);
         if (param0 != 6546) {
           this.field_v = -29;
         }

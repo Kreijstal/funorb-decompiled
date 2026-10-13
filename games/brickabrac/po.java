@@ -135,24 +135,24 @@ final class po {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ak var4 = null;
-        ak var5 = null;
+        MultiplayerMatch var4 = null;
+        MultiplayerMatch var5 = null;
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = pe.field_o.field_w;
+          var4 = pe.field_o.match;
           var5 = var4;
           ec.field_Q = oa.field_Sb;
           ci.field_r = pe.field_o.field_p;
           eg.field_k = pe.field_o.c(124);
           cb.field_n = pe.field_o.field_n;
-          sk.field_I = pe.field_o.field_w.field_k;
+          sk.field_I = pe.field_o.match.playerCount;
           fh.field_h = new String[sk.field_I];
           for (var2 = 0; var2 < sk.field_I; var2++) {
-            fh.field_h[var2] = var4.field_f[var2];
+            fh.field_h[var2] = var4.playerNames[var2];
           }
           pi.field_o = new int[var5.field_m.length];
           for (var2Lifetime1 = 0; var5.field_m.length > var2Lifetime1; var2Lifetime1++) {
@@ -160,7 +160,7 @@ final class po {
           }
           da.field_C = new int[sk.field_I];
           for (var2Lifetime2 = 0; var2Lifetime2 < sk.field_I; var2Lifetime2++) {
-            da.field_C[var2Lifetime2] = var5.field_l[var2Lifetime2].field_H;
+            da.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].field_H;
           }
           stackIn_13_0 = !(ci.field_r);
           wk.field_p = stackIn_13_0;

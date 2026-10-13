@@ -5,7 +5,7 @@ final class ip extends ki {
     static jp[][] field_v;
     static String field_t;
     static fo field_r;
-    static vl field_s;
+    static NodeDeque field_s;
     static String[] field_u;
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {
@@ -436,7 +436,7 @@ final class ip extends ki {
             stackIn_184_0 = 0;
           }
           var7 = stackIn_184_0;
-          L62: while (true) {
+          scanLoop1: while (true) {
             if (cq.field_p > var7) {
               dupTemp$1 = ab.field_A[var7 + 4];
               var27 = dupTemp$1;
@@ -445,7 +445,7 @@ final class ip extends ki {
               stackIn_406_0 = stackOut_186_0 ? 1 : 0;
               stackIn_187_0 = stackOut_186_0;
               if (var26 != 0) {
-                break L62;
+                break scanLoop1;
               }
               stackIn_191_0 = (stackIn_187_0) ? -1 : 0;
               var9 = stackIn_191_0;
@@ -465,10 +465,10 @@ final class ip extends ki {
                     var15 = r.a((byte) -82, me.field_e[var7][var9] & ~qn.field_f);
                     var14 = 1;
                   }
-                  if (null != vl.field_a &&
-                    vl.field_a[var7] != null &&
+                  if (null != NodeDeque.field_a &&
+                    NodeDeque.field_a[var7] != null &&
                     0 >= go.field_c &&
-                    vl.field_a[var7][var9]) {
+                    NodeDeque.field_a[var7][var9]) {
                     var10 = 1;
                   }
                   if (null != bl.field_F &&
@@ -780,7 +780,7 @@ final class ip extends ki {
               stackIn_404_0Lifetime1 = var6Lifetime2 + (255 & jg.field_c[var7]);
               var6Lifetime2 = stackIn_404_0Lifetime1;
               var7++;
-              continue L62;
+              continue scanLoop1;
             }
             stackIn_406_0 = var5;
             break;
@@ -813,7 +813,7 @@ final class ip extends ki {
           var3 = (om) null;
           ip.a(81, (om) null, true, true);
         }
-        stackIn_13_0 = (null != ch.field_f) && (null != dg.field_g) && (np.field_d != null) && (null != on.field_w) && (null != ep.field_h) && (tk.field_l != null) && (ae.field_g != null) && (null != up.field_A);
+        stackIn_13_0 = (null != ch.field_f) && (null != dg.field_g) && (np.field_d != null) && (null != Brick.field_w) && (null != ep.field_h) && (tk.field_l != null) && (ae.field_g != null) && (null != up.field_A);
         return stackIn_13_0;
     }
 
@@ -873,7 +873,7 @@ final class ip extends ki {
           lb.g(param2, param3, 153, 238, 16777215, 11184810);
         }
         if (this.b((byte) -125)) {
-          on.field_w.c(param2, param3);
+          Brick.field_w.c(param2, param3);
         }
         var5 = 107 / ((param0 + 28) / 43);
     }
@@ -928,7 +928,7 @@ final class ip extends ki {
         ch.field_f = pl.a("jungle", "jungle_near", (byte) -39, i.field_m);
         dg.field_g = pl.a("jungle", "jungle_mid", (byte) -67, i.field_m);
         np.field_d = pl.a("jungle", "jungle_far", (byte) -46, i.field_m);
-        on.field_w = pl.a("jungle", "jungle_small", (byte) -109, i.field_m);
+        Brick.field_w = pl.a("jungle", "jungle_small", (byte) -109, i.field_m);
         sl.field_D = jh.a(0, ch.field_f);
         fk.field_e = jh.a(0, dg.field_g);
         ib.field_E = jh.a(0, np.field_d);
@@ -945,6 +945,6 @@ final class ip extends ki {
     static {
         field_t = "Accept";
         field_u = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        field_s = new vl();
+        field_s = new NodeDeque();
     }
 }

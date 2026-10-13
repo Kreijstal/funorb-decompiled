@@ -270,13 +270,13 @@ final class hc {
           var15.field_O = (dh) ((Object) var7);
           var15.field_X = 16777215;
           var15.field_R = np.field_a;
-          vo.field_C = new mh(0L, ad.field_l);
-          vo.field_C.field_Jb = vp.a(false, (byte) 94, 2236962, 16, 2236962, false);
-          vo.field_C.field_V = 2;
+          Paddle.field_C = new mh(0L, ad.field_l);
+          Paddle.field_C.field_Jb = vp.a(false, (byte) 94, 2236962, 16, 2236962, false);
+          Paddle.field_C.field_V = 2;
           wi.field_n = new mh(0L, ad.field_l);
           wi.field_n.field_Jb = vp.a(false, (byte) 80, 1513239, 16, 1513239, false);
           wi.field_n.field_V = 2;
-          fp.field_v = new mh(0L, vo.field_C);
+          fp.field_v = new mh(0L, Paddle.field_C);
           fp.field_v.a((byte) -82, tk.field_t);
           vb.field_K = new mh(0L, wi.field_n);
           vb.field_K.a((byte) -72, tk.field_t);

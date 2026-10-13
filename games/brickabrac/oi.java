@@ -10,7 +10,7 @@ final class oi {
     static boolean field_d;
     boolean field_c;
 
-    final void a(ga param0, kq param1, vl param2, int param3, byte param4, vl[] param5) {
+    final void a(ga param0, kq param1, NodeDeque param2, int param3, byte param4, NodeDeque[] param5) {
         if (param4 > -90) {
           return;
         }
@@ -53,9 +53,9 @@ final class oi {
           cr.f((byte) -123);
           return true;
         }
-        if (no.field_p != null &&
-          no.field_p.d((byte) 119)) {
-          no.field_p = null;
+        if (CircleBody.field_p != null &&
+          CircleBody.field_p.d((byte) 119)) {
+          CircleBody.field_p = null;
           cr.f((byte) -55);
           return true;
         }

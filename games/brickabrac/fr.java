@@ -37,7 +37,7 @@ final class fr {
     short[] field_b;
     short field_w;
     private boolean field_r;
-    static vl field_M;
+    static NodeDeque field_M;
     short[] field_a;
     short[] field_G;
     static int field_k;
@@ -70,23 +70,23 @@ final class fr {
         mh var3 = null;
         try {
           ok.field_g = pl.a("basic", "display_name_changed", (byte) 109, param0);
-          gf.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
+          GameScreen.field_f = new hj(0L, rq.field_b, hk.field_J, oo.field_y);
           f.field_c = new hj(0L, rq.field_b, ab.field_z, ng.field_e);
           rg.field_c = new mh(0L, (mh) null);
           sj.field_d = new mh(0L, ad.field_l);
           sj.field_d.field_S = 1;
           gk.field_c = new mh(0L, rp.field_t, n.field_a);
-          qj.field_u = new mh(0L, ik.field_a, bc.field_c);
+          GameplayScreen.field_u = new mh(0L, ik.field_a, bc.field_c);
           mo.field_R = new mh(0L, tk.field_t);
           rg.field_c.a(sj.field_d, 0);
           rg.field_c.a(gk.field_c, 0);
-          rg.field_c.a(qj.field_u, 0);
-          rg.field_c.a(gf.field_f, 0);
+          rg.field_c.a(GameplayScreen.field_u, 0);
+          rg.field_c.a(GameScreen.field_f, 0);
           rg.field_c.a(mo.field_R, 0);
-          gf.field_f.field_Qb.field_Qb.a((byte) -102, ad.field_l);
-          var5 = gf.field_f.field_Qb.field_Qb;
+          GameScreen.field_f.field_Qb.field_Qb.a((byte) -102, ad.field_l);
+          var5 = GameScreen.field_f.field_Qb.field_Qb;
           var6 = var5;
-          gf.field_f.field_Qb.field_Qb.field_Q = 1;
+          GameScreen.field_f.field_Qb.field_Qb.field_Q = 1;
           if (param1 <= 58) {
             field_k = 109;
           }
@@ -152,16 +152,16 @@ final class fr {
           return;
         }
         if (param0 != 1) {
-          field_M = (vl) null;
+          field_M = (NodeDeque) null;
         }
         if (pe.field_o.field_n) {
-          if ((pe.field_o.field_w.field_j & 1 << pe.field_o.field_k) != 0) {
+          if ((pe.field_o.match.field_j & 1 << pe.field_o.field_k) != 0) {
             ag.field_D[12] = mi.field_a;
           } else {
-            if (pe.field_o.field_w.field_j != 0) {
+            if (pe.field_o.match.field_j != 0) {
               ag.field_D[12] = qm.field_c;
             } else {
-              if ((1 << pe.field_o.field_k | pe.field_o.field_v) != (1 << pe.field_o.field_w.field_k) - 1) {
+              if ((1 << pe.field_o.field_k | pe.field_o.field_v) != (1 << pe.field_o.match.playerCount) - 1) {
                 ag.field_D[12] = s.field_a;
               } else {
                 ag.field_D[12] = oa.field_Pb;
@@ -169,12 +169,12 @@ final class fr {
             }
           }
         } else {
-          if ((1 << pe.field_o.field_k & pe.field_o.field_w.field_j) != 0) {
+          if ((1 << pe.field_o.field_k & pe.field_o.match.field_j) != 0) {
             ag.field_D[12] = ff.field_g;
           } else {
-            if (0 == pe.field_o.field_w.field_j) {
-              if ((pe.field_o.field_v | 1 << pe.field_o.field_k) != -1 + (1 << pe.field_o.field_w.field_k)) {
-                ag.field_D[12] = bn.field_t;
+            if (0 == pe.field_o.match.field_j) {
+              if ((pe.field_o.field_v | 1 << pe.field_o.field_k) != -1 + (1 << pe.field_o.match.playerCount)) {
+                ag.field_D[12] = RectangleBody.field_t;
               } else {
                 ag.field_D[12] = bm.field_b;
               }
@@ -268,7 +268,7 @@ final class fr {
     }
 
     static {
-        field_M = new vl();
+        field_M = new NodeDeque();
         field_e = new oe[8];
         field_l = new int[]{44, 45, 8, 23};
     }

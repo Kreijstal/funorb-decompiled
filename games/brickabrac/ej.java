@@ -5,7 +5,7 @@ final class ej extends sl {
     private Object field_N;
     static tq field_P;
     static String field_M;
-    static vl field_F;
+    static NodeDeque field_F;
     static lp field_I;
     static int[] field_E;
     static double field_J;
@@ -78,7 +78,7 @@ final class ej extends sl {
         field_E[4] = 5;
         field_E[10] = 2;
         field_J = 0.0;
-        field_F = new vl();
+        field_F = new NodeDeque();
         field_K = "Only show game chat from my friends";
         field_O = 480;
         field_H = "Resign";

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends nm {
+final class i extends IntrusiveNode {
     static mf field_s;
     int field_i;
     af field_t;
@@ -195,8 +195,8 @@ final class i extends nm {
         if (pe.field_o.c(116)) {
           return;
         }
-        if ((1 << pe.field_o.field_k & pe.field_o.field_w.field_n) == 0) {
-          if (pe.field_o.field_w.field_n != 0) {
+        if ((1 << pe.field_o.field_k & pe.field_o.match.field_n) == 0) {
+          if (pe.field_o.match.field_n != 0) {
             ag.field_D[10] = er.field_a;
             if (param0 != 32) {
               field_o = (String) null;
@@ -253,7 +253,7 @@ final class i extends nm {
 
     final void c(int param0) {
         if (param0 == 1) {
-          aa.field_a.a((nm) (this), (byte) 3);
+          aa.field_a.addLast((IntrusiveNode) (this), (byte) 3);
           this.field_v = false;
           this.field_k = null;
           this.field_t = null;
@@ -261,7 +261,7 @@ final class i extends nm {
         }
         pe var3 = (pe) null;
         i.a(-1, (pe) null, 57);
-        aa.field_a.a((nm) (this), (byte) 3);
+        aa.field_a.addLast((IntrusiveNode) (this), (byte) 3);
         this.field_v = false;
         this.field_k = null;
         this.field_t = null;

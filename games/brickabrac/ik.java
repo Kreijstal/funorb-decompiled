@@ -9,8 +9,8 @@ final class ik implements Iterator {
     private ji field_e;
     private int field_d;
     static tq field_g;
-    private nm field_h;
-    private nm field_k;
+    private IntrusiveNode field_h;
+    private IntrusiveNode field_k;
     static mh[] field_i;
     static jp[] field_f;
     static String[] field_b;
@@ -22,7 +22,7 @@ final class ik implements Iterator {
 
     private final void b(int param0) {
         this.field_d = 1;
-        this.field_h = this.field_e.field_d[0].field_e;
+        this.field_h = this.field_e.field_d[0].next;
         if (param0 > -71) {
           return;
         }
@@ -30,7 +30,7 @@ final class ik implements Iterator {
     }
 
     public final boolean hasNext() {
-        nm[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
@@ -41,8 +41,8 @@ final class ik implements Iterator {
           fieldTemp$0 = this.field_e.field_d;
           fieldTemp$1 = this.field_d;
           this.field_d = this.field_d + 1;
-          if (fieldTemp$0[fieldTemp$1].field_e != this.field_e.field_d[this.field_d - 1]) {
-            this.field_h = this.field_e.field_d[this.field_d - 1].field_e;
+          if (fieldTemp$0[fieldTemp$1].next != this.field_e.field_d[this.field_d - 1]) {
+            this.field_h = this.field_e.field_d[this.field_d - 1].next;
             return true;
           }
           this.field_h = this.field_e.field_d[this.field_d - 1];
@@ -51,14 +51,14 @@ final class ik implements Iterator {
     }
 
     public final Object next() {
-        nm[] fieldTemp$0 = null;
+        IntrusiveNode[] fieldTemp$0 = null;
         int fieldTemp$1 = 0;
-        nm var1;
+        IntrusiveNode var1;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
         if (this.field_h != this.field_e.field_d[-1 + this.field_d]) {
           var1 = this.field_h;
-          this.field_h = var1.field_e;
+          this.field_h = var1.next;
           this.field_k = var1;
           return var1;
         }
@@ -69,9 +69,9 @@ final class ik implements Iterator {
           fieldTemp$0 = this.field_e.field_d;
           fieldTemp$1 = this.field_d;
           this.field_d = this.field_d + 1;
-          var1 = fieldTemp$0[fieldTemp$1].field_e;
+          var1 = fieldTemp$0[fieldTemp$1].next;
         } while (this.field_e.field_d[this.field_d - 1] == var1);
-        this.field_h = var1.field_e;
+        this.field_h = var1.next;
         this.field_k = var1;
         return var1;
     }
@@ -145,7 +145,7 @@ final class ik implements Iterator {
         if (this.field_k == null) {
           throw new IllegalStateException();
         }
-        this.field_k.b((byte) 111);
+        this.field_k.unlink((byte) 111);
         this.field_k = null;
     }
 
@@ -159,7 +159,7 @@ final class ik implements Iterator {
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = (bg) (mf.field_i.d(-78));
+          var5 = (bg) (mf.field_i.first(-78));
           var1 = var5;
           if (var1 == null) {
             return false;

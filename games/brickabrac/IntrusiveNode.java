@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class nm {
-    nm field_b;
-    nm field_e;
+class IntrusiveNode {
+    IntrusiveNode previous;
+    IntrusiveNode next;
     static th field_c;
     static String field_a;
     static jp[] field_f;
     static jp field_d;
     static int[] field_h;
-    long field_g;
+    long key;
 
-    final boolean b(int param0) {
-        if (param0 != 0) {
-          this.b((byte) 95);
-          if (null != this.field_b) {
+    final boolean isLinked(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
+          this.unlink((byte) 95);
+          if (null != this.previous) {
             return true;
           }
           return false;
         }
-        if (null != this.field_b) {
+        if (null != this.previous) {
           return true;
         }
         return false;
@@ -54,22 +54,22 @@ class nm {
         }
     }
 
-    final void b(byte param0) {
-        if (this.field_b == null) {
+    final void unlink(byte obfuscationGuard) {
+        if (this.previous == null) {
           return;
         }
-        if (param0 == 111) {
-          this.field_b.field_e = this.field_e;
-          this.field_e.field_b = this.field_b;
-          this.field_b = null;
-          this.field_e = null;
+        if (obfuscationGuard == 111) {
+          this.previous.next = this.next;
+          this.next.previous = this.previous;
+          this.previous = null;
+          this.next = null;
           return;
         }
         field_a = (String) null;
-        this.field_b.field_e = this.field_e;
-        this.field_e.field_b = this.field_b;
-        this.field_b = null;
-        this.field_e = null;
+        this.previous.next = this.next;
+        this.next.previous = this.previous;
+        this.previous = null;
+        this.next = null;
     }
 
     public static void a(boolean param0) {

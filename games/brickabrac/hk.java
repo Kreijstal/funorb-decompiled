@@ -122,7 +122,7 @@ final class hk extends ib implements hf, en {
           }
           lb.a(var14, var5, var6);
           fe.field_kb = e.a(nb.field_e, ko.field_j, var4, 4, cp.field_K);
-          wd.field_w.field_bb = new vl();
+          wd.field_w.field_bb = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -152,7 +152,7 @@ final class up extends um {
             stackIn_5_0 = (oc) (param3);
           }
           var10 = (d) (stackIn_5_0);
-          vi.a((byte) 106, param3.field_t + param3.field_o + param2, param2 + param3.field_o, param4 + param3.field_w, param4 + param3.field_w + param3.field_s);
+          MovingBody.a((byte) 106, param3.field_t + param3.field_o + param2, param2 + param3.field_o, param4 + param3.field_w, param4 + param3.field_w + param3.field_s);
           if (var10 != null) {
             param0 = param0 & var10.field_J;
           }

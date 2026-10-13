@@ -475,6 +475,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 420,
+          "sha256": "c04d46490d1d7674f3d2ee0076998e98cf381002d3b6eb2b459f2b6caf7d9ad2"
         }
       },
       "chess": {
@@ -2843,6 +2847,31 @@
           }
         },
         "sourceTreeSha256": "6478eb5845afc293d37ad893c4eafe6eb3b6d55555de4c0af0c477822e7a4de1"
+      }
+    },
+    "brickabrac": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "8f15143529e53929d7157a5393487342612a4180",
+        "subdirectory": "games/brickabrac"
+      },
+      "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
+      "sources": {
+        "files": 420,
+        "sha256": "c04d46490d1d7674f3d2ee0076998e98cf381002d3b6eb2b459f2b6caf7d9ad2"
+      },
+      "dictionary": {
+        "path": "decompilation/brickabrac-naming.json",
+        "sha256": "f3bbcf327357d737316056349e4362c48379521ec35a547939211983ea137f10"
+      },
+      "readingGuide": {
+        "path": "games/brickabrac/README.md",
+        "sha256": "cbafa0ea01eb198d51c53fc14337b9c2d0e19da6a294113ea560481ae9f8a782"
+      },
+      "rulesSha256": "d0138ebef1ca11d21bcc95aa1c17c53973df5edfb1e413b9525538561e99e2e9",
+      "compiler": {
+        "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff",
+        "trackedSourceTarSha256": "7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd"
       }
     }
   }

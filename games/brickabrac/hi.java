@@ -3,7 +3,7 @@
  */
 final class hi extends um {
     private int field_z;
-    static vl field_v;
+    static NodeDeque field_v;
     static int[] field_A;
     private int field_y;
     private int field_x;
@@ -108,7 +108,7 @@ final class hi extends um {
           var3 = 0;
         }
         if (param0) {
-          field_v = (vl) null;
+          field_v = (NodeDeque) null;
           if (ng.field_b == 0 &&
             null != nl.field_f) {
             var3 = 0;
@@ -549,6 +549,6 @@ final class hi extends um {
     }
 
     static {
-        field_v = new vl();
+        field_v = new NodeDeque();
     }
 }

@@ -152,8 +152,8 @@ final class kj extends hb {
           wd.field_E.a(18, np.field_a + 2, -40 + (-2 + ji.field_b.field_Ib) - ec.field_J, 42 + ec.field_J, (byte) 64);
           vp.field_u.a(2, (byte) -109, ji.field_b.field_Ib, 0, np.field_a + 2 + 20, ec.field_J, -2 + ji.field_b.field_cb - (np.field_a + 20));
           ij.field_e.a(40, -40 + qa.field_w.field_cb, 0, qa.field_w.field_Ib, (byte) 64);
-          ba.field_v.a(30, 0, 0, ak.field_d.field_Ib, (byte) 64);
-          rg.field_e.a(-2 + (-40 + ak.field_d.field_cb) - 30, 30, 0, ak.field_d.field_Ib, (byte) 64);
+          ba.field_v.a(30, 0, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
+          rg.field_e.a(-2 + (-40 + MultiplayerMatch.field_d.field_cb) - 30, 30, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
           var2_int = cq.field_p + 3;
           if (w.field_n.length < 2) {
             var2_int--;
@@ -242,7 +242,7 @@ final class kj extends hb {
                     ab.field_A[var6][0].a(-10411, var5, 2, kn.field_z, var8, var3, 38);
                     var8 += 40;
                   }
-                  var9_int = 2 + (ak.field_d.field_Ib - (5 + var8));
+                  var9_int = 2 + (MultiplayerMatch.field_d.field_Ib - (5 + var8));
                   var10 = ab.field_A[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
@@ -259,7 +259,7 @@ final class kj extends hb {
           stackIn_78_0 = de.field_t;
           stackIn_79_1 = !(param0);
           stackIn_78_0.field_Jb = na.a(stackIn_79_1, 8421504, 3, 11579568, de.field_t.field_cb, 1);
-          vn.field_A.a(de.field_t.field_cb - 10 - 26, 5, 5, -10 + de.field_t.field_Ib, (byte) 64);
+          Ball.field_A.a(de.field_t.field_cb - 10 - 26, 5, 5, -10 + de.field_t.field_Ib, (byte) 64);
           nd.field_a.a(24, -29 + de.field_t.field_cb, (de.field_t.field_Ib - 80) / 2, 80, (byte) 64);
           s.b(125);
           return;
@@ -270,7 +270,7 @@ final class kj extends hb {
         }
     }
 
-    final static void a(int param0, vl param1, int param2) {
+    final static void a(int param0, NodeDeque param1, int param2) {
         int var4 = 0;
         int var3_int = 0;
         int var7 = 0;
@@ -294,7 +294,7 @@ final class kj extends hb {
                 param0 == var3_int) {
                 var5 = var3_int * 34 << 8;
                 var6 = 16 * var4 << 8;
-                param1.a(new on(var5, var6, 0, 0, 1, 1, 0, 0), (byte) 3);
+                param1.addLast(new Brick(var5, var6, 0, 0, 1, 1, 0, 0), (byte) 3);
               }
             }
             var3_int++;

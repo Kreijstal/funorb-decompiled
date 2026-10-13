@@ -69,7 +69,7 @@ final class jk extends ki {
           n.field_c.g(0, 0);
           sc.b(-81);
           to.field_e = jh.a(0, wm.field_b);
-          qj.field_l = jh.a(0, hk.field_Q);
+          GameplayScreen.field_l = jh.a(0, hk.field_Q);
           jg.field_a = jh.a(0, n.field_c);
           ig.field_P = jh.a(0, vj.field_b);
           uo.field_d = new jp(go.field_d.field_x / 2, go.field_d.field_z);
@@ -131,7 +131,7 @@ final class jk extends ki {
             hh.a(jg.field_a, -13, 2, var8, -8562, param3, ig.field_P);
             var8.a(this.field_m, param3, (byte) 78);
           }
-          il.a(param4, to.field_e, var8.field_p, 2, 2, qj.field_l, -13, param3, param0, param2, uo.field_d, 306);
+          il.a(param4, to.field_e, var8.field_p, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
           return;
         }
         if (!this.b((byte) -95)) {
@@ -143,7 +143,7 @@ final class jk extends ki {
           hh.a(jg.field_a, -13, 2, var9, -8562, param3, ig.field_P);
           var9.a(this.field_m, param3, (byte) 78);
         }
-        il.a(param4, to.field_e, var9.field_p, 2, 2, qj.field_l, -13, param3, param0, param2, uo.field_d, 306);
+        il.a(param4, to.field_e, var9.field_p, 2, 2, GameplayScreen.field_l, -13, param3, param0, param2, uo.field_d, 306);
     }
 
     final void a(boolean param0, int param1, int param2, int param3, int param4) {

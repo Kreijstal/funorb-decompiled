@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl {
+final class NodeDeque {
     static boolean[][] field_a;
     static String field_c;
     static int field_d;
-    nm field_e;
-    private nm field_b;
+    IntrusiveNode sentinel;
+    private IntrusiveNode cursor;
 
     final static void a(int param0, int param1) {
         if (param0 <= 11) {
@@ -15,17 +15,17 @@ final class vl {
         hb.field_x = 1000000000L / (long)param1;
     }
 
-    final nm f(int param0) {
-        nm var2 = this.field_e.field_b;
-        if (this.field_e == var2) {
-          this.field_b = null;
+    final IntrusiveNode last(int obfuscationGuard) {
+        IntrusiveNode var2 = this.sentinel.previous;
+        if (this.sentinel == var2) {
+          this.cursor = null;
           return null;
         }
-        if (param0 == 0) {
-          this.field_b = var2.field_b;
+        if (obfuscationGuard == 0) {
+          this.cursor = var2.previous;
           return var2;
         }
-        return (nm) null;
+        return (IntrusiveNode) null;
     }
 
     final static String a(int param0, String param1, int param2) {
@@ -92,7 +92,7 @@ final class vl {
 
     public static void b(byte param0) {
         if (param0 != 100) {
-          vl.a(false, 28);
+          NodeDeque.a(false, 28);
           field_c = null;
           field_a = (boolean[][]) null;
           return;
@@ -101,93 +101,93 @@ final class vl {
         field_a = (boolean[][]) null;
     }
 
-    final void a(boolean param0, nm param1) {
+    final void addFirst(boolean obfuscationGuard, IntrusiveNode node) {
         try {
-          if (param1.field_b != null) {
-            param1.b((byte) 111);
+          if (node.previous != null) {
+            node.unlink((byte) 111);
           }
-          param1.field_b = this.field_e;
-          param1.field_e = this.field_e.field_e;
-          param1.field_b.field_e = param1;
-          if (!param0) {
-            vl.a(107, 77);
+          node.previous = this.sentinel;
+          node.next = this.sentinel.next;
+          node.previous.next = node;
+          if (!obfuscationGuard) {
+            NodeDeque.a(107, 77);
           }
-          param1.field_e.field_b = param1;
+          node.next.previous = node;
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "vl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "vl.F(" + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
-    final nm d(int param0) {
-        nm var2 = this.field_e.field_e;
-        if (var2 == this.field_e) {
-          this.field_b = null;
+    final IntrusiveNode first(int obfuscationGuard) {
+        IntrusiveNode var2 = this.sentinel.next;
+        if (var2 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
-        this.field_b = var2.field_e;
-        if (param0 < -6) {
+        this.cursor = var2.next;
+        if (obfuscationGuard < -6) {
           return var2;
         }
-        nm var3 = (nm) null;
-        this.a((nm) null, (byte) 60);
+        IntrusiveNode var3 = (IntrusiveNode) null;
+        this.addLast((IntrusiveNode) null, (byte) 60);
         return var2;
     }
 
-    final int e(int param0) {
+    final int size(int obfuscationGuard) {
         int var2 = 0;
-        nm var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
-        nm var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         int var2Lifetime1;
-        if (param0 >= 117) {
+        if (obfuscationGuard >= 117) {
           var2 = 0;
-          var3 = this.field_e.field_e;
-          while (this.field_e != var3) {
+          var3 = this.sentinel.next;
+          while (this.sentinel != var3) {
             var2++;
-            var3 = var3.field_e;
+            var3 = var3.next;
           }
           return var2;
         }
         field_a = (boolean[][]) null;
         var2Lifetime1 = 0;
-        var3Lifetime1 = this.field_e.field_e;
-        while (this.field_e != var3Lifetime1) {
+        var3Lifetime1 = this.sentinel.next;
+        while (this.sentinel != var3Lifetime1) {
           var2Lifetime1++;
-          var3Lifetime1 = var3Lifetime1.field_e;
+          var3Lifetime1 = var3Lifetime1.next;
         }
         return var2Lifetime1;
     }
 
-    final void a(nm param0, byte param1) {
+    final void addLast(IntrusiveNode node, byte obfuscationGuard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param0.field_b) {
-            param0.b((byte) 111);
+          if (null != node.previous) {
+            node.unlink((byte) 111);
           }
-          param0.field_b = this.field_e.field_b;
-          param0.field_e = this.field_e;
-          param0.field_b.field_e = param0;
-          param0.field_e.field_b = param0;
-          if (param1 == 3) {
+          node.previous = this.sentinel.previous;
+          node.next = this.sentinel;
+          node.previous.next = node;
+          node.next.previous = node;
+          if (obfuscationGuard == 3) {
             return;
           }
-          this.c(-52);
+          this.removeFirst(-52);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
           stackIn_8_1 = new StringBuilder().append("vl.H(");
-          if (param0 == null) {
+          if (node == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -201,68 +201,68 @@ final class vl {
         wi.field_j.a(pk.field_h, 0);
         wi.field_j.a(de.field_t, 0);
         int var2 = -67 / ((1 - param1) / 63);
-        de.field_t.a(vn.field_A, 0);
+        de.field_t.a(Ball.field_A, 0);
         de.field_t.a(nd.field_a, 0);
         kj.a(true, param0);
     }
 
-    final boolean a(boolean param0) {
-        if (param0) {
+    final boolean isEmpty(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           return false;
         }
-        return this.field_e == this.field_e.field_e ? true : false;
+        return this.sentinel == this.sentinel.next ? true : false;
     }
 
-    final nm a(byte param0) {
-        nm var2 = this.field_b;
-        if (var2 == this.field_e) {
-          this.field_b = null;
+    final IntrusiveNode next(byte obfuscationGuard) {
+        IntrusiveNode var2 = this.cursor;
+        if (var2 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
-        if (param0 == 116) {
-          this.field_b = var2.field_e;
+        if (obfuscationGuard == 116) {
+          this.cursor = var2.next;
           return var2;
         }
-        return (nm) null;
+        return (IntrusiveNode) null;
     }
 
-    final nm a(int param0) {
-        nm var2 = this.field_e.field_b;
-        if (var2 != this.field_e) {
-          int var3 = 107 / ((51 - param0) / 59);
-          var2.b((byte) 111);
+    final IntrusiveNode removeLast(int obfuscationGuard) {
+        IntrusiveNode var2 = this.sentinel.previous;
+        if (var2 != this.sentinel) {
+          int var3 = 107 / ((51 - obfuscationGuard) / 59);
+          var2.unlink((byte) 111);
           return var2;
         }
         return null;
     }
 
-    final void c(byte param0) {
+    final void clear(byte obfuscationGuard) {
         int var3;
-        nm var5;
-        nm var4;
+        IntrusiveNode var5;
+        IntrusiveNode var4;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (param0 <= -43) {
+        if (obfuscationGuard <= -43) {
           while (true) {
-            var4 = this.field_e.field_e;
-            if (this.field_e != var4) {
-              var4.b((byte) 111);
+            var4 = this.sentinel.next;
+            if (this.sentinel != var4) {
+              var4.unlink((byte) 111);
               continue;
             }
             break;
           }
-          this.field_b = null;
+          this.cursor = null;
           return;
         }
-        this.e(115);
+        this.size(115);
         while (true) {
-          var5 = this.field_e.field_e;
-          if (this.field_e != var5) {
-            var5.b((byte) 111);
+          var5 = this.sentinel.next;
+          if (this.sentinel != var5) {
+            var5.unlink((byte) 111);
             continue;
           }
           break;
         }
-        this.field_b = null;
+        this.cursor = null;
         return;
     }
 
@@ -282,7 +282,7 @@ final class vl {
               if (param1 <= -42) {
                 return;
               }
-              vl.a(false, -57);
+              NodeDeque.a(false, -57);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,32 +309,32 @@ final class vl {
         }
     }
 
-    final nm a(byte param0, nm param1) {
-        nm var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        nm stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 94) {
-            this.field_b = (nm) null;
+            this.cursor = (IntrusiveNode) null;
           }
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_e.field_e;
+            var3 = this.sentinel.next;
           }
-          if (var3 != this.field_e) {
-            this.field_b = var3.field_e;
+          if (var3 != this.sentinel) {
+            this.cursor = var3.next;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
-          this.field_b = null;
+          this.cursor = null;
           stackIn_7_0 = null;
-          return (nm) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -349,13 +349,13 @@ final class vl {
         }
     }
 
-    final nm c(int param0) {
-        if (param0 != 3) {
-          return (nm) null;
+    final IntrusiveNode removeFirst(int obfuscationGuard) {
+        if (obfuscationGuard != 3) {
+          return (IntrusiveNode) null;
         }
-        nm var2 = this.field_e.field_e;
-        if (this.field_e != var2) {
-          var2.b((byte) 111);
+        IntrusiveNode var2 = this.sentinel.next;
+        if (this.sentinel != var2) {
+          var2.unlink((byte) 111);
           return var2;
         }
         return null;
@@ -372,21 +372,21 @@ final class vl {
         }
     }
 
-    final nm b(int param0) {
-        int var2 = 23 % ((param0 + 65) / 45);
-        nm var3 = this.field_b;
-        if (this.field_e == var3) {
-          this.field_b = null;
+    final IntrusiveNode previous(int obfuscationGuard) {
+        int var2 = 23 % ((obfuscationGuard + 65) / 45);
+        IntrusiveNode var3 = this.cursor;
+        if (this.sentinel == var3) {
+          this.cursor = null;
           return null;
         }
-        this.field_b = var3.field_b;
+        this.cursor = var3.previous;
         return var3;
     }
 
-    public vl() {
-        this.field_e = new nm();
-        this.field_e.field_b = this.field_e;
-        this.field_e.field_e = this.field_e;
+    public NodeDeque() {
+        this.sentinel = new IntrusiveNode();
+        this.sentinel.previous = this.sentinel;
+        this.sentinel.next = this.sentinel;
     }
 
     static {

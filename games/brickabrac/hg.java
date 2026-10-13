@@ -6,7 +6,7 @@ final class hg {
     int field_c;
     static String field_b;
     int field_f;
-    static vl field_a;
+    static NodeDeque field_a;
     int field_d;
     int field_h;
     static int field_e;

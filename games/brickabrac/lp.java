@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lp extends fe implements en {
-    static vl field_wb;
+    static NodeDeque field_wb;
     private boolean field_Bb;
     private boolean field_vb;
     private boolean field_tb;
@@ -12,7 +12,7 @@ class lp extends fe implements en {
     static mh field_Ab;
     static qh field_xb;
     private dh field_sb;
-    static gf field_rb;
+    static GameScreen field_rb;
     static tg field_ub;
 
     final boolean a(int param0, byte param1, oc param2, char param3) {
@@ -28,7 +28,7 @@ class lp extends fe implements en {
             return true;
           }
           if (param1 != 110) {
-            field_rb = (gf) null;
+            field_rb = (GameScreen) null;
           }
           stackIn_7_0 = super.a(param0, (byte) 110, param2, param3);
           return stackIn_7_0;
@@ -165,7 +165,7 @@ class lp extends fe implements en {
               var6.a(param1, ue.field_f, 8);
             }
           } else {
-            var6.a(false, vn.field_H, 7);
+            var6.a(false, Ball.field_H, 7);
           }
           this.b((byte) 125, var6);
           return;
@@ -246,7 +246,7 @@ class lp extends fe implements en {
     }
 
     static {
-        field_wb = new vl();
+        field_wb = new NodeDeque();
         field_xb = new qh();
     }
 }

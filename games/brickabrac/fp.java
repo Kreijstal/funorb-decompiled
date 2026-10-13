@@ -86,9 +86,9 @@ final class fp extends lh {
         super(14, 180, 460, 155, 35, be.field_o);
     }
 
-    final void b(byte param0) {
-        super.b((byte) -119);
-        if (param0 > -14) {
+    final void drawScreen(byte obfuscationGuard) {
+        super.drawScreen((byte) -119);
+        if (obfuscationGuard > -14) {
           return;
         }
         al.a(this.field_a, 19);

@@ -17,7 +17,7 @@ final class cn {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = (i) (aa.field_a.c(3));
+          var9 = (i) (aa.field_a.removeFirst(3));
           if (var9 == null) {
             var9 = new i();
           }
@@ -45,12 +45,12 @@ final class cn {
         }
     }
 
-    final static void a(ul param0, j param1, int param2, int param3, int param4) {
+    final static void a(ul param0, PlayerBoard param1, int param2, int param3, int param4) {
         try {
           nn.field_g.b(param0.field_o, (param0.field_i >> 8) + param3, (param0.field_n >> 8) + param4 + nn.field_g.field_B, 0, -1, 256 * param0.field_q / 50);
           if (param2 != 10030) {
-            j var6 = (j) null;
-            cn.a((ul) null, (j) null, -6, -71, 111);
+            PlayerBoard var6 = (PlayerBoard) null;
+            cn.a((ul) null, (PlayerBoard) null, -6, -71, 111);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "cn.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -62,8 +62,8 @@ final class cn {
         field_a = (byte[][]) null;
         field_b = null;
         if (param0 < 97) {
-          j var2 = (j) null;
-          cn.a((ul) null, (j) null, 41, -50, 10);
+          PlayerBoard var2 = (PlayerBoard) null;
+          cn.a((ul) null, (PlayerBoard) null, 41, -50, 10);
         }
     }
 

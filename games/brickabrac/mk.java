@@ -204,7 +204,7 @@ final class mk {
     }
 
     static {
-        field_b = vn.d(8);
+        field_b = Ball.d(8);
         field_a = "Wipe out: cancels out any positive power-ups.";
     }
 }

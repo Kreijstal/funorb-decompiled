@@ -24,18 +24,18 @@ final class cd {
           var1 = ue.a(false);
           var3 = -ob.field_G + var1;
           if (var3 > 30000L) {
-            qj.field_h = 0;
+            GameplayScreen.field_h = 0;
             ob.field_G = var1;
             return true;
           }
           var5 = 3000;
-          if (7 <= qj.field_h) {
+          if (7 <= GameplayScreen.field_h) {
             var5 = 12000;
           } else {
-            if (5 <= qj.field_h) {
+            if (5 <= GameplayScreen.field_h) {
               var5 = 9000;
             } else {
-              if (qj.field_h >= 3) {
+              if (GameplayScreen.field_h >= 3) {
                 var5 = 6000;
               }
             }
@@ -44,25 +44,25 @@ final class cd {
             return false;
           }
           ob.field_G = var1;
-          qj.field_h = qj.field_h + 1;
+          GameplayScreen.field_h = GameplayScreen.field_h + 1;
           return true;
         }
         field_d = (mh) null;
         var1Lifetime1 = ue.a(false);
         var3Lifetime1 = -ob.field_G + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
-          qj.field_h = 0;
+          GameplayScreen.field_h = 0;
           ob.field_G = var1Lifetime1;
           return true;
         }
         var5Lifetime1 = 3000;
-        if (7 <= qj.field_h) {
+        if (7 <= GameplayScreen.field_h) {
           var5Lifetime1 = 12000;
         } else {
-          if (5 <= qj.field_h) {
+          if (5 <= GameplayScreen.field_h) {
             var5Lifetime1 = 9000;
           } else {
-            if (qj.field_h >= 3) {
+            if (GameplayScreen.field_h >= 3) {
               var5Lifetime1 = 6000;
             }
           }
@@ -71,7 +71,7 @@ final class cd {
           return false;
         }
         ob.field_G = var1Lifetime1;
-        qj.field_h = qj.field_h + 1;
+        GameplayScreen.field_h = GameplayScreen.field_h + 1;
         return true;
     }
 

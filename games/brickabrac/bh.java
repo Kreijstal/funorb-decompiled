@@ -11,7 +11,7 @@ final class bh extends fe {
 
     final static void m(int param0) {
         ob.field_G = ue.a(false);
-        qj.field_h = 0;
+        GameplayScreen.field_h = 0;
         if (param0 >= -58) {
           bh.m(-3);
         }

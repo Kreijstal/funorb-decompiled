@@ -15,7 +15,7 @@ final class sk extends h {
 
     final static void a(String[] args, int param1, oi param2, int param3, boolean param4, int param5) {
         int var8 = 0;
-        qj stackIn_10_0 = null;
+        GameplayScreen stackIn_10_0 = null;
         boolean stackIn_10_1 = false;
         boolean stackIn_11_2 = false;
         RuntimeException stackIn_15_0 = null;
@@ -53,7 +53,7 @@ final class sk extends h {
             var7[var8] = hi.field_w.b(97);
           }
           var15 = id.a(hi.field_w, false);
-          pe.field_o = new qj(args, -1, var6_int, param2, var12, var15);
+          pe.field_o = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
           pe.field_o.a((byte) 119, param1);
           pe.field_o.field_q = true;
           stackIn_10_0 = pe.field_o;
@@ -117,7 +117,7 @@ final class sk extends h {
           }
           if (eb.field_l) {
             fj.field_Ub = null;
-            lp.field_wb.c((byte) -121);
+            lp.field_wb.clear((byte) -121);
             var9 = mk.field_b;
             var7 = var9;
             var4 = var7;
@@ -192,7 +192,7 @@ final class sk extends h {
         try {
           var2 = new l(param1, param1);
           var3 = 30 % ((param0 - 58) / 43);
-          wd.field_v.a(var2, (byte) 3);
+          wd.field_v.addLast(var2, (byte) 3);
           ob.field_J.b(param1);
           stackIn_1_0 = var2;
           return stackIn_1_0;

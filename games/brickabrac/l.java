@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class l extends nm {
+final class l extends IntrusiveNode {
     static wp field_m;
     int field_i;
     kl field_j;
     static volatile int field_l;
     static String field_k;
-    nm field_n;
+    IntrusiveNode field_n;
 
     final static void a(int param0, int param1, pb param2, int param3, int param4, jp param5) {
         try {
@@ -82,7 +82,7 @@ final class l extends nm {
             return stackIn_13_0;
           }
           if (5 == param2) {
-            stackIn_17_0 = rd.a(on.field_z, new String[]{param1}, (byte) 103);
+            stackIn_17_0 = rd.a(Brick.field_z, new String[]{param1}, (byte) 103);
             return stackIn_17_0;
           }
           if (param2 == 6) {
@@ -127,7 +127,7 @@ final class l extends nm {
         }
     }
 
-    l(kl param0, nm param1) {
+    l(kl param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
           this.field_i = param0.g();

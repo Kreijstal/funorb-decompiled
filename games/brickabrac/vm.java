@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vm extends nm {
+final class vm extends IntrusiveNode {
     byte[] field_j;
     si field_i;
 

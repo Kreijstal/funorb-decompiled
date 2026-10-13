@@ -32,10 +32,10 @@ final class tf {
                 param0 = gi.field_u;
               }
               param2 = 2;
-              eo.field_k.a(70, gf.field_d);
+              eo.field_k.a(70, GameScreen.field_d);
             }
             if (param2 == 10) {
-              bn.c(116);
+              RectangleBody.c(116);
               var3_int = 0;
             }
             if (var3_int != 0) {
@@ -123,7 +123,7 @@ final class tf {
               var13.field_d.a(var14, 16, (byte) 90);
             } else {
               var11 = bm.field_d;
-              var12 = rd.a(vo.field_G, new String[]{param3}, (byte) 103);
+              var12 = rd.a(Paddle.field_G, new String[]{param3}, (byte) 103);
               var11.field_d.a(var12, 15, (byte) 116);
             }
           }
@@ -158,7 +158,7 @@ final class tf {
           lb.g(0, 0, param2.field_i, param2.field_q, 16777215);
           int var6_int = -110 / ((param4 - 62) / 39);
           param5.c((-param5.field_x + param2.field_i) / 2, param2.field_q + (param0 - (param5.field_z - 5 / param3)));
-          la.a(0, 0, param2.field_i, param2.field_q, nm.field_h[param1], 11970969, 152);
+          la.a(0, 0, param2.field_i, param2.field_q, IntrusiveNode.field_h[param1], 11970969, 152);
           sc.b(-112);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "tf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

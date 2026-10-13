@@ -64,7 +64,7 @@ final class pi extends wq {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, int param3, ak param4, int param5) {
+    final static void a(byte param0, int param1, int param2, int param3, MultiplayerMatch param4, int param5) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         RuntimeException stackIn_74_0 = null;
@@ -72,13 +72,13 @@ final class pi extends wq {
         String stackIn_75_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        vo var7 = null;
+        Paddle var7 = null;
         int var8 = 0;
         int var9 = 0;
         double var10_double = 0.0;
         int var10 = 0;
         int var11 = 0;
-        vn var12_ref_vn = null;
+        Ball var12_ref_vn = null;
         ge var12_ref_ge = null;
         il var12_ref_il = null;
         int var12 = 0;
@@ -93,9 +93,9 @@ final class pi extends wq {
         int var21 = 0;
         Object var22 = null;
         Object var23 = null;
-        j var24 = null;
+        PlayerBoard var24 = null;
         Object var25 = null;
-        vn var26 = null;
+        Ball var26 = null;
         kc var27 = null;
         ul var28 = null;
         var22 = null;
@@ -103,9 +103,9 @@ final class pi extends wq {
         var25 = null;
         var21 = BrickABrac.field_J ? 1 : 0;
         try {
-          var24 = param4.field_l[param1];
-          var7 = var24.field_yb;
-          var8 = var24.field_mb;
+          var24 = param4.playerBoards[param1];
+          var7 = var24.paddle;
+          var8 = var24.boardWidth;
           var9 = var24.field_wb;
           lb.e(param5, param3, param5 + var8 / param2, var9 / param2 + param3);
           if (var24.field_z != null) {
@@ -117,12 +117,12 @@ final class pi extends wq {
             var10_double = 30.0 * Math.sin(var10_double) + 60.0;
             lb.d(param5, param3, var8 / param2, var9 - param2, 16724787, (int)var10_double);
           }
-          stackIn_8_0 = (((param4.field_g | param4.field_i | param4.field_a) & 1 << param1) == 0) ? 0 : 1;
+          stackIn_8_0 = (((param4.playerMaskTwo | param4.playerMaskOne | param4.playerMaskThree) & 1 << param1) == 0) ? 0 : 1;
           var10 = stackIn_8_0;
           if (var24.field_Z == 2 &&
             var10 == 0) {
-            var11 = var24.field_gb.e(127);
-            var12_ref_vn = (vn) (var24.field_gb.d(-7));
+            var11 = var24.field_gb.size(127);
+            var12_ref_vn = (Ball) (var24.field_gb.first(-7));
             while (var12_ref_vn != null) {
               var13 = var12_ref_vn.field_E.field_j;
               if (var12_ref_vn.field_C < 40) {
@@ -133,7 +133,7 @@ final class pi extends wq {
               var14 = stackIn_16_0;
               var15 = (var12_ref_vn.field_C + 3) * 256 / (var12_ref_vn.field_C + 6);
               var16 = var15 / (1 + var14);
-              var17 = var12_ref_vn.field_u;
+              var17 = var12_ref_vn.radius256;
               var18 = 0;
               while (var13 >= 0) {
                 if (var18 < var14) {
@@ -149,26 +149,26 @@ final class pi extends wq {
                 break;
               }
               if (var12_ref_vn.field_C >= 40) {
-                al.a((var12_ref_vn.field_u >> 8) / param2 + (param3 + (var12_ref_vn.field_m >> 8) / param2), 40 / param2, 256, sa.a(100 * de.field_x, -4097) * 10 >> 16, 123, 20 / param2, (var12_ref_vn.field_j >> 8) / param2 + param5 + (var12_ref_vn.field_u >> 8) / param2);
-                la.a((var12_ref_vn.field_j + var12_ref_vn.field_u >> 4) / param2 + (param5 << 4), (param3 << 4) + (var12_ref_vn.field_m + var12_ref_vn.field_u >> 4) / param2, (var12_ref_vn.field_u >> 3) / param2, 4, 3, lj.field_n, var24.field_F / 5);
+                al.a((var12_ref_vn.radius256 >> 8) / param2 + (param3 + (var12_ref_vn.y256 >> 8) / param2), 40 / param2, 256, sa.a(100 * de.field_x, -4097) * 10 >> 16, 123, 20 / param2, (var12_ref_vn.x256 >> 8) / param2 + param5 + (var12_ref_vn.radius256 >> 8) / param2);
+                la.a((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / param2 + (param5 << 4), (param3 << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / param2, (var12_ref_vn.radius256 >> 3) / param2, 4, 3, lj.field_n, var24.simulationTick / 5);
               }
               kq.a(var12_ref_vn, (byte) -119, param2, param5, param3);
-              var12_ref_vn = (vn) (var24.field_gb.a((byte) 116));
+              var12_ref_vn = (Ball) (var24.field_gb.next((byte) 116));
             }
-            var26 = (vn) (var24.field_K.d(-76));
+            var26 = (Ball) (var24.queuedBalls.first(-76));
             while (var26 != null) {
               kq.a(var26, (byte) -119, param2, param5, param3);
-              var26 = (vn) (var24.field_K.a((byte) 116));
+              var26 = (Ball) (var24.queuedBalls.next((byte) 116));
             }
-            var12_ref_ge = (ge) (var24.field_pb.d(-113));
+            var12_ref_ge = (ge) (var24.field_pb.first(-113));
             while (var12_ref_ge != null) {
-              we.field_b[var12_ref_ge.field_i].c(param5 + (var12_ref_ge.field_j >> 8) / param2, (var12_ref_ge.field_m >> 8) / param2 + param3);
-              var12_ref_ge = (ge) (var24.field_pb.a((byte) 116));
+              we.field_b[var12_ref_ge.typeId].c(param5 + (var12_ref_ge.x256 >> 8) / param2, (var12_ref_ge.y256 >> 8) / param2 + param3);
+              var12_ref_ge = (ge) (var24.field_pb.next((byte) 116));
             }
-            var12_ref_il = (il) (var24.field_C.d(-20));
+            var12_ref_il = (il) (var24.field_C.first(-20));
             while (var12_ref_il != null) {
-              la.a((var12_ref_il.field_j >> 4) / param2 + (param5 << 4), (var12_ref_il.field_m >> 4) / param2 + (param3 << 4), (var12_ref_il.field_u >> 4) / param2, var12_ref_il.field_v);
-              var12_ref_il = (il) (var24.field_C.a((byte) 116));
+              la.a((var12_ref_il.x256 >> 4) / param2 + (param5 << 4), (var12_ref_il.y256 >> 4) / param2 + (param3 << 4), (var12_ref_il.radius256 >> 4) / param2, var12_ref_il.field_v);
+              var12_ref_il = (il) (var24.field_C.next((byte) 116));
             }
           }
           if ((var24.field_Z == 2 ||
@@ -177,12 +177,12 @@ final class pi extends wq {
             var10 == 0) {
             oj.a(kb.a(param4, param1, 127, var24), var7, param2, param3, (byte) 107, var24, param5);
           }
-          var27 = (kc) (var24.field_x.d(-30));
+          var27 = (kc) (var24.field_x.first(-30));
           while (var27 != null) {
             var27.a(param2, param5, param3, true);
-            var27 = (kc) (var24.field_x.a((byte) 116));
+            var27 = (kc) (var24.field_x.next((byte) 116));
           }
-          if (param4.field_k == 1 &&
+          if (param4.playerCount == 1 &&
             var24.field_Z == 1) {
             var12 = 256;
             if (var24.field_P < 25) {
@@ -208,21 +208,21 @@ final class pi extends wq {
           if (var24.field_D != null) {
             jg.a(param5, var24, var24.field_D, param2, 25, param3);
           }
-          var28 = (ul) (var24.field_nb.d(-81));
+          var28 = (ul) (var24.field_nb.first(-81));
           if (param0 < 14) {
             return;
           }
           while (var28 != null) {
             cn.a(var28, var24, 10030, param5, param3);
-            var28 = (ul) (var24.field_nb.a((byte) 116));
+            var28 = (ul) (var24.field_nb.next((byte) 116));
           }
-          if (0 != (param4.field_a & 1 << param1)) {
+          if (0 != (param4.playerMaskThree & 1 << param1)) {
             cp.a(param5, var8, var9, (byte) 126, var24, param3, param2);
           }
-          if (0 != (1 << param1 & param4.field_g)) {
+          if (0 != (1 << param1 & param4.playerMaskTwo)) {
             bm.a(param5, param3, var9, var24, var8, param2, ci.field_s.toLowerCase(), (byte) 123);
           }
-          if ((param4.field_i & 1 << param1) != 0) {
+          if ((param4.playerMaskOne & 1 << param1) != 0) {
             bm.a(param5, param3, var9, var24, var8, param2, t.field_h.toLowerCase(), (byte) 76);
           }
           lb.a();

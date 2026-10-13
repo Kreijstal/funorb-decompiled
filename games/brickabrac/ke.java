@@ -68,7 +68,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           }
           var6 = this;
           synchronized (var6) {
-            qa.field_r = no.field_r;
+            qa.field_r = CircleBody.field_r;
           }
           this.f(-107);
           return;
@@ -225,7 +225,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          vi.a(-122, param0, 5, param2);
+          MovingBody.a(-122, param0, 5, param2);
           if (param1 != 39) {
             ke.a(false, (byte[]) null);
           }
@@ -512,7 +512,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          no.field_r = true;
+          CircleBody.field_r = true;
           qc.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -677,7 +677,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
           }
           kj.field_D.addFocusListener((java.awt.event.FocusListener) (this));
           kj.field_D.requestFocus();
-          no.field_r = true;
+          CircleBody.field_r = true;
           qa.field_r = true;
           qc.field_i = true;
           tn.field_A = param0;
@@ -729,7 +729,7 @@ public abstract class ke extends java.applet.Applet implements Runnable, java.aw
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          no.field_r = false;
+          CircleBody.field_r = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

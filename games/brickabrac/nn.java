@@ -234,7 +234,7 @@ final class nn {
                 }
                 var2 = nk.a("create_ineligible", (byte) 28);
                 if (var2 != null) {
-                  no.field_q = q.a(var2, (byte) 96);
+                  CircleBody.field_q = q.a(var2, (byte) 96);
                 }
                 var2 = nk.a("usernameprompt", (byte) 2);
                 if (var2 != null) {
@@ -326,7 +326,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_x_lost_con", (byte) -123);
                 if (var2 != null) {
-                  on.field_z = q.a(var2, (byte) 122);
+                  Brick.field_z = q.a(var2, (byte) 122);
                 }
                 var2 = nk.a("mu_x_cannot_join_full", (byte) 7);
                 if (null != var2) {
@@ -446,7 +446,7 @@ final class nn {
                 }
                 var2 = nk.a("mu_create_unrated", (byte) 8);
                 if (var2 != null) {
-                  ak.field_e = q.a(var2, (byte) 82);
+                  MultiplayerMatch.field_e = q.a(var2, (byte) 82);
                 }
                 var2 = nk.a("mu_options", (byte) -120);
                 if (var2 != null) {
@@ -690,7 +690,7 @@ final class nn {
                 }
                 var2 = nk.a("waiting_for_x_to_start_game", (byte) -127);
                 if (null != var2) {
-                  nm.field_a = q.a(var2, (byte) 88);
+                  IntrusiveNode.field_a = q.a(var2, (byte) 88);
                 }
                 var2 = nk.a("game_options_changed", (byte) -108);
                 if (null != var2) {
@@ -814,7 +814,7 @@ final class nn {
                 }
                 var2 = nk.a("show_players_in_xs_game", (byte) -123);
                 if (null != var2) {
-                  vo.field_G = q.a(var2, (byte) 99);
+                  Paddle.field_G = q.a(var2, (byte) 99);
                 }
                 var2 = nk.a("connecting_to_friend_server_twoline", (byte) -118);
                 if (null != var2) {
@@ -866,7 +866,7 @@ final class nn {
                 }
                 var2 = nk.a("dob_chatdisabled", (byte) -119);
                 if (var2 != null) {
-                  no.field_s = q.a(var2, (byte) 74);
+                  CircleBody.field_s = q.a(var2, (byte) 74);
                 }
                 var2 = nk.a("dob_enterforchat", (byte) 71);
                 if (var2 != null) {
@@ -982,7 +982,7 @@ final class nn {
                 }
                 var2 = nk.a("gameopt_youneedratedgames", (byte) 121);
                 if (null != var2) {
-                  on.field_F = q.a(var2, (byte) 100);
+                  Brick.field_F = q.a(var2, (byte) 100);
                 }
                 var2 = nk.a("gameopt_playerneeds1ratedgame", (byte) 66);
                 if (null != var2) {
@@ -1196,7 +1196,7 @@ final class nn {
                 }
                 var2 = nk.a("toserverlist", (byte) -125);
                 if (var2 != null) {
-                  vn.field_H = q.a(var2, (byte) 82);
+                  Ball.field_H = q.a(var2, (byte) 82);
                 }
                 var2 = nk.a("tocustomersupport", (byte) 112);
                 if (var2 != null) {
@@ -1264,7 +1264,7 @@ final class nn {
                 }
                 var2 = nk.a("connectionlost_reconnecting", (byte) 75);
                 if (null != var2) {
-                  gf.field_b = q.a(var2, (byte) 97);
+                  GameScreen.field_b = q.a(var2, (byte) 97);
                 }
                 var2 = nk.a("connectionlost_withreason", (byte) -122);
                 if (var2 != null) {
@@ -1926,7 +1926,7 @@ final class nn {
                 }
                 var2 = nk.a("waitingfor_soundeffects", (byte) 116);
                 if (var2 != null) {
-                  vi.field_n = q.a(var2, (byte) 111);
+                  MovingBody.field_n = q.a(var2, (byte) 111);
                 }
                 var2 = nk.a("waitingfor_music", (byte) 18);
                 if (var2 != null) {
@@ -2018,7 +2018,7 @@ final class nn {
                 }
                 var2 = nk.a("unpacking_levels", (byte) 78);
                 if (var2 != null) {
-                  vn.field_x = q.a(var2, (byte) 97);
+                  Ball.field_x = q.a(var2, (byte) 97);
                 }
                 var2 = nk.a("unpacking_languages", (byte) 15);
                 if (var2 != null) {
@@ -2486,7 +2486,7 @@ final class nn {
                 }
                 var2 = nk.a("mp_offerrematch", (byte) 110);
                 if (var2 != null) {
-                  bn.field_t = q.a(var2, (byte) 81);
+                  RectangleBody.field_t = q.a(var2, (byte) 81);
                 }
                 var2 = nk.a("mp_offerrematch_unrated", (byte) 45);
                 if (var2 != null) {
@@ -2686,7 +2686,7 @@ final class nn {
                 }
                 var2 = nk.a("rating_played", (byte) -128);
                 if (null != var2) {
-                  vl.field_c = q.a(var2, (byte) 101);
+                  NodeDeque.field_c = q.a(var2, (byte) 101);
                 }
                 var2 = nk.a("rating_won", (byte) -117);
                 if (var2 != null) {
@@ -3508,7 +3508,7 @@ final class nn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 17) {
-            no.field_p = new am(this.field_j.field_Eb, this.field_j.field_db, this.field_j.field_Ib, this.field_j.field_cb, param2, re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, tk.field_t, this.field_e, this.field_i);
+            CircleBody.field_p = new am(this.field_j.field_Eb, this.field_j.field_db, this.field_j.field_Ib, this.field_j.field_cb, param2, re.field_m, rf.field_c, am.field_Zb, ad.field_l, of.field_k, tk.field_t, this.field_e, this.field_i);
             return true;
           }
           if (param0 < 121) {

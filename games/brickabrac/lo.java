@@ -20,7 +20,7 @@ final class lo {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, j param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, PlayerBoard param7) {
         Object var8 = null;
         String var8_ref = null;
         RuntimeException var8_ref2 = null;

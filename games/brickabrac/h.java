@@ -59,25 +59,25 @@ abstract class h extends oc implements sd {
           if (param0 != 13894) {
             h.a(-92, -23);
           }
-          var2 = (l) (wd.field_v.d(param0 ^ -13940));
+          var2 = (l) (wd.field_v.first(param0 ^ -13940));
           while (var2 != null) {
-            if (!var2.field_n.b(0)) {
-              var2.b((byte) 111);
+            if (!var2.field_n.isLinked(0)) {
+              var2.unlink((byte) 111);
             } else {
               var2.field_j.e(ki.field_d * var2.field_i + 128 >> 8);
             }
-            var2 = (l) (wd.field_v.a((byte) 116));
+            var2 = (l) (wd.field_v.next((byte) 116));
           }
           if (jc.field_M != null) {
-            var2Lifetime1 = (l) (jc.field_M.d(param0 - 13977));
+            var2Lifetime1 = (l) (jc.field_M.first(param0 - 13977));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_n.b(0);
+              stackIn_14_0 = var2Lifetime1.field_n.isLinked(0);
               if (stackIn_14_0) {
                 var2Lifetime1.field_j.e(var2Lifetime1.field_i * ki.field_d + 128 >> 8);
               } else {
-                var2Lifetime1.b((byte) 111);
+                var2Lifetime1.unlink((byte) 111);
               }
-              var2Lifetime1 = (l) (jc.field_M.a((byte) 116));
+              var2Lifetime1 = (l) (jc.field_M.next((byte) 116));
             }
             return;
           }
@@ -455,7 +455,7 @@ abstract class h extends oc implements sd {
             param5 = false;
           }
           wp.a(124, param1, param5);
-          vo.a(param2, param5, 124);
+          Paddle.a(param2, param5, 124);
           param5 = false;
         }
         return param5;
@@ -625,15 +625,15 @@ abstract class h extends oc implements sd {
     }
 
     final static void g(byte param0) {
-        bn.field_q = new mh(0L, (mh) null);
+        RectangleBody.field_q = new mh(0L, (mh) null);
         if (param0 != -24) {
           return;
         }
         if (vd.field_e) {
-          bn.field_q.a(dn.field_N, 0);
+          RectangleBody.field_q.a(dn.field_N, 0);
         }
-        bn.field_q.a(vn.field_A, 0);
-        ap.field_b = new vj(fi.field_u, bn.field_q);
+        RectangleBody.field_q.a(Ball.field_A, 0);
+        ap.field_b = new vj(fi.field_u, RectangleBody.field_q);
         fe.field_gb = new mh(0L, (mh) null);
         fe.field_gb.a(ap.field_b.field_d, 0);
         fe.field_gb.a(jf.field_k, 0);

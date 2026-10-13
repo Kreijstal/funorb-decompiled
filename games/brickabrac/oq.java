@@ -50,12 +50,12 @@ class oq extends lh {
         }
     }
 
-    void b(byte param0) {
-        pe.field_o.b((byte) -116);
+    void drawScreen(byte obfuscationGuard) {
+        pe.field_o.drawScreen((byte) -116);
         lb.b(0, 0, 640, 480);
         this.g(102);
         pg.d(0);
-        if (param0 <= -14) {
+        if (obfuscationGuard <= -14) {
           this.a(0);
           return;
         }

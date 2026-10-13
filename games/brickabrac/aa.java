@@ -5,7 +5,7 @@ import java.util.*;
 
 final class aa {
     static jp field_b;
-    static vl field_a;
+    static NodeDeque field_a;
     static String field_c;
 
     public static void b(int param0) {
@@ -24,7 +24,7 @@ final class aa {
         if (param0 != 480) {
           return 109;
         }
-        return vo.field_x;
+        return Paddle.field_x;
     }
 
     final static void a(int param0, jp param1, boolean param2, int param3, pb param4, int param5) {
@@ -153,6 +153,6 @@ final class aa {
     static {
         field_b = new jp(270, 70);
         field_c = "Use this alternative as your account name";
-        field_a = new vl();
+        field_a = new NodeDeque();
     }
 }

@@ -45,14 +45,14 @@ final class nk {
               cp.a(false, 21543);
             }
           }
-          sm.field_b = vl.field_d;
+          sm.field_b = NodeDeque.field_d;
           if (param0 >= 20) {
             return;
           }
           field_c = (jp) null;
           return;
         }
-        if (vl.field_d != sm.field_b) {
+        if (NodeDeque.field_d != sm.field_b) {
           if (param0 >= 20) {
             return;
           }

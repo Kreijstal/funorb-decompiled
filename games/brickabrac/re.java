@@ -264,10 +264,10 @@ final class re {
           if (0 != var2) {
             if (var2 == 1) {
               var3 = var9.e(255);
-              var4 = (ln) (ie.field_v.d(-37));
+              var4 = (ln) (ie.field_v.first(-37));
               while (var4 != null) {
                 if (var3 != var4.field_m) {
-                  var4 = (ln) (ie.field_v.a((byte) 116));
+                  var4 = (ln) (ie.field_v.next((byte) 116));
                   continue;
                 }
                 break;
@@ -276,13 +276,13 @@ final class re {
                 hn.a((byte) 104);
                 return;
               }
-              var4.b((byte) 111);
+              var4.unlink((byte) 111);
               return;
             }
             rk.a("A1: " + eq.c((byte) -101), (Throwable) null, 123);
             hn.a((byte) 60);
           } else {
-            var3_ref_wj = (wj) (uc.field_q.d(-110));
+            var3_ref_wj = (wj) (uc.field_q.first(-110));
             if (var3_ref_wj == null) {
               hn.a((byte) 76);
               return;
@@ -299,7 +299,7 @@ final class re {
               hn.a((byte) 86);
               return;
             }
-            var3_ref_wj.b((byte) 111);
+            var3_ref_wj.unlink((byte) 111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

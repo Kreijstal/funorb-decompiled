@@ -182,9 +182,9 @@ final class n {
             ke.field_e.field_cb = 0;
             var6.field_Ib = 0;
             ba.field_v.field_Mb = pg.field_n.toUpperCase();
-            var7 = (ak.field_d.field_Ib + 2) / 2;
-            ke.field_e.a(40, -40 + ak.field_d.field_cb, 0, var7 - 2, (byte) 64);
-            dn.field_K.a(40, ak.field_d.field_cb - 40, var7, ak.field_d.field_Ib - var7, (byte) 64);
+            var7 = (MultiplayerMatch.field_d.field_Ib + 2) / 2;
+            ke.field_e.a(40, -40 + MultiplayerMatch.field_d.field_cb, 0, var7 - 2, (byte) 64);
+            dn.field_K.a(40, MultiplayerMatch.field_d.field_cb - 40, var7, MultiplayerMatch.field_d.field_Ib - var7, (byte) 64);
             if (1 == w.field_n.length &&
               w.field_n[0] == 2) {
               var8 = 0;
@@ -309,7 +309,7 @@ final class n {
           stackIn_73_0 = qa.field_w;
           stackIn_74_1 = (param1) && (!param2) && (!hc.field_c);
           ((mh) (Object) stackIn_73_0).a(stackIn_74_1, -15211);
-          stackIn_78_0 = ak.field_d;
+          stackIn_78_0 = MultiplayerMatch.field_d;
           stackIn_79_1 = (param1) && (!param2) && (!hc.field_c);
           ((mh) (Object) stackIn_78_0).a(stackIn_79_1, -15211);
           stackIn_83_0 = wi.field_j;

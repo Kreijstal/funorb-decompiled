@@ -118,10 +118,10 @@ final class wl extends d {
         try {
           var14 = jl.field_e;
           var2 = var14.l(255);
-          var3 = (cq) (fk.field_f.d(-7));
+          var3 = (cq) (fk.field_f.first(-7));
           while (var3 != null) {
             if (var3.field_m != var2) {
-              var3 = (cq) (fk.field_f.a((byte) 116));
+              var3 = (cq) (fk.field_f.next((byte) 116));
               continue;
             }
             break;
@@ -198,7 +198,7 @@ final class wl extends d {
             field_Q = (String) null;
           }
           var3.field_v = true;
-          var3.b((byte) 111);
+          var3.unlink((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -278,7 +278,7 @@ final class wl extends d {
                 var11_ref_String = "";
               }
               k.field_h.a(var11_ref_String, -1);
-              dq.a(k.field_h, tq.field_f, vn.field_F, (byte) -72, to.field_g);
+              dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
               k.field_h.c(-var10 + k.field_h.field_l, 255);
             } else {
               tq.field_f.field_l = 0;
@@ -303,7 +303,7 @@ final class wl extends d {
               k.field_h.a(-10, 16);
               k.field_h.field_l = k.field_h.field_l + 1;
               var9 = k.field_h.field_l;
-              dq.a(k.field_h, tq.field_f, vn.field_F, (byte) -72, to.field_g);
+              dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
               k.field_h.d((byte) 119, k.field_h.field_l - var9);
             }
             cr.a(-1, 10000);
@@ -439,21 +439,21 @@ final class wl extends d {
         RuntimeException var2_ref = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          param0.b((byte) 111);
+          param0.unlink((byte) 111);
           if (param1 != 17574) {
             var4 = (id) null;
             wl.a((id) null, 48);
           }
-          var2 = (id) (ua.field_c.d(-69));
+          var2 = (id) (ua.field_c.first(-69));
           while (var2 != null) {
             if (var2.a(param0, param1 ^ -18005)) {
-              var2 = (id) (ua.field_c.a((byte) 116));
+              var2 = (id) (ua.field_c.next((byte) 116));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            ua.field_c.a(param0, (byte) 3);
+            ua.field_c.addLast(param0, (byte) 3);
           } else {
             il.a(param0, 56, var2);
           }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hd {
-    static gf field_d;
+    static GameScreen field_d;
     static mh field_c;
     static og field_a;
     static String field_b;

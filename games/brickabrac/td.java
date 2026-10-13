@@ -56,7 +56,7 @@ final class td extends ki {
         mc.field_f = pl.a("volcanic", "volcanic_small", (byte) -77, i.field_m);
         cg.field_q = jh.a(0, pb.field_j);
         gq.field_Sb = jh.a(0, cp.field_I);
-        bn.field_p = jh.a(0, se.field_k);
+        RectangleBody.field_p = jh.a(0, se.field_k);
         kg.field_a[0] = cr.a("volcanic", i.field_m, "volcanic_caps", 2);
         np.field_c[0] = cr.a("volcanic", i.field_m, "volcanic_segs", 2);
         uj.field_e[0] = pl.a("volcanic", "volcanic_centre", (byte) -67, i.field_m);
@@ -112,7 +112,7 @@ final class td extends ki {
         }
     }
 
-    final static int a(vl[] param0, byte[] param1, kq param2, vl param3, ga param4, int param5) {
+    final static int a(NodeDeque[] param0, byte[] param1, kq param2, NodeDeque param3, ga param4, int param5) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -192,7 +192,7 @@ final class td extends ki {
         } else {
           var6 = kd.a(this.field_m, param3, (byte) -111);
           if (!var6.a((byte) -84, param3, this.field_m)) {
-            pi.a(bn.field_p, var6, param3, 2, (byte) 119, -14);
+            pi.a(RectangleBody.field_p, var6, param3, 2, (byte) 119, -14);
             var6.a(this.field_m, param3, (byte) 78);
           }
           ko.a(-113, -14, cg.field_q, param4, var6.field_p, param3, 306, 2, param2, param0, gq.field_Sb);

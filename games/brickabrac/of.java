@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends gf {
+final class of extends GameScreen {
     static ni field_k;
     static String field_j;
     static String field_h;
@@ -11,16 +11,16 @@ final class of extends gf {
         super(-2);
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         lb.d();
-        if (param0 > -14) {
+        if (obfuscationGuard > -14) {
           of.a(-57);
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        if (param2 > -52) {
-          this.a(true, false, -69);
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
+        if (obfuscationGuard > -52) {
+          this.advanceScreen(true, false, -69);
         }
     }
 
@@ -45,8 +45,8 @@ final class of extends gf {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
-        if (param1 < 98) {
+    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
+        if (keyCode < 98) {
           field_j = (String) null;
           return false;
         }

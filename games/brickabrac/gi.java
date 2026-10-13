@@ -198,7 +198,7 @@ final class gi extends ki {
     final static void g(int param0) {
         int var1 = co.a((byte) -53);
         int var2 = ba.b(true);
-        vg.field_c.a(var1 + (un.field_a << 1), var2 + (vo.field_A << 1), nc.field_k - un.field_a, false, mi.field_d - vo.field_A);
+        vg.field_c.a(var1 + (un.field_a << 1), var2 + (Paddle.field_A << 1), nc.field_k - un.field_a, false, mi.field_d - Paddle.field_A);
         jq.d(-16085);
         if (param0 == 11184810) {
           return;

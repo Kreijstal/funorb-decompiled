@@ -256,7 +256,7 @@ final class ko {
           return;
         }
         if (!(ml.field_b <= 0)) {
-          on.e(param0 ^ 32040);
+          Brick.e(param0 ^ 32040);
         }
         if (!(pe.field_j <= 0)) {
           co.a(pe.field_j, false);

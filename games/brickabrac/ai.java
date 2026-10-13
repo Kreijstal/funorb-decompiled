@@ -266,7 +266,7 @@ final class ai extends ki {
           sh.field_d = new mh(0L, param2);
           gp.field_d.a(sh.field_d, 0);
           var17 = new mh(0L, (mh) null);
-          var17.field_bb = new vl();
+          var17.field_bb = new NodeDeque();
           i.field_q = new mm(0L, var17, param5, param10);
           sh.field_d.a(i.field_q, param8 - 61);
           kc.field_n = new mh(0L, param3);

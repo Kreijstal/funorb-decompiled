@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kq extends nm {
+final class kq extends IntrusiveNode {
     int field_p;
     static th field_i;
     static String field_n;
@@ -9,7 +9,7 @@ final class kq extends nm {
     static jp field_o;
     static String field_m;
     static String field_l;
-    static vl field_j;
+    static NodeDeque field_j;
 
     public static void a(byte param0) {
         field_n = null;
@@ -158,7 +158,7 @@ final class kq extends nm {
         }
     }
 
-    final static void a(vn param0, byte param1, int param2, int param3, int param4) {
+    final static void a(Ball param0, byte param1, int param2, int param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -170,12 +170,12 @@ final class kq extends nm {
         try {
           if (0 >= param0.field_v) {
             if (param0.field_J <= 0) {
-              gr.field_c.c(param3 + (param0.field_j >> 8) / param2, (param0.field_m >> 8) / param2 + param4);
+              gr.field_c.c(param3 + (param0.x256 >> 8) / param2, (param0.y256 >> 8) / param2 + param4);
             } else {
-              gr.field_c.b(param3 + (param0.field_j >> 8) / param2, param4 + (param0.field_m >> 8) / param2, 128);
+              gr.field_c.b(param3 + (param0.x256 >> 8) / param2, param4 + (param0.y256 >> 8) / param2, 128);
             }
           } else {
-            jc.field_J.c((param0.field_j >> 8) / param2 + param3, param4 + (param0.field_m >> 8) / param2);
+            jc.field_J.c((param0.x256 >> 8) / param2 + param3, param4 + (param0.y256 >> 8) / param2);
           }
           if (param1 != -119) {
             var7 = (Object) null;
@@ -206,6 +206,6 @@ final class kq extends nm {
         field_k = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_m = "<%0> has not yet unlocked this option for use.";
         field_l = "Email (Login):";
-        field_j = new vl();
+        field_j = new NodeDeque();
     }
 }

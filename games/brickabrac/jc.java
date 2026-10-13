@@ -7,7 +7,7 @@ abstract class jc extends ib {
     static boolean field_H;
     private int field_L;
     private cp field_I;
-    static vl field_M;
+    static NodeDeque field_M;
     boolean field_N;
 
     private final int h(byte param0) {
@@ -16,7 +16,7 @@ abstract class jc extends ib {
         RuntimeException var2 = null;
         try {
           if (param0 != 90) {
-            field_M = (vl) null;
+            field_M = (NodeDeque) null;
           }
           if (this.field_N) {
             stackIn_9_0 = (this.field_I.g(-125) != this) ? 0 : 256;
@@ -60,7 +60,7 @@ abstract class jc extends ib {
           field_J = null;
           field_M = null;
           if (param0 != -17) {
-            field_M = (vl) null;
+            field_M = (NodeDeque) null;
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "jc.W(" + param0 + ')');

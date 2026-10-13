@@ -42,14 +42,14 @@ final class cg extends dj {
     final static void b(int param0) {
         fo.field_i = lb.field_d;
         kp.field_a = lb.field_c;
-        on.e(-67);
+        Brick.e(-67);
         ap.field_b.a(fe.field_gb.field_Ib, 0, 80, 0, fe.field_gb.field_cb - 40 - 2);
-        dn.field_N.a(np.field_a, 0, 0, bn.field_q.field_Ib, (byte) 64);
+        dn.field_N.a(np.field_a, 0, 0, RectangleBody.field_q.field_Ib, (byte) 64);
         if (param0 <= 16) {
           field_l = true;
         }
         int var1 = np.field_a + 2;
-        vn.field_A.a(-(!vd.field_e ? 0 : var1) + bn.field_q.field_cb, !vd.field_e ? 0 : var1, 0, bn.field_q.field_Ib, (byte) 64);
+        Ball.field_A.a(-(!vd.field_e ? 0 : var1) + RectangleBody.field_q.field_cb, !vd.field_e ? 0 : var1, 0, RectangleBody.field_q.field_Ib, (byte) 64);
         s.b(124);
         jf.field_k.a(40, fe.field_gb.field_cb - 40, 0, fe.field_gb.field_Ib, (byte) 64);
         sc.field_b.a(30, 0, 0, rm.field_a.field_Ib, (byte) 64);
@@ -102,8 +102,8 @@ final class cg extends dj {
           this.field_r = this.field_r + (-this.field_r + this.field_m);
         }
         if (param0 != 1) {
-          vl var3 = (vl) null;
-          cg.a((vl[]) null, (byte) 16, (vl) null, true);
+          NodeDeque var3 = (NodeDeque) null;
+          cg.a((NodeDeque[]) null, (byte) 16, (NodeDeque) null, true);
         }
         this.field_k = 0L;
     }
@@ -141,15 +141,15 @@ final class cg extends dj {
         return var6 / (long)this.field_j;
     }
 
-    final static void a(vl[] param0, byte param1, vl param2, boolean param3) {
+    final static void a(NodeDeque[] param0, byte param1, NodeDeque param2, boolean param3) {
         int incrementValue$1 = 0;
         int var4_int = 0;
         cl[] var5 = null;
         int var6 = 0;
         cl var7 = null;
-        on var8 = null;
+        Brick var8 = null;
         int var9 = 0;
-        vl var10 = null;
+        NodeDeque var10 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -160,15 +160,15 @@ final class cg extends dj {
         int var6Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = param2.e(param1 ^ 88);
+          var4_int = param2.size(param1 ^ 88);
           var5 = new cl[var4_int];
           var6 = 0;
-          var7 = (cl) (param2.d(-79));
+          var7 = (cl) (param2.first(-79));
           while (var7 != null) {
             incrementValue$1 = var6;
             var6++;
             var5[incrementValue$1] = var7;
-            var7 = (cl) (param2.a((byte) 116));
+            var7 = (cl) (param2.next((byte) 116));
           }
           var6Lifetime1 = 0;
           if (param1 != 35) {
@@ -176,12 +176,12 @@ final class cg extends dj {
           }
           while (var6Lifetime1 < param0.length) {
             var10 = param0[var6Lifetime1];
-            var8 = (on) (var10.d(param1 - 159));
+            var8 = (Brick) (var10.first(param1 - 159));
             while (var8 != null) {
               if ((var8.field_N & 4) != 0) {
                 var8.a(var5[var8.field_M], param3, 4);
               }
-              var8 = (on) (var10.a((byte) 116));
+              var8 = (Brick) (var10.next((byte) 116));
             }
             var6Lifetime1++;
           }

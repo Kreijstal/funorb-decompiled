@@ -8,7 +8,7 @@ final class na extends ug {
     private vb field_M;
     static nc[] field_L;
     static String field_N;
-    static vl field_Q;
+    static NodeDeque field_Q;
 
     final void a(int param0, int param1, int param2, byte param3, int param4) {
         super.a(param0, param1, param2, (byte) -119, param4);
@@ -165,7 +165,7 @@ final class na extends ug {
           return true;
         }
         if (param0 != -124) {
-          field_Q = (vl) null;
+          field_Q = (NodeDeque) null;
         }
         if (this.field_O.field_A != null &&
           this.field_O.field_A.length() != 0) {
@@ -215,7 +215,7 @@ final class na extends ug {
         mh stackIn_60_0 = null;
         boolean stackIn_61_1 = false;
         int var4;
-        on.e(-79);
+        Brick.e(-79);
         if (m.field_h >= 0) {
           dn.field_N.field_Mb = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);
@@ -264,7 +264,7 @@ final class na extends ug {
             pf.field_i != w.field_n[0]) {
             pf.field_i = w.field_n[0];
           }
-          pl.a(param3, on.field_O, pf.field_i, true, 0, (byte) -102);
+          pl.a(param3, Brick.field_O, pf.field_i, true, 0, (byte) -102);
         }
         if (0 != nh.field_a.field_L) {
           sc.field_c = false;
@@ -797,6 +797,6 @@ final class na extends ug {
 
     static {
         field_N = "Create a free account to start using this feature";
-        field_Q = new vl();
+        field_Q = new NodeDeque();
     }
 }

@@ -77,7 +77,7 @@ final class ja {
         field_a = (jp[][]) null;
     }
 
-    final static void a(byte param0, jp param1, int param2, int param3, j param4) {
+    final static void a(byte param0, jp param1, int param2, int param3, PlayerBoard param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;

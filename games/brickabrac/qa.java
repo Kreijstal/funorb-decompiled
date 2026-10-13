@@ -3,7 +3,7 @@
  */
 final class qa extends ki {
     static String field_s;
-    static vl field_t;
+    static NodeDeque field_t;
     static gk field_x;
     static mh field_w;
     static jp field_y;
@@ -220,7 +220,7 @@ final class qa extends ki {
 
     static {
         field_s = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
-        field_t = new vl();
+        field_t = new NodeDeque();
         field_v = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

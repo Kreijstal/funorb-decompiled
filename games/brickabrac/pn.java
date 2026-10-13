@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pn extends nm {
+final class pn extends IntrusiveNode {
     static mk field_i;
     int field_k;
     int field_n;
@@ -123,7 +123,7 @@ final class pn extends nm {
               var4 = var4 + var3 + var8Lifetime1;
               boolean decompiledSharedTail0 = !(um.field_e);
               if (!decompiledSharedTail0) {
-                var4 = "<col=999999>" + var4 + no.field_s + "</col>";
+                var4 = "<col=999999>" + var4 + CircleBody.field_s + "</col>";
                 var5 = "";
                 decompiledSharedTail0 = (var10 != 0);
               }

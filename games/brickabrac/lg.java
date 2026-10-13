@@ -3,7 +3,7 @@
  */
 class lg extends d {
     private String[] field_K;
-    private vl field_O;
+    private NodeDeque field_O;
     private gg field_N;
     static int field_L;
     static String field_M;
@@ -28,7 +28,7 @@ class lg extends d {
         int var16;
         int var7Lifetime1;
         var16 = BrickABrac.field_J ? 1 : 0;
-        this.field_O = new vl();
+        this.field_O = new NodeDeque();
         var2 = 0;
         var3 = (qe) ((Object) this.field_l);
         if (param0 != -1) {
@@ -69,7 +69,7 @@ class lg extends d {
             if (var10 != null) {
               ((gg) (var10)).field_k = var15;
             }
-            this.field_O.a(var15, (byte) 3);
+            this.field_O.addLast(var15, (byte) 3);
             var10 = var15;
           }
         }
@@ -132,7 +132,7 @@ class lg extends d {
         if (param1 != 0) {
           this.a(3, -6, -76, (byte) 116, -98);
         }
-        var4 = (gg) (this.field_O.d(param1 - 75));
+        var4 = (gg) (this.field_O.first(param1 - 75));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -144,7 +144,7 @@ class lg extends d {
             }
             var5 = var5.field_k;
           }
-          var4 = (gg) (this.field_O.a((byte) 116));
+          var4 = (gg) (this.field_O.next((byte) 116));
         }
         return null;
     }
@@ -242,7 +242,7 @@ class lg extends d {
     }
 
     final static void h(int param0) {
-        ob.field_E.c((byte) -114);
+        ob.field_E.clear((byte) -114);
         dl.field_f = param0;
     }
 

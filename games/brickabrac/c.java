@@ -92,7 +92,7 @@ final class c {
               na.a(param8, param3, -94, param2);
             }
             ke.field_e.field_S = 1;
-            ke.field_e.field_V = vo.field_C.field_V;
+            ke.field_e.field_V = Paddle.field_C.field_V;
             if (0 < pe.field_j) {
               n.a(param2, param8, param3, (byte) -76);
             }
@@ -102,11 +102,11 @@ final class c {
             if (hc.field_c &&
               o.field_e.field_jc <= o.field_e.field_cc) {
               fo.field_b.field_Qb.field_Mb = wg.field_d;
-              vn.field_A.field_eb = false;
+              Ball.field_A.field_eb = false;
               jh.a(true, fo.field_b.field_Rb);
             } else {
               fo.field_b.field_Qb.field_Mb = null;
-              vn.field_A.field_eb = true;
+              Ball.field_A.field_eb = true;
               ka.a(param4, fo.field_b, param2, param0, -108);
             }
           } else {
@@ -115,7 +115,7 @@ final class c {
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
               ke.field_e.field_S = 1;
-              ke.field_e.field_V = vo.field_C.field_V;
+              ke.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -125,16 +125,16 @@ final class c {
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
                 fo.field_b.field_Qb.field_Mb = wg.field_d;
-                vn.field_A.field_eb = false;
+                Ball.field_A.field_eb = false;
                 jh.a(true, fo.field_b.field_Rb);
               } else {
                 fo.field_b.field_Qb.field_Mb = null;
-                vn.field_A.field_eb = true;
+                Ball.field_A.field_eb = true;
                 ka.a(param4, fo.field_b, param2, param0, -108);
               }
             } else {
               ke.field_e.field_S = 1;
-              ke.field_e.field_V = vo.field_C.field_V;
+              ke.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -143,16 +143,16 @@ final class c {
               }
               if (!hc.field_c) {
                 fo.field_b.field_Qb.field_Mb = null;
-                vn.field_A.field_eb = true;
+                Ball.field_A.field_eb = true;
                 ka.a(param4, fo.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
                   fo.field_b.field_Qb.field_Mb = null;
-                  vn.field_A.field_eb = true;
+                  Ball.field_A.field_eb = true;
                   ka.a(param4, fo.field_b, param2, param0, -108);
                 } else {
                   fo.field_b.field_Qb.field_Mb = wg.field_d;
-                  vn.field_A.field_eb = false;
+                  Ball.field_A.field_eb = false;
                   jh.a(true, fo.field_b.field_Rb);
                 }
               }
@@ -180,7 +180,7 @@ final class c {
                 na.a(param8, param3, -94, param2);
               }
               ke.field_e.field_S = 1;
-              ke.field_e.field_V = vo.field_C.field_V;
+              ke.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -190,11 +190,11 @@ final class c {
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
                 fo.field_b.field_Qb.field_Mb = wg.field_d;
-                vn.field_A.field_eb = false;
+                Ball.field_A.field_eb = false;
                 jh.a(true, fo.field_b.field_Rb);
               } else {
                 fo.field_b.field_Qb.field_Mb = null;
-                vn.field_A.field_eb = true;
+                Ball.field_A.field_eb = true;
                 ka.a(param4, fo.field_b, param2, param0, -108);
               }
             } else {
@@ -204,7 +204,7 @@ final class c {
                 na.a(param8, param3, -94, param2);
               }
               ke.field_e.field_S = 1;
-              ke.field_e.field_V = vo.field_C.field_V;
+              ke.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -213,16 +213,16 @@ final class c {
               }
               if (!hc.field_c) {
                 fo.field_b.field_Qb.field_Mb = null;
-                vn.field_A.field_eb = true;
+                Ball.field_A.field_eb = true;
                 ka.a(param4, fo.field_b, param2, param0, -108);
               } else {
                 if (o.field_e.field_jc > o.field_e.field_cc) {
                   fo.field_b.field_Qb.field_Mb = null;
-                  vn.field_A.field_eb = true;
+                  Ball.field_A.field_eb = true;
                   ka.a(param4, fo.field_b, param2, param0, -108);
                 } else {
                   fo.field_b.field_Qb.field_Mb = wg.field_d;
-                  vn.field_A.field_eb = false;
+                  Ball.field_A.field_eb = false;
                   jh.a(true, fo.field_b.field_Rb);
                 }
               }
@@ -247,7 +247,7 @@ final class c {
                 na.a(param8, param3, -94, param2);
               }
               ke.field_e.field_S = 1;
-              ke.field_e.field_V = vo.field_C.field_V;
+              ke.field_e.field_V = Paddle.field_C.field_V;
               if (0 < pe.field_j) {
                 n.a(param2, param8, param3, (byte) -76);
               }
@@ -257,11 +257,11 @@ final class c {
               if (hc.field_c &&
                 o.field_e.field_jc <= o.field_e.field_cc) {
                 fo.field_b.field_Qb.field_Mb = wg.field_d;
-                vn.field_A.field_eb = false;
+                Ball.field_A.field_eb = false;
                 jh.a(true, fo.field_b.field_Rb);
               } else {
                 fo.field_b.field_Qb.field_Mb = null;
-                vn.field_A.field_eb = true;
+                Ball.field_A.field_eb = true;
                 ka.a(param4, fo.field_b, param2, param0, -108);
               }
             } else {
@@ -270,7 +270,7 @@ final class c {
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
                 ke.field_e.field_S = 1;
-                ke.field_e.field_V = vo.field_C.field_V;
+                ke.field_e.field_V = Paddle.field_C.field_V;
                 if (0 < pe.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
@@ -280,16 +280,16 @@ final class c {
                 if (hc.field_c &&
                   o.field_e.field_jc <= o.field_e.field_cc) {
                   fo.field_b.field_Qb.field_Mb = wg.field_d;
-                  vn.field_A.field_eb = false;
+                  Ball.field_A.field_eb = false;
                   jh.a(true, fo.field_b.field_Rb);
                 } else {
                   fo.field_b.field_Qb.field_Mb = null;
-                  vn.field_A.field_eb = true;
+                  Ball.field_A.field_eb = true;
                   ka.a(param4, fo.field_b, param2, param0, -108);
                 }
               } else {
                 ke.field_e.field_S = 1;
-                ke.field_e.field_V = vo.field_C.field_V;
+                ke.field_e.field_V = Paddle.field_C.field_V;
                 if (0 < pe.field_j) {
                   n.a(param2, param8, param3, (byte) -76);
                 }
@@ -298,16 +298,16 @@ final class c {
                 }
                 if (!hc.field_c) {
                   fo.field_b.field_Qb.field_Mb = null;
-                  vn.field_A.field_eb = true;
+                  Ball.field_A.field_eb = true;
                   ka.a(param4, fo.field_b, param2, param0, -108);
                 } else {
                   if (o.field_e.field_jc > o.field_e.field_cc) {
                     fo.field_b.field_Qb.field_Mb = null;
-                    vn.field_A.field_eb = true;
+                    Ball.field_A.field_eb = true;
                     ka.a(param4, fo.field_b, param2, param0, -108);
                   } else {
                     fo.field_b.field_Qb.field_Mb = wg.field_d;
-                    vn.field_A.field_eb = false;
+                    Ball.field_A.field_eb = false;
                     jh.a(true, fo.field_b.field_Rb);
                   }
                 }

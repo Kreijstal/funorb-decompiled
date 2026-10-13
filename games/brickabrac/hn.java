@@ -61,11 +61,11 @@ final class hn {
     final static void a(mh param0, mh param1, int param2) {
         try {
           if (param1.field_bb == null) {
-            param1.field_bb = new vl();
+            param1.field_bb = new NodeDeque();
           }
           int var3_int = -102 / ((param2 + 58) / 50);
           if (param0.field_bb == null) {
-            param0.field_bb = new vl();
+            param0.field_bb = new NodeDeque();
           }
           if (null == of.field_i) {
             of.field_i = new mk(64);

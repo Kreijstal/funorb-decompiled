@@ -34,13 +34,13 @@ final class vq extends oq {
         }
         int var3 = 4 + ip.field_r.a(-37880252, -4 + param0);
         int var4 = ip.field_r.a(-37880252, -8 + param2) + 8;
-        ob.field_E.a(new nj(var3, var4, oq.field_x + ip.field_r.a(-37880252, qb.field_w), fr.field_k + ip.field_r.a(-37880252, ag.field_E)), (byte) 3);
+        ob.field_E.addLast(new nj(var3, var4, oq.field_x + ip.field_r.a(-37880252, qb.field_w), fr.field_k + ip.field_r.a(-37880252, ag.field_E)), (byte) 3);
         dl.field_f = dl.field_f + 1;
     }
 
-    final void b(byte param0) {
-        pe.field_o.b((byte) -19);
-        if (param0 > -14) {
+    final void drawScreen(byte obfuscationGuard) {
+        pe.field_o.drawScreen((byte) -19);
+        if (obfuscationGuard > -14) {
           field_J = (String) null;
         }
         lb.b(0, 0, 640, 480);
@@ -55,7 +55,7 @@ final class vq extends oq {
 
     final void c(int param0) {
         if (param0 != -1) {
-          this.b((byte) 35);
+          this.drawScreen((byte) 35);
         }
     }
 

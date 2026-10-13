@@ -48,7 +48,7 @@ final class kl extends qd {
               this.field_o = 0;
               this.field_q = 0;
               this.field_A = 0;
-              this.b((byte) 111);
+              this.unlink((byte) 111);
               param0 = this.field_x;
             }
             this.field_x = 0;
@@ -66,7 +66,7 @@ final class kl extends qd {
         if (this.field_r < 0) {
           if (this.field_p <= 0) {
             this.i();
-            this.b((byte) 111);
+            this.unlink((byte) 111);
             return;
           }
           this.field_r = 0;
@@ -74,7 +74,7 @@ final class kl extends qd {
         if (this.field_r >= var5) {
           if (this.field_p >= 0) {
             this.i();
-            this.b((byte) 111);
+            this.unlink((byte) 111);
             return;
           }
           this.field_r = var5 - 1;
@@ -187,7 +187,7 @@ final class kl extends qd {
           if (this.field_r >= var5) {
             this.field_r = var5;
             this.i();
-            this.b((byte) 111);
+            this.unlink((byte) 111);
           }
           return;
         }
@@ -196,7 +196,7 @@ final class kl extends qd {
         }
         this.field_r = -1;
         this.i();
-        this.b((byte) 111);
+        this.unlink((byte) 111);
     }
 
     final synchronized void h(int param0) {
@@ -242,7 +242,7 @@ final class kl extends qd {
           this.field_o = 0;
           this.field_q = 0;
           this.field_A = 0;
-          this.b((byte) 111);
+          this.unlink((byte) 111);
           return true;
         }
         if (this.field_A >= var1) {
@@ -538,7 +538,7 @@ final class kl extends qd {
         int var2Lifetime1;
         if (param0 == 0) {
           this.e(0);
-          this.b((byte) 111);
+          this.unlink((byte) 111);
           return;
         }
         if (this.field_q != 0) {
@@ -598,7 +598,7 @@ final class kl extends qd {
         this.field_x = 0;
         this.field_w = 0;
         this.field_A = 0;
-        this.b((byte) 111);
+        this.unlink((byte) 111);
     }
 
     final synchronized void d(int param0) {
@@ -1191,7 +1191,7 @@ final class kl extends qd {
         if (this.field_r < 0) {
           if (this.field_p <= 0) {
             this.i();
-            this.b((byte) 111);
+            this.unlink((byte) 111);
             return;
           }
           this.field_r = 0;
@@ -1199,7 +1199,7 @@ final class kl extends qd {
         if (this.field_r >= var7) {
           if (this.field_p >= 0) {
             this.i();
-            this.b((byte) 111);
+            this.unlink((byte) 111);
             return;
           }
           this.field_r = var7 - 1;
@@ -1326,7 +1326,7 @@ final class kl extends qd {
           if (this.field_r >= var7) {
             this.field_r = var7;
             this.i();
-            this.b((byte) 111);
+            this.unlink((byte) 111);
           }
           return;
         }
@@ -1336,7 +1336,7 @@ final class kl extends qd {
         }
         this.field_r = -1;
         this.i();
-        this.b((byte) 111);
+        this.unlink((byte) 111);
         return;
     }
 

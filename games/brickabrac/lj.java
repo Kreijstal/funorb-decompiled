@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends nm {
+final class lj extends IntrusiveNode {
     static int[] field_n;
     int field_m;
     int field_o;
@@ -182,7 +182,7 @@ final class lj extends nm {
         field_i = param1;
     }
 
-    final static void a(int param0, j param1, ak param2, int param3, int param4) {
+    final static void a(int param0, PlayerBoard param1, MultiplayerMatch param2, int param3, int param4) {
         try {
           int var5_int = -82 % ((param3 - 81) / 41);
           km.a(param2, param1, param4, param0, true, 5, 1);

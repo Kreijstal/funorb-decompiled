@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class no extends vi {
+class CircleBody extends MovingBody {
     static volatile boolean field_r;
     static String field_q;
     static String field_s;
     static jp[][] field_t;
-    int field_u;
+    int radius256;
     static am field_p;
 
-    no(int param0, int param1, int param2, int param3, int param4, int param5) {
-        super(param0, param1, param2, param3, param5);
-        this.field_u = param4;
+    CircleBody(int x256, int y256, int velocityX256, int velocityY256, int radius256, int typeId) {
+        super(x256, y256, velocityX256, velocityY256, typeId);
+        this.radius256 = radius256;
     }
 
     public static void d(byte param0) {
@@ -22,7 +22,7 @@ class no extends vi {
         field_p = null;
     }
 
-    int a(int param0, StringBuilder param1) {
+    int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -30,17 +30,17 @@ class no extends vi {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 79) {
+          if (obfuscationGuard < 79) {
             field_p = (am) null;
           }
-          stackIn_3_0 = this.field_u + 1365 << 6 ^ super.a(89, param1);
+          stackIn_3_0 = this.radius256 + 1365 << 6 ^ super.computeSyncChecksum(89, diagnostics);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("no.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("no.A(").append(obfuscationGuard).append(',');
+          if (diagnostics == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

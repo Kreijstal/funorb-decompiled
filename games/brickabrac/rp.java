@@ -4,7 +4,7 @@
 final class rp extends km {
     static String field_r;
     static jp field_s;
-    private vl field_v;
+    private NodeDeque field_v;
     static mh field_t;
     static int field_x;
     static jp field_w;
@@ -80,35 +80,35 @@ final class rp extends km {
         return 19;
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         nq var4 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
-        super.b((byte) -68);
+        super.drawScreen((byte) -68);
         im.a(this.field_l + (-this.field_j + 30), 0, 468, 0, 6, (byte) -90, -15 + this.field_j);
-        vi.a((byte) -105);
+        MovingBody.a((byte) -105);
         this.a(0);
-        if (param0 > -14) {
+        if (obfuscationGuard > -14) {
           field_s = (jp) null;
         }
         si.a(pq.field_k, (byte) -118, po.field_a, hc.field_h);
         if (!pg.c(77)) {
-          var4 = (nq) (this.field_v.d(-90));
+          var4 = (nq) (this.field_v.first(-90));
           while (var4 != null) {
             var4.a(2);
-            var4 = (nq) (this.field_v.a((byte) 116));
+            var4 = (nq) (this.field_v.next((byte) 116));
           }
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int fieldTemp$0 = 0;
         nq var6 = null;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        super.a(param0, param1, -95);
-        if (param2 > -52) {
+        super.advanceScreen(updateFlag, inputEnabled, -95);
+        if (obfuscationGuard > -52) {
           this.b((byte) 59, 93);
         }
-        if (param1 &&
+        if (inputEnabled &&
           c.field_g > 0) {
           fieldTemp$0 = c.field_g - 1;
           c.field_g = c.field_g - 1;
@@ -125,10 +125,10 @@ final class rp extends km {
           }
         }
         if (!pg.c(112)) {
-          var6 = (nq) (this.field_v.d(-90));
+          var6 = (nq) (this.field_v.first(-90));
           while (var6 != null) {
             var6.c(0);
-            var6 = (nq) (this.field_v.a((byte) 116));
+            var6 = (nq) (this.field_v.next((byte) 116));
           }
         }
     }
@@ -219,10 +219,10 @@ final class rp extends km {
 
     rp() {
         super(0, 180, 460, 150, 35, hc.field_e);
-        this.field_v = new vl();
+        this.field_v = new NodeDeque();
         int var1 = 468;
         var1 = var1 - da.field_E[1].field_z;
-        this.field_v.a(new nq(12, var1, da.field_E[1], rd.a(ii.field_s, new String[]{qn.field_u[1]}, (byte) 103)), (byte) 3);
+        this.field_v.addLast(new nq(12, var1, da.field_E[1], rd.a(ii.field_s, new String[]{qn.field_u[1]}, (byte) 103)), (byte) 3);
     }
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9) {

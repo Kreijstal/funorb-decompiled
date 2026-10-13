@@ -174,7 +174,7 @@ final class pp {
         w.field_k = param1;
     }
 
-    final static int a(j param0, byte param1, ak param2) {
+    final static int a(PlayerBoard param0, byte param1, MultiplayerMatch param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
@@ -186,13 +186,13 @@ final class pp {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2.field_b.field_c) {
+          if (param2.configuration.field_c) {
             stackIn_3_0 = param0.field_qb;
             return stackIn_3_0;
           }
           var3_int = 44 / ((param1 + 59) / 34);
-          if (param0.field_qb >= param2.field_b.a(-30)) {
-            stackIn_7_0 = -1 + param2.field_b.a(79);
+          if (param0.field_qb >= param2.configuration.a(-30)) {
+            stackIn_7_0 = -1 + param2.configuration.a(79);
           } else {
             stackIn_7_0 = param0.field_qb;
           }

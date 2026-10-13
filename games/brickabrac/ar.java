@@ -56,11 +56,11 @@ final class ar {
               var10_ref_int__ = var17;
               var11 = 0;
               var12 = 0;
-              L18: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     cq.field_p != param4) {
-                    break L18;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -73,13 +73,13 @@ final class ar {
                       lk.field_s = true;
                     }
                   }
-                  break L18;
+                  break scanLoop1;
                 }
                 var13_intLifetime1 = var19[var12];
                 var14 = var10_ref_int__[1 + var12];
                 if (var13_intLifetime1 == -1) {
                   if (var14 != w.field_n[param3]) {
-                    break L18;
+                    break scanLoop1;
                   }
                 } else {
                   if (var13_intLifetime1 == param4 &&
@@ -87,10 +87,10 @@ final class ar {
                     var11 = 1;
                   } else {
                     if (var13_intLifetime1 >= param4) {
-                      break L18;
+                      break scanLoop1;
                     }
                     if (var14 != (qo.field_J[var13_intLifetime1] & 255)) {
-                      break L18;
+                      break scanLoop1;
                     }
                   }
                 }

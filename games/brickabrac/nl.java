@@ -46,10 +46,10 @@ final class nl {
           var2_long = ue.a(false);
           if (0 != ue.field_d &&
             ob.field_I < 0) {
-            var4_ref_pg = (pg) (al.field_m.d(-124));
+            var4_ref_pg = (pg) (al.field_m.first(-124));
             if (var4_ref_pg != null &&
               var2_long > var4_ref_pg.field_j) {
-              var4_ref_pg.b((byte) 111);
+              var4_ref_pg.unlink((byte) 111);
               ga.field_j = var4_ref_pg.field_l.length;
               jl.field_e.field_l = 0;
               for (var5_int = 0; ga.field_j > var5_int; var5_int++) {
@@ -94,7 +94,7 @@ final class nl {
             for (var6 = 0; ga.field_j > var6; var6++) {
               var5.field_l[var6] = jl.field_e.field_k[var6];
             }
-            al.field_m.a(var5, (byte) 3);
+            al.field_m.addLast(var5, (byte) 3);
             ob.field_I = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

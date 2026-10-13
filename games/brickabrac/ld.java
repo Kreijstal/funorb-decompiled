@@ -57,7 +57,7 @@ abstract class ld extends km {
         return;
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         jp[] stackIn_27_0 = null;
         int var2;
         int var3;
@@ -87,14 +87,14 @@ abstract class ld extends km {
           var5_ref_tp = qp.field_e[var4];
           var5_ref_tp.a((640 - var5_ref_tp.field_f) / 2, -((-var3 + 480) / ((1 + var4) * 2)) + var2);
         }
-        if (param0 > -14) {
+        if (obfuscationGuard > -14) {
           field_s = false;
         }
         var2 = var2 - (-var3 + 480) / 2;
         var4 = qp.field_e[0].field_f;
         var5 = 0;
         var6 = 0;
-        L5: while (true) {
+        scanLoop1: while (true) {
           if (pi.field_o.length > var6) {
             var7 = pi.field_o[var6];
             if (0 <= var7) {
@@ -135,7 +135,7 @@ abstract class ld extends km {
               ce.field_e.b(fh.field_h[var7], var8, var2 + 85, 0, -1);
               var5++;
               if (var5 == 3) {
-                break L5;
+                break scanLoop1;
               }
             }
             var6++;
@@ -174,13 +174,13 @@ abstract class ld extends km {
         return (284 + this.f(param0 - 6181)) / 2;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int var5 = 0;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        if (param2 > -52) {
-          this.a(false, false, -123);
+        if (obfuscationGuard > -52) {
+          this.advanceScreen(false, false, -123);
         }
-        super.a(param0, param1, -121);
+        super.advanceScreen(updateFlag, inputEnabled, -121);
         int var4 = this.h(6175);
         for (var5 = 0; var5 < this.field_m.length; var5++) {
           this.field_m[var5].field_a = var4;

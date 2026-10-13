@@ -60,21 +60,21 @@ final class wo {
                   var1Lifetime3 = stackIn_95_0;
                 } else {
                   if (4 == var2) {
-                    stackIn_103_0 = (!m.field_f.a(-114, cd.field_g, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                    stackIn_103_0 = (!m.field_f.a(-114, cd.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                     var1Lifetime3 = stackIn_103_0;
                   } else {
                     if (var2 == 5) {
-                      stackIn_132_0 = (!m.field_f.a(-112, uk.field_t, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                      stackIn_132_0 = (!m.field_f.a(-112, uk.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime3 = stackIn_132_0;
                     } else {
                       if (6 == var2) {
-                        stackIn_139_0 = (!m.field_f.a(-111, c.field_j, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                        stackIn_139_0 = (!m.field_f.a(-111, c.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                         var1Lifetime3 = stackIn_139_0;
                       } else {
                         if (7 != var2) {
                           return true;
                         }
-                        stackIn_116_0 = (!m.field_f.a(-123, oj.field_q, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                        stackIn_116_0 = (!m.field_f.a(-123, oj.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                         var1Lifetime3 = stackIn_116_0;
                       }
                     }
@@ -113,21 +113,21 @@ final class wo {
                 var1Lifetime2 = stackIn_23_0;
               } else {
                 if (4 == var2Lifetime1) {
-                  stackIn_31_0 = (!m.field_f.a(-114, cd.field_g, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                  stackIn_31_0 = (!m.field_f.a(-114, cd.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                   var1Lifetime2 = stackIn_31_0;
                 } else {
                   if (var2Lifetime1 == 5) {
-                    stackIn_60_0 = (!m.field_f.a(-112, uk.field_t, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                    stackIn_60_0 = (!m.field_f.a(-112, uk.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                     var1Lifetime2 = stackIn_60_0;
                   } else {
                     if (6 == var2Lifetime1) {
-                      stackIn_68_0 = (!m.field_f.a(-111, c.field_j, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                      stackIn_68_0 = (!m.field_f.a(-111, c.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime2 = stackIn_68_0;
                     } else {
                       if (7 != var2Lifetime1) {
                         return true;
                       }
-                      stackIn_43_0 = (!m.field_f.a(-123, oj.field_q, 22050, ic.field_a, gf.field_e)) ? 0 : 1;
+                      stackIn_43_0 = (!m.field_f.a(-123, oj.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime2 = stackIn_43_0;
                     }
                   }

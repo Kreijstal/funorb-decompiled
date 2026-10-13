@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ka extends nm {
+final class ka extends IntrusiveNode {
     int field_x;
     int field_r;
     int field_s;
@@ -140,7 +140,7 @@ final class ka extends nm {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        vl var10 = null;
+        NodeDeque var10 = null;
         int var11 = 0;
         Object var12 = null;
         id var13 = null;
@@ -181,7 +181,7 @@ final class ka extends nm {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (o.field_e != null && (null != vl.field_a ||
+          if (o.field_e != null && (null != NodeDeque.field_a ||
             null != bl.field_F ||
             null != ld.field_v ||
             null != me.field_e)) {
@@ -192,9 +192,9 @@ final class ka extends nm {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              if (null != vl.field_a &&
-                null != vl.field_a[var9] &&
-                vl.field_a[var9][var10_int]) {
+              if (null != NodeDeque.field_a &&
+                null != NodeDeque.field_a[var9] &&
+                NodeDeque.field_a[var9][var10_int]) {
                 var5_int = 1;
               }
               if (bl.field_F != null &&
@@ -239,7 +239,7 @@ final class ka extends nm {
           var10 = param1.field_Rb.field_bb;
           var11Lifetime1 = 73 % ((param4 - 41) / 57);
           var12 = null;
-          var13 = (id) (var10.d(-67));
+          var13 = (id) (var10.first(-67));
           while (null != var13) {
             var14 = 0;
             if (var32 != 0) {
@@ -444,7 +444,7 @@ final class ka extends nm {
                     if (var26_int == 1) {
                       var25 = hq.field_w;
                     }
-                    var25 = rd.a(on.field_F, new String[]{null, Integer.toString(var26_int)}, (byte) 103);
+                    var25 = rd.a(Brick.field_F, new String[]{null, Integer.toString(var26_int)}, (byte) 103);
                   }
                 }
               } else {
@@ -485,9 +485,9 @@ final class ka extends nm {
                   if (cq.field_p > var28_int) {
                     var29 = o.field_e.field_Tb[var28_int] & 255;
                     var30 = 0;
-                    if (vl.field_a != null &&
-                      vl.field_a[var28_int] != null &&
-                      vl.field_a[var28_int][var29] &&
+                    if (NodeDeque.field_a != null &&
+                      NodeDeque.field_a[var28_int] != null &&
+                      NodeDeque.field_a[var28_int][var29] &&
                       !var13.field_ec) {
                       var30 = 1;
                     }
@@ -556,7 +556,7 @@ final class ka extends nm {
                 ep.field_e = (String) (var25);
               }
             }
-            var13 = (id) (var10.a((byte) 116));
+            var13 = (id) (var10.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -614,7 +614,7 @@ final class ka extends nm {
         try {
           vg.field_c = param3;
           un.field_a = param0;
-          vo.field_A = param2;
+          Paddle.field_A = param2;
           if (param1 >= -25) {
             field_l = (tq) null;
           }
@@ -732,7 +732,7 @@ final class ka extends nm {
           var21Lifetime2 = mg.field_d;
           var22Lifetime2 = mg.field_a;
           var23Lifetime2 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (param5.field_w > var23Lifetime2) {
               var24Lifetime1 = param5.field_B[var23Lifetime2];
               var25Lifetime1 = param5.field_Q[var23Lifetime2];
@@ -749,12 +749,12 @@ final class ka extends nm {
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;
                   }
-                  vo.field_v[var23Lifetime2] = var29Lifetime1;
+                  Paddle.field_v[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;
                   }
                 } else {
-                  vo.field_v[var23Lifetime2] = -2147483648;
+                  Paddle.field_v[var23Lifetime2] = -2147483648;
                 }
                 if (param3) {
                   fh.field_f[var23Lifetime2] = var27Lifetime1 >> lc.field_k;
@@ -815,7 +815,7 @@ final class ka extends nm {
                   stackIn_65_0 = ~var18;
                   stackIn_65_1 = ~wl.field_R.length;
                   if (var30 != 0) {
-                    break L3;
+                    break scanLoop1;
                   }
                   if (stackIn_65_0 <= stackIn_65_1) {
                     break;

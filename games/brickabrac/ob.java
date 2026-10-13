@@ -6,9 +6,9 @@ final class ob extends r {
     static ra field_J;
     static String field_H;
     static bi field_D;
-    static vl field_E;
+    static NodeDeque field_E;
     static long field_G;
-    static vl field_F;
+    static NodeDeque field_F;
 
     public static void b(int param0) {
         field_F = null;
@@ -79,7 +79,7 @@ final class ob extends r {
     static {
         field_H = "Add <%0> to ignore list";
         field_I = -1;
-        field_E = new vl();
-        field_F = new vl();
+        field_E = new NodeDeque();
+        field_F = new NodeDeque();
     }
 }

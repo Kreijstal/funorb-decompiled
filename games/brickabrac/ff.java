@@ -10,7 +10,7 @@ abstract class ff {
     static long field_b;
     static String field_a;
     static int[] field_h;
-    static vl field_d;
+    static NodeDeque field_d;
     static String field_e;
 
     abstract void a(int param0, wq param1);
@@ -81,18 +81,18 @@ abstract class ff {
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = (sp) (tm.field_f.d(-84));
+          var4 = (sp) (tm.field_f.first(-84));
           while (var4 != null) {
             ke.a(param1, var4, 14989);
-            var4 = (sp) (tm.field_f.a((byte) 116));
+            var4 = (sp) (tm.field_f.next((byte) 116));
           }
           if (param0 > -34) {
             return;
           }
-          var5 = (eg) (qc.field_n.d(-71));
+          var5 = (eg) (qc.field_n.first(-71));
           while (var5 != null) {
             uo.a(var5, param1, (byte) 68);
-            var5 = (eg) (qc.field_n.a((byte) 116));
+            var5 = (eg) (qc.field_n.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

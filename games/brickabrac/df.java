@@ -74,9 +74,9 @@ final class df {
     final static int a(int param0, int param1, int param2, boolean param3) {
         if (param0 != -27790) {
           df.a((byte) 15);
-          return vi.c((byte) 109);
+          return MovingBody.c((byte) 109);
         }
-        return vi.c((byte) 109);
+        return MovingBody.c((byte) 109);
     }
 
     final static Boolean a(int param0) {
@@ -102,7 +102,7 @@ final class df {
           if (param2 != -161) {
             field_b = (String) null;
           }
-          na.field_Q.a(param0, (byte) 3);
+          na.field_Q.addLast(param0, (byte) 3);
           ud.a(param1, param0, (byte) 119);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "df.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -121,7 +121,7 @@ final class df {
           tq.field_f.a(-104, param2);
           tq.field_f.a(50, param3);
           tq.field_f.b((byte) 124, param0);
-          tq.field_f.a(vn.field_F, to.field_g, param1 + 19672);
+          tq.field_f.a(Ball.field_F, to.field_g, param1 + 19672);
           k.field_h.e(param1 ^ -13316, 18);
           fieldTemp$0 = k.field_h.field_l + 1;
           k.field_h.field_l = k.field_h.field_l + 1;
@@ -138,7 +138,7 @@ final class df {
         tq.field_f.a(-104, param2);
         tq.field_f.a(50, param3);
         tq.field_f.b((byte) 124, param0);
-        tq.field_f.a(vn.field_F, to.field_g, param1 + 19672);
+        tq.field_f.a(Ball.field_F, to.field_g, param1 + 19672);
         k.field_h.e(param1 ^ -13316, 18);
         int fieldTemp$1 = k.field_h.field_l + 1;
         k.field_h.field_l = k.field_h.field_l + 1;

@@ -8,7 +8,7 @@ abstract class dj {
     static jp field_e;
     static jp field_a;
     static int field_g;
-    static bn field_c;
+    static RectangleBody field_c;
     static int field_b;
 
     final int a(long param0, byte param1) {

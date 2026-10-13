@@ -21,9 +21,9 @@ final class de extends km {
         field_s = null;
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         lb.d();
-        if (param0 <= -14) {
+        if (obfuscationGuard <= -14) {
           if (ff.field_c != null) {
             ff.field_c.e((byte) -93);
           }
@@ -81,10 +81,10 @@ final class de extends km {
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         boolean discarded$0 = false;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        if (param2 >= -52) {
+        if (obfuscationGuard >= -52) {
           return;
         }
         if (null == this.field_r) {
@@ -92,14 +92,14 @@ final class de extends km {
           return;
         }
         if (ff.field_c != null) {
-          discarded$0 = this.c(460, ff.field_c.a(false, param1));
+          discarded$0 = this.c(460, ff.field_c.a(false, inputEnabled));
           return;
         }
         ff.field_c = new w(sl.field_C, oc.field_u, this.field_r, false, hq.field_u);
     }
 
-    final boolean a(char param0, int param1, int param2) {
-        if (param1 <= 98) {
+    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
+        if (keyCode <= 98) {
           return false;
         }
         if (null != ff.field_c) {

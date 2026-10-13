@@ -6,7 +6,7 @@ final class wd extends tk {
     private int[][] field_A;
     private int[] field_B;
     private String[] field_y;
-    static vl field_v;
+    static NodeDeque field_v;
     static mh field_E;
     static mh[] field_F;
     static String field_D;
@@ -92,7 +92,7 @@ final class wd extends tk {
               this.field_A = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param2.i(65280);
-                var7 = vn.a(var6, (byte) 84);
+                var7 = Ball.a(var6, (byte) 84);
                 if (var7 != null) {
                   this.field_B[var5] = var6;
                   array$0 = new int[var7.field_g];
@@ -263,7 +263,7 @@ final class wd extends tk {
     }
 
     static {
-        field_v = new vl();
+        field_v = new NodeDeque();
         field_D = "A detailed explanation of each rule can be found through the link on our website.<br>(in the Help Section)";
         field_x = "This option is restricted. Your rating is currently <%0>.<br>Can you achieve the qualifying rating of <%1>?";
     }

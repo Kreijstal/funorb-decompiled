@@ -57,7 +57,7 @@ class ba extends tk {
     }
 
     final static void f(int param0) {
-        fa var1 = (fa) (wp.field_f.d(-39));
+        fa var1 = (fa) (wp.field_f.first(-39));
         if (var1 == null) {
           hn.a((byte) 106);
           return;
@@ -68,11 +68,11 @@ class ba extends tk {
         var2.e(255);
         var2.e(255);
         if (param0 == -1) {
-          var1.b((byte) 111);
+          var1.unlink((byte) 111);
           return;
         }
         field_A = (jp) null;
-        var1.b((byte) 111);
+        var1.unlink((byte) 111);
     }
 
     final static int a(byte[] param0, int param1, int param2, int param3) {

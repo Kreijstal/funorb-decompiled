@@ -154,7 +154,7 @@ final class vh extends d {
             return;
           }
           stackIn_4_0 = true;
-          stackIn_5_1 = !(vo.field_x >= 13);
+          stackIn_5_1 = !(Paddle.field_x >= 13);
           ni.field_Rb = cd.a(stackIn_4_0, stackIn_5_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -7,7 +7,7 @@ final class we {
     static jp[] field_b;
 
     final static void a(byte param0) {
-        mf.field_i = new vl();
+        mf.field_i = new NodeDeque();
         if (param0 != -46) {
           we.a(12);
         }

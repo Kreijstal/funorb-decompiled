@@ -5,7 +5,7 @@ final class lk extends qd {
     static th field_o;
     static jp field_t;
     private ie field_r;
-    vl field_v;
+    NodeDeque field_v;
     static int field_p;
     static boolean field_s;
     static jp[] field_n;
@@ -26,7 +26,7 @@ final class lk extends qd {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           this.field_m.b(param0, param1, param2);
-          var6 = (ka) (this.field_v.d(-123));
+          var6 = (ka) (this.field_v.first(-123));
           while (var6 != null) {
             if (!this.field_r.a(var6, -128)) {
               var4_int = param1;
@@ -42,7 +42,7 @@ final class lk extends qd {
                 var4_int = var4_int + var6.field_z;
               } while (!this.field_r.a(23300, param0, var5, var6, var4_int));
             }
-            var6 = (ka) (this.field_v.a((byte) 116));
+            var6 = (ka) (this.field_v.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,7 +66,7 @@ final class lk extends qd {
         boolean stackIn_4_0 = false;
         var4 = BrickABrac.field_J ? 1 : 0;
         this.field_m.a(param0);
-        var3 = (ka) (this.field_v.d(-18));
+        var3 = (ka) (this.field_v.first(-18));
         while (var3 != null) {
           stackIn_4_0 = this.field_r.a(var3, -112);
           boolean decompiledFrameCompleted0 = true;
@@ -85,7 +85,7 @@ final class lk extends qd {
               var3.field_z = var3.field_z - var2;
             }
           }
-          var3 = (ka) (this.field_v.a((byte) 116));
+          var3 = (ka) (this.field_v.next((byte) 116));
         }
     }
 
@@ -94,7 +94,7 @@ final class lk extends qd {
     }
 
     final qd a() {
-        ka var1 = (ka) (this.field_v.d(-81));
+        ka var1 = (ka) (this.field_v.first(-81));
         if (var1 == null) {
           return null;
         }
@@ -204,7 +204,7 @@ final class lk extends qd {
         int var5 = 0;
         try {
           if (param0 >= -97) {
-            this.field_v = (vl) null;
+            this.field_v = (NodeDeque) null;
           }
           if ((this.field_r.field_n[param2.field_u] & 4) != 0 &&
             param2.field_x < 0) {
@@ -247,7 +247,7 @@ final class lk extends qd {
     final qd d() {
         ka var1_ref = null;
         do {
-          var1_ref = (ka) (this.field_v.a((byte) 116));
+          var1_ref = (ka) (this.field_v.next((byte) 116));
           if (var1_ref == null) {
             return null;
           }
@@ -289,7 +289,7 @@ final class lk extends qd {
     }
 
     lk(ie param0) {
-        this.field_v = new vl();
+        this.field_v = new NodeDeque();
         this.field_m = new ra();
         try {
           this.field_r = param0;

@@ -8,7 +8,7 @@ class ib extends oc implements sd {
     static jp field_E;
     static String field_F;
     static String field_C;
-    vl field_G;
+    NodeDeque field_G;
 
     final boolean a(oc param0, byte param1) {
         kh var3 = null;
@@ -23,7 +23,7 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_G.a(false)) {
+          if (this.field_G.isEmpty(false)) {
             return false;
           }
           var3 = new kh(this.field_G);
@@ -76,7 +76,7 @@ class ib extends oc implements sd {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = -60 % ((param1 - 51) / 34);
-          if (this.field_G.a(false)) {
+          if (this.field_G.isEmpty(false)) {
             return false;
           }
           var4 = new kh(this.field_G);
@@ -118,7 +118,7 @@ class ib extends oc implements sd {
         }
         kh var5 = new kh(this.field_G);
         if (param3 != -11) {
-          this.field_G = (vl) null;
+          this.field_G = (NodeDeque) null;
         }
         oc var6 = (oc) (var5.a(true));
         while (var6 != null) {
@@ -129,7 +129,7 @@ class ib extends oc implements sd {
 
     final void a(oc param0, boolean param1) {
         try {
-          this.field_G.a(param0, (byte) 3);
+          this.field_G.addLast(param0, (byte) 3);
           if (!param1) {
             field_F = (String) null;
           }
@@ -163,7 +163,7 @@ class ib extends oc implements sd {
           var8 = new kh(this.field_G);
           var9 = (oc) (var8.a(240));
           while (var9 != null) {
-            if (var9.b(0)) {
+            if (var9.isLinked(0)) {
               if (var9.f(-65) &&
                 var9.a(param0, param1, param2, -126, param4, param5, param6)) {
                 return true;
@@ -176,7 +176,7 @@ class ib extends oc implements sd {
           if (param3 < -125) {
             return false;
           }
-          this.field_G = (vl) null;
+          this.field_G = (NodeDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -217,7 +217,7 @@ class ib extends oc implements sd {
           }
           var9 = (oc) (var8.a(240));
           while (var9 != null) {
-            if (var9.b(param6 ^ 0)) {
+            if (var9.isLinked(param6 ^ 0)) {
               if (!var9.a(param0, param1, param2 + this.field_o, this.field_w + param3, param4, param5, 0)) {
                 var9 = (oc) (var8.b(7));
                 continue;
@@ -260,7 +260,7 @@ class ib extends oc implements sd {
             this.a(-102, (Hashtable) null, 23, (StringBuilder) null);
           }
           while (var8 != null) {
-            if (var8.b(0)) {
+            if (var8.isLinked(0)) {
               var8.a(param0, param1, param2 + this.field_w, param3, 19223, param5 + this.field_o);
               var8 = (oc) (var7.b(7));
               continue;
@@ -456,7 +456,7 @@ class ib extends oc implements sd {
             this.a(param3, param0, (byte) 104, param1);
           }
           if (param2 != 24) {
-            this.field_G = (vl) null;
+            this.field_G = (NodeDeque) null;
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -489,7 +489,7 @@ class ib extends oc implements sd {
 
     ib(int param0, int param1, int param2, int param3, ub param4) {
         super(param0, param1, param2, param3, param4, (uh) null);
-        this.field_G = new vl();
+        this.field_G = new NodeDeque();
     }
 
     oc g(byte param0) {
@@ -548,7 +548,7 @@ class ib extends oc implements sd {
           var10 = new kh(this.field_G);
           var9 = (oc) (var10.a(param1 + 130));
           while (var9 != null) {
-            if (var9.b(0)) {
+            if (var9.isLinked(0)) {
               if (var9.f(-118) &&
                 var9.a(param0, (byte) 110, param2, param3)) {
                 return true;
@@ -677,7 +677,7 @@ class ib extends oc implements sd {
           var5 = new kh(this.field_G);
           var6 = (oc) (var5.a(240));
           while (var6 != null) {
-            if (var6.b(param1 + 0)) {
+            if (var6.isLinked(param1 + 0)) {
               var6.a(param0, (byte) 0, this.field_o + param2, this.field_w + param3);
               var6 = (oc) (var5.b(7));
               continue;

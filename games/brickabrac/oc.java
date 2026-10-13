@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class oc extends nm {
+class oc extends IntrusiveNode {
     int field_r;
     ep field_j;
     static jg field_k;
@@ -80,7 +80,7 @@ class oc extends nm {
         bj.field_T.a(true, ad.field_j, b.field_a, var5);
     }
 
-    final static void a(int param0, int param1, int param2, j param3, ak param4, byte param5) {
+    final static void a(int param0, int param1, int param2, PlayerBoard param3, MultiplayerMatch param4, byte param5) {
         int stackIn_8_0 = 0;
         int stackIn_11_0 = 0;
         int stackIn_13_1 = 0;
@@ -106,7 +106,7 @@ class oc extends nm {
         int var11Lifetime2;
         int var11Lifetime3;
         try {
-          if (param4.field_k == 1) {
+          if (param4.playerCount == 1) {
             if (r.field_A) {
               stackIn_8_0 = (ka.a((byte) 88)) ? 1 : 0;
             } else {
@@ -291,12 +291,12 @@ class oc extends nm {
         }
         if (0 != qc.field_o) {
           if (var5 == 0) {
-            L1: {
+            regionExit1: {
               if (ki.field_e != 0) {
                 if (this.a(this, tb.field_fb, param1, param0, ki.field_e, qo.field_O, 0)) {
                   param3 = false;
                   if (var7 == 0) {
-                    break L1;
+                    break regionExit1;
                   }
                 }
                 if (0 == cb.field_q &&
@@ -345,12 +345,12 @@ class oc extends nm {
           }
           this.a(qc.field_o, pq.field_k, param0, -127, po.field_a, this, param1);
         }
-        L4: {
+        regionExit2: {
           if (ki.field_e != 0) {
             if (this.a(this, tb.field_fb, param1, param0, ki.field_e, qo.field_O, 0)) {
               param3 = false;
               if (var7 == 0) {
-                break L4;
+                break regionExit2;
               }
             }
             if (var5 == 0) {
@@ -451,7 +451,7 @@ class oc extends nm {
           if (param0 != 1) {
             oc.c(16);
           }
-          ff.field_d = new vl();
+          ff.field_d = new NodeDeque();
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "oc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -600,7 +600,7 @@ class oc extends nm {
 
     final static void c(byte param0) {
         if (param0 >= -12) {
-          oc.a(89, -103, -10, (j) null, (ak) null, (byte) 67);
+          oc.a(89, -103, -10, (PlayerBoard) null, (MultiplayerMatch) null, (byte) 67);
           o.field_d = 0;
           return;
         }

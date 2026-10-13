@@ -5,7 +5,7 @@ final class tm {
     private static long[] field_c;
     static boolean[] field_b;
     static String field_h;
-    static vl field_f;
+    static NodeDeque field_f;
     static int field_a;
     static String field_e;
     static String field_d;
@@ -51,24 +51,24 @@ final class tm {
           vh.field_N.a(param5, -1, param4, param1);
           vh.field_N.f((byte) -74, var7_int);
           vh.field_N.a(18146, var13);
-          if (null == bn.field_r ||
-            !(bn.field_r.field_k.length >= 100)) {
-            bn.field_r = new wq(100);
+          if (null == RectangleBody.field_r ||
+            !(RectangleBody.field_r.field_k.length >= 100)) {
+            RectangleBody.field_r = new wq(100);
           }
-          bn.field_r.field_l = 0;
-          bn.field_r.a(21, 10);
+          RectangleBody.field_r.field_l = 0;
+          RectangleBody.field_r.a(21, 10);
           if (param2 <= 115) {
             tm.a(-128, (byte) -47);
           }
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {
-            bn.field_r.a(var13[var11], (byte) -79);
+            RectangleBody.field_r.a(var13[var11], (byte) -79);
             var11++;
           }
-          bn.field_r.b((byte) 122, param1);
-          bn.field_r.a(param3, param6, 19775);
-          param0.a(bn.field_r.field_k, -1, 0, bn.field_r.field_l);
+          RectangleBody.field_r.b((byte) 122, param1);
+          RectangleBody.field_r.a(param3, param6, 19775);
+          param0.a(RectangleBody.field_r.field_k, -1, 0, RectangleBody.field_r.field_l);
           param0.a(vh.field_N.field_k, -1, 0, vh.field_N.field_l);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -139,14 +139,14 @@ final class tm {
                 var8[var6] = k.field_h.field_k[var6];
               }
               var6_ref_pg = new pg(var2_long + (long)var4, k.field_h.field_l, var17);
-              hg.field_a.a(var6_ref_pg, (byte) 3);
+              hg.field_a.addLast(var6_ref_pg, (byte) 3);
               k.field_h.field_l = 0;
             }
-            var9 = (pg) (hg.field_a.d(-62));
+            var9 = (pg) (hg.field_a.first(-62));
             var13 = var9;
             if (var13 != null &&
               var13.field_j < var2_long) {
-              var13.b((byte) 111);
+              var13.unlink((byte) 111);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var10 < var13.field_r) {
@@ -216,7 +216,7 @@ final class tm {
         }
         field_h = "Ninja skills!";
         field_e = "Waiting for graphics";
-        field_f = new vl();
+        field_f = new NodeDeque();
         field_d = "Strong: balls destroy bricks without bouncing.";
     }
 }

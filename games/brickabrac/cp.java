@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cp extends h {
-    private vl field_J;
+    private NodeDeque field_J;
     static mh field_K;
     static String field_G;
     static jp field_I;
@@ -11,11 +11,11 @@ final class cp extends h {
     final static void a(boolean param0, int param1) {
         int var2;
         int var3;
-        j var4;
+        PlayerBoard var4;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param1 != 21543) {
-          var4 = (j) null;
-          cp.a(103, 104, 91, (byte) -14, (j) null, 105, 90);
+          var4 = (PlayerBoard) null;
+          cp.a(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
         }
         if (0 >= go.field_c) {
           var2 = (og.h(-26090)) ? 0 : 1;
@@ -90,7 +90,7 @@ final class cp extends h {
           if (param0 > -63) {
             cp.j((byte) -73);
           }
-          this.field_J.a(true, var3);
+          this.field_J.addFirst(true, var3);
           var3.field_N = true;
           var3.a(true, (oc) (this));
         } catch (RuntimeException runtimeException) {
@@ -107,7 +107,7 @@ final class cp extends h {
         }
         while (var3 != null) {
           if (var3.a(-94)) {
-            var3.b((byte) 111);
+            var3.unlink((byte) 111);
           }
           var3 = (jc) (var2.b(param0 ^ -37));
         }
@@ -115,7 +115,7 @@ final class cp extends h {
 
     public cp() {
         super(0, 0, mn.field_y, r.field_w, (ub) null, (uh) null);
-        this.field_J = new vl();
+        this.field_J = new NodeDeque();
     }
 
     final static lo a(String param0, byte param1) {
@@ -193,7 +193,7 @@ final class cp extends h {
         jc var4 = (jc) (var2.a(240));
         while (var4 != null) {
           if (var4.h(0)) {
-            var4.b((byte) 111);
+            var4.unlink((byte) 111);
           }
           var4 = (jc) (var2.b(7));
         }
@@ -219,7 +219,7 @@ final class cp extends h {
         int var8 = 0;
         ta var9 = null;
         int var10 = 0;
-        j var11 = null;
+        PlayerBoard var11 = null;
         int var7Lifetime1;
         int var8Lifetime1;
         var10 = BrickABrac.field_J ? 1 : 0;
@@ -227,8 +227,8 @@ final class cp extends h {
           var1_int = jq.field_r;
           var2 = 0;
           if (param0 != -16546) {
-            var11 = (j) null;
-            cp.a(-114, -15, 90, (byte) -109, (j) null, -85, -67);
+            var11 = (PlayerBoard) null;
+            cp.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
           }
           if (ih.field_p == 2) {
             var3_long = -un.field_g + ue.a(false);
@@ -316,7 +316,7 @@ final class cp extends h {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, j param4, int param5, int param6) {
+    final static void a(int param0, int param1, int param2, byte param3, PlayerBoard param4, int param5, int param6) {
         int stackIn_7_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_7_2 = 0;
@@ -380,12 +380,12 @@ final class cp extends h {
 
     final static eg b(int param0, int param1, int param2, int param3, int param4) {
         int var6 = BrickABrac.field_J ? 1 : 0;
-        eg var5 = (eg) (qc.field_n.d(-91));
+        eg var5 = (eg) (qc.field_n.first(-91));
         while (var5 != null) {
           if (~var5.field_l == ~param1) {
             return var5;
           }
-          var5 = (eg) (qc.field_n.a((byte) 116));
+          var5 = (eg) (qc.field_n.next((byte) 116));
         }
         eg var7 = new eg();
         var5 = var7;
@@ -395,7 +395,7 @@ final class cp extends h {
           return (eg) null;
         }
         var5.field_l = param1;
-        qc.field_n.a(var5, (byte) 3);
+        qc.field_n.addLast(var5, (byte) 3);
         uo.a(var5, param4, (byte) 68);
         return var5;
     }

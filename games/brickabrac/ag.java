@@ -533,7 +533,7 @@ abstract class ag extends oc implements sd {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        on.field_A.field_Mb = param1;
+        Brick.field_A.field_Mb = param1;
         sc.field_c = true;
         int var2_int = kc.field_q.field_g;
         if (param0 != -83) {
@@ -541,11 +541,11 @@ abstract class ag extends oc implements sd {
         }
         try {
           var3 = kc.field_q.field_f;
-          var4 = on.field_A.field_O.b(param1, 272, on.field_A.field_R);
+          var4 = Brick.field_A.field_O.b(param1, 272, Brick.field_A.field_R);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           qp.field_f.a(-(2 * var5) + (-120 + var3), var5, (var2_int - 320) / 2, 320, (byte) 64);
           qp.field_f.field_Jb = na.a(false, 8421504, 3, 11579568, qp.field_f.field_cb, 2105376);
-          on.field_A.a(-24 + (qp.field_f.field_cb - 20), 16, 24, -24 + (-24 + qp.field_f.field_Ib), (byte) 64);
+          Brick.field_A.a(-24 + (qp.field_f.field_cb - 20), 16, 24, -24 + (-24 + qp.field_f.field_Ib), (byte) 64);
           nh.field_a.a(24, -24 + (-20 + qp.field_f.field_cb), 120, 80, (byte) 64);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ag.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

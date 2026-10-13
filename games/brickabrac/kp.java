@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class kp {
-    static vl field_c;
+    static NodeDeque field_c;
     static dh field_b;
     static jp[] field_e;
     static int field_a;
@@ -42,6 +42,6 @@ final class kp {
     }
 
     static {
-        field_c = new vl();
+        field_c = new NodeDeque();
     }
 }

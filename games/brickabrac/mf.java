@@ -3,7 +3,7 @@
  */
 final class mf {
     private Object[][] field_h;
-    static vl field_i;
+    static NodeDeque field_i;
     static int field_c;
     private bc field_g;
     int field_l;
@@ -861,7 +861,7 @@ final class mf {
           if (param0 >= 95) {
             return true;
           }
-          field_i = (vl) null;
+          field_i = (NodeDeque) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -964,7 +964,7 @@ final class mf {
     }
 
     static {
-        field_i = new vl();
+        field_i = new NodeDeque();
         field_e = "Type your email address again to make sure it's correct";
     }
 }

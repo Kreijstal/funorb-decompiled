@@ -140,7 +140,7 @@ final class ve {
                 this.field_a.a(tf.field_b, 0, 6, -1);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param4 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -156,7 +156,7 @@ final class ve {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var13 = 255 & tf.field_b[7];
                         var12 = (tf.field_b[2] << 8 & 65280) + (255 & tf.field_b[3]);
@@ -172,7 +172,7 @@ final class ve {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = ((tf.field_b[2] & 255) << 8) + ((16711680 & tf.field_b[1] << 16) + (-16777216 & tf.field_b[0] << 24)) + (tf.field_b[3] & 255);
                         var10 = (255 & tf.field_b[8]) + ((tf.field_b[6] << 16 & 16711680) + (tf.field_b[7] << 8 & 65280));

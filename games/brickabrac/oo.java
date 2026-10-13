@@ -82,10 +82,10 @@ final class oo extends ki {
         u.field_c = pl.a("chocolate", "chocolate_small_far", (byte) -36, i.field_m);
         dj.field_a = pl.a("chocolate", "chocolate_small_near", (byte) -69, i.field_m);
         dc.field_c = pl.a("chocolate", "chocolate_character", (byte) 101, i.field_m);
-        on.field_I[0] = cr.a("chocolate", i.field_m, "choc_caps", 2);
+        Brick.field_I[0] = cr.a("chocolate", i.field_m, "choc_caps", 2);
         aj.field_a[0] = cr.a("chocolate", i.field_m, "choc_segs", 2);
         lm.field_e[0] = pl.a("chocolate", "choc_centre", (byte) -126, i.field_m);
-        on.field_I[1] = ig.a(on.field_I[0], param0);
+        Brick.field_I[1] = ig.a(Brick.field_I[0], param0);
         aj.field_a[1] = ig.a(aj.field_a[0], param0);
         lm.field_e[1] = pl.a(-16371, lm.field_e[0]);
         gq.field_Ub = cr.a("chocolate", i.field_m, "choc_lever", 2);
@@ -162,7 +162,7 @@ final class oo extends ki {
 
     final jp[] a(byte param0, int param1) {
         int var3 = -63 % ((65 - param0) / 49);
-        return on.field_I[-1 + param1];
+        return Brick.field_I[-1 + param1];
     }
 
     oo(int param0, String param1, String param2, int param3) {
@@ -170,7 +170,7 @@ final class oo extends ki {
         try {
           aj.field_a = new jp[2][];
           lm.field_e = new jp[2];
-          on.field_I = new jp[2][];
+          Brick.field_I = new jp[2][];
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "oo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

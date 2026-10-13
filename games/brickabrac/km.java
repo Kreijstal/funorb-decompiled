@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class km extends gf {
+abstract class km extends GameScreen {
     int field_p;
     int field_q;
     int field_l;
@@ -13,7 +13,7 @@ abstract class km extends gf {
     static String field_o;
     static int field_i;
 
-    void b(byte param0) {
+    void drawScreen(byte obfuscationGuard) {
         int var2;
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
@@ -29,7 +29,7 @@ abstract class km extends gf {
             rp.field_s.d(var2, 0);
           }
         }
-        if (param0 >= -14) {
+        if (obfuscationGuard >= -14) {
           return;
         }
         pg.d(0);
@@ -70,7 +70,7 @@ abstract class km extends gf {
     private final void c(boolean param0, int param1) {
         if (this.field_h.field_j != -1 &&
           param1 != this.field_h.field_j) {
-          j.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
+          PlayerBoard.a(ta.field_e[0], -106, lh.g((byte) -44) / 4);
         }
         if (!param0) {
           this.field_j = -36;
@@ -146,11 +146,11 @@ abstract class km extends gf {
         }
     }
 
-    boolean a(char param0, int param1, int param2) {
+    boolean handleKey(char character, int keyCode, int obfuscationGuard) {
         int var4 = 0;
-        if (13 != param2) {
+        if (13 != obfuscationGuard) {
           var4 = this.field_h.field_j;
-          this.a(-120, param2, param0);
+          this.a(-120, obfuscationGuard, character);
           this.field_h.d((byte) -124);
           if (this.a(false, (byte) 126)) {
             wp.a(8, ta.field_e[0]);
@@ -159,7 +159,7 @@ abstract class km extends gf {
         } else {
           this.c(-1);
         }
-        if (param1 <= 98) {
+        if (keyCode <= 98) {
           return true;
         }
         return true;
@@ -167,7 +167,7 @@ abstract class km extends gf {
 
     int b(int param0, int param1) {
         if (param1 != 1) {
-          this.a(true, true, -57);
+          this.advanceScreen(true, true, -57);
         }
         return this.field_q * param0 + this.field_p;
     }
@@ -179,7 +179,7 @@ abstract class km extends gf {
         }
     }
 
-    void a(boolean param0, boolean param1, int param2) {
+    void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int var5 = 0;
         int fieldTemp$2 = 0;
         q[] var4_ref_q__;
@@ -195,12 +195,12 @@ abstract class km extends gf {
           var6 = var8[var5];
           var6.b(-2217);
         }
-        if (param2 > -52) {
+        if (obfuscationGuard > -52) {
           this.a(true, -79, -10);
         }
         var4 = this.field_h.field_j;
         dm.field_b = sa.a(de.field_x * 20, -4097);
-        if (param1 &&
+        if (inputEnabled &&
           !vh.field_L &&
           !ed.field_d) {
           this.field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), 27479, this.a(qo.field_O, (byte) -80, tb.field_fb));
@@ -306,7 +306,7 @@ abstract class km extends gf {
         if (param2 != 123) {
           return true;
         }
-        L0: {
+        regionExit1: {
           var4 = 0;
           var5 = this.field_m[param0];
           var6 = var5.field_f;
@@ -319,7 +319,7 @@ abstract class km extends gf {
                   be.field_a = true;
                   cq.a(16727, param1, 0, new oi(na.field_L[0]));
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 1) {
                 if (!(!this.field_h.a((byte) 113))) {
@@ -330,56 +330,56 @@ abstract class km extends gf {
                     dk.a(sb.field_b, true, 0, param1, 46);
                   }
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 2) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, 69, -1);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 7) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, 74, 0);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 24) {
                 if (!(!this.field_h.a((byte) 113))) {
                   eb.field_l = true;
                   ng.a(param1, param2 ^ 61, 0);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 22) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, 67, 8);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 5) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, 126, 7);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 8) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, param2 ^ 28, this.a(true));
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 4) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, 71, 6);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 3) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, 86, 5);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 20) {
                 var7 = 0;
@@ -423,7 +423,7 @@ abstract class km extends gf {
                   wp.a(8, ta.field_e[1]);
                   ea.field_d = de.field_x + 20;
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 21) {
                 if (this.field_h.b(param2 ^ -30)) {
@@ -452,7 +452,7 @@ abstract class km extends gf {
                     }
                   }
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 6) {
                 if (!(!this.field_h.a((byte) 113))) {
@@ -463,33 +463,33 @@ abstract class km extends gf {
                     nc.b(82);
                   }
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 9) {
                 if (!(!this.field_h.a((byte) 113))) {
                   pe.field_o.a((byte) 40, param1);
                   cc.field_G = true;
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 11) {
                 if (!(!this.field_h.a((byte) 113))) {
                   pe.field_o.b(29);
                   ng.a(param1, 73, -1);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 12) {
                 if (!(!this.field_h.a((byte) 113))) {
                   pe.field_o.f(69);
                 }
-                break L0;
+                break regionExit1;
               }
               if (13 == var8) {
                 if (!(!this.field_h.a((byte) 113))) {
                   da.f((byte) 122);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 23) {
                 if (!(!this.field_h.a((byte) 113))) {
@@ -507,26 +507,26 @@ abstract class km extends gf {
                     }
                   }
                 }
-                break L0;
+                break regionExit1;
               }
               if (19 == var8) {
                 if (!(!this.field_h.a((byte) 113))) {
                   var4 = 1;
                   nk.a(2048, uc.e((byte) -66));
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 32) {
                 if (!(!this.field_h.a((byte) 113))) {
                   ng.a(param1, 62, 14);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 33) {
                 if (!(!this.field_h.a((byte) 113))) {
-                  cq.a(16727, param1, pe.field_o.field_r, pe.field_o.field_w.field_b);
+                  cq.a(16727, param1, pe.field_o.field_r, pe.field_o.match.configuration);
                 }
-                break L0;
+                break regionExit1;
               }
               if (var8 == 34) {
                 if (!(!this.field_h.a((byte) 113))) {
@@ -537,28 +537,28 @@ abstract class km extends gf {
                   ng.a(param1, param2 ^ 25, var8);
                   cc.field_G = true;
                 }
-                break L0;
+                break regionExit1;
               }
               switch (var8) {
                 case 35:
                   if (!this.field_h.a((byte) 113)) {
-                    break L0;
+                    break regionExit1;
                   }
                   pe.field_o.a(param1, (byte) 69);
                   cc.field_G = true;
-                  break L0;
+                  break regionExit1;
                 default:
-                  break L0;
+                  break regionExit1;
                 case 42:
                   if (!this.field_h.a((byte) 113)) {
-                    break L0;
+                    break regionExit1;
                   }
                   var4 = 1;
                   ng.a(param1, 110, 12);
-                  break L0;
+                  break regionExit1;
                 case 36:
                   if (!this.field_h.a((byte) 113)) {
-                    break L0;
+                    break regionExit1;
                   }
                   stackIn_165_0 = !(be.field_a);
                   be.field_a = stackIn_165_0;
@@ -568,11 +568,11 @@ abstract class km extends gf {
                     hd.a(true);
                   }
                   var4 = 1;
-                  break L0;
+                  break regionExit1;
               }
             }
             if (this.field_h.a((byte) 113)) {
-              qj.b((byte) -126, param1);
+              GameplayScreen.b((byte) -126, param1);
             }
           } else {
             if (this.field_h.a((byte) 113)) {
@@ -590,7 +590,7 @@ abstract class km extends gf {
         return var4 != 0;
     }
 
-    final static void a(ak param0, j param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final static void a(MultiplayerMatch param0, PlayerBoard param1, int param2, int param3, boolean param4, int param5, int param6) {
         int var11 = 0;
         int var7_int = 0;
         int var8 = 0;
@@ -699,15 +699,15 @@ abstract class km extends gf {
         field_o = null;
         field_n = null;
         if (param0 >= -57) {
-          j var2 = (j) null;
-          km.a((ak) null, (j) null, 113, 61, false, -53, 18);
+          PlayerBoard var2 = (PlayerBoard) null;
+          km.a((MultiplayerMatch) null, (PlayerBoard) null, 113, 61, false, -53, 18);
         }
         field_k = null;
     }
 
     void a(boolean param0, int param1, int param2) {
         if (param2 <= 96) {
-          this.a('F', -76, -96);
+          this.handleKey('F', -76, -96);
         }
         this.field_h.a(this.a(po.field_a, (byte) -106, pq.field_k), param1, param0, (byte) -127);
     }

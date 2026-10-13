@@ -21,7 +21,7 @@ final class ah extends km {
         this.field_s = 0;
         if (pe.field_o != null &&
           !pe.field_o.field_p) {
-          var4 = pe.field_o.field_w.field_b;
+          var4 = pe.field_o.match.configuration;
           if (var4.field_b.field_h == 1) {
             this.field_s = 1;
           }
@@ -328,7 +328,7 @@ final class ah extends km {
           var22 = null;
           var12 = BrickABrac.field_J ? 1 : 0;
           try {
-            var13 = (bg) (mf.field_i.d(-48));
+            var13 = (bg) (mf.field_i.first(-48));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -466,7 +466,7 @@ final class ah extends km {
               ah.a(-62, '&');
             }
             param0.d(3, var4);
-            var17.b((byte) 111);
+            var17.unlink((byte) 111);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -631,7 +631,7 @@ final class ah extends km {
         }
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         int stackIn_17_0 = 0;
         int var2;
         int var3;
@@ -652,7 +652,7 @@ final class ah extends km {
         int var9Lifetime1;
         int var10Lifetime1;
         var12 = BrickABrac.field_J ? 1 : 0;
-        super.b((byte) -38);
+        super.drawScreen((byte) -38);
         al.a(this.field_a, 19);
         this.a(0);
         if (og.h(-26090)) {
@@ -663,7 +663,7 @@ final class ah extends km {
         im.a(475, 5, 33, 5, 140, (byte) -101, 120);
         nn.field_g.b(qn.field_u[this.field_s], 357, 1 + (-nn.field_g.field_L + 178), 0, -1);
         da.field_E[this.field_s].e(565, 140, -2048, 4096);
-        if (param0 >= -14) {
+        if (obfuscationGuard >= -14) {
           field_v = -65;
         }
         im.a(475, 5, 243, 5, 178, (byte) -57, 120);
@@ -717,9 +717,9 @@ final class ah extends km {
         this.field_r.b(117);
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        super.a(param0, param1, -100);
-        if (param2 >= -52) {
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
+        super.advanceScreen(updateFlag, inputEnabled, -100);
+        if (obfuscationGuard >= -52) {
           return;
         }
         if (og.h(-26090)) {

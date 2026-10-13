@@ -12,8 +12,8 @@ final class sb implements vc {
     private final boolean d(int param0) {
         boolean stackIn_18_0 = false;
         int var2;
-        qj var3;
-        ak var4;
+        GameplayScreen var3;
+        MultiplayerMatch var4;
         if (!ue.field_c) {
           return false;
         }
@@ -31,14 +31,14 @@ final class sb implements vc {
           return false;
         }
         var3 = pe.field_o;
-        var4 = var3.field_w;
+        var4 = var3.match;
         if (var3.c(99)) {
           return true;
         }
-        if (var3.field_w.field_c) {
+        if (var3.match.field_c) {
           return true;
         }
-        stackIn_18_0 = (((var4.field_a | var4.field_g | var4.field_i) & var3.field_o) != 0);
+        stackIn_18_0 = (((var4.playerMaskThree | var4.playerMaskTwo | var4.playerMaskOne) & var3.field_o) != 0);
         return stackIn_18_0;
     }
 
@@ -219,7 +219,7 @@ final class sb implements vc {
           var2 = stackIn_300_0;
           var3 = gp.field_d.field_db;
           if (!n.field_d) {
-            if (0 < on.field_E &&
+            if (0 < Brick.field_E &&
               20 > de.field_x % 40) {
               var4 = 1;
               if (var4 != 0) {
@@ -269,7 +269,7 @@ final class sb implements vc {
                 }
                 return;
               }
-              if (pe.field_o.field_w.field_c) {
+              if (pe.field_o.match.field_c) {
                 var5Lifetime10 = 1;
                 if (this.d(-119)) {
                   cc.a(var3, var4 != 0, var5Lifetime10 != 0, -114);
@@ -306,7 +306,7 @@ final class sb implements vc {
           if (var4Lifetime7 == 0) {
             if (!pf.field_p) {
               if (pe.field_o != null &&
-                pe.field_o.field_w.field_c) {
+                pe.field_o.match.field_c) {
                 var5Lifetime7 = 1;
                 if (this.d(-119)) {
                   cc.a(var3, var4Lifetime7 != 0, var5Lifetime7 != 0, -114);
@@ -348,7 +348,7 @@ final class sb implements vc {
           var2Lifetime1 = 0;
           var3Lifetime1 = gp.field_d.field_db;
           if (!n.field_d) {
-            if (0 < on.field_E) {
+            if (0 < Brick.field_E) {
               stackIn_10_0 = (20 > de.field_x % 40) ? 1 : 0;
             } else {
               stackIn_10_0 = 0;
@@ -362,7 +362,7 @@ final class sb implements vc {
           } else {
             if (!pf.field_p) {
               if (pe.field_o != null) {
-                stackIn_20_0 = (pe.field_o.field_w.field_c) ? 1 : 0;
+                stackIn_20_0 = (pe.field_o.match.field_c) ? 1 : 0;
               } else {
                 stackIn_20_0 = 0;
               }
@@ -388,7 +388,7 @@ final class sb implements vc {
           var2Lifetime2 = 0;
           var3Lifetime2 = gp.field_d.field_db;
           if (!n.field_d) {
-            if (0 < on.field_E &&
+            if (0 < Brick.field_E &&
               20 > de.field_x % 40) {
               var4Lifetime2 = 1;
               if (var4Lifetime2 != 0) {
@@ -396,7 +396,7 @@ final class sb implements vc {
               } else {
                 if (!pf.field_p) {
                   if (pe.field_o != null) {
-                    stackIn_46_0 = (pe.field_o.field_w.field_c) ? 1 : 0;
+                    stackIn_46_0 = (pe.field_o.match.field_c) ? 1 : 0;
                   } else {
                     stackIn_46_0 = 0;
                   }
@@ -467,7 +467,7 @@ final class sb implements vc {
                   ((jp) (Object) stackIn_79_0).b(stackIn_79_1, stackIn_79_2, stackIn_80_3);
                 }
               } else {
-                if (pe.field_o.field_w.field_c) {
+                if (pe.field_o.match.field_c) {
                   var5Lifetime2Lifetime1 = 1;
                   if (this.d(-119)) {
                     cc.a(var3Lifetime2, var4Lifetime2Lifetime1 != 0, var5Lifetime2Lifetime1 != 0, -114);
@@ -547,7 +547,7 @@ final class sb implements vc {
                   ((jp) (Object) stackIn_263_0).b(stackIn_263_1, stackIn_263_2, stackIn_264_3);
                 }
               } else {
-                if (!pe.field_o.field_w.field_c) {
+                if (!pe.field_o.match.field_c) {
                   var5Lifetime3 = 0;
                   if (this.d(-119)) {
                     cc.a(var3Lifetime3, var4Lifetime3 != 0, var5Lifetime3 != 0, -114);
@@ -579,7 +579,7 @@ final class sb implements vc {
           }
           return;
         }
-        if (0 >= on.field_E) {
+        if (0 >= Brick.field_E) {
           var4Lifetime4 = 0;
           if (var4Lifetime4 != 0) {
             stackIn_116_0 = 1;
@@ -625,7 +625,7 @@ final class sb implements vc {
                   ((jp) (Object) stackIn_136_0).b(stackIn_136_1, stackIn_136_2, stackIn_137_3);
                 }
               } else {
-                if (pe.field_o.field_w.field_c) {
+                if (pe.field_o.match.field_c) {
                   var5Lifetime4 = 1;
                   if (this.d(-119)) {
                     cc.a(var3Lifetime3, var4Lifetime4 != 0, var5Lifetime4 != 0, -114);
@@ -662,7 +662,7 @@ final class sb implements vc {
           if (var4Lifetime5 == 0) {
             if (!pf.field_p) {
               if (pe.field_o != null) {
-                stackIn_181_0 = (pe.field_o.field_w.field_c) ? 1 : 0;
+                stackIn_181_0 = (pe.field_o.match.field_c) ? 1 : 0;
               } else {
                 stackIn_181_0 = 0;
               }
@@ -720,7 +720,7 @@ final class sb implements vc {
             }
             return;
           }
-          if (pe.field_o.field_w.field_c) {
+          if (pe.field_o.match.field_c) {
             var5Lifetime6 = 1;
             if (this.d(-119)) {
               cc.a(var3Lifetime3, var4Lifetime6 != 0, var5Lifetime6 != 0, -114);
@@ -960,9 +960,9 @@ final class sb implements vc {
           if (this.field_a > 0) {
             this.field_a = this.field_a - 1;
           }
-          if (on.field_E != 1) {
-            if (1 < on.field_E) {
-              nn.field_f = rd.a(bc.field_a, new String[]{Integer.toString(on.field_E)}, (byte) 103);
+          if (Brick.field_E != 1) {
+            if (1 < Brick.field_E) {
+              nn.field_f = rd.a(bc.field_a, new String[]{Integer.toString(Brick.field_E)}, (byte) 103);
               var4 = n.field_d ? 1 : 0;
               n.field_d = false;
               if (this.d(76)) {
@@ -975,7 +975,7 @@ final class sb implements vc {
                   pf.field_p = stackIn_27_0;
                   if (pf.field_p) {
                     this.field_a = 0;
-                    on.field_E = 0;
+                    Brick.field_E = 0;
                   } else {
                     this.field_a = 20;
                   }
@@ -1026,7 +1026,7 @@ final class sb implements vc {
             nn.field_f = an.field_g;
           }
         } else {
-          on.field_E = 0;
+          Brick.field_E = 0;
         }
         var4Lifetime1 = n.field_d ? 1 : 0;
         n.field_d = false;
@@ -1157,7 +1157,7 @@ final class sb implements vc {
           return;
         }
         if (ki.field_e != 1) {
-          sharedTailExit_0: {
+          regionExit1: {
             if (n.field_d) {
               stackIn_231_0 = n.field_d;
               stackIn_232_1 = (var4Lifetime1 != 0) ? 0 : 1;
@@ -1185,7 +1185,7 @@ final class sb implements vc {
                 stackIn_243_10 = 13;
                 stackIn_244_11 = (so.a((byte) -35) <= 50) ? false : true;
                 dc.a(stackIn_240_0, stackIn_241_1, stackIn_243_2, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7, stackIn_243_8 != 0, stackIn_243_9, stackIn_243_10, stackIn_244_11);
-                break sharedTailExit_0;
+                break regionExit1;
               }
               wp.a(8, ta.field_e[0]);
             }
@@ -1282,7 +1282,7 @@ final class sb implements vc {
             dc.a(stackIn_176_0, stackIn_177_1, stackIn_179_2, stackIn_179_3, stackIn_179_4, stackIn_179_5, stackIn_179_6, stackIn_179_7, stackIn_179_8 != 0, stackIn_179_9, stackIn_179_10, stackIn_180_11);
           } else {
             this.field_a = 0;
-            on.field_E = 0;
+            Brick.field_E = 0;
             if (n.field_d) {
               stackIn_190_0 = n.field_d;
               stackIn_191_1 = (var4Lifetime1 != 0) ? 0 : 1;

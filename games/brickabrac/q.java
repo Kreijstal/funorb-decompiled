@@ -62,7 +62,7 @@ final class q {
           this.field_f != 43) {
           if (!this.field_b) {
             if (!param1) {
-              var3 = vn.field_G;
+              var3 = Ball.field_G;
             } else {
               var3 = af.field_A;
             }

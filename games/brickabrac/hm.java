@@ -47,26 +47,26 @@ final class hm {
           var10_int = (7 + var10_int) / 8;
           lj.field_p = new byte[var10_int];
           if (param3.field_bb == null) {
-            param3.field_bb = new vl();
+            param3.field_bb = new NodeDeque();
           }
           ua.field_c = param3.field_bb;
-          ua.field_c.c((byte) -60);
+          ua.field_c.clear((byte) -60);
           eq.field_m = new mk(param5);
           m.field_h = -1;
           re.field_i = 0;
           uf.field_c = 0;
           ko.field_s = -1;
           if (param6.field_bb == null) {
-            param6.field_bb = new vl();
+            param6.field_bb = new NodeDeque();
           }
           rq.field_a = param6.field_bb;
-          rq.field_a.c((byte) -48);
+          rq.field_a.clear((byte) -48);
           pn.field_i = new mk(param8);
           if (param0.field_bb == null) {
-            param0.field_bb = new vl();
+            param0.field_bb = new NodeDeque();
           }
           mp.field_Tb = param0.field_bb;
-          mp.field_Tb.c((byte) -61);
+          mp.field_Tb.clear((byte) -61);
           if (param1 != 86) {
             return;
           }

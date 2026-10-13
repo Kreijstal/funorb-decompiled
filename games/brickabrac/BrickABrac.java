@@ -25,16 +25,16 @@ public final class BrickABrac extends sa {
         var2 = stackIn_6_0;
         if (var2 != 0) {
           if (16 > kh.field_a) {
-            lp.field_rb.b((byte) -75);
+            lp.field_rb.drawScreen((byte) -75);
             jn.a(kh.field_a + 1, 256, 16769381, false, false);
           } else {
-            hd.field_d.b((byte) -85);
+            hd.field_d.drawScreen((byte) -85);
             jn.a(32 - (kh.field_a - 1), 256, 16769381, false, false);
           }
         } else {
-          lp.field_rb.b((byte) -63);
+          lp.field_rb.drawScreen((byte) -63);
         }
-        var3 = (kq) (kp.field_c.d(-123));
+        var3 = (kq) (kp.field_c.first(-123));
         if (param0 != 16769381) {
           field_I = (mf) null;
         }
@@ -60,7 +60,7 @@ public final class BrickABrac extends sa {
     public final void a(boolean param0, byte param1) {
         int fieldTemp$0 = 0;
         int stackIn_10_0 = 0;
-        gf stackIn_17_0 = null;
+        GameScreen stackIn_17_0 = null;
         boolean stackIn_17_1 = false;
         boolean stackIn_18_2 = false;
         int var3;
@@ -72,7 +72,7 @@ public final class BrickABrac extends sa {
         de.field_x = de.field_x + 1;
         if (!og.h(-26090)) {
           while (true) {
-            var6 = (pn) (kq.field_j.c(3));
+            var6 = (pn) (kq.field_j.removeFirst(3));
             if (var6 == null) {
               break;
             }
@@ -91,13 +91,13 @@ public final class BrickABrac extends sa {
           stackIn_17_0 = lp.field_rb;
           stackIn_17_1 = true;
           stackIn_18_2 = (param0) && (var3 == 0);
-          ((gf) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2, -104);
+          ((GameScreen) (Object) stackIn_17_0).advanceScreen(stackIn_17_1, stackIn_18_2, -104);
         }
         if (var3 != 0) {
           if ((pe.field_o != hd.field_d ||
             pe.field_o.field_p) &&
             hd.field_d != null) {
-            hd.field_d.a(false, false, -82);
+            hd.field_d.advanceScreen(false, false, -82);
           }
           kh.field_a = kh.field_a + 1;
           if (32 == kh.field_a) {
@@ -107,15 +107,15 @@ public final class BrickABrac extends sa {
           if (pe.field_o != null &&
             lp.field_rb != pe.field_o &&
             pe.field_o.field_p) {
-            pe.field_o.a(false, false, -81);
+            pe.field_o.advanceScreen(false, false, -81);
           }
         }
-        if (null != kp.field_c.d(-8)) {
+        if (null != kp.field_c.first(-8)) {
           fieldTemp$0 = ok.field_c + 1;
           ok.field_c = ok.field_c + 1;
           if (fieldTemp$0 == 335) {
             ok.field_c = 0;
-            kp.field_c.c(3);
+            kp.field_c.removeFirst(3);
           }
         }
         if (ok.field_c == 50) {
@@ -151,11 +151,11 @@ public final class BrickABrac extends sa {
         int var10 = 0;
         int stackIn_44_0 = 0;
         int stackIn_56_0 = 0;
-        qj stackIn_58_0 = null;
+        GameplayScreen stackIn_58_0 = null;
         boolean stackIn_59_1 = false;
-        qj stackIn_74_0 = null;
+        GameplayScreen stackIn_74_0 = null;
         boolean stackIn_75_1 = false;
-        qj stackIn_99_0 = null;
+        GameplayScreen stackIn_99_0 = null;
         int stackIn_99_1 = 0;
         pi stackIn_99_2 = null;
         boolean stackIn_100_3;
@@ -241,7 +241,7 @@ public final class BrickABrac extends sa {
             return true;
           }
           if (param2 == 72) {
-            var35 = vn.d(8);
+            var35 = Ball.d(8);
             var27 = var35;
             var4 = var27;
             var18 = var4;
@@ -263,7 +263,7 @@ public final class BrickABrac extends sa {
               var5_int = ea.a(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
                 if (eo.a(var35, var6, (byte) -75)) {
-                  kp.field_c.a(new kq(var6), (byte) 3);
+                  kp.field_c.addLast(new kq(var6), (byte) 3);
                 }
               }
             }
@@ -296,15 +296,15 @@ public final class BrickABrac extends sa {
               } else {
                 fieldTemp$0 = pe.field_o.field_x;
                 pe.field_o.field_x = pe.field_o.field_x + 1;
-                pe.field_o.field_w.field_l[fieldTemp$0].a(false, param0, pe.field_o.field_w.field_k);
+                pe.field_o.match.playerBoards[fieldTemp$0].a(false, param0, pe.field_o.match.playerCount);
                 stackIn_74_0 = pe.field_o;
-                stackIn_75_1 = (pe.field_o.field_x == pe.field_o.field_w.field_k);
+                stackIn_75_1 = (pe.field_o.field_x == pe.field_o.match.playerCount);
                 stackIn_74_0.field_q = stackIn_75_1;
                 if (pe.field_o.field_q) {
                   if (pe.field_o.c(103)) {
                     return true;
                   }
-                  pe.field_o.field_w.field_l[pe.field_o.field_k].field_E = pe.field_o.field_w.field_l[pe.field_o.field_k].field_F - 50;
+                  pe.field_o.match.playerBoards[pe.field_o.field_k].field_E = pe.field_o.match.playerBoards[pe.field_o.field_k].simulationTick - 50;
                 }
               }
               return true;
@@ -318,7 +318,7 @@ public final class BrickABrac extends sa {
                 pe.field_o.a(false, (byte) 69);
                 cc.field_G = true;
                 pf.field_p = true;
-                on.field_E = 0;
+                Brick.field_E = 0;
                 ng.a(false, 125, -2);
               }
               ed.field_d = false;
@@ -353,7 +353,7 @@ public final class BrickABrac extends sa {
                   return true;
                 }
                 if (si.field_a == 70) {
-                  pe.field_o.field_w.field_j = param0.l(255);
+                  pe.field_o.match.field_j = param0.l(255);
                   if (pe.field_o != null) {
                     fr.a(1);
                   }
@@ -373,7 +373,7 @@ public final class BrickABrac extends sa {
                 stackIn_99_1 = -15;
                 stackIn_99_2 = (pi) (param0);
                 stackIn_100_3 = (si.field_a == 74);
-                ((qj) (Object) stackIn_99_0).a((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
+                ((GameplayScreen) (Object) stackIn_99_0).a((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
                 return true;
               }
             }
@@ -415,7 +415,7 @@ public final class BrickABrac extends sa {
             stackIn_56_0 = 0;
           }
           var15 = stackIn_56_0;
-          pe.field_o = new qj(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
+          pe.field_o = new GameplayScreen(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
           stackIn_58_0 = pe.field_o;
           stackIn_59_1 = (param0.l(255) == 0);
           stackIn_58_0.field_q = stackIn_59_1;
@@ -540,7 +540,7 @@ public final class BrickABrac extends sa {
         if (null != hd.field_d) {
           return false;
         }
-        return null != lp.field_rb ? lp.field_rb.a(param1, 106, param0) : false;
+        return null != lp.field_rb ? lp.field_rb.handleKey(param1, 106, param0) : false;
     }
 
     final static int c(int param0, int param1) {
@@ -568,7 +568,7 @@ public final class BrickABrac extends sa {
         v.a(false);
         op.a((byte) -42);
         kq.a((byte) -115);
-        vl.b((byte) 100);
+        NodeDeque.b((byte) 100);
         fo.a(2);
         sc.a(81);
         ue.a((byte) -114);
@@ -612,20 +612,20 @@ public final class BrickABrac extends sa {
         wg.a(0);
         qn.b(0);
         ng.a((byte) -49);
-        gf.c((byte) -91);
+        GameScreen.c((byte) -91);
         of.a(-2);
-        qj.d(81);
-        on.d(4641);
-        nm.a(true);
+        GameplayScreen.d(81);
+        Brick.d(4641);
+        IntrusiveNode.a(true);
         mn.f(2);
         tk.a(-2);
         un.a(!param0 ? true : false);
         ie.c(-1);
         wp.a((byte) -117);
-        bn.d((byte) -106);
-        vi.a(34);
-        no.d((byte) 97);
-        j.d(-2947);
+        RectangleBody.d((byte) -106);
+        MovingBody.a(34);
+        CircleBody.d((byte) 97);
+        PlayerBoard.d(-2947);
         ee.e(-116);
         cl.b(true);
         ij.c(false);
@@ -669,14 +669,14 @@ public final class BrickABrac extends sa {
         ce.b(46);
         hn.a(122);
         qc.d(0);
-        vn.c(122);
+        Ball.c(122);
         il.c(124);
         kc.a(95);
-        vo.e(-77);
+        Paddle.e(-77);
         ge.c(6);
         lj.b(false);
         ul.a((byte) -73);
-        ak.d(-19537);
+        MultiplayerMatch.d(-19537);
         p.b(false);
         vd.a(true);
         dh.a();

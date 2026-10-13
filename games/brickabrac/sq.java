@@ -197,7 +197,7 @@ final class sq {
         long var1;
         long var3;
         long var5;
-        ff.field_d.c((byte) -83);
+        ff.field_d.clear((byte) -83);
         if (!pf.field_f) {
           if (!param0) {
             if (im.field_g) {
@@ -207,7 +207,7 @@ final class sq {
                 discarded$9 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
-              ff.field_d.a(bq.field_b, (byte) 3);
+              ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
@@ -218,7 +218,7 @@ final class sq {
                 discarded$8 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
-              ff.field_d.a(bq.field_b, (byte) 3);
+              ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           }
           return;
@@ -236,7 +236,7 @@ final class sq {
           discarded$11 = bj.field_P.field_l.append(" kB");
           mk.field_j = var5;
           lf.field_u = var1;
-          ff.field_d.a(bj.field_P, (byte) 3);
+          ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
@@ -245,7 +245,7 @@ final class sq {
                 discarded$13 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
-              ff.field_d.a(bq.field_b, (byte) 3);
+              ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
@@ -256,13 +256,13 @@ final class sq {
                 discarded$12 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
-              ff.field_d.a(bq.field_b, (byte) 3);
+              ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           }
           return;
         }
         if (mk.field_j == var5) {
-          ff.field_d.a(bj.field_P, (byte) 3);
+          ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (im.field_g) {
               if (d.field_H != rn.field_c) {
@@ -271,7 +271,7 @@ final class sq {
                 discarded$14 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
-              ff.field_d.a(bq.field_b, (byte) 3);
+              ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
@@ -282,7 +282,7 @@ final class sq {
                 discarded$15 = bq.field_b.field_l.append(" fps");
                 rn.field_c = d.field_H;
               }
-              ff.field_d.a(bq.field_b, (byte) 3);
+              ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           }
           return;
@@ -294,7 +294,7 @@ final class sq {
         discarded$17 = bj.field_P.field_l.append(" kB");
         mk.field_j = var5;
         lf.field_u = var1;
-        ff.field_d.a(bj.field_P, (byte) 3);
+        ff.field_d.addLast(bj.field_P, (byte) 3);
         if (!param0) {
           if (im.field_g) {
             if (d.field_H != rn.field_c) {
@@ -303,7 +303,7 @@ final class sq {
               discarded$18 = bq.field_b.field_l.append(" fps");
               rn.field_c = d.field_H;
             }
-            ff.field_d.a(bq.field_b, (byte) 3);
+            ff.field_d.addLast(bq.field_b, (byte) 3);
           }
         } else {
           sq.a(15);
@@ -314,7 +314,7 @@ final class sq {
               discarded$19 = bq.field_b.field_l.append(" fps");
               rn.field_c = d.field_H;
             }
-            ff.field_d.a(bq.field_b, (byte) 3);
+            ff.field_d.addLast(bq.field_b, (byte) 3);
           }
         }
         return;

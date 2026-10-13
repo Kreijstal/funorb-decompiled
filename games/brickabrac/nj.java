@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj extends nm {
+final class nj extends IntrusiveNode {
     private int field_I;
     static int[] field_G;
     private int[][] field_D;
@@ -97,7 +97,7 @@ final class nj extends nm {
         int fieldTemp$1 = this.field_k + 1;
         this.field_k = this.field_k + 1;
         if (this.field_u == fieldTemp$1) {
-          this.b((byte) 111);
+          this.unlink((byte) 111);
           dl.field_f = dl.field_f - 1;
         }
     }

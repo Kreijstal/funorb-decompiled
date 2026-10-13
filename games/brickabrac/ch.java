@@ -75,7 +75,7 @@ final class ch {
               fieldTemp$1 = fo.field_h;
               fo.field_h = fo.field_h + 1;
               var6.field_Sb = fieldTemp$1;
-              jq.field_n.a(var6, (byte) 3);
+              jq.field_n.addLast(var6, (byte) 3);
             }
             var6.field_ac = var5;
             var6.field_Qb = var7_ref;
@@ -133,7 +133,7 @@ final class ch {
             fieldTemp$0 = ol.field_w;
             ol.field_w = ol.field_w + 1;
             var6Lifetime1.field_Sb = fieldTemp$0;
-            bf.field_N.a(var6Lifetime1, (byte) 3);
+            bf.field_N.addLast(var6Lifetime1, (byte) 3);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -141,11 +141,11 @@ final class ch {
           var6Lifetime1.field_Rb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Ub = (String) (var3Lifetime1);
           var6Lifetime1.field_Qb = var5Lifetime1;
-          var6Lifetime1.b((byte) 111);
-          var7 = (mp) (bf.field_N.d(-65));
+          var6Lifetime1.unlink((byte) 111);
+          var7 = (mp) (bf.field_N.first(-65));
           while (null != var7) {
             if (a.a(200, var7, var6Lifetime1)) {
-              var7 = (mp) (bf.field_N.a((byte) 116));
+              var7 = (mp) (bf.field_N.next((byte) 116));
               if (var9 == 0) {
                 continue;
               }
@@ -158,7 +158,7 @@ final class ch {
               return;
             }
           }
-          bf.field_N.a(var6Lifetime1, (byte) 3);
+          bf.field_N.addLast(var6Lifetime1, (byte) 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

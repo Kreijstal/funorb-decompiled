@@ -55,10 +55,10 @@ final class f {
           var2 = var27.l(255);
           if (0 == var2) {
             var3 = var27.i(65280);
-            var4_ref_eg = (eg) (qc.field_n.d(-105));
+            var4_ref_eg = (eg) (qc.field_n.first(-105));
             while (var4_ref_eg != null) {
               if (var4_ref_eg.field_l != var3) {
-                var4_ref_eg = (eg) (qc.field_n.a((byte) 116));
+                var4_ref_eg = (eg) (qc.field_n.next((byte) 116));
                 continue;
               }
               break;
@@ -148,16 +148,16 @@ final class f {
               }
             }
             var4_ref_eg.field_o = true;
-            var4_ref_eg.b((byte) 111);
+            var4_ref_eg.unlink((byte) 111);
             return;
           }
           if (var2 == 1) {
             var3Lifetime1 = var27.i(param0 + 65273);
             var4 = var27.g(-32768);
-            var6 = (sp) (tm.field_f.d(-60));
+            var6 = (sp) (tm.field_f.first(-60));
             while (var6 != null) {
               if (var6.field_m != var3Lifetime1) {
-                var6 = (sp) (tm.field_f.a((byte) 116));
+                var6 = (sp) (tm.field_f.next((byte) 116));
                 continue;
               }
               break;
@@ -167,7 +167,7 @@ final class f {
               return;
             }
             var6.field_p = var4;
-            var6.b((byte) 111);
+            var6.unlink((byte) 111);
             return;
           }
           rk.a("HS1: " + eq.c((byte) -96), (Throwable) null, param0 ^ 102);

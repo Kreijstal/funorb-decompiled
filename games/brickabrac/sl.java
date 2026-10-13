@@ -83,7 +83,7 @@ abstract class sl extends tk {
         try {
           w.field_n = param8;
           pe.field_t = param4;
-          on.field_O = param5;
+          Brick.field_O = param5;
           dm.field_c = param10;
           rg.field_b = param12;
           th.field_a = param3;
@@ -96,22 +96,22 @@ abstract class sl extends tk {
           dj.field_f = cr.a("lobby", param7, "gameprivacy", 2);
           bq.field_c = cr.a("lobby", param7, "ratedgame", 2);
           uo.field_c = cr.a("lobby", param7, "opentome", 2);
-          vn.field_K = cr.a("lobby", param7, "allowspectators", 2);
+          Ball.field_K = cr.a("lobby", param7, "allowspectators", 2);
           bl.field_H = new String[5];
           bl.field_H[3] = cm.field_u;
           bl.field_H[1] = t.field_e;
           bl.field_H[2] = ji.field_g;
           bl.field_H[4] = bq.field_a;
           bl.field_H[0] = rp.field_r;
-          vn.field_A = new mh(0L, (mh) null);
+          Ball.field_A = new mh(0L, (mh) null);
           qb.field_v = new mh(0L, rp.field_t, n.field_a);
           ij.field_a = new mh(0L, ik.field_a, pf.field_c);
           fo.field_b = new mm(0L, new mh(0L, (mh) null), am.field_Qb, ic.field_c);
-          vn.field_A.a(qb.field_v, 0);
+          Ball.field_A.a(qb.field_v, 0);
           if (vd.field_e) {
-            vn.field_A.a(ij.field_a, 0);
+            Ball.field_A.a(ij.field_a, 0);
           }
-          vn.field_A.a(fo.field_b, 0);
+          Ball.field_A.a(fo.field_b, 0);
           fo.field_b.field_Qb.a((byte) -74, ad.field_l);
           fo.field_b.field_Qb.field_Q = 1;
           var23 = fo.field_b.field_Qb;
@@ -138,7 +138,7 @@ abstract class sl extends tk {
           if (vd.field_e) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
-            stackIn_7_4 = ak.field_e;
+            stackIn_7_4 = MultiplayerMatch.field_e;
           } else {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
@@ -164,12 +164,12 @@ abstract class sl extends tk {
             rm.field_a.a(gj.field_b, 0);
           }
           rm.field_a.a(td.field_v, 0);
-          on.field_A = new mh(0L, ad.field_l);
-          on.field_A.field_S = 1;
-          on.field_A.field_Q = 0;
+          Brick.field_A = new mh(0L, ad.field_l);
+          Brick.field_A.field_S = 1;
+          Brick.field_A.field_Q = 0;
           nh.field_a = new mh(0L, ij.field_b, k.field_j.toUpperCase());
           qp.field_f = new mh(0L, re.field_m);
-          qp.field_f.a(on.field_A, 0);
+          qp.field_f.a(Brick.field_A, 0);
           qp.field_f.a(nh.field_a, 0);
           t.field_f = new mh(0L, am.field_Qb);
           t.field_f.a((byte) -83, ad.field_l);
@@ -209,7 +209,7 @@ abstract class sl extends tk {
             }
           }
           gb.field_l[2] = new mh(0L, wi.field_n, p.field_j);
-          ab.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, tk.field_t, vn.field_K[0], re.field_a), new rk(0L, al.field_n, (mh) null, tk.field_t, vn.field_K[1], hh.field_f)};
+          ab.field_A[2] = new rk[]{new rk(0L, al.field_n, (mh) null, tk.field_t, (jp) null, ni.field_Pb), new rk(0L, al.field_n, (mh) null, tk.field_t, Ball.field_K[0], re.field_a), new rk(0L, al.field_n, (mh) null, tk.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < pe.field_t) {
             gb.field_l[3] = new mh(0L, wi.field_n, uc.field_r);
             array$1 = new rk[pe.field_t + 1];
@@ -261,14 +261,14 @@ abstract class sl extends tk {
           }
           pf.field_h = new mh(0L, fm.field_b);
           dn.field_K = new mh(0L, fm.field_b);
-          ke.field_e = new mh(0L, vo.field_C);
+          ke.field_e = new mh(0L, Paddle.field_C);
           ke.field_e.a((byte) -125, ad.field_l);
           var17 = ke.field_e;
           ke.field_e.field_Q = 1;
           var17.field_S = 1;
-          ak.field_d = new mh(0L, (mh) null);
-          ak.field_d.a(ba.field_v, 0);
-          ak.field_d.a(rg.field_e, 0);
+          MultiplayerMatch.field_d = new mh(0L, (mh) null);
+          MultiplayerMatch.field_d.a(ba.field_v, 0);
+          MultiplayerMatch.field_d.a(rg.field_e, 0);
           rg.field_e.a(jd.field_a, 0);
           for (var18Lifetime2 = 0; param13 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
@@ -282,9 +282,9 @@ abstract class sl extends tk {
               }
             }
           }
-          ak.field_d.a(pf.field_h, 0);
-          ak.field_d.a(dn.field_K, 0);
-          ak.field_d.a(ke.field_e, 0);
+          MultiplayerMatch.field_d.a(pf.field_h, 0);
+          MultiplayerMatch.field_d.a(dn.field_K, 0);
+          MultiplayerMatch.field_d.a(ke.field_e, 0);
           pk.field_h = new mh(0L, rf.field_c, lq.field_a.toUpperCase());
           nd.field_a = new mh(0L, ij.field_b, fh.field_e.toUpperCase());
           return;

@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class qc extends nm {
+final class qc extends IntrusiveNode {
     static jp[] field_l;
-    static vl field_n;
+    static NodeDeque field_n;
     static volatile boolean field_i;
     static int field_o;
     int field_j;
@@ -76,8 +76,8 @@ final class qc extends nm {
             if (null != vd.field_f) {
               vd.field_f.b((byte) 30);
             }
-            if (on.field_x != null) {
-              on.field_x.a((byte) 68);
+            if (Brick.field_x != null) {
+              Brick.field_x.a((byte) 68);
             }
             if (param0 != 14676) {
               return;
@@ -198,6 +198,6 @@ final class qc extends nm {
 
     static {
         field_i = true;
-        field_n = new vl();
+        field_n = new NodeDeque();
     }
 }

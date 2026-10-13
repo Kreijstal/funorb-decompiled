@@ -158,23 +158,23 @@ final class ol extends km {
         this.field_t = new lc((km) (this), this.field_m[2], 2, 1);
     }
 
-    final void b(byte param0) {
-        super.b((byte) -56);
+    final void drawScreen(byte obfuscationGuard) {
+        super.drawScreen((byte) -56);
         al.a(this.field_a, 19);
         im.a(550, 5, 243, 5, 140, (byte) -91, 45);
         this.a(0);
         this.field_u.a((byte) 105);
         this.field_t.a((byte) 116);
-        if (param0 >= -14) {
+        if (obfuscationGuard >= -14) {
           field_z = (jp[]) null;
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        super.a(param0, param1, -118);
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
+        super.advanceScreen(updateFlag, inputEnabled, -118);
         this.field_u.b((byte) -75);
         this.field_t.b((byte) -75);
-        if (param2 > -52) {
+        if (obfuscationGuard > -52) {
           field_r = (jp) null;
         }
     }

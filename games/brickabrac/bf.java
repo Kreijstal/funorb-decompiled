@@ -5,7 +5,7 @@ final class bf extends d {
     static int[] field_M;
     static jp field_L;
     static jp field_K;
-    static vl field_N;
+    static NodeDeque field_N;
 
     public static void a(int param0) {
         if (param0 != 8192) {
@@ -80,7 +80,7 @@ final class bf extends d {
           if (param2 != -15947) {
             field_K = (jp) null;
           }
-          eo.field_k = new hk(gf.field_d, (String) null, cg.field_l, param0, param1);
+          eo.field_k = new hk(GameScreen.field_d, (String) null, cg.field_l, param0, param1);
           rj.field_c = new bh(mf.field_f, eo.field_k);
           mf.field_f.a(-117, rj.field_c);
         } catch (RuntimeException runtimeException) {
@@ -95,7 +95,7 @@ final class bf extends d {
         fh.field_d = false;
         nl.field_f = null;
         if (ua.field_c != null) {
-          ua.field_c.c((byte) -57);
+          ua.field_c.clear((byte) -57);
           ua.field_c = null;
         }
         if (param0 < 29) {
@@ -104,12 +104,12 @@ final class bf extends d {
         try {
           eq.field_m = null;
           if (rq.field_a != null) {
-            rq.field_a.c((byte) -91);
+            rq.field_a.clear((byte) -91);
             rq.field_a = null;
           }
           pn.field_i = null;
           if (null != mp.field_Tb) {
-            mp.field_Tb.c((byte) -84);
+            mp.field_Tb.clear((byte) -84);
             mp.field_Tb = null;
           }
           BrickABrac.field_F = null;

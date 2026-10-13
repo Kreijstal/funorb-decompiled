@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ln extends nm {
+final class ln extends IntrusiveNode {
     static boolean field_l;
     static jp[] field_j;
     int field_m;
@@ -79,10 +79,10 @@ final class ln extends nm {
           og.field_gc = param0;
           ji.field_a = param6;
           for (var7_int = 0; var7_int < 2; var7_int++) {
-            ip.field_s.a(new pb(960, 480), (byte) 3);
+            ip.field_s.addLast(new pb(960, 480), (byte) 3);
           }
           for (var7_intLifetime1 = 0; var7_intLifetime1 < 2; var7_intLifetime1++) {
-            cr.field_N.a(new pb(1280, 480), (byte) 3);
+            cr.field_N.addLast(new pb(1280, 480), (byte) 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

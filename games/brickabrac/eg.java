@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends nm {
+final class eg extends IntrusiveNode {
     long[][] field_r;
     boolean field_o;
     int[][] field_n;

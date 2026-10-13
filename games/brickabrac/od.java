@@ -29,7 +29,7 @@ final class od extends java.awt.Canvas {
         int fieldTemp$3 = 0;
         int fieldTemp$4 = 0;
         int var2;
-        L0: {
+        regionExit1: {
           var2 = BrickABrac.field_J ? 1 : 0;
           if (13 != pp.field_a) {
             if (pp.field_a == 14) {
@@ -87,10 +87,10 @@ final class od extends java.awt.Canvas {
                           } else {
                             if (((pp.field_a != 11)) &&
                               (pp.field_a == 12)) {
-                              break L0;
+                              break regionExit1;
                             }
                           }
-                          break L0;
+                          break regionExit1;
                         }
                         if (jl.field_a > 0) {
                           fieldTemp$3 = jl.field_a - 1;

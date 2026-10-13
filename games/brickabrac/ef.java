@@ -104,7 +104,7 @@ final class ef extends IOException {
             return;
           }
           stackIn_6_0 = true;
-          stackIn_7_1 = !(vo.field_x >= 13);
+          stackIn_7_1 = !(Paddle.field_x >= 13);
           he.field_H = cd.a(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           md.a((String[]) null, true);

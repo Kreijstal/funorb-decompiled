@@ -7,7 +7,7 @@ final class mp extends mh {
     int field_Sb;
     static String field_Pb;
     mh field_Xb;
-    static vl field_Tb;
+    static NodeDeque field_Tb;
     String field_Ub;
     String field_Qb;
     static String[] field_bc;
@@ -287,7 +287,7 @@ final class mp extends mh {
           if (null != ai.field_t) {
             k.field_h.a(0, ai.field_t);
           }
-          dq.a(k.field_h, tq.field_f, vn.field_F, (byte) -72, to.field_g);
+          dq.a(k.field_h, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
           k.field_h.c(k.field_h.field_l - var5_int, 255);
           cr.a(-1, 10000);
           return;

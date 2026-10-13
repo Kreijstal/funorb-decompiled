@@ -2099,12 +2099,12 @@ class jp extends mn {
         int var4Lifetime2;
         int var5Lifetime1;
         var1 = this.field_C - 1;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var1 >= 0) {
             var2 = var1 * this.field_D;
             for (var3 = 0; var3 < this.field_D; var3++) {
               if (this.field_G[var2 + var3] != 0) {
-                break L1;
+                break scanLoop1;
               }
             }
             var1--;
@@ -2113,12 +2113,12 @@ class jp extends mn {
           break;
         }
         var2Lifetime1 = 0;
-        L4: while (true) {
+        scanLoop2: while (true) {
           if (var2Lifetime1 < var1) {
             var3Lifetime1 = var2Lifetime1 * this.field_D;
             for (var4 = 0; var4 < this.field_D; var4++) {
               if (this.field_G[var3Lifetime1 + var4] != 0) {
-                break L4;
+                break scanLoop2;
               }
             }
             var2Lifetime1++;
@@ -2127,11 +2127,11 @@ class jp extends mn {
           break;
         }
         var3Lifetime2 = this.field_D - 1;
-        L7: while (true) {
+        scanLoop3: while (true) {
           if (var3Lifetime2 >= 0) {
             for (var4Lifetime1 = var2Lifetime1; var4Lifetime1 <= var1; var4Lifetime1++) {
               if (this.field_G[var4Lifetime1 * this.field_D + var3Lifetime2] != 0) {
-                break L7;
+                break scanLoop3;
               }
             }
             var3Lifetime2--;
@@ -2140,11 +2140,11 @@ class jp extends mn {
           break;
         }
         var4Lifetime2 = 0;
-        L10: while (true) {
+        scanLoop4: while (true) {
           if (var4Lifetime2 < var3Lifetime2) {
             for (var5 = var2Lifetime1; var5 <= var1; var5++) {
               if (this.field_G[var5 * this.field_D + var4Lifetime2] != 0) {
-                break L10;
+                break scanLoop4;
               }
             }
             var4Lifetime2++;

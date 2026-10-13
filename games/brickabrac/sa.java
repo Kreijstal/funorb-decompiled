@@ -451,7 +451,7 @@ abstract class sa extends qg implements vc {
         }
         if (!og.h(-26090)) {
           do {
-            var5 = (e) (lp.field_wb.c(3));
+            var5 = (e) (lp.field_wb.removeFirst(3));
             if (var5 == null) {
               if (var4 == 0) {
                 break;

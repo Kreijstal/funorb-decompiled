@@ -6,7 +6,7 @@ import java.io.*;
 final class cr extends oc {
     int field_L;
     boolean field_J;
-    static vl field_N;
+    static NodeDeque field_N;
     private int field_K;
     private int field_M;
     private jp field_C;
@@ -42,8 +42,8 @@ final class cr extends oc {
           u.field_g = param1;
           nb.field_a = param8;
           vd.field_f = (ih) ((Object) new a());
-          on.field_x = new kg(param4);
-          dp.field_v = new co(vd.field_f, on.field_x);
+          Brick.field_x = new kg(param4);
+          dp.field_v = new co(vd.field_f, Brick.field_x);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "cr.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -62,7 +62,7 @@ final class cr extends oc {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var5_int = param0 + this.field_t;
-          vi.a((byte) 107, var5_int - this.field_G.field_D, param0 + this.field_G.field_D, param1, param1 + this.field_s);
+          MovingBody.a((byte) 107, var5_int - this.field_G.field_D, param0 + this.field_G.field_D, param1, param1 + this.field_s);
           var6 = param0 - this.field_K;
           if (param3 > -56) {
             this.field_C = (jp) null;
@@ -121,7 +121,7 @@ final class cr extends oc {
         field_D = null;
         field_N = null;
         if (param0 <= 36) {
-          field_N = (vl) null;
+          field_N = (NodeDeque) null;
         }
     }
 
@@ -256,7 +256,7 @@ final class cr extends oc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 2) {
-            field_N = (vl) null;
+            field_N = (NodeDeque) null;
           }
           var4_int = param1.a(param0, false);
           var5 = param1.a(var4_int, param3 ^ -31, param2);
@@ -305,7 +305,7 @@ final class cr extends oc {
         int var6 = param0 + this.field_w;
         this.a(var5, var6, this.field_P[0], -63);
         if (65536 > this.field_L) {
-          vi.a((byte) 118, this.field_t + var5, var5 + (this.field_L * this.field_t >> 16), var6, this.field_s + var6);
+          MovingBody.a((byte) 118, this.field_t + var5, var5 + (this.field_L * this.field_t >> 16), var6, this.field_s + var6);
           this.a(var5, var6, this.field_P[1], param3 ^ 92);
           sc.b(-102);
         }
@@ -359,6 +359,6 @@ final class cr extends oc {
     }
 
     static {
-        field_N = new vl();
+        field_N = new NodeDeque();
     }
 }

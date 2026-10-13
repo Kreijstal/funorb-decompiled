@@ -103,11 +103,11 @@ final class uj {
         eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         sl.field_A[15] = ab.field_F;
-        ih.field_j = new String[]{ff.field_g, pq.field_m, bm.field_b, bn.field_t};
+        ih.field_j = new String[]{ff.field_g, pq.field_m, bm.field_b, RectangleBody.field_t};
         ml.field_e = new String[]{qi.field_N, bg.field_o, ue.field_a, eb.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
         sl.field_A[17] = pq.field_q;
         sl.field_A[14] = vh.field_V;
-        sl.field_A[18] = gf.field_g;
+        sl.field_A[18] = GameScreen.field_g;
     }
 
     final static short[] a(byte param0, short[] param1, pi param2, int param3) {
@@ -189,7 +189,7 @@ final class uj {
         int var4;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        vi.a((byte) 70, this.field_p.field_c + this.field_p.field_j, this.field_p.field_c, this.field_p.field_a, this.field_p.field_a + this.field_p.field_d);
+        MovingBody.a((byte) 70, this.field_p.field_c + this.field_p.field_j, this.field_p.field_c, this.field_p.field_a, this.field_p.field_a + this.field_p.field_d);
         var2 = df.a(this.field_i, (byte) 15, this.field_g - this.field_c);
         if (param0 != 28) {
           return;

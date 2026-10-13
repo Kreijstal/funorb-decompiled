@@ -76,7 +76,7 @@ final class gr {
           jc.field_J = mh.field_ib;
           tf.field_c = kp.field_e;
           field_c = p.field_i;
-          vn.field_w = cq.field_o;
+          Ball.field_w = cq.field_o;
           we.field_b = ch.field_k;
           bq.field_e = hc.field_a;
           gg.field_o = ep.field_j;
@@ -86,8 +86,8 @@ final class gr {
           bq.field_e = ip.field_v;
           a.field_s = hp.field_l;
           tf.field_c = dg.field_b;
-          vn.field_w = dg.field_e;
-          jc.field_J = vn.field_D;
+          Ball.field_w = dg.field_e;
+          jc.field_J = Ball.field_D;
           gg.field_o = dk.field_R;
           nj.field_l = pa.field_m;
           fq.field_d = qg.field_D;

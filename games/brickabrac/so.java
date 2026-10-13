@@ -10,10 +10,10 @@ final class so {
     private mf field_g;
     private mf field_c;
 
-    final static pb a(int param0, int param1, int param2, vl param3) {
+    final static pb a(int param0, int param1, int param2, NodeDeque param3) {
         Object var4 = null;
         pb var5 = null;
-        vl var6 = null;
+        NodeDeque var6 = null;
         Object stackIn_11_0 = null;
         Object stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -22,22 +22,22 @@ final class so {
         try {
           var4 = null;
           if (param0 != 0) {
-            var6 = (vl) null;
-            so.a(8, 113, -81, (vl) null);
+            var6 = (NodeDeque) null;
+            so.a(8, 113, -81, (NodeDeque) null);
           }
-          var5 = (pb) (param3.d(-15));
+          var5 = (pb) (param3.first(-15));
           while (var5 != null) {
             if (!var5.a((byte) -84, param1, param2)) {
-              var5 = (pb) (param3.a((byte) 116));
+              var5 = (pb) (param3.next((byte) 116));
               continue;
             }
             var4 = var5;
             break;
           }
           if (var4 == null) {
-            var4 = (pb) (param3.a(127));
+            var4 = (pb) (param3.removeLast(127));
           }
-          param3.a(true, (nm) (var4));
+          param3.addFirst(true, (IntrusiveNode) (var4));
           stackIn_11_0 = var4;
           return (pb) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -178,7 +178,7 @@ final class so {
           var7[4] = null;
           pl.a("basic", "frame_bracket", (byte) 106, param0);
           af.field_A = kf.a("button_frame", "basic", param0, -91);
-          vn.field_G = kf.a("button_raised", "basic", param0, 103);
+          Ball.field_G = kf.a("button_raised", "basic", param0, 103);
           pe.field_k = kf.a("button_depressed", "basic", param0, -104);
           si.field_c = wq.a("basic", param0, "achievements_large", -946715356);
           vq.field_F = pl.a("basic", "unachieved", (byte) 97, param1);
@@ -207,13 +207,13 @@ final class so {
             e.field_l[var10_int] = p.a(-12, var20, 8, 9838226);
             pa.field_h[var10_int] = p.a(pn.a(param3, -29147), var20, 12, 9838226);
           }
-          no.field_t = new jp[lo.field_c.length][];
+          CircleBody.field_t = new jp[lo.field_c.length][];
           var9 = null;
           for (var10_intLifetime1 = 0; lo.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
-            no.field_t[var10_intLifetime1] = cr.a("basic", param0, lo.field_c[var10_intLifetime1], 2);
+            CircleBody.field_t[var10_intLifetime1] = cr.a("basic", param0, lo.field_c[var10_intLifetime1], 2);
           }
           re.field_k = pl.a("basic", "ball", (byte) 121, param0);
-          vn.field_D = pl.a("basic", "steelball", (byte) 98, param0);
+          Ball.field_D = pl.a("basic", "steelball", (byte) 98, param0);
           h.field_C = wq.a("basic", param0, "brickset", -946715356);
           dg.field_b = cr.a("basic", param0, "paddlecaps", param3 - 29135);
           qg.field_D = cr.a("basic", param0, "paddleseg", 2);
@@ -223,7 +223,7 @@ final class so {
           ch.field_l = pl.a("basic", "heart", (byte) -108, param0);
           kb.field_Ub = cr.a("basic", param0, "characters_fm", 2);
           im.field_a = cr.a("basic", param0, "lever_game", param3 - 29135);
-          nm.field_f = cr.a("basic", param0, "eyes_game", 2);
+          IntrusiveNode.field_f = cr.a("basic", param0, "eyes_game", 2);
           tf.field_g = cr.a("basic", param0, "track_heads", 2);
           ef.field_e = cr.a("basic", param0, "characters_small", 2);
           ul.field_k = cr.a("basic", param0, "character_heads", param3 ^ 29139);
@@ -269,9 +269,9 @@ final class so {
           p.field_i = new jp(re.field_k.field_x / 2, re.field_k.field_z / 2);
           p.field_i.g();
           re.field_k.a(0, 0);
-          mh.field_ib = new jp(vn.field_D.field_x / 2, vn.field_D.field_z / 2);
+          mh.field_ib = new jp(Ball.field_D.field_x / 2, Ball.field_D.field_z / 2);
           mh.field_ib.g();
-          vn.field_D.a(0, 0);
+          Ball.field_D.a(0, 0);
           ch.field_k = new jp[gg.field_p.length];
           if (param3 != 29137) {
             so.a((byte) -25);

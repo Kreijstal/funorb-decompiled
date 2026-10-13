@@ -13,7 +13,7 @@ final class jq extends bc {
     private ko field_v;
     private byte[] field_e;
     private ve field_g;
-    static vl field_n;
+    static NodeDeque field_n;
     private int field_h;
     static int field_r;
     static int field_p;
@@ -21,8 +21,8 @@ final class jq extends bc {
     private kg field_u;
     private boolean field_f;
     private int field_m;
-    private vl field_x;
-    private vl field_z;
+    private NodeDeque field_x;
+    private NodeDeque field_z;
     private boolean field_k;
     private long field_q;
     private boolean field_w;
@@ -125,17 +125,17 @@ final class jq extends bc {
         if (this.b((byte) -112) == null) {
           return;
         }
-        nm var2 = this.field_x.d(-9);
+        IntrusiveNode var2 = this.field_x.first(-9);
         while (var2 != null) {
-          var3 = (int)var2.field_g;
+          var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.b((byte) 111);
+            var2.unlink((byte) 111);
           } else {
             if (this.field_v.field_f <= var3) {
-              var2.b((byte) 111);
+              var2.unlink((byte) 111);
             } else {
               if (this.field_v.field_m[var3] == 0) {
-                var2.b((byte) 111);
+                var2.unlink((byte) 111);
               } else {
                 if (this.field_e[var3] == 0) {
                   discarded$0 = this.a(1, var3, (byte) -109);
@@ -144,12 +144,12 @@ final class jq extends bc {
                   discarded$1 = this.a(2, var3, (byte) -116);
                 }
                 if (this.field_e[var3] == 1) {
-                  var2.b((byte) 111);
+                  var2.unlink((byte) 111);
                 }
               }
             }
           }
-          var2 = this.field_x.a((byte) 116);
+          var2 = this.field_x.next((byte) 116);
         }
     }
 
@@ -162,7 +162,7 @@ final class jq extends bc {
         }
         this.field_f = true;
         if (this.field_z == null) {
-          this.field_z = new vl();
+          this.field_z = new NodeDeque();
         }
     }
 
@@ -180,7 +180,7 @@ final class jq extends bc {
           return null;
         }
         byte[] var4 = var3.c((byte) -85);
-        var3.b((byte) 111);
+        var3.unlink((byte) 111);
         return var4;
     }
 
@@ -191,14 +191,14 @@ final class jq extends bc {
         hb discarded$0 = null;
         int var2_int;
         hb var2;
-        nm var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        nm var6;
-        nm var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        nm var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (null != this.field_z) {
@@ -207,18 +207,18 @@ final class jq extends bc {
           }
           if (this.field_k) {
             var2_int = 1;
-            var3 = this.field_z.d(-101);
+            var3 = this.field_z.first(-101);
             while (var3 != null) {
-              var4 = (int)var3.field_g;
+              var4 = (int)var3.key;
               if (this.field_e[var4] == 0) {
                 discarded$3 = this.a(1, var4, (byte) -118);
               }
               if (this.field_e[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.b((byte) 111);
+                var3.unlink((byte) 111);
               }
-              var3 = this.field_z.a((byte) 116);
+              var3 = this.field_z.next((byte) 116);
             }
             while (this.field_m < this.field_v.field_m.length) {
               if (0 == this.field_v.field_m[this.field_m]) {
@@ -230,9 +230,9 @@ final class jq extends bc {
                   discarded$2 = this.a(1, this.field_m, (byte) -119);
                 }
                 if (this.field_e[this.field_m] == 0) {
-                  var6 = new nm();
-                  var6.field_g = (long)this.field_m;
-                  this.field_z.a(var6, (byte) 3);
+                  var6 = new IntrusiveNode();
+                  var6.key = (long)this.field_m;
+                  this.field_z.addLast(var6, (byte) 3);
                   var2_int = 0;
                 }
                 this.field_m = this.field_m + 1;
@@ -250,33 +250,33 @@ final class jq extends bc {
           else {
             if (this.field_f) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_z.d(-127);
+              var3Lifetime1 = this.field_z.first(-127);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_g;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_e[var4Lifetime1] != 1) {
                   discarded$1 = this.a(2, var4Lifetime1, (byte) -118);
                 }
                 if (1 == this.field_e[var4Lifetime1]) {
-                  var3Lifetime1.b((byte) 111);
+                  var3Lifetime1.unlink((byte) 111);
                 } else {
                   var2_intLifetime1 = 0;
                 }
-                var3Lifetime1 = this.field_z.a((byte) 116);
+                var3Lifetime1 = this.field_z.next((byte) 116);
               }
-              L3: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_v.field_m.length > this.field_m) {
                   if (this.field_v.field_m[this.field_m] != 0) {
                     if (this.field_j.d((byte) 101)) {
                       var2_intLifetime1 = 0;
-                      break L3;
+                      break scanLoop1;
                     }
                     if (1 != this.field_e[this.field_m]) {
                       discarded$0 = this.a(2, this.field_m, (byte) -121);
                     }
                     if (1 != this.field_e[this.field_m]) {
-                      var7 = new nm();
-                      var7.field_g = (long)this.field_m;
-                      this.field_z.a(var7, (byte) 3);
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_m;
+                      this.field_z.addLast(var7, (byte) 3);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -307,7 +307,7 @@ final class jq extends bc {
                 if (!var2.field_B) {
                   throw new RuntimeException();
                 }
-                var2.b((byte) 111);
+                var2.unlink((byte) 111);
               }
             }
             var2 = (hb) (this.field_l.a(true));
@@ -345,7 +345,7 @@ final class jq extends bc {
           0 == param0 &&
           !var12.field_B &&
           var12.field_u) {
-          var12.b((byte) 111);
+          var12.unlink((byte) 111);
           var4 = null;
         }
         if (var4 == null) {
@@ -381,7 +381,7 @@ final class jq extends bc {
               var4 = this.field_j.a(-952050528, this.field_h, (byte) 2, param1, false);
             }
           }
-          this.field_l.a(34, (nm) (var4), (long)param1);
+          this.field_l.a(34, (IntrusiveNode) (var4), (long)param1);
         }
         if (((hb) (var4)).field_u) {
           return null;
@@ -422,7 +422,7 @@ final class jq extends bc {
                 this.field_e[param1] = (byte) 1;
               }
               if (!((hb) (var4)).field_B) {
-                ((hb) (var4)).b((byte) 111);
+                ((hb) (var4)).unlink((byte) 111);
               }
               stackIn_59_0 = var4;
               return (hb) (stackIn_59_0);
@@ -432,11 +432,11 @@ final class jq extends bc {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_e[param1] = (byte)-1;
-            ((hb) (var4)).b((byte) 111);
+            ((hb) (var4)).unlink((byte) 111);
             if (((hb) (var4)).field_B &&
               !this.field_j.a(2)) {
               var4 = this.field_j.a(-952050528, this.field_h, (byte) 2, param1, true);
-              this.field_l.a(34, (nm) (var4), (long)param1);
+              this.field_l.a(34, (IntrusiveNode) (var4), (long)param1);
             }
             return null;
           }
@@ -472,13 +472,13 @@ final class jq extends bc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_j.a((byte) 8);
-          ((hb) (var4)).b((byte) 111);
+          ((hb) (var4)).unlink((byte) 111);
           if (((hb) (var4)).field_B) {
             if (this.field_j.a(2)) {
               return null;
             }
             var4 = this.field_j.a(-952050528, this.field_h, (byte) 2, param1, true);
-            this.field_l.a(34, (nm) (var4), (long)param1);
+            this.field_l.a(34, (IntrusiveNode) (var4), (long)param1);
           }
           return null;
         }
@@ -491,7 +491,7 @@ final class jq extends bc {
           }
         }
         if (!((hb) (var4)).field_B) {
-          ((hb) (var4)).b((byte) 111);
+          ((hb) (var4)).unlink((byte) 111);
         }
         return (hb) (var4);
     }
@@ -599,7 +599,7 @@ final class jq extends bc {
         RuntimeException var10 = null;
         this.field_l = new si(16);
         this.field_m = 0;
-        this.field_x = new vl();
+        this.field_x = new NodeDeque();
         this.field_q = 0L;
         try {
           this.field_B = param1;
@@ -608,7 +608,7 @@ final class jq extends bc {
             this.field_k = false;
           } else {
             this.field_k = true;
-            this.field_z = new vl();
+            this.field_z = new NodeDeque();
           }
           stackIn_7_1 = (param8);
           this.field_w = stackIn_7_1;

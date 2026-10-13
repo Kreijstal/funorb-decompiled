@@ -110,15 +110,15 @@ final class ui {
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = (pn) (qa.field_t.d(-14));
+          var4 = (pn) (qa.field_t.first(-14));
           while (var4 != null) {
             kp.a(param0, (byte) 112, var4);
-            var4 = (pn) (qa.field_t.a((byte) 116));
+            var4 = (pn) (qa.field_t.next((byte) 116));
           }
-          var5 = (pe) (ob.field_F.d(-61));
+          var5 = (pe) (ob.field_F.first(-61));
           while (var5 != null) {
             i.a(param0, var5, 61);
-            var5 = (pe) (ob.field_F.a((byte) 116));
+            var5 = (pe) (ob.field_F.next((byte) 116));
           }
           if (param1 != 115) {
             ui.a(-72);

@@ -32,7 +32,7 @@ final class v extends RuntimeException {
         this.field_d = param1;
     }
 
-    final static void a(int param0, int param1, boolean param2, ak param3, int param4, int param5) {
+    final static void a(int param0, int param1, boolean param2, MultiplayerMatch param3, int param4, int param5) {
         int var6_int = 0;
         int stackIn_7_0;
         boolean stackIn_7_1;
@@ -44,16 +44,16 @@ final class v extends RuntimeException {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        j var7 = null;
+        PlayerBoard var7 = null;
         int var8 = 0;
         int var9 = 0;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
           op.a(param0 + 6, t.field_d, 294, 6, param1, 64, 3 + param5);
-          for (var6_int = 0; param3.field_k > var6_int; var6_int++) {
-            if (0 == (1 << var6_int & (param3.field_g | param3.field_i | param3.field_a))) {
-              var7 = param3.field_l[var6_int];
-              var8 = 1414 * var7.field_G / (30 * param3.field_k);
+          for (var6_int = 0; param3.playerCount > var6_int; var6_int++) {
+            if (0 == (1 << var6_int & (param3.playerMaskTwo | param3.playerMaskOne | param3.playerMaskThree))) {
+              var7 = param3.playerBoards[var6_int];
+              var8 = 1414 * var7.field_G / (30 * param3.playerCount);
               var8 = var8 + (de.field_x + 294 << 7);
               var8 = var8 >> 8;
               stackIn_7_0 = var7.field_H;

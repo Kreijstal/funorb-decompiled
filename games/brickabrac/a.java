@@ -10,7 +10,7 @@ final class a extends ih {
     private wh field_q;
     static String field_r;
 
-    final static void a(int param0, ak param1, j param2) {
+    final static void a(int param0, MultiplayerMatch param1, PlayerBoard param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -45,7 +45,7 @@ final class a extends ih {
             ih.field_k != null) {
             ih.field_k.b(640 - ih.field_k.field_x, 480 - ih.field_k.field_z - 10, var3_int);
           }
-          var5 = nm.field_f[param2.field_y];
+          var5 = IntrusiveNode.field_f[param2.field_y];
           if (var4 != null) {
             var5.c(-3 + (640 - (var4.field_x + var5.field_x) / 2), -var4.field_z + 480 - 10 + 45);
           }

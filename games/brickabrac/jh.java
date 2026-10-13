@@ -50,14 +50,14 @@ final class jh {
         mh var5 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = (mh) (param1.field_bb.d(-104));
+          var4 = (mh) (param1.field_bb.first(-104));
           mh var2 = var4;
           while (var4 != null) {
             var4.field_Db = 0;
             var4.field_cb = 0;
             var4.field_C = 0;
             var4.field_zb = 0;
-            var5 = (mh) (param1.field_bb.a((byte) 116));
+            var5 = (mh) (param1.field_bb.next((byte) 116));
             var5 = var5;
           }
           if (!param0) {

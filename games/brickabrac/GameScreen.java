@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gf {
+abstract class GameScreen {
     static wp field_e;
     int field_a;
     static String field_d;
@@ -10,7 +10,7 @@ abstract class gf {
     static hj field_f;
     static String field_g;
 
-    abstract void b(byte param0);
+    abstract void drawScreen(byte obfuscationGuard);
 
     final boolean a(byte param0) {
         if (param0 != -51) {
@@ -19,11 +19,11 @@ abstract class gf {
         return true;
     }
 
-    abstract boolean a(char param0, int param1, int param2);
+    abstract boolean handleKey(char character, int keyCode, int obfuscationGuard);
 
-    abstract void a(boolean param0, boolean param1, int param2);
+    abstract void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard);
 
-    gf(int param0) {
+    GameScreen(int param0) {
         this.field_a = param0;
     }
 
@@ -35,7 +35,7 @@ abstract class gf {
         field_c = null;
         field_e = null;
         if (param0 != -91) {
-          gf.a(119, 39, -126, (byte) 48);
+          GameScreen.a(119, 39, -126, (byte) 48);
           return;
         }
     }
@@ -47,34 +47,34 @@ abstract class gf {
         cq var7;
         cq var4Lifetime1;
         var5 = BrickABrac.field_J ? 1 : 0;
-        var4 = (cq) (fk.field_f.d(-55));
+        var4 = (cq) (fk.field_f.first(-55));
         if (param3 < -102) {
           while (var4 != null) {
             if (param1 == var4.field_m) {
               return var4;
             }
-            var4 = (cq) (fk.field_f.a((byte) 116));
+            var4 = (cq) (fk.field_f.next((byte) 116));
           }
           var6 = new cq();
           var4 = var6;
           var6.field_s = param2;
           var6.field_m = param1;
-          fk.field_f.a(var6, (byte) 3);
+          fk.field_f.addLast(var6, (byte) 3);
           gn.a(-21167, var6, param0);
           return var6;
         }
-        gf.c((byte) -109);
+        GameScreen.c((byte) -109);
         while (var4 != null) {
           if (param1 == var4.field_m) {
             return var4;
           }
-          var4 = (cq) (fk.field_f.a((byte) 116));
+          var4 = (cq) (fk.field_f.next((byte) 116));
         }
         var7 = new cq();
         var4Lifetime1 = var7;
         var7.field_s = param2;
         var7.field_m = param1;
-        fk.field_f.a(var7, (byte) 3);
+        fk.field_f.addLast(var7, (byte) 3);
         gn.a(-21167, var7, param0);
         return var7;
     }

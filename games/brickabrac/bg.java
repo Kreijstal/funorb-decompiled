@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends nm {
+final class bg extends IntrusiveNode {
     byte[][][] field_m;
     int field_s;
     static java.security.SecureRandom field_p;

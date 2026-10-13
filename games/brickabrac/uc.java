@@ -9,7 +9,7 @@ final class uc extends k {
     private boolean field_o;
     static ta field_l;
     static String field_r;
-    static vl field_q;
+    static NodeDeque field_q;
 
     final static java.applet.Applet e(byte param0) {
         if (null != sl.field_x) {
@@ -112,7 +112,7 @@ final class uc extends k {
 
     public static void g(int param0) {
         if (param0 != 0) {
-          field_q = (vl) null;
+          field_q = (NodeDeque) null;
         }
         field_r = null;
         field_l = null;
@@ -130,8 +130,8 @@ final class uc extends k {
           rk.field_Tb = null;
           fo.field_h = 0;
           ol.field_w = 0;
-          bf.field_N.c((byte) -72);
-          jq.field_n.c((byte) -92);
+          bf.field_N.clear((byte) -72);
+          jq.field_n.clear((byte) -92);
           var2 = of.field_i.b((byte) 74);
           while (var2 != null) {
             var2.d(3);
@@ -196,6 +196,6 @@ final class uc extends k {
         field_r = "Match by...";
         field_m = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
         field_k = new me("email");
-        field_q = new vl();
+        field_q = new NodeDeque();
     }
 }

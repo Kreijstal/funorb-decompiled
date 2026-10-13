@@ -262,7 +262,7 @@ final class pl {
 
     static {
         field_e = "Ignore";
-        field_b = vn.d(8);
+        field_b = Ball.d(8);
         field_d = 0;
         field_c = new String[]{"All scores", "My scores", "Best each"};
     }

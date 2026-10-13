@@ -7,7 +7,7 @@ final class wp {
     static dh field_c;
     static mh field_k;
     private mf field_g;
-    static vl field_f;
+    static NodeDeque field_f;
     private si field_a;
     static char field_h;
     private si field_e;
@@ -167,7 +167,7 @@ final class wp {
             stackIn_17_0 = null;
             return (oe) (stackIn_17_0);
           }
-          var9.b((byte) 111);
+          var9.unlink((byte) 111);
           this.field_e.a(34, var8Lifetime1, var6);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
@@ -247,9 +247,9 @@ final class wp {
               k.field_h.a(28, 14);
               k.field_h.a(107, cg.field_s.a(13).field_a);
               cr.a(-1, 10000);
-              rf.field_b = gf.field_c;
+              rf.field_b = GameScreen.field_c;
             }
-            if (rf.field_b == gf.field_c &&
+            if (rf.field_b == GameScreen.field_c &&
               vd.a(20, 1)) {
               var6_int = jl.field_e.l(255);
               jl.field_e.field_l = 0;
@@ -601,16 +601,16 @@ final class wp {
           if (0 == var2_int) {
             uf.a(3, 0);
           }
-          var3 = (nj) (ob.field_E.d(-31));
+          var3 = (nj) (ob.field_E.first(-31));
           while (var3 != null) {
             var3.c(0);
-            var3 = (nj) (ob.field_E.a((byte) 116));
+            var3 = (nj) (ob.field_E.next((byte) 116));
           }
           if (param0) {
             uf.a(var2_int - dl.field_f, 0);
           }
           if (param1 >= -30) {
-            field_f = (vl) null;
+            field_f = (NodeDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -777,6 +777,6 @@ final class wp {
         field_i = "Play the game without logging in just yet";
         field_h = '/';
         field_b = "RuneScape clan";
-        field_f = new vl();
+        field_f = new NodeDeque();
     }
 }

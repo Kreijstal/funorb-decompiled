@@ -81,7 +81,7 @@ final class jm {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        vl var4 = null;
+        NodeDeque var4 = null;
         Object var5 = null;
         mp var6 = null;
         int var7 = 0;
@@ -119,7 +119,7 @@ final class jm {
           f.field_c.field_eb = true;
           f.field_c.field_Qb.field_Qb.field_Mb = null;
           var5 = null;
-          var6 = (mp) (var4.d(-57));
+          var6 = (mp) (var4.first(-57));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.field_bb) {
@@ -182,7 +182,7 @@ final class jm {
               var17.field_d.a(var14, -126, 0, 0, var13);
             }
             var5 = var6;
-            var6 = (mp) (var4.a((byte) 116));
+            var6 = (mp) (var4.next((byte) 116));
           }
           if (f.field_c.field_Tb.field_L != 0) {
             tn.field_m = new gq(f.field_c.field_Tb.field_Eb, f.field_c.field_Tb.field_db, f.field_c.field_Tb.field_Ib, f.field_c.field_Tb.field_cb, kg.field_e, ij.field_c, ad.field_l, ad.field_l);
@@ -267,7 +267,7 @@ final class jm {
           var2 = var10.l(255);
           var3 = var10.l(param0 + 233);
           if (var2 == 0) {
-            var4_ref_pe = (pe) (ob.field_F.d(-37));
+            var4_ref_pe = (pe) (ob.field_F.first(-37));
             if (var4_ref_pe == null) {
               hn.a((byte) 57);
               return;
@@ -283,22 +283,22 @@ final class jm {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.l(255) << (ik.a(3, var7) << 8));
             }
             var4_ref_pe.field_v = true;
-            var4_ref_pe.b((byte) 111);
+            var4_ref_pe.unlink((byte) 111);
             return;
           }
           if (var2 == 1) {
             var4 = var10.c(-1342);
-            var5 = (pn) (qa.field_t.d(-19));
+            var5 = (pn) (qa.field_t.first(-19));
             while (var5 != null) {
               if (var3 != var5.field_p ||
                 var4 != var5.field_n) {
-                var5 = (pn) (qa.field_t.a((byte) 116));
+                var5 = (pn) (qa.field_t.next((byte) 116));
                 continue;
               }
               break;
             }
             if (var5 != null) {
-              var5.b((byte) 111);
+              var5.unlink((byte) 111);
               return;
             }
             hn.a((byte) 110);

@@ -243,7 +243,7 @@ final class am extends mh {
             this.field_Yb.field_Cb = "|";
             if (!(gh.field_f < 5) ||
               !(kb.field_Yb < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_8_0 = this;
                 stackIn_8_1 = null;
                 stackIn_8_2 = null;
@@ -258,7 +258,7 @@ final class am extends mh {
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
                     stackIn_9_5 = nk.field_e;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_9_0Lifetime1 = this;

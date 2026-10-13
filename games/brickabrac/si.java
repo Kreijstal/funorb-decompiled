@@ -3,19 +3,19 @@
  */
 final class si {
     static ki field_k;
-    private nm field_h;
+    private IntrusiveNode field_h;
     static int field_a;
     static th field_o;
     static int field_m;
     private int field_f;
     private int field_g;
     static char[] field_n;
-    private nm field_e;
+    private IntrusiveNode field_e;
     static jp field_i;
     static byte[][] field_b;
     static int[] field_d;
     static tp[] field_c;
-    private nm[] field_j;
+    private IntrusiveNode[] field_j;
     static int field_l;
 
     final static mb a(byte param0, String param1, String param2, mf param3, mf param4) {
@@ -75,32 +75,32 @@ final class si {
         }
     }
 
-    final nm a(int param0, long param1) {
-        nm var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        nm var4 = this.field_j[(int)(param1 & (long)(this.field_g - 1))];
-        nm var5Lifetime1;
-        this.field_h = var4.field_e;
+        IntrusiveNode var4 = this.field_j[(int)(param1 & (long)(this.field_g - 1))];
+        IntrusiveNode var5Lifetime1;
+        this.field_h = var4.next;
         if (param0 < -23) {
           while (this.field_h != var4) {
-            if (~param1 == ~this.field_h.field_g) {
+            if (~param1 == ~this.field_h.key) {
               var5 = this.field_h;
-              this.field_h = this.field_h.field_e;
+              this.field_h = this.field_h.next;
               return var5;
             }
-            this.field_h = this.field_h.field_e;
+            this.field_h = this.field_h.next;
           }
           this.field_h = null;
           return null;
         }
-        this.a(60, (nm) null, -45L);
+        this.a(60, (IntrusiveNode) null, -45L);
         while (this.field_h != var4) {
-          if (~param1 == ~this.field_h.field_g) {
+          if (~param1 == ~this.field_h.key) {
             var5Lifetime1 = this.field_h;
-            this.field_h = this.field_h.field_e;
+            this.field_h = this.field_h.next;
             return var5Lifetime1;
           }
-          this.field_h = this.field_h.field_e;
+          this.field_h = this.field_h.next;
         }
         this.field_h = null;
         return null;
@@ -123,17 +123,17 @@ final class si {
         field_b = (byte[][]) null;
     }
 
-    final nm a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        nm var4;
-        nm var5;
-        nm var9;
-        nm var12;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var9;
+        IntrusiveNode var12;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (!param0) {
-          return (nm) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_f <= 0) {
           do {
@@ -142,15 +142,15 @@ final class si {
             }
             fieldTemp$1 = this.field_f;
             this.field_f = this.field_f + 1;
-            var4 = this.field_j[fieldTemp$1].field_e;
+            var4 = this.field_j[fieldTemp$1].next;
             var5 = var4;
           } while (var4 == this.field_j[this.field_f - 1]);
-          this.field_e = var5.field_e;
+          this.field_e = var5.next;
           return var5;
         }
         if (this.field_e != this.field_j[this.field_f - 1]) {
           var12 = this.field_e;
-          this.field_e = var12.field_e;
+          this.field_e = var12.next;
           return var12;
         }
         do {
@@ -159,17 +159,17 @@ final class si {
           }
           fieldTemp$0 = this.field_f;
           this.field_f = this.field_f + 1;
-          var4 = this.field_j[fieldTemp$0].field_e;
+          var4 = this.field_j[fieldTemp$0].next;
           var9 = var4;
         } while (var4 == this.field_j[this.field_f - 1]);
-        this.field_e = var9.field_e;
+        this.field_e = var9.next;
         return var9;
     }
 
-    final nm b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_f = 0;
         if (param0 != -15519) {
-          this.field_h = (nm) null;
+          this.field_h = (IntrusiveNode) null;
           return this.a(true);
         }
         return this.a(true);
@@ -238,22 +238,22 @@ final class si {
         gr.field_d[param3].c(var8Lifetime3, var9Lifetime2);
     }
 
-    final void a(int param0, nm param1, long param2) {
-        nm var5 = null;
+    final void a(int param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_b != null) {
-            param1.b((byte) 111);
+          if (param1.previous != null) {
+            param1.unlink((byte) 111);
           }
           if (param0 != 34) {
             mf var6 = (mf) null;
             si.a((byte) -123, (String) null, (String) null, (mf) null, (mf) null);
           }
           var5 = this.field_j[(int)((long)(this.field_g - 1) & param2)];
-          param1.field_e = var5;
-          param1.field_b = var5.field_b;
-          param1.field_b.field_e = param1;
-          param1.field_e.field_b = param1;
-          param1.field_g = param2;
+          param1.next = var5;
+          param1.previous = var5.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
+          param1.key = param2;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "si.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -261,17 +261,17 @@ final class si {
 
     si(int param0) {
         int var2 = 0;
-        nm dupTemp$1 = null;
-        nm var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_f = 0;
         this.field_g = param0;
-        this.field_j = new nm[param0];
+        this.field_j = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new nm();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_j[var2] = dupTemp$1;
-          var3.field_b = var3;
-          var3.field_e = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 

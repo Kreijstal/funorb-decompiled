@@ -19,7 +19,7 @@ final class fi extends ki {
           }
           var8 = kd.a(this.field_m, param3, (byte) 107);
           if (!var8.a((byte) -84, param3, this.field_m)) {
-            dk.a(2, param3, var8, -35, 23275, on.field_K);
+            dk.a(2, param3, var8, -35, 23275, Brick.field_K);
             var8.a(this.field_m, param3, (byte) 78);
             mn.a(var8.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
             return;
@@ -36,7 +36,7 @@ final class fi extends ki {
           mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
           return;
         }
-        dk.a(2, param3, var9, -35, 23275, on.field_K);
+        dk.a(2, param3, var9, -35, 23275, Brick.field_K);
         var9.a(this.field_m, param3, (byte) 78);
         mn.a(var9.field_p, 306, param0, param2, param3, param4, un.field_d, 2, jl.field_d, 1, -35);
     }
@@ -169,7 +169,7 @@ final class fi extends ki {
           be.field_d = pl.a("arctic", "arctic_small", (byte) -44, i.field_m);
           un.field_d = jh.a(0, s.field_d);
           jl.field_d = jh.a(0, kc.field_r);
-          on.field_K = jh.a(0, hk.field_I);
+          Brick.field_K = jh.a(0, hk.field_I);
           ao.field_o[0] = cr.a("arctic", i.field_m, "arctic_caps", 2);
           ja.field_a[0] = cr.a("arctic", i.field_m, "arctic_segs", 2);
           ga.field_k[0] = pl.a("arctic", "arctic_centre", (byte) -115, i.field_m);

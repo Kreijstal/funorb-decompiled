@@ -43,11 +43,11 @@ final class rd {
           if (param0 >= -26) {
             return;
           }
-          var1_int = ff.field_d.e(119);
+          var1_int = ff.field_d.size(119);
           if (var1_int != 0) {
             var2 = 14 + (18 * var1_int + 9);
             var3 = 0;
-            var4_ref_ck = (ck) (ff.field_d.d(-8));
+            var4_ref_ck = (ck) (ff.field_d.first(-8));
             while (var4_ref_ck != null) {
               var5_int = 0;
               for (var6 = 0; var4_ref_ck.field_l.length() > var6; var6++) {
@@ -56,7 +56,7 @@ final class rd {
               if (var5_int > var3) {
                 var3 = var5_int;
               }
-              var4_ref_ck = (ck) (ff.field_d.a((byte) 116));
+              var4_ref_ck = (ck) (ff.field_d.next((byte) 116));
             }
             var3 += 28;
             var3 = -(var3 % 100) + (100 + var3);
@@ -66,7 +66,7 @@ final class rd {
               lb.a(626 - var3 + var4, 14 + var4, -var4 - var4 + var3, -var4 - var4 + var2, 0, var5_intLifetime1);
             }
             var4Lifetime1 = 41;
-            var5 = (ck) (ff.field_d.d(-80));
+            var5 = (ck) (ff.field_d.first(-80));
             while (var5 != null) {
               var6Lifetime1 = 612;
               var7 = 0;
@@ -77,7 +77,7 @@ final class rd {
                 wp.field_c.a((char) var7Lifetime1, var6Lifetime1, var4Lifetime1, 2);
               }
               var4Lifetime1 += 18;
-              var5 = (ck) (ff.field_d.a((byte) 116));
+              var5 = (ck) (ff.field_d.next((byte) 116));
             }
             return;
           }

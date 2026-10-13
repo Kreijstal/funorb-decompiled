@@ -18,8 +18,8 @@ final class vj {
           this.field_d.a(var7, param1, param0, var6, param4, param3, 75);
           sj.field_d.a(np.field_a, 0, 0, rg.field_c.field_Ib, (byte) 64);
           gk.field_c.a(18, 2 + np.field_a, 0, -82 + (rg.field_c.field_Ib - ec.field_J - 2), (byte) 64);
-          qj.field_u.a(18, 2 + np.field_a, -2 + (-ec.field_J + (rg.field_c.field_Ib - 80)), 82 + ec.field_J, (byte) 64);
-          gf.field_f.a(true, 2, rg.field_c.field_Ib, 0, 20 + (np.field_a + 2), ec.field_J, 20, -2 + (-np.field_a + rg.field_c.field_cb) - 20);
+          GameplayScreen.field_u.a(18, 2 + np.field_a, -2 + (-ec.field_J + (rg.field_c.field_Ib - 80)), 82 + ec.field_J, (byte) 64);
+          GameScreen.field_f.a(true, 2, rg.field_c.field_Ib, 0, 20 + (np.field_a + 2), ec.field_J, 20, -2 + (-np.field_a + rg.field_c.field_cb) - 20);
           f.field_c.a(20, -779, ec.field_J, 2);
           return;
         }

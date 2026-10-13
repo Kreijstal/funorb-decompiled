@@ -25,7 +25,7 @@ final class dq {
         field_a = null;
     }
 
-    final static int a(vl[] param0, boolean param1, wq param2, vl param3, kq param4, ga param5) {
+    final static int a(NodeDeque[] param0, boolean param1, wq param2, NodeDeque param3, kq param4, ga param5) {
         int var11 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -47,12 +47,12 @@ final class dq {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        on var9_ref_on = null;
+        Brick var9_ref_on = null;
         int var10 = 0;
-        on var12 = null;
+        Brick var12 = null;
         int var13 = 0;
         java.math.BigInteger var14 = null;
-        on var15 = null;
+        Brick var15 = null;
         cl var16 = null;
         int var6_intLifetime1;
         int var8Lifetime1;
@@ -60,7 +60,7 @@ final class dq {
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var6_int = 0; param0.length > var6_int; var6_int++) {
-            if (!param0[var6_int].a(false)) {
+            if (!param0[var6_int].isEmpty(false)) {
               throw new IllegalArgumentException();
             }
           }
@@ -68,7 +68,7 @@ final class dq {
             var14 = (java.math.BigInteger) null;
             dq.a((wq) null, (wq) null, (java.math.BigInteger) null, (byte) 57, (java.math.BigInteger) null);
           }
-          if (!param3.a(false)) {
+          if (!param3.isEmpty(false)) {
             throw new IllegalArgumentException();
           }
           var6_intLifetime1 = param2.e(255);
@@ -90,43 +90,43 @@ final class dq {
             for (var9 = 0; param0.length > var9; var9++) {
               var10 = param2.e(255);
               for (var11 = 0; var10 > var11; var11++) {
-                var12 = new on();
-                var12.a(91, param2);
-                param0[var9].a(var12, (byte) 3);
+                var12 = new Brick();
+                var12.readBodySnapshot(91, param2);
+                param0[var9].addLast(var12, (byte) 3);
               }
             }
           } else {
             var8 = param2.e(255);
             for (var9 = 0; var8 > var9; var9++) {
-              var15 = new on();
+              var15 = new Brick();
               if (var6_intLifetime1 != 0) {
                 if (var6_intLifetime1 > 0) {
-                  var15.a(101, param2);
+                  var15.readBodySnapshot(101, param2);
                 }
               } else {
-                var15.field_j = param2.e(255);
-                var15.field_m = param2.e(255);
-                var15.field_k = param2.e(255);
-                var15.field_o = param2.e(255);
-                var15.field_i = param2.e(255);
+                var15.x256 = param2.e(255);
+                var15.y256 = param2.e(255);
+                var15.velocityX256 = param2.e(255);
+                var15.velocityY256 = param2.e(255);
+                var15.typeId = param2.e(255);
                 var15.field_N = param2.e(255);
               }
-              param0[0].a(var15, (byte) 3);
+              param0[0].addLast(var15, (byte) 3);
             }
-            var9_ref_on = (on) (param0[0].d(-54));
+            var9_ref_on = (Brick) (param0[0].first(-54));
             while (var9_ref_on != null) {
               if ((var9_ref_on.field_N & 4) != 0) {
-                param0[1].a(var9_ref_on, (byte) 3);
+                param0[1].addLast(var9_ref_on, (byte) 3);
               }
-              var9_ref_on = (on) (param0[0].a((byte) 116));
+              var9_ref_on = (Brick) (param0[0].next((byte) 116));
             }
           }
           if (var6_intLifetime1 > 1) {
             var8Lifetime1 = param2.e(255);
             for (var9Lifetime1 = 0; var8Lifetime1 > var9Lifetime1; var9Lifetime1++) {
               var16 = new cl();
-              var16.a(90, param2);
-              param3.a(var16, (byte) 3);
+              var16.readBodySnapshot(90, param2);
+              param3.addLast(var16, (byte) 3);
             }
           }
           if (var6_intLifetime1 > 4) {

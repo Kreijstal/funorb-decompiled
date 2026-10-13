@@ -25,7 +25,7 @@ final class wn {
         mp stackOut_11_0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        vl var4 = null;
+        NodeDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         mp var7 = null;
@@ -45,26 +45,26 @@ final class wn {
         String var18Lifetime1;
         var19 = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_4_0 = gf.field_f.field_Qb;
+          stackIn_4_0 = GameScreen.field_f.field_Qb;
           stackIn_4_1 = 2;
           stackIn_4_2 = param1 * (6 + 3 * np.field_a);
           stackIn_4_3 = np.field_a + 2;
           stackIn_4_4 = 22676;
           stackIn_4_5 = param0;
-          stackIn_5_6 = (gf.field_f.field_Qb == o.field_b);
+          stackIn_5_6 = (GameScreen.field_f.field_Qb == o.field_b);
           var3_int = ((mm) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, stackIn_4_5, stackIn_5_6) ? 1 : 0;
           if (param2 > -12) {
             wn.a((byte) 96);
           }
           boolean decompiledFrameCompleted0 = true;
-          var4 = gf.field_f.field_Xb.field_bb;
+          var4 = GameScreen.field_f.field_Xb.field_bb;
           var5 = null;
           if (wk.field_m == 2) {
             rg.field_c.field_eb = true;
             sj.field_d.field_Mb = rd.a(dq.field_c, new String[]{rk.field_Tb}, (byte) 103);
-            gf.field_f.field_Qb.field_Qb.field_Mb = null;
+            GameScreen.field_f.field_Qb.field_Qb.field_Mb = null;
             var6 = null;
-            var7 = (mp) (var4.d(-76));
+            var7 = (mp) (var4.first(-76));
             while (var7 != null) {
               var8 = 0;
               stackOut_11_0 = var7;
@@ -85,7 +85,7 @@ final class wn {
                 var8 = 1;
                 var7.c(true);
               }
-              var7.field_Ib = gf.field_f.field_Xb.field_Ib;
+              var7.field_Ib = GameScreen.field_f.field_Xb.field_Ib;
               var9 = 0;
               if (var7.field_Ub == null) {
                 var10 = 13369344;
@@ -142,7 +142,7 @@ final class wn {
                 var7.field_C = var9 - var7.field_cb;
               }
               if (var8 != 0) {
-                gf.field_f.field_Xb.a((mh) (var6), 2, var7, 17290);
+                GameScreen.field_f.field_Xb.a((mh) (var6), 2, var7, 17290);
               }
               var6 = var7;
               if (null != var7.field_Yb &&
@@ -155,7 +155,7 @@ final class wn {
                 }
               } else {
                 var16 = var7.field_Rb;
-                mn.a(-1, var7, gf.field_f.field_Qb, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
+                mn.a(-1, var7, GameScreen.field_f.field_Qb, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
                 if (null != var7.field_Ub &&
                   !m.a(13134, bm.field_d.field_e) &&
                   !um.field_e) {
@@ -170,15 +170,15 @@ final class wn {
                 }
                 var5 = var7;
               }
-              var7 = (mp) (var4.a((byte) 116));
+              var7 = (mp) (var4.next((byte) 116));
             }
             if (decompiledFrameCompleted0) {
-              if (gf.field_f.field_Tb.field_L != 0) {
-                tn.field_m = new gq(gf.field_f.field_Tb.field_Eb, gf.field_f.field_Tb.field_db, gf.field_f.field_Tb.field_Ib, gf.field_f.field_Tb.field_cb, a.field_t, ij.field_c, ad.field_l, ad.field_l);
+              if (GameScreen.field_f.field_Tb.field_L != 0) {
+                tn.field_m = new gq(GameScreen.field_f.field_Tb.field_Eb, GameScreen.field_f.field_Tb.field_db, GameScreen.field_f.field_Tb.field_Ib, GameScreen.field_f.field_Tb.field_cb, a.field_t, ij.field_c, ad.field_l, ad.field_l);
                 ij.field_d = 0;
               }
-              if (0 != gf.field_f.field_Wb.field_L) {
-                tn.field_m = new gq(gf.field_f.field_Wb.field_Eb, gf.field_f.field_Wb.field_db, gf.field_f.field_Wb.field_Ib, gf.field_f.field_Wb.field_cb, eg.field_j, ij.field_c, ad.field_l, ad.field_l);
+              if (0 != GameScreen.field_f.field_Wb.field_L) {
+                tn.field_m = new gq(GameScreen.field_f.field_Wb.field_Eb, GameScreen.field_f.field_Wb.field_db, GameScreen.field_f.field_Wb.field_Ib, GameScreen.field_f.field_Wb.field_cb, eg.field_j, ij.field_c, ad.field_l, ad.field_l);
                 ij.field_d = 1;
               }
             }
@@ -186,14 +186,14 @@ final class wn {
             sj.field_d.field_Mb = kd.field_a;
             rg.field_c.field_eb = false;
             if (wk.field_m == 1) {
-              gf.field_f.field_Qb.field_Qb.field_Mb = cd.field_f;
+              GameScreen.field_f.field_Qb.field_Qb.field_Mb = cd.field_f;
               if (var19 != 0) {
-                gf.field_f.field_Qb.field_Qb.field_Mb = cm.field_t;
+                GameScreen.field_f.field_Qb.field_Qb.field_Mb = cm.field_t;
               }
             } else {
-              gf.field_f.field_Qb.field_Qb.field_Mb = cm.field_t;
+              GameScreen.field_f.field_Qb.field_Qb.field_Mb = cm.field_t;
             }
-            jh.a(true, gf.field_f.field_Xb);
+            jh.a(true, GameScreen.field_f.field_Xb);
           }
           if (decompiledFrameCompleted0) {
             stackIn_101_0 = var5;

@@ -71,11 +71,11 @@ final class bm {
               }
               if (!stackIn_41_0 ||
                 var14 * var17 - var15 * var16 < 0) {
-                var12Lifetime1 = vo.field_v[var9];
+                var12Lifetime1 = Paddle.field_v[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = vo.field_v[var10];
+                  var13Lifetime1 = Paddle.field_v[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = vo.field_v[var11];
+                    var14 = Paddle.field_v[var11];
                     if (var14 != -2147483648) {
                       var15 = var12Lifetime1 + (var13Lifetime1 + var14 - var6);
                       if (var7 < 0) {
@@ -214,7 +214,7 @@ final class bm {
         }
     }
 
-    final static void a(int param0, int param1, int param2, j param3, int param4, int param5, String param6, byte param7) {
+    final static void a(int param0, int param1, int param2, PlayerBoard param3, int param4, int param5, String param6, byte param7) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -238,8 +238,8 @@ final class bm {
             var9 = 0.0;
           }
           var9 = var9 / (double)param5;
-          vn.field_w.d(param0 - 7 / param5, -(7 / param5) + (param1 - (int)var9));
-          vn.field_w.g(-(7 / param5) + param0, (int)var9 - 7 / param5 + (param1 + vn.field_w.field_z));
+          Ball.field_w.d(param0 - 7 / param5, -(7 / param5) + (param1 - (int)var9));
+          Ball.field_w.g(-(7 / param5) + param0, (int)var9 - 7 / param5 + (param1 + Ball.field_w.field_z));
           if (var8_int >= 130) {
             var11 = var8_int - 130;
             if (var11 > 100) {
@@ -270,7 +270,7 @@ final class bm {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, vl param4) {
+    final static void a(int param0, int param1, boolean param2, int param3, NodeDeque param4) {
         int stackIn_74_0 = 0;
         kl stackIn_78_0 = null;
         RuntimeException stackIn_89_0 = null;
@@ -291,9 +291,9 @@ final class bm {
         try {
           var5_int = 0;
           if (param3 != -30791) {
-            bm.a(98, -116, false, -50, (vl) null);
+            bm.a(98, -116, false, -50, (NodeDeque) null);
           }
-          var6 = (qc) (param4.d(-65));
+          var6 = (qc) (param4.first(-65));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var6 == null))) {
             var7_ref = null;
@@ -367,9 +367,9 @@ final class bm {
                 }
               }
               if (null != var7_ref) {
-                j.a((oe) (var7_ref), -56, param0);
+                PlayerBoard.a((oe) (var7_ref), -56, param0);
               }
-              var6 = (qc) (param4.a((byte) 116));
+              var6 = (qc) (param4.next((byte) 116));
               continue;
             }
             break;

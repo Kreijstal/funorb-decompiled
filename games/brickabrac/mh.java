@@ -46,7 +46,7 @@ class mh extends ba {
     jp[] field_Ab;
     jp field_wb;
     boolean field_kb;
-    vl field_bb;
+    NodeDeque field_bb;
     static mf field_lb;
     static tf field_ab;
     static jp field_ib;
@@ -155,10 +155,10 @@ class mh extends ba {
         stackIn_39_1 = (this.field_G) && (this.field_Ob == cb.field_q) && (param5);
         this.field_kb = stackIn_39_1;
         if (this.field_bb != null) {
-          var13 = (mh) (this.field_bb.f(param1 ^ 886229954));
+          var13 = (mh) (this.field_bb.last(param1 ^ 886229954));
           while (var13 != null) {
             var13.a(this.field_Ib, 886229954, this.field_Eb, this.field_cb, this.field_db, param5);
-            var13 = (mh) (this.field_bb.b(33));
+            var13 = (mh) (this.field_bb.previous(33));
           }
         }
         if (this.field_G) {
@@ -364,10 +364,10 @@ class mh extends ba {
           }
         }
         if (this.field_bb != null) {
-          var24_ref = (mh) (this.field_bb.d(-46));
+          var24_ref = (mh) (this.field_bb.first(-46));
           while (var24_ref != null) {
             var24_ref.a(param0, this.field_db + var21, 89, this.field_Ib, param4, param5, param6, this.field_cb, param8, var20 + this.field_Eb, this.field_Bb);
-            var24_ref = (mh) (this.field_bb.a((byte) 116));
+            var24_ref = (mh) (this.field_bb.next((byte) 116));
           }
         }
         lb.e(var12, var14, var15, var16);
@@ -563,11 +563,11 @@ class mh extends ba {
         int var9Lifetime1;
         if (!param3) {
           var9 = 0;
-          var10_ref_mh = (mh) (this.field_bb.d(param2 ^ 2147483544));
+          var10_ref_mh = (mh) (this.field_bb.first(param2 ^ 2147483544));
           while (var10_ref_mh != null) {
             var10_ref_mh.field_Db = var9 - var10_ref_mh.field_zb;
             var9 = var9 + (param1 + var10_ref_mh.field_cb + var10_ref_mh.field_C);
-            var10_ref_mh = (mh) (this.field_bb.a((byte) 116));
+            var10_ref_mh = (mh) (this.field_bb.next((byte) 116));
           }
           var8 = -param1 + var9;
         }
@@ -598,11 +598,11 @@ class mh extends ba {
         mh var4 = null;
         int var3 = BrickABrac.field_J ? 1 : 0;
         if (null != this.field_bb) {
-          var4 = (mh) (this.field_bb.f(0));
+          var4 = (mh) (this.field_bb.last(0));
           while (var4 != null) {
             var4.field_Kb = true;
             var4.c(true);
-            var4 = (mh) (this.field_bb.b(118));
+            var4 = (mh) (this.field_bb.previous(118));
           }
         }
         if (!param0) {
@@ -685,9 +685,9 @@ class mh extends ba {
         RuntimeException var3 = null;
         try {
           if (null == this.field_bb) {
-            this.field_bb = new vl();
+            this.field_bb = new NodeDeque();
           }
-          this.field_bb.a(param0, (byte) 3);
+          this.field_bb.addLast(param0, (byte) 3);
           if (param1 != 0) {
             this.a(-97, -100, 116, 23, -11, true);
           }
@@ -749,7 +749,7 @@ class mh extends ba {
         this.field_I = -1;
         try {
           this.field_zb = param3;
-          this.field_g = param0;
+          this.key = param0;
           this.field_Ib = param4;
           this.field_P = param2;
           this.field_cb = param5;
@@ -799,13 +799,13 @@ class mh extends ba {
           }
         }
         if (this.field_bb != null) {
-          var4 = (mh) (this.field_bb.d(-85));
+          var4 = (mh) (this.field_bb.first(-85));
           while (var4 != null) {
             var5 = var4.field_P + var4.field_Ib;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (mh) (this.field_bb.a((byte) 116));
+            var4 = (mh) (this.field_bb.next((byte) 116));
           }
         }
         return var3;

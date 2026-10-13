@@ -27,7 +27,7 @@ final class bd implements ub {
 
     final static void a(int param0, byte param1, sp param2) {
         try {
-          tm.field_f.a(param2, (byte) 3);
+          tm.field_f.addLast(param2, (byte) 3);
           if (param1 != 25) {
             bd.a(20, false);
           }

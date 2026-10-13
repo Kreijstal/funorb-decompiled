@@ -105,7 +105,7 @@ final class oj extends ep {
         int var2Lifetime2;
         int var2Lifetime3;
         int var2Lifetime4;
-        vi.a((byte) 74, 640 + lb.field_c >> 1, -640 + lb.field_c >> 1, 0, lb.field_d);
+        MovingBody.a((byte) 74, 640 + lb.field_c >> 1, -640 + lb.field_c >> 1, 0, lb.field_d);
         if (ml.field_b <= 0) {
           if (pe.field_j > 0) {
             if (null == c.field_e) {
@@ -113,7 +113,7 @@ final class oj extends ep {
               stackIn_60_1 = true;
               stackIn_61_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_61_2);
-              stackIn_64_0 = ak.field_d;
+              stackIn_64_0 = MultiplayerMatch.field_d;
               stackIn_64_1 = true;
               stackIn_65_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_64_0).a(stackIn_64_1, stackIn_65_2);
@@ -123,7 +123,7 @@ final class oj extends ep {
               stackIn_69_1 = true;
               stackIn_70_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_69_0).a(stackIn_69_1, stackIn_70_2);
-              stackIn_73_0 = ak.field_d;
+              stackIn_73_0 = MultiplayerMatch.field_d;
               stackIn_73_1 = true;
               stackIn_74_2 = (param0) && (!hc.field_c);
               ((mh) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
@@ -135,7 +135,7 @@ final class oj extends ep {
                 stackIn_82_1 = true;
                 stackIn_83_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_82_0).a(stackIn_82_1, stackIn_83_2);
-                stackIn_86_0 = ak.field_d;
+                stackIn_86_0 = MultiplayerMatch.field_d;
                 stackIn_86_1 = true;
                 stackIn_87_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_86_0).a(stackIn_86_1, stackIn_87_2);
@@ -145,7 +145,7 @@ final class oj extends ep {
                 stackIn_91_1 = true;
                 stackIn_92_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_91_0).a(stackIn_91_1, stackIn_92_2);
-                stackIn_95_0 = ak.field_d;
+                stackIn_95_0 = MultiplayerMatch.field_d;
                 stackIn_95_1 = true;
                 stackIn_96_2 = (param0) && (!hc.field_c);
                 ((mh) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_96_2);
@@ -173,7 +173,7 @@ final class oj extends ep {
             stackIn_17_1 = true;
             stackIn_18_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
-            stackIn_21_0 = ak.field_d;
+            stackIn_21_0 = MultiplayerMatch.field_d;
             stackIn_21_1 = true;
             stackIn_22_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
@@ -183,7 +183,7 @@ final class oj extends ep {
             stackIn_26_1 = true;
             stackIn_27_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_27_2);
-            stackIn_30_0 = ak.field_d;
+            stackIn_30_0 = MultiplayerMatch.field_d;
             stackIn_30_1 = true;
             stackIn_31_2 = (param0) && (!hc.field_c);
             ((mh) (Object) stackIn_30_0).a(stackIn_30_1, stackIn_31_2);
@@ -202,7 +202,7 @@ final class oj extends ep {
           stackIn_39_1 = true;
           stackIn_40_2 = (param0) && (!hc.field_c);
           ((mh) (Object) stackIn_39_0).a(stackIn_39_1, stackIn_40_2);
-          stackIn_43_0 = ak.field_d;
+          stackIn_43_0 = MultiplayerMatch.field_d;
           stackIn_43_1 = true;
           stackIn_44_2 = (param0) && (!hc.field_c);
           ((mh) (Object) stackIn_43_0).a(stackIn_43_1, stackIn_44_2);
@@ -215,7 +215,7 @@ final class oj extends ep {
         stackIn_48_1 = true;
         stackIn_49_2 = (param0) && (!hc.field_c);
         ((mh) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
-        stackIn_52_0 = ak.field_d;
+        stackIn_52_0 = MultiplayerMatch.field_d;
         stackIn_52_1 = true;
         stackIn_53_2 = (param0) && (!hc.field_c);
         ((mh) (Object) stackIn_52_0).a(stackIn_52_1, stackIn_53_2);
@@ -250,7 +250,7 @@ final class oj extends ep {
         }
     }
 
-    final static void a(int param0, vo param1, int param2, int param3, byte param4, j param5, int param6) {
+    final static void a(int param0, Paddle param1, int param2, int param3, byte param4, PlayerBoard param5, int param6) {
         jp[] stackIn_4_0 = null;
         jp[] stackIn_7_0 = null;
         jp stackIn_10_0 = null;
@@ -297,8 +297,8 @@ final class oj extends ep {
           if (param4 < 54) {
             return;
           }
-          var10 = param1.field_m >> 8;
-          var11 = param1.field_j >> 8;
+          var10 = param1.y256 >> 8;
+          var11 = param1.x256 >> 8;
           if (param0 == 2) {
             var15 = bq.field_e[1][oo.field_w.a(-37880252, bq.field_e[1].length)];
             var12 = var15;
@@ -309,7 +309,7 @@ final class oj extends ep {
             var14[0].c(param6 + var11 / param2, param3 + var10 / param2);
           }
           var11 += 16;
-          for (var12_int = 0; param1.field_F / 2 > var12_int; var12_int++) {
+          for (var12_int = 0; param1.sizeStage / 2 > var12_int; var12_int++) {
             fq.field_d[0].c(var11 / param2 + param6, param3 + var10 / param2);
             if (null != var8) {
               var8[0].c(var11 / param2 + param6, var10 / param2 + param3);
@@ -321,7 +321,7 @@ final class oj extends ep {
             var9.c(param6 + var11 / param2, var10 / param2 + param3);
           }
           var11 += 8;
-          for (var12_intLifetime1 = 0; param1.field_F / 2 > var12_intLifetime1; var12_intLifetime1++) {
+          for (var12_intLifetime1 = 0; param1.sizeStage / 2 > var12_intLifetime1; var12_intLifetime1++) {
             fq.field_d[1].c(var11 / param2 + param6, var10 / param2 + param3);
             if (null != var8) {
               var8[1].c(var11 / param2 + param6, param3 + var10 / param2);

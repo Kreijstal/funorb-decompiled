@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj extends gf {
+final class GameplayScreen extends GameScreen {
     boolean field_p;
     static int field_h;
-    ak field_w;
+    MultiplayerMatch match;
     static jp field_l;
     int field_v;
     int field_r;
@@ -31,7 +31,7 @@ final class qj extends gf {
         int stackIn_17_1 = 0;
         boolean stackIn_30_0 = false;
         int var2;
-        j var3;
+        PlayerBoard var3;
         int var2Lifetime1;
         int var2Lifetime2;
         if (!pf.field_p) {
@@ -41,16 +41,16 @@ final class qj extends gf {
         }
         var2 = stackIn_6_0;
         if (param0 != -1) {
-          var3 = (j) null;
-          this.a((byte) -2, (j) null);
+          var3 = (PlayerBoard) null;
+          this.a((byte) -2, (PlayerBoard) null);
         }
         stackIn_10_0 = var2;
-        stackIn_11_1 = ((this.field_o & (this.field_w.field_i | this.field_w.field_g | this.field_w.field_a)) != this.field_o) ? 0 : 1;
+        stackIn_11_1 = ((this.field_o & (this.match.playerMaskOne | this.match.playerMaskTwo | this.match.playerMaskThree)) != this.field_o) ? 0 : 1;
         boolean decompiledFrameRemainder0 = true;
         var2Lifetime1 = stackIn_10_0 & stackIn_11_1;
         stackIn_16_0 = var2Lifetime1;
-        if (2 < this.field_w.field_k && (this.field_k < 0 ||
-          !(this.field_w.field_l[this.field_k].field_U < 50))) {
+        if (2 < this.match.playerCount && (this.field_k < 0 ||
+          !(this.match.playerBoards[this.field_k].field_U < 50))) {
           stackIn_17_1 = 1;
           decompiledFrameRemainder0 = false;
         }
@@ -65,14 +65,14 @@ final class qj extends gf {
             if (!(!pe.field_l[ac.field_f])) {
               fieldTemp$0 = this.field_m - 1;
               this.field_m = this.field_m - 1;
-              this.field_m = (this.field_w.field_k + fieldTemp$0) % this.field_w.field_k;
+              this.field_m = (this.match.playerCount + fieldTemp$0) % this.match.playerCount;
             }
             decompiledFrameRemainder1 = false;
           }
           else {
             fieldTemp$1 = this.field_m + 1;
             this.field_m = this.field_m + 1;
-            this.field_m = fieldTemp$1 % this.field_w.field_k;
+            this.field_m = fieldTemp$1 % this.match.playerCount;
           }
         }
         stackIn_30_0 = (pe.field_l[fq.field_b]) || (pe.field_l[ac.field_f]) || (pe.field_l[td.field_u]);
@@ -91,16 +91,16 @@ final class qj extends gf {
         var3 = var6;
         var4 = param0;
         var6[var4 >> 5] = ud.d(var6[var4 >> 5], param1 << ik.a(var4, 31));
-        kp.field_c.a(new kq(param0), (byte) 3);
+        kp.field_c.addLast(new kq(param0), (byte) 3);
         return false;
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         lb.a();
         if (!this.field_q) {
           return;
         }
-        if (param0 > -14) {
+        if (obfuscationGuard > -14) {
           this.a((byte) -47, -81);
         }
         this.g(41);
@@ -116,13 +116,13 @@ final class qj extends gf {
         RuntimeException var4 = null;
         try {
           var4_int = param0.l(255);
-          this.field_w.field_l[var4_int].field_V = param0.j(48);
+          this.match.playerBoards[var4_int].field_V = param0.j(48);
           var5 = -101 % ((param2 - 26) / 60);
           if (param1) {
-            this.field_w.field_l[var4_int].field_zb = param0.l(255);
-            this.field_w.field_a = this.field_w.field_a | 1 << var4_int;
+            this.match.playerBoards[var4_int].field_zb = param0.l(255);
+            this.match.playerMaskThree = this.match.playerMaskThree | 1 << var4_int;
           } else {
-            this.field_w.field_g = this.field_w.field_g | 1 << var4_int;
+            this.match.playerMaskTwo = this.match.playerMaskTwo | 1 << var4_int;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,14 +140,14 @@ final class qj extends gf {
     }
 
     final void a(byte param0, pi param1) {
-        j dupTemp$0 = null;
+        PlayerBoard dupTemp$0 = null;
         try {
-          dupTemp$0 = this.field_w.field_l[this.field_k];
+          dupTemp$0 = this.match.playerBoards[this.field_k];
           dupTemp$0.field_E = dupTemp$0.field_E + 5;
-          this.field_w.field_l[this.field_k].field_p = param1.i(65280);
+          this.match.playerBoards[this.field_k].field_p = param1.i(65280);
           if (param0 != 33) {
-            j var4 = (j) null;
-            this.a((byte) 15, (j) null);
+            PlayerBoard var4 = (PlayerBoard) null;
+            this.a((byte) 15, (PlayerBoard) null);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "qj.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -161,11 +161,11 @@ final class qj extends gf {
           return;
         }
         if (!this.field_s) {
-          var4 = this.field_w.field_l[0].field_ob;
+          var4 = this.match.playerBoards[0].score;
           ep.field_i = ep.field_i - (var4 + this.field_t);
-          var5 = this.field_w.field_l[0].field_qb;
+          var5 = this.match.playerBoards[0].field_qb;
           fp.field_z = fp.field_z + var5;
-          lp.field_wb.a(new e(param2, param0, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
+          lp.field_wb.addLast(new e(param2, param0, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
           fp.field_z = fp.field_z + (var4 + this.field_t);
           ep.field_i = ep.field_i - var5;
         }
@@ -174,7 +174,7 @@ final class qj extends gf {
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -193,28 +193,28 @@ final class qj extends gf {
         int var4;
         int var5;
         int var6;
-        vl var7;
+        NodeDeque var7;
         long var9_long;
         int var9_int;
-        vn var9;
-        j var11;
-        j var12;
-        vn var13;
+        Ball var9;
+        PlayerBoard var11;
+        PlayerBoard var12;
+        Ball var13;
         int var14;
-        j var15;
-        j var16;
-        j var17;
-        j var18;
-        vl var19;
-        j var20;
-        j var21;
+        PlayerBoard var15;
+        PlayerBoard var16;
+        PlayerBoard var17;
+        PlayerBoard var18;
+        NodeDeque var19;
+        PlayerBoard var20;
+        PlayerBoard var21;
         int var4Lifetime1;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
         int var5Lifetime4;
-        j var17Lifetime1;
-        j var17Lifetime2;
+        PlayerBoard var17Lifetime1;
+        PlayerBoard var17Lifetime2;
         var14 = BrickABrac.field_J ? 1 : 0;
         if (!this.field_q) {
           return;
@@ -242,22 +242,22 @@ final class qj extends gf {
             }
           }
         }
-        stackIn_15_0 = (this.field_w.field_l[this.field_m].field_M == -1) ? 0 : 1;
+        stackIn_15_0 = (this.match.playerBoards[this.field_m].field_M == -1) ? 0 : 1;
         var4 = stackIn_15_0;
         stackIn_19_0 = var4;
         if (!this.field_p &&
-          this.field_w.field_k == 2 &&
-          -1 != this.field_w.field_l[-this.field_m + 1].field_M) {
+          this.match.playerCount == 2 &&
+          -1 != this.match.playerBoards[-this.field_m + 1].field_M) {
           stackIn_20_1 = 1;
         } else {
           stackIn_20_1 = 0;
         }
         var4Lifetime1 = stackIn_19_0 | stackIn_20_1;
-        if (1 == this.field_w.field_k &&
-          this.field_w.field_l[0].field_Z == 5) {
+        if (1 == this.match.playerCount &&
+          this.match.playerBoards[0].field_Z == 5) {
           ji.a(25459, true, c.field_j, 1, 1, true);
         } else {
-          if (!this.field_w.field_c) {
+          if (!this.match.field_c) {
             if (var4Lifetime1 != 0) {
               ji.a(25459, true, uk.field_t, 1, 1, true);
             } else {
@@ -272,8 +272,8 @@ final class qj extends gf {
             ji.a(25459, true, oj.field_q, 1, 1, true);
           }
         }
-        if (this.field_w.field_c &&
-          this.field_w.field_k > 1) {
+        if (this.match.field_c &&
+          this.match.playerCount > 1) {
           fieldTemp$2 = be.field_j + 1;
           be.field_j = be.field_j + 1;
           if (fieldTemp$2 == 300) {
@@ -281,7 +281,7 @@ final class qj extends gf {
               fieldTemp$3 = ml.field_f + 1;
               ml.field_f = ml.field_f + 1;
               System.out.println("Concluded " + fieldTemp$3 + " games (" + cf.field_a + " errors)");
-              if ((1 << this.field_k & this.field_w.field_j) == 0) {
+              if ((1 << this.field_k & this.match.field_j) == 0) {
                 this.f(87);
               }
             }
@@ -301,8 +301,8 @@ final class qj extends gf {
             }
           }
         }
-        if (param2 >= -52) {
-          this.field_w = (ak) null;
+        if (obfuscationGuard >= -52) {
+          this.match = (MultiplayerMatch) null;
         }
         var5 = oo.field_w.a(-37880252, 10);
         var6 = oo.field_w.a(-37880252, 3);
@@ -367,42 +367,42 @@ final class qj extends gf {
           tm.field_g = tm.field_g + 1;
         }
         if (this.field_p) {
-          for (var5Lifetime2 = 0; this.field_w.field_k > var5Lifetime2; var5Lifetime2++) {
+          for (var5Lifetime2 = 0; this.match.playerCount > var5Lifetime2; var5Lifetime2++) {
             if ((this.field_o & 1 << var5Lifetime2) != 0) {
-              var15 = this.field_w.field_l[var5Lifetime2];
+              var15 = this.match.playerBoards[var5Lifetime2];
               var17 = var15;
               var17Lifetime2 = var15;
               var16 = var15;
-              var16.field_vb[var15.field_F % 5] = 0;
+              var16.field_vb[var15.simulationTick % 5] = 0;
             }
           }
         }
-        if (param1) {
+        if (inputEnabled) {
           this.a(-1);
         }
-        for (var5Lifetime3 = 0; var5Lifetime3 < this.field_w.field_k; var5Lifetime3++) {
+        for (var5Lifetime3 = 0; var5Lifetime3 < this.match.playerCount; var5Lifetime3++) {
           if ((this.field_o & 1 << var5Lifetime3) != 0) {
-            var17Lifetime1 = this.field_w.field_l[var5Lifetime3];
-            if (param1) {
+            var17Lifetime1 = this.match.playerBoards[var5Lifetime3];
+            if (inputEnabled) {
               this.a((byte) 73, var17Lifetime1);
             } else {
               var17Lifetime1.field_db = 0;
             }
             if (this.field_p) {
-              var17Lifetime1.field_vb[var17Lifetime1.field_F % 5] = var17Lifetime1.field_db;
+              var17Lifetime1.field_vb[var17Lifetime1.simulationTick % 5] = var17Lifetime1.field_db;
             }
           }
         }
         var5Lifetime4 = 0;
-        var19 = new vl();
-        var7 = new vl();
+        var19 = new NodeDeque();
+        var7 = new NodeDeque();
         if (!r.field_A) {
           stackIn_120_0 = (!this.a(var7, true, var19)) ? 0 : 1;
           var5Lifetime4 = stackIn_120_0;
         } else {
           if (km.field_i == 0) {
             od.a((byte) 32);
-            var18 = this.field_w.field_l[0];
+            var18 = this.match.playerBoards[0];
             if (2 == var18.field_Z) {
               jc.a(var18.field_db, 0, (byte) -85);
             }
@@ -415,40 +415,40 @@ final class qj extends gf {
         }
         bm.a(96, 96, false, -30791, var19);
         bm.a(48, 48, true, -30791, var7);
-        if (this.field_w.field_k == 1) {
-          var20 = this.field_w.field_l[0];
+        if (this.match.playerCount == 1) {
+          var20 = this.match.playerBoards[0];
           if (var20.field_qb > this.field_i) {
             var9_long = ue.a(false);
             this.a(gq.field_Yb, this.field_i, var9_long - fl.field_l, true, 1000);
             fl.field_l = var9_long;
             this.field_i = var20.field_qb;
-            this.a(this.field_w.field_b.field_b, var20.field_ob, (byte) -125, var20.field_qb);
+            this.a(this.match.configuration.field_b, var20.score, (byte) -125, var20.field_qb);
             if (this.field_i == 1 &&
-              0 == this.field_w.field_b.field_b.field_h) {
+              0 == this.match.configuration.field_b.field_h) {
               var11 = var20;
               var20.field_Q = 0;
               var11.field_m = 0;
               var20.field_u = 0;
               var12 = var20;
               var12.field_N = 0;
-              var13 = (vn) (var20.field_gb.d(-66));
+              var13 = (Ball) (var20.field_gb.first(-66));
               while (var13 != null) {
                 var13.field_I = 0;
-                var13 = (vn) (var20.field_gb.a((byte) 116));
+                var13 = (Ball) (var20.field_gb.next((byte) 116));
               }
             }
             if ((this.field_i > 1 ||
-              this.field_w.field_b.field_b.field_h == 1) &&
+              this.match.configuration.field_b.field_h == 1) &&
               (lc.a(0, -119) &&
               oa.field_Sb instanceof dp)) {
               this.a(false, 239, 16);
             }
-            if (this.field_i < this.field_w.field_b.a(95)) {
-              w.field_r = lg.a(2, this.field_w.field_b.a(this.field_i, (byte) -122), -1);
+            if (this.field_i < this.match.configuration.a(95)) {
+              w.field_r = lg.a(2, this.match.configuration.a(this.field_i, (byte) -122), -1);
             }
           }
           if (var20.field_tb) {
-            var9_int = (33423360 - 2 * (var20.field_yb.field_j + var20.field_yb.field_u / 2 << 8)) / 510;
+            var9_int = (33423360 - 2 * (var20.paddle.x256 + var20.paddle.width256 / 2 << 8)) / 510;
             nk.field_c.g();
             oa.field_Sb.a(true, var9_int, 0, 0, 0);
             kc.field_q.a((byte) 78);
@@ -460,7 +460,7 @@ final class qj extends gf {
             pe.field_n = var20.field_ab.field_p;
           }
           if (!(var20.field_qb <= 0) ||
-            this.field_w.field_b.field_b.field_h != 0) {
+            this.match.configuration.field_b.field_h != 0) {
             if (dp.field_r[0] <= var20.field_m) {
               this.b(0, -64, 255);
             }
@@ -486,22 +486,22 @@ final class qj extends gf {
               var20.field_Z == 5) {
               this.a(249, 67, 6);
             }
-            if (dp.field_r[7] <= var20.field_ob) {
+            if (dp.field_r[7] <= var20.score) {
               this.a((byte) 68, 7, 248);
             }
-            if (dp.field_r[8] <= var20.field_ob) {
+            if (dp.field_r[8] <= var20.score) {
               this.a((byte) 97, 8, 247);
             }
-            if (var20.field_ob >= dp.field_r[40]) {
+            if (var20.score >= dp.field_r[40]) {
               this.a((byte) 39, 40, 215);
             }
-            var9 = (vn) (var20.field_gb.d(-119));
+            var9 = (Ball) (var20.field_gb.first(-119));
             while (var9 != null) {
               if (dp.field_r[9] <= var9.field_I) {
                 this.b(9, 106, 246);
               }
               if (var9.field_I < dp.field_r[10]) {
-                var9 = (vn) (var20.field_gb.a((byte) 116));
+                var9 = (Ball) (var20.field_gb.next((byte) 116));
                 continue;
               }
               this.b(10, -52, 245);
@@ -535,12 +535,12 @@ final class qj extends gf {
               this.b(21, 109, 234);
             }
           }
-          if (dj.field_b != var20.field_ob) {
-            dj.field_b = var20.field_ob;
+          if (dj.field_b != var20.score) {
+            dj.field_b = var20.score;
             vd.field_d = Integer.toString(dj.field_b);
           }
-          if (pg.field_m != 1 + pp.a(var20, (byte) 59, this.field_w)) {
-            pg.field_m = pp.a(var20, (byte) -100, this.field_w) + 1;
+          if (pg.field_m != 1 + pp.a(var20, (byte) 59, this.match)) {
+            pg.field_m = pp.a(var20, (byte) -100, this.match) + 1;
             if (pg.field_m < 10) {
               stackIn_210_0 = "0" + pg.field_m;
             } else {
@@ -551,15 +551,15 @@ final class qj extends gf {
         }
         if (this.field_p &&
           this.field_o != 0) {
-          for (var8 = 0; var8 < this.field_w.field_k; var8++) {
+          for (var8 = 0; var8 < this.match.playerCount; var8++) {
             if ((this.field_o & 1 << var8) != 0 &&
-              ((this.field_w.field_i | (this.field_w.field_a | this.field_w.field_g)) & 1 << var8) == 0) {
-              var21 = this.field_w.field_l[var8];
+              ((this.match.playerMaskOne | (this.match.playerMaskThree | this.match.playerMaskTwo)) & 1 << var8) == 0) {
+              var21 = this.match.playerBoards[var8];
               if (var5Lifetime4 != 0 &&
-                0 == var21.field_F % 5) {
+                0 == var21.simulationTick % 5) {
                 stackIn_230_1 = 120;
                 stackIn_230_2 = var8;
-                if (var21.field_F % 5 != 0) {
+                if (var21.simulationTick % 5 != 0) {
                   stackIn_231_0 = this;
                   stackIn_231_3 = false;
                 } else {
@@ -590,8 +590,8 @@ final class qj extends gf {
           return;
         }
         if (null == fj.field_Ub &&
-          !(0 >= this.field_w.field_l[0].field_ob)) {
-          fj.field_Ub = new sp(this.field_w.field_b.field_b.field_d, 65535 ^ this.field_w.field_b.field_b.field_d, fp.field_z, ep.field_i, od.field_c, og.field_Wb, new int[]{this.field_w.field_l[0].field_ob, this.field_t << 16 | this.field_r});
+          !(0 >= this.match.playerBoards[0].score)) {
+          fj.field_Ub = new sp(this.match.configuration.field_b.field_d, 65535 ^ this.match.configuration.field_b.field_d, fp.field_z, ep.field_i, od.field_c, og.field_Wb, new int[]{this.match.playerBoards[0].score, this.field_t << 16 | this.field_r});
           if (!og.h(-26090)) {
             bd.a(3, (byte) 25, fj.field_Ub);
           }
@@ -601,17 +601,17 @@ final class qj extends gf {
     final void a(byte param0, boolean param1) {
         boolean stackIn_8_0 = false;
         if (!this.field_p) {
-          if (1 == this.field_w.field_k &&
+          if (1 == this.match.playerCount &&
             !this.field_s) {
-            this.a(pp.a(this.field_w.field_l[0], (byte) 115, this.field_w), false);
+            this.a(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.e(0);
             this.a(gq.field_Yb, this.field_r, -fl.field_l + ue.a(false), false, 1000);
-            jj.field_d = jj.field_d | ja.a(this.field_t, this.field_w.field_b, -1 + this.field_r, true);
+            jj.field_d = jj.field_d | ja.a(this.field_t, this.match.configuration, -1 + this.field_r, true);
             stackIn_8_0 = (hh.field_b[0] == 0);
             be.field_a = stackIn_8_0;
           }
-          if (this.field_w.field_k == 1 &&
-            this.field_w.field_l[0].field_Z == 8) {
+          if (this.match.playerCount == 1 &&
+            this.match.playerBoards[0].field_Z == 8) {
             ng.a(param1, 107, 18);
             ji.a(25459, true, cd.field_g, 1, 1, true);
           } else {
@@ -629,8 +629,8 @@ final class qj extends gf {
         var4 = BrickABrac.field_J ? 1 : 0;
         rj.a((byte) 80, to.field_k);
         rj.a((byte) 80, me.field_d);
-        if (!(this.field_w.field_k <= 1) ||
-          9 != this.field_w.field_l[0].field_Z) {
+        if (!(this.match.playerCount <= 1) ||
+          9 != this.match.playerBoards[0].field_Z) {
           ji.a(25459, true, cd.field_g, 1, 1, true);
         }
         if (this.field_p) {
@@ -668,12 +668,12 @@ final class qj extends gf {
         int var4_int = 0;
         RuntimeException var4 = null;
         p var5 = null;
-        j var6 = null;
+        PlayerBoard var6 = null;
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           var4_int = param1.l(255);
-          if (this.field_w.field_k <= var4_int) {
+          if (this.match.playerCount <= var4_int) {
             rk.a("K1: (" + var4_int + "/" + param1.field_l + ") " + eq.c((byte) -110), (Throwable) null, param0 + 125);
             hn.a((byte) 89);
             return;
@@ -692,10 +692,10 @@ final class qj extends gf {
             var5.field_m = param1.e(255);
             var5.field_l = true;
           }
-          var6 = this.field_w.field_l[var4_int];
+          var6 = this.match.playerBoards[var4_int];
           var6.field_E = var6.field_E + 5;
           var6.field_q = var6.field_q + 5;
-          var6.field_eb.a(var5, (byte) 3);
+          var6.field_eb.addLast(var5, (byte) 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -720,8 +720,8 @@ final class qj extends gf {
         RuntimeException var3 = null;
         try {
           var3_int = param1.l(param0 ^ 18615);
-          this.field_w.field_l[var3_int].field_V = param1.j(48);
-          this.field_w.field_i = this.field_w.field_i | 1 << var3_int;
+          this.match.playerBoards[var3_int].field_V = param1.j(48);
+          this.match.playerMaskOne = this.match.playerMaskOne | 1 << var3_int;
           if (param0 != 18504) {
             field_u = (mh) null;
           }
@@ -746,7 +746,7 @@ final class qj extends gf {
         int var4 = 17 % ((29 - param0) / 57);
         k.field_h.e(-13413, !param2 ? 68 : 69);
         k.field_h.p(62);
-        j var5 = this.field_w.field_l[param1];
+        PlayerBoard var5 = this.match.playerBoards[param1];
         for (var6 = 0; var6 < 5; var6++) {
           k.field_h.a(3, -17566, var5.field_vb[var6]);
         }
@@ -756,21 +756,21 @@ final class qj extends gf {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
+    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
         int fieldTemp$0 = 0;
         boolean stackIn_152_0 = false;
         int var4;
         int var5;
-        vn var5_ref_vn;
+        Ball var5_ref_vn;
         int var6;
-        j var7;
-        j var8;
+        PlayerBoard var7;
+        PlayerBoard var8;
         int var4Lifetime1;
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime2Lifetime1;
-        vn var5_ref_vnLifetime1;
+        Ball var5_ref_vnLifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
         var4 = oo.field_w.a(-37880252, 10);
         var5 = oo.field_w.a(-37880252, 5);
@@ -798,7 +798,7 @@ final class qj extends gf {
           od.field_c = od.field_c - 2;
           ep.field_i = ep.field_i - 2 * og.field_Wb;
         }
-        if (param1 <= 98) {
+        if (keyCode <= 98) {
           return false;
         }
         if (6 == var4) {
@@ -837,23 +837,23 @@ final class qj extends gf {
           tm.field_g = tm.field_g + 1;
           ek.field_kb = ek.field_kb + qm.field_a;
         }
-        if (param2 == 13) {
+        if (obfuscationGuard == 13) {
           boolean decompiledFrameRemainder0 = true;
           var4Lifetime2 = 1;
           if (this.field_p) {
             if (this.c(113)) {
               var4Lifetime2 = 4;
             } else {
-              if (!this.field_w.field_c &&
-                ((this.field_w.field_a | (this.field_w.field_i | this.field_w.field_g)) & 1 << this.field_k) == 0) {
+              if (!this.match.field_c &&
+                ((this.match.playerMaskThree | (this.match.playerMaskOne | this.match.playerMaskTwo)) & 1 << this.field_k) == 0) {
                 var4Lifetime2 = 2;
               } else {
                 var4Lifetime2 = 3;
               }
             }
           } else {
-            if (this.field_w.field_k == 1) {
-              var5Lifetime1 = this.field_w.field_l[0].field_Z;
+            if (this.match.playerCount == 1) {
+              var5Lifetime1 = this.match.playerBoards[0].field_Z;
               decompiledFrameRemainder0 = (5 == var5Lifetime1 ||
                 9 == var5Lifetime1 ||
                 var5Lifetime1 == 3 ||
@@ -863,12 +863,12 @@ final class qj extends gf {
               }
             }
             if ((decompiledFrameRemainder0) &&
-              (this.field_w.field_k == 2)) {
+              (this.match.playerCount == 2)) {
               var4Lifetime2 = 17;
             }
           }
-          if (this.field_w.field_k != 1 &&
-            this.field_w.field_c) {
+          if (this.match.playerCount != 1 &&
+            this.match.field_c) {
             if (!(200 >= be.field_j)) {
               be.field_j = 299;
               return true;
@@ -878,71 +878,71 @@ final class qj extends gf {
           }
           return true;
         }
-        if (this.field_w.field_k == 1 &&
+        if (this.match.playerCount == 1 &&
           r.field_A &&
           ka.a((byte) 113)) {
-          if (84 == param2) {
+          if (84 == obfuscationGuard) {
             im.b(-8);
           }
           return true;
         }
-        if (1 == this.field_w.field_k &&
+        if (1 == this.match.playerCount &&
           this.field_y) {
-          var7 = this.field_w.field_l[0];
+          var7 = this.match.playerBoards[0];
           var8 = var7;
-          if (48 == param2) {
+          if (48 == obfuscationGuard) {
             this.field_s = true;
             var7.field_m = dp.field_r[0] - 5;
             return true;
           }
-          if (param2 == 68) {
+          if (obfuscationGuard == 68) {
             var7.field_m = dp.field_r[1] - 5;
             this.field_s = true;
             return true;
           }
-          if (66 == param2) {
+          if (66 == obfuscationGuard) {
             var7.field_m = -5 + dp.field_r[2];
             this.field_s = true;
             return true;
           }
-          if (param2 == 50) {
+          if (obfuscationGuard == 50) {
             this.field_t = -dp.field_r[3] + (var8.field_qb + 1);
             this.field_s = true;
             return true;
           }
-          if (param2 == 34) {
+          if (obfuscationGuard == 34) {
             this.field_s = true;
             this.field_t = var7.field_qb + 1 - dp.field_r[4];
             return true;
           }
-          if (51 == param2) {
-            var7.field_ob = dp.field_r[7] - 20;
+          if (51 == obfuscationGuard) {
+            var7.score = dp.field_r[7] - 20;
             this.field_s = true;
             return true;
           }
-          if (param2 == 52) {
+          if (obfuscationGuard == 52) {
             this.field_s = true;
-            var7.field_ob = -20 + dp.field_r[8];
+            var7.score = -20 + dp.field_r[8];
           }
-          if (param2 == 53) {
-            var5_ref_vn = (vn) (var8.field_gb.d(-19));
+          if (obfuscationGuard == 53) {
+            var5_ref_vn = (Ball) (var8.field_gb.first(-19));
             while (var5_ref_vn != null) {
               var5_ref_vn.field_I = dp.field_r[9] - 2;
-              var5_ref_vn = (vn) (var8.field_gb.a((byte) 116));
+              var5_ref_vn = (Ball) (var8.field_gb.next((byte) 116));
             }
             this.field_s = true;
             return true;
           }
-          if (param2 == 39) {
-            var5_ref_vnLifetime1 = (vn) (var8.field_gb.d(-114));
+          if (obfuscationGuard == 39) {
+            var5_ref_vnLifetime1 = (Ball) (var8.field_gb.first(-114));
             while (var5_ref_vnLifetime1 != null) {
               var5_ref_vnLifetime1.field_I = dp.field_r[10] - 2;
-              var5_ref_vnLifetime1 = (vn) (var8.field_gb.a((byte) 116));
+              var5_ref_vnLifetime1 = (Ball) (var8.field_gb.next((byte) 116));
             }
             this.field_s = true;
             return true;
           }
-          if (param2 == 54) {
+          if (obfuscationGuard == 54) {
             fieldTemp$0 = var8.field_qb + 1;
             var8.field_qb = var8.field_qb + 1;
             if (tk.field_q > fieldTemp$0) {
@@ -954,7 +954,7 @@ final class qj extends gf {
             var8.field_P = 0;
             return true;
           }
-          if (param2 == 55) {
+          if (obfuscationGuard == 55) {
             for (var5Lifetime2 = 0; 29 > var5Lifetime2; var5Lifetime2++) {
               if (to.field_f[var5Lifetime2] > -1) {
                 var7.field_o[var5Lifetime2] = (byte)(-1 + to.field_f[var5Lifetime2]);
@@ -963,14 +963,14 @@ final class qj extends gf {
             this.field_s = true;
             return true;
           }
-          if (param2 == 56) {
+          if (obfuscationGuard == 56) {
             var8.field_rb = 5;
             this.field_s = true;
             return true;
           }
-          if (param2 >= 16 &&
-            25 >= param2) {
-            var5Lifetime2Lifetime1 = -16 - (-param2 - 1);
+          if (obfuscationGuard >= 16 &&
+            25 >= obfuscationGuard) {
+            var5Lifetime2Lifetime1 = -16 - (-obfuscationGuard - 1);
             this.field_s = true;
             if (pe.field_l[81]) {
               var5Lifetime2Lifetime1 += 10;
@@ -980,47 +980,47 @@ final class qj extends gf {
               return true;
             }
           }
-          if (70 == param2) {
+          if (70 == obfuscationGuard) {
             var8.field_l = 6;
             this.field_s = true;
             return true;
           }
-          if (param2 == 69) {
+          if (obfuscationGuard == 69) {
             this.field_s = true;
             var7.field_hb = -1 + dp.field_r[29];
             return true;
           }
-          if (param2 == 40) {
+          if (obfuscationGuard == 40) {
             var7.field_u = -1 + dp.field_r[30];
             this.field_s = true;
             return true;
           }
-          if (41 == param2) {
+          if (41 == obfuscationGuard) {
             var7.field_u = dp.field_r[31] - 1;
             this.field_s = true;
             return true;
           }
-          if (param2 == 32) {
+          if (obfuscationGuard == 32) {
             var7.field_N = dp.field_r[32] - 1;
             this.field_s = true;
             return true;
           }
-          if (param2 == 35) {
+          if (obfuscationGuard == 35) {
             var7.field_N = -1 + dp.field_r[33];
             this.field_s = true;
             return true;
           }
-          if (49 == param2) {
+          if (49 == obfuscationGuard) {
             this.field_s = true;
             var7.field_m = dp.field_r[39] - 5;
             return true;
           }
-          if (param2 == 36) {
+          if (obfuscationGuard == 36) {
             this.field_s = true;
-            var7.field_ob = dp.field_r[40] - 20;
+            var7.score = dp.field_r[40] - 20;
             return true;
           }
-          if (38 == param2) {
+          if (38 == obfuscationGuard) {
             var8.field_Z = 0;
             this.field_s = true;
             var8.field_P = 0;
@@ -1048,7 +1048,7 @@ final class qj extends gf {
         if (!this.field_p) {
           throw new IllegalStateException();
         }
-        this.field_w.field_i = this.field_w.field_i | 1 << this.field_k;
+        this.match.playerMaskOne = this.match.playerMaskOne | 1 << this.field_k;
         int var2 = 116 % ((param0 + 55) / 62);
         k.field_h.e(-13413, 66);
     }
@@ -1063,11 +1063,11 @@ final class qj extends gf {
           this.field_q = true;
         }
         if (!this.field_s) {
-          var4 = this.field_w.field_l[0].field_ob;
-          var5 = this.field_w.field_l[0].field_qb;
+          var4 = this.match.playerBoards[0].score;
+          var5 = this.match.playerBoards[0].field_qb;
           fp.field_z = fp.field_z - (this.field_t + var4);
           ep.field_i = ep.field_i + (-this.field_t + var5);
-          lp.field_wb.a(new e(param2, param1, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
+          lp.field_wb.addLast(new e(param2, param1, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
           fp.field_z = fp.field_z - (-this.field_t + var5);
           ep.field_i = ep.field_i + (this.field_t + var4);
         }
@@ -1080,15 +1080,15 @@ final class qj extends gf {
         if (param0 != 119) {
           return;
         }
-        for (var3 = 0; var3 < this.field_w.field_l.length; var3++) {
-          this.field_w.field_l[var3].field_qb = param1;
+        for (var3 = 0; var3 < this.match.playerBoards.length; var3++) {
+          this.match.playerBoards[var3].field_qb = param1;
         }
-        if (this.field_w.field_k == 1) {
+        if (this.match.playerCount == 1) {
           this.field_t = param1;
           this.field_i = param1;
           var3Lifetime1 = param1;
           fp.field_z = fp.field_z + var3Lifetime1;
-          w.field_r = lg.a(2, this.field_w.field_b.a(this.field_i, (byte) -122), -1);
+          w.field_r = lg.a(2, this.match.configuration.a(this.field_i, (byte) -122), -1);
         }
     }
 
@@ -1114,14 +1114,14 @@ final class qj extends gf {
         int var4 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var3_int = param1; this.field_w.field_k > var3_int; var3_int++) {
+          for (var3_int = param1; this.match.playerCount > var3_int; var3_int++) {
             dupTemp$0 = param0.b(true);
-            this.field_w.field_m[var3_int] = dupTemp$0;
+            this.match.field_m[var3_int] = dupTemp$0;
             stackIn_5_0 = op.field_a;
             stackIn_6_1 = !(0 > dupTemp$0);
             op.field_a = stackIn_5_0 | stackIn_6_1;
           }
-          this.field_w.a(false);
+          this.match.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1148,7 +1148,7 @@ final class qj extends gf {
         if (param1) {
           this.field_n = true;
         }
-        if (this.field_w.field_k == 1) {
+        if (this.match.playerCount == 1) {
           var3 = param0;
           ep.field_i = ep.field_i - var3;
         }
@@ -1178,7 +1178,7 @@ final class qj extends gf {
           var7 = 1 << var6;
           hg.field_e = hg.field_e ^ var7;
           ek.field_kb = ek.field_kb - hg.field_e;
-          lp.field_wb.a(new e(param0, param2, hg.field_e, ek.field_kb, tm.field_g, qm.field_a), (byte) 3);
+          lp.field_wb.addLast(new e(param0, param2, hg.field_e, ek.field_kb, tm.field_g, qm.field_a), (byte) 3);
         }
         var4Lifetime1 = 90 % ((param1 - 36) / 46);
     }
@@ -1198,7 +1198,7 @@ final class qj extends gf {
           } else {
             ep.field_i = ep.field_i - this.field_t;
           }
-          lp.field_wb.a(new e(param1, param2, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
+          lp.field_wb.addLast(new e(param1, param2, fp.field_z, ep.field_i, od.field_c, og.field_Wb), (byte) 3);
           if (param1 != 7) {
             ep.field_i = ep.field_i + this.field_t;
           } else {
@@ -1207,8 +1207,8 @@ final class qj extends gf {
         }
     }
 
-    private final boolean a(vl param0, boolean param1, vl param2) {
-        vl stackIn_4_0 = null;
+    private final boolean a(NodeDeque param0, boolean param1, NodeDeque param2) {
+        NodeDeque stackIn_4_0 = null;
         int stackIn_107_0 = 0;
         RuntimeException stackIn_110_0 = null;
         StringBuilder stackIn_110_1 = null;
@@ -1218,12 +1218,12 @@ final class qj extends gf {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        vl var5 = null;
+        NodeDeque var5 = null;
         int var6_int = 0;
-        j var6 = null;
+        PlayerBoard var6 = null;
         int var7 = 0;
         int var8_int = 0;
-        j var8 = null;
+        PlayerBoard var8 = null;
         ge var9_ref_ge = null;
         int var9 = 0;
         int var10 = 0;
@@ -1232,9 +1232,9 @@ final class qj extends gf {
         int var12 = 0;
         int var13 = 0;
         int var15 = 0;
-        j var16 = null;
-        j var17 = null;
-        j var18 = null;
+        PlayerBoard var16 = null;
+        PlayerBoard var17 = null;
+        PlayerBoard var18 = null;
         int var6_intLifetime1;
         int var6_intLifetime2;
         int var6_intLifetime3;
@@ -1247,14 +1247,14 @@ final class qj extends gf {
         try {
           var4_int = 0;
           if (!this.field_p) {
-            stackIn_4_0 = new vl();
+            stackIn_4_0 = new NodeDeque();
           } else {
             stackIn_4_0 = null;
           }
           var5 = stackIn_4_0;
-          for (var6_int = 0; var6_int < this.field_w.field_k; var6_int++) {
-            var16 = this.field_w.field_l[var6_int];
-            if ((1 << var6_int & (this.field_w.field_i | (this.field_w.field_g | this.field_w.field_a))) != 0) {
+          for (var6_int = 0; var6_int < this.match.playerCount; var6_int++) {
+            var16 = this.match.playerBoards[var6_int];
+            if ((1 << var6_int & (this.match.playerMaskOne | (this.match.playerMaskTwo | this.match.playerMaskThree))) != 0) {
               var16.field_U = var16.field_U + 1;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -1269,14 +1269,14 @@ final class qj extends gf {
                   var8_int = -25 + var16.field_q;
                 }
                 var9 = 0;
-                var10_ref_p = (p) (var16.field_eb.d(-84));
+                var10_ref_p = (p) (var16.field_eb.first(-84));
                 while (var9 < var8_int) {
-                  this.field_w.a((byte) 120, var6_int);
+                  this.match.a((byte) 120, var6_int);
                   var16.field_db = var10_ref_p.a((byte) -104);
-                  this.field_w.a(var16, param0, var5, 0);
-                  var16.field_F = var16.field_F + 1;
+                  this.match.a(var16, param0, var5, 0);
+                  var16.simulationTick = var16.simulationTick + 1;
                   if (var10_ref_p.c(1)) {
-                    var10_ref_p.b((byte) 111);
+                    var10_ref_p.unlink((byte) 111);
                     var16.field_p = var10_ref_p.field_k;
                     if (var10_ref_p.field_l) {
                       var11 = null;
@@ -1287,7 +1287,7 @@ final class qj extends gf {
                         cf.field_a = cf.field_a + 1;
                       }
                     }
-                    var10_ref_p = (p) (var16.field_eb.d(-21));
+                    var10_ref_p = (p) (var16.field_eb.first(-21));
                   }
                   var9++;
                   var16.field_q = var16.field_q - 1;
@@ -1295,7 +1295,7 @@ final class qj extends gf {
               }
             } else {
               if (this.field_p) {
-                var8_int = var16.field_F - var16.field_E;
+                var8_int = var16.simulationTick - var16.field_E;
                 decompiledFrameRemainder0 = (!(var8_int > 30) ||
                   0 != de.field_x % 10);
                 if ((decompiledFrameRemainder0) &&
@@ -1305,20 +1305,20 @@ final class qj extends gf {
                 }
               }
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = (((this.field_w.field_a | (this.field_w.field_g | this.field_w.field_i)) & 1 << var6_int) == 0))) {
-                this.field_w.a((byte) 127, var6_int);
-                this.field_w.a(var16, param2, var5, 0);
+                (decompiledFrameRemainder0 = (((this.match.playerMaskThree | (this.match.playerMaskTwo | this.match.playerMaskOne)) & 1 << var6_int) == 0))) {
+                this.match.a((byte) 127, var6_int);
+                this.match.a(var16, param2, var5, 0);
                 if (!this.field_p) {
-                  this.field_w.a(var6_int, 1, var5, (byte) -122);
+                  this.match.distributeQueuedAttacks(var6_int, 1, var5, (byte) -122);
                   var16.field_p = var16.field_Q;
                 }
                 var4_int = var4_int | 1;
-                var16.field_F = var16.field_F + 1;
+                var16.simulationTick = var16.simulationTick + 1;
               }
             }
             if (decompiledFrameRemainder0) {
               if (var5 != null) {
-                var5.c((byte) -110);
+                var5.clear((byte) -110);
               }
               var16.c(-101);
             }
@@ -1327,13 +1327,13 @@ final class qj extends gf {
           if (!param1) {
             this.field_k = 29;
           }
-          while (this.field_w.field_k > var6_intLifetime1) {
-            var17 = this.field_w.field_l[var6_intLifetime1];
+          while (this.match.playerCount > var6_intLifetime1) {
+            var17 = this.match.playerBoards[var6_intLifetime1];
             var8_intLifetime1 = 0;
-            var9_ref_ge = (ge) (var17.field_pb.d(-48));
+            var9_ref_ge = (ge) (var17.field_pb.first(-48));
             while (var9_ref_ge != null) {
-              var8_intLifetime1 = var8_intLifetime1 | 1 << var9_ref_ge.field_i;
-              var9_ref_ge = (ge) (var17.field_pb.a((byte) 116));
+              var8_intLifetime1 = var8_intLifetime1 | 1 << var9_ref_ge.typeId;
+              var9_ref_ge = (ge) (var17.field_pb.next((byte) 116));
             }
             var15 = 0;
             var9Lifetime1 = var15;
@@ -1363,10 +1363,10 @@ final class qj extends gf {
             }
             var6_intLifetime1++;
           }
-          if (this.field_w.field_k > 1) {
-            for (var6_intLifetime2 = 0; var6_intLifetime2 < this.field_w.field_k; var6_intLifetime2++) {
-              var18 = this.field_w.field_l[var6_intLifetime2];
-              var8_intLifetime2 = var18.field_p + var18.field_ub << 8;
+          if (this.match.playerCount > 1) {
+            for (var6_intLifetime2 = 0; var6_intLifetime2 < this.match.playerCount; var6_intLifetime2++) {
+              var18 = this.match.playerBoards[var6_intLifetime2];
+              var8_intLifetime2 = var18.field_p + var18.boardOffset << 8;
               var18.field_J = var18.field_J + (var8_intLifetime2 - var18.field_G) / 100;
               var18.field_J = 7 * var18.field_J / 8;
               if (var18.field_J > 1280) {
@@ -1378,10 +1378,10 @@ final class qj extends gf {
               }
             }
           }
-          if (this.field_w.field_k > 1) {
-            var6_intLifetime3 = this.field_w.a(125);
-            for (var7 = 0; this.field_w.field_k > var7; var7++) {
-              var8 = this.field_w.field_l[var7];
+          if (this.match.playerCount > 1) {
+            var6_intLifetime3 = this.match.a(125);
+            for (var7 = 0; this.match.playerCount > var7; var7++) {
+              var8 = this.match.playerBoards[var7];
               if ((1 << var7 & var6_intLifetime3) != 0) {
                 if (var8.field_M == -1) {
                   var8.field_M = 500;
@@ -1392,8 +1392,8 @@ final class qj extends gf {
             }
           }
           if (!this.field_p) {
-            if (this.field_w.field_k == 1) {
-              var6 = this.field_w.field_l[0];
+            if (this.match.playerCount == 1) {
+              var6 = this.match.playerBoards[0];
               if (var6.field_Z == 8 ||
                 var6.field_Z == 9) {
                 this.a((byte) 40, false);
@@ -1402,23 +1402,23 @@ final class qj extends gf {
                 }
               }
             } else {
-              if (!this.field_w.field_c) {
-                this.field_w.field_a = this.field_w.field_a | this.field_w.c(-17566);
-                this.field_w.field_g = this.field_w.field_g | this.field_w.a((byte) -92);
-                if (this.field_w.b(82)) {
-                  if (-1 == this.field_w.field_h) {
-                    this.field_w.field_h = 0;
+              if (!this.match.field_c) {
+                this.match.playerMaskThree = this.match.playerMaskThree | this.match.getStateSevenPlayerMask(-17566);
+                this.match.playerMaskTwo = this.match.playerMaskTwo | this.match.getStateZeroPlayerMask((byte) -92);
+                if (this.match.b(82)) {
+                  if (-1 == this.match.field_h) {
+                    this.match.field_h = 0;
                   }
-                  var6_intLifetime4 = this.field_w.field_h;
-                  var7Lifetime1 = 1 - this.field_w.field_h;
-                  if ((this.field_w.field_a & 1 << var7Lifetime1) != 0) {
+                  var6_intLifetime4 = this.match.field_h;
+                  var7Lifetime1 = 1 - this.match.field_h;
+                  if ((this.match.playerMaskThree & 1 << var7Lifetime1) != 0) {
                     var6_intLifetime4 = var7Lifetime1;
                   }
-                  this.field_w.field_l[var6_intLifetime4].field_zb = 1;
-                  this.field_w.field_m[0] = var6_intLifetime4;
-                  this.field_w.field_l[-var6_intLifetime4 + 1].field_zb = 2;
-                  this.field_w.field_m[1] = 1 - var6_intLifetime4;
-                  this.field_w.a(false);
+                  this.match.playerBoards[var6_intLifetime4].field_zb = 1;
+                  this.match.field_m[0] = var6_intLifetime4;
+                  this.match.playerBoards[-var6_intLifetime4 + 1].field_zb = 2;
+                  this.match.field_m[1] = 1 - var6_intLifetime4;
+                  this.match.a(false);
                   op.field_a = true;
                 }
               }
@@ -1463,7 +1463,7 @@ final class qj extends gf {
           }
           fp.field_z = fp.field_z - (param1 + this.field_t);
           var5 = new pn(param0.field_h, -1 + param3, fp.field_z, ep.field_i, od.field_c, og.field_Wb);
-          kq.field_j.a(var5, (byte) 3);
+          kq.field_j.addLast(var5, (byte) 3);
           fp.field_z = fp.field_z - (param0.field_b + param3);
           ep.field_i = ep.field_i + (param1 + this.field_t);
           if (hh.field_b[param0.field_h] < param3) {
@@ -1496,13 +1496,13 @@ final class qj extends gf {
           var6 = new ge(0, 0, var4);
           int var7 = 102 / ((-65 - param1) / 34);
           var6.field_y = var5;
-          this.field_w.field_l[var3_int].field_kb.a(var6, (byte) -39);
+          this.match.playerBoards[var3_int].field_kb.a(var6, (byte) -39);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "qj.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(byte param0, j param1) {
+    private final void a(byte param0, PlayerBoard param1) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -1522,7 +1522,7 @@ final class qj extends gf {
           if (param0 <= 50) {
             this.b(60);
           }
-          if (this.field_w.field_k == 1 ||
+          if (this.match.playerCount == 1 ||
             this.field_p) {
             if (pe.field_l[ah.field_w[1][0]]) {
               param1.field_db = param1.field_db | 1;
@@ -1559,7 +1559,7 @@ final class qj extends gf {
         int stackIn_59_1 = 0;
         int stackIn_59_2 = 0;
         boolean stackIn_61_3 = false;
-        j stackIn_64_4;
+        PlayerBoard stackIn_64_4;
         int stackIn_64_5;
         int stackIn_64_6;
         boolean stackIn_66_7 = false;
@@ -1568,7 +1568,7 @@ final class qj extends gf {
         int stackIn_72_1 = 0;
         int stackIn_72_2 = 0;
         boolean stackIn_74_3 = false;
-        j stackIn_77_4;
+        PlayerBoard stackIn_77_4;
         int stackIn_77_5;
         int stackIn_77_6;
         boolean stackIn_79_7;
@@ -1583,14 +1583,14 @@ final class qj extends gf {
         int[] var5;
         int var6;
         int var7;
-        j var7_ref_j;
+        PlayerBoard var7_ref_j;
         int var8_int;
         jp var8;
         int var9;
         int var10;
         int var11;
         tp[] var12;
-        vo var13;
+        Paddle var13;
         int[] var14;
         int[] var15;
         int[] var16;
@@ -1613,20 +1613,20 @@ final class qj extends gf {
         int var10Lifetime1Lifetime1;
         var11 = BrickABrac.field_J ? 1 : 0;
         var4 = -76 / ((-79 - param0) / 35);
-        var14 = kh.field_c[this.field_w.field_k - 1];
+        var14 = kh.field_c[this.match.playerCount - 1];
         var2 = var14;
-        var15 = kh.field_e[this.field_w.field_k - 1];
+        var15 = kh.field_e[this.match.playerCount - 1];
         var3 = var15;
-        var5 = kh.field_h[-1 + this.field_w.field_k];
+        var5 = kh.field_h[-1 + this.match.playerCount];
         var6 = this.field_m;
         if (null != oa.field_Sb) {
-          for (var7 = 0; var7 < this.field_w.field_k; var7++) {
-            var13 = this.field_w.field_l[var6].field_yb;
-            if (1 == this.field_w.field_k) {
-              var9 = (-((var13.field_j + var13.field_u / 2 << 8) * 2) + 33423360) / 510;
+          for (var7 = 0; var7 < this.match.playerCount; var7++) {
+            var13 = this.match.playerBoards[var6].paddle;
+            if (1 == this.match.playerCount) {
+              var9 = (-((var13.x256 + var13.width256 / 2 << 8) * 2) + 33423360) / 510;
               oa.field_Sb.a(true, var9, 0, 0, 0);
               if (oa.field_Sb.field_m == 7 ||
-                this.field_w.field_l[var6].field_Z == 5) {
+                this.match.playerBoards[var6].field_Z == 5) {
                 gh.a(121, true);
               }
               if (km.field_i <= 0) {
@@ -1641,40 +1641,40 @@ final class qj extends gf {
             if (var5[var7] != 1) {
               var14 = var2;
               var15 = var3;
-              vi.a((byte) 124, 153 + var14[var7], var14[var7], var15[var7], 233 + var15[var7]);
+              MovingBody.a((byte) 124, 153 + var14[var7], var14[var7], var15[var7], 233 + var15[var7]);
               oa.field_Sb.a((byte) -102, var6, var14[var7], var15[var7]);
               sc.b(-79);
             } else {
-              vi.a((byte) 76, 306 + var14[var7], var14[var7], var15[var7], var15[var7] + 480);
-              var9Lifetime3 = (-(2 * (var13.field_j + var13.field_u / 2 << 8)) + 20054016) / 306;
+              MovingBody.a((byte) 76, 306 + var14[var7], var14[var7], var15[var7], var15[var7] + 480);
+              var9Lifetime3 = (-(2 * (var13.x256 + var13.width256 / 2 << 8)) + 20054016) / 306;
               oa.field_Sb.a(var15[var7], (byte) -107, var14[var7], var6, var9Lifetime3 / 2);
               sc.b(-122);
             }
             var6++;
-            var6 = var6 % this.field_w.field_k;
+            var6 = var6 % this.match.playerCount;
           }
         }
         if (oa.field_Sb != null) {
           var14 = var2;
           var15 = var3;
-          if (this.field_w.field_k > 2) {
-            for (var7Lifetime1 = this.field_w.field_k; var7Lifetime1 < 5; var7Lifetime1++) {
+          if (this.match.playerCount > 2) {
+            for (var7Lifetime1 = this.match.playerCount; var7Lifetime1 < 5; var7Lifetime1++) {
               oa.field_Sb.a((byte) -79, -1, var14[var7Lifetime1], var15[var7Lifetime1]);
               lb.d(var14[var7Lifetime1], var15[var7Lifetime1], 153, 233, 0, 160);
             }
           }
         }
         var6Lifetime1 = this.field_m;
-        for (var7Lifetime2 = 0; var7Lifetime2 < this.field_w.field_k; var7Lifetime2++) {
+        for (var7Lifetime2 = 0; var7Lifetime2 < this.match.playerCount; var7Lifetime2++) {
           if (~tn.field_C != ~var5[var7Lifetime2]) {
             gr.b(var5[var7Lifetime2], -28463);
           }
-          pi.a((byte) 90, var6Lifetime1, var5[var7Lifetime2], var15[var7Lifetime2], this.field_w, var14[var7Lifetime2]);
+          pi.a((byte) 90, var6Lifetime1, var5[var7Lifetime2], var15[var7Lifetime2], this.match, var14[var7Lifetime2]);
           var6Lifetime1++;
-          var6Lifetime1 = var6Lifetime1 % this.field_w.field_k;
+          var6Lifetime1 = var6Lifetime1 % this.match.playerCount;
         }
-        if (this.field_w.field_k != 1) {
-          if (2 != this.field_w.field_k) {
+        if (this.match.playerCount != 1) {
+          if (2 != this.match.playerCount) {
             var22 = kh.field_e[4];
             var17 = var22;
             var3 = var17;
@@ -1689,7 +1689,7 @@ final class qj extends gf {
             stackIn_86_1 = -103;
             stackIn_86_2 = var21[0];
             stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.field_o);
-            om.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.field_w.field_l[this.field_m], var22[0], this.field_m, var7Lifetime3 != 0, this.field_w);
+            om.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.field_m], var22[0], this.field_m, var7Lifetime3 != 0, this.match);
             nh.a(169, 9, -40, -1, cd.field_h, 0 + (var22[2] - 3));
             nh.a(169, 9, -40, 472, cd.field_h, -3 + var22[2] - 0);
           } else {
@@ -1713,11 +1713,11 @@ final class qj extends gf {
             stackIn_59_1 = -103;
             stackIn_59_2 = var14[0];
             stackIn_61_3 = (var8_int != 0) || (var10Lifetime1 != 0);
-            stackIn_64_4 = this.field_w.field_l[var9Lifetime1];
+            stackIn_64_4 = this.match.playerBoards[var9Lifetime1];
             stackIn_64_5 = var15[0];
             stackIn_64_6 = var9Lifetime1;
             stackIn_66_7 = (var7Lifetime3 != 0) || (var10Lifetime1 != 0);
-            om.$cfr$intArgs$a$687785aae666(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_61_3, stackIn_64_4, stackIn_64_5, stackIn_64_6, stackIn_66_7, this.field_w);
+            om.$cfr$intArgs$a$687785aae666(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_61_3, stackIn_64_4, stackIn_64_5, stackIn_64_6, stackIn_66_7, this.match);
             var9Lifetime1 = 1 - var9Lifetime1;
             stackIn_69_0 = (0 == (1 << var9Lifetime1 & this.field_o)) ? 0 : 1;
             var10Lifetime1Lifetime1 = stackIn_69_0;
@@ -1725,26 +1725,26 @@ final class qj extends gf {
             stackIn_72_1 = -103;
             stackIn_72_2 = var14[1];
             stackIn_74_3 = (var8_int != 0) || (var10Lifetime1Lifetime1 != 0);
-            stackIn_77_4 = this.field_w.field_l[var9Lifetime1];
+            stackIn_77_4 = this.match.playerBoards[var9Lifetime1];
             stackIn_77_5 = var15[1];
             stackIn_77_6 = var9Lifetime1;
             stackIn_79_7 = (var7Lifetime3 != 0) || (var10Lifetime1Lifetime1 != 0);
-            om.$cfr$intArgs$a$687785aae666(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_74_3, stackIn_77_4, stackIn_77_5, stackIn_77_6, stackIn_79_7, this.field_w);
+            om.$cfr$intArgs$a$687785aae666(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_74_3, stackIn_77_4, stackIn_77_5, stackIn_77_6, stackIn_79_7, this.match);
           }
         } else {
-          var7_ref_j = this.field_w.field_l[0];
+          var7_ref_j = this.match.playerBoards[0];
           nh.a(526, 482, -40, -1, cd.field_h, -1);
           lb.d(7, 473, 510, 7, 0, 96);
           lb.d(524, 0, 116, 480, 0, 96);
           nh.a(125, 482, -40, 516, cd.field_h, -1);
-          tk.a(130, this.field_w, nn.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
+          tk.a(130, this.match, nn.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
           nh.a(125, 9, -40, 516, cd.field_h, 137);
           if (!r.field_A ||
             wc.field_b) {
-            ua.a(var7_ref_j, 524, 85, -68, 147, 81, this.field_w);
+            ua.a(var7_ref_j, 524, 85, -68, 147, 81, this.match);
           }
           nh.a(125, 9, -40, 516, cd.field_h, 229);
-          a.a(640, this.field_w, var7_ref_j);
+          a.a(640, this.match, var7_ref_j);
           if (r.field_A &&
             ka.a((byte) 124)) {
             ui.a(tb.field_eb + ro.field_v, ob.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);
@@ -1755,32 +1755,32 @@ final class qj extends gf {
             }
           }
         }
-        if (this.field_w.field_k > 1 &&
-          ((this.field_w.field_g | this.field_w.field_i) & 1 << this.field_m) == 0) {
-          v.a(var2[0], 424, false, this.field_w, this.field_m, var3[0]);
+        if (this.match.playerCount > 1 &&
+          ((this.match.playerMaskTwo | this.match.playerMaskOne) & 1 << this.field_m) == 0) {
+          v.a(var2[0], 424, false, this.match, this.field_m, var3[0]);
         }
-        if (this.field_w.field_k == 2 &&
-          0 == (1 << 1 - this.field_m & (this.field_w.field_g | this.field_w.field_i))) {
-          v.a(var2[1], 424, false, this.field_w, 1 - this.field_m, var3[1]);
+        if (this.match.playerCount == 2 &&
+          0 == (1 << 1 - this.field_m & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
+          v.a(var2[1], 424, false, this.match, 1 - this.field_m, var3[1]);
         }
-        var19 = kh.field_e[this.field_w.field_k - 1];
+        var19 = kh.field_e[this.match.playerCount - 1];
         var6Lifetime2 = this.field_m;
-        var18 = kh.field_c[this.field_w.field_k - 1];
-        for (var7Lifetime4 = 0; this.field_w.field_k > var7Lifetime4; var7Lifetime4++) {
+        var18 = kh.field_c[this.match.playerCount - 1];
+        for (var7Lifetime4 = 0; this.match.playerCount > var7Lifetime4; var7Lifetime4++) {
           if (var5[var7Lifetime4] == 2) {
-            var20 = ul.field_k[this.field_w.field_l[var6Lifetime2].field_H];
+            var20 = ul.field_k[this.match.playerBoards[var6Lifetime2].field_H];
             var8 = var20;
             var9Lifetime2 = ob.field_D.field_F + ob.field_D.field_P;
             lb.d(var18[var7Lifetime4], 235 + var19[var7Lifetime4] - 23, 153, var9Lifetime2, 0, 141);
             var8.c(-var20.field_x + (153 + var18[var7Lifetime4]), 0 + (-var20.field_z + var19[var7Lifetime4]) + 233);
-            ce.field_e.c(this.field_w.field_f[var6Lifetime2], var18[var7Lifetime4] + 4, 2 + var19[var7Lifetime4] + 223, 2, -1);
+            ce.field_e.c(this.match.playerNames[var6Lifetime2], var18[var7Lifetime4] + 4, 2 + var19[var7Lifetime4] + 223, 2, -1);
           }
           var6Lifetime2++;
-          var6Lifetime2 = var6Lifetime2 % this.field_w.field_k;
+          var6Lifetime2 = var6Lifetime2 % this.match.playerCount;
         }
     }
 
-    qj(String[] param0, int param1, int param2, oi param3, int[] param4, int[] param5) {
+    GameplayScreen(String[] param0, int param1, int param2, oi param3, int[] param4, int[] param5) {
         this(false, false, param0, param1, param2, param3, param4, param5);
     }
 
@@ -1792,7 +1792,7 @@ final class qj extends gf {
         int var2 = 68 % ((param0 + 65) / 59);
     }
 
-    qj(boolean param0, boolean param1, String[] param2, int param3, int param4, oi param5, int[] param6, int[] param7) {
+    GameplayScreen(boolean param0, boolean param1, String[] param2, int param3, int param4, oi param5, int[] param6, int[] param7) {
         super(-1);
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -1834,9 +1834,9 @@ final class qj extends gf {
           for (var10 = 0; 8 > var10; var10++) {
             var14[var10] = 0;
           }
-          this.field_w = new ak(param2, this.field_o, param5, param6, param7);
+          this.match = new MultiplayerMatch(param2, this.field_o, param5, param6, param7);
           var9_int = 0;
-          for (var10Lifetime1 = 0; this.field_w.field_k > var10Lifetime1; var10Lifetime1++) {
+          for (var10Lifetime1 = 0; this.match.playerCount > var10Lifetime1; var10Lifetime1++) {
             if ((this.field_o & 1 << var10Lifetime1) != 0) {
               var9_int++;
             }

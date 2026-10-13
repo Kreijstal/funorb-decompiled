@@ -83,7 +83,7 @@ final class g extends k {
 
     final static void a(pn param0, int param1, byte param2) {
         try {
-          qa.field_t.a(param0, (byte) 3);
+          qa.field_t.addLast(param0, (byte) 3);
           kp.a(param1, (byte) -99, param0);
           int var3_int = -88 % ((param2 + 37) / 48);
         } catch (RuntimeException runtimeException) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tk extends nm {
+class tk extends IntrusiveNode {
     static String field_o;
     static mh field_t;
     static int field_q;
@@ -28,7 +28,7 @@ class tk extends nm {
         this.field_s = null;
     }
 
-    final static void a(int param0, ak param1, bi param2, j param3, byte param4, int param5, int param6, int param7) {
+    final static void a(int param0, MultiplayerMatch param1, bi param2, PlayerBoard param3, byte param4, int param5, int param6, int param7) {
         int var13 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;

@@ -63,7 +63,7 @@ final class fo {
           return;
         }
         try {
-          vl.a(param0, -27300, true);
+          NodeDeque.a(param0, -27300, true);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "fo.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -145,7 +145,7 @@ class um implements ub, qe {
                 var19.field_k[var6] = -5;
               }
             }
-            mf.field_i.a(var19, (byte) 3);
+            mf.field_i.addLast(var19, (byte) 3);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -279,7 +279,7 @@ class um implements ub, qe {
               stackIn_5_3 = var13.field_c[1 + var7].field_d;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            vi.a((byte) 125, param0.field_t + param1 + param0.field_o, param0.field_o + param1, param3 + param0.field_w, param0.field_s + param3 + param0.field_w);
+            MovingBody.a((byte) 125, param0.field_t + param1 + param0.field_o, param0.field_o + param1, param3 + param0.field_w, param0.field_s + param3 + param0.field_w);
             bj.field_T.a(this.field_s, var10, var11, 91, var12, var10);
             sc.b(-94);
           }
@@ -634,7 +634,7 @@ class um implements ub, qe {
             }
             var10 = var18.a(var8, true);
             var11 = var18.a(var9, true);
-            vi.a((byte) 127, param5.field_o + param2 + param5.field_t, param2 + param5.field_o, param5.field_w + param1, param5.field_s + (param5.field_w + param1));
+            MovingBody.a((byte) 127, param5.field_o + param2 + param5.field_t, param2 + param5.field_o, param5.field_w + param1, param5.field_s + (param5.field_w + param1));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_c[var12];
               if (var10 != var12) {
@@ -792,7 +792,7 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        vl var8 = null;
+        NodeDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         int var12 = 0;
@@ -873,7 +873,7 @@ class um implements ub, qe {
           var9 = ue.a(false);
           var12 = -30 / ((param6 + 26) / 55);
           var11 = null;
-          var13 = (om) (var8.d(-64));
+          var13 = (om) (var8.first(-64));
           while (var13 != null) {
             var14 = 0;
             if (null == var13.field_bb) {
@@ -1130,7 +1130,7 @@ class um implements ub, qe {
                 var35_int = var35_int + (var52_ref.field_x + kn.field_z);
               }
               if ((1 << u.field_a & var15Lifetime1) != 0) {
-                var53_ref = vn.field_K[var13.field_wc - 1];
+                var53_ref = Ball.field_K[var13.field_wc - 1];
                 var13.field_Bc.field_wb = var53_ref;
                 var13.field_Bc.a(var13.field_ec.field_cb, 0, var35_int, var53_ref.field_x, (byte) 64);
                 var35_int = var35_int + (var53_ref.field_x + kn.field_z);
@@ -1214,7 +1214,7 @@ class um implements ub, qe {
                 var32 = var32 + np.field_a;
               }
             }
-            var34 = vl.a(var13.field_Zb, var33, -15);
+            var34 = NodeDeque.a(var13.field_Zb, var33, -15);
             var35 = var34;
             var35Lifetime1 = var34;
             if (var34 != null) {
@@ -1288,7 +1288,7 @@ class um implements ub, qe {
             boolean decompiledFrameRemainder0 = true;
             if (var13.field_L != 0) {
               if (var13.h(109)) {
-                var13 = (om) (var8.a((byte) 116));
+                var13 = (om) (var8.next((byte) 116));
                 continue;
               }
               if (var13.field_nc.field_L == 0) {
@@ -1305,7 +1305,7 @@ class um implements ub, qe {
                 }
               }
             }
-            var13 = (om) (var8.a((byte) 116));
+            var13 = (om) (var8.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1358,7 +1358,7 @@ class um implements ub, qe {
         int var12Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          vi.a((byte) 81, param7.field_t + param7.field_o + param6, param6 + param7.field_o, param7.field_w + param3, param3 + param7.field_w + param7.field_s);
+          MovingBody.a((byte) 81, param7.field_t + param7.field_o + param6, param6 + param7.field_o, param7.field_w + param3, param3 + param7.field_w + param7.field_s);
           if (param5 >= -45) {
             return;
           }

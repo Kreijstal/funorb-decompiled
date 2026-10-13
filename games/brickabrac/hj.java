@@ -160,7 +160,7 @@ final class hj extends mh {
     }
 
     final static void b(int param0, int param1) {
-        nm var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ln var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -170,15 +170,15 @@ final class hj extends mh {
           if (param1 != 0) {
             return;
           }
-          var4 = (ln) (ie.field_v.d(-28));
+          var4 = (ln) (ie.field_v.first(-28));
           while (var4 != null) {
             gn.a(param0, 125, var4);
-            var4 = (ln) (ie.field_v.a((byte) 116));
+            var4 = (ln) (ie.field_v.next((byte) 116));
           }
-          var2 = uc.field_q.d(-54);
+          var2 = uc.field_q.first(-54);
           while (var2 != null) {
             bd.a(param0, 92);
-            var2 = uc.field_q.a((byte) 116);
+            var2 = uc.field_q.next((byte) 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

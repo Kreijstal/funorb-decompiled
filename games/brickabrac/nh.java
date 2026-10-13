@@ -315,7 +315,7 @@ final class nh {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        vl var17 = null;
+        NodeDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         id var18_ref = null;
@@ -354,15 +354,15 @@ final class nh {
             if (!hn.b((byte) 7)) {
               var9_ref_String = o.field_e.field_Fc;
               ba.field_v.field_Mb = rd.a(fm.field_a, new String[]{var9_ref_String}, (byte) 103).toUpperCase();
-              ke.field_e.a(40, ak.field_d.field_cb - 40, 0, ak.field_d.field_Ib, (byte) 64);
-              ke.field_e.field_Mb = rd.a(nm.field_a, new String[]{var9_ref_String}, (byte) 103);
+              ke.field_e.a(40, MultiplayerMatch.field_d.field_cb - 40, 0, MultiplayerMatch.field_d.field_Ib, (byte) 64);
+              ke.field_e.field_Mb = rd.a(IntrusiveNode.field_a, new String[]{var9_ref_String}, (byte) 103);
               var8 = ke.field_e;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
               ba.field_v.field_Mb = ba.field_x.toUpperCase();
-              var9 = (ak.field_d.field_Ib + 2) / 2;
-              pf.field_h.a(40, ak.field_d.field_cb - 40, 0, -2 + var9, (byte) 64);
+              var9 = (MultiplayerMatch.field_d.field_Ib + 2) / 2;
+              pf.field_h.a(40, MultiplayerMatch.field_d.field_cb - 40, 0, -2 + var9, (byte) 64);
               if (o.field_e.field_jc <= o.field_e.field_cc) {
                 pf.field_h.field_Mb = wg.field_d.toUpperCase();
                 pf.field_h.field_eb = false;
@@ -390,7 +390,7 @@ final class nh {
                   pf.field_h.field_Jb = fm.field_b.field_Gb;
                 }
               }
-              dn.field_K.a(40, ak.field_d.field_cb - 40, var9, ak.field_d.field_Ib - var9, (byte) 64);
+              dn.field_K.a(40, MultiplayerMatch.field_d.field_cb - 40, var9, MultiplayerMatch.field_d.field_Ib - var9, (byte) 64);
               dn.field_K.field_Mb = sn.field_r.toUpperCase();
               var8 = dn.field_K;
               stackIn_23_0 = dn.field_K;
@@ -411,12 +411,12 @@ final class nh {
                   h.field_D[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_73_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_73_0;
                     while (true) {
@@ -429,7 +429,7 @@ final class nh {
                         var13_ref_int__ = var21;
                         stackIn_67_0 = 0;
                         var14 = stackIn_67_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var26.length > var14) {
                             var15 = var26[var14];
                             var16 = var21[var14 + 1];
@@ -437,7 +437,7 @@ final class nh {
                             stackIn_58_1 = -1;
                             if (stackIn_58_0 != stackIn_58_1) {
                               if (~(o.field_e.field_Tb[var15] & 255) != ~var16) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (var10 != 0) {
@@ -448,7 +448,7 @@ final class nh {
                               var17_int = stackIn_51_0;
                               if (var17_int != var16 &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -548,7 +548,7 @@ final class nh {
                   ep.field_e = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
-              if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (null != vl.field_a ||
+              if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (null != NodeDeque.field_a ||
                 bl.field_F != null ||
                 ld.field_v != null ||
                 null != me.field_e)) {
@@ -562,9 +562,9 @@ final class nh {
                 while (!(decompiledNaturalLoopExit0 = (!(cq.field_p > var16)))) {
                   var17_int = 255 & o.field_e.field_Tb[var16];
                   if (var19 == 0) {
-                    if (vl.field_a != null &&
-                      vl.field_a[var16] != null &&
-                      vl.field_a[var16][var17_int]) {
+                    if (NodeDeque.field_a != null &&
+                      NodeDeque.field_a[var16] != null &&
+                      NodeDeque.field_a[var16][var17_int]) {
                       var11 = 1;
                     }
                     if (bl.field_F != null &&
@@ -602,15 +602,15 @@ final class nh {
                   var16 = 0;
                 }
                 var17 = vp.field_u.field_Rb.field_bb;
-                var18_ref = (id) (var17.d(-97));
-                L55: while (true) {
+                var18_ref = (id) (var17.first(-97));
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
                     stackOut_132_0 = var18_ref.i(0);
                     stackIn_153_0 = stackOut_132_0 ? 1 : 0;
                     stackIn_133_0 = stackOut_132_0;
                     if (var19 != 0) {
-                      break L55;
+                      break scanLoop3;
                     }
                     if (!stackIn_133_0 ||
                       var19 != 0) {
@@ -645,7 +645,7 @@ final class nh {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (id) (var17.a((byte) 116));
+                      var18_ref = (id) (var17.next((byte) 116));
                       continue;
                     }
                   }
@@ -684,7 +684,7 @@ final class nh {
           stackIn_174_0 = qa.field_w;
           stackIn_175_1 = (param2) && (!param1) && (!hc.field_c);
           ((mh) (Object) stackIn_174_0).a(stackIn_175_1, -15211);
-          stackIn_179_0 = ak.field_d;
+          stackIn_179_0 = MultiplayerMatch.field_d;
           stackIn_180_1 = (param2) && (!param1) && (!hc.field_c);
           ((mh) (Object) stackIn_179_0).a(stackIn_180_1, -15211);
           stackIn_184_0 = wi.field_j;
@@ -734,7 +734,7 @@ final class nh {
         int stackIn_29_1Lifetime1;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = (id) (ua.field_c.d(-50));
+          var1 = (id) (ua.field_c.first(-50));
           while (var1 != null) {
             stackIn_29_0 = -1;
             stackIn_29_1 = ~var1.field_ic;
@@ -743,11 +743,11 @@ final class nh {
                 if (stackIn_29_0 == stackIn_29_1) {
                   var1.field_kc = 0;
                   if (var1.i(param0 + 0)) {
-                    var1.b((byte) 111);
+                    var1.unlink((byte) 111);
                   }
                 }
                 while (true) {
-                  var1 = (id) (mp.field_Tb.a((byte) 116));
+                  var1 = (id) (mp.field_Tb.next((byte) 116));
                   return;
                 }
               }
@@ -757,17 +757,17 @@ final class nh {
               if (var1.field_ic == 0) {
                 var1.field_kc = 0;
                 if (var1.i(0)) {
-                  var1.b((byte) 111);
+                  var1.unlink((byte) 111);
                 }
               }
             }
-            var1 = (id) (ua.field_c.a((byte) 116));
+            var1 = (id) (ua.field_c.next((byte) 116));
             if (var2 == 0) {
               continue;
             }
             break;
           }
-          var1_ref = (om) (rq.field_a.d(-14));
+          var1_ref = (om) (rq.field_a.first(-14));
           if (param0 != 0) {
             field_b = -23;
           }
@@ -782,17 +782,17 @@ final class nh {
                 if (var1_ref.field_Wb == 0) {
                   var1_ref.field_Zb = 0;
                   if (var1_ref.h(param0 ^ -15)) {
-                    var1_ref.b((byte) 111);
+                    var1_ref.unlink((byte) 111);
                   }
                 }
               }
-              var1_ref = (om) (rq.field_a.a((byte) 116));
+              var1_ref = (om) (rq.field_a.next((byte) 116));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_23_0 = mp.field_Tb.d(-21);
+            stackIn_23_0 = mp.field_Tb.first(-21);
           }
           var1Lifetime1 = (id) (stackIn_23_0);
           while (true) {
@@ -809,11 +809,11 @@ final class nh {
               if (stackIn_29_0Lifetime1 == stackIn_29_1Lifetime1) {
                 var1Lifetime1.field_kc = 0;
                 if (var1Lifetime1.i(param0 + 0)) {
-                  var1Lifetime1.b((byte) 111);
+                  var1Lifetime1.unlink((byte) 111);
                 }
               }
             }
-            var1Lifetime1 = (id) (mp.field_Tb.a((byte) 116));
+            var1Lifetime1 = (id) (mp.field_Tb.next((byte) 116));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends vi {
+final class cl extends MovingBody {
     static long field_q;
     static jp[] field_r;
     private int field_u;
-    vl field_p;
+    NodeDeque field_p;
     static String field_s;
     int field_t;
 
@@ -19,7 +19,7 @@ final class cl extends vi {
         field_s = null;
     }
 
-    final int a(int param0, StringBuilder param1) {
+    final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ee var4 = null;
@@ -34,13 +34,13 @@ final class cl extends vi {
           var3_int = -1437511254;
           var3_int = var3_int + (73 + this.field_u * 71 << 3);
           var3_int = var3_int ^ this.field_t * 21 + 29298 << 9;
-          if (param0 < 79) {
+          if (obfuscationGuard < 79) {
             this.field_u = 98;
           }
-          var4 = (ee) (this.field_p.d(-103));
+          var4 = (ee) (this.field_p.first(-103));
           while (var4 != null) {
-            var3_int = var3_int ^ var4.a(92, param1);
-            var4 = (ee) (this.field_p.a((byte) 116));
+            var3_int = var3_int ^ var4.computeSyncChecksum(92, diagnostics);
+            var4 = (ee) (this.field_p.next((byte) 116));
           }
           stackIn_7_0 = var3_int;
           return stackIn_7_0;
@@ -48,8 +48,8 @@ final class cl extends vi {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("cl.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("cl.A(").append(obfuscationGuard).append(',');
+          if (diagnostics == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -60,10 +60,10 @@ final class cl extends vi {
 
     cl() {
         super(0, 0, 0, 0, 0);
-        this.field_p = new vl();
+        this.field_p = new NodeDeque();
     }
 
-    final void a(int param0, wq param1) {
+    final void readBodySnapshot(int obfuscationGuard, wq packet) {
         int var3_int = 0;
         ee var4 = null;
         int var5 = 0;
@@ -75,18 +75,18 @@ final class cl extends vi {
         RuntimeException var3 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_u = param1.l(255);
-          this.field_p.c((byte) -72);
+          this.field_u = packet.l(255);
+          this.field_p.clear((byte) -72);
           this.field_t = 0;
           var3_int = 0;
-          if (param0 < 89) {
+          if (obfuscationGuard < 89) {
             var6 = (wq) null;
-            this.a(-40, (wq) null);
+            this.readBodySnapshot(-40, (wq) null);
           }
           while (this.field_u > var3_int) {
             var4 = new ee();
-            var4.a(91, param1);
-            this.field_p.a(var4, (byte) 3);
+            var4.readBodySnapshot(91, packet);
+            this.field_p.addLast(var4, (byte) 3);
             this.field_t = this.field_t + var4.field_t;
             var3_int++;
           }
@@ -95,8 +95,8 @@ final class cl extends vi {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("cl.L(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("cl.L(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

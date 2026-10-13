@@ -142,7 +142,7 @@ abstract class fe extends bj {
 
     private final void a(byte param0, oc param1) {
         if (null != this.field_mb) {
-          this.field_mb.b((byte) 111);
+          this.field_mb.unlink((byte) 111);
         }
         if (param1 == null) {
           this.field_mb = new sk();

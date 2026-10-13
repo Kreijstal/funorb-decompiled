@@ -12,7 +12,7 @@ final class ie extends qd {
     private int field_E;
     private ka[][] field_r;
     private int[] field_W;
-    static vl field_v;
+    static NodeDeque field_v;
     private int[] field_S;
     private int[] field_Q;
     private hr field_K;
@@ -91,7 +91,7 @@ final class ie extends qd {
           if (0 <= param3.field_x && (null == param3.field_y ||
             param3.field_y.l())) {
             param3.a(param0 ^ -23346);
-            param3.b((byte) 111);
+            param3.unlink((byte) 111);
             if (param3.field_q > 0) {
               if (this.field_r[param3.field_u][param3.field_q] != param3) {
                 return true;
@@ -180,7 +180,7 @@ final class ie extends qd {
           }
           param3.a(-94);
           if (param3.field_x >= 0) {
-            param3.b((byte) 111);
+            param3.unlink((byte) 111);
             if (param3.field_q > 0 &&
               param3 == this.field_r[param3.field_u][param3.field_q]) {
               this.field_r[param3.field_u][param3.field_q] = null;
@@ -211,12 +211,12 @@ final class ie extends qd {
         ka var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
         if ((4 & this.field_n[param0]) != 0) {
-          var3 = (ka) (this.field_C.field_v.d(-117));
+          var3 = (ka) (this.field_C.field_v.first(-117));
           while (var3 != null) {
             if (var3.field_u == param0) {
               var3.field_j = 0;
             }
-            var3 = (ka) (this.field_C.field_v.a((byte) 116));
+            var3 = (ka) (this.field_C.field_v.next((byte) 116));
           }
         }
         if (param1 != 0) {
@@ -246,10 +246,10 @@ final class ie extends qd {
           if (param1 != -46) {
             return;
           }
-          var4 = (fa) (wp.field_f.d(-33));
+          var4 = (fa) (wp.field_f.first(-33));
           while (var4 != null) {
             hq.a(var4, param0, 49);
-            var4 = (fa) (wp.field_f.a((byte) 116));
+            var4 = (fa) (wp.field_f.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,18 +270,18 @@ final class ie extends qd {
         ka var3 = null;
         int var4 = BrickABrac.field_J ? 1 : 0;
         if ((this.field_n[param1] & 2) != 0) {
-          var3 = (ka) (this.field_C.field_v.d(-70));
+          var3 = (ka) (this.field_C.field_v.first(-70));
           while (var3 != null) {
             if (param1 == var3.field_u &&
               this.field_A[param1][var3.field_B] == null &&
               var3.field_x < 0) {
               var3.field_x = 0;
             }
-            var3 = (ka) (this.field_C.field_v.a((byte) 116));
+            var3 = (ka) (this.field_C.field_v.next((byte) 116));
           }
         }
         if (param0 != 0) {
-          field_v = (vl) null;
+          field_v = (NodeDeque) null;
         }
     }
 
@@ -458,7 +458,7 @@ final class ie extends qd {
         var9 = BrickABrac.field_J ? 1 : 0;
         this.a(115, param2, param0, 64);
         if ((this.field_n[param0] & 2) != 0) {
-          var5 = (ka) (this.field_C.field_v.f(0));
+          var5 = (ka) (this.field_C.field_v.last(0));
           while (var5 != null) {
             if (var5.field_u == param0 &&
               var5.field_x < 0) {
@@ -471,7 +471,7 @@ final class ie extends qd {
               var5.field_B = param2;
               return;
             }
-            var5 = (ka) (this.field_C.field_v.b(-111));
+            var5 = (ka) (this.field_C.field_v.previous(-111));
           }
         }
         var10 = (pq) (this.field_w.a(-81, (long)this.field_J[param0]));
@@ -528,7 +528,7 @@ final class ie extends qd {
           }
           this.field_r[param0][var7.field_q] = var7;
         }
-        this.field_C.field_v.a(var7, (byte) 3);
+        this.field_C.field_v.addLast(var7, (byte) 3);
         this.field_A[param0][param2] = var7;
         return;
     }
@@ -583,7 +583,7 @@ final class ie extends qd {
         if (param0 != -86) {
           return;
         }
-        var3 = (ka) (this.field_C.field_v.d(-28));
+        var3 = (ka) (this.field_C.field_v.first(-28));
         while (var3 != null) {
           if (param1 < 0 ||
             var3.field_u == param1) {
@@ -597,9 +597,9 @@ final class ie extends qd {
             if (var3.field_x < 0) {
               this.field_A[var3.field_u][var3.field_B] = null;
             }
-            var3.b((byte) 111);
+            var3.unlink((byte) 111);
           }
-          var3 = (ka) (this.field_C.field_v.a((byte) 116));
+          var3 = (ka) (this.field_C.field_v.next((byte) 116));
         }
     }
 
@@ -627,7 +627,7 @@ final class ie extends qd {
             return false;
           }
           if (param0.field_x >= 0) {
-            param0.b((byte) 111);
+            param0.unlink((byte) 111);
             if (param0.field_q > 0 &&
               param0 == this.field_r[param0.field_u][param0.field_q]) {
               this.field_r[param0.field_u][param0.field_q] = null;
@@ -747,7 +747,7 @@ final class ie extends qd {
           var8 = (se) (param1.field_i.b(-15519));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var9 = (int)var8.field_g;
+            var9 = (int)var8.key;
             var12 = (pq) (this.field_w.a(-70, (long)var9));
             if (var12 == null) {
               var13 = mi.a(param3, var9, 8);
@@ -831,14 +831,14 @@ final class ie extends qd {
         if (param1 != 0) {
           this.field_P = (int[]) null;
         }
-        ka var3 = (ka) (this.field_C.field_v.d(-36));
+        ka var3 = (ka) (this.field_C.field_v.first(-36));
         while (var3 != null) {
           if ((0 > param0 || param0 == var3.field_u) &&
             !(var3.field_x >= 0)) {
             this.field_A[var3.field_u][var3.field_B] = null;
             var3.field_x = 0;
           }
-          var3 = (ka) (this.field_C.field_v.a((byte) 116));
+          var3 = (ka) (this.field_C.field_v.next((byte) 116));
         }
     }
 
@@ -1276,14 +1276,14 @@ final class ie extends qd {
         if ((this.field_n[param2] & 2) == 0) {
           var9.field_x = 0;
         } else {
-          var7 = (ka) (this.field_C.field_v.d(-26));
+          var7 = (ka) (this.field_C.field_v.first(-26));
           while (var7 != null) {
             if (var9.field_u == var7.field_u && var7.field_x < 0 &&
               var7 != var9) {
               var9.field_x = 0;
               break;
             }
-            var7 = (ka) (this.field_C.field_v.a((byte) 116));
+            var7 = (ka) (this.field_C.field_v.next((byte) 116));
           }
         }
     }
@@ -1425,7 +1425,7 @@ final class ie extends qd {
 
     static {
         field_o = "Creating your account";
-        field_v = new vl();
+        field_v = new NodeDeque();
         field_u = "Tips";
         field_q = "Create your own free Jagex account";
     }

@@ -45,7 +45,7 @@ abstract class fc {
         if (ka.field_l == jm.field_f) {
           return ma.field_I.a(0);
         }
-        return gf.field_d;
+        return GameScreen.field_d;
     }
 
     final static bi a(int param0, byte[] param1, int param2, tp[] param3, int param4, int param5) {

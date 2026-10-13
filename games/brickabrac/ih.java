@@ -157,7 +157,7 @@ abstract class ih {
     }
 
     final static void a(boolean param0, String param1, String param2, int param3) {
-        gf.field_d = param1;
+        GameScreen.field_d = param1;
         dl.field_e = param2;
         if (param3 != 2) {
           return;

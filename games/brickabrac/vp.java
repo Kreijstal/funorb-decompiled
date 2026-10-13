@@ -7,11 +7,11 @@ final class vp extends km {
     static char[] field_r;
     private int field_t;
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int fieldTemp$0 = 0;
-        if (param2 >= -52) {
+        if (obfuscationGuard >= -52) {
           vp.a(true, (byte) -10, 12, -97, -36, false);
-          if (!param1) {
+          if (!inputEnabled) {
             return;
           }
           fieldTemp$0 = this.field_t - 1;
@@ -30,7 +30,7 @@ final class vp extends km {
           ng.a(true, 120, 0);
           return;
         }
-        if (!param1) {
+        if (!inputEnabled) {
           return;
         }
         int fieldTemp$1 = this.field_t - 1;
@@ -103,13 +103,13 @@ final class vp extends km {
         field_r = null;
     }
 
-    final void b(byte param0) {
-        if (param0 >= -14) {
+    final void drawScreen(byte obfuscationGuard) {
+        if (obfuscationGuard >= -14) {
           return;
         }
         lf.field_t.b(0, 0);
         pg.d(0);
-        vi.a((byte) -115);
+        MovingBody.a((byte) -115);
     }
 
     final static jp[] a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
@@ -153,15 +153,15 @@ final class vp extends km {
         return (jp[]) null;
     }
 
-    final boolean a(char param0, int param1, int param2) {
-        if (param1 >= 98) {
-          if (param2 >= 0) {
+    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
+        if (keyCode >= 98) {
+          if (obfuscationGuard >= 0) {
             ng.a(false, 99, 0);
           }
           return true;
         }
         this.field_t = -100;
-        if (param2 >= 0) {
+        if (obfuscationGuard >= 0) {
           ng.a(false, 99, 0);
           return true;
         }

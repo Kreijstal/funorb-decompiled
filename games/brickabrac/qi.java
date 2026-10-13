@@ -154,7 +154,7 @@ final class qi extends d {
           var14 = jl.field_e;
           var2 = var14.l(255);
           if (param0 == ~var2) {
-            var11 = vn.d(8);
+            var11 = Ball.d(8);
             var3 = var11;
             var10 = var11;
             var4 = var10;
@@ -163,23 +163,23 @@ final class qi extends d {
             for (var7 = 0; var6 > var7; var7++) {
               var10[var7] = ((wq) ((Object) var5)).e(pn.a(param0, -256));
             }
-            var13 = (al) (ej.field_F.d(param0 - 84));
+            var13 = (al) (ej.field_F.first(param0 - 84));
             if (var13 == null) {
               hn.a((byte) 102);
               return;
             }
             var13.field_i = true;
             var13.field_k = var3;
-            var13.b((byte) 111);
+            var13.unlink((byte) 111);
             return;
           }
           if (1 == var2) {
-            var12 = (e) (na.field_Q.d(param0 ^ 86));
+            var12 = (e) (na.field_Q.first(param0 ^ 86));
             if (var12 == null) {
               hn.a((byte) 103);
               return;
             }
-            var12.b((byte) 111);
+            var12.unlink((byte) 111);
             return;
           }
           if (var2 != 2) {
@@ -187,14 +187,14 @@ final class qi extends d {
             hn.a((byte) 52);
             return;
           }
-          var15 = (al) (ej.field_F.d(-42));
+          var15 = (al) (ej.field_F.first(-42));
           if (var15 == null) {
             hn.a((byte) 119);
             return;
           }
-          var15.field_k = vn.d(8);
+          var15.field_k = Ball.d(8);
           var15.field_i = true;
-          var15.b((byte) 111);
+          var15.unlink((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

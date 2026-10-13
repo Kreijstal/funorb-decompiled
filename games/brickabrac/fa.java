@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fa extends nm {
+final class fa extends IntrusiveNode {
     int field_k;
     int field_i;
     static String field_j;
@@ -11,13 +11,13 @@ final class fa extends nm {
         var4.field_w = param2;
         if (param1 <= -68) {
           var4.field_m = new int[param0];
-          ob.field_F.a(var4, (byte) 3);
+          ob.field_F.addLast(var4, (byte) 3);
           i.a(param3, var4, 108);
           return var4;
         }
         field_j = (String) null;
         var4.field_m = new int[param0];
-        ob.field_F.a(var4, (byte) 3);
+        ob.field_F.addLast(var4, (byte) 3);
         i.a(param3, var4, 108);
         return var4;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sp extends nm {
+final class sp extends IntrusiveNode {
     int field_j;
     static int field_l;
     int field_n;

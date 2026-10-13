@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vi extends nm {
-    int field_j;
-    int field_k;
-    int field_o;
-    int field_l;
-    int field_m;
-    int field_i;
+abstract class MovingBody extends IntrusiveNode {
+    int x256;
+    int velocityX256;
+    int velocityY256;
+    int stateWord;
+    int y256;
+    int typeId;
     static String field_n;
 
     final static void a(int param0, int[] param1, int param2, fo param3) {
@@ -58,15 +58,15 @@ abstract class vi extends nm {
         }
     }
 
-    vi(int param0, int param1, int param2, int param3, int param4) {
-        this.field_j = param0;
-        this.field_o = param3;
-        this.field_m = param1;
-        this.field_k = param2;
-        this.field_i = param4;
+    MovingBody(int x256, int y256, int velocityX256, int velocityY256, int typeId) {
+        this.x256 = x256;
+        this.velocityY256 = velocityY256;
+        this.y256 = y256;
+        this.velocityX256 = velocityX256;
+        this.typeId = typeId;
     }
 
-    void a(int param0, wq param1) {
+    void readBodySnapshot(int obfuscationGuard, wq packet) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -79,47 +79,47 @@ abstract class vi extends nm {
         int var7 = 0;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = param1.l(255);
+          var3_int = packet.l(255);
           if (0 != (128 & var3_int)) {
-            var4 = param1.l(255);
+            var4 = packet.l(255);
             var5 = (var3_int & 7) << 3;
             var5 = var5 | (224 & var4) >> 5;
             var6 = 31 & var4;
-            this.field_j = var6 * 34 << 8;
-            this.field_m = var5 * 16 << 8;
+            this.x256 = var6 * 34 << 8;
+            this.y256 = var5 * 16 << 8;
           } else {
             var4 = var3_int & 12;
             var5 = var3_int & 3;
-            this.field_j = var4 << 14 | param1.i(65280);
-            this.field_m = var5 << 16 | param1.i(65280);
+            this.x256 = var4 << 14 | packet.i(65280);
+            this.y256 = var5 << 16 | packet.i(65280);
           }
           if ((64 & var3_int) == 0) {
-            this.field_k = 0;
-            this.field_o = 0;
+            this.velocityX256 = 0;
+            this.velocityY256 = 0;
           } else {
-            this.field_k = param1.a(127);
-            this.field_o = param1.a(127);
+            this.velocityX256 = packet.a(127);
+            this.velocityY256 = packet.a(127);
           }
           if ((var3_int & 32) == 0) {
-            this.field_l = 0;
+            this.stateWord = 0;
           } else {
-            this.field_l = param1.l(255);
+            this.stateWord = packet.l(255);
           }
-          if (param0 < 89) {
+          if (obfuscationGuard < 89) {
             return;
           }
           if ((var3_int & 16) != 0) {
-            this.field_i = param1.l(255);
+            this.typeId = packet.l(255);
           } else {
-            this.field_i = 0;
+            this.typeId = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_18_0 = var3;
-          stackIn_18_1 = new StringBuilder().append("vi.L(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("vi.L(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -520,7 +520,7 @@ abstract class vi extends nm {
         }
     }
 
-    int a(int param0, StringBuilder param1) {
+    int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -528,17 +528,17 @@ abstract class vi extends nm {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 79) {
-            vi.a((byte) 80);
+          if (obfuscationGuard <= 79) {
+            MovingBody.a((byte) 80);
           }
-          stackIn_3_0 = (11 * this.field_l + 666 << 23 | 3 * (this.field_i + 5) << 7) ^ (this.field_m * 17 + 10855845 << 3 ^ this.field_j * 31 + 15790320) + (58339 + 11 * this.field_k | 29 * this.field_o << 13);
+          stackIn_3_0 = (11 * this.stateWord + 666 << 23 | 3 * (this.typeId + 5) << 7) ^ (this.y256 * 17 + 10855845 << 3 ^ this.x256 * 31 + 15790320) + (58339 + 11 * this.velocityX256 | 29 * this.velocityY256 << 13);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("vi.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("vi.A(").append(obfuscationGuard).append(',');
+          if (diagnostics == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -551,7 +551,7 @@ abstract class vi extends nm {
         field_n = null;
         if (param0 != 34) {
           int[] var2 = (int[]) null;
-          vi.a(-84, 122, -97, (byte) 68, 30, 8, -62, -26, -113, (int[]) null, 112, -31, -33, -94, -22, -100, 90);
+          MovingBody.a(-84, 122, -97, (byte) 68, 30, 8, -62, -26, -113, (int[]) null, 112, -31, -33, -94, -22, -100, 90);
         }
     }
 

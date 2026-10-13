@@ -78,16 +78,16 @@ final class lf extends km {
         ch.field_h = null;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        super.a(param0, param1, -94);
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
+        super.advanceScreen(updateFlag, inputEnabled, -94);
         if (og.h(-26090)) {
           return;
         }
-        if (param2 >= -52) {
+        if (obfuscationGuard >= -52) {
           return;
         }
         if (ch.field_h == null) {
-          ch.field_h = gf.a(7, 0, 10, (byte) -114);
+          ch.field_h = GameScreen.a(7, 0, 10, (byte) -114);
         }
     }
 
@@ -131,9 +131,9 @@ final class lf extends km {
         int var6Lifetime1;
         this.field_v = 0;
         qo.field_N = 10 + ob.field_D.c("10. ");
-        var8 = new String[]{so.field_e, vl.field_c, be.field_e, hj.field_Vb, jg.field_p};
+        var8 = new String[]{so.field_e, NodeDeque.field_c, be.field_e, hj.field_Vb, jg.field_p};
         var9 = var8;
-        var2 = nn.field_g.c(nm.a((CharSequence[]) ((Object) var9), true));
+        var2 = nn.field_g.c(IntrusiveNode.a((CharSequence[]) ((Object) var9), true));
         var3 = 582;
         var4 = 182;
         var5 = (-var4 + (var3 - var2)) / 5;
@@ -205,7 +205,7 @@ final class lf extends km {
         return var4 != 0;
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         int var8 = 0;
         int var2;
         int var3;
@@ -218,7 +218,7 @@ final class lf extends km {
         int var3Lifetime1;
         Object var4Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
-        super.b((byte) -101);
+        super.drawScreen((byte) -101);
         im.a(550, 5, 243, 5, 140, (byte) -62, 45);
         al.a(this.field_a, 19);
         this.a(0);
@@ -230,9 +230,9 @@ final class lf extends km {
         var3 = 0;
         nn.field_g.c(ae.field_i, 66, var2, var3, -1);
         nn.field_g.a(so.field_e, mf.field_d[0], var2, var3, -1);
-        nn.field_g.a(vl.field_c, mf.field_d[1], var2, var3, -1);
-        if (param0 >= -14) {
-          this.a(false, true, 9);
+        nn.field_g.a(NodeDeque.field_c, mf.field_d[1], var2, var3, -1);
+        if (obfuscationGuard >= -14) {
+          this.advanceScreen(false, true, 9);
         }
         nn.field_g.a(be.field_e, mf.field_d[2], var2, var3, -1);
         nn.field_g.a(hj.field_Vb, mf.field_d[3], var2, var3, -1);

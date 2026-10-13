@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends nm {
+final class pg extends IntrusiveNode {
     static jp field_p;
     static String field_i;
     static String field_q;

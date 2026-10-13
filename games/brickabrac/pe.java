@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends nm {
+final class pe extends IntrusiveNode {
     static String field_p;
     static boolean field_i;
     static int field_u;
-    static qj field_o;
+    static GameplayScreen field_o;
     static boolean[] field_l;
     static int field_t;
     static int field_q;

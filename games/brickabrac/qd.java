@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qd extends nm {
+abstract class qd extends IntrusiveNode {
     el field_k;
     int field_i;
     qd field_l;

@@ -32,7 +32,7 @@ final class sj {
         int var9Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         var4 = null;
-        i.field_q.field_Rb.field_bb.c((byte) -61);
+        i.field_q.field_Rb.field_bb.clear((byte) -61);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + mm.field_Sb; var7 >= 0; var7--) {
@@ -53,7 +53,7 @@ final class sj {
             if (var8_ref_gb.field_b == null ||
               oi.field_d) {
               if (null == var8_ref_gb.field_b) {
-                on.field_E = on.field_E + 1;
+                Brick.field_E = Brick.field_E + 1;
               }
               var10 = kq.a(var8_ref_gb, (byte) 91);
               var11 = var10 + dh.b(var8_ref_gb.field_j);
@@ -238,7 +238,7 @@ final class sj {
         var19 = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          L0: {
+          regionExit1: {
             var1 = jl.field_e;
             var2 = ((wq) ((Object) var1)).l(255);
             if (var2 != 0 &&
@@ -273,7 +273,7 @@ final class sj {
                 var8.field_Zb = ((wq) ((Object) var1)).l(255);
                 var8.field_Ub = ((wq) ((Object) var1)).l(255);
                 wl.a(var8, 17574);
-                break L0;
+                break regionExit1;
               }
               if (var2 == 6) {
                 var3 = ((wq) ((Object) var1)).g(param0 ^ -32735);
@@ -285,7 +285,7 @@ final class sj {
                     var21.field_fc = false;
                   }
                   if (var5 == 0) {
-                    var21.b((byte) 111);
+                    var21.unlink((byte) 111);
                   } else {
                     var21.field_kc = var5;
                     var21.field_ic = cm.field_o;
@@ -294,11 +294,11 @@ final class sj {
                 }
               } else {
                 if (var2 == 7) {
-                  var34 = (id) (ua.field_c.d(-61));
+                  var34 = (id) (ua.field_c.first(-61));
                   while (var34 != null) {
-                    var34.b((byte) 111);
+                    var34.unlink((byte) 111);
                     var34.d(3);
-                    var34 = (id) (ua.field_c.a((byte) 116));
+                    var34 = (id) (ua.field_c.next((byte) 116));
                   }
                   uf.field_c = 0;
                 } else {
@@ -318,7 +318,7 @@ final class sj {
                       var32 = (om) (pn.field_i.a((long)var3_int, -1));
                       if ((var32 != null)) {
                         if (var4 == 0) {
-                          var32.b((byte) 111);
+                          var32.unlink((byte) 111);
                         } else {
                           var32.field_Zb = var4;
                           var32.field_Wb = cm.field_o;
@@ -327,11 +327,11 @@ final class sj {
                       }
                     } else {
                       if (var2 == 10) {
-                        var33 = (om) (rq.field_a.d(-62));
+                        var33 = (om) (rq.field_a.first(-62));
                         while (var33 != null) {
-                          var33.b((byte) 111);
+                          var33.unlink((byte) 111);
                           var33.d(3);
-                          var33 = (om) (rq.field_a.a((byte) 116));
+                          var33 = (om) (rq.field_a.next((byte) 116));
                         }
                       } else {
                         if (var2 != 11 &&
@@ -375,47 +375,47 @@ final class sj {
                                     var7.field_ac = var8_int >> 1;
                                     var7.field_Zb = ((wq) ((Object) var1)).l(param0 ^ 222);
                                     var7.field_Ub = ((wq) ((Object) var1)).l(param0 + 222);
-                                    mp.field_Tb.a(var7, (byte) 3);
-                                    break L0;
+                                    mp.field_Tb.addLast(var7, (byte) 3);
+                                    break regionExit1;
                                   case 19:
                                     var3 = ((wq) ((Object) var1)).g(-32768);
                                     var5 = ((wq) ((Object) var1)).l(255);
                                     var14 = ac.a(var3, 2);
                                     var25 = var14;
                                     if (var14 == null) {
-                                      break L0;
+                                      break regionExit1;
                                     }
                                     if (0 == var5) {
-                                      var25.b((byte) 111);
+                                      var25.unlink((byte) 111);
                                     } else {
                                       var14.field_ic = cm.field_o;
                                       var14.field_kc = var5;
                                     }
                                     var25.d(param0 - 30);
                                     o.field_e.field_cc = o.field_e.field_cc - 1;
-                                    break L0;
+                                    break regionExit1;
                                   case 20:
                                     eb.a(o.field_e, var1, 0, false);
-                                    break L0;
+                                    break regionExit1;
                                   case 21:
                                     var3_int = ((wq) ((Object) var1)).i(65280);
                                     if (var3_int != 0) {
                                       ic.field_b = (long)var3_int + ue.a(false);
-                                      break L0;
+                                      break regionExit1;
                                     }
                                     ic.field_b = 0L;
-                                    break L0;
+                                    break regionExit1;
                                   case 22:
                                     m.field_h = ((wq) ((Object) var1)).i(65280);
                                     ko.field_s = ((wq) ((Object) var1)).c((byte) 119);
-                                    break L0;
+                                    break regionExit1;
                                   case 23:
                                     oc.field_p = ((wq) ((Object) var1)).g(-32768);
-                                    break L0;
+                                    break regionExit1;
                                   default:
                                     rk.a("L1: " + eq.c((byte) -121), (Throwable) null, 108);
                                     hn.a((byte) 84);
-                                    break L0;
+                                    break regionExit1;
                                 }
                               }
                               var3 = ((wq) ((Object) var1)).g(-32768);
@@ -471,13 +471,13 @@ final class sj {
                   }
                 }
               }
-              break L0;
+              break regionExit1;
             }
-            var3_ref_id = (id) (mp.field_Tb.d(-8));
+            var3_ref_id = (id) (mp.field_Tb.first(-8));
             while (var3_ref_id != null) {
-              var3_ref_id.b((byte) 111);
+              var3_ref_id.unlink((byte) 111);
               var3_ref_id.d(param0 - 30);
-              var3_ref_id = (id) (mp.field_Tb.a((byte) 116));
+              var3_ref_id = (id) (mp.field_Tb.next((byte) 116));
             }
             var3_ref_id = (id) (eq.field_m.b((byte) 89));
             while (var3_ref_id != null) {

@@ -5,7 +5,7 @@ final class fk {
     private byte[] field_i;
     static String[] field_h;
     private int[] field_j;
-    static vl field_f;
+    static NodeDeque field_f;
     static int field_g;
     static double field_b;
     static String field_c;
@@ -150,7 +150,7 @@ final class fk {
             String var3 = (String) null;
             fk.a((byte) 84, (java.applet.Applet) null, (String) null, false);
           }
-          wd.field_w.field_bb.c((byte) -72);
+          wd.field_w.field_bb.clear((byte) -72);
           wd.field_w.a(hd.field_a, 0);
           nq.field_p = true;
         } catch (RuntimeException runtimeException) {
@@ -343,7 +343,7 @@ final class fk {
           param0 = param0 + param1;
           var7_int = 0;
           var8 = param2;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param5[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -357,7 +357,7 @@ final class fk {
               param1++;
               param4[incrementValue$1] = (byte)(~var10);
               if (param1 >= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -373,7 +373,7 @@ final class fk {
               param1++;
               param4[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 >= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -389,7 +389,7 @@ final class fk {
               param1++;
               param4[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param0 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -405,7 +405,7 @@ final class fk {
               param1++;
               param4[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param0 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -421,7 +421,7 @@ final class fk {
               param1++;
               param4[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param1 >= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -453,7 +453,7 @@ final class fk {
               param1++;
               param4[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param1 >= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -469,7 +469,7 @@ final class fk {
               param1++;
               param4[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param1 >= param0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -667,7 +667,7 @@ final class fk {
     }
 
     static {
-        field_f = new vl();
+        field_f = new NodeDeque();
         field_c = "Passwords can only contain letters and numbers";
         field_b = 0.0;
         field_d = "Age:";

@@ -3,49 +3,49 @@
  */
 import java.util.*;
 
-final class j extends nm {
-    vl field_eb;
-    int field_F;
+final class PlayerBoard extends IntrusiveNode {
+    NodeDeque field_eb;
+    int simulationTick;
     int[] field_vb;
     static String[][] field_jb;
     int field_db;
     int field_bb;
     int field_j;
-    vl field_nb;
+    NodeDeque field_nb;
     int field_rb;
-    int field_ob;
+    int score;
     int field_I;
     int field_q;
     private ao field_Y;
-    vo field_yb;
-    vl field_K;
-    vl field_gb;
-    vl field_x;
+    Paddle paddle;
+    NodeDeque queuedBalls;
+    NodeDeque field_gb;
+    NodeDeque field_x;
     int field_A;
-    vl field_pb;
-    vl field_C;
+    NodeDeque field_pb;
+    NodeDeque field_C;
     ao field_kb;
     int field_N;
     kq field_ab;
     int field_X;
     int field_hb;
-    vl[] field_z;
-    vl field_v;
+    NodeDeque[] field_z;
+    NodeDeque field_v;
     int field_qb;
     int field_u;
     private int field_W;
     int field_m;
-    int field_ub;
+    int boardOffset;
     int field_Q;
     int field_L;
     int field_P;
     byte[] field_o;
     int field_Z;
-    private int field_sb;
+    private int randomSeed;
     int field_G;
     private Random field_B;
-    int field_mb;
-    private fo field_s;
+    int boardWidth;
+    private fo seededRandom;
     private int field_T;
     int field_wb;
     int field_J;
@@ -54,7 +54,7 @@ final class j extends nm {
     int field_H;
     int field_k;
     int field_i;
-    private on[] field_O;
+    private Brick[] bricks;
     lj field_D;
     int field_S;
     int field_r;
@@ -75,7 +75,7 @@ final class j extends nm {
     int field_V;
     int field_zb;
 
-    final void a(vl param0, int param1, vl[] param2) {
+    final void a(NodeDeque param0, int param1, NodeDeque[] param2) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
@@ -87,13 +87,13 @@ final class j extends nm {
         RuntimeException var4 = null;
         int var5 = 0;
         Object var7 = null;
-        on var7_ref = null;
+        Brick var7_ref = null;
         int var8 = 0;
-        vl var9 = null;
-        vl var10 = null;
-        on var7_refLifetime1;
-        vl var10Lifetime1;
-        vl var10Lifetime2;
+        NodeDeque var9 = null;
+        NodeDeque var10 = null;
+        Brick var7_refLifetime1;
+        NodeDeque var10Lifetime1;
+        NodeDeque var10Lifetime2;
         int var5Lifetime1;
         int var4_intLifetime1;
         var7 = null;
@@ -117,41 +117,41 @@ final class j extends nm {
             var9 = this.field_z[var5];
             var10 = var9;
             var10Lifetime2 = var9;
-            var7_ref = (on) (var9.d(-94));
+            var7_ref = (Brick) (var9.first(-94));
             while (var7_ref != null) {
               boolean decompiledFrameRemainder0 = true;
-              if (var7_ref.field_i != 1 &&
-                var7_ref.field_i != 25 &&
-                var7_ref.field_i != 28) {
+              if (var7_ref.typeId != 1 &&
+                var7_ref.typeId != 25 &&
+                var7_ref.typeId != 28) {
                 if ((var7_ref.field_N & 2) != 0) {
-                  this.field_S = this.field_S | 1 << var7_ref.field_i;
+                  this.field_S = this.field_S | 1 << var7_ref.typeId;
                 }
-                decompiledFrameRemainder0 = (var7_ref.field_i != 0 ||
+                decompiledFrameRemainder0 = (var7_ref.typeId != 0 ||
                   2 != var7_ref.field_R);
                 if (decompiledFrameRemainder0) {
                   this.field_L = this.field_L + 1;
                 }
               }
               if ((decompiledFrameRemainder0) &&
-                (var7_ref.field_i == 28)) {
+                (var7_ref.typeId == 28)) {
                 var4_int++;
               }
-              var7_ref = (on) (var9.a((byte) 116));
+              var7_ref = (Brick) (var9.next((byte) 116));
             }
           }
-          this.field_O = new on[var4_int];
+          this.bricks = new Brick[var4_int];
           var4_intLifetime1 = 0;
           for (var5Lifetime1 = 0; this.field_z.length > var5Lifetime1; var5Lifetime1++) {
             var10Lifetime1 = this.field_z[var5Lifetime1];
-            var7_refLifetime1 = (on) (var10Lifetime1.d(-37));
+            var7_refLifetime1 = (Brick) (var10Lifetime1.first(-37));
             while (var7_refLifetime1 != null) {
-              if (var7_refLifetime1.field_i == 28) {
+              if (var7_refLifetime1.typeId == 28) {
                 incrementValue$0 = var4_intLifetime1;
                 var4_intLifetime1++;
                 var7_refLifetime1.field_H = incrementValue$0;
-                this.field_O[var7_refLifetime1.field_H] = var7_refLifetime1;
+                this.bricks[var7_refLifetime1.field_H] = var7_refLifetime1;
               }
-              var7_refLifetime1 = (on) (var10Lifetime1.a((byte) 116));
+              var7_refLifetime1 = (Brick) (var10Lifetime1.next((byte) 116));
             }
           }
           return;
@@ -179,17 +179,17 @@ final class j extends nm {
         int var2;
         int var3;
         int var4;
-        vn var5;
+        Ball var5;
         int var6;
-        vn var5Lifetime1;
+        Ball var5Lifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
         var2 = this.a(3, 96, 25);
         if (var2 != -1 &&
-          var2 > this.field_yb.field_w) {
+          var2 > this.paddle.field_w) {
           return new lj(3);
         }
-        if (this.field_yb.field_w > 0 &&
-          this.field_yb.field_w < 25 &&
+        if (this.paddle.field_w > 0 &&
+          this.paddle.field_w < 25 &&
           var2 == -1) {
           return new lj(3, false);
         }
@@ -199,19 +199,19 @@ final class j extends nm {
         var3 = this.a(15, 117, 25);
         if (var3 != -1) {
           var4 = 0;
-          var5 = (vn) (this.field_K.d(-98));
+          var5 = (Ball) (this.queuedBalls.first(-98));
           while (var5 != null) {
             if (var3 > var5.field_J) {
               var4 = 1;
             }
-            var5 = (vn) (this.field_K.a((byte) 116));
+            var5 = (Ball) (this.queuedBalls.next((byte) 116));
           }
-          var5Lifetime1 = (vn) (this.field_gb.d(-95));
+          var5Lifetime1 = (Ball) (this.field_gb.first(-95));
           while (var5Lifetime1 != null) {
             if (var5Lifetime1.field_J < var3) {
               var4 = 1;
             }
-            var5Lifetime1 = (vn) (this.field_gb.a((byte) 116));
+            var5Lifetime1 = (Ball) (this.field_gb.next((byte) 116));
           }
           if (var4 != 0) {
             return new lj(15);
@@ -279,14 +279,14 @@ final class j extends nm {
         int var5 = 0;
         int var6 = 0;
         int var7_int = 0;
-        on var7 = null;
+        Brick var7 = null;
         int var8 = 0;
         int var9 = 0;
-        vn var10 = null;
+        Ball var10 = null;
         ge var11 = null;
         cl var12 = null;
         il var13 = null;
-        vn var14 = null;
+        Ball var14 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var6Lifetime1;
@@ -308,9 +308,9 @@ final class j extends nm {
             discarded$2 = param1.append("1. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$3 = param1.append("Score, Level, Lives: " + this.field_ob + " " + this.field_qb + " " + this.field_rb + "\n");
+            discarded$3 = param1.append("Score, Level, Lives: " + this.score + " " + this.field_qb + " " + this.field_rb + "\n");
           }
-          var4 = var4 ^ 65535 + this.field_ob * 29;
+          var4 = var4 ^ 65535 + this.score * 29;
           var4 = var4 ^ 15601376 + 67 * this.field_qb << 3;
           var4 = var4 ^ this.field_rb * 61 + 961453 << 10;
           if (var3_int != 0) {
@@ -325,16 +325,16 @@ final class j extends nm {
             discarded$6 = param1.append("3. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$7 = param1.append("PRNG: " + this.field_sb + " " + this.field_W + "\n");
+            discarded$7 = param1.append("PRNG: " + this.randomSeed + " " + this.field_W + "\n");
           }
-          var4 = var4 ^ 5457 + 31 * this.field_sb << 5;
+          var4 = var4 ^ 5457 + 31 * this.randomSeed << 5;
           var4 = var4 ^ 43 * this.field_W + 818 << 9;
           if (var3_int != 0) {
             discarded$8 = param1.append("4. " + Integer.toString(var4, 16) + "\n");
           }
-          var4 = var4 ^ 7 * this.field_mb + 61453 << 8;
+          var4 = var4 ^ 7 * this.boardWidth + 61453 << 8;
           var4 = var4 ^ 19 * this.field_T + 17 << 17;
-          var4 = var4 ^ 12648430 + this.field_ub * 17 << 3;
+          var4 = var4 ^ 12648430 + this.boardOffset * 17 << 3;
           if (!param0) {
             this.field_Q = -85;
           }
@@ -342,20 +342,20 @@ final class j extends nm {
             discarded$9 = param1.append("5. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$10 = param1.append("Keys and time: " + this.field_db + " " + this.field_F + "\n");
+            discarded$10 = param1.append("Keys and time: " + this.field_db + " " + this.simulationTick + "\n");
           }
-          var4 = var4 ^ 21879 + this.field_F * 23 << 12;
+          var4 = var4 ^ 21879 + this.simulationTick * 23 << 12;
           if (var3_int != 0) {
             discarded$11 = param1.append("6. " + Integer.toString(var4, 16) + "\n");
           }
           if (this.field_v != null) {
             var5 = 7;
-            var12 = (cl) (this.field_v.d(-104));
+            var12 = (cl) (this.field_v.first(-104));
             while (var12 != null) {
               var5 = 6 + var5 * 3 + 5 & 31;
-              var7_int = var12.a(108, param1);
+              var7_int = var12.computeSyncChecksum(108, param1);
               var4 = var4 ^ (var7_int << var5 | var5 >>> -var5 + 32);
-              var12 = (cl) (this.field_v.a((byte) 116));
+              var12 = (cl) (this.field_v.next((byte) 116));
             }
           }
           if (var3_int != 0) {
@@ -365,13 +365,13 @@ final class j extends nm {
             var5Lifetime1 = 0;
             for (var6 = 0; this.field_z.length > var6; var6++) {
               var5Lifetime1Lifetime1 = 31 & 5 + 7 * var6;
-              var7 = (on) (this.field_z[var6].d(-94));
+              var7 = (Brick) (this.field_z[var6].first(-94));
               while (var7 != null) {
                 if ((1 & var7.field_N) == 0) {
-                  var8 = var7.a(108, param1);
+                  var8 = var7.computeSyncChecksum(108, param1);
                   var4 = var4 ^ (var8 << var5Lifetime1Lifetime1 | var8 >>> 32 - var5Lifetime1Lifetime1);
                 }
-                var7 = (on) (this.field_z[var6].a((byte) 116));
+                var7 = (Brick) (this.field_z[var6].next((byte) 116));
               }
             }
           }
@@ -382,44 +382,44 @@ final class j extends nm {
             discarded$14 = param1.append("Ball info:\n");
           }
           if (var3_int != 0) {
-            discarded$15 = param1.append("Balls queued up: " + this.field_K.e(120) + "\n");
+            discarded$15 = param1.append("Balls queued up: " + this.queuedBalls.size(120) + "\n");
           }
-          var14 = (vn) (this.field_K.d(-13));
+          var14 = (Ball) (this.queuedBalls.first(-13));
           while (var14 != null) {
-            var4 = var4 ^ var14.a(94, param1);
-            var14 = (vn) (this.field_K.a((byte) 116));
+            var4 = var4 ^ var14.computeSyncChecksum(94, param1);
+            var14 = (Ball) (this.queuedBalls.next((byte) 116));
           }
           if (var3_int != 0) {
-            discarded$16 = param1.append("Balls in play: " + this.field_gb.e(119) + "\n");
+            discarded$16 = param1.append("Balls in play: " + this.field_gb.size(119) + "\n");
           }
-          var10 = (vn) (this.field_gb.d(-75));
+          var10 = (Ball) (this.field_gb.first(-75));
           while (var10 != null) {
-            var4 = var4 ^ var10.a(82, param1);
-            var10 = (vn) (this.field_gb.a((byte) 116));
+            var4 = var4 ^ var10.computeSyncChecksum(82, param1);
+            var10 = (Ball) (this.field_gb.next((byte) 116));
           }
           if (var3_int != 0) {
             discarded$17 = param1.append("9. " + Integer.toString(var4, 16) + "\n");
           }
-          var11 = (ge) (this.field_pb.d(-61));
+          var11 = (ge) (this.field_pb.first(-61));
           while (var11 != null) {
-            var4 = var4 ^ var11.a(114, param1);
-            var11 = (ge) (this.field_pb.a((byte) 116));
+            var4 = var4 ^ var11.computeSyncChecksum(114, param1);
+            var11 = (ge) (this.field_pb.next((byte) 116));
           }
           if (var3_int != 0) {
             discarded$18 = param1.append("10. " + Integer.toString(var4, 16) + "\n");
           }
-          var4 = var4 ^ this.field_yb.a(93, param1);
+          var4 = var4 ^ this.paddle.computeSyncChecksum(93, param1);
           if (var3_int != 0) {
             discarded$19 = param1.append("11. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$20 = param1.append("Bubble info " + this.field_C.e(124) + "\n");
+            discarded$20 = param1.append("Bubble info " + this.field_C.size(124) + "\n");
             discarded$21 = param1.append(this.field_R + " " + this.field_k + "\n");
           }
-          var13 = (il) (this.field_C.d(-90));
+          var13 = (il) (this.field_C.first(-90));
           while (var13 != null) {
-            var4 = var4 ^ var13.a(114, param1);
-            var13 = (il) (this.field_C.a((byte) 116));
+            var4 = var4 ^ var13.computeSyncChecksum(114, param1);
+            var13 = (il) (this.field_C.next((byte) 116));
           }
           if (var3_int != 0) {
             discarded$22 = param1.append("12. " + Integer.toString(var4, 16) + "\n");
@@ -477,14 +477,14 @@ final class j extends nm {
         if (param1 <= 8) {
           return -87;
         }
-        param2 = this.field_F + param2;
+        param2 = this.simulationTick + param2;
         for (var4 = this.field_X; var4 <= this.field_kb.field_n; var4++) {
           var5 = (ge) (this.field_kb.a(var4, 111));
           if (!(param2 >= var5.field_y)) {
             return -1;
           }
-          if (var5.field_i == param0) {
-            return var5.field_y - this.field_F;
+          if (var5.typeId == param0) {
+            return var5.field_y - this.simulationTick;
           }
         }
         return -1;
@@ -500,18 +500,18 @@ final class j extends nm {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5_int = 0;
-        vl[] var5 = null;
-        vl var6 = null;
+        NodeDeque[] var5 = null;
+        NodeDeque var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         ge var11 = null;
         int var12 = 0;
-        on var13 = null;
+        Brick var13 = null;
         cl var14 = null;
-        vn var15 = null;
-        vn var16 = null;
+        Ball var15 = null;
+        Ball var16 = null;
         int var4_intLifetime1;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -524,9 +524,9 @@ final class j extends nm {
         try {
           this.field_Z = param1.l(255);
           this.field_P = param1.i(65280);
-          this.field_F = param1.e(255);
-          this.field_Y.field_n = -1 + this.field_F / 5;
-          this.field_ob = param1.e((byte) -34);
+          this.simulationTick = param1.e(255);
+          this.field_Y.field_n = -1 + this.simulationTick / 5;
+          this.score = param1.e((byte) -34);
           this.field_qb = param1.l(255);
           this.field_rb = param1.l(255);
           this.field_m = param1.i(65280);
@@ -541,48 +541,48 @@ final class j extends nm {
           }
           this.field_n = param1.i(65280);
           var4_intLifetime1 = this.field_n % 16;
-          var5 = new vl[3];
+          var5 = new NodeDeque[3];
           for (var6_int = 0; var6_int < var5.length; var6_int++) {
-            var5[var6_int] = new vl();
+            var5[var6_int] = new NodeDeque();
             var7 = param1.i(65280);
             for (var8 = 0; var7 > var8; var8++) {
-              var13 = new on();
-              var13.a(92, param1);
-              var13.field_m = var13.field_m - (var4_intLifetime1 * 1 << 8);
-              var5[var6_int].a(var13, (byte) 3);
+              var13 = new Brick();
+              var13.readBodySnapshot(92, param1);
+              var13.y256 = var13.y256 - (var4_intLifetime1 * 1 << 8);
+              var5[var6_int].addLast(var13, (byte) 3);
             }
           }
-          var6 = new vl();
+          var6 = new NodeDeque();
           var7Lifetime1 = param1.i(65280);
           for (var8Lifetime1 = 0; var8Lifetime1 < var7Lifetime1; var8Lifetime1++) {
             var14 = new cl();
-            var14.a(114, param1);
-            var6.a(var14, (byte) 3);
+            var14.readBodySnapshot(114, param1);
+            var6.addLast(var14, (byte) 3);
           }
           this.a(var6, 9, var5);
-          this.field_K.c((byte) -79);
-          this.field_gb.c((byte) -118);
+          this.queuedBalls.clear((byte) -79);
+          this.field_gb.clear((byte) -118);
           var8Lifetime2 = param1.l(255);
           for (var9 = 0; var8Lifetime2 > var9; var9++) {
-            var15 = new vn();
-            var15.a(110, param1);
-            this.field_K.a(var15, (byte) 3);
+            var15 = new Ball();
+            var15.readBodySnapshot(110, param1);
+            this.queuedBalls.addLast(var15, (byte) 3);
           }
           var8Lifetime3 = param1.l(255);
           for (var9Lifetime1 = 0; var8Lifetime3 > var9Lifetime1; var9Lifetime1++) {
-            var16 = new vn();
-            var16.a(107, param1);
-            this.field_gb.a(var16, (byte) 3);
+            var16 = new Ball();
+            var16.readBodySnapshot(107, param1);
+            this.field_gb.addLast(var16, (byte) 3);
           }
-          this.field_pb.c((byte) -63);
+          this.field_pb.clear((byte) -63);
           var9Lifetime2 = param1.l(255);
           for (var10 = 0; var9Lifetime2 > var10; var10++) {
             var11 = new ge();
-            var11.a(97, param1);
-            this.field_pb.a(var11, (byte) 3);
+            var11.readBodySnapshot(97, param1);
+            this.field_pb.addLast(var11, (byte) 3);
           }
-          this.field_yb.a(100, param1);
-          this.field_C.c((byte) -83);
+          this.paddle.readBodySnapshot(100, param1);
+          this.field_C.clear((byte) -83);
           this.field_k = param1.e(255);
           this.field_R = param1.e(255);
           this.f(1000);
@@ -595,7 +595,7 @@ final class j extends nm {
           this.field_r = param1.i(65280);
           this.field_M = param1.i(65280);
           this.field_p = param1.e(255);
-          this.field_G = this.field_p + this.field_ub << 8;
+          this.field_G = this.field_p + this.boardOffset << 8;
           stackIn_30_0 = (1 == param2) ? 15 : 9;
           kj.a(stackIn_30_0, this.field_z[2], 16);
           return;
@@ -615,8 +615,8 @@ final class j extends nm {
 
     final void b(int param0, int param1) {
         if (param0 != 16387) {
-          vo var4 = (vo) null;
-          this.a(-103, (vo) null, -75);
+          Paddle var4 = (Paddle) null;
+          this.a(-103, (Paddle) null, -75);
         }
         this.a(param1, true, 50);
     }
@@ -641,7 +641,7 @@ final class j extends nm {
             this.field_ib = 95;
           }
           var2 = new fo(new int[]{this.field_R});
-          var3 = (-68 + this.field_mb) / 8;
+          var3 = (-68 + this.boardWidth) / 8;
           var4 = 60;
           for (var5 = 0; var5 < 8; var5++) {
             for (var6 = 0; var6 < 8; var6++) {
@@ -653,7 +653,7 @@ final class j extends nm {
               var11.field_E = var2.a(param0 ^ -37880404, 4096);
               var11.field_w = var2.a(-37880252, 100) + 300;
               var11.field_y = 8000 + var2.a(-37880252, 1000);
-              this.field_C.a(var11, (byte) 3);
+              this.field_C.addLast(var11, (byte) 3);
               for (var12 = 0; this.field_k > var12; var12++) {
                 var11.d(-2081170685);
               }
@@ -668,7 +668,7 @@ final class j extends nm {
           hm.a(0, param0, param2);
           if (param1 > -29) {
             oe var4 = (oe) null;
-            j.a((oe) null, -15, 82);
+            PlayerBoard.a((oe) null, -15, 82);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "j.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -680,11 +680,11 @@ final class j extends nm {
           this.field_t = 0;
           this.field_m = 0;
         }
-        this.field_yb.f(param0 ^ 85);
-        this.field_K.c((byte) -82);
-        this.field_K.a(new vn(this.field_yb, param2, 1536), (byte) 3);
-        this.field_pb.c((byte) -92);
-        this.field_gb.c((byte) -88);
+        this.paddle.resetSize(param0 ^ 85);
+        this.queuedBalls.clear((byte) -82);
+        this.queuedBalls.addLast(new Ball(this.paddle, param2, 1536), (byte) 3);
+        this.field_pb.clear((byte) -92);
+        this.field_gb.clear((byte) -88);
         if (param0 != 85) {
           this.field_j = 84;
         }
@@ -731,12 +731,12 @@ final class j extends nm {
     final int e(int param0) {
         int var2 = -93 / ((param0 - 76) / 39);
         this.field_W = this.field_W + 1;
-        return this.field_s.b(115);
+        return this.seededRandom.b(115);
     }
 
     final void a(int param0) {
         int var2 = 0;
-        on var3;
+        Brick var3;
         int var4;
         StringBuilder var5;
         var4 = BrickABrac.field_J ? 1 : 0;
@@ -745,46 +745,46 @@ final class j extends nm {
           this.a(true, (StringBuilder) null);
         }
         for (var2 = 0; this.field_z.length > var2; var2++) {
-          var3 = (on) (this.field_z[var2].d(-81));
+          var3 = (Brick) (this.field_z[var2].first(-81));
           while (var3 != null) {
-            if (var3.field_i == 26 &&
+            if (var3.typeId == 26 &&
               var3.field_R == 26) {
               var3.field_R = 27;
-              var3.field_l = 0;
+              var3.stateWord = 0;
               var3.field_B = 10;
-            } else if (26 == var3.field_i &&
+            } else if (26 == var3.typeId &&
               var3.field_R == 27) {
               var3.field_R = 26;
-              var3.field_i = 27;
-              var3.field_l = -var3.field_l + 15;
+              var3.typeId = 27;
+              var3.stateWord = -var3.stateWord + 15;
               var3.field_B = 10;
-            } else if (var3.field_i == 26 &&
+            } else if (var3.typeId == 26 &&
               var3.field_R < 0) {
               var3.field_B = 10;
               var3.field_R = 27;
-              var3.field_l = 0;
-            } else if (var3.field_i == 27 &&
+              var3.stateWord = 0;
+            } else if (var3.typeId == 27 &&
               var3.field_R == 26) {
-              var3.field_i = 26;
-              var3.field_l = 15 - var3.field_l;
+              var3.typeId = 26;
+              var3.stateWord = 15 - var3.stateWord;
               var3.field_B = 10;
               var3.field_R = 27;
             } else {
-              if (27 == var3.field_i &&
+              if (27 == var3.typeId &&
                 var3.field_R == 27) {
                 throw new RuntimeException();
               }
-              if (var3.field_i == 27) {
+              if (var3.typeId == 27) {
                 if (var3.field_R >= 0) {
-                  var3 = (on) (this.field_z[var2].a((byte) 116));
+                  var3 = (Brick) (this.field_z[var2].next((byte) 116));
                   continue;
                 }
                 var3.field_R = 26;
                 var3.field_B = 10;
-                var3.field_l = 0;
+                var3.stateWord = 0;
               }
             }
-            var3 = (on) (this.field_z[var2].a((byte) 116));
+            var3 = (Brick) (this.field_z[var2].next((byte) 116));
           }
         }
     }
@@ -794,7 +794,7 @@ final class j extends nm {
         if (param1 != 62) {
           this.field_J = 79;
         }
-        return this.field_s.a(-37880252, param0);
+        return this.seededRandom.a(-37880252, param0);
     }
 
     final void a(int param0, boolean param1, int param2) {
@@ -805,7 +805,7 @@ final class j extends nm {
         }
     }
 
-    final void a(byte param0, on param1, vn param2) {
+    final void a(byte param0, Brick param1, Ball param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -814,24 +814,24 @@ final class j extends nm {
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
         RuntimeException var4 = null;
-        on var5 = null;
+        Brick var5 = null;
         int var6 = 0;
         int var7 = 0;
         try {
-          var4_int = this.a(-1 + this.field_O.length, (byte) 62);
+          var4_int = this.a(-1 + this.bricks.length, (byte) 62);
           if (param1.field_H <= var4_int) {
             var4_int++;
           }
-          var5 = this.field_O[var4_int];
-          param2.field_j = var5.field_u / 2 + var5.field_j - param2.field_u;
+          var5 = this.bricks[var4_int];
+          param2.x256 = var5.width256 / 2 + var5.x256 - param2.radius256;
           if (param0 != -63) {
             this.field_i = -27;
           }
-          param2.field_m = -(2 * param2.field_u) + var5.field_m;
+          param2.y256 = -(2 * param2.radius256) + var5.y256;
           var6 = this.a(65536, (byte) 62);
           var7 = dm.a(var6, -1, 33554432) + dm.a(-var6 + 65536, -1, 67108864);
           var7 = var7 >> 16;
-          if (param2.field_k < 0) {
+          if (param2.velocityX256 < 0) {
             var7 = -var7;
             param2.a(6546, var7);
           } else {
@@ -858,17 +858,17 @@ final class j extends nm {
         }
     }
 
-    final void a(int param0, on param1, int param2) {
+    final void a(int param0, Brick param1, int param2) {
         try {
-          this.a(param0, false, param1.field_j + param1.field_u / 2, param1.field_s / param2 + param1.field_m);
+          this.a(param0, false, param1.x256 + param1.width256 / 2, param1.height256 / param2 + param1.y256);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "j.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final void a(int param0, vo param1, int param2) {
+    final void a(int param0, Paddle param1, int param2) {
         try {
-          this.a(param0, false, param1.field_j + param1.field_u / param2, -12800 + param1.field_m);
+          this.a(param0, false, param1.x256 + param1.width256 / param2, -12800 + param1.y256);
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "j.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -889,8 +889,8 @@ final class j extends nm {
         if (param1) {
           this.field_l = 1;
         }
-        this.field_ob = this.field_ob + param0;
-        this.field_nb.a(new ul(param0, param2, param3), (byte) 3);
+        this.score = this.score + param0;
+        this.field_nb.addLast(new ul(param0, param2, param3), (byte) 3);
     }
 
     final boolean a(int param0, int param1) {
@@ -906,18 +906,18 @@ final class j extends nm {
         return this.field_o[param1] == 0 ? true : false;
     }
 
-    j(int param0, int param1, int param2, int param3, int param4) {
+    PlayerBoard(int boardWidth, int initialBoardOffset, int paletteVariant, int randomSeed, int initialState) {
         this.field_vb = new int[5];
         this.field_db = 0;
-        this.field_eb = new vl();
+        this.field_eb = new NodeDeque();
         this.field_rb = 4;
-        this.field_ob = 0;
-        this.field_nb = new vl();
-        this.field_K = new vl();
-        this.field_gb = new vl();
-        this.field_x = new vl();
-        this.field_pb = new vl();
-        this.field_C = new vl();
+        this.score = 0;
+        this.field_nb = new NodeDeque();
+        this.queuedBalls = new NodeDeque();
+        this.field_gb = new NodeDeque();
+        this.field_x = new NodeDeque();
+        this.field_pb = new NodeDeque();
+        this.field_C = new NodeDeque();
         this.field_kb = new ao(500);
         this.field_ab = new kq();
         this.field_G = -1;
@@ -926,19 +926,19 @@ final class j extends nm {
         this.field_M = -1;
         this.field_k = -1;
         this.field_wb = 466;
-        this.field_mb = param0;
-        this.field_ub = param1;
-        this.field_G = param1 << 8;
-        this.field_T = this.field_mb / 2;
-        this.field_yb = new vo(this.field_T << 8, 0, 0, this.field_mb << 8);
-        this.field_sb = param3;
+        this.boardWidth = boardWidth;
+        this.boardOffset = initialBoardOffset;
+        this.field_G = initialBoardOffset << 8;
+        this.field_T = this.boardWidth / 2;
+        this.paddle = new Paddle(this.field_T << 8, 0, 0, this.boardWidth << 8);
+        this.randomSeed = randomSeed;
         this.field_Z = 0;
-        this.field_s = new fo(new int[]{this.field_sb});
+        this.seededRandom = new fo(new int[]{this.randomSeed});
         this.field_cb = new int[29];
         this.field_xb = new int[29];
         this.field_Y = new ao(500);
         this.b(16387, 0);
-        this.field_H = param4;
+        this.field_H = initialState;
         if (ah.field_w == null) {
           ah.field_w = new int[2][3];
           ah.field_w[0][2] = aq.field_e;
@@ -948,9 +948,9 @@ final class j extends nm {
           ah.field_w[1][1] = ce.field_d;
           ah.field_w[1][0] = jl.field_b;
         }
-        this.field_bb = ah.field_w[param2][0];
-        this.field_j = ah.field_w[param2][1];
-        this.field_I = ah.field_w[param2][2];
+        this.field_bb = ah.field_w[paletteVariant][0];
+        this.field_j = ah.field_w[paletteVariant][1];
+        this.field_I = ah.field_w[paletteVariant][2];
     }
 
     static {

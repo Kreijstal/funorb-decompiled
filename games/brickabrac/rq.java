@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rq {
-    static vl field_a;
+    static NodeDeque field_a;
     static hj field_b;
     static String field_d;
     static n field_c;

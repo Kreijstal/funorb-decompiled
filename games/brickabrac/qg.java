@@ -117,12 +117,12 @@ abstract class qg extends ke {
           var3 = param0.field_D;
           var4 = param0.field_G;
           var5 = var2_int - 1;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var5 >= 0) {
               var6 = var5 * var3;
               for (var7 = 0; var7 < var3; var7++) {
                 if (var4[var7 + var6] != 16777215) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var5--;
@@ -131,12 +131,12 @@ abstract class qg extends ke {
             break;
           }
           var6Lifetime1 = 0;
-          L4: while (true) {
+          scanLoop2: while (true) {
             if (var6Lifetime1 < var5) {
               var7Lifetime1 = var3 * var6Lifetime1;
               for (var8 = 0; var8 < var3; var8++) {
                 if (var4[var8 + var7Lifetime1] != 16777215) {
-                  break L4;
+                  break scanLoop2;
                 }
               }
               var6Lifetime1++;
@@ -148,11 +148,11 @@ abstract class qg extends ke {
           if (param1 != 1) {
             field_z = (String) null;
           }
-          L8: while (true) {
+          scanLoop3: while (true) {
             if (var7Lifetime2 >= 0) {
               for (var8Lifetime1 = var6Lifetime1; var5 >= var8Lifetime1; var8Lifetime1++) {
                 if (16711422 != var4[var7Lifetime2 + var8Lifetime1 * var3]) {
-                  break L8;
+                  break scanLoop3;
                 }
               }
               var7Lifetime2--;
@@ -161,11 +161,11 @@ abstract class qg extends ke {
             break;
           }
           var8Lifetime2 = 0;
-          L11: while (true) {
+          scanLoop4: while (true) {
             if (var7Lifetime2 > var8Lifetime2) {
               for (var9 = var6Lifetime1; var5 >= var9; var9++) {
                 if (var4[var9 * var3 + var8Lifetime2] != 16711422) {
-                  break L11;
+                  break scanLoop4;
                 }
               }
               var8Lifetime2++;
@@ -399,7 +399,7 @@ abstract class qg extends ke {
             jc.a(uc.e((byte) -70), (byte) 97);
           }
           if (var4 == 9) {
-            vl.a(uc.e((byte) -108), (byte) -106);
+            NodeDeque.a(uc.e((byte) -108), (byte) -106);
           }
           if (var4 == 10) {
             k.field_h.e(-13413, 17);

@@ -39,14 +39,14 @@ final class op implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           bf.field_N.a((byte) 107, var8);
           while (true) {
-            var7 = (mp) (bf.field_N.a((byte) 116));
+            var7 = (mp) (bf.field_N.next((byte) 116));
             if (var7 != null) {
               var7.field_Sb = var7.field_Sb - 1;
               continue;
             }
             break;
           }
-          var8.b((byte) 111);
+          var8.unlink((byte) 111);
           var8.d(3);
           ol.field_w = ol.field_w - 1;
           var9 = k.field_h;

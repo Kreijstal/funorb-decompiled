@@ -105,13 +105,13 @@ final class mq {
         al var2Lifetime1;
         if (param0 > 37) {
           var2 = new al();
-          ej.field_F.a(var2, (byte) 3);
+          ej.field_F.addLast(var2, (byte) 3);
           ma.b((byte) -112, param1);
           return var2;
         }
         mq.a((byte) -67, -39);
         var2Lifetime1 = new al();
-        ej.field_F.a(var2Lifetime1, (byte) 3);
+        ej.field_F.addLast(var2Lifetime1, (byte) 3);
         ma.b((byte) -112, param1);
         return var2Lifetime1;
     }

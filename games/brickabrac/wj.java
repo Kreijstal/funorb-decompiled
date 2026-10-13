@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends nm {
+final class wj extends IntrusiveNode {
     final static void a(int param0, long param1) {
         if (param0 > -123) {
           wj.a(112, -29L);

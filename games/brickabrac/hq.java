@@ -28,10 +28,10 @@ final class hq extends km {
         return this.field_p;
     }
 
-    final void b(byte param0) {
-        super.b((byte) -39);
+    final void drawScreen(byte obfuscationGuard) {
+        super.drawScreen((byte) -39);
         im.a(550, 5, 243, 5, 140, (byte) -81, 45);
-        if (param0 <= -14) {
+        if (obfuscationGuard <= -14) {
           nn.field_g.a(this.field_v, 54, 149, 532, 225, 2, -1, 1, 1, 22);
           this.a(0);
           return;
@@ -202,10 +202,10 @@ final class hq extends km {
           if (!param0) {
             field_y = (String) null;
           }
-          var3 = (nj) (ob.field_E.d(-58));
+          var3 = (nj) (ob.field_E.first(-58));
           while (var3 != null) {
             var3.a(-1196049244, param2 << 4);
-            var3 = (nj) (ob.field_E.a((byte) 116));
+            var3 = (nj) (ob.field_E.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

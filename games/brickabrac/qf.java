@@ -57,7 +57,7 @@ final class qf extends lp implements en {
     }
 
     final void c(boolean param0) {
-        this.a(-7, i.a(248, -85, no.field_q), param0);
+        this.a(-7, i.a(248, -85, CircleBody.field_q), param0);
     }
 
     public final void a(int param0, int param1, byte param2, int param3, d param4) {
@@ -107,7 +107,7 @@ final class qf extends lp implements en {
                   jq.e(-77);
                 }
                 this.field_Fb = true;
-                var4 = no.field_q;
+                var4 = CircleBody.field_q;
               }
             }
           }
@@ -130,7 +130,7 @@ final class qf extends lp implements en {
               }
             }
             if (3 == param1.field_d) {
-              var5.a(false, vn.field_H, 7);
+              var5.a(false, Ball.field_H, 7);
             } else {
               if (param1.field_d == 6) {
                 var5.a(false, cb.field_p, 9);

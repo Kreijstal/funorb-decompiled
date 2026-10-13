@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nq extends nm {
+final class nq extends IntrusiveNode {
     static boolean field_p;
     private int field_o;
     static String field_k;
@@ -127,7 +127,7 @@ final class nq extends nm {
     }
 
     final static void a(int param0, int param1) {
-        nm var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         e var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -137,15 +137,15 @@ final class nq extends nm {
           if (param1 != 13330) {
             field_n = (String) null;
           }
-          var4 = (e) (na.field_Q.d(-37));
+          var4 = (e) (na.field_Q.first(-37));
           while (var4 != null) {
             ud.a(param0, var4, (byte) 80);
-            var4 = (e) (na.field_Q.a((byte) 116));
+            var4 = (e) (na.field_Q.next((byte) 116));
           }
-          var2 = ej.field_F.d(param1 ^ -13402);
+          var2 = ej.field_F.first(param1 ^ -13402);
           while (var2 != null) {
             ma.b((byte) -85, param0);
-            var2 = ej.field_F.a((byte) 116);
+            var2 = ej.field_F.next((byte) 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -266,7 +266,7 @@ final class md extends km {
         field_w = null;
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         int var4 = 0;
         int var2;
         int var3;
@@ -276,7 +276,7 @@ final class md extends km {
         int var8;
         int var9;
         var9 = BrickABrac.field_J ? 1 : 0;
-        super.b((byte) -27);
+        super.drawScreen((byte) -27);
         im.a(550, 5, 243, 5, 140, (byte) -101, 45);
         al.a(this.field_a, 19);
         if (this.field_u != 0) {
@@ -322,7 +322,7 @@ final class md extends km {
           var5.c(ok.field_b[var4], 60, var3, var6, var7);
           var3 = var3 + (m.field_j + var8);
         }
-        if (param0 >= -14) {
+        if (obfuscationGuard >= -14) {
           md.g((byte) 61);
         }
         nn.field_g.a(pb.a(this.field_u, 4), 581, -12 + (nn.field_g.field_B + 373), 0, -1);

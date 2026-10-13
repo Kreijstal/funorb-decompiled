@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends nm {
+final class cq extends IntrusiveNode {
     String[][] field_r;
     int field_s;
     static String field_i;
@@ -59,8 +59,8 @@ final class cq extends nm {
             bm.field_d.a((byte) -126, param0);
           }
           de.a(param0, false);
-          if (null != no.field_p) {
-            no.field_p.a(true, param0);
+          if (null != CircleBody.field_p) {
+            CircleBody.field_p.a(true, param0);
           }
           eh.a(param0, true);
           return;
@@ -74,8 +74,8 @@ final class cq extends nm {
           bm.field_d.a((byte) -126, param0);
         }
         de.a(param0, false);
-        if (null != no.field_p) {
-          no.field_p.a(true, param0);
+        if (null != CircleBody.field_p) {
+          CircleBody.field_p.a(true, param0);
         }
         eh.a(param0, true);
         return;

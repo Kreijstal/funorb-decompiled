@@ -69,12 +69,12 @@ final class jf {
         if (param0 != -99) {
           field_g = (String) null;
         }
-        ii var1 = (ii) (fr.field_M.a(127));
+        ii var1 = (ii) (fr.field_M.removeLast(127));
         if (var1 == null) {
           var1 = new ii();
         }
         var1.a(lb.field_l, lb.field_i, lb.field_c, lb.field_d, param0 ^ 194, lb.field_f, lb.field_b, lb.field_j);
-        hi.field_v.a(var1, (byte) 3);
+        hi.field_v.addLast(var1, (byte) 3);
     }
 
     final static mp a(int param0, String param1) {

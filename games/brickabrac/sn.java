@@ -66,7 +66,7 @@ final class sn extends ki {
           lb.g(param2, param3, 153, 240, 16777215, 11184810);
         }
         if (param1 > -1) {
-          la.a(param2, param3, 153, 240, nm.field_h[param1], 11970969, 152);
+          la.a(param2, param3, 153, 240, IntrusiveNode.field_h[param1], 11970969, 152);
         }
         if (this.b((byte) -112)) {
           re.field_h.c(param2, param3);
@@ -81,7 +81,7 @@ final class sn extends ki {
             tf.a(-10, param3, var6, 2, -119, hg.field_g);
             var6.a(this.field_m, param3, (byte) 78);
           }
-          sn.a(t.field_a, 2, param4, 306, -10, nm.field_d, param2, 5, param0, 480, er.field_d, param3, var6.field_p);
+          sn.a(t.field_a, 2, param4, 306, -10, IntrusiveNode.field_d, param2, 5, param0, 480, er.field_d, param3, var6.field_p);
         } else {
           lb.g(param2, param0, 306, 480, 16777215);
         }
@@ -117,7 +117,7 @@ final class sn extends ki {
         kq.field_o = pl.a("construct", "construction_smoke", (byte) -128, i.field_m);
         re.field_h = pl.a("construct", "construction_small", (byte) -74, i.field_m);
         t.field_a = jh.a(0, sf.field_Y);
-        nm.field_d = jh.a(0, af.field_D);
+        IntrusiveNode.field_d = jh.a(0, af.field_D);
         hg.field_g = jh.a(0, sf.field_cb);
         er.field_d = jh.a(0, kq.field_o);
         rd.field_d[0] = cr.a("construct", i.field_m, "construction_caps", 2);

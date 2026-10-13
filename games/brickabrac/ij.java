@@ -32,43 +32,43 @@ final class ij implements wb {
 
     public final void a(boolean param0) {
         boolean discarded$0 = false;
-        vl.a(127, 50);
+        NodeDeque.a(127, 50);
         pa var2 = new pa(cd.field_h);
         jp[] var3 = (jp[]) null;
-        ie.a(1, (jp[]) null, vn.field_G, 240, af.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
+        ie.a(1, (jp[]) null, Ball.field_G, 240, af.field_A, 8, 2, nn.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
         if (param0) {
           discarded$0 = this.b((byte) -1);
         }
         jp[] var4 = (jp[]) null;
-        nh.a((jp[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, af.field_A, 0, vn.field_G, 2, (byte) -110, 8);
+        nh.a((jp[]) null, 240, 8, 320, 0, nn.field_g, 2, 0, 1, af.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         ka.a(20, -97, 20, var2);
-        oa.a(jf.field_d, no.field_t, 2, j.field_jb, tk.field_k, wn.field_c, (jp[][]) null, gq.field_Rb, true, 1, jb.field_I, j.field_jb, wd.field_C, qh.field_h, 22287);
+        oa.a(jf.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, tk.field_k, wn.field_c, (jp[][]) null, gq.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, wd.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         pn.b(-9, 200);
         op.a(new sb(), 0);
         td.g(0);
         qn.a(240, 0, 640, 0, -6532);
-        bm.a(kh.field_i, qb.field_r, 24876, uj.field_o, gf.field_e, ki.field_f, i.field_s);
+        bm.a(kh.field_i, qb.field_r, 24876, uj.field_o, GameScreen.field_e, ki.field_f, i.field_s);
         oc.a(1, ob.field_D);
         hk.h((byte) 55);
         hk.a((byte) 115, ki.field_f);
-        lp.field_rb = (gf) ((Object) bq.a(21, 28472));
+        lp.field_rb = (GameScreen) ((Object) bq.a(21, 28472));
         co.a((byte) -79, cd.field_g);
     }
 
-    final static gf a(int param0, byte param1) {
+    final static GameScreen a(int param0, byte param1) {
         if (-1 == param0) {
-          return (gf) ((Object) pe.field_o);
+          return (GameScreen) ((Object) pe.field_o);
         }
         if (param0 == -2) {
-          return (gf) ((Object) ki.field_p);
+          return (GameScreen) ((Object) ki.field_p);
         }
         if (param1 > -5) {
           field_e = (mh) null;
         }
-        return (gf) ((Object) bq.a(param0, 28472));
+        return (GameScreen) ((Object) bq.a(param0, 28472));
     }
 
     public static void c(boolean param0) {
@@ -166,8 +166,8 @@ final class ij implements wb {
         bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, ki.field_f);
         bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ul.field_l);
         bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
-        bh.field_tb.a(qb.field_r, false, vi.field_n, wl.field_Q);
-        bh.field_tb.a(i.field_s, false, vi.field_n, wl.field_Q);
+        bh.field_tb.a(qb.field_r, false, MovingBody.field_n, wl.field_Q);
+        bh.field_tb.a(i.field_s, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(uj.field_o, false, kc.field_i, sg.field_m);
         bh.field_tb.a(kh.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
@@ -188,7 +188,7 @@ final class ij implements wb {
             if (var3 != 2) {
               if (3 != var3) {
                 if (4 == var3) {
-                  ai.a((byte) 24, 92.0f, vn.field_x);
+                  ai.a((byte) 24, 92.0f, Ball.field_x);
                   sl.field_C.g(121);
                   sb.a(nl.field_a, hp.field_i, 2);
                 } else {

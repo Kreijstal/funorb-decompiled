@@ -100,7 +100,7 @@ final class jg {
             }
             if (param2 <= 116) {
               var15 = (lj) null;
-              jg.a(36, (j) null, (lj) null, -113, -57, 112);
+              jg.a(36, (PlayerBoard) null, (lj) null, -113, -57, 112);
             }
             var5_long = this.field_l;
             var7 = param1;
@@ -417,7 +417,7 @@ final class jg {
         }
     }
 
-    final static void a(int param0, j param1, lj param2, int param3, int param4, int param5) {
+    final static void a(int param0, PlayerBoard param1, lj param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         jp var8 = null;
@@ -436,7 +436,7 @@ final class jg {
         int var9Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          var6_int = param1.field_mb / (param3 << 1) + param0;
+          var6_int = param1.boardWidth / (param3 << 1) + param0;
           var7 = param1.field_wb / (param3 << 1) + param1.field_wb / (param3 << 3) + param5;
           var8 = gg.field_p[param2.field_o];
           var9 = 96;

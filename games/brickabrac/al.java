@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends nm {
+final class al extends IntrusiveNode {
     int[] field_k;
-    static vl field_m;
+    static NodeDeque field_m;
     boolean field_i;
     static mh field_n;
     static wb field_j;

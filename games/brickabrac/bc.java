@@ -41,7 +41,7 @@ abstract class bc {
           fj.field_Qb = param1;
           am.field_cc = param2;
           ni.field_Rb = null;
-          vo.field_x = param3;
+          Paddle.field_x = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

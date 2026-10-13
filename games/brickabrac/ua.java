@@ -5,10 +5,10 @@ final class ua {
     static String[] field_b;
     static wg field_d;
     static String field_e;
-    static vl field_c;
+    static NodeDeque field_c;
     static String field_a;
 
-    final static void a(j param0, int param1, int param2, int param3, int param4, int param5, ak param6) {
+    final static void a(PlayerBoard param0, int param1, int param2, int param3, int param4, int param5, MultiplayerMatch param6) {
         try {
           if (param3 >= -53) {
             field_e = (String) null;

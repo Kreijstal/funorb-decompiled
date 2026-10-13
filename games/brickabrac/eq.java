@@ -22,7 +22,7 @@ final class eq {
           field_g = (wh) null;
         }
         lq.d(125);
-        no.field_p = null;
+        CircleBody.field_p = null;
         rd.a(param0 - 8);
     }
 

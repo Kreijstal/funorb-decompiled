@@ -43,7 +43,7 @@ final class la {
           if (var16 < param5) {
             var19 = (var18 << 4) - param12;
             var20 = (var16 << param4) / param6;
-            var21 = on.field_L[var20] * param10 >> 15;
+            var21 = Brick.field_L[var20] * param10 >> 15;
             var22 = var18 + (var19 * var21 + 131072 >> 18);
             if (var22 > lb.field_c - 1) {
               var22 = lb.field_c - 1;
@@ -80,7 +80,7 @@ final class la {
           if (var16Lifetime1 < param5) {
             var19Lifetime1 = (var18Lifetime1 << 4) - param12;
             var20Lifetime1 = (var16Lifetime1 << param4) / param6;
-            var21Lifetime1 = on.field_L[var20Lifetime1] * param10 >> 15;
+            var21Lifetime1 = Brick.field_L[var20Lifetime1] * param10 >> 15;
             var22Lifetime1 = var18Lifetime1 + (var19Lifetime1 * var21Lifetime1 + 131072 >> 18);
             if (var22Lifetime1 < 0) {
               var22Lifetime1 = 0;
@@ -144,7 +144,7 @@ final class la {
           if (var16 < param5) {
             var19 = (var18 << 4) - param12;
             var20 = (var16 << param4) / param6;
-            var21 = on.field_L[var20] * param10 >> 15;
+            var21 = Brick.field_L[var20] * param10 >> 15;
             var22 = var18 + (var19 * var21 + 131072 >> 18);
             if (var22 > lb.field_c - 1) {
               var22 = lb.field_c - 1;
@@ -181,7 +181,7 @@ final class la {
           if (var16Lifetime1 < param5) {
             var19Lifetime1 = (var18Lifetime1 << 4) - param12;
             var20Lifetime1 = (var16Lifetime1 << param4) / param6;
-            var21Lifetime1 = on.field_L[var20Lifetime1] * param10 >> 15;
+            var21Lifetime1 = Brick.field_L[var20Lifetime1] * param10 >> 15;
             var22Lifetime1 = var18Lifetime1 + (var19Lifetime1 * var21Lifetime1 + 131072 >> 18);
             if (var22Lifetime1 < 0) {
               var22Lifetime1 = 0;

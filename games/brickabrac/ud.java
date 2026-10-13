@@ -4,8 +4,8 @@
 final class ud extends km {
     private static int[] field_x;
     static long field_E;
-    private vl field_z;
-    private vl[] field_F;
+    private NodeDeque field_z;
+    private NodeDeque[] field_F;
     static int field_v;
     static int field_w;
     static String field_t;
@@ -79,7 +79,7 @@ final class ud extends km {
 
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         int stackIn_17_0;
         int stackIn_17_1;
         int stackIn_17_2;
@@ -91,7 +91,7 @@ final class ud extends km {
         jp var4;
         int var5;
         int var6;
-        super.b((byte) -101);
+        super.drawScreen((byte) -101);
         al.a(13, 19);
         im.a(550, 5, 33, 5, 140, (byte) -106, 45);
         im.a(160, 5, 243, 5, 178, (byte) -88, 45);
@@ -140,7 +140,7 @@ final class ud extends km {
         }
         this.field_y.c((byte) 28);
         this.a(0);
-        if (param0 >= -14) {
+        if (obfuscationGuard >= -14) {
           this.field_D = -125;
         }
     }
@@ -174,18 +174,18 @@ final class ud extends km {
 
     private final void c(int param0, int param1) {
         int var3;
-        on var4;
+        Brick var4;
         int var5;
         int var3Lifetime1;
         var5 = BrickABrac.field_J ? 1 : 0;
         for (var3 = 0; this.field_F.length > var3; var3++) {
           if (this.field_F[var3] != null) {
-            this.field_F[var3].c((byte) -80);
+            this.field_F[var3].clear((byte) -80);
           } else {
-            this.field_F[var3] = new vl();
+            this.field_F[var3] = new NodeDeque();
           }
         }
-        this.field_z.c((byte) -78);
+        this.field_z.clear((byte) -78);
         td.a(this.field_F, this.field_A.field_j[param1], this.field_r, this.field_z, this.field_s, 10792131);
         cg.a(this.field_F, (byte) 35, this.field_z, false);
         this.field_I = 122880;
@@ -196,23 +196,23 @@ final class ud extends km {
         }
         this.field_B = 0;
         for (var3Lifetime1 = 0; this.field_F.length > var3Lifetime1; var3Lifetime1++) {
-          var4 = (on) (this.field_F[var3Lifetime1].d(param0 + 6735));
+          var4 = (Brick) (this.field_F[var3Lifetime1].first(param0 + 6735));
           while (var4 != null) {
             if ((1 & var4.field_N) == 0) {
-              if (this.field_D < var4.field_j + var4.field_u) {
-                this.field_D = var4.field_j + var4.field_u;
+              if (this.field_D < var4.x256 + var4.width256) {
+                this.field_D = var4.x256 + var4.width256;
               }
-              if (this.field_I > var4.field_m) {
-                this.field_I = var4.field_m;
+              if (this.field_I > var4.y256) {
+                this.field_I = var4.y256;
               }
-              if (var4.field_m + var4.field_s > this.field_B) {
-                this.field_B = var4.field_s + var4.field_m;
+              if (var4.y256 + var4.height256 > this.field_B) {
+                this.field_B = var4.height256 + var4.y256;
               }
-              if (var4.field_j < this.field_u) {
-                this.field_u = var4.field_j;
+              if (var4.x256 < this.field_u) {
+                this.field_u = var4.x256;
               }
             }
-            var4 = (on) (this.field_F[var3Lifetime1].a((byte) 116));
+            var4 = (Brick) (this.field_F[var3Lifetime1].next((byte) 116));
           }
         }
     }
@@ -249,12 +249,12 @@ final class ud extends km {
         }
     }
 
-    final boolean a(char param0, int param1, int param2) {
-        if (param1 <= 98) {
+    final boolean handleKey(char character, int keyCode, int obfuscationGuard) {
+        if (keyCode <= 98) {
           this.a(true);
         }
-        if (param2 != 48) {
-          return super.a(param0, 100, param2);
+        if (obfuscationGuard != 48) {
+          return super.handleKey(character, 100, obfuscationGuard);
         }
         if (cf.a((byte) 62)) {
           qg.field_t = true;
@@ -293,15 +293,15 @@ final class ud extends km {
         if (!ma.field_I.b(96)) {
           return om.field_pc;
         }
-        return gf.field_d;
+        return GameScreen.field_d;
     }
 
     private ud(int param0, int[] param1, int param2) {
         super(param0, 180, 460, 402, 35, param1);
         int var4_int = 0;
         int var5 = 0;
-        this.field_F = new vl[3];
-        this.field_z = new vl();
+        this.field_F = new NodeDeque[3];
+        this.field_z = new NodeDeque();
         this.field_r = new kq();
         this.field_s = new ga();
         this.field_G = 0;
@@ -329,7 +329,7 @@ final class ud extends km {
         var7 = BrickABrac.field_J ? 1 : 0;
         var8 = this.field_m[param0];
         if (param2 != 123) {
-          this.a('ﾉ', -55, 73);
+          this.handleKey('ﾉ', -55, 73);
         }
         var5 = var8.field_f;
         var6 = var5;
@@ -401,7 +401,7 @@ final class ud extends km {
 
     private final void a(int param0, int param1, int param2, int param3, byte param4) {
         int var8 = 0;
-        on var9 = null;
+        Brick var9 = null;
         int var10 = BrickABrac.field_J ? 1 : 0;
         if (param4 != 85) {
           this.field_s = (ga) null;
@@ -411,12 +411,12 @@ final class ud extends km {
         int var7 = -this.field_I + this.field_B >> 9;
         param0 = param0 + (param1 - var7) / 2;
         for (var8 = 0; var8 < this.field_F.length; var8++) {
-          var9 = (on) (this.field_F[var8].d(-109));
+          var9 = (Brick) (this.field_F[var8].first(-109));
           while (var9 != null) {
             if ((1 & var9.field_N) == 0) {
-              pa.field_m[var9.field_i].a((var9.field_j - this.field_u >> 9) + param2, (var9.field_m - this.field_I >> 9) + param0, 17, 8);
+              pa.field_m[var9.typeId].a((var9.x256 - this.field_u >> 9) + param2, (var9.y256 - this.field_I >> 9) + param0, 17, 8);
             }
-            var9 = (on) (this.field_F[var8].a((byte) 116));
+            var9 = (Brick) (this.field_F[var8].next((byte) 116));
           }
         }
     }
@@ -488,10 +488,10 @@ final class ud extends km {
         return;
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
-        super.a(param0, param1, -113);
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
+        super.advanceScreen(updateFlag, inputEnabled, -113);
         this.field_y.b(false);
-        if (param2 >= -52) {
+        if (obfuscationGuard >= -52) {
           field_v = -8;
         }
     }

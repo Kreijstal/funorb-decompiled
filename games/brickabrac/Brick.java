@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends bn {
+final class Brick extends RectangleBody {
     static String field_F;
     int field_H;
     int field_B;
@@ -26,7 +26,7 @@ final class on extends bn {
     int field_C;
     static jp field_w;
 
-    final int a(int param0, StringBuilder param1) {
+    final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         StringBuilder discarded$4 = null;
         StringBuilder discarded$5 = null;
         StringBuilder discarded$6 = null;
@@ -39,15 +39,15 @@ final class on extends bn {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 79) {
+          if (obfuscationGuard <= 79) {
             this.f(-33);
           }
-          var3_int = super.a(107, param1);
-          if (param1 != null) {
-            discarded$4 = param1.append(this.field_j + " " + this.field_m + " ");
-            discarded$5 = param1.append(this.field_k + " " + " " + this.field_o + " ");
-            discarded$6 = param1.append(this.field_G + " " + this.field_J + " " + this.field_S + " " + this.field_M + " ");
-            discarded$7 = param1.append(this.field_R + "\n");
+          var3_int = super.computeSyncChecksum(107, diagnostics);
+          if (diagnostics != null) {
+            discarded$4 = diagnostics.append(this.x256 + " " + this.y256 + " ");
+            discarded$5 = diagnostics.append(this.velocityX256 + " " + " " + this.velocityY256 + " ");
+            discarded$6 = diagnostics.append(this.field_G + " " + this.field_J + " " + this.field_S + " " + this.field_M + " ");
+            discarded$7 = diagnostics.append(this.field_R + "\n");
           }
           var3_int = var3_int ^ (this.field_J * 19 + this.field_G * 23 - (-(this.field_S * 17) - 4641) ^ 405 + 27 * this.field_N << 21 ^ 47802 + this.field_M * 3 << 4 ^ 4643 + this.field_R * 23 << 8);
           var3_int = var3_int ^ this.field_H * 7 + 35 << 2;
@@ -57,8 +57,8 @@ final class on extends bn {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("on.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("on.A(").append(obfuscationGuard).append(',');
+          if (diagnostics == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -74,7 +74,7 @@ final class on extends bn {
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var3_intLifetime1;
-        if (param0.field_p.a(false)) {
+        if (param0.field_p.isEmpty(false)) {
           return;
         }
         if (param1 > -87) {
@@ -82,14 +82,14 @@ final class on extends bn {
         }
         try {
           this.field_G = param0.field_t;
-          this.field_P = new ee[param0.field_p.e(119)];
+          this.field_P = new ee[param0.field_p.size(119)];
           var3_int = 0;
-          var4_ref_ee = (ee) (param0.field_p.d(-38));
+          var4_ref_ee = (ee) (param0.field_p.first(-38));
           while (var4_ref_ee != null) {
             incrementValue$0 = var3_int;
             var3_int++;
             this.field_P[incrementValue$0] = var4_ref_ee;
-            var4_ref_ee = (ee) (param0.field_p.a((byte) 116));
+            var4_ref_ee = (ee) (param0.field_p.next((byte) 116));
           }
           this.field_v = -1 + this.field_P.length;
           this.field_C = 0;
@@ -106,19 +106,19 @@ final class on extends bn {
         }
     }
 
-    on() {
+    Brick() {
         this(0, 0, 0, 0, 0);
     }
 
-    on(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        super(param0, param1, param2, param3, 8704, 4096, param4);
+    Brick(int x256, int y256, int velocityX256, int velocityY256, int typeId, int brickFlags, int brickState, int hitState) {
+        super(x256, y256, velocityX256, velocityY256, 8704, 4096, typeId);
         this.field_R = -1;
-        this.field_J = param7;
-        this.field_N = param5;
-        this.field_M = param6;
+        this.field_J = hitState;
+        this.field_N = brickFlags;
+        this.field_M = brickState;
     }
 
-    private final void a(j param0, int param1) {
+    private final void a(PlayerBoard param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -129,12 +129,12 @@ final class on extends bn {
             this.a((byte) -67, false);
           }
           if ((this.field_N & 2) != 0 &&
-            param0.a(26, this.field_i)) {
-            param0.field_pb.a(new ge(this.field_j + this.field_u / 2 - 2048, this.field_m + this.field_s * 2, this.field_i), (byte) 3);
+            param0.a(26, this.typeId)) {
+            param0.field_pb.addLast(new ge(this.x256 + this.width256 / 2 - 2048, this.y256 + this.height256 * 2, this.typeId), (byte) 3);
             if (!r.field_A) {
               return;
             }
-            jc.a(this.field_i, 2, (byte) -92);
+            jc.a(this.typeId, 2, (byte) -92);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -156,7 +156,7 @@ final class on extends bn {
           this.a(param0, (byte) -105);
           this.a((byte) 36, param1);
           if (param2 != 4) {
-            on.a((byte) -120, -81);
+            Brick.a((byte) -120, -81);
           }
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "on.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -166,20 +166,20 @@ final class on extends bn {
     final void a(byte param0, boolean param1) {
         ee var6 = this.field_P[this.field_v];
         ee var4 = this.field_P[this.field_C];
-        this.field_k = -var6.field_j + var4.field_j;
+        this.velocityX256 = -var6.x256 + var4.x256;
         int var5 = var4.field_t;
-        this.field_o = var4.field_m - var6.field_m;
+        this.velocityY256 = var4.y256 - var6.y256;
         if (param0 <= 33) {
           this.f(-3);
         }
-        this.field_j = this.field_S * this.field_k / var5 + var6.field_j;
-        this.field_m = var6.field_m + this.field_o * this.field_S / var5;
+        this.x256 = this.field_S * this.velocityX256 / var5 + var6.x256;
+        this.y256 = var6.y256 + this.velocityY256 * this.field_S / var5;
         if (param1) {
-          this.field_k = this.field_k / var5;
-          this.field_o = this.field_o / var5;
+          this.velocityX256 = this.velocityX256 / var5;
+          this.velocityY256 = this.velocityY256 / var5;
         } else {
-          this.field_k = 0;
-          this.field_o = 0;
+          this.velocityX256 = 0;
+          this.velocityY256 = 0;
         }
     }
 
@@ -200,7 +200,7 @@ final class on extends bn {
         field_F = null;
     }
 
-    final void a(byte param0, j param1, no param2) {
+    final void a(byte param0, PlayerBoard param1, CircleBody param2) {
         int dupTemp$0 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
@@ -216,46 +216,46 @@ final class on extends bn {
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        vn var7 = null;
+        Ball var7 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var7 = (vn) (param2);
-          if (this.field_i == 28) {
+          var7 = (Ball) (param2);
+          if (this.typeId == 28) {
             param1.a((byte) -63, this, var7);
             return;
           }
-          if ((sg.field_n & 1 << this.field_i) != 0 ||
+          if ((sg.field_n & 1 << this.typeId) != 0 ||
             var7.field_v == 0 &&
             var7.field_J == 0) {
             super.a((byte) 53, param1, param2);
             var7.field_I = var7.field_I + 1;
             if (sh.field_a != 8 &&
               sh.field_a != 4) {
-              var7.field_o = -var7.field_o;
-              var5 = ae.field_b * (this.field_o - var7.field_o);
+              var7.velocityY256 = -var7.velocityY256;
+              var5 = ae.field_b * (this.velocityY256 - var7.velocityY256);
               if (var5 < 0) {
-                var7.field_o = this.field_o;
+                var7.velocityY256 = this.velocityY256;
               }
             } else {
-              var7.field_k = -var7.field_k;
-              var5 = mn.field_A * (this.field_k - var7.field_k);
+              var7.velocityX256 = -var7.velocityX256;
+              var5 = mn.field_A * (this.velocityX256 - var7.velocityX256);
               if (0 > var5) {
-                var7.field_k = this.field_k;
+                var7.velocityX256 = this.velocityX256;
               }
             }
             var7.field_C = var7.field_C + 1;
             if ((var7.field_I & 3) == 0) {
-              var7.field_k = var7.field_k + (-param1.a(4, (byte) 62) + 2);
-              var7.field_o = var7.field_o + (2 - param1.a(4, (byte) 62));
+              var7.velocityX256 = var7.velocityX256 + (-param1.a(4, (byte) 62) + 2);
+              var7.velocityY256 = var7.velocityY256 + (2 - param1.a(4, (byte) 62));
             }
           }
           stackIn_21_0 = (var7.field_J != 0) ? 0 : 1;
           var5Lifetime1 = stackIn_21_0;
           stackIn_24_0 = var5Lifetime1;
-          if (this.field_i == 19 &&
+          if (this.typeId == 19 &&
             sh.field_a != 1) {
             stackIn_26_1 = 0;
           } else {
@@ -263,7 +263,7 @@ final class on extends bn {
           }
           var5Lifetime2 = stackIn_24_0 & stackIn_26_1;
           stackIn_29_0 = var5Lifetime2;
-          if (20 == this.field_i &&
+          if (20 == this.typeId &&
             sh.field_a != 2) {
             stackIn_31_1 = 0;
           } else {
@@ -271,26 +271,26 @@ final class on extends bn {
           }
           var5Lifetime3 = stackIn_29_0 & stackIn_31_1;
           if (var5Lifetime3 != 0) {
-            if (25 == this.field_i) {
+            if (25 == this.typeId) {
               param1.a(-27);
             }
-            if (this.field_i != 27 ||
+            if (this.typeId != 27 ||
               this.field_R != 26) {
-              if (this.field_i == 26 &&
+              if (this.typeId == 26 &&
                 this.field_R == 27) {
-                this.field_i = 27;
+                this.typeId = 27;
                 this.field_R = 0;
                 this.field_B = 1;
               } else {
-                if (param1.field_l + 1 != ej.field_E[this.field_i]) {
+                if (param1.field_l + 1 != ej.field_E[this.typeId]) {
                   if ((this.field_N & 1) == 0) {
                     param1.field_l = 0;
                   }
                 } else {
                   param1.field_l = param1.field_l + 1;
                 }
-                this.field_R = ue.field_b[this.field_i];
-                dupTemp$0 = rb.field_a[this.field_i];
+                this.field_R = ue.field_b[this.typeId];
+                dupTemp$0 = rb.field_a[this.typeId];
                 this.field_B = dupTemp$0;
                 if (dupTemp$0 < 0) {
                   if (param1.a(100, (byte) 62) > 65) {
@@ -313,18 +313,18 @@ final class on extends bn {
                 }
                 this.a(param1, 15165);
               }
-              this.field_l = 0;
+              this.stateWord = 0;
             }
           }
-          if (19 == this.field_i &&
+          if (19 == this.typeId &&
             this.field_R < 0) {
-            this.field_R = this.field_i;
+            this.field_R = this.typeId;
             this.field_B = 12;
           }
-          if (20 == this.field_i &&
+          if (20 == this.typeId &&
             this.field_R < 0) {
             this.field_B = 12;
-            this.field_R = this.field_i;
+            this.field_R = this.typeId;
           }
           if (param0 != 53) {
             field_F = (String) null;
@@ -350,7 +350,7 @@ final class on extends bn {
         }
     }
 
-    final boolean a(no param0, byte param1) {
+    final boolean resolveCircleCollision(CircleBody circle, byte obfuscationGuard) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_13_0 = false;
@@ -364,27 +364,27 @@ final class on extends bn {
             0 == this.field_S) {
             return false;
           }
-          if ((1 << this.field_i & sg.field_n) == 0 &&
-            0 != ((vn) (param0)).field_J) {
+          if ((1 << this.typeId & sg.field_n) == 0 &&
+            0 != ((Ball) (circle)).field_J) {
             return false;
           }
           if (this.field_R == 0) {
             return false;
           }
-          var3_int = -83 % ((-29 - param1) / 35);
-          stackIn_13_0 = super.a(param0, (byte) -120);
+          var3_int = -83 % ((-29 - obfuscationGuard) / 35);
+          stackIn_13_0 = super.resolveCircleCollision(circle, (byte) -120);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_16_0 = var3;
           stackIn_16_1 = new StringBuilder().append("on.F(");
-          if (param0 == null) {
+          if (circle == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw qb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -394,12 +394,12 @@ final class on extends bn {
         int var3 = var2 - ml.field_b * ml.field_b;
         fe.field_gb.a(-124 + (lb.field_d - 90), 90, -(199 * var3 / var2) + var1, 199, (byte) 64);
         if (param0 >= -50) {
-          on.d(61);
+          Brick.d(61);
         }
         rm.field_a.a(-4 + lb.field_d - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
     }
 
-    on(int param0, int param1, int param2, int param3, int param4) {
+    Brick(int param0, int param1, int param2, int param3, int param4) {
         this(param0, param1, param2, param3, param4, 0, 0, 0);
     }
 
@@ -412,7 +412,7 @@ final class on extends bn {
         this.field_v = fieldTemp$1 % this.field_P.length;
         if (param0 <= 61) {
           wq var3 = (wq) null;
-          this.a(-99, (wq) null);
+          this.readBodySnapshot(-99, (wq) null);
         }
         this.field_J = this.field_J % this.field_G;
         this.field_S = 0;
@@ -420,7 +420,7 @@ final class on extends bn {
 
     final static int a(byte param0, int param1) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        qj.field_j = 0;
+        GameplayScreen.field_j = 0;
         dm.field_d = null;
         fc.field_e = null;
         int var2 = gd.field_a;
@@ -451,7 +451,7 @@ final class on extends bn {
         return -1;
     }
 
-    final void a(int param0, wq param1) {
+    final void readBodySnapshot(int obfuscationGuard, wq packet) {
         cl var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -459,27 +459,27 @@ final class on extends bn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param0 <= 89) {
+          if (obfuscationGuard <= 89) {
             var4 = (cl) null;
             this.a((cl) null, (byte) 44);
           }
-          super.a(93, param1);
-          this.field_R = param1.b(true);
+          super.readBodySnapshot(93, packet);
+          this.field_R = packet.b(true);
           if (this.field_R > 0) {
-            this.field_B = param1.l(255);
+            this.field_B = packet.l(255);
           }
-          this.field_N = param1.l(255) & 255;
+          this.field_N = packet.l(255) & 255;
           if ((4 & this.field_N) != 0) {
-            this.field_M = param1.l(255);
-            this.field_J = param1.i(65280);
+            this.field_M = packet.l(255);
+            this.field_J = packet.i(65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("on.L(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("on.L(").append(obfuscationGuard).append(',');
+          if (packet == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

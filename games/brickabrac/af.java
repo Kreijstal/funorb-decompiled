@@ -8,38 +8,38 @@ abstract class af extends km {
     static jp[] field_A;
     private String[] field_E;
     static String[] field_s;
-    private vl field_C;
+    private NodeDeque field_C;
     int[] field_t;
-    private vl field_v;
+    private NodeDeque field_v;
     static jp field_D;
     private int[] field_y;
-    private vl[] field_z;
+    private NodeDeque[] field_z;
     private int field_x;
     private int field_w;
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int var5 = BrickABrac.field_J ? 1 : 0;
-        super.a(param0, param1, -89);
+        super.advanceScreen(updateFlag, inputEnabled, -89);
         nf.field_Y = -1;
-        i var4 = (i) (this.field_C.d(-117));
-        if (param2 > -52) {
+        i var4 = (i) (this.field_C.first(-117));
+        if (obfuscationGuard > -52) {
           field_u = 41;
         }
         while (var4 != null) {
           var4.a(-127);
-          var4 = (i) (this.field_C.a((byte) 116));
+          var4 = (i) (this.field_C.next((byte) 116));
         }
-        var4 = (i) (this.field_v.d(-113));
+        var4 = (i) (this.field_v.first(-113));
         while (var4 != null) {
           var4.a(-128);
           if (var4.field_p == 0) {
             var4.c(1);
           }
-          var4 = (i) (this.field_v.a((byte) 116));
+          var4 = (i) (this.field_v.next((byte) 116));
         }
     }
 
-    final void b(byte param0) {
+    final void drawScreen(byte obfuscationGuard) {
         int var13 = 0;
         int stackIn_9_0 = 0;
         int stackIn_17_0 = 0;
@@ -62,18 +62,18 @@ abstract class af extends km {
         int var11Lifetime1;
         var16 = null;
         var14 = BrickABrac.field_J ? 1 : 0;
-        super.b((byte) -104);
+        super.drawScreen((byte) -104);
         im.a(550, 5, 88, 5, 140, (byte) -72, 45);
-        vi.a((byte) 98, 560, 80, 140, 228);
-        var17 = (i) (this.field_C.d(-94));
+        MovingBody.a((byte) 98, 560, 80, 140, 228);
+        var17 = (i) (this.field_C.first(-94));
         while (var17 != null) {
           var17.a((byte) 103);
-          var17 = (i) (this.field_C.a((byte) 116));
+          var17 = (i) (this.field_C.next((byte) 116));
         }
-        var15 = (i) (this.field_v.d(-43));
+        var15 = (i) (this.field_v.first(-43));
         while (var15 != null) {
           var15.a((byte) 107);
-          var15 = (i) (this.field_v.a((byte) 116));
+          var15 = (i) (this.field_v.next((byte) 116));
         }
         sc.b(-81);
         im.a(146, 5, 146, 5, 233, (byte) -87, 45);
@@ -84,7 +84,7 @@ abstract class af extends km {
           stackIn_9_0 = nf.field_Y;
         }
         var3 = stackIn_9_0;
-        if (param0 >= -14) {
+        if (obfuscationGuard >= -14) {
           return;
         }
         var4 = ob.field_D.field_P + ob.field_D.field_B;
@@ -113,7 +113,7 @@ abstract class af extends km {
             ob.field_D.c(this.field_E[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
           }
-          ob.field_D.c(mq.field_c + on.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.field_C / 2), 2, -1);
+          ob.field_D.c(mq.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.field_P) - nj.field_z.field_C / 2), 2, -1);
           ob.field_D.c(fl.field_m, 209, -nn.field_g.field_P + var9, 2, -1);
           var11Lifetime1 = ob.field_D.c(fl.field_m) + 209;
           var12 = -(nj.field_z.field_z / 2) + var9;
@@ -291,12 +291,12 @@ abstract class af extends km {
         super(param0, 38, 460, 402, 35, param1);
         int var3_int = 0;
         this.field_E = new String[24];
-        this.field_C = new vl();
-        this.field_v = new vl();
+        this.field_C = new NodeDeque();
+        this.field_v = new NodeDeque();
         try {
-          this.field_z = new vl[1 + field_s.length / 16];
+          this.field_z = new NodeDeque[1 + field_s.length / 16];
           for (var3_int = 0; this.field_z.length > var3_int; var3_int++) {
-            this.field_z[var3_int] = new vl();
+            this.field_z[var3_int] = new NodeDeque();
           }
           this.field_y = new int[]{373};
         } catch (RuntimeException runtimeException) {
@@ -354,31 +354,31 @@ abstract class af extends km {
         this.field_x = 0;
         nf.field_Y = -1;
         nf.field_P = -1;
-        this.field_z[this.field_x].c((byte) -114);
+        this.field_z[this.field_x].clear((byte) -114);
         if (param2 <= 96) {
           return;
         }
         var4 = 0;
         for (var5 = 0; var5 < field_s.length; var5++) {
           if (!this.a(var5, (byte) 38)) {
-            this.field_z[this.field_x].a(new kq(var5), (byte) 3);
+            this.field_z[this.field_x].addLast(new kq(var5), (byte) 3);
             var4++;
             if (var4 == 16) {
               var4 = 0;
               fieldTemp$0 = this.field_x + 1;
               this.field_x = this.field_x + 1;
-              this.field_z[fieldTemp$0].c((byte) -46);
+              this.field_z[fieldTemp$0].clear((byte) -46);
             }
           }
         }
-        if (!this.field_z[this.field_x].a(false)) {
+        if (!this.field_z[this.field_x].isEmpty(false)) {
           this.field_x = this.field_x + 1;
         }
         this.a(2, 0, this.field_z[this.field_w]);
         return;
     }
 
-    private final void a(int param0, int param1, vl param2) {
+    private final void a(int param0, int param1, NodeDeque param2) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -397,22 +397,22 @@ abstract class af extends km {
           nf.field_P = -1;
           var4_int = 640 * param1;
           this.a(32367, this.field_v);
-          var5 = (i) (this.field_C.c(3));
+          var5 = (i) (this.field_C.removeFirst(3));
           while (var5 != null) {
             var5.field_x = -1;
             var5.field_p = -var4_int;
-            this.field_v.a(var5, (byte) 3);
-            var5 = (i) (this.field_C.c(3));
+            this.field_v.addLast(var5, (byte) 3);
+            var5 = (i) (this.field_C.removeFirst(3));
           }
           var6 = 82;
           var7 = (24 + var6 * 2) / param0;
           var8 = 150;
-          var9 = (kq) (param2.d(-74));
+          var9 = (kq) (param2.first(-74));
           var10 = 0;
           while (var9 != null) {
-            this.field_C.a(cn.a(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.field_p, param0 - 1), (byte) 3);
+            this.field_C.addLast(cn.a(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.field_p, param0 - 1), (byte) 3);
             rk.field_Qb = rk.field_Qb | 1 << var10;
-            var9 = (kq) (param2.a((byte) 116));
+            var9 = (kq) (param2.next((byte) 116));
             var10++;
             if (var10 != 8) {
               var7 += 56;
@@ -436,7 +436,7 @@ abstract class af extends km {
         }
     }
 
-    private final void a(int param0, vl param1) {
+    private final void a(int param0, NodeDeque param1) {
         int var4 = 0;
         i var5 = null;
         RuntimeException stackIn_9_0 = null;
@@ -447,12 +447,12 @@ abstract class af extends km {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param0 != 32367) {
-            this.field_C = (vl) null;
+            this.field_C = (NodeDeque) null;
           }
-          var5 = (i) (param1.c(param0 - 32364));
+          var5 = (i) (param1.removeFirst(param0 - 32364));
           while (var5 != null) {
             var5.c(1);
-            var5 = (i) (param1.c(3));
+            var5 = (i) (param1.removeFirst(3));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

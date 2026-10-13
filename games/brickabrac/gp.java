@@ -53,7 +53,7 @@ final class gp implements Iterable {
           if (s.a(-121)) {
             return true;
           }
-          if (no.field_p != null) {
+          if (CircleBody.field_p != null) {
             return true;
           }
           if (!jg.b(true)) {
@@ -67,7 +67,7 @@ final class gp implements Iterable {
         if (s.a(-121)) {
           return true;
         }
-        if (no.field_p != null) {
+        if (CircleBody.field_p != null) {
           return true;
         }
         if (!jg.b(true)) {

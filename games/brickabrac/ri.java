@@ -68,7 +68,7 @@ final class ri extends ib implements en {
         int var5Lifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_G.c((byte) -95);
+          this.field_G.clear((byte) -95);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;

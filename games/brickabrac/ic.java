@@ -19,17 +19,17 @@ final class ic {
           if (!param0) {
             field_b = 8L;
           }
-          param1.b((byte) 111);
-          var2 = (om) (rq.field_a.d(-76));
+          param1.unlink((byte) 111);
+          var2 = (om) (rq.field_a.first(-76));
           while (var2 != null) {
             if (var2.a(param1, true)) {
-              var2 = (om) (rq.field_a.a((byte) 116));
+              var2 = (om) (rq.field_a.next((byte) 116));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            rq.field_a.a(param1, (byte) 3);
+            rq.field_a.addLast(param1, (byte) 3);
             return;
           }
           il.a(param1, -90, var2);

@@ -257,7 +257,7 @@ final class og extends mh {
             this.field_Qb = (rk[]) null;
           }
           var3 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var3 < var2.length) {
               var4 = var2[var3];
               var4.field_L = 0;
@@ -268,11 +268,11 @@ final class og extends mh {
               }
             } else {
               if (null == this.field_Vb) {
-                break L2;
+                break scanLoop1;
               }
               this.field_Vb.f((byte) 41);
             }
-            this.field_Vb.b((byte) 111);
+            this.field_Vb.unlink((byte) 111);
             break;
           }
           this.field_Vb = null;
@@ -306,7 +306,7 @@ final class og extends mh {
           var2_int = 0;
           var3 = this.field_Qb;
           var4 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var4 < var3.length) {
               var5 = var3[var4];
               stackIn_17_0 = var2_int;
@@ -323,7 +323,7 @@ final class og extends mh {
               }
             } else {
               if (var2_int != 0) {
-                break L2;
+                break scanLoop1;
               }
               stackIn_17_0 = -1;
               stackIn_17_1 = this.field_Tb;
@@ -1094,19 +1094,19 @@ final class og extends mh {
           }
           var2Lifetime93 = gr.a(!param0, "gameoptnames,0,0");
           if (null != var2Lifetime93) {
-            j.field_jb[0][0] = q.a(var2Lifetime93, (byte) 87);
+            PlayerBoard.field_jb[0][0] = q.a(var2Lifetime93, (byte) 87);
           }
           var2Lifetime94 = gr.a(true, "gameoptnames,0,1");
           if (var2Lifetime94 != null) {
-            j.field_jb[0][1] = q.a(var2Lifetime94, (byte) 101);
+            PlayerBoard.field_jb[0][1] = q.a(var2Lifetime94, (byte) 101);
           }
           var2Lifetime95 = gr.a(true, "gameoptnames,0,2");
           if (null != var2Lifetime95) {
-            j.field_jb[0][2] = q.a(var2Lifetime95, (byte) 120);
+            PlayerBoard.field_jb[0][2] = q.a(var2Lifetime95, (byte) 120);
           }
           var2Lifetime96 = gr.a(!param0, "gameoptnames,0,3");
           if (null != var2Lifetime96) {
-            j.field_jb[0][3] = q.a(var2Lifetime96, (byte) 112);
+            PlayerBoard.field_jb[0][3] = q.a(var2Lifetime96, (byte) 112);
           }
           var2Lifetime97 = gr.a(true, "player_one");
           if (null != var2Lifetime97) {
@@ -1406,7 +1406,7 @@ final class og extends mh {
           }
           var2Lifetime171 = gr.a(true, "explain_plasma");
           if (null != var2Lifetime171) {
-            gf.field_g = q.a(var2Lifetime171, (byte) 92);
+            GameScreen.field_g = q.a(var2Lifetime171, (byte) 92);
           }
           var2Lifetime172 = gr.a(!param0, "keycode_player0_left");
           if (var2Lifetime172 != null) {

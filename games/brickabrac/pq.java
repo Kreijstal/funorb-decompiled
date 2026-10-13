@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pq extends nm {
+final class pq extends IntrusiveNode {
     int field_u;
     static qo field_o;
     jm[] field_l;
@@ -144,7 +144,7 @@ final class pq extends nm {
                 } else {
                   if (hj.field_Yb > pe.field_j) {
                     if (pe.field_j == 0) {
-                      vl.a(true, -122);
+                      NodeDeque.a(true, -122);
                     }
                     pe.field_j = pe.field_j + 1;
                   }
@@ -156,7 +156,7 @@ final class pq extends nm {
               if (0 >= pe.field_j) {
                 if (hj.field_Yb > eg.field_m) {
                   if (eg.field_m == 0) {
-                    vl.a(false, -64);
+                    NodeDeque.a(false, -64);
                   }
                   eg.field_m = eg.field_m + 1;
                 }

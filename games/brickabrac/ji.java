@@ -5,10 +5,10 @@ import java.util.*;
 
 final class ji implements Iterable {
     static boolean field_f;
-    private nm field_h;
+    private IntrusiveNode field_h;
     static Random field_e;
     static String field_g;
-    nm[] field_d;
+    IntrusiveNode[] field_d;
     int field_c;
     static mf field_a;
     static mh field_b;
@@ -26,50 +26,50 @@ final class ji implements Iterable {
         field_e = null;
     }
 
-    final nm a(long param0, int param1) {
-        nm var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        nm var4 = this.field_d[(int)((long)(this.field_c - 1) & param0)];
-        nm var5Lifetime1;
-        this.field_h = var4.field_e;
+        IntrusiveNode var4 = this.field_d[(int)((long)(this.field_c - 1) & param0)];
+        IntrusiveNode var5Lifetime1;
+        this.field_h = var4.next;
         if (param1 > 85) {
           while (var4 != this.field_h) {
-            if (param0 == this.field_h.field_g) {
+            if (param0 == this.field_h.key) {
               var5 = this.field_h;
-              this.field_h = this.field_h.field_e;
+              this.field_h = this.field_h.next;
               return var5;
             }
-            this.field_h = this.field_h.field_e;
+            this.field_h = this.field_h.next;
           }
           this.field_h = null;
           return null;
         }
         this.field_c = -72;
         while (var4 != this.field_h) {
-          if (param0 == this.field_h.field_g) {
+          if (param0 == this.field_h.key) {
             var5Lifetime1 = this.field_h;
-            this.field_h = this.field_h.field_e;
+            this.field_h = this.field_h.next;
             return var5Lifetime1;
           }
-          this.field_h = this.field_h.field_e;
+          this.field_h = this.field_h.next;
         }
         this.field_h = null;
         return null;
     }
 
-    final void a(byte param0, long param1, nm param2) {
-        nm var5 = null;
+    final void a(byte param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_b) {
-            param2.b((byte) 111);
+          if (null != param2.previous) {
+            param2.unlink((byte) 111);
           }
           var5 = this.field_d[(int)(param1 & (long)(-1 + this.field_c))];
-          param2.field_b = var5.field_b;
-          param2.field_e = var5;
-          param2.field_b.field_e = param2;
-          param2.field_e.field_b = param2;
+          param2.previous = var5.previous;
+          param2.next = var5;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
           int var6 = -64 % ((param0 + 60) / 52);
-          param2.field_g = param1;
+          param2.key = param1;
         } catch (RuntimeException runtimeException) {
           throw qb.a((Throwable) ((Object) runtimeException), "ji.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -118,16 +118,16 @@ final class ji implements Iterable {
 
     ji(int param0) {
         int var2 = 0;
-        nm dupTemp$1 = null;
-        nm var3;
-        this.field_d = new nm[param0];
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
+        this.field_d = new IntrusiveNode[param0];
         this.field_c = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$1 = new nm();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          var3.field_b = var3;
-          var3.field_e = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 

@@ -259,7 +259,7 @@ final class uf {
             stackIn_9_0 = rd.a(to.field_h, new String[]{param2}, (byte) 103);
             return stackIn_9_0;
           }
-          var8.b((byte) 111);
+          var8.unlink((byte) 111);
           var8.d(3);
           fo.field_h = fo.field_h - 1;
           var6 = k.field_h;

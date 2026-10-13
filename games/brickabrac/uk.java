@@ -196,11 +196,11 @@ final class uk extends km {
         }
     }
 
-    final void b(byte param0) {
-        super.b((byte) -50);
+    final void drawScreen(byte obfuscationGuard) {
+        super.drawScreen((byte) -50);
         im.a(550, 5, 243, 5, 140, (byte) -107, 45);
         nn.field_g.a(qn.field_p, 54, 149, 532, 225, 2, -1, 1, 1, 22);
-        if (param0 < -14) {
+        if (obfuscationGuard < -14) {
           this.a(0);
           return;
         }

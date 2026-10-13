@@ -17,7 +17,7 @@ final class kb extends mh {
 
     final static boolean a(long param0, int param1, String param2, int[] param3, int param4) {
         RuntimeException var6 = null;
-        j var7 = null;
+        PlayerBoard var7 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -27,8 +27,8 @@ final class kb extends mh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -3) {
-            var7 = (j) null;
-            kb.a((ak) null, 109, -70, (j) null);
+            var7 = (PlayerBoard) null;
+            kb.a((MultiplayerMatch) null, 109, -70, (PlayerBoard) null);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3 != null && (param4 != 2 ||
@@ -271,9 +271,9 @@ final class kb extends mh {
     final static mh h(int param0) {
         if (param0 != 2) {
           field_Vb = (mh) null;
-          return gf.field_f.field_Xb;
+          return GameScreen.field_f.field_Xb;
         }
-        return gf.field_f.field_Xb;
+        return GameScreen.field_f.field_Xb;
     }
 
     final static void a(String param0, int param1) {
@@ -299,7 +299,7 @@ final class kb extends mh {
         return false;
     }
 
-    final static int a(ak param0, int param1, int param2, j param3) {
+    final static int a(MultiplayerMatch param0, int param1, int param2, PlayerBoard param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int[] var5 = null;
@@ -314,7 +314,7 @@ final class kb extends mh {
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = ((1 << param1 & (param0.field_a | (param0.field_g | param0.field_i))) == 0) ? 0 : 1;
+          stackIn_3_0 = ((1 << param1 & (param0.playerMaskThree | (param0.playerMaskTwo | param0.playerMaskOne))) == 0) ? 0 : 1;
           var4_int = stackIn_3_0;
           if (param2 <= 63) {
             var5 = (int[]) null;

@@ -94,7 +94,7 @@ final class ei implements ub {
             } else {
               ke.field_b = ib.field_C;
             }
-            ke.field_b = nm.a(new CharSequence[]{(CharSequence) ((Object) ke.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
+            ke.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) ke.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
           }
           ej.field_I.m(param0 + 17);
           qa.e((byte) -117);

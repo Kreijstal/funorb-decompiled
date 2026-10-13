@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends vi {
+final class ee extends MovingBody {
     static jp field_p;
     static int field_q;
     static mh field_s;
@@ -46,15 +46,15 @@ final class ee extends vi {
         gg.field_t = null;
     }
 
-    final void a(int param0, wq param1) {
+    final void readBodySnapshot(int obfuscationGuard, wq packet) {
         try {
-          super.a(100, param1);
-          this.field_t = param1.i(65280);
-          if (param0 <= 89) {
+          super.readBodySnapshot(100, packet);
+          this.field_t = packet.i(65280);
+          if (obfuscationGuard <= 89) {
             field_p = (jp) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw qb.a((Throwable) ((Object) runtimeException), "ee.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw qb.a((Throwable) ((Object) runtimeException), "ee.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class ee extends vi {
         fr.a(true, (String) null, "");
     }
 
-    final int a(int param0, StringBuilder param1) {
+    final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -79,17 +79,17 @@ final class ee extends vi {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 79) {
+          if (obfuscationGuard < 79) {
             field_s = (mh) null;
           }
-          stackIn_3_0 = 1734820418 ^ super.a(99, param1) ^ 101 * this.field_t + 42148 << 2;
+          stackIn_3_0 = 1734820418 ^ super.computeSyncChecksum(99, diagnostics) ^ 101 * this.field_t + 42148 << 2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ee.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("ee.A(").append(obfuscationGuard).append(',');
+          if (diagnostics == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";

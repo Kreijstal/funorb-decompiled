@@ -18,7 +18,7 @@ final class ed {
 
     final static void a(boolean param0, mf param1, mf param2, byte param3) {
         try {
-          ai.a(lp.field_Ab, ul.field_m, f.field_a, vo.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
+          ai.a(lp.field_Ab, ul.field_m, f.field_a, Paddle.field_C, im.field_d, wi.field_n, tk.field_t, ad.field_l, (byte) 61, param0, ic.field_c, fp.field_u);
           if (param3 < 74) {
             ed.b(2, -57);
           }

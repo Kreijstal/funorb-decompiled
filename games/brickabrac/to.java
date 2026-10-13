@@ -23,7 +23,7 @@ final class to {
         }
         Object var5 = var4.g(1);
         if (var5 == null) {
-          var4.b((byte) 111);
+          var4.unlink((byte) 111);
           var4.d(3);
           this.field_d = this.field_d + var4.field_u;
           return null;
@@ -34,10 +34,10 @@ final class to {
           return var5;
         }
         ej var6 = new ej(var5, var4.field_u);
-        this.field_c.a((byte) 44, var4.field_g, var6);
+        this.field_c.a((byte) 44, var4.key, var6);
         this.field_j.a(var6, (byte) -119);
         ((sl) ((Object) var6)).field_j = 0L;
-        var4.b((byte) 111);
+        var4.unlink((byte) 111);
         var4.d(3);
         return var5;
     }
@@ -120,7 +120,7 @@ final class to {
           if (param1 == null) {
             return;
           }
-          param1.b((byte) 111);
+          param1.unlink((byte) 111);
           param1.d(3);
           this.field_d = this.field_d + param1.field_u;
           return;
