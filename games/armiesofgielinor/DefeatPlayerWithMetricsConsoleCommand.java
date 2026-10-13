@@ -88,7 +88,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
             param9.drawTransparent(param3, param2);
             if (!param1) {
               if (param8) {
-                fe.a(RegionAnchor.field_m[2], param3, param2, 56, 56);
+                GradientUiRenderer.multiplyScaledSprite(RegionAnchor.field_m[2], param3, param2, 56, 56);
                 RegionAnchor.field_m[2].d(param3, param2, 56, 56, 228);
               } else {
                 if (param4) {
@@ -104,7 +104,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
             param9.drawTransparent(0, 0);
             if (!param1) {
               if (param8) {
-                fe.a(RegionAnchor.field_m[2], 0, 0, 56, 56);
+                GradientUiRenderer.multiplyScaledSprite(RegionAnchor.field_m[2], 0, 0, 56, 56);
                 RegionAnchor.field_m[2].d(0, 0, 56, 56, 228);
               } else {
                 if (!param4) {

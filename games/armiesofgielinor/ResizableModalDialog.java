@@ -312,32 +312,32 @@ abstract class ResizableModalDialog extends ModalDialog {
               StateChangeEvent.a(var6_int, param2 ^ -12933, param5, param3);
             }
             if (vs.field_e[param4].hasCorpse(-121)) {
-              fe.a(NetworkGameShell.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);
+              GradientUiRenderer.multiplySprite(NetworkGameShell.boneShadowSprites[var6_int % 4], param3 - 10, -25 + param5);
             }
             var9 = EditableTextWidget.field_Q[vs.field_e[param4].terrainType];
             if (var9 > -1) {
               if (2 == var9) {
-                fe.a(oq.activeStructureShadows[17], -10 + param3, param5 - 25);
+                GradientUiRenderer.multiplySprite(oq.activeStructureShadows[17], -10 + param3, param5 - 25);
               } else {
                 if (vs.field_e[param4].terrainType == 3) {
                   MidiPcmStream.a((byte) -124, param3 + 30, param4 + ConsoleExpression.field_p[param4], 32 + param5);
                 } else {
                   if (var9 == 1) {
-                    fe.a(oq.activeStructureShadows[8 + var6_int % 3], -10 + param3, param5 - 55);
+                    GradientUiRenderer.multiplySprite(oq.activeStructureShadows[8 + var6_int % 3], -10 + param3, param5 - 55);
                   } else {
                     if (var9 == 9) {
-                      fe.a(oq.activeStructureShadows[14 + var6_int % 2], -10 + param3, param5 - 30);
+                      GradientUiRenderer.multiplySprite(oq.activeStructureShadows[14 + var6_int % 2], -10 + param3, param5 - 30);
                     } else {
                       if (8 != var9) {
                         if (var9 == 0) {
-                          fe.a(oq.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
+                          GradientUiRenderer.multiplySprite(oq.activeStructureShadows[var6_int % 8 + 0], param3 - 10, param5 - 35);
                         } else {
                           if (4 == var9) {
                             ab.a(35 + param5, ConsoleExpression.field_p[param4] + param4, param3 + 30, false);
                           }
                         }
                       } else {
-                        fe.a(oq.activeStructureShadows[var6_int % 2 + 11], -10 + param3, param5 - 55);
+                        GradientUiRenderer.multiplySprite(oq.activeStructureShadows[var6_int % 2 + 11], -10 + param3, param5 - 55);
                       }
                     }
                   }

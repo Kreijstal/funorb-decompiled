@@ -66,7 +66,7 @@ final class RadialSummonItem {
           } else {
             UnitModelPreview.field_d[this.godGroupId].drawWithBrightness(originX - (-this.offsetX + 25), -25 + (this.offsetY + originY), 128);
           }
-          fe.a(this.offsetX + originX, originY + this.offsetY, this.godGroupId, availability, fe.field_b);
+          GradientUiRenderer.drawParticleRings(this.offsetX + originX, originY + this.offsetY, this.godGroupId, availability, GradientUiRenderer.particlePhasePercent);
           if (var6 == 0) {
             return;
           }
@@ -96,7 +96,7 @@ final class RadialSummonItem {
           }
           km.field_h[0].drawTransparent(-23 + (this.offsetX + originX), -23 + originY + this.offsetY);
           if (var6 != 0) {
-            StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+            StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, GradientUiRenderer.scaleColour(TutorialLayout.field_g[this.godGroupId], 128));
             if (this.choiceId != 81) {
               DeployAction.field_x[this.choiceId].drawWithBrightness(-20 + this.offsetX + originX, -20 + (originY + this.offsetY), 0);
             }
@@ -105,7 +105,7 @@ final class RadialSummonItem {
           }
           return;
         }
-        StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, fe.b(TutorialLayout.field_g[this.godGroupId], 128));
+        StandardContentDialog.field_ob.drawTintedGrayscale(this.offsetX + (originX - 20), -20 + originY + this.offsetY, GradientUiRenderer.scaleColour(TutorialLayout.field_g[this.godGroupId], 128));
         if (this.choiceId == 81) {
           DeployAction.field_x[4].drawWithBrightness(-20 + (originX + this.offsetX), originY + this.offsetY - 20, 0);
         } else {

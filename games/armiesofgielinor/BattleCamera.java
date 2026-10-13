@@ -470,7 +470,7 @@ final class BattleCamera {
                 var9 > -1 &&
                 var9 < 1 + this.mapHeight) {
                 var18 = (-param1 + var15) * (-param1 + var15) + (var17 - param0) * (-param0 + var17);
-                var19 = 3 * fe.a(var18 * 4) - 30;
+                var19 = 3 * GradientUiRenderer.boundedIntegerSquareRoot(var18 * 4) - 30;
                 if (var19 < 0) {
                   var19 = 0;
                 }

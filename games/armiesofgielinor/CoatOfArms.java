@@ -260,7 +260,7 @@ final class CoatOfArms {
                 RegionAnchor.field_m[3].drawTransparent(0, 0);
               }
             } else {
-              fe.a(RegionAnchor.field_m[2], 0, 0);
+              GradientUiRenderer.multiplySprite(RegionAnchor.field_m[2], 0, 0);
               RegionAnchor.field_m[2].drawAdditive(0, 0, 228);
             }
           } else {
@@ -319,7 +319,7 @@ final class CoatOfArms {
                 RegionAnchor.field_m[3].drawTransparent(0, 0);
               }
             } else {
-              fe.a(RegionAnchor.field_m[2], 0, 0);
+              GradientUiRenderer.multiplySprite(RegionAnchor.field_m[2], 0, 0);
               RegionAnchor.field_m[2].drawAdditive(0, 0, 228);
             }
           }
@@ -380,7 +380,7 @@ final class CoatOfArms {
                 RegionAnchor.field_m[3].drawTransparent(0, 0);
               }
             } else {
-              fe.a(RegionAnchor.field_m[2], 0, 0);
+              GradientUiRenderer.multiplySprite(RegionAnchor.field_m[2], 0, 0);
               RegionAnchor.field_m[2].drawAdditive(0, 0, 228);
             }
           } else {

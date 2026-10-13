@@ -134,15 +134,15 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           CampaignDefinition.field_t.drawOpaque(param4 + 2, param7 + param6 - 73);
-          fe.b(param4 + 0, -76 + param6 + param7, 309, 71, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
+          GradientUiRenderer.drawHollowGradientFrame(param4 + 0, -76 + param6 + param7, 309, 71, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
           SoftwareRaster.b(param4 + 7, param7 - 70 + param6, 25, 25, 0, 128);
           SoftwareRaster.b(37 + param4, param7 - 70 + param6, 265, 25, 0, 128);
           var21 = param2.q((byte) 67);
           var8 = var21.toLowerCase();
           SoftwareRaster.setClip(param4 + 37, param7 - 70 + param6, 245 + param4, param6 + (param7 - 45));
-          fe.a(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
+          GradientUiRenderer.drawSolidText(var8, -param3 + (param4 + 42), param6 - 43 + param7, 16777215, true);
           SoftwareRaster.a();
-          fe.c(param2.strength + param2.bonusStrength + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
+          GradientUiRenderer.drawCenteredSolidText(param2.strength + param2.bonusStrength + "/" + param2.maximumStrength, param4 + 272, param6 - (42 - param7), 16777215, param1);
           ProgressMessageDialog.field_rb[param2.getUnitCategory(0)].draw(param4 + 9, param7 - 66 + param6);
           var9 = param2.l(-27014);
           SoftwareRaster.b(59 + param4, param7 - 41 + param6, 30, 30, 0, 128);
@@ -178,10 +178,10 @@ abstract class ArrayWidgetContainer extends Widget implements WidgetContainerMar
           }
           if (var11 != var12) {
             SoftwareRaster.b(param4 + 92, param7 - 41 + param6, 39, 30, 0, 128);
-            fe.c(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
+            GradientUiRenderer.drawCenteredSolidText(EmailCheckResult.a(4800, LinkButtonPainter.field_a, new String[]{Integer.toString(var11), Integer.toString(var12)}), param4 + 111, param7 - 41 + (param6 + 30), 16777215, true);
           } else {
             SoftwareRaster.b(96 + param4, -41 - (-param6 - param7), 30, 30, 0, 128);
-            fe.c(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 + 30)), 16777215, true);
+            GradientUiRenderer.drawCenteredSolidText(Integer.toString(var11), param4 + 111, -41 - (-param6 - (param7 + 30)), 16777215, true);
           }
           var13 = 0;
           SoftwareRaster.a(307 + param4 - 20, param7 - 26 + param6, 17, 0, 128);

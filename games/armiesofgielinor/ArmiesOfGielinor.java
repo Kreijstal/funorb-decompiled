@@ -1054,7 +1054,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           if (var3 != null &&
             null == var3.movementPlanner) {
             AnimationSkeleton.field_t.draw(0, 0);
-            fe.c(ManaEvent.field_A, 320, 200, ConsoleValue.field_b, false);
+            GradientUiRenderer.drawCenteredGradientText(ManaEvent.field_A, 320, 200, ConsoleValue.field_b, false);
           }
           this.c(false);
           if (null != ToggleTurnSkipConsoleCommand.debugConsole) {
@@ -1150,7 +1150,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           cd.a(false);
           bt.c(0);
           gv.b(93);
-          fe.b();
+          GradientUiRenderer.releaseCaches();
           vi.a(true);
           NetworkGameShell.releaseSharedShellGlobals(71);
           ContextualRuntimeException.c(1);
@@ -2174,8 +2174,8 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           DateInputWidget.field_E = DropdownArrowPainter.a("basic", iw.field_l, UnitAnimationPreview.field_j, (byte) -53, "smallfont");
           TrianglePulse.field_i = it.a("introfont", iw.field_l, UnitAnimationPreview.field_j, (byte) -87, "basic");
           nr.field_e = TurnEffectEvent.a("runewarsfont", UnitAnimationPreview.field_j, iw.field_l, "basic", -2088);
-          fe.a(nr.field_e);
-          fe.field_l = fk.loadRgbSpritesByName("textshadow", (byte) -127, iw.field_l, "basic");
+          GradientUiRenderer.installFont(nr.field_e);
+          GradientUiRenderer.textBackdropSprites = fk.loadRgbSpritesByName("textshadow", (byte) -127, iw.field_l, "basic");
           var5_array = MapLayout.loadIndexedSpritesByName("members_benefits_screenshots", -28106, "basic", iw.field_l);
           if (var5_array != null) {
             LineOfSightGrid.a(var5_array, (byte) 110, this);
@@ -2280,7 +2280,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           var14 = new int[]{13369344};
           var15 = new int[]{4456448};
           dh.field_l = jk.a(100, var15, 123, var14);
-          fe.a(0, 0, 640, 480, ChannelBaseVolumeConsoleCommand.field_J, ConsoleValue.field_b);
+          GradientUiRenderer.bakeGradientFrameBorders(0, 0, 640, 480, ChannelBaseVolumeConsoleCommand.field_J, ConsoleValue.field_b);
           SocketResourceClient.a((byte) 125, ac.a(iw.field_l, "dials", (byte) -4, "basic"), GameplayController.a("hand", (byte) 51, "basic", iw.field_l));
           IsaacRandom.field_k = fk.loadRgbSpritesByName("arrows", (byte) -124, iw.field_l, "basic");
           pi.field_T = GameplayController.a("isocrosshair", (byte) 51, "basic", iw.field_l);
@@ -2319,7 +2319,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
           UnitAnimationPreview.field_j = null;
           ResourceRequest.field_A = null;
           ModalDialog.a(0);
-          fe.field_o = new int[7][64];
+          GradientUiRenderer.particlePalettes = new int[7][64];
           var17 = 0;
           do {
             if (var17 >= 64) {
@@ -2328,13 +2328,13 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
               }
               break;
             }
-            fe.field_o[1][var17] = fe.a(TutorialLayout.field_g[1], var17 << 3);
-            fe.field_o[2][var17] = fe.a(TutorialLayout.field_g[2], var17 << 3);
-            fe.field_o[3][var17] = fe.a(TutorialLayout.field_g[3], var17 << 3);
-            fe.field_o[4][var17] = fe.a(TutorialLayout.field_g[4], var17 << 3);
-            fe.field_o[5][var17] = fe.a(TutorialLayout.field_g[5], var17 << 3);
-            fe.field_o[6][var17] = fe.a(TutorialLayout.field_g[6], var17 << 3);
-            fe.field_o[0][var17] = (var17 << 2) + (var17 << 10) + (var17 << 18);
+            GradientUiRenderer.particlePalettes[1][var17] = GradientUiRenderer.adjustBrightness(TutorialLayout.field_g[1], var17 << 3);
+            GradientUiRenderer.particlePalettes[2][var17] = GradientUiRenderer.adjustBrightness(TutorialLayout.field_g[2], var17 << 3);
+            GradientUiRenderer.particlePalettes[3][var17] = GradientUiRenderer.adjustBrightness(TutorialLayout.field_g[3], var17 << 3);
+            GradientUiRenderer.particlePalettes[4][var17] = GradientUiRenderer.adjustBrightness(TutorialLayout.field_g[4], var17 << 3);
+            GradientUiRenderer.particlePalettes[5][var17] = GradientUiRenderer.adjustBrightness(TutorialLayout.field_g[5], var17 << 3);
+            GradientUiRenderer.particlePalettes[6][var17] = GradientUiRenderer.adjustBrightness(TutorialLayout.field_g[6], var17 << 3);
+            GradientUiRenderer.particlePalettes[0][var17] = (var17 << 2) + (var17 << 10) + (var17 << 18);
             var17++;
           } while (var18 == 0);
           return false;
@@ -2479,7 +2479,7 @@ public final class ArmiesOfGielinor extends NetworkGameShell {
                 var3 = 8;
               }
             }
-            fe.b(-5, var3 - 10, rs.field_n.textWidth(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+            GradientUiRenderer.drawHollowGradientFrame(-5, var3 - 10, rs.field_n.textWidth(so.field_a[var2.field_l]) + 62, 48, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
             DelayedPacket.field_k[var2.field_l].c(8, var3);
             rs.field_n.drawText(so.field_a[var2.field_l], 42, var3 - (-5 - rs.field_n.maxAscent), 15658734, -1);
           }

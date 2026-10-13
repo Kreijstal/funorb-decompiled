@@ -12,7 +12,7 @@ final class pn extends nr {
     static int field_h;
 
     final void a(byte param0, int param1, int param2, int param3, int param4) {
-        fe.a(param2, param4, param3, param1, this.field_b, this.field_g, this.field_i, this.field_l, this.field_j);
+        GradientUiRenderer.drawGradientFrame(param2, param4, param3, param1, this.field_b, this.field_g, this.field_i, this.field_l, this.field_j);
         if (param0 != -111) {
           this.field_l = -40;
         }

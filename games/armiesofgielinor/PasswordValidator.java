@@ -181,30 +181,30 @@ final class PasswordValidator extends TextFieldValidator {
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var9_int = fs.a(param3, 24340, param2, param8, param4, param5, param1);
-          fe.a(param2, param8, param5, param1, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
-          fe.a(param2 + 4, param8 + 4, param5 - 8, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
-          fe.a(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+          GradientUiRenderer.drawGradientFrame(param2, param8, param5, param1, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+          GradientUiRenderer.drawGradientFrame(param2 + 4, param8 + 4, param5 - 8, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+          GradientUiRenderer.drawGradientFrame(param2 + 4, -40 + (param1 + param8 - 4), -8 + param5, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           if (var9_int == -3 &&
             param3 - param8 < 40 &&
             0 < dd.field_e) {
             if (!param0) {
-              fe.a(8 + param2, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
+              GradientUiRenderer.drawGradientFrame(8 + param2, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             } else {
-              fe.a(param2 + 8, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
+              GradientUiRenderer.drawGradientFrame(param2 + 8, param8 + 8, param5 - 16, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             }
           } else {
-            fe.a(8 + param2, 8 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 128, true);
+            GradientUiRenderer.drawGradientFrame(8 + param2, 8 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 128, true);
           }
           if (var9_int == -3 &&
             -param8 + param3 + 40 > param1 &&
             NanoGameClock.field_q > dd.field_e) {
             if (param0) {
-              fe.a(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
+              GradientUiRenderer.drawGradientFrame(param2 + 8, param8 + (param1 - 40), -16 + param5, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 128, true);
             } else {
-              fe.a(8 + param2, -40 + param1 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
+              GradientUiRenderer.drawGradientFrame(8 + param2, -40 + param1 + param8, -16 + param5, 32, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 128, true);
             }
           } else {
-            fe.a(8 + param2, -40 + param1 + param8, param5 - 16, 32, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 128, true);
+            GradientUiRenderer.drawGradientFrame(8 + param2, -40 + param1 + param8, param5 - 16, 32, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 128, true);
           }
           ClientConnectionState.field_a.drawWithOpacity(param2 + ((param5 >> 1) - 29), param8 + 14, 128);
           ClientConnectionState.field_a.drawWithOpacity(11 + ((param5 >> 1) + param2), 14 + param8, 128);
@@ -239,22 +239,22 @@ final class PasswordValidator extends TextFieldValidator {
                   stackIn_40_1 = pg.playerProfile.getUnlockLevel(param7 ^ -40);
                   stackIn_41_2 = !(2 > BufferedSocket.field_j);
                   if (!BufferedFile.a(stackIn_40_0, stackIn_40_1, stackIn_41_2, var11, -1208926000, BoundedFile.field_e[0])) {
-                    fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, MoveAttackAction.field_x, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, MoveAttackAction.field_x, 0, 128, false);
                   } else {
-                    fe.a(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, TutorialController.field_e, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, TutorialController.field_e, 0, 128, false);
                   }
                 } else {
                   stackIn_34_0 = AccountRegistrationForm.field_X;
                   stackIn_34_1 = pg.playerProfile.getUnlockLevel(0);
                   stackIn_35_2 = !(BufferedSocket.field_j < 2);
                   if (!BufferedFile.a(stackIn_34_0, stackIn_34_1, stackIn_35_2, var11, -1208926000, BoundedFile.field_e[0])) {
-                    fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, dh.field_l, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, dh.field_l, 0, 128, false);
                   } else {
-                    fe.a(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, AgeValidator.field_k, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var13, var14, -9 + (param5 >> 1), 78, MusicPatch.field_m, AgeValidator.field_k, 0, 128, false);
                   }
                 }
               } else {
-                fe.a(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, ConsoleValue.field_b, 0, 128, false);
+                GradientUiRenderer.drawGradientFrame(var13, var14, (param5 >> 1) - 9, 78, MusicPatch.field_m, ConsoleValue.field_b, 0, 128, false);
               }
               if (var12_int % 2 != 1) {
                 stackIn_47_0 = 0;

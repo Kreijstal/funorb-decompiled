@@ -173,12 +173,12 @@ final class GameplayController {
           }
           if (var9 == 0 ||
             ArmiesOfGielinor.obfuscationControl) {
-            fe.b(this.battlefield.campaignMission.name, db.a(true, 320), MatchConditionEntry.a(80, (byte) 94), true);
-            fe.c(this.battlefield.campaignMission.name, db.a(true, 320), MatchConditionEntry.a(80, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(this.battlefield.campaignMission.name, db.a(true, 320), MatchConditionEntry.a(80, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(this.battlefield.campaignMission.name, db.a(true, 320), MatchConditionEntry.a(80, (byte) 94), ConsoleValue.field_b, true);
           }
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, var8, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-          fe.b(FullscreenConfirmationDialog.field_eb, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
-          fe.c(FullscreenConfirmationDialog.field_eb, db.a(true, 111 + param1), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, var8, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+          GradientUiRenderer.drawCenteredTextBackdrop(FullscreenConfirmationDialog.field_eb, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
+          GradientUiRenderer.drawCenteredGradientText(FullscreenConfirmationDialog.field_eb, db.a(true, 111 + param1), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           var10 = param1 + 55;
           var11 = var10 + 100;
           var12 = 50 + param0;
@@ -199,14 +199,14 @@ final class GameplayController {
             }
             var17 = b.calculateMissionScore(var5.scoreTurnTarget, var5.scoreDamageTarget, var16, (byte) 25, var15);
             SoftwareRaster.e(db.a(true, var10), MatchConditionEntry.a(param0 + 113, (byte) 94), var11 - var10, 12303155);
-            fe.b(qf.field_g, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
-            fe.c(qf.field_g, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
-            fe.c(AiInfluenceMap.a(10602, var17), db.a(true, 111 + param1), MatchConditionEntry.a(param0 + 155, (byte) 94), TutorialController.field_e, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(qf.field_g, db.a(true, param1 + 111), MatchConditionEntry.a(param0 + 128, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(qf.field_g, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(AiInfluenceMap.a(10602, var17), db.a(true, 111 + param1), MatchConditionEntry.a(param0 + 155, (byte) 94), TutorialController.field_e, true);
             if (var7 != 0) {
               param0 += 58;
               SoftwareRaster.e(db.a(true, var10), MatchConditionEntry.a(113 + param0, (byte) 94), -var10 + var11, 12303155);
-              fe.b(InstructionsPanel.field_gb, db.a(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
-              fe.c(InstructionsPanel.field_gb, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
+              GradientUiRenderer.drawCenteredTextBackdrop(InstructionsPanel.field_gb, db.a(true, param1 + 111), MatchConditionEntry.a(128 + param0, (byte) 94), true);
+              GradientUiRenderer.drawCenteredGradientText(InstructionsPanel.field_gb, db.a(true, 111 + param1), MatchConditionEntry.a(128 + param0, (byte) 94), ConsoleValue.field_b, true);
               var18 = var5.createRewardPreview(-1);
               StandardContentDialog.field_ob.drawTransparent(db.a(true, 4 + (15 + var10)), MatchConditionEntry.a(param0 + 132, (byte) 94));
               var18.icon.drawTransparent(db.a(true, 4 + var10 + 15), MatchConditionEntry.a(128 + param0 + 4, (byte) 94));
@@ -712,7 +712,7 @@ final class GameplayController {
           if (param3 != 89) {
             return;
           }
-          fe.b(param0, param8, param7, param2, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
+          GradientUiRenderer.drawHollowGradientFrame(param0, param8, param7, param2, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
           if (param4) {
             vq.field_b.drawScaled(param0 + param9, param8 + param1, param5, param6);
             if (!ArmiesOfGielinor.obfuscationControl) {
@@ -983,15 +983,15 @@ final class GameplayController {
             discarded$0 = this.a(false);
           }
           var6 = ConsoleValue.field_b;
-          fe.b(db.a(true, param4), MatchConditionEntry.a(param1, (byte) 94), 340, 160, MusicPatch.field_m, var6, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, param4), MatchConditionEntry.a(param1, (byte) 94), 340, 160, MusicPatch.field_m, var6, 0, 180);
           if (-1 < param3) {
-            fe.b(ph.field_b[param3], db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), true);
-            fe.c(ph.field_b[param3], db.a(true, param4 + 137), MatchConditionEntry.a(param1 + 18, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(ph.field_b[param3], db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(ph.field_b[param3], db.a(true, param4 + 137), MatchConditionEntry.a(param1 + 18, (byte) 94), ConsoleValue.field_b, true);
           }
           if (-1 >= param3 ||
             var11 != 0) {
-            fe.b(DualNodeIterator.field_g, db.a(true, 137 + param4), MatchConditionEntry.a(18 + param1, (byte) 94), true);
-            fe.c(DualNodeIterator.field_g, db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, db.a(true, 137 + param4), MatchConditionEntry.a(18 + param1, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, db.a(true, param4 + 137), MatchConditionEntry.a(18 + param1, (byte) 94), ConsoleValue.field_b, true);
           }
           var7 = 260 / this.battlefield.c(-9650, param0);
           HuffmanCodec.a(db.a(true, 25 + param4), op.field_c[0][param0], this.battlefield.teams[param0].getTeamName(3), false, (byte) -8, MatchConditionEntry.a(param1 + 5, (byte) 94));
@@ -1120,9 +1120,9 @@ final class GameplayController {
             } else {
               stackIn_12_5 = var8;
             }
-            fe.b(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 180);
+            GradientUiRenderer.drawHollowGradientFrame(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 180);
             if (-1 < param1) {
-              fe.b(ph.field_b[param1], db.a(true, 59 + param0), MatchConditionEntry.a(19 + param3, (byte) 94), true);
+              GradientUiRenderer.drawCenteredTextBackdrop(ph.field_b[param1], db.a(true, 59 + param0), MatchConditionEntry.a(19 + param3, (byte) 94), true);
               stackIn_18_0 = ph.field_b[param1];
               stackIn_18_1 = db.a(true, 59 + param0);
               stackIn_18_2 = MatchConditionEntry.a(19 + param3, (byte) 94);
@@ -1131,11 +1131,11 @@ final class GameplayController {
               } else {
                 stackIn_19_3 = AgeValidator.field_k;
               }
-              fe.c(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_19_3, true);
+              GradientUiRenderer.drawCenteredGradientText(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_19_3, true);
             }
             if (-1 >= param1 ||
               ArmiesOfGielinor.obfuscationControl) {
-              fe.b(DualNodeIterator.field_g, db.a(true, 59 + param0), MatchConditionEntry.a(param3 + 19, (byte) 94), true);
+              GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, db.a(true, 59 + param0), MatchConditionEntry.a(param3 + 19, (byte) 94), true);
               stackIn_25_0 = DualNodeIterator.field_g;
               stackIn_25_1 = db.a(true, 59 + param0);
               stackIn_25_2 = MatchConditionEntry.a(param3 + 19, (byte) 94);
@@ -1144,7 +1144,7 @@ final class GameplayController {
               } else {
                 stackIn_26_3 = AgeValidator.field_k;
               }
-              fe.c(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_26_3, true);
+              GradientUiRenderer.drawCenteredGradientText(stackIn_25_0, stackIn_25_1, stackIn_25_2, stackIn_26_3, true);
             }
             stackIn_30_0 = this.battlefield.playerCoats[var7];
             stackIn_31_1 = (0 != (this.battlefield.eliminatedPlayerMask & 1 << var7));
@@ -2782,7 +2782,7 @@ final class GameplayController {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.battlefield.rankedParticipants[this.field_Rb];
           var5 = this.battlefield.playerNames[var4_int];
           var5 = BitmapFont.truncateWithEllipsis(nr.field_e, var5, 400);
@@ -2844,8 +2844,8 @@ final class GameplayController {
             stackIn_42_0 = TutorialController.field_e;
           }
           var7 = stackIn_42_0;
-          fe.a(db.a(true, param1 + 3), MatchConditionEntry.a(param0 + 3, (byte) 94), 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
-          fe.c(var5, db.a(true, 483), MatchConditionEntry.a(34 + param0, (byte) 94), 0, true);
+          GradientUiRenderer.drawGradientFrame(db.a(true, param1 + 3), MatchConditionEntry.a(param0 + 3, (byte) 94), 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
+          GradientUiRenderer.drawCenteredSolidText(var5, db.a(true, 483), MatchConditionEntry.a(34 + param0, (byte) 94), 0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3198,7 +3198,7 @@ final class GameplayController {
             discarded$1 = this.l(true);
           }
           fm.a(e.field_b, 77, 150, 15, -67);
-          fe.c(this.c(this.battlefield.playerMana[this.controlledPlayerId], -117), 180, 44, 16777215, true);
+          GradientUiRenderer.drawCenteredSolidText(this.c(this.battlefield.playerMana[this.controlledPlayerId], -117), 180, 44, 16777215, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3390,8 +3390,8 @@ final class GameplayController {
     private final void f(int param0) {
         this.s(-96);
         if (!this.field_bb) {
-          fe.b(ChatMessage.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), false);
-          fe.c(ChatMessage.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), ConsoleValue.field_b, false);
+          GradientUiRenderer.drawCenteredTextBackdrop(ChatMessage.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), false);
+          GradientUiRenderer.drawCenteredGradientText(ChatMessage.field_o, db.a(true, 320), MatchConditionEntry.a(380, (byte) 94), ConsoleValue.field_b, false);
         }
         int var2_int = 0;
         AnimationSkeleton.field_t.draw(db.a(true, var2_int), MatchConditionEntry.a(0, (byte) 94));
@@ -3400,7 +3400,7 @@ final class GameplayController {
         }
         try {
           int var3 = -15 % ((19 - param0) / 42);
-          fe.c(this.battlefield.playerNames[this.battlefield.currentPlayer], db.a(true, var2_int + 320), MatchConditionEntry.a(170, (byte) 94), ConsoleValue.field_b, false);
+          GradientUiRenderer.drawCenteredGradientText(this.battlefield.playerNames[this.battlefield.currentPlayer], db.a(true, var2_int + 320), MatchConditionEntry.a(170, (byte) 94), ConsoleValue.field_b, false);
           this.battlefield.playerCoats[this.battlefield.currentPlayer].a(db.a(true, var2_int + 264), this.battlefield.playerNames[this.battlefield.currentPlayer], false, false, MatchConditionEntry.a(this.battlefield.playerCoats[this.battlefield.currentPlayer].getMissingPartOffset((byte) -62) + 190, (byte) 94), false, false, 74);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ic.GA(" + param0 + ')');
@@ -4242,10 +4242,10 @@ final class GameplayController {
           param3 = 75;
           DraggableWidgetContainer.field_J.drawTintedGrayscale(var5_int - 73, var6 - 73, TutorialLayout.field_g[WhirlpoolHasher.unitDefinitions[param1][1] + 1]);
           param0 = 75;
-          fe.a(var5_int - 50, -46 + var6, 100, 30, AgeValidator.field_l, 128);
-          fe.a(-50 + var5_int, var6 + 1, 100, 15, AgeValidator.field_l, 128);
-          fe.a(var5_int - 50, var6 + 18, 100, 15, AgeValidator.field_l, 128);
-          fe.a(-50 + var5_int, 35 + var6, 100, 15, AgeValidator.field_l, 128);
+          GradientUiRenderer.drawCornerShadow(var5_int - 50, -46 + var6, 100, 30, AgeValidator.field_l, 128);
+          GradientUiRenderer.drawCornerShadow(-50 + var5_int, var6 + 1, 100, 15, AgeValidator.field_l, 128);
+          GradientUiRenderer.drawCornerShadow(var5_int - 50, var6 + 18, 100, 15, AgeValidator.field_l, 128);
+          GradientUiRenderer.drawCornerShadow(-50 + var5_int, 35 + var6, 100, 15, AgeValidator.field_l, 128);
           SpellConfirmationDialog.field_j.b();
           SoftwareRaster.b();
           DateInputWidget.field_E.drawParagraph(ScrollContainer.unitDisplayNames[param1].toUpperCase(), -47 + param3, param0 - 48, 94, 30, 16763904, -1, 1, 1, 0);
@@ -4312,7 +4312,7 @@ final class GameplayController {
           ProgressMessageDialog.field_rb[WhirlpoolHasher.unitDefinitions[param1][0]].draw(var5_int - 8, var6 - 71);
           if (null != AlphaWidgetContainer.field_M[param1]) {
             var10 = DateInputWidget.field_E.getParagraphHeight(AlphaWidgetContainer.field_M[param1], 220, 0);
-            fe.b(-120 + var5_int, 130 + var6, 240, 20 + var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
+            GradientUiRenderer.drawHollowGradientFrame(-120 + var5_int, 130 + var6, 240, 20 + var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
             DateInputWidget.field_E.drawParagraph(AlphaWidgetContainer.field_M[param1], var5_int - 110, 140 + var6, 220, 100, 16777215, -1, 1, 0, 0);
           }
           return;
@@ -4528,15 +4528,15 @@ final class GameplayController {
             stackIn_11_0 = TutorialController.field_e;
           }
           var8 = stackIn_11_0;
-          fe.b(db.a(true, 181), MatchConditionEntry.a(var5_int + 57, (byte) 94), 184, 111, MusicPatch.field_m, var8, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 181), MatchConditionEntry.a(var5_int + 57, (byte) 94), 184, 111, MusicPatch.field_m, var8, 0, 180);
           if (param2 > -1) {
-            fe.b(ph.field_b[param2], db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), true);
-            fe.c(ph.field_b[param2], db.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(ph.field_b[param2], db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(ph.field_b[param2], db.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), ConsoleValue.field_b, true);
           }
           if (param2 <= -1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            fe.b(DualNodeIterator.field_g, db.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), true);
-            fe.c(DualNodeIterator.field_g, db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, db.a(true, 240), MatchConditionEntry.a(var5_int + 75, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, db.a(true, 240), MatchConditionEntry.a(75 + var5_int, (byte) 94), ConsoleValue.field_b, true);
           }
           var9 = -26 % ((-25 - param0) / 49);
           stackIn_20_0 = this.battlefield.playerCoats[var6];
@@ -4749,9 +4749,9 @@ final class GameplayController {
           var2_int = this.battlefield.playerCount;
           SoftwareRaster.b();
           jg.field_m.drawPixels(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94));
-          fe.b(db.a(param0, 15), MatchConditionEntry.a(33, (byte) 94), 610, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-          fe.b(l.field_g, db.a(true, 320), MatchConditionEntry.a(35, (byte) 94));
-          fe.c(l.field_g, db.a(true, 320), MatchConditionEntry.a(35, (byte) 94), ConsoleValue.field_b, false);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(param0, 15), MatchConditionEntry.a(33, (byte) 94), 610, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+          GradientUiRenderer.drawCenteredTextBackdrop(l.field_g, db.a(true, 320), MatchConditionEntry.a(35, (byte) 94));
+          GradientUiRenderer.drawCenteredGradientText(l.field_g, db.a(true, 320), MatchConditionEntry.a(35, (byte) 94), ConsoleValue.field_b, false);
           var3 = this.battlefield.winnerCount;
           stackIn_5_0 = (null == this.battlefield.campaignMission) ? 0 : 1;
           var4 = stackIn_5_0;
@@ -5085,7 +5085,7 @@ final class GameplayController {
         var13 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          fe.b(param0, param2, 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(param0, param2, 223, 228, MusicPatch.field_m, TutorialController.field_e, 0, 180);
           var4_int = this.field_Rb;
           var5 = this.battlefield.playerNames[var4_int];
           var5 = BitmapFont.truncateWithEllipsis(nr.field_e, var5, 400);
@@ -5142,8 +5142,8 @@ final class GameplayController {
             stackIn_37_0 = TutorialController.field_e;
           }
           var7 = stackIn_37_0;
-          fe.a(param0 + 3, 3 + param2, 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
-          fe.c(var5, param0 + 108, param2 + 34, 0, true);
+          GradientUiRenderer.drawGradientFrame(param0 + 3, 3 + param2, 217, 29, DisplacedUnitMarker.field_s, var7, 0, 128, true);
+          GradientUiRenderer.drawCenteredSolidText(var5, param0 + 108, param2 + 34, 0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5740,7 +5740,7 @@ final class GameplayController {
           }
           var5_int = this.g(param0, -50);
           var6 = so.field_b.field_a;
-          fe.c(param1, var6 / 2 + var5_int, 170, ConsoleValue.field_b, false);
+          GradientUiRenderer.drawCenteredGradientText(param1, var6 / 2 + var5_int, 170, ConsoleValue.field_b, false);
           var7 = this.battlefield.h(this.battlefield.currentPlayer, 0);
           if (param3 != 64) {
             this.field_jc = false;
@@ -6035,8 +6035,8 @@ final class GameplayController {
                     if (stackIn_22_0) {
                       var9 = this.battlefield.equippedSpellIds[this.controlledPlayerId][var6];
                       if (var9 < 0) {
-                        fe.b(TurnEffectEvent.field_y, 320, -100 + this.o(125), true);
-                        fe.c(TurnEffectEvent.field_y, 320, this.o(param0 ^ 7) - 100, AgeValidator.field_k, true);
+                        GradientUiRenderer.drawCenteredTextBackdrop(TurnEffectEvent.field_y, 320, -100 + this.o(125), true);
+                        GradientUiRenderer.drawCenteredGradientText(TurnEffectEvent.field_y, 320, this.o(param0 ^ 7) - 100, AgeValidator.field_k, true);
                         var5 = 1;
                       } else {
                         var5 = 1;
@@ -6104,7 +6104,7 @@ final class GameplayController {
                           stackIn_72_0 = StateChangeEvent.field_A;
                         }
                         var8_ref_String = stackIn_72_0;
-                        fe.b(var8_ref_String, 320, this.o(param0 ^ 5) - 45, true);
+                        GradientUiRenderer.drawCenteredTextBackdrop(var8_ref_String, 320, this.o(param0 ^ 5) - 45, true);
                         var5 = 1;
                         stackIn_75_0 = var8_ref_String;
                         stackIn_75_1 = 320;
@@ -6118,7 +6118,7 @@ final class GameplayController {
                         } else {
                           stackIn_79_3 = ConsoleValue.field_b;
                         }
-                        fe.c(stackIn_75_0, stackIn_75_1, stackIn_75_2, stackIn_79_3, true);
+                        GradientUiRenderer.drawCenteredGradientText(stackIn_75_0, stackIn_75_1, stackIn_75_2, stackIn_79_3, true);
                       }
                       decompiledFrameRemainder14 = false;
                     }
@@ -6135,8 +6135,8 @@ final class GameplayController {
               if (stackIn_83_0 == 0 &&
                 -1 < this.field_gc) {
                 var6_ref_String = MusicPatchEnvelope.field_f[this.field_gc];
-                fe.b(var6_ref_String, 320, this.o(125) - 45, true);
-                fe.c(var6_ref_String, 320, this.o(126) - 45, ConsoleValue.field_b, true);
+                GradientUiRenderer.drawCenteredTextBackdrop(var6_ref_String, 320, this.o(125) - 45, true);
+                GradientUiRenderer.drawCenteredGradientText(var6_ref_String, 320, this.o(126) - 45, ConsoleValue.field_b, true);
               }
             }
             if (var2 == null &&
@@ -7326,8 +7326,8 @@ final class GameplayController {
         int var7Lifetime1;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.field_b = fe.field_b + 1;
-          fe.field_b = fe.field_b % 100;
+          GradientUiRenderer.particlePhasePercent = GradientUiRenderer.particlePhasePercent + 1;
+          GradientUiRenderer.particlePhasePercent = GradientUiRenderer.particlePhasePercent % 100;
           if (param0 != -12) {
             this.field_bb = true;
           }
@@ -7368,7 +7368,7 @@ final class GameplayController {
                     if (var10 != -1) {
                       UnitModelPreview.field_d[1 + var10].drawHalfSize(-12 + var8, var9 - 12);
                       gt.field_c[var10 + 1].drawHalfSize(-18 + var8, -21 + var9);
-                      fe.a(var8, var9, var10 + 1, var3[var10], fe.field_b);
+                      GradientUiRenderer.drawParticleRings(var8, var9, var10 + 1, var3[var10], GradientUiRenderer.particlePhasePercent);
                     }
                   } else {
                     UnitModelPreview.field_d[0].drawHalfSize(var8 - 12, var9 - 12);
@@ -7440,7 +7440,7 @@ final class GameplayController {
             stackIn_7_0 = TutorialController.field_e;
           }
           var8 = stackIn_7_0;
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 180);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 180);
           CampaignUnitOverride.a(db.a(true, param1), db.a(true, 134), MatchConditionEntry.a(228, (byte) 94), MatchConditionEntry.a(param0, (byte) 94), (byte) 73);
           stackIn_10_0 = this.battlefield.playerCoats[var6_int];
           stackIn_10_1 = db.a(true, 13 + param1);
@@ -7451,15 +7451,15 @@ final class GameplayController {
           stackIn_19_6 = !((1 << var6_int & this.battlefield.field_C) <= 0);
           ((CoatOfArms) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3, stackIn_15_4, stackIn_18_5, stackIn_19_6, false, param2 ^ -3);
           QuickChatPhraseRepository.popRasterState(-18862);
-          fe.b(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 0);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, param1), MatchConditionEntry.a(param0, (byte) 94), 134, 228, MusicPatch.field_m, var8, 0, 0);
           if (param3 <= -1) {
-            fe.b(DualNodeIterator.field_g, db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
-            fe.c(DualNodeIterator.field_g, db.a(true, 67 + param1), MatchConditionEntry.a(param0 + 18, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(DualNodeIterator.field_g, db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, db.a(true, 67 + param1), MatchConditionEntry.a(param0 + 18, (byte) 94), ConsoleValue.field_b, true);
           }
           if (param3 > -1 ||
             ArmiesOfGielinor.obfuscationControl) {
-            fe.b(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
-            fe.c(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredTextBackdrop(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(param0 + 18, (byte) 94), true);
+            GradientUiRenderer.drawCenteredGradientText(ph.field_b[param3], db.a(true, param1 + 67), MatchConditionEntry.a(18 + param0, (byte) 94), ConsoleValue.field_b, true);
           }
           DateInputWidget.field_E.drawCentered(var7, db.a(true, param1 + 67), MatchConditionEntry.a(128 + param0, (byte) 94), 16777215, -1);
           this.b(var6_int, 35 + param1, 133 + param0, -12857);
@@ -7563,11 +7563,11 @@ final class GameplayController {
               }
               var8Lifetime1 = rs.field_k;
               fm.a(e.field_b, 30 + var5, db.a(true, var8Lifetime1 - var5 - 45), MatchConditionEntry.a(var3_int, (byte) 94), -117);
-              fe.a(var4_ref_String, db.a(true, var8Lifetime1 - 30 - var5), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
+              GradientUiRenderer.drawSolidText(var4_ref_String, db.a(true, var8Lifetime1 - 30 - var5), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
               if (this.field_lb &&
                 -1 < this.controlledPlayerId) {
                 fm.a(e.field_b, var6 + 30, db.a(true, -15 + var7), MatchConditionEntry.a(var3_int, (byte) 94), -87);
-                fe.a(DisplacedUnitMarker.field_t[12], db.a(true, var7), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
+                GradientUiRenderer.drawSolidText(DisplacedUnitMarker.field_t[12], db.a(true, var7), MatchConditionEntry.a(var3_int + 28, (byte) 94), 16777215, true);
               }
               return;
             }
@@ -7697,7 +7697,7 @@ final class GameplayController {
                 } else {
                   stackIn_150_3 = 14540253;
                 }
-                fe.c(stackIn_149_0, stackIn_149_1, stackIn_149_2, stackIn_150_3);
+                GradientUiRenderer.drawFeatheredCircle(stackIn_149_0, stackIn_149_1, stackIn_149_2, stackIn_150_3);
               }
             }
             if (param1) {
@@ -10006,7 +10006,7 @@ final class GameplayController {
                     this.battleTutorial == null) {
                     var10Lifetime1 = -52 - var9Lifetime1 / 2 + var2_int;
                     var11Lifetime1 = 44 + var3Lifetime1 + 8;
-                    SoftwareRaster.a(var10Lifetime1 << 4, var11Lifetime1 << 4, 256, 62, fe.field_o[0]);
+                    SoftwareRaster.a(var10Lifetime1 << 4, var11Lifetime1 << 4, 256, 62, GradientUiRenderer.particlePalettes[0]);
                     TeleportAction.field_w[-1 + var7[var8Lifetime1]].drawTransparent(-10 + var10Lifetime1, -10 + var11Lifetime1);
                   }
                 }
@@ -10214,7 +10214,7 @@ final class GameplayController {
         var17 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           CampaignDefinition.field_t.drawOpaque(param3 + 2, -73 + (param5 + param0));
-          fe.b(param3 + 0, -76 - (-param5 - param0), 309, 71, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
+          GradientUiRenderer.drawHollowGradientFrame(param3 + 0, -76 - (-param5 - param0), 309, 71, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
           SoftwareRaster.b(7 + param3, param5 - 70 + param0, 25, 25, 0, 128);
           if (-1 < param4.ownerPlayer) {
             wb.a(7816226, -8 + param3, param4.ownerPlayer, NanoGameClock.field_n, -52 + param5 + param0);
@@ -10222,7 +10222,7 @@ final class GameplayController {
           SoftwareRaster.b(param3 + 37, param0 + param5 - 70, 265, 25, 0, 128);
           var9 = param4.getDisplayName((byte) 124).toLowerCase();
           SoftwareRaster.setClip(37 + param3, param0 - 70 + param5, 245 + param3, param0 + param5 - 45);
-          fe.a(var9, -param2 + 42 + param3, param0 + (-43 + param5), 16777215, true);
+          GradientUiRenderer.drawSolidText(var9, -param2 + 42 + param3, param0 + (-43 + param5), 16777215, true);
           SoftwareRaster.a();
           lp.field_b[vg.field_r[param4.terrainType]].draw(param3 + 273, param0 + (param5 - 74));
           SoftwareRaster.b(param3 + 7, param0 - 41 + param5, 60, 30, 0, 128);
@@ -10283,7 +10283,7 @@ final class GameplayController {
           } else {
             stackIn_60_3 = 7829367;
           }
-          fe.d(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_60_3, true);
+          GradientUiRenderer.drawRightAlignedSolidText(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_60_3, true);
           SoftwareRaster.b(72 + param3, param0 - 41 + param5, 190, 30, 0, 128);
           if (param7 + 17 >= lp.field_b.length) {
             param7 = 0;
@@ -10426,10 +10426,10 @@ final class GameplayController {
           if (param4 != 11951) {
             this.field_l = false;
           }
-          fe.b(param2 - (var6_int >> 1), -20 + param1 - var8 - var9, var6_int, var8 - (-var9 - 30), MusicPatch.field_m, param3, 0, 192);
+          GradientUiRenderer.drawHollowGradientFrame(param2 - (var6_int >> 1), -20 + param1 - var8 - var9, var6_int, var8 - (-var9 - 30), MusicPatch.field_m, param3, 0, 192);
           DateInputWidget.field_E.drawParagraph(var7, param2 - (var6_int >> 1) + 10, param1 - var8, var6_int - 20, var8, 16777215, -1, 1, 0, 0);
-          fe.b(MusicPatchEnvelope.field_f[param0], param2, -3 - var8 + param1 - var9, var6_int - 20, true);
-          fe.a(MusicPatchEnvelope.field_f[param0], param2, -3 - var9 + (-var8 + param1), -20 + var6_int, param3, true);
+          GradientUiRenderer.drawWrappedCenteredTextBackdrop(MusicPatchEnvelope.field_f[param0], param2, -3 - var8 + param1 - var9, var6_int - 20, true);
+          GradientUiRenderer.drawWrappedCenteredGradientText(MusicPatchEnvelope.field_f[param0], param2, -3 - var9 + (-var8 + param1), -20 + var6_int, param3, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -11220,7 +11220,7 @@ final class GameplayController {
           var4_int = 0;
           param0 = -param0;
           if (param2 > 3) {
-            fe.b(db.a(true, 41), MatchConditionEntry.a(292, (byte) 94), 553, 127, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 41), MatchConditionEntry.a(292, (byte) 94), 553, 127, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
             var7 = 3;
             while (param2 > var7) {
               var5 = this.battlefield.rankedParticipants[var7];
@@ -11231,10 +11231,10 @@ final class GameplayController {
               if (param0 >= 1) {
                 if (param0 >= 0 &&
                   !(ph.field_b.length <= param0)) {
-                  fe.c(ph.field_b[param0], db.a(true, var4_int + 98), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
+                  GradientUiRenderer.drawCenteredGradientText(ph.field_b[param0], db.a(true, var4_int + 98), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
                 }
               } else {
-                fe.c(DualNodeIterator.field_g, db.a(true, 98 + var4_int), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
+                GradientUiRenderer.drawCenteredGradientText(DualNodeIterator.field_g, db.a(true, 98 + var4_int), MatchConditionEntry.a(323, (byte) 94), ConsoleValue.field_b, true);
               }
               stackIn_25_0 = this.battlefield.playerCoats[var5];
               stackIn_26_1 = (0 != (1 << var5 & this.battlefield.eliminatedPlayerMask));

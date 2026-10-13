@@ -180,7 +180,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
             return;
           }
         }
@@ -204,7 +204,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             if (param0 != 33) {
               discarded$0 = this.d(true);
             }
@@ -352,9 +352,9 @@ final class MatchSetupPanel {
               var15 = var16;
               var14 = var15;
               if (param3 < ~param0) {
-                fe.c(param1, db.a(true, this.field_c.first), var8Lifetime1, var16, true);
+                GradientUiRenderer.drawCenteredGradientText(param1, db.a(true, this.field_c.first), var8Lifetime1, var16, true);
               } else {
-                fe.a(param1, db.a(true, param0), var8Lifetime1, var16, true);
+                GradientUiRenderer.drawGradientText(param1, db.a(true, param0), var8Lifetime1, var16, true);
               }
               return;
             }
@@ -541,7 +541,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             return;
           }
         }
@@ -877,7 +877,7 @@ final class MatchSetupPanel {
               this.option33Enabled = true;
             }
             SoftwareRaster.f(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, this.field_M);
-            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
             var10 = MatchConditionEntry.a(param0.second, (byte) 94);
             var11 = MatchConditionEntry.a(param3.second, (byte) 94);
             var7Lifetime1 = var10 + var11 >> 1;
@@ -891,7 +891,7 @@ final class MatchSetupPanel {
             var15 = stackIn_11_0;
             var14 = var15;
             var13 = var14;
-            fe.c(param1, db.a(true, this.field_c.first), var7Lifetime1, var15, true);
+            GradientUiRenderer.drawCenteredGradientText(param1, db.a(true, this.field_c.first), var7Lifetime1, var15, true);
             return;
           }
           return;
@@ -1015,14 +1015,14 @@ final class MatchSetupPanel {
             if (param0) {
               var10 = TutorialController.field_e;
             }
-            fe.a(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
-            fe.b(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_A);
+            GradientUiRenderer.drawGradientFrame(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_A);
             var11 = param1.second;
             var12 = param2.second;
             var7Lifetime1 = var11 + var12 >> 1;
             var13 = SocialListPanel.k(-74);
             var7Lifetime1 = var7Lifetime1 + var13;
-            fe.c(param4, db.a(true, this.field_c.first), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
+            GradientUiRenderer.drawCenteredSolidText(param4, db.a(true, this.field_c.first), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
             return;
           }
           return;
@@ -1161,7 +1161,7 @@ final class MatchSetupPanel {
               if (var14 == 3 &&
                 !param4) {
                 var15 = BitmapFont.truncateWithEllipsis(nr.field_e, param11, -10 + uh.field_e[var14][0] << 1);
-                fe.c(var15, (uh.field_e[var14][0] >> 1) + EditableTextField.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (EditableTextField.field_Vb[var14][1] + param10), 0, true);
+                GradientUiRenderer.drawCenteredSolidText(var15, (uh.field_e[var14][0] >> 1) + EditableTextField.field_Vb[var14][0] + param8, 20 + (uh.field_e[var14][1] >> 1) + (EditableTextField.field_Vb[var14][1] + param10), 0, true);
               }
             }
             var13++;
@@ -1360,8 +1360,8 @@ final class MatchSetupPanel {
             this.getItemLeftX(70, true);
           }
           var4 = var3 + var2;
-          fe.b(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94));
-          fe.c(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
+          GradientUiRenderer.drawCenteredTextBackdrop(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94));
+          GradientUiRenderer.drawCenteredGradientText(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
           return;
         }
     }

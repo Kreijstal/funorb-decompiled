@@ -1640,8 +1640,8 @@ class BattleTutorial {
         }
         if (this.stage == 0) {
           MaskedTextEntryPainter.field_y.drawTransparent(db.a(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
-          fe.b(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
-          fe.c(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
+          GradientUiRenderer.drawCenteredTextBackdrop(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
+          GradientUiRenderer.drawCenteredGradientText(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
           this.panelHeight = 40;
         }
         if (0 == this.panelHeight) {
@@ -1651,7 +1651,7 @@ class BattleTutorial {
         var2 = so.field_b.field_a;
         var3 = so.field_b.field_g;
         SoftwareRaster.setClip(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
-        fe.b(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, MusicPatch.field_m, ConsoleValue.field_b, 0, 192);
+        GradientUiRenderer.drawHollowGradientFrame(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, MusicPatch.field_m, ConsoleValue.field_b, 0, 192);
         if (4 != this.buttonMode) {
           stackIn_12_0 = -5 + var2 - this.panelWidth;
           stackIn_12_1 = -45 + var3;
@@ -1664,9 +1664,9 @@ class BattleTutorial {
           } else {
             stackIn_13_5 = ConsoleValue.field_b;
           }
-          fe.a(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5, 0, 192, true);
+          GradientUiRenderer.drawGradientFrame(stackIn_12_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_13_5, 0, 192, true);
           if (this.buttonMode == 0) {
-            fe.c(qf.field_c, -10 + (-120 + var2), -16 + var3, 0, true);
+            GradientUiRenderer.drawCenteredSolidText(qf.field_c, -10 + (-120 + var2), -16 + var3, 0, true);
             decompiledFrameRemainder0 = (var5 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -1679,14 +1679,14 @@ class BattleTutorial {
                 } else {
                   stackIn_24_0 = DeployAction.field_z;
                 }
-                fe.c(stackIn_24_0, var2 - this.panelWidth / 2 - 10, var3 - 16, 0, true);
+                GradientUiRenderer.drawCenteredSolidText(stackIn_24_0, var2 - this.panelWidth / 2 - 10, var3 - 16, 0, true);
                 if (var5 != 0) {
                   if (var4 == 0) {
                     stackIn_28_0 = jk.field_a;
                   } else {
                     stackIn_28_0 = SkeletonLimitMarker.field_t;
                   }
-                  fe.c(stackIn_28_0, -10 + (var2 - this.panelWidth / 2), var3 - 16, 0, true);
+                  GradientUiRenderer.drawCenteredSolidText(stackIn_28_0, -10 + (var2 - this.panelWidth / 2), var3 - 16, 0, true);
                 }
               } else {
                 if (var4 == 0) {
@@ -1694,32 +1694,32 @@ class BattleTutorial {
                 } else {
                   stackIn_28_0 = SkeletonLimitMarker.field_t;
                 }
-                fe.c(stackIn_28_0, -10 + (var2 - this.panelWidth / 2), var3 - 16, 0, true);
+                GradientUiRenderer.drawCenteredSolidText(stackIn_28_0, -10 + (var2 - this.panelWidth / 2), var3 - 16, 0, true);
               }
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (this.buttonMode == 2) {
-                fe.c(SectorCacheStore.field_f, -120 + var2 - 10, -16 + var3, 0, true);
+                GradientUiRenderer.drawCenteredSolidText(SectorCacheStore.field_f, -120 + var2 - 10, -16 + var3, 0, true);
                 decompiledFrameRemainder0 = (var5 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (this.buttonMode == 3) {
-                  fe.c(ac.field_u, -10 + var2 - 120, -16 + var3, 0, true);
+                  GradientUiRenderer.drawCenteredSolidText(ac.field_u, -10 + var2 - 120, -16 + var3, 0, true);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if ((decompiledFrameRemainder0) &&
                   (this.buttonMode == 5)) {
-                  fe.c(GlobalSpell.field_m, -120 + var2 - 10, var3 - 16, 0, true);
+                  GradientUiRenderer.drawCenteredSolidText(GlobalSpell.field_m, -120 + var2 - 10, var3 - 16, 0, true);
                   if (var5 != 0) {
-                    fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 192, true);
+                    GradientUiRenderer.drawGradientFrame(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 192, true);
                   }
                 }
               }
             }
           }
         } else {
-          fe.a(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 192, true);
+          GradientUiRenderer.drawGradientFrame(-5 - this.panelWidth + var2, -45 + var3, -10 + this.panelWidth, 30, DisplacedUnitMarker.field_s, AgeValidator.field_k, 0, 192, true);
         }
         if (this.message != null) {
           SoftwareRaster.setClip(var2 - this.panelWidth, -this.panelHeight + var3, var2 - 10, var3 - 45);

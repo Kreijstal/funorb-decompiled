@@ -580,7 +580,7 @@ final class BattleCharacter {
                   stackIn_43_1 = 256;
                 }
                 stackIn_45_2 = 56;
-                stackIn_45_3 = fe.field_o[var9Lifetime1Lifetime1];
+                stackIn_45_3 = GradientUiRenderer.particlePalettes[var9Lifetime1Lifetime1];
                 if (this.field_k[var12] << 4 <= 63) {
                   stackIn_46_4 = this.field_k[var12] << 4;
                 } else {

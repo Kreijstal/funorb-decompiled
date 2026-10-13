@@ -65,11 +65,11 @@ final class TutorialController {
             this.drawInstructionsPanel(93);
           }
           if (!highlighted) {
-            fe.a(var5, var11, 25 + var9, ConsoleValue.field_b, true);
+            GradientUiRenderer.drawGradientText(var5, var11, 25 + var9, ConsoleValue.field_b, true);
           }
           if (highlighted ||
             var14 != 0) {
-            fe.a(var5, var11, var9 + 25, field_e, true);
+            GradientUiRenderer.drawGradientText(var5, var11, var9 + 25, field_e, true);
           }
           var12 = this.b((byte) 84, itemIndex);
           if (var12 > -1) {
@@ -116,7 +116,7 @@ final class TutorialController {
           }
           var4 = ValidationStatusWidget.field_V;
           var4 = var4 + " " + SpriteFramedLabel.a(EmailCheckResult.a(param0 ^ 4800, QuickChatPhrase.a(var2_int != 0, false, (byte) -115, var3 != 0), new String[]{ConsolePanel.field_r}), '#', param0 ^ 3, "<br><br>");
-          fe.b(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(40, 180, 560, 150, MusicPatch.field_m, ConsoleValue.field_b, param0, 128);
           rs.field_n.drawParagraph(var4, 80, 200, 480, 300, 16777215, -1, 1, 0, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -480,7 +480,7 @@ final class TutorialController {
             }
           }
           if (decompiledFrameCompleted0) {
-            fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
             SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(54, (byte) 94), db.a(true, 606), MatchConditionEntry.a(136, (byte) 94));
           }
           var2_int = 0;
@@ -511,7 +511,7 @@ final class TutorialController {
           }
           if (decompiledNaturalLoopExit0) {
             SoftwareRaster.a();
-            fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
             SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
             stackIn_26_0 = pg.playerProfile.getUnlockLevel(0);
             stackIn_26_1 = ah.field_b;
@@ -527,22 +527,22 @@ final class TutorialController {
           stackIn_33_5 = !(pg.playerProfile.getUnlockLevel(0) > ah.field_b);
           uh.a(stackIn_32_0, stackIn_32_1, stackIn_32_2, stackIn_32_3, stackIn_32_4, stackIn_33_5, db.a(true, 50));
           SoftwareRaster.a();
-          fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-          fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
-          fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
-          fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
-          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
+          GradientUiRenderer.drawCenteredGradientText(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawCenteredGradientText(dd.a(pg.playerProfile.getAvailableRunes((byte) 45), param0 ^ -23666), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (BufferedSocket.field_j >= 2) {
             rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 127) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           var2_int = 0;
           var3 = 0;
           do {
             if (!(var3 <= ah.field_b)) {
               var3 = -pg.playerProfile.progressionCredit - pg.playerProfile.runeCredit + var2_int;
-              fe.c(EmailCheckResult.a(4800, hf.field_e, new String[]{Integer.toString(1 + ah.field_b)}), db.a(true, 460), MatchConditionEntry.a(190, (byte) 94), ConsoleValue.field_b, true);
+              GradientUiRenderer.drawCenteredGradientText(EmailCheckResult.a(4800, hf.field_e, new String[]{Integer.toString(1 + ah.field_b)}), db.a(true, 460), MatchConditionEntry.a(190, (byte) 94), ConsoleValue.field_b, true);
               break;
             }
             var2_int = var2_int + NodeDeque.unlockLevelCosts[var3];
@@ -557,19 +557,19 @@ final class TutorialController {
             rs.field_n.drawParagraph(EmailCheckResult.a(4800, gt.field_g, new String[]{this.c(-38, var2_int)}), db.a(true, 320), MatchConditionEntry.a(200, (byte) 94), 280, 170, 16777215, 0, 1, 0, 0);
           }
           if (pg.playerProfile.getUnlockLevel(param0 ^ param0) < NodeDeque.unlockLevelCosts.length) {
-            fe.c(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.c(-38, NodeDeque.unlockLevelCosts[ah.field_b]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.getUnlockLevel(0) == ah.field_b &&
               pg.playerProfile.getAvailableRunes((byte) 123) >= NodeDeque.unlockLevelCosts[pg.playerProfile.getUnlockLevel(0)]) {
               boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+                GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 AccountNameSelectionForm.field_F = 52;
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+                GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
               }
-              fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
+              GradientUiRenderer.drawCenteredSolidText(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             }
           }
           return;
@@ -826,11 +826,11 @@ final class TutorialController {
           boolean decompiledFrameRemainder0 = true;
           var4 = 89;
           var5 = field_e;
-          fe.c(CampaignQuicksave.field_i, db.a(true, var3[0]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          fe.c(MapRepository.field_f, db.a(true, var3[1]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          fe.c(TextLineLayout.field_g, db.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          fe.c(vi.field_c, db.a(true, var3[3]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
-          fe.c(hq.field_c, db.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          GradientUiRenderer.drawCenteredGradientText(CampaignQuicksave.field_i, db.a(true, var3[0]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          GradientUiRenderer.drawCenteredGradientText(MapRepository.field_f, db.a(true, var3[1]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          GradientUiRenderer.drawCenteredGradientText(TextLineLayout.field_g, db.a(true, var3[2]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          GradientUiRenderer.drawCenteredGradientText(vi.field_c, db.a(true, var3[3]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
+          GradientUiRenderer.drawCenteredGradientText(hq.field_c, db.a(true, var3[4]), MatchConditionEntry.a(var4, (byte) 94), field_e, true);
           var4 = var4 + (8 + rs.field_n.maxAscent);
           var6 = -100 / ((15 - param0) / 42);
           if (!AnimationFrameSet.field_z.field_l) {
@@ -879,7 +879,7 @@ final class TutorialController {
           }
           var4Lifetime1 = 275 + (rs.field_n.maxAscent + 110);
           if (var7 != null) {
-            fe.c((String) (var7), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
+            GradientUiRenderer.drawCenteredGradientText((String) (var7), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2266,7 +2266,7 @@ final class TutorialController {
 
     private final void b(int param0) {
         try {
-          fe.a(eq.field_n, db.a(true, param0), MatchConditionEntry.a(220, (byte) 94), 400, 16777215, true);
+          GradientUiRenderer.drawWrappedCenteredSolidText(eq.field_n, db.a(true, param0), MatchConditionEntry.a(220, (byte) 94), 400, 16777215, true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ci.H(" + param0 + ')');
         }
@@ -2375,7 +2375,7 @@ final class TutorialController {
           var16 = 1;
           var17 = 0;
           if (var7 == 0) {
-            fe.a(EmailCheckResult.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, ConsoleValue.field_b, true);
+            GradientUiRenderer.drawWrappedCenteredGradientText(EmailCheckResult.a(4800, QuickChatCommandDefinition.field_a, new String[]{Integer.toString(pg.playerProfile.spellQuantities[param1])}), var8 >> 1, 82 + var11, var8 - 45, ConsoleValue.field_b, true);
           }
           stackIn_24_0 = DateInputWidget.field_E;
           stackIn_24_1 = var5;
@@ -2391,7 +2391,7 @@ final class TutorialController {
           if (var7 == 0) {
             DateInputWidget.field_E.drawParagraph(EmailCheckResult.a(4800, SocketResourceClient.field_w, new String[]{Integer.toString(1 + uc.spellDefinitions[param1][1])}), 10, var11 + (52 - (-30 - var10)), var8 - 20, var13, var14, var15, var16, var17, var9);
           }
-          fe.a(var4, var8 >> 1, 35, -45 + var8, ConsoleValue.field_b, true);
+          GradientUiRenderer.drawWrappedCenteredGradientText(var4, var8 >> 1, 35, -45 + var8, ConsoleValue.field_b, true);
           BattleCharacter.field_h[var6].drawTransparent(-20 + (var8 >> 1), 12 + var11);
           stackIn_32_0 = km.field_h;
           if (var7 == 0) {
@@ -2835,13 +2835,13 @@ final class TutorialController {
             if (!DamageEvent.isGuestSession(95)) {
               return;
             }
-            fe.a(eq.field_n, db.a(true, 420), MatchConditionEntry.a(386, (byte) 94), 350, 16777215, true);
+            GradientUiRenderer.drawWrappedCenteredSolidText(eq.field_n, db.a(true, 420), MatchConditionEntry.a(386, (byte) 94), 350, 16777215, true);
             if (var17 == 0) {
               return;
             }
           }
           var7 = rs.field_n.capitalHeight + rs.field_n.maxDescent;
-          fe.a(so.field_a[var6], db.a(true, 272), MatchConditionEntry.a(260 - (rs.field_n.maxDescent - rs.field_n.baselineHeight), (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawGradientText(so.field_a[var6], db.a(true, 272), MatchConditionEntry.a(260 - (rs.field_n.maxDescent - rs.field_n.baselineHeight), (byte) 94), ConsoleValue.field_b, true);
           var8 = DebouncedValidator.a(var6, var5, 1) ? 1 : 0;
           var9 = MatchConditionEntry.a(288, (byte) 94);
           if (var8 != 0) {
@@ -2927,18 +2927,18 @@ final class TutorialController {
             this.a(true);
           }
           if (0 == pg.playerProfile.unitUnlockMasks[param1]) {
-            fe.c(this.c(-38, 50), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.c(-38, 50), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.getAvailableRunes((byte) 120) >= 50) {
               boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail0) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+                GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 AccountNameSelectionForm.field_F = 53;
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+                GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
               }
-              fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
+              GradientUiRenderer.drawCenteredSolidText(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             }
           }
           return;
@@ -3094,7 +3094,7 @@ final class TutorialController {
           }
           DateInputWidget.field_E.drawParagraph(param0, 0, var14 + (30 + var9), var7_int, var17, var18, var19, var20, var21, var22);
           DateInputWidget.field_E.drawParagraph(param5, 0, var15 + (var14 + 30) + var9, var7_int, var17, var18, var19, var20, var21, var22);
-          fe.c(param2, var7_int >> 1, 30, ConsoleValue.field_b, true);
+          GradientUiRenderer.drawCenteredGradientText(param2, var7_int >> 1, 30, ConsoleValue.field_b, true);
           so.field_b.a(5605);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3490,7 +3490,7 @@ final class TutorialController {
           boolean decompiledFrameRemainder0 = true;
           var5Lifetime1 = 89;
           var6 = field_e;
-          fe.c(bj.field_o, db.a(true, var3[4]), MatchConditionEntry.a(var5Lifetime1, (byte) 94), field_e, true);
+          GradientUiRenderer.drawCenteredGradientText(bj.field_o, db.a(true, var3[4]), MatchConditionEntry.a(var5Lifetime1, (byte) 94), field_e, true);
           var5Lifetime1 = var5Lifetime1 + (8 + rs.field_n.maxAscent);
           if (!TurnTimerDial.field_a.field_o) {
             var7 = fm.field_c;
@@ -3543,7 +3543,7 @@ final class TutorialController {
             stackIn_60_0 = var7;
           }
           if (decompiledFrameRemainder1) {
-            fe.c((String) (stackIn_60_0), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
+            GradientUiRenderer.drawCenteredGradientText((String) (stackIn_60_0), SoftwareRaster.width / 2, SoftwareRaster.height / 2, field_e, true);
           }
           var8 = 30 / ((param0 + 12) / 41);
           var5Lifetime2 = 385 + rs.field_n.maxAscent;
@@ -3604,38 +3604,38 @@ final class TutorialController {
           if (null == pg.playerProfile) {
             return;
           }
-          fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-          fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           SoftwareRaster.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 192);
           SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 192);
           if (ClientContextMenu.field_k == 0) {
-            fe.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 167), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
           if (1 == ClientContextMenu.field_k) {
-            fe.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
             SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
           boolean decompiledSharedTail2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 171), db.a(true, 286), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
           if (!decompiledSharedTail2) {
-            fe.a(db.a(true, 171), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+            GradientUiRenderer.drawFilledGradientFrame(db.a(true, 171), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
             decompiledSharedTail2 = (var8 != 0);
           }
           if (decompiledSharedTail2) {
-            fe.a(db.a(true, 171), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+            GradientUiRenderer.drawFilledGradientFrame(db.a(true, 171), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
             AccountNameSelectionForm.field_F = 8;
           }
-          fe.c(SpriteButtonPainter.field_w, db.a(true, 228), MatchConditionEntry.a(416, (byte) 94), 0, true);
+          GradientUiRenderer.drawCenteredSolidText(SpriteButtonPainter.field_w, db.a(true, 228), MatchConditionEntry.a(416, (byte) 94), 0, true);
           boolean decompiledSharedTail1 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 44), db.a(true, 159), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
           if (!decompiledSharedTail1) {
-            fe.a(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+            GradientUiRenderer.drawFilledGradientFrame(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
             AccountNameSelectionForm.field_F = 9;
             decompiledSharedTail1 = (var8 != 0);
           }
           if (decompiledSharedTail1) {
-            fe.a(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+            GradientUiRenderer.drawFilledGradientFrame(db.a(true, 44), MatchConditionEntry.a(384, (byte) 94), 115, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
           }
-          fe.c(CampaignRewardPreview.field_b, db.a(true, 101), MatchConditionEntry.a(416, (byte) 94), 0, true);
+          GradientUiRenderer.drawCenteredSolidText(CampaignRewardPreview.field_b, db.a(true, 101), MatchConditionEntry.a(416, (byte) 94), 0, true);
           if (param0 != 100) {
             discarded$0 = this.d(78, 100, 70);
           }
@@ -3646,7 +3646,7 @@ final class TutorialController {
             SoftwareRaster.b(db.a(true, 40), MatchConditionEntry.a(380, (byte) 94), 123, 40, 0, 128);
           }
           boolean decompiledFrameRemainder0 = true;
-          fe.b(db.a(true, 30), MatchConditionEntry.a(60, (byte) 94), 270, 324, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 30), MatchConditionEntry.a(60, (byte) 94), 270, 324, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           if (ClientContextMenu.field_k == 0) {
             SoftwareRaster.setClip(db.a(true, 34), MatchConditionEntry.a(64, (byte) 94), db.a(true, 296), MatchConditionEntry.a(380, (byte) 94));
             if (ToggleWidget.field_O == null ||
@@ -3684,8 +3684,8 @@ final class TutorialController {
               TextLineLayout.currentSpellMenu.drawRadialMenu(0, var3, var2_int, param0 ^ 76, this, AccountNameSelectionForm.field_F, -1);
             }
             SoftwareRaster.a();
-            fe.b(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
-            fe.a(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
+            GradientUiRenderer.drawWrappedCenteredTextBackdrop(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
+            GradientUiRenderer.drawWrappedCenteredGradientText(l.field_e, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
             if (var2_int >= 0) {
               discarded$1 = this.a(TextLineLayout.currentSpellMenu, true, -125, -var2_int + 256);
             }
@@ -3694,13 +3694,13 @@ final class TutorialController {
               discarded$2 = this.a(ToggleWidget.field_O, true, -127, -var2_int);
             }
             if (vi.field_f == null) {
-              fe.b(TextLineLayout.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
-              fe.a(TextLineLayout.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
+              GradientUiRenderer.drawWrappedCenteredTextBackdrop(TextLineLayout.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
+              GradientUiRenderer.drawWrappedCenteredGradientText(TextLineLayout.currentSpellMenu.label, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
               decompiledFrameRemainder0 = (var8 != 0);
             }
             if (decompiledFrameRemainder0) {
-              fe.b(vi.field_f, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
-              fe.a(vi.field_f, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
+              GradientUiRenderer.drawWrappedCenteredTextBackdrop(vi.field_f, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, true);
+              GradientUiRenderer.drawWrappedCenteredGradientText(vi.field_f, db.a(true, 165), MatchConditionEntry.a(100, (byte) 94), 230, field_e, true);
               decompiledFrameRemainder0 = (var8 != 0);
             }
           }
@@ -3721,11 +3721,11 @@ final class TutorialController {
             discarded$3 = this.a(0, CachedArchiveProvider.spellMenuRoot, true, 0, var4, (byte) 116);
             this.c(0);
             SoftwareRaster.a();
-            fe.b(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
-            fe.a(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
+            GradientUiRenderer.drawWrappedCenteredTextBackdrop(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, true);
+            GradientUiRenderer.drawWrappedCenteredGradientText(MapRepository.field_j, db.a(true, 165), MatchConditionEntry.a(76, (byte) 94), 230, ConsoleValue.field_b, true);
           }
           SoftwareRaster.a();
-          fe.b(db.a(true, 310), MatchConditionEntry.a(60, (byte) 94), 300, 80, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 310), MatchConditionEntry.a(60, (byte) 94), 300, 80, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           var4Lifetime1 = 1;
           var5 = 0;
           while (true) {
@@ -3779,23 +3779,23 @@ final class TutorialController {
               rs.field_n.drawParagraph(SocketResourceClient.field_x, db.a(true, 40), MatchConditionEntry.a(284, (byte) 94), 250, 55, 16777215, -1, var2_int, 1, 1, 0);
             }
           }
-          fe.b(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), true);
-          fe.c(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), ConsoleValue.field_b, true);
-          fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
-          fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
-          fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
-          fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
-          fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawCenteredTextBackdrop(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), true);
+          GradientUiRenderer.drawCenteredGradientText(cp.field_c, db.a(true, 460), MatchConditionEntry.a(76, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
+          GradientUiRenderer.drawCenteredGradientText(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawCenteredGradientText(dd.a(pg.playerProfile.getAvailableRunes((byte) 48), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
           if (2 <= BufferedSocket.field_j &&
             CoatOfArms.field_e) {
             rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 114) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           this.g(RasterViewportResizeHandler.field_d, -118);
           var5Lifetime1 = 40 + (nr.field_e.textWidth(AnimationSkeleton.field_m) >> 1);
           fm.a(e.field_b, var5Lifetime1, db.a(true, 620 - var5Lifetime1), MatchConditionEntry.a(19, (byte) 94), -104);
-          fe.a(AnimationSkeleton.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
+          GradientUiRenderer.drawSolidText(AnimationSkeleton.field_m, db.a(true, 640 - var5Lifetime1), MatchConditionEntry.a(49, (byte) 94), 16777215, true);
           if (IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 620 - var5Lifetime1), db.a(true, 620), MatchConditionEntry.a(19, (byte) 94), MatchConditionEntry.a(e.field_b[0].pixelHeight + 19, (byte) 94))) {
             AccountNameSelectionForm.field_F = 45;
           }
@@ -4190,7 +4190,7 @@ final class TutorialController {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           AccountNameSelectionForm.field_F = -1;
-          fe.b(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 30), MatchConditionEntry.a(50, (byte) 94), 580, 90, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
           var2_int = (int)(-(128.0 * Math.cos((double)GlobalSpell.field_h * 3.141592653589793 / 256.0)) + 128.0);
           var3 = (int)(128.0 - Math.cos((double)WeightedLruCache.field_d * 3.141592653589793 / 256.0) * 128.0);
           var4 = (int)(128.0 - 128.0 * Math.cos((double)tf.field_k * 3.141592653589793 / 256.0));
@@ -4227,7 +4227,7 @@ final class TutorialController {
           }
           if (decompiledNaturalLoopExit0) {
             SoftwareRaster.a();
-            fe.b(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 30), MatchConditionEntry.a(150, (byte) 94), 270, 270, EffectPresentation.field_j, AgeValidator.field_k, 0, 256);
             stackIn_18_0 = db.a(true, 34);
           }
           SoftwareRaster.setClip(stackIn_18_0, MatchConditionEntry.a(154, (byte) 94), db.a(true, 296), MatchConditionEntry.a(416, (byte) 94));
@@ -4318,11 +4318,11 @@ final class TutorialController {
               }
             }
             SoftwareRaster.a();
-            fe.b(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-            fe.b(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
-            fe.b(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
-            fe.c(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
-            fe.c(dd.a(pg.playerProfile.getAvailableRunes((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 310), MatchConditionEntry.a(150, (byte) 94), 300, 170, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 310), MatchConditionEntry.a(330, (byte) 94), 145, 90, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 320), MatchConditionEntry.a(370, (byte) 94), 125, 42, EffectPresentation.field_j, AgeValidator.field_k, 0, 0);
+            GradientUiRenderer.drawCenteredGradientText(ov.field_f, db.a(true, 382), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(dd.a(pg.playerProfile.getAvailableRunes((byte) 55), 82), db.a(true, 382), MatchConditionEntry.a(406, (byte) 94), ConsoleValue.field_b, true);
             stackIn_71_0 = BufferedSocket.field_j;
             break;
           }
@@ -4330,8 +4330,8 @@ final class TutorialController {
             CoatOfArms.field_e) {
             rs.field_n.drawCentered(pg.playerProfile.getAvailableRunes((byte) 96) + "", db.a(true, 382), MatchConditionEntry.a(369, (byte) 94), 16777215, 0);
           }
-          fe.b(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
-          fe.b(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 465), MatchConditionEntry.a(330, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, 465), MatchConditionEntry.a(380, (byte) 94), 145, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128);
           if (SetCoatConsoleCommand.field_F <= -1) {
             this.d((byte) -35, 1 + li.field_q);
             if (var10 == 0) {
@@ -4377,7 +4377,7 @@ final class TutorialController {
           var11 = RadialSummonItem.field_h[var10_int];
           var12 = param1 + param5 + param7;
           if (param2 != -1) {
-            fe.b(param2 + 1 + ". ", db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param0, true);
+            GradientUiRenderer.drawRightAlignedGradientText(param2 + 1 + ". ", db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param0, true);
           }
           if (var12 != 0) {
             param5 = (200 * param5 + var12) / (2 * var12);
@@ -4385,22 +4385,22 @@ final class TutorialController {
             param7 = (var12 + 200 * param7) / (var12 * 2);
           }
           var13 = param8;
-          fe.a(var13, db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param0, true);
+          GradientUiRenderer.drawGradientText(var13, db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param0, true);
           var13Lifetime1 = Integer.toString(param4);
-          fe.c(var13Lifetime1, db.a(true, var11[0]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
+          GradientUiRenderer.drawCenteredGradientText(var13Lifetime1, db.a(true, var11[0]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
           if (50 > var12) {
             stackIn_19_0 = Integer.toString(var12);
           } else {
             stackIn_19_0 = "50+";
           }
           var13Lifetime2 = stackIn_19_0;
-          fe.c(var13Lifetime2, db.a(true, var11[1]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
+          GradientUiRenderer.drawCenteredGradientText(var13Lifetime2, db.a(true, var11[1]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
           var13Lifetime3 = param1 + "%";
-          fe.c(var13Lifetime3, db.a(true, var11[2]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
+          GradientUiRenderer.drawCenteredGradientText(var13Lifetime3, db.a(true, var11[2]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
           var13Lifetime4 = param5 + "%";
-          fe.c(var13Lifetime4, db.a(true, var11[3]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
+          GradientUiRenderer.drawCenteredGradientText(var13Lifetime4, db.a(true, var11[3]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
           var13Lifetime5 = param7 + "%";
-          fe.c(var13Lifetime5, db.a(true, var11[4]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
+          GradientUiRenderer.drawCenteredGradientText(var13Lifetime5, db.a(true, var11[4]), MatchConditionEntry.a(param3, (byte) 94), param0, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4983,7 +4983,7 @@ final class TutorialController {
                 var8 = -param4 + param0 - (-7 - 70 * (param3 >> 2));
                 if (0 < var8 &&
                   var8 < 354) {
-                  fe.c(param1.children[var7_int].label, db.a(true, 152), MatchConditionEntry.a(var8 + 55, (byte) 94), field_e, true);
+                  GradientUiRenderer.drawCenteredGradientText(param1.children[var7_int].label, db.a(true, 152), MatchConditionEntry.a(var8 + 55, (byte) 94), field_e, true);
                   var9 = -30 + (270 + (-(nr.field_e.textWidth(param1.children[var7_int].label) >> 1) - 25) >> 1);
                   fm.a(DraggableWidgetContainer.field_Q, var9, db.a(true, 50), MatchConditionEntry.a(38 + var8, (byte) 94), -66);
                   fm.a(DraggableWidgetContainer.field_Q, var9, db.a(true, 255 - var9), MatchConditionEntry.a(var8 + 38, (byte) 94), -126);
@@ -5159,18 +5159,18 @@ final class TutorialController {
           this.b(true);
           if (WhirlpoolHasher.unitDefinitions[var4_int][11] <= 0) {
             if ((pg.playerProfile.unitUnlockMasks[param0] & 1 << param1) != 0) {
-              fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+              GradientUiRenderer.drawCenteredGradientText(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
               if (var6 == 0) {
                 return;
               }
             }
-            fe.c(IntrusiveNode.field_d, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(IntrusiveNode.field_d, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (var6 == 0) {
               return;
             }
           }
           if (0 == (pg.playerProfile.unitUnlockMasks[param0] & 1 << param1)) {
-            fe.c(this.c(-38, WhirlpoolHasher.unitDefinitions[var4_int][11]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.c(-38, WhirlpoolHasher.unitDefinitions[var4_int][11]), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.unitUnlockMasks[param0] == 0) {
               return;
             }
@@ -5179,19 +5179,19 @@ final class TutorialController {
             }
             boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
             if (!decompiledSharedTail0) {
-              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+              GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
               AccountNameSelectionForm.field_F = 52;
               decompiledSharedTail0 = (var6 != 0);
             }
             if (decompiledSharedTail0) {
-              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+              GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
             }
-            fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
+            GradientUiRenderer.drawCenteredSolidText(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             if (var6 == 0) {
               return;
             }
           }
-          fe.c(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+          GradientUiRenderer.drawCenteredGradientText(CampaignMenuButton.field_b, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5220,20 +5220,20 @@ final class TutorialController {
           var3_int = 44 % ((-32 - param1) / 61);
           if (ClientContextMenu.field_k == 0) {
             var4 = uc.spellDefinitions[param0][0];
-            fe.c(this.c(-38, var4), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(this.c(-38, var4), db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), ConsoleValue.field_b, true);
             if (pg.playerProfile.getAvailableRunes((byte) 125) >= var4 &&
               param0 < pg.playerProfile.spellQuantities.length &&
               pg.playerProfile.spellQuantities[param0] < 250) {
               boolean decompiledSharedTail2 = !(!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
               if (!decompiledSharedTail2) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+                GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
                 decompiledSharedTail2 = (var7 != 0);
               }
               if (decompiledSharedTail2) {
-                fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+                GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                 AccountNameSelectionForm.field_F = 8;
               }
-              fe.c(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
+              GradientUiRenderer.drawCenteredSolidText(wv.field_e, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             }
           }
           if (ClientContextMenu.field_k == 1) {
@@ -5258,14 +5258,14 @@ final class TutorialController {
                 if (var5 != 0) {
                   boolean decompiledSharedTail1 = !(IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, 469), db.a(true, 606), MatchConditionEntry.a(334, (byte) 94), MatchConditionEntry.a(366, (byte) 94)));
                   if (!decompiledSharedTail1) {
-                    fe.a(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+                    GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
                     AccountNameSelectionForm.field_F = 8;
                     decompiledSharedTail1 = (var7 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    fe.a(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+                    GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(334, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
                   }
-                  fe.c(VertexNormal.field_h, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), 0, true);
+                  GradientUiRenderer.drawCenteredSolidText(VertexNormal.field_h, db.a(true, 537), MatchConditionEntry.a(366, (byte) 94), 0, true);
                 }
                 if (var4Lifetime1 == 0) {
                   return;
@@ -5277,14 +5277,14 @@ final class TutorialController {
             }
             boolean decompiledSharedTail0 = !(IterableDualNodeDeque.isPointerInBounds(stackIn_47_0, stackIn_47_1, db.a(true, 606), MatchConditionEntry.a(384, (byte) 94), MatchConditionEntry.a(416, (byte) 94)));
             if (!decompiledSharedTail0) {
-              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
+              GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, field_e, 0, 0);
               AccountNameSelectionForm.field_F = 8;
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              fe.a(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+              GradientUiRenderer.drawFilledGradientFrame(db.a(true, 469), MatchConditionEntry.a(384, (byte) 94), 137, 32, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
             }
-            fe.c(MeshObject.field_c, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
+            GradientUiRenderer.drawCenteredSolidText(MeshObject.field_c, db.a(true, 537), MatchConditionEntry.a(416, (byte) 94), 0, true);
             return;
           }
           return;
@@ -5464,12 +5464,12 @@ final class TutorialController {
             field_c = (int[]) null;
           }
           if (param1 != -1) {
-            fe.b(1 + param1 + ". ", db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param4, true);
+            GradientUiRenderer.drawRightAlignedGradientText(1 + param1 + ". ", db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param4, true);
           }
           var9 = param5;
-          fe.a(var9, db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param4, true);
+          GradientUiRenderer.drawGradientText(var9, db.a(true, 80), MatchConditionEntry.a(param3, (byte) 94), param4, true);
           var9Lifetime1 = AiInfluenceMap.a(param0 + 10539, param2);
-          fe.c(var9Lifetime1, db.a(true, var8[4]), MatchConditionEntry.a(param3, (byte) 94), param4, true);
+          GradientUiRenderer.drawCenteredGradientText(var9Lifetime1, db.a(true, var8[4]), MatchConditionEntry.a(param3, (byte) 94), param4, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5541,7 +5541,7 @@ final class TutorialController {
             19 != this.tutorialStage &&
             4 != this.tutorialStage &&
             this.tutorialStage != 16) {
-            fe.b(db.a(!param0, 0), MatchConditionEntry.a(0, (byte) 94), rs.field_k, se.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(!param0, 0), MatchConditionEntry.a(0, (byte) 94), rs.field_k, se.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
           }
           boolean decompiledFrameRemainder0 = true;
           if (19 != this.tutorialStage) {
@@ -5551,38 +5551,38 @@ final class TutorialController {
                   this.tutorialStage != 27 &&
                   28 != this.tutorialStage) {
                   if (18 == this.tutorialStage) {
-                    fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                    fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
+                    GradientUiRenderer.drawHollowGradientFrame(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                    GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117) - 10, MoveEvent.tutorialLayout.getRightX((byte) -73, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) + 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                     this.m(100);
-                    fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
-                    fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
+                    GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
+                    GradientUiRenderer.drawCenteredGradientText(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                     decompiledFrameRemainder0 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder0) {
                     if (this.tutorialStage == 12) {
-                      fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
+                      GradientUiRenderer.drawHollowGradientFrame(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                      GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -118), MoveEvent.tutorialLayout.getRightX((byte) -101, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -109) + 10, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                       this.k(-128);
                       stackIn_68_0 = wb.field_b[this.tutorialStage];
                       stackIn_69_1 = !(param0);
-                      fe.b(stackIn_68_0, db.a(stackIn_69_1, 320), MatchConditionEntry.a(30, (byte) 94));
-                      fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
+                      GradientUiRenderer.drawCenteredTextBackdrop(stackIn_68_0, db.a(stackIn_69_1, 320), MatchConditionEntry.a(30, (byte) 94));
+                      GradientUiRenderer.drawCenteredGradientText(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                       decompiledFrameRemainder0 = (var4 != 0);
                     }
                     if (decompiledFrameRemainder0) {
                       if (20 != this.tutorialStage) {
                         if (this.tutorialStage == 13) {
-                          fe.b(db.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                          fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
+                          GradientUiRenderer.drawHollowGradientFrame(db.a(!param0, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                          GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -127) - 10, MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -114) - 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                           this.i((byte) 41);
-                          fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
-                          fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
+                          GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
+                          GradientUiRenderer.drawCenteredGradientText(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                           decompiledFrameRemainder0 = (var4 != 0);
                         }
                         if (decompiledFrameRemainder0) {
                           if (this.tutorialStage == 0) {
-                            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
-                            fe.b(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, MusicPatch.field_m, field_e, 0, 128);
+                            GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -106) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -33) - 10), MoveEvent.tutorialLayout.getRightX((byte) -125, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -125) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 113)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+                            GradientUiRenderer.drawHollowGradientFrame(10 + MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -104) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -22) + 10), -20 + MoveEvent.tutorialLayout.getRightX((byte) 115, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -120) - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -125) - 10) - 20, MusicPatch.field_m, field_e, 0, 128);
                             var2_int = so.field_b.field_a;
                             MaskedTextEntryPainter.field_y.drawTransparent(var2_int / 2 - MaskedTextEntryPainter.field_y.canvasWidth / 2, 50 + MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -111) - MaskedTextEntryPainter.field_y.canvasHeight);
                             decompiledFrameRemainder0 = (var4 != 0);
@@ -5595,15 +5595,15 @@ final class TutorialController {
                             if (this.tutorialStage != 5) {
                               if (this.tutorialStage == 22 ||
                                 21 == this.tutorialStage) {
-                                fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                                GradientUiRenderer.drawHollowGradientFrame(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
                                 MoveEvent.campaignMenu.draw((byte) 17);
-                                fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
+                                GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10, MoveEvent.tutorialLayout.getRightX((byte) 103, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - (MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - 10), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                                 decompiledFrameRemainder0 = (var4 != 0);
                               }
                               if (decompiledFrameRemainder0) {
                                 if (this.tutorialStage == 16) {
                                   BufferedSocket.field_i.a(256);
-                                  fe.b(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+                                  GradientUiRenderer.drawHollowGradientFrame(-3 + MoveEvent.tutorialLayout.getLeftX(16, 29), MoveEvent.tutorialLayout.getTopY(16, (byte) -118) - 3, 6 + (MoveEvent.tutorialLayout.getRightX((byte) -83, 16) - MoveEvent.tutorialLayout.getLeftX(16, 29)), 6 + this.getItemHeight(12, 0), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                                   decompiledFrameRemainder0 = (var4 != 0);
                                 }
                                 if (decompiledFrameRemainder0) {
@@ -5618,37 +5618,37 @@ final class TutorialController {
                                         ValidatedTextWidget.field_Z) {
                                         var2_int -= 32;
                                       }
-                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+                                      GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -64), MoveEvent.tutorialLayout.getRightX((byte) 92, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) + (-MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -115) + MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112)), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                                       if (wb.field_b[this.tutorialStage] != null) {
-                                        fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
-                                        fe.c(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
+                                        GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
+                                        GradientUiRenderer.drawCenteredGradientText(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
                                       }
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                     if (decompiledFrameRemainder0) {
                                       var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -102);
-                                      fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -34), MoveEvent.tutorialLayout.getRightX((byte) 97, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), (1 + MoveEvent.tutorialStageItems[this.tutorialStage].length) * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -121) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 117) >> 2), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+                                      GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -34), MoveEvent.tutorialLayout.getRightX((byte) 97, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), (1 + MoveEvent.tutorialStageItems[this.tutorialStage].length) * MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -121) + (MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 117) >> 2), MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
                                       if (null != wb.field_b[this.tutorialStage]) {
-                                        fe.b(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
+                                        GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], this.getItemLeftX(true, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true));
                                         stackIn_143_0 = wb.field_b[this.tutorialStage];
                                         stackIn_144_2 = !(param0);
-                                        fe.c(stackIn_143_0, this.getItemLeftX(stackIn_144_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
+                                        GradientUiRenderer.drawCenteredGradientText(stackIn_143_0, this.getItemLeftX(stackIn_144_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
                                       }
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                   }
                                   if (decompiledFrameRemainder0) {
-                                    fe.b(db.a(true, 25), MatchConditionEntry.a(33, (byte) 94), 590, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                                    fe.b(db.a(true, 42), MatchConditionEntry.a(48, (byte) 94), 556, 158, MusicPatch.field_m, AgeValidator.field_k, 0, 256);
-                                    fe.b(db.a(true, 42), MatchConditionEntry.a(215, (byte) 94), 556, 205, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
-                                    fe.b(db.a(true, 52), MatchConditionEntry.a(228, (byte) 94), 191, 180, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
-                                    fe.b(db.a(true, 251), MatchConditionEntry.a(228, (byte) 94), 337, 180, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
-                                    fe.b(db.a(!param0, 30), MatchConditionEntry.a(431, (byte) 94), 581, 32, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
+                                    GradientUiRenderer.drawHollowGradientFrame(db.a(true, 25), MatchConditionEntry.a(33, (byte) 94), 590, 414, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                                    GradientUiRenderer.drawHollowGradientFrame(db.a(true, 42), MatchConditionEntry.a(48, (byte) 94), 556, 158, MusicPatch.field_m, AgeValidator.field_k, 0, 256);
+                                    GradientUiRenderer.drawHollowGradientFrame(db.a(true, 42), MatchConditionEntry.a(215, (byte) 94), 556, 205, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
+                                    GradientUiRenderer.drawHollowGradientFrame(db.a(true, 52), MatchConditionEntry.a(228, (byte) 94), 191, 180, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
+                                    GradientUiRenderer.drawHollowGradientFrame(db.a(true, 251), MatchConditionEntry.a(228, (byte) 94), 337, 180, MusicPatch.field_m, AgeValidator.field_k, 0, 128);
+                                    GradientUiRenderer.drawHollowGradientFrame(db.a(!param0, 30), MatchConditionEntry.a(431, (byte) 94), 581, 32, MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                                     decompiledFrameRemainder0 = (null != wb.field_b[this.tutorialStage]);
                                     if (decompiledFrameRemainder0) {
                                       var2_int = MatchConditionEntry.a(33, (byte) 94);
-                                      fe.b(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -63, this.tutorialStage) >> 1, var2_int);
-                                      fe.c(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -77, this.tutorialStage) >> 1, var2_int, ConsoleValue.field_b, false);
+                                      GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -63, this.tutorialStage) >> 1, var2_int);
+                                      GradientUiRenderer.drawCenteredGradientText(wb.field_b[this.tutorialStage], MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29) + MoveEvent.tutorialLayout.getRightX((byte) -77, this.tutorialStage) >> 1, var2_int, ConsoleValue.field_b, false);
                                       decompiledFrameRemainder0 = (var4 != 0);
                                     }
                                   }
@@ -5665,65 +5665,65 @@ final class TutorialController {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        fe.b(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                        fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
+                        GradientUiRenderer.drawHollowGradientFrame(db.a(true, 15), MatchConditionEntry.a(30, (byte) 94), 610, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                        GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -108) - 10, MoveEvent.tutorialLayout.getRightX((byte) -85, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), 10 + (MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -105)), MusicPatch.field_m, ConsoleValue.field_b, 0, 256);
                         this.l(-23588);
-                        fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
-                        fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
+                        GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94));
+                        GradientUiRenderer.drawCenteredGradientText(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, false);
                         decompiledFrameRemainder0 = (var4 != 0);
                       }
                     }
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  fe.b(db.a(true, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                  fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
+                  GradientUiRenderer.drawHollowGradientFrame(db.a(true, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                  GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
                   stackIn_168_0 = wb.field_b[this.tutorialStage];
                   stackIn_169_1 = !(param0);
-                  fe.c(stackIn_168_0, db.a(stackIn_169_1, 320), MatchConditionEntry.a(40, (byte) 94), ConsoleValue.field_b, false);
+                  GradientUiRenderer.drawCenteredGradientText(stackIn_168_0, db.a(stackIn_169_1, 320), MatchConditionEntry.a(40, (byte) 94), ConsoleValue.field_b, false);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
-                fe.b(db.a(!param0, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
-                fe.b(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
-                fe.c(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94), ConsoleValue.field_b, false);
+                GradientUiRenderer.drawHollowGradientFrame(db.a(!param0, 20), MatchConditionEntry.a(40, (byte) 94), 600, 420, MusicPatch.field_m, ConsoleValue.field_b, 0, 180);
+                GradientUiRenderer.drawCenteredTextBackdrop(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94));
+                GradientUiRenderer.drawCenteredGradientText(wb.field_b[this.tutorialStage], db.a(true, 320), MatchConditionEntry.a(40, (byte) 94), ConsoleValue.field_b, false);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
             }
             if (decompiledFrameRemainder0) {
               var2_int = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -117);
               var3 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -119) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) -66) - (nr.field_e.getParagraphHeight(vd.field_a, 500, 0) >> 1));
-              fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
-              fe.a(vd.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
+              GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var2_int - MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 112), MoveEvent.tutorialLayout.getRightX((byte) 94, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+              GradientUiRenderer.drawWrappedCenteredSolidText(vd.field_a, this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, var2_int + 20, 250, 16777215, true);
               stackIn_180_0 = wb.field_b[this.tutorialStage];
               stackIn_180_1 = this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1;
               stackIn_180_2 = this;
               stackIn_180_3 = -1;
               stackIn_181_4 = !(param0);
-              fe.b(stackIn_180_0, stackIn_180_1, this.getItemTopY(stackIn_180_3, stackIn_181_4));
+              GradientUiRenderer.drawCenteredTextBackdrop(stackIn_180_0, stackIn_180_1, this.getItemTopY(stackIn_180_3, stackIn_181_4));
               stackIn_184_0 = wb.field_b[this.tutorialStage];
               stackIn_185_2 = !(param0);
-              fe.c(stackIn_184_0, this.getItemLeftX(stackIn_185_2, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
+              GradientUiRenderer.drawCenteredGradientText(stackIn_184_0, this.getItemLeftX(stackIn_185_2, 0) + this.getItemRightX(this.selectionState.itemCount - 1, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
               decompiledFrameRemainder0 = (var4 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
             var2_intLifetime2 = MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -124);
             var3Lifetime1 = MoveEvent.tutorialLayout.getBottomY(-6, this.tutorialStage) - MoveEvent.tutorialLayout.getTopY(this.tutorialStage, (byte) -103) - (-MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 122) - (nr.field_e.getParagraphHeight(mu.field_e, 500, 0) >> 1));
-            fe.b(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
+            GradientUiRenderer.drawHollowGradientFrame(MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), -MoveEvent.tutorialLayout.getItemSpacing(this.tutorialStage, (byte) 123) + var2_intLifetime2, MoveEvent.tutorialLayout.getRightX((byte) -61, this.tutorialStage) - MoveEvent.tutorialLayout.getLeftX(this.tutorialStage, 29), var3Lifetime1, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
             stackIn_189_0 = mu.field_e;
             stackIn_190_2 = !(param0);
-            fe.a(stackIn_189_0, this.getItemLeftX(stackIn_190_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, 20 + var2_intLifetime2, 250, 16777215, true);
+            GradientUiRenderer.drawWrappedCenteredSolidText(stackIn_189_0, this.getItemLeftX(stackIn_190_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, 20 + var2_intLifetime2, 250, 16777215, true);
             stackIn_193_0 = wb.field_b[this.tutorialStage];
             stackIn_193_1 = this.getItemLeftX(true, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1;
             stackIn_193_2 = this;
             stackIn_193_3 = -1;
             stackIn_194_4 = !(param0);
-            fe.b(stackIn_193_0, stackIn_193_1, this.getItemTopY(stackIn_193_3, stackIn_194_4));
+            GradientUiRenderer.drawCenteredTextBackdrop(stackIn_193_0, stackIn_193_1, this.getItemTopY(stackIn_193_3, stackIn_194_4));
             stackIn_197_0 = wb.field_b[this.tutorialStage];
             stackIn_198_2 = !(param0);
-            fe.c(stackIn_197_0, this.getItemLeftX(stackIn_198_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
+            GradientUiRenderer.drawCenteredGradientText(stackIn_197_0, this.getItemLeftX(stackIn_198_2, 0) + this.getItemRightX(-1 + this.selectionState.itemCount, -3858) >> 1, this.getItemTopY(-1, true), ConsoleValue.field_b, false);
           }
           var2_intLifetime1 = 0;
           if (param0) {
@@ -6037,7 +6037,7 @@ final class TutorialController {
         int var5Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+          GradientUiRenderer.drawGradientFrame(db.a(true, 40), MatchConditionEntry.a(60, (byte) 94), 264, 260, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
           AccountNameSelectionForm.field_F = ah.localCoat.a(db.a(true, 55), 0, AiPlanningStrategy.pointerX, wh.field_a, mv.localAccountName, MatchConditionEntry.a(70, (byte) 94), ko.pointerY);
           var2_int = 44;
           var3 = 0;
@@ -6053,15 +6053,15 @@ final class TutorialController {
                 var5 < ko.pointerY &&
                 (60 + (var2_int * (1 + var3) - 4)) > ko.pointerY) {
                 if (~var3 != ~wh.field_a) {
-                  fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, field_e, 0, 128, false);
+                  GradientUiRenderer.drawGradientFrame(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, field_e, 0, 128, false);
                 } else {
-                  fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
+                  GradientUiRenderer.drawGradientFrame(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
                 }
                 AccountNameSelectionForm.field_F = var3;
               } else if (~wh.field_a != ~var3) {
-                fe.a(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+                GradientUiRenderer.drawGradientFrame(var4, var5, 68, var2_int - 4, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
               } else {
-                fe.a(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
+                GradientUiRenderer.drawGradientFrame(var4, var5, 68, -4 + var2_int, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
               }
               wv.field_h[var3].drawTransparent(db.a(true, 323), MatchConditionEntry.a(var2_int * var3 + 66, (byte) 94));
               var3++;
@@ -6109,12 +6109,12 @@ final class TutorialController {
                   stackIn_59_1 = -1;
                   if (stackIn_59_0 > stackIn_59_1 &&
                     var5Lifetime1 + var4Lifetime1 * 16 == ah.localCoat.colourIndices[AccountRegistrationForm.field_X]) {
-                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var6, var7, 20, 40, EffectPresentation.field_j, ConsoleValue.field_b, 0, 128, false);
                   } else if (AccountRegistrationForm.field_X > -1 &&
                     ~(var5Lifetime1 + var4Lifetime1 * 16) == ~var3Lifetime1) {
-                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, field_e, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var6, var7, 20, 40, EffectPresentation.field_j, field_e, 0, 128, false);
                   } else {
-                    fe.a(var6, var7, 20, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
+                    GradientUiRenderer.drawGradientFrame(var6, var7, 20, 40, EffectPresentation.field_j, AgeValidator.field_k, 0, 128, false);
                   }
                   if (-1 < AccountRegistrationForm.field_X) {
                     SoftwareRaster.f(db.a(true, var5Lifetime1 * 21 + 44), MatchConditionEntry.a(334 + var4Lifetime1 * 42, (byte) 94), 12, 32, PreparedAction.field_q[var5Lifetime1 + var4Lifetime1 * 16]);

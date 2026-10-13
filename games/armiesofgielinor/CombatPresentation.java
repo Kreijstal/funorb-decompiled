@@ -2776,13 +2776,13 @@ final class CombatPresentation implements EventPresentation {
             stackIn_50_0 = ConsoleValue.field_b;
           }
           var8 = stackIn_50_0;
-          fe.a(var6, var7, var4, var5, DisplacedUnitMarker.field_s, var8, 0, 0, true);
+          GradientUiRenderer.drawGradientFrame(var6, var7, var4, var5, DisplacedUnitMarker.field_s, var8, 0, 0, true);
           if (obfuscationGuard >= -119) {
             this.field_C = 65;
           }
           var2_intLifetime1 = var4 >> 1;
           var3Lifetime1 = SocialListPanel.k(-104) + (var5 >> 1);
-          fe.c(TickCounter.field_c, var2_intLifetime1 + var6, var7 + var3Lifetime1, 2236962, true);
+          GradientUiRenderer.drawCenteredSolidText(TickCounter.field_c, var2_intLifetime1 + var6, var7 + var3Lifetime1, 2236962, true);
           if (this.battlefield != null &&
             this.battlefield.playerCoats != null) {
             var3Lifetime2 = 19;
@@ -2809,7 +2809,7 @@ final class CombatPresentation implements EventPresentation {
               this.battlefield.playerCoats[this.field_g].a(var6Lifetime1Lifetime1, this.battlefield.playerNames[this.field_g], false, false, var7Lifetime1, false, false, 28);
             }
           }
-          fe.b(0, 0, rs.field_k, se.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
+          GradientUiRenderer.drawHollowGradientFrame(0, 0, rs.field_k, se.field_a, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
           so.field_b.a(5605);
           if (null != MatchConditionEntry.field_p) {
             MatchConditionEntry.field_p.a(-66, this.framebuffer);

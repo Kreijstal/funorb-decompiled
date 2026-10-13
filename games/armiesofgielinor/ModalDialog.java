@@ -184,7 +184,7 @@ abstract class ModalDialog extends DequeWidgetContainer {
         if (null != SectorCacheStore.field_a) {
           SectorCacheStore.field_a.b(0, param1);
         }
-        fe.b(0, 0, so.field_b.field_a, so.field_b.field_g, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
+        GradientUiRenderer.drawHollowGradientFrame(0, 0, so.field_b.field_a, so.field_b.field_g, HuffmanCodec.field_i, ConsoleValue.field_b, 0, 0);
         if (var2 != 0) {
           if (!ChannelFadeTimeConsoleCommand.field_F) {
             stackIn_22_0 = CampaignMenu.field_q;

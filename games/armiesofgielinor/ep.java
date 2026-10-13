@@ -142,7 +142,7 @@ final class ep {
           var3_int = nr.field_e.wrapLines(TextLineLayout.field_b, new int[]{1000}, var13);
           for (var4 = 0; var4 < var3_int; var4++) {
             var5 = this.a((byte) -90, var4 * 20 + 200);
-            fe.c(var12[var4], this.a(320, 4592), var5, ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(var12[var4], this.a(320, 4592), var5, ConsoleValue.field_b, true);
           }
           if (this.field_j != 1) {
             var4Lifetime1 = (this.field_m << 8) / 50;
@@ -213,14 +213,14 @@ final class ep {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);
             }
           } else {
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32, fe.field_o[1]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (SocketResourceClient.b(800 + var6Lifetime1, 100) >> 13), fe.field_o[2]);
-            SoftwareRaster.a((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (SocketResourceClient.b(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, fe.field_o[3]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.b(2400 + var6Lifetime1, 100) >> 13), fe.field_o[4]);
-            SoftwareRaster.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.b(var6Lifetime1 + 3200, param0 ^ 356) >> 13), fe.field_o[5]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.b(4000 + var6Lifetime1, 100) >> 13), fe.field_o[6]);
-            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.b(150 + (var6Lifetime1 >> 1), 100) >> 14), fe.field_o[0]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32 >> 2, fe.field_o[1]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32, GradientUiRenderer.particlePalettes[1]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (SocketResourceClient.b(800 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[2]);
+            SoftwareRaster.a((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (SocketResourceClient.b(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, GradientUiRenderer.particlePalettes[3]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.b(2400 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[4]);
+            SoftwareRaster.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.b(var6Lifetime1 + 3200, param0 ^ 356) >> 13), GradientUiRenderer.particlePalettes[5]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.b(4000 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[6]);
+            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.b(150 + (var6Lifetime1 >> 1), 100) >> 14), GradientUiRenderer.particlePalettes[0]);
+            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32 >> 2, GradientUiRenderer.particlePalettes[1]);
             var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
               MidiPcmStream.field_H.drawWithOpacity((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
@@ -310,7 +310,7 @@ final class ep {
               if (0 > var12) {
                 var12 = 0;
               }
-              fe.a(ck.field_c[var6], var11, 0, var8, var12, var9, var17);
+              GradientUiRenderer.resampleSpriteWithCarry(ck.field_c[var6], var11, 0, var8, var12, var9, var17);
             } else {
               us.field_a = 1 + var6;
               NameSuggestionList.field_F = NameSuggestionList.field_F + (var9 << 4);

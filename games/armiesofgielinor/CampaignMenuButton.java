@@ -49,12 +49,12 @@ final class CampaignMenuButton {
 
     final void draw(int textRenderParameter) {
         if (!IterableDualNodeDeque.isPointerInBounds(-33, db.a(true, this.left), db.a(true, this.left + this.width), MatchConditionEntry.a(this.top, (byte) 94), MatchConditionEntry.a(30 + this.top, (byte) 94))) {
-          fe.a(db.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
-          fe.c(this.label, db.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
+          GradientUiRenderer.drawFilledGradientFrame(db.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, ConsoleValue.field_b, 0, 0);
+          GradientUiRenderer.drawCenteredSolidText(this.label, db.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
           return;
         }
-        fe.a(db.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
-        fe.c(this.label, db.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
+        GradientUiRenderer.drawFilledGradientFrame(db.a(true, this.left), MatchConditionEntry.a(this.top, (byte) 94), this.width, 30, DisplacedUnitMarker.field_s, TutorialController.field_e, 0, 0);
+        GradientUiRenderer.drawCenteredSolidText(this.label, db.a(true, this.width / 2 + this.left), MatchConditionEntry.a(this.top + 30, (byte) 94), textRenderParameter, true);
     }
 
     final static void b(int param0) {

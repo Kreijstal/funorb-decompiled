@@ -72,10 +72,10 @@ final class ab {
             var5 = -44 + ((var4_int & 7) + CachedArchiveProvider.field_y[var7][0] + param2);
             if (0 == var7) {
               var10 = FullscreenMembershipDialog.activeFoliageShadows[16 + param1 % 9];
-              fe.a(var10, var5, -CachedArchiveProvider.field_y[var7][1] + var6);
+              GradientUiRenderer.multiplySprite(var10, var5, -CachedArchiveProvider.field_y[var7][1] + var6);
             } else {
               var11 = FullscreenMembershipDialog.activeFoliageShadows[25 + param1 % 9];
-              fe.a(var11, var5, var6);
+              GradientUiRenderer.multiplySprite(var11, var5, var6);
             }
             param1 = param1 >> 1;
             var4_int = var4_int >> 1;

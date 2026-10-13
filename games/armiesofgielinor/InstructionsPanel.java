@@ -117,10 +117,10 @@ final class InstructionsPanel {
                 UnitModelPreview.field_d[1 + var7].drawHalfSize(db.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
                 gt.field_c[var7 + 1].drawHalfSize(db.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
                 if (var8 > 0 &&
-                  null != fe.field_o &&
+                  null != GradientUiRenderer.particlePalettes &&
                   0 <= 1 + var7 &&
-                  var7 + 1 < fe.field_o.length) {
-                  fe.a(db.a(true, 18 + param1), MatchConditionEntry.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
+                  var7 + 1 < GradientUiRenderer.particlePalettes.length) {
+                  GradientUiRenderer.drawParticleRings(db.a(true, 18 + param1), MatchConditionEntry.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
                   param1 = 50 + param1 - var9;
                   var6++;
                   continue;
@@ -393,7 +393,7 @@ final class InstructionsPanel {
           }
           var12 = title;
           if (var12 != null) {
-            fe.c(var12, db.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(var12, db.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
           }
           var13 = topY;
           var11Lifetime1 = this.field_Y - this.field_T + (this.a(true) >> 1);
@@ -555,7 +555,7 @@ final class InstructionsPanel {
         int var4 = this.footerEnd.first - var2;
         int var5 = -var3 + this.footerEnd.second;
         SoftwareRaster.f(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
+        GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         int var6 = this.footerStart.second;
         int var7 = this.footerEnd.second;
         var3 = var6 + var7 >> 1;
@@ -569,7 +569,7 @@ final class InstructionsPanel {
         int[] var12 = this.footerHighlighted ? TutorialController.field_e : ConsoleValue.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
-        fe.c(var9, db.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
+        GradientUiRenderer.drawCenteredGradientText(var9, db.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
     }
 
     final void f(byte param0) {
@@ -643,7 +643,7 @@ final class InstructionsPanel {
         int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         SpellConfirmationDialog.field_j.b();
         SoftwareRaster.b();
-        fe.b(0, 0, 134, 61, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
+        GradientUiRenderer.drawHollowGradientFrame(0, 0, 134, 61, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
         qt.field_e.drawOpaque(2, 2);
         SoftwareRaster.b(5, 5, 124, 18, 0, 192);
         if (param4 < 70) {
@@ -831,7 +831,7 @@ final class InstructionsPanel {
         if (this.previousEnabled &&
           var13 != null &&
           var13.length() > 0) {
-          fe.a(var13, db.a(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
+          GradientUiRenderer.drawGradientText(var13, db.a(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
         }
         if (this.nextHighlighted) {
           stackIn_12_0 = TutorialController.field_e;
@@ -847,11 +847,11 @@ final class InstructionsPanel {
         if (this.nextEnabled &&
           var15 != null &&
           var15.length() > 0) {
-          fe.b(var15, db.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
+          GradientUiRenderer.drawRightAlignedGradientText(var15, db.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
         }
         var2Lifetime3 = this.field_F.first;
         var9 = qk.a(this.pageCount, -2823, this.pageIndex);
-        fe.c(var9, db.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
+        GradientUiRenderer.drawCenteredGradientText(var9, db.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
     private final int d(int param0) {
@@ -1111,7 +1111,7 @@ final class InstructionsPanel {
               param3.d(param5, param2, var25, var26);
               so.field_b.a(5605);
               SoftwareRaster.a(this.field_J);
-              fe.a(param0);
+              GradientUiRenderer.clearSentinelPixels(param0);
               param0.a();
               return;
             }
@@ -2151,8 +2151,8 @@ final class InstructionsPanel {
           this.g((byte) 9);
         }
         int var4 = var3 + var2;
-        fe.b(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
-        fe.c(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
+        GradientUiRenderer.drawCenteredTextBackdrop(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
+        GradientUiRenderer.drawCenteredGradientText(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
     }
 
     private final void f(int param0) {
@@ -2872,13 +2872,13 @@ final class InstructionsPanel {
         int var3 = this.field_C.second;
         int var4 = this.field_V.first - var2;
         int var5 = this.field_V.second - var3;
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
+        GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         this.g(120);
         var2 = this.field_x.first;
         var3 = this.field_x.second;
         var4 = -var2 + this.field_K.first;
         var5 = -var3 + this.field_K.second;
-        fe.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
+        GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.drawPageSections(-107);
         this.l(obfuscationGuard + 19);
         this.g((byte) 10);

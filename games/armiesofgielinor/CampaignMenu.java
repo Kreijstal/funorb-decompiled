@@ -258,14 +258,14 @@ final class CampaignMenu {
           var11 = -(var8Lifetime1 / 2) + 320;
           var12 = -(var10 / 2) + 240;
           var13 = 13 + var11;
-          fe.b(db.a(true, var11), MatchConditionEntry.a(var12, (byte) 94), var8Lifetime1, var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, var11), MatchConditionEntry.a(var12, (byte) 94), var8Lifetime1, var10, MusicPatch.field_m, TutorialController.field_e, 0, 192);
           var14 = -26 + var8Lifetime1;
           var15 = var13;
           var16 = var12 + 30;
           if (param0 < 9) {
             field_s = (Boolean) null;
           }
-          fe.a(this.selectedMissionEntry.title, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
+          GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, db.a(true, var8Lifetime1 / 2 + var11), MatchConditionEntry.a(var16, (byte) 94), var8Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var16 += 14;
           rs.field_n.drawParagraph(var6, db.a(true, var15), MatchConditionEntry.a(var16, (byte) 94), var14, var10, 16777215, 1, 1, 0, 0);
           var16 = var16 + (var9Lifetime1 + 30);
@@ -310,8 +310,8 @@ final class CampaignMenu {
         int var4Lifetime1;
         var8 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.a(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, AgeValidator.field_k, 0, 128, ScrollWidgetContainer.field_V, true, ConsoleValue.field_b);
-          fe.a(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, AgeValidator.field_k, 0, 128, SummonAction.field_A, true, ConsoleValue.field_b);
+          GradientUiRenderer.drawTitledGradientFrame(db.a(true, 32), MatchConditionEntry.a(71, (byte) 94), 305, 228, MusicPatch.field_m, AgeValidator.field_k, 0, 128, ScrollWidgetContainer.field_V, true, ConsoleValue.field_b);
+          GradientUiRenderer.drawTitledGradientFrame(db.a(true, 32), MatchConditionEntry.a(321, (byte) 94), 305, 92, MusicPatch.field_m, AgeValidator.field_k, 0, 128, SummonAction.field_A, true, ConsoleValue.field_b);
           if (null != this.selectedCampaignEntry) {
             if (this.selectedCampaignEntry.entryId == -1) {
               stackIn_8_0 = SummonAction.field_A;
@@ -319,7 +319,7 @@ final class CampaignMenu {
               stackIn_8_0 = this.selectedCampaignEntry.title;
             }
             var2 = stackIn_8_0;
-            fe.a(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, MusicPatch.field_m, AgeValidator.field_k, 0, 128, (String) (var2), true, ConsoleValue.field_b);
+            GradientUiRenderer.drawTitledGradientFrame(db.a(true, 346), MatchConditionEntry.a(70, (byte) 94), 262, 343, MusicPatch.field_m, AgeValidator.field_k, 0, 128, (String) (var2), true, ConsoleValue.field_b);
             stackIn_11_0 = db.a(true, 354);
             stackIn_11_1 = MatchConditionEntry.a(361, (byte) 94);
             stackIn_11_2 = 246;
@@ -330,12 +330,12 @@ final class CampaignMenu {
             } else {
               stackIn_12_5 = TutorialController.field_e;
             }
-            fe.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 0);
+            GradientUiRenderer.drawFilledGradientFrame(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_12_5, 0, 0);
             var3 = MusicPatch.field_o;
             if (this.selectedCampaignEntry.entryId == -1) {
               var3 = ConsoleTokenCursor.field_b;
             }
-            fe.c(var3, db.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
+            GradientUiRenderer.drawCenteredSolidText(var3, db.a(true, 477), MatchConditionEntry.a(396, (byte) 94), 0, true);
             var4 = db.a(true, 359);
             var5 = MatchConditionEntry.a(85, (byte) 94);
             CampaignUnitOverride.a(var4, var4 + 236, var5 + 200, var5, (byte) 83);
@@ -395,7 +395,7 @@ final class CampaignMenu {
             break;
           }
           this.hoveredEntry = (CampaignMenuEntry) (var2);
-          fe.a(ConsoleExpression.field_u, db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, 1, false);
+          GradientUiRenderer.drawAlignedGradientText(ConsoleExpression.field_u, db.a(true, 320), MatchConditionEntry.a(30, (byte) 94), ConsoleValue.field_b, 1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -486,12 +486,12 @@ final class CampaignMenu {
           } else {
             stackIn_18_5 = AgeValidator.field_k;
           }
-          fe.b(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5, 0, 0);
+          GradientUiRenderer.drawHollowGradientFrame(stackIn_17_0, stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5, 0, 0);
           if (null != param2.title) {
             var10 = db.a(true, param2.left + var7);
             var11 = param2.height / 2 + param2.top + rs.field_n.baselineHeight;
-            fe.a(param2.title, var10, MatchConditionEntry.a(8 + (param2.top + param2.height / 2), (byte) 94), true);
-            fe.a(param2.title, var10, MatchConditionEntry.a(param2.height / 2 + param2.top + 8, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawTextBackdrop(param2.title, var10, MatchConditionEntry.a(8 + (param2.top + param2.height / 2), (byte) 94), true);
+            GradientUiRenderer.drawGradientText(param2.title, var10, MatchConditionEntry.a(param2.height / 2 + param2.top + 8, (byte) 94), ConsoleValue.field_b, true);
             rs.field_n.drawText(param2.statusText, var10, MatchConditionEntry.a(var11, (byte) 94), 12303291, 1);
           }
           return;
@@ -609,7 +609,7 @@ final class CampaignMenu {
                 }
                 var6_int = 8573219;
               }
-              fe.c(param3.previewSprite, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.pixelWidth, var6_int);
+              GradientUiRenderer.drawSolidMask(param3.previewSprite, db.a(true, 0), MatchConditionEntry.a(3, (byte) 94), param3.previewSprite.pixelWidth, var6_int);
             }
             if (param4) {
               param3.previewSprite.drawAdditive(db.a(true, 0), MatchConditionEntry.a(0, (byte) 94), 128);
@@ -749,11 +749,11 @@ final class CampaignMenu {
           var10 = -(var7Lifetime1 / 2) + 320;
           var11 = 240 - var9Lifetime1 / 2;
           var12 = var10 + 13;
-          fe.b(db.a(true, var10), MatchConditionEntry.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 192);
+          GradientUiRenderer.drawHollowGradientFrame(db.a(true, var10), MatchConditionEntry.a(var11, (byte) 94), var7Lifetime1, var9Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 192);
           var13 = var7Lifetime1 - 26;
           var14 = var12;
           var15 = 30 + var11;
-          fe.a(this.selectedMissionEntry.title, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
+          GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, db.a(true, var10 + var7Lifetime1 / 2), MatchConditionEntry.a(var15, (byte) 94), var7Lifetime1 - 20, ConsoleValue.field_b, true, 40, 1);
           var15 += 14;
           rs.field_n.drawParagraph(var5, db.a(true, var14), MatchConditionEntry.a(var15, (byte) 94), var13, var9Lifetime1, 16777215, 1, 1, 0, 0);
           var15 = var15 + (30 + var8Lifetime1);
@@ -984,11 +984,11 @@ final class CampaignMenu {
             }
             var3Lifetime1 = var2_int + 26;
             var4Lifetime1 = -26 + var3Lifetime1;
-            fe.b(db.a(true, 5), MatchConditionEntry.a(4, (byte) 94), var3Lifetime1, 472, MusicPatch.field_m, TutorialController.field_e, 0, 112);
+            GradientUiRenderer.drawHollowGradientFrame(db.a(true, 5), MatchConditionEntry.a(4, (byte) 94), var3Lifetime1, 472, MusicPatch.field_m, TutorialController.field_e, 0, 112);
             var5 = 18;
             var6 = 34;
             var6Lifetime1 = 34;
-            fe.a(this.selectedMissionEntry.title, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, ConsoleValue.field_b, true, 40, 1);
+            GradientUiRenderer.drawWrappedCenteredGradientText(this.selectedMissionEntry.title, db.a(true, var3Lifetime1 / 2 + 5), MatchConditionEntry.a(var6Lifetime1, (byte) 94), -20 + var3Lifetime1, ConsoleValue.field_b, true, 40, 1);
             var6Lifetime1 += 14;
             var7 = this.selectedMissionEntry.mission.getMapLayout(-127);
             var8 = 0;
@@ -1024,7 +1024,7 @@ final class CampaignMenu {
                 var15_int++;
                 continue scanLoop1;
               }
-              fe.b(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 0);
+              GradientUiRenderer.drawHollowGradientFrame(db.a(true, var5 + var8Lifetime1), MatchConditionEntry.a(var6Lifetime1, (byte) 94), var9Lifetime1 * var7.mapWidth, var7.mapHeight * var10Lifetime1, MusicPatch.field_m, TutorialController.field_e, 0, 0);
               var6Lifetime1 = var6Lifetime1 + (124 + ProgressMessageDialog.field_rb[0].canvasHeight);
               stackIn_26_0 = 18;
               break;
@@ -1210,7 +1210,7 @@ final class CampaignMenu {
           var9_int = param4.pixelWidth;
           param7 = db.a(true, param7);
           param3 = MatchConditionEntry.a(param3, (byte) 94);
-          var10 = (13 * param3 + fe.field_b + param7 * 57) % 100;
+          var10 = (13 * param3 + GradientUiRenderer.particlePhasePercent + param7 * 57) % 100;
           if (param6 == (float)param5) {
             if (param0 != null) {
               StandardContentDialog.field_ob.drawTransparent(1 + (param7 - var9_int / 2), -(var9_int / 2) + (param3 + 1));
@@ -1224,7 +1224,7 @@ final class CampaignMenu {
             if (param2 <= 0) {
               return;
             }
-            fe.a(param7, param3, param1, param2, var10, 40, 96);
+            GradientUiRenderer.drawParticleRings(param7, param3, param1, param2, var10, 40, 96);
             if (var15 == 0) {
               return;
             }
@@ -1244,7 +1244,7 @@ final class CampaignMenu {
               param0.drawScaled(param7 - var12 / 2, param3 - var12 / 2, var12, var12);
             }
             if (param2 > 0) {
-              fe.a(param7, param3, param1, param2, var10, var13, var14);
+              GradientUiRenderer.drawParticleRings(param7, param3, param1, param2, var10, var13, var14);
             }
             if (var15 == 0) {
               return;
@@ -1260,7 +1260,7 @@ final class CampaignMenu {
             param0.drawHalfSize(-11 + param7, -11 + param3);
           }
           if (param2 > 0) {
-            fe.a(param7, param3, param1, param2, var10, 20, 48);
+            GradientUiRenderer.drawParticleRings(param7, param3, param1, param2, var10, 20, 48);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1505,8 +1505,8 @@ final class CampaignMenu {
         int var7 = 0;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          fe.field_b = fe.field_b + 1;
-          fe.field_b = fe.field_b % 100;
+          GradientUiRenderer.particlePhasePercent = GradientUiRenderer.particlePhasePercent + 1;
+          GradientUiRenderer.particlePhasePercent = GradientUiRenderer.particlePhasePercent % 100;
           if (obfuscationGuard < 114) {
             return;
           }
@@ -2266,8 +2266,8 @@ final class CampaignMenu {
               if (-var5 + var6 < 225) {
                 var6 = 225 + var5;
               }
-              fe.b(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), true);
-              fe.c(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), ConsoleValue.field_b, true);
+              GradientUiRenderer.drawCenteredTextBackdrop(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), true);
+              GradientUiRenderer.drawCenteredGradientText(((CampaignMenuEntry) (var3)).title, db.a(true, var6), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top - 12, (byte) 94), ConsoleValue.field_b, true);
               if (null != var4_ref &&
                 ~this.campaignIndex == ~var4_ref.campaignIndex &&
                 var4_ref.missionId == ((CampaignMenuEntry) (var3)).entryId) {
@@ -2277,8 +2277,8 @@ final class CampaignMenu {
               }
               var7 = stackIn_89_0;
               if (var7 != 0) {
-                fe.b(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
-                fe.c(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), ConsoleValue.field_b, true);
+                GradientUiRenderer.drawCenteredTextBackdrop(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(10 + ((CampaignMenuEntry) (var3)).top, (byte) 94), true);
+                GradientUiRenderer.drawCenteredGradientText(qf.field_a, db.a(true, ((CampaignMenuEntry) (var3)).left), MatchConditionEntry.a(((CampaignMenuEntry) (var3)).top + 10, (byte) 94), ConsoleValue.field_b, true);
               }
               if (this.hoveredEntry != var3) {
                 RadialSummonMenu.playDefaultSoundWithIntGuard(127, ClientUiNode.field_v[1]);

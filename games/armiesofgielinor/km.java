@@ -51,7 +51,7 @@ final class km {
               var5 = -((var8 * 4 + (-24 + this.field_f)) * 5) + (this.field_g + AttackEvent.nextBoundedInt(false, var8 + 1, li.field_n));
               var6 = this.field_d;
             }
-            fh.$cfr$intArgs$a$e0bc7fdb2979(var7, -(var8 * 40) + 400, 56, fe.field_o[param0 + 1], -(5 * var8) + 63, var5, var6);
+            fh.$cfr$intArgs$a$e0bc7fdb2979(var7, -(var8 * 40) + 400, 56, GradientUiRenderer.particlePalettes[param0 + 1], -(5 * var8) + 63, var5, var6);
             continue;
           }
           break;
