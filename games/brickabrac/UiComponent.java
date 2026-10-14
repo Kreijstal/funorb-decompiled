@@ -345,13 +345,13 @@ class UiComponent extends ba {
               var23 = var23 + (this.height - this.font.ascent - this.font.descent) / 2;
             }
             if (this.horizontalAlignment == 0) {
-              this.font.c(var24Lifetime2, var22 + (this.screenX + this.textInset), this.screenY + var23 + this.font.ascent, var19, -1, this.textAlpha256);
+              this.font.drawLeftAlpha(var24Lifetime2, var22 + (this.screenX + this.textInset), this.screenY + var23 + this.font.ascent, var19, -1, this.textAlpha256);
             } else {
               if (this.horizontalAlignment == 1) {
                 this.font.drawCenteredAlpha(var24Lifetime2, var22 + this.textInset + this.screenX + (-(this.textInset * 2) + this.width) / 2, this.screenY - (-var23 - this.font.ascent), var19, -1, this.textAlpha256);
               } else {
                 if (this.horizontalAlignment != 2) {
-                  this.font.a(var24Lifetime2, var22 + (this.textInset + this.screenX), var23 + this.screenY, -(2 * this.textInset) + this.width, this.height, var19, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
+                  this.font.drawParagraphAlpha(var24Lifetime2, var22 + (this.textInset + this.screenX), var23 + this.screenY, -(2 * this.textInset) + this.width, this.height, var19, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
                 } else {
                   this.font.drawRightAlpha(var24Lifetime2, this.screenX + this.textInset - (-var22 + this.textInset * 2) + this.width, this.screenY + (var23 + this.font.ascent), var19, -1, this.textAlpha256);
                 }
@@ -360,7 +360,7 @@ class UiComponent extends ba {
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.font.a(var24Lifetime2, var22 + (this.textInset + this.screenX), var23 + this.screenY, -(this.textInset * 2) + this.width, this.height, var19, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
+            this.font.drawParagraphAlpha(var24Lifetime2, var22 + (this.textInset + this.screenX), var23 + this.screenY, -(this.textInset * 2) + this.width, this.height, var19, -1, this.textAlpha256, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           }
         }
         if (this.children != null) {

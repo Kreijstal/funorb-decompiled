@@ -28,7 +28,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
 
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         if (this.introMessage != null) {
-          ArchiveNetworkClient.field_u.a(this.introMessage, this.x + (parentX + 20), parentY - (-this.y - 15), -40 + this.width, this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
+          ArchiveNetworkClient.field_u.drawParagraph(this.introMessage, this.x + (parentX + 20), parentY - (-this.y - 15), -40 + this.width, this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
         }
         if (null != this.createAccountButton) {
           Rasterizer2D.drawHorizontalLine(parentX + 10, parentY + 134, this.width - 20, 4210752);

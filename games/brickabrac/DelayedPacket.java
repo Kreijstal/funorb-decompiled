@@ -124,7 +124,7 @@ final class DelayedPacket extends IntrusiveNode {
           var8 = ContextMenu.choosePopupY(var6, var3, 20, -30);
           Rasterizer2D.drawRectangle(var7, var8, var5, var6, 0);
           Rasterizer2D.fillRectangle(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
-          CappedUrlRequest.field_l.font.a(param1, 3 + var7, -CappedUrlRequest.field_l.font.ascent + (1 + var8) + ok.field_f, 500, 1000, 0, -1, 0, 0, np.uiRowHeight);
+          CappedUrlRequest.field_l.font.drawParagraph(param1, 3 + var7, -CappedUrlRequest.field_l.font.ascent + (1 + var8) + ok.field_f, 500, 1000, 0, -1, 0, 0, np.uiRowHeight);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

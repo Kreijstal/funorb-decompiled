@@ -243,7 +243,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
         }
         TextFont var5 = ArchiveNetworkClient.field_u;
         if (this.suggestions != null) {
-          var5.a(AchievementIcon.field_l, parentX + this.x, this.y + parentY, this.width, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
+          var5.drawParagraph(AchievementIcon.field_l, parentX + this.x, this.y + parentY, this.width, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
         }
     }
 

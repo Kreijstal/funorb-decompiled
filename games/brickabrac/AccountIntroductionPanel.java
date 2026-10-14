@@ -307,7 +307,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         int var5 = this.x + parentX;
         int var6 = parentY + this.y;
-        ArchiveNetworkClient.field_u.a(PlayerNameChooserPanel.field_H, var5 + 20, 20 + var6, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
+        ArchiveNetworkClient.field_u.drawParagraph(PlayerNameChooserPanel.field_H, var5 + 20, 20 + var6, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
         super.drawLayer(parentY, parentX, layer, obfuscationGuard);
     }
 

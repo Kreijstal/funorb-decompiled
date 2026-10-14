@@ -1366,7 +1366,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
           var9_int = this.getTextAreaWidth(61823, widget);
           var10 = this.getTextAreaHeight(16265, widget);
           if (this.wrapText) {
-            this.font.a(this.getDisplayText(widget, true), this.computeTextX(localX, widget, 65263, parentX), this.computeTextY((byte) 117, parentY, localY, widget), var9_int, var10, textColor, shadowColor, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
+            this.font.drawParagraph(this.getDisplayText(widget, true), this.computeTextX(localX, widget, 65263, parentX), this.computeTextY((byte) 117, parentY, localY, widget), var9_int, var10, textColor, shadowColor, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           } else {
             var12 = this.verticalAlignment;
             if (var12 != 0) {

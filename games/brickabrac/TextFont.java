@@ -31,13 +31,13 @@ abstract class TextFont extends DualLinkNode {
     abstract void drawGlyph(int glyphId, int x, int y, int width, int height, int paint, boolean shadow);
 
     private final void applyTag(String tag) {
-        Throwable decompiledCaughtException = null;
-        Exception var2 = null;
-        CharSequence var3 = null;
-        CharSequence var4 = null;
-        CharSequence var5 = null;
-        CharSequence var6 = null;
-        CharSequence var7 = null;
+        Throwable caughtTagFailure = null;
+        Exception ignoredTagFailure = null;
+        CharSequence paintText = null;
+        CharSequence alphaText = null;
+        CharSequence strikeText = null;
+        CharSequence underlineText = null;
+        CharSequence shadowText = null;
         try {
           if (!tag.startsWith("col=")) {
             if (!tag.equals("/col")) {
@@ -62,8 +62,8 @@ abstract class TextFont extends DualLinkNode {
                                   currentShadow = 0;
                                 }
                               } else {
-                                var7 = (CharSequence) ((Object) tag.substring(5));
-                                currentShadow = DualLinkNode.a(16, (byte) -55, var7);
+                                shadowText = (CharSequence) ((Object) tag.substring(5));
+                                currentShadow = DualLinkNode.a(16, (byte) -55, shadowText);
                               }
                             } else {
                               underlineColor = -1;
@@ -72,8 +72,8 @@ abstract class TextFont extends DualLinkNode {
                             underlineColor = 0;
                           }
                         } else {
-                          var6 = (CharSequence) ((Object) tag.substring(2));
-                          underlineColor = DualLinkNode.a(16, (byte) -55, var6);
+                          underlineText = (CharSequence) ((Object) tag.substring(2));
+                          underlineColor = DualLinkNode.a(16, (byte) -55, underlineText);
                         }
                       } else {
                         strikeColor = -1;
@@ -82,30 +82,30 @@ abstract class TextFont extends DualLinkNode {
                       strikeColor = 8388608;
                     }
                   } else {
-                    var5 = (CharSequence) ((Object) tag.substring(4));
-                    strikeColor = DualLinkNode.a(16, (byte) -55, var5);
+                    strikeText = (CharSequence) ((Object) tag.substring(4));
+                    strikeColor = DualLinkNode.a(16, (byte) -55, strikeText);
                   }
                 } else {
                   currentAlpha = defaultAlpha;
                 }
               } else {
-                var4 = (CharSequence) ((Object) tag.substring(6));
-                currentAlpha = UsernameAvailabilityValidator.a(var4, -28734);
+                alphaText = (CharSequence) ((Object) tag.substring(6));
+                currentAlpha = UsernameAvailabilityValidator.a(alphaText, -28734);
               }
             } else {
               currentPaint = defaultPaint;
             }
           } else {
-            var3 = (CharSequence) ((Object) tag.substring(4));
-            currentPaint = DualLinkNode.a(16, (byte) -55, var3);
+            paintText = (CharSequence) ((Object) tag.substring(4));
+            currentPaint = DualLinkNode.a(16, (byte) -55, paintText);
           }
-        } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (Exception) (Object) decompiledCaughtException;
+        } catch (java.lang.Exception caughtParameter) {
+          caughtTagFailure = caughtParameter;
+          ignoredTagFailure = (Exception) (Object) caughtTagFailure;
         }
     }
 
-    public static void a() {
+    public static void clearTextScratchBuffers() {
         wrapScratch = null;
         wrappedLines = null;
     }
@@ -114,77 +114,77 @@ abstract class TextFont extends DualLinkNode {
         return this.wrapText(text, new int[]{width}, wrappedLines);
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        return this.a(param0, param1, param2, param3, param4, param5, param6, 256, param7, param8, param9);
+    final int drawParagraph(String text, int x, int y, int width, int height, int paint, int shadow, int horizontalAlignment, int verticalAlignment, int lineSpacing) {
+        return this.drawParagraphAlpha(text, x, y, width, height, paint, shadow, 256, horizontalAlignment, verticalAlignment, lineSpacing);
     }
 
-    final int a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {
-        int[] var12;
-        int var13;
-        int var14;
-        int var15;
-        int var15Lifetime1;
-        if (param0 == null) {
+    final int drawParagraphAlpha(String text, int x, int y, int width, int height, int paint, int shadow, int alpha, int horizontalAlignment, int verticalAlignment, int lineSpacing) {
+        int[] lineWidths;
+        int lineCount;
+        int baselineY;
+        int distributedGap;
+        int lineIndex;
+        if (text == null) {
           return 0;
         }
-        this.resetStyle(param5, param6, param7);
-        if (param10 == 0) {
-          param10 = this.baselineHeight;
+        this.resetStyle(paint, shadow, alpha);
+        if (lineSpacing == 0) {
+          lineSpacing = this.baselineHeight;
         }
-        var12 = new int[]{param3};
-        if (param4 < this.ascent + this.descent + param10 &&
-          param4 < param10 + param10) {
-          var12 = null;
+        lineWidths = new int[]{width};
+        if (height < this.ascent + this.descent + lineSpacing &&
+          height < lineSpacing + lineSpacing) {
+          lineWidths = null;
         }
-        var13 = this.wrapText(param0, var12, wrappedLines);
-        if (param9 == 3 &&
-          var13 == 1) {
-          param9 = 1;
+        lineCount = this.wrapText(text, lineWidths, wrappedLines);
+        if (verticalAlignment == 3 &&
+          lineCount == 1) {
+          verticalAlignment = 1;
         }
-        if (param9 != 0) {
-          if (param9 != 1) {
-            if (param9 != 2) {
-              var15 = (param4 - this.ascent - this.descent - (var13 - 1) * param10) / (var13 + 1);
-              if (var15 < 0) {
-                var15 = 0;
+        if (verticalAlignment != 0) {
+          if (verticalAlignment != 1) {
+            if (verticalAlignment != 2) {
+              distributedGap = (height - this.ascent - this.descent - (lineCount - 1) * lineSpacing) / (lineCount + 1);
+              if (distributedGap < 0) {
+                distributedGap = 0;
               }
-              var14 = param2 + this.ascent + var15;
-              param10 = param10 + var15;
+              baselineY = y + this.ascent + distributedGap;
+              lineSpacing = lineSpacing + distributedGap;
             } else {
-              var14 = param2 + param4 - this.descent - (var13 - 1) * param10;
+              baselineY = y + height - this.descent - (lineCount - 1) * lineSpacing;
             }
           } else {
-            var14 = param2 + this.ascent + (param4 - this.ascent - this.descent - (var13 - 1) * param10) / 2;
+            baselineY = y + this.ascent + (height - this.ascent - this.descent - (lineCount - 1) * lineSpacing) / 2;
           }
         } else {
-          var14 = param2 + this.ascent;
+          baselineY = y + this.ascent;
         }
-        for (var15Lifetime1 = 0; var15Lifetime1 < var13; var15Lifetime1++) {
-          if (param8 != 0) {
-            if (param8 != 1) {
-              if (param8 != 2) {
-                if (var15Lifetime1 != var13 - 1) {
-                  this.prepareJustification(wrappedLines[var15Lifetime1], param3);
-                  this.drawText(wrappedLines[var15Lifetime1], param1, var14);
+        for (lineIndex = 0; lineIndex < lineCount; lineIndex++) {
+          if (horizontalAlignment != 0) {
+            if (horizontalAlignment != 1) {
+              if (horizontalAlignment != 2) {
+                if (lineIndex != lineCount - 1) {
+                  this.prepareJustification(wrappedLines[lineIndex], width);
+                  this.drawText(wrappedLines[lineIndex], x, baselineY);
                   justifyStep256 = 0;
                 } else {
-                  this.drawText(wrappedLines[var15Lifetime1], param1, var14);
+                  this.drawText(wrappedLines[lineIndex], x, baselineY);
                 }
-                var14 = var14 + param10;
+                baselineY = baselineY + lineSpacing;
               } else {
-                this.drawText(wrappedLines[var15Lifetime1], param1 + param3 - this.measureText(wrappedLines[var15Lifetime1]), var14);
-                var14 = var14 + param10;
+                this.drawText(wrappedLines[lineIndex], x + width - this.measureText(wrappedLines[lineIndex]), baselineY);
+                baselineY = baselineY + lineSpacing;
               }
             } else {
-              this.drawText(wrappedLines[var15Lifetime1], param1 + (param3 - this.measureText(wrappedLines[var15Lifetime1])) / 2, var14);
-              var14 = var14 + param10;
+              this.drawText(wrappedLines[lineIndex], x + (width - this.measureText(wrappedLines[lineIndex])) / 2, baselineY);
+              baselineY = baselineY + lineSpacing;
             }
           } else {
-            this.drawText(wrappedLines[var15Lifetime1], param1, var14);
-            var14 = var14 + param10;
+            this.drawText(wrappedLines[lineIndex], x, baselineY);
+            baselineY = baselineY + lineSpacing;
           }
         }
-        return var13;
+        return lineCount;
     }
 
     private final void resetStyle(int paint, int shadow, int alpha) {
@@ -201,31 +201,31 @@ abstract class TextFont extends DualLinkNode {
     }
 
     private final void prepareJustification(String text, int targetWidth) {
-        int var6 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var7;
-        var3 = 0;
-        var4 = 0;
-        var5 = text.length();
-        for (var6 = 0; var6 < var5; var6++) {
-          var7 = text.charAt(var6);
-          if (var7 != 60) {
-            if (var7 != 62) {
-              if (var4 == 0 &&
-                var7 == 32) {
-                var3++;
+        int characterIndex = 0;
+        int spaceCount;
+        int insideTag;
+        int textLength;
+        int character;
+        spaceCount = 0;
+        insideTag = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          character = text.charAt(characterIndex);
+          if (character != 60) {
+            if (character != 62) {
+              if (insideTag == 0 &&
+                character == 32) {
+                spaceCount++;
               }
             } else {
-              var4 = 0;
+              insideTag = 0;
             }
           } else {
-            var4 = 1;
+            insideTag = 1;
           }
         }
-        if (var3 > 0) {
-          justifyStep256 = (targetWidth - this.measureText(text) << 8) / var3;
+        if (spaceCount > 0) {
+          justifyStep256 = (targetWidth - this.measureText(text) << 8) / spaceCount;
         }
     }
 
@@ -238,107 +238,107 @@ abstract class TextFont extends DualLinkNode {
     }
 
     private final void readMetrics(byte[] metrics) {
-        int var3_int = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$5 = 0;
-        int incrementValue$4 = 0;
-        int var6_int = 0;
-        byte[] array$2 = null;
-        int incrementValue$3 = 0;
-        byte[] array$0 = null;
-        int var9 = 0;
-        int incrementValue$1 = 0;
-        int var2;
-        int[] var3;
-        int[] var4;
-        int var5_int;
-        byte[][] var5;
-        byte[][] var6;
-        int var7;
-        int var8;
-        int[] var10;
-        byte[][] var11;
-        byte[][] var12;
-        int[] var13;
-        int[] var14;
-        byte[][] var15;
-        byte[][] var16;
-        int[] var17;
-        int var5_intLifetime1;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        int var7Lifetime1;
-        int var7Lifetime2;
+        int advanceIndex = 0;
+        int advanceByteIndex = 0;
+        int lengthByteIndex = 0;
+        int startByteIndex = 0;
+        int leadingGlyph = 0;
+        byte[] newLeadingProfile = null;
+        int leadingDeltaByteIndex = 0;
+        byte[] newTrailingProfile = null;
+        int trailingRow = 0;
+        int trailingDeltaByteIndex = 0;
+        int metricsCursor;
+        int[] profileLengths;
+        int[] profileStarts;
+        int lengthIndex;
+        byte[][] leadingProfiles;
+        byte[][] trailingProfiles;
+        int leadingAccumulator;
+        int leadingRow;
+        int[] profileLengthsAlias;
+        byte[][] leadingProfilesAlias;
+        byte[][] trailingProfilesAlias;
+        int[] profileStartsAlias;
+        int[] newProfileLengths;
+        byte[][] newLeadingProfiles;
+        byte[][] newTrailingProfiles;
+        int[] newProfileStarts;
+        int startIndex;
+        int trailingAccumulator;
+        int nextGlyph;
+        int trailingGlyph;
+        int previousGlyph;
         this.glyphAdvances = new int[256];
         if (metrics.length == 257) {
-          for (var2 = 0; var2 < this.glyphAdvances.length; var2++) {
-            this.glyphAdvances[var2] = metrics[var2] & 255;
+          for (metricsCursor = 0; metricsCursor < this.glyphAdvances.length; metricsCursor++) {
+            this.glyphAdvances[metricsCursor] = metrics[metricsCursor] & 255;
           }
           this.baselineHeight = metrics[256] & 255;
         } else {
-          var2 = 0;
-          for (var3_int = 0; var3_int < 256; var3_int++) {
-            incrementValue$6 = var2;
-            var2++;
-            this.glyphAdvances[var3_int] = metrics[incrementValue$6] & 255;
+          metricsCursor = 0;
+          for (advanceIndex = 0; advanceIndex < 256; advanceIndex++) {
+            advanceByteIndex = metricsCursor;
+            metricsCursor++;
+            this.glyphAdvances[advanceIndex] = metrics[advanceByteIndex] & 255;
           }
-          var14 = new int[256];
-          var10 = var14;
-          var3 = var10;
-          var17 = new int[256];
-          var13 = var17;
-          var4 = var13;
-          for (var5_int = 0; var5_int < 256; var5_int++) {
-            incrementValue$5 = var2;
-            var2++;
-            var3[var5_int] = metrics[incrementValue$5] & 255;
+          newProfileLengths = new int[256];
+          profileLengthsAlias = newProfileLengths;
+          profileLengths = profileLengthsAlias;
+          newProfileStarts = new int[256];
+          profileStartsAlias = newProfileStarts;
+          profileStarts = profileStartsAlias;
+          for (lengthIndex = 0; lengthIndex < 256; lengthIndex++) {
+            lengthByteIndex = metricsCursor;
+            metricsCursor++;
+            profileLengths[lengthIndex] = metrics[lengthByteIndex] & 255;
           }
-          for (var5_intLifetime1 = 0; var5_intLifetime1 < 256; var5_intLifetime1++) {
-            incrementValue$4 = var2;
-            var2++;
-            var4[var5_intLifetime1] = metrics[incrementValue$4] & 255;
+          for (startIndex = 0; startIndex < 256; startIndex++) {
+            startByteIndex = metricsCursor;
+            metricsCursor++;
+            profileStarts[startIndex] = metrics[startByteIndex] & 255;
           }
-          var15 = new byte[256][];
-          var11 = var15;
-          var5 = var11;
-          for (var6_int = 0; var6_int < 256; var6_int++) {
-            array$2 = new byte[var14[var6_int]];
-            var5[var6_int] = array$2;
-            var7 = 0;
-            for (var8 = 0; var8 < var15[var6_int].length; var8++) {
-              incrementValue$3 = var2;
-              var2++;
-              var7 = (byte)(var7 + metrics[incrementValue$3]);
-              var15[var6_int][var8] = (byte)var7;
+          newLeadingProfiles = new byte[256][];
+          leadingProfilesAlias = newLeadingProfiles;
+          leadingProfiles = leadingProfilesAlias;
+          for (leadingGlyph = 0; leadingGlyph < 256; leadingGlyph++) {
+            newLeadingProfile = new byte[newProfileLengths[leadingGlyph]];
+            leadingProfiles[leadingGlyph] = newLeadingProfile;
+            leadingAccumulator = 0;
+            for (leadingRow = 0; leadingRow < newLeadingProfiles[leadingGlyph].length; leadingRow++) {
+              leadingDeltaByteIndex = metricsCursor;
+              metricsCursor++;
+              leadingAccumulator = (byte)(leadingAccumulator + metrics[leadingDeltaByteIndex]);
+              newLeadingProfiles[leadingGlyph][leadingRow] = (byte)leadingAccumulator;
             }
           }
-          var16 = new byte[256][];
-          var12 = var16;
-          var6 = var12;
-          for (var7Lifetime1 = 0; var7Lifetime1 < 256; var7Lifetime1++) {
-            array$0 = new byte[var14[var7Lifetime1]];
-            var6[var7Lifetime1] = array$0;
-            var8Lifetime1 = 0;
-            for (var9 = 0; var9 < var16[var7Lifetime1].length; var9++) {
-              incrementValue$1 = var2;
-              var2++;
-              var8Lifetime1 = (byte)(var8Lifetime1 + metrics[incrementValue$1]);
-              var16[var7Lifetime1][var9] = (byte)var8Lifetime1;
+          newTrailingProfiles = new byte[256][];
+          trailingProfilesAlias = newTrailingProfiles;
+          trailingProfiles = trailingProfilesAlias;
+          for (trailingGlyph = 0; trailingGlyph < 256; trailingGlyph++) {
+            newTrailingProfile = new byte[newProfileLengths[trailingGlyph]];
+            trailingProfiles[trailingGlyph] = newTrailingProfile;
+            trailingAccumulator = 0;
+            for (trailingRow = 0; trailingRow < newTrailingProfiles[trailingGlyph].length; trailingRow++) {
+              trailingDeltaByteIndex = metricsCursor;
+              metricsCursor++;
+              trailingAccumulator = (byte)(trailingAccumulator + metrics[trailingDeltaByteIndex]);
+              newTrailingProfiles[trailingGlyph][trailingRow] = (byte)trailingAccumulator;
             }
           }
           this.kerning = new byte[65536];
-          for (var7Lifetime2 = 0; var7Lifetime2 < 256; var7Lifetime2++) {
-            if (var7Lifetime2 != 32 &&
-              var7Lifetime2 != 160) {
-              for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
-                if (var8Lifetime2 != 32 &&
-                  var8Lifetime2 != 160) {
-                  this.kerning[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)TextFont.a(var15, var16, var17, this.glyphAdvances, var14, var7Lifetime2, var8Lifetime2);
+          for (previousGlyph = 0; previousGlyph < 256; previousGlyph++) {
+            if (previousGlyph != 32 &&
+              previousGlyph != 160) {
+              for (nextGlyph = 0; nextGlyph < 256; nextGlyph++) {
+                if (nextGlyph != 32 &&
+                  nextGlyph != 160) {
+                  this.kerning[(previousGlyph << 8) + nextGlyph] = (byte)TextFont.computePairKerning(newLeadingProfiles, newTrailingProfiles, newProfileStarts, this.glyphAdvances, newProfileLengths, previousGlyph, nextGlyph);
                 }
               }
             }
           }
-          this.baselineHeight = var17[32] + var14[32];
+          this.baselineHeight = newProfileStarts[32] + newProfileLengths[32];
         }
     }
 
@@ -350,113 +350,113 @@ abstract class TextFont extends DualLinkNode {
         this.drawText(text, rightX - this.measureText(text), baselineY);
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4, int param5) {
-        if (param0 == null) {
+    final void drawLeftAlpha(String text, int x, int baselineY, int paint, int shadow, int alpha) {
+        if (text == null) {
           return;
         }
-        this.resetStyle(param3, param4, param5);
-        this.drawText(param0, param1, param2);
+        this.resetStyle(paint, shadow, alpha);
+        this.drawText(text, x, baselineY);
     }
 
     private final void drawText(String text, int x, int baselineY) {
-        int var7 = 0;
-        int stackIn_27_0 = 0;
-        Throwable decompiledCaughtException = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var8 = 0;
-        String var9_ref_String = null;
-        int var9 = 0;
-        int var10 = 0;
-        Exception var10_ref_Exception = null;
-        IndexedSpriteGeometry var11_ref_fc = null;
-        int var11 = 0;
-        int var12 = 0;
-        CharSequence var13 = null;
+        int characterIndex = 0;
+        int selectedSpriteBaseline = 0;
+        Throwable caughtImageFailure = null;
+        int tagStart = 0;
+        int previousGlyph = 0;
+        int textLength = 0;
+        int characterOrGlyph = 0;
+        String tag = null;
+        int glyphWidth = 0;
+        int imageIndexOrGlyphHeight = 0;
+        Exception ignoredImageFailure = null;
+        IndexedSpriteGeometry inlineSprite = null;
+        int glyphStartX = 0;
+        int spriteBaseline = 0;
+        CharSequence imageIndexText = null;
         baselineY = baselineY - this.baselineHeight;
-        var4 = -1;
-        var5 = 0;
-        var6 = text.length();
-        for (var7 = 0; var7 < var6; var7++) {
-          boolean decompiledFrameRemainder0 = true;
-          var8 = text.charAt(var7);
-          if (var8 != 60) {
-            if (var8 == 62 &&
-              var4 != -1) {
-              var9_ref_String = text.substring(var4 + 1, var7).toLowerCase();
-              var4 = -1;
-              if (!var9_ref_String.equals("lt")) {
-                if (!var9_ref_String.equals("gt")) {
-                  if (!var9_ref_String.equals("nbsp")) {
-                    if (!var9_ref_String.equals("shy")) {
-                      if (!var9_ref_String.equals("times")) {
-                        if (!var9_ref_String.equals("euro")) {
-                          if (!var9_ref_String.equals("copy")) {
-                            if (!var9_ref_String.equals("reg")) {
-                              if (!var9_ref_String.startsWith("img=")) {
-                                this.applyTag(var9_ref_String);
+        tagStart = -1;
+        previousGlyph = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          boolean emitGlyph = true;
+          characterOrGlyph = text.charAt(characterIndex);
+          if (characterOrGlyph != 60) {
+            if (characterOrGlyph == 62 &&
+              tagStart != -1) {
+              tag = text.substring(tagStart + 1, characterIndex).toLowerCase();
+              tagStart = -1;
+              if (!tag.equals("lt")) {
+                if (!tag.equals("gt")) {
+                  if (!tag.equals("nbsp")) {
+                    if (!tag.equals("shy")) {
+                      if (!tag.equals("times")) {
+                        if (!tag.equals("euro")) {
+                          if (!tag.equals("copy")) {
+                            if (!tag.equals("reg")) {
+                              if (!tag.startsWith("img=")) {
+                                this.applyTag(tag);
                               } else {
                                 try {
-                                  var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = UsernameAvailabilityValidator.a(var13, -28734);
-                                  var11_ref_fc = this.inlineSprites[var10];
+                                  imageIndexText = (CharSequence) ((Object) tag.substring(4));
+                                  imageIndexOrGlyphHeight = UsernameAvailabilityValidator.a(imageIndexText, -28734);
+                                  inlineSprite = this.inlineSprites[imageIndexOrGlyphHeight];
                                   if (this.inlineSpriteBaselines == null) {
-                                    stackIn_27_0 = var11_ref_fc.canvasHeight;
+                                    selectedSpriteBaseline = inlineSprite.canvasHeight;
                                   } else {
-                                    stackIn_27_0 = this.inlineSpriteBaselines[var10];
+                                    selectedSpriteBaseline = this.inlineSpriteBaselines[imageIndexOrGlyphHeight];
                                   }
-                                  var12 = stackIn_27_0;
+                                  spriteBaseline = selectedSpriteBaseline;
                                   if (currentAlpha != 256) {
-                                    var11_ref_fc.drawAlpha(x, baselineY + this.baselineHeight - var12, currentAlpha);
+                                    inlineSprite.drawAlpha(x, baselineY + this.baselineHeight - spriteBaseline, currentAlpha);
                                   } else {
-                                    var11_ref_fc.drawTransparent(x, baselineY + this.baselineHeight - var12);
+                                    inlineSprite.drawTransparent(x, baselineY + this.baselineHeight - spriteBaseline);
                                   }
-                                  x = x + var11_ref_fc.canvasWidth;
-                                  var5 = 0;
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  decompiledCaughtException = decompiledCaughtParameter0;
-                                  var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                                  x = x + inlineSprite.canvasWidth;
+                                  previousGlyph = 0;
+                                } catch (java.lang.Exception caughtParameter) {
+                                  caughtImageFailure = caughtParameter;
+                                  ignoredImageFailure = (Exception) (Object) caughtImageFailure;
                                 }
                               }
-                              decompiledFrameRemainder0 = false;
+                              emitGlyph = false;
                             }
                             else {
-                              var8 = 174;
+                              characterOrGlyph = 174;
                             }
                           } else {
-                            var8 = 169;
+                            characterOrGlyph = 169;
                           }
                         } else {
-                          var8 = 8364;
+                          characterOrGlyph = 8364;
                         }
                       } else {
-                        var8 = 215;
+                        characterOrGlyph = 215;
                       }
                     } else {
-                      var8 = 173;
+                      characterOrGlyph = 173;
                     }
                   } else {
-                    var8 = 160;
+                    characterOrGlyph = 160;
                   }
                 } else {
-                  var8 = 62;
+                  characterOrGlyph = 62;
                 }
               } else {
-                var8 = 60;
+                characterOrGlyph = 60;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (var4 == -1)) {
-              var8 = (char)(DateFieldsWidget.a(-8250, (char) var8) & 255);
+            if ((emitGlyph) &&
+              (tagStart == -1)) {
+              characterOrGlyph = (char)(DateFieldsWidget.a(-8250, (char) characterOrGlyph) & 255);
               if (this.kerning != null &&
-                var5 != 0) {
-                x = x + this.kerning[(var5 << 8) + var8];
+                previousGlyph != 0) {
+                x = x + this.kerning[(previousGlyph << 8) + characterOrGlyph];
               }
-              var9 = this.glyphWidths[var8];
-              var10 = this.glyphHeights[var8];
-              var11 = x;
-              if (var8 == 32) {
+              glyphWidth = this.glyphWidths[characterOrGlyph];
+              imageIndexOrGlyphHeight = this.glyphHeights[characterOrGlyph];
+              glyphStartX = x;
+              if (characterOrGlyph == 32) {
                 if (justifyStep256 > 0) {
                   justifyRemainder256 = justifyRemainder256 + justifyStep256;
                   x = x + (justifyRemainder256 >> 8);
@@ -465,27 +465,27 @@ abstract class TextFont extends DualLinkNode {
               } else {
                 if (currentAlpha != 256) {
                   if (currentShadow != -1) {
-                    this.drawGlyphAlpha(var8, x + this.glyphOffsetX[var8] + 1, baselineY + this.glyphOffsetY[var8] + 1, var9, var10, currentShadow, currentAlpha, true);
+                    this.drawGlyphAlpha(characterOrGlyph, x + this.glyphOffsetX[characterOrGlyph] + 1, baselineY + this.glyphOffsetY[characterOrGlyph] + 1, glyphWidth, imageIndexOrGlyphHeight, currentShadow, currentAlpha, true);
                   }
-                  this.drawGlyphAlpha(var8, x + this.glyphOffsetX[var8], baselineY + this.glyphOffsetY[var8], var9, var10, currentPaint, currentAlpha, false);
+                  this.drawGlyphAlpha(characterOrGlyph, x + this.glyphOffsetX[characterOrGlyph], baselineY + this.glyphOffsetY[characterOrGlyph], glyphWidth, imageIndexOrGlyphHeight, currentPaint, currentAlpha, false);
                 } else {
                   if (currentShadow != -1) {
-                    this.drawGlyph(var8, x + this.glyphOffsetX[var8] + 1, baselineY + this.glyphOffsetY[var8] + 1, var9, var10, currentShadow, true);
+                    this.drawGlyph(characterOrGlyph, x + this.glyphOffsetX[characterOrGlyph] + 1, baselineY + this.glyphOffsetY[characterOrGlyph] + 1, glyphWidth, imageIndexOrGlyphHeight, currentShadow, true);
                   }
-                  this.drawGlyph(var8, x + this.glyphOffsetX[var8], baselineY + this.glyphOffsetY[var8], var9, var10, currentPaint, false);
+                  this.drawGlyph(characterOrGlyph, x + this.glyphOffsetX[characterOrGlyph], baselineY + this.glyphOffsetY[characterOrGlyph], glyphWidth, imageIndexOrGlyphHeight, currentPaint, false);
                 }
               }
-              x = x + this.glyphAdvances[var8];
+              x = x + this.glyphAdvances[characterOrGlyph];
               if (strikeColor != -1) {
-                Rasterizer2D.drawHorizontalLine(var11, baselineY + (int)((double)this.baselineHeight * 0.7), x - var11, strikeColor);
+                Rasterizer2D.drawHorizontalLine(glyphStartX, baselineY + (int)((double)this.baselineHeight * 0.7), x - glyphStartX, strikeColor);
               }
               if (underlineColor != -1) {
-                Rasterizer2D.drawHorizontalLine(var11, baselineY + this.baselineHeight + 1, x - var11, underlineColor);
+                Rasterizer2D.drawHorizontalLine(glyphStartX, baselineY + this.baselineHeight + 1, x - glyphStartX, underlineColor);
               }
-              var5 = var8;
+              previousGlyph = characterOrGlyph;
             }
           } else {
-            var4 = var7;
+            tagStart = characterIndex;
           }
         }
     }
@@ -515,9 +515,9 @@ abstract class TextFont extends DualLinkNode {
         if (lineSpacing == 0) {
           lineSpacing = this.baselineHeight;
         }
-        int var4 = this.wrapText(text, new int[]{width}, wrappedLines);
-        int var5 = (var4 - 1) * lineSpacing;
-        return this.ascent + var5 + this.descent;
+        int lineCount = this.wrapText(text, new int[]{width}, wrappedLines);
+        int baselineSpan = (lineCount - 1) * lineSpacing;
+        return this.ascent + baselineSpan + this.descent;
     }
 
     final void drawCentered(String text, int centerX, int baselineY, int paint, int shadow) {
@@ -537,360 +537,360 @@ abstract class TextFont extends DualLinkNode {
     }
 
     final int measureWrappedWidth(String text, int width) {
-        int var5 = 0;
-        int var3;
-        int var4;
-        int var6;
-        var3 = this.wrapText(text, new int[]{width}, wrappedLines);
-        var4 = 0;
-        for (var5 = 0; var5 < var3; var5++) {
-          var6 = this.measureText(wrappedLines[var5]);
-          if (var6 > var4) {
-            var4 = var6;
+        int lineIndex = 0;
+        int lineCount;
+        int maximumWidth;
+        int lineWidth;
+        lineCount = this.wrapText(text, new int[]{width}, wrappedLines);
+        maximumWidth = 0;
+        for (lineIndex = 0; lineIndex < lineCount; lineIndex++) {
+          lineWidth = this.measureText(wrappedLines[lineIndex]);
+          if (lineWidth > maximumWidth) {
+            maximumWidth = lineWidth;
           }
         }
-        return var4;
+        return maximumWidth;
     }
 
     final int wrapText(String text, int[] lineWidths, String[] lines) {
-        int var13 = 0;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int stackIn_69_0 = 0;
-        int[] stackIn_69_1 = null;
-        int stackIn_70_2 = 0;
-        Throwable decompiledCaughtException = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var14 = 0;
-        String var15 = null;
-        int var16_int = 0;
-        Exception var16 = null;
-        Object var17 = null;
-        CharSequence var18 = null;
-        var17 = null;
+        int characterIndex = 0;
+        StringBuilder unusedOpenTagAppend = null;
+        StringBuilder unusedTagAppend = null;
+        StringBuilder unusedCloseTagAppend = null;
+        StringBuilder unusedCharacterAppend = null;
+        int widthAtLimitCheck = 0;
+        int[] widthLimits = null;
+        int widthLimitIndex = 0;
+        Throwable caughtImageFailure = null;
+        int lineWidth = 0;
+        int lineStart = 0;
+        int breakPosition = 0;
+        int widthAtBreak = 0;
+        int breakTrim = 0;
+        int tagStart = 0;
+        int previousCode = 0;
+        int lineCount = 0;
+        int textLength = 0;
+        int characterOrGlyph = 0;
+        String tag = null;
+        int imageIndex = 0;
+        Exception ignoredImageFailure = null;
+        Object unusedReference = null;
+        CharSequence imageIndexText = null;
+        unusedReference = null;
         if (text == null) {
           return 0;
         }
         MessageScreen.resizeAndFillTextBuffer(' ', wrapScratch, 0, false);
-        var4 = 0;
-        var5 = 0;
-        var6 = -1;
-        var7 = 0;
-        var8 = 0;
-        var9 = -1;
-        var10 = 0;
-        var11 = 0;
-        var12 = text.length();
-        for (var13 = 0; var13 < var12; var13++) {
-          var14 = text.charAt(var13);
-          if (var14 != 60) {
-            if (var14 == 62 &&
-              var9 != -1) {
-              var15 = text.substring(var9 + 1, var13).toLowerCase();
-              var9 = -1;
-              discarded$0 = wrapScratch.append('<');
-              discarded$1 = wrapScratch.append(var15);
-              discarded$2 = wrapScratch.append('>');
-              if (!var15.equals("br")) {
-                if (!var15.equals("lt")) {
-                  if (!var15.equals("gt")) {
-                    if (!var15.equals("nbsp")) {
-                      if (!var15.equals("shy")) {
-                        if (!var15.equals("times")) {
-                          if (!var15.equals("euro")) {
-                            if (!var15.equals("copy")) {
-                              if (!var15.equals("reg")) {
-                                if (var15.startsWith("img=")) {
+        lineWidth = 0;
+        lineStart = 0;
+        breakPosition = -1;
+        widthAtBreak = 0;
+        breakTrim = 0;
+        tagStart = -1;
+        previousCode = 0;
+        lineCount = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          characterOrGlyph = text.charAt(characterIndex);
+          if (characterOrGlyph != 60) {
+            if (characterOrGlyph == 62 &&
+              tagStart != -1) {
+              tag = text.substring(tagStart + 1, characterIndex).toLowerCase();
+              tagStart = -1;
+              unusedOpenTagAppend = wrapScratch.append('<');
+              unusedTagAppend = wrapScratch.append(tag);
+              unusedCloseTagAppend = wrapScratch.append('>');
+              if (!tag.equals("br")) {
+                if (!tag.equals("lt")) {
+                  if (!tag.equals("gt")) {
+                    if (!tag.equals("nbsp")) {
+                      if (!tag.equals("shy")) {
+                        if (!tag.equals("times")) {
+                          if (!tag.equals("euro")) {
+                            if (!tag.equals("copy")) {
+                              if (!tag.equals("reg")) {
+                                if (tag.startsWith("img=")) {
                                   try {
-                                    var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = UsernameAvailabilityValidator.a(var18, -28734);
-                                    var4 = var4 + this.inlineSprites[var16_int].canvasWidth;
-                                    var10 = 0;
-                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                    decompiledCaughtException = decompiledCaughtParameter0;
-                                    var16 = (Exception) (Object) decompiledCaughtException;
+                                    imageIndexText = (CharSequence) ((Object) tag.substring(4));
+                                    imageIndex = UsernameAvailabilityValidator.a(imageIndexText, -28734);
+                                    lineWidth = lineWidth + this.inlineSprites[imageIndex].canvasWidth;
+                                    previousCode = 0;
+                                  } catch (java.lang.Exception caughtParameter) {
+                                    caughtImageFailure = caughtParameter;
+                                    ignoredImageFailure = (Exception) (Object) caughtImageFailure;
                                   }
                                 }
                               } else {
-                                var4 = var4 + this.getAdvance('®');
+                                lineWidth = lineWidth + this.getAdvance('®');
                                 if (this.kerning != null &&
-                                  var10 != 0) {
-                                  var4 = var4 + this.kerning[(var10 << 8) + 174];
+                                  previousCode != 0) {
+                                  lineWidth = lineWidth + this.kerning[(previousCode << 8) + 174];
                                 }
-                                var10 = 174;
+                                previousCode = 174;
                               }
                             } else {
-                              var4 = var4 + this.getAdvance('©');
+                              lineWidth = lineWidth + this.getAdvance('©');
                               if (this.kerning != null &&
-                                var10 != 0) {
-                                var4 = var4 + this.kerning[(var10 << 8) + 169];
+                                previousCode != 0) {
+                                lineWidth = lineWidth + this.kerning[(previousCode << 8) + 169];
                               }
-                              var10 = 169;
+                              previousCode = 169;
                             }
                           } else {
-                            var4 = var4 + this.getAdvance('€');
+                            lineWidth = lineWidth + this.getAdvance('€');
                             if (this.kerning != null &&
-                              var10 != 0) {
-                              var4 = var4 + this.kerning[(var10 << 8) + 128];
+                              previousCode != 0) {
+                              lineWidth = lineWidth + this.kerning[(previousCode << 8) + 128];
                             }
-                            var10 = 8364;
+                            previousCode = 8364;
                           }
                         } else {
-                          var4 = var4 + this.getAdvance('×');
+                          lineWidth = lineWidth + this.getAdvance('×');
                           if (this.kerning != null &&
-                            var10 != 0) {
-                            var4 = var4 + this.kerning[(var10 << 8) + 215];
+                            previousCode != 0) {
+                            lineWidth = lineWidth + this.kerning[(previousCode << 8) + 215];
                           }
-                          var10 = 215;
+                          previousCode = 215;
                         }
                       } else {
-                        var4 = var4 + this.getAdvance('­');
+                        lineWidth = lineWidth + this.getAdvance('­');
                         if (this.kerning != null &&
-                          var10 != 0) {
-                          var4 = var4 + this.kerning[(var10 << 8) + 173];
+                          previousCode != 0) {
+                          lineWidth = lineWidth + this.kerning[(previousCode << 8) + 173];
                         }
-                        var10 = 173;
+                        previousCode = 173;
                       }
                     } else {
-                      var4 = var4 + this.getAdvance(' ');
+                      lineWidth = lineWidth + this.getAdvance(' ');
                       if (this.kerning != null &&
-                        var10 != 0) {
-                        var4 = var4 + this.kerning[(var10 << 8) + 160];
+                        previousCode != 0) {
+                        lineWidth = lineWidth + this.kerning[(previousCode << 8) + 160];
                       }
-                      var10 = 160;
+                      previousCode = 160;
                     }
                   } else {
-                    var4 = var4 + this.getAdvance('>');
+                    lineWidth = lineWidth + this.getAdvance('>');
                     if (this.kerning != null &&
-                      var10 != 0) {
-                      var4 = var4 + this.kerning[(var10 << 8) + 62];
+                      previousCode != 0) {
+                      lineWidth = lineWidth + this.kerning[(previousCode << 8) + 62];
                     }
-                    var10 = 62;
+                    previousCode = 62;
                   }
                 } else {
-                  var4 = var4 + this.getAdvance('<');
+                  lineWidth = lineWidth + this.getAdvance('<');
                   if (this.kerning != null &&
-                    var10 != 0) {
-                    var4 = var4 + this.kerning[(var10 << 8) + 60];
+                    previousCode != 0) {
+                    lineWidth = lineWidth + this.kerning[(previousCode << 8) + 60];
                   }
-                  var10 = 60;
+                  previousCode = 60;
                 }
               } else {
-                lines[var11] = wrapScratch.toString().substring(var5, wrapScratch.length());
-                var11++;
-                var5 = wrapScratch.length();
-                var4 = 0;
-                var6 = -1;
-                var10 = 0;
+                lines[lineCount] = wrapScratch.toString().substring(lineStart, wrapScratch.length());
+                lineCount++;
+                lineStart = wrapScratch.length();
+                lineWidth = 0;
+                breakPosition = -1;
+                previousCode = 0;
               }
-              var14 = 0;
+              characterOrGlyph = 0;
             }
-            if (var9 == -1) {
-              if (var14 != 0) {
-                discarded$3 = wrapScratch.append((char) var14);
-                var14 = (char)(DateFieldsWidget.a(-8250, (char) var14) & 255);
-                var4 = var4 + this.glyphAdvances[var14];
+            if (tagStart == -1) {
+              if (characterOrGlyph != 0) {
+                unusedCharacterAppend = wrapScratch.append((char) characterOrGlyph);
+                characterOrGlyph = (char)(DateFieldsWidget.a(-8250, (char) characterOrGlyph) & 255);
+                lineWidth = lineWidth + this.glyphAdvances[characterOrGlyph];
                 if (this.kerning != null &&
-                  var10 != 0) {
-                  var4 = var4 + this.kerning[(var10 << 8) + var14];
+                  previousCode != 0) {
+                  lineWidth = lineWidth + this.kerning[(previousCode << 8) + characterOrGlyph];
                 }
-                var10 = var14;
+                previousCode = characterOrGlyph;
               }
-              if (var14 == 32) {
-                var6 = wrapScratch.length();
-                var7 = var4;
-                var8 = 1;
+              if (characterOrGlyph == 32) {
+                breakPosition = wrapScratch.length();
+                widthAtBreak = lineWidth;
+                breakTrim = 1;
               }
               if (lineWidths != null) {
-                stackIn_69_0 = var4;
-                stackIn_69_1 = (int[]) (lineWidths);
-                if (var11 >= lineWidths.length) {
-                  stackIn_70_2 = lineWidths.length - 1;
+                widthAtLimitCheck = lineWidth;
+                widthLimits = (int[]) (lineWidths);
+                if (lineCount >= lineWidths.length) {
+                  widthLimitIndex = lineWidths.length - 1;
                 } else {
-                  stackIn_70_2 = var11;
+                  widthLimitIndex = lineCount;
                 }
-                if (stackIn_69_0 > stackIn_69_1[stackIn_70_2] &&
-                  var6 >= 0) {
-                  lines[var11] = wrapScratch.toString().substring(var5, var6 - var8);
-                  var11++;
-                  var5 = var6;
-                  var6 = -1;
-                  var4 = var4 - var7;
-                  var10 = 0;
+                if (widthAtLimitCheck > widthLimits[widthLimitIndex] &&
+                  breakPosition >= 0) {
+                  lines[lineCount] = wrapScratch.toString().substring(lineStart, breakPosition - breakTrim);
+                  lineCount++;
+                  lineStart = breakPosition;
+                  breakPosition = -1;
+                  lineWidth = lineWidth - widthAtBreak;
+                  previousCode = 0;
                 }
               }
-              if (var14 == 45) {
-                var6 = wrapScratch.length();
-                var7 = var4;
-                var8 = 0;
+              if (characterOrGlyph == 45) {
+                breakPosition = wrapScratch.length();
+                widthAtBreak = lineWidth;
+                breakTrim = 0;
               }
             }
           } else {
-            var9 = var13;
+            tagStart = characterIndex;
           }
         }
-        if (wrapScratch.length() > var5) {
-          lines[var11] = wrapScratch.toString().substring(var5, wrapScratch.length());
-          var11++;
+        if (wrapScratch.length() > lineStart) {
+          lines[lineCount] = wrapScratch.toString().substring(lineStart, wrapScratch.length());
+          lineCount++;
         }
-        return var11;
+        return lineCount;
     }
 
     final int measureText(String text) {
-        int var6 = 0;
-        Throwable decompiledCaughtException = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var7 = 0;
-        String var8 = null;
-        int var9_int = 0;
-        Exception var9 = null;
-        CharSequence var10 = null;
+        int characterIndex = 0;
+        Throwable caughtImageFailure = null;
+        int tagStart = 0;
+        int previousGlyph = 0;
+        int width = 0;
+        int textLength = 0;
+        int characterOrGlyph = 0;
+        String tag = null;
+        int imageIndex = 0;
+        Exception ignoredImageFailure = null;
+        CharSequence imageIndexText = null;
         if (text == null) {
           return 0;
         }
-        var2 = -1;
-        var3 = 0;
-        var4 = 0;
-        var5 = text.length();
-        for (var6 = 0; var6 < var5; var6++) {
-          boolean decompiledFrameRemainder0 = true;
-          var7 = text.charAt(var6);
-          if (var7 != 60) {
-            if (var7 == 62 &&
-              var2 != -1) {
-              var8 = text.substring(var2 + 1, var6).toLowerCase();
-              var2 = -1;
-              if (!var8.equals("lt")) {
-                if (!var8.equals("gt")) {
-                  if (!var8.equals("nbsp")) {
-                    if (!var8.equals("shy")) {
-                      if (!var8.equals("times")) {
-                        if (!var8.equals("euro")) {
-                          if (!var8.equals("copy")) {
-                            if (!var8.equals("reg")) {
-                              if (!(!var8.startsWith("img="))) {
+        tagStart = -1;
+        previousGlyph = 0;
+        width = 0;
+        textLength = text.length();
+        for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+          boolean emitGlyph = true;
+          characterOrGlyph = text.charAt(characterIndex);
+          if (characterOrGlyph != 60) {
+            if (characterOrGlyph == 62 &&
+              tagStart != -1) {
+              tag = text.substring(tagStart + 1, characterIndex).toLowerCase();
+              tagStart = -1;
+              if (!tag.equals("lt")) {
+                if (!tag.equals("gt")) {
+                  if (!tag.equals("nbsp")) {
+                    if (!tag.equals("shy")) {
+                      if (!tag.equals("times")) {
+                        if (!tag.equals("euro")) {
+                          if (!tag.equals("copy")) {
+                            if (!tag.equals("reg")) {
+                              if (!(!tag.startsWith("img="))) {
                                 try {
-                                  var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = UsernameAvailabilityValidator.a(var10, -28734);
-                                  var4 = var4 + this.inlineSprites[var9_int].canvasWidth;
-                                  var3 = 0;
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  decompiledCaughtException = decompiledCaughtParameter0;
-                                  var9 = (Exception) (Object) decompiledCaughtException;
+                                  imageIndexText = (CharSequence) ((Object) tag.substring(4));
+                                  imageIndex = UsernameAvailabilityValidator.a(imageIndexText, -28734);
+                                  width = width + this.inlineSprites[imageIndex].canvasWidth;
+                                  previousGlyph = 0;
+                                } catch (java.lang.Exception caughtParameter) {
+                                  caughtImageFailure = caughtParameter;
+                                  ignoredImageFailure = (Exception) (Object) caughtImageFailure;
                                 }
                               }
-                              decompiledFrameRemainder0 = false;
+                              emitGlyph = false;
                             }
                             else {
-                              var7 = 174;
+                              characterOrGlyph = 174;
                             }
                           } else {
-                            var7 = 169;
+                            characterOrGlyph = 169;
                           }
                         } else {
-                          var7 = 8364;
+                          characterOrGlyph = 8364;
                         }
                       } else {
-                        var7 = 215;
+                        characterOrGlyph = 215;
                       }
                     } else {
-                      var7 = 173;
+                      characterOrGlyph = 173;
                     }
                   } else {
-                    var7 = 160;
+                    characterOrGlyph = 160;
                   }
                 } else {
-                  var7 = 62;
+                  characterOrGlyph = 62;
                 }
               } else {
-                var7 = 60;
+                characterOrGlyph = 60;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (var2 == -1)) {
-              var7 = (char)(DateFieldsWidget.a(-8250, (char) var7) & 255);
-              var4 = var4 + this.glyphAdvances[var7];
+            if ((emitGlyph) &&
+              (tagStart == -1)) {
+              characterOrGlyph = (char)(DateFieldsWidget.a(-8250, (char) characterOrGlyph) & 255);
+              width = width + this.glyphAdvances[characterOrGlyph];
               if (this.kerning != null &&
-                var3 != 0) {
-                var4 = var4 + this.kerning[(var3 << 8) + var7];
+                previousGlyph != 0) {
+                width = width + this.kerning[(previousGlyph << 8) + characterOrGlyph];
               }
-              var3 = var7;
+              previousGlyph = characterOrGlyph;
             }
           } else {
-            var2 = var6;
+            tagStart = characterIndex;
           }
         }
-        return var4;
+        return width;
     }
 
-    private final static int a(byte[][] param0, byte[][] param1, int[] param2, int[] param3, int[] param4, int param5, int param6) {
-        int var18 = 0;
-        int incrementValue$6 = 0;
-        int incrementValue$7 = 0;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        byte[] var14;
-        byte[] var15;
-        int var16;
-        int var17;
-        int var19;
-        var7 = param2[param5];
-        var8 = var7 + param4[param5];
-        var9 = param2[param6];
-        var10 = var9 + param4[param6];
-        var11 = var7;
-        if (var9 > var7) {
-          var11 = var9;
+    private final static int computePairKerning(byte[][] leadingProfiles, byte[][] trailingProfiles, int[] profileStarts, int[] advances, int[] profileLengths, int previousGlyph, int nextGlyph) {
+        int row = 0;
+        int previousProfileIndex = 0;
+        int nextProfileIndex = 0;
+        int previousStart;
+        int previousEnd;
+        int nextStart;
+        int nextEnd;
+        int overlapStart;
+        int overlapEnd;
+        int minimumGap;
+        byte[] previousTrailingProfile;
+        byte[] nextLeadingProfile;
+        int previousRow;
+        int nextRow;
+        int profileGap;
+        previousStart = profileStarts[previousGlyph];
+        previousEnd = previousStart + profileLengths[previousGlyph];
+        nextStart = profileStarts[nextGlyph];
+        nextEnd = nextStart + profileLengths[nextGlyph];
+        overlapStart = previousStart;
+        if (nextStart > previousStart) {
+          overlapStart = nextStart;
         }
-        var12 = var8;
-        if (var10 < var8) {
-          var12 = var10;
+        overlapEnd = previousEnd;
+        if (nextEnd < previousEnd) {
+          overlapEnd = nextEnd;
         }
-        var13 = param3[param5];
-        if (param3[param6] < var13) {
-          var13 = param3[param6];
+        minimumGap = advances[previousGlyph];
+        if (advances[nextGlyph] < minimumGap) {
+          minimumGap = advances[nextGlyph];
         }
-        var14 = param1[param5];
-        var15 = param0[param6];
-        var16 = var11 - var7;
-        var17 = var11 - var9;
-        for (var18 = var11; var18 < var12; var18++) {
-          incrementValue$6 = var16;
-          var16++;
-          incrementValue$7 = var17;
-          var17++;
-          var19 = var14[incrementValue$6] + var15[incrementValue$7];
-          if (var19 < var13) {
-            var13 = var19;
+        previousTrailingProfile = trailingProfiles[previousGlyph];
+        nextLeadingProfile = leadingProfiles[nextGlyph];
+        previousRow = overlapStart - previousStart;
+        nextRow = overlapStart - nextStart;
+        for (row = overlapStart; row < overlapEnd; row++) {
+          previousProfileIndex = previousRow;
+          previousRow++;
+          nextProfileIndex = nextRow;
+          nextRow++;
+          profileGap = previousTrailingProfile[previousProfileIndex] + nextLeadingProfile[nextProfileIndex];
+          if (profileGap < minimumGap) {
+            minimumGap = profileGap;
           }
         }
-        return -var13;
+        return -minimumGap;
     }
 
     final void drawCharacter(char character, int x, int baselineY, int paint) {
-        int var5 = 0;
+        int glyphId = 0;
         if (character != 32) {
           baselineY = baselineY - this.baselineHeight;
-          var5 = DateFieldsWidget.a(-8250, character) & 255;
-          this.drawGlyph(var5, x + this.glyphOffsetX[var5], baselineY + this.glyphOffsetY[var5], this.glyphWidths[var5], this.glyphHeights[var5], paint, false);
+          glyphId = DateFieldsWidget.a(-8250, character) & 255;
+          this.drawGlyph(glyphId, x + this.glyphOffsetX[glyphId], baselineY + this.glyphOffsetY[glyphId], this.glyphWidths[glyphId], this.glyphHeights[glyphId], paint, false);
         }
     }
 
@@ -908,91 +908,91 @@ abstract class TextFont extends DualLinkNode {
     }
 
     final static String truncateText(TextFont font, String text, int width) {
-        int var6 = 0;
-        int var3;
-        int var4;
-        int var5;
-        int var7;
+        int characterIndex = 0;
+        int ellipsisWidth;
+        int prefixBudget;
+        int prefixWidth;
+        int advance;
         if (font.measureText(text) <= width) {
           return text;
         }
-        var3 = font.measureText("...");
-        var4 = width - var3;
-        var5 = 0;
-        for (var6 = 0; var6 < text.length(); var6++) {
-          var7 = font.getAdvance(text.charAt(var6));
-          if (var5 + var7 > var4) {
-            return text.substring(0, var6 - 1) + "...";
+        ellipsisWidth = font.measureText("...");
+        prefixBudget = width - ellipsisWidth;
+        prefixWidth = 0;
+        for (characterIndex = 0; characterIndex < text.length(); characterIndex++) {
+          advance = font.getAdvance(text.charAt(characterIndex));
+          if (prefixWidth + advance > prefixBudget) {
+            return text.substring(0, characterIndex - 1) + "...";
           }
-          var5 = var5 + var7;
+          prefixWidth = prefixWidth + advance;
         }
         return null;
     }
 
     final static String escapeAngles(String text) {
-        int var3_int = 0;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        int var1;
-        int var2;
-        int var4;
-        StringBuilder var3;
-        int var5;
-        int var4Lifetime1;
-        var1 = text.length();
-        var2 = 0;
-        for (var3_int = 0; var3_int < var1; var3_int++) {
-          var4 = text.charAt(var3_int);
-          if (var4 != 60) {
-            if (var4 == 62) {
-              var2 += 3;
+        int countIndex = 0;
+        StringBuilder unusedCharacterAppend = null;
+        StringBuilder unusedGreaterAppend = null;
+        StringBuilder unusedLessAppend = null;
+        int textLength;
+        int extraCapacity;
+        int characterToCount;
+        StringBuilder escaped;
+        int characterToAppend;
+        int appendIndex;
+        textLength = text.length();
+        extraCapacity = 0;
+        for (countIndex = 0; countIndex < textLength; countIndex++) {
+          characterToCount = text.charAt(countIndex);
+          if (characterToCount != 60) {
+            if (characterToCount == 62) {
+              extraCapacity += 3;
             }
           } else {
-            var2 += 3;
+            extraCapacity += 3;
           }
         }
-        var3 = new StringBuilder(var1 + var2);
-        for (var4Lifetime1 = 0; var4Lifetime1 < var1; var4Lifetime1++) {
-          var5 = text.charAt(var4Lifetime1);
-          if (var5 != 60) {
-            if (var5 != 62) {
-              discarded$0 = var3.append((char) var5);
+        escaped = new StringBuilder(textLength + extraCapacity);
+        for (appendIndex = 0; appendIndex < textLength; appendIndex++) {
+          characterToAppend = text.charAt(appendIndex);
+          if (characterToAppend != 60) {
+            if (characterToAppend != 62) {
+              unusedCharacterAppend = escaped.append((char) characterToAppend);
             } else {
-              discarded$1 = var3.append("<gt>");
+              unusedGreaterAppend = escaped.append("<gt>");
             }
           } else {
-            discarded$2 = var3.append("<lt>");
+            unusedLessAppend = escaped.append("<lt>");
           }
         }
-        return var3.toString();
+        return escaped.toString();
     }
 
     abstract void drawGlyphAlpha(int glyphId, int x, int y, int width, int height, int paint, int alpha, boolean shadow);
 
     TextFont(byte[] metrics, int[] glyphOffsetX, int[] glyphOffsetY, int[] glyphWidths, int[] glyphHeights) {
-        int var8 = 0;
-        int var6;
-        int var7;
+        int glyphIndex = 0;
+        int minimumGlyphTop;
+        int maximumGlyphBottom;
         this.baselineHeight = 0;
         this.glyphOffsetX = glyphOffsetX;
         this.glyphOffsetY = glyphOffsetY;
         this.glyphWidths = glyphWidths;
         this.glyphHeights = glyphHeights;
         this.readMetrics(metrics);
-        var6 = 2147483647;
-        var7 = -2147483648;
-        for (var8 = 0; var8 < 256; var8++) {
-          if (this.glyphOffsetY[var8] < var6 &&
-            this.glyphHeights[var8] != 0) {
-            var6 = this.glyphOffsetY[var8];
+        minimumGlyphTop = 2147483647;
+        maximumGlyphBottom = -2147483648;
+        for (glyphIndex = 0; glyphIndex < 256; glyphIndex++) {
+          if (this.glyphOffsetY[glyphIndex] < minimumGlyphTop &&
+            this.glyphHeights[glyphIndex] != 0) {
+            minimumGlyphTop = this.glyphOffsetY[glyphIndex];
           }
-          if (this.glyphOffsetY[var8] + this.glyphHeights[var8] > var7) {
-            var7 = this.glyphOffsetY[var8] + this.glyphHeights[var8];
+          if (this.glyphOffsetY[glyphIndex] + this.glyphHeights[glyphIndex] > maximumGlyphBottom) {
+            maximumGlyphBottom = this.glyphOffsetY[glyphIndex] + this.glyphHeights[glyphIndex];
           }
         }
-        this.ascent = this.baselineHeight - var6;
-        this.descent = var7 - this.baselineHeight;
+        this.ascent = this.baselineHeight - minimumGlyphTop;
+        this.descent = maximumGlyphBottom - this.baselineHeight;
         this.capHeight = this.baselineHeight - this.glyphOffsetY[88];
         this.xHeight = this.baselineHeight - this.glyphOffsetY[120];
     }

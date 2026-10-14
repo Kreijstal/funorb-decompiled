@@ -126,7 +126,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
             return;
           }
           var13 = var14.centerX + var14.radius + this.labelGap;
-          this.font.a(widget.text, widget.x + parentX + var13, parentY + (widget.y + this.labelOffsetY), widget.width - (this.labelGap + var13), widget.height - (this.labelGap << 1), this.textPaint, this.shadowPaint, 1, 1, 0);
+          this.font.drawParagraph(widget.text, widget.x + parentX + var13, parentY + (widget.y + this.labelOffsetY), widget.width - (this.labelGap + var13), widget.height - (this.labelGap << 1), this.textPaint, this.shadowPaint, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

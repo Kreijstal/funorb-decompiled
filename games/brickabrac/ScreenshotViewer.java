@@ -168,7 +168,7 @@ final class ScreenshotViewer {
         try {
           if (this.screenshots == null) {
             if (null != ch.field_c) {
-              ch.field_c.a(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              ch.field_c.drawParagraph(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
             return;
           }
@@ -176,7 +176,7 @@ final class ScreenshotViewer {
           var2 = var6;
           if (var2 == null) {
             if (null != ch.field_c) {
-              ch.field_c.a(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              ch.field_c.drawParagraph(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
             var6.drawTransparent(9, 58);
@@ -340,11 +340,11 @@ final class ScreenshotViewer {
             }
           }
           this.field_e.drawTransparent(16, 302);
-          ch.field_c.a(this.captions[this.selectedScreenshot], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+          ch.field_c.drawParagraph(this.captions[this.selectedScreenshot], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
           MainMenuScreen.field_u.drawTransparent(30, 330);
-          ch.field_c.a(MatchCompleteScreen.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ch.field_c.a(MatchCompleteScreen.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ch.field_c.a(MatchCompleteScreen.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          ch.field_c.drawParagraph(MatchCompleteScreen.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          ch.field_c.drawParagraph(MatchCompleteScreen.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          ch.field_c.drawParagraph(MatchCompleteScreen.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           LevelPack.field_e.drawTransparent((-LevelPack.field_e.canvasWidth + 127) / 2 + 508, 315);
           if (0 == this.selection.selectedIndex) {
             ValidatedTextFieldWidget.field_V[0].drawTransparent(508, 299);
@@ -694,7 +694,7 @@ final class ScreenshotViewer {
             Rasterizer2D.setClip(param1, var9_int, param5, 1 + var9_int);
             var10 = var9_int * param3.length / param0;
             var11 = param3[param3.length - (var10 + 1)];
-            param4.a(param2, param1, param6, param5, param0, var11, -1, 1, 1, 0);
+            param4.drawParagraph(param2, param1, param6, param5, param0, var11, -1, 1, 1, 0);
           }
           sc.popRaster(-102);
           return;

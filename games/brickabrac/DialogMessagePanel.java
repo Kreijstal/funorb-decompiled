@@ -86,7 +86,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
 
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-        this.font.a(this.message, 14 + (parentX + this.x), 10 + (parentY + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.font.ascent);
+        this.font.drawParagraph(this.message, 14 + (parentX + this.x), 10 + (parentY + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.font.ascent);
     }
 
     final FocusableWidget appendButton(byte obfuscationGuard, String caption, WidgetListener listener) {

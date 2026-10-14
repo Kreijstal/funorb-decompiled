@@ -18,14 +18,14 @@ final class tb extends PopupWidgetLayer {
         if (obfuscationGuard == 274) {
           if (this.field_ib != null) {
             Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
-            wm.field_a.a(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+            wm.field_a.drawParagraph(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
           }
           return;
         }
         this.field_gb = false;
         if (this.field_ib != null) {
           Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
-          wm.field_a.a(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+          wm.field_a.drawParagraph(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
         }
     }
 

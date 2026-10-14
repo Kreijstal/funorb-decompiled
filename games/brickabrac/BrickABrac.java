@@ -679,7 +679,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MultiplayerMatch.d(-19537);
         PlayerInputBatch.b(false);
         vd.a(true);
-        TextFont.a();
+        TextFont.clearTextScratchBuffers();
         rf.a((byte) 98);
         ObjectHistoryBuffer.a(81);
         aa.b(118);

@@ -31,7 +31,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.font.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", widget.x + parentX, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.descent + this.font.ascent);
+          this.font.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", widget.x + parentX, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.descent + this.font.ascent);
           if (callbackGuard != -20618) {
             field_a = (String) null;
           }

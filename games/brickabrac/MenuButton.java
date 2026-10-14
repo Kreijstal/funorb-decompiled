@@ -107,7 +107,7 @@ final class MenuButton {
               if (this.actionId == 42) {
                 var8_ref_String = var4.toLowerCase();
                 var9_int = -16 + this.width;
-                ContextActionController.field_g.a(var8_ref_String, 8 + this.x, this.y - 5, var9_int, this.height, var7, -1, 1, 1, 3 + ContextActionController.field_g.capHeight);
+                ContextActionController.field_g.drawParagraph(var8_ref_String, 8 + this.x, this.y - 5, var9_int, this.height, var7, -1, 1, 1, 3 + ContextActionController.field_g.capHeight);
               } else {
                 ContextActionController.field_g.drawLeft(var4.toLowerCase(), var6, 2 + (this.y + (-ContextActionController.field_g.descent + ContextActionController.field_g.capHeight + this.height) / 2), var7, -1);
               }

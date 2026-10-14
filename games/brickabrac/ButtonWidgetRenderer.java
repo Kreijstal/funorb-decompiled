@@ -501,7 +501,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           if (callbackGuard != -20618) {
             field_A = (int[]) null;
           }
-          this.font.a(widget.text, widget.x + parentX, parentY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.font.ascent);
+          this.font.drawParagraph(widget.text, widget.x + parentX, parentY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.font.ascent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

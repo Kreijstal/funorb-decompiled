@@ -199,7 +199,7 @@ final class MessageScreen extends MenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -50);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -107, 45);
-        ContextActionController.field_g.a(qn.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
+        ContextActionController.field_g.drawParagraph(qn.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
         if (obfuscationGuard < -14) {
           this.a(0);
           return;

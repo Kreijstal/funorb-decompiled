@@ -553,7 +553,7 @@ final class WidgetTheme {
           }
           Rasterizer2D.drawRectangle(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_j);
           Rasterizer2D.fillRectangle(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_p);
-          this.font.a(param0, this.field_h + var12, var13Lifetime1 + this.field_g, var9, var10, this.field_c, -1, 0, 0, var7);
+          this.font.drawParagraph(param0, this.field_h + var12, var13Lifetime1 + this.field_g, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

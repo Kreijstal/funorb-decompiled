@@ -59,7 +59,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
             return;
           }
           var10 = this.boxWidth + this.boxX + this.labelGap;
-          this.font.a(widget.text, parentX + (widget.x + var10), this.labelOffsetY + (widget.y + parentY), widget.width - (this.labelGap + var10), widget.height - (this.labelGap << 1), this.textPaint, this.shadowPaint, this.horizontalAlignment, this.verticalAlignment, 0);
+          this.font.drawParagraph(widget.text, parentX + (widget.x + var10), this.labelOffsetY + (widget.y + parentY), widget.width - (this.labelGap + var10), widget.height - (this.labelGap << 1), this.textPaint, this.shadowPaint, this.horizontalAlignment, this.verticalAlignment, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

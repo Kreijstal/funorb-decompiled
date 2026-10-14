@@ -21,7 +21,7 @@ final class LabeledWidget extends SingleChildWidget {
           return;
         }
         int var7 = this.labelOnRight ? this.width - (this.labelWidth + this.inset * 2) : 0;
-        this.labelFont.a(this.labelText, this.inset + var5 + var7, this.inset + var6, this.labelWidth - this.inset, -(2 * this.inset) + this.height, this.labelColor, -1, !this.labelOnRight ? 2 : 0, 1, this.labelFont.ascent);
+        this.labelFont.drawParagraph(this.labelText, this.inset + var5 + var7, this.inset + var6, this.labelWidth - this.inset, -(2 * this.inset) + this.height, this.labelColor, -1, !this.labelOnRight ? 2 : 0, 1, this.labelFont.ascent);
     }
 
     public static void c(boolean param0) {

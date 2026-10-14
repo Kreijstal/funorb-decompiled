@@ -182,7 +182,7 @@ final class WidgetPaintStyle {
             } else {
               stackIn_25_8 = this.textAlpha256;
             }
-            ((TextFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, renderer.horizontalAlignment, renderer.verticalAlignment, renderer.lineSpacing);
+            ((TextFont) (Object) stackIn_18_0).drawParagraphAlpha(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, renderer.horizontalAlignment, renderer.verticalAlignment, renderer.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
