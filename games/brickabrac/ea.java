@@ -67,27 +67,27 @@ final class ea {
         field_h = null;
     }
 
-    final static void a(int param0, int param1) {
-        int var4 = 0;
-        BitPacketBuffer var2 = k.outgoingPackets;
-        int var4Lifetime1;
-        var2.writeCipheredOpcode(-13413, param1);
-        var2.position = var2.position + 1;
-        int var3 = var2.position;
-        var2.writeByte(71, 5);
-        var2.writeByte(param0 ^ 10903, o.currentLobbyGame.maxPlayers);
-        if (param0 == -11008) {
-          var4 = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
-          var2.writeByte(15, var4);
-          var2.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
-          var2.backfillByteLength((byte) 118, -var3 + var2.position);
+    final static void requestUpdateGameOptions(int obfuscationGuard, int opcode) {
+        int packedMode = 0;
+        BitPacketBuffer packet = k.outgoingPackets;
+        int packedModeAfterWrongGuard;
+        packet.writeCipheredOpcode(-13413, opcode);
+        packet.position = packet.position + 1;
+        int payloadStart = packet.position;
+        packet.writeByte(71, 5);
+        packet.writeByte(obfuscationGuard ^ 10903, o.currentLobbyGame.maxPlayers);
+        if (obfuscationGuard == -11008) {
+          packedMode = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
+          packet.writeByte(15, packedMode);
+          packet.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
+          packet.backfillByteLength((byte) 118, -payloadStart + packet.position);
           return;
         }
-        ea.a(109, -29);
-        var4Lifetime1 = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
-        var2.writeByte(15, var4Lifetime1);
-        var2.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
-        var2.backfillByteLength((byte) 118, -var3 + var2.position);
+        ea.requestUpdateGameOptions(109, -29);
+        packedModeAfterWrongGuard = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
+        packet.writeByte(15, packedModeAfterWrongGuard);
+        packet.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
+        packet.backfillByteLength((byte) 118, -payloadStart + packet.position);
     }
 
     final static java.awt.Container b(int param0) {

@@ -22,7 +22,7 @@ final class pl {
           var2 = new RgbSprite(param1.canvasWidth / 2, param1.canvasHeight / 2);
           if (param0 != -16371) {
             var3 = (byte[]) null;
-            pl.a(-81, (byte[]) null, 117, false, 81, (byte) 40);
+            pl.requestCreateGame(-81, (byte[]) null, 117, false, 81, (byte) 40);
           }
           var2.bindRasterTarget();
           param1.a(0, 0);
@@ -43,29 +43,29 @@ final class pl {
         }
     }
 
-    final static void a(int param0, byte[] param1, int param2, boolean param3, int param4, byte param5) {
-        BitPacketBuffer var6 = null;
-        int var7 = 0;
-        int var8 = 0;
+    final static void requestCreateGame(int opcode, byte[] settings, int choiceId, boolean creationFlag128, int modeWord, byte obfuscationGuard) {
+        BitPacketBuffer packet = null;
+        int payloadStart = 0;
+        int creationWord = 0;
         try {
-          var6 = k.outgoingPackets;
-          var6.writeCipheredOpcode(-13413, param0);
-          var6.position = var6.position + 1;
-          var7 = var6.position;
-          var6.writeByte(15, 4);
-          var6.writeByte(81, param2);
-          if (param5 >= -55) {
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(15, 4);
+          packet.writeByte(81, choiceId);
+          if (obfuscationGuard >= -55) {
             pendingAchievementMask = (int[]) null;
           }
-          var8 = param4;
-          if (param3) {
-            var8 += 128;
+          creationWord = modeWord;
+          if (creationFlag128) {
+            creationWord += 128;
           }
-          var6.writeByte(46, var8);
-          var6.writeBytes(param1, -1, 0, param1.length);
-          var6.backfillByteLength((byte) 123, -var7 + var6.position);
+          packet.writeByte(46, creationWord);
+          packet.writeBytes(settings, -1, 0, settings.length);
+          packet.backfillByteLength((byte) 123, -payloadStart + packet.position);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pl.B(" + opcode + ',' + (settings != null ? "{...}" : "null") + ',' + choiceId + ',' + creationFlag128 + ',' + modeWord + ',' + obfuscationGuard + ')');
         }
     }
 

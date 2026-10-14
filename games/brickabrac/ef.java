@@ -11,13 +11,13 @@ final class ef extends IOException {
     static int[] keyEventCodes;
     static String field_c;
 
-    final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = null;
-        if (param0 == -22809) {
-          var2 = k.outgoingPackets;
-          var2.writeCipheredOpcode(-13413, param1);
-          var2.writeByte(-5, 1);
-          var2.writeByte(param0 ^ 22903, 1);
+    final static void requestReturnToLobby(int obfuscationGuard, int opcode) {
+        BitPacketBuffer packet = null;
+        if (obfuscationGuard == -22809) {
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.writeByte(-5, 1);
+          packet.writeByte(obfuscationGuard ^ 22903, 1);
           return;
         }
     }

@@ -5,7 +5,7 @@ final class bb implements ub {
     private int field_d;
     private TextFont field_b;
     private int field_f;
-    static int field_e;
+    static int matchmakingOptionByteOne;
     static me field_c;
     static String field_a;
 

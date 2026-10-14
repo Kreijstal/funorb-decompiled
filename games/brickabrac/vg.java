@@ -19,13 +19,13 @@ final class vg {
         return true;
     }
 
-    final static void a(int param0, boolean param1, int param2) {
-        BitPacketBuffer var3 = k.outgoingPackets;
-        var3.writeCipheredOpcode(-13413, param2);
-        var3.writeByte(-29, 3);
-        var3.writeByte(-127, 9);
-        var3.writeShort((byte) 121, param0);
-        if (!param1) {
+    final static void requestLeaveOrDeclineGame(int gameId, boolean obfuscationGuard, int opcode) {
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(-13413, opcode);
+        packet.writeByte(-29, 3);
+        packet.writeByte(-127, 9);
+        packet.writeShort((byte) 121, gameId);
+        if (!obfuscationGuard) {
           return;
         }
         field_c = (ta) null;

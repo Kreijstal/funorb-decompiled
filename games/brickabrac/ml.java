@@ -42,14 +42,14 @@ final class ml {
         }
     }
 
-    final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = k.outgoingPackets;
-        var2.writeCipheredOpcode(-13413, param0);
-        var2.writeByte(-21, 1);
-        if (param1 != -1) {
+    final static void requestMatchmakingOptions(int opcode, int obfuscationGuard) {
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(-13413, opcode);
+        packet.writeByte(-21, 1);
+        if (obfuscationGuard != -1) {
           field_f = 16;
         }
-        var2.writeByte(-111, 0);
+        packet.writeByte(-111, 0);
     }
 
     final int a(byte param0, int param1) {

@@ -42,17 +42,17 @@ final class jb extends h {
         field_I = null;
         field_G = null;
         if (param0 >= -47) {
-          jb.b(-87, 55, -124);
+          jb.requestJoinGame(-87, 55, -124);
         }
     }
 
-    final static void b(int param0, int param1, int param2) {
-        BitPacketBuffer var3 = k.outgoingPackets;
-        var3.writeCipheredOpcode(-13413, param1);
-        var3.writeByte(-115, 3);
-        if (param2 == 11912) {
-          var3.writeByte(-113, 8);
-          var3.writeShort((byte) 109, param0);
+    final static void requestJoinGame(int gameId, int opcode, int obfuscationGuard) {
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(-13413, opcode);
+        packet.writeByte(-115, 3);
+        if (obfuscationGuard == 11912) {
+          packet.writeByte(-113, 8);
+          packet.writeShort((byte) 109, gameId);
           return;
         }
     }

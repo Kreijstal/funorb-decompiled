@@ -243,8 +243,8 @@ final class JungleBackground extends BackgroundScene {
             if (var6Lifetime1 != 0) {
               var7 = BubbleDistortion.field_z;
               var8_int = 0;
-              while (rh.field_d.length > var8_int) {
-                rh.field_d[var8_int] = (byte) 0;
+              while (rh.matchmakingChoiceMask.length > var8_int) {
+                rh.matchmakingChoiceMask[var8_int] = (byte) 0;
                 var8_int++;
                 if (var26 != 0) {
                   decompiledFrameCompleted4 = false;
@@ -252,7 +252,7 @@ final class JungleBackground extends BackgroundScene {
                 }
               }
               if (decompiledFrameCompleted4) {
-                rh.field_d[var7 / 8] = (byte)LevelSelectScreen.d((int) rh.field_d[var7 / 8], 1 << var7 % 8);
+                rh.matchmakingChoiceMask[var7 / 8] = (byte)LevelSelectScreen.d((int) rh.matchmakingChoiceMask[var7 / 8], 1 << var7 % 8);
               }
             }
             stackIn_63_0 = (param2) ? -1 : 0;
@@ -281,11 +281,11 @@ final class JungleBackground extends BackgroundScene {
                 } else {
                   if (var6Lifetime1 == 0) {
                     if (var7 != -1) {
-                      rh.field_d[var7 / 8] = (byte)LevelResultSubmission.a((int) rh.field_d[var7 / 8], 1 << ik.a(var7, 7));
+                      rh.matchmakingChoiceMask[var7 / 8] = (byte)LevelResultSubmission.a((int) rh.matchmakingChoiceMask[var7 / 8], 1 << ik.a(var7, 7));
                     } else {
                       var9 = 0;
-                      while (!(var9 >= rh.field_d.length)) {
-                        rh.field_d[var9] = (byte) 0;
+                      while (!(var9 >= rh.matchmakingChoiceMask.length)) {
+                        rh.matchmakingChoiceMask[var9] = (byte) 0;
                         var9++;
                       }
                     }
@@ -306,7 +306,7 @@ final class JungleBackground extends BackgroundScene {
                   stackOut_97_1 = dupTemp$0.selected;
                   stackIn_105_1 = stackOut_97_1 ? 1 : 0;
                   stackIn_98_1 = stackOut_97_1;
-                  stackIn_105_2 = ~(rh.field_d[var9 / 8] & 1 << (var9 & 7));
+                  stackIn_105_2 = ~(rh.matchmakingChoiceMask[var9 / 8] & 1 << (var9 & 7));
                   stackIn_105_3 = -1;
                   stackIn_101_0 = stackIn_105_0;
                   stackIn_101_1 = stackIn_98_1;
@@ -325,7 +325,7 @@ final class JungleBackground extends BackgroundScene {
               } else {
                 stackIn_105_0 = MatchCompleteScreen.field_A[1][1 + var7];
                 stackIn_105_1 = 0;
-                stackIn_105_2 = rh.field_d[var7 / 8];
+                stackIn_105_2 = rh.matchmakingChoiceMask[var7 / 8];
                 stackIn_105_3 = 1 << (var7 & 7);
                 stackIn_108_0 = stackIn_105_0;
                 if (stackIn_105_1 == (stackIn_105_2 & stackIn_105_3)) {
@@ -365,9 +365,9 @@ final class JungleBackground extends BackgroundScene {
                 }
                 else {
                   if (var6Lifetime2 != 0) {
-                    ResourceArchive.field_c = ResourceArchive.field_c ^ var6Lifetime2;
+                    ResourceArchive.matchmakingOptionByteTwo = ResourceArchive.matchmakingOptionByteTwo ^ var6Lifetime2;
                   } else {
-                    ResourceArchive.field_c = 0;
+                    ResourceArchive.matchmakingOptionByteTwo = 0;
                   }
                 }
               }
@@ -380,11 +380,11 @@ final class JungleBackground extends BackgroundScene {
                 stackIn_142_0.selected = stackIn_143_1;
               } else if (0 == var6Lifetime2) {
                 stackIn_148_0 = var28;
-                stackIn_149_1 = (ResourceArchive.field_c == 0);
+                stackIn_149_1 = (ResourceArchive.matchmakingOptionByteTwo == 0);
                 stackIn_148_0.selected = stackIn_149_1;
               } else {
                 stackIn_153_0 = var28;
-                stackIn_154_1 = (0 != (ResourceArchive.field_c & var6Lifetime2));
+                stackIn_154_1 = (0 != (ResourceArchive.matchmakingOptionByteTwo & var6Lifetime2));
                 stackIn_153_0.selected = stackIn_154_1;
               }
               var6Lifetime2++;
@@ -408,7 +408,7 @@ final class JungleBackground extends BackgroundScene {
               }
               if (stackIn_184_0 != 0 &&
                 var29.pressedButton != 0) {
-                bb.field_e = var6Lifetime2;
+                bb.matchmakingOptionByteOne = var6Lifetime2;
               }
               if (var29.hovered &&
                 var6Lifetime2 > 0) {
@@ -423,7 +423,7 @@ final class JungleBackground extends BackgroundScene {
                 }
               }
               stackIn_178_0 = var29;
-              stackIn_179_1 = (bb.field_e == var6Lifetime2);
+              stackIn_179_1 = (bb.matchmakingOptionByteOne == var6Lifetime2);
               stackIn_178_0.selected = stackIn_179_1;
               stackIn_181_0 = var29;
               stackIn_182_1 = (var4_int != 0);
@@ -563,11 +563,11 @@ final class JungleBackground extends BackgroundScene {
                     if (-1 == var9) {
                       var18 = var6Lifetime2;
                       while (-1 + (var6Lifetime2 + var27.length) > var18) {
-                        PowerUpWarning.field_p[var18 / 8] = (byte)ik.a((int) PowerUpWarning.field_p[var18 / 8], ~(1 << ik.a(7, var18)));
+                        PowerUpWarning.matchmakingSettingMask[var18 / 8] = (byte)ik.a((int) PowerUpWarning.matchmakingSettingMask[var18 / 8], ~(1 << ik.a(7, var18)));
                         var18++;
                       }
                     } else {
-                      PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8], 1 << ik.a(7, var6Lifetime2 + var9));
+                      PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], 1 << ik.a(7, var6Lifetime2 + var9));
                     }
                     decompiledFrameRemainder1 = false;
                   }
@@ -581,7 +581,7 @@ final class JungleBackground extends BackgroundScene {
                 }
                 if (param2 &&
                   var16Lifetime1 != 0) {
-                  PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8] = (byte)ik.a((int) PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8], ~(1 << ik.a(var9 + var6Lifetime2, 7)));
+                  PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)ik.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], ~(1 << ik.a(var9 + var6Lifetime2, 7)));
                 }
                 if (var9 >= 0 &&
                   var17.hovered) {
@@ -727,7 +727,7 @@ final class JungleBackground extends BackgroundScene {
                         stackIn_376_0 = var17;
                         stackIn_376_1 = var17.selected;
                         stackIn_376_2 = 0;
-                        stackIn_376_3 = PowerUpWarning.field_p[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
+                        stackIn_376_3 = PowerUpWarning.matchmakingSettingMask[var18Lifetime1 / 8] & 1 << (7 & var18Lifetime1);
                         stackIn_388_0 = stackIn_376_0;
                         stackIn_388_1 = stackIn_376_1;
                         if (stackIn_376_2 != stackIn_376_3) {
@@ -749,7 +749,7 @@ final class JungleBackground extends BackgroundScene {
                   if (decompiledFrameCompleted1) {
                     stackIn_377_0 = var17;
                     stackIn_377_1 = 0;
-                    stackIn_377_2 = PowerUpWarning.field_p[(var9 + var6Lifetime2) / 8] & 1 << (var9 + var6Lifetime2 & 7);
+                    stackIn_377_2 = PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] & 1 << (var9 + var6Lifetime2 & 7);
                     while (true) {
                       stackIn_380_0 = stackIn_377_0;
                       if (stackIn_377_1 == stackIn_377_2) {
@@ -777,7 +777,7 @@ final class JungleBackground extends BackgroundScene {
                 stackIn_401_0.enabled = stackIn_402_1;
                 var9++;
               }
-              stackIn_404_0Lifetime1 = var6Lifetime2 + (255 & BufferedFile.field_c[var7]);
+              stackIn_404_0Lifetime1 = var6Lifetime2 + (255 & BufferedFile.gameSettingBitWidths[var7]);
               var6Lifetime2 = stackIn_404_0Lifetime1;
               var7++;
               continue scanLoop1;
@@ -789,7 +789,7 @@ final class JungleBackground extends BackgroundScene {
             if (param2) {
               return;
             }
-            ea.a(-11008, param0);
+            ea.requestUpdateGameOptions(-11008, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

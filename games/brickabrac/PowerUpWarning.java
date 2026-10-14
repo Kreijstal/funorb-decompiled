@@ -6,7 +6,7 @@ final class PowerUpWarning extends IntrusiveNode {
     int ageTicks;
     int typeId;
     static RgbSprite desertMidSprite;
-    static byte[] field_p;
+    static byte[] matchmakingSettingMask;
     static int[] field_l;
     static MouseInput mouseInput;
     static UiComponent field_k;
@@ -86,7 +86,7 @@ final class PowerUpWarning extends IntrusiveNode {
         field_r = null;
         field_n = null;
         field_k = null;
-        field_p = null;
+        matchmakingSettingMask = null;
         desertMidSprite = null;
     }
 

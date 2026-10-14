@@ -12,7 +12,7 @@ final class MenuSelection {
     static int[] field_q;
     static String field_f;
     static String field_a;
-    static int field_i;
+    static int previewGameId;
     private int field_o;
     static RgbSprite field_k;
     private boolean pointerDriven;

@@ -3440,43 +3440,43 @@ final class ContextActionController {
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (actionId == 0) {
-            hd.a(this.targetId, 69, opcode);
+            hd.requestInviteOrAcceptPlayer(this.targetId, 69, opcode);
           }
           if (actionId != 0 ||
             unusedGameFlag != 0) {
             if (actionId != 1) {
               if (actionId != 2) {
                 if (3 == actionId) {
-                  vg.a(this.gameId, false, opcode);
+                  vg.requestLeaveOrDeclineGame(this.gameId, false, opcode);
                 }
                 if (3 != actionId ||
                   unusedGameFlag != 0) {
                   if (actionId == 10) {
-                    dn.b(this.gameId, obfuscationGuard - 11, opcode);
+                    dn.requestSpectateGame(this.gameId, obfuscationGuard - 11, opcode);
                   }
                   if (actionId != 10 ||
                     unusedGameFlag != 0) {
                     if (actionId == 15) {
-                      ContextMenu.a(opcode, (byte) -34, this.gameId);
+                      ContextMenu.requestGamePlayerPreview(opcode, (byte) -34, this.gameId);
                     }
                     if (actionId != 15 ||
                       unusedGameFlag != 0) {
                       if (actionId != 16) {
                         return false;
                       }
-                      ContextMenu.a(opcode, (byte) 120, 0);
+                      ContextMenu.requestGamePlayerPreview(opcode, (byte) 120, 0);
                       if (unusedGameFlag != 0) {
-                        jb.b(this.gameId, opcode, obfuscationGuard + 11815);
-                        rf.a(opcode, this.targetId, true);
+                        jb.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
+                        rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
                       }
                     }}}} else {
-                jb.b(this.gameId, opcode, obfuscationGuard + 11815);
+                jb.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
                 if (unusedGameFlag != 0) {
-                  rf.a(opcode, this.targetId, true);
+                  rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
                 }
               }
             } else {
-              rf.a(opcode, this.targetId, true);
+              rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
             }
           }
           if (obfuscationGuard != 97) {

@@ -394,14 +394,14 @@ class um implements ub, qe {
         }
     }
 
-    final static void a(int param0, int param1) {
-        if (param0 != 200) {
+    final static void requestCancelOpponentSearch(int obfuscationGuard, int opcode) {
+        if (obfuscationGuard != 200) {
           field_b = (UiComponent) null;
         }
-        BitPacketBuffer var2 = k.outgoingPackets;
-        var2.writeCipheredOpcode(param0 ^ -13485, param1);
-        var2.writeByte(87, 1);
-        var2.writeByte(-121, 3);
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(obfuscationGuard ^ -13485, opcode);
+        packet.writeByte(87, 1);
+        packet.writeByte(-121, 3);
     }
 
     final static boolean ensureGamePacketBody(byte obfuscationGuard) {
@@ -1297,11 +1297,11 @@ class um implements ub, qe {
                 if (var13.started && (!var13.protocolFlag8 ||
                   !var13.directJoinAvailable &&
                   !var13.invitationPending)) {
-                  dn.b(var13.getGameId((byte) -107), -85, param4);
+                  dn.requestSpectateGame(var13.getGameId((byte) -107), -85, param4);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  jb.b(var13.getGameId((byte) -34), param4, 11912);
+                  jb.requestJoinGame(var13.getGameId((byte) -34), param4, 11912);
                 }
               }
             }

@@ -20,7 +20,7 @@ final class BufferedFile {
     private int writeBufferLength;
     private BoundedFile file;
     private int readBufferLength;
-    static byte[] field_c;
+    static byte[] gameSettingBitWidths;
 
     final void seek(int minimumPosition, long position) throws IOException {
         if (position < (long)minimumPosition) {
@@ -278,7 +278,7 @@ final class BufferedFile {
         field_q = null;
         field_d = null;
         field_a = null;
-        field_c = null;
+        gameSettingBitWidths = null;
         field_p = null;
     }
 

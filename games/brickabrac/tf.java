@@ -117,7 +117,7 @@ final class tf {
           }
           bm.contextActions.addGameActions(true);
           if (param1) {
-            if (bm.contextActions.gameId == MenuSelection.field_i) {
+            if (bm.contextActions.gameId == MenuSelection.previewGameId) {
               var13 = bm.contextActions;
               var14 = rd.a(co.field_d, new String[]{param3}, (byte) 103);
               var13.contextMenu.addAction(var14, 16, (byte) 90);

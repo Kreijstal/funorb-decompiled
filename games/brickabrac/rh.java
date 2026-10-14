@@ -4,7 +4,7 @@
 final class rh {
     static String field_a;
     static RgbSprite field_c;
-    static byte[] field_d;
+    static byte[] matchmakingChoiceMask;
     static String[] field_e;
     static int[] field_b;
     private static String field_z;
@@ -14,13 +14,13 @@ final class rh {
         field_e = null;
         if (param0 > 116) {
           field_b = null;
-          field_d = null;
+          matchmakingChoiceMask = null;
           field_a = null;
           return;
         }
         rh.a(42);
         field_b = null;
-        field_d = null;
+        matchmakingChoiceMask = null;
         field_a = null;
     }
 

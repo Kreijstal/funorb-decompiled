@@ -4,7 +4,7 @@
 final class ResourceArchive {
     private Object[][] decodedFiles;
     static NodeDeque field_i;
-    static int field_c;
+    static int matchmakingOptionByteTwo;
     private ArchiveSource source;
     int decodedFilePolicy;
     private ArchiveIndex index;

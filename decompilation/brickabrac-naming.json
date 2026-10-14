@@ -2340,6 +2340,14 @@
       "renamedSymbol": "F:ba.repeatRecipientName:Ljava/lang/String;"
     },
     {
+      "symbol": "F:bb.field_e:I",
+      "originalName": "field_e",
+      "to": "matchmakingOptionByteOne",
+      "evidence": "bb.java: Response3 unsigned byte and request2 byte, between choice/setting masks; full meaning unresolved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:bb.matchmakingOptionByteOne:I"
+    },
+    {
       "symbol": "F:be.field_c:I",
       "originalName": "field_c",
       "to": "uiBootstrapStage",
@@ -6132,6 +6140,14 @@
       "renamedSymbol": "F:BufferedFile.writeBufferLength:I"
     },
     {
+      "symbol": "F:jg.field_c:[B",
+      "originalName": "field_c",
+      "to": "gameSettingBitWidths",
+      "evidence": "jg.java: Initializer-supplied widths; sum determines setting-mask byte capacity.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:BufferedFile.gameSettingBitWidths:[B"
+    },
+    {
       "symbol": "F:jg.field_e:[B",
       "originalName": "field_e",
       "to": "writeBuffer",
@@ -7524,6 +7540,14 @@
       "renamedSymbol": "F:PowerUpWarning.typeId:I"
     },
     {
+      "symbol": "F:lj.field_p:[B",
+      "originalName": "field_p",
+      "to": "matchmakingSettingMask",
+      "evidence": "lj.java: Response3 fills and request2 transmits setting-bit payload sized from supplied bit widths.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PowerUpWarning.matchmakingSettingMask:[B"
+    },
+    {
       "symbol": "F:lj.field_q:Ljp;",
       "originalName": "field_q",
       "to": "desertMidSprite",
@@ -7690,6 +7714,14 @@
       "evidence": "mf.java: Raw packed bytes released after unpacking when true.",
       "confidence": "reviewed",
       "renamedSymbol": "F:ResourceArchive.discardPackedGroups:Z"
+    },
+    {
+      "symbol": "F:mf.field_c:I",
+      "originalName": "field_c",
+      "to": "matchmakingOptionByteTwo",
+      "evidence": "mf.java: Second response3/request2 unsigned byte; full meaning unresolved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourceArchive.matchmakingOptionByteTwo:I"
     },
     {
       "symbol": "F:mf.field_g:Lbc;",
@@ -10700,6 +10732,14 @@
       "renamedSymbol": "F:MenuSelection.constructionSmallSprite:LRgbSprite;"
     },
     {
+      "symbol": "F:re.field_i:I",
+      "originalName": "field_i",
+      "to": "previewGameId",
+      "evidence": "re.java: Player-preview request suppresses repeated IDs and clears the previous game name array on changes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MenuSelection.previewGameId:I"
+    },
+    {
       "symbol": "F:re.field_j:I",
       "originalName": "field_j",
       "to": "selectedIndex",
@@ -10770,6 +10810,14 @@
       "evidence": "rg.java: IDs below32768 read group1 file ID unchanged.",
       "confidence": "reviewed",
       "renamedSymbol": "F:QuickChatPhraseRegistry.standardArchive:LResourceArchive;"
+    },
+    {
+      "symbol": "F:rh.field_d:[B",
+      "originalName": "field_d",
+      "to": "matchmakingChoiceMask",
+      "evidence": "rh.java: Response3 fills and request2 transmits caller-sized choice bits; UI checks each choice bit.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:rh.matchmakingChoiceMask:[B"
     },
     {
       "symbol": "F:rk.field_Pb:Lmh;",
@@ -15284,6 +15332,38 @@
       "renamedSymbol": "L:ContextMenu.updateAndPollAction(BZ)I#2"
     },
     {
+      "symbol": "L:br.a(IBI)V#0",
+      "originalName": "var6",
+      "to": "previousGameLookup",
+      "evidence": "br.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#0"
+    },
+    {
+      "symbol": "L:br.a(IBI)V#1",
+      "originalName": "var7",
+      "to": "previousGame",
+      "evidence": "br.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#1"
+    },
+    {
+      "symbol": "L:br.a(IBI)V#2",
+      "originalName": "var4",
+      "to": "packet",
+      "evidence": "br.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#2"
+    },
+    {
+      "symbol": "L:br.a(IBI)V#3",
+      "originalName": "var3",
+      "to": "guardArithmetic",
+      "evidence": "br.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#3"
+    },
+    {
       "symbol": "L:br.a(IIII)I#0",
       "originalName": "var4",
       "to": "guardDivision",
@@ -15980,6 +16060,22 @@
       "renamedSymbol": "L:cp.requestTableData(IIIII)LTableDataRequest;#2"
     },
     {
+      "symbol": "L:dn.b(III)V#0",
+      "originalName": "var3",
+      "to": "guardArithmetic",
+      "evidence": "dn.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:dn.requestSpectateGame(III)V#0"
+    },
+    {
+      "symbol": "L:dn.b(III)V#1",
+      "originalName": "var4",
+      "to": "packet",
+      "evidence": "dn.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:dn.requestSpectateGame(III)V#1"
+    },
+    {
       "symbol": "L:dq.a([Lvl;ZLwq;Lvl;Lkq;Lga;)I#0",
       "originalName": "var11",
       "to": "brickIndex",
@@ -16252,6 +16348,38 @@
       "renamedSymbol": "L:AchievementSubmission.createPitchYawPose(III)[I#7"
     },
     {
+      "symbol": "L:ea.a(II)V#0",
+      "originalName": "var4",
+      "to": "packedMode",
+      "evidence": "ea.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#0"
+    },
+    {
+      "symbol": "L:ea.a(II)V#1",
+      "originalName": "var2",
+      "to": "packet",
+      "evidence": "ea.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#1"
+    },
+    {
+      "symbol": "L:ea.a(II)V#2",
+      "originalName": "var4Lifetime1",
+      "to": "packedModeAfterWrongGuard",
+      "evidence": "ea.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#2"
+    },
+    {
+      "symbol": "L:ea.a(II)V#3",
+      "originalName": "var3",
+      "to": "payloadStart",
+      "evidence": "ea.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#3"
+    },
+    {
       "symbol": "L:eb.a(Lom;Lwq;IZ)V#0",
       "originalName": "var8",
       "to": "playerIndex",
@@ -16314,6 +16442,14 @@
       "evidence": "ed.java: Accumulated unsigned bit-range reductions before final bit.",
       "confidence": "reviewed",
       "renamedSymbol": "L:ed.unsignedBitLength(II)I#0"
+    },
+    {
+      "symbol": "L:ef.a(II)V#0",
+      "originalName": "var2",
+      "to": "packet",
+      "evidence": "ef.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ef.requestReturnToLobby(II)V#0"
     },
     {
       "symbol": "L:eh.a(ZI)V#0",
@@ -18652,6 +18788,22 @@
       "renamedSymbol": "L:hc.decodeMesh(ILBitPacketBuffer;)LMesh3D;#9"
     },
     {
+      "symbol": "L:hd.a(JII)V#0",
+      "originalName": "var4",
+      "to": "packet",
+      "evidence": "hd.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:hd.requestInviteOrAcceptPlayer(JII)V#0"
+    },
+    {
+      "symbol": "L:hd.a(JII)V#1",
+      "originalName": "var5",
+      "to": "payloadStart",
+      "evidence": "hd.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:hd.requestInviteOrAcceptPlayer(JII)V#1"
+    },
+    {
       "symbol": "L:hh.a(III)I#0",
       "originalName": "var3_int",
       "to": "product",
@@ -19180,6 +19332,14 @@
       "renamedSymbol": "L:PlayerBoard.selectPowerUpWarning(I)LPowerUpWarning;#5"
     },
     {
+      "symbol": "L:jb.b(III)V#0",
+      "originalName": "var3",
+      "to": "packet",
+      "evidence": "jb.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:jb.requestJoinGame(III)V#0"
+    },
+    {
       "symbol": "L:jf.a(ILjava/lang/String;)Lmp;#0",
       "originalName": "var2",
       "to": "nameKey",
@@ -19410,6 +19570,22 @@
       "evidence": "jg.java: Reviewed flush read-cache overlap declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:BufferedFile.flush(I)V#3"
+    },
+    {
+      "symbol": "L:jk.a(IB)V#0",
+      "originalName": "var2",
+      "to": "packet",
+      "evidence": "jk.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UnderwaterBackground.requestFindOpponents(IB)V#0"
+    },
+    {
+      "symbol": "L:jk.a(IB)V#1",
+      "originalName": "var3",
+      "to": "payloadStart",
+      "evidence": "jk.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UnderwaterBackground.requestFindOpponents(IB)V#1"
     },
     {
       "symbol": "L:jl.a(B)Z#1",
@@ -21348,6 +21524,14 @@
       "renamedSymbol": "L:SecondaryHashTable.put(JLDualLinkNode;I)V#0"
     },
     {
+      "symbol": "L:ml.a(II)V#0",
+      "originalName": "var2",
+      "to": "packet",
+      "evidence": "ml.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ml.requestMatchmakingOptions(II)V#0"
+    },
+    {
       "symbol": "L:mm.a(IZIIIZI)Z#0",
       "originalName": "var8",
       "to": "requestedKeepLayout",
@@ -22996,6 +23180,30 @@
       "renamedSymbol": "L:BitPacketBuffer.readBits(IB)I#5"
     },
     {
+      "symbol": "L:pl.a(I[BIZIB)V#0",
+      "originalName": "var6",
+      "to": "packet",
+      "evidence": "pl.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:pl.requestCreateGame(I[BIZIB)V#0"
+    },
+    {
+      "symbol": "L:pl.a(I[BIZIB)V#1",
+      "originalName": "var7",
+      "to": "payloadStart",
+      "evidence": "pl.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:pl.requestCreateGame(I[BIZIB)V#1"
+    },
+    {
+      "symbol": "L:pl.a(I[BIZIB)V#2",
+      "originalName": "var8",
+      "to": "creationWord",
+      "evidence": "pl.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:pl.requestCreateGame(I[BIZIB)V#2"
+    },
+    {
       "symbol": "L:qg.a(ILjava/lang/String;III)V#10",
       "originalName": "var9",
       "to": "affiliateParameter",
@@ -23642,6 +23850,22 @@
       "evidence": "ra.java: Current child stream processed into output.",
       "confidence": "reviewed",
       "renamedSymbol": "L:AudioMixer.processStreams([III)V#0"
+    },
+    {
+      "symbol": "L:rf.a(IJZ)V#0",
+      "originalName": "var4",
+      "to": "packet",
+      "evidence": "rf.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:rf.requestRemoveOrRejectPlayer(IJZ)V#0"
+    },
+    {
+      "symbol": "L:rf.a(IJZ)V#1",
+      "originalName": "var5",
+      "to": "payloadStart",
+      "evidence": "rf.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:rf.requestRemoveOrRejectPlayer(IJZ)V#1"
     },
     {
       "symbol": "L:rg.a(IZ)Lwd;#0",
@@ -25236,6 +25460,14 @@
       "renamedSymbol": "L:ScorePopup.advance(Z)Z#0"
     },
     {
+      "symbol": "L:um.a(II)V#0",
+      "originalName": "var2",
+      "to": "packet",
+      "evidence": "um.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:um.requestCancelOpponentSearch(II)V#0"
+    },
+    {
       "symbol": "L:vd.a(II)Z#0",
       "originalName": "var2_int",
       "to": "availableBytes",
@@ -25418,6 +25650,14 @@
       "evidence": "ve.java: Reviewed sector-chain write declaration and data flow, including reused entry/length local.",
       "confidence": "reviewed",
       "renamedSymbol": "L:FileCacheStore.writeSectors([BIZZI)Z#8"
+    },
+    {
+      "symbol": "L:vg.a(IZI)V#0",
+      "originalName": "var3",
+      "to": "packet",
+      "evidence": "vg.java: Scoped outgoing request buffer, byte-length origin or packed option word verified from writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:vg.requestLeaveOrDeclineGame(IZI)V#0"
     },
     {
       "symbol": "L:vi.a(ILwq;)V#4",
@@ -26604,6 +26844,14 @@
       "renamedSymbol": "M:ContextMenu.updateAndPollAction(BZ)I"
     },
     {
+      "symbol": "M:br.a(IBI)V",
+      "originalName": "a",
+      "to": "requestGamePlayerPreview",
+      "evidence": "br.java: Writes action11/game ID only when preview target changes, clearing old playerNames; ID0 stops preview; canonical guard -34 or120.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ContextMenu.requestGamePlayerPreview(IBI)V"
+    },
+    {
       "symbol": "M:br.a(IIII)I",
       "originalName": "a",
       "to": "choosePopupY",
@@ -27108,6 +27356,14 @@
       "renamedSymbol": "M:dk.loadRgbSprite(ILResourceArchive;II)LRgbSprite;"
     },
     {
+      "symbol": "M:dn.b(III)V",
+      "originalName": "b",
+      "to": "requestSpectateGame",
+      "evidence": "dn.java: Game action10 writes length3/action10 and low16 game ID; caller guard86.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:dn.requestSpectateGame(III)V"
+    },
+    {
       "symbol": "M:dp.a(BIII)V",
       "originalName": "a",
       "to": "drawPreview",
@@ -27196,6 +27452,14 @@
       "renamedSymbol": "M:ea.createMouseWheelSource(I)LMouseWheelSource;"
     },
     {
+      "symbol": "M:ea.a(II)V",
+      "originalName": "a",
+      "to": "requestUpdateGameOptions",
+      "evidence": "ea.java: Changed current-game options write action5, maxPlayers, joinSortPriority plus spectatorMode shifted6, and settings; guard -11008.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ea.requestUpdateGameOptions(II)V"
+    },
+    {
       "symbol": "M:eb.a(Lom;Lwq;IZ)V",
       "originalName": "a",
       "to": "decodeLobbyGame",
@@ -27234,6 +27498,14 @@
       "evidence": "ee.java: Releases index/palette/geometry arrays; alpha/has-alpha arrays and scalar count/canvas remain retained; guard96.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MotionWaypoint.clearDecodedSpriteData(B)V"
+    },
+    {
+      "symbol": "M:ef.a(II)V",
+      "originalName": "a",
+      "to": "requestReturnToLobby",
+      "evidence": "ef.java: Return to lobby button in pending game writes length1/action1; guard -22809.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ef.requestReturnToLobby(II)V"
     },
     {
       "symbol": "M:eg.a(I[BZ)Ljava/lang/Object;",
@@ -27882,6 +28154,14 @@
       "evidence": "hc.java: Version0 MSB-first mesh decoder with packed coordinate/index/optional channels and byte group metadata. Third coordinate array uses supplied length-bit width.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hc.decodeMesh(ILBitPacketBuffer;)LMesh3D;"
+    },
+    {
+      "symbol": "M:hd.a(JII)V",
+      "originalName": "a",
+      "to": "requestInviteOrAcceptPlayer",
+      "evidence": "hd.java: Game action0 writes action6 and64-bit player ID for inviting or accepting a join request; guard above35.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hd.requestInviteOrAcceptPlayer(JII)V"
     },
     {
       "symbol": "M:hh.a(III)I",
@@ -28780,6 +29060,14 @@
       "renamedSymbol": "M:ja.createGameClock(B)LGameClock;"
     },
     {
+      "symbol": "M:jb.b(III)V",
+      "originalName": "b",
+      "to": "requestJoinGame",
+      "evidence": "jb.java: Game action2 writes length3/action8 and low16 game ID for direct join, request or invitation acceptance; guard11912.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jb.requestJoinGame(III)V"
+    },
+    {
       "symbol": "M:jf.a(B)V",
       "originalName": "a",
       "to": "selectFirst",
@@ -28914,6 +29202,14 @@
       "evidence": "ki.java: Draws small background preview; negative color index selects neutral fallback. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:UnderwaterBackground.drawPreview(BIII)V"
+    },
+    {
+      "symbol": "M:jk.a(IB)V",
+      "originalName": "a",
+      "to": "requestFindOpponents",
+      "evidence": "jk.java: Find opponent(s) button writes action2, choice mask, two option bytes and setting mask with byte length; guard98.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UnderwaterBackground.requestFindOpponents(IB)V"
     },
     {
       "symbol": "M:jk.a(IBIII)V",
@@ -30924,6 +31220,14 @@
       "renamedSymbol": "M:SecondaryHashTable.first(B)LDualLinkNode;"
     },
     {
+      "symbol": "M:ml.a(II)V",
+      "originalName": "a",
+      "to": "requestMatchmakingOptions",
+      "evidence": "ml.java: Writes length1/action0 when opening opponent-finding options; guard -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ml.requestMatchmakingOptions(II)V"
+    },
+    {
       "symbol": "M:mm.a(IBIIIII)V",
       "originalName": "a",
       "to": "setScrollPaneBounds",
@@ -31796,6 +32100,14 @@
       "renamedSymbol": "M:BitPacketBuffer.finishBitWrite(I)V"
     },
     {
+      "symbol": "M:pl.a(I[BIZIB)V",
+      "originalName": "a",
+      "to": "requestCreateGame",
+      "evidence": "pl.java: New/Create unrated game button writes action4, choice byte, mode word plus optional128 and supplied setting bytes; guard below -55.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:pl.requestCreateGame(I[BIZIB)V"
+    },
+    {
       "symbol": "M:pl.a(Ljava/lang/String;Ljava/lang/String;BLmf;)Ljp;",
       "originalName": "a",
       "to": "loadRgbSpriteByName",
@@ -32562,6 +32874,14 @@
       "evidence": "re.java: Tests retained code96, mapped from AWT left arrow; guard -57.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MenuSelection.isLeftArrow(B)Z"
+    },
+    {
+      "symbol": "M:rf.a(IJZ)V",
+      "originalName": "a",
+      "to": "requestRemoveOrRejectPlayer",
+      "evidence": "rf.java: Game action1 writes action7 and64-bit player ID for kick, invitation withdrawal or request rejection; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rf.requestRemoveOrRejectPlayer(IJZ)V"
     },
     {
       "symbol": "M:rg.a(IZ)Lwd;",
@@ -33540,6 +33860,14 @@
       "renamedSymbol": "M:ScorePopup.advance(Z)Z"
     },
     {
+      "symbol": "M:um.a(II)V",
+      "originalName": "a",
+      "to": "requestCancelOpponentSearch",
+      "evidence": "um.java: Cancel button while searching writes length1/action3; guard200.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:um.requestCancelOpponentSearch(II)V"
+    },
+    {
       "symbol": "M:um.b(B)Z",
       "originalName": "b",
       "to": "ensureGamePacketBody",
@@ -33634,6 +33962,14 @@
       "evidence": "ve.java: Writes six-byte index and chained520-byte sectors; can reuse existing chain.",
       "confidence": "reviewed",
       "renamedSymbol": "M:FileCacheStore.writeSectors([BIZZI)Z"
+    },
+    {
+      "symbol": "M:vg.a(IZI)V",
+      "originalName": "a",
+      "to": "requestLeaveOrDeclineGame",
+      "evidence": "vg.java: Current-game leave and game action3 write length3/action9 and low16 game ID; false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:vg.requestLeaveOrDeclineGame(IZI)V"
     },
     {
       "symbol": "M:vi.a(ILjava/lang/StringBuilder;)I",
@@ -36844,6 +37180,30 @@
       "renamedSymbol": "P:ContextMenu.updateAndPollAction(BZ)I#1"
     },
     {
+      "symbol": "P:br.a(IBI)V#0",
+      "originalName": "param0",
+      "to": "opcode",
+      "evidence": "br.java: Writes action11/game ID only when preview target changes, clearing old playerNames; ID0 stops preview; canonical guard -34 or120.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ContextMenu.requestGamePlayerPreview(IBI)V#0"
+    },
+    {
+      "symbol": "P:br.a(IBI)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "br.java: Writes action11/game ID only when preview target changes, clearing old playerNames; ID0 stops preview; canonical guard -34 or120.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ContextMenu.requestGamePlayerPreview(IBI)V#1"
+    },
+    {
+      "symbol": "P:br.a(IBI)V#2",
+      "originalName": "param2",
+      "to": "gameId",
+      "evidence": "br.java: Writes action11/game ID only when preview target changes, clearing old playerNames; ID0 stops preview; canonical guard -34 or120.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ContextMenu.requestGamePlayerPreview(IBI)V#2"
+    },
+    {
       "symbol": "P:br.a(IIII)I#0",
       "originalName": "param0",
       "to": "popupHeight",
@@ -38492,6 +38852,30 @@
       "renamedSymbol": "P:MouseInput.mouseReleased(Ljava/awt/event/MouseEvent;)V#0"
     },
     {
+      "symbol": "P:dn.b(III)V#0",
+      "originalName": "param0",
+      "to": "gameId",
+      "evidence": "dn.java: Game action10 writes length3/action10 and low16 game ID; caller guard86.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:dn.requestSpectateGame(III)V#0"
+    },
+    {
+      "symbol": "P:dn.b(III)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "dn.java: Game action10 writes length3/action10 and low16 game ID; caller guard86.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:dn.requestSpectateGame(III)V#1"
+    },
+    {
+      "symbol": "P:dn.b(III)V#2",
+      "originalName": "param2",
+      "to": "opcode",
+      "evidence": "dn.java: Game action10 writes length3/action10 and low16 game ID; caller guard86.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:dn.requestSpectateGame(III)V#2"
+    },
+    {
       "symbol": "P:dp.<init>(ILjava/lang/String;Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "to": "sceneId",
@@ -38812,6 +39196,22 @@
       "renamedSymbol": "P:ea.createMouseWheelSource(I)LMouseWheelSource;#0"
     },
     {
+      "symbol": "P:ea.a(II)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ea.java: Changed current-game options write action5, maxPlayers, joinSortPriority plus spectatorMode shifted6, and settings; guard -11008.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ea.requestUpdateGameOptions(II)V#0"
+    },
+    {
+      "symbol": "P:ea.a(II)V#1",
+      "originalName": "param1",
+      "to": "opcode",
+      "evidence": "ea.java: Changed current-game options write action5, maxPlayers, joinSortPriority plus spectatorMode shifted6, and settings; guard -11008.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ea.requestUpdateGameOptions(II)V#1"
+    },
+    {
       "symbol": "P:eb.a(Lom;Lwq;IZ)V#0",
       "originalName": "param0",
       "to": "game",
@@ -38938,6 +39338,22 @@
       "evidence": "ee.java: Releases index/palette/geometry arrays; alpha/has-alpha arrays and scalar count/canvas remain retained; guard96.",
       "confidence": "reviewed",
       "renamedSymbol": "P:MotionWaypoint.clearDecodedSpriteData(B)V#0"
+    },
+    {
+      "symbol": "P:ef.a(II)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ef.java: Return to lobby button in pending game writes length1/action1; guard -22809.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ef.requestReturnToLobby(II)V#0"
+    },
+    {
+      "symbol": "P:ef.a(II)V#1",
+      "originalName": "param1",
+      "to": "opcode",
+      "evidence": "ef.java: Return to lobby button in pending game writes length1/action1; guard -22809.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ef.requestReturnToLobby(II)V#1"
     },
     {
       "symbol": "P:eg.a(I[BZ)Ljava/lang/Object;#0",
@@ -40890,6 +41306,30 @@
       "evidence": "hc.java: Version0 MSB-first mesh decoder with packed coordinate/index/optional channels and byte group metadata. Third coordinate array uses supplied length-bit width.",
       "confidence": "reviewed",
       "renamedSymbol": "P:hc.decodeMesh(ILBitPacketBuffer;)LMesh3D;#1"
+    },
+    {
+      "symbol": "P:hd.a(JII)V#0",
+      "originalName": "param0",
+      "to": "playerId",
+      "evidence": "hd.java: Game action0 writes action6 and64-bit player ID for inviting or accepting a join request; guard above35.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:hd.requestInviteOrAcceptPlayer(JII)V#0"
+    },
+    {
+      "symbol": "P:hd.a(JII)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "hd.java: Game action0 writes action6 and64-bit player ID for inviting or accepting a join request; guard above35.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:hd.requestInviteOrAcceptPlayer(JII)V#1"
+    },
+    {
+      "symbol": "P:hd.a(JII)V#2",
+      "originalName": "param2",
+      "to": "opcode",
+      "evidence": "hd.java: Game action0 writes action6 and64-bit player ID for inviting or accepting a join request; guard above35.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:hd.requestInviteOrAcceptPlayer(JII)V#2"
     },
     {
       "symbol": "P:hh.a(III)I#0",
@@ -43036,6 +43476,30 @@
       "renamedSymbol": "P:ja.createGameClock(B)LGameClock;#0"
     },
     {
+      "symbol": "P:jb.b(III)V#0",
+      "originalName": "param0",
+      "to": "gameId",
+      "evidence": "jb.java: Game action2 writes length3/action8 and low16 game ID for direct join, request or invitation acceptance; guard11912.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:jb.requestJoinGame(III)V#0"
+    },
+    {
+      "symbol": "P:jb.b(III)V#1",
+      "originalName": "param1",
+      "to": "opcode",
+      "evidence": "jb.java: Game action2 writes length3/action8 and low16 game ID for direct join, request or invitation acceptance; guard11912.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:jb.requestJoinGame(III)V#1"
+    },
+    {
+      "symbol": "P:jb.b(III)V#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "jb.java: Game action2 writes length3/action8 and low16 game ID for direct join, request or invitation acceptance; guard11912.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:jb.requestJoinGame(III)V#2"
+    },
+    {
       "symbol": "P:jf.<init>(Lah;II)V#0",
       "originalName": "param0",
       "to": "owner",
@@ -43402,6 +43866,22 @@
       "evidence": "ki.java: Draws small background preview; negative color index selects neutral fallback. Resolved override parameter.",
       "confidence": "reviewed",
       "renamedSymbol": "P:UnderwaterBackground.drawPreview(BIII)V#3"
+    },
+    {
+      "symbol": "P:jk.a(IB)V#0",
+      "originalName": "param0",
+      "to": "opcode",
+      "evidence": "jk.java: Find opponent(s) button writes action2, choice mask, two option bytes and setting mask with byte length; guard98.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:UnderwaterBackground.requestFindOpponents(IB)V#0"
+    },
+    {
+      "symbol": "P:jk.a(IB)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "jk.java: Find opponent(s) button writes action2, choice mask, two option bytes and setting mask with byte length; guard98.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:UnderwaterBackground.requestFindOpponents(IB)V#1"
     },
     {
       "symbol": "P:jk.a(IBIII)V#0",
@@ -48516,6 +48996,22 @@
       "renamedSymbol": "P:SecondaryHashTable.first(B)LDualLinkNode;#0"
     },
     {
+      "symbol": "P:ml.a(II)V#0",
+      "originalName": "param0",
+      "to": "opcode",
+      "evidence": "ml.java: Writes length1/action0 when opening opponent-finding options; guard -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ml.requestMatchmakingOptions(II)V#0"
+    },
+    {
+      "symbol": "P:ml.a(II)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "ml.java: Writes length1/action0 when opening opponent-finding options; guard -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ml.requestMatchmakingOptions(II)V#1"
+    },
+    {
       "symbol": "P:mm.<init>(JLmh;Lmh;Lfj;)V#0",
       "originalName": "param0",
       "to": "id",
@@ -51524,6 +52020,54 @@
       "renamedSymbol": "P:BitPacketBuffer.finishBitWrite(I)V#0"
     },
     {
+      "symbol": "P:pl.a(I[BIZIB)V#0",
+      "originalName": "param0",
+      "to": "opcode",
+      "evidence": "pl.java: New/Create unrated game button writes action4, choice byte, mode word plus optional128 and supplied setting bytes; guard below -55.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#0"
+    },
+    {
+      "symbol": "P:pl.a(I[BIZIB)V#1",
+      "originalName": "param1",
+      "to": "settings",
+      "evidence": "pl.java: New/Create unrated game button writes action4, choice byte, mode word plus optional128 and supplied setting bytes; guard below -55.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#1"
+    },
+    {
+      "symbol": "P:pl.a(I[BIZIB)V#2",
+      "originalName": "param2",
+      "to": "choiceId",
+      "evidence": "pl.java: New/Create unrated game button writes action4, choice byte, mode word plus optional128 and supplied setting bytes; guard below -55.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#2"
+    },
+    {
+      "symbol": "P:pl.a(I[BIZIB)V#3",
+      "originalName": "param3",
+      "to": "creationFlag128",
+      "evidence": "pl.java: New/Create unrated game button writes action4, choice byte, mode word plus optional128 and supplied setting bytes; guard below -55.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#3"
+    },
+    {
+      "symbol": "P:pl.a(I[BIZIB)V#4",
+      "originalName": "param4",
+      "to": "modeWord",
+      "evidence": "pl.java: New/Create unrated game button writes action4, choice byte, mode word plus optional128 and supplied setting bytes; guard below -55.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#4"
+    },
+    {
+      "symbol": "P:pl.a(I[BIZIB)V#5",
+      "originalName": "param5",
+      "to": "obfuscationGuard",
+      "evidence": "pl.java: New/Create unrated game button writes action4, choice byte, mode word plus optional128 and supplied setting bytes; guard below -55.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#5"
+    },
+    {
       "symbol": "P:pl.a(Ljava/lang/String;Ljava/lang/String;BLmf;)Ljp;#0",
       "originalName": "param0",
       "to": "groupName",
@@ -53354,6 +53898,30 @@
       "evidence": "re.java: Tests retained code96, mapped from AWT left arrow; guard -57.",
       "confidence": "reviewed",
       "renamedSymbol": "P:MenuSelection.isLeftArrow(B)Z#0"
+    },
+    {
+      "symbol": "P:rf.a(IJZ)V#0",
+      "originalName": "param0",
+      "to": "opcode",
+      "evidence": "rf.java: Game action1 writes action7 and64-bit player ID for kick, invitation withdrawal or request rejection; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:rf.requestRemoveOrRejectPlayer(IJZ)V#0"
+    },
+    {
+      "symbol": "P:rf.a(IJZ)V#1",
+      "originalName": "param1",
+      "to": "playerId",
+      "evidence": "rf.java: Game action1 writes action7 and64-bit player ID for kick, invitation withdrawal or request rejection; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:rf.requestRemoveOrRejectPlayer(IJZ)V#1"
+    },
+    {
+      "symbol": "P:rf.a(IJZ)V#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "rf.java: Game action1 writes action7 and64-bit player ID for kick, invitation withdrawal or request rejection; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:rf.requestRemoveOrRejectPlayer(IJZ)V#2"
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#0",
@@ -56116,6 +56684,22 @@
       "renamedSymbol": "P:ScorePopup.advance(Z)Z#0"
     },
     {
+      "symbol": "P:um.a(II)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "um.java: Cancel button while searching writes length1/action3; guard200.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:um.requestCancelOpponentSearch(II)V#0"
+    },
+    {
+      "symbol": "P:um.a(II)V#1",
+      "originalName": "param1",
+      "to": "opcode",
+      "evidence": "um.java: Cancel button while searching writes length1/action3; guard200.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:um.requestCancelOpponentSearch(II)V#1"
+    },
+    {
       "symbol": "P:um.b(B)Z#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -56410,6 +56994,30 @@
       "evidence": "ve.java: Writes six-byte index and chained520-byte sectors; can reuse existing chain.",
       "confidence": "reviewed",
       "renamedSymbol": "P:FileCacheStore.writeSectors([BIZZI)Z#4"
+    },
+    {
+      "symbol": "P:vg.a(IZI)V#0",
+      "originalName": "param0",
+      "to": "gameId",
+      "evidence": "vg.java: Current-game leave and game action3 write length3/action9 and low16 game ID; false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:vg.requestLeaveOrDeclineGame(IZI)V#0"
+    },
+    {
+      "symbol": "P:vg.a(IZI)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "vg.java: Current-game leave and game action3 write length3/action9 and low16 game ID; false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:vg.requestLeaveOrDeclineGame(IZI)V#1"
+    },
+    {
+      "symbol": "P:vg.a(IZI)V#2",
+      "originalName": "param2",
+      "to": "opcode",
+      "evidence": "vg.java: Current-game leave and game action3 write length3/action9 and low16 game ID; false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:vg.requestLeaveOrDeclineGame(IZI)V#2"
     },
     {
       "symbol": "P:vi.<init>(IIIII)V#0",
@@ -65129,9 +65737,9 @@
     },
     {
       "symbol": "F:bb.field_e:I",
-      "renamedSymbol": "F:bb.field_e:I",
+      "renamedSymbol": "F:bb.matchmakingOptionByteOne:I",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "matchmakingOptionByteOne",
       "declaration": {
         "file": "bb.java",
         "start": 158,
@@ -78846,9 +79454,9 @@
     },
     {
       "symbol": "F:jg.field_c:[B",
-      "renamedSymbol": "F:BufferedFile.field_c:[B",
+      "renamedSymbol": "F:BufferedFile.gameSettingBitWidths:[B",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "gameSettingBitWidths",
       "declaration": {
         "file": "jg.java",
         "start": 503,
@@ -82498,9 +83106,9 @@
     },
     {
       "symbol": "F:lj.field_p:[B",
-      "renamedSymbol": "F:PowerUpWarning.field_p:[B",
+      "renamedSymbol": "F:PowerUpWarning.matchmakingSettingMask:[B",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "matchmakingSettingMask",
       "declaration": {
         "file": "lj.java",
         "start": 167,
@@ -83554,9 +84162,9 @@
     },
     {
       "symbol": "F:mf.field_c:I",
-      "renamedSymbol": "F:ResourceArchive.field_c:I",
+      "renamedSymbol": "F:ResourceArchive.matchmakingOptionByteTwo:I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "matchmakingOptionByteTwo",
       "declaration": {
         "file": "mf.java",
         "start": 125,
@@ -92970,9 +93578,9 @@
     },
     {
       "symbol": "F:re.field_i:I",
-      "renamedSymbol": "F:MenuSelection.field_i:I",
+      "renamedSymbol": "F:MenuSelection.previewGameId:I",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "previewGameId",
       "declaration": {
         "file": "re.java",
         "start": 312,
@@ -93311,9 +93919,9 @@
     },
     {
       "symbol": "F:rh.field_d:[B",
-      "renamedSymbol": "F:rh.field_d:[B",
+      "renamedSymbol": "F:rh.matchmakingChoiceMask:[B",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "matchmakingChoiceMask",
       "declaration": {
         "file": "rh.java",
         "start": 123,
@@ -121075,9 +121683,9 @@
     },
     {
       "symbol": "L:br.a(IBI)V#0",
-      "renamedSymbol": "L:ContextMenu.a(IBI)V#0",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#0",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "previousGameLookup",
       "declaration": {
         "file": "br.java",
         "start": 568,
@@ -121086,9 +121694,9 @@
     },
     {
       "symbol": "L:br.a(IBI)V#1",
-      "renamedSymbol": "L:ContextMenu.a(IBI)V#1",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#1",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "previousGame",
       "declaration": {
         "file": "br.java",
         "start": 592,
@@ -121097,9 +121705,9 @@
     },
     {
       "symbol": "L:br.a(IBI)V#2",
-      "renamedSymbol": "L:ContextMenu.a(IBI)V#2",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#2",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "packet",
       "declaration": {
         "file": "br.java",
         "start": 616,
@@ -121108,9 +121716,9 @@
     },
     {
       "symbol": "L:br.a(IBI)V#3",
-      "renamedSymbol": "L:ContextMenu.a(IBI)V#3",
+      "renamedSymbol": "L:ContextMenu.requestGamePlayerPreview(IBI)V#3",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "guardArithmetic",
       "declaration": {
         "file": "br.java",
         "start": 1031,
@@ -132064,9 +132672,9 @@
     },
     {
       "symbol": "L:dn.b(III)V#0",
-      "renamedSymbol": "L:dn.b(III)V#0",
+      "renamedSymbol": "L:dn.requestSpectateGame(III)V#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "guardArithmetic",
       "declaration": {
         "file": "dn.java",
         "start": 9612,
@@ -132075,9 +132683,9 @@
     },
     {
       "symbol": "L:dn.b(III)V#1",
-      "renamedSymbol": "L:dn.b(III)V#1",
+      "renamedSymbol": "L:dn.requestSpectateGame(III)V#1",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "packet",
       "declaration": {
         "file": "dn.java",
         "start": 9659,
@@ -133362,9 +133970,9 @@
     },
     {
       "symbol": "L:ea.a(II)V#0",
-      "renamedSymbol": "L:ea.a(II)V#0",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "packedMode",
       "declaration": {
         "file": "ea.java",
         "start": 2175,
@@ -133373,9 +133981,9 @@
     },
     {
       "symbol": "L:ea.a(II)V#1",
-      "renamedSymbol": "L:ea.a(II)V#1",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#1",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "packet",
       "declaration": {
         "file": "ea.java",
         "start": 2196,
@@ -133384,9 +133992,9 @@
     },
     {
       "symbol": "L:ea.a(II)V#2",
-      "renamedSymbol": "L:ea.a(II)V#2",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#2",
       "originalName": "var4Lifetime1",
-      "renamedName": "var4Lifetime1",
+      "renamedName": "packedModeAfterWrongGuard",
       "declaration": {
         "file": "ea.java",
         "start": 2226,
@@ -133395,9 +134003,9 @@
     },
     {
       "symbol": "L:ea.a(II)V#3",
-      "renamedSymbol": "L:ea.a(II)V#3",
+      "renamedSymbol": "L:ea.requestUpdateGameOptions(II)V#3",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "payloadStart",
       "declaration": {
         "file": "ea.java",
         "start": 2326,
@@ -134803,9 +135411,9 @@
     },
     {
       "symbol": "L:ef.a(II)V#0",
-      "renamedSymbol": "L:ef.a(II)V#0",
+      "renamedSymbol": "L:ef.requestReturnToLobby(II)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "packet",
       "declaration": {
         "file": "ef.java",
         "start": 311,
@@ -152381,9 +152989,9 @@
     },
     {
       "symbol": "L:hd.a(JII)V#0",
-      "renamedSymbol": "L:hd.a(JII)V#0",
+      "renamedSymbol": "L:hd.requestInviteOrAcceptPlayer(JII)V#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "packet",
       "declaration": {
         "file": "hd.java",
         "start": 637,
@@ -152392,9 +153000,9 @@
     },
     {
       "symbol": "L:hd.a(JII)V#1",
-      "renamedSymbol": "L:hd.a(JII)V#1",
+      "renamedSymbol": "L:hd.requestInviteOrAcceptPlayer(JII)V#1",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "payloadStart",
       "declaration": {
         "file": "hd.java",
         "start": 740,
@@ -168738,9 +169346,9 @@
     },
     {
       "symbol": "L:jb.b(III)V#0",
-      "renamedSymbol": "L:jb.b(III)V#0",
+      "renamedSymbol": "L:jb.requestJoinGame(III)V#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "packet",
       "declaration": {
         "file": "jb.java",
         "start": 1863,
@@ -171279,9 +171887,9 @@
     },
     {
       "symbol": "L:jk.a(IB)V#0",
-      "renamedSymbol": "L:UnderwaterBackground.a(IB)V#0",
+      "renamedSymbol": "L:UnderwaterBackground.requestFindOpponents(IB)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "packet",
       "declaration": {
         "file": "jk.java",
         "start": 2933,
@@ -171290,9 +171898,9 @@
     },
     {
       "symbol": "L:jk.a(IB)V#1",
-      "renamedSymbol": "L:UnderwaterBackground.a(IB)V#1",
+      "renamedSymbol": "L:UnderwaterBackground.requestFindOpponents(IB)V#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "payloadStart",
       "declaration": {
         "file": "jk.java",
         "start": 3045,
@@ -207315,9 +207923,9 @@
     },
     {
       "symbol": "L:ml.a(II)V#0",
-      "renamedSymbol": "L:ml.a(II)V#0",
+      "renamedSymbol": "L:ml.requestMatchmakingOptions(II)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "packet",
       "declaration": {
         "file": "ml.java",
         "start": 1571,
@@ -230261,9 +230869,9 @@
     },
     {
       "symbol": "L:pl.a(I[BIZIB)V#0",
-      "renamedSymbol": "L:pl.a(I[BIZIB)V#0",
+      "renamedSymbol": "L:pl.requestCreateGame(I[BIZIB)V#0",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "packet",
       "declaration": {
         "file": "pl.java",
         "start": 1646,
@@ -230272,9 +230880,9 @@
     },
     {
       "symbol": "L:pl.a(I[BIZIB)V#1",
-      "renamedSymbol": "L:pl.a(I[BIZIB)V#1",
+      "renamedSymbol": "L:pl.requestCreateGame(I[BIZIB)V#1",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "payloadStart",
       "declaration": {
         "file": "pl.java",
         "start": 1671,
@@ -230283,9 +230891,9 @@
     },
     {
       "symbol": "L:pl.a(I[BIZIB)V#2",
-      "renamedSymbol": "L:pl.a(I[BIZIB)V#2",
+      "renamedSymbol": "L:pl.requestCreateGame(I[BIZIB)V#2",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "creationWord",
       "declaration": {
         "file": "pl.java",
         "start": 1693,
@@ -230294,7 +230902,7 @@
     },
     {
       "symbol": "L:pl.a(I[BIZIB)V#3",
-      "renamedSymbol": "L:pl.a(I[BIZIB)V#3",
+      "renamedSymbol": "L:pl.requestCreateGame(I[BIZIB)V#3",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -243219,9 +243827,9 @@
     },
     {
       "symbol": "L:rf.a(IJZ)V#0",
-      "renamedSymbol": "L:rf.a(IJZ)V#0",
+      "renamedSymbol": "L:rf.requestRemoveOrRejectPlayer(IJZ)V#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "packet",
       "declaration": {
         "file": "rf.java",
         "start": 307,
@@ -243230,9 +243838,9 @@
     },
     {
       "symbol": "L:rf.a(IJZ)V#1",
-      "renamedSymbol": "L:rf.a(IJZ)V#1",
+      "renamedSymbol": "L:rf.requestRemoveOrRejectPlayer(IJZ)V#1",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "payloadStart",
       "declaration": {
         "file": "rf.java",
         "start": 410,
@@ -265802,9 +266410,9 @@
     },
     {
       "symbol": "L:um.a(II)V#0",
-      "renamedSymbol": "L:um.a(II)V#0",
+      "renamedSymbol": "L:um.requestCancelOpponentSearch(II)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "packet",
       "declaration": {
         "file": "um.java",
         "start": 16757,
@@ -272468,9 +273076,9 @@
     },
     {
       "symbol": "L:vg.a(IZI)V#0",
-      "renamedSymbol": "L:vg.a(IZI)V#0",
+      "renamedSymbol": "L:vg.requestLeaveOrDeclineGame(IZI)V#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "packet",
       "declaration": {
         "file": "vg.java",
         "start": 478,
@@ -290464,9 +291072,9 @@
     },
     {
       "symbol": "M:br.a(IBI)V",
-      "renamedSymbol": "M:ContextMenu.a(IBI)V",
+      "renamedSymbol": "M:ContextMenu.requestGamePlayerPreview(IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestGamePlayerPreview",
       "declaration": {
         "file": "br.java",
         "start": 516,
@@ -293434,9 +294042,9 @@
     },
     {
       "symbol": "M:dn.b(III)V",
-      "renamedSymbol": "M:dn.b(III)V",
+      "renamedSymbol": "M:dn.requestSpectateGame(III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requestSpectateGame",
       "declaration": {
         "file": "dn.java",
         "start": 9560,
@@ -293753,9 +294361,9 @@
     },
     {
       "symbol": "M:ea.a(II)V",
-      "renamedSymbol": "M:ea.a(II)V",
+      "renamedSymbol": "M:ea.requestUpdateGameOptions(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestUpdateGameOptions",
       "declaration": {
         "file": "ea.java",
         "start": 2135,
@@ -294105,9 +294713,9 @@
     },
     {
       "symbol": "M:ef.a(II)V",
-      "renamedSymbol": "M:ef.a(II)V",
+      "renamedSymbol": "M:ef.requestReturnToLobby(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestReturnToLobby",
       "declaration": {
         "file": "ef.java",
         "start": 272,
@@ -297801,9 +298409,9 @@
     },
     {
       "symbol": "M:hd.a(JII)V",
-      "renamedSymbol": "M:hd.a(JII)V",
+      "renamedSymbol": "M:hd.requestInviteOrAcceptPlayer(JII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestInviteOrAcceptPlayer",
       "declaration": {
         "file": "hd.java",
         "start": 585,
@@ -301288,9 +301896,9 @@
     },
     {
       "symbol": "M:jb.b(III)V",
-      "renamedSymbol": "M:jb.b(III)V",
+      "renamedSymbol": "M:jb.requestJoinGame(III)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requestJoinGame",
       "declaration": {
         "file": "jb.java",
         "start": 1812,
@@ -301871,9 +302479,9 @@
     },
     {
       "symbol": "M:jk.a(IB)V",
-      "renamedSymbol": "M:UnderwaterBackground.a(IB)V",
+      "renamedSymbol": "M:UnderwaterBackground.requestFindOpponents(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestFindOpponents",
       "declaration": {
         "file": "jk.java",
         "start": 2893,
@@ -308460,9 +309068,9 @@
     },
     {
       "symbol": "M:ml.a(II)V",
-      "renamedSymbol": "M:ml.a(II)V",
+      "renamedSymbol": "M:ml.requestMatchmakingOptions(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestMatchmakingOptions",
       "declaration": {
         "file": "ml.java",
         "start": 1532,
@@ -312772,9 +313380,9 @@
     },
     {
       "symbol": "M:pl.a(I[BIZIB)V",
-      "renamedSymbol": "M:pl.a(I[BIZIB)V",
+      "renamedSymbol": "M:pl.requestCreateGame(I[BIZIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestCreateGame",
       "declaration": {
         "file": "pl.java",
         "start": 1551,
@@ -315533,9 +316141,9 @@
     },
     {
       "symbol": "M:rf.a(IJZ)V",
-      "renamedSymbol": "M:rf.a(IJZ)V",
+      "renamedSymbol": "M:rf.requestRemoveOrRejectPlayer(IJZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestRemoveOrRejectPlayer",
       "declaration": {
         "file": "rf.java",
         "start": 251,
@@ -319988,9 +320596,9 @@
     },
     {
       "symbol": "M:um.a(II)V",
-      "renamedSymbol": "M:um.a(II)V",
+      "renamedSymbol": "M:um.requestCancelOpponentSearch(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestCancelOpponentSearch",
       "declaration": {
         "file": "um.java",
         "start": 16648,
@@ -320945,9 +321553,9 @@
     },
     {
       "symbol": "M:vg.a(IZI)V",
-      "renamedSymbol": "M:vg.a(IZI)V",
+      "renamedSymbol": "M:vg.requestLeaveOrDeclineGame(IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestLeaveOrDeclineGame",
       "declaration": {
         "file": "vg.java",
         "start": 423,
@@ -331461,9 +332069,9 @@
     },
     {
       "symbol": "P:br.a(IBI)V#0",
-      "renamedSymbol": "P:ContextMenu.a(IBI)V#0",
+      "renamedSymbol": "P:ContextMenu.requestGamePlayerPreview(IBI)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "opcode",
       "declaration": {
         "file": "br.java",
         "start": 522,
@@ -331472,9 +332080,9 @@
     },
     {
       "symbol": "P:br.a(IBI)V#1",
-      "renamedSymbol": "P:ContextMenu.a(IBI)V#1",
+      "renamedSymbol": "P:ContextMenu.requestGamePlayerPreview(IBI)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "br.java",
         "start": 535,
@@ -331483,9 +332091,9 @@
     },
     {
       "symbol": "P:br.a(IBI)V#2",
-      "renamedSymbol": "P:ContextMenu.a(IBI)V#2",
+      "renamedSymbol": "P:ContextMenu.requestGamePlayerPreview(IBI)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "gameId",
       "declaration": {
         "file": "br.java",
         "start": 547,
@@ -339216,9 +339824,9 @@
     },
     {
       "symbol": "P:dn.b(III)V#0",
-      "renamedSymbol": "P:dn.b(III)V#0",
+      "renamedSymbol": "P:dn.requestSpectateGame(III)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "gameId",
       "declaration": {
         "file": "dn.java",
         "start": 9566,
@@ -339227,9 +339835,9 @@
     },
     {
       "symbol": "P:dn.b(III)V#1",
-      "renamedSymbol": "P:dn.b(III)V#1",
+      "renamedSymbol": "P:dn.requestSpectateGame(III)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "dn.java",
         "start": 9578,
@@ -339238,9 +339846,9 @@
     },
     {
       "symbol": "P:dn.b(III)V#2",
-      "renamedSymbol": "P:dn.b(III)V#2",
+      "renamedSymbol": "P:dn.requestSpectateGame(III)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "opcode",
       "declaration": {
         "file": "dn.java",
         "start": 9590,
@@ -340030,9 +340638,9 @@
     },
     {
       "symbol": "P:ea.a(II)V#0",
-      "renamedSymbol": "P:ea.a(II)V#0",
+      "renamedSymbol": "P:ea.requestUpdateGameOptions(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ea.java",
         "start": 2141,
@@ -340041,9 +340649,9 @@
     },
     {
       "symbol": "P:ea.a(II)V#1",
-      "renamedSymbol": "P:ea.a(II)V#1",
+      "renamedSymbol": "P:ea.requestUpdateGameOptions(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "opcode",
       "declaration": {
         "file": "ea.java",
         "start": 2153,
@@ -340800,9 +341408,9 @@
     },
     {
       "symbol": "P:ef.a(II)V#0",
-      "renamedSymbol": "P:ef.a(II)V#0",
+      "renamedSymbol": "P:ef.requestReturnToLobby(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ef.java",
         "start": 278,
@@ -340811,9 +341419,9 @@
     },
     {
       "symbol": "P:ef.a(II)V#1",
-      "renamedSymbol": "P:ef.a(II)V#1",
+      "renamedSymbol": "P:ef.requestReturnToLobby(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "opcode",
       "declaration": {
         "file": "ef.java",
         "start": 290,
@@ -350557,9 +351165,9 @@
     },
     {
       "symbol": "P:hd.a(JII)V#0",
-      "renamedSymbol": "P:hd.a(JII)V#0",
+      "renamedSymbol": "P:hd.requestInviteOrAcceptPlayer(JII)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "playerId",
       "declaration": {
         "file": "hd.java",
         "start": 592,
@@ -350568,9 +351176,9 @@
     },
     {
       "symbol": "P:hd.a(JII)V#1",
-      "renamedSymbol": "P:hd.a(JII)V#1",
+      "renamedSymbol": "P:hd.requestInviteOrAcceptPlayer(JII)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "hd.java",
         "start": 604,
@@ -350579,9 +351187,9 @@
     },
     {
       "symbol": "P:hd.a(JII)V#2",
-      "renamedSymbol": "P:hd.a(JII)V#2",
+      "renamedSymbol": "P:hd.requestInviteOrAcceptPlayer(JII)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "opcode",
       "declaration": {
         "file": "hd.java",
         "start": 616,
@@ -359643,9 +360251,9 @@
     },
     {
       "symbol": "P:jb.b(III)V#0",
-      "renamedSymbol": "P:jb.b(III)V#0",
+      "renamedSymbol": "P:jb.requestJoinGame(III)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "gameId",
       "declaration": {
         "file": "jb.java",
         "start": 1818,
@@ -359654,9 +360262,9 @@
     },
     {
       "symbol": "P:jb.b(III)V#1",
-      "renamedSymbol": "P:jb.b(III)V#1",
+      "renamedSymbol": "P:jb.requestJoinGame(III)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "opcode",
       "declaration": {
         "file": "jb.java",
         "start": 1830,
@@ -359665,9 +360273,9 @@
     },
     {
       "symbol": "P:jb.b(III)V#2",
-      "renamedSymbol": "P:jb.b(III)V#2",
+      "renamedSymbol": "P:jb.requestJoinGame(III)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "jb.java",
         "start": 1842,
@@ -360842,9 +361450,9 @@
     },
     {
       "symbol": "P:jk.a(IB)V#0",
-      "renamedSymbol": "P:UnderwaterBackground.a(IB)V#0",
+      "renamedSymbol": "P:UnderwaterBackground.requestFindOpponents(IB)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "opcode",
       "declaration": {
         "file": "jk.java",
         "start": 2899,
@@ -360853,9 +361461,9 @@
     },
     {
       "symbol": "P:jk.a(IB)V#1",
-      "renamedSymbol": "P:UnderwaterBackground.a(IB)V#1",
+      "renamedSymbol": "P:UnderwaterBackground.requestFindOpponents(IB)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "jk.java",
         "start": 2912,
@@ -380114,9 +380722,9 @@
     },
     {
       "symbol": "P:ml.a(II)V#0",
-      "renamedSymbol": "P:ml.a(II)V#0",
+      "renamedSymbol": "P:ml.requestMatchmakingOptions(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "opcode",
       "declaration": {
         "file": "ml.java",
         "start": 1538,
@@ -380125,9 +380733,9 @@
     },
     {
       "symbol": "P:ml.a(II)V#1",
-      "renamedSymbol": "P:ml.a(II)V#1",
+      "renamedSymbol": "P:ml.requestMatchmakingOptions(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ml.java",
         "start": 1550,
@@ -391730,9 +392338,9 @@
     },
     {
       "symbol": "P:pl.a(I[BIZIB)V#0",
-      "renamedSymbol": "P:pl.a(I[BIZIB)V#0",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "opcode",
       "declaration": {
         "file": "pl.java",
         "start": 1557,
@@ -391741,9 +392349,9 @@
     },
     {
       "symbol": "P:pl.a(I[BIZIB)V#1",
-      "renamedSymbol": "P:pl.a(I[BIZIB)V#1",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "settings",
       "declaration": {
         "file": "pl.java",
         "start": 1572,
@@ -391752,9 +392360,9 @@
     },
     {
       "symbol": "P:pl.a(I[BIZIB)V#2",
-      "renamedSymbol": "P:pl.a(I[BIZIB)V#2",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "choiceId",
       "declaration": {
         "file": "pl.java",
         "start": 1584,
@@ -391763,9 +392371,9 @@
     },
     {
       "symbol": "P:pl.a(I[BIZIB)V#3",
-      "renamedSymbol": "P:pl.a(I[BIZIB)V#3",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "creationFlag128",
       "declaration": {
         "file": "pl.java",
         "start": 1600,
@@ -391774,9 +392382,9 @@
     },
     {
       "symbol": "P:pl.a(I[BIZIB)V#4",
-      "renamedSymbol": "P:pl.a(I[BIZIB)V#4",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "modeWord",
       "declaration": {
         "file": "pl.java",
         "start": 1612,
@@ -391785,9 +392393,9 @@
     },
     {
       "symbol": "P:pl.a(I[BIZIB)V#5",
-      "renamedSymbol": "P:pl.a(I[BIZIB)V#5",
+      "renamedSymbol": "P:pl.requestCreateGame(I[BIZIB)V#5",
       "originalName": "param5",
-      "renamedName": "param5",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "pl.java",
         "start": 1625,
@@ -397527,9 +398135,9 @@
     },
     {
       "symbol": "P:rf.a(IJZ)V#0",
-      "renamedSymbol": "P:rf.a(IJZ)V#0",
+      "renamedSymbol": "P:rf.requestRemoveOrRejectPlayer(IJZ)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "opcode",
       "declaration": {
         "file": "rf.java",
         "start": 257,
@@ -397538,9 +398146,9 @@
     },
     {
       "symbol": "P:rf.a(IJZ)V#1",
-      "renamedSymbol": "P:rf.a(IJZ)V#1",
+      "renamedSymbol": "P:rf.requestRemoveOrRejectPlayer(IJZ)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "playerId",
       "declaration": {
         "file": "rf.java",
         "start": 270,
@@ -397549,9 +398157,9 @@
     },
     {
       "symbol": "P:rf.a(IJZ)V#2",
-      "renamedSymbol": "P:rf.a(IJZ)V#2",
+      "renamedSymbol": "P:rf.requestRemoveOrRejectPlayer(IJZ)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "rf.java",
         "start": 286,
@@ -408461,9 +409069,9 @@
     },
     {
       "symbol": "P:um.a(II)V#0",
-      "renamedSymbol": "P:um.a(II)V#0",
+      "renamedSymbol": "P:um.requestCancelOpponentSearch(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "um.java",
         "start": 16654,
@@ -408472,9 +409080,9 @@
     },
     {
       "symbol": "P:um.a(II)V#1",
-      "renamedSymbol": "P:um.a(II)V#1",
+      "renamedSymbol": "P:um.requestCancelOpponentSearch(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "opcode",
       "declaration": {
         "file": "um.java",
         "start": 16666,
@@ -410804,9 +411412,9 @@
     },
     {
       "symbol": "P:vg.a(IZI)V#0",
-      "renamedSymbol": "P:vg.a(IZI)V#0",
+      "renamedSymbol": "P:vg.requestLeaveOrDeclineGame(IZI)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "gameId",
       "declaration": {
         "file": "vg.java",
         "start": 429,
@@ -410815,9 +411423,9 @@
     },
     {
       "symbol": "P:vg.a(IZI)V#1",
-      "renamedSymbol": "P:vg.a(IZI)V#1",
+      "renamedSymbol": "P:vg.requestLeaveOrDeclineGame(IZI)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "vg.java",
         "start": 445,
@@ -410826,9 +411434,9 @@
     },
     {
       "symbol": "P:vg.a(IZI)V#2",
-      "renamedSymbol": "P:vg.a(IZI)V#2",
+      "renamedSymbol": "P:vg.requestLeaveOrDeclineGame(IZI)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "opcode",
       "declaration": {
         "file": "vg.java",
         "start": 457,
@@ -450468,7 +451076,7 @@
       "original": "ar.java",
       "renamed": "ar.java",
       "inputSha256": "1543b9eec4c8ff573ba2766fae3be1128622279332f73d4b58d4d5f1a719b0df",
-      "outputSha256": "d44ff0860b9a93560953a3bf19ef9278f86d4b34b1975bd0187292673fcc6fdc",
+      "outputSha256": "ab36b1b48c68849d9ad2ca5e863837fc48accbc5b70c7f08ce94f8781ce8dcff",
       "edits": [
         {
           "start": 125,
@@ -450603,6 +451211,13 @@
           "renamed": "MatchCompleteScreen"
         },
         {
+          "start": 4004,
+          "end": 4011,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
           "start": 4512,
           "end": 4514,
           "symbol": "C:lj",
@@ -450610,11 +451225,25 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 4515,
+          "end": 4522,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 4757,
           "end": 4759,
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "BufferedFile"
+        },
+        {
+          "start": 4760,
+          "end": 4767,
+          "symbol": "F:jg.field_c:[B",
+          "original": "field_c",
+          "renamed": "gameSettingBitWidths"
         },
         {
           "start": 5589,
@@ -451065,7 +451694,7 @@
       "original": "bb.java",
       "renamed": "bb.java",
       "inputSha256": "2f2aec6449fd716acb765da96f4543ddc8bc9bad90ee2e8524722f1ea29d8439",
-      "outputSha256": "09f77e3cb757d7a18babcbde394ba5676c23d51b907d554d74b5b7af9ea72374",
+      "outputSha256": "13c84b1357a4ad246db64e4e7ae932eee6929e59d4a4e933c634f5688665a360",
       "edits": [
         {
           "start": 106,
@@ -451073,6 +451702,13 @@
           "symbol": "C:dh",
           "original": "dh",
           "renamed": "TextFont"
+        },
+        {
+          "start": 158,
+          "end": 165,
+          "symbol": "F:bb.field_e:I",
+          "original": "field_e",
+          "renamed": "matchmakingOptionByteOne"
         },
         {
           "start": 1186,
@@ -470750,7 +471386,7 @@
       "original": "br.java",
       "renamed": "ContextMenu.java",
       "inputSha256": "bc91f9e47b74ec0adaf8363a545e85ee6eb41724a33494f1cbe0f24d14a1a889",
-      "outputSha256": "a652e2e413c4e773cd9c46a0df4d0a921409af28ccefb35b6eea15199144270a",
+      "outputSha256": "8e35c4f8ff3c7c9b9e2aa196101160bd0e7edbb15febb88ce32fab0bdd52ec4e",
       "edits": [
         {
           "start": 50,
@@ -470879,11 +471515,46 @@
           "renamed": "emptyItemStyle"
         },
         {
+          "start": 516,
+          "end": 517,
+          "symbol": "M:br.a(IBI)V",
+          "original": "a",
+          "renamed": "requestGamePlayerPreview"
+        },
+        {
+          "start": 522,
+          "end": 528,
+          "symbol": "P:br.a(IBI)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 535,
+          "end": 541,
+          "symbol": "P:br.a(IBI)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 547,
+          "end": 553,
+          "symbol": "P:br.a(IBI)V#2",
+          "original": "param2",
+          "renamed": "gameId"
+        },
+        {
           "start": 565,
           "end": 567,
           "symbol": "C:om",
           "original": "om",
           "renamed": "LobbyGame"
+        },
+        {
+          "start": 568,
+          "end": 572,
+          "symbol": "L:br.a(IBI)V#0",
+          "original": "var6",
+          "renamed": "previousGameLookup"
         },
         {
           "start": 589,
@@ -470893,6 +471564,13 @@
           "renamed": "LobbyGame"
         },
         {
+          "start": 592,
+          "end": 596,
+          "symbol": "L:br.a(IBI)V#1",
+          "original": "var7",
+          "renamed": "previousGame"
+        },
+        {
           "start": 613,
           "end": 615,
           "symbol": "C:pi",
@@ -470900,11 +471578,39 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 616,
+          "end": 620,
+          "symbol": "L:br.a(IBI)V#2",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 641,
           "end": 643,
           "symbol": "C:re",
           "original": "re",
           "renamed": "MenuSelection"
+        },
+        {
+          "start": 644,
+          "end": 651,
+          "symbol": "F:re.field_i:I",
+          "original": "field_i",
+          "renamed": "previewGameId"
+        },
+        {
+          "start": 655,
+          "end": 661,
+          "symbol": "P:br.a(IBI)V#2",
+          "original": "param2",
+          "renamed": "gameId"
+        },
+        {
+          "start": 675,
+          "end": 679,
+          "symbol": "L:br.a(IBI)V#0",
+          "original": "var6",
+          "renamed": "previousGameLookup"
         },
         {
           "start": 683,
@@ -470942,6 +471648,41 @@
           "renamed": "MenuSelection"
         },
         {
+          "start": 710,
+          "end": 717,
+          "symbol": "F:re.field_i:I",
+          "original": "field_i",
+          "renamed": "previewGameId"
+        },
+        {
+          "start": 735,
+          "end": 739,
+          "symbol": "L:br.a(IBI)V#1",
+          "original": "var7",
+          "renamed": "previousGame"
+        },
+        {
+          "start": 742,
+          "end": 746,
+          "symbol": "L:br.a(IBI)V#0",
+          "original": "var6",
+          "renamed": "previousGameLookup"
+        },
+        {
+          "start": 762,
+          "end": 766,
+          "symbol": "L:br.a(IBI)V#1",
+          "original": "var7",
+          "renamed": "previousGame"
+        },
+        {
+          "start": 790,
+          "end": 794,
+          "symbol": "L:br.a(IBI)V#1",
+          "original": "var7",
+          "renamed": "previousGame"
+        },
+        {
           "start": 795,
           "end": 803,
           "symbol": "F:om.field_Qb:[Ljava/lang/String;",
@@ -470956,11 +471697,39 @@
           "renamed": "MenuSelection"
         },
         {
+          "start": 837,
+          "end": 844,
+          "symbol": "F:re.field_i:I",
+          "original": "field_i",
+          "renamed": "previewGameId"
+        },
+        {
+          "start": 847,
+          "end": 853,
+          "symbol": "P:br.a(IBI)V#2",
+          "original": "param2",
+          "renamed": "gameId"
+        },
+        {
+          "start": 865,
+          "end": 869,
+          "symbol": "L:br.a(IBI)V#2",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 874,
           "end": 881,
           "symbol": "F:k.field_h:Lpi;",
           "original": "field_h",
           "renamed": "outgoingPackets"
+        },
+        {
+          "start": 893,
+          "end": 897,
+          "symbol": "L:br.a(IBI)V#2",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 898,
@@ -470970,11 +471739,32 @@
           "renamed": "writeCipheredOpcode"
         },
         {
+          "start": 908,
+          "end": 914,
+          "symbol": "P:br.a(IBI)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 927,
+          "end": 931,
+          "symbol": "L:br.a(IBI)V#2",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 932,
           "end": 933,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 953,
+          "end": 957,
+          "symbol": "L:br.a(IBI)V#2",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 958,
@@ -470984,11 +471774,39 @@
           "renamed": "writeByte"
         },
         {
+          "start": 981,
+          "end": 985,
+          "symbol": "L:br.a(IBI)V#2",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 986,
           "end": 987,
           "symbol": "M:wq.b(BI)V",
           "original": "b",
           "renamed": "writeShort"
+        },
+        {
+          "start": 1000,
+          "end": 1006,
+          "symbol": "P:br.a(IBI)V#2",
+          "original": "param2",
+          "renamed": "gameId"
+        },
+        {
+          "start": 1031,
+          "end": 1035,
+          "symbol": "L:br.a(IBI)V#3",
+          "original": "var3",
+          "renamed": "guardArithmetic"
+        },
+        {
+          "start": 1050,
+          "end": 1056,
+          "symbol": "P:br.a(IBI)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 1087,
@@ -488900,7 +489718,7 @@
       "original": "da.java",
       "renamed": "ArchiveNetworkRequest.java",
       "inputSha256": "b7092b4fc52e65920d023efeaba958b8560b0f01a847a165b18f9f8600c1de97",
-      "outputSha256": "757142ec11f723d17b6dc53b0c202986ce805601e762051f8ac677913706ce4e",
+      "outputSha256": "f0d4c620d228aa16260b82443a2aca8956780570a1c2760d59205f4bd8cf337f",
       "edits": [
         {
           "start": 50,
@@ -489057,6 +489875,13 @@
           "renamed": "gameplayScreen"
         },
         {
+          "start": 721,
+          "end": 722,
+          "symbol": "M:vg.a(IZI)V",
+          "original": "a",
+          "renamed": "requestLeaveOrDeclineGame"
+        },
+        {
           "start": 725,
           "end": 732,
           "symbol": "F:o.field_e:Lom;",
@@ -489083,6 +489908,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 925,
+          "end": 926,
+          "symbol": "M:dn.b(III)V",
+          "original": "b",
+          "renamed": "requestSpectateGame"
         },
         {
           "start": 980,
@@ -497283,7 +498115,7 @@
       "original": "dn.java",
       "renamed": "dn.java",
       "inputSha256": "9af378ec6b9dfd11e35804935d0648b34faef3c7ba9d3009e1dd0ebb2b85bdd8",
-      "outputSha256": "5c4d83898bb802b8fadc7d4284eaf9c46d4ca83fc6ab20e7c24e3e5f87b9331a",
+      "outputSha256": "f9e0e78353be185a07b6f7142bf1353abc227ea0e67110649837ca71a7e1ee93",
       "edits": [
         {
           "start": 97,
@@ -497468,11 +498300,60 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 9560,
+          "end": 9561,
+          "symbol": "M:dn.b(III)V",
+          "original": "b",
+          "renamed": "requestSpectateGame"
+        },
+        {
+          "start": 9566,
+          "end": 9572,
+          "symbol": "P:dn.b(III)V#0",
+          "original": "param0",
+          "renamed": "gameId"
+        },
+        {
+          "start": 9578,
+          "end": 9584,
+          "symbol": "P:dn.b(III)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 9590,
+          "end": 9596,
+          "symbol": "P:dn.b(III)V#2",
+          "original": "param2",
+          "renamed": "opcode"
+        },
+        {
+          "start": 9612,
+          "end": 9616,
+          "symbol": "L:dn.b(III)V#0",
+          "original": "var3",
+          "renamed": "guardArithmetic"
+        },
+        {
+          "start": 9633,
+          "end": 9639,
+          "symbol": "P:dn.b(III)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 9656,
           "end": 9658,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 9659,
+          "end": 9663,
+          "symbol": "L:dn.b(III)V#1",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 9668,
@@ -497482,11 +498363,32 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 9685,
+          "end": 9689,
+          "symbol": "L:dn.b(III)V#1",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 9690,
           "end": 9691,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 9700,
+          "end": 9706,
+          "symbol": "P:dn.b(III)V#2",
+          "original": "param2",
+          "renamed": "opcode"
+        },
+        {
+          "start": 9717,
+          "end": 9721,
+          "symbol": "L:dn.b(III)V#1",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 9722,
@@ -497496,6 +498398,13 @@
           "renamed": "writeByte"
         },
         {
+          "start": 9742,
+          "end": 9746,
+          "symbol": "L:dn.b(III)V#1",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 9747,
           "end": 9748,
           "symbol": "M:wq.a(II)V",
@@ -497503,11 +498412,25 @@
           "renamed": "writeByte"
         },
         {
+          "start": 9767,
+          "end": 9771,
+          "symbol": "L:dn.b(III)V#1",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 9772,
           "end": 9773,
           "symbol": "M:wq.b(BI)V",
           "original": "b",
           "renamed": "writeShort"
+        },
+        {
+          "start": 9786,
+          "end": 9792,
+          "symbol": "P:dn.b(III)V#0",
+          "original": "param0",
+          "renamed": "gameId"
         },
         {
           "start": 11773,
@@ -502797,7 +503720,7 @@
       "original": "ea.java",
       "renamed": "ea.java",
       "inputSha256": "9e545c3c9b79bc40c16f330da1c23a361df3245594ee46314a5cc597d56c5947",
-      "outputSha256": "021a998f2c0b5b37db3fe4a956ae6375a7ba385fab4eea16e37ef1d88a1e639d",
+      "outputSha256": "070d66092376da8a9197d084a796680c0a55f6d9ce9ca1f769fe3dbacf716a64",
       "edits": [
         {
           "start": 1203,
@@ -502821,11 +503744,46 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 2135,
+          "end": 2136,
+          "symbol": "M:ea.a(II)V",
+          "original": "a",
+          "renamed": "requestUpdateGameOptions"
+        },
+        {
+          "start": 2141,
+          "end": 2147,
+          "symbol": "P:ea.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2153,
+          "end": 2159,
+          "symbol": "P:ea.a(II)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
+          "start": 2175,
+          "end": 2179,
+          "symbol": "L:ea.a(II)V#0",
+          "original": "var4",
+          "renamed": "packedMode"
+        },
+        {
           "start": 2193,
           "end": 2195,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2196,
+          "end": 2200,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 2205,
@@ -502835,11 +503793,39 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 2226,
+          "end": 2239,
+          "symbol": "L:ea.a(II)V#2",
+          "original": "var4Lifetime1",
+          "renamed": "packedModeAfterWrongGuard"
+        },
+        {
+          "start": 2249,
+          "end": 2253,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2254,
           "end": 2255,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 2264,
+          "end": 2270,
+          "symbol": "P:ea.a(II)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
+          "start": 2281,
+          "end": 2285,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 2286,
@@ -502849,11 +503835,32 @@
           "renamed": "position"
         },
         {
+          "start": 2296,
+          "end": 2300,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2301,
           "end": 2308,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 2326,
+          "end": 2330,
+          "symbol": "L:ea.a(II)V#3",
+          "original": "var3",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 2333,
+          "end": 2337,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 2338,
@@ -502863,6 +503870,13 @@
           "renamed": "position"
         },
         {
+          "start": 2355,
+          "end": 2359,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2360,
           "end": 2361,
           "symbol": "M:wq.a(II)V",
@@ -502870,11 +503884,25 @@
           "renamed": "writeByte"
         },
         {
+          "start": 2378,
+          "end": 2382,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2383,
           "end": 2384,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 2385,
+          "end": 2391,
+          "symbol": "P:ea.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 2403,
@@ -502889,6 +503917,20 @@
           "symbol": "F:om.field_jc:I",
           "original": "field_jc",
           "renamed": "maxPlayers"
+        },
+        {
+          "start": 2434,
+          "end": 2440,
+          "symbol": "P:ea.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2464,
+          "end": 2468,
+          "symbol": "L:ea.a(II)V#0",
+          "original": "var4",
+          "renamed": "packedMode"
         },
         {
           "start": 2473,
@@ -502919,11 +503961,32 @@
           "renamed": "spectatorMode"
         },
         {
+          "start": 2529,
+          "end": 2533,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2534,
           "end": 2535,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 2540,
+          "end": 2544,
+          "symbol": "L:ea.a(II)V#0",
+          "original": "var4",
+          "renamed": "packedMode"
+        },
+        {
+          "start": 2557,
+          "end": 2561,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 2562,
@@ -502961,6 +504024,13 @@
           "renamed": "settings"
         },
         {
+          "start": 2629,
+          "end": 2633,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2634,
           "end": 2635,
           "symbol": "M:wq.d(BI)V",
@@ -502968,11 +504038,39 @@
           "renamed": "backfillByteLength"
         },
         {
+          "start": 2649,
+          "end": 2653,
+          "symbol": "L:ea.a(II)V#3",
+          "original": "var3",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 2656,
+          "end": 2660,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2661,
           "end": 2668,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 2710,
+          "end": 2711,
+          "symbol": "M:ea.a(II)V",
+          "original": "a",
+          "renamed": "requestUpdateGameOptions"
+        },
+        {
+          "start": 2731,
+          "end": 2744,
+          "symbol": "L:ea.a(II)V#2",
+          "original": "var4Lifetime1",
+          "renamed": "packedModeAfterWrongGuard"
         },
         {
           "start": 2749,
@@ -503003,11 +504101,32 @@
           "renamed": "spectatorMode"
         },
         {
+          "start": 2803,
+          "end": 2807,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2808,
           "end": 2809,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 2814,
+          "end": 2827,
+          "symbol": "L:ea.a(II)V#2",
+          "original": "var4Lifetime1",
+          "renamed": "packedModeAfterWrongGuard"
+        },
+        {
+          "start": 2838,
+          "end": 2842,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 2843,
@@ -503045,11 +504164,32 @@
           "renamed": "settings"
         },
         {
+          "start": 2908,
+          "end": 2912,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2913,
           "end": 2914,
           "symbol": "M:wq.d(BI)V",
           "original": "d",
           "renamed": "backfillByteLength"
+        },
+        {
+          "start": 2928,
+          "end": 2932,
+          "symbol": "L:ea.a(II)V#3",
+          "original": "var3",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 2935,
+          "end": 2939,
+          "symbol": "L:ea.a(II)V#1",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 2940,
@@ -505932,7 +507072,7 @@
       "original": "ef.java",
       "renamed": "ef.java",
       "inputSha256": "37c48ae6538048d4e0d331731b28c21a80e4730dbb9dc04e734818eca559b7a0",
-      "outputSha256": "1b30409bd04dc3526568e0d2582e64a16621a9804efeae1402d4e7fbf194ed25",
+      "outputSha256": "b27876b7c509d72476ff5f2fab7ce9ad9faecad524acd3af07660d78275f7f12",
       "edits": [
         {
           "start": 132,
@@ -505963,11 +507103,53 @@
           "renamed": "keyEventCodes"
         },
         {
+          "start": 272,
+          "end": 273,
+          "symbol": "M:ef.a(II)V",
+          "original": "a",
+          "renamed": "requestReturnToLobby"
+        },
+        {
+          "start": 278,
+          "end": 284,
+          "symbol": "P:ef.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 290,
+          "end": 296,
+          "symbol": "P:ef.a(II)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
           "start": 308,
           "end": 310,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 311,
+          "end": 315,
+          "symbol": "L:ef.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
+          "start": 336,
+          "end": 342,
+          "symbol": "P:ef.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 366,
+          "end": 370,
+          "symbol": "L:ef.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 375,
@@ -505977,11 +507159,32 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 394,
+          "end": 398,
+          "symbol": "L:ef.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 399,
           "end": 400,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 409,
+          "end": 415,
+          "symbol": "P:ef.a(II)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
+          "start": 428,
+          "end": 432,
+          "symbol": "L:ef.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 433,
@@ -505991,11 +507194,25 @@
           "renamed": "writeByte"
         },
         {
+          "start": 453,
+          "end": 457,
+          "symbol": "L:ef.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 458,
           "end": 459,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 460,
+          "end": 466,
+          "symbol": "P:ef.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 642,
@@ -555416,7 +556633,7 @@
       "original": "hd.java",
       "renamed": "hd.java",
       "inputSha256": "8cac1a86ab7d0698309d09eb58d39293f658c7ffd45eef1d2c6ddb9d20cf1217",
-      "outputSha256": "85decf38d5ea37e53041d1eb9ba1f48d2b521c0748a88ee7bfd9439f76260f10",
+      "outputSha256": "63257374944291b102b81d0c25a3af15fc08c194753aa6b99ee8aae95afa0f5f",
       "edits": [
         {
           "start": 66,
@@ -555496,11 +556713,46 @@
           "renamed": "pixels"
         },
         {
+          "start": 585,
+          "end": 586,
+          "symbol": "M:hd.a(JII)V",
+          "original": "a",
+          "renamed": "requestInviteOrAcceptPlayer"
+        },
+        {
+          "start": 592,
+          "end": 598,
+          "symbol": "P:hd.a(JII)V#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 604,
+          "end": 610,
+          "symbol": "P:hd.a(JII)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 616,
+          "end": 622,
+          "symbol": "P:hd.a(JII)V#2",
+          "original": "param2",
+          "renamed": "opcode"
+        },
+        {
           "start": 634,
           "end": 636,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 637,
+          "end": 641,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 646,
@@ -555510,11 +556762,32 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 663,
+          "end": 667,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 668,
           "end": 669,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 678,
+          "end": 684,
+          "symbol": "P:hd.a(JII)V#2",
+          "original": "param2",
+          "renamed": "opcode"
+        },
+        {
+          "start": 695,
+          "end": 699,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 700,
@@ -555524,11 +556797,32 @@
           "renamed": "position"
         },
         {
+          "start": 710,
+          "end": 714,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 715,
           "end": 722,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 740,
+          "end": 744,
+          "symbol": "L:hd.a(JII)V#1",
+          "original": "var5",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 747,
+          "end": 751,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 752,
@@ -555538,11 +556832,32 @@
           "renamed": "position"
         },
         {
+          "start": 769,
+          "end": 773,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 774,
           "end": 775,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 798,
+          "end": 804,
+          "symbol": "P:hd.a(JII)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 854,
+          "end": 858,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 859,
@@ -555552,11 +556867,39 @@
           "renamed": "writeLong"
         },
         {
+          "start": 869,
+          "end": 875,
+          "symbol": "P:hd.a(JII)V#0",
+          "original": "param0",
+          "renamed": "playerId"
+        },
+        {
+          "start": 886,
+          "end": 890,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 891,
           "end": 892,
           "symbol": "M:wq.d(BI)V",
           "original": "d",
           "renamed": "backfillByteLength"
+        },
+        {
+          "start": 906,
+          "end": 910,
+          "symbol": "L:hd.a(JII)V#1",
+          "original": "var5",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 913,
+          "end": 917,
+          "symbol": "L:hd.a(JII)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 918,
@@ -562956,7 +564299,7 @@
       "original": "hm.java",
       "renamed": "hm.java",
       "inputSha256": "8f732b791d5e8c4da7d03b94b887e40bad407a542c45a5fe6c066e4580c84159",
-      "outputSha256": "bde09422f8d5baa8ea5cee371db25e3d8fb2a1f6052fd499c21e1d522f4013d9",
+      "outputSha256": "548f2b30a2c89c81860a67a40270e5a7383772ad3a0701549de54c6b75999225",
       "edits": [
         {
           "start": 334,
@@ -563071,6 +564414,13 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 1122,
+          "end": 1129,
+          "symbol": "F:jg.field_c:[B",
+          "original": "field_c",
+          "renamed": "gameSettingBitWidths"
+        },
+        {
           "start": 1132,
           "end": 1138,
           "symbol": "P:hm.a(Lmh;B[BLmh;IILmh;III)V#2",
@@ -563099,6 +564449,13 @@
           "renamed": "pendingGameOptionsReceived"
         },
         {
+          "start": 1221,
+          "end": 1228,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
           "start": 1275,
           "end": 1282,
           "symbol": "F:o.field_e:Lom;",
@@ -563120,6 +564477,13 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 1374,
+          "end": 1381,
+          "symbol": "F:jg.field_c:[B",
+          "original": "field_c",
+          "renamed": "gameSettingBitWidths"
+        },
+        {
           "start": 1446,
           "end": 1448,
           "symbol": "C:jg",
@@ -563127,11 +564491,25 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 1449,
+          "end": 1456,
+          "symbol": "F:jg.field_c:[B",
+          "original": "field_c",
+          "renamed": "gameSettingBitWidths"
+        },
+        {
           "start": 1537,
           "end": 1539,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "PowerUpWarning"
+        },
+        {
+          "start": 1540,
+          "end": 1547,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 1585,
@@ -563230,6 +564608,13 @@
           "symbol": "C:re",
           "original": "re",
           "renamed": "MenuSelection"
+        },
+        {
+          "start": 1818,
+          "end": 1825,
+          "symbol": "F:re.field_i:I",
+          "original": "field_i",
+          "renamed": "previewGameId"
         },
         {
           "start": 1844,
@@ -585780,7 +587165,7 @@
       "original": "ip.java",
       "renamed": "JungleBackground.java",
       "inputSha256": "fda3621e32924036def33b6bfe07ca8973e98afaba868384ede85499d943a5e8",
-      "outputSha256": "675f3338bd7a9f8c6d4006ed036b920e22fd524b158e70d9533f13f23d760f80",
+      "outputSha256": "5119bbf2d0fd9d40846cea974b69fd10a32e135576b3082390c14a6c50043e95",
       "edits": [
         {
           "start": 50,
@@ -586595,11 +587980,39 @@
           "renamed": "BubbleDistortion"
         },
         {
+          "start": 8067,
+          "end": 8074,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 8115,
+          "end": 8122,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 8385,
+          "end": 8392,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
           "start": 8411,
           "end": 8413,
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "LevelSelectScreen"
+        },
+        {
+          "start": 8425,
+          "end": 8432,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
         },
         {
           "start": 8850,
@@ -586637,11 +588050,39 @@
           "renamed": "maxPlayers"
         },
         {
+          "start": 9458,
+          "end": 9465,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
           "start": 9484,
           "end": 9486,
           "symbol": "C:pn",
           "original": "pn",
           "renamed": "LevelResultSubmission"
+        },
+        {
+          "start": 9498,
+          "end": 9505,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 9641,
+          "end": 9648,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 9687,
+          "end": 9694,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
         },
         {
           "start": 9945,
@@ -586693,6 +588134,13 @@
           "renamed": "selected"
         },
         {
+          "start": 10552,
+          "end": 10559,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
           "start": 11148,
           "end": 11156,
           "symbol": "F:mh.field_Nb:Z",
@@ -586705,6 +588153,13 @@
           "symbol": "C:ab",
           "original": "ab",
           "renamed": "MatchCompleteScreen"
+        },
+        {
+          "start": 11384,
+          "end": 11391,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
         },
         {
           "start": 11823,
@@ -586763,6 +588218,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 13027,
+          "end": 13034,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
+        },
+        {
           "start": 13037,
           "end": 13039,
           "symbol": "C:mf",
@@ -586770,11 +588232,25 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 13040,
+          "end": 13047,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
+        },
+        {
           "start": 13112,
           "end": 13114,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 13115,
+          "end": 13122,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
         },
         {
           "start": 13294,
@@ -586805,6 +588281,13 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 13640,
+          "end": 13647,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
+        },
+        {
           "start": 13685,
           "end": 13693,
           "symbol": "F:mh.field_Nb:Z",
@@ -586817,6 +588300,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 13815,
+          "end": 13822,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
         },
         {
           "start": 13872,
@@ -586854,6 +588344,13 @@
           "renamed": "pressedButton"
         },
         {
+          "start": 14631,
+          "end": 14638,
+          "symbol": "F:bb.field_e:I",
+          "original": "field_e",
+          "renamed": "matchmakingOptionByteOne"
+        },
+        {
           "start": 14696,
           "end": 14703,
           "symbol": "F:mh.field_G:Z",
@@ -586873,6 +588370,13 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "QuickChatParameterType"
+        },
+        {
+          "start": 15151,
+          "end": 15158,
+          "symbol": "F:bb.field_e:I",
+          "original": "field_e",
+          "renamed": "matchmakingOptionByteOne"
         },
         {
           "start": 15206,
@@ -587129,6 +588633,13 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 20310,
+          "end": 20317,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 20348,
           "end": 20350,
           "symbol": "C:lj",
@@ -587136,11 +588647,25 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 20351,
+          "end": 20358,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 20504,
           "end": 20506,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "PowerUpWarning"
+        },
+        {
+          "start": 20507,
+          "end": 20514,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 20551,
@@ -587155,6 +588680,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "PowerUpWarning"
+        },
+        {
+          "start": 20565,
+          "end": 20572,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 20837,
@@ -587178,11 +588710,25 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 21111,
+          "end": 21118,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 21166,
           "end": 21168,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "PowerUpWarning"
+        },
+        {
+          "start": 21169,
+          "end": 21176,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 21321,
@@ -587311,6 +588857,13 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 27488,
+          "end": 27495,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 28139,
           "end": 28147,
           "symbol": "F:mh.field_Nb:Z",
@@ -587323,6 +588876,13 @@
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "PowerUpWarning"
+        },
+        {
+          "start": 28547,
+          "end": 28554,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 29060,
@@ -587367,12 +588927,26 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 29888,
+          "end": 29895,
+          "symbol": "F:jg.field_c:[B",
+          "original": "field_c",
+          "renamed": "gameSettingBitWidths"
+        },
+        {
           "start": 30003,
           "end": 30006,
           "symbol": "B:ip.a(ILom;ZZ)V#0",
           "original": "L62",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 30200,
+          "end": 30201,
+          "symbol": "M:ea.a(II)V",
+          "original": "a",
+          "renamed": "requestUpdateGameOptions"
         },
         {
           "start": 30707,
@@ -594655,7 +596229,7 @@
       "original": "jb.java",
       "renamed": "jb.java",
       "inputSha256": "0cfd7bf47fb7bb8e1daf7e8cf735882bce439aa6a277b0dd6b22835032347c35",
-      "outputSha256": "3be31fdf88d908a093df23be7aea1b855ae5a9c6c708eb468c6623a32b751ce2",
+      "outputSha256": "ac84eb5e58b2eb159381dce54f3b244202b223b54fa084fd44b98b32bd0f2285",
       "edits": [
         {
           "start": 884,
@@ -594686,11 +596260,53 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 1755,
+          "end": 1756,
+          "symbol": "M:jb.b(III)V",
+          "original": "b",
+          "renamed": "requestJoinGame"
+        },
+        {
+          "start": 1812,
+          "end": 1813,
+          "symbol": "M:jb.b(III)V",
+          "original": "b",
+          "renamed": "requestJoinGame"
+        },
+        {
+          "start": 1818,
+          "end": 1824,
+          "symbol": "P:jb.b(III)V#0",
+          "original": "param0",
+          "renamed": "gameId"
+        },
+        {
+          "start": 1830,
+          "end": 1836,
+          "symbol": "P:jb.b(III)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
+          "start": 1842,
+          "end": 1848,
+          "symbol": "P:jb.b(III)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 1860,
           "end": 1862,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1863,
+          "end": 1867,
+          "symbol": "L:jb.b(III)V#0",
+          "original": "var3",
+          "renamed": "packet"
         },
         {
           "start": 1872,
@@ -594700,11 +596316,32 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 1889,
+          "end": 1893,
+          "symbol": "L:jb.b(III)V#0",
+          "original": "var3",
+          "renamed": "packet"
+        },
+        {
           "start": 1894,
           "end": 1895,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 1904,
+          "end": 1910,
+          "symbol": "P:jb.b(III)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
+          "start": 1921,
+          "end": 1925,
+          "symbol": "L:jb.b(III)V#0",
+          "original": "var3",
+          "renamed": "packet"
         },
         {
           "start": 1926,
@@ -594714,6 +596351,20 @@
           "renamed": "writeByte"
         },
         {
+          "start": 1950,
+          "end": 1956,
+          "symbol": "P:jb.b(III)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1979,
+          "end": 1983,
+          "symbol": "L:jb.b(III)V#0",
+          "original": "var3",
+          "renamed": "packet"
+        },
+        {
           "start": 1984,
           "end": 1985,
           "symbol": "M:wq.a(II)V",
@@ -594721,11 +596372,25 @@
           "renamed": "writeByte"
         },
         {
+          "start": 2006,
+          "end": 2010,
+          "symbol": "L:jb.b(III)V#0",
+          "original": "var3",
+          "renamed": "packet"
+        },
+        {
           "start": 2011,
           "end": 2012,
           "symbol": "M:wq.b(BI)V",
           "original": "b",
           "renamed": "writeShort"
+        },
+        {
+          "start": 2025,
+          "end": 2031,
+          "symbol": "P:jb.b(III)V#0",
+          "original": "param0",
+          "renamed": "gameId"
         }
       ]
     },
@@ -596843,7 +598508,7 @@
       "original": "jg.java",
       "renamed": "BufferedFile.java",
       "inputSha256": "ad228da3d749d32b1033acb237f32f40b9e44012fbdea31a351731ab8d66ea7d",
-      "outputSha256": "b36a8362757ad0dd273f5df47d632ad41dfaf230e2ab72ca0d849c0df056a879",
+      "outputSha256": "a90ebfb602af3fd55acafe811870649f8ac942613fe485517694a5a2627afb77",
       "edits": [
         {
           "start": 69,
@@ -596956,6 +598621,13 @@
           "symbol": "F:jg.field_f:I",
           "original": "field_f",
           "renamed": "readBufferLength"
+        },
+        {
+          "start": 503,
+          "end": 510,
+          "symbol": "F:jg.field_c:[B",
+          "original": "field_c",
+          "renamed": "gameSettingBitWidths"
         },
         {
           "start": 528,
@@ -599406,6 +601078,13 @@
           "symbol": "P:jg.a([BB)V#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 10647,
+          "end": 10654,
+          "symbol": "F:jg.field_c:[B",
+          "original": "field_c",
+          "renamed": "gameSettingBitWidths"
         },
         {
           "start": 10709,
@@ -602524,7 +604203,7 @@
       "original": "jk.java",
       "renamed": "UnderwaterBackground.java",
       "inputSha256": "35762eb76ee99358bb4274275df2c3913132b2ceb7a3f7d85d158625a76e7cc0",
-      "outputSha256": "f0dfbefc5bc996199635d9712c3488fac627140dc3d3837cc63949a6338c1f3d",
+      "outputSha256": "d0eed86b1e43b85b0c541bcdaa9e5ec7d82560bd013caf7c67293e93b0c3964f",
       "edits": [
         {
           "start": 50,
@@ -603213,11 +604892,39 @@
           "renamed": "soundEffectCount"
         },
         {
+          "start": 2893,
+          "end": 2894,
+          "symbol": "M:jk.a(IB)V",
+          "original": "a",
+          "renamed": "requestFindOpponents"
+        },
+        {
+          "start": 2899,
+          "end": 2905,
+          "symbol": "P:jk.a(IB)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 2912,
+          "end": 2918,
+          "symbol": "P:jk.a(IB)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 2930,
           "end": 2932,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 2933,
+          "end": 2937,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 2942,
@@ -603227,11 +604934,39 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 2959,
+          "end": 2963,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 2964,
           "end": 2965,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 2966,
+          "end": 2972,
+          "symbol": "P:jk.a(IB)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2983,
+          "end": 2989,
+          "symbol": "P:jk.a(IB)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 3000,
+          "end": 3004,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 3005,
@@ -603241,11 +604976,32 @@
           "renamed": "position"
         },
         {
+          "start": 3015,
+          "end": 3019,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 3020,
           "end": 3027,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 3045,
+          "end": 3049,
+          "symbol": "L:jk.a(IB)V#1",
+          "original": "var3",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 3052,
+          "end": 3056,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 3057,
@@ -603255,11 +605011,25 @@
           "renamed": "position"
         },
         {
+          "start": 3074,
+          "end": 3078,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 3079,
           "end": 3080,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 3096,
+          "end": 3100,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 3101,
@@ -603269,11 +605039,53 @@
           "renamed": "writeBytes"
         },
         {
+          "start": 3106,
+          "end": 3113,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 3115,
+          "end": 3121,
+          "symbol": "P:jk.a(IB)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3134,
+          "end": 3141,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 3159,
+          "end": 3163,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 3164,
           "end": 3165,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 3175,
+          "end": 3182,
+          "symbol": "F:bb.field_e:I",
+          "original": "field_e",
+          "renamed": "matchmakingOptionByteOne"
+        },
+        {
+          "start": 3193,
+          "end": 3197,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 3198,
@@ -603283,11 +605095,39 @@
           "renamed": "writeByte"
         },
         {
+          "start": 3200,
+          "end": 3206,
+          "symbol": "P:jk.a(IB)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 3214,
           "end": 3216,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 3217,
+          "end": 3224,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
+        },
+        {
+          "start": 3239,
+          "end": 3245,
+          "symbol": "P:jk.a(IB)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3265,
+          "end": 3269,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 3270,
@@ -603304,6 +605144,13 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 3275,
+          "end": 3282,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 3291,
           "end": 3293,
           "symbol": "C:lj",
@@ -603311,11 +605158,39 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 3294,
+          "end": 3301,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
+          "start": 3321,
+          "end": 3325,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 3326,
           "end": 3327,
           "symbol": "M:wq.d(BI)V",
           "original": "d",
           "renamed": "backfillByteLength"
+        },
+        {
+          "start": 3341,
+          "end": 3345,
+          "symbol": "L:jk.a(IB)V#1",
+          "original": "var3",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 3348,
+          "end": 3352,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 3353,
@@ -603332,6 +605207,13 @@
           "renamed": "UnderwaterBackground"
         },
         {
+          "start": 3423,
+          "end": 3427,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 3428,
           "end": 3429,
           "symbol": "M:wq.a([BIII)V",
@@ -603346,6 +605228,13 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 3433,
+          "end": 3440,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 3449,
           "end": 3451,
           "symbol": "C:lj",
@@ -603353,11 +605242,39 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 3452,
+          "end": 3459,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
+          "start": 3477,
+          "end": 3481,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 3482,
           "end": 3483,
           "symbol": "M:wq.d(BI)V",
           "original": "d",
           "renamed": "backfillByteLength"
+        },
+        {
+          "start": 3497,
+          "end": 3501,
+          "symbol": "L:jk.a(IB)V#1",
+          "original": "var3",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 3504,
+          "end": 3508,
+          "symbol": "L:jk.a(IB)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 3509,
@@ -623795,7 +625712,7 @@
       "original": "ka.java",
       "renamed": "MusicVoice.java",
       "inputSha256": "1979628dd155157bc15d179cf5d12821bf889151c6ec1a630671076a9f3c328d",
-      "outputSha256": "e481a20e356baa56c0471bf8adc3f05dff75d1be3a268bc57dafa90879584fe1",
+      "outputSha256": "5724aea084bb5af11acb9215af3099b7e50dd142b08d505cba820bf54495ab79",
       "edits": [
         {
           "start": 50,
@@ -625807,6 +627724,13 @@
           "renamed": "pressedButton"
         },
         {
+          "start": 14651,
+          "end": 14652,
+          "symbol": "M:rf.a(IJZ)V",
+          "original": "a",
+          "renamed": "requestRemoveOrRejectPlayer"
+        },
+        {
           "start": 14667,
           "end": 14675,
           "symbol": "F:id.field_gc:J",
@@ -625833,6 +627757,13 @@
           "symbol": "F:tb.field_fb:I",
           "original": "field_fb",
           "renamed": "pressX"
+        },
+        {
+          "start": 14915,
+          "end": 14916,
+          "symbol": "M:hd.a(JII)V",
+          "original": "a",
+          "renamed": "requestInviteOrAcceptPlayer"
         },
         {
           "start": 14923,
@@ -669705,7 +671636,7 @@
       "original": "lj.java",
       "renamed": "PowerUpWarning.java",
       "inputSha256": "2f93673c4bb687e7829e31c4057a6fc3a5c16a1778173bc69be438e035bfdaec",
-      "outputSha256": "ab127d3d23f9a5c48465ab800e08a5d04e75df8f8b6b4e267733321802c910a5",
+      "outputSha256": "fc07b290b3c45a5fe190049936d0e7653d1b38e78a8f576dc2cbe6c40930386e",
       "edits": [
         {
           "start": 50,
@@ -669748,6 +671679,13 @@
           "symbol": "F:lj.field_q:Ljp;",
           "original": "field_q",
           "renamed": "desertMidSprite"
+        },
+        {
+          "start": 167,
+          "end": 174,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 213,
@@ -669839,6 +671777,13 @@
           "symbol": "F:lj.field_j:Ldm;",
           "original": "field_j",
           "renamed": "mouseInput"
+        },
+        {
+          "start": 2752,
+          "end": 2759,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 2776,
@@ -678154,7 +680099,7 @@
       "original": "mf.java",
       "renamed": "ResourceArchive.java",
       "inputSha256": "bb6b72aec9c3806b6e1d5af9ca4fa5da56247ef89a7529cb5dbe4ec72f50639f",
-      "outputSha256": "75dd18568eedf71e1db55128f1c748872e823c347f91b4448bc6842fdc8fc3ef",
+      "outputSha256": "63d4357cf7ec9c7027c38c67b6751a4483af68a425d23ef6535b948ab9735fc5",
       "edits": [
         {
           "start": 50,
@@ -678176,6 +680121,13 @@
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 125,
+          "end": 132,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
         },
         {
           "start": 146,
@@ -692818,7 +694770,7 @@
       "original": "ml.java",
       "renamed": "ml.java",
       "inputSha256": "83b7a24cd8cc6a6a3ea6872d1e38a795ea275a045688dc1a233b1f199ee66625",
-      "outputSha256": "65988977e77632e91cd0f7b8e1647cdb3381dc1619cdc47db0b50dd58bf33906",
+      "outputSha256": "43ea95454c0843ab3dd3d535100ca5860299e2f3851278eac5759be931ecc28a",
       "edits": [
         {
           "start": 135,
@@ -692884,11 +694836,39 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 1532,
+          "end": 1533,
+          "symbol": "M:ml.a(II)V",
+          "original": "a",
+          "renamed": "requestMatchmakingOptions"
+        },
+        {
+          "start": 1538,
+          "end": 1544,
+          "symbol": "P:ml.a(II)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 1550,
+          "end": 1556,
+          "symbol": "P:ml.a(II)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 1568,
           "end": 1570,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1571,
+          "end": 1575,
+          "symbol": "L:ml.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 1580,
@@ -692898,6 +694878,13 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 1597,
+          "end": 1601,
+          "symbol": "L:ml.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 1602,
           "end": 1603,
           "symbol": "M:pi.e(II)V",
@@ -692905,11 +694892,39 @@
           "renamed": "writeCipheredOpcode"
         },
         {
+          "start": 1612,
+          "end": 1618,
+          "symbol": "P:ml.a(II)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 1629,
+          "end": 1633,
+          "symbol": "L:ml.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 1634,
           "end": 1635,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 1657,
+          "end": 1663,
+          "symbol": "P:ml.a(II)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1715,
+          "end": 1719,
+          "symbol": "L:ml.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 1720,
@@ -701427,7 +703442,7 @@
       "original": "n.java",
       "renamed": "n.java",
       "inputSha256": "57ffbc609c7e96db9f2eef78c7891cd0d26578906ecf226e6a621834d09bfd2a",
-      "outputSha256": "9b97b6f0bab39e58e1b71db8a9cc4fd9ff4c11d9b73231bb3be4e4c0bebac4ae",
+      "outputSha256": "bc310cdc7680761eaeaae9e99bd2fbd7ce9b049b130e74c52f34616371db7762",
       "edits": [
         {
           "start": 93,
@@ -702326,6 +704341,13 @@
           "renamed": "width"
         },
         {
+          "start": 6759,
+          "end": 6766,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
           "start": 7370,
           "end": 7378,
           "symbol": "F:mh.field_eb:Z",
@@ -702760,6 +704782,13 @@
           "renamed": "pressedButton"
         },
         {
+          "start": 11635,
+          "end": 11636,
+          "symbol": "M:ef.a(II)V",
+          "original": "a",
+          "renamed": "requestReturnToLobby"
+        },
+        {
           "start": 11695,
           "end": 11702,
           "symbol": "F:mh.field_L:I",
@@ -702779,6 +704808,20 @@
           "symbol": "C:jk",
           "original": "jk",
           "renamed": "UnderwaterBackground"
+        },
+        {
+          "start": 11763,
+          "end": 11764,
+          "symbol": "M:jk.a(IB)V",
+          "original": "a",
+          "renamed": "requestFindOpponents"
+        },
+        {
+          "start": 11827,
+          "end": 11828,
+          "symbol": "M:um.a(II)V",
+          "original": "a",
+          "renamed": "requestCancelOpponentSearch"
         },
         {
           "start": 11894,
@@ -702814,7 +704857,7 @@
       "original": "na.java",
       "renamed": "na.java",
       "inputSha256": "5a8704376de500d107a61d89176da08c7c0961b70356626dc95f6f8cecbcbc74",
-      "outputSha256": "e571cb3cf4bef58e12d0dc0d4e2fe4f0fd0610940242c43be517df4ff2480871",
+      "outputSha256": "76c80614ee8b38ea1bbe1e839c5314b448f991e6aa1d1f230705986e50309995",
       "edits": [
         {
           "start": 178,
@@ -703636,6 +705679,20 @@
           "renamed": "pressedButton"
         },
         {
+          "start": 9399,
+          "end": 9400,
+          "symbol": "M:ml.a(II)V",
+          "original": "a",
+          "renamed": "requestMatchmakingOptions"
+        },
+        {
+          "start": 9484,
+          "end": 9485,
+          "symbol": "M:ml.a(II)V",
+          "original": "a",
+          "renamed": "requestMatchmakingOptions"
+        },
+        {
           "start": 9538,
           "end": 9540,
           "symbol": "C:kb",
@@ -703657,6 +705714,13 @@
           "renamed": "heldKeys"
         },
         {
+          "start": 9611,
+          "end": 9612,
+          "symbol": "M:ml.a(II)V",
+          "original": "a",
+          "renamed": "requestMatchmakingOptions"
+        },
+        {
           "start": 9690,
           "end": 9692,
           "symbol": "C:td",
@@ -703669,6 +705733,13 @@
           "symbol": "F:mh.field_L:I",
           "original": "field_L",
           "renamed": "pressedButton"
+        },
+        {
+          "start": 9862,
+          "end": 9863,
+          "symbol": "M:pl.a(I[BIZIB)V",
+          "original": "a",
+          "renamed": "requestCreateGame"
         },
         {
           "start": 9872,
@@ -706719,7 +708790,7 @@
       "original": "nh.java",
       "renamed": "nh.java",
       "inputSha256": "14d571abf3fef6acc8f8b558e6b385e71c591c87c3f53dd16cb95bc1a5325f34",
-      "outputSha256": "ad25c120aa3fd7eb9c34d9295adb93c5dd18945a6f4bfb01e5340b73b6e58a0e",
+      "outputSha256": "8d6d1ddd91dabf60a5cb30942d8d7315b3d8182f08ea1baa6210567ba13ebf5d",
       "edits": [
         {
           "start": 66,
@@ -708540,6 +710611,13 @@
           "symbol": "F:mh.field_L:I",
           "original": "field_L",
           "renamed": "pressedButton"
+        },
+        {
+          "start": 27784,
+          "end": 27785,
+          "symbol": "M:vg.a(IZI)V",
+          "original": "a",
+          "renamed": "requestLeaveOrDeclineGame"
         },
         {
           "start": 27788,
@@ -712024,7 +714102,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "4d1cb3e9baf1f573e5ad7c9224ace909bf8d295639f04c2881eb1732d30e69e3",
+      "outputSha256": "a9afb765b46d31293c5c0fd10946abe667523c296dfc391fe506b83b1b2e6437",
       "edits": [
         {
           "start": 50,
@@ -721624,6 +723702,13 @@
           "renamed": "actionId"
         },
         {
+          "start": 141746,
+          "end": 141747,
+          "symbol": "M:hd.a(JII)V",
+          "original": "a",
+          "renamed": "requestInviteOrAcceptPlayer"
+        },
+        {
           "start": 141753,
           "end": 141760,
           "symbol": "F:nn.field_i:J",
@@ -721673,6 +723758,13 @@
           "renamed": "actionId"
         },
         {
+          "start": 141961,
+          "end": 141962,
+          "symbol": "M:vg.a(IZI)V",
+          "original": "a",
+          "renamed": "requestLeaveOrDeclineGame"
+        },
+        {
           "start": 141968,
           "end": 141975,
           "symbol": "F:nn.field_b:I",
@@ -721706,6 +723798,13 @@
           "symbol": "P:nn.b(BII)Z#2",
           "original": "param2",
           "renamed": "actionId"
+        },
+        {
+          "start": 142138,
+          "end": 142139,
+          "symbol": "M:dn.b(III)V",
+          "original": "b",
+          "renamed": "requestSpectateGame"
         },
         {
           "start": 142145,
@@ -721757,6 +723856,13 @@
           "renamed": "ContextMenu"
         },
         {
+          "start": 142332,
+          "end": 142333,
+          "symbol": "M:br.a(IBI)V",
+          "original": "a",
+          "renamed": "requestGamePlayerPreview"
+        },
+        {
           "start": 142334,
           "end": 142340,
           "symbol": "P:nn.b(BII)Z#1",
@@ -721799,6 +723905,13 @@
           "renamed": "ContextMenu"
         },
         {
+          "start": 142595,
+          "end": 142596,
+          "symbol": "M:br.a(IBI)V",
+          "original": "a",
+          "renamed": "requestGamePlayerPreview"
+        },
+        {
           "start": 142597,
           "end": 142603,
           "symbol": "P:nn.b(BII)Z#1",
@@ -721811,6 +723924,13 @@
           "symbol": "L:nn.b(BII)Z#2",
           "original": "var5",
           "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 142687,
+          "end": 142688,
+          "symbol": "M:jb.b(III)V",
+          "original": "b",
+          "renamed": "requestJoinGame"
         },
         {
           "start": 142694,
@@ -721834,6 +723954,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 142755,
+          "end": 142756,
+          "symbol": "M:rf.a(IJZ)V",
+          "original": "a",
+          "renamed": "requestRemoveOrRejectPlayer"
+        },
+        {
           "start": 142757,
           "end": 142763,
           "symbol": "P:nn.b(BII)Z#1",
@@ -721846,6 +723973,13 @@
           "symbol": "F:nn.field_i:J",
           "original": "field_i",
           "renamed": "targetId"
+        },
+        {
+          "start": 142861,
+          "end": 142862,
+          "symbol": "M:jb.b(III)V",
+          "original": "b",
+          "renamed": "requestJoinGame"
         },
         {
           "start": 142868,
@@ -721876,6 +724010,13 @@
           "renamed": "unusedGameFlag"
         },
         {
+          "start": 142956,
+          "end": 142957,
+          "symbol": "M:rf.a(IJZ)V",
+          "original": "a",
+          "renamed": "requestRemoveOrRejectPlayer"
+        },
+        {
           "start": 142958,
           "end": 142964,
           "symbol": "P:nn.b(BII)Z#1",
@@ -721888,6 +724029,13 @@
           "symbol": "F:nn.field_i:J",
           "original": "field_i",
           "renamed": "targetId"
+        },
+        {
+          "start": 143059,
+          "end": 143060,
+          "symbol": "M:rf.a(IJZ)V",
+          "original": "a",
+          "renamed": "requestRemoveOrRejectPlayer"
         },
         {
           "start": 143061,
@@ -755131,7 +757279,7 @@
       "original": "pl.java",
       "renamed": "pl.java",
       "inputSha256": "9b077d9193a33f54bb4ca6679d639f20250da8d866d73980b3c035e73139d9b2",
-      "outputSha256": "3b96925598c22adf9c6a1604aee107a5430e62dc8216b11ca7f50e4caea5a6f4",
+      "outputSha256": "0238f87fccd966027136f5bb135bdf5ee85c69f64fdb4ca2691eb7e5a4ea0462",
       "edits": [
         {
           "start": 66,
@@ -755218,6 +757366,13 @@
           "renamed": "canvasHeight"
         },
         {
+          "start": 725,
+          "end": 726,
+          "symbol": "M:pl.a(I[BIZIB)V",
+          "original": "a",
+          "renamed": "requestCreateGame"
+        },
+        {
           "start": 802,
           "end": 803,
           "symbol": "M:jp.g()V",
@@ -755260,11 +757415,88 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 1551,
+          "end": 1552,
+          "symbol": "M:pl.a(I[BIZIB)V",
+          "original": "a",
+          "renamed": "requestCreateGame"
+        },
+        {
+          "start": 1557,
+          "end": 1563,
+          "symbol": "P:pl.a(I[BIZIB)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 1572,
+          "end": 1578,
+          "symbol": "P:pl.a(I[BIZIB)V#1",
+          "original": "param1",
+          "renamed": "settings"
+        },
+        {
+          "start": 1584,
+          "end": 1590,
+          "symbol": "P:pl.a(I[BIZIB)V#2",
+          "original": "param2",
+          "renamed": "choiceId"
+        },
+        {
+          "start": 1600,
+          "end": 1606,
+          "symbol": "P:pl.a(I[BIZIB)V#3",
+          "original": "param3",
+          "renamed": "creationFlag128"
+        },
+        {
+          "start": 1612,
+          "end": 1618,
+          "symbol": "P:pl.a(I[BIZIB)V#4",
+          "original": "param4",
+          "renamed": "modeWord"
+        },
+        {
+          "start": 1625,
+          "end": 1631,
+          "symbol": "P:pl.a(I[BIZIB)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 1643,
           "end": 1645,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 1646,
+          "end": 1650,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
+        },
+        {
+          "start": 1671,
+          "end": 1675,
+          "symbol": "L:pl.a(I[BIZIB)V#1",
+          "original": "var7",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 1693,
+          "end": 1697,
+          "symbol": "L:pl.a(I[BIZIB)V#2",
+          "original": "var8",
+          "renamed": "creationWord"
+        },
+        {
+          "start": 1727,
+          "end": 1731,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
         },
         {
           "start": 1736,
@@ -755274,11 +757506,32 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 1755,
+          "end": 1759,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
+        },
+        {
           "start": 1760,
           "end": 1761,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 1770,
+          "end": 1776,
+          "symbol": "P:pl.a(I[BIZIB)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 1789,
+          "end": 1793,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
         },
         {
           "start": 1794,
@@ -755288,11 +757541,32 @@
           "renamed": "position"
         },
         {
+          "start": 1804,
+          "end": 1808,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
+        },
+        {
           "start": 1809,
           "end": 1816,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 1832,
+          "end": 1836,
+          "symbol": "L:pl.a(I[BIZIB)V#1",
+          "original": "var7",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 1839,
+          "end": 1843,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
         },
         {
           "start": 1844,
@@ -755302,11 +757576,25 @@
           "renamed": "position"
         },
         {
+          "start": 1863,
+          "end": 1867,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
+        },
+        {
           "start": 1868,
           "end": 1869,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 1888,
+          "end": 1892,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
         },
         {
           "start": 1893,
@@ -755316,11 +757604,60 @@
           "renamed": "writeByte"
         },
         {
+          "start": 1899,
+          "end": 1905,
+          "symbol": "P:pl.a(I[BIZIB)V#2",
+          "original": "param2",
+          "renamed": "choiceId"
+        },
+        {
+          "start": 1922,
+          "end": 1928,
+          "symbol": "P:pl.a(I[BIZIB)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 1951,
           "end": 1958,
           "symbol": "F:pl.field_b:[I",
           "original": "field_b",
           "renamed": "pendingAchievementMask"
+        },
+        {
+          "start": 1997,
+          "end": 2001,
+          "symbol": "L:pl.a(I[BIZIB)V#2",
+          "original": "var8",
+          "renamed": "creationWord"
+        },
+        {
+          "start": 2004,
+          "end": 2010,
+          "symbol": "P:pl.a(I[BIZIB)V#4",
+          "original": "param4",
+          "renamed": "modeWord"
+        },
+        {
+          "start": 2026,
+          "end": 2032,
+          "symbol": "P:pl.a(I[BIZIB)V#3",
+          "original": "param3",
+          "renamed": "creationFlag128"
+        },
+        {
+          "start": 2048,
+          "end": 2052,
+          "symbol": "L:pl.a(I[BIZIB)V#2",
+          "original": "var8",
+          "renamed": "creationWord"
+        },
+        {
+          "start": 2083,
+          "end": 2087,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
         },
         {
           "start": 2088,
@@ -755330,6 +757667,20 @@
           "renamed": "writeByte"
         },
         {
+          "start": 2094,
+          "end": 2098,
+          "symbol": "L:pl.a(I[BIZIB)V#2",
+          "original": "var8",
+          "renamed": "creationWord"
+        },
+        {
+          "start": 2111,
+          "end": 2115,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
+        },
+        {
           "start": 2116,
           "end": 2117,
           "symbol": "M:wq.a([BIII)V",
@@ -755337,11 +757688,46 @@
           "renamed": "writeBytes"
         },
         {
+          "start": 2118,
+          "end": 2124,
+          "symbol": "P:pl.a(I[BIZIB)V#1",
+          "original": "param1",
+          "renamed": "settings"
+        },
+        {
+          "start": 2133,
+          "end": 2139,
+          "symbol": "P:pl.a(I[BIZIB)V#1",
+          "original": "param1",
+          "renamed": "settings"
+        },
+        {
+          "start": 2159,
+          "end": 2163,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
+        },
+        {
           "start": 2164,
           "end": 2165,
           "symbol": "M:wq.d(BI)V",
           "original": "d",
           "renamed": "backfillByteLength"
+        },
+        {
+          "start": 2179,
+          "end": 2183,
+          "symbol": "L:pl.a(I[BIZIB)V#1",
+          "original": "var7",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 2186,
+          "end": 2190,
+          "symbol": "L:pl.a(I[BIZIB)V#0",
+          "original": "var6",
+          "renamed": "packet"
         },
         {
           "start": 2191,
@@ -755363,6 +757749,48 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 2327,
+          "end": 2333,
+          "symbol": "P:pl.a(I[BIZIB)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 2343,
+          "end": 2349,
+          "symbol": "P:pl.a(I[BIZIB)V#1",
+          "original": "param1",
+          "renamed": "settings"
+        },
+        {
+          "start": 2386,
+          "end": 2392,
+          "symbol": "P:pl.a(I[BIZIB)V#2",
+          "original": "param2",
+          "renamed": "choiceId"
+        },
+        {
+          "start": 2401,
+          "end": 2407,
+          "symbol": "P:pl.a(I[BIZIB)V#3",
+          "original": "param3",
+          "renamed": "creationFlag128"
+        },
+        {
+          "start": 2416,
+          "end": 2422,
+          "symbol": "P:pl.a(I[BIZIB)V#4",
+          "original": "param4",
+          "renamed": "modeWord"
+        },
+        {
+          "start": 2431,
+          "end": 2437,
+          "symbol": "P:pl.a(I[BIZIB)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 2563,
@@ -792363,7 +794791,7 @@
       "original": "re.java",
       "renamed": "MenuSelection.java",
       "inputSha256": "5b1393bf97095628d9436304f8a09159fd4fb4fc80eff17e35fd3595f72ca484",
-      "outputSha256": "d2d6ca1e0c9f123b36dd564711eb63ec999dd338a0aa5d73d197c78e63e4a630",
+      "outputSha256": "45df1f77f7941d7c57cc5158712f40d14ce0300e2f4290f517cf094844e5bb62",
       "edits": [
         {
           "start": 50,
@@ -792427,6 +794855,13 @@
           "symbol": "F:re.field_c:I",
           "original": "field_c",
           "renamed": "activationCode"
+        },
+        {
+          "start": 312,
+          "end": 319,
+          "symbol": "F:re.field_i:I",
+          "original": "field_i",
+          "renamed": "previewGameId"
         },
         {
           "start": 357,
@@ -795780,7 +798215,7 @@
       "original": "rf.java",
       "renamed": "rf.java",
       "inputSha256": "74e1c409ef4508ac53eb3b24bb4e02ee428ec29f7b0d179743cff5d64deab290",
-      "outputSha256": "cbae3a643413ae0bab3ff81be86adf0d0eaa3ec5d6bd46f5628449fcd31f2f2c",
+      "outputSha256": "1cdfa4a8afb24c84ee84ec99b4182171b92228d05e41673b4a1612df7d38ec39",
       "edits": [
         {
           "start": 93,
@@ -795811,11 +798246,46 @@
           "renamed": "TableDataRequest"
         },
         {
+          "start": 251,
+          "end": 252,
+          "symbol": "M:rf.a(IJZ)V",
+          "original": "a",
+          "renamed": "requestRemoveOrRejectPlayer"
+        },
+        {
+          "start": 257,
+          "end": 263,
+          "symbol": "P:rf.a(IJZ)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 270,
+          "end": 276,
+          "symbol": "P:rf.a(IJZ)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 286,
+          "end": 292,
+          "symbol": "P:rf.a(IJZ)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 304,
           "end": 306,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 307,
+          "end": 311,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 316,
@@ -795825,11 +798295,32 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 333,
+          "end": 337,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 338,
           "end": 339,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 348,
+          "end": 354,
+          "symbol": "P:rf.a(IJZ)V#0",
+          "original": "param0",
+          "renamed": "opcode"
+        },
+        {
+          "start": 365,
+          "end": 369,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 370,
@@ -795839,11 +798330,32 @@
           "renamed": "position"
         },
         {
+          "start": 380,
+          "end": 384,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 385,
           "end": 392,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 410,
+          "end": 414,
+          "symbol": "L:rf.a(IJZ)V#1",
+          "original": "var5",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 417,
+          "end": 421,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 422,
@@ -795853,11 +798365,25 @@
           "renamed": "position"
         },
         {
+          "start": 439,
+          "end": 443,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 444,
           "end": 445,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 462,
+          "end": 466,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
         },
         {
           "start": 467,
@@ -795867,6 +798393,20 @@
           "renamed": "writeLong"
         },
         {
+          "start": 477,
+          "end": 483,
+          "symbol": "P:rf.a(IJZ)V#1",
+          "original": "param1",
+          "renamed": "playerId"
+        },
+        {
+          "start": 494,
+          "end": 498,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 499,
           "end": 500,
           "symbol": "M:wq.d(BI)V",
@@ -795874,11 +798414,32 @@
           "renamed": "backfillByteLength"
         },
         {
+          "start": 514,
+          "end": 518,
+          "symbol": "L:rf.a(IJZ)V#1",
+          "original": "var5",
+          "renamed": "payloadStart"
+        },
+        {
+          "start": 521,
+          "end": 525,
+          "symbol": "L:rf.a(IJZ)V#0",
+          "original": "var4",
+          "renamed": "packet"
+        },
+        {
           "start": 526,
           "end": 533,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 548,
+          "end": 554,
+          "symbol": "P:rf.a(IJZ)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 795,
@@ -796503,7 +799064,7 @@
       "original": "rh.java",
       "renamed": "rh.java",
       "inputSha256": "8950e60a7831be7e4fbb7a400e46339597e9468236ec728306f00d3af1436f83",
-      "outputSha256": "8711a2a676831d6d3ba3cd4958900c05782a9f4bd853c5e09a599cd07270b5de",
+      "outputSha256": "174cebb58983e0a1fe2a0b294693419d829a66c486ff93b50b0f80694233557a",
       "edits": [
         {
           "start": 93,
@@ -796511,6 +799072,27 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 123,
+          "end": 130,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 374,
+          "end": 381,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 494,
+          "end": 501,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
         }
       ]
     },
@@ -810125,7 +812707,7 @@
       "original": "sj.java",
       "renamed": "sj.java",
       "inputSha256": "80078b150c07b3277b72c50f24f2e31a3a63229821b05c75d116d3e9ba8765af",
-      "outputSha256": "f8d579a99dec43ce018595e1931baf2f9521fc5eeca7fe0d12ac2550a9477ac9",
+      "outputSha256": "fba998925814d0a1b71033f303d52d948c36d2240b4f8edbcb8216783c98a302",
       "edits": [
         {
           "start": 93,
@@ -814998,6 +817580,20 @@
           "renamed": "pendingGameOptionsReceived"
         },
         {
+          "start": 21848,
+          "end": 21855,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
+          "start": 21897,
+          "end": 21904,
+          "symbol": "F:rh.field_d:[B",
+          "original": "field_d",
+          "renamed": "matchmakingChoiceMask"
+        },
+        {
           "start": 21919,
           "end": 21921,
           "symbol": "C:wq",
@@ -815017,6 +817613,13 @@
           "symbol": "M:wq.b(Z)B",
           "original": "b",
           "renamed": "readByte"
+        },
+        {
+          "start": 21982,
+          "end": 21989,
+          "symbol": "F:bb.field_e:I",
+          "original": "field_e",
+          "renamed": "matchmakingOptionByteOne"
         },
         {
           "start": 21994,
@@ -815045,6 +817648,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 22040,
+          "end": 22047,
+          "symbol": "F:mf.field_c:I",
+          "original": "field_c",
+          "renamed": "matchmakingOptionByteTwo"
         },
         {
           "start": 22052,
@@ -815082,11 +817692,25 @@
           "renamed": "PowerUpWarning"
         },
         {
+          "start": 22137,
+          "end": 22144,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
+        },
+        {
           "start": 22183,
           "end": 22185,
           "symbol": "C:lj",
           "original": "lj",
           "renamed": "PowerUpWarning"
+        },
+        {
+          "start": 22186,
+          "end": 22193,
+          "symbol": "F:lj.field_p:[B",
+          "original": "field_p",
+          "renamed": "matchmakingSettingMask"
         },
         {
           "start": 22208,
@@ -828914,7 +831538,7 @@
       "original": "tf.java",
       "renamed": "tf.java",
       "inputSha256": "6f434ed9856c9dbcccf04d2d6924d1e68750d68ea8128049834926bb58ad1d8e",
-      "outputSha256": "2fd4a3e78a6a3e5c115c60dfd3343cc6596e1da59c7ff6b86fcc8f8faf0fc6d7",
+      "outputSha256": "2dda3869fff3ee198bff88da7aef82aad7c47d9be55cd335df6f6e56f0ffd14c",
       "edits": [
         {
           "start": 123,
@@ -829258,6 +831882,13 @@
           "symbol": "C:re",
           "original": "re",
           "renamed": "MenuSelection"
+        },
+        {
+          "start": 3611,
+          "end": 3618,
+          "symbol": "F:re.field_i:I",
+          "original": "field_i",
+          "renamed": "previewGameId"
         },
         {
           "start": 3647,
@@ -851339,7 +853970,7 @@
       "original": "um.java",
       "renamed": "um.java",
       "inputSha256": "2891bb96e2938f1651ad43f68d9e1d9b6f546660da1ba0bbc819d1f31a21a74b",
-      "outputSha256": "f467d1780830f7774359aa2360de9c5803b626db3dd9d0d374964aa83d99167c",
+      "outputSha256": "358a79703c4ce2dda7017e52b7de790aeb2ee77f86283939e65a5ff15e8a3f7d",
       "edits": [
         {
           "start": 84,
@@ -851699,6 +854330,34 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 16648,
+          "end": 16649,
+          "symbol": "M:um.a(II)V",
+          "original": "a",
+          "renamed": "requestCancelOpponentSearch"
+        },
+        {
+          "start": 16654,
+          "end": 16660,
+          "symbol": "P:um.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 16666,
+          "end": 16672,
+          "symbol": "P:um.a(II)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
+          "start": 16688,
+          "end": 16694,
+          "symbol": "P:um.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 16726,
           "end": 16728,
           "symbol": "C:mh",
@@ -851713,11 +854372,25 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 16757,
+          "end": 16761,
+          "symbol": "L:um.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 16766,
           "end": 16773,
           "symbol": "F:k.field_h:Lpi;",
           "original": "field_h",
           "renamed": "outgoingPackets"
+        },
+        {
+          "start": 16783,
+          "end": 16787,
+          "symbol": "L:um.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 16788,
@@ -851727,11 +854400,39 @@
           "renamed": "writeCipheredOpcode"
         },
         {
+          "start": 16790,
+          "end": 16796,
+          "symbol": "P:um.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 16807,
+          "end": 16813,
+          "symbol": "P:um.a(II)V#1",
+          "original": "param1",
+          "renamed": "opcode"
+        },
+        {
+          "start": 16824,
+          "end": 16828,
+          "symbol": "L:um.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
+        },
+        {
           "start": 16829,
           "end": 16830,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 16847,
+          "end": 16851,
+          "symbol": "L:um.a(II)V#0",
+          "original": "var2",
+          "renamed": "packet"
         },
         {
           "start": 16852,
@@ -854716,11 +857417,25 @@
           "renamed": "invitationPending"
         },
         {
+          "start": 52729,
+          "end": 52730,
+          "symbol": "M:dn.b(III)V",
+          "original": "b",
+          "renamed": "requestSpectateGame"
+        },
+        {
           "start": 52737,
           "end": 52738,
           "symbol": "M:om.e(B)I",
           "original": "e",
           "renamed": "getGameId"
+        },
+        {
+          "start": 52882,
+          "end": 52883,
+          "symbol": "M:jb.b(III)V",
+          "original": "b",
+          "renamed": "requestJoinGame"
         },
         {
           "start": 52890,
@@ -860250,7 +862965,7 @@
       "original": "vg.java",
       "renamed": "vg.java",
       "inputSha256": "76f9a753327a3b47da2f87ee116b15750980e3c938617bc7fd86f67b153fb8c4",
-      "outputSha256": "efed996d5f0df3eef85a95659e60070e35debf6168ad8073988179f1a1600185",
+      "outputSha256": "49c453f79b14b648e7ca28d2aaac43be944e92a96bdef35847f632d97eb53349",
       "edits": [
         {
           "start": 249,
@@ -860260,11 +862975,46 @@
           "renamed": "gameTransport"
         },
         {
+          "start": 423,
+          "end": 424,
+          "symbol": "M:vg.a(IZI)V",
+          "original": "a",
+          "renamed": "requestLeaveOrDeclineGame"
+        },
+        {
+          "start": 429,
+          "end": 435,
+          "symbol": "P:vg.a(IZI)V#0",
+          "original": "param0",
+          "renamed": "gameId"
+        },
+        {
+          "start": 445,
+          "end": 451,
+          "symbol": "P:vg.a(IZI)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 457,
+          "end": 463,
+          "symbol": "P:vg.a(IZI)V#2",
+          "original": "param2",
+          "renamed": "opcode"
+        },
+        {
           "start": 475,
           "end": 477,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 478,
+          "end": 482,
+          "symbol": "L:vg.a(IZI)V#0",
+          "original": "var3",
+          "renamed": "packet"
         },
         {
           "start": 487,
@@ -860274,11 +863024,32 @@
           "renamed": "outgoingPackets"
         },
         {
+          "start": 504,
+          "end": 508,
+          "symbol": "L:vg.a(IZI)V#0",
+          "original": "var3",
+          "renamed": "packet"
+        },
+        {
           "start": 509,
           "end": 510,
           "symbol": "M:pi.e(II)V",
           "original": "e",
           "renamed": "writeCipheredOpcode"
+        },
+        {
+          "start": 519,
+          "end": 525,
+          "symbol": "P:vg.a(IZI)V#2",
+          "original": "param2",
+          "renamed": "opcode"
+        },
+        {
+          "start": 536,
+          "end": 540,
+          "symbol": "L:vg.a(IZI)V#0",
+          "original": "var3",
+          "renamed": "packet"
         },
         {
           "start": 541,
@@ -860288,6 +863059,13 @@
           "renamed": "writeByte"
         },
         {
+          "start": 560,
+          "end": 564,
+          "symbol": "L:vg.a(IZI)V#0",
+          "original": "var3",
+          "renamed": "packet"
+        },
+        {
           "start": 565,
           "end": 566,
           "symbol": "M:wq.a(II)V",
@@ -860295,11 +863073,32 @@
           "renamed": "writeByte"
         },
         {
+          "start": 585,
+          "end": 589,
+          "symbol": "L:vg.a(IZI)V#0",
+          "original": "var3",
+          "renamed": "packet"
+        },
+        {
           "start": 590,
           "end": 591,
           "symbol": "M:wq.b(BI)V",
           "original": "b",
           "renamed": "writeShort"
+        },
+        {
+          "start": 604,
+          "end": 610,
+          "symbol": "P:vg.a(IZI)V#0",
+          "original": "param0",
+          "renamed": "gameId"
+        },
+        {
+          "start": 626,
+          "end": 632,
+          "symbol": "P:vg.a(IZI)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
         }
       ]
     },
@@ -889844,10 +892643,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "91db575d9a021f14ac2ec47cc56aeca2e32fb546bb9786c61d05c6d26a83e597",
+    "rulesSha256": "977d0b6d5564625212fd2e3dda15b3ee3e7ce7c6cac4bd9b653ee71fb6b55f80",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "e957bbe6486c54d3e9eb42dcb44ee6141461857d825e831d19c143e9b096aa6f",
+    "outputTreeSha256": "bca98d6613eeee9531c1e6e131f29be9cf555ac154974d5127d2367d8d8d9341",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -889867,8 +892666,8 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 820298,
-        "traceSha256": "16df866bf9f5610a9c696c27fbd17d1afdba706d75c66398af2471d38ade0c0d",
+        "checks": 821879,
+        "traceSha256": "cda8fb4dd9133b07bd9c3b9be689f5bed60ce21840226a2da8ce244e53a24089",
         "rawNamedIdentical": true,
         "independentExpectations": true,
         "headlessClientBoundary": true,
@@ -890053,7 +892852,9 @@
         "lobbySortFixtures": true,
         "lobbyResponseFixtures": true,
         "lobbyInitializationFixtures": true,
-        "lobbyOwnershipFixtures": true
+        "lobbyOwnershipFixtures": true,
+        "lobbyRequestWireFixtures": true,
+        "lobbyPreviewFixtures": true
       }
     }
   },

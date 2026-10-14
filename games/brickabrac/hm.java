@@ -34,18 +34,18 @@ final class hm {
         try {
           wc.field_e = choiceCount;
           oc.field_p = -1L;
-          BufferedFile.field_c = settingBitWidths;
+          BufferedFile.gameSettingBitWidths = settingBitWidths;
           cq.gameSettingCount = settingBitWidths.length;
           fh.pendingGameOptionsReceived = false;
-          rh.field_d = new byte[(wc.field_e + 7) / 8];
+          rh.matchmakingChoiceMask = new byte[(wc.field_e + 7) / 8];
           o.currentLobbyGame = null;
           nl.pendingLobbyGame = null;
           var10_int = 0;
-          for (var11 = 0; BufferedFile.field_c.length > var11; var11++) {
-            var10_int = var10_int + (BufferedFile.field_c[var11] & 255);
+          for (var11 = 0; BufferedFile.gameSettingBitWidths.length > var11; var11++) {
+            var10_int = var10_int + (BufferedFile.gameSettingBitWidths[var11] & 255);
           }
           var10_int = (7 + var10_int) / 8;
-          PowerUpWarning.field_p = new byte[var10_int];
+          PowerUpWarning.matchmakingSettingMask = new byte[var10_int];
           if (lobbyPlayerContent.children == null) {
             lobbyPlayerContent.children = new NodeDeque();
           }
@@ -53,7 +53,7 @@ final class hm {
           ua.lobbyPlayers.clear((byte) -60);
           eq.lobbyPlayerIndex = new SecondaryHashTable(lobbyPlayerBuckets);
           m.field_h = -1;
-          MenuSelection.field_i = 0;
+          MenuSelection.previewGameId = 0;
           uf.pendingJoinRequestCount = 0;
           ArchiveIndex.field_s = -1;
           if (lobbyGameContent.children == null) {

@@ -99,23 +99,23 @@ final class UnderwaterBackground extends BackgroundScene {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
     }
 
-    final static void a(int param0, byte param1) {
-        BitPacketBuffer var2 = k.outgoingPackets;
-        var2.writeCipheredOpcode(param1 ^ -13319, param0);
-        var2.position = var2.position + 1;
-        int var3 = var2.position;
-        var2.writeByte(6, 2);
-        var2.writeBytes(rh.field_d, param1 - 99, 0, rh.field_d.length);
-        var2.writeByte(-125, bb.field_e);
-        var2.writeByte(param1 ^ -12, ResourceArchive.field_c);
-        if (param1 == 98) {
-          var2.writeBytes(PowerUpWarning.field_p, -1, 0, PowerUpWarning.field_p.length);
-          var2.backfillByteLength((byte) 126, -var3 + var2.position);
+    final static void requestFindOpponents(int opcode, byte obfuscationGuard) {
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(obfuscationGuard ^ -13319, opcode);
+        packet.position = packet.position + 1;
+        int payloadStart = packet.position;
+        packet.writeByte(6, 2);
+        packet.writeBytes(rh.matchmakingChoiceMask, obfuscationGuard - 99, 0, rh.matchmakingChoiceMask.length);
+        packet.writeByte(-125, bb.matchmakingOptionByteOne);
+        packet.writeByte(obfuscationGuard ^ -12, ResourceArchive.matchmakingOptionByteTwo);
+        if (obfuscationGuard == 98) {
+          packet.writeBytes(PowerUpWarning.matchmakingSettingMask, -1, 0, PowerUpWarning.matchmakingSettingMask.length);
+          packet.backfillByteLength((byte) 126, -payloadStart + packet.position);
           return;
         }
         UnderwaterBackground.d((byte) 3);
-        var2.writeBytes(PowerUpWarning.field_p, -1, 0, PowerUpWarning.field_p.length);
-        var2.backfillByteLength((byte) 126, -var3 + var2.position);
+        packet.writeBytes(PowerUpWarning.matchmakingSettingMask, -1, 0, PowerUpWarning.matchmakingSettingMask.length);
+        packet.backfillByteLength((byte) 126, -payloadStart + packet.position);
     }
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {

@@ -172,4 +172,23 @@ Lobby response flow: initializeLobby attaches and clears the three caller-owned 
 
 Independent packet fixtures cover every supported kind0..23, name-update markers, insert/update identity, sorting and equal-key reinsertion, missing-ID responses, request idempotence, exact counters, status ticks, removals with both zero and nonzero status, list clear and secondary ownership, current-game count retention, option payloads, pending-game reuse, deadline bounds and cursor consumption. Nonzero removals unindex records while retaining their primary rows; transition packets clear game-player ownership and request flags without removing lobby identities. Unknown-response disconnect/error routing, malformed packets, all option meanings, rendered UI and live server interaction remain unverified.
 
+Outgoing lobby requests have named helpers for actions0..11. The outer opcode is caller-supplied and ISAAC-encrypted; the next byte is the body length, including the action byte. Numeric payloads are big-endian, with byte/short writes preserving low bits. Action2 sends choice-mask bytes, two unresolved option bytes and setting-mask bytes. Action4 adds optional128 to its mode word; action5 adds joinSortPriority to spectatorMode shifted6. These are additions, not bitwise OR operations.
+
+| Action | Request | Payload after action byte |
+| --- | --- | --- |
+|0|requestMatchmakingOptions|empty|
+|1|requestReturnToLobby|empty|
+|2|requestFindOpponents|choice mask, option byte1, option byte2, setting mask|
+|3|requestCancelOpponentSearch|empty|
+|4|requestCreateGame|choice byte, mode word plus optional128, settings|
+|5|requestUpdateGameOptions|maxPlayers byte, packed priority/spectator byte, settings|
+|6|requestInviteOrAcceptPlayer|64-bit player ID|
+|7|requestRemoveOrRejectPlayer|64-bit player ID|
+|8|requestJoinGame|16-bit game ID|
+|9|requestLeaveOrDeclineGame|16-bit game ID|
+|10|requestSpectateGame|16-bit game ID|
+|11|requestGamePlayerPreview|16-bit game ID|
+
+Independent wire fixtures check every request action across seeded ciphers, boundary IDs/bytes, empty and nonempty arrays, option-word overlap and byte-length wrapping. They preserve source arrays and current-game identity. Preview fixtures check old-name invalidation, full input ID tracking versus low16-bit wire ID, same-ID suppression, stop/restart and subsequent cipher progression. This describes client byte production, not server acceptance of oversized payloads. Controller invocation, live transport/server responses, packet guards outside canonical call values and unresolved mode/option meanings remain unverified.
+
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

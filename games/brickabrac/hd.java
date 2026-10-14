@@ -21,17 +21,17 @@ final class hd {
         return var3;
     }
 
-    final static void a(long param0, int param1, int param2) {
-        BitPacketBuffer var4 = k.outgoingPackets;
-        var4.writeCipheredOpcode(-13413, param2);
-        var4.position = var4.position + 1;
-        int var5 = var4.position;
-        var4.writeByte(-115, 6);
-        if (param1 <= 35) {
+    final static void requestInviteOrAcceptPlayer(long playerId, int obfuscationGuard, int opcode) {
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(-13413, opcode);
+        packet.position = packet.position + 1;
+        int payloadStart = packet.position;
+        packet.writeByte(-115, 6);
+        if (obfuscationGuard <= 35) {
           hd.a(true);
         }
-        var4.writeLong(-23054, param0);
-        var4.backfillByteLength((byte) 121, -var5 + var4.position);
+        packet.writeLong(-23054, playerId);
+        packet.backfillByteLength((byte) 121, -payloadStart + packet.position);
     }
 
     final static void a(int param0, ta param1, int param2, int param3) {

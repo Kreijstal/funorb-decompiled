@@ -118,7 +118,7 @@ final class ar {
             if (param0) {
               if (param4 == -1) {
                 for (var10 = 0; w.field_n.length > var10; var10++) {
-                  if ((rh.field_d[var10 / 8] & 1 << (var10 & 7)) != 0) {
+                  if ((rh.matchmakingChoiceMask[var10 / 8] & 1 << (var10 & 7)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
                     break;
@@ -129,13 +129,13 @@ final class ar {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
                 for (var10Lifetime2 = 0; -1 + var16.length > var10Lifetime2; var10Lifetime2++) {
-                  if (0 == (PowerUpWarning.field_p[(var10Lifetime2 + param7) / 8] & 1 << (param7 + var10Lifetime2 & 7))) {
+                  if (0 == (PowerUpWarning.matchmakingSettingMask[(var10Lifetime2 + param7) / 8] & 1 << (param7 + var10Lifetime2 & 7))) {
                     continue;
                   }
                   var9 = 0;
                   break;
                 }
-                param7 = param7 + (255 & BufferedFile.field_c[param4]);
+                param7 = param7 + (255 & BufferedFile.gameSettingBitWidths[param4]);
               }
             }
             var10Lifetime1 = 0;

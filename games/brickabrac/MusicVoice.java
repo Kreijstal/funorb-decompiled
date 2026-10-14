@@ -405,14 +405,14 @@ final class MusicVoice extends IntrusiveNode {
               !var13.isUnindexed(0)) {
               if (0 == var13.statusLabel.pressedButton) {
                 if (var13.actionLabel.pressedButton != 0) {
-                  rf.a(param2, var13.playerId, true);
+                  rf.requestRemoveOrRejectPlayer(param2, var13.playerId, true);
                 } else {
                   SpriteGeometry.a(0, qo.pressY, var13, param1, (byte) 58, tb.pressX, 0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                hd.a(var13.playerId, 66, param2);
+                hd.requestInviteOrAcceptPlayer(var13.playerId, 66, param2);
               }
             }
             var12 = var13;

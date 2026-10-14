@@ -26,7 +26,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
 
     final static void f(byte param0) {
         if (!IntArrayRequest.gameplayScreen.c(95)) {
-          vg.a(o.currentLobbyGame.getGameId((byte) 31), false, 11);
+          vg.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 31), false, 11);
           ed.field_d = true;
           if (param0 != 122) {
             packSelectorIcons = (RgbSprite[]) null;
@@ -34,7 +34,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           }
           return;
         }
-        dn.b(0, -108, 11);
+        dn.requestSpectateGame(0, -108, 11);
         if (param0 != 122) {
           packSelectorIcons = (RgbSprite[]) null;
           return;

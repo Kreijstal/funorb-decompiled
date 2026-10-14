@@ -247,13 +247,13 @@ final class dn extends h {
         }
     }
 
-    final static void b(int param0, int param1, int param2) {
-        int var3 = -51 / ((-23 - param1) / 62);
-        BitPacketBuffer var4 = k.outgoingPackets;
-        var4.writeCipheredOpcode(-13413, param2);
-        var4.writeByte(-100, 3);
-        var4.writeByte(-15, 10);
-        var4.writeShort((byte) 122, param0);
+    final static void requestSpectateGame(int gameId, int obfuscationGuard, int opcode) {
+        int guardArithmetic = -51 / ((-23 - obfuscationGuard) / 62);
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(-13413, opcode);
+        packet.writeByte(-100, 3);
+        packet.writeByte(-15, 10);
+        packet.writeShort((byte) 122, gameId);
     }
 
     final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {

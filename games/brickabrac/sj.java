@@ -517,13 +517,13 @@ final class sj {
               fh.pendingGameOptionsReceived = false;
             } else {
               fh.pendingGameOptionsReceived = true;
-              for (var3_int = 0; var3_int < rh.field_d.length; var3_int++) {
-                rh.field_d[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
+              for (var3_int = 0; var3_int < rh.matchmakingChoiceMask.length; var3_int++) {
+                rh.matchmakingChoiceMask[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
               }
-              bb.field_e = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
-              ResourceArchive.field_c = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard + 222);
-              for (var3_int = 0; var3_int < PowerUpWarning.field_p.length; var3_int++) {
-                PowerUpWarning.field_p[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
+              bb.matchmakingOptionByteOne = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+              ResourceArchive.matchmakingOptionByteTwo = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard + 222);
+              for (var3_int = 0; var3_int < PowerUpWarning.matchmakingSettingMask.length; var3_int++) {
+                PowerUpWarning.matchmakingSettingMask[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
               }
             }
           }

@@ -247,14 +247,14 @@ final class na extends ug {
         }
         if (gj.field_b.pressedButton != 0) {
           if (ea.field_g) {
-            ml.a(param3, -1);
+            ml.requestMatchmakingOptions(param3, -1);
           } else {
             if (go.field_c > 0) {
-              ml.a(param3, -1);
+              ml.requestMatchmakingOptions(param3, -1);
             } else {
               if (QuickChatHelpDialog.field_Yb >= 2 &&
                 IntArrayRequest.heldKeys[12]) {
-                ml.a(param3, -1);
+                ml.requestMatchmakingOptions(param3, -1);
               }
             }
           }
@@ -264,7 +264,7 @@ final class na extends ug {
             pf.field_i != w.field_n[0]) {
             pf.field_i = w.field_n[0];
           }
-          pl.a(param3, Brick.field_O, pf.field_i, true, 0, (byte) -102);
+          pl.requestCreateGame(param3, Brick.field_O, pf.field_i, true, 0, (byte) -102);
         }
         if (0 != nh.field_a.pressedButton) {
           sc.field_c = false;

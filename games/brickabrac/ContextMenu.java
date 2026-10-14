@@ -19,24 +19,24 @@ final class ContextMenu extends UiComponent {
     private UiComponent itemStyle;
     private UiComponent emptyItemStyle;
 
-    final static void a(int param0, byte param1, int param2) {
-        LobbyGame var6 = null;
-        LobbyGame var7 = null;
-        BitPacketBuffer var4 = null;
-        if (MenuSelection.field_i != param2) {
-          var6 = (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)MenuSelection.field_i, -1));
-          var7 = var6;
-          if (var7 != null) {
-            var7.playerNames = null;
+    final static void requestGamePlayerPreview(int opcode, byte obfuscationGuard, int gameId) {
+        LobbyGame previousGameLookup = null;
+        LobbyGame previousGame = null;
+        BitPacketBuffer packet = null;
+        if (MenuSelection.previewGameId != gameId) {
+          previousGameLookup = (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)MenuSelection.previewGameId, -1));
+          previousGame = previousGameLookup;
+          if (previousGame != null) {
+            previousGame.playerNames = null;
           }
-          MenuSelection.field_i = param2;
-          var4 = k.outgoingPackets;
-          var4.writeCipheredOpcode(-13413, param0);
-          var4.writeByte(-29, 3);
-          var4.writeByte(-127, 11);
-          var4.writeShort((byte) 121, param2);
+          MenuSelection.previewGameId = gameId;
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.writeByte(-29, 3);
+          packet.writeByte(-127, 11);
+          packet.writeShort((byte) 121, gameId);
         }
-        int var3 = 20 / ((55 - param1) / 62);
+        int guardArithmetic = 20 / ((55 - obfuscationGuard) / 62);
     }
 
     final void addAction(String text, int actionId, byte obfuscationGuard) {

@@ -194,7 +194,7 @@ final class n {
               var10 = 0;
               while (true) {
                 if (var10 < w.field_n.length) {
-                  stackIn_13_0 = ((rh.field_d[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
+                  stackIn_13_0 = ((rh.matchmakingChoiceMask[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
                   var11_int = stackIn_13_0;
                   if (var11_int != 0) {
                     var9_int++;
@@ -318,13 +318,13 @@ final class n {
           sb.field_c.field_d.processTabPresses(0);
           if (nl.pendingLobbyGame != null) {
             if (GameUiController.field_e.pressedButton != 0) {
-              ef.a(-22809, param0);
+              ef.requestReturnToLobby(-22809, param0);
             }
             if (dn.field_K.pressedButton != 0) {
               if (!fh.pendingGameOptionsReceived) {
-                UnderwaterBackground.a(param0, (byte) 98);
+                UnderwaterBackground.requestFindOpponents(param0, (byte) 98);
               } else {
-                um.a(param3 + 276, param0);
+                um.requestCancelOpponentSearch(param3 + 276, param0);
               }
             }
             JungleBackground.a(param0, nl.pendingLobbyGame, true, false);

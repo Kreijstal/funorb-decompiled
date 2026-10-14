@@ -697,7 +697,7 @@ final class nh {
           sb.field_c.field_d.processTabPresses(0);
           if (null != o.currentLobbyGame) {
             if (GameUiController.field_e.pressedButton != 0) {
-              vg.a(o.currentLobbyGame.getGameId((byte) 123), false, param3);
+              vg.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 123), false, param3);
             }
             if (pf.field_h.pressedButton != 0) {
               hc.field_c = true;

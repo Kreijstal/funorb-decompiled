@@ -10,15 +10,15 @@ final class rf {
     static TableDataRequest field_g;
     static n field_b;
 
-    final static void a(int param0, long param1, boolean param2) {
-        BitPacketBuffer var4 = k.outgoingPackets;
-        var4.writeCipheredOpcode(-13413, param0);
-        var4.position = var4.position + 1;
-        int var5 = var4.position;
-        var4.writeByte(96, 7);
-        var4.writeLong(-23054, param1);
-        var4.backfillByteLength((byte) 113, -var5 + var4.position);
-        if (param2) {
+    final static void requestRemoveOrRejectPlayer(int opcode, long playerId, boolean obfuscationGuard) {
+        BitPacketBuffer packet = k.outgoingPackets;
+        packet.writeCipheredOpcode(-13413, opcode);
+        packet.position = packet.position + 1;
+        int payloadStart = packet.position;
+        packet.writeByte(96, 7);
+        packet.writeLong(-23054, playerId);
+        packet.backfillByteLength((byte) 113, -payloadStart + packet.position);
+        if (obfuscationGuard) {
           return;
         }
         rf.a((byte) 102);
