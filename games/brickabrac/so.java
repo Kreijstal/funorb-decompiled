@@ -159,11 +159,11 @@ final class so {
           var14 = var17;
           var5Lifetime1 = var14;
           var18 = PacketBuffer.a("kartika13", param1, "", -946715356);
-          ob.field_D = IndexedSpriteGeometry.a(0, var22, 0, var18, 0, 1);
-          ob.field_D.palettes = bg.field_n;
+          PasswordFieldRenderer.field_D = IndexedSpriteGeometry.a(0, var22, 0, var18, 0, 1);
+          PasswordFieldRenderer.field_D.palettes = bg.field_n;
           ce.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
           ce.field_e.palettes = bg.field_n;
-          gj.field_c = bd.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
+          gj.field_c = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
             gj.field_c[var7_int] = GameConnectionShell.a(gj.field_c[var7_int], 1);
             if (gj.field_c[var7_int].width == 0 ||
@@ -217,7 +217,7 @@ final class so {
           SingleChildWidget.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
           dg.field_b = cr.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
           GameConnectionShell.field_D = cr.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
-          dk.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
+          AccountRegistrationPanel.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
           TextHotspotRegion.field_p = cr.loadRgbSpritesByName("basic", param0, "powerup", 2);
           LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
@@ -232,13 +232,13 @@ final class so {
           lp.field_yb = cr.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
           qi.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
           ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
-          ln.field_j = bd.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
-          IntHistoryBuffer.field_l = bd.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
+          ln.field_j = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
+          IntHistoryBuffer.field_l = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
           me.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
           pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = cr.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = cr.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
-          ValidationStatus.field_e = um.a("basic", "congratulations", 1593955777, param0);
+          ValidationStatus.field_e = TextWidgetRenderer.a("basic", "congratulations", 1593955777, param0);
           pa.field_m = new RgbSprite[SingleChildWidget.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
             pa.field_m[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
@@ -263,9 +263,9 @@ final class so {
             LevelPackSelectScreen.field_z[var10_intLifetime5].bindRasterTarget();
             GameConnectionShell.field_D[var10_intLifetime5].a(0, 0);
           }
-          WidgetTextLayout.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
+          WidgetTextLayout.field_j = new RgbSprite(AccountRegistrationPanel.field_R.canvasWidth / 2, AccountRegistrationPanel.field_R.canvasHeight / 2);
           WidgetTextLayout.field_j.bindRasterTarget();
-          dk.field_R.a(0, 0);
+          AccountRegistrationPanel.field_R.a(0, 0);
           PlayerInputBatch.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
           PlayerInputBatch.field_i.bindRasterTarget();
           MenuSelection.field_k.a(0, 0);
@@ -288,10 +288,10 @@ final class so {
           for (var10_intLifetime8 = 0; IntHistoryBuffer.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
             IntHistoryBuffer.field_l[var10_intLifetime8].trimTransparentBorders();
           }
-          um.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
+          TextWidgetRenderer.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
           pa.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
           gr.field_d = cr.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
-          nl.field_b = um.a("basic", "logo", 1593955777, param0);
+          nl.field_b = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
           PasswordValidator.field_l = cr.loadRgbSpritesByName("basic", param0, "sliders", 2);
           SocialListEntry.field_Vb = cr.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
           pa.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
@@ -348,7 +348,7 @@ final class so {
             hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 127);
-          SaveResultsPromptScreen.packCardIcons = bd.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);
+          SaveResultsPromptScreen.packCardIcons = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);
           ArchiveNetworkRequest.packSelectorIcons = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {
             ArchiveNetworkRequest.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);

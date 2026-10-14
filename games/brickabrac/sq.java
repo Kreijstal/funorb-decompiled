@@ -174,7 +174,7 @@ final class sq {
           var4_ref_nn.contextMenu.addAction(var5_ref_String, 5, (byte) 104);
           var4_ref_nnLifetime1 = bm.contextActions;
           var5 = tb.pressX;
-          var6 = qo.pressY;
+          var6 = PlayerNameChooserPanel.pressY;
           var4_ref_nnLifetime1.contextMenu.layoutAtAnchor(var6, -98, 0, 0, var5);
         }
         int var4 = -44 % ((-3 - param2) / 50);

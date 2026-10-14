@@ -13,12 +13,12 @@ final class np {
         bj.widgetTheme = sh.a((byte) 84);
         if (!param0) {
           ResourceArchive.field_f = new WidgetLayerStack();
-          ag.a((byte) -16, true, true);
+          ArrayWidgetGroup.a((byte) -16, true, true);
           return;
         }
         field_e = (String) null;
         ResourceArchive.field_f = new WidgetLayerStack();
-        ag.a((byte) -16, true, true);
+        ArrayWidgetGroup.a((byte) -16, true, true);
     }
 
     public static void a(boolean param0) {

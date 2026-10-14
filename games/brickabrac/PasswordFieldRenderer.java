@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends r {
+final class PasswordFieldRenderer extends TextFieldRenderer {
     static int pendingPacketOpcode;
     static AudioMixer soundMixer;
     static String field_H;
@@ -30,7 +30,7 @@ final class ob extends r {
           param1 = param1 + (param1 >>> 16);
           return 255 & param1;
         }
-        ob.b((byte) 47, 6);
+        PasswordFieldRenderer.b((byte) 47, 6);
         param1 = ((param1 & -1431655766) >>> 1) + (1431655765 & param1);
         param1 = ((param1 & -858993460) >>> 2) + (param1 & 858993459);
         param1 = (param1 >>> 4) + param1 & 252645135;
@@ -39,11 +39,11 @@ final class ob extends r {
         return 255 & param1;
     }
 
-    ob(int param0) {
-        this(ArchiveNetworkClient.field_u, param0);
+    PasswordFieldRenderer(int textColor) {
+        this(ArchiveNetworkClient.field_u, textColor);
     }
 
-    final String a(Widget param0, boolean param1) {
+    final String getDisplayText(Widget widget, boolean obfuscationGuard) {
         RuntimeException var3 = null;
         Widget var4 = null;
         String stackIn_3_0 = null;
@@ -52,28 +52,28 @@ final class ob extends r {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             var4 = (Widget) null;
-            this.a((Widget) null, false);
+            this.getDisplayText((Widget) null, false);
           }
-          stackIn_3_0 = InteractiveGameClient.a('*', 122, param0.text.length());
+          stackIn_3_0 = InteractiveGameClient.a('*', 122, widget.text.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("ob.Q(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private ob(TextFont param0, int param1) {
-        super(param0, param1);
+    private PasswordFieldRenderer(TextFont font, int textColor) {
+        super(font, textColor);
     }
 
     static {

@@ -255,6 +255,6 @@ final class IsaacGenerator {
 
     static {
         field_g = new n();
-        qo.a(150, 50);
+        PlayerNameChooserPanel.a(150, 50);
     }
 }

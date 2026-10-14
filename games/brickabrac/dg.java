@@ -196,7 +196,7 @@ final class dg implements WidgetRenderer {
     }
 
     final static void a(boolean param0) {
-        bd.a(17, param0);
+        CheckboxWidgetRenderer.a(17, param0);
     }
 
     final static void a(int param0, int param1, int param2, RgbSprite param3, RgbSprite param4, int param5, int param6, RgbSprite param7, int param8, int param9) {

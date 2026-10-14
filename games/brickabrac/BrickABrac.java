@@ -129,7 +129,7 @@ public final class BrickABrac extends InteractiveGameClient {
 
     final void initializeClient(boolean obfuscationGuard) {
         this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
-        hi.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
+        ButtonWidgetRenderer.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         nk.field_c = new RgbSprite(640, 480);
         Widget.a(lp.field_ub, (byte) 60, CacheIoRequest.field_D);
         this.registerUiLifecycle(3160, new GameUiController());
@@ -427,7 +427,7 @@ public final class BrickABrac extends InteractiveGameClient {
             Mesh3D.updateRematchCaption(obfuscationGuard ^ 46);
           }
           ed.field_d = false;
-          r.field_A = false;
+          TextFieldRenderer.field_A = false;
           pf.field_p = false;
           ng.requestScreen(false, obfuscationGuard ^ 105, -1);
           return true;
@@ -474,7 +474,7 @@ public final class BrickABrac extends InteractiveGameClient {
             }
           }
         }
-        dk.h((byte) -64);
+        AccountRegistrationPanel.h((byte) -64);
     }
 
     public BrickABrac() {
@@ -549,9 +549,9 @@ public final class BrickABrac extends InteractiveGameClient {
           BrickABrac.s(116);
         }
         if (angle >= 4096) {
-          return angle < 6144 ? -um.quarterSineQ16[6144 - angle] : um.quarterSineQ16[angle - 6144];
+          return angle < 6144 ? -TextWidgetRenderer.quarterSineQ16[6144 - angle] : TextWidgetRenderer.quarterSineQ16[angle - 6144];
         }
-        return 2048 > angle ? um.quarterSineQ16[-angle + 2048] : -um.quarterSineQ16[-2048 + angle];
+        return 2048 > angle ? TextWidgetRenderer.quarterSineQ16[-angle + 2048] : -TextWidgetRenderer.quarterSineQ16[-2048 + angle];
     }
 
     final void clearClientResources(boolean obfuscationGuard) {
@@ -733,10 +733,10 @@ public final class BrickABrac extends InteractiveGameClient {
         tb.m(-48);
         bh.n(28);
         lp.o(50);
-        dk.a(-11310);
+        AccountRegistrationPanel.a(-11310);
         he.a((byte) 36);
         hk.i((byte) 88);
-        qo.h(-106);
+        PlayerNameChooserPanel.h(-106);
         WidgetTheme.a(-31063);
         ua.a(2);
         ll.a(!obfuscationGuard ? true : false);
@@ -745,7 +745,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ArchiveFetchClient.c(-12200);
         CacheIoWorker.b(26679);
         co.b(-70);
-        um.a(31292);
+        TextWidgetRenderer.a(31292);
         MeshRasterState.releaseTables();
         VorbisSample.releaseScratch();
         MeshAttributeRecord.a(-9669);
@@ -762,7 +762,7 @@ public final class BrickABrac extends InteractiveGameClient {
         kn.a((byte) 90);
         BirthDateValidator.c((byte) -93);
         DateFieldsWidget.k((byte) 84);
-        ag.c(false);
+        ArrayWidgetGroup.c(false);
         FocusableWidget.g(-66);
         Widget.c(-14711);
         WidgetTextLayout.a(obfuscationGuard);
@@ -817,7 +817,7 @@ public final class BrickABrac extends InteractiveGameClient {
         TextFieldWidget.i(80);
         fe.l(98);
         cr.a((byte) 123);
-        ri.a((byte) -83);
+        UsernameSuggestionPanel.a((byte) -83);
         HotspotTextWidget.j(-2);
         ValidationIconWidget.a(2);
         ValidationMessageWidget.f((byte) -42);
@@ -868,11 +868,11 @@ public final class BrickABrac extends InteractiveGameClient {
         TableRowSubmission.a(-241);
         TableNameEntry.a((byte) -105);
         RankingsRequest.a((byte) -105);
-        hi.c((byte) -93);
-        bb.a(false);
-        r.d((byte) 91);
-        ob.b(-95);
-        bd.a(true);
+        ButtonWidgetRenderer.c((byte) -93);
+        LinkWidgetRenderer.a(false);
+        TextFieldRenderer.d((byte) 91);
+        PasswordFieldRenderer.b(-95);
+        CheckboxWidgetRenderer.a(true);
         OpacityWidget.a(51550);
         SoundPlayback.a((byte) 49);
         po.b(-81);

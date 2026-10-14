@@ -398,9 +398,9 @@ final class nh {
               stackIn_23_0.enabled = stackIn_24_1;
               var10 = 2;
               if (null != ContextMenu.field_bc) {
-                if (qo.field_J == null) {
+                if (PlayerNameChooserPanel.field_J == null) {
                   SingleChildWidget.field_D = new boolean[RankingsRequest.gameSettingCount];
-                  qo.field_J = new byte[RankingsRequest.gameSettingCount];
+                  PlayerNameChooserPanel.field_J = new byte[RankingsRequest.gameSettingCount];
                 }
                 var11 = 0;
                 do {
@@ -679,7 +679,7 @@ final class nh {
               }
               var8.text = rd.a(SpriteGeometry.field_w, new String[]{Integer.toString(var9)}, (byte) 103);
             }
-            um.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.currentLobbyGame.playerCount), Integer.toString(o.currentLobbyGame.maxPlayers)}, (byte) 103);
+            TextWidgetRenderer.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.currentLobbyGame.playerCount), Integer.toString(o.currentLobbyGame.maxPlayers)}, (byte) 103);
           }
           stackIn_174_0 = NinjaBackground.field_w;
           stackIn_175_1 = (param2) && (!param1) && (!hc.field_c);

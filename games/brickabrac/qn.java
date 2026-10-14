@@ -142,7 +142,7 @@ final class qn {
           HotspotTextWidget.field_L = param2;
           wo.field_a = param0;
           FarmBackground.field_w = HotspotTextWidget.field_L - PauseMenuScreen.field_x;
-          ag.field_E = -Mesh3D.field_k + wo.field_a;
+          ArrayWidgetGroup.field_E = -Mesh3D.field_k + wo.field_a;
           return;
         }
         qn.b(109);
@@ -150,7 +150,7 @@ final class qn {
         HotspotTextWidget.field_L = param2;
         wo.field_a = param0;
         FarmBackground.field_w = HotspotTextWidget.field_L - PauseMenuScreen.field_x;
-        ag.field_E = -Mesh3D.field_k + wo.field_a;
+        ArrayWidgetGroup.field_E = -Mesh3D.field_k + wo.field_a;
     }
 
     final GameCanvas a(boolean param0) {

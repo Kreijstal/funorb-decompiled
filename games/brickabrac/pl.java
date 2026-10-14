@@ -232,7 +232,7 @@ final class pl {
           var4_int = archive.getGroupId(groupName, false);
           var5 = archive.getFileId(var4_int, -108, fileName);
           var6 = 116 % ((40 - obfuscationGuard) / 57);
-          stackIn_1_0 = dk.loadRgbSprite(-873, archive, var4_int, var5);
+          stackIn_1_0 = AccountRegistrationPanel.loadRgbSprite(-873, archive, var4_int, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

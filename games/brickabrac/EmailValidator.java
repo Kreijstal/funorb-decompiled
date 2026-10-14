@@ -25,7 +25,7 @@ final class EmailValidator extends TextFieldValidator {
           kn.livePointerChanged = false;
           BackgroundScene.pressedButton = mi.livePressedButton;
           tb.pressX = SoundPlayback.livePressX;
-          qo.pressY = va.livePressY;
+          PlayerNameChooserPanel.pressY = va.livePressY;
           mi.livePressedButton = 0;
           var2 = 54 / ((obfuscationGuard + 49) / 63);
         }

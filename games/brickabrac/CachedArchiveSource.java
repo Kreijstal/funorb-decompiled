@@ -85,7 +85,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (var4 >= 0) {
               var2 = var2 + GameClock.field_g;
               if (ArcticBackground.field_r.selectedIndex != var4) {
-                stackIn_17_0 = ag.field_F;
+                stackIn_17_0 = ArrayWidgetGroup.field_F;
               } else {
                 stackIn_17_0 = EmailConfirmationValidator.field_l;
               }

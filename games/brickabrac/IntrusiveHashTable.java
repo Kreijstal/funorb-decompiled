@@ -191,22 +191,22 @@ final class IntrusiveHashTable {
         int var8 = 0;
         int var9 = 0;
         int var10 = BrickABrac.field_J ? 1 : 0;
-        int var4 = -5 + (640 - um.field_p.canvasWidth);
-        int var5 = -20 + (480 - um.field_p.canvasHeight + 15);
+        int var4 = -5 + (640 - TextWidgetRenderer.field_p.canvasWidth);
+        int var5 = -20 + (480 - TextWidgetRenderer.field_p.canvasHeight + 15);
         int var8Lifetime1;
         int var8Lifetime2;
         int var8Lifetime3;
         int var9Lifetime1;
         int var9Lifetime2;
-        um.field_p.drawTransparent(var4, var5);
+        TextWidgetRenderer.field_p.drawTransparent(var4, var5);
         if (param1 >= -115) {
           IntrusiveHashTable.a(75, (byte) 65, 92, -101);
         }
-        int var6 = var4 + (um.field_p.canvasWidth - pa.field_j.canvasWidth) / 2;
+        int var6 = var4 + (TextWidgetRenderer.field_p.canvasWidth - pa.field_j.canvasWidth) / 2;
         int var7 = 64 + var5;
         if ((param2 | param0) <= 0) {
           pa.field_j.drawTransparent(var6, var7);
-          var8 = -20 + ((-gr.field_d[param3].canvasWidth + um.field_p.canvasWidth) / 2 + var4);
+          var8 = -20 + ((-gr.field_d[param3].canvasWidth + TextWidgetRenderer.field_p.canvasWidth) / 2 + var4);
           var9 = 480 - gr.field_d[param3].canvasHeight + 60;
           gr.field_d[param3].drawTransparent(var8, var9);
           return;
@@ -223,7 +223,7 @@ final class IntrusiveHashTable {
         if (0 >= var9Lifetime1) {
           if (var9Lifetime1 >= 0) {
             pa.field_j.drawTransparent(var6, var7);
-            var8Lifetime2 = -20 + ((-gr.field_d[param3].canvasWidth + um.field_p.canvasWidth) / 2 + var4);
+            var8Lifetime2 = -20 + ((-gr.field_d[param3].canvasWidth + TextWidgetRenderer.field_p.canvasWidth) / 2 + var4);
             var9Lifetime1 = 480 - gr.field_d[param3].canvasHeight + 60;
             gr.field_d[param3].drawTransparent(var8Lifetime2, var9Lifetime1);
             return;
@@ -233,7 +233,7 @@ final class IntrusiveHashTable {
           var6 = var6 - 6 * var9Lifetime1 / (var9Lifetime1 + param0);
         }
         pa.field_j.drawTransparent(var6, var7);
-        var8Lifetime3 = -20 + ((-gr.field_d[param3].canvasWidth + um.field_p.canvasWidth) / 2 + var4);
+        var8Lifetime3 = -20 + ((-gr.field_d[param3].canvasWidth + TextWidgetRenderer.field_p.canvasWidth) / 2 + var4);
         var9Lifetime2 = 480 - gr.field_d[param3].canvasHeight + 60;
         gr.field_d[param3].drawTransparent(var8Lifetime3, var9Lifetime2);
     }

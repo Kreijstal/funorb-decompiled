@@ -134,7 +134,7 @@ final class CacheIoRequest extends ResourceRequest {
           }
           co.a(stackIn_4_0, false);
           sb.field_c.a(NinjaBackground.field_w.width, 0, 88, 0, -40 + NinjaBackground.field_w.height - 2);
-          um.field_b.setBounds(np.uiRowHeight, 0, 0, ji.field_b.width, (byte) 64);
+          TextWidgetRenderer.field_b.setBounds(np.uiRowHeight, 0, 0, ji.field_b.width, (byte) 64);
           stackIn_6_0 = BoundedFile.field_g;
           stackIn_6_1 = 18;
           stackIn_6_2 = np.uiRowHeight + 2;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo extends ag implements WidgetActionListener {
+final class mo extends ArrayWidgetGroup implements WidgetActionListener {
     static UiComponent field_R;
     static String field_O;
     private DateFieldsWidget field_P;
@@ -21,17 +21,17 @@ final class mo extends ag implements WidgetActionListener {
 
     mo(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetRenderer) null);
-        this.field_P = new DateFieldsWidget(new r(10000536), RasterSnapshot.field_j, 0, 0, 140, 25);
+        this.field_P = new DateFieldsWidget(new TextFieldRenderer(10000536), RasterSnapshot.field_j, 0, 0, 140, 25);
         this.field_P.setBirthDateValidator(new BirthDateValidator(), (byte) -12);
-        this.field_Q = new FocusableWidget(ri.field_L, (WidgetListener) (this));
-        this.field_H = new Widget[]{(Widget) ((Object) this.field_P), (Widget) ((Object) this.field_Q)};
-        this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
+        this.field_Q = new FocusableWidget(UsernameSuggestionPanel.field_L, (WidgetListener) (this));
+        this.children = new Widget[]{(Widget) ((Object) this.field_P), (Widget) ((Object) this.field_Q)};
+        this.field_Q.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
         this.relayout(1);
     }
 
-    final void a(int param0) {
+    final void layoutChildren(int obfuscationGuard) {
         int var2 = 250;
-        this.field_P.setBounds(25, -var2 + this.width >> 1, this.height - 5 >> 1, (byte) -119, param0);
+        this.field_P.setBounds(25, -var2 + this.width >> 1, this.height - 5 >> 1, (byte) -119, obfuscationGuard);
         this.field_Q.setBounds(30, 140 + (-var2 + this.width >> 1) + 10, (20 + (this.height - 30) >> 1) + 2, (byte) -119, 100);
     }
 

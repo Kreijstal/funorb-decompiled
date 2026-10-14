@@ -62,7 +62,7 @@ class DualLinkNode extends IntrusiveNode {
           if (param4 >= -96) {
             return;
           }
-          if (r.field_A &&
+          if (TextFieldRenderer.field_A &&
             !ValidationIconWidget.field_N) {
             return;
           }
@@ -231,7 +231,7 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!bd.hasValidPlayerNameShape(name, 0, true)) {
+          if (!CheckboxWidgetRenderer.hasValidPlayerNameShape(name, 0, true)) {
             return false;
           }
           var2_int = 0;

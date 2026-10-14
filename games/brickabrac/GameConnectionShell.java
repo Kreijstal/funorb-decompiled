@@ -419,10 +419,10 @@ abstract class GameConnectionShell extends AppletGameShell {
                 var12 = po.countryListRequest.getResult((byte) 100);
                 if (var12 != null) {
                   var7 = df.decodeCp1252(var12.position, 97, var12.data, 0);
-                  hi.a(85, var7);
+                  ButtonWidgetRenderer.a(85, var7);
                 } else {
                   var9 = (String) null;
-                  hi.a(85, (String) null);
+                  ButtonWidgetRenderer.a(85, (String) null);
                 }
                 po.countryListRequest = null;
               }
@@ -430,7 +430,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
               AlignedIconLabel.a("S1", (Throwable) ((Object) var5), 28);
-              hi.a(param1 ^ 123, (String) null);
+              ButtonWidgetRenderer.a(param1 ^ 123, (String) null);
               po.countryListRequest = null;
             }
           }
@@ -543,7 +543,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             PowerUpWarning.acceptChatMessage(var3, 79);
                           }
                         } else {
-                          um.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, lp.field_ub);
+                          TextWidgetRenderer.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, lp.field_ub);
                         }
                       } else {
                         stackIn_22_1 = !(obfuscationGuard);
@@ -711,7 +711,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         wn.snapshotKeyboardInput((byte) -97);
         EmailValidator.snapshotMouseInput(70);
-        if (!r.c((byte) -114) &&
+        if (!TextFieldRenderer.c((byte) -114) &&
           AchievementIcon.field_j != 11) {
           GameplayAudioEvent.c(27144);
         }
@@ -845,7 +845,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           ui.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
           SpaceBackground.field_t = false;
-          ri.field_N = cm.field_t;
+          UsernameSuggestionPanel.field_N = cm.field_t;
           MultiplayerExitScreen.a(FarmBackground.field_u, ja.field_c, LabeledWidget.field_P, RadialSelectorWidget.field_S, guardCode ^ 23);
           if (MatchingTextValidator.field_k ||
             null != LevelDecoder.field_a) {
@@ -858,9 +858,9 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           if (null == EmailValidator.field_l) {
             EmailValidator.field_l = StateIconLabel.h(114);
-            ri.field_M = ar.a((byte) 120);
+            UsernameSuggestionPanel.field_M = ar.a((byte) 120);
           }
-          BallPulseEffect.a(ja.field_c, EmailValidator.field_l, ri.field_M, 107);
+          BallPulseEffect.a(ja.field_c, EmailValidator.field_l, UsernameSuggestionPanel.field_M, 107);
           RadialSelectorWidget.field_S = null;
           LabeledWidget.field_P = null;
           ja.field_c = null;

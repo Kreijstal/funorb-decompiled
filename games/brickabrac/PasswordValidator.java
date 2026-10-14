@@ -23,13 +23,13 @@ final class PasswordValidator extends TextFieldValidator {
 
     final static void e(byte param0) {
         if (param0 <= -77) {
-          um.field_e = false;
-          qo.field_I = jl.incomingPackets.readUnsignedByte(255) == 0 ? true : false;
+          TextWidgetRenderer.field_e = false;
+          PlayerNameChooserPanel.field_I = jl.incomingPackets.readUnsignedByte(255) == 0 ? true : false;
           return;
         }
         field_m = (String) null;
-        um.field_e = false;
-        qo.field_I = jl.incomingPackets.readUnsignedByte(255) == 0 ? true : false;
+        TextWidgetRenderer.field_e = false;
+        PlayerNameChooserPanel.field_I = jl.incomingPackets.readUnsignedByte(255) == 0 ? true : false;
     }
 
     private final boolean containsEmailPart(int obfuscationGuard, String password) {

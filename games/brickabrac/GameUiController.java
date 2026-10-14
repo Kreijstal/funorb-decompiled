@@ -18,10 +18,10 @@ final class GameUiController implements GameUiLifecycle {
         }
         if (rf.field_g.complete) {
           be.field_a = true;
-          r.field_A = true;
+          TextFieldRenderer.field_A = true;
           if (null != rf.field_g.names &&
             null != rf.field_g.names[1][0]) {
-            r.field_A = false;
+            TextFieldRenderer.field_A = false;
             be.field_a = false;
             return true;
           }
@@ -51,7 +51,7 @@ final class GameUiController implements GameUiLifecycle {
         VolcanicBackground.g(0);
         qn.a(240, 0, 640, 0, -6532);
         bm.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
-        Widget.a(1, ob.field_D);
+        Widget.a(1, PasswordFieldRenderer.field_D);
         hk.h((byte) 55);
         hk.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         lp.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
@@ -169,7 +169,7 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         bh.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
-        bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, bb.field_a);
+        bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, LinkWidgetRenderer.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
         bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
         bh.field_tb.a(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);

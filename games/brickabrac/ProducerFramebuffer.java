@@ -198,7 +198,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                   }
                   else {
                     var16.drawTransparent(var7_int, var8);
-                    if (r.field_A &&
+                    if (TextFieldRenderer.field_A &&
                       MusicVoice.a((byte) 89) &&
                       4 == ga.field_i &&
                       (2 & var14.flags) != 0) {

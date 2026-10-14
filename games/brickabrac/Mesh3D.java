@@ -156,30 +156,30 @@ final class Mesh3D {
         }
         if (IntArrayRequest.gameplayScreen.resultWordMode) {
           if ((IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask & 1 << IntArrayRequest.gameplayScreen.localPlayerId) != 0) {
-            ag.buttonLabels[12] = mi.field_a;
+            ArrayWidgetGroup.buttonLabels[12] = mi.field_a;
           } else {
             if (IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask != 0) {
-              ag.buttonLabels[12] = qm.field_c;
+              ArrayWidgetGroup.buttonLabels[12] = qm.field_c;
             } else {
               if ((1 << IntArrayRequest.gameplayScreen.localPlayerId | IntArrayRequest.gameplayScreen.rematchSetupPlayerMask) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
-                ag.buttonLabels[12] = s.field_a;
+                ArrayWidgetGroup.buttonLabels[12] = s.field_a;
               } else {
-                ag.buttonLabels[12] = TabbedPane.field_Pb;
+                ArrayWidgetGroup.buttonLabels[12] = TabbedPane.field_Pb;
               }
             }
           }
         } else {
           if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask) != 0) {
-            ag.buttonLabels[12] = ff.field_g;
+            ArrayWidgetGroup.buttonLabels[12] = ff.field_g;
           } else {
             if (0 == IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask) {
               if ((IntArrayRequest.gameplayScreen.rematchSetupPlayerMask | 1 << IntArrayRequest.gameplayScreen.localPlayerId) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
-                ag.buttonLabels[12] = RectangleBody.field_t;
+                ArrayWidgetGroup.buttonLabels[12] = RectangleBody.field_t;
               } else {
-                ag.buttonLabels[12] = bm.field_b;
+                ArrayWidgetGroup.buttonLabels[12] = bm.field_b;
               }
             } else {
-              ag.buttonLabels[12] = MusicPatch.field_m;
+              ArrayWidgetGroup.buttonLabels[12] = MusicPatch.field_m;
             }
           }
         }
@@ -255,7 +255,7 @@ final class Mesh3D {
     }
 
     final static void d(int param0) {
-        o.field_c = new dk();
+        o.field_c = new AccountRegistrationPanel();
         if (param0 != -1) {
           return;
         }

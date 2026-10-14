@@ -210,9 +210,9 @@ final class BubbleDistortion extends CircleBody {
           PcmPlayer.a(param2, param7, 10);
           DirectByteStorage.field_f = PcmPlayer.a(param1, param6, 0, param4);
           UnderwaterBackground.field_w = PcmPlayer.a(param1, param6, 1, param3);
-          ob.soundMixer = new AudioMixer();
+          PasswordFieldRenderer.soundMixer = new AudioMixer();
           AchievementBrowserScreen.field_u = param5 * param3 / param2;
-          UnderwaterBackground.field_w.setRootStream(ob.soundMixer);
+          UnderwaterBackground.field_w.setRootStream(PasswordFieldRenderer.soundMixer);
           m.musicSynthesizer = param0;
           m.musicSynthesizer.setMasterGain(ScorePopup.field_p, false);
           DirectByteStorage.field_f.setRootStream(m.musicSynthesizer);

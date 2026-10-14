@@ -140,7 +140,7 @@ final class kn extends DualLinkNode {
           if (!param0) {
             kn.a((byte) -116);
           }
-          ToggleButtonWidget.a(ri.field_N, 8192, WidgetTextLayout.field_a, LevelCompleteScreen.field_C);
+          ToggleButtonWidget.a(UsernameSuggestionPanel.field_N, 8192, WidgetTextLayout.field_a, LevelCompleteScreen.field_C);
           ck.a(param1, 0, 14209, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

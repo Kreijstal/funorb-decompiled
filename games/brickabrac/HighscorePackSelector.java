@@ -74,7 +74,7 @@ final class HighscorePackSelector {
           snapshot = new RasterSnapshot();
         }
         snapshot.capture(Rasterizer2D.pixels, Rasterizer2D.clipLeft, Rasterizer2D.width, Rasterizer2D.height, obfuscationGuard ^ 194, Rasterizer2D.clipRight, Rasterizer2D.clipTop, Rasterizer2D.clipBottom);
-        hi.rasterStack.addLast(snapshot, (byte) 3);
+        ButtonWidgetRenderer.rasterStack.addLast(snapshot, (byte) 3);
     }
 
     final static SocialListEntry findIgnoredPlayer(int obfuscationGuard, String name) {

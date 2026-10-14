@@ -3,7 +3,7 @@
  */
 final class MusicPatch extends IntrusiveNode {
     int gain;
-    static qo field_o;
+    static PlayerNameChooserPanel field_o;
     MusicEnvelope[] envelopes;
     static String field_q;
     short[] pitchOffsets;

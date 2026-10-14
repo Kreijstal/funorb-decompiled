@@ -252,7 +252,7 @@ final class LobbyGame extends UiComponent {
             var16 = ContextActionController.field_g.measureText(param4.displayedMessage) + 20;
             nh.a(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
             AlignedIconLabel.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
-            ob.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.ascent), 6, -1);
+            PasswordFieldRenderer.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + PasswordFieldRenderer.field_D.ascent), 6, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -401,7 +401,7 @@ final class LobbyGame extends UiComponent {
             var16 = ContextActionController.field_g.measureText(param4.displayedMessage) + 20;
             nh.a(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), qi.field_K, 2 + var10Lifetime1);
             AlignedIconLabel.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
-            ob.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + ob.field_D.ascent), 6, -1);
+            PasswordFieldRenderer.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + PasswordFieldRenderer.field_D.ascent), 6, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

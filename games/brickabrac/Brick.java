@@ -131,7 +131,7 @@ final class Brick extends RectangleBody {
           if ((this.flags & 2) != 0 &&
             board.a(26, this.typeId)) {
             board.fallingPowerUps.addLast(new PowerUp(this.x256 + this.width256 / 2 - 2048, this.y256 + this.height256 * 2, this.typeId), (byte) 3);
-            if (!r.field_A) {
+            if (!TextFieldRenderer.field_A) {
               return;
             }
             WidgetLayer.a(this.typeId, 2, (byte) -92);

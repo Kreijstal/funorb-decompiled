@@ -102,12 +102,12 @@ final class ik implements Iterator {
           if (message.channel != 2) {
             if (message.channel != 4) {
               if (~message.senderId != ~Widget.field_p) {
-                var2_intLifetime1 = r.field_C[message.channel];
+                var2_intLifetime1 = TextFieldRenderer.field_C[message.channel];
               } else {
                 var2_intLifetime1 = BackgroundScene.field_i[message.channel];
               }
             } else {
-              var2_intLifetime1 = r.field_C[message.channel];
+              var2_intLifetime1 = TextFieldRenderer.field_C[message.channel];
             }
           } else {
             if (!message.systemMessage) {
@@ -115,7 +115,7 @@ final class ik implements Iterator {
                 message.messageKeyLow24 == 0) {
                 var2_intLifetime1 = BackgroundScene.field_i[message.channel];
               } else {
-                var2_intLifetime1 = r.field_C[message.channel];
+                var2_intLifetime1 = TextFieldRenderer.field_C[message.channel];
               }
             } else {
               var2_intLifetime1 = cn.field_d;

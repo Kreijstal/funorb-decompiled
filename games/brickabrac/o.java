@@ -9,7 +9,7 @@ final class o {
     static ScrollPane field_b;
     static QuickChatParameterType field_h;
     static int enabledFeatureMask;
-    static dk field_c;
+    static AccountRegistrationPanel field_c;
 
     final static boolean d(int param0) {
         if (param0 != -572695519) {

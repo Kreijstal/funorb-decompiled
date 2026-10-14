@@ -122,8 +122,8 @@ final class SecondaryNodeQueue {
           BallPulseEffect.field_j = param1;
           ta.field_g = param3;
           ic.field_a = param0;
-          ag.field_G = param4;
-          GameScreen.field_e = new SoundCache(ag.field_G, ta.field_g);
+          ArrayWidgetGroup.field_G = param4;
+          GameScreen.field_e = new SoundCache(ArrayWidgetGroup.field_G, ta.field_g);
           if (param2 != -38) {
             field_a = (String) null;
           }

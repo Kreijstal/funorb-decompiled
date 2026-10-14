@@ -202,10 +202,10 @@ final class SaveResultsPromptScreen extends MenuScreen {
           if (!param0) {
             field_y = (String) null;
           }
-          var3 = (nj) (ob.field_E.first(-58));
+          var3 = (nj) (PasswordFieldRenderer.field_E.first(-58));
           while (var3 != null) {
             var3.a(-1196049244, param2 << 4);
-            var3 = (nj) (ob.field_E.next((byte) 116));
+            var3 = (nj) (PasswordFieldRenderer.field_E.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

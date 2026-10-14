@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionListener, vf {
+final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotListener, WidgetActionListener, UsernameSuggestionListener {
     static RgbSprite field_R;
-    private ToggleButtonWidget field_N;
-    private HotspotTextWidget field_I;
-    private ValidatedTextFieldWidget field_M;
-    private FocusableWidget field_Q;
-    private ValidatedTextFieldWidget field_L;
-    private ValidatedTextFieldWidget field_O;
-    private ValidatedTextFieldWidget field_S;
-    private ValidatedTextFieldWidget field_J;
-    private ValidatedTextFieldWidget field_H;
-    private FocusableWidget field_P;
-    ri field_K;
+    private ToggleButtonWidget newsletterToggle;
+    private HotspotTextWidget termsLinks;
+    private ValidatedTextFieldWidget emailField;
+    private FocusableWidget registerButton;
+    private ValidatedTextFieldWidget passwordConfirmationField;
+    private ValidatedTextFieldWidget passwordField;
+    private ValidatedTextFieldWidget ageField;
+    private ValidatedTextFieldWidget usernameField;
+    private ValidatedTextFieldWidget emailConfirmationField;
+    private FocusableWidget backButton;
+    UsernameSuggestionPanel suggestionPanel;
 
     final static void a(String param0, boolean param1, int param2, boolean param3, int param4) {
         String stackIn_4_0 = null;
@@ -57,17 +57,17 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
             for (var9 = 0; var8 > var9; var9++) {
               MenuSelection.field_q[var9] = -1;
             }
-            hi.field_A = new int[2];
+            ButtonWidgetRenderer.field_A = new int[2];
             for (var9 = 0; var7 > var9; var9++) {
               kn.field_E[var9] = RasterSnapshot.field_r[var9];
             }
             kn.field_E[-3 + var8] = "";
             kn.field_E[var8 - 2] = var6;
             MenuSelection.field_q[-2 + var8] = 0;
-            hi.field_A[0] = 1;
+            ButtonWidgetRenderer.field_A[0] = 1;
             kn.field_E[-1 + var8] = LevelSequence.field_a;
             MenuSelection.field_q[var8 - 1] = 1;
-            hi.field_A[1] = 2;
+            ButtonWidgetRenderer.field_A[1] = 2;
           } else {
             if (LevelSelectScreen.field_v != 1) {
               throw new IllegalArgumentException();
@@ -79,16 +79,16 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
             for (var9 = 0; var8 > var9; var9++) {
               MenuSelection.field_q[var9] = -1;
             }
-            hi.field_A = new int[1];
+            ButtonWidgetRenderer.field_A = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
               kn.field_E[var9] = RasterSnapshot.field_r[var9];
             }
             kn.field_E[var8 - 2] = "";
             kn.field_E[-1 + var8] = LevelSequence.field_a;
             MenuSelection.field_q[-1 + var8] = 0;
-            hi.field_A[0] = 2;
+            ButtonWidgetRenderer.field_A[0] = 2;
           }
-          ArcticBackground.field_r.itemCount = hi.field_A.length;
+          ArcticBackground.field_r.itemCount = ButtonWidgetRenderer.field_A.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < kn.field_E.length; var8Lifetime1++) {
             stackIn_25_0 = 0;
@@ -152,16 +152,16 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         return "</col></u>";
     }
 
-    private final boolean i(int param0) {
-        if (!this.h(param0 + 10000537)) {
+    private final boolean submitRegistration(int obfuscationGuard) {
+        if (!this.canSubmitRegistration(obfuscationGuard + 10000537)) {
           return false;
         }
-        int var2 = param0;
+        int var2 = obfuscationGuard;
         try {
-          var2 = Integer.parseInt(this.field_S.text);
+          var2 = Integer.parseInt(this.ageField.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return ArchiveSource.a(this.field_J.text, this.field_O.text, this.field_M.text, var2, (byte) -126, this, this.field_N.active);
+        return ArchiveSource.a(this.usernameField.text, this.passwordField.text, this.emailField.text, var2, (byte) -126, this, this.newsletterToggle.active);
     }
 
     private final String c(boolean param0) {
@@ -209,7 +209,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard != -526) {
-            this.field_O = (ValidatedTextFieldWidget) null;
+            this.passwordField = (ValidatedTextFieldWidget) null;
           }
           if (0 == hotspotId) {
             ArchiveFetchClient.a("terms.ws", 12);
@@ -245,15 +245,15 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (this.field_P == widget) {
+          if (this.backButton == widget) {
             ln.a(103);
           } else {
-            if (widget == this.field_Q) {
-              discarded$1 = this.i(-1);
+            if (widget == this.registerButton) {
+              discarded$1 = this.submitRegistration(-1);
             }
           }
           if (obfuscationGuard >= -22) {
-            this.field_H = (ValidatedTextFieldWidget) null;
+            this.emailConfirmationField = (ValidatedTextFieldWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -289,7 +289,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
           var9 = new ValidationMessageWidget(((ValidatableWidget) ((Object) param0)).getValidationSource(-11011), param2, 126, param1 + var10.height, param4 + 50, param3);
           var9.listener = (WidgetListener) (this);
           if (param6 != 170) {
-            this.field_N = (ToggleButtonWidget) null;
+            this.newsletterToggle = (ToggleButtonWidget) null;
           }
           this.addChild(var9, true);
           stackIn_3_0 = var10.height + var9.height;
@@ -371,7 +371,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 <= 97) {
-            discarded$1 = this.i(-122);
+            discarded$1 = this.submitRegistration(-122);
           }
           var8 = new LabeledWidget(20, param4, param2 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param1);
           this.addChild(var8, true);
@@ -425,7 +425,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         }
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onUsernameSuggestionChosen(String username, byte obfuscationGuard) {
         String discarded$1 = null;
         ValidatedTextFieldWidget var3 = null;
         String var4 = null;
@@ -435,10 +435,10 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = this.field_J;
-          var4 = param0;
+          var3 = this.usernameField;
+          var4 = username;
           ((TextFieldWidget) ((Object) var3)).setText(var4, -12592, false);
-          if (param1 != 56) {
+          if (obfuscationGuard != 56) {
             discarded$1 = this.c(true);
           }
           return;
@@ -447,12 +447,12 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
           stackIn_5_1 = new StringBuilder().append("dk.C(");
-          if (param0 == null) {
+          if (username == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -505,16 +505,16 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         }
     }
 
-    private final boolean h(int param0) {
-        if (param0 != 10000536) {
-          this.field_H = (ValidatedTextFieldWidget) null;
+    private final boolean canSubmitRegistration(int obfuscationGuard) {
+        if (obfuscationGuard != 10000536) {
+          this.emailConfirmationField = (ValidatedTextFieldWidget) null;
         }
-        if (this.a(60, this.field_J) &&
-          this.a(60, this.field_M) &&
-          this.a(60, this.field_H) &&
-          this.a(60, this.field_O) &&
-          this.a(60, this.field_L) &&
-          this.a(60, this.field_S)) {
+        if (this.passesSubmissionGate(60, this.usernameField) &&
+          this.passesSubmissionGate(60, this.emailField) &&
+          this.passesSubmissionGate(60, this.emailConfirmationField) &&
+          this.passesSubmissionGate(60, this.passwordField) &&
+          this.passesSubmissionGate(60, this.passwordConfirmationField) &&
+          this.passesSubmissionGate(60, this.ageField)) {
           return true;
         }
         return false;
@@ -523,7 +523,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
-          this.field_Q.enabled = this.h(10000536);
+          this.registerButton.enabled = this.canSubmitRegistration(10000536);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dk.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
@@ -542,7 +542,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -3) {
-            this.field_N = (ToggleButtonWidget) null;
+            this.newsletterToggle = (ToggleButtonWidget) null;
           }
           stackIn_3_0 = this.a(param4, param5, param1, 35, param0, param2, 170);
           return stackIn_3_0;
@@ -572,108 +572,108 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         }
     }
 
-    public final void a(byte param0) {
-        if (param0 < 96) {
+    public final void onRefreshUsernameSuggestions(byte obfuscationGuard) {
+        if (obfuscationGuard < 96) {
           return;
         }
-        ((UsernameAvailabilityValidator) (this.field_J.getValidationSource(-11011))).clearAvailabilityCache((byte) -22);
+        ((UsernameAvailabilityValidator) (this.usernameField.getValidationSource(-11011))).clearAvailabilityCache((byte) -22);
     }
 
-    public dk() {
+    public AccountRegistrationPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_J = new ValidatedTextFieldWidget("", (WidgetListener) null, 12);
-        this.field_M = new ValidatedTextFieldWidget("", (WidgetListener) null, 100);
-        this.field_H = new ValidatedTextFieldWidget("", (WidgetListener) null, 100);
-        this.field_O = new ValidatedTextFieldWidget("", (WidgetListener) null, 20);
-        this.field_L = new ValidatedTextFieldWidget("", (WidgetListener) null, 20);
-        this.field_S = new ValidatedTextFieldWidget("", (WidgetListener) null, 3);
+        this.usernameField = new ValidatedTextFieldWidget("", (WidgetListener) null, 12);
+        this.emailField = new ValidatedTextFieldWidget("", (WidgetListener) null, 100);
+        this.emailConfirmationField = new ValidatedTextFieldWidget("", (WidgetListener) null, 100);
+        this.passwordField = new ValidatedTextFieldWidget("", (WidgetListener) null, 20);
+        this.passwordConfirmationField = new ValidatedTextFieldWidget("", (WidgetListener) null, 20);
+        this.ageField = new ValidatedTextFieldWidget("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_N = new ToggleButtonWidget("", (WidgetListener) null, var1 != 0);
-        this.field_Q = new FocusableWidget(c.field_d, (WidgetListener) null);
-        this.field_P = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
-        this.field_J.tooltip = hh.field_a;
-        this.field_M.tooltip = rf.field_d;
-        this.field_H.tooltip = ResourceArchive.field_e;
-        this.field_O.tooltip = IntKeyIndex.field_a;
-        this.field_L.tooltip = BoundedFile.field_b;
-        this.field_S.tooltip = hc.field_d;
-        this.field_N.tooltip = ok.field_e;
-        this.field_J.setValidationSource(new UsernameAvailabilityValidator(this.field_J), (byte) -68);
-        this.field_M.setValidationSource(new EmailValidator(this.field_M), (byte) -68);
-        this.field_H.setValidationSource(new EmailConfirmationValidator(this.field_H, this.field_M), (byte) -68);
-        this.field_O.setValidationSource(new PasswordValidator(this.field_O, this.field_J, this.field_M), (byte) -68);
-        this.field_L.setValidationSource(new MatchingTextValidator(this.field_L, this.field_O), (byte) -68);
-        this.field_S.setValidationSource(new AgeValidator(this.field_S), (byte) -68);
-        this.field_Q.enabled = false;
-        this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
-        this.field_P.renderer = (WidgetRenderer) ((Object) new bb());
-        this.field_J.renderer = (WidgetRenderer) ((Object) new r(10000536));
-        r dupTemp$0 = new r(10000536);
-        this.field_H.renderer = (WidgetRenderer) ((Object) dupTemp$0);
-        this.field_M.renderer = (WidgetRenderer) ((Object) dupTemp$0);
-        this.field_S.renderer = (WidgetRenderer) ((Object) new r(10000536));
-        this.field_N.renderer = (WidgetRenderer) ((Object) new bd());
-        ob dupTemp$1 = new ob(10000536);
-        this.field_L.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        this.field_O.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        this.newsletterToggle = new ToggleButtonWidget("", (WidgetListener) null, var1 != 0);
+        this.registerButton = new FocusableWidget(c.field_d, (WidgetListener) null);
+        this.backButton = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
+        this.usernameField.tooltip = hh.field_a;
+        this.emailField.tooltip = rf.field_d;
+        this.emailConfirmationField.tooltip = ResourceArchive.field_e;
+        this.passwordField.tooltip = IntKeyIndex.field_a;
+        this.passwordConfirmationField.tooltip = BoundedFile.field_b;
+        this.ageField.tooltip = hc.field_d;
+        this.newsletterToggle.tooltip = ok.field_e;
+        this.usernameField.setValidationSource(new UsernameAvailabilityValidator(this.usernameField), (byte) -68);
+        this.emailField.setValidationSource(new EmailValidator(this.emailField), (byte) -68);
+        this.emailConfirmationField.setValidationSource(new EmailConfirmationValidator(this.emailConfirmationField, this.emailField), (byte) -68);
+        this.passwordField.setValidationSource(new PasswordValidator(this.passwordField, this.usernameField, this.emailField), (byte) -68);
+        this.passwordConfirmationField.setValidationSource(new MatchingTextValidator(this.passwordConfirmationField, this.passwordField), (byte) -68);
+        this.ageField.setValidationSource(new AgeValidator(this.ageField), (byte) -68);
+        this.registerButton.enabled = false;
+        this.registerButton.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
+        this.backButton.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+        this.usernameField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+        TextFieldRenderer dupTemp$0 = new TextFieldRenderer(10000536);
+        this.emailConfirmationField.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.emailField.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.ageField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+        this.newsletterToggle.renderer = (WidgetRenderer) ((Object) new CheckboxWidgetRenderer());
+        PasswordFieldRenderer dupTemp$1 = new PasswordFieldRenderer(10000536);
+        this.passwordConfirmationField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        this.passwordField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = rd.a(ch.field_e, new String[]{this.c(true), this.j(-987472479)}, (byte) 103);
         int var3 = 20;
-        var3 = var3 + this.a(IntNode.field_l, this.field_M, var3, 37, 170);
-        var3 = var3 + (this.a(this.field_H, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
-        var3 = var3 + this.a(wc.field_c, this.field_O, var3, 84, 170);
-        var3 = var3 + (this.a(170, InstructionsScreen.field_x, WidgetLayerStack.field_G, -3, this.field_L, var3) + 5);
-        var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.field_J, var3) + 5);
-        var3 = var3 + this.a(this.field_S, HuffmanCodec.field_d, 170, 111, var3);
-        LabeledWidget var4 = new LabeledWidget(46, var3, this.width - 90, 25, this.field_N, true, -120 + this.width, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
+        var3 = var3 + this.a(IntNode.field_l, this.emailField, var3, 37, 170);
+        var3 = var3 + (this.a(this.emailConfirmationField, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
+        var3 = var3 + this.a(wc.field_c, this.passwordField, var3, 84, 170);
+        var3 = var3 + (this.a(170, InstructionsScreen.field_x, WidgetLayerStack.field_G, -3, this.passwordConfirmationField, var3) + 5);
+        var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.usernameField, var3) + 5);
+        var3 = var3 + this.a(this.ageField, HuffmanCodec.field_d, 170, 111, var3);
+        LabeledWidget var4 = new LabeledWidget(46, var3, this.width - 90, 25, this.newsletterToggle, true, -120 + this.width, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
         this.addChild(var4, true);
         var3 = var3 + var4.height;
-        um var5 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
-        this.field_I = new HotspotTextWidget(var2, var5);
-        this.field_I.tooltip = "";
-        this.field_I.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);
-        this.field_I.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
-        this.field_I.listener = (WidgetListener) (this);
-        this.field_I.a(46, (byte) 46, -90 + this.width, var3);
-        var3 = var3 + (15 + this.field_I.height);
-        this.addChild(this.field_I, true);
+        TextWidgetRenderer var5 = new TextWidgetRenderer(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
+        this.termsLinks = new HotspotTextWidget(var2, var5);
+        this.termsLinks.tooltip = "";
+        this.termsLinks.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);
+        this.termsLinks.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
+        this.termsLinks.listener = (WidgetListener) (this);
+        this.termsLinks.a(46, (byte) 46, -90 + this.width, var3);
+        var3 = var3 + (15 + this.termsLinks.height);
+        this.addChild(this.termsLinks, true);
         int var6 = 4;
         int var7 = 200;
-        this.field_Q.setBounds(40, -var7 + 496 >> 1, var3, (byte) -119, var7);
-        this.field_P.setBounds(40, 3 + var6, var3 + 15, (byte) -119, 60);
-        this.field_P.listener = (WidgetListener) (this);
-        this.field_Q.listener = (WidgetListener) (this);
-        this.addChild(this.field_Q, true);
-        this.addChild(this.field_P, true);
-        this.field_K = new ri((vf) (this));
-        this.field_K.setBounds(150, this.field_J.x - (-this.field_J.width - 60), 20 + this.field_J.y, (byte) -119, this.width - this.field_J.x - (this.field_J.width + 60));
-        this.addChild(this.field_K, true);
+        this.registerButton.setBounds(40, -var7 + 496 >> 1, var3, (byte) -119, var7);
+        this.backButton.setBounds(40, 3 + var6, var3 + 15, (byte) -119, 60);
+        this.backButton.listener = (WidgetListener) (this);
+        this.registerButton.listener = (WidgetListener) (this);
+        this.addChild(this.registerButton, true);
+        this.addChild(this.backButton, true);
+        this.suggestionPanel = new UsernameSuggestionPanel((UsernameSuggestionListener) (this));
+        this.suggestionPanel.setBounds(150, this.usernameField.x - (-this.usernameField.width - 60), 20 + this.usernameField.y, (byte) -119, this.width - this.usernameField.x - (this.usernameField.width + 60));
+        this.addChild(this.suggestionPanel, true);
         this.setBounds(var6 + (var3 + 55), 0, 0, (byte) -119, 496);
     }
 
-    private final boolean a(int param0, ValidatableWidget param1) {
-        ValidationSource var3 = null;
+    private final boolean passesSubmissionGate(int obfuscationGuard, ValidatableWidget widget) {
+        ValidationSource validationSource = null;
         RuntimeException var3_ref = null;
-        ValidationStatus var4 = null;
+        ValidationStatus status = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.getValidationSource(param0 ^ -11071);
-          if (var3 == null) {
+          validationSource = widget.getValidationSource(obfuscationGuard ^ -11071);
+          if (validationSource == null) {
             return true;
           }
-          var4 = var3.getValidationStatus((byte) -31);
-          if (lp.validationInvalid == var4) {
+          status = validationSource.getValidationStatus((byte) -31);
+          if (lp.validationInvalid == status) {
             return false;
           }
-          if (param0 != 60) {
-            this.field_N = (ToggleButtonWidget) null;
+          if (obfuscationGuard != 60) {
+            this.newsletterToggle = (ToggleButtonWidget) null;
           }
-          if (m.validationDebouncing == var4) {
+          if (m.validationDebouncing == status) {
             return false;
           }
-          if (var4 != uo.validationEmpty) {
+          if (status != uo.validationEmpty) {
             return true;
           }
           return false;
@@ -681,8 +681,8 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("dk.P(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("dk.P(").append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";

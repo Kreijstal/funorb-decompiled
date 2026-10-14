@@ -19,7 +19,7 @@ final class ArcticBackground extends BackgroundScene {
           }
           var8 = kd.a(this.sceneId, colorIndex, (byte) 107);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            dk.a(2, colorIndex, var8, -35, 23275, Brick.field_K);
+            AccountRegistrationPanel.a(2, colorIndex, var8, -35, 23275, Brick.field_K);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             SpriteGeometry.a(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, jl.field_d, 1, -35);
             return;
@@ -36,7 +36,7 @@ final class ArcticBackground extends BackgroundScene {
           SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, jl.field_d, 1, -35);
           return;
         }
-        dk.a(2, colorIndex, var9, -35, 23275, Brick.field_K);
+        AccountRegistrationPanel.a(2, colorIndex, var9, -35, 23275, Brick.field_K);
         var9.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, jl.field_d, 1, -35);
     }
@@ -144,7 +144,7 @@ final class ArcticBackground extends BackgroundScene {
         }
         RasterCacheSurface var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
         if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          dk.a(1, colorIndex, var6, 0, 23275, hk.arcticFarSprite);
+          AccountRegistrationPanel.a(1, colorIndex, var6, 0, 23275, hk.arcticFarSprite);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
           SpriteGeometry.a(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, s.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);

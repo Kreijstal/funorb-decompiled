@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class up extends um {
+final class up extends TextWidgetRenderer {
     static RgbSprite[] jungleCentreSprites;
     static tq field_v;
     private be field_B;
@@ -45,7 +45,7 @@ final class up extends um {
         be var6Lifetime2;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          super.a(-35, param1);
+          super.copyStyleTo(-35, param1);
           if (!param0) {
             var8 = (RgbSprite) null;
             this.a(54, (RgbSprite) null);

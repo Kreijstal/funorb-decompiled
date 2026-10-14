@@ -128,16 +128,16 @@ final class ig extends WidgetGroup implements TextHotspotListener, WidgetActionL
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
-        um var4 = null;
+        TextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
           this.field_I = param0;
-          this.field_L = new FocusableWidget(ri.field_L, (WidgetListener) null);
-          this.field_L.renderer = (WidgetRenderer) ((Object) new hi());
+          this.field_L = new FocusableWidget(UsernameSuggestionPanel.field_L, (WidgetListener) null);
+          this.field_L.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
           var7 = rd.a(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
           var3 = 20;
-          var4 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
+          var4 = new TextWidgetRenderer(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
           this.field_O = new HotspotTextWidget(var7, var4);
           this.field_O.tooltip = "";
           this.field_O.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);

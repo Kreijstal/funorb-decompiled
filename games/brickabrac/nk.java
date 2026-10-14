@@ -37,7 +37,7 @@ final class nk {
         if (sm.field_b == RasterSnapshot.field_q) {
           if (!QuickChatMenu.h(-26090)) {
             if (VerticalScrollbar.field_Ub != null) {
-              bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
+              CheckboxWidgetRenderer.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
             }
             DualLinkIterator.b((byte) 117);
             if (wi.field_g) {

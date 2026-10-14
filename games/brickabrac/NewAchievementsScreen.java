@@ -17,11 +17,11 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
         if (param0 != 967) {
           discardGameplayOnTransition = false;
           NinjaBackground.e((byte) -95);
-          bd.a(4, true);
+          CheckboxWidgetRenderer.a(4, true);
           return;
         }
         NinjaBackground.e((byte) -95);
-        bd.a(4, true);
+        CheckboxWidgetRenderer.a(4, true);
     }
 
     final boolean isAchievementExcluded(int achievementId, byte obfuscationGuard) {

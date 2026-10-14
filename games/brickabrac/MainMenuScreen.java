@@ -120,7 +120,7 @@ final class MainMenuScreen extends MenuScreen {
               IntArrayRequest.lastBackgroundId = IntrusiveHashTable.field_k.sceneId;
             }
             IntrusiveHashTable.field_k = rd.selectBackground(0, (byte) 19);
-            hc.field_h = 2 * hi.field_w.nextBoundedInt(-37880252, 2);
+            hc.field_h = 2 * ButtonWidgetRenderer.field_w.nextBoundedInt(-37880252, 2);
             GzipInflater.field_e = 50;
           }
         }

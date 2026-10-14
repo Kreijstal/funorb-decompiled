@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb implements WidgetRenderer {
-    private int field_d;
-    private TextFont field_b;
-    private int field_f;
+final class LinkWidgetRenderer implements WidgetRenderer {
+    private int horizontalAlignment;
+    private TextFont font;
+    private int verticalAlignment;
     static int matchmakingOptionByteOne;
     static me field_c;
     static String field_a;
@@ -31,28 +31,28 @@ final class bb implements WidgetRenderer {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", widget.x + parentX, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.field_d, this.field_f, this.field_b.descent + this.field_b.ascent);
+          this.font.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", widget.x + parentX, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.horizontalAlignment, this.verticalAlignment, this.font.descent + this.font.ascent);
           if (callbackGuard != -20618) {
             field_a = (String) null;
           }
           if (!widget.isFocused(-54)) {
             return;
           }
-          var7 = this.field_b.measureText(widget.text);
-          var8 = this.field_b.descent + this.field_b.ascent;
+          var7 = this.font.measureText(widget.text);
+          var8 = this.font.descent + this.font.ascent;
           var9 = widget.x + parentX;
-          if (this.field_d == 2) {
+          if (this.horizontalAlignment == 2) {
             var9 = var9 + (-var7 + widget.width);
           } else {
-            if (this.field_d == 1) {
+            if (this.horizontalAlignment == 1) {
               var9 = var9 + (-var7 + widget.width >> 1);
             }
           }
           var10 = widget.y + parentY;
-          if (this.field_f == 2) {
+          if (this.verticalAlignment == 2) {
             var10 = var10 + (-var8 + widget.height);
           } else {
-            if (1 == this.field_f) {
+            if (1 == this.verticalAlignment) {
               var10 = var10 + (-var8 + widget.height >> 1);
             }
           }
@@ -72,10 +72,10 @@ final class bb implements WidgetRenderer {
         }
     }
 
-    public bb() {
-        this.field_d = 1;
-        this.field_b = ArchiveNetworkClient.field_u;
-        this.field_f = 1;
+    public LinkWidgetRenderer() {
+        this.horizontalAlignment = 1;
+        this.font = ArchiveNetworkClient.field_u;
+        this.verticalAlignment = 1;
     }
 
     public static void a(boolean param0) {
@@ -88,13 +88,13 @@ final class bb implements WidgetRenderer {
         field_a = null;
     }
 
-    bb(TextFont param0, int param1, int param2) {
+    LinkWidgetRenderer(TextFont font, int horizontalAlignment, int verticalAlignment) {
         try {
-          this.field_d = param1;
-          this.field_b = param0;
-          this.field_f = param2;
+          this.horizontalAlignment = horizontalAlignment;
+          this.font = font;
+          this.verticalAlignment = verticalAlignment;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bb.<init>(" + (font != null ? "{...}" : "null") + ',' + horizontalAlignment + ',' + verticalAlignment + ')');
         }
     }
 

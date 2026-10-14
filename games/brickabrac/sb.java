@@ -947,7 +947,7 @@ final class sb implements vc {
         var8 = BrickABrac.field_J ? 1 : 0;
         var3 = -86 / ((obfuscationGuard + 61) / 47);
         if (!MonotonicTime.field_c) {
-          ri.h(-111);
+          UsernameSuggestionPanel.h(-111);
           this.field_a = 0;
           return;
         }

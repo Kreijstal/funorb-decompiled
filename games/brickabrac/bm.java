@@ -171,7 +171,7 @@ final class bm {
           var2 = new BitPacketBuffer(archive.takeFileByName(-72, "logo.fo3d", ""));
           var3 = var2.readUnsignedByte(obfuscationGuard + 325);
           var2.beginBitRead(obfuscationGuard - 47);
-          um.meshAttributeRecords = AlignedIconLabel.decodeMeshAttributeRecords(var2, 24);
+          TextWidgetRenderer.meshAttributeRecords = AlignedIconLabel.decodeMeshAttributeRecords(var2, 24);
           TextHotspotRegion.logoMeshes = new Mesh3D[var3];
           BoundedFile.logoOriginalCenters = new int[var3][];
           if (obfuscationGuard != -70) {

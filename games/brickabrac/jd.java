@@ -76,7 +76,7 @@ final class jd {
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!bd.hasValidPlayerNameShape(param2, 0, param1)) {
+          if (!CheckboxWidgetRenderer.hasValidPlayerNameShape(param2, 0, param1)) {
             return false;
           }
           for (var3_int = 0; param2.length() > var3_int; var3_int++) {

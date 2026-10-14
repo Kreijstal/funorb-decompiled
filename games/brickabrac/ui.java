@@ -115,10 +115,10 @@ final class ui {
             kp.sendLevelResult(param0, (byte) 112, var4);
             var4 = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.next((byte) 116));
           }
-          var5 = (IntArrayRequest) (ob.pendingIntArrayRequests.first(-61));
+          var5 = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.first(-61));
           while (var5 != null) {
             AchievementIcon.sendIntArrayRequest(param0, var5, 61);
-            var5 = (IntArrayRequest) (ob.pendingIntArrayRequests.next((byte) 116));
+            var5 = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.next((byte) 116));
           }
           if (param1 != 115) {
             ui.a(-72);

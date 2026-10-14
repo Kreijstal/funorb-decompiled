@@ -21,7 +21,7 @@ final class sc {
         if (obfuscationGuard > -75) {
           return;
         }
-        RasterSnapshot snapshot = (RasterSnapshot) (hi.rasterStack.removeLast(113));
+        RasterSnapshot snapshot = (RasterSnapshot) (ButtonWidgetRenderer.rasterStack.removeLast(113));
         if (snapshot == null) {
           throw new IllegalStateException();
         }

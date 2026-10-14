@@ -2,23 +2,23 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 interface WidgetLayoutProvider {
-    public abstract int a(Widget param0, byte param1, int param2);
+    public abstract int getTextOriginX(Widget widget, byte obfuscationGuard, int parentX);
 
-    public abstract int a(int param0, byte param1, Widget param2);
+    public abstract int getTextOriginY(int parentY, byte obfuscationGuard, Widget widget);
 
     public abstract int getPreferredWidth(Widget widget, int obfuscationGuard);
 
-    public abstract int a(Widget param0, int param1, boolean param2, int param3, int param4, int param5);
+    public abstract int findTextSourceOffset(Widget widget, int pointerX, boolean obfuscationGuard, int parentY, int pointerY, int parentX);
 
     public abstract WidgetTextLayout getTextLayout(Widget widget, int obfuscationGuard);
 
-    public abstract int a(int param0, Widget param1);
+    public abstract int getTextAreaWidth(int obfuscationGuard, Widget widget);
 
     public abstract int getLineHeight(byte obfuscationGuard);
 
-    public abstract void a(int param0, int param1, int param2, int param3, int param4, Widget param5);
+    public abstract void paintTextSelection(int obfuscationGuard, int parentY, int parentX, int selectionAnchor, int caretIndex, Widget widget);
 
-    public abstract void a(Widget param0, int param1, int param2, int param3, byte param4);
+    public abstract void paintTextCaret(Widget widget, int parentX, int caretIndex, int parentY, byte obfuscationGuard);
 
     public abstract int getPreferredHeight(Widget widget, int obfuscationGuard);
 }

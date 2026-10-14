@@ -89,7 +89,7 @@ final class ar {
                     if (var13_intLifetime1 >= param4) {
                       break scanLoop1;
                     }
-                    if (var14 != (qo.field_J[var13_intLifetime1] & 255)) {
+                    if (var14 != (PlayerNameChooserPanel.field_J[var13_intLifetime1] & 255)) {
                       break scanLoop1;
                     }
                   }
@@ -153,7 +153,7 @@ final class ar {
                 }
                 for (var11 = 0; -1 + var18.length > var11; var11++) {
                   if (-1 != param4) {
-                    qo.field_J[param4] = (byte)var11;
+                    PlayerNameChooserPanel.field_J[param4] = (byte)var11;
                   } else {
                     param3 = var11;
                   }
@@ -165,7 +165,7 @@ final class ar {
                 break;
               }
               if (param4 != -1) {
-                qo.field_J[param4] = (byte)var11;
+                PlayerNameChooserPanel.field_J[param4] = (byte)var11;
               } else {
                 param3 = var11;
               }

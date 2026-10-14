@@ -119,7 +119,7 @@ final class LevelPackSelectScreen extends MenuScreen {
           if (var9.actionId == 8) {
             stackIn_7_0 = this.e((byte) 81);
           } else {
-            stackIn_7_0 = ag.buttonLabels[var7.actionId];
+            stackIn_7_0 = ArrayWidgetGroup.buttonLabels[var7.actionId];
           }
           var10 = stackIn_7_0;
           var5_ref = var10;
@@ -153,7 +153,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     }
 
     LevelPackSelectScreen() {
-        super(16, 180, 460, 402, 35, ag.field_L);
+        super(16, 180, 460, 402, 35, ArrayWidgetGroup.field_L);
         this.firstPackCard = new LevelPackCard((MenuScreen) (this), this.buttons[1], 1, 0);
         this.secondPackCard = new LevelPackCard((MenuScreen) (this), this.buttons[2], 2, 1);
     }

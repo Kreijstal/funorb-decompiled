@@ -49,7 +49,7 @@ final class ec extends WidgetGroup implements WidgetActionListener {
             }
             var7 = this.field_T[var6_int];
             if (var7 != -1) {
-              bd.a(this.field_T[var6_int], true);
+              CheckboxWidgetRenderer.a(this.field_T[var6_int], true);
             } else {
               this.field_K.m(17);
             }
@@ -104,7 +104,7 @@ final class ec extends WidgetGroup implements WidgetActionListener {
         try {
           var4_int = -104 / ((param0 - 89) / 37);
           var5 = new FocusableWidget(param1, param2);
-          var5.renderer = (WidgetRenderer) ((Object) new hi());
+          var5.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
           var6 = this.height - 2;
           this.setBounds(34 + this.height, 0, 0, (byte) -119, this.width);
           var5.setBounds(30, 7, var6, (byte) -119, -14 + this.width);

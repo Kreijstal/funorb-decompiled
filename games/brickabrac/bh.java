@@ -10,7 +10,7 @@ final class bh extends fe {
     static int field_vb;
 
     final static void m(int param0) {
-        ob.field_G = MonotonicTime.nowMillis(false);
+        PasswordFieldRenderer.field_G = MonotonicTime.nowMillis(false);
         GameplayScreen.field_h = 0;
         if (param0 >= -58) {
           bh.m(-3);

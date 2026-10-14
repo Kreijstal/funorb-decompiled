@@ -408,7 +408,7 @@ final class JungleBackground extends BackgroundScene {
               }
               if (stackIn_184_0 != 0 &&
                 var29.pressedButton != 0) {
-                bb.matchmakingOptionByteOne = var6Lifetime2;
+                LinkWidgetRenderer.matchmakingOptionByteOne = var6Lifetime2;
               }
               if (var29.hovered &&
                 var6Lifetime2 > 0) {
@@ -423,7 +423,7 @@ final class JungleBackground extends BackgroundScene {
                 }
               }
               stackIn_178_0 = var29;
-              stackIn_179_1 = (bb.matchmakingOptionByteOne == var6Lifetime2);
+              stackIn_179_1 = (LinkWidgetRenderer.matchmakingOptionByteOne == var6Lifetime2);
               stackIn_178_0.selected = stackIn_179_1;
               stackIn_181_0 = var29;
               stackIn_182_1 = (var4_int != 0);
@@ -462,7 +462,7 @@ final class JungleBackground extends BackgroundScene {
                   if (null != me.field_e &&
                     me.field_e[var7] != null &&
                     0 < (me.field_e[var7][var9] & ~qn.field_f)) {
-                    var15 = r.a((byte) -82, me.field_e[var7][var9] & ~qn.field_f);
+                    var15 = TextFieldRenderer.a((byte) -82, me.field_e[var7][var9] & ~qn.field_f);
                     var14 = 1;
                   }
                   if (null != NodeDeque.field_a &&
@@ -530,9 +530,9 @@ final class JungleBackground extends BackgroundScene {
                   var9 >= 0 &&
                   ContextMenu.field_bc != null && (!param2 ||
                   !fh.pendingGameOptionsReceived)) {
-                  if (qo.field_J == null) {
+                  if (PlayerNameChooserPanel.field_J == null) {
                     SingleChildWidget.field_D = new boolean[RankingsRequest.gameSettingCount];
-                    qo.field_J = new byte[RankingsRequest.gameSettingCount];
+                    PlayerNameChooserPanel.field_J = new byte[RankingsRequest.gameSettingCount];
                   }
                   MeshAttributeRecord.field_g = false;
                   MusicVoiceMixer.field_s = false;

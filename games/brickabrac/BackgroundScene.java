@@ -248,7 +248,7 @@ abstract class BackgroundScene {
           for (var4_int = 0; this.soundEffectOrder.length > var4_int; var4_int++) {
             this.soundEffectOrder[var4_int] = var4_int;
           }
-          AppletGameShell.shuffleFivePasses(this.soundEffectOrder, (byte) 39, hi.field_w);
+          AppletGameShell.shuffleFivePasses(this.soundEffectOrder, (byte) 39, ButtonWidgetRenderer.field_w);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ki.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectNames != null ? "{...}" : "null") + ')');
         }

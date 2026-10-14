@@ -27,7 +27,7 @@ abstract class MatchResultScreen extends MenuScreen {
           return;
         }
         var2 = 1;
-        var3 = ContextActionController.field_g.measureText(ag.buttonLabels[this.buttons[0].actionId]);
+        var3 = ContextActionController.field_g.measureText(ArrayWidgetGroup.buttonLabels[this.buttons[0].actionId]);
         if (this.isButtonEnabled((byte) 110, 1)) {
           var2++;
           for (var4 = 0; var4 < sj.field_c.length; var4++) {

@@ -72,12 +72,12 @@ final class QuickChatParameterType {
 
     final static void a(byte param0) {
         if (param0 == -63) {
-          ri.c(true);
+          UsernameSuggestionPanel.c(true);
           return;
         }
         String var2 = (String) null;
         QuickChatParameterType.a((int[]) null, 43L, -67, true, (String) null);
-        ri.c(true);
+        UsernameSuggestionPanel.c(true);
     }
 
     final static String a(CharSequence param0, int param1) {

@@ -29,14 +29,14 @@ final class AchievementIcon extends IntrusiveNode {
             wins = (wins * 200 + var9_int) / (var9_int * 2);
           }
           if (-1 != rankIndex) {
-            ob.field_D.drawRight(1 + rankIndex + ". ", qo.field_N + 54, baselineY, textStyle, -1);
+            PasswordFieldRenderer.field_D.drawRight(1 + rankIndex + ". ", PlayerNameChooserPanel.field_N + 54, baselineY, textStyle, -1);
           }
-          ob.field_D.drawLeft(name, 54 + qo.field_N, baselineY, textStyle, -1);
-          ob.field_D.drawRight(Integer.toString(rating), ResourceArchive.field_d[0], baselineY, textStyle, -1);
-          ob.field_D.drawRight(var9_int < 50 ? Integer.toString(var9_int) : "50+", ResourceArchive.field_d[1], baselineY, textStyle, -1);
-          ob.field_D.drawRight(wins + "%", ResourceArchive.field_d[2], baselineY, textStyle, winsShadowColor);
-          ob.field_D.drawRight(losses + "%", ResourceArchive.field_d[3], baselineY, textStyle, -1);
-          ob.field_D.drawRight(draws + "%", ResourceArchive.field_d[4], baselineY, textStyle, -1);
+          PasswordFieldRenderer.field_D.drawLeft(name, 54 + PlayerNameChooserPanel.field_N, baselineY, textStyle, -1);
+          PasswordFieldRenderer.field_D.drawRight(Integer.toString(rating), ResourceArchive.field_d[0], baselineY, textStyle, -1);
+          PasswordFieldRenderer.field_D.drawRight(var9_int < 50 ? Integer.toString(var9_int) : "50+", ResourceArchive.field_d[1], baselineY, textStyle, -1);
+          PasswordFieldRenderer.field_D.drawRight(wins + "%", ResourceArchive.field_d[2], baselineY, textStyle, winsShadowColor);
+          PasswordFieldRenderer.field_D.drawRight(losses + "%", ResourceArchive.field_d[3], baselineY, textStyle, -1);
+          PasswordFieldRenderer.field_D.drawRight(draws + "%", ResourceArchive.field_d[4], baselineY, textStyle, -1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "i.H(" + losses + ',' + baselineY + ',' + (name != null ? "{...}" : "null") + ',' + wins + ',' + rating + ',' + textStyle + ',' + winsShadowColor + ',' + draws + ',' + rankIndex + ')');
         }
@@ -160,7 +160,7 @@ final class AchievementIcon extends IntrusiveNode {
           if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
             ValidationMessageWidget.hoveredAchievementId = this.achievementId;
             if (1 == BackgroundScene.pressedButton &&
-              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
+              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
               if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
                 ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {
@@ -172,7 +172,7 @@ final class AchievementIcon extends IntrusiveNode {
             }
           } else {
             if (1 == BackgroundScene.pressedButton &&
-              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
+              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
               if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
                 ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {
@@ -197,21 +197,21 @@ final class AchievementIcon extends IntrusiveNode {
         }
         if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask) == 0) {
           if (IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask != 0) {
-            ag.buttonLabels[10] = er.field_a;
+            ArrayWidgetGroup.buttonLabels[10] = er.field_a;
             if (obfuscationGuard != 32) {
               field_o = (String) null;
               return;
             }
             return;
           }
-          ag.buttonLabels[10] = t.field_b;
+          ArrayWidgetGroup.buttonLabels[10] = t.field_b;
           if (obfuscationGuard != 32) {
             field_o = (String) null;
             return;
           }
           return;
         }
-        ag.buttonLabels[10] = fh.field_a;
+        ArrayWidgetGroup.buttonLabels[10] = fh.field_a;
         if (obfuscationGuard == 32) {
           return;
         }

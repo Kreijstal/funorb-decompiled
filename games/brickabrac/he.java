@@ -60,10 +60,10 @@ final class he extends WidgetGroup implements WidgetActionListener {
 
     public he() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_I = new FocusableWidget(bd.field_a, (WidgetListener) null);
+        this.field_I = new FocusableWidget(CheckboxWidgetRenderer.field_a, (WidgetListener) null);
         this.field_K = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
         this.field_J = new FocusableWidget(nd.field_d, (WidgetListener) null);
-        hi var1 = new hi();
+        ButtonWidgetRenderer var1 = new ButtonWidgetRenderer();
         this.field_I.renderer = (WidgetRenderer) ((Object) var1);
         this.field_K.renderer = (WidgetRenderer) ((Object) var1);
         this.field_J.renderer = (WidgetRenderer) ((Object) var1);
@@ -307,7 +307,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         int var5 = this.x + parentX;
         int var6 = parentY + this.y;
-        ArchiveNetworkClient.field_u.a(qo.field_H, var5 + 20, 20 + var6, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
+        ArchiveNetworkClient.field_u.a(PlayerNameChooserPanel.field_H, var5 + 20, 20 + var6, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
         super.drawLayer(parentY, parentX, layer, obfuscationGuard);
     }
 

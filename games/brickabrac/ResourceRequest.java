@@ -29,7 +29,7 @@ abstract class ResourceRequest extends DualLinkNode {
         if (param0 < 20) {
           return;
         }
-        bd.a(4, true);
+        CheckboxWidgetRenderer.a(4, true);
     }
 
     public static void a(byte param0) {

@@ -126,7 +126,7 @@ abstract class sl extends DualLinkNode {
           nk.field_a = new UiComponent(0L, cd.field_d, VolcanicBackground.field_r);
           kk.field_b = new UiComponent(0L, cd.field_d, ch.field_d);
           la.field_b = new UiComponent(0L, cd.field_d, BallPulseEffect.field_o);
-          BufferedSocket.field_h = new UiComponent(0L, cd.field_d, r.field_v);
+          BufferedSocket.field_h = new UiComponent(0L, cd.field_d, TextFieldRenderer.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, ik.field_a, ByteStorage.field_d);
           rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           gj.field_b = new UiComponent(0L, fm.field_b, ua.field_e.toUpperCase());
@@ -177,12 +177,12 @@ abstract class sl extends DualLinkNode {
           var16 = t.field_f;
           var16.horizontalAlignment = 1;
           ji.field_b = new UiComponent(0L, (UiComponent) null);
-          um.field_b = new UiComponent(0L, CappedUrlRequest.field_l);
-          um.field_b.horizontalAlignment = 1;
+          TextWidgetRenderer.field_b = new UiComponent(0L, CappedUrlRequest.field_l);
+          TextWidgetRenderer.field_b.horizontalAlignment = 1;
           BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
           QuickChatPhraseDefinition.field_E = new UiComponent(0L, ik.field_a, pf.field_c);
           TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
-          ji.field_b.addChild(um.field_b, 0);
+          ji.field_b.addChild(TextWidgetRenderer.field_b, 0);
           ji.field_b.addChild(BoundedFile.field_g, 0);
           if (vd.field_e) {
             ji.field_b.addChild(QuickChatPhraseDefinition.field_E, 0);

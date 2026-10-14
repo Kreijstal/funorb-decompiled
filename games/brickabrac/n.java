@@ -108,7 +108,7 @@ final class n {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = qp.decodedSpritePalette[ik.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
+        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var4;
     }
@@ -246,7 +246,7 @@ final class n {
               if (var8 == 0) {
                 stackIn_29_1 = NewAchievementsScreen.field_F;
               } else {
-                stackIn_29_1 = ag.field_J;
+                stackIn_29_1 = ArrayWidgetGroup.field_J;
               }
               stackIn_28_0.text = ((String) (Object) stackIn_29_1).toUpperCase();
               stackIn_31_0 = t.field_f;
@@ -260,8 +260,8 @@ final class n {
               AppletGameShell.field_e.text = SocialListEntry.field_Pb;
               GameUiController.field_e.enabled = true;
               if (ContextMenu.field_bc != null) {
-                if (null == qo.field_J) {
-                  qo.field_J = new byte[RankingsRequest.gameSettingCount];
+                if (null == PlayerNameChooserPanel.field_J) {
+                  PlayerNameChooserPanel.field_J = new byte[RankingsRequest.gameSettingCount];
                   SingleChildWidget.field_D = new boolean[RankingsRequest.gameSettingCount];
                 }
                 MusicVoiceMixer.field_s = false;
@@ -324,7 +324,7 @@ final class n {
               if (!fh.pendingGameOptionsReceived) {
                 UnderwaterBackground.requestFindOpponents(param0, (byte) 98);
               } else {
-                um.requestCancelOpponentSearch(param3 + 276, param0);
+                TextWidgetRenderer.requestCancelOpponentSearch(param3 + 276, param0);
               }
             }
             JungleBackground.a(param0, nl.pendingLobbyGame, true, false);

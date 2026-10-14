@@ -87,8 +87,8 @@ final class w {
           if (ll.field_c != null) {
             var4 = 0;
             if (BackgroundScene.pressedButton != 0 &&
-              qo.pressY > 257 &&
-              290 > qo.pressY) {
+              PlayerNameChooserPanel.pressY > 257 &&
+              290 > PlayerNameChooserPanel.pressY) {
               if (tb.pressX > 9 &&
                 tb.pressX < 82) {
                 this.field_a = false;
@@ -104,8 +104,8 @@ final class w {
             }
             if (var4 == 0 &&
               IsaacGenerator.field_n < this.field_j &&
-              qo.pressY > 257 &&
-              qo.pressY < 290) {
+              PlayerNameChooserPanel.pressY > 257 &&
+              PlayerNameChooserPanel.pressY < 290) {
               if (MusicPatch.pointerX > 9 &&
                 MusicPatch.pointerX < 82) {
                 this.field_j = IsaacGenerator.field_n;
@@ -120,7 +120,7 @@ final class w {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.field_g.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(qo.pressY, -636, tb.pressX));
+          this.field_g.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, tb.pressX));
           var4Lifetime1 = 0;
           if (this.field_g.isActivated((byte) 113)) {
             if (this.field_g.selectedIndex == 0) {
@@ -299,9 +299,9 @@ final class w {
             ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
             ch.field_c = TooltipSprite.a((byte) -37, "arialish12", BufferedFile.field_d, fe.field_jb, "");
             co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, fe.field_jb);
-            MainMenuScreen.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
-            LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
-            ValidatedTextFieldWidget.field_V = bd.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);
+            MainMenuScreen.field_u = TextWidgetRenderer.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
+            LevelPack.field_e = TextWidgetRenderer.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
+            ValidatedTextFieldWidget.field_V = CheckboxWidgetRenderer.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);
             fe.field_jb = null;
             BufferedFile.field_d = null;
           }

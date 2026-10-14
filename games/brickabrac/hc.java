@@ -63,7 +63,7 @@ final class hc {
             mesh.faceMaterialIds = LevelList.readPackedShortArray((byte) -65, mesh.faceMaterialIds, packet, 16);
           }
           if (DirectByteStorage.readPacketFlag(false, packet)) {
-            mesh.faceGroups = ri.readPackedByteArray(mesh.faceGroups, 16, packet, 20);
+            mesh.faceGroups = UsernameSuggestionPanel.readPackedByteArray(mesh.faceGroups, 16, packet, 20);
             maximumGroup = 0;
             for (face = 0; mesh.faceGroups.length > face; face++) {
               if ((mesh.faceGroups[face] & 255) > maximumGroup) {

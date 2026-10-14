@@ -106,7 +106,7 @@ final class UnderwaterBackground extends BackgroundScene {
         int payloadStart = packet.position;
         packet.writeByte(6, 2);
         packet.writeBytes(rh.matchmakingChoiceMask, obfuscationGuard - 99, 0, rh.matchmakingChoiceMask.length);
-        packet.writeByte(-125, bb.matchmakingOptionByteOne);
+        packet.writeByte(-125, LinkWidgetRenderer.matchmakingOptionByteOne);
         packet.writeByte(obfuscationGuard ^ -12, ResourceArchive.matchmakingOptionByteTwo);
         if (obfuscationGuard == 98) {
           packet.writeBytes(PowerUpWarning.matchmakingSettingMask, -1, 0, PowerUpWarning.matchmakingSettingMask.length);
@@ -123,7 +123,7 @@ final class UnderwaterBackground extends BackgroundScene {
         if (obfuscationGuard > -84) {
           this.drawPreview((byte) -90, 97, -35, 25);
           if (!this.hasSprites((byte) -95)) {
-            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, um.underwaterBackgroundColors[colorIndex], 928072);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
             return;
           }
           var8 = kd.a(this.sceneId, colorIndex, (byte) 106);
@@ -135,7 +135,7 @@ final class UnderwaterBackground extends BackgroundScene {
           return;
         }
         if (!this.hasSprites((byte) -95)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, um.underwaterBackgroundColors[colorIndex], 928072);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
           return;
         }
         RasterCacheSurface var9 = kd.a(this.sceneId, colorIndex, (byte) 106);
@@ -151,7 +151,7 @@ final class UnderwaterBackground extends BackgroundScene {
         if (!obfuscationGuard) {
           field_w = (PcmPlayer) null;
           if (!this.hasSprites((byte) -112)) {
-            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, um.underwaterBackgroundColors[colorIndex], 928072);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
             return;
           }
           var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
@@ -163,7 +163,7 @@ final class UnderwaterBackground extends BackgroundScene {
           return;
         }
         if (!this.hasSprites((byte) -112)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, um.underwaterBackgroundColors[colorIndex], 928072);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
           return;
         }
         RasterCacheSurface var8 = PowerUp.a(this.sceneId, colorIndex, -20777);
@@ -189,7 +189,7 @@ final class UnderwaterBackground extends BackgroundScene {
           var5Lifetime3 = 14 / ((obfuscationGuard + 28) / 43);
           return;
         }
-        Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, um.underwaterBackgroundColors[colorIndex], 928072);
+        Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
         if (this.hasSprites((byte) -98)) {
           TableNameEntry.waterSmallSprite.drawTransparent(destinationX, destinationY);
           var5Lifetime1 = 14 / ((obfuscationGuard + 28) / 43);

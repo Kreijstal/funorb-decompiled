@@ -145,12 +145,12 @@ final class SocialListEntry extends UiComponent {
               directionCValue = mesh.faceDirectionC[face];
             }
             directionC = directionCValue;
-            if (null != um.meshAttributeRecords &&
+            if (null != TextWidgetRenderer.meshAttributeRecords &&
               mesh.faceMaterialIds != null &&
               face < mesh.faceMaterialIds.length &&
               -1 != mesh.faceMaterialIds[face] &&
-              mesh.faceMaterialIds[face] < um.meshAttributeRecords.length) {
-              materialValue = um.meshAttributeRecords[mesh.faceMaterialIds[face]];
+              mesh.faceMaterialIds[face] < TextWidgetRenderer.meshAttributeRecords.length) {
+              materialValue = TextWidgetRenderer.meshAttributeRecords[mesh.faceMaterialIds[face]];
             } else {
               materialValue = null;
             }

@@ -136,45 +136,45 @@ final class be {
           nh.a(param2.width, param2.height, -40, param2.x + param4, this.field_f, param0 + param2.y);
           if (null != this.field_k) {
             var6_int = this.field_i + param2.x + param4;
-            if (param1.field_f == 1) {
+            if (param1.horizontalAlignment == 1) {
               var6_int = var6_int + (param2.width - this.field_k.canvasWidth) / 2;
             }
             var7 = this.field_m + (param0 + param2.y);
-            if (param1.field_m == 1) {
+            if (param1.verticalAlignment == 1) {
               var7 = var7 + (-this.field_k.canvasHeight + param2.height) / 2;
             }
-            if (2 == param1.field_f) {
+            if (2 == param1.horizontalAlignment) {
               var6_int = var6_int + (param2.width - this.field_k.canvasWidth);
             }
-            if (param1.field_m == 2) {
+            if (param1.verticalAlignment == 2) {
               var7 = var7 + (param2.height - this.field_k.canvasHeight);
             }
             this.field_k.drawTransparent(var6_int, var7);
           }
-          var6 = param1.a(param2, true);
+          var6 = param1.getDisplayText(param2, true);
           var7Lifetime1 = 3 % ((param3 - 13) / 43);
           if (var6 != null &&
-            param1.field_k != null &&
+            param1.font != null &&
             0 <= this.field_h) {
-            stackIn_18_0 = param1.field_k;
+            stackIn_18_0 = param1.font;
             stackIn_18_1 = var6;
             if (this.field_i != -2147483648) {
               stackIn_19_2 = this.field_i;
             } else {
               stackIn_19_2 = 0;
             }
-            stackIn_21_2 = stackIn_19_2 + param1.field_d + (param4 + param2.x);
+            stackIn_21_2 = stackIn_19_2 + param1.leftInset + (param4 + param2.x);
             stackIn_21_3 = param0;
             stackIn_21_4 = -param2.y;
-            stackIn_21_5 = -param1.field_q;
+            stackIn_21_5 = -param1.topInset;
             if (this.field_m == -2147483648) {
               stackIn_22_6 = 0;
             } else {
               stackIn_22_6 = this.field_m;
             }
             stackIn_24_3 = stackIn_21_3 - (stackIn_21_4 + (stackIn_21_5 - stackIn_22_6));
-            stackIn_24_4 = param2.width - param1.field_d - param1.field_i;
-            stackIn_24_5 = -param1.field_q + (param2.height - param1.field_a);
+            stackIn_24_4 = param2.width - param1.leftInset - param1.rightInset;
+            stackIn_24_5 = -param1.topInset + (param2.height - param1.bottomInset);
             stackIn_24_6 = this.field_h;
             stackIn_24_7 = this.field_l;
             if (this.field_b == -2147483648) {
@@ -182,7 +182,7 @@ final class be {
             } else {
               stackIn_25_8 = this.field_b;
             }
-            ((TextFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param1.field_f, param1.field_m, param1.field_h);
+            ((TextFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param1.horizontalAlignment, param1.verticalAlignment, param1.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

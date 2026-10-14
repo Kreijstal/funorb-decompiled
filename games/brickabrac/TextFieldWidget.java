@@ -94,8 +94,8 @@ class TextFieldWidget extends FocusableWidget {
         WidgetLayoutProvider var9;
         var8 = BrickABrac.field_J ? 1 : 0;
         if (!this.autoScrollCaret) {
-          this.field_r = 0;
-          this.field_B = 0;
+          this.textOffsetX = 0;
+          this.textOffsetY = 0;
           return;
         }
         if (!(this.renderer instanceof WidgetLayoutProvider)) {
@@ -107,26 +107,26 @@ class TextFieldWidget extends FocusableWidget {
         var9 = (WidgetLayoutProvider) ((Object) this.renderer);
         var3 = var9.getTextLayout((Widget) (this), -3);
         var4 = var3.getRightEdge(31458);
-        var5 = var9.a(61823, (Widget) (this));
+        var5 = var9.getTextAreaWidth(61823, (Widget) (this));
         var6 = var9.getLineHeight((byte) 99) >> 1;
         if (var4 < var5 - var6) {
-          this.field_B = 0;
-          this.field_r = 0;
+          this.textOffsetY = 0;
+          this.textOffsetX = 0;
           return;
         }
-        var7 = this.field_r + var3.getCaretX(this.caretIndex, (byte) -108);
+        var7 = this.textOffsetX + var3.getCaretX(this.caretIndex, (byte) -108);
         if (-var6 + var5 < var7) {
-          this.field_r = -var7 - (-var5 + var6 - this.field_r);
+          this.textOffsetX = -var7 - (-var5 + var6 - this.textOffsetX);
         } else {
           if (var7 < var6) {
-            this.field_r = var6 - (var7 - this.field_r);
+            this.textOffsetX = var6 - (var7 - this.textOffsetX);
           }
         }
-        if (this.field_r > 0) {
-          this.field_r = 0;
+        if (this.textOffsetX > 0) {
+          this.textOffsetX = 0;
         } else {
-          if (this.field_r < -var5 + var6) {
-            this.field_r = var6 - var5;
+          if (this.textOffsetX < -var5 + var6) {
+            this.textOffsetX = var6 - var5;
           }
         }
         return;
@@ -189,7 +189,7 @@ class TextFieldWidget extends FocusableWidget {
           if (this.pressedButton == 1) {
             if (this.renderer instanceof WidgetLayoutProvider) {
               var7 = (WidgetLayoutProvider) ((Object) this.renderer);
-              var6 = var7.a((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
+              var6 = var7.findTextSourceOffset((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
               if (var6 != -1) {
                 if (this.doubleClickSelection &&
                   this.wordSelectionEnd > var6 &&
@@ -355,11 +355,11 @@ class TextFieldWidget extends FocusableWidget {
           if (this.renderer instanceof WidgetLayoutProvider) {
             var5 = (WidgetLayoutProvider) ((Object) this.renderer);
             if (this.caretIndex != this.selectionAnchor) {
-              var5.a(-15964, parentY, parentX, this.selectionAnchor, this.caretIndex, (Widget) (this));
+              var5.paintTextSelection(-15964, parentY, parentX, this.selectionAnchor, this.caretIndex, (Widget) (this));
             }
             var6 = MonotonicTime.nowMillis(false);
             if ((var6 - this.caretBlinkStartMillis) % 1000L < 500L) {
-              var5.a((Widget) (this), parentX, this.caretIndex, parentY, (byte) 123);
+              var5.paintTextCaret((Widget) (this), parentX, this.caretIndex, parentY, (byte) 123);
             }
           }
         }
@@ -532,7 +532,7 @@ class TextFieldWidget extends FocusableWidget {
           if (!(this.renderer instanceof WidgetLayoutProvider)) {
             return false;
           }
-          var8_int = ((WidgetLayoutProvider) ((Object) this.renderer)).a((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
+          var8_int = ((WidgetLayoutProvider) ((Object) this.renderer)).findTextSourceOffset((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
           if (var8_int == -1) {
             stackIn_7_1 = 0;
           } else {

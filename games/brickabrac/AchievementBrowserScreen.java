@@ -87,7 +87,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         if (obfuscationGuard >= -14) {
           return;
         }
-        var4 = ob.field_D.descent + ob.field_D.capHeight;
+        var4 = PasswordFieldRenderer.field_D.descent + PasswordFieldRenderer.field_D.capHeight;
         var5 = ContextActionController.field_g.capHeight + ContextActionController.field_g.descent;
         if (-1 != var3) {
           stackIn_17_0 = (!DirectByteStorage.isBitSet(this.achievementMask, var3, (byte) -75)) ? 0 : 1;
@@ -107,15 +107,15 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           }
           var7 = 246 + 5 * var5 / 2;
           var8 = var7 + var5;
-          var9 = var7 - (-(7 * var4) + ob.field_D.ascent);
-          var10 = ob.field_D.wrapText(rd.a(SocialListEntry.field_bc[var3], new String[]{nl.a(true, true, 0, (long)HalloweenBackground.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
+          var9 = var7 - (-(7 * var4) + PasswordFieldRenderer.field_D.ascent);
+          var10 = PasswordFieldRenderer.field_D.wrapText(rd.a(SocialListEntry.field_bc[var3], new String[]{nl.a(true, true, 0, (long)HalloweenBackground.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
           for (var11 = 0; var11 < var10; var11++) {
-            ob.field_D.drawLeft(this.descriptionLines[var11], 209, var8, 2, -1);
+            PasswordFieldRenderer.field_D.drawLeft(this.descriptionLines[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
           }
-          ob.field_D.drawLeft(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.descent) - nj.field_z.height / 2), 2, -1);
-          ob.field_D.drawLeft(UsernameAvailabilityValidator.field_m, 209, -ContextActionController.field_g.descent + var9, 2, -1);
-          var11Lifetime1 = ob.field_D.measureText(UsernameAvailabilityValidator.field_m) + 209;
+          PasswordFieldRenderer.field_D.drawLeft(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * PasswordFieldRenderer.field_D.descent) - nj.field_z.height / 2), 2, -1);
+          PasswordFieldRenderer.field_D.drawLeft(UsernameAvailabilityValidator.field_m, 209, -ContextActionController.field_g.descent + var9, 2, -1);
+          var11Lifetime1 = PasswordFieldRenderer.field_D.measureText(UsernameAvailabilityValidator.field_m) + 209;
           var12 = -(nj.field_z.canvasHeight / 2) + var9;
           for (var13 = 0; fq.field_e[var3] > var13; var13++) {
             nj.field_z.a(var11Lifetime1, var12);
@@ -125,7 +125,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           ContextActionController.field_g.drawLeft(ProducerFramebuffer.field_h, 209, 246 + ContextActionController.field_g.capHeight, 2, -1);
           if (QuickChatMenu.h(-26090)) {
             var6 = 246 + var5 * 3;
-            ob.field_D.drawLeft(DateFieldsWidget.field_N, 209, var6, 2, -1);
+            PasswordFieldRenderer.field_D.drawLeft(DateFieldsWidget.field_N, 209, var6, 2, -1);
           }
         }
         AchievementMaskRequest.a(this.screenId, 19);
@@ -556,7 +556,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           if (var6_ref_q.actionId == 8) {
             stackIn_7_0 = this.e((byte) 105);
           } else {
-            stackIn_7_0 = ag.buttonLabels[var6_ref_q.actionId];
+            stackIn_7_0 = ArrayWidgetGroup.buttonLabels[var6_ref_q.actionId];
           }
           var10 = stackIn_7_0;
           var7 = var10;

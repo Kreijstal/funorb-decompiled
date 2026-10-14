@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd implements WidgetRenderer {
+final class CheckboxWidgetRenderer implements WidgetRenderer {
     static String field_a;
     static AchievementMaskRequest field_b;
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
-          bd.a(-34, 70);
+          CheckboxWidgetRenderer.a(-34, 70);
           ch.field_b = param0;
           return;
         }
@@ -29,7 +29,7 @@ final class bd implements WidgetRenderer {
         try {
           tm.pendingTableSubmissions.addLast(submission, (byte) 3);
           if (obfuscationGuard != 25) {
-            bd.a(20, false);
+            CheckboxWidgetRenderer.a(20, false);
           }
           AppletGameShell.sendTableRow(opcode, submission, obfuscationGuard + 14964);
         } catch (RuntimeException runtimeException) {

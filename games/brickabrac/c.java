@@ -315,7 +315,7 @@ final class c {
             }
           }
         }
-        um.a(param6, param9, param4, param0, param2, param1, (byte) -114);
+        TextWidgetRenderer.a(param6, param9, param4, param0, param2, param1, (byte) -114);
         MusicVoice.a(param4, TimedSplashScreen.field_u, param2, param0, 121);
         if (param5 <= 6) {
           field_g = -90;

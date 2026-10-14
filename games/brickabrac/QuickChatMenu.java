@@ -1190,7 +1190,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime117 = gr.a(true, "oh_no");
           if (null != var2Lifetime117) {
-            ag.field_C = MenuButton.a(var2Lifetime117, (byte) 81);
+            ArrayWidgetGroup.field_C = MenuButton.a(var2Lifetime117, (byte) 81);
           }
           var2Lifetime118 = gr.a(true, "oh_dear");
           if (null != var2Lifetime118) {
@@ -1198,7 +1198,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime119 = gr.a(!param0, "curses");
           if (var2Lifetime119 != null) {
-            qo.field_P = MenuButton.a(var2Lifetime119, (byte) 97);
+            PlayerNameChooserPanel.field_P = MenuButton.a(var2Lifetime119, (byte) 97);
           }
           var2Lifetime120 = gr.a(true, "crumbs");
           if (null != var2Lifetime120) {

@@ -79,7 +79,7 @@ abstract class ArchiveFetchClient {
     final static void a(String param0, int param1) {
         try {
           PasswordValidator.field_m = param0;
-          bd.a(param1, true);
+          CheckboxWidgetRenderer.a(param1, true);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

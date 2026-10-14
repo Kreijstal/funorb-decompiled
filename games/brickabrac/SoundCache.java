@@ -295,7 +295,7 @@ final class SoundCache {
               }
             }
             if (rf.field_b == IsaacGenerator.field_g &&
-              um.ensureGamePacketBody((byte) -80)) {
+              TextWidgetRenderer.ensureGamePacketBody((byte) -80)) {
               sl.field_v = jl.incomingPackets.readLong(-32768);
               gd.field_b = param5;
               QuickChatHelpDialog.field_Yb = jl.incomingPackets.readUnsignedByte(255);
@@ -308,13 +308,13 @@ final class SoundCache {
               }
               if (!param1) {
                 stackIn_41_0 = ((var7 & 2) != 0);
-                qo.field_I = stackIn_41_0;
+                PlayerNameChooserPanel.field_I = stackIn_41_0;
                 stackIn_44_0 = ((8 & var7) != 0);
-                um.field_e = stackIn_44_0;
+                TextWidgetRenderer.field_e = stackIn_44_0;
                 stackIn_47_0 = ((4 & var7) != 0);
                 ChocolateBackground.field_r = stackIn_47_0;
-                if (um.field_e) {
-                  qo.field_I = true;
+                if (TextWidgetRenderer.field_e) {
+                  PlayerNameChooserPanel.field_I = true;
                 }
               }
               stackIn_53_0 = ((16 & var7) != 0);
@@ -376,7 +376,7 @@ final class SoundCache {
               field_h = 'ﾢ';
             }
             if (rf.field_b == MenuScreen.field_k &&
-              um.ensureGamePacketBody((byte) -41)) {
+              TextWidgetRenderer.ensureGamePacketBody((byte) -41)) {
               hn.a((byte) 58);
               if (IntrusiveHashTable.currentPacketOpcode == 7 &&
                 !pf.field_d) {
@@ -601,10 +601,10 @@ final class SoundCache {
           if (0 == var2_int) {
             uf.a(3, 0);
           }
-          var3 = (nj) (ob.field_E.first(-31));
+          var3 = (nj) (PasswordFieldRenderer.field_E.first(-31));
           while (var3 != null) {
             var3.c(0);
-            var3 = (nj) (ob.field_E.next((byte) 116));
+            var3 = (nj) (PasswordFieldRenderer.field_E.next((byte) 116));
           }
           if (param0) {
             uf.a(var2_int - dl.field_f, 0);

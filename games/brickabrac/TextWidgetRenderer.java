@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class um implements WidgetRenderer, WidgetLayoutProvider {
+class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
     static int[] quarterSineQ16;
-    int field_q;
+    int topInset;
     static int[] underwaterBackgroundColors;
-    int field_a;
-    TextFont field_k;
-    int field_h;
-    int field_c;
+    int bottomInset;
+    TextFont font;
+    int lineSpacing;
+    int selectionArgb;
     static UiComponent field_b;
     static RgbSprite field_p;
     static boolean field_t;
-    int field_r;
-    int field_m;
-    int field_i;
+    int textColor;
+    int verticalAlignment;
+    int rightInset;
     static MeshAttributeRecord[] meshAttributeRecords;
-    private int field_g;
+    private int shadowColor;
     static boolean field_e;
-    int field_f;
-    int field_s;
-    int field_d;
+    int horizontalAlignment;
+    int caretColor;
+    int leftInset;
     static RgbSprite[] desertCentreSprites;
-    private boolean field_n;
+    private boolean wrapText;
 
     final static void a(int param0, PacketBuffer param1, byte param2, PlatformServices param3) {
         try {
@@ -172,7 +172,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    public final int a(Widget param0, byte param1, int param2) {
+    public final int getTextOriginX(Widget widget, byte obfuscationGuard, int parentX) {
         RuntimeException var4 = null;
         Widget var5 = null;
         int stackIn_3_0 = 0;
@@ -181,40 +181,40 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 <= 40) {
+          if (obfuscationGuard <= 40) {
             var5 = (Widget) null;
-            this.a((Widget) null, (byte) -5, -108);
+            this.getTextOriginX((Widget) null, (byte) -5, -108);
           }
-          stackIn_3_0 = this.a(0, param0, 65263, param2);
+          stackIn_3_0 = this.computeTextX(0, widget, 65263, parentX);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
           stackIn_6_1 = new StringBuilder().append("um.T(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(')').toString());
         }
     }
 
-    um(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
+    TextWidgetRenderer(TextFont font, int horizontalInset, int verticalInset, int textColor, int shadowColor, int horizontalAlignment, int verticalAlignment, int lineSpacing) {
+        this(font, horizontalInset, horizontalInset, verticalInset, verticalInset, textColor, shadowColor, horizontalAlignment, verticalAlignment, lineSpacing, -1, 2147483647, false);
     }
 
-    private final void a(int param0, int param1, int param2, Widget param3) {
+    private final void paintText(int obfuscationGuard, int parentX, int parentY, Widget widget) {
         try {
-          int var5_int = 64 / ((param0 - 64) / 58);
-          this.a(0, 0, this.field_g, param2, this.field_r, (byte) -56, param1, param3);
+          int var5_int = 64 / ((obfuscationGuard - 64) / 58);
+          this.paintTextRun(0, 0, this.shadowColor, parentY, this.textColor, (byte) -56, parentX, widget);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.R(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.R(" + obfuscationGuard + ',' + parentX + ',' + parentY + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final int a(int param0, Widget param1) {
+    public final int getTextAreaWidth(int obfuscationGuard, Widget widget) {
         RuntimeException var3 = null;
         ResourceArchive var4 = null;
         int stackIn_3_0 = 0;
@@ -223,18 +223,18 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 61823) {
+          if (obfuscationGuard != 61823) {
             var4 = (ResourceArchive) null;
-            um.a((String) null, (String) null, -49, (ResourceArchive) null);
+            TextWidgetRenderer.a((String) null, (String) null, -49, (ResourceArchive) null);
           }
-          stackIn_3_0 = -this.field_d + (param1.width - this.field_i);
+          stackIn_3_0 = -this.leftInset + (widget.width - this.rightInset);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("um.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("um.C(").append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -243,7 +243,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    public final void a(Widget param0, int param1, int param2, int param3, byte param4) {
+    public final void paintTextCaret(Widget widget, int parentX, int caretIndex, int parentY, byte obfuscationGuard) {
         int var7 = 0;
         TextLineLayout var8 = null;
         int var9 = 0;
@@ -262,16 +262,16 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param0.isFocused(-83)) {
-            var13 = this.getTextLayout(param0, 121);
+          if (widget.isFocused(-83)) {
+            var13 = this.getTextLayout(widget, 121);
             var14 = var13;
-            var7 = var14.findLineIndex(param2, true);
+            var7 = var14.findLineIndex(caretIndex, true);
             var8 = var13.lines[var7];
-            var9 = var14.getCaretX(param2, (byte) -72);
-            var10 = this.a(var9, param0, 65263, param1);
-            var11 = this.a(param3, (byte) -116, param0) + Math.max(0, var8.top);
-            stackIn_4_0 = this.a(param3, (byte) -96, param0);
-            stackIn_4_1 = this.b(16265, param0);
+            var9 = var14.getCaretX(caretIndex, (byte) -72);
+            var10 = this.computeTextX(var9, widget, 65263, parentX);
+            var11 = this.getTextOriginY(parentY, (byte) -116, widget) + Math.max(0, var8.top);
+            stackIn_4_0 = this.getTextOriginY(parentY, (byte) -96, widget);
+            stackIn_4_1 = this.getTextAreaHeight(16265, widget);
             stackIn_4_2 = var8.bottom;
             if (1 + var7 >= var14.lines.length) {
               stackIn_5_3 = var8.bottom;
@@ -279,12 +279,12 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               stackIn_5_3 = var13.lines[1 + var7].top;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            MovingBody.a((byte) 125, param0.width + param1 + param0.x, param0.x + param1, param3 + param0.y, param0.height + param3 + param0.y);
-            bj.widgetTheme.a(this.field_s, var10, var11, 91, var12, var10);
+            MovingBody.a((byte) 125, widget.width + parentX + widget.x, widget.x + parentX, parentY + widget.y, widget.height + parentY + widget.y);
+            bj.widgetTheme.a(this.caretColor, var10, var11, 91, var12, var10);
             sc.popRaster(-94);
           }
-          if (param4 <= 118) {
-            this.field_d = -19;
+          if (obfuscationGuard <= 118) {
+            this.leftInset = -19;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -292,16 +292,16 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
           var6 = decompiledCaughtException;
           stackIn_11_0 = var6;
           stackIn_11_1 = new StringBuilder().append("um.B(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(parentX).append(',').append(caretIndex).append(',').append(parentY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final int a(int param0, Widget param1, int param2, int param3) {
+    private final int computeTextX(int localX, Widget widget, int obfuscationGuard, int parentX) {
         RuntimeException var5 = null;
         Widget var6 = null;
         int stackIn_3_0 = 0;
@@ -310,23 +310,23 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 != 65263) {
+          if (obfuscationGuard != 65263) {
             var6 = (Widget) null;
-            this.a(41, (Widget) null);
+            this.getTextAreaWidth(41, (Widget) null);
           }
-          stackIn_3_0 = param0 + param1.field_r + param3 + (param1.x + this.field_d);
+          stackIn_3_0 = localX + widget.textOffsetX + parentX + (widget.x + this.leftInset);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("um.U(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("um.U(").append(localX).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -343,10 +343,10 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
             widget.textLayout = (WidgetTextLayout) ((Object) new RichTextLayout());
           }
           var3_int = -14 / ((obfuscationGuard - 49) / 43);
-          if (this.field_n) {
-            ((RichTextLayout) (widget.textLayout)).layoutWrapped(this.a(widget, true), this.field_f, 122, this.b(16265, widget), this.field_h, this.a(61823, widget), this.field_m, this.field_k);
+          if (this.wrapText) {
+            ((RichTextLayout) (widget.textLayout)).layoutWrapped(this.getDisplayText(widget, true), this.horizontalAlignment, 122, this.getTextAreaHeight(16265, widget), this.lineSpacing, this.getTextAreaWidth(61823, widget), this.verticalAlignment, this.font);
           } else {
-            this.a((byte) 6, widget);
+            this.layoutSingleLine((byte) 6, widget);
           }
           stackIn_6_0 = widget.textLayout;
           return stackIn_6_0;
@@ -364,7 +364,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    public final int a(Widget param0, int param1, boolean param2, int param3, int param4, int param5) {
+    public final int findTextSourceOffset(Widget widget, int pointerX, boolean obfuscationGuard, int parentY, int pointerY, int parentX) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -373,24 +373,24 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param2) {
+          if (!obfuscationGuard) {
             stackIn_2_0 = 64;
             return stackIn_2_0;
           }
-          this.getTextLayout(param0, 121);
-          stackIn_4_0 = param0.textLayout.findSourceOffset(-this.a(param0, (byte) 48, param5) + param1, false, param4 - this.a(param3, (byte) -122, param0));
+          this.getTextLayout(widget, 121);
+          stackIn_4_0 = widget.textLayout.findSourceOffset(-this.getTextOriginX(widget, (byte) 48, parentX) + pointerX, false, pointerY - this.getTextOriginY(parentY, (byte) -122, widget));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_7_0 = var7;
           stackIn_7_1 = new StringBuilder().append("um.O(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(pointerX).append(',').append(obfuscationGuard).append(',').append(parentY).append(',').append(pointerY).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -436,7 +436,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         try {
           this.getTextLayout(widget, -118);
           if (obfuscationGuard > 24) {
-            stackIn_4_0 = widget.textLayout.getRightEdge(31458) - (-this.field_d - this.field_i);
+            stackIn_4_0 = widget.textLayout.getRightEdge(31458) - (-this.leftInset - this.rightInset);
             return stackIn_4_0;
           }
           stackIn_2_0 = 74;
@@ -455,7 +455,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    private final int a(byte param0, int param1, int param2, Widget param3) {
+    private final int computeTextY(byte obfuscationGuard, int parentY, int localY, Widget widget) {
         RuntimeException var5 = null;
         Widget var6 = null;
         int stackIn_3_0 = 0;
@@ -464,18 +464,18 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 103) {
+          if (obfuscationGuard < 103) {
             var6 = (Widget) null;
-            this.a((byte) -127, (Widget) null);
+            this.layoutSingleLine((byte) -127, (Widget) null);
           }
-          stackIn_3_0 = param3.field_B + param1 - (-param3.y - this.field_q) + param2;
+          stackIn_3_0 = widget.textOffsetY + parentY - (-widget.y - this.topInset) + localY;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("um.L(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_6_1 = new StringBuilder().append("um.L(").append(obfuscationGuard).append(',').append(parentY).append(',').append(localY).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -484,26 +484,26 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    final void a(int param0, um param1) {
+    final void copyStyleTo(int obfuscationGuard, TextWidgetRenderer target) {
         try {
-          param1.field_r = this.field_r;
-          param1.field_h = this.field_h;
-          param1.field_m = this.field_m;
-          param1.field_c = this.field_c;
-          param1.field_d = this.field_d;
-          param1.field_q = this.field_q;
-          param1.field_g = this.field_g;
-          param1.field_i = this.field_i;
-          param1.field_f = this.field_f;
-          param1.field_a = this.field_a;
-          if (param0 > -7) {
+          target.textColor = this.textColor;
+          target.lineSpacing = this.lineSpacing;
+          target.verticalAlignment = this.verticalAlignment;
+          target.selectionArgb = this.selectionArgb;
+          target.leftInset = this.leftInset;
+          target.topInset = this.topInset;
+          target.shadowColor = this.shadowColor;
+          target.rightInset = this.rightInset;
+          target.horizontalAlignment = this.horizontalAlignment;
+          target.bottomInset = this.bottomInset;
+          if (obfuscationGuard > -7) {
             underwaterBackgroundColors = (int[]) null;
           }
-          param1.field_k = this.field_k;
-          param1.field_n = this.field_n;
-          param1.field_s = this.field_s;
+          target.font = this.font;
+          target.wrapText = this.wrapText;
+          target.caretColor = this.caretColor;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.W(" + obfuscationGuard + ',' + (target != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -554,7 +554,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    private final int b(int param0, Widget param1) {
+    private final int getTextAreaHeight(int obfuscationGuard, Widget widget) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -562,17 +562,17 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 16265) {
+          if (obfuscationGuard != 16265) {
             quarterSineQ16 = (int[]) null;
           }
-          stackIn_3_0 = -this.field_a + (param1.height - this.field_q);
+          stackIn_3_0 = -this.bottomInset + (widget.height - this.topInset);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("um.D(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("um.D(").append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -582,11 +582,11 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
     }
 
     public void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
-        if (null == this.field_k) {
+        if (null == this.font) {
           return;
         }
         try {
-          this.a(-94, parentX, parentY, widget);
+          this.paintText(-94, parentX, parentY, widget);
           if (callbackGuard != -20618) {
             quarterSineQ16 = (int[]) null;
           }
@@ -595,7 +595,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, Widget param5) {
+    public final void paintTextSelection(int obfuscationGuard, int parentY, int parentX, int selectionAnchor, int caretIndex, Widget widget) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -616,25 +616,25 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         WidgetTextLayout var18 = null;
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param4 == param3) {
+          if (caretIndex == selectionAnchor) {
             return;
           }
-          if (param0 != -15964) {
+          if (obfuscationGuard != -15964) {
             return;
           }
-          if (param5.isFocused(-76)) {
-            var17 = this.getTextLayout(param5, 106);
+          if (widget.isFocused(-76)) {
+            var17 = this.getTextLayout(widget, 106);
             var18 = var17;
-            if (param3 < param4) {
-              var8 = param3;
-              var9 = param4;
+            if (selectionAnchor < caretIndex) {
+              var8 = selectionAnchor;
+              var9 = caretIndex;
             } else {
-              var8 = param4;
-              var9 = param3;
+              var8 = caretIndex;
+              var9 = selectionAnchor;
             }
             var10 = var18.findLineIndex(var8, true);
             var11 = var18.findLineIndex(var9, true);
-            MovingBody.a((byte) 127, param5.x + param2 + param5.width, param2 + param5.x, param5.y + param1, param5.height + (param5.y + param1));
+            MovingBody.a((byte) 127, widget.x + parentX + widget.width, parentX + widget.x, widget.y + parentY, widget.height + (widget.y + parentY));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.lines[var12];
               if (var10 != var12) {
@@ -653,7 +653,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
                 }
               }
               var15 = stackIn_21_0;
-              bj.widgetTheme.a(var13.top + this.field_q + (param5.y + (param1 + param5.field_B)), this.field_c >>> 24, this.field_c, this.a(var14, param5, 65263, param2), var13.bottom, (byte) 55, var15 - var14);
+              bj.widgetTheme.a(var13.top + this.topInset + (widget.y + (parentY + widget.textOffsetY)), this.selectionArgb >>> 24, this.selectionArgb, this.computeTextX(var14, widget, 65263, parentX), var13.bottom, (byte) 55, var15 - var14);
             }
             sc.popRaster(-98);
             return;
@@ -663,8 +663,8 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_26_0 = var7;
-          stackIn_26_1 = new StringBuilder().append("um.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_26_1 = new StringBuilder().append("um.I(").append(obfuscationGuard).append(',').append(parentY).append(',').append(parentX).append(',').append(selectionAnchor).append(',').append(caretIndex).append(',');
+          if (widget == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
@@ -673,64 +673,64 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    private final void a(byte param0, Widget param1) {
+    private final void layoutSingleLine(byte obfuscationGuard, Widget widget) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
+        int textAreaWidth = 0;
         RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int textAreaHeight = 0;
+        int baselineY = 0;
+        int verticalAlignment = 0;
         int var7 = 0;
         Widget var8 = null;
-        int var6Lifetime1;
+        int horizontalAlignment;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (null == param1.textLayout) {
-            param1.textLayout = (WidgetTextLayout) ((Object) new RichTextLayout());
+          if (null == widget.textLayout) {
+            widget.textLayout = (WidgetTextLayout) ((Object) new RichTextLayout());
           }
-          var3_int = this.a(61823, param1);
-          var4 = this.b(16265, param1);
-          if (param0 != 6) {
+          textAreaWidth = this.getTextAreaWidth(61823, widget);
+          textAreaHeight = this.getTextAreaHeight(16265, widget);
+          if (obfuscationGuard != 6) {
             var8 = (Widget) null;
-            this.a((Widget) null, (byte) 6, -90);
+            this.getTextOriginX((Widget) null, (byte) 6, -90);
           }
-          var6 = this.field_m;
-          if (var6 != 0) {
-            if (2 != var6) {
-              if (var6 != 3 &&
-                var6 == 1) {
+          verticalAlignment = this.verticalAlignment;
+          if (verticalAlignment != 0) {
+            if (2 != verticalAlignment) {
+              if (verticalAlignment != 3 &&
+                verticalAlignment == 1) {
               }
-              var5 = (-this.field_k.descent + var4 - this.field_k.ascent >> 1) + this.field_k.ascent;
+              baselineY = (-this.font.descent + textAreaHeight - this.font.ascent >> 1) + this.font.ascent;
             } else {
-              var5 = var4 - this.field_k.descent;
+              baselineY = textAreaHeight - this.font.descent;
             }
           } else {
-            var5 = this.field_k.ascent;
+            baselineY = this.font.ascent;
           }
-          var6Lifetime1 = this.field_f;
-          if (var6Lifetime1 != 0 &&
-            var6Lifetime1 != 3) {
-            if (1 == var6Lifetime1) {
-              if (!(param1.textLayout instanceof RichTextLayout)) {
+          horizontalAlignment = this.horizontalAlignment;
+          if (horizontalAlignment != 0 &&
+            horizontalAlignment != 3) {
+            if (1 == horizontalAlignment) {
+              if (!(widget.textLayout instanceof RichTextLayout)) {
                 return;
               }
-              ((RichTextLayout) (param1.textLayout)).layoutCentered(this.a(param1, true), var5, this.field_k, var3_int >> 1, 1);
+              ((RichTextLayout) (widget.textLayout)).layoutCentered(this.getDisplayText(widget, true), baselineY, this.font, textAreaWidth >> 1, 1);
               return;
             }
-            if (var6Lifetime1 != 2) {
+            if (horizontalAlignment != 2) {
               return;
             }
-            if (!(param1.textLayout instanceof RichTextLayout)) {
+            if (!(widget.textLayout instanceof RichTextLayout)) {
               return;
             }
-            ((RichTextLayout) (param1.textLayout)).layoutRightAligned(this.a(param1, true), this.field_k, var3_int, (byte) -115, var5);
+            ((RichTextLayout) (widget.textLayout)).layoutRightAligned(this.getDisplayText(widget, true), this.font, textAreaWidth, (byte) -115, baselineY);
             return;
           }
-          if (param1.textLayout instanceof RichTextLayout) {
-            ((RichTextLayout) (param1.textLayout)).layoutLeftAligned(this.field_k, var5, 0, this.a(param1, true), 0);
+          if (widget.textLayout instanceof RichTextLayout) {
+            ((RichTextLayout) (widget.textLayout)).layoutLeftAligned(this.font, baselineY, 0, this.getDisplayText(widget, true), 0);
             return;
           }
           return;
@@ -738,8 +738,8 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_33_0 = var3;
-          stackIn_33_1 = new StringBuilder().append("um.M(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_33_1 = new StringBuilder().append("um.M(").append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
@@ -1070,7 +1070,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
                     if (var13.spectatorMode != 2) {
                       var13.field_Ac.text = qn.field_o;
                     } else {
-                      var13.field_nc.text = ag.field_I;
+                      var13.field_nc.text = ArrayWidgetGroup.field_I;
                     }
                   }
                 } else {
@@ -1204,7 +1204,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
                 var32 = var32 + np.uiRowHeight * var40Lifetime1;
               }
               if (var13.invitationPending) {
-                var13.field_ic.text = rd.a(r.field_y, new String[]{var33}, (byte) 103);
+                var13.field_ic.text = rd.a(TextFieldRenderer.field_y, new String[]{var33}, (byte) 103);
                 var13.field_ic.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.uiRowHeight;
               }
@@ -1315,7 +1315,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    String a(Widget param0, boolean param1) {
+    String getDisplayText(Widget widget, boolean obfuscationGuard) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -1324,8 +1324,8 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1) {
-            stackIn_4_0 = param0.text;
+          if (obfuscationGuard) {
+            stackIn_4_0 = widget.text;
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -1335,16 +1335,16 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("um.Q(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, Widget param7) {
+    private final void paintTextRun(int localX, int localY, int shadowColor, int parentY, int textColor, byte obfuscationGuard, int parentX, Widget widget) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -1358,43 +1358,43 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         int var12Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          MovingBody.a((byte) 81, param7.width + param7.x + param6, param6 + param7.x, param7.y + param3, param3 + param7.y + param7.height);
-          if (param5 >= -45) {
+          MovingBody.a((byte) 81, widget.width + widget.x + parentX, parentX + widget.x, widget.y + parentY, parentY + widget.y + widget.height);
+          if (obfuscationGuard >= -45) {
             return;
           }
           boolean decompiledFrameRemainder0 = true;
-          var9_int = this.a(61823, param7);
-          var10 = this.b(16265, param7);
-          if (this.field_n) {
-            this.field_k.a(this.a(param7, true), this.a(param0, param7, 65263, param6), this.a((byte) 117, param3, param1, param7), var9_int, var10, param4, param2, this.field_f, this.field_m, this.field_h);
+          var9_int = this.getTextAreaWidth(61823, widget);
+          var10 = this.getTextAreaHeight(16265, widget);
+          if (this.wrapText) {
+            this.font.a(this.getDisplayText(widget, true), this.computeTextX(localX, widget, 65263, parentX), this.computeTextY((byte) 117, parentY, localY, widget), var9_int, var10, textColor, shadowColor, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           } else {
-            var12 = this.field_m;
+            var12 = this.verticalAlignment;
             if (var12 != 0) {
               if (var12 != 2) {
                 if (var12 != 3 &&
                   var12 != 1) {
                 }
-                var11 = this.field_k.ascent + (-this.field_k.descent - this.field_k.ascent + var10 >> 1);
+                var11 = this.font.ascent + (-this.font.descent - this.font.ascent + var10 >> 1);
               } else {
-                var11 = -this.field_k.descent + var10;
+                var11 = -this.font.descent + var10;
               }
             } else {
-              var11 = this.field_k.ascent;
+              var11 = this.font.ascent;
             }
-            var12Lifetime1 = this.field_f;
+            var12Lifetime1 = this.horizontalAlignment;
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (1 == var12Lifetime1) {
-                this.field_k.drawCentered(this.a(param7, true), (var9_int >> 1) + this.a(param0, param7, 65263, param6), this.a((byte) 118, param3, param1, param7) + var11, param4, param2);
+                this.font.drawCentered(this.getDisplayText(widget, true), (var9_int >> 1) + this.computeTextX(localX, widget, 65263, parentX), this.computeTextY((byte) 118, parentY, localY, widget) + var11, textColor, shadowColor);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_k.drawRight(this.a(param7, true), this.a(param0, param7, 65263, param6) + var9_int, var11 + this.a((byte) 127, param3, param1, param7), param4, param2);
+                  this.font.drawRight(this.getDisplayText(widget, true), this.computeTextX(localX, widget, 65263, parentX) + var9_int, var11 + this.computeTextY((byte) 127, parentY, localY, widget), textColor, shadowColor);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_k.drawLeft(this.a(param7, true), this.a(param0, param7, 65263, param6), this.a((byte) 105, param3, param1, param7) + var11, param4, param2);
+              this.font.drawLeft(this.getDisplayText(widget, true), this.computeTextX(localX, widget, 65263, parentX), this.computeTextY((byte) 105, parentY, localY, widget) + var11, textColor, shadowColor);
             }
           }
           sc.popRaster(-103);
@@ -1403,8 +1403,8 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
           stackIn_28_0 = var9;
-          stackIn_28_1 = new StringBuilder().append("um.P(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_28_1 = new StringBuilder().append("um.P(").append(localX).append(',').append(localY).append(',').append(shadowColor).append(',').append(parentY).append(',').append(textColor).append(',').append(obfuscationGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
@@ -1413,7 +1413,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         }
     }
 
-    public final int a(int param0, byte param1, Widget param2) {
+    public final int getTextOriginY(int parentY, byte obfuscationGuard, Widget widget) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1421,17 +1421,17 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -92) {
-            this.field_k = (TextFont) null;
+          if (obfuscationGuard >= -92) {
+            this.font = (TextFont) null;
           }
-          stackIn_3_0 = this.a((byte) 125, param0, 0, param2);
+          stackIn_3_0 = this.computeTextY((byte) 125, parentY, 0, widget);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("um.S(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_6_1 = new StringBuilder().append("um.S(").append(parentY).append(',').append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -1442,9 +1442,9 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
 
     public final int getLineHeight(byte obfuscationGuard) {
         if (obfuscationGuard < 64) {
-          this.field_h = -89;
+          this.lineSpacing = -89;
         }
-        return this.field_k.descent + this.field_k.ascent;
+        return this.font.descent + this.font.ascent;
     }
 
     public final int getPreferredHeight(Widget widget, int obfuscationGuard) {
@@ -1458,7 +1458,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         try {
           this.getTextLayout(widget, 109);
           if (obfuscationGuard == 46695) {
-            stackIn_4_0 = widget.textLayout.getHeight(obfuscationGuard ^ 46695) + this.field_q + this.field_a;
+            stackIn_4_0 = widget.textLayout.getHeight(obfuscationGuard ^ 46695) + this.topInset + this.bottomInset;
             return stackIn_4_0;
           }
           stackIn_2_0 = 99;
@@ -1489,26 +1489,26 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         desertCentreSprites = null;
     }
 
-    protected um() {
+    protected TextWidgetRenderer() {
     }
 
-    um(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    TextWidgetRenderer(TextFont font, int leftInset, int rightInset, int topInset, int bottomInset, int textColor, int shadowColor, int horizontalAlignment, int verticalAlignment, int lineSpacing, int caretColor, int selectionArgb, boolean wrapText) {
         try {
-          this.field_n = param12 ? true : false;
-          this.field_r = param5;
-          this.field_h = param9;
-          this.field_k = param0;
-          this.field_a = param4;
-          this.field_q = param3;
-          this.field_c = param11;
-          this.field_m = param8;
-          this.field_s = param10;
-          this.field_i = param2;
-          this.field_d = param1;
-          this.field_f = param7;
-          this.field_g = param6;
+          this.wrapText = wrapText ? true : false;
+          this.textColor = textColor;
+          this.lineSpacing = lineSpacing;
+          this.font = font;
+          this.bottomInset = bottomInset;
+          this.topInset = topInset;
+          this.selectionArgb = selectionArgb;
+          this.verticalAlignment = verticalAlignment;
+          this.caretColor = caretColor;
+          this.rightInset = rightInset;
+          this.leftInset = leftInset;
+          this.horizontalAlignment = horizontalAlignment;
+          this.shadowColor = shadowColor;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.<init>(" + (font != null ? "{...}" : "null") + ',' + leftInset + ',' + rightInset + ',' + topInset + ',' + bottomInset + ',' + textColor + ',' + shadowColor + ',' + horizontalAlignment + ',' + verticalAlignment + ',' + lineSpacing + ',' + caretColor + ',' + selectionArgb + ',' + wrapText + ')');
         }
     }
 

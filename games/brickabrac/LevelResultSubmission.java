@@ -81,7 +81,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             DateFieldsWidget.a(-115, (String) null, (String) (var2), 0, cn.field_d);
           } else {
             var3 = tb.field_cb;
-            var3 = r.a((byte) 82, var3);
+            var3 = TextFieldRenderer.a((byte) 82, var3);
             var4 = "";
             var5 = "|";
             var6 = ng.quickChatChannel;
@@ -114,29 +114,29 @@ final class LevelResultSubmission extends IntrusiveNode {
                   }
                 }
               }
-              if (!ri.a(param0 + 9142)) {
+              if (!UsernameSuggestionPanel.a(param0 + 9142)) {
                 stackIn_59_0 = "<img=3>: ";
               } else {
                 stackIn_59_0 = ": ";
               }
               var8Lifetime1 = stackIn_59_0;
               var4 = var4 + var3 + var8Lifetime1;
-              boolean decompiledSharedTail0 = !(um.field_e);
+              boolean decompiledSharedTail0 = !(TextWidgetRenderer.field_e);
               if (!decompiledSharedTail0) {
                 var4 = "<col=999999>" + var4 + CircleBody.field_s + "</col>";
                 var5 = "";
                 decompiledSharedTail0 = (var10 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (qo.field_I)) {
+                (PlayerNameChooserPanel.field_I)) {
                 var4 = "<col=999999>" + var4 + MainMenuScreen.field_y + "</col>";
                 var5 = "";
               }
               var9 = CachedArchiveSource.field_y.measureText(var4);
-              if (!ri.a(-112)) {
+              if (!UsernameSuggestionPanel.a(-112)) {
                 if (PasswordValidator.field_n.activeInside &&
                   (-PasswordValidator.field_n.screenX + MusicPatch.pointerX) < var9) {
-                  if (!um.field_e) {
+                  if (!TextWidgetRenderer.field_e) {
                     var1 = MainMenuScreen.field_y;
                   } else {
                     var1 = "Broken!";
@@ -144,7 +144,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                 }
                 if (PasswordValidator.field_n.pressedButton != 0 &&
                   var9 > PasswordValidator.field_n.pressLocalX &&
-                  !um.field_e) {
+                  !TextWidgetRenderer.field_e) {
                   LevelPackLoader.a(param0 ^ -13455);
                 }
               }

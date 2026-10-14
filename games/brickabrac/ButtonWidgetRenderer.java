@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hi extends um {
-    private int field_z;
+final class ButtonWidgetRenderer extends TextWidgetRenderer {
+    private int normalTint;
     static NodeDeque rasterStack;
     static int[] field_A;
-    private int field_y;
-    private int field_x;
+    private int hoverTint;
+    private int disabledTint;
     static IsaacGenerator field_w;
-    private RgbSprite[] field_B;
+    private RgbSprite[] buttonSprites;
 
     final static boolean a(boolean param0, int param1, int param2) {
         StringBuilder discarded$2 = null;
@@ -171,7 +171,7 @@ final class hi extends um {
           var17 = tb.field_cb;
           var7 = var17;
           var7Lifetime10 = var17;
-          var16 = r.a((byte) 104, var17);
+          var16 = TextFieldRenderer.a((byte) 104, var17);
           var7Lifetime11 = var16;
           var7Lifetime12 = var16;
           var19 = var16;
@@ -276,7 +276,7 @@ final class hi extends um {
               var17Lifetime1 = tb.field_cb;
               var7Lifetime1 = var17Lifetime1;
               var7Lifetime1Lifetime1 = var17Lifetime1;
-              var16 = r.a((byte) 104, var17Lifetime1);
+              var16 = TextFieldRenderer.a((byte) 104, var17Lifetime1);
               var7Lifetime1Lifetime2 = var16;
               var7Lifetime1Lifetime3 = var16;
               var19Lifetime1 = var16;
@@ -389,7 +389,7 @@ final class hi extends um {
         var17Lifetime2 = tb.field_cb;
         var7Lifetime3 = var17Lifetime2;
         var7Lifetime4 = var17Lifetime2;
-        var16 = r.a((byte) 104, var17Lifetime2);
+        var16 = TextFieldRenderer.a((byte) 104, var17Lifetime2);
         var7Lifetime5 = var16;
         var7Lifetime6 = var16;
         var19Lifetime2 = var16;
@@ -486,22 +486,22 @@ final class hi extends um {
             obfuscationGuard = obfuscationGuard & ((FocusableWidget) (widget)).enabled;
           }
           if (!obfuscationGuard) {
-            stackIn_14_0 = this.field_x;
+            stackIn_14_0 = this.disabledTint;
           } else {
             if (var6_int != 0) {
-              stackIn_14_0 = this.field_y;
+              stackIn_14_0 = this.hoverTint;
             } else {
-              stackIn_14_0 = this.field_z;
+              stackIn_14_0 = this.normalTint;
             }
           }
           var7 = stackIn_14_0;
-          EmailAvailabilityRequest.a(this.field_B, widget.y + parentY + (widget.height - this.field_B[0].canvasHeight >> 1), widget.x + parentX, widget.width, var7, (byte) 122);
+          EmailAvailabilityRequest.a(this.buttonSprites, widget.y + parentY + (widget.height - this.buttonSprites[0].canvasHeight >> 1), widget.x + parentX, widget.width, var7, (byte) 122);
           stackIn_17_0 = (!obfuscationGuard) ? 7105644 : 16777215;
           var8 = stackIn_17_0;
           if (callbackGuard != -20618) {
             field_A = (int[]) null;
           }
-          this.field_k.a(widget.text, widget.x + parentX, parentY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.field_k.ascent);
+          this.font.a(widget.text, widget.x + parentX, parentY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.font.ascent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -517,7 +517,7 @@ final class hi extends um {
         }
     }
 
-    public hi() {
+    public ButtonWidgetRenderer() {
         this(2188450, 2591221, 9543);
     }
 
@@ -540,12 +540,12 @@ final class hi extends um {
         }
     }
 
-    private hi(int param0, int param1, int param2) {
-        this.field_x = param2;
-        this.field_y = param1;
-        this.field_z = param0;
-        this.field_k = wm.field_a;
-        this.field_B = ValidatedTextFieldWidget.field_U;
+    private ButtonWidgetRenderer(int normalTint, int hoverTint, int disabledTint) {
+        this.disabledTint = disabledTint;
+        this.hoverTint = hoverTint;
+        this.normalTint = normalTint;
+        this.font = wm.field_a;
+        this.buttonSprites = ValidatedTextFieldWidget.field_U;
     }
 
     static {

@@ -301,8 +301,8 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         int var1 = 0;
         int var2 = 0;
         if (param0 >= 4) {
-          var1 = ContextActionController.field_g.measureText(ag.buttonLabels[20]);
-          var2 = ContextActionController.field_g.measureText(ag.buttonLabels[21]);
+          var1 = ContextActionController.field_g.measureText(ArrayWidgetGroup.buttonLabels[20]);
+          var2 = ContextActionController.field_g.measureText(ArrayWidgetGroup.buttonLabels[21]);
           dg.field_d = (var2 >= var1 ? var2 : var1) + 4;
           QuickChatMenu.field_Zb = QuickChatMenu.field_Zb + (dg.field_d + 120);
           return;
@@ -327,7 +327,7 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        hi var6 = null;
+        ButtonWidgetRenderer var6 = null;
         RuntimeException var6_ref = null;
         TextFont var7 = null;
         String var8 = null;
@@ -363,16 +363,16 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
             }
             this.field_M = new FocusableWidget(stackIn_19_3, (WidgetListener) null);
             if (this.field_V) {
-              this.field_O = new FocusableWidget(bd.field_a, (WidgetListener) (this));
+              this.field_O = new FocusableWidget(CheckboxWidgetRenderer.field_a, (WidgetListener) (this));
             }
           } else {
             this.field_U = new FocusableWidget(TabbedPane.field_Tb, (WidgetListener) null);
             this.field_M = new FocusableWidget(wc.field_a, (WidgetListener) null);
             this.field_P.enabled = false;
           }
-          this.field_P.renderer = (WidgetRenderer) ((Object) new r(10000536));
-          this.field_T.renderer = (WidgetRenderer) ((Object) new ob(10000536));
-          var6 = new hi();
+          this.field_P.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+          this.field_T.renderer = (WidgetRenderer) ((Object) new PasswordFieldRenderer(10000536));
+          var6 = new ButtonWidgetRenderer();
           this.field_U.renderer = (WidgetRenderer) ((Object) var6);
           if (null != this.field_M) {
             this.field_M.renderer = (WidgetRenderer) ((Object) var6);
@@ -389,9 +389,9 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
           } else {
             if (this.field_S) {
               this.field_M.tooltip = SoundCache.field_i;
-              this.field_M.renderer = (WidgetRenderer) ((Object) new bb());
+              this.field_M.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             } else {
-              this.field_M.renderer = (WidgetRenderer) ((Object) new bb());
+              this.field_M.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             }
           }
           this.y = 15;

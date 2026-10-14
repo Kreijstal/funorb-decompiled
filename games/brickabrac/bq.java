@@ -89,17 +89,17 @@ final class bq {
             for (var5 = 0; var4 > var5; var5++) {
               BrickABrac.field_K[var5] = -1;
             }
-            ri.field_I = new int[2];
+            UsernameSuggestionPanel.field_I = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
             }
             ValidationStatus.field_i[var4 - 3] = "";
             ValidationStatus.field_i[var4 - 2] = PasswordValidator.field_q;
             BrickABrac.field_K[var4 - 2] = 0;
-            ri.field_I[0] = 4;
+            UsernameSuggestionPanel.field_I[0] = 4;
             ValidationStatus.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 1;
-            ri.field_I[1] = 5;
+            UsernameSuggestionPanel.field_I[1] = 5;
           } else if (1 == ArchiveFetchClient.field_p) {
             var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, up.field_x);
             var4 = 2 + var3_int;
@@ -108,14 +108,14 @@ final class bq {
             for (var5 = 0; var5 < var4; var5++) {
               BrickABrac.field_K[var5] = -1;
             }
-            ri.field_I = new int[1];
+            UsernameSuggestionPanel.field_I = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
             }
             ValidationStatus.field_i[var4 - 2] = "";
             ValidationStatus.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 0;
-            ri.field_I[0] = 5;
+            UsernameSuggestionPanel.field_I[0] = 5;
           } else if (2 != ArchiveFetchClient.field_p) {
             if (3 == ArchiveFetchClient.field_p) {
               if (lp.field_ub.privilegedMode) {
@@ -129,14 +129,14 @@ final class bq {
               for (var5 = 0; var4 > var5; var5++) {
                 BrickABrac.field_K[var5] = -1;
               }
-              ri.field_I = new int[1];
+              UsernameSuggestionPanel.field_I = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
               }
               ValidationStatus.field_i[var4 - 2] = "";
               ValidationStatus.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
-              ri.field_I[0] = 5;
+              UsernameSuggestionPanel.field_I[0] = 5;
             } else if (ArchiveFetchClient.field_p == 4) {
               var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, ChocolateBackground.field_s);
               var4 = var3_int + 2;
@@ -145,14 +145,14 @@ final class bq {
               for (var5 = 0; var4 > var5; var5++) {
                 BrickABrac.field_K[var5] = -1;
               }
-              ri.field_I = new int[1];
+              UsernameSuggestionPanel.field_I = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
               }
               ValidationStatus.field_i[var4 - 2] = "";
               ValidationStatus.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
-              ri.field_I[0] = 5;
+              UsernameSuggestionPanel.field_I[0] = 5;
             } else {
               if (ArchiveFetchClient.field_p != 5) {
                 throw new IllegalArgumentException();
@@ -164,17 +164,17 @@ final class bq {
               for (var5 = 0; var5 < var4; var5++) {
                 BrickABrac.field_K[var5] = -1;
               }
-              ri.field_I = new int[2];
+              UsernameSuggestionPanel.field_I = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
                 ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
               }
               ValidationStatus.field_i[var4 - 3] = "";
               ValidationStatus.field_i[var4 - 2] = ja.field_b;
               BrickABrac.field_K[var4 - 2] = 0;
-              ri.field_I[0] = 3;
+              UsernameSuggestionPanel.field_I[0] = 3;
               ValidationStatus.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 1;
-              ri.field_I[1] = 5;
+              UsernameSuggestionPanel.field_I[1] = 5;
             }
           } else {
             var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
@@ -230,11 +230,11 @@ final class bq {
             ValidationStatus.field_i[0] = dg.field_k;
             ValidationStatus.field_i[1] = c.field_c;
             BrickABrac.field_K[1] = 0;
-            ri.field_I = new int[2];
+            UsernameSuggestionPanel.field_I = new int[2];
             BrickABrac.field_K[3] = 1;
-            ri.field_I[1] = 2;
+            UsernameSuggestionPanel.field_I[1] = 2;
             ValidationStatus.field_i[4] = u.field_f;
-            ri.field_I[0] = 5;
+            UsernameSuggestionPanel.field_I[0] = 5;
             ValidationStatus.field_i[2] = rf.field_e;
             ValidationStatus.field_i[5] = "";
             ValidationStatus.field_i[3] = di.field_c;
@@ -264,7 +264,7 @@ final class bq {
             }
             un.field_g = MonotonicTime.nowMillis(false);
           }
-          UiComponent.field_H.itemCount = ri.field_I.length;
+          UiComponent.field_H.itemCount = UsernameSuggestionPanel.field_I.length;
           var3_intLifetime1 = 0;
           if (param2 != 104) {
             return;
@@ -329,7 +329,7 @@ final class bq {
             var4Lifetime3++;
           }
           if (ArchiveFetchClient.field_p != 2) {
-            UiComponent.field_H.initializeSelection(qo.b(120, po.pointerY, MusicPatch.pointerX), 0, param0, (byte) -127);
+            UiComponent.field_H.initializeSelection(PlayerNameChooserPanel.b(120, po.pointerY, MusicPatch.pointerX), 0, param0, (byte) -127);
           } else {
             UiComponent.field_H.initializeSelection(-1, -1, param0, (byte) -128);
           }

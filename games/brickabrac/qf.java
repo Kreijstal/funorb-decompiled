@@ -3,7 +3,7 @@
  */
 final class qf extends lp implements WidgetActionListener {
     private boolean field_Db;
-    private dk field_Eb;
+    private AccountRegistrationPanel field_Eb;
     static int tableSubmissionSequence;
     private boolean field_Fb;
 
@@ -47,7 +47,7 @@ final class qf extends lp implements WidgetActionListener {
         return to.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
     }
 
-    qf(WidgetLayerStack param0, dk param1) {
+    qf(WidgetLayerStack param0, AccountRegistrationPanel param1) {
         super(param0, wm.field_a, MidiSynthesizer.field_o, false, false);
         try {
           this.field_Eb = param1;
@@ -62,7 +62,7 @@ final class qf extends lp implements WidgetActionListener {
 
     public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         if (this.field_Fb) {
-          ag.a((byte) -16, true, false);
+          ArrayWidgetGroup.a((byte) -16, true, false);
           return;
         }
         if (obfuscationGuard >= -22) {
@@ -98,7 +98,7 @@ final class qf extends lp implements WidgetActionListener {
             if (null != param1.field_e) {
               var4 = ng.field_f;
               if (null != this.field_Eb) {
-                this.field_Eb.a((byte) 124);
+                this.field_Eb.onRefreshUsernameSuggestions((byte) 124);
               }
             } else {
               var4 = param1.field_g;
@@ -117,10 +117,10 @@ final class qf extends lp implements WidgetActionListener {
               this.b((byte) 118, new ig(this));
               return;
             }
-            var5.a((byte) 126, ri.field_L, (WidgetListener) (this));
+            var5.a((byte) 126, UsernameSuggestionPanel.field_L, (WidgetListener) (this));
           } else {
             if (this.field_Fb) {
-              var5.a((byte) -37, ri.field_L, (WidgetListener) (this));
+              var5.a((byte) -37, UsernameSuggestionPanel.field_L, (WidgetListener) (this));
             } else {
               if (param1.field_d != 5) {
                 var5.a(false, HalloweenBackground.field_s, -1);
@@ -141,7 +141,7 @@ final class qf extends lp implements WidgetActionListener {
           if (param0 == -7) {
             return;
           }
-          this.field_Eb = (dk) null;
+          this.field_Eb = (AccountRegistrationPanel) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

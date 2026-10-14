@@ -169,7 +169,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (param0 <= 53) {
           return (String) null;
         }
-        return ag.buttonLabels[DelayedPacket.c(61) ? 7 : 39];
+        return ArrayWidgetGroup.buttonLabels[DelayedPacket.c(61) ? 7 : 39];
     }
 
     private final void loadPreview(int obfuscationGuard, int levelIndex) {
@@ -267,7 +267,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (obfuscationGuard) {
           return (IndexedSprite) null;
         }
-        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], cn.decodedSpriteIndices[0], qp.decodedSpritePalette);
+        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], cn.decodedSpriteIndices[0], qp.decodedSpritePalette);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
@@ -464,7 +464,7 @@ final class LevelSelectScreen extends MenuScreen {
         for (var6 = 3; var6 < this.buttons.length; var6++) {
           var7_ref_q = this.buttons[var6];
           if (var7_ref_q.actionId != 8) {
-            stackIn_9_0 = ag.buttonLabels[var7_ref_q.actionId];
+            stackIn_9_0 = ArrayWidgetGroup.buttonLabels[var7_ref_q.actionId];
           } else {
             stackIn_9_0 = this.e((byte) 74);
           }

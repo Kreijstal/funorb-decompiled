@@ -37,7 +37,7 @@ final class TooltipSprite extends IntrusiveNode {
           GameplayAudioEvent.field_l = cr.loadRgbSpritesByName("commonui", param3, "frame_bottom", 2);
           MusicVoice.field_n = pl.loadRgbSpriteByName("commonui", "jagex_logo_grey", (byte) -110, param3);
           ValidatedTextFieldWidget.field_U = cr.loadRgbSpritesByName("commonui", param3, "button", 2);
-          df.field_a = bd.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
+          df.field_a = CheckboxWidgetRenderer.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
           QuickChatMenu.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
           ArchiveNetworkClient.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
           wm.field_a = (TextFont) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
@@ -218,8 +218,8 @@ final class TooltipSprite extends IntrusiveNode {
           this.x = x;
           this.y = y;
           this.tooltipText = tooltipText.toLowerCase();
-          this.tooltipWidth = 2 * IntKeyIndex.field_b + ob.field_D.measureText(this.tooltipText);
-          this.tooltipHeight = ob.field_D.descent + 2 * BackgroundScene.field_a + ob.field_D.ascent;
+          this.tooltipWidth = 2 * IntKeyIndex.field_b + PasswordFieldRenderer.field_D.measureText(this.tooltipText);
+          this.tooltipHeight = PasswordFieldRenderer.field_D.descent + 2 * BackgroundScene.field_a + PasswordFieldRenderer.field_D.ascent;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nq.<init>(" + x + ',' + y + ',' + (sprite != null ? "{...}" : "null") + ',' + (tooltipText != null ? "{...}" : "null") + ')');
         }

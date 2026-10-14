@@ -38,7 +38,7 @@ final class sj {
         for (var7 = -1 + ScrollPane.chatHistorySize; var7 >= 0; var7--) {
           var8_ref_gb = UnderwaterBackground.chatHistory[var7];
           var9 = 0;
-          if (!um.field_e &&
+          if (!TextWidgetRenderer.field_e &&
             var5 < WidgetTheme.chatHistoryCategoryLimit) {
             var10_int = tm.getChatFilter(var8_ref_gb.channel, (byte) 18);
             if (var10_int <= var8_ref_gb.getRetentionCategory(true) && (var8_ref_gb.systemMessage ||
@@ -520,7 +520,7 @@ final class sj {
               for (var3_int = 0; var3_int < rh.matchmakingChoiceMask.length; var3_int++) {
                 rh.matchmakingChoiceMask[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
               }
-              bb.matchmakingOptionByteOne = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+              LinkWidgetRenderer.matchmakingOptionByteOne = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
               ResourceArchive.matchmakingOptionByteTwo = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard + 222);
               for (var3_int = 0; var3_int < PowerUpWarning.matchmakingSettingMask.length; var3_int++) {
                 PowerUpWarning.matchmakingSettingMask[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);

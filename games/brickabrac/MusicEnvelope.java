@@ -178,7 +178,7 @@ final class MusicEnvelope {
               var16.contextMenu.addAction(var13_ref_String, 7, (byte) 126);
               var17 = bm.contextActions;
               var13 = tb.pressX;
-              var14 = qo.pressY;
+              var14 = PlayerNameChooserPanel.pressY;
               var17.contextMenu.layoutAtAnchor(var14, -126, 0, 0, var13);
             }
             var5 = var6;
@@ -218,7 +218,7 @@ final class MusicEnvelope {
             stackIn_5_0 = (AlphaFont) null;
             return stackIn_5_0;
           }
-          var2 = new AlphaFont(param0, ag.decodedSpriteOffsetX, dl.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, qp.decodedSpritePalette, cn.decodedSpriteIndices);
+          var2 = new AlphaFont(param0, ArrayWidgetGroup.decodedSpriteOffsetX, dl.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, qp.decodedSpritePalette, cn.decodedSpriteIndices);
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -267,7 +267,7 @@ final class MusicEnvelope {
           var2 = var10.readUnsignedByte(255);
           requestId = var10.readUnsignedByte(obfuscationGuard + 233);
           if (var2 == 0) {
-            var4_ref_pe = (IntArrayRequest) (ob.pendingIntArrayRequests.first(-37));
+            var4_ref_pe = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.first(-37));
             if (var4_ref_pe == null) {
               hn.a((byte) 57);
               return;

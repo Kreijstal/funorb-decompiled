@@ -96,7 +96,7 @@ final class StateIconLabel extends UiComponent {
         if (param0 < 91) {
           field_Pb = (String) null;
         }
-        return ob.soundMixer;
+        return PasswordFieldRenderer.soundMixer;
     }
 
     public static void d(boolean param0) {

@@ -120,12 +120,12 @@ final class HighscoresScreen extends MenuScreen {
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, String param7) {
         try {
           if (param0 != -1) {
-            ob.field_D.drawRight(param0 + 1 + ". ", SecondaryNodeQueue.field_b[0], param2, param3, -1);
+            PasswordFieldRenderer.field_D.drawRight(param0 + 1 + ". ", SecondaryNodeQueue.field_b[0], param2, param3, -1);
           }
-          ob.field_D.drawLeft(param7, SecondaryNodeQueue.field_b[0], param2, param3, -1);
-          ob.field_D.drawCentered(Integer.toString(1 + param1), SecondaryNodeQueue.field_b[1] - ContextActionController.field_g.measureText(SpriteGeometry.field_u) / 2, param2, param3, -1);
-          ob.field_D.drawCentered(Integer.toString(1 + param4), SecondaryNodeQueue.field_b[2] - ContextActionController.field_g.measureText(ba.field_u) / 2, param2, param3, -1);
-          ob.field_D.drawRight(Integer.toString(param6), SecondaryNodeQueue.field_b[3], param2, param3, -1);
+          PasswordFieldRenderer.field_D.drawLeft(param7, SecondaryNodeQueue.field_b[0], param2, param3, -1);
+          PasswordFieldRenderer.field_D.drawCentered(Integer.toString(1 + param1), SecondaryNodeQueue.field_b[1] - ContextActionController.field_g.measureText(SpriteGeometry.field_u) / 2, param2, param3, -1);
+          PasswordFieldRenderer.field_D.drawCentered(Integer.toString(1 + param4), SecondaryNodeQueue.field_b[2] - ContextActionController.field_g.measureText(ba.field_u) / 2, param2, param3, -1);
+          PasswordFieldRenderer.field_D.drawRight(Integer.toString(param6), SecondaryNodeQueue.field_b[3], param2, param3, -1);
           int var9_int = 102 % ((param5 + 15) / 45);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ah.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
@@ -248,7 +248,7 @@ final class HighscoresScreen extends MenuScreen {
             if (var4_ref_q.actionId == 8) {
               stackIn_8_0 = this.e((byte) 125);
             } else {
-              stackIn_8_0 = ag.buttonLabels[var4_ref_q.actionId];
+              stackIn_8_0 = ArrayWidgetGroup.buttonLabels[var4_ref_q.actionId];
             }
             var9 = stackIn_8_0;
             var5_ref = var9;
@@ -550,7 +550,7 @@ final class HighscoresScreen extends MenuScreen {
         super(5, 38, 460, 402, 35, LevelPack.field_a);
         this.packIndex = 0;
         this.scoreFilterIndex = 0;
-        HuffmanCodec.field_g = ob.field_D.measureText("10. ") + 10;
+        HuffmanCodec.field_g = PasswordFieldRenderer.field_D.measureText("10. ") + 10;
         SecondaryNodeQueue.field_b = new int[4];
         SecondaryNodeQueue.field_b[2] = 125 + HuffmanCodec.field_g + 330;
         SecondaryNodeQueue.field_b[1] = 125 + HuffmanCodec.field_g + 240;

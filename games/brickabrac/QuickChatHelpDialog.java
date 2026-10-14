@@ -198,7 +198,7 @@ final class QuickChatHelpDialog extends UiComponent {
           nextRowY = 50;
           maximumDescriptionWidth = 0;
           for (shortcutIndex = 0; MenuSelection.field_p.length > shortcutIndex; shortcutIndex++) {
-            shortcutLabel = new UiComponent(0L, textStyle, qo.field_M[shortcutIndex]);
+            shortcutLabel = new UiComponent(0L, textStyle, PlayerNameChooserPanel.field_M[shortcutIndex]);
             descriptionLabel = new UiComponent(0L, textStyle, MenuSelection.field_p[shortcutIndex]);
             descriptionWidth = textStyle.font.measureText(MenuSelection.field_p[shortcutIndex]);
             shortcutLabel.setBounds(15, nextRowY, 20, 65, (byte) 64);
@@ -321,7 +321,7 @@ final class QuickChatHelpDialog extends UiComponent {
             QuickChatHelpDialog.a(-35L, 83, (String) null, (int[]) null, -41);
           }
           if (var4_int == 0 &&
-            param3.boardState == 2 && (!r.field_A ||
+            param3.boardState == 2 && (!TextFieldRenderer.field_A ||
             !MusicVoice.a((byte) 93))) {
             if ((1 & param3.controlMask) != 0 &&
               (-2 & param3.controlMask) == 0) {

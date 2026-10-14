@@ -434,7 +434,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_gamelist_options", (byte) -112);
                 if (null != var2) {
-                  r.field_v = MenuButton.a(var2, (byte) 120);
+                  TextFieldRenderer.field_v = MenuButton.a(var2, (byte) 120);
                 }
                 var2 = nk.a("mu_gamelist_elapsed_time", (byte) -14);
                 if (null != var2) {
@@ -494,7 +494,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("add_x_to_ignore", (byte) 52);
                 if (var2 != null) {
-                  ob.field_H = MenuButton.a(var2, (byte) 76);
+                  PasswordFieldRenderer.field_H = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("rm_x_from_friends", (byte) -111);
                 if (var2 != null) {
@@ -502,7 +502,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rm_x_from_ignore", (byte) -127);
                 if (var2 != null) {
-                  ri.field_O = MenuButton.a(var2, (byte) 83);
+                  UsernameSuggestionPanel.field_O = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = nk.a("send_pm_to_x", (byte) -108);
                 if (null != var2) {
@@ -654,7 +654,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("find_opponents_plural", (byte) -127);
                 if (null != var2) {
-                  ag.field_J = MenuButton.a(var2, (byte) 124);
+                  ArrayWidgetGroup.field_J = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("rated_game_tips_setup_singular", (byte) -117);
                 if (null != var2) {
@@ -750,7 +750,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("status_spectate", (byte) -4);
                 if (var2 != null) {
-                  ag.field_I = MenuButton.a(var2, (byte) 118);
+                  ArrayWidgetGroup.field_I = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("status_playing", (byte) -15);
                 if (null != var2) {
@@ -774,7 +774,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("you_are_invited_to_xs_game", (byte) -111);
                 if (null != var2) {
-                  r.field_y = MenuButton.a(var2, (byte) 92);
+                  TextFieldRenderer.field_y = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("asking_to_join_xs_game", (byte) 28);
                 if (null != var2) {
@@ -1064,7 +1064,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ra_title", (byte) 119);
                 if (var2 != null) {
-                  r.field_B = MenuButton.a(var2, (byte) 124);
+                  TextFieldRenderer.field_B = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("ra_mutethisplayer", (byte) -114);
                 if (var2 != null) {
@@ -1536,7 +1536,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_welcome", (byte) -17);
                 if (var2 != null) {
-                  qo.field_H = MenuButton.a(var2, (byte) 101);
+                  PlayerNameChooserPanel.field_H = MenuButton.a(var2, (byte) 101);
                 }
                 var2 = nk.a("create_u13_welcome", (byte) -122);
                 if (var2 != null) {
@@ -1544,7 +1544,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_createanaccount", (byte) 0);
                 if (null != var2) {
-                  bd.field_a = MenuButton.a(var2, (byte) 71);
+                  CheckboxWidgetRenderer.field_a = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("create_username", (byte) -111);
                 if (null != var2) {
@@ -1978,7 +1978,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("loading_instruments", (byte) -123);
                 if (var2 != null) {
-                  bb.field_a = MenuButton.a(var2, (byte) 127);
+                  LinkWidgetRenderer.field_a = MenuButton.a(var2, (byte) 127);
                 }
                 var2 = nk.a("loading_levels", (byte) -7);
                 if (var2 != null) {
@@ -2246,7 +2246,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("cont", (byte) -117);
                 if (null != var2) {
-                  ri.field_L = MenuButton.a(var2, (byte) 111);
+                  UsernameSuggestionPanel.field_L = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("continue_spectating", (byte) -119);
                 if (null != var2) {
@@ -2650,27 +2650,27 @@ final class ContextActionController {
                 }
                 var2 = nk.a("quickchat_shortcut_keys,0", (byte) 119);
                 if (var2 != null) {
-                  qo.field_M[0] = MenuButton.a(var2, (byte) 122);
+                  PlayerNameChooserPanel.field_M[0] = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = nk.a("quickchat_shortcut_keys,1", (byte) 51);
                 if (null != var2) {
-                  qo.field_M[1] = MenuButton.a(var2, (byte) 92);
+                  PlayerNameChooserPanel.field_M[1] = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("quickchat_shortcut_keys,2", (byte) 26);
                 if (null != var2) {
-                  qo.field_M[2] = MenuButton.a(var2, (byte) 118);
+                  PlayerNameChooserPanel.field_M[2] = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("quickchat_shortcut_keys,3", (byte) 101);
                 if (null != var2) {
-                  qo.field_M[3] = MenuButton.a(var2, (byte) 71);
+                  PlayerNameChooserPanel.field_M[3] = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("quickchat_shortcut_keys,4", (byte) 124);
                 if (var2 != null) {
-                  qo.field_M[4] = MenuButton.a(var2, (byte) 94);
+                  PlayerNameChooserPanel.field_M[4] = MenuButton.a(var2, (byte) 94);
                 }
                 var2 = nk.a("quickchat_shortcut_keys,5", (byte) -119);
                 if (var2 != null) {
-                  qo.field_M[5] = MenuButton.a(var2, (byte) 100);
+                  PlayerNameChooserPanel.field_M[5] = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("keychar_the_character_under_questionmark", (byte) 109);
                 if (null != var2) {
@@ -3231,18 +3231,18 @@ final class ContextActionController {
             if (friend == null &&
               ignoredPlayer == 0) {
               this.contextMenu.addAction(rd.a(AchievementMaskRequest.field_l, new String[]{caption}, (byte) 103), 4, (byte) 105);
-              this.contextMenu.addAction(rd.a(ob.field_H, new String[]{caption}, (byte) 103), 6, (byte) 110);
+              this.contextMenu.addAction(rd.a(PasswordFieldRenderer.field_H, new String[]{caption}, (byte) 103), 6, (byte) 110);
               if (null != suggestedPhraseIds &&
                 2 != channel &&
-                !um.field_e) {
+                !TextWidgetRenderer.field_e) {
                 this.suggestedPhraseIds = suggestedPhraseIds;
                 this.contextMenu.addAction(rd.a(cn.field_b, new String[]{caption}, (byte) 103), 19, (byte) 95);
               }
             }
             if (null != friend) {
               if (!m.a(13134, this.targetName) &&
-                !um.field_e) {
-                if (!qo.field_I) {
+                !TextWidgetRenderer.field_e) {
+                if (!PlayerNameChooserPanel.field_I) {
                   this.contextMenu.addAction(rd.a(ClientException.field_c, new String[]{caption}, (byte) 103), 8, (byte) 80);
                 }
                 this.contextMenu.addAction(rd.a(qm.field_b, new String[]{caption}, (byte) 103), 18, (byte) 104);
@@ -3254,7 +3254,7 @@ final class ContextActionController {
               this.contextMenu.addAction(rd.a(sj.field_g, new String[]{caption}, (byte) 103), 5, (byte) 106);
             }
             if (ignoredPlayer != 0) {
-              this.contextMenu.addAction(rd.a(ri.field_O, new String[]{caption}, (byte) 103), 7, (byte) 82);
+              this.contextMenu.addAction(rd.a(UsernameSuggestionPanel.field_O, new String[]{caption}, (byte) 103), 7, (byte) 82);
             }
           }
           if (obfuscationGuard > -68) {

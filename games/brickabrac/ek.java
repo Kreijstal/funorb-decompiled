@@ -95,7 +95,7 @@ final class ek extends bj implements WidgetActionListener {
           var4.height = 80;
           var4.width = this.width;
           var4.x = 0;
-          var4.renderer = (WidgetRenderer) ((Object) new um(QuickChatMenu.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(QuickChatMenu.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, true);
           this.field_ib = this.a(LevelSequence.field_a, 101, (WidgetListener) (this));
           return;
@@ -139,7 +139,7 @@ final class ek extends bj implements WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new FocusableWidget(param0, param2);
-          var4.renderer = (WidgetRenderer) ((Object) new hi());
+          var4.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
           var5 = -6 + this.height;
           this.height = this.height + 38;
           var4.setBounds(30, 15, var5, (byte) -119, -30 + this.width);

@@ -121,7 +121,7 @@ abstract class WidgetLayer extends WidgetGroup {
     }
 
     WidgetLayer(WidgetLayerStack layerStack, int width, int height) {
-        super(SpriteGeometry.field_y - width >> 1, -height + r.field_w >> 1, width, height, (WidgetRenderer) null);
+        super(SpriteGeometry.field_y - width >> 1, -height + TextFieldRenderer.field_w >> 1, width, height, (WidgetRenderer) null);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -151,7 +151,7 @@ abstract class WidgetLayer extends WidgetGroup {
           if (!param0) {
             field_H = false;
           }
-          this.setBounds(param1, -param2 + SpriteGeometry.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
+          this.setBounds(param1, -param2 + SpriteGeometry.field_y >> 1, TextFieldRenderer.field_w - param1 >> 1, (byte) -119, param2);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

@@ -37,7 +37,7 @@ final class hh {
         RuntimeException var7 = null;
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-72, param3.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param3.width, param3.height, um.underwaterBackgroundColors[param5], 928072);
+          Rasterizer2D.fillVerticalGradient(0, 0, param3.width, param3.height, TextWidgetRenderer.underwaterBackgroundColors[param5], 928072);
           QuickChatMenu.a(-124, 128, 8, param0, 16777215, (-param0.canvasWidth + param3.width) / 2, 85 + (param1 - param0.canvasHeight));
           if (param4 != -8562) {
             return;

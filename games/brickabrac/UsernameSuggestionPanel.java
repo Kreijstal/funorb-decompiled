@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends WidgetGroup implements WidgetActionListener {
-    private vf field_K;
-    private String[] field_J;
+final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionListener {
+    private UsernameSuggestionListener listener;
+    private String[] suggestions;
     static int[] field_I;
     static String field_O;
     static String field_L;
     static String field_N;
     static int field_M;
-    private FocusableWidget[] field_H;
+    private FocusableWidget[] buttons;
 
     public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         int var6_int = 0;
@@ -21,13 +21,13 @@ final class ri extends WidgetGroup implements WidgetActionListener {
         RuntimeException var6 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var6_int = 0; var6_int < this.field_J.length; var6_int++) {
-            if (this.field_H[var6_int] == widget) {
-              this.field_K.a(this.field_J[var6_int], (byte) 56);
+          for (var6_int = 0; var6_int < this.suggestions.length; var6_int++) {
+            if (this.buttons[var6_int] == widget) {
+              this.listener.onUsernameSuggestionChosen(this.suggestions[var6_int], (byte) 56);
             }
           }
-          if (widget == this.field_H[this.field_J.length]) {
-            this.field_K.a((byte) 100);
+          if (widget == this.buttons[this.suggestions.length]) {
+            this.listener.onRefreshUsernameSuggestions((byte) 100);
           }
           if (obfuscationGuard >= -22) {
             this.drawLayer(-93, -52, -108, (byte) -4);
@@ -54,52 +54,52 @@ final class ri extends WidgetGroup implements WidgetActionListener {
         return null != VolcanicBackground.field_t ? true : false;
     }
 
-    final void a(byte param0, String[] param1) {
-        int var4_int = 0;
+    final void setSuggestions(byte obfuscationGuard, String[] suggestions) {
+        int suggestionIndex = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
+        int suggestionCount = 0;
         RuntimeException var3 = null;
-        bb var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var5Lifetime1;
-        var6 = BrickABrac.field_J ? 1 : 0;
+        LinkWidgetRenderer rowRenderer = null;
+        int buttonIndex = 0;
+        int unusedGameFlag = 0;
+        int guardComputation;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           this.children.clear((byte) -95);
-          if (param1 != null &&
-            param1.length != 0) {
-            var3_int = param1.length;
-            this.field_J = new String[var3_int];
-            for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_J[var4_int] = ap.a(true, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
+          if (suggestions != null &&
+            suggestions.length != 0) {
+            suggestionCount = suggestions.length;
+            this.suggestions = new String[suggestionCount];
+            for (suggestionIndex = 0; suggestionCount > suggestionIndex; suggestionIndex++) {
+              this.suggestions[suggestionIndex] = ap.a(true, (CharSequence) ((Object) suggestions[suggestionIndex])).replace(' ', ' ');
             }
-            var4 = new bb(ArchiveNetworkClient.field_u, 0, 1);
-            this.field_H = new FocusableWidget[var3_int + 1];
-            for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_H[var5] = new FocusableWidget(this.field_J[var5], (WidgetListener) (this));
-              this.field_H[var5].renderer = (WidgetRenderer) ((Object) var4);
-              this.field_H[var5].tooltip = aa.field_c;
-              this.field_H[var5].setBounds(15, 0, var5 * 16 + 20, (byte) -119, 80);
-              this.addChild(this.field_H[var5], true);
+            rowRenderer = new LinkWidgetRenderer(ArchiveNetworkClient.field_u, 0, 1);
+            this.buttons = new FocusableWidget[suggestionCount + 1];
+            for (buttonIndex = 0; buttonIndex < suggestionCount; buttonIndex++) {
+              this.buttons[buttonIndex] = new FocusableWidget(this.suggestions[buttonIndex], (WidgetListener) (this));
+              this.buttons[buttonIndex].renderer = (WidgetRenderer) ((Object) rowRenderer);
+              this.buttons[buttonIndex].tooltip = aa.field_c;
+              this.buttons[buttonIndex].setBounds(15, 0, buttonIndex * 16 + 20, (byte) -119, 80);
+              this.addChild(this.buttons[buttonIndex], true);
             }
-            this.field_H[var3_int] = new FocusableWidget(sh.field_c, (WidgetListener) (this));
-            var5Lifetime1 = 52 / ((-9 - param0) / 59);
-            this.field_H[var3_int].renderer = (WidgetRenderer) ((Object) var4);
-            this.field_H[var3_int].setBounds(15, 0, 16 * (var3_int + 1) + 20, (byte) -119, 100);
-            this.addChild(this.field_H[var3_int], true);
+            this.buttons[suggestionCount] = new FocusableWidget(sh.field_c, (WidgetListener) (this));
+            guardComputation = 52 / ((-9 - obfuscationGuard) / 59);
+            this.buttons[suggestionCount].renderer = (WidgetRenderer) ((Object) rowRenderer);
+            this.buttons[suggestionCount].setBounds(15, 0, 16 * (suggestionCount + 1) + 20, (byte) -119, 100);
+            this.addChild(this.buttons[suggestionCount], true);
             return;
           }
-          this.field_J = null;
+          this.suggestions = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("ri.U(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("ri.U(").append(obfuscationGuard).append(',');
+          if (suggestions == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
@@ -242,17 +242,17 @@ final class ri extends WidgetGroup implements WidgetActionListener {
           return;
         }
         TextFont var5 = ArchiveNetworkClient.field_u;
-        if (this.field_J != null) {
+        if (this.suggestions != null) {
           var5.a(AchievementIcon.field_l, parentX + this.x, this.y + parentY, this.width, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
         }
     }
 
-    ri(vf param0) {
+    UsernameSuggestionPanel(UsernameSuggestionListener listener) {
         super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.field_K = param0;
+          this.listener = listener;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ri.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ri.<init>(" + (listener != null ? "{...}" : "null") + ')');
         }
     }
 

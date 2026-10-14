@@ -158,8 +158,8 @@ final class wn {
                 SpriteGeometry.a(-1, var7, GameScreen.field_f.scrollPane, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
                 if (null != var7.serverName &&
                   !m.a(13134, bm.contextActions.targetName) &&
-                  !um.field_e) {
-                  if (!qo.field_I) {
+                  !TextWidgetRenderer.field_e) {
+                  if (!PlayerNameChooserPanel.field_I) {
                     var17 = bm.contextActions;
                     var18 = rd.a(ClientException.field_c, new String[]{var16}, (byte) 103);
                     var17.contextMenu.addAction(var18, 8, (byte) 84);

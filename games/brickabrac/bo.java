@@ -8,7 +8,7 @@ class bo extends ff {
 
     final static me[] b(int param0) {
         if (param0 == 140) {
-          return new me[]{EmailConfirmationValidator.field_k, ll.field_d, bb.field_c};
+          return new me[]{EmailConfirmationValidator.field_k, ll.field_d, LinkWidgetRenderer.field_c};
         }
         return (me[]) null;
     }

@@ -11,13 +11,13 @@ final class fa extends IntrusiveNode {
         var4.requestId = requestId;
         if (obfuscationGuard <= -68) {
           var4.values = new int[valueCount];
-          ob.pendingIntArrayRequests.addLast(var4, (byte) 3);
+          PasswordFieldRenderer.pendingIntArrayRequests.addLast(var4, (byte) 3);
           AchievementIcon.sendIntArrayRequest(opcode, var4, 108);
           return var4;
         }
         field_j = (String) null;
         var4.values = new int[valueCount];
-        ob.pendingIntArrayRequests.addLast(var4, (byte) 3);
+        PasswordFieldRenderer.pendingIntArrayRequests.addLast(var4, (byte) 3);
         AchievementIcon.sendIntArrayRequest(opcode, var4, 108);
         return var4;
     }

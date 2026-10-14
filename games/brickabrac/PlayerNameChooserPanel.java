@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qo extends WidgetGroup implements vf, WidgetActionListener {
+final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSuggestionListener, WidgetActionListener {
     static boolean field_I;
     static byte[] field_J;
     static String field_H;
     static int field_N;
     static String field_P;
-    private FocusableWidget field_K;
-    private ValidatedTextFieldWidget field_L;
-    private FocusableWidget field_Q;
+    private FocusableWidget cancelButton;
+    private ValidatedTextFieldWidget usernameField;
+    private FocusableWidget submitButton;
     static String[] field_M;
-    ri field_R;
+    UsernameSuggestionPanel suggestionPanel;
     static int pressY;
 
     private final int a(int param0, String param1, Widget param2, String param3, int param4, int param5) {
@@ -209,11 +209,11 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (widget == this.field_K) {
+          if (widget == this.cancelButton) {
             MotionWaypoint.d(-101);
           } else {
-            if (widget == this.field_Q) {
-              this.a(28462);
+            if (widget == this.submitButton) {
+              this.submitPlayerName(28462);
             }
           }
           if (obfuscationGuard <= -22) {
@@ -238,38 +238,38 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
-          this.field_Q.enabled = this.h((byte) 92);
+          this.submitButton.enabled = this.canSubmitPlayerName((byte) 92);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qo.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
-    private final boolean a(int param0, ValidatableWidget param1) {
-        ValidationSource var3 = null;
+    private final boolean passesSubmissionGate(int obfuscationGuard, ValidatableWidget widget) {
+        ValidationSource validationSource = null;
         RuntimeException var3_ref = null;
-        ValidationStatus var4 = null;
+        ValidationStatus status = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.getValidationSource(-11011);
-          if (var3 == null) {
+          validationSource = widget.getValidationSource(-11011);
+          if (validationSource == null) {
             return true;
           }
-          var4 = var3.getValidationStatus((byte) -31);
-          if (param0 > -64) {
+          status = validationSource.getValidationStatus((byte) -31);
+          if (obfuscationGuard > -64) {
             field_J = (byte[]) null;
           }
-          stackIn_9_0 = (var4 == DualLinkIterator.validationValid);
+          stackIn_9_0 = (status == DualLinkIterator.validationValid);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_12_0 = var3_ref;
-          stackIn_12_1 = new StringBuilder().append("qo.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_12_1 = new StringBuilder().append("qo.I(").append(obfuscationGuard).append(',');
+          if (widget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -278,64 +278,64 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         }
     }
 
-    private final void a(int param0) {
-        if (!this.h((byte) 92)) {
+    private final void submitPlayerName(int obfuscationGuard) {
+        if (!this.canSubmitPlayerName((byte) 92)) {
           return;
         }
-        QuickChatHelpDialog.a(this.field_L.text, -96);
-        if (param0 != 28462) {
-          this.field_Q = (FocusableWidget) null;
+        QuickChatHelpDialog.a(this.usernameField.text, -96);
+        if (obfuscationGuard != 28462) {
+          this.submitButton = (FocusableWidget) null;
           return;
         }
     }
 
-    public qo() {
+    public PlayerNameChooserPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_L = new ValidatedTextFieldWidget("", (WidgetListener) null, 12);
-        um var1 = new um(QuickChatMenu.field_Yb, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
+        this.usernameField = new ValidatedTextFieldWidget("", (WidgetListener) null, 12);
+        TextWidgetRenderer var1 = new TextWidgetRenderer(QuickChatMenu.field_Yb, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
         Widget var2 = new Widget(EmailAvailabilityRequest.field_d, var1, (WidgetListener) null);
-        this.field_Q = new FocusableWidget(TextFieldValidator.field_j, (WidgetListener) null);
-        this.field_K = new FocusableWidget(ValidationIconWidget.field_L, (WidgetListener) null);
-        this.field_L.tooltip = hh.field_a;
-        this.field_L.setValidationSource(new UsernameAvailabilityValidator(this.field_L), (byte) -68);
-        this.field_Q.enabled = false;
-        this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
-        this.field_K.renderer = (WidgetRenderer) ((Object) new bb());
-        this.field_L.renderer = (WidgetRenderer) ((Object) new r(10000536));
+        this.submitButton = new FocusableWidget(TextFieldValidator.field_j, (WidgetListener) null);
+        this.cancelButton = new FocusableWidget(ValidationIconWidget.field_L, (WidgetListener) null);
+        this.usernameField.tooltip = hh.field_a;
+        this.usernameField.setValidationSource(new UsernameAvailabilityValidator(this.usernameField), (byte) -68);
+        this.submitButton.enabled = false;
+        this.submitButton.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
+        this.cancelButton.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+        this.usernameField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
         var2.setBounds(50, 20, var3, (byte) -119, 270);
         var3 += 50;
         this.addChild(var2, true);
-        var3 = var3 + (this.a(-14, BlankScreen.field_j, this.field_L, GameClock.field_h, var3, 170) + 5);
-        this.field_Q.setBounds(40, 496 - var5 >> 1, var3, (byte) -119, var5);
-        this.field_K.setBounds(40, var4 + 3, var3 + 15, (byte) -119, 60);
-        this.field_K.listener = (WidgetListener) (this);
-        this.field_Q.listener = (WidgetListener) (this);
-        this.addChild(this.field_Q, true);
-        this.addChild(this.field_K, true);
-        this.field_R = new ri((vf) (this));
-        this.field_R.setBounds(150, this.field_L.width + this.field_L.x + 60, 20, (byte) -119, -60 + (-this.field_L.width - this.field_L.x + this.width));
-        this.addChild(this.field_R, true);
+        var3 = var3 + (this.a(-14, BlankScreen.field_j, this.usernameField, GameClock.field_h, var3, 170) + 5);
+        this.submitButton.setBounds(40, 496 - var5 >> 1, var3, (byte) -119, var5);
+        this.cancelButton.setBounds(40, var4 + 3, var3 + 15, (byte) -119, 60);
+        this.cancelButton.listener = (WidgetListener) (this);
+        this.submitButton.listener = (WidgetListener) (this);
+        this.addChild(this.submitButton, true);
+        this.addChild(this.cancelButton, true);
+        this.suggestionPanel = new UsernameSuggestionPanel((UsernameSuggestionListener) (this));
+        this.suggestionPanel.setBounds(150, this.usernameField.width + this.usernameField.x + 60, 20, (byte) -119, -60 + (-this.usernameField.width - this.usernameField.x + this.width));
+        this.addChild(this.suggestionPanel, true);
         this.setBounds(var4 + (55 + var3), 0, 0, (byte) -119, 496);
     }
 
-    private final boolean h(byte param0) {
-        if (param0 != 92) {
+    private final boolean canSubmitPlayerName(byte obfuscationGuard) {
+        if (obfuscationGuard != 92) {
           field_P = (String) null;
-          if (this.a(-68, this.field_L)) {
+          if (this.passesSubmissionGate(-68, this.usernameField)) {
             return true;
           }
           return false;
         }
-        if (this.a(-68, this.field_L)) {
+        if (this.passesSubmissionGate(-68, this.usernameField)) {
           return true;
         }
         return false;
     }
 
-    public final void a(String param0, byte param1) {
+    public final void onUsernameSuggestionChosen(String username, byte obfuscationGuard) {
         ValidatedTextFieldWidget var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -344,10 +344,10 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_L;
-          var4 = param0;
-          ((TextFieldWidget) ((Object) var3)).setText(var4, param1 - 12648, false);
-          if (param1 == 56) {
+          var3 = this.usernameField;
+          var4 = username;
+          ((TextFieldWidget) ((Object) var3)).setText(var4, obfuscationGuard - 12648, false);
+          if (obfuscationGuard == 56) {
             return;
           }
           field_P = (String) null;
@@ -357,20 +357,20 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
           var3_ref = decompiledCaughtException;
           stackIn_5_0 = var3_ref;
           stackIn_5_1 = new StringBuilder().append("qo.C(");
-          if (param0 == null) {
+          if (username == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    public final void a(byte param0) {
-        if (param0 < 96) {
+    public final void onRefreshUsernameSuggestions(byte obfuscationGuard) {
+        if (obfuscationGuard < 96) {
           return;
         }
-        ((UsernameAvailabilityValidator) (this.field_L.getValidationSource(-11011))).clearAvailabilityCache((byte) -22);
+        ((UsernameAvailabilityValidator) (this.usernameField.getValidationSource(-11011))).clearAvailabilityCache((byte) -22);
     }
 
     static {

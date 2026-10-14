@@ -422,7 +422,7 @@ final class MultiplayerMatch {
                         board.field_m = board.field_m + 1;
                         board.field_Q = board.field_Q + 1;
                       }
-                      if (r.field_A) {
+                      if (TextFieldRenderer.field_A) {
                         WidgetLayer.a(var11_ref_onLifetime1.flags, 1, (byte) -95);
                       }
                     } else {
@@ -595,7 +595,7 @@ final class MultiplayerMatch {
                     stackIn_271_2 = 5;
                   }
                   ((PlayerBoard) (Object) stackIn_270_0).b(stackIn_270_1, stackIn_271_2);
-                  if (r.field_A) {
+                  if (TextFieldRenderer.field_A) {
                     WidgetLayer.a(fallingPowerUp.typeId, 4, (byte) -110);
                   }
                   fallingPowerUp.unlink((byte) 111);
@@ -631,7 +631,7 @@ final class MultiplayerMatch {
                         board.field_N = 0;
                       }
                     }
-                    if (r.field_A) {
+                    if (TextFieldRenderer.field_A) {
                       WidgetLayer.a(fallingPowerUp.typeId, 3, (byte) -115);
                     }
                     if (audioEvents != null) {
@@ -989,7 +989,7 @@ final class MultiplayerMatch {
             }
             if (param0.activeBalls.isEmpty(false) &&
               param0.queuedBalls.isEmpty(false)) {
-              if (1 == this.playerCount && (!r.field_A ||
+              if (1 == this.playerCount && (!TextFieldRenderer.field_A ||
                 0 != this.configuration.pack.packId ||
                 !(0 >= param0.levelIndex))) {
                 param0.lives = param0.lives - 1;
@@ -1007,7 +1007,7 @@ final class MultiplayerMatch {
                 } else {
                   param0.a(6, true, 150);
                 }
-                if (r.field_A) {
+                if (TextFieldRenderer.field_A) {
                   WidgetLayer.a(0, 5, (byte) -124);
                 }
                 param0.resetServeWithRandomAngle(26496, true);
@@ -1025,7 +1025,7 @@ final class MultiplayerMatch {
             return false;
           }
           if (null != GameClock.field_c) {
-            if (r.field_A) {
+            if (TextFieldRenderer.field_A) {
               if (ValidationIconWidget.field_N) {
                 if (!cm.field_s &&
                   param4.contactCount == 39) {

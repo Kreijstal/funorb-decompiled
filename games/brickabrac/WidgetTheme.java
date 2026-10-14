@@ -32,7 +32,7 @@ final class WidgetTheme {
     }
 
     final void a(TextFont param0, int param1) {
-        um var17 = null;
+        TextWidgetRenderer var17 = null;
         up var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -55,13 +55,13 @@ final class WidgetTheme {
         up var14Lifetime1;
         up var14Lifetime2;
         try {
-          var17 = new um(param0, 2, 2, 2236962, 1, 1, 1, param0.ascent + param0.descent + 2);
-          var17.field_r = 16777215;
+          var17 = new TextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.ascent + param0.descent + 2);
+          var17.textColor = 16777215;
           this.field_i = (WidgetRenderer) ((Object) var17);
           var4 = new up();
-          var17.a(-86, var4);
-          var4.field_s = 15658734;
-          var4.field_c = 11711154;
+          var17.copyStyleTo(-86, var4);
+          var4.caretColor = 15658734;
+          var4.selectionArgb = 11711154;
           this.font = param0;
           this.field_f = 3;
           this.field_a = 3;
@@ -85,16 +85,16 @@ final class WidgetTheme {
           var4.b(5, param1 ^ 13421757).a(VerticalScrollbar.a(0, 0, 65793, 1, 0), param1 ^ -2134061876).a(true, false).a(false, -1);
           this.defaultFocusableRenderer = (WidgetRenderer) ((Object) var4);
           var6 = new up(var4, true);
-          var6.field_f = 0;
+          var6.horizontalAlignment = 0;
           var7 = new up(var4, true);
-          var7.field_f = 0;
+          var7.horizontalAlignment = 0;
           var7.a(BallPulseEffect.a(8947848, false), false);
           var7.b(1, 110).a(BallPulseEffect.a(11184810, false), param1 + 2134061876).a(false, 2236962);
           this.toggleButtonRenderer = (WidgetRenderer) ((Object) new ei(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new pf(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new dg(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new up();
-          var17.a(-68, var8);
+          var17.copyStyleTo(-68, var8);
           var8.b(0, 105).a(ScorePopup.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).a(false, 1118481).a(-1, (byte) -69);
           var8.b(4, 108).a(true, false).a(var5, -2147483648);
           this.textFieldRenderer = (WidgetRenderer) ((Object) var8);
@@ -187,13 +187,13 @@ final class WidgetTheme {
           TextHotspotRegion.decodedSpriteHeights = new int[nl.decodedSpriteCount];
           tm.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
           bj.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
-          ag.decodedSpriteOffsetX = new int[nl.decodedSpriteCount];
+          ArrayWidgetGroup.decodedSpriteOffsetX = new int[nl.decodedSpriteCount];
           metadataPacket.position = -(8 * nl.decodedSpriteCount) + (-7 + data.length);
           cf.decodedCanvasWidth = metadataPacket.readUnsignedShort(65280);
           ek.decodedCanvasHeight = metadataPacket.readUnsignedShort(65280);
           paletteSize = 1 + (metadataPacket.readUnsignedByte(255) & 255);
           for (var4 = 0; nl.decodedSpriteCount > var4; var4++) {
-            ag.decodedSpriteOffsetX[var4] = packet.readUnsignedShort(65280);
+            ArrayWidgetGroup.decodedSpriteOffsetX[var4] = packet.readUnsignedShort(65280);
           }
           for (offsetYIndex = 0; nl.decodedSpriteCount > offsetYIndex; offsetYIndex++) {
             dl.decodedSpriteOffsetY[offsetYIndex] = metadataPacket.readUnsignedShort(65280);

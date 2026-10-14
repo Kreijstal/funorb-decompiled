@@ -4,7 +4,7 @@
 import java.util.*;
 
 class Widget extends IntrusiveNode {
-    int field_r;
+    int textOffsetX;
     WidgetTextLayout textLayout;
     static BufferedFile field_k;
     int pressedButton;
@@ -20,7 +20,7 @@ class Widget extends IntrusiveNode {
     WidgetRenderer renderer;
     static int[] field_y;
     static RgbSprite field_x;
-    int field_B;
+    int textOffsetY;
     WidgetListener listener;
     String tooltip;
     int y;
@@ -107,7 +107,7 @@ class Widget extends IntrusiveNode {
         int var11Lifetime3;
         try {
           if (param4.playerCount == 1) {
-            if (r.field_A) {
+            if (TextFieldRenderer.field_A) {
               stackIn_8_0 = (MusicVoice.a((byte) 88)) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -259,7 +259,7 @@ class Widget extends IntrusiveNode {
             this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
           }
           if (BackgroundScene.pressedButton != 0) {
-            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
+            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
               param3 = false;
             }
             this.clearFocus(false);
@@ -293,7 +293,7 @@ class Widget extends IntrusiveNode {
           if (var5 == 0) {
             regionExit1: {
               if (BackgroundScene.pressedButton != 0) {
-                if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
+                if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
                   param3 = false;
                   if (var7 == 0) {
                     break regionExit1;
@@ -347,7 +347,7 @@ class Widget extends IntrusiveNode {
         }
         regionExit2: {
           if (BackgroundScene.pressedButton != 0) {
-            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
+            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
               param3 = false;
               if (var7 == 0) {
                 break regionExit2;
@@ -923,14 +923,14 @@ class Widget extends IntrusiveNode {
     }
 
     protected Widget() {
-        this.field_r = 0;
-        this.field_B = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
     }
 
     Widget(String text, WidgetRenderer renderer, WidgetListener listener) {
         WidgetLayoutProvider var4 = null;
-        this.field_r = 0;
-        this.field_B = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
         try {
           this.text = text;
           this.listener = listener;
@@ -946,8 +946,8 @@ class Widget extends IntrusiveNode {
     }
 
     Widget(int x, int y, int width, int height, WidgetRenderer renderer, WidgetListener listener) {
-        this.field_r = 0;
-        this.field_B = 0;
+        this.textOffsetX = 0;
+        this.textOffsetY = 0;
         try {
           this.x = x;
           this.width = width;

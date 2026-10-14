@@ -396,7 +396,7 @@ final class GameplayScreen extends GameScreen {
         var5Lifetime4 = 0;
         var19 = new NodeDeque();
         var7 = new NodeDeque();
-        if (!r.field_A) {
+        if (!TextFieldRenderer.field_A) {
           stackIn_120_0 = (!this.advanceMatch(var7, true, var19)) ? 0 : 1;
           var5Lifetime4 = stackIn_120_0;
         } else {
@@ -593,7 +593,7 @@ final class GameplayScreen extends GameScreen {
           !(0 >= this.match.playerBoards[0].score)) {
           VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.resultLevel});
           if (!QuickChatMenu.h(-26090)) {
-            bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
+            CheckboxWidgetRenderer.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
           }
         }
     }
@@ -879,7 +879,7 @@ final class GameplayScreen extends GameScreen {
           return true;
         }
         if (this.match.playerCount == 1 &&
-          r.field_A &&
+          TextFieldRenderer.field_A &&
           MusicVoice.a((byte) 113)) {
           if (84 == keyCode) {
             GzipInflater.b(-8);
@@ -1095,8 +1095,8 @@ final class GameplayScreen extends GameScreen {
     final static void b(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
         String[] var3 = new String[]{tb.field_cb == null ? we.field_c : tb.field_cb, DelayedPacket.field_q};
-        LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, kk.createIndexOrder(false, ValidationStatus.field_b.levelCount, hi.field_w), 3);
-        r.field_A = false;
+        LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, kk.createIndexOrder(false, ValidationStatus.field_b.levelCount, ButtonWidgetRenderer.field_w), 3);
+        TextFieldRenderer.field_A = false;
         TabbedPane.currentBackground = rd.selectBackground(0, (byte) 19);
         OpacityWidget.startLocalGame(var3, 0, var4, 2, param1, -12665);
     }
@@ -1739,15 +1739,15 @@ final class GameplayScreen extends GameScreen {
           nh.a(125, 482, -40, 516, cd.field_h, -1);
           DualLinkNode.a(130, this.match, ContextActionController.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
           nh.a(125, 9, -40, 516, cd.field_h, 137);
-          if (!r.field_A ||
+          if (!TextFieldRenderer.field_A ||
             wc.field_b) {
             ua.a(var7_ref_j, 524, 85, -68, 147, 81, this.match);
           }
           nh.a(125, 9, -40, 516, cd.field_h, 229);
           ArchiveNetworkClient.a(640, this.match, var7_ref_j);
-          if (r.field_A &&
+          if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
-            ui.a(tb.field_eb + ro.field_v, ob.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);
+            ui.a(tb.field_eb + ro.field_v, PasswordFieldRenderer.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != var7_ref_j.displayedMessage) {
               var12 = (IndexedSprite[]) null;
@@ -1770,7 +1770,7 @@ final class GameplayScreen extends GameScreen {
           if (var5[var7Lifetime4] == 2) {
             var20 = ScorePopup.characterHeads[this.match.playerBoards[var6Lifetime2].characterIndex];
             var8 = var20;
-            var9Lifetime2 = ob.field_D.ascent + ob.field_D.descent;
+            var9Lifetime2 = PasswordFieldRenderer.field_D.ascent + PasswordFieldRenderer.field_D.descent;
             Rasterizer2D.fillRectangleAlpha(var18[var7Lifetime4], 235 + var19[var7Lifetime4] - 23, 153, var9Lifetime2, 0, 141);
             var8.drawTransparent(-var20.canvasWidth + (153 + var18[var7Lifetime4]), 0 + (-var20.canvasHeight + var19[var7Lifetime4]) + 233);
             ce.field_e.drawLeft(this.match.playerNames[var6Lifetime2], var18[var7Lifetime4] + 4, 2 + var19[var7Lifetime4] + 223, 2, -1);

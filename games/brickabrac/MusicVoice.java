@@ -407,7 +407,7 @@ final class MusicVoice extends IntrusiveNode {
                 if (var13.actionLabel.pressedButton != 0) {
                   rf.requestRemoveOrRejectPlayer(param2, var13.playerId, true);
                 } else {
-                  SpriteGeometry.a(0, qo.pressY, var13, param1, (byte) 58, tb.pressX, 0);
+                  SpriteGeometry.a(0, PlayerNameChooserPanel.pressY, var13, param1, (byte) 58, tb.pressX, 0);
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -429,7 +429,7 @@ final class MusicVoice extends IntrusiveNode {
                       var25 = rd.a(ea.field_h, new String[]{null, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
-                        var26_int = r.a((byte) -82, ~var13.optionEligibilityMask & var8);
+                        var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = ObjectHistoryBuffer.field_j;
                         if (var26_int > 0 &&
                           eb.field_p != null &&
@@ -457,7 +457,7 @@ final class MusicVoice extends IntrusiveNode {
                       var25 = rd.a(WidgetLayerStack.field_H, new String[]{var21, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
-                        var26_int = r.a((byte) -82, ~var13.optionEligibilityMask & var8);
+                        var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = rd.a(IntNode.field_m, new String[]{var21}, (byte) 103);
                         if (var26_int > 0 &&
                           null != eb.field_p &&
@@ -641,7 +641,7 @@ final class MusicVoice extends IntrusiveNode {
           if (param0 < 60) {
             receivedChatContextId = -98;
           }
-          stackIn_10_0 = (r.field_A) && (~ga.field_i != ~pp.field_a);
+          stackIn_10_0 = (TextFieldRenderer.field_A) && (~ga.field_i != ~pp.field_a);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

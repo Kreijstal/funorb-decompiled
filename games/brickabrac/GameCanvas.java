@@ -145,7 +145,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           ef.a(param2 - 123);
           DualLinkDeque.field_d.updateRoot(param3, -15211);
           if (null != vd.field_a) {
-            if (um.field_e) {
+            if (TextWidgetRenderer.field_e) {
               vd.field_a.a(DualLinkDeque.field_d.screenY, DualLinkDeque.field_d.screenX, 116, param3);
             } else {
               vd.field_a = null;

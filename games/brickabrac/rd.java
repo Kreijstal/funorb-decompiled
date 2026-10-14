@@ -95,9 +95,9 @@ final class rd {
         if (obfuscationGuard != 19) {
           rd.a((byte) -86);
         }
-        ChatMessage.backgroundVariant = hi.field_w.nextBoundedInt(-37880252, 2);
+        ChatMessage.backgroundVariant = ButtonWidgetRenderer.field_w.nextBoundedInt(-37880252, 2);
         if (selector == 0) {
-          var3 = hi.field_w.nextBoundedInt(-37880252, 11);
+          var3 = ButtonWidgetRenderer.field_w.nextBoundedInt(-37880252, 11);
           if (var3 + 1 == IntArrayRequest.lastBackgroundId) {
             var3 = (1 + var3) % 11;
           }
@@ -240,7 +240,7 @@ final class rd {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = qp.decodedSpritePalette[ik.a((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var5);
+          var1[var2] = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var5);
         }
         if (param0 < 93) {
           return (RgbSprite[]) null;

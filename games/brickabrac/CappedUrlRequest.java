@@ -11,7 +11,7 @@ final class CappedUrlRequest implements Runnable {
     private int phase;
     private PlatformServices services;
     static RgbSprite chocolateSpiresSprite;
-    static um field_e;
+    static TextWidgetRenderer field_e;
     private PlatformTask urlTask;
     static int field_j;
     private PlatformTask socketTask;
@@ -75,7 +75,7 @@ final class CappedUrlRequest implements Runnable {
               var4 = jl.incomingPackets;
               var5 = var4;
               stackIn_11_0 = (!param0) ? -1 : -2;
-              r.thirdPreviousPacketOpcode = stackIn_11_0;
+              TextFieldRenderer.thirdPreviousPacketOpcode = stackIn_11_0;
               we.secondPreviousPacketOpcode = stackIn_11_0;
               UiComponent.previousPacketOpcode = stackIn_11_0;
               rf.field_b = BitPacketBuffer.field_u;

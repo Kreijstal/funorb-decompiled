@@ -38,9 +38,9 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
     final static int sine8192(int angle, int obfuscationGuard) {
         angle = angle & 8191;
         if (~angle <= obfuscationGuard) {
-          return angle >= 6144 ? -um.quarterSineQ16[8192 - angle] : -um.quarterSineQ16[-4096 + angle];
+          return angle >= 6144 ? -TextWidgetRenderer.quarterSineQ16[8192 - angle] : -TextWidgetRenderer.quarterSineQ16[-4096 + angle];
         }
-        return angle < 2048 ? um.quarterSineQ16[angle] : um.quarterSineQ16[4096 - angle];
+        return angle < 2048 ? TextWidgetRenderer.quarterSineQ16[angle] : TextWidgetRenderer.quarterSineQ16[4096 - angle];
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -75,7 +75,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         int var4 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = gd.a((byte) 0);
-        if (r.c((byte) -84)) {
+        if (TextFieldRenderer.c((byte) -84)) {
           TableNameEntry.a((byte) 68, var2, LegacyUtf8Decoder.a((byte) -81));
           return;
         }
@@ -83,7 +83,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           kn.a(true, var2);
           return;
         }
-        if (!um.field_t &&
+        if (!TextWidgetRenderer.field_t &&
           !QuickChatMenu.h(-26090)) {
           ParisBackground.a((byte) 24, 100.0f, qm.field_e);
           kn.a(true, var2);
@@ -418,9 +418,9 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           AchievementMaskRequest.uiLifecycle.prepareUiAssets(true);
           lo.field_d = false;
         }
-        if (r.c((byte) -87)) {
+        if (TextFieldRenderer.c((byte) -87)) {
           this.g(false);
-          if (r.c((byte) -113)) {
+          if (TextFieldRenderer.c((byte) -113)) {
             return;
           }
         }
@@ -436,7 +436,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           }
         }
         if (decompiledFrameRemainder0) {
-          boolean decompiledSharedTail0 = (!(um.field_t) &&
+          boolean decompiledSharedTail0 = (!(TextWidgetRenderer.field_t) &&
             !(QuickChatMenu.h(-26090)));
           if (!decompiledSharedTail0) {
             this.r(10);
@@ -444,7 +444,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           }
           if ((decompiledSharedTail0) &&
             (AchievementMaskRequest.uiLifecycle.pollUiReady(23570))) {
-            um.field_t = true;
+            TextWidgetRenderer.field_t = true;
             this.p(1);
             mc.a((byte) 126);
           }

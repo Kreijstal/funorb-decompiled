@@ -41,7 +41,7 @@ final class OpacityWidget extends SingleChildWidget {
             OpacityWidget.a(122);
           }
           QuickChatMenu.field_Wb = 3;
-          hg.field_e = 51550 + (hi.field_w.nextInt(102) << 16);
+          hg.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(102) << 16);
           ek.field_kb = 72;
           qm.field_a = 40;
           tm.field_g = 11;
@@ -50,9 +50,9 @@ final class OpacityWidget extends SingleChildWidget {
           seedStorage = randomSeeds;
           seedWords = seedStorage;
           for (playerIndex = 0; localPlayerCount > playerIndex; playerIndex++) {
-            seedWords[playerIndex] = hi.field_w.nextInt(97);
+            seedWords[playerIndex] = ButtonWidgetRenderer.field_w.nextInt(97);
           }
-          characterOrder = LobbyPlayer.createCharacterOrder(hi.field_w, false);
+          characterOrder = LobbyPlayer.createCharacterOrder(ButtonWidgetRenderer.field_w, false);
           IntArrayRequest.gameplayScreen = new GameplayScreen(playerNames, -1, localPlayerMask, configuration, randomSeeds, characterOrder);
           IntArrayRequest.gameplayScreen.setStartingLevel((byte) 119, startingLevel);
           IntArrayRequest.gameplayScreen.snapshotsReady = true;
@@ -193,7 +193,7 @@ final class OpacityWidget extends SingleChildWidget {
           var2 = new SoundPlayback(stream, stream);
           var3 = 30 % ((obfuscationGuard - 58) / 43);
           QuickChatPhraseDefinition.soundPlaybacks.addLast(var2, (byte) 3);
-          ob.soundMixer.addStream(stream);
+          PasswordFieldRenderer.soundMixer.addStream(stream);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

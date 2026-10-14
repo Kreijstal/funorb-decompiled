@@ -242,7 +242,7 @@ class HotspotTextWidget extends FocusableWidget {
     }
 
     final static void h(int param0) {
-        ob.field_E.clear((byte) -114);
+        PasswordFieldRenderer.field_E.clear((byte) -114);
         dl.field_f = param0;
     }
 
@@ -301,8 +301,8 @@ class HotspotTextWidget extends FocusableWidget {
         TextHotspotRegion var6 = this.hoveredHotspot;
         if (var6 == null) {
         } else {
-          var7 = var9.a((Widget) (this), (byte) 77, parentX);
-          var8 = var9.a(parentY, (byte) -100, (Widget) (this));
+          var7 = var9.getTextOriginX((Widget) (this), (byte) 77, parentX);
+          var8 = var9.getTextOriginY(parentY, (byte) -100, (Widget) (this));
           do {
             ScrollPaneWithFooter.a(-2 + (var8 + var6.y), var7 - (-var6.x + 2), obfuscationGuard + 132, var6.height + 2, 2 + var6.width);
             var6 = var6.nextSegment;

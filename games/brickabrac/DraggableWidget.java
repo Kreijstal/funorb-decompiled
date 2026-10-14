@@ -228,12 +228,12 @@ final class DraggableWidget extends SingleChildWidget {
         field_K = null;
     }
 
-    final static um g(int param0) {
+    final static TextWidgetRenderer g(int param0) {
         if (param0 != -23009) {
           field_J = (String) null;
         }
         if (CappedUrlRequest.field_e == null) {
-          CappedUrlRequest.field_e = new um(QuickChatMenu.field_Yb, 20, 0, 0, 0, 11579568, -1, 0, 0, QuickChatMenu.field_Yb.ascent, -1, 2147483647, true);
+          CappedUrlRequest.field_e = new TextWidgetRenderer(QuickChatMenu.field_Yb, 20, 0, 0, 0, 11579568, -1, 0, 0, QuickChatMenu.field_Yb.ascent, -1, 2147483647, true);
         }
         return CappedUrlRequest.field_e;
     }

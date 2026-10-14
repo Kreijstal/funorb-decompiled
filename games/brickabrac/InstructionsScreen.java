@@ -39,14 +39,14 @@ final class InstructionsScreen extends MenuScreen {
             var8 = (java.awt.Component) null;
             InstructionsScreen.attachKeyboardInput(22, (java.awt.Component) null);
           }
-          UiComponent.field_H.updatePointer(qo.b(120, po.pointerY, MusicPatch.pointerX), param0 + 27355, qo.b(param0 - 4, qo.pressY, tb.pressX));
+          UiComponent.field_H.updatePointer(PlayerNameChooserPanel.b(120, po.pointerY, MusicPatch.pointerX), param0 + 27355, PlayerNameChooserPanel.b(param0 - 4, PlayerNameChooserPanel.pressY, tb.pressX));
           if (UiComponent.field_H.isActivated((byte) 113)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
             UiComponent.field_H.selectedIndex >= 0) {
-            var3 = ri.field_I[UiComponent.field_H.selectedIndex];
+            var3 = UsernameSuggestionPanel.field_I[UiComponent.field_H.selectedIndex];
             if (var3 == 2) {
               w.c((byte) 3);
             } else if (5 == var3) {
@@ -208,7 +208,7 @@ final class InstructionsScreen extends MenuScreen {
 
     InstructionsScreen() {
         super(7, 38, 460, 402, 35, LevelPackCard.field_n);
-        m.field_j = ob.field_D.ascent + ob.field_D.descent + 1;
+        m.field_j = PasswordFieldRenderer.field_D.ascent + PasswordFieldRenderer.field_D.descent + 1;
     }
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
@@ -230,7 +230,7 @@ final class InstructionsScreen extends MenuScreen {
         for (var5 = 0; var5 < this.buttons.length; var5++) {
           var6_ref_q = this.buttons[var5];
           if (var6_ref_q.actionId != 8) {
-            stackIn_5_0 = ag.buttonLabels[var6_ref_q.actionId];
+            stackIn_5_0 = ArrayWidgetGroup.buttonLabels[var6_ref_q.actionId];
           } else {
             stackIn_5_0 = this.e((byte) 112);
           }
@@ -280,14 +280,14 @@ final class InstructionsScreen extends MenuScreen {
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -101, 45);
         AchievementMaskRequest.a(this.screenId, 19);
         if (this.pageIndex != 0) {
-          ob.field_D.setInlineSprites(SingleChildWidget.field_C, nd.field_f);
+          PasswordFieldRenderer.field_D.setInlineSprites(SingleChildWidget.field_C, nd.field_f);
         } else {
-          ob.field_D.setInlineSprites(un.field_e, vj.field_f);
+          PasswordFieldRenderer.field_D.setInlineSprites(un.field_e, vj.field_f);
         }
-        var2 = ob.field_D.wrapText(gh.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
+        var2 = PasswordFieldRenderer.field_D.wrapText(gh.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
         var3 = 145 - (-m.field_j - 4);
         for (var4 = 0; var2 > var4; var4++) {
-          var5 = ob.field_D;
+          var5 = PasswordFieldRenderer.field_D;
           var6 = 2;
           var7 = -1;
           var8 = 0;
@@ -345,7 +345,7 @@ final class InstructionsScreen extends MenuScreen {
           java.awt.Component var3 = (java.awt.Component) null;
           InstructionsScreen.attachKeyboardInput(-108, (java.awt.Component) null);
         }
-        return ag.buttonLabels[7];
+        return ArrayWidgetGroup.buttonLabels[7];
     }
 
     final boolean handleMenuAction(int buttonIndex, boolean inputFlag, byte obfuscationGuard) {
@@ -418,10 +418,10 @@ final class InstructionsScreen extends MenuScreen {
             field_t = (String) null;
           }
           if (null != o.field_c) {
-            o.field_c.field_K.a((byte) -94, args);
+            o.field_c.suggestionPanel.setSuggestions((byte) -94, args);
           }
           if (MusicPatch.field_o != null) {
-            MusicPatch.field_o.field_R.a((byte) 102, args);
+            MusicPatch.field_o.suggestionPanel.setSuggestions((byte) 102, args);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

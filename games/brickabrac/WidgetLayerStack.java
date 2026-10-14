@@ -114,7 +114,7 @@ final class WidgetLayerStack extends SingleChildWidget {
     }
 
     public WidgetLayerStack() {
-        super(0, 0, SpriteGeometry.field_y, r.field_w, (WidgetRenderer) null, (WidgetListener) null);
+        super(0, 0, SpriteGeometry.field_y, TextFieldRenderer.field_w, (WidgetRenderer) null, (WidgetListener) null);
         this.layers = new NodeDeque();
     }
 

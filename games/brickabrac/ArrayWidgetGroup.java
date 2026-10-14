@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class ag extends Widget implements WidgetContainer {
-    Widget[] field_H;
+abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
+    Widget[] children;
     static int[] field_M;
     static String field_I;
     static ResourceArchive field_G;
@@ -43,19 +43,19 @@ abstract class ag extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_H == null) {
+          if (this.children == null) {
             return false;
           }
           if (param0 <= 99) {
             this.isFocused(-98);
           }
-          var4_int = -1 + this.field_H.length;
+          var4_int = -1 + this.children.length;
           while (var4_int >= 0) {
-            var5 = this.field_H[var4_int];
+            var5 = this.children[var4_int];
             if (var5 != null &&
               var5.isFocused(-106)) {
               for (var4_int = var4_int - param1; 0 <= var4_int; var4_int = var4_int - param1) {
-                var6 = this.field_H[var4_int];
+                var6 = this.children[var4_int];
                 if (var6 != null &&
                   var6.tryFocus(true, param2)) {
                   return true;
@@ -91,9 +91,9 @@ abstract class ag extends Widget implements WidgetContainer {
           null != this.renderer) {
           this.renderer.paintWidget(true, obfuscationGuard - 20607, parentX, (Widget) (this), parentY);
         }
-        if (this.field_H != null) {
-          for (var5 = -1 + this.field_H.length; var5 >= 0; var5--) {
-            var6 = this.field_H[var5];
+        if (this.children != null) {
+          for (var5 = -1 + this.children.length; var5 >= 0; var5--) {
+            var6 = this.children[var5];
             if (var6 != null) {
               var6.drawLayer(parentY + this.y, this.x + parentX, layer, (byte) -11);
             }
@@ -111,7 +111,7 @@ abstract class ag extends Widget implements WidgetContainer {
         field_C = null;
         field_F = null;
         if (param0) {
-          ag.c(true);
+          ArrayWidgetGroup.c(true);
         }
         field_G = null;
     }
@@ -156,10 +156,10 @@ abstract class ag extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_H == null) {
+          if (this.children == null) {
             return false;
           }
-          var12 = this.field_H;
+          var12 = this.children;
           var8 = var12;
           for (var9 = obfuscationGuard; var12.length > var9; var9++) {
             var10 = var12[var9];
@@ -199,10 +199,10 @@ abstract class ag extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (null == this.field_H) {
+          if (null == this.children) {
             return false;
           }
-          var10 = this.field_H;
+          var10 = this.children;
           var5 = var10;
           if (obfuscationGuard != 110) {
             var9 = (Widget) null;
@@ -287,10 +287,10 @@ abstract class ag extends Widget implements WidgetContainer {
             var11 = (Widget) null;
             this.handleWidgetKey(78, (byte) -22, (Widget) null, '￻');
           }
-          if (null == this.field_H) {
+          if (null == this.children) {
             return;
           }
-          var12 = this.field_H;
+          var12 = this.children;
           var7 = var12;
           for (var8 = 0; var12.length > var8; var8++) {
             var9 = var12[var8];
@@ -331,13 +331,13 @@ abstract class ag extends Widget implements WidgetContainer {
         RuntimeException var5 = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (null == this.field_H) {
+          if (null == this.children) {
             return;
           }
-          var10 = this.field_H;
+          var10 = this.children;
           var6 = 0;
           if (param0 <= 72) {
-            ag.c(true);
+            ArrayWidgetGroup.c(true);
           }
           while (var6 < var10.length) {
             var7 = var10[var6];
@@ -375,13 +375,13 @@ abstract class ag extends Widget implements WidgetContainer {
 
     final boolean isFocused(int obfuscationGuard) {
         if (obfuscationGuard > -49) {
-          this.field_H = (Widget[]) null;
+          this.children = (Widget[]) null;
         }
-        return null != this.a((byte) -78) ? true : false;
+        return null != this.getFocusedChild((byte) -78) ? true : false;
     }
 
-    ag(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
-        super(param0, param1, param2, param3, param4, (WidgetListener) null);
+    ArrayWidgetGroup(int x, int y, int width, int height, WidgetRenderer renderer) {
+        super(x, y, width, height, renderer, (WidgetListener) null);
     }
 
     final void clearFocus(boolean obfuscationGuard) {
@@ -391,10 +391,10 @@ abstract class ag extends Widget implements WidgetContainer {
         Widget var4;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        var2 = this.field_H;
+        var2 = this.children;
         var3 = 0;
         if (obfuscationGuard) {
-          discarded$1 = this.a((byte) 108);
+          discarded$1 = this.getFocusedChild((byte) 108);
         }
         while (var2.length > var3) {
           var4 = var2[var3];
@@ -418,13 +418,13 @@ abstract class ag extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (null == this.field_H) {
+          if (null == this.children) {
             return false;
           }
           if (param3 >= -125) {
             return false;
           }
-          var12 = this.field_H;
+          var12 = this.children;
           var8 = var12;
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];
@@ -449,22 +449,22 @@ abstract class ag extends Widget implements WidgetContainer {
         }
     }
 
-    abstract void a(int param0);
+    abstract void layoutChildren(int obfuscationGuard);
 
-    private final Widget a(byte param0) {
+    private final Widget getFocusedChild(byte obfuscationGuard) {
         int var3 = 0;
         Widget[] var2;
         Widget var4;
         int var5;
         Widget[] var6;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (null == this.field_H) {
+        if (null == this.children) {
           return null;
         }
-        if (param0 != -78) {
+        if (obfuscationGuard != -78) {
           return (Widget) null;
         }
-        var6 = this.field_H;
+        var6 = this.children;
         var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
@@ -478,7 +478,7 @@ abstract class ag extends Widget implements WidgetContainer {
 
     final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, obfuscationGuard, width);
-        this.a(obfuscationGuard ^ -251);
+        this.layoutChildren(obfuscationGuard ^ -251);
     }
 
     private final boolean a(int param0, Widget param1, byte param2) {
@@ -493,19 +493,19 @@ abstract class ag extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (null == this.field_H) {
+          if (null == this.children) {
             return false;
           }
           if (param2 != 116) {
             field_F = (ta) null;
           }
           var4_int = 0;
-          while (this.field_H.length > var4_int) {
-            var5 = this.field_H[var4_int];
+          while (this.children.length > var4_int) {
+            var5 = this.children[var4_int];
             if (null != var5 &&
               var5.isFocused(-57)) {
-              for (var4_int = var4_int + param0; this.field_H.length > var4_int; var4_int = var4_int + param0) {
-                var6 = this.field_H[var4_int];
+              for (var4_int = var4_int + param0; this.children.length > var4_int; var4_int = var4_int + param0) {
+                var6 = this.children[var4_int];
                 if (null != var6 &&
                   var6.tryFocus(true, param1)) {
                   return true;
@@ -566,10 +566,10 @@ abstract class ag extends Widget implements WidgetContainer {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
-          if (this.field_H == null) {
+          if (this.children == null) {
             return;
           }
-          var9 = this.field_H;
+          var9 = this.children;
           var5 = var9;
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
@@ -599,10 +599,10 @@ abstract class ag extends Widget implements WidgetContainer {
         int var6;
         String var5;
         var6 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_H == null) {
+        if (this.children == null) {
           return null;
         }
-        var2 = this.field_H;
+        var2 = this.children;
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
           if (var4 != null) {
@@ -675,7 +675,7 @@ abstract class ag extends Widget implements WidgetContainer {
         RuntimeException decompiledCaughtException = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var8 = this.field_H;
+          var8 = this.children;
           var3 = var8;
           if (!obfuscationGuard) {
             var7 = (Widget) null;
@@ -714,7 +714,7 @@ abstract class ag extends Widget implements WidgetContainer {
         var8 = BrickABrac.field_J ? 1 : 0;
         var2 = 0;
         var4 = -128 % ((-17 - param0) / 43);
-        var3 = this.field_H;
+        var3 = this.children;
         for (var5 = 0; var3.length > var5; var5++) {
           var6 = var3[var5];
           if (var6 != null) {
@@ -730,7 +730,7 @@ abstract class ag extends Widget implements WidgetContainer {
     final static void a(byte param0, boolean param1, boolean param2) {
         if (param0 != -16) {
           String var4 = (String) null;
-          ag.a((byte) 10, (String) null);
+          ArrayWidgetGroup.a((byte) 10, (String) null);
         }
         String var5 = (String) null;
         ToggleButtonWidget.a(param2, param1, -15947, (String) null);

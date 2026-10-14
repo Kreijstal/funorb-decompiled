@@ -22,10 +22,10 @@ final class cd {
         var6 = BrickABrac.field_J ? 1 : 0;
         if (param0 < -126) {
           var1 = MonotonicTime.nowMillis(false);
-          var3 = -ob.field_G + var1;
+          var3 = -PasswordFieldRenderer.field_G + var1;
           if (var3 > 30000L) {
             GameplayScreen.field_h = 0;
-            ob.field_G = var1;
+            PasswordFieldRenderer.field_G = var1;
             return true;
           }
           var5 = 3000;
@@ -43,16 +43,16 @@ final class cd {
           if (var3 <= (long)var5) {
             return false;
           }
-          ob.field_G = var1;
+          PasswordFieldRenderer.field_G = var1;
           GameplayScreen.field_h = GameplayScreen.field_h + 1;
           return true;
         }
         field_d = (UiComponent) null;
         var1Lifetime1 = MonotonicTime.nowMillis(false);
-        var3Lifetime1 = -ob.field_G + var1Lifetime1;
+        var3Lifetime1 = -PasswordFieldRenderer.field_G + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
           GameplayScreen.field_h = 0;
-          ob.field_G = var1Lifetime1;
+          PasswordFieldRenderer.field_G = var1Lifetime1;
           return true;
         }
         var5Lifetime1 = 3000;
@@ -70,7 +70,7 @@ final class cd {
         if (var3Lifetime1 <= (long)var5Lifetime1) {
           return false;
         }
-        ob.field_G = var1Lifetime1;
+        PasswordFieldRenderer.field_G = var1Lifetime1;
         GameplayScreen.field_h = GameplayScreen.field_h + 1;
         return true;
     }
@@ -102,7 +102,7 @@ final class cd {
         }
         try {
           EmailConfirmationValidator.field_l = param1;
-          ag.field_F = param0;
+          ArrayWidgetGroup.field_F = param0;
           GameCanvas.field_f = param4;
           ek.field_lb = param5;
         } catch (RuntimeException runtimeException) {

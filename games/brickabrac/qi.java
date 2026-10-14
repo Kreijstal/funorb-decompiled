@@ -28,7 +28,7 @@ final class qi extends FocusableWidget {
         try {
           var2 = BackgroundScene.a(param0, 104, "jagex-last-login-method");
           if (var2 == null) {
-            stackIn_4_0 = bb.field_c;
+            stackIn_4_0 = LinkWidgetRenderer.field_c;
             return stackIn_4_0;
           }
           var3 = bo.b(140);
@@ -40,7 +40,7 @@ final class qi extends FocusableWidget {
             }
           }
           if (param1 == -28432) {
-            stackIn_16_0 = bb.field_c;
+            stackIn_16_0 = LinkWidgetRenderer.field_c;
             return stackIn_16_0;
           }
           stackIn_14_0 = (me) null;

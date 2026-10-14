@@ -150,7 +150,7 @@ abstract class MovingBody extends IntrusiveNode {
           var1_int = -30 % ((55 - param0) / 43);
           if (ch.field_b != -1) {
             var2 = ch.field_b;
-            bd.a(-1, true);
+            CheckboxWidgetRenderer.a(-1, true);
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }

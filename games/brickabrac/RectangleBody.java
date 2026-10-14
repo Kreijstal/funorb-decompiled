@@ -308,7 +308,7 @@ class RectangleBody extends MovingBody {
         if (ej.field_I != null) {
           ej.field_I.m(17);
         }
-        MusicPatch.field_o = new qo();
+        MusicPatch.field_o = new PlayerNameChooserPanel();
         rj.field_c.b((byte) 110, MusicPatch.field_o);
     }
 

@@ -199,7 +199,7 @@ final class NinjaBackground extends BackgroundScene {
     }
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
-        if (um.field_e) {
+        if (TextWidgetRenderer.field_e) {
           return vd.field_a.a(go.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
         }
         if (TooltipSprite.field_p) {
@@ -208,14 +208,14 @@ final class NinjaBackground extends BackgroundScene {
         if (ln.a(param1, 11, param0)) {
           return true;
         }
-        if (qo.field_I) {
+        if (PlayerNameChooserPanel.field_I) {
           return false;
         }
         if (param2 == 108) {
-          return hi.a(false, param3, param1);
+          return ButtonWidgetRenderer.a(false, param3, param1);
         }
         parisNearSprite = (RgbSprite) null;
-        return hi.a(false, param3, param1);
+        return ButtonWidgetRenderer.a(false, param3, param1);
     }
 
     static {

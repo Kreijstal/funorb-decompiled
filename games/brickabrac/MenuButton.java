@@ -74,7 +74,7 @@ final class MenuButton {
             this.actionId != 30) {
             if (44 != this.actionId &&
               this.actionId != 45) {
-              var4 = ag.buttonLabels[this.actionId];
+              var4 = ArrayWidgetGroup.buttonLabels[this.actionId];
               if (this.actionId == 8) {
                 var4 = this.owner.e((byte) 87);
               }

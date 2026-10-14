@@ -39,7 +39,7 @@ final class RankingsScreen extends MenuScreen {
           var2 = 0;
           for (var3 = 0; var3 < 2; var3++) {
             var4_ref_q = this.buttons[var3];
-            var8 = ag.buttonLabels[var4_ref_q.actionId];
+            var8 = ArrayWidgetGroup.buttonLabels[var4_ref_q.actionId];
             var6_int = 30 + ContextActionController.field_g.measureText(var8);
             if (var6_int > var2) {
               var2 = var6_int;
@@ -113,7 +113,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final static void a(byte param0, boolean param1) {
-        ag.a((byte) -16, false, param1);
+        ArrayWidgetGroup.a((byte) -16, false, param1);
         if (param0 >= -61) {
           rankingWins = (int[]) null;
         }
@@ -130,7 +130,7 @@ final class RankingsScreen extends MenuScreen {
         String[] var9;
         int var6Lifetime1;
         this.sortIndex = 0;
-        qo.field_N = 10 + ob.field_D.measureText("10. ");
+        PlayerNameChooserPanel.field_N = 10 + PasswordFieldRenderer.field_D.measureText("10. ");
         var8 = new String[]{so.field_e, NodeDeque.field_c, be.field_e, ScrollPaneWithFooter.field_Vb, BufferedFile.field_p};
         var9 = var8;
         var2 = ContextActionController.field_g.measureText(IntrusiveNode.a((CharSequence[]) ((Object) var9), true));
@@ -157,7 +157,7 @@ final class RankingsScreen extends MenuScreen {
           RgbSprite var2 = (RgbSprite) null;
           RankingsScreen.a((RasterCacheSurface) null, -117, -10, (RgbSprite) null, -120, 52);
         }
-        ag.f((byte) 122);
+        ArrayWidgetGroup.f((byte) 122);
     }
 
     final static void a(boolean param0, int param1, boolean param2) {

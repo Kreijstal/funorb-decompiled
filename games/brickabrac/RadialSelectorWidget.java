@@ -104,14 +104,14 @@ final class RadialSelectorWidget extends FocusableWidget {
             }
             var1_int = 1;
           }
-          ArcticBackground.field_r.updatePointer(aj.a(param0 + param0, po.pointerY, MusicPatch.pointerX), param0 ^ 27479, aj.a(0, qo.pressY, tb.pressX));
+          ArcticBackground.field_r.updatePointer(aj.a(param0 + param0, po.pointerY, MusicPatch.pointerX), param0 ^ 27479, aj.a(0, PlayerNameChooserPanel.pressY, tb.pressX));
           if (ArcticBackground.field_r.isActivated((byte) 113)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
             ArcticBackground.field_r.selectedIndex >= 0) {
-            var2 = hi.field_A[ArcticBackground.field_r.selectedIndex];
+            var2 = ButtonWidgetRenderer.field_A[ArcticBackground.field_r.selectedIndex];
             if (var2 == 2) {
               DualLinkIterator.b((byte) 99);
             }

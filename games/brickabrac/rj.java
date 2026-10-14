@@ -17,7 +17,7 @@ final class rj {
           return;
         }
         try {
-          ob.soundMixer.removeStream(param1);
+          PasswordFieldRenderer.soundMixer.removeStream(param1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "rj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

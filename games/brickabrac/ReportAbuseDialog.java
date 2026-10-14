@@ -221,7 +221,7 @@ final class ReportAbuseDialog extends UiComponent {
         this.keyboardResult = -2;
         try {
           this.reportTargetId = reportTargetId;
-          this.title = new UiComponent(0L, titleStyle, r.field_B.toUpperCase());
+          this.title = new UiComponent(0L, titleStyle, TextFieldRenderer.field_B.toUpperCase());
           this.title.horizontalAlignment = 1;
           this.addChild(this.title, 0);
           this.closeButton = new UiComponent(0L, closeStyle);

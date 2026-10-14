@@ -45,7 +45,7 @@ final class nl {
           }
           nowMillis = MonotonicTime.nowMillis(false);
           if (0 != MonotonicTime.packetDelayMillis &&
-            ob.pendingPacketOpcode < 0) {
+            PasswordFieldRenderer.pendingPacketOpcode < 0) {
             queuedPacket = (DelayedPacket) (AchievementMaskRequest.delayedPackets.first(-124));
             if (queuedPacket != null &&
               nowMillis > queuedPacket.deliverAfterMillis) {
@@ -55,7 +55,7 @@ final class nl {
               for (queuedByteIndex = 0; ga.incomingPacketLength > queuedByteIndex; queuedByteIndex++) {
                 jl.incomingPackets.data[queuedByteIndex] = queuedPacket.data[queuedByteIndex];
               }
-              r.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
+              TextFieldRenderer.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
               we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
               UiComponent.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
               IntrusiveHashTable.currentPacketOpcode = queuedPacket.opcode;
@@ -63,24 +63,24 @@ final class nl {
             }
           }
           while (true) {
-            if (0 > ob.pendingPacketOpcode) {
+            if (0 > PasswordFieldRenderer.pendingPacketOpcode) {
               jl.incomingPackets.position = 0;
               if (!vd.ensureGamePacketBytes(20, 1)) {
                 return false;
               }
-              ob.pendingPacketOpcode = jl.incomingPackets.readCipheredOpcode(true);
+              PasswordFieldRenderer.pendingPacketOpcode = jl.incomingPackets.readCipheredOpcode(true);
               jl.incomingPackets.position = 0;
-              ga.incomingPacketLength = packetLengths[ob.pendingPacketOpcode];
+              ga.incomingPacketLength = packetLengths[PasswordFieldRenderer.pendingPacketOpcode];
             }
-            if (!um.ensureGamePacketBody((byte) -104)) {
+            if (!TextWidgetRenderer.ensureGamePacketBody((byte) -104)) {
               return false;
             }
             if (MonotonicTime.packetDelayMillis == 0) {
-              r.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
+              TextFieldRenderer.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
               we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
               UiComponent.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
-              IntrusiveHashTable.currentPacketOpcode = ob.pendingPacketOpcode;
-              ob.pendingPacketOpcode = -1;
+              IntrusiveHashTable.currentPacketOpcode = PasswordFieldRenderer.pendingPacketOpcode;
+              PasswordFieldRenderer.pendingPacketOpcode = -1;
               return true;
             }
             delayMillis = MonotonicTime.packetDelayMillis;
@@ -90,12 +90,12 @@ final class nl {
                 delayMillis = 0;
               }
             }
-            delayedPacket = new DelayedPacket(nowMillis + (long)delayMillis, ob.pendingPacketOpcode, new byte[ga.incomingPacketLength]);
+            delayedPacket = new DelayedPacket(nowMillis + (long)delayMillis, PasswordFieldRenderer.pendingPacketOpcode, new byte[ga.incomingPacketLength]);
             for (receivedByteIndex = 0; ga.incomingPacketLength > receivedByteIndex; receivedByteIndex++) {
               delayedPacket.data[receivedByteIndex] = jl.incomingPackets.data[receivedByteIndex];
             }
             AchievementMaskRequest.delayedPackets.addLast(delayedPacket, (byte) 3);
-            ob.pendingPacketOpcode = -1;
+            PasswordFieldRenderer.pendingPacketOpcode = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -56,7 +56,7 @@ abstract class MenuScreen extends GameScreen {
         if (param0 <= 53) {
           discarded$0 = this.findButtonAt(18, (byte) 84, -33);
         }
-        return ag.buttonLabels[7];
+        return ArrayWidgetGroup.buttonLabels[7];
     }
 
     int getParentScreenId(boolean obfuscationGuard) {
@@ -96,7 +96,7 @@ abstract class MenuScreen extends GameScreen {
           if (var4_ref_q.actionId == 8) {
             stackIn_5_0 = this.e((byte) 108);
           } else {
-            stackIn_5_0 = ag.buttonLabels[var4_ref_q.actionId];
+            stackIn_5_0 = ArrayWidgetGroup.buttonLabels[var4_ref_q.actionId];
           }
           var7 = stackIn_5_0;
           var5 = var7;
@@ -203,7 +203,7 @@ abstract class MenuScreen extends GameScreen {
         if (inputEnabled &&
           !RadialSelectorWidget.field_L &&
           !ed.field_d) {
-          this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(qo.pressY, (byte) -80, tb.pressX));
+          this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(PlayerNameChooserPanel.pressY, (byte) -80, tb.pressX));
           if (this.a(true, (byte) -117)) {
             SoundCache.playUiSound(8, ta.uiSounds[0]);
           }
@@ -327,7 +327,7 @@ abstract class MenuScreen extends GameScreen {
                     MatchingTextValidator.b(true);
                   } else {
                     sl.field_z = -2;
-                    dk.a(sb.field_b, true, 0, inputFlag, 46);
+                    AccountRegistrationPanel.a(sb.field_b, true, 0, inputFlag, 46);
                   }
                 }
                 break regionExit1;
@@ -562,8 +562,8 @@ abstract class MenuScreen extends GameScreen {
                   }
                   stackIn_165_0 = !(be.field_a);
                   be.field_a = stackIn_165_0;
-                  r.field_A = stackIn_165_0;
-                  if (r.field_A &&
+                  TextFieldRenderer.field_A = stackIn_165_0;
+                  if (TextFieldRenderer.field_A &&
                     IntArrayRequest.gameplayScreen != null) {
                     hd.a(true);
                   }

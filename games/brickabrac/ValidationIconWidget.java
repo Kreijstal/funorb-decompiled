@@ -355,7 +355,7 @@ final class ValidationIconWidget extends FocusableWidget {
             }
           }
           if (vj.field_e == rf.field_b &&
-            um.ensureGamePacketBody((byte) -92)) {
+            TextWidgetRenderer.ensureGamePacketBody((byte) -92)) {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
               var9_ref_String = jl.incomingPackets.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {

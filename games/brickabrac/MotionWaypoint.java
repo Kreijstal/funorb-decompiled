@@ -30,7 +30,7 @@ final class MotionWaypoint extends MovingBody {
     }
 
     final static void clearDecodedSpriteData(byte obfuscationGuard) {
-        ag.decodedSpriteOffsetX = null;
+        ArrayWidgetGroup.decodedSpriteOffsetX = null;
         dl.decodedSpriteOffsetY = null;
         if (obfuscationGuard == 96) {
           cn.decodedSpriteIndices = (byte[][]) null;

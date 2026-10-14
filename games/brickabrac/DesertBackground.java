@@ -66,10 +66,10 @@ final class DesertBackground extends BackgroundScene {
           pp.field_b = jh.a(0, OptionsScreen.desertFarSprite);
           GzipInflater.desertCapsSprites[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
           TableNameEntry.desertSegsSprites[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
-          um.desertCentreSprites[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
+          TextWidgetRenderer.desertCentreSprites[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
           GzipInflater.desertCapsSprites[1] = ig.a(GzipInflater.desertCapsSprites[0], obfuscationGuard);
           TableNameEntry.desertSegsSprites[1] = ig.a(TableNameEntry.desertSegsSprites[0], false);
-          um.desertCentreSprites[1] = pl.a(-16371, um.desertCentreSprites[0]);
+          TextWidgetRenderer.desertCentreSprites[1] = pl.a(-16371, TextWidgetRenderer.desertCentreSprites[0]);
           return true;
         }
         return false;
@@ -77,10 +77,10 @@ final class DesertBackground extends BackgroundScene {
 
     final RgbSprite a(boolean param0, int param1) {
         if (param0) {
-          return um.desertCentreSprites[-1 + param1];
+          return TextWidgetRenderer.desertCentreSprites[-1 + param1];
         }
         this.drawPreview((byte) 65, 25, -62, -115);
-        return um.desertCentreSprites[-1 + param1];
+        return TextWidgetRenderer.desertCentreSprites[-1 + param1];
     }
 
     final RgbSprite[] a(byte param0, int param1) {
@@ -144,7 +144,7 @@ final class DesertBackground extends BackgroundScene {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
           GzipInflater.desertCapsSprites = new RgbSprite[2][];
-          um.desertCentreSprites = new RgbSprite[2];
+          TextWidgetRenderer.desertCentreSprites = new RgbSprite[2];
           TableNameEntry.desertSegsSprites = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "gi.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectPrefix != null ? "{...}" : "null") + ',' + soundEffectCount + ')');
@@ -170,7 +170,7 @@ final class DesertBackground extends BackgroundScene {
             return false;
           }
           if (TableNameEntry.desertSegsSprites != null) {
-            return um.desertCentreSprites != null ? true : false;
+            return TextWidgetRenderer.desertCentreSprites != null ? true : false;
           }
           return false;
         }
@@ -190,7 +190,7 @@ final class DesertBackground extends BackgroundScene {
           return false;
         }
         if (TableNameEntry.desertSegsSprites != null) {
-          return um.desertCentreSprites != null ? true : false;
+          return TextWidgetRenderer.desertCentreSprites != null ? true : false;
         }
         return false;
     }

@@ -86,7 +86,7 @@ class lp extends fe implements WidgetActionListener {
           if (!this.field_Bb) {
             AgeValidator.a("tochangedisplayname.ws", (byte) -113, EmailConfirmationValidator.e((byte) -103));
           } else {
-            bd.a(3, true);
+            CheckboxWidgetRenderer.a(3, true);
             this.m(17);
           }
           if (obfuscationGuard < -22) {

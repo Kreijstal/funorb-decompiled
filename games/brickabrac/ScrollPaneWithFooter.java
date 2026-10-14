@@ -74,7 +74,7 @@ final class ScrollPaneWithFooter extends UiComponent {
             !MatchingTextValidator.e(-91) &&
             null == o.currentLobbyGame &&
             nl.pendingLobbyGame == null) {
-            if (!qo.field_I) {
+            if (!PlayerNameChooserPanel.field_I) {
               var5 = bm.contextActions;
               var6 = LevelPackSelectScreen.field_x;
               var5.contextMenu.addAction(var6, 14, (byte) 84);
@@ -87,7 +87,7 @@ final class ScrollPaneWithFooter extends UiComponent {
             !MatchingTextValidator.e(-128) &&
             null != o.currentLobbyGame &&
             param1.contextId == o.currentLobbyGame.getGameId((byte) 118)) {
-            if (!qo.field_I) {
+            if (!PlayerNameChooserPanel.field_I) {
               var9 = bm.contextActions;
               var10 = hc.field_b;
               var9.contextMenu.addAction(var10, 14, (byte) 120);
@@ -103,7 +103,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           bm.contextActions.addMessageFilterActions(param1, -96);
           var13 = bm.contextActions;
           var3 = tb.pressX;
-          var4 = qo.pressY;
+          var4 = PlayerNameChooserPanel.pressY;
           var13.contextMenu.layoutAtAnchor(var4, -101, 0, param0, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           }
           var2 = EmailConfirmationValidator.field_q.first(-54);
           while (var2 != null) {
-            bd.a(param0, 92);
+            CheckboxWidgetRenderer.a(param0, 92);
             var2 = EmailConfirmationValidator.field_q.next((byte) 116);
           }
           return;
@@ -192,7 +192,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         try {
           Rasterizer2D.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
           Rasterizer2D.c(param0, -param2 + param1, param3, param2, 3, param5);
-          ob.field_D.drawLeft(param4, MusicPatch.pointerX, -1 + (-ob.field_D.descent + po.pointerY - ob.field_D.descent), 2, -1);
+          PasswordFieldRenderer.field_D.drawLeft(param4, MusicPatch.pointerX, -1 + (-PasswordFieldRenderer.field_D.descent + po.pointerY - PasswordFieldRenderer.field_D.descent), 2, -1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

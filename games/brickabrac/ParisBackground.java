@@ -56,7 +56,7 @@ final class ParisBackground extends BackgroundScene {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          ri.field_N = param2;
+          UsernameSuggestionPanel.field_N = param2;
           if (param0 != 24) {
             ParisBackground.readLevelMetadata((byte) 116, (PacketBuffer) null);
           }
@@ -243,15 +243,15 @@ final class ParisBackground extends BackgroundScene {
           CachedArchiveSource.field_y = param1;
           BackgroundScene.field_i[4] = 16711935;
           BackgroundScene.field_i[2] = 9474303;
-          r.field_C[2] = 16736352;
+          TextFieldRenderer.field_C[2] = 16736352;
           BackgroundScene.field_i[4] = 16711935;
           cn.field_d = 8421504;
-          r.field_C[3] = 16736511;
-          r.field_C[0] = 16764000;
+          TextFieldRenderer.field_C[3] = 16736511;
+          TextFieldRenderer.field_C[0] = 16764000;
           if (param8 != 61) {
             ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 97, false, (VerticalScrollbar) null, (UiComponent) null);
           }
-          r.field_C[1] = 6356832;
+          TextFieldRenderer.field_C[1] = 6356832;
           var12 = new RgbSprite(4, 4);
           var13 = var12.pixels;
           var14 = var12.pixels;
@@ -332,7 +332,7 @@ final class ParisBackground extends BackgroundScene {
             stackIn_34_0 = ik.a(false) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
-            !um.field_e) {
+            !TextWidgetRenderer.field_e) {
             return;
           }
           vd.field_a = new mo(0, 0, 0, 0);

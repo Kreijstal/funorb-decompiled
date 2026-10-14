@@ -109,13 +109,13 @@ final class RankingsRequest extends IntrusiveNode {
           OptionsScreen.resultCounterOne = 57;
           QuickChatMenu.field_Wb = 3;
           WidgetTextLayout.resultCounterTwo = 23;
-          hg.field_e = 51550 + (hi.field_w.nextInt(92) << 16);
+          hg.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(92) << 16);
           tm.field_g = 11;
           qm.field_a = 40;
           ek.field_kb = 72;
           ck.a((byte) 66);
-          r.field_A = be.field_a;
-          if (!r.field_A) {
+          TextFieldRenderer.field_A = be.field_a;
+          if (!TextFieldRenderer.field_A) {
             hd.a(true);
             BitPacketBuffer.field_q = jj.field_d;
           } else {

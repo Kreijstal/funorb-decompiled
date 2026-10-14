@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class r extends um {
+class TextFieldRenderer extends TextWidgetRenderer {
     static int thirdPreviousPacketOpcode;
     static String field_B;
     static int field_w;
@@ -31,7 +31,7 @@ class r extends um {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 72) {
-            r.a((byte) 33, 79);
+            TextFieldRenderer.a((byte) 33, 79);
           }
           var2_int = qp.a(QuickChatHelpDialog.field_Yb, gh.field_f, (byte) -22);
           if (var2_int == 1) {
@@ -56,13 +56,13 @@ class r extends um {
         }
     }
 
-    r(int param0) {
-        this(ArchiveNetworkClient.field_u, param0);
+    TextFieldRenderer(int textColor) {
+        this(ArchiveNetworkClient.field_u, textColor);
     }
 
     final static boolean c(byte param0) {
         if (param0 >= -80) {
-          r.c((byte) 16);
+          TextFieldRenderer.c((byte) 16);
           if (GameConnectionShell.clientStage < 20) {
             return true;
           }
@@ -92,8 +92,8 @@ class r extends um {
         return false;
     }
 
-    r(TextFont param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.ascent, -1, 2147483647, false);
+    TextFieldRenderer(TextFont font, int textColor) {
+        super(font, 4, 2, 2, 2, textColor, -1, 0, 1, font.ascent, -1, 2147483647, false);
     }
 
     final static int a(byte param0, int param1) {

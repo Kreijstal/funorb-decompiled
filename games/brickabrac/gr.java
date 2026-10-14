@@ -88,7 +88,7 @@ final class gr {
           tf.field_c = dg.field_b;
           Ball.field_w = dg.field_e;
           WidgetLayer.field_J = Ball.field_D;
-          TextHotspotRegion.field_o = dk.field_R;
+          TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;
           nj.field_l = pa.field_m;
           fq.field_d = GameConnectionShell.field_D;
           we.field_b = TextHotspotRegion.field_p;

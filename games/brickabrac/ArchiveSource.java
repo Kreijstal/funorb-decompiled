@@ -9,7 +9,7 @@ abstract class ArchiveSource {
 
     abstract ArchiveIndex getIndex(byte obfuscationGuard);
 
-    final static boolean a(String param0, String param1, String param2, int param3, byte param4, dk param5, boolean param6) {
+    final static boolean a(String param0, String param1, String param2, int param3, byte param4, AccountRegistrationPanel param5, boolean param6) {
         RuntimeException var7 = null;
         qf var8 = null;
         RuntimeException stackIn_15_0 = null;
