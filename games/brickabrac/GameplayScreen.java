@@ -265,7 +265,7 @@ final class GameplayScreen extends GameScreen {
                 TabbedPane.currentBackground.musicReady) {
                 wj.a(1, true, TabbedPane.currentBackground.c(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
-                IterableIntrusiveHashTable.a(25459, true, cd.field_g, 1, 1, true);
+                IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
               }
             }
           } else {
@@ -613,7 +613,7 @@ final class GameplayScreen extends GameScreen {
           if (this.match.playerCount == 1 &&
             this.match.playerBoards[0].boardState == 8) {
             ng.requestScreen(param1, 107, 18);
-            IterableIntrusiveHashTable.a(25459, true, cd.field_g, 1, 1, true);
+            IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
           } else {
             this.a(param1, (byte) 69);
           }
@@ -627,11 +627,11 @@ final class GameplayScreen extends GameScreen {
     final void a(boolean param0, byte param1) {
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        rj.a((byte) 80, to.primaryActivityLoop);
-        rj.a((byte) 80, me.alternateActivityLoop);
+        rj.a((byte) 80, WeightedLruCache.primaryActivityLoop);
+        rj.a((byte) 80, LoginMethodPreference.alternateActivityLoop);
         if (!(this.match.playerCount <= 1) ||
           9 != this.match.playerBoards[0].boardState) {
-          IterableIntrusiveHashTable.a(25459, true, cd.field_g, 1, 1, true);
+          IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
         }
         if (this.networkedMatch) {
           return;
@@ -674,7 +674,7 @@ final class GameplayScreen extends GameScreen {
         try {
           playerId = packet.readUnsignedByte(255);
           if (this.match.playerCount <= playerId) {
-            AlignedIconLabel.a("K1: (" + playerId + "/" + packet.position + ") " + eq.c((byte) -110), (Throwable) null, obfuscationGuard + 125);
+            AlignedIconLabel.a("K1: (" + playerId + "/" + packet.position + ") " + WhirlpoolHasher.c((byte) -110), (Throwable) null, obfuscationGuard + 125);
             hn.a((byte) 89);
             return;
           }
@@ -956,8 +956,8 @@ final class GameplayScreen extends GameScreen {
           }
           if (keyCode == 55) {
             for (var5Lifetime2 = 0; 29 > var5Lifetime2; var5Lifetime2++) {
-              if (to.field_f[var5Lifetime2] > -1) {
-                var7.field_o[var5Lifetime2] = (byte)(-1 + to.field_f[var5Lifetime2]);
+              if (WeightedLruCache.field_f[var5Lifetime2] > -1) {
+                var7.field_o[var5Lifetime2] = (byte)(-1 + WeightedLruCache.field_f[var5Lifetime2]);
               }
             }
             this.suppressResultSubmission = true;
@@ -1338,8 +1338,8 @@ final class GameplayScreen extends GameScreen {
             var15 = 0;
             var9Lifetime1 = var15;
             while (var15 < 29) {
-              if (to.field_f[var15] >= 1) {
-                var10 = (20 * effectBoard.field_o[var15] << 8) / to.field_f[var15];
+              if (WeightedLruCache.field_f[var15] >= 1) {
+                var10 = (20 * effectBoard.field_o[var15] << 8) / WeightedLruCache.field_f[var15];
                 if ((1 << var15 & var8_intLifetime1) != 0) {
                   var10 = 5120;
                 }
@@ -1681,8 +1681,8 @@ final class GameplayScreen extends GameScreen {
             var21 = NodeDequeCursor.field_c[4];
             var16 = var21;
             var2 = var16;
-            nh.paintNineSliceFrame(169, 482, -40, -1, cd.field_h, -1);
-            nh.paintNineSliceFrame(169, 482, -40, 472, cd.field_h, -1);
+            nh.paintNineSliceFrame(169, 482, -40, -1, LoginCredentialKind.field_h, -1);
+            nh.paintNineSliceFrame(169, 482, -40, 472, LoginCredentialKind.field_h, -1);
             stackIn_83_0 = ((this.localPlayerMask & 1 << this.viewedPlayerId) == 0) ? 0 : 1;
             var7Lifetime3 = stackIn_83_0;
             stackIn_86_0 = this.resultWordMode;
@@ -1690,8 +1690,8 @@ final class GameplayScreen extends GameScreen {
             stackIn_86_2 = var21[0];
             stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.localPlayerMask);
             LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.viewedPlayerId], var22[0], this.viewedPlayerId, var7Lifetime3 != 0, this.match);
-            nh.paintNineSliceFrame(169, 9, -40, -1, cd.field_h, 0 + (var22[2] - 3));
-            nh.paintNineSliceFrame(169, 9, -40, 472, cd.field_h, -3 + var22[2] - 0);
+            nh.paintNineSliceFrame(169, 9, -40, -1, LoginCredentialKind.field_h, 0 + (var22[2] - 3));
+            nh.paintNineSliceFrame(169, 9, -40, 472, LoginCredentialKind.field_h, -3 + var22[2] - 0);
           } else {
             stackIn_44_0 = (this.networkedMatch) ? 0 : 1;
             var7Lifetime3 = stackIn_44_0;
@@ -1733,17 +1733,17 @@ final class GameplayScreen extends GameScreen {
           }
         } else {
           var7_ref_j = this.match.playerBoards[0];
-          nh.paintNineSliceFrame(526, 482, -40, -1, cd.field_h, -1);
+          nh.paintNineSliceFrame(526, 482, -40, -1, LoginCredentialKind.field_h, -1);
           Rasterizer2D.fillRectangleAlpha(7, 473, 510, 7, 0, 96);
           Rasterizer2D.fillRectangleAlpha(524, 0, 116, 480, 0, 96);
-          nh.paintNineSliceFrame(125, 482, -40, 516, cd.field_h, -1);
+          nh.paintNineSliceFrame(125, 482, -40, 516, LoginCredentialKind.field_h, -1);
           DualLinkNode.a(130, this.match, ContextActionController.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
-          nh.paintNineSliceFrame(125, 9, -40, 516, cd.field_h, 137);
+          nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 137);
           if (!TextFieldRenderer.field_A ||
             wc.field_b) {
             ua.a(var7_ref_j, 524, 85, -68, 147, 81, this.match);
           }
-          nh.paintNineSliceFrame(125, 9, -40, 516, cd.field_h, 229);
+          nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 229);
           ArchiveNetworkClient.a(640, this.match, var7_ref_j);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
@@ -1855,19 +1855,19 @@ final class GameplayScreen extends GameScreen {
             ChocolateBackground.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           }
           MenuScreen.field_i = 0;
-          to.primaryActivityLoop = PcmStream.createWithVolume(NineSliceFrame.uiSounds[2], 256, 0);
-          me.alternateActivityLoop = PcmStream.createWithVolume(NineSliceFrame.uiSounds[2], 256, 0);
-          to.primaryActivityLoop.setLoopCount(-1);
-          me.alternateActivityLoop.setLoopCount(-1);
-          OpacityWidget.queueSoundPlayback((byte) 125, to.primaryActivityLoop);
-          OpacityWidget.queueSoundPlayback((byte) 5, me.alternateActivityLoop);
+          WeightedLruCache.primaryActivityLoop = PcmStream.createWithVolume(NineSliceFrame.uiSounds[2], 256, 0);
+          LoginMethodPreference.alternateActivityLoop = PcmStream.createWithVolume(NineSliceFrame.uiSounds[2], 256, 0);
+          WeightedLruCache.primaryActivityLoop.setLoopCount(-1);
+          LoginMethodPreference.alternateActivityLoop.setLoopCount(-1);
+          OpacityWidget.queueSoundPlayback((byte) 125, WeightedLruCache.primaryActivityLoop);
+          OpacityWidget.queueSoundPlayback((byte) 5, LoginMethodPreference.alternateActivityLoop);
           MusicCrossfadeStream.field_C = 1;
           gr.b(MusicCrossfadeStream.field_C, -28463);
           DelayedPacket.field_m = -1;
           GameClock.field_b = -1;
           if (ProducerFramebuffer.field_j == null) {
-            ProducerFramebuffer.field_j = rd.a(cm.field_p, new String[]{""}, (byte) 103).toLowerCase();
-            ff.field_j = LevelResultSubmission.field_j.toLowerCase();
+            ProducerFramebuffer.field_j = rd.a(AlternateNumericLoginCredentials.field_p, new String[]{""}, (byte) 103).toLowerCase();
+            LoginCredentials.field_j = LevelResultSubmission.field_j.toLowerCase();
           }
           WidgetPaintStyle.field_j = 0;
           KeyboardInput.hasNonnegativeResult = false;

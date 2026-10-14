@@ -139,7 +139,7 @@ final class ChatMessage {
           this.suggestedPhraseIds = null;
         }
         this.senderDisplayName = HalloweenBackground.receivedChatDisplayName;
-        this.contextLabel = sl.receivedChatContextLabel;
+        this.contextLabel = CacheEntry.receivedChatContextLabel;
         this.badgeId = nh.receivedChatBadge;
         this.senderId = BirthDateValidator.receivedChatSenderId;
         this.senderName = nd.receivedChatSenderName;

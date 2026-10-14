@@ -108,7 +108,7 @@ final class AlignedIconLabel extends UiComponent {
               }
               var3 = var3 + param0;
             }
-            me.a(var3, -107);
+            LoginMethodPreference.a(var3, -107);
             var7 = AccountResponse.a((byte) 13, "%3a", var3, ":");
             var8 = AccountResponse.a((byte) 13, "%40", var7, "@");
             var9 = AccountResponse.a((byte) 13, "%26", var8, "&");

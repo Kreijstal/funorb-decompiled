@@ -78,10 +78,10 @@ final class HalloweenBackground extends BackgroundScene {
         ch.field_m = jh.a(0, GameClock.halloweenFarSprite);
         QuickChatParameterType.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
         ba.halloweenCharacterSprite = pl.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
-        ej.halloweenCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
+        StrongCacheEntry.halloweenCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
         GameConnectionShell.halloweenSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
         ap.halloweenCentreSprites[0] = pl.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.field_m);
-        ej.halloweenCapsSprites[1] = Under13RegistrationNoticePanel.a(ej.halloweenCapsSprites[0], obfuscationGuard);
+        StrongCacheEntry.halloweenCapsSprites[1] = Under13RegistrationNoticePanel.a(StrongCacheEntry.halloweenCapsSprites[0], obfuscationGuard);
         GameConnectionShell.halloweenSegsSprites[1] = Under13RegistrationNoticePanel.a(GameConnectionShell.halloweenSegsSprites[0], obfuscationGuard);
         ap.halloweenCentreSprites[1] = pl.a(-16371, ap.halloweenCentreSprites[0]);
         return true;
@@ -133,7 +133,7 @@ final class HalloweenBackground extends BackgroundScene {
           if (null == ba.halloweenCharacterSprite) {
             return false;
           }
-          if (null == ej.halloweenCapsSprites) {
+          if (null == StrongCacheEntry.halloweenCapsSprites) {
             return false;
           }
           if (null == GameConnectionShell.halloweenSegsSprites) {
@@ -162,7 +162,7 @@ final class HalloweenBackground extends BackgroundScene {
         if (null == ba.halloweenCharacterSprite) {
           return false;
         }
-        if (null == ej.halloweenCapsSprites) {
+        if (null == StrongCacheEntry.halloweenCapsSprites) {
           return false;
         }
         if (null == GameConnectionShell.halloweenSegsSprites) {
@@ -176,7 +176,7 @@ final class HalloweenBackground extends BackgroundScene {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
           GameConnectionShell.halloweenSegsSprites = new RgbSprite[2][];
-          ej.halloweenCapsSprites = new RgbSprite[2][];
+          StrongCacheEntry.halloweenCapsSprites = new RgbSprite[2][];
           ap.halloweenCentreSprites = new RgbSprite[2];
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dp.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectPrefix != null ? "{...}" : "null") + ',' + soundEffectCount + ')');
@@ -246,7 +246,7 @@ final class HalloweenBackground extends BackgroundScene {
 
     final RgbSprite[] a(byte param0, int param1) {
         int var3 = -12 % ((65 - param0) / 49);
-        return ej.halloweenCapsSprites[-1 + param1];
+        return StrongCacheEntry.halloweenCapsSprites[-1 + param1];
     }
 
     static {

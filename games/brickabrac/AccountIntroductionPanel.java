@@ -10,12 +10,12 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
     static String[] field_L;
     private FocusableWidget guestPlayButton;
 
-    final static ff a(long param0, int param1, boolean param2, String param3, String param4) {
+    final static LoginCredentials createLoginCredentials(long identifier, int obfuscationGuard, boolean alternateNumericKind, String password, String email) {
         RuntimeException var6 = null;
         String var7 = null;
-        cm stackIn_7_0 = null;
-        eb stackIn_9_0 = null;
-        bo stackIn_11_0 = null;
+        AlternateNumericLoginCredentials stackIn_7_0 = null;
+        EmailLoginCredentials stackIn_9_0 = null;
+        NumericLoginCredentials stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -23,33 +23,33 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 20) {
+          if (obfuscationGuard != 20) {
             var7 = (String) null;
-            AccountIntroductionPanel.a(-13L, 34, false, (String) null, (String) null);
+            AccountIntroductionPanel.createLoginCredentials(-13L, 34, false, (String) null, (String) null);
           }
-          if (0L == param0 &&
-            param4 != null) {
-            stackIn_9_0 = new eb(param4, param3);
-            return (ff) ((Object) stackIn_9_0);
+          if (0L == identifier &&
+            email != null) {
+            stackIn_9_0 = new EmailLoginCredentials(email, password);
+            return (LoginCredentials) ((Object) stackIn_9_0);
           }
-          if (!param2) {
-            stackIn_11_0 = new bo(param0, param3);
-            return (ff) ((Object) stackIn_11_0);
+          if (!alternateNumericKind) {
+            stackIn_11_0 = new NumericLoginCredentials(identifier, password);
+            return (LoginCredentials) ((Object) stackIn_11_0);
           }
-          stackIn_7_0 = new cm(param0, param3);
-          return (ff) ((Object) stackIn_7_0);
+          stackIn_7_0 = new AlternateNumericLoginCredentials(identifier, password);
+          return (LoginCredentials) ((Object) stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_14_0 = var6;
-          stackIn_14_1 = new StringBuilder().append("he.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_14_1 = new StringBuilder().append("he.A(").append(identifier).append(',').append(obfuscationGuard).append(',').append(alternateNumericKind).append(',');
+          if (password == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
           stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param4 == null) {
+          if (email == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";

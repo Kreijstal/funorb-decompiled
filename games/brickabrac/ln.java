@@ -180,7 +180,7 @@ final class ln extends IntrusiveNode {
           return true;
         }
         if (MeshAttributeRecord.currentKeyCode == param1) {
-          if (!bo.repeatMessageAvailable) {
+          if (!NumericLoginCredentials.repeatMessageAvailable) {
             return false;
           }
           if (QuickChatPhraseDefinition.repeatMessageChannel == 2 &&
@@ -191,7 +191,7 @@ final class ln extends IntrusiveNode {
             var3 != 0) {
             return false;
           }
-          if (cd.a(param1 - 138)) {
+          if (LoginCredentialKind.a(param1 - 138)) {
             String var4 = (String) null;
             GrowableIntList.writeChatMessage(WidgetTextLayout.repeatMessageId, ba.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
           }

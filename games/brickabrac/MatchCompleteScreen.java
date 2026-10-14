@@ -130,7 +130,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
         if (obfuscationGuard != 96) {
           MatchCompleteScreen.findLobbyPlayer((byte) 62, 38L);
         }
-        return (LobbyPlayer) (eq.lobbyPlayerIndex.get(playerId, obfuscationGuard ^ -97));
+        return (LobbyPlayer) (WhirlpoolHasher.lobbyPlayerIndex.get(playerId, obfuscationGuard ^ -97));
     }
 
     static {

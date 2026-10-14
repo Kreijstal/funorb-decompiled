@@ -154,7 +154,7 @@ final class LegacyUtf8Decoder {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        eb.field_n = param0;
+        EmailLoginCredentials.field_n = param0;
         LevelCompleteScreen.field_A = param1;
         NewAchievementsScreen.field_H = param3;
         if (param2) {

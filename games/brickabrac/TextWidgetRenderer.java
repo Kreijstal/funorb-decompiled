@@ -1220,7 +1220,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             if (var34 != null) {
               var35_intLifetime1 = var13.field_gc.font.countWrappedLines(var34, -LobbyGame.field_oc + (var13.width - LobbyGame.field_oc));
               var13.field_gc.text = var34;
-              var13.field_gc.textAlpha256 = var13.statusChangeTick * 256 / cm.field_o;
+              var13.field_gc.textAlpha256 = var13.statusChangeTick * 256 / AlternateNumericLoginCredentials.field_o;
               var13.field_gc.setBounds(np.uiRowHeight * var35_intLifetime1, var32, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
               var32 = var32 + np.uiRowHeight * var35_intLifetime1;
             }
@@ -1232,11 +1232,11 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             }
             for (var35_intLifetime2 = 0; RankingsRequest.gameSettingCount > var35_intLifetime2; var35_intLifetime2++) {
               if (var13.field_Ec[var35_intLifetime2].activeInside) {
-                if (null == ff.field_i) {
+                if (null == LoginCredentials.field_i) {
                   var36 = null;
                 } else {
-                  if (ff.field_i[var35_intLifetime2] != null) {
-                    var36 = ff.field_i[var35_intLifetime2][var13.settings[var35_intLifetime2] & 255];
+                  if (LoginCredentials.field_i[var35_intLifetime2] != null) {
+                    var36 = LoginCredentials.field_i[var35_intLifetime2][var13.settings[var35_intLifetime2] & 255];
                   } else {
                     var36 = null;
                   }
@@ -1279,7 +1279,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             }
             if (var13.field_Bc.activeInside) {
               if (2 != var13.spectatorMode) {
-                stackIn_164_0 = cm.field_q;
+                stackIn_164_0 = AlternateNumericLoginCredentials.field_q;
               } else {
                 stackIn_164_0 = LobbyPlayer.field_jc;
               }

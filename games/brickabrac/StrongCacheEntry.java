@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej extends sl {
-    private Object field_N;
+final class StrongCacheEntry extends CacheEntry {
+    private Object value;
     static tq field_P;
     static String field_M;
     static NodeDeque pendingAchievementMaskRequests;
@@ -25,8 +25,8 @@ final class ej extends sl {
         }
     }
 
-    final boolean b(boolean param0) {
-        if (!param0) {
+    final boolean isSoft(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return true;
         }
         return false;
@@ -46,22 +46,22 @@ final class ej extends sl {
         }
     }
 
-    ej(Object param0, int param1) {
-        super(param1);
+    StrongCacheEntry(Object value, int weight) {
+        super(weight);
         try {
-          this.field_N = param0;
+          this.value = value;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ej.<init>(" + (value != null ? "{...}" : "null") + ',' + weight + ')');
         }
     }
 
-    final Object g(int param0) {
-        if (param0 == 1) {
-          return this.field_N;
+    final Object getValue(int obfuscationGuard) {
+        if (obfuscationGuard == 1) {
+          return this.value;
         }
         RasterCacheSurface var3 = (RasterCacheSurface) null;
-        ej.a(-50, (RgbSprite) null, -35, 2, 119, (RasterCacheSurface) null);
-        return this.field_N;
+        StrongCacheEntry.a(-50, (RgbSprite) null, -35, 2, 119, (RasterCacheSurface) null);
+        return this.value;
     }
 
     static {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sl extends DualLinkNode {
+abstract class CacheEntry extends DualLinkNode {
     static long field_v;
     static java.applet.Applet field_x;
     static BrickABrac field_C;
@@ -9,7 +9,7 @@ abstract class sl extends DualLinkNode {
     static RgbSprite field_D;
     static QuickChatParameterType field_B;
     static String receivedChatContextLabel;
-    int field_u;
+    int weight;
     static String[] field_A;
     static boolean field_w;
 
@@ -19,13 +19,13 @@ abstract class sl extends DualLinkNode {
         field_A = null;
         field_B = null;
         if (param0 != 31434) {
-          sl.a((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
+          CacheEntry.a((String[][]) null, (RgbSprite[][]) null, -45, (String[]) null, 69, (byte[]) null, (String[]) null, (ResourceArchive) null, (int[]) null, (RgbSprite[][]) null, (byte[]) null, 112, (String[]) null, -119, (String[][]) null);
         }
         field_C = null;
         field_D = null;
     }
 
-    abstract Object g(int param0);
+    abstract Object getValue(int obfuscationGuard);
 
     final static void a(String[][] param0, RgbSprite[][] param1, int param2, String[] param3, int param4, byte[] param5, String[] param6, ResourceArchive param7, int[] param8, RgbSprite[][] param9, byte[] param10, int param11, String[] param12, int param13, String[][] param14) {
         AlignedIconLabel[] array$0 = null;
@@ -90,7 +90,7 @@ abstract class sl extends DualLinkNode {
           aj.field_c = param1;
           SecondaryHashTable.field_c = param0;
           GzipInflater.field_c = param6;
-          ff.field_i = param14;
+          LoginCredentials.field_i = param14;
           RadialSelectorRenderer.field_i = param11;
           BackgroundScene.field_k = param9;
           GameClock.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
@@ -98,7 +98,7 @@ abstract class sl extends DualLinkNode {
           uo.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "opentome", 2);
           Ball.field_K = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
           AchievementsScreen.field_H = new String[5];
-          AchievementsScreen.field_H[3] = cm.field_u;
+          AchievementsScreen.field_H[3] = AlternateNumericLoginCredentials.field_u;
           AchievementsScreen.field_H[1] = t.field_e;
           AchievementsScreen.field_H[2] = IterableIntrusiveHashTable.field_g;
           AchievementsScreen.field_H[4] = bq.field_a;
@@ -123,10 +123,10 @@ abstract class sl extends DualLinkNode {
           sc.field_b = new UiComponent(0L, ValidationStatus.field_j, rl.field_c.toUpperCase());
           ll.field_e = new UiComponent(0L, FarmBackground.field_x);
           nk.field_g = new UiComponent(0L, MainMenuScreen.field_t, nk.field_b);
-          nk.field_a = new UiComponent(0L, cd.field_d, VolcanicBackground.field_r);
-          kk.field_b = new UiComponent(0L, cd.field_d, ch.field_d);
-          la.field_b = new UiComponent(0L, cd.field_d, BallPulseEffect.field_o);
-          BufferedSocket.field_h = new UiComponent(0L, cd.field_d, TextFieldRenderer.field_v);
+          nk.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
+          kk.field_b = new UiComponent(0L, LoginCredentialKind.field_d, ch.field_d);
+          la.field_b = new UiComponent(0L, LoginCredentialKind.field_d, BallPulseEffect.field_o);
+          BufferedSocket.field_h = new UiComponent(0L, LoginCredentialKind.field_d, TextFieldRenderer.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
           rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           gj.field_b = new UiComponent(0L, fm.field_b, ua.field_e.toUpperCase());
@@ -362,10 +362,10 @@ abstract class sl extends DualLinkNode {
         }
     }
 
-    abstract boolean b(boolean param0);
+    abstract boolean isSoft(boolean obfuscationGuard);
 
-    sl(int param0) {
-        this.field_u = param0;
+    CacheEntry(int weight) {
+        this.weight = weight;
     }
 
     static {

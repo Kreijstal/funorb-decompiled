@@ -206,8 +206,8 @@ final class CacheIoRequest extends ResourceRequest {
               } else {
                 if (param1) {
                   if (var6 >= 4) {
-                    if (me.field_f != null) {
-                      stackIn_52_0 = (me.field_f[var6 - 4]) ? 1 : 0;
+                    if (LoginMethodPreference.field_f != null) {
+                      stackIn_52_0 = (LoginMethodPreference.field_f[var6 - 4]) ? 1 : 0;
                     } else {
                       stackIn_52_0 = 0;
                     }

@@ -35,9 +35,9 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
-          if (null != sl.field_x &&
-            sl.field_x != this) {
-            stackIn_8_0 = sl.field_x.getDocumentBase();
+          if (null != CacheEntry.field_x &&
+            CacheEntry.field_x != this) {
+            stackIn_8_0 = CacheEntry.field_x.getDocumentBase();
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getDocumentBase();
@@ -84,9 +84,9 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         if (null != MatchingTextValidator.field_o) {
           return null;
         }
-        if (null != sl.field_x &&
-          sl.field_x != this) {
-          return sl.field_x.getCodeBase();
+        if (null != CacheEntry.field_x &&
+          CacheEntry.field_x != this) {
+          return CacheEntry.field_x.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -119,10 +119,10 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 this.a("alreadyloaded", 4000);
                 return;
               }
-              to.field_b = param3;
+              WeightedLruCache.field_b = param3;
               u.field_d = param3;
               so.field_f = this;
-              to.field_i = 0;
+              WeightedLruCache.field_i = 0;
               var8_int = 88 / ((param1 - 24) / 56);
               LoginPanel.field_W = 0;
               RichTextLayout.field_m = param4;
@@ -179,9 +179,9 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
-          if (sl.field_x != null &&
-            this != sl.field_x) {
-            stackIn_10_0 = sl.field_x.getAppletContext();
+          if (CacheEntry.field_x != null &&
+            this != CacheEntry.field_x) {
+            stackIn_10_0 = CacheEntry.field_x.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();
@@ -394,8 +394,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               }
               if (decompiledFrameRemainder3) {
                 var1 = so.field_f;
-                if (sl.field_x != null) {
-                  var1 = sl.field_x;
+                if (CacheEntry.field_x != null) {
+                  var1 = CacheEntry.field_x;
                 }
                 var2_ref = PlatformServices.field_x;
                 if (var2_ref != null) {
@@ -408,7 +408,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 }
                 sh.b(1);
                 this.c(false);
-                BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.field_D), to.field_b, -2414, WidgetPaintStyle.field_g);
+                BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.field_D), WeightedLruCache.field_b, -2414, WidgetPaintStyle.field_g);
                 this.initializeClient(false);
                 MenuSelection.gameClock = ja.createGameClock((byte) 123);
                 do {
@@ -480,17 +480,17 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if (50 < fieldTemp$1) {
             GameplayAudioEvent.redrawRequested = true;
             MouseWheelSource.resizeFrameCounter = MouseWheelSource.resizeFrameCounter - 50;
-            CacheIoRequest.field_D.setSize(to.field_b, WidgetPaintStyle.field_g);
+            CacheIoRequest.field_D.setSize(WeightedLruCache.field_b, WidgetPaintStyle.field_g);
             CacheIoRequest.field_D.setVisible(true);
             if (null != MatchingTextValidator.field_o &&
               null == BackgroundRegistry.field_e) {
               insets = MatchingTextValidator.field_o.getInsets();
-              CacheIoRequest.field_D.setLocation(insets.left + to.field_i, insets.top + LoginPanel.field_W);
+              CacheIoRequest.field_D.setLocation(insets.left + WeightedLruCache.field_i, insets.top + LoginPanel.field_W);
               if (BrickABrac.field_J) {
-                CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
+                CacheIoRequest.field_D.setLocation(WeightedLruCache.field_i, LoginPanel.field_W);
               }
             } else {
-              CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
+              CacheIoRequest.field_D.setLocation(WeightedLruCache.field_i, LoginPanel.field_W);
             }
           }
           this.renderClient(obfuscationGuard + 102);
@@ -581,8 +581,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             }
             ParisBackground.field_s = true;
           }
-          if (null != sl.field_x) {
-            sl.field_x.destroy();
+          if (null != CacheEntry.field_x) {
+            CacheEntry.field_x.destroy();
           }
           try {
             this.stopClientServices(false);
@@ -645,14 +645,14 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (null == sl.field_x) {
+              if (null == CacheEntry.field_x) {
                 var2 = so.field_f;
                 if (var4 != 0) {
-                  var2 = sl.field_x;
+                  var2 = CacheEntry.field_x;
                   var2 = BackgroundRegistry.field_e;
                 }
               } else {
-                var2 = sl.field_x;
+                var2 = CacheEntry.field_x;
                 if (var4 != 0) {
                   var2 = BackgroundRegistry.field_e;
                 }
@@ -664,16 +664,16 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           CacheIoRequest.field_D = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) CacheIoRequest.field_D));
-          CacheIoRequest.field_D.setSize(to.field_b, WidgetPaintStyle.field_g);
+          CacheIoRequest.field_D.setSize(WeightedLruCache.field_b, WidgetPaintStyle.field_g);
           CacheIoRequest.field_D.setVisible(true);
           if (MatchingTextValidator.field_o == var2) {
             var3 = MatchingTextValidator.field_o.getInsets();
-            CacheIoRequest.field_D.setLocation(var3.left + to.field_i, var3.top + LoginPanel.field_W);
+            CacheIoRequest.field_D.setLocation(var3.left + WeightedLruCache.field_i, var3.top + LoginPanel.field_W);
             if (var4 != 0) {
-              CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
+              CacheIoRequest.field_D.setLocation(WeightedLruCache.field_i, LoginPanel.field_W);
             }
           } else {
-            CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
+            CacheIoRequest.field_D.setLocation(WeightedLruCache.field_i, LoginPanel.field_W);
           }
           CacheIoRequest.field_D.addFocusListener((java.awt.event.FocusListener) (this));
           CacheIoRequest.field_D.requestFocus();
@@ -865,7 +865,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          sl.field_x = param0;
+          CacheEntry.field_x = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -915,9 +915,9 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if (null != sl.field_x &&
-            this != sl.field_x) {
-            stackIn_10_0 = sl.field_x.getParameter(param0);
+          if (null != CacheEntry.field_x &&
+            this != CacheEntry.field_x) {
+            stackIn_10_0 = CacheEntry.field_x.getParameter(param0);
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getParameter(param0);

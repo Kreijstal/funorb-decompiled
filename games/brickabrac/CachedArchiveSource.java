@@ -405,7 +405,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (this.index.groupDigests != null &&
                 this.index.groupDigests[groupId] != null) {
                 expectedCacheDigest = this.index.groupDigests[groupId];
-                actualCacheDigest = jd.a(data, 0, -14970, -2 + payload.length);
+                actualCacheDigest = jd.computeWhirlpoolDigest(data, 0, -14970, -2 + payload.length);
                 for (digestIndex = 0; digestIndex < 64; digestIndex++) {
                   if (actualCacheDigest[digestIndex] != expectedCacheDigest[digestIndex]) {
                     throw new RuntimeException();
@@ -453,7 +453,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (this.index.groupDigests != null &&
               this.index.groupDigests[groupId] != null) {
               expectedNetworkDigest = this.index.groupDigests[groupId];
-              actualNetworkDigest = jd.a(data, 0, -14970, -2 + payload.length);
+              actualNetworkDigest = jd.computeWhirlpoolDigest(data, 0, -14970, -2 + payload.length);
               var11 = 0;
               digestIndex = var11;
               while (64 > var11) {

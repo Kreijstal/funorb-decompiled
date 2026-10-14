@@ -1027,7 +1027,7 @@ final class MultiplayerMatch {
           if (null != GameClock.field_c) {
             if (TextFieldRenderer.field_A) {
               if (ValidationIconWidget.field_N) {
-                if (!cm.field_s &&
+                if (!AlternateNumericLoginCredentials.field_s &&
                   param4.contactCount == 39) {
                   WidgetLayer.a(0, 6, (byte) -108);
                 }

@@ -111,7 +111,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         if (MatchResultScreen.field_t > 200) {
           var5 = (-MatchResultScreen.field_t + 250 << 8) / 50;
         }
-        IndexedSpriteGeometry.pushSpriteRaster(-90, me.field_b);
+        IndexedSpriteGeometry.pushSpriteRaster(-90, LoginMethodPreference.field_b);
         MeshRasterState.syncRasterClip();
         if (!param0) {
           Rasterizer2D.clear();
@@ -121,7 +121,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           }
           sc.popRaster(-96);
           if (MatchResultScreen.field_t < 150) {
-            me.field_b.a(var3, var4);
+            LoginMethodPreference.field_b.a(var3, var4);
           } else {
             LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
           }
@@ -158,7 +158,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         }
         sc.popRaster(-96);
         if (MatchResultScreen.field_t < 150) {
-          me.field_b.a(var3, var4);
+          LoginMethodPreference.field_b.a(var3, var4);
         } else {
           LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
         }

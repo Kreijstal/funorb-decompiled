@@ -1011,9 +1011,9 @@ final class BrickGameLayerController implements GameLayerController {
               stackIn_48_10 = 13;
               stackIn_49_11 = (so.a((byte) -35) <= 50) ? false : true;
               MeshAttributeRecord.a(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
-              if (sl.field_w) {
+              if (CacheEntry.field_w) {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
-                sl.field_w = false;
+                CacheEntry.field_w = false;
               }
               if (tq.field_c) {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
@@ -1054,9 +1054,9 @@ final class BrickGameLayerController implements GameLayerController {
           stackIn_67_10 = 13;
           stackIn_68_11 = (so.a((byte) -35) <= 50) ? false : true;
           MeshAttributeRecord.a(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
-          if (sl.field_w) {
+          if (CacheEntry.field_w) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
-            sl.field_w = false;
+            CacheEntry.field_w = false;
           }
           if (tq.field_c) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
@@ -1146,9 +1146,9 @@ final class BrickGameLayerController implements GameLayerController {
               MeshAttributeRecord.a(stackIn_112_0, stackIn_113_1, stackIn_115_2, stackIn_115_3, stackIn_115_4, stackIn_115_5, stackIn_115_6, stackIn_115_7, stackIn_115_8 != 0, stackIn_115_9, stackIn_115_10, stackIn_116_11);
             }
           }
-          if (sl.field_w) {
+          if (CacheEntry.field_w) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
-            sl.field_w = false;
+            CacheEntry.field_w = false;
           }
           if (tq.field_c) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
@@ -1245,9 +1245,9 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_161_10 = 13;
                 stackIn_162_11 = (so.a((byte) -35) <= 50) ? false : true;
                 MeshAttributeRecord.a(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
-                if (sl.field_w) {
+                if (CacheEntry.field_w) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
-                  sl.field_w = false;
+                  CacheEntry.field_w = false;
                 }
                 if (tq.field_c) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
@@ -1310,9 +1310,9 @@ final class BrickGameLayerController implements GameLayerController {
                 stackIn_202_10 = 13;
                 stackIn_203_11 = (so.a((byte) -35) <= 50) ? false : true;
                 MeshAttributeRecord.a(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
-                if (sl.field_w) {
+                if (CacheEntry.field_w) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
-                  sl.field_w = false;
+                  CacheEntry.field_w = false;
                 }
                 if (tq.field_c) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
@@ -1347,9 +1347,9 @@ final class BrickGameLayerController implements GameLayerController {
             MeshAttributeRecord.a(stackIn_217_0, stackIn_218_1, stackIn_220_2, stackIn_220_3, stackIn_220_4, stackIn_220_5, stackIn_220_6, stackIn_220_7, stackIn_220_8 != 0, stackIn_220_9, stackIn_220_10, stackIn_221_11);
           }
         }
-        if (sl.field_w) {
+        if (CacheEntry.field_w) {
           TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
-          sl.field_w = false;
+          CacheEntry.field_w = false;
         }
         if (!tq.field_c) {
           return;

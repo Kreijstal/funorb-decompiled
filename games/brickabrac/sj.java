@@ -261,7 +261,7 @@ final class sj {
                   }
                 } else {
                   lobbyPlayer = new LobbyPlayer(lobbyAccountName, lobbyDisplayName, playerId);
-                  eq.lobbyPlayerIndex.put(playerId, lobbyPlayer, 86);
+                  WhirlpoolHasher.lobbyPlayerIndex.put(playerId, lobbyPlayer, 86);
                 }
                 lobbyPlayer.arrivalTimeMillis = MonotonicTime.nowMillis(false) - (long)((PacketBuffer) ((Object) packet)).readInt(255);
                 lobbyPlayer.rating = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
@@ -288,7 +288,7 @@ final class sj {
                     removedLobbyPlayer.unlink((byte) 111);
                   } else {
                     removedLobbyPlayer.removalStatus = playerStatus;
-                    removedLobbyPlayer.statusChangeTick = cm.field_o;
+                    removedLobbyPlayer.statusChangeTick = AlternateNumericLoginCredentials.field_o;
                   }
                   removedLobbyPlayer.unlinkSecondary(obfuscationGuard ^ 34);
                 }
@@ -309,7 +309,7 @@ final class sj {
                       updatedGame = new LobbyGame(RankingsRequest.gameSettingCount);
                       LevelResultSubmission.lobbyGameIndex.put((long)var3_int, updatedGame, 47);
                     }
-                    eb.decodeLobbyGame(updatedGame, packet, 0, true);
+                    EmailLoginCredentials.decodeLobbyGame(updatedGame, packet, 0, true);
                     ic.insertSortedLobbyGame(true, updatedGame);
                   } else {
                     if (9 == responseKind) {
@@ -321,7 +321,7 @@ final class sj {
                           removedGame.unlink((byte) 111);
                         } else {
                           removedGame.removalStatus = gameStatus;
-                          removedGame.statusChangeTick = cm.field_o;
+                          removedGame.statusChangeTick = AlternateNumericLoginCredentials.field_o;
                         }
                         removedGame.unlinkSecondary(3);
                       }
@@ -347,7 +347,7 @@ final class sj {
                               statusGame.invitationPending = false;
                               if (gameStatus != 0) {
                                 requestGame.removalStatus = gameStatus;
-                                requestGame.statusChangeTick = cm.field_o;
+                                requestGame.statusChangeTick = AlternateNumericLoginCredentials.field_o;
                               }
                               ic.insertSortedLobbyGame(true, requestGame);
                             }
@@ -388,14 +388,14 @@ final class sj {
                                     if (0 == playerStatus) {
                                       removedGamePlayerAlias.unlink((byte) 111);
                                     } else {
-                                      removedGamePlayer.statusChangeTick = cm.field_o;
+                                      removedGamePlayer.statusChangeTick = AlternateNumericLoginCredentials.field_o;
                                       removedGamePlayer.removalStatus = playerStatus;
                                     }
                                     removedGamePlayerAlias.unlinkSecondary(obfuscationGuard - 30);
                                     o.currentLobbyGame.playerCount = o.currentLobbyGame.playerCount - 1;
                                     break regionExit1;
                                   case 20:
-                                    eb.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
+                                    EmailLoginCredentials.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
                                     break regionExit1;
                                   case 21:
                                     var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
@@ -413,7 +413,7 @@ final class sj {
                                     Widget.field_p = ((PacketBuffer) ((Object) packet)).readLong(-32768);
                                     break regionExit1;
                                   default:
-                                    AlignedIconLabel.a("L1: " + eq.c((byte) -121), (Throwable) null, 108);
+                                    AlignedIconLabel.a("L1: " + WhirlpoolHasher.c((byte) -121), (Throwable) null, 108);
                                     hn.a((byte) 84);
                                     break regionExit1;
                                 }
@@ -432,7 +432,7 @@ final class sj {
                                   requestPlayer.invitationPending = false;
                                 }
                                 if (playerStatus != 0) {
-                                  requestPlayerAlias.statusChangeTick = cm.field_o;
+                                  requestPlayerAlias.statusChangeTick = AlternateNumericLoginCredentials.field_o;
                                   requestPlayerAlias.removalStatus = playerStatus;
                                 }
                                 ValidationIconWidget.insertSortedLobbyPlayer(requestPlayerAlias, 17574);
@@ -479,7 +479,7 @@ final class sj {
               resetPlayer.unlinkSecondary(obfuscationGuard - 30);
               resetPlayer = (LobbyPlayer) (SocialListEntry.gamePlayers.next((byte) 116));
             }
-            resetPlayer = (LobbyPlayer) (eq.lobbyPlayerIndex.first((byte) 89));
+            resetPlayer = (LobbyPlayer) (WhirlpoolHasher.lobbyPlayerIndex.first((byte) 89));
             while (resetPlayer != null) {
               if (resetPlayer.invitationPending ||
                 resetPlayer.joinRequestPending) {
@@ -490,7 +490,7 @@ final class sj {
                 }
                 ValidationIconWidget.insertSortedLobbyPlayer(resetPlayer, 17574);
               }
-              resetPlayer = (LobbyPlayer) (eq.lobbyPlayerIndex.next(false));
+              resetPlayer = (LobbyPlayer) (WhirlpoolHasher.lobbyPlayerIndex.next(false));
             }
             if (responseKind == 1 &&
               o.currentLobbyGame != null) {
@@ -500,7 +500,7 @@ final class sj {
               var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
               o.currentLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
               o.currentLobbyGame.setSecondaryKey((long)var3_int, -105);
-              eb.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
+              EmailLoginCredentials.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
               ic.optionChangeDeadlineMillis = 0L;
             } else {
               o.currentLobbyGame = null;

@@ -5,7 +5,7 @@ final class NanoGameClock extends GameClock {
     private int sampleCursor;
     static boolean field_l;
     static RgbSprite field_q;
-    static ff field_s;
+    static LoginCredentials field_s;
     static PcmSound[] field_p;
     private long nextTickNanos;
     private long elapsedNanos;

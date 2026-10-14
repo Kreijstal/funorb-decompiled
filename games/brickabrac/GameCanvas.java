@@ -135,9 +135,9 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (ScrollPaneWithFooter.field_Yb > hc.field_f) {
             hc.field_f = hc.field_f + 1;
           }
-          if (BallPulseEffect.framebuffer.height != ej.field_O) {
-            BoundedFile.field_h = BoundedFile.field_h + (-ej.field_O + BallPulseEffect.framebuffer.height);
-            ej.field_O = BallPulseEffect.framebuffer.height;
+          if (BallPulseEffect.framebuffer.height != StrongCacheEntry.field_O) {
+            BoundedFile.field_h = BoundedFile.field_h + (-StrongCacheEntry.field_O + BallPulseEffect.framebuffer.height);
+            StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
           }
           if (param2 <= ~hc.field_f) {
             return;

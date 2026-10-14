@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends bo {
+final class AlternateNumericLoginCredentials extends NumericLoginCredentials {
     static String field_u;
     static String field_q;
     static int field_o;
@@ -11,8 +11,8 @@ final class cm extends bo {
     static String field_p;
     static RgbSprite[] field_r;
 
-    cm(long param0, String param1) {
-        super(param0, param1);
+    AlternateNumericLoginCredentials(long identifier, String password) {
+        super(identifier, password);
     }
 
     public static void b(byte param0) {
@@ -29,12 +29,12 @@ final class cm extends bo {
         field_p = null;
     }
 
-    final cd a(int param0) {
-        if (param0 != 13) {
+    final LoginCredentialKind getCredentialKind(int obfuscationGuard) {
+        if (obfuscationGuard != 13) {
           field_r = (RgbSprite[]) null;
-          return PopupWidgetLayer.field_Y;
+          return PopupWidgetLayer.alternateNumericLoginKind;
         }
-        return PopupWidgetLayer.field_Y;
+        return PopupWidgetLayer.alternateNumericLoginKind;
     }
 
     static {

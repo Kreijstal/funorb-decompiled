@@ -115,10 +115,10 @@ final class nj extends IntrusiveNode {
         }
         for (var3 = 0; this.field_w > var3; var3++) {
           for (var4 = 0; var4 < this.field_J; var4++) {
-            Rasterizer2D.a((this.field_D[var3][var4] >> 4) + param1, this.field_m[var3][var4] >> 4, 48, -(this.field_i * this.field_j) + 64, eb.field_r[this.field_P[var3]]);
+            Rasterizer2D.a((this.field_D[var3][var4] >> 4) + param1, this.field_m[var3][var4] >> 4, 48, -(this.field_i * this.field_j) + 64, EmailLoginCredentials.field_r[this.field_P[var3]]);
           }
-          Rasterizer2D.a(param1 + (this.field_A[var3] >> 4), this.field_C[var3] >> 4, 224, -(this.field_j * this.field_E) + 165, eb.field_r[this.field_n[var3]]);
-          Rasterizer2D.a((this.field_A[var3] >> 4) + param1, this.field_C[var3] >> 4, 64, -(this.field_x * this.field_j) + 250, eb.field_r[this.field_n[var3]]);
+          Rasterizer2D.a(param1 + (this.field_A[var3] >> 4), this.field_C[var3] >> 4, 224, -(this.field_j * this.field_E) + 165, EmailLoginCredentials.field_r[this.field_n[var3]]);
+          Rasterizer2D.a((this.field_A[var3] >> 4) + param1, this.field_C[var3] >> 4, 64, -(this.field_x * this.field_j) + 250, EmailLoginCredentials.field_r[this.field_n[var3]]);
         }
         return;
     }
@@ -166,8 +166,8 @@ final class nj extends IntrusiveNode {
         int var7 = 8192 / this.field_H;
         int var8 = 0;
         for (var11 = 0; this.field_L > var11; var11++) {
-          var9 = JungleBackground.field_r.nextBoundedInt(-37880252, eb.field_q.length);
-          var10 = JungleBackground.field_r.nextBoundedInt(-37880252, eb.field_q.length);
+          var9 = JungleBackground.field_r.nextBoundedInt(-37880252, EmailLoginCredentials.field_q.length);
+          var10 = JungleBackground.field_r.nextBoundedInt(-37880252, EmailLoginCredentials.field_q.length);
           for (var12 = 0; this.field_H > var12; var12++) {
             var8 = JungleBackground.field_r.nextBoundedInt(-37880252, 800);
             this.field_A[var5] = this.field_s + (JungleBackground.field_r.nextBoundedInt(-37880252, 4) - 2 << 8);

@@ -108,7 +108,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var7 = 246 + 5 * var5 / 2;
           var8 = var7 + var5;
           var9 = var7 - (-(7 * var4) + PasswordFieldRenderer.field_D.ascent);
-          var10 = PasswordFieldRenderer.field_D.wrapText(rd.a(SocialListEntry.field_bc[var3], new String[]{nl.a(true, true, 0, (long)HalloweenBackground.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
+          var10 = PasswordFieldRenderer.field_D.wrapText(rd.a(SocialListEntry.field_bc[var3], new String[]{nl.a(true, true, 0, (long)HalloweenBackground.field_r[var3], LoginCredentialKind.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
           for (var11 = 0; var11 < var10; var11++) {
             PasswordFieldRenderer.field_D.drawLeft(this.descriptionLines[var11], 209, var8, 2, -1);
             var8 = var8 + var4;

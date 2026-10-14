@@ -186,12 +186,12 @@ final class wn {
             sj.field_d.text = kd.field_a;
             QuickChatPhraseRegistry.field_c.enabled = false;
             if (LevelMetadata.field_m == 1) {
-              GameScreen.field_f.scrollPane.viewport.text = cd.field_f;
+              GameScreen.field_f.scrollPane.viewport.text = LoginCredentialKind.field_f;
               if (var19 != 0) {
-                GameScreen.field_f.scrollPane.viewport.text = cm.field_t;
+                GameScreen.field_f.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
               }
             } else {
-              GameScreen.field_f.scrollPane.viewport.text = cm.field_t;
+              GameScreen.field_f.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
             }
             jh.a(true, GameScreen.field_f.content);
           }
@@ -387,9 +387,9 @@ final class wn {
           if (InstructionsScreen.gameChatFilter > maximumGameFilter) {
             InstructionsScreen.gameChatFilter = 2;
           }
-          to.privateChatFilter = 3 & packedFilters;
-          if (to.privateChatFilter > 2) {
-            to.privateChatFilter = 2;
+          WeightedLruCache.privateChatFilter = 3 & packedFilters;
+          if (WeightedLruCache.privateChatFilter > 2) {
+            WeightedLruCache.privateChatFilter = 2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -249,9 +249,9 @@ final class hc {
           MainMenuScreen.field_t = new UiComponent(0L, var10);
           MainMenuScreen.field_t.textInset = 2;
           MainMenuScreen.field_t.frameSprites = TimedSplashScreen.a(true, (byte) 44, 3815994, 30, 2039583, false);
-          cd.field_d = new UiComponent(0L, var10);
-          cd.field_d.textInset = 2;
-          cd.field_d.frameSprites = TimedSplashScreen.a(false, (byte) 77, 3815994, 30, 2039583, false);
+          LoginCredentialKind.field_d = new UiComponent(0L, var10);
+          LoginCredentialKind.field_d.textInset = 2;
+          LoginCredentialKind.field_d.frameSprites = TimedSplashScreen.a(false, (byte) 77, 3815994, 30, 2039583, false);
           IntrusiveHashIterator.field_a = new UiComponent(0L, var10);
           IntrusiveHashIterator.field_a.textInset = 2;
           IntrusiveHashIterator.field_a.frameSprites = TimedSplashScreen.a(false, (byte) 83, 3815994, 30, 2039583, true);

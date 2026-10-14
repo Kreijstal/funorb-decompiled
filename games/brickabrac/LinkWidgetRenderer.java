@@ -6,7 +6,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
     private TextFont font;
     private int verticalAlignment;
     static int matchmakingOptionByteOne;
-    static me field_c;
+    static LoginMethodPreference field_c;
     static String field_a;
 
     public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
@@ -81,7 +81,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
     public static void a(boolean param0) {
         field_c = null;
         if (param0) {
-          field_c = (me) null;
+          field_c = (LoginMethodPreference) null;
           field_a = null;
           return;
         }
@@ -99,7 +99,7 @@ final class LinkWidgetRenderer implements WidgetRenderer {
     }
 
     static {
-        field_c = new me("");
+        field_c = new LoginMethodPreference("");
         field_a = "Loading instruments";
     }
 }

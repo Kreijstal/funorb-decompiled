@@ -105,8 +105,8 @@ final class MultiplayerExitScreen extends MatchResultScreen {
           }
           TooltipSprite.a(param3, param1, (byte) -59, param2);
           np.b(false);
-          MusicVoice.field_l = ej.field_P;
-          IntrusiveHashIterator.field_g = ej.field_P;
+          MusicVoice.field_l = StrongCacheEntry.field_P;
+          IntrusiveHashIterator.field_g = StrongCacheEntry.field_P;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "gn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -131,7 +131,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     }
 
     MultiplayerExitScreen() {
-        super(19, ff.field_h);
+        super(19, LoginCredentials.field_h);
     }
 
     static {

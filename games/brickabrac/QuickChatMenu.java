@@ -1170,7 +1170,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime112 = gr.a(true, "nice");
           if (var2Lifetime112 != null) {
-            eb.field_m = MenuButton.a(var2Lifetime112, (byte) 72);
+            EmailLoginCredentials.field_m = MenuButton.a(var2Lifetime112, (byte) 72);
           }
           var2Lifetime113 = gr.a(true, "genius");
           if (var2Lifetime113 != null) {

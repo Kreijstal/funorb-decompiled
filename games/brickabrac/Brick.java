@@ -282,7 +282,7 @@ final class Brick extends RectangleBody {
                 this.pendingTypeId = 0;
                 this.transitionCode = 1;
               } else {
-                if (board.field_l + 1 != ej.field_E[this.typeId]) {
+                if (board.field_l + 1 != StrongCacheEntry.field_E[this.typeId]) {
                   if ((this.flags & 1) == 0) {
                     board.field_l = 0;
                   }

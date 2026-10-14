@@ -46,7 +46,7 @@ final class SoundCache {
                 var6Lifetime1 = KeyboardInput.requestRemoveFriend(param1, false, var5);
               }
               if (GameUiController.field_d == 2) {
-                var6Lifetime1 = me.requestAddIgnoredPlayer(var5, param1, 2);
+                var6Lifetime1 = LoginMethodPreference.requestAddIgnoredPlayer(var5, param1, 2);
               }
               if (GameUiController.field_d == 3) {
                 var6Lifetime1 = uf.requestRemoveIgnoredPlayer(var5, param1, var5, -45);
@@ -231,7 +231,7 @@ final class SoundCache {
           int var8Lifetime1;
           var9 = BrickABrac.field_J ? 1 : 0;
           try {
-            if (eq.gameTransport == null &&
+            if (WhirlpoolHasher.gameTransport == null &&
               !CappedUrlRequest.a(param1, 10000)) {
               stackIn_5_0 = -1;
               return stackIn_5_0;
@@ -239,13 +239,13 @@ final class SoundCache {
             if (BitPacketBuffer.field_u == rf.field_b) {
               if (param1) {
                 var10 = (String) null;
-                NanoGameClock.field_s = AccountIntroductionPanel.a(sl.field_v, 20, false, param5, (String) null);
+                NanoGameClock.field_s = AccountIntroductionPanel.createLoginCredentials(CacheEntry.field_v, 20, false, param5, (String) null);
               } else {
-                NanoGameClock.field_s = ArchiveFetchClient.a(param0, false, param5, (byte) -109);
+                NanoGameClock.field_s = ArchiveFetchClient.createCredentialsForAccount(param0, false, param5, (byte) -109);
               }
               TextFieldValidator.outgoingPackets.position = 0;
               TextFieldValidator.outgoingPackets.writeByte(28, 14);
-              TextFieldValidator.outgoingPackets.writeByte(107, NanoGameClock.field_s.a(13).field_a);
+              TextFieldValidator.outgoingPackets.writeByte(107, NanoGameClock.field_s.getCredentialKind(13).wireCode);
               ActivityIndicatorWidget.a(-1, 10000);
               rf.field_b = GameScreen.field_c;
             }
@@ -296,7 +296,7 @@ final class SoundCache {
             }
             if (rf.field_b == IsaacGenerator.field_g &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -80)) {
-              sl.field_v = jl.incomingPackets.readLong(-32768);
+              CacheEntry.field_v = jl.incomingPackets.readLong(-32768);
               gd.field_b = param5;
               QuickChatHelpDialog.field_Yb = jl.incomingPackets.readUnsignedByte(255);
               gh.field_f = jl.incomingPackets.readUnsignedByte(255);
@@ -334,11 +334,11 @@ final class SoundCache {
               ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var12, 65);
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
-              if (NanoGameClock.field_s.a(13) == RadialSelectorWidget.field_X) {
-                EmailConfirmationValidator.field_k.a(100, EmailConfirmationValidator.e((byte) -66));
+              if (NanoGameClock.field_s.getCredentialKind(13) == RadialSelectorWidget.emailLoginKind) {
+                EmailConfirmationValidator.field_k.persistLoginMethod(100, EmailConfirmationValidator.e((byte) -66));
               } else {
-                if (NanoGameClock.field_s.a(13) == MembershipBenefitsScreen.field_v) {
-                  ll.field_d.a(112, EmailConfirmationValidator.e((byte) -81));
+                if (NanoGameClock.field_s.getCredentialKind(13) == MembershipBenefitsScreen.numericLoginKind) {
+                  ll.field_d.persistLoginMethod(112, EmailConfirmationValidator.e((byte) -81));
                 }
               }
               RadialSelectorRenderer.field_d = false;
@@ -355,7 +355,7 @@ final class SoundCache {
                 }
               } else {
                 try {
-                  ne.a(new Object[]{GameplayAudioEvent.a(sl.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
+                  ne.a(new Object[]{GameplayAudioEvent.a(CacheEntry.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -392,7 +392,7 @@ final class SoundCache {
               stackIn_95_0 = IntrusiveHashTable.currentPacketOpcode;
               return stackIn_95_0;
             }
-            if (eq.gameTransport == null) {
+            if (WhirlpoolHasher.gameTransport == null) {
               if (RadialSelectorRenderer.field_d) {
                 if (30000L >= MembershipBenefitsScreen.f(-6792)) {
                   DirectByteStorage.field_e = gd.field_e;

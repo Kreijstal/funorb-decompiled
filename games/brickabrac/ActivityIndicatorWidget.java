@@ -319,7 +319,7 @@ final class ActivityIndicatorWidget extends Widget {
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
           boolean decompiledFrameRemainder0 = true;
-          if (eq.gameTransport != null) {
+          if (WhirlpoolHasher.gameTransport != null) {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (MenuButton.field_i == rf.field_b);
               if ((decompiledFrameRemainder0) && (TextFieldValidator.outgoingPackets.position == 0 &&
@@ -338,7 +338,7 @@ final class ActivityIndicatorWidget extends Widget {
               }
               if (0 < TextFieldValidator.outgoingPackets.position) {
                 try {
-                  eq.gameTransport.write(TextFieldValidator.outgoingPackets.data, true, TextFieldValidator.outgoingPackets.position, 0);
+                  WhirlpoolHasher.gameTransport.write(TextFieldValidator.outgoingPackets.data, true, TextFieldValidator.outgoingPackets.position, 0);
                   BrickMotionPath.field_q = MonotonicTime.nowMillis(false);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;

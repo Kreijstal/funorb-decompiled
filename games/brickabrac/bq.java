@@ -119,7 +119,7 @@ final class bq {
           } else if (2 != ArchiveFetchClient.field_p) {
             if (3 == ArchiveFetchClient.field_p) {
               if (AccountMessageDialog.field_ub.privilegedMode) {
-                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, ff.field_a);
+                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, LoginCredentials.field_a);
               } else {
                 var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, df.field_d);
               }

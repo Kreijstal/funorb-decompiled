@@ -62,8 +62,8 @@ final class IntKeyIndex {
         t.field_g = false;
         NanoGameClock.field_l = false;
         CheckboxWidgetRenderer.a(param0, true);
-        MusicVoice.field_l = ej.field_P;
-        IntrusiveHashIterator.field_g = ej.field_P;
+        MusicVoice.field_l = StrongCacheEntry.field_P;
+        IntrusiveHashIterator.field_g = StrongCacheEntry.field_P;
     }
 
     final static boolean a(byte param0) {

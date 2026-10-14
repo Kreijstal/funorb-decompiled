@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EmailConfirmationValidator extends TextFieldValidator {
-    static me field_k;
+    static LoginMethodPreference field_k;
     static String[] field_m;
     private String checkedEmail;
     private MatchingTextValidator matchingValidator;
@@ -12,8 +12,8 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     static NodeDeque field_q;
 
     final static java.applet.Applet e(byte param0) {
-        if (null != sl.field_x) {
-          return sl.field_x;
+        if (null != CacheEntry.field_x) {
+          return CacheEntry.field_x;
         }
         if (param0 >= -60) {
           field_m = (String[]) null;
@@ -81,7 +81,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (this.validateText(text, (byte) 106) != AccountMessageDialog.validationInvalid) {
-            return to.field_l;
+            return WeightedLruCache.field_l;
           }
           stackIn_6_0 = ConstructionBackground.field_s;
           return stackIn_6_0;
@@ -195,7 +195,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     static {
         field_r = "Match by...";
         field_m = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
-        field_k = new me("email");
+        field_k = new LoginMethodPreference("email");
         field_q = new NodeDeque();
     }
 }

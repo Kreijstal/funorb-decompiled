@@ -425,7 +425,7 @@ final class PlayerBoard extends IntrusiveNode {
             discarded$22 = diagnostics.append("12. " + Integer.toString(var4, 16) + "\n");
           }
           for (var5Lifetime2 = 3; var5Lifetime2 < 29; var5Lifetime2++) {
-            var6Lifetime1 = this.field_o[var5Lifetime2] % to.field_f[var5Lifetime2];
+            var6Lifetime1 = this.field_o[var5Lifetime2] % WeightedLruCache.field_f[var5Lifetime2];
             var6Lifetime1 = (15 & var6Lifetime1) << 4 | var6Lifetime1 >> 4;
             var4 = var4 ^ var6Lifetime1 * 3 + 26386 << (15 & var5Lifetime2);
           }
@@ -895,10 +895,10 @@ final class PlayerBoard extends IntrusiveNode {
 
     final boolean a(int param0, int param1) {
         byte dupTemp$0 = 0;
-        if (to.field_f[param1] > 0) {
+        if (WeightedLruCache.field_f[param1] > 0) {
           dupTemp$0 = (byte)(this.field_o[param1] + 1);
           this.field_o[param1] = dupTemp$0;
-          this.field_o[param1] = (byte)(dupTemp$0 % to.field_f[param1]);
+          this.field_o[param1] = (byte)(dupTemp$0 % WeightedLruCache.field_f[param1]);
         }
         if (param0 != 26) {
           this.b(-111, 112);

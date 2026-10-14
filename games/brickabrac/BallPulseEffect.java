@@ -125,10 +125,10 @@ final class BallPulseEffect extends IntrusiveNode {
         if (1 != gj.receivedChatChannel &&
           4 != gj.receivedChatChannel) {
           MusicVoice.receivedChatContextId = 0;
-          sl.receivedChatContextLabel = null;
+          CacheEntry.receivedChatContextLabel = null;
         } else {
           MusicVoice.receivedChatContextId = var8.readUnsignedShort(obfuscationGuard ^ 65347);
-          sl.receivedChatContextLabel = var8.readCp1252String(-1);
+          CacheEntry.receivedChatContextLabel = var8.readCp1252String(-1);
         }
         if (!quickChat) {
           gd.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);
@@ -210,10 +210,10 @@ final class BallPulseEffect extends IntrusiveNode {
         if (1 != gj.receivedChatChannel &&
           4 != gj.receivedChatChannel) {
           MusicVoice.receivedChatContextId = 0;
-          sl.receivedChatContextLabel = null;
+          CacheEntry.receivedChatContextLabel = null;
         } else {
           MusicVoice.receivedChatContextId = var8.readUnsignedShort(param0 ^ 65347);
-          sl.receivedChatContextLabel = var8.readCp1252String(-1);
+          CacheEntry.receivedChatContextLabel = var8.readCp1252String(-1);
         }
         if (!param1) {
           gd.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);

@@ -9,7 +9,7 @@ final class RadialSelectorWidget extends FocusableWidget {
     static PacketBuffer field_N;
     static boolean field_L;
     int markedSector;
-    static cd field_X;
+    static LoginCredentialKind emailLoginKind;
     static String field_T;
     static ResourceArchive field_S;
     int centerX;
@@ -26,13 +26,13 @@ final class RadialSelectorWidget extends FocusableWidget {
         field_P = null;
         field_S = null;
         if (param0 >= 89) {
-          field_X = null;
+          emailLoginKind = null;
           field_T = null;
           field_Y = null;
           return;
         }
         RadialSelectorWidget.h(64);
-        field_X = null;
+        emailLoginKind = null;
         field_T = null;
         field_Y = null;
     }
@@ -155,7 +155,7 @@ final class RadialSelectorWidget extends FocusableWidget {
           }
           stackIn_4_0 = true;
           stackIn_5_1 = !(Paddle.field_x >= 13);
-          StateIconLabel.field_Rb = cd.a(stackIn_4_0, stackIn_5_1);
+          StateIconLabel.field_Rb = LoginCredentialKind.a(stackIn_4_0, stackIn_5_1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -184,7 +184,7 @@ final class RadialSelectorWidget extends FocusableWidget {
     static {
         field_V = "Sticky: any balls that hit the paddle stick to it";
         field_T = "Basic Bricks";
-        field_X = new cd(3);
+        emailLoginKind = new LoginCredentialKind(3);
         field_Y = "Report abuse";
         field_P = "Waiting for fonts";
         field_M = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";

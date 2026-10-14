@@ -115,7 +115,7 @@ final class OpacityWidget extends SingleChildWidget {
           if (obfuscationGuard > -112) {
             constructionCentreSprites = (RgbSprite[]) null;
           }
-          if (eb.field_l) {
+          if (EmailLoginCredentials.field_l) {
             VerticalScrollbar.field_Ub = null;
             AccountMessageDialog.queuedAchievementSubmissions.clear((byte) -121);
             var9 = SecondaryHashTable.earnedAchievementMask;
@@ -135,10 +135,10 @@ final class OpacityWidget extends SingleChildWidget {
               var10[var6] = 0;
               var6++;
             }
-            eb.field_l = false;
+            EmailLoginCredentials.field_l = false;
           }
           if (HalloweenBackground.field_y) {
-            eq.a(7);
+            WhirlpoolHasher.a(7);
             ToggleButtonWidget.a((byte) 119);
             EmailConfirmationValidator.e(-94);
             HalloweenBackground.field_y = false;

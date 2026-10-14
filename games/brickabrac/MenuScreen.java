@@ -326,7 +326,7 @@ abstract class MenuScreen extends GameScreen {
                   if (!QuickChatMenu.h(-26090)) {
                     MatchingTextValidator.b(true);
                   } else {
-                    sl.field_z = -2;
+                    CacheEntry.field_z = -2;
                     AccountRegistrationPanel.a(BrickGameLayerController.field_b, true, 0, inputFlag, 46);
                   }
                 }
@@ -346,7 +346,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 24) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  eb.field_l = true;
+                  EmailLoginCredentials.field_l = true;
                   ng.requestScreen(inputFlag, obfuscationGuard ^ 61, 0);
                 }
                 break regionExit1;
@@ -495,15 +495,15 @@ abstract class MenuScreen extends GameScreen {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   if (this.screenId != 10) {
                     AccountIntroductionPanel.a(LevelPackLoader.field_a, true, (byte) 126);
-                    sl.field_z = 2147483647;
+                    CacheEntry.field_z = 2147483647;
                   } else {
                     var12 = (String) null;
                     AccountIntroductionPanel.a((String) null, true, (byte) 123);
                     if (WidgetGroup.a(pl.pendingAchievementMask, -1)) {
-                      sl.field_z = 9;
+                      CacheEntry.field_z = 9;
                     } else {
                       stackIn_143_0 = (null != VerticalScrollbar.field_Ub) ? 5 : 0;
-                      sl.field_z = stackIn_143_0;
+                      CacheEntry.field_z = stackIn_143_0;
                     }
                   }
                 }
@@ -683,7 +683,7 @@ abstract class MenuScreen extends GameScreen {
     final static void rememberRepeatMessage(int messageId, int obfuscationGuard, long recipientId, String recipientName, int channel) {
         try {
           WidgetTextLayout.repeatMessageId = messageId;
-          bo.repeatMessageAvailable = true;
+          NumericLoginCredentials.repeatMessageAvailable = true;
           QuickChatPhraseDefinition.repeatMessageChannel = channel;
           MultiplayerExitScreen.repeatRecipientId = recipientId;
           ba.repeatRecipientName = recipientName;

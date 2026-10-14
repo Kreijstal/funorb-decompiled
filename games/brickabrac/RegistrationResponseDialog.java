@@ -41,10 +41,10 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
 
     final static int packChatFilters(int obfuscationGuard) {
         if (obfuscationGuard == 248) {
-          return to.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
+          return WeightedLruCache.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
         }
         tableSubmissionSequence = 19;
-        return to.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
+        return WeightedLruCache.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
     }
 
     RegistrationResponseDialog(WidgetLayerStack layerStack, AccountRegistrationPanel registrationPanel) {

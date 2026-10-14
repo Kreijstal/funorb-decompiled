@@ -9,17 +9,17 @@ final class MultiValueSliderWidget extends FocusableWidget {
     static RgbSprite[] field_K;
     int horizontalInset;
 
-    final static me a(java.applet.Applet param0, int param1) {
+    final static LoginMethodPreference a(java.applet.Applet param0, int param1) {
         int var4 = 0;
         String var2 = null;
         RuntimeException var2_ref = null;
-        me[] var3 = null;
-        me var5 = null;
+        LoginMethodPreference[] var3 = null;
+        LoginMethodPreference var5 = null;
         int var6 = 0;
-        me stackIn_4_0 = null;
-        me stackIn_10_0 = null;
-        me stackIn_14_0 = null;
-        me stackIn_16_0 = null;
+        LoginMethodPreference stackIn_4_0 = null;
+        LoginMethodPreference stackIn_10_0 = null;
+        LoginMethodPreference stackIn_14_0 = null;
+        LoginMethodPreference stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -31,10 +31,10 @@ final class MultiValueSliderWidget extends FocusableWidget {
             stackIn_4_0 = LinkWidgetRenderer.field_c;
             return stackIn_4_0;
           }
-          var3 = bo.b(140);
+          var3 = NumericLoginCredentials.b(140);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
-            if (var5.b(var2, param1 + 28554)) {
+            if (var5.matchesCookieValue(var2, param1 + 28554)) {
               stackIn_10_0 = var5;
               return stackIn_10_0;
             }
@@ -43,7 +43,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
             stackIn_16_0 = LinkWidgetRenderer.field_c;
             return stackIn_16_0;
           }
-          stackIn_14_0 = (me) null;
+          stackIn_14_0 = (LoginMethodPreference) null;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
             for (wordIndex = 0; wordCount > wordIndex; wordIndex++) {
               var10[wordIndex] = ((PacketBuffer) ((Object) var5)).readInt(LevelResultSubmission.a(obfuscationGuard, -256));
             }
-            maskRequest = (AchievementMaskRequest) (ej.pendingAchievementMaskRequests.first(obfuscationGuard - 84));
+            maskRequest = (AchievementMaskRequest) (StrongCacheEntry.pendingAchievementMaskRequests.first(obfuscationGuard - 84));
             if (maskRequest == null) {
               hn.a((byte) 102);
               return;
@@ -183,11 +183,11 @@ final class MultiValueSliderWidget extends FocusableWidget {
             return;
           }
           if (responseType != 2) {
-            AlignedIconLabel.a("A1: " + eq.c((byte) -92), (Throwable) null, 88);
+            AlignedIconLabel.a("A1: " + WhirlpoolHasher.c((byte) -92), (Throwable) null, 88);
             hn.a((byte) 52);
             return;
           }
-          emptyMaskRequest = (AchievementMaskRequest) (ej.pendingAchievementMaskRequests.first(-42));
+          emptyMaskRequest = (AchievementMaskRequest) (StrongCacheEntry.pendingAchievementMaskRequests.first(-42));
           if (emptyMaskRequest == null) {
             hn.a((byte) 119);
             return;

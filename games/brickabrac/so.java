@@ -3,7 +3,7 @@
  */
 final class so {
     static String field_e;
-    private to field_a;
+    private WeightedLruCache field_a;
     static AppletGameShell field_f;
     static int field_b;
     static HuffmanCodec textHuffman;
@@ -69,7 +69,7 @@ final class so {
 
     final kn a(int param0, byte param1) {
         byte[] var4 = null;
-        kn var3 = (kn) (this.field_a.a((long)param0, true));
+        kn var3 = (kn) (this.field_a.get((long)param0, true));
         if (var3 != null) {
           return var3;
         }
@@ -86,7 +86,7 @@ final class so {
           var3.c((byte) -124);
         }
         int var5 = -120 % ((param1 - 22) / 49);
-        this.field_a.a(72, var3, (long)param0);
+        this.field_a.put(72, var3, (long)param0);
         return var3;
     }
 
@@ -171,10 +171,10 @@ final class so {
               gj.field_c[var7_int] = null;
             }
           }
-          cd.field_h = AgeValidator.a("frame", "basic", param0, -122);
+          LoginCredentialKind.field_h = AgeValidator.a("frame", "basic", param0, -122);
           t.field_d = AgeValidator.a("frame_track", "basic", param0, -128);
           t.field_d[4] = null;
-          var7 = cd.field_h;
+          var7 = LoginCredentialKind.field_h;
           var7[4] = null;
           pl.loadRgbSpriteByName("basic", "frame_bracket", (byte) 106, param0);
           AchievementBrowserScreen.field_A = AgeValidator.a("button_frame", "basic", param0, -91);
@@ -234,7 +234,7 @@ final class so {
           ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           ln.field_j = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.field_l = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
-          me.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
+          LoginMethodPreference.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
           pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
@@ -356,9 +356,9 @@ final class so {
             SaveResultsPromptScreen.packCardIcons[var11Lifetime1].a(0, 0);
             sc.popRaster(-89);
           }
-          cm.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
+          AlternateNumericLoginCredentials.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {
-            cm.field_r[var11Lifetime2] = DelayedPacket.a(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
+            AlternateNumericLoginCredentials.field_r[var11Lifetime2] = DelayedPacket.a(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
           }
           IntrusiveHashIterator.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {
@@ -405,7 +405,7 @@ final class so {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_a = new to(64);
+        this.field_a = new WeightedLruCache(64);
         try {
           this.field_c = param2;
           this.field_g = param1;

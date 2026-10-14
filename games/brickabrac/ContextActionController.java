@@ -590,7 +590,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_game_friends_only", (byte) 117);
                 if (var2 != null) {
-                  ej.field_K = MenuButton.a(var2, (byte) 86);
+                  StrongCacheEntry.field_K = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = nk.a("mu_chat_game_friends", (byte) -128);
                 if (var2 != null) {
@@ -802,7 +802,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("you_can_not_spectate", (byte) -112);
                 if (var2 != null) {
-                  cm.field_q = MenuButton.a(var2, (byte) 101);
+                  AlternateNumericLoginCredentials.field_q = MenuButton.a(var2, (byte) 101);
                 }
                 var2 = nk.a("spectate_xs_game", (byte) -122);
                 if (null != var2) {
@@ -818,11 +818,11 @@ final class ContextActionController {
                 }
                 var2 = nk.a("connecting_to_friend_server_twoline", (byte) -118);
                 if (null != var2) {
-                  cd.field_f = MenuButton.a(var2, (byte) 102);
+                  LoginCredentialKind.field_f = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("loading", (byte) 18);
                 if (null != var2) {
-                  cm.field_t = MenuButton.a(var2, (byte) 124);
+                  AlternateNumericLoginCredentials.field_t = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("offline", (byte) -126);
                 if (var2 != null) {
@@ -842,7 +842,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("multiconst_similar_rating", (byte) 55);
                 if (null != var2) {
-                  cm.field_u = MenuButton.a(var2, (byte) 72);
+                  AlternateNumericLoginCredentials.field_u = MenuButton.a(var2, (byte) 72);
                 }
                 var2 = nk.a("multiconst_open", (byte) -115);
                 if (null != var2) {
@@ -1032,7 +1032,7 @@ final class ContextActionController {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  eq.field_b = MenuButton.a(var2, (byte) 78);
+                  WhirlpoolHasher.field_b = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = nk.a("gameopt_pleaseselectoption1", (byte) 9);
                 if (var2 != null) {
@@ -1052,7 +1052,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_inviteplayers_or_trychanging2", (byte) -117);
                 if (null != var2) {
-                  ff.field_e = MenuButton.a(var2, (byte) 77);
+                  LoginCredentials.field_e = MenuButton.a(var2, (byte) 77);
                 }
                 var2 = nk.a("gameopt_novalidcombos", (byte) -119);
                 if (var2 != null) {
@@ -1476,7 +1476,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("day", (byte) 40);
                 if (var2 != null) {
-                  ej.field_M = MenuButton.a(var2, (byte) 99);
+                  StrongCacheEntry.field_M = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("month", (byte) 36);
                 if (null != var2) {
@@ -1760,7 +1760,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_alert_passrepeated", (byte) -18);
                 if (var2 != null) {
-                  eq.field_i = MenuButton.a(var2, (byte) 76);
+                  WhirlpoolHasher.field_i = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("create_alert_passlength", (byte) 29);
                 if (null != var2) {
@@ -1812,7 +1812,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_emailvalid", (byte) -108);
                 if (null != var2) {
-                  to.field_l = MenuButton.a(var2, (byte) 92);
+                  WeightedLruCache.field_l = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("create_account_success", (byte) -126);
                 if (var2 != null) {
@@ -1864,7 +1864,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ignorenotfound", (byte) 26);
                 if (var2 != null) {
-                  to.field_h = MenuButton.a(var2, (byte) 99);
+                  WeightedLruCache.field_h = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("removeignorefirst", (byte) -113);
                 if (null != var2) {
@@ -1934,7 +1934,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("waitingfor_instruments", (byte) 41);
                 if (null != var2) {
-                  cm.field_n = MenuButton.a(var2, (byte) 83);
+                  AlternateNumericLoginCredentials.field_n = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = nk.a("waitingfor_levels", (byte) -117);
                 if (var2 != null) {
@@ -2238,7 +2238,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("resign", (byte) 27);
                 if (var2 != null) {
-                  ej.field_H = MenuButton.a(var2, (byte) 124);
+                  StrongCacheEntry.field_H = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("returntolobby", (byte) -118);
                 if (null != var2) {
@@ -2406,7 +2406,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ingame_level", (byte) 113);
                 if (null != var2) {
-                  cm.field_p = MenuButton.a(var2, (byte) 117);
+                  AlternateNumericLoginCredentials.field_p = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = nk.a("mouseoveranicon", (byte) -107);
                 if (var2 != null) {
@@ -2502,7 +2502,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mp_cancelrematch", (byte) 0);
                 if (null != var2) {
-                  ff.field_g = MenuButton.a(var2, (byte) 89);
+                  LoginCredentials.field_g = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("mp_cancelrematch_unrated", (byte) -111);
                 if (null != var2) {
@@ -2840,7 +2840,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_unavailable", (byte) -125);
                 if (null != var2) {
-                  ff.field_a = MenuButton.a(var2, (byte) 76);
+                  LoginCredentials.field_a = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("fs_unavailable_try_signed_applet", (byte) -108);
                 if (null != var2) {
@@ -3413,7 +3413,7 @@ final class ContextActionController {
               errorMessage = KeyboardInput.requestRemoveFriend(opcode, false, this.targetName);
             } else {
               if (6 == actionId) {
-                errorMessage = me.requestAddIgnoredPlayer(this.targetName, opcode, 2);
+                errorMessage = LoginMethodPreference.requestAddIgnoredPlayer(this.targetName, opcode, 2);
               } else {
                 if (7 != actionId) {
                   return false;
@@ -3599,12 +3599,12 @@ final class ContextActionController {
           }
           if (message.channel == 1) {
             if (InstructionsScreen.gameChatFilter == 0) {
-              this.contextMenu.addAction(ej.field_K, 12, (byte) 107);
+              this.contextMenu.addAction(StrongCacheEntry.field_K, 12, (byte) 107);
             }
             this.contextMenu.addAction(CacheIoWorker.field_b, 13, (byte) 82);
           }
           if (message.channel == 2) {
-            if (to.privateChatFilter == 0) {
+            if (WeightedLruCache.privateChatFilter == 0) {
               this.contextMenu.addAction(qp.field_d, 12, (byte) 121);
             }
             this.contextMenu.addAction(EmailAvailabilityRequest.field_b, 13, (byte) 118);

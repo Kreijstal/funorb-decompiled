@@ -51,14 +51,14 @@ final class qn {
             }
             return;
           }
-          if (this.field_m > to.field_b) {
-            to.field_i = (-to.field_b + this.field_m) / 2;
+          if (this.field_m > WeightedLruCache.field_b) {
+            WeightedLruCache.field_i = (-WeightedLruCache.field_b + this.field_m) / 2;
           } else {
             if (this.field_m > 0) {
-              to.field_i = 0;
+              WeightedLruCache.field_i = 0;
             }
           }
-          if (to.field_b == this.field_v &&
+          if (WeightedLruCache.field_b == this.field_v &&
             WidgetPaintStyle.field_g == this.field_t) {
             return;
           }
@@ -67,14 +67,14 @@ final class qn {
         }
         this.field_b = false;
         if (!this.field_b) {
-          if (this.field_m <= to.field_b) {
+          if (this.field_m <= WeightedLruCache.field_b) {
             if (this.field_m > 0) {
-              to.field_i = 0;
+              WeightedLruCache.field_i = 0;
             }
           } else {
-            to.field_i = (-to.field_b + this.field_m) / 2;
+            WeightedLruCache.field_i = (-WeightedLruCache.field_b + this.field_m) / 2;
           }
-          if (to.field_b != this.field_v) {
+          if (WeightedLruCache.field_b != this.field_v) {
             this.field_e.a(this.field_v, this.field_t, -70);
           } else {
             if (WidgetPaintStyle.field_g != this.field_t) {
@@ -155,10 +155,10 @@ final class qn {
 
     final GameCanvas a(boolean param0) {
         this.field_d = WidgetPaintStyle.field_g;
-        this.field_l = to.field_b;
+        this.field_l = WeightedLruCache.field_b;
         this.field_e.a(this.field_q, this.field_s, -93);
         MusicCrossfadeStream.field_A = false;
-        GameCanvas var2 = ff.a(0, 0, this.field_q, this.field_s, param0, AccountMessageDialog.field_ub);
+        GameCanvas var2 = LoginCredentials.a(0, 0, this.field_q, this.field_s, param0, AccountMessageDialog.field_ub);
         if (var2 == null) {
           this.a(102);
         }
@@ -222,7 +222,7 @@ final class qn {
         } else {
           if (this.field_a <= var2) {
             if (!(0.0f < this.field_r)) {
-              if (var2 != to.field_b) {
+              if (var2 != WeightedLruCache.field_b) {
                 this.field_e.a(var2, var3, -97);
               } else {
                 if (var3 != WidgetPaintStyle.field_g) {
@@ -230,7 +230,7 @@ final class qn {
                 }
               }
               if (param0 < this.field_m) {
-                to.field_i = (-to.field_b + this.field_m) / 2;
+                WeightedLruCache.field_i = (-WeightedLruCache.field_b + this.field_m) / 2;
               }
               return;
             }
@@ -242,7 +242,7 @@ final class qn {
                 var2 = var4;
               }
             }
-            if (var2 != to.field_b) {
+            if (var2 != WeightedLruCache.field_b) {
               this.field_e.a(var2, var3, -97);
             } else {
               if (var3 != WidgetPaintStyle.field_g) {
@@ -250,7 +250,7 @@ final class qn {
               }
             }
             if (param0 < this.field_m) {
-              to.field_i = (-to.field_b + this.field_m) / 2;
+              WeightedLruCache.field_i = (-WeightedLruCache.field_b + this.field_m) / 2;
             }
             return;
           }
@@ -264,10 +264,10 @@ final class qn {
           } else {
             if (var2 > var4Lifetime1) {
               var2 = var4Lifetime1;
-              if (var2 != to.field_b) {
+              if (var2 != WeightedLruCache.field_b) {
                 this.field_e.a(var2, var3, -97);
                 if (param0 < this.field_m) {
-                  to.field_i = (-to.field_b + this.field_m) / 2;
+                  WeightedLruCache.field_i = (-WeightedLruCache.field_b + this.field_m) / 2;
                 }
                 return;
               }
@@ -279,7 +279,7 @@ final class qn {
           }
         }
         if (decompiledFrameRemainder0) {
-          if (var2 != to.field_b) {
+          if (var2 != WeightedLruCache.field_b) {
             this.field_e.a(var2, var3, -97);
           } else {
             if (var3 != WidgetPaintStyle.field_g) {
@@ -290,7 +290,7 @@ final class qn {
         if (param0 >= this.field_m) {
           return;
         }
-        to.field_i = (-to.field_b + this.field_m) / 2;
+        WeightedLruCache.field_i = (-WeightedLruCache.field_b + this.field_m) / 2;
     }
 
     static {

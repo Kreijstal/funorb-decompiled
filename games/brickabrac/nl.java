@@ -84,8 +84,8 @@ final class nl {
               return true;
             }
             delayMillis = MonotonicTime.packetDelayMillis;
-            if (0.0 != ej.packetDelayJitter) {
-              delayMillis = (int)((double)delayMillis + IterableIntrusiveHashTable.packetDelayRandom.nextGaussian() * ej.packetDelayJitter);
+            if (0.0 != StrongCacheEntry.packetDelayJitter) {
+              delayMillis = (int)((double)delayMillis + IterableIntrusiveHashTable.packetDelayRandom.nextGaussian() * StrongCacheEntry.packetDelayJitter);
               if (0 > delayMillis) {
                 delayMillis = 0;
               }

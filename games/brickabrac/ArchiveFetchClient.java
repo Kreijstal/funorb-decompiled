@@ -21,13 +21,13 @@ abstract class ArchiveFetchClient {
 
     abstract void reportIntegrityFailure(byte obfuscationGuard);
 
-    final static ff a(String param0, boolean param1, String param2, byte param3) {
-        long var4_long = 0L;
+    final static LoginCredentials createCredentialsForAccount(String account, boolean alternateNumericKind, String password, byte obfuscationGuard) {
+        long identifier = 0L;
         RuntimeException var4 = null;
-        Object var6 = null;
-        int var7 = 0;
-        CharSequence var8 = null;
-        ff stackIn_4_0 = null;
+        Object email = null;
+        int guardArithmetic = 0;
+        CharSequence accountCharacters = null;
+        LoginCredentials credentials = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -35,34 +35,34 @@ abstract class ArchiveFetchClient {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_long = 0L;
-          var7 = -101 % ((param3 + 57) / 48);
-          var6 = null;
-          if (-1 != param0.indexOf('@')) {
-            var6 = param0;
+          identifier = 0L;
+          guardArithmetic = -101 % ((obfuscationGuard + 57) / 48);
+          email = null;
+          if (-1 != account.indexOf('@')) {
+            email = account;
           } else {
-            var8 = (CharSequence) ((Object) param0);
-            var4_long = HighscoresScreen.a(false, var8);
+            accountCharacters = (CharSequence) ((Object) account);
+            identifier = HighscoresScreen.a(false, accountCharacters);
           }
-          stackIn_4_0 = AccountIntroductionPanel.a(var4_long, 20, param1, param2, (String) (var6));
-          return stackIn_4_0;
+          credentials = AccountIntroductionPanel.createLoginCredentials(identifier, 20, alternateNumericKind, password, (String) (email));
+          return credentials;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_7_0 = var4;
           stackIn_7_1 = new StringBuilder().append("ih.N(");
-          if (param0 == null) {
+          if (account == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(alternateNumericKind).append(',');
+          if (password == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

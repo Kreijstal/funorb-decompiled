@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd {
+final class LoginCredentialKind {
     static NineSliceFrame field_c;
     static UiComponent field_d;
     static MusicTrack field_g;
     static String field_f;
     static IndexedSprite[] field_b;
-    int field_a;
+    int wireCode;
     static int field_e;
     static RgbSprite[] field_h;
 
@@ -110,8 +110,8 @@ final class cd {
         }
     }
 
-    cd(int param0) {
-        this.field_a = param0;
+    LoginCredentialKind(int wireCode) {
+        this.wireCode = wireCode;
     }
 
     static {

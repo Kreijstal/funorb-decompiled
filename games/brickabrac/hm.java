@@ -51,7 +51,7 @@ final class hm {
           }
           ua.lobbyPlayers = lobbyPlayerContent.children;
           ua.lobbyPlayers.clear((byte) -60);
-          eq.lobbyPlayerIndex = new SecondaryHashTable(lobbyPlayerBuckets);
+          WhirlpoolHasher.lobbyPlayerIndex = new SecondaryHashTable(lobbyPlayerBuckets);
           m.field_h = -1;
           MenuSelection.previewGameId = 0;
           uf.pendingJoinRequestCount = 0;
@@ -72,7 +72,7 @@ final class hm {
           }
           BrickABrac.gamePlayerIndex = new SecondaryHashTable(gamePlayerBuckets);
           ic.optionChangeDeadlineMillis = 0L;
-          cm.field_o = initialTick;
+          AlternateNumericLoginCredentials.field_o = initialTick;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

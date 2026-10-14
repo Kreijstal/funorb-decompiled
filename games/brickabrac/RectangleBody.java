@@ -305,8 +305,8 @@ class RectangleBody extends MovingBody {
 
     final static void c(int param0) {
         int var1 = 62 / ((25 - param0) / 57);
-        if (ej.field_I != null) {
-          ej.field_I.closeDialog(17);
+        if (StrongCacheEntry.field_I != null) {
+          StrongCacheEntry.field_I.closeDialog(17);
         }
         MusicPatch.field_o = new PlayerNameChooserPanel();
         rj.field_c.transitionToContent((byte) 110, MusicPatch.field_o);

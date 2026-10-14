@@ -59,7 +59,7 @@ final class po {
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, to.field_b, WidgetPaintStyle.field_g);
+              var9.fillRect(0, 0, WeightedLruCache.field_b, WidgetPaintStyle.field_g);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -78,11 +78,11 @@ final class po {
               var10.setFont(DirectByteStorage.field_g);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
-              var9.drawImage(RichTextLayout.field_r, to.field_b / 2 - 152, WidgetPaintStyle.field_g / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(RichTextLayout.field_r, WeightedLruCache.field_b / 2 - 152, WidgetPaintStyle.field_g / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = -152 + to.field_b / 2;
+              var7 = -152 + WeightedLruCache.field_b / 2;
               var8 = WidgetPaintStyle.field_g / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
@@ -97,7 +97,7 @@ final class po {
             if (LevelSequence.field_g != null) {
               var9.setFont(DirectByteStorage.field_g);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(LevelSequence.field_g, to.field_b / 2 - 6 * LevelSequence.field_g.length() / 2, -26 + WidgetPaintStyle.field_g / 2);
+              var9.drawString(LevelSequence.field_g, WeightedLruCache.field_b / 2 - 6 * LevelSequence.field_g.length() / 2, -26 + WidgetPaintStyle.field_g / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -183,7 +183,7 @@ final class po {
           sj.field_c = stackIn_25_0;
           var2Lifetime4 = 57 % ((-7 - param0) / 42);
           if (OpacityWidget.field_I == 2) {
-            stackIn_28_0 = me.field_a;
+            stackIn_28_0 = LoginMethodPreference.field_a;
           } else {
             stackIn_28_0 = pl.field_f;
           }

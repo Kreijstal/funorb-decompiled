@@ -223,7 +223,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (opcode == 15) {
             if (MonotonicTime.field_c) {
-              eq.a(7);
+              WhirlpoolHasher.a(7);
               BirthDateValidator.d((byte) -56);
               ng.requestScreen(false, obfuscationGuard + 43, 0);
               MonotonicTime.field_c = false;
@@ -466,9 +466,9 @@ public final class BrickABrac extends InteractiveGameClient {
           !WidgetGroup.a(pl.pendingAchievementMask, -1)) {
           ng.requestScreen(false, 69, 5);
         } else {
-          if (sl.field_z != 2147483647) {
-            if (sl.field_z != -2) {
-              ng.requestScreen(false, param0 + 55, sl.field_z);
+          if (CacheEntry.field_z != 2147483647) {
+            if (CacheEntry.field_z != -2) {
+              ng.requestScreen(false, param0 + 55, CacheEntry.field_z);
             } else {
               MatchingTextValidator.b(true);
             }
@@ -478,7 +478,7 @@ public final class BrickABrac extends InteractiveGameClient {
     }
 
     public BrickABrac() {
-        sl.field_C = this;
+        CacheEntry.field_C = this;
     }
 
     final void b(int param0, int param1) {
@@ -649,8 +649,8 @@ public final class BrickABrac extends InteractiveGameClient {
         m.c(2);
         f.a(1);
         hd.a(12);
-        cd.a((byte) 65);
-        ff.a((byte) 114);
+        LoginCredentialKind.a((byte) 65);
+        LoginCredentials.a((byte) 114);
         BufferedSocket.b(119);
         we.a(-8495);
         sm.a(30000);
@@ -792,7 +792,7 @@ public final class BrickABrac extends InteractiveGameClient {
         VorbisFloor1.releaseScratch();
         ui.b(1516);
         QuickChatPhraseDefinition.f(32463);
-        to.a(-125);
+        WeightedLruCache.a(-125);
         IntrusiveHashTable.a(120);
         MusicVoice.c((byte) 67);
         MidiFileReader.g();
@@ -835,19 +835,19 @@ public final class BrickABrac extends InteractiveGameClient {
         CachedArchiveSource.c((byte) 56);
         ResourceRequest.a((byte) 78);
         DateInputWidget.h(0);
-        eq.b(-1);
+        WhirlpoolHasher.b(-1);
         RadialSelectorWidget.a(110);
         MultiValueSliderWidget.j(18724);
         RichTextLayout.a((byte) -51);
         IterableIntrusiveHashTable.a(24968);
         DualLinkDeque.b(2);
-        sl.f(31434);
+        CacheEntry.f(31434);
         DraggableWidget.a(1);
         DropTargetWidget.i((byte) -116);
         DirectByteStorage.c(7301);
         GrowableIntList.a(true);
         QuickChatParameterType.a(125);
-        ej.h(928072);
+        StrongCacheEntry.h(928072);
         wi.b((byte) -54);
         AudioFilter.releaseScratch();
         ja.a(2);
@@ -884,9 +884,9 @@ public final class BrickABrac extends InteractiveGameClient {
         fa.a((byte) -102);
         nj.a(0);
         RasterCacheSurface.a((byte) 121);
-        me.a(100);
-        cm.b((byte) -121);
-        eb.a(false);
+        LoginMethodPreference.a(100);
+        AlternateNumericLoginCredentials.b((byte) -121);
+        EmailLoginCredentials.a(false);
         RasterSnapshot.a(20888);
         ck.a(30850);
         TooltipSprite.a((byte) -77);

@@ -85,7 +85,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
         AppletGameShell.field_b = null;
         t.field_g = false;
         if (NanoGameClock.field_l) {
-          ej.field_I.showPendingMessage((byte) -104);
+          StrongCacheEntry.field_I.showPendingMessage((byte) -104);
         } else {
           var1 = OptionsScreen.field_x;
           if (var1 > 0) {
@@ -96,7 +96,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
             }
             AppletGameShell.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) AppletGameShell.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
           }
-          ej.field_I.closeDialog(param0 + 17);
+          StrongCacheEntry.field_I.closeDialog(param0 + 17);
           NinjaBackground.e((byte) -117);
         }
     }

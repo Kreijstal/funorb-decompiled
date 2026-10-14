@@ -57,7 +57,7 @@ final class hd {
 
     final static void a(boolean param0) {
         ga.field_i = 12;
-        cm.field_s = param0 ? true : false;
+        AlternateNumericLoginCredentials.field_s = param0 ? true : false;
         tb.field_eb = null;
         rf.field_f = true;
         pp.field_a = 12;

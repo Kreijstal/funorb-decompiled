@@ -93,7 +93,7 @@ final class SocialListEntry extends UiComponent {
           diffuseAlias = diffuseStorage;
           highlights = new int[mesh.directionCount];
           directionX = ValidationIconWidget.worldDirectionX;
-          directionY = ff.worldDirectionY;
+          directionY = LoginCredentials.worldDirectionY;
           directionZ = ContextActionController.worldDirectionZ;
           for (direction = 0; mesh.directionCount > direction; direction++) {
             diffuseDot = directionZ[direction] * diffuseZ + diffuseY * directionY[direction] + directionX[direction] * diffuseX >> 8;
@@ -230,7 +230,7 @@ final class SocialListEntry extends UiComponent {
         super(0L, (UiComponent) null);
     }
 
-    final static void a(int param0, ff param1, boolean param2, boolean param3, boolean param4) {
+    final static void a(int param0, LoginCredentials param1, boolean param2, boolean param3, boolean param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -251,7 +251,7 @@ final class SocialListEntry extends UiComponent {
           tq.field_f.writeInt(LevelPackCard.field_a[3], (byte) -79);
           AccountIntroductionPanel.a(tq.field_f, (byte) -95);
           tq.field_f.writeShort((byte) 113, param0);
-          param1.a(0, tq.field_f);
+          param1.writeCredentials(0, tq.field_f);
           TextFieldValidator.outgoingPackets.position = 0;
           if (!param2) {
             TextFieldValidator.outgoingPackets.writeByte(94, 16);
@@ -287,7 +287,7 @@ final class SocialListEntry extends UiComponent {
           if (null != ParisBackground.field_t) {
             TextFieldValidator.outgoingPackets.writePrefixedCp1252String(0, ParisBackground.field_t);
           }
-          LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+          LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
           TextFieldValidator.outgoingPackets.backfillShortLength(TextFieldValidator.outgoingPackets.position - var5_int, 255);
           ActivityIndicatorWidget.a(-1, 10000);
           return;

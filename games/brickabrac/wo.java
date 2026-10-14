@@ -40,8 +40,8 @@ final class wo {
           var1 = 1;
           var2 = m.field_i;
           if (var2 == 0) {
-            cd.field_g = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_title_music");
-            stackIn_77_0 = (null == cd.field_g) ? 0 : 1;
+            LoginCredentialKind.field_g = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_title_music");
+            stackIn_77_0 = (null == LoginCredentialKind.field_g) ? 0 : 1;
             var1Lifetime3 = stackIn_77_0;
           } else {
             if (1 == var2) {
@@ -60,7 +60,7 @@ final class wo {
                   var1Lifetime3 = stackIn_95_0;
                 } else {
                   if (4 == var2) {
-                    stackIn_103_0 = (!m.musicSynthesizer.prepareTrack(-114, cd.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                    stackIn_103_0 = (!m.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                     var1Lifetime3 = stackIn_103_0;
                   } else {
                     if (var2 == 5) {
@@ -93,8 +93,8 @@ final class wo {
         var1Lifetime1 = 1;
         var2Lifetime1 = m.field_i;
         if (var2Lifetime1 == 0) {
-          cd.field_g = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_title_music");
-          stackIn_5_0 = (null == cd.field_g) ? 0 : 1;
+          LoginCredentialKind.field_g = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_title_music");
+          stackIn_5_0 = (null == LoginCredentialKind.field_g) ? 0 : 1;
           var1Lifetime2 = stackIn_5_0;
         } else {
           if (1 == var2Lifetime1) {
@@ -113,7 +113,7 @@ final class wo {
                 var1Lifetime2 = stackIn_23_0;
               } else {
                 if (4 == var2Lifetime1) {
-                  stackIn_31_0 = (!m.musicSynthesizer.prepareTrack(-114, cd.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                  stackIn_31_0 = (!m.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                   var1Lifetime2 = stackIn_31_0;
                 } else {
                   if (var2Lifetime1 == 5) {

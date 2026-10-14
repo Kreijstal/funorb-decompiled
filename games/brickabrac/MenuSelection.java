@@ -279,7 +279,7 @@ final class MenuSelection {
               var4.unlink((byte) 111);
               return;
             }
-            AlignedIconLabel.a("A1: " + eq.c((byte) -101), (Throwable) null, 123);
+            AlignedIconLabel.a("A1: " + WhirlpoolHasher.c((byte) -101), (Throwable) null, 123);
             hn.a((byte) 60);
           } else {
             var3_ref_wj = (wj) (EmailConfirmationValidator.field_q.first(-110));

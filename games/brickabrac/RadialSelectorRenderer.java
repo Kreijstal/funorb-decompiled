@@ -205,7 +205,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
           if (param4 != -27460) {
             field_i = 90;
           }
-          sl.a(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
+          CacheEntry.a(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
           ed.a(param5, param7, param2, (byte) 104);
           GameClock.b((byte) 13);
           SingleChildWidget.g((byte) -24);

@@ -45,9 +45,9 @@ final class TooltipSprite extends IntrusiveNode {
           uo.loadIndexedSpriteByName((byte) 29, param3, "dropdown", "commonui");
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
           LevelPackLoader.field_b = new IndexedSprite[4];
-          cd.field_b = new IndexedSprite[4];
+          LoginCredentialKind.field_b = new IndexedSprite[4];
           ng.field_d = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{LevelPackLoader.field_b, ng.field_d, cd.field_b};
+          var6 = new IndexedSprite[][]{LevelPackLoader.field_b, ng.field_d, LoginCredentialKind.field_b};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -142,10 +142,10 @@ final class TooltipSprite extends IntrusiveNode {
             LevelSelectScreen.sendAchievementSubmission(opcode, var4, (byte) 80);
             var4 = (AchievementSubmission) (DateFieldsWidget.pendingAchievementSubmissions.next((byte) 116));
           }
-          var2 = ej.pendingAchievementMaskRequests.first(obfuscationGuard ^ -13402);
+          var2 = StrongCacheEntry.pendingAchievementMaskRequests.first(obfuscationGuard ^ -13402);
           while (var2 != null) {
             LabeledWidget.sendAchievementMaskRequest((byte) -85, opcode);
-            var2 = ej.pendingAchievementMaskRequests.next((byte) 116);
+            var2 = StrongCacheEntry.pendingAchievementMaskRequests.next((byte) 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

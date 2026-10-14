@@ -89,7 +89,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         int[] var14 = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = cd.field_e;
+          var3_int = LoginCredentialKind.field_e;
           QuickChatPhraseDefinition.quickChatMenuRoot = new UiComponent(0L, (UiComponent) null);
           if (param2 == null) {
             AlignedIconLabel.a("QC1", (Throwable) null, param1 ^ 118);
@@ -331,7 +331,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         RuntimeException var6_ref = null;
         TextFont var7 = null;
         String var8 = null;
-        me var9 = null;
+        LoginMethodPreference var9 = null;
         LabeledWidget var12 = null;
         LabeledWidget var13 = null;
         try {

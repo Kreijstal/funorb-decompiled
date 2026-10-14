@@ -21,7 +21,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
         } else {
           if (null == jj.field_a) {
-            ua.field_d = ff.a(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
+            ua.field_d = LoginCredentials.a(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
           } else {
             ua.field_d = jj.field_a.a(true);
             qm.a(97, 2);
@@ -178,7 +178,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           if (param3 <= 25) {
             WidgetLayerStack.h(24);
           }
-          cd.field_c = param4;
+          LoginCredentialKind.field_c = param4;
           DropTargetWidget.field_H = param0;
           GrowableIntList.field_l = param2;
         } catch (RuntimeException runtimeException) {
@@ -243,7 +243,7 @@ final class WidgetLayerStack extends SingleChildWidget {
               var5 = NewAchievementsScreen.field_H;
             } else {
               if (UiComponent.field_H.selectedIndex != var4) {
-                var5 = eb.field_n;
+                var5 = EmailLoginCredentials.field_n;
               } else {
                 var5 = LevelCompleteScreen.field_A;
               }
@@ -290,7 +290,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             if (var4 >= 0) {
               var1_int = var1_int + kn.field_y;
               if (UiComponent.field_H.selectedIndex != var4) {
-                stackIn_44_0 = cd.field_c;
+                stackIn_44_0 = LoginCredentialKind.field_c;
               } else {
                 stackIn_44_0 = GrowableIntList.field_l;
               }

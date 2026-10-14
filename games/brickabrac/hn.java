@@ -48,9 +48,9 @@ final class hn {
     }
 
     final static void a(byte param0) {
-        if (eq.gameTransport != null) {
-          eq.gameTransport.close((byte) 113);
-          eq.gameTransport = null;
+        if (WhirlpoolHasher.gameTransport != null) {
+          WhirlpoolHasher.gameTransport.close((byte) 113);
+          WhirlpoolHasher.gameTransport = null;
         }
         if (param0 < 49) {
           ninjaFarSprite = (RgbSprite) null;

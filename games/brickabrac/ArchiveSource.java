@@ -26,7 +26,7 @@ abstract class ArchiveSource {
           if (param4 > -102) {
             ArchiveSource.a(51);
           }
-          if (IntrusiveHashIterator.field_g != ej.field_P) {
+          if (IntrusiveHashIterator.field_g != StrongCacheEntry.field_P) {
             return false;
           }
           var8 = new RegistrationResponseDialog(ResourceArchive.field_f, param5);

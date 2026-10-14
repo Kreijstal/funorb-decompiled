@@ -102,7 +102,7 @@ final class ToggleButtonWidget extends FocusableWidget {
           return;
         }
         try {
-          eq.lobbyPlayerIndex = null;
+          WhirlpoolHasher.lobbyPlayerIndex = null;
           if (rq.lobbyGames != null) {
             rq.lobbyGames.clear((byte) -91);
             rq.lobbyGames = null;
@@ -113,13 +113,13 @@ final class ToggleButtonWidget extends FocusableWidget {
             SocialListEntry.gamePlayers = null;
           }
           BrickABrac.gamePlayerIndex = null;
-          if (eq.lobbyPlayerIndex != null) {
-            var3 = (LobbyPlayer) (eq.lobbyPlayerIndex.first((byte) 120));
+          if (WhirlpoolHasher.lobbyPlayerIndex != null) {
+            var3 = (LobbyPlayer) (WhirlpoolHasher.lobbyPlayerIndex.first((byte) 120));
             while (var3 != null) {
               var3.unlinkSecondary(3);
-              var3 = (LobbyPlayer) (eq.lobbyPlayerIndex.next(false));
+              var3 = (LobbyPlayer) (WhirlpoolHasher.lobbyPlayerIndex.next(false));
             }
-            eq.lobbyPlayerIndex = null;
+            WhirlpoolHasher.lobbyPlayerIndex = null;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.A(" + param0 + ')');

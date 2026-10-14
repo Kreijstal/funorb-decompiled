@@ -70,7 +70,7 @@ final class CappedUrlRequest implements Runnable {
             rf.field_b = mc.field_e;
           } else {
             try {
-              eq.gameTransport = new BufferedSocket((java.net.Socket) (qm.field_d.result), FramedMenuScreen.field_s);
+              WhirlpoolHasher.gameTransport = new BufferedSocket((java.net.Socket) (qm.field_d.result), FramedMenuScreen.field_s);
               TextFieldValidator.outgoingPackets.position = 0;
               var4 = jl.incomingPackets;
               var5 = var4;

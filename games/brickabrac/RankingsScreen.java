@@ -223,7 +223,7 @@ final class RankingsScreen extends MenuScreen {
         AchievementMaskRequest.a(this.screenId, 19);
         this.a(0);
         if (QuickChatMenu.h(-26090)) {
-          bo.a((byte) 97, DateFieldsWidget.field_N);
+          NumericLoginCredentials.a((byte) 97, DateFieldsWidget.field_N);
           return;
         }
         var2 = 149 + ContextActionController.field_g.capHeight;
@@ -271,7 +271,7 @@ final class RankingsScreen extends MenuScreen {
           var4Lifetime1 = kd.field_a;
         }
         if (var4Lifetime1 != null) {
-          bo.a((byte) 119, (String) (var4Lifetime1));
+          NumericLoginCredentials.a((byte) 119, (String) (var4Lifetime1));
         }
         return;
     }

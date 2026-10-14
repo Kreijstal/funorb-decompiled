@@ -9,7 +9,7 @@ abstract class PopupWidgetLayer extends WidgetLayer {
     private int targetWidth;
     private int targetHeight;
     private int resizeDuration;
-    static cd field_Y;
+    static LoginCredentialKind alternateNumericLoginKind;
     static byte[][] decodedSpriteAlpha;
     static WidgetTheme widgetTheme;
     static String field_V;
@@ -264,12 +264,12 @@ abstract class PopupWidgetLayer extends WidgetLayer {
         widgetTheme = null;
         decodedSpriteAlpha = (byte[][]) null;
         field_U = null;
-        field_Y = null;
+        alternateNumericLoginKind = null;
     }
 
     static {
         field_U = "The hearts above are your lives.<br>Outside of the tutorial level, you will lose one life if all your balls fall out of play.";
-        field_Y = new cd(0);
+        alternateNumericLoginKind = new LoginCredentialKind(0);
         field_V = "Hide chat";
     }
 }

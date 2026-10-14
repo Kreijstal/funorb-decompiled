@@ -22,11 +22,11 @@ final class vd {
           if (length <= jl.incomingPackets.position) {
             return true;
           }
-          if (null == eq.gameTransport) {
+          if (null == WhirlpoolHasher.gameTransport) {
             return false;
           }
           try {
-            availableBytes = eq.gameTransport.available(10434);
+            availableBytes = WhirlpoolHasher.gameTransport.available(10434);
             if (0 >= availableBytes) {
               if (availableBytes < 0) {
                 hn.a((byte) 123);
@@ -41,7 +41,7 @@ final class vd {
             if (availableBytes > length - jl.incomingPackets.position) {
               availableBytes = -jl.incomingPackets.position + length;
             }
-            eq.gameTransport.readFully(obfuscationGuard + 25806, jl.incomingPackets.data, availableBytes, jl.incomingPackets.position);
+            WhirlpoolHasher.gameTransport.readFully(obfuscationGuard + 25806, jl.incomingPackets.data, availableBytes, jl.incomingPackets.position);
             RichTextLayout.lastGameReadMillis = MonotonicTime.nowMillis(false);
             jl.incomingPackets.position = jl.incomingPackets.position + availableBytes;
             if (length > jl.incomingPackets.position) {

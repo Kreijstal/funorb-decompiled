@@ -41,7 +41,7 @@ final class gh {
           PowerUpWarning.field_r = param6;
           PowerUpWarning.a(param16, param13, param12, 0, param4);
           MusicVoice.a(param0, -28, param5, param11);
-          cd.a(param10, param1, param19, 7, param18, param2);
+          LoginCredentialKind.a(param10, param1, param19, 7, param18, param2);
           GameConnectionShell.a(param3, param9, (byte) -119);
           fq.a((byte) 94, param15, param17, param14);
           return;

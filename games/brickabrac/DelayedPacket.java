@@ -89,7 +89,7 @@ final class DelayedPacket extends IntrusiveNode {
         if (param0 != 0) {
           return;
         }
-        nh.paintNineSliceFrame(642, 482, -40, -1, cd.field_h, -1);
+        nh.paintNineSliceFrame(642, 482, -40, -1, LoginCredentialKind.field_h, -1);
     }
 
     DelayedPacket(long deliverAfterMillis, int opcode, byte[] data) {

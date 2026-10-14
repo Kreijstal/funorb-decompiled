@@ -86,7 +86,7 @@ final class co {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var16 = jd.a(var11.data, 5, -14970, var11.position - var14.length - 5);
+        var16 = jd.computeWhirlpoolDigest(var11.data, 5, -14970, var11.position - var14.length - 5);
         for (var7 = 0; 64 > var7; var7++) {
           if (var16[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

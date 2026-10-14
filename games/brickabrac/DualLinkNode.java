@@ -56,7 +56,7 @@ class DualLinkNode extends IntrusiveNode {
           var12 = var12 + var10;
           param2.drawLeft(SecondaryNodeQueue.field_e, var11, var12, 1, -1);
           var12 = var12 + var10;
-          param2.drawLeft(ff.field_j, var11, var12, 2, -1);
+          param2.drawLeft(LoginCredentials.field_j, var11, var12, 2, -1);
           var12 = var12 + var10;
           param2.drawLeft(vd.field_d, var11, var12, 0, -1);
           if (param4 >= -96) {

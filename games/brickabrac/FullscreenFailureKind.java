@@ -20,8 +20,8 @@ final class FullscreenFailureKind {
           if (param1 >= -43) {
             field_c = (RgbSprite[]) null;
           }
-          if (null != ej.field_I) {
-            if (!ej.field_I.visible) {
+          if (null != StrongCacheEntry.field_I) {
+            if (!StrongCacheEntry.field_I.visible) {
               return;
             }
             var3_int = 1;
@@ -45,7 +45,7 @@ final class FullscreenFailureKind {
               if (ln.field_l) {
                 param0 = GameCanvas.field_b;
               }
-              ej.field_I.showResponseMessage(param2, false, param0);
+              StrongCacheEntry.field_I.showResponseMessage(param2, false, param0);
             }
             if (param2 != 256) {
               if (10 == param2) {

@@ -54,11 +54,11 @@ final class DirectByteStorage extends ByteStorage {
         if (2 != channel) {
           return;
         }
-        if (filter == to.privateChatFilter) {
+        if (filter == WeightedLruCache.privateChatFilter) {
           return;
         }
         LevelSequence.chatFiltersChanged = true;
-        to.privateChatFilter = filter;
+        WeightedLruCache.privateChatFilter = filter;
         WidgetTheme.writeChatFilters(true, opcode);
     }
 

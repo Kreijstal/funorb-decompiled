@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TabbedPane extends UiComponent {
-    static long[][] field_Wb;
+    static long[][] whirlpoolRoundTables;
     private UiComponent body;
-    static long[] field_Xb;
+    static long[] whirlpoolRoundConstants;
     int selectedTab;
     private UiComponent[] tabButtons;
     private UiComponent[] panels;
@@ -170,8 +170,8 @@ final class TabbedPane extends UiComponent {
         field_Pb = null;
         field_Tb = null;
         int var1 = 120 / ((-3 - param0) / 47);
-        field_Xb = null;
-        field_Wb = (long[][]) null;
+        whirlpoolRoundConstants = null;
+        whirlpoolRoundTables = (long[][]) null;
     }
 
     final void processTabPresses(int firstTabIndex) {
@@ -279,7 +279,7 @@ final class TabbedPane extends UiComponent {
         RuntimeException var20 = null;
         try {
           if (param15) {
-            field_Xb = (long[]) null;
+            whirlpoolRoundConstants = (long[]) null;
           }
           gh.a(param2, new NineSliceFrame(param11), param3, param0, param14, param7, param18, param10, 12, param6, new NineSliceFrame(param17), new NineSliceFrame(param9), param4, param19, param13, param8, param1, param12, param16, param5);
           return;
@@ -330,8 +330,8 @@ final class TabbedPane extends UiComponent {
         long var10 = 0L;
         long var12 = 0L;
         int var14 = 0;
-        field_Wb = new long[8][256];
-        field_Xb = new long[11];
+        whirlpoolRoundTables = new long[8][256];
+        whirlpoolRoundConstants = new long[11];
         int var0 = 0;
         while (var0 < 256) {
             var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
@@ -350,16 +350,16 @@ final class TabbedPane extends UiComponent {
                 var10 = var10 ^ 285L;
             }
             var12 = var2 ^ var10;
-            field_Wb[0][var0] = CacheIoWorker.a(var12, CacheIoWorker.a(CacheIoWorker.a(var8 << 16, CacheIoWorker.a(var10 << 24, CacheIoWorker.a(CacheIoWorker.a(var6 << 40, CacheIoWorker.a(var2 << 48, var2 << 56)), var2 << 32))), var4 << 8));
+            whirlpoolRoundTables[0][var0] = CacheIoWorker.a(var12, CacheIoWorker.a(CacheIoWorker.a(var8 << 16, CacheIoWorker.a(var10 << 24, CacheIoWorker.a(CacheIoWorker.a(var6 << 40, CacheIoWorker.a(var2 << 48, var2 << 56)), var2 << 32))), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_Wb[var14][var0] = CacheIoWorker.a(field_Wb[var14 - 1][var0] << 56, field_Wb[-1 + var14][var0] >>> 8);
+                whirlpoolRoundTables[var14][var0] = CacheIoWorker.a(whirlpoolRoundTables[var14 - 1][var0] << 56, whirlpoolRoundTables[-1 + var14][var0] >>> 8);
             }
             var0++;
         }
-        field_Xb[0] = 0L;
+        whirlpoolRoundConstants[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = var0 * 8 - 8;
-            field_Xb[var0] = RegistrationResponseDialog.a(ch.a(255L, field_Wb[7][7 + var1]), RegistrationResponseDialog.a(ch.a(65280L, field_Wb[6][var1 + 6]), RegistrationResponseDialog.a(ch.a(16711680L, field_Wb[5][var1 + 5]), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(field_Wb[3][var1 + 3], 1095216660480L), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(71776119061217280L, field_Wb[1][var1 + 1]), ch.a(field_Wb[0][var1], -72057594037927936L)), ch.a(field_Wb[2][var1 + 2], 280375465082880L))), ch.a(field_Wb[4][4 + var1], 4278190080L)))));
+            whirlpoolRoundConstants[var0] = RegistrationResponseDialog.a(ch.a(255L, whirlpoolRoundTables[7][7 + var1]), RegistrationResponseDialog.a(ch.a(65280L, whirlpoolRoundTables[6][var1 + 6]), RegistrationResponseDialog.a(ch.a(16711680L, whirlpoolRoundTables[5][var1 + 5]), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(71776119061217280L, whirlpoolRoundTables[1][var1 + 1]), ch.a(whirlpoolRoundTables[0][var1], -72057594037927936L)), ch.a(whirlpoolRoundTables[2][var1 + 2], 280375465082880L))), ch.a(whirlpoolRoundTables[4][4 + var1], 4278190080L)))));
         }
         field_Pb = "Set up new unrated game";
         field_Ub = 0;

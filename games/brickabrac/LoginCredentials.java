@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ff {
+abstract class LoginCredentials {
     static String field_g;
     static int[] worldDirectionY;
     static String field_j;
@@ -13,7 +13,7 @@ abstract class ff {
     static NodeDeque field_d;
     static String field_e;
 
-    abstract void a(int param0, PacketBuffer param1);
+    abstract void writeCredentials(int obfuscationGuard, PacketBuffer packet);
 
     final static GameCanvas a(int param0, int param1, int param2, int param3, boolean param4, PlatformServices param5) {
         java.awt.Frame var6 = null;
@@ -39,7 +39,7 @@ abstract class ff {
           var7.setBounds(0, 0, param2, param3);
           var7.addFocusListener(var7);
           if (!param4) {
-            ff.a((byte) 7, -111);
+            LoginCredentials.a((byte) 7, -111);
           }
           var7.requestFocus();
           stackIn_6_0 = var7;
@@ -58,7 +58,7 @@ abstract class ff {
         }
     }
 
-    abstract cd a(int param0);
+    abstract LoginCredentialKind getCredentialKind(int obfuscationGuard);
 
     public static void a(byte param0) {
         field_h = null;

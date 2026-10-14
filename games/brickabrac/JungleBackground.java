@@ -459,10 +459,10 @@ final class JungleBackground extends BackgroundScene {
                 stackIn_404_0 = var4_int;
                 if (stackIn_404_0 != 0 &&
                   var9 >= 0) {
-                  if (null != me.field_e &&
-                    me.field_e[var7] != null &&
-                    0 < (me.field_e[var7][var9] & ~qn.field_f)) {
-                    var15 = TextFieldRenderer.a((byte) -82, me.field_e[var7][var9] & ~qn.field_f);
+                  if (null != LoginMethodPreference.field_e &&
+                    LoginMethodPreference.field_e[var7] != null &&
+                    0 < (LoginMethodPreference.field_e[var7][var9] & ~qn.field_f)) {
+                    var15 = TextFieldRenderer.a((byte) -82, LoginMethodPreference.field_e[var7][var9] & ~qn.field_f);
                     var14 = 1;
                   }
                   if (null != NodeDeque.field_a &&
@@ -594,13 +594,13 @@ final class JungleBackground extends BackgroundScene {
                       var18_ref = null;
                     }
                   }
-                  if (ff.field_i == null) {
+                  if (LoginCredentials.field_i == null) {
                     var19 = null;
                   } else {
-                    if (null == ff.field_i[var7]) {
+                    if (null == LoginCredentials.field_i[var7]) {
                       var19 = null;
                     } else {
-                      var19 = ff.field_i[var7][var9];
+                      var19 = LoginCredentials.field_i[var7][var9];
                     }
                   }
                   var20 = null;
@@ -632,10 +632,10 @@ final class JungleBackground extends BackgroundScene {
                       if (var14 != 0) {
                         var22 = InstructionsScreen.field_t;
                         if (var15 > 0 &&
-                          eb.field_p != null &&
-                          eb.field_p.length >= var15 &&
-                          null != eb.field_p[var15 - 1]) {
-                          var22 = eb.field_p[-1 + var15][0];
+                          EmailLoginCredentials.field_p != null &&
+                          EmailLoginCredentials.field_p.length >= var15 &&
+                          null != EmailLoginCredentials.field_p[var15 - 1]) {
+                          var22 = EmailLoginCredentials.field_p[-1 + var15][0];
                         }
                         if (null == var21) {
                           var21 = var22;
@@ -906,7 +906,7 @@ final class JungleBackground extends BackgroundScene {
               ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, sl.field_D);
+            ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
           }
         } else {
           var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
@@ -914,7 +914,7 @@ final class JungleBackground extends BackgroundScene {
             ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, sl.field_D);
+          ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
         }
         if (obfuscationGuard >= -84) {
           field_t = (String) null;
@@ -929,7 +929,7 @@ final class JungleBackground extends BackgroundScene {
         MultiValueSliderRenderer.jungleMidSprite = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
         np.jungleFarSprite = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
         Brick.jungleSmallSprite = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
-        sl.field_D = jh.a(0, ch.jungleNearSprite);
+        CacheEntry.field_D = jh.a(0, ch.jungleNearSprite);
         HuffmanCodec.field_e = jh.a(0, MultiValueSliderRenderer.jungleMidSprite);
         WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
         WidgetTextLayout.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);

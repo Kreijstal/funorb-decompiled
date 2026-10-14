@@ -184,7 +184,7 @@ final class MusicVoice extends IntrusiveNode {
           if (o.currentLobbyGame != null && (null != NodeDeque.field_a ||
             null != AchievementsScreen.field_F ||
             null != MatchResultScreen.field_v ||
-            null != me.field_e)) {
+            null != LoginMethodPreference.field_e)) {
             var9 = 0;
             while (!(var9 >= RankingsRequest.gameSettingCount)) {
               var10_int = 255 & o.currentLobbyGame.settings[var9];
@@ -208,9 +208,9 @@ final class MusicVoice extends IntrusiveNode {
                   var6 = var11;
                 }
               }
-              if (null != me.field_e &&
-                null != me.field_e[var9]) {
-                var8 = var8 | me.field_e[var9][var10_int];
+              if (null != LoginMethodPreference.field_e &&
+                null != LoginMethodPreference.field_e[var9]) {
+                var8 = var8 | LoginMethodPreference.field_e[var9][var10_int];
               }
               if (null != MatchResultScreen.field_v &&
                 MatchResultScreen.field_v[var9] != null) {
@@ -389,7 +389,7 @@ final class MusicVoice extends IntrusiveNode {
             var24 = SoundPlayback.a((byte) -110, var21, var13.removalStatus);
             if (null != var24) {
               var25_intLifetime1 = var13.field_Tb.font.countWrappedLines(var24, -LobbyGame.field_oc + var13.width - LobbyGame.field_oc);
-              var13.field_Tb.textAlpha256 = var13.statusChangeTick * 256 / cm.field_o;
+              var13.field_Tb.textAlpha256 = var13.statusChangeTick * 256 / AlternateNumericLoginCredentials.field_o;
               var13.field_Tb.text = var24;
               var13.field_Tb.setBounds(var25_intLifetime1 * np.uiRowHeight, var20, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
               var20 = var20 + np.uiRowHeight * var25_intLifetime1;
@@ -432,10 +432,10 @@ final class MusicVoice extends IntrusiveNode {
                         var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = ObjectHistoryBuffer.field_j;
                         if (var26_int > 0 &&
-                          eb.field_p != null &&
-                          var26_int <= eb.field_p.length &&
-                          eb.field_p[var26_int - 1] != null) {
-                          var25 = eb.field_p[var26_int - 1][1];
+                          EmailLoginCredentials.field_p != null &&
+                          var26_int <= EmailLoginCredentials.field_p.length &&
+                          EmailLoginCredentials.field_p[var26_int - 1] != null) {
+                          var25 = EmailLoginCredentials.field_p[var26_int - 1][1];
                         }
                       }
                     }
@@ -460,10 +460,10 @@ final class MusicVoice extends IntrusiveNode {
                         var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = rd.a(IntNode.field_m, new String[]{var21}, (byte) 103);
                         if (var26_int > 0 &&
-                          null != eb.field_p &&
-                          var26_int <= eb.field_p.length &&
-                          eb.field_p[-1 + var26_int] != null) {
-                          var25 = rd.a(eb.field_p[var26_int - 1][2], new String[]{var21}, (byte) 103);
+                          null != EmailLoginCredentials.field_p &&
+                          var26_int <= EmailLoginCredentials.field_p.length &&
+                          EmailLoginCredentials.field_p[-1 + var26_int] != null) {
+                          var25 = rd.a(EmailLoginCredentials.field_p[var26_int - 1][2], new String[]{var21}, (byte) 103);
                         }
                       }
                     }
@@ -515,9 +515,9 @@ final class MusicVoice extends IntrusiveNode {
                         var30 = 1;
                       }
                     }
-                    if (null != me.field_e &&
-                      me.field_e[var28_int] != null &&
-                      (me.field_e[var28_int][var29] & ~var13.optionEligibilityMask) != 0) {
+                    if (null != LoginMethodPreference.field_e &&
+                      LoginMethodPreference.field_e[var28_int] != null &&
+                      (LoginMethodPreference.field_e[var28_int][var29] & ~var13.optionEligibilityMask) != 0) {
                       var30 = 1;
                     }
                     if (var30 != 0) {
@@ -824,7 +824,7 @@ final class MusicVoice extends IntrusiveNode {
                   relativeZZOrDirectionY = mesh.directionY[relativeXZOrDirectionIndex];
                   centerXOrDirectionZ = mesh.directionZ[relativeXZOrDirectionIndex];
                   ValidationIconWidget.worldDirectionX[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeXYOrWorldXZ + (cameraXOrWorldXX * relativeYZOrDirectionX + relativeZZOrDirectionY * relativeXXOrWorldXY) >> 16;
-                  ff.worldDirectionY[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeYYOrWorldYZ + relativeYXOrWorldYY * relativeZZOrDirectionY + relativeYZOrDirectionX * cameraYOrWorldYX >> 16;
+                  LoginCredentials.worldDirectionY[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeYYOrWorldYZ + relativeYXOrWorldYY * relativeZZOrDirectionY + relativeYZOrDirectionX * cameraYOrWorldYX >> 16;
                   ContextActionController.worldDirectionZ[relativeXZOrDirectionIndex] = relativeYZOrDirectionX * cameraZOrWorldZX - (-(relativeZZOrDirectionY * relativeZXOrWorldZY) - centerXOrDirectionZ * relativeZYOrWorldZZ) >> 16;
                   relativeXZOrDirectionIndex++;
                 }

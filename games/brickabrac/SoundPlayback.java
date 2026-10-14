@@ -24,11 +24,11 @@ final class SoundPlayback extends IntrusiveNode {
     }
 
     final static AccountResponse a(int param0) {
-        if (IntrusiveHashIterator.field_g == ej.field_P) {
+        if (IntrusiveHashIterator.field_g == StrongCacheEntry.field_P) {
           throw new IllegalStateException();
         }
         if (IntrusiveHashIterator.field_g == StatefulWidgetRenderer.field_v) {
-          IntrusiveHashIterator.field_g = ej.field_P;
+          IntrusiveHashIterator.field_g = StrongCacheEntry.field_P;
           return StateIconLabel.field_Rb;
         }
         if (param0 <= 17) {

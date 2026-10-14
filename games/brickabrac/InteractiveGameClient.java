@@ -180,7 +180,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         var2 = 0;
         if (!m.a(2)) {
           if (HotspotTextWidget.a(9)) {
-            if (!me.b(126)) {
+            if (!LoginMethodPreference.b(126)) {
               var3 = InstructionsScreen.f((byte) 124);
               switch (var3) {
                 case 3:
@@ -223,7 +223,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
             }
             if (decompiledFrameRemainder0) {
               if (EmailConfirmationValidator.f(21651)) {
-                if (!me.b(param0 ^ -16)) {
+                if (!LoginMethodPreference.b(param0 ^ -16)) {
                   var3 = RadialSelectorWidget.h(0);
                   if (1 == var3) {
                     AccountIntroductionPanel.a(LevelPackLoader.field_a, true, (byte) 97);
@@ -237,7 +237,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!me.b(-34)) {
+                if (!LoginMethodPreference.b(-34)) {
                   var2 = 1;
                   var3 = -1;
                   while (true) {

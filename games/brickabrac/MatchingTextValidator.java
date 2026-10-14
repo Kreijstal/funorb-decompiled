@@ -19,7 +19,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (param0 >= -34) {
           return;
         }
-        if (null == ej.field_I) {
+        if (null == StrongCacheEntry.field_I) {
           var1 = PlayerInputBatch.a(-123);
           DirectByteStorage.field_k = new LoginPanel(var1, (String) null, true, false, false);
           ResourceArchive.field_f.pushLayer(-126, rj.field_c);
@@ -27,7 +27,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           rj.field_c.finishTransition(20);
           return;
         }
-        ej.field_I.closeDialog(17);
+        StrongCacheEntry.field_I.closeDialog(17);
         var1Lifetime1 = PlayerInputBatch.a(-123);
         DirectByteStorage.field_k = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         ResourceArchive.field_f.pushLayer(-126, rj.field_c);

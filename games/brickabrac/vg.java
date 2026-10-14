@@ -10,7 +10,7 @@ final class vg {
         if (param0 != 3) {
           return true;
         }
-        if (eq.gameTransport == null) {
+        if (WhirlpoolHasher.gameTransport == null) {
           return false;
         }
         if (!rf.field_b.c(-26774)) {

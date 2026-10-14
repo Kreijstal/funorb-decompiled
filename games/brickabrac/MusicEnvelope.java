@@ -112,7 +112,7 @@ final class MusicEnvelope {
           if (LevelMetadata.field_m != 2 &&
             LevelMetadata.field_m != 1) {
             f.field_c.enabled = false;
-            f.field_c.scrollPane.viewport.text = cm.field_t;
+            f.field_c.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
             jh.a(param1, f.field_c.content);
             return;
           }
@@ -304,7 +304,7 @@ final class MusicEnvelope {
             hn.a((byte) 110);
             return;
           }
-          AlignedIconLabel.a("LR1: " + eq.c((byte) -96), (Throwable) null, 53);
+          AlignedIconLabel.a("LR1: " + WhirlpoolHasher.c((byte) -96), (Throwable) null, 53);
           hn.a((byte) 52);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

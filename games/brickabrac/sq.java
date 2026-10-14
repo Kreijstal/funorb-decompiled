@@ -197,7 +197,7 @@ final class sq {
         long var1;
         long var3;
         long var5;
-        ff.field_d.clear((byte) -83);
+        LoginCredentials.field_d.clear((byte) -83);
         if (!RadialSelectorRenderer.field_f) {
           if (!param0) {
             if (GzipInflater.field_g) {
@@ -207,7 +207,7 @@ final class sq {
                 discarded$9 = bq.field_b.field_l.append(" fps");
                 BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
-              ff.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
@@ -218,7 +218,7 @@ final class sq {
                 discarded$8 = bq.field_b.field_l.append(" fps");
                 BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
-              ff.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
             }
           }
           return;
@@ -236,7 +236,7 @@ final class sq {
           discarded$11 = PopupWidgetLayer.field_P.field_l.append(" kB");
           SecondaryHashTable.field_j = var5;
           RankingsScreen.field_u = var1;
-          ff.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
+          LoginCredentials.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
               if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
@@ -245,7 +245,7 @@ final class sq {
                 discarded$13 = bq.field_b.field_l.append(" fps");
                 BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
-              ff.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
@@ -256,13 +256,13 @@ final class sq {
                 discarded$12 = bq.field_b.field_l.append(" fps");
                 BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
-              ff.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
             }
           }
           return;
         }
         if (SecondaryHashTable.field_j == var5) {
-          ff.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
+          LoginCredentials.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
               if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
@@ -271,7 +271,7 @@ final class sq {
                 discarded$14 = bq.field_b.field_l.append(" fps");
                 BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
-              ff.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
@@ -282,7 +282,7 @@ final class sq {
                 discarded$15 = bq.field_b.field_l.append(" fps");
                 BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
-              ff.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
             }
           }
           return;
@@ -294,7 +294,7 @@ final class sq {
         discarded$17 = PopupWidgetLayer.field_P.field_l.append(" kB");
         SecondaryHashTable.field_j = var5;
         RankingsScreen.field_u = var1;
-        ff.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
+        LoginCredentials.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
         if (!param0) {
           if (GzipInflater.field_g) {
             if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
@@ -303,7 +303,7 @@ final class sq {
               discarded$18 = bq.field_b.field_l.append(" fps");
               BoundedFile.field_c = FocusableWidget.recentRenderRate;
             }
-            ff.field_d.addLast(bq.field_b, (byte) 3);
+            LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
           }
         } else {
           sq.a(15);
@@ -314,7 +314,7 @@ final class sq {
               discarded$19 = bq.field_b.field_l.append(" fps");
               BoundedFile.field_c = FocusableWidget.recentRenderRate;
             }
-            ff.field_d.addLast(bq.field_b, (byte) 3);
+            LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
           }
         }
         return;

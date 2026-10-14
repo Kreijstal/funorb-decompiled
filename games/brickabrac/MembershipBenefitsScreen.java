@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MembershipBenefitsScreen extends MenuScreen {
-    static cd field_v;
+    static LoginCredentialKind numericLoginKind;
     private IndexedSprite[] screenshots;
     static UiComponent field_t;
     private ResourceArchive archive;
@@ -11,7 +11,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
     static int renderTimeCursor;
 
     public static void g(int param0) {
-        field_v = null;
+        numericLoginKind = null;
         field_t = null;
         if (param0 != 2) {
           MembershipBenefitsScreen.g(47);
@@ -24,14 +24,14 @@ final class MembershipBenefitsScreen extends MenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         Rasterizer2D.clear();
         if (obfuscationGuard <= -14) {
-          if (ff.field_c != null) {
-            ff.field_c.e((byte) -93);
+          if (LoginCredentials.field_c != null) {
+            LoginCredentials.field_c.e((byte) -93);
           }
           return;
         }
         MembershipBenefitsScreen.g(61);
-        if (ff.field_c != null) {
-          ff.field_c.e((byte) -93);
+        if (LoginCredentials.field_c != null) {
+          LoginCredentials.field_c.e((byte) -93);
         }
     }
 
@@ -91,24 +91,24 @@ final class MembershipBenefitsScreen extends MenuScreen {
           this.screenshots = PacketBuffer.a("benefits", this.archive, "members_benefits_screenshots", -946715356);
           return;
         }
-        if (ff.field_c != null) {
-          discarded$0 = this.c(460, ff.field_c.a(false, inputEnabled));
+        if (LoginCredentials.field_c != null) {
+          discarded$0 = this.c(460, LoginCredentials.field_c.a(false, inputEnabled));
           return;
         }
-        ff.field_c = new ScreenshotViewer(sl.field_C, Widget.field_u, this.screenshots, false, SaveResultsPromptScreen.field_u);
+        LoginCredentials.field_c = new ScreenshotViewer(CacheEntry.field_C, Widget.field_u, this.screenshots, false, SaveResultsPromptScreen.field_u);
     }
 
     final boolean handleKey(char character, int obfuscationGuard, int keyCode) {
         if (obfuscationGuard <= 98) {
           return false;
         }
-        if (null != ff.field_c) {
-          return this.c(460, ff.field_c.a((byte) -93));
+        if (null != LoginCredentials.field_c) {
+          return this.c(460, LoginCredentials.field_c.a((byte) -93));
         }
         return false;
     }
 
     static {
-        field_v = new cd(2);
+        numericLoginKind = new LoginCredentialKind(2);
     }
 }

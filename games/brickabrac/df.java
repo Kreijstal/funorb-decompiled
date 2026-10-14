@@ -121,7 +121,7 @@ final class df {
           tq.field_f.writeByte(-104, param2);
           tq.field_f.writeByte(50, param3);
           tq.field_f.writeShort((byte) 124, param0);
-          tq.field_f.applyRsa(Ball.field_F, to.field_g, param1 + 19672);
+          tq.field_f.applyRsa(Ball.field_F, WeightedLruCache.field_g, param1 + 19672);
           TextFieldValidator.outgoingPackets.writeCipheredOpcode(param1 ^ -13316, 18);
           fieldTemp$0 = TextFieldValidator.outgoingPackets.position + 1;
           TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 1;
@@ -138,7 +138,7 @@ final class df {
         tq.field_f.writeByte(-104, param2);
         tq.field_f.writeByte(50, param3);
         tq.field_f.writeShort((byte) 124, param0);
-        tq.field_f.applyRsa(Ball.field_F, to.field_g, param1 + 19672);
+        tq.field_f.applyRsa(Ball.field_F, WeightedLruCache.field_g, param1 + 19672);
         TextFieldValidator.outgoingPackets.writeCipheredOpcode(param1 ^ -13316, 18);
         int fieldTemp$1 = TextFieldValidator.outgoingPackets.position + 1;
         TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 1;

@@ -65,10 +65,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        cd.field_e = this.languageId;
-        LoginPanel.a(cd.field_e, (byte) 125);
-        GzipInflater.a(param7, this.host, this.memberAccount, this.serverNumber, 5000, 5000, cd.field_e, this.gameCrc, AccountMessageDialog.field_ub, (byte) 123, param3, this.instanceId, this.gamePortTwo, this.gamePortOne);
-        ActivityIndicatorWidget.a(param7, cd.field_e, param0 + 3, this.gamePortOne, AccountMessageDialog.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
+        LoginCredentialKind.field_e = this.languageId;
+        LoginPanel.a(LoginCredentialKind.field_e, (byte) 125);
+        GzipInflater.a(param7, this.host, this.memberAccount, this.serverNumber, 5000, 5000, LoginCredentialKind.field_e, this.gameCrc, AccountMessageDialog.field_ub, (byte) 123, param3, this.instanceId, this.gamePortTwo, this.gamePortOne);
+        ActivityIndicatorWidget.a(param7, LoginCredentialKind.field_e, param0 + 3, this.gamePortOne, AccountMessageDialog.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
         BoundedFile.patchJavaKeyCodeMap(59);
         NinjaBackground.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, CacheIoRequest.field_D);
@@ -256,7 +256,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             MidiSynthesizer.a(2, (byte) -46);
           }
           if (uf.enabledCommonPackets[2]) {
-            ff.a((byte) -61, 3);
+            LoginCredentials.a((byte) -61, 3);
           }
           if (uf.enabledCommonPackets[3]) {
             TooltipSprite.resendPendingAchievements(4, 13330);
@@ -327,7 +327,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = BrickABrac.field_J ? 1 : 0;
-          var4 = df.a(-27790, GameplayAudioEvent.mouseWheelDelta, cd.field_e, param0);
+          var4 = df.a(-27790, GameplayAudioEvent.mouseWheelDelta, LoginCredentialKind.field_e, param0);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -340,7 +340,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
             var11 = df.a(0);
             if (var11 != null) {
-              to.a(var11.booleanValue(), -128);
+              WeightedLruCache.a(var11.booleanValue(), -128);
             }
           }
           if (var4 == 2) {
@@ -364,7 +364,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                   FullscreenFailureKind.a(DirectByteStorage.field_e, (byte) -77, var5_intLifetime2);
                   DirectByteStorage.field_e = null;
                 } else {
-                  BrickGameLayerController.field_e = sl.field_v;
+                  BrickGameLayerController.field_e = CacheEntry.field_v;
                   LabeledToggleRenderer.b(0);
                   AchievementIcon.field_j = 10;
                   LevelPackSelectScreen.field_s = false;
@@ -533,7 +533,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                                 PasswordValidator.e((byte) -114);
                                 return;
                               }
-                              AlignedIconLabel.a("MGS1: " + eq.c((byte) -71), (Throwable) null, 119);
+                              AlignedIconLabel.a("MGS1: " + WhirlpoolHasher.c((byte) -71), (Throwable) null, 119);
                               hn.a((byte) 101);
                               return;
                             }
@@ -565,7 +565,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           return;
         }
-        AlignedIconLabel.a("MGS2: " + eq.c((byte) -66), (Throwable) null, 89);
+        AlignedIconLabel.a("MGS2: " + WhirlpoolHasher.c((byte) -66), (Throwable) null, 89);
         hn.a((byte) 71);
     }
 
@@ -812,7 +812,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           clientStage = 1;
         }
         if (clientStage == guardCode) {
-          if (cd.field_e != 0) {
+          if (LoginCredentialKind.field_e != 0) {
             ValidationIconWidget.field_K = aj.a(PacketBuffer.field_j, true);
           }
           LabeledWidget.field_P = bq.a(-6, 1, true, nd.field_c, false);
@@ -845,7 +845,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           ui.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
           SpaceBackground.field_t = false;
-          UsernameSuggestionPanel.field_N = cm.field_t;
+          UsernameSuggestionPanel.field_N = AlternateNumericLoginCredentials.field_t;
           MultiplayerExitScreen.a(FarmBackground.field_u, ja.field_c, LabeledWidget.field_P, RadialSelectorWidget.field_S, guardCode ^ 23);
           if (MatchingTextValidator.field_k ||
             null != LevelDecoder.field_a) {
@@ -869,7 +869,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           clientStage = 10;
         }
         if (10 == clientStage) {
-          if (0 != cd.field_e) {
+          if (0 != LoginCredentialKind.field_e) {
             GameplayAudioEvent.field_k = aj.a(LevelPackCard.field_i, true);
           }
           clientStage = 11;

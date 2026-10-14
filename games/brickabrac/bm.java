@@ -378,9 +378,9 @@ final class bm {
             alternateLoopFlag = alternateActivityLoop ? 1 : 0;
           }
           if (alternateLoopFlag == 0) {
-            selectedLoop = to.primaryActivityLoop;
+            selectedLoop = WeightedLruCache.primaryActivityLoop;
           } else {
-            selectedLoop = me.alternateActivityLoop;
+            selectedLoop = LoginMethodPreference.alternateActivityLoop;
           }
           activityLoop = selectedLoop;
           targetVolume = activityEvents * activityVolumePerEvent;

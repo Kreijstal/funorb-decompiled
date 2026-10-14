@@ -529,13 +529,13 @@ final class nh {
                     if (var12 == 0) {
                       var14_ref_String = rd.a(ContextMenu.field_ac, new String[]{(String) (var11_ref)}, (byte) 103);
                       if (var19 != 0) {
-                        var14_ref_String = ff.field_e + (String) (var11_ref);
+                        var14_ref_String = LoginCredentials.field_e + (String) (var11_ref);
                       }
                     } else {
-                      var14_ref_String = ff.field_e + (String) (var11_ref);
+                      var14_ref_String = LoginCredentials.field_e + (String) (var11_ref);
                     }
                   } else {
-                    var13_ref_String = eq.field_b;
+                    var13_ref_String = WhirlpoolHasher.field_b;
                     boolean decompiledSharedTail0 = (var12 == 0);
                     if (!decompiledSharedTail0) {
                       var14_ref_String = BackgroundScene.field_g + (String) (var11_ref);
@@ -551,7 +551,7 @@ final class nh {
               if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (null != NodeDeque.field_a ||
                 AchievementsScreen.field_F != null ||
                 MatchResultScreen.field_v != null ||
-                null != me.field_e)) {
+                null != LoginMethodPreference.field_e)) {
                 var11 = 0;
                 var12 = 0;
                 var13Lifetime1 = 0;
@@ -589,9 +589,9 @@ final class nh {
                         var14 = var18_intLifetime1;
                       }
                     }
-                    if (null != me.field_e &&
-                      me.field_e[var16] != null) {
-                      var15 = var15 | me.field_e[var16][var17_int];
+                    if (null != LoginMethodPreference.field_e &&
+                      LoginMethodPreference.field_e[var16] != null) {
+                      var15 = var15 | LoginMethodPreference.field_e[var16][var17_int];
                     }
                     var16++;
                     continue;
@@ -703,7 +703,7 @@ final class nh {
               hc.field_c = true;
             }
             if (DraggableWidget.field_K.pressedButton != 0) {
-              sl.field_w = true;
+              CacheEntry.field_w = true;
             }
             if (0 != nd.field_a.pressedButton) {
               hc.field_c = false;

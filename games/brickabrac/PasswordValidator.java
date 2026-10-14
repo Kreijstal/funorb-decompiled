@@ -126,7 +126,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_10_0;
           }
           if (DualLinkDeque.consistsOfRepeatedCharacter((byte) 65, var6)) {
-            stackIn_14_0 = eq.field_i;
+            stackIn_14_0 = WhirlpoolHasher.field_i;
             return stackIn_14_0;
           }
           if (this.containsEmailPart(0, text)) {

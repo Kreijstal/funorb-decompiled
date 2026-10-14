@@ -290,10 +290,10 @@ abstract class WidgetLayer extends WidgetGroup {
             if (0 == BitPacketBuffer.field_q &&
               !QuickChatHelpDialog.field_Sb) {
               ga.field_i = 5;
-              tb.field_eb = tb.field_db + "<br><br>" + sl.field_A[AgeValidator.field_k];
+              tb.field_eb = tb.field_db + "<br><br>" + CacheEntry.field_A[AgeValidator.field_k];
             } else {
               ArchiveNetworkRequest.field_G = pp.field_a;
-              tb.field_eb = sl.field_A[AgeValidator.field_k];
+              tb.field_eb = CacheEntry.field_A[AgeValidator.field_k];
             }
             pp.field_a = -1;
             BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
@@ -327,7 +327,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 return;
               }
               if (pp.field_a == 11) {
-                if (cm.field_s) {
+                if (AlternateNumericLoginCredentials.field_s) {
                   return;
                 }
                 ga.field_i = 12;

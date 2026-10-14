@@ -153,7 +153,7 @@ final class ParisBackground extends BackgroundScene {
           if (decompiledSharedTail0) {
             var6 = kd.a(this.sceneId, colorIndex, (byte) -34);
             if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              ej.a(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
+              StrongCacheEntry.a(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
               var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
             wo.a(destinationY, scroll16, UnderwaterBackground.field_t, 118, 306, 0, destinationX, 2, IntrusiveHashTable.field_i, var6.sprite, colorIndex);
@@ -421,7 +421,7 @@ final class ParisBackground extends BackgroundScene {
           }
           var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ej.a(0, ToggleButtonWidget.parisFarSprite, 1, 0, colorIndex, var6);
+            StrongCacheEntry.a(0, ToggleButtonWidget.parisFarSprite, 1, 0, colorIndex, var6);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           wo.a(destinationY, scroll16, QuickChatParameterType.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);

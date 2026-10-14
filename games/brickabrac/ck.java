@@ -88,7 +88,7 @@ final class ck extends IntrusiveNode {
         GameClock.field_d = 0;
         GrowableIntList.field_i = un.field_e;
         BitPacketBuffer.field_q = 0;
-        cm.field_s = false;
+        AlternateNumericLoginCredentials.field_s = false;
         QuickChatHelpDialog.field_Sb = false;
         jl.field_a = 1;
         if (param0 > 27) {

@@ -3,7 +3,7 @@
  */
 final class ll {
     static String field_a;
-    static me field_d;
+    static LoginMethodPreference field_d;
     static int field_b;
     static UiComponent field_e;
     static RgbSprite field_c;
@@ -60,6 +60,6 @@ final class ll {
     static {
         field_a = "Inviting <%0>";
         field_b = -1;
-        field_d = new me("usename");
+        field_d = new LoginMethodPreference("usename");
     }
 }

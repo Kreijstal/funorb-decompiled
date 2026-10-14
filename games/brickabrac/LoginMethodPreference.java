@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class me {
-    private String field_c;
+final class LoginMethodPreference {
+    private String cookieValue;
     static RgbSprite field_b;
     static IndexedSprite[] field_a;
     static int[][] field_e;
     static boolean[] field_f;
     static PcmStream alternateActivityLoop;
 
-    final void a(int param0, java.applet.Applet param1) {
+    final void persistLoginMethod(int obfuscationGuard, java.applet.Applet applet) {
         try {
-          if (param0 < 92) {
-            me.b(-113);
+          if (obfuscationGuard < 92) {
+            LoginMethodPreference.b(-113);
           }
-          sj.a(param1, (byte) 122, this.field_c, "jagex-last-login-method", 31536000L);
+          sj.a(applet, (byte) 122, this.cookieValue, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "me.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "me.D(" + obfuscationGuard + ',' + (applet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -108,7 +108,7 @@ final class me {
         }
     }
 
-    final boolean b(String param0, int param1) {
+    final boolean matchesCookieValue(String value, int obfuscationGuard) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -116,22 +116,22 @@ final class me {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 < 56) {
+          if (obfuscationGuard < 56) {
             field_b = (RgbSprite) null;
           }
-          stackIn_3_0 = this.field_c.equals(param0);
+          stackIn_3_0 = this.cookieValue.equals(value);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("me.A(");
-          if (param0 == null) {
+          if (value == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -139,11 +139,11 @@ final class me {
         throw new IllegalStateException();
     }
 
-    me(String param0) {
+    LoginMethodPreference(String cookieValue) {
         try {
-          this.field_c = param0;
+          this.cookieValue = cookieValue;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "me.<init>(" + (cookieValue != null ? "{...}" : "null") + ')');
         }
     }
 

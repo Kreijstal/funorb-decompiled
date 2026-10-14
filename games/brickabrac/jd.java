@@ -16,11 +16,11 @@ final class jd {
         field_b = null;
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2, int param3) {
+    final static byte[] computeWhirlpoolDigest(byte[] input, int offset, int obfuscationGuard, int length) {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        eq var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
@@ -32,24 +32,24 @@ final class jd {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param2 != -14970) {
+          if (obfuscationGuard != -14970) {
             stackIn_3_0 = (byte[]) null;
             return stackIn_3_0;
           }
-          if (0 < param1) {
-            var8 = new byte[param3];
+          if (0 < offset) {
+            var8 = new byte[length];
             var4 = var8;
-            for (var5_int = 0; param3 > var5_int; var5_int++) {
-              var8[var5_int] = param0[param1 + var5_int];
+            for (var5_int = 0; length > var5_int; var5_int++) {
+              var8[var5_int] = input[offset + var5_int];
             }
           } else {
-            var4 = param0;
+            var4 = input;
           }
-          var5 = new eq();
-          var5.b((byte) 99);
-          var5.a(var4, 540, (long)(param3 * 8));
+          var5 = new WhirlpoolHasher();
+          var5.reset((byte) 99);
+          var5.updateBits(var4, 540, (long)(length * 8));
           var6 = new byte[64];
-          var5.a(var6, param2 ^ -14860, 0);
+          var5.finishDigest(var6, obfuscationGuard ^ -14860, 0);
           stackIn_10_0 = var6;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -57,12 +57,12 @@ final class jd {
           var4_ref = decompiledCaughtException;
           stackIn_13_0 = var4_ref;
           stackIn_13_1 = new StringBuilder().append("jd.C(");
-          if (param0 == null) {
+          if (input == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(offset).append(',').append(obfuscationGuard).append(',').append(length).append(')').toString());
         }
     }
 

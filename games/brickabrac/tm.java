@@ -193,7 +193,7 @@ final class tm {
           var2 = InstructionsScreen.gameChatFilter;
         }
         if (channel == 2) {
-          var2 = to.privateChatFilter;
+          var2 = WeightedLruCache.privateChatFilter;
         }
         return var2;
     }

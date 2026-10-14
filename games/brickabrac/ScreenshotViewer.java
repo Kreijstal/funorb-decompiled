@@ -168,7 +168,7 @@ final class ScreenshotViewer {
         try {
           if (this.screenshots == null) {
             if (null != ch.field_c) {
-              ch.field_c.a(cm.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              ch.field_c.a(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
             return;
           }
@@ -176,7 +176,7 @@ final class ScreenshotViewer {
           var2 = var6;
           if (var2 == null) {
             if (null != ch.field_c) {
-              ch.field_c.a(cm.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+              ch.field_c.a(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
             var6.drawTransparent(9, 58);

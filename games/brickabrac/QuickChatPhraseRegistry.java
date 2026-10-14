@@ -5,7 +5,7 @@ final class QuickChatPhraseRegistry {
     private ResourceArchive extendedArchive;
     static FullscreenFailureKind fullscreenTimeout;
     static String[] field_b;
-    private to definitions;
+    private WeightedLruCache definitions;
     static String[] field_k;
     static int field_a;
     static UiComponent field_e;
@@ -16,7 +16,7 @@ final class QuickChatPhraseRegistry {
 
     final QuickChatPhraseDefinition getDefinition(int phraseId, boolean obfuscationGuard) {
         byte[] data = null;
-        QuickChatPhraseDefinition definition = (QuickChatPhraseDefinition) (this.definitions.a((long)phraseId, obfuscationGuard));
+        QuickChatPhraseDefinition definition = (QuickChatPhraseDefinition) (this.definitions.get((long)phraseId, obfuscationGuard));
         if (definition != null) {
           return definition;
         }
@@ -31,14 +31,14 @@ final class QuickChatPhraseRegistry {
         }
         if (phraseId >= 32768) {
           definition.markExtendedLinks(-126);
-          this.definitions.a(84, definition, (long)phraseId);
+          this.definitions.put(84, definition, (long)phraseId);
           if (!obfuscationGuard) {
             this.getDefinition(120, false);
             return definition;
           }
           return definition;
         }
-        this.definitions.a(84, definition, (long)phraseId);
+        this.definitions.put(84, definition, (long)phraseId);
         if (obfuscationGuard) {
           return definition;
         }
@@ -96,7 +96,7 @@ final class QuickChatPhraseRegistry {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.definitions = new to(64);
+        this.definitions = new WeightedLruCache(64);
         try {
           this.standardArchive = standardArchive;
           this.extendedArchive = extendedArchive;

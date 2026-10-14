@@ -451,7 +451,7 @@ class Widget extends IntrusiveNode {
           if (param0 != 1) {
             Widget.c(16);
           }
-          ff.field_d = new NodeDeque();
+          LoginCredentials.field_d = new NodeDeque();
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

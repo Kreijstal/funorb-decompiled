@@ -33,7 +33,7 @@ final class GameUiController implements GameUiLifecycle {
     public final void initializeUi(boolean obfuscationGuard) {
         boolean discarded$0 = false;
         NodeDeque.a(127, 50);
-        pa var2 = new pa(cd.field_h);
+        pa var2 = new pa(LoginCredentialKind.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
         MidiSynthesizer.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, ContextActionController.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);
@@ -55,7 +55,7 @@ final class GameUiController implements GameUiLifecycle {
         LoginPanel.h((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         AccountMessageDialog.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
-        co.a((byte) -79, cd.field_g);
+        co.a((byte) -79, LoginCredentialKind.field_g);
     }
 
     final static GameScreen getScreen(int screenId, byte obfuscationGuard) {
@@ -169,7 +169,7 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         bh.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
-        bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, LinkWidgetRenderer.field_a);
+        bh.field_tb.a(NodeDequeCursor.field_i, false, AlternateNumericLoginCredentials.field_n, LinkWidgetRenderer.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
         bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
         bh.field_tb.a(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
@@ -189,7 +189,7 @@ final class GameUiController implements GameUiLifecycle {
               if (3 != var3) {
                 if (4 == var3) {
                   ParisBackground.a((byte) 24, 92.0f, Ball.field_x);
-                  sl.field_C.renderClient(121);
+                  CacheEntry.field_C.renderClient(121);
                   BrickGameLayerController.a(nl.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
                   if (var3 != 5) {
@@ -200,17 +200,17 @@ final class GameUiController implements GameUiLifecycle {
                 }
               } else {
                 ParisBackground.a((byte) 24, 90.0f, MessageScreen.field_u);
-                sl.field_C.renderClient(106);
+                CacheEntry.field_C.renderClient(106);
                 so.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }
             } else {
               ParisBackground.a((byte) 24, 88.0f, ValidatedTextFieldWidget.field_bb);
-              sl.field_C.renderClient(124);
+              CacheEntry.field_C.renderClient(124);
               var2 = var2 != 0 & wo.a(2) ? 1 : 0;
             }
           } else {
             ParisBackground.a((byte) 24, 82.0f, BitPacketBuffer.field_s);
-            sl.field_C.renderClient(123);
+            CacheEntry.field_C.renderClient(123);
             o.c(123);
           }
         } else {

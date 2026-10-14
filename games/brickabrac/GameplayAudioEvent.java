@@ -31,7 +31,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
           }
           if (StatefulWidgetRenderer.field_v == MusicVoice.field_l &&
             username.equals(LobbyGame.field_pc)) {
-            MusicVoice.field_l = ej.field_P;
+            MusicVoice.field_l = StrongCacheEntry.field_P;
             stackIn_9_0 = AccountIntroductionPanel.field_H;
             return stackIn_9_0;
           }

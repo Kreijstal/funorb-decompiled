@@ -105,13 +105,13 @@ final class LevelPackLoader {
         AchievementMaskRequest var2Lifetime1;
         if (obfuscationGuard > 37) {
           var2 = new AchievementMaskRequest();
-          ej.pendingAchievementMaskRequests.addLast(var2, (byte) 3);
+          StrongCacheEntry.pendingAchievementMaskRequests.addLast(var2, (byte) 3);
           LabeledWidget.sendAchievementMaskRequest((byte) -112, opcode);
           return var2;
         }
         LevelPackLoader.requestAchievementMask((byte) -67, -39);
         var2Lifetime1 = new AchievementMaskRequest();
-        ej.pendingAchievementMaskRequests.addLast(var2Lifetime1, (byte) 3);
+        StrongCacheEntry.pendingAchievementMaskRequests.addLast(var2Lifetime1, (byte) 3);
         LabeledWidget.sendAchievementMaskRequest((byte) -112, opcode);
         return var2Lifetime1;
     }

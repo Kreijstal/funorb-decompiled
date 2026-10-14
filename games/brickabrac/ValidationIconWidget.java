@@ -247,7 +247,7 @@ final class ValidationIconWidget extends FocusableWidget {
         try {
           var14 = param3.b(2);
           var8 = param5.b(2);
-          if (eq.gameTransport == null &&
+          if (WhirlpoolHasher.gameTransport == null &&
             !CappedUrlRequest.a(false, param6 ^ 10004)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -278,7 +278,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 var11_ref_String = "";
               }
               TextFieldValidator.outgoingPackets.writeCp1252String(var11_ref_String, -1);
-              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
               TextFieldValidator.outgoingPackets.backfillShortLength(-var10 + TextFieldValidator.outgoingPackets.position, 255);
             } else {
               tq.field_f.position = 0;
@@ -303,7 +303,7 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.writeByte(-10, 16);
               TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 1;
               var9 = TextFieldValidator.outgoingPackets.position;
-              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
               TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
             ActivityIndicatorWidget.a(-1, 10000);
@@ -372,7 +372,7 @@ final class ValidationIconWidget extends FocusableWidget {
           if (param6 != 4) {
             field_N = false;
           }
-          if (null == eq.gameTransport) {
+          if (null == WhirlpoolHasher.gameTransport) {
             if (RadialSelectorRenderer.field_d) {
               if (MembershipBenefitsScreen.f(param6 ^ -6788) > 30000L) {
                 DirectByteStorage.field_e = hg.field_b;

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends ff {
-    private String field_o;
+final class EmailLoginCredentials extends LoginCredentials {
+    private String password;
     static int[] field_q;
     static String field_m;
-    private String field_k;
+    private String email;
     static int[][] field_r;
     static String[][] field_p;
     static int field_n;
@@ -15,18 +15,18 @@ final class eb extends ff {
         field_r = (int[][]) null;
         if (param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          eb.decodeLobbyGame((LobbyGame) null, (PacketBuffer) null, -20, false);
+          EmailLoginCredentials.decodeLobbyGame((LobbyGame) null, (PacketBuffer) null, -20, false);
         }
         field_m = null;
         field_p = (String[][]) null;
         field_q = null;
     }
 
-    final cd a(int param0) {
-        if (param0 != 13) {
-          return (cd) null;
+    final LoginCredentialKind getCredentialKind(int obfuscationGuard) {
+        if (obfuscationGuard != 13) {
+          return (LoginCredentialKind) null;
         }
-        return RadialSelectorWidget.field_X;
+        return RadialSelectorWidget.emailLoginKind;
     }
 
     final static void decodeLobbyGame(LobbyGame game, PacketBuffer packet, int obfuscationGuard, boolean includePlayerCount) {
@@ -132,21 +132,21 @@ final class eb extends ff {
         }
     }
 
-    eb(String param0, String param1) {
+    EmailLoginCredentials(String email, String password) {
         try {
-          this.field_o = param1;
-          this.field_k = param0;
+          this.password = password;
+          this.email = email;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "eb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "eb.<init>(" + (email != null ? "{...}" : "null") + ',' + (password != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, PacketBuffer param1) {
+    final void writeCredentials(int obfuscationGuard, PacketBuffer packet) {
         try {
-          param1.writePrefixedCp1252String(param0, this.field_k);
-          param1.writeBase38Name(false, this.field_o);
+          packet.writePrefixedCp1252String(obfuscationGuard, this.email);
+          packet.writeBase38Name(false, this.password);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "eb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "eb.B(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

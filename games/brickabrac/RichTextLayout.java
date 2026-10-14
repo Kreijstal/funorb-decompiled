@@ -449,7 +449,7 @@ final class RichTextLayout extends WidgetTextLayout {
         if (GameConnectionShell.clientStage < 2) {
           return 0;
         }
-        if (cd.field_e == 0) {
+        if (LoginCredentialKind.field_e == 0) {
           if (!LabeledWidget.field_P.ensureIndex((byte) -127)) {
             return 20;
           }

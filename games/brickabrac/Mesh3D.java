@@ -170,7 +170,7 @@ final class Mesh3D {
           }
         } else {
           if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask) != 0) {
-            ArrayWidgetGroup.buttonLabels[12] = ff.field_g;
+            ArrayWidgetGroup.buttonLabels[12] = LoginCredentials.field_g;
           } else {
             if (0 == IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask) {
               if ((IntArrayRequest.gameplayScreen.rematchSetupPlayerMask | 1 << IntArrayRequest.gameplayScreen.localPlayerId) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
@@ -244,8 +244,8 @@ final class Mesh3D {
 
     final static void a(boolean param0, String param1, String param2) {
         try {
-          if (null != ej.field_I) {
-            ej.field_I.closeDialog(17);
+          if (null != StrongCacheEntry.field_I) {
+            StrongCacheEntry.field_I.closeDialog(17);
           }
           DirectByteStorage.field_k = new LoginPanel(param2, param1, false, true, param0);
           rj.field_c.transitionToContent((byte) 114, DirectByteStorage.field_k);
