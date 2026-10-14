@@ -531,7 +531,7 @@ class WidgetGroup extends Widget implements WidgetContainer {
         return null;
     }
 
-    boolean a(int param0, byte param1, Widget param2, char param3) {
+    boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
@@ -546,43 +546,43 @@ class WidgetGroup extends Widget implements WidgetContainer {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           var10 = new NodeDequeCursor(this.children);
-          var9 = (Widget) (var10.first(param1 + 130));
+          var9 = (Widget) (var10.first(obfuscationGuard + 130));
           while (var9 != null) {
             if (var9.isLinked(0)) {
               if (var9.isFocused(-118) &&
-                var9.a(param0, (byte) 110, param2, param3)) {
+                var9.handleWidgetKey(keyCode, (byte) 110, focusRoot, character)) {
                 return true;
               }
-              var9 = (Widget) (var10.next(param1 ^ 105));
+              var9 = (Widget) (var10.next(obfuscationGuard ^ 105));
               continue;
             }
             break;
           }
-          if (param1 != 110) {
+          if (obfuscationGuard != 110) {
             var8 = (StringBuilder) null;
             this.a(87, (Hashtable) null, -4, (StringBuilder) null);
           }
-          var6 = param0;
+          var6 = keyCode;
           if (var6 != 80) {
             return false;
           }
           if (IntArrayRequest.heldKeys[81]) {
-            stackIn_17_0 = this.b(param2, (byte) -118);
+            stackIn_17_0 = this.b(focusRoot, (byte) -118);
           } else {
-            stackIn_17_0 = this.a(param2, (byte) -128);
+            stackIn_17_0 = this.a(focusRoot, (byte) -128);
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_20_0 = var5;
-          stackIn_20_1 = new StringBuilder().append("ib.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_20_1 = new StringBuilder().append("ib.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(character).append(')').toString());
         }
     }
 

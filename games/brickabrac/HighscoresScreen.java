@@ -726,7 +726,7 @@ final class HighscoresScreen extends MenuScreen {
           return;
         }
         if (rf.field_g == null) {
-          rf.field_g = cp.requestTableData(-2, this.packIndex, 2, 10, 3);
+          rf.field_g = WidgetLayerStack.requestTableData(-2, this.packIndex, 2, 10, 3);
         }
         this.packSelector.updatePointerSelection(111);
     }

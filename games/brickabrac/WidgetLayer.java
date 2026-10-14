@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jc extends WidgetGroup {
+abstract class WidgetLayer extends WidgetGroup {
     static RgbSprite field_J;
     static int field_K;
     static boolean field_H;
-    private int field_L;
-    private cp field_I;
+    private int opacity256;
+    private WidgetLayerStack layerStack;
     static NodeDeque field_M;
-    boolean field_N;
+    boolean visible;
 
     private final int h(byte param0) {
         int stackIn_9_0 = 0;
@@ -18,8 +18,8 @@ abstract class jc extends WidgetGroup {
           if (param0 != 90) {
             field_M = (NodeDeque) null;
           }
-          if (this.field_N) {
-            stackIn_9_0 = (this.field_I.g(-125) != this) ? 0 : 256;
+          if (this.visible) {
+            stackIn_9_0 = (this.layerStack.getTopVisibleLayer(-125) != this) ? 0 : 256;
           } else {
             stackIn_9_0 = 0;
           }
@@ -39,14 +39,14 @@ abstract class jc extends WidgetGroup {
         RuntimeException var2 = null;
         try {
           var2_int = this.h((byte) 90);
-          var3 = var2_int - this.field_L;
+          var3 = var2_int - this.opacity256;
           if (var3 > 0) {
-            this.field_L = this.field_L + (-1 + var3 + 8) / 8;
+            this.opacity256 = this.opacity256 + (-1 + var3 + 8) / 8;
           }
           if (param0 > var3) {
-            this.field_L = this.field_L + (1 + (-16 + var3)) / 16;
+            this.opacity256 = this.opacity256 + (1 + (-16 + var3)) / 16;
           }
-          stackIn_10_0 = (this.field_L == 0) && (var2_int == 0) && (!this.field_N);
+          stackIn_10_0 = (this.opacity256 == 0) && (var2_int == 0) && (!this.visible);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,10 +71,10 @@ abstract class jc extends WidgetGroup {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (0 == this.field_L) {
+          if (0 == this.opacity256) {
             return;
           }
-          if (this.field_L >= 256) {
+          if (this.opacity256 >= 256) {
             if (0 != layer) {
               return;
             }
@@ -92,7 +92,7 @@ abstract class jc extends WidgetGroup {
           this.b(0, obfuscationGuard ^ -281, 0);
           super.drawLayer(-parentY - this.y, -parentX - this.x, layer, obfuscationGuard);
           sc.popRaster(-117);
-          nl.field_e.b(parentX + this.x, parentY + this.y, this.field_L);
+          nl.field_e.b(parentX + this.x, parentY + this.y, this.opacity256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,29 +120,29 @@ abstract class jc extends WidgetGroup {
         }
     }
 
-    jc(cp param0, int param1, int param2) {
-        super(SpriteGeometry.field_y - param1 >> 1, -param2 + r.field_w >> 1, param1, param2, (WidgetRenderer) null);
+    WidgetLayer(WidgetLayerStack layerStack, int width, int height) {
+        super(SpriteGeometry.field_y - width >> 1, -height + r.field_w >> 1, width, height, (WidgetRenderer) null);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_N = false;
-          this.field_I = param0;
-          this.field_L = 0;
+          this.visible = false;
+          this.layerStack = layerStack;
+          this.opacity256 = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("jc.<init>(");
-          if (param0 == null) {
+          if (layerStack == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(width).append(',').append(height).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ abstract class jc extends WidgetGroup {
         try {
           ArchiveNetworkRequest.a("", 121, param0);
           if (param1 != 97) {
-            jc.a((byte) -100);
+            WidgetLayer.a((byte) -100);
           }
           mi.a((byte) -111, param0);
           return;
@@ -186,21 +186,21 @@ abstract class jc extends WidgetGroup {
         }
     }
 
-    boolean a(int param0) {
+    boolean updateOpacityAndCheckHidden(int obfuscationGuard) {
         boolean stackIn_7_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (param0 > -22) {
-            this.field_L = 90;
+          if (obfuscationGuard > -22) {
+            this.opacity256 = 90;
           }
-          this.field_L = this.h((byte) 90);
-          stackIn_7_0 = (this.field_L == 0) && (!this.field_N);
+          this.opacity256 = this.h((byte) 90);
+          stackIn_7_0 = (this.opacity256 == 0) && (!this.visible);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "jc.E(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "jc.E(" + obfuscationGuard + ')');
         }
     }
 
@@ -211,7 +211,7 @@ abstract class jc extends WidgetGroup {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param2 >= -84) {
-            jc.a((byte) 8);
+            WidgetLayer.a((byte) 8);
           }
           if (0 == param1) {
             if (pp.field_a == 14) {

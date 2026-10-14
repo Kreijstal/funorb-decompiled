@@ -116,7 +116,7 @@ final class ri extends WidgetGroup implements WidgetActionListener {
         ArchiveIndex.a(-32120);
     }
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -125,29 +125,29 @@ final class ri extends WidgetGroup implements WidgetActionListener {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleWidgetKey(keyCode, obfuscationGuard, focusRoot, character)) {
             return true;
           }
-          if (param0 == 98) {
-            stackIn_7_0 = this.b(param2, (byte) -60);
+          if (keyCode == 98) {
+            stackIn_7_0 = this.b(focusRoot, (byte) -60);
             return stackIn_7_0;
           }
-          if (param0 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_11_0 = this.a(param2, (byte) -117);
+          stackIn_11_0 = this.a(focusRoot, (byte) -117);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("ri.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = new StringBuilder().append("ri.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(character).append(')').toString());
         }
     }
 

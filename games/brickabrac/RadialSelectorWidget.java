@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends FocusableWidget {
-    int field_R;
-    int field_K;
-    int field_W;
+final class RadialSelectorWidget extends FocusableWidget {
+    int centerY;
+    int sectorCount;
+    int radius;
     static String field_V;
     static PacketBuffer field_N;
     static boolean field_L;
@@ -12,11 +12,11 @@ final class vh extends FocusableWidget {
     static cd field_X;
     static String field_T;
     static ResourceArchive field_S;
-    int field_Z;
+    int centerX;
     static String field_P;
     static String field_Y;
     static int decodedRankingWins;
-    int field_O;
+    int selectedSector;
     static String field_M;
 
     public static void a(int param0) {
@@ -31,7 +31,7 @@ final class vh extends FocusableWidget {
           field_Y = null;
           return;
         }
-        vh.h(64);
+        RadialSelectorWidget.h(64);
         field_X = null;
         field_T = null;
         field_Y = null;
@@ -52,25 +52,25 @@ final class vh extends FocusableWidget {
           if (!super.handlePointerPress(focusRoot, pointerX, parentX, parentY, button, pointerY, obfuscationGuard)) {
             return false;
           }
-          var8_int = pointerX + (-this.x - parentX) - this.field_Z;
-          var9 = -parentY - this.y - this.field_R + pointerY;
-          if (var8_int * var8_int + var9 * var9 >= this.field_W * this.field_W) {
+          var8_int = pointerX + (-this.x - parentX) - this.centerX;
+          var9 = -parentY - this.y - this.centerY + pointerY;
+          if (var8_int * var8_int + var9 * var9 >= this.radius * this.radius) {
             return true;
           }
           var10 = Math.atan2((double)var9, (double)var8_int) - hh.field_d;
           if (!(0.0 > var10)) {
             if (0.0 < var10) {
-              var10 = var10 + 3.141592653589793 / (double)this.field_K;
+              var10 = var10 + 3.141592653589793 / (double)this.sectorCount;
             }
           } else {
-            var10 = var10 - 3.141592653589793 / (double)this.field_K;
+            var10 = var10 - 3.141592653589793 / (double)this.sectorCount;
           }
-          this.field_O = (int)(var10 * (double)this.field_K / 6.283185307179586);
-          while (this.field_K <= this.field_O) {
-            this.field_O = this.field_O - this.field_K;
+          this.selectedSector = (int)(var10 * (double)this.sectorCount / 6.283185307179586);
+          while (this.sectorCount <= this.selectedSector) {
+            this.selectedSector = this.selectedSector - this.sectorCount;
           }
-          while (this.field_O < 0) {
-            this.field_O = this.field_O + this.field_K;
+          while (this.selectedSector < 0) {
+            this.selectedSector = this.selectedSector + this.sectorCount;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class vh extends FocusableWidget {
         }
     }
 
-    private vh() throws Throwable {
+    private RadialSelectorWidget() throws Throwable {
         throw new Error();
     }
 

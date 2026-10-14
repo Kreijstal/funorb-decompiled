@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends FocusableWidget {
+final class ToggleButtonWidget extends FocusableWidget {
     static int[] viewFacePointTwoY;
     static RgbSprite field_L;
     static RgbSprite parisFarSprite;
@@ -21,11 +21,11 @@ final class bf extends FocusableWidget {
         try {
           if (param1 != 8192) {
             String var5 = (String) null;
-            bf.a((String) null, 67, -0.11976710706949234f, true);
+            ToggleButtonWidget.a((String) null, 67, -0.11976710706949234f, true);
           }
           if (sj.field_b == null) {
             sj.field_b = new tb(ResourceArchive.field_f, AppletGameShell.field_b);
-            ResourceArchive.field_f.a(param1 - 8287, sj.field_b);
+            ResourceArchive.field_f.pushLayer(param1 - 8287, sj.field_b);
           }
           sj.field_b.a(param2, param0, param3, (byte) 86);
           Rasterizer2D.clear();
@@ -35,19 +35,19 @@ final class bf extends FocusableWidget {
         }
     }
 
-    bf(String param0, WidgetListener param1, boolean param2) {
-        this(param0, param1);
+    ToggleButtonWidget(String text, WidgetListener listener, boolean active) {
+        this(text, listener);
         try {
-          this.active = param2 ? true : false;
+          this.active = active ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + active + ')');
         }
     }
 
-    private bf(String param0, WidgetListener param1) {
-        this(param0, bj.field_T.field_q, param1);
+    private ToggleButtonWidget(String param0, WidgetListener param1) {
+        this(param0, bj.widgetTheme.defaultFocusableRenderer, param1);
         try {
-          this.renderer = bj.field_T.field_o;
+          this.renderer = bj.widgetTheme.toggleButtonRenderer;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -64,10 +64,10 @@ final class bf extends FocusableWidget {
         super.dispatchAction(pointerY, button, -69, pointerX);
     }
 
-    private bf(String param0, WidgetRenderer param1, WidgetListener param2) {
+    private ToggleButtonWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.renderer = bj.field_T.field_o;
+          this.renderer = bj.widgetTheme.toggleButtonRenderer;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -76,13 +76,13 @@ final class bf extends FocusableWidget {
     final static void a(boolean param0, boolean param1, int param2, String param3) {
         try {
           IntKeyIndex.a(-1);
-          ResourceArchive.field_f.a(-127);
+          ResourceArchive.field_f.hideLayers(-127);
           if (param2 != -15947) {
             parisFarSprite = (RgbSprite) null;
           }
           DirectByteStorage.field_k = new hk(GameScreen.field_d, (String) null, NanoGameClock.field_l, param0, param1);
           rj.field_c = new bh(ResourceArchive.field_f, DirectByteStorage.field_k);
-          ResourceArchive.field_f.a(-117, rj.field_c);
+          ResourceArchive.field_f.pushLayer(-117, rj.field_c);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

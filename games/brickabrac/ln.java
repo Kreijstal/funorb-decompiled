@@ -146,7 +146,7 @@ final class ln extends IntrusiveNode {
           if (var5 == null) {
             return false;
           }
-          eh.decodeSpriteData(var5, false);
+          WidgetTheme.decodeSpriteData(var5, false);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

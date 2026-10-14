@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ma extends SingleChildWidget {
-    private String field_M;
-    private boolean field_J;
-    private TextFont field_H;
-    private int field_L;
-    private int field_K;
+final class LabeledWidget extends SingleChildWidget {
+    private String labelText;
+    private boolean labelOnRight;
+    private TextFont labelFont;
+    private int inset;
+    private int labelColor;
     static ac field_I;
     static String field_G;
-    private int field_N;
+    private int labelWidth;
     static PaletteFont field_O;
     static ResourceArchive field_P;
 
@@ -20,8 +20,8 @@ final class ma extends SingleChildWidget {
         if (layer != 0) {
           return;
         }
-        int var7 = this.field_J ? this.width - (this.field_N + this.field_L * 2) : 0;
-        this.field_H.a(this.field_M, this.field_L + var5 + var7, this.field_L + var6, this.field_N - this.field_L, -(2 * this.field_L) + this.height, this.field_K, -1, !this.field_J ? 2 : 0, 1, this.field_H.ascent);
+        int var7 = this.labelOnRight ? this.width - (this.labelWidth + this.inset * 2) : 0;
+        this.labelFont.a(this.labelText, this.inset + var5 + var7, this.inset + var6, this.labelWidth - this.inset, -(2 * this.inset) + this.height, this.labelColor, -1, !this.labelOnRight ? 2 : 0, 1, this.labelFont.ascent);
     }
 
     public static void c(boolean param0) {
@@ -34,8 +34,8 @@ final class ma extends SingleChildWidget {
         }
     }
 
-    ma(int param0, int param1, int param2, int param3, Widget param4, boolean param5, int param6, int param7, TextFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (WidgetRenderer) null, (WidgetListener) null);
+    LabeledWidget(int x, int y, int width, int height, Widget child, boolean labelOnRight, int labelWidth, int inset, TextFont labelFont, int labelColor, String labelText) {
+        super(x, y, width, height, (WidgetRenderer) null, (WidgetListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -51,47 +51,47 @@ final class ma extends SingleChildWidget {
         int var13 = 0;
         int var14 = 0;
         try {
-          this.child = param4;
-          this.field_L = param7;
-          stackIn_4_1 = (param5);
-          this.field_J = stackIn_4_1;
-          this.field_H = param8;
-          this.field_K = param9;
-          this.field_M = param10;
-          this.field_N = param6;
-          var12_int = this.field_N - this.field_L;
-          var13 = this.field_H.measureWrappedHeight(param10, var12_int, this.field_H.ascent) + this.field_L * 2;
-          if (param3 >= var13) {
-            var13 = param3;
+          this.child = child;
+          this.inset = inset;
+          stackIn_4_1 = (labelOnRight);
+          this.labelOnRight = stackIn_4_1;
+          this.labelFont = labelFont;
+          this.labelColor = labelColor;
+          this.labelText = labelText;
+          this.labelWidth = labelWidth;
+          var12_int = this.labelWidth - this.inset;
+          var13 = this.labelFont.measureWrappedHeight(labelText, var12_int, this.labelFont.ascent) + this.inset * 2;
+          if (height >= var13) {
+            var13 = height;
           } else {
-            this.setBounds(var13, param0, param1, (byte) -119, param2);
+            this.setBounds(var13, x, y, (byte) -119, width);
           }
-          if (this.field_J) {
+          if (this.labelOnRight) {
             stackIn_10_0 = 0;
           } else {
-            stackIn_10_0 = 2 * this.field_L + this.field_N;
+            stackIn_10_0 = 2 * this.inset + this.labelWidth;
           }
           var14 = stackIn_10_0;
-          this.child.setBounds(param3 - 2 * this.field_L, var14, this.field_L + (var13 - param3 >> 1), (byte) -119, -(this.field_L * 3) + param2 - this.field_N);
+          this.child.setBounds(height - 2 * this.inset, var14, this.inset + (var13 - height >> 1), (byte) -119, -(this.inset * 3) + width - this.labelWidth);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var12 = decompiledCaughtException;
           stackIn_14_0 = var12;
-          stackIn_14_1 = new StringBuilder().append("ma.<init>(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_14_1 = new StringBuilder().append("ma.<init>(").append(x).append(',').append(y).append(',').append(width).append(',').append(height).append(',');
+          if (child == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-          if (param8 == null) {
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(labelOnRight).append(',').append(labelWidth).append(',').append(inset).append(',');
+          if (labelFont == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param9).append(',');
-          if (param10 == null) {
+          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(labelColor).append(',');
+          if (labelText == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -128,7 +128,7 @@ final class ma extends SingleChildWidget {
           var2.writeByte(127, 2);
           return;
         }
-        ma.sendAchievementMaskRequest((byte) -23, -84);
+        LabeledWidget.sendAchievementMaskRequest((byte) -23, -84);
         var2Lifetime1 = k.outgoingPackets;
         var2Lifetime1.writeCipheredOpcode(-13413, opcode);
         var2Lifetime1.writeByte(27, 1);

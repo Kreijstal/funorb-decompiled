@@ -22,7 +22,7 @@ final class nk {
           CachedArchiveSource.field_p = CachedArchiveSource.field_p + 1;
           if (fieldTemp$0 >= 16) {
             if (ln.field_k) {
-              vb.k(0);
+              TextFieldWidget.k(0);
             } else {
               ok.a(0);
             }
@@ -42,7 +42,7 @@ final class nk {
             DualLinkIterator.b((byte) 117);
             if (wi.field_g) {
               wi.field_g = false;
-              cp.a(false, 21543);
+              WidgetLayerStack.a(false, 21543);
             }
           }
           sm.field_b = NodeDeque.field_d;

@@ -99,7 +99,7 @@ final class uc extends k {
         }
     }
 
-    uc(vb param0, vb param1) {
+    uc(TextFieldWidget param0, TextFieldWidget param1) {
         super(param0);
         this.field_n = "";
         this.field_o = false;
@@ -130,7 +130,7 @@ final class uc extends k {
           AlignedIconLabel.currentSocialServer = null;
           IsaacGenerator.ignoreCount = 0;
           LevelPackSelectScreen.friendCount = 0;
-          bf.friendEntries.clear((byte) -72);
+          ToggleButtonWidget.friendEntries.clear((byte) -72);
           CachedArchiveSource.ignoreEntries.clear((byte) -92);
           var2 = BlankScreen.friendIndex.first((byte) 74);
           while (var2 != null) {

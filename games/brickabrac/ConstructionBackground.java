@@ -27,7 +27,7 @@ final class ConstructionBackground extends BackgroundScene {
         if (!param0) {
           this.drawPreview((byte) 31, 89, 39, 72);
         }
-        return sk.constructionCentreSprites[-1 + param1];
+        return OpacityWidget.constructionCentreSprites[-1 + param1];
     }
 
     public static void f(int param0) {
@@ -50,7 +50,7 @@ final class ConstructionBackground extends BackgroundScene {
     ConstructionBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
-          sk.constructionCentreSprites = new RgbSprite[2];
+          OpacityWidget.constructionCentreSprites = new RgbSprite[2];
           rd.constructionCapsSprites = new RgbSprite[2][];
           NodeDequeCursor.constructionSegsSprites = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
@@ -122,10 +122,10 @@ final class ConstructionBackground extends BackgroundScene {
         er.field_d = jh.a(0, IntNode.constructionSmokeSprite);
         rd.constructionCapsSprites[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_caps", 2);
         NodeDequeCursor.constructionSegsSprites[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_segs", 2);
-        sk.constructionCentreSprites[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.field_m);
+        OpacityWidget.constructionCentreSprites[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.field_m);
         rd.constructionCapsSprites[1] = ig.a(rd.constructionCapsSprites[0], false);
         NodeDequeCursor.constructionSegsSprites[1] = ig.a(NodeDequeCursor.constructionSegsSprites[0], obfuscationGuard);
-        sk.constructionCentreSprites[1] = pl.a(-16371, sk.constructionCentreSprites[0]);
+        OpacityWidget.constructionCentreSprites[1] = pl.a(-16371, OpacityWidget.constructionCentreSprites[0]);
         pl.a(IntNode.constructionSmokeSprite, 0);
         pl.a(er.field_d, 0);
         return true;

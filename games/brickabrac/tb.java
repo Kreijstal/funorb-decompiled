@@ -218,7 +218,7 @@ final class tb extends bj {
         this.field_gb = true;
     }
 
-    tb(cp param0, String param1) {
+    tb(WidgetLayerStack param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {

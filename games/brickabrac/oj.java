@@ -39,7 +39,7 @@ final class oj extends ep {
           var7 = param2.measureText(param0);
           var8.field_g[0] = param3 - (var7 >> 1);
           var8.field_g[param0.length()] = param3 + (var7 >> 1);
-          dn.a(25293, param0, var8, 0, param2);
+          DraggableWidget.a(25293, param0, var8, 0, param2);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -244,7 +244,7 @@ final class oj extends ep {
           var8 = var7;
           var7.field_g[0] = param2;
           var8.field_g[param3.length()] = param0.measureText(param3) + param2;
-          dn.a(param4 ^ 25293, param3, var8, 0, param0);
+          DraggableWidget.a(param4 ^ 25293, param3, var8, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -439,7 +439,7 @@ final class oj extends ep {
           var10 = var9;
           var10.field_g[0] = param2 - param1.measureText(param0);
           var10.field_g[param0.length()] = param2;
-          dn.a(25293, param0, var10, 0, param1);
+          DraggableWidget.a(25293, param0, var10, 0, param1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -450,16 +450,16 @@ final class oj extends ep {
           return 0;
         }
         if (cd.field_e == 0) {
-          if (!ma.field_P.ensureIndex((byte) -127)) {
+          if (!LabeledWidget.field_P.ensureIndex((byte) -127)) {
             return 20;
           }
-          if (!ma.field_P.ensureGroupAvailableByName("commonui", -28138)) {
+          if (!LabeledWidget.field_P.ensureGroupAvailableByName("commonui", -28138)) {
             return 40;
           }
-          if (!vh.field_S.ensureIndex((byte) -127)) {
+          if (!RadialSelectorWidget.field_S.ensureIndex((byte) -127)) {
             return 50;
           }
-          if (!vh.field_S.ensureGroupAvailableByName("commonui", -28138)) {
+          if (!RadialSelectorWidget.field_S.ensureGroupAvailableByName("commonui", -28138)) {
             return 60;
           }
           if (!ja.field_c.ensureIndex((byte) -127)) {
@@ -480,16 +480,16 @@ final class oj extends ep {
               return 29;
             }
           }
-          if (!ma.field_P.ensureIndex((byte) -127)) {
+          if (!LabeledWidget.field_P.ensureIndex((byte) -127)) {
             return 43;
           }
-          if (!ma.field_P.ensureGroupAvailableByName("commonui", -28138)) {
+          if (!LabeledWidget.field_P.ensureGroupAvailableByName("commonui", -28138)) {
             return 57;
           }
-          if (!vh.field_S.ensureIndex((byte) -127)) {
+          if (!RadialSelectorWidget.field_S.ensureIndex((byte) -127)) {
             return 71;
           }
-          if (!vh.field_S.ensureGroupAvailableByName("commonui", -28138)) {
+          if (!RadialSelectorWidget.field_S.ensureGroupAvailableByName("commonui", -28138)) {
             return 80;
           }
           if (!ja.field_c.ensureIndex((byte) -127)) {
@@ -614,7 +614,7 @@ final class oj extends ep {
               } else {
                 stackIn_40_3 = this.a(param5, param7.measureText(var14), var14, true);
               }
-              dn.a(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_40_3, param7);
+              DraggableWidget.a(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_40_3, param7);
             }
             this.field_c[var13Lifetime1] = var15;
             var12 = var12 + param4;

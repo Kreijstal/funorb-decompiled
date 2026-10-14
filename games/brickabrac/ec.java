@@ -77,7 +77,7 @@ final class ec extends WidgetGroup implements WidgetActionListener {
         IntKeyIndex.a(-1);
         NanoGameClock.field_l = true;
         InteractiveGameClient.field_E = true;
-        ResourceArchive.field_f.a(-126);
+        ResourceArchive.field_f.hideLayers(-126);
         if (param0 != 6846) {
           ec.a(-62);
         }

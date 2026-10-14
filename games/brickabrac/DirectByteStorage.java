@@ -43,13 +43,13 @@ final class DirectByteStorage extends ByteStorage {
           InstructionsScreen.lobbyChatFilter != filter) {
           LevelSequence.chatFiltersChanged = true;
           InstructionsScreen.lobbyChatFilter = filter;
-          eh.writeChatFilters(true, opcode);
+          WidgetTheme.writeChatFilters(true, opcode);
         }
         if (channel == 1 &&
           InstructionsScreen.gameChatFilter != filter) {
           InstructionsScreen.gameChatFilter = filter;
           LevelSequence.chatFiltersChanged = true;
-          eh.writeChatFilters(true, opcode);
+          WidgetTheme.writeChatFilters(true, opcode);
         }
         if (2 != channel) {
           return;
@@ -59,7 +59,7 @@ final class DirectByteStorage extends ByteStorage {
         }
         LevelSequence.chatFiltersChanged = true;
         to.privateChatFilter = filter;
-        eh.writeChatFilters(true, opcode);
+        WidgetTheme.writeChatFilters(true, opcode);
     }
 
     final void store(int obfuscationGuard, byte[] data) {

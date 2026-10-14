@@ -12,7 +12,7 @@ final class ce {
 
     final static void a(int param0) {
         if (ResourceArchive.field_f != null) {
-          ResourceArchive.field_f.i((byte) -36);
+          ResourceArchive.field_f.removeHiddenLayers((byte) -36);
           if (param0 != 224) {
             field_d = -126;
             if (null != sj.field_b) {

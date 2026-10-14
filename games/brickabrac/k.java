@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class k extends pj implements hf {
+abstract class k extends pj implements TextFieldListener {
     static String field_i;
     static BitPacketBuffer outgoingPackets;
     static String field_j;
-    private vb field_g;
+    private TextFieldWidget field_g;
 
     final qh c(int param0) {
         if (param0 != 4) {
@@ -25,14 +25,14 @@ abstract class k extends pj implements hf {
 
     abstract String a(int param0, String param1);
 
-    public final void a(vb param0, byte param1) {
+    public final void onTextChanged(TextFieldWidget textField, byte obfuscationGuard) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (param1 > -39) {
+          if (obfuscationGuard > -39) {
             outgoingPackets = (BitPacketBuffer) null;
             this.a(false);
           } else {
@@ -44,12 +44,12 @@ abstract class k extends pj implements hf {
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("k.I(");
-          if (param0 == null) {
+          if (textField == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ abstract class k extends pj implements hf {
         return stackIn_7_0;
     }
 
-    k(vb param0) {
+    k(TextFieldWidget param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {
@@ -339,14 +339,14 @@ abstract class k extends pj implements hf {
         }
     }
 
-    public final void a(vb param0, int param1) {
+    public final void onSubmitted(TextFieldWidget textField, int obfuscationGuard) {
         try {
-          if (param1 != -40) {
+          if (obfuscationGuard != -40) {
             String var4 = (String) null;
             this.a((String) null, (byte) -114);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "k.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "k.H(" + (textField != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

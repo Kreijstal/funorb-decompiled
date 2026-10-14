@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh {
+final class WidgetTheme {
     WidgetRenderer field_i;
-    TextFont field_l;
+    TextFont font;
     int field_h;
     int field_g;
     int field_m;
-    WidgetRenderer field_q;
+    WidgetRenderer defaultFocusableRenderer;
     int field_p;
     private int field_c;
     static String[] field_e;
@@ -15,11 +15,11 @@ final class eh {
     int field_j;
     static int chatHistoryCategoryLimit;
     static UiComponent field_n;
-    WidgetRenderer field_b;
-    WidgetRenderer field_r;
+    WidgetRenderer textFieldRenderer;
+    WidgetRenderer emptyFocusableRenderer;
     int field_a;
     static String field_d;
-    WidgetRenderer field_o;
+    WidgetRenderer toggleButtonRenderer;
     private boolean field_s;
 
     public static void a(int param0) {
@@ -62,7 +62,7 @@ final class eh {
           var17.a(-86, var4);
           var4.field_s = 15658734;
           var4.field_c = 11711154;
-          this.field_l = param0;
+          this.font = param0;
           this.field_f = 3;
           this.field_a = 3;
           this.field_p = 5592405;
@@ -83,21 +83,21 @@ final class eh {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.b(4, 121).a(true, false).a(var5, -2147483648);
           var4.b(5, param1 ^ 13421757).a(VerticalScrollbar.a(0, 0, 65793, 1, 0), param1 ^ -2134061876).a(true, false).a(false, -1);
-          this.field_q = (WidgetRenderer) ((Object) var4);
+          this.defaultFocusableRenderer = (WidgetRenderer) ((Object) var4);
           var6 = new up(var4, true);
           var6.field_f = 0;
           var7 = new up(var4, true);
           var7.field_f = 0;
           var7.a(BallPulseEffect.a(8947848, false), false);
           var7.b(1, 110).a(BallPulseEffect.a(11184810, false), param1 + 2134061876).a(false, 2236962);
-          this.field_o = (WidgetRenderer) ((Object) new ei(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.toggleButtonRenderer = (WidgetRenderer) ((Object) new ei(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new pf(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new dg(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new up();
           var17.a(-68, var8);
           var8.b(0, 105).a(ScorePopup.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).a(false, 1118481).a(-1, (byte) -69);
           var8.b(4, 108).a(true, false).a(var5, -2147483648);
-          this.field_b = (WidgetRenderer) ((Object) var8);
+          this.textFieldRenderer = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
           var10 = new RgbSprite[9];
@@ -304,7 +304,7 @@ final class eh {
         BitPacketBuffer packet = k.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         if (!obfuscationGuard) {
-          eh.isAsciiDigit('￪', (byte) -120);
+          WidgetTheme.isAsciiDigit('￪', (byte) -120);
         }
         packet.writeByte(-101, 2);
         packet.writeByte(-103, 4);
@@ -327,8 +327,8 @@ final class eh {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_l.measureText(param1);
-          var6 = this.field_l.capHeight + this.field_l.descent;
+          var5_int = this.font.measureText(param1);
+          var6 = this.font.capHeight + this.font.descent;
           if (param0 != 8081) {
             return;
           }
@@ -336,13 +336,13 @@ final class eh {
           if (Rasterizer2D.width < 6 + var7 + var5_int) {
             var7 = -6 + (Rasterizer2D.width - var5_int);
           }
-          var8 = param2 - (this.field_l.capHeight - 32);
+          var8 = param2 - (this.font.capHeight - 32);
           if (6 + (var8 + var6) > Rasterizer2D.height) {
             var8 = -var6 + Rasterizer2D.height - 6;
           }
           Rasterizer2D.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_c);
           Rasterizer2D.fillRectangle(1 + var7, 1 + var8, var5_int + 4, var6 + 4, this.field_p);
-          this.field_l.drawLeft(param1, var7 + 3, this.field_l.capHeight + var8 + 3, this.field_c, -1);
+          this.font.drawLeft(param1, var7 + 3, this.font.capHeight + var8 + 3, this.field_c, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -461,7 +461,7 @@ final class eh {
           }
           var7 = (java.awt.Frame) (var11.result);
           if (param3 <= 80) {
-            eh.isAsciiDigit('4', (byte) 78);
+            WidgetTheme.isAsciiDigit('4', (byte) 78);
           }
           if (var7 == null) {
             return null;
@@ -516,11 +516,11 @@ final class eh {
             field_d = (String) null;
           }
           if (var7 == -1) {
-            var7 = this.field_l.ascent + this.field_l.descent;
+            var7 = this.font.ascent + this.font.descent;
           }
           var8 = Rasterizer2D.width >> 2;
-          var9 = this.field_l.measureText(param0);
-          var10 = this.field_l.descent + this.field_l.ascent;
+          var9 = this.font.measureText(param0);
+          var10 = this.font.descent + this.font.ascent;
           var11 = 1;
           if (var9 > var8 ||
             param0.indexOf("<br>") != -1) {
@@ -533,11 +533,11 @@ final class eh {
             if (null == an.field_j) {
               an.field_j = new String[16];
             }
-            var11Lifetime1 = this.field_l.wrapText(param0, new int[]{var12}, an.field_j);
+            var11Lifetime1 = this.font.wrapText(param0, new int[]{var12}, an.field_j);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_l.measureText(an.field_j[var13Lifetime2]);
+              var14 = this.font.measureText(an.field_j[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -547,13 +547,13 @@ final class eh {
           if (var12 + var9 + var5_int > Rasterizer2D.width) {
             var12 = Rasterizer2D.width - var9 - var5_int;
           }
-          var13Lifetime1 = -this.field_l.capHeight + (param2 + 32);
+          var13Lifetime1 = -this.font.capHeight + (param2 + 32);
           if (var13Lifetime1 + var10 + var6 > Rasterizer2D.height) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
           Rasterizer2D.drawRectangle(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_j);
           Rasterizer2D.fillRectangle(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_p);
-          this.field_l.a(param0, this.field_h + var12, var13Lifetime1 + this.field_g, var9, var10, this.field_c, -1, 0, 0, var7);
+          this.font.a(param0, this.field_h + var12, var13Lifetime1 + this.field_g, var9, var10, this.field_c, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -569,7 +569,7 @@ final class eh {
         }
     }
 
-    public eh() {
+    public WidgetTheme() {
         this.field_s = true;
     }
 

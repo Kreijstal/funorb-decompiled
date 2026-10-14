@@ -334,7 +334,7 @@ final class SoundCache {
               ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var12, 65);
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
-              if (NanoGameClock.field_s.a(13) == vh.field_X) {
+              if (NanoGameClock.field_s.a(13) == RadialSelectorWidget.field_X) {
                 uc.field_k.a(100, uc.e((byte) -66));
               } else {
                 if (NanoGameClock.field_s.a(13) == MembershipBenefitsScreen.field_v) {

@@ -73,7 +73,7 @@ final class gr {
         MusicCrossfadeStream.field_C = param0;
         if (MusicCrossfadeStream.field_C != 1) {
           ArchiveNetworkClient.field_s = ln.field_j;
-          jc.field_J = UiComponent.field_ib;
+          WidgetLayer.field_J = UiComponent.field_ib;
           tf.field_c = kp.field_e;
           field_c = PlayerInputBatch.field_i;
           Ball.field_w = RankingsRequest.field_o;
@@ -87,7 +87,7 @@ final class gr {
           ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
           tf.field_c = dg.field_b;
           Ball.field_w = dg.field_e;
-          jc.field_J = Ball.field_D;
+          WidgetLayer.field_J = Ball.field_D;
           gg.field_o = dk.field_R;
           nj.field_l = pa.field_m;
           fq.field_d = GameConnectionShell.field_D;

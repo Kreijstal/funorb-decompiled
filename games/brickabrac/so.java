@@ -150,8 +150,8 @@ final class so {
           var5 = var13;
           var16 = PacketBuffer.a("basic", param0, "gamefont", param3 - 946744493);
           ConstructionBackground.a(param3 ^ 29068, var21, 1);
-          ma.field_O = IndexedSpriteGeometry.a(0, var21, 0, var16, 0, 1);
-          ma.field_O.palettes = bg.field_n;
+          LabeledWidget.field_O = IndexedSpriteGeometry.a(0, var21, 0, var16, 0, 1);
+          LabeledWidget.field_O.palettes = bg.field_n;
           ContextActionController.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
           ContextActionController.field_g.palettes = bg.field_n;
           var22 = param4.takeFileByName(86, "kartika13", "");
@@ -193,7 +193,7 @@ final class so {
           var19.bindRasterTarget();
           LevelCompleteScreen.field_F.e(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 113);
-          bf.field_L = PlayerInputBatch.a(-12, var19, 8, 9838226);
+          ToggleButtonWidget.field_L = PlayerInputBatch.a(-12, var19, 8, 9838226);
           qh.field_c = PlayerInputBatch.a(-12, var19, 12, 9838226);
           var8 = null;
           AchievementSubmission.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
@@ -313,8 +313,8 @@ final class so {
           for (var10_intLifetime10 = 0; nd.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
             nd.field_f[var10_intLifetime10] = 14;
           }
-          UnderwaterBackground.field_u = lg.a(2, mo.field_N, -1);
-          ClientException.field_b = lg.a(2, SpaceBackground.field_s.toUpperCase(), -1);
+          UnderwaterBackground.field_u = HotspotTextWidget.a(2, mo.field_N, -1);
+          ClientException.field_b = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
           ed.field_b = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
             ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);

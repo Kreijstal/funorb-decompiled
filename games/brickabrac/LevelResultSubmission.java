@@ -186,7 +186,7 @@ final class LevelResultSubmission extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          eh.chatHistoryCategoryLimit = param1;
+          WidgetTheme.chatHistoryCategoryLimit = param1;
           BubbleDistortion.chatHistoryCategoryCounts = new int[3];
           ScrollPane.chatHistorySize = 0;
           if (param0 > -4) {

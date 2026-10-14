@@ -26,7 +26,7 @@ final class eb extends ff {
         if (param0 != 13) {
           return (cd) null;
         }
-        return vh.field_X;
+        return RadialSelectorWidget.field_X;
     }
 
     final static void decodeLobbyGame(LobbyGame game, PacketBuffer packet, int obfuscationGuard, boolean includePlayerCount) {

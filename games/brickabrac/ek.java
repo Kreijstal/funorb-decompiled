@@ -61,7 +61,7 @@ final class ek extends bj implements WidgetActionListener {
         }
     }
 
-    ek(cp param0, tf param1) {
+    ek(WidgetLayerStack param0, tf param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -120,10 +120,10 @@ final class ek extends bj implements WidgetActionListener {
     }
 
     private final void d(boolean param0) {
-        if (!this.field_N) {
+        if (!this.visible) {
           return;
         }
-        this.field_N = param0 ? true : false;
+        this.visible = param0 ? true : false;
     }
 
     private final FocusableWidget a(String param0, int param1, WidgetListener param2) {

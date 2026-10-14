@@ -162,7 +162,7 @@ abstract class MovingBody extends IntrusiveNode {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
-          if (!ma.field_I.b(96)) {
+          if (!LabeledWidget.field_I.b(96)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

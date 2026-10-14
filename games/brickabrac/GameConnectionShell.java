@@ -346,7 +346,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (var4 == 2) {
             var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.affiliateId);
             if (-1 != var5_intLifetime1) {
-              vh.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, co.field_f);
+              RadialSelectorWidget.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, co.field_f);
               DirectByteStorage.field_e = null;
               co.field_f = null;
             }
@@ -379,7 +379,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               AchievementIcon.field_j = 10;
               LevelPackSelectScreen.field_s = true;
             } else {
-              jc.a(uc.e((byte) -97), (byte) 97);
+              WidgetLayer.a(uc.e((byte) -97), (byte) 97);
             }
           }
           if (var4 == 5) {
@@ -396,7 +396,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             this.gameCrc = 120;
           }
           if (var4 == 8) {
-            jc.a(uc.e((byte) -70), (byte) 97);
+            WidgetLayer.a(uc.e((byte) -70), (byte) 97);
           }
           if (var4 == 9) {
             NodeDeque.a(uc.e((byte) -108), (byte) -106);
@@ -767,7 +767,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                     tf.a(AppletGameShell.field_k, (byte) -54, 256);
                   }
                 } else {
-                  tf.a(vh.field_M, (byte) -103, 256);
+                  tf.a(RadialSelectorWidget.field_M, (byte) -103, 256);
                 }
               }
               n.field_e = true;
@@ -815,12 +815,12 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (cd.field_e != 0) {
             wl.field_K = aj.a(PacketBuffer.field_j, true);
           }
-          ma.field_P = bq.a(-6, 1, true, nd.field_c, false);
-          vh.field_S = bq.a(-6, 1, true, ea.field_c, false);
+          LabeledWidget.field_P = bq.a(-6, 1, true, nd.field_c, false);
+          RadialSelectorWidget.field_S = bq.a(-6, 1, true, ea.field_c, false);
           ja.field_c = bq.a(-6, 1, true, o.field_f, false);
-          wn.field_c = vh.field_S;
+          wn.field_c = RadialSelectorWidget.field_S;
           clientStage = 2;
-          NameEntryPopup.field_Rb = ma.field_P;
+          NameEntryPopup.field_Rb = LabeledWidget.field_P;
         }
         if (2 == clientStage) {
           if (null != wl.field_K &&
@@ -840,18 +840,18 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
         }
         if (3 == clientStage &&
-          HuffmanCodec.a(vh.field_S, ma.field_P, ja.field_c, -111) &&
+          HuffmanCodec.a(RadialSelectorWidget.field_S, LabeledWidget.field_P, ja.field_c, -111) &&
           QuickChatPhraseRegistry.a(ja.field_c, (byte) 101)) {
           ui.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
           SpaceBackground.field_t = false;
           ri.field_N = cm.field_t;
-          MultiplayerExitScreen.a(FarmBackground.field_u, ja.field_c, ma.field_P, vh.field_S, guardCode ^ 23);
+          MultiplayerExitScreen.a(FarmBackground.field_u, ja.field_c, LabeledWidget.field_P, RadialSelectorWidget.field_S, guardCode ^ 23);
           if (cb.field_k ||
             null != LevelDecoder.field_a) {
             stackIn_99_0 = !(cb.field_k);
             stackIn_102_1 = !(cb.field_k);
-            bf.a(stackIn_99_0, stackIn_102_1, guardCode ^ -15948, LevelDecoder.field_a);
+            ToggleButtonWidget.a(stackIn_99_0, stackIn_102_1, guardCode ^ -15948, LevelDecoder.field_a);
           }
           if (MatchResultScreen.field_u) {
             NewAchievementsScreen.f(967);
@@ -861,8 +861,8 @@ abstract class GameConnectionShell extends AppletGameShell {
             ri.field_M = ar.a((byte) 120);
           }
           BallPulseEffect.a(ja.field_c, sg.field_l, ri.field_M, 107);
-          vh.field_S = null;
-          ma.field_P = null;
+          RadialSelectorWidget.field_S = null;
+          LabeledWidget.field_P = null;
           ja.field_c = null;
           MenuScreen.a((java.applet.Applet) (this), -90);
           hc.b(2);

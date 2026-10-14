@@ -100,7 +100,7 @@ abstract class MatchResultScreen extends MenuScreen {
             if (0 <= var7) {
               var8 = 320;
               var9 = var2;
-              if (sk.field_I != 2) {
+              if (OpacityWidget.field_I != 2) {
                 switch (var5) {
                   case 0:
                     var9 += 14;

@@ -44,7 +44,7 @@ final class QuickChatParameterType {
           var7 = (CharSequence) ((Object) param4);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var7, 64);
           qn.field_n = param1;
-          var6 = SaveResultsPromptScreen.a(param0, cp.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
+          var6 = SaveResultsPromptScreen.a(param0, WidgetLayerStack.field_K, ArchiveIndex.field_j, SoftwareFramebuffer.field_e, (byte) -78);
           if (param3) {
             field_f = (String) null;
           }

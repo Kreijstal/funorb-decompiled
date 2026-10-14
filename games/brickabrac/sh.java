@@ -7,14 +7,14 @@ final class sh {
     static int field_a;
     static UiComponent field_d;
 
-    final static eh a(byte param0) {
+    final static WidgetTheme a(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (null != MouseInput.field_g) {
           var1 = 89 / ((param0 - 32) / 44);
           return MouseInput.field_g;
         }
-        MouseInput.field_g = new eh();
+        MouseInput.field_g = new WidgetTheme();
         MouseInput.field_g.a(ArchiveNetworkClient.field_u, 13421772);
         MouseInput.field_g.field_p = 2763306;
         MouseInput.field_g.field_h = 6;
@@ -23,7 +23,7 @@ final class sh {
         MouseInput.field_g.field_f = 5;
         MouseInput.field_g.field_j = 7697781;
         MouseInput.field_g.field_m = 14;
-        MouseInput.field_g.field_l = QuickChatMenu.field_Yb;
+        MouseInput.field_g.font = QuickChatMenu.field_Yb;
         var1Lifetime1 = 89 / ((param0 - 32) / 44);
         return MouseInput.field_g;
     }

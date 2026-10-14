@@ -278,8 +278,8 @@ final class hc {
           wi.field_n.textInset = 2;
           OptionsScreen.field_v = new UiComponent(0L, Paddle.field_C);
           OptionsScreen.field_v.copyStyle((byte) -82, DualLinkNode.field_t);
-          vb.field_K = new UiComponent(0L, wi.field_n);
-          vb.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
+          TextFieldWidget.field_K = new UiComponent(0L, wi.field_n);
+          TextFieldWidget.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
           var16 = cr.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
           ce.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.uiRowHeight);
           ArcticBackground.field_s = new UiComponent(0L, DualLinkNode.field_t);
@@ -293,11 +293,11 @@ final class hc {
           ArcticBackground.field_s.selectedFrameSprites = cr.loadRgbSpritesByName("lobby", param3, "button_active", 2);
           ArcticBackground.field_s.disabledFrameSprites = cr.loadRgbSpritesByName("lobby", param3, "button_disabled", 2);
           ArcticBackground.field_s.horizontalAlignment = 1;
-          eh.field_n = new UiComponent(0L, DualLinkNode.field_t);
-          eh.field_n.horizontalAlignment = 1;
-          eh.field_n.frameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
-          eh.field_n.activeFrameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
-          eh.field_n.selectedFrameSprites = var14;
+          WidgetTheme.field_n = new UiComponent(0L, DualLinkNode.field_t);
+          WidgetTheme.field_n.horizontalAlignment = 1;
+          WidgetTheme.field_n.frameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
+          WidgetTheme.field_n.activeFrameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
+          WidgetTheme.field_n.selectedFrameSprites = var14;
           hd.field_c = new UiComponent(0L, (UiComponent) null);
           hd.field_c.frameSprites = na.a(false, 1127256, 3, 1856141, 206, -1);
           FarmBackground.field_x = new UiComponent(0L, (UiComponent) null);

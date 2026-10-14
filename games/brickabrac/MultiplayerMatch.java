@@ -346,7 +346,7 @@ final class MultiplayerMatch {
                     if (var11 > 0) {
                       stackIn_159_1 = ml.field_e;
                     } else {
-                      stackIn_159_1 = eh.field_e;
+                      stackIn_159_1 = WidgetTheme.field_e;
                     }
                     ((PlayerBoard) (Object) stackIn_158_0).a(stackIn_159_1, (byte) 75);
                   }
@@ -423,7 +423,7 @@ final class MultiplayerMatch {
                         board.field_Q = board.field_Q + 1;
                       }
                       if (r.field_A) {
-                        jc.a(var11_ref_onLifetime1.flags, 1, (byte) -95);
+                        WidgetLayer.a(var11_ref_onLifetime1.flags, 1, (byte) -95);
                       }
                     } else {
                       if (var11_ref_onLifetime1.typeId == 0) {
@@ -596,7 +596,7 @@ final class MultiplayerMatch {
                   }
                   ((PlayerBoard) (Object) stackIn_270_0).b(stackIn_270_1, stackIn_271_2);
                   if (r.field_A) {
-                    jc.a(fallingPowerUp.typeId, 4, (byte) -110);
+                    WidgetLayer.a(fallingPowerUp.typeId, 4, (byte) -110);
                   }
                   fallingPowerUp.unlink((byte) 111);
                 } else {
@@ -632,7 +632,7 @@ final class MultiplayerMatch {
                       }
                     }
                     if (r.field_A) {
-                      jc.a(fallingPowerUp.typeId, 3, (byte) -115);
+                      WidgetLayer.a(fallingPowerUp.typeId, 3, (byte) -115);
                     }
                     if (audioEvents != null) {
                       audioEvents.addLast(new GameplayAudioEvent(3, fallingPowerUp.typeId), (byte) 3);
@@ -641,7 +641,7 @@ final class MultiplayerMatch {
                     if (1 >= this.playerCount &&
                       fallingPowerUp.typeId != 13 &&
                       var11 == 0) {
-                      stackIn_302_1 = eh.field_e;
+                      stackIn_302_1 = WidgetTheme.field_e;
                     } else {
                       stackIn_302_1 = ml.field_e;
                     }
@@ -1008,13 +1008,13 @@ final class MultiplayerMatch {
                   param0.a(6, true, 150);
                 }
                 if (r.field_A) {
-                  jc.a(0, 5, (byte) -124);
+                  WidgetLayer.a(0, 5, (byte) -124);
                 }
                 param0.resetServeWithRandomAngle(26496, true);
                 param0.stateTicks = 0;
                 param0.boardState = 4;
               }
-              param0.a(eh.field_e, (byte) 75);
+              param0.a(WidgetTheme.field_e, (byte) 75);
               return false;
             }
             param0.b(16387, 2);
@@ -1029,7 +1029,7 @@ final class MultiplayerMatch {
               if (wl.field_N) {
                 if (!cm.field_s &&
                   param4.contactCount == 39) {
-                  jc.a(0, 6, (byte) -108);
+                  WidgetLayer.a(0, 6, (byte) -108);
                 }
               } else {
                 param4.contactCount = 0;

@@ -75,11 +75,11 @@ final class wn {
                 break;
               }
               if (stackIn_12_0.children == null) {
-                var7.nameLabel = new UiComponent(0L, vb.field_K);
+                var7.nameLabel = new UiComponent(0L, TextFieldWidget.field_K);
                 var7.addChild(var7.nameLabel, 0);
                 var7.serverLabel = new UiComponent(0L, OptionsScreen.field_v);
                 var7.addChild(var7.serverLabel, 0);
-                var7.renameIndicator = new UiComponent(0L, vb.field_K);
+                var7.renameIndicator = new UiComponent(0L, TextFieldWidget.field_K);
                 var7.addChild(var7.renameIndicator, 0);
                 var7.serverLabel.horizontalAlignment = 2;
                 var8 = 1;

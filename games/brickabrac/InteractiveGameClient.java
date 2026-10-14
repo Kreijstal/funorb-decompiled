@@ -179,12 +179,12 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         boolean decompiledFrameRemainder0 = true;
         var2 = 0;
         if (!m.a(2)) {
-          if (lg.a(9)) {
+          if (HotspotTextWidget.a(9)) {
             if (!me.b(126)) {
               var3 = InstructionsScreen.f((byte) 124);
               switch (var3) {
                 case 3:
-                  cp.a(true, 21543);
+                  WidgetLayerStack.a(true, 21543);
                 default:
                   break;
                 case 4:
@@ -224,7 +224,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             if (decompiledFrameRemainder0) {
               if (uc.f(21651)) {
                 if (!me.b(param0 ^ -16)) {
-                  var3 = vh.h(0);
+                  var3 = RadialSelectorWidget.h(0);
                   if (1 == var3) {
                     he.a(LevelPackLoader.field_a, true, (byte) 97);
                   }

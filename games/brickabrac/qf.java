@@ -25,7 +25,7 @@ final class qf extends lp implements WidgetActionListener {
         if (param0 != 0) {
           return true;
         }
-        if (!this.field_N) {
+        if (!this.visible) {
           return super.h(0);
         }
         if (this.field_Db) {
@@ -47,7 +47,7 @@ final class qf extends lp implements WidgetActionListener {
         return to.privateChatFilter + ((InstructionsScreen.gameChatFilter << 2) + (InstructionsScreen.lobbyChatFilter << 4));
     }
 
-    qf(cp param0, dk param1) {
+    qf(WidgetLayerStack param0, dk param1) {
         super(param0, wm.field_a, MidiSynthesizer.field_o, false, false);
         try {
           this.field_Eb = param1;

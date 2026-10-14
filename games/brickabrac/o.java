@@ -95,11 +95,11 @@ final class o {
         int var2 = ClientException.b(param0 + 29830);
         IntKeyIndex.field_c.a((hn.field_a << 1) + var1, var2 + (bh.field_vb << 1), -hn.field_a + np.field_b, false, -bh.field_vb + CachedArchiveSource.field_r);
         if (param0 == -24435) {
-          cp.h(param0 ^ 8147);
+          WidgetLayerStack.h(param0 ^ 8147);
           return;
         }
         field_b = (ScrollPane) null;
-        cp.h(param0 ^ 8147);
+        WidgetLayerStack.h(param0 ^ 8147);
     }
 
     static {

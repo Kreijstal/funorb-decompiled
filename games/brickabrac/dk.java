@@ -3,8 +3,8 @@
  */
 final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
     static RgbSprite field_R;
-    private bf field_N;
-    private lg field_I;
+    private ToggleButtonWidget field_N;
+    private HotspotTextWidget field_I;
     private sf field_M;
     private FocusableWidget field_Q;
     private sf field_L;
@@ -199,7 +199,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         }
     }
 
-    public final void a(int param0, int param1, int param2, lg param3) {
+    public final void a(int param0, int param1, int param2, HotspotTextWidget param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -273,7 +273,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
     private final int a(Widget param0, int param1, String param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         nf var9 = null;
-        ma var10 = null;
+        LabeledWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -284,12 +284,12 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ma(20, param1, param4 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param5);
+          var10 = new LabeledWidget(20, param1, param4 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param5);
           this.addChild(var10, true);
           var9 = new nf(((je) ((Object) param0)).a(-11011), param2, 126, param1 + var10.height, param4 + 50, param3);
           var9.listener = (WidgetListener) (this);
           if (param6 != 170) {
-            this.field_N = (bf) null;
+            this.field_N = (ToggleButtonWidget) null;
           }
           this.addChild(var9, true);
           stackIn_3_0 = var10.height + var9.height;
@@ -321,7 +321,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
     }
 
     private final int a(String param0, Widget param1, int param2, int param3, int param4) {
-        ma var6 = null;
+        LabeledWidget var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int stackIn_1_0 = 0;
@@ -332,7 +332,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ma(20, param2, 120 + param4, 25, param1, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
+          var6 = new LabeledWidget(20, param2, 120 + param4, 25, param1, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
           this.addChild(var6, true);
           var7 = -5 / ((-32 - param3) / 59);
           stackIn_1_0 = var6.height;
@@ -361,7 +361,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         wl var7 = null;
-        ma var8 = null;
+        LabeledWidget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -373,7 +373,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
           if (param3 <= 97) {
             discarded$1 = this.i(-122);
           }
-          var8 = new ma(20, param4, param2 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param1);
+          var8 = new LabeledWidget(20, param4, param2 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param1);
           this.addChild(var8, true);
           var7 = new wl(((je) ((Object) param0)).a(-11011));
           this.addChild(var7, true);
@@ -437,7 +437,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         try {
           var3 = this.field_J;
           var4 = param0;
-          ((vb) ((Object) var3)).a(var4, -12592, false);
+          ((TextFieldWidget) ((Object) var3)).setText(var4, -12592, false);
           if (param1 != 56) {
             discarded$1 = this.c(true);
           }
@@ -470,7 +470,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         }
     }
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -479,29 +479,29 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleWidgetKey(keyCode, obfuscationGuard, focusRoot, character)) {
             return true;
           }
-          if (param0 == 98) {
-            stackIn_6_0 = this.b(param2, (byte) 119);
+          if (keyCode == 98) {
+            stackIn_6_0 = this.b(focusRoot, (byte) 119);
             return stackIn_6_0;
           }
-          if (param0 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param2, (byte) -122);
+          stackIn_10_0 = this.a(focusRoot, (byte) -122);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("dk.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = new StringBuilder().append("dk.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -542,7 +542,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -3) {
-            this.field_N = (bf) null;
+            this.field_N = (ToggleButtonWidget) null;
           }
           stackIn_3_0 = this.a(param4, param5, param1, 35, param0, param2, 170);
           return stackIn_3_0;
@@ -588,7 +588,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         this.field_L = new sf("", (WidgetListener) null, 20);
         this.field_S = new sf("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_N = new bf("", (WidgetListener) null, var1 != 0);
+        this.field_N = new ToggleButtonWidget("", (WidgetListener) null, var1 != 0);
         this.field_Q = new FocusableWidget(c.field_d, (WidgetListener) null);
         this.field_P = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
         this.field_J.tooltip = hh.field_a;
@@ -621,14 +621,14 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         var3 = var3 + this.a(IntNode.field_l, this.field_M, var3, 37, 170);
         var3 = var3 + (this.a(this.field_H, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
         var3 = var3 + this.a(wc.field_c, this.field_O, var3, 84, 170);
-        var3 = var3 + (this.a(170, InstructionsScreen.field_x, cp.field_G, -3, this.field_L, var3) + 5);
+        var3 = var3 + (this.a(170, InstructionsScreen.field_x, WidgetLayerStack.field_G, -3, this.field_L, var3) + 5);
         var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.field_J, var3) + 5);
         var3 = var3 + this.a(this.field_S, HuffmanCodec.field_d, 170, 111, var3);
-        ma var4 = new ma(46, var3, this.width - 90, 25, this.field_N, true, -120 + this.width, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
+        LabeledWidget var4 = new LabeledWidget(46, var3, this.width - 90, 25, this.field_N, true, -120 + this.width, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
         this.addChild(var4, true);
         var3 = var3 + var4.height;
         um var5 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
-        this.field_I = new lg(var2, var5);
+        this.field_I = new HotspotTextWidget(var2, var5);
         this.field_I.tooltip = "";
         this.field_I.a(GameConnectionShell.field_z, 0, (byte) -98);
         this.field_I.a(GameConnectionShell.field_z, 1, (byte) -98);
@@ -668,7 +668,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
             return false;
           }
           if (param0 != 60) {
-            this.field_N = (bf) null;
+            this.field_N = (ToggleButtonWidget) null;
           }
           if (m.field_c == var4) {
             return false;

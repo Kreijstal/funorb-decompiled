@@ -214,7 +214,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("error_js5io", (byte) -119);
                 if (null != var2) {
-                  vh.field_M = MenuButton.a(var2, (byte) 80);
+                  RadialSelectorWidget.field_M = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("error_js5connect_full", (byte) -119);
                 if (null != var2) {
@@ -610,7 +610,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_pm_friends", (byte) -109);
                 if (var2 != null) {
-                  lg.field_M = MenuButton.a(var2, (byte) 98);
+                  HotspotTextWidget.field_M = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = nk.a("mu_chat_invisible_and_silent_mode", (byte) -118);
                 if (var2 != null) {
@@ -662,7 +662,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rated_game_tips_setup_plural", (byte) -106);
                 if (null != var2) {
-                  ma.field_G = MenuButton.a(var2, (byte) 113);
+                  LabeledWidget.field_G = MenuButton.a(var2, (byte) 113);
                 }
                 var2 = nk.a("waiting_to_start_hint", (byte) -117);
                 if (null != var2) {
@@ -854,7 +854,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("reportabuse", (byte) -4);
                 if (null != var2) {
-                  vh.field_Y = MenuButton.a(var2, (byte) 109);
+                  RadialSelectorWidget.field_Y = MenuButton.a(var2, (byte) 109);
                 }
                 var2 = nk.a("presstabtochat", (byte) -122);
                 if (null != var2) {
@@ -970,7 +970,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_playerneedsrating", (byte) 5);
                 if (var2 != null) {
-                  cp.field_H = MenuButton.a(var2, (byte) 101);
+                  WidgetLayerStack.field_H = MenuButton.a(var2, (byte) 101);
                 }
                 var2 = nk.a("gameopt_youneedrating", (byte) 38);
                 if (null != var2) {
@@ -1388,7 +1388,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("checking", (byte) -112);
                 if (null != var2) {
-                  jb.field_G = MenuButton.a(var2, (byte) 103);
+                  DropTargetWidget.field_G = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("create_namealreadytaken", (byte) 19);
                 if (null != var2) {
@@ -1560,7 +1560,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_password_confirm", (byte) -121);
                 if (null != var2) {
-                  cp.field_G = MenuButton.a(var2, (byte) 72);
+                  WidgetLayerStack.field_G = MenuButton.a(var2, (byte) 72);
                 }
                 var2 = nk.a("create_email", (byte) 29);
                 if (var2 != null) {
@@ -1860,7 +1860,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ignorelistdupe", (byte) 73);
                 if (var2 != null) {
-                  dn.field_J = MenuButton.a(var2, (byte) 124);
+                  DraggableWidget.field_J = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("ignorenotfound", (byte) 26);
                 if (var2 != null) {
@@ -1922,7 +1922,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("waitingfor_fonts", (byte) -5);
                 if (null != var2) {
-                  vh.field_P = MenuButton.a(var2, (byte) 92);
+                  RadialSelectorWidget.field_P = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("waitingfor_soundeffects", (byte) 116);
                 if (var2 != null) {
@@ -3452,7 +3452,7 @@ final class ContextActionController {
                 if (3 != actionId ||
                   unusedGameFlag != 0) {
                   if (actionId == 10) {
-                    dn.requestSpectateGame(this.gameId, obfuscationGuard - 11, opcode);
+                    DraggableWidget.requestSpectateGame(this.gameId, obfuscationGuard - 11, opcode);
                   }
                   if (actionId != 10 ||
                     unusedGameFlag != 0) {
@@ -3466,11 +3466,11 @@ final class ContextActionController {
                       }
                       ContextMenu.requestGamePlayerPreview(opcode, (byte) 120, 0);
                       if (unusedGameFlag != 0) {
-                        jb.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
+                        DropTargetWidget.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
                         rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
                       }
                     }}}} else {
-                jb.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
+                DropTargetWidget.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
                 if (unusedGameFlag != 0) {
                   rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
                 }

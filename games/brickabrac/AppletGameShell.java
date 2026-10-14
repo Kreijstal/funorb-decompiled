@@ -336,7 +336,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_66_0 = eh.isAsciiDigit(var2.charAt(var3), (byte) 86);
+                      stackIn_66_0 = WidgetTheme.isAsciiDigit(var2.charAt(var3), (byte) 86);
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;

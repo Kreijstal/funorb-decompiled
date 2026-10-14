@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends WidgetGroup implements hf, WidgetActionListener {
+final class hk extends WidgetGroup implements TextFieldListener, WidgetActionListener {
     static String field_L;
     static RgbSprite waterMidSprite;
     private String field_N;
@@ -12,11 +12,11 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
     private boolean field_K;
     private FocusableWidget field_U;
     static RgbSprite arcticFarSprite;
-    private vb field_P;
+    private TextFieldWidget field_P;
     static int field_W;
     static String field_J;
     private boolean field_S;
-    private vb field_T;
+    private TextFieldWidget field_T;
 
     final static void a(byte param0) {
         if (MatchResultScreen.field_t != -BoundedFile.field_i + 0 &&
@@ -36,7 +36,7 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
         super.drawLayer(parentY, parentX, layer, obfuscationGuard);
     }
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -45,29 +45,29 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleWidgetKey(keyCode, obfuscationGuard, focusRoot, character)) {
             return true;
           }
-          if (98 == param0) {
-            stackIn_7_0 = this.b(param2, (byte) -78);
+          if (98 == keyCode) {
+            stackIn_7_0 = this.b(focusRoot, (byte) -78);
             return stackIn_7_0;
           }
-          if (param0 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_11_0 = this.a(param2, (byte) -122);
+          stackIn_11_0 = this.a(focusRoot, (byte) -122);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("hk.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = new StringBuilder().append("hk.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -108,7 +108,7 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
           var10 = (TextFont) null;
           ArchiveIndex.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
           SoftwareFramebuffer.field_e = ug.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
-          cp.field_K = ug.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
+          WidgetLayerStack.field_K = ug.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
           var5 = Rasterizer2D.width;
           var6 = Rasterizer2D.height;
           var14 = Rasterizer2D.pixels;
@@ -121,7 +121,7 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
             hk.i((byte) 86);
           }
           Rasterizer2D.bind(var14, var5, var6);
-          fe.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, cp.field_K);
+          fe.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
           QuickChatPhraseDefinition.quickChatMenuRoot.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,20 +144,20 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
         }
     }
 
-    public final void a(vb param0, int param1) {
+    public final void onSubmitted(TextFieldWidget textField, int obfuscationGuard) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_P == param0) {
+          if (this.field_P == textField) {
             this.field_T.tryFocus(true, (Widget) (this));
           }
-          if (param0 == this.field_T) {
+          if (textField == this.field_T) {
             this.a(25);
           }
-          if (param1 != -40) {
+          if (obfuscationGuard != -40) {
             this.drawLayer(-38, -29, -91, (byte) 20);
           }
           return;
@@ -166,12 +166,12 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
           stackIn_9_1 = new StringBuilder().append("hk.H(");
-          if (param0 == null) {
+          if (textField == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -187,7 +187,7 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
     }
 
     final void a(int param0, String param1) {
-        vb var3 = null;
+        TextFieldWidget var3 = null;
         String var4 = null;
         try {
           var3 = this.field_P;
@@ -195,8 +195,8 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
           if (param0 < 53) {
             this.h(-119);
           }
-          var3.a(var4, -12592, false);
-          this.field_T.c(false);
+          var3.setText(var4, -12592, false);
+          this.field_T.clearText(false);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -234,13 +234,13 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
         }
     }
 
-    public final void a(vb param0, byte param1) {
+    public final void onTextChanged(TextFieldWidget textField, byte obfuscationGuard) {
         try {
-          if (param1 >= -39) {
+          if (obfuscationGuard >= -39) {
             this.h(68);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.I(" + (textField != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -311,8 +311,8 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
 
     hk(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (WidgetRenderer) null);
-        ma dupTemp$0 = null;
-        ma dupTemp$1 = null;
+        LabeledWidget dupTemp$0 = null;
+        LabeledWidget dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
@@ -332,8 +332,8 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
         TextFont var7 = null;
         String var8 = null;
         me var9 = null;
-        ma var12 = null;
-        ma var13 = null;
+        LabeledWidget var12 = null;
+        LabeledWidget var13 = null;
         try {
           stackIn_4_1 = (param4);
           this.field_S = stackIn_4_1;
@@ -346,8 +346,8 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
             this.field_S)) {
             throw new IllegalStateException();
           }
-          this.field_P = (vb) ((Object) new sf(param0, (WidgetListener) (this), 100));
-          this.field_T = (vb) ((Object) new sf("", (WidgetListener) (this), 20));
+          this.field_P = (TextFieldWidget) ((Object) new sf(param0, (WidgetListener) (this), 100));
+          this.field_T = (TextFieldWidget) ((Object) new sf("", (WidgetListener) (this), 20));
           if (!this.field_K) {
             this.field_U = new FocusableWidget(ok.field_a, (WidgetListener) null);
             stackIn_18_1 = null;
@@ -408,11 +408,11 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
               var8 = IndexedSpriteGeometry.field_c;
             }
           }
-          dupTemp$0 = new ma(10, this.y, this.width - 20, 25, this.field_P, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledWidget(10, this.y, this.width - 20, 25, this.field_P, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, true);
           this.y = this.y + (5 + ((Widget) ((Object) var12)).height);
-          dupTemp$1 = new ma(10, this.y, this.width - 20, 25, this.field_T, false, 80, 3, var7, 16777215, wc.field_c);
+          dupTemp$1 = new LabeledWidget(10, this.y, this.width - 20, 25, this.field_T, false, 80, 3, var7, 16777215, wc.field_c);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, true);
           this.field_U.listener = (WidgetListener) (this);
@@ -499,8 +499,8 @@ final class hk extends WidgetGroup implements hf, WidgetActionListener {
           FocusableWidget var3 = (FocusableWidget) null;
           this.onAction(64, -27, (byte) 58, 71, (FocusableWidget) null);
         }
-        this.field_P.c(false);
-        this.field_T.c(false);
+        this.field_P.clearText(false);
+        this.field_T.clearText(false);
     }
 
     static {

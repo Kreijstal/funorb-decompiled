@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class g extends k {
-    private vb field_p;
-    private vb field_k;
+    private TextFieldWidget field_p;
+    private TextFieldWidget field_k;
     static String field_m;
     static UiComponent field_n;
     static RgbSprite[] field_l;
@@ -164,7 +164,7 @@ final class g extends k {
         }
     }
 
-    g(vb param0, vb param1, vb param2) {
+    g(TextFieldWidget param0, TextFieldWidget param1, TextFieldWidget param2) {
         super(param0);
         try {
           this.field_p = param1;

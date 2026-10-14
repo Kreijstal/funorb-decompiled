@@ -246,7 +246,7 @@ final class MusicVoice extends IntrusiveNode {
               return;
             }
             if (null == var13.children) {
-              var13.nameLabel = new UiComponent(0L, vb.field_K);
+              var13.nameLabel = new UiComponent(0L, TextFieldWidget.field_K);
               var13.addChild(var13.nameLabel, 0);
               var13.ratingLabel = new UiComponent(0L, OptionsScreen.field_v);
               if (vd.field_e) {
@@ -454,7 +454,7 @@ final class MusicVoice extends IntrusiveNode {
                 } else {
                   if (var13.ratedGameCount >= var7) {
                     if (var13.rating < var6) {
-                      var25 = rd.a(cp.field_H, new String[]{var21, Integer.toString(var6)}, (byte) 103);
+                      var25 = rd.a(WidgetLayerStack.field_H, new String[]{var21, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
                         var26_int = r.a((byte) -82, ~var13.optionEligibilityMask & var8);
@@ -786,7 +786,7 @@ final class MusicVoice extends IntrusiveNode {
                   pointY = mesh.facePointTwoY[vertexOrFace];
                   pointZ = mesh.facePointTwoZ[vertexOrFace];
                   LevelPackCard.viewFacePointTwoX[vertexOrFace] = (pointX * relativeXXOrWorldXY + pointY * relativeXYOrWorldXZ + relativeXZOrDirectionIndex * pointZ >> 16) + cameraXOrWorldXX;
-                  bf.viewFacePointTwoY[vertexOrFace] = cameraYOrWorldYX + (relativeYZOrDirectionX * pointZ + (relativeYXOrWorldYY * pointX + relativeYYOrWorldYZ * pointY) >> 16);
+                  ToggleButtonWidget.viewFacePointTwoY[vertexOrFace] = cameraYOrWorldYX + (relativeYZOrDirectionX * pointZ + (relativeYXOrWorldYY * pointX + relativeYYOrWorldYZ * pointY) >> 16);
                   LevelCompleteScreen.viewFacePointTwoZ[vertexOrFace] = (pointZ * relativeZZOrDirectionY + (pointX * relativeZXOrWorldZY + pointY * relativeZYOrWorldZZ) >> 16) + cameraZOrWorldZX;
                   pointX = mesh.facePointThreeX[vertexOrFace];
                   pointY = mesh.facePointThreeY[vertexOrFace];

@@ -28,14 +28,14 @@ final class ei implements WidgetRenderer {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        bf var11 = null;
+        ToggleButtonWidget var11 = null;
         try {
-          if (widget instanceof bf) {
+          if (widget instanceof ToggleButtonWidget) {
             stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (bf) (stackIn_3_0);
+          var11 = (ToggleButtonWidget) (stackIn_3_0);
           if (var11 != null) {
             obfuscationGuard = obfuscationGuard & var11.enabled;
           }

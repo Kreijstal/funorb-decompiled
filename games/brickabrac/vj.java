@@ -91,7 +91,7 @@ final class vj {
         try {
           var3 = new String[]{param0, AchievementSubmission.field_j, pl.field_e};
           var4 = new UiComponent[]{param1, QuickChatPhraseRegistry.field_c, (UiComponent) ((Object) f.field_c)};
-          this.field_d = new TabbedPane(0L, eh.field_n, var3, hd.field_c, var4, 0);
+          this.field_d = new TabbedPane(0L, WidgetTheme.field_n, var3, hd.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

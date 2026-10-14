@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb extends SingleChildWidget {
+final class DropTargetWidget extends SingleChildWidget {
     static int field_H;
     static String field_G;
     static int[] field_I;
 
     final void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
-        dn var7 = null;
+        DraggableWidget var7 = null;
         try {
           super.handlePointerRelease(pointerY, pointerX, parentY, focusRoot, obfuscationGuard, parentX);
-          var7 = gd.field_c;
+          var7 = gd.draggedWidget;
           if (var7 != null &&
             this.containsPoint(pointerY, parentY, parentX, 3, pointerX)) {
-            if (this.listener instanceof em) {
-              ((em) (this.listener)).a(-24178, var7, this);
-              gd.field_c = null;
+            if (this.listener instanceof WidgetDropListener) {
+              ((WidgetDropListener) (this.listener)).onDrop(-24178, var7, this);
+              gd.draggedWidget = null;
               return;
             }
-            if (var7.listener instanceof em) {
-              ((em) (var7.listener)).a(-24178, var7, this);
-              gd.field_c = null;
+            if (var7.listener instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var7.listener)).onDrop(-24178, var7, this);
+              gd.draggedWidget = null;
               return;
             }
           }
@@ -29,12 +29,12 @@ final class jb extends SingleChildWidget {
         }
     }
 
-    private jb(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, Widget param6) {
-        super(param0, param1, param2, param3, param4, param5);
+    private DropTargetWidget(int x, int y, int width, int height, WidgetRenderer renderer, WidgetListener listener, Widget child) {
+        super(x, y, width, height, renderer, listener);
         try {
-          this.child = param6;
+          this.child = child;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jb.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class jb extends SingleChildWidget {
         field_I = null;
         field_G = null;
         if (param0 >= -47) {
-          jb.requestJoinGame(-87, 55, -124);
+          DropTargetWidget.requestJoinGame(-87, 55, -124);
         }
     }
 

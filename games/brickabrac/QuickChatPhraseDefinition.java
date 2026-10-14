@@ -237,7 +237,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var27.contextMenu.addIconAction(var28, param0 - 686, 11, var29Lifetime1);
           var30 = bm.contextActions;
           var32 = ef.field_b[1];
-          var31 = lg.field_M;
+          var31 = HotspotTextWidget.field_M;
           var30.contextMenu.addIconAction(var31, param0 - 720, 12, var32);
           var33 = bm.contextActions;
           var35 = ef.field_b[2];

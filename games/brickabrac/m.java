@@ -21,7 +21,7 @@ final class m {
           if (wo.field_b == null) {
             return false;
           }
-          if (null != wo.field_b.g(-113)) {
+          if (null != wo.field_b.getTopVisibleLayer(-113)) {
             return true;
           }
           return false;
@@ -29,7 +29,7 @@ final class m {
         if (wo.field_b == null) {
           return false;
         }
-        if (null != wo.field_b.g(-113)) {
+        if (null != wo.field_b.getTopVisibleLayer(-113)) {
           return true;
         }
         return false;

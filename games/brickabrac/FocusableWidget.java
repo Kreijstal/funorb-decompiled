@@ -53,7 +53,7 @@ class FocusableWidget extends Widget {
     }
 
     FocusableWidget(String param0, WidgetListener param1) {
-        this(param0, bj.field_T.field_q, param1);
+        this(param0, bj.widgetTheme.defaultFocusableRenderer, param1);
     }
 
     FocusableWidget(String text, WidgetRenderer renderer, WidgetListener listener) {
@@ -224,21 +224,21 @@ class FocusableWidget extends Widget {
         }
     }
 
-    boolean a(int param0, byte param1, Widget param2, char param3) {
+    boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 110) {
+          if (obfuscationGuard != 110) {
             return false;
           }
           if (!this.isFocused(-103)) {
             return false;
           }
-          if (param0 != 84 &&
-            param0 != 83) {
+          if (keyCode != 84 &&
+            keyCode != 83) {
             return false;
           }
           this.dispatchAction(-1, 1, -18, -1);
@@ -247,13 +247,13 @@ class FocusableWidget extends Widget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("d.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = new StringBuilder().append("d.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -285,7 +285,7 @@ class FocusableWidget extends Widget {
         this.focusable = true;
         this.focused = false;
         this.enabled = true;
-        this.renderer = bj.field_T.field_r;
+        this.renderer = bj.widgetTheme.emptyFocusableRenderer;
     }
 
     static {

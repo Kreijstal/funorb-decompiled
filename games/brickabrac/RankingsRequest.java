@@ -62,7 +62,7 @@ final class RankingsRequest extends IntrusiveNode {
           if (null != CircleBody.reportAbuseDialog) {
             CircleBody.reportAbuseDialog.drawRoot(true, param0);
           }
-          eh.a(param0, true);
+          WidgetTheme.a(param0, true);
           return;
         }
         var3 = (LevelSequence) null;
@@ -77,7 +77,7 @@ final class RankingsRequest extends IntrusiveNode {
         if (null != CircleBody.reportAbuseDialog) {
           CircleBody.reportAbuseDialog.drawRoot(true, param0);
         }
-        eh.a(param0, true);
+        WidgetTheme.a(param0, true);
         return;
     }
 
@@ -133,7 +133,7 @@ final class RankingsRequest extends IntrusiveNode {
             tickTimeCursor = 49;
           }
           TabbedPane.currentBackground = rd.selectBackground(param3.pack.metadata[param2].attributeByte, (byte) 19);
-          sk.startLocalGame(var5, param2, param3, 1, param1, -12665);
+          OpacityWidget.startLocalGame(var5, param2, param3, 1, param1, -12665);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

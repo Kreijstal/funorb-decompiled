@@ -280,7 +280,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             MovingBody.a((byte) 125, param0.width + param1 + param0.x, param0.x + param1, param3 + param0.y, param0.height + param3 + param0.y);
-            bj.field_T.a(this.field_s, var10, var11, 91, var12, var10);
+            bj.widgetTheme.a(this.field_s, var10, var11, 91, var12, var10);
             sc.popRaster(-94);
           }
           if (param4 <= 118) {
@@ -653,7 +653,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
                 }
               }
               var15 = stackIn_21_0;
-              bj.field_T.a(var13.field_d + this.field_q + (param5.y + (param1 + param5.field_B)), this.field_c >>> 24, this.field_c, this.a(var14, param5, 65263, param2), var13.field_a, (byte) 55, var15 - var14);
+              bj.widgetTheme.a(var13.field_d + this.field_q + (param5.y + (param1 + param5.field_B)), this.field_c >>> 24, this.field_c, this.a(var14, param5, 65263, param2), var13.field_a, (byte) 55, var15 - var14);
             }
             sc.popRaster(-98);
             return;
@@ -883,7 +883,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               var15 = stackIn_8_0 | stackIn_8_1;
               var13.addChild(var13.field_Ac, 0);
               var13.field_Ac.horizontalAlignment = 1;
-              var13.field_Vb = new UiComponent(0L, vb.field_K);
+              var13.field_Vb = new UiComponent(0L, TextFieldWidget.field_K);
               var13.addChild(var13.field_Vb, 0);
               var13.field_tc = new UiComponent(0L, OptionsScreen.field_v);
               var13.addChild(var13.field_tc, 0);
@@ -891,7 +891,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               var13.field_Cc = new UiComponent(0L, OptionsScreen.field_v);
               var13.addChild(var13.field_Cc, 0);
               var13.field_Cc.textInset = 0;
-              var13.field_mc = new UiComponent(0L, vb.field_K);
+              var13.field_mc = new UiComponent(0L, TextFieldWidget.field_K);
               var13.addChild(var13.field_mc, 0);
               var13.field_mc.horizontalAlignment = 2;
               stackIn_10_0 = var13;
@@ -905,7 +905,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               } else {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
-                stackIn_11_4 = vb.field_K;
+                stackIn_11_4 = TextFieldWidget.field_K;
               }
               stackIn_10_0.field_ec = new UiComponent(stackIn_10_3, stackIn_11_4);
               var13.addChild(var13.field_ec, 0);
@@ -935,7 +935,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               var46.verticalAlignment = 1;
               for (var19_int = 0; RankingsRequest.gameSettingCount > var19_int; var19_int++) {
                 var13.field_Ec[var19_int] = new UiComponent(0L, (UiComponent) null);
-                if ((var15 & 1 << jc.field_K + var19_int) != 0) {
+                if ((var15 & 1 << WidgetLayer.field_K + var19_int) != 0) {
                   var13.field_ec.addChild(var13.field_Ec[var19_int], 0);
                 }
                 var13.field_Ec[var19_int].verticalAlignment = 1;
@@ -947,7 +947,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               if (vd.field_e) {
                 stackIn_28_1 = null;
                 stackIn_28_2 = null;
-                stackIn_28_4 = vb.field_K;
+                stackIn_28_4 = TextFieldWidget.field_K;
               } else {
                 stackIn_28_1 = null;
                 stackIn_28_2 = null;
@@ -956,7 +956,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               stackIn_27_0.field_zc = new UiComponent(stackIn_27_3, stackIn_28_4);
               var13.addChild(var13.field_zc, 0);
               var13.field_zc.horizontalAlignment = 2;
-              var13.field_Ub = new UiComponent(0L, vb.field_K);
+              var13.field_Ub = new UiComponent(0L, TextFieldWidget.field_K);
               var13.addChild(var13.field_Ub, 0);
               var13.field_ic = new UiComponent(0L, DualLinkNode.field_t);
               var13.addChild(var13.field_ic, 0);
@@ -1150,7 +1150,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
               if (null != aj.field_c) {
                 for (var37Lifetime1 = 0; var37Lifetime1 < RankingsRequest.gameSettingCount; var37Lifetime1++) {
                   if (null != aj.field_c[var37Lifetime1] &&
-                    (1 << var37Lifetime1 + jc.field_K & var15Lifetime1) != 0) {
+                    (1 << var37Lifetime1 + WidgetLayer.field_K & var15Lifetime1) != 0) {
                     var43 = aj.field_c[var37Lifetime1][255 & var13.settings[var37Lifetime1]];
                     var55 = var43;
                     var13.field_Ec[var37Lifetime1].sprite = var43;
@@ -1297,11 +1297,11 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
                 if (var13.started && (!var13.protocolFlag8 ||
                   !var13.directJoinAvailable &&
                   !var13.invitationPending)) {
-                  dn.requestSpectateGame(var13.getGameId((byte) -107), -85, param4);
+                  DraggableWidget.requestSpectateGame(var13.getGameId((byte) -107), -85, param4);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  jb.requestJoinGame(var13.getGameId((byte) -34), param4, 11912);
+                  DropTargetWidget.requestJoinGame(var13.getGameId((byte) -34), param4, 11912);
                 }
               }
             }

@@ -21,7 +21,7 @@ final class tf {
             field_c = (RgbSprite[]) null;
           }
           if (null != ej.field_I) {
-            if (!ej.field_I.field_N) {
+            if (!ej.field_I.visible) {
               return;
             }
             var3_int = 1;

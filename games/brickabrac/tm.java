@@ -43,14 +43,14 @@ final class tm {
           for (var9 = 0; var9 < 4; var9++) {
             var8[var9] = bg.field_p.nextInt();
           }
-          if (vh.field_N == null ||
-            !(vh.field_N.data.length >= var7_int)) {
-            vh.field_N = new PacketBuffer(var7_int);
+          if (RadialSelectorWidget.field_N == null ||
+            !(RadialSelectorWidget.field_N.data.length >= var7_int)) {
+            RadialSelectorWidget.field_N = new PacketBuffer(var7_int);
           }
-          vh.field_N.position = 0;
-          vh.field_N.writeBytes(param5, -1, param4, param1);
-          vh.field_N.padToPosition((byte) -74, var7_int);
-          vh.field_N.encryptBlocks(18146, var13);
+          RadialSelectorWidget.field_N.position = 0;
+          RadialSelectorWidget.field_N.writeBytes(param5, -1, param4, param1);
+          RadialSelectorWidget.field_N.padToPosition((byte) -74, var7_int);
+          RadialSelectorWidget.field_N.encryptBlocks(18146, var13);
           if (null == RectangleBody.field_r ||
             !(RectangleBody.field_r.data.length >= 100)) {
             RectangleBody.field_r = new PacketBuffer(100);
@@ -69,7 +69,7 @@ final class tm {
           RectangleBody.field_r.writeShort((byte) 122, param1);
           RectangleBody.field_r.applyRsa(param3, param6, 19775);
           param0.writeBytes(RectangleBody.field_r.data, -1, 0, RectangleBody.field_r.position);
-          param0.writeBytes(vh.field_N.data, -1, 0, vh.field_N.position);
+          param0.writeBytes(RadialSelectorWidget.field_N.data, -1, 0, RadialSelectorWidget.field_N.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

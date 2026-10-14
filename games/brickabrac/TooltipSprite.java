@@ -144,7 +144,7 @@ final class TooltipSprite extends IntrusiveNode {
           }
           var2 = ej.pendingAchievementMaskRequests.first(obfuscationGuard ^ -13402);
           while (var2 != null) {
-            ma.sendAchievementMaskRequest((byte) -85, opcode);
+            LabeledWidget.sendAchievementMaskRequest((byte) -85, opcode);
             var2 = ej.pendingAchievementMaskRequests.next((byte) 116);
           }
           return;

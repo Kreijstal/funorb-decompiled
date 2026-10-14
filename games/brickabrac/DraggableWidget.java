@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-final class dn extends SingleChildWidget {
+final class DraggableWidget extends SingleChildWidget {
     static UiComponent field_K;
-    private int field_H;
+    private int dragOffsetY;
     static String field_J;
-    private int field_O;
-    private int field_G;
-    private int field_I;
+    private int originY;
+    private int dragOffsetX;
+    private int originX;
     static UiComponent field_N;
-    private boolean field_L;
-    private boolean field_M;
+    private boolean returnToOrigin;
+    private boolean childPressTakesPriority;
 
     final boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         int var8_int = 0;
@@ -25,7 +25,7 @@ final class dn extends SingleChildWidget {
         try {
           var8_int = super.handlePointerPress(focusRoot, pointerX, parentX, parentY, button, pointerY, obfuscationGuard) ? 1 : 0;
           if (var8_int != 0 &&
-            this.field_M) {
+            this.childPressTakesPriority) {
             return true;
           }
           if (!this.containsPoint(pointerY, parentY, parentX, obfuscationGuard ^ 3, pointerX)) {
@@ -36,9 +36,9 @@ final class dn extends SingleChildWidget {
           if (1 != button) {
             return true;
           }
-          this.field_H = -parentY + (-this.y + pointerY);
-          gd.field_c = this;
-          this.field_G = -parentX - this.x + pointerX;
+          this.dragOffsetY = -parentY + (-this.y + pointerY);
+          gd.draggedWidget = this;
+          this.dragOffsetX = -parentX - this.x + pointerX;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,22 +124,22 @@ final class dn extends SingleChildWidget {
         super.a((byte) -39);
         this.child.setBounds(this.height, 0, 0, (byte) -119, this.width);
         if (param0 > -7) {
-          dn.g(1);
+          DraggableWidget.g(1);
         }
-        this.field_I = this.x;
-        this.field_O = this.y;
+        this.originX = this.x;
+        this.originY = this.y;
     }
 
-    private dn(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, Widget param6, boolean param7, boolean param8) {
-        super(param0, param1, param2, param3, param4, param5);
-        this.field_O = 2147483647;
-        this.field_I = 2147483647;
+    private DraggableWidget(int x, int y, int width, int height, WidgetRenderer renderer, WidgetListener listener, Widget child, boolean returnToOrigin, boolean childPressTakesPriority) {
+        super(x, y, width, height, renderer, listener);
+        this.originY = 2147483647;
+        this.originX = 2147483647;
         try {
-          this.field_L = param7 ? true : false;
-          this.child = param6;
-          this.field_M = param8 ? true : false;
+          this.returnToOrigin = returnToOrigin ? true : false;
+          this.child = child;
+          this.childPressTakesPriority = childPressTakesPriority ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dn.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + (child != null ? "{...}" : "null") + ',' + returnToOrigin + ',' + childPressTakesPriority + ')');
         }
     }
 
@@ -159,8 +159,8 @@ final class dn extends SingleChildWidget {
           if ((!(this.child instanceof FocusableWidget) ||
             ((FocusableWidget) (this.child)).enabled) &&
             1 == this.pressedButton) {
-            var5_int = MusicPatch.pointerX - this.field_G - parentX;
-            var6 = po.pointerY + (-this.field_H - parentY);
+            var5_int = MusicPatch.pointerX - this.dragOffsetX - parentX;
+            var6 = po.pointerY + (-this.dragOffsetY - parentY);
             if (this.x == var5_int &&
               var6 == this.y) {
               super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
@@ -168,13 +168,13 @@ final class dn extends SingleChildWidget {
             }
             this.y = var6;
             this.x = var5_int;
-            if (this.listener instanceof li) {
-              ((li) (this.listener)).a((byte) -68, parentY, parentX, this);
+            if (this.listener instanceof WidgetDragListener) {
+              ((WidgetDragListener) (this.listener)).onDragged((byte) -68, parentY, parentX, this);
             }
           } else {
-            if (this.field_L) {
-              if (this.x != this.field_I) {
-                var5_int = this.field_I - this.x;
+            if (this.returnToOrigin) {
+              if (this.x != this.originX) {
+                var5_int = this.originX - this.x;
                 stackIn_11_1 = this.x;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int <= 0) {
@@ -187,8 +187,8 @@ final class dn extends SingleChildWidget {
                 }
                 this.x = stackIn_11_1 + stackIn_14_2;
               }
-              if (this.field_O != this.y) {
-                var5_int = this.field_O - this.y;
+              if (this.originY != this.y) {
+                var5_int = this.originY - this.y;
                 stackIn_19_1 = this.y;
                 if (2 >= Math.abs(var5_int)) {
                   if (var5_int <= 0) {
@@ -222,7 +222,7 @@ final class dn extends SingleChildWidget {
     public static void a(int param0) {
         field_J = null;
         if (param0 != 1) {
-          dn.g(-43);
+          DraggableWidget.g(-43);
         }
         field_N = null;
         field_K = null;
@@ -272,10 +272,10 @@ final class dn extends SingleChildWidget {
           if (this.a(param3, 1595637992, param0, param1)) {
             this.a(param1, param0, 0, param3);
             this.a(param3, true, param1, param0);
-            discarded$64 = param3.append(" revert=").append(this.field_L);
-            if (this.field_I != 2147483647 &&
-              this.field_O != 2147483647) {
-              discarded$65 = param3.append(" to ").append(this.field_I).append(',').append(this.field_O);
+            discarded$64 = param3.append(" revert=").append(this.returnToOrigin);
+            if (this.originX != 2147483647 &&
+              this.originY != 2147483647) {
+              discarded$65 = param3.append(" to ").append(this.originX).append(',').append(this.originY);
             }
           }
           if (param2 != 24) {

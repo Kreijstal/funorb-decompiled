@@ -42,7 +42,7 @@ final class n {
             boolean decompiledFrameRemainder0 = true;
             if (message.channel == UnderwaterBackground.chatHistory[var3].channel) {
               var4 = UnderwaterBackground.chatHistory[var3].getRetentionCategory(true);
-              if (eh.chatHistoryCategoryLimit < BubbleDistortion.chatHistoryCategoryCounts[var4]) {
+              if (WidgetTheme.chatHistoryCategoryLimit < BubbleDistortion.chatHistoryCategoryCounts[var4]) {
                 BubbleDistortion.chatHistoryCategoryCounts[var4] = BubbleDistortion.chatHistoryCategoryCounts[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
@@ -175,8 +175,8 @@ final class n {
             var17 = var15;
             pf.field_h.height = 0;
             var17.width = 0;
-            var5 = dn.field_K;
-            dn.field_K.height = 0;
+            var5 = DraggableWidget.field_K;
+            DraggableWidget.field_K.height = 0;
             var5.width = 0;
             var6 = AppletGameShell.field_e;
             AppletGameShell.field_e.height = 0;
@@ -184,7 +184,7 @@ final class n {
             ba.field_v.text = DelayedPacket.field_n.toUpperCase();
             var7 = (MultiplayerMatch.field_d.width + 2) / 2;
             AppletGameShell.field_e.setBounds(40, -40 + MultiplayerMatch.field_d.height, 0, var7 - 2, (byte) 64);
-            dn.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var7, MultiplayerMatch.field_d.width - var7, (byte) 64);
+            DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var7, MultiplayerMatch.field_d.width - var7, (byte) 64);
             if (1 == w.field_n.length &&
               w.field_n[0] == 2) {
               var8 = 0;
@@ -214,7 +214,7 @@ final class n {
                 break;
               }
             }
-            dn.field_K.enabled = true;
+            DraggableWidget.field_K.enabled = true;
             if (fh.pendingGameOptionsReceived) {
               GameUiController.field_e.enabled = false;
               t.field_f.text = gh.field_a;
@@ -240,9 +240,9 @@ final class n {
                 var9 = (String) (var9) + "...";
               }
               AppletGameShell.field_e.text = (String) (var9);
-              dn.field_K.text = wl.field_L.toUpperCase();
+              DraggableWidget.field_K.text = wl.field_L.toUpperCase();
             } else {
-              stackIn_28_0 = dn.field_K;
+              stackIn_28_0 = DraggableWidget.field_K;
               if (var8 == 0) {
                 stackIn_29_1 = NewAchievementsScreen.field_F;
               } else {
@@ -253,9 +253,9 @@ final class n {
               if (var8 == 0) {
                 stackIn_32_1 = go.field_f;
               } else {
-                stackIn_32_1 = ma.field_G;
+                stackIn_32_1 = LabeledWidget.field_G;
               }
-              stackIn_31_0.text = rd.a(stackIn_32_1, new String[]{dn.field_K.text}, (byte) 103);
+              stackIn_31_0.text = rd.a(stackIn_32_1, new String[]{DraggableWidget.field_K.text}, (byte) 103);
               MeshAttributeRecord.field_g = true;
               AppletGameShell.field_e.text = SocialListEntry.field_Pb;
               GameUiController.field_e.enabled = true;
@@ -279,8 +279,8 @@ final class n {
                 }
               }
               if (!MeshAttributeRecord.field_g) {
-                dn.field_K.enabled = false;
-                if (dn.field_K.hovered) {
+                DraggableWidget.field_K.enabled = false;
+                if (DraggableWidget.field_K.hovered) {
                   var9 = null;
                   if (MusicVoiceMixer.field_s) {
                     var9 = "<col=A00000>" + QuickChatMenu.field_ac + "</col>";
@@ -320,7 +320,7 @@ final class n {
             if (GameUiController.field_e.pressedButton != 0) {
               ef.requestReturnToLobby(-22809, param0);
             }
-            if (dn.field_K.pressedButton != 0) {
+            if (DraggableWidget.field_K.pressedButton != 0) {
               if (!fh.pendingGameOptionsReceived) {
                 UnderwaterBackground.requestFindOpponents(param0, (byte) 98);
               } else {

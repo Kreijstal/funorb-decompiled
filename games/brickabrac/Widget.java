@@ -77,7 +77,7 @@ class Widget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        bj.field_T.a(true, CappedUrlRequest.field_j, b.field_a, var5);
+        bj.widgetTheme.a(true, CappedUrlRequest.field_j, b.field_a, var5);
     }
 
     final static void a(int param0, int param1, int param2, PlayerBoard param3, MultiplayerMatch param4, byte param5) {
@@ -209,11 +209,11 @@ class Widget extends IntrusiveNode {
         int var5;
         int var6;
         int var7;
-        dn var8;
-        dn var9;
-        dn var10;
-        dn var11;
-        dn var12;
+        DraggableWidget var8;
+        DraggableWidget var9;
+        DraggableWidget var10;
+        DraggableWidget var11;
+        DraggableWidget var12;
         int var6Lifetime1;
         int var6Lifetime2;
         int var6Lifetime3;
@@ -277,12 +277,12 @@ class Widget extends IntrusiveNode {
             return param3;
           }
           this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-          var8 = gd.field_c;
+          var8 = gd.draggedWidget;
           if (var8 != null) {
-            if (var8.listener instanceof em) {
-              ((em) (var8.listener)).a(-24178, var8, (jb) null);
+            if (var8.listener instanceof WidgetDropListener) {
+              ((WidgetDropListener) (var8.listener)).onDrop(-24178, var8, (DropTargetWidget) null);
             }
-            gd.field_c = null;
+            gd.draggedWidget = null;
           }
           var6Lifetime10 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = cb.heldButton;
@@ -302,13 +302,13 @@ class Widget extends IntrusiveNode {
                 if (0 == cb.heldButton &&
                   ScrollPaneWithFooter.field_Pb != 0) {
                   this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-                  var9 = gd.field_c;
+                  var9 = gd.draggedWidget;
                   if (var9 != null) {
-                    if (!(var9.listener instanceof em)) {
-                      gd.field_c = null;
+                    if (!(var9.listener instanceof WidgetDropListener)) {
+                      gd.draggedWidget = null;
                     } else {
-                      ((em) (var9.listener)).a(-24178, var9, (jb) null);
-                      gd.field_c = null;
+                      ((WidgetDropListener) (var9.listener)).onDrop(-24178, var9, (DropTargetWidget) null);
+                      gd.draggedWidget = null;
                     }
                   }
                 }
@@ -331,12 +331,12 @@ class Widget extends IntrusiveNode {
               return param3;
             }
             this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-            var10 = gd.field_c;
+            var10 = gd.draggedWidget;
             if (var10 != null) {
-              if (var10.listener instanceof em) {
-                ((em) (var10.listener)).a(-24178, var10, (jb) null);
+              if (var10.listener instanceof WidgetDropListener) {
+                ((WidgetDropListener) (var10.listener)).onDrop(-24178, var10, (DropTargetWidget) null);
               }
-              gd.field_c = null;
+              gd.draggedWidget = null;
             }
             var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = cb.heldButton;
@@ -367,22 +367,22 @@ class Widget extends IntrusiveNode {
                 return param3;
               }
               this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-              var11 = gd.field_c;
+              var11 = gd.draggedWidget;
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = cb.heldButton;
                 MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
-              if (!(var11.listener instanceof em)) {
-                gd.field_c = null;
+              if (!(var11.listener instanceof WidgetDropListener)) {
+                gd.draggedWidget = null;
                 var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = cb.heldButton;
                 MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
-              ((em) (var11.listener)).a(-24178, var11, (jb) null);
-              gd.field_c = null;
+              ((WidgetDropListener) (var11.listener)).onDrop(-24178, var11, (DropTargetWidget) null);
+              gd.draggedWidget = null;
               var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = cb.heldButton;
               MusicVoice.a(this.getTooltip(15), 22546);
@@ -404,12 +404,12 @@ class Widget extends IntrusiveNode {
           return param3;
         }
         this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-        var12 = gd.field_c;
+        var12 = gd.draggedWidget;
         if (var12 != null) {
-          if (var12.listener instanceof em) {
-            ((em) (var12.listener)).a(-24178, var12, (jb) null);
+          if (var12.listener instanceof WidgetDropListener) {
+            ((WidgetDropListener) (var12.listener)).onDrop(-24178, var12, (DropTargetWidget) null);
           }
-          gd.field_c = null;
+          gd.draggedWidget = null;
         }
         var6Lifetime5 = -57 % ((56 - param2) / 43);
         ScrollPaneWithFooter.field_Pb = cb.heldButton;
@@ -572,7 +572,7 @@ class Widget extends IntrusiveNode {
           field_p = -38L;
           return false;
         }
-        if (this.a(param1, (byte) 110, this, param0)) {
+        if (this.handleWidgetKey(param1, (byte) 110, this, param0)) {
           return true;
         }
         var4Lifetime1 = param1;
@@ -665,14 +665,14 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, byte param1, Widget param2, char param3) {
+    boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == 110) {
+          if (obfuscationGuard == 110) {
             return false;
           }
           return true;
@@ -680,13 +680,13 @@ class Widget extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_7_0 = var5;
-          stackIn_7_1 = new StringBuilder().append("oc.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_7_1 = new StringBuilder().append("oc.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -804,7 +804,7 @@ class Widget extends IntrusiveNode {
     }
 
     Widget(String param0, WidgetListener param1) {
-        this(param0, bj.field_T.field_i, param1);
+        this(param0, bj.widgetTheme.field_i, param1);
     }
 
     void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
@@ -910,7 +910,7 @@ class Widget extends IntrusiveNode {
 
     String getTooltip(int obfuscationGuard) {
         if (obfuscationGuard < 6) {
-          this.a(-58, (byte) -3, (Widget) null, '*');
+          this.handleWidgetKey(-58, (byte) -3, (Widget) null, '*');
           if (this.mouseOver) {
             return this.tooltip;
           }

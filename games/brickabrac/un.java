@@ -41,11 +41,11 @@ final class un {
         int drawsLossesBoundary;
         int lossesRatingBoundary;
         try {
-          vh.decodedRankingWins = packet.readUnsignedShort(65280) << 5;
+          RadialSelectorWidget.decodedRankingWins = packet.readUnsignedShort(65280) << 5;
           winsDrawsBoundary = packet.readUnsignedByte(255);
           fh.decodedRankingDraws = 1835008 & winsDrawsBoundary << 18;
           int guardArithmetic = -32 % ((obfuscationGuard + 69) / 37);
-          vh.decodedRankingWins = vh.decodedRankingWins + (winsDrawsBoundary >> 3);
+          RadialSelectorWidget.decodedRankingWins = RadialSelectorWidget.decodedRankingWins + (winsDrawsBoundary >> 3);
           fh.decodedRankingDraws = fh.decodedRankingDraws + (packet.readUnsignedShort(65280) << 2);
           drawsLossesBoundary = packet.readUnsignedByte(255);
           sf.decodedRankingLosses = 2064384 & drawsLossesBoundary << 15;

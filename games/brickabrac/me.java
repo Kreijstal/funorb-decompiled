@@ -67,7 +67,7 @@ final class me {
             return stackIn_9_0;
           }
           if (AchievementBrowserScreen.isIgnoredPlayer(124, name)) {
-            stackIn_12_0 = rd.a(dn.field_J, new String[]{name}, (byte) 103);
+            stackIn_12_0 = rd.a(DraggableWidget.field_J, new String[]{name}, (byte) 103);
             return stackIn_12_0;
           }
           if (IsaacGenerator.ignoreCount >= 100) {

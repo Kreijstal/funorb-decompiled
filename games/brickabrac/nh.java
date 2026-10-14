@@ -345,8 +345,8 @@ final class nh {
             var27 = var23;
             pf.field_h.height = 0;
             var27.width = 0;
-            dn.field_K.height = 0;
-            var6 = dn.field_K;
+            DraggableWidget.field_K.height = 0;
+            var6 = DraggableWidget.field_K;
             var6.width = 0;
             var7 = AppletGameShell.field_e;
             AppletGameShell.field_e.height = 0;
@@ -390,10 +390,10 @@ final class nh {
                   pf.field_h.frameSprites = fm.field_b.activeFrameSprites;
                 }
               }
-              dn.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var9, MultiplayerMatch.field_d.width - var9, (byte) 64);
-              dn.field_K.text = ConstructionBackground.field_r.toUpperCase();
-              var8 = dn.field_K;
-              stackIn_23_0 = dn.field_K;
+              DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var9, MultiplayerMatch.field_d.width - var9, (byte) 64);
+              DraggableWidget.field_K.text = ConstructionBackground.field_r.toUpperCase();
+              var8 = DraggableWidget.field_K;
+              stackIn_23_0 = DraggableWidget.field_K;
               stackIn_24_1 = (param4) && (ic.optionChangeDeadlineMillis == 0L);
               stackIn_23_0.enabled = stackIn_24_1;
               var10 = 2;
@@ -495,8 +495,8 @@ final class nh {
                 }
               }
               if (var10 < 2) {
-                dn.field_K.enabled = false;
-                decompiledFrameRemainder1 = !(!dn.field_K.hovered);
+                DraggableWidget.field_K.enabled = false;
+                decompiledFrameRemainder1 = !(!DraggableWidget.field_K.hovered);
                 if (decompiledFrameRemainder1) {
                   var11_ref = null;
                   var12 = 0;
@@ -657,8 +657,8 @@ final class nh {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  dn.field_K.enabled = false;
-                  if (dn.field_K.hovered) {
+                  DraggableWidget.field_K.enabled = false;
+                  if (DraggableWidget.field_K.hovered) {
                     if (sb.field_c.field_d.selectedTab != 0) {
                       ep.field_e = rd.a(ta.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
                       if (var19 != 0) {
@@ -702,7 +702,7 @@ final class nh {
             if (pf.field_h.pressedButton != 0) {
               hc.field_c = true;
             }
-            if (dn.field_K.pressedButton != 0) {
+            if (DraggableWidget.field_K.pressedButton != 0) {
               sl.field_w = true;
             }
             if (0 != nd.field_a.pressedButton) {

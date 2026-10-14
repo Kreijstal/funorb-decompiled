@@ -34,7 +34,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           }
           return;
         }
-        dn.requestSpectateGame(0, -108, 11);
+        DraggableWidget.requestSpectateGame(0, -108, 11);
         if (param0 != 122) {
           packSelectorIcons = (RgbSprite[]) null;
           return;
@@ -55,7 +55,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
           try {
-            sk.field_G = param0;
+            OpacityWidget.field_G = param0;
             try {
               var3 = param2.getParameter("cookieprefix");
               var4 = param2.getParameter("cookiehost");
@@ -121,17 +121,17 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         if (param0 != 103) {
           return (String) null;
         }
-        if (!ma.field_P.ensureIndex((byte) -127)) {
+        if (!LabeledWidget.field_P.ensureIndex((byte) -127)) {
           return tm.field_e;
         }
-        if (!ma.field_P.ensureGroupAvailableByName("commonui", -28138)) {
-          return WidgetGroup.field_F + " - " + ma.field_P.getGroupProgressByName(0, "commonui") + "%";
+        if (!LabeledWidget.field_P.ensureGroupAvailableByName("commonui", -28138)) {
+          return WidgetGroup.field_F + " - " + LabeledWidget.field_P.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!vh.field_S.ensureIndex((byte) -127)) {
-          return vh.field_P;
+        if (!RadialSelectorWidget.field_S.ensureIndex((byte) -127)) {
+          return RadialSelectorWidget.field_P;
         }
-        if (!vh.field_S.ensureGroupAvailableByName("commonui", -28138)) {
-          return m.field_k + " - " + vh.field_S.getGroupProgressByName(0, "commonui") + "%";
+        if (!RadialSelectorWidget.field_S.ensureGroupAvailableByName("commonui", -28138)) {
+          return m.field_k + " - " + RadialSelectorWidget.field_S.getGroupProgressByName(0, "commonui") + "%";
         }
         if (!ja.field_c.ensureIndex((byte) -127)) {
           return IntHistoryBuffer.field_k;

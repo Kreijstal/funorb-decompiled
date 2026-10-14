@@ -139,17 +139,17 @@ final class qn {
         PauseMenuScreen.field_x = param1;
         if (param4 == -6532) {
           Mesh3D.field_k = param3;
-          lg.field_L = param2;
+          HotspotTextWidget.field_L = param2;
           wo.field_a = param0;
-          FarmBackground.field_w = lg.field_L - PauseMenuScreen.field_x;
+          FarmBackground.field_w = HotspotTextWidget.field_L - PauseMenuScreen.field_x;
           ag.field_E = -Mesh3D.field_k + wo.field_a;
           return;
         }
         qn.b(109);
         Mesh3D.field_k = param3;
-        lg.field_L = param2;
+        HotspotTextWidget.field_L = param2;
         wo.field_a = param0;
-        FarmBackground.field_w = lg.field_L - PauseMenuScreen.field_x;
+        FarmBackground.field_w = HotspotTextWidget.field_L - PauseMenuScreen.field_x;
         ag.field_E = -Mesh3D.field_k + wo.field_a;
     }
 

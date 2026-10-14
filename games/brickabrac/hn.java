@@ -73,7 +73,7 @@ final class hn {
           if (tf.ignoreIndex == null) {
             tf.ignoreIndex = new SecondaryHashTable(64);
           }
-          bf.friendEntries = param1.children;
+          ToggleButtonWidget.friendEntries = param1.children;
           CachedArchiveSource.ignoreEntries = param0.children;
           uc.e(108);
         } catch (RuntimeException runtimeException) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class an extends pj implements hf, ph {
+final class an extends pj implements TextFieldListener, ph {
     ug field_l;
     static String[] field_j;
     static String field_g;
@@ -58,24 +58,24 @@ final class an extends pj implements hf, ph {
         return DualLinkIterator.field_c;
     }
 
-    public final void a(vb param0, int param1) {
+    public final void onSubmitted(TextFieldWidget textField, int obfuscationGuard) {
         try {
-          if (param1 != -40) {
+          if (obfuscationGuard != -40) {
             field_i = (QuickChatParameterType) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.H(" + (textField != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    public final void a(vb param0, byte param1) {
+    public final void onTextChanged(TextFieldWidget textField, byte obfuscationGuard) {
         try {
           this.a(false);
-          if (param1 > -39) {
+          if (obfuscationGuard > -39) {
             this.c(113);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "an.I(" + (textField != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

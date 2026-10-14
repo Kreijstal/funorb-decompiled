@@ -31,7 +31,7 @@ final class cr extends Widget {
     final static void a(int param0, int param1, int param2, int param3, PlatformServices param4, String param5, int param6, int param7, int param8) {
         ec.field_P = param4;
         ArcticBackground.field_t = param7;
-        vb.field_S = param0;
+        TextFieldWidget.field_S = param0;
         LevelMetadata.field_k = param5;
         if (param2 <= 17) {
           return;

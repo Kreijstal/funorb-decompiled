@@ -11,7 +11,7 @@ final class ng {
 
     final static void requestScreen(boolean usePointer, int obfuscationGuard, int screenId) {
         if (hd.pendingScreen != null) {
-          sk.finishScreenTransition((byte) -127);
+          OpacityWidget.finishScreenTransition((byte) -127);
         }
         if (lp.currentScreen.screenId == screenId) {
           return;

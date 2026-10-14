@@ -338,7 +338,7 @@ final class AchievementIcon extends IntrusiveNode {
               this.cachedThumbnail.drawTransparent(this.x, this.y);
               return;
             }
-            bf.field_L.f(this.x, this.y, 256);
+            ToggleButtonWidget.field_L.f(this.x, this.y, 256);
           } else {
             qh.field_c.f(this.x, this.y, 384);
           }

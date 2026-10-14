@@ -40,7 +40,7 @@ final class jj {
               }
               return var1 != 0;
             }
-            if (!lg.a(9)) {
+            if (!HotspotTextWidget.a(9)) {
               var1 = 1;
               ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
               if (me.b(param0 + 39)) {
@@ -61,14 +61,14 @@ final class jj {
             }
             return var1 != 0;
           }
-          if (!lg.a(9)) {
+          if (!HotspotTextWidget.a(9)) {
             if (uc.f(21651)) {
               Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
               var1 = 1;
               DesertBackground.g(param0 ^ -11184849);
             }
             if (GameClock.c((byte) 119) &&
-              !lg.a(9)) {
+              !HotspotTextWidget.a(9)) {
               var1 = 1;
               ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
             }
@@ -84,7 +84,7 @@ final class jj {
           o.a(-24435);
           var1 = 1;
           if (GameClock.c((byte) 119) &&
-            !lg.a(9)) {
+            !HotspotTextWidget.a(9)) {
             var1 = 1;
             ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
           }
@@ -101,7 +101,7 @@ final class jj {
           var1 = 1;
           IntArrayRequest.c(126);
           if (GameClock.c((byte) 119) &&
-            !lg.a(9)) {
+            !HotspotTextWidget.a(9)) {
             var1 = 1;
             ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
           }
@@ -114,14 +114,14 @@ final class jj {
           }
           return var1 != 0;
         }
-        if (!lg.a(9)) {
+        if (!HotspotTextWidget.a(9)) {
           if (uc.f(21651)) {
             Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
             var1 = 1;
             DesertBackground.g(param0 ^ -11184849);
           }
           if (GameClock.c((byte) 119) &&
-            !lg.a(9)) {
+            !HotspotTextWidget.a(9)) {
             var1 = 1;
             ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
           }
@@ -137,7 +137,7 @@ final class jj {
         o.a(-24435);
         var1Lifetime1 = 1;
         if (GameClock.c((byte) 119) &&
-          !lg.a(9)) {
+          !HotspotTextWidget.a(9)) {
           var1Lifetime1 = 1;
           ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
         }

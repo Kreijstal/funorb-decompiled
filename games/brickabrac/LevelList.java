@@ -92,21 +92,21 @@ final class LevelList {
         ag.buttonLabels[15] = pl.field_c[1];
         ag.buttonLabels[16] = pl.field_c[2];
         sl.field_A[12] = uo.field_b;
-        sl.field_A[10] = eh.field_d;
+        sl.field_A[10] = WidgetTheme.field_d;
         ag.buttonLabels[18] = LevelCompleteScreen.field_E[1];
         ag.buttonLabels[26] = PauseMenuScreen.field_u;
         ag.buttonLabels[22] = FocusableWidget.field_D;
         sl.field_A[13] = TimedSplashScreen.field_s;
         hm.field_b = new String[]{mi.field_a, qm.field_c, TabbedPane.field_Pb, s.field_a};
         sl.field_A[16] = MeshAttributeRecord.field_d;
-        qn.packNames = new String[]{vh.field_T, Widget.field_u};
-        eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
+        qn.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
+        WidgetTheme.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         sl.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{ff.field_g, MusicPatch.field_m, bm.field_b, RectangleBody.field_t};
         ml.field_e = new String[]{qi.field_N, bg.field_o, MonotonicTime.field_a, eb.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
         sl.field_A[17] = MusicPatch.field_q;
-        sl.field_A[14] = vh.field_V;
+        sl.field_A[14] = RadialSelectorWidget.field_V;
         sl.field_A[18] = GameScreen.field_g;
     }
 

@@ -144,10 +144,10 @@ final class wl extends FocusableWidget {
                 request.localDraws = fh.decodedRankingDraws;
                 request.localRating = vj.decodedRankingRating;
                 request.localLosses = sf.decodedRankingLosses;
-                request.localWins = vh.decodedRankingWins;
-                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, vh.decodedRankingWins);
+                request.localWins = RadialSelectorWidget.decodedRankingWins;
+                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               } else {
-                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, vh.decodedRankingWins);
+                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               }
             }
             gr.sortRankingViews(12429, rowLimit);

@@ -30,11 +30,11 @@ final class OptionsScreen extends FramedMenuScreen {
         RuntimeException decompiledCaughtException = null;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = ma.field_O.measureText(param2) + 2;
-          var5 = ma.field_O.baselineHeight;
+          var4_int = LabeledWidget.field_O.measureText(param2) + 2;
+          var5 = LabeledWidget.field_O.baselineHeight;
           var6 = new RgbSprite(var4_int, var5);
           var6.bindRasterTarget();
-          ma.field_O.drawCentered(param2, var4_int / param0, 2 + ma.field_O.ascent, 0, -1);
+          LabeledWidget.field_O.drawCentered(param2, var4_int / param0, 2 + LabeledWidget.field_O.ascent, 0, -1);
           BallPulseEffect.framebuffer.bindRaster((byte) 124);
           var7 = new RgbSprite(var4_int * param1, var5 * param1);
           var7.bindRasterTarget();
@@ -43,7 +43,7 @@ final class OptionsScreen extends FramedMenuScreen {
           BallPulseEffect.framebuffer.bindRaster((byte) 126);
           if (param3) {
             var8 = var7.width;
-            var9 = 2 + ma.field_O.capHeight * param1;
+            var9 = 2 + LabeledWidget.field_O.capHeight * param1;
             var10 = new int[var8 * var9];
             for (var11 = 0; var9 > var11; var11++) {
               for (var12 = 0; var12 < var8; var12++) {

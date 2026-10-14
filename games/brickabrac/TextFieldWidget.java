@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vb extends FocusableWidget {
-    private long field_P;
-    private int field_Q;
-    private boolean field_M;
-    private int field_L;
+class TextFieldWidget extends FocusableWidget {
+    private long lastPressMillis;
+    private int maxLength;
+    private boolean doubleClickSelection;
+    private int selectionAnchor;
     static int field_S;
-    private int field_T;
+    private int caretIndex;
     static UiComponent field_K;
-    private boolean field_N;
-    private int field_R;
-    private long field_O;
+    private boolean autoScrollCaret;
+    private int wordSelectionEnd;
+    private long caretBlinkStartMillis;
 
-    final void c(boolean param0) {
-        this.field_L = 0;
+    final void clearText(boolean obfuscationGuard) {
+        this.selectionAnchor = 0;
         this.text = "";
-        this.field_T = 0;
-        this.n(122);
-        if (param0) {
+        this.caretIndex = 0;
+        this.notifyTextChanged(122);
+        if (obfuscationGuard) {
           field_S = 97;
         }
     }
@@ -30,52 +30,52 @@ class vb extends FocusableWidget {
         field_K = null;
     }
 
-    private final void h(int param0) {
+    private final void deleteSelection(int obfuscationGuard) {
         int var2 = 0;
         int var3 = 0;
-        if (this.field_L != this.field_T) {
-          var2 = this.field_L >= this.field_T ? this.field_T : this.field_L;
-          var3 = this.field_L < this.field_T ? this.field_T : this.field_L;
-          this.field_L = var2;
-          this.field_T = var2;
+        if (this.selectionAnchor != this.caretIndex) {
+          var2 = this.selectionAnchor >= this.caretIndex ? this.caretIndex : this.selectionAnchor;
+          var3 = this.selectionAnchor < this.caretIndex ? this.caretIndex : this.selectionAnchor;
+          this.selectionAnchor = var2;
+          this.caretIndex = var2;
           this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
-          this.n(46);
+          this.notifyTextChanged(46);
         }
-        if (param0 >= -34) {
+        if (obfuscationGuard >= -34) {
           String var4 = (String) null;
-          this.a(false, (String) null);
+          this.insertClipboardText(false, (String) null);
         }
     }
 
-    vb(String param0, WidgetListener param1, int param2) {
-        super(param0, param1);
-        this.field_P = 0L;
-        this.field_M = false;
-        this.field_R = -1;
+    TextFieldWidget(String text, WidgetListener listener, int maxLength) {
+        super(text, listener);
+        this.lastPressMillis = 0L;
+        this.doubleClickSelection = false;
+        this.wordSelectionEnd = -1;
         try {
-          this.renderer = bj.field_T.field_b;
-          this.field_Q = param2;
-          this.a(param0, -12592, true);
-          this.field_N = true;
-          this.field_O = MonotonicTime.nowMillis(false);
+          this.renderer = bj.widgetTheme.textFieldRenderer;
+          this.maxLength = maxLength;
+          this.setText(text, -12592, true);
+          this.autoScrollCaret = true;
+          this.caretBlinkStartMillis = MonotonicTime.nowMillis(false);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vb.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + maxLength + ')');
         }
     }
 
-    private final int h(byte param0) {
+    private final int nextWordBoundary(byte obfuscationGuard) {
         int var2;
         int var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = this.text.length();
-        if (var2 == this.field_T) {
-          return this.field_T;
+        if (var2 == this.caretIndex) {
+          return this.caretIndex;
         }
-        if (param0 < 93) {
+        if (obfuscationGuard < 93) {
           return -128;
         }
-        for (var3 = this.field_T + 1; var3 < var2; var3++) {
+        for (var3 = this.caretIndex + 1; var3 < var2; var3++) {
           if (this.text.charAt(var3 - 1) != 32) {
             continue;
           }
@@ -93,7 +93,7 @@ class vb extends FocusableWidget {
         int var8;
         WidgetLayoutProvider var9;
         var8 = BrickABrac.field_J ? 1 : 0;
-        if (!this.field_N) {
+        if (!this.autoScrollCaret) {
           this.field_r = 0;
           this.field_B = 0;
           return;
@@ -102,7 +102,7 @@ class vb extends FocusableWidget {
           return;
         }
         if (param0 != 81) {
-          this.field_L = 16;
+          this.selectionAnchor = 16;
         }
         var9 = (WidgetLayoutProvider) ((Object) this.renderer);
         var3 = var9.c((Widget) (this), -3);
@@ -114,7 +114,7 @@ class vb extends FocusableWidget {
           this.field_r = 0;
           return;
         }
-        var7 = this.field_r + var3.a(this.field_T, (byte) -108);
+        var7 = this.field_r + var3.a(this.caretIndex, (byte) -108);
         if (-var6 + var5 < var7) {
           this.field_r = -var7 - (-var5 + var6 - this.field_r);
         } else {
@@ -132,7 +132,7 @@ class vb extends FocusableWidget {
         return;
     }
 
-    private final void a(boolean param0, String param1) {
+    private final void insertClipboardText(boolean copyToClipboard, String text) {
         int var3_int = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -140,33 +140,33 @@ class vb extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_Q != -1) {
-            var3_int = this.field_Q - this.text.length();
+          if (this.maxLength != -1) {
+            var3_int = this.maxLength - this.text.length();
             if (var3_int >= 0) {
               return;
             }
-            param1 = param1.substring(0, var3_int);
+            text = text.substring(0, var3_int);
           }
-          if (this.field_T == this.text.length()) {
-            this.text = this.text + param1;
+          if (this.caretIndex == this.text.length()) {
+            this.text = this.text + text;
           } else {
-            this.text = this.text.substring(0, this.field_T) + param1 + this.text.substring(this.field_T, this.text.length());
+            this.text = this.text.substring(0, this.caretIndex) + text + this.text.substring(this.caretIndex, this.text.length());
           }
-          this.field_T = this.field_T + param1.length();
-          this.field_L = this.field_T;
-          if (param0) {
+          this.caretIndex = this.caretIndex + text.length();
+          this.selectionAnchor = this.caretIndex;
+          if (copyToClipboard) {
             this.l(95);
-            this.n(80);
+            this.notifyTextChanged(80);
           } else {
-            this.n(80);
+            this.notifyTextChanged(80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("vb.U(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("vb.U(").append(copyToClipboard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -191,15 +191,15 @@ class vb extends FocusableWidget {
               var7 = (WidgetLayoutProvider) ((Object) this.renderer);
               var6 = var7.a((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
               if (var6 != -1) {
-                if (this.field_M &&
-                  this.field_R > var6 &&
-                  var6 > this.field_L) {
-                  var6 = this.field_R;
+                if (this.doubleClickSelection &&
+                  this.wordSelectionEnd > var6 &&
+                  var6 > this.selectionAnchor) {
+                  var6 = this.wordSelectionEnd;
                 }
-                this.field_T = var6;
+                this.caretIndex = var6;
               }
             }
-            this.field_O = MonotonicTime.nowMillis(false);
+            this.caretBlinkStartMillis = MonotonicTime.nowMillis(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,8 +226,8 @@ class vb extends FocusableWidget {
           }
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.h(param0 ^ -8);
-            this.a(false, var2);
+            this.deleteSelection(param0 ^ -8);
+            this.insertClipboardText(false, var2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -239,7 +239,7 @@ class vb extends FocusableWidget {
         }
     }
 
-    final void a(String param0, int param1, boolean param2) {
+    final void setText(String text, int obfuscationGuard, boolean suppressChangeCallback) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         String var5 = null;
@@ -249,24 +249,24 @@ class vb extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          if (param0 == null) {
-            param0 = "";
+          if (text == null) {
+            text = "";
           }
-          this.text = param0;
-          var4_int = param0.length();
-          if (this.field_Q != -1 &&
-            this.field_Q < var4_int) {
-            this.text = this.text.substring(0, this.field_Q);
+          this.text = text;
+          var4_int = text.length();
+          if (this.maxLength != -1 &&
+            this.maxLength < var4_int) {
+            this.text = this.text.substring(0, this.maxLength);
           }
           dupTemp$1 = this.text.length();
-          this.field_L = dupTemp$1;
-          this.field_T = dupTemp$1;
-          if (!param2) {
-            this.n(19);
+          this.selectionAnchor = dupTemp$1;
+          this.caretIndex = dupTemp$1;
+          if (!suppressChangeCallback) {
+            this.notifyTextChanged(19);
           }
-          if (param1 != -12592) {
+          if (obfuscationGuard != -12592) {
             var5 = (String) null;
-            this.a((String) null, 58, false);
+            this.setText((String) null, 58, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -274,72 +274,72 @@ class vb extends FocusableWidget {
           var4 = decompiledCaughtException;
           stackIn_14_0 = var4;
           stackIn_14_1 = new StringBuilder().append("vb.F(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(',').append(suppressChangeCallback).append(')').toString());
         }
     }
 
     private final void l(int param0) {
-        String var2 = this.a((byte) -108);
+        String var2 = this.getSelectedText((byte) -108);
         if (!(var2.length() <= param0)) {
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.a((byte) -124))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -124))), (java.awt.datatransfer.ClipboardOwner) null);
         }
     }
 
     private final void a(int param0, int param1) {
-        this.field_T = param0;
+        this.caretIndex = param0;
         if (!IntArrayRequest.heldKeys[param1]) {
-          this.field_L = this.field_T;
+          this.selectionAnchor = this.caretIndex;
         }
     }
 
-    private final void j(int param0) {
-        if (param0 != -66) {
-          this.field_M = false;
+    private final void notifySubmitted(int obfuscationGuard) {
+        if (obfuscationGuard != -66) {
+          this.doubleClickSelection = false;
         }
-        if (this.listener instanceof hf) {
-          ((hf) (this.listener)).a(this, -40);
-        }
-    }
-
-    void n(int param0) {
-        if (this.listener instanceof hf) {
-          ((hf) (this.listener)).a(this, (byte) -100);
-        }
-        if (param0 <= 7) {
-          vb.i(41);
+        if (this.listener instanceof TextFieldListener) {
+          ((TextFieldListener) (this.listener)).onSubmitted(this, -40);
         }
     }
 
-    private final int d(boolean param0) {
+    void notifyTextChanged(int obfuscationGuard) {
+        if (this.listener instanceof TextFieldListener) {
+          ((TextFieldListener) (this.listener)).onTextChanged(this, (byte) -100);
+        }
+        if (obfuscationGuard <= 7) {
+          TextFieldWidget.i(41);
+        }
+    }
+
+    private final int previousWordBoundary(boolean obfuscationGuard) {
         int var2;
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_T == 0) {
-          return this.field_T;
+        if (this.caretIndex == 0) {
+          return this.caretIndex;
         }
-        for (var2 = -1 + this.field_T; var2 > 0; var2--) {
+        for (var2 = -1 + this.caretIndex; var2 > 0; var2--) {
           if (this.text.charAt(-1 + var2) != 32) {
             continue;
           }
           break;
         }
-        if (param0) {
-          this.field_L = -72;
+        if (obfuscationGuard) {
+          this.selectionAnchor = -72;
         }
         return var2;
     }
 
-    private final String a(byte param0) {
-        int var2 = this.field_L >= this.field_T ? this.field_T : this.field_L;
-        if (param0 > -97) {
+    private final String getSelectedText(byte obfuscationGuard) {
+        int var2 = this.selectionAnchor >= this.caretIndex ? this.caretIndex : this.selectionAnchor;
+        if (obfuscationGuard > -97) {
           return (String) null;
         }
-        int var3 = this.field_L < this.field_T ? this.field_T : this.field_L;
+        int var3 = this.selectionAnchor < this.caretIndex ? this.caretIndex : this.selectionAnchor;
         return this.text.substring(var2, var3);
     }
 
@@ -354,12 +354,12 @@ class vb extends FocusableWidget {
           this.renderer.paintWidget(this.enabled, -20618, parentX, (Widget) (this), parentY);
           if (this.renderer instanceof WidgetLayoutProvider) {
             var5 = (WidgetLayoutProvider) ((Object) this.renderer);
-            if (this.field_T != this.field_L) {
-              var5.a(-15964, parentY, parentX, this.field_L, this.field_T, (Widget) (this));
+            if (this.caretIndex != this.selectionAnchor) {
+              var5.a(-15964, parentY, parentX, this.selectionAnchor, this.caretIndex, (Widget) (this));
             }
             var6 = MonotonicTime.nowMillis(false);
-            if ((var6 - this.field_O) % 1000L < 500L) {
-              var5.a((Widget) (this), parentX, this.field_T, parentY, (byte) 123);
+            if ((var6 - this.caretBlinkStartMillis) % 1000L < 500L) {
+              var5.a((Widget) (this), parentX, this.caretIndex, parentY, (byte) 123);
             }
           }
         }
@@ -374,7 +374,7 @@ class vb extends FocusableWidget {
         AchievementIcon.field_j = param0;
     }
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         int dupTemp$0 = 0;
         int stackIn_38_1 = 0;
         int stackIn_69_1 = 0;
@@ -384,109 +384,109 @@ class vb extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_O = MonotonicTime.nowMillis(false);
-          if (param1 != 110) {
+          this.caretBlinkStartMillis = MonotonicTime.nowMillis(false);
+          if (obfuscationGuard != 110) {
             field_S = 20;
           }
-          if (param3 != 60 &&
-            62 != param3) {
-            if (param3 >= 32 &&
-              param3 <= 126) {
-              if (this.field_T != this.field_L) {
-                this.h(-84);
+          if (character != 60 &&
+            62 != character) {
+            if (character >= 32 &&
+              character <= 126) {
+              if (this.caretIndex != this.selectionAnchor) {
+                this.deleteSelection(-84);
               }
-              if (-1 == this.field_Q ||
-                !(this.text.length() >= this.field_Q)) {
-                if (this.field_T >= this.text.length()) {
-                  this.text = this.text + param3;
+              if (-1 == this.maxLength ||
+                !(this.text.length() >= this.maxLength)) {
+                if (this.caretIndex >= this.text.length()) {
+                  this.text = this.text + character;
                   dupTemp$0 = this.text.length();
-                  this.field_T = dupTemp$0;
-                  this.field_L = dupTemp$0;
+                  this.caretIndex = dupTemp$0;
+                  this.selectionAnchor = dupTemp$0;
                 } else {
-                  this.text = this.text.substring(0, this.field_T) + param3 + this.text.substring(this.field_T, this.text.length());
-                  this.field_T = this.field_T + 1;
-                  this.field_L = this.field_T;
+                  this.text = this.text.substring(0, this.caretIndex) + character + this.text.substring(this.caretIndex, this.text.length());
+                  this.caretIndex = this.caretIndex + 1;
+                  this.selectionAnchor = this.caretIndex;
                 }
-                this.n(66);
+                this.notifyTextChanged(66);
               }
               return true;
             }
-            if (param0 != 85) {
-              if (param0 == 101) {
-                if (this.field_T != this.field_L) {
-                  this.h(-114);
+            if (keyCode != 85) {
+              if (keyCode == 101) {
+                if (this.caretIndex != this.selectionAnchor) {
+                  this.deleteSelection(-114);
                   return true;
                 }
-                if (this.field_T < this.text.length()) {
-                  this.field_L = this.field_T + 1;
-                  this.h(param1 - 182);
+                if (this.caretIndex < this.text.length()) {
+                  this.selectionAnchor = this.caretIndex + 1;
+                  this.deleteSelection(obfuscationGuard - 182);
                   return true;
                 }
               } else {
-                if (param0 == 13) {
-                  this.c(false);
+                if (keyCode == 13) {
+                  this.clearText(false);
                   return true;
                 }
-                if (96 == param0) {
-                  if (this.field_T <= 0) {
+                if (96 == keyCode) {
+                  if (this.caretIndex <= 0) {
                     return false;
                   }
                   if (!IntArrayRequest.heldKeys[82]) {
-                    stackIn_38_1 = this.field_T - 1;
+                    stackIn_38_1 = this.caretIndex - 1;
                   } else {
-                    stackIn_38_1 = this.d(false);
+                    stackIn_38_1 = this.previousWordBoundary(false);
                   }
-                  this.a(stackIn_38_1, param1 - 29);
+                  this.a(stackIn_38_1, obfuscationGuard - 29);
                   return true;
                 }
-                if (param0 == 97) {
-                  if (this.field_T < this.text.length()) {
+                if (keyCode == 97) {
+                  if (this.caretIndex < this.text.length()) {
                     if (!IntArrayRequest.heldKeys[82]) {
-                      stackIn_69_1 = this.field_T + 1;
+                      stackIn_69_1 = this.caretIndex + 1;
                     } else {
-                      stackIn_69_1 = this.h((byte) 106);
+                      stackIn_69_1 = this.nextWordBoundary((byte) 106);
                     }
                     this.a(stackIn_69_1, 81);
                     return true;
                   }
                 } else {
-                  if (param0 == 102) {
+                  if (keyCode == 102) {
                     this.a(0, 81);
                     return true;
                   }
-                  if (param0 == 103) {
+                  if (keyCode == 103) {
                     this.a(this.text.length(), 81);
                     return true;
                   }
-                  if (param0 == 84) {
-                    this.j(-66);
+                  if (keyCode == 84) {
+                    this.notifySubmitted(-66);
                     return true;
                   }
                   if (IntArrayRequest.heldKeys[82] &&
-                    param0 == 65) {
+                    keyCode == 65) {
                     this.g((byte) -49);
                     return true;
                   }
                   if (IntArrayRequest.heldKeys[82] &&
-                    66 == param0) {
+                    66 == keyCode) {
                     this.l(0);
                     return true;
                   }
                   if (IntArrayRequest.heldKeys[82] &&
-                    67 == param0) {
+                    67 == keyCode) {
                     this.m(32);
                     return true;
                   }
                 }
               }
             } else {
-              if (this.field_L != this.field_T) {
-                this.h(param1 ^ -55);
+              if (this.selectionAnchor != this.caretIndex) {
+                this.deleteSelection(obfuscationGuard ^ -55);
                 return true;
               }
-              if (this.field_T > 0) {
-                this.field_L = -1 + this.field_T;
-                this.h(param1 ^ -41);
+              if (this.caretIndex > 0) {
+                this.selectionAnchor = -1 + this.caretIndex;
+                this.deleteSelection(obfuscationGuard ^ -41);
                 return true;
               }
             }
@@ -497,21 +497,21 @@ class vb extends FocusableWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_82_0 = var5;
-          stackIn_82_1 = new StringBuilder().append("vb.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_82_1 = new StringBuilder().append("vb.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_83_2 = "null";
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_82_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(character).append(')').toString());
         }
     }
 
     private final void g(byte param0) {
         this.l(param0 ^ -49);
-        this.h(-118);
+        this.deleteSelection(-118);
         if (param0 != -49) {
-          this.field_O = -103L;
+          this.caretBlinkStartMillis = -103L;
         }
     }
 
@@ -540,18 +540,18 @@ class vb extends FocusableWidget {
           }
           this.a(stackIn_7_1, 81);
           var8_long = MonotonicTime.nowMillis(false);
-          stackIn_10_1 = !(-this.field_P + var8_long >= 250L);
-          this.field_M = stackIn_10_1;
-          if (this.field_M) {
-            this.field_L = this.d(false);
-            this.field_T = this.h((byte) 103);
-            if (this.field_T > 0 &&
-              this.text.charAt(-1 + this.field_T) == 32) {
-              this.field_T = this.field_T - 1;
+          stackIn_10_1 = !(-this.lastPressMillis + var8_long >= 250L);
+          this.doubleClickSelection = stackIn_10_1;
+          if (this.doubleClickSelection) {
+            this.selectionAnchor = this.previousWordBoundary(false);
+            this.caretIndex = this.nextWordBoundary((byte) 103);
+            if (this.caretIndex > 0 &&
+              this.text.charAt(-1 + this.caretIndex) == 32) {
+              this.caretIndex = this.caretIndex - 1;
             }
-            this.field_R = this.field_T;
+            this.wordSelectionEnd = this.caretIndex;
           }
-          this.field_P = var8_long;
+          this.lastPressMillis = var8_long;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wo {
-    static cp field_b;
+    static WidgetLayerStack field_b;
     static int field_a;
 
     public static void b(int param0) {

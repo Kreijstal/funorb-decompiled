@@ -86,7 +86,7 @@ final class pf implements WidgetRenderer {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        vh var14 = null;
+        RadialSelectorWidget var14 = null;
         Widget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -96,36 +96,36 @@ final class pf implements WidgetRenderer {
         int var11Lifetime1;
         int var12Lifetime1;
         try {
-          if (widget instanceof vh) {
+          if (widget instanceof RadialSelectorWidget) {
             stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
-          var14 = (vh) (stackIn_3_0);
+          var14 = (RadialSelectorWidget) (stackIn_3_0);
           if (var14 != null) {
           }
           Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_o);
-          var7 = var14.field_Z + parentX + widget.x;
-          var8 = var14.field_R + (parentY + widget.y);
-          Rasterizer2D.f(var7, var8, var14.field_W, this.field_e);
+          var7 = var14.centerX + parentX + widget.x;
+          var8 = var14.centerY + (parentY + widget.y);
+          Rasterizer2D.f(var7, var8, var14.radius, this.field_e);
           if (var14.field_Q != -1) {
-            var9 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.field_K;
-            var11 = (int)(-Math.sin(var9) * (double)var14.field_W);
-            var12 = (int)(Math.cos(var9) * (double)var14.field_W);
+            var9 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.sectorCount;
+            var11 = (int)(-Math.sin(var9) * (double)var14.radius);
+            var12 = (int)(Math.cos(var9) * (double)var14.radius);
             Rasterizer2D.f(var7 + var11, var12 + var8, 1, this.field_m);
           }
           Rasterizer2D.f(var7, var8, 2, 1);
           if (callbackGuard != -20618) {
             return;
           }
-          var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_O) / (double)var14.field_K;
-          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_W);
-          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_W);
+          var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.selectedSector) / (double)var14.sectorCount;
+          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.radius);
+          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.radius);
           Rasterizer2D.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_l == null) {
             return;
           }
-          var13 = var14.field_Z + var14.field_W + this.field_n;
+          var13 = var14.centerX + var14.radius + this.field_n;
           this.field_l.a(widget.text, widget.x + parentX + var13, parentY + (widget.y + this.field_g), widget.width - (this.field_n + var13), widget.height - (this.field_n << 1), this.field_k, this.field_j, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

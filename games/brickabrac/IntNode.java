@@ -175,7 +175,7 @@ final class IntNode extends IntrusiveNode {
               gr.field_c.b(param3 + (param0.x256 >> 8) / param2, param4 + (param0.y256 >> 8) / param2, 128);
             }
           } else {
-            jc.field_J.drawTransparent((param0.x256 >> 8) / param2 + param3, param4 + (param0.y256 >> 8) / param2);
+            WidgetLayer.field_J.drawTransparent((param0.x256 >> 8) / param2 + param3, param4 + (param0.y256 >> 8) / param2);
           }
           if (param1 != -119) {
             var7 = (Object) null;

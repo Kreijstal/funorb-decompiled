@@ -39,11 +39,11 @@ abstract class IndexedSpriteGeometry {
         if (ik.field_g == MusicEnvelope.field_f) {
           return ReportAbuseDialog.field_cc;
         }
-        if (!ma.field_I.b(96)) {
-          return ma.field_I.a(0);
+        if (!LabeledWidget.field_I.b(96)) {
+          return LabeledWidget.field_I.a(0);
         }
         if (MusicVoice.field_l == MusicEnvelope.field_f) {
-          return ma.field_I.a(0);
+          return LabeledWidget.field_I.a(0);
         }
         return GameScreen.field_d;
     }

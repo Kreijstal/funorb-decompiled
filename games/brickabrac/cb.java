@@ -8,7 +8,7 @@ final class cb extends k {
     static java.awt.Frame field_o;
     static int heldButton;
     static String field_p;
-    private vb field_m;
+    private TextFieldWidget field_m;
 
     final static void e(byte param0) {
         String var1 = null;
@@ -22,7 +22,7 @@ final class cb extends k {
         if (null == ej.field_I) {
           var1 = PlayerInputBatch.a(-123);
           DirectByteStorage.field_k = new hk(var1, (String) null, true, false, false);
-          ResourceArchive.field_f.a(-126, rj.field_c);
+          ResourceArchive.field_f.pushLayer(-126, rj.field_c);
           rj.field_c.b((byte) 108, DirectByteStorage.field_k);
           rj.field_c.j(20);
           return;
@@ -30,7 +30,7 @@ final class cb extends k {
         ej.field_I.m(17);
         var1Lifetime1 = PlayerInputBatch.a(-123);
         DirectByteStorage.field_k = new hk(var1Lifetime1, (String) null, true, false, false);
-        ResourceArchive.field_f.a(-126, rj.field_c);
+        ResourceArchive.field_f.pushLayer(-126, rj.field_c);
         rj.field_c.b((byte) 108, DirectByteStorage.field_k);
         rj.field_c.j(20);
     }
@@ -88,7 +88,7 @@ final class cb extends k {
 
     final static void b(boolean param0) {
         k.outgoingPackets.writeCipheredOpcode(-13413, 9);
-        vh.field_L = param0 ? true : false;
+        RadialSelectorWidget.field_L = param0 ? true : false;
     }
 
     final qh a(String param0, byte param1) {
@@ -132,7 +132,7 @@ final class cb extends k {
         }
     }
 
-    cb(vb param0, vb param1) {
+    cb(TextFieldWidget param0, TextFieldWidget param1) {
         super(param0);
         try {
           this.field_m = param1;

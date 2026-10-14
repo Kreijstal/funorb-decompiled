@@ -68,8 +68,8 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
             }
             var2 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.next((byte) 116));
           }
-          if (jc.field_M != null) {
-            var2Lifetime1 = (SoundPlayback) (jc.field_M.first(param0 - 13977));
+          if (WidgetLayer.field_M != null) {
+            var2Lifetime1 = (SoundPlayback) (WidgetLayer.field_M.first(param0 - 13977));
             while (var2Lifetime1 != null) {
               stackIn_14_0 = var2Lifetime1.sourceNode.isLinked(0);
               if (stackIn_14_0) {
@@ -77,7 +77,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
               } else {
                 var2Lifetime1.unlink((byte) 111);
               }
-              var2Lifetime1 = (SoundPlayback) (jc.field_M.next((byte) 116));
+              var2Lifetime1 = (SoundPlayback) (WidgetLayer.field_M.next((byte) 116));
             }
             return;
           }
@@ -89,7 +89,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
     }
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
@@ -100,34 +100,34 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         try {
           if (this.child != null &&
             this.child.isFocused(-127) &&
-            this.child.a(param0, (byte) 110, param2, param3)) {
+            this.child.handleWidgetKey(keyCode, (byte) 110, focusRoot, character)) {
             return true;
           }
-          var5_int = param0;
+          var5_int = keyCode;
           if (var5_int != 80) {
-            if (param1 == 110) {
+            if (obfuscationGuard == 110) {
               return false;
             }
             field_C = (IndexedSprite[]) null;
             return false;
           }
           if (IntArrayRequest.heldKeys[81]) {
-            stackIn_9_0 = this.a(param2, (byte) -35);
+            stackIn_9_0 = this.a(focusRoot, (byte) -35);
           } else {
-            stackIn_9_0 = this.b(true, param2);
+            stackIn_9_0 = this.b(true, focusRoot);
           }
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("h.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_16_1 = new StringBuilder().append("h.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -630,7 +630,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
           return;
         }
         if (vd.field_e) {
-          RectangleBody.field_q.addChild(dn.field_N, 0);
+          RectangleBody.field_q.addChild(DraggableWidget.field_N, 0);
         }
         RectangleBody.field_q.addChild(Ball.field_A, 0);
         ap.field_b = new vj(ArcticBackground.field_u, RectangleBody.field_q);

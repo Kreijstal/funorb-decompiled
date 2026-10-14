@@ -117,8 +117,8 @@ abstract class sl extends DualLinkNode {
           var23 = IsaacGenerator.field_b.viewport;
           var24 = var23;
           var24.horizontalAlignment = 1;
-          dn.field_N = new UiComponent(0L, CappedUrlRequest.field_l);
-          dn.field_N.horizontalAlignment = 1;
+          DraggableWidget.field_N = new UiComponent(0L, CappedUrlRequest.field_l);
+          DraggableWidget.field_N.horizontalAlignment = 1;
           HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, VerticalScrollbar.field_Rb.toUpperCase());
           sc.field_b = new UiComponent(0L, qh.field_j, rl.field_c.toUpperCase());
           ll.field_e = new UiComponent(0L, FarmBackground.field_x);
@@ -260,7 +260,7 @@ abstract class sl extends DualLinkNode {
             }
           }
           pf.field_h = new UiComponent(0L, fm.field_b);
-          dn.field_K = new UiComponent(0L, fm.field_b);
+          DraggableWidget.field_K = new UiComponent(0L, fm.field_b);
           AppletGameShell.field_e = new UiComponent(0L, Paddle.field_C);
           AppletGameShell.field_e.copyStyle((byte) -125, CappedUrlRequest.field_l);
           var17 = AppletGameShell.field_e;
@@ -283,7 +283,7 @@ abstract class sl extends DualLinkNode {
             }
           }
           MultiplayerMatch.field_d.addChild(pf.field_h, 0);
-          MultiplayerMatch.field_d.addChild(dn.field_K, 0);
+          MultiplayerMatch.field_d.addChild(DraggableWidget.field_K, 0);
           MultiplayerMatch.field_d.addChild(AppletGameShell.field_e, 0);
           TableNameEntry.field_h = new UiComponent(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
           nd.field_a = new UiComponent(0L, GameUiController.field_b, fh.field_e.toUpperCase());

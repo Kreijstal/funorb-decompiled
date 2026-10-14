@@ -447,7 +447,7 @@ final class bm {
             bm.a((byte) 96);
           }
           BackgroundRegistry.scenes[11] = (BackgroundScene) ((Object) new NinjaBackground(11, "BAB_ninja", "BaB_block_ninja", 7));
-          sk.pendingMusicLoads = 11;
+          OpacityWidget.pendingMusicLoads = 11;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,9 +3,9 @@
  */
 final class na extends ug {
     private boolean field_P;
-    private vb field_R;
-    private vb field_O;
-    private vb field_M;
+    private TextFieldWidget field_R;
+    private TextFieldWidget field_O;
+    private TextFieldWidget field_M;
     static LevelPack[] field_L;
     static String field_N;
     static NodeDeque pendingAchievementSubmissions;
@@ -58,7 +58,7 @@ final class na extends ug {
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         if (param0 != 5390) {
-          this.field_M = (vb) null;
+          this.field_M = (TextFieldWidget) null;
         }
         try {
           stackIn_3_0 = Integer.parseInt(this.field_O.text);
@@ -111,9 +111,9 @@ final class na extends ug {
     private na(WidgetRenderer param0, boolean param1) {
         super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.field_R = (vb) ((Object) new sf("", (WidgetListener) null, 2));
-          this.field_M = (vb) ((Object) new sf("", (WidgetListener) null, 2));
-          this.field_O = (vb) ((Object) new sf("", (WidgetListener) null, 4));
+          this.field_R = (TextFieldWidget) ((Object) new sf("", (WidgetListener) null, 2));
+          this.field_M = (TextFieldWidget) ((Object) new sf("", (WidgetListener) null, 2));
+          this.field_O = (TextFieldWidget) ((Object) new sf("", (WidgetListener) null, 4));
           this.field_O.renderer = param0;
           this.field_M.renderer = param0;
           this.field_R.renderer = param0;
@@ -217,7 +217,7 @@ final class na extends ug {
         int var4;
         Brick.e(-79);
         if (m.field_h >= 0) {
-          dn.field_N.text = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
+          DraggableWidget.field_N.text = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_48_0 = fe.field_gb;
           stackIn_49_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.currentLobbyGame) && (nl.pendingLobbyGame == null);
@@ -229,7 +229,7 @@ final class na extends ug {
           stackIn_61_1 = (param0) && (!param1) && (sc.field_c);
           ((UiComponent) (Object) stackIn_60_0).updateRoot(stackIn_61_1, -15211);
         } else {
-          dn.field_N.text = null;
+          DraggableWidget.field_N.text = null;
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_7_0 = fe.field_gb;
           stackIn_8_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.currentLobbyGame) && (nl.pendingLobbyGame == null);

@@ -137,13 +137,13 @@ final class NinjaBackground extends BackgroundScene {
 
     final static void e(byte param0) {
         int var1 = 35 / ((-43 - param0) / 37);
-        ResourceArchive.field_f.a(-125);
+        ResourceArchive.field_f.hideLayers(-125);
         if (null != sj.field_b) {
-          ResourceArchive.field_f.a(-76, sj.field_b);
+          ResourceArchive.field_f.pushLayer(-76, sj.field_b);
           return;
         }
         sj.field_b = new tb(ResourceArchive.field_f, AppletGameShell.field_b);
-        ResourceArchive.field_f.a(-76, sj.field_b);
+        ResourceArchive.field_f.pushLayer(-76, sj.field_b);
     }
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {

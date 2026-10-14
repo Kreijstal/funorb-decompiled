@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends SingleChildWidget {
+final class OpacityWidget extends SingleChildWidget {
     static String field_G;
     static RgbSprite[] constructionCentreSprites;
     static int field_I;
-    int field_K;
+    int opacity256;
     static int pendingMusicLoads;
 
-    public sk() {
+    public OpacityWidget() {
         super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
-        this.field_K = 256;
+        this.opacity256 = 256;
     }
 
     final static void startLocalGame(String[] playerNames, int startingLevel, LevelSequence configuration, int localPlayerCount, boolean inputFlag, int obfuscationGuard) {
@@ -38,7 +38,7 @@ final class sk extends SingleChildWidget {
           OptionsScreen.resultCounterOne = 57;
           DelegatingCanvas.field_c = 13;
           if (obfuscationGuard != -12665) {
-            sk.a(122);
+            OpacityWidget.a(122);
           }
           QuickChatMenu.field_Wb = 3;
           hg.field_e = 51550 + (hi.field_w.nextInt(102) << 16);
@@ -139,7 +139,7 @@ final class sk extends SingleChildWidget {
           }
           if (HalloweenBackground.field_y) {
             eq.a(7);
-            bf.a((byte) 119);
+            ToggleButtonWidget.a((byte) 119);
             uc.e(-94);
             HalloweenBackground.field_y = false;
           }
@@ -158,10 +158,10 @@ final class sk extends SingleChildWidget {
         if (this.child == null) {
           return;
         }
-        if (0 == this.field_K) {
+        if (0 == this.opacity256) {
           return;
         }
-        if (256 == this.field_K) {
+        if (256 == this.opacity256) {
           this.child.drawLayer(parentY + this.y, parentX + this.x, layer, (byte) -11);
           return;
         }
@@ -169,7 +169,7 @@ final class sk extends SingleChildWidget {
         IndexedSpriteGeometry.pushSpriteRaster(-113, var6);
         this.child.drawLayer(0, 0, layer, obfuscationGuard);
         sc.popRaster(obfuscationGuard ^ 119);
-        var6.b(parentX + this.x, parentY + this.y, this.field_K);
+        var6.b(parentX + this.x, parentY + this.y, this.opacity256);
     }
 
     public static void a(int param0) {
@@ -210,14 +210,14 @@ final class sk extends SingleChildWidget {
         }
     }
 
-    sk(Widget param0) {
-        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (WidgetListener) null);
+    OpacityWidget(Widget child) {
+        super(child.x, child.y, child.width, child.height, (WidgetRenderer) null, (WidgetListener) null);
         try {
-          param0.setBounds(this.height, 0, 0, (byte) -119, this.width);
-          this.field_K = 256;
-          this.child = param0;
+          child.setBounds(this.height, 0, 0, (byte) -119, this.width);
+          this.opacity256 = 256;
+          this.child = child;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sk.<init>(" + (child != null ? "{...}" : "null") + ')');
         }
     }
 

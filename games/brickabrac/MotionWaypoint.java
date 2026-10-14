@@ -23,7 +23,7 @@ final class MotionWaypoint extends MovingBody {
     }
 
     final static void c(int param0) {
-        if (!lg.a(9)) {
+        if (!HotspotTextWidget.a(9)) {
           return;
         }
         bq.a(false, param0, (byte) 104);

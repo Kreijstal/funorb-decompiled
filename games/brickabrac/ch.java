@@ -133,7 +133,7 @@ final class ch {
             friendInsertionIndex = LevelPackSelectScreen.friendCount;
             LevelPackSelectScreen.friendCount = LevelPackSelectScreen.friendCount + 1;
             friendEntry.insertionIndex = friendInsertionIndex;
-            bf.friendEntries.addLast(friendEntry, (byte) 3);
+            ToggleButtonWidget.friendEntries.addLast(friendEntry, (byte) 3);
           }
           if (friendServer != null) {
             friendServer = ((String) (friendServer)).intern();
@@ -142,10 +142,10 @@ final class ch {
           friendEntry.serverName = (String) (friendServer);
           friendEntry.previousName = previousFriendName;
           friendEntry.unlink((byte) 111);
-          existingFriend = (SocialListEntry) (bf.friendEntries.first(-65));
+          existingFriend = (SocialListEntry) (ToggleButtonWidget.friendEntries.first(-65));
           while (null != existingFriend) {
             if (ArchiveNetworkClient.comesBeforeFriend(200, existingFriend, friendEntry)) {
-              existingFriend = (SocialListEntry) (bf.friendEntries.next((byte) 116));
+              existingFriend = (SocialListEntry) (ToggleButtonWidget.friendEntries.next((byte) 116));
               if (unusedGameFlag == 0) {
                 continue;
               }
@@ -158,7 +158,7 @@ final class ch {
               return;
             }
           }
-          bf.friendEntries.addLast(friendEntry, (byte) 3);
+          ToggleButtonWidget.friendEntries.addLast(friendEntry, (byte) 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -404,7 +404,7 @@ final class GameplayScreen extends GameScreen {
             DelegatingCanvas.a((byte) 32);
             var18 = this.match.playerBoards[0];
             if (2 == var18.boardState) {
-              jc.a(var18.controlMask, 0, (byte) -85);
+              WidgetLayer.a(var18.controlMask, 0, (byte) -85);
             }
             if (var18.boardState == 0 ||
               !MusicVoice.a((byte) 62)) {
@@ -444,7 +444,7 @@ final class GameplayScreen extends GameScreen {
               this.queueProgressAchievement(false, 239, 16);
             }
             if (this.lastReportedLevel < this.match.configuration.getPeriod(95)) {
-              w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
+              w.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
             }
           }
           if (var20.field_tb) {
@@ -1088,7 +1088,7 @@ final class GameplayScreen extends GameScreen {
           this.lastReportedLevel = levelIndex;
           counterLevelAdjustment = levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + counterLevelAdjustment;
-          w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
+          w.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
         }
     }
 
@@ -1098,7 +1098,7 @@ final class GameplayScreen extends GameScreen {
         LevelSequence var4 = new LevelSequence(qh.field_b, kk.createIndexOrder(false, qh.field_b.levelCount, hi.field_w), 3);
         r.field_A = false;
         TabbedPane.currentBackground = rd.selectBackground(0, (byte) 19);
-        sk.startLocalGame(var3, 0, var4, 2, param1, -12665);
+        OpacityWidget.startLocalGame(var3, 0, var4, 2, param1, -12665);
     }
 
     final void readResultOrder(BitPacketBuffer packet, int startIndex) {
@@ -1859,8 +1859,8 @@ final class GameplayScreen extends GameScreen {
           me.alternateActivityLoop = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
           to.primaryActivityLoop.setLoopCount(-1);
           me.alternateActivityLoop.setLoopCount(-1);
-          sk.queueSoundPlayback((byte) 125, to.primaryActivityLoop);
-          sk.queueSoundPlayback((byte) 5, me.alternateActivityLoop);
+          OpacityWidget.queueSoundPlayback((byte) 125, to.primaryActivityLoop);
+          OpacityWidget.queueSoundPlayback((byte) 5, me.alternateActivityLoop);
           MusicCrossfadeStream.field_C = 1;
           gr.b(MusicCrossfadeStream.field_C, -28463);
           DelayedPacket.field_m = -1;

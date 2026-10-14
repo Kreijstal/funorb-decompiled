@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bj extends jc {
+abstract class bj extends WidgetLayer {
     private int field_X;
     static String field_U;
     private int field_O;
@@ -11,7 +11,7 @@ abstract class bj extends jc {
     private int field_Z;
     static cd field_Y;
     static byte[][] decodedSpriteAlpha;
-    static eh field_T;
+    static WidgetTheme widgetTheme;
     static String field_V;
     static long field_ab;
     static ck field_P;
@@ -28,12 +28,12 @@ abstract class bj extends jc {
         this.k(-13717);
     }
 
-    boolean a(int param0) {
+    boolean updateOpacityAndCheckHidden(int obfuscationGuard) {
         this.j(20);
-        if (param0 > -22) {
+        if (obfuscationGuard > -22) {
           this.field_Q = 2;
         }
-        return super.a(-81);
+        return super.updateOpacityAndCheckHidden(-81);
     }
 
     void k(int param0) {
@@ -42,7 +42,7 @@ abstract class bj extends jc {
         }
     }
 
-    bj(cp param0, int param1, int param2) {
+    bj(WidgetLayerStack param0, int param1, int param2) {
         super(param0, param1, param2);
         this.field_W = 0;
         this.field_Z = 0;
@@ -55,7 +55,7 @@ abstract class bj extends jc {
         }
         this.field_R = param2;
         if (param0 != -116) {
-          this.a(97);
+          this.updateOpacityAndCheckHidden(97);
         }
         this.field_X = this.height;
         this.field_Z = param1;
@@ -261,7 +261,7 @@ abstract class bj extends jc {
           return;
         }
         field_V = null;
-        field_T = null;
+        widgetTheme = null;
         decodedSpriteAlpha = (byte[][]) null;
         field_U = null;
         field_Y = null;

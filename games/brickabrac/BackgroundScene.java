@@ -144,9 +144,9 @@ abstract class BackgroundScene {
         if (!m.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, ji.field_a, SoundPlayback.soundCache)) {
           return;
         }
-        if (sk.pendingMusicLoads > 0) {
-          fieldTemp$1 = sk.pendingMusicLoads - 1;
-          sk.pendingMusicLoads = sk.pendingMusicLoads - 1;
+        if (OpacityWidget.pendingMusicLoads > 0) {
+          fieldTemp$1 = OpacityWidget.pendingMusicLoads - 1;
+          OpacityWidget.pendingMusicLoads = OpacityWidget.pendingMusicLoads - 1;
           if (0 == fieldTemp$1) {
             m.musicSynthesizer.a((byte) 118);
           }

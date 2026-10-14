@@ -44,7 +44,7 @@ final class NanoGameClock extends GameClock {
         kp.field_a = Rasterizer2D.width;
         Brick.e(-67);
         ap.field_b.a(fe.field_gb.width, 0, 80, 0, fe.field_gb.height - 40 - 2);
-        dn.field_N.setBounds(np.uiRowHeight, 0, 0, RectangleBody.field_q.width, (byte) 64);
+        DraggableWidget.field_N.setBounds(np.uiRowHeight, 0, 0, RectangleBody.field_q.width, (byte) 64);
         if (param0 <= 16) {
           field_l = true;
         }

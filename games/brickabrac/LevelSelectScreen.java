@@ -290,7 +290,7 @@ final class LevelSelectScreen extends MenuScreen {
           AchievementSubmission var2 = (AchievementSubmission) null;
           LevelSelectScreen.sendAchievementSubmission(67, (AchievementSubmission) null, (byte) 80);
         }
-        if (!ma.field_I.b(96)) {
+        if (!LabeledWidget.field_I.b(96)) {
           return LobbyGame.field_pc;
         }
         return GameScreen.field_d;

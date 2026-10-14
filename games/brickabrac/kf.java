@@ -138,7 +138,7 @@ final class kf extends k {
         }
     }
 
-    kf(vb param0) {
+    kf(TextFieldWidget param0) {
         super(param0);
     }
 

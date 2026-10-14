@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends vb implements je {
+final class sf extends TextFieldWidget implements je {
     static RgbSprite[] field_V;
     static int decodedRankingLosses;
     private int field_ab;
@@ -12,16 +12,16 @@ final class sf extends vb implements je {
     static RgbSprite constructionFarSprite;
     static RgbSprite constructionNearSprite;
 
-    final void n(int param0) {
-        if (param0 >= 7) {
-          super.n(90);
+    final void notifyTextChanged(int obfuscationGuard) {
+        if (obfuscationGuard >= 7) {
+          super.notifyTextChanged(90);
           if (this.field_W != null) {
             this.field_W.a(false);
           }
           return;
         }
         sf.o(8);
-        super.n(90);
+        super.notifyTextChanged(90);
         if (this.field_W != null) {
           this.field_W.a(false);
         }
@@ -30,7 +30,7 @@ final class sf extends vb implements je {
     final void a(ia param0, byte param1) {
         try {
           if (param1 != -68) {
-            this.n(48);
+            this.notifyTextChanged(48);
           }
           this.field_W = param0;
         } catch (RuntimeException runtimeException) {

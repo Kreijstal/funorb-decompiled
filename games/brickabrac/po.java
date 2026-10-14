@@ -149,17 +149,17 @@ final class po {
           SpaceBackground.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
           TableDataRequest.field_k = IntArrayRequest.gameplayScreen.isSpectator(124);
           cb.field_n = IntArrayRequest.gameplayScreen.resultWordMode;
-          sk.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
-          fh.field_h = new String[sk.field_I];
-          for (var2 = 0; var2 < sk.field_I; var2++) {
+          OpacityWidget.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
+          fh.field_h = new String[OpacityWidget.field_I];
+          for (var2 = 0; var2 < OpacityWidget.field_I; var2++) {
             fh.field_h[var2] = var4.playerNames[var2];
           }
           BitPacketBuffer.field_o = new int[var5.resultOrder.length];
           for (var2Lifetime1 = 0; var5.resultOrder.length > var2Lifetime1; var2Lifetime1++) {
             BitPacketBuffer.field_o[var2Lifetime1] = var5.resultOrder[var2Lifetime1];
           }
-          ArchiveNetworkRequest.field_C = new int[sk.field_I];
-          for (var2Lifetime2 = 0; var2Lifetime2 < sk.field_I; var2Lifetime2++) {
+          ArchiveNetworkRequest.field_C = new int[OpacityWidget.field_I];
+          for (var2Lifetime2 = 0; var2Lifetime2 < OpacityWidget.field_I; var2Lifetime2++) {
             ArchiveNetworkRequest.field_C[var2Lifetime2] = var5.playerBoards[var2Lifetime2].characterIndex;
           }
           stackIn_13_0 = !(SpaceBackground.field_r);
@@ -182,7 +182,7 @@ final class po {
           }
           sj.field_c = stackIn_25_0;
           var2Lifetime4 = 57 % ((-7 - param0) / 42);
-          if (sk.field_I == 2) {
+          if (OpacityWidget.field_I == 2) {
             stackIn_28_0 = me.field_a;
           } else {
             stackIn_28_0 = pl.field_f;

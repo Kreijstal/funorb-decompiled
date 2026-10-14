@@ -6,7 +6,7 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
     private qf field_I;
     static long[] renderTimes;
     static int field_N;
-    private lg field_O;
+    private HotspotTextWidget field_O;
     static String field_K;
     static RgbSprite field_P;
     static String field_J;
@@ -19,7 +19,7 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
         return "</col></u>";
     }
 
-    public final void a(int param0, int param1, int param2, lg param3) {
+    public final void a(int param0, int param1, int param2, HotspotTextWidget param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -138,7 +138,7 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
           var7 = rd.a(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
           var3 = 20;
           var4 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
-          this.field_O = new lg(var7, var4);
+          this.field_O = new HotspotTextWidget(var7, var4);
           this.field_O.tooltip = "";
           this.field_O.a(GameConnectionShell.field_z, 0, (byte) -98);
           this.field_O.a(GameConnectionShell.field_z, 1, (byte) -98);
@@ -214,7 +214,7 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
         }
     }
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -223,29 +223,29 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleWidgetKey(keyCode, obfuscationGuard, focusRoot, character)) {
             return true;
           }
-          if (param0 == 98) {
-            stackIn_7_0 = this.b(param2, (byte) 86);
+          if (keyCode == 98) {
+            stackIn_7_0 = this.b(focusRoot, (byte) 86);
             return stackIn_7_0;
           }
-          if (99 != param0) {
+          if (99 != keyCode) {
             return false;
           }
-          stackIn_10_0 = this.a(param2, (byte) -119);
+          stackIn_10_0 = this.a(focusRoot, (byte) -119);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("ig.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_15_1 = new StringBuilder().append("ig.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(character).append(')').toString());
         }
     }
 

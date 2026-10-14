@@ -201,7 +201,7 @@ abstract class MenuScreen extends GameScreen {
         var4 = this.selection.selectedIndex;
         MouseInput.field_b = InteractiveGameClient.sine8192(MembershipBenefitsScreen.clientTick * 20, -4097);
         if (inputEnabled &&
-          !vh.field_L &&
+          !RadialSelectorWidget.field_L &&
           !ed.field_d) {
           this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(qo.pressY, (byte) -80, tb.pressX));
           if (this.a(true, (byte) -117)) {
@@ -385,12 +385,12 @@ abstract class MenuScreen extends GameScreen {
                 var7 = 0;
                 if (this.selection.isHomeKey(-103) &&
                   FramedMenuScreen.g((byte) -44) > 0) {
-                  ma.a((byte) -113, 0);
+                  LabeledWidget.a((byte) -113, 0);
                   var7 = 1;
                 }
                 if (this.selection.isEndKey(-1) &&
                   FramedMenuScreen.g((byte) -44) < MenuSelection.e((byte) 44)) {
-                  ma.a((byte) 47, MenuSelection.e((byte) 31));
+                  LabeledWidget.a((byte) 47, MenuSelection.e((byte) 31));
                   var7 = 1;
                 }
                 if (this.selection.isLeftArrow((byte) -57) &&
@@ -408,12 +408,12 @@ abstract class MenuScreen extends GameScreen {
                   var9 = MusicPatch.pointerX - var8;
                   var10 = var9 * MenuSelection.e((byte) 51) / 120;
                   if (var10 <= 0) {
-                    ma.a((byte) -114, 0);
+                    LabeledWidget.a((byte) -114, 0);
                   } else {
                     if (var10 < MenuSelection.e((byte) 81)) {
-                      ma.a((byte) -127, var10);
+                      LabeledWidget.a((byte) -127, var10);
                     } else {
-                      ma.a((byte) 95, MenuSelection.e((byte) 32));
+                      LabeledWidget.a((byte) 95, MenuSelection.e((byte) 32));
                     }
                   }
                   var7 = 1;
@@ -458,7 +458,7 @@ abstract class MenuScreen extends GameScreen {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
                   if (null == ua.field_d) {
-                    cp.a(inputFlag, 21543);
+                    WidgetLayerStack.a(inputFlag, 21543);
                   } else {
                     LevelPack.b(82);
                   }

@@ -35,9 +35,9 @@ final class hg {
             var4Lifetime2 = var3;
           }
           var4Lifetime1 = null;
-          if (null != sk.field_G &&
-            !sk.field_G.equals(param0.getParameter("session"))) {
-            var4Lifetime1 = sk.field_G;
+          if (null != OpacityWidget.field_G &&
+            !OpacityWidget.field_G.equals(param0.getParameter("session"))) {
+            var4Lifetime1 = OpacityWidget.field_G;
           }
           stackIn_11_0 = FramedMenuScreen.a((String) (var3), (byte) 60, (String) (var4Lifetime1), -1, param1);
           return stackIn_11_0;
@@ -69,14 +69,14 @@ final class hg {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ma.field_I.b(96) &&
-            !param1.equals(ma.field_I.a(0))) {
-            ma.field_I = rm.a(param1, 16711935);
+          if (LabeledWidget.field_I.b(96) &&
+            !param1.equals(LabeledWidget.field_I.a(0))) {
+            LabeledWidget.field_I = rm.a(param1, 16711935);
           }
           if (param0 != 0) {
             field_g = (RgbSprite) null;
           }
-          stackIn_7_0 = ma.field_I;
+          stackIn_7_0 = LabeledWidget.field_I;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

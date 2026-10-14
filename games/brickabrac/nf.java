@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends lg {
+final class nf extends HotspotTextWidget {
     private int field_Q;
     static int selectedAchievementId;
     private String field_S;
@@ -46,7 +46,7 @@ final class nf extends lg {
     }
 
     nf(ia param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, dn.g(-23009));
+        super(param1, DraggableWidget.g(-23009));
         try {
           this.field_R = param0;
           this.field_S = param1;
@@ -168,10 +168,10 @@ final class nf extends lg {
         var13 = BrickABrac.field_J ? 1 : 0;
         var6 = this.field_R.b((byte) -31);
         if (var6 == m.field_c) {
-          var17 = jb.field_G;
+          var17 = DropTargetWidget.field_G;
           if (!var17.equals(this.text)) {
             this.text = var17;
-            this.i(obfuscationGuard + 10);
+            this.rebuildHotspots(obfuscationGuard + 10);
             super.drawLayer(parentY, parentX, layer, obfuscationGuard);
             var6 = this.field_R.b((byte) -31);
             var18_ref = (WidgetLayoutProvider) ((Object) this.renderer);
@@ -253,10 +253,10 @@ final class nf extends lg {
           return;
         }
         if (var6 == SaveResultsPromptScreen.field_z) {
-          var26 = jb.field_G;
+          var26 = DropTargetWidget.field_G;
           if (!var26.equals(this.text)) {
             this.text = var26;
-            this.i(obfuscationGuard + 10);
+            this.rebuildHotspots(obfuscationGuard + 10);
             super.drawLayer(parentY, parentX, layer, obfuscationGuard);
             var6 = this.field_R.b((byte) -31);
             var27_ref = (WidgetLayoutProvider) ((Object) this.renderer);
@@ -377,7 +377,7 @@ final class nf extends lg {
             return;
           }
           this.text = var5;
-          this.i(obfuscationGuard + 10);
+          this.rebuildHotspots(obfuscationGuard + 10);
           super.drawLayer(parentY, parentX, layer, obfuscationGuard);
           var6Lifetime1Lifetime1 = this.field_R.b((byte) -31);
           var44_ref = (WidgetLayoutProvider) ((Object) this.renderer);
@@ -427,7 +427,7 @@ final class nf extends lg {
         var5Lifetime1 = var35;
         if (!var35.equals(this.text)) {
           this.text = var35;
-          this.i(obfuscationGuard + 10);
+          this.rebuildHotspots(obfuscationGuard + 10);
           super.drawLayer(parentY, parentX, layer, obfuscationGuard);
           var6Lifetime2 = this.field_R.b((byte) -31);
           var36_ref = (WidgetLayoutProvider) ((Object) this.renderer);

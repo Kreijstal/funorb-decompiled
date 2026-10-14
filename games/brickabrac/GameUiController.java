@@ -11,7 +11,7 @@ final class GameUiController implements GameUiLifecycle {
 
     private final boolean pollRequiredData(boolean obfuscationGuard) {
         if (rf.field_g == null) {
-          rf.field_g = cp.requestTableData(-2, 0, 2, 10, 3);
+          rf.field_g = WidgetLayerStack.requestTableData(-2, 0, 2, 10, 3);
         }
         if (!obfuscationGuard) {
           return false;
@@ -43,7 +43,7 @@ final class GameUiController implements GameUiLifecycle {
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, ContextActionController.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.a(20, -97, 20, var2);
-        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, jb.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, qh.field_h, 22287);
+        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, qh.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
@@ -87,8 +87,8 @@ final class GameUiController implements GameUiLifecycle {
         if (!ResourceRequest.field_y) {
           ResourceRequest.field_y = NameEntryPopup.d((byte) -126);
         }
-        if (!jc.field_H) {
-          jc.field_H = this.pollSavedProgress((byte) 127);
+        if (!WidgetLayer.field_H) {
+          WidgetLayer.field_H = this.pollSavedProgress((byte) 127);
         }
         if (obfuscationGuard != 23570) {
           this.initializeUi(true);
@@ -96,7 +96,7 @@ final class GameUiController implements GameUiLifecycle {
         if (!QuickChatParameterType.field_b) {
           QuickChatParameterType.field_b = this.pollRequiredData(true);
         }
-        stackIn_15_0 = (ResourceRequest.field_y) && (jc.field_H) && (QuickChatParameterType.field_b);
+        stackIn_15_0 = (ResourceRequest.field_y) && (WidgetLayer.field_H) && (QuickChatParameterType.field_b);
         return stackIn_15_0;
     }
 
@@ -164,8 +164,8 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(tm.field_e, "lobby", 124, WidgetGroup.field_F, wn.field_c);
         bh.field_tb.a(tm.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
         bh.field_tb.a(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
-        bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
-        bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
+        bh.field_tb.a(RadialSelectorWidget.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
+        bh.field_tb.a(RadialSelectorWidget.field_P, "kartika13", 127, m.field_k, wn.field_c);
         bh.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, wl.field_Q);
         bh.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, sg.field_m);

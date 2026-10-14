@@ -115,7 +115,7 @@ final class ParisBackground extends BackgroundScene {
           }
           NinjaBackground.parisNearSprite = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
           QuickChatParameterType.parisMidSprite = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
-          bf.parisFarSprite = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
+          ToggleButtonWidget.parisFarSprite = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
           pl.parisSmallSprite = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
           BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
           IntrusiveHashTable.field_i = jh.a(0, NinjaBackground.parisNearSprite);
@@ -123,7 +123,7 @@ final class ParisBackground extends BackgroundScene {
             ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
           }
           UnderwaterBackground.field_t = jh.a(0, QuickChatParameterType.parisMidSprite);
-          MembershipBenefitsScreen.field_s = jh.a(0, bf.parisFarSprite);
+          MembershipBenefitsScreen.field_s = jh.a(0, ToggleButtonWidget.parisFarSprite);
           uq.b(QuickChatParameterType.parisMidSprite);
           uq.b(UnderwaterBackground.field_t);
           uq.b(NinjaBackground.parisNearSprite);
@@ -177,7 +177,7 @@ final class ParisBackground extends BackgroundScene {
           if (obfuscationGuard >= -91) {
             this.drawFullBackground(false, 87, -76, -86, -25);
           }
-          stackIn_19_0 = (NinjaBackground.parisNearSprite != null) && (null != QuickChatParameterType.parisMidSprite) && (bf.parisFarSprite != null) && (pl.parisSmallSprite != null) && (null != BallPulseEffect.parisCharacterSprite);
+          stackIn_19_0 = (NinjaBackground.parisNearSprite != null) && (null != QuickChatParameterType.parisMidSprite) && (ToggleButtonWidget.parisFarSprite != null) && (pl.parisSmallSprite != null) && (null != BallPulseEffect.parisCharacterSprite);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -327,7 +327,7 @@ final class ParisBackground extends BackgroundScene {
           }
           if (decompiledNaturalLoopExit0) {
             LegacyUtf8Decoder.field_c = new UiComponent(0L, param4);
-            LegacyUtf8Decoder.field_c.text = vh.field_Y;
+            LegacyUtf8Decoder.field_c.text = RadialSelectorWidget.field_Y;
             DualLinkDeque.field_d.addChild(LegacyUtf8Decoder.field_c, 0);
             stackIn_34_0 = ik.a(false) ? 1 : 0;
           }
@@ -421,7 +421,7 @@ final class ParisBackground extends BackgroundScene {
           }
           var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ej.a(0, bf.parisFarSprite, 1, 0, colorIndex, var6);
+            ej.a(0, ToggleButtonWidget.parisFarSprite, 1, 0, colorIndex, var6);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           wo.a(destinationY, scroll16, QuickChatParameterType.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);

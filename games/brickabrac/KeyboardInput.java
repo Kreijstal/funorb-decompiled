@@ -37,9 +37,9 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             stackIn_9_0 = rd.a(MusicVoice.field_C, new String[]{name}, (byte) 103);
             return stackIn_9_0;
           }
-          bf.friendEntries.a((byte) 107, entry);
+          ToggleButtonWidget.friendEntries.a((byte) 107, entry);
           while (true) {
-            laterFriend = (SocialListEntry) (bf.friendEntries.next((byte) 116));
+            laterFriend = (SocialListEntry) (ToggleButtonWidget.friendEntries.next((byte) 116));
             if (laterFriend != null) {
               laterFriend.insertionIndex = laterFriend.insertionIndex - 1;
               continue;

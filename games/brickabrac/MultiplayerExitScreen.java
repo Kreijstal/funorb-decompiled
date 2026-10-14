@@ -98,8 +98,8 @@ final class MultiplayerExitScreen extends MatchResultScreen {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         try {
-          ma.field_I = rm.a("", 16711935);
-          ma.field_I.a(false, 20892);
+          LabeledWidget.field_I = rm.a("", 16711935);
+          LabeledWidget.field_I.a(false, 20892);
           if (param4 <= 11) {
             savePrompts = (String[]) null;
           }

@@ -123,9 +123,9 @@ final class MusicEnvelope {
           while (var6 != null) {
             var7 = 0;
             if (null == var6.children) {
-              var6.nameLabel = new UiComponent(0L, vb.field_K);
+              var6.nameLabel = new UiComponent(0L, TextFieldWidget.field_K);
               var6.addChild(var6.nameLabel, 0);
-              var6.renameIndicator = new UiComponent(0L, vb.field_K);
+              var6.renameIndicator = new UiComponent(0L, TextFieldWidget.field_K);
               var6.addChild(var6.renameIndicator, 0);
               var6.markDescendantsToInheritVisualState(param1);
               var7 = 1;

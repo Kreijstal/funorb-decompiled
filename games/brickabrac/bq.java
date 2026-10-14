@@ -295,7 +295,7 @@ final class bq {
               }
             }
           }
-          jj.field_c = UiComponent.field_H.itemCount * (kn.field_y + jb.field_H << 1);
+          jj.field_c = UiComponent.field_H.itemCount * (kn.field_y + DropTargetWidget.field_H << 1);
           np.field_b = wi.field_k - (var3_intLifetime1 >> 1);
           SpaceBackground.field_u = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + wi.field_k);
           for (var4Lifetime2 = 0; qh.field_i.length > var4Lifetime2; var4Lifetime2++) {
@@ -321,8 +321,8 @@ final class bq {
               ce.field_a[var4Lifetime3][0] = -cn.field_c + var8Lifetime1;
               ce.field_a[var4Lifetime3][1] = var5Lifetime3;
               ce.field_a[var4Lifetime3][2] = (cn.field_c << 1) + var7Lifetime2;
-              var5Lifetime3 = var5Lifetime3 + (kn.field_y + ((jb.field_H << 1) + b.field_c));
-              ce.field_a[var4Lifetime3][3] = (jb.field_H << 1) + b.field_c;
+              var5Lifetime3 = var5Lifetime3 + (kn.field_y + ((DropTargetWidget.field_H << 1) + b.field_c));
+              ce.field_a[var4Lifetime3][3] = (DropTargetWidget.field_H << 1) + b.field_c;
             } else {
               var5Lifetime3 = var5Lifetime3 + IntArrayRequest.field_s;
             }

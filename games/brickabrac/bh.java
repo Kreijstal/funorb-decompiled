@@ -17,7 +17,7 @@ final class bh extends fe {
         }
     }
 
-    bh(cp param0, Widget param1) {
+    bh(WidgetLayerStack param0, Widget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

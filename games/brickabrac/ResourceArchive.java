@@ -9,7 +9,7 @@ final class ResourceArchive {
     int decodedFilePolicy;
     private ArchiveIndex index;
     private Object[] packedGroups;
-    static cp field_f;
+    static WidgetLayerStack field_f;
     static String field_e;
     boolean discardPackedGroups;
     static RgbSprite[] field_a;

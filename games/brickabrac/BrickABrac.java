@@ -101,7 +101,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           NodeDequeCursor.screenTransitionTick = NodeDequeCursor.screenTransitionTick + 1;
           if (32 == NodeDequeCursor.screenTransitionTick) {
-            sk.finishScreenTransition((byte) -126);
+            OpacityWidget.finishScreenTransition((byte) -126);
           }
         } else {
           if (IntArrayRequest.gameplayScreen != null &&
@@ -141,7 +141,7 @@ public final class BrickABrac extends InteractiveGameClient {
         if (param0 != 73) {
           return false;
         }
-        stackIn_8_0 = (MonotonicTime.field_c) || (vh.field_L) || (ed.field_d);
+        stackIn_8_0 = (MonotonicTime.field_c) || (RadialSelectorWidget.field_L) || (ed.field_d);
         return stackIn_8_0;
     }
 
@@ -206,17 +206,17 @@ public final class BrickABrac extends InteractiveGameClient {
         var16 = field_J ? 1 : 0;
         try {
           if (9 == opcode) {
-            sk.finishScreenTransition((byte) -113);
-            vh.field_L = false;
+            OpacityWidget.finishScreenTransition((byte) -113);
+            RadialSelectorWidget.field_L = false;
             ng.requestScreen(false, obfuscationGuard + 66, 11);
             kk.setMessageText(true, packet.readCp1252String(-1));
             return true;
           }
           if (14 == opcode) {
-            sk.finishScreenTransition((byte) -116);
-            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, jb.field_I.length);
+            OpacityWidget.finishScreenTransition((byte) -116);
+            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
             hn.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
-            vh.field_L = false;
+            RadialSelectorWidget.field_L = false;
             MonotonicTime.field_c = true;
             ng.requestScreen(false, 113, -2);
             return true;
@@ -232,7 +232,7 @@ public final class BrickABrac extends InteractiveGameClient {
             }
             ed.field_d = false;
             pf.field_p = false;
-            vh.field_L = false;
+            RadialSelectorWidget.field_L = false;
             return true;
           }
           if (opcode == 10 &&
@@ -311,7 +311,7 @@ public final class BrickABrac extends InteractiveGameClient {
             }
             if (66 == IntrusiveHashTable.currentPacketOpcode) {
               if (IntArrayRequest.gameplayScreen != null) {
-                sk.finishScreenTransition((byte) -123);
+                OpacityWidget.finishScreenTransition((byte) -123);
                 if (!IntArrayRequest.gameplayScreen.isSpectator(123)) {
                   IntArrayRequest.gameplayScreen.a((byte) 40, false);
                 }
@@ -382,7 +382,7 @@ public final class BrickABrac extends InteractiveGameClient {
             }
             return true;
           }
-          sk.finishScreenTransition((byte) -125);
+          OpacityWidget.finishScreenTransition((byte) -125);
           stackIn_44_0 = (packet.readUnsignedByte(255) == 0) ? 0 : 1;
           resultWordFlag = stackIn_44_0;
           playerNames = new String[packet.readUnsignedByte(255)];
@@ -500,11 +500,11 @@ public final class BrickABrac extends InteractiveGameClient {
             }
             MonotonicTime.field_c = false;
           }
-          vh.field_L = false;
+          RadialSelectorWidget.field_L = false;
           ed.field_d = false;
         } else {
           ed.field_d = true;
-          vh.field_L = true;
+          RadialSelectorWidget.field_L = true;
         }
     }
 
@@ -729,7 +729,7 @@ public final class BrickABrac extends InteractiveGameClient {
         np.a(true);
         BoundedFile.b(57);
         LegacyUtf8Decoder.clearStaticReferences((byte) 124);
-        cp.j((byte) -113);
+        WidgetLayerStack.j((byte) -113);
         tb.m(-48);
         bh.n(28);
         lp.o(50);
@@ -737,7 +737,7 @@ public final class BrickABrac extends InteractiveGameClient {
         he.a((byte) 36);
         hk.i((byte) 88);
         qo.h(-106);
-        eh.a(-31063);
+        WidgetTheme.a(-31063);
         ua.a(2);
         ll.a(!obfuscationGuard ? true : false);
         ek.c(obfuscationGuard);
@@ -769,7 +769,7 @@ public final class BrickABrac extends InteractiveGameClient {
         QuickChatHelpDialog.d((byte) 98);
         jl.a(31186);
         bj.i(111);
-        jc.a((byte) -17);
+        WidgetLayer.a((byte) -17);
         WidgetGroup.f((byte) -67);
         NodeDequeCursor.c(117);
         SingleChildWidget.f((byte) -102);
@@ -812,16 +812,16 @@ public final class BrickABrac extends InteractiveGameClient {
         SoundTone.releaseScratch();
         bm.a((byte) -116);
         ar.a(-1);
-        ma.c(false);
+        LabeledWidget.c(false);
         sf.o(-16124);
-        vb.i(80);
+        TextFieldWidget.i(80);
         fe.l(98);
         cr.a((byte) 123);
         ri.a((byte) -83);
-        lg.j(-2);
+        HotspotTextWidget.j(-2);
         wl.a(2);
         nf.f((byte) -42);
-        bf.a(8192);
+        ToggleButtonWidget.a(8192);
         k.c((byte) -109);
         go.a(-7393);
         ig.a(12127);
@@ -836,14 +836,14 @@ public final class BrickABrac extends InteractiveGameClient {
         ResourceRequest.a((byte) 78);
         ug.h(0);
         eq.b(-1);
-        vh.a(110);
+        RadialSelectorWidget.a(110);
         qi.j(18724);
         oj.a((byte) -51);
         ji.a(24968);
         DualLinkDeque.b(2);
         sl.f(31434);
-        dn.a(1);
-        jb.i((byte) -116);
+        DraggableWidget.a(1);
+        DropTargetWidget.i((byte) -116);
         DirectByteStorage.c(7301);
         c.a(true);
         QuickChatParameterType.a(125);
@@ -873,7 +873,7 @@ public final class BrickABrac extends InteractiveGameClient {
         r.d((byte) 91);
         ob.b(-95);
         bd.a(true);
-        sk.a(51550);
+        OpacityWidget.a(51550);
         SoundPlayback.a((byte) 49);
         po.b(-81);
         AchievementMaskRequest.a(28391);

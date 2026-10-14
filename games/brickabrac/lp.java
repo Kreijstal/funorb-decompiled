@@ -15,7 +15,7 @@ class lp extends fe implements WidgetActionListener {
     static GameScreen currentScreen;
     static PlatformServices field_ub;
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -23,26 +23,26 @@ class lp extends fe implements WidgetActionListener {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (13 == param0) {
-            this.m(param1 ^ 127);
+          if (13 == keyCode) {
+            this.m(obfuscationGuard ^ 127);
             return true;
           }
-          if (param1 != 110) {
+          if (obfuscationGuard != 110) {
             currentScreen = (GameScreen) null;
           }
-          stackIn_7_0 = super.a(param0, (byte) 110, param2, param3);
+          stackIn_7_0 = super.handleWidgetKey(keyCode, (byte) 110, focusRoot, character);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("lp.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_10_1 = new StringBuilder().append("lp.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -183,7 +183,7 @@ class lp extends fe implements WidgetActionListener {
         }
     }
 
-    lp(cp param0, TextFont param1, String param2, boolean param3, boolean param4) {
+    lp(WidgetLayerStack param0, TextFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new ec((lp) null, param1, param2), 77, 10, 10);
         try {
           this.field_tb = param4 ? true : false;
@@ -202,10 +202,10 @@ class lp extends fe implements WidgetActionListener {
     final void m(int param0) {
         if (param0 != 17) {
           this.field_vb = false;
-          if (!this.field_N) {
+          if (!this.visible) {
             return;
           }
-          this.field_N = false;
+          this.visible = false;
           if (this.field_vb) {
             cb.e((byte) -46);
             return;
@@ -216,10 +216,10 @@ class lp extends fe implements WidgetActionListener {
           }
           return;
         }
-        if (!this.field_N) {
+        if (!this.visible) {
           return;
         }
-        this.field_N = false;
+        this.visible = false;
         if (this.field_vb) {
           cb.e((byte) -46);
           return;

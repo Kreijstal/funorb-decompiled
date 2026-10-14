@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gd {
-    static dn field_c;
+    static DraggableWidget draggedWidget;
     static String field_e;
     static String field_b;
     static int field_a;
@@ -14,10 +14,10 @@ final class gd {
         field_e = null;
         if (param0) {
           receivedChatText = (String) null;
-          field_c = null;
+          draggedWidget = null;
           return;
         }
-        field_c = null;
+        draggedWidget = null;
     }
 
     final static java.awt.Canvas a(byte param0) {

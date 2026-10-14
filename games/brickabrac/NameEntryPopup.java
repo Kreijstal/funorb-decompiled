@@ -126,7 +126,7 @@ final class NameEntryPopup extends UiComponent {
               this.completionState = 1;
               return true;
             }
-            if (eh.isAsciiDigit((char) normalizedCharacter, (byte) 83)) {
+            if (WidgetTheme.isAsciiDigit((char) normalizedCharacter, (byte) 83)) {
               ignoredDigitAppend = this.nameBuffer.append((char) normalizedCharacter);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.nameBuffer.length() > 0) {
@@ -181,7 +181,7 @@ final class NameEntryPopup extends UiComponent {
               this.completionState = 1;
               return true;
             }
-            if (eh.isAsciiDigit((char) emptyNormalizedCharacter, (byte) 83)) {
+            if (WidgetTheme.isAsciiDigit((char) emptyNormalizedCharacter, (byte) 83)) {
               ignoredEmptyDigitAppend = this.nameBuffer.append((char) emptyNormalizedCharacter);
               if (MeshAttributeRecord.currentKeyCode == 84) {
                 if (this.nameBuffer.length() > 0) {
@@ -249,7 +249,7 @@ final class NameEntryPopup extends UiComponent {
           }
           return true;
         }
-        if (eh.isAsciiDigit((char) backspaceNormalizedCharacter, (byte) 83)) {
+        if (WidgetTheme.isAsciiDigit((char) backspaceNormalizedCharacter, (byte) 83)) {
           ignoredBackspaceDigitAppend = this.nameBuffer.append((char) backspaceNormalizedCharacter);
           if (MeshAttributeRecord.currentKeyCode == 84) {
             if (this.nameBuffer.length() <= 0) {

@@ -75,7 +75,7 @@ final class ga extends IntrusiveNode {
         if (param0 != 30794) {
           return false;
         }
-        return !ma.field_I.b(96) ? true : false;
+        return !LabeledWidget.field_I.b(96) ? true : false;
     }
 
     public static void a(int param0) {

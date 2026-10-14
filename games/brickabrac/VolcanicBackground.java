@@ -34,7 +34,7 @@ final class VolcanicBackground extends BackgroundScene {
         if (RasterCacheSurface.volcanicNearSprite == null) {
           return false;
         }
-        if (null == cp.volcanicMidSprite) {
+        if (null == WidgetLayerStack.volcanicMidSprite) {
           return false;
         }
         if (null == ByteArrayNode.volcanicFarSprite) {
@@ -51,11 +51,11 @@ final class VolcanicBackground extends BackgroundScene {
           return false;
         }
         RasterCacheSurface.volcanicNearSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
-        cp.volcanicMidSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
+        WidgetLayerStack.volcanicMidSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
         ByteArrayNode.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
         mc.volcanicSmallSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
         NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
-        NameEntryPopup.field_Sb = jh.a(0, cp.volcanicMidSprite);
+        NameEntryPopup.field_Sb = jh.a(0, WidgetLayerStack.volcanicMidSprite);
         RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
         CacheIoWorker.volcanicCapsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
         np.volcanicSegsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
@@ -104,7 +104,7 @@ final class VolcanicBackground extends BackgroundScene {
             BitPacketBuffer.a(ByteArrayNode.volcanicFarSprite, var6, colorIndex, 1, (byte) 18, 0);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ArchiveIndex.a(-91, -7, RasterCacheSurface.volcanicNearSprite, scroll16, var6.sprite, colorIndex, 640, 1, destinationX, destinationY, cp.volcanicMidSprite);
+          ArchiveIndex.a(-91, -7, RasterCacheSurface.volcanicNearSprite, scroll16, var6.sprite, colorIndex, 640, 1, destinationX, destinationY, WidgetLayerStack.volcanicMidSprite);
         }
         if (!obfuscationGuard) {
           field_v = (UiComponent) null;

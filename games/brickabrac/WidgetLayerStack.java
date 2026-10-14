@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cp extends SingleChildWidget {
-    private NodeDeque field_J;
+final class WidgetLayerStack extends SingleChildWidget {
+    private NodeDeque layers;
     static UiComponent field_K;
     static String field_G;
     static RgbSprite volcanicMidSprite;
@@ -15,7 +15,7 @@ final class cp extends SingleChildWidget {
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param1 != 21543) {
           var4 = (PlayerBoard) null;
-          cp.a(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
+          WidgetLayerStack.a(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
         }
         if (0 >= go.field_c) {
           var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
@@ -44,7 +44,7 @@ final class cp extends SingleChildWidget {
         if (this.renderer != null) {
           this.renderer.paintWidget(true, obfuscationGuard - 20607, parentX, (Widget) (this), parentY);
         }
-        NodeDequeCursor var5 = new NodeDequeCursor(this.field_J);
+        NodeDequeCursor var5 = new NodeDequeCursor(this.layers);
         Widget var6 = (Widget) (var5.last(true));
         while (var6 != null) {
           var6.drawLayer(parentY + this.y, parentX + this.x, layer, (byte) -11);
@@ -60,62 +60,62 @@ final class cp extends SingleChildWidget {
         field_G = null;
         if (param0 > -91) {
           ta var2 = (ta) null;
-          cp.a(-80, 69, (ta) null, 50, (ta) null, -32);
+          WidgetLayerStack.a(-80, 69, (ta) null, 50, (ta) null, -32);
         }
         field_H = null;
         field_K = null;
     }
 
-    final void a(int param0) {
+    final void hideLayers(int obfuscationGuard) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        if (param0 > -119) {
+        if (obfuscationGuard > -119) {
           return;
         }
-        NodeDequeCursor var2 = new NodeDequeCursor(this.field_J);
-        jc var3 = (jc) (var2.first(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.layers);
+        WidgetLayer var3 = (WidgetLayer) (var2.first(240));
         while (var3 != null) {
-          var3.field_N = false;
-          var3 = (jc) (var2.next(7));
+          var3.visible = false;
+          var3 = (WidgetLayer) (var2.next(7));
         }
         this.child = null;
     }
 
-    final void a(int param0, Widget param1) {
-        jc var3 = null;
+    final void pushLayer(int obfuscationGuard, Widget layer) {
+        WidgetLayer var3 = null;
         try {
-          if (!(param1 instanceof jc)) {
+          if (!(layer instanceof WidgetLayer)) {
             throw new IllegalArgumentException();
           }
-          var3 = (jc) (param1);
-          if (param0 > -63) {
-            cp.j((byte) -73);
+          var3 = (WidgetLayer) (layer);
+          if (obfuscationGuard > -63) {
+            WidgetLayerStack.j((byte) -73);
           }
-          this.field_J.addFirst(true, var3);
-          var3.field_N = true;
+          this.layers.addFirst(true, var3);
+          var3.visible = true;
           var3.tryFocus(true, (Widget) (this));
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.M(" + obfuscationGuard + ',' + (layer != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void i(byte param0) {
+    final void removeHiddenLayers(byte obfuscationGuard) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        NodeDequeCursor var2 = new NodeDequeCursor(this.field_J);
-        jc var3 = (jc) (var2.first(240));
-        if (param0 != -36) {
+        NodeDequeCursor var2 = new NodeDequeCursor(this.layers);
+        WidgetLayer var3 = (WidgetLayer) (var2.first(240));
+        if (obfuscationGuard != -36) {
           return;
         }
         while (var3 != null) {
-          if (var3.a(-94)) {
+          if (var3.updateOpacityAndCheckHidden(-94)) {
             var3.unlink((byte) 111);
           }
-          var3 = (jc) (var2.next(param0 ^ -37));
+          var3 = (WidgetLayer) (var2.next(obfuscationGuard ^ -37));
         }
     }
 
-    public cp() {
+    public WidgetLayerStack() {
         super(0, 0, SpriteGeometry.field_y, r.field_w, (WidgetRenderer) null, (WidgetListener) null);
-        this.field_J = new NodeDeque();
+        this.layers = new NodeDeque();
     }
 
     final static lo a(String param0, byte param1) {
@@ -176,10 +176,10 @@ final class cp extends SingleChildWidget {
           kn.field_y = param1;
           cn.field_c = param5;
           if (param3 <= 25) {
-            cp.h(24);
+            WidgetLayerStack.h(24);
           }
           cd.field_c = param4;
-          jb.field_H = param0;
+          DropTargetWidget.field_H = param0;
           c.field_l = param2;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
@@ -189,15 +189,15 @@ final class cp extends SingleChildWidget {
     final void i(int param0) {
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var3 = 18 / ((36 - param0) / 43);
-        NodeDequeCursor var2 = new NodeDequeCursor(this.field_J);
-        jc var4 = (jc) (var2.first(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.layers);
+        WidgetLayer var4 = (WidgetLayer) (var2.first(240));
         while (var4 != null) {
           if (var4.h(0)) {
             var4.unlink((byte) 111);
           }
-          var4 = (jc) (var2.next(7));
+          var4 = (WidgetLayer) (var2.next(7));
         }
-        this.child = (Widget) ((Object) this.g(-126));
+        this.child = (Widget) ((Object) this.getTopVisibleLayer(-126));
     }
 
     final static void h(int param0) {
@@ -228,7 +228,7 @@ final class cp extends SingleChildWidget {
           var2 = 0;
           if (param0 != -16546) {
             var11 = (PlayerBoard) null;
-            cp.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
+            WidgetLayerStack.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
           }
           if (ArchiveFetchClient.field_p == 2) {
             var3_long = -un.field_g + MonotonicTime.nowMillis(false);
@@ -296,13 +296,13 @@ final class cp extends SingleChildWidget {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a((cn.field_c << 1) + var7Lifetime1, b.field_c + (jb.field_H << 1), -cn.field_c + var8Lifetime1, false, var1_int);
+                var9.a((cn.field_c << 1) + var7Lifetime1, b.field_c + (DropTargetWidget.field_H << 1), -cn.field_c + var8Lifetime1, false, var1_int);
               }
-              var1_int = var1_int + jb.field_H;
+              var1_int = var1_int + DropTargetWidget.field_H;
             }
             if (var4 >= 0) {
               kp.field_b.drawLeft(var6, var8Lifetime1, var1_int + so.field_b, var5, -1);
-              var1_int = var1_int + (jb.field_H + (kn.field_y + b.field_c));
+              var1_int = var1_int + (DropTargetWidget.field_H + (kn.field_y + b.field_c));
             } else {
               StateIconLabel.field_Wb.drawLeft(var6, var8Lifetime1, var1_int + DualLinkIterator.field_f, var5, -1);
               var1_int = var1_int + IntArrayRequest.field_s;
@@ -361,7 +361,7 @@ final class cp extends SingleChildWidget {
             lo.a(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
           }
           if (param3 < 118) {
-            cp.a(true, 86);
+            WidgetLayerStack.a(true, 86);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -402,38 +402,38 @@ final class cp extends SingleChildWidget {
 
     final Widget h(byte param0) {
         NodeDequeCursor var2;
-        jc var3;
+        WidgetLayer var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = new NodeDequeCursor(this.field_J);
+        var2 = new NodeDequeCursor(this.layers);
         if (param0 != 25) {
-          cp.j((byte) -34);
+          WidgetLayerStack.j((byte) -34);
         }
-        var3 = (jc) (var2.first(param0 + 215));
+        var3 = (WidgetLayer) (var2.first(param0 + 215));
         while (var3 != null) {
-          if (var3.field_N) {
+          if (var3.visible) {
             return var3.g((byte) -3);
           }
-          var3 = (jc) (var2.next(7));
+          var3 = (WidgetLayer) (var2.next(7));
         }
         return null;
     }
 
-    final jc g(int param0) {
+    final WidgetLayer getTopVisibleLayer(int obfuscationGuard) {
         NodeDequeCursor var2;
-        jc var3;
+        WidgetLayer var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        if (param0 >= -96) {
+        if (obfuscationGuard >= -96) {
           field_G = (String) null;
         }
-        var2 = new NodeDequeCursor(this.field_J);
-        var3 = (jc) (var2.first(240));
+        var2 = new NodeDequeCursor(this.layers);
+        var3 = (WidgetLayer) (var2.first(240));
         while (var3 != null) {
-          if (var3.field_N) {
+          if (var3.visible) {
             return var3;
           }
-          var3 = (jc) (var2.next(7));
+          var3 = (WidgetLayer) (var2.next(7));
         }
         return null;
     }

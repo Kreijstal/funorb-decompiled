@@ -1270,7 +1270,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime137 = gr.a(true, "group_0");
           if (null != var2Lifetime137) {
-            vh.field_T = MenuButton.a(var2Lifetime137, (byte) 79);
+            RadialSelectorWidget.field_T = MenuButton.a(var2Lifetime137, (byte) 79);
           }
           var2Lifetime138 = gr.a(!param0, "group_1");
           if (null != var2Lifetime138) {
@@ -1374,7 +1374,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime163 = gr.a(!param0, "explain_multiball");
           if (null != var2Lifetime163) {
-            eh.field_d = MenuButton.a(var2Lifetime163, (byte) 90);
+            WidgetTheme.field_d = MenuButton.a(var2Lifetime163, (byte) 90);
           }
           var2Lifetime164 = gr.a(true, "explain_speedup");
           if (var2Lifetime164 != null) {
@@ -1390,7 +1390,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime167 = gr.a(true, "explain_sticky");
           if (var2Lifetime167 != null) {
-            vh.field_V = MenuButton.a(var2Lifetime167, (byte) 114);
+            RadialSelectorWidget.field_V = MenuButton.a(var2Lifetime167, (byte) 114);
           }
           var2Lifetime168 = gr.a(true, "explain_unsuper_ball");
           if (null != var2Lifetime168) {

@@ -217,7 +217,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var28 = (ScorePopup) (var24.scorePopups.next((byte) 116));
           }
           if (0 != (match.playerMaskThree & 1 << playerId)) {
-            cp.a(destinationX, var8, var9, (byte) 126, var24, destinationY, scaleDivisor);
+            WidgetLayerStack.a(destinationX, var8, var9, (byte) 126, var24, destinationY, scaleDivisor);
           }
           if (0 != (1 << playerId & match.playerMaskTwo)) {
             bm.a(destinationX, destinationY, var9, var24, var8, scaleDivisor, SpaceBackground.field_s.toLowerCase(), (byte) 123);

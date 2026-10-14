@@ -220,13 +220,13 @@ final class ScrollPane extends UiComponent {
               }
               var1 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.next((byte) 116));
             }
-            if (jc.field_M != null) {
-              var1Lifetime1 = (SoundPlayback) (jc.field_M.first(param0 + 29407));
+            if (WidgetLayer.field_M != null) {
+              var1Lifetime1 = (SoundPlayback) (WidgetLayer.field_M.first(param0 + 29407));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.sourceNode.isLinked(0)) {
                   var1Lifetime1.unlink((byte) 111);
                 }
-                var1Lifetime1 = (SoundPlayback) (jc.field_M.next((byte) 116));
+                var1Lifetime1 = (SoundPlayback) (WidgetLayer.field_M.next((byte) 116));
               }
             }
           }

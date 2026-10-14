@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lg extends FocusableWidget {
+class HotspotTextWidget extends FocusableWidget {
     private String[] field_K;
     private NodeDeque field_O;
     private gg field_N;
     static int field_L;
     static String field_M;
 
-    final void i(int param0) {
+    final void rebuildHotspots(int obfuscationGuard) {
         int var11 = 0;
         int stackIn_10_0 = 0;
         int stackIn_15_0 = 0;
@@ -31,7 +31,7 @@ class lg extends FocusableWidget {
         this.field_O = new NodeDeque();
         var2 = 0;
         var3 = (WidgetLayoutProvider) ((Object) this.renderer);
-        if (param0 != -1) {
+        if (obfuscationGuard != -1) {
           this.a(-10, (byte) -28, 79, -11);
         }
         var4 = var3.c((Widget) (this), -7);
@@ -151,7 +151,7 @@ class lg extends FocusableWidget {
 
     final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, obfuscationGuard, width);
-        this.i(-1);
+        this.rebuildHotspots(-1);
     }
 
     void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
@@ -230,7 +230,7 @@ class lg extends FocusableWidget {
         super.dispatchAction(pointerY, button, -106, pointerX);
         if (obfuscationGuard >= -8) {
           String var8 = (String) null;
-          lg.a(-127, (String) null, 62);
+          HotspotTextWidget.a(-127, (String) null, 62);
         }
         int var5 = -this.x + pointerX;
         int var6 = -this.y + pointerY;
@@ -310,13 +310,13 @@ class lg extends FocusableWidget {
         }
     }
 
-    lg(String param0, WidgetRenderer param1) {
-        super(param0, (WidgetListener) null);
+    HotspotTextWidget(String text, WidgetRenderer renderer) {
+        super(text, (WidgetListener) null);
         this.field_N = null;
         try {
-          this.renderer = param1;
+          this.renderer = renderer;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lg.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ')');
         }
     }
 

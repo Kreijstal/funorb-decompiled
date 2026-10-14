@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class fe extends bj {
-    private sk field_mb;
+    private OpacityWidget field_mb;
     private int field_cb;
     static int field_ob;
     private int field_fb;
@@ -64,12 +64,12 @@ abstract class fe extends bj {
           this.a((byte) 56, this.field_eb);
         } else {
           this.field_nb = null;
-          this.field_mb.field_K = 256;
+          this.field_mb.opacity256 = 256;
           super.j(param0);
           return;
         }
         this.field_nb = null;
-        this.field_mb.field_K = 256;
+        this.field_mb.opacity256 = 256;
         super.j(param0);
     }
 
@@ -80,7 +80,7 @@ abstract class fe extends bj {
         int var3 = BrickABrac.field_J ? 1 : 0;
         if (param0 != 0) {
           Widget var4 = (Widget) null;
-          this.a(-125, (byte) 123, (Widget) null, 'ﾈ');
+          this.handleWidgetKey(-125, (byte) 123, (Widget) null, 'ﾈ');
           if (this.field_nb == null) {
             return super.h(0);
           }
@@ -92,21 +92,21 @@ abstract class fe extends bj {
             this.field_fb = this.field_fb + 1;
             if (this.field_bb == fieldTemp$0) {
               this.field_nb = null;
-              this.field_mb.field_K = 256;
+              this.field_mb.opacity256 = 256;
               return super.h(0);
             }
-            this.field_mb.field_K = (this.field_fb << 8) / this.field_bb;
+            this.field_mb.opacity256 = (this.field_fb << 8) / this.field_bb;
             return super.h(0);
           }
           fieldTemp$1 = this.field_fb + 1;
           this.field_fb = this.field_fb + 1;
           if (fieldTemp$1 != this.field_cb) {
-            this.field_mb.field_K = 256 - (this.field_fb << 8) / this.field_cb;
+            this.field_mb.opacity256 = 256 - (this.field_fb << 8) / this.field_cb;
             return super.h(0);
           }
           this.field_nb = MouseInput.field_e;
           this.a((byte) -116, this.field_lb, this.field_eb.height + (this.field_db + 12), 12 + this.field_eb.width);
-          this.field_mb.field_K = 0;
+          this.field_mb.opacity256 = 0;
           this.field_fb = 0;
           return super.h(0);
         }
@@ -121,21 +121,21 @@ abstract class fe extends bj {
           this.field_fb = this.field_fb + 1;
           if (this.field_bb == fieldTemp$2) {
             this.field_nb = null;
-            this.field_mb.field_K = 256;
+            this.field_mb.opacity256 = 256;
             return super.h(0);
           }
-          this.field_mb.field_K = (this.field_fb << 8) / this.field_bb;
+          this.field_mb.opacity256 = (this.field_fb << 8) / this.field_bb;
           return super.h(0);
         }
         int fieldTemp$3 = this.field_fb + 1;
         this.field_fb = this.field_fb + 1;
         if (fieldTemp$3 != this.field_cb) {
-          this.field_mb.field_K = 256 - (this.field_fb << 8) / this.field_cb;
+          this.field_mb.opacity256 = 256 - (this.field_fb << 8) / this.field_cb;
           return super.h(0);
         }
         this.field_nb = MouseInput.field_e;
         this.a((byte) -116, this.field_lb, this.field_eb.height + (this.field_db + 12), 12 + this.field_eb.width);
-        this.field_mb.field_K = 0;
+        this.field_mb.opacity256 = 0;
         this.field_fb = 0;
         return super.h(0);
     }
@@ -145,10 +145,10 @@ abstract class fe extends bj {
           this.field_mb.unlink((byte) 111);
         }
         if (param1 == null) {
-          this.field_mb = new sk();
+          this.field_mb = new OpacityWidget();
         } else {
           param1.setBounds(param1.height, 6, this.field_db + 6, (byte) -119, param1.width);
-          this.field_mb = new sk(param1);
+          this.field_mb = new OpacityWidget(param1);
         }
         this.addChild(this.field_mb, true);
         if (param0 != 56) {
@@ -169,43 +169,43 @@ abstract class fe extends bj {
         this.field_nb = NameEntryPopup.field_Xb;
         this.a((byte) 56, this.field_eb);
         this.field_eb = null;
-        this.field_mb.field_K = 0;
+        this.field_mb.opacity256 = 0;
         if (param0 != -13717) {
           this.field_nb = (mi) null;
         }
     }
 
-    boolean a(int param0, byte param1, Widget param2, char param3) {
+    boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleWidgetKey(keyCode, obfuscationGuard, focusRoot, character)) {
             return true;
           }
           if (null == this.field_mb) {
             return false;
           }
-          if (98 == param0) {
-            this.field_mb.tryFocus(true, param2);
+          if (98 == keyCode) {
+            this.field_mb.tryFocus(true, focusRoot);
           }
-          if (param0 == 99) {
-            this.field_mb.tryFocus(true, param2);
+          if (keyCode == 99) {
+            this.field_mb.tryFocus(true, focusRoot);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("fe.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_14_1 = new StringBuilder().append("fe.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(character).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ abstract class fe extends bj {
         field_gb = null;
     }
 
-    fe(cp param0, Widget param1, int param2, int param3, int param4) {
+    fe(WidgetLayerStack param0, Widget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.width, 12 + param2 + param1.height);
         try {
           this.field_lb = param4;
@@ -233,14 +233,14 @@ abstract class fe extends bj {
         }
     }
 
-    final boolean a(int param0) {
-        if (param0 < -22) {
+    final boolean updateOpacityAndCheckHidden(int obfuscationGuard) {
+        if (obfuscationGuard < -22) {
           this.j(20);
-          return super.a(-119);
+          return super.updateOpacityAndCheckHidden(-119);
         }
         this.field_cb = -1;
         this.j(20);
-        return super.a(-119);
+        return super.updateOpacityAndCheckHidden(-119);
     }
 
     static {

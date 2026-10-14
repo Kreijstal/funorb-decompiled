@@ -151,7 +151,7 @@ final class hm {
           if (obfuscationGuard != 0) {
             field_b = (String[]) null;
           }
-          stackIn_3_0 = sk.queueSoundPlayback((byte) -9, PcmStream.createAtRate(sound, 100, volume));
+          stackIn_3_0 = OpacityWidget.queueSoundPlayback((byte) -9, PcmStream.createAtRate(sound, 100, volume));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

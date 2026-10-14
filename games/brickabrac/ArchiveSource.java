@@ -30,7 +30,7 @@ abstract class ArchiveSource {
             return false;
           }
           var8 = new qf(ResourceArchive.field_f, param5);
-          ResourceArchive.field_f.a(-102, var8);
+          ResourceArchive.field_f.pushLayer(-102, var8);
           if (LevelPackLoader.a((byte) -56)) {
             var8.c(true);
             return true;

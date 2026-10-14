@@ -105,7 +105,7 @@ final class rd {
           selector = var3 + 1;
         }
         if (selector == 7) {
-          lg.h(0);
+          HotspotTextWidget.h(0);
         }
         BackgroundScene var2_ref = BackgroundRegistry.scenes[selector];
         var2_ref.ensureSprites(obfuscationGuard - 18);
@@ -151,7 +151,7 @@ final class rd {
             var6_int = param0.indexOf("<%", var5);
             if (var6_int >= 0) {
               for (var5 = 2 + var6_int; var5 < var3_int; var5++) {
-                if (eh.isAsciiDigit(param0.charAt(var5), (byte) 44)) {
+                if (WidgetTheme.isAsciiDigit(param0.charAt(var5), (byte) 44)) {
                   continue;
                 }
                 break;
@@ -184,7 +184,7 @@ final class rd {
               return stackIn_27_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (eh.isAsciiDigit(param0.charAt(var5Lifetime1), (byte) 60)) {
+              if (WidgetTheme.isAsciiDigit(param0.charAt(var5Lifetime1), (byte) 60)) {
                 continue;
               }
               break;

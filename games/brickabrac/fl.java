@@ -107,7 +107,7 @@ final class fl extends k {
         ng.quickChatChannel = 0;
     }
 
-    fl(vb param0) {
+    fl(TextFieldWidget param0) {
         super(param0);
         this.field_n = false;
     }

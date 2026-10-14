@@ -85,11 +85,11 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
               var6 = hm.a(true, qh.field_i[var3_int], 0);
               var4 = var4 + kn.field_y;
               var7 = wi.field_k - (var6 >> 1);
-              if (bg.containsRectanglePoint(var7 - cn.field_c, (jb.field_H << 1) + b.field_c, var6 + (cn.field_c << 1), (byte) 65, param1, param2, var4)) {
+              if (bg.containsRectanglePoint(var7 - cn.field_c, (DropTargetWidget.field_H << 1) + b.field_c, var6 + (cn.field_c << 1), (byte) 65, param1, param2, var4)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (kn.field_y + ((jb.field_H << 1) + b.field_c));
+              var4 = var4 + (kn.field_y + ((DropTargetWidget.field_H << 1) + b.field_c));
             }
             var3_int++;
           }
@@ -102,7 +102,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         }
     }
 
-    final boolean a(int param0, byte param1, Widget param2, char param3) {
+    final boolean handleWidgetKey(int keyCode, byte obfuscationGuard, Widget focusRoot, char character) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -111,37 +111,37 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleWidgetKey(keyCode, obfuscationGuard, focusRoot, character)) {
             return true;
           }
-          if (param0 == 98) {
-            stackIn_6_0 = this.b(param2, (byte) 87);
+          if (keyCode == 98) {
+            stackIn_6_0 = this.b(focusRoot, (byte) 87);
             return stackIn_6_0;
           }
-          if (param0 != 99) {
+          if (keyCode != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(param2, (byte) -127);
+          stackIn_10_0 = this.a(focusRoot, (byte) -127);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("qo.T(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_13_1 = new StringBuilder().append("qo.T(").append(keyCode).append(',').append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(character).append(')').toString());
         }
     }
 
     private final int a(String param0, int param1, int param2, Widget param3, int param4, String param5, boolean param6) {
         RuntimeException var8 = null;
         nf var9 = null;
-        ma var10 = null;
-        ma stackIn_2_1 = null;
+        LabeledWidget var10 = null;
+        LabeledWidget stackIn_2_1 = null;
         boolean stackIn_3_2 = false;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -153,7 +153,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new ma(20, param2, param1 + 120, 25, param3, param6, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
+          var10 = new LabeledWidget(20, param2, param1 + 120, 25, param3, param6, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
           stackIn_2_1 = var10;
           stackIn_3_2 = !(param6);
           this.addChild(stackIn_2_1, stackIn_3_2);
@@ -346,7 +346,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         try {
           var3 = this.field_L;
           var4 = param0;
-          ((vb) ((Object) var3)).a(var4, param1 - 12648, false);
+          ((TextFieldWidget) ((Object) var3)).setText(var4, param1 - 12648, false);
           if (param1 == 56) {
             return;
           }

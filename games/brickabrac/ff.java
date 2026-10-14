@@ -27,7 +27,7 @@ abstract class ff {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = eh.a(param0, param5, param3, 119, param1, param2);
+          var8 = WidgetTheme.a(param0, param5, param3, 119, param1, param2);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;

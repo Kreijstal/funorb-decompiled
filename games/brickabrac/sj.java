@@ -39,7 +39,7 @@ final class sj {
           var8_ref_gb = UnderwaterBackground.chatHistory[var7];
           var9 = 0;
           if (!um.field_e &&
-            var5 < eh.chatHistoryCategoryLimit) {
+            var5 < WidgetTheme.chatHistoryCategoryLimit) {
             var10_int = tm.getChatFilter(var8_ref_gb.channel, (byte) 18);
             if (var10_int <= var8_ref_gb.getRetentionCategory(true) && (var8_ref_gb.systemMessage ||
               !AchievementBrowserScreen.isIgnoredPlayer(125, var8_ref_gb.senderName))) {

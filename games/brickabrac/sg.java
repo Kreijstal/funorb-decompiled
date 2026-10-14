@@ -7,7 +7,7 @@ final class sg extends k {
     static String field_k;
     static int field_n;
 
-    sg(vb param0) {
+    sg(TextFieldWidget param0) {
         super(param0);
     }
 
@@ -55,7 +55,7 @@ final class sg extends k {
           if (param1 != 106) {
             field_n = 85;
           }
-          stackIn_5_0 = (null != cp.a(param0, (byte) -24)) ? 0 : 1;
+          stackIn_5_0 = (null != WidgetLayerStack.a(param0, (byte) -24)) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
             return DualLinkIterator.field_c;

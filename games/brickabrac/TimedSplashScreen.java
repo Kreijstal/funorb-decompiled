@@ -74,7 +74,7 @@ final class TimedSplashScreen extends MenuScreen {
           if (obfuscationGuard < 75) {
             field_u = (ScrollPane) null;
           }
-          stackIn_3_0 = sk.queueSoundPlayback((byte) 117, PcmStream.createAtRate(sound, 100, 96));
+          stackIn_3_0 = OpacityWidget.queueSoundPlayback((byte) 117, PcmStream.createAtRate(sound, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
