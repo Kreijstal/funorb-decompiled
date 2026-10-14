@@ -201,7 +201,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var11 = ef.field_b[0];
           var29 = var11;
           var29Lifetime2 = var11;
-          var10 = ro.field_m;
+          var10 = Bzip2State.field_m;
           var9.contextMenu.addIconAction(var10, 108, 11, var11);
           var12 = bm.contextActions;
           var14 = ef.field_b[1];

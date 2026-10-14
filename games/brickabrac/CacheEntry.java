@@ -194,7 +194,7 @@ abstract class CacheEntry extends DualLinkNode {
           jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           ChatMessage.field_l = new UiComponent[4 + param13];
           MatchCompleteScreen.field_A = new AlignedIconLabel[4 + param13][];
-          ChatMessage.field_l[0] = new UiComponent(0L, wi.field_n, ro.field_H);
+          ChatMessage.field_l[0] = new UiComponent(0L, wi.field_n, Bzip2State.field_H);
           MatchCompleteScreen.field_A[0] = new AlignedIconLabel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             MatchCompleteScreen.field_A[0][1 + var17_int] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);

@@ -454,7 +454,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_options_whocanjoin", (byte) -121);
                 if (var2 != null) {
-                  ro.field_H = MenuButton.a(var2, (byte) 85);
+                  Bzip2State.field_H = MenuButton.a(var2, (byte) 85);
                 }
                 var2 = nk.a("mu_options_players", (byte) -107);
                 if (var2 != null) {
@@ -570,7 +570,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_lobby_show_all", (byte) 75);
                 if (var2 != null) {
-                  ro.field_m = MenuButton.a(var2, (byte) 116);
+                  Bzip2State.field_m = MenuButton.a(var2, (byte) 116);
                 }
                 var2 = nk.a("mu_chat_lobby_friends_only", (byte) -127);
                 if (null != var2) {

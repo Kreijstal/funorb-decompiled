@@ -1294,7 +1294,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime143 = gr.a(true, "explain_close");
           if (null != var2Lifetime143) {
-            ro.field_v = MenuButton.a(var2Lifetime143, (byte) 118);
+            Bzip2State.field_v = MenuButton.a(var2Lifetime143, (byte) 118);
           }
           var2Lifetime144 = gr.a(true, "explain_welcome");
           if (null != var2Lifetime144) {

@@ -75,39 +75,39 @@ class ba extends DualLinkNode {
         var1.unlink((byte) 111);
     }
 
-    final static int a(byte[] param0, int param1, int param2, int param3) {
-        int var5 = 0;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var6 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+    final static int computeCrc32(byte[] input, int obfuscationGuard, int start, int end) {
+        int inputIndex = 0;
+        int crc = 0;
+        RuntimeException failure = null;
+        int unusedGameFlag = 0;
+        int checksum = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String inputSummary = null;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = -1;
-          if (param1 != 9) {
+          crc = -1;
+          if (obfuscationGuard != 9) {
             ba.b(false);
           }
-          for (var5 = param2; param3 > var5; var5++) {
-            var4_int = LevelCompleteScreen.field_D[(var4_int ^ param0[var5]) & 255] ^ var4_int >>> 8;
+          for (inputIndex = start; end > inputIndex; inputIndex++) {
+            crc = LevelCompleteScreen.crc32Table[(crc ^ input[inputIndex]) & 255] ^ crc >>> 8;
           }
-          var4_int = ~var4_int;
-          stackIn_7_0 = var4_int;
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("ba.IA(");
-          if (param0 == null) {
-            stackIn_11_2 = "null";
+          crc = ~crc;
+          checksum = crc;
+          return checksum;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ba.IA(");
+          if (input == null) {
+            inputSummary = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            inputSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(inputSummary).append(',').append(obfuscationGuard).append(',').append(start).append(',').append(end).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ class ba extends DualLinkNode {
         field_y = null;
         if (param0 > -98) {
           byte[] var2 = (byte[]) null;
-          ba.a((byte[]) null, 51, 121, 59);
+          ba.computeCrc32((byte[]) null, 51, 121, 59);
         }
     }
 

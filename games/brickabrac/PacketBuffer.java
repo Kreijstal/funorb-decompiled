@@ -727,7 +727,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int appendCrc32(int obfuscationGuard, int startOffset) {
-        int var3 = ba.a(this.data, 9, startOffset, this.position);
+        int var3 = ba.computeCrc32(this.data, 9, startOffset, this.position);
         if (obfuscationGuard != 3) {
           this.readSignedSmart(46);
         }
@@ -763,7 +763,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(byte obfuscationGuard) {
         this.position = this.position - 4;
-        int var2 = ba.a(this.data, obfuscationGuard + 36, 0, this.position);
+        int var2 = ba.computeCrc32(this.data, obfuscationGuard + 36, 0, this.position);
         int var3 = this.readInt(255);
         if (var2 == var3) {
           return true;

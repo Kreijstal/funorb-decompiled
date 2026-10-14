@@ -8,7 +8,7 @@ final class HighscoresScreen extends MenuScreen {
     static int[][] field_w;
     private int packIndex;
     private HighscorePackSelector packSelector;
-    static int[] field_u;
+    static int[] bzip2TraversalTable;
     private int scoreFilterIndex;
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
@@ -31,7 +31,7 @@ final class HighscoresScreen extends MenuScreen {
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
         int var3 = 0;
         if (obfuscationGuard != 1) {
-          field_u = (int[]) null;
+          bzip2TraversalTable = (int[]) null;
         }
         if (this.buttons.length != 2) {
           var3 = this.buttons[buttonIndex].actionId;
@@ -113,7 +113,7 @@ final class HighscoresScreen extends MenuScreen {
           }
         }
         if (obfuscationGuard != -120) {
-          field_u = (int[]) null;
+          bzip2TraversalTable = (int[]) null;
         }
     }
 
@@ -488,7 +488,7 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     public static void f(int param0) {
-        field_u = null;
+        bzip2TraversalTable = null;
         if (param0 != -5) {
           String var2 = (String) null;
           HighscoresScreen.a((String) null, -31, (String) null);

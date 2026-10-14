@@ -14,7 +14,7 @@ final class JungleBackground extends BackgroundScene {
           field_v = (RgbSprite[][]) null;
         }
         if (!this.hasSprites((byte) -99)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, ro.jungleBackgroundColors[colorIndex], 16777215);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, Bzip2State.jungleBackgroundColors[colorIndex], 16777215);
           if (BrickABrac.field_J) {
             var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
@@ -866,7 +866,7 @@ final class JungleBackground extends BackgroundScene {
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         int var5;
         if (colorIndex > -1) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, ro.jungleBackgroundColors[colorIndex], 16777215);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, Bzip2State.jungleBackgroundColors[colorIndex], 16777215);
         }
         if (colorIndex <= -1 ||
           BrickABrac.field_J) {
@@ -899,7 +899,7 @@ final class JungleBackground extends BackgroundScene {
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var7;
         if (!this.hasSprites((byte) -95)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, ro.jungleBackgroundColors[colorIndex], 16777215);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, Bzip2State.jungleBackgroundColors[colorIndex], 16777215);
           if (BrickABrac.field_J) {
             var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {

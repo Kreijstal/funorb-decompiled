@@ -100,7 +100,7 @@ final class AchievementIcon extends IntrusiveNode {
               var11 = var13;
               var6 = var11;
               if (var3 == 1) {
-                tc.a(var13, var5, data, var4, 9);
+                Bzip2Decoder.decompress(var13, var5, data, var4, 9);
               } else {
                 var7 = DualLinkIterator.archiveGzipInflater;
                 synchronized (var7) {

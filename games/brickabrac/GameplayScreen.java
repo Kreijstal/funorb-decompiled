@@ -1747,7 +1747,7 @@ final class GameplayScreen extends GameScreen {
           ArchiveNetworkClient.a(640, this.match, var7_ref_j);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
-            ui.a(tb.field_eb + ro.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
+            ui.a(tb.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != var7_ref_j.displayedMessage) {
               var12 = (IndexedSprite[]) null;

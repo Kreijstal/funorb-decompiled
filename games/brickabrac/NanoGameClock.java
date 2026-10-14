@@ -81,7 +81,7 @@ final class NanoGameClock extends GameClock {
           if (param2 != -86) {
             field_i = -76L;
           }
-          stackIn_3_0 = ba.a(param1, 9, 0, param0);
+          stackIn_3_0 = ba.computeCrc32(param1, 9, 0, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

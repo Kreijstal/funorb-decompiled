@@ -4,7 +4,7 @@
 final class LevelCompleteScreen extends PauseMenuScreen {
     static int receivedChatKeyLow24;
     static int field_A;
-    static int[] field_D;
+    static int[] crc32Table;
     static RgbSprite field_F;
     static String field_z;
     static String[] field_E;
@@ -18,7 +18,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         if (param0 != -257) {
           LevelCompleteScreen.h(-94);
         }
-        field_D = null;
+        crc32Table = null;
         field_F = null;
         viewFacePointTwoZ = null;
         field_J = null;
@@ -63,7 +63,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         int var1 = 0;
         int var2 = 0;
         int var0;
-        field_D = new int[256];
+        crc32Table = new int[256];
         for (var1 = 0; var1 < 256; var1++) {
           var0 = var1;
           for (var2 = 0; var2 < 8; var2++) {
@@ -73,7 +73,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
               var0 = var0 >>> 1;
             }
           }
-          field_D[var1] = var0;
+          crc32Table[var1] = var0;
         }
         field_E = new String[]{"By rating", "By win percentage"};
         field_z = "Please send me news and updates (I can unsubscribe at any time)";
