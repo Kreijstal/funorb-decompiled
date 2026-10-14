@@ -98,7 +98,7 @@ final class nj extends IntrusiveNode {
         this.field_k = this.field_k + 1;
         if (this.field_u == fieldTemp$1) {
           this.unlink((byte) 111);
-          dl.field_f = dl.field_f - 1;
+          SocketConnector.field_f = SocketConnector.field_f - 1;
         }
     }
 

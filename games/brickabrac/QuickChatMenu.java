@@ -1354,7 +1354,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime158 = gr.a(true, "explain_extra");
           if (var2Lifetime158 != null) {
-            ef.field_c = MenuButton.a(var2Lifetime158, (byte) 101);
+            ProxyAuthenticationRequiredException.field_c = MenuButton.a(var2Lifetime158, (byte) 101);
           }
           var2Lifetime159 = gr.a(!param0, "explain_distort");
           if (null != var2Lifetime159) {

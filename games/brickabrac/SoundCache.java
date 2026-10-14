@@ -403,8 +403,8 @@ final class SoundCache {
                 stackIn_104_0 = 3;
                 return stackIn_104_0;
               }
-              var6_intLifetime2 = dl.field_b;
-              dl.field_b = DebouncedValidationSource.field_a;
+              var6_intLifetime2 = SocketConnector.field_b;
+              SocketConnector.field_b = DebouncedValidationSource.field_a;
               RadialSelectorRenderer.field_d = true;
               DebouncedValidationSource.field_a = var6_intLifetime2;
             }
@@ -597,7 +597,7 @@ final class SoundCache {
         RuntimeException var2 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = dl.field_f;
+          var2_int = SocketConnector.field_f;
           if (0 == var2_int) {
             uf.a(3, 0);
           }
@@ -607,7 +607,7 @@ final class SoundCache {
             var3 = (nj) (PasswordFieldRenderer.field_E.next((byte) 116));
           }
           if (param0) {
-            uf.a(var2_int - dl.field_f, 0);
+            uf.a(var2_int - SocketConnector.field_f, 0);
           }
           if (param1 >= -30) {
             field_f = (NodeDeque) null;

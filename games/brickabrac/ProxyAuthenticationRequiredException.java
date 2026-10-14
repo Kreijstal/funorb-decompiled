@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ef extends IOException {
+final class ProxyAuthenticationRequiredException extends IOException {
     static String field_f;
     static RgbSprite[] field_b;
     static PcmSound[] field_a;
@@ -34,8 +34,8 @@ final class ef extends IOException {
         field_c = null;
     }
 
-    ef(String param0) {
-        super(param0);
+    ProxyAuthenticationRequiredException(String authenticationScheme) {
+        super(authenticationScheme);
     }
 
     final static void a(RgbSprite param0, RgbSprite param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9, RgbSprite param10) {
@@ -86,7 +86,7 @@ final class ef extends IOException {
         try {
           if (param1 != -106) {
             var6 = (String[]) null;
-            ef.a((String) null, 72, 40, (String[]) null);
+            ProxyAuthenticationRequiredException.a((String) null, 72, 40, (String[]) null);
           }
           MusicVoice.field_l = StatefulWidgetRenderer.field_v;
           if (param2 != 255) {

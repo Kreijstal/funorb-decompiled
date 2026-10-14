@@ -108,7 +108,7 @@ final class n {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = qp.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
+        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var4;
     }
@@ -312,13 +312,13 @@ final class n {
           stackIn_78_0 = MultiplayerMatch.field_d;
           stackIn_79_1 = (param1) && (!param2) && (!hc.field_c);
           ((UiComponent) (Object) stackIn_78_0).updateRoot(stackIn_79_1, -15211);
-          stackIn_83_0 = wi.field_j;
+          stackIn_83_0 = ProxySocketConnector.field_j;
           stackIn_84_1 = (param1) && (!param2) && (hc.field_c);
           ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
           BrickGameLayerController.field_c.field_d.processTabPresses(0);
           if (nl.pendingLobbyGame != null) {
             if (GameUiController.field_e.pressedButton != 0) {
-              ef.requestReturnToLobby(-22809, param0);
+              ProxyAuthenticationRequiredException.requestReturnToLobby(-22809, param0);
             }
             if (DraggableWidget.field_K.pressedButton != 0) {
               if (!fh.pendingGameOptionsReceived) {

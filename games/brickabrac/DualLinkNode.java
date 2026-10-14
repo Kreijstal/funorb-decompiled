@@ -214,7 +214,7 @@ class DualLinkNode extends IntrusiveNode {
         if (obfuscationGuard < 0) {
           return;
         }
-        wi.rankingRowCount = 0;
+        ProxySocketConnector.rankingRowCount = 0;
         ba.field_w = 2147483647;
         IntArrayRequest.field_u = 2147483647;
         uf.field_b = -2147483648;

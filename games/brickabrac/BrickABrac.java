@@ -797,8 +797,8 @@ public final class BrickABrac extends InteractiveGameClient {
         MusicVoice.c((byte) 67);
         MidiFileReader.g();
         MusicVoiceMixer.c(2143);
-        dl.b(-9125);
-        ef.b(10);
+        SocketConnector.b(-9125);
+        ProxyAuthenticationRequiredException.b(10);
         NanoGameClock.f((byte) -124);
         ProducerFramebuffer.b(11);
         rq.a((byte) -118);
@@ -848,7 +848,7 @@ public final class BrickABrac extends InteractiveGameClient {
         GrowableIntList.a(true);
         QuickChatParameterType.a(125);
         StrongCacheEntry.h(928072);
-        wi.b((byte) -54);
+        ProxySocketConnector.b((byte) -54);
         AudioFilter.releaseScratch();
         ja.a(2);
         IntrusiveHashIterator.c(-93);

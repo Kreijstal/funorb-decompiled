@@ -21,7 +21,7 @@ final class JungleBackground extends BackgroundScene {
               ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ef.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
+            ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
           }
         } else {
           var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
@@ -29,7 +29,7 @@ final class JungleBackground extends BackgroundScene {
             ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ef.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
+          ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
         }
     }
 
@@ -906,7 +906,7 @@ final class JungleBackground extends BackgroundScene {
               ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
+            ProxyAuthenticationRequiredException.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
           }
         } else {
           var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
@@ -914,7 +914,7 @@ final class JungleBackground extends BackgroundScene {
             ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
+          ProxyAuthenticationRequiredException.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
         }
         if (obfuscationGuard >= -84) {
           field_t = (String) null;

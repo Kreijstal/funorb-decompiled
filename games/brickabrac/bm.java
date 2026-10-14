@@ -316,7 +316,7 @@ final class bm {
                             sound = NineSliceFrame.uiSounds[7];
                           } else {
                             if (3 == event.eventCode) {
-                              sound = ef.field_a[event.detailId];
+                              sound = ProxyAuthenticationRequiredException.field_a[event.detailId];
                             } else {
                               if (8 == event.eventCode) {
                                 sound = NineSliceFrame.uiSounds[10];

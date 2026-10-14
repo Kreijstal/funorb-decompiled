@@ -167,7 +167,7 @@ final class pp {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        wi.field_k = param0;
+        ProxySocketConnector.field_k = param0;
         if (param2 != 19) {
           return;
         }

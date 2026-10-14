@@ -225,7 +225,7 @@ final class so {
           GzipInflater.field_a = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
           IntrusiveNode.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
           FullscreenFailureKind.trackHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "track_heads", 2);
-          ef.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_small", 2);
+          ProxyAuthenticationRequiredException.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_small", 2);
           ScorePopup.characterHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
           cn.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small", 2);
           ScorePopup.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);

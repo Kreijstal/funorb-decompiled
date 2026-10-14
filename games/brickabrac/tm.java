@@ -33,7 +33,7 @@ final class tm {
         int var9Lifetime1;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var7_int = wi.a((byte) -98, param1);
+          var7_int = ProxySocketConnector.roundUpToEight((byte) -98, param1);
           if (null == ReflectionCheck.field_p) {
             ReflectionCheck.field_p = new java.security.SecureRandom();
           }

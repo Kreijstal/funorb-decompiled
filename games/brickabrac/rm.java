@@ -42,7 +42,7 @@ final class rm implements bp {
             stackIn_5_0 = null;
             return (hl) (stackIn_5_0);
           }
-          var2 = new hl(param1, ArrayWidgetGroup.decodedSpriteOffsetX, dl.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, cn.decodedSpriteIndices);
+          var2 = new hl(param1, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, cn.decodedSpriteIndices);
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;

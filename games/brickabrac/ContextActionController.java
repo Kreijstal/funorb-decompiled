@@ -1268,7 +1268,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("connectionlost_withreason", (byte) -122);
                 if (var2 != null) {
-                  wi.field_h = MenuButton.a(var2, (byte) 91);
+                  ProxySocketConnector.field_h = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = nk.a("passwordverificationrequired", (byte) -128);
                 if (var2 != null) {
@@ -2678,7 +2678,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rating_noratings", (byte) -116);
                 if (null != var2) {
-                  ef.field_f = MenuButton.a(var2, (byte) 79);
+                  ProxyAuthenticationRequiredException.field_f = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = nk.a("rating_rating", (byte) -115);
                 if (null != var2) {

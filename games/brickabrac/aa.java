@@ -90,7 +90,7 @@ final class aa {
             StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
           }
           if (hc.field_f > 0) {
-            ef.a(-83);
+            ProxyAuthenticationRequiredException.a(-83);
           }
           return;
         }
@@ -104,7 +104,7 @@ final class aa {
           StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
         }
         if (hc.field_f > 0) {
-          ef.a(-83);
+          ProxyAuthenticationRequiredException.a(-83);
         }
         return;
     }

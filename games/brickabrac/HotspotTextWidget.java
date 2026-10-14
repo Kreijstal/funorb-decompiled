@@ -243,7 +243,7 @@ class HotspotTextWidget extends FocusableWidget {
 
     final static void h(int param0) {
         PasswordFieldRenderer.field_E.clear((byte) -114);
-        dl.field_f = param0;
+        SocketConnector.field_f = param0;
     }
 
     final void setHotspotTooltip(String tooltip, int hotspotId, byte obfuscationGuard) {

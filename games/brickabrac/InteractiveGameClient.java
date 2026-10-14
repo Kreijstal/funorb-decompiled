@@ -189,7 +189,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                   break;
                 case 4:
                   AccountIntroductionPanel.a(qn.field_k, false, (byte) 61);
-                  wi.field_g = true;
+                  ProxySocketConnector.field_g = true;
                   if (var5 == 0) {
                     break;
                   }

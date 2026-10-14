@@ -286,7 +286,7 @@ final class WidgetLayerStack extends SingleChildWidget {
               var6 = Integer.toString(var2);
             }
             var7Lifetime1 = hm.a(!(0 > var4), var6, 0);
-            var8Lifetime1 = wi.field_k - (var7Lifetime1 >> 1);
+            var8Lifetime1 = ProxySocketConnector.field_k - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + kn.field_y;
               if (UiComponent.field_H.selectedIndex != var4) {

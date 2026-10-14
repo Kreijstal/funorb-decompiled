@@ -35,7 +35,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         int var3 = 4 + JungleBackground.field_r.nextBoundedInt(-37880252, -4 + param0);
         int var4 = JungleBackground.field_r.nextBoundedInt(-37880252, -8 + param2) + 8;
         PasswordFieldRenderer.field_E.addLast(new nj(var3, var4, PauseMenuScreen.field_x + JungleBackground.field_r.nextBoundedInt(-37880252, FarmBackground.field_w), Mesh3D.field_k + JungleBackground.field_r.nextBoundedInt(-37880252, ArrayWidgetGroup.field_E)), (byte) 3);
-        dl.field_f = dl.field_f + 1;
+        SocketConnector.field_f = SocketConnector.field_f + 1;
     }
 
     final void drawScreen(byte obfuscationGuard) {

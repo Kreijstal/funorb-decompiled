@@ -273,12 +273,12 @@ final class hc {
           Paddle.field_C = new UiComponent(0L, CappedUrlRequest.field_l);
           Paddle.field_C.frameSprites = TimedSplashScreen.a(false, (byte) 94, 2236962, 16, 2236962, false);
           Paddle.field_C.textInset = 2;
-          wi.field_n = new UiComponent(0L, CappedUrlRequest.field_l);
-          wi.field_n.frameSprites = TimedSplashScreen.a(false, (byte) 80, 1513239, 16, 1513239, false);
-          wi.field_n.textInset = 2;
+          ProxySocketConnector.field_n = new UiComponent(0L, CappedUrlRequest.field_l);
+          ProxySocketConnector.field_n.frameSprites = TimedSplashScreen.a(false, (byte) 80, 1513239, 16, 1513239, false);
+          ProxySocketConnector.field_n.textInset = 2;
           OptionsScreen.field_v = new UiComponent(0L, Paddle.field_C);
           OptionsScreen.field_v.copyStyle((byte) -82, DualLinkNode.field_t);
-          TextFieldWidget.field_K = new UiComponent(0L, wi.field_n);
+          TextFieldWidget.field_K = new UiComponent(0L, ProxySocketConnector.field_n);
           TextFieldWidget.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
           var16 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
           ce.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.uiRowHeight);

@@ -50,16 +50,16 @@ final class gr {
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          ti.sortRankingIndexRange(BoundedFile.field_l, IntArrayRequest.field_u, wi.rankingRowCount, true, 97, rowLimit, 0);
+          ti.sortRankingIndexRange(BoundedFile.field_l, IntArrayRequest.field_u, ProxySocketConnector.rankingRowCount, true, 97, rowLimit, 0);
           if (obfuscationGuard != 12429) {
             gr.sortRankingViews(22, -5);
           }
-          for (var2_int = 0; var2_int < wi.rankingRowCount; var2_int++) {
+          for (var2_int = 0; var2_int < ProxySocketConnector.rankingRowCount; var2_int++) {
             VerticalScrollbar.rankingSortIndices[var2_int + rowLimit] = var2_int;
           }
-          ti.sortRankingIndexRange(uf.field_b, ba.field_w, rowLimit + wi.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
-          if (rowLimit < wi.rankingRowCount) {
-            wi.rankingRowCount = rowLimit;
+          ti.sortRankingIndexRange(uf.field_b, ba.field_w, rowLimit + ProxySocketConnector.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
+          if (rowLimit < ProxySocketConnector.rankingRowCount) {
+            ProxySocketConnector.rankingRowCount = rowLimit;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

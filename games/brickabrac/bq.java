@@ -296,8 +296,8 @@ final class bq {
             }
           }
           jj.field_c = UiComponent.field_H.itemCount * (kn.field_y + DropTargetWidget.field_H << 1);
-          np.field_b = wi.field_k - (var3_intLifetime1 >> 1);
-          SpaceBackground.field_u = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + wi.field_k);
+          np.field_b = ProxySocketConnector.field_k - (var3_intLifetime1 >> 1);
+          SpaceBackground.field_u = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + ProxySocketConnector.field_k);
           for (var4Lifetime2 = 0; ValidationStatus.field_i.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_118_0 = jj.field_c;
             if (BrickABrac.field_K[var4Lifetime2] >= 0) {
@@ -315,7 +315,7 @@ final class bq {
             var6Lifetime1 = BrickABrac.field_K[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = hm.a(true, ValidationStatus.field_i[var4Lifetime3], param2 - 104);
-              var8Lifetime1 = wi.field_k - (var7Lifetime2 >> 1);
+              var8Lifetime1 = ProxySocketConnector.field_k - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + kn.field_y;
               ce.field_a[var4Lifetime3] = new int[4];
               ce.field_a[var4Lifetime3][0] = -cn.field_c + var8Lifetime1;

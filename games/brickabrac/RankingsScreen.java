@@ -244,7 +244,7 @@ final class RankingsScreen extends MenuScreen {
           if (null == ch.screenRankingsRequest.namesBySort) {
             var4Lifetime1 = BoundedFile.field_d;
           } else {
-            var4Lifetime1 = ef.field_f;
+            var4Lifetime1 = ProxyAuthenticationRequiredException.field_f;
             var5 = ch.screenRankingsRequest.namesBySort[this.sortIndex];
             var6 = ch.screenRankingsRequest.statisticsBySort[this.sortIndex];
             var7 = 0;

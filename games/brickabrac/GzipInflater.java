@@ -51,7 +51,7 @@ final class GzipInflater {
             if (param9 <= 121) {
               GzipInflater.b(47);
             }
-            dl.field_b = param13;
+            SocketConnector.field_b = param13;
             DebouncedValidationSource.field_a = param12;
             DialogMessagePanel.field_O = param10;
             LevelSelectScreen.field_E = param11;

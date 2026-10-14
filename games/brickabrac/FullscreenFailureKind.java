@@ -40,7 +40,7 @@ final class FullscreenFailureKind {
             }
             if (var3_int != 0) {
               if (InteractiveGameClient.field_E) {
-                param0 = rd.a(wi.field_h, new String[]{param0}, (byte) 103);
+                param0 = rd.a(ProxySocketConnector.field_h, new String[]{param0}, (byte) 103);
               }
               if (ln.field_l) {
                 param0 = GameCanvas.field_b;

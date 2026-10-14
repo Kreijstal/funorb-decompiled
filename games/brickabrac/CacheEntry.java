@@ -194,13 +194,13 @@ abstract class CacheEntry extends DualLinkNode {
           jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           ChatMessage.field_l = new UiComponent[4 + param13];
           MatchCompleteScreen.field_A = new AlignedIconLabel[4 + param13][];
-          ChatMessage.field_l[0] = new UiComponent(0L, wi.field_n, Bzip2State.field_H);
+          ChatMessage.field_l[0] = new UiComponent(0L, ProxySocketConnector.field_n, Bzip2State.field_H);
           MatchCompleteScreen.field_A[0] = new AlignedIconLabel[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             MatchCompleteScreen.field_A[0][1 + var17_int] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
           if (2 <= ScreenshotViewer.field_n.length) {
-            ChatMessage.field_l[1] = new UiComponent(0L, wi.field_n, QuickChatMenu.field_ac);
+            ChatMessage.field_l[1] = new UiComponent(0L, ProxySocketConnector.field_n, QuickChatMenu.field_ac);
             array$0 = new AlignedIconLabel[1 + ScreenshotViewer.field_n.length];
             MatchCompleteScreen.field_A[1] = array$0;
             MatchCompleteScreen.field_A[1][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
@@ -208,10 +208,10 @@ abstract class CacheEntry extends DualLinkNode {
               MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(ScreenshotViewer.field_n[var17_intLifetime1]));
             }
           }
-          ChatMessage.field_l[2] = new UiComponent(0L, wi.field_n, PlayerInputBatch.field_j);
+          ChatMessage.field_l[2] = new UiComponent(0L, ProxySocketConnector.field_n, PlayerInputBatch.field_j);
           MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < IntArrayRequest.field_t) {
-            ChatMessage.field_l[3] = new UiComponent(0L, wi.field_n, EmailConfirmationValidator.field_r);
+            ChatMessage.field_l[3] = new UiComponent(0L, ProxySocketConnector.field_n, EmailConfirmationValidator.field_r);
             array$1 = new AlignedIconLabel[IntArrayRequest.field_t + 1];
             MatchCompleteScreen.field_A[3] = array$1;
             MatchCompleteScreen.field_A[3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
@@ -220,7 +220,7 @@ abstract class CacheEntry extends DualLinkNode {
             }
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
-            ChatMessage.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, QuickChatPhraseRegistry.field_b[var17_intLifetime3]);
+            ChatMessage.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, ProxySocketConnector.field_n, QuickChatPhraseRegistry.field_b[var17_intLifetime3]);
             array$2 = new AlignedIconLabel[IntrusiveHashIterator.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
             MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);

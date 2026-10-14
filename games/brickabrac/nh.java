@@ -687,7 +687,7 @@ final class nh {
           stackIn_179_0 = MultiplayerMatch.field_d;
           stackIn_180_1 = (param2) && (!param1) && (!hc.field_c);
           ((UiComponent) (Object) stackIn_179_0).updateRoot(stackIn_180_1, -15211);
-          stackIn_184_0 = wi.field_j;
+          stackIn_184_0 = ProxySocketConnector.field_j;
           stackIn_185_1 = (param2) && (!param1) && (hc.field_c);
           ((UiComponent) (Object) stackIn_184_0).updateRoot(stackIn_185_1, -15211);
           if (!param0) {

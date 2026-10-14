@@ -31,16 +31,16 @@ final class MessageScreen extends MenuScreen {
         int var6Lifetime2;
         int var7Lifetime2;
         if (obfuscationGuard == -19824) {
-          cf.rankingSourceIndices[wi.rankingRowCount] = sourceIndex;
-          VerticalScrollbar.rankingSortIndices[wi.rankingRowCount] = wi.rankingRowCount;
-          DialogMessagePanel.rankingRatings[wi.rankingRowCount] = rating;
+          cf.rankingSourceIndices[ProxySocketConnector.rankingRowCount] = sourceIndex;
+          VerticalScrollbar.rankingSortIndices[ProxySocketConnector.rankingRowCount] = ProxySocketConnector.rankingRowCount;
+          DialogMessagePanel.rankingRatings[ProxySocketConnector.rankingRowCount] = rating;
           if (rating <= BoundedFile.field_l) {
             if (IntArrayRequest.field_u > rating) {
               ba.field_w = rating;
             }
-            RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
-            ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-            WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
+            RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
+            ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
+            WidgetGroup.rankingLosses[ProxySocketConnector.rankingRowCount] = losses;
             var6 = draws + wins + losses;
             if (0 != var6) {
               stackIn_54_0 = 1000 * wins / var6;
@@ -48,23 +48,23 @@ final class MessageScreen extends MenuScreen {
               stackIn_54_0 = 0;
             }
             var7 = stackIn_54_0;
-            DebouncedValidationSource.rankingWinRateThousandths[wi.rankingRowCount] = var7;
+            DebouncedValidationSource.rankingWinRateThousandths[ProxySocketConnector.rankingRowCount] = var7;
             if (uf.field_b < var7) {
               uf.field_b = var7;
             }
             if (ba.field_w > var7) {
               ba.field_w = var7;
             }
-            wi.rankingRowCount = wi.rankingRowCount + 1;
+            ProxySocketConnector.rankingRowCount = ProxySocketConnector.rankingRowCount + 1;
             return;
           }
           uf.field_b = rating;
           if (IntArrayRequest.field_u > rating) {
             ba.field_w = rating;
           }
-          RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
-          ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-          WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
+          RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
+          ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
+          WidgetGroup.rankingLosses[ProxySocketConnector.rankingRowCount] = losses;
           var6Lifetime2 = draws + wins + losses;
           if (0 != var6Lifetime2) {
             stackIn_39_0 = 1000 * wins / var6Lifetime2;
@@ -72,28 +72,28 @@ final class MessageScreen extends MenuScreen {
             stackIn_39_0 = 0;
           }
           var7Lifetime2 = stackIn_39_0;
-          DebouncedValidationSource.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime2;
+          DebouncedValidationSource.rankingWinRateThousandths[ProxySocketConnector.rankingRowCount] = var7Lifetime2;
           if (uf.field_b < var7Lifetime2) {
             uf.field_b = var7Lifetime2;
           }
           if (ba.field_w > var7Lifetime2) {
             ba.field_w = var7Lifetime2;
           }
-          wi.rankingRowCount = wi.rankingRowCount + 1;
+          ProxySocketConnector.rankingRowCount = ProxySocketConnector.rankingRowCount + 1;
           return;
         }
         var8 = (StringBuilder) null;
         MessageScreen.resizeAndFillTextBuffer('￰', (StringBuilder) null, -124, false);
-        cf.rankingSourceIndices[wi.rankingRowCount] = sourceIndex;
-        VerticalScrollbar.rankingSortIndices[wi.rankingRowCount] = wi.rankingRowCount;
-        DialogMessagePanel.rankingRatings[wi.rankingRowCount] = rating;
+        cf.rankingSourceIndices[ProxySocketConnector.rankingRowCount] = sourceIndex;
+        VerticalScrollbar.rankingSortIndices[ProxySocketConnector.rankingRowCount] = ProxySocketConnector.rankingRowCount;
+        DialogMessagePanel.rankingRatings[ProxySocketConnector.rankingRowCount] = rating;
         if (rating <= BoundedFile.field_l) {
           if (IntArrayRequest.field_u > rating) {
             ba.field_w = rating;
           }
-          RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
-          ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-          WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
+          RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
+          ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
+          WidgetGroup.rankingLosses[ProxySocketConnector.rankingRowCount] = losses;
           var6Lifetime1 = draws + wins + losses;
           if (0 != var6Lifetime1) {
             stackIn_8_0 = 1000 * wins / var6Lifetime1;
@@ -106,9 +106,9 @@ final class MessageScreen extends MenuScreen {
           if (IntArrayRequest.field_u > rating) {
             ba.field_w = rating;
           }
-          RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
-          ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-          WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
+          RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
+          ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
+          WidgetGroup.rankingLosses[ProxySocketConnector.rankingRowCount] = losses;
           var6Lifetime1 = draws + wins + losses;
           if (0 != var6Lifetime1) {
             stackIn_23_0 = 1000 * wins / var6Lifetime1;
@@ -117,14 +117,14 @@ final class MessageScreen extends MenuScreen {
           }
           var7Lifetime1 = stackIn_23_0;
         }
-        DebouncedValidationSource.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime1;
+        DebouncedValidationSource.rankingWinRateThousandths[ProxySocketConnector.rankingRowCount] = var7Lifetime1;
         if (uf.field_b < var7Lifetime1) {
           uf.field_b = var7Lifetime1;
         }
         if (ba.field_w > var7Lifetime1) {
           ba.field_w = var7Lifetime1;
         }
-        wi.rankingRowCount = wi.rankingRowCount + 1;
+        ProxySocketConnector.rankingRowCount = ProxySocketConnector.rankingRowCount + 1;
         return;
     }
 

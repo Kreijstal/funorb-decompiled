@@ -40,8 +40,8 @@ final class nk {
               CheckboxWidgetRenderer.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
             }
             DualLinkIterator.b((byte) 117);
-            if (wi.field_g) {
-              wi.field_g = false;
+            if (ProxySocketConnector.field_g) {
+              ProxySocketConnector.field_g = false;
               WidgetLayerStack.a(false, 21543);
             }
           }

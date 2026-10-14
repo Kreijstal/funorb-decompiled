@@ -21,36 +21,36 @@ final class nd {
         field_d = null;
     }
 
-    final static dl a(int param0, int param1, String param2) {
-        wi var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        wi stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static SocketConnector createSocketConnector(int obfuscationGuard, int port, String host) {
+        ProxySocketConnector connector = null;
+        RuntimeException failure = null;
+        String unusedHost = null;
+        ProxySocketConnector result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String hostSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          var3 = new wi();
-          if (param0 < 17) {
-            var4 = (String) null;
-            nd.a(19, -8, (String) null);
+          connector = new ProxySocketConnector();
+          if (obfuscationGuard < 17) {
+            unusedHost = (String) null;
+            nd.createSocketConnector(19, -8, (String) null);
           }
-          ((dl) ((Object) var3)).field_c = param1;
-          ((dl) ((Object) var3)).field_a = param2;
-          stackIn_3_0 = var3;
-          return (dl) ((Object) stackIn_3_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_6_0 = var3_ref;
-          stackIn_6_1 = new StringBuilder().append("nd.B(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_7_2 = "null";
+          ((SocketConnector) ((Object) connector)).targetPort = port;
+          ((SocketConnector) ((Object) connector)).targetHost = host;
+          result = connector;
+          return (SocketConnector) ((Object) result);
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("nd.B(").append(obfuscationGuard).append(',').append(port).append(',');
+          if (host == null) {
+            hostSummary = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            hostSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(hostSummary).append(')').toString());
         }
     }
 

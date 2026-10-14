@@ -128,7 +128,7 @@ final class jl {
           if (IntrusiveHashTable.keyEventReadIndex == fm.keyEventFrameEnd) {
             return false;
           }
-          MeshAttributeRecord.currentKeyCode = ef.keyEventCodes[IntrusiveHashTable.keyEventReadIndex];
+          MeshAttributeRecord.currentKeyCode = ProxyAuthenticationRequiredException.keyEventCodes[IntrusiveHashTable.keyEventReadIndex];
           go.currentKeyCharacter = TimedSplashScreen.keyEventCharacters[IntrusiveHashTable.keyEventReadIndex];
           if (obfuscationGuard != 5) {
             return true;

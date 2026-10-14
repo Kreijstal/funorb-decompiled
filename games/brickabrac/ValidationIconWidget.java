@@ -157,7 +157,7 @@ final class ValidationIconWidget extends FocusableWidget {
             dupTemp$1 = new int[2][4 * rowLimit];
             request.statisticsBySort = dupTemp$1;
             statisticsBySort = dupTemp$1;
-            rowCount = wi.rankingRowCount;
+            rowCount = ProxySocketConnector.rankingRowCount;
             ratingRowIndex = 0;
             ratingOutputIndex = 0;
             while (ratingRowIndex < rowCount) {
@@ -383,8 +383,8 @@ final class ValidationIconWidget extends FocusableWidget {
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
-            var9Lifetime3 = dl.field_b;
-            dl.field_b = DebouncedValidationSource.field_a;
+            var9Lifetime3 = SocketConnector.field_b;
+            SocketConnector.field_b = DebouncedValidationSource.field_a;
             DebouncedValidationSource.field_a = var9Lifetime3;
             RadialSelectorRenderer.field_d = true;
           }

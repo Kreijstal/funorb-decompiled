@@ -15,7 +15,7 @@ final class MotionWaypoint extends MovingBody {
         if (MusicEnvelope.field_f == IntrusiveHashIterator.field_g) {
           return VerticalScrollbar.field_Qb;
         }
-        return dl.field_e;
+        return SocketConnector.field_e;
     }
 
     private MotionWaypoint(int x256, int y256, int velocityX256, int velocityY256, int typeId) {
@@ -31,7 +31,7 @@ final class MotionWaypoint extends MovingBody {
 
     final static void clearDecodedSpriteData(byte obfuscationGuard) {
         ArrayWidgetGroup.decodedSpriteOffsetX = null;
-        dl.decodedSpriteOffsetY = null;
+        SocketConnector.decodedSpriteOffsetY = null;
         if (obfuscationGuard == 96) {
           cn.decodedSpriteIndices = (byte[][]) null;
           jh.decodedSpriteWidths = null;

@@ -142,7 +142,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (param2 <= ~hc.field_f) {
             return;
           }
-          ef.a(param2 - 123);
+          ProxyAuthenticationRequiredException.a(param2 - 123);
           DualLinkDeque.field_d.updateRoot(param3, -15211);
           if (null != vd.field_a) {
             if (TextWidgetRenderer.field_e) {
@@ -158,7 +158,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
                 QuickChatPhraseDefinition.a(784, var4_int, var5);
               }
               var6 = tm.getChatFilter(var4_int, (byte) 18);
-              vj.field_a[var4_int].sprite = ef.field_b[var6];
+              vj.field_a[var4_int].sprite = ProxyAuthenticationRequiredException.field_b[var6];
               QuickChatPhraseDefinition.field_F[var4_int].text = rh.field_e[var6];
             }
           }

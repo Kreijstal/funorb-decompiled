@@ -253,9 +253,9 @@ final class CacheIoRequest extends ResourceRequest {
               }
             }
           }
-          wi.field_j.setBounds(-10 + (-120 + Rasterizer2D.height) - 4 - 10, 10, -360 + Rasterizer2D.width >> 1, 360, (byte) 64);
-          TableNameEntry.field_h.setBounds(24, 0, 0, wi.field_j.width, (byte) 64);
-          MembershipBenefitsScreen.field_t.setBounds(-24 + wi.field_j.height, 24, 0, wi.field_j.width, (byte) 64);
+          ProxySocketConnector.field_j.setBounds(-10 + (-120 + Rasterizer2D.height) - 4 - 10, 10, -360 + Rasterizer2D.width >> 1, 360, (byte) 64);
+          TableNameEntry.field_h.setBounds(24, 0, 0, ProxySocketConnector.field_j.width, (byte) 64);
+          MembershipBenefitsScreen.field_t.setBounds(-24 + ProxySocketConnector.field_j.height, 24, 0, ProxySocketConnector.field_j.width, (byte) 64);
           stackIn_78_0 = MembershipBenefitsScreen.field_t;
           stackIn_79_1 = !(param0);
           stackIn_78_0.frameSprites = DateFieldsWidget.a(stackIn_79_1, 8421504, 3, 11579568, MembershipBenefitsScreen.field_t.height, 1);

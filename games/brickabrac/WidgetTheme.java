@@ -183,7 +183,7 @@ final class WidgetTheme {
           nl.decodedSpriteCount = metadataPacket.readUnsignedShort(65280);
           cn.decodedSpriteIndices = new byte[nl.decodedSpriteCount][];
           jh.decodedSpriteWidths = new int[nl.decodedSpriteCount];
-          dl.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
+          SocketConnector.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
           TextHotspotRegion.decodedSpriteHeights = new int[nl.decodedSpriteCount];
           tm.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
           PopupWidgetLayer.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
@@ -196,7 +196,7 @@ final class WidgetTheme {
             ArrayWidgetGroup.decodedSpriteOffsetX[var4] = packet.readUnsignedShort(65280);
           }
           for (offsetYIndex = 0; nl.decodedSpriteCount > offsetYIndex; offsetYIndex++) {
-            dl.decodedSpriteOffsetY[offsetYIndex] = metadataPacket.readUnsignedShort(65280);
+            SocketConnector.decodedSpriteOffsetY[offsetYIndex] = metadataPacket.readUnsignedShort(65280);
           }
           for (widthIndex = 0; nl.decodedSpriteCount > widthIndex; widthIndex++) {
             jh.decodedSpriteWidths[widthIndex] = metadataPacket.readUnsignedShort(65280);

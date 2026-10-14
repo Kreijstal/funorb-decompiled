@@ -334,7 +334,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (var4 == 1) {
             var5_int = FullscreenFailureDialog.a(ChocolateBackground.f(param1 ^ 67), sq.a(64), (byte) -16);
             if (var5_int != -1) {
-              ef.a(DirectByteStorage.field_e, -106, var5_int, co.field_f);
+              ProxyAuthenticationRequiredException.a(DirectByteStorage.field_e, -106, var5_int, co.field_f);
               DirectByteStorage.field_e = null;
               co.field_f = null;
             }
@@ -721,7 +721,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (IntrusiveHashIterator.a(false)) {
           var3 = wn.a((byte) -98) * 1200;
           if (this.reconnectRequested ||
-            !(wi.c(1) <= var3) &&
+            !(ProxySocketConnector.c(1) <= var3) &&
             !(var3 >= so.a((byte) -35))) {
             this.reconnectRequested = false;
             hn.a((byte) 91);

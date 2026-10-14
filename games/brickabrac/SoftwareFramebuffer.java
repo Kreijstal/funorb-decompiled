@@ -16,8 +16,8 @@ abstract class SoftwareFramebuffer {
         if (param0 != 40) {
           return;
         }
-        ef.a(param0 ^ -54);
-        CacheIoWorker.a((byte) 93, LobbyGame.field_oc, ef.field_b[0].canvasWidth, np.uiRowHeight, DialogMessagePanel.field_J, MenuSelection.field_g);
+        ProxyAuthenticationRequiredException.a(param0 ^ -54);
+        CacheIoWorker.a((byte) 93, LobbyGame.field_oc, ProxyAuthenticationRequiredException.field_b[0].canvasWidth, np.uiRowHeight, DialogMessagePanel.field_J, MenuSelection.field_g);
     }
 
     final void bindRaster(byte obfuscationGuard) {

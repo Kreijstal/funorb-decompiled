@@ -62,7 +62,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[27] = MatchResultScreen.field_r;
         ArrayWidgetGroup.buttonLabels[2] = DebouncedValidationSource.field_e;
         CacheEntry.field_A[11] = MusicCrossfadeStream.field_w;
-        CacheEntry.field_A[5] = ef.field_c;
+        CacheEntry.field_A[5] = ProxyAuthenticationRequiredException.field_c;
         CacheEntry.field_A[6] = ch.field_i;
         CacheEntry.field_A[9] = SecondaryHashTable.field_a;
         CacheEntry.field_A[4] = tm.field_d;

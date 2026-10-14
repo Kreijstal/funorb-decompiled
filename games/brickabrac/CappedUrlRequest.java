@@ -58,7 +58,7 @@ final class CappedUrlRequest implements Runnable {
             CappedUrlRequest.b(46);
           }
           if (null == qm.field_d) {
-            qm.field_d = FramedMenuScreen.field_s.a(tq.field_h, (byte) 120, dl.field_b);
+            qm.field_d = FramedMenuScreen.field_s.a(tq.field_h, (byte) 120, SocketConnector.field_b);
           }
           if (qm.field_d.status == 0) {
             return false;

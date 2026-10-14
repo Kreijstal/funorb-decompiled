@@ -240,7 +240,7 @@ final class rd {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = qp.decodedSpritePalette[IntrusiveHashIterator.a((int) var4[var6], 255)];
           }
-          var1[var2] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var5);
+          var1[var2] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var5);
         }
         if (param0 < 93) {
           return (RgbSprite[]) null;

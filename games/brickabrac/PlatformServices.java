@@ -89,7 +89,7 @@ final class PlatformServices implements Runnable {
           int var3_int = 0;
           Exception var3_ref = null;
           BoundedFile var3_ref2 = null;
-          ef var3_ref3 = null;
+          ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -287,11 +287,11 @@ final class PlatformServices implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (ef) null;
-                      var8.result = nd.a(60, var8.argumentOne, (String) (var8.payload)).a(0);
-                    } catch (ef decompiledCaughtParameter2) {
+                      if (false) throw (ProxyAuthenticationRequiredException) null;
+                      var8.result = nd.createSocketConnector(60, var8.argumentOne, (String) (var8.payload)).connect(0);
+                    } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
-                      var3_ref3 = (ef) (Object) decompiledCaughtException;
+                      var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
                       var8.result = var3_ref3.getMessage();
                       throw var3_ref3;
                     }
