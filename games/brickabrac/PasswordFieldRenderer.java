@@ -21,22 +21,22 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
         field_D = null;
     }
 
-    final static int b(byte param0, int param1) {
-        if (param0 <= -84) {
-          param1 = ((param1 & -1431655766) >>> 1) + (1431655765 & param1);
-          param1 = ((param1 & -858993460) >>> 2) + (param1 & 858993459);
-          param1 = (param1 >>> 4) + param1 & 252645135;
-          param1 = param1 + (param1 >>> 8);
-          param1 = param1 + (param1 >>> 16);
-          return 255 & param1;
+    final static int countSetBits(byte obfuscationGuard, int value) {
+        if (obfuscationGuard <= -84) {
+          value = ((value & -1431655766) >>> 1) + (1431655765 & value);
+          value = ((value & -858993460) >>> 2) + (value & 858993459);
+          value = (value >>> 4) + value & 252645135;
+          value = value + (value >>> 8);
+          value = value + (value >>> 16);
+          return 255 & value;
         }
-        PasswordFieldRenderer.b((byte) 47, 6);
-        param1 = ((param1 & -1431655766) >>> 1) + (1431655765 & param1);
-        param1 = ((param1 & -858993460) >>> 2) + (param1 & 858993459);
-        param1 = (param1 >>> 4) + param1 & 252645135;
-        param1 = param1 + (param1 >>> 8);
-        param1 = param1 + (param1 >>> 16);
-        return 255 & param1;
+        PasswordFieldRenderer.countSetBits((byte) 47, 6);
+        value = ((value & -1431655766) >>> 1) + (1431655765 & value);
+        value = ((value & -858993460) >>> 2) + (value & 858993459);
+        value = (value >>> 4) + value & 252645135;
+        value = value + (value >>> 8);
+        value = value + (value >>> 16);
+        return 255 & value;
     }
 
     PasswordFieldRenderer(int textColor) {

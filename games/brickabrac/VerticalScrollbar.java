@@ -86,15 +86,15 @@ final class VerticalScrollbar extends UiComponent {
         return false;
     }
 
-    final static int a(int param0, byte param1) {
-        param0--;
-        param0 = param0 | param0 >>> 1;
-        param0 = param0 | param0 >>> 2;
-        param0 = param0 | param0 >>> 4;
-        param0 = param0 | param0 >>> 8;
-        param0 = param0 | param0 >>> 16;
-        int var2 = -124 % ((35 - param1) / 37);
-        return 1 + param0;
+    final static int roundUpPowerOfTwo(int value, byte obfuscationGuard) {
+        value--;
+        value = value | value >>> 1;
+        value = value | value >>> 2;
+        value = value | value >>> 4;
+        value = value | value >>> 8;
+        value = value | value >>> 16;
+        int var2 = -124 % ((35 - obfuscationGuard) / 37);
+        return 1 + value;
     }
 
     final boolean isThumbCaptured(byte obfuscationGuard) {

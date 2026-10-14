@@ -214,7 +214,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (14 == opcode) {
             OpacityWidget.finishScreenTransition((byte) -116);
-            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
+            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.roundUpPowerOfTwo(2000, (byte) -54), aj.a(1345), VerticalScrollbar.roundUpPowerOfTwo(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
             hn.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             RadialSelectorWidget.field_L = false;
             MonotonicTime.field_c = true;
@@ -709,7 +709,7 @@ public final class BrickABrac extends InteractiveGameClient {
         HalloweenBackground.f(1);
         FarmBackground.f(0);
         NinjaBackground.d((byte) -119);
-        PcmPlayer.g();
+        PcmPlayer.clearServiceReference();
         MusicCrossfadeStream.c(-52);
         ArchiveIndex.a((byte) 117);
         GzipInflater.a(-32);

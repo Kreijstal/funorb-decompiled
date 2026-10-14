@@ -429,7 +429,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                   do {
                     if (!(GrowableIntList.cyclesDue > var3)) {
                       this.runRenderFrame(0);
-                      IntNode.a(-4317, AccountMessageDialog.field_ub, CacheIoRequest.field_D);
+                      IntNode.pumpPlatformEvents(-4317, AccountMessageDialog.field_ub, CacheIoRequest.field_D);
                       break;
                     }
                     this.runClientTick(26573);

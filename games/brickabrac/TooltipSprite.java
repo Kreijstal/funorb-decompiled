@@ -100,10 +100,10 @@ final class TooltipSprite extends IntrusiveNode {
 
     final static void e(int param0) {
         if (DirectByteStorage.field_f != null) {
-          DirectByteStorage.field_f.f();
+          DirectByteStorage.field_f.shutdown();
         }
         if (UnderwaterBackground.field_w != null) {
-          UnderwaterBackground.field_w.f();
+          UnderwaterBackground.field_w.shutdown();
         }
         if (param0 < 39) {
           TooltipSprite.resendPendingAchievements(-13, -69);

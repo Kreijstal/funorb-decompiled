@@ -25,7 +25,7 @@ final class IntNode extends IntrusiveNode {
     public IntNode() {
     }
 
-    final static void a(int param0, PlatformServices param1, Object param2) {
+    final static void pumpPlatformEvents(int obfuscationGuard, PlatformServices services, Object source) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -38,22 +38,22 @@ final class IntNode extends IntrusiveNode {
         int var4 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1.eventQueue == null) {
+          if (services.eventQueue == null) {
             return;
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
-            if (null != param1.eventQueue.peekEvent()) {
-              wj.sleepMillis(param0 + 4192, 1L);
+            if (null != services.eventQueue.peekEvent()) {
+              wj.sleepMillis(obfuscationGuard + 4192, 1L);
               continue;
             }
             break;
           }
-          if (param0 != -4317) {
+          if (obfuscationGuard != -4317) {
             constructionSmokeSprite = (RgbSprite) null;
           }
           try {
-            if (param2 != null) {
-              param1.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+            if (source != null) {
+              services.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(source, 1001, "dummy")));
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,14 +64,14 @@ final class IntNode extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("kq.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_16_1 = new StringBuilder().append("kq.B(").append(obfuscationGuard).append(',');
+          if (services == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
           stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
-          if (param2 == null) {
+          if (source == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -179,7 +179,7 @@ final class IntNode extends IntrusiveNode {
           }
           if (param1 != -119) {
             var7 = (Object) null;
-            IntNode.a(-14, (PlatformServices) null, (Object) null);
+            IntNode.pumpPlatformEvents(-14, (PlatformServices) null, (Object) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

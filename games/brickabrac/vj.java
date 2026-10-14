@@ -64,7 +64,7 @@ final class vj {
               return;
             }
             m.musicSynthesizer.stopTrack(-24774);
-            DirectByteStorage.field_f.b();
+            DirectByteStorage.field_f.flush();
             IsaacGenerator.field_a = param3;
             if (null != IsaacGenerator.field_a) {
               m.musicSynthesizer.playTrack(IsaacGenerator.field_a, 127, param0);

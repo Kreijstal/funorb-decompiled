@@ -204,12 +204,12 @@ final class ScrollPane extends UiComponent {
         SoundPlayback var1Lifetime1;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          DirectByteStorage.field_f.c();
+          DirectByteStorage.field_f.pump();
           if (param0 != -29448) {
             var3 = (String) null;
             ScrollPane.a((String) null, (byte) 116);
           }
-          UnderwaterBackground.field_w.c();
+          UnderwaterBackground.field_w.pump();
           bm.field_c = bm.field_c - 1;
           if (bm.field_c == 0) {
             bm.field_c = 200;

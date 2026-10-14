@@ -941,7 +941,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.characterIndex = characterIndex;
         if (HighscoresScreen.field_w == null) {
           HighscoresScreen.field_w = new int[2][3];
-          HighscoresScreen.field_w[0][2] = aq.field_e;
+          HighscoresScreen.field_w[0][2] = PcmPlayerService.field_e;
           HighscoresScreen.field_w[0][0] = EmailAvailabilityRequest.field_f;
           HighscoresScreen.field_w[0][1] = fq.field_b;
           HighscoresScreen.field_w[1][2] = VolcanicBackground.field_u;

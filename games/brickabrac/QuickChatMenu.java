@@ -1418,7 +1418,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime174 = gr.a(true, "keycode_player0_launch");
           if (var2Lifetime174 != null) {
-            aq.field_e = var2Lifetime174[0] & 255;
+            PcmPlayerService.field_e = var2Lifetime174[0] & 255;
           }
           var2Lifetime175 = gr.a(!param0, "keycode_player1_left");
           if (null != var2Lifetime175) {
