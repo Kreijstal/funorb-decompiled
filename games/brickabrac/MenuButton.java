@@ -136,7 +136,7 @@ final class MenuButton {
               }
               return;
             }
-            stackIn_26_0 = pa.field_l;
+            stackIn_26_0 = TranslucentNineSliceFrame.field_l;
             stackIn_27_1 = (!focused) ? 0 : 1;
             var12 = stackIn_26_0[stackIn_27_1];
             var4_ref = var12;

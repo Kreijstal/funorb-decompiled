@@ -97,10 +97,10 @@ final class SecondaryNodeQueue {
 
     final static QuickChatParameterType[] getQuickChatParameterTypes(int obfuscationGuard) {
         if (obfuscationGuard == 0) {
-          return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, o.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, ba.field_B, pa.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
+          return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, o.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, ba.field_B, TranslucentNineSliceFrame.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
         }
         field_e = (String) null;
-        return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, o.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, ba.field_B, pa.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
+        return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, o.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, ba.field_B, TranslucentNineSliceFrame.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
     }
 
     public static void b(boolean param0) {

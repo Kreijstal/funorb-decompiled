@@ -46,7 +46,7 @@ final class AlphaFont extends TextFont {
           if (!shadow) {
             AlphaFont.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var11, var8, width, height, var9, var10);
           } else {
-            hl.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var11, var8, width, height, var9, var10);
+            BinaryMaskFont.blitMask(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var11, var8, width, height, var9, var10);
           }
           return;
         }
@@ -94,7 +94,7 @@ final class AlphaFont extends TextFont {
           if (!shadow) {
             AlphaFont.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var12, var9, width, height, var10, var11, alpha);
           } else {
-            hl.a(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var12, var9, width, height, var10, var11, alpha);
+            BinaryMaskFont.blitMaskAlpha(Rasterizer2D.pixels, this.glyphCoverage[glyphId], paint, var12, var9, width, height, var10, var11, alpha);
           }
           return;
         }

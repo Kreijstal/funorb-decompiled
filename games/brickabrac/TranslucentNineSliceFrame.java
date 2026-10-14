@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa extends NineSliceFrame {
+final class TranslucentNineSliceFrame extends NineSliceFrame {
     static RgbSprite[] field_l;
     static QuickChatParameterType field_k;
     static RgbSprite[] field_h;
@@ -32,7 +32,7 @@ final class pa extends NineSliceFrame {
           hd.a(117, param7, param10, param1);
           LegacyUtf8Decoder.a(param12, param9, false, param8);
           if (param20 != 10) {
-            pa.a(true);
+            TranslucentNineSliceFrame.a(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -84,12 +84,12 @@ final class pa extends NineSliceFrame {
           return;
         }
         NineSliceFrame var2 = (NineSliceFrame) null;
-        pa.a(-2, -34, -105, (TextFont) null, -37, -46, -79, (NineSliceFrame) null, 96, 79, -47, -14, 91, (NineSliceFrame) null, -22, -64, (TextFont) null, (NineSliceFrame) null, 77, -115, -55);
+        TranslucentNineSliceFrame.a(-2, -34, -105, (TextFont) null, -37, -46, -79, (NineSliceFrame) null, 96, 79, -47, -14, 91, (NineSliceFrame) null, -22, -64, (TextFont) null, (NineSliceFrame) null, 77, -115, -55);
         ed.a(0, 0);
     }
 
-    pa(RgbSprite[] param0) {
-        super(param0);
+    TranslucentNineSliceFrame(RgbSprite[] sprites) {
+        super(sprites);
     }
 
     public static void c(int param0) {

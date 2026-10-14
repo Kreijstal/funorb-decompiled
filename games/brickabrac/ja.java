@@ -24,7 +24,7 @@ final class ja {
           if (param7 != -111) {
             arcticSegsSprites = (RgbSprite[][]) null;
           }
-          pa.a(param6, param18, param15, param4, param3, param5, param13, new NineSliceFrame(param10), param1, param14, param12, param9, param0, new NineSliceFrame(param19), param2, param8, param11, new NineSliceFrame(param20), param16, param17, 10);
+          TranslucentNineSliceFrame.a(param6, param18, param15, param4, param3, param5, param13, new NineSliceFrame(param10), param1, param14, param12, param9, param0, new NineSliceFrame(param19), param2, param8, param11, new NineSliceFrame(param20), param16, param17, 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

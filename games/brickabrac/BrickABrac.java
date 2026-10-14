@@ -878,7 +878,7 @@ public final class BrickABrac extends InteractiveGameClient {
         po.b(-81);
         AchievementMaskRequest.a(28391);
         AchievementSubmission.a(105);
-        pa.c(5);
+        TranslucentNineSliceFrame.c(5);
         tq.a(1024);
         AccountResponse.a((byte) 83);
         fa.a((byte) -102);

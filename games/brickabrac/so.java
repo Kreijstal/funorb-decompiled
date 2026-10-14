@@ -197,7 +197,7 @@ final class so {
           ValidationStatus.field_c = PlayerInputBatch.a(-12, var19, 12, 9838226);
           var8 = null;
           AchievementSubmission.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
-          pa.field_h = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
+          TranslucentNineSliceFrame.field_h = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
           var20 = new RgbSprite(LevelCompleteScreen.field_F.canvasWidth / 4, LevelCompleteScreen.field_F.canvasHeight / 4);
           for (var10_int = 0; var10_int < IntrusiveHashTable.achievementSourceIcons.length; var10_int++) {
             var20.bindRasterTarget();
@@ -205,7 +205,7 @@ final class so {
             IntrusiveHashTable.achievementSourceIcons[var10_int].drawQuarter(0, 0);
             BallPulseEffect.framebuffer.bindRaster((byte) 101);
             AchievementSubmission.field_l[var10_int] = PlayerInputBatch.a(-12, var20, 8, 9838226);
-            pa.field_h[var10_int] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
+            TranslucentNineSliceFrame.field_h[var10_int] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
           }
           CircleBody.field_t = new RgbSprite[lo.field_c.length][];
           var9 = null;
@@ -239,17 +239,17 @@ final class so {
           BrickMotionPath.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
           ValidationStatus.field_e = TextWidgetRenderer.a("basic", "congratulations", 1593955777, param0);
-          pa.field_m = new RgbSprite[SingleChildWidget.field_C.length];
-          for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
-            pa.field_m[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
+          TranslucentNineSliceFrame.field_m = new RgbSprite[SingleChildWidget.field_C.length];
+          for (var10_intLifetime2 = 0; var10_intLifetime2 < TranslucentNineSliceFrame.field_m.length; var10_intLifetime2++) {
+            TranslucentNineSliceFrame.field_m[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
           }
-          pa.field_m[24].bindRasterTarget();
+          TranslucentNineSliceFrame.field_m[24].bindRasterTarget();
           Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
-          ResourceArchive.field_a = new RgbSprite[pa.field_m.length];
-          for (var10_intLifetime3 = 0; var10_intLifetime3 < pa.field_m.length; var10_intLifetime3++) {
-            ResourceArchive.field_a[var10_intLifetime3] = new RgbSprite(pa.field_m[var10_intLifetime3].canvasWidth / 2, pa.field_m[var10_intLifetime3].canvasHeight / 2);
+          ResourceArchive.field_a = new RgbSprite[TranslucentNineSliceFrame.field_m.length];
+          for (var10_intLifetime3 = 0; var10_intLifetime3 < TranslucentNineSliceFrame.field_m.length; var10_intLifetime3++) {
+            ResourceArchive.field_a[var10_intLifetime3] = new RgbSprite(TranslucentNineSliceFrame.field_m[var10_intLifetime3].canvasWidth / 2, TranslucentNineSliceFrame.field_m[var10_intLifetime3].canvasHeight / 2);
             ResourceArchive.field_a[var10_intLifetime3].bindRasterTarget();
-            pa.field_m[var10_intLifetime3 % 29].a(0, 0);
+            TranslucentNineSliceFrame.field_m[var10_intLifetime3 % 29].a(0, 0);
           }
           kp.field_e = new RgbSprite[MultiValueSliderRenderer.field_b.length];
           for (var10_intLifetime4 = 0; MultiValueSliderRenderer.field_b.length > var10_intLifetime4; var10_intLifetime4++) {
@@ -289,15 +289,15 @@ final class so {
             IntHistoryBuffer.field_l[var10_intLifetime8].trimTransparentBorders();
           }
           TextWidgetRenderer.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
-          pa.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
+          TranslucentNineSliceFrame.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
           gr.field_d = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
           nl.field_b = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
           PasswordValidator.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "sliders", 2);
           SocialListEntry.field_Vb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
-          pa.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
+          TranslucentNineSliceFrame.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
           for (var10_intLifetime9 = 0; SocialListEntry.field_Vb.length > var10_intLifetime9; var10_intLifetime9++) {
             dupTemp$0 = SocialListEntry.field_Vb[var10_intLifetime9].copy();
-            pa.field_l[var10_intLifetime9] = dupTemp$0;
+            TranslucentNineSliceFrame.field_l[var10_intLifetime9] = dupTemp$0;
             var11_ref_jp = dupTemp$0;
             var11_ref_jp.rotateCounterclockwise();
           }

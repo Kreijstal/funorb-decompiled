@@ -155,60 +155,60 @@ final class TooltipSprite extends IntrusiveNode {
         }
     }
 
-    final static hl a(byte param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        hl stackIn_2_0 = null;
-        hl stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static BinaryMaskFont loadBinaryMaskFontByName(byte obfuscationGuard, String groupName, ResourceArchive spriteArchive, ResourceArchive metricsArchive, String fileName) {
+        int groupId = 0;
+        RuntimeException failure = null;
+        int fileId = 0;
+        BinaryMaskFont guardRejectedFont = null;
+        BinaryMaskFont font = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String groupSummary = null;
+        StringBuilder spriteContextBuilder = null;
+        String spriteArchiveSummary = null;
+        StringBuilder metricsContextBuilder = null;
+        String metricsArchiveSummary = null;
+        StringBuilder fileContextBuilder = null;
+        String fileSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          var5_int = param2.getGroupId(param1, false);
-          var6 = param2.getFileId(var5_int, -80, param4);
-          if (param0 == -37) {
-            stackIn_4_0 = wn.a(var5_int, param3, param2, var6, (byte) -112);
-            return stackIn_4_0;
+          groupId = spriteArchive.getGroupId(groupName, false);
+          fileId = spriteArchive.getFileId(groupId, -80, fileName);
+          if (obfuscationGuard == -37) {
+            font = wn.loadBinaryMaskFont(groupId, metricsArchive, spriteArchive, fileId, (byte) -112);
+            return font;
           }
-          stackIn_2_0 = (hl) null;
-          return stackIn_2_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_7_0 = var5;
-          stackIn_7_1 = new StringBuilder().append("nq.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+          guardRejectedFont = (BinaryMaskFont) null;
+          return guardRejectedFont;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("nq.F(").append(obfuscationGuard).append(',');
+          if (groupName == null) {
+            groupSummary = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            groupSummary = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param2 == null) {
-            stackIn_11_2 = "null";
+          spriteContextBuilder = ((StringBuilder) (Object) contextBuilder).append(groupSummary).append(',');
+          if (spriteArchive == null) {
+            spriteArchiveSummary = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            spriteArchiveSummary = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param3 == null) {
-            stackIn_14_2 = "null";
+          metricsContextBuilder = ((StringBuilder) (Object) spriteContextBuilder).append(spriteArchiveSummary).append(',');
+          if (metricsArchive == null) {
+            metricsArchiveSummary = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            metricsArchiveSummary = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
-          if (param4 == null) {
-            stackIn_17_2 = "null";
+          fileContextBuilder = ((StringBuilder) (Object) metricsContextBuilder).append(metricsArchiveSummary).append(',');
+          if (fileName == null) {
+            fileSummary = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            fileSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) fileContextBuilder).append(fileSummary).append(')').toString());
         }
     }
 

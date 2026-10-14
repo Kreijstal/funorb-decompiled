@@ -89,7 +89,7 @@ final class gr {
           Ball.field_w = MultiValueSliderRenderer.field_e;
           WidgetLayer.field_J = Ball.field_D;
           TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;
-          nj.field_l = pa.field_m;
+          nj.field_l = TranslucentNineSliceFrame.field_m;
           fq.field_d = GameConnectionShell.field_D;
           we.field_b = TextHotspotRegion.field_p;
           field_c = MenuSelection.field_k;

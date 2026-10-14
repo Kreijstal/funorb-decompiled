@@ -414,7 +414,7 @@ final class LevelSelectScreen extends MenuScreen {
           var9 = (Brick) (this.previewBrickGroups[var8].first(-109));
           while (var9 != null) {
             if ((1 & var9.flags) == 0) {
-              pa.field_m[var9.typeId].a((var9.x256 - this.previewLeft256 >> 9) + param2, (var9.y256 - this.previewTop256 >> 9) + param0, 17, 8);
+              TranslucentNineSliceFrame.field_m[var9.typeId].a((var9.x256 - this.previewLeft256 >> 9) + param2, (var9.y256 - this.previewTop256 >> 9) + param0, 17, 8);
             }
             var9 = (Brick) (this.previewBrickGroups[var8].next((byte) 116));
           }

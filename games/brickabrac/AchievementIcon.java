@@ -278,7 +278,7 @@ final class AchievementIcon extends IntrusiveNode {
         var3 = BrickABrac.field_J ? 1 : 0;
         if (DirectByteStorage.isBitSet(this.owner.achievementMask, this.achievementId, (byte) -75)) {
           if (this.achievementId == ValidationMessageWidget.selectedAchievementId) {
-            pa.field_h[this.achievementId].f(this.x, this.y, 384);
+            TranslucentNineSliceFrame.field_h[this.achievementId].f(this.x, this.y, 384);
             if (this.cachedThumbnail == null ||
               this.thumbnailIsPlaceholder) {
               var12 = IntrusiveHashTable.achievementSourceIcons[this.achievementId];

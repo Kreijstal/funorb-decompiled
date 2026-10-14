@@ -319,42 +319,42 @@ final class wn {
         }
     }
 
-    final static hl a(int param0, ResourceArchive param1, ResourceArchive param2, int param3, byte param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        Object stackIn_4_0 = null;
-        hl stackIn_6_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static BinaryMaskFont loadBinaryMaskFont(int groupId, ResourceArchive metricsArchive, ResourceArchive spriteArchive, int fileId, byte obfuscationGuard) {
+        int unusedGuardQuotient = 0;
+        RuntimeException failure = null;
+        Object unavailableFont = null;
+        BinaryMaskFont font = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String metricsArchiveSummary = null;
+        StringBuilder spriteContextBuilder = null;
+        String spriteArchiveSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (!ln.decodeSpritesFromArchive(-123, param3, param2, param0)) {
-            stackIn_4_0 = null;
-            return (hl) (stackIn_4_0);
+          if (!ln.decodeSpritesFromArchive(-123, fileId, spriteArchive, groupId)) {
+            unavailableFont = null;
+            return (BinaryMaskFont) (unavailableFont);
           }
-          var5_int = 126 / ((param4 + 35) / 45);
-          stackIn_6_0 = rm.a(12658477, param1.takeFile(param3, param0, 4));
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("wn.D(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          unusedGuardQuotient = 126 / ((obfuscationGuard + 35) / 45);
+          font = rm.createBinaryMaskFont(12658477, metricsArchive.takeFile(fileId, groupId, 4));
+          return font;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("wn.D(").append(groupId).append(',');
+          if (metricsArchive == null) {
+            metricsArchiveSummary = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            metricsArchiveSummary = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
-            stackIn_15_2 = "null";
+          spriteContextBuilder = ((StringBuilder) (Object) contextBuilder).append(metricsArchiveSummary).append(',');
+          if (spriteArchive == null) {
+            spriteArchiveSummary = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            spriteArchiveSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) spriteContextBuilder).append(spriteArchiveSummary).append(',').append(fileId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -8,7 +8,7 @@ final class ch {
     static RgbSprite field_l;
     static FullscreenFailureKind fullscreenFocusProblem;
     static RgbSprite jungleNearSprite;
-    static hl field_c;
+    static BinaryMaskFont field_c;
     static int[] incomingPacketLengths;
     static String field_j;
     static String field_e;

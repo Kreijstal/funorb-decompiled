@@ -151,7 +151,7 @@ final class hc {
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        hl var7 = null;
+        BinaryMaskFont var7 = null;
         UiComponent var8 = null;
         UiComponent var9 = null;
         UiComponent var10 = null;
@@ -208,9 +208,9 @@ final class hc {
           }
           kn.field_z = 2;
           ok.field_f = 11;
-          var7 = TooltipSprite.a((byte) -37, "lobby", param3, param4, "largefont");
-          rd.field_e = TooltipSprite.a((byte) -37, "lobby", param3, param4, "generalfont");
-          ScorePopup.field_m = TooltipSprite.a((byte) -37, "lobby", param3, param4, "chatfont");
+          var7 = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "largefont");
+          rd.field_e = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "generalfont");
+          ScorePopup.field_m = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "chatfont");
           var7.setInlineSprites(var5, var24);
           rd.field_e.setInlineSprites(var5, var24);
           ScorePopup.field_m.setInlineSprites(var5, var24);

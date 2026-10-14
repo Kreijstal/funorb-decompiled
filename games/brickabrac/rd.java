@@ -3,7 +3,7 @@
  */
 final class rd {
     static String field_b;
-    static hl field_e;
+    static BinaryMaskFont field_e;
     static String field_c;
     static boolean field_a;
     static RgbSprite[][] constructionCapsSprites;

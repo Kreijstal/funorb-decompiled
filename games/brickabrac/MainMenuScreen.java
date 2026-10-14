@@ -114,7 +114,7 @@ final class MainMenuScreen extends MenuScreen {
           GrowableIntList.field_g = GrowableIntList.field_g - 1;
           if (0 == fieldTemp$0) {
             IndexedSpriteGeometry.pushSpriteRaster(-59, field_s);
-            pa.a(true);
+            TranslucentNineSliceFrame.a(true);
             sc.popRaster(-96);
             if (IntrusiveHashTable.field_k != null) {
               IntArrayRequest.lastBackgroundId = IntrusiveHashTable.field_k.sceneId;

@@ -33,7 +33,7 @@ final class GameUiController implements GameUiLifecycle {
     public final void initializeUi(boolean obfuscationGuard) {
         boolean discarded$0 = false;
         NodeDeque.a(127, 50);
-        pa var2 = new pa(LoginCredentialKind.field_h);
+        TranslucentNineSliceFrame var2 = new TranslucentNineSliceFrame(LoginCredentialKind.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
         MidiSynthesizer.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, ContextActionController.field_g, 0, 2, 100, 8, 0, 320, 0);
         hd.a(93, var2, 20, 20);

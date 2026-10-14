@@ -4,7 +4,7 @@
 final class Rasterizer2D {
     private static int[] field_k;
     static int clipRight;
-    static int[] field_h;
+    static int[] scanlineMaskWidths;
     static int clipBottom;
     static int[] pixels;
     private static int[] field_a;
@@ -12,7 +12,7 @@ final class Rasterizer2D {
     static int clipTop;
     static int height;
     private static int[] field_g;
-    static int[] field_e;
+    static int[] scanlineMaskOffsets;
     static int width;
 
     private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
@@ -76,7 +76,7 @@ final class Rasterizer2D {
         clipTop = 0;
         clipRight = width;
         clipBottom = height;
-        Rasterizer2D.b();
+        Rasterizer2D.clearScanlineMask();
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -444,7 +444,7 @@ final class Rasterizer2D {
         clipTop = top;
         clipRight = right;
         clipBottom = bottom;
-        Rasterizer2D.b();
+        Rasterizer2D.clearScanlineMask();
     }
 
     private final static void c(int param0, int param1, int param2, int param3, int param4) {
@@ -1209,7 +1209,7 @@ final class Rasterizer2D {
         if (clipBottom > bottom) {
           clipBottom = bottom;
         }
-        Rasterizer2D.b();
+        Rasterizer2D.clearScanlineMask();
     }
 
     final static void restoreClip(int[] saved) {
@@ -1217,7 +1217,7 @@ final class Rasterizer2D {
         clipTop = saved[1];
         clipRight = saved[2];
         clipBottom = saved[3];
-        Rasterizer2D.b();
+        Rasterizer2D.clearScanlineMask();
     }
 
     final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1981,16 +1981,16 @@ final class Rasterizer2D {
 
     public static void clearStaticReferences() {
         pixels = null;
-        field_e = null;
-        field_h = null;
+        scanlineMaskOffsets = null;
+        scanlineMaskWidths = null;
         field_g = null;
         field_a = null;
         field_k = null;
     }
 
-    private final static void b() {
-        field_e = null;
-        field_h = null;
+    private final static void clearScanlineMask() {
+        scanlineMaskOffsets = null;
+        scanlineMaskWidths = null;
     }
 
     static {

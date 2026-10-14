@@ -18,7 +18,7 @@ abstract class MenuScreen extends GameScreen {
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (GzipInflater.field_e <= 0) {
-          pa.a(true);
+          TranslucentNineSliceFrame.a(true);
         } else {
           var2 = (-50 + GzipInflater.field_e) * 640 / 50;
           if (0 != hc.field_h) {

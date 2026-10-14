@@ -239,7 +239,7 @@ final class pp {
             field_b = (RgbSprite) null;
           }
           if (password != null &&
-            password.length() >= pa.field_n &&
+            password.length() >= TranslucentNineSliceFrame.field_n &&
             password.length() <= FullscreenFailureDialog.field_bb) {
             return false;
           }

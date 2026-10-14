@@ -8,7 +8,7 @@ final class ScorePopup extends IntrusiveNode {
     static RgbSprite[] field_r;
     int x256;
     static ResourceArchive field_l;
-    static hl field_m;
+    static BinaryMaskFont field_m;
     static int field_p;
     static RgbSprite[] characterHeads;
     int remainingTicks;

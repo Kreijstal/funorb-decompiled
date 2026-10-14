@@ -23,40 +23,40 @@ final class rm implements bp {
         field_c = null;
     }
 
-    final static hl a(int param0, byte[] param1) {
-        hl var2 = null;
-        RuntimeException var2_ref = null;
-        hl stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        hl stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
-        String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static BinaryMaskFont createBinaryMaskFont(int obfuscationGuard, byte[] metrics) {
+        BinaryMaskFont font = null;
+        RuntimeException failure = null;
+        BinaryMaskFont guardRejectedFont = null;
+        Object missingMetricsFont = null;
+        BinaryMaskFont result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String metricsSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 != 12658477) {
-            stackIn_2_0 = (hl) null;
-            return stackIn_2_0;
+          if (obfuscationGuard != 12658477) {
+            guardRejectedFont = (BinaryMaskFont) null;
+            return guardRejectedFont;
           }
-          if (param1 == null) {
-            stackIn_5_0 = null;
-            return (hl) (stackIn_5_0);
+          if (metrics == null) {
+            missingMetricsFont = null;
+            return (BinaryMaskFont) (missingMetricsFont);
           }
-          var2 = new hl(param1, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, cn.decodedSpriteIndices);
+          font = new BinaryMaskFont(metrics, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, cn.decodedSpriteIndices);
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
-          stackIn_7_0 = var2;
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_10_0 = var2_ref;
-          stackIn_10_1 = new StringBuilder().append("rm.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_11_2 = "null";
+          result = font;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("rm.C(").append(obfuscationGuard).append(',');
+          if (metrics == null) {
+            metricsSummary = "null";
           } else {
-            stackIn_11_2 = "{...}";
+            metricsSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(metricsSummary).append(')').toString());
         }
     }
 

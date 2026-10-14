@@ -485,9 +485,9 @@ final class la {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
-        pa.field_i[0] = param0;
-        pa.field_i[1] = param1;
-        pa.field_i[2] = param3;
+        TranslucentNineSliceFrame.field_i[0] = param0;
+        TranslucentNineSliceFrame.field_i[1] = param1;
+        TranslucentNineSliceFrame.field_i[2] = param3;
         int var7 = 0;
         int var8 = 3;
         int var9 = 1;
@@ -500,37 +500,37 @@ final class la {
           Rasterizer2D.a(param0, param1, var12 * param2, 196 / (1 + var12), param5);
           var13 = 0;
           for (var14 = 0; var14 < var9; var14++) {
-            var7 = var7 % pa.field_i.length;
+            var7 = var7 % TranslucentNineSliceFrame.field_i.length;
             incrementValue$0 = var7;
             var7++;
-            var15 = pa.field_i[incrementValue$0];
+            var15 = TranslucentNineSliceFrame.field_i[incrementValue$0];
             incrementValue$1 = var7;
             var7++;
-            var16 = pa.field_i[incrementValue$1];
+            var16 = TranslucentNineSliceFrame.field_i[incrementValue$1];
             incrementValue$2 = var7;
             var7++;
-            var17 = pa.field_i[incrementValue$2];
+            var17 = TranslucentNineSliceFrame.field_i[incrementValue$2];
             var13 = var13 + var17;
             Rasterizer2D.a(var15, var16, var11, var10, param5);
             Rasterizer2D.a(var15, var16, var11 >> 1, var10 >> 1, param5);
             for (var18 = 0; var18 < var17; var18++) {
-              var8 = var8 % pa.field_i.length;
+              var8 = var8 % TranslucentNineSliceFrame.field_i.length;
               param6 = param6 % UiComponent.field_F.length;
               incrementValue$3 = var8;
               var8++;
               incrementValue$4 = param6;
               param6++;
-              pa.field_i[incrementValue$3] = var15 + (var11 * InteractiveGameClient.sine8192(UiComponent.field_F[incrementValue$4], -4097) >> 16);
+              TranslucentNineSliceFrame.field_i[incrementValue$3] = var15 + (var11 * InteractiveGameClient.sine8192(UiComponent.field_F[incrementValue$4], -4097) >> 16);
               incrementValue$5 = var8;
               var8++;
               incrementValue$6 = param6;
               param6++;
-              pa.field_i[incrementValue$5] = var16 + (var11 * BrickABrac.cosine8192(2048, UiComponent.field_F[incrementValue$6]) >> 16);
+              TranslucentNineSliceFrame.field_i[incrementValue$5] = var16 + (var11 * BrickABrac.cosine8192(2048, UiComponent.field_F[incrementValue$6]) >> 16);
               incrementValue$7 = var8;
               var8++;
               incrementValue$8 = param6;
               param6++;
-              pa.field_i[incrementValue$7] = 1 + er.nonnegativeRemainder(-1560508993, param4, UiComponent.field_F[incrementValue$8]);
+              TranslucentNineSliceFrame.field_i[incrementValue$7] = 1 + er.nonnegativeRemainder(-1560508993, param4, UiComponent.field_F[incrementValue$8]);
             }
           }
           var9 = var13;
