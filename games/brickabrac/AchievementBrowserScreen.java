@@ -20,7 +20,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
         int var5 = BrickABrac.field_J ? 1 : 0;
         super.advanceScreen(updateFlag, inputEnabled, -89);
-        nf.hoveredAchievementId = -1;
+        ValidationMessageWidget.hoveredAchievementId = -1;
         AchievementIcon var4 = (AchievementIcon) (this.visibleIcons.first(-117));
         if (obfuscationGuard > -52) {
           field_u = 41;
@@ -78,10 +78,10 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         sc.popRaster(-81);
         GzipInflater.a(146, 5, 146, 5, 233, (byte) -87, 45);
         GzipInflater.a(399, 5, 146, 5, 233, (byte) -107, 196);
-        if (nf.selectedAchievementId != -1) {
-          stackIn_9_0 = nf.selectedAchievementId;
+        if (ValidationMessageWidget.selectedAchievementId != -1) {
+          stackIn_9_0 = ValidationMessageWidget.selectedAchievementId;
         } else {
-          stackIn_9_0 = nf.hoveredAchievementId;
+          stackIn_9_0 = ValidationMessageWidget.hoveredAchievementId;
         }
         var3 = stackIn_9_0;
         if (obfuscationGuard >= -14) {
@@ -114,8 +114,8 @@ abstract class AchievementBrowserScreen extends MenuScreen {
             var8 = var8 + var4;
           }
           ob.field_D.drawLeft(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * ob.field_D.descent) - nj.field_z.height / 2), 2, -1);
-          ob.field_D.drawLeft(fl.field_m, 209, -ContextActionController.field_g.descent + var9, 2, -1);
-          var11Lifetime1 = ob.field_D.measureText(fl.field_m) + 209;
+          ob.field_D.drawLeft(UsernameAvailabilityValidator.field_m, 209, -ContextActionController.field_g.descent + var9, 2, -1);
+          var11Lifetime1 = ob.field_D.measureText(UsernameAvailabilityValidator.field_m) + 209;
           var12 = -(nj.field_z.canvasHeight / 2) + var9;
           for (var13 = 0; fq.field_e[var3] > var13; var13++) {
             nj.field_z.a(var11Lifetime1, var12);
@@ -125,7 +125,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           ContextActionController.field_g.drawLeft(ProducerFramebuffer.field_h, 209, 246 + ContextActionController.field_g.capHeight, 2, -1);
           if (QuickChatMenu.h(-26090)) {
             var6 = 246 + var5 * 3;
-            ob.field_D.drawLeft(na.field_N, 209, var6, 2, -1);
+            ob.field_D.drawLeft(DateFieldsWidget.field_N, 209, var6, 2, -1);
           }
         }
         AchievementMaskRequest.a(this.screenId, 19);
@@ -352,8 +352,8 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         super.onEnter(usePointer, 2, 110);
         this.pageIndex = 0;
         this.pageCount = 0;
-        nf.hoveredAchievementId = -1;
-        nf.selectedAchievementId = -1;
+        ValidationMessageWidget.hoveredAchievementId = -1;
+        ValidationMessageWidget.selectedAchievementId = -1;
         this.achievementPages[this.pageCount].clear((byte) -114);
         if (obfuscationGuard <= 96) {
           return;
@@ -394,7 +394,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          nf.selectedAchievementId = -1;
+          ValidationMessageWidget.selectedAchievementId = -1;
           var4_int = 640 * transitionDirection;
           this.clearIcons(32367, this.departingIcons);
           var5 = (AchievementIcon) (this.visibleIcons.removeFirst(3));

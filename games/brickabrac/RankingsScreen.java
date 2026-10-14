@@ -223,7 +223,7 @@ final class RankingsScreen extends MenuScreen {
         AchievementMaskRequest.a(this.screenId, 19);
         this.a(0);
         if (QuickChatMenu.h(-26090)) {
-          bo.a((byte) 97, na.field_N);
+          bo.a((byte) 97, DateFieldsWidget.field_N);
           return;
         }
         var2 = 149 + ContextActionController.field_g.capHeight;

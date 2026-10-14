@@ -23,7 +23,7 @@ final class SoundPlayback extends IntrusiveNode {
         }
     }
 
-    final static oh a(int param0) {
+    final static UsernameAvailabilityResult a(int param0) {
         if (ik.field_g == ej.field_P) {
           throw new IllegalStateException();
         }
@@ -32,7 +32,7 @@ final class SoundPlayback extends IntrusiveNode {
           return StateIconLabel.field_Rb;
         }
         if (param0 <= 17) {
-          return (oh) null;
+          return (UsernameAvailabilityResult) null;
         }
         return null;
     }
@@ -74,7 +74,7 @@ final class SoundPlayback extends IntrusiveNode {
             return stackIn_5_0;
           }
           if (param2 == 3) {
-            stackIn_9_0 = rd.a(ug.field_K, new String[]{param1}, (byte) 103);
+            stackIn_9_0 = rd.a(DateInputWidget.field_K, new String[]{param1}, (byte) 103);
             return stackIn_9_0;
           }
           if (param2 == 4) {

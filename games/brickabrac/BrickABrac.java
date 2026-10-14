@@ -76,7 +76,7 @@ public final class BrickABrac extends InteractiveGameClient {
             if (var6 == null) {
               break;
             }
-            g.submitLevelResult(var6, 5, (byte) -116);
+            PasswordValidator.submitLevelResult(var6, 5, (byte) -116);
           }
         }
         if (hd.pendingScreen != null) {
@@ -214,7 +214,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (14 == opcode) {
             OpacityWidget.finishScreenTransition((byte) -116);
-            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
+            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
             hn.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             RadialSelectorWidget.field_L = false;
             MonotonicTime.field_c = true;
@@ -224,7 +224,7 @@ public final class BrickABrac extends InteractiveGameClient {
           if (opcode == 15) {
             if (MonotonicTime.field_c) {
               eq.a(7);
-              an.d((byte) -56);
+              BirthDateValidator.d((byte) -56);
               ng.requestScreen(false, obfuscationGuard + 43, 0);
               MonotonicTime.field_c = false;
               NewAchievementsScreen.discardGameplayOnTransition = true;
@@ -470,7 +470,7 @@ public final class BrickABrac extends InteractiveGameClient {
             if (sl.field_z != -2) {
               ng.requestScreen(false, param0 + 55, sl.field_z);
             } else {
-              cb.b(true);
+              MatchingTextValidator.b(true);
             }
           }
         }
@@ -490,7 +490,7 @@ public final class BrickABrac extends InteractiveGameClient {
             NewAchievementsScreen.discardGameplayOnTransition = true;
             if (IntArrayRequest.gameplayScreen != null &&
               !IntArrayRequest.gameplayScreen.isSpectator(param1 + 94)) {
-              kk.setMessageText(true, sg.field_k);
+              kk.setMessageText(true, EmailValidator.field_k);
               ng.requestScreen(false, param1 ^ 118, 11);
             } else {
               ng.requestScreen(false, 120, 0);
@@ -760,8 +760,8 @@ public final class BrickABrac extends InteractiveGameClient {
         so.b((byte) -19);
         QuickChatPhraseRegistry.a(64);
         kn.a((byte) 90);
-        an.c((byte) -93);
-        na.k((byte) 84);
+        BirthDateValidator.c((byte) -93);
+        DateFieldsWidget.k((byte) 84);
         ag.c(false);
         FocusableWidget.g(-66);
         Widget.c(-14711);
@@ -813,16 +813,16 @@ public final class BrickABrac extends InteractiveGameClient {
         bm.a((byte) -116);
         ar.a(-1);
         LabeledWidget.c(false);
-        sf.o(-16124);
+        ValidatedTextFieldWidget.o(-16124);
         TextFieldWidget.i(80);
         fe.l(98);
         cr.a((byte) 123);
         ri.a((byte) -83);
         HotspotTextWidget.j(-2);
-        wl.a(2);
-        nf.f((byte) -42);
+        ValidationIconWidget.a(2);
+        ValidationMessageWidget.f((byte) -42);
         ToggleButtonWidget.a(8192);
-        k.c((byte) -109);
+        TextFieldValidator.c((byte) -109);
         go.a(-7393);
         ig.a(12127);
         uf.a((byte) 85);
@@ -834,7 +834,7 @@ public final class BrickABrac extends InteractiveGameClient {
         CacheIoRequest.h(-122);
         CachedArchiveSource.c((byte) 56);
         ResourceRequest.a((byte) 78);
-        ug.h(0);
+        DateInputWidget.h(0);
         eq.b(-1);
         RadialSelectorWidget.a(110);
         qi.j(18724);
@@ -858,7 +858,7 @@ public final class BrickABrac extends InteractiveGameClient {
         LevelList.a(true);
         MatchCompleteScreen.f((byte) -112);
         MultiplayerExitScreen.i(61);
-        ac.c(0);
+        EmailAvailabilityRequest.c(0);
         n.b(-2);
         DelayedPacket.a(-128);
         IntArrayRequest.a(112);
@@ -880,7 +880,7 @@ public final class BrickABrac extends InteractiveGameClient {
         AchievementSubmission.a(105);
         pa.c(5);
         tq.a(1024);
-        oh.a((byte) 83);
+        UsernameAvailabilityResult.a((byte) 83);
         fa.a((byte) -102);
         nj.a(0);
         RasterCacheSurface.a((byte) 121);
@@ -901,15 +901,15 @@ public final class BrickABrac extends InteractiveGameClient {
         ec.a(0);
         tf.a(6);
         ln.a((byte) -46);
-        qh.a(109);
-        pj.d(31366);
+        ValidationStatus.a(109);
+        DebouncedValidationSource.d(31366);
         TextLineLayout.a((byte) 111);
         be.b(2);
-        fl.f(-90);
-        g.b(true);
-        sg.e((byte) 124);
-        uc.g(0);
-        cb.f(-71);
+        UsernameAvailabilityValidator.f(-90);
+        PasswordValidator.b(true);
+        EmailValidator.e((byte) 124);
+        EmailConfirmationValidator.g(0);
+        MatchingTextValidator.f(-71);
         mi.a(-81);
         TextHotspotRegion.a((byte) -25);
         lo.a((byte) 38);

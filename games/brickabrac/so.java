@@ -171,15 +171,15 @@ final class so {
               gj.field_c[var7_int] = null;
             }
           }
-          cd.field_h = kf.a("frame", "basic", param0, -122);
-          t.field_d = kf.a("frame_track", "basic", param0, -128);
+          cd.field_h = AgeValidator.a("frame", "basic", param0, -122);
+          t.field_d = AgeValidator.a("frame_track", "basic", param0, -128);
           t.field_d[4] = null;
           var7 = cd.field_h;
           var7[4] = null;
           pl.loadRgbSpriteByName("basic", "frame_bracket", (byte) 106, param0);
-          AchievementBrowserScreen.field_A = kf.a("button_frame", "basic", param0, -91);
-          Ball.field_G = kf.a("button_raised", "basic", param0, 103);
-          IntArrayRequest.field_k = kf.a("button_depressed", "basic", param0, -104);
+          AchievementBrowserScreen.field_A = AgeValidator.a("button_frame", "basic", param0, -91);
+          Ball.field_G = AgeValidator.a("button_raised", "basic", param0, 103);
+          IntArrayRequest.field_k = AgeValidator.a("button_depressed", "basic", param0, -104);
           IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
           LevelCompleteScreen.field_F = pl.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
           DelayedPacket.field_p = pl.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
@@ -194,7 +194,7 @@ final class so {
           LevelCompleteScreen.field_F.e(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 113);
           ToggleButtonWidget.field_L = PlayerInputBatch.a(-12, var19, 8, 9838226);
-          qh.field_c = PlayerInputBatch.a(-12, var19, 12, 9838226);
+          ValidationStatus.field_c = PlayerInputBatch.a(-12, var19, 12, 9838226);
           var8 = null;
           AchievementSubmission.field_l = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
           pa.field_h = new RgbSprite[IntrusiveHashTable.achievementSourceIcons.length];
@@ -230,7 +230,7 @@ final class so {
           cn.field_e = cr.loadRgbSpritesByName("basic", param0, "lever_small", 2);
           ScorePopup.field_r = cr.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
           lp.field_yb = cr.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
-          qi.field_K = kf.a("frame_bubble", "basic", param0, -105);
+          qi.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
           ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           ln.field_j = bd.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.field_l = bd.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
@@ -238,7 +238,7 @@ final class so {
           pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = cr.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = cr.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
-          qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
+          ValidationStatus.field_e = um.a("basic", "congratulations", 1593955777, param0);
           pa.field_m = new RgbSprite[SingleChildWidget.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
             pa.field_m[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
@@ -292,7 +292,7 @@ final class so {
           pa.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
           gr.field_d = cr.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
           nl.field_b = um.a("basic", "logo", 1593955777, param0);
-          g.field_l = cr.loadRgbSpritesByName("basic", param0, "sliders", 2);
+          PasswordValidator.field_l = cr.loadRgbSpritesByName("basic", param0, "sliders", 2);
           SocialListEntry.field_Vb = cr.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
           pa.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
           for (var10_intLifetime9 = 0; SocialListEntry.field_Vb.length > var10_intLifetime9; var10_intLifetime9++) {

@@ -6,7 +6,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
     private String promptText;
     static ResourceArchive field_t;
     static String field_w;
-    static qh field_z;
+    static ValidationStatus validationPending;
     static String field_x;
     static String[] field_u;
     static RgbSprite[] packCardIcons;
@@ -42,7 +42,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         if (QuickChatMenu.h(-26090)) {
           return;
         }
-        BitPacketBuffer var4 = k.outgoingPackets;
+        BitPacketBuffer var4 = TextFieldValidator.outgoingPackets;
         var4.writeCipheredOpcode(-13413, 16);
         var4.position = var4.position + 1;
         int var5 = var4.position;
@@ -154,7 +154,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = k.outgoingPackets;
+          var3 = TextFieldValidator.outgoingPackets;
           var3.writeCipheredOpcode(-13413, param1);
           var3.writeByte(85, param0.field_i);
           var3.writeShort((byte) 122, param0.field_k);
@@ -223,7 +223,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
     }
 
     public static void f(int param0) {
-        field_z = null;
+        validationPending = null;
         field_u = null;
         field_x = null;
         field_y = null;
@@ -246,7 +246,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         field_x = "To <%0>: ";
         field_u = new String[]{"Do battle with Ninja!", "Amazing scores!", "Fiendish levels!", "Adventures on the high seas!", "Charged multiplayer action!"};
         field_w = "You must play 1 more rated game before playing with the current options.";
-        field_z = new qh();
+        validationPending = new ValidationStatus();
         field_y = "Press <img=1><img=0> or <img=4><img=3> to move the paddle left or right.<br><br>Press <img=2> or <img=5> to launch the ball.";
     }
 }

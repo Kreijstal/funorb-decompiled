@@ -92,7 +92,7 @@ final class SocialListEntry extends UiComponent {
           diffuseStorage = diffuseValues;
           diffuseAlias = diffuseStorage;
           highlights = new int[mesh.directionCount];
-          directionX = wl.worldDirectionX;
+          directionX = ValidationIconWidget.worldDirectionX;
           directionY = ff.worldDirectionY;
           directionZ = ContextActionController.worldDirectionZ;
           for (direction = 0; mesh.directionCount > direction; direction++) {
@@ -127,19 +127,19 @@ final class SocialListEntry extends UiComponent {
             vertexA = mesh.faceVertexA[face];
             vertexB = mesh.faceVertexB[face];
             vertexC = mesh.faceVertexC[face];
-            if (wl.worldDirectionX.length <= mesh.faceDirectionA[face]) {
+            if (ValidationIconWidget.worldDirectionX.length <= mesh.faceDirectionA[face]) {
               directionAValue = -1;
             } else {
               directionAValue = mesh.faceDirectionA[face];
             }
             directionA = directionAValue;
-            if (wl.worldDirectionX.length > mesh.faceDirectionB[face]) {
+            if (ValidationIconWidget.worldDirectionX.length > mesh.faceDirectionB[face]) {
               directionBValue = mesh.faceDirectionB[face];
             } else {
               directionBValue = -1;
             }
             directionB = directionBValue;
-            if (wl.worldDirectionX.length <= mesh.faceDirectionC[face]) {
+            if (ValidationIconWidget.worldDirectionX.length <= mesh.faceDirectionC[face]) {
               directionCValue = -1;
             } else {
               directionCValue = mesh.faceDirectionC[face];
@@ -252,16 +252,16 @@ final class SocialListEntry extends UiComponent {
           he.a(tq.field_f, (byte) -95);
           tq.field_f.writeShort((byte) 113, param0);
           param1.a(0, tq.field_f);
-          k.outgoingPackets.position = 0;
+          TextFieldValidator.outgoingPackets.position = 0;
           if (!param2) {
-            k.outgoingPackets.writeByte(94, 16);
+            TextFieldValidator.outgoingPackets.writeByte(94, 16);
           } else {
-            k.outgoingPackets.writeByte(-4, 18);
+            TextFieldValidator.outgoingPackets.writeByte(-4, 18);
           }
-          k.outgoingPackets.position = k.outgoingPackets.position + 2;
-          var5_int = k.outgoingPackets.position;
-          k.outgoingPackets.writeInt(MainMenuScreen.field_x, (byte) -79);
-          k.outgoingPackets.writeLong(-23054, LevelSelectScreen.field_E);
+          TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 2;
+          var5_int = TextFieldValidator.outgoingPackets.position;
+          TextFieldValidator.outgoingPackets.writeInt(MainMenuScreen.field_x, (byte) -79);
+          TextFieldValidator.outgoingPackets.writeLong(-23054, LevelSelectScreen.field_E);
           var6 = 0;
           if (FarmBackground.field_u) {
             var6 = var6 | 1;
@@ -278,17 +278,17 @@ final class SocialListEntry extends UiComponent {
           if (param4) {
             return;
           }
-          k.outgoingPackets.writeByte(-105, var6);
-          var7 = GameClock.a(true, uc.e((byte) -101));
+          TextFieldValidator.outgoingPackets.writeByte(-105, var6);
+          var7 = GameClock.a(true, EmailConfirmationValidator.e((byte) -101));
           if (var7 == null) {
             var7 = "";
           }
-          k.outgoingPackets.writeCp1252String(var7, -1);
+          TextFieldValidator.outgoingPackets.writeCp1252String(var7, -1);
           if (null != ParisBackground.field_t) {
-            k.outgoingPackets.writePrefixedCp1252String(0, ParisBackground.field_t);
+            TextFieldValidator.outgoingPackets.writePrefixedCp1252String(0, ParisBackground.field_t);
           }
-          LevelDecoder.a(k.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-          k.outgoingPackets.backfillShortLength(k.outgoingPackets.position - var5_int, 255);
+          LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+          TextFieldValidator.outgoingPackets.backfillShortLength(TextFieldValidator.outgoingPackets.position - var5_int, 255);
           cr.a(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

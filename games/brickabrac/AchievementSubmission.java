@@ -81,7 +81,7 @@ final class AchievementSubmission extends IntrusiveNode {
           var11 = new QuickChatMenu[var7];
           if (param2.field_x != null) {
             for (var12 = 0; param2.field_x.length > var12; var12++) {
-              var13_ref_kn = pj.field_c.a(param2.field_x[var12], (byte) 124);
+              var13_ref_kn = DebouncedValidationSource.field_c.a(param2.field_x[var12], (byte) 124);
               var8[var12] = var13_ref_kn.field_D;
               var9[var12] = param2.field_w[var12];
               var11[var12] = AchievementSubmission.a(param0, param1, var13_ref_kn, 4, param4);

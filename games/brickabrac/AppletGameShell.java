@@ -31,7 +31,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         java.net.URL stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != cb.field_o) {
+          if (null != MatchingTextValidator.field_o) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -81,7 +81,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (null != cb.field_o) {
+        if (null != MatchingTextValidator.field_o) {
           return null;
         }
         if (null != sl.field_x &&
@@ -128,7 +128,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               RichTextLayout.field_m = param4;
               be.field_g = param2;
               mc.field_d = param2;
-              SecondaryHashTable.field_i = uc.e((byte) -64);
+              SecondaryHashTable.field_i = EmailConfirmationValidator.e((byte) -64);
               dupTemp$0 = new PlatformServices(param0, param5, param6, true);
               lp.field_ub = dupTemp$0;
               LevelPackLoader.field_e = dupTemp$0;
@@ -175,7 +175,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (cb.field_o != null) {
+          if (MatchingTextValidator.field_o != null) {
             stackIn_2_0 = null;
             return (java.applet.AppletContext) (stackIn_2_0);
           }
@@ -350,7 +350,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (MeshAttributeRecord.a((CharSequence) ((Object) var4), -102) &&
-                        !(fl.a((CharSequence) ((Object) var4), -28734) >= 10)) {
+                        !(UsernameAvailabilityValidator.a((CharSequence) ((Object) var4), -28734) >= 10)) {
                         this.a("wrongjava", 4000);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -482,9 +482,9 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             MouseWheelSource.resizeFrameCounter = MouseWheelSource.resizeFrameCounter - 50;
             CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
             CacheIoRequest.field_D.setVisible(true);
-            if (null != cb.field_o &&
+            if (null != MatchingTextValidator.field_o &&
               null == BackgroundRegistry.field_e) {
-              insets = cb.field_o.getInsets();
+              insets = MatchingTextValidator.field_o.getInsets();
               CacheIoRequest.field_D.setLocation(insets.left + to.field_i, insets.top + hk.field_W);
               if (BrickABrac.field_J) {
                 CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
@@ -609,7 +609,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             }
           }
           this.clearClientResources(true);
-          if (null != cb.field_o) {
+          if (null != MatchingTextValidator.field_o) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -640,8 +640,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           }
           boolean decompiledFrameRemainder0 = true;
           if (BackgroundRegistry.field_e == null) {
-            if (null != cb.field_o) {
-              var2 = cb.field_o;
+            if (null != MatchingTextValidator.field_o) {
+              var2 = MatchingTextValidator.field_o;
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -666,8 +666,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) CacheIoRequest.field_D));
           CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
           CacheIoRequest.field_D.setVisible(true);
-          if (cb.field_o == var2) {
-            var3 = cb.field_o.getInsets();
+          if (MatchingTextValidator.field_o == var2) {
+            var3 = MatchingTextValidator.field_o.getInsets();
             CacheIoRequest.field_D.setLocation(var3.left + to.field_i, var3.top + hk.field_W);
             if (var4 != 0) {
               CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
@@ -761,7 +761,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             this.field_d = true;
             System.out.println("error_game_" + param0);
             try {
-              ne.a("loggedout", -123, uc.e((byte) -124));
+              ne.a("loggedout", -123, EmailConfirmationValidator.e((byte) -124));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -911,7 +911,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (cb.field_o != null) {
+          if (MatchingTextValidator.field_o != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -952,7 +952,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         int var6 = 0;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = k.outgoingPackets;
+          var3 = TextFieldValidator.outgoingPackets;
           var3.writeCipheredOpcode(obfuscationGuard ^ -3818, opcode);
           var3.position = var3.position + 1;
           var4 = var3.position;

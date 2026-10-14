@@ -100,7 +100,7 @@ final class UnderwaterBackground extends BackgroundScene {
     }
 
     final static void requestFindOpponents(int opcode, byte obfuscationGuard) {
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(obfuscationGuard ^ -13319, opcode);
         packet.position = packet.position + 1;
         int payloadStart = packet.position;

@@ -8,7 +8,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
     static int field_N;
     static String field_P;
     private FocusableWidget field_K;
-    private sf field_L;
+    private ValidatedTextFieldWidget field_L;
     private FocusableWidget field_Q;
     static String[] field_M;
     ri field_R;
@@ -77,12 +77,12 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
           if (param0 != 120) {
             pressY = -69;
           }
-          while (qh.field_i.length > var3_int) {
+          while (ValidationStatus.field_i.length > var3_int) {
             var5 = BrickABrac.field_K[var3_int];
             if (var5 < 0) {
               var4 = var4 + IntArrayRequest.field_s;
             } else {
-              var6 = hm.a(true, qh.field_i[var3_int], 0);
+              var6 = hm.a(true, ValidationStatus.field_i[var3_int], 0);
               var4 = var4 + kn.field_y;
               var7 = wi.field_k - (var6 >> 1);
               if (bg.containsRectanglePoint(var7 - cn.field_c, (DropTargetWidget.field_H << 1) + b.field_c, var6 + (cn.field_c << 1), (byte) 65, param1, param2, var4)) {
@@ -139,7 +139,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
 
     private final int a(String param0, int param1, int param2, Widget param3, int param4, String param5, boolean param6) {
         RuntimeException var8 = null;
-        nf var9 = null;
+        ValidationMessageWidget var9 = null;
         LabeledWidget var10 = null;
         LabeledWidget stackIn_2_1 = null;
         boolean stackIn_3_2 = false;
@@ -157,7 +157,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
           stackIn_2_1 = var10;
           stackIn_3_2 = !(param6);
           this.addChild(stackIn_2_1, stackIn_3_2);
-          var9 = new nf(((je) ((Object) param3)).a(-11011), param5, 126, param2 + var10.height, 25 + param1, param4);
+          var9 = new ValidationMessageWidget(((ValidatableWidget) ((Object) param3)).getValidationSource(-11011), param5, 126, param2 + var10.height, 25 + param1, param4);
           var9.listener = (WidgetListener) (this);
           this.addChild(var9, true);
           stackIn_4_0 = var9.height + var10.height;
@@ -244,25 +244,25 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         }
     }
 
-    private final boolean a(int param0, je param1) {
-        ia var3 = null;
+    private final boolean a(int param0, ValidatableWidget param1) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        qh var4 = null;
+        ValidationStatus var4 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a(-11011);
+          var3 = param1.getValidationSource(-11011);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.b((byte) -31);
+          var4 = var3.getValidationStatus((byte) -31);
           if (param0 > -64) {
             field_J = (byte[]) null;
           }
-          stackIn_9_0 = (var4 == DualLinkIterator.field_c);
+          stackIn_9_0 = (var4 == DualLinkIterator.validationValid);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -291,13 +291,13 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
 
     public qo() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_L = new sf("", (WidgetListener) null, 12);
+        this.field_L = new ValidatedTextFieldWidget("", (WidgetListener) null, 12);
         um var1 = new um(QuickChatMenu.field_Yb, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
-        Widget var2 = new Widget(ac.field_d, var1, (WidgetListener) null);
-        this.field_Q = new FocusableWidget(k.field_j, (WidgetListener) null);
-        this.field_K = new FocusableWidget(wl.field_L, (WidgetListener) null);
+        Widget var2 = new Widget(EmailAvailabilityRequest.field_d, var1, (WidgetListener) null);
+        this.field_Q = new FocusableWidget(TextFieldValidator.field_j, (WidgetListener) null);
+        this.field_K = new FocusableWidget(ValidationIconWidget.field_L, (WidgetListener) null);
         this.field_L.tooltip = hh.field_a;
-        this.field_L.a(new fl(this.field_L), (byte) -68);
+        this.field_L.setValidationSource(new UsernameAvailabilityValidator(this.field_L), (byte) -68);
         this.field_Q.enabled = false;
         this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
         this.field_K.renderer = (WidgetRenderer) ((Object) new bb());
@@ -336,7 +336,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
     }
 
     public final void a(String param0, byte param1) {
-        sf var3 = null;
+        ValidatedTextFieldWidget var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -370,7 +370,7 @@ final class qo extends WidgetGroup implements vf, WidgetActionListener {
         if (param0 < 96) {
           return;
         }
-        ((fl) (this.field_L.a(-11011))).e((byte) -22);
+        ((UsernameAvailabilityValidator) (this.field_L.getValidationSource(-11011))).clearAvailabilityCache((byte) -22);
     }
 
     static {

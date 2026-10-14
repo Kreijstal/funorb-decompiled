@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac {
-    private String field_g;
+final class EmailAvailabilityRequest {
+    private String email;
     static int field_e;
     static int field_f;
     static String field_b;
-    private boolean field_a;
+    private boolean completed;
     static String field_d;
-    private boolean field_c;
+    private boolean available;
 
     public static void c(int param0) {
         field_b = null;
@@ -18,12 +18,12 @@ final class ac {
         }
     }
 
-    final boolean b(int param0) {
-        if (param0 != 96) {
+    final boolean isCompleted(int obfuscationGuard) {
+        if (obfuscationGuard != 96) {
           field_e = -42;
-          return this.field_a;
+          return this.completed;
         }
-        return this.field_a;
+        return this.completed;
     }
 
     final static LobbyPlayer findGamePlayer(long playerId, int obfuscationGuard) {
@@ -33,27 +33,27 @@ final class ac {
         return (LobbyPlayer) (BrickABrac.gamePlayerIndex.get(playerId, -1));
     }
 
-    final void a(boolean param0, int param1) {
-        this.field_c = param0 ? true : false;
-        this.field_a = true;
-        if (param1 != 20892) {
+    final void complete(boolean available, int obfuscationGuard) {
+        this.available = available ? true : false;
+        this.completed = true;
+        if (obfuscationGuard != 20892) {
           field_f = -25;
         }
     }
 
-    final String a(int param0) {
-        if (param0 != 0) {
+    final String getEmail(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return (String) null;
         }
-        return this.field_g;
+        return this.email;
     }
 
-    final boolean a(boolean param0) {
-        if (param0) {
-          this.a(62);
-          return this.field_c;
+    final boolean isAvailable(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
+          this.getEmail(62);
+          return this.available;
         }
-        return this.field_c;
+        return this.available;
     }
 
     final static void a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5, boolean param6, int param7, int param8, byte param9, boolean param10, int param11, int param12, int param13) {
@@ -117,13 +117,13 @@ final class ac {
         }
     }
 
-    ac(String param0) {
-        this.field_a = false;
-        this.field_c = false;
+    EmailAvailabilityRequest(String email) {
+        this.completed = false;
+        this.available = false;
         try {
-          this.field_g = param0;
+          this.email = email;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ac.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ac.<init>(" + (email != null ? "{...}" : "null") + ')');
         }
     }
 

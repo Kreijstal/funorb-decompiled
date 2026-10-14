@@ -337,7 +337,7 @@ final class MusicVoice extends IntrusiveNode {
                 }
               } else {
                 var13.nameLabel.text = rd.a(ll.field_a, new String[]{var21}, (byte) 103);
-                var13.actionLabel.text = wl.field_L;
+                var13.actionLabel.text = ValidationIconWidget.field_L;
               }
               var26_int = 0;
               if (null != o.currentLobbyGame &&
@@ -422,7 +422,7 @@ final class MusicVoice extends IntrusiveNode {
               if (~var13.playerId == ~Widget.field_p) {
                 if (var5_int != 0 &&
                   !var13.member) {
-                  var25 = ug.field_J;
+                  var25 = DateInputWidget.field_J;
                 } else {
                   if (var13.ratedGameCount >= var7) {
                     if (var6 > var13.rating) {
@@ -472,7 +472,7 @@ final class MusicVoice extends IntrusiveNode {
                     if (var26_int == 1) {
                       var25 = rd.a(di.field_b, new String[]{var21}, (byte) 103);
                     }
-                    var25 = rd.a(qh.field_g, new String[]{var21, Integer.toString(var26_int)}, (byte) 103);
+                    var25 = rd.a(ValidationStatus.field_g, new String[]{var21, Integer.toString(var26_int)}, (byte) 103);
                   }
                 }
               }
@@ -813,7 +813,7 @@ final class MusicVoice extends IntrusiveNode {
                 relativeXZOrDirectionIndex = 0;
                 while (!(relativeXZOrDirectionIndex >= mesh.directionCount)) {
                   branchOrCullValue = ~relativeXZOrDirectionIndex;
-                  boundOrMinimumDepth = ~wl.worldDirectionX.length;
+                  boundOrMinimumDepth = ~ValidationIconWidget.worldDirectionX.length;
                   if (gameFlag != 0) {
                     break scanLoop1;
                   }
@@ -823,7 +823,7 @@ final class MusicVoice extends IntrusiveNode {
                   relativeYZOrDirectionX = mesh.directionX[relativeXZOrDirectionIndex];
                   relativeZZOrDirectionY = mesh.directionY[relativeXZOrDirectionIndex];
                   centerXOrDirectionZ = mesh.directionZ[relativeXZOrDirectionIndex];
-                  wl.worldDirectionX[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeXYOrWorldXZ + (cameraXOrWorldXX * relativeYZOrDirectionX + relativeZZOrDirectionY * relativeXXOrWorldXY) >> 16;
+                  ValidationIconWidget.worldDirectionX[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeXYOrWorldXZ + (cameraXOrWorldXX * relativeYZOrDirectionX + relativeZZOrDirectionY * relativeXXOrWorldXY) >> 16;
                   ff.worldDirectionY[relativeXZOrDirectionIndex] = centerXOrDirectionZ * relativeYYOrWorldYZ + relativeYXOrWorldYY * relativeZZOrDirectionY + relativeYZOrDirectionX * cameraYOrWorldYX >> 16;
                   ContextActionController.worldDirectionZ[relativeXZOrDirectionIndex] = relativeYZOrDirectionX * cameraZOrWorldZX - (-(relativeZZOrDirectionY * relativeZXOrWorldZY) - centerXOrDirectionZ * relativeZYOrWorldZZ) >> 16;
                   relativeXZOrDirectionIndex++;

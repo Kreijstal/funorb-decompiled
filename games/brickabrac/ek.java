@@ -85,7 +85,7 @@ final class ek extends bj implements WidgetActionListener {
               this.height = this.height + 10;
               var3 = ChocolateBackground.field_s;
               if (ok.a(true)) {
-                var3 = oh.field_h;
+                var3 = UsernameAvailabilityResult.field_h;
                 this.height = this.height + 20;
               }
             }
@@ -227,7 +227,7 @@ final class ek extends bj implements WidgetActionListener {
             ek.a((m) null, (m) null, (byte) 87);
           }
           var5 = (String) null;
-          stackIn_3_0 = wl.a((String) null, false, 0, param0, 0, param1, 4);
+          stackIn_3_0 = ValidationIconWidget.a((String) null, false, 0, param0, 0, param1, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 final class uo {
     static String[] field_e;
-    static qh field_f;
+    static ValidationStatus validationEmpty;
     static String field_b;
     static RgbSprite field_d;
     static RgbSprite[] field_c;
@@ -69,7 +69,7 @@ final class uo {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = k.outgoingPackets;
+          var3 = TextFieldValidator.outgoingPackets;
           var3.writeCipheredOpcode(-13413, opcode);
           var3.writeByte(58, 5);
           var3.writeByte(obfuscationGuard ^ -55, 0);
@@ -97,7 +97,7 @@ final class uo {
 
     public static void a(byte param0) {
         field_c = null;
-        field_f = null;
+        validationEmpty = null;
         field_b = null;
         if (param0 >= 32) {
           field_d = null;
@@ -197,7 +197,7 @@ final class uo {
 
     static {
         field_e = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
-        field_f = new qh();
+        validationEmpty = new ValidationStatus();
         field_b = "Aftertouch: flight control.";
         field_a = "Loading levels";
     }

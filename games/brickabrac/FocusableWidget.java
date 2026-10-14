@@ -212,9 +212,9 @@ class FocusableWidget extends Widget {
         try {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
           if (this.pressedButton != 0 &&
-            cb.heldButton != this.pressedButton) {
+            MatchingTextValidator.heldButton != this.pressedButton) {
             if (this.containsPoint(po.pointerY, parentY, parentX, obfuscationGuard + 3, MusicPatch.pointerX) &&
-              cb.heldButton == 0) {
+              MatchingTextValidator.heldButton == 0) {
               this.dispatchAction(po.pointerY - parentY, this.pressedButton, -79, -parentX + MusicPatch.pointerX);
             }
             this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, parentY, focusRoot, 19223, parentX);

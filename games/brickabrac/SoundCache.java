@@ -243,9 +243,9 @@ final class SoundCache {
               } else {
                 NanoGameClock.field_s = ArchiveFetchClient.a(param0, false, param5, (byte) -109);
               }
-              k.outgoingPackets.position = 0;
-              k.outgoingPackets.writeByte(28, 14);
-              k.outgoingPackets.writeByte(107, NanoGameClock.field_s.a(13).field_a);
+              TextFieldValidator.outgoingPackets.position = 0;
+              TextFieldValidator.outgoingPackets.writeByte(28, 14);
+              TextFieldValidator.outgoingPackets.writeByte(107, NanoGameClock.field_s.a(13).field_a);
               cr.a(-1, 10000);
               rf.field_b = GameScreen.field_c;
             }
@@ -335,27 +335,27 @@ final class SoundCache {
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
               if (NanoGameClock.field_s.a(13) == RadialSelectorWidget.field_X) {
-                uc.field_k.a(100, uc.e((byte) -66));
+                EmailConfirmationValidator.field_k.a(100, EmailConfirmationValidator.e((byte) -66));
               } else {
                 if (NanoGameClock.field_s.a(13) == MembershipBenefitsScreen.field_v) {
-                  ll.field_d.a(112, uc.e((byte) -81));
+                  ll.field_d.a(112, EmailConfirmationValidator.e((byte) -81));
                 }
               }
               pf.field_d = false;
               if (var11 != null) {
-                ui.a(-70, uc.e((byte) -112), var11);
+                ui.a(-70, EmailConfirmationValidator.e((byte) -112), var11);
               }
               if (0 >= go.field_c &&
                 !ChocolateBackground.field_r) {
                 try {
-                  ne.a("unzap", -121, uc.e((byte) -100));
+                  ne.a("unzap", -121, EmailConfirmationValidator.e((byte) -100));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ne.a(new Object[]{GameplayAudioEvent.a(sl.field_v, (byte) 3)}, 116, uc.e((byte) -75), "zap");
+                  ne.a(new Object[]{GameplayAudioEvent.a(sl.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -364,7 +364,7 @@ final class SoundCache {
               if (go.field_c > 0) {
                 FarmBackground.field_u = true;
               }
-              k.outgoingPackets.initializeOpcodeCipher(LevelPackCard.field_a, -98);
+              TextFieldValidator.outgoingPackets.initializeOpcodeCipher(LevelPackCard.field_a, -98);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 LevelPackCard.field_a[var8Lifetime1] = LevelPackCard.field_a[var8Lifetime1] + 50;
               }
@@ -404,9 +404,9 @@ final class SoundCache {
                 return stackIn_104_0;
               }
               var6_intLifetime2 = dl.field_b;
-              dl.field_b = pj.field_a;
+              dl.field_b = DebouncedValidationSource.field_a;
               pf.field_d = true;
-              pj.field_a = var6_intLifetime2;
+              DebouncedValidationSource.field_a = var6_intLifetime2;
             }
             stackIn_106_0 = -1;
             return stackIn_106_0;

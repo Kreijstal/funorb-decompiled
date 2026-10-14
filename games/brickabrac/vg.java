@@ -20,7 +20,7 @@ final class vg {
     }
 
     final static void requestLeaveOrDeclineGame(int gameId, boolean obfuscationGuard, int opcode) {
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         packet.writeByte(-29, 3);
         packet.writeByte(-127, 9);

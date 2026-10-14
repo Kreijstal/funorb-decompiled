@@ -126,7 +126,7 @@ final class sh {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                qh.field_a = 1 + (int)(var3.longValue() / 1048576L);
+                ValidationStatus.field_a = 1 + (int)(var3.longValue() / 1048576L);
                 return;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

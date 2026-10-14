@@ -10,13 +10,13 @@ final class DualLinkIterator implements Iterator {
     private DualLinkDeque owner;
     static String field_i;
     private DualLinkNode lastReturned;
-    static qh field_c;
+    static ValidationStatus validationValid;
     static RgbSprite[][] jungleSegsSprites;
     static int field_f;
 
     public static void a(byte param0) {
         field_i = null;
-        field_c = null;
+        validationValid = null;
         archiveGzipInflater = null;
         if (param0 < 55) {
           return;
@@ -101,6 +101,6 @@ final class DualLinkIterator implements Iterator {
     static {
         field_i = "Name";
         archiveGzipInflater = new GzipInflater();
-        field_c = new qh();
+        validationValid = new ValidationStatus();
     }
 }

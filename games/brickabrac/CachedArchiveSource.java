@@ -68,10 +68,10 @@ final class CachedArchiveSource extends ArchiveSource {
           for (var3 = 0; var3 < kn.field_E.length; var3++) {
             var4 = MenuSelection.field_q[var3];
             if (var4 < 0) {
-              var5 = qh.field_d;
+              var5 = ValidationStatus.field_d;
             } else {
               if (ArcticBackground.field_r.selectedIndex != var4) {
-                var5 = ug.field_I;
+                var5 = DateInputWidget.field_I;
               } else {
                 var5 = LobbyGame.field_hc;
               }
@@ -87,7 +87,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (ArcticBackground.field_r.selectedIndex != var4) {
                 stackIn_17_0 = ag.field_F;
               } else {
-                stackIn_17_0 = uc.field_l;
+                stackIn_17_0 = EmailConfirmationValidator.field_l;
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
@@ -168,7 +168,7 @@ final class CachedArchiveSource extends ArchiveSource {
 
     final static void e(int param0) {
         int var1 = -91 / ((33 - param0) / 48);
-        cb.a(uc.e((byte) -119), 9);
+        MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -119), 9);
     }
 
     final byte[] getPackedGroup(int groupId, byte obfuscationGuard) {

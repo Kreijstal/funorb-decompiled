@@ -140,7 +140,7 @@ final class OpacityWidget extends SingleChildWidget {
           if (HalloweenBackground.field_y) {
             eq.a(7);
             ToggleButtonWidget.a((byte) 119);
-            uc.e(-94);
+            EmailConfirmationValidator.e(-94);
             HalloweenBackground.field_y = false;
           }
           return;

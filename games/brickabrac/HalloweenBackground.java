@@ -42,7 +42,7 @@ final class HalloweenBackground extends BackgroundScene {
             s.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, va.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          qh.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, nf.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
+          ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
           return;
         }
         if (!this.hasSprites((byte) -106)) {
@@ -54,7 +54,7 @@ final class HalloweenBackground extends BackgroundScene {
           s.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, va.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        qh.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, nf.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
+        ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
     }
 
     final RgbSprite[] a(int param0, boolean param1) {
@@ -68,12 +68,12 @@ final class HalloweenBackground extends BackgroundScene {
         if (!AchievementIcon.field_m.ensureGroupAvailableByName("halloween", -28138)) {
           return false;
         }
-        nf.halloweenNearSprite = pl.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);
+        ValidationMessageWidget.halloweenNearSprite = pl.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.field_m);
         StateIconLabel.halloweenMidSprite = pl.loadRgbSpriteByName("halloween", "halloween_mid", (byte) 116, AchievementIcon.field_m);
         GameClock.halloweenFarSprite = pl.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.field_m);
         LevelPackLoader.halloweenSmallSprite = pl.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.field_m);
         MotionWaypoint.halloweenMoonSprite = pl.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.field_m);
-        va.field_b = jh.a(0, nf.halloweenNearSprite);
+        va.field_b = jh.a(0, ValidationMessageWidget.halloweenNearSprite);
         field_u = jh.a(0, StateIconLabel.halloweenMidSprite);
         ch.field_m = jh.a(0, GameClock.halloweenFarSprite);
         QuickChatParameterType.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
@@ -115,7 +115,7 @@ final class HalloweenBackground extends BackgroundScene {
         boolean stackIn_40_0 = false;
         RasterCacheSurface var3;
         if (obfuscationGuard <= -91) {
-          if (nf.halloweenNearSprite == null) {
+          if (ValidationMessageWidget.halloweenNearSprite == null) {
             return false;
           }
           if (null == StateIconLabel.halloweenMidSprite) {
@@ -144,7 +144,7 @@ final class HalloweenBackground extends BackgroundScene {
         }
         var3 = (RasterCacheSurface) null;
         HalloweenBackground.a(62, -82, true, -61, (RgbSprite) null, (RasterCacheSurface) null);
-        if (nf.halloweenNearSprite == null) {
+        if (ValidationMessageWidget.halloweenNearSprite == null) {
           return false;
         }
         if (null == StateIconLabel.halloweenMidSprite) {
@@ -195,10 +195,10 @@ final class HalloweenBackground extends BackgroundScene {
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             s.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, va.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-            qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+            ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
             return;
           }
-          qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+          ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
           return;
         }
         if (!this.hasSprites((byte) -126)) {
@@ -207,12 +207,12 @@ final class HalloweenBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = kd.a(this.sceneId, colorIndex, (byte) 116);
         if (var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+          ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
           return;
         }
         s.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, va.field_b);
         var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-        qh.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+        ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
     }
 
     final RgbSprite a(boolean param0, int param1) {

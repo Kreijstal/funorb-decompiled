@@ -48,7 +48,7 @@ final class BallPulseEffect extends IntrusiveNode {
           bm.loadLogoMeshes((byte) -70, param0);
           AchievementSubmission.a(param0, 115);
           ScorePopup.initializeMeshLighting(-37);
-          fl.e(-41);
+          UsernameAvailabilityValidator.e(-41);
           MatchResultScreen.field_t = -BoundedFile.field_i + 0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -106,7 +106,7 @@ final class BallPulseEffect extends IntrusiveNode {
         stackIn_5_0 = ((var3 & 128) != 0);
         ji.receivedChatSystem = stackIn_5_0;
         nh.receivedChatBadge = var8.readUnsignedByte(255);
-        an.receivedChatSenderId = var8.readLong(-32768);
+        BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
         if (gj.receivedChatChannel == 2) {
           ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
           LevelCompleteScreen.receivedChatKeyLow24 = var8.readUnsignedMedium((byte) -34);
@@ -191,7 +191,7 @@ final class BallPulseEffect extends IntrusiveNode {
         stackIn_5_0 = ((var3 & 128) != 0);
         ji.receivedChatSystem = stackIn_5_0;
         nh.receivedChatBadge = var8.readUnsignedByte(255);
-        an.receivedChatSenderId = var8.readLong(-32768);
+        BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
         if (gj.receivedChatChannel == 2) {
           ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
           LevelCompleteScreen.receivedChatKeyLow24 = var8.readUnsignedMedium((byte) -34);

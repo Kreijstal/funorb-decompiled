@@ -90,7 +90,7 @@ abstract class TextFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) tag.substring(6));
-                currentAlpha = fl.a(var4, -28734);
+                currentAlpha = UsernameAvailabilityValidator.a(var4, -28734);
               }
             } else {
               currentPaint = defaultPaint;
@@ -399,7 +399,7 @@ abstract class TextFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = fl.a(var13, -28734);
+                                  var10 = UsernameAvailabilityValidator.a(var13, -28734);
                                   var11_ref_fc = this.inlineSprites[var10];
                                   if (this.inlineSpriteBaselines == null) {
                                     stackIn_27_0 = var11_ref_fc.canvasHeight;
@@ -448,7 +448,7 @@ abstract class TextFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(na.a(-8250, (char) var8) & 255);
+              var8 = (char)(DateFieldsWidget.a(-8250, (char) var8) & 255);
               if (this.kerning != null &&
                 var5 != 0) {
                 x = x + this.kerning[(var5 << 8) + var8];
@@ -613,7 +613,7 @@ abstract class TextFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = fl.a(var18, -28734);
+                                    var16_int = UsernameAvailabilityValidator.a(var18, -28734);
                                     var4 = var4 + this.inlineSprites[var16_int].canvasWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -698,7 +698,7 @@ abstract class TextFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = wrapScratch.append((char) var14);
-                var14 = (char)(na.a(-8250, (char) var14) & 255);
+                var14 = (char)(DateFieldsWidget.a(-8250, (char) var14) & 255);
                 var4 = var4 + this.glyphAdvances[var14];
                 if (this.kerning != null &&
                   var10 != 0) {
@@ -784,7 +784,7 @@ abstract class TextFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = fl.a(var10, -28734);
+                                  var9_int = UsernameAvailabilityValidator.a(var10, -28734);
                                   var4 = var4 + this.inlineSprites[var9_int].canvasWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -821,7 +821,7 @@ abstract class TextFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(na.a(-8250, (char) var7) & 255);
+              var7 = (char)(DateFieldsWidget.a(-8250, (char) var7) & 255);
               var4 = var4 + this.glyphAdvances[var7];
               if (this.kerning != null &&
                 var3 != 0) {
@@ -889,7 +889,7 @@ abstract class TextFont extends DualLinkNode {
         int var5 = 0;
         if (character != 32) {
           baselineY = baselineY - this.baselineHeight;
-          var5 = na.a(-8250, character) & 255;
+          var5 = DateFieldsWidget.a(-8250, character) & 255;
           this.drawGlyph(var5, x + this.glyphOffsetX[var5], baselineY + this.glyphOffsetY[var5], this.glyphWidths[var5], this.glyphHeights[var5], paint, false);
         }
     }
@@ -904,7 +904,7 @@ abstract class TextFont extends DualLinkNode {
     }
 
     final int getAdvance(char character) {
-        return this.glyphAdvances[na.a(-8250, character) & 255];
+        return this.glyphAdvances[DateFieldsWidget.a(-8250, character) & 255];
     }
 
     final static String truncateText(TextFont font, String text, int width) {

@@ -99,7 +99,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                             ga.field_i = 11;
                             pp.field_a = -1;
                             tb.field_eb = bj.field_U;
-                            wl.field_N = true;
+                            ValidationIconWidget.field_N = true;
                           }
                         }
                       }

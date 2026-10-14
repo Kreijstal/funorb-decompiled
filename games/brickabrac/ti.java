@@ -43,7 +43,7 @@ final class ti {
               if (sortByRating) {
                 stackIn_25_0 = ec.rankingRatings[var12];
               } else {
-                stackIn_25_0 = pj.rankingWinRateThousandths[var12];
+                stackIn_25_0 = DebouncedValidationSource.rankingWinRateThousandths[var12];
               }
               var13 = stackIn_25_0;
               if (var7_int < var13) {

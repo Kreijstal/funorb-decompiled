@@ -4,7 +4,7 @@
 final class mo extends ag implements WidgetActionListener {
     static UiComponent field_R;
     static String field_O;
-    private na field_P;
+    private DateFieldsWidget field_P;
     static String field_N;
     private FocusableWidget field_Q;
 
@@ -21,8 +21,8 @@ final class mo extends ag implements WidgetActionListener {
 
     mo(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (WidgetRenderer) null);
-        this.field_P = new na(new r(10000536), RasterSnapshot.field_j, 0, 0, 140, 25);
-        this.field_P.a(new an(), (byte) -12);
+        this.field_P = new DateFieldsWidget(new r(10000536), RasterSnapshot.field_j, 0, 0, 140, 25);
+        this.field_P.setBirthDateValidator(new BirthDateValidator(), (byte) -12);
         this.field_Q = new FocusableWidget(ri.field_L, (WidgetListener) (this));
         this.field_H = new Widget[]{(Widget) ((Object) this.field_P), (Widget) ((Object) this.field_Q)};
         this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
@@ -36,11 +36,11 @@ final class mo extends ag implements WidgetActionListener {
     }
 
     public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
-        if (this.field_P.a(-11011).b((byte) -31) != DualLinkIterator.field_c) {
+        if (this.field_P.getValidationSource(-11011).getValidationStatus((byte) -31) != DualLinkIterator.validationValid) {
           return;
         }
         try {
-          df.a(this.field_P.i(5390), (byte) 103, this.field_P.a((byte) -125), this.field_P.i((byte) -117));
+          df.a(this.field_P.getYear(5390), (byte) 103, this.field_P.getDay((byte) -125), this.field_P.getMonthIndex((byte) -117));
           if (obfuscationGuard >= -22) {
             mo.d(true);
           }
@@ -52,7 +52,7 @@ final class mo extends ag implements WidgetActionListener {
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
-          this.field_Q.enabled = this.field_P.a(-11011).b((byte) -31) == DualLinkIterator.field_c ? true : false;
+          this.field_Q.enabled = this.field_P.getValidationSource(-11011).getValidationStatus((byte) -31) == DualLinkIterator.validationValid ? true : false;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mo.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }

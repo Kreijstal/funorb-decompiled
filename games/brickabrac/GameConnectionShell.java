@@ -21,7 +21,7 @@ abstract class GameConnectionShell extends AppletGameShell {
 
     private final void f(boolean param0) {
         String var2 = go.a((byte) 120);
-        ArchiveNetworkRequest.a(var2, 70, uc.e((byte) -116));
+        ArchiveNetworkRequest.a(var2, 70, EmailConfirmationValidator.e((byte) -116));
         if (!param0) {
           this.g(false);
         }
@@ -379,36 +379,36 @@ abstract class GameConnectionShell extends AppletGameShell {
               AchievementIcon.field_j = 10;
               LevelPackSelectScreen.field_s = true;
             } else {
-              WidgetLayer.a(uc.e((byte) -97), (byte) 97);
+              WidgetLayer.a(EmailConfirmationValidator.e((byte) -97), (byte) 97);
             }
           }
           if (var4 == 5) {
-            nk.a(2048, uc.e((byte) -110));
+            nk.a(2048, EmailConfirmationValidator.e((byte) -110));
           }
           if (var4 == 6 &&
             SpaceBackground.field_t) {
             AchievementIcon.field_j = 10;
           }
           if (7 == var4) {
-            pf.a(uc.e((byte) -76), false);
+            pf.a(EmailConfirmationValidator.e((byte) -76), false);
           }
           if (param1 != 46) {
             this.gameCrc = 120;
           }
           if (var4 == 8) {
-            WidgetLayer.a(uc.e((byte) -70), (byte) 97);
+            WidgetLayer.a(EmailConfirmationValidator.e((byte) -70), (byte) 97);
           }
           if (var4 == 9) {
-            NodeDeque.a(uc.e((byte) -108), (byte) -106);
+            NodeDeque.a(EmailConfirmationValidator.e((byte) -108), (byte) -106);
           }
           if (var4 == 10) {
-            k.outgoingPackets.writeCipheredOpcode(-13413, 17);
+            TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 17);
           }
           if (var4 == 11) {
-            mi.a((byte) -123, uc.e((byte) -93));
+            mi.a((byte) -123, EmailConfirmationValidator.e((byte) -93));
           }
           if (12 == var4) {
-            kf.a(oh.b((byte) -49), (byte) -125, uc.e((byte) -97));
+            AgeValidator.a(UsernameAvailabilityResult.b((byte) -49), (byte) -125, EmailConfirmationValidator.e((byte) -97));
           }
           if (var4 == 13) {
             try {
@@ -530,7 +530,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                                 return;
                               }
                               if (var2 == 18) {
-                                g.e((byte) -114);
+                                PasswordValidator.e((byte) -114);
                                 return;
                               }
                               AlignedIconLabel.a("MGS1: " + eq.c((byte) -71), (Throwable) null, 119);
@@ -550,7 +550,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                         this.f(stackIn_22_1);
                       }
                     } else {
-                      wl.handleRankingsResponse(false);
+                      ValidationIconWidget.handleRankingsResponse(false);
                     }
                   } else {
                     MenuSelection.f((byte) -71);
@@ -710,7 +710,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           jj.field_a.c(guardCode + 118);
         }
         wn.snapshotKeyboardInput((byte) -97);
-        sg.snapshotMouseInput(70);
+        EmailValidator.snapshotMouseInput(70);
         if (!r.c((byte) -114) &&
           AchievementIcon.field_j != 11) {
           GameplayAudioEvent.c(27144);
@@ -813,7 +813,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (clientStage == guardCode) {
           if (cd.field_e != 0) {
-            wl.field_K = aj.a(PacketBuffer.field_j, true);
+            ValidationIconWidget.field_K = aj.a(PacketBuffer.field_j, true);
           }
           LabeledWidget.field_P = bq.a(-6, 1, true, nd.field_c, false);
           RadialSelectorWidget.field_S = bq.a(-6, 1, true, ea.field_c, false);
@@ -823,19 +823,19 @@ abstract class GameConnectionShell extends AppletGameShell {
           NameEntryPopup.field_Rb = LabeledWidget.field_P;
         }
         if (2 == clientStage) {
-          if (null != wl.field_K &&
-            wl.field_K.ensureIndex((byte) -127)) {
-            if (!wl.field_K.hasGroupName(113, "")) {
-              wl.field_K = null;
+          if (null != ValidationIconWidget.field_K &&
+            ValidationIconWidget.field_K.ensureIndex((byte) -127)) {
+            if (!ValidationIconWidget.field_K.hasGroupName(113, "")) {
+              ValidationIconWidget.field_K = null;
             } else {
-              if (wl.field_K.ensureGroupAvailableByName("", -28138)) {
-                ContextActionController.a(wl.field_K, 122);
-                wl.field_K = null;
+              if (ValidationIconWidget.field_K.ensureGroupAvailableByName("", -28138)) {
+                ContextActionController.a(ValidationIconWidget.field_K, 122);
+                ValidationIconWidget.field_K = null;
                 hc.b(guardCode ^ 3);
               }
             }
           }
-          if (wl.field_K == null) {
+          if (ValidationIconWidget.field_K == null) {
             clientStage = 3;
           }
         }
@@ -847,20 +847,20 @@ abstract class GameConnectionShell extends AppletGameShell {
           SpaceBackground.field_t = false;
           ri.field_N = cm.field_t;
           MultiplayerExitScreen.a(FarmBackground.field_u, ja.field_c, LabeledWidget.field_P, RadialSelectorWidget.field_S, guardCode ^ 23);
-          if (cb.field_k ||
+          if (MatchingTextValidator.field_k ||
             null != LevelDecoder.field_a) {
-            stackIn_99_0 = !(cb.field_k);
-            stackIn_102_1 = !(cb.field_k);
+            stackIn_99_0 = !(MatchingTextValidator.field_k);
+            stackIn_102_1 = !(MatchingTextValidator.field_k);
             ToggleButtonWidget.a(stackIn_99_0, stackIn_102_1, guardCode ^ -15948, LevelDecoder.field_a);
           }
           if (MatchResultScreen.field_u) {
             NewAchievementsScreen.f(967);
           }
-          if (null == sg.field_l) {
-            sg.field_l = StateIconLabel.h(114);
+          if (null == EmailValidator.field_l) {
+            EmailValidator.field_l = StateIconLabel.h(114);
             ri.field_M = ar.a((byte) 120);
           }
-          BallPulseEffect.a(ja.field_c, sg.field_l, ri.field_M, 107);
+          BallPulseEffect.a(ja.field_c, EmailValidator.field_l, ri.field_M, 107);
           RadialSelectorWidget.field_S = null;
           LabeledWidget.field_P = null;
           ja.field_c = null;
@@ -932,7 +932,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           return;
         }
         jl.incomingPackets.readCipheredBytes(false, 0, var4, var5);
-        HuffmanCodec.a((byte) 114, uc.e((byte) -73), MenuButton.a(var5, (byte) 70), var3 != 0);
+        HuffmanCodec.a((byte) 114, EmailConfirmationValidator.e((byte) -73), MenuButton.a(var5, (byte) 70), var3 != 0);
     }
 
     static {

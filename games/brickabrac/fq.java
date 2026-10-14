@@ -60,14 +60,14 @@ final class fq {
     }
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        ug.field_I = param1;
+        DateInputWidget.field_I = param1;
         if (param0 > 83) {
-          qh.field_d = param3;
+          ValidationStatus.field_d = param3;
           LobbyGame.field_hc = param2;
           return;
         }
         fq.a((byte) -44, 39, -69, 32);
-        qh.field_d = param3;
+        ValidationStatus.field_d = param3;
         LobbyGame.field_hc = param2;
     }
 

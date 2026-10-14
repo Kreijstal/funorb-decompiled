@@ -227,7 +227,7 @@ final class Brick extends RectangleBody {
             board.a((byte) -63, this, var7);
             return;
           }
-          if ((sg.field_n & 1 << this.typeId) != 0 ||
+          if ((EmailValidator.field_n & 1 << this.typeId) != 0 ||
             var7.penetrationTicks == 0 &&
             var7.phaseTicks == 0) {
             super.onCircleContact((byte) 53, board, circle);
@@ -364,7 +364,7 @@ final class Brick extends RectangleBody {
             0 == this.segmentElapsedTicks) {
             return false;
           }
-          if ((1 << this.typeId & sg.field_n) == 0 &&
+          if ((1 << this.typeId & EmailValidator.field_n) == 0 &&
             0 != ((Ball) (circle)).phaseTicks) {
             return false;
           }

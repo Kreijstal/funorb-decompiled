@@ -385,7 +385,7 @@ final class nh {
                   var10_ref_String = rd.a(LevelPackLoader.field_h, new String[]{Integer.toString(uf.pendingJoinRequestCount)}, (byte) 103);
                 }
                 pf.field_h.text = pf.field_h.text + "<br>" + var10_ref_String;
-                if ((an.field_h & 16) == 0 &&
+                if ((BirthDateValidator.field_h & 16) == 0 &&
                   !hc.field_c) {
                   pf.field_h.frameSprites = fm.field_b.activeFrameSprites;
                 }

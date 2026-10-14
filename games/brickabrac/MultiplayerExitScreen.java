@@ -20,7 +20,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
     }
 
     final static void sendRankingsRequest(int obfuscationGuard, RankingsRequest request, int opcode) {
-        BitPacketBuffer var3 = k.outgoingPackets;
+        BitPacketBuffer var3 = TextFieldValidator.outgoingPackets;
         if (obfuscationGuard != -21167) {
           return;
         }
@@ -61,7 +61,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = k.outgoingPackets;
+          var5 = TextFieldValidator.outgoingPackets;
           var3 = var5;
           var5.writeCipheredOpcode(-13413, param0);
           var5.position = var5.position + 1;
@@ -98,8 +98,8 @@ final class MultiplayerExitScreen extends MatchResultScreen {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         try {
-          LabeledWidget.field_I = rm.a("", 16711935);
-          LabeledWidget.field_I.a(false, 20892);
+          LabeledWidget.emailAvailabilityRequest = rm.createEmailAvailabilityRequest("", 16711935);
+          LabeledWidget.emailAvailabilityRequest.complete(false, 20892);
           if (param4 <= 11) {
             savePrompts = (String[]) null;
           }

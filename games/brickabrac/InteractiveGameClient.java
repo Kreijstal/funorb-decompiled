@@ -215,14 +215,14 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
                   LevelPack.b(118);
                 }
                 if (var3 == 2) {
-                  nk.a(param0 ^ 2058, uc.e((byte) -85));
+                  nk.a(param0 ^ 2058, EmailConfirmationValidator.e((byte) -85));
                 }
               }
               this.updateGameLayer(false, (byte) 81);
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (uc.f(21651)) {
+              if (EmailConfirmationValidator.f(21651)) {
                 if (!me.b(param0 ^ -16)) {
                   var3 = RadialSelectorWidget.h(0);
                   if (1 == var3) {

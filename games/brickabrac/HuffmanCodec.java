@@ -265,14 +265,14 @@ final class HuffmanCodec {
             var4 = (ResourceArchive) null;
             HuffmanCodec.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
           }
-          var1 = k.outgoingPackets;
+          var1 = TextFieldValidator.outgoingPackets;
           while (ik.a(104)) {
             var1.writeCipheredOpcode(-13413, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             HighscoresScreen.a(var1, (byte) 9);
-            k.outgoingPackets.backfillByteLength((byte) 118, -var2 + var1.position);
+            TextFieldValidator.outgoingPackets.backfillByteLength((byte) 118, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -141,7 +141,7 @@ final class ChatMessage {
         this.senderDisplayName = HalloweenBackground.receivedChatDisplayName;
         this.contextLabel = sl.receivedChatContextLabel;
         this.badgeId = nh.receivedChatBadge;
-        this.senderId = an.receivedChatSenderId;
+        this.senderId = BirthDateValidator.receivedChatSenderId;
         this.senderName = nd.receivedChatSenderName;
         this.systemMessage = ji.receivedChatSystem;
         this.text = gd.receivedChatText;

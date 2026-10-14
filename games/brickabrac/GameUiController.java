@@ -43,7 +43,7 @@ final class GameUiController implements GameUiLifecycle {
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, ContextActionController.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.a(20, -97, 20, var2);
-        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, qh.field_h, 22287);
+        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
         ea.field_g = true;
         c.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
@@ -125,7 +125,7 @@ final class GameUiController implements GameUiLifecycle {
               if (OptionsScreen.progressRequests[var3].values[0] > hh.unlockedLevelCounts[var3]) {
                 hh.unlockedLevelCounts[var3] = OptionsScreen.progressRequests[var3].values[0];
               }
-              jj.field_d = jj.field_d | ln.a(na.field_L[var3], 0, true, hh.unlockedLevelCounts[var3]);
+              jj.field_d = jj.field_d | ln.a(DateFieldsWidget.field_L[var3], 0, true, hh.unlockedLevelCounts[var3]);
               if (!DelayedPacket.c(obfuscationGuard ^ 27)) {
                 hh.unlockedLevelCounts[var3] = 0;
               } else {
@@ -166,9 +166,9 @@ final class GameUiController implements GameUiLifecycle {
         bh.field_tb.a(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
         bh.field_tb.a(RadialSelectorWidget.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
         bh.field_tb.a(RadialSelectorWidget.field_P, "kartika13", 127, m.field_k, wn.field_c);
-        bh.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, wl.field_Q);
-        bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, wl.field_Q);
-        bh.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, sg.field_m);
+        bh.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);
+        bh.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
+        bh.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
         bh.field_tb.a(NodeDequeCursor.field_i, false, cm.field_n, bb.field_a);
         bh.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
         bh.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
@@ -204,7 +204,7 @@ final class GameUiController implements GameUiLifecycle {
                 so.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }
             } else {
-              ParisBackground.a((byte) 24, 88.0f, sf.field_bb);
+              ParisBackground.a((byte) 24, 88.0f, ValidatedTextFieldWidget.field_bb);
               sl.field_C.renderClient(124);
               var2 = var2 != 0 & wo.a(2) ? 1 : 0;
             }

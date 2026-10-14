@@ -1026,7 +1026,7 @@ final class MultiplayerMatch {
           }
           if (null != GameClock.field_c) {
             if (r.field_A) {
-              if (wl.field_N) {
+              if (ValidationIconWidget.field_N) {
                 if (!cm.field_s &&
                   param4.contactCount == 39) {
                   WidgetLayer.a(0, 6, (byte) -108);
@@ -1102,7 +1102,7 @@ final class MultiplayerMatch {
                   var7 = 2;
                 }
                 if (0 == param4.phaseTicks ||
-                  0 != (1 << var9.typeId & sg.field_n)) {
+                  0 != (1 << var9.typeId & EmailValidator.field_n)) {
                   param1.addLast(new GameplayAudioEvent(var7), (byte) 3);
                 }
               }

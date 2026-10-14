@@ -61,29 +61,29 @@ final class hg {
         }
     }
 
-    final static ac a(int param0, String param1) {
+    final static EmailAvailabilityRequest pollEmailAvailability(int obfuscationGuard, String email) {
         RuntimeException var2 = null;
-        ac stackIn_7_0 = null;
+        EmailAvailabilityRequest stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (LabeledWidget.field_I.b(96) &&
-            !param1.equals(LabeledWidget.field_I.a(0))) {
-            LabeledWidget.field_I = rm.a(param1, 16711935);
+          if (LabeledWidget.emailAvailabilityRequest.isCompleted(96) &&
+            !email.equals(LabeledWidget.emailAvailabilityRequest.getEmail(0))) {
+            LabeledWidget.emailAvailabilityRequest = rm.createEmailAvailabilityRequest(email, 16711935);
           }
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             field_g = (RgbSprite) null;
           }
-          stackIn_7_0 = LabeledWidget.field_I;
+          stackIn_7_0 = LabeledWidget.emailAvailabilityRequest;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("hg.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("hg.B(").append(obfuscationGuard).append(',');
+          if (email == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";

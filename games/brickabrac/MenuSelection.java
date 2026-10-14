@@ -282,7 +282,7 @@ final class MenuSelection {
             AlignedIconLabel.a("A1: " + eq.c((byte) -101), (Throwable) null, 123);
             hn.a((byte) 60);
           } else {
-            var3_ref_wj = (wj) (uc.field_q.first(-110));
+            var3_ref_wj = (wj) (EmailConfirmationValidator.field_q.first(-110));
             if (var3_ref_wj == null) {
               hn.a((byte) 76);
               return;
@@ -339,7 +339,7 @@ final class MenuSelection {
           }
           if (0 == this.heldCode) {
             if (BackgroundScene.pressedButton == 0 &&
-              cb.heldButton == 0) {
+              MatchingTextValidator.heldButton == 0) {
               this.heldCode = 0;
             }
             if (this.heldCode == 0) {
@@ -363,9 +363,9 @@ final class MenuSelection {
             }
             return;
           }
-          if (cb.heldButton == 0) {
+          if (MatchingTextValidator.heldButton == 0) {
             if (BackgroundScene.pressedButton == 0 &&
-              cb.heldButton == 0) {
+              MatchingTextValidator.heldButton == 0) {
               this.heldCode = 0;
             }
             if (this.heldCode == 0) {
@@ -395,7 +395,7 @@ final class MenuSelection {
           }
           this.field_o = this.field_o - 1;
           if (BackgroundScene.pressedButton == 0 &&
-            cb.heldButton == 0) {
+            MatchingTextValidator.heldButton == 0) {
             this.heldCode = 0;
           }
           if (this.heldCode == 0) {
@@ -431,7 +431,7 @@ final class MenuSelection {
         if (0 == this.heldCode) {
           boolean decompiledFrameRemainder1 = true;
           if (BackgroundScene.pressedButton == 0) {
-            if (cb.heldButton != 0) {
+            if (MatchingTextValidator.heldButton != 0) {
               if (this.heldCode != 0) {
                 return;
               }
@@ -467,10 +467,10 @@ final class MenuSelection {
           this.selectedIndex = heldIndex;
           return;
         }
-        if (cb.heldButton == 0) {
+        if (MatchingTextValidator.heldButton == 0) {
           boolean decompiledFrameRemainder0 = true;
           if (BackgroundScene.pressedButton == 0) {
-            if (cb.heldButton != 0) {
+            if (MatchingTextValidator.heldButton != 0) {
               if (this.heldCode != 0) {
                 return;
               }
@@ -512,7 +512,7 @@ final class MenuSelection {
         }
         this.field_o = this.field_o - 1;
         if (BackgroundScene.pressedButton == 0) {
-          if (cb.heldButton != 0) {
+          if (MatchingTextValidator.heldButton != 0) {
             if (this.heldCode == 0) {
               if (!this.pointerDriven &&
                 !QuickChatHelpDialog.pointerChanged) {

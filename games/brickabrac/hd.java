@@ -22,7 +22,7 @@ final class hd {
     }
 
     final static void requestInviteOrAcceptPlayer(long playerId, int obfuscationGuard, int opcode) {
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         packet.position = packet.position + 1;
         int payloadStart = packet.position;
@@ -62,7 +62,7 @@ final class hd {
         rf.field_f = true;
         pp.field_a = 12;
         QuickChatHelpDialog.field_Sb = true;
-        wl.field_N = true;
+        ValidationIconWidget.field_N = true;
         wc.field_b = true;
         c.field_i = un.field_e;
     }

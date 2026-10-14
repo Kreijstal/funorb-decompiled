@@ -41,7 +41,7 @@ final class qn {
               return;
             }
             this.field_w = this.field_g;
-            if (qh.field_a < this.field_c) {
+            if (ValidationStatus.field_a < this.field_c) {
               this.field_b = false;
             } else {
               if (param0 < 23) {
@@ -89,7 +89,7 @@ final class qn {
           return;
         }
         this.field_w = this.field_g;
-        if (qh.field_a < this.field_c) {
+        if (ValidationStatus.field_a < this.field_c) {
           this.field_b = false;
         } else {
           if (param0 < 23) {
@@ -188,7 +188,7 @@ final class qn {
         if (param0 != -32) {
           return true;
         }
-        if (qh.field_a < this.field_c) {
+        if (ValidationStatus.field_a < this.field_c) {
           return false;
         }
         if (0 >= go.field_c) {

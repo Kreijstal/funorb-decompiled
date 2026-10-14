@@ -60,7 +60,7 @@ final class LevelList {
         ag.buttonLabels[8] = null;
         ag.buttonLabels[13] = di.field_a;
         ag.buttonLabels[27] = MatchResultScreen.field_r;
-        ag.buttonLabels[2] = pj.field_e;
+        ag.buttonLabels[2] = DebouncedValidationSource.field_e;
         sl.field_A[11] = MusicCrossfadeStream.field_w;
         sl.field_A[5] = ef.field_c;
         sl.field_A[6] = ch.field_i;

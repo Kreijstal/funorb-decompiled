@@ -237,7 +237,7 @@ final class WidgetLayerStack extends SingleChildWidget {
               var2 = 0;
             }
           }
-          for (var3 = 0; qh.field_i.length > var3; var3++) {
+          for (var3 = 0; ValidationStatus.field_i.length > var3; var3++) {
             var4 = BrickABrac.field_K[var3];
             if (var4 < 0) {
               var5 = NewAchievementsScreen.field_H;
@@ -248,7 +248,7 @@ final class WidgetLayerStack extends SingleChildWidget {
                 var5 = LevelCompleteScreen.field_A;
               }
             }
-            var6 = qh.field_i[var3];
+            var6 = ValidationStatus.field_i[var3];
             if (2 == ArchiveFetchClient.field_p &&
               1 == var2) {
               if (QuickChatPhraseRegistry.field_k.length >= ik.field_b.length) {

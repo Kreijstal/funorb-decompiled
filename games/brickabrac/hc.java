@@ -228,12 +228,12 @@ final class hc {
           var11 = var10;
           var10.verticalAlignment = 1;
           var11.horizontalAlignment = 1;
-          qh.field_j = new UiComponent(0L, var8);
-          qh.field_j.frameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
+          ValidationStatus.field_j = new UiComponent(0L, var8);
+          ValidationStatus.field_j.frameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
           lp.field_Ab = new UiComponent(0L, (UiComponent) null);
           lp.field_Ab.frameSprites = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
           f.field_a = new UiComponent(0L, (UiComponent) null);
-          f.field_a.frameSprites = na.a(false, 6316128, 3, 6316128, 114, 1);
+          f.field_a.frameSprites = DateFieldsWidget.a(false, 6316128, 3, 6316128, 114, 1);
           GameUiController.field_c = new UiComponent(0L, (UiComponent) null);
           GameUiController.field_c.frameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
           var12 = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
@@ -299,9 +299,9 @@ final class hc {
           WidgetTheme.field_n.activeFrameSprites = GameConnectionShell.a(cr.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
           WidgetTheme.field_n.selectedFrameSprites = var14;
           hd.field_c = new UiComponent(0L, (UiComponent) null);
-          hd.field_c.frameSprites = na.a(false, 1127256, 3, 1856141, 206, -1);
+          hd.field_c.frameSprites = DateFieldsWidget.a(false, 1127256, 3, 1856141, 206, -1);
           FarmBackground.field_x = new UiComponent(0L, (UiComponent) null);
-          FarmBackground.field_x.frameSprites = na.a(false, 6052956, 3, 11579568, 290, -1);
+          FarmBackground.field_x.frameSprites = DateFieldsWidget.a(false, 6052956, 3, 11579568, 290, -1);
           fm.field_b = new UiComponent(0L, var15);
           fm.field_b.selectedOffsetX = 1;
           fm.field_b.selectedOffsetY = 1;

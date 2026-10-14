@@ -469,14 +469,14 @@ final class RichTextLayout extends WidgetTextLayout {
             return 80;
           }
         } else {
-          if (wl.field_K != null) {
-            if (!wl.field_K.ensureIndex((byte) -127)) {
+          if (ValidationIconWidget.field_K != null) {
+            if (!ValidationIconWidget.field_K.ensureIndex((byte) -127)) {
               return 14;
             }
-            if (!wl.field_K.hasGroupName(-104, "")) {
+            if (!ValidationIconWidget.field_K.hasGroupName(-104, "")) {
               return 29;
             }
-            if (!wl.field_K.ensureGroupAvailableByName("", -28138)) {
+            if (!ValidationIconWidget.field_K.ensureGroupAvailableByName("", -28138)) {
               return 29;
             }
           }

@@ -120,7 +120,7 @@ abstract class sl extends DualLinkNode {
           DraggableWidget.field_N = new UiComponent(0L, CappedUrlRequest.field_l);
           DraggableWidget.field_N.horizontalAlignment = 1;
           HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, VerticalScrollbar.field_Rb.toUpperCase());
-          sc.field_b = new UiComponent(0L, qh.field_j, rl.field_c.toUpperCase());
+          sc.field_b = new UiComponent(0L, ValidationStatus.field_j, rl.field_c.toUpperCase());
           ll.field_e = new UiComponent(0L, FarmBackground.field_x);
           nk.field_g = new UiComponent(0L, MainMenuScreen.field_t, nk.field_b);
           nk.field_a = new UiComponent(0L, cd.field_d, VolcanicBackground.field_r);
@@ -167,7 +167,7 @@ abstract class sl extends DualLinkNode {
           Brick.field_A = new UiComponent(0L, CappedUrlRequest.field_l);
           Brick.field_A.horizontalAlignment = 1;
           Brick.field_A.verticalAlignment = 0;
-          nh.field_a = new UiComponent(0L, GameUiController.field_b, k.field_j.toUpperCase());
+          nh.field_a = new UiComponent(0L, GameUiController.field_b, TextFieldValidator.field_j.toUpperCase());
           qp.field_f = new UiComponent(0L, MenuSelection.field_m);
           qp.field_f.addChild(Brick.field_A, 0);
           qp.field_f.addChild(nh.field_a, 0);
@@ -189,7 +189,7 @@ abstract class sl extends DualLinkNode {
           }
           ji.field_b.addChild(TimedSplashScreen.field_u, 0);
           GameUiController.field_e = new UiComponent(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
-          ba.field_v = new UiComponent(0L, qh.field_j);
+          ba.field_v = new UiComponent(0L, ValidationStatus.field_j);
           QuickChatPhraseRegistry.field_e = new UiComponent(0L, FarmBackground.field_x);
           jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           ChatMessage.field_l = new UiComponent[4 + param13];
@@ -211,7 +211,7 @@ abstract class sl extends DualLinkNode {
           ChatMessage.field_l[2] = new UiComponent(0L, wi.field_n, PlayerInputBatch.field_j);
           MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
           if (1 < IntArrayRequest.field_t) {
-            ChatMessage.field_l[3] = new UiComponent(0L, wi.field_n, uc.field_r);
+            ChatMessage.field_l[3] = new UiComponent(0L, wi.field_n, EmailConfirmationValidator.field_r);
             array$1 = new AlignedIconLabel[IntArrayRequest.field_t + 1];
             MatchCompleteScreen.field_A[3] = array$1;
             MatchCompleteScreen.field_A[3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);

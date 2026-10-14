@@ -7,7 +7,7 @@ final class LabeledWidget extends SingleChildWidget {
     private TextFont labelFont;
     private int inset;
     private int labelColor;
-    static ac field_I;
+    static EmailAvailabilityRequest emailAvailabilityRequest;
     static String field_G;
     private int labelWidth;
     static PaletteFont field_O;
@@ -26,7 +26,7 @@ final class LabeledWidget extends SingleChildWidget {
 
     public static void c(boolean param0) {
         field_O = null;
-        field_I = null;
+        emailAvailabilityRequest = null;
         field_G = null;
         field_P = null;
         if (param0) {
@@ -122,14 +122,14 @@ final class LabeledWidget extends SingleChildWidget {
         BitPacketBuffer var2 = null;
         BitPacketBuffer var2Lifetime1;
         if (obfuscationGuard <= -49) {
-          var2 = k.outgoingPackets;
+          var2 = TextFieldValidator.outgoingPackets;
           var2.writeCipheredOpcode(-13413, opcode);
           var2.writeByte(27, 1);
           var2.writeByte(127, 2);
           return;
         }
         LabeledWidget.sendAchievementMaskRequest((byte) -23, -84);
-        var2Lifetime1 = k.outgoingPackets;
+        var2Lifetime1 = TextFieldValidator.outgoingPackets;
         var2Lifetime1.writeCipheredOpcode(-13413, opcode);
         var2Lifetime1.writeByte(27, 1);
         var2Lifetime1.writeByte(127, 2);

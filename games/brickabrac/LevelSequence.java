@@ -59,7 +59,7 @@ final class LevelSequence {
           cr.f((byte) -55);
           return true;
         }
-        if (na.j((byte) -60)) {
+        if (DateFieldsWidget.j((byte) -60)) {
           return true;
         }
         if (NinjaBackground.a(param3, param0, (byte) 108, param2)) {

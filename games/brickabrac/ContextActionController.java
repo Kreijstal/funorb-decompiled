@@ -318,7 +318,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_x_entered_other_game", (byte) -126);
                 if (null != var2) {
-                  ug.field_K = MenuButton.a(var2, (byte) 80);
+                  DateInputWidget.field_K = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("mu_x_left_lobby", (byte) -125);
                 if (null != var2) {
@@ -470,7 +470,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_options_ratedgametype", (byte) -114);
                 if (null != var2) {
-                  uc.field_r = MenuButton.a(var2, (byte) 89);
+                  EmailConfirmationValidator.field_r = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("yes", (byte) -119);
                 if (null != var2) {
@@ -614,11 +614,11 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_invisible_and_silent_mode", (byte) -118);
                 if (var2 != null) {
-                  ac.field_b = MenuButton.a(var2, (byte) 72);
+                  EmailAvailabilityRequest.field_b = MenuButton.a(var2, (byte) 72);
                 }
                 var2 = nk.a("you_have_been_removed_from_xs_game", (byte) 86);
                 if (null != var2) {
-                  nf.field_T = MenuButton.a(var2, (byte) 80);
+                  ValidationMessageWidget.field_T = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = nk.a("your_rating_is_x", (byte) 48);
                 if (var2 != null) {
@@ -642,7 +642,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("searching_for_opponent_singular", (byte) -115);
                 if (null != var2) {
-                  cb.field_l = MenuButton.a(var2, (byte) 99);
+                  MatchingTextValidator.field_l = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("searching_for_opponents_plural", (byte) -112);
                 if (var2 != null) {
@@ -966,7 +966,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_younotmember", (byte) 118);
                 if (null != var2) {
-                  ug.field_J = MenuButton.a(var2, (byte) 119);
+                  DateInputWidget.field_J = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("gameopt_playerneedsrating", (byte) 5);
                 if (var2 != null) {
@@ -978,7 +978,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_playerneedsratedgames", (byte) -125);
                 if (null != var2) {
-                  qh.field_g = MenuButton.a(var2, (byte) 115);
+                  ValidationStatus.field_g = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("gameopt_youneedratedgames", (byte) 121);
                 if (null != var2) {
@@ -1100,7 +1100,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rule_0_2", (byte) -106);
                 if (var2 != null) {
-                  k.field_i = MenuButton.a(var2, (byte) 73);
+                  TextFieldValidator.field_i = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = nk.a("rule_0_3", (byte) -16);
                 if (null != var2) {
@@ -1160,7 +1160,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("cancel", (byte) 25);
                 if (var2 != null) {
-                  wl.field_L = MenuButton.a(var2, (byte) 108);
+                  ValidationIconWidget.field_L = MenuButton.a(var2, (byte) 108);
                 }
                 var2 = nk.a("pleaselogintoplay", (byte) -116);
                 if (null != var2) {
@@ -1200,7 +1200,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("tocustomersupport", (byte) 112);
                 if (var2 != null) {
-                  cb.field_p = MenuButton.a(var2, (byte) 76);
+                  MatchingTextValidator.field_p = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("changedisplayname", (byte) 61);
                 if (var2 != null) {
@@ -1636,7 +1636,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("login_username_tooltip", (byte) -127);
                 if (null != var2) {
-                  sf.field_X = MenuButton.a(var2, (byte) 121);
+                  ValidatedTextFieldWidget.field_X = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = nk.a("login_password_tooltip", (byte) 120);
                 if (var2 != null) {
@@ -1660,7 +1660,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("login_no_displayname", (byte) 60);
                 if (var2 != null) {
-                  ac.field_d = MenuButton.a(var2, (byte) 123);
+                  EmailAvailabilityRequest.field_d = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = nk.a("create_username_tooltip", (byte) 51);
                 if (null != var2) {
@@ -1784,7 +1784,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_alert_invalidemail", (byte) -120);
                 if (var2 != null) {
-                  wl.field_O = MenuButton.a(var2, (byte) 100);
+                  ValidationIconWidget.field_O = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("create_alert_email_unavailable", (byte) -124);
                 if (var2 != null) {
@@ -1892,7 +1892,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("text_removed_from_game", (byte) 25);
                 if (null != var2) {
-                  sg.field_k = MenuButton.a(var2, (byte) 70);
+                  EmailValidator.field_k = MenuButton.a(var2, (byte) 70);
                 }
                 var2 = nk.a("text_lobby_pleaselogin_free", (byte) 63);
                 if (null != var2) {
@@ -1970,11 +1970,11 @@ final class ContextActionController {
                 }
                 var2 = nk.a("loading_soundeffects", (byte) -17);
                 if (var2 != null) {
-                  wl.field_Q = MenuButton.a(var2, (byte) 108);
+                  ValidationIconWidget.field_Q = MenuButton.a(var2, (byte) 108);
                 }
                 var2 = nk.a("loading_music", (byte) 123);
                 if (var2 != null) {
-                  sg.field_m = MenuButton.a(var2, (byte) 110);
+                  EmailValidator.field_m = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("loading_instruments", (byte) -123);
                 if (var2 != null) {
@@ -2014,7 +2014,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("unpacking_music", (byte) 9);
                 if (null != var2) {
-                  sf.field_bb = MenuButton.a(var2, (byte) 113);
+                  ValidatedTextFieldWidget.field_bb = MenuButton.a(var2, (byte) 113);
                 }
                 var2 = nk.a("unpacking_levels", (byte) 78);
                 if (var2 != null) {
@@ -2178,7 +2178,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ok", (byte) -108);
                 if (null != var2) {
-                  k.field_j = MenuButton.a(var2, (byte) 87);
+                  TextFieldValidator.field_j = MenuButton.a(var2, (byte) 87);
                 }
                 var2 = nk.a("on", (byte) -127);
                 if (var2 != null) {
@@ -2218,7 +2218,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("returntogame", (byte) -125);
                 if (var2 != null) {
-                  pj.field_e = MenuButton.a(var2, (byte) 103);
+                  DebouncedValidationSource.field_e = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("endgameresign", (byte) -110);
                 if (null != var2) {
@@ -2434,7 +2434,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("orbcoins_colon", (byte) -7);
                 if (null != var2) {
-                  fl.field_m = MenuButton.a(var2, (byte) 94);
+                  UsernameAvailabilityValidator.field_m = MenuButton.a(var2, (byte) 94);
                 }
                 var2 = nk.a("achieved_colon_description", (byte) 86);
                 if (null != var2) {
@@ -2602,7 +2602,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mp_showchat_unread1", (byte) 111);
                 if (null != var2) {
-                  an.field_g = MenuButton.a(var2, (byte) 117);
+                  BirthDateValidator.field_g = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = nk.a("mp_showchat_unread2", (byte) -106);
                 if (var2 != null) {
@@ -2836,7 +2836,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_button_members", (byte) -123);
                 if (null != var2) {
-                  g.field_q = MenuButton.a(var2, (byte) 114);
+                  PasswordValidator.field_q = MenuButton.a(var2, (byte) 114);
                 }
                 var2 = nk.a("fs_unavailable", (byte) -125);
                 if (null != var2) {
@@ -2852,7 +2852,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_focus_or_resolution", (byte) -124);
                 if (null != var2) {
-                  oh.field_h = MenuButton.a(var2, (byte) 112);
+                  UsernameAvailabilityResult.field_h = MenuButton.a(var2, (byte) 112);
                 }
                 var2 = nk.a("fs_timeout", (byte) 40);
                 if (null != var2) {
@@ -2980,7 +2980,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("createtouse", (byte) 40);
                 if (var2 != null) {
-                  na.field_N = MenuButton.a(var2, (byte) 75);
+                  DateFieldsWidget.field_N = MenuButton.a(var2, (byte) 75);
                 }
                 var2 = nk.a("achievementsoffline", (byte) -20);
                 if (var2 != null) {
@@ -3000,31 +3000,31 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mustlogin2,1", (byte) 77);
                 if (var2 != null) {
-                  uc.field_m[1] = MenuButton.a(var2, (byte) 82);
+                  EmailConfirmationValidator.field_m[1] = MenuButton.a(var2, (byte) 82);
                 }
                 var2 = nk.a("mustlogin2,2", (byte) -108);
                 if (null != var2) {
-                  uc.field_m[2] = MenuButton.a(var2, (byte) 79);
+                  EmailConfirmationValidator.field_m[2] = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = nk.a("mustlogin2,3", (byte) -123);
                 if (var2 != null) {
-                  uc.field_m[3] = MenuButton.a(var2, (byte) 126);
+                  EmailConfirmationValidator.field_m[3] = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = nk.a("mustlogin2,4", (byte) 84);
                 if (var2 != null) {
-                  uc.field_m[4] = MenuButton.a(var2, (byte) 87);
+                  EmailConfirmationValidator.field_m[4] = MenuButton.a(var2, (byte) 87);
                 }
                 var2 = nk.a("mustlogin2,5", (byte) -121);
                 if (var2 != null) {
-                  uc.field_m[5] = MenuButton.a(var2, (byte) 90);
+                  EmailConfirmationValidator.field_m[5] = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("mustlogin2,6", (byte) 63);
                 if (var2 != null) {
-                  uc.field_m[6] = MenuButton.a(var2, (byte) 73);
+                  EmailConfirmationValidator.field_m[6] = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = nk.a("mustlogin2,7", (byte) 6);
                 if (null != var2) {
-                  uc.field_m[7] = MenuButton.a(var2, (byte) 103);
+                  EmailConfirmationValidator.field_m[7] = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("mustlogin3,1", (byte) 115);
                 if (var2 != null) {
@@ -3292,7 +3292,7 @@ final class ContextActionController {
             null != o.currentLobbyGame &&
             hn.b((byte) 7)) {
             gamePlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, this.targetId);
-            invitedPlayer = ac.findGamePlayer(this.targetId, 2);
+            invitedPlayer = EmailAvailabilityRequest.findGamePlayer(this.targetId, 2);
             caption = this.getTargetCaption(-12688);
             if (invitedPlayer != null) {
               if (o.currentLobbyGame.started &&
@@ -3607,7 +3607,7 @@ final class ContextActionController {
             if (to.privateChatFilter == 0) {
               this.contextMenu.addAction(qp.field_d, 12, (byte) 121);
             }
-            this.contextMenu.addAction(ac.field_b, 13, (byte) 118);
+            this.contextMenu.addAction(EmailAvailabilityRequest.field_b, 13, (byte) 118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

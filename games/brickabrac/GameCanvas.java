@@ -36,7 +36,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             field_c = (lo) null;
           }
           var8 = new m(param3);
-          stackIn_3_0 = wl.a(param0, param2, param4, var7, param6, var8, 4);
+          stackIn_3_0 = ValidationIconWidget.a(param0, param2, param4, var7, param6, var8, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

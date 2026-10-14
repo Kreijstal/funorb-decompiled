@@ -62,7 +62,7 @@ final class GameplayScreen extends GameScreen {
         if (var2Lifetime2 != 0) {
           if (!IntArrayRequest.heldKeys[fq.field_b] &&
             !IntArrayRequest.heldKeys[VolcanicBackground.field_u]) {
-            if (!(!IntArrayRequest.heldKeys[ac.field_f])) {
+            if (!(!IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f])) {
               fieldTemp$0 = this.viewedPlayerId - 1;
               this.viewedPlayerId = this.viewedPlayerId - 1;
               this.viewedPlayerId = (this.match.playerCount + fieldTemp$0) % this.match.playerCount;
@@ -75,7 +75,7 @@ final class GameplayScreen extends GameScreen {
             this.viewedPlayerId = fieldTemp$1 % this.match.playerCount;
           }
         }
-        stackIn_30_0 = (IntArrayRequest.heldKeys[fq.field_b]) || (IntArrayRequest.heldKeys[ac.field_f]) || (IntArrayRequest.heldKeys[VolcanicBackground.field_u]);
+        stackIn_30_0 = (IntArrayRequest.heldKeys[fq.field_b]) || (IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f]) || (IntArrayRequest.heldKeys[VolcanicBackground.field_u]);
         la.field_c = stackIn_30_0;
     }
 
@@ -419,8 +419,8 @@ final class GameplayScreen extends GameScreen {
           var20 = this.match.playerBoards[0];
           if (var20.levelIndex > this.lastReportedLevel) {
             var9_long = MonotonicTime.nowMillis(false);
-            this.a(NameEntryPopup.field_Yb, this.lastReportedLevel, var9_long - fl.field_l, true, 1000);
-            fl.field_l = var9_long;
+            this.a(NameEntryPopup.field_Yb, this.lastReportedLevel, var9_long - UsernameAvailabilityValidator.field_l, true, 1000);
+            UsernameAvailabilityValidator.field_l = var9_long;
             this.lastReportedLevel = var20.levelIndex;
             this.queueLevelResult(this.match.configuration.pack, var20.score, (byte) -125, var20.levelIndex);
             if (this.lastReportedLevel == 1 &&
@@ -605,7 +605,7 @@ final class GameplayScreen extends GameScreen {
             !this.suppressResultSubmission) {
             this.setResultLevel(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.e(0);
-            this.a(NameEntryPopup.field_Yb, this.resultLevel, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
+            this.a(NameEntryPopup.field_Yb, this.resultLevel, -UsernameAvailabilityValidator.field_l + MonotonicTime.nowMillis(false), false, 1000);
             jj.field_d = jj.field_d | ja.a(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
             stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
             be.field_a = stackIn_8_0;
@@ -744,15 +744,15 @@ final class GameplayScreen extends GameScreen {
         int var6 = 0;
         int var7 = BrickABrac.field_J ? 1 : 0;
         int var4 = 17 % ((29 - obfuscationGuard) / 57);
-        k.outgoingPackets.writeCipheredOpcode(-13413, !hasChecksum ? 68 : 69);
-        k.outgoingPackets.beginBitWrite(62);
+        TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, !hasChecksum ? 68 : 69);
+        TextFieldValidator.outgoingPackets.beginBitWrite(62);
         PlayerBoard var5 = this.match.playerBoards[playerId];
         for (var6 = 0; var6 < 5; var6++) {
-          k.outgoingPackets.writeBits(3, -17566, var5.outgoingInputMasks[var6]);
+          TextFieldValidator.outgoingPackets.writeBits(3, -17566, var5.outgoingInputMasks[var6]);
         }
-        k.outgoingPackets.finishBitWrite(-105);
+        TextFieldValidator.outgoingPackets.finishBitWrite(-105);
         if (hasChecksum) {
-          k.outgoingPackets.writeInt(var5.computeBoardChecksum(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
+          TextFieldValidator.outgoingPackets.writeInt(var5.computeBoardChecksum(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
         }
     }
 
@@ -1050,7 +1050,7 @@ final class GameplayScreen extends GameScreen {
         }
         this.match.playerMaskOne = this.match.playerMaskOne | 1 << this.localPlayerId;
         int var2 = 116 % ((param0 + 55) / 62);
-        k.outgoingPackets.writeCipheredOpcode(-13413, 66);
+        TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 66);
     }
 
     private final void queueProgressAchievement(boolean markSnapshotsReady, int submissionByte, int achievementId) {
@@ -1095,7 +1095,7 @@ final class GameplayScreen extends GameScreen {
     final static void b(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
         String[] var3 = new String[]{tb.field_cb == null ? we.field_c : tb.field_cb, DelayedPacket.field_q};
-        LevelSequence var4 = new LevelSequence(qh.field_b, kk.createIndexOrder(false, qh.field_b.levelCount, hi.field_w), 3);
+        LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, kk.createIndexOrder(false, ValidationStatus.field_b.levelCount, hi.field_w), 3);
         r.field_A = false;
         TabbedPane.currentBackground = rd.selectBackground(0, (byte) 19);
         OpacityWidget.startLocalGame(var3, 0, var4, 2, param1, -12665);
@@ -1788,7 +1788,7 @@ final class GameplayScreen extends GameScreen {
         if (!this.networkedMatch) {
           throw new IllegalStateException();
         }
-        k.outgoingPackets.writeCipheredOpcode(-13413, 67);
+        TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 67);
         int guardArithmetic = 68 % ((obfuscationGuard + 65) / 59);
     }
 
@@ -1871,7 +1871,7 @@ final class GameplayScreen extends GameScreen {
           }
           be.field_j = 0;
           KeyboardInput.hasNonnegativeResult = false;
-          fl.field_l = MonotonicTime.nowMillis(false);
+          UsernameAvailabilityValidator.field_l = MonotonicTime.nowMillis(false);
           NameEntryPopup.field_Yb = configuration.pack.packId;
           DualLinkNode.field_q = configuration.getPeriod(96);
           return;

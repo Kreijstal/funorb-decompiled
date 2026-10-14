@@ -148,7 +148,7 @@ final class po {
           ec.field_Q = TabbedPane.currentBackground;
           SpaceBackground.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
           TableDataRequest.field_k = IntArrayRequest.gameplayScreen.isSpectator(124);
-          cb.field_n = IntArrayRequest.gameplayScreen.resultWordMode;
+          MatchingTextValidator.field_n = IntArrayRequest.gameplayScreen.resultWordMode;
           OpacityWidget.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
           fh.field_h = new String[OpacityWidget.field_I];
           for (var2 = 0; var2 < OpacityWidget.field_I; var2++) {
@@ -172,7 +172,7 @@ final class po {
             }
           }
           if (SpaceBackground.field_r) {
-            if (cb.field_n) {
+            if (MatchingTextValidator.field_n) {
               stackIn_25_0 = hm.field_b;
             } else {
               stackIn_25_0 = ArchiveFetchClient.field_j;

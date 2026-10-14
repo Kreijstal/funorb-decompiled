@@ -272,7 +272,7 @@ final class sj {
                 stackIn_139_0.member = stackIn_140_1;
                 lobbyPlayer.badgeId = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
                 lobbyPlayer.optionEligibilityMask = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
-                wl.insertSortedLobbyPlayer(lobbyPlayer, 17574);
+                ValidationIconWidget.insertSortedLobbyPlayer(lobbyPlayer, 17574);
                 break regionExit1;
               }
               if (responseKind == 6) {
@@ -361,7 +361,7 @@ final class sj {
                                     playerId = ((PacketBuffer) ((Object) packet)).readLong(-32768);
                                     gameAccountName = ((PacketBuffer) ((Object) packet)).readCp1252String(obfuscationGuard - 34);
                                     gameDisplayName = ((PacketBuffer) ((Object) packet)).readCp1252String(obfuscationGuard - 34);
-                                    gamePlayer = ac.findGamePlayer(playerId, 2);
+                                    gamePlayer = EmailAvailabilityRequest.findGamePlayer(playerId, 2);
                                     if (gamePlayer == null) {
                                       gamePlayer = new LobbyPlayer(gameAccountName, gameDisplayName, playerId);
                                       BrickABrac.gamePlayerIndex.put(playerId, gamePlayer, 48);
@@ -380,7 +380,7 @@ final class sj {
                                   case 19:
                                     playerId = ((PacketBuffer) ((Object) packet)).readLong(-32768);
                                     playerStatus = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
-                                    removedGamePlayer = ac.findGamePlayer(playerId, 2);
+                                    removedGamePlayer = EmailAvailabilityRequest.findGamePlayer(playerId, 2);
                                     removedGamePlayerAlias = removedGamePlayer;
                                     if (removedGamePlayer == null) {
                                       break regionExit1;
@@ -435,7 +435,7 @@ final class sj {
                                   requestPlayerAlias.statusChangeTick = cm.field_o;
                                   requestPlayerAlias.removalStatus = playerStatus;
                                 }
-                                wl.insertSortedLobbyPlayer(requestPlayerAlias, 17574);
+                                ValidationIconWidget.insertSortedLobbyPlayer(requestPlayerAlias, 17574);
                               }
                             } else {
                               playerId = ((PacketBuffer) ((Object) packet)).readLong(obfuscationGuard ^ -32735);
@@ -449,7 +449,7 @@ final class sj {
                                 } else {
                                   pendingPlayer.invitationPending = true;
                                 }
-                                wl.insertSortedLobbyPlayer(pendingPlayer, 17574);
+                                ValidationIconWidget.insertSortedLobbyPlayer(pendingPlayer, 17574);
                               }
                             }
                           }
@@ -488,7 +488,7 @@ final class sj {
                   uf.pendingJoinRequestCount = uf.pendingJoinRequestCount - 1;
                   resetPlayer.joinRequestPending = false;
                 }
-                wl.insertSortedLobbyPlayer(resetPlayer, 17574);
+                ValidationIconWidget.insertSortedLobbyPlayer(resetPlayer, 17574);
               }
               resetPlayer = (LobbyPlayer) (eq.lobbyPlayerIndex.next(false));
             }

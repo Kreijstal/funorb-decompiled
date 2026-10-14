@@ -75,7 +75,7 @@ final class hn {
           }
           ToggleButtonWidget.friendEntries = param1.children;
           CachedArchiveSource.ignoreEntries = param0.children;
-          uc.e(108);
+          EmailConfirmationValidator.e(108);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

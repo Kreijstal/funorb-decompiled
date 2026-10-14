@@ -70,10 +70,10 @@ final class nd {
           if (ec.rankingRatings[rightIndex] > ec.rankingRatings[leftIndex]) {
             return false;
           }
-          if (pj.rankingWinRateThousandths[leftIndex] > pj.rankingWinRateThousandths[rightIndex]) {
+          if (DebouncedValidationSource.rankingWinRateThousandths[leftIndex] > DebouncedValidationSource.rankingWinRateThousandths[rightIndex]) {
             return true;
           }
-          if (pj.rankingWinRateThousandths[rightIndex] > pj.rankingWinRateThousandths[leftIndex]) {
+          if (DebouncedValidationSource.rankingWinRateThousandths[rightIndex] > DebouncedValidationSource.rankingWinRateThousandths[leftIndex]) {
             return false;
           }
           if (obfuscationGuard) {
@@ -98,10 +98,10 @@ final class nd {
           }
           return !(leftIndex <= rightIndex);
         }
-        if (pj.rankingWinRateThousandths[leftIndex] > pj.rankingWinRateThousandths[rightIndex]) {
+        if (DebouncedValidationSource.rankingWinRateThousandths[leftIndex] > DebouncedValidationSource.rankingWinRateThousandths[rightIndex]) {
           return true;
         }
-        if (pj.rankingWinRateThousandths[leftIndex] < pj.rankingWinRateThousandths[rightIndex]) {
+        if (DebouncedValidationSource.rankingWinRateThousandths[leftIndex] < DebouncedValidationSource.rankingWinRateThousandths[rightIndex]) {
           return false;
         }
         if (ec.rankingRatings[leftIndex] > ec.rankingRatings[rightIndex]) {

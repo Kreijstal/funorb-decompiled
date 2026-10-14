@@ -221,7 +221,7 @@ final class n {
               if (var8 != 0) {
                 stackIn_61_0 = nj.field_F;
               } else {
-                stackIn_61_0 = cb.field_l;
+                stackIn_61_0 = MatchingTextValidator.field_l;
               }
               var16 = stackIn_61_0;
               var9 = var16;
@@ -229,18 +229,18 @@ final class n {
               var9 = var16;
               var10Lifetime1 = AppletGameShell.field_e.font.measureText(var16) + AppletGameShell.field_e.font.getAdvance('.') * 3;
               AppletGameShell.field_e.horizontalAlignment = 0;
-              if (16 == (an.field_h & 48)) {
+              if (16 == (BirthDateValidator.field_h & 48)) {
                 var9 = var16 + ".";
               }
               AppletGameShell.field_e.textInset = (-var10Lifetime1 + AppletGameShell.field_e.width) / 2;
-              if ((48 & an.field_h) == 32) {
+              if ((48 & BirthDateValidator.field_h) == 32) {
                 var9 = (String) (var9) + "..";
               }
-              if ((an.field_h & 48) == 48) {
+              if ((BirthDateValidator.field_h & 48) == 48) {
                 var9 = (String) (var9) + "...";
               }
               AppletGameShell.field_e.text = (String) (var9);
-              DraggableWidget.field_K.text = wl.field_L.toUpperCase();
+              DraggableWidget.field_K.text = ValidationIconWidget.field_L.toUpperCase();
             } else {
               stackIn_28_0 = DraggableWidget.field_K;
               if (var8 == 0) {

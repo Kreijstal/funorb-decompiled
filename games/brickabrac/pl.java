@@ -48,7 +48,7 @@ final class pl {
         int payloadStart = 0;
         int creationWord = 0;
         try {
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.position = packet.position + 1;
           payloadStart = packet.position;

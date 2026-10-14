@@ -130,7 +130,7 @@ final class AchievementIcon extends IntrusiveNode {
     final static void sendIntArrayRequest(int opcode, IntArrayRequest request, int obfuscationGuard) {
         BitPacketBuffer var3 = null;
         try {
-          var3 = k.outgoingPackets;
+          var3 = TextFieldValidator.outgoingPackets;
           var3.writeCipheredOpcode(-13413, opcode);
           int var4 = 29 / ((-57 - obfuscationGuard) / 59);
           var3.writeByte(114, 2);
@@ -158,27 +158,27 @@ final class AchievementIcon extends IntrusiveNode {
         } else {
           AlignedIconLabel.achievementTransitionMask = AlignedIconLabel.achievementTransitionMask & this.transitionKeepMask;
           if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
-            nf.hoveredAchievementId = this.achievementId;
+            ValidationMessageWidget.hoveredAchievementId = this.achievementId;
             if (1 == BackgroundScene.pressedButton &&
               bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
-              if (nf.selectedAchievementId != this.achievementId) {
-                nf.selectedAchievementId = this.achievementId;
+              if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
+                ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {
-                nf.selectedAchievementId = -1;
+                ValidationMessageWidget.selectedAchievementId = -1;
               }
-              if (nf.selectedAchievementId != -1) {
+              if (ValidationMessageWidget.selectedAchievementId != -1) {
                 SoundCache.playUiSound(8, ta.uiSounds[0]);
               }
             }
           } else {
             if (1 == BackgroundScene.pressedButton &&
               bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, qo.pressY, tb.pressX, this.y)) {
-              if (nf.selectedAchievementId != this.achievementId) {
-                nf.selectedAchievementId = this.achievementId;
+              if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
+                ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {
-                nf.selectedAchievementId = -1;
+                ValidationMessageWidget.selectedAchievementId = -1;
               }
-              if (nf.selectedAchievementId != -1) {
+              if (ValidationMessageWidget.selectedAchievementId != -1) {
                 SoundCache.playUiSound(8, ta.uiSounds[0]);
               }
             }
@@ -218,17 +218,17 @@ final class AchievementIcon extends IntrusiveNode {
         field_o = (String) null;
     }
 
-    final static oh a(int param0, int param1, String param2) {
-        oh var3 = null;
+    final static UsernameAvailabilityResult a(int param0, int param1, String param2) {
+        UsernameAvailabilityResult var3 = null;
         RuntimeException var3_ref = null;
         IntArrayRequest var4 = null;
-        oh stackIn_3_0 = null;
+        UsernameAvailabilityResult stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new oh(false);
+          var3 = new UsernameAvailabilityResult(false);
           var3.field_d = param0;
           var3.field_g = param2;
           if (param1 > -27) {
@@ -277,7 +277,7 @@ final class AchievementIcon extends IntrusiveNode {
         IndexedSprite var13;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (DirectByteStorage.isBitSet(this.owner.achievementMask, this.achievementId, (byte) -75)) {
-          if (this.achievementId == nf.selectedAchievementId) {
+          if (this.achievementId == ValidationMessageWidget.selectedAchievementId) {
             pa.field_h[this.achievementId].f(this.x, this.y, 384);
             if (this.cachedThumbnail == null ||
               this.thumbnailIsPlaceholder) {
@@ -289,7 +289,7 @@ final class AchievementIcon extends IntrusiveNode {
               this.thumbnailIsPlaceholder = false;
             }
           } else {
-            if (this.achievementId == nf.hoveredAchievementId) {
+            if (this.achievementId == ValidationMessageWidget.hoveredAchievementId) {
               AchievementSubmission.field_l[this.achievementId].f(this.x, this.y, 256);
               if (this.cachedThumbnail == null ||
                 this.thumbnailIsPlaceholder) {
@@ -313,8 +313,8 @@ final class AchievementIcon extends IntrusiveNode {
             }
           }
         } else {
-          if (nf.selectedAchievementId != this.achievementId) {
-            if (nf.hoveredAchievementId != this.achievementId) {
+          if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
+            if (ValidationMessageWidget.hoveredAchievementId != this.achievementId) {
               if (this.cachedThumbnail == null) {
                 var6 = LevelCompleteScreen.field_F;
                 this.cachedThumbnail = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
@@ -340,7 +340,7 @@ final class AchievementIcon extends IntrusiveNode {
             }
             ToggleButtonWidget.field_L.f(this.x, this.y, 256);
           } else {
-            qh.field_c.f(this.x, this.y, 384);
+            ValidationStatus.field_c.f(this.x, this.y, 384);
           }
           if (this.cachedThumbnail == null) {
             var10 = LevelCompleteScreen.field_F;

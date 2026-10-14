@@ -49,7 +49,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           entry.unlink((byte) 111);
           entry.unlinkSecondary(3);
           LevelPackSelectScreen.friendCount = LevelPackSelectScreen.friendCount - 1;
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.position = packet.position + 1;
           bodyStart = packet.position;

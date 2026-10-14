@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class pj implements ia {
+abstract class DebouncedValidationSource implements ValidationSource {
     static int[] rankingWinRateThousandths;
     static String field_e;
-    private long field_f;
+    private long lastEditMillis;
     static so field_c;
     static String field_d;
     static int field_a;
 
-    public final String a(int param0) {
-        int var2 = -4 / ((-23 - param0) / 56);
-        if (this.a((byte) -119)) {
+    public final String getValidationMessage(int obfuscationGuard) {
+        int var2 = -4 / ((-23 - obfuscationGuard) / 56);
+        if (this.isIncomplete((byte) -119)) {
           return null;
         }
-        if (MonotonicTime.nowMillis(false) >= (350L + this.field_f)) {
-          return this.b(28600);
+        if (MonotonicTime.nowMillis(false) >= (350L + this.lastEditMillis)) {
+          return this.computeValidationMessage(28600);
         }
         return null;
     }
 
-    public final void a(boolean param0) {
-        this.field_f = MonotonicTime.nowMillis(param0);
+    public final void markEdited(boolean obfuscationGuard) {
+        this.lastEditMillis = MonotonicTime.nowMillis(obfuscationGuard);
     }
 
     public static void d(int param0) {
@@ -30,29 +30,29 @@ abstract class pj implements ia {
         rankingWinRateThousandths = null;
         field_d = null;
         if (param0 != 31366) {
-          pj.d(-12);
+          DebouncedValidationSource.d(-12);
         }
     }
 
-    abstract qh c(int param0);
+    abstract ValidationStatus computeValidationStatus(int obfuscationGuard);
 
-    abstract String b(int param0);
+    abstract String computeValidationMessage(int obfuscationGuard);
 
-    public final qh b(byte param0) {
-        if (this.a((byte) -44)) {
-          return uo.field_f;
+    public final ValidationStatus getValidationStatus(byte obfuscationGuard) {
+        if (this.isIncomplete((byte) -44)) {
+          return uo.validationEmpty;
         }
-        if (param0 != -31) {
-          pj.d(100);
-          if (MonotonicTime.nowMillis(false) >= this.field_f + 350L) {
-            return this.c(4);
+        if (obfuscationGuard != -31) {
+          DebouncedValidationSource.d(100);
+          if (MonotonicTime.nowMillis(false) >= this.lastEditMillis + 350L) {
+            return this.computeValidationStatus(4);
           }
-          return m.field_c;
+          return m.validationDebouncing;
         }
-        if (MonotonicTime.nowMillis(false) >= this.field_f + 350L) {
-          return this.c(4);
+        if (MonotonicTime.nowMillis(false) >= this.lastEditMillis + 350L) {
+          return this.computeValidationStatus(4);
         }
-        return m.field_c;
+        return m.validationDebouncing;
     }
 
     final static Class a(String param0, boolean param1) throws ClassNotFoundException {

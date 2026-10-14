@@ -30,7 +30,7 @@ final class ContextMenu extends UiComponent {
             previousGame.playerNames = null;
           }
           MenuSelection.previewGameId = gameId;
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.writeByte(-29, 3);
           packet.writeByte(-127, 11);

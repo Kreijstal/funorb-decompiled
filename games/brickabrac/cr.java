@@ -322,35 +322,35 @@ final class cr extends Widget {
           if (eq.gameTransport != null) {
             if (0 <= param0) {
               decompiledFrameRemainder0 = (MenuButton.field_i == rf.field_b);
-              if ((decompiledFrameRemainder0) && (k.outgoingPackets.position == 0 &&
+              if ((decompiledFrameRemainder0) && (TextFieldValidator.outgoingPackets.position == 0 &&
                 BrickMotionPath.field_q + 10000L < MonotonicTime.nowMillis(false))) {
-                k.outgoingPackets.writeCipheredOpcode(-13413, param0);
+                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, param0);
               }
             } else {
-              if (k.outgoingPackets.position == 0 &&
+              if (TextFieldValidator.outgoingPackets.position == 0 &&
                 BrickMotionPath.field_q + 10000L < MonotonicTime.nowMillis(false)) {
-                k.outgoingPackets.writeCipheredOpcode(-13413, param0);
+                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, param0);
               }
             }
             if (decompiledFrameRemainder0) {
               if (param1 != 10000) {
                 return;
               }
-              if (0 < k.outgoingPackets.position) {
+              if (0 < TextFieldValidator.outgoingPackets.position) {
                 try {
-                  eq.gameTransport.write(k.outgoingPackets.data, true, k.outgoingPackets.position, 0);
+                  eq.gameTransport.write(TextFieldValidator.outgoingPackets.data, true, TextFieldValidator.outgoingPackets.position, 0);
                   BrickMotionPath.field_q = MonotonicTime.nowMillis(false);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
                   hn.a((byte) 92);
                 }
-                k.outgoingPackets.position = 0;
+                TextFieldValidator.outgoingPackets.position = 0;
               }
               return;
             }
           }
-          k.outgoingPackets.position = 0;
+          TextFieldValidator.outgoingPackets.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

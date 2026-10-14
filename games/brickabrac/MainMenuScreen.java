@@ -202,7 +202,7 @@ final class MainMenuScreen extends MenuScreen {
           MainMenuScreen.c(false);
         }
         if (!DelayedPacket.c(102)) {
-          this.initializeButtons(g.field_o, 0);
+          this.initializeButtons(PasswordValidator.field_o, 0);
         }
     }
 

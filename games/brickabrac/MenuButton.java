@@ -124,9 +124,9 @@ final class MenuButton {
                 }
                 var8 = stackIn_56_0;
                 if (!focused) {
-                  stackIn_59_0 = g.field_l[0];
+                  stackIn_59_0 = PasswordValidator.field_l[0];
                 } else {
-                  stackIn_59_0 = g.field_l[1];
+                  stackIn_59_0 = PasswordValidator.field_l[1];
                 }
                 var9 = stackIn_59_0;
                 var9.drawTransparent(var8 + (var6 + (-1 - var9.canvasWidth / 2)), (-var9.canvasHeight + this.height) / 2 + this.y);

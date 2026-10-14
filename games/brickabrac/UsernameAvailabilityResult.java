@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oh {
+final class UsernameAvailabilityResult {
     static String field_h;
     String field_g;
     static int field_b;
-    boolean field_c;
+    boolean available;
     String[] field_e;
     boolean field_a;
     static int field_f;
@@ -14,9 +14,9 @@ final class oh {
     final static String b(byte param0) {
         if (param0 != -49) {
           field_f = 94;
-          return g.field_m;
+          return PasswordValidator.field_m;
         }
-        return g.field_m;
+        return PasswordValidator.field_m;
     }
 
     final static boolean a(int param0, int param1, byte param2, int param3, int param4, RgbSprite param5) {
@@ -76,12 +76,12 @@ final class oh {
     public static void a(byte param0) {
         field_h = null;
         if (param0 < 57) {
-          oh.a((byte) 49);
+          UsernameAvailabilityResult.a((byte) 49);
         }
     }
 
-    oh(boolean param0) {
-        this.field_c = param0 ? true : false;
+    UsernameAvailabilityResult(boolean available) {
+        this.available = available ? true : false;
     }
 
     static {

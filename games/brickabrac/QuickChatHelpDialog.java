@@ -216,7 +216,7 @@ final class QuickChatHelpDialog extends UiComponent {
           this.closeButton.setBounds(15, 5, -20 + title.width, 15, (byte) 64);
           body.setBounds(this.height - title.height, title.height, 0, this.width, (byte) 64);
           subtitle.setBounds(15, 20, 0, this.width, (byte) 64);
-          body.frameSprites = na.a(false, 8421504, 3, 11579568, body.height, 2105376);
+          body.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, body.height, 2105376);
           title.addChild(this.closeButton, 0);
           body.addChild(subtitle, 0);
           this.addChild(title, 0);

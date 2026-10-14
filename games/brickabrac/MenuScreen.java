@@ -317,14 +317,14 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 37) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   be.field_a = true;
-                  RankingsRequest.a(16727, inputFlag, 0, new LevelSequence(na.field_L[0]));
+                  RankingsRequest.a(16727, inputFlag, 0, new LevelSequence(DateFieldsWidget.field_L[0]));
                 }
                 break regionExit1;
               }
               if (var8 == 1) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   if (!QuickChatMenu.h(-26090)) {
-                    cb.b(true);
+                    MatchingTextValidator.b(true);
                   } else {
                     sl.field_z = -2;
                     dk.a(sb.field_b, true, 0, inputFlag, 46);
@@ -395,7 +395,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (this.selection.isLeftArrow((byte) -57) &&
                   FramedMenuScreen.g((byte) -44) > 0) {
-                  k.d((byte) 116);
+                  TextFieldValidator.d((byte) 116);
                   var7 = 1;
                 }
                 if (this.selection.isRightArrow(-98) &&
@@ -436,7 +436,7 @@ abstract class MenuScreen extends GameScreen {
                   RankingsScreen.f(-1);
                 }
                 if (this.selection.isRightArrow(obfuscationGuard ^ -27)) {
-                  nf.a((byte) 109);
+                  ValidationMessageWidget.a((byte) 109);
                 }
                 if (!(!this.selection.isHeld(false))) {
                   var8 = -120 + (dg.field_d + (var5.x + var5.width) + var5.x) >> 1;
@@ -512,7 +512,7 @@ abstract class MenuScreen extends GameScreen {
               if (19 == var8) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
-                  nk.a(2048, uc.e((byte) -66));
+                  nk.a(2048, EmailConfirmationValidator.e((byte) -66));
                 }
                 break regionExit1;
               }

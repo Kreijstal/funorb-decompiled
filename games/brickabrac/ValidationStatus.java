@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh {
+final class ValidationStatus {
     static int field_a;
     static UiComponent field_j;
     static LevelPack field_b;

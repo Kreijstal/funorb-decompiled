@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends FocusableWidget {
-    private int field_P;
-    private ia field_M;
+final class ValidationIconWidget extends FocusableWidget {
+    private int spinnerTicks;
+    private ValidationSource validationSource;
     static String field_L;
     static int[] worldDirectionX;
     static boolean field_N;
@@ -14,7 +14,7 @@ final class wl extends FocusableWidget {
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         int var5;
         int var6;
-        qh var8;
+        ValidationStatus var8;
         int var9;
         int var10;
         int var11;
@@ -28,13 +28,13 @@ final class wl extends FocusableWidget {
         }
         var5 = parentX + (this.x + (this.width >> 1));
         var6 = (this.height >> 1) + (this.y + parentY);
-        var8 = this.field_M.b((byte) -31);
-        if (var8 != m.field_c &&
-          SaveResultsPromptScreen.field_z != var8) {
-          if (lp.field_xb == var8) {
+        var8 = this.validationSource.getValidationStatus((byte) -31);
+        if (var8 != m.validationDebouncing &&
+          SaveResultsPromptScreen.validationPending != var8) {
+          if (lp.validationInvalid == var8) {
             var13 = df.field_a[2];
             var13.f(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
-          } else if (DualLinkIterator.field_c == var8) {
+          } else if (DualLinkIterator.validationValid == var8) {
             var14 = df.field_a[1];
             var14.f(var5 - (var14.width >> 1), -(var14.height >> 1) + var6, 256);
           }
@@ -51,7 +51,7 @@ final class wl extends FocusableWidget {
             ik.field_c = new RgbSprite(var9, var10);
             IndexedSpriteGeometry.pushSpriteRaster(-87, ik.field_c);
           }
-          var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.field_P << 10, 4096);
+          var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           sc.popRaster(-104);
           ik.field_c.f(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
         }
@@ -59,7 +59,7 @@ final class wl extends FocusableWidget {
 
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          this.field_P = this.field_P + 1;
+          this.spinnerTicks = this.spinnerTicks + 1;
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wl.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
@@ -74,7 +74,7 @@ final class wl extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!obfuscationGuard) {
-            wl.handleRankingsResponse(false);
+            ValidationIconWidget.handleRankingsResponse(false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,11 +143,11 @@ final class wl extends FocusableWidget {
               if (recordIndex == 0) {
                 request.localDraws = fh.decodedRankingDraws;
                 request.localRating = vj.decodedRankingRating;
-                request.localLosses = sf.decodedRankingLosses;
+                request.localLosses = ValidatedTextFieldWidget.decodedRankingLosses;
                 request.localWins = RadialSelectorWidget.decodedRankingWins;
-                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
+                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               } else {
-                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
+                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               }
             }
             gr.sortRankingViews(12429, rowLimit);
@@ -253,7 +253,7 @@ final class wl extends FocusableWidget {
             return stackIn_6_0;
           }
           if (rf.field_b == BitPacketBuffer.field_u) {
-            k.outgoingPackets.position = 0;
+            TextFieldValidator.outgoingPackets.position = 0;
             AchievementBrowserScreen.field_r = null;
             if (param0 != null) {
               var9 = 0;
@@ -270,16 +270,16 @@ final class wl extends FocusableWidget {
               tq.field_f.writeShort((byte) 113, param4);
               tq.field_f.writeByte(89, param2);
               tq.field_f.writeByte(127, var9);
-              k.outgoingPackets.writeByte(53, 18);
-              k.outgoingPackets.position = k.outgoingPackets.position + 2;
-              var10 = k.outgoingPackets.position;
-              var11_ref_String = GameClock.a(true, uc.e((byte) -75));
+              TextFieldValidator.outgoingPackets.writeByte(53, 18);
+              TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 2;
+              var10 = TextFieldValidator.outgoingPackets.position;
+              var11_ref_String = GameClock.a(true, EmailConfirmationValidator.e((byte) -75));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              k.outgoingPackets.writeCp1252String(var11_ref_String, -1);
-              LevelDecoder.a(k.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-              k.outgoingPackets.backfillShortLength(-var10 + k.outgoingPackets.position, 255);
+              TextFieldValidator.outgoingPackets.writeCp1252String(var11_ref_String, -1);
+              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              TextFieldValidator.outgoingPackets.backfillShortLength(-var10 + TextFieldValidator.outgoingPackets.position, 255);
             } else {
               tq.field_f.position = 0;
               tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
@@ -300,11 +300,11 @@ final class wl extends FocusableWidget {
                 stackIn_15_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_14_0).writePrefixedCp1252String(stackIn_14_1, stackIn_15_2);
-              k.outgoingPackets.writeByte(-10, 16);
-              k.outgoingPackets.position = k.outgoingPackets.position + 1;
-              var9 = k.outgoingPackets.position;
-              LevelDecoder.a(k.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
-              k.outgoingPackets.backfillByteLength((byte) 119, k.outgoingPackets.position - var9);
+              TextFieldValidator.outgoingPackets.writeByte(-10, 16);
+              TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 1;
+              var9 = TextFieldValidator.outgoingPackets.position;
+              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
+              TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
             cr.a(-1, 10000);
             rf.field_b = ck.field_k;
@@ -319,7 +319,7 @@ final class wl extends FocusableWidget {
               co.field_f = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                cb.a(uc.e((byte) -108), param6 + 5);
+                MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -108), param6 + 5);
                 DirectByteStorage.field_e = m.field_d;
                 hn.a((byte) 96);
                 pf.field_d = false;
@@ -359,7 +359,7 @@ final class wl extends FocusableWidget {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
               var9_ref_String = jl.incomingPackets.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {
-                ui.a(param6 ^ -55, uc.e((byte) -120), var9_ref_String);
+                ui.a(param6 ^ -55, EmailConfirmationValidator.e((byte) -120), var9_ref_String);
               }
             } else {
               DirectByteStorage.field_e = jl.incomingPackets.readCp1252String(-1);
@@ -384,8 +384,8 @@ final class wl extends FocusableWidget {
               return stackIn_62_0;
             }
             var9Lifetime3 = dl.field_b;
-            dl.field_b = pj.field_a;
-            pj.field_a = var9Lifetime3;
+            dl.field_b = DebouncedValidationSource.field_a;
+            DebouncedValidationSource.field_a = var9Lifetime3;
             pf.field_d = true;
           }
           stackIn_64_0 = -1;
@@ -424,7 +424,7 @@ final class wl extends FocusableWidget {
         field_O = null;
         if (param0 != 2) {
           LobbyPlayer var2 = (LobbyPlayer) null;
-          wl.insertSortedLobbyPlayer((LobbyPlayer) null, -2);
+          ValidationIconWidget.insertSortedLobbyPlayer((LobbyPlayer) null, -2);
         }
     }
 
@@ -442,7 +442,7 @@ final class wl extends FocusableWidget {
           player.unlink((byte) 111);
           if (obfuscationGuard != 17574) {
             var4 = (LobbyPlayer) null;
-            wl.insertSortedLobbyPlayer((LobbyPlayer) null, 48);
+            ValidationIconWidget.insertSortedLobbyPlayer((LobbyPlayer) null, 48);
           }
           existingPlayer = (LobbyPlayer) (ua.lobbyPlayers.first(-69));
           while (existingPlayer != null) {
@@ -472,11 +472,11 @@ final class wl extends FocusableWidget {
         }
     }
 
-    wl(ia param0) {
+    ValidationIconWidget(ValidationSource validationSource) {
         try {
-          this.field_M = param0;
+          this.validationSource = validationSource;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wl.<init>(" + (validationSource != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -485,7 +485,7 @@ final class wl extends FocusableWidget {
           field_K = (ResourceArchive) null;
         }
         if (this.mouseOver) {
-          return this.field_M.a(-87);
+          return this.validationSource.getValidationMessage(-87);
         }
         return null;
     }

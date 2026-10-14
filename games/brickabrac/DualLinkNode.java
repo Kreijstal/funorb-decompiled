@@ -63,7 +63,7 @@ class DualLinkNode extends IntrusiveNode {
             return;
           }
           if (r.field_A &&
-            !wl.field_N) {
+            !ValidationIconWidget.field_N) {
             return;
           }
           var11 -= 2;
@@ -198,9 +198,9 @@ class DualLinkNode extends IntrusiveNode {
           !(recordCount <= WidgetGroup.rankingLosses.length)) {
           WidgetGroup.rankingLosses = new int[2 * recordCount];
         }
-        if (pj.rankingWinRateThousandths == null ||
-          !(pj.rankingWinRateThousandths.length >= recordCount)) {
-          pj.rankingWinRateThousandths = new int[2 * recordCount];
+        if (DebouncedValidationSource.rankingWinRateThousandths == null ||
+          !(DebouncedValidationSource.rankingWinRateThousandths.length >= recordCount)) {
+          DebouncedValidationSource.rankingWinRateThousandths = new int[2 * recordCount];
         }
         if (VerticalScrollbar.rankingSortIndices == null ||
           !(rowLimit + recordCount <= VerticalScrollbar.rankingSortIndices.length)) {

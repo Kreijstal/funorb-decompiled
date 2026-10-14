@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class g extends k {
-    private TextFieldWidget field_p;
-    private TextFieldWidget field_k;
+final class PasswordValidator extends TextFieldValidator {
+    private TextFieldWidget usernameField;
+    private TextFieldWidget emailField;
     static String field_m;
     static UiComponent field_n;
     static RgbSprite[] field_l;
@@ -32,36 +32,36 @@ final class g extends k {
         qo.field_I = jl.incomingPackets.readUnsignedByte(255) == 0 ? true : false;
     }
 
-    private final boolean b(int param0, String param1) {
-        String var3 = null;
+    private final boolean containsEmailPart(int obfuscationGuard, String password) {
+        String normalizedEmail = null;
         RuntimeException var3_ref = null;
-        String var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        String var7 = null;
+        String normalizedPassword = null;
+        int atSignIndex = 0;
+        String emailLocalPart = null;
+        String emailDomain = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
-            g.b(true);
+          if (obfuscationGuard != 0) {
+            PasswordValidator.b(true);
           }
-          var3 = this.field_k.text.toLowerCase();
-          var4 = param1.toLowerCase();
-          if (var3.length() > 0 &&
-            var4.length() > 0) {
-            var5 = var3.lastIndexOf("@");
-            if (0 <= var5) {
-              if (var5 >= var3.length() - 1) {
+          normalizedEmail = this.emailField.text.toLowerCase();
+          normalizedPassword = password.toLowerCase();
+          if (normalizedEmail.length() > 0 &&
+            normalizedPassword.length() > 0) {
+            atSignIndex = normalizedEmail.lastIndexOf("@");
+            if (0 <= atSignIndex) {
+              if (atSignIndex >= normalizedEmail.length() - 1) {
                 return false;
               }
-              var6 = var3.substring(0, var5);
-              var7 = var3.substring(1 + var5);
-              if (var4.indexOf(var6) >= 0) {
+              emailLocalPart = normalizedEmail.substring(0, atSignIndex);
+              emailDomain = normalizedEmail.substring(1 + atSignIndex);
+              if (normalizedPassword.indexOf(emailLocalPart) >= 0) {
                 return true;
               }
-              if (var4.indexOf(var7) >= 0) {
+              if (normalizedPassword.indexOf(emailDomain) >= 0) {
                 return true;
               }
             }
@@ -71,8 +71,8 @@ final class g extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_17_0 = var3_ref;
-          stackIn_17_1 = new StringBuilder().append("g.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_17_1 = new StringBuilder().append("g.F(").append(obfuscationGuard).append(',');
+          if (password == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
@@ -91,7 +91,7 @@ final class g extends k {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String describeTextValidation(int obfuscationGuard, String text) {
         RuntimeException var3 = null;
         String var4 = null;
         int var5 = 0;
@@ -110,26 +110,26 @@ final class g extends k {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.field_p.text.toLowerCase();
-          var4 = param1.toLowerCase();
-          var5 = -62 % ((-16 - param0) / 50);
+          var7 = this.usernameField.text.toLowerCase();
+          var4 = text.toLowerCase();
+          var5 = -62 % ((-16 - obfuscationGuard) / 50);
           if (var4.length() == 0) {
             return null;
           }
           var6 = var4;
-          if (pp.a(var6, true)) {
+          if (pp.hasInvalidPasswordLength(var6, true)) {
             stackIn_6_0 = sc.field_a;
             return stackIn_6_0;
           }
-          if (MatchCompleteScreen.a(var6, 0)) {
+          if (MatchCompleteScreen.containsNonAlphanumeric(var6, 0)) {
             stackIn_10_0 = HuffmanCodec.field_c;
             return stackIn_10_0;
           }
-          if (DualLinkDeque.a((byte) 65, var6)) {
+          if (DualLinkDeque.consistsOfRepeatedCharacter((byte) 65, var6)) {
             stackIn_14_0 = eq.field_i;
             return stackIn_14_0;
           }
-          if (this.b(0, param1)) {
+          if (this.containsEmailPart(0, text)) {
             stackIn_18_0 = StateIconLabel.field_Tb;
             return stackIn_18_0;
           }
@@ -154,8 +154,8 @@ final class g extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_36_0 = var3;
-          stackIn_36_1 = new StringBuilder().append("g.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_36_1 = new StringBuilder().append("g.C(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_37_2 = "null";
           } else {
             stackIn_37_2 = "{...}";
@@ -164,59 +164,59 @@ final class g extends k {
         }
     }
 
-    g(TextFieldWidget param0, TextFieldWidget param1, TextFieldWidget param2) {
-        super(param0);
+    PasswordValidator(TextFieldWidget textField, TextFieldWidget usernameField, TextFieldWidget emailField) {
+        super(textField);
         try {
-          this.field_p = param1;
-          this.field_k = param2;
+          this.usernameField = usernameField;
+          this.emailField = emailField;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "g.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "g.<init>(" + (textField != null ? "{...}" : "null") + ',' + (usernameField != null ? "{...}" : "null") + ',' + (emailField != null ? "{...}" : "null") + ')');
         }
     }
 
-    final qh a(String param0, byte param1) {
-        String var3 = null;
+    final ValidationStatus validateText(String text, byte obfuscationGuard) {
+        String normalizedUsername = null;
         RuntimeException var3_ref = null;
-        String var4 = null;
-        qh stackIn_4_0 = null;
-        qh stackIn_8_0 = null;
-        qh stackIn_11_0 = null;
-        qh stackIn_13_0 = null;
+        String normalizedPassword = null;
+        ValidationStatus stackIn_4_0 = null;
+        ValidationStatus stackIn_8_0 = null;
+        ValidationStatus stackIn_11_0 = null;
+        ValidationStatus stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 106) {
+          if (obfuscationGuard != 106) {
             field_q = (String) null;
           }
-          var3 = this.field_p.text.toLowerCase();
-          var4 = param0.toLowerCase();
-          if (0 == var4.length()) {
-            stackIn_4_0 = lp.field_xb;
+          normalizedUsername = this.usernameField.text.toLowerCase();
+          normalizedPassword = text.toLowerCase();
+          if (0 == normalizedPassword.length()) {
+            stackIn_4_0 = lp.validationInvalid;
             return stackIn_4_0;
           }
-          if (!MatchCompleteScreen.a((byte) -120, var4, var3)) {
-            stackIn_8_0 = lp.field_xb;
+          if (!MatchCompleteScreen.isAcceptablePassword((byte) -120, normalizedPassword, normalizedUsername)) {
+            stackIn_8_0 = lp.validationInvalid;
             return stackIn_8_0;
           }
-          if (!this.b(0, param0)) {
-            stackIn_13_0 = DualLinkIterator.field_c;
+          if (!this.containsEmailPart(0, text)) {
+            stackIn_13_0 = DualLinkIterator.validationValid;
             return stackIn_13_0;
           }
-          stackIn_11_0 = lp.field_xb;
+          stackIn_11_0 = lp.validationInvalid;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("g.B(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

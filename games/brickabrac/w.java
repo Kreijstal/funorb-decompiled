@@ -301,7 +301,7 @@ final class w {
             co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, fe.field_jb);
             MainMenuScreen.field_u = um.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
             LevelPack.field_e = um.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
-            sf.field_V = bd.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);
+            ValidatedTextFieldWidget.field_V = bd.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);
             fe.field_jb = null;
             BufferedFile.field_d = null;
           }
@@ -347,10 +347,10 @@ final class w {
           ch.field_c.a(MatchCompleteScreen.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           LevelPack.field_e.drawTransparent((-LevelPack.field_e.canvasWidth + 127) / 2 + 508, 315);
           if (0 == this.field_g.selectedIndex) {
-            sf.field_V[0].drawTransparent(508, 299);
+            ValidatedTextFieldWidget.field_V[0].drawTransparent(508, 299);
           } else {
             if (this.field_g.selectedIndex == 1) {
-              sf.field_V[1].drawTransparent(508, 387);
+              ValidatedTextFieldWidget.field_V[1].drawTransparent(508, 387);
             }
           }
           return;
@@ -368,7 +368,7 @@ final class w {
         RuntimeException var2_ref = null;
         try {
           try {
-            ChocolateBackground.a(uc.e((byte) -86), 0);
+            ChocolateBackground.a(EmailConfirmationValidator.e((byte) -86), 0);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (Exception) (Object) decompiledCaughtException;
@@ -518,7 +518,7 @@ final class w {
           var7 = param5.getParameter("currency");
           if (var7 != null &&
             MeshAttributeRecord.a((CharSequence) ((Object) var7), -53)) {
-            this.field_c = fl.a((CharSequence) ((Object) var7), -28734);
+            this.field_c = UsernameAvailabilityValidator.a((CharSequence) ((Object) var7), -28734);
           } else {
             this.field_c = 2;
           }

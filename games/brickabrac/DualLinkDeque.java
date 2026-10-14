@@ -9,7 +9,7 @@ final class DualLinkDeque implements Iterable {
     static UiComponent field_d;
     static int field_b;
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean consistsOfRepeatedCharacter(byte obfuscationGuard, String text) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -20,12 +20,12 @@ final class DualLinkDeque implements Iterable {
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param1.charAt(0);
-          if (param0 <= 28) {
+          var2_int = text.charAt(0);
+          if (obfuscationGuard <= 28) {
             return false;
           }
-          for (var3 = 1; param1.length() > var3; var3++) {
-            if (param1.charAt(var3) != var2_int) {
+          for (var3 = 1; text.length() > var3; var3++) {
+            if (text.charAt(var3) != var2_int) {
               return false;
             }
           }
@@ -34,8 +34,8 @@ final class DualLinkDeque implements Iterable {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("gp.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("gp.G(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -139,7 +139,7 @@ final class DualLinkDeque implements Iterable {
           param0 = false;
         }
         RichTextLayout.a(param0, (byte) 123);
-        if (nf.field_V) {
+        if (ValidationMessageWidget.field_V) {
           Rasterizer2D.darkenRectangle(sb.field_c.field_d.localX, sb.field_c.field_d.localY, sb.field_c.field_d.width, sb.field_c.field_d.height);
           sb.field_c.field_d.drawRoot(true, param0);
         }

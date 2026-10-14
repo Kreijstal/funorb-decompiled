@@ -47,7 +47,7 @@ final class DropTargetWidget extends SingleChildWidget {
     }
 
     final static void requestJoinGame(int gameId, int opcode, int obfuscationGuard) {
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         packet.writeByte(-115, 3);
         if (obfuscationGuard == 11912) {

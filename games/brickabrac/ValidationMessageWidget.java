@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends HotspotTextWidget {
-    private int field_Q;
+final class ValidationMessageWidget extends HotspotTextWidget {
+    private int spinnerTicks;
     static int selectedAchievementId;
-    private String field_S;
+    private String defaultPrompt;
     static int hoveredAchievementId;
     static RgbSprite[] field_W;
     static boolean field_V;
-    private RgbSprite field_X;
-    private ia field_R;
+    private RgbSprite spinnerSurface;
+    private ValidationSource validationSource;
     static String field_T;
     static RgbSprite halloweenNearSprite;
 
@@ -45,14 +45,14 @@ final class nf extends HotspotTextWidget {
         return (String) null;
     }
 
-    nf(ia param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, DraggableWidget.g(-23009));
+    ValidationMessageWidget(ValidationSource validationSource, String defaultPrompt, int x, int y, int width, int height) {
+        super(defaultPrompt, DraggableWidget.g(-23009));
         try {
-          this.field_R = param0;
-          this.field_S = param1;
-          this.setBounds(param5, param2, param3, (byte) -119, param4);
+          this.validationSource = validationSource;
+          this.defaultPrompt = defaultPrompt;
+          this.setBounds(height, x, y, (byte) -119, width);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.<init>(" + (validationSource != null ? "{...}" : "null") + ',' + (defaultPrompt != null ? "{...}" : "null") + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 
@@ -68,12 +68,12 @@ final class nf extends HotspotTextWidget {
         halloweenNearSprite = null;
         field_T = null;
         if (param0 >= -18) {
-          nf.a((byte) 48);
+          ValidationMessageWidget.a((byte) 48);
         }
     }
 
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
-        qh var6;
+        ValidationStatus var6;
         int var9;
         int var10;
         int var13;
@@ -152,11 +152,11 @@ final class nf extends HotspotTextWidget {
         int var11Lifetime2Lifetime1;
         int var12Lifetime1Lifetime1;
         int var12Lifetime2Lifetime1;
-        qh var6Lifetime1;
-        qh var6Lifetime2;
-        qh var6Lifetime3;
+        ValidationStatus var6Lifetime1;
+        ValidationStatus var6Lifetime2;
+        ValidationStatus var6Lifetime3;
         String var5Lifetime1;
-        qh var6Lifetime1Lifetime1;
+        ValidationStatus var6Lifetime1Lifetime1;
         var18 = null;
         var22 = null;
         var27 = null;
@@ -166,25 +166,25 @@ final class nf extends HotspotTextWidget {
         var44 = null;
         var50 = null;
         var13 = BrickABrac.field_J ? 1 : 0;
-        var6 = this.field_R.b((byte) -31);
-        if (var6 == m.field_c) {
+        var6 = this.validationSource.getValidationStatus((byte) -31);
+        if (var6 == m.validationDebouncing) {
           var17 = DropTargetWidget.field_G;
           if (!var17.equals(this.text)) {
             this.text = var17;
             this.rebuildHotspots(obfuscationGuard + 10);
             super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-            var6 = this.field_R.b((byte) -31);
+            var6 = this.validationSource.getValidationStatus((byte) -31);
             var18_ref = (WidgetLayoutProvider) ((Object) this.renderer);
             var9 = parentX + this.x;
             var10 = var18_ref.a(parentY, (byte) -107, (Widget) (this)) + (var18_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-            if (var6 != m.field_c &&
-              var6 != SaveResultsPromptScreen.field_z) {
-              if (lp.field_xb == var6) {
+            if (var6 != m.validationDebouncing &&
+              var6 != SaveResultsPromptScreen.validationPending) {
+              if (lp.validationInvalid == var6) {
                 var19 = df.field_a[2];
                 var19.f(var9, var10 - (var19.height >> 1), 256);
                 return;
               }
-              if (DualLinkIterator.field_c != var6) {
+              if (DualLinkIterator.validationValid != var6) {
                 return;
               }
               var20 = df.field_a[1];
@@ -194,33 +194,33 @@ final class nf extends HotspotTextWidget {
             var21 = df.field_a[0];
             var11 = var21.canvasWidth << 1;
             var12 = var21.canvasHeight << 1;
-            if (this.field_X != null &&
-              var11 <= this.field_X.width &&
-              this.field_X.height >= var12) {
-              IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+            if (this.spinnerSurface != null &&
+              var11 <= this.spinnerSurface.width &&
+              this.spinnerSurface.height >= var12) {
+              IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
               Rasterizer2D.clear();
             } else {
-              this.field_X = new RgbSprite(var11, var12);
-              IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+              this.spinnerSurface = new RgbSprite(var11, var12);
+              IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             }
-            var21.a(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.field_Q << 10, 4096);
+            var21.a(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
             sc.popRaster(-111);
-            this.field_X.f(-(var21.canvasWidth >> 1) + var9, -var21.canvasHeight + var10, 256);
+            this.spinnerSurface.f(-(var21.canvasWidth >> 1) + var9, -var21.canvasHeight + var10, 256);
             return;
           }
           super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-          var6 = this.field_R.b((byte) -31);
+          var6 = this.validationSource.getValidationStatus((byte) -31);
           var22_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime5 = parentX + this.x;
           var10Lifetime5 = var22_ref.a(parentY, (byte) -107, (Widget) (this)) + (var22_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-          if (var6 != m.field_c &&
-            var6 != SaveResultsPromptScreen.field_z) {
-            if (lp.field_xb == var6) {
+          if (var6 != m.validationDebouncing &&
+            var6 != SaveResultsPromptScreen.validationPending) {
+            if (lp.validationInvalid == var6) {
               var23 = df.field_a[2];
               var23.f(var9Lifetime5, var10Lifetime5 - (var23.height >> 1), 256);
               return;
             }
-            if (DualLinkIterator.field_c != var6) {
+            if (DualLinkIterator.validationValid != var6) {
               return;
             }
             var24 = df.field_a[1];
@@ -230,46 +230,46 @@ final class nf extends HotspotTextWidget {
           var25 = df.field_a[0];
           var11Lifetime5 = var25.canvasWidth << 1;
           var12Lifetime5 = var25.canvasHeight << 1;
-          if (this.field_X == null) {
-            this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
-            IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+          if (this.spinnerSurface == null) {
+            this.spinnerSurface = new RgbSprite(var11Lifetime5, var12Lifetime5);
+            IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
           } else {
-            if (var11Lifetime5 > this.field_X.width) {
-              this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
-              IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+            if (var11Lifetime5 > this.spinnerSurface.width) {
+              this.spinnerSurface = new RgbSprite(var11Lifetime5, var12Lifetime5);
+              IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             } else {
-              if (this.field_X.height >= var12Lifetime5) {
-                IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+              if (this.spinnerSurface.height >= var12Lifetime5) {
+                IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
                 Rasterizer2D.clear();
               } else {
-                this.field_X = new RgbSprite(var11Lifetime5, var12Lifetime5);
-                IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+                this.spinnerSurface = new RgbSprite(var11Lifetime5, var12Lifetime5);
+                IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
               }
             }
           }
-          var25.a(112, 144, var25.canvasWidth << 4, var25.canvasHeight << 4, -this.field_Q << 10, 4096);
+          var25.a(112, 144, var25.canvasWidth << 4, var25.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           sc.popRaster(-111);
-          this.field_X.f(-(var25.canvasWidth >> 1) + var9Lifetime5, -var25.canvasHeight + var10Lifetime5, 256);
+          this.spinnerSurface.f(-(var25.canvasWidth >> 1) + var9Lifetime5, -var25.canvasHeight + var10Lifetime5, 256);
           return;
         }
-        if (var6 == SaveResultsPromptScreen.field_z) {
+        if (var6 == SaveResultsPromptScreen.validationPending) {
           var26 = DropTargetWidget.field_G;
           if (!var26.equals(this.text)) {
             this.text = var26;
             this.rebuildHotspots(obfuscationGuard + 10);
             super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-            var6 = this.field_R.b((byte) -31);
+            var6 = this.validationSource.getValidationStatus((byte) -31);
             var27_ref = (WidgetLayoutProvider) ((Object) this.renderer);
             var9Lifetime1 = parentX + this.x;
             var10Lifetime1 = var27_ref.a(parentY, (byte) -107, (Widget) (this)) + (var27_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-            if (var6 != m.field_c &&
-              var6 != SaveResultsPromptScreen.field_z) {
-              if (lp.field_xb == var6) {
+            if (var6 != m.validationDebouncing &&
+              var6 != SaveResultsPromptScreen.validationPending) {
+              if (lp.validationInvalid == var6) {
                 var28 = df.field_a[2];
                 var28.f(var9Lifetime1, var10Lifetime1 - (var28.height >> 1), 256);
                 return;
               }
-              if (DualLinkIterator.field_c != var6) {
+              if (DualLinkIterator.validationValid != var6) {
                 return;
               }
               var29 = df.field_a[1];
@@ -279,33 +279,33 @@ final class nf extends HotspotTextWidget {
             var30 = df.field_a[0];
             var11Lifetime1 = var30.canvasWidth << 1;
             var12Lifetime1 = var30.canvasHeight << 1;
-            if (this.field_X != null &&
-              var11Lifetime1 <= this.field_X.width &&
-              this.field_X.height >= var12Lifetime1) {
-              IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+            if (this.spinnerSurface != null &&
+              var11Lifetime1 <= this.spinnerSurface.width &&
+              this.spinnerSurface.height >= var12Lifetime1) {
+              IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
               Rasterizer2D.clear();
             } else {
-              this.field_X = new RgbSprite(var11Lifetime1, var12Lifetime1);
-              IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+              this.spinnerSurface = new RgbSprite(var11Lifetime1, var12Lifetime1);
+              IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             }
-            var30.a(112, 144, var30.canvasWidth << 4, var30.canvasHeight << 4, -this.field_Q << 10, 4096);
+            var30.a(112, 144, var30.canvasWidth << 4, var30.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
             sc.popRaster(-111);
-            this.field_X.f(-(var30.canvasWidth >> 1) + var9Lifetime1, -var30.canvasHeight + var10Lifetime1, 256);
+            this.spinnerSurface.f(-(var30.canvasWidth >> 1) + var9Lifetime1, -var30.canvasHeight + var10Lifetime1, 256);
             return;
           }
           super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-          var6 = this.field_R.b((byte) -31);
+          var6 = this.validationSource.getValidationStatus((byte) -31);
           var31_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime1Lifetime1 = parentX + this.x;
           var10Lifetime1Lifetime1 = var31_ref.a(parentY, (byte) -107, (Widget) (this)) + (var31_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-          if (var6 != m.field_c &&
-            var6 != SaveResultsPromptScreen.field_z) {
-            if (lp.field_xb == var6) {
+          if (var6 != m.validationDebouncing &&
+            var6 != SaveResultsPromptScreen.validationPending) {
+            if (lp.validationInvalid == var6) {
               var32 = df.field_a[2];
               var32.f(var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - (var32.height >> 1), 256);
               return;
             }
-            if (DualLinkIterator.field_c != var6) {
+            if (DualLinkIterator.validationValid != var6) {
               return;
             }
             var33 = df.field_a[1];
@@ -315,44 +315,44 @@ final class nf extends HotspotTextWidget {
           var34 = df.field_a[0];
           var11Lifetime1Lifetime1 = var34.canvasWidth << 1;
           var12Lifetime1Lifetime1 = var34.canvasHeight << 1;
-          if (this.field_X == null) {
-            this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-            IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+          if (this.spinnerSurface == null) {
+            this.spinnerSurface = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+            IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
           } else {
-            if (var11Lifetime1Lifetime1 > this.field_X.width) {
-              this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-              IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+            if (var11Lifetime1Lifetime1 > this.spinnerSurface.width) {
+              this.spinnerSurface = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+              IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             } else {
-              if (this.field_X.height >= var12Lifetime1Lifetime1) {
-                IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+              if (this.spinnerSurface.height >= var12Lifetime1Lifetime1) {
+                IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
                 Rasterizer2D.clear();
               } else {
-                this.field_X = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-                IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+                this.spinnerSurface = new RgbSprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
+                IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
               }
             }
           }
-          var34.a(112, 144, var34.canvasWidth << 4, var34.canvasHeight << 4, -this.field_Q << 10, 4096);
+          var34.a(112, 144, var34.canvasWidth << 4, var34.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           sc.popRaster(-111);
-          this.field_X.f(-(var34.canvasWidth >> 1) + var9Lifetime1Lifetime1, -var34.canvasHeight + var10Lifetime1Lifetime1, 256);
+          this.spinnerSurface.f(-(var34.canvasWidth >> 1) + var9Lifetime1Lifetime1, -var34.canvasHeight + var10Lifetime1Lifetime1, 256);
           return;
         }
-        var5 = this.field_R.a(-118);
+        var5 = this.validationSource.getValidationMessage(-118);
         if (var5 != null) {
           if (var5.equals(this.text)) {
             super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-            var6Lifetime1 = this.field_R.b((byte) -31);
+            var6Lifetime1 = this.validationSource.getValidationStatus((byte) -31);
             var50_ref = (WidgetLayoutProvider) ((Object) this.renderer);
             var9Lifetime2 = parentX + this.x;
             var10Lifetime2 = var50_ref.a(parentY, (byte) -107, (Widget) (this)) + (var50_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-            if (var6Lifetime1 != m.field_c &&
-              var6Lifetime1 != SaveResultsPromptScreen.field_z) {
-              if (lp.field_xb == var6Lifetime1) {
+            if (var6Lifetime1 != m.validationDebouncing &&
+              var6Lifetime1 != SaveResultsPromptScreen.validationPending) {
+              if (lp.validationInvalid == var6Lifetime1) {
                 var51 = df.field_a[2];
                 var51.f(var9Lifetime2, var10Lifetime2 - (var51.height >> 1), 256);
                 return;
               }
-              if (DualLinkIterator.field_c != var6Lifetime1) {
+              if (DualLinkIterator.validationValid != var6Lifetime1) {
                 return;
               }
               var52 = df.field_a[1];
@@ -362,35 +362,35 @@ final class nf extends HotspotTextWidget {
             var53 = df.field_a[0];
             var11Lifetime2 = var53.canvasWidth << 1;
             var12Lifetime2 = var53.canvasHeight << 1;
-            if (this.field_X != null &&
-              var11Lifetime2 <= this.field_X.width &&
-              this.field_X.height >= var12Lifetime2) {
-              IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+            if (this.spinnerSurface != null &&
+              var11Lifetime2 <= this.spinnerSurface.width &&
+              this.spinnerSurface.height >= var12Lifetime2) {
+              IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
               Rasterizer2D.clear();
             } else {
-              this.field_X = new RgbSprite(var11Lifetime2, var12Lifetime2);
-              IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+              this.spinnerSurface = new RgbSprite(var11Lifetime2, var12Lifetime2);
+              IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             }
-            var53.a(112, 144, var53.canvasWidth << 4, var53.canvasHeight << 4, -this.field_Q << 10, 4096);
+            var53.a(112, 144, var53.canvasWidth << 4, var53.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
             sc.popRaster(-111);
-            this.field_X.f(-(var53.canvasWidth >> 1) + var9Lifetime2, -var53.canvasHeight + var10Lifetime2, 256);
+            this.spinnerSurface.f(-(var53.canvasWidth >> 1) + var9Lifetime2, -var53.canvasHeight + var10Lifetime2, 256);
             return;
           }
           this.text = var5;
           this.rebuildHotspots(obfuscationGuard + 10);
           super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-          var6Lifetime1Lifetime1 = this.field_R.b((byte) -31);
+          var6Lifetime1Lifetime1 = this.validationSource.getValidationStatus((byte) -31);
           var44_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime2Lifetime1 = parentX + this.x;
           var10Lifetime2Lifetime1 = var44_ref.a(parentY, (byte) -107, (Widget) (this)) + (var44_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-          if (var6Lifetime1Lifetime1 != m.field_c &&
-            var6Lifetime1Lifetime1 != SaveResultsPromptScreen.field_z) {
-            if (lp.field_xb == var6Lifetime1Lifetime1) {
+          if (var6Lifetime1Lifetime1 != m.validationDebouncing &&
+            var6Lifetime1Lifetime1 != SaveResultsPromptScreen.validationPending) {
+            if (lp.validationInvalid == var6Lifetime1Lifetime1) {
               var45 = df.field_a[2];
               var45.f(var9Lifetime2Lifetime1, var10Lifetime2Lifetime1 - (var45.height >> 1), 256);
               return;
             }
-            if (DualLinkIterator.field_c != var6Lifetime1Lifetime1) {
+            if (DualLinkIterator.validationValid != var6Lifetime1Lifetime1) {
               return;
             }
             var46 = df.field_a[1];
@@ -401,46 +401,46 @@ final class nf extends HotspotTextWidget {
           var16 = var47;
           var11Lifetime2Lifetime1 = var47.canvasWidth << 1;
           var12Lifetime2Lifetime1 = var47.canvasHeight << 1;
-          if (this.field_X == null) {
-            this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-            IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+          if (this.spinnerSurface == null) {
+            this.spinnerSurface = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+            IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
           } else {
-            if (var11Lifetime2Lifetime1 > this.field_X.width) {
-              this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-              IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+            if (var11Lifetime2Lifetime1 > this.spinnerSurface.width) {
+              this.spinnerSurface = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+              IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             } else {
-              if (this.field_X.height >= var12Lifetime2Lifetime1) {
-                IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+              if (this.spinnerSurface.height >= var12Lifetime2Lifetime1) {
+                IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
                 Rasterizer2D.clear();
               } else {
-                this.field_X = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
-                IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+                this.spinnerSurface = new RgbSprite(var11Lifetime2Lifetime1, var12Lifetime2Lifetime1);
+                IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
               }
             }
           }
-          var47.a(112, 144, var47.canvasWidth << 4, var47.canvasHeight << 4, -this.field_Q << 10, 4096);
+          var47.a(112, 144, var47.canvasWidth << 4, var47.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           sc.popRaster(-111);
-          this.field_X.f(-(var47.canvasWidth >> 1) + var9Lifetime2Lifetime1, -var47.canvasHeight + var10Lifetime2Lifetime1, 256);
+          this.spinnerSurface.f(-(var47.canvasWidth >> 1) + var9Lifetime2Lifetime1, -var47.canvasHeight + var10Lifetime2Lifetime1, 256);
           return;
         }
-        var35 = this.field_S;
+        var35 = this.defaultPrompt;
         var5Lifetime1 = var35;
         if (!var35.equals(this.text)) {
           this.text = var35;
           this.rebuildHotspots(obfuscationGuard + 10);
           super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-          var6Lifetime2 = this.field_R.b((byte) -31);
+          var6Lifetime2 = this.validationSource.getValidationStatus((byte) -31);
           var36_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime3 = parentX + this.x;
           var10Lifetime3 = var36_ref.a(parentY, (byte) -107, (Widget) (this)) + (var36_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-          if (var6Lifetime2 != m.field_c &&
-            var6Lifetime2 != SaveResultsPromptScreen.field_z) {
-            if (lp.field_xb == var6Lifetime2) {
+          if (var6Lifetime2 != m.validationDebouncing &&
+            var6Lifetime2 != SaveResultsPromptScreen.validationPending) {
+            if (lp.validationInvalid == var6Lifetime2) {
               var37 = df.field_a[2];
               var37.f(var9Lifetime3, var10Lifetime3 - (var37.height >> 1), 256);
               return;
             }
-            if (DualLinkIterator.field_c != var6Lifetime2) {
+            if (DualLinkIterator.validationValid != var6Lifetime2) {
               return;
             }
             var38 = df.field_a[1];
@@ -450,33 +450,33 @@ final class nf extends HotspotTextWidget {
           var39 = df.field_a[0];
           var11Lifetime3 = var39.canvasWidth << 1;
           var12Lifetime3 = var39.canvasHeight << 1;
-          if (this.field_X != null &&
-            var11Lifetime3 <= this.field_X.width &&
-            this.field_X.height >= var12Lifetime3) {
-            IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+          if (this.spinnerSurface != null &&
+            var11Lifetime3 <= this.spinnerSurface.width &&
+            this.spinnerSurface.height >= var12Lifetime3) {
+            IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
             Rasterizer2D.clear();
           } else {
-            this.field_X = new RgbSprite(var11Lifetime3, var12Lifetime3);
-            IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+            this.spinnerSurface = new RgbSprite(var11Lifetime3, var12Lifetime3);
+            IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
           }
-          var39.a(112, 144, var39.canvasWidth << 4, var39.canvasHeight << 4, -this.field_Q << 10, 4096);
+          var39.a(112, 144, var39.canvasWidth << 4, var39.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           sc.popRaster(-111);
-          this.field_X.f(-(var39.canvasWidth >> 1) + var9Lifetime3, -var39.canvasHeight + var10Lifetime3, 256);
+          this.spinnerSurface.f(-(var39.canvasWidth >> 1) + var9Lifetime3, -var39.canvasHeight + var10Lifetime3, 256);
           return;
         }
         super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-        var6Lifetime3 = this.field_R.b((byte) -31);
+        var6Lifetime3 = this.validationSource.getValidationStatus((byte) -31);
         var40_ref = (WidgetLayoutProvider) ((Object) this.renderer);
         var9Lifetime4 = parentX + this.x;
         var10Lifetime4 = var40_ref.a(parentY, (byte) -107, (Widget) (this)) + (var40_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
-        if (var6Lifetime3 != m.field_c &&
-          var6Lifetime3 != SaveResultsPromptScreen.field_z) {
-          if (lp.field_xb == var6Lifetime3) {
+        if (var6Lifetime3 != m.validationDebouncing &&
+          var6Lifetime3 != SaveResultsPromptScreen.validationPending) {
+          if (lp.validationInvalid == var6Lifetime3) {
             var41 = df.field_a[2];
             var41.f(var9Lifetime4, var10Lifetime4 - (var41.height >> 1), 256);
             return;
           }
-          if (DualLinkIterator.field_c != var6Lifetime3) {
+          if (DualLinkIterator.validationValid != var6Lifetime3) {
             return;
           }
           var42 = df.field_a[1];
@@ -486,32 +486,32 @@ final class nf extends HotspotTextWidget {
         var43 = df.field_a[0];
         var11Lifetime4 = var43.canvasWidth << 1;
         var12Lifetime4 = var43.canvasHeight << 1;
-        if (this.field_X == null) {
-          this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
-          IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+        if (this.spinnerSurface == null) {
+          this.spinnerSurface = new RgbSprite(var11Lifetime4, var12Lifetime4);
+          IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
         } else {
-          if (var11Lifetime4 > this.field_X.width) {
-            this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
-            IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+          if (var11Lifetime4 > this.spinnerSurface.width) {
+            this.spinnerSurface = new RgbSprite(var11Lifetime4, var12Lifetime4);
+            IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
           } else {
-            if (this.field_X.height < var12Lifetime4) {
-              this.field_X = new RgbSprite(var11Lifetime4, var12Lifetime4);
-              IndexedSpriteGeometry.pushSpriteRaster(-86, this.field_X);
+            if (this.spinnerSurface.height < var12Lifetime4) {
+              this.spinnerSurface = new RgbSprite(var11Lifetime4, var12Lifetime4);
+              IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             } else {
-              IndexedSpriteGeometry.pushSpriteRaster(-70, this.field_X);
+              IndexedSpriteGeometry.pushSpriteRaster(-70, this.spinnerSurface);
               Rasterizer2D.clear();
             }
           }
         }
-        var43.a(112, 144, var43.canvasWidth << 4, var43.canvasHeight << 4, -this.field_Q << 10, 4096);
+        var43.a(112, 144, var43.canvasWidth << 4, var43.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
         sc.popRaster(-111);
-        this.field_X.f(-(var43.canvasWidth >> 1) + var9Lifetime4, -var43.canvasHeight + var10Lifetime4, 256);
+        this.spinnerSurface.f(-(var43.canvasWidth >> 1) + var9Lifetime4, -var43.canvasHeight + var10Lifetime4, 256);
         return;
     }
 
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          this.field_Q = this.field_Q + 1;
+          this.spinnerTicks = this.spinnerTicks + 1;
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');

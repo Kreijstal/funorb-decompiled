@@ -69,7 +69,7 @@ final class ea {
 
     final static void requestUpdateGameOptions(int obfuscationGuard, int opcode) {
         int packedMode = 0;
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         int packedModeAfterWrongGuard;
         packet.writeCipheredOpcode(-13413, opcode);
         packet.position = packet.position + 1;
@@ -93,15 +93,15 @@ final class ea {
     final static java.awt.Container b(int param0) {
         if (param0 != 0) {
           field_g = true;
-          if (null == cb.field_o) {
-            return (java.awt.Container) ((Object) uc.e((byte) -83));
+          if (null == MatchingTextValidator.field_o) {
+            return (java.awt.Container) ((Object) EmailConfirmationValidator.e((byte) -83));
           }
-          return (java.awt.Container) ((Object) cb.field_o);
+          return (java.awt.Container) ((Object) MatchingTextValidator.field_o);
         }
-        if (null == cb.field_o) {
-          return (java.awt.Container) ((Object) uc.e((byte) -83));
+        if (null == MatchingTextValidator.field_o) {
+          return (java.awt.Container) ((Object) EmailConfirmationValidator.e((byte) -83));
         }
-        return (java.awt.Container) ((Object) cb.field_o);
+        return (java.awt.Container) ((Object) MatchingTextValidator.field_o);
     }
 
     final static MouseWheelSource createMouseWheelSource(int obfuscationGuard) {

@@ -4,7 +4,7 @@
 final class StateIconLabel extends UiComponent {
     static String field_Pb;
     private UiComponent label;
-    static oh field_Rb;
+    static UsernameAvailabilityResult field_Rb;
     static String field_Tb;
     static RgbSprite halloweenMidSprite;
     static boolean field_Sb;
@@ -37,7 +37,7 @@ final class StateIconLabel extends UiComponent {
             halloweenMidSprite = (RgbSprite) null;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = (var3 << 5) - var3 + na.a(-8250, name.charAt(var4));
+            var3 = (var3 << 5) - var3 + DateFieldsWidget.a(-8250, name.charAt(var4));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;
@@ -106,7 +106,7 @@ final class StateIconLabel extends UiComponent {
         field_Wb = null;
         field_Rb = null;
         if (!param0) {
-          field_Rb = (oh) null;
+          field_Rb = (UsernameAvailabilityResult) null;
         }
     }
 

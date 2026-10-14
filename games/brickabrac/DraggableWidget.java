@@ -249,7 +249,7 @@ final class DraggableWidget extends SingleChildWidget {
 
     final static void requestSpectateGame(int gameId, int obfuscationGuard, int opcode) {
         int guardArithmetic = -51 / ((-23 - obfuscationGuard) / 62);
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         packet.writeByte(-100, 3);
         packet.writeByte(-15, 10);

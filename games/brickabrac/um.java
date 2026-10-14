@@ -104,10 +104,10 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var10 > var18) {
-                      var13[var18] = pj.a(var11[var18], true);
+                      var13[var18] = DebouncedValidationSource.a(var11[var18], true);
                       var18++;
                     }
-                    var19.field_l[var6] = param3.lookupMethod(23311, pj.a(var21, true), var13, var22);
+                    var19.field_l[var6] = param3.lookupMethod(23311, DebouncedValidationSource.a(var21, true), var13, var22);
                     var19.field_m[var6] = var23;
                   }
                 } else {
@@ -121,7 +121,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
                   }
                   var19.field_t[var6] = var7_int;
                   var19.field_q[var6] = var10;
-                  var19.field_j[var6] = param3.lookupField(124, pj.a(var16, true), var17);
+                  var19.field_j[var6] = param3.lookupField(124, DebouncedValidationSource.a(var16, true), var17);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -398,7 +398,7 @@ class um implements WidgetRenderer, WidgetLayoutProvider {
         if (obfuscationGuard != 200) {
           field_b = (UiComponent) null;
         }
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(obfuscationGuard ^ -13485, opcode);
         packet.writeByte(87, 1);
         packet.writeByte(-121, 3);

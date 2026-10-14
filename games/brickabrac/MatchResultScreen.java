@@ -78,7 +78,7 @@ abstract class MatchResultScreen extends MenuScreen {
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         gh.a(120, true);
         if (LevelMetadata.field_p) {
-          var12 = qh.field_e;
+          var12 = ValidationStatus.field_e;
           var12.drawTransparent((640 - var12.canvasWidth) / 2, 20);
         }
         var2 = -qp.field_e[0].canvasHeight + 480;

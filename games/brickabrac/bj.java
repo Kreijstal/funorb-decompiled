@@ -238,7 +238,7 @@ abstract class bj extends WidgetLayer {
           field_P = (ck) null;
         }
         MusicVoice.field_n.drawTransparent(param0 + this.width - 90, 10 + param2);
-        fq.a(this.width - 10, 35 + param2, param1 ^ 1013, nf.field_W, 5 + param0);
+        fq.a(this.width - 10, 35 + param2, param1 ^ 1013, ValidationMessageWidget.field_W, 5 + param0);
         fq.a(this.width, -22 + param2 + this.height, param1 + 469, GameplayAudioEvent.field_l, param0);
         var5Lifetime2 = 169;
         var4Lifetime2 = this.height - 79;

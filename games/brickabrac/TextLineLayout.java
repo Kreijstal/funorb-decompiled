@@ -43,7 +43,7 @@ final class TextLineLayout {
     }
 
     final static void requestMatchmakingOptions(int opcode, int obfuscationGuard) {
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         packet.writeByte(-21, 1);
         if (obfuscationGuard != -1) {

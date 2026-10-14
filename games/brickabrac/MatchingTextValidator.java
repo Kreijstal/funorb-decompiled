@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb extends k {
+final class MatchingTextValidator extends TextFieldValidator {
     static String field_l;
     static boolean field_k;
     static boolean field_n;
     static java.awt.Frame field_o;
     static int heldButton;
     static String field_p;
-    private TextFieldWidget field_m;
+    private TextFieldWidget matchingField;
 
     final static void e(byte param0) {
         String var1 = null;
@@ -35,8 +35,8 @@ final class cb extends k {
         rj.field_c.j(20);
     }
 
-    final String a(int param0, String param1) {
-        ia var3 = null;
+    final String describeTextValidation(int obfuscationGuard, String text) {
+        ValidationSource sourceValidation = null;
         int var3_int = 0;
         RuntimeException var3_ref = null;
         String stackIn_6_0 = null;
@@ -47,20 +47,20 @@ final class cb extends k {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_m instanceof je) {
-            var3 = ((je) ((Object) this.field_m)).a(-11011);
-            if (var3 != null) {
-              if (var3.b((byte) -31) == DualLinkIterator.field_c &&
-                !param1.equals(this.field_m.text)) {
+          if (this.matchingField instanceof ValidatableWidget) {
+            sourceValidation = ((ValidatableWidget) ((Object) this.matchingField)).getValidationSource(-11011);
+            if (sourceValidation != null) {
+              if (sourceValidation.getValidationStatus((byte) -31) == DualLinkIterator.validationValid &&
+                !text.equals(this.matchingField.text)) {
                 stackIn_6_0 = bh.field_sb;
                 return stackIn_6_0;
               }
-              stackIn_8_0 = var3.a(45);
+              stackIn_8_0 = sourceValidation.getValidationMessage(45);
               return stackIn_8_0;
             }
           }
-          var3_int = 55 % ((-16 - param0) / 50);
-          if (param1.equals(this.field_m.text)) {
+          var3_int = 55 % ((-16 - obfuscationGuard) / 50);
+          if (text.equals(this.matchingField.text)) {
             return null;
           }
           stackIn_12_0 = bh.field_sb;
@@ -69,8 +69,8 @@ final class cb extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_15_0 = var3_ref;
-          stackIn_15_1 = new StringBuilder().append("cb.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("cb.C(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -87,35 +87,35 @@ final class cb extends k {
     }
 
     final static void b(boolean param0) {
-        k.outgoingPackets.writeCipheredOpcode(-13413, 9);
+        TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 9);
         RadialSelectorWidget.field_L = param0 ? true : false;
     }
 
-    final qh a(String param0, byte param1) {
-        ia var3 = null;
+    final ValidationStatus validateText(String text, byte obfuscationGuard) {
+        ValidationSource sourceValidation = null;
         RuntimeException var3_ref = null;
-        qh stackIn_7_0 = null;
-        qh stackIn_11_0 = null;
+        ValidationStatus stackIn_7_0 = null;
+        ValidationStatus stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 106) {
+          if (obfuscationGuard != 106) {
             field_k = false;
           }
-          if (this.field_m instanceof je) {
-            var3 = ((je) ((Object) this.field_m)).a(param1 - 11117);
-            if (var3 != null &&
-              var3.b((byte) -31) != DualLinkIterator.field_c) {
-              stackIn_7_0 = lp.field_xb;
+          if (this.matchingField instanceof ValidatableWidget) {
+            sourceValidation = ((ValidatableWidget) ((Object) this.matchingField)).getValidationSource(obfuscationGuard - 11117);
+            if (sourceValidation != null &&
+              sourceValidation.getValidationStatus((byte) -31) != DualLinkIterator.validationValid) {
+              stackIn_7_0 = lp.validationInvalid;
               return stackIn_7_0;
             }
           }
-          if (param0.equals(this.field_m.text)) {
-            stackIn_11_0 = DualLinkIterator.field_c;
+          if (text.equals(this.matchingField.text)) {
+            stackIn_11_0 = DualLinkIterator.validationValid;
           } else {
-            stackIn_11_0 = lp.field_xb;
+            stackIn_11_0 = lp.validationInvalid;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,21 +123,21 @@ final class cb extends k {
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
           stackIn_14_1 = new StringBuilder().append("cb.B(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    cb(TextFieldWidget param0, TextFieldWidget param1) {
-        super(param0);
+    MatchingTextValidator(TextFieldWidget textField, TextFieldWidget matchingField) {
+        super(textField);
         try {
-          this.field_m = param1;
+          this.matchingField = matchingField;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cb.<init>(" + (textField != null ? "{...}" : "null") + ',' + (matchingField != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class cb extends k {
         try {
           StateIconLabel.field_Sb = true;
           if (param1 != 9) {
-            cb.f(-31);
+            MatchingTextValidator.f(-31);
           }
           var2 = "tuhstatbut";
           var3 = "rvnadlm";

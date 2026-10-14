@@ -199,7 +199,7 @@ final class jl {
           if (obfuscationGuard != 24943) {
             lastWallMillis = -99L;
           }
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.position = packet.position + 1;
           bodyStart = packet.position;

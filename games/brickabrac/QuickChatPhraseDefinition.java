@@ -241,7 +241,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var30.contextMenu.addIconAction(var31, param0 - 720, 12, var32);
           var33 = bm.contextActions;
           var35 = ef.field_b[2];
-          var34 = ac.field_b;
+          var34 = EmailAvailabilityRequest.field_b;
           var33.contextMenu.addIconAction(var34, param0 - 708, 13, var35);
         }
         ContextActionController var36 = bm.contextActions;

@@ -11,7 +11,7 @@ final class rf {
     static n field_b;
 
     final static void requestRemoveOrRejectPlayer(int opcode, long playerId, boolean obfuscationGuard) {
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         packet.position = packet.position + 1;
         int payloadStart = packet.position;

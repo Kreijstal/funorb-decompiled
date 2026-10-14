@@ -92,7 +92,7 @@ final class ck extends IntrusiveNode {
         QuickChatHelpDialog.field_Sb = false;
         jl.field_a = 1;
         if (param0 > 27) {
-          wl.field_N = false;
+          ValidationIconWidget.field_N = false;
           rf.field_f = false;
           pp.field_a = 13;
           return;

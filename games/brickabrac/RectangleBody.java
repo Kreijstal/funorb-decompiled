@@ -190,7 +190,7 @@ class RectangleBody extends MovingBody {
           if (var10Lifetime1 > ea.field_b) {
             return true;
           }
-          oh.field_f = var13Lifetime1 - circle.radius256;
+          UsernameAvailabilityResult.field_f = var13Lifetime1 - circle.radius256;
           ea.field_b = var10Lifetime1;
           SpriteGeometry.field_A = var31;
           DualLinkIterator.field_b = var32;
@@ -296,7 +296,7 @@ class RectangleBody extends MovingBody {
             CircleBody var5 = (CircleBody) null;
             this.resolveCircleCollision((CircleBody) null, (byte) 44);
           }
-          circle.x256 = oh.field_f;
+          circle.x256 = UsernameAvailabilityResult.field_f;
           circle.y256 = ScrollPane.field_Tb;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bn.E(" + obfuscationGuard + ',' + (board != null ? "{...}" : "null") + ',' + (circle != null ? "{...}" : "null") + ')');

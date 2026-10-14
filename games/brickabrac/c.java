@@ -37,7 +37,7 @@ final class c {
         BitPacketBuffer packet = null;
         int bodyStart = 0;
         try {
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           BitPacketBuffer packetAlias = packet;
           int guardDivision = -44 / ((-59 - obfuscationGuard) / 38);
           packet.writeCipheredOpcode(-13413, opcode);
@@ -86,10 +86,10 @@ final class c {
         var11 = BrickABrac.field_J ? 1 : 0;
         if (param3) {
           if (param3) {
-            qh.field_f = LobbyPlayer.field_Pb;
+            ValidationStatus.field_f = LobbyPlayer.field_Pb;
             MusicPatch.a(-128, param3);
             if (TextLineLayout.field_b > 0) {
-              na.a(param8, param3, -94, param2);
+              DateFieldsWidget.a(param8, param3, -94, param2);
             }
             AppletGameShell.field_e.horizontalAlignment = 1;
             AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -110,10 +110,10 @@ final class c {
               MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
             }
           } else {
-            qh.field_f = (kp.field_a - 640) / 2;
+            ValidationStatus.field_f = (kp.field_a - 640) / 2;
             MusicPatch.a(-128, param3);
             if (TextLineLayout.field_b > 0) {
-              na.a(param8, param3, -94, param2);
+              DateFieldsWidget.a(param8, param3, -94, param2);
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
@@ -174,10 +174,10 @@ final class c {
               }
             }
             if (param3) {
-              qh.field_f = LobbyPlayer.field_Pb;
+              ValidationStatus.field_f = LobbyPlayer.field_Pb;
               MusicPatch.a(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                na.a(param8, param3, -94, param2);
+                DateFieldsWidget.a(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -198,10 +198,10 @@ final class c {
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
-              qh.field_f = (kp.field_a - 640) / 2;
+              ValidationStatus.field_f = (kp.field_a - 640) / 2;
               MusicPatch.a(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                na.a(param8, param3, -94, param2);
+                DateFieldsWidget.a(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -241,10 +241,10 @@ final class c {
               }
             }
             if (param3) {
-              qh.field_f = LobbyPlayer.field_Pb;
+              ValidationStatus.field_f = LobbyPlayer.field_Pb;
               MusicPatch.a(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                na.a(param8, param3, -94, param2);
+                DateFieldsWidget.a(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -265,10 +265,10 @@ final class c {
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
-              qh.field_f = (kp.field_a - 640) / 2;
+              ValidationStatus.field_f = (kp.field_a - 640) / 2;
               MusicPatch.a(-128, param3);
               if (TextLineLayout.field_b > 0) {
-                na.a(param8, param3, -94, param2);
+                DateFieldsWidget.a(param8, param3, -94, param2);
                 AppletGameShell.field_e.horizontalAlignment = 1;
                 AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
                 if (0 < IntArrayRequest.field_j) {
@@ -320,7 +320,7 @@ final class c {
         if (param5 <= 6) {
           field_g = -90;
         }
-        an.field_h = an.field_h + 1;
+        BirthDateValidator.field_h = BirthDateValidator.field_h + 1;
     }
 
     final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {

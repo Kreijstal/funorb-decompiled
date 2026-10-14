@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fl extends k {
-    private String field_k;
+final class UsernameAvailabilityValidator extends TextFieldValidator {
+    private String checkedUsername;
     static long field_l;
     static String field_m;
-    private boolean field_n;
+    private boolean usernameAvailable;
 
     final static void f(byte param0) {
         int var1 = 50 / ((31 - param0) / 52);
@@ -42,10 +42,10 @@ final class fl extends k {
         }
     }
 
-    final String a(int param0, String param1) {
+    final String describeTextValidation(int obfuscationGuard, String text) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        oh var4_ref_oh = null;
+        UsernameAvailabilityResult var4_ref_oh = null;
         int var4 = 0;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
@@ -57,14 +57,14 @@ final class fl extends k {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = (CharSequence) ((Object) param1);
+          var5 = (CharSequence) ((Object) text);
           var3 = QuickChatParameterType.a(var5, -106);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;
           }
-          if (!param1.equals(this.field_k)) {
-            var4_ref_oh = GameplayAudioEvent.a(param1, 0);
+          if (!text.equals(this.checkedUsername)) {
+            var4_ref_oh = GameplayAudioEvent.pollUsernameAvailability(text, 0);
             if (var4_ref_oh == null) {
               return null;
             }
@@ -72,22 +72,22 @@ final class fl extends k {
               stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
-            this.field_n = var4_ref_oh.field_c;
-            this.field_k = param1;
+            this.usernameAvailable = var4_ref_oh.available;
+            this.checkedUsername = text;
           }
-          if (!this.field_n) {
+          if (!this.usernameAvailable) {
             stackIn_13_0 = ng.field_f;
             return stackIn_13_0;
           }
-          var4 = 21 / ((-16 - param0) / 50);
+          var4 = 21 / ((-16 - obfuscationGuard) / 50);
           stackIn_15_0 = MouseWheelSource.field_d;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("fl.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_18_1 = new StringBuilder().append("fl.C(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -98,7 +98,7 @@ final class fl extends k {
 
     final static void b(boolean param0) {
         if (!param0) {
-          fl.f((byte) -72);
+          UsernameAvailabilityValidator.f((byte) -72);
           OptionsScreen.field_A.setLength(0);
           ng.quickChatChannel = 0;
           return;
@@ -107,9 +107,9 @@ final class fl extends k {
         ng.quickChatChannel = 0;
     }
 
-    fl(TextFieldWidget param0) {
-        super(param0);
-        this.field_n = false;
+    UsernameAvailabilityValidator(TextFieldWidget textField) {
+        super(textField);
+        this.usernameAvailable = false;
     }
 
     public static void f(int param0) {
@@ -121,41 +121,41 @@ final class fl extends k {
         field_m = null;
     }
 
-    final qh a(String param0, byte param1) {
-        oh var3 = null;
+    final ValidationStatus validateText(String text, byte obfuscationGuard) {
+        UsernameAvailabilityResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        qh stackIn_4_0 = null;
-        qh stackIn_11_0 = null;
-        qh stackIn_16_0 = null;
+        ValidationStatus stackIn_4_0 = null;
+        ValidationStatus stackIn_11_0 = null;
+        ValidationStatus stackIn_16_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != 106) {
-            fl.f((byte) -106);
+          if (obfuscationGuard != 106) {
+            UsernameAvailabilityValidator.f((byte) -106);
           }
-          var4 = (CharSequence) ((Object) param0);
+          var4 = (CharSequence) ((Object) text);
           if (!ByteArrayNode.a(17165, var4)) {
-            stackIn_4_0 = lp.field_xb;
+            stackIn_4_0 = lp.validationInvalid;
             return stackIn_4_0;
           }
-          if (!param0.equals(this.field_k)) {
-            var3 = GameplayAudioEvent.a(param0, 0);
+          if (!text.equals(this.checkedUsername)) {
+            var3 = GameplayAudioEvent.pollUsernameAvailability(text, 0);
             if (var3 != null &&
               var3.field_g == null) {
-              this.field_k = param0;
-              this.field_n = var3.field_c;
+              this.checkedUsername = text;
+              this.usernameAvailable = var3.available;
             } else {
-              stackIn_11_0 = SaveResultsPromptScreen.field_z;
+              stackIn_11_0 = SaveResultsPromptScreen.validationPending;
               return stackIn_11_0;
             }
           }
-          if (!this.field_n) {
-            stackIn_16_0 = lp.field_xb;
+          if (!this.usernameAvailable) {
+            stackIn_16_0 = lp.validationInvalid;
           } else {
-            stackIn_16_0 = DualLinkIterator.field_c;
+            stackIn_16_0 = DualLinkIterator.validationValid;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,12 +163,12 @@ final class fl extends k {
           var3_ref = decompiledCaughtException;
           stackIn_19_0 = var3_ref;
           stackIn_19_1 = new StringBuilder().append("fl.B(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -199,10 +199,10 @@ final class fl extends k {
         }
     }
 
-    final void e(byte param0) {
-        this.field_k = null;
-        if (param0 != -22) {
-          this.e((byte) -82);
+    final void clearAvailabilityCache(byte obfuscationGuard) {
+        this.checkedUsername = null;
+        if (obfuscationGuard != -22) {
+          this.clearAvailabilityCache((byte) -82);
         }
     }
 

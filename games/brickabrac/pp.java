@@ -228,19 +228,19 @@ final class pp {
         field_b = null;
     }
 
-    final static boolean a(String param0, boolean param1) {
+    final static boolean hasInvalidPasswordLength(String password, boolean obfuscationGuard) {
         RuntimeException var2 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1) {
+          if (!obfuscationGuard) {
             field_b = (RgbSprite) null;
           }
-          if (param0 != null &&
-            param0.length() >= pa.field_n &&
-            param0.length() <= ek.field_bb) {
+          if (password != null &&
+            password.length() >= pa.field_n &&
+            password.length() <= ek.field_bb) {
             return false;
           }
           return true;
@@ -249,12 +249,12 @@ final class pp {
           var2 = decompiledCaughtException;
           stackIn_10_0 = var2;
           stackIn_10_1 = new StringBuilder().append("pp.D(");
-          if (param0 == null) {
+          if (password == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

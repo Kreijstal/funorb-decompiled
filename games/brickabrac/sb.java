@@ -1012,18 +1012,18 @@ final class sb implements vc {
               stackIn_49_11 = (so.a((byte) -35) <= 50) ? false : true;
               MeshAttributeRecord.a(stackIn_45_0, stackIn_46_1, stackIn_48_2, stackIn_48_3, stackIn_48_4, stackIn_48_5, stackIn_48_6, stackIn_48_7, stackIn_48_8 != 0, stackIn_48_9, stackIn_48_10, stackIn_49_11);
               if (sl.field_w) {
-                k.outgoingPackets.writeCipheredOpcode(-13413, 64);
+                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                 sl.field_w = false;
               }
               if (tq.field_c) {
-                k.outgoingPackets.writeCipheredOpcode(-13413, 10);
+                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
                 tq.field_c = false;
               }
               return;
             }
             ContextActionController.field_f = BubbleDistortion.field_A;
           } else {
-            ContextActionController.field_f = an.field_g;
+            ContextActionController.field_f = BirthDateValidator.field_g;
           }
         } else {
           Brick.field_E = 0;
@@ -1055,11 +1055,11 @@ final class sb implements vc {
           stackIn_68_11 = (so.a((byte) -35) <= 50) ? false : true;
           MeshAttributeRecord.a(stackIn_64_0, stackIn_65_1, stackIn_67_2, stackIn_67_3, stackIn_67_4, stackIn_67_5, stackIn_67_6, stackIn_67_7, stackIn_67_8 != 0, stackIn_67_9, stackIn_67_10, stackIn_68_11);
           if (sl.field_w) {
-            k.outgoingPackets.writeCipheredOpcode(-13413, 64);
+            TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
             sl.field_w = false;
           }
           if (tq.field_c) {
-            k.outgoingPackets.writeCipheredOpcode(-13413, 10);
+            TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
             tq.field_c = false;
           }
           return;
@@ -1147,11 +1147,11 @@ final class sb implements vc {
             }
           }
           if (sl.field_w) {
-            k.outgoingPackets.writeCipheredOpcode(-13413, 64);
+            TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
             sl.field_w = false;
           }
           if (tq.field_c) {
-            k.outgoingPackets.writeCipheredOpcode(-13413, 10);
+            TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
             tq.field_c = false;
           }
           return;
@@ -1246,11 +1246,11 @@ final class sb implements vc {
                 stackIn_162_11 = (so.a((byte) -35) <= 50) ? false : true;
                 MeshAttributeRecord.a(stackIn_158_0, stackIn_159_1, stackIn_161_2, stackIn_161_3, stackIn_161_4, stackIn_161_5, stackIn_161_6, stackIn_161_7, stackIn_161_8 != 0, stackIn_161_9, stackIn_161_10, stackIn_162_11);
                 if (sl.field_w) {
-                  k.outgoingPackets.writeCipheredOpcode(-13413, 64);
+                  TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   sl.field_w = false;
                 }
                 if (tq.field_c) {
-                  k.outgoingPackets.writeCipheredOpcode(-13413, 10);
+                  TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
                   tq.field_c = false;
                 }
                 return;
@@ -1311,11 +1311,11 @@ final class sb implements vc {
                 stackIn_203_11 = (so.a((byte) -35) <= 50) ? false : true;
                 MeshAttributeRecord.a(stackIn_199_0, stackIn_200_1, stackIn_202_2, stackIn_202_3, stackIn_202_4, stackIn_202_5, stackIn_202_6, stackIn_202_7, stackIn_202_8 != 0, stackIn_202_9, stackIn_202_10, stackIn_203_11);
                 if (sl.field_w) {
-                  k.outgoingPackets.writeCipheredOpcode(-13413, 64);
+                  TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   sl.field_w = false;
                 }
                 if (tq.field_c) {
-                  k.outgoingPackets.writeCipheredOpcode(-13413, 10);
+                  TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
                   tq.field_c = false;
                 }
                 return;
@@ -1348,13 +1348,13 @@ final class sb implements vc {
           }
         }
         if (sl.field_w) {
-          k.outgoingPackets.writeCipheredOpcode(-13413, 64);
+          TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
           sl.field_w = false;
         }
         if (!tq.field_c) {
           return;
         }
-        k.outgoingPackets.writeCipheredOpcode(-13413, 10);
+        TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
         tq.field_c = false;
     }
 
@@ -1383,20 +1383,20 @@ final class sb implements vc {
           return;
         }
         try {
-          na.field_L = new LevelPack[2];
+          DateFieldsWidget.field_L = new LevelPack[2];
           var4 = 0;
           var8 = new PacketBuffer(param0.takeFileByName(param2 ^ 118, "single", ""));
           var9 = var8;
-          na.field_L[0] = LevelPackLoader.loadLevelPack((byte) 76, param0, var9, var3_int, 0, 0, var4);
-          var4 = var4 + na.field_L[0].levelCount;
+          DateFieldsWidget.field_L[0] = LevelPackLoader.loadLevelPack((byte) 76, param0, var9, var3_int, 0, 0, var4);
+          var4 = var4 + DateFieldsWidget.field_L[0].levelCount;
           var10 = new PacketBuffer(param0.takeFileByName(121, "hotseat", ""));
-          qh.field_b = LevelPackLoader.loadLevelPack((byte) -115, param0, var10, var3_int, -1, -1, -1);
+          ValidationStatus.field_b = LevelPackLoader.loadLevelPack((byte) -115, param0, var10, var3_int, -1, -1, -1);
           var11 = new PacketBuffer(param0.takeFileByName(100, "multiplayer", ""));
           tq.field_d = LevelPackLoader.loadLevelPack((byte) -97, param0, var11, var3_int, -1, -1, -1);
-          tq.field_d.appendLevelData(qh.field_b, false);
+          tq.field_d.appendLevelData(ValidationStatus.field_b, false);
           var3_int = param1.getGroupId("", false);
           var7 = new PacketBuffer(param1.takeFileByName(-88, "single", ""));
-          na.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, param1, var7, var3_int, 1, 1, var4);
+          DateFieldsWidget.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, param1, var7, var3_int, 1, 1, var4);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sb.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

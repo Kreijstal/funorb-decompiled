@@ -33,10 +33,10 @@ final class TooltipSprite extends IntrusiveNode {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          nf.field_W = cr.loadRgbSpritesByName("commonui", param3, "frame_top", param2 ^ -57);
+          ValidationMessageWidget.field_W = cr.loadRgbSpritesByName("commonui", param3, "frame_top", param2 ^ -57);
           GameplayAudioEvent.field_l = cr.loadRgbSpritesByName("commonui", param3, "frame_bottom", 2);
           MusicVoice.field_n = pl.loadRgbSpriteByName("commonui", "jagex_logo_grey", (byte) -110, param3);
-          sf.field_U = cr.loadRgbSpritesByName("commonui", param3, "button", 2);
+          ValidatedTextFieldWidget.field_U = cr.loadRgbSpritesByName("commonui", param3, "button", 2);
           df.field_a = bd.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
           QuickChatMenu.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
           ArchiveNetworkClient.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
@@ -84,7 +84,7 @@ final class TooltipSprite extends IntrusiveNode {
           var12.bindRasterTarget();
           var17.drawAt(-var9Lifetime1, 0);
           sc.popRaster(-81);
-          sf.field_U = new RgbSprite[]{var15, var12, var11};
+          ValidatedTextFieldWidget.field_U = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -94,7 +94,7 @@ final class TooltipSprite extends IntrusiveNode {
         if (obfuscationGuard != 0) {
           return;
         }
-        this.hovered = oh.a(MusicPatch.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
+        this.hovered = UsernameAvailabilityResult.a(MusicPatch.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
         this.hovered = this.sprite.containsPixel(this.x, this.y, MusicPatch.pointerX, po.pointerY);
     }
 
@@ -137,10 +137,10 @@ final class TooltipSprite extends IntrusiveNode {
           if (obfuscationGuard != 13330) {
             field_n = (String) null;
           }
-          var4 = (AchievementSubmission) (na.pendingAchievementSubmissions.first(-37));
+          var4 = (AchievementSubmission) (DateFieldsWidget.pendingAchievementSubmissions.first(-37));
           while (var4 != null) {
             LevelSelectScreen.sendAchievementSubmission(opcode, var4, (byte) 80);
-            var4 = (AchievementSubmission) (na.pendingAchievementSubmissions.next((byte) 116));
+            var4 = (AchievementSubmission) (DateFieldsWidget.pendingAchievementSubmissions.next((byte) 116));
           }
           var2 = ej.pendingAchievementMaskRequests.first(obfuscationGuard ^ -13402);
           while (var2 != null) {

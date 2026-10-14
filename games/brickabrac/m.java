@@ -11,7 +11,7 @@ final class m {
     static int field_h;
     private boolean field_g;
     static String field_d;
-    static qh field_c;
+    static ValidationStatus validationDebouncing;
     static MidiSynthesizer musicSynthesizer;
     static String field_e;
 
@@ -133,13 +133,13 @@ final class m {
         if (param0 == 2) {
           musicSynthesizer = null;
           field_e = null;
-          field_c = null;
+          validationDebouncing = null;
           return;
         }
         m.c(1);
         musicSynthesizer = null;
         field_e = null;
-        field_c = null;
+        validationDebouncing = null;
     }
 
     final String b(int param0) {
@@ -196,6 +196,6 @@ final class m {
         field_k = "Loading fonts";
         field_d = "Unfortunately we are unable to create an account for you at this time.";
         field_e = "Visit the Account Management section on the main site to view.";
-        field_c = new qh();
+        validationDebouncing = new ValidationStatus();
     }
 }

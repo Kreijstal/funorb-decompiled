@@ -31,7 +31,7 @@ final class qf extends lp implements WidgetActionListener {
         if (this.field_Db) {
           return super.h(0);
         }
-        oh var2 = SoundPlayback.a(106);
+        UsernameAvailabilityResult var2 = SoundPlayback.a(106);
         if (var2 != null) {
           this.a(-7, var2, false);
           return super.h(0);
@@ -80,7 +80,7 @@ final class qf extends lp implements WidgetActionListener {
         return param0 ^ param1;
     }
 
-    private final void a(int param0, oh param1, boolean param2) {
+    private final void a(int param0, UsernameAvailabilityResult param1, boolean param2) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -92,7 +92,7 @@ final class qf extends lp implements WidgetActionListener {
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           this.field_Db = true;
-          if (param1.field_c) {
+          if (param1.available) {
             var4 = FramedMenuScreen.field_r;
           } else {
             if (null != param1.field_e) {
@@ -112,7 +112,7 @@ final class qf extends lp implements WidgetActionListener {
             }
           }
           var5 = new ec((lp) (this), wm.field_a, var4);
-          if (param1.field_c) {
+          if (param1.available) {
             if (param1.field_a) {
               this.b((byte) 118, new ig(this));
               return;
@@ -133,7 +133,7 @@ final class qf extends lp implements WidgetActionListener {
               var5.a(false, Ball.field_H, 7);
             } else {
               if (param1.field_d == 6) {
-                var5.a(false, cb.field_p, 9);
+                var5.a(false, MatchingTextValidator.field_p, 9);
               }
             }
           }

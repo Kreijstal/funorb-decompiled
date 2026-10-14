@@ -18,27 +18,27 @@ final class ce {
             if (null != sj.field_b) {
               sj.field_b.l(6457);
             }
-            fl.f((byte) -83);
+            UsernameAvailabilityValidator.f((byte) -83);
             return;
           }
           if (null != sj.field_b) {
             sj.field_b.l(6457);
           }
-          fl.f((byte) -83);
+          UsernameAvailabilityValidator.f((byte) -83);
           return;
         }
         if (param0 == 224) {
           if (null != sj.field_b) {
             sj.field_b.l(6457);
           }
-          fl.f((byte) -83);
+          UsernameAvailabilityValidator.f((byte) -83);
           return;
         }
         field_d = -126;
         if (null != sj.field_b) {
           sj.field_b.l(6457);
         }
-        fl.f((byte) -83);
+        UsernameAvailabilityValidator.f((byte) -83);
     }
 
     final static void a(boolean param0, int param1, byte param2, int param3) {

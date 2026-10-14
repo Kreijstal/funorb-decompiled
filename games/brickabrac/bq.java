@@ -85,35 +85,35 @@ final class bq {
             var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, up.field_x);
             var4 = 3 + var3_int;
             BrickABrac.field_K = new int[var4];
-            qh.field_i = new String[var4];
+            ValidationStatus.field_i = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               BrickABrac.field_K[var5] = -1;
             }
             ri.field_I = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              qh.field_i[var5] = CacheIoWorker.field_h[var5];
+              ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
             }
-            qh.field_i[var4 - 3] = "";
-            qh.field_i[var4 - 2] = g.field_q;
+            ValidationStatus.field_i[var4 - 3] = "";
+            ValidationStatus.field_i[var4 - 2] = PasswordValidator.field_q;
             BrickABrac.field_K[var4 - 2] = 0;
             ri.field_I[0] = 4;
-            qh.field_i[-1 + var4] = LevelSequence.field_a;
+            ValidationStatus.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 1;
             ri.field_I[1] = 5;
           } else if (1 == ArchiveFetchClient.field_p) {
             var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, up.field_x);
             var4 = 2 + var3_int;
             BrickABrac.field_K = new int[var4];
-            qh.field_i = new String[var4];
+            ValidationStatus.field_i = new String[var4];
             for (var5 = 0; var5 < var4; var5++) {
               BrickABrac.field_K[var5] = -1;
             }
             ri.field_I = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              qh.field_i[var5] = CacheIoWorker.field_h[var5];
+              ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
             }
-            qh.field_i[var4 - 2] = "";
-            qh.field_i[-1 + var4] = LevelSequence.field_a;
+            ValidationStatus.field_i[var4 - 2] = "";
+            ValidationStatus.field_i[-1 + var4] = LevelSequence.field_a;
             BrickABrac.field_K[-1 + var4] = 0;
             ri.field_I[0] = 5;
           } else if (2 != ArchiveFetchClient.field_p) {
@@ -124,33 +124,33 @@ final class bq {
                 var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, df.field_d);
               }
               var4 = 2 + var3_int;
-              qh.field_i = new String[var4];
+              ValidationStatus.field_i = new String[var4];
               BrickABrac.field_K = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 BrickABrac.field_K[var5] = -1;
               }
               ri.field_I = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                qh.field_i[var5] = CacheIoWorker.field_h[var5];
+                ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
               }
-              qh.field_i[var4 - 2] = "";
-              qh.field_i[var4 - 1] = LevelSequence.field_a;
+              ValidationStatus.field_i[var4 - 2] = "";
+              ValidationStatus.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
               ri.field_I[0] = 5;
             } else if (ArchiveFetchClient.field_p == 4) {
               var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, ChocolateBackground.field_s);
               var4 = var3_int + 2;
-              qh.field_i = new String[var4];
+              ValidationStatus.field_i = new String[var4];
               BrickABrac.field_K = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 BrickABrac.field_K[var5] = -1;
               }
               ri.field_I = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                qh.field_i[var5] = CacheIoWorker.field_h[var5];
+                ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
               }
-              qh.field_i[var4 - 2] = "";
-              qh.field_i[var4 - 1] = LevelSequence.field_a;
+              ValidationStatus.field_i[var4 - 2] = "";
+              ValidationStatus.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 0;
               ri.field_I[0] = 5;
             } else {
@@ -160,19 +160,19 @@ final class bq {
               var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, DirectByteStorage.field_h);
               var4 = 3 + var3_int;
               BrickABrac.field_K = new int[var4];
-              qh.field_i = new String[var4];
+              ValidationStatus.field_i = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 BrickABrac.field_K[var5] = -1;
               }
               ri.field_I = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                qh.field_i[var5] = CacheIoWorker.field_h[var5];
+                ValidationStatus.field_i[var5] = CacheIoWorker.field_h[var5];
               }
-              qh.field_i[var4 - 3] = "";
-              qh.field_i[var4 - 2] = ja.field_b;
+              ValidationStatus.field_i[var4 - 3] = "";
+              ValidationStatus.field_i[var4 - 2] = ja.field_b;
               BrickABrac.field_K[var4 - 2] = 0;
               ri.field_I[0] = 3;
-              qh.field_i[var4 - 1] = LevelSequence.field_a;
+              ValidationStatus.field_i[var4 - 1] = LevelSequence.field_a;
               BrickABrac.field_K[-1 + var4] = 1;
               ri.field_I[1] = 5;
             }
@@ -223,23 +223,23 @@ final class bq {
             var6 = stackIn_69_0;
             var7 = var6 + (var5 + 7);
             BrickABrac.field_K = new int[var7];
-            qh.field_i = new String[var7];
+            ValidationStatus.field_i = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
               BrickABrac.field_K[var8] = -1;
             }
-            qh.field_i[0] = dg.field_k;
-            qh.field_i[1] = c.field_c;
+            ValidationStatus.field_i[0] = dg.field_k;
+            ValidationStatus.field_i[1] = c.field_c;
             BrickABrac.field_K[1] = 0;
             ri.field_I = new int[2];
             BrickABrac.field_K[3] = 1;
             ri.field_I[1] = 2;
-            qh.field_i[4] = u.field_f;
+            ValidationStatus.field_i[4] = u.field_f;
             ri.field_I[0] = 5;
-            qh.field_i[2] = rf.field_e;
-            qh.field_i[5] = "";
-            qh.field_i[3] = di.field_c;
+            ValidationStatus.field_i[2] = rf.field_e;
+            ValidationStatus.field_i[5] = "";
+            ValidationStatus.field_i[3] = di.field_c;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
-              stackIn_76_0 = qh.field_i;
+              stackIn_76_0 = ValidationStatus.field_i;
               stackIn_76_1 = 6 + var8Lifetime2;
               if (0 > var8Lifetime2 - (-ik.field_b.length + var5)) {
                 stackIn_77_2 = "";
@@ -248,10 +248,10 @@ final class bq {
               }
               stackIn_76_0[stackIn_76_1] = stackIn_77_2;
             }
-            qh.field_i[6 + var5] = null;
+            ValidationStatus.field_i[6 + var5] = null;
             BrickABrac.field_K[6 + var5] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              stackIn_81_0 = qh.field_i;
+              stackIn_81_0 = ValidationStatus.field_i;
               stackIn_81_1 = 7 + (var5 + var8Lifetime3);
               stackIn_81_2 = ~HuffmanCodec.field_h.length;
               stackIn_81_3 = ~var8Lifetime3;
@@ -269,9 +269,9 @@ final class bq {
           if (param2 != 104) {
             return;
           }
-          for (var4Lifetime1 = 0; var4Lifetime1 < qh.field_i.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < ValidationStatus.field_i.length; var4Lifetime1++) {
             stackIn_93_0 = !(BrickABrac.field_K[var4Lifetime1] < 0);
-            var5Lifetime1 = hm.a(stackIn_93_0, qh.field_i[var4Lifetime1], 0);
+            var5Lifetime1 = hm.a(stackIn_93_0, ValidationStatus.field_i[var4Lifetime1], 0);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -298,7 +298,7 @@ final class bq {
           jj.field_c = UiComponent.field_H.itemCount * (kn.field_y + DropTargetWidget.field_H << 1);
           np.field_b = wi.field_k - (var3_intLifetime1 >> 1);
           SpaceBackground.field_u = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + wi.field_k);
-          for (var4Lifetime2 = 0; qh.field_i.length > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; ValidationStatus.field_i.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_118_0 = jj.field_c;
             if (BrickABrac.field_K[var4Lifetime2] >= 0) {
               stackIn_119_1 = b.field_c;
@@ -308,13 +308,13 @@ final class bq {
             jj.field_c = stackIn_118_0 + stackIn_119_1;
           }
           CachedArchiveSource.field_r = -(jj.field_c >> 1) + w.field_k;
-          ce.field_a = new int[qh.field_i.length][];
+          ce.field_a = new int[ValidationStatus.field_i.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = CachedArchiveSource.field_r;
-          while (var4Lifetime3 < qh.field_i.length) {
+          while (var4Lifetime3 < ValidationStatus.field_i.length) {
             var6Lifetime1 = BrickABrac.field_K[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = hm.a(true, qh.field_i[var4Lifetime3], param2 - 104);
+              var7Lifetime2 = hm.a(true, ValidationStatus.field_i[var4Lifetime3], param2 - 104);
               var8Lifetime1 = wi.field_k - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + kn.field_y;
               ce.field_a[var4Lifetime3] = new int[4];

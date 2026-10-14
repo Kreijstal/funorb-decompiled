@@ -14,7 +14,7 @@ final class ef extends IOException {
     final static void requestReturnToLobby(int obfuscationGuard, int opcode) {
         BitPacketBuffer packet = null;
         if (obfuscationGuard == -22809) {
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.writeByte(-5, 1);
           packet.writeByte(obfuscationGuard ^ 22903, 1);
@@ -58,13 +58,13 @@ final class ef extends IOException {
         int var3Lifetime1;
         if (param0 < -27) {
           var3 = (-BoundedFile.field_h + ej.field_O) * var2 / var1 + BoundedFile.field_h;
-          DualLinkDeque.field_d.setBounds(120, var3, qh.field_f, 640, (byte) 64);
+          DualLinkDeque.field_d.setBounds(120, var3, ValidationStatus.field_f, 640, (byte) 64);
           VerticalScrollbar.a(kn.field_z, 5, ej.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
           return;
         }
         keyEventCodes = (int[]) null;
         var3Lifetime1 = (-BoundedFile.field_h + ej.field_O) * var2 / var1 + BoundedFile.field_h;
-        DualLinkDeque.field_d.setBounds(120, var3Lifetime1, qh.field_f, 640, (byte) 64);
+        DualLinkDeque.field_d.setBounds(120, var3Lifetime1, ValidationStatus.field_f, 640, (byte) 64);
         VerticalScrollbar.a(kn.field_z, 5, ej.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
     }
 

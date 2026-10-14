@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class k extends pj implements TextFieldListener {
+abstract class TextFieldValidator extends DebouncedValidationSource implements TextFieldListener {
     static String field_i;
     static BitPacketBuffer outgoingPackets;
     static String field_j;
-    private TextFieldWidget field_g;
+    private TextFieldWidget textField;
 
-    final qh c(int param0) {
-        if (param0 != 4) {
+    final ValidationStatus computeValidationStatus(int obfuscationGuard) {
+        if (obfuscationGuard != 4) {
           field_i = (String) null;
         }
-        return this.a(this.field_g.text, (byte) 106);
+        return this.validateText(this.textField.text, (byte) 106);
     }
 
-    abstract qh a(String param0, byte param1);
+    abstract ValidationStatus validateText(String text, byte obfuscationGuard);
 
     final static void d(byte param0) {
         if (param0 < 114) {
@@ -23,7 +23,7 @@ abstract class k extends pj implements TextFieldListener {
         ga.d(-105);
     }
 
-    abstract String a(int param0, String param1);
+    abstract String describeTextValidation(int obfuscationGuard, String text);
 
     public final void onTextChanged(TextFieldWidget textField, byte obfuscationGuard) {
         RuntimeException stackIn_7_0 = null;
@@ -34,9 +34,9 @@ abstract class k extends pj implements TextFieldListener {
         try {
           if (obfuscationGuard > -39) {
             outgoingPackets = (BitPacketBuffer) null;
-            this.a(false);
+            this.markEdited(false);
           } else {
-            this.a(false);
+            this.markEdited(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -315,27 +315,27 @@ abstract class k extends pj implements TextFieldListener {
         }
     }
 
-    final String b(int param0) {
-        if (param0 != 28600) {
+    final String computeValidationMessage(int obfuscationGuard) {
+        if (obfuscationGuard != 28600) {
           field_j = (String) null;
         }
-        return this.a(56, this.field_g.text);
+        return this.describeTextValidation(56, this.textField.text);
     }
 
-    public final boolean a(byte param0) {
+    public final boolean isIncomplete(byte obfuscationGuard) {
         boolean stackIn_7_0 = false;
-        if (param0 > -27) {
-          k.d((byte) 112);
+        if (obfuscationGuard > -27) {
+          TextFieldValidator.d((byte) 112);
         }
-        stackIn_7_0 = (this.field_g.text == null) || (0 == this.field_g.text.length());
+        stackIn_7_0 = (this.textField.text == null) || (0 == this.textField.text.length());
         return stackIn_7_0;
     }
 
-    k(TextFieldWidget param0) {
+    TextFieldValidator(TextFieldWidget textField) {
         try {
-          this.field_g = param0;
+          this.textField = textField;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "k.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "k.<init>(" + (textField != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -343,7 +343,7 @@ abstract class k extends pj implements TextFieldListener {
         try {
           if (obfuscationGuard != -40) {
             String var4 = (String) null;
-            this.a((String) null, (byte) -114);
+            this.validateText((String) null, (byte) -114);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "k.H(" + (textField != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');

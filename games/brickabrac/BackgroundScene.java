@@ -59,7 +59,7 @@ abstract class BackgroundScene {
     }
 
     BackgroundScene(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
-        this(sceneId, musicName, uc.createSoundEffectNames(soundEffectCount, soundEffectPrefix, (byte) -1));
+        this(sceneId, musicName, EmailConfirmationValidator.createSoundEffectNames(soundEffectCount, soundEffectPrefix, (byte) -1));
     }
 
     final static void drawFlatMeshTriangle(int halfRgb, int yA, int xC, int xA, int yB, int yC, int xB, int obfuscationGuard) {
@@ -69,21 +69,21 @@ abstract class BackgroundScene {
         if (yB > yA) {
           if (yB >= yC) {
             if (yC > yA) {
-              k.rasterFlatMeshTriangle(xC, xB, yA, Rasterizer2D.pixels, yB, yC, halfRgb, xA, 0);
+              TextFieldValidator.rasterFlatMeshTriangle(xC, xB, yA, Rasterizer2D.pixels, yB, yC, halfRgb, xA, 0);
             } else {
-              k.rasterFlatMeshTriangle(xA, xB, yC, Rasterizer2D.pixels, yB, yA, halfRgb, xC, 0);
+              TextFieldValidator.rasterFlatMeshTriangle(xA, xB, yC, Rasterizer2D.pixels, yB, yA, halfRgb, xC, 0);
             }
           } else {
-            k.rasterFlatMeshTriangle(xB, xC, yA, Rasterizer2D.pixels, yC, yB, halfRgb, xA, 0);
+            TextFieldValidator.rasterFlatMeshTriangle(xB, xC, yA, Rasterizer2D.pixels, yC, yB, halfRgb, xA, 0);
           }
         } else {
           if (yC > yA) {
-            k.rasterFlatMeshTriangle(xA, xC, yB, Rasterizer2D.pixels, yC, yA, halfRgb, xB, 0);
+            TextFieldValidator.rasterFlatMeshTriangle(xA, xC, yB, Rasterizer2D.pixels, yC, yA, halfRgb, xB, 0);
           } else {
             if (yB < yC) {
-              k.rasterFlatMeshTriangle(xC, xA, yB, Rasterizer2D.pixels, yA, yC, halfRgb, xB, 0);
+              TextFieldValidator.rasterFlatMeshTriangle(xC, xA, yB, Rasterizer2D.pixels, yA, yC, halfRgb, xB, 0);
             } else {
-              k.rasterFlatMeshTriangle(xB, xA, yC, Rasterizer2D.pixels, yA, yB, halfRgb, xC, 0);
+              TextFieldValidator.rasterFlatMeshTriangle(xB, xA, yC, Rasterizer2D.pixels, yA, yB, halfRgb, xC, 0);
             }
           }
         }

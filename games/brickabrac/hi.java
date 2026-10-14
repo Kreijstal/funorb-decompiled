@@ -120,7 +120,7 @@ final class hi extends um {
           if (MeshAttributeRecord.currentKeyCode == 84) {
             if (var3 == 0) {
               if (ng.quickChatChannel != 0) {
-                fl.b(!param0);
+                UsernameAvailabilityValidator.b(!param0);
               }
             } else {
               if (OptionsScreen.field_A.length() > 0) {
@@ -144,7 +144,7 @@ final class hi extends um {
                   c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_String);
                 }
               }
-              fl.b(true);
+              UsernameAvailabilityValidator.b(true);
             }
             return true;
           }
@@ -226,7 +226,7 @@ final class hi extends um {
             if (MeshAttributeRecord.currentKeyCode == 84) {
               if (var3 == 0) {
                 if (ng.quickChatChannel != 0) {
-                  fl.b(!param0);
+                  UsernameAvailabilityValidator.b(!param0);
                 }
               } else {
                 if (OptionsScreen.field_A.length() > 0) {
@@ -238,7 +238,7 @@ final class hi extends um {
                     var15Lifetime1 = (String) null;
                     var14Lifetime1 = (String) null;
                     SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
-                    fl.b(true);
+                    UsernameAvailabilityValidator.b(true);
                   } else {
                     var5Lifetime1 = ng.quickChatChannel;
                     if (var5Lifetime1 == 0 &&
@@ -249,10 +249,10 @@ final class hi extends um {
                       DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime1);
                     }
                     c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime1);
-                    fl.b(true);
+                    UsernameAvailabilityValidator.b(true);
                   }
                 } else {
-                  fl.b(true);
+                  UsernameAvailabilityValidator.b(true);
                 }
               }
               return true;
@@ -333,7 +333,7 @@ final class hi extends um {
         if (MeshAttributeRecord.currentKeyCode == 84) {
           if (var3 == 0) {
             if (ng.quickChatChannel != 0) {
-              fl.b(!param0);
+              UsernameAvailabilityValidator.b(!param0);
             }
           } else {
             if (OptionsScreen.field_A.length() > 0) {
@@ -359,7 +359,7 @@ final class hi extends um {
                 c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime2);
               }
             }
-            fl.b(true);
+            UsernameAvailabilityValidator.b(true);
           }
           return true;
         }
@@ -495,7 +495,7 @@ final class hi extends um {
             }
           }
           var7 = stackIn_14_0;
-          ac.a(this.field_B, widget.y + parentY + (widget.height - this.field_B[0].canvasHeight >> 1), widget.x + parentX, widget.width, var7, (byte) 122);
+          EmailAvailabilityRequest.a(this.field_B, widget.y + parentY + (widget.height - this.field_B[0].canvasHeight >> 1), widget.x + parentX, widget.width, var7, (byte) 122);
           stackIn_17_0 = (!obfuscationGuard) ? 7105644 : 16777215;
           var8 = stackIn_17_0;
           if (callbackGuard != -20618) {
@@ -545,7 +545,7 @@ final class hi extends um {
         this.field_y = param1;
         this.field_z = param0;
         this.field_k = wm.field_a;
-        this.field_B = sf.field_U;
+        this.field_B = ValidatedTextFieldWidget.field_U;
     }
 
     static {

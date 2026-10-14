@@ -5,13 +5,13 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
     static RgbSprite field_R;
     private ToggleButtonWidget field_N;
     private HotspotTextWidget field_I;
-    private sf field_M;
+    private ValidatedTextFieldWidget field_M;
     private FocusableWidget field_Q;
-    private sf field_L;
-    private sf field_O;
-    private sf field_S;
-    private sf field_J;
-    private sf field_H;
+    private ValidatedTextFieldWidget field_L;
+    private ValidatedTextFieldWidget field_O;
+    private ValidatedTextFieldWidget field_S;
+    private ValidatedTextFieldWidget field_J;
+    private ValidatedTextFieldWidget field_H;
     private FocusableWidget field_P;
     ri field_K;
 
@@ -44,7 +44,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
           LevelSelectScreen.field_v = param2;
           var11 = param0;
           if (!param1) {
-            stackIn_4_0 = g.field_q;
+            stackIn_4_0 = PasswordValidator.field_q;
           } else {
             stackIn_4_0 = UiComponent.field_mb;
           }
@@ -209,7 +209,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard != -526) {
-            this.field_O = (sf) null;
+            this.field_O = (ValidatedTextFieldWidget) null;
           }
           if (0 == hotspotId) {
             ArchiveFetchClient.a("terms.ws", 12);
@@ -253,7 +253,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
             }
           }
           if (obfuscationGuard >= -22) {
-            this.field_H = (sf) null;
+            this.field_H = (ValidatedTextFieldWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -272,7 +272,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
 
     private final int a(Widget param0, int param1, String param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
-        nf var9 = null;
+        ValidationMessageWidget var9 = null;
         LabeledWidget var10 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -286,7 +286,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         try {
           var10 = new LabeledWidget(20, param1, param4 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param5);
           this.addChild(var10, true);
-          var9 = new nf(((je) ((Object) param0)).a(-11011), param2, 126, param1 + var10.height, param4 + 50, param3);
+          var9 = new ValidationMessageWidget(((ValidatableWidget) ((Object) param0)).getValidationSource(-11011), param2, 126, param1 + var10.height, param4 + 50, param3);
           var9.listener = (WidgetListener) (this);
           if (param6 != 170) {
             this.field_N = (ToggleButtonWidget) null;
@@ -360,7 +360,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
     private final int a(Widget param0, String param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
-        wl var7 = null;
+        ValidationIconWidget var7 = null;
         LabeledWidget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -375,7 +375,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
           }
           var8 = new LabeledWidget(20, param4, param2 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param1);
           this.addChild(var8, true);
-          var7 = new wl(((je) ((Object) param0)).a(-11011));
+          var7 = new ValidationIconWidget(((ValidatableWidget) ((Object) param0)).getValidationSource(-11011));
           this.addChild(var7, true);
           var7.setBounds(15, var8.x + var8.width + 3, (var8.height - 15 >> 1) + var8.y, (byte) -119, 15);
           stackIn_3_0 = var8.height;
@@ -427,7 +427,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
 
     public final void a(String param0, byte param1) {
         String discarded$1 = null;
-        sf var3 = null;
+        ValidatedTextFieldWidget var3 = null;
         String var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -507,7 +507,7 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
 
     private final boolean h(int param0) {
         if (param0 != 10000536) {
-          this.field_H = (sf) null;
+          this.field_H = (ValidatedTextFieldWidget) null;
         }
         if (this.a(60, this.field_J) &&
           this.a(60, this.field_M) &&
@@ -576,17 +576,17 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         if (param0 < 96) {
           return;
         }
-        ((fl) (this.field_J.a(-11011))).e((byte) -22);
+        ((UsernameAvailabilityValidator) (this.field_J.getValidationSource(-11011))).clearAvailabilityCache((byte) -22);
     }
 
     public dk() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
-        this.field_J = new sf("", (WidgetListener) null, 12);
-        this.field_M = new sf("", (WidgetListener) null, 100);
-        this.field_H = new sf("", (WidgetListener) null, 100);
-        this.field_O = new sf("", (WidgetListener) null, 20);
-        this.field_L = new sf("", (WidgetListener) null, 20);
-        this.field_S = new sf("", (WidgetListener) null, 3);
+        this.field_J = new ValidatedTextFieldWidget("", (WidgetListener) null, 12);
+        this.field_M = new ValidatedTextFieldWidget("", (WidgetListener) null, 100);
+        this.field_H = new ValidatedTextFieldWidget("", (WidgetListener) null, 100);
+        this.field_O = new ValidatedTextFieldWidget("", (WidgetListener) null, 20);
+        this.field_L = new ValidatedTextFieldWidget("", (WidgetListener) null, 20);
+        this.field_S = new ValidatedTextFieldWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.field_N = new ToggleButtonWidget("", (WidgetListener) null, var1 != 0);
         this.field_Q = new FocusableWidget(c.field_d, (WidgetListener) null);
@@ -598,12 +598,12 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         this.field_L.tooltip = BoundedFile.field_b;
         this.field_S.tooltip = hc.field_d;
         this.field_N.tooltip = ok.field_e;
-        this.field_J.a(new fl(this.field_J), (byte) -68);
-        this.field_M.a(new sg(this.field_M), (byte) -68);
-        this.field_H.a(new uc(this.field_H, this.field_M), (byte) -68);
-        this.field_O.a(new g(this.field_O, this.field_J, this.field_M), (byte) -68);
-        this.field_L.a(new cb(this.field_L, this.field_O), (byte) -68);
-        this.field_S.a(new kf(this.field_S), (byte) -68);
+        this.field_J.setValidationSource(new UsernameAvailabilityValidator(this.field_J), (byte) -68);
+        this.field_M.setValidationSource(new EmailValidator(this.field_M), (byte) -68);
+        this.field_H.setValidationSource(new EmailConfirmationValidator(this.field_H, this.field_M), (byte) -68);
+        this.field_O.setValidationSource(new PasswordValidator(this.field_O, this.field_J, this.field_M), (byte) -68);
+        this.field_L.setValidationSource(new MatchingTextValidator(this.field_L, this.field_O), (byte) -68);
+        this.field_S.setValidationSource(new AgeValidator(this.field_S), (byte) -68);
         this.field_Q.enabled = false;
         this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
         this.field_P.renderer = (WidgetRenderer) ((Object) new bb());
@@ -650,30 +650,30 @@ final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionL
         this.setBounds(var6 + (var3 + 55), 0, 0, (byte) -119, 496);
     }
 
-    private final boolean a(int param0, je param1) {
-        ia var3 = null;
+    private final boolean a(int param0, ValidatableWidget param1) {
+        ValidationSource var3 = null;
         RuntimeException var3_ref = null;
-        qh var4 = null;
+        ValidationStatus var4 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a(param0 ^ -11071);
+          var3 = param1.getValidationSource(param0 ^ -11071);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.b((byte) -31);
-          if (lp.field_xb == var4) {
+          var4 = var3.getValidationStatus((byte) -31);
+          if (lp.validationInvalid == var4) {
             return false;
           }
           if (param0 != 60) {
             this.field_N = (ToggleButtonWidget) null;
           }
-          if (m.field_c == var4) {
+          if (m.validationDebouncing == var4) {
             return false;
           }
-          if (var4 != uo.field_f) {
+          if (var4 != uo.validationEmpty) {
             return true;
           }
           return false;

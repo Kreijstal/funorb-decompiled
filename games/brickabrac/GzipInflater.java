@@ -41,7 +41,7 @@ final class GzipInflater {
           RuntimeException var15_ref = null;
           try {
             jl.incomingPackets = new BitPacketBuffer(param4);
-            k.outgoingPackets = new BitPacketBuffer(param5);
+            TextFieldValidator.outgoingPackets = new BitPacketBuffer(param5);
             fe.field_ob = param6;
             tq.field_h = param1;
             FramedMenuScreen.field_s = param8;
@@ -52,7 +52,7 @@ final class GzipInflater {
               GzipInflater.b(47);
             }
             dl.field_b = param13;
-            pj.field_a = param12;
+            DebouncedValidationSource.field_a = param12;
             ec.field_O = param10;
             LevelSelectScreen.field_E = param11;
             IntArrayRequest.field_r = param3;

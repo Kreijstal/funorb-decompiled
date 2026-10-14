@@ -75,8 +75,8 @@ final class cd {
         return true;
     }
 
-    final static oh a(boolean param0, boolean param1) {
-        oh var2 = new oh(param0);
+    final static UsernameAvailabilityResult a(boolean param0, boolean param1) {
+        UsernameAvailabilityResult var2 = new UsernameAvailabilityResult(param0);
         var2.field_a = param1 ? true : false;
         return var2;
     }
@@ -101,7 +101,7 @@ final class cd {
           return;
         }
         try {
-          uc.field_l = param1;
+          EmailConfirmationValidator.field_l = param1;
           ag.field_F = param0;
           GameCanvas.field_f = param4;
           ek.field_lb = param5;

@@ -12,10 +12,10 @@ final class GameplayAudioEvent extends IntrusiveNode {
     static ResourceArchive field_k;
     int eventCode;
 
-    final static oh a(String param0, int param1) {
+    final static UsernameAvailabilityResult pollUsernameAvailability(String username, int obfuscationGuard) {
         RuntimeException var2 = null;
-        oh stackIn_5_0 = null;
-        oh stackIn_9_0 = null;
+        UsernameAvailabilityResult stackIn_5_0 = null;
+        UsernameAvailabilityResult stackIn_9_0 = null;
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -25,32 +25,32 @@ final class GameplayAudioEvent extends IntrusiveNode {
           if (MusicVoice.field_l == MusicEnvelope.field_f) {
             return null;
           }
-          if (param1 != 0) {
-            stackIn_5_0 = (oh) null;
+          if (obfuscationGuard != 0) {
+            stackIn_5_0 = (UsernameAvailabilityResult) null;
             return stackIn_5_0;
           }
           if (up.field_v == MusicVoice.field_l &&
-            param0.equals(LobbyGame.field_pc)) {
+            username.equals(LobbyGame.field_pc)) {
             MusicVoice.field_l = ej.field_P;
             stackIn_9_0 = he.field_H;
             return stackIn_9_0;
           }
           he.field_H = null;
           MusicVoice.field_l = MusicEnvelope.field_f;
-          LobbyGame.field_pc = param0;
+          LobbyGame.field_pc = username;
           stackIn_11_0 = null;
-          return (oh) (stackIn_11_0);
+          return (UsernameAvailabilityResult) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_14_0 = var2;
           stackIn_14_1 = new StringBuilder().append("qc.B(");
-          if (param0 == null) {
+          if (username == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

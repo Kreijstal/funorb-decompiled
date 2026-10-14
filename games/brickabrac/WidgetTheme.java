@@ -301,7 +301,7 @@ final class WidgetTheme {
     }
 
     final static void writeChatFilters(boolean obfuscationGuard, int opcode) {
-        BitPacketBuffer packet = k.outgoingPackets;
+        BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
         packet.writeCipheredOpcode(-13413, opcode);
         if (!obfuscationGuard) {
           WidgetTheme.isAsciiDigit('￪', (byte) -120);
@@ -530,14 +530,14 @@ final class WidgetTheme {
               var13 = var9 / var8;
               var12 = 2 * ((-1 + var9 % var8 + var13) / var13) + var8;
             }
-            if (null == an.field_j) {
-              an.field_j = new String[16];
+            if (null == BirthDateValidator.field_j) {
+              BirthDateValidator.field_j = new String[16];
             }
-            var11Lifetime1 = this.font.wrapText(param0, new int[]{var12}, an.field_j);
+            var11Lifetime1 = this.font.wrapText(param0, new int[]{var12}, BirthDateValidator.field_j);
             var9 = 0;
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.font.measureText(an.field_j[var13Lifetime2]);
+              var14 = this.font.measureText(BirthDateValidator.field_j[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }

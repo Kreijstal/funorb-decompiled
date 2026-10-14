@@ -78,7 +78,7 @@ final class me {
             stackIn_19_0 = rd.a(tq.field_a, new String[]{name}, (byte) 103);
             return stackIn_19_0;
           }
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.position = packet.position + 1;
           bodyStart = packet.position;
@@ -102,7 +102,7 @@ final class me {
     }
 
     final static void a(String param0, int param1) {
-        System.out.println("Error: " + oh.a((byte) 13, "\n", param0, "%0a"));
+        System.out.println("Error: " + UsernameAvailabilityResult.a((byte) 13, "\n", param0, "%0a"));
         if (param1 > -73) {
           field_f = (boolean[]) null;
         }

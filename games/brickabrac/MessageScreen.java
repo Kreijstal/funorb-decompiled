@@ -48,7 +48,7 @@ final class MessageScreen extends MenuScreen {
               stackIn_54_0 = 0;
             }
             var7 = stackIn_54_0;
-            pj.rankingWinRateThousandths[wi.rankingRowCount] = var7;
+            DebouncedValidationSource.rankingWinRateThousandths[wi.rankingRowCount] = var7;
             if (uf.field_b < var7) {
               uf.field_b = var7;
             }
@@ -72,7 +72,7 @@ final class MessageScreen extends MenuScreen {
             stackIn_39_0 = 0;
           }
           var7Lifetime2 = stackIn_39_0;
-          pj.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime2;
+          DebouncedValidationSource.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime2;
           if (uf.field_b < var7Lifetime2) {
             uf.field_b = var7Lifetime2;
           }
@@ -117,7 +117,7 @@ final class MessageScreen extends MenuScreen {
           }
           var7Lifetime1 = stackIn_23_0;
         }
-        pj.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime1;
+        DebouncedValidationSource.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime1;
         if (uf.field_b < var7Lifetime1) {
           uf.field_b = var7Lifetime1;
         }

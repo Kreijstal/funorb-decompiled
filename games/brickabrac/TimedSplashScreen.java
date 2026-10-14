@@ -20,7 +20,7 @@ final class TimedSplashScreen extends MenuScreen {
             ng.requestScreen(true, 120, 0);
             return;
           }
-          if (cb.heldButton != 0) {
+          if (MatchingTextValidator.heldButton != 0) {
             ng.requestScreen(true, 120, 0);
             return;
           }
@@ -39,7 +39,7 @@ final class TimedSplashScreen extends MenuScreen {
           ng.requestScreen(true, 120, 0);
           return;
         }
-        if (cb.heldButton != 0) {
+        if (MatchingTextValidator.heldButton != 0) {
           ng.requestScreen(true, 120, 0);
           return;
         }

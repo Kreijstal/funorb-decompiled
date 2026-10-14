@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class he extends WidgetGroup implements WidgetActionListener {
-    static oh field_H;
+    static UsernameAvailabilityResult field_H;
     private FocusableWidget field_K;
     private FocusableWidget field_I;
     static String[] field_L;
@@ -130,7 +130,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
               }
             }
             if (param1 > -41) {
-              field_H = (oh) null;
+              field_H = (UsernameAvailabilityResult) null;
             }
             param0.writeBytes(var10, -1, 0, 24);
             return;
@@ -212,7 +212,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
           var7 = var8;
           var3 = var7;
           if (param1 != -58) {
-            field_H = (oh) null;
+            field_H = (UsernameAvailabilityResult) null;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var5 = param0.charAt(var4);
@@ -287,7 +287,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
     public static void a(byte param0) {
         field_H = null;
         if (param0 != 36) {
-          field_H = (oh) null;
+          field_H = (UsernameAvailabilityResult) null;
         }
         field_L = null;
     }
@@ -295,9 +295,9 @@ final class he extends WidgetGroup implements WidgetActionListener {
     final static void a(String param0, boolean param1, byte param2) {
         try {
           if (param2 <= 18) {
-            field_H = (oh) null;
+            field_H = (UsernameAvailabilityResult) null;
           }
-          sm.field_b = oh.field_b;
+          sm.field_b = UsernameAvailabilityResult.field_b;
           ln.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "he.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

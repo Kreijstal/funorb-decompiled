@@ -14,7 +14,7 @@ final class rd {
           hd.quickChatMenu.resetSelection((byte) 41);
         }
         if (param0 != ~ng.quickChatChannel) {
-          fl.b(true);
+          UsernameAvailabilityValidator.b(true);
         }
         HighscoresScreen.field_v = 0;
     }
@@ -167,7 +167,7 @@ final class rd {
                 continue;
               }
               var5++;
-              var8 = fl.a((CharSequence) ((Object) var7_ref_String), -28734);
+              var8 = UsernameAvailabilityValidator.a((CharSequence) ((Object) var7_ref_String), -28734);
               var4 = var4 + (var6_int - var5 + param1[var8].length());
               continue;
             }
@@ -200,7 +200,7 @@ final class rd {
               continue;
             }
             var5Lifetime1++;
-            var10 = fl.a((CharSequence) ((Object) var9), -28734);
+            var10 = UsernameAvailabilityValidator.a((CharSequence) ((Object) var9), -28734);
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(param1[var10]);

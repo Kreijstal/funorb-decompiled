@@ -14,7 +14,7 @@ final class kp {
         BitPacketBuffer packet = null;
         int payloadStart = 0;
         try {
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           int var4 = 107 / ((44 - obfuscationGuard) / 45);
           packet.writeCipheredOpcode(-13413, opcode);
           packet.position = packet.position + 1;

@@ -657,7 +657,7 @@ final class HighscoresScreen extends MenuScreen {
         this.a(0);
         if (QuickChatMenu.h(-26090)) {
           GzipInflater.a(550, 5, 243, 5, 140, (byte) -108, 45);
-          VerticalScrollbar.a(243, na.field_N, 140, ContextActionController.field_g, -15531, 2);
+          VerticalScrollbar.a(243, DateFieldsWidget.field_N, 140, ContextActionController.field_g, -15531, 2);
           return;
         }
         GzipInflater.a(475, 5, 33, 5, 140, (byte) -101, 120);
@@ -672,7 +672,7 @@ final class HighscoresScreen extends MenuScreen {
         ContextActionController.field_g.drawLeft(DualLinkIterator.field_i, -HuffmanCodec.field_g + SecondaryNodeQueue.field_b[0] + 12, var2, var3, -1);
         ContextActionController.field_g.drawRight(SpriteGeometry.field_u, SecondaryNodeQueue.field_b[1], var2, var3, -1);
         ContextActionController.field_g.drawRight(ba.field_u, SecondaryNodeQueue.field_b[2], var2, var3, -1);
-        ContextActionController.field_g.drawRight(pj.field_d, SecondaryNodeQueue.field_b[3], var2, var3, -1);
+        ContextActionController.field_g.drawRight(DebouncedValidationSource.field_d, SecondaryNodeQueue.field_b[3], var2, var3, -1);
         var2Lifetime1 = 5 * (ContextActionController.field_g.descent + ContextActionController.field_g.capHeight) / 2 + 187;
         var4 = null;
         if (rf.field_g != null &&

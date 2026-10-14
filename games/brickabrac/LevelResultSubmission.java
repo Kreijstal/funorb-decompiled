@@ -78,7 +78,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             var2 = un.field_h;
           }
           if (null != var2) {
-            na.a(-115, (String) null, (String) (var2), 0, cn.field_d);
+            DateFieldsWidget.a(-115, (String) null, (String) (var2), 0, cn.field_d);
           } else {
             var3 = tb.field_cb;
             var3 = r.a((byte) 82, var3);
@@ -89,7 +89,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             if (2 == var6) {
               var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
               var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
-              var7 = -485 + g.field_n.width + ap.field_e.width - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
+              var7 = -485 + PasswordValidator.field_n.width + ap.field_e.width - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -134,22 +134,22 @@ final class LevelResultSubmission extends IntrusiveNode {
               }
               var9 = CachedArchiveSource.field_y.measureText(var4);
               if (!ri.a(-112)) {
-                if (g.field_n.activeInside &&
-                  (-g.field_n.screenX + MusicPatch.pointerX) < var9) {
+                if (PasswordValidator.field_n.activeInside &&
+                  (-PasswordValidator.field_n.screenX + MusicPatch.pointerX) < var9) {
                   if (!um.field_e) {
                     var1 = MainMenuScreen.field_y;
                   } else {
                     var1 = "Broken!";
                   }
                 }
-                if (g.field_n.pressedButton != 0 &&
-                  var9 > g.field_n.pressLocalX &&
+                if (PasswordValidator.field_n.pressedButton != 0 &&
+                  var9 > PasswordValidator.field_n.pressLocalX &&
                   !um.field_e) {
                   LevelPackLoader.a(param0 ^ -13455);
                 }
               }
             }
-            na.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, BackgroundScene.field_i[var6]);
+            DateFieldsWidget.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, BackgroundScene.field_i[var6]);
             if (!MatchResultScreen.field_s) {
               ap.field_e.activeInside = false;
             }

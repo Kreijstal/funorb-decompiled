@@ -262,7 +262,7 @@ final class uf {
           entry.unlink((byte) 111);
           entry.unlinkSecondary(3);
           IsaacGenerator.ignoreCount = IsaacGenerator.ignoreCount - 1;
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.position = packet.position + 1;
           bodyStart = packet.position;

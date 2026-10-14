@@ -191,7 +191,7 @@ final class bd implements WidgetRenderer {
     }
 
     final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = k.outgoingPackets;
+        BitPacketBuffer var2 = TextFieldValidator.outgoingPackets;
         var2.writeCipheredOpcode(-13413, param0);
         var2.writeByte(-119, 1);
         var2.writeByte(-127, 0);

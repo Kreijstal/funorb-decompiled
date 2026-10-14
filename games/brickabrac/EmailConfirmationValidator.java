@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends k {
+final class EmailConfirmationValidator extends TextFieldValidator {
     static me field_k;
     static String[] field_m;
-    private String field_n;
-    private cb field_p;
-    private boolean field_o;
+    private String checkedEmail;
+    private MatchingTextValidator matchingValidator;
+    private boolean emailAvailable;
     static ta field_l;
     static String field_r;
     static NodeDeque field_q;
@@ -21,34 +21,34 @@ final class uc extends k {
         return (java.applet.Applet) ((Object) so.field_f);
     }
 
-    final qh a(String param0, byte param1) {
-        ac var3 = null;
+    final ValidationStatus validateText(String text, byte obfuscationGuard) {
+        EmailAvailabilityRequest var3 = null;
         RuntimeException var3_ref = null;
-        qh stackIn_2_0 = null;
-        qh stackIn_8_0 = null;
-        qh stackIn_13_0 = null;
+        ValidationStatus stackIn_2_0 = null;
+        ValidationStatus stackIn_8_0 = null;
+        ValidationStatus stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_p.a(param0, param1) == lp.field_xb) {
-            stackIn_2_0 = lp.field_xb;
+          if (this.matchingValidator.validateText(text, obfuscationGuard) == lp.validationInvalid) {
+            stackIn_2_0 = lp.validationInvalid;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_n)) {
-            var3 = hg.a(0, param0);
-            if (!var3.b(96)) {
-              stackIn_8_0 = SaveResultsPromptScreen.field_z;
+          if (!text.equals(this.checkedEmail)) {
+            var3 = hg.pollEmailAvailability(0, text);
+            if (!var3.isCompleted(96)) {
+              stackIn_8_0 = SaveResultsPromptScreen.validationPending;
               return stackIn_8_0;
             }
-            this.field_n = param0;
-            this.field_o = var3.a(false);
+            this.checkedEmail = text;
+            this.emailAvailable = var3.isAvailable(false);
           }
-          if (!this.field_o) {
-            stackIn_13_0 = lp.field_xb;
+          if (!this.emailAvailable) {
+            stackIn_13_0 = lp.validationInvalid;
           } else {
-            stackIn_13_0 = DualLinkIterator.field_c;
+            stackIn_13_0 = DualLinkIterator.validationValid;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -56,16 +56,16 @@ final class uc extends k {
           var3_ref = decompiledCaughtException;
           stackIn_16_0 = var3_ref;
           stackIn_16_1 = new StringBuilder().append("uc.B(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final String a(int param0, String param1) {
+    final String describeTextValidation(int obfuscationGuard, String text) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
@@ -75,12 +75,12 @@ final class uc extends k {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = 27 / ((-16 - param0) / 50);
-          if (this.field_p.a(param1, (byte) 106) == lp.field_xb) {
-            stackIn_2_0 = this.field_p.a(37, param1);
+          var3_int = 27 / ((-16 - obfuscationGuard) / 50);
+          if (this.matchingValidator.validateText(text, (byte) 106) == lp.validationInvalid) {
+            stackIn_2_0 = this.matchingValidator.describeTextValidation(37, text);
             return stackIn_2_0;
           }
-          if (this.a(param1, (byte) 106) != lp.field_xb) {
+          if (this.validateText(text, (byte) 106) != lp.validationInvalid) {
             return to.field_l;
           }
           stackIn_6_0 = ConstructionBackground.field_s;
@@ -89,8 +89,8 @@ final class uc extends k {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("uc.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_9_1 = new StringBuilder().append("uc.C(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
@@ -99,14 +99,14 @@ final class uc extends k {
         }
     }
 
-    uc(TextFieldWidget param0, TextFieldWidget param1) {
-        super(param0);
-        this.field_n = "";
-        this.field_o = false;
+    EmailConfirmationValidator(TextFieldWidget textField, TextFieldWidget emailField) {
+        super(textField);
+        this.checkedEmail = "";
+        this.emailAvailable = false;
         try {
-          this.field_p = new cb(param0, param1);
+          this.matchingValidator = new MatchingTextValidator(textField, emailField);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "uc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "uc.<init>(" + (textField != null ? "{...}" : "null") + ',' + (emailField != null ? "{...}" : "null") + ')');
         }
     }
 

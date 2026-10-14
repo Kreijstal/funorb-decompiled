@@ -48,11 +48,11 @@ final class un {
           RadialSelectorWidget.decodedRankingWins = RadialSelectorWidget.decodedRankingWins + (winsDrawsBoundary >> 3);
           fh.decodedRankingDraws = fh.decodedRankingDraws + (packet.readUnsignedShort(65280) << 2);
           drawsLossesBoundary = packet.readUnsignedByte(255);
-          sf.decodedRankingLosses = 2064384 & drawsLossesBoundary << 15;
+          ValidatedTextFieldWidget.decodedRankingLosses = 2064384 & drawsLossesBoundary << 15;
           fh.decodedRankingDraws = fh.decodedRankingDraws + (drawsLossesBoundary >> 6);
-          sf.decodedRankingLosses = sf.decodedRankingLosses + (packet.readUnsignedByte(255) << 7);
+          ValidatedTextFieldWidget.decodedRankingLosses = ValidatedTextFieldWidget.decodedRankingLosses + (packet.readUnsignedByte(255) << 7);
           lossesRatingBoundary = packet.readUnsignedByte(255);
-          sf.decodedRankingLosses = sf.decodedRankingLosses + (lossesRatingBoundary >> 1);
+          ValidatedTextFieldWidget.decodedRankingLosses = ValidatedTextFieldWidget.decodedRankingLosses + (lossesRatingBoundary >> 1);
           vj.decodedRankingRating = 65536 & lossesRatingBoundary << 16;
           vj.decodedRankingRating = vj.decodedRankingRating + packet.readUnsignedShort(65280);
         } catch (RuntimeException runtimeException) {

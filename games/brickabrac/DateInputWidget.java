@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ug extends WidgetGroup implements je {
+abstract class DateInputWidget extends WidgetGroup implements ValidatableWidget {
     static int field_I;
     static String field_J;
-    private an field_H;
+    private BirthDateValidator validator;
     static String field_K;
 
-    public final ia a(int param0) {
-        if (param0 != -11011) {
-          this.i(111);
-          return (ia) ((Object) this.field_H);
+    public final ValidationSource getValidationSource(int obfuscationGuard) {
+        if (obfuscationGuard != -11011) {
+          this.getYear(111);
+          return (ValidationSource) ((Object) this.validator);
         }
-        return (ia) ((Object) this.field_H);
+        return (ValidationSource) ((Object) this.validator);
     }
 
-    ug(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
-        super(param0, param1, param2, param3, param4);
+    DateInputWidget(int x, int y, int width, int height, WidgetRenderer renderer) {
+        super(x, y, width, height, renderer);
     }
 
     final static UiComponent a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, TextFont param8, int param9, int param10, int param11, int param12) {
@@ -36,7 +36,7 @@ abstract class ug extends WidgetGroup implements je {
           var13.selectedFrameSprites = ByteArrayNode.a(param5, (byte) -18, param4);
           if (param2 < 96) {
             var14 = (TextFont) null;
-            ug.a(-26, -58, (byte) 79, 5, 18, -27, 69, 4, (TextFont) null, 4, -79, 47, -32);
+            DateInputWidget.a(-26, -58, (byte) 79, 5, 18, -27, 69, 4, (TextFont) null, 4, -79, 47, -32);
           }
           var13.disabledFrameSprites = ByteArrayNode.a(param6, (byte) -18, param10);
           var13.textColor = param9;
@@ -57,34 +57,34 @@ abstract class ug extends WidgetGroup implements je {
         }
     }
 
-    abstract int i(int param0);
+    abstract int getYear(int obfuscationGuard);
 
     public static void h(int param0) {
         field_J = null;
         field_K = null;
         if (param0 != 0) {
           TextFont var2 = (TextFont) null;
-          ug.a(102, -93, (byte) 33, 30, -107, 27, -54, 36, (TextFont) null, 50, -58, -25, 44);
+          DateInputWidget.a(102, -93, (byte) 33, 30, -107, 27, -54, 36, (TextFont) null, 50, -58, -25, 44);
         }
     }
 
-    void a(an param0, byte param1) {
+    void setBirthDateValidator(BirthDateValidator validator, byte obfuscationGuard) {
         try {
-          this.field_H = param0;
-          this.field_H.field_l = this;
-          if (param1 != -12) {
-            this.field_H = (an) null;
+          this.validator = validator;
+          this.validator.dateInput = this;
+          if (obfuscationGuard != -12) {
+            this.validator = (BirthDateValidator) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ug.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ug.N(" + (validator != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    abstract int i(byte param0);
+    abstract int getMonthIndex(byte obfuscationGuard);
 
-    abstract int a(byte param0);
+    abstract int getDay(byte obfuscationGuard);
 
-    abstract boolean h(byte param0);
+    abstract boolean isDateIncomplete(byte obfuscationGuard);
 
     static {
         field_J = "You must be a member to play with the current options.";

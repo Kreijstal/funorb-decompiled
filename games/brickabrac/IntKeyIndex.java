@@ -16,23 +16,23 @@ final class IntKeyIndex {
         return param0 >= 2 ? true : false;
     }
 
-    final static oh a(int param0, String[] param1) {
-        oh var2 = null;
+    final static UsernameAvailabilityResult a(int param0, String[] param1) {
+        UsernameAvailabilityResult var2 = null;
         RuntimeException var2_ref = null;
-        oh stackIn_2_0 = null;
-        oh stackIn_4_0 = null;
+        UsernameAvailabilityResult stackIn_2_0 = null;
+        UsernameAvailabilityResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new oh(false);
+          var2 = new UsernameAvailabilityResult(false);
           var2.field_e = param1;
           if (param0 == -2079) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (oh) null;
+          stackIn_2_0 = (UsernameAvailabilityResult) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -71,7 +71,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           }
           SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.senderId, param1.senderDisplayName);
           if (param1.channel == 0 &&
-            !cb.e(-91) &&
+            !MatchingTextValidator.e(-91) &&
             null == o.currentLobbyGame &&
             nl.pendingLobbyGame == null) {
             if (!qo.field_I) {
@@ -84,7 +84,7 @@ final class ScrollPaneWithFooter extends UiComponent {
             var7.contextMenu.addAction(var8, 20, (byte) 118);
           }
           if (param1.channel == 1 &&
-            !cb.e(-128) &&
+            !MatchingTextValidator.e(-128) &&
             null != o.currentLobbyGame &&
             param1.contextId == o.currentLobbyGame.getGameId((byte) 118)) {
             if (!qo.field_I) {
@@ -175,10 +175,10 @@ final class ScrollPaneWithFooter extends UiComponent {
             MultiplayerExitScreen.a(param0, 125, var4);
             var4 = (ln) (MidiSynthesizer.field_v.next((byte) 116));
           }
-          var2 = uc.field_q.first(-54);
+          var2 = EmailConfirmationValidator.field_q.first(-54);
           while (var2 != null) {
             bd.a(param0, 92);
-            var2 = uc.field_q.next((byte) 116);
+            var2 = EmailConfirmationValidator.field_q.next((byte) 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

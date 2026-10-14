@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kf extends k {
+final class AgeValidator extends TextFieldValidator {
     static int field_k;
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -33,7 +33,7 @@ final class kf extends k {
           var15 = -param4;
           if (param10 != 8) {
             var22 = (int[]) null;
-            kf.a((int[]) null, 92, 50, 37, -19, 126, (int[]) null, 74, 68, -55, 33, -74, 59);
+            AgeValidator.a((int[]) null, 92, 50, 37, -19, 126, (int[]) null, 74, 68, -55, 33, -74, 59);
           }
           while (var15 < 0) {
             var13_int = var13_int - param7;
@@ -94,55 +94,55 @@ final class kf extends k {
         }
     }
 
-    final qh a(String param0, byte param1) {
-        int var3_int = 0;
+    final ValidationStatus validateText(String text, byte obfuscationGuard) {
+        int age = 0;
         RuntimeException var3 = null;
         ResourceArchive var4 = null;
-        CharSequence var5 = null;
-        CharSequence var6 = null;
-        qh stackIn_2_0 = null;
-        qh stackIn_9_0 = null;
+        CharSequence syntaxInput = null;
+        CharSequence parseInput = null;
+        ValidationStatus stackIn_2_0 = null;
+        ValidationStatus stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = (CharSequence) ((Object) param0);
-          if (!MeshAttributeRecord.a(var5, -125)) {
-            stackIn_2_0 = lp.field_xb;
+          syntaxInput = (CharSequence) ((Object) text);
+          if (!MeshAttributeRecord.a(syntaxInput, -125)) {
+            stackIn_2_0 = lp.validationInvalid;
             return stackIn_2_0;
           }
-          var6 = (CharSequence) ((Object) param0);
-          var3_int = fl.a(var6, -28734);
-          if (param1 != 106) {
+          parseInput = (CharSequence) ((Object) text);
+          age = UsernameAvailabilityValidator.a(parseInput, -28734);
+          if (obfuscationGuard != 106) {
             var4 = (ResourceArchive) null;
-            kf.a((String) null, (String) null, (ResourceArchive) null, -17);
+            AgeValidator.a((String) null, (String) null, (ResourceArchive) null, -17);
           }
-          if (var3_int > 0 &&
-            var3_int <= 130) {
-            return DualLinkIterator.field_c;
+          if (age > 0 &&
+            age <= 130) {
+            return DualLinkIterator.validationValid;
           }
-          stackIn_9_0 = lp.field_xb;
+          stackIn_9_0 = lp.validationInvalid;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("kf.B(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    kf(TextFieldWidget param0) {
-        super(param0);
+    AgeValidator(TextFieldWidget textField) {
+        super(textField);
     }
 
-    final String a(int param0, String param1) {
+    final String describeTextValidation(int obfuscationGuard, String text) {
         int var3_int = 0;
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
@@ -152,19 +152,19 @@ final class kf extends k {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, (byte) 106) == lp.field_xb) {
+          if (this.validateText(text, (byte) 106) == lp.validationInvalid) {
             stackIn_3_0 = FarmBackground.field_y;
             return stackIn_3_0;
           }
-          var3_int = -11 / ((param0 + 16) / 50);
+          var3_int = -11 / ((obfuscationGuard + 16) / 50);
           stackIn_5_0 = null;
           return (String) (stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("kf.C(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("kf.C(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -325,8 +325,8 @@ final class kf extends k {
           var6[7].canvasWidth = var6[7].width;
           var6[1] = FarmBackground.a(var6[1], false, 8);
           var6[7] = FarmBackground.a(var6[7], false, 8);
-          var6[3] = k.a(var6[3], 101, 8);
-          var6[5] = k.a(var6[5], 89, 8);
+          var6[3] = TextFieldValidator.a(var6[3], 101, 8);
+          var6[5] = TextFieldValidator.a(var6[5], 89, 8);
           var5 = -92 / ((-45 - param3) / 34);
           stackIn_1_0 = var4;
           return stackIn_1_0;

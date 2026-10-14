@@ -1266,7 +1266,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime136 = gr.a(!param0, "score");
           if (null != var2Lifetime136) {
-            pj.field_d = MenuButton.a(var2Lifetime136, (byte) 85);
+            DebouncedValidationSource.field_d = MenuButton.a(var2Lifetime136, (byte) 85);
           }
           var2Lifetime137 = gr.a(true, "group_0");
           if (null != var2Lifetime137) {
@@ -1410,7 +1410,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime172 = gr.a(!param0, "keycode_player0_left");
           if (var2Lifetime172 != null) {
-            ac.field_f = var2Lifetime172[0] & 255;
+            EmailAvailabilityRequest.field_f = var2Lifetime172[0] & 255;
           }
           var2Lifetime173 = gr.a(true, "keycode_player0_right");
           if (null != var2Lifetime173) {
@@ -1509,7 +1509,7 @@ final class QuickChatMenu extends UiComponent {
           FileCacheStore.a(5);
           GameplayAudioEvent.a(param0 + 14569);
           if (vg.a(param0 - 104)) {
-            k.outgoingPackets.writeCipheredOpcode(-13413, 1);
+            TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 1);
             cr.a(0, 10000);
           }
           hn.a((byte) 53);
@@ -1675,7 +1675,7 @@ final class QuickChatMenu extends UiComponent {
           }
           if (var12 < var13 &&
             0 < var9) {
-            kf.a(Rasterizer2D.pixels, var15, var13, var11, var9, var14, param3.pixels, var10, var12, var8, 8, param4, var7_int);
+            AgeValidator.a(Rasterizer2D.pixels, var15, var13, var11, var9, var14, param3.pixels, var10, var12, var8, 8, param4, var7_int);
             return;
           }
           return;

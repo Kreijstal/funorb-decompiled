@@ -29,7 +29,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         RuntimeException var3_ref = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = kf.a(param1, param2, 3);
+          var3 = AgeValidator.a(param1, param2, 3);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;
@@ -85,7 +85,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         if (TableNameEntry.field_g != null) {
           var2 = TableNameEntry.field_g;
           String var1 = var2;
-          ag.a((byte) -83, rd.a(nf.field_T, new String[]{var2}, (byte) 103));
+          ag.a((byte) -83, rd.a(ValidationMessageWidget.field_T, new String[]{var2}, (byte) 103));
           TableNameEntry.field_g = null;
         }
     }

@@ -23,7 +23,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
     final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         if (obfuscationGuard != -120) {
           String var5 = (String) null;
-          MatchCompleteScreen.a((String) null, 111);
+          MatchCompleteScreen.containsNonAlphanumeric((String) null, 111);
         }
         this.selection.navigateHorizontal(0, -1);
     }
@@ -35,7 +35,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
         return 480;
     }
 
-    final static boolean a(byte param0, String param1, String param2) {
+    final static boolean isAcceptablePassword(byte obfuscationGuard, String password, String username) {
         RuntimeException var3 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -44,28 +44,28 @@ final class MatchCompleteScreen extends MatchResultScreen {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (MatchCompleteScreen.a(param1, 0)) {
+          if (MatchCompleteScreen.containsNonAlphanumeric(password, 0)) {
             return false;
           }
-          if (DualLinkDeque.a((byte) 54, param1)) {
+          if (DualLinkDeque.consistsOfRepeatedCharacter((byte) 54, password)) {
             return false;
           }
-          if (pp.a(param1, true)) {
+          if (pp.hasInvalidPasswordLength(password, true)) {
             return false;
           }
-          if (param0 >= -38) {
+          if (obfuscationGuard >= -38) {
             return true;
           }
-          if (param2.length() == 0) {
+          if (username.length() == 0) {
             return true;
           }
-          if (MenuButton.a(param1, 0, param2)) {
+          if (MenuButton.a(password, 0, username)) {
             return false;
           }
-          if (ll.a(param1, (byte) 122, param2)) {
+          if (ll.a(password, (byte) 122, username)) {
             return false;
           }
-          if (!WidgetTextLayout.a(param1, (byte) 73, param2)) {
+          if (!WidgetTextLayout.a(password, (byte) 73, username)) {
             return true;
           }
           return false;
@@ -73,14 +73,14 @@ final class MatchCompleteScreen extends MatchResultScreen {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_30_0 = var3;
-          stackIn_30_1 = new StringBuilder().append("ab.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_30_1 = new StringBuilder().append("ab.B(").append(obfuscationGuard).append(',');
+          if (password == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
           stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param2 == null) {
+          if (username == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
@@ -93,7 +93,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
         super(20, lo.field_a);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean containsNonAlphanumeric(String text, int startOffset) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -104,8 +104,8 @@ final class MatchCompleteScreen extends MatchResultScreen {
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var2_int = param1; var2_int < param0.length(); var2_int++) {
-            var3 = param0.charAt(var2_int);
+          for (var2_int = startOffset; var2_int < text.length(); var2_int++) {
+            var3 = text.charAt(var2_int);
             if (!StateIconLabel.isAsciiLetter(true, (char) var3) &&
               !WidgetTheme.isAsciiDigit((char) var3, (byte) 95)) {
               return true;
@@ -117,12 +117,12 @@ final class MatchCompleteScreen extends MatchResultScreen {
           var2 = decompiledCaughtException;
           stackIn_12_0 = var2;
           stackIn_12_1 = new StringBuilder().append("ab.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(startOffset).append(')').toString());
         }
     }
 

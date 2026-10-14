@@ -101,10 +101,10 @@ final class to {
     final static void a(boolean param0, int param1) {
         if (param1 > -127) {
           field_f = (int[]) null;
-          LabeledWidget.field_I.a(param0, 20892);
+          LabeledWidget.emailAvailabilityRequest.complete(param0, 20892);
           return;
         }
-        LabeledWidget.field_I.a(param0, 20892);
+        LabeledWidget.emailAvailabilityRequest.complete(param0, 20892);
     }
 
     private final void a(boolean param0, sl param1) {

@@ -149,10 +149,10 @@ class UiComponent extends ba {
         }
         hoverResult = (!NinjaBackground.uiHoverClaimed) && (Rasterizer2D.clipLeft <= MusicPatch.pointerX) && (Rasterizer2D.clipRight > MusicPatch.pointerX) && (po.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.pointerY);
         this.hovered = hoverResult;
-        if (0 == cb.heldButton) {
+        if (0 == MatchingTextValidator.heldButton) {
           this.capturedButton = 0;
         }
-        activeResult = (this.hovered) && (this.capturedButton == cb.heldButton) && (inputEnabled);
+        activeResult = (this.hovered) && (this.capturedButton == MatchingTextValidator.heldButton) && (inputEnabled);
         this.activeInside = activeResult;
         if (this.children != null) {
           child = (UiComponent) (this.children.last(obfuscationGuard ^ 886229954));

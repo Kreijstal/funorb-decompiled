@@ -1,52 +1,52 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends TextFieldWidget implements je {
+final class ValidatedTextFieldWidget extends TextFieldWidget implements ValidatableWidget {
     static RgbSprite[] field_V;
     static int decodedRankingLosses;
     private int field_ab;
     static String field_bb;
     static String field_X;
     static RgbSprite[] field_U;
-    private ia field_W;
+    private ValidationSource validationSource;
     static RgbSprite constructionFarSprite;
     static RgbSprite constructionNearSprite;
 
     final void notifyTextChanged(int obfuscationGuard) {
         if (obfuscationGuard >= 7) {
           super.notifyTextChanged(90);
-          if (this.field_W != null) {
-            this.field_W.a(false);
+          if (this.validationSource != null) {
+            this.validationSource.markEdited(false);
           }
           return;
         }
-        sf.o(8);
+        ValidatedTextFieldWidget.o(8);
         super.notifyTextChanged(90);
-        if (this.field_W != null) {
-          this.field_W.a(false);
+        if (this.validationSource != null) {
+          this.validationSource.markEdited(false);
         }
     }
 
-    final void a(ia param0, byte param1) {
+    final void setValidationSource(ValidationSource validationSource, byte obfuscationGuard) {
         try {
-          if (param1 != -68) {
+          if (obfuscationGuard != -68) {
             this.notifyTextChanged(48);
           }
-          this.field_W = param0;
+          this.validationSource = validationSource;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sf.AB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sf.AB(" + (validationSource != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    sf(String param0, WidgetListener param1, int param2) {
-        super(param0, param1, param2);
+    ValidatedTextFieldWidget(String text, WidgetListener listener, int maxLength) {
+        super(text, listener, maxLength);
     }
 
-    public final ia a(int param0) {
-        if (param0 != -11011) {
-          return (ia) null;
+    public final ValidationSource getValidationSource(int obfuscationGuard) {
+        if (obfuscationGuard != -11011) {
+          return (ValidationSource) null;
         }
-        return this.field_W;
+        return this.validationSource;
     }
 
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
@@ -84,7 +84,7 @@ final class sf extends TextFieldWidget implements je {
           field_V = null;
           return;
         }
-        sf.o(121);
+        ValidatedTextFieldWidget.o(121);
         field_V = null;
     }
 

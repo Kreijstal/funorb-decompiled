@@ -112,8 +112,8 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         if (!(2 <= GameConnectionShell.clientStage)) {
           return kd.field_c;
         }
-        if (null != wl.field_K) {
-          if (!wl.field_K.ensureIndex((byte) -127)) {
+        if (null != ValidationIconWidget.field_K) {
+          if (!ValidationIconWidget.field_K.ensureIndex((byte) -127)) {
             return wn.field_a;
           }
           return FocusableWidget.field_C;

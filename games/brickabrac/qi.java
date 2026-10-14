@@ -174,7 +174,7 @@ final class qi extends FocusableWidget {
             return;
           }
           if (1 == responseType) {
-            submission = (AchievementSubmission) (na.pendingAchievementSubmissions.first(obfuscationGuard ^ 86));
+            submission = (AchievementSubmission) (DateFieldsWidget.pendingAchievementSubmissions.first(obfuscationGuard ^ 86));
             if (submission == null) {
               hn.a((byte) 103);
               return;

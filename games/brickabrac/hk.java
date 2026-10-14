@@ -97,7 +97,7 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
           }
           param2.decodedFilePolicy = 0;
           param2.discardPackedGroups = false;
-          pj.field_c = new so(var3_int, param2, param2);
+          DebouncedValidationSource.field_c = new so(var3_int, param2, param2);
           nh.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, param2, param2, new rm());
           var4 = gj.b(0);
           if (var4 == null) {
@@ -106,9 +106,9 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
           }
           ResourceRequest.a(var4, false);
           var10 = (TextFont) null;
-          ArchiveIndex.field_j = ug.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
-          SoftwareFramebuffer.field_e = ug.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
-          WidgetLayerStack.field_K = ug.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
+          ArchiveIndex.field_j = DateInputWidget.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
+          SoftwareFramebuffer.field_e = DateInputWidget.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
+          WidgetLayerStack.field_K = DateInputWidget.a(0, 0, (byte) 113, 0, 0, 0, 0, 0, param0, 16777215, 0, 0, 0);
           var5 = Rasterizer2D.width;
           var6 = Rasterizer2D.height;
           var14 = Rasterizer2D.pixels;
@@ -346,8 +346,8 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
             this.field_S)) {
             throw new IllegalStateException();
           }
-          this.field_P = (TextFieldWidget) ((Object) new sf(param0, (WidgetListener) (this), 100));
-          this.field_T = (TextFieldWidget) ((Object) new sf("", (WidgetListener) (this), 20));
+          this.field_P = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget(param0, (WidgetListener) (this), 100));
+          this.field_T = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget("", (WidgetListener) (this), 20));
           if (!this.field_K) {
             this.field_U = new FocusableWidget(ok.field_a, (WidgetListener) null);
             stackIn_18_1 = null;
@@ -380,7 +380,7 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
           if (this.field_O != null) {
             this.field_O.renderer = (WidgetRenderer) ((Object) var6);
           }
-          this.field_P.tooltip = sf.field_X;
+          this.field_P.tooltip = ValidatedTextFieldWidget.field_X;
           if (this.field_O != null) {
             this.field_O.tooltip = MidiSynthesizer.field_q;
           }
@@ -400,8 +400,8 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
             this.y = this.y + (5 + var7.measureWrappedHeight(this.field_N, -40 + this.width, var7.ascent));
           }
           var8 = PlayerInputBatch.field_p;
-          var9 = qi.a(uc.e((byte) -115), -28432);
-          if (uc.field_k == var9) {
+          var9 = qi.a(EmailConfirmationValidator.e((byte) -115), -28432);
+          if (EmailConfirmationValidator.field_k == var9) {
             var8 = sq.field_a;
           } else {
             if (ll.field_d == var9) {

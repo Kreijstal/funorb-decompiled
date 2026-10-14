@@ -109,10 +109,10 @@ final class AlignedIconLabel extends UiComponent {
               var3 = var3 + param0;
             }
             me.a(var3, -107);
-            var7 = oh.a((byte) 13, "%3a", var3, ":");
-            var8 = oh.a((byte) 13, "%40", var7, "@");
-            var9 = oh.a((byte) 13, "%26", var8, "&");
-            var10 = oh.a((byte) 13, "%23", var9, "#");
+            var7 = UsernameAvailabilityResult.a((byte) 13, "%3a", var3, ":");
+            var8 = UsernameAvailabilityResult.a((byte) 13, "%40", var7, "@");
+            var9 = UsernameAvailabilityResult.a((byte) 13, "%26", var8, "&");
+            var10 = UsernameAvailabilityResult.a((byte) 13, "%23", var9, "#");
             if (null == SecondaryHashTable.field_i) {
               return;
             }

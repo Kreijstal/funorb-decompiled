@@ -271,9 +271,9 @@ final class ParisBackground extends BackgroundScene {
           sh.field_d.addChild(AchievementIcon.field_q, param8 - 61);
           BallPulseEffect.field_n = new UiComponent(0L, param3);
           sh.field_d.addChild(BallPulseEffect.field_n, 0);
-          g.field_n = new UiComponent(0L, param7);
-          g.field_n.font = CachedArchiveSource.field_y;
-          BallPulseEffect.field_n.addChild(g.field_n, 0);
+          PasswordValidator.field_n = new UiComponent(0L, param7);
+          PasswordValidator.field_n.font = CachedArchiveSource.field_y;
+          BallPulseEffect.field_n.addChild(PasswordValidator.field_n, 0);
           BallPulseEffect.field_n.markDescendantsToInheritVisualState(true);
           ap.field_e = new UiComponent(0L, (UiComponent) null);
           ap.field_e.frameSprites = var16;

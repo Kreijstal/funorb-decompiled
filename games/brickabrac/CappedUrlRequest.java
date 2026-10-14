@@ -71,7 +71,7 @@ final class CappedUrlRequest implements Runnable {
           } else {
             try {
               eq.gameTransport = new BufferedSocket((java.net.Socket) (qm.field_d.result), FramedMenuScreen.field_s);
-              k.outgoingPackets.position = 0;
+              TextFieldValidator.outgoingPackets.position = 0;
               var4 = jl.incomingPackets;
               var5 = var4;
               stackIn_11_0 = (!param0) ? -1 : -2;
@@ -80,7 +80,7 @@ final class CappedUrlRequest implements Runnable {
               UiComponent.previousPacketOpcode = stackIn_11_0;
               rf.field_b = BitPacketBuffer.field_u;
               var5.position = 0;
-              c.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, fe.field_ob, k.outgoingPackets);
+              c.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, fe.field_ob, TextFieldValidator.outgoingPackets);
               cr.a(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -233,7 +233,7 @@ final class LevelSelectScreen extends MenuScreen {
             var5.serverName != null) {
             return true;
           }
-          stackIn_9_0 = (o.currentLobbyGame != null) && (null != ac.findGamePlayer(param0, 2));
+          stackIn_9_0 = (o.currentLobbyGame != null) && (null != EmailAvailabilityRequest.findGamePlayer(param0, 2));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,7 +290,7 @@ final class LevelSelectScreen extends MenuScreen {
           AchievementSubmission var2 = (AchievementSubmission) null;
           LevelSelectScreen.sendAchievementSubmission(67, (AchievementSubmission) null, (byte) 80);
         }
-        if (!LabeledWidget.field_I.b(96)) {
+        if (!LabeledWidget.emailAvailabilityRequest.isCompleted(96)) {
           return LobbyGame.field_pc;
         }
         return GameScreen.field_d;
@@ -307,7 +307,7 @@ final class LevelSelectScreen extends MenuScreen {
         this.maxNumberLabelWidth = 0;
         try {
           this.emptySelectionText = RichTextLayout.field_s.toLowerCase();
-          this.pack = na.field_L[packIndex];
+          this.pack = DateFieldsWidget.field_L[packIndex];
           for (var4_int = 0; this.pack.levelCount > var4_int; var4_int++) {
             var5 = ContextActionController.field_g.measureText(this.pack.metadata[var4_int].numberLabel);
             if (var5 > this.maxNumberLabelWidth) {
@@ -367,7 +367,7 @@ final class LevelSelectScreen extends MenuScreen {
         BitPacketBuffer packet = null;
         int payloadStart = 0;
         try {
-          packet = k.outgoingPackets;
+          packet = TextFieldValidator.outgoingPackets;
           packet.writeCipheredOpcode(-13413, opcode);
           packet.position = packet.position + 1;
           payloadStart = packet.position;

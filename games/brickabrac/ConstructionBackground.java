@@ -100,10 +100,10 @@ final class ConstructionBackground extends BackgroundScene {
         } else {
           var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            tf.a(0, colorIndex, var6, 1, 114, sf.constructionFarSprite);
+            tf.a(0, colorIndex, var6, 1, 114, ValidatedTextFieldWidget.constructionFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ConstructionBackground.a(sf.constructionNearSprite, 1, scroll16, 640, 0, AchievementBrowserScreen.constructionMidSprite, destinationX, 5, destinationY, 480, IntNode.constructionSmokeSprite, colorIndex, var6.sprite);
+          ConstructionBackground.a(ValidatedTextFieldWidget.constructionNearSprite, 1, scroll16, 640, 0, AchievementBrowserScreen.constructionMidSprite, destinationX, 5, destinationY, 480, IntNode.constructionSmokeSprite, colorIndex, var6.sprite);
         }
     }
 
@@ -111,14 +111,14 @@ final class ConstructionBackground extends BackgroundScene {
         if (!AchievementIcon.field_m.ensureGroupAvailableByName("construct", -28138)) {
           return false;
         }
-        sf.constructionNearSprite = pl.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.field_m);
+        ValidatedTextFieldWidget.constructionNearSprite = pl.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.field_m);
         AchievementBrowserScreen.constructionMidSprite = pl.loadRgbSpriteByName("construct", "construction_mid", (byte) 102, AchievementIcon.field_m);
-        sf.constructionFarSprite = pl.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.field_m);
+        ValidatedTextFieldWidget.constructionFarSprite = pl.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.field_m);
         IntNode.constructionSmokeSprite = pl.loadRgbSpriteByName("construct", "construction_smoke", (byte) -128, AchievementIcon.field_m);
         MenuSelection.constructionSmallSprite = pl.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.field_m);
-        t.field_a = jh.a(0, sf.constructionNearSprite);
+        t.field_a = jh.a(0, ValidatedTextFieldWidget.constructionNearSprite);
         IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.constructionMidSprite);
-        hg.field_g = jh.a(0, sf.constructionFarSprite);
+        hg.field_g = jh.a(0, ValidatedTextFieldWidget.constructionFarSprite);
         er.field_d = jh.a(0, IntNode.constructionSmokeSprite);
         rd.constructionCapsSprites[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_caps", 2);
         NodeDequeCursor.constructionSegsSprites[0] = cr.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_segs", 2);
@@ -140,7 +140,7 @@ final class ConstructionBackground extends BackgroundScene {
           var3 = var2 - hc.field_f * hc.field_f;
           param1 = param1 + var3 * (ej.field_O - param1) / var2;
         }
-        DualLinkDeque.field_d.setBounds(120, param1, qh.field_f, 640, (byte) 64);
+        DualLinkDeque.field_d.setBounds(120, param1, ValidationStatus.field_f, 640, (byte) 64);
         VerticalScrollbar.a(kn.field_z, 5, ej.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
         if (param0 > -70) {
           RgbSprite var4 = (RgbSprite) null;
@@ -200,7 +200,7 @@ final class ConstructionBackground extends BackgroundScene {
         if (obfuscationGuard >= -91) {
           this.a((byte) -78, -121);
         }
-        stackIn_9_0 = (null != sf.constructionNearSprite) && (AchievementBrowserScreen.constructionMidSprite != null) && (null != sf.constructionFarSprite) && (null != IntNode.constructionSmokeSprite) && (MenuSelection.constructionSmallSprite != null);
+        stackIn_9_0 = (null != ValidatedTextFieldWidget.constructionNearSprite) && (AchievementBrowserScreen.constructionMidSprite != null) && (null != ValidatedTextFieldWidget.constructionFarSprite) && (null != IntNode.constructionSmokeSprite) && (MenuSelection.constructionSmallSprite != null);
         return stackIn_9_0;
     }
 

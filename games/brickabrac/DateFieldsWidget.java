@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends ug {
-    private boolean field_P;
-    private TextFieldWidget field_R;
-    private TextFieldWidget field_O;
-    private TextFieldWidget field_M;
+final class DateFieldsWidget extends DateInputWidget {
+    private boolean monthFirst;
+    private TextFieldWidget dayField;
+    private TextFieldWidget yearField;
+    private TextFieldWidget monthField;
     static LevelPack[] field_L;
     static String field_N;
     static NodeDeque pendingAchievementSubmissions;
@@ -13,24 +13,24 @@ final class na extends ug {
     final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, (byte) -119, width);
         int var6 = -130 + width >> 1;
-        if (!this.field_P) {
-          this.field_R.setBounds(height, var6, 0, (byte) -119, 25);
-          this.field_M.setBounds(height, var6 + 45, 0, (byte) -119, 25);
-          this.field_O.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
+        if (!this.monthFirst) {
+          this.dayField.setBounds(height, var6, 0, (byte) -119, 25);
+          this.monthField.setBounds(height, var6 + 45, 0, (byte) -119, 25);
+          this.yearField.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
           return;
         }
-        this.field_M.setBounds(height, var6, 0, (byte) -119, 25);
-        this.field_R.setBounds(height, 45 + var6, 0, (byte) -119, 25);
-        this.field_O.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
+        this.monthField.setBounds(height, var6, 0, (byte) -119, 25);
+        this.dayField.setBounds(height, 45 + var6, 0, (byte) -119, 25);
+        this.yearField.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
     }
 
     final String getTooltip(int obfuscationGuard) {
-        String var2 = this.field_M.getTooltip(77);
+        String var2 = this.monthField.getTooltip(77);
         if (var2 != null) {
           return var2;
         }
         if (obfuscationGuard <= 6) {
-          na.j((byte) -82);
+          DateFieldsWidget.j((byte) -82);
           if (this.mouseOver) {
             return this.tooltip == null ? this.text : this.tooltip;
           }
@@ -42,26 +42,26 @@ final class na extends ug {
         return null;
     }
 
-    final void a(an param0, byte param1) {
+    final void setBirthDateValidator(BirthDateValidator validator, byte obfuscationGuard) {
         try {
-          super.a(param0, param1);
-          this.field_R.listener = (WidgetListener) ((Object) param0);
-          this.field_M.listener = (WidgetListener) ((Object) param0);
-          this.field_O.listener = (WidgetListener) ((Object) param0);
+          super.setBirthDateValidator(validator, obfuscationGuard);
+          this.dayField.listener = (WidgetListener) ((Object) validator);
+          this.monthField.listener = (WidgetListener) ((Object) validator);
+          this.yearField.listener = (WidgetListener) ((Object) validator);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.N(" + (validator != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    final int i(int param0) {
+    final int getYear(int obfuscationGuard) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        if (param0 != 5390) {
-          this.field_M = (TextFieldWidget) null;
+        if (obfuscationGuard != 5390) {
+          this.monthField = (TextFieldWidget) null;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_O.text);
+          stackIn_3_0 = Integer.parseInt(this.yearField.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,36 +104,36 @@ final class na extends ug {
         if (!param0) {
           return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
         }
-        na.a(false, 118, 124, -92, 47, -40);
+        DateFieldsWidget.a(false, 118, 124, -92, 47, -40);
         return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
     }
 
-    private na(WidgetRenderer param0, boolean param1) {
+    private DateFieldsWidget(WidgetRenderer renderer, boolean monthFirst) {
         super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.field_R = (TextFieldWidget) ((Object) new sf("", (WidgetListener) null, 2));
-          this.field_M = (TextFieldWidget) ((Object) new sf("", (WidgetListener) null, 2));
-          this.field_O = (TextFieldWidget) ((Object) new sf("", (WidgetListener) null, 4));
-          this.field_O.renderer = param0;
-          this.field_M.renderer = param0;
-          this.field_R.renderer = param0;
-          this.field_P = param1 ? true : false;
-          if (!this.field_P) {
-            this.addChild(this.field_R, true);
-            this.addChild(this.field_M, true);
+          this.dayField = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget("", (WidgetListener) null, 2));
+          this.monthField = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget("", (WidgetListener) null, 2));
+          this.yearField = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget("", (WidgetListener) null, 4));
+          this.yearField.renderer = renderer;
+          this.monthField.renderer = renderer;
+          this.dayField.renderer = renderer;
+          this.monthFirst = monthFirst ? true : false;
+          if (!this.monthFirst) {
+            this.addChild(this.dayField, true);
+            this.addChild(this.monthField, true);
           } else {
-            this.addChild(this.field_M, true);
-            this.addChild(this.field_R, true);
+            this.addChild(this.monthField, true);
+            this.addChild(this.dayField, true);
           }
-          this.addChild(this.field_O, true);
+          this.addChild(this.yearField, true);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.<init>(" + (renderer != null ? "{...}" : "null") + ',' + monthFirst + ')');
         }
     }
 
     final static boolean j(byte param0) {
         if (param0 != -60) {
-          na.a(true, 76, -125, -71, 104, -123);
+          DateFieldsWidget.a(true, 76, -125, -71, 104, -123);
           if (MusicCrossfadeStream.nameEntryPopup == null) {
             return false;
           }
@@ -151,24 +151,24 @@ final class na extends ug {
         return false;
     }
 
-    final boolean h(byte param0) {
-        if (null == this.field_R.text) {
+    final boolean isDateIncomplete(byte obfuscationGuard) {
+        if (null == this.dayField.text) {
           return true;
         }
-        if (0 == this.field_R.text.length()) {
+        if (0 == this.dayField.text.length()) {
           return true;
         }
-        if (this.field_M.text == null) {
+        if (this.monthField.text == null) {
           return true;
         }
-        if (this.field_M.text.length() == 0) {
+        if (this.monthField.text.length() == 0) {
           return true;
         }
-        if (param0 != -124) {
+        if (obfuscationGuard != -124) {
           pendingAchievementSubmissions = (NodeDeque) null;
         }
-        if (this.field_O.text != null &&
-          this.field_O.text.length() != 0) {
+        if (this.yearField.text != null &&
+          this.yearField.text.length() != 0) {
           return false;
         }
         return true;
@@ -185,16 +185,16 @@ final class na extends ug {
 
     final static void a(int param0, String param1, String param2, int param3, int param4) {
         try {
-          g.field_n.textColor = param4;
-          g.field_n.textSuffix = param1;
-          g.field_n.text = param2;
-          g.field_n.width = g.field_n.width + ap.field_e.width;
+          PasswordValidator.field_n.textColor = param4;
+          PasswordValidator.field_n.textSuffix = param1;
+          PasswordValidator.field_n.text = param2;
+          PasswordValidator.field_n.width = PasswordValidator.field_n.width + ap.field_e.width;
           ap.field_e.localX = ap.field_e.localX + ap.field_e.width;
           ap.field_e.width = param3;
           if (param0 >= -72) {
-            na.a(true, true, 77, -47);
+            DateFieldsWidget.a(true, true, 77, -47);
           }
-          g.field_n.width = g.field_n.width - ap.field_e.width;
+          PasswordValidator.field_n.width = PasswordValidator.field_n.width - ap.field_e.width;
           ap.field_e.localX = ap.field_e.localX - ap.field_e.width;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
@@ -276,19 +276,19 @@ final class na extends ug {
         if (layer == 0) {
           parentY = parentY + this.y;
           parentX = parentX + this.x;
-          this.a(this.field_R, ej.field_M, (byte) 127, parentX, parentY);
-          this.a(this.field_M, rl.field_f, (byte) 123, parentX, parentY);
-          this.a(this.field_O, kk.field_f, (byte) -86, parentX, parentY);
+          this.a(this.dayField, ej.field_M, (byte) 127, parentX, parentY);
+          this.a(this.monthField, rl.field_f, (byte) 123, parentX, parentY);
+          this.a(this.yearField, kk.field_f, (byte) -86, parentX, parentY);
           return;
         }
     }
 
-    na(WidgetRenderer param0, boolean param1, int param2, int param3, int param4, int param5) {
-        this(param0, param1);
+    DateFieldsWidget(WidgetRenderer renderer, boolean monthFirst, int x, int y, int width, int height) {
+        this(renderer, monthFirst);
         try {
-          this.setBounds(param5, param2, param3, (byte) -119, param4);
+          this.setBounds(height, x, y, (byte) -119, width);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.<init>(" + (renderer != null ? "{...}" : "null") + ',' + monthFirst + ',' + x + ',' + y + ',' + width + ',' + height + ')');
         }
     }
 
@@ -761,15 +761,15 @@ final class na extends ug {
         field_N = null;
     }
 
-    final int a(byte param0) {
+    final int getDay(byte obfuscationGuard) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
-        if (param0 > -79) {
-          this.field_P = true;
+        if (obfuscationGuard > -79) {
+          this.monthFirst = true;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_R.text);
+          stackIn_3_0 = Integer.parseInt(this.dayField.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -778,15 +778,15 @@ final class na extends ug {
         }
     }
 
-    final int i(byte param0) {
+    final int getMonthIndex(byte obfuscationGuard) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         try {
-          if (param0 != -117) {
+          if (obfuscationGuard != -117) {
             field_N = (String) null;
           }
-          stackIn_3_0 = Integer.parseInt(this.field_M.text) - 1;
+          stackIn_3_0 = Integer.parseInt(this.monthField.text) - 1;
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

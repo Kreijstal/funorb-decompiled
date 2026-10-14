@@ -117,9 +117,9 @@ final class CacheIoWorker implements Runnable {
           sh.field_d.setBounds(-6 + DualLinkDeque.field_d.height, 3, 3, -6 + var6_int, (byte) 64);
           var7 = -5 + sh.field_d.height;
           BallPulseEffect.field_n.setBounds(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
-          g.field_n.setBounds(param3, 0, param1, -ap.field_e.width - param1 + BallPulseEffect.field_n.width, (byte) 64);
+          PasswordValidator.field_n.setBounds(param3, 0, param1, -ap.field_e.width - param1 + BallPulseEffect.field_n.width, (byte) 64);
           var8 = 3 / ((49 - param0) / 40);
-          ap.field_e.setBounds(param3, 0, param1 + g.field_n.width, ap.field_e.width, (byte) 64);
+          ap.field_e.setBounds(param3, 0, param1 + PasswordValidator.field_n.width, ap.field_e.width, (byte) 64);
           var7 = var7 - (param3 + 2);
           AchievementIcon.field_q.setScrollPaneBounds(2, (byte) -110, 2 + (485 + param1) + param4, 5, 5, param4, var7 - 5);
           if (null != vd.field_a) {

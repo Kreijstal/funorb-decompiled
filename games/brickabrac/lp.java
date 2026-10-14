@@ -10,7 +10,7 @@ class lp extends fe implements WidgetActionListener {
     private boolean field_zb;
     static RgbSprite[] field_yb;
     static UiComponent field_Ab;
-    static qh field_xb;
+    static ValidationStatus validationInvalid;
     private TextFont field_sb;
     static GameScreen currentScreen;
     static PlatformServices field_ub;
@@ -70,7 +70,7 @@ class lp extends fe implements WidgetActionListener {
         this.field_qb.b(2121792, 4210752, 2);
         ec var2 = new ec(this, this.field_sb, FarmBackground.field_t);
         if (param0 < -11) {
-          var2.a(false, pj.field_e, 15);
+          var2.a(false, DebouncedValidationSource.field_e, 15);
           this.b((byte) 110, var2);
           return;
         }
@@ -84,7 +84,7 @@ class lp extends fe implements WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_Bb) {
-            kf.a("tochangedisplayname.ws", (byte) -113, uc.e((byte) -103));
+            AgeValidator.a("tochangedisplayname.ws", (byte) -113, EmailConfirmationValidator.e((byte) -103));
           } else {
             bd.a(3, true);
             this.m(17);
@@ -155,7 +155,7 @@ class lp extends fe implements WidgetActionListener {
           if (param0 != 3) {
             if (param0 != 4) {
               if (param0 == 6) {
-                var6.a(false, cb.field_p, 9);
+                var6.a(false, MatchingTextValidator.field_p, 9);
               } else {
                 if (9 == param0) {
                   var6.a((byte) 126, BrickABrac.field_G, (WidgetListener) (this));
@@ -207,7 +207,7 @@ class lp extends fe implements WidgetActionListener {
           }
           this.visible = false;
           if (this.field_vb) {
-            cb.e((byte) -46);
+            MatchingTextValidator.e((byte) -46);
             return;
           }
           if (this.field_tb) {
@@ -221,7 +221,7 @@ class lp extends fe implements WidgetActionListener {
         }
         this.visible = false;
         if (this.field_vb) {
-          cb.e((byte) -46);
+          MatchingTextValidator.e((byte) -46);
           return;
         }
         if (this.field_tb) {
@@ -236,17 +236,17 @@ class lp extends fe implements WidgetActionListener {
         currentScreen = null;
         field_Ab = null;
         if (param0 == 50) {
-          field_xb = null;
+          validationInvalid = null;
           field_yb = null;
           return;
         }
         lp.o(29);
-        field_xb = null;
+        validationInvalid = null;
         field_yb = null;
     }
 
     static {
         queuedAchievementSubmissions = new NodeDeque();
-        field_xb = new qh();
+        validationInvalid = new ValidationStatus();
     }
 }
