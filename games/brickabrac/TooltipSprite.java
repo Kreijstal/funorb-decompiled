@@ -94,8 +94,8 @@ final class TooltipSprite extends IntrusiveNode {
         if (obfuscationGuard != 0) {
           return;
         }
-        this.hovered = AccountResponse.a(MusicPatch.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
-        this.hovered = this.sprite.containsPixel(this.x, this.y, MusicPatch.pointerX, po.pointerY);
+        this.hovered = AccountResponse.a(MusicPatch.pointerX, ResourcePreparationEntry.pointerY, (byte) -24, this.y, this.x, this.sprite);
+        this.hovered = this.sprite.containsPixel(this.x, this.y, MusicPatch.pointerX, ResourcePreparationEntry.pointerY);
     }
 
     final static void e(int param0) {
@@ -231,7 +231,7 @@ final class TooltipSprite extends IntrusiveNode {
           return;
         }
         if (this.hovered) {
-          ScrollPaneWithFooter.a(-IntKeyIndex.field_b + MusicPatch.pointerX, -BackgroundScene.field_a + po.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
+          ScrollPaneWithFooter.a(-IntKeyIndex.field_b + MusicPatch.pointerX, -BackgroundScene.field_a + ResourcePreparationEntry.pointerY, this.tooltipHeight, this.tooltipWidth, this.tooltipText, 16777215);
         }
     }
 

@@ -162,7 +162,7 @@ final class Mesh3D {
               ArrayWidgetGroup.buttonLabels[12] = qm.field_c;
             } else {
               if ((1 << IntArrayRequest.gameplayScreen.localPlayerId | IntArrayRequest.gameplayScreen.rematchSetupPlayerMask) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
-                ArrayWidgetGroup.buttonLabels[12] = s.field_a;
+                ArrayWidgetGroup.buttonLabels[12] = ResourcePreparationQueue.field_a;
               } else {
                 ArrayWidgetGroup.buttonLabels[12] = TabbedPane.field_Pb;
               }

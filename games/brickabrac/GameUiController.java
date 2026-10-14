@@ -158,22 +158,22 @@ final class GameUiController implements GameUiLifecycle {
         IntHistoryBuffer.field_i = aj.a(12, true);
         QuickChatPhraseDefinition.field_C = aj.a(13, true);
         wn.a(NameEntryPopup.field_Rb, wn.field_c, 0);
-        AccountContentTransitionLayer.field_tb = new s(82);
-        AccountContentTransitionLayer.field_tb.a(tm.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
-        AccountContentTransitionLayer.field_tb.a(tm.field_e, "lobby", 126, WidgetGroup.field_F, NameEntryPopup.field_Rb);
-        AccountContentTransitionLayer.field_tb.a(tm.field_e, "lobby", 124, WidgetGroup.field_F, wn.field_c);
-        AccountContentTransitionLayer.field_tb.a(tm.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
-        AccountContentTransitionLayer.field_tb.a(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
-        AccountContentTransitionLayer.field_tb.a(RadialSelectorWidget.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
-        AccountContentTransitionLayer.field_tb.a(RadialSelectorWidget.field_P, "kartika13", 127, m.field_k, wn.field_c);
-        AccountContentTransitionLayer.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);
-        AccountContentTransitionLayer.field_tb.a(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
-        AccountContentTransitionLayer.field_tb.a(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
-        AccountContentTransitionLayer.field_tb.a(NodeDequeCursor.field_i, false, AlternateNumericLoginCredentials.field_n, LinkWidgetRenderer.field_a);
-        AccountContentTransitionLayer.field_tb.a(nl.field_a, false, fa.field_j, uo.field_a);
-        AccountContentTransitionLayer.field_tb.a(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
-        AccountContentTransitionLayer.field_tb.a(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
-        AccountContentTransitionLayer.field_tb.a(uf.field_a, false, IntHistoryBuffer.field_k, qm.field_e);
+        AccountContentTransitionLayer.startupResources = new ResourcePreparationQueue(82);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 126, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 124, WidgetGroup.field_F, wn.field_c);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "kartika13", 127, m.field_k, wn.field_c);
+        AccountContentTransitionLayer.startupResources.addArchive(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);
+        AccountContentTransitionLayer.startupResources.addArchive(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
+        AccountContentTransitionLayer.startupResources.addArchive(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
+        AccountContentTransitionLayer.startupResources.addArchive(NodeDequeCursor.field_i, false, AlternateNumericLoginCredentials.field_n, LinkWidgetRenderer.field_a);
+        AccountContentTransitionLayer.startupResources.addArchive(nl.field_a, false, fa.field_j, uo.field_a);
+        AccountContentTransitionLayer.startupResources.addArchive(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
+        AccountContentTransitionLayer.startupResources.addArchive(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
+        AccountContentTransitionLayer.startupResources.addArchive(uf.field_a, false, IntHistoryBuffer.field_k, qm.field_e);
     }
 
     public final boolean pollUiBootstrap(byte obfuscationGuard) {

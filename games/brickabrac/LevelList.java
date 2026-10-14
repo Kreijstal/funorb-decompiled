@@ -97,7 +97,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[26] = PauseMenuScreen.field_u;
         ArrayWidgetGroup.buttonLabels[22] = FocusableWidget.field_D;
         CacheEntry.field_A[13] = TimedSplashScreen.field_s;
-        hm.field_b = new String[]{ContentTransitionPhase.field_a, qm.field_c, TabbedPane.field_Pb, s.field_a};
+        hm.field_b = new String[]{ContentTransitionPhase.field_a, qm.field_c, TabbedPane.field_Pb, ResourcePreparationQueue.field_a};
         CacheEntry.field_A[16] = MeshAttributeRecord.field_d;
         qn.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
         WidgetTheme.field_e = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, bq.field_f, jh.field_c};
@@ -177,7 +177,7 @@ final class LevelList {
     final void selectFirst(byte obfuscationGuard) {
         this.lastPointerX = MusicPatch.pointerX;
         this.scrollOffset = 0;
-        this.lastPointerY = po.pointerY;
+        this.lastPointerY = ResourcePreparationEntry.pointerY;
         this.keyboardSelection = true;
         this.selectedLevelIndex = 0;
         int var2 = 125 % ((-49 - obfuscationGuard) / 41);
@@ -253,7 +253,7 @@ final class LevelList {
         if (obfuscationGuard >= -39) {
           this.scrollBy(47, false);
         }
-        this.lastPointerY = po.pointerY;
+        this.lastPointerY = ResourcePreparationEntry.pointerY;
         this.lastPointerX = MusicPatch.pointerX;
     }
 
@@ -272,8 +272,8 @@ final class LevelList {
           this.keyboardSelection = this.keyboardSelection & (GameplayAudioEvent.mouseWheelDelta == 0 ? true : false);
           if (!this.keyboardSelection ||
             MusicPatch.pointerX != this.lastPointerX ||
-            this.lastPointerY != po.pointerY) {
-            this.selectedLevelIndex = df.divideFloorPositive(this.rowSpacing, (byte) 15, po.pointerY - (this.viewport.y - (-this.rowGap + this.scrollOffset)));
+            this.lastPointerY != ResourcePreparationEntry.pointerY) {
+            this.selectedLevelIndex = df.divideFloorPositive(this.rowSpacing, (byte) 15, ResourcePreparationEntry.pointerY - (this.viewport.y - (-this.rowGap + this.scrollOffset)));
             if (this.selectedLevelIndex < 0) {
               this.selectedLevelIndex = 0;
             }
@@ -281,7 +281,7 @@ final class LevelList {
               this.selectedLevelIndex = this.pack.levelCount;
             }
           }
-          this.lastPointerY = po.pointerY;
+          this.lastPointerY = ResourcePreparationEntry.pointerY;
           this.lastPointerX = MusicPatch.pointerX;
         }
         if (obfuscationGuard) {

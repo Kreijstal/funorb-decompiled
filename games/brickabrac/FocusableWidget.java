@@ -213,11 +213,11 @@ class FocusableWidget extends Widget {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
           if (this.pressedButton != 0 &&
             MatchingTextValidator.heldButton != this.pressedButton) {
-            if (this.containsPoint(po.pointerY, parentY, parentX, obfuscationGuard + 3, MusicPatch.pointerX) &&
+            if (this.containsPoint(ResourcePreparationEntry.pointerY, parentY, parentX, obfuscationGuard + 3, MusicPatch.pointerX) &&
               MatchingTextValidator.heldButton == 0) {
-              this.dispatchAction(po.pointerY - parentY, this.pressedButton, -79, -parentX + MusicPatch.pointerX);
+              this.dispatchAction(ResourcePreparationEntry.pointerY - parentY, this.pressedButton, -79, -parentX + MusicPatch.pointerX);
             }
-            this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, parentY, focusRoot, 19223, parentX);
+            this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, parentY, focusRoot, 19223, parentX);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "d.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');

@@ -90,7 +90,7 @@ final class MainMenuScreen extends MenuScreen {
         if (obfuscationGuard > -14) {
           field_s = (RgbSprite) null;
         }
-        IntrusiveHashTable.a(MusicPatch.pointerX, (byte) -118, po.pointerY, hc.field_h);
+        IntrusiveHashTable.a(MusicPatch.pointerX, (byte) -118, ResourcePreparationEntry.pointerY, hc.field_h);
         if (!DelayedPacket.c(77)) {
           var4 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var4 != null) {

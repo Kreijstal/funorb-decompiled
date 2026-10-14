@@ -41,7 +41,7 @@ final class TableNameEntry {
               var3_int = 1;
               GameplayAudioEvent.redrawRequested = false;
             }
-            po.a(ArchiveNetworkRequest.d((byte) 103), BrickGameLayerController.field_f, RichTextLayout.b(false), var3_int != 0, 0);
+            ResourcePreparationEntry.a(ArchiveNetworkRequest.d((byte) 103), BrickGameLayerController.field_f, RichTextLayout.b(false), var3_int != 0, 0);
             return;
           }
           if (!BubbleDistortion.e((byte) -94)) {

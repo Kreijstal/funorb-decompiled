@@ -43,7 +43,7 @@ final class MusicVoice extends IntrusiveNode {
           if (-1 == ChocolateBackground.field_v &&
             ll.field_b == -1) {
             ChocolateBackground.field_v = MusicPatch.pointerX;
-            ll.field_b = po.pointerY;
+            ll.field_b = ResourcePreparationEntry.pointerY;
           }
           if (param1 != 22546) {
             return;

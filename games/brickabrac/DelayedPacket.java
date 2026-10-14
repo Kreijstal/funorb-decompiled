@@ -112,7 +112,7 @@ final class DelayedPacket extends IntrusiveNode {
         int var8 = 0;
         try {
           var2_int = MusicPatch.pointerX;
-          var3 = po.pointerY;
+          var3 = ResourcePreparationEntry.pointerY;
           if (param0) {
             String var9 = (String) null;
             DelayedPacket.a(false, (String) null);

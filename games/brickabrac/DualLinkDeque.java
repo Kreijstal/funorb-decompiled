@@ -50,7 +50,7 @@ final class DualLinkDeque implements Iterable {
           if (null != bm.contextActions) {
             return true;
           }
-          if (s.a(-121)) {
+          if (ResourcePreparationQueue.a(-121)) {
             return true;
           }
           if (CircleBody.reportAbuseDialog != null) {
@@ -64,7 +64,7 @@ final class DualLinkDeque implements Iterable {
         if (null != bm.contextActions) {
           return true;
         }
-        if (s.a(-121)) {
+        if (ResourcePreparationQueue.a(-121)) {
           return true;
         }
         if (CircleBody.reportAbuseDialog != null) {

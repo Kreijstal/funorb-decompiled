@@ -608,7 +608,7 @@ public final class BrickABrac extends InteractiveGameClient {
         fq.a((byte) 15);
         GameClock.a((byte) 66);
         SoftwareFramebuffer.a(-125);
-        s.c(4862);
+        ResourcePreparationQueue.c(4862);
         GameCanvas.a(0);
         qn.b(0);
         ng.a((byte) -49);
@@ -875,7 +875,7 @@ public final class BrickABrac extends InteractiveGameClient {
         CheckboxWidgetRenderer.a(true);
         OpacityWidget.a(51550);
         SoundPlayback.a((byte) 49);
-        po.b(-81);
+        ResourcePreparationEntry.b(-81);
         AchievementMaskRequest.a(28391);
         AchievementSubmission.a(105);
         TranslucentNineSliceFrame.c(5);

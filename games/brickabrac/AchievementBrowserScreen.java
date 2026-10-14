@@ -95,7 +95,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           ContextActionController.field_g.drawLeft(field_s[var3], 209, ContextActionController.field_g.capHeight + 246, 1, -1);
           stackIn_19_0 = ContextActionController.field_g;
           if (var6 == 0) {
-            stackIn_20_1 = po.field_c;
+            stackIn_20_1 = ResourcePreparationEntry.field_c;
           } else {
             stackIn_20_1 = DesertBackground.field_s;
           }

@@ -4,7 +4,7 @@
 final class AccountContentTransitionLayer extends ContentTransitionLayer {
     static ContentTransitionPhase contentFadingOut;
     static String field_rb;
-    static s field_tb;
+    static ResourcePreparationQueue startupResources;
     static String field_ub;
     static String field_sb;
     static int field_vb;
@@ -27,7 +27,7 @@ final class AccountContentTransitionLayer extends ContentTransitionLayer {
         if (param0 < 26) {
           return;
         }
-        field_tb = null;
+        startupResources = null;
         field_rb = null;
         field_sb = null;
     }

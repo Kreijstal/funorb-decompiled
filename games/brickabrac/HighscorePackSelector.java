@@ -170,11 +170,11 @@ final class HighscorePackSelector {
           var7 = this.owner.buttons[this.buttonIndex];
           if (!this.keyboardSelection ||
             MusicPatch.pointerX != this.lastPointerX ||
-            this.lastPointerY != po.pointerY) {
+            this.lastPointerY != ResourcePreparationEntry.pointerY) {
             var3 = var7.x;
             var4 = var7.y;
             for (var5 = 0; this.packCount > var5; var5++) {
-              if (ArchiveNetworkRequest.packSelectorIcons[var5].containsPixel(var3, var4, MusicPatch.pointerX, po.pointerY)) {
+              if (ArchiveNetworkRequest.packSelectorIcons[var5].containsPixel(var3, var4, MusicPatch.pointerX, ResourcePreparationEntry.pointerY)) {
                 this.selectedPackIndex = var5;
                 break;
               }
@@ -182,7 +182,7 @@ final class HighscorePackSelector {
             }
           }
           this.lastPointerX = MusicPatch.pointerX;
-          this.lastPointerY = po.pointerY;
+          this.lastPointerY = ResourcePreparationEntry.pointerY;
         }
         if (obfuscationGuard <= 84) {
           this.buttonIndex = 25;
@@ -201,14 +201,14 @@ final class HighscorePackSelector {
 
     final void selectRelativeToEnd(int offset) {
         this.selectedPackIndex = offset + this.packCount;
-        this.lastPointerY = po.pointerY;
+        this.lastPointerY = ResourcePreparationEntry.pointerY;
         this.lastPointerX = MusicPatch.pointerX;
         this.keyboardSelection = true;
     }
 
     final void selectFirst(byte obfuscationGuard) {
         this.keyboardSelection = true;
-        this.lastPointerY = po.pointerY;
+        this.lastPointerY = ResourcePreparationEntry.pointerY;
         if (obfuscationGuard <= 32) {
           return;
         }

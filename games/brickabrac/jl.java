@@ -74,8 +74,8 @@ final class jl {
           var8Lifetime1 = InteractiveGameClient.sine8192(var6Lifetime1, -4097) >> 8;
           var9Lifetime1 = BrickABrac.cosine8192(2048, var6Lifetime1) >> 8;
           if (-1 != MusicPatch.pointerX &&
-            -1 != po.pointerY) {
-            var8Lifetime1 = -po.pointerY + 240;
+            -1 != ResourcePreparationEntry.pointerY) {
+            var8Lifetime1 = -ResourcePreparationEntry.pointerY + 240;
             var9Lifetime1 = -128;
             var7Lifetime1 = MusicPatch.pointerX - 320;
           }

@@ -39,7 +39,7 @@ final class HalloweenBackground extends BackgroundScene {
           }
           var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            s.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, va.field_b);
+            ResourcePreparationQueue.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, va.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
@@ -51,7 +51,7 @@ final class HalloweenBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = PowerUp.a(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          s.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, va.field_b);
+          ResourcePreparationQueue.a(ch.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, va.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
@@ -193,7 +193,7 @@ final class HalloweenBackground extends BackgroundScene {
           }
           var7 = kd.a(this.sceneId, colorIndex, (byte) 116);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            s.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, va.field_b);
+            ResourcePreparationQueue.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, va.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
             return;
@@ -210,7 +210,7 @@ final class HalloweenBackground extends BackgroundScene {
           ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
           return;
         }
-        s.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, va.field_b);
+        ResourcePreparationQueue.a(ch.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, va.field_b);
         var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
     }

@@ -120,7 +120,7 @@ final class ScreenshotViewer {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.selection.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, LoadingProgressDialog.pressX));
+          this.selection.updatePointer(this.a(ResourcePreparationEntry.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, LoadingProgressDialog.pressX));
           var4Lifetime1 = 0;
           if (this.selection.isActivated((byte) 113)) {
             if (this.selection.selectedIndex == 0) {
@@ -315,8 +315,8 @@ final class ScreenshotViewer {
           if (null != ll.field_c) {
             ll.field_c.drawTransparent(9, 257);
             ll.field_c.f(558, 257);
-            if (po.pointerY > 257 &&
-              po.pointerY < 290) {
+            if (ResourcePreparationEntry.pointerY > 257 &&
+              ResourcePreparationEntry.pointerY < 290) {
               var2_intLifetime2 = 40 + (di.a((byte) 124, this.field_i << 4) * 40 >> 16);
               if (0 < var2_intLifetime2) {
                 if (9 < MusicPatch.pointerX &&

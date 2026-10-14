@@ -189,7 +189,7 @@ class TextFieldWidget extends FocusableWidget {
           if (this.pressedButton == 1) {
             if (this.renderer instanceof WidgetLayoutProvider) {
               var7 = (WidgetLayoutProvider) ((Object) this.renderer);
-              var6 = var7.findTextSourceOffset((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
+              var6 = var7.findTextSourceOffset((Widget) (this), MusicPatch.pointerX, true, parentY, ResourcePreparationEntry.pointerY, parentX);
               if (var6 != -1) {
                 if (this.doubleClickSelection &&
                   this.wordSelectionEnd > var6 &&
@@ -532,7 +532,7 @@ class TextFieldWidget extends FocusableWidget {
           if (!(this.renderer instanceof WidgetLayoutProvider)) {
             return false;
           }
-          var8_int = ((WidgetLayoutProvider) ((Object) this.renderer)).findTextSourceOffset((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
+          var8_int = ((WidgetLayoutProvider) ((Object) this.renderer)).findTextSourceOffset((Widget) (this), MusicPatch.pointerX, true, parentY, ResourcePreparationEntry.pointerY, parentX);
           if (var8_int == -1) {
             stackIn_7_1 = 0;
           } else {

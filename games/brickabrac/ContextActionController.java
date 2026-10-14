@@ -2414,7 +2414,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("notyetachieved", (byte) 55);
                 if (null != var2) {
-                  po.field_c = MenuButton.a(var2, (byte) 114);
+                  ResourcePreparationEntry.field_c = MenuButton.a(var2, (byte) 114);
                 }
                 var2 = nk.a("achieved", (byte) -125);
                 if (null != var2) {
@@ -2490,7 +2490,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mp_offerrematch_unrated", (byte) 45);
                 if (var2 != null) {
-                  s.field_a = MenuButton.a(var2, (byte) 85);
+                  ResourcePreparationQueue.field_a = MenuButton.a(var2, (byte) 85);
                 }
                 var2 = nk.a("mp_acceptrematch", (byte) -114);
                 if (var2 != null) {

@@ -285,7 +285,7 @@ final class GameplayScreen extends GameScreen {
                 this.requestRematchAction(87);
               }
             }
-            po.a((byte) -97);
+            ResourcePreparationEntry.a((byte) -97);
             if (!this.networkedMatch) {
               ng.requestScreen(false, 62, 20);
               NewAchievementsScreen.discardGameplayOnTransition = true;

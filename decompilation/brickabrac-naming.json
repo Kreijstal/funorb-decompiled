@@ -1988,6 +1988,14 @@
       "renamedSymbol": "C:LevelResultSubmission"
     },
     {
+      "symbol": "C:po",
+      "originalName": "po",
+      "to": "ResourcePreparationEntry",
+      "evidence": "po.java: Archive plus optional numeric/named group and index/loading captions consumed by ResourcePreparationQueue. Unrelated static pointer/game/result helpers remain separate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ResourcePreparationEntry"
+    },
+    {
       "symbol": "C:pq",
       "originalName": "pq",
       "to": "MusicPatch",
@@ -2186,6 +2194,14 @@
       "evidence": "rp.java: Screen ID0 with top-level menu actions and shared menu backdrop.",
       "confidence": "reviewed",
       "renamedSymbol": "C:MainMenuScreen"
+    },
+    {
+      "symbol": "C:s",
+      "originalName": "s",
+      "to": "ResourcePreparationQueue",
+      "evidence": "s.java: Ordered archive-index/group readiness checks with scaled loading percentage/caption and retained preparation entries. Static UI/background helpers remain separate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ResourcePreparationQueue"
     },
     {
       "symbol": "C:sa",
@@ -3578,6 +3594,14 @@
       "evidence": "bh.java: Current wrapper fades before target resize.",
       "confidence": "reviewed",
       "renamedSymbol": "F:AccountContentTransitionLayer.contentFadingOut:LContentTransitionPhase;"
+    },
+    {
+      "symbol": "F:bh.field_tb:Ls;",
+      "originalName": "field_tb",
+      "to": "startupResources",
+      "evidence": "bh.java: Startup queue of named groups/archives created with scale82 and polled by the client connection shell.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AccountContentTransitionLayer.startupResources:LResourcePreparationQueue;"
     },
     {
       "symbol": "F:bi.field_M:[[I",
@@ -13129,7 +13153,23 @@
       "to": "pointerY",
       "evidence": "po.java: Frame snapshot of ep live pointer y from AWT getY.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:po.pointerY:I"
+      "renamedSymbol": "F:ResourcePreparationEntry.pointerY:I"
+    },
+    {
+      "symbol": "F:po.field_b:Lmf;",
+      "originalName": "field_b",
+      "to": "archive",
+      "evidence": "po.java: Archive whose index/group availability is polled.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationEntry.archive:LResourceArchive;"
+    },
+    {
+      "symbol": "F:po.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "to": "groupName",
+      "evidence": "po.java: Optional named group, checked after any numeric group.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationEntry.groupName:Ljava/lang/String;"
     },
     {
       "symbol": "F:po.field_e:Lad;",
@@ -13137,7 +13177,31 @@
       "to": "countryListRequest",
       "evidence": "po.java: Temporary countrylist.ws request.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:po.countryListRequest:LCappedUrlRequest;"
+      "renamedSymbol": "F:ResourcePreparationEntry.countryListRequest:LCappedUrlRequest;"
+    },
+    {
+      "symbol": "F:po.field_f:Ljava/lang/String;",
+      "originalName": "field_f",
+      "to": "waitingCaption",
+      "evidence": "po.java: Caption used whenever a blocked entry reports zero percent.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationEntry.waitingCaption:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:po.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "to": "loadingCaption",
+      "evidence": "po.java: Caption used for nonzero progress; when nonnull with no selectors, requests all archive groups.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationEntry.loadingCaption:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:po.field_h:I",
+      "originalName": "field_h",
+      "to": "groupId",
+      "evidence": "po.java: Nonnegative selects a numeric group; inserted entries default to -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationEntry.groupId:I"
     },
     {
       "symbol": "F:pq.field_i:[B",
@@ -14580,12 +14644,60 @@
       "renamedSymbol": "F:rq.lobbyGames:LNodeDeque;"
     },
     {
+      "symbol": "F:s.field_b:I",
+      "originalName": "field_b",
+      "to": "entryCount",
+      "evidence": "s.java: Used prefix of retained entries.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationQueue.entryCount:I"
+    },
+    {
+      "symbol": "F:s.field_c:I",
+      "originalName": "field_c",
+      "to": "completedEntries",
+      "evidence": "s.java: Monotonic cursor advanced by readiness polling; appending does not reset it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationQueue.completedEntries:I"
+    },
+    {
       "symbol": "F:s.field_d:Ljp;",
       "originalName": "field_d",
       "to": "arcticNearSprite",
       "evidence": "fi.java: Literal sprite resource arctic/arctic_near assigned to this resolved field.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:s.arcticNearSprite:LRgbSprite;"
+      "renamedSymbol": "F:ResourcePreparationQueue.arcticNearSprite:LRgbSprite;"
+    },
+    {
+      "symbol": "F:s.field_e:F",
+      "originalName": "field_e",
+      "to": "scaledProgress",
+      "evidence": "s.java: Last reported progressScale*(completedEntries+1+entryPercent/100)/(entryCount+1).",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationQueue.scaledProgress:F"
+    },
+    {
+      "symbol": "F:s.field_f:[Lpo;",
+      "originalName": "field_f",
+      "to": "entries",
+      "evidence": "s.java: Initial16-slot array doubles when full; completed entries/archives remain retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationQueue.entries:[LResourcePreparationEntry;"
+    },
+    {
+      "symbol": "F:s.field_g:Ljava/lang/String;",
+      "originalName": "field_g",
+      "to": "statusText",
+      "evidence": "s.java: Last blocked entry caption; successful polling leaves this unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationQueue.statusText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:s.field_h:I",
+      "originalName": "field_h",
+      "to": "progressScale",
+      "evidence": "s.java: Caller scale,82 for startup resource preparation; no clamping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ResourcePreparationQueue.progressScale:I"
     },
     {
       "symbol": "F:se.field_i:[B",
@@ -33852,6 +33964,166 @@
       "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#9"
     },
     {
+      "symbol": "L:s.a(IILpo;)V#0",
+      "originalName": "var4_float",
+      "to": "completedUnits",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#0"
+    },
+    {
+      "symbol": "L:s.a(IILpo;)V#1",
+      "originalName": "var4",
+      "to": "failure",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#1"
+    },
+    {
+      "symbol": "L:s.a(IILpo;)V#2",
+      "originalName": "stackIn_8_0",
+      "to": "failureContext",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#2"
+    },
+    {
+      "symbol": "L:s.a(IILpo;)V#3",
+      "originalName": "stackIn_8_1",
+      "to": "contextBuilder",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#3"
+    },
+    {
+      "symbol": "L:s.a(IILpo;)V#4",
+      "originalName": "stackIn_9_2",
+      "to": "entrySummary",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#4"
+    },
+    {
+      "symbol": "L:s.a(IILpo;)V#5",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#5"
+    },
+    {
+      "symbol": "L:s.a(IILpo;)V#6",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#6"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
+      "originalName": "var6_int",
+      "to": "unusedGuardQuotient",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#0"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#1"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+      "originalName": "var10",
+      "to": "expandedEntries",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#0"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+      "originalName": "var9",
+      "to": "entry",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#1"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+      "originalName": "var11",
+      "to": "entryAlias",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#2"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+      "originalName": "fieldTemp$0",
+      "to": "appendIndex",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#3"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
+      "originalName": "var7",
+      "to": "expandedEntriesAlias",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#4"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
+      "originalName": "var7_ref",
+      "to": "entryReference",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#5"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#6",
+      "originalName": "var8",
+      "to": "unusedGuardQuotient",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#6"
+    },
+    {
+      "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#7",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#7"
+    },
+    {
+      "symbol": "L:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#0"
+    },
+    {
+      "symbol": "L:s.d(I)Z#0",
+      "originalName": "var3",
+      "to": "unusedGameFlag",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.pollReady(I)Z#0"
+    },
+    {
+      "symbol": "L:s.d(I)Z#1",
+      "originalName": "var4",
+      "to": "entry",
+      "evidence": "s.java: Reviewed resource preparation append/growth, readiness order, progress formula or diagnostic declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourcePreparationQueue.pollReady(I)Z#1"
+    },
+    {
       "symbol": "L:sc.b(I)V#0",
       "originalName": "var1",
       "to": "snapshot",
@@ -48194,6 +48466,46 @@
       "evidence": "km.java: Refresh hook overridden by screens that rebuild their menu data; guard at most -60. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MainMenuScreen.refreshMenu(I)V"
+    },
+    {
+      "symbol": "M:s.a(IILpo;)V",
+      "originalName": "a",
+      "to": "reportBlockedEntry",
+      "evidence": "s.java: Computes scaled fractional progress and zero/nonzero caption, preserving null-caption concatenation and floating rounding; guard -22269.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V"
+    },
+    {
+      "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+      "originalName": "a",
+      "to": "addNamedGroup",
+      "evidence": "s.java: Adds named group with index/loading captions; canonical guards125/126/124/-126/127.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V"
+    },
+    {
+      "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V",
+      "originalName": "a",
+      "to": "addEntry",
+      "evidence": "s.java: Retains selectors/captions/archive, doubles full backing array and appends; canonical guards99/-90.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V"
+    },
+    {
+      "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+      "originalName": "a",
+      "to": "addArchive",
+      "evidence": "s.java: Adds index-only preparation if loadingCaption null, otherwise all-groups preparation; canonical false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V"
+    },
+    {
+      "symbol": "M:s.d(I)Z",
+      "originalName": "d",
+      "to": "pollReady",
+      "evidence": "s.java: Consumes ready entries until first unavailable index/numeric group/named group/all-groups request; success does not refresh percentage/caption; guard at most -94.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourcePreparationQueue.pollReady(I)Z"
     },
     {
       "symbol": "M:sa.a(BLjp;IILjp;Ljp;IIII)V",
@@ -80228,6 +80540,166 @@
       "renamedSymbol": "P:MainMenuScreen.refreshMenu(I)V#0"
     },
     {
+      "symbol": "P:s.<init>(I)V#0",
+      "originalName": "param0",
+      "to": "progressScale",
+      "evidence": "s.java: Starts with16 retained entry slots and caller progress scale.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.<init>(I)V#0"
+    },
+    {
+      "symbol": "P:s.a(IILpo;)V#0",
+      "originalName": "param0",
+      "to": "entryPercent",
+      "evidence": "s.java: Computes scaled fractional progress and zero/nonzero caption, preserving null-caption concatenation and floating rounding; guard -22269.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#0"
+    },
+    {
+      "symbol": "P:s.a(IILpo;)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "s.java: Computes scaled fractional progress and zero/nonzero caption, preserving null-caption concatenation and floating rounding; guard -22269.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#1"
+    },
+    {
+      "symbol": "P:s.a(IILpo;)V#2",
+      "originalName": "param2",
+      "to": "entry",
+      "evidence": "s.java: Computes scaled fractional progress and zero/nonzero caption, preserving null-caption concatenation and floating rounding; guard -22269.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#2"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
+      "originalName": "param0",
+      "to": "waitingCaption",
+      "evidence": "s.java: Adds named group with index/loading captions; canonical guards125/126/124/-126/127.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#0"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
+      "originalName": "param1",
+      "to": "groupName",
+      "evidence": "s.java: Adds named group with index/loading captions; canonical guards125/126/124/-126/127.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#1"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "s.java: Adds named group with index/loading captions; canonical guards125/126/124/-126/127.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#2"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#3",
+      "originalName": "param3",
+      "to": "loadingCaption",
+      "evidence": "s.java: Adds named group with index/loading captions; canonical guards125/126/124/-126/127.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#3"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#4",
+      "originalName": "param4",
+      "to": "archive",
+      "evidence": "s.java: Adds named group with index/loading captions; canonical guards125/126/124/-126/127.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#4"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+      "originalName": "param0",
+      "to": "groupName",
+      "evidence": "s.java: Retains selectors/captions/archive, doubles full backing array and appends; canonical guards99/-90.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#0"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+      "originalName": "param1",
+      "to": "waitingCaption",
+      "evidence": "s.java: Retains selectors/captions/archive, doubles full backing array and appends; canonical guards99/-90.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#1"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+      "originalName": "param2",
+      "to": "loadingCaption",
+      "evidence": "s.java: Retains selectors/captions/archive, doubles full backing array and appends; canonical guards99/-90.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#2"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+      "originalName": "param3",
+      "to": "archive",
+      "evidence": "s.java: Retains selectors/captions/archive, doubles full backing array and appends; canonical guards99/-90.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#3"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
+      "originalName": "param4",
+      "to": "groupId",
+      "evidence": "s.java: Retains selectors/captions/archive, doubles full backing array and appends; canonical guards99/-90.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#4"
+    },
+    {
+      "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
+      "originalName": "param5",
+      "to": "obfuscationGuard",
+      "evidence": "s.java: Retains selectors/captions/archive, doubles full backing array and appends; canonical guards99/-90.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#5"
+    },
+    {
+      "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
+      "originalName": "param0",
+      "to": "archive",
+      "evidence": "s.java: Adds index-only preparation if loadingCaption null, otherwise all-groups preparation; canonical false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#0"
+    },
+    {
+      "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "s.java: Adds index-only preparation if loadingCaption null, otherwise all-groups preparation; canonical false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#1"
+    },
+    {
+      "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#2",
+      "originalName": "param2",
+      "to": "waitingCaption",
+      "evidence": "s.java: Adds index-only preparation if loadingCaption null, otherwise all-groups preparation; canonical false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#2"
+    },
+    {
+      "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#3",
+      "originalName": "param3",
+      "to": "loadingCaption",
+      "evidence": "s.java: Adds index-only preparation if loadingCaption null, otherwise all-groups preparation; canonical false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#3"
+    },
+    {
+      "symbol": "P:s.d(I)Z#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "s.java: Consumes ready entries until first unavailable index/numeric group/named group/all-groups request; success does not refresh percentage/caption; guard at most -94.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourcePreparationQueue.pollReady(I)Z#0"
+    },
+    {
       "symbol": "P:sa.a(BLjp;IILjp;Ljp;IIII)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -90829,9 +91301,9 @@
     },
     {
       "symbol": "C:po",
-      "renamedSymbol": "C:po",
+      "renamedSymbol": "C:ResourcePreparationEntry",
       "originalName": "po",
-      "renamedName": "po",
+      "renamedName": "ResourcePreparationEntry",
       "declaration": {
         "file": "po.java",
         "start": 50,
@@ -91258,9 +91730,9 @@
     },
     {
       "symbol": "C:s",
-      "renamedSymbol": "C:s",
+      "renamedSymbol": "C:ResourcePreparationQueue",
       "originalName": "s",
-      "renamedName": "s",
+      "renamedName": "ResourcePreparationQueue",
       "declaration": {
         "file": "s.java",
         "start": 50,
@@ -94525,9 +94997,9 @@
     },
     {
       "symbol": "F:bh.field_tb:Ls;",
-      "renamedSymbol": "F:AccountContentTransitionLayer.field_tb:Ls;",
+      "renamedSymbol": "F:AccountContentTransitionLayer.startupResources:LResourcePreparationQueue;",
       "originalName": "field_tb",
-      "renamedName": "field_tb",
+      "renamedName": "startupResources",
       "declaration": {
         "file": "bh.java",
         "start": 131,
@@ -119451,7 +119923,7 @@
     },
     {
       "symbol": "F:po.field_a:I",
-      "renamedSymbol": "F:po.pointerY:I",
+      "renamedSymbol": "F:ResourcePreparationEntry.pointerY:I",
       "originalName": "field_a",
       "renamedName": "pointerY",
       "declaration": {
@@ -119462,9 +119934,9 @@
     },
     {
       "symbol": "F:po.field_b:Lmf;",
-      "renamedSymbol": "F:po.field_b:LResourceArchive;",
+      "renamedSymbol": "F:ResourcePreparationEntry.archive:LResourceArchive;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "archive",
       "declaration": {
         "file": "po.java",
         "start": 99,
@@ -119473,7 +119945,7 @@
     },
     {
       "symbol": "F:po.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:po.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:ResourcePreparationEntry.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -119484,9 +119956,9 @@
     },
     {
       "symbol": "F:po.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:po.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:ResourcePreparationEntry.groupName:Ljava/lang/String;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "groupName",
       "declaration": {
         "file": "po.java",
         "start": 119,
@@ -119495,7 +119967,7 @@
     },
     {
       "symbol": "F:po.field_e:Lad;",
-      "renamedSymbol": "F:po.countryListRequest:LCappedUrlRequest;",
+      "renamedSymbol": "F:ResourcePreparationEntry.countryListRequest:LCappedUrlRequest;",
       "originalName": "field_e",
       "renamedName": "countryListRequest",
       "declaration": {
@@ -119506,9 +119978,9 @@
     },
     {
       "symbol": "F:po.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:po.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:ResourcePreparationEntry.waitingCaption:Ljava/lang/String;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "waitingCaption",
       "declaration": {
         "file": "po.java",
         "start": 213,
@@ -119517,9 +119989,9 @@
     },
     {
       "symbol": "F:po.field_g:Ljava/lang/String;",
-      "renamedSymbol": "F:po.field_g:Ljava/lang/String;",
+      "renamedSymbol": "F:ResourcePreparationEntry.loadingCaption:Ljava/lang/String;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "loadingCaption",
       "declaration": {
         "file": "po.java",
         "start": 83,
@@ -119528,9 +120000,9 @@
     },
     {
       "symbol": "F:po.field_h:I",
-      "renamedSymbol": "F:po.field_h:I",
+      "renamedSymbol": "F:ResourcePreparationEntry.groupId:I",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "groupId",
       "declaration": {
         "file": "po.java",
         "start": 63,
@@ -123290,7 +123762,7 @@
     },
     {
       "symbol": "F:s.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:s.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:ResourcePreparationQueue.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -123301,9 +123773,9 @@
     },
     {
       "symbol": "F:s.field_b:I",
-      "renamedSymbol": "F:s.field_b:I",
+      "renamedSymbol": "F:ResourcePreparationQueue.entryCount:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "entryCount",
       "declaration": {
         "file": "s.java",
         "start": 113,
@@ -123312,9 +123784,9 @@
     },
     {
       "symbol": "F:s.field_c:I",
-      "renamedSymbol": "F:s.field_c:I",
+      "renamedSymbol": "F:ResourcePreparationQueue.completedEntries:I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "completedEntries",
       "declaration": {
         "file": "s.java",
         "start": 138,
@@ -123323,7 +123795,7 @@
     },
     {
       "symbol": "F:s.field_d:Ljp;",
-      "renamedSymbol": "F:s.arcticNearSprite:LRgbSprite;",
+      "renamedSymbol": "F:ResourcePreparationQueue.arcticNearSprite:LRgbSprite;",
       "originalName": "field_d",
       "renamedName": "arcticNearSprite",
       "declaration": {
@@ -123334,9 +123806,9 @@
     },
     {
       "symbol": "F:s.field_e:F",
-      "renamedSymbol": "F:s.field_e:F",
+      "renamedSymbol": "F:ResourcePreparationQueue.scaledProgress:F",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "scaledProgress",
       "declaration": {
         "file": "s.java",
         "start": 157,
@@ -123345,9 +123817,9 @@
     },
     {
       "symbol": "F:s.field_f:[Lpo;",
-      "renamedSymbol": "F:s.field_f:[Lpo;",
+      "renamedSymbol": "F:ResourcePreparationQueue.entries:[LResourcePreparationEntry;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "entries",
       "declaration": {
         "file": "s.java",
         "start": 208,
@@ -123356,9 +123828,9 @@
     },
     {
       "symbol": "F:s.field_g:Ljava/lang/String;",
-      "renamedSymbol": "F:s.field_g:Ljava/lang/String;",
+      "renamedSymbol": "F:ResourcePreparationQueue.statusText:Ljava/lang/String;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "statusText",
       "declaration": {
         "file": "s.java",
         "start": 65,
@@ -123367,9 +123839,9 @@
     },
     {
       "symbol": "F:s.field_h:I",
-      "renamedSymbol": "F:s.field_h:I",
+      "renamedSymbol": "F:ResourcePreparationQueue.progressScale:I",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "progressScale",
       "declaration": {
         "file": "s.java",
         "start": 182,
@@ -259976,7 +260448,7 @@
     },
     {
       "symbol": "L:po.a(B)V#0",
-      "renamedSymbol": "L:po.a(B)V#0",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#0",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -259987,7 +260459,7 @@
     },
     {
       "symbol": "L:po.a(B)V#1",
-      "renamedSymbol": "L:po.a(B)V#1",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#1",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -259998,7 +260470,7 @@
     },
     {
       "symbol": "L:po.a(B)V#10",
-      "renamedSymbol": "L:po.a(B)V#10",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#10",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -260009,7 +260481,7 @@
     },
     {
       "symbol": "L:po.a(B)V#11",
-      "renamedSymbol": "L:po.a(B)V#11",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#11",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -260020,7 +260492,7 @@
     },
     {
       "symbol": "L:po.a(B)V#12",
-      "renamedSymbol": "L:po.a(B)V#12",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#12",
       "originalName": "var2Lifetime2",
       "renamedName": "var2Lifetime2",
       "declaration": {
@@ -260031,7 +260503,7 @@
     },
     {
       "symbol": "L:po.a(B)V#13",
-      "renamedSymbol": "L:po.a(B)V#13",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#13",
       "originalName": "var2Lifetime3",
       "renamedName": "var2Lifetime3",
       "declaration": {
@@ -260042,7 +260514,7 @@
     },
     {
       "symbol": "L:po.a(B)V#14",
-      "renamedSymbol": "L:po.a(B)V#14",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#14",
       "originalName": "var2Lifetime4",
       "renamedName": "var2Lifetime4",
       "declaration": {
@@ -260053,7 +260525,7 @@
     },
     {
       "symbol": "L:po.a(B)V#15",
-      "renamedSymbol": "L:po.a(B)V#15",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -260064,7 +260536,7 @@
     },
     {
       "symbol": "L:po.a(B)V#2",
-      "renamedSymbol": "L:po.a(B)V#2",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#2",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -260075,7 +260547,7 @@
     },
     {
       "symbol": "L:po.a(B)V#3",
-      "renamedSymbol": "L:po.a(B)V#3",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#3",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -260086,7 +260558,7 @@
     },
     {
       "symbol": "L:po.a(B)V#4",
-      "renamedSymbol": "L:po.a(B)V#4",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#4",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -260097,7 +260569,7 @@
     },
     {
       "symbol": "L:po.a(B)V#5",
-      "renamedSymbol": "L:po.a(B)V#5",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -260108,7 +260580,7 @@
     },
     {
       "symbol": "L:po.a(B)V#6",
-      "renamedSymbol": "L:po.a(B)V#6",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#6",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -260119,7 +260591,7 @@
     },
     {
       "symbol": "L:po.a(B)V#7",
-      "renamedSymbol": "L:po.a(B)V#7",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#7",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -260130,7 +260602,7 @@
     },
     {
       "symbol": "L:po.a(B)V#8",
-      "renamedSymbol": "L:po.a(B)V#8",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -260141,7 +260613,7 @@
     },
     {
       "symbol": "L:po.a(B)V#9",
-      "renamedSymbol": "L:po.a(B)V#9",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(B)V#9",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -260152,7 +260624,7 @@
     },
     {
       "symbol": "L:po.a(I)V#0",
-      "renamedSymbol": "L:po.a(I)V#0",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -260163,7 +260635,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#0",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#0",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#0",
       "originalName": "stackIn_20_0",
       "renamedName": "stackIn_20_0",
       "declaration": {
@@ -260174,7 +260646,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#1",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#1",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#1",
       "originalName": "stackIn_20_1",
       "renamedName": "stackIn_20_1",
       "declaration": {
@@ -260185,7 +260657,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#10",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#10",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -260196,7 +260668,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#11",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#11",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -260207,7 +260679,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#12",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#12",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -260218,7 +260690,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#13",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#13",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#13",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -260229,7 +260701,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#14",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#14",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#14",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -260240,7 +260712,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#15",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#15",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#15",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -260251,7 +260723,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#2",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#2",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#2",
       "originalName": "stackIn_21_2",
       "renamedName": "stackIn_21_2",
       "declaration": {
@@ -260262,7 +260734,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#3",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#3",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#3",
       "originalName": "stackIn_23_1",
       "renamedName": "stackIn_23_1",
       "declaration": {
@@ -260273,7 +260745,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#4",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#4",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#4",
       "originalName": "stackIn_24_2",
       "renamedName": "stackIn_24_2",
       "declaration": {
@@ -260284,7 +260756,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#5",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#5",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -260295,7 +260767,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#6",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#6",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -260306,7 +260778,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#7",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#7",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#7",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -260317,7 +260789,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#8",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#8",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -260328,7 +260800,7 @@
     },
     {
       "symbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#9",
-      "renamedSymbol": "L:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#9",
+      "renamedSymbol": "L:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -260339,7 +260811,7 @@
     },
     {
       "symbol": "L:po.b(I)V#0",
-      "renamedSymbol": "L:po.b(I)V#0",
+      "renamedSymbol": "L:ResourcePreparationEntry.b(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -274276,7 +274748,7 @@
     },
     {
       "symbol": "L:s.a(B)V#0",
-      "renamedSymbol": "L:s.a(B)V#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -274287,7 +274759,7 @@
     },
     {
       "symbol": "L:s.a(I)Z#0",
-      "renamedSymbol": "L:s.a(I)Z#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(I)Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -274298,9 +274770,9 @@
     },
     {
       "symbol": "L:s.a(IILpo;)V#0",
-      "renamedSymbol": "L:s.a(IILpo;)V#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#0",
       "originalName": "var4_float",
-      "renamedName": "var4_float",
+      "renamedName": "completedUnits",
       "declaration": {
         "file": "s.java",
         "start": 7416,
@@ -274309,9 +274781,9 @@
     },
     {
       "symbol": "L:s.a(IILpo;)V#1",
-      "renamedSymbol": "L:s.a(IILpo;)V#1",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#1",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "failure",
       "declaration": {
         "file": "s.java",
         "start": 7460,
@@ -274320,9 +274792,9 @@
     },
     {
       "symbol": "L:s.a(IILpo;)V#2",
-      "renamedSymbol": "L:s.a(IILpo;)V#2",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#2",
       "originalName": "stackIn_8_0",
-      "renamedName": "stackIn_8_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "s.java",
         "start": 7498,
@@ -274331,9 +274803,9 @@
     },
     {
       "symbol": "L:s.a(IILpo;)V#3",
-      "renamedSymbol": "L:s.a(IILpo;)V#3",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#3",
       "originalName": "stackIn_8_1",
-      "renamedName": "stackIn_8_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "s.java",
         "start": 7540,
@@ -274342,9 +274814,9 @@
     },
     {
       "symbol": "L:s.a(IILpo;)V#4",
-      "renamedSymbol": "L:s.a(IILpo;)V#4",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#4",
       "originalName": "stackIn_9_2",
-      "renamedName": "stackIn_9_2",
+      "renamedName": "entrySummary",
       "declaration": {
         "file": "s.java",
         "start": 7575,
@@ -274353,9 +274825,9 @@
     },
     {
       "symbol": "L:s.a(IILpo;)V#5",
-      "renamedSymbol": "L:s.a(IILpo;)V#5",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#5",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "s.java",
         "start": 7620,
@@ -274364,9 +274836,9 @@
     },
     {
       "symbol": "L:s.a(IILpo;)V#6",
-      "renamedSymbol": "L:s.a(IILpo;)V#6",
+      "renamedSymbol": "L:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#6",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "s.java",
         "start": 8128,
@@ -274375,9 +274847,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#0",
       "originalName": "var6_int",
-      "renamedName": "var6_int",
+      "renamedName": "unusedGuardQuotient",
       "declaration": {
         "file": "s.java",
         "start": 2036,
@@ -274386,9 +274858,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#1",
+      "renamedSymbol": "L:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#1",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "s.java",
         "start": 2109,
@@ -274397,9 +274869,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#0",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "expandedEntries",
       "declaration": {
         "file": "s.java",
         "start": 2528,
@@ -274408,9 +274880,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#1",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#1",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "entry",
       "declaration": {
         "file": "s.java",
         "start": 2553,
@@ -274419,9 +274891,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#2",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#2",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "entryAlias",
       "declaration": {
         "file": "s.java",
         "start": 2577,
@@ -274430,9 +274902,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#3",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#3",
       "originalName": "fieldTemp$0",
-      "renamedName": "fieldTemp$0",
+      "renamedName": "appendIndex",
       "declaration": {
         "file": "s.java",
         "start": 2603,
@@ -274441,9 +274913,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#4",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#4",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "expandedEntriesAlias",
       "declaration": {
         "file": "s.java",
         "start": 2750,
@@ -274452,9 +274924,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#5",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#5",
       "originalName": "var7_ref",
-      "renamedName": "var7_ref",
+      "renamedName": "entryReference",
       "declaration": {
         "file": "s.java",
         "start": 2933,
@@ -274463,9 +274935,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#6",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#6",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#6",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "unusedGuardQuotient",
       "declaration": {
         "file": "s.java",
         "start": 2999,
@@ -274474,9 +274946,9 @@
     },
     {
       "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#7",
-      "renamedSymbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#7",
+      "renamedSymbol": "L:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#7",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "s.java",
         "start": 3327,
@@ -274485,7 +274957,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#0",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#0",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -274496,7 +274968,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#1",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#1",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#1",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -274507,7 +274979,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#10",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#10",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#10",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -274518,7 +274990,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#11",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#11",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#11",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -274529,7 +275001,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#12",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#12",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -274540,7 +275012,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#2",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#2",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#2",
       "originalName": "stackIn_5_2",
       "renamedName": "stackIn_5_2",
       "declaration": {
@@ -274551,7 +275023,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#3",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#3",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#3",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -274562,7 +275034,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#4",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#4",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#4",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -274573,7 +275045,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#5",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#5",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#5",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -274584,7 +275056,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#6",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#6",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#6",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -274595,7 +275067,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#7",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#7",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#7",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -274606,7 +275078,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#8",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#8",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#8",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -274617,7 +275089,7 @@
     },
     {
       "symbol": "L:s.a(Ljp;IILjp;Lpb;IBLjp;)V#9",
-      "renamedSymbol": "L:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#9",
+      "renamedSymbol": "L:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -274628,9 +275100,9 @@
     },
     {
       "symbol": "L:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
-      "renamedSymbol": "L:s.a(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#0",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "s.java",
         "start": 502,
@@ -274639,7 +275111,7 @@
     },
     {
       "symbol": "L:s.b(I)V#0",
-      "renamedSymbol": "L:s.b(I)V#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.b(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -274650,9 +275122,9 @@
     },
     {
       "symbol": "L:s.d(I)Z#0",
-      "renamedSymbol": "L:s.d(I)Z#0",
+      "renamedSymbol": "L:ResourcePreparationQueue.pollReady(I)Z#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "s.java",
         "start": 803,
@@ -274661,9 +275133,9 @@
     },
     {
       "symbol": "L:s.d(I)Z#1",
-      "renamedSymbol": "L:s.d(I)Z#1",
+      "renamedSymbol": "L:ResourcePreparationQueue.pollReady(I)Z#1",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "entry",
       "declaration": {
         "file": "s.java",
         "start": 820,
@@ -341827,7 +342299,7 @@
     },
     {
       "symbol": "M:po.a(B)V",
-      "renamedSymbol": "M:po.a(B)V",
+      "renamedSymbol": "M:ResourcePreparationEntry.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -341838,7 +342310,7 @@
     },
     {
       "symbol": "M:po.a(I)V",
-      "renamedSymbol": "M:po.a(I)V",
+      "renamedSymbol": "M:ResourcePreparationEntry.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -341849,7 +342321,7 @@
     },
     {
       "symbol": "M:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V",
-      "renamedSymbol": "M:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V",
+      "renamedSymbol": "M:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -341860,7 +342332,7 @@
     },
     {
       "symbol": "M:po.a(Z)V",
-      "renamedSymbol": "M:po.a(Z)V",
+      "renamedSymbol": "M:ResourcePreparationEntry.a(Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -341871,7 +342343,7 @@
     },
     {
       "symbol": "M:po.b(I)V",
-      "renamedSymbol": "M:po.b(I)V",
+      "renamedSymbol": "M:ResourcePreparationEntry.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -345072,9 +345544,9 @@
     },
     {
       "symbol": "M:s.<init>(I)V",
-      "renamedSymbol": "M:s.<init>(I)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.<init>(I)V",
       "originalName": "s",
-      "renamedName": "s",
+      "renamedName": "ResourcePreparationQueue",
       "declaration": {
         "file": "s.java",
         "start": 7082,
@@ -345083,7 +345555,7 @@
     },
     {
       "symbol": "M:s.a(B)V",
-      "renamedSymbol": "M:s.a(B)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -345094,7 +345566,7 @@
     },
     {
       "symbol": "M:s.a(I)Z",
-      "renamedSymbol": "M:s.a(I)Z",
+      "renamedSymbol": "M:ResourcePreparationQueue.a(I)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -345105,9 +345577,9 @@
     },
     {
       "symbol": "M:s.a(IILpo;)V",
-      "renamedSymbol": "M:s.a(IILpo;)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reportBlockedEntry",
       "declaration": {
         "file": "s.java",
         "start": 7363,
@@ -345116,9 +345588,9 @@
     },
     {
       "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
-      "renamedSymbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addNamedGroup",
       "declaration": {
         "file": "s.java",
         "start": 1877,
@@ -345127,9 +345599,9 @@
     },
     {
       "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V",
-      "renamedSymbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addEntry",
       "declaration": {
         "file": "s.java",
         "start": 2431,
@@ -345138,7 +345610,7 @@
     },
     {
       "symbol": "M:s.a(Ljp;IILjp;Lpb;IBLjp;)V",
-      "renamedSymbol": "M:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -345149,9 +345621,9 @@
     },
     {
       "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
-      "renamedSymbol": "M:s.a(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addArchive",
       "declaration": {
         "file": "s.java",
         "start": 260,
@@ -345160,7 +345632,7 @@
     },
     {
       "symbol": "M:s.b(I)V",
-      "renamedSymbol": "M:s.b(I)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -345171,7 +345643,7 @@
     },
     {
       "symbol": "M:s.c(I)V",
-      "renamedSymbol": "M:s.c(I)V",
+      "renamedSymbol": "M:ResourcePreparationQueue.c(I)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -345182,9 +345654,9 @@
     },
     {
       "symbol": "M:s.d(I)Z",
-      "renamedSymbol": "M:s.d(I)Z",
+      "renamedSymbol": "M:ResourcePreparationQueue.pollReady(I)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "pollReady",
       "declaration": {
         "file": "s.java",
         "start": 775,
@@ -421126,7 +421598,7 @@
     },
     {
       "symbol": "P:po.a(B)V#0",
-      "renamedSymbol": "P:po.a(B)V#0",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -421137,7 +421609,7 @@
     },
     {
       "symbol": "P:po.a(I)V#0",
-      "renamedSymbol": "P:po.a(I)V#0",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -421148,7 +421620,7 @@
     },
     {
       "symbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#0",
-      "renamedSymbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#0",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -421159,7 +421631,7 @@
     },
     {
       "symbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#1",
-      "renamedSymbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#1",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -421170,7 +421642,7 @@
     },
     {
       "symbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#2",
-      "renamedSymbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#2",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -421181,7 +421653,7 @@
     },
     {
       "symbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#3",
-      "renamedSymbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#3",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -421192,7 +421664,7 @@
     },
     {
       "symbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#4",
-      "renamedSymbol": "P:po.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#4",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(Ljava/lang/String;Ljava/awt/Color;IZI)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -421203,7 +421675,7 @@
     },
     {
       "symbol": "P:po.a(Z)V#0",
-      "renamedSymbol": "P:po.a(Z)V#0",
+      "renamedSymbol": "P:ResourcePreparationEntry.a(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -421214,7 +421686,7 @@
     },
     {
       "symbol": "P:po.b(I)V#0",
-      "renamedSymbol": "P:po.b(I)V#0",
+      "renamedSymbol": "P:ResourcePreparationEntry.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -427858,9 +428330,9 @@
     },
     {
       "symbol": "P:s.<init>(I)V#0",
-      "renamedSymbol": "P:s.<init>(I)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.<init>(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "progressScale",
       "declaration": {
         "file": "s.java",
         "start": 7088,
@@ -427869,7 +428341,7 @@
     },
     {
       "symbol": "P:s.a(B)V#0",
-      "renamedSymbol": "P:s.a(B)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -427880,7 +428352,7 @@
     },
     {
       "symbol": "P:s.a(I)Z#0",
-      "renamedSymbol": "P:s.a(I)Z#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -427891,9 +428363,9 @@
     },
     {
       "symbol": "P:s.a(IILpo;)V#0",
-      "renamedSymbol": "P:s.a(IILpo;)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "entryPercent",
       "declaration": {
         "file": "s.java",
         "start": 7369,
@@ -427902,9 +428374,9 @@
     },
     {
       "symbol": "P:s.a(IILpo;)V#1",
-      "renamedSymbol": "P:s.a(IILpo;)V#1",
+      "renamedSymbol": "P:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "s.java",
         "start": 7381,
@@ -427913,9 +428385,9 @@
     },
     {
       "symbol": "P:s.a(IILpo;)V#2",
-      "renamedSymbol": "P:s.a(IILpo;)V#2",
+      "renamedSymbol": "P:ResourcePreparationQueue.reportBlockedEntry(IILResourcePreparationEntry;)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "entry",
       "declaration": {
         "file": "s.java",
         "start": 7392,
@@ -427924,9 +428396,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "waitingCaption",
       "declaration": {
         "file": "s.java",
         "start": 1886,
@@ -427935,9 +428407,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#1",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "groupName",
       "declaration": {
         "file": "s.java",
         "start": 1901,
@@ -427946,9 +428418,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#2",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#2",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "s.java",
         "start": 1913,
@@ -427957,9 +428429,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#3",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#3",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "loadingCaption",
       "declaration": {
         "file": "s.java",
         "start": 1928,
@@ -427968,9 +428440,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#4",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#4",
+      "renamedSymbol": "P:ResourcePreparationQueue.addNamedGroup(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;LResourceArchive;)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "archive",
       "declaration": {
         "file": "s.java",
         "start": 1939,
@@ -427979,9 +428451,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "groupName",
       "declaration": {
         "file": "s.java",
         "start": 2440,
@@ -427990,9 +428462,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#1",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "waitingCaption",
       "declaration": {
         "file": "s.java",
         "start": 2455,
@@ -428001,9 +428473,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#2",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "loadingCaption",
       "declaration": {
         "file": "s.java",
         "start": 2470,
@@ -428012,9 +428484,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#3",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "archive",
       "declaration": {
         "file": "s.java",
         "start": 2481,
@@ -428023,9 +428495,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#4",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "groupId",
       "declaration": {
         "file": "s.java",
         "start": 2493,
@@ -428034,9 +428506,9 @@
     },
     {
       "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
-      "renamedSymbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#5",
+      "renamedSymbol": "P:ResourcePreparationQueue.addEntry(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;LResourceArchive;II)V#5",
       "originalName": "param5",
-      "renamedName": "param5",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "s.java",
         "start": 2505,
@@ -428045,7 +428517,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#0",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -428056,7 +428528,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#1",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#1",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -428067,7 +428539,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#2",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#2",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -428078,7 +428550,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#3",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#3",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -428089,7 +428561,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#4",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#4",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -428100,7 +428572,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#5",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#5",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -428111,7 +428583,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#6",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#6",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -428122,7 +428594,7 @@
     },
     {
       "symbol": "P:s.a(Ljp;IILjp;Lpb;IBLjp;)V#7",
-      "renamedSymbol": "P:s.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#7",
+      "renamedSymbol": "P:ResourcePreparationQueue.a(LRgbSprite;IILRgbSprite;LRasterCacheSurface;IBLRgbSprite;)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -428133,9 +428605,9 @@
     },
     {
       "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
-      "renamedSymbol": "P:s.a(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "archive",
       "declaration": {
         "file": "s.java",
         "start": 265,
@@ -428144,9 +428616,9 @@
     },
     {
       "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#1",
-      "renamedSymbol": "P:s.a(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#1",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "s.java",
         "start": 281,
@@ -428155,9 +428627,9 @@
     },
     {
       "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#2",
-      "renamedSymbol": "P:s.a(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#2",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "waitingCaption",
       "declaration": {
         "file": "s.java",
         "start": 296,
@@ -428166,9 +428638,9 @@
     },
     {
       "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#3",
-      "renamedSymbol": "P:s.a(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#3",
+      "renamedSymbol": "P:ResourcePreparationQueue.addArchive(LResourceArchive;ZLjava/lang/String;Ljava/lang/String;)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "loadingCaption",
       "declaration": {
         "file": "s.java",
         "start": 311,
@@ -428177,7 +428649,7 @@
     },
     {
       "symbol": "P:s.b(I)V#0",
-      "renamedSymbol": "P:s.b(I)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -428188,7 +428660,7 @@
     },
     {
       "symbol": "P:s.c(I)V#0",
-      "renamedSymbol": "P:s.c(I)V#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.c(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -428199,9 +428671,9 @@
     },
     {
       "symbol": "P:s.d(I)Z#0",
-      "renamedSymbol": "P:s.d(I)Z#0",
+      "renamedSymbol": "P:ResourcePreparationQueue.pollReady(I)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "s.java",
         "start": 781,
@@ -445231,7 +445703,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "e50d0abf0f8bdcc7ecd68551632b365af575da8e7e44c78b250182fe5e2b9255",
+      "outputSha256": "f2230f00e02ac4bc167635b5e079ec9b2debee1931819217197ddae0d021d31b",
       "edits": [
         {
           "start": 76,
@@ -449637,6 +450109,13 @@
           "renamed": "SoftwareFramebuffer"
         },
         {
+          "start": 18631,
+          "end": 18632,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 18650,
           "end": 18652,
           "symbol": "C:wg",
@@ -451168,6 +451647,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoundPlayback"
+        },
+        {
+          "start": 24397,
+          "end": 24399,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 24416,
@@ -457859,7 +458345,7 @@
       "original": "af.java",
       "renamed": "AchievementBrowserScreen.java",
       "inputSha256": "4d0e91ed351977d2a7e2515b1d056d31c61b2c735fb9a8732ff814f378140f11",
-      "outputSha256": "c6d3b172886899c2128a35a85d8d1f45d3c6d12463e2e8f8e0573a17ff2db481",
+      "outputSha256": "2d40793e829ff172d47eea87cb439dd2f6c1430747041ccca38328b2baf45d32",
       "edits": [
         {
           "start": 53,
@@ -458497,6 +458983,13 @@
           "symbol": "C:nn",
           "original": "nn",
           "renamed": "ContextActionController"
+        },
+        {
+          "start": 2802,
+          "end": 2804,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 2860,
@@ -493843,7 +494336,7 @@
       "original": "bh.java",
       "renamed": "AccountContentTransitionLayer.java",
       "inputSha256": "c1d47bb0df2a34f0166701104bf519b03be095da0783a25988a6d7311ba9fe35",
-      "outputSha256": "2af79e2a2298fc38354f2ec1f047c90ddabe2853f9c98b9ba976f6ac41319a13",
+      "outputSha256": "b0753988863955a6a9e4b18bdfc351b4253ce2ccf2e7169c34f509f2cf9b479a",
       "edits": [
         {
           "start": 50,
@@ -493872,6 +494365,20 @@
           "symbol": "F:bh.field_qb:Lmi;",
           "original": "field_qb",
           "renamed": "contentFadingOut"
+        },
+        {
+          "start": 129,
+          "end": 130,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
+          "start": 131,
+          "end": 139,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
         },
         {
           "start": 269,
@@ -493963,6 +494470,13 @@
           "symbol": "F:bh.field_qb:Lmi;",
           "original": "field_qb",
           "renamed": "contentFadingOut"
+        },
+        {
+          "start": 618,
+          "end": 626,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
         },
         {
           "start": 707,
@@ -514543,7 +515057,7 @@
       "original": "bq.java",
       "renamed": "bq.java",
       "inputSha256": "455f0b7bcf51a90176a8f10bcdd9aa16041af9df4bfd65738948dac31df676e3",
-      "outputSha256": "cbc1033a07b8244baa16fc0b1eaf844b44ed456129f65ff7899179527128b6c1",
+      "outputSha256": "1c7bd1583a8a49b8f05914ec145c623c6218704bccacececf84d40aa4d334fa1",
       "edits": [
         {
           "start": 120,
@@ -515804,6 +516318,13 @@
           "symbol": "C:qo",
           "original": "qo",
           "renamed": "PlayerNameChooserPanel"
+        },
+        {
+          "start": 13182,
+          "end": 13184,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 13185,
@@ -525731,7 +526252,7 @@
       "original": "cg.java",
       "renamed": "NanoGameClock.java",
       "inputSha256": "5115ebd3a6fb414d6e298e2e330d8fa86e71161f40d62d329f44a56ebd212998",
-      "outputSha256": "88c8f4b3cbd044c3c72acdc7f97c740562ef468258b9a681709d95cbf81b8739",
+      "outputSha256": "bc0dcab143e692b033797308e1ae87ebdde62775ef0d6803b3f41c3c1517c267",
       "edits": [
         {
           "start": 50,
@@ -526194,6 +526715,13 @@
           "symbol": "F:mh.field_Ib:I",
           "original": "field_Ib",
           "renamed": "width"
+        },
+        {
+          "start": 1597,
+          "end": 1598,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 1615,
@@ -540457,7 +540985,7 @@
       "original": "d.java",
       "renamed": "FocusableWidget.java",
       "inputSha256": "25a9fc99f2c03448c66dd483a3e09e6d74e83cdb51338108d2c46fc3f42b472b",
-      "outputSha256": "5c34815c49355e9d70e184b8df6437c249886438bf90d953880a1263321f2596",
+      "outputSha256": "8e957990198de9934a0c26c4638ad6a1f92877dd9897559656ba31a1e716e5ec",
       "edits": [
         {
           "start": 65,
@@ -541573,6 +542101,13 @@
           "renamed": "containsPoint"
         },
         {
+          "start": 7272,
+          "end": 7274,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 7275,
           "end": 7282,
           "symbol": "F:po.field_a:I",
@@ -541636,6 +542171,13 @@
           "renamed": "dispatchAction"
         },
         {
+          "start": 7381,
+          "end": 7383,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 7384,
           "end": 7391,
           "symbol": "F:po.field_a:I",
@@ -541683,6 +542225,13 @@
           "symbol": "M:d.a(IIILoc;II)V",
           "original": "a",
           "renamed": "handlePointerRelease"
+        },
+        {
+          "start": 7477,
+          "end": 7479,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 7480,
@@ -556608,7 +557157,7 @@
       "original": "dk.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "dc50c13154cfd195cf3a3180a08754eff1a3451b2e6ce48c0ea42829bbc86078",
-      "outputSha256": "e1357468af664f8c7cfba21bdebb3982201c9f7d7f270429d0763fc0d254310d",
+      "outputSha256": "8e49be8af75adc40047c0163264d06450d8ffd9addee5f1467d3f6d247ce2c0d",
       "edits": [
         {
           "start": 50,
@@ -557246,6 +557795,13 @@
           "symbol": "M:re.a(IIZB)V",
           "original": "a",
           "renamed": "initializeSelection"
+        },
+        {
+          "start": 4311,
+          "end": 4313,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 4314,
@@ -561525,7 +562081,7 @@
       "original": "dn.java",
       "renamed": "DraggableWidget.java",
       "inputSha256": "9af378ec6b9dfd11e35804935d0648b34faef3c7ba9d3009e1dd0ebb2b85bdd8",
-      "outputSha256": "a012b3f46899f30731d9d8ba2c2539256ef65c3e1041cdbf98fbd50204d34989",
+      "outputSha256": "d79b17500869e4ed1ddb495f37eefc919ac4ee728e346f81b1ee17177025c3c2",
       "edits": [
         {
           "start": 71,
@@ -562606,6 +563162,13 @@
           "renamed": "parentX"
         },
         {
+          "start": 6318,
+          "end": 6320,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 6321,
           "end": 6328,
           "symbol": "F:po.field_a:I",
@@ -563332,7 +563895,7 @@
       "original": "dp.java",
       "renamed": "HalloweenBackground.java",
       "inputSha256": "510137ab99fc63903b8321f8800db51a0b5683d0299e33fd07844c56fcd77327",
-      "outputSha256": "c2d6b74e572e9ac61aae6d0ae1951b511170792f49cd41db82fa4084bb3771b3",
+      "outputSha256": "5872e4e5bc8b3bac3584719dfc5394b551eb0f1233bd8b8774d664101cbf3413",
       "edits": [
         {
           "start": 50,
@@ -563748,6 +564311,13 @@
           "renamed": "sceneId"
         },
         {
+          "start": 1279,
+          "end": 1280,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 1298,
           "end": 1304,
           "symbol": "P:dp.a(ZIIII)V#3",
@@ -563949,6 +564519,13 @@
           "symbol": "F:ki.field_m:I",
           "original": "field_m",
           "renamed": "sceneId"
+        },
+        {
+          "start": 1793,
+          "end": 1794,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 1812,
@@ -565260,6 +565837,13 @@
           "renamed": "sceneId"
         },
         {
+          "start": 6806,
+          "end": 6807,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 6825,
           "end": 6831,
           "symbol": "P:dp.a(IBIII)V#3",
@@ -565496,6 +566080,13 @@
           "symbol": "P:dp.a(IBIII)V#0",
           "original": "param0",
           "renamed": "destinationY"
+        },
+        {
+          "start": 7555,
+          "end": 7556,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 7574,
@@ -600191,7 +600782,7 @@
       "original": "fi.java",
       "renamed": "ArcticBackground.java",
       "inputSha256": "2f434dee13d670122728b8f655c8b88e2e583bb8e8346518397e000d20aa28d3",
-      "outputSha256": "148ddd1a24aae6f18f7fbebd7a00f958ff3f63fa2dc52543a7e97820d702c0fe",
+      "outputSha256": "5d4ab1a3ed662b114f4055675e69b52247b6dab4d9663ca1ad6b8023e6600a09",
       "edits": [
         {
           "start": 50,
@@ -600964,6 +601555,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 2264,
+          "end": 2265,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 2266,
           "end": 2273,
           "symbol": "F:s.field_d:Ljp;",
@@ -601011,6 +601609,13 @@
           "symbol": "F:be.field_d:Ljp;",
           "original": "field_d",
           "renamed": "arcticSmallSprite"
+        },
+        {
+          "start": 2590,
+          "end": 2591,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 2592,
@@ -601545,6 +602150,13 @@
           "renamed": "scroll16"
         },
         {
+          "start": 4737,
+          "end": 4738,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 4739,
           "end": 4746,
           "symbol": "F:s.field_d:Ljp;",
@@ -601622,6 +602234,13 @@
           "renamed": "scroll16"
         },
         {
+          "start": 4946,
+          "end": 4947,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 4948,
           "end": 4955,
           "symbol": "F:s.field_d:Ljp;",
@@ -601683,6 +602302,13 @@
           "symbol": "M:mf.a(Ljava/lang/String;I)Z",
           "original": "a",
           "renamed": "ensureGroupAvailableByName"
+        },
+        {
+          "start": 5152,
+          "end": 5153,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 5154,
@@ -601788,6 +602414,13 @@
           "symbol": "C:i",
           "original": "i",
           "renamed": "AchievementIcon"
+        },
+        {
+          "start": 5479,
+          "end": 5480,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 5481,
@@ -602012,7 +602645,7 @@
       "original": "fj.java",
       "renamed": "VerticalScrollbar.java",
       "inputSha256": "f04f8bf6a2c898009438c561da020574bfe54b957f41f9d8d2e4f64c5b9518a1",
-      "outputSha256": "d26fa50f6b5ea7eff86af1c0155d6966dd5f76886da7d0a58ea860b43d5a03a7",
+      "outputSha256": "c074838e04ee65bc8631e0452f39f4b74fe32db3de3e27782ef02f6cfe92cdf6",
       "edits": [
         {
           "start": 50,
@@ -602400,6 +603033,13 @@
           "renamed": "remainingY"
         },
         {
+          "start": 1095,
+          "end": 1097,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 1098,
           "end": 1105,
           "symbol": "F:po.field_a:I",
@@ -602617,6 +603257,13 @@
           "renamed": "remainingY"
         },
         {
+          "start": 2211,
+          "end": 2213,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 2214,
           "end": 2221,
           "symbol": "F:po.field_a:I",
@@ -602692,6 +603339,13 @@
           "symbol": "F:mh.field_Db:I",
           "original": "field_Db",
           "renamed": "remainingY"
+        },
+        {
+          "start": 2509,
+          "end": 2511,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 2512,
@@ -614362,7 +615016,7 @@
       "original": "fr.java",
       "renamed": "Mesh3D.java",
       "inputSha256": "0cd70bde2fb8c24810a34becf8c4851905d8155b4604028de4b9bf727af97ebb",
-      "outputSha256": "b7792fa7362fd37dea0be3f76d157a8e8e95e8dac8ef43e85eaa3fa163e29a39",
+      "outputSha256": "536489ce7779f9c59294ec3a52570a1bb496fa7916b884ea6048ebe580c25974",
       "edits": [
         {
           "start": 50,
@@ -615952,6 +616606,13 @@
           "symbol": "F:ag.field_D:[Ljava/lang/String;",
           "original": "field_D",
           "renamed": "buttonLabels"
+        },
+        {
+          "start": 5233,
+          "end": 5234,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 5283,
@@ -627159,7 +627820,7 @@
       "original": "gp.java",
       "renamed": "DualLinkDeque.java",
       "inputSha256": "07d459ef568cedd9267ad6c266b63d75b490e0e65b87170c12292739999b7da2",
-      "outputSha256": "b19485f140a25f976f1a13da072d419044d6586cbaf7a530577880e113b67b73",
+      "outputSha256": "ba4b67383878d6b46cf9ebd50a04194be23c2bf3d0683903dc95f0ddc0876073",
       "edits": [
         {
           "start": 71,
@@ -627295,6 +627956,13 @@
           "renamed": "contextActions"
         },
         {
+          "start": 1680,
+          "end": 1681,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 1744,
           "end": 1746,
           "symbol": "C:no",
@@ -627321,6 +627989,13 @@
           "symbol": "F:bm.field_d:Lnn;",
           "original": "field_d",
           "renamed": "contextActions"
+        },
+        {
+          "start": 1982,
+          "end": 1983,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 2040,
@@ -644350,7 +645025,7 @@
       "original": "hj.java",
       "renamed": "ScrollPaneWithFooter.java",
       "inputSha256": "05f1cbe9af6a2b6b97e4bbcecc7a25bc66a8f880e16f1dc52140cd0137163b95",
-      "outputSha256": "18dd0fb0d4b304b1b56df6cd2d7013d0c631a52694764f950ff8251abbe4e6e4",
+      "outputSha256": "0229711bc15120fd8147547579480d6ffea0c044e386a412f0b5384c558643e9",
       "edits": [
         {
           "start": 50,
@@ -645583,6 +646258,13 @@
           "symbol": "F:dh.field_P:I",
           "original": "field_P",
           "renamed": "descent"
+        },
+        {
+          "start": 6878,
+          "end": 6880,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 6881,
@@ -660004,7 +660686,7 @@
       "original": "i.java",
       "renamed": "AchievementIcon.java",
       "inputSha256": "9e1806d5b6283651f87e1e1570bf1b830f27f797ab0b33b41cc15d247fbbcaa5",
-      "outputSha256": "6ef1d4de523efbb0e7f2880bfbb2799f89fb3f68580c19122e595d8ad8689f3d",
+      "outputSha256": "3fe3888119da04d4b5774aff8414f04e3e3210f6274d79d8802212d1513c9e2f",
       "edits": [
         {
           "start": 50,
@@ -661167,6 +661849,13 @@
           "symbol": "F:i.field_u:I",
           "original": "field_u",
           "renamed": "width"
+        },
+        {
+          "start": 5720,
+          "end": 5722,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 5723,
@@ -676673,7 +677362,7 @@
       "original": "ij.java",
       "renamed": "GameUiController.java",
       "inputSha256": "339c7bc70a1ba21de91fa145135ab1baa57f171c2de6bb0204975e8531f8a5a5",
-      "outputSha256": "68eba97ee07d0b1097235863a7601655f65f8cc6d0d1fe7b5de9728cdda4ee42",
+      "outputSha256": "5332ebd534b25eb1c41c9eef4ba43cd191e9988555badabbe50d495d25f3aa83",
       "edits": [
         {
           "start": 50,
@@ -677754,11 +678443,39 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 4792,
+          "end": 4800,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 4807,
+          "end": 4808,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 4822,
           "end": 4824,
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 4825,
+          "end": 4833,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 4834,
+          "end": 4835,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
         },
         {
           "start": 4862,
@@ -677782,6 +678499,20 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 4899,
+          "end": 4907,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 4908,
+          "end": 4909,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
+        },
+        {
           "start": 4936,
           "end": 4938,
           "symbol": "C:ib",
@@ -677803,6 +678534,20 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 4973,
+          "end": 4981,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 4982,
+          "end": 4983,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
+        },
+        {
           "start": 5010,
           "end": 5012,
           "symbol": "C:ib",
@@ -677815,6 +678560,20 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 5046,
+          "end": 5054,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5055,
+          "end": 5056,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
         },
         {
           "start": 5087,
@@ -677838,6 +678597,20 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 5124,
+          "end": 5132,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5133,
+          "end": 5134,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
+        },
+        {
           "start": 5161,
           "end": 5163,
           "symbol": "C:ib",
@@ -677857,6 +678630,20 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 5197,
+          "end": 5205,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5206,
+          "end": 5207,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
         },
         {
           "start": 5208,
@@ -677880,6 +678667,20 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 5270,
+          "end": 5278,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5279,
+          "end": 5280,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
+        },
+        {
           "start": 5281,
           "end": 5283,
           "symbol": "C:vh",
@@ -677892,6 +678693,20 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 5346,
+          "end": 5354,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5355,
+          "end": 5356,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
         },
         {
           "start": 5357,
@@ -677922,6 +678737,20 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 5412,
+          "end": 5420,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5421,
+          "end": 5422,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
+        },
+        {
           "start": 5423,
           "end": 5424,
           "symbol": "C:i",
@@ -677948,6 +678777,20 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 5477,
+          "end": 5485,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5486,
+          "end": 5487,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
         },
         {
           "start": 5488,
@@ -677978,6 +678821,20 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 5543,
+          "end": 5551,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5552,
+          "end": 5553,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
+        },
+        {
           "start": 5554,
           "end": 5556,
           "symbol": "C:kh",
@@ -678006,11 +678863,39 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 5609,
+          "end": 5617,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5618,
+          "end": 5619,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
+        },
+        {
           "start": 5672,
           "end": 5674,
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 5675,
+          "end": 5683,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5684,
+          "end": 5685,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
         },
         {
           "start": 5686,
@@ -678025,6 +678910,20 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 5741,
+          "end": 5749,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5750,
+          "end": 5751,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
         },
         {
           "start": 5752,
@@ -678053,6 +678952,20 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 5824,
+          "end": 5832,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 5833,
+          "end": 5834,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
         },
         {
           "start": 5854,
@@ -694544,7 +695457,7 @@
       "original": "jf.java",
       "renamed": "HighscorePackSelector.java",
       "inputSha256": "262ef4fc4ba5e265a41ab338b96b79355ea5bba3a315d4eb038c58dc7a8c2cdb",
-      "outputSha256": "0a1457e586f408f1c81c541a42579e717b7720dc769de1f450ae63c502407a41",
+      "outputSha256": "5191d0cfb8abe951c7b54104601ad587fe02f1e67762c78a6539622a450559a7",
       "edits": [
         {
           "start": 50,
@@ -695751,6 +696664,13 @@
           "renamed": "lastPointerY"
         },
         {
+          "start": 5625,
+          "end": 5627,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 5628,
           "end": 5635,
           "symbol": "F:po.field_a:I",
@@ -695812,6 +696732,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 5824,
+          "end": 5826,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 5827,
@@ -695877,6 +696804,13 @@
           "renamed": "lastPointerY"
         },
         {
+          "start": 6064,
+          "end": 6066,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 6067,
           "end": 6074,
           "symbol": "F:po.field_a:I",
@@ -695940,6 +696874,13 @@
           "renamed": "lastPointerY"
         },
         {
+          "start": 6456,
+          "end": 6458,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 6459,
           "end": 6466,
           "symbol": "F:po.field_a:I",
@@ -696001,6 +696942,13 @@
           "symbol": "F:jf.field_j:I",
           "original": "field_j",
           "renamed": "lastPointerY"
+        },
+        {
+          "start": 6623,
+          "end": 6625,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 6626,
@@ -704854,7 +705802,7 @@
       "original": "jl.java",
       "renamed": "jl.java",
       "inputSha256": "7e40faa3ba5d9fb9b42c5bf269553dd150c8c037d67a22f1eaa8e66d6b7c4af2",
-      "outputSha256": "653ef968f3f64d3ca51c55cec9500b35cc1081ee63e9b1723ef0f090f411f32c",
+      "outputSha256": "9b09c208e22bf1cd1966563b4ef5cb8602295d4893151aa34833b67ccf77c7a1",
       "edits": [
         {
           "start": 71,
@@ -705088,11 +706036,25 @@
           "renamed": "pointerX"
         },
         {
+          "start": 2674,
+          "end": 2676,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 2677,
           "end": 2684,
           "symbol": "F:po.field_a:I",
           "original": "field_a",
           "renamed": "pointerY"
+        },
+        {
+          "start": 2717,
+          "end": 2719,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 2720,
@@ -724829,7 +725791,7 @@
       "original": "ka.java",
       "renamed": "MusicVoice.java",
       "inputSha256": "1979628dd155157bc15d179cf5d12821bf889151c6ec1a630671076a9f3c328d",
-      "outputSha256": "e14ce165c70861613700c39c83b0f106bc343c1f59448092af399ff917de1fa8",
+      "outputSha256": "11e5ad33663058ada0274504cf8730eb13a3c99e1518c55e07a1153294699570",
       "edits": [
         {
           "start": 50,
@@ -725054,6 +726016,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 1094,
+          "end": 1096,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 1097,
@@ -742655,7 +743624,7 @@
       "original": "kj.java",
       "renamed": "CacheIoRequest.java",
       "inputSha256": "5edb46af88d97c272551f42305792d4ce92abbef28b7cd20bfd37caee71ee761",
-      "outputSha256": "99bfcf34a6c92267584e3008574b0c48f2bb68b372a674f4dde1e7ea6dd05e27",
+      "outputSha256": "e17b223ca6059166dcdeb4f2eb1da203dc7f5a9563d292b789a448b720fd30a5",
       "edits": [
         {
           "start": 50,
@@ -744091,6 +745060,13 @@
           "symbol": "F:mh.field_Ib:I",
           "original": "field_Ib",
           "renamed": "width"
+        },
+        {
+          "start": 9427,
+          "end": 9428,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 9655,
@@ -751639,7 +752615,7 @@
       "original": "km.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "f22df0331a8e5d5b77576f2d37f0ff72e55b9b32052f7e538627c9b5c74e5335",
-      "outputSha256": "1636b059c86a83910fb45065c560422baed07b8e73dc7292118f0f7ebba233f6",
+      "outputSha256": "b5c6672a4c37d7f3583d7b83b64f4c14b7524fd428835b96001a8661bcbbfd31",
       "edits": [
         {
           "start": 53,
@@ -752858,6 +753834,13 @@
           "symbol": "M:km.a(IBI)I",
           "original": "a",
           "renamed": "findButtonAt"
+        },
+        {
+          "start": 5671,
+          "end": 5673,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 5674,
@@ -755464,6 +756447,13 @@
           "symbol": "M:km.a(IBI)I",
           "original": "a",
           "renamed": "findButtonAt"
+        },
+        {
+          "start": 22354,
+          "end": 22356,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 22357,
@@ -774174,7 +775164,7 @@
       "original": "lg.java",
       "renamed": "HotspotTextWidget.java",
       "inputSha256": "5e41ae5140b9f940d690914e1eedb0a802d501e7eacaff98e426b8e715ad3d3e",
-      "outputSha256": "3c424dd8527f03d0131f88946c24d7b59a56110ef8739d636771a71aabcd04ca",
+      "outputSha256": "c222dd6d6839213ac29f8c523fa5ee3f6314ce9c30f8d87df389089a0eb19847",
       "edits": [
         {
           "start": 44,
@@ -775785,6 +776775,13 @@
           "symbol": "P:lg.a(Loc;BII)V#3",
           "original": "param3",
           "renamed": "parentY"
+        },
+        {
+          "start": 5342,
+          "end": 5344,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 5345,
@@ -780462,7 +781459,7 @@
       "original": "lp.java",
       "renamed": "AccountMessageDialog.java",
       "inputSha256": "5deea989a0ed344bcf732d2541c859608db1537a4dd336dbc12af658f8adf3d7",
-      "outputSha256": "857e72b7517abd49f9c42d20bed1c1d9dbc95e6415a0310eb98df7ca64e26457",
+      "outputSha256": "445276c9ac1107612d823f8c07c12f8558aa7f7c80a1ad071249512df029f92a",
       "edits": [
         {
           "start": 44,
@@ -781599,6 +782596,13 @@
           "renamed": "MatchingTextValidator"
         },
         {
+          "start": 7460,
+          "end": 7461,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 7555,
           "end": 7562,
           "symbol": "F:jc.field_N:Z",
@@ -781618,6 +782622,13 @@
           "symbol": "C:cb",
           "original": "cb",
           "renamed": "MatchingTextValidator"
+        },
+        {
+          "start": 7748,
+          "end": 7749,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 7847,
@@ -787440,7 +788451,7 @@
       "original": "md.java",
       "renamed": "InstructionsScreen.java",
       "inputSha256": "e5ef716b310376f3ac70c33b839fdf5cc891f67c7d6d19885bc87c76787a13b9",
-      "outputSha256": "c2eeca9e7be60f7788fb935b92abc4994d0a8b6258331c77672b7f3c921f45f8",
+      "outputSha256": "5213fb365d98485c59f2e63f4455d37fab37eacd8a085c18c50ff4fcef28b6d6",
       "edits": [
         {
           "start": 50,
@@ -787567,6 +788578,13 @@
           "symbol": "C:qo",
           "original": "qo",
           "renamed": "PlayerNameChooserPanel"
+        },
+        {
+          "start": 1120,
+          "end": 1122,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 1123,
@@ -795347,7 +796365,7 @@
       "original": "mh.java",
       "renamed": "UiComponent.java",
       "inputSha256": "f7347d94cd0b42eac5b8f4b2a19d0cc5aa0d6861f1547399a9e84727c0b19fa6",
-      "outputSha256": "b20a5dbd143e7766467677f4f4b847d28a3ba930642b6ceca6dd2296c1424a1f",
+      "outputSha256": "a9af09c99930d37f6db822b44e56e285342fc733bb8f26a7d04ac38a02f5cf3f",
       "edits": [
         {
           "start": 44,
@@ -796981,6 +797999,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 4138,
+          "end": 4140,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 4141,
           "end": 4148,
           "symbol": "F:po.field_a:I",
@@ -797014,6 +798039,13 @@
           "symbol": "F:lb.field_j:I",
           "original": "field_j",
           "renamed": "clipBottom"
+        },
+        {
+          "start": 4181,
+          "end": 4183,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 4184,
@@ -797336,6 +798368,13 @@
           "symbol": "F:mh.field_zb:I",
           "original": "field_zb",
           "renamed": "localY"
+        },
+        {
+          "start": 4985,
+          "end": 4987,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 4988,
@@ -821514,7 +822553,7 @@
       "original": "nf.java",
       "renamed": "ValidationMessageWidget.java",
       "inputSha256": "026c9059c9217c4c511351ee754fdc7cc0cd96a424e039714346dc14c697af00",
-      "outputSha256": "15b0d5ca5be33d3ae311fcda36a337e8dd295684054486b785fc27d62f3ab23a",
+      "outputSha256": "a594eb2cf83bcdf30e4611205d38852929b5af4d035fa100ca169233436bcc41",
       "edits": [
         {
           "start": 50,
@@ -821879,6 +822918,13 @@
           "symbol": "P:nf.<init>(Lia;Ljava/lang/String;IIII)V#5",
           "original": "param5",
           "renamed": "height"
+        },
+        {
+          "start": 2014,
+          "end": 2016,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 2177,
@@ -832477,7 +833523,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "3ad9e28c5c5b4aa5c2058cdb38089c02bc7fe379e589b981ca9b448d2a8471ef",
+      "outputSha256": "acdabfdefd984e7ffbb263fc5da6f16141cb1a43e95eade0495d10ba02e276fa",
       "edits": [
         {
           "start": 50,
@@ -839361,6 +840407,13 @@
           "renamed": "MenuButton"
         },
         {
+          "start": 99490,
+          "end": 99492,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 99503,
           "end": 99504,
           "symbol": "C:q",
@@ -839534,6 +840587,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 102464,
+          "end": 102465,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 102476,
@@ -844800,7 +845860,7 @@
       "original": "nq.java",
       "renamed": "TooltipSprite.java",
       "inputSha256": "b8e7cc64c3c2c07651445f6cd39e83043d3d5006fff67a7251da4238a82822b5",
-      "outputSha256": "c26ec1be8f857f028151f0ff5cc8d64131cf63d471f28f74aa15dea9365edf9e",
+      "outputSha256": "9bfe1f941af2528ad5568f1c1d67a2c156bb643bb00bff85051eca50604f9d9b",
       "edits": [
         {
           "start": 50,
@@ -845454,6 +846514,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 3785,
+          "end": 3787,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 3788,
           "end": 3795,
           "symbol": "F:po.field_a:I",
@@ -845529,6 +846596,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 3930,
+          "end": 3932,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 3933,
@@ -846698,6 +847772,13 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "BackgroundScene"
+        },
+        {
+          "start": 8671,
+          "end": 8673,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 8674,
@@ -850607,7 +851688,7 @@
       "original": "oc.java",
       "renamed": "Widget.java",
       "inputSha256": "76acdc8390b5b1b074b42067d1978f78555e930de06880dd56cd9223a1016ef1",
-      "outputSha256": "2e244a6b3410c6dd7d74216dd1996d14a6c16409bc41826b74d54a1bafbeea6a",
+      "outputSha256": "230a17043735bb7bfd5b2601e5a4f563147da4c2a921bb491331ce2be8d25370",
       "edits": [
         {
           "start": 65,
@@ -851667,6 +852748,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 8251,
+          "end": 8253,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 8254,
           "end": 8261,
           "symbol": "F:po.field_a:I",
@@ -851840,6 +852928,13 @@
           "symbol": "M:oc.a(IIILoc;II)V",
           "original": "a",
           "renamed": "handlePointerRelease"
+        },
+        {
+          "start": 8918,
+          "end": 8920,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 8921,
@@ -852075,6 +853170,13 @@
           "renamed": "handlePointerRelease"
         },
         {
+          "start": 9803,
+          "end": 9805,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 9806,
           "end": 9813,
           "symbol": "F:po.field_a:I",
@@ -852292,6 +853394,13 @@
           "renamed": "handlePointerRelease"
         },
         {
+          "start": 10904,
+          "end": 10906,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 10907,
           "end": 10914,
           "symbol": "F:po.field_a:I",
@@ -852430,6 +853539,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 11437,
+          "end": 11439,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 11440,
@@ -852614,6 +853730,13 @@
           "symbol": "M:oc.a(IIILoc;II)V",
           "original": "a",
           "renamed": "handlePointerRelease"
+        },
+        {
+          "start": 12240,
+          "end": 12242,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 12243,
@@ -852908,6 +854031,13 @@
           "symbol": "M:oc.a(IIILoc;II)V",
           "original": "a",
           "renamed": "handlePointerRelease"
+        },
+        {
+          "start": 13583,
+          "end": 13585,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 13586,
@@ -853937,6 +855067,13 @@
           "symbol": "M:oc.a(IIIII)Z",
           "original": "a",
           "renamed": "containsPoint"
+        },
+        {
+          "start": 28791,
+          "end": 28793,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 28794,
@@ -856113,7 +857250,7 @@
       "original": "og.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "71899f71a52c83eb6ccb0dee0cc74938ae731561777c8a4d21529059d9abf91c",
-      "outputSha256": "471f89067a69326c70ebb2649e42d6956ee98217dee5ff3af14387d845cf56c6",
+      "outputSha256": "3811bcbfa34c3276f9d04d3902b0e038da693c19294a0c163472630d1f6177ff",
       "edits": [
         {
           "start": 50,
@@ -858078,6 +859215,13 @@
           "symbol": "L:og.a(IIII)V#5",
           "original": "decompiledFrameRemainder0",
           "renamed": "openHelpBranch"
+        },
+        {
+          "start": 13659,
+          "end": 13661,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 13717,
@@ -882006,7 +883150,7 @@
       "original": "pg.java",
       "renamed": "DelayedPacket.java",
       "inputSha256": "1c46046e6fc44802333eca3df578d167405d4bae4594eb478c5214805eb91e3e",
-      "outputSha256": "4ba38a91f512db110f5696ed86384edc156f1ff627356247d492b643a109f231",
+      "outputSha256": "ea1a86c5a34f24c7f1d554b8eadb632c65a4fa678c937d9b2a7ed0f6824eedf2",
       "edits": [
         {
           "start": 50,
@@ -882434,6 +883578,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 3541,
+          "end": 3543,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 3544,
@@ -886601,7 +887752,7 @@
       "original": "pk.java",
       "renamed": "TableNameEntry.java",
       "inputSha256": "ccd49f782b8e8fb6d494cb58ed221e4736d84be74032d9188ec41acfb641254d",
-      "outputSha256": "1f4432084cb5a24129201f741a2e4d975326d2d1accec8659d34173792b1f641",
+      "outputSha256": "a0905ee3685e04bc068a64e3e01e0f5445951e128a23d5e120440ee3e9c79f6a",
       "edits": [
         {
           "start": 50,
@@ -886749,6 +887900,13 @@
           "symbol": "F:qc.field_i:Z",
           "original": "field_i",
           "renamed": "redrawRequested"
+        },
+        {
+          "start": 1117,
+          "end": 1119,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 1122,
@@ -893218,16 +894376,51 @@
     },
     {
       "original": "po.java",
-      "renamed": "po.java",
+      "renamed": "ResourcePreparationEntry.java",
       "inputSha256": "645ae79ba708ad156bc7e39b943e4b1d16b5bef39a22c15070b29dc74b8500a6",
-      "outputSha256": "72c3f84772ad13972cc70d50e93affc9711103a1de14fa5abd1dd89db7412712",
+      "outputSha256": "28c24691692719611fa5aeefb6f04cdf105b9cfae46fb90c71171843746a6bb3",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 63,
+          "end": 70,
+          "symbol": "F:po.field_h:I",
+          "original": "field_h",
+          "renamed": "groupId"
+        },
+        {
+          "start": 83,
+          "end": 90,
+          "symbol": "F:po.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "loadingCaption"
+        },
         {
           "start": 96,
           "end": 98,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 99,
+          "end": 106,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
+        },
+        {
+          "start": 119,
+          "end": 126,
+          "symbol": "F:po.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "groupName"
         },
         {
           "start": 139,
@@ -893249,6 +894442,13 @@
           "symbol": "F:po.field_a:I",
           "original": "field_a",
           "renamed": "pointerY"
+        },
+        {
+          "start": 213,
+          "end": 220,
+          "symbol": "F:po.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "waitingCaption"
         },
         {
           "start": 327,
@@ -895890,7 +897090,7 @@
       "original": "q.java",
       "renamed": "MenuButton.java",
       "inputSha256": "2cd96d5c1abb70834952d32e37ce6d86998b34eebff3da49a62fb72b7e247d25",
-      "outputSha256": "ec31f74676c4b5e30f80e7a75deed69da8935667e4be06ca9b4c5642ea3f7db5",
+      "outputSha256": "2deeee25b7bc0834c0ba12fe6be4a92f68c3a8005d684d71909d20fbb5088efd",
       "edits": [
         {
           "start": 50,
@@ -897172,6 +898372,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 8371,
+          "end": 8373,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 8374,
@@ -902722,7 +903929,7 @@
       "original": "qg.java",
       "renamed": "GameConnectionShell.java",
       "inputSha256": "f0f96ff4267e2ff560eb4272327a49af02204398e19363a87a54075043f5c452",
-      "outputSha256": "a0473509cce39e94636a1013d3c2b8936d5571d2f54d8be8c617716195a38581",
+      "outputSha256": "ff36df6cda00991fc6a656b0ec9d9c9067af5ef1e65ea530c6f7154b943e9a41",
       "edits": [
         {
           "start": 53,
@@ -904224,11 +905431,25 @@
           "renamed": "EmailConfirmationValidator"
         },
         {
+          "start": 12531,
+          "end": 12533,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 12534,
           "end": 12541,
           "symbol": "F:po.field_e:Lad;",
           "original": "field_e",
           "renamed": "countryListRequest"
+        },
+        {
+          "start": 12561,
+          "end": 12563,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 12564,
@@ -904252,6 +905473,13 @@
           "renamed": "AccountMessageDialog"
         },
         {
+          "start": 12691,
+          "end": 12693,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 12694,
           "end": 12701,
           "symbol": "F:po.field_e:Lad;",
@@ -904264,6 +905492,13 @@
           "symbol": "M:ad.a(I)Z",
           "original": "a",
           "renamed": "poll"
+        },
+        {
+          "start": 12734,
+          "end": 12736,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 12737,
@@ -904315,6 +905550,13 @@
           "renamed": "ButtonWidgetRenderer"
         },
         {
+          "start": 13041,
+          "end": 13043,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 13044,
           "end": 13051,
           "symbol": "F:po.field_e:Lad;",
@@ -904334,6 +905576,13 @@
           "symbol": "C:hi",
           "original": "hi",
           "renamed": "ButtonWidgetRenderer"
+        },
+        {
+          "start": 13408,
+          "end": 13410,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 13411,
@@ -906135,11 +907384,32 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 28815,
+          "end": 28823,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
           "start": 28865,
           "end": 28867,
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 28868,
+          "end": 28876,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 28877,
+          "end": 28878,
+          "symbol": "M:s.d(I)Z",
+          "original": "d",
+          "renamed": "pollReady"
         },
         {
           "start": 28950,
@@ -906156,11 +907426,39 @@
           "renamed": "AccountContentTransitionLayer"
         },
         {
+          "start": 28969,
+          "end": 28977,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 28978,
+          "end": 28985,
+          "symbol": "F:s.field_e:F",
+          "original": "field_e",
+          "renamed": "scaledProgress"
+        },
+        {
           "start": 28987,
           "end": 28989,
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "AccountContentTransitionLayer"
+        },
+        {
+          "start": 28990,
+          "end": 28998,
+          "symbol": "F:bh.field_tb:Ls;",
+          "original": "field_tb",
+          "renamed": "startupResources"
+        },
+        {
+          "start": 28999,
+          "end": 29006,
+          "symbol": "F:s.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "statusText"
         },
         {
           "start": 29069,
@@ -907836,7 +909134,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "6656a7114712462f5ee04f03085623754138e9299e66cc9420b995906e977d20",
+      "outputSha256": "2b7da7bef5752adbaf79e2a0c87754b4241db57cd5d8ac663e4dd722e7c97db7",
       "edits": [
         {
           "start": 50,
@@ -909860,6 +911158,13 @@
           "symbol": "M:qj.f(I)V",
           "original": "f",
           "renamed": "requestRematchAction"
+        },
+        {
+          "start": 9339,
+          "end": 9341,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 9379,
@@ -942683,7 +943988,7 @@
       "original": "rp.java",
       "renamed": "MainMenuScreen.java",
       "inputSha256": "3153c1e392569e4cbd5637b399348102353ba5b4435ca222eafefb9782e82c23",
-      "outputSha256": "8243cabf4f28e5f3f74369d7512623d7b27b986c7d2e334078c762b077d95eef",
+      "outputSha256": "1dfa0a73364efe96a60df8682b94943737447fc7aa45029aa52705129b486f91",
       "edits": [
         {
           "start": 50,
@@ -943223,6 +944528,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 3013,
+          "end": 3015,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 3016,
@@ -944503,10 +945815,24 @@
     },
     {
       "original": "s.java",
-      "renamed": "s.java",
+      "renamed": "ResourcePreparationQueue.java",
       "inputSha256": "a11e1d275a3ed66eb10f910974110b894bff963263b3496032066004ae72c2c8",
-      "outputSha256": "ffde32087773540413daddfbf344adbd5e62566e275c774a9fe04906b9b6bda4",
+      "outputSha256": "6fea2c666a28a73cfa380cf2598bccb2663b6e507a3b3d597d5bcf199662b715",
       "edits": [
+        {
+          "start": 50,
+          "end": 51,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
+          "start": 65,
+          "end": 72,
+          "symbol": "F:s.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "statusText"
+        },
         {
           "start": 85,
           "end": 87,
@@ -944522,11 +945848,137 @@
           "renamed": "arcticNearSprite"
         },
         {
+          "start": 113,
+          "end": 120,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 138,
+          "end": 145,
+          "symbol": "F:s.field_c:I",
+          "original": "field_c",
+          "renamed": "completedEntries"
+        },
+        {
+          "start": 157,
+          "end": 164,
+          "symbol": "F:s.field_e:F",
+          "original": "field_e",
+          "renamed": "scaledProgress"
+        },
+        {
+          "start": 182,
+          "end": 189,
+          "symbol": "F:s.field_h:I",
+          "original": "field_h",
+          "renamed": "progressScale"
+        },
+        {
+          "start": 203,
+          "end": 205,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 208,
+          "end": 215,
+          "symbol": "F:s.field_f:[Lpo;",
+          "original": "field_f",
+          "renamed": "entries"
+        },
+        {
+          "start": 260,
+          "end": 261,
+          "symbol": "M:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V",
+          "original": "a",
+          "renamed": "addArchive"
+        },
+        {
           "start": 262,
           "end": 264,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 265,
+          "end": 271,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
+          "original": "param0",
+          "renamed": "archive"
+        },
+        {
+          "start": 281,
+          "end": 287,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 296,
+          "end": 302,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#2",
+          "original": "param2",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 311,
+          "end": 317,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#3",
+          "original": "param3",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 349,
+          "end": 355,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 376,
+          "end": 383,
+          "symbol": "F:s.field_c:I",
+          "original": "field_c",
+          "renamed": "completedEntries"
+        },
+        {
+          "start": 418,
+          "end": 419,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V",
+          "original": "a",
+          "renamed": "addEntry"
+        },
+        {
+          "start": 435,
+          "end": 441,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#2",
+          "original": "param2",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 443,
+          "end": 449,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#3",
+          "original": "param3",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 451,
+          "end": 457,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
+          "original": "param0",
+          "renamed": "archive"
+        },
+        {
+          "start": 502,
+          "end": 518,
+          "symbol": "L:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 538,
@@ -944543,6 +945995,90 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 565,
+          "end": 581,
+          "symbol": "L:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 594,
+          "end": 600,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#0",
+          "original": "param0",
+          "renamed": "archive"
+        },
+        {
+          "start": 637,
+          "end": 643,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 653,
+          "end": 659,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#2",
+          "original": "param2",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 697,
+          "end": 703,
+          "symbol": "P:s.a(Lmf;ZLjava/lang/String;Ljava/lang/String;)V#3",
+          "original": "param3",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 775,
+          "end": 776,
+          "symbol": "M:s.d(I)Z",
+          "original": "d",
+          "renamed": "pollReady"
+        },
+        {
+          "start": 781,
+          "end": 787,
+          "symbol": "P:s.d(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 803,
+          "end": 807,
+          "symbol": "L:s.d(I)Z#0",
+          "original": "var3",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 817,
+          "end": 819,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 820,
+          "end": 824,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 834,
+          "end": 838,
+          "symbol": "L:s.d(I)Z#0",
+          "original": "var3",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 881,
+          "end": 887,
+          "symbol": "P:s.d(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 907,
           "end": 914,
           "symbol": "F:s.field_d:Ljp;",
@@ -944557,11 +946093,102 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 958,
+          "end": 965,
+          "symbol": "F:s.field_c:I",
+          "original": "field_c",
+          "renamed": "completedEntries"
+        },
+        {
+          "start": 973,
+          "end": 980,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 994,
+          "end": 998,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1006,
+          "end": 1013,
+          "symbol": "F:s.field_f:[Lpo;",
+          "original": "field_f",
+          "renamed": "entries"
+        },
+        {
+          "start": 1019,
+          "end": 1026,
+          "symbol": "F:s.field_c:I",
+          "original": "field_c",
+          "renamed": "completedEntries"
+        },
+        {
+          "start": 1044,
+          "end": 1048,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1049,
+          "end": 1056,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
+        },
+        {
           "start": 1057,
           "end": 1058,
           "symbol": "M:mf.a(B)Z",
           "original": "a",
           "renamed": "ensureIndex"
+        },
+        {
+          "start": 1092,
+          "end": 1093,
+          "symbol": "M:s.a(IILpo;)V",
+          "original": "a",
+          "renamed": "reportBlockedEntry"
+        },
+        {
+          "start": 1105,
+          "end": 1109,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1169,
+          "end": 1173,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1174,
+          "end": 1181,
+          "symbol": "F:po.field_h:I",
+          "original": "field_h",
+          "renamed": "groupId"
+        },
+        {
+          "start": 1198,
+          "end": 1202,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1203,
+          "end": 1210,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
         },
         {
           "start": 1211,
@@ -944571,11 +946198,95 @@
           "renamed": "ensureGroupAvailable"
         },
         {
+          "start": 1221,
+          "end": 1225,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1226,
+          "end": 1233,
+          "symbol": "F:po.field_h:I",
+          "original": "field_h",
+          "renamed": "groupId"
+        },
+        {
+          "start": 1255,
+          "end": 1256,
+          "symbol": "M:s.a(IILpo;)V",
+          "original": "a",
+          "renamed": "reportBlockedEntry"
+        },
+        {
+          "start": 1257,
+          "end": 1261,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1262,
+          "end": 1269,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
+        },
+        {
           "start": 1270,
           "end": 1271,
           "symbol": "M:mf.d(II)I",
           "original": "d",
           "renamed": "getGroupProgress"
+        },
+        {
+          "start": 1272,
+          "end": 1276,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1277,
+          "end": 1284,
+          "symbol": "F:po.field_h:I",
+          "original": "field_h",
+          "renamed": "groupId"
+        },
+        {
+          "start": 1303,
+          "end": 1307,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1362,
+          "end": 1366,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1367,
+          "end": 1374,
+          "symbol": "F:po.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "groupName"
+        },
+        {
+          "start": 1399,
+          "end": 1403,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1404,
+          "end": 1411,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
         },
         {
           "start": 1412,
@@ -944585,11 +946296,123 @@
           "renamed": "ensureGroupAvailableByName"
         },
         {
+          "start": 1414,
+          "end": 1418,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1419,
+          "end": 1426,
+          "symbol": "F:po.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "groupName"
+        },
+        {
+          "start": 1456,
+          "end": 1457,
+          "symbol": "M:s.a(IILpo;)V",
+          "original": "a",
+          "renamed": "reportBlockedEntry"
+        },
+        {
+          "start": 1458,
+          "end": 1462,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1463,
+          "end": 1470,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
+        },
+        {
           "start": 1471,
           "end": 1472,
           "symbol": "M:mf.b(ILjava/lang/String;)I",
           "original": "b",
           "renamed": "getGroupProgressByName"
+        },
+        {
+          "start": 1476,
+          "end": 1480,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1481,
+          "end": 1488,
+          "symbol": "F:po.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "groupName"
+        },
+        {
+          "start": 1499,
+          "end": 1503,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1558,
+          "end": 1562,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1563,
+          "end": 1570,
+          "symbol": "F:po.field_h:I",
+          "original": "field_h",
+          "renamed": "groupId"
+        },
+        {
+          "start": 1598,
+          "end": 1602,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1603,
+          "end": 1610,
+          "symbol": "F:po.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "groupName"
+        },
+        {
+          "start": 1626,
+          "end": 1630,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1631,
+          "end": 1638,
+          "symbol": "F:po.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 1663,
+          "end": 1667,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1668,
+          "end": 1675,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
         },
         {
           "start": 1676,
@@ -944599,6 +946422,27 @@
           "renamed": "ensureAllGroupsAvailable"
         },
         {
+          "start": 1703,
+          "end": 1704,
+          "symbol": "M:s.a(IILpo;)V",
+          "original": "a",
+          "renamed": "reportBlockedEntry"
+        },
+        {
+          "start": 1705,
+          "end": 1709,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1710,
+          "end": 1717,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
+        },
+        {
           "start": 1718,
           "end": 1719,
           "symbol": "M:mf.b(I)I",
@@ -944606,11 +946450,130 @@
           "renamed": "getProgress"
         },
         {
+          "start": 1736,
+          "end": 1740,
+          "symbol": "L:s.d(I)Z#1",
+          "original": "var4",
+          "renamed": "entry"
+        },
+        {
+          "start": 1796,
+          "end": 1803,
+          "symbol": "F:s.field_c:I",
+          "original": "field_c",
+          "renamed": "completedEntries"
+        },
+        {
+          "start": 1811,
+          "end": 1818,
+          "symbol": "F:s.field_c:I",
+          "original": "field_c",
+          "renamed": "completedEntries"
+        },
+        {
+          "start": 1877,
+          "end": 1878,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V",
+          "original": "a",
+          "renamed": "addNamedGroup"
+        },
+        {
+          "start": 1886,
+          "end": 1892,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
+          "original": "param0",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 1901,
+          "end": 1907,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
+          "original": "param1",
+          "renamed": "groupName"
+        },
+        {
+          "start": 1913,
+          "end": 1919,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1928,
+          "end": 1934,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#3",
+          "original": "param3",
+          "renamed": "loadingCaption"
+        },
+        {
           "start": 1936,
           "end": 1938,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1939,
+          "end": 1945,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#4",
+          "original": "param4",
+          "renamed": "archive"
+        },
+        {
+          "start": 1978,
+          "end": 1979,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V",
+          "original": "a",
+          "renamed": "addEntry"
+        },
+        {
+          "start": 1980,
+          "end": 1986,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
+          "original": "param1",
+          "renamed": "groupName"
+        },
+        {
+          "start": 1988,
+          "end": 1994,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
+          "original": "param0",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 1996,
+          "end": 2002,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#3",
+          "original": "param3",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 2004,
+          "end": 2010,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#4",
+          "original": "param4",
+          "renamed": "archive"
+        },
+        {
+          "start": 2036,
+          "end": 2044,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
+          "original": "var6_int",
+          "renamed": "unusedGuardQuotient"
+        },
+        {
+          "start": 2060,
+          "end": 2066,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2109,
+          "end": 2125,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 2145,
@@ -944627,11 +946590,207 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 2172,
+          "end": 2188,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 2201,
+          "end": 2207,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#0",
+          "original": "param0",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 2245,
+          "end": 2251,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#1",
+          "original": "param1",
+          "renamed": "groupName"
+        },
+        {
+          "start": 2288,
+          "end": 2294,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2304,
+          "end": 2310,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#3",
+          "original": "param3",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 2348,
+          "end": 2354,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lmf;)V#4",
+          "original": "param4",
+          "renamed": "archive"
+        },
+        {
+          "start": 2431,
+          "end": 2432,
+          "symbol": "M:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V",
+          "original": "a",
+          "renamed": "addEntry"
+        },
+        {
+          "start": 2440,
+          "end": 2446,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "param0",
+          "renamed": "groupName"
+        },
+        {
+          "start": 2455,
+          "end": 2461,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+          "original": "param1",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 2470,
+          "end": 2476,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "param2",
+          "renamed": "loadingCaption"
+        },
+        {
           "start": 2478,
           "end": 2480,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2481,
+          "end": 2487,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+          "original": "param3",
+          "renamed": "archive"
+        },
+        {
+          "start": 2493,
+          "end": 2499,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
+          "original": "param4",
+          "renamed": "groupId"
+        },
+        {
+          "start": 2505,
+          "end": 2511,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2523,
+          "end": 2525,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 2528,
+          "end": 2533,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "var10",
+          "renamed": "expandedEntries"
+        },
+        {
+          "start": 2550,
+          "end": 2552,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 2553,
+          "end": 2557,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+          "original": "var9",
+          "renamed": "entry"
+        },
+        {
+          "start": 2574,
+          "end": 2576,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 2577,
+          "end": 2582,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 2603,
+          "end": 2614,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+          "original": "fieldTemp$0",
+          "renamed": "appendIndex"
+        },
+        {
+          "start": 2653,
+          "end": 2660,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 2669,
+          "end": 2676,
+          "symbol": "F:s.field_f:[Lpo;",
+          "original": "field_f",
+          "renamed": "entries"
+        },
+        {
+          "start": 2699,
+          "end": 2704,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "var10",
+          "renamed": "expandedEntries"
+        },
+        {
+          "start": 2711,
+          "end": 2713,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 2723,
+          "end": 2730,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 2745,
+          "end": 2747,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 2750,
+          "end": 2754,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
+          "original": "var7",
+          "renamed": "expandedEntriesAlias"
+        },
+        {
+          "start": 2757,
+          "end": 2762,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "var10",
+          "renamed": "expandedEntries"
         },
         {
           "start": 2776,
@@ -944648,6 +946807,265 @@
           "renamed": "copy"
         },
         {
+          "start": 2786,
+          "end": 2793,
+          "symbol": "F:s.field_f:[Lpo;",
+          "original": "field_f",
+          "renamed": "entries"
+        },
+        {
+          "start": 2798,
+          "end": 2803,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "var10",
+          "renamed": "expandedEntries"
+        },
+        {
+          "start": 2813,
+          "end": 2820,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 2840,
+          "end": 2847,
+          "symbol": "F:s.field_f:[Lpo;",
+          "original": "field_f",
+          "renamed": "entries"
+        },
+        {
+          "start": 2850,
+          "end": 2855,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "var10",
+          "renamed": "expandedEntries"
+        },
+        {
+          "start": 2879,
+          "end": 2883,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+          "original": "var9",
+          "renamed": "entry"
+        },
+        {
+          "start": 2890,
+          "end": 2892,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 2906,
+          "end": 2911,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 2914,
+          "end": 2918,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+          "original": "var9",
+          "renamed": "entry"
+        },
+        {
+          "start": 2930,
+          "end": 2932,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 2933,
+          "end": 2941,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
+          "original": "var7_ref",
+          "renamed": "entryReference"
+        },
+        {
+          "start": 2944,
+          "end": 2949,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 2961,
+          "end": 2966,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 2967,
+          "end": 2974,
+          "symbol": "F:po.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 2977,
+          "end": 2983,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+          "original": "param1",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 2999,
+          "end": 3003,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#6",
+          "original": "var8",
+          "renamed": "unusedGuardQuotient"
+        },
+        {
+          "start": 3017,
+          "end": 3023,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3042,
+          "end": 3047,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 3048,
+          "end": 3055,
+          "symbol": "F:po.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 3058,
+          "end": 3064,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "param2",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 3076,
+          "end": 3081,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 3082,
+          "end": 3089,
+          "symbol": "F:po.field_b:Lmf;",
+          "original": "field_b",
+          "renamed": "archive"
+        },
+        {
+          "start": 3092,
+          "end": 3098,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+          "original": "param3",
+          "renamed": "archive"
+        },
+        {
+          "start": 3110,
+          "end": 3115,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 3116,
+          "end": 3123,
+          "symbol": "F:po.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "groupName"
+        },
+        {
+          "start": 3126,
+          "end": 3132,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "param0",
+          "renamed": "groupName"
+        },
+        {
+          "start": 3144,
+          "end": 3149,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "var11",
+          "renamed": "entryAlias"
+        },
+        {
+          "start": 3150,
+          "end": 3157,
+          "symbol": "F:po.field_h:I",
+          "original": "field_h",
+          "renamed": "groupId"
+        },
+        {
+          "start": 3160,
+          "end": 3166,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
+          "original": "param4",
+          "renamed": "groupId"
+        },
+        {
+          "start": 3178,
+          "end": 3189,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+          "original": "fieldTemp$0",
+          "renamed": "appendIndex"
+        },
+        {
+          "start": 3197,
+          "end": 3204,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 3221,
+          "end": 3228,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 3236,
+          "end": 3243,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 3264,
+          "end": 3271,
+          "symbol": "F:s.field_f:[Lpo;",
+          "original": "field_f",
+          "renamed": "entries"
+        },
+        {
+          "start": 3272,
+          "end": 3283,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+          "original": "fieldTemp$0",
+          "renamed": "appendIndex"
+        },
+        {
+          "start": 3287,
+          "end": 3291,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+          "original": "var9",
+          "renamed": "entry"
+        },
+        {
+          "start": 3327,
+          "end": 3343,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#7",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
           "start": 3363,
           "end": 3365,
           "symbol": "C:qb",
@@ -944660,6 +947078,55 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 3390,
+          "end": 3406,
+          "symbol": "L:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#7",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 3419,
+          "end": 3425,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#0",
+          "original": "param0",
+          "renamed": "groupName"
+        },
+        {
+          "start": 3463,
+          "end": 3469,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#1",
+          "original": "param1",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 3507,
+          "end": 3513,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#2",
+          "original": "param2",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 3551,
+          "end": 3557,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#3",
+          "original": "param3",
+          "renamed": "archive"
+        },
+        {
+          "start": 3594,
+          "end": 3600,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#4",
+          "original": "param4",
+          "renamed": "groupId"
+        },
+        {
+          "start": 3609,
+          "end": 3615,
+          "symbol": "P:s.a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmf;II)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 3725,
@@ -944814,6 +947281,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 4310,
+          "end": 4311,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
         },
         {
           "start": 4315,
@@ -945075,11 +947549,347 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 7082,
+          "end": 7083,
+          "symbol": "M:s.<init>(I)V",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
+          "start": 7088,
+          "end": 7094,
+          "symbol": "P:s.<init>(I)V#0",
+          "original": "param0",
+          "renamed": "progressScale"
+        },
+        {
+          "start": 7111,
+          "end": 7118,
+          "symbol": "F:s.field_f:[Lpo;",
+          "original": "field_f",
+          "renamed": "entries"
+        },
+        {
+          "start": 7125,
+          "end": 7127,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 7146,
+          "end": 7153,
+          "symbol": "F:s.field_h:I",
+          "original": "field_h",
+          "renamed": "progressScale"
+        },
+        {
+          "start": 7156,
+          "end": 7162,
+          "symbol": "P:s.<init>(I)V#0",
+          "original": "param0",
+          "renamed": "progressScale"
+        },
+        {
           "start": 7242,
           "end": 7249,
           "symbol": "F:s.field_d:Ljp;",
           "original": "field_d",
           "renamed": "arcticNearSprite"
+        },
+        {
+          "start": 7324,
+          "end": 7325,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
+          "start": 7363,
+          "end": 7364,
+          "symbol": "M:s.a(IILpo;)V",
+          "original": "a",
+          "renamed": "reportBlockedEntry"
+        },
+        {
+          "start": 7369,
+          "end": 7375,
+          "symbol": "P:s.a(IILpo;)V#0",
+          "original": "param0",
+          "renamed": "entryPercent"
+        },
+        {
+          "start": 7381,
+          "end": 7387,
+          "symbol": "P:s.a(IILpo;)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 7389,
+          "end": 7391,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
+          "start": 7392,
+          "end": 7398,
+          "symbol": "P:s.a(IILpo;)V#2",
+          "original": "param2",
+          "renamed": "entry"
+        },
+        {
+          "start": 7416,
+          "end": 7426,
+          "symbol": "L:s.a(IILpo;)V#0",
+          "original": "var4_float",
+          "renamed": "completedUnits"
+        },
+        {
+          "start": 7460,
+          "end": 7464,
+          "symbol": "L:s.a(IILpo;)V#1",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 7498,
+          "end": 7509,
+          "symbol": "L:s.a(IILpo;)V#2",
+          "original": "stackIn_8_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 7540,
+          "end": 7551,
+          "symbol": "L:s.a(IILpo;)V#3",
+          "original": "stackIn_8_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 7575,
+          "end": 7586,
+          "symbol": "L:s.a(IILpo;)V#4",
+          "original": "stackIn_9_2",
+          "renamed": "entrySummary"
+        },
+        {
+          "start": 7620,
+          "end": 7645,
+          "symbol": "L:s.a(IILpo;)V#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 7678,
+          "end": 7688,
+          "symbol": "L:s.a(IILpo;)V#0",
+          "original": "var4_float",
+          "renamed": "completedUnits"
+        },
+        {
+          "start": 7698,
+          "end": 7704,
+          "symbol": "P:s.a(IILpo;)V#0",
+          "original": "param0",
+          "renamed": "entryPercent"
+        },
+        {
+          "start": 7729,
+          "end": 7736,
+          "symbol": "F:s.field_c:I",
+          "original": "field_c",
+          "renamed": "completedEntries"
+        },
+        {
+          "start": 7758,
+          "end": 7765,
+          "symbol": "F:s.field_e:F",
+          "original": "field_e",
+          "renamed": "scaledProgress"
+        },
+        {
+          "start": 7780,
+          "end": 7787,
+          "symbol": "F:s.field_h:I",
+          "original": "field_h",
+          "renamed": "progressScale"
+        },
+        {
+          "start": 7790,
+          "end": 7800,
+          "symbol": "L:s.a(IILpo;)V#0",
+          "original": "var4_float",
+          "renamed": "completedUnits"
+        },
+        {
+          "start": 7820,
+          "end": 7827,
+          "symbol": "F:s.field_b:I",
+          "original": "field_b",
+          "renamed": "entryCount"
+        },
+        {
+          "start": 7844,
+          "end": 7850,
+          "symbol": "P:s.a(IILpo;)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 7876,
+          "end": 7877,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
+          "start": 7912,
+          "end": 7918,
+          "symbol": "P:s.a(IILpo;)V#0",
+          "original": "param0",
+          "renamed": "entryPercent"
+        },
+        {
+          "start": 7944,
+          "end": 7951,
+          "symbol": "F:s.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "statusText"
+        },
+        {
+          "start": 7954,
+          "end": 7960,
+          "symbol": "P:s.a(IILpo;)V#2",
+          "original": "param2",
+          "renamed": "entry"
+        },
+        {
+          "start": 7961,
+          "end": 7968,
+          "symbol": "F:po.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "waitingCaption"
+        },
+        {
+          "start": 8017,
+          "end": 8024,
+          "symbol": "F:s.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "statusText"
+        },
+        {
+          "start": 8027,
+          "end": 8033,
+          "symbol": "P:s.a(IILpo;)V#2",
+          "original": "param2",
+          "renamed": "entry"
+        },
+        {
+          "start": 8034,
+          "end": 8041,
+          "symbol": "F:po.field_g:Ljava/lang/String;",
+          "original": "field_g",
+          "renamed": "loadingCaption"
+        },
+        {
+          "start": 8052,
+          "end": 8058,
+          "symbol": "P:s.a(IILpo;)V#0",
+          "original": "param0",
+          "renamed": "entryPercent"
+        },
+        {
+          "start": 8128,
+          "end": 8154,
+          "symbol": "L:s.a(IILpo;)V#6",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 8168,
+          "end": 8193,
+          "symbol": "L:s.a(IILpo;)V#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 8196,
+          "end": 8222,
+          "symbol": "L:s.a(IILpo;)V#6",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 8234,
+          "end": 8238,
+          "symbol": "L:s.a(IILpo;)V#1",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 8241,
+          "end": 8266,
+          "symbol": "L:s.a(IILpo;)V#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 8278,
+          "end": 8289,
+          "symbol": "L:s.a(IILpo;)V#2",
+          "original": "stackIn_8_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 8292,
+          "end": 8296,
+          "symbol": "L:s.a(IILpo;)V#1",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 8308,
+          "end": 8319,
+          "symbol": "L:s.a(IILpo;)V#3",
+          "original": "stackIn_8_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 8364,
+          "end": 8370,
+          "symbol": "P:s.a(IILpo;)V#0",
+          "original": "param0",
+          "renamed": "entryPercent"
+        },
+        {
+          "start": 8391,
+          "end": 8397,
+          "symbol": "P:s.a(IILpo;)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 8426,
+          "end": 8432,
+          "symbol": "P:s.a(IILpo;)V#2",
+          "original": "param2",
+          "renamed": "entry"
+        },
+        {
+          "start": 8456,
+          "end": 8467,
+          "symbol": "L:s.a(IILpo;)V#4",
+          "original": "stackIn_9_2",
+          "renamed": "entrySummary"
+        },
+        {
+          "start": 8509,
+          "end": 8520,
+          "symbol": "L:s.a(IILpo;)V#4",
+          "original": "stackIn_9_2",
+          "renamed": "entrySummary"
         },
         {
           "start": 8560,
@@ -945094,6 +947904,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 8587,
+          "end": 8598,
+          "symbol": "L:s.a(IILpo;)V#2",
+          "original": "stackIn_8_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 8627,
+          "end": 8638,
+          "symbol": "L:s.a(IILpo;)V#3",
+          "original": "stackIn_8_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 8647,
+          "end": 8658,
+          "symbol": "L:s.a(IILpo;)V#4",
+          "original": "stackIn_9_2",
+          "renamed": "entrySummary"
         }
       ]
     },
@@ -946894,7 +949725,7 @@
       "original": "sb.java",
       "renamed": "BrickGameLayerController.java",
       "inputSha256": "115180fb00906adb2b95582433ed6ae9a88ca7cd49de64f7c57980478ba42f14",
-      "outputSha256": "9d9e250c7ee912709b82701c1940e9f6890670e2a40d02e42ba209f968c045f6",
+      "outputSha256": "6aa6da4cc539d5f31e6050a8efac3b653afe4bc27542c46201f91a1a83ff5222",
       "edits": [
         {
           "start": 50,
@@ -948724,6 +951555,13 @@
           "renamed": "LevelSelectScreen"
         },
         {
+          "start": 34098,
+          "end": 34100,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 34101,
           "end": 34108,
           "symbol": "F:po.field_a:I",
@@ -948743,6 +951581,13 @@
           "symbol": "F:mh.field_db:I",
           "original": "field_db",
           "renamed": "screenY"
+        },
+        {
+          "start": 34136,
+          "end": 34138,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 34139,
@@ -949214,6 +952059,13 @@
           "renamed": "LevelSelectScreen"
         },
         {
+          "start": 37962,
+          "end": 37964,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 37965,
           "end": 37972,
           "symbol": "F:po.field_a:I",
@@ -949233,6 +952085,13 @@
           "symbol": "F:mh.field_db:I",
           "original": "field_db",
           "renamed": "screenY"
+        },
+        {
+          "start": 38000,
+          "end": 38002,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 38003,
@@ -951191,7 +954050,7 @@
       "original": "sf.java",
       "renamed": "ValidatedTextFieldWidget.java",
       "inputSha256": "fa26ecd243659468647d2b3c5001ca3b2fdbfdc1416890297311b93d1e65efec",
-      "outputSha256": "6ce791cb243d179e058e3b5f1538500b64a233bcc709fc19f249b0ac0383b14c",
+      "outputSha256": "b7ea57ebc65173d76b761a731e527083ae16c3b4512bba846fdf3b2f38d07e69",
       "edits": [
         {
           "start": 50,
@@ -951747,6 +954606,13 @@
           "renamed": "pointerX"
         },
         {
+          "start": 1901,
+          "end": 1903,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 1904,
           "end": 1911,
           "symbol": "F:po.field_a:I",
@@ -951780,6 +954646,13 @@
           "symbol": "F:pq.field_k:I",
           "original": "field_k",
           "renamed": "pointerX"
+        },
+        {
+          "start": 2054,
+          "end": 2056,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 2057,
@@ -951822,7 +954695,7 @@
       "original": "sg.java",
       "renamed": "EmailValidator.java",
       "inputSha256": "6b476bd83bf24bb72fcd5b8b1b6c755e0f93dc50da23870aa37867dea1ba2abb",
-      "outputSha256": "c3ad27cb20aad0f0d838bbad733da02bc18b4ab9837863e20b296b3f5421bd7d",
+      "outputSha256": "da69bfd48066825521623cd9a91fd60b6cd03188080c78f2ceb7419596eaabbb",
       "edits": [
         {
           "start": 50,
@@ -951970,6 +954843,13 @@
           "symbol": "F:eo.field_i:I",
           "original": "field_i",
           "renamed": "livePointerX"
+        },
+        {
+          "start": 534,
+          "end": 536,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 537,
@@ -1010552,7 +1013432,7 @@
       "original": "uj.java",
       "renamed": "LevelList.java",
       "inputSha256": "24f3c828504851d3fa276e35f7adecb4bb8180253d852a801475f7acdb396f53",
-      "outputSha256": "eb2376aaf1bec83790648c0781a2c6d99e85798a8fd1ad3b891ed45781d46a33",
+      "outputSha256": "683097480959b54032e0596dfe539e9651b678abfa872e7bb0d0a2e5770de35d",
       "edits": [
         {
           "start": 50,
@@ -1011640,6 +1014520,13 @@
           "renamed": "TabbedPane"
         },
         {
+          "start": 2982,
+          "end": 2983,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "ResourcePreparationQueue"
+        },
+        {
           "start": 3002,
           "end": 3004,
           "symbol": "C:sl",
@@ -1012485,6 +1015372,13 @@
           "symbol": "F:uj.field_n:I",
           "original": "field_n",
           "renamed": "lastPointerY"
+        },
+        {
+          "start": 6126,
+          "end": 6128,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 6129,
@@ -1013348,6 +1016242,13 @@
           "renamed": "lastPointerY"
         },
         {
+          "start": 8653,
+          "end": 8655,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 8656,
           "end": 8663,
           "symbol": "F:po.field_a:I",
@@ -1013565,6 +1016466,13 @@
           "renamed": "lastPointerY"
         },
         {
+          "start": 9233,
+          "end": 9235,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 9236,
           "end": 9243,
           "symbol": "F:po.field_a:I",
@@ -1013591,6 +1016499,13 @@
           "symbol": "F:uj.field_i:I",
           "original": "field_i",
           "renamed": "rowSpacing"
+        },
+        {
+          "start": 9304,
+          "end": 9306,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 9307,
@@ -1013689,6 +1016604,13 @@
           "symbol": "F:uj.field_n:I",
           "original": "field_n",
           "renamed": "lastPointerY"
+        },
+        {
+          "start": 9618,
+          "end": 9620,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 9621,
@@ -1030666,7 +1033588,7 @@
       "original": "vb.java",
       "renamed": "TextFieldWidget.java",
       "inputSha256": "96f7813af935be1697132c1ff27db7a487c15be5ffcbfcbeead19391f1e77679",
-      "outputSha256": "872b17583bc9ddde71612c646593b91ade404f94829d931aee5ddf8394d8bf4f",
+      "outputSha256": "dbbfbed90edba3a73ad1863a619b00776ccc158a1eaf14f9754f98fa6825b992",
       "edits": [
         {
           "start": 44,
@@ -1031766,6 +1034688,13 @@
           "symbol": "P:vb.a(Loc;BII)V#3",
           "original": "param3",
           "renamed": "parentY"
+        },
+        {
+          "start": 5937,
+          "end": 5939,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 5940,
@@ -1033537,6 +1036466,13 @@
           "symbol": "P:vb.a(Loc;IIIIII)Z#3",
           "original": "param3",
           "renamed": "parentY"
+        },
+        {
+          "start": 18041,
+          "end": 18043,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 18044,
@@ -1037836,7 +1040772,7 @@
       "original": "vh.java",
       "renamed": "RadialSelectorWidget.java",
       "inputSha256": "a8d2de5bdcc40ffc3f94348576b596e962c6f1d2186af0a821c58fadbd42c658",
-      "outputSha256": "54842cb0dcd1e69d041bb0b53f2813964ef6ab83d62b2fbc5cae24e217f6b8ee",
+      "outputSha256": "b114c823a44858930df777122fe1bc36682415400c0a3f1664b811947d11886c",
       "edits": [
         {
           "start": 50,
@@ -1038341,6 +1041277,13 @@
           "symbol": "M:re.a(III)V",
           "original": "a",
           "renamed": "updatePointer"
+        },
+        {
+          "start": 3614,
+          "end": 3616,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 3617,
@@ -1048843,7 +1051786,7 @@
       "original": "w.java",
       "renamed": "ScreenshotViewer.java",
       "inputSha256": "ab1a43a9c1637cb4b966b968d0afaa046a56ac5eb15d5fc304855e89893c8e66",
-      "outputSha256": "766281fa4a0c3baf48650c94b299e7a1e7326d433251f9e34689b8daa95f8300",
+      "outputSha256": "54617516c764dfe3af3bb77a188f7880d307fc339165d5ce62853a66f752ee8c",
       "edits": [
         {
           "start": 50,
@@ -1049348,6 +1052291,13 @@
           "symbol": "M:re.a(III)V",
           "original": "a",
           "renamed": "updatePointer"
+        },
+        {
+          "start": 3896,
+          "end": 3898,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 3899,
@@ -1050316,11 +1053266,25 @@
           "renamed": "drawTransparent"
         },
         {
+          "start": 11540,
+          "end": 11542,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
+        },
+        {
           "start": 11543,
           "end": 11550,
           "symbol": "F:po.field_a:I",
           "original": "field_a",
           "renamed": "pointerY"
+        },
+        {
+          "start": 11574,
+          "end": 11576,
+          "symbol": "C:po",
+          "original": "po",
+          "renamed": "ResourcePreparationEntry"
         },
         {
           "start": 11577,
@@ -1075046,10 +1078010,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "fb42011eadbfd7271c64867a9dd83faaf7df76dc0596b4e059619547634e63e4",
+    "rulesSha256": "3ad75281387cd0a4bb22fbdf2ecb03a923da55c6137985fe2859790ce318ece0",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "1af1572eef2fa5bd14926d73a818bec2b5c9c9796612bc81be7b2f179fd3e238",
+    "outputTreeSha256": "1b2049394bdf691a00d78bd7ecea75953adc79c18457c94b0c203927e54b83e5",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1075069,10 +1078033,14 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 1020431,
-        "traceSha256": "5785cd4a661a0f28092dc761841b8d4a971b02262a56760e21f34f177ecae367",
+        "checks": 1020532,
+        "traceSha256": "163affb9be5d30279785786ed557d4fe28334a807b224af016e5642bcc743d90",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "resourcePreparationOrderFixtures": true,
+        "resourcePreparationProgressFixtures": true,
+        "resourcePreparationRetentionFixtures": true,
+        "resourcePreparationGrowthFixtures": true,
         "loadingProgressStateFixtures": true,
         "activitySpriteFixtures": true,
         "activityProgressSplitFixtures": true,

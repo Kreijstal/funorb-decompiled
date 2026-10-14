@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class po {
-    int field_h;
-    String field_g;
-    ResourceArchive field_b;
-    String field_d;
+final class ResourcePreparationEntry {
+    int groupId;
+    String loadingCaption;
+    ResourceArchive archive;
+    String groupName;
     static CappedUrlRequest countryListRequest;
     static String field_c;
     static int pointerY;
-    String field_f;
+    String waitingCaption;
 
     final static void a(boolean param0) {
         if (!param0) {

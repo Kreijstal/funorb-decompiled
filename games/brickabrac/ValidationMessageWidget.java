@@ -57,7 +57,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
     }
 
     final static void a(byte param0) {
-        po.a(13);
+        ResourcePreparationEntry.a(13);
         if (param0 != 109) {
           field_T = (String) null;
         }

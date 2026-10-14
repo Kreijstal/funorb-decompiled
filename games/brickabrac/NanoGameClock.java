@@ -50,7 +50,7 @@ final class NanoGameClock extends GameClock {
         }
         int var1 = np.uiRowHeight + 2;
         Ball.field_A.setBounds(-(!vd.field_e ? 0 : var1) + RectangleBody.field_q.height, !vd.field_e ? 0 : var1, 0, RectangleBody.field_q.width, (byte) 64);
-        s.b(124);
+        ResourcePreparationQueue.b(124);
         HighscorePackSelector.field_k.setBounds(40, ContentTransitionLayer.field_gb.height - 40, 0, ContentTransitionLayer.field_gb.width, (byte) 64);
         sc.field_b.setBounds(30, 0, 0, rm.field_a.width, (byte) 64);
         ll.field_e.setBounds(-72 + rm.field_a.height, 30, 0, rm.field_a.width, (byte) 64);

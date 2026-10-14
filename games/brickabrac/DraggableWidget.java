@@ -160,7 +160,7 @@ final class DraggableWidget extends SingleChildWidget {
             ((FocusableWidget) (this.child)).enabled) &&
             1 == this.pressedButton) {
             var5_int = MusicPatch.pointerX - this.dragOffsetX - parentX;
-            var6 = po.pointerY + (-this.dragOffsetY - parentY);
+            var6 = ResourcePreparationEntry.pointerY + (-this.dragOffsetY - parentY);
             if (this.x == var5_int &&
               var6 == this.y) {
               super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);

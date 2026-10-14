@@ -104,7 +104,7 @@ final class RadialSelectorWidget extends FocusableWidget {
             }
             var1_int = 1;
           }
-          ArcticBackground.field_r.updatePointer(aj.a(param0 + param0, po.pointerY, MusicPatch.pointerX), param0 ^ 27479, aj.a(0, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
+          ArcticBackground.field_r.updatePointer(aj.a(param0 + param0, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), param0 ^ 27479, aj.a(0, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
           if (ArcticBackground.field_r.isActivated((byte) 113)) {
             var1_int = 1;
           }

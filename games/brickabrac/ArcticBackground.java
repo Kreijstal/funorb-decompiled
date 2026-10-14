@@ -61,7 +61,7 @@ final class ArcticBackground extends BackgroundScene {
     final boolean hasSprites(byte obfuscationGuard) {
         if (obfuscationGuard > -91) {
           field_v = (String) null;
-          if (null == s.arcticNearSprite) {
+          if (null == ResourcePreparationQueue.arcticNearSprite) {
             return false;
           }
           if (BallPulseEffect.arcticMidSprite == null) {
@@ -75,7 +75,7 @@ final class ArcticBackground extends BackgroundScene {
           }
           return false;
         }
-        if (null == s.arcticNearSprite) {
+        if (null == ResourcePreparationQueue.arcticNearSprite) {
           return false;
         }
         if (BallPulseEffect.arcticMidSprite == null) {
@@ -147,14 +147,14 @@ final class ArcticBackground extends BackgroundScene {
           AccountRegistrationPanel.a(1, colorIndex, var6, 0, 23275, LoginPanel.arcticFarSprite);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          SpriteGeometry.a(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, s.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
+          SpriteGeometry.a(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, ResourcePreparationQueue.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
           if (!obfuscationGuard) {
             this.loadSprites(false);
             return;
           }
           return;
         }
-        SpriteGeometry.a(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, s.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
+        SpriteGeometry.a(var6.sprite, 640, destinationY, destinationX, colorIndex, scroll16, ResourcePreparationQueue.arcticNearSprite, 1, BallPulseEffect.arcticMidSprite, 1, 0);
         if (obfuscationGuard) {
           return;
         }
@@ -163,11 +163,11 @@ final class ArcticBackground extends BackgroundScene {
 
     final boolean loadSprites(boolean obfuscationGuard) {
         if (AchievementIcon.field_m.ensureGroupAvailableByName("arctic", -28138)) {
-          s.arcticNearSprite = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
+          ResourcePreparationQueue.arcticNearSprite = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
           BallPulseEffect.arcticMidSprite = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
           LoginPanel.arcticFarSprite = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);
           WidgetPaintStyle.arcticSmallSprite = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
-          un.field_d = jh.a(0, s.arcticNearSprite);
+          un.field_d = jh.a(0, ResourcePreparationQueue.arcticNearSprite);
           jl.field_d = jh.a(0, BallPulseEffect.arcticMidSprite);
           Brick.field_K = jh.a(0, LoginPanel.arcticFarSprite);
           ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.field_m, "arctic_caps", 2);

@@ -157,7 +157,7 @@ final class AchievementIcon extends IntrusiveNode {
           this.x = this.x + offsetStep;
         } else {
           AlignedIconLabel.achievementTransitionMask = AlignedIconLabel.achievementTransitionMask & this.transitionKeepMask;
-          if (ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
+          if (ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, ResourcePreparationEntry.pointerY, MusicPatch.pointerX, this.y)) {
             ValidationMessageWidget.hoveredAchievementId = this.achievementId;
             if (1 == BackgroundScene.pressedButton &&
               ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX, this.y)) {

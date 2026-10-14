@@ -34,7 +34,7 @@ final class VerticalScrollbar extends UiComponent {
             this.repeatDelay = this.repeatDelay - 1;
           }
           if (this.repeatDelay == 0 &&
-            this.thumb.screenY + this.thumb.remainingY > po.pointerY) {
+            this.thumb.screenY + this.thumb.remainingY > ResourcePreparationEntry.pointerY) {
             this.repeatDelay = 3;
             return true;
           }
@@ -70,7 +70,7 @@ final class VerticalScrollbar extends UiComponent {
           if (this.repeatDelay != 0) {
             return false;
           }
-          if (this.thumb.remainingHeight + this.thumb.height + (this.thumb.screenY + this.thumb.remainingY) <= po.pointerY) {
+          if (this.thumb.remainingHeight + this.thumb.height + (this.thumb.screenY + this.thumb.remainingY) <= ResourcePreparationEntry.pointerY) {
             this.repeatDelay = 3;
             return true;
           }
@@ -79,7 +79,7 @@ final class VerticalScrollbar extends UiComponent {
         if (this.repeatDelay != 0) {
           return false;
         }
-        if (this.thumb.remainingHeight + this.thumb.height + (this.thumb.screenY + this.thumb.remainingY) <= po.pointerY) {
+        if (this.thumb.remainingHeight + this.thumb.height + (this.thumb.screenY + this.thumb.remainingY) <= ResourcePreparationEntry.pointerY) {
           this.repeatDelay = 3;
           return true;
         }

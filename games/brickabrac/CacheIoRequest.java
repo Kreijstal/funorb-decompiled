@@ -261,7 +261,7 @@ final class CacheIoRequest extends ResourceRequest {
           stackIn_78_0.frameSprites = DateFieldsWidget.a(stackIn_79_1, 8421504, 3, 11579568, MembershipBenefitsScreen.field_t.height, 1);
           Ball.field_A.setBounds(MembershipBenefitsScreen.field_t.height - 10 - 26, 5, 5, -10 + MembershipBenefitsScreen.field_t.width, (byte) 64);
           nd.field_a.setBounds(24, -29 + MembershipBenefitsScreen.field_t.height, (MembershipBenefitsScreen.field_t.width - 80) / 2, 80, (byte) 64);
-          s.b(125);
+          ResourcePreparationQueue.b(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

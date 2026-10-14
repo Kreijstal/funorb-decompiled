@@ -66,11 +66,11 @@ final class ValidatedTextFieldWidget extends TextFieldWidget implements Validata
           return null;
         }
         if (obfuscationGuard >= 6) {
-          ap.a(-this.field_ab - (-this.width - MusicPatch.pointerX), po.pointerY, (byte) 79);
+          ap.a(-this.field_ab - (-this.width - MusicPatch.pointerX), ResourcePreparationEntry.pointerY, (byte) 79);
           return this.tooltip;
         }
         this.field_ab = -5;
-        ap.a(-this.field_ab - (-this.width - MusicPatch.pointerX), po.pointerY, (byte) 79);
+        ap.a(-this.field_ab - (-this.width - MusicPatch.pointerX), ResourcePreparationEntry.pointerY, (byte) 79);
         return this.tooltip;
     }
 

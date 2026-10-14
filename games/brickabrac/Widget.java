@@ -256,7 +256,7 @@ class Widget extends IntrusiveNode {
           }
           if (0 != GameplayAudioEvent.mouseWheelDelta &&
             var5 != 0) {
-            this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
+            this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, ResourcePreparationEntry.pointerY, this, param1);
           }
           if (BackgroundScene.pressedButton != 0) {
             if (this.handlePointerPress(this, LoadingProgressDialog.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
@@ -276,7 +276,7 @@ class Widget extends IntrusiveNode {
             MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
-          this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+          this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
           var8 = gd.draggedWidget;
           if (var8 != null) {
             if (var8.listener instanceof WidgetDropListener) {
@@ -301,7 +301,7 @@ class Widget extends IntrusiveNode {
                 }
                 if (0 == MatchingTextValidator.heldButton &&
                   ScrollPaneWithFooter.field_Pb != 0) {
-                  this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+                  this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
                   var9 = gd.draggedWidget;
                   if (var9 != null) {
                     if (!(var9.listener instanceof WidgetDropListener)) {
@@ -330,7 +330,7 @@ class Widget extends IntrusiveNode {
               MusicVoice.a(this.getTooltip(15), 22546);
               return param3;
             }
-            this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+            this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
             var10 = gd.draggedWidget;
             if (var10 != null) {
               if (var10.listener instanceof WidgetDropListener) {
@@ -343,7 +343,7 @@ class Widget extends IntrusiveNode {
             MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
-          this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
+          this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, ResourcePreparationEntry.pointerY, this, param1);
         }
         regionExit2: {
           if (BackgroundScene.pressedButton != 0) {
@@ -366,7 +366,7 @@ class Widget extends IntrusiveNode {
                 MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
-              this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+              this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
               var11 = gd.draggedWidget;
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
@@ -403,7 +403,7 @@ class Widget extends IntrusiveNode {
           MusicVoice.a(this.getTooltip(15), 22546);
           return param3;
         }
-        this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+        this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
         var12 = gd.draggedWidget;
         if (var12 != null) {
           if (var12.listener instanceof WidgetDropListener) {
@@ -819,7 +819,7 @@ class Widget extends IntrusiveNode {
           if (obfuscationGuard != 0) {
             field_u = (String) null;
           }
-          var5_int = this.containsPoint(po.pointerY, parentY, parentX, 3, MusicPatch.pointerX) ? 1 : 0;
+          var5_int = this.containsPoint(ResourcePreparationEntry.pointerY, parentY, parentX, 3, MusicPatch.pointerX) ? 1 : 0;
           if ((this.mouseOver ? 1 : 0) != var5_int) {
             stackIn_7_1 = (var5_int != 0);
             this.mouseOver = stackIn_7_1;

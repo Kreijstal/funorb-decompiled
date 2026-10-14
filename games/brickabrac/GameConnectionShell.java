@@ -412,11 +412,11 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           if (var4 == 13) {
             try {
-              if (null == po.countryListRequest) {
-                po.countryListRequest = new CappedUrlRequest(AccountMessageDialog.field_ub, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (null == ResourcePreparationEntry.countryListRequest) {
+                ResourcePreparationEntry.countryListRequest = new CappedUrlRequest(AccountMessageDialog.field_ub, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (po.countryListRequest.poll(1)) {
-                var12 = po.countryListRequest.getResult((byte) 100);
+              if (ResourcePreparationEntry.countryListRequest.poll(1)) {
+                var12 = ResourcePreparationEntry.countryListRequest.getResult((byte) 100);
                 if (var12 != null) {
                   var7 = df.decodeCp1252(var12.position, 97, var12.data, 0);
                   ButtonWidgetRenderer.a(85, var7);
@@ -424,14 +424,14 @@ abstract class GameConnectionShell extends AppletGameShell {
                   var9 = (String) null;
                   ButtonWidgetRenderer.a(85, (String) null);
                 }
-                po.countryListRequest = null;
+                ResourcePreparationEntry.countryListRequest = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
               AlignedIconLabel.a("S1", (Throwable) ((Object) var5), 28);
               ButtonWidgetRenderer.a(param1 ^ 123, (String) null);
-              po.countryListRequest = null;
+              ResourcePreparationEntry.countryListRequest = null;
             }
           }
           if (var4 == 15) {
@@ -892,10 +892,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (clientStage == 13) {
           var3Lifetime2 = 1;
-          if (AccountContentTransitionLayer.field_tb != null) {
-            stackIn_132_0 = (!AccountContentTransitionLayer.field_tb.d(-115)) ? 0 : 1;
+          if (AccountContentTransitionLayer.startupResources != null) {
+            stackIn_132_0 = (!AccountContentTransitionLayer.startupResources.pollReady(-115)) ? 0 : 1;
             var3Lifetime2 = stackIn_132_0;
-            ParisBackground.a((byte) 24, AccountContentTransitionLayer.field_tb.field_e, AccountContentTransitionLayer.field_tb.field_g);
+            ParisBackground.a((byte) 24, AccountContentTransitionLayer.startupResources.scaledProgress, AccountContentTransitionLayer.startupResources.statusText);
           }
           if (var3Lifetime2 != 0) {
             clientStage = 20;

@@ -203,7 +203,7 @@ abstract class MenuScreen extends GameScreen {
         if (inputEnabled &&
           !RadialSelectorWidget.field_L &&
           !ed.field_d) {
-          this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(PlayerNameChooserPanel.pressY, (byte) -80, LoadingProgressDialog.pressX));
+          this.selection.updatePointer(this.findButtonAt(ResourcePreparationEntry.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(PlayerNameChooserPanel.pressY, (byte) -80, LoadingProgressDialog.pressX));
           if (this.a(true, (byte) -117)) {
             SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
           }
@@ -709,7 +709,7 @@ abstract class MenuScreen extends GameScreen {
         if (obfuscationGuard <= 96) {
           this.handleKey('F', -76, -96);
         }
-        this.selection.initializeSelection(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), initialSelection, usePointer, (byte) -127);
+        this.selection.initializeSelection(this.findButtonAt(ResourcePreparationEntry.pointerY, (byte) -106, MusicPatch.pointerX), initialSelection, usePointer, (byte) -127);
     }
 
     void onExit(byte obfuscationGuard) {

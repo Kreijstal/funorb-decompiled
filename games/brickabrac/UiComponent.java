@@ -147,7 +147,7 @@ class UiComponent extends ba {
             this.capturedButton = 0;
           }
         }
-        hoverResult = (!NinjaBackground.uiHoverClaimed) && (Rasterizer2D.clipLeft <= MusicPatch.pointerX) && (Rasterizer2D.clipRight > MusicPatch.pointerX) && (po.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > po.pointerY);
+        hoverResult = (!NinjaBackground.uiHoverClaimed) && (Rasterizer2D.clipLeft <= MusicPatch.pointerX) && (Rasterizer2D.clipRight > MusicPatch.pointerX) && (ResourcePreparationEntry.pointerY >= Rasterizer2D.clipTop) && (Rasterizer2D.clipBottom > ResourcePreparationEntry.pointerY);
         this.hovered = hoverResult;
         if (0 == MatchingTextValidator.heldButton) {
           this.capturedButton = 0;
@@ -170,7 +170,7 @@ class UiComponent extends ba {
         Rasterizer2D.setClip(savedClipLeft, savedClipTop, savedClipRight, savedClipBottom);
         if (this.capturedButton != 0 &&
           this.draggable) {
-          this.localY = po.pointerY - this.pressLocalY - parentY;
+          this.localY = ResourcePreparationEntry.pointerY - this.pressLocalY - parentY;
           this.localX = -this.pressLocalX + MusicPatch.pointerX - parentX;
           if (0 > this.localX) {
             this.localX = 0;

@@ -167,7 +167,7 @@ class HotspotTextWidget extends FocusableWidget {
           this.hoveredHotspot = null;
           if (this.mouseOver) {
             var5_int = -parentX + (MusicPatch.pointerX - this.x);
-            var6 = -parentY + (po.pointerY - this.y);
+            var6 = -parentY + (ResourcePreparationEntry.pointerY - this.y);
             this.hoveredHotspot = this.findHotspot(var6, 0, var5_int);
           }
           return;

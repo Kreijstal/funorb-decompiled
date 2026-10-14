@@ -371,7 +371,7 @@ final class QuickChatMenu extends UiComponent {
                 openHelpBranch = (unusedGameFlag != 0);
               }
               if (openHelpBranch) {
-                po.a(true);
+                ResourcePreparationEntry.a(true);
                 rd.a(-1);
                 if (unusedGameFlag != 0) {
                   this.resetSelection((byte) 41);

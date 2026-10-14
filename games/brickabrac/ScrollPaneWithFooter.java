@@ -192,7 +192,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         try {
           Rasterizer2D.a(param0, -param2 + param1, param3, param2, 3, 0, 196);
           Rasterizer2D.c(param0, -param2 + param1, param3, param2, 3, param5);
-          PasswordFieldRenderer.field_D.drawLeft(param4, MusicPatch.pointerX, -1 + (-PasswordFieldRenderer.field_D.descent + po.pointerY - PasswordFieldRenderer.field_D.descent), 2, -1);
+          PasswordFieldRenderer.field_D.drawLeft(param4, MusicPatch.pointerX, -1 + (-PasswordFieldRenderer.field_D.descent + ResourcePreparationEntry.pointerY - PasswordFieldRenderer.field_D.descent), 2, -1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hj.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

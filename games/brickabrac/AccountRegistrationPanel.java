@@ -118,7 +118,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             var8Lifetime2++;
           }
           ContentTransitionPhase.field_d = ea.field_e - (ReflectionCheck.field_r >> 1);
-          ArcticBackground.field_r.initializeSelection(aj.a(param4 - 46, po.pointerY, MusicPatch.pointerX), 0, param3, (byte) -127);
+          ArcticBackground.field_r.initializeSelection(aj.a(param4 - 46, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, param3, (byte) -127);
           if (param4 != 46) {
             field_R = (RgbSprite) null;
             return;

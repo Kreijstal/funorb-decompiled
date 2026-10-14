@@ -329,7 +329,7 @@ final class bq {
             var4Lifetime3++;
           }
           if (ArchiveFetchClient.field_p != 2) {
-            UiComponent.field_H.initializeSelection(PlayerNameChooserPanel.b(120, po.pointerY, MusicPatch.pointerX), 0, param0, (byte) -127);
+            UiComponent.field_H.initializeSelection(PlayerNameChooserPanel.b(120, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, param0, (byte) -127);
           } else {
             UiComponent.field_H.initializeSelection(-1, -1, param0, (byte) -128);
           }

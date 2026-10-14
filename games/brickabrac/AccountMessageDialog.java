@@ -211,7 +211,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
             return;
           }
           if (this.field_tb) {
-            s.a((byte) -30);
+            ResourcePreparationQueue.a((byte) -30);
             return;
           }
           return;
@@ -225,7 +225,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
           return;
         }
         if (this.field_tb) {
-          s.a((byte) -30);
+          ResourcePreparationQueue.a((byte) -30);
           return;
         }
     }

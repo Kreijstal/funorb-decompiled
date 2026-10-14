@@ -967,7 +967,7 @@ final class BrickGameLayerController implements GameLayerController {
               n.field_d = false;
               if (this.d(76)) {
                 var5 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
-                stackIn_22_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.screenY > po.pointerY);
+                stackIn_22_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= ResourcePreparationEntry.pointerY) && (DualLinkDeque.field_d.screenY > ResourcePreparationEntry.pointerY);
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
                   BackgroundScene.pressedButton == 1) {
@@ -1065,7 +1065,7 @@ final class BrickGameLayerController implements GameLayerController {
           return;
         }
         var5Lifetime2 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
-        stackIn_80_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5Lifetime2) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= po.pointerY) && (DualLinkDeque.field_d.screenY > po.pointerY);
+        stackIn_80_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5Lifetime2) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= ResourcePreparationEntry.pointerY) && (DualLinkDeque.field_d.screenY > ResourcePreparationEntry.pointerY);
         n.field_d = stackIn_80_0;
         if (!n.field_d) {
           if (!n.field_d) {
