@@ -16,154 +16,154 @@ final class ch {
     static String field_d;
     static String field_i;
 
-    final static void a(byte param0) {
-        int fieldTemp$1 = 0;
-        int fieldTemp$0 = 0;
-        int stackIn_12_0 = 0;
+    final static void handleSocialListResponse(byte obfuscationGuard) {
+        int ignoreInsertionIndex = 0;
+        int friendInsertionIndex = 0;
+        int alternateNameFlag = 0;
         RuntimeException decompiledCaughtException = null;
-        BitPacketBuffer var1 = null;
+        BitPacketBuffer packet = null;
         RuntimeException var1_ref = null;
-        int var2 = 0;
-        Object var3 = null;
-        int var3_int = 0;
-        int var4 = 0;
-        String var4_ref_String = null;
-        String var5 = null;
-        mp var6 = null;
-        mp var7 = null;
-        String var7_ref = null;
-        String var8 = null;
-        int var9 = 0;
-        Object var3Lifetime1;
-        String var4_ref_StringLifetime1;
-        String var5Lifetime1;
-        mp var6Lifetime1;
-        var9 = BrickABrac.field_J ? 1 : 0;
+        int responseKind = 0;
+        Object serverStateResult = null;
+        int hasAlternateName = 0;
+        int serverStateWord = 0;
+        String ignoreName = null;
+        String ignoreActionName = null;
+        SocialListEntry ignoredEntry = null;
+        SocialListEntry existingFriend = null;
+        String previousIgnoreName = null;
+        String ignoreNameKey = null;
+        int unusedGameFlag = 0;
+        Object friendServer;
+        String friendName;
+        String previousFriendName;
+        SocialListEntry friendEntry;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = jl.incomingPackets;
-          var2 = var1.readUnsignedByte(255);
-          if (0 == var2) {
-            if (null == tf.field_d) {
-              tf.field_d = new SecondaryHashTable(128);
-              IsaacGenerator.field_h = 0;
+          packet = jl.incomingPackets;
+          responseKind = packet.readUnsignedByte(255);
+          if (0 == responseKind) {
+            if (null == tf.ignoreIndex) {
+              tf.ignoreIndex = new SecondaryHashTable(128);
+              IsaacGenerator.ignoreCount = 0;
             }
-            stackIn_12_0 = (1 != var1.readUnsignedByte(255)) ? 0 : 1;
-            var3_int = stackIn_12_0;
-            var4_ref_String = var1.readCp1252String(-1);
-            if (var3_int != 0) {
-              var5 = var1.readCp1252String(-1);
+            alternateNameFlag = (1 != packet.readUnsignedByte(255)) ? 0 : 1;
+            hasAlternateName = alternateNameFlag;
+            ignoreName = packet.readCp1252String(-1);
+            if (hasAlternateName != 0) {
+              ignoreActionName = packet.readCp1252String(-1);
             }
-            if (var3_int == 0 ||
-              var9 != 0) {
-              var5 = var4_ref_String;
+            if (hasAlternateName == 0 ||
+              unusedGameFlag != 0) {
+              ignoreActionName = ignoreName;
             }
-            var6 = HighscorePackSelector.a(0, var4_ref_String);
-            var7_ref = var1.readCp1252String(-1);
-            var8 = ChatMessage.normalizePlayerName((CharSequence) ((Object) var4_ref_String), 69);
-            if (null == var8) {
-              var8 = var4_ref_String;
+            ignoredEntry = HighscorePackSelector.findIgnoredPlayer(0, ignoreName);
+            previousIgnoreName = packet.readCp1252String(-1);
+            ignoreNameKey = ChatMessage.normalizePlayerName((CharSequence) ((Object) ignoreName), 69);
+            if (null == ignoreNameKey) {
+              ignoreNameKey = ignoreName;
             }
-            if (null == var6) {
-              var6 = HighscorePackSelector.a(0, var7_ref);
-              if (null != var6) {
-                tf.field_d.put((long)var8.hashCode(), var6, 110);
+            if (null == ignoredEntry) {
+              ignoredEntry = HighscorePackSelector.findIgnoredPlayer(0, previousIgnoreName);
+              if (null != ignoredEntry) {
+                tf.ignoreIndex.put((long)ignoreNameKey.hashCode(), ignoredEntry, 110);
               }
             }
-            if (var6 == null) {
-              var6 = new mp();
-              tf.field_d.put((long)var8.hashCode(), var6, 120);
-              fieldTemp$1 = IsaacGenerator.field_h;
-              IsaacGenerator.field_h = IsaacGenerator.field_h + 1;
-              var6.field_Sb = fieldTemp$1;
-              CachedArchiveSource.field_n.addLast(var6, (byte) 3);
+            if (ignoredEntry == null) {
+              ignoredEntry = new SocialListEntry();
+              tf.ignoreIndex.put((long)ignoreNameKey.hashCode(), ignoredEntry, 120);
+              ignoreInsertionIndex = IsaacGenerator.ignoreCount;
+              IsaacGenerator.ignoreCount = IsaacGenerator.ignoreCount + 1;
+              ignoredEntry.insertionIndex = ignoreInsertionIndex;
+              CachedArchiveSource.ignoreEntries.addLast(ignoredEntry, (byte) 3);
             }
-            var6.field_ac = var5;
-            var6.field_Qb = var7_ref;
-            var6.field_Rb = var4_ref_String;
+            ignoredEntry.actionName = ignoreActionName;
+            ignoredEntry.previousName = previousIgnoreName;
+            ignoredEntry.name = ignoreName;
             return;
           }
-          if (var2 != 1) {
-            if (var2 == 2) {
+          if (responseKind != 1) {
+            if (responseKind == 2) {
               if (LevelMetadata.field_m == 1) {
                 LevelMetadata.field_m = 2;
               }
               return;
             }
-            if (var2 == 3) {
+            if (responseKind == 3) {
               if (LevelMetadata.field_m == 2) {
                 LevelMetadata.field_m = 1;
               }
               return;
             }
-            if (var2 == 4) {
+            if (responseKind == 4) {
               LevelMetadata.field_m = 1;
-              var3 = var1.readCp1252String(-1);
-              AlignedIconLabel.field_Tb = ((String) (var3)).intern();
-              var4 = var1.readUnsignedByte(255);
-              wn.a(2, var4);
+              serverStateResult = packet.readCp1252String(-1);
+              AlignedIconLabel.currentSocialServer = ((String) (serverStateResult)).intern();
+              serverStateWord = packet.readUnsignedByte(255);
+              wn.applyChatFilters(2, serverStateWord);
               return;
             }
             AlignedIconLabel.a("F1: " + eq.c((byte) -104), (Throwable) null, 58);
             hn.a((byte) 98);
-            if (param0 < 52) {
-              ch.a((byte) -91);
+            if (obfuscationGuard < 52) {
+              ch.handleSocialListResponse((byte) -91);
             }
             return;
           }
-          if (null == BlankScreen.field_i) {
-            BlankScreen.field_i = new SecondaryHashTable(128);
-            LevelPackSelectScreen.field_w = 0;
+          if (null == BlankScreen.friendIndex) {
+            BlankScreen.friendIndex = new SecondaryHashTable(128);
+            LevelPackSelectScreen.friendCount = 0;
           }
-          var3Lifetime1 = var1.readCp1252String(-1);
-          if (((String) (var3Lifetime1)).equals("")) {
-            var3Lifetime1 = null;
+          friendServer = packet.readCp1252String(-1);
+          if (((String) (friendServer)).equals("")) {
+            friendServer = null;
           }
-          var4_ref_StringLifetime1 = var1.readCp1252String(-1);
-          var5Lifetime1 = var1.readCp1252String(-1);
-          var6Lifetime1 = pf.a(false, var4_ref_StringLifetime1);
-          if (var6Lifetime1 == null) {
-            var6Lifetime1 = pf.a(false, var5Lifetime1);
-            if (var6Lifetime1 != null) {
-              BlankScreen.field_i.put((long)ChatMessage.normalizePlayerName((CharSequence) ((Object) var4_ref_StringLifetime1), 87).hashCode(), var6Lifetime1, 104);
+          friendName = packet.readCp1252String(-1);
+          previousFriendName = packet.readCp1252String(-1);
+          friendEntry = pf.findFriend(false, friendName);
+          if (friendEntry == null) {
+            friendEntry = pf.findFriend(false, previousFriendName);
+            if (friendEntry != null) {
+              BlankScreen.friendIndex.put((long)ChatMessage.normalizePlayerName((CharSequence) ((Object) friendName), 87).hashCode(), friendEntry, 104);
             }
           }
-          if (var6Lifetime1 == null) {
-            var6Lifetime1 = new mp();
-            BlankScreen.field_i.put((long)ChatMessage.normalizePlayerName((CharSequence) ((Object) var4_ref_StringLifetime1), 116).hashCode(), var6Lifetime1, 101);
-            fieldTemp$0 = LevelPackSelectScreen.field_w;
-            LevelPackSelectScreen.field_w = LevelPackSelectScreen.field_w + 1;
-            var6Lifetime1.field_Sb = fieldTemp$0;
-            bf.field_N.addLast(var6Lifetime1, (byte) 3);
+          if (friendEntry == null) {
+            friendEntry = new SocialListEntry();
+            BlankScreen.friendIndex.put((long)ChatMessage.normalizePlayerName((CharSequence) ((Object) friendName), 116).hashCode(), friendEntry, 101);
+            friendInsertionIndex = LevelPackSelectScreen.friendCount;
+            LevelPackSelectScreen.friendCount = LevelPackSelectScreen.friendCount + 1;
+            friendEntry.insertionIndex = friendInsertionIndex;
+            bf.friendEntries.addLast(friendEntry, (byte) 3);
           }
-          if (var3Lifetime1 != null) {
-            var3Lifetime1 = ((String) (var3Lifetime1)).intern();
+          if (friendServer != null) {
+            friendServer = ((String) (friendServer)).intern();
           }
-          var6Lifetime1.field_Rb = var4_ref_StringLifetime1;
-          var6Lifetime1.field_Ub = (String) (var3Lifetime1);
-          var6Lifetime1.field_Qb = var5Lifetime1;
-          var6Lifetime1.unlink((byte) 111);
-          var7 = (mp) (bf.field_N.first(-65));
-          while (null != var7) {
-            if (ArchiveNetworkClient.a(200, var7, var6Lifetime1)) {
-              var7 = (mp) (bf.field_N.next((byte) 116));
-              if (var9 == 0) {
+          friendEntry.name = friendName;
+          friendEntry.serverName = (String) (friendServer);
+          friendEntry.previousName = previousFriendName;
+          friendEntry.unlink((byte) 111);
+          existingFriend = (SocialListEntry) (bf.friendEntries.first(-65));
+          while (null != existingFriend) {
+            if (ArchiveNetworkClient.comesBeforeFriend(200, existingFriend, friendEntry)) {
+              existingFriend = (SocialListEntry) (bf.friendEntries.next((byte) 116));
+              if (unusedGameFlag == 0) {
                 continue;
               }
             }
             break;
           }
-          if (var7 != null) {
-            BubbleDistortion.insertNodeBefore(var6Lifetime1, -103, var7);
-            if (var9 == 0) {
+          if (existingFriend != null) {
+            BubbleDistortion.insertNodeBefore(friendEntry, -103, existingFriend);
+            if (unusedGameFlag == 0) {
               return;
             }
           }
-          bf.field_N.addLast(var6Lifetime1, (byte) 3);
+          bf.friendEntries.addLast(friendEntry, (byte) 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "ch.C(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "ch.C(" + obfuscationGuard + ')');
         }
     }
 

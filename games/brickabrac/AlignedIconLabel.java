@@ -5,7 +5,7 @@ import java.io.*;
 
 final class AlignedIconLabel extends UiComponent {
     UiComponent label;
-    static String field_Tb;
+    static String currentSocialServer;
     static RgbSprite field_Sb;
     private UiComponent icon;
     static int achievementTransitionMask;
@@ -65,7 +65,7 @@ final class AlignedIconLabel extends UiComponent {
     }
 
     public static void d(byte param0) {
-        field_Tb = null;
+        currentSocialServer = null;
         field_Sb = null;
         if (param0 != 21) {
           AlignedIconLabel.d((byte) -26);
@@ -265,7 +265,7 @@ final class AlignedIconLabel extends UiComponent {
             return (MeshAttributeRecord[]) (unsupportedResult);
           }
           if (obfuscationGuard != 24) {
-            field_Tb = (String) null;
+            currentSocialServer = (String) null;
           }
           count = packet.readBits(12, (byte) 85);
           records = new MeshAttributeRecord[count];

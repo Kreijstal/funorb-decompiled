@@ -77,58 +77,58 @@ final class HighscorePackSelector {
         hi.rasterStack.addLast(snapshot, (byte) 3);
     }
 
-    final static mp a(int param0, String param1) {
-        String var2 = null;
-        mp var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        CharSequence var7 = null;
-        CharSequence var8 = null;
-        mp stackIn_16_0 = null;
+    final static SocialListEntry findIgnoredPlayer(int obfuscationGuard, String name) {
+        String nameKey = null;
+        SocialListEntry entry = null;
+        String entryNameKey = null;
+        int unusedGameFlag = 0;
+        String unusedName = null;
+        CharSequence nameCharacters = null;
+        CharSequence entryNameCharacters = null;
+        SocialListEntry result = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (tf.field_d == null) {
+          if (tf.ignoreIndex == null) {
             return null;
           }
-          var7 = (CharSequence) ((Object) param1);
-          var2 = ChatMessage.normalizePlayerName(var7, 85);
-          if (var2 == null) {
-            var2 = param1;
+          nameCharacters = (CharSequence) ((Object) name);
+          nameKey = ChatMessage.normalizePlayerName(nameCharacters, 85);
+          if (nameKey == null) {
+            nameKey = name;
           }
-          if (param0 != 0) {
-            var6 = (String) null;
-            HighscorePackSelector.a(-82, (String) null);
+          if (obfuscationGuard != 0) {
+            unusedName = (String) null;
+            HighscorePackSelector.findIgnoredPlayer(-82, (String) null);
           }
-          var3 = (mp) (tf.field_d.get((long)var2.hashCode(), -1));
+          entry = (SocialListEntry) (tf.ignoreIndex.get((long)nameKey.hashCode(), -1));
           while (true) {
-            if (var3 == null) {
+            if (entry == null) {
               return null;
             }
-            var8 = (CharSequence) ((Object) var3.field_Rb);
-            var4 = ChatMessage.normalizePlayerName(var8, param0 + 55);
-            if (var4 == null) {
-              var4 = var3.field_Rb;
+            entryNameCharacters = (CharSequence) ((Object) entry.name);
+            entryNameKey = ChatMessage.normalizePlayerName(entryNameCharacters, obfuscationGuard + 55);
+            if (entryNameKey == null) {
+              entryNameKey = entry.name;
             }
-            if (!var4.equals(var2)) {
-              var3 = (mp) (tf.field_d.nextMatch((byte) -43));
+            if (!entryNameKey.equals(nameKey)) {
+              entry = (SocialListEntry) (tf.ignoreIndex.nextMatch((byte) -43));
               continue;
             }
             break;
           }
-          stackIn_16_0 = var3;
-          return stackIn_16_0;
+          result = entry;
+          return result;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_21_0 = var2_ref;
-          stackIn_21_1 = new StringBuilder().append("jf.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_21_1 = new StringBuilder().append("jf.A(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";

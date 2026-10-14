@@ -118,7 +118,7 @@ final class f {
                     firstPartitionRows++;
                   }
                   if (name != null &&
-                    SpaceBackground.a(name, obfuscationGuard ^ -88)) {
+                    SpaceBackground.isLocalPlayerName(name, obfuscationGuard ^ -88)) {
                     names[1][playerPartitionRows] = tb.field_cb;
                     secondaryLabels[1][playerPartitionRows] = null;
                     rowIds[1][playerPartitionRows] = rowId;

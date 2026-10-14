@@ -127,20 +127,20 @@ final class uc extends k {
         DualLinkNode var2Lifetime1;
         try {
           int var1_int = 9 % ((-59 - param0) / 35);
-          AlignedIconLabel.field_Tb = null;
-          IsaacGenerator.field_h = 0;
-          LevelPackSelectScreen.field_w = 0;
-          bf.field_N.clear((byte) -72);
-          CachedArchiveSource.field_n.clear((byte) -92);
-          var2 = BlankScreen.field_i.first((byte) 74);
+          AlignedIconLabel.currentSocialServer = null;
+          IsaacGenerator.ignoreCount = 0;
+          LevelPackSelectScreen.friendCount = 0;
+          bf.friendEntries.clear((byte) -72);
+          CachedArchiveSource.ignoreEntries.clear((byte) -92);
+          var2 = BlankScreen.friendIndex.first((byte) 74);
           while (var2 != null) {
             var2.unlinkSecondary(3);
-            var2 = BlankScreen.field_i.next(false);
+            var2 = BlankScreen.friendIndex.next(false);
           }
-          var2Lifetime1 = tf.field_d.first((byte) 122);
+          var2Lifetime1 = tf.ignoreIndex.first((byte) 122);
           while (var2Lifetime1 != null) {
             var2Lifetime1.unlinkSecondary(3);
-            var2Lifetime1 = tf.field_d.next(false);
+            var2Lifetime1 = tf.ignoreIndex.next(false);
           }
           LevelMetadata.field_m = 0;
         } catch (RuntimeException runtimeException) {

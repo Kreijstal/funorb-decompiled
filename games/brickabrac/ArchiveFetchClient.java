@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveFetchClient {
-    static String field_d;
+    static String localPlayerNameKey;
     static String[] field_j;
     static int field_p;
     static RgbSprite field_k;
@@ -95,11 +95,11 @@ abstract class ArchiveFetchClient {
         if (param0 != -12200) {
           field_j = (String[]) null;
           field_k = null;
-          field_d = null;
+          localPlayerNameKey = null;
           return;
         }
         field_k = null;
-        field_d = null;
+        localPlayerNameKey = null;
     }
 
     final static void a(RasterCacheSurface param0, RgbSprite param1, int param2, int param3, int param4, boolean param5) {

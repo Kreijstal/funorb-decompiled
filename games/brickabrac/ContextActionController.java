@@ -666,7 +666,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("waiting_to_start_hint", (byte) -117);
                 if (null != var2) {
-                  mp.field_Pb = MenuButton.a(var2, (byte) 96);
+                  SocialListEntry.field_Pb = MenuButton.a(var2, (byte) 96);
                 }
                 var2 = nk.a("your_game", (byte) -121);
                 if (null != var2) {
@@ -3220,14 +3220,14 @@ final class ContextActionController {
         RuntimeException decompiledCaughtException = null;
         String caption = null;
         RuntimeException var4_ref = null;
-        mp friend = null;
+        SocialListEntry friend = null;
         int ignoredPlayer = 0;
         try {
           if (null != this.targetName && (oc.field_p != this.targetId ||
             channel == 2) && 2 == LevelMetadata.field_m) {
             caption = this.getTargetCaption(-12688);
-            friend = pf.a(false, this.targetName);
-            ignoredPlayer = AchievementBrowserScreen.a(121, this.targetName) ? 1 : 0;
+            friend = pf.findFriend(false, this.targetName);
+            ignoredPlayer = AchievementBrowserScreen.isIgnoredPlayer(121, this.targetName) ? 1 : 0;
             if (friend == null &&
               ignoredPlayer == 0) {
               this.contextMenu.addAction(rd.a(AchievementMaskRequest.field_l, new String[]{caption}, (byte) 103), 4, (byte) 105);
@@ -3407,18 +3407,18 @@ final class ContextActionController {
           }
           unusedError = null;
           if (actionId == 4) {
-            errorMessage = jl.a(obfuscationGuard ^ -24878, this.targetName, opcode);
+            errorMessage = jl.requestAddFriend(obfuscationGuard ^ -24878, this.targetName, opcode);
           } else {
             if (actionId == 5) {
-              errorMessage = KeyboardInput.a(opcode, false, this.targetName);
+              errorMessage = KeyboardInput.requestRemoveFriend(opcode, false, this.targetName);
             } else {
               if (6 == actionId) {
-                errorMessage = me.a(this.targetName, opcode, 2);
+                errorMessage = me.requestAddIgnoredPlayer(this.targetName, opcode, 2);
               } else {
                 if (7 != actionId) {
                   return false;
                 }
-                errorMessage = uf.a(this.targetName, opcode, this.targetDisplayName, -66);
+                errorMessage = uf.requestRemoveIgnoredPlayer(this.targetName, opcode, this.targetDisplayName, -66);
               }
             }
           }

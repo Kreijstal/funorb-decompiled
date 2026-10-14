@@ -226,13 +226,13 @@ final class uf {
         }
     }
 
-    final static String a(String param0, int param1, String param2, int param3) {
+    final static String requestRemoveIgnoredPlayer(String name, int opcode, String lookupName, int obfuscationGuard) {
         RuntimeException var4 = null;
-        int var5 = 0;
-        BitPacketBuffer var6 = null;
-        int var7 = 0;
-        mp var8 = null;
-        CharSequence var9 = null;
+        int guardDivision = 0;
+        BitPacketBuffer packet = null;
+        int bodyStart = 0;
+        SocialListEntry entry = null;
+        CharSequence nameCharacters = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -244,8 +244,8 @@ final class uf {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = (CharSequence) ((Object) param0);
-          if (!DualLinkNode.a(var9, false)) {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!DualLinkNode.isValidSocialName(nameCharacters, false)) {
             stackIn_2_0 = om.field_Xb;
             return stackIn_2_0;
           }
@@ -253,22 +253,22 @@ final class uf {
             stackIn_6_0 = hd.field_b;
             return stackIn_6_0;
           }
-          var8 = HighscorePackSelector.a(0, param2);
-          var5 = 42 / ((15 - param3) / 34);
-          if (var8 == null) {
-            stackIn_9_0 = rd.a(to.field_h, new String[]{param2}, (byte) 103);
+          entry = HighscorePackSelector.findIgnoredPlayer(0, lookupName);
+          guardDivision = 42 / ((15 - obfuscationGuard) / 34);
+          if (entry == null) {
+            stackIn_9_0 = rd.a(to.field_h, new String[]{lookupName}, (byte) 103);
             return stackIn_9_0;
           }
-          var8.unlink((byte) 111);
-          var8.unlinkSecondary(3);
-          IsaacGenerator.field_h = IsaacGenerator.field_h - 1;
-          var6 = k.outgoingPackets;
-          var6.writeCipheredOpcode(-13413, param1);
-          var6.position = var6.position + 1;
-          var7 = var6.position;
-          var6.writeByte(16, 3);
-          var6.writeCp1252String(param0, -1);
-          var6.backfillByteLength((byte) 117, -var7 + var6.position);
+          entry.unlink((byte) 111);
+          entry.unlinkSecondary(3);
+          IsaacGenerator.ignoreCount = IsaacGenerator.ignoreCount - 1;
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          bodyStart = packet.position;
+          packet.writeByte(16, 3);
+          packet.writeCp1252String(name, -1);
+          packet.backfillByteLength((byte) 117, -bodyStart + packet.position);
           stackIn_11_0 = null;
           return (String) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -276,18 +276,18 @@ final class uf {
           var4 = decompiledCaughtException;
           stackIn_14_0 = var4;
           stackIn_14_1 = new StringBuilder().append("uf.C(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(opcode).append(',');
+          if (lookupName == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

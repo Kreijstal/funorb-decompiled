@@ -220,7 +220,7 @@ class DualLinkNode extends IntrusiveNode {
         uf.field_b = -2147483648;
     }
 
-    final static boolean a(CharSequence param0, boolean param1) {
+    final static boolean isValidSocialName(CharSequence name, boolean obfuscationGuard) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -231,19 +231,19 @@ class DualLinkNode extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!bd.a(param0, 0, true)) {
+          if (!bd.hasValidPlayerNameShape(name, 0, true)) {
             return false;
           }
           var2_int = 0;
-          if (param1) {
+          if (obfuscationGuard) {
             var4 = (CharSequence) null;
-            DualLinkNode.a((CharSequence) null, false);
+            DualLinkNode.isValidSocialName((CharSequence) null, false);
           }
           while (true) {
-            if (param0.length() <= var2_int) {
+            if (name.length() <= var2_int) {
               return true;
             }
-            if (m.isNameCharacter(true, param0.charAt(var2_int))) {
+            if (m.isNameCharacter(true, name.charAt(var2_int))) {
               var2_int++;
               continue;
             }
@@ -255,12 +255,12 @@ class DualLinkNode extends IntrusiveNode {
           var2 = decompiledCaughtException;
           stackIn_16_0 = var2;
           stackIn_16_1 = new StringBuilder().append("tk.SB(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

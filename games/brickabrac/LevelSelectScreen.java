@@ -220,7 +220,7 @@ final class LevelSelectScreen extends MenuScreen {
     final static boolean a(long param0, String param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        mp var5 = null;
+        SocialListEntry var5 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -228,9 +228,9 @@ final class LevelSelectScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -82 / ((-47 - param2) / 37);
-          var5 = pf.a(false, param1);
+          var5 = pf.findFriend(false, param1);
           if (var5 != null &&
-            var5.field_Ub != null) {
+            var5.serverName != null) {
             return true;
           }
           stackIn_9_0 = (o.field_e != null) && (null != ac.a(param0, 2));

@@ -251,7 +251,7 @@ final class RankingsScreen extends MenuScreen {
             for (var8 = 0; var8 < 10; var8++) {
               if (var5[var8] != null) {
                 var3Lifetime1 = 2;
-                if (SpaceBackground.a(var5[var8], -15)) {
+                if (SpaceBackground.isLocalPlayerName(var5[var8], -15)) {
                   var3Lifetime1 = 1;
                   var7 = 1;
                 }

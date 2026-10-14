@@ -83,7 +83,7 @@ final class MusicEnvelope {
         RuntimeException var3 = null;
         NodeDeque var4 = null;
         Object var5 = null;
-        mp var6 = null;
+        SocialListEntry var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -119,26 +119,26 @@ final class MusicEnvelope {
           f.field_c.enabled = true;
           f.field_c.scrollPane.viewport.text = null;
           var5 = null;
-          var6 = (mp) (var4.first(-57));
+          var6 = (SocialListEntry) (var4.first(-57));
           while (var6 != null) {
             var7 = 0;
             if (null == var6.children) {
-              var6.field_Xb = new UiComponent(0L, vb.field_K);
-              var6.addChild(var6.field_Xb, 0);
-              var6.field_Yb = new UiComponent(0L, vb.field_K);
-              var6.addChild(var6.field_Yb, 0);
+              var6.nameLabel = new UiComponent(0L, vb.field_K);
+              var6.addChild(var6.nameLabel, 0);
+              var6.renameIndicator = new UiComponent(0L, vb.field_K);
+              var6.addChild(var6.renameIndicator, 0);
               var6.markDescendantsToInheritVisualState(param1);
               var7 = 1;
             }
             var6.width = f.field_c.content.width;
-            var6.field_Xb.setBounds(np.uiRowHeight, 0, 0, var6.width, (byte) 64);
+            var6.nameLabel.setBounds(np.uiRowHeight, 0, 0, var6.width, (byte) 64);
             var8 = 0;
-            if (null != var6.field_Qb &&
-              !var6.field_Qb.equals("")) {
-              var6.field_Yb.sprite = ok.field_g;
-              var6.field_Yb.activeTextColor = 16737894;
+            if (null != var6.previousName &&
+              !var6.previousName.equals("")) {
+              var6.renameIndicator.sprite = ok.field_g;
+              var6.renameIndicator.activeTextColor = 16737894;
               var8 = 1;
-              var6.field_Yb.setBounds(np.uiRowHeight, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
+              var6.renameIndicator.setBounds(np.uiRowHeight, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
             }
             var9 = 0;
             var10 = var6.width;
@@ -146,33 +146,33 @@ final class MusicEnvelope {
               var9 = ok.field_g.canvasWidth + 3;
               var10 = var10 - var9;
             }
-            stackIn_20_0 = var6.field_Xb;
+            stackIn_20_0 = var6.nameLabel;
             if (0 < var10) {
-              stackIn_21_1 = TextFont.truncateText(var6.field_Xb.font, var6.field_Rb, var10);
+              stackIn_21_1 = TextFont.truncateText(var6.nameLabel.font, var6.name, var10);
             } else {
-              stackIn_21_1 = var6.field_Rb;
+              stackIn_21_1 = var6.name;
             }
             stackIn_20_0.text = stackIn_21_1;
-            stackIn_24_0 = (var6.field_Xb.text.equals(var6.field_Rb)) ? 0 : 1;
+            stackIn_24_0 = (var6.nameLabel.text.equals(var6.name)) ? 0 : 1;
             var11 = stackIn_24_0;
-            var6.field_Xb.setBounds(np.uiRowHeight, 0, var9, var10, (byte) 64);
+            var6.nameLabel.setBounds(np.uiRowHeight, 0, var9, var10, (byte) 64);
             if (var3_int == 0) {
               var6.remainingHeight = np.uiRowHeight - var6.height;
             }
             if (var7 != 0) {
               f.field_c.content.placeBelow((UiComponent) (var5), 2, var6, 17290);
             }
-            if (null != var6.field_Yb &&
-              var6.field_Yb.activeInside) {
-              ep.field_e = var6.field_Qb;
+            if (null != var6.renameIndicator &&
+              var6.renameIndicator.activeInside) {
+              ep.field_e = var6.previousName;
             } else {
-              if (var6.field_Xb.activeInside &&
+              if (var6.nameLabel.activeInside &&
                 var11 != 0) {
-                ep.field_e = var6.field_Rb;
+                ep.field_e = var6.name;
               }
             }
             if (var6.pressedButton != 0) {
-              SpriteGeometry.a(-1, var6, f.field_c.scrollPane, (int[]) null, var6.field_ac, -1, (byte) -58, 0L, var6.field_Rb);
+              SpriteGeometry.a(-1, var6, f.field_c.scrollPane, (int[]) null, var6.actionName, -1, (byte) -58, 0L, var6.name);
               var16 = bm.contextActions;
               var13_ref_String = ng.field_e;
               var16.contextMenu.addAction(var13_ref_String, 7, (byte) 126);
@@ -182,7 +182,7 @@ final class MusicEnvelope {
               var17.contextMenu.layoutAtAnchor(var14, -126, 0, 0, var13);
             }
             var5 = var6;
-            var6 = (mp) (var4.next((byte) 116));
+            var6 = (SocialListEntry) (var4.next((byte) 116));
           }
           if (f.field_c.leftFooter.pressedButton != 0) {
             MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.field_c.leftFooter.screenX, f.field_c.leftFooter.screenY, f.field_c.leftFooter.width, f.field_c.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);

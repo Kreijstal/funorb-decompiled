@@ -9,7 +9,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     static int[] field_v;
     private LevelPackCard secondPackCard;
     static int field_y;
-    static int field_w;
+    static int friendCount;
     static boolean field_s;
 
     final void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {

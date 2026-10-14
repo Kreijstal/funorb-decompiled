@@ -863,7 +863,7 @@ public final class BrickABrac extends InteractiveGameClient {
         DelayedPacket.a(-128);
         IntArrayRequest.a(112);
         LevelResultSubmission.a(-17432);
-        mp.h(-115);
+        SocialListEntry.h(-115);
         TableDataRequest.a(136);
         TableRowSubmission.a(-241);
         TableNameEntry.a((byte) -105);

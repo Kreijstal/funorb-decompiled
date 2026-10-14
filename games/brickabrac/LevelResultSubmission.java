@@ -59,7 +59,7 @@ final class LevelResultSubmission extends IntrusiveNode {
           }
           if (2 == ng.quickChatChannel &&
             !FileCacheStore.b(-21835160)) {
-            boolean decompiledSharedTail2 = !(LevelPack.a(0, QuickChatHelpDialog.field_Qb));
+            boolean decompiledSharedTail2 = !(LevelPack.isFriend(0, QuickChatHelpDialog.field_Qb));
             if (!decompiledSharedTail2) {
               var2 = rd.a(ScorePopup.field_j, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
               decompiledSharedTail2 = (var10 != 0);

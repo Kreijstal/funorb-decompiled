@@ -918,171 +918,171 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime49 = gr.a(!param0, "achievement_criteria,0");
           if (var2Lifetime49 != null) {
-            mp.field_bc[0] = MenuButton.a(var2Lifetime49, (byte) 95);
+            SocialListEntry.field_bc[0] = MenuButton.a(var2Lifetime49, (byte) 95);
           }
           var2Lifetime50 = gr.a(true, "achievement_criteria,1");
           if (null != var2Lifetime50) {
-            mp.field_bc[1] = MenuButton.a(var2Lifetime50, (byte) 109);
+            SocialListEntry.field_bc[1] = MenuButton.a(var2Lifetime50, (byte) 109);
           }
           var2Lifetime51 = gr.a(!param0, "achievement_criteria,2");
           if (null != var2Lifetime51) {
-            mp.field_bc[2] = MenuButton.a(var2Lifetime51, (byte) 100);
+            SocialListEntry.field_bc[2] = MenuButton.a(var2Lifetime51, (byte) 100);
           }
           var2Lifetime52 = gr.a(true, "achievement_criteria,3");
           if (var2Lifetime52 != null) {
-            mp.field_bc[3] = MenuButton.a(var2Lifetime52, (byte) 92);
+            SocialListEntry.field_bc[3] = MenuButton.a(var2Lifetime52, (byte) 92);
           }
           var2Lifetime53 = gr.a(!param0, "achievement_criteria,4");
           if (null != var2Lifetime53) {
-            mp.field_bc[4] = MenuButton.a(var2Lifetime53, (byte) 106);
+            SocialListEntry.field_bc[4] = MenuButton.a(var2Lifetime53, (byte) 106);
           }
           var2Lifetime54 = gr.a(true, "achievement_criteria,5");
           if (null != var2Lifetime54) {
-            mp.field_bc[5] = MenuButton.a(var2Lifetime54, (byte) 127);
+            SocialListEntry.field_bc[5] = MenuButton.a(var2Lifetime54, (byte) 127);
           }
           var2Lifetime55 = gr.a(!param0, "achievement_criteria,6");
           if (var2Lifetime55 != null) {
-            mp.field_bc[6] = MenuButton.a(var2Lifetime55, (byte) 116);
+            SocialListEntry.field_bc[6] = MenuButton.a(var2Lifetime55, (byte) 116);
           }
           var2Lifetime56 = gr.a(true, "achievement_criteria,7");
           if (var2Lifetime56 != null) {
-            mp.field_bc[7] = MenuButton.a(var2Lifetime56, (byte) 70);
+            SocialListEntry.field_bc[7] = MenuButton.a(var2Lifetime56, (byte) 70);
           }
           var2Lifetime57 = gr.a(true, "achievement_criteria,8");
           if (null != var2Lifetime57) {
-            mp.field_bc[8] = MenuButton.a(var2Lifetime57, (byte) 112);
+            SocialListEntry.field_bc[8] = MenuButton.a(var2Lifetime57, (byte) 112);
           }
           var2Lifetime58 = gr.a(true, "achievement_criteria,9");
           if (var2Lifetime58 != null) {
-            mp.field_bc[9] = MenuButton.a(var2Lifetime58, (byte) 76);
+            SocialListEntry.field_bc[9] = MenuButton.a(var2Lifetime58, (byte) 76);
           }
           var2Lifetime59 = gr.a(true, "achievement_criteria,10");
           if (var2Lifetime59 != null) {
-            mp.field_bc[10] = MenuButton.a(var2Lifetime59, (byte) 99);
+            SocialListEntry.field_bc[10] = MenuButton.a(var2Lifetime59, (byte) 99);
           }
           var2Lifetime60 = gr.a(true, "achievement_criteria,11");
           if (null != var2Lifetime60) {
-            mp.field_bc[11] = MenuButton.a(var2Lifetime60, (byte) 78);
+            SocialListEntry.field_bc[11] = MenuButton.a(var2Lifetime60, (byte) 78);
           }
           var2Lifetime61 = gr.a(true, "achievement_criteria,12");
           if (null != var2Lifetime61) {
-            mp.field_bc[12] = MenuButton.a(var2Lifetime61, (byte) 91);
+            SocialListEntry.field_bc[12] = MenuButton.a(var2Lifetime61, (byte) 91);
           }
           var2Lifetime62 = gr.a(!param0, "achievement_criteria,13");
           if (var2Lifetime62 != null) {
-            mp.field_bc[13] = MenuButton.a(var2Lifetime62, (byte) 92);
+            SocialListEntry.field_bc[13] = MenuButton.a(var2Lifetime62, (byte) 92);
           }
           var2Lifetime63 = gr.a(!param0, "achievement_criteria,14");
           if (var2Lifetime63 != null) {
-            mp.field_bc[14] = MenuButton.a(var2Lifetime63, (byte) 107);
+            SocialListEntry.field_bc[14] = MenuButton.a(var2Lifetime63, (byte) 107);
           }
           var2Lifetime64 = gr.a(true, "achievement_criteria,15");
           if (null != var2Lifetime64) {
-            mp.field_bc[15] = MenuButton.a(var2Lifetime64, (byte) 125);
+            SocialListEntry.field_bc[15] = MenuButton.a(var2Lifetime64, (byte) 125);
           }
           var2Lifetime65 = gr.a(true, "achievement_criteria,16");
           if (null != var2Lifetime65) {
-            mp.field_bc[16] = MenuButton.a(var2Lifetime65, (byte) 101);
+            SocialListEntry.field_bc[16] = MenuButton.a(var2Lifetime65, (byte) 101);
           }
           var2Lifetime66 = gr.a(true, "achievement_criteria,17");
           if (null != var2Lifetime66) {
-            mp.field_bc[17] = MenuButton.a(var2Lifetime66, (byte) 92);
+            SocialListEntry.field_bc[17] = MenuButton.a(var2Lifetime66, (byte) 92);
           }
           var2Lifetime67 = gr.a(true, "achievement_criteria,18");
           if (null != var2Lifetime67) {
-            mp.field_bc[18] = MenuButton.a(var2Lifetime67, (byte) 74);
+            SocialListEntry.field_bc[18] = MenuButton.a(var2Lifetime67, (byte) 74);
           }
           var2Lifetime68 = gr.a(true, "achievement_criteria,19");
           if (var2Lifetime68 != null) {
-            mp.field_bc[19] = MenuButton.a(var2Lifetime68, (byte) 121);
+            SocialListEntry.field_bc[19] = MenuButton.a(var2Lifetime68, (byte) 121);
           }
           var2Lifetime69 = gr.a(!param0, "achievement_criteria,20");
           if (var2Lifetime69 != null) {
-            mp.field_bc[20] = MenuButton.a(var2Lifetime69, (byte) 89);
+            SocialListEntry.field_bc[20] = MenuButton.a(var2Lifetime69, (byte) 89);
           }
           var2Lifetime70 = gr.a(true, "achievement_criteria,21");
           if (null != var2Lifetime70) {
-            mp.field_bc[21] = MenuButton.a(var2Lifetime70, (byte) 106);
+            SocialListEntry.field_bc[21] = MenuButton.a(var2Lifetime70, (byte) 106);
           }
           var2Lifetime71 = gr.a(true, "achievement_criteria,22");
           if (var2Lifetime71 != null) {
-            mp.field_bc[22] = MenuButton.a(var2Lifetime71, (byte) 81);
+            SocialListEntry.field_bc[22] = MenuButton.a(var2Lifetime71, (byte) 81);
           }
           var2Lifetime72 = gr.a(true, "achievement_criteria,23");
           if (var2Lifetime72 != null) {
-            mp.field_bc[23] = MenuButton.a(var2Lifetime72, (byte) 122);
+            SocialListEntry.field_bc[23] = MenuButton.a(var2Lifetime72, (byte) 122);
           }
           var2Lifetime73 = gr.a(true, "achievement_criteria,24");
           if (null != var2Lifetime73) {
-            mp.field_bc[24] = MenuButton.a(var2Lifetime73, (byte) 77);
+            SocialListEntry.field_bc[24] = MenuButton.a(var2Lifetime73, (byte) 77);
           }
           var2Lifetime74 = gr.a(true, "achievement_criteria,25");
           if (null != var2Lifetime74) {
-            mp.field_bc[25] = MenuButton.a(var2Lifetime74, (byte) 102);
+            SocialListEntry.field_bc[25] = MenuButton.a(var2Lifetime74, (byte) 102);
           }
           var2Lifetime75 = gr.a(!param0, "achievement_criteria,26");
           if (null != var2Lifetime75) {
-            mp.field_bc[26] = MenuButton.a(var2Lifetime75, (byte) 124);
+            SocialListEntry.field_bc[26] = MenuButton.a(var2Lifetime75, (byte) 124);
           }
           var2Lifetime76 = gr.a(!param0, "achievement_criteria,27");
           if (var2Lifetime76 != null) {
-            mp.field_bc[27] = MenuButton.a(var2Lifetime76, (byte) 79);
+            SocialListEntry.field_bc[27] = MenuButton.a(var2Lifetime76, (byte) 79);
           }
           var2Lifetime77 = gr.a(!param0, "achievement_criteria,28");
           if (var2Lifetime77 != null) {
-            mp.field_bc[28] = MenuButton.a(var2Lifetime77, (byte) 81);
+            SocialListEntry.field_bc[28] = MenuButton.a(var2Lifetime77, (byte) 81);
           }
           var2Lifetime78 = gr.a(true, "achievement_criteria,29");
           if (null != var2Lifetime78) {
-            mp.field_bc[29] = MenuButton.a(var2Lifetime78, (byte) 72);
+            SocialListEntry.field_bc[29] = MenuButton.a(var2Lifetime78, (byte) 72);
           }
           var2Lifetime79 = gr.a(true, "achievement_criteria,30");
           if (var2Lifetime79 != null) {
-            mp.field_bc[30] = MenuButton.a(var2Lifetime79, (byte) 115);
+            SocialListEntry.field_bc[30] = MenuButton.a(var2Lifetime79, (byte) 115);
           }
           var2Lifetime80 = gr.a(true, "achievement_criteria,31");
           if (var2Lifetime80 != null) {
-            mp.field_bc[31] = MenuButton.a(var2Lifetime80, (byte) 110);
+            SocialListEntry.field_bc[31] = MenuButton.a(var2Lifetime80, (byte) 110);
           }
           var2Lifetime81 = gr.a(!param0, "achievement_criteria,32");
           if (var2Lifetime81 != null) {
-            mp.field_bc[32] = MenuButton.a(var2Lifetime81, (byte) 124);
+            SocialListEntry.field_bc[32] = MenuButton.a(var2Lifetime81, (byte) 124);
           }
           var2Lifetime82 = gr.a(true, "achievement_criteria,33");
           if (null != var2Lifetime82) {
-            mp.field_bc[33] = MenuButton.a(var2Lifetime82, (byte) 85);
+            SocialListEntry.field_bc[33] = MenuButton.a(var2Lifetime82, (byte) 85);
           }
           var2Lifetime83 = gr.a(true, "achievement_criteria,34");
           if (var2Lifetime83 != null) {
-            mp.field_bc[34] = MenuButton.a(var2Lifetime83, (byte) 72);
+            SocialListEntry.field_bc[34] = MenuButton.a(var2Lifetime83, (byte) 72);
           }
           var2Lifetime84 = gr.a(true, "achievement_criteria,35");
           if (null != var2Lifetime84) {
-            mp.field_bc[35] = MenuButton.a(var2Lifetime84, (byte) 72);
+            SocialListEntry.field_bc[35] = MenuButton.a(var2Lifetime84, (byte) 72);
           }
           var2Lifetime85 = gr.a(true, "achievement_criteria,36");
           if (var2Lifetime85 != null) {
-            mp.field_bc[36] = MenuButton.a(var2Lifetime85, (byte) 126);
+            SocialListEntry.field_bc[36] = MenuButton.a(var2Lifetime85, (byte) 126);
           }
           var2Lifetime86 = gr.a(true, "achievement_criteria,37");
           if (null != var2Lifetime86) {
-            mp.field_bc[37] = MenuButton.a(var2Lifetime86, (byte) 94);
+            SocialListEntry.field_bc[37] = MenuButton.a(var2Lifetime86, (byte) 94);
           }
           var2Lifetime87 = gr.a(!param0, "achievement_criteria,38");
           if (var2Lifetime87 != null) {
-            mp.field_bc[38] = MenuButton.a(var2Lifetime87, (byte) 114);
+            SocialListEntry.field_bc[38] = MenuButton.a(var2Lifetime87, (byte) 114);
           }
           var2Lifetime88 = gr.a(!param0, "achievement_criteria,39");
           if (var2Lifetime88 != null) {
-            mp.field_bc[39] = MenuButton.a(var2Lifetime88, (byte) 98);
+            SocialListEntry.field_bc[39] = MenuButton.a(var2Lifetime88, (byte) 98);
           }
           var2Lifetime89 = gr.a(true, "achievement_criteria,40");
           if (null != var2Lifetime89) {
-            mp.field_bc[40] = MenuButton.a(var2Lifetime89, (byte) 125);
+            SocialListEntry.field_bc[40] = MenuButton.a(var2Lifetime89, (byte) 125);
           }
           var2Lifetime90 = gr.a(true, "achievement_criteria,41");
           if (var2Lifetime90 != null) {
-            mp.field_bc[41] = MenuButton.a(var2Lifetime90, (byte) 86);
+            SocialListEntry.field_bc[41] = MenuButton.a(var2Lifetime90, (byte) 86);
           }
           var2Lifetime91 = gr.a(true, "achievement_obtained");
           if (var2Lifetime91 != null) {

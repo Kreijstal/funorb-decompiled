@@ -67,14 +67,14 @@ final class hn {
           if (param0.children == null) {
             param0.children = new NodeDeque();
           }
-          if (null == BlankScreen.field_i) {
-            BlankScreen.field_i = new SecondaryHashTable(64);
+          if (null == BlankScreen.friendIndex) {
+            BlankScreen.friendIndex = new SecondaryHashTable(64);
           }
-          if (tf.field_d == null) {
-            tf.field_d = new SecondaryHashTable(64);
+          if (tf.ignoreIndex == null) {
+            tf.ignoreIndex = new SecondaryHashTable(64);
           }
-          bf.field_N = param1.children;
-          CachedArchiveSource.field_n = param0.children;
+          bf.friendEntries = param1.children;
+          CachedArchiveSource.ignoreEntries = param0.children;
           uc.e(108);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hn.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

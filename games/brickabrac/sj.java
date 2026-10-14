@@ -42,7 +42,7 @@ final class sj {
             var5 < eh.chatHistoryCategoryLimit) {
             var10_int = tm.getChatFilter(var8_ref_gb.channel, (byte) 18);
             if (var10_int <= var8_ref_gb.getRetentionCategory(true) && (var8_ref_gb.systemMessage ||
-              !AchievementBrowserScreen.a(125, var8_ref_gb.senderName))) {
+              !AchievementBrowserScreen.isIgnoredPlayer(125, var8_ref_gb.senderName))) {
               var9 = 1;
             }
           }
@@ -375,7 +375,7 @@ final class sj {
                                     var7.field_ac = var8_int >> 1;
                                     var7.field_Zb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
                                     var7.field_Ub = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
-                                    mp.field_Tb.addLast(var7, (byte) 3);
+                                    SocialListEntry.field_Tb.addLast(var7, (byte) 3);
                                     break regionExit1;
                                   case 19:
                                     var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
@@ -473,11 +473,11 @@ final class sj {
               }
               break regionExit1;
             }
-            var3_ref_id = (id) (mp.field_Tb.first(-8));
+            var3_ref_id = (id) (SocialListEntry.field_Tb.first(-8));
             while (var3_ref_id != null) {
               var3_ref_id.unlink((byte) 111);
               var3_ref_id.unlinkSecondary(param0 - 30);
-              var3_ref_id = (id) (mp.field_Tb.next((byte) 116));
+              var3_ref_id = (id) (SocialListEntry.field_Tb.next((byte) 116));
             }
             var3_ref_id = (id) (eq.field_m.first((byte) 89));
             while (var3_ref_id != null) {

@@ -165,7 +165,7 @@ final class sq {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        mp var3 = wn.a(param0, param1, -16);
+        SocialListEntry var3 = wn.a(param0, param1, -16);
         ContextActionController var4_ref_nnLifetime1;
         if (var3 != null) {
           bm.contextActions.addPlayerGameActions(true, false);

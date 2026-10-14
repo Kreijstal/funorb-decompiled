@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mp extends UiComponent {
-    String field_Rb;
-    UiComponent field_Wb;
-    int field_Sb;
+final class SocialListEntry extends UiComponent {
+    String name;
+    UiComponent serverLabel;
+    int insertionIndex;
     static String field_Pb;
-    UiComponent field_Xb;
+    UiComponent nameLabel;
     static NodeDeque field_Tb;
-    String field_Ub;
-    String field_Qb;
+    String serverName;
+    String previousName;
     static String[] field_bc;
-    String field_ac;
+    String actionName;
     static RgbSprite[] field_Vb;
     static RgbSprite field_Zb;
-    UiComponent field_Yb;
+    UiComponent renameIndicator;
 
     final static void shadeAndDrawMesh(int highlightZ, int diffuseX, int highlightX, int diffuseZ, Mesh3D mesh, byte obfuscationGuard, int highlightY, int diffuseY) {
         int diffuseResponse = 0;
@@ -226,7 +226,7 @@ final class mp extends UiComponent {
         field_bc = null;
     }
 
-    mp() {
+    SocialListEntry() {
         super(0L, (UiComponent) null);
     }
 

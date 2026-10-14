@@ -19,57 +19,57 @@ final class pf implements ub {
     private int field_n;
     static boolean field_f;
 
-    final static mp a(boolean param0, String param1) {
-        String var2 = null;
-        mp var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        CharSequence var6 = null;
-        CharSequence var7 = null;
-        Object stackIn_10_0 = null;
-        mp stackIn_18_0 = null;
+    final static SocialListEntry findFriend(boolean obfuscationGuard, String name) {
+        String nameKey = null;
+        SocialListEntry entry = null;
+        String entryNameKey = null;
+        int unusedGameFlag = 0;
+        CharSequence nameCharacters = null;
+        CharSequence entryNameCharacters = null;
+        Object invalidNameResult = null;
+        SocialListEntry result = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (BlankScreen.field_i == null) {
+          if (BlankScreen.friendIndex == null) {
             return null;
           }
-          if (param1 == null) {
+          if (name == null) {
             return null;
           }
-          if (param1.length() == 0) {
+          if (name.length() == 0) {
             return null;
           }
-          var6 = (CharSequence) ((Object) param1);
-          var2 = ChatMessage.normalizePlayerName(var6, 75);
-          if (var2 == null) {
-            stackIn_10_0 = null;
-            return (mp) (stackIn_10_0);
+          nameCharacters = (CharSequence) ((Object) name);
+          nameKey = ChatMessage.normalizePlayerName(nameCharacters, 75);
+          if (nameKey == null) {
+            invalidNameResult = null;
+            return (SocialListEntry) (invalidNameResult);
           }
-          var3 = (mp) (BlankScreen.field_i.get((long)var2.hashCode(), -1));
-          if (param0) {
+          entry = (SocialListEntry) (BlankScreen.friendIndex.get((long)nameKey.hashCode(), -1));
+          if (obfuscationGuard) {
             field_f = false;
           }
-          while (var3 != null) {
-            var7 = (CharSequence) ((Object) var3.field_Rb);
-            var4 = ChatMessage.normalizePlayerName(var7, 117);
-            if (var4.equals(var2)) {
-              stackIn_18_0 = var3;
-              return stackIn_18_0;
+          while (entry != null) {
+            entryNameCharacters = (CharSequence) ((Object) entry.name);
+            entryNameKey = ChatMessage.normalizePlayerName(entryNameCharacters, 117);
+            if (entryNameKey.equals(nameKey)) {
+              result = entry;
+              return result;
             }
-            var3 = (mp) (BlankScreen.field_i.nextMatch((byte) 127));
+            entry = (SocialListEntry) (BlankScreen.friendIndex.nextMatch((byte) 127));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_23_0 = var2_ref;
-          stackIn_23_1 = new StringBuilder().append("pf.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_23_1 = new StringBuilder().append("pf.E(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";

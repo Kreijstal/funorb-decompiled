@@ -5,13 +5,13 @@ final class bf extends d {
     static int[] viewFacePointTwoY;
     static RgbSprite field_L;
     static RgbSprite parisFarSprite;
-    static NodeDeque field_N;
+    static NodeDeque friendEntries;
 
     public static void a(int param0) {
         if (param0 != 8192) {
           return;
         }
-        field_N = null;
+        friendEntries = null;
         parisFarSprite = null;
         viewFacePointTwoY = null;
         field_L = null;
@@ -108,9 +108,9 @@ final class bf extends d {
             rq.field_a = null;
           }
           LevelResultSubmission.field_i = null;
-          if (null != mp.field_Tb) {
-            mp.field_Tb.clear((byte) -84);
-            mp.field_Tb = null;
+          if (null != SocialListEntry.field_Tb) {
+            SocialListEntry.field_Tb.clear((byte) -84);
+            SocialListEntry.field_Tb = null;
           }
           BrickABrac.field_F = null;
           if (eq.field_m != null) {

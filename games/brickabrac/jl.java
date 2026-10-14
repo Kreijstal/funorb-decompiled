@@ -107,7 +107,7 @@ final class jl {
               MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.logoOriginalCenters[var15][var18];
             }
             MusicVoice.transformAndProjectMesh(kk.field_e, -16283, MatchResultScreen.field_w, false, true, var17, false);
-            mp.shadeAndDrawMesh(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);
+            SocialListEntry.shadeAndDrawMesh(var14, var7Lifetime1, var12Lifetime1, var9Lifetime1, var17, (byte) -105, var13Lifetime1, var8Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -144,11 +144,11 @@ final class jl {
         field_d = null;
         if (param0 != 31186) {
           String var2 = (String) null;
-          jl.a(-88, (String) null, -64);
+          jl.requestAddFriend(-88, (String) null, -64);
         }
     }
 
-    final static String a(int param0, String param1, int param2) {
+    final static String requestAddFriend(int obfuscationGuard, String name, int opcode) {
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         String stackIn_11_0 = null;
@@ -162,12 +162,12 @@ final class jl {
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        int var4 = 0;
-        BitPacketBuffer var5 = null;
-        CharSequence var6 = null;
+        int bodyStart = 0;
+        BitPacketBuffer packet = null;
+        CharSequence nameCharacters = null;
         try {
-          var6 = (CharSequence) ((Object) param1);
-          if (!DualLinkNode.a(var6, false)) {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!DualLinkNode.isValidSocialName(nameCharacters, false)) {
             stackIn_3_0 = om.field_Xb;
             return stackIn_3_0;
           }
@@ -175,50 +175,50 @@ final class jl {
             stackIn_7_0 = kd.field_b;
             return stackIn_7_0;
           }
-          if (SpaceBackground.a(param1, -19)) {
+          if (SpaceBackground.isLocalPlayerName(name, -19)) {
             stackIn_11_0 = rj.field_a;
             return stackIn_11_0;
           }
-          if (LevelPack.a(0, param1)) {
-            stackIn_14_0 = rd.a(gh.field_d, new String[]{param1}, (byte) 103);
+          if (LevelPack.isFriend(0, name)) {
+            stackIn_14_0 = rd.a(gh.field_d, new String[]{name}, (byte) 103);
             return stackIn_14_0;
           }
-          if (LevelPackSelectScreen.field_w >= 100 &&
+          if (LevelPackSelectScreen.friendCount >= 100 &&
             go.field_c <= 0) {
             stackIn_18_0 = er.field_e;
             return stackIn_18_0;
           }
-          if (200 <= LevelPackSelectScreen.field_w) {
+          if (200 <= LevelPackSelectScreen.friendCount) {
             stackIn_21_0 = er.field_e;
             return stackIn_21_0;
           }
-          if (AchievementBrowserScreen.a(121, param1)) {
-            stackIn_24_0 = rd.a(ConstructionBackground.field_u, new String[]{param1}, (byte) 103);
+          if (AchievementBrowserScreen.isIgnoredPlayer(121, name)) {
+            stackIn_24_0 = rd.a(ConstructionBackground.field_u, new String[]{name}, (byte) 103);
             return stackIn_24_0;
           }
-          if (param0 != 24943) {
+          if (obfuscationGuard != 24943) {
             lastWallMillis = -99L;
           }
-          var5 = k.outgoingPackets;
-          var5.writeCipheredOpcode(-13413, param2);
-          var5.position = var5.position + 1;
-          var4 = var5.position;
-          var5.writeByte(-107, 0);
-          var5.writeCp1252String(param1, param0 - 24944);
-          var5.backfillByteLength((byte) 122, -var4 + var5.position);
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          bodyStart = packet.position;
+          packet.writeByte(-107, 0);
+          packet.writeCp1252String(name, obfuscationGuard - 24944);
+          packet.backfillByteLength((byte) 122, -bodyStart + packet.position);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_31_0 = var3;
-          stackIn_31_1 = new StringBuilder().append("jl.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_31_1 = new StringBuilder().append("jl.B(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_32_2 = "null";
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(opcode).append(')').toString());
         }
     }
 

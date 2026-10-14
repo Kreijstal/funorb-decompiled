@@ -8,7 +8,7 @@ final class IsaacGenerator {
     private int remaining;
     static n field_g;
     private int blockCounter;
-    static int field_h;
+    static int ignoreCount;
     private int[] memory;
     private int lastResult;
     static int field_i;

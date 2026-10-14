@@ -36,11 +36,11 @@ final class me {
         return sm.field_b != sm.field_a ? true : false;
     }
 
-    final static String a(String param0, int param1, int param2) {
+    final static String requestAddIgnoredPlayer(String name, int opcode, int expectedLoginStage) {
         RuntimeException var3 = null;
-        int var4 = 0;
-        BitPacketBuffer var5 = null;
-        CharSequence var6 = null;
+        int bodyStart = 0;
+        BitPacketBuffer packet = null;
+        CharSequence nameCharacters = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
         String stackIn_9_0 = null;
@@ -53,38 +53,38 @@ final class me {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = (CharSequence) ((Object) param0);
-          if (!DualLinkNode.a(var6, false)) {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!DualLinkNode.isValidSocialName(nameCharacters, false)) {
             stackIn_2_0 = om.field_Xb;
             return stackIn_2_0;
           }
-          if (SpaceBackground.a(param0, -26)) {
+          if (SpaceBackground.isLocalPlayerName(name, -26)) {
             stackIn_5_0 = rj.field_a;
             return stackIn_5_0;
           }
-          if (param2 != LevelMetadata.field_m) {
+          if (expectedLoginStage != LevelMetadata.field_m) {
             stackIn_9_0 = df.field_c;
             return stackIn_9_0;
           }
-          if (AchievementBrowserScreen.a(124, param0)) {
-            stackIn_12_0 = rd.a(dn.field_J, new String[]{param0}, (byte) 103);
+          if (AchievementBrowserScreen.isIgnoredPlayer(124, name)) {
+            stackIn_12_0 = rd.a(dn.field_J, new String[]{name}, (byte) 103);
             return stackIn_12_0;
           }
-          if (IsaacGenerator.field_h >= 100) {
+          if (IsaacGenerator.ignoreCount >= 100) {
             stackIn_15_0 = ap.field_d;
             return stackIn_15_0;
           }
-          if (LevelPack.a(param2 - 2, param0)) {
-            stackIn_19_0 = rd.a(tq.field_a, new String[]{param0}, (byte) 103);
+          if (LevelPack.isFriend(expectedLoginStage - 2, name)) {
+            stackIn_19_0 = rd.a(tq.field_a, new String[]{name}, (byte) 103);
             return stackIn_19_0;
           }
-          var5 = k.outgoingPackets;
-          var5.writeCipheredOpcode(-13413, param1);
-          var5.position = var5.position + 1;
-          var4 = var5.position;
-          var5.writeByte(84, 2);
-          var5.writeCp1252String(param0, param2 ^ -3);
-          var5.backfillByteLength((byte) 119, -var4 + var5.position);
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          bodyStart = packet.position;
+          packet.writeByte(84, 2);
+          packet.writeCp1252String(name, expectedLoginStage ^ -3);
+          packet.backfillByteLength((byte) 119, -bodyStart + packet.position);
           stackIn_21_0 = null;
           return (String) (stackIn_21_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,12 +92,12 @@ final class me {
           var3 = decompiledCaughtException;
           stackIn_24_0 = var3;
           stackIn_24_1 = new StringBuilder().append("me.F(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(opcode).append(',').append(expectedLoginStage).append(')').toString());
         }
     }
 

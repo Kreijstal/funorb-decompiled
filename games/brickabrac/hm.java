@@ -65,8 +65,8 @@ final class hm {
           if (param0.children == null) {
             param0.children = new NodeDeque();
           }
-          mp.field_Tb = param0.children;
-          mp.field_Tb.clear((byte) -61);
+          SocialListEntry.field_Tb = param0.children;
+          SocialListEntry.field_Tb.clear((byte) -61);
           if (param1 != 86) {
             return;
           }

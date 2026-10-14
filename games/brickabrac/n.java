@@ -257,7 +257,7 @@ final class n {
               }
               stackIn_31_0.text = rd.a(stackIn_32_1, new String[]{dn.field_K.text}, (byte) 103);
               MeshAttributeRecord.field_g = true;
-              AppletGameShell.field_e.text = mp.field_Pb;
+              AppletGameShell.field_e.text = SocialListEntry.field_Pb;
               GameUiController.field_e.enabled = true;
               if (ContextMenu.field_bc != null) {
                 if (null == qo.field_J) {

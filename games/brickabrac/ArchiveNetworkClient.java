@@ -338,49 +338,49 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
         }
     }
 
-    final static boolean a(int param0, mp param1, mp param2) {
-        int var3_int = 0;
+    final static boolean comesBeforeFriend(int obfuscationGuard, SocialListEntry existing, SocialListEntry incoming) {
+        int orderDifference = 0;
         RuntimeException var3 = null;
-        int var4 = 0;
+        int unusedGameFlag = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = param2.field_Sb - param1.field_Sb;
-          if (AlignedIconLabel.field_Tb != param2.field_Ub) {
-            if (null == param2.field_Ub) {
-              var3_int += 200;
+          orderDifference = incoming.insertionIndex - existing.insertionIndex;
+          if (AlignedIconLabel.currentSocialServer != incoming.serverName) {
+            if (null == incoming.serverName) {
+              orderDifference += 200;
             }
           } else {
-            var3_int -= 200;
+            orderDifference -= 200;
           }
-          if (param0 != 200) {
+          if (obfuscationGuard != 200) {
             return false;
           }
-          if (AlignedIconLabel.field_Tb == param1.field_Ub) {
-            var3_int += 200;
+          if (AlignedIconLabel.currentSocialServer == existing.serverName) {
+            orderDifference += 200;
           } else {
-            if (param1.field_Ub == null) {
-              var3_int -= 200;
+            if (existing.serverName == null) {
+              orderDifference -= 200;
             }
           }
-          return !(var3_int <= 0);
+          return !(orderDifference <= 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_19_0 = var3;
-          stackIn_19_1 = new StringBuilder().append("a.I(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("a.I(").append(obfuscationGuard).append(',');
+          if (existing == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
           stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param2 == null) {
+          if (incoming == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";

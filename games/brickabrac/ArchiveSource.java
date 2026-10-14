@@ -101,13 +101,13 @@ abstract class ArchiveSource {
         if (param0 == 27423) {
           tb.field_cb = jl.incomingPackets.readCp1252String(-1);
           var3 = (CharSequence) ((Object) tb.field_cb);
-          ArchiveFetchClient.field_d = ChatMessage.normalizePlayerName(var3, 71);
+          ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var3, 71);
           return;
         }
         ArchiveSource.sleepOnce(49, -113L);
         tb.field_cb = jl.incomingPackets.readCp1252String(-1);
         CharSequence var2 = (CharSequence) ((Object) tb.field_cb);
-        ArchiveFetchClient.field_d = ChatMessage.normalizePlayerName(var2, 71);
+        ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var2, 71);
     }
 
     abstract byte[] getPackedGroup(int groupId, byte obfuscationGuard);

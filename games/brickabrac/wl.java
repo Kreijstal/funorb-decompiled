@@ -167,7 +167,7 @@ final class wl extends d {
               var7[0][var10 * 4 + 1] = RankingsScreen.field_r[var11];
               var7[0][2 + var10 * 4] = ObjectHistoryBuffer.field_p[var11];
               var7[0][4 * var10 + 3] = ib.field_D[var11];
-              if (SpaceBackground.a(LevelCompleteScreen.field_B[var11], -40) &&
+              if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.field_B[var11], -40) &&
                 0 == ObjectHistoryBuffer.field_p[var11] + RankingsScreen.field_r[var11] + ib.field_D[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -185,7 +185,7 @@ final class wl extends d {
               var7[1][1 + var13 * 4] = RankingsScreen.field_r[var11Lifetime1];
               var7[1][2 + 4 * var13] = ObjectHistoryBuffer.field_p[var11Lifetime1];
               var7[1][var13 * 4 + 3] = ib.field_D[var11Lifetime1];
-              if (SpaceBackground.a(LevelCompleteScreen.field_B[var11Lifetime1], -31) &&
+              if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.field_B[var11Lifetime1], -31) &&
                 RankingsScreen.field_r[var11Lifetime1] + ObjectHistoryBuffer.field_p[var11Lifetime1] + ib.field_D[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;

@@ -293,10 +293,10 @@ final class so {
           gr.field_d = cr.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
           nl.field_b = um.a("basic", "logo", 1593955777, param0);
           g.field_l = cr.loadRgbSpritesByName("basic", param0, "sliders", 2);
-          mp.field_Vb = cr.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
-          pa.field_l = new RgbSprite[mp.field_Vb.length];
-          for (var10_intLifetime9 = 0; mp.field_Vb.length > var10_intLifetime9; var10_intLifetime9++) {
-            dupTemp$0 = mp.field_Vb[var10_intLifetime9].copy();
+          SocialListEntry.field_Vb = cr.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
+          pa.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
+          for (var10_intLifetime9 = 0; SocialListEntry.field_Vb.length > var10_intLifetime9; var10_intLifetime9++) {
+            dupTemp$0 = SocialListEntry.field_Vb[var10_intLifetime9].copy();
             pa.field_l[var10_intLifetime9] = dupTemp$0;
             var11_ref_jp = dupTemp$0;
             var11_ref_jp.rotateCounterclockwise();

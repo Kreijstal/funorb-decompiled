@@ -62,7 +62,7 @@ final class gj {
             for (var6 = 0; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (submission.rowId == table.rowIds[partition][var6] &&
-                SpaceBackground.a(table.names[partition][var6], -46)) {
+                SpaceBackground.isLocalPlayerName(table.names[partition][var6], -46)) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (submission.values[var7] != table.values[partition][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;

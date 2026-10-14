@@ -80,7 +80,7 @@ final class LevelPack {
         this.completionWord = completionWord;
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isFriend(int obfuscationGuard, String name) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -88,17 +88,17 @@ final class LevelPack {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             LevelPack.b(-40);
           }
-          stackIn_5_0 = (pf.a(false, param1) != null);
+          stackIn_5_0 = (pf.findFriend(false, name) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("nc.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("nc.B(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

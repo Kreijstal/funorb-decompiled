@@ -6,7 +6,7 @@ final class wn {
     static RgbSprite desertNearSprite;
     static ResourceArchive field_c;
 
-    final static mp a(boolean param0, int param1, int param2) {
+    final static SocialListEntry a(boolean param0, int param1, int param2) {
         ScrollPane stackIn_4_0;
         int stackIn_4_1;
         int stackIn_4_2;
@@ -14,7 +14,7 @@ final class wn {
         int stackIn_4_4;
         boolean stackIn_4_5;
         boolean stackIn_5_6 = false;
-        mp stackIn_12_0 = null;
+        SocialListEntry stackIn_12_0 = null;
         UiComponent stackIn_33_0 = null;
         String stackIn_34_1 = null;
         UiComponent stackIn_37_0 = null;
@@ -22,13 +22,13 @@ final class wn {
         int stackIn_42_0 = 0;
         Object stackIn_101_0 = null;
         RuntimeException decompiledCaughtException = null;
-        mp stackOut_11_0;
+        SocialListEntry stackOut_11_0;
         int var3_int = 0;
         RuntimeException var3 = null;
         NodeDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
-        mp var7 = null;
+        SocialListEntry var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -61,10 +61,10 @@ final class wn {
           var5 = null;
           if (LevelMetadata.field_m == 2) {
             QuickChatPhraseRegistry.field_c.enabled = true;
-            sj.field_d.text = rd.a(LevelDecoder.field_c, new String[]{AlignedIconLabel.field_Tb}, (byte) 103);
+            sj.field_d.text = rd.a(LevelDecoder.field_c, new String[]{AlignedIconLabel.currentSocialServer}, (byte) 103);
             GameScreen.field_f.scrollPane.viewport.text = null;
             var6 = null;
-            var7 = (mp) (var4.first(-76));
+            var7 = (SocialListEntry) (var4.first(-76));
             while (var7 != null) {
               var8 = 0;
               stackOut_11_0 = var7;
@@ -75,22 +75,22 @@ final class wn {
                 break;
               }
               if (stackIn_12_0.children == null) {
-                var7.field_Xb = new UiComponent(0L, vb.field_K);
-                var7.addChild(var7.field_Xb, 0);
-                var7.field_Wb = new UiComponent(0L, OptionsScreen.field_v);
-                var7.addChild(var7.field_Wb, 0);
-                var7.field_Yb = new UiComponent(0L, vb.field_K);
-                var7.addChild(var7.field_Yb, 0);
-                var7.field_Wb.horizontalAlignment = 2;
+                var7.nameLabel = new UiComponent(0L, vb.field_K);
+                var7.addChild(var7.nameLabel, 0);
+                var7.serverLabel = new UiComponent(0L, OptionsScreen.field_v);
+                var7.addChild(var7.serverLabel, 0);
+                var7.renameIndicator = new UiComponent(0L, vb.field_K);
+                var7.addChild(var7.renameIndicator, 0);
+                var7.serverLabel.horizontalAlignment = 2;
                 var8 = 1;
                 var7.markDescendantsToInheritVisualState(true);
               }
               var7.width = GameScreen.field_f.content.width;
               var9 = 0;
-              if (var7.field_Ub == null) {
+              if (var7.serverName == null) {
                 var10 = 13369344;
                 var11 = 16737894;
-              } else if (var7.field_Ub != AlignedIconLabel.field_Tb) {
+              } else if (var7.serverName != AlignedIconLabel.currentSocialServer) {
                 var10 = 13421568;
                 var11 = 16777062;
               } else {
@@ -98,44 +98,44 @@ final class wn {
                 var10 = 52224;
               }
               var12 = 0;
-              if (null != var7.field_Qb &&
-                !var7.field_Qb.equals("")) {
-                var7.field_Yb.sprite = ok.field_g;
-                var7.field_Yb.activeTextColor = var11;
-                var7.field_Yb.setBounds(np.uiRowHeight, var9, 0, 3 + ok.field_g.canvasWidth, (byte) 64);
+              if (null != var7.previousName &&
+                !var7.previousName.equals("")) {
+                var7.renameIndicator.sprite = ok.field_g;
+                var7.renameIndicator.activeTextColor = var11;
+                var7.renameIndicator.setBounds(np.uiRowHeight, var9, 0, 3 + ok.field_g.canvasWidth, (byte) 64);
                 var12 = 1;
               }
-              var7.field_Wb.capturedTextColor = var11;
-              var7.field_Xb.capturedTextColor = var11;
-              var7.field_Wb.selectedTextColor = var11;
-              var7.field_Xb.selectedTextColor = var11;
-              var7.field_Wb.activeTextColor = var11;
-              var7.field_Xb.activeTextColor = var11;
-              var7.field_Wb.textColor = var10;
-              var7.field_Xb.textColor = var10;
+              var7.serverLabel.capturedTextColor = var11;
+              var7.nameLabel.capturedTextColor = var11;
+              var7.serverLabel.selectedTextColor = var11;
+              var7.nameLabel.selectedTextColor = var11;
+              var7.serverLabel.activeTextColor = var11;
+              var7.nameLabel.activeTextColor = var11;
+              var7.serverLabel.textColor = var10;
+              var7.nameLabel.textColor = var10;
               var13 = 0;
               var14 = -80 + (var7.width - 2);
               if (var12 != 0) {
                 var13 = 3 + ok.field_g.canvasWidth;
                 var14 = var14 - var13;
               }
-              stackIn_33_0 = var7.field_Xb;
+              stackIn_33_0 = var7.nameLabel;
               if (var14 > 0) {
-                stackIn_34_1 = TextFont.truncateText(var7.field_Xb.font, var7.field_Rb, var14);
+                stackIn_34_1 = TextFont.truncateText(var7.nameLabel.font, var7.name, var14);
               } else {
-                stackIn_34_1 = var7.field_Rb;
+                stackIn_34_1 = var7.name;
               }
               stackIn_33_0.text = stackIn_34_1;
-              var7.field_Xb.setBounds(np.uiRowHeight, var9, var13, var14, (byte) 64);
-              stackIn_37_0 = var7.field_Wb;
-              if (var7.field_Ub != null) {
-                stackIn_38_1 = var7.field_Ub;
+              var7.nameLabel.setBounds(np.uiRowHeight, var9, var13, var14, (byte) 64);
+              stackIn_37_0 = var7.serverLabel;
+              if (var7.serverName != null) {
+                stackIn_38_1 = var7.serverName;
               } else {
                 stackIn_38_1 = ec.field_S;
               }
               stackIn_37_0.text = stackIn_38_1;
-              var7.field_Wb.setBounds(np.uiRowHeight, var9, -80 + var7.width, 80, (byte) 64);
-              stackIn_42_0 = (var7.field_Xb.text.equals(var7.field_Rb)) ? 0 : 1;
+              var7.serverLabel.setBounds(np.uiRowHeight, var9, -80 + var7.width, 80, (byte) 64);
+              stackIn_42_0 = (var7.nameLabel.text.equals(var7.name)) ? 0 : 1;
               var15 = stackIn_42_0;
               var9 = var9 + np.uiRowHeight;
               if (var3_int == 0) {
@@ -145,18 +145,18 @@ final class wn {
                 GameScreen.field_f.content.placeBelow((UiComponent) (var6), 2, var7, 17290);
               }
               var6 = var7;
-              if (null != var7.field_Yb &&
-                var7.field_Yb.activeInside) {
-                ep.field_e = var7.field_Qb;
+              if (null != var7.renameIndicator &&
+                var7.renameIndicator.activeInside) {
+                ep.field_e = var7.previousName;
               } else if (0 == var7.pressedButton) {
-                if (var7.field_Xb.activeInside &&
+                if (var7.nameLabel.activeInside &&
                   var15 != 0) {
-                  ep.field_e = var7.field_Rb;
+                  ep.field_e = var7.name;
                 }
               } else {
-                var16 = var7.field_Rb;
+                var16 = var7.name;
                 SpriteGeometry.a(-1, var7, GameScreen.field_f.scrollPane, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
-                if (null != var7.field_Ub &&
+                if (null != var7.serverName &&
                   !m.a(13134, bm.contextActions.targetName) &&
                   !um.field_e) {
                   if (!qo.field_I) {
@@ -170,7 +170,7 @@ final class wn {
                 }
                 var5 = var7;
               }
-              var7 = (mp) (var4.next((byte) 116));
+              var7 = (SocialListEntry) (var4.next((byte) 116));
             }
             if (decompiledFrameCompleted0) {
               if (GameScreen.field_f.leftFooter.pressedButton != 0) {
@@ -198,7 +198,7 @@ final class wn {
           if (decompiledFrameCompleted0) {
             stackIn_101_0 = var5;
           }
-          return (mp) (stackIn_101_0);
+          return (SocialListEntry) (stackIn_101_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -284,7 +284,7 @@ final class wn {
         try {
           fe.field_jb = param1;
           if (param2 != 0) {
-            wn.a(79, -114);
+            wn.applyChatFilters(79, -114);
           }
           BufferedFile.field_d = param0;
           return;
@@ -375,19 +375,19 @@ final class wn {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void applyChatFilters(int maximumGameFilter, int packedFilters) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          InstructionsScreen.lobbyChatFilter = param1 >> 4 & 3;
-          InstructionsScreen.gameChatFilter = (param1 & 12) >> 2;
+          InstructionsScreen.lobbyChatFilter = packedFilters >> 4 & 3;
+          InstructionsScreen.gameChatFilter = (packedFilters & 12) >> 2;
           if (InstructionsScreen.lobbyChatFilter > 2) {
             InstructionsScreen.lobbyChatFilter = 2;
           }
-          if (InstructionsScreen.gameChatFilter > param0) {
+          if (InstructionsScreen.gameChatFilter > maximumGameFilter) {
             InstructionsScreen.gameChatFilter = 2;
           }
-          to.privateChatFilter = 3 & param1;
+          to.privateChatFilter = 3 & packedFilters;
           if (to.privateChatFilter > 2) {
             to.privateChatFilter = 2;
           }
@@ -395,7 +395,7 @@ final class wn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "wn.H(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "wn.H(" + maximumGameFilter + ',' + packedFilters + ')');
         }
     }
 

@@ -5,14 +5,14 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
     static String field_b;
     static boolean hasNonnegativeResult;
 
-    final static String a(int param0, boolean param1, String param2) {
+    final static String requestRemoveFriend(int opcode, boolean obfuscationGuard, String name) {
         RuntimeException var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        mp var7 = null;
-        mp var8 = null;
-        BitPacketBuffer var9 = null;
-        CharSequence var10 = null;
+        int bodyStart = 0;
+        int unusedGameFlag = 0;
+        SocialListEntry laterFriend = null;
+        SocialListEntry entry = null;
+        BitPacketBuffer packet = null;
+        CharSequence nameCharacters = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
         String stackIn_9_0 = null;
@@ -21,10 +21,10 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var10 = (CharSequence) ((Object) param2);
-          if (!DualLinkNode.a(var10, param1)) {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!DualLinkNode.isValidSocialName(nameCharacters, obfuscationGuard)) {
             stackIn_3_0 = om.field_Xb;
             return stackIn_3_0;
           }
@@ -32,38 +32,38 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             stackIn_6_0 = ScrollPaneWithFooter.field_Ub;
             return stackIn_6_0;
           }
-          var8 = pf.a(param1, param2);
-          if (var8 == null) {
-            stackIn_9_0 = rd.a(MusicVoice.field_C, new String[]{param2}, (byte) 103);
+          entry = pf.findFriend(obfuscationGuard, name);
+          if (entry == null) {
+            stackIn_9_0 = rd.a(MusicVoice.field_C, new String[]{name}, (byte) 103);
             return stackIn_9_0;
           }
-          bf.field_N.a((byte) 107, var8);
+          bf.friendEntries.a((byte) 107, entry);
           while (true) {
-            var7 = (mp) (bf.field_N.next((byte) 116));
-            if (var7 != null) {
-              var7.field_Sb = var7.field_Sb - 1;
+            laterFriend = (SocialListEntry) (bf.friendEntries.next((byte) 116));
+            if (laterFriend != null) {
+              laterFriend.insertionIndex = laterFriend.insertionIndex - 1;
               continue;
             }
             break;
           }
-          var8.unlink((byte) 111);
-          var8.unlinkSecondary(3);
-          LevelPackSelectScreen.field_w = LevelPackSelectScreen.field_w - 1;
-          var9 = k.outgoingPackets;
-          var9.writeCipheredOpcode(-13413, param0);
-          var9.position = var9.position + 1;
-          var5 = var9.position;
-          var9.writeByte(-13, 1);
-          var9.writeCp1252String(param2, -1);
-          var9.backfillByteLength((byte) 118, -var5 + var9.position);
+          entry.unlink((byte) 111);
+          entry.unlinkSecondary(3);
+          LevelPackSelectScreen.friendCount = LevelPackSelectScreen.friendCount - 1;
+          packet = k.outgoingPackets;
+          packet.writeCipheredOpcode(-13413, opcode);
+          packet.position = packet.position + 1;
+          bodyStart = packet.position;
+          packet.writeByte(-13, 1);
+          packet.writeCp1252String(name, -1);
+          packet.backfillByteLength((byte) 118, -bodyStart + packet.position);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_17_0 = var3;
-          stackIn_17_1 = new StringBuilder().append("op.E(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_17_1 = new StringBuilder().append("op.E(").append(opcode).append(',').append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";

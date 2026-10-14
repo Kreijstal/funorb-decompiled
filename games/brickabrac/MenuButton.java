@@ -147,7 +147,7 @@ final class MenuButton {
             }
             return;
           }
-          stackIn_16_0 = mp.field_Vb;
+          stackIn_16_0 = SocialListEntry.field_Vb;
           stackIn_17_1 = (!focused) ? 0 : 1;
           var11 = stackIn_16_0[stackIn_17_1];
           var4_refLifetime1 = var11;

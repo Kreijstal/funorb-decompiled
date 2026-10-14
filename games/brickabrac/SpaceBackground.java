@@ -119,7 +119,7 @@ final class SpaceBackground extends BackgroundScene {
     final RgbSprite c(byte param0) {
         if (param0 > -74) {
           String var3 = (String) null;
-          SpaceBackground.a((String) null, -110);
+          SpaceBackground.isLocalPlayerName((String) null, -110);
           return TableNameEntry.spaceCharacterSprite;
         }
         return TableNameEntry.spaceCharacterSprite;
@@ -157,7 +157,7 @@ final class SpaceBackground extends BackgroundScene {
         return false;
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isLocalPlayerName(String name, int obfuscationGuard) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -166,23 +166,23 @@ final class SpaceBackground extends BackgroundScene {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= -6) {
+          if (obfuscationGuard >= -6) {
             field_u = -69;
           }
-          var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = ArchiveFetchClient.field_d.equals(ChatMessage.normalizePlayerName(var3, 92));
+          var3 = (CharSequence) ((Object) name);
+          stackIn_3_0 = ArchiveFetchClient.localPlayerNameKey.equals(ChatMessage.normalizePlayerName(var3, 92));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("ci.A(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

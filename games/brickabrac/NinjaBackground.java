@@ -29,7 +29,7 @@ final class NinjaBackground extends BackgroundScene {
         hc.ninjaSmallSprite = pl.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.field_m);
         ObjectHistoryBuffer.ninjaCharacterSprite = pl.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.field_m);
         nk.field_h = jh.a(0, LegacyUtf8Decoder.ninjaNearSprite);
-        mp.field_Zb = jh.a(0, ap.ninjaMidSprite);
+        SocialListEntry.field_Zb = jh.a(0, ap.ninjaMidSprite);
         rh.field_c = jh.a(0, hn.ninjaFarSprite);
         pl.a(hn.ninjaFarSprite, 0);
         if (!obfuscationGuard) {
@@ -164,7 +164,7 @@ final class NinjaBackground extends BackgroundScene {
           aa.a(0, rh.field_c, true, colorIndex, var8, 2);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, nk.field_h, mp.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
+          ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, nk.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
           if (obfuscationGuard > -84) {
             var7Lifetime1 = (ResourceArchive) null;
             NinjaBackground.loadRgbSprites(90, 38, (ResourceArchive) null, true);
@@ -172,7 +172,7 @@ final class NinjaBackground extends BackgroundScene {
           }
           return;
         }
-        ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, nk.field_h, mp.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
+        ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, nk.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
         if (obfuscationGuard <= -84) {
           return;
         }

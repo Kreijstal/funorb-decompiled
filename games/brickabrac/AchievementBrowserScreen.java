@@ -108,7 +108,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var7 = 246 + 5 * var5 / 2;
           var8 = var7 + var5;
           var9 = var7 - (-(7 * var4) + ob.field_D.ascent);
-          var10 = ob.field_D.wrapText(rd.a(mp.field_bc[var3], new String[]{nl.a(true, true, 0, (long)HalloweenBackground.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
+          var10 = ob.field_D.wrapText(rd.a(SocialListEntry.field_bc[var3], new String[]{nl.a(true, true, 0, (long)HalloweenBackground.field_r[var3], cd.field_e)}, (byte) 103), this.descriptionWidths, this.descriptionLines);
           for (var11 = 0; var11 < var10; var11++) {
             ob.field_D.drawLeft(this.descriptionLines[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
@@ -227,7 +227,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         }
     }
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isIgnoredPlayer(int obfuscationGuard, String name) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -235,17 +235,17 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 <= 118) {
+          if (obfuscationGuard <= 118) {
             field_B = (char[]) null;
           }
-          stackIn_5_0 = (HighscorePackSelector.a(0, param1) != null);
+          stackIn_5_0 = (HighscorePackSelector.findIgnoredPlayer(0, name) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("af.SA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("af.SA(").append(obfuscationGuard).append(',');
+          if (name == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

@@ -40,16 +40,16 @@ final class SoundCache {
               }
               var6Lifetime1 = null;
               if (GameUiController.field_d == 0) {
-                var6Lifetime1 = jl.a(24943, var5, param1);
+                var6Lifetime1 = jl.requestAddFriend(24943, var5, param1);
               }
               if (GameUiController.field_d == 1) {
-                var6Lifetime1 = KeyboardInput.a(param1, false, var5);
+                var6Lifetime1 = KeyboardInput.requestRemoveFriend(param1, false, var5);
               }
               if (GameUiController.field_d == 2) {
-                var6Lifetime1 = me.a(var5, param1, 2);
+                var6Lifetime1 = me.requestAddIgnoredPlayer(var5, param1, 2);
               }
               if (GameUiController.field_d == 3) {
-                var6Lifetime1 = uf.a(var5, param1, var5, -45);
+                var6Lifetime1 = uf.requestRemoveIgnoredPlayer(var5, param1, var5, -45);
               }
               if (var6Lifetime1 != null) {
                 var7 = (String) null;
@@ -265,7 +265,7 @@ final class SoundCache {
               vd.ensureGamePacketBytes(20, 8)) {
               bj.field_ab = jl.incomingPackets.readLong(-32768);
               jl.incomingPackets.position = 0;
-              mp.a(param4, NanoGameClock.field_s, param1, param3, false);
+              SocialListEntry.a(param4, NanoGameClock.field_s, param1, param3, false);
               rf.field_b = rq.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -331,7 +331,7 @@ final class SoundCache {
               }
               tb.field_cb = jl.incomingPackets.readCp1252String(-1);
               var12 = (CharSequence) ((Object) tb.field_cb);
-              ArchiveFetchClient.field_d = ChatMessage.normalizePlayerName(var12, 65);
+              ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var12, 65);
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;
               if (NanoGameClock.field_s.a(13) == vh.field_X) {

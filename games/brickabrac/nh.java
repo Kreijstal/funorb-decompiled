@@ -747,7 +747,7 @@ final class nh {
                   }
                 }
                 while (true) {
-                  var1 = (id) (mp.field_Tb.next((byte) 116));
+                  var1 = (id) (SocialListEntry.field_Tb.next((byte) 116));
                   return;
                 }
               }
@@ -792,7 +792,7 @@ final class nh {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_23_0 = mp.field_Tb.first(-21);
+            stackIn_23_0 = SocialListEntry.field_Tb.first(-21);
           }
           var1Lifetime1 = (id) (stackIn_23_0);
           while (true) {
@@ -813,7 +813,7 @@ final class nh {
                 }
               }
             }
-            var1Lifetime1 = (id) (mp.field_Tb.next((byte) 116));
+            var1Lifetime1 = (id) (SocialListEntry.field_Tb.next((byte) 116));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

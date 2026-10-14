@@ -522,7 +522,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                ch.a((byte) 63);
+                                ch.handleSocialListResponse((byte) 63);
                                 return;
                               }
                               if (var2 == 17) {

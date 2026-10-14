@@ -5,7 +5,7 @@ final class BlankScreen extends GameScreen {
     static StateIconLabel field_k;
     static String field_j;
     static String field_h;
-    static SecondaryHashTable field_i;
+    static SecondaryHashTable friendIndex;
 
     BlankScreen() {
         super(-2);
@@ -30,7 +30,7 @@ final class BlankScreen extends GameScreen {
         if (param0 != -2) {
           return;
         }
-        field_i = null;
+        friendIndex = null;
         field_j = null;
     }
 

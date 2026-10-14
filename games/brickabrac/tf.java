@@ -8,7 +8,7 @@ final class tf {
     static byte[] cacheSectorScratch;
     static RgbSprite[] field_c;
     static int[] javaKeyCodeMap;
-    static SecondaryHashTable field_d;
+    static SecondaryHashTable ignoreIndex;
     static String[] field_e;
     static boolean field_i;
 
@@ -73,7 +73,7 @@ final class tf {
           field_f = null;
           trackHeads = null;
           field_e = null;
-          field_d = null;
+          ignoreIndex = null;
           field_c = null;
           return;
         }
@@ -84,7 +84,7 @@ final class tf {
         field_f = null;
         trackHeads = null;
         field_e = null;
-        field_d = null;
+        ignoreIndex = null;
         field_c = null;
     }
 

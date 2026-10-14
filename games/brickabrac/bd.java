@@ -37,7 +37,7 @@ final class bd implements ub {
         }
     }
 
-    final static boolean a(CharSequence param0, int param1, boolean param2) {
+    final static boolean hasValidPlayerNameShape(CharSequence name, int startIndex, boolean allowRepeatedSeparators) {
         int var6 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -51,31 +51,31 @@ final class bd implements ub {
         int var8 = 0;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 == null) {
+          if (name == null) {
             return false;
           }
-          var3_int = param0.length();
+          var3_int = name.length();
           if (var3_int < 1) {
             return false;
           }
           if (var3_int > 12) {
             return false;
           }
-          var4 = ChatMessage.normalizePlayerName(param0, 67);
+          var4 = ChatMessage.normalizePlayerName(name, 67);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!ik.isNameSeparator((byte) -9, var4.charAt(0)) &&
               !ik.isNameSeparator((byte) -9, var4.charAt(var4.length() - 1))) {
               var5 = 0;
-              for (var6 = param1; param0.length() > var6; var6++) {
-                var7 = param0.charAt(var6);
+              for (var6 = startIndex; name.length() > var6; var6++) {
+                var7 = name.charAt(var6);
                 if (!ik.isNameSeparator((byte) -9, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;
                 }
                 if (var5 >= 2 &&
-                  !param2) {
+                  !allowRepeatedSeparators) {
                   return false;
                 }
               }
@@ -92,12 +92,12 @@ final class bd implements ub {
           var3 = decompiledCaughtException;
           stackIn_35_0 = var3;
           stackIn_35_1 = new StringBuilder().append("bd.E(");
-          if (param0 == null) {
+          if (name == null) {
             stackIn_36_2 = "null";
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(startIndex).append(',').append(allowRepeatedSeparators).append(')').toString());
         }
     }
 

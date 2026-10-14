@@ -13,7 +13,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private ArchiveIndex index;
     private byte[] cacheGroupStates;
     private FileCacheStore indexCache;
-    static NodeDeque field_n;
+    static NodeDeque ignoreEntries;
     private int archiveId;
     static int field_r;
     static int field_p;
@@ -579,7 +579,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (param0 != 56) {
           field_r = 120;
         }
-        field_n = null;
+        ignoreEntries = null;
     }
 
     CachedArchiveSource(int archiveId, FileCacheStore groupCache, FileCacheStore indexCache, ArchiveFetchClient fetchClient, CacheIoWorker cacheIo, int expectedIndexCrc, byte[] expectedIndexDigest, int expectedIndexRevision, boolean cleanupEnabled) {

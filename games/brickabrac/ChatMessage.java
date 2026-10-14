@@ -114,7 +114,7 @@ final class ChatMessage {
             return 1;
           }
           if (LevelMetadata.field_m == 2 &&
-            LevelPack.a(0, this.senderName)) {
+            LevelPack.isFriend(0, this.senderName)) {
             return 1;
           }
           return 0;
