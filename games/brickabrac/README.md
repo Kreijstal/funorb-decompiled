@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 294 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 295 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -269,5 +269,9 @@ WhirlpoolHasher exposes block/hash/round state, input bit count, reset, bit upda
 Bzip2Decoder/Bzip2State expose shared synchronization, MSB bit input, in-use alphabet, canonical Huffman tables, selectors, move-to-front lists, RUNA/RUNB, inverse BWT and pending output runs. HighscoresScreen owns the unrelated shared traversal table; static chat/terrain helpers in Bzip2State remain separate. Native fixtures use Python bz2 level-one streams with their BZh1 header removed, covering empty, byte-alphabet, repeated-run, varied and multi-block messages; offsets, output quotas, sentinels and input immutability are checked. Real type1 archive containers decode the same independent fixtures. Direct bit/alphabet/canonical-code probes check the named internal tables, and Java CRC32 verifies half-open slice checksums.
 
 Successful BZIP2 calls release input/output references. A truncated call retains both arrays until a later success; explicit shared-state release has no automatic recreation. These archived behaviors are verified and preserved, not repaired in this naming pass. The compressed-length parameter is unused, blocks are fixed at100k, and CRC/framing/randomized-block validation is absent. Actual game archive assets, complete malformed-input behavior, concurrency races and original-JAR equivalence remain unverified.
+
+ReflectionCheck exposes requestId, operationCount, field/method lookup tasks, operation IDs, field-set values, serialized arguments and operation errors. readReflectionCheckRequest, isReflectionCheckReady and writeReflectionCheckResponse separate packet decoding, asynchronous lookup readiness and response execution. Operations0/1/2 read/write a static integer or report field modifiers;3 invokes a method with ObjectInputStream arguments;4 reports method modifiers. Replies distinguish null, Number-as-long, CP1252 String and other objects; response CRC covers request ID/results before unlinking the completed head.
+
+Native protocol fixtures parse controlled requests through the real parser and PlatformServices dispatcher, verify pending deferral, typed results, field writes/modifiers, independent response bytes/CRC and FIFO removal of one request per response. Missing types/members, corrupt and primitive argument streams, bad invocation arguments, inaccessible/final/instance fields and throwing methods exercise specific error statuses. Privileged lookup rejects bootstrap-owned members with terminal failed tasks. resolveReflectionType maps the eight primitive descriptors and otherwise uses Class.forName; V/void remain unsupported. Environment/cache initialization is bypassed; arbitrary deserialization classes, all error codes, service races, real server checks and original-JAR equivalence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

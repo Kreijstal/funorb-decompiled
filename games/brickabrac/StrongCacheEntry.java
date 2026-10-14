@@ -17,7 +17,7 @@ final class StrongCacheEntry extends CacheEntry {
     final static void a(int param0, RgbSprite param1, int param2, int param3, int param4, RasterCacheSurface param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-53, param5.sprite);
-          Rasterizer2D.fillVerticalGradient(param0, 0, param5.width, param5.height, bg.parisBackgroundColors[param4], 928072);
+          Rasterizer2D.fillVerticalGradient(param0, 0, param5.width, param5.height, ReflectionCheck.parisBackgroundColors[param4], 928072);
           param1.b(-(30 / param2) + (param5.width - param1.canvasWidth) / 2, -(66 / param2) + (-param1.canvasHeight + param3 + param5.height), 0, 208);
           sc.popRaster(-101);
         } catch (RuntimeException runtimeException) {

@@ -1162,7 +1162,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime110 = gr.a(true, "awesome");
           if (null != var2Lifetime110) {
-            bg.field_o = MenuButton.a(var2Lifetime110, (byte) 107);
+            ReflectionCheck.field_o = MenuButton.a(var2Lifetime110, (byte) 107);
           }
           var2Lifetime111 = gr.a(true, "neat");
           if (null != var2Lifetime111) {

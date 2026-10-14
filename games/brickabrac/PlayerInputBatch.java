@@ -41,7 +41,7 @@ final class PlayerInputBatch extends IntrusiveNode {
         if (param1 < 1) {
           return false;
         }
-        if (bg.a(param2, 29, param3) < param1) {
+        if (ReflectionCheck.a(param2, 29, param3) < param1) {
           return false;
         }
         if (param0 == -49) {

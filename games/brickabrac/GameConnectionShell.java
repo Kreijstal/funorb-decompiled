@@ -543,7 +543,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             PowerUpWarning.acceptChatMessage(var3, 79);
                           }
                         } else {
-                          TextWidgetRenderer.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, AccountMessageDialog.field_ub);
+                          TextWidgetRenderer.readReflectionCheckRequest(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, AccountMessageDialog.field_ub);
                         }
                       } else {
                         stackIn_22_1 = !(obfuscationGuard);

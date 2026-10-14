@@ -62,7 +62,7 @@ final class CachedArchiveSource extends ArchiveSource {
             return;
           }
           LevelPack.field_k = NewAchievementsScreen.field_J - (var1_int >> 1);
-          ContentTransitionPhase.field_d = ea.field_e - (bg.field_r >> 1);
+          ContentTransitionPhase.field_d = ea.field_e - (ReflectionCheck.field_r >> 1);
           MusicVoiceMixer.field_p = var1_int + LevelPack.field_k;
           var2 = ContentTransitionPhase.field_d;
           for (var3 = 0; var3 < kn.field_E.length; var3++) {

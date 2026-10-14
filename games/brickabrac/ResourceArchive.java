@@ -3,7 +3,7 @@
  */
 final class ResourceArchive {
     private Object[][] decodedFiles;
-    static NodeDeque field_i;
+    static NodeDeque pendingReflectionChecks;
     static int matchmakingOptionByteTwo;
     private ArchiveSource source;
     int decodedFilePolicy;
@@ -23,7 +23,7 @@ final class ResourceArchive {
           String var2 = (String) null;
           ResourceArchive.a((byte) -93, (String) null);
         }
-        field_i = null;
+        pendingReflectionChecks = null;
         field_d = null;
     }
 
@@ -861,7 +861,7 @@ final class ResourceArchive {
           if (obfuscationGuard >= 95) {
             return true;
           }
-          field_i = (NodeDeque) null;
+          pendingReflectionChecks = (NodeDeque) null;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
@@ -964,7 +964,7 @@ final class ResourceArchive {
     }
 
     static {
-        field_i = new NodeDeque();
+        pendingReflectionChecks = new NodeDeque();
         field_e = "Type your email address again to make sure it's correct";
     }
 }

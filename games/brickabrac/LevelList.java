@@ -104,7 +104,7 @@ final class LevelList {
         ar.field_a = new String[]{kk.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, bm.field_b, RectangleBody.field_t};
-        TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, bg.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
+        TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, ch.field_j, vg.field_a, nk.field_f, tm.field_h};
         CacheEntry.field_A[17] = MusicPatch.field_q;
         CacheEntry.field_A[14] = RadialSelectorWidget.field_V;
         CacheEntry.field_A[18] = GameScreen.field_g;

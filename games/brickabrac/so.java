@@ -151,18 +151,18 @@ final class so {
           var16 = PacketBuffer.a("basic", param0, "gamefont", param3 - 946744493);
           ConstructionBackground.a(param3 ^ 29068, var21, 1);
           LabeledWidget.field_O = IndexedSpriteGeometry.a(0, var21, 0, var16, 0, 1);
-          LabeledWidget.field_O.palettes = bg.field_n;
+          LabeledWidget.field_O.palettes = ReflectionCheck.field_n;
           ContextActionController.field_g = IndexedSpriteGeometry.a(2, var21, 0, var16, 0, 1);
-          ContextActionController.field_g.palettes = bg.field_n;
+          ContextActionController.field_g.palettes = ReflectionCheck.field_n;
           var22 = param4.takeFileByName(86, "kartika13", "");
           var17 = var22;
           var14 = var17;
           var5Lifetime1 = var14;
           var18 = PacketBuffer.a("kartika13", param1, "", -946715356);
           PasswordFieldRenderer.field_D = IndexedSpriteGeometry.a(0, var22, 0, var18, 0, 1);
-          PasswordFieldRenderer.field_D.palettes = bg.field_n;
+          PasswordFieldRenderer.field_D.palettes = ReflectionCheck.field_n;
           ce.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
-          ce.field_e.palettes = bg.field_n;
+          ce.field_e.palettes = ReflectionCheck.field_n;
           gj.field_c = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
             gj.field_c[var7_int] = GameConnectionShell.a(gj.field_c[var7_int], 1);

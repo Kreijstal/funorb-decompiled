@@ -13,7 +13,7 @@ final class ParisBackground extends BackgroundScene {
         try {
           var5_int = -51 % ((-28 - obfuscationGuard) / 43);
           if (-1 < colorIndex) {
-            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, bg.parisBackgroundColors[colorIndex], 928072);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, ReflectionCheck.parisBackgroundColors[colorIndex], 928072);
           }
           if (-1 >= colorIndex ||
             BrickABrac.field_J) {
@@ -147,7 +147,7 @@ final class ParisBackground extends BackgroundScene {
         try {
           boolean decompiledSharedTail0 = !(!this.hasSprites((byte) -124));
           if (!decompiledSharedTail0) {
-            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, bg.parisBackgroundColors[colorIndex], 928072);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, ReflectionCheck.parisBackgroundColors[colorIndex], 928072);
             decompiledSharedTail0 = (BrickABrac.field_J);
           }
           if (decompiledSharedTail0) {
@@ -414,7 +414,7 @@ final class ParisBackground extends BackgroundScene {
             cp1252Extensions = (char[]) null;
           }
           if (!this.hasSprites((byte) -97)) {
-            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, bg.parisBackgroundColors[colorIndex], 928072);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, ReflectionCheck.parisBackgroundColors[colorIndex], 928072);
             if (!BrickABrac.field_J) {
               return;
             }

@@ -34,14 +34,14 @@ final class tm {
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
           var7_int = wi.a((byte) -98, param1);
-          if (null == bg.field_p) {
-            bg.field_p = new java.security.SecureRandom();
+          if (null == ReflectionCheck.field_p) {
+            ReflectionCheck.field_p = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = bg.field_p.nextInt();
+            var8[var9] = ReflectionCheck.field_p.nextInt();
           }
           if (RadialSelectorWidget.field_N == null ||
             !(RadialSelectorWidget.field_N.data.length >= var7_int)) {

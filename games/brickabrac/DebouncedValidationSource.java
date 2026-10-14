@@ -55,70 +55,70 @@ abstract class DebouncedValidationSource implements ValidationSource {
         return m.validationDebouncing;
     }
 
-    final static Class a(String param0, boolean param1) throws ClassNotFoundException {
-        RuntimeException var2 = null;
-        Class stackIn_3_0 = null;
-        Class stackIn_7_0 = null;
-        Class stackIn_11_0 = null;
-        Class stackIn_15_0 = null;
-        Class stackIn_18_0 = null;
-        Class stackIn_22_0 = null;
-        Class stackIn_25_0 = null;
-        Class stackIn_29_0 = null;
-        Class stackIn_33_0 = null;
-        RuntimeException stackIn_36_0 = null;
-        StringBuilder stackIn_36_1 = null;
-        String stackIn_37_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static Class resolveReflectionType(String typeName, boolean obfuscationGuard) throws ClassNotFoundException {
+        RuntimeException failure = null;
+        Class byteType = null;
+        Class intType = null;
+        Class shortType = null;
+        Class longType = null;
+        Class disabledResult = null;
+        Class booleanType = null;
+        Class floatType = null;
+        Class doubleType = null;
+        Class charType = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String typeSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0.equals("B")) {
-            stackIn_3_0 = Byte.TYPE;
-            return stackIn_3_0;
+          if (typeName.equals("B")) {
+            byteType = Byte.TYPE;
+            return byteType;
           }
-          if (param0.equals("I")) {
-            stackIn_7_0 = Integer.TYPE;
-            return stackIn_7_0;
+          if (typeName.equals("I")) {
+            intType = Integer.TYPE;
+            return intType;
           }
-          if (param0.equals("S")) {
-            stackIn_11_0 = Short.TYPE;
-            return stackIn_11_0;
+          if (typeName.equals("S")) {
+            shortType = Short.TYPE;
+            return shortType;
           }
-          if (param0.equals("J")) {
-            stackIn_15_0 = Long.TYPE;
-            return stackIn_15_0;
+          if (typeName.equals("J")) {
+            longType = Long.TYPE;
+            return longType;
           }
-          if (!param1) {
-            stackIn_18_0 = (Class) null;
-            return stackIn_18_0;
+          if (!obfuscationGuard) {
+            disabledResult = (Class) null;
+            return disabledResult;
           }
-          if (param0.equals("Z")) {
-            stackIn_22_0 = Boolean.TYPE;
-            return stackIn_22_0;
+          if (typeName.equals("Z")) {
+            booleanType = Boolean.TYPE;
+            return booleanType;
           }
-          if (param0.equals("F")) {
-            stackIn_25_0 = Float.TYPE;
-            return stackIn_25_0;
+          if (typeName.equals("F")) {
+            floatType = Float.TYPE;
+            return floatType;
           }
-          if (param0.equals("D")) {
-            stackIn_29_0 = Double.TYPE;
-            return stackIn_29_0;
+          if (typeName.equals("D")) {
+            doubleType = Double.TYPE;
+            return doubleType;
           }
-          if (!param0.equals("C")) {
-            return Class.forName(param0);
+          if (!typeName.equals("C")) {
+            return Class.forName(typeName);
           }
-          stackIn_33_0 = Character.TYPE;
-          return stackIn_33_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_36_0 = var2;
-          stackIn_36_1 = new StringBuilder().append("pj.J(");
-          if (param0 == null) {
-            stackIn_37_2 = "null";
+          charType = Character.TYPE;
+          return charType;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("pj.J(");
+          if (typeName == null) {
+            typeSummary = "null";
           } else {
-            stackIn_37_2 = "{...}";
+            typeSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(typeSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

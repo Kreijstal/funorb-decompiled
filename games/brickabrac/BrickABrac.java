@@ -781,7 +781,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ByteStorage.a(10);
         Bzip2Decoder.releaseSharedState();
         Bzip2State.a((byte) -102);
-        bg.a(6);
+        ReflectionCheck.a(6);
         gd.a(!obfuscationGuard ? true : false);
         rl.a(-18657);
         LabeledToggleRenderer.a(1);

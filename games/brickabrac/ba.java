@@ -51,9 +51,9 @@ class ba extends DualLinkNode {
     final static int b(boolean param0) {
         if (!param0) {
           ba.f(-108);
-          return bg.field_r;
+          return ReflectionCheck.field_r;
         }
-        return bg.field_r;
+        return ReflectionCheck.field_r;
     }
 
     final static void f(int param0) {

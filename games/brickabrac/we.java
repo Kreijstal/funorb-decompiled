@@ -7,7 +7,7 @@ final class we {
     static RgbSprite[] field_b;
 
     final static void a(byte param0) {
-        ResourceArchive.field_i = new NodeDeque();
+        ResourceArchive.pendingReflectionChecks = new NodeDeque();
         if (param0 != -46) {
           we.a(12);
         }

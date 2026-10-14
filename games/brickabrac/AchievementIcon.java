@@ -157,10 +157,10 @@ final class AchievementIcon extends IntrusiveNode {
           this.x = this.x + offsetStep;
         } else {
           AlignedIconLabel.achievementTransitionMask = AlignedIconLabel.achievementTransitionMask & this.transitionKeepMask;
-          if (bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
+          if (ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
             ValidationMessageWidget.hoveredAchievementId = this.achievementId;
             if (1 == BackgroundScene.pressedButton &&
-              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
+              ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
               if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
                 ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {
@@ -172,7 +172,7 @@ final class AchievementIcon extends IntrusiveNode {
             }
           } else {
             if (1 == BackgroundScene.pressedButton &&
-              bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
+              ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
               if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
                 ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {

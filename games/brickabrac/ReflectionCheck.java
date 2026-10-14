@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends IntrusiveNode {
-    byte[][][] field_m;
-    int field_s;
+final class ReflectionCheck extends IntrusiveNode {
+    byte[][][] serializedArguments;
+    int operationCount;
     static java.security.SecureRandom field_p;
-    PlatformTask[] field_j;
-    int[] field_q;
+    PlatformTask[] fieldTasks;
+    int[] fieldSetValues;
     static int[] parisBackgroundColors;
     static int field_r;
-    int[] field_t;
+    int[] operations;
     static String field_o;
     static int[][] field_n;
-    int[] field_k;
-    PlatformTask[] field_l;
-    int field_i;
+    int[] operationErrors;
+    PlatformTask[] methodTasks;
+    int requestId;
 
     final static int a(int param0, int param1, int param2) {
         if (param1 != 29) {
-          bg.a(6);
+          ReflectionCheck.a(6);
           if (param2 != 1) {
             return rh.field_b[param2];
           }
@@ -78,7 +78,7 @@ final class bg extends IntrusiveNode {
         return false;
     }
 
-    bg() {
+    ReflectionCheck() {
     }
 
     static {

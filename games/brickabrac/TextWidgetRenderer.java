@@ -24,151 +24,151 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
     static RgbSprite[] desertCentreSprites;
     private boolean wrapText;
 
-    final static void a(int param0, PacketBuffer param1, byte param2, PlatformServices param3) {
+    final static void readReflectionCheckRequest(int unusedRequestContext, PacketBuffer packet, byte obfuscationGuard, PlatformServices services) {
         try {
-          int var6 = 0;
-          int var12_int = 0;
-          int var13_int = 0;
-          byte[] array$0 = null;
-          RuntimeException stackIn_36_0 = null;
-          StringBuilder stackIn_36_1 = null;
-          String stackIn_37_2 = null;
-          StringBuilder stackIn_39_1 = null;
-          String stackIn_40_2 = null;
-          Throwable decompiledCaughtException = null;
-          RuntimeException var4 = null;
-          int var5 = 0;
-          int var7_int = 0;
-          ClassNotFoundException var7 = null;
-          SecurityException var7_ref = null;
-          NullPointerException var7_ref2 = null;
-          Exception var7_ref3 = null;
-          Throwable var7_ref4 = null;
-          String var8 = null;
-          String var9 = null;
-          int var10 = 0;
-          String[] var11 = null;
-          byte[][] var12 = null;
-          Class[] var13 = null;
-          int var14 = 0;
-          int var15 = 0;
-          String var16 = null;
-          String var17 = null;
-          int var18 = 0;
-          bg var19 = null;
-          byte[][] var20 = null;
-          String var21 = null;
-          String var22 = null;
-          byte[][] var23 = null;
-          int var14Lifetime1;
-          var15 = BrickABrac.field_J ? 1 : 0;
+          int operationIndex = 0;
+          int parameterIndex = 0;
+          int argumentIndex = 0;
+          byte[] argumentBytes = null;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String packetSummary = null;
+          StringBuilder serviceContextBuilder = null;
+          String serviceSummary = null;
+          Throwable caughtFailure = null;
+          RuntimeException failure = null;
+          int guardArithmetic = 0;
+          int operation = 0;
+          ClassNotFoundException missingType = null;
+          SecurityException lookupDenied = null;
+          NullPointerException missingReference = null;
+          Exception lookupFailure = null;
+          Throwable lookupThrowable = null;
+          String fieldOwnerName = null;
+          String fieldName = null;
+          int parameterCountOrFieldValue = 0;
+          String[] parameterTypeNames = null;
+          byte[][] serializedArguments = null;
+          Class[] parameterTypes = null;
+          int argumentLength = 0;
+          int unusedGameFlag = 0;
+          String parsedFieldOwner = null;
+          String parsedFieldName = null;
+          int typeIndex = 0;
+          ReflectionCheck request = null;
+          byte[][] argumentArrayReference = null;
+          String methodOwnerName = null;
+          String methodName = null;
+          byte[][] argumentArrays = null;
+          int unusedTypeIndex;
+          unusedGameFlag = BrickABrac.field_J ? 1 : 0;
           try {
-            var19 = new bg();
-            var19.field_s = param1.readUnsignedByte(255);
-            var19.field_i = param1.readInt(255);
-            var19.field_q = new int[var19.field_s];
-            var19.field_k = new int[var19.field_s];
-            var19.field_t = new int[var19.field_s];
-            var5 = 24 / ((-6 - param2) / 53);
-            var19.field_l = new PlatformTask[var19.field_s];
-            var19.field_m = new byte[var19.field_s][][];
-            var19.field_j = new PlatformTask[var19.field_s];
-            for (var6 = 0; var19.field_s > var6; var6++) {
+            request = new ReflectionCheck();
+            request.operationCount = packet.readUnsignedByte(255);
+            request.requestId = packet.readInt(255);
+            request.fieldSetValues = new int[request.operationCount];
+            request.operationErrors = new int[request.operationCount];
+            request.operations = new int[request.operationCount];
+            guardArithmetic = 24 / ((-6 - obfuscationGuard) / 53);
+            request.methodTasks = new PlatformTask[request.operationCount];
+            request.serializedArguments = new byte[request.operationCount][][];
+            request.fieldTasks = new PlatformTask[request.operationCount];
+            for (operationIndex = 0; request.operationCount > operationIndex; operationIndex++) {
               try {
-                var7_int = param1.readUnsignedByte(255);
-                if (0 != var7_int &&
-                  1 != var7_int &&
-                  var7_int != 2) {
-                  if (3 == var7_int ||
-                    var7_int == 4) {
-                    var21 = param1.readCp1252String(-1);
-                    var22 = param1.readCp1252String(-1);
-                    var10 = param1.readUnsignedByte(255);
-                    var11 = new String[var10];
-                    for (var12_int = 0; var12_int < var10; var12_int++) {
-                      var11[var12_int] = param1.readCp1252String(-1);
+                operation = packet.readUnsignedByte(255);
+                if (0 != operation &&
+                  1 != operation &&
+                  operation != 2) {
+                  if (3 == operation ||
+                    operation == 4) {
+                    methodOwnerName = packet.readCp1252String(-1);
+                    methodName = packet.readCp1252String(-1);
+                    parameterCountOrFieldValue = packet.readUnsignedByte(255);
+                    parameterTypeNames = new String[parameterCountOrFieldValue];
+                    for (parameterIndex = 0; parameterIndex < parameterCountOrFieldValue; parameterIndex++) {
+                      parameterTypeNames[parameterIndex] = packet.readCp1252String(-1);
                     }
-                    var23 = new byte[var10][];
-                    var20 = var23;
-                    var12 = var20;
-                    if (var7_int == 3) {
-                      for (var13_int = 0; var10 > var13_int; var13_int++) {
-                        var14 = param1.readInt(255);
-                        array$0 = new byte[var14];
-                        var12[var13_int] = array$0;
-                        param1.readBytes(0, var23[var13_int], 115, var14);
+                    argumentArrays = new byte[parameterCountOrFieldValue][];
+                    argumentArrayReference = argumentArrays;
+                    serializedArguments = argumentArrayReference;
+                    if (operation == 3) {
+                      for (argumentIndex = 0; parameterCountOrFieldValue > argumentIndex; argumentIndex++) {
+                        argumentLength = packet.readInt(255);
+                        argumentBytes = new byte[argumentLength];
+                        serializedArguments[argumentIndex] = argumentBytes;
+                        packet.readBytes(0, argumentArrays[argumentIndex], 115, argumentLength);
                       }
                     }
-                    var19.field_t[var6] = var7_int;
-                    var13 = new Class[var10];
-                    var18 = 0;
-                    var14Lifetime1 = var18;
-                    while (var10 > var18) {
-                      var13[var18] = DebouncedValidationSource.a(var11[var18], true);
-                      var18++;
+                    request.operations[operationIndex] = operation;
+                    parameterTypes = new Class[parameterCountOrFieldValue];
+                    typeIndex = 0;
+                    unusedTypeIndex = typeIndex;
+                    while (parameterCountOrFieldValue > typeIndex) {
+                      parameterTypes[typeIndex] = DebouncedValidationSource.resolveReflectionType(parameterTypeNames[typeIndex], true);
+                      typeIndex++;
                     }
-                    var19.field_l[var6] = param3.lookupMethod(23311, DebouncedValidationSource.a(var21, true), var13, var22);
-                    var19.field_m[var6] = var23;
+                    request.methodTasks[operationIndex] = services.lookupMethod(23311, DebouncedValidationSource.resolveReflectionType(methodOwnerName, true), parameterTypes, methodName);
+                    request.serializedArguments[operationIndex] = argumentArrays;
                   }
                 } else {
-                  var16 = param1.readCp1252String(-1);
-                  var8 = var16;
-                  var17 = param1.readCp1252String(-1);
-                  var9 = var17;
-                  var10 = 0;
-                  if (var7_int == 1) {
-                    var10 = param1.readInt(255);
+                  parsedFieldOwner = packet.readCp1252String(-1);
+                  fieldOwnerName = parsedFieldOwner;
+                  parsedFieldName = packet.readCp1252String(-1);
+                  fieldName = parsedFieldName;
+                  parameterCountOrFieldValue = 0;
+                  if (operation == 1) {
+                    parameterCountOrFieldValue = packet.readInt(255);
                   }
-                  var19.field_t[var6] = var7_int;
-                  var19.field_q[var6] = var10;
-                  var19.field_j[var6] = param3.lookupField(124, DebouncedValidationSource.a(var16, true), var17);
+                  request.operations[operationIndex] = operation;
+                  request.fieldSetValues[operationIndex] = parameterCountOrFieldValue;
+                  request.fieldTasks[operationIndex] = services.lookupField(124, DebouncedValidationSource.resolveReflectionType(parsedFieldOwner, true), parsedFieldName);
                 }
-              } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                var19.field_k[var6] = -1;
-              } catch (java.lang.SecurityException decompiledCaughtParameter1) {
-                decompiledCaughtException = decompiledCaughtParameter1;
-                var7_ref = (SecurityException) (Object) decompiledCaughtException;
-                var19.field_k[var6] = -2;
-              } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
-                decompiledCaughtException = decompiledCaughtParameter2;
-                var7_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                var19.field_k[var6] = -3;
-              } catch (java.lang.Exception decompiledCaughtParameter3) {
-                decompiledCaughtException = decompiledCaughtParameter3;
-                var7_ref3 = (Exception) (Object) decompiledCaughtException;
-                var19.field_k[var6] = -4;
-              } catch (java.lang.Throwable decompiledCaughtParameter4) {
-                decompiledCaughtException = decompiledCaughtParameter4;
-                var7_ref4 = decompiledCaughtException;
-                var19.field_k[var6] = -5;
+              } catch (java.lang.ClassNotFoundException caughtMissingType) {
+                caughtFailure = caughtMissingType;
+                missingType = (ClassNotFoundException) (Object) caughtFailure;
+                request.operationErrors[operationIndex] = -1;
+              } catch (java.lang.SecurityException caughtLookupDenied) {
+                caughtFailure = caughtLookupDenied;
+                lookupDenied = (SecurityException) (Object) caughtFailure;
+                request.operationErrors[operationIndex] = -2;
+              } catch (java.lang.NullPointerException caughtMissingReference) {
+                caughtFailure = caughtMissingReference;
+                missingReference = (NullPointerException) (Object) caughtFailure;
+                request.operationErrors[operationIndex] = -3;
+              } catch (java.lang.Exception caughtLookupFailure) {
+                caughtFailure = caughtLookupFailure;
+                lookupFailure = (Exception) (Object) caughtFailure;
+                request.operationErrors[operationIndex] = -4;
+              } catch (java.lang.Throwable caughtLookupThrowable) {
+                caughtFailure = caughtLookupThrowable;
+                lookupThrowable = caughtFailure;
+                request.operationErrors[operationIndex] = -5;
               }
             }
-            ResourceArchive.field_i.addLast(var19, (byte) 3);
+            ResourceArchive.pendingReflectionChecks.addLast(request, (byte) 3);
             return;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
-            decompiledCaughtException = decompiledCaughtParameter5;
-            var4 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_36_0 = var4;
-            stackIn_36_1 = new StringBuilder().append("um.BA(").append(param0).append(',');
-            if (param1 == null) {
-              stackIn_37_2 = "null";
+          } catch (java.lang.RuntimeException caughtRequestFailure) {
+            caughtFailure = caughtRequestFailure;
+            failure = (RuntimeException) (Object) caughtFailure;
+            failureContext = failure;
+            contextBuilder = new StringBuilder().append("um.BA(").append(unusedRequestContext).append(',');
+            if (packet == null) {
+              packetSummary = "null";
             } else {
-              stackIn_37_2 = "{...}";
+              packetSummary = "{...}";
             }
-            stackIn_39_1 = ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(',').append(param2).append(',');
-            if (param3 == null) {
-              stackIn_40_2 = "null";
+            serviceContextBuilder = ((StringBuilder) (Object) contextBuilder).append(packetSummary).append(',').append(obfuscationGuard).append(',');
+            if (services == null) {
+              serviceSummary = "null";
             } else {
-              stackIn_40_2 = "{...}";
+              serviceSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) serviceContextBuilder).append(serviceSummary).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

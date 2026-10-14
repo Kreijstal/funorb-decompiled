@@ -279,211 +279,211 @@ final class HighscoresScreen extends MenuScreen {
         }
     }
 
-    final static void a(BitPacketBuffer param0, byte param1) {
+    final static void writeReflectionCheckResponse(BitPacketBuffer packet, byte obfuscationGuard) {
         try {
-          int var5 = 0;
-          int var10_int = 0;
-          RuntimeException stackIn_66_0 = null;
-          StringBuilder stackIn_66_1 = null;
-          String stackIn_67_2 = null;
-          Throwable decompiledCaughtException = null;
-          RuntimeException var2 = null;
-          int var3 = 0;
-          int var4 = 0;
-          int var6_int = 0;
-          ClassNotFoundException var6 = null;
-          InvalidClassException var6_ref = null;
-          StreamCorruptedException var6_ref2 = null;
-          OptionalDataException var6_ref3 = null;
-          IllegalAccessException var6_ref4 = null;
-          IllegalArgumentException var6_ref5 = null;
-          java.lang.reflect.InvocationTargetException var6_ref6 = null;
-          SecurityException var6_ref7 = null;
-          IOException var6_ref8 = null;
-          NullPointerException var6_ref9 = null;
-          Exception var6_ref10 = null;
-          Throwable var6_ref11 = null;
-          int var8 = 0;
-          Object[] var9 = null;
-          Object var10 = null;
-          ObjectInputStream var11 = null;
-          int var12 = 0;
-          bg var13 = null;
-          java.lang.reflect.Field var15 = null;
+          int operationIndex = 0;
+          int argumentIndex = 0;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String packetSummary = null;
+          Throwable caughtFailure = null;
+          RuntimeException responseFailure = null;
+          int lookupPending = 0;
+          int lookupIndexOrResponseStart = 0;
+          int operation = 0;
+          ClassNotFoundException missingArgumentType = null;
+          InvalidClassException incompatibleArgumentClass = null;
+          StreamCorruptedException corruptArgumentStream = null;
+          OptionalDataException unexpectedPrimitiveData = null;
+          IllegalAccessException memberAccessDenied = null;
+          IllegalArgumentException invalidArguments = null;
+          java.lang.reflect.InvocationTargetException invocationFailure = null;
+          SecurityException securityFailure = null;
+          IOException argumentIoFailure = null;
+          NullPointerException nullReference = null;
+          Exception operationFailure = null;
+          Throwable operationThrowable = null;
+          int fieldValueOrModifiers = 0;
+          Object[] arguments = null;
+          Object result = null;
+          ObjectInputStream argumentStream = null;
+          int unusedGameFlag = 0;
+          ReflectionCheck queuedRequest = null;
+          java.lang.reflect.Field readField = null;
           Object var16 = null;
-          java.lang.reflect.Field var16_ref = null;
-          bg var17 = null;
+          java.lang.reflect.Field writeFieldReference = null;
+          ReflectionCheck request = null;
           Object var18 = null;
-          java.lang.reflect.Field var19 = null;
+          java.lang.reflect.Field writeField = null;
           Object var20 = null;
           Object var22 = null;
-          byte[][] var25 = null;
-          java.lang.reflect.Field var26 = null;
-          java.lang.reflect.Method var27 = null;
-          java.lang.reflect.Method var28 = null;
-          int var8Lifetime1;
+          byte[][] serializedArguments = null;
+          java.lang.reflect.Field modifierField = null;
+          java.lang.reflect.Method modifierMethod = null;
+          java.lang.reflect.Method invokedMethod = null;
+          int methodModifiers;
           var18 = null;
           var16 = null;
           var20 = null;
           var22 = null;
-          var12 = BrickABrac.field_J ? 1 : 0;
+          unusedGameFlag = BrickABrac.field_J ? 1 : 0;
           try {
-            var13 = (bg) (ResourceArchive.field_i.first(-48));
-            var17 = var13;
-            if (var17 == null) {
+            queuedRequest = (ReflectionCheck) (ResourceArchive.pendingReflectionChecks.first(-48));
+            request = queuedRequest;
+            if (request == null) {
               return;
             }
-            var3 = 0;
-            for (var4 = 0; var17.field_s > var4; var4++) {
-              if (null != var13.field_j[var4]) {
-                if (var13.field_j[var4].status == 2) {
-                  var13.field_k[var4] = -5;
+            lookupPending = 0;
+            for (lookupIndexOrResponseStart = 0; request.operationCount > lookupIndexOrResponseStart; lookupIndexOrResponseStart++) {
+              if (null != queuedRequest.fieldTasks[lookupIndexOrResponseStart]) {
+                if (queuedRequest.fieldTasks[lookupIndexOrResponseStart].status == 2) {
+                  queuedRequest.operationErrors[lookupIndexOrResponseStart] = -5;
                 }
-                if (0 == var13.field_j[var4].status) {
-                  var3 = 1;
+                if (0 == queuedRequest.fieldTasks[lookupIndexOrResponseStart].status) {
+                  lookupPending = 1;
                 }
               }
-              if (var13.field_l[var4] != null) {
-                if (2 == var13.field_l[var4].status) {
-                  var13.field_k[var4] = -6;
+              if (queuedRequest.methodTasks[lookupIndexOrResponseStart] != null) {
+                if (2 == queuedRequest.methodTasks[lookupIndexOrResponseStart].status) {
+                  queuedRequest.operationErrors[lookupIndexOrResponseStart] = -6;
                 }
-                if (0 == var13.field_l[var4].status) {
-                  var3 = 1;
+                if (0 == queuedRequest.methodTasks[lookupIndexOrResponseStart].status) {
+                  lookupPending = 1;
                 }
               }
             }
-            if (var3 != 0) {
+            if (lookupPending != 0) {
               return;
             }
-            var4 = param0.position;
-            param0.writeInt(var17.field_i, (byte) -79);
-            for (var5 = 0; var17.field_s > var5; var5++) {
-              if (var17.field_k[var5] == 0) {
+            lookupIndexOrResponseStart = packet.position;
+            packet.writeInt(request.requestId, (byte) -79);
+            for (operationIndex = 0; request.operationCount > operationIndex; operationIndex++) {
+              if (request.operationErrors[operationIndex] == 0) {
                 try {
-                  var6_int = var17.field_t[var5];
-                  if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var17.field_j[var5].result);
-                    var8 = var15.getInt((Object) null);
-                    param0.writeByte(-7, 0);
-                    param0.writeInt(var8, (byte) -79);
+                  operation = request.operations[operationIndex];
+                  if (operation == 0) {
+                    readField = (java.lang.reflect.Field) (request.fieldTasks[operationIndex].result);
+                    fieldValueOrModifiers = readField.getInt((Object) null);
+                    packet.writeByte(-7, 0);
+                    packet.writeInt(fieldValueOrModifiers, (byte) -79);
                   } else {
-                    if (var6_int == 1) {
-                      var16_ref = (java.lang.reflect.Field) (var17.field_j[var5].result);
-                      var19 = var16_ref;
-                      var19.setInt((Object) null, var17.field_q[var5]);
-                      param0.writeByte(-15, 0);
+                    if (operation == 1) {
+                      writeFieldReference = (java.lang.reflect.Field) (request.fieldTasks[operationIndex].result);
+                      writeField = writeFieldReference;
+                      writeField.setInt((Object) null, request.fieldSetValues[operationIndex]);
+                      packet.writeByte(-15, 0);
                     } else {
-                      if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var17.field_j[var5].result);
-                        var8 = var26.getModifiers();
-                        param0.writeByte(param1 - 4, 0);
-                        param0.writeInt(var8, (byte) -79);
+                      if (operation == 2) {
+                        modifierField = (java.lang.reflect.Field) (request.fieldTasks[operationIndex].result);
+                        fieldValueOrModifiers = modifierField.getModifiers();
+                        packet.writeByte(obfuscationGuard - 4, 0);
+                        packet.writeInt(fieldValueOrModifiers, (byte) -79);
                       }
                     }
                   }
-                  if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var17.field_l[var5].result);
-                    var25 = var17.field_m[var5];
-                    var9 = new Object[var25.length];
-                    for (var10_int = 0; var25.length > var10_int; var10_int++) {
-                      var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var25[var10_int])));
-                      var9[var10_int] = var11.readObject();
+                  if (operation == 3) {
+                    invokedMethod = (java.lang.reflect.Method) (request.methodTasks[operationIndex].result);
+                    serializedArguments = request.serializedArguments[operationIndex];
+                    arguments = new Object[serializedArguments.length];
+                    for (argumentIndex = 0; serializedArguments.length > argumentIndex; argumentIndex++) {
+                      argumentStream = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(serializedArguments[argumentIndex])));
+                      arguments[argumentIndex] = argumentStream.readObject();
                     }
-                    var10 = var28.invoke((Object) null, var9);
-                    if (var10 == null) {
-                      param0.writeByte(param1 ^ 61, 0);
-                    } else if (var10 instanceof Number) {
-                      param0.writeByte(param1 ^ -114, 1);
-                      param0.writeLong(-23054, ((Number) (var10)).longValue());
-                    } else if (!(var10 instanceof String)) {
-                      param0.writeByte(22, 4);
+                    result = invokedMethod.invoke((Object) null, arguments);
+                    if (result == null) {
+                      packet.writeByte(obfuscationGuard ^ 61, 0);
+                    } else if (result instanceof Number) {
+                      packet.writeByte(obfuscationGuard ^ -114, 1);
+                      packet.writeLong(-23054, ((Number) (result)).longValue());
+                    } else if (!(result instanceof String)) {
+                      packet.writeByte(22, 4);
                     } else {
-                      param0.writeByte(param1 ^ -103, 2);
-                      param0.writeCp1252String((String) (var10), -1);
+                      packet.writeByte(obfuscationGuard ^ -103, 2);
+                      packet.writeCp1252String((String) (result), -1);
                     }
                   } else {
-                    if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var17.field_l[var5].result);
-                      var8Lifetime1 = var27.getModifiers();
-                      param0.writeByte(-123, 0);
-                      param0.writeInt(var8Lifetime1, (byte) -79);
+                    if (operation == 4) {
+                      modifierMethod = (java.lang.reflect.Method) (request.methodTasks[operationIndex].result);
+                      methodModifiers = modifierMethod.getModifiers();
+                      packet.writeByte(-123, 0);
+                      packet.writeInt(methodModifiers, (byte) -79);
                     }
                   }
-                } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.writeByte(80, -10);
-                } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
-                  decompiledCaughtException = decompiledCaughtParameter1;
-                  var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.writeByte(param1 - 127, -11);
-                } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
-                  decompiledCaughtException = decompiledCaughtParameter2;
-                  var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.writeByte(param1 ^ -126, -12);
-                } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
-                  decompiledCaughtException = decompiledCaughtParameter3;
-                  var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.writeByte(param1 - 16, -13);
-                } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
-                  decompiledCaughtException = decompiledCaughtParameter4;
-                  var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.writeByte(109, -14);
-                } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
-                  decompiledCaughtException = decompiledCaughtParameter5;
-                  var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.writeByte(-126, -15);
-                } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
-                  decompiledCaughtException = decompiledCaughtParameter6;
-                  var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.writeByte(-114, -16);
-                } catch (java.lang.SecurityException decompiledCaughtParameter7) {
-                  decompiledCaughtException = decompiledCaughtParameter7;
-                  var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.writeByte(71, -17);
-                } catch (java.io.IOException decompiledCaughtParameter8) {
-                  decompiledCaughtException = decompiledCaughtParameter8;
-                  var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.writeByte(-111, -18);
-                } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
-                  decompiledCaughtException = decompiledCaughtParameter9;
-                  var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.writeByte(param1 - 112, -19);
-                } catch (java.lang.Exception decompiledCaughtParameter10) {
-                  decompiledCaughtException = decompiledCaughtParameter10;
-                  var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.writeByte(101, -20);
-                } catch (java.lang.Throwable decompiledCaughtParameter11) {
-                  decompiledCaughtException = decompiledCaughtParameter11;
-                  var6_ref11 = decompiledCaughtException;
-                  param0.writeByte(87, -21);
+                } catch (java.lang.ClassNotFoundException caughtMissingArgumentType) {
+                  caughtFailure = caughtMissingArgumentType;
+                  missingArgumentType = (ClassNotFoundException) (Object) caughtFailure;
+                  packet.writeByte(80, -10);
+                } catch (java.io.InvalidClassException caughtIncompatibleArgumentClass) {
+                  caughtFailure = caughtIncompatibleArgumentClass;
+                  incompatibleArgumentClass = (InvalidClassException) (Object) caughtFailure;
+                  packet.writeByte(obfuscationGuard - 127, -11);
+                } catch (java.io.StreamCorruptedException caughtCorruptArgumentStream) {
+                  caughtFailure = caughtCorruptArgumentStream;
+                  corruptArgumentStream = (StreamCorruptedException) (Object) caughtFailure;
+                  packet.writeByte(obfuscationGuard ^ -126, -12);
+                } catch (java.io.OptionalDataException caughtUnexpectedPrimitiveData) {
+                  caughtFailure = caughtUnexpectedPrimitiveData;
+                  unexpectedPrimitiveData = (OptionalDataException) (Object) caughtFailure;
+                  packet.writeByte(obfuscationGuard - 16, -13);
+                } catch (java.lang.IllegalAccessException caughtMemberAccessDenied) {
+                  caughtFailure = caughtMemberAccessDenied;
+                  memberAccessDenied = (IllegalAccessException) (Object) caughtFailure;
+                  packet.writeByte(109, -14);
+                } catch (java.lang.IllegalArgumentException caughtInvalidArguments) {
+                  caughtFailure = caughtInvalidArguments;
+                  invalidArguments = (IllegalArgumentException) (Object) caughtFailure;
+                  packet.writeByte(-126, -15);
+                } catch (java.lang.reflect.InvocationTargetException caughtInvocationFailure) {
+                  caughtFailure = caughtInvocationFailure;
+                  invocationFailure = (java.lang.reflect.InvocationTargetException) (Object) caughtFailure;
+                  packet.writeByte(-114, -16);
+                } catch (java.lang.SecurityException caughtSecurityFailure) {
+                  caughtFailure = caughtSecurityFailure;
+                  securityFailure = (SecurityException) (Object) caughtFailure;
+                  packet.writeByte(71, -17);
+                } catch (java.io.IOException caughtArgumentIoFailure) {
+                  caughtFailure = caughtArgumentIoFailure;
+                  argumentIoFailure = (IOException) (Object) caughtFailure;
+                  packet.writeByte(-111, -18);
+                } catch (java.lang.NullPointerException caughtNullReference) {
+                  caughtFailure = caughtNullReference;
+                  nullReference = (NullPointerException) (Object) caughtFailure;
+                  packet.writeByte(obfuscationGuard - 112, -19);
+                } catch (java.lang.Exception caughtOperationFailure) {
+                  caughtFailure = caughtOperationFailure;
+                  operationFailure = (Exception) (Object) caughtFailure;
+                  packet.writeByte(101, -20);
+                } catch (java.lang.Throwable caughtOperationThrowable) {
+                  caughtFailure = caughtOperationThrowable;
+                  operationThrowable = caughtFailure;
+                  packet.writeByte(87, -21);
                 }
               } else {
-                param0.writeByte(87, var17.field_k[var5]);
+                packet.writeByte(87, request.operationErrors[operationIndex]);
               }
             }
-            if (param1 != 9) {
+            if (obfuscationGuard != 9) {
               HighscoresScreen.foldPlayerNameCharacter(-62, '&');
             }
-            param0.appendCrc32(3, var4);
-            var17.unlink((byte) 111);
+            packet.appendCrc32(3, lookupIndexOrResponseStart);
+            request.unlink((byte) 111);
             return;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
-            decompiledCaughtException = decompiledCaughtParameter12;
-            var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_66_0 = var2;
-            stackIn_66_1 = new StringBuilder().append("ah.B(");
-            if (param0 == null) {
-              stackIn_67_2 = "null";
+          } catch (java.lang.RuntimeException caughtResponseFailure) {
+            caughtFailure = caughtResponseFailure;
+            responseFailure = (RuntimeException) (Object) caughtFailure;
+            failureContext = responseFailure;
+            contextBuilder = new StringBuilder().append("ah.B(");
+            if (packet == null) {
+              packetSummary = "null";
             } else {
-              stackIn_67_2 = "{...}";
+              packetSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_66_0), ((StringBuilder) (Object) stackIn_66_1).append(stackIn_67_2).append(',').append(param1).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(packetSummary).append(',').append(obfuscationGuard).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

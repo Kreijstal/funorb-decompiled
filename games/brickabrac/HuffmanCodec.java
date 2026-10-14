@@ -266,12 +266,12 @@ final class HuffmanCodec {
             HuffmanCodec.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
           }
           var1 = TextFieldValidator.outgoingPackets;
-          while (IntrusiveHashIterator.a(104)) {
+          while (IntrusiveHashIterator.isReflectionCheckReady(104)) {
             var1.writeCipheredOpcode(-13413, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            HighscoresScreen.a(var1, (byte) 9);
+            HighscoresScreen.writeReflectionCheckResponse(var1, (byte) 9);
             TextFieldValidator.outgoingPackets.backfillByteLength((byte) 118, -var2 + var1.position);
           }
           return;

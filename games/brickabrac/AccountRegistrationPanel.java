@@ -103,21 +103,21 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             }
           }
           MusicVoiceMixer.field_p = var7Lifetime1 + (NewAchievementsScreen.field_J - (var7Lifetime1 >> 1));
-          bg.field_r = ArcticBackground.field_r.itemCount * (GameCanvas.field_f + GameClock.field_g << 1);
+          ReflectionCheck.field_r = ArcticBackground.field_r.itemCount * (GameCanvas.field_f + GameClock.field_g << 1);
           LevelPack.field_k = NewAchievementsScreen.field_J - (var7Lifetime1 >> 1);
           var8Lifetime2 = 0;
           while (kn.field_E.length > var8Lifetime2) {
-            stackIn_38_0 = bg.field_r;
+            stackIn_38_0 = ReflectionCheck.field_r;
             stackIn_38_1 = MenuSelection.field_q[var8Lifetime2];
             if (stackIn_38_1 >= 0) {
               stackIn_41_1 = TooltipSprite.field_i;
             } else {
               stackIn_41_1 = BufferedSocket.field_m;
             }
-            bg.field_r = stackIn_38_0 + stackIn_41_1;
+            ReflectionCheck.field_r = stackIn_38_0 + stackIn_41_1;
             var8Lifetime2++;
           }
-          ContentTransitionPhase.field_d = ea.field_e - (bg.field_r >> 1);
+          ContentTransitionPhase.field_d = ea.field_e - (ReflectionCheck.field_r >> 1);
           ArcticBackground.field_r.initializeSelection(aj.a(param4 - 46, po.pointerY, MusicPatch.pointerX), 0, param3, (byte) -127);
           if (param4 != 46) {
             field_R = (RgbSprite) null;

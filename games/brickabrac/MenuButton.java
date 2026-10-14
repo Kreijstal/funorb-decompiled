@@ -17,7 +17,7 @@ final class MenuButton {
         if (obfuscationGuard >= -25) {
           return false;
         }
-        return bg.containsRectanglePoint(this.x, this.height, this.width, (byte) 126, pointY, pointX, this.y);
+        return ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 126, pointY, pointX, this.y);
     }
 
     final void resetPressed(int obfuscationGuard) {

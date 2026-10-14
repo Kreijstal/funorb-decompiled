@@ -149,39 +149,39 @@ final class IntrusiveHashIterator implements Iterator {
         this.lastReturned = null;
     }
 
-    final static boolean a(int param0) {
-        bg var1 = null;
-        RuntimeException var1_ref = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        bg var5 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+    final static boolean isReflectionCheckReady(int obfuscationGuard) {
+        ReflectionCheck request = null;
+        RuntimeException failure = null;
+        int operationIndex = 0;
+        int guardArithmetic = 0;
+        int unusedGameFlag = 0;
+        ReflectionCheck queuedRequest = null;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = (bg) (ResourceArchive.field_i.first(-78));
-          var1 = var5;
-          if (var1 == null) {
+          queuedRequest = (ReflectionCheck) (ResourceArchive.pendingReflectionChecks.first(-78));
+          request = queuedRequest;
+          if (request == null) {
             return false;
           }
-          var2 = 0;
-          var3 = -90 / ((param0 + 28) / 50);
-          while (var2 < var1.field_s) {
-            if (var5.field_j[var2] != null &&
-              0 == var5.field_j[var2].status) {
+          operationIndex = 0;
+          guardArithmetic = -90 / ((obfuscationGuard + 28) / 50);
+          while (operationIndex < request.operationCount) {
+            if (queuedRequest.fieldTasks[operationIndex] != null &&
+              0 == queuedRequest.fieldTasks[operationIndex].status) {
               return false;
             }
-            if (var5.field_l[var2] != null &&
-              var5.field_l[var2].status == 0) {
+            if (queuedRequest.methodTasks[operationIndex] != null &&
+              queuedRequest.methodTasks[operationIndex].status == 0) {
               return false;
             }
-            var2++;
+            operationIndex++;
           }
           return true;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "ik.C(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "ik.C(" + obfuscationGuard + ')');
         }
     }
 
