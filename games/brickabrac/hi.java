@@ -463,7 +463,7 @@ final class hi extends um {
         return true;
     }
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -476,16 +476,16 @@ final class hi extends um {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (!param3.field_q) {
-            stackIn_6_0 = (param3.f(-71)) ? 1 : 0;
+          if (!widget.mouseOver) {
+            stackIn_6_0 = (widget.isFocused(-71)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param3 instanceof d) {
-            param0 = param0 & ((d) (param3)).field_J;
+          if (widget instanceof FocusableWidget) {
+            obfuscationGuard = obfuscationGuard & ((FocusableWidget) (widget)).enabled;
           }
-          if (!param0) {
+          if (!obfuscationGuard) {
             stackIn_14_0 = this.field_x;
           } else {
             if (var6_int != 0) {
@@ -495,25 +495,25 @@ final class hi extends um {
             }
           }
           var7 = stackIn_14_0;
-          ac.a(this.field_B, param3.field_w + param4 + (param3.field_s - this.field_B[0].canvasHeight >> 1), param3.field_o + param2, param3.field_t, var7, (byte) 122);
-          stackIn_17_0 = (!param0) ? 7105644 : 16777215;
+          ac.a(this.field_B, widget.y + parentY + (widget.height - this.field_B[0].canvasHeight >> 1), widget.x + parentX, widget.width, var7, (byte) 122);
+          stackIn_17_0 = (!obfuscationGuard) ? 7105644 : 16777215;
           var8 = stackIn_17_0;
-          if (param1 != -20618) {
+          if (callbackGuard != -20618) {
             field_A = (int[]) null;
           }
-          this.field_k.a(param3.field_A, param3.field_o + param2, param4 + param3.field_w - 2, param3.field_t, param3.field_s, var8, -1, 1, 1, this.field_k.ascent);
+          this.field_k.a(widget.text, widget.x + parentX, parentY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.field_k.ascent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_23_0 = var6;
-          stackIn_23_1 = new StringBuilder().append("hi.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_23_1 = new StringBuilder().append("hi.AA(").append(obfuscationGuard).append(',').append(callbackGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(parentY).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ug extends ib implements je {
+abstract class ug extends WidgetGroup implements je {
     static int field_I;
     static String field_J;
     private an field_H;
@@ -15,7 +15,7 @@ abstract class ug extends ib implements je {
         return (ia) ((Object) this.field_H);
     }
 
-    ug(int param0, int param1, int param2, int param3, ub param4) {
+    ug(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4);
     }
 

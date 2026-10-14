@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd implements ub {
+final class bd implements WidgetRenderer {
     static String field_a;
     static AchievementMaskRequest field_b;
 
@@ -150,7 +150,7 @@ final class bd implements ub {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -160,33 +160,33 @@ final class bd implements ub {
         int var7 = 0;
         RgbSprite var8 = null;
         try {
-          var6_int = param3.field_o + param2;
-          var7 = param3.field_w + param4;
-          if (param1 != -20618) {
+          var6_int = widget.x + parentX;
+          var7 = widget.y + parentY;
+          if (callbackGuard != -20618) {
             field_a = (String) null;
           }
-          ig.b(param3.field_s, var6_int, param3.field_t, var7, -17634);
+          ig.b(widget.height, var6_int, widget.width, var7, -17634);
           var8 = df.field_a[1];
-          if (param3 instanceof d &&
-            ((d) (param3)).field_F) {
-            var8.f((-var8.canvasWidth + param3.field_t >> 1) + 1 + var6_int, (-var8.canvasHeight + param3.field_s >> 1) + 1 + var7, 256);
+          if (widget instanceof FocusableWidget &&
+            ((FocusableWidget) (widget)).active) {
+            var8.f((-var8.canvasWidth + widget.width >> 1) + 1 + var6_int, (-var8.canvasHeight + widget.height >> 1) + 1 + var7, 256);
           }
-          if (!param3.f(param1 ^ 20732)) {
+          if (!widget.isFocused(callbackGuard ^ 20732)) {
             return;
           }
-          ScrollPaneWithFooter.a(var7 + 2, var6_int + 2, 124, -4 + param3.field_s, -4 + param3.field_t);
+          ScrollPaneWithFooter.a(var7 + 2, var6_int + 2, 124, -4 + widget.height, -4 + widget.width);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_11_0 = var6;
-          stackIn_11_1 = new StringBuilder().append("bd.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_11_1 = new StringBuilder().append("bd.AA(").append(obfuscationGuard).append(',').append(callbackGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(parentY).append(')').toString());
         }
     }
 

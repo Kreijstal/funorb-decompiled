@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg implements ub {
+final class dg implements WidgetRenderer {
     private TextFont field_j;
     static String field_k;
     private int field_i;
@@ -25,9 +25,9 @@ final class dg implements ub {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
         int var10 = 0;
-        oc stackIn_4_0 = null;
+        Widget stackIn_4_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -40,40 +40,40 @@ final class dg implements ub {
         qi var12 = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param3 instanceof qi) {
-            stackIn_4_0 = (oc) (param3);
+          if (widget instanceof qi) {
+            stackIn_4_0 = (Widget) (widget);
           } else {
             stackIn_4_0 = null;
           }
           var12 = (qi) (stackIn_4_0);
-          Rasterizer2D.fillRectangle(param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, this.field_i);
+          Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_i);
           if (var12 != null) {
           }
-          var7 = param3.field_t - 2 * var12.field_L;
-          var8 = param2 - (-param3.field_o - var12.field_L);
-          var9 = var12.field_M + param3.field_w + param4;
+          var7 = widget.width - 2 * var12.field_L;
+          var8 = parentX - (-widget.x - var12.field_L);
+          var9 = var12.field_M + widget.y + parentY;
           Rasterizer2D.drawLine(var8, var9, var7 + var8, var9, this.field_l);
           for (var10 = var12.c(false) - 1; var10 >= 0; var10--) {
             Rasterizer2D.f(var8 + var12.a(var10, false) * var7 / var12.h(-119), var9, this.field_c, this.field_a);
           }
-          if (param1 != -20618) {
+          if (callbackGuard != -20618) {
             dg.a(46);
           }
           if (this.field_j != null) {
-            this.field_j.drawCentered(var12.field_A, var7 / 2 + var8, var9 + this.field_j.baselineHeight + var12.field_M, this.field_h, this.field_f);
+            this.field_j.drawCentered(var12.text, var7 / 2 + var8, var9 + this.field_j.baselineHeight + var12.field_M, this.field_h, this.field_f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("dg.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_15_1 = new StringBuilder().append("dg.AA(").append(obfuscationGuard).append(',').append(callbackGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(parentY).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cp extends h {
+final class cp extends SingleChildWidget {
     private NodeDeque field_J;
     static UiComponent field_K;
     static String field_G;
@@ -39,18 +39,18 @@ final class cp extends h {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         int var7 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_l != null) {
-          this.field_l.a(true, param3 - 20607, param1, (oc) (this), param0);
+        if (this.renderer != null) {
+          this.renderer.paintWidget(true, obfuscationGuard - 20607, parentX, (Widget) (this), parentY);
         }
         NodeDequeCursor var5 = new NodeDequeCursor(this.field_J);
-        oc var6 = (oc) (var5.last(true));
+        Widget var6 = (Widget) (var5.last(true));
         while (var6 != null) {
-          var6.a(param0 + this.field_w, param1 + this.field_o, param2, (byte) -11);
-          var6 = (oc) (var5.previous(-24706));
+          var6.drawLayer(parentY + this.y, parentX + this.x, layer, (byte) -11);
+          var6 = (Widget) (var5.previous(-24706));
         }
-        if (param3 != -11) {
+        if (obfuscationGuard != -11) {
           field_G = (String) null;
         }
     }
@@ -77,10 +77,10 @@ final class cp extends h {
           var3.field_N = false;
           var3 = (jc) (var2.next(7));
         }
-        this.field_E = null;
+        this.child = null;
     }
 
-    final void a(int param0, oc param1) {
+    final void a(int param0, Widget param1) {
         jc var3 = null;
         try {
           if (!(param1 instanceof jc)) {
@@ -92,7 +92,7 @@ final class cp extends h {
           }
           this.field_J.addFirst(true, var3);
           var3.field_N = true;
-          var3.a(true, (oc) (this));
+          var3.tryFocus(true, (Widget) (this));
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -114,7 +114,7 @@ final class cp extends h {
     }
 
     public cp() {
-        super(0, 0, SpriteGeometry.field_y, r.field_w, (ub) null, (uh) null);
+        super(0, 0, SpriteGeometry.field_y, r.field_w, (WidgetRenderer) null, (WidgetListener) null);
         this.field_J = new NodeDeque();
     }
 
@@ -147,7 +147,7 @@ final class cp extends h {
               stackIn_10_0 = (lo) null;
               return stackIn_10_0;
             }
-            var5 = h.a(var3, false);
+            var5 = SingleChildWidget.a(var3, false);
             if (var5 == null) {
               stackIn_15_0 = ji.a(var4, 0);
               return stackIn_15_0;
@@ -197,7 +197,7 @@ final class cp extends h {
           }
           var4 = (jc) (var2.next(7));
         }
-        this.field_E = (oc) ((Object) this.g(-126));
+        this.child = (Widget) ((Object) this.g(-126));
     }
 
     final static void h(int param0) {
@@ -257,8 +257,8 @@ final class cp extends h {
                 stackIn_19_0 = ik.field_b.length;
               }
               var7 = stackIn_19_0;
-              if (HuffmanCodec.field_h.length <= h.field_F.length) {
-                stackIn_22_0 = h.field_F.length;
+              if (HuffmanCodec.field_h.length <= SingleChildWidget.field_F.length) {
+                stackIn_22_0 = SingleChildWidget.field_F.length;
               } else {
                 stackIn_22_0 = HuffmanCodec.field_h.length;
               }
@@ -274,8 +274,8 @@ final class cp extends h {
               }
               if (7 + var7 <= var3 &&
                 7 - (-var7 - var8) > var3) {
-                if (-var7 + (var3 - 7) < h.field_F.length) {
-                  stackIn_33_0 = h.field_F[var3 + (-7 - var7)];
+                if (-var7 + (var3 - 7) < SingleChildWidget.field_F.length) {
+                  stackIn_33_0 = SingleChildWidget.field_F[var3 + (-7 - var7)];
                 } else {
                   stackIn_33_0 = "";
                 }
@@ -400,7 +400,7 @@ final class cp extends h {
         return request;
     }
 
-    final oc h(byte param0) {
+    final Widget h(byte param0) {
         NodeDequeCursor var2;
         jc var3;
         int var4;

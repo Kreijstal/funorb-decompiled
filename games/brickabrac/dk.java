@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends ib implements ha, en, vf {
+final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
     static RgbSprite field_R;
     private bf field_N;
     private lg field_I;
     private sf field_M;
-    private d field_Q;
+    private FocusableWidget field_Q;
     private sf field_L;
     private sf field_O;
     private sf field_S;
     private sf field_J;
     private sf field_H;
-    private d field_P;
+    private FocusableWidget field_P;
     ri field_K;
 
     final static void a(String param0, boolean param1, int param2, boolean param3, int param4) {
@@ -50,7 +50,7 @@ final class dk extends ib implements ha, en, vf {
           }
           var6 = stackIn_4_0;
           if (LevelSelectScreen.field_v == 0) {
-            var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 ^ -17, oc.field_m, var11);
+            var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 ^ -17, Widget.field_m, var11);
             var8 = var7 + 3;
             MenuSelection.field_q = new int[var8];
             kn.field_E = new String[var8];
@@ -72,7 +72,7 @@ final class dk extends ib implements ha, en, vf {
             if (LevelSelectScreen.field_v != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 - 109, oc.field_m, var11);
+            var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 - 109, Widget.field_m, var11);
             var8 = 2 + var7;
             MenuSelection.field_q = new int[var8];
             kn.field_E = new String[var8];
@@ -158,10 +158,10 @@ final class dk extends ib implements ha, en, vf {
         }
         int var2 = param0;
         try {
-          var2 = Integer.parseInt(this.field_S.field_A);
+          var2 = Integer.parseInt(this.field_S.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return ArchiveSource.a(this.field_J.field_A, this.field_O.field_A, this.field_M.field_A, var2, (byte) -126, this, this.field_N.field_F);
+        return ArchiveSource.a(this.field_J.text, this.field_O.text, this.field_M.text, var2, (byte) -126, this, this.field_N.active);
     }
 
     private final String c(boolean param0) {
@@ -237,7 +237,7 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         boolean discarded$1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -245,14 +245,14 @@ final class dk extends ib implements ha, en, vf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (this.field_P == param4) {
+          if (this.field_P == widget) {
             ln.a(103);
           } else {
-            if (param4 == this.field_Q) {
+            if (widget == this.field_Q) {
               discarded$1 = this.i(-1);
             }
           }
-          if (param2 >= -22) {
+          if (obfuscationGuard >= -22) {
             this.field_H = (sf) null;
           }
           return;
@@ -260,8 +260,8 @@ final class dk extends ib implements ha, en, vf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_10_0 = var6;
-          stackIn_10_1 = new StringBuilder().append("dk.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_10_1 = new StringBuilder().append("dk.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -270,7 +270,7 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    private final int a(oc param0, int param1, String param2, int param3, int param4, String param5, int param6) {
+    private final int a(Widget param0, int param1, String param2, int param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         nf var9 = null;
         ma var10 = null;
@@ -285,14 +285,14 @@ final class dk extends ib implements ha, en, vf {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ma(20, param1, param4 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param5);
-          this.a(var10, true);
-          var9 = new nf(((je) ((Object) param0)).a(-11011), param2, 126, param1 + var10.field_s, param4 + 50, param3);
-          var9.field_i = (uh) (this);
+          this.addChild(var10, true);
+          var9 = new nf(((je) ((Object) param0)).a(-11011), param2, 126, param1 + var10.height, param4 + 50, param3);
+          var9.listener = (WidgetListener) (this);
           if (param6 != 170) {
             this.field_N = (bf) null;
           }
-          this.a(var9, true);
-          stackIn_3_0 = var10.field_s + var9.field_s;
+          this.addChild(var9, true);
+          stackIn_3_0 = var10.height + var9.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -320,7 +320,7 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    private final int a(String param0, oc param1, int param2, int param3, int param4) {
+    private final int a(String param0, Widget param1, int param2, int param3, int param4) {
         ma var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -333,9 +333,9 @@ final class dk extends ib implements ha, en, vf {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = new ma(20, param2, 120 + param4, 25, param1, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
-          this.a(var6, true);
+          this.addChild(var6, true);
           var7 = -5 / ((-32 - param3) / 59);
-          stackIn_1_0 = var6.field_s;
+          stackIn_1_0 = var6.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -357,7 +357,7 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    private final int a(oc param0, String param1, int param2, int param3, int param4) {
+    private final int a(Widget param0, String param1, int param2, int param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         wl var7 = null;
@@ -374,11 +374,11 @@ final class dk extends ib implements ha, en, vf {
             discarded$1 = this.i(-122);
           }
           var8 = new ma(20, param4, param2 + 120, 25, param0, false, 120, 3, ArchiveNetworkClient.field_u, 16777215, param1);
-          this.a(var8, true);
+          this.addChild(var8, true);
           var7 = new wl(((je) ((Object) param0)).a(-11011));
-          this.a(var7, true);
-          var7.a(15, var8.field_o + var8.field_t + 3, (var8.field_s - 15 >> 1) + var8.field_w, (byte) -119, 15);
-          stackIn_3_0 = var8.field_s;
+          this.addChild(var7, true);
+          var7.setBounds(15, var8.x + var8.width + 3, (var8.height - 15 >> 1) + var8.y, (byte) -119, 15);
+          stackIn_3_0 = var8.height;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -470,7 +470,7 @@ final class dk extends ib implements ha, en, vf {
         }
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -520,16 +520,16 @@ final class dk extends ib implements ha, en, vf {
         return false;
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_Q.field_J = this.h(10000536);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
+          this.field_Q.enabled = this.h(10000536);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dk.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dk.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
-    private final int a(int param0, String param1, String param2, int param3, oc param4, int param5) {
+    private final int a(int param0, String param1, String param2, int param3, Widget param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -580,42 +580,42 @@ final class dk extends ib implements ha, en, vf {
     }
 
     public dk() {
-        super(0, 0, 496, 0, (ub) null);
-        this.field_J = new sf("", (uh) null, 12);
-        this.field_M = new sf("", (uh) null, 100);
-        this.field_H = new sf("", (uh) null, 100);
-        this.field_O = new sf("", (uh) null, 20);
-        this.field_L = new sf("", (uh) null, 20);
-        this.field_S = new sf("", (uh) null, 3);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_J = new sf("", (WidgetListener) null, 12);
+        this.field_M = new sf("", (WidgetListener) null, 100);
+        this.field_H = new sf("", (WidgetListener) null, 100);
+        this.field_O = new sf("", (WidgetListener) null, 20);
+        this.field_L = new sf("", (WidgetListener) null, 20);
+        this.field_S = new sf("", (WidgetListener) null, 3);
         int var1 = 1;
-        this.field_N = new bf("", (uh) null, var1 != 0);
-        this.field_Q = new d(c.field_d, (uh) null);
-        this.field_P = new d(ByteArrayNode.field_l, (uh) null);
-        this.field_J.field_z = hh.field_a;
-        this.field_M.field_z = rf.field_d;
-        this.field_H.field_z = ResourceArchive.field_e;
-        this.field_O.field_z = IntKeyIndex.field_a;
-        this.field_L.field_z = BoundedFile.field_b;
-        this.field_S.field_z = hc.field_d;
-        this.field_N.field_z = ok.field_e;
+        this.field_N = new bf("", (WidgetListener) null, var1 != 0);
+        this.field_Q = new FocusableWidget(c.field_d, (WidgetListener) null);
+        this.field_P = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
+        this.field_J.tooltip = hh.field_a;
+        this.field_M.tooltip = rf.field_d;
+        this.field_H.tooltip = ResourceArchive.field_e;
+        this.field_O.tooltip = IntKeyIndex.field_a;
+        this.field_L.tooltip = BoundedFile.field_b;
+        this.field_S.tooltip = hc.field_d;
+        this.field_N.tooltip = ok.field_e;
         this.field_J.a(new fl(this.field_J), (byte) -68);
         this.field_M.a(new sg(this.field_M), (byte) -68);
         this.field_H.a(new uc(this.field_H, this.field_M), (byte) -68);
         this.field_O.a(new g(this.field_O, this.field_J, this.field_M), (byte) -68);
         this.field_L.a(new cb(this.field_L, this.field_O), (byte) -68);
         this.field_S.a(new kf(this.field_S), (byte) -68);
-        this.field_Q.field_J = false;
-        this.field_Q.field_l = (ub) ((Object) new hi());
-        this.field_P.field_l = (ub) ((Object) new bb());
-        this.field_J.field_l = (ub) ((Object) new r(10000536));
+        this.field_Q.enabled = false;
+        this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
+        this.field_P.renderer = (WidgetRenderer) ((Object) new bb());
+        this.field_J.renderer = (WidgetRenderer) ((Object) new r(10000536));
         r dupTemp$0 = new r(10000536);
-        this.field_H.field_l = (ub) ((Object) dupTemp$0);
-        this.field_M.field_l = (ub) ((Object) dupTemp$0);
-        this.field_S.field_l = (ub) ((Object) new r(10000536));
-        this.field_N.field_l = (ub) ((Object) new bd());
+        this.field_H.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_M.renderer = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_S.renderer = (WidgetRenderer) ((Object) new r(10000536));
+        this.field_N.renderer = (WidgetRenderer) ((Object) new bd());
         ob dupTemp$1 = new ob(10000536);
-        this.field_L.field_l = (ub) ((Object) dupTemp$1);
-        this.field_O.field_l = (ub) ((Object) dupTemp$1);
+        this.field_L.renderer = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_O.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = rd.a(ch.field_e, new String[]{this.c(true), this.j(-987472479)}, (byte) 103);
         int var3 = 20;
         var3 = var3 + this.a(IntNode.field_l, this.field_M, var3, 37, 170);
@@ -624,30 +624,30 @@ final class dk extends ib implements ha, en, vf {
         var3 = var3 + (this.a(170, InstructionsScreen.field_x, cp.field_G, -3, this.field_L, var3) + 5);
         var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.field_J, var3) + 5);
         var3 = var3 + this.a(this.field_S, HuffmanCodec.field_d, 170, 111, var3);
-        ma var4 = new ma(46, var3, this.field_t - 90, 25, this.field_N, true, -120 + this.field_t, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
-        this.a(var4, true);
-        var3 = var3 + var4.field_s;
+        ma var4 = new ma(46, var3, this.width - 90, 25, this.field_N, true, -120 + this.width, 5, QuickChatMenu.field_Yb, 11579568, LevelCompleteScreen.field_z);
+        this.addChild(var4, true);
+        var3 = var3 + var4.height;
         um var5 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
         this.field_I = new lg(var2, var5);
-        this.field_I.field_z = "";
+        this.field_I.tooltip = "";
         this.field_I.a(GameConnectionShell.field_z, 0, (byte) -98);
         this.field_I.a(GameConnectionShell.field_z, 1, (byte) -98);
-        this.field_I.field_i = (uh) (this);
-        this.field_I.a(46, (byte) 46, -90 + this.field_t, var3);
-        var3 = var3 + (15 + this.field_I.field_s);
-        this.a(this.field_I, true);
+        this.field_I.listener = (WidgetListener) (this);
+        this.field_I.a(46, (byte) 46, -90 + this.width, var3);
+        var3 = var3 + (15 + this.field_I.height);
+        this.addChild(this.field_I, true);
         int var6 = 4;
         int var7 = 200;
-        this.field_Q.a(40, -var7 + 496 >> 1, var3, (byte) -119, var7);
-        this.field_P.a(40, 3 + var6, var3 + 15, (byte) -119, 60);
-        this.field_P.field_i = (uh) (this);
-        this.field_Q.field_i = (uh) (this);
-        this.a(this.field_Q, true);
-        this.a(this.field_P, true);
+        this.field_Q.setBounds(40, -var7 + 496 >> 1, var3, (byte) -119, var7);
+        this.field_P.setBounds(40, 3 + var6, var3 + 15, (byte) -119, 60);
+        this.field_P.listener = (WidgetListener) (this);
+        this.field_Q.listener = (WidgetListener) (this);
+        this.addChild(this.field_Q, true);
+        this.addChild(this.field_P, true);
         this.field_K = new ri((vf) (this));
-        this.field_K.a(150, this.field_J.field_o - (-this.field_J.field_t - 60), 20 + this.field_J.field_w, (byte) -119, this.field_t - this.field_J.field_o - (this.field_J.field_t + 60));
-        this.a(this.field_K, true);
-        this.a(var6 + (var3 + 55), 0, 0, (byte) -119, 496);
+        this.field_K.setBounds(150, this.field_J.x - (-this.field_J.width - 60), 20 + this.field_J.y, (byte) -119, this.width - this.field_J.x - (this.field_J.width + 60));
+        this.addChild(this.field_K, true);
+        this.setBounds(var6 + (var3 + 55), 0, 0, (byte) -119, 496);
     }
 
     private final boolean a(int param0, je param1) {

@@ -410,7 +410,7 @@ final class sj {
                                     ArchiveIndex.field_s = ((PacketBuffer) ((Object) packet)).readVarInt((byte) 119);
                                     break regionExit1;
                                   case 23:
-                                    oc.field_p = ((PacketBuffer) ((Object) packet)).readLong(-32768);
+                                    Widget.field_p = ((PacketBuffer) ((Object) packet)).readLong(-32768);
                                     break regionExit1;
                                   default:
                                     AlignedIconLabel.a("L1: " + eq.c((byte) -121), (Throwable) null, 108);

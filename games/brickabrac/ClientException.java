@@ -61,7 +61,7 @@ final class ClientException extends RuntimeException {
               stackIn_7_2 = var7.field_M;
               stackIn_7_3 = var8;
               stackIn_8_4 = (var6_int == param4);
-              ib.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param5, param0);
+              WidgetGroup.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param5, param0);
             }
           }
           return;

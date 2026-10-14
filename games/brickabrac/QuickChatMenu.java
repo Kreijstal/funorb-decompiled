@@ -1274,7 +1274,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime138 = gr.a(!param0, "group_1");
           if (null != var2Lifetime138) {
-            oc.field_u = MenuButton.a(var2Lifetime138, (byte) 73);
+            Widget.field_u = MenuButton.a(var2Lifetime138, (byte) 73);
           }
           var2Lifetime139 = gr.a(true, "menu_level_label");
           if (var2Lifetime139 != null) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends bj implements en {
+final class ek extends bj implements WidgetActionListener {
     static int[] sortedFaceIds;
     static int field_bb;
     static int field_lb;
@@ -10,7 +10,7 @@ final class ek extends bj implements en {
     static int keyChangeReadIndex;
     static int decodedCanvasHeight;
     static RgbSprite field_hb;
-    private d field_ib;
+    private FocusableWidget field_ib;
     static String[] field_eb;
     static String field_fb;
 
@@ -70,7 +70,7 @@ final class ek extends bj implements en {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        oc var4 = null;
+        Widget var4 = null;
         try {
           var3 = null;
           if (UiComponent.field_ab == param1) {
@@ -78,26 +78,26 @@ final class ek extends bj implements en {
           } else {
             if (ch.field_a != param1) {
               if (param1 == QuickChatPhraseRegistry.field_i) {
-                this.field_s = this.field_s + 30;
+                this.height = this.height + 30;
                 var3 = DirectByteStorage.field_h;
               }
             } else {
-              this.field_s = this.field_s + 10;
+              this.height = this.height + 10;
               var3 = ChocolateBackground.field_s;
               if (ok.a(true)) {
                 var3 = oh.field_h;
-                this.field_s = this.field_s + 20;
+                this.height = this.height + 20;
               }
             }
           }
-          var4 = new oc((String) (var3), (uh) null);
-          var4.field_w = 50;
-          var4.field_s = 80;
-          var4.field_t = this.field_t;
-          var4.field_o = 0;
-          var4.field_l = (ub) ((Object) new um(QuickChatMenu.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.a(var4, true);
-          this.field_ib = this.a(LevelSequence.field_a, 101, (uh) (this));
+          var4 = new Widget((String) (var3), (WidgetListener) null);
+          var4.y = 50;
+          var4.height = 80;
+          var4.width = this.width;
+          var4.x = 0;
+          var4.renderer = (WidgetRenderer) ((Object) new um(QuickChatMenu.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(var4, true);
+          this.field_ib = this.a(LevelSequence.field_a, 101, (WidgetListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -126,11 +126,11 @@ final class ek extends bj implements en {
         this.field_N = param0 ? true : false;
     }
 
-    private final d a(String param0, int param1, uh param2) {
-        d var4 = null;
+    private final FocusableWidget a(String param0, int param1, WidgetListener param2) {
+        FocusableWidget var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        d stackIn_3_0 = null;
+        FocusableWidget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -138,13 +138,13 @@ final class ek extends bj implements en {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new d(param0, param2);
-          var4.field_l = (ub) ((Object) new hi());
-          var5 = -6 + this.field_s;
-          this.field_s = this.field_s + 38;
-          var4.a(30, 15, var5, (byte) -119, -30 + this.field_t);
-          this.a(var4, true);
-          this.e(1);
+          var4 = new FocusableWidget(param0, param2);
+          var4.renderer = (WidgetRenderer) ((Object) new hi());
+          var5 = -6 + this.height;
+          this.height = this.height + 38;
+          var4.setBounds(30, 15, var5, (byte) -119, -30 + this.width);
+          this.addChild(var4, true);
+          this.relayout(1);
           if (param1 < 23) {
             keyChangeReadIndex = -75;
           }
@@ -181,17 +181,17 @@ final class ek extends bj implements en {
         }
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 > -22) {
+          if (obfuscationGuard > -22) {
             ek.c(false);
           }
-          if (param4 != this.field_ib) {
+          if (widget != this.field_ib) {
             return;
           }
           this.d(false);
@@ -200,8 +200,8 @@ final class ek extends bj implements en {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_8_0 = var6;
-          stackIn_8_1 = new StringBuilder().append("ek.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_8_1 = new StringBuilder().append("ek.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";

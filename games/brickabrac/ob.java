@@ -43,9 +43,9 @@ final class ob extends r {
         this(ArchiveNetworkClient.field_u, param0);
     }
 
-    final String a(oc param0, boolean param1) {
+    final String a(Widget param0, boolean param1) {
         RuntimeException var3 = null;
-        oc var4 = null;
+        Widget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -53,10 +53,10 @@ final class ob extends r {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            var4 = (oc) null;
-            this.a((oc) null, false);
+            var4 = (Widget) null;
+            this.a((Widget) null, false);
           }
-          stackIn_3_0 = InteractiveGameClient.a('*', 122, param0.field_A.length());
+          stackIn_3_0 = InteractiveGameClient.a('*', 122, param0.text.length());
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

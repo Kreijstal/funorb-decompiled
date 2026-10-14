@@ -99,7 +99,7 @@ final class CachedArchiveSource extends ArchiveSource {
               PowerUpWarning.field_r.drawLeft(var6, var8, PowerUpWarning.field_i + var2, var5, -1);
               var2 = var2 + (TooltipSprite.field_i + GameClock.field_g + GameCanvas.field_f);
             } else {
-              oc.field_m.drawLeft(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
+              Widget.field_m.drawLeft(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
               var2 = var2 + BufferedSocket.field_m;
             }
           }

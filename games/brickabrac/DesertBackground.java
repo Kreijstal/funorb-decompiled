@@ -62,7 +62,7 @@ final class DesertBackground extends BackgroundScene {
           OptionsScreen.desertFarSprite = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
           ce.desertSmallSprite = pl.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.field_m);
           SecondaryNodeQueue.field_d = jh.a(0, wn.desertNearSprite);
-          oc.field_x = jh.a(0, PowerUpWarning.desertMidSprite);
+          Widget.field_x = jh.a(0, PowerUpWarning.desertMidSprite);
           pp.field_b = jh.a(0, OptionsScreen.desertFarSprite);
           GzipInflater.desertCapsSprites[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
           TableNameEntry.desertSegsSprites[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
@@ -119,10 +119,10 @@ final class DesertBackground extends BackgroundScene {
             RankingsScreen.a(var7, 2, -13, pp.field_b, colorIndex, 102);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           } else {
-            InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, oc.field_x, var7.sprite, scroll16, 306, -13, destinationX);
+            InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var7.sprite, scroll16, 306, -13, destinationX);
             return;
           }
-          InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, oc.field_x, var7.sprite, scroll16, 306, -13, destinationX);
+          InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var7.sprite, scroll16, 306, -13, destinationX);
           return;
         }
         if (!this.hasSprites((byte) -123)) {
@@ -134,10 +134,10 @@ final class DesertBackground extends BackgroundScene {
           RankingsScreen.a(var8, 2, -13, pp.field_b, colorIndex, 102);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, oc.field_x, var8.sprite, scroll16, 306, -13, destinationX);
+          InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var8.sprite, scroll16, 306, -13, destinationX);
           return;
         }
-        InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, oc.field_x, var8.sprite, scroll16, 306, -13, destinationX);
+        InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var8.sprite, scroll16, 306, -13, destinationX);
     }
 
     DesertBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {

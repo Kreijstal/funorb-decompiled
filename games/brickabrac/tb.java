@@ -14,7 +14,7 @@ final class tb extends bj {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1 ^ 0, param2);
-        wm.field_a.drawCentered(this.field_jb, param0 + (this.field_t >> 1), param2 + 103, 16777215, -1);
+        wm.field_a.drawCentered(this.field_jb, param0 + (this.width >> 1), param2 + 103, 16777215, -1);
         if (param1 == 274) {
           if (this.field_ib != null) {
             Rasterizer2D.drawHorizontalLine(20 + param0, 120 + param2 - 7, 260, 8421504);
@@ -231,7 +231,7 @@ final class tb extends bj {
           this.field_hb = false;
           this.field_gb = false;
           this.field_bb.field_J = true;
-          this.a(this.field_bb, true);
+          this.addChild(this.field_bb, true);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "tb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo extends ag implements en {
+final class mo extends ag implements WidgetActionListener {
     static UiComponent field_R;
     static String field_O;
     private na field_P;
     static String field_N;
-    private d field_Q;
+    private FocusableWidget field_Q;
 
     public static void d(boolean param0) {
         field_R = null;
@@ -20,47 +20,47 @@ final class mo extends ag implements en {
     }
 
     mo(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (ub) null);
+        super(param0, param1, param2, param3, (WidgetRenderer) null);
         this.field_P = new na(new r(10000536), RasterSnapshot.field_j, 0, 0, 140, 25);
         this.field_P.a(new an(), (byte) -12);
-        this.field_Q = new d(ri.field_L, (uh) (this));
-        this.field_H = new oc[]{(oc) ((Object) this.field_P), (oc) ((Object) this.field_Q)};
-        this.field_Q.field_l = (ub) ((Object) new hi());
-        this.e(1);
+        this.field_Q = new FocusableWidget(ri.field_L, (WidgetListener) (this));
+        this.field_H = new Widget[]{(Widget) ((Object) this.field_P), (Widget) ((Object) this.field_Q)};
+        this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
+        this.relayout(1);
     }
 
     final void a(int param0) {
         int var2 = 250;
-        this.field_P.a(25, -var2 + this.field_t >> 1, this.field_s - 5 >> 1, (byte) -119, param0);
-        this.field_Q.a(30, 140 + (-var2 + this.field_t >> 1) + 10, (20 + (this.field_s - 30) >> 1) + 2, (byte) -119, 100);
+        this.field_P.setBounds(25, -var2 + this.width >> 1, this.height - 5 >> 1, (byte) -119, param0);
+        this.field_Q.setBounds(30, 140 + (-var2 + this.width >> 1) + 10, (20 + (this.height - 30) >> 1) + 2, (byte) -119, 100);
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         if (this.field_P.a(-11011).b((byte) -31) != DualLinkIterator.field_c) {
           return;
         }
         try {
           df.a(this.field_P.i(5390), (byte) 103, this.field_P.a((byte) -125), this.field_P.i((byte) -117));
-          if (param2 >= -22) {
+          if (obfuscationGuard >= -22) {
             mo.d(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mo.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mo.Q(" + pointerY + ',' + button + ',' + obfuscationGuard + ',' + pointerX + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_Q.field_J = this.field_P.a(-11011).b((byte) -31) == DualLinkIterator.field_c ? true : false;
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
+          this.field_Q.enabled = this.field_P.a(-11011).b((byte) -31) == DualLinkIterator.field_c ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mo.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, param3);
-        QuickChatMenu.field_Yb.drawLeft(MusicEnvelope.field_i, 4 + (this.field_o + param1), 4 + param0 + (this.field_w + QuickChatMenu.field_Yb.ascent), 16777215, -1);
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        super.drawLayer(parentY, parentX, layer, obfuscationGuard);
+        QuickChatMenu.field_Yb.drawLeft(MusicEnvelope.field_i, 4 + (this.x + parentX), 4 + parentY + (this.y + QuickChatMenu.field_Yb.ascent), 16777215, -1);
     }
 
     static {

@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class h extends oc implements sd {
-    oc field_E;
+abstract class SingleChildWidget extends Widget implements WidgetContainer {
+    Widget child;
     static boolean[] field_D;
     static String[] field_F;
     static IndexedSprite[] field_C;
@@ -14,12 +14,12 @@ abstract class h extends oc implements sd {
         field_F = null;
         if (param0 > -82) {
           String var2 = (String) null;
-          h.a((String) null, false);
+          SingleChildWidget.a((String) null, false);
         }
         field_D = null;
     }
 
-    private final boolean b(boolean param0, oc param1) {
+    private final boolean b(boolean param0, Widget param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -30,7 +30,7 @@ abstract class h extends oc implements sd {
           if (!param0) {
             return false;
           }
-          stackIn_8_0 = (this.field_E != null) && (!this.field_E.f(-124)) && (this.field_E.a(true, param1));
+          stackIn_8_0 = (this.child != null) && (!this.child.isFocused(-124)) && (this.child.tryFocus(true, param1));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -57,7 +57,7 @@ abstract class h extends oc implements sd {
         try {
           BackgroundScene.masterSoundGain = param1;
           if (param0 != 13894) {
-            h.a(-92, -23);
+            SingleChildWidget.a(-92, -23);
           }
           var2 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.first(param0 ^ -13940));
           while (var2 != null) {
@@ -89,7 +89,7 @@ abstract class h extends oc implements sd {
         }
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
@@ -98,9 +98,9 @@ abstract class h extends oc implements sd {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_E != null &&
-            this.field_E.f(-127) &&
-            this.field_E.a(param0, (byte) 110, param2, param3)) {
+          if (this.child != null &&
+            this.child.isFocused(-127) &&
+            this.child.a(param0, (byte) 110, param2, param3)) {
             return true;
           }
           var5_int = param0;
@@ -131,18 +131,18 @@ abstract class h extends oc implements sd {
         }
     }
 
-    h(int param0, int param1, int param2, int param3, ub param4, uh param5) {
-        super(param0, param1, param2, param3, param4, param5);
+    SingleChildWidget(int x, int y, int width, int height, WidgetRenderer renderer, WidgetListener listener) {
+        super(x, y, width, height, renderer, listener);
     }
 
-    String d(int param0) {
+    String getTooltip(int obfuscationGuard) {
         String var3 = null;
-        if (param0 <= 6) {
+        if (obfuscationGuard <= 6) {
           field_C = (IndexedSprite[]) null;
         }
-        String var2 = super.d(66);
-        if (null != this.field_E) {
-          var3 = this.field_E.d(61);
+        String var2 = super.getTooltip(66);
+        if (null != this.child) {
+          var3 = this.child.getTooltip(61);
           if (var3 != null) {
             return var3;
           }
@@ -150,23 +150,23 @@ abstract class h extends oc implements sd {
         return var2;
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
+        super.setBounds(height, x, y, obfuscationGuard, width);
         this.a((byte) -19);
     }
 
-    final void b(boolean param0) {
-        if (null != this.field_E) {
-          this.field_E.b(param0);
+    final void clearFocus(boolean obfuscationGuard) {
+        if (null != this.child) {
+          this.child.clearFocus(obfuscationGuard);
         }
-        if (param0) {
-          this.f(-98);
+        if (obfuscationGuard) {
+          this.isFocused(-98);
         }
     }
 
     final int e(byte param0) {
         int var2 = 100 / ((-17 - param0) / 43);
-        return this.field_E != null ? this.field_E.e((byte) -71) : 0;
+        return this.child != null ? this.child.e((byte) -71) : 0;
     }
 
     StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
@@ -210,18 +210,18 @@ abstract class h extends oc implements sd {
         }
     }
 
-    void a(oc param0, byte param1, int param2, int param3) {
+    void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          super.a(param0, param1, param2, param3);
-          if (null != this.field_E) {
-            this.field_E.a(param0, (byte) 0, param2 + this.field_o, param3 + this.field_w);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
+          if (null != this.child) {
+            this.child.updatePointer(focusRoot, (byte) 0, parentX + this.x, parentY + this.y);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "h.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "h.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, oc param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -232,7 +232,7 @@ abstract class h extends oc implements sd {
           if (param3 > -125) {
             this.e((byte) 12);
           }
-          stackIn_7_0 = (null != this.field_E) && (this.field_E.f(-83)) && (this.field_E.a(param0, param1, param2, -126, param4, param5, param6));
+          stackIn_7_0 = (null != this.child) && (this.child.isFocused(-83)) && (this.child.a(param0, param1, param2, -126, param4, param5, param6));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -248,17 +248,17 @@ abstract class h extends oc implements sd {
         }
     }
 
-    void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
+    void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          if (null != this.field_E) {
-            this.field_E.a(param0, param1, this.field_w + param2, param3, 19223, this.field_o + param5);
+          if (null != this.child) {
+            this.child.handlePointerRelease(pointerY, pointerX, this.y + parentY, focusRoot, 19223, this.x + parentX);
           }
-          if (param4 != 19223) {
+          if (obfuscationGuard != 19223) {
             field_C = (IndexedSprite[]) null;
           }
           return;
@@ -266,13 +266,13 @@ abstract class h extends oc implements sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("h.GA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_8_1 = new StringBuilder().append("h.GA(").append(pointerY).append(',').append(pointerX).append(',').append(parentY).append(',');
+          if (focusRoot == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -361,10 +361,10 @@ abstract class h extends oc implements sd {
           if (!param1) {
             return;
           }
-          if (this.field_E == null) {
+          if (this.child == null) {
             discarded$4 = param0.append("null");
           } else {
-            this.field_E.a(1 + param3, param2, 24, param0);
+            this.child.a(1 + param3, param2, 24, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -387,7 +387,7 @@ abstract class h extends oc implements sd {
         }
     }
 
-    final boolean a(boolean param0, oc param1) {
+    final boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -395,17 +395,17 @@ abstract class h extends oc implements sd {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             return false;
           }
-          stackIn_7_0 = (this.field_E != null) && (this.field_E.a(true, param1));
+          stackIn_7_0 = (this.child != null) && (this.child.tryFocus(true, focusRoot));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("h.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("h.CA(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -414,30 +414,30 @@ abstract class h extends oc implements sd {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
-        if (param2 == 0 &&
-          null != this.field_l) {
-          this.field_l.a(true, -20618, param1, (oc) (this), param0);
+    void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        if (layer == 0 &&
+          null != this.renderer) {
+          this.renderer.paintWidget(true, -20618, parentX, (Widget) (this), parentY);
         }
-        if (null != this.field_E) {
-          this.field_E.a(this.field_w + param0, param1 + this.field_o, param2, (byte) -11);
+        if (null != this.child) {
+          this.child.drawLayer(this.y + parentY, parentX + this.x, layer, (byte) -11);
         }
-        if (param3 != -11) {
+        if (obfuscationGuard != -11) {
           field_C = (IndexedSprite[]) null;
         }
     }
 
-    oc h(byte param0) {
+    Widget h(byte param0) {
         boolean discarded$0 = false;
-        oc var2 = this.field_E;
+        Widget var2 = this.child;
         if (param0 != 25) {
-          oc var3 = (oc) null;
-          discarded$0 = this.b(true, (oc) null);
+          Widget var3 = (Widget) null;
+          discarded$0 = this.b(true, (Widget) null);
         }
         if (var2 == null) {
           return null;
         }
-        if (!var2.f(-95)) {
+        if (!var2.isFocused(-95)) {
           return null;
         }
         return var2;
@@ -461,7 +461,7 @@ abstract class h extends oc implements sd {
         return param5;
     }
 
-    private final boolean a(oc param0, byte param1) {
+    private final boolean a(Widget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -472,7 +472,7 @@ abstract class h extends oc implements sd {
           if (param1 != -35) {
             field_C = (IndexedSprite[]) null;
           }
-          stackIn_7_0 = (this.field_E != null) && (!this.field_E.f(-117)) && (this.field_E.a(true, param0));
+          stackIn_7_0 = (this.child != null) && (!this.child.isFocused(-117)) && (this.child.tryFocus(true, param0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -488,7 +488,7 @@ abstract class h extends oc implements sd {
         }
     }
 
-    boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -496,22 +496,22 @@ abstract class h extends oc implements sd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param6 != 0) {
+          if (obfuscationGuard != 0) {
             this.h((byte) -11);
           }
-          stackIn_6_0 = (this.field_E != null) && (this.field_E.a(param0, param1, this.field_o + param2, param3 + this.field_w, param4, param5, 0));
+          stackIn_6_0 = (this.child != null) && (this.child.handlePointerPress(focusRoot, pointerX, this.x + parentX, parentY + this.y, button, pointerY, 0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_9_0 = var8;
           stackIn_9_1 = new StringBuilder().append("h.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -519,13 +519,13 @@ abstract class h extends oc implements sd {
         if (param0 > -7) {
           field_D = (boolean[]) null;
         }
-        if (this.field_E != null) {
-          this.field_E.e(1);
+        if (this.child != null) {
+          this.child.relayout(1);
         }
     }
 
-    final boolean f(int param0) {
-        if (param0 >= -49) {
+    final boolean isFocused(int obfuscationGuard) {
+        if (obfuscationGuard >= -49) {
           return true;
         }
         return null != this.h((byte) 25) ? true : false;

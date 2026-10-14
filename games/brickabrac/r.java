@@ -114,17 +114,17 @@ class r extends um {
         return ~var2 & param1;
     }
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
-        if (param1 != -20618) {
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
+        if (callbackGuard != -20618) {
           return;
         }
         try {
-          if (param0) {
-            ig.b(param3.field_s, param3.field_o + param2, param3.field_t, param4 + param3.field_w, -17634);
+          if (obfuscationGuard) {
+            ig.b(widget.height, widget.x + parentX, widget.width, parentY + widget.y, -17634);
           }
-          super.a(param0, param1 ^ 0, param2, param3, param4);
+          super.paintWidget(obfuscationGuard, callbackGuard ^ 0, parentX, widget, parentY);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "r.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "r.AA(" + obfuscationGuard + ',' + callbackGuard + ',' + parentX + ',' + (widget != null ? "{...}" : "null") + ',' + parentY + ')');
         }
     }
 

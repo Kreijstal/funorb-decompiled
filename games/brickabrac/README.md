@@ -2,13 +2,15 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 195 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 207 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
 | [GameplayScreen](GameplayScreen.java) → [MultiplayerMatch](MultiplayerMatch.java) → [PlayerBoard](PlayerBoard.java) | Gameplay screen, multiplayer match and per-player boards. |
 | [LobbyGame](LobbyGame.java) / [LobbyPlayer](LobbyPlayer.java) | Lobby game settings, capacity, invitations, player membership/rating and row sorting. |
 | [RankingsRequest](RankingsRequest.java) / [RankingsScreen](RankingsScreen.java) | Ranking request lifecycle, packed results, rating and win-rate sorted views. |
+| [Widget](Widget.java) / [FocusableWidget](FocusableWidget.java) / [SingleChildWidget](SingleChildWidget.java) / [WidgetGroup](WidgetGroup.java) | Widget geometry, focus, wrapper and intrusive-group contracts. |
+| [WidgetRenderer](WidgetRenderer.java) / [WidgetLayoutProvider](WidgetLayoutProvider.java) / [WidgetListener](WidgetListener.java) | Widget painting, layout metrics and listener contracts. |
 | [MovingBody](MovingBody.java) / [RectangleBody](RectangleBody.java) / [CircleBody](CircleBody.java) | Fixed8 body coordinates/velocities, rectangle/circle geometry, snapshots and checksums. |
 | [Paddle](Paddle.java) / [Ball](Ball.java) / [Brick](Brick.java) | Paddle size stages, balls and bricks. |
 | [IntrusiveNode](IntrusiveNode.java) / [NodeDeque](NodeDeque.java) | Intrusive ownership and deque traversal/transfer. |
@@ -203,5 +205,9 @@ Actual GameplayScreen constructors run with fixture audio queues, caller-owned c
 Network startup fixtures now enter actual handleGamePacket paths64/65 and instantiate GameplayScreen/MultiplayerMatch with fixture-ready background assets and audio. Wire fields are mode byte, player-count byte, signed local-player byte, zero-prefixed CP1252 names,32-bit seed, signed period byte and snapshot flag byte. Negative local IDs normalize to -2. The seed produces one seed word per board, five-pass level shuffle, background selector0..10 and five-pass available-character shuffle in that order. Selector0 uses a separate UI random generator to choose a background, with its variant draw accounted independently.
 
 Independent encodings and ISAAC/shuffle expectations check64 startup cases, including euro names, positive/negative local IDs, nonzero mode flags, repeating periods, character availability, both background-selection paths and exact cursor consumption with an unread sentinel. For pending snapshots, real packet79 dispatch loads every board with full extension bytes, checking count/readiness progression, score/tick/position and local input baseline after the last board. Screen request identity and opcode64-only draw/rematch captions are checked. These fixtures prove source dispatch and construction with controlled assets; live server transport, real resource loading, malformed/duplicate snapshots and rendered sustained gameplay remain unverified.
+
+The older widget hierarchy now names Widget, FocusableWidget, SingleChildWidget and WidgetGroup, plus renderer/layout/listener contracts and focus/action/pointer/hover callbacks. Fields name x,y,width,height, text/tooltip, mouse-over/press, renderer/listener, focusable/enabled/focused state and child ownership. Bounds setters retain the original height,x,y,guard,width argument order. containsPoint retains pointerY,parentY,parentX,guard,pointerX order. Resolved override families receive the same names automatically; broader layout-provider members and active-state meaning remain unresolved.
+
+Independent fixtures cover half-open parent-translated geometry with zero/negative sizes and int-wrap boundaries, retained relayout, preferred dimensions through provider callbacks, layer0-only painter dispatch and instance identity. Focus fixtures cover acquisition/notification, enabled/focusable gates, explicit clearing and disabled focused-state retention. Pointer fixtures check focus-before-press, hover/action/release ordering, parent-relative activation coordinates, release idempotence and outside rejection. Wrapper fixtures check child paint offsets and tooltip forwarding; group fixtures check primary ownership transfer and focus clearing. These use fixture painters/listeners; full rendered legacy controls, all container traversal and remaining provider/listener interfaces are unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

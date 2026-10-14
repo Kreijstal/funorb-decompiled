@@ -92,7 +92,7 @@ final class Paddle extends RectangleBody {
           }
           if (var3 != -1) {
             var4 = CircleBody.reportAbuseDialog.isMuteRequested(72) ? 1 : 0;
-            oc.writeAbuseReport(var3, param0, CircleBody.reportAbuseDialog.reportTargetId, 1, var4 != 0, CircleBody.reportAbuseDialog.getReportedName(107));
+            Widget.writeAbuseReport(var3, param0, CircleBody.reportAbuseDialog.reportTargetId, 1, var4 != 0, CircleBody.reportAbuseDialog.getReportedName(107));
           }
           CircleBody.reportAbuseDialog = null;
           cr.f((byte) -124);

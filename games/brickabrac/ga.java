@@ -59,7 +59,7 @@ final class ga extends IntrusiveNode {
         int var1Lifetime1;
         int var1Lifetime2;
         if (BackgroundScene.masterSoundGain <= 32) {
-          h.a(13894, 0);
+          SingleChildWidget.a(13894, 0);
           var1 = -2 % ((-60 - param0) / 34);
           return;
         }
@@ -67,7 +67,7 @@ final class ga extends IntrusiveNode {
         if (0 == var1Lifetime1) {
           var1Lifetime1 = 32;
         }
-        h.a(13894, BackgroundScene.masterSoundGain - var1Lifetime1);
+        SingleChildWidget.a(13894, BackgroundScene.masterSoundGain - var1Lifetime1);
         var1Lifetime2 = -2 % ((-60 - param0) / 34);
     }
 

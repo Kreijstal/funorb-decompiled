@@ -191,8 +191,8 @@ final class bq {
             }
             QuickChatPhraseRegistry.field_k = new String[var4];
             ArrayOperations.copy(CacheIoWorker.field_h, 0, QuickChatPhraseRegistry.field_k, 0, var4);
-            h.field_F = new String[-1 - var4 + var3_int];
-            ArrayOperations.copy(CacheIoWorker.field_h, 1 + var4, h.field_F, 0, -1 + (-var4 + var3_int));
+            SingleChildWidget.field_F = new String[-1 - var4 + var3_int];
+            ArrayOperations.copy(CacheIoWorker.field_h, 1 + var4, SingleChildWidget.field_F, 0, -1 + (-var4 + var3_int));
             var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -215,8 +215,8 @@ final class bq {
               stackIn_66_0 = QuickChatPhraseRegistry.field_k.length;
             }
             var5 = stackIn_66_0;
-            if (HuffmanCodec.field_h.length <= h.field_F.length) {
-              stackIn_69_0 = h.field_F.length;
+            if (HuffmanCodec.field_h.length <= SingleChildWidget.field_F.length) {
+              stackIn_69_0 = SingleChildWidget.field_F.length;
             } else {
               stackIn_69_0 = HuffmanCodec.field_h.length;
             }
@@ -286,7 +286,7 @@ final class bq {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = h.field_F;
+            var4_ref_String__Lifetime1 = SingleChildWidget.field_F;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = hm.a(false, var12, 0);

@@ -280,7 +280,7 @@ final class InstructionsScreen extends MenuScreen {
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -101, 45);
         AchievementMaskRequest.a(this.screenId, 19);
         if (this.pageIndex != 0) {
-          ob.field_D.setInlineSprites(h.field_C, nd.field_f);
+          ob.field_D.setInlineSprites(SingleChildWidget.field_C, nd.field_f);
         } else {
           ob.field_D.setInlineSprites(un.field_e, vj.field_f);
         }

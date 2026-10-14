@@ -51,7 +51,7 @@ final class GameUiController implements GameUiLifecycle {
         VolcanicBackground.g(0);
         qn.a(240, 0, 640, 0, -6532);
         bm.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
-        oc.a(1, ob.field_D);
+        Widget.a(1, ob.field_D);
         hk.h((byte) 55);
         hk.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         lp.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
@@ -159,11 +159,11 @@ final class GameUiController implements GameUiLifecycle {
         QuickChatPhraseDefinition.field_C = aj.a(13, true);
         wn.a(NameEntryPopup.field_Rb, wn.field_c, 0);
         bh.field_tb = new s(82);
-        bh.field_tb.a(tm.field_e, "basic", 125, ib.field_F, NameEntryPopup.field_Rb);
-        bh.field_tb.a(tm.field_e, "lobby", 126, ib.field_F, NameEntryPopup.field_Rb);
-        bh.field_tb.a(tm.field_e, "lobby", 124, ib.field_F, wn.field_c);
-        bh.field_tb.a(tm.field_e, "kartika13", 125, ib.field_F, NameEntryPopup.field_Rb);
-        bh.field_tb.a(tm.field_e, "basic", 126, ib.field_F, BackgroundScene.field_f);
+        bh.field_tb.a(tm.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        bh.field_tb.a(tm.field_e, "lobby", 126, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        bh.field_tb.a(tm.field_e, "lobby", 124, WidgetGroup.field_F, wn.field_c);
+        bh.field_tb.a(tm.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        bh.field_tb.a(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
         bh.field_tb.a(vh.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
         bh.field_tb.a(vh.field_P, "kartika13", 127, m.field_k, wn.field_c);
         bh.field_tb.a(FarmBackground.field_r, false, MovingBody.field_n, wl.field_Q);

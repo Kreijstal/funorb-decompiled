@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends d {
+final class bf extends FocusableWidget {
     static int[] viewFacePointTwoY;
     static RgbSprite field_L;
     static RgbSprite parisFarSprite;
@@ -35,39 +35,39 @@ final class bf extends d {
         }
     }
 
-    bf(String param0, uh param1, boolean param2) {
+    bf(String param0, WidgetListener param1, boolean param2) {
         this(param0, param1);
         try {
-          this.field_F = param2 ? true : false;
+          this.active = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private bf(String param0, uh param1) {
+    private bf(String param0, WidgetListener param1) {
         this(param0, bj.field_T.field_q, param1);
         try {
-          this.field_l = bj.field_T.field_o;
+          this.renderer = bj.field_T.field_o;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        if (param2 <= -8) {
-          this.field_F = !this.field_F ? true : false;
-          super.a(param0, param1, -69, param3);
+    final void dispatchAction(int pointerY, int button, int obfuscationGuard, int pointerX) {
+        if (obfuscationGuard <= -8) {
+          this.active = !this.active ? true : false;
+          super.dispatchAction(pointerY, button, -69, pointerX);
           return;
         }
         field_L = (RgbSprite) null;
-        this.field_F = !this.field_F ? true : false;
-        super.a(param0, param1, -69, param3);
+        this.active = !this.active ? true : false;
+        super.dispatchAction(pointerY, button, -69, pointerX);
     }
 
-    private bf(String param0, ub param1, uh param2) {
+    private bf(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_l = bj.field_T.field_o;
+          this.renderer = bj.field_T.field_o;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

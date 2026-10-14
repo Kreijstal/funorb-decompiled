@@ -9,7 +9,7 @@ abstract class fe extends bj {
     static UiComponent field_gb;
     static ResourceArchive field_jb;
     static String field_ib;
-    private oc field_eb;
+    private Widget field_eb;
     static QuickChatMenu field_kb;
     private int field_db;
     private int field_bb;
@@ -18,7 +18,7 @@ abstract class fe extends bj {
     private mi field_nb;
     private int field_lb;
 
-    void b(byte param0, oc param1) {
+    void b(byte param0, Widget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -32,7 +32,7 @@ abstract class fe extends bj {
               this.field_fb = 0;
             }
           } else {
-            this.a((byte) -116, this.field_lb, this.field_db + (12 + this.field_eb.field_s), this.field_eb.field_t + 12);
+            this.a((byte) -116, this.field_lb, this.field_db + (12 + this.field_eb.height), this.field_eb.width + 12);
             this.field_fb = 0;
           }
           if (param0 > 105) {
@@ -60,7 +60,7 @@ abstract class fe extends bj {
           return;
         }
         if (this.field_nb != NameEntryPopup.field_Xb) {
-          this.a(true, this.field_db + 12 + this.field_eb.field_s, 12 + this.field_eb.field_t);
+          this.a(true, this.field_db + 12 + this.field_eb.height, 12 + this.field_eb.width);
           this.a((byte) 56, this.field_eb);
         } else {
           this.field_nb = null;
@@ -79,8 +79,8 @@ abstract class fe extends bj {
         int fieldTemp$2 = 0;
         int var3 = BrickABrac.field_J ? 1 : 0;
         if (param0 != 0) {
-          oc var4 = (oc) null;
-          this.a(-125, (byte) 123, (oc) null, 'ﾈ');
+          Widget var4 = (Widget) null;
+          this.a(-125, (byte) 123, (Widget) null, 'ﾈ');
           if (this.field_nb == null) {
             return super.h(0);
           }
@@ -105,7 +105,7 @@ abstract class fe extends bj {
             return super.h(0);
           }
           this.field_nb = MouseInput.field_e;
-          this.a((byte) -116, this.field_lb, this.field_eb.field_s + (this.field_db + 12), 12 + this.field_eb.field_t);
+          this.a((byte) -116, this.field_lb, this.field_eb.height + (this.field_db + 12), 12 + this.field_eb.width);
           this.field_mb.field_K = 0;
           this.field_fb = 0;
           return super.h(0);
@@ -134,23 +134,23 @@ abstract class fe extends bj {
           return super.h(0);
         }
         this.field_nb = MouseInput.field_e;
-        this.a((byte) -116, this.field_lb, this.field_eb.field_s + (this.field_db + 12), 12 + this.field_eb.field_t);
+        this.a((byte) -116, this.field_lb, this.field_eb.height + (this.field_db + 12), 12 + this.field_eb.width);
         this.field_mb.field_K = 0;
         this.field_fb = 0;
         return super.h(0);
     }
 
-    private final void a(byte param0, oc param1) {
+    private final void a(byte param0, Widget param1) {
         if (null != this.field_mb) {
           this.field_mb.unlink((byte) 111);
         }
         if (param1 == null) {
           this.field_mb = new sk();
         } else {
-          param1.a(param1.field_s, 6, this.field_db + 6, (byte) -119, param1.field_t);
+          param1.setBounds(param1.height, 6, this.field_db + 6, (byte) -119, param1.width);
           this.field_mb = new sk(param1);
         }
-        this.a(this.field_mb, true);
+        this.addChild(this.field_mb, true);
         if (param0 != 56) {
           return;
         }
@@ -175,7 +175,7 @@ abstract class fe extends bj {
         }
     }
 
-    boolean a(int param0, byte param1, oc param2, char param3) {
+    boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -189,10 +189,10 @@ abstract class fe extends bj {
             return false;
           }
           if (98 == param0) {
-            this.field_mb.a(true, param2);
+            this.field_mb.tryFocus(true, param2);
           }
           if (param0 == 99) {
-            this.field_mb.a(true, param2);
+            this.field_mb.tryFocus(true, param2);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -220,8 +220,8 @@ abstract class fe extends bj {
         field_gb = null;
     }
 
-    fe(cp param0, oc param1, int param2, int param3, int param4) {
-        super(param0, 12 + param1.field_t, 12 + param2 + param1.field_s);
+    fe(cp param0, Widget param1, int param2, int param3, int param4) {
+        super(param0, 12 + param1.width, 12 + param2 + param1.height);
         try {
           this.field_lb = param4;
           this.field_db = param2;

@@ -262,14 +262,14 @@ final class n {
               if (ContextMenu.field_bc != null) {
                 if (null == qo.field_J) {
                   qo.field_J = new byte[RankingsRequest.gameSettingCount];
-                  h.field_D = new boolean[RankingsRequest.gameSettingCount];
+                  SingleChildWidget.field_D = new boolean[RankingsRequest.gameSettingCount];
                 }
                 MusicVoiceMixer.field_s = false;
                 MeshAttributeRecord.field_g = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (RankingsRequest.gameSettingCount > var13) {
-                  h.field_D[var13] = false;
+                  SingleChildWidget.field_D[var13] = false;
                   var13++;
                 }
                 ar.a(true, nl.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
@@ -290,7 +290,7 @@ final class n {
                     var9 = var11Lifetime1;
                   }
                   for (var10Lifetime1 = 0; var10Lifetime1 < RankingsRequest.gameSettingCount; var10Lifetime1++) {
-                    if (h.field_D[var10Lifetime1]) {
+                    if (SingleChildWidget.field_D[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + QuickChatPhraseRegistry.field_b[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;

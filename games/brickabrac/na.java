@@ -10,34 +10,34 @@ final class na extends ug {
     static String field_N;
     static NodeDeque pendingAchievementSubmissions;
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        super.a(param0, param1, param2, (byte) -119, param4);
-        int var6 = -130 + param4 >> 1;
+    final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
+        super.setBounds(height, x, y, (byte) -119, width);
+        int var6 = -130 + width >> 1;
         if (!this.field_P) {
-          this.field_R.a(param0, var6, 0, (byte) -119, 25);
-          this.field_M.a(param0, var6 + 45, 0, (byte) -119, 25);
-          this.field_O.a(param0, 90 + var6, 0, param3, 40);
+          this.field_R.setBounds(height, var6, 0, (byte) -119, 25);
+          this.field_M.setBounds(height, var6 + 45, 0, (byte) -119, 25);
+          this.field_O.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
           return;
         }
-        this.field_M.a(param0, var6, 0, (byte) -119, 25);
-        this.field_R.a(param0, 45 + var6, 0, (byte) -119, 25);
-        this.field_O.a(param0, 90 + var6, 0, param3, 40);
+        this.field_M.setBounds(height, var6, 0, (byte) -119, 25);
+        this.field_R.setBounds(height, 45 + var6, 0, (byte) -119, 25);
+        this.field_O.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
     }
 
-    final String d(int param0) {
-        String var2 = this.field_M.d(77);
+    final String getTooltip(int obfuscationGuard) {
+        String var2 = this.field_M.getTooltip(77);
         if (var2 != null) {
           return var2;
         }
-        if (param0 <= 6) {
+        if (obfuscationGuard <= 6) {
           na.j((byte) -82);
-          if (this.field_q) {
-            return this.field_z == null ? this.field_A : this.field_z;
+          if (this.mouseOver) {
+            return this.tooltip == null ? this.text : this.tooltip;
           }
           return null;
         }
-        if (this.field_q) {
-          return this.field_z == null ? this.field_A : this.field_z;
+        if (this.mouseOver) {
+          return this.tooltip == null ? this.text : this.tooltip;
         }
         return null;
     }
@@ -45,9 +45,9 @@ final class na extends ug {
     final void a(an param0, byte param1) {
         try {
           super.a(param0, param1);
-          this.field_R.field_i = (uh) ((Object) param0);
-          this.field_M.field_i = (uh) ((Object) param0);
-          this.field_O.field_i = (uh) ((Object) param0);
+          this.field_R.listener = (WidgetListener) ((Object) param0);
+          this.field_M.listener = (WidgetListener) ((Object) param0);
+          this.field_O.listener = (WidgetListener) ((Object) param0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -61,7 +61,7 @@ final class na extends ug {
           this.field_M = (vb) null;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_O.field_A);
+          stackIn_3_0 = Integer.parseInt(this.field_O.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,24 +108,24 @@ final class na extends ug {
         return new RgbSprite[]{var10, var11, var10, var9, (RgbSprite) (var14), var9, var12, var13, var12};
     }
 
-    private na(ub param0, boolean param1) {
-        super(0, 0, 0, 0, (ub) null);
+    private na(WidgetRenderer param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
-          this.field_R = (vb) ((Object) new sf("", (uh) null, 2));
-          this.field_M = (vb) ((Object) new sf("", (uh) null, 2));
-          this.field_O = (vb) ((Object) new sf("", (uh) null, 4));
-          this.field_O.field_l = param0;
-          this.field_M.field_l = param0;
-          this.field_R.field_l = param0;
+          this.field_R = (vb) ((Object) new sf("", (WidgetListener) null, 2));
+          this.field_M = (vb) ((Object) new sf("", (WidgetListener) null, 2));
+          this.field_O = (vb) ((Object) new sf("", (WidgetListener) null, 4));
+          this.field_O.renderer = param0;
+          this.field_M.renderer = param0;
+          this.field_R.renderer = param0;
           this.field_P = param1 ? true : false;
           if (!this.field_P) {
-            this.a(this.field_R, true);
-            this.a(this.field_M, true);
+            this.addChild(this.field_R, true);
+            this.addChild(this.field_M, true);
           } else {
-            this.a(this.field_M, true);
-            this.a(this.field_R, true);
+            this.addChild(this.field_M, true);
+            this.addChild(this.field_R, true);
           }
-          this.a(this.field_O, true);
+          this.addChild(this.field_O, true);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -152,31 +152,31 @@ final class na extends ug {
     }
 
     final boolean h(byte param0) {
-        if (null == this.field_R.field_A) {
+        if (null == this.field_R.text) {
           return true;
         }
-        if (0 == this.field_R.field_A.length()) {
+        if (0 == this.field_R.text.length()) {
           return true;
         }
-        if (this.field_M.field_A == null) {
+        if (this.field_M.text == null) {
           return true;
         }
-        if (this.field_M.field_A.length() == 0) {
+        if (this.field_M.text.length() == 0) {
           return true;
         }
         if (param0 != -124) {
           pendingAchievementSubmissions = (NodeDeque) null;
         }
-        if (this.field_O.field_A != null &&
-          this.field_O.field_A.length() != 0) {
+        if (this.field_O.text != null &&
+          this.field_O.text.length() != 0) {
           return false;
         }
         return true;
     }
 
-    private final void a(oc param0, String param1, byte param2, int param3, int param4) {
+    private final void a(Widget param0, String param1, byte param2, int param3, int param4) {
         try {
-          QuickChatMenu.field_Yb.drawCentered(param1, param3 + param0.field_o + (param0.field_t >> 1), param0.field_w + (param4 - 5), 16777215, -1);
+          QuickChatMenu.field_Yb.drawCentered(param1, param3 + param0.x + (param0.width >> 1), param0.y + (param4 - 5), 16777215, -1);
           int var6_int = -127 % ((-2 - param2) / 59);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
@@ -271,22 +271,22 @@ final class na extends ug {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, param3);
-        if (param2 == 0) {
-          param0 = param0 + this.field_w;
-          param1 = param1 + this.field_o;
-          this.a(this.field_R, ej.field_M, (byte) 127, param1, param0);
-          this.a(this.field_M, rl.field_f, (byte) 123, param1, param0);
-          this.a(this.field_O, kk.field_f, (byte) -86, param1, param0);
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        super.drawLayer(parentY, parentX, layer, obfuscationGuard);
+        if (layer == 0) {
+          parentY = parentY + this.y;
+          parentX = parentX + this.x;
+          this.a(this.field_R, ej.field_M, (byte) 127, parentX, parentY);
+          this.a(this.field_M, rl.field_f, (byte) 123, parentX, parentY);
+          this.a(this.field_O, kk.field_f, (byte) -86, parentX, parentY);
           return;
         }
     }
 
-    na(ub param0, boolean param1, int param2, int param3, int param4, int param5) {
+    na(WidgetRenderer param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param5, param2, param3, (byte) -119, param4);
+          this.setBounds(param5, param2, param3, (byte) -119, param4);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -769,7 +769,7 @@ final class na extends ug {
           this.field_P = true;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_R.field_A);
+          stackIn_3_0 = Integer.parseInt(this.field_R.text);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -786,7 +786,7 @@ final class na extends ug {
           if (param0 != -117) {
             field_N = (String) null;
           }
-          stackIn_3_0 = Integer.parseInt(this.field_M.field_A) - 1;
+          stackIn_3_0 = Integer.parseInt(this.field_M.text) - 1;
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

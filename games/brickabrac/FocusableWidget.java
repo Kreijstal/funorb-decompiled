@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-class d extends oc {
-    private boolean field_I;
+class FocusableWidget extends Widget {
+    private boolean focusable;
     static String field_C;
-    private boolean field_E;
+    private boolean focused;
     static String field_D;
-    boolean field_F;
+    boolean active;
     static String field_G;
     static int recentRenderRate;
-    boolean field_J;
+    boolean enabled;
 
     public static void g(int param0) {
         if (param0 > -22) {
@@ -22,45 +22,45 @@ class d extends oc {
         field_D = null;
     }
 
-    final void b(boolean param0) {
-        if (param0) {
-          oc var3 = (oc) null;
-          this.a((oc) null, (byte) -52, -45, 104);
-          if (!this.field_E) {
+    final void clearFocus(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
+          Widget var3 = (Widget) null;
+          this.updatePointer((Widget) null, (byte) -52, -45, 104);
+          if (!this.focused) {
             return;
           }
-          this.field_E = false;
-          if (this.field_i == null) {
+          this.focused = false;
+          if (this.listener == null) {
             return;
           }
-          if (!(this.field_i instanceof gm)) {
+          if (!(this.listener instanceof WidgetFocusListener)) {
             return;
           }
-          ((gm) (this.field_i)).a(this.field_E, (oc) (this), 19365);
+          ((WidgetFocusListener) (this.listener)).onFocusChanged(this.focused, (Widget) (this), 19365);
           return;
         }
-        if (!this.field_E) {
+        if (!this.focused) {
           return;
         }
-        this.field_E = false;
-        if (this.field_i == null) {
+        this.focused = false;
+        if (this.listener == null) {
           return;
         }
-        if (!(this.field_i instanceof gm)) {
+        if (!(this.listener instanceof WidgetFocusListener)) {
           return;
         }
-        ((gm) (this.field_i)).a(this.field_E, (oc) (this), 19365);
+        ((WidgetFocusListener) (this.listener)).onFocusChanged(this.focused, (Widget) (this), 19365);
     }
 
-    d(String param0, uh param1) {
+    FocusableWidget(String param0, WidgetListener param1) {
         this(param0, bj.field_T.field_q, param1);
     }
 
-    d(String param0, ub param1, uh param2) {
-        super(param0, param1, param2);
-        this.field_I = true;
-        this.field_E = false;
-        this.field_J = true;
+    FocusableWidget(String text, WidgetRenderer renderer, WidgetListener listener) {
+        super(text, renderer, listener);
+        this.focusable = true;
+        this.focused = false;
+        this.enabled = true;
     }
 
     final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
@@ -77,15 +77,15 @@ class d extends oc {
         try {
           if (this.a(param3, 1595637992, param0, param1)) {
             this.a(param1, param0, 0, param3);
-            if (this.field_F) {
+            if (this.active) {
               discarded$2 = param3.append(" active");
             }
-            if (!this.field_J) {
+            if (!this.enabled) {
               discarded$3 = param3.append(" disabled");
             }
           }
           if (param2 != 24) {
-            this.field_E = true;
+            this.focused = true;
           }
           stackIn_10_0 = (StringBuilder) (param3);
           return stackIn_10_0;
@@ -109,26 +109,26 @@ class d extends oc {
         }
     }
 
-    boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         RuntimeException var8 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_J &&
-            this.a(param5, param3, param2, param6 + 3, param1)) {
-            this.a(true, param0);
-            this.field_n = param4;
-            if (this.field_i != null) {
-              if (!(this.field_i instanceof ca)) {
+          if (this.enabled &&
+            this.containsPoint(pointerY, parentY, parentX, obfuscationGuard + 3, pointerX)) {
+            this.tryFocus(true, focusRoot);
+            this.pressedButton = button;
+            if (this.listener != null) {
+              if (!(this.listener instanceof WidgetPointerListener)) {
                 return true;
               }
-              ((ca) (this.field_i)).a(param2, param4, this, param5, param1, param3, -13469);
+              ((WidgetPointerListener) (this.listener)).onPointerPress(parentX, button, this, pointerY, pointerX, parentY, -13469);
             }
             return true;
           }
-          if (param6 == 0) {
+          if (obfuscationGuard == 0) {
             return false;
           }
           return true;
@@ -137,40 +137,40 @@ class d extends oc {
           var8 = decompiledCaughtException;
           stackIn_16_0 = var8;
           stackIn_16_1 = new StringBuilder().append("d.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    void a(int param0, int param1, int param2, int param3) {
-        if (this.field_i == null) {
-          if (param2 < -8) {
+    void dispatchAction(int pointerY, int button, int obfuscationGuard, int pointerX) {
+        if (this.listener == null) {
+          if (obfuscationGuard < -8) {
             return;
           }
-          this.f(-13);
+          this.isFocused(-13);
           return;
         }
-        if (!(this.field_i instanceof en)) {
-          if (param2 < -8) {
+        if (!(this.listener instanceof WidgetActionListener)) {
+          if (obfuscationGuard < -8) {
             return;
           }
-          this.f(-13);
+          this.isFocused(-13);
           return;
         }
-        ((en) (this.field_i)).a(param0, param1, (byte) -60, param3, this);
-        if (param2 < -8) {
+        ((WidgetActionListener) (this.listener)).onAction(pointerY, button, (byte) -60, pointerX, this);
+        if (obfuscationGuard < -8) {
           return;
         }
-        this.f(-13);
+        this.isFocused(-13);
     }
 
-    boolean a(boolean param0, oc param1) {
+    boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
-        oc stackIn_7_0 = null;
+        Widget stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         boolean stackIn_11_1 = false;
         RuntimeException stackIn_19_0 = null;
@@ -178,18 +178,18 @@ class d extends oc {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_J &&
-            this.field_I) {
-            stackIn_7_0 = (oc) (param1);
-            stackIn_8_1 = !(param0);
-            ((oc) (Object) stackIn_7_0).b(stackIn_8_1);
-            stackIn_11_1 = (param0);
-            this.field_E = stackIn_11_1;
-            if (null != this.field_i) {
-              if (!(this.field_i instanceof gm)) {
+          if (this.enabled &&
+            this.focusable) {
+            stackIn_7_0 = (Widget) (focusRoot);
+            stackIn_8_1 = !(obfuscationGuard);
+            ((Widget) (Object) stackIn_7_0).clearFocus(stackIn_8_1);
+            stackIn_11_1 = (obfuscationGuard);
+            this.focused = stackIn_11_1;
+            if (null != this.listener) {
+              if (!(this.listener instanceof WidgetFocusListener)) {
                 return true;
               }
-              ((gm) (this.field_i)).a(this.field_E, (oc) (this), 19365);
+              ((WidgetFocusListener) (this.listener)).onFocusChanged(this.focused, (Widget) (this), 19365);
             }
             return true;
           }
@@ -198,8 +198,8 @@ class d extends oc {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_19_0 = var3;
-          stackIn_19_1 = new StringBuilder().append("d.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("d.CA(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
@@ -208,23 +208,23 @@ class d extends oc {
         }
     }
 
-    void a(oc param0, byte param1, int param2, int param3) {
+    void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          super.a(param0, param1, param2, param3);
-          if (this.field_n != 0 &&
-            cb.heldButton != this.field_n) {
-            if (this.a(po.pointerY, param3, param2, param1 + 3, MusicPatch.pointerX) &&
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
+          if (this.pressedButton != 0 &&
+            cb.heldButton != this.pressedButton) {
+            if (this.containsPoint(po.pointerY, parentY, parentX, obfuscationGuard + 3, MusicPatch.pointerX) &&
               cb.heldButton == 0) {
-              this.a(po.pointerY - param3, this.field_n, -79, -param2 + MusicPatch.pointerX);
+              this.dispatchAction(po.pointerY - parentY, this.pressedButton, -79, -parentX + MusicPatch.pointerX);
             }
-            this.a(po.pointerY, MusicPatch.pointerX, param3, param0, 19223, param2);
+            this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, parentY, focusRoot, 19223, parentX);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "d.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "d.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
-    boolean a(int param0, byte param1, oc param2, char param3) {
+    boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -234,14 +234,14 @@ class d extends oc {
           if (param1 != 110) {
             return false;
           }
-          if (!this.f(-103)) {
+          if (!this.isFocused(-103)) {
             return false;
           }
           if (param0 != 84 &&
             param0 != 83) {
             return false;
           }
-          this.a(-1, 1, -18, -1);
+          this.dispatchAction(-1, 1, -18, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,35 +257,35 @@ class d extends oc {
         }
     }
 
-    final void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
+    final void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
         try {
-          if (null != this.field_i &&
-            this.field_i instanceof ca) {
-            ((ca) (this.field_i)).a((byte) 10, param2, param0, this, param5, param1);
+          if (null != this.listener &&
+            this.listener instanceof WidgetPointerListener) {
+            ((WidgetPointerListener) (this.listener)).onPointerRelease((byte) 10, parentY, pointerY, this, parentX, pointerX);
           }
-          if (param4 != 19223) {
-            this.f(87);
+          if (obfuscationGuard != 19223) {
+            this.isFocused(87);
           }
-          this.field_n = 0;
+          this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "d.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "d.GA(" + pointerY + ',' + pointerX + ',' + parentY + ',' + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ')');
         }
     }
 
-    final boolean f(int param0) {
-        if (param0 < -49) {
-          return this.field_E;
+    final boolean isFocused(int obfuscationGuard) {
+        if (obfuscationGuard < -49) {
+          return this.focused;
         }
-        oc var3 = (oc) null;
-        this.a((oc) null, -26, 22, -12, 8, -95, 39);
-        return this.field_E;
+        Widget var3 = (Widget) null;
+        this.handlePointerPress((Widget) null, -26, 22, -12, 8, -95, 39);
+        return this.focused;
     }
 
-    protected d() {
-        this.field_I = true;
-        this.field_E = false;
-        this.field_J = true;
-        this.field_l = bj.field_T.field_r;
+    protected FocusableWidget() {
+        this.focusable = true;
+        this.focused = false;
+        this.enabled = true;
+        this.renderer = bj.field_T.field_r;
     }
 
     static {

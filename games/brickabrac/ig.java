@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends ib implements ha, en {
-    private d field_L;
+final class ig extends WidgetGroup implements ha, WidgetActionListener {
+    private FocusableWidget field_L;
     private qf field_I;
     static long[] renderTimes;
     static int field_N;
@@ -13,8 +13,8 @@ final class ig extends ib implements ha, en {
 
     private final String h(int param0) {
         if (param0 != 0) {
-          d var3 = (d) null;
-          this.a(50, 62, (byte) 59, -10, (d) null);
+          FocusableWidget var3 = (FocusableWidget) null;
+          this.onAction(50, 62, (byte) 59, -10, (FocusableWidget) null);
         }
         return "</col></u>";
     }
@@ -95,27 +95,27 @@ final class ig extends ib implements ha, en {
         }
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param4 == this.field_L) {
+          if (widget == this.field_L) {
             ek.l(111);
             this.field_I.m(17);
           }
-          if (param2 > -22) {
-            this.field_L = (d) null;
+          if (obfuscationGuard > -22) {
+            this.field_L = (FocusableWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_7_0 = var6;
-          stackIn_7_1 = new StringBuilder().append("ig.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_7_1 = new StringBuilder().append("ig.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -125,7 +125,7 @@ final class ig extends ib implements ha, en {
     }
 
     ig(qf param0) {
-        super(0, 0, 288, 0, (ub) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         um var4 = null;
@@ -133,26 +133,26 @@ final class ig extends ib implements ha, en {
         int var6 = 0;
         try {
           this.field_I = param0;
-          this.field_L = new d(ri.field_L, (uh) null);
-          this.field_L.field_l = (ub) ((Object) new hi());
+          this.field_L = new FocusableWidget(ri.field_L, (WidgetListener) null);
+          this.field_L.renderer = (WidgetRenderer) ((Object) new hi());
           var7 = rd.a(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
           var3 = 20;
           var4 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
           this.field_O = new lg(var7, var4);
-          this.field_O.field_z = "";
+          this.field_O.tooltip = "";
           this.field_O.a(GameConnectionShell.field_z, 0, (byte) -98);
           this.field_O.a(GameConnectionShell.field_z, 1, (byte) -98);
-          this.field_O.field_i = (uh) (this);
-          this.field_O.field_t = -40 + this.field_t;
-          this.field_O.a(26, (byte) 46, -40 + this.field_t, var3);
-          var3 = var3 + (15 + this.field_O.field_s);
-          this.a(this.field_O, true);
+          this.field_O.listener = (WidgetListener) (this);
+          this.field_O.width = -40 + this.width;
+          this.field_O.a(26, (byte) 46, -40 + this.width, var3);
+          var3 = var3 + (15 + this.field_O.height);
+          this.addChild(this.field_O, true);
           var5 = 4;
           var6 = 200;
-          this.field_L.a(40, 300 - var6 >> 1, var3, (byte) -119, var6);
-          this.field_L.field_i = (uh) (this);
-          this.a(this.field_L, true);
-          this.a(var3 + 55 + var5, 0, 0, (byte) -119, 300);
+          this.field_L.setBounds(40, 300 - var6 >> 1, var3, (byte) -119, var6);
+          this.field_L.listener = (WidgetListener) (this);
+          this.addChild(this.field_L, true);
+          this.setBounds(var3 + 55 + var5, 0, 0, (byte) -119, 300);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -214,7 +214,7 @@ final class ig extends ib implements ha, en {
         }
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;

@@ -85,7 +85,7 @@ final class LevelList {
         ag.buttonLabels[32] = hk.field_L;
         ag.buttonLabels[25] = ck.field_i;
         ag.buttonLabels[24] = DesertBackground.field_r;
-        ag.buttonLabels[42] = oc.field_u;
+        ag.buttonLabels[42] = Widget.field_u;
         ag.buttonLabels[37] = LevelPackLoader.field_i;
         sl.field_A[7] = AppletGameShell.field_f;
         sl.field_A[8] = PauseMenuScreen.field_v;
@@ -95,11 +95,11 @@ final class LevelList {
         sl.field_A[10] = eh.field_d;
         ag.buttonLabels[18] = LevelCompleteScreen.field_E[1];
         ag.buttonLabels[26] = PauseMenuScreen.field_u;
-        ag.buttonLabels[22] = d.field_D;
+        ag.buttonLabels[22] = FocusableWidget.field_D;
         sl.field_A[13] = TimedSplashScreen.field_s;
         hm.field_b = new String[]{mi.field_a, qm.field_c, TabbedPane.field_Pb, s.field_a};
         sl.field_A[16] = MeshAttributeRecord.field_d;
-        qn.packNames = new String[]{vh.field_T, oc.field_u};
+        qn.packNames = new String[]{vh.field_T, Widget.field_u};
         eh.field_e = new String[]{ag.field_C, bh.field_ub, qo.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         sl.field_A[15] = MatchCompleteScreen.field_F;

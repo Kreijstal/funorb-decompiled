@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei implements ub {
+final class ei implements WidgetRenderer {
     private int field_l;
     static String field_g;
     private int field_h;
@@ -17,8 +17,8 @@ final class ei implements ub {
     private TextFont field_n;
     private int field_e;
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
-        oc stackIn_3_0 = null;
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
+        Widget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -30,28 +30,28 @@ final class ei implements ub {
         int var10 = 0;
         bf var11 = null;
         try {
-          if (param3 instanceof bf) {
-            stackIn_3_0 = (oc) (param3);
+          if (widget instanceof bf) {
+            stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
           var11 = (bf) (stackIn_3_0);
           if (var11 != null) {
-            param0 = param0 & var11.field_J;
+            obfuscationGuard = obfuscationGuard & var11.enabled;
           }
           var7 = 5592405;
-          if (param0) {
+          if (obfuscationGuard) {
             var7 = 16777215;
           }
-          Rasterizer2D.fillRectangle(param3.field_o + param2, param4 + param3.field_w, param3.field_t, param3.field_s, this.field_b);
-          var8 = this.field_m + param2 + param3.field_o;
-          var9 = this.field_h + param4 + param3.field_w;
+          Rasterizer2D.fillRectangle(widget.x + parentX, parentY + widget.y, widget.width, widget.height, this.field_b);
+          var8 = this.field_m + parentX + widget.x;
+          var9 = this.field_h + parentY + widget.y;
           Rasterizer2D.a(var8, var9, this.field_l, this.field_d, 5592405);
-          if (param1 != -20618) {
+          if (callbackGuard != -20618) {
             this.field_h = 116;
           }
           Rasterizer2D.fillRectangle(var8, var9, this.field_l, this.field_d, var7);
-          if (var11.field_F) {
+          if (var11.active) {
             Rasterizer2D.drawLine(var8, var9, this.field_l + var8, var9 + this.field_d, 1);
             Rasterizer2D.drawLine(var8 + this.field_l, var9, var8, var9 + this.field_d, 1);
           }
@@ -59,19 +59,19 @@ final class ei implements ub {
             return;
           }
           var10 = this.field_l + this.field_m + this.field_f;
-          this.field_n.a(param3.field_A, param2 + (param3.field_o + var10), this.field_c + (param3.field_w + param4), param3.field_t - (this.field_f + var10), param3.field_s - (this.field_f << 1), this.field_e, this.field_j, this.field_i, this.field_k, 0);
+          this.field_n.a(widget.text, parentX + (widget.x + var10), this.field_c + (widget.y + parentY), widget.width - (this.field_f + var10), widget.height - (this.field_f << 1), this.field_e, this.field_j, this.field_i, this.field_k, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_18_0 = var6;
-          stackIn_18_1 = new StringBuilder().append("ei.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_18_1 = new StringBuilder().append("ei.AA(").append(obfuscationGuard).append(',').append(callbackGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ final class ei implements ub {
             if (var1 != 1) {
               AppletGameShell.field_b = rd.a(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);
             } else {
-              AppletGameShell.field_b = ib.field_C;
+              AppletGameShell.field_b = WidgetGroup.field_C;
             }
             AppletGameShell.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) AppletGameShell.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
           }

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class cr extends oc {
+final class cr extends Widget {
     int field_L;
     boolean field_J;
     static NodeDeque field_N;
@@ -19,8 +19,8 @@ final class cr extends oc {
     private int field_H;
     private int field_E;
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
+        super.setBounds(height, x, y, obfuscationGuard, width);
         this.g(-1847795903);
     }
 
@@ -61,8 +61,8 @@ final class cr extends oc {
         int var8 = 0;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5_int = param0 + this.field_t;
-          MovingBody.a((byte) 107, var5_int - this.field_G.width, param0 + this.field_G.width, param1, param1 + this.field_s);
+          var5_int = param0 + this.width;
+          MovingBody.a((byte) 107, var5_int - this.field_G.width, param0 + this.field_G.width, param1, param1 + this.height);
           var6 = param0 - this.field_K;
           if (param3 > -56) {
             this.field_C = (RgbSprite) null;
@@ -82,7 +82,7 @@ final class cr extends oc {
           }
           if (Rasterizer2D.clipRight >= var5_int - this.field_G.width) {
             IndexedSpriteGeometry.pushSpriteRaster(-51, this.field_C);
-            for (var7 = this.field_t - this.field_G.width + this.field_K; var7 > 2 * this.field_H; var7 = var7 - this.field_H * 2) {
+            for (var7 = this.width - this.field_G.width + this.field_K; var7 > 2 * this.field_H; var7 = var7 - this.field_H * 2) {
             }
             param2.drawTransparent(-var7, 0);
             param2.drawTransparent(-var7 + 2 * this.field_H, 0);
@@ -108,7 +108,7 @@ final class cr extends oc {
 
     final void b(int param0, int param1, int param2) {
         if (param2 != 2) {
-          this.a(-106, -2, -16, (byte) 28, -96);
+          this.setBounds(-106, -2, -16, (byte) 28, -96);
         }
         this.field_M = (param0 & 16711422) >> 1;
         this.field_F = param0;
@@ -129,7 +129,7 @@ final class cr extends oc {
         this.field_P = new RgbSprite[]{this.a(this.field_E, (byte) -41, this.field_F), this.a(this.field_I, (byte) 107, this.field_M)};
         this.field_G = this.a(16711422);
         this.field_O = this.field_G.copyFlippedHorizontal();
-        this.field_C = new RgbSprite(this.field_s >> 1, this.field_s);
+        this.field_C = new RgbSprite(this.height >> 1, this.height);
         if (param0 != -1847795903) {
           this.field_F = 58;
         }
@@ -147,14 +147,14 @@ final class cr extends oc {
         bm.contextActions = null;
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (param1 != 0) {
+          if (obfuscationGuard != 0) {
             return;
           }
           if (this.field_J) {
@@ -170,12 +170,12 @@ final class cr extends oc {
           var5 = decompiledCaughtException;
           stackIn_9_0 = var5;
           stackIn_9_1 = new StringBuilder().append("cr.WA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -185,15 +185,15 @@ final class cr extends oc {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = BrickABrac.field_J ? 1 : 0;
-        int var2 = this.field_s >> 1;
+        int var2 = this.height >> 1;
         if (param0 != 16711422) {
           return (RgbSprite) null;
         }
-        RgbSprite var3 = new RgbSprite(var2, this.field_s);
+        RgbSprite var3 = new RgbSprite(var2, this.height);
         IndexedSpriteGeometry.pushSpriteRaster(-67, var3);
-        for (var4 = 0; this.field_s > var4; var4++) {
+        for (var4 = 0; this.height > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_s - var4));
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));
             var8 = 1;
             if (1.0 > var6) {
               var6 = Math.sqrt(-var6 + 1.0);
@@ -216,13 +216,13 @@ final class cr extends oc {
         int var13 = 0;
         int var14 = BrickABrac.field_J ? 1 : 0;
         int var4 = 93 % ((11 - param1) / 37);
-        RgbSprite var5 = new RgbSprite(2 * this.field_H, this.field_s);
+        RgbSprite var5 = new RgbSprite(2 * this.field_H, this.height);
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
         IndexedSpriteGeometry.pushSpriteRaster(-102, var5);
-        int var6 = this.field_s >> 1;
-        for (var7 = 0; var7 < this.field_s; var7++) {
+        int var6 = this.height >> 1;
+        for (var7 = 0; var7 < this.height; var7++) {
           var8 = (var7 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);
           var9 = param2 & 16711935;
           var10 = param2 & 65280;
@@ -294,22 +294,22 @@ final class cr extends oc {
         this.field_I = param8;
         this.field_F = param5;
         this.field_E = param6;
-        this.a(param3, param0, param1, (byte) -119, param2);
+        this.setBounds(param3, param0, param1, (byte) -119, param2);
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        if (param2 != 0) {
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        if (layer != 0) {
           return;
         }
-        int var5 = this.field_o + param1;
-        int var6 = param0 + this.field_w;
+        int var5 = this.x + parentX;
+        int var6 = parentY + this.y;
         this.a(var5, var6, this.field_P[0], -63);
         if (65536 > this.field_L) {
-          MovingBody.a((byte) 118, this.field_t + var5, var5 + (this.field_L * this.field_t >> 16), var6, this.field_s + var6);
-          this.a(var5, var6, this.field_P[1], param3 ^ 92);
+          MovingBody.a((byte) 118, this.width + var5, var5 + (this.field_L * this.width >> 16), var6, this.height + var6);
+          this.a(var5, var6, this.field_P[1], obfuscationGuard ^ 92);
           sc.popRaster(-102);
         }
-        if (param3 != -11) {
+        if (obfuscationGuard != -11) {
           this.field_J = true;
         }
     }

@@ -183,7 +183,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
         int var5 = 0;
-        int var4 = ib.a(pl.pendingAchievementMask, -1) ? 1 : 0;
+        int var4 = WidgetGroup.a(pl.pendingAchievementMask, -1) ? 1 : 0;
         if (obfuscationGuard >= 96) {
           var5 = null != VerticalScrollbar.field_Ub ? 1 : 0;
           this.promptText = PauseMenuScreen.field_w + " " + wj.a(-1, rd.a(AchievementBrowserScreen.buildSavePrompt(var4 != 0, var5 != 0, false, 126), new String[]{DesertBackground.field_r}, (byte) 103), '#', "<br><br>");

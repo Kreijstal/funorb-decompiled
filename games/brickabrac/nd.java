@@ -77,8 +77,8 @@ final class nd {
             return false;
           }
           if (obfuscationGuard) {
-            var4 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
-            var5 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
+            var4 = WidgetGroup.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+            var5 = WidgetGroup.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
             if (var5 > var4) {
               return true;
             }
@@ -88,8 +88,8 @@ final class nd {
             return !(leftIndex <= rightIndex);
           }
           field_c = -96;
-          var4Lifetime3 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
-          var5Lifetime3 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
+          var4Lifetime3 = WidgetGroup.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+          var5Lifetime3 = WidgetGroup.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
           if (var5Lifetime3 > var4Lifetime3) {
             return true;
           }
@@ -111,8 +111,8 @@ final class nd {
           return false;
         }
         if (obfuscationGuard) {
-          var4Lifetime1 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
-          var5Lifetime1 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
+          var4Lifetime1 = WidgetGroup.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+          var5Lifetime1 = WidgetGroup.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -122,8 +122,8 @@ final class nd {
           return !(leftIndex <= rightIndex);
         }
         field_c = -96;
-        var4Lifetime2 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
-        var5Lifetime2 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
+        var4Lifetime2 = WidgetGroup.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+        var5Lifetime2 = WidgetGroup.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
         if (var5Lifetime2 > var4Lifetime2) {
           return true;
         }

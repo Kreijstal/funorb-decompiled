@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class um implements ub, qe {
+class um implements WidgetRenderer, WidgetLayoutProvider {
     static int[] quarterSineQ16;
     int field_q;
     static int[] underwaterBackgroundColors;
@@ -172,9 +172,9 @@ class um implements ub, qe {
         }
     }
 
-    public final int a(oc param0, byte param1, int param2) {
+    public final int a(Widget param0, byte param1, int param2) {
         RuntimeException var4 = null;
-        oc var5 = null;
+        Widget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -182,8 +182,8 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 40) {
-            var5 = (oc) null;
-            this.a((oc) null, (byte) -5, -108);
+            var5 = (Widget) null;
+            this.a((Widget) null, (byte) -5, -108);
           }
           stackIn_3_0 = this.a(0, param0, 65263, param2);
           return stackIn_3_0;
@@ -205,7 +205,7 @@ class um implements ub, qe {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final void a(int param0, int param1, int param2, oc param3) {
+    private final void a(int param0, int param1, int param2, Widget param3) {
         try {
           int var5_int = 64 / ((param0 - 64) / 58);
           this.a(0, 0, this.field_g, param2, this.field_r, (byte) -56, param1, param3);
@@ -214,7 +214,7 @@ class um implements ub, qe {
         }
     }
 
-    public final int a(int param0, oc param1) {
+    public final int a(int param0, Widget param1) {
         RuntimeException var3 = null;
         ResourceArchive var4 = null;
         int stackIn_3_0 = 0;
@@ -227,7 +227,7 @@ class um implements ub, qe {
             var4 = (ResourceArchive) null;
             um.a((String) null, (String) null, -49, (ResourceArchive) null);
           }
-          stackIn_3_0 = -this.field_d + (param1.field_t - this.field_i);
+          stackIn_3_0 = -this.field_d + (param1.width - this.field_i);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -243,7 +243,7 @@ class um implements ub, qe {
         }
     }
 
-    public final void a(oc param0, int param1, int param2, int param3, byte param4) {
+    public final void a(Widget param0, int param1, int param2, int param3, byte param4) {
         int var7 = 0;
         ml var8 = null;
         int var9 = 0;
@@ -262,7 +262,7 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param0.f(-83)) {
+          if (param0.isFocused(-83)) {
             var13 = this.c(param0, 121);
             var14 = var13;
             var7 = var14.a(param2, true);
@@ -279,7 +279,7 @@ class um implements ub, qe {
               stackIn_5_3 = var13.field_c[1 + var7].field_d;
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-            MovingBody.a((byte) 125, param0.field_t + param1 + param0.field_o, param0.field_o + param1, param3 + param0.field_w, param0.field_s + param3 + param0.field_w);
+            MovingBody.a((byte) 125, param0.width + param1 + param0.x, param0.x + param1, param3 + param0.y, param0.height + param3 + param0.y);
             bj.field_T.a(this.field_s, var10, var11, 91, var12, var10);
             sc.popRaster(-94);
           }
@@ -301,9 +301,9 @@ class um implements ub, qe {
         }
     }
 
-    private final int a(int param0, oc param1, int param2, int param3) {
+    private final int a(int param0, Widget param1, int param2, int param3) {
         RuntimeException var5 = null;
-        oc var6 = null;
+        Widget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -311,10 +311,10 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 65263) {
-            var6 = (oc) null;
-            this.a(41, (oc) null);
+            var6 = (Widget) null;
+            this.a(41, (Widget) null);
           }
-          stackIn_3_0 = param0 + param1.field_r + param3 + (param1.field_o + this.field_d);
+          stackIn_3_0 = param0 + param1.field_r + param3 + (param1.x + this.field_d);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -330,7 +330,7 @@ class um implements ub, qe {
         }
     }
 
-    public final ep c(oc param0, int param1) {
+    public final ep c(Widget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ep stackIn_6_0 = null;
@@ -364,7 +364,7 @@ class um implements ub, qe {
         }
     }
 
-    public final int a(oc param0, int param1, boolean param2, int param3, int param4, int param5) {
+    public final int a(Widget param0, int param1, boolean param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -425,7 +425,7 @@ class um implements ub, qe {
         return vd.ensureGamePacketBytes(20, ga.incomingPacketLength);
     }
 
-    public final int b(oc param0, int param1) {
+    public final int getPreferredWidth(Widget widget, int obfuscationGuard) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -434,9 +434,9 @@ class um implements ub, qe {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.c(param0, -118);
-          if (param1 > 24) {
-            stackIn_4_0 = param0.field_j.b(31458) - (-this.field_d - this.field_i);
+          this.c(widget, -118);
+          if (obfuscationGuard > 24) {
+            stackIn_4_0 = widget.field_j.b(31458) - (-this.field_d - this.field_i);
             return stackIn_4_0;
           }
           stackIn_2_0 = 74;
@@ -446,18 +446,18 @@ class um implements ub, qe {
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("um.J(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    private final int a(byte param0, int param1, int param2, oc param3) {
+    private final int a(byte param0, int param1, int param2, Widget param3) {
         RuntimeException var5 = null;
-        oc var6 = null;
+        Widget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -465,10 +465,10 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 103) {
-            var6 = (oc) null;
-            this.a((byte) -127, (oc) null);
+            var6 = (Widget) null;
+            this.a((byte) -127, (Widget) null);
           }
-          stackIn_3_0 = param3.field_B + param1 - (-param3.field_w - this.field_q) + param2;
+          stackIn_3_0 = param3.field_B + param1 - (-param3.y - this.field_q) + param2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -554,7 +554,7 @@ class um implements ub, qe {
         }
     }
 
-    private final int b(int param0, oc param1) {
+    private final int b(int param0, Widget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -565,7 +565,7 @@ class um implements ub, qe {
           if (param0 != 16265) {
             quarterSineQ16 = (int[]) null;
           }
-          stackIn_3_0 = -this.field_a + (param1.field_s - this.field_q);
+          stackIn_3_0 = -this.field_a + (param1.height - this.field_q);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -581,21 +581,21 @@ class um implements ub, qe {
         }
     }
 
-    public void a(boolean param0, int param1, int param2, oc param3, int param4) {
+    public void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
         if (null == this.field_k) {
           return;
         }
         try {
-          this.a(-94, param2, param4, param3);
-          if (param1 != -20618) {
+          this.a(-94, parentX, parentY, widget);
+          if (callbackGuard != -20618) {
             quarterSineQ16 = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.AA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "um.AA(" + obfuscationGuard + ',' + callbackGuard + ',' + parentX + ',' + (widget != null ? "{...}" : "null") + ',' + parentY + ')');
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, oc param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, Widget param5) {
         int var12 = 0;
         int stackIn_16_0 = 0;
         int stackIn_21_0 = 0;
@@ -622,7 +622,7 @@ class um implements ub, qe {
           if (param0 != -15964) {
             return;
           }
-          if (param5.f(-76)) {
+          if (param5.isFocused(-76)) {
             var17 = this.c(param5, 106);
             var18 = var17;
             if (param3 < param4) {
@@ -634,7 +634,7 @@ class um implements ub, qe {
             }
             var10 = var18.a(var8, true);
             var11 = var18.a(var9, true);
-            MovingBody.a((byte) 127, param5.field_o + param2 + param5.field_t, param2 + param5.field_o, param5.field_w + param1, param5.field_s + (param5.field_w + param1));
+            MovingBody.a((byte) 127, param5.x + param2 + param5.width, param2 + param5.x, param5.y + param1, param5.height + (param5.y + param1));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_c[var12];
               if (var10 != var12) {
@@ -653,7 +653,7 @@ class um implements ub, qe {
                 }
               }
               var15 = stackIn_21_0;
-              bj.field_T.a(var13.field_d + this.field_q + (param5.field_w + (param1 + param5.field_B)), this.field_c >>> 24, this.field_c, this.a(var14, param5, 65263, param2), var13.field_a, (byte) 55, var15 - var14);
+              bj.field_T.a(var13.field_d + this.field_q + (param5.y + (param1 + param5.field_B)), this.field_c >>> 24, this.field_c, this.a(var14, param5, 65263, param2), var13.field_a, (byte) 55, var15 - var14);
             }
             sc.popRaster(-98);
             return;
@@ -673,7 +673,7 @@ class um implements ub, qe {
         }
     }
 
-    private final void a(byte param0, oc param1) {
+    private final void a(byte param0, Widget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -684,7 +684,7 @@ class um implements ub, qe {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        oc var8 = null;
+        Widget var8 = null;
         int var6Lifetime1;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -694,8 +694,8 @@ class um implements ub, qe {
           var3_int = this.a(61823, param1);
           var4 = this.b(16265, param1);
           if (param0 != 6) {
-            var8 = (oc) null;
-            this.a((oc) null, (byte) 6, -90);
+            var8 = (Widget) null;
+            this.a((Widget) null, (byte) 6, -90);
           }
           var6 = this.field_m;
           if (var6 != 0) {
@@ -1315,7 +1315,7 @@ class um implements ub, qe {
         }
     }
 
-    String a(oc param0, boolean param1) {
+    String a(Widget param0, boolean param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -1325,7 +1325,7 @@ class um implements ub, qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            stackIn_4_0 = param0.field_A;
+            stackIn_4_0 = param0.text;
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -1344,7 +1344,7 @@ class um implements ub, qe {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, oc param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, Widget param7) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -1358,7 +1358,7 @@ class um implements ub, qe {
         int var12Lifetime1;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          MovingBody.a((byte) 81, param7.field_t + param7.field_o + param6, param6 + param7.field_o, param7.field_w + param3, param3 + param7.field_w + param7.field_s);
+          MovingBody.a((byte) 81, param7.width + param7.x + param6, param6 + param7.x, param7.y + param3, param3 + param7.y + param7.height);
           if (param5 >= -45) {
             return;
           }
@@ -1413,7 +1413,7 @@ class um implements ub, qe {
         }
     }
 
-    public final int a(int param0, byte param1, oc param2) {
+    public final int a(int param0, byte param1, Widget param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -1447,7 +1447,7 @@ class um implements ub, qe {
         return this.field_k.descent + this.field_k.ascent;
     }
 
-    public final int a(oc param0, int param1) {
+    public final int getPreferredHeight(Widget widget, int obfuscationGuard) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -1456,9 +1456,9 @@ class um implements ub, qe {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.c(param0, 109);
-          if (param1 == 46695) {
-            stackIn_4_0 = param0.field_j.a(param1 ^ 46695) + this.field_q + this.field_a;
+          this.c(widget, 109);
+          if (obfuscationGuard == 46695) {
+            stackIn_4_0 = widget.field_j.a(obfuscationGuard ^ 46695) + this.field_q + this.field_a;
             return stackIn_4_0;
           }
           stackIn_2_0 = 99;
@@ -1468,12 +1468,12 @@ class um implements ub, qe {
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
           stackIn_7_1 = new StringBuilder().append("um.G(");
-          if (param0 == null) {
+          if (widget == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

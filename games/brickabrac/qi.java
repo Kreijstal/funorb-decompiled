@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends d {
+final class qi extends FocusableWidget {
     private int field_P;
     static String field_N;
     int field_M;
@@ -203,7 +203,7 @@ final class qi extends d {
         }
     }
 
-    final boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         int var12 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -218,11 +218,11 @@ final class qi extends d {
         int var14 = 0;
         var14 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6 + param6)) {
+          if (!super.handlePointerPress(focusRoot, pointerX, parentX, parentY, button, pointerY, obfuscationGuard + obfuscationGuard)) {
             return false;
           }
-          var8_int = -this.field_L + (-param2 + param1);
-          var9 = -(this.field_L * 2) + this.field_t;
+          var8_int = -this.field_L + (-parentX + pointerX);
+          var9 = -(this.field_L * 2) + this.width;
           if (var9 < var8_int) {
             var8_int = var9;
           }
@@ -230,10 +230,10 @@ final class qi extends d {
             var8_int = 0;
           }
           var8_int = this.field_P * var8_int / var9;
-          if (param4 == 1) {
+          if (button == 1) {
             this.field_O.a(false, var8_int);
           } else {
-            if (param4 == 2) {
+            if (button == 2) {
               var10 = 2147483647;
               var11 = -1;
               for (var12 = 0; this.field_O.b(true) > var12; var12++) {
@@ -256,12 +256,12 @@ final class qi extends d {
           var8 = decompiledCaughtException;
           stackIn_24_0 = var8;
           stackIn_24_1 = new StringBuilder().append("qi.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

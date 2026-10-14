@@ -67,7 +67,7 @@ final class ar {
                     var13_int = var19[var12];
                     if (var13_int != -1) {
                       if (param4 > var13_int) {
-                        h.field_D[var13_int] = true;
+                        SingleChildWidget.field_D[var13_int] = true;
                       }
                     } else {
                       MusicVoiceMixer.field_s = true;

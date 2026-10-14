@@ -195,7 +195,7 @@ final class pl {
             pl.a(-94);
           }
           if (!param2) {
-            stackIn_6_0 = oc.field_m.measureText(param1);
+            stackIn_6_0 = Widget.field_m.measureText(param1);
             return stackIn_6_0;
           }
           stackIn_4_0 = PowerUpWarning.field_r.measureText(param1);

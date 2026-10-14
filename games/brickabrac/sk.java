@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends h {
+final class sk extends SingleChildWidget {
     static String field_G;
     static RgbSprite[] constructionCentreSprites;
     static int field_I;
@@ -9,7 +9,7 @@ final class sk extends h {
     static int pendingMusicLoads;
 
     public sk() {
-        super(0, 0, 0, 0, (ub) null, (uh) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (WidgetListener) null);
         this.field_K = 256;
     }
 
@@ -151,25 +151,25 @@ final class sk extends h {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        if (param2 != 0) {
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        if (layer != 0) {
           return;
         }
-        if (this.field_E == null) {
+        if (this.child == null) {
           return;
         }
         if (0 == this.field_K) {
           return;
         }
         if (256 == this.field_K) {
-          this.field_E.a(param0 + this.field_w, param1 + this.field_o, param2, (byte) -11);
+          this.child.drawLayer(parentY + this.y, parentX + this.x, layer, (byte) -11);
           return;
         }
-        RgbSprite var6 = new RgbSprite(this.field_E.field_t, this.field_E.field_s);
+        RgbSprite var6 = new RgbSprite(this.child.width, this.child.height);
         IndexedSpriteGeometry.pushSpriteRaster(-113, var6);
-        this.field_E.a(0, 0, param2, param3);
-        sc.popRaster(param3 ^ 119);
-        var6.b(param1 + this.field_o, param0 + this.field_w, this.field_K);
+        this.child.drawLayer(0, 0, layer, obfuscationGuard);
+        sc.popRaster(obfuscationGuard ^ 119);
+        var6.b(parentX + this.x, parentY + this.y, this.field_K);
     }
 
     public static void a(int param0) {
@@ -210,12 +210,12 @@ final class sk extends h {
         }
     }
 
-    sk(oc param0) {
-        super(param0.field_o, param0.field_w, param0.field_t, param0.field_s, (ub) null, (uh) null);
+    sk(Widget param0) {
+        super(param0.x, param0.y, param0.width, param0.height, (WidgetRenderer) null, (WidgetListener) null);
         try {
-          param0.a(this.field_s, 0, 0, (byte) -119, this.field_t);
+          param0.setBounds(this.height, 0, 0, (byte) -119, this.width);
           this.field_K = 256;
-          this.field_E = param0;
+          this.child = param0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

@@ -131,7 +131,7 @@ public final class BrickABrac extends InteractiveGameClient {
         this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
         hi.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         nk.field_c = new RgbSprite(640, 480);
-        oc.a(lp.field_ub, (byte) 60, CacheIoRequest.field_D);
+        Widget.a(lp.field_ub, (byte) 60, CacheIoRequest.field_D);
         this.registerUiLifecycle(3160, new GameUiController());
         ReportAbuseDialog.a(ch.incomingPacketLengths, 1);
     }
@@ -463,7 +463,7 @@ public final class BrickABrac extends InteractiveGameClient {
           return;
         }
         if (lp.currentScreen.screenId == 9 &&
-          !ib.a(pl.pendingAchievementMask, -1)) {
+          !WidgetGroup.a(pl.pendingAchievementMask, -1)) {
           ng.requestScreen(false, 69, 5);
         } else {
           if (sl.field_z != 2147483647) {
@@ -763,16 +763,16 @@ public final class BrickABrac extends InteractiveGameClient {
         an.c((byte) -93);
         na.k((byte) 84);
         ag.c(false);
-        d.g(-66);
-        oc.c(-14711);
+        FocusableWidget.g(-66);
+        Widget.c(-14711);
         ep.a(obfuscationGuard);
         QuickChatHelpDialog.d((byte) 98);
         jl.a(31186);
         bj.i(111);
         jc.a((byte) -17);
-        ib.f((byte) -67);
+        WidgetGroup.f((byte) -67);
         NodeDequeCursor.c(117);
-        h.f((byte) -102);
+        SingleChildWidget.f((byte) -102);
         qm.a((byte) -120);
         pl.a(0);
         DelegatingCanvas.a(!obfuscationGuard ? true : false);

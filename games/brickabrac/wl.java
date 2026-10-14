@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wl extends d {
+final class wl extends FocusableWidget {
     private int field_P;
     private ia field_M;
     static String field_L;
@@ -11,7 +11,7 @@ final class wl extends d {
     static ResourceArchive field_K;
     static String field_Q;
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         int var5;
         int var6;
         qh var8;
@@ -22,12 +22,12 @@ final class wl extends d {
         RgbSprite var13;
         RgbSprite var14;
         var11 = BrickABrac.field_J ? 1 : 0;
-        super.a(param0, param1, param2, param3);
-        if (param2 != 0) {
+        super.drawLayer(parentY, parentX, layer, obfuscationGuard);
+        if (layer != 0) {
           return;
         }
-        var5 = param1 + (this.field_o + (this.field_t >> 1));
-        var6 = (this.field_s >> 1) + (this.field_w + param0);
+        var5 = parentX + (this.x + (this.width >> 1));
+        var6 = (this.height >> 1) + (this.y + parentY);
         var8 = this.field_M.b((byte) -31);
         if (var8 != m.field_c &&
           SaveResultsPromptScreen.field_z != var8) {
@@ -57,23 +57,23 @@ final class wl extends d {
         }
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
           this.field_P = this.field_P + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wl.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wl.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
-    final boolean a(boolean param0, oc param1) {
+    final boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             wl.handleRankingsResponse(false);
           }
           return false;
@@ -81,8 +81,8 @@ final class wl extends d {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("wl.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_6_1 = new StringBuilder().append("wl.CA(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
@@ -166,9 +166,9 @@ final class wl extends d {
               statisticsBySort[0][4 * ratingOutputIndex] = ec.rankingRatings[ratingSourceIndex];
               statisticsBySort[0][ratingOutputIndex * 4 + 1] = RankingsScreen.rankingWins[ratingSourceIndex];
               statisticsBySort[0][2 + ratingOutputIndex * 4] = ObjectHistoryBuffer.rankingDraws[ratingSourceIndex];
-              statisticsBySort[0][4 * ratingOutputIndex + 3] = ib.rankingLosses[ratingSourceIndex];
+              statisticsBySort[0][4 * ratingOutputIndex + 3] = WidgetGroup.rankingLosses[ratingSourceIndex];
               if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.receivedRankingNames[ratingSourceIndex], -40) &&
-                0 == ObjectHistoryBuffer.rankingDraws[ratingSourceIndex] + RankingsScreen.rankingWins[ratingSourceIndex] + ib.rankingLosses[ratingSourceIndex]) {
+                0 == ObjectHistoryBuffer.rankingDraws[ratingSourceIndex] + RankingsScreen.rankingWins[ratingSourceIndex] + WidgetGroup.rankingLosses[ratingSourceIndex]) {
                 namesBySort[0][ratingOutputIndex] = null;
                 ratingOutputIndex--;
               }
@@ -184,9 +184,9 @@ final class wl extends d {
               statisticsBySort[1][winRateOutputIndex * 4] = ec.rankingRatings[winRateSourceIndex];
               statisticsBySort[1][1 + winRateOutputIndex * 4] = RankingsScreen.rankingWins[winRateSourceIndex];
               statisticsBySort[1][2 + 4 * winRateOutputIndex] = ObjectHistoryBuffer.rankingDraws[winRateSourceIndex];
-              statisticsBySort[1][winRateOutputIndex * 4 + 3] = ib.rankingLosses[winRateSourceIndex];
+              statisticsBySort[1][winRateOutputIndex * 4 + 3] = WidgetGroup.rankingLosses[winRateSourceIndex];
               if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.receivedRankingNames[winRateSourceIndex], -31) &&
-                RankingsScreen.rankingWins[winRateSourceIndex] + ObjectHistoryBuffer.rankingDraws[winRateSourceIndex] + ib.rankingLosses[winRateSourceIndex] == 0) {
+                RankingsScreen.rankingWins[winRateSourceIndex] + ObjectHistoryBuffer.rankingDraws[winRateSourceIndex] + WidgetGroup.rankingLosses[winRateSourceIndex] == 0) {
                 namesBySort[1][winRateOutputIndex] = null;
                 winRateOutputIndex--;
               }
@@ -327,7 +327,7 @@ final class wl extends d {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                vd.ensureGamePacketBytes(20, oc.d((byte) -59));
+                vd.ensureGamePacketBytes(20, Widget.d((byte) -59));
                 AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, jl.incomingPackets));
                 jl.incomingPackets.position = 0;
               } else {
@@ -480,11 +480,11 @@ final class wl extends d {
         }
     }
 
-    final String d(int param0) {
-        if (param0 <= 6) {
+    final String getTooltip(int obfuscationGuard) {
+        if (obfuscationGuard <= 6) {
           field_K = (ResourceArchive) null;
         }
-        if (this.field_q) {
+        if (this.mouseOver) {
           return this.field_M.a(-87);
         }
         return null;

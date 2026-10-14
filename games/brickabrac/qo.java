@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qo extends ib implements vf, en {
+final class qo extends WidgetGroup implements vf, WidgetActionListener {
     static boolean field_I;
     static byte[] field_J;
     static String field_H;
     static int field_N;
     static String field_P;
-    private d field_K;
+    private FocusableWidget field_K;
     private sf field_L;
-    private d field_Q;
+    private FocusableWidget field_Q;
     static String[] field_M;
     ri field_R;
     static int pressY;
 
-    private final int a(int param0, String param1, oc param2, String param3, int param4, int param5) {
+    private final int a(int param0, String param1, Widget param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -102,7 +102,7 @@ final class qo extends ib implements vf, en {
         }
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -137,7 +137,7 @@ final class qo extends ib implements vf, en {
         }
     }
 
-    private final int a(String param0, int param1, int param2, oc param3, int param4, String param5, boolean param6) {
+    private final int a(String param0, int param1, int param2, Widget param3, int param4, String param5, boolean param6) {
         RuntimeException var8 = null;
         nf var9 = null;
         ma var10 = null;
@@ -156,11 +156,11 @@ final class qo extends ib implements vf, en {
           var10 = new ma(20, param2, param1 + 120, 25, param3, param6, 120, 3, ArchiveNetworkClient.field_u, 16777215, param0);
           stackIn_2_1 = var10;
           stackIn_3_2 = !(param6);
-          this.a(stackIn_2_1, stackIn_3_2);
-          var9 = new nf(((je) ((Object) param3)).a(-11011), param5, 126, param2 + var10.field_s, 25 + param1, param4);
-          var9.field_i = (uh) (this);
-          this.a(var9, true);
-          stackIn_4_0 = var9.field_s + var10.field_s;
+          this.addChild(stackIn_2_1, stackIn_3_2);
+          var9 = new nf(((je) ((Object) param3)).a(-11011), param5, 126, param2 + var10.height, 25 + param1, param4);
+          var9.listener = (WidgetListener) (this);
+          this.addChild(var9, true);
+          stackIn_4_0 = var9.height + var10.height;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,21 +202,21 @@ final class qo extends ib implements vf, en {
         int var1 = -119 / ((-4 - param0) / 38);
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param4 == this.field_K) {
+          if (widget == this.field_K) {
             MotionWaypoint.d(-101);
           } else {
-            if (param4 == this.field_Q) {
+            if (widget == this.field_Q) {
               this.a(28462);
             }
           }
-          if (param2 <= -22) {
+          if (obfuscationGuard <= -22) {
             return;
           }
           field_P = (String) null;
@@ -225,8 +225,8 @@ final class qo extends ib implements vf, en {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_10_0 = var6;
-          stackIn_10_1 = new StringBuilder().append("qo.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_10_1 = new StringBuilder().append("qo.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -235,12 +235,12 @@ final class qo extends ib implements vf, en {
         }
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_Q.field_J = this.h((byte) 92);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
+          this.field_Q.enabled = this.h((byte) 92);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qo.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qo.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
@@ -282,43 +282,43 @@ final class qo extends ib implements vf, en {
         if (!this.h((byte) 92)) {
           return;
         }
-        QuickChatHelpDialog.a(this.field_L.field_A, -96);
+        QuickChatHelpDialog.a(this.field_L.text, -96);
         if (param0 != 28462) {
-          this.field_Q = (d) null;
+          this.field_Q = (FocusableWidget) null;
           return;
         }
     }
 
     public qo() {
-        super(0, 0, 496, 0, (ub) null);
-        this.field_L = new sf("", (uh) null, 12);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
+        this.field_L = new sf("", (WidgetListener) null, 12);
         um var1 = new um(QuickChatMenu.field_Yb, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
-        oc var2 = new oc(ac.field_d, var1, (uh) null);
-        this.field_Q = new d(k.field_j, (uh) null);
-        this.field_K = new d(wl.field_L, (uh) null);
-        this.field_L.field_z = hh.field_a;
+        Widget var2 = new Widget(ac.field_d, var1, (WidgetListener) null);
+        this.field_Q = new FocusableWidget(k.field_j, (WidgetListener) null);
+        this.field_K = new FocusableWidget(wl.field_L, (WidgetListener) null);
+        this.field_L.tooltip = hh.field_a;
         this.field_L.a(new fl(this.field_L), (byte) -68);
-        this.field_Q.field_J = false;
-        this.field_Q.field_l = (ub) ((Object) new hi());
-        this.field_K.field_l = (ub) ((Object) new bb());
-        this.field_L.field_l = (ub) ((Object) new r(10000536));
+        this.field_Q.enabled = false;
+        this.field_Q.renderer = (WidgetRenderer) ((Object) new hi());
+        this.field_K.renderer = (WidgetRenderer) ((Object) new bb());
+        this.field_L.renderer = (WidgetRenderer) ((Object) new r(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(50, 20, var3, (byte) -119, 270);
+        var2.setBounds(50, 20, var3, (byte) -119, 270);
         var3 += 50;
-        this.a(var2, true);
+        this.addChild(var2, true);
         var3 = var3 + (this.a(-14, BlankScreen.field_j, this.field_L, GameClock.field_h, var3, 170) + 5);
-        this.field_Q.a(40, 496 - var5 >> 1, var3, (byte) -119, var5);
-        this.field_K.a(40, var4 + 3, var3 + 15, (byte) -119, 60);
-        this.field_K.field_i = (uh) (this);
-        this.field_Q.field_i = (uh) (this);
-        this.a(this.field_Q, true);
-        this.a(this.field_K, true);
+        this.field_Q.setBounds(40, 496 - var5 >> 1, var3, (byte) -119, var5);
+        this.field_K.setBounds(40, var4 + 3, var3 + 15, (byte) -119, 60);
+        this.field_K.listener = (WidgetListener) (this);
+        this.field_Q.listener = (WidgetListener) (this);
+        this.addChild(this.field_Q, true);
+        this.addChild(this.field_K, true);
         this.field_R = new ri((vf) (this));
-        this.field_R.a(150, this.field_L.field_t + this.field_L.field_o + 60, 20, (byte) -119, -60 + (-this.field_L.field_t - this.field_L.field_o + this.field_t));
-        this.a(this.field_R, true);
-        this.a(var4 + (55 + var3), 0, 0, (byte) -119, 496);
+        this.field_R.setBounds(150, this.field_L.width + this.field_L.x + 60, 20, (byte) -119, -60 + (-this.field_L.width - this.field_L.x + this.width));
+        this.addChild(this.field_R, true);
+        this.setBounds(var4 + (55 + var3), 0, 0, (byte) -119, 496);
     }
 
     private final boolean h(byte param0) {

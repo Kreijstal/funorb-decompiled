@@ -620,7 +620,7 @@ final class w {
           if (param0 != 3) {
             field_k = -112;
           }
-          h.field_F = null;
+          SingleChildWidget.field_F = null;
           ik.field_j = false;
           QuickChatPhraseRegistry.field_k = null;
           ik.field_b = null;

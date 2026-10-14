@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qf extends lp implements en {
+final class qf extends lp implements WidgetActionListener {
     private boolean field_Db;
     private dk field_Eb;
     static int tableSubmissionSequence;
@@ -60,19 +60,19 @@ final class qf extends lp implements en {
         this.a(-7, AchievementIcon.a(248, -85, CircleBody.field_q), param0);
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         if (this.field_Fb) {
           ag.a((byte) -16, true, false);
           return;
         }
-        if (param2 >= -22) {
+        if (obfuscationGuard >= -22) {
           return;
         }
         try {
           ek.l(64);
           this.m(17);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.Q(" + pointerY + ',' + button + ',' + obfuscationGuard + ',' + pointerX + ',' + (widget != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -117,10 +117,10 @@ final class qf extends lp implements en {
               this.b((byte) 118, new ig(this));
               return;
             }
-            var5.a((byte) 126, ri.field_L, (uh) (this));
+            var5.a((byte) 126, ri.field_L, (WidgetListener) (this));
           } else {
             if (this.field_Fb) {
-              var5.a((byte) -37, ri.field_L, (uh) (this));
+              var5.a((byte) -37, ri.field_L, (WidgetListener) (this));
             } else {
               if (param1.field_d != 5) {
                 var5.a(false, HalloweenBackground.field_s, -1);

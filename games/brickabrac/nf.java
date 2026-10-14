@@ -13,14 +13,14 @@ final class nf extends lg {
     static String field_T;
     static RgbSprite halloweenNearSprite;
 
-    final boolean a(boolean param0, oc param1) {
+    final boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             return false;
           }
           return true;
@@ -28,8 +28,8 @@ final class nf extends lg {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("nf.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("nf.CA(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -38,8 +38,8 @@ final class nf extends lg {
         }
     }
 
-    final String d(int param0) {
-        if (param0 > 6) {
+    final String getTooltip(int obfuscationGuard) {
+        if (obfuscationGuard > 6) {
           return null;
         }
         return (String) null;
@@ -50,7 +50,7 @@ final class nf extends lg {
         try {
           this.field_R = param0;
           this.field_S = param1;
-          this.a(param5, param2, param3, (byte) -119, param4);
+          this.setBounds(param5, param2, param3, (byte) -119, param4);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -72,14 +72,14 @@ final class nf extends lg {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         qh var6;
         int var9;
         int var10;
         int var13;
         String var17;
         Object var18;
-        qe var18_ref;
+        WidgetLayoutProvider var18_ref;
         RgbSprite var19;
         RgbSprite var20;
         Object var22;
@@ -94,33 +94,33 @@ final class nf extends lg {
         int var12;
         RgbSprite var16;
         RgbSprite var21;
-        qe var22_ref;
+        WidgetLayoutProvider var22_ref;
         RgbSprite var23;
         RgbSprite var24;
         RgbSprite var25;
         String var26;
-        qe var27_ref;
+        WidgetLayoutProvider var27_ref;
         RgbSprite var28;
         RgbSprite var29;
         RgbSprite var30;
-        qe var31_ref;
+        WidgetLayoutProvider var31_ref;
         RgbSprite var32;
         RgbSprite var33;
         RgbSprite var34;
         String var35;
-        qe var36_ref;
+        WidgetLayoutProvider var36_ref;
         RgbSprite var37;
         RgbSprite var38;
         RgbSprite var39;
-        qe var40_ref;
+        WidgetLayoutProvider var40_ref;
         RgbSprite var41;
         RgbSprite var42;
         RgbSprite var43;
-        qe var44_ref;
+        WidgetLayoutProvider var44_ref;
         RgbSprite var45;
         RgbSprite var46;
         RgbSprite var47;
-        qe var50_ref;
+        WidgetLayoutProvider var50_ref;
         RgbSprite var51;
         RgbSprite var52;
         RgbSprite var53;
@@ -169,14 +169,14 @@ final class nf extends lg {
         var6 = this.field_R.b((byte) -31);
         if (var6 == m.field_c) {
           var17 = jb.field_G;
-          if (!var17.equals(this.field_A)) {
-            this.field_A = var17;
-            this.i(param3 + 10);
-            super.a(param0, param1, param2, param3);
+          if (!var17.equals(this.text)) {
+            this.text = var17;
+            this.i(obfuscationGuard + 10);
+            super.drawLayer(parentY, parentX, layer, obfuscationGuard);
             var6 = this.field_R.b((byte) -31);
-            var18_ref = (qe) ((Object) this.field_l);
-            var9 = param1 + this.field_o;
-            var10 = var18_ref.a(param0, (byte) -107, (oc) (this)) + (var18_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+            var18_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+            var9 = parentX + this.x;
+            var10 = var18_ref.a(parentY, (byte) -107, (Widget) (this)) + (var18_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
             if (var6 != m.field_c &&
               var6 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6) {
@@ -208,11 +208,11 @@ final class nf extends lg {
             this.field_X.f(-(var21.canvasWidth >> 1) + var9, -var21.canvasHeight + var10, 256);
             return;
           }
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(parentY, parentX, layer, obfuscationGuard);
           var6 = this.field_R.b((byte) -31);
-          var22_ref = (qe) ((Object) this.field_l);
-          var9Lifetime5 = param1 + this.field_o;
-          var10Lifetime5 = var22_ref.a(param0, (byte) -107, (oc) (this)) + (var22_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+          var22_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+          var9Lifetime5 = parentX + this.x;
+          var10Lifetime5 = var22_ref.a(parentY, (byte) -107, (Widget) (this)) + (var22_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
           if (var6 != m.field_c &&
             var6 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6) {
@@ -254,14 +254,14 @@ final class nf extends lg {
         }
         if (var6 == SaveResultsPromptScreen.field_z) {
           var26 = jb.field_G;
-          if (!var26.equals(this.field_A)) {
-            this.field_A = var26;
-            this.i(param3 + 10);
-            super.a(param0, param1, param2, param3);
+          if (!var26.equals(this.text)) {
+            this.text = var26;
+            this.i(obfuscationGuard + 10);
+            super.drawLayer(parentY, parentX, layer, obfuscationGuard);
             var6 = this.field_R.b((byte) -31);
-            var27_ref = (qe) ((Object) this.field_l);
-            var9Lifetime1 = param1 + this.field_o;
-            var10Lifetime1 = var27_ref.a(param0, (byte) -107, (oc) (this)) + (var27_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+            var27_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+            var9Lifetime1 = parentX + this.x;
+            var10Lifetime1 = var27_ref.a(parentY, (byte) -107, (Widget) (this)) + (var27_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
             if (var6 != m.field_c &&
               var6 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6) {
@@ -293,11 +293,11 @@ final class nf extends lg {
             this.field_X.f(-(var30.canvasWidth >> 1) + var9Lifetime1, -var30.canvasHeight + var10Lifetime1, 256);
             return;
           }
-          super.a(param0, param1, param2, param3);
+          super.drawLayer(parentY, parentX, layer, obfuscationGuard);
           var6 = this.field_R.b((byte) -31);
-          var31_ref = (qe) ((Object) this.field_l);
-          var9Lifetime1Lifetime1 = param1 + this.field_o;
-          var10Lifetime1Lifetime1 = var31_ref.a(param0, (byte) -107, (oc) (this)) + (var31_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+          var31_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+          var9Lifetime1Lifetime1 = parentX + this.x;
+          var10Lifetime1Lifetime1 = var31_ref.a(parentY, (byte) -107, (Widget) (this)) + (var31_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
           if (var6 != m.field_c &&
             var6 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6) {
@@ -339,12 +339,12 @@ final class nf extends lg {
         }
         var5 = this.field_R.a(-118);
         if (var5 != null) {
-          if (var5.equals(this.field_A)) {
-            super.a(param0, param1, param2, param3);
+          if (var5.equals(this.text)) {
+            super.drawLayer(parentY, parentX, layer, obfuscationGuard);
             var6Lifetime1 = this.field_R.b((byte) -31);
-            var50_ref = (qe) ((Object) this.field_l);
-            var9Lifetime2 = param1 + this.field_o;
-            var10Lifetime2 = var50_ref.a(param0, (byte) -107, (oc) (this)) + (var50_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+            var50_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+            var9Lifetime2 = parentX + this.x;
+            var10Lifetime2 = var50_ref.a(parentY, (byte) -107, (Widget) (this)) + (var50_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
             if (var6Lifetime1 != m.field_c &&
               var6Lifetime1 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6Lifetime1) {
@@ -376,13 +376,13 @@ final class nf extends lg {
             this.field_X.f(-(var53.canvasWidth >> 1) + var9Lifetime2, -var53.canvasHeight + var10Lifetime2, 256);
             return;
           }
-          this.field_A = var5;
-          this.i(param3 + 10);
-          super.a(param0, param1, param2, param3);
+          this.text = var5;
+          this.i(obfuscationGuard + 10);
+          super.drawLayer(parentY, parentX, layer, obfuscationGuard);
           var6Lifetime1Lifetime1 = this.field_R.b((byte) -31);
-          var44_ref = (qe) ((Object) this.field_l);
-          var9Lifetime2Lifetime1 = param1 + this.field_o;
-          var10Lifetime2Lifetime1 = var44_ref.a(param0, (byte) -107, (oc) (this)) + (var44_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+          var44_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+          var9Lifetime2Lifetime1 = parentX + this.x;
+          var10Lifetime2Lifetime1 = var44_ref.a(parentY, (byte) -107, (Widget) (this)) + (var44_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
           if (var6Lifetime1Lifetime1 != m.field_c &&
             var6Lifetime1Lifetime1 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6Lifetime1Lifetime1) {
@@ -425,14 +425,14 @@ final class nf extends lg {
         }
         var35 = this.field_S;
         var5Lifetime1 = var35;
-        if (!var35.equals(this.field_A)) {
-          this.field_A = var35;
-          this.i(param3 + 10);
-          super.a(param0, param1, param2, param3);
+        if (!var35.equals(this.text)) {
+          this.text = var35;
+          this.i(obfuscationGuard + 10);
+          super.drawLayer(parentY, parentX, layer, obfuscationGuard);
           var6Lifetime2 = this.field_R.b((byte) -31);
-          var36_ref = (qe) ((Object) this.field_l);
-          var9Lifetime3 = param1 + this.field_o;
-          var10Lifetime3 = var36_ref.a(param0, (byte) -107, (oc) (this)) + (var36_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+          var36_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+          var9Lifetime3 = parentX + this.x;
+          var10Lifetime3 = var36_ref.a(parentY, (byte) -107, (Widget) (this)) + (var36_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
           if (var6Lifetime2 != m.field_c &&
             var6Lifetime2 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6Lifetime2) {
@@ -464,11 +464,11 @@ final class nf extends lg {
           this.field_X.f(-(var39.canvasWidth >> 1) + var9Lifetime3, -var39.canvasHeight + var10Lifetime3, 256);
           return;
         }
-        super.a(param0, param1, param2, param3);
+        super.drawLayer(parentY, parentX, layer, obfuscationGuard);
         var6Lifetime3 = this.field_R.b((byte) -31);
-        var40_ref = (qe) ((Object) this.field_l);
-        var9Lifetime4 = param1 + this.field_o;
-        var10Lifetime4 = var40_ref.a(param0, (byte) -107, (oc) (this)) + (var40_ref.c((oc) (this), param3 ^ 32).a(0) >> 1);
+        var40_ref = (WidgetLayoutProvider) ((Object) this.renderer);
+        var9Lifetime4 = parentX + this.x;
+        var10Lifetime4 = var40_ref.a(parentY, (byte) -107, (Widget) (this)) + (var40_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
         if (var6Lifetime3 != m.field_c &&
           var6Lifetime3 != SaveResultsPromptScreen.field_z) {
           if (lp.field_xb == var6Lifetime3) {
@@ -509,12 +509,12 @@ final class nf extends lg {
         return;
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
           this.field_Q = this.field_Q + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nf.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 

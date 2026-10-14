@@ -38,7 +38,7 @@ final class sf extends vb implements je {
         }
     }
 
-    sf(String param0, uh param1, int param2) {
+    sf(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -49,29 +49,29 @@ final class sf extends vb implements je {
         return this.field_W;
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_ab = -param2 - this.field_o + MusicPatch.pointerX;
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
+          this.field_ab = -parentX - this.x + MusicPatch.pointerX;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sf.WA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sf.WA(" + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ',' + parentY + ')');
         }
     }
 
-    final String d(int param0) {
-        if (!this.field_q) {
+    final String getTooltip(int obfuscationGuard) {
+        if (!this.mouseOver) {
           return null;
         }
-        if (this.field_z == null) {
+        if (this.tooltip == null) {
           return null;
         }
-        if (param0 >= 6) {
-          ap.a(-this.field_ab - (-this.field_t - MusicPatch.pointerX), po.pointerY, (byte) 79);
-          return this.field_z;
+        if (obfuscationGuard >= 6) {
+          ap.a(-this.field_ab - (-this.width - MusicPatch.pointerX), po.pointerY, (byte) 79);
+          return this.tooltip;
         }
         this.field_ab = -5;
-        ap.a(-this.field_ab - (-this.field_t - MusicPatch.pointerX), po.pointerY, (byte) 79);
-        return this.field_z;
+        ap.a(-this.field_ab - (-this.width - MusicPatch.pointerX), po.pointerY, (byte) 79);
+        return this.tooltip;
     }
 
     public static void o(int param0) {

@@ -11,7 +11,7 @@ abstract class k extends pj implements hf {
         if (param0 != 4) {
           field_i = (String) null;
         }
-        return this.a(this.field_g.field_A, (byte) 106);
+        return this.a(this.field_g.text, (byte) 106);
     }
 
     abstract qh a(String param0, byte param1);
@@ -319,7 +319,7 @@ abstract class k extends pj implements hf {
         if (param0 != 28600) {
           field_j = (String) null;
         }
-        return this.a(56, this.field_g.field_A);
+        return this.a(56, this.field_g.text);
     }
 
     public final boolean a(byte param0) {
@@ -327,7 +327,7 @@ abstract class k extends pj implements hf {
         if (param0 > -27) {
           k.d((byte) 112);
         }
-        stackIn_7_0 = (this.field_g.field_A == null) || (0 == this.field_g.field_A.length());
+        stackIn_7_0 = (this.field_g.text == null) || (0 == this.field_g.text.length());
         return stackIn_7_0;
     }
 

@@ -83,7 +83,7 @@ final class SocialListEntry extends UiComponent {
           if (null != meshAlias.faceGroups &&
             meshAlias.faceGroupCount > 1) {
             faceGroups = meshAlias.faceGroups;
-            h.orderFacesByGroup(0, 0, (byte) 114, faceGroups, AppletGameShell.faceGroupOffsets);
+            SingleChildWidget.orderFacesByGroup(0, 0, (byte) 114, faceGroups, AppletGameShell.faceGroupOffsets);
           } else {
             ArchiveNetworkClient.compactFaceBuckets((byte) 94);
           }

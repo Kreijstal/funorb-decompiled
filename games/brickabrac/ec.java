@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec extends ib implements en {
+final class ec extends WidgetGroup implements WidgetActionListener {
     static int field_J;
     static String field_L;
     private int[] field_T;
-    private d[] field_I;
+    private FocusableWidget[] field_I;
     private int field_M;
     static boolean field_O;
     static PlatformServices field_P;
@@ -20,19 +20,19 @@ final class ec extends ib implements en {
         int var4_int = 0;
         try {
           if (param0) {
-            d var5 = (d) null;
-            this.a(117, -42, (byte) 27, -108, (d) null);
+            FocusableWidget var5 = (FocusableWidget) null;
+            this.onAction(117, -42, (byte) 27, -108, (FocusableWidget) null);
           }
           var4_int = this.field_M;
           this.a((byte) -106, 1 + var4_int);
-          this.field_I[var4_int] = this.a((byte) 126, param1, (uh) (this));
+          this.field_I[var4_int] = this.a((byte) 126, param1, (WidgetListener) (this));
           this.field_T[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ec.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -44,7 +44,7 @@ final class ec extends ib implements en {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var6_int = 0; var6_int < this.field_M; var6_int++) {
-            if (param4 != this.field_I[var6_int]) {
+            if (widget != this.field_I[var6_int]) {
               continue;
             }
             var7 = this.field_T[var6_int];
@@ -55,7 +55,7 @@ final class ec extends ib implements en {
             }
             break;
           }
-          if (param2 > -22) {
+          if (obfuscationGuard > -22) {
             field_O = false;
           }
           return;
@@ -63,8 +63,8 @@ final class ec extends ib implements en {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_13_0 = var6;
-          stackIn_13_1 = new StringBuilder().append("ec.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_13_1 = new StringBuilder().append("ec.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -84,17 +84,17 @@ final class ec extends ib implements en {
         MusicPatch.a(0, GameScreen.field_b, false);
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, param3);
-        this.field_H.a(this.field_R, 14 + (param1 + this.field_o), 10 + (param0 + this.field_w), this.field_t - 28, this.field_s, 16777215, -1, 0, 0, this.field_H.ascent);
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        super.drawLayer(parentY, parentX, layer, obfuscationGuard);
+        this.field_H.a(this.field_R, 14 + (parentX + this.x), 10 + (parentY + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_H.ascent);
     }
 
-    final d a(byte param0, String param1, uh param2) {
+    final FocusableWidget a(byte param0, String param1, WidgetListener param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        d var5 = null;
+        FocusableWidget var5 = null;
         int var6 = 0;
-        d stackIn_1_0 = null;
+        FocusableWidget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -103,12 +103,12 @@ final class ec extends ib implements en {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -104 / ((param0 - 89) / 37);
-          var5 = new d(param1, param2);
-          var5.field_l = (ub) ((Object) new hi());
-          var6 = this.field_s - 2;
-          this.a(34 + this.field_s, 0, 0, (byte) -119, this.field_t);
-          var5.a(30, 7, var6, (byte) -119, -14 + this.field_t);
-          this.a(var5, true);
+          var5 = new FocusableWidget(param1, param2);
+          var5.renderer = (WidgetRenderer) ((Object) new hi());
+          var6 = this.height - 2;
+          this.setBounds(34 + this.height, 0, 0, (byte) -119, this.width);
+          var5.setBounds(30, 7, var6, (byte) -119, -14 + this.width);
+          this.addChild(var5, true);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,8 +137,8 @@ final class ec extends ib implements en {
         if (param1 <= this.field_M) {
           return;
         }
-        d[] var7 = new d[param1];
-        d[] var3 = var7;
+        FocusableWidget[] var7 = new FocusableWidget[param1];
+        FocusableWidget[] var3 = var7;
         int[] var4 = new int[param1];
         for (var5 = 0; var5 < this.field_M; var5++) {
           var7[var5] = this.field_I[var5];
@@ -300,7 +300,7 @@ final class ec extends ib implements en {
     }
 
     ec(lp param0, TextFont param1, String param2) {
-        super(0, 0, 288, 0, (ub) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_M = 0;
         try {
@@ -308,7 +308,7 @@ final class ec extends ib implements en {
           this.field_R = param2;
           this.field_H = param1;
           var4_int = this.field_R == null ? 0 : this.field_H.measureWrappedHeight(this.field_R, 260, this.field_H.ascent);
-          this.a(22 + var4_int, 0, 0, (byte) -119, 288);
+          this.setBounds(22 + var4_int, 0, 0, (byte) -119, 288);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb implements ub {
+final class bb implements WidgetRenderer {
     private int field_d;
     private TextFont field_b;
     private int field_f;
@@ -9,7 +9,7 @@ final class bb implements ub {
     static me field_c;
     static String field_a;
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -24,51 +24,51 @@ final class bb implements ub {
         int var11 = 0;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!param3.field_q &&
-            !param3.f(-67)) {
+          if (!widget.mouseOver &&
+            !widget.isFocused(-67)) {
             stackIn_5_0 = 2188450;
           } else {
             stackIn_5_0 = 3249872;
           }
           var6_int = stackIn_5_0;
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_A + "</u>", param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, var6_int, -1, this.field_d, this.field_f, this.field_b.descent + this.field_b.ascent);
-          if (param1 != -20618) {
+          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + widget.text + "</u>", widget.x + parentX, widget.y + parentY, widget.width, widget.height, var6_int, -1, this.field_d, this.field_f, this.field_b.descent + this.field_b.ascent);
+          if (callbackGuard != -20618) {
             field_a = (String) null;
           }
-          if (!param3.f(-54)) {
+          if (!widget.isFocused(-54)) {
             return;
           }
-          var7 = this.field_b.measureText(param3.field_A);
+          var7 = this.field_b.measureText(widget.text);
           var8 = this.field_b.descent + this.field_b.ascent;
-          var9 = param3.field_o + param2;
+          var9 = widget.x + parentX;
           if (this.field_d == 2) {
-            var9 = var9 + (-var7 + param3.field_t);
+            var9 = var9 + (-var7 + widget.width);
           } else {
             if (this.field_d == 1) {
-              var9 = var9 + (-var7 + param3.field_t >> 1);
+              var9 = var9 + (-var7 + widget.width >> 1);
             }
           }
-          var10 = param3.field_w + param4;
+          var10 = widget.y + parentY;
           if (this.field_f == 2) {
-            var10 = var10 + (-var8 + param3.field_s);
+            var10 = var10 + (-var8 + widget.height);
           } else {
             if (1 == this.field_f) {
-              var10 = var10 + (-var8 + param3.field_s >> 1);
+              var10 = var10 + (-var8 + widget.height >> 1);
             }
           }
-          ScrollPaneWithFooter.a(var10 + 2, var9 - 2, param1 ^ -20727, var8, var7 + 4);
+          ScrollPaneWithFooter.a(var10 + 2, var9 - 2, callbackGuard ^ -20727, var8, var7 + 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_22_0 = var6;
-          stackIn_22_1 = new StringBuilder().append("bb.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_22_1 = new StringBuilder().append("bb.AA(").append(obfuscationGuard).append(',').append(callbackGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(parentY).append(')').toString());
         }
     }
 

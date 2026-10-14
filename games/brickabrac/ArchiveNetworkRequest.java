@@ -116,7 +116,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           if (!wl.field_K.ensureIndex((byte) -127)) {
             return wn.field_a;
           }
-          return d.field_C;
+          return FocusableWidget.field_C;
         }
         if (param0 != 103) {
           return (String) null;
@@ -125,7 +125,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           return tm.field_e;
         }
         if (!ma.field_P.ensureGroupAvailableByName("commonui", -28138)) {
-          return ib.field_F + " - " + ma.field_P.getGroupProgressByName(0, "commonui") + "%";
+          return WidgetGroup.field_F + " - " + ma.field_P.getGroupProgressByName(0, "commonui") + "%";
         }
         if (!vh.field_S.ensureIndex((byte) -127)) {
           return vh.field_P;

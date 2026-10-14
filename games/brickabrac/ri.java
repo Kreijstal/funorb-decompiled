@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends ib implements en {
+final class ri extends WidgetGroup implements WidgetActionListener {
     private vf field_K;
     private String[] field_J;
     static int[] field_I;
@@ -9,9 +9,9 @@ final class ri extends ib implements en {
     static String field_L;
     static String field_N;
     static int field_M;
-    private d[] field_H;
+    private FocusableWidget[] field_H;
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -22,23 +22,23 @@ final class ri extends ib implements en {
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           for (var6_int = 0; var6_int < this.field_J.length; var6_int++) {
-            if (this.field_H[var6_int] == param4) {
+            if (this.field_H[var6_int] == widget) {
               this.field_K.a(this.field_J[var6_int], (byte) 56);
             }
           }
-          if (param4 == this.field_H[this.field_J.length]) {
+          if (widget == this.field_H[this.field_J.length]) {
             this.field_K.a((byte) 100);
           }
-          if (param2 >= -22) {
-            this.a(-93, -52, -108, (byte) -4);
+          if (obfuscationGuard >= -22) {
+            this.drawLayer(-93, -52, -108, (byte) -4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("ri.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_15_1 = new StringBuilder().append("ri.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -68,7 +68,7 @@ final class ri extends ib implements en {
         int var5Lifetime1;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_G.clear((byte) -95);
+          this.children.clear((byte) -95);
           if (param1 != null &&
             param1.length != 0) {
             var3_int = param1.length;
@@ -77,19 +77,19 @@ final class ri extends ib implements en {
               this.field_J[var4_int] = ap.a(true, (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
             var4 = new bb(ArchiveNetworkClient.field_u, 0, 1);
-            this.field_H = new d[var3_int + 1];
+            this.field_H = new FocusableWidget[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_H[var5] = new d(this.field_J[var5], (uh) (this));
-              this.field_H[var5].field_l = (ub) ((Object) var4);
-              this.field_H[var5].field_z = aa.field_c;
-              this.field_H[var5].a(15, 0, var5 * 16 + 20, (byte) -119, 80);
-              this.a(this.field_H[var5], true);
+              this.field_H[var5] = new FocusableWidget(this.field_J[var5], (WidgetListener) (this));
+              this.field_H[var5].renderer = (WidgetRenderer) ((Object) var4);
+              this.field_H[var5].tooltip = aa.field_c;
+              this.field_H[var5].setBounds(15, 0, var5 * 16 + 20, (byte) -119, 80);
+              this.addChild(this.field_H[var5], true);
             }
-            this.field_H[var3_int] = new d(sh.field_c, (uh) (this));
+            this.field_H[var3_int] = new FocusableWidget(sh.field_c, (WidgetListener) (this));
             var5Lifetime1 = 52 / ((-9 - param0) / 59);
-            this.field_H[var3_int].field_l = (ub) ((Object) var4);
-            this.field_H[var3_int].a(15, 0, 16 * (var3_int + 1) + 20, (byte) -119, 100);
-            this.a(this.field_H[var3_int], true);
+            this.field_H[var3_int].renderer = (WidgetRenderer) ((Object) var4);
+            this.field_H[var3_int].setBounds(15, 0, 16 * (var3_int + 1) + 20, (byte) -119, 100);
+            this.addChild(this.field_H[var3_int], true);
             return;
           }
           this.field_J = null;
@@ -116,7 +116,7 @@ final class ri extends ib implements en {
         ArchiveIndex.a(-32120);
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -227,28 +227,28 @@ final class ri extends ib implements en {
         int var1 = 0;
         if (BackgroundScene.masterSoundGain < 224) {
           var1 = BackgroundScene.masterSoundGain % 32;
-          h.a(13894, BackgroundScene.masterSoundGain + (32 - var1));
+          SingleChildWidget.a(13894, BackgroundScene.masterSoundGain + (32 - var1));
         } else {
-          h.a(13894, 256);
+          SingleChildWidget.a(13894, 256);
         }
         if (!param0) {
           field_M = -128;
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        super.a(param0, param1, param2, param3);
-        if (param2 != 0) {
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        super.drawLayer(parentY, parentX, layer, obfuscationGuard);
+        if (layer != 0) {
           return;
         }
         TextFont var5 = ArchiveNetworkClient.field_u;
         if (this.field_J != null) {
-          var5.a(AchievementIcon.field_l, param1 + this.field_o, this.field_w + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
+          var5.a(AchievementIcon.field_l, parentX + this.x, this.y + parentY, this.width, 20, 16777215, -1, 0, 0, var5.descent + var5.ascent);
         }
     }
 
     ri(vf param0) {
-        super(0, 0, 0, 0, (ub) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_K = param0;
         } catch (RuntimeException runtimeException) {

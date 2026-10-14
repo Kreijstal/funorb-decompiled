@@ -82,9 +82,9 @@ final class GameplayAudioEvent extends IntrusiveNode {
             if (param0 != 14676) {
               return;
             }
-            if (oc.field_k != null) {
+            if (Widget.field_k != null) {
               try {
-                oc.field_k.close(false);
+                Widget.field_k.close(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

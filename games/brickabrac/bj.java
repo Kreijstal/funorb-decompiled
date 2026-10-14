@@ -57,11 +57,11 @@ abstract class bj extends jc {
         if (param0 != -116) {
           this.a(97);
         }
-        this.field_X = this.field_s;
+        this.field_X = this.height;
         this.field_Z = param1;
         this.field_Q = param3;
         this.field_W = 0;
-        this.field_O = this.field_t;
+        this.field_O = this.width;
     }
 
     final static String readCompressedString(int maximumLength, byte obfuscationGuard, PacketBuffer packet) {
@@ -169,7 +169,7 @@ abstract class bj extends jc {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = BrickABrac.field_J ? 1 : 0;
-        Rasterizer2D.fillVerticalGradient(param0 + 6, param2 + 35, -12 + this.field_t, this.field_s - 40, 2105376, 0);
+        Rasterizer2D.fillVerticalGradient(param0 + 6, param2 + 35, -12 + this.width, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -180,7 +180,7 @@ abstract class bj extends jc {
             var8 < Rasterizer2D.clipBottom) {
             var9 = var7 * (-var5 + var6) / var4 + var5;
             var10 = 0;
-            var11 = this.field_t;
+            var11 = this.width;
             if (var7 <= 20) {
               while (var10 <= 20) {
                 var12 = (20 - var10) * (-var10 + 20) + (20 - var7) * (-var7 + 20);
@@ -230,18 +230,18 @@ abstract class bj extends jc {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
           Rasterizer2D.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
-          Rasterizer2D.drawHorizontalLine(this.field_t + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer2D.drawHorizontalLine(this.width + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
         if (param1 != 274) {
           field_P = (ck) null;
         }
-        MusicVoice.field_n.drawTransparent(param0 + this.field_t - 90, 10 + param2);
-        fq.a(this.field_t - 10, 35 + param2, param1 ^ 1013, nf.field_W, 5 + param0);
-        fq.a(this.field_t, -22 + param2 + this.field_s, param1 + 469, GameplayAudioEvent.field_l, param0);
+        MusicVoice.field_n.drawTransparent(param0 + this.width - 90, 10 + param2);
+        fq.a(this.width - 10, 35 + param2, param1 ^ 1013, nf.field_W, 5 + param0);
+        fq.a(this.width, -22 + param2 + this.height, param1 + 469, GameplayAudioEvent.field_l, param0);
         var5Lifetime2 = 169;
-        var4Lifetime2 = this.field_s - 79;
+        var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
         var8Lifetime2 = param2 + 57;
@@ -249,7 +249,7 @@ abstract class bj extends jc {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
           Rasterizer2D.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
-          Rasterizer2D.drawHorizontalLine(param0 + this.field_t - 6, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer2D.drawHorizontalLine(param0 + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf implements ub {
+final class pf implements WidgetRenderer {
     static String field_a;
     static int field_i;
     private int field_j;
@@ -78,7 +78,7 @@ final class pf implements ub {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -87,7 +87,7 @@ final class pf implements ub {
         int var12 = 0;
         int var13 = 0;
         vh var14 = null;
-        oc stackIn_3_0 = null;
+        Widget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -96,17 +96,17 @@ final class pf implements ub {
         int var11Lifetime1;
         int var12Lifetime1;
         try {
-          if (param3 instanceof vh) {
-            stackIn_3_0 = (oc) (param3);
+          if (widget instanceof vh) {
+            stackIn_3_0 = (Widget) (widget);
           } else {
             stackIn_3_0 = null;
           }
           var14 = (vh) (stackIn_3_0);
           if (var14 != null) {
           }
-          Rasterizer2D.fillRectangle(param3.field_o + param2, param3.field_w + param4, param3.field_t, param3.field_s, this.field_o);
-          var7 = var14.field_Z + param2 + param3.field_o;
-          var8 = var14.field_R + (param4 + param3.field_w);
+          Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_o);
+          var7 = var14.field_Z + parentX + widget.x;
+          var8 = var14.field_R + (parentY + widget.y);
           Rasterizer2D.f(var7, var8, var14.field_W, this.field_e);
           if (var14.field_Q != -1) {
             var9 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.field_K;
@@ -115,7 +115,7 @@ final class pf implements ub {
             Rasterizer2D.f(var7 + var11, var12 + var8, 1, this.field_m);
           }
           Rasterizer2D.f(var7, var8, 2, 1);
-          if (param1 != -20618) {
+          if (callbackGuard != -20618) {
             return;
           }
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_O) / (double)var14.field_K;
@@ -126,19 +126,19 @@ final class pf implements ub {
             return;
           }
           var13 = var14.field_Z + var14.field_W + this.field_n;
-          this.field_l.a(param3.field_A, param3.field_o + param2 + var13, param4 + (param3.field_w + this.field_g), param3.field_t - (this.field_n + var13), param3.field_s - (this.field_n << 1), this.field_k, this.field_j, 1, 1, 0);
+          this.field_l.a(widget.text, widget.x + parentX + var13, parentY + (widget.y + this.field_g), widget.width - (this.field_n + var13), widget.height - (this.field_n << 1), this.field_k, this.field_j, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("pf.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_15_1 = new StringBuilder().append("pf.AA(").append(obfuscationGuard).append(',').append(callbackGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -208,7 +208,7 @@ final class pf implements ub {
           sl.a(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
           ed.a(param5, param7, param2, (byte) 104);
           GameClock.b((byte) 13);
-          h.g((byte) -24);
+          SingleChildWidget.g((byte) -24);
           SoftwareFramebuffer.b((byte) 40);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -110,7 +110,7 @@ final class ChatMessage {
         }
         if (!this.systemMessage && (this.channel != 2 ||
           this.badgeId <= 0)) {
-          if (this.senderId == oc.field_p) {
+          if (this.senderId == Widget.field_p) {
             return 1;
           }
           if (LevelMetadata.field_m == 2 &&

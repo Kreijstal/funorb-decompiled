@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lp extends fe implements en {
+class lp extends fe implements WidgetActionListener {
     static NodeDeque queuedAchievementSubmissions;
     private boolean field_Bb;
     private boolean field_vb;
@@ -15,7 +15,7 @@ class lp extends fe implements en {
     static GameScreen currentScreen;
     static PlatformServices field_ub;
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -76,7 +76,7 @@ class lp extends fe implements en {
         }
     }
 
-    public void a(int param0, int param1, byte param2, int param3, d param4) {
+    public void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -89,7 +89,7 @@ class lp extends fe implements en {
             bd.a(3, true);
             this.m(17);
           }
-          if (param2 < -22) {
+          if (obfuscationGuard < -22) {
             return;
           }
           lp.o(-11);
@@ -98,8 +98,8 @@ class lp extends fe implements en {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_8_0 = var6;
-          stackIn_8_1 = new StringBuilder().append("lp.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_8_1 = new StringBuilder().append("lp.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -137,7 +137,7 @@ class lp extends fe implements en {
           var4 = var6;
           if (param0 != 5) {
             if (param0 == 256) {
-              var6.a((byte) -78, TabbedPane.field_Tb, (uh) (this));
+              var6.a((byte) -78, TabbedPane.field_Tb, (WidgetListener) (this));
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = false;
@@ -158,7 +158,7 @@ class lp extends fe implements en {
                 var6.a(false, cb.field_p, 9);
               } else {
                 if (9 == param0) {
-                  var6.a((byte) 126, BrickABrac.field_G, (uh) (this));
+                  var6.a((byte) 126, BrickABrac.field_G, (WidgetListener) (this));
                 }
               }
             } else {
@@ -193,7 +193,7 @@ class lp extends fe implements en {
           this.field_sb = param1;
           this.field_qb = new cr(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_qb.field_J = true;
-          this.a(this.field_qb, true);
+          this.addChild(this.field_qb, true);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

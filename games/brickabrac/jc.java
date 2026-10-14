@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jc extends ib {
+abstract class jc extends WidgetGroup {
     static RgbSprite field_J;
     static int field_K;
     static boolean field_H;
@@ -67,7 +67,7 @@ abstract class jc extends ib {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -75,35 +75,35 @@ abstract class jc extends ib {
             return;
           }
           if (this.field_L >= 256) {
-            if (0 != param2) {
+            if (0 != layer) {
               return;
             }
-            this.b(this.field_o + param1, 274, this.field_w + param0);
-            super.a(param0, param1, param2, (byte) -11);
+            this.b(this.x + parentX, 274, this.y + parentY);
+            super.drawLayer(parentY, parentX, layer, (byte) -11);
             return;
           }
           if (nl.field_e == null ||
-            !(this.field_t <= nl.field_e.width) ||
-            !(this.field_s <= nl.field_e.height)) {
-            nl.field_e = new RgbSprite(this.field_t, this.field_s);
+            !(this.width <= nl.field_e.width) ||
+            !(this.height <= nl.field_e.height)) {
+            nl.field_e = new RgbSprite(this.width, this.height);
           }
           IndexedSpriteGeometry.pushSpriteRaster(-109, nl.field_e);
           Rasterizer2D.clear();
-          this.b(0, param3 ^ -281, 0);
-          super.a(-param0 - this.field_w, -param1 - this.field_o, param2, param3);
+          this.b(0, obfuscationGuard ^ -281, 0);
+          super.drawLayer(-parentY - this.y, -parentX - this.x, layer, obfuscationGuard);
           sc.popRaster(-117);
-          nl.field_e.b(param1 + this.field_o, param0 + this.field_w, this.field_L);
+          nl.field_e.b(parentX + this.x, parentY + this.y, this.field_L);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.J(" + parentY + ',' + parentX + ',' + layer + ',' + obfuscationGuard + ')');
         }
     }
 
-    final oc g(byte param0) {
-        oc var2 = null;
-        oc stackIn_4_0 = null;
+    final Widget g(byte param0) {
+        Widget var2 = null;
+        Widget stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
@@ -112,7 +112,7 @@ abstract class jc extends ib {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
-          return (oc) (this);
+          return (Widget) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -121,7 +121,7 @@ abstract class jc extends ib {
     }
 
     jc(cp param0, int param1, int param2) {
-        super(SpriteGeometry.field_y - param1 >> 1, -param2 + r.field_w >> 1, param1, param2, (ub) null);
+        super(SpriteGeometry.field_y - param1 >> 1, -param2 + r.field_w >> 1, param1, param2, (WidgetRenderer) null);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -151,7 +151,7 @@ abstract class jc extends ib {
           if (!param0) {
             field_H = false;
           }
-          this.a(param1, -param2 + SpriteGeometry.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
+          this.setBounds(param1, -param2 + SpriteGeometry.field_y >> 1, r.field_w - param1 >> 1, (byte) -119, param2);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

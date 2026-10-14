@@ -40,7 +40,7 @@ final class MessageScreen extends MenuScreen {
             }
             RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
             ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-            ib.rankingLosses[wi.rankingRowCount] = losses;
+            WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
             var6 = draws + wins + losses;
             if (0 != var6) {
               stackIn_54_0 = 1000 * wins / var6;
@@ -64,7 +64,7 @@ final class MessageScreen extends MenuScreen {
           }
           RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
           ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-          ib.rankingLosses[wi.rankingRowCount] = losses;
+          WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
           var6Lifetime2 = draws + wins + losses;
           if (0 != var6Lifetime2) {
             stackIn_39_0 = 1000 * wins / var6Lifetime2;
@@ -93,7 +93,7 @@ final class MessageScreen extends MenuScreen {
           }
           RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
           ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-          ib.rankingLosses[wi.rankingRowCount] = losses;
+          WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
           var6Lifetime1 = draws + wins + losses;
           if (0 != var6Lifetime1) {
             stackIn_8_0 = 1000 * wins / var6Lifetime1;
@@ -108,7 +108,7 @@ final class MessageScreen extends MenuScreen {
           }
           RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
           ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
-          ib.rankingLosses[wi.rankingRowCount] = losses;
+          WidgetGroup.rankingLosses[wi.rankingRowCount] = losses;
           var6Lifetime1 = draws + wins + losses;
           if (0 != var6Lifetime1) {
             stackIn_23_0 = 1000 * wins / var6Lifetime1;

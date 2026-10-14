@@ -473,7 +473,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if ((long)obfuscationGuard != previousRenderMillis &&
             nowMillis > previousRenderMillis) {
             renderSpanMillis = (int)(nowMillis - previousRenderMillis);
-            d.recentRenderRate = (32000 + (renderSpanMillis >> 1)) / renderSpanMillis;
+            FocusableWidget.recentRenderRate = (32000 + (renderSpanMillis >> 1)) / renderSpanMillis;
           }
           fieldTemp$1 = MouseWheelSource.resizeFrameCounter;
           MouseWheelSource.resizeFrameCounter = MouseWheelSource.resizeFrameCounter + 1;

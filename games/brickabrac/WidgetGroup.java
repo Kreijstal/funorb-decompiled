@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-class ib extends oc implements sd {
+class WidgetGroup extends Widget implements WidgetContainer {
     static int[] rankingLosses;
     static RgbSprite field_E;
     static String field_F;
     static String field_C;
-    NodeDeque field_G;
+    NodeDeque children;
 
-    final boolean a(oc param0, byte param1) {
+    final boolean a(Widget param0, byte param1) {
         NodeDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        oc var4 = null;
+        Widget var4 = null;
         NodeDequeCursor var5 = null;
-        oc var6 = null;
+        Widget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -23,28 +23,28 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_G.isEmpty(false)) {
+          if (this.children.isEmpty(false)) {
             return false;
           }
-          var3 = new NodeDequeCursor(this.field_G);
+          var3 = new NodeDequeCursor(this.children);
           if (param1 > -115) {
             return false;
           }
-          var4 = (oc) (var3.first(240));
+          var4 = (Widget) (var3.first(240));
           while (var4 != null) {
-            if (var4.f(-128)) {
-              var5 = new NodeDequeCursor(this.field_G);
+            if (var4.isFocused(-128)) {
+              var5 = new NodeDequeCursor(this.children);
               var5.firstFrom(122, var4);
-              var6 = (oc) (var5.next(7));
+              var6 = (Widget) (var5.next(7));
               while (var6 != null) {
-                if (!var6.a(true, param0)) {
-                  var6 = (oc) (var5.next(7));
+                if (!var6.tryFocus(true, param0)) {
+                  var6 = (Widget) (var5.next(7));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (oc) (var3.next(7));
+            var4 = (Widget) (var3.next(7));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,13 +61,13 @@ class ib extends oc implements sd {
         }
     }
 
-    final boolean b(oc param0, byte param1) {
+    final boolean b(Widget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         NodeDequeCursor var4 = null;
-        oc var5 = null;
+        Widget var5 = null;
         NodeDequeCursor var6 = null;
-        oc var7 = null;
+        Widget var7 = null;
         int var8 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -76,24 +76,24 @@ class ib extends oc implements sd {
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = -60 % ((param1 - 51) / 34);
-          if (this.field_G.isEmpty(false)) {
+          if (this.children.isEmpty(false)) {
             return false;
           }
-          var4 = new NodeDequeCursor(this.field_G);
-          var5 = (oc) (var4.last(true));
+          var4 = new NodeDequeCursor(this.children);
+          var5 = (Widget) (var4.last(true));
           while (var5 != null) {
-            if (var5.f(-57)) {
-              var6 = new NodeDequeCursor(this.field_G);
+            if (var5.isFocused(-57)) {
+              var6 = new NodeDequeCursor(this.children);
               var6.lastFrom(16802, var5);
-              var7 = (oc) (var6.previous(-24706));
+              var7 = (Widget) (var6.previous(-24706));
               while (var7 != null) {
-                if (var7.a(true, param0)) {
+                if (var7.tryFocus(true, param0)) {
                   return true;
                 }
-                var7 = (oc) (var6.previous(-24706));
+                var7 = (Widget) (var6.previous(-24706));
               }
             }
-            var5 = (oc) (var4.previous(-24706));
+            var5 = (Widget) (var4.previous(-24706));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -110,49 +110,49 @@ class ib extends oc implements sd {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         int var7 = BrickABrac.field_J ? 1 : 0;
-        if (param2 == 0 &&
-          this.field_l != null) {
-          this.field_l.a(true, param3 - 20607, param1, (oc) (this), param0);
+        if (layer == 0 &&
+          this.renderer != null) {
+          this.renderer.paintWidget(true, obfuscationGuard - 20607, parentX, (Widget) (this), parentY);
         }
-        NodeDequeCursor var5 = new NodeDequeCursor(this.field_G);
-        if (param3 != -11) {
-          this.field_G = (NodeDeque) null;
+        NodeDequeCursor var5 = new NodeDequeCursor(this.children);
+        if (obfuscationGuard != -11) {
+          this.children = (NodeDeque) null;
         }
-        oc var6 = (oc) (var5.last(true));
+        Widget var6 = (Widget) (var5.last(true));
         while (var6 != null) {
-          var6.a(this.field_w + param0, this.field_o + param1, param2, (byte) -11);
-          var6 = (oc) (var5.previous(param3 - 24695));
+          var6.drawLayer(this.y + parentY, this.x + parentX, layer, (byte) -11);
+          var6 = (Widget) (var5.previous(obfuscationGuard - 24695));
         }
     }
 
-    final void a(oc param0, boolean param1) {
+    final void addChild(Widget child, boolean obfuscationGuard) {
         try {
-          this.field_G.addLast(param0, (byte) 3);
-          if (!param1) {
+          this.children.addLast(child, (byte) 3);
+          if (!obfuscationGuard) {
             field_F = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ib.IB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ib.IB(" + (child != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
     private final void g(int param0) {
         int var5 = BrickABrac.field_J ? 1 : 0;
-        NodeDequeCursor var2 = new NodeDequeCursor(this.field_G);
+        NodeDequeCursor var2 = new NodeDequeCursor(this.children);
         int var3 = -77 % ((param0 - 69) / 46);
-        oc var4 = (oc) (var2.first(240));
+        Widget var4 = (Widget) (var2.first(240));
         while (var4 != null) {
-          var4.e(1);
-          var4 = (oc) (var2.next(7));
+          var4.relayout(1);
+          var4 = (Widget) (var2.next(7));
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, oc param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
         NodeDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        oc var9 = null;
+        Widget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -160,15 +160,15 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var8 = new NodeDequeCursor(this.field_G);
-          var9 = (oc) (var8.first(240));
+          var8 = new NodeDequeCursor(this.children);
+          var9 = (Widget) (var8.first(240));
           while (var9 != null) {
             if (var9.isLinked(0)) {
-              if (var9.f(-65) &&
+              if (var9.isFocused(-65) &&
                 var9.a(param0, param1, param2, -126, param4, param5, param6)) {
                 return true;
               }
-              var9 = (oc) (var8.next(7));
+              var9 = (Widget) (var8.next(7));
               continue;
             }
             break;
@@ -176,7 +176,7 @@ class ib extends oc implements sd {
           if (param3 < -125) {
             return false;
           }
-          this.field_G = (NodeDeque) null;
+          this.children = (NodeDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -200,10 +200,10 @@ class ib extends oc implements sd {
         field_C = null;
     }
 
-    final boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         NodeDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        oc var9 = null;
+        Widget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -211,15 +211,15 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          var8 = new NodeDequeCursor(this.field_G);
-          if (param6 != 0) {
+          var8 = new NodeDequeCursor(this.children);
+          if (obfuscationGuard != 0) {
             return true;
           }
-          var9 = (oc) (var8.first(240));
+          var9 = (Widget) (var8.first(240));
           while (var9 != null) {
-            if (var9.isLinked(param6 ^ 0)) {
-              if (!var9.a(param0, param1, param2 + this.field_o, this.field_w + param3, param4, param5, 0)) {
-                var9 = (oc) (var8.next(7));
+            if (var9.isLinked(obfuscationGuard ^ 0)) {
+              if (!var9.handlePointerPress(focusRoot, pointerX, parentX + this.x, this.y + parentY, button, pointerY, 0)) {
+                var9 = (Widget) (var8.next(7));
                 continue;
               }
               return true;
@@ -232,19 +232,19 @@ class ib extends oc implements sd {
           var8_ref = decompiledCaughtException;
           stackIn_15_0 = var8_ref;
           stackIn_15_1 = new StringBuilder().append("ib.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
+    final void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
         RuntimeException runtimeException = null;
         NodeDequeCursor var7 = null;
-        oc var8 = null;
+        Widget var8 = null;
         int var9 = 0;
         StringBuilder var10 = null;
         RuntimeException stackIn_9_0 = null;
@@ -253,16 +253,16 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          var7 = new NodeDequeCursor(this.field_G);
-          var8 = (oc) (var7.first(240));
-          if (param4 != 19223) {
+          var7 = new NodeDequeCursor(this.children);
+          var8 = (Widget) (var7.first(240));
+          if (obfuscationGuard != 19223) {
             var10 = (StringBuilder) null;
             this.a(-102, (Hashtable) null, 23, (StringBuilder) null);
           }
           while (var8 != null) {
             if (var8.isLinked(0)) {
-              var8.a(param0, param1, param2 + this.field_w, param3, 19223, param5 + this.field_o);
-              var8 = (oc) (var7.next(7));
+              var8.handlePointerRelease(pointerY, pointerX, parentY + this.y, focusRoot, 19223, parentX + this.x);
+              var8 = (Widget) (var7.next(7));
               continue;
             }
             break;
@@ -272,13 +272,13 @@ class ib extends oc implements sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_9_0 = runtimeException;
-          stackIn_9_1 = new StringBuilder().append("ib.GA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_9_1 = new StringBuilder().append("ib.GA(").append(pointerY).append(',').append(pointerX).append(',').append(parentY).append(',');
+          if (focusRoot == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ class ib extends oc implements sd {
             }
           }
           if (param1 != -1) {
-            ib.a(89, false, 71, 122, false, 9, -88);
+            WidgetGroup.a(89, false, 71, 122, false, 9, -88);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -320,9 +320,9 @@ class ib extends oc implements sd {
         int var7 = 0;
         StringBuilder discarded$3 = null;
         NodeDequeCursor var5 = null;
-        oc var6 = null;
+        Widget var6 = null;
         int var8 = 0;
-        oc var9 = null;
+        Widget var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -332,19 +332,19 @@ class ib extends oc implements sd {
         RuntimeException var5_ref = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var5 = new NodeDequeCursor(this.field_G);
-          var6 = (oc) (var5.first(240));
+          var5 = new NodeDequeCursor(this.children);
+          var6 = (Widget) (var5.first(240));
           while (var6 != null) {
             discarded$2 = param0.append('\n');
             for (var7 = 0; param1 >= var7; var7++) {
               discarded$3 = param0.append(' ');
             }
             var6.a(param1 + 1, param3, 24, param0);
-            var6 = (oc) (var5.next(7));
+            var6 = (Widget) (var5.next(7));
           }
           if (param2 <= 52) {
-            var9 = (oc) null;
-            this.a((oc) null, (byte) -19);
+            var9 = (Widget) null;
+            this.a((Widget) null, (byte) -19);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -456,7 +456,7 @@ class ib extends oc implements sd {
             this.a(param3, param0, (byte) 104, param1);
           }
           if (param2 != 24) {
-            this.field_G = (NodeDeque) null;
+            this.children = (NodeDeque) null;
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -480,63 +480,63 @@ class ib extends oc implements sd {
         }
     }
 
-    final boolean f(int param0) {
-        if (param0 > -49) {
+    final boolean isFocused(int obfuscationGuard) {
+        if (obfuscationGuard > -49) {
           this.g(4);
         }
         return this.g((byte) -3) != null ? true : false;
     }
 
-    ib(int param0, int param1, int param2, int param3, ub param4) {
-        super(param0, param1, param2, param3, param4, (uh) null);
-        this.field_G = new NodeDeque();
+    WidgetGroup(int x, int y, int width, int height, WidgetRenderer renderer) {
+        super(x, y, width, height, renderer, (WidgetListener) null);
+        this.children = new NodeDeque();
     }
 
-    oc g(byte param0) {
+    Widget g(byte param0) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        NodeDequeCursor var2 = new NodeDequeCursor(this.field_G);
-        oc var3 = (oc) (var2.first(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.children);
+        Widget var3 = (Widget) (var2.first(240));
         while (var3 != null) {
-          if (var3.f(-83)) {
+          if (var3.isFocused(-83)) {
             return var3;
           }
-          var3 = (oc) (var2.next(7));
+          var3 = (Widget) (var2.next(7));
         }
         if (param0 == -3) {
           return null;
         }
-        oc var5 = (oc) null;
-        this.a((oc) null, (byte) -16, -70, 95);
+        Widget var5 = (Widget) null;
+        this.updatePointer((Widget) null, (byte) -16, -70, 95);
         return null;
     }
 
-    String d(int param0) {
+    String getTooltip(int obfuscationGuard) {
         NodeDequeCursor var2;
-        oc var3;
+        Widget var3;
         String var4;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        var2 = new NodeDequeCursor(this.field_G);
-        if (param0 < 6) {
+        var2 = new NodeDequeCursor(this.children);
+        if (obfuscationGuard < 6) {
           return (String) null;
         }
-        var3 = (oc) (var2.first(240));
+        var3 = (Widget) (var2.first(240));
         while (var3 != null) {
-          var4 = var3.d(37);
+          var4 = var3.getTooltip(37);
           if (var4 != null) {
             return var4;
           }
-          var3 = (oc) (var2.next(7));
+          var3 = (Widget) (var2.next(7));
         }
         return null;
     }
 
-    boolean a(int param0, byte param1, oc param2, char param3) {
+    boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
         StringBuilder var8 = null;
-        oc var9 = null;
+        Widget var9 = null;
         NodeDequeCursor var10 = null;
         boolean stackIn_17_0 = false;
         RuntimeException stackIn_20_0 = null;
@@ -545,15 +545,15 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          var10 = new NodeDequeCursor(this.field_G);
-          var9 = (oc) (var10.first(param1 + 130));
+          var10 = new NodeDequeCursor(this.children);
+          var9 = (Widget) (var10.first(param1 + 130));
           while (var9 != null) {
             if (var9.isLinked(0)) {
-              if (var9.f(-118) &&
+              if (var9.isFocused(-118) &&
                 var9.a(param0, (byte) 110, param2, param3)) {
                 return true;
               }
-              var9 = (oc) (var10.next(param1 ^ 105));
+              var9 = (Widget) (var10.next(param1 ^ 105));
               continue;
             }
             break;
@@ -586,21 +586,21 @@ class ib extends oc implements sd {
         }
     }
 
-    final void b(boolean param0) {
+    final void clearFocus(boolean obfuscationGuard) {
         int var4 = BrickABrac.field_J ? 1 : 0;
-        if (param0) {
-          ib.f((byte) 29);
+        if (obfuscationGuard) {
+          WidgetGroup.f((byte) 29);
         }
-        NodeDequeCursor var2 = new NodeDequeCursor(this.field_G);
-        oc var3 = (oc) (var2.first(240));
+        NodeDequeCursor var2 = new NodeDequeCursor(this.children);
+        Widget var3 = (Widget) (var2.first(240));
         while (var3 != null) {
-          var3.b(false);
-          var3 = (oc) (var2.next(7));
+          var3.clearFocus(false);
+          var3 = (Widget) (var2.next(7));
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
+        super.setBounds(height, x, y, obfuscationGuard, width);
         this.g(116);
     }
 
@@ -609,22 +609,22 @@ class ib extends oc implements sd {
         int var7 = BrickABrac.field_J ? 1 : 0;
         int var3 = -70 % ((-17 - param0) / 43);
         int var2 = 0;
-        NodeDequeCursor var4 = new NodeDequeCursor(this.field_G);
-        oc var5 = (oc) (var4.first(240));
+        NodeDequeCursor var4 = new NodeDequeCursor(this.children);
+        Widget var5 = (Widget) (var4.first(240));
         while (var5 != null) {
           var6 = var5.e((byte) -86);
           if (var6 > var2) {
             var2 = var6;
           }
-          var5 = (oc) (var4.next(7));
+          var5 = (Widget) (var4.next(7));
         }
         return var2;
     }
 
-    final boolean a(boolean param0, oc param1) {
+    final boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
         NodeDequeCursor var3 = null;
         RuntimeException var3_ref = null;
-        oc var4 = null;
+        Widget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -632,17 +632,17 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          var3 = new NodeDequeCursor(this.field_G);
-          if (!param0) {
+          var3 = new NodeDequeCursor(this.children);
+          if (!obfuscationGuard) {
             return true;
           }
-          var4 = (oc) (var3.first(240));
+          var4 = (Widget) (var3.first(240));
           while (true) {
             if (var4 == null) {
               return false;
             }
-            if (!var4.a(param0, param1)) {
-              var4 = (oc) (var3.next(7));
+            if (!var4.tryFocus(obfuscationGuard, focusRoot)) {
+              var4 = (Widget) (var3.next(7));
               continue;
             }
             break;
@@ -652,8 +652,8 @@ class ib extends oc implements sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
-          stackIn_14_1 = new StringBuilder().append("ib.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("ib.CA(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -662,10 +662,10 @@ class ib extends oc implements sd {
         }
     }
 
-    void a(oc param0, byte param1, int param2, int param3) {
+    void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         RuntimeException runtimeException = null;
         NodeDequeCursor var5 = null;
-        oc var6 = null;
+        Widget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -673,13 +673,13 @@ class ib extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
-          var5 = new NodeDequeCursor(this.field_G);
-          var6 = (oc) (var5.first(240));
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
+          var5 = new NodeDequeCursor(this.children);
+          var6 = (Widget) (var5.first(240));
           while (var6 != null) {
-            if (var6.isLinked(param1 + 0)) {
-              var6.a(param0, (byte) 0, this.field_o + param2, this.field_w + param3);
-              var6 = (oc) (var5.next(7));
+            if (var6.isLinked(obfuscationGuard + 0)) {
+              var6.updatePointer(focusRoot, (byte) 0, this.x + parentX, this.y + parentY);
+              var6 = (Widget) (var5.next(7));
               continue;
             }
             break;
@@ -690,12 +690,12 @@ class ib extends oc implements sd {
           runtimeException = decompiledCaughtException;
           stackIn_8_0 = runtimeException;
           stackIn_8_1 = new StringBuilder().append("ib.WA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 

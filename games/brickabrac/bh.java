@@ -17,7 +17,7 @@ final class bh extends fe {
         }
     }
 
-    bh(cp param0, oc param1) {
+    bh(cp param0, Widget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -32,7 +32,7 @@ final class bh extends fe {
         field_sb = null;
     }
 
-    final void b(byte param0, oc param1) {
+    final void b(byte param0, Widget param1) {
         if (param0 <= 105) {
           return;
         }

@@ -201,22 +201,22 @@ final class sq {
         if (!pf.field_f) {
           if (!param0) {
             if (GzipInflater.field_g) {
-              if (d.recentRenderRate != BoundedFile.field_c) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
                 discarded$9 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = d.recentRenderRate;
+                BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.field_g) {
-              if (d.recentRenderRate != BoundedFile.field_c) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
                 discarded$8 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = d.recentRenderRate;
+                BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
@@ -239,22 +239,22 @@ final class sq {
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
-              if (d.recentRenderRate != BoundedFile.field_c) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
                 discarded$13 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = d.recentRenderRate;
+                BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.field_g) {
-              if (d.recentRenderRate != BoundedFile.field_c) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
                 discarded$12 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = d.recentRenderRate;
+                BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
@@ -265,22 +265,22 @@ final class sq {
           ff.field_d.addLast(bj.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
-              if (d.recentRenderRate != BoundedFile.field_c) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
                 discarded$14 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = d.recentRenderRate;
+                BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.field_g) {
-              if (d.recentRenderRate != BoundedFile.field_c) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
                 bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
                 discarded$15 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = d.recentRenderRate;
+                BoundedFile.field_c = FocusableWidget.recentRenderRate;
               }
               ff.field_d.addLast(bq.field_b, (byte) 3);
             }
@@ -297,22 +297,22 @@ final class sq {
         ff.field_d.addLast(bj.field_P, (byte) 3);
         if (!param0) {
           if (GzipInflater.field_g) {
-            if (d.recentRenderRate != BoundedFile.field_c) {
+            if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
               bq.field_b.field_l.setLength(0);
-              DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+              DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
               discarded$18 = bq.field_b.field_l.append(" fps");
-              BoundedFile.field_c = d.recentRenderRate;
+              BoundedFile.field_c = FocusableWidget.recentRenderRate;
             }
             ff.field_d.addLast(bq.field_b, (byte) 3);
           }
         } else {
           sq.a(15);
           if (GzipInflater.field_g) {
-            if (d.recentRenderRate != BoundedFile.field_c) {
+            if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
               bq.field_b.field_l.setLength(0);
-              DelegatingCanvas.a(-9, (long)d.recentRenderRate, bq.field_b.field_l);
+              DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
               discarded$19 = bq.field_b.field_l.append(" fps");
-              BoundedFile.field_c = d.recentRenderRate;
+              BoundedFile.field_c = FocusableWidget.recentRenderRate;
             }
             ff.field_d.addLast(bq.field_b, (byte) 3);
           }

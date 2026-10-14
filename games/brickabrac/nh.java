@@ -399,7 +399,7 @@ final class nh {
               var10 = 2;
               if (null != ContextMenu.field_bc) {
                 if (qo.field_J == null) {
-                  h.field_D = new boolean[RankingsRequest.gameSettingCount];
+                  SingleChildWidget.field_D = new boolean[RankingsRequest.gameSettingCount];
                   qo.field_J = new byte[RankingsRequest.gameSettingCount];
                 }
                 var11 = 0;
@@ -408,7 +408,7 @@ final class nh {
                     var10 = 0;
                     break;
                   }
-                  h.field_D[var11] = false;
+                  SingleChildWidget.field_D[var11] = false;
                   var11++;
                 } while (var19 == 0);
                 scanLoop1: while (true) {
@@ -471,7 +471,7 @@ final class nh {
                             }
                             var15 += 2;
                           }
-                          h.field_D[var14] = true;
+                          SingleChildWidget.field_D[var14] = true;
                           break;
                         }
                         var12++;
@@ -503,7 +503,7 @@ final class nh {
                   var13 = 0;
                   while (true) {
                     if (RankingsRequest.gameSettingCount > var13) {
-                      stackOut_80_0 = h.field_D[var13];
+                      stackOut_80_0 = SingleChildWidget.field_D[var13];
                       stackIn_87_0 = stackOut_80_0 ? 1 : 0;
                       stackIn_81_0 = stackOut_80_0;
                       if (var19 == 0) {

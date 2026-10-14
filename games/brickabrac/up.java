@@ -128,8 +128,8 @@ final class up extends um {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, oc param3, int param4) {
-        oc stackIn_5_0 = null;
+    public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
+        Widget stackIn_5_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -137,74 +137,74 @@ final class up extends um {
         RuntimeException var6 = null;
         be var7 = null;
         be var9 = null;
-        d var10 = null;
+        FocusableWidget var10 = null;
         be var11 = null;
         be var12 = null;
         be var13 = null;
         be var14 = null;
         try {
-          if (param1 != -20618) {
+          if (callbackGuard != -20618) {
             up.b(62);
           }
-          if (!(param3 instanceof d)) {
+          if (!(widget instanceof FocusableWidget)) {
             stackIn_5_0 = null;
           } else {
-            stackIn_5_0 = (oc) (param3);
+            stackIn_5_0 = (Widget) (widget);
           }
-          var10 = (d) (stackIn_5_0);
-          MovingBody.a((byte) 106, param3.field_t + param3.field_o + param2, param2 + param3.field_o, param4 + param3.field_w, param4 + param3.field_w + param3.field_s);
+          var10 = (FocusableWidget) (stackIn_5_0);
+          MovingBody.a((byte) 106, widget.width + widget.x + parentX, parentX + widget.x, parentY + widget.y, parentY + widget.y + widget.height);
           if (var10 != null) {
-            param0 = param0 & var10.field_J;
+            obfuscationGuard = obfuscationGuard & var10.enabled;
           }
           var7 = this.field_y[0];
           this.field_B.a(-2147483648);
-          var7.a(this.field_B, 2147483647, this, param3, param2, param4);
+          var7.a(this.field_B, 2147483647, this, widget, parentX, parentY);
           if (var10 != null) {
-            if (var10.field_F) {
+            if (var10.active) {
               var11 = this.field_y[1];
               if (var11 != null) {
-                var11.a(this.field_B, 2147483647, this, param3, param2, param4);
+                var11.a(this.field_B, 2147483647, this, widget, parentX, parentY);
               }
             }
-            if (var10.field_q) {
+            if (var10.mouseOver) {
               var12 = this.field_y[3];
-              if (var10.field_n != 0 &&
+              if (var10.pressedButton != 0 &&
                 var12 != null) {
-                var12.a(this.field_B, 2147483647, this, param3, param2, param4);
+                var12.a(this.field_B, 2147483647, this, widget, parentX, parentY);
               } else {
                 var9 = this.field_y[2];
                 if (var9 != null) {
-                  var9.a(this.field_B, 2147483647, this, param3, param2, param4);
+                  var9.a(this.field_B, 2147483647, this, widget, parentX, parentY);
                 }
               }
             }
           }
-          if (param3.f(-76)) {
+          if (widget.isFocused(-76)) {
             var13 = this.field_y[5];
             if (var13 != null) {
-              var13.a(this.field_B, 2147483647, this, param3, param2, param4);
+              var13.a(this.field_B, 2147483647, this, widget, parentX, parentY);
             }
           }
-          if (!param0) {
+          if (!obfuscationGuard) {
             var14 = this.field_y[4];
             if (var14 != null) {
-              var14.a(this.field_B, 2147483647, this, param3, param2, param4);
+              var14.a(this.field_B, 2147483647, this, widget, parentX, parentY);
             }
           }
-          this.field_B.a(param4, this, param3, (byte) -109, param2);
-          sc.popRaster(param1 ^ 20704);
+          this.field_B.a(parentY, this, widget, (byte) -109, parentX);
+          sc.popRaster(callbackGuard ^ 20704);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_32_0 = var6;
-          stackIn_32_1 = new StringBuilder().append("up.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_32_1 = new StringBuilder().append("up.AA(").append(obfuscationGuard).append(',').append(callbackGuard).append(',').append(parentX).append(',');
+          if (widget == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(parentY).append(')').toString());
         }
     }
 

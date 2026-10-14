@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb extends h {
+final class jb extends SingleChildWidget {
     static int field_H;
     static String field_G;
     static int[] field_I;
 
-    final void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
+    final void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
         dn var7 = null;
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
+          super.handlePointerRelease(pointerY, pointerX, parentY, focusRoot, obfuscationGuard, parentX);
           var7 = gd.field_c;
           if (var7 != null &&
-            this.a(param0, param2, param5, 3, param1)) {
-            if (this.field_i instanceof em) {
-              ((em) (this.field_i)).a(-24178, var7, this);
+            this.containsPoint(pointerY, parentY, parentX, 3, pointerX)) {
+            if (this.listener instanceof em) {
+              ((em) (this.listener)).a(-24178, var7, this);
               gd.field_c = null;
               return;
             }
-            if (var7.field_i instanceof em) {
-              ((em) (var7.field_i)).a(-24178, var7, this);
+            if (var7.listener instanceof em) {
+              ((em) (var7.listener)).a(-24178, var7, this);
               gd.field_c = null;
               return;
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jb.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jb.GA(" + pointerY + ',' + pointerX + ',' + parentY + ',' + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ')');
         }
     }
 
-    private jb(int param0, int param1, int param2, int param3, ub param4, uh param5, oc param6) {
+    private jb(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, Widget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
-          this.field_E = param6;
+          this.child = param6;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ')');
         }

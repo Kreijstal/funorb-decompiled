@@ -105,11 +105,11 @@ final class ContextActionController {
                     var2.directJoinAvailable)) {
                     this.contextMenu.addAction(rd.a(qp.field_a, new String[]{var3}, (byte) 103), 2, (byte) 105);
                     if (var4 != 0) {
-                      this.contextMenu.addAction(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
+                      this.contextMenu.addAction(rd.a(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                     }
                   }
                 } else {
-                  this.contextMenu.addAction(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
+                  this.contextMenu.addAction(rd.a(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                 }
                 if (var2.joinRequestPending) {
                   this.contextMenu.addAction(rd.a(rm.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
@@ -258,7 +258,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ticketing_oneunread", (byte) 113);
                 if (var2 != null) {
-                  ib.field_C = MenuButton.a(var2, (byte) 110);
+                  WidgetGroup.field_C = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("ticketing_xunread", (byte) -111);
                 if (null != var2) {
@@ -526,7 +526,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("join_xs_game", (byte) -122);
                 if (null != var2) {
-                  d.field_G = MenuButton.a(var2, (byte) 71);
+                  FocusableWidget.field_G = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("join_request_xs_game", (byte) 24);
                 if (null != var2) {
@@ -1488,51 +1488,51 @@ final class ContextActionController {
                 }
                 var2 = nk.a("monthnames,0", (byte) -128);
                 if (null != var2) {
-                  oc.field_v[0] = MenuButton.a(var2, (byte) 78);
+                  Widget.field_v[0] = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = nk.a("monthnames,1", (byte) -123);
                 if (var2 != null) {
-                  oc.field_v[1] = MenuButton.a(var2, (byte) 74);
+                  Widget.field_v[1] = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("monthnames,2", (byte) 61);
                 if (null != var2) {
-                  oc.field_v[2] = MenuButton.a(var2, (byte) 71);
+                  Widget.field_v[2] = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("monthnames,3", (byte) -116);
                 if (var2 != null) {
-                  oc.field_v[3] = MenuButton.a(var2, (byte) 124);
+                  Widget.field_v[3] = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("monthnames,4", (byte) -111);
                 if (null != var2) {
-                  oc.field_v[4] = MenuButton.a(var2, (byte) 95);
+                  Widget.field_v[4] = MenuButton.a(var2, (byte) 95);
                 }
                 var2 = nk.a("monthnames,5", (byte) -127);
                 if (var2 != null) {
-                  oc.field_v[5] = MenuButton.a(var2, (byte) 114);
+                  Widget.field_v[5] = MenuButton.a(var2, (byte) 114);
                 }
                 var2 = nk.a("monthnames,6", (byte) -108);
                 if (null != var2) {
-                  oc.field_v[6] = MenuButton.a(var2, (byte) 92);
+                  Widget.field_v[6] = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("monthnames,7", (byte) 122);
                 if (var2 != null) {
-                  oc.field_v[7] = MenuButton.a(var2, (byte) 89);
+                  Widget.field_v[7] = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("monthnames,8", (byte) -113);
                 if (var2 != null) {
-                  oc.field_v[8] = MenuButton.a(var2, (byte) 82);
+                  Widget.field_v[8] = MenuButton.a(var2, (byte) 82);
                 }
                 var2 = nk.a("monthnames,9", (byte) -123);
                 if (null != var2) {
-                  oc.field_v[9] = MenuButton.a(var2, (byte) 74);
+                  Widget.field_v[9] = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = nk.a("monthnames,10", (byte) 83);
                 if (null != var2) {
-                  oc.field_v[10] = MenuButton.a(var2, (byte) 99);
+                  Widget.field_v[10] = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("monthnames,11", (byte) 112);
                 if (var2 != null) {
-                  oc.field_v[11] = MenuButton.a(var2, (byte) 101);
+                  Widget.field_v[11] = MenuButton.a(var2, (byte) 101);
                 }
                 var2 = nk.a("create_welcome", (byte) -17);
                 if (var2 != null) {
@@ -1958,7 +1958,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("loading_graphics", (byte) 111);
                 if (null != var2) {
-                  ib.field_F = MenuButton.a(var2, (byte) 87);
+                  WidgetGroup.field_F = MenuButton.a(var2, (byte) 87);
                 }
                 var2 = nk.a("loading_models", (byte) -110);
                 if (var2 != null) {
@@ -2070,7 +2070,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("achievements", (byte) -116);
                 if (null != var2) {
-                  d.field_D = MenuButton.a(var2, (byte) 121);
+                  FocusableWidget.field_D = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = nk.a("achievementsthisgame", (byte) 22);
                 if (null != var2) {
@@ -3223,7 +3223,7 @@ final class ContextActionController {
         SocialListEntry friend = null;
         int ignoredPlayer = 0;
         try {
-          if (null != this.targetName && (oc.field_p != this.targetId ||
+          if (null != this.targetName && (Widget.field_p != this.targetId ||
             channel == 2) && 2 == LevelMetadata.field_m) {
             caption = this.getTargetCaption(-12688);
             friend = pf.findFriend(false, this.targetName);
@@ -3288,7 +3288,7 @@ final class ContextActionController {
             this.drawContextMenu((byte) -36, true);
           }
           if (this.targetName != null &&
-            ~oc.field_p != ~this.targetId &&
+            ~Widget.field_p != ~this.targetId &&
             null != o.currentLobbyGame &&
             hn.b((byte) 7)) {
             gamePlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, this.targetId);
@@ -3341,7 +3341,7 @@ final class ContextActionController {
             this.handleContextCancelKey(32);
           }
           if (null != this.targetName &&
-            this.targetId != oc.field_p) {
+            this.targetId != Widget.field_p) {
             var2 = this.getTargetCaption(-12688);
             this.contextMenu.addAction(rd.a(DesertBackground.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
           }

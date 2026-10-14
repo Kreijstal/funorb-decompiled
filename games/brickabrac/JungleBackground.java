@@ -531,7 +531,7 @@ final class JungleBackground extends BackgroundScene {
                   ContextMenu.field_bc != null && (!param2 ||
                   !fh.pendingGameOptionsReceived)) {
                   if (qo.field_J == null) {
-                    h.field_D = new boolean[RankingsRequest.gameSettingCount];
+                    SingleChildWidget.field_D = new boolean[RankingsRequest.gameSettingCount];
                     qo.field_J = new byte[RankingsRequest.gameSettingCount];
                   }
                   MeshAttributeRecord.field_g = false;
@@ -539,7 +539,7 @@ final class JungleBackground extends BackgroundScene {
                   var17_int = 0;
                   while (true) {
                     if (var7 > var17_int) {
-                      h.field_D[var17_int] = false;
+                      SingleChildWidget.field_D[var17_int] = false;
                       var17_int++;
                       continue;
                     }
@@ -674,7 +674,7 @@ final class JungleBackground extends BackgroundScene {
                     var24 = 0;
                     while (true) {
                       if (var24 < var7) {
-                        stackOut_357_0 = h.field_D[var24];
+                        stackOut_357_0 = SingleChildWidget.field_D[var24];
                         stackIn_364_0 = stackOut_357_0 ? 1 : 0;
                         stackIn_358_0 = stackOut_357_0;
                         if (stackIn_358_0) {
@@ -903,7 +903,7 @@ final class JungleBackground extends BackgroundScene {
           if (BrickABrac.field_J) {
             var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              ArchiveFetchClient.a(var7, ib.field_E, colorIndex, 2, -13, true);
+              ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
             ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, sl.field_D);
@@ -911,7 +911,7 @@ final class JungleBackground extends BackgroundScene {
         } else {
           var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ArchiveFetchClient.a(var7, ib.field_E, colorIndex, 2, -13, true);
+            ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ef.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, sl.field_D);
@@ -931,7 +931,7 @@ final class JungleBackground extends BackgroundScene {
         Brick.jungleSmallSprite = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
         sl.field_D = jh.a(0, ch.jungleNearSprite);
         HuffmanCodec.field_e = jh.a(0, dg.jungleMidSprite);
-        ib.field_E = jh.a(0, np.jungleFarSprite);
+        WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
         ep.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
         DualLinkNode.jungleCapsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
         DualLinkIterator.jungleSegsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);

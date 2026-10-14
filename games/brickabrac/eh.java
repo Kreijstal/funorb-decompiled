@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eh {
-    ub field_i;
+    WidgetRenderer field_i;
     TextFont field_l;
     int field_h;
     int field_g;
     int field_m;
-    ub field_q;
+    WidgetRenderer field_q;
     int field_p;
     private int field_c;
     static String[] field_e;
@@ -15,11 +15,11 @@ final class eh {
     int field_j;
     static int chatHistoryCategoryLimit;
     static UiComponent field_n;
-    ub field_b;
-    ub field_r;
+    WidgetRenderer field_b;
+    WidgetRenderer field_r;
     int field_a;
     static String field_d;
-    ub field_o;
+    WidgetRenderer field_o;
     private boolean field_s;
 
     public static void a(int param0) {
@@ -57,7 +57,7 @@ final class eh {
         try {
           var17 = new um(param0, 2, 2, 2236962, 1, 1, 1, param0.ascent + param0.descent + 2);
           var17.field_r = 16777215;
-          this.field_i = (ub) ((Object) var17);
+          this.field_i = (WidgetRenderer) ((Object) var17);
           var4 = new up();
           var17.a(-86, var4);
           var4.field_s = 15658734;
@@ -83,21 +83,21 @@ final class eh {
           var5[4] = (RgbSprite) ((Object) var18);
           var4.b(4, 121).a(true, false).a(var5, -2147483648);
           var4.b(5, param1 ^ 13421757).a(VerticalScrollbar.a(0, 0, 65793, 1, 0), param1 ^ -2134061876).a(true, false).a(false, -1);
-          this.field_q = (ub) ((Object) var4);
+          this.field_q = (WidgetRenderer) ((Object) var4);
           var6 = new up(var4, true);
           var6.field_f = 0;
           var7 = new up(var4, true);
           var7.field_f = 0;
           var7.a(BallPulseEffect.a(8947848, false), false);
           var7.b(1, 110).a(BallPulseEffect.a(11184810, false), param1 + 2134061876).a(false, 2236962);
-          this.field_o = (ub) ((Object) new ei(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_o = (WidgetRenderer) ((Object) new ei(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new pf(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new dg(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new up();
           var17.a(-68, var8);
           var8.b(0, 105).a(ScorePopup.a(10066329, 7829367, (byte) 124, 15658734), -2147483648).a(false, 1118481).a(-1, (byte) -69);
           var8.b(4, 108).a(true, false).a(var5, -2147483648);
-          this.field_b = (ub) ((Object) var8);
+          this.field_b = (WidgetRenderer) ((Object) var8);
           var9 = new RgbSprite[9];
           var9[4] = new RgbSprite(2, 1);
           var10 = new RgbSprite[9];

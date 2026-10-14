@@ -47,7 +47,7 @@ final class g extends k {
           if (param0 != 0) {
             g.b(true);
           }
-          var3 = this.field_k.field_A.toLowerCase();
+          var3 = this.field_k.text.toLowerCase();
           var4 = param1.toLowerCase();
           if (var3.length() > 0 &&
             var4.length() > 0) {
@@ -110,7 +110,7 @@ final class g extends k {
         String stackIn_37_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = this.field_p.field_A.toLowerCase();
+          var7 = this.field_p.text.toLowerCase();
           var4 = param1.toLowerCase();
           var5 = -62 % ((-16 - param0) / 50);
           if (var4.length() == 0) {
@@ -190,7 +190,7 @@ final class g extends k {
           if (param1 != 106) {
             field_q = (String) null;
           }
-          var3 = this.field_p.field_A.toLowerCase();
+          var3 = this.field_p.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (0 == var4.length()) {
             stackIn_4_0 = lp.field_xb;

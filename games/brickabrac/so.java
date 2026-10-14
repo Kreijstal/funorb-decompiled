@@ -214,7 +214,7 @@ final class so {
           }
           MenuSelection.field_k = pl.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
           Ball.field_D = pl.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
-          h.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
+          SingleChildWidget.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
           dg.field_b = cr.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
           GameConnectionShell.field_D = cr.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
           dk.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
@@ -239,9 +239,9 @@ final class so {
           BrickMotionPath.field_r = cr.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = cr.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
           qh.field_e = um.a("basic", "congratulations", 1593955777, param0);
-          pa.field_m = new RgbSprite[h.field_C.length];
+          pa.field_m = new RgbSprite[SingleChildWidget.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
-            pa.field_m[var10_intLifetime2] = h.field_C[var10_intLifetime2].toRgbSprite();
+            pa.field_m[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
           }
           pa.field_m[24].bindRasterTarget();
           Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);

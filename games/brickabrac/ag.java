@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-abstract class ag extends oc implements sd {
-    oc[] field_H;
+abstract class ag extends Widget implements WidgetContainer {
+    Widget[] field_H;
     static int[] field_M;
     static String field_I;
     static ResourceArchive field_G;
@@ -31,11 +31,11 @@ abstract class ag extends oc implements sd {
         var1Lifetime1 = -4 % ((73 - param0) / 40);
     }
 
-    private final boolean a(int param0, int param1, oc param2) {
+    private final boolean a(int param0, int param1, Widget param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        oc var5 = null;
-        oc var6 = null;
+        Widget var5 = null;
+        Widget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -47,17 +47,17 @@ abstract class ag extends oc implements sd {
             return false;
           }
           if (param0 <= 99) {
-            this.f(-98);
+            this.isFocused(-98);
           }
           var4_int = -1 + this.field_H.length;
           while (var4_int >= 0) {
             var5 = this.field_H[var4_int];
             if (var5 != null &&
-              var5.f(-106)) {
+              var5.isFocused(-106)) {
               for (var4_int = var4_int - param1; 0 <= var4_int; var4_int = var4_int - param1) {
                 var6 = this.field_H[var4_int];
                 if (var6 != null &&
-                  var6.a(true, param2)) {
+                  var6.tryFocus(true, param2)) {
                   return true;
                 }
               }
@@ -79,23 +79,23 @@ abstract class ag extends oc implements sd {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
+    void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         int var5 = 0;
-        oc var6;
+        Widget var6;
         int var7;
         var7 = BrickABrac.field_J ? 1 : 0;
-        if (param3 != -11) {
+        if (obfuscationGuard != -11) {
           return;
         }
-        if (param2 == 0 &&
-          null != this.field_l) {
-          this.field_l.a(true, param3 - 20607, param1, (oc) (this), param0);
+        if (layer == 0 &&
+          null != this.renderer) {
+          this.renderer.paintWidget(true, obfuscationGuard - 20607, parentX, (Widget) (this), parentY);
         }
         if (this.field_H != null) {
           for (var5 = -1 + this.field_H.length; var5 >= 0; var5--) {
             var6 = this.field_H[var5];
             if (var6 != null) {
-              var6.a(param0 + this.field_w, this.field_o + param1, param2, (byte) -11);
+              var6.drawLayer(parentY + this.y, this.x + parentX, layer, (byte) -11);
             }
           }
         }
@@ -116,7 +116,7 @@ abstract class ag extends oc implements sd {
         field_G = null;
     }
 
-    private final boolean a(int param0, oc param1) {
+    private final boolean a(int param0, Widget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -143,13 +143,13 @@ abstract class ag extends oc implements sd {
         }
     }
 
-    final boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         int var9 = 0;
-        oc[] var8 = null;
+        Widget[] var8 = null;
         RuntimeException var8_ref = null;
-        oc var10 = null;
+        Widget var10 = null;
         int var11 = 0;
-        oc[] var12 = null;
+        Widget[] var12 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -161,10 +161,10 @@ abstract class ag extends oc implements sd {
           }
           var12 = this.field_H;
           var8 = var12;
-          for (var9 = param6; var12.length > var9; var9++) {
+          for (var9 = obfuscationGuard; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.a(param0, param1, param2 + this.field_o, this.field_w + param3, param4, param5, 0)) {
+              var10.handlePointerPress(focusRoot, pointerX, parentX + this.x, this.y + parentY, button, pointerY, 0)) {
               return true;
             }
           }
@@ -174,24 +174,24 @@ abstract class ag extends oc implements sd {
           var8_ref = decompiledCaughtException;
           stackIn_17_0 = var8_ref;
           stackIn_17_1 = new StringBuilder().append("ag.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         int var6 = 0;
-        oc[] var5 = null;
+        Widget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        oc var7 = null;
+        Widget var7 = null;
         int var8 = 0;
-        oc var9 = null;
-        oc[] var10 = null;
+        Widget var9 = null;
+        Widget[] var10 = null;
         boolean stackIn_20_0 = false;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -205,13 +205,13 @@ abstract class ag extends oc implements sd {
           var10 = this.field_H;
           var5 = var10;
           if (param1 != 110) {
-            var9 = (oc) null;
-            this.a(26, 34, 108, (oc) null, -13, -79);
+            var9 = (Widget) null;
+            this.handlePointerRelease(26, 34, 108, (Widget) null, -13, -79);
           }
           for (var6 = 0; var6 < var10.length; var6++) {
             var7 = var10[var6];
             if (var7 != null &&
-              var7.f(-58) &&
+              var7.isFocused(-58) &&
               var7.a(param0, (byte) 110, param2, param3)) {
               return true;
             }
@@ -240,9 +240,9 @@ abstract class ag extends oc implements sd {
         }
     }
 
-    private final boolean b(boolean param0, oc param1) {
+    private final boolean b(boolean param0, Widget param1) {
         RuntimeException var3 = null;
-        oc var4 = null;
+        Widget var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -250,8 +250,8 @@ abstract class ag extends oc implements sd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            var4 = (oc) null;
-            this.a(91, (byte) 97, (oc) null, '<');
+            var4 = (Widget) null;
+            this.a(91, (byte) 97, (Widget) null, '<');
           }
           stackIn_3_0 = this.a(1, param1, (byte) 116);
           return stackIn_3_0;
@@ -269,13 +269,13 @@ abstract class ag extends oc implements sd {
         }
     }
 
-    final void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
+    final void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
         int var8 = 0;
-        oc[] var7 = null;
-        oc var9 = null;
+        Widget[] var7 = null;
+        Widget var9 = null;
         int var10 = 0;
-        oc var11 = null;
-        oc[] var12 = null;
+        Widget var11 = null;
+        Widget[] var12 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -283,9 +283,9 @@ abstract class ag extends oc implements sd {
         RuntimeException var7_ref = null;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param4 != 19223) {
-            var11 = (oc) null;
-            this.a(78, (byte) -22, (oc) null, '￻');
+          if (obfuscationGuard != 19223) {
+            var11 = (Widget) null;
+            this.a(78, (byte) -22, (Widget) null, '￻');
           }
           if (null == this.field_H) {
             return;
@@ -295,7 +295,7 @@ abstract class ag extends oc implements sd {
           for (var8 = 0; var12.length > var8; var8++) {
             var9 = var12[var8];
             if (var9 != null) {
-              var9.a(param0, param1, param2 + this.field_w, param3, param4 ^ 0, param5 + this.field_o);
+              var9.handlePointerRelease(pointerY, pointerX, parentY + this.y, focusRoot, obfuscationGuard ^ 0, parentX + this.x);
             }
           }
           return;
@@ -303,13 +303,13 @@ abstract class ag extends oc implements sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7_ref = decompiledCaughtException;
           stackIn_15_0 = var7_ref;
-          stackIn_15_1 = new StringBuilder().append("ag.GA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_15_1 = new StringBuilder().append("ag.GA(").append(pointerY).append(',').append(pointerX).append(',').append(parentY).append(',');
+          if (focusRoot == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(')').toString());
         }
     }
 
@@ -319,9 +319,9 @@ abstract class ag extends oc implements sd {
         StringBuilder discarded$6 = null;
         StringBuilder discarded$5 = null;
         int var6 = 0;
-        oc var7 = null;
+        Widget var7 = null;
         int var9 = 0;
-        oc[] var10 = null;
+        Widget[] var10 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -373,45 +373,45 @@ abstract class ag extends oc implements sd {
         }
     }
 
-    final boolean f(int param0) {
-        if (param0 > -49) {
-          this.field_H = (oc[]) null;
+    final boolean isFocused(int obfuscationGuard) {
+        if (obfuscationGuard > -49) {
+          this.field_H = (Widget[]) null;
         }
         return null != this.a((byte) -78) ? true : false;
     }
 
-    ag(int param0, int param1, int param2, int param3, ub param4) {
-        super(param0, param1, param2, param3, param4, (uh) null);
+    ag(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
+        super(param0, param1, param2, param3, param4, (WidgetListener) null);
     }
 
-    final void b(boolean param0) {
-        oc discarded$1 = null;
-        oc[] var2;
+    final void clearFocus(boolean obfuscationGuard) {
+        Widget discarded$1 = null;
+        Widget[] var2;
         int var3;
-        oc var4;
+        Widget var4;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
         var2 = this.field_H;
         var3 = 0;
-        if (param0) {
+        if (obfuscationGuard) {
           discarded$1 = this.a((byte) 108);
         }
         while (var2.length > var3) {
           var4 = var2[var3];
           if (var4 != null) {
-            var4.b(false);
+            var4.clearFocus(false);
           }
           var3++;
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, oc param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
         int var9 = 0;
-        oc[] var8 = null;
+        Widget[] var8 = null;
         RuntimeException var8_ref = null;
-        oc var10 = null;
+        Widget var10 = null;
         int var11 = 0;
-        oc[] var12 = null;
+        Widget[] var12 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -429,7 +429,7 @@ abstract class ag extends oc implements sd {
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null &&
-              var10.f(-109) &&
+              var10.isFocused(-109) &&
               var10.a(param0, param1, param2, -126, param4, param5, param6)) {
               return true;
             }
@@ -451,41 +451,41 @@ abstract class ag extends oc implements sd {
 
     abstract void a(int param0);
 
-    private final oc a(byte param0) {
+    private final Widget a(byte param0) {
         int var3 = 0;
-        oc[] var2;
-        oc var4;
+        Widget[] var2;
+        Widget var4;
         int var5;
-        oc[] var6;
+        Widget[] var6;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (null == this.field_H) {
           return null;
         }
         if (param0 != -78) {
-          return (oc) null;
+          return (Widget) null;
         }
         var6 = this.field_H;
         var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.f(-88)) {
+            var4.isFocused(-88)) {
             return var4;
           }
         }
         return null;
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        this.a(param3 ^ -251);
+    final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
+        super.setBounds(height, x, y, obfuscationGuard, width);
+        this.a(obfuscationGuard ^ -251);
     }
 
-    private final boolean a(int param0, oc param1, byte param2) {
+    private final boolean a(int param0, Widget param1, byte param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        oc var5 = null;
-        oc var6 = null;
+        Widget var5 = null;
+        Widget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -503,11 +503,11 @@ abstract class ag extends oc implements sd {
           while (this.field_H.length > var4_int) {
             var5 = this.field_H[var4_int];
             if (null != var5 &&
-              var5.f(-57)) {
+              var5.isFocused(-57)) {
               for (var4_int = var4_int + param0; this.field_H.length > var4_int; var4_int = var4_int + param0) {
                 var6 = this.field_H[var4_int];
                 if (null != var6 &&
-                  var6.a(true, param1)) {
+                  var6.tryFocus(true, param1)) {
                   return true;
                 }
               }
@@ -552,12 +552,12 @@ abstract class ag extends oc implements sd {
         }
     }
 
-    void a(oc param0, byte param1, int param2, int param3) {
+    void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         int var6 = 0;
-        oc[] var5 = null;
-        oc var7 = null;
+        Widget[] var5 = null;
+        Widget var7 = null;
         int var8 = 0;
-        oc[] var9 = null;
+        Widget[] var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -565,7 +565,7 @@ abstract class ag extends oc implements sd {
         RuntimeException var5_ref = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
           if (this.field_H == null) {
             return;
           }
@@ -574,7 +574,7 @@ abstract class ag extends oc implements sd {
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(param0, (byte) 0, this.field_o + param2, param3 + this.field_w);
+              var7.updatePointer(focusRoot, (byte) 0, this.x + parentX, parentY + this.y);
             }
           }
           return;
@@ -583,19 +583,19 @@ abstract class ag extends oc implements sd {
           var5_ref = decompiledCaughtException;
           stackIn_12_0 = var5_ref;
           stackIn_12_1 = new StringBuilder().append("ag.WA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 
-    final String d(int param0) {
+    final String getTooltip(int obfuscationGuard) {
         int var3 = 0;
-        oc[] var2;
-        oc var4;
+        Widget[] var2;
+        Widget var4;
         int var6;
         String var5;
         var6 = BrickABrac.field_J ? 1 : 0;
@@ -606,13 +606,13 @@ abstract class ag extends oc implements sd {
         for (var3 = 0; var3 < var2.length; var3++) {
           var4 = var2[var3];
           if (var4 != null) {
-            var5 = var4.d(21);
+            var5 = var4.getTooltip(21);
             if (var5 != null) {
               return var5;
             }
           }
         }
-        if (param0 >= 6) {
+        if (obfuscationGuard >= 6) {
           return null;
         }
         buttonLabels = (String[]) null;
@@ -622,7 +622,7 @@ abstract class ag extends oc implements sd {
     final StringBuilder a(int param0, Hashtable param1, int param2, StringBuilder param3) {
         boolean discarded$1 = false;
         RuntimeException var5 = null;
-        oc var6 = null;
+        Widget var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -636,8 +636,8 @@ abstract class ag extends oc implements sd {
             this.a((byte) 119, param0, param1, param3);
           }
           if (param2 != 24) {
-            var6 = (oc) null;
-            discarded$1 = this.a(26, -76, (oc) null);
+            var6 = (Widget) null;
+            discarded$1 = this.a(26, -76, (Widget) null);
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -661,14 +661,14 @@ abstract class ag extends oc implements sd {
         }
     }
 
-    final boolean a(boolean param0, oc param1) {
+    final boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
         int var4 = 0;
-        oc[] var3 = null;
+        Widget[] var3 = null;
         RuntimeException var3_ref = null;
-        oc var5 = null;
+        Widget var5 = null;
         int var6 = 0;
-        oc var7 = null;
-        oc[] var8 = null;
+        Widget var7 = null;
+        Widget[] var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -677,14 +677,14 @@ abstract class ag extends oc implements sd {
         try {
           var8 = this.field_H;
           var3 = var8;
-          if (!param0) {
-            var7 = (oc) null;
-            this.a(18, 61, 105, -29, 39, (oc) null, -74);
+          if (!obfuscationGuard) {
+            var7 = (Widget) null;
+            this.a(18, 61, 105, -29, 39, (Widget) null, -74);
           }
           for (var4 = 0; var4 < var8.length; var4++) {
             var5 = var8[var4];
             if (var5 != null &&
-              var5.a(true, param1)) {
+              var5.tryFocus(true, focusRoot)) {
               return true;
             }
           }
@@ -693,8 +693,8 @@ abstract class ag extends oc implements sd {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_14_0 = var3_ref;
-          stackIn_14_1 = new StringBuilder().append("ag.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_14_1 = new StringBuilder().append("ag.CA(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
@@ -706,9 +706,9 @@ abstract class ag extends oc implements sd {
     final int e(byte param0) {
         int var5 = 0;
         int var2;
-        oc[] var3;
+        Widget[] var3;
         int var4;
-        oc var6;
+        Widget var6;
         int var8;
         int var7;
         var8 = BrickABrac.field_J ? 1 : 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vb extends d {
+class vb extends FocusableWidget {
     private long field_P;
     private int field_Q;
     private boolean field_M;
@@ -15,7 +15,7 @@ class vb extends d {
 
     final void c(boolean param0) {
         this.field_L = 0;
-        this.field_A = "";
+        this.text = "";
         this.field_T = 0;
         this.n(122);
         if (param0) {
@@ -38,7 +38,7 @@ class vb extends d {
           var3 = this.field_L < this.field_T ? this.field_T : this.field_L;
           this.field_L = var2;
           this.field_T = var2;
-          this.field_A = this.field_A.substring(0, var2) + this.field_A.substring(var3, this.field_A.length());
+          this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
           this.n(46);
         }
         if (param0 >= -34) {
@@ -47,13 +47,13 @@ class vb extends d {
         }
     }
 
-    vb(String param0, uh param1, int param2) {
+    vb(String param0, WidgetListener param1, int param2) {
         super(param0, param1);
         this.field_P = 0L;
         this.field_M = false;
         this.field_R = -1;
         try {
-          this.field_l = bj.field_T.field_b;
+          this.renderer = bj.field_T.field_b;
           this.field_Q = param2;
           this.a(param0, -12592, true);
           this.field_N = true;
@@ -68,7 +68,7 @@ class vb extends d {
         int var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = this.field_A.length();
+        var2 = this.text.length();
         if (var2 == this.field_T) {
           return this.field_T;
         }
@@ -76,7 +76,7 @@ class vb extends d {
           return -128;
         }
         for (var3 = this.field_T + 1; var3 < var2; var3++) {
-          if (this.field_A.charAt(var3 - 1) != 32) {
+          if (this.text.charAt(var3 - 1) != 32) {
             continue;
           }
           break;
@@ -91,23 +91,23 @@ class vb extends d {
         int var6;
         int var7;
         int var8;
-        qe var9;
+        WidgetLayoutProvider var9;
         var8 = BrickABrac.field_J ? 1 : 0;
         if (!this.field_N) {
           this.field_r = 0;
           this.field_B = 0;
           return;
         }
-        if (!(this.field_l instanceof qe)) {
+        if (!(this.renderer instanceof WidgetLayoutProvider)) {
           return;
         }
         if (param0 != 81) {
           this.field_L = 16;
         }
-        var9 = (qe) ((Object) this.field_l);
-        var3 = var9.c((oc) (this), -3);
+        var9 = (WidgetLayoutProvider) ((Object) this.renderer);
+        var3 = var9.c((Widget) (this), -3);
         var4 = var3.b(31458);
-        var5 = var9.a(61823, (oc) (this));
+        var5 = var9.a(61823, (Widget) (this));
         var6 = var9.a((byte) 99) >> 1;
         if (var4 < var5 - var6) {
           this.field_B = 0;
@@ -141,16 +141,16 @@ class vb extends d {
         RuntimeException var3 = null;
         try {
           if (this.field_Q != -1) {
-            var3_int = this.field_Q - this.field_A.length();
+            var3_int = this.field_Q - this.text.length();
             if (var3_int >= 0) {
               return;
             }
             param1 = param1.substring(0, var3_int);
           }
-          if (this.field_T == this.field_A.length()) {
-            this.field_A = this.field_A + param1;
+          if (this.field_T == this.text.length()) {
+            this.text = this.text + param1;
           } else {
-            this.field_A = this.field_A.substring(0, this.field_T) + param1 + this.field_A.substring(this.field_T, this.field_A.length());
+            this.text = this.text.substring(0, this.field_T) + param1 + this.text.substring(this.field_T, this.text.length());
           }
           this.field_T = this.field_T + param1.length();
           this.field_L = this.field_T;
@@ -175,21 +175,21 @@ class vb extends d {
         }
     }
 
-    void a(oc param0, byte param1, int param2, int param3) {
+    void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         int var6 = 0;
-        qe var7 = null;
+        WidgetLayoutProvider var7 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
           this.f((byte) 81);
-          if (this.field_n == 1) {
-            if (this.field_l instanceof qe) {
-              var7 = (qe) ((Object) this.field_l);
-              var6 = var7.a((oc) (this), MusicPatch.pointerX, true, param3, po.pointerY, param2);
+          if (this.pressedButton == 1) {
+            if (this.renderer instanceof WidgetLayoutProvider) {
+              var7 = (WidgetLayoutProvider) ((Object) this.renderer);
+              var6 = var7.a((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
               if (var6 != -1) {
                 if (this.field_M &&
                   this.field_R > var6 &&
@@ -207,12 +207,12 @@ class vb extends d {
           var5 = decompiledCaughtException;
           stackIn_14_0 = var5;
           stackIn_14_1 = new StringBuilder().append("vb.WA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -252,13 +252,13 @@ class vb extends d {
           if (param0 == null) {
             param0 = "";
           }
-          this.field_A = param0;
+          this.text = param0;
           var4_int = param0.length();
           if (this.field_Q != -1 &&
             this.field_Q < var4_int) {
-            this.field_A = this.field_A.substring(0, this.field_Q);
+            this.text = this.text.substring(0, this.field_Q);
           }
-          dupTemp$1 = this.field_A.length();
+          dupTemp$1 = this.text.length();
           this.field_L = dupTemp$1;
           this.field_T = dupTemp$1;
           if (!param2) {
@@ -301,14 +301,14 @@ class vb extends d {
         if (param0 != -66) {
           this.field_M = false;
         }
-        if (this.field_i instanceof hf) {
-          ((hf) (this.field_i)).a(this, -40);
+        if (this.listener instanceof hf) {
+          ((hf) (this.listener)).a(this, -40);
         }
     }
 
     void n(int param0) {
-        if (this.field_i instanceof hf) {
-          ((hf) (this.field_i)).a(this, (byte) -100);
+        if (this.listener instanceof hf) {
+          ((hf) (this.listener)).a(this, (byte) -100);
         }
         if (param0 <= 7) {
           vb.i(41);
@@ -323,7 +323,7 @@ class vb extends d {
           return this.field_T;
         }
         for (var2 = -1 + this.field_T; var2 > 0; var2--) {
-          if (this.field_A.charAt(-1 + var2) != 32) {
+          if (this.text.charAt(-1 + var2) != 32) {
             continue;
           }
           break;
@@ -340,26 +340,26 @@ class vb extends d {
           return (String) null;
         }
         int var3 = this.field_L < this.field_T ? this.field_T : this.field_L;
-        return this.field_A.substring(var2, var3);
+        return this.text.substring(var2, var3);
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        qe var5 = null;
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        WidgetLayoutProvider var5 = null;
         long var6 = 0L;
-        if (param3 != -11) {
+        if (obfuscationGuard != -11) {
           return;
         }
-        if (null != this.field_l &&
-          param2 == 0) {
-          this.field_l.a(this.field_J, -20618, param1, (oc) (this), param0);
-          if (this.field_l instanceof qe) {
-            var5 = (qe) ((Object) this.field_l);
+        if (null != this.renderer &&
+          layer == 0) {
+          this.renderer.paintWidget(this.enabled, -20618, parentX, (Widget) (this), parentY);
+          if (this.renderer instanceof WidgetLayoutProvider) {
+            var5 = (WidgetLayoutProvider) ((Object) this.renderer);
             if (this.field_T != this.field_L) {
-              var5.a(-15964, param0, param1, this.field_L, this.field_T, (oc) (this));
+              var5.a(-15964, parentY, parentX, this.field_L, this.field_T, (Widget) (this));
             }
             var6 = MonotonicTime.nowMillis(false);
             if ((var6 - this.field_O) % 1000L < 500L) {
-              var5.a((oc) (this), param1, this.field_T, param0, (byte) 123);
+              var5.a((Widget) (this), parentX, this.field_T, parentY, (byte) 123);
             }
           }
         }
@@ -374,7 +374,7 @@ class vb extends d {
         AchievementIcon.field_j = param0;
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         int dupTemp$0 = 0;
         int stackIn_38_1 = 0;
         int stackIn_69_1 = 0;
@@ -396,14 +396,14 @@ class vb extends d {
                 this.h(-84);
               }
               if (-1 == this.field_Q ||
-                !(this.field_A.length() >= this.field_Q)) {
-                if (this.field_T >= this.field_A.length()) {
-                  this.field_A = this.field_A + param3;
-                  dupTemp$0 = this.field_A.length();
+                !(this.text.length() >= this.field_Q)) {
+                if (this.field_T >= this.text.length()) {
+                  this.text = this.text + param3;
+                  dupTemp$0 = this.text.length();
                   this.field_T = dupTemp$0;
                   this.field_L = dupTemp$0;
                 } else {
-                  this.field_A = this.field_A.substring(0, this.field_T) + param3 + this.field_A.substring(this.field_T, this.field_A.length());
+                  this.text = this.text.substring(0, this.field_T) + param3 + this.text.substring(this.field_T, this.text.length());
                   this.field_T = this.field_T + 1;
                   this.field_L = this.field_T;
                 }
@@ -417,7 +417,7 @@ class vb extends d {
                   this.h(-114);
                   return true;
                 }
-                if (this.field_T < this.field_A.length()) {
+                if (this.field_T < this.text.length()) {
                   this.field_L = this.field_T + 1;
                   this.h(param1 - 182);
                   return true;
@@ -440,7 +440,7 @@ class vb extends d {
                   return true;
                 }
                 if (param0 == 97) {
-                  if (this.field_T < this.field_A.length()) {
+                  if (this.field_T < this.text.length()) {
                     if (!IntArrayRequest.heldKeys[82]) {
                       stackIn_69_1 = this.field_T + 1;
                     } else {
@@ -455,7 +455,7 @@ class vb extends d {
                     return true;
                   }
                   if (param0 == 103) {
-                    this.a(this.field_A.length(), 81);
+                    this.a(this.text.length(), 81);
                     return true;
                   }
                   if (param0 == 84) {
@@ -515,7 +515,7 @@ class vb extends d {
         }
     }
 
-    final boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         int stackIn_7_1 = 0;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_22_0 = null;
@@ -526,13 +526,13 @@ class vb extends d {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6 + param6)) {
+          if (!super.handlePointerPress(focusRoot, pointerX, parentX, parentY, button, pointerY, obfuscationGuard + obfuscationGuard)) {
             return false;
           }
-          if (!(this.field_l instanceof qe)) {
+          if (!(this.renderer instanceof WidgetLayoutProvider)) {
             return false;
           }
-          var8_int = ((qe) ((Object) this.field_l)).a((oc) (this), MusicPatch.pointerX, true, param3, po.pointerY, param2);
+          var8_int = ((WidgetLayoutProvider) ((Object) this.renderer)).a((Widget) (this), MusicPatch.pointerX, true, parentY, po.pointerY, parentX);
           if (var8_int == -1) {
             stackIn_7_1 = 0;
           } else {
@@ -546,7 +546,7 @@ class vb extends d {
             this.field_L = this.d(false);
             this.field_T = this.h((byte) 103);
             if (this.field_T > 0 &&
-              this.field_A.charAt(-1 + this.field_T) == 32) {
+              this.text.charAt(-1 + this.field_T) == 32) {
               this.field_T = this.field_T - 1;
             }
             this.field_R = this.field_T;
@@ -558,12 +558,12 @@ class vb extends d {
           var8 = decompiledCaughtException;
           stackIn_22_0 = var8;
           stackIn_22_1 = new StringBuilder().append("vb.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

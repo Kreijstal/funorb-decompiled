@@ -81,7 +81,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           this.g(false);
         }
         this.initializePacketLengths(123);
-        oc.c((byte) -35);
+        Widget.c((byte) -35);
     }
 
     final static RgbSprite a(RgbSprite param0, int param1) {
@@ -878,7 +878,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (clientStage == 11) {
           if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.ensureIndex((byte) -127) ||
             !GameplayAudioEvent.field_k.ensureAllGroupsAvailable(98))) {
-            ParisBackground.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, d.field_C));
+            ParisBackground.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, FocusableWidget.field_C));
             decompiledFrameRemainder0 = false;
           }
           else {

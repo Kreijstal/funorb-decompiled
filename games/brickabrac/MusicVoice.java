@@ -342,7 +342,7 @@ final class MusicVoice extends IntrusiveNode {
               var26_int = 0;
               if (null != o.currentLobbyGame &&
                 hn.b((byte) 7) &&
-                ~oc.field_p != ~var13.playerId) {
+                ~Widget.field_p != ~var13.playerId) {
                 if (null != var13.statusLabel.text) {
                   var27 = var13.statusLabel.getContentWidth(123) + 2 * LobbyGame.field_oc;
                   var13.statusLabel.setBounds(np.uiRowHeight, var20, var26_int, var27, (byte) 64);
@@ -419,7 +419,7 @@ final class MusicVoice extends IntrusiveNode {
             if (var13.hovered &&
               !var13.isUnindexed(0)) {
               var25 = null;
-              if (~var13.playerId == ~oc.field_p) {
+              if (~var13.playerId == ~Widget.field_p) {
                 if (var5_int != 0 &&
                   !var13.member) {
                   var25 = ug.field_J;

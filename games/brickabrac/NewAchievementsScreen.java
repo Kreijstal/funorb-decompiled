@@ -9,7 +9,7 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
     static boolean discardGameplayOnTransition;
 
     NewAchievementsScreen() {
-        super(9, oc.field_y);
+        super(9, Widget.field_y);
         this.achievementMask = pl.pendingAchievementMask;
     }
 

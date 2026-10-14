@@ -3,58 +3,58 @@
  */
 import java.util.*;
 
-class oc extends IntrusiveNode {
+class Widget extends IntrusiveNode {
     int field_r;
     ep field_j;
     static BufferedFile field_k;
-    int field_n;
-    int field_s;
+    int pressedButton;
+    int height;
     static String[] field_v;
-    boolean field_q;
-    String field_A;
-    int field_t;
+    boolean mouseOver;
+    String text;
+    int width;
     static TextFont field_m;
     static long field_p;
     static String field_u;
-    int field_o;
-    ub field_l;
+    int x;
+    WidgetRenderer renderer;
     static int[] field_y;
     static RgbSprite field_x;
     int field_B;
-    uh field_i;
-    String field_z;
-    int field_w;
+    WidgetListener listener;
+    String tooltip;
+    int y;
 
-    final void e(int param0) {
-        if (param0 != 1) {
+    final void relayout(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           return;
         }
-        this.a(this.field_s, this.field_o, this.field_w, (byte) -119, this.field_t);
+        this.setBounds(this.height, this.x, this.y, (byte) -119, this.width);
     }
 
-    void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
+    void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
         try {
-          this.field_n = 0;
-          if (param4 != 19223) {
+          this.pressedButton = 0;
+          if (obfuscationGuard != 19223) {
             field_y = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.GA(" + pointerY + ',' + pointerX + ',' + parentY + ',' + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ')');
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3, int param4) {
-        this.field_s = param0;
-        if (param3 == -119) {
-          this.field_t = param4;
-          this.field_w = param2;
-          this.field_o = param1;
+    void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
+        this.height = height;
+        if (obfuscationGuard == -119) {
+          this.width = width;
+          this.y = y;
+          this.x = x;
           return;
         }
-        this.a(28, 90, 95, (byte) 89, -101);
-        this.field_t = param4;
-        this.field_w = param2;
-        this.field_o = param1;
+        this.setBounds(28, 90, 95, (byte) 89, -101);
+        this.width = width;
+        this.y = y;
+        this.x = x;
     }
 
     final void a(int param0, int param1, int param2) {
@@ -66,7 +66,7 @@ class oc extends IntrusiveNode {
         var4 = this.e((byte) -79);
         var5_int = param2;
         while (var5_int <= var4) {
-          this.a(param1, param0, var5_int, (byte) -11);
+          this.drawLayer(param1, param0, var5_int, (byte) -11);
           var5_int++;
           if (var6 == 0) {
             continue;
@@ -134,7 +134,7 @@ class oc extends IntrusiveNode {
           var8 = LevelPackSelectScreen.field_r.width + param2 - 5;
           Rasterizer2D.fillRectangle(var8, param0 + 1, 4, LevelPackSelectScreen.field_r.height - 2, 16777215);
           if (param5 <= 106) {
-            oc.a(120, (TextFont) null);
+            Widget.a(120, (TextFont) null);
           }
           var9 = param3.field_cb[param1] >> 8;
           var10 = LevelPackSelectScreen.field_r.height + (param0 - 1);
@@ -232,26 +232,26 @@ class oc extends IntrusiveNode {
         int var6Lifetime2Lifetime3;
         int var6Lifetime2Lifetime4;
         var7 = BrickABrac.field_J ? 1 : 0;
-        this.a(this, (byte) 0, param1, param0);
-        var5 = this.f(-123) ? 1 : 0;
+        this.updatePointer(this, (byte) 0, param1, param0);
+        var5 = this.isFocused(-123) ? 1 : 0;
         if (!param3) {
           if (var5 == 0) {
             var6 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = cb.heldButton;
-            MusicVoice.a(this.d(15), 22546);
+            MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
           if (BackgroundScene.pressedButton == 0) {
             var6Lifetime6 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = cb.heldButton;
-            MusicVoice.a(this.d(15), 22546);
+            MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
-          this.b(false);
+          this.clearFocus(false);
           if (var7 == 0) {
             var6Lifetime7 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = cb.heldButton;
-            MusicVoice.a(this.d(15), 22546);
+            MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
           if (0 != GameplayAudioEvent.mouseWheelDelta &&
@@ -259,41 +259,41 @@ class oc extends IntrusiveNode {
             this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
           }
           if (BackgroundScene.pressedButton != 0) {
-            if (this.a(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
+            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
               param3 = false;
             }
-            this.b(false);
+            this.clearFocus(false);
           }
           if (0 != cb.heldButton) {
             var6Lifetime8 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = cb.heldButton;
-            MusicVoice.a(this.d(15), 22546);
+            MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
           if (ScrollPaneWithFooter.field_Pb == 0) {
             var6Lifetime9 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = cb.heldButton;
-            MusicVoice.a(this.d(15), 22546);
+            MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
-          this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+          this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
           var8 = gd.field_c;
           if (var8 != null) {
-            if (var8.field_i instanceof em) {
-              ((em) (var8.field_i)).a(-24178, var8, (jb) null);
+            if (var8.listener instanceof em) {
+              ((em) (var8.listener)).a(-24178, var8, (jb) null);
             }
             gd.field_c = null;
           }
           var6Lifetime10 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = cb.heldButton;
-          MusicVoice.a(this.d(15), 22546);
+          MusicVoice.a(this.getTooltip(15), 22546);
           return param3;
         }
         if (0 != GameplayAudioEvent.mouseWheelDelta) {
           if (var5 == 0) {
             regionExit1: {
               if (BackgroundScene.pressedButton != 0) {
-                if (this.a(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
+                if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
                   param3 = false;
                   if (var7 == 0) {
                     break regionExit1;
@@ -301,53 +301,53 @@ class oc extends IntrusiveNode {
                 }
                 if (0 == cb.heldButton &&
                   ScrollPaneWithFooter.field_Pb != 0) {
-                  this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+                  this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
                   var9 = gd.field_c;
                   if (var9 != null) {
-                    if (!(var9.field_i instanceof em)) {
+                    if (!(var9.listener instanceof em)) {
                       gd.field_c = null;
                     } else {
-                      ((em) (var9.field_i)).a(-24178, var9, (jb) null);
+                      ((em) (var9.listener)).a(-24178, var9, (jb) null);
                       gd.field_c = null;
                     }
                   }
                 }
                 var6Lifetime1 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = cb.heldButton;
-                MusicVoice.a(this.d(15), 22546);
+                MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
             }
             if (0 != cb.heldButton) {
               var6Lifetime1Lifetime1 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = cb.heldButton;
-              MusicVoice.a(this.d(15), 22546);
+              MusicVoice.a(this.getTooltip(15), 22546);
               return param3;
             }
             if (ScrollPaneWithFooter.field_Pb == 0) {
               var6Lifetime1Lifetime2 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = cb.heldButton;
-              MusicVoice.a(this.d(15), 22546);
+              MusicVoice.a(this.getTooltip(15), 22546);
               return param3;
             }
-            this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+            this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
             var10 = gd.field_c;
             if (var10 != null) {
-              if (var10.field_i instanceof em) {
-                ((em) (var10.field_i)).a(-24178, var10, (jb) null);
+              if (var10.listener instanceof em) {
+                ((em) (var10.listener)).a(-24178, var10, (jb) null);
               }
               gd.field_c = null;
             }
             var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = cb.heldButton;
-            MusicVoice.a(this.d(15), 22546);
+            MusicVoice.a(this.getTooltip(15), 22546);
             return param3;
           }
           this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
         }
         regionExit2: {
           if (BackgroundScene.pressedButton != 0) {
-            if (this.a(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
+            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, qo.pressY, 0)) {
               param3 = false;
               if (var7 == 0) {
                 break regionExit2;
@@ -357,67 +357,67 @@ class oc extends IntrusiveNode {
               if (0 != cb.heldButton) {
                 var6Lifetime2 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = cb.heldButton;
-                MusicVoice.a(this.d(15), 22546);
+                MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
               if (ScrollPaneWithFooter.field_Pb == 0) {
                 var6Lifetime2Lifetime1 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = cb.heldButton;
-                MusicVoice.a(this.d(15), 22546);
+                MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
-              this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+              this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
               var11 = gd.field_c;
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = cb.heldButton;
-                MusicVoice.a(this.d(15), 22546);
+                MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
-              if (!(var11.field_i instanceof em)) {
+              if (!(var11.listener instanceof em)) {
                 gd.field_c = null;
                 var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = cb.heldButton;
-                MusicVoice.a(this.d(15), 22546);
+                MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
-              ((em) (var11.field_i)).a(-24178, var11, (jb) null);
+              ((em) (var11.listener)).a(-24178, var11, (jb) null);
               gd.field_c = null;
               var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = cb.heldButton;
-              MusicVoice.a(this.d(15), 22546);
+              MusicVoice.a(this.getTooltip(15), 22546);
               return param3;
             }
-            this.b(false);
+            this.clearFocus(false);
           }
         }
         if (0 != cb.heldButton) {
           var6Lifetime3 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = cb.heldButton;
-          MusicVoice.a(this.d(15), 22546);
+          MusicVoice.a(this.getTooltip(15), 22546);
           return param3;
         }
         if (ScrollPaneWithFooter.field_Pb == 0) {
           var6Lifetime4 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = cb.heldButton;
-          MusicVoice.a(this.d(15), 22546);
+          MusicVoice.a(this.getTooltip(15), 22546);
           return param3;
         }
-        this.a(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
+        this.handlePointerRelease(po.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
         var12 = gd.field_c;
         if (var12 != null) {
-          if (var12.field_i instanceof em) {
-            ((em) (var12.field_i)).a(-24178, var12, (jb) null);
+          if (var12.listener instanceof em) {
+            ((em) (var12.listener)).a(-24178, var12, (jb) null);
           }
           gd.field_c = null;
         }
         var6Lifetime5 = -57 % ((56 - param2) / 43);
         ScrollPaneWithFooter.field_Pb = cb.heldButton;
-        MusicVoice.a(this.d(15), 22546);
+        MusicVoice.a(this.getTooltip(15), 22546);
         return param3;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, oc param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, Widget param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -449,7 +449,7 @@ class oc extends IntrusiveNode {
           bq.field_b = new ck();
           bj.field_P = new ck();
           if (param0 != 1) {
-            oc.c(16);
+            Widget.c(16);
           }
           ff.field_d = new NodeDeque();
         } catch (RuntimeException runtimeException) {
@@ -457,23 +457,23 @@ class oc extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3) {
-        if (param2 != 0) {
-          if (param3 == -11) {
+    void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        if (layer != 0) {
+          if (obfuscationGuard == -11) {
             return;
           }
           this.a(5, -67, -79, true);
           return;
         }
-        if (null == this.field_l) {
-          if (param3 == -11) {
+        if (null == this.renderer) {
+          if (obfuscationGuard == -11) {
             return;
           }
           this.a(5, -67, -79, true);
           return;
         }
-        this.field_l.a(true, param3 - 20607, param1, this, param0);
-        if (param3 == -11) {
+        this.renderer.paintWidget(true, obfuscationGuard - 20607, parentX, this, parentY);
+        if (obfuscationGuard == -11) {
           return;
         }
         this.a(5, -67, -79, true);
@@ -530,7 +530,7 @@ class oc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1595637992) {
-            this.field_w = -128;
+            this.y = -128;
           }
           if (!param3.containsKey(this)) {
             param3.put(this, this);
@@ -561,10 +561,10 @@ class oc extends IntrusiveNode {
     final boolean a(char param0, int param1, boolean param2) {
         int var4 = 0;
         int var4Lifetime1;
-        if (!this.f(-86)) {
+        if (!this.isFocused(-86)) {
           var4 = param1;
           if (var4 == 80) {
-            return this.a(true, this);
+            return this.tryFocus(true, this);
           }
           if (param2) {
             return false;
@@ -577,7 +577,7 @@ class oc extends IntrusiveNode {
         }
         var4Lifetime1 = param1;
         if (var4Lifetime1 == 80) {
-          return this.a(true, this);
+          return this.tryFocus(true, this);
         }
         if (param2) {
           return false;
@@ -591,8 +591,8 @@ class oc extends IntrusiveNode {
         return 0;
     }
 
-    boolean f(int param0) {
-        if (param0 > -49) {
+    boolean isFocused(int obfuscationGuard) {
+        if (obfuscationGuard > -49) {
           return false;
         }
         return false;
@@ -600,7 +600,7 @@ class oc extends IntrusiveNode {
 
     final static void c(byte param0) {
         if (param0 >= -12) {
-          oc.a(89, -103, -10, (PlayerBoard) null, (MultiplayerMatch) null, (byte) 67);
+          Widget.a(89, -103, -10, (PlayerBoard) null, (MultiplayerMatch) null, (byte) 67);
           o.enabledFeatureMask = 0;
           return;
         }
@@ -636,17 +636,17 @@ class oc extends IntrusiveNode {
         field_k = null;
     }
 
-    boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param5, param3, param2, 3, param1)) {
-            this.field_n = param4;
+          if (this.containsPoint(pointerY, parentY, parentX, 3, pointerX)) {
+            this.pressedButton = button;
           }
-          if (param6 == 0) {
+          if (obfuscationGuard == 0) {
             return false;
           }
           this.e((byte) -99);
@@ -656,16 +656,16 @@ class oc extends IntrusiveNode {
           var8 = decompiledCaughtException;
           stackIn_8_0 = var8;
           stackIn_8_1 = new StringBuilder().append("oc.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    boolean a(int param0, byte param1, oc param2, char param3) {
+    boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -697,14 +697,14 @@ class oc extends IntrusiveNode {
         return 1;
     }
 
-    boolean a(boolean param0, oc param1) {
+    boolean tryFocus(boolean obfuscationGuard, Widget focusRoot) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             return false;
           }
           return true;
@@ -712,8 +712,8 @@ class oc extends IntrusiveNode {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("oc.CA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_7_1 = new StringBuilder().append("oc.CA(").append(obfuscationGuard).append(',');
+          if (focusRoot == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -722,9 +722,9 @@ class oc extends IntrusiveNode {
         }
     }
 
-    void b(boolean param0) {
-        if (param0) {
-          oc.c(-57);
+    void clearFocus(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
+          Widget.c(-57);
         }
     }
 
@@ -747,23 +747,23 @@ class oc extends IntrusiveNode {
         int var6 = 0;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_o).append(",").append(this.field_w).append(" ").append(this.field_t).append("x").append(this.field_s);
-          if (null != this.field_A) {
-            discarded$1 = param3.append(" text=\"").append(this.field_A).append('"');
+          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          if (null != this.text) {
+            discarded$1 = param3.append(" text=\"").append(this.text).append('"');
           }
-          if (this.field_q) {
+          if (this.mouseOver) {
             discarded$2 = param3.append(" mouseover");
           }
-          if (this.f(-102)) {
+          if (this.isFocused(-102)) {
             discarded$3 = param3.append(" focused");
           }
           if (param2 != 0) {
             this.a((Hashtable) null, 44, -5, (StringBuilder) null);
           }
-          if (this.field_l != null) {
+          if (this.renderer != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_l instanceof oc)) {
-              discarded$5 = param3.append(this.field_l);
+            if (!(this.renderer instanceof Widget)) {
+              discarded$5 = param3.append(this.renderer);
               if (var6 != 0) {
                 param3 = this.a(param1 + 1, param0, 24, param3);
               }
@@ -771,10 +771,10 @@ class oc extends IntrusiveNode {
               param3 = this.a(param1 + 1, param0, 24, param3);
             }
           }
-          if (null != this.field_i) {
+          if (null != this.listener) {
             discarded$6 = param3.append(" listener=");
-            if (!(this.field_i instanceof oc)) {
-              discarded$7 = param3.append(this.field_i);
+            if (!(this.listener instanceof Widget)) {
+              discarded$7 = param3.append(this.listener);
               if (var6 != 0) {
                 param3 = this.a(1 + param1, param0, 24, param3);
               }
@@ -803,11 +803,11 @@ class oc extends IntrusiveNode {
         }
     }
 
-    oc(String param0, uh param1) {
+    Widget(String param0, WidgetListener param1) {
         this(param0, bj.field_T.field_i, param1);
     }
 
-    void a(oc param0, byte param1, int param2, int param3) {
+    void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         int var5_int = 0;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_14_0 = null;
@@ -816,18 +816,18 @@ class oc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (param1 != 0) {
+          if (obfuscationGuard != 0) {
             field_u = (String) null;
           }
-          var5_int = this.a(po.pointerY, param3, param2, 3, MusicPatch.pointerX) ? 1 : 0;
-          if ((this.field_q ? 1 : 0) != var5_int) {
+          var5_int = this.containsPoint(po.pointerY, parentY, parentX, 3, MusicPatch.pointerX) ? 1 : 0;
+          if ((this.mouseOver ? 1 : 0) != var5_int) {
             stackIn_7_1 = (var5_int != 0);
-            this.field_q = stackIn_7_1;
-            if (null != this.field_i) {
-              if (!(this.field_i instanceof vk)) {
+            this.mouseOver = stackIn_7_1;
+            if (null != this.listener) {
+              if (!(this.listener instanceof WidgetHoverListener)) {
                 return;
               }
-              ((vk) (this.field_i)).a(-6932, this, var5_int != 0);
+              ((WidgetHoverListener) (this.listener)).onMouseOverChanged(-6932, this, var5_int != 0);
             }
           }
           return;
@@ -836,29 +836,29 @@ class oc extends IntrusiveNode {
           var5 = decompiledCaughtException;
           stackIn_14_0 = var5;
           stackIn_14_1 = new StringBuilder().append("oc.WA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4) {
-        if (param3 != 3) {
+    final boolean containsPoint(int pointerY, int parentY, int parentX, int obfuscationGuard, int pointerX) {
+        if (obfuscationGuard != 3) {
           return false;
         }
-        if (this.field_o + param2 > param4) {
+        if (this.x + parentX > pointerX) {
           return false;
         }
-        if (param0 < param1 + this.field_w) {
+        if (pointerY < parentY + this.y) {
           return false;
         }
-        if (param4 >= this.field_t + param2 + this.field_o) {
+        if (pointerX >= this.width + parentX + this.x) {
           return false;
         }
-        if (param0 < this.field_s + (this.field_w + param1)) {
+        if (pointerY < this.height + (this.y + parentY)) {
           return true;
         }
         return false;
@@ -908,55 +908,55 @@ class oc extends IntrusiveNode {
         }
     }
 
-    String d(int param0) {
-        if (param0 < 6) {
-          this.a(-58, (byte) -3, (oc) null, '*');
-          if (this.field_q) {
-            return this.field_z;
+    String getTooltip(int obfuscationGuard) {
+        if (obfuscationGuard < 6) {
+          this.a(-58, (byte) -3, (Widget) null, '*');
+          if (this.mouseOver) {
+            return this.tooltip;
           }
           return null;
         }
-        if (this.field_q) {
-          return this.field_z;
+        if (this.mouseOver) {
+          return this.tooltip;
         }
         return null;
     }
 
-    protected oc() {
+    protected Widget() {
         this.field_r = 0;
         this.field_B = 0;
     }
 
-    oc(String param0, ub param1, uh param2) {
-        qe var4 = null;
+    Widget(String text, WidgetRenderer renderer, WidgetListener listener) {
+        WidgetLayoutProvider var4 = null;
         this.field_r = 0;
         this.field_B = 0;
         try {
-          this.field_A = param0;
-          this.field_i = param2;
-          this.field_l = param1;
-          if (this.field_l instanceof qe) {
-            var4 = (qe) ((Object) this.field_l);
-            this.field_t = var4.b(this, 31);
-            this.field_s = var4.a(this, 46695);
+          this.text = text;
+          this.listener = listener;
+          this.renderer = renderer;
+          if (this.renderer instanceof WidgetLayoutProvider) {
+            var4 = (WidgetLayoutProvider) ((Object) this.renderer);
+            this.width = var4.getPreferredWidth(this, 31);
+            this.height = var4.getPreferredHeight(this, 46695);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + (text != null ? "{...}" : "null") + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 
-    oc(int param0, int param1, int param2, int param3, ub param4, uh param5) {
+    Widget(int x, int y, int width, int height, WidgetRenderer renderer, WidgetListener listener) {
         this.field_r = 0;
         this.field_B = 0;
         try {
-          this.field_o = param0;
-          this.field_t = param2;
-          this.field_i = param5;
-          this.field_l = param4;
-          this.field_w = param1;
-          this.field_s = param3;
+          this.x = x;
+          this.width = width;
+          this.listener = listener;
+          this.renderer = renderer;
+          this.y = y;
+          this.height = height;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.<init>(" + x + ',' + y + ',' + width + ',' + height + ',' + (renderer != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
     }
 

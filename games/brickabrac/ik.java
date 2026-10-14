@@ -101,7 +101,7 @@ final class ik implements Iterator {
           var2_int = cn.field_d;
           if (message.channel != 2) {
             if (message.channel != 4) {
-              if (~message.senderId != ~oc.field_p) {
+              if (~message.senderId != ~Widget.field_p) {
                 var2_intLifetime1 = r.field_C[message.channel];
               } else {
                 var2_intLifetime1 = BackgroundScene.field_i[message.channel];

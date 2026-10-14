@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class he extends ib implements en {
+final class he extends WidgetGroup implements WidgetActionListener {
     static oh field_H;
-    private d field_K;
-    private d field_I;
+    private FocusableWidget field_K;
+    private FocusableWidget field_I;
     static String[] field_L;
-    private d field_J;
+    private FocusableWidget field_J;
 
     final static ff a(long param0, int param1, boolean param2, String param3, String param4) {
         RuntimeException var6 = null;
@@ -59,28 +59,28 @@ final class he extends ib implements en {
     }
 
     public he() {
-        super(0, 0, 476, 225, (ub) null);
-        this.field_I = new d(bd.field_a, (uh) null);
-        this.field_K = new d(ByteArrayNode.field_l, (uh) null);
-        this.field_J = new d(nd.field_d, (uh) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
+        this.field_I = new FocusableWidget(bd.field_a, (WidgetListener) null);
+        this.field_K = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
+        this.field_J = new FocusableWidget(nd.field_d, (WidgetListener) null);
         hi var1 = new hi();
-        this.field_I.field_l = (ub) ((Object) var1);
-        this.field_K.field_l = (ub) ((Object) var1);
-        this.field_J.field_l = (ub) ((Object) var1);
+        this.field_I.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_K.renderer = (WidgetRenderer) ((Object) var1);
+        this.field_J.renderer = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_K.a(30, this.field_t - var3 >> 1, this.field_s + (-48 - var2), (byte) -119, var4);
-        this.field_J.a(30, (-var3 + this.field_t >> 1) + (var4 + var2), -var2 + (-48 + this.field_s), (byte) -119, var4);
-        this.field_I.a(30, this.field_t - var3 >> 1, this.field_s - (78 + var2 * 2), (byte) -119, var3);
-        this.field_K.field_i = (uh) (this);
-        this.field_I.field_i = (uh) (this);
-        this.field_I.field_z = MidiSynthesizer.field_q;
-        this.field_J.field_i = (uh) (this);
-        this.field_J.field_z = SoundCache.field_i;
-        this.a(this.field_K, true);
-        this.a(this.field_I, true);
-        this.a(this.field_J, true);
+        this.field_K.setBounds(30, this.width - var3 >> 1, this.height + (-48 - var2), (byte) -119, var4);
+        this.field_J.setBounds(30, (-var3 + this.width >> 1) + (var4 + var2), -var2 + (-48 + this.height), (byte) -119, var4);
+        this.field_I.setBounds(30, this.width - var3 >> 1, this.height - (78 + var2 * 2), (byte) -119, var3);
+        this.field_K.listener = (WidgetListener) (this);
+        this.field_I.listener = (WidgetListener) (this);
+        this.field_I.tooltip = MidiSynthesizer.field_q;
+        this.field_J.listener = (WidgetListener) (this);
+        this.field_J.tooltip = SoundCache.field_i;
+        this.addChild(this.field_K, true);
+        this.addChild(this.field_I, true);
+        this.addChild(this.field_J, true);
     }
 
     final static void a(PacketBuffer param0, byte param1) {
@@ -153,7 +153,7 @@ final class he extends ib implements en {
         }
     }
 
-    final boolean a(int param0, byte param1, oc param2, char param3) {
+    final boolean a(int param0, byte param1, Widget param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -244,7 +244,7 @@ final class he extends ib implements en {
         }
     }
 
-    public final void a(int param0, int param1, byte param2, int param3, d param4) {
+    public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
         int var7 = 0;
         PacketBuffer var8 = null;
         RuntimeException stackIn_12_0 = null;
@@ -254,17 +254,17 @@ final class he extends ib implements en {
         RuntimeException var6 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param2 > -22) {
+          if (obfuscationGuard > -22) {
             var8 = (PacketBuffer) null;
             he.a((PacketBuffer) null, (byte) -62);
           }
-          if (this.field_K == param4) {
+          if (this.field_K == widget) {
             MotionWaypoint.d(-117);
           } else {
-            if (this.field_I == param4) {
+            if (this.field_I == widget) {
               Mesh3D.d(-1);
             } else {
-              if (param4 == this.field_J) {
+              if (widget == this.field_J) {
                 NewAchievementsScreen.f(967);
               }
             }
@@ -274,8 +274,8 @@ final class he extends ib implements en {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_12_0 = var6;
-          stackIn_12_1 = new StringBuilder().append("he.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_12_1 = new StringBuilder().append("he.Q(").append(pointerY).append(',').append(button).append(',').append(obfuscationGuard).append(',').append(pointerX).append(',');
+          if (widget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
@@ -304,11 +304,11 @@ final class he extends ib implements en {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        int var5 = this.field_o + param1;
-        int var6 = param0 + this.field_w;
-        ArchiveNetworkClient.field_u.a(qo.field_H, var5 + 20, 20 + var6, this.field_t - 40, -50 + this.field_s, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
-        super.a(param0, param1, param2, param3);
+    final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
+        int var5 = this.x + parentX;
+        int var6 = parentY + this.y;
+        ArchiveNetworkClient.field_u.a(qo.field_H, var5 + 20, 20 + var6, this.width - 40, -50 + this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
+        super.drawLayer(parentY, parentX, layer, obfuscationGuard);
     }
 
     static {

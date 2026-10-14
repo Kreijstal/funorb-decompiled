@@ -194,9 +194,9 @@ class DualLinkNode extends IntrusiveNode {
           !(recordCount <= ObjectHistoryBuffer.rankingDraws.length)) {
           ObjectHistoryBuffer.rankingDraws = new int[recordCount * 2];
         }
-        if (null == ib.rankingLosses ||
-          !(recordCount <= ib.rankingLosses.length)) {
-          ib.rankingLosses = new int[2 * recordCount];
+        if (null == WidgetGroup.rankingLosses ||
+          !(recordCount <= WidgetGroup.rankingLosses.length)) {
+          WidgetGroup.rankingLosses = new int[2 * recordCount];
         }
         if (pj.rankingWinRateThousandths == null ||
           !(pj.rankingWinRateThousandths.length >= recordCount)) {

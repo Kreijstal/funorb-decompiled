@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vh extends d {
+final class vh extends FocusableWidget {
     int field_R;
     int field_K;
     int field_W;
@@ -37,7 +37,7 @@ final class vh extends d {
         field_Y = null;
     }
 
-    final boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -49,11 +49,11 @@ final class vh extends d {
         int var12 = 0;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
+          if (!super.handlePointerPress(focusRoot, pointerX, parentX, parentY, button, pointerY, obfuscationGuard)) {
             return false;
           }
-          var8_int = param1 + (-this.field_o - param2) - this.field_Z;
-          var9 = -param3 - this.field_w - this.field_R + param5;
+          var8_int = pointerX + (-this.x - parentX) - this.field_Z;
+          var9 = -parentY - this.y - this.field_R + pointerY;
           if (var8_int * var8_int + var9 * var9 >= this.field_W * this.field_W) {
             return true;
           }
@@ -78,12 +78,12 @@ final class vh extends d {
           var8 = decompiledCaughtException;
           stackIn_19_0 = var8;
           stackIn_19_1 = new StringBuilder().append("vh.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

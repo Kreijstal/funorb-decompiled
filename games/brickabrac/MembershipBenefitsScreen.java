@@ -95,7 +95,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
           discarded$0 = this.c(460, ff.field_c.a(false, inputEnabled));
           return;
         }
-        ff.field_c = new w(sl.field_C, oc.field_u, this.screenshots, false, SaveResultsPromptScreen.field_u);
+        ff.field_c = new w(sl.field_C, Widget.field_u, this.screenshots, false, SaveResultsPromptScreen.field_u);
     }
 
     final boolean handleKey(char character, int obfuscationGuard, int keyCode) {

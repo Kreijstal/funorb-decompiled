@@ -640,14 +640,14 @@ final class GameplayScreen extends GameScreen {
           return;
         }
         if (QuickChatMenu.h(-26090)) {
-          if (!ib.a(pl.pendingAchievementMask, -1) &&
+          if (!WidgetGroup.a(pl.pendingAchievementMask, -1) &&
             VerticalScrollbar.field_Ub == null) {
             ng.requestScreen(param0, 121, 0);
           } else {
             ng.requestScreen(param0, 68, 10);
           }
         } else {
-          if (!ib.a(pl.pendingAchievementMask, -1)) {
+          if (!WidgetGroup.a(pl.pendingAchievementMask, -1)) {
             if (VerticalScrollbar.field_Ub != null) {
               ng.requestScreen(param0, 68, 5);
             } else {

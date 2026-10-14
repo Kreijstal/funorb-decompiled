@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class dn extends h {
+final class dn extends SingleChildWidget {
     static UiComponent field_K;
     private int field_H;
     static String field_J;
@@ -14,7 +14,7 @@ final class dn extends h {
     private boolean field_L;
     private boolean field_M;
 
-    final boolean a(oc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean handlePointerPress(Widget focusRoot, int pointerX, int parentX, int parentY, int button, int pointerY, int obfuscationGuard) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_9_0 = 0;
@@ -23,34 +23,34 @@ final class dn extends h {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8_int = super.a(param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
+          var8_int = super.handlePointerPress(focusRoot, pointerX, parentX, parentY, button, pointerY, obfuscationGuard) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_M) {
             return true;
           }
-          if (!this.a(param5, param3, param2, param6 ^ 3, param1)) {
+          if (!this.containsPoint(pointerY, parentY, parentX, obfuscationGuard ^ 3, pointerX)) {
             stackIn_9_0 = var8_int;
             return stackIn_9_0 != 0;
           }
-          this.field_n = param4;
-          if (1 != param4) {
+          this.pressedButton = button;
+          if (1 != button) {
             return true;
           }
-          this.field_H = -param3 + (-this.field_w + param5);
+          this.field_H = -parentY + (-this.y + pointerY);
           gd.field_c = this;
-          this.field_G = -param2 - this.field_o + param1;
+          this.field_G = -parentX - this.x + pointerX;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
           stackIn_14_0 = var8;
           stackIn_14_1 = new StringBuilder().append("dn.MA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(pointerX).append(',').append(parentX).append(',').append(parentY).append(',').append(button).append(',').append(pointerY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -122,28 +122,28 @@ final class dn extends h {
 
     final void a(byte param0) {
         super.a((byte) -39);
-        this.field_E.a(this.field_s, 0, 0, (byte) -119, this.field_t);
+        this.child.setBounds(this.height, 0, 0, (byte) -119, this.width);
         if (param0 > -7) {
           dn.g(1);
         }
-        this.field_I = this.field_o;
-        this.field_O = this.field_w;
+        this.field_I = this.x;
+        this.field_O = this.y;
     }
 
-    private dn(int param0, int param1, int param2, int param3, ub param4, uh param5, oc param6, boolean param7, boolean param8) {
+    private dn(int param0, int param1, int param2, int param3, WidgetRenderer param4, WidgetListener param5, Widget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_O = 2147483647;
         this.field_I = 2147483647;
         try {
           this.field_L = param7 ? true : false;
-          this.field_E = param6;
+          this.child = param6;
           this.field_M = param8 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dn.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final void a(oc param0, byte param1, int param2, int param3) {
+    final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
         int stackIn_11_1 = 0;
         int stackIn_14_2 = 0;
         int stackIn_19_1 = 0;
@@ -156,26 +156,26 @@ final class dn extends h {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_E instanceof d) ||
-            ((d) (this.field_E)).field_J) &&
-            1 == this.field_n) {
-            var5_int = MusicPatch.pointerX - this.field_G - param2;
-            var6 = po.pointerY + (-this.field_H - param3);
-            if (this.field_o == var5_int &&
-              var6 == this.field_w) {
-              super.a(param0, param1, param2, param3);
+          if ((!(this.child instanceof FocusableWidget) ||
+            ((FocusableWidget) (this.child)).enabled) &&
+            1 == this.pressedButton) {
+            var5_int = MusicPatch.pointerX - this.field_G - parentX;
+            var6 = po.pointerY + (-this.field_H - parentY);
+            if (this.x == var5_int &&
+              var6 == this.y) {
+              super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
               return;
             }
-            this.field_w = var6;
-            this.field_o = var5_int;
-            if (this.field_i instanceof li) {
-              ((li) (this.field_i)).a((byte) -68, param3, param2, this);
+            this.y = var6;
+            this.x = var5_int;
+            if (this.listener instanceof li) {
+              ((li) (this.listener)).a((byte) -68, parentY, parentX, this);
             }
           } else {
             if (this.field_L) {
-              if (this.field_o != this.field_I) {
-                var5_int = this.field_I - this.field_o;
-                stackIn_11_1 = this.field_o;
+              if (this.x != this.field_I) {
+                var5_int = this.field_I - this.x;
+                stackIn_11_1 = this.x;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int <= 0) {
                     stackIn_14_2 = -1;
@@ -185,11 +185,11 @@ final class dn extends h {
                 } else {
                   stackIn_14_2 = var5_int >> 1;
                 }
-                this.field_o = stackIn_11_1 + stackIn_14_2;
+                this.x = stackIn_11_1 + stackIn_14_2;
               }
-              if (this.field_O != this.field_w) {
-                var5_int = this.field_O - this.field_w;
-                stackIn_19_1 = this.field_w;
+              if (this.field_O != this.y) {
+                var5_int = this.field_O - this.y;
+                stackIn_19_1 = this.y;
                 if (2 >= Math.abs(var5_int)) {
                   if (var5_int <= 0) {
                     stackIn_22_2 = -1;
@@ -199,23 +199,23 @@ final class dn extends h {
                 } else {
                   stackIn_22_2 = var5_int >> 1;
                 }
-                this.field_w = stackIn_19_1 + stackIn_22_2;
+                this.y = stackIn_19_1 + stackIn_22_2;
               }
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_33_0 = var5;
           stackIn_33_1 = new StringBuilder().append("dn.WA(");
-          if (param0 == null) {
+          if (focusRoot == null) {
             stackIn_34_2 = "null";
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -238,12 +238,12 @@ final class dn extends h {
         return CappedUrlRequest.field_e;
     }
 
-    final void a(int param0, int param1, int param2, oc param3, int param4, int param5) {
+    final void handlePointerRelease(int pointerY, int pointerX, int parentY, Widget focusRoot, int obfuscationGuard, int parentX) {
         try {
-          super.a(param0, param1, param2, param3, param4, param5);
-          this.field_n = 0;
+          super.handlePointerRelease(pointerY, pointerX, parentY, focusRoot, obfuscationGuard, parentX);
+          this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dn.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dn.GA(" + pointerY + ',' + pointerX + ',' + parentY + ',' + (focusRoot != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + parentX + ')');
         }
     }
 

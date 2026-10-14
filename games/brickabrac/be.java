@@ -106,7 +106,7 @@ final class be {
         }
     }
 
-    final void a(int param0, up param1, oc param2, byte param3, int param4) {
+    final void a(int param0, up param1, Widget param2, byte param3, int param4) {
         TextFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
@@ -133,21 +133,21 @@ final class be {
         int var7 = 0;
         int var7Lifetime1;
         try {
-          nh.a(param2.field_t, param2.field_s, -40, param2.field_o + param4, this.field_f, param0 + param2.field_w);
+          nh.a(param2.width, param2.height, -40, param2.x + param4, this.field_f, param0 + param2.y);
           if (null != this.field_k) {
-            var6_int = this.field_i + param2.field_o + param4;
+            var6_int = this.field_i + param2.x + param4;
             if (param1.field_f == 1) {
-              var6_int = var6_int + (param2.field_t - this.field_k.canvasWidth) / 2;
+              var6_int = var6_int + (param2.width - this.field_k.canvasWidth) / 2;
             }
-            var7 = this.field_m + (param0 + param2.field_w);
+            var7 = this.field_m + (param0 + param2.y);
             if (param1.field_m == 1) {
-              var7 = var7 + (-this.field_k.canvasHeight + param2.field_s) / 2;
+              var7 = var7 + (-this.field_k.canvasHeight + param2.height) / 2;
             }
             if (2 == param1.field_f) {
-              var6_int = var6_int + (param2.field_t - this.field_k.canvasWidth);
+              var6_int = var6_int + (param2.width - this.field_k.canvasWidth);
             }
             if (param1.field_m == 2) {
-              var7 = var7 + (param2.field_s - this.field_k.canvasHeight);
+              var7 = var7 + (param2.height - this.field_k.canvasHeight);
             }
             this.field_k.drawTransparent(var6_int, var7);
           }
@@ -163,9 +163,9 @@ final class be {
             } else {
               stackIn_19_2 = 0;
             }
-            stackIn_21_2 = stackIn_19_2 + param1.field_d + (param4 + param2.field_o);
+            stackIn_21_2 = stackIn_19_2 + param1.field_d + (param4 + param2.x);
             stackIn_21_3 = param0;
-            stackIn_21_4 = -param2.field_w;
+            stackIn_21_4 = -param2.y;
             stackIn_21_5 = -param1.field_q;
             if (this.field_m == -2147483648) {
               stackIn_22_6 = 0;
@@ -173,8 +173,8 @@ final class be {
               stackIn_22_6 = this.field_m;
             }
             stackIn_24_3 = stackIn_21_3 - (stackIn_21_4 + (stackIn_21_5 - stackIn_22_6));
-            stackIn_24_4 = param2.field_t - param1.field_d - param1.field_i;
-            stackIn_24_5 = -param1.field_q + (param2.field_s - param1.field_a);
+            stackIn_24_4 = param2.width - param1.field_d - param1.field_i;
+            stackIn_24_5 = -param1.field_q + (param2.height - param1.field_a);
             stackIn_24_6 = this.field_h;
             stackIn_24_7 = this.field_l;
             if (this.field_b == -2147483648) {
@@ -205,7 +205,7 @@ final class be {
         }
     }
 
-    final void a(be param0, int param1, up param2, oc param3, int param4, int param5) {
+    final void a(be param0, int param1, up param2, Widget param3, int param4, int param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;

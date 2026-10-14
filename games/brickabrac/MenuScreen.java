@@ -499,7 +499,7 @@ abstract class MenuScreen extends GameScreen {
                   } else {
                     var12 = (String) null;
                     he.a((String) null, true, (byte) 123);
-                    if (ib.a(pl.pendingAchievementMask, -1)) {
+                    if (WidgetGroup.a(pl.pendingAchievementMask, -1)) {
                       sl.field_z = 9;
                     } else {
                       stackIn_143_0 = (null != VerticalScrollbar.field_Ub) ? 5 : 0;
@@ -615,7 +615,7 @@ abstract class MenuScreen extends GameScreen {
           var10 = 0;
           for (var11 = 0; var11 < 29; var11++) {
             if ((1 << var11 & param1.flaggedBrickTypeMask) != 0) {
-              oc.a(var8, var11, var7_int, param1, param0, (byte) 115);
+              Widget.a(var8, var11, var7_int, param1, param0, (byte) 115);
               var7_int += 25;
               var9++;
               if (var9 == param5) {

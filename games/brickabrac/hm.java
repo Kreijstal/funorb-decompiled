@@ -33,7 +33,7 @@ final class hm {
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           wc.field_e = choiceCount;
-          oc.field_p = -1L;
+          Widget.field_p = -1L;
           BufferedFile.gameSettingBitWidths = settingBitWidths;
           RankingsRequest.gameSettingCount = settingBitWidths.length;
           fh.pendingGameOptionsReceived = false;
