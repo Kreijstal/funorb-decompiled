@@ -10,7 +10,7 @@ final class WeightedLruCache {
     private IterableIntrusiveHashTable index;
     static RgbSprite field_e;
     private DualLinkDeque lruEntries;
-    static int[] field_f;
+    static int[] powerUpDropPeriods;
     static PcmStream primaryActivityLoop;
     static String field_h;
     static int field_b;
@@ -83,7 +83,7 @@ final class WeightedLruCache {
         int var1 = 77 / ((-29 - param0) / 44);
         field_l = null;
         field_h = null;
-        field_f = null;
+        powerUpDropPeriods = null;
         field_g = null;
     }
 
@@ -100,7 +100,7 @@ final class WeightedLruCache {
 
     final static void a(boolean param0, int param1) {
         if (param1 > -127) {
-          field_f = (int[]) null;
+          powerUpDropPeriods = (int[]) null;
           LabeledWidget.emailAvailabilityRequest.complete(param0, 20892);
           return;
         }
@@ -164,36 +164,36 @@ final class WeightedLruCache {
         field_g = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
         field_h = "<%0> is not on your ignore list.";
         field_l = "Email is valid";
-        field_f = new int[29];
-        field_f[3] = 5;
-        field_f[15] = 2;
-        field_f[22] = -1;
-        field_f[27] = -1;
-        field_f[14] = 5;
-        field_f[26] = -1;
-        field_f[20] = -1;
-        field_f[0] = -1;
-        field_f[28] = -1;
-        field_f[13] = 2;
-        field_f[1] = -1;
-        field_f[21] = -1;
-        field_f[8] = 2;
-        field_f[7] = 2;
-        field_f[6] = 5;
-        field_f[23] = -1;
-        field_f[4] = 5;
-        field_f[18] = 10;
-        field_f[2] = -1;
-        field_f[9] = 2;
-        field_f[24] = -1;
-        field_f[25] = -1;
-        field_f[16] = 5;
-        field_f[12] = 10;
-        field_f[17] = 2;
-        field_f[10] = 5;
-        field_f[19] = -1;
-        field_f[11] = 2;
-        field_f[5] = 10;
+        powerUpDropPeriods = new int[29];
+        powerUpDropPeriods[3] = 5;
+        powerUpDropPeriods[15] = 2;
+        powerUpDropPeriods[22] = -1;
+        powerUpDropPeriods[27] = -1;
+        powerUpDropPeriods[14] = 5;
+        powerUpDropPeriods[26] = -1;
+        powerUpDropPeriods[20] = -1;
+        powerUpDropPeriods[0] = -1;
+        powerUpDropPeriods[28] = -1;
+        powerUpDropPeriods[13] = 2;
+        powerUpDropPeriods[1] = -1;
+        powerUpDropPeriods[21] = -1;
+        powerUpDropPeriods[8] = 2;
+        powerUpDropPeriods[7] = 2;
+        powerUpDropPeriods[6] = 5;
+        powerUpDropPeriods[23] = -1;
+        powerUpDropPeriods[4] = 5;
+        powerUpDropPeriods[18] = 10;
+        powerUpDropPeriods[2] = -1;
+        powerUpDropPeriods[9] = 2;
+        powerUpDropPeriods[24] = -1;
+        powerUpDropPeriods[25] = -1;
+        powerUpDropPeriods[16] = 5;
+        powerUpDropPeriods[12] = 10;
+        powerUpDropPeriods[17] = 2;
+        powerUpDropPeriods[10] = 5;
+        powerUpDropPeriods[19] = -1;
+        powerUpDropPeriods[11] = 2;
+        powerUpDropPeriods[5] = 10;
         field_i = 0;
     }
 }

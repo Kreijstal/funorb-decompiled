@@ -6,7 +6,7 @@ class IntrusiveNode {
     IntrusiveNode next;
     static QuickChatParameterType field_c;
     static String field_a;
-    static RgbSprite[] field_f;
+    static RgbSprite[] gameEyeSprites;
     static RgbSprite field_d;
     static int[] field_h;
     long key;
@@ -73,7 +73,7 @@ class IntrusiveNode {
     }
 
     public static void a(boolean param0) {
-        field_f = null;
+        gameEyeSprites = null;
         field_c = null;
         if (!param0) {
           return;

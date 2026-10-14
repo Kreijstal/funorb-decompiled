@@ -109,44 +109,44 @@ final class aa {
         return;
     }
 
-    final static int a(int param0, Random param1, boolean param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_12_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int nextBoundedJavaRandom(int bound, Random random, boolean obfuscationGuard) {
+        int rejectionThreshold = 0;
+        RuntimeException failure = null;
+        int word = 0;
+        int powerOfTwoResult = 0;
+        int remainderResult = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String randomSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 <= 0) {
+          if (bound <= 0) {
             throw new IllegalArgumentException();
           }
-          if (!param2) {
+          if (!obfuscationGuard) {
             field_b = (RgbSprite) null;
           }
-          if (wn.a(param0, (byte) -6)) {
-            stackIn_7_0 = (int)((long)param0 * ((long)param1.nextInt() & 4294967295L) >> 32);
-            return stackIn_7_0;
+          if (wn.a(bound, (byte) -6)) {
+            powerOfTwoResult = (int)((long)bound * ((long)random.nextInt() & 4294967295L) >> 32);
+            return powerOfTwoResult;
           }
-          var3_int = -2147483648 - (int)(4294967296L % (long)param0);
+          rejectionThreshold = -2147483648 - (int)(4294967296L % (long)bound);
           do {
-            var4 = param1.nextInt();
-          } while (var3_int <= var4);
-          stackIn_12_0 = er.nonnegativeRemainder(-1560508993, param0, var4);
-          return stackIn_12_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("aa.D(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_16_2 = "null";
+            word = random.nextInt();
+          } while (rejectionThreshold <= word);
+          remainderResult = er.nonnegativeRemainder(-1560508993, bound, word);
+          return remainderResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("aa.D(").append(bound).append(',');
+          if (random == null) {
+            randomSummary = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            randomSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(randomSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

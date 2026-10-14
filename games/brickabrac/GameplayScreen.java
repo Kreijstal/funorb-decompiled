@@ -956,8 +956,8 @@ final class GameplayScreen extends GameScreen {
           }
           if (keyCode == 55) {
             for (var5Lifetime2 = 0; 29 > var5Lifetime2; var5Lifetime2++) {
-              if (WeightedLruCache.field_f[var5Lifetime2] > -1) {
-                var7.field_o[var5Lifetime2] = (byte)(-1 + WeightedLruCache.field_f[var5Lifetime2]);
+              if (WeightedLruCache.powerUpDropPeriods[var5Lifetime2] > -1) {
+                var7.powerUpDropCounters[var5Lifetime2] = (byte)(-1 + WeightedLruCache.powerUpDropPeriods[var5Lifetime2]);
               }
             }
             this.suppressResultSubmission = true;
@@ -1338,8 +1338,8 @@ final class GameplayScreen extends GameScreen {
             var15 = 0;
             var9Lifetime1 = var15;
             while (var15 < 29) {
-              if (WeightedLruCache.field_f[var15] >= 1) {
-                var10 = (20 * effectBoard.field_o[var15] << 8) / WeightedLruCache.field_f[var15];
+              if (WeightedLruCache.powerUpDropPeriods[var15] >= 1) {
+                var10 = (20 * effectBoard.powerUpDropCounters[var15] << 8) / WeightedLruCache.powerUpDropPeriods[var15];
                 if ((1 << var15 & var8_intLifetime1) != 0) {
                   var10 = 5120;
                 }

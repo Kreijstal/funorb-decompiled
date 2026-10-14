@@ -8196,6 +8196,14 @@
       "renamedSymbol": "F:GzipInflater.desertCapsSprites:[[LRgbSprite;"
     },
     {
+      "symbol": "F:j.field_B:Ljava/util/Random;",
+      "originalName": "field_B",
+      "to": "messageRandom",
+      "evidence": "j.java: Separate java.util.Random used only to choose presentation messages; excluded from ISAAC call accounting.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.messageRandom:Ljava/util/Random;"
+    },
+    {
       "symbol": "F:j.field_C:Lvl;",
       "originalName": "field_C",
       "to": "bubbles",
@@ -8396,6 +8404,14 @@
       "renamedSymbol": "F:PlayerBoard.messageTicks:I"
     },
     {
+      "symbol": "F:j.field_ib:I",
+      "originalName": "field_ib",
+      "to": "eyeExpressionTicks",
+      "evidence": "j.java: Decrements during board advancement; expiry selects neutral state0 for50 ticks.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.eyeExpressionTicks:I"
+    },
+    {
       "symbol": "F:j.field_j:I",
       "originalName": "field_j",
       "to": "rightKeyCode",
@@ -8442,6 +8458,14 @@
       "evidence": "j.java: addScore appends score text; match tick advances its rising/fading lifetime.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlayerBoard.scorePopups:LNodeDeque;"
+    },
+    {
+      "symbol": "F:j.field_o:[B",
+      "originalName": "field_o",
+      "to": "powerUpDropCounters",
+      "evidence": "j.java: Per-brick-type signed byte counters incremented before modulo by the corresponding drop period.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.powerUpDropCounters:[B"
     },
     {
       "symbol": "F:j.field_ob:I",
@@ -8546,6 +8570,14 @@
       "evidence": "j.java: Transient BallPulseEffect collection aged/unlinked by match and drawn by board renderer.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlayerBoard.ballPulses:LNodeDeque;"
+    },
+    {
+      "symbol": "F:j.field_y:I",
+      "originalName": "field_y",
+      "to": "eyeExpression",
+      "evidence": "j.java: Indexes the eyes_game sprite table; timed changes include ball-loss states. Numeric state meanings remain qualified.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.eyeExpression:I"
     },
     {
       "symbol": "F:j.field_yb:Lvo;",
@@ -11650,6 +11682,14 @@
       "evidence": "nm.java: Next intrusive link; forward deque traversal follows it.",
       "confidence": "reviewed",
       "renamedSymbol": "F:IntrusiveNode.next:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:nm.field_f:[Ljp;",
+      "originalName": "field_f",
+      "to": "gameEyeSprites",
+      "evidence": "nm.java: Loaded from basic/eyes_game and indexed by the board eye-expression state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveNode.gameEyeSprites:[LRgbSprite;"
     },
     {
       "symbol": "F:nm.field_g:J",
@@ -15636,6 +15676,14 @@
       "renamedSymbol": "F:WeightedLruCache.remainingCapacity:I"
     },
     {
+      "symbol": "F:to.field_f:[I",
+      "originalName": "field_f",
+      "to": "powerUpDropPeriods",
+      "evidence": "to.java: Shared per-type positive modulo period; nonpositive values leave the stored counter unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:WeightedLruCache.powerUpDropPeriods:[I"
+    },
+    {
       "symbol": "F:to.field_j:Lgp;",
       "originalName": "field_j",
       "to": "lruEntries",
@@ -17298,6 +17346,86 @@
       "evidence": "a.java: Reviewed social update/lookup/request declaration and intrusive ownership; exact ordinal/spelling checked.",
       "confidence": "reviewed",
       "renamedSymbol": "L:ArchiveNetworkClient.comesBeforeFriend(ILSocialListEntry;LSocialListEntry;)Z#2"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#0",
+      "originalName": "var3_int",
+      "to": "rejectionThreshold",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#0"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#1",
+      "originalName": "var3",
+      "to": "failure",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#1"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#2",
+      "originalName": "var4",
+      "to": "word",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#2"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#3",
+      "originalName": "stackIn_7_0",
+      "to": "powerOfTwoResult",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#3"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#4",
+      "originalName": "stackIn_12_0",
+      "to": "remainderResult",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#4"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#5",
+      "originalName": "stackIn_15_0",
+      "to": "failureContext",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#5"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#6",
+      "originalName": "stackIn_15_1",
+      "to": "contextBuilder",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#6"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#7",
+      "originalName": "stackIn_16_2",
+      "to": "randomSummary",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#7"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#8",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#8"
+    },
+    {
+      "symbol": "L:aa.a(ILjava/util/Random;Z)I#9",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "aa.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#9"
     },
     {
       "symbol": "L:ad.run()V#0",
@@ -27444,6 +27572,142 @@
       "renamedSymbol": "L:IntrusiveHashIterator.isReflectionCheckReady(I)Z#7"
     },
     {
+      "symbol": "L:j.a(BLon;Lvn;)V#0",
+      "originalName": "stackIn_11_0",
+      "to": "failureContext",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#0"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#1",
+      "originalName": "stackIn_11_1",
+      "to": "contextBuilder",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#1"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#10",
+      "originalName": "var7",
+      "to": "outgoingAngle",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#10"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#11",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#11"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#2",
+      "originalName": "stackIn_12_2",
+      "to": "sourceSummary",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#2"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#3",
+      "originalName": "stackIn_14_1",
+      "to": "ballContextBuilder",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#3"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#4",
+      "originalName": "stackIn_15_2",
+      "to": "ballSummary",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#4"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#5",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#5"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#6",
+      "originalName": "var4_int",
+      "to": "destinationIndex",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#6"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#7",
+      "originalName": "var4",
+      "to": "failure",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#7"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#8",
+      "originalName": "var5",
+      "to": "destinationPortal",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#8"
+    },
+    {
+      "symbol": "L:j.a(BLon;Lvn;)V#9",
+      "originalName": "var6",
+      "to": "angleSample",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#9"
+    },
+    {
+      "symbol": "L:j.a(I)V#0",
+      "originalName": "var2",
+      "to": "groupIndex",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#0"
+    },
+    {
+      "symbol": "L:j.a(I)V#1",
+      "originalName": "var3",
+      "to": "brick",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#1"
+    },
+    {
+      "symbol": "L:j.a(I)V#2",
+      "originalName": "var4",
+      "to": "unusedGameFlag",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#2"
+    },
+    {
+      "symbol": "L:j.a(I)V#3",
+      "originalName": "var5",
+      "to": "unusedDiagnosticBuilder",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#3"
+    },
+    {
+      "symbol": "L:j.a(II)Z#0",
+      "originalName": "dupTemp$0",
+      "to": "incrementedCounter",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.advancePowerUpDropCounter(II)Z#0"
+    },
+    {
       "symbol": "L:j.a(III)I#0",
       "originalName": "var4",
       "to": "historyIndex",
@@ -27458,6 +27722,38 @@
       "evidence": "j.java: Pending effect examined for type and activation tick.",
       "confidence": "reviewed",
       "renamedSymbol": "L:PlayerBoard.ticksUntilPendingPowerUp(III)I#1"
+    },
+    {
+      "symbol": "L:j.a(ILon;I)V#0",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.addBrickScore(ILBrick;I)V#0"
+    },
+    {
+      "symbol": "L:j.a(ILvo;I)V#0",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.addPaddleScore(ILPaddle;I)V#0"
+    },
+    {
+      "symbol": "L:j.a([Ljava/lang/String;B)V#0",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V#0"
+    },
+    {
+      "symbol": "L:j.b(II)V#0",
+      "originalName": "var4",
+      "to": "unusedPaddle",
+      "evidence": "j.java: Reviewed board action, signed drop cadence, portal destination/angle selection or Java Random declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerBoard.setBriefEyeExpression(II)V#0"
     },
     {
       "symbol": "L:j.f(I)V#0",
@@ -38772,6 +39068,14 @@
       "renamedSymbol": "M:ArchiveNetworkClient.compactFaceBuckets(B)V"
     },
     {
+      "symbol": "M:aa.a(ILjava/util/Random;Z)I",
+      "originalName": "a",
+      "to": "nextBoundedJavaRandom",
+      "evidence": "aa.java: Uses unsigned multiply for powers of two, otherwise signed-range rejection then nonnegative remainder; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I"
+    },
+    {
       "symbol": "M:ab.a(BJ)Lid;",
       "originalName": "a",
       "to": "findLobbyPlayer",
@@ -43228,12 +43532,36 @@
       "renamedSymbol": "M:JungleBackground.hasSprites(B)Z"
     },
     {
+      "symbol": "M:j.a(B)V",
+      "originalName": "a",
+      "to": "beginDefeatTransition",
+      "evidence": "j.java: Enters board state3 and resets state ticks after loss of final life; guard22.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.beginDefeatTransition(B)V"
+    },
+    {
+      "symbol": "M:j.a(BLon;Lvn;)V",
+      "originalName": "a",
+      "to": "teleportBall",
+      "evidence": "j.java: Chooses another portal with one bounded ISAAC call, positions ball above its center, then selects outgoing angle with a second call and preserves horizontal sign; guard -63.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.teleportBall(BLBrick;LBall;)V"
+    },
+    {
       "symbol": "M:j.a(BZI)V",
       "originalName": "a",
       "to": "resetServe",
       "evidence": "j.java: Resets paddle size, queued/active balls and falling effects; optional accounting reset and explicit launch angle; guard85.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayerBoard.resetServe(BZI)V"
+    },
+    {
+      "symbol": "M:j.a(I)V",
+      "originalName": "a",
+      "to": "toggleBrickTypes26And27",
+      "evidence": "j.java: Walks all brick groups and reverses/schedules numeric type26/27 transitions; rejects current27/pending27; guard -27.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.toggleBrickTypes26And27(I)V"
     },
     {
       "symbol": "M:j.a(IB)I",
@@ -43244,6 +43572,14 @@
       "renamedSymbol": "M:PlayerBoard.nextRandomBoundedInt(IB)I"
     },
     {
+      "symbol": "M:j.a(II)Z",
+      "originalName": "a",
+      "to": "advancePowerUpDropCounter",
+      "evidence": "j.java: Positive periods increment through signed byte conversion before modulo; returns whether retained counter is zero; guard26.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.advancePowerUpDropCounter(II)Z"
+    },
+    {
       "symbol": "M:j.a(III)I",
       "originalName": "a",
       "to": "ticksUntilPendingPowerUp",
@@ -43252,12 +43588,36 @@
       "renamedSymbol": "M:PlayerBoard.ticksUntilPendingPowerUp(III)I"
     },
     {
+      "symbol": "M:j.a(ILon;I)V",
+      "originalName": "a",
+      "to": "addBrickScore",
+      "evidence": "j.java: Scores at brick horizontal center and caller-divided height offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.addBrickScore(ILBrick;I)V"
+    },
+    {
+      "symbol": "M:j.a(ILvo;I)V",
+      "originalName": "a",
+      "to": "addPaddleScore",
+      "evidence": "j.java: Scores at caller-divided paddle width offset and50 pixels above paddle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.addPaddleScore(ILPaddle;I)V"
+    },
+    {
       "symbol": "M:j.a(IZ)V",
       "originalName": "a",
       "to": "resetServeWithRandomAngle",
       "evidence": "j.java: Consumes one bounded board random sample, then resets serve; guard26496.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayerBoard.resetServeWithRandomAngle(IZ)V"
+    },
+    {
+      "symbol": "M:j.a(IZI)V",
+      "originalName": "a",
+      "to": "setEyeExpression",
+      "evidence": "j.java: Stores eyes_game sprite state and duration; canonical true avoids unrelated warning update.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.setEyeExpression(IZI)V"
     },
     {
       "symbol": "M:j.a(IZII)V",
@@ -43298,6 +43658,22 @@
       "evidence": "j.java: Restores lifecycle, tick/history, score/lives, random position, brick/path/body collections, paddle and deterministic bubbles; true skips final extension.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlayerBoard.readBoardSnapshot(ZLPacketBuffer;I)V"
+    },
+    {
+      "symbol": "M:j.a([Ljava/lang/String;B)V",
+      "originalName": "a",
+      "to": "choosePendingMessage",
+      "evidence": "j.java: Chooses caption with separate Java Random helper, preserving synchronized ISAAC state/call count; guard75.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V"
+    },
+    {
+      "symbol": "M:j.b(II)V",
+      "originalName": "b",
+      "to": "setBriefEyeExpression",
+      "evidence": "j.java: Delegates eye-expression state with50-tick duration; guard16387.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBoard.setBriefEyeExpression(II)V"
     },
     {
       "symbol": "M:j.c(I)V",
@@ -51434,6 +51810,30 @@
       "evidence": "a.java: Moves depth bucket IDs to contiguous prefix in ascending bucket order; canonical guard94.",
       "confidence": "reviewed",
       "renamedSymbol": "P:ArchiveNetworkClient.compactFaceBuckets(B)V#0"
+    },
+    {
+      "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+      "originalName": "param0",
+      "to": "bound",
+      "evidence": "aa.java: Uses unsigned multiply for powers of two, otherwise signed-range rejection then nonnegative remainder; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#0"
+    },
+    {
+      "symbol": "P:aa.a(ILjava/util/Random;Z)I#1",
+      "originalName": "param1",
+      "to": "random",
+      "evidence": "aa.java: Uses unsigned multiply for powers of two, otherwise signed-range rejection then nonnegative remainder; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#1"
+    },
+    {
+      "symbol": "P:aa.a(ILjava/util/Random;Z)I#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "aa.java: Uses unsigned multiply for powers of two, otherwise signed-range rejection then nonnegative remainder; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#2"
     },
     {
       "symbol": "P:ab.a(BJ)Lid;#0",
@@ -65500,6 +65900,38 @@
       "renamedSymbol": "P:PlayerBoard.<init>(IIIII)V#4"
     },
     {
+      "symbol": "P:j.a(B)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "j.java: Enters board state3 and resets state ticks after loss of final life; guard22.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.beginDefeatTransition(B)V#0"
+    },
+    {
+      "symbol": "P:j.a(BLon;Lvn;)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "j.java: Chooses another portal with one bounded ISAAC call, positions ball above its center, then selects outgoing angle with a second call and preserves horizontal sign; guard -63.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.teleportBall(BLBrick;LBall;)V#0"
+    },
+    {
+      "symbol": "P:j.a(BLon;Lvn;)V#1",
+      "originalName": "param1",
+      "to": "sourcePortal",
+      "evidence": "j.java: Chooses another portal with one bounded ISAAC call, positions ball above its center, then selects outgoing angle with a second call and preserves horizontal sign; guard -63.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.teleportBall(BLBrick;LBall;)V#1"
+    },
+    {
+      "symbol": "P:j.a(BLon;Lvn;)V#2",
+      "originalName": "param2",
+      "to": "ball",
+      "evidence": "j.java: Chooses another portal with one bounded ISAAC call, positions ball above its center, then selects outgoing angle with a second call and preserves horizontal sign; guard -63.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.teleportBall(BLBrick;LBall;)V#2"
+    },
+    {
       "symbol": "P:j.a(BZI)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -65524,6 +65956,14 @@
       "renamedSymbol": "P:PlayerBoard.resetServe(BZI)V#2"
     },
     {
+      "symbol": "P:j.a(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "j.java: Walks all brick groups and reverses/schedules numeric type26/27 transitions; rejects current27/pending27; guard -27.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.toggleBrickTypes26And27(I)V#0"
+    },
+    {
       "symbol": "P:j.a(IB)I#0",
       "originalName": "param0",
       "to": "bound",
@@ -65538,6 +65978,22 @@
       "evidence": "j.java: Increments randomCallCount before delegating bounded sampling; guard62.",
       "confidence": "reviewed",
       "renamedSymbol": "P:PlayerBoard.nextRandomBoundedInt(IB)I#1"
+    },
+    {
+      "symbol": "P:j.a(II)Z#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "j.java: Positive periods increment through signed byte conversion before modulo; returns whether retained counter is zero; guard26.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.advancePowerUpDropCounter(II)Z#0"
+    },
+    {
+      "symbol": "P:j.a(II)Z#1",
+      "originalName": "param1",
+      "to": "typeId",
+      "evidence": "j.java: Positive periods increment through signed byte conversion before modulo; returns whether retained counter is zero; guard26.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.advancePowerUpDropCounter(II)Z#1"
     },
     {
       "symbol": "P:j.a(III)I#0",
@@ -65564,6 +66020,54 @@
       "renamedSymbol": "P:PlayerBoard.ticksUntilPendingPowerUp(III)I#2"
     },
     {
+      "symbol": "P:j.a(ILon;I)V#0",
+      "originalName": "param0",
+      "to": "points",
+      "evidence": "j.java: Scores at brick horizontal center and caller-divided height offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.addBrickScore(ILBrick;I)V#0"
+    },
+    {
+      "symbol": "P:j.a(ILon;I)V#1",
+      "originalName": "param1",
+      "to": "brick",
+      "evidence": "j.java: Scores at brick horizontal center and caller-divided height offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.addBrickScore(ILBrick;I)V#1"
+    },
+    {
+      "symbol": "P:j.a(ILon;I)V#2",
+      "originalName": "param2",
+      "to": "heightDivisor",
+      "evidence": "j.java: Scores at brick horizontal center and caller-divided height offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.addBrickScore(ILBrick;I)V#2"
+    },
+    {
+      "symbol": "P:j.a(ILvo;I)V#0",
+      "originalName": "param0",
+      "to": "points",
+      "evidence": "j.java: Scores at caller-divided paddle width offset and50 pixels above paddle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.addPaddleScore(ILPaddle;I)V#0"
+    },
+    {
+      "symbol": "P:j.a(ILvo;I)V#1",
+      "originalName": "param1",
+      "to": "paddle",
+      "evidence": "j.java: Scores at caller-divided paddle width offset and50 pixels above paddle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.addPaddleScore(ILPaddle;I)V#1"
+    },
+    {
+      "symbol": "P:j.a(ILvo;I)V#2",
+      "originalName": "param2",
+      "to": "widthDivisor",
+      "evidence": "j.java: Scores at caller-divided paddle width offset and50 pixels above paddle.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.addPaddleScore(ILPaddle;I)V#2"
+    },
+    {
       "symbol": "P:j.a(IZ)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -65578,6 +66082,30 @@
       "evidence": "j.java: Consumes one bounded board random sample, then resets serve; guard26496.",
       "confidence": "reviewed",
       "renamedSymbol": "P:PlayerBoard.resetServeWithRandomAngle(IZ)V#1"
+    },
+    {
+      "symbol": "P:j.a(IZI)V#0",
+      "originalName": "param0",
+      "to": "eyeExpression",
+      "evidence": "j.java: Stores eyes_game sprite state and duration; canonical true avoids unrelated warning update.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.setEyeExpression(IZI)V#0"
+    },
+    {
+      "symbol": "P:j.a(IZI)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "j.java: Stores eyes_game sprite state and duration; canonical true avoids unrelated warning update.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.setEyeExpression(IZI)V#1"
+    },
+    {
+      "symbol": "P:j.a(IZI)V#2",
+      "originalName": "param2",
+      "to": "ticks",
+      "evidence": "j.java: Stores eyes_game sprite state and duration; canonical true avoids unrelated warning update.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.setEyeExpression(IZI)V#2"
     },
     {
       "symbol": "P:j.a(IZII)V#0",
@@ -65698,6 +66226,38 @@
       "evidence": "j.java: Restores lifecycle, tick/history, score/lives, random position, brick/path/body collections, paddle and deterministic bubbles; true skips final extension.",
       "confidence": "reviewed",
       "renamedSymbol": "P:PlayerBoard.readBoardSnapshot(ZLPacketBuffer;I)V#2"
+    },
+    {
+      "symbol": "P:j.a([Ljava/lang/String;B)V#0",
+      "originalName": "param0",
+      "to": "messages",
+      "evidence": "j.java: Chooses caption with separate Java Random helper, preserving synchronized ISAAC state/call count; guard75.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V#0"
+    },
+    {
+      "symbol": "P:j.a([Ljava/lang/String;B)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "j.java: Chooses caption with separate Java Random helper, preserving synchronized ISAAC state/call count; guard75.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V#1"
+    },
+    {
+      "symbol": "P:j.b(II)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "j.java: Delegates eye-expression state with50-tick duration; guard16387.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.setBriefEyeExpression(II)V#0"
+    },
+    {
+      "symbol": "P:j.b(II)V#1",
+      "originalName": "param1",
+      "to": "eyeExpression",
+      "evidence": "j.java: Delegates eye-expression state with50-tick duration; guard16387.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBoard.setBriefEyeExpression(II)V#1"
     },
     {
       "symbol": "P:j.c(I)V#0",
@@ -107163,9 +107723,9 @@
     },
     {
       "symbol": "F:j.field_B:Ljava/util/Random;",
-      "renamedSymbol": "F:PlayerBoard.field_B:Ljava/util/Random;",
+      "renamedSymbol": "F:PlayerBoard.messageRandom:Ljava/util/Random;",
       "originalName": "field_B",
-      "renamedName": "field_B",
+      "renamedName": "messageRandom",
       "declaration": {
         "file": "j.java",
         "start": 817,
@@ -107537,9 +108097,9 @@
     },
     {
       "symbol": "F:j.field_ib:I",
-      "renamedSymbol": "F:PlayerBoard.field_ib:I",
+      "renamedSymbol": "F:PlayerBoard.eyeExpressionTicks:I",
       "originalName": "field_ib",
-      "renamedName": "field_ib",
+      "renamedName": "eyeExpressionTicks",
       "declaration": {
         "file": "j.java",
         "start": 1160,
@@ -107658,9 +108218,9 @@
     },
     {
       "symbol": "F:j.field_o:[B",
-      "renamedSymbol": "F:PlayerBoard.field_o:[B",
+      "renamedSymbol": "F:PlayerBoard.powerUpDropCounters:[B",
       "originalName": "field_o",
-      "renamedName": "field_o",
+      "renamedName": "powerUpDropCounters",
       "declaration": {
         "file": "j.java",
         "start": 729,
@@ -107878,9 +108438,9 @@
     },
     {
       "symbol": "F:j.field_y:I",
-      "renamedSymbol": "F:PlayerBoard.field_y:I",
+      "renamedSymbol": "F:PlayerBoard.eyeExpression:I",
       "originalName": "field_y",
-      "renamedName": "field_y",
+      "renamedName": "eyeExpression",
       "declaration": {
         "file": "j.java",
         "start": 1228,
@@ -115952,9 +116512,9 @@
     },
     {
       "symbol": "F:nm.field_f:[Ljp;",
-      "renamedSymbol": "F:IntrusiveNode.field_f:[LRgbSprite;",
+      "renamedSymbol": "F:IntrusiveNode.gameEyeSprites:[LRgbSprite;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "gameEyeSprites",
       "declaration": {
         "file": "nm.java",
         "start": 147,
@@ -126567,9 +127127,9 @@
     },
     {
       "symbol": "F:to.field_f:[I",
-      "renamedSymbol": "F:WeightedLruCache.field_f:[I",
+      "renamedSymbol": "F:WeightedLruCache.powerUpDropPeriods:[I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "powerUpDropPeriods",
       "declaration": {
         "file": "to.java",
         "start": 285,
@@ -132727,9 +133287,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#0",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#0",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#0",
       "originalName": "var3_int",
-      "renamedName": "var3_int",
+      "renamedName": "rejectionThreshold",
       "declaration": {
         "file": "aa.java",
         "start": 3564,
@@ -132738,9 +133298,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#1",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#1",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "failure",
       "declaration": {
         "file": "aa.java",
         "start": 3603,
@@ -132749,9 +133309,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#2",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#2",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#2",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "word",
       "declaration": {
         "file": "aa.java",
         "start": 3628,
@@ -132760,9 +133320,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#3",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#3",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#3",
       "originalName": "stackIn_7_0",
-      "renamedName": "stackIn_7_0",
+      "renamedName": "powerOfTwoResult",
       "declaration": {
         "file": "aa.java",
         "start": 3650,
@@ -132771,9 +133331,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#4",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#4",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#4",
       "originalName": "stackIn_12_0",
-      "renamedName": "stackIn_12_0",
+      "renamedName": "remainderResult",
       "declaration": {
         "file": "aa.java",
         "start": 3679,
@@ -132782,9 +133342,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#5",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#5",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#5",
       "originalName": "stackIn_15_0",
-      "renamedName": "stackIn_15_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "aa.java",
         "start": 3722,
@@ -132793,9 +133353,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#6",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#6",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#6",
       "originalName": "stackIn_15_1",
-      "renamedName": "stackIn_15_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "aa.java",
         "start": 3765,
@@ -132804,9 +133364,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#7",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#7",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#7",
       "originalName": "stackIn_16_2",
-      "renamedName": "stackIn_16_2",
+      "renamedName": "randomSummary",
       "declaration": {
         "file": "aa.java",
         "start": 3801,
@@ -132815,9 +133375,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#8",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#8",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#8",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "aa.java",
         "start": 3847,
@@ -132826,9 +133386,9 @@
     },
     {
       "symbol": "L:aa.a(ILjava/util/Random;Z)I#9",
-      "renamedSymbol": "L:aa.a(ILjava/util/Random;Z)I#9",
+      "renamedSymbol": "L:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#9",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "aa.java",
         "start": 4528,
@@ -196032,9 +196592,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#0",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#0",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#0",
       "originalName": "stackIn_11_0",
-      "renamedName": "stackIn_11_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "j.java",
         "start": 27496,
@@ -196043,9 +196603,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#1",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#1",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#1",
       "originalName": "stackIn_11_1",
-      "renamedName": "stackIn_11_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "j.java",
         "start": 27539,
@@ -196054,9 +196614,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#10",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#10",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#10",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "outgoingAngle",
       "declaration": {
         "file": "j.java",
         "start": 27856,
@@ -196065,9 +196625,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#11",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#11",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#11",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "j.java",
         "start": 28658,
@@ -196076,9 +196636,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#2",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#2",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#2",
       "originalName": "stackIn_12_2",
-      "renamedName": "stackIn_12_2",
+      "renamedName": "sourceSummary",
       "declaration": {
         "file": "j.java",
         "start": 27575,
@@ -196087,9 +196647,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#3",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#3",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#3",
       "originalName": "stackIn_14_1",
-      "renamedName": "stackIn_14_1",
+      "renamedName": "ballContextBuilder",
       "declaration": {
         "file": "j.java",
         "start": 27618,
@@ -196098,9 +196658,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#4",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#4",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#4",
       "originalName": "stackIn_15_2",
-      "renamedName": "stackIn_15_2",
+      "renamedName": "ballSummary",
       "declaration": {
         "file": "j.java",
         "start": 27654,
@@ -196109,9 +196669,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#5",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#5",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#5",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "j.java",
         "start": 27700,
@@ -196120,9 +196680,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#6",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#6",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#6",
       "originalName": "var4_int",
-      "renamedName": "var4_int",
+      "renamedName": "destinationIndex",
       "declaration": {
         "file": "j.java",
         "start": 27746,
@@ -196131,9 +196691,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#7",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#7",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#7",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "failure",
       "declaration": {
         "file": "j.java",
         "start": 27785,
@@ -196142,9 +196702,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#8",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#8",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#8",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "destinationPortal",
       "declaration": {
         "file": "j.java",
         "start": 27809,
@@ -196153,9 +196713,9 @@
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#9",
-      "renamedSymbol": "L:PlayerBoard.a(BLBrick;LBall;)V#9",
+      "renamedSymbol": "L:PlayerBoard.teleportBall(BLBrick;LBall;)V#9",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "angleSample",
       "declaration": {
         "file": "j.java",
         "start": 27834,
@@ -196164,9 +196724,9 @@
     },
     {
       "symbol": "L:j.a(I)V#0",
-      "renamedSymbol": "L:PlayerBoard.a(I)V#0",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "groupIndex",
       "declaration": {
         "file": "j.java",
         "start": 25257,
@@ -196175,9 +196735,9 @@
     },
     {
       "symbol": "L:j.a(I)V#1",
-      "renamedSymbol": "L:PlayerBoard.a(I)V#1",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "brick",
       "declaration": {
         "file": "j.java",
         "start": 25278,
@@ -196186,9 +196746,9 @@
     },
     {
       "symbol": "L:j.a(I)V#2",
-      "renamedSymbol": "L:PlayerBoard.a(I)V#2",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#2",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "j.java",
         "start": 25296,
@@ -196197,9 +196757,9 @@
     },
     {
       "symbol": "L:j.a(I)V#3",
-      "renamedSymbol": "L:PlayerBoard.a(I)V#3",
+      "renamedSymbol": "L:PlayerBoard.toggleBrickTypes26And27(I)V#3",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "unusedDiagnosticBuilder",
       "declaration": {
         "file": "j.java",
         "start": 25324,
@@ -196208,9 +196768,9 @@
     },
     {
       "symbol": "L:j.a(II)Z#0",
-      "renamedSymbol": "L:PlayerBoard.a(II)Z#0",
+      "renamedSymbol": "L:PlayerBoard.advancePowerUpDropCounter(II)Z#0",
       "originalName": "dupTemp$0",
-      "renamedName": "dupTemp$0",
+      "renamedName": "incrementedCounter",
       "declaration": {
         "file": "j.java",
         "start": 30888,
@@ -196252,9 +196812,9 @@
     },
     {
       "symbol": "L:j.a(ILon;I)V#0",
-      "renamedSymbol": "L:PlayerBoard.a(ILBrick;I)V#0",
+      "renamedSymbol": "L:PlayerBoard.addBrickScore(ILBrick;I)V#0",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "j.java",
         "start": 29659,
@@ -196263,9 +196823,9 @@
     },
     {
       "symbol": "L:j.a(ILvo;I)V#0",
-      "renamedSymbol": "L:PlayerBoard.a(ILPaddle;I)V#0",
+      "renamedSymbol": "L:PlayerBoard.addPaddleScore(ILPaddle;I)V#0",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "j.java",
         "start": 30043,
@@ -197440,9 +198000,9 @@
     },
     {
       "symbol": "L:j.a([Ljava/lang/String;B)V#0",
-      "renamedSymbol": "L:PlayerBoard.a([Ljava/lang/String;B)V#0",
+      "renamedSymbol": "L:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V#0",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "j.java",
         "start": 16324,
@@ -197451,9 +198011,9 @@
     },
     {
       "symbol": "L:j.b(II)V#0",
-      "renamedSymbol": "L:PlayerBoard.b(II)V#0",
+      "renamedSymbol": "L:PlayerBoard.setBriefEyeExpression(II)V#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "unusedPaddle",
       "declaration": {
         "file": "j.java",
         "start": 21701,
@@ -316834,9 +317394,9 @@
     },
     {
       "symbol": "M:aa.a(ILjava/util/Random;Z)I",
-      "renamedSymbol": "M:aa.a(ILjava/util/Random;Z)I",
+      "renamedSymbol": "M:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "nextBoundedJavaRandom",
       "declaration": {
         "file": "aa.java",
         "start": 3505,
@@ -330342,9 +330902,9 @@
     },
     {
       "symbol": "M:j.a(B)V",
-      "renamedSymbol": "M:PlayerBoard.a(B)V",
+      "renamedSymbol": "M:PlayerBoard.beginDefeatTransition(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "beginDefeatTransition",
       "declaration": {
         "file": "j.java",
         "start": 24251,
@@ -330353,9 +330913,9 @@
     },
     {
       "symbol": "M:j.a(BLon;Lvn;)V",
-      "renamedSymbol": "M:PlayerBoard.a(BLBrick;LBall;)V",
+      "renamedSymbol": "M:PlayerBoard.teleportBall(BLBrick;LBall;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "teleportBall",
       "declaration": {
         "file": "j.java",
         "start": 27432,
@@ -330375,9 +330935,9 @@
     },
     {
       "symbol": "M:j.a(I)V",
-      "renamedSymbol": "M:PlayerBoard.a(I)V",
+      "renamedSymbol": "M:PlayerBoard.toggleBrickTypes26And27(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "toggleBrickTypes26And27",
       "declaration": {
         "file": "j.java",
         "start": 25229,
@@ -330397,9 +330957,9 @@
     },
     {
       "symbol": "M:j.a(II)Z",
-      "renamedSymbol": "M:PlayerBoard.a(II)Z",
+      "renamedSymbol": "M:PlayerBoard.advancePowerUpDropCounter(II)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advancePowerUpDropCounter",
       "declaration": {
         "file": "j.java",
         "start": 30847,
@@ -330419,9 +330979,9 @@
     },
     {
       "symbol": "M:j.a(ILon;I)V",
-      "renamedSymbol": "M:PlayerBoard.a(ILBrick;I)V",
+      "renamedSymbol": "M:PlayerBoard.addBrickScore(ILBrick;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addBrickScore",
       "declaration": {
         "file": "j.java",
         "start": 29460,
@@ -330430,9 +330990,9 @@
     },
     {
       "symbol": "M:j.a(ILvo;I)V",
-      "renamedSymbol": "M:PlayerBoard.a(ILPaddle;I)V",
+      "renamedSymbol": "M:PlayerBoard.addPaddleScore(ILPaddle;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addPaddleScore",
       "declaration": {
         "file": "j.java",
         "start": 29856,
@@ -330452,9 +331012,9 @@
     },
     {
       "symbol": "M:j.a(IZI)V",
-      "renamedSymbol": "M:PlayerBoard.a(IZI)V",
+      "renamedSymbol": "M:PlayerBoard.setEyeExpression(IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setEyeExpression",
       "declaration": {
         "file": "j.java",
         "start": 27248,
@@ -330518,9 +331078,9 @@
     },
     {
       "symbol": "M:j.a([Ljava/lang/String;B)V",
-      "renamedSymbol": "M:PlayerBoard.a([Ljava/lang/String;B)V",
+      "renamedSymbol": "M:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "choosePendingMessage",
       "declaration": {
         "file": "j.java",
         "start": 16091,
@@ -330529,9 +331089,9 @@
     },
     {
       "symbol": "M:j.b(II)V",
-      "renamedSymbol": "M:PlayerBoard.b(II)V",
+      "renamedSymbol": "M:PlayerBoard.setBriefEyeExpression(II)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "setBriefEyeExpression",
       "declaration": {
         "file": "j.java",
         "start": 21629,
@@ -353387,9 +353947,9 @@
     },
     {
       "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
-      "renamedSymbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+      "renamedSymbol": "P:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "bound",
       "declaration": {
         "file": "aa.java",
         "start": 3511,
@@ -353398,9 +353958,9 @@
     },
     {
       "symbol": "P:aa.a(ILjava/util/Random;Z)I#1",
-      "renamedSymbol": "P:aa.a(ILjava/util/Random;Z)I#1",
+      "renamedSymbol": "P:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "random",
       "declaration": {
         "file": "aa.java",
         "start": 3526,
@@ -353409,9 +353969,9 @@
     },
     {
       "symbol": "P:aa.a(ILjava/util/Random;Z)I#2",
-      "renamedSymbol": "P:aa.a(ILjava/util/Random;Z)I#2",
+      "renamedSymbol": "P:aa.nextBoundedJavaRandom(ILjava/util/Random;Z)I#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "aa.java",
         "start": 3542,
@@ -387982,9 +388542,9 @@
     },
     {
       "symbol": "P:j.a(B)V#0",
-      "renamedSymbol": "P:PlayerBoard.a(B)V#0",
+      "renamedSymbol": "P:PlayerBoard.beginDefeatTransition(B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "j.java",
         "start": 24258,
@@ -387993,9 +388553,9 @@
     },
     {
       "symbol": "P:j.a(BLon;Lvn;)V#0",
-      "renamedSymbol": "P:PlayerBoard.a(BLBrick;LBall;)V#0",
+      "renamedSymbol": "P:PlayerBoard.teleportBall(BLBrick;LBall;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "j.java",
         "start": 27439,
@@ -388004,9 +388564,9 @@
     },
     {
       "symbol": "P:j.a(BLon;Lvn;)V#1",
-      "renamedSymbol": "P:PlayerBoard.a(BLBrick;LBall;)V#1",
+      "renamedSymbol": "P:PlayerBoard.teleportBall(BLBrick;LBall;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "sourcePortal",
       "declaration": {
         "file": "j.java",
         "start": 27450,
@@ -388015,9 +388575,9 @@
     },
     {
       "symbol": "P:j.a(BLon;Lvn;)V#2",
-      "renamedSymbol": "P:PlayerBoard.a(BLBrick;LBall;)V#2",
+      "renamedSymbol": "P:PlayerBoard.teleportBall(BLBrick;LBall;)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "ball",
       "declaration": {
         "file": "j.java",
         "start": 27461,
@@ -388059,9 +388619,9 @@
     },
     {
       "symbol": "P:j.a(I)V#0",
-      "renamedSymbol": "P:PlayerBoard.a(I)V#0",
+      "renamedSymbol": "P:PlayerBoard.toggleBrickTypes26And27(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "j.java",
         "start": 25235,
@@ -388092,9 +388652,9 @@
     },
     {
       "symbol": "P:j.a(II)Z#0",
-      "renamedSymbol": "P:PlayerBoard.a(II)Z#0",
+      "renamedSymbol": "P:PlayerBoard.advancePowerUpDropCounter(II)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "j.java",
         "start": 30853,
@@ -388103,9 +388663,9 @@
     },
     {
       "symbol": "P:j.a(II)Z#1",
-      "renamedSymbol": "P:PlayerBoard.a(II)Z#1",
+      "renamedSymbol": "P:PlayerBoard.advancePowerUpDropCounter(II)Z#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "typeId",
       "declaration": {
         "file": "j.java",
         "start": 30865,
@@ -388147,9 +388707,9 @@
     },
     {
       "symbol": "P:j.a(ILon;I)V#0",
-      "renamedSymbol": "P:PlayerBoard.a(ILBrick;I)V#0",
+      "renamedSymbol": "P:PlayerBoard.addBrickScore(ILBrick;I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "points",
       "declaration": {
         "file": "j.java",
         "start": 29466,
@@ -388158,9 +388718,9 @@
     },
     {
       "symbol": "P:j.a(ILon;I)V#1",
-      "renamedSymbol": "P:PlayerBoard.a(ILBrick;I)V#1",
+      "renamedSymbol": "P:PlayerBoard.addBrickScore(ILBrick;I)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "brick",
       "declaration": {
         "file": "j.java",
         "start": 29477,
@@ -388169,9 +388729,9 @@
     },
     {
       "symbol": "P:j.a(ILon;I)V#2",
-      "renamedSymbol": "P:PlayerBoard.a(ILBrick;I)V#2",
+      "renamedSymbol": "P:PlayerBoard.addBrickScore(ILBrick;I)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "heightDivisor",
       "declaration": {
         "file": "j.java",
         "start": 29489,
@@ -388180,9 +388740,9 @@
     },
     {
       "symbol": "P:j.a(ILvo;I)V#0",
-      "renamedSymbol": "P:PlayerBoard.a(ILPaddle;I)V#0",
+      "renamedSymbol": "P:PlayerBoard.addPaddleScore(ILPaddle;I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "points",
       "declaration": {
         "file": "j.java",
         "start": 29862,
@@ -388191,9 +388751,9 @@
     },
     {
       "symbol": "P:j.a(ILvo;I)V#1",
-      "renamedSymbol": "P:PlayerBoard.a(ILPaddle;I)V#1",
+      "renamedSymbol": "P:PlayerBoard.addPaddleScore(ILPaddle;I)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "paddle",
       "declaration": {
         "file": "j.java",
         "start": 29873,
@@ -388202,9 +388762,9 @@
     },
     {
       "symbol": "P:j.a(ILvo;I)V#2",
-      "renamedSymbol": "P:PlayerBoard.a(ILPaddle;I)V#2",
+      "renamedSymbol": "P:PlayerBoard.addPaddleScore(ILPaddle;I)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "widthDivisor",
       "declaration": {
         "file": "j.java",
         "start": 29885,
@@ -388235,9 +388795,9 @@
     },
     {
       "symbol": "P:j.a(IZI)V#0",
-      "renamedSymbol": "P:PlayerBoard.a(IZI)V#0",
+      "renamedSymbol": "P:PlayerBoard.setEyeExpression(IZI)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "eyeExpression",
       "declaration": {
         "file": "j.java",
         "start": 27254,
@@ -388246,9 +388806,9 @@
     },
     {
       "symbol": "P:j.a(IZI)V#1",
-      "renamedSymbol": "P:PlayerBoard.a(IZI)V#1",
+      "renamedSymbol": "P:PlayerBoard.setEyeExpression(IZI)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "j.java",
         "start": 27270,
@@ -388257,9 +388817,9 @@
     },
     {
       "symbol": "P:j.a(IZI)V#2",
-      "renamedSymbol": "P:PlayerBoard.a(IZI)V#2",
+      "renamedSymbol": "P:PlayerBoard.setEyeExpression(IZI)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "ticks",
       "declaration": {
         "file": "j.java",
         "start": 27282,
@@ -388433,9 +388993,9 @@
     },
     {
       "symbol": "P:j.a([Ljava/lang/String;B)V#0",
-      "renamedSymbol": "P:PlayerBoard.a([Ljava/lang/String;B)V#0",
+      "renamedSymbol": "P:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "messages",
       "declaration": {
         "file": "j.java",
         "start": 16102,
@@ -388444,9 +389004,9 @@
     },
     {
       "symbol": "P:j.a([Ljava/lang/String;B)V#1",
-      "renamedSymbol": "P:PlayerBoard.a([Ljava/lang/String;B)V#1",
+      "renamedSymbol": "P:PlayerBoard.choosePendingMessage([Ljava/lang/String;B)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "j.java",
         "start": 16115,
@@ -388455,9 +389015,9 @@
     },
     {
       "symbol": "P:j.b(II)V#0",
-      "renamedSymbol": "P:PlayerBoard.b(II)V#0",
+      "renamedSymbol": "P:PlayerBoard.setBriefEyeExpression(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "j.java",
         "start": 21635,
@@ -388466,9 +389026,9 @@
     },
     {
       "symbol": "P:j.b(II)V#1",
-      "renamedSymbol": "P:PlayerBoard.b(II)V#1",
+      "renamedSymbol": "P:PlayerBoard.setBriefEyeExpression(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "eyeExpression",
       "declaration": {
         "file": "j.java",
         "start": 21647,
@@ -451885,7 +452445,7 @@
       "original": "a.java",
       "renamed": "ArchiveNetworkClient.java",
       "inputSha256": "93a8dfd82ab9ff19f7a359ba01d4a83466406bf2860e203ccd9bd13cd1c3e1ff",
-      "outputSha256": "06bc13f2f6089527474b646579ca626728be193daa18f218202699fd73e8cdf0",
+      "outputSha256": "bf95bd2a3a311c79c5c899280fe71272afcaae7b00e8493a5e724d7e26209daa",
       "edits": [
         {
           "start": 69,
@@ -452110,6 +452670,20 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 1439,
+          "end": 1446,
+          "symbol": "F:nm.field_f:[Ljp;",
+          "original": "field_f",
+          "renamed": "gameEyeSprites"
+        },
+        {
+          "start": 1454,
+          "end": 1461,
+          "symbol": "F:j.field_y:I",
+          "original": "field_y",
+          "renamed": "eyeExpression"
         },
         {
           "start": 1511,
@@ -454959,7 +455533,7 @@
       "original": "aa.java",
       "renamed": "aa.java",
       "inputSha256": "2c5f1ce2b2502e0905c3f4b658aa5b8c1997ec7e3ae9b57201abac445b37f8a0",
-      "outputSha256": "f9f64ebe148e84c565aabdc01330a3d0e63380981b20e2cfec220bd1696243b0",
+      "outputSha256": "10584854697d91458af09ea871ee77a2aed52043147be82257a826c6cb24f282",
       "edits": [
         {
           "start": 87,
@@ -455368,6 +455942,111 @@
           "renamed": "ProxyAuthenticationRequiredException"
         },
         {
+          "start": 3505,
+          "end": 3506,
+          "symbol": "M:aa.a(ILjava/util/Random;Z)I",
+          "original": "a",
+          "renamed": "nextBoundedJavaRandom"
+        },
+        {
+          "start": 3511,
+          "end": 3517,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "param0",
+          "renamed": "bound"
+        },
+        {
+          "start": 3526,
+          "end": 3532,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#1",
+          "original": "param1",
+          "renamed": "random"
+        },
+        {
+          "start": 3542,
+          "end": 3548,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3564,
+          "end": 3572,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "var3_int",
+          "renamed": "rejectionThreshold"
+        },
+        {
+          "start": 3603,
+          "end": 3607,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#1",
+          "original": "var3",
+          "renamed": "failure"
+        },
+        {
+          "start": 3628,
+          "end": 3632,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#2",
+          "original": "var4",
+          "renamed": "word"
+        },
+        {
+          "start": 3650,
+          "end": 3661,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#3",
+          "original": "stackIn_7_0",
+          "renamed": "powerOfTwoResult"
+        },
+        {
+          "start": 3679,
+          "end": 3691,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#4",
+          "original": "stackIn_12_0",
+          "renamed": "remainderResult"
+        },
+        {
+          "start": 3722,
+          "end": 3734,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#5",
+          "original": "stackIn_15_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 3765,
+          "end": 3777,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#6",
+          "original": "stackIn_15_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 3801,
+          "end": 3813,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#7",
+          "original": "stackIn_16_2",
+          "renamed": "randomSummary"
+        },
+        {
+          "start": 3847,
+          "end": 3872,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#8",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 3909,
+          "end": 3915,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "param0",
+          "renamed": "bound"
+        },
+        {
+          "start": 4001,
+          "end": 4007,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 4034,
           "end": 4036,
           "symbol": "C:jp",
@@ -455375,11 +456054,200 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 4075,
+          "end": 4081,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "param0",
+          "renamed": "bound"
+        },
+        {
+          "start": 4109,
+          "end": 4120,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#3",
+          "original": "stackIn_7_0",
+          "renamed": "powerOfTwoResult"
+        },
+        {
+          "start": 4135,
+          "end": 4141,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "param0",
+          "renamed": "bound"
+        },
+        {
+          "start": 4151,
+          "end": 4157,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#1",
+          "original": "param1",
+          "renamed": "random"
+        },
+        {
+          "start": 4210,
+          "end": 4221,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#3",
+          "original": "stackIn_7_0",
+          "renamed": "powerOfTwoResult"
+        },
+        {
+          "start": 4245,
+          "end": 4253,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "var3_int",
+          "renamed": "rejectionThreshold"
+        },
+        {
+          "start": 4296,
+          "end": 4302,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "param0",
+          "renamed": "bound"
+        },
+        {
+          "start": 4332,
+          "end": 4336,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#2",
+          "original": "var4",
+          "renamed": "word"
+        },
+        {
+          "start": 4339,
+          "end": 4345,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#1",
+          "original": "param1",
+          "renamed": "random"
+        },
+        {
+          "start": 4376,
+          "end": 4384,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "var3_int",
+          "renamed": "rejectionThreshold"
+        },
+        {
+          "start": 4388,
+          "end": 4392,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#2",
+          "original": "var4",
+          "renamed": "word"
+        },
+        {
+          "start": 4405,
+          "end": 4417,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#4",
+          "original": "stackIn_12_0",
+          "renamed": "remainderResult"
+        },
+        {
           "start": 4423,
           "end": 4424,
           "symbol": "M:er.a(III)I",
           "original": "a",
           "renamed": "nonnegativeRemainder"
+        },
+        {
+          "start": 4438,
+          "end": 4444,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "param0",
+          "renamed": "bound"
+        },
+        {
+          "start": 4446,
+          "end": 4450,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#2",
+          "original": "var4",
+          "renamed": "word"
+        },
+        {
+          "start": 4470,
+          "end": 4482,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#4",
+          "original": "stackIn_12_0",
+          "renamed": "remainderResult"
+        },
+        {
+          "start": 4528,
+          "end": 4554,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 4568,
+          "end": 4593,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#8",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 4596,
+          "end": 4622,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 4634,
+          "end": 4638,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#1",
+          "original": "var3",
+          "renamed": "failure"
+        },
+        {
+          "start": 4641,
+          "end": 4666,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#8",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 4678,
+          "end": 4690,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#5",
+          "original": "stackIn_15_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 4693,
+          "end": 4697,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#1",
+          "original": "var3",
+          "renamed": "failure"
+        },
+        {
+          "start": 4709,
+          "end": 4721,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#6",
+          "original": "stackIn_15_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 4767,
+          "end": 4773,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#0",
+          "original": "param0",
+          "renamed": "bound"
+        },
+        {
+          "start": 4802,
+          "end": 4808,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#1",
+          "original": "param1",
+          "renamed": "random"
+        },
+        {
+          "start": 4832,
+          "end": 4844,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#7",
+          "original": "stackIn_16_2",
+          "renamed": "randomSummary"
+        },
+        {
+          "start": 4886,
+          "end": 4898,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#7",
+          "original": "stackIn_16_2",
+          "renamed": "randomSummary"
         },
         {
           "start": 4938,
@@ -455394,6 +456262,34 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 4965,
+          "end": 4977,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#5",
+          "original": "stackIn_15_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 5006,
+          "end": 5018,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#6",
+          "original": "stackIn_15_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 5027,
+          "end": 5039,
+          "symbol": "L:aa.a(ILjava/util/Random;Z)I#7",
+          "original": "stackIn_16_2",
+          "renamed": "randomSummary"
+        },
+        {
+          "start": 5060,
+          "end": 5066,
+          "symbol": "P:aa.a(ILjava/util/Random;Z)I#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 5145,
@@ -471454,7 +472350,7 @@
       "original": "ak.java",
       "renamed": "MultiplayerMatch.java",
       "inputSha256": "44ef57260a869da05db5b717d65518d04318fe4b8ac90975756f82aa77d07565",
-      "outputSha256": "66b83d1c43cee9dc371b29c9d41f4ba3433a7c732350dcacb2b8fc8bbbae1f93",
+      "outputSha256": "147c2736d5393769634dfa899826095a9f9cc69a46cc507150728ab130ef0cfc",
       "edits": [
         {
           "start": 50,
@@ -472808,11 +473704,25 @@
           "renamed": "board"
         },
         {
+          "start": 7148,
+          "end": 7156,
+          "symbol": "F:j.field_ib:I",
+          "original": "field_ib",
+          "renamed": "eyeExpressionTicks"
+        },
+        {
           "start": 7190,
           "end": 7196,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 7197,
+          "end": 7205,
+          "symbol": "F:j.field_ib:I",
+          "original": "field_ib",
+          "renamed": "eyeExpressionTicks"
         },
         {
           "start": 7223,
@@ -472822,6 +473732,13 @@
           "renamed": "board"
         },
         {
+          "start": 7230,
+          "end": 7238,
+          "symbol": "F:j.field_ib:I",
+          "original": "field_ib",
+          "renamed": "eyeExpressionTicks"
+        },
+        {
           "start": 7241,
           "end": 7247,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -472829,11 +473746,25 @@
           "renamed": "board"
         },
         {
+          "start": 7248,
+          "end": 7256,
+          "symbol": "F:j.field_ib:I",
+          "original": "field_ib",
+          "renamed": "eyeExpressionTicks"
+        },
+        {
           "start": 7312,
           "end": 7318,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 7319,
+          "end": 7320,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
         },
         {
           "start": 7376,
@@ -473767,6 +474698,13 @@
           "renamed": "board"
         },
         {
+          "start": 11350,
+          "end": 11351,
+          "symbol": "M:j.a(ILon;I)V",
+          "original": "a",
+          "renamed": "addBrickScore"
+        },
+        {
           "start": 11361,
           "end": 11368,
           "symbol": "F:vn.field_B:I",
@@ -473823,6 +474761,13 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 11927,
+          "end": 11928,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
+        },
+        {
           "start": 11997,
           "end": 11998,
           "symbol": "C:j",
@@ -473856,6 +474801,13 @@
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 12247,
+          "end": 12248,
+          "symbol": "M:j.a([Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "choosePendingMessage"
         },
         {
           "start": 12322,
@@ -475730,6 +476682,13 @@
           "renamed": "board"
         },
         {
+          "start": 22442,
+          "end": 22443,
+          "symbol": "M:j.a([Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "choosePendingMessage"
+        },
+        {
           "start": 22444,
           "end": 22446,
           "symbol": "C:ml",
@@ -475912,6 +476871,13 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 23159,
+          "end": 23160,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
+        },
+        {
           "start": 23214,
           "end": 23215,
           "symbol": "C:r",
@@ -476071,6 +477037,13 @@
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 24356,
+          "end": 24357,
+          "symbol": "M:j.a(ILvo;I)V",
+          "original": "a",
+          "renamed": "addPaddleScore"
         },
         {
           "start": 24373,
@@ -476260,6 +477233,13 @@
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 25411,
+          "end": 25412,
+          "symbol": "M:j.a([Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "choosePendingMessage"
         },
         {
           "start": 25494,
@@ -479230,6 +480210,55 @@
           "renamed": "lives"
         },
         {
+          "start": 38838,
+          "end": 38839,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
+        },
+        {
+          "start": 38874,
+          "end": 38875,
+          "symbol": "M:j.a(B)V",
+          "original": "a",
+          "renamed": "beginDefeatTransition"
+        },
+        {
+          "start": 38943,
+          "end": 38950,
+          "symbol": "F:j.field_y:I",
+          "original": "field_y",
+          "renamed": "eyeExpression"
+        },
+        {
+          "start": 38983,
+          "end": 38990,
+          "symbol": "F:j.field_y:I",
+          "original": "field_y",
+          "renamed": "eyeExpression"
+        },
+        {
+          "start": 39026,
+          "end": 39027,
+          "symbol": "M:j.a(IZI)V",
+          "original": "a",
+          "renamed": "setEyeExpression"
+        },
+        {
+          "start": 39097,
+          "end": 39098,
+          "symbol": "M:j.a(IZI)V",
+          "original": "a",
+          "renamed": "setEyeExpression"
+        },
+        {
+          "start": 39184,
+          "end": 39185,
+          "symbol": "M:j.a(IZI)V",
+          "original": "a",
+          "renamed": "setEyeExpression"
+        },
+        {
           "start": 39239,
           "end": 39240,
           "symbol": "C:r",
@@ -479265,11 +480294,25 @@
           "renamed": "boardState"
         },
         {
+          "start": 39461,
+          "end": 39462,
+          "symbol": "M:j.a([Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "choosePendingMessage"
+        },
+        {
           "start": 39463,
           "end": 39465,
           "symbol": "C:eh",
           "original": "eh",
           "renamed": "WidgetTheme"
+        },
+        {
+          "start": 39548,
+          "end": 39549,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
         },
         {
           "start": 39728,
@@ -479648,6 +480691,13 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 42889,
+          "end": 42890,
+          "symbol": "M:j.a(ILon;I)V",
+          "original": "a",
+          "renamed": "addBrickScore"
         },
         {
           "start": 42903,
@@ -687016,7 +688066,7 @@
       "original": "j.java",
       "renamed": "PlayerBoard.java",
       "inputSha256": "fd17d2e8af703f3b2f6c8a11f25171f5416b9cfb05dbe2f312816f77e79ed9a3",
-      "outputSha256": "d5414a7bd76d83c361696c5d3e71f181f62cc95908402d5c11ba58883136332a",
+      "outputSha256": "b95423a4ffdacc8a524529901d497ca8e8750b637c72da0a160b985e70c8e542",
       "edits": [
         {
           "start": 71,
@@ -687320,6 +688370,13 @@
           "renamed": "stateTicks"
         },
         {
+          "start": 729,
+          "end": 736,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
           "start": 746,
           "end": 753,
           "symbol": "F:j.field_Z:I",
@@ -687332,6 +688389,13 @@
           "symbol": "F:j.field_sb:I",
           "original": "field_sb",
           "renamed": "randomSeed"
+        },
+        {
+          "start": 817,
+          "end": 824,
+          "symbol": "F:j.field_B:Ljava/util/Random;",
+          "original": "field_B",
+          "renamed": "messageRandom"
         },
         {
           "start": 834,
@@ -687432,6 +688496,13 @@
           "renamed": "pendingMessage"
         },
         {
+          "start": 1160,
+          "end": 1168,
+          "symbol": "F:j.field_ib:I",
+          "original": "field_ib",
+          "renamed": "eyeExpressionTicks"
+        },
+        {
           "start": 1178,
           "end": 1185,
           "symbol": "F:j.field_U:I",
@@ -687458,6 +688529,13 @@
           "symbol": "F:j.field_R:I",
           "original": "field_R",
           "renamed": "bubbleSeed"
+        },
+        {
+          "start": 1228,
+          "end": 1235,
+          "symbol": "F:j.field_y:I",
+          "original": "field_y",
+          "renamed": "eyeExpression"
         },
         {
           "start": 1316,
@@ -689217,11 +690295,25 @@
           "renamed": "diagnostics"
         },
         {
+          "start": 14717,
+          "end": 14724,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
           "start": 14742,
           "end": 14744,
           "symbol": "C:to",
           "original": "to",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 14745,
+          "end": 14752,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
         },
         {
           "start": 14992,
@@ -689266,11 +690358,74 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 16091,
+          "end": 16092,
+          "symbol": "M:j.a([Ljava/lang/String;B)V",
+          "original": "a",
+          "renamed": "choosePendingMessage"
+        },
+        {
+          "start": 16102,
+          "end": 16108,
+          "symbol": "P:j.a([Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "messages"
+        },
+        {
+          "start": 16115,
+          "end": 16121,
+          "symbol": "P:j.a([Ljava/lang/String;B)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 16154,
           "end": 16162,
           "symbol": "F:j.field_lb:Ljava/lang/String;",
           "original": "field_lb",
           "renamed": "pendingMessage"
+        },
+        {
+          "start": 16165,
+          "end": 16171,
+          "symbol": "P:j.a([Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "messages"
+        },
+        {
+          "start": 16175,
+          "end": 16176,
+          "symbol": "M:aa.a(ILjava/util/Random;Z)I",
+          "original": "a",
+          "renamed": "nextBoundedJavaRandom"
+        },
+        {
+          "start": 16177,
+          "end": 16183,
+          "symbol": "P:j.a([Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "messages"
+        },
+        {
+          "start": 16197,
+          "end": 16204,
+          "symbol": "F:j.field_B:Ljava/util/Random;",
+          "original": "field_B",
+          "renamed": "messageRandom"
+        },
+        {
+          "start": 16228,
+          "end": 16234,
+          "symbol": "P:j.a([Ljava/lang/String;B)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 16324,
+          "end": 16340,
+          "symbol": "L:j.a([Ljava/lang/String;B)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 16360,
@@ -689285,6 +690440,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 16387,
+          "end": 16403,
+          "symbol": "L:j.a([Ljava/lang/String;B)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 16416,
+          "end": 16422,
+          "symbol": "P:j.a([Ljava/lang/String;B)V#0",
+          "original": "param0",
+          "renamed": "messages"
+        },
+        {
+          "start": 16459,
+          "end": 16465,
+          "symbol": "P:j.a([Ljava/lang/String;B)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 16513,
@@ -690232,6 +691408,13 @@
           "renamed": "skipExtension"
         },
         {
+          "start": 20628,
+          "end": 20635,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
           "start": 20660,
           "end": 20666,
           "symbol": "P:j.a(ZLwq;I)V#1",
@@ -690372,11 +691555,46 @@
           "renamed": "boardMode"
         },
         {
+          "start": 21629,
+          "end": 21630,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
+        },
+        {
+          "start": 21635,
+          "end": 21641,
+          "symbol": "P:j.b(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 21647,
+          "end": 21653,
+          "symbol": "P:j.b(II)V#1",
+          "original": "param1",
+          "renamed": "eyeExpression"
+        },
+        {
+          "start": 21669,
+          "end": 21675,
+          "symbol": "P:j.b(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 21698,
           "end": 21700,
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "Paddle"
+        },
+        {
+          "start": 21701,
+          "end": 21705,
+          "symbol": "L:j.b(II)V#0",
+          "original": "var4",
+          "renamed": "unusedPaddle"
         },
         {
           "start": 21709,
@@ -690386,11 +691604,32 @@
           "renamed": "Paddle"
         },
         {
+          "start": 21734,
+          "end": 21735,
+          "symbol": "M:j.a(ILvo;I)V",
+          "original": "a",
+          "renamed": "addPaddleScore"
+        },
+        {
           "start": 21743,
           "end": 21745,
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "Paddle"
+        },
+        {
+          "start": 21782,
+          "end": 21783,
+          "symbol": "M:j.a(IZI)V",
+          "original": "a",
+          "renamed": "setEyeExpression"
+        },
+        {
+          "start": 21784,
+          "end": 21790,
+          "symbol": "P:j.b(II)V#1",
+          "original": "param1",
+          "renamed": "eyeExpression"
         },
         {
           "start": 21825,
@@ -690531,6 +691770,13 @@
           "symbol": "P:j.f(I)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 22230,
+          "end": 22238,
+          "symbol": "F:j.field_ib:I",
+          "original": "field_ib",
+          "renamed": "eyeExpressionTicks"
         },
         {
           "start": 22267,
@@ -691261,6 +692507,20 @@
           "renamed": "nextRandomBoundedInt"
         },
         {
+          "start": 24251,
+          "end": 24252,
+          "symbol": "M:j.a(B)V",
+          "original": "a",
+          "renamed": "beginDefeatTransition"
+        },
+        {
+          "start": 24258,
+          "end": 24264,
+          "symbol": "P:j.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 24281,
           "end": 24288,
           "symbol": "F:j.field_Z:I",
@@ -691273,6 +692533,13 @@
           "symbol": "F:j.field_P:I",
           "original": "field_P",
           "renamed": "stateTicks"
+        },
+        {
+          "start": 24332,
+          "end": 24338,
+          "symbol": "P:j.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 24363,
@@ -691499,11 +692766,74 @@
           "renamed": "nextInt"
         },
         {
+          "start": 25229,
+          "end": 25230,
+          "symbol": "M:j.a(I)V",
+          "original": "a",
+          "renamed": "toggleBrickTypes26And27"
+        },
+        {
+          "start": 25235,
+          "end": 25241,
+          "symbol": "P:j.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 25257,
+          "end": 25261,
+          "symbol": "L:j.a(I)V#0",
+          "original": "var2",
+          "renamed": "groupIndex"
+        },
+        {
           "start": 25275,
           "end": 25277,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 25278,
+          "end": 25282,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
+          "start": 25296,
+          "end": 25300,
+          "symbol": "L:j.a(I)V#2",
+          "original": "var4",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 25324,
+          "end": 25328,
+          "symbol": "L:j.a(I)V#3",
+          "original": "var5",
+          "renamed": "unusedDiagnosticBuilder"
+        },
+        {
+          "start": 25338,
+          "end": 25342,
+          "symbol": "L:j.a(I)V#2",
+          "original": "var4",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 25385,
+          "end": 25391,
+          "symbol": "P:j.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 25412,
+          "end": 25416,
+          "symbol": "L:j.a(I)V#3",
+          "original": "var5",
+          "renamed": "unusedDiagnosticBuilder"
         },
         {
           "start": 25456,
@@ -691513,11 +692843,39 @@
           "renamed": "computeBoardChecksum"
         },
         {
+          "start": 25510,
+          "end": 25514,
+          "symbol": "L:j.a(I)V#0",
+          "original": "var2",
+          "renamed": "groupIndex"
+        },
+        {
           "start": 25525,
           "end": 25532,
           "symbol": "F:j.field_z:[Lvl;",
           "original": "field_z",
           "renamed": "brickGroups"
+        },
+        {
+          "start": 25542,
+          "end": 25546,
+          "symbol": "L:j.a(I)V#0",
+          "original": "var2",
+          "renamed": "groupIndex"
+        },
+        {
+          "start": 25548,
+          "end": 25552,
+          "symbol": "L:j.a(I)V#0",
+          "original": "var2",
+          "renamed": "groupIndex"
+        },
+        {
+          "start": 25568,
+          "end": 25572,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 25576,
@@ -691534,11 +692892,32 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 25594,
+          "end": 25598,
+          "symbol": "L:j.a(I)V#0",
+          "original": "var2",
+          "renamed": "groupIndex"
+        },
+        {
           "start": 25600,
           "end": 25601,
           "symbol": "M:vl.d(I)Lnm;",
           "original": "d",
           "renamed": "first"
+        },
+        {
+          "start": 25626,
+          "end": 25630,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
+          "start": 25658,
+          "end": 25662,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 25663,
@@ -691548,11 +692927,25 @@
           "renamed": "typeId"
         },
         {
+          "start": 25694,
+          "end": 25698,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 25699,
           "end": 25706,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 25730,
+          "end": 25734,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 25735,
@@ -691562,11 +692955,25 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 25763,
+          "end": 25767,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 25768,
           "end": 25775,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 25795,
+          "end": 25799,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 25800,
@@ -691576,11 +692983,25 @@
           "renamed": "transitionCode"
         },
         {
+          "start": 25843,
+          "end": 25847,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 25848,
           "end": 25855,
           "symbol": "F:vi.field_i:I",
           "original": "field_i",
           "renamed": "typeId"
+        },
+        {
+          "start": 25873,
+          "end": 25877,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 25878,
@@ -691590,11 +693011,25 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 25909,
+          "end": 25913,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 25914,
           "end": 25921,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 25942,
+          "end": 25946,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 25947,
@@ -691604,11 +693039,25 @@
           "renamed": "typeId"
         },
         {
+          "start": 25975,
+          "end": 25979,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 25980,
           "end": 25987,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 25991,
+          "end": 25995,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 25996,
@@ -691618,11 +693067,25 @@
           "renamed": "stateWord"
         },
         {
+          "start": 26024,
+          "end": 26028,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26029,
           "end": 26036,
           "symbol": "F:on.field_B:I",
           "original": "field_B",
           "renamed": "transitionCode"
+        },
+        {
+          "start": 26066,
+          "end": 26070,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26071,
@@ -691632,11 +693095,25 @@
           "renamed": "typeId"
         },
         {
+          "start": 26102,
+          "end": 26106,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26107,
           "end": 26114,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 26136,
+          "end": 26140,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26141,
@@ -691646,11 +693123,25 @@
           "renamed": "transitionCode"
         },
         {
+          "start": 26169,
+          "end": 26173,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26174,
           "end": 26181,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 26202,
+          "end": 26206,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26207,
@@ -691660,11 +693151,25 @@
           "renamed": "stateWord"
         },
         {
+          "start": 26243,
+          "end": 26247,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26248,
           "end": 26255,
           "symbol": "F:vi.field_i:I",
           "original": "field_i",
           "renamed": "typeId"
+        },
+        {
+          "start": 26279,
+          "end": 26283,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26284,
@@ -691674,11 +693179,25 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 26315,
+          "end": 26319,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26320,
           "end": 26327,
           "symbol": "F:vi.field_i:I",
           "original": "field_i",
           "renamed": "typeId"
+        },
+        {
+          "start": 26348,
+          "end": 26352,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26353,
@@ -691688,11 +693207,25 @@
           "renamed": "stateWord"
         },
         {
+          "start": 26368,
+          "end": 26372,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26373,
           "end": 26380,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 26396,
+          "end": 26400,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26401,
@@ -691702,11 +693235,25 @@
           "renamed": "transitionCode"
         },
         {
+          "start": 26429,
+          "end": 26433,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26434,
           "end": 26441,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 26493,
+          "end": 26497,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26498,
@@ -691716,11 +693263,25 @@
           "renamed": "typeId"
         },
         {
+          "start": 26525,
+          "end": 26529,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26530,
           "end": 26537,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 26627,
+          "end": 26631,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26632,
@@ -691730,11 +693291,25 @@
           "renamed": "typeId"
         },
         {
+          "start": 26669,
+          "end": 26673,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26674,
           "end": 26681,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 26708,
+          "end": 26712,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26716,
@@ -691751,11 +693326,25 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 26734,
+          "end": 26738,
+          "symbol": "L:j.a(I)V#0",
+          "original": "var2",
+          "renamed": "groupIndex"
+        },
+        {
           "start": 26740,
           "end": 26741,
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 26818,
+          "end": 26822,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26823,
@@ -691765,6 +693354,13 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 26853,
+          "end": 26857,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26858,
           "end": 26865,
           "symbol": "F:on.field_B:I",
@@ -691772,11 +693368,25 @@
           "renamed": "transitionCode"
         },
         {
+          "start": 26888,
+          "end": 26892,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
+        },
+        {
           "start": 26893,
           "end": 26900,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 26948,
+          "end": 26952,
+          "symbol": "L:j.a(I)V#1",
+          "original": "var3",
+          "renamed": "brick"
         },
         {
           "start": 26956,
@@ -691791,6 +693401,13 @@
           "symbol": "F:j.field_z:[Lvl;",
           "original": "field_z",
           "renamed": "brickGroups"
+        },
+        {
+          "start": 26974,
+          "end": 26978,
+          "symbol": "L:j.a(I)V#0",
+          "original": "var2",
+          "renamed": "groupIndex"
         },
         {
           "start": 26980,
@@ -691863,11 +693480,88 @@
           "renamed": "bound"
         },
         {
+          "start": 27248,
+          "end": 27249,
+          "symbol": "M:j.a(IZI)V",
+          "original": "a",
+          "renamed": "setEyeExpression"
+        },
+        {
+          "start": 27254,
+          "end": 27260,
+          "symbol": "P:j.a(IZI)V#0",
+          "original": "param0",
+          "renamed": "eyeExpression"
+        },
+        {
+          "start": 27270,
+          "end": 27276,
+          "symbol": "P:j.a(IZI)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 27282,
+          "end": 27288,
+          "symbol": "P:j.a(IZI)V#2",
+          "original": "param2",
+          "renamed": "ticks"
+        },
+        {
+          "start": 27305,
+          "end": 27313,
+          "symbol": "F:j.field_ib:I",
+          "original": "field_ib",
+          "renamed": "eyeExpressionTicks"
+        },
+        {
+          "start": 27316,
+          "end": 27322,
+          "symbol": "P:j.a(IZI)V#2",
+          "original": "param2",
+          "renamed": "ticks"
+        },
+        {
+          "start": 27337,
+          "end": 27344,
+          "symbol": "F:j.field_y:I",
+          "original": "field_y",
+          "renamed": "eyeExpression"
+        },
+        {
+          "start": 27347,
+          "end": 27353,
+          "symbol": "P:j.a(IZI)V#0",
+          "original": "param0",
+          "renamed": "eyeExpression"
+        },
+        {
+          "start": 27368,
+          "end": 27374,
+          "symbol": "P:j.a(IZI)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 27393,
           "end": 27394,
           "symbol": "M:j.c(I)V",
           "original": "c",
           "renamed": "advancePowerUpWarnings"
+        },
+        {
+          "start": 27432,
+          "end": 27433,
+          "symbol": "M:j.a(BLon;Lvn;)V",
+          "original": "a",
+          "renamed": "teleportBall"
+        },
+        {
+          "start": 27439,
+          "end": 27445,
+          "symbol": "P:j.a(BLon;Lvn;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 27447,
@@ -691877,6 +693571,13 @@
           "renamed": "Brick"
         },
         {
+          "start": 27450,
+          "end": 27456,
+          "symbol": "P:j.a(BLon;Lvn;)V#1",
+          "original": "param1",
+          "renamed": "sourcePortal"
+        },
+        {
           "start": 27458,
           "end": 27460,
           "symbol": "C:vn",
@@ -691884,11 +693585,102 @@
           "renamed": "Ball"
         },
         {
+          "start": 27461,
+          "end": 27467,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
+        },
+        {
+          "start": 27496,
+          "end": 27508,
+          "symbol": "L:j.a(BLon;Lvn;)V#0",
+          "original": "stackIn_11_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 27539,
+          "end": 27551,
+          "symbol": "L:j.a(BLon;Lvn;)V#1",
+          "original": "stackIn_11_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 27575,
+          "end": 27587,
+          "symbol": "L:j.a(BLon;Lvn;)V#2",
+          "original": "stackIn_12_2",
+          "renamed": "sourceSummary"
+        },
+        {
+          "start": 27618,
+          "end": 27630,
+          "symbol": "L:j.a(BLon;Lvn;)V#3",
+          "original": "stackIn_14_1",
+          "renamed": "ballContextBuilder"
+        },
+        {
+          "start": 27654,
+          "end": 27666,
+          "symbol": "L:j.a(BLon;Lvn;)V#4",
+          "original": "stackIn_15_2",
+          "renamed": "ballSummary"
+        },
+        {
+          "start": 27700,
+          "end": 27725,
+          "symbol": "L:j.a(BLon;Lvn;)V#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 27746,
+          "end": 27754,
+          "symbol": "L:j.a(BLon;Lvn;)V#6",
+          "original": "var4_int",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 27785,
+          "end": 27789,
+          "symbol": "L:j.a(BLon;Lvn;)V#7",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
           "start": 27806,
           "end": 27808,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 27809,
+          "end": 27813,
+          "symbol": "L:j.a(BLon;Lvn;)V#8",
+          "original": "var5",
+          "renamed": "destinationPortal"
+        },
+        {
+          "start": 27834,
+          "end": 27838,
+          "symbol": "L:j.a(BLon;Lvn;)V#9",
+          "original": "var6",
+          "renamed": "angleSample"
+        },
+        {
+          "start": 27856,
+          "end": 27860,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
+        },
+        {
+          "start": 27890,
+          "end": 27898,
+          "symbol": "L:j.a(BLon;Lvn;)V#6",
+          "original": "var4_int",
+          "renamed": "destinationIndex"
         },
         {
           "start": 27906,
@@ -691905,11 +693697,39 @@
           "renamed": "portalBricks"
         },
         {
+          "start": 27960,
+          "end": 27966,
+          "symbol": "P:j.a(BLon;Lvn;)V#1",
+          "original": "param1",
+          "renamed": "sourcePortal"
+        },
+        {
           "start": 27967,
           "end": 27974,
           "symbol": "F:on.field_H:I",
           "original": "field_H",
           "renamed": "portalIndex"
+        },
+        {
+          "start": 27978,
+          "end": 27986,
+          "symbol": "L:j.a(BLon;Lvn;)V#6",
+          "original": "var4_int",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 28002,
+          "end": 28010,
+          "symbol": "L:j.a(BLon;Lvn;)V#6",
+          "original": "var4_int",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 28036,
+          "end": 28040,
+          "symbol": "L:j.a(BLon;Lvn;)V#8",
+          "original": "var5",
+          "renamed": "destinationPortal"
         },
         {
           "start": 28048,
@@ -691919,11 +693739,32 @@
           "renamed": "portalBricks"
         },
         {
+          "start": 28056,
+          "end": 28064,
+          "symbol": "L:j.a(BLon;Lvn;)V#6",
+          "original": "var4_int",
+          "renamed": "destinationIndex"
+        },
+        {
+          "start": 28077,
+          "end": 28083,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
+        },
+        {
           "start": 28084,
           "end": 28091,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 28094,
+          "end": 28098,
+          "symbol": "L:j.a(BLon;Lvn;)V#8",
+          "original": "var5",
+          "renamed": "destinationPortal"
         },
         {
           "start": 28099,
@@ -691933,11 +693774,25 @@
           "renamed": "width256"
         },
         {
+          "start": 28113,
+          "end": 28117,
+          "symbol": "L:j.a(BLon;Lvn;)V#8",
+          "original": "var5",
+          "renamed": "destinationPortal"
+        },
+        {
           "start": 28118,
           "end": 28125,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 28128,
+          "end": 28134,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
         },
         {
           "start": 28135,
@@ -691947,11 +693802,25 @@
           "renamed": "radius256"
         },
         {
+          "start": 28158,
+          "end": 28164,
+          "symbol": "P:j.a(BLon;Lvn;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 28192,
           "end": 28199,
           "symbol": "F:j.field_i:I",
           "original": "field_i",
           "renamed": "messageTicks"
+        },
+        {
+          "start": 28229,
+          "end": 28235,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
         },
         {
           "start": 28236,
@@ -691961,11 +693830,25 @@
           "renamed": "y256"
         },
         {
+          "start": 28252,
+          "end": 28258,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
+        },
+        {
           "start": 28259,
           "end": 28266,
           "symbol": "F:no.field_u:I",
           "original": "field_u",
           "renamed": "radius256"
+        },
+        {
+          "start": 28270,
+          "end": 28274,
+          "symbol": "L:j.a(BLon;Lvn;)V#8",
+          "original": "var5",
+          "renamed": "destinationPortal"
         },
         {
           "start": 28275,
@@ -691975,11 +693858,25 @@
           "renamed": "y256"
         },
         {
+          "start": 28294,
+          "end": 28298,
+          "symbol": "L:j.a(BLon;Lvn;)V#9",
+          "original": "var6",
+          "renamed": "angleSample"
+        },
+        {
           "start": 28306,
           "end": 28307,
           "symbol": "M:j.a(IB)I",
           "original": "a",
           "renamed": "nextRandomBoundedInt"
+        },
+        {
+          "start": 28337,
+          "end": 28341,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
         },
         {
           "start": 28344,
@@ -691989,11 +693886,46 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 28349,
+          "end": 28353,
+          "symbol": "L:j.a(BLon;Lvn;)V#9",
+          "original": "var6",
+          "renamed": "angleSample"
+        },
+        {
           "start": 28371,
           "end": 28373,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 28377,
+          "end": 28381,
+          "symbol": "L:j.a(BLon;Lvn;)V#9",
+          "original": "var6",
+          "renamed": "angleSample"
+        },
+        {
+          "start": 28416,
+          "end": 28420,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
+        },
+        {
+          "start": 28423,
+          "end": 28427,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
+        },
+        {
+          "start": 28449,
+          "end": 28455,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
         },
         {
           "start": 28456,
@@ -692003,6 +693935,27 @@
           "renamed": "velocityX256"
         },
         {
+          "start": 28483,
+          "end": 28487,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
+        },
+        {
+          "start": 28491,
+          "end": 28495,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
+        },
+        {
+          "start": 28509,
+          "end": 28515,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
+        },
+        {
           "start": 28516,
           "end": 28517,
           "symbol": "M:vn.a(II)V",
@@ -692010,11 +693963,158 @@
           "renamed": "redirectVelocity"
         },
         {
+          "start": 28524,
+          "end": 28528,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
+        },
+        {
+          "start": 28562,
+          "end": 28568,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
+        },
+        {
           "start": 28569,
           "end": 28570,
           "symbol": "M:vn.a(II)V",
           "original": "a",
           "renamed": "redirectVelocity"
+        },
+        {
+          "start": 28577,
+          "end": 28581,
+          "symbol": "L:j.a(BLon;Lvn;)V#10",
+          "original": "var7",
+          "renamed": "outgoingAngle"
+        },
+        {
+          "start": 28658,
+          "end": 28684,
+          "symbol": "L:j.a(BLon;Lvn;)V#11",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 28698,
+          "end": 28723,
+          "symbol": "L:j.a(BLon;Lvn;)V#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 28726,
+          "end": 28752,
+          "symbol": "L:j.a(BLon;Lvn;)V#11",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 28764,
+          "end": 28768,
+          "symbol": "L:j.a(BLon;Lvn;)V#7",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 28771,
+          "end": 28796,
+          "symbol": "L:j.a(BLon;Lvn;)V#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 28808,
+          "end": 28820,
+          "symbol": "L:j.a(BLon;Lvn;)V#0",
+          "original": "stackIn_11_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 28823,
+          "end": 28827,
+          "symbol": "L:j.a(BLon;Lvn;)V#7",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 28839,
+          "end": 28851,
+          "symbol": "L:j.a(BLon;Lvn;)V#1",
+          "original": "stackIn_11_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 28896,
+          "end": 28902,
+          "symbol": "P:j.a(BLon;Lvn;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 28931,
+          "end": 28937,
+          "symbol": "P:j.a(BLon;Lvn;)V#1",
+          "original": "param1",
+          "renamed": "sourcePortal"
+        },
+        {
+          "start": 28961,
+          "end": 28973,
+          "symbol": "L:j.a(BLon;Lvn;)V#2",
+          "original": "stackIn_12_2",
+          "renamed": "sourceSummary"
+        },
+        {
+          "start": 29015,
+          "end": 29027,
+          "symbol": "L:j.a(BLon;Lvn;)V#2",
+          "original": "stackIn_12_2",
+          "renamed": "sourceSummary"
+        },
+        {
+          "start": 29061,
+          "end": 29073,
+          "symbol": "L:j.a(BLon;Lvn;)V#3",
+          "original": "stackIn_14_1",
+          "renamed": "ballContextBuilder"
+        },
+        {
+          "start": 29102,
+          "end": 29114,
+          "symbol": "L:j.a(BLon;Lvn;)V#1",
+          "original": "stackIn_11_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 29123,
+          "end": 29135,
+          "symbol": "L:j.a(BLon;Lvn;)V#2",
+          "original": "stackIn_12_2",
+          "renamed": "sourceSummary"
+        },
+        {
+          "start": 29164,
+          "end": 29170,
+          "symbol": "P:j.a(BLon;Lvn;)V#2",
+          "original": "param2",
+          "renamed": "ball"
+        },
+        {
+          "start": 29194,
+          "end": 29206,
+          "symbol": "L:j.a(BLon;Lvn;)V#4",
+          "original": "stackIn_15_2",
+          "renamed": "ballSummary"
+        },
+        {
+          "start": 29248,
+          "end": 29260,
+          "symbol": "L:j.a(BLon;Lvn;)V#4",
+          "original": "stackIn_15_2",
+          "renamed": "ballSummary"
         },
         {
           "start": 29300,
@@ -692031,11 +694131,60 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 29327,
+          "end": 29339,
+          "symbol": "L:j.a(BLon;Lvn;)V#0",
+          "original": "stackIn_11_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 29368,
+          "end": 29380,
+          "symbol": "L:j.a(BLon;Lvn;)V#3",
+          "original": "stackIn_14_1",
+          "renamed": "ballContextBuilder"
+        },
+        {
+          "start": 29389,
+          "end": 29401,
+          "symbol": "L:j.a(BLon;Lvn;)V#4",
+          "original": "stackIn_15_2",
+          "renamed": "ballSummary"
+        },
+        {
+          "start": 29460,
+          "end": 29461,
+          "symbol": "M:j.a(ILon;I)V",
+          "original": "a",
+          "renamed": "addBrickScore"
+        },
+        {
+          "start": 29466,
+          "end": 29472,
+          "symbol": "P:j.a(ILon;I)V#0",
+          "original": "param0",
+          "renamed": "points"
+        },
+        {
           "start": 29474,
           "end": 29476,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 29477,
+          "end": 29483,
+          "symbol": "P:j.a(ILon;I)V#1",
+          "original": "param1",
+          "renamed": "brick"
+        },
+        {
+          "start": 29489,
+          "end": 29495,
+          "symbol": "P:j.a(ILon;I)V#2",
+          "original": "param2",
+          "renamed": "heightDivisor"
         },
         {
           "start": 29528,
@@ -692045,11 +694194,32 @@
           "renamed": "addScore"
         },
         {
+          "start": 29530,
+          "end": 29536,
+          "symbol": "P:j.a(ILon;I)V#0",
+          "original": "param0",
+          "renamed": "points"
+        },
+        {
+          "start": 29545,
+          "end": 29551,
+          "symbol": "P:j.a(ILon;I)V#1",
+          "original": "param1",
+          "renamed": "brick"
+        },
+        {
           "start": 29552,
           "end": 29559,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 29562,
+          "end": 29568,
+          "symbol": "P:j.a(ILon;I)V#1",
+          "original": "param1",
+          "renamed": "brick"
         },
         {
           "start": 29569,
@@ -692059,6 +694229,13 @@
           "renamed": "width256"
         },
         {
+          "start": 29582,
+          "end": 29588,
+          "symbol": "P:j.a(ILon;I)V#1",
+          "original": "param1",
+          "renamed": "brick"
+        },
+        {
           "start": 29589,
           "end": 29596,
           "symbol": "F:bn.field_s:I",
@@ -692066,11 +694243,32 @@
           "renamed": "height256"
         },
         {
+          "start": 29599,
+          "end": 29605,
+          "symbol": "P:j.a(ILon;I)V#2",
+          "original": "param2",
+          "renamed": "heightDivisor"
+        },
+        {
+          "start": 29608,
+          "end": 29614,
+          "symbol": "P:j.a(ILon;I)V#1",
+          "original": "param1",
+          "renamed": "brick"
+        },
+        {
           "start": 29615,
           "end": 29622,
           "symbol": "F:vi.field_m:I",
           "original": "field_m",
           "renamed": "y256"
+        },
+        {
+          "start": 29659,
+          "end": 29675,
+          "symbol": "L:j.a(ILon;I)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 29695,
@@ -692087,11 +694285,67 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 29722,
+          "end": 29738,
+          "symbol": "L:j.a(ILon;I)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 29750,
+          "end": 29756,
+          "symbol": "P:j.a(ILon;I)V#0",
+          "original": "param0",
+          "renamed": "points"
+        },
+        {
+          "start": 29766,
+          "end": 29772,
+          "symbol": "P:j.a(ILon;I)V#1",
+          "original": "param1",
+          "renamed": "brick"
+        },
+        {
+          "start": 29809,
+          "end": 29815,
+          "symbol": "P:j.a(ILon;I)V#2",
+          "original": "param2",
+          "renamed": "heightDivisor"
+        },
+        {
+          "start": 29856,
+          "end": 29857,
+          "symbol": "M:j.a(ILvo;I)V",
+          "original": "a",
+          "renamed": "addPaddleScore"
+        },
+        {
+          "start": 29862,
+          "end": 29868,
+          "symbol": "P:j.a(ILvo;I)V#0",
+          "original": "param0",
+          "renamed": "points"
+        },
+        {
           "start": 29870,
           "end": 29872,
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "Paddle"
+        },
+        {
+          "start": 29873,
+          "end": 29879,
+          "symbol": "P:j.a(ILvo;I)V#1",
+          "original": "param1",
+          "renamed": "paddle"
+        },
+        {
+          "start": 29885,
+          "end": 29891,
+          "symbol": "P:j.a(ILvo;I)V#2",
+          "original": "param2",
+          "renamed": "widthDivisor"
         },
         {
           "start": 29924,
@@ -692101,11 +694355,32 @@
           "renamed": "addScore"
         },
         {
+          "start": 29926,
+          "end": 29932,
+          "symbol": "P:j.a(ILvo;I)V#0",
+          "original": "param0",
+          "renamed": "points"
+        },
+        {
+          "start": 29941,
+          "end": 29947,
+          "symbol": "P:j.a(ILvo;I)V#1",
+          "original": "param1",
+          "renamed": "paddle"
+        },
+        {
           "start": 29948,
           "end": 29955,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 29958,
+          "end": 29964,
+          "symbol": "P:j.a(ILvo;I)V#1",
+          "original": "param1",
+          "renamed": "paddle"
         },
         {
           "start": 29965,
@@ -692115,11 +694390,32 @@
           "renamed": "width256"
         },
         {
+          "start": 29975,
+          "end": 29981,
+          "symbol": "P:j.a(ILvo;I)V#2",
+          "original": "param2",
+          "renamed": "widthDivisor"
+        },
+        {
+          "start": 29992,
+          "end": 29998,
+          "symbol": "P:j.a(ILvo;I)V#1",
+          "original": "param1",
+          "renamed": "paddle"
+        },
+        {
           "start": 29999,
           "end": 30006,
           "symbol": "F:vi.field_m:I",
           "original": "field_m",
           "renamed": "y256"
+        },
+        {
+          "start": 30043,
+          "end": 30059,
+          "symbol": "L:j.a(ILvo;I)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 30079,
@@ -692134,6 +694430,34 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 30106,
+          "end": 30122,
+          "symbol": "L:j.a(ILvo;I)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 30134,
+          "end": 30140,
+          "symbol": "P:j.a(ILvo;I)V#0",
+          "original": "param0",
+          "renamed": "points"
+        },
+        {
+          "start": 30150,
+          "end": 30156,
+          "symbol": "P:j.a(ILvo;I)V#1",
+          "original": "param1",
+          "renamed": "paddle"
+        },
+        {
+          "start": 30193,
+          "end": 30199,
+          "symbol": "P:j.a(ILvo;I)V#2",
+          "original": "param2",
+          "renamed": "widthDivisor"
         },
         {
           "start": 30240,
@@ -692353,6 +694677,34 @@
           "renamed": "y256"
         },
         {
+          "start": 30847,
+          "end": 30848,
+          "symbol": "M:j.a(II)Z",
+          "original": "a",
+          "renamed": "advancePowerUpDropCounter"
+        },
+        {
+          "start": 30853,
+          "end": 30859,
+          "symbol": "P:j.a(II)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 30865,
+          "end": 30871,
+          "symbol": "P:j.a(II)Z#1",
+          "original": "param1",
+          "renamed": "typeId"
+        },
+        {
+          "start": 30888,
+          "end": 30897,
+          "symbol": "L:j.a(II)Z#0",
+          "original": "dupTemp$0",
+          "renamed": "incrementedCounter"
+        },
+        {
           "start": 30915,
           "end": 30917,
           "symbol": "C:to",
@@ -692360,11 +694712,130 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 30918,
+          "end": 30925,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 30926,
+          "end": 30932,
+          "symbol": "P:j.a(II)Z#1",
+          "original": "param1",
+          "renamed": "typeId"
+        },
+        {
+          "start": 30951,
+          "end": 30960,
+          "symbol": "L:j.a(II)Z#0",
+          "original": "dupTemp$0",
+          "renamed": "incrementedCounter"
+        },
+        {
+          "start": 30975,
+          "end": 30982,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
+          "start": 30983,
+          "end": 30989,
+          "symbol": "P:j.a(II)Z#1",
+          "original": "param1",
+          "renamed": "typeId"
+        },
+        {
+          "start": 31012,
+          "end": 31019,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
+          "start": 31020,
+          "end": 31026,
+          "symbol": "P:j.a(II)Z#1",
+          "original": "param1",
+          "renamed": "typeId"
+        },
+        {
+          "start": 31030,
+          "end": 31039,
+          "symbol": "L:j.a(II)Z#0",
+          "original": "dupTemp$0",
+          "renamed": "incrementedCounter"
+        },
+        {
+          "start": 31056,
+          "end": 31063,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
+          "start": 31064,
+          "end": 31070,
+          "symbol": "P:j.a(II)Z#1",
+          "original": "param1",
+          "renamed": "typeId"
+        },
+        {
+          "start": 31081,
+          "end": 31090,
+          "symbol": "L:j.a(II)Z#0",
+          "original": "dupTemp$0",
+          "renamed": "incrementedCounter"
+        },
+        {
           "start": 31093,
           "end": 31095,
           "symbol": "C:to",
           "original": "to",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 31096,
+          "end": 31103,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 31104,
+          "end": 31110,
+          "symbol": "P:j.a(II)Z#1",
+          "original": "param1",
+          "renamed": "typeId"
+        },
+        {
+          "start": 31136,
+          "end": 31142,
+          "symbol": "P:j.a(II)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 31167,
+          "end": 31168,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
+        },
+        {
+          "start": 31211,
+          "end": 31218,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
+          "start": 31219,
+          "end": 31225,
+          "symbol": "P:j.a(II)Z#1",
+          "original": "param1",
+          "renamed": "typeId"
         },
         {
           "start": 31259,
@@ -692563,6 +695034,20 @@
           "renamed": "IntNode"
         },
         {
+          "start": 31786,
+          "end": 31793,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
+          "start": 31823,
+          "end": 31830,
+          "symbol": "F:j.field_B:Ljava/util/Random;",
+          "original": "field_B",
+          "renamed": "messageRandom"
+        },
+        {
           "start": 31887,
           "end": 31894,
           "symbol": "F:j.field_k:I",
@@ -692687,6 +695172,13 @@
           "symbol": "C:ao",
           "original": "ao",
           "renamed": "ObjectHistoryBuffer"
+        },
+        {
+          "start": 32387,
+          "end": 32388,
+          "symbol": "M:j.b(II)V",
+          "original": "b",
+          "renamed": "setBriefEyeExpression"
         },
         {
           "start": 32413,
@@ -833242,7 +835734,7 @@
       "original": "nm.java",
       "renamed": "IntrusiveNode.java",
       "inputSha256": "7cbee8be838eede330e47d95129c2fc64d07a551ecc0ebfaf16142f1f4863ae1",
-      "outputSha256": "f1ddb5f819462b66a7454c8e38ab872d81706f14d124fd0e2b64df475bd376aa",
+      "outputSha256": "039499dd324acd176b5ec15b7ab977387be07b26346e1f1698a1104b4c30cb9c",
       "edits": [
         {
           "start": 44,
@@ -833292,6 +835784,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 147,
+          "end": 154,
+          "symbol": "F:nm.field_f:[Ljp;",
+          "original": "field_f",
+          "renamed": "gameEyeSprites"
         },
         {
           "start": 167,
@@ -833509,6 +836008,13 @@
           "symbol": "F:nm.field_e:Lnm;",
           "original": "field_e",
           "renamed": "next"
+        },
+        {
+          "start": 2234,
+          "end": 2241,
+          "symbol": "F:nm.field_f:[Ljp;",
+          "original": "field_f",
+          "renamed": "gameEyeSprites"
         },
         {
           "start": 2439,
@@ -871464,7 +873970,7 @@
       "original": "on.java",
       "renamed": "Brick.java",
       "inputSha256": "e2ea06abf1d907ffb3f1df2b918920b6464709bc1e74174e0fbf95abf27c359f",
-      "outputSha256": "9c8d4981b845406a5563b3e336adad0ae60d6148c377a3bb01fd5b9f6e9b908f",
+      "outputSha256": "681259ccb28f1a4fd30bd2dd0efb67a97b1bd4f16b7a86c2a62edc1ea211a02b",
       "edits": [
         {
           "start": 50,
@@ -872482,6 +874988,13 @@
           "renamed": "board"
         },
         {
+          "start": 4680,
+          "end": 4681,
+          "symbol": "M:j.a(II)Z",
+          "original": "a",
+          "renamed": "advancePowerUpDropCounter"
+        },
+        {
           "start": 4691,
           "end": 4698,
           "symbol": "F:vi.field_i:I",
@@ -873147,6 +875660,13 @@
           "renamed": "board"
         },
         {
+          "start": 7927,
+          "end": 7928,
+          "symbol": "M:j.a(BLon;Lvn;)V",
+          "original": "a",
+          "renamed": "teleportBall"
+        },
+        {
           "start": 8001,
           "end": 8003,
           "symbol": "C:sg",
@@ -873418,6 +875938,13 @@
           "symbol": "P:on.a(BLj;Lno;)V#1",
           "original": "param1",
           "renamed": "board"
+        },
+        {
+          "start": 9661,
+          "end": 9662,
+          "symbol": "M:j.a(I)V",
+          "original": "a",
+          "renamed": "toggleBrickTypes26And27"
         },
         {
           "start": 9704,
@@ -909134,7 +911661,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "2b7da7bef5752adbaf79e2a0c87754b4241db57cd5d8ac663e4dd722e7c97db7",
+      "outputSha256": "3fb5e18db567b3d42692d2e30175971d569e92c5118916adfb81aee3d7eb8f7a",
       "edits": [
         {
           "start": 50,
@@ -916179,11 +918706,32 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 32400,
+          "end": 32407,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 32452,
+          "end": 32459,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
           "start": 32489,
           "end": 32491,
           "symbol": "C:to",
           "original": "to",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 32492,
+          "end": 32499,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
         },
         {
           "start": 32564,
@@ -919308,6 +921856,13 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 45666,
+          "end": 45673,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
           "start": 45719,
           "end": 45724,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -919315,11 +921870,25 @@
           "renamed": "effectBoard"
         },
         {
+          "start": 45725,
+          "end": 45732,
+          "symbol": "F:j.field_o:[B",
+          "original": "field_o",
+          "renamed": "powerUpDropCounters"
+        },
+        {
           "start": 45748,
           "end": 45750,
           "symbol": "C:to",
           "original": "to",
           "renamed": "WeightedLruCache"
+        },
+        {
+          "start": 45751,
+          "end": 45758,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
         },
         {
           "start": 45894,
@@ -968715,7 +971284,7 @@
       "original": "so.java",
       "renamed": "QuickChatCategoryRegistry.java",
       "inputSha256": "7a871da7f6968a595499d6b7cfa90debd8b7460c269a74d1db04db3b23128dad",
-      "outputSha256": "018a20be7b0d21933e8cedfc58980f8158993d07d44e1cf34da8df0b517324df",
+      "outputSha256": "2c4a259c3ecd24fb443aa254a57934dfa0b076b698a5779a79007d710581aba4",
       "edits": [
         {
           "start": 50,
@@ -970214,6 +972783,13 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 8640,
+          "end": 8647,
+          "symbol": "F:nm.field_f:[Ljp;",
+          "original": "field_f",
+          "renamed": "gameEyeSprites"
         },
         {
           "start": 8650,
@@ -1001540,7 +1004116,7 @@
       "original": "to.java",
       "renamed": "WeightedLruCache.java",
       "inputSha256": "0889ba30db0ca1118336d5e28dabf9935e470a91c1aa5b4996b8d0b18a50c9ec",
-      "outputSha256": "a734c5d0d81f0ae8b78c93f48f732d3a40146ccf912b001908d1010fb525a376",
+      "outputSha256": "ceec2a8b14ba38df01797180b0e0dca9bdfe3991bfec933642346f945d9876c3",
       "edits": [
         {
           "start": 50,
@@ -1001604,6 +1004180,13 @@
           "symbol": "F:to.field_j:Lgp;",
           "original": "field_j",
           "renamed": "lruEntries"
+        },
+        {
+          "start": 285,
+          "end": 292,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
         },
         {
           "start": 305,
@@ -1002418,6 +1005001,13 @@
           "renamed": "primaryActivityLoop"
         },
         {
+          "start": 2535,
+          "end": 2542,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
           "start": 2597,
           "end": 2598,
           "symbol": "M:to.a(ILjava/lang/Object;J)V",
@@ -1002514,6 +1005104,13 @@
           "symbol": "P:to.a(ILjava/lang/Object;J)V#2",
           "original": "param2",
           "renamed": "key"
+        },
+        {
+          "start": 3077,
+          "end": 3084,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
         },
         {
           "start": 3111,
@@ -1002864,6 +1005461,216 @@
           "symbol": "F:to.field_a:I",
           "original": "field_a",
           "renamed": "privateChatFilter"
+        },
+        {
+          "start": 5172,
+          "end": 5179,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5203,
+          "end": 5210,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5227,
+          "end": 5234,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5252,
+          "end": 5259,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5278,
+          "end": 5285,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5304,
+          "end": 5311,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5329,
+          "end": 5336,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5355,
+          "end": 5362,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5381,
+          "end": 5388,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5406,
+          "end": 5413,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5432,
+          "end": 5439,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5457,
+          "end": 5464,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5482,
+          "end": 5489,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5508,
+          "end": 5515,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5532,
+          "end": 5539,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5556,
+          "end": 5563,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5580,
+          "end": 5587,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5606,
+          "end": 5613,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5630,
+          "end": 5637,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5656,
+          "end": 5663,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5681,
+          "end": 5688,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5705,
+          "end": 5712,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5731,
+          "end": 5738,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5757,
+          "end": 5764,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5782,
+          "end": 5789,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5808,
+          "end": 5815,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5833,
+          "end": 5840,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5858,
+          "end": 5865,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5884,
+          "end": 5891,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 5909,
+          "end": 5916,
+          "symbol": "F:to.field_f:[I",
+          "original": "field_f",
+          "renamed": "powerUpDropPeriods"
         }
       ]
     },
@@ -1078010,10 +1080817,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "3ad75281387cd0a4bb22fbdf2ecb03a923da55c6137985fe2859790ce318ece0",
+    "rulesSha256": "c1264d11061ee41d37a6480bd41fc088128503d04afdaef543fb3bfe6a674b45",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "1b2049394bdf691a00d78bd7ecea75953adc79c18457c94b0c203927e54b83e5",
+    "outputTreeSha256": "9b7a74f128d17fe45920875d629a00799cb97844eff19172119b9298862ff596",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1078033,10 +1080840,16 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 1020532,
-        "traceSha256": "163affb9be5d30279785786ed557d4fe28334a807b224af016e5642bcc743d90",
+        "checks": 1024558,
+        "traceSha256": "f177df848389ea29d98f1c21c9ec812dbe1e98edba4f6f7c6eb0339cd7d13f58",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "boardPortalFixtures": true,
+        "boardBrickToggleFixtures": true,
+        "boardDropCadenceFixtures": true,
+        "boardScoreAnchorFixtures": true,
+        "boardMessageRandomFixtures": true,
+        "boardEyeExpressionFixtures": true,
         "resourcePreparationOrderFixtures": true,
         "resourcePreparationProgressFixtures": true,
         "resourcePreparationRetentionFixtures": true,

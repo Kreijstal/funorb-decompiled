@@ -39,11 +39,11 @@ final class PlayerBoard extends IntrusiveNode {
     int field_Q;
     int countedBricks;
     int stateTicks;
-    byte[] field_o;
+    byte[] powerUpDropCounters;
     int boardState;
     private int randomSeed;
     int field_G;
-    private Random field_B;
+    private Random messageRandom;
     int boardWidth;
     private IsaacGenerator seededRandom;
     private int field_T;
@@ -61,11 +61,11 @@ final class PlayerBoard extends IntrusiveNode {
     int receivedInputTick;
     String pendingMessage;
     int[] field_cb;
-    int field_ib;
+    int eyeExpressionTicks;
     int maskedTicks;
     PowerUpWarning displayedWarning;
     int bubbleSeed;
-    int field_y;
+    int eyeExpression;
     int field_t;
     int field_n;
     int field_l;
@@ -425,7 +425,7 @@ final class PlayerBoard extends IntrusiveNode {
             discarded$22 = diagnostics.append("12. " + Integer.toString(var4, 16) + "\n");
           }
           for (var5Lifetime2 = 3; var5Lifetime2 < 29; var5Lifetime2++) {
-            var6Lifetime1 = this.field_o[var5Lifetime2] % WeightedLruCache.field_f[var5Lifetime2];
+            var6Lifetime1 = this.powerUpDropCounters[var5Lifetime2] % WeightedLruCache.powerUpDropPeriods[var5Lifetime2];
             var6Lifetime1 = (15 & var6Lifetime1) << 4 | var6Lifetime1 >> 4;
             var4 = var4 ^ var6Lifetime1 * 3 + 26386 << (15 & var5Lifetime2);
           }
@@ -459,14 +459,14 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    final void a(String[] param0, byte param1) {
+    final void choosePendingMessage(String[] messages, byte obfuscationGuard) {
         try {
-          this.pendingMessage = param0[aa.a(param0.length, this.field_B, true)];
-          if (param1 != 75) {
+          this.pendingMessage = messages[aa.nextBoundedJavaRandom(messages.length, this.messageRandom, true)];
+          if (obfuscationGuard != 75) {
             this.field_hb = -123;
           }
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "j.E(" + (messages != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -590,7 +590,7 @@ final class PlayerBoard extends IntrusiveNode {
             return;
           }
           for (var10Lifetime1 = 3; var10Lifetime1 < 29; var10Lifetime1++) {
-            this.field_o[var10Lifetime1] = (byte)packet.readUnsignedByte(255);
+            this.powerUpDropCounters[var10Lifetime1] = (byte)packet.readUnsignedByte(255);
           }
           this.field_r = packet.readUnsignedShort(65280);
           this.field_M = packet.readUnsignedShort(65280);
@@ -613,12 +613,12 @@ final class PlayerBoard extends IntrusiveNode {
         }
     }
 
-    final void b(int param0, int param1) {
-        if (param0 != 16387) {
-          Paddle var4 = (Paddle) null;
-          this.a(-103, (Paddle) null, -75);
+    final void setBriefEyeExpression(int obfuscationGuard, int eyeExpression) {
+        if (obfuscationGuard != 16387) {
+          Paddle unusedPaddle = (Paddle) null;
+          this.addPaddleScore(-103, (Paddle) null, -75);
         }
-        this.a(param1, true, 50);
+        this.setEyeExpression(eyeExpression, true, 50);
     }
 
     final void recreateBubbles(int obfuscationGuard) {
@@ -638,7 +638,7 @@ final class PlayerBoard extends IntrusiveNode {
         if (this.bubbleTick >= 0 &&
           this.bubbleTick <= 564) {
           if (obfuscationGuard != 1000) {
-            this.field_ib = 95;
+            this.eyeExpressionTicks = 95;
           }
           random = new IsaacGenerator(new int[]{this.bubbleSeed});
           cellWidth = (-68 + this.boardWidth) / 8;
@@ -697,10 +697,10 @@ final class PlayerBoard extends IntrusiveNode {
         this.resetServe((byte) 85, resetAccounting, this.nextRandomBoundedInt(2048, (byte) 62) - 1024);
     }
 
-    final void a(byte param0) {
+    final void beginDefeatTransition(byte obfuscationGuard) {
         this.boardState = 3;
         this.stateTicks = 0;
-        if (param0 != 22) {
+        if (obfuscationGuard != 22) {
           this.levelState = (IntNode) null;
         }
     }
@@ -734,57 +734,57 @@ final class PlayerBoard extends IntrusiveNode {
         return this.seededRandom.nextInt(115);
     }
 
-    final void a(int param0) {
-        int var2 = 0;
-        Brick var3;
-        int var4;
-        StringBuilder var5;
-        var4 = BrickABrac.field_J ? 1 : 0;
-        if (param0 != -27) {
-          var5 = (StringBuilder) null;
+    final void toggleBrickTypes26And27(int obfuscationGuard) {
+        int groupIndex = 0;
+        Brick brick;
+        int unusedGameFlag;
+        StringBuilder unusedDiagnosticBuilder;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (obfuscationGuard != -27) {
+          unusedDiagnosticBuilder = (StringBuilder) null;
           this.computeBoardChecksum(true, (StringBuilder) null);
         }
-        for (var2 = 0; this.brickGroups.length > var2; var2++) {
-          var3 = (Brick) (this.brickGroups[var2].first(-81));
-          while (var3 != null) {
-            if (var3.typeId == 26 &&
-              var3.pendingTypeId == 26) {
-              var3.pendingTypeId = 27;
-              var3.stateWord = 0;
-              var3.transitionCode = 10;
-            } else if (26 == var3.typeId &&
-              var3.pendingTypeId == 27) {
-              var3.pendingTypeId = 26;
-              var3.typeId = 27;
-              var3.stateWord = -var3.stateWord + 15;
-              var3.transitionCode = 10;
-            } else if (var3.typeId == 26 &&
-              var3.pendingTypeId < 0) {
-              var3.transitionCode = 10;
-              var3.pendingTypeId = 27;
-              var3.stateWord = 0;
-            } else if (var3.typeId == 27 &&
-              var3.pendingTypeId == 26) {
-              var3.typeId = 26;
-              var3.stateWord = 15 - var3.stateWord;
-              var3.transitionCode = 10;
-              var3.pendingTypeId = 27;
+        for (groupIndex = 0; this.brickGroups.length > groupIndex; groupIndex++) {
+          brick = (Brick) (this.brickGroups[groupIndex].first(-81));
+          while (brick != null) {
+            if (brick.typeId == 26 &&
+              brick.pendingTypeId == 26) {
+              brick.pendingTypeId = 27;
+              brick.stateWord = 0;
+              brick.transitionCode = 10;
+            } else if (26 == brick.typeId &&
+              brick.pendingTypeId == 27) {
+              brick.pendingTypeId = 26;
+              brick.typeId = 27;
+              brick.stateWord = -brick.stateWord + 15;
+              brick.transitionCode = 10;
+            } else if (brick.typeId == 26 &&
+              brick.pendingTypeId < 0) {
+              brick.transitionCode = 10;
+              brick.pendingTypeId = 27;
+              brick.stateWord = 0;
+            } else if (brick.typeId == 27 &&
+              brick.pendingTypeId == 26) {
+              brick.typeId = 26;
+              brick.stateWord = 15 - brick.stateWord;
+              brick.transitionCode = 10;
+              brick.pendingTypeId = 27;
             } else {
-              if (27 == var3.typeId &&
-                var3.pendingTypeId == 27) {
+              if (27 == brick.typeId &&
+                brick.pendingTypeId == 27) {
                 throw new RuntimeException();
               }
-              if (var3.typeId == 27) {
-                if (var3.pendingTypeId >= 0) {
-                  var3 = (Brick) (this.brickGroups[var2].next((byte) 116));
+              if (brick.typeId == 27) {
+                if (brick.pendingTypeId >= 0) {
+                  brick = (Brick) (this.brickGroups[groupIndex].next((byte) 116));
                   continue;
                 }
-                var3.pendingTypeId = 26;
-                var3.transitionCode = 10;
-                var3.stateWord = 0;
+                brick.pendingTypeId = 26;
+                brick.transitionCode = 10;
+                brick.stateWord = 0;
               }
             }
-            var3 = (Brick) (this.brickGroups[var2].next((byte) 116));
+            brick = (Brick) (this.brickGroups[groupIndex].next((byte) 116));
           }
         }
     }
@@ -797,80 +797,80 @@ final class PlayerBoard extends IntrusiveNode {
         return this.seededRandom.nextBoundedInt(-37880252, bound);
     }
 
-    final void a(int param0, boolean param1, int param2) {
-        this.field_ib = param2;
-        this.field_y = param0;
-        if (!param1) {
+    final void setEyeExpression(int eyeExpression, boolean obfuscationGuard, int ticks) {
+        this.eyeExpressionTicks = ticks;
+        this.eyeExpression = eyeExpression;
+        if (!obfuscationGuard) {
           this.advancePowerUpWarnings(27);
         }
     }
 
-    final void a(byte param0, Brick param1, Ball param2) {
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        Brick var5 = null;
-        int var6 = 0;
-        int var7 = 0;
+    final void teleportBall(byte obfuscationGuard, Brick sourcePortal, Ball ball) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String sourceSummary = null;
+        StringBuilder ballContextBuilder = null;
+        String ballSummary = null;
+        RuntimeException caughtFailure = null;
+        int destinationIndex = 0;
+        RuntimeException failure = null;
+        Brick destinationPortal = null;
+        int angleSample = 0;
+        int outgoingAngle = 0;
         try {
-          var4_int = this.nextRandomBoundedInt(-1 + this.portalBricks.length, (byte) 62);
-          if (param1.portalIndex <= var4_int) {
-            var4_int++;
+          destinationIndex = this.nextRandomBoundedInt(-1 + this.portalBricks.length, (byte) 62);
+          if (sourcePortal.portalIndex <= destinationIndex) {
+            destinationIndex++;
           }
-          var5 = this.portalBricks[var4_int];
-          param2.x256 = var5.width256 / 2 + var5.x256 - param2.radius256;
-          if (param0 != -63) {
+          destinationPortal = this.portalBricks[destinationIndex];
+          ball.x256 = destinationPortal.width256 / 2 + destinationPortal.x256 - ball.radius256;
+          if (obfuscationGuard != -63) {
             this.messageTicks = -27;
           }
-          param2.y256 = -(2 * param2.radius256) + var5.y256;
-          var6 = this.nextRandomBoundedInt(65536, (byte) 62);
-          var7 = MouseInput.a(var6, -1, 33554432) + MouseInput.a(-var6 + 65536, -1, 67108864);
-          var7 = var7 >> 16;
-          if (param2.velocityX256 < 0) {
-            var7 = -var7;
-            param2.redirectVelocity(6546, var7);
+          ball.y256 = -(2 * ball.radius256) + destinationPortal.y256;
+          angleSample = this.nextRandomBoundedInt(65536, (byte) 62);
+          outgoingAngle = MouseInput.a(angleSample, -1, 33554432) + MouseInput.a(-angleSample + 65536, -1, 67108864);
+          outgoingAngle = outgoingAngle >> 16;
+          if (ball.velocityX256 < 0) {
+            outgoingAngle = -outgoingAngle;
+            ball.redirectVelocity(6546, outgoingAngle);
           } else {
-            param2.redirectVelocity(6546, var7);
+            ball.redirectVelocity(6546, outgoingAngle);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("j.U(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("j.U(").append(obfuscationGuard).append(',');
+          if (sourcePortal == null) {
+            sourceSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            sourceSummary = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
-          if (param2 == null) {
-            stackIn_15_2 = "null";
+          ballContextBuilder = ((StringBuilder) (Object) contextBuilder).append(sourceSummary).append(',');
+          if (ball == null) {
+            ballSummary = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            ballSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) ballContextBuilder).append(ballSummary).append(')').toString());
         }
     }
 
-    final void a(int param0, Brick param1, int param2) {
+    final void addBrickScore(int points, Brick brick, int heightDivisor) {
         try {
-          this.addScore(param0, false, param1.x256 + param1.width256 / 2, param1.height256 / param2 + param1.y256);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          this.addScore(points, false, brick.x256 + brick.width256 / 2, brick.height256 / heightDivisor + brick.y256);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "j.I(" + points + ',' + (brick != null ? "{...}" : "null") + ',' + heightDivisor + ')');
         }
     }
 
-    final void a(int param0, Paddle param1, int param2) {
+    final void addPaddleScore(int points, Paddle paddle, int widthDivisor) {
         try {
-          this.addScore(param0, false, param1.x256 + param1.width256 / param2, -12800 + param1.y256);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "j.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          this.addScore(points, false, paddle.x256 + paddle.width256 / widthDivisor, -12800 + paddle.y256);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "j.M(" + points + ',' + (paddle != null ? "{...}" : "null") + ',' + widthDivisor + ')');
         }
     }
 
@@ -893,17 +893,17 @@ final class PlayerBoard extends IntrusiveNode {
         this.scorePopups.addLast(new ScorePopup(points, x256, y256), (byte) 3);
     }
 
-    final boolean a(int param0, int param1) {
-        byte dupTemp$0 = 0;
-        if (WeightedLruCache.field_f[param1] > 0) {
-          dupTemp$0 = (byte)(this.field_o[param1] + 1);
-          this.field_o[param1] = dupTemp$0;
-          this.field_o[param1] = (byte)(dupTemp$0 % WeightedLruCache.field_f[param1]);
+    final boolean advancePowerUpDropCounter(int obfuscationGuard, int typeId) {
+        byte incrementedCounter = 0;
+        if (WeightedLruCache.powerUpDropPeriods[typeId] > 0) {
+          incrementedCounter = (byte)(this.powerUpDropCounters[typeId] + 1);
+          this.powerUpDropCounters[typeId] = incrementedCounter;
+          this.powerUpDropCounters[typeId] = (byte)(incrementedCounter % WeightedLruCache.powerUpDropPeriods[typeId]);
         }
-        if (param0 != 26) {
-          this.b(-111, 112);
+        if (obfuscationGuard != 26) {
+          this.setBriefEyeExpression(-111, 112);
         }
-        return this.field_o[param1] == 0 ? true : false;
+        return this.powerUpDropCounters[typeId] == 0 ? true : false;
     }
 
     PlayerBoard(int boardWidth, int initialBoardOffset, int controlSet, int randomSeed, int characterIndex) {
@@ -921,8 +921,8 @@ final class PlayerBoard extends IntrusiveNode {
         this.powerUpHistory = new ObjectHistoryBuffer(500);
         this.levelState = new IntNode();
         this.field_G = -1;
-        this.field_o = new byte[29];
-        this.field_B = new Random();
+        this.powerUpDropCounters = new byte[29];
+        this.messageRandom = new Random();
         this.field_M = -1;
         this.bubbleTick = -1;
         this.field_wb = 466;
@@ -937,7 +937,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.field_cb = new int[29];
         this.field_xb = new int[29];
         this.snapshotHistory = new ObjectHistoryBuffer(500);
-        this.b(16387, 0);
+        this.setBriefEyeExpression(16387, 0);
         this.characterIndex = characterIndex;
         if (HighscoresScreen.field_w == null) {
           HighscoresScreen.field_w = new int[2][3];

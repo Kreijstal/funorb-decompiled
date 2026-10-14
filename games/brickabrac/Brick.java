@@ -129,7 +129,7 @@ final class Brick extends RectangleBody {
             this.interpolateMotion((byte) -67, false);
           }
           if ((this.flags & 2) != 0 &&
-            board.a(26, this.typeId)) {
+            board.advancePowerUpDropCounter(26, this.typeId)) {
             board.fallingPowerUps.addLast(new PowerUp(this.x256 + this.width256 / 2 - 2048, this.y256 + this.height256 * 2, this.typeId), (byte) 3);
             if (!TextFieldRenderer.field_A) {
               return;
@@ -224,7 +224,7 @@ final class Brick extends RectangleBody {
         try {
           var7 = (Ball) (circle);
           if (this.typeId == 28) {
-            board.a((byte) -63, this, var7);
+            board.teleportBall((byte) -63, this, var7);
             return;
           }
           if ((EmailValidator.field_n & 1 << this.typeId) != 0 ||
@@ -272,7 +272,7 @@ final class Brick extends RectangleBody {
           var5Lifetime3 = stackIn_29_0 & stackIn_31_1;
           if (var5Lifetime3 != 0) {
             if (25 == this.typeId) {
-              board.a(-27);
+              board.toggleBrickTypes26And27(-27);
             }
             if (this.typeId != 27 ||
               this.pendingTypeId != 26) {

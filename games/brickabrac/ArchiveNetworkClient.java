@@ -45,7 +45,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
             ArchiveFetchClient.field_k != null) {
             ArchiveFetchClient.field_k.b(640 - ArchiveFetchClient.field_k.canvasWidth, 480 - ArchiveFetchClient.field_k.canvasHeight - 10, var3_int);
           }
-          var5 = IntrusiveNode.field_f[param2.field_y];
+          var5 = IntrusiveNode.gameEyeSprites[param2.eyeExpression];
           if (var4 != null) {
             var5.drawTransparent(-3 + (640 - (var4.canvasWidth + var5.canvasWidth) / 2), -var4.canvasHeight + 480 - 10 + 45);
           }

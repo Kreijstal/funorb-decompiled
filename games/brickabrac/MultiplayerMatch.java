@@ -228,11 +228,11 @@ final class MultiplayerMatch {
           if (board.field_M > 0) {
             board.field_M = board.field_M - 1;
           }
-          if (board.field_ib > 0) {
-            fieldTemp$1 = board.field_ib - 1;
-            board.field_ib = board.field_ib - 1;
+          if (board.eyeExpressionTicks > 0) {
+            fieldTemp$1 = board.eyeExpressionTicks - 1;
+            board.eyeExpressionTicks = board.eyeExpressionTicks - 1;
             if (0 == fieldTemp$1) {
-              board.b(16387, 0);
+              board.setBriefEyeExpression(16387, 0);
             }
           }
           var5 = (BallPulseEffect) (board.ballPulses.first(-58));
@@ -326,7 +326,7 @@ final class MultiplayerMatch {
                             if (1 == this.playerCount &&
                               contactBrick.pendingTypeId == 0 &&
                               var16 == 0) {
-                              board.a(2 * var9.destroyedBrickStreak + 10, contactBrick, 2);
+                              board.addBrickScore(2 * var9.destroyedBrickStreak + 10, contactBrick, 2);
                               var11++;
                             }
                           }
@@ -341,14 +341,14 @@ final class MultiplayerMatch {
                     } else {
                       stackIn_156_2 = 6;
                     }
-                    ((PlayerBoard) (Object) stackIn_155_0).b(stackIn_155_1, stackIn_156_2);
+                    ((PlayerBoard) (Object) stackIn_155_0).setBriefEyeExpression(stackIn_155_1, stackIn_156_2);
                     stackIn_158_0 = (PlayerBoard) (board);
                     if (var11 > 0) {
                       stackIn_159_1 = TextLineLayout.field_e;
                     } else {
                       stackIn_159_1 = WidgetTheme.field_e;
                     }
-                    ((PlayerBoard) (Object) stackIn_158_0).a(stackIn_159_1, (byte) 75);
+                    ((PlayerBoard) (Object) stackIn_158_0).choosePendingMessage(stackIn_159_1, (byte) 75);
                   }
                   var9 = (Ball) (board.activeBalls.next((byte) 116));
                 }
@@ -579,7 +579,7 @@ final class MultiplayerMatch {
                   15 >= var11) {
                   return;
                 }
-                board.a(TextLineLayout.field_e, (byte) 75);
+                board.choosePendingMessage(TextLineLayout.field_e, (byte) 75);
                 return;
               }
               fallingPowerUp = (PowerUp) (board.fallingPowerUps.first(-119));
@@ -594,7 +594,7 @@ final class MultiplayerMatch {
                   } else {
                     stackIn_271_2 = 5;
                   }
-                  ((PlayerBoard) (Object) stackIn_270_0).b(stackIn_270_1, stackIn_271_2);
+                  ((PlayerBoard) (Object) stackIn_270_0).setBriefEyeExpression(stackIn_270_1, stackIn_271_2);
                   if (TextFieldRenderer.field_A) {
                     WidgetLayer.a(fallingPowerUp.typeId, 4, (byte) -110);
                   }
@@ -621,7 +621,7 @@ final class MultiplayerMatch {
                       } else {
                         stackIn_288_1 = 500;
                       }
-                      ((PlayerBoard) (Object) stackIn_287_0).a(stackIn_288_1, paddle, obfuscationGuard + 2);
+                      ((PlayerBoard) (Object) stackIn_287_0).addPaddleScore(stackIn_288_1, paddle, obfuscationGuard + 2);
                       if (var11 != 0) {
                         board.field_u = 0;
                         board.field_hb = 0;
@@ -645,7 +645,7 @@ final class MultiplayerMatch {
                     } else {
                       stackIn_302_1 = TextLineLayout.field_e;
                     }
-                    ((PlayerBoard) (Object) stackIn_300_0).a(stackIn_302_1, (byte) 75);
+                    ((PlayerBoard) (Object) stackIn_300_0).choosePendingMessage(stackIn_302_1, (byte) 75);
                   }
                 }
                 fallingPowerUp = (PowerUp) (board.fallingPowerUps.next((byte) 116));
@@ -995,17 +995,17 @@ final class MultiplayerMatch {
                 param0.lives = param0.lives - 1;
               }
               if (param0.lives <= 0) {
-                param0.b(16387, 3);
-                param0.a((byte) 22);
+                param0.setBriefEyeExpression(16387, 3);
+                param0.beginDefeatTransition((byte) 22);
               } else {
-                if (3 != param0.field_y) {
-                  if (param0.field_y == 6) {
-                    param0.a(7, true, 150);
+                if (3 != param0.eyeExpression) {
+                  if (param0.eyeExpression == 6) {
+                    param0.setEyeExpression(7, true, 150);
                   } else {
-                    param0.a(3, true, 150);
+                    param0.setEyeExpression(3, true, 150);
                   }
                 } else {
-                  param0.a(6, true, 150);
+                  param0.setEyeExpression(6, true, 150);
                 }
                 if (TextFieldRenderer.field_A) {
                   WidgetLayer.a(0, 5, (byte) -124);
@@ -1014,10 +1014,10 @@ final class MultiplayerMatch {
                 param0.stateTicks = 0;
                 param0.boardState = 4;
               }
-              param0.a(WidgetTheme.field_e, (byte) 75);
+              param0.choosePendingMessage(WidgetTheme.field_e, (byte) 75);
               return false;
             }
-            param0.b(16387, 2);
+            param0.setBriefEyeExpression(16387, 2);
             return false;
           }
           this.a(param4, -1, param0);
@@ -1109,7 +1109,7 @@ final class MultiplayerMatch {
               if (param4.phaseTicks == 0 &&
                 var9.pendingTypeId == 0) {
                 if (1 == this.playerCount) {
-                  param0.a(10 + param4.destroyedBrickStreak, var9, 2);
+                  param0.addBrickScore(10 + param4.destroyedBrickStreak, var9, 2);
                 }
                 param4.destroyedBrickStreak = param4.destroyedBrickStreak + 1;
               }

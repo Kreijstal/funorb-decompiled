@@ -223,7 +223,7 @@ final class QuickChatCategoryRegistry {
           ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
           QuickChatHelpDialog.field_Ub = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
           GzipInflater.field_a = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
-          IntrusiveNode.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
+          IntrusiveNode.gameEyeSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
           FullscreenFailureKind.trackHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "track_heads", 2);
           ProxyAuthenticationRequiredException.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_small", 2);
           ScorePopup.characterHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
