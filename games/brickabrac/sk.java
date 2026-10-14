@@ -13,8 +13,8 @@ final class sk extends h {
         this.field_K = 256;
     }
 
-    final static void a(String[] args, int param1, LevelSequence param2, int param3, boolean param4, int param5) {
-        int var8 = 0;
+    final static void startLocalGame(String[] playerNames, int startingLevel, LevelSequence configuration, int localPlayerCount, boolean inputFlag, int obfuscationGuard) {
+        int playerIndex = 0;
         GameplayScreen stackIn_10_0 = null;
         boolean stackIn_10_1 = false;
         boolean stackIn_11_2 = false;
@@ -24,20 +24,20 @@ final class sk extends h {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int[] var7 = null;
-        int var9 = 0;
-        int[] var10 = null;
-        int[] var12 = null;
-        int[] var15 = null;
-        var9 = BrickABrac.field_J ? 1 : 0;
+        int localPlayerMask = 0;
+        RuntimeException failure = null;
+        int[] seedWords = null;
+        int clientBranchFlag = 0;
+        int[] seedStorage = null;
+        int[] randomSeeds = null;
+        int[] characterOrder = null;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           VerticalScrollbar.field_Ub = null;
           ep.resultCounterTwo = 23;
           OptionsScreen.resultCounterOne = 57;
           DelegatingCanvas.field_c = 13;
-          if (param5 != -12665) {
+          if (obfuscationGuard != -12665) {
             sk.a(122);
           }
           QuickChatMenu.field_Wb = 3;
@@ -45,40 +45,40 @@ final class sk extends h {
           ek.field_kb = 72;
           qm.field_a = 40;
           tm.field_g = 11;
-          var6_int = (1 << param3) - 1;
-          var12 = new int[param3];
-          var10 = var12;
-          var7 = var10;
-          for (var8 = 0; param3 > var8; var8++) {
-            var7[var8] = hi.field_w.nextInt(97);
+          localPlayerMask = (1 << localPlayerCount) - 1;
+          randomSeeds = new int[localPlayerCount];
+          seedStorage = randomSeeds;
+          seedWords = seedStorage;
+          for (playerIndex = 0; localPlayerCount > playerIndex; playerIndex++) {
+            seedWords[playerIndex] = hi.field_w.nextInt(97);
           }
-          var15 = LobbyPlayer.createCharacterOrder(hi.field_w, false);
-          IntArrayRequest.gameplayScreen = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
-          IntArrayRequest.gameplayScreen.a((byte) 119, param1);
+          characterOrder = LobbyPlayer.createCharacterOrder(hi.field_w, false);
+          IntArrayRequest.gameplayScreen = new GameplayScreen(playerNames, -1, localPlayerMask, configuration, randomSeeds, characterOrder);
+          IntArrayRequest.gameplayScreen.setStartingLevel((byte) 119, startingLevel);
           IntArrayRequest.gameplayScreen.snapshotsReady = true;
           stackIn_10_0 = IntArrayRequest.gameplayScreen;
           stackIn_10_1 = IntArrayRequest.gameplayScreen.suppressResultSubmission;
-          stackIn_11_2 = (QuickChatHelpDialog.field_Yb >= 2) && (param3 == 1) && (GameConnectionShell.field_t);
+          stackIn_11_2 = (QuickChatHelpDialog.field_Yb >= 2) && (localPlayerCount == 1) && (GameConnectionShell.field_t);
           stackIn_10_0.suppressResultSubmission = stackIn_10_1 | stackIn_11_2;
-          ng.requestScreen(param4, 103, -1);
+          ng.requestScreen(inputFlag, 103, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_15_0 = var6;
+          failure = decompiledCaughtException;
+          stackIn_15_0 = failure;
           stackIn_15_1 = new StringBuilder().append("sk.E(");
-          if (args == null) {
+          if (playerNames == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(startingLevel).append(',');
+          if (configuration == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(localPlayerCount).append(',').append(inputFlag).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

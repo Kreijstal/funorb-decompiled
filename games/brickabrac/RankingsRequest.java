@@ -133,7 +133,7 @@ final class RankingsRequest extends IntrusiveNode {
             tickTimeCursor = 49;
           }
           TabbedPane.currentBackground = rd.selectBackground(param3.pack.metadata[param2].attributeByte, (byte) 19);
-          sk.a(var5, param2, param3, 1, param1, -12665);
+          sk.startLocalGame(var5, param2, param3, 1, param1, -12665);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

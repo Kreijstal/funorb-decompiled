@@ -9,13 +9,13 @@ final class MultiplayerMatch {
     static UiComponent field_d;
     boolean resultsReady;
     int[] resultOrder;
-    int field_n;
-    int field_h;
+    int drawOfferPlayerMask;
+    int lastRemainingPlayerId;
     String[] playerNames;
     int playerMaskThree;
     LevelSequence configuration;
     int playerMaskTwo;
-    int field_j;
+    int rematchOfferPlayerMask;
 
     final void distributeQueuedAttacks(int playerId, int tickOffset, NodeDeque attacks, byte obfuscationGuard) {
         int recipientIndex = 0;
@@ -1154,18 +1154,18 @@ final class MultiplayerMatch {
         }
     }
 
-    final boolean b(int param0) {
-        int var2;
-        if (param0 < 75) {
+    final boolean checkMatchCompletion(int obfuscationGuard) {
+        int remainingPlayerMask;
+        if (obfuscationGuard < 75) {
           field_e = (String) null;
         }
-        var2 = ~(this.playerMaskTwo | this.playerMaskThree | this.playerMaskOne) & -1 + (1 << this.playerCount);
-        if (var2 == 0) {
+        remainingPlayerMask = ~(this.playerMaskTwo | this.playerMaskThree | this.playerMaskOne) & -1 + (1 << this.playerCount);
+        if (remainingPlayerMask == 0) {
           this.markResultsReady(false);
         } else {
-          if (wn.a(var2, (byte) -6)) {
-            this.field_h = ed.unsignedBitLength(9, var2 - 1);
-            this.playerMaskThree = this.playerMaskThree | 1 << this.field_h;
+          if (wn.a(remainingPlayerMask, (byte) -6)) {
+            this.lastRemainingPlayerId = ed.unsignedBitLength(9, remainingPlayerMask - 1);
+            this.playerMaskThree = this.playerMaskThree | 1 << this.lastRemainingPlayerId;
             this.markResultsReady(false);
           }
         }
@@ -1173,7 +1173,7 @@ final class MultiplayerMatch {
     }
 
     MultiplayerMatch(String[] playerNames, int localPlayerMask, LevelSequence configuration, int[] randomSeeds, int[] characterOrder) {
-        int var8 = 0;
+        int boardIndex = 0;
         int stackIn_4_0 = 0;
         Paddle stackIn_8_0 = null;
         int stackIn_9_1 = 0;
@@ -1187,37 +1187,37 @@ final class MultiplayerMatch {
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
+        int boardWidth = 0;
+        RuntimeException failure = null;
+        int controlSetIndex = 0;
         try {
           this.playerCount = playerNames.length;
           this.playerNames = playerNames;
           this.configuration = configuration;
           this.playerBoards = new PlayerBoard[this.playerCount];
           stackIn_4_0 = (this.playerCount >= 2) ? 306 : 510;
-          var6_int = stackIn_4_0;
-          var7 = 0;
-          for (var8 = 0; this.playerCount > var8; var8++) {
-            this.playerBoards[var8] = new PlayerBoard(var6_int, var8 * 30, var7, randomSeeds[var8], characterOrder[var8]);
-            stackIn_8_0 = this.playerBoards[var8].paddle;
+          boardWidth = stackIn_4_0;
+          controlSetIndex = 0;
+          for (boardIndex = 0; this.playerCount > boardIndex; boardIndex++) {
+            this.playerBoards[boardIndex] = new PlayerBoard(boardWidth, boardIndex * 30, controlSetIndex, randomSeeds[boardIndex], characterOrder[boardIndex]);
+            stackIn_8_0 = this.playerBoards[boardIndex].paddle;
             if (1 < this.playerCount) {
               stackIn_9_1 = 102400;
             } else {
               stackIn_9_1 = 114688;
             }
             stackIn_8_0.y256 = stackIn_9_1;
-            if ((localPlayerMask & 1 << var8) != 0) {
-              var7++;
+            if ((localPlayerMask & 1 << boardIndex) != 0) {
+              controlSetIndex++;
             }
           }
           this.resultOrder = new int[this.playerCount];
-          this.field_h = -1;
+          this.lastRemainingPlayerId = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_16_0 = var6;
+          failure = decompiledCaughtException;
+          stackIn_16_0 = failure;
           stackIn_16_1 = new StringBuilder().append("ak.<init>(");
           if (playerNames == null) {
             stackIn_17_2 = "null";

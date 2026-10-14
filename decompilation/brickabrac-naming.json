@@ -2108,12 +2108,28 @@
       "renamedSymbol": "F:MultiplayerMatch.playerMaskTwo:I"
     },
     {
+      "symbol": "F:ak.field_h:I",
+      "originalName": "field_h",
+      "to": "lastRemainingPlayerId",
+      "evidence": "ak.java: Starts -1; completion scan stores the sole player not in result masks. Local two-player result order has additional rules.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MultiplayerMatch.lastRemainingPlayerId:I"
+    },
+    {
       "symbol": "F:ak.field_i:I",
       "originalName": "field_i",
       "to": "playerMaskOne",
       "evidence": "ak.java: Match constructor and board iteration; player masks retain separate numbered identities rather than guessing elimination/disconnect encodings.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MultiplayerMatch.playerMaskOne:I"
+    },
+    {
+      "symbol": "F:ak.field_j:I",
+      "originalName": "field_j",
+      "to": "rematchOfferPlayerMask",
+      "evidence": "ak.java: Packet70 and rematch-caption offer/accept/cancel branches.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MultiplayerMatch.rematchOfferPlayerMask:I"
     },
     {
       "symbol": "F:ak.field_k:I",
@@ -2138,6 +2154,14 @@
       "evidence": "ak.java: Signed byte response entries; local two-player completion assigns winner/other indices.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MultiplayerMatch.resultOrder:[I"
+    },
+    {
+      "symbol": "F:ak.field_n:I",
+      "originalName": "field_n",
+      "to": "drawOfferPlayerMask",
+      "evidence": "ak.java: Draw-caption offer/accept/cancel branches indexed by local player ID.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MultiplayerMatch.drawOfferPlayerMask:I"
     },
     {
       "symbol": "F:al.field_i:Z",
@@ -10436,6 +10460,14 @@
       "renamedSymbol": "F:GameConnectionShell.reconnectRequested:Z"
     },
     {
+      "symbol": "F:qj.field_i:I",
+      "originalName": "field_i",
+      "to": "lastReportedLevel",
+      "evidence": "qj.java: Initialized at selected level, advanced when viewed board reaches a later level; used for prior-level result submission.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameplayScreen.lastReportedLevel:I"
+    },
+    {
       "symbol": "F:qj.field_k:I",
       "originalName": "field_k",
       "to": "localPlayerId",
@@ -10450,6 +10482,14 @@
       "evidence": "qj.java: Board view index cycled by gameplay viewing controls.",
       "confidence": "reviewed",
       "renamedSymbol": "F:GameplayScreen.viewedPlayerId:I"
+    },
+    {
+      "symbol": "F:qj.field_n:Z",
+      "originalName": "field_n",
+      "to": "resultWordMode",
+      "evidence": "qj.java: Startup flag and result-level setter gate board resultWord display; rematch captions select unrated wording when true. Full mode semantics remain qualified.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameplayScreen.resultWordMode:Z"
     },
     {
       "symbol": "F:qj.field_o:I",
@@ -10476,6 +10516,14 @@
       "renamedSymbol": "F:GameplayScreen.snapshotsReady:Z"
     },
     {
+      "symbol": "F:qj.field_r:I",
+      "originalName": "field_r",
+      "to": "resultLevel",
+      "evidence": "qj.java: Updated by private result-level setter and used in final progress/result submission.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameplayScreen.resultLevel:I"
+    },
+    {
       "symbol": "F:qj.field_s:Z",
       "originalName": "field_s",
       "to": "suppressResultSubmission",
@@ -10492,6 +10540,14 @@
       "renamedSymbol": "F:GameplayScreen.progressBaseLevel:I"
     },
     {
+      "symbol": "F:qj.field_v:I",
+      "originalName": "field_v",
+      "to": "rematchSetupPlayerMask",
+      "evidence": "qj.java: Packet71 mask; combined with local bit to choose offer-rematch versus setup-new-game caption.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameplayScreen.rematchSetupPlayerMask:I"
+    },
+    {
       "symbol": "F:qj.field_w:Lak;",
       "originalName": "field_w",
       "to": "match",
@@ -10506,6 +10562,14 @@
       "evidence": "qj.java: Next sequential board snapshot index advanced by opcode79.",
       "confidence": "reviewed",
       "renamedSymbol": "F:GameplayScreen.loadedBoardSnapshots:I"
+    },
+    {
+      "symbol": "F:qj.field_y:Z",
+      "originalName": "field_y",
+      "to": "debugControlsEnabled",
+      "evidence": "qj.java: Captured from debug level at least2; enables single-player debug/achievement keys that suppress result submission.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameplayScreen.debugControlsEnabled:Z"
     },
     {
       "symbol": "F:qk.field_e:I",
@@ -13076,6 +13140,38 @@
       "renamedSymbol": "L:AchievementBrowserScreen.clearIcons(ILNodeDeque;)V#1"
     },
     {
+      "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+      "originalName": "var8",
+      "to": "boardIndex",
+      "evidence": "ak.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#0"
+    },
+    {
+      "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#14",
+      "originalName": "var6_int",
+      "to": "boardWidth",
+      "evidence": "ak.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#14"
+    },
+    {
+      "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#15",
+      "originalName": "var6",
+      "to": "failure",
+      "evidence": "ak.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#15"
+    },
+    {
+      "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#16",
+      "originalName": "var7",
+      "to": "controlSetIndex",
+      "evidence": "ak.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#16"
+    },
+    {
       "symbol": "L:ak.a(BI)V#0",
       "originalName": "var3",
       "to": "board",
@@ -13218,6 +13314,14 @@
       "evidence": "ak.java: Reviewed main board tick body/collection role; original control flow retained.",
       "confidence": "reviewed",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#82"
+    },
+    {
+      "symbol": "L:ak.b(I)Z#0",
+      "originalName": "var2",
+      "to": "remainingPlayerMask",
+      "evidence": "ak.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.checkMatchCompletion(I)Z#0"
     },
     {
       "symbol": "L:am.<init>(IIIIILmh;Lmh;Lmh;Lmh;Lni;Lmh;Ljava/lang/String;J)V#0",
@@ -23548,6 +23652,94 @@
       "renamedSymbol": "L:qi.handleAchievementResponse(I)V#8"
     },
     {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#14",
+      "originalName": "var9",
+      "to": "achievementMaskAlias",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#14"
+    },
+    {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#15",
+      "originalName": "var9_int",
+      "to": "localBoardCount",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#15"
+    },
+    {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#16",
+      "originalName": "var9_ref",
+      "to": "failure",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#16"
+    },
+    {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#17",
+      "originalName": "var10",
+      "to": "achievementWordIndex",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#17"
+    },
+    {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#18",
+      "originalName": "var12",
+      "to": "achievementMaskStorage",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#18"
+    },
+    {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#19",
+      "originalName": "var13",
+      "to": "achievementMaskReference",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#19"
+    },
+    {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#20",
+      "originalName": "var14",
+      "to": "achievementMask",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#20"
+    },
+    {
+      "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#21",
+      "originalName": "var10Lifetime1",
+      "to": "playerIndex",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#21"
+    },
+    {
+      "symbol": "L:qj.a(BI)V#0",
+      "originalName": "var3",
+      "to": "boardIndex",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.setStartingLevel(BI)V#0"
+    },
+    {
+      "symbol": "L:qj.a(BI)V#1",
+      "originalName": "var4",
+      "to": "clientBranchFlag",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.setStartingLevel(BI)V#1"
+    },
+    {
+      "symbol": "L:qj.a(BI)V#2",
+      "originalName": "var3Lifetime1",
+      "to": "counterLevelAdjustment",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.setStartingLevel(BI)V#2"
+    },
+    {
       "symbol": "L:qj.a(BLpi;Z)V#0",
       "originalName": "var6_int",
       "to": "maskIndex",
@@ -23586,6 +23778,14 @@
       "evidence": "qj.java: Reviewed incoming control-batch parser declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#9"
+    },
+    {
+      "symbol": "L:qj.a(IZ)V#0",
+      "originalName": "var3",
+      "to": "counterLevelAdjustment",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.setResultLevel(IZ)V#0"
     },
     {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#10",
@@ -23682,6 +23882,14 @@
       "evidence": "qj.java: Reviewed remote/local simulation and input-batch consumption declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#8"
+    },
+    {
+      "symbol": "L:qj.f(I)V#0",
+      "originalName": "var2",
+      "to": "guardArithmetic",
+      "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.requestRematchAction(I)V#0"
     },
     {
       "symbol": "L:qq.<initializer>()V#0",
@@ -24690,6 +24898,70 @@
       "evidence": "sj.java: Scoped response dispatcher local verified against packet reads, lookups and state consumers; shared integer and unused erased locals remain unresolved.",
       "confidence": "reviewed",
       "renamedSymbol": "L:sj.handleLobbyResponse(B)V#9"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+      "originalName": "var8",
+      "to": "playerIndex",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#0"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#10",
+      "originalName": "var6_int",
+      "to": "localPlayerMask",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#10"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#11",
+      "originalName": "var6",
+      "to": "failure",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#11"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#12",
+      "originalName": "var7",
+      "to": "seedWords",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#12"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#13",
+      "originalName": "var9",
+      "to": "clientBranchFlag",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#13"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#14",
+      "originalName": "var10",
+      "to": "seedStorage",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#14"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#15",
+      "originalName": "var12",
+      "to": "randomSeeds",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#15"
+    },
+    {
+      "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#16",
+      "originalName": "var15",
+      "to": "characterOrder",
+      "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#16"
     },
     {
       "symbol": "L:te.<init>()V#0",
@@ -26908,6 +27180,14 @@
       "renamedSymbol": "M:MultiplayerMatch.markResultsReady(Z)V"
     },
     {
+      "symbol": "M:ak.b(I)Z",
+      "originalName": "b",
+      "to": "checkMatchCompletion",
+      "evidence": "ak.java: Zero unmasked players finalizes; exactly one records its index and maskThree bit then finalizes; multiple unmasked players keep prior completion state; guard82.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MultiplayerMatch.checkMatchCompletion(I)Z"
+    },
+    {
       "symbol": "M:ak.c(I)I",
       "originalName": "c",
       "to": "getStateSevenPlayerMask",
@@ -28292,6 +28572,14 @@
       "renamedSymbol": "M:OptionsScreen.drawScreen(B)V"
     },
     {
+      "symbol": "M:fr.a(I)V",
+      "originalName": "a",
+      "to": "updateRematchCaption",
+      "evidence": "fr.java: Spectators retain caption; offer/setup masks and resultWordMode select literal rematch labels at button12; guard1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Mesh3D.updateRematchCaption(I)V"
+    },
+    {
       "symbol": "M:fr.a(IIII)V",
       "originalName": "a",
       "to": "translateVerticesFrom",
@@ -28946,6 +29234,14 @@
       "evidence": "i.java: Type0 copies,1 bzip,other types shared fixed-header gzip; preserves length limits; true guard.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AchievementIcon.decompressArchiveContainer(Z[B)[B"
+    },
+    {
+      "symbol": "M:i.c(B)V",
+      "originalName": "c",
+      "to": "updateDrawCaption",
+      "evidence": "i.java: Spectators retain caption; local/other/no draw offers select Cancel/Accept/Offer draw at button10; guard32.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AchievementIcon.updateDrawCaption(B)V"
     },
     {
       "symbol": "M:i.c(I)V",
@@ -32924,6 +33220,14 @@
       "renamedSymbol": "M:qi.handleAchievementResponse(I)V"
     },
     {
+      "symbol": "M:qj.a(BI)V",
+      "originalName": "a",
+      "to": "setStartingLevel",
+      "evidence": "qj.java: Sets every board level; single-player also captures progress baseline/report level, changes result counter and level title; guard119.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.setStartingLevel(BI)V"
+    },
+    {
       "symbol": "M:qj.a(BII)V",
       "originalName": "a",
       "to": "queueOffsetAchievement",
@@ -32996,6 +33300,14 @@
       "renamedSymbol": "M:GameplayScreen.readMaskOnePlayerResult(ILBitPacketBuffer;)V"
     },
     {
+      "symbol": "M:qj.a(IZ)V",
+      "originalName": "a",
+      "to": "setResultLevel",
+      "evidence": "qj.java: Optional mode promotion, single-player result-counter subtraction, then result-level retention.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.setResultLevel(IZ)V"
+    },
+    {
       "symbol": "M:qj.a(Lnc;IBI)V",
       "originalName": "a",
       "to": "queueLevelResult",
@@ -33066,6 +33378,22 @@
       "evidence": "qj.java: Checks complement byte and mapped bit, toggles qualified bit word and captures adjusted companion word; guard above81.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameplayScreen.queueMappedBitAchievement(III)V"
+    },
+    {
+      "symbol": "M:qj.c(I)Z",
+      "originalName": "c",
+      "to": "isSpectator",
+      "evidence": "qj.java: True exactly for localPlayerId -2; offline -1 is not spectator; guard at least93.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.isSpectator(I)Z"
+    },
+    {
+      "symbol": "M:qj.f(I)V",
+      "originalName": "f",
+      "to": "requestRematchAction",
+      "evidence": "qj.java: Post-result button12 and automated repeat path write ciphered opcode67 with no body; offline screen throws before output; guard69/87.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.requestRematchAction(I)V"
     },
     {
       "symbol": "M:qk.a(BLjava/awt/Component;)V",
@@ -33698,6 +34026,14 @@
       "evidence": "sk.java: Creates association, queues it and adds stream to sound mixer; canonical guard117.",
       "confidence": "reviewed",
       "renamedSymbol": "M:sk.queueSoundPlayback(BLPcmStream;)LSoundPlayback;"
+    },
+    {
+      "symbol": "M:sk.a([Ljava/lang/String;ILoi;IZI)V",
+      "originalName": "a",
+      "to": "startLocalGame",
+      "evidence": "sk.java: Generates local masks/seeds/character order, constructs offline screen, sets level/snapshot state and requests gameplay screen; guard -12665.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V"
     },
     {
       "symbol": "M:sk.i(B)V",
@@ -36514,6 +36850,14 @@
       "evidence": "ak.java: Marks result-order data ready; false avoids unused guard branch.",
       "confidence": "reviewed",
       "renamedSymbol": "P:MultiplayerMatch.markResultsReady(Z)V#0"
+    },
+    {
+      "symbol": "P:ak.b(I)Z#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ak.java: Zero unmasked players finalizes; exactly one records its index and maskThree bit then finalizes; multiple unmasked players keep prior completion state; guard82.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MultiplayerMatch.checkMatchCompletion(I)Z#0"
     },
     {
       "symbol": "P:ak.c(I)I#0",
@@ -40980,6 +41324,14 @@
       "renamedSymbol": "P:OptionsScreen.drawScreen(B)V#0"
     },
     {
+      "symbol": "P:fr.a(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "fr.java: Spectators retain caption; offer/setup masks and resultWordMode select literal rematch labels at button12; guard1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Mesh3D.updateRematchCaption(I)V#0"
+    },
+    {
       "symbol": "P:fr.a(IIII)V#0",
       "originalName": "param0",
       "to": "deltaZ",
@@ -42818,6 +43170,14 @@
       "evidence": "i.java: Type0 copies,1 bzip,other types shared fixed-header gzip; preserves length limits; true guard.",
       "confidence": "reviewed",
       "renamedSymbol": "P:AchievementIcon.decompressArchiveContainer(Z[B)[B#1"
+    },
+    {
+      "symbol": "P:i.c(B)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "i.java: Spectators retain caption; local/other/no draw offers select Cancel/Accept/Offer draw at button10; guard32.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AchievementIcon.updateDrawCaption(B)V#0"
     },
     {
       "symbol": "P:i.c(I)V#0",
@@ -53724,6 +54084,14 @@
       "renamedSymbol": "P:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#0"
     },
     {
+      "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#1",
+      "originalName": "param1",
+      "to": "resultWordMode",
+      "evidence": "qj.java: Retained startup flag gates result-word rendering and unrated-rematch captions; full server mode semantics remain unresolved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#1"
+    },
+    {
       "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#2",
       "originalName": "param2",
       "to": "playerNames",
@@ -53818,6 +54186,22 @@
       "evidence": "qj.java: Delegates to offline gameplay construction with supplied seeded boards and character order.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GameplayScreen.<init>([Ljava/lang/String;IILLevelSequence;[I[I)V#5"
+    },
+    {
+      "symbol": "P:qj.a(BI)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Sets every board level; single-player also captures progress baseline/report level, changes result counter and level title; guard119.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.setStartingLevel(BI)V#0"
+    },
+    {
+      "symbol": "P:qj.a(BI)V#1",
+      "originalName": "param1",
+      "to": "levelIndex",
+      "evidence": "qj.java: Sets every board level; single-player also captures progress baseline/report level, changes result counter and level title; guard119.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.setStartingLevel(BI)V#1"
     },
     {
       "symbol": "P:qj.a(BII)V#0",
@@ -54002,6 +54386,22 @@
       "evidence": "qj.java: Reads player and signed24-bit result then ORs player into maskOne; guard18504.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GameplayScreen.readMaskOnePlayerResult(ILBitPacketBuffer;)V#1"
+    },
+    {
+      "symbol": "P:qj.a(IZ)V#0",
+      "originalName": "param0",
+      "to": "levelIndex",
+      "evidence": "qj.java: Optional mode promotion, single-player result-counter subtraction, then result-level retention.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.setResultLevel(IZ)V#0"
+    },
+    {
+      "symbol": "P:qj.a(IZ)V#1",
+      "originalName": "param1",
+      "to": "enableResultWordMode",
+      "evidence": "qj.java: Optional mode promotion, single-player result-counter subtraction, then result-level retention.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.setResultLevel(IZ)V#1"
     },
     {
       "symbol": "P:qj.a(Lnc;IBI)V#0",
@@ -54194,6 +54594,22 @@
       "evidence": "qj.java: Checks complement byte and mapped bit, toggles qualified bit word and captures adjusted companion word; guard above81.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GameplayScreen.queueMappedBitAchievement(III)V#2"
+    },
+    {
+      "symbol": "P:qj.c(I)Z#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: True exactly for localPlayerId -2; offline -1 is not spectator; guard at least93.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.isSpectator(I)Z#0"
+    },
+    {
+      "symbol": "P:qj.f(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Post-result button12 and automated repeat path write ciphered opcode67 with no body; offline screen throws before output; guard69/87.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.requestRematchAction(I)V#0"
     },
     {
       "symbol": "P:qk.a(BLjava/awt/Component;)V#0",
@@ -55602,6 +56018,54 @@
       "evidence": "sk.java: Creates association, queues it and adds stream to sound mixer; canonical guard117.",
       "confidence": "reviewed",
       "renamedSymbol": "P:sk.queueSoundPlayback(BLPcmStream;)LSoundPlayback;#1"
+    },
+    {
+      "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+      "originalName": "args",
+      "to": "playerNames",
+      "evidence": "sk.java: Generates local masks/seeds/character order, constructs offline screen, sets level/snapshot state and requests gameplay screen; guard -12665.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#0"
+    },
+    {
+      "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#1",
+      "originalName": "param1",
+      "to": "startingLevel",
+      "evidence": "sk.java: Generates local masks/seeds/character order, constructs offline screen, sets level/snapshot state and requests gameplay screen; guard -12665.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#1"
+    },
+    {
+      "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#2",
+      "originalName": "param2",
+      "to": "configuration",
+      "evidence": "sk.java: Generates local masks/seeds/character order, constructs offline screen, sets level/snapshot state and requests gameplay screen; guard -12665.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#2"
+    },
+    {
+      "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
+      "originalName": "param3",
+      "to": "localPlayerCount",
+      "evidence": "sk.java: Generates local masks/seeds/character order, constructs offline screen, sets level/snapshot state and requests gameplay screen; guard -12665.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#3"
+    },
+    {
+      "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#4",
+      "originalName": "param4",
+      "to": "inputFlag",
+      "evidence": "sk.java: Generates local masks/seeds/character order, constructs offline screen, sets level/snapshot state and requests gameplay screen; guard -12665.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#4"
+    },
+    {
+      "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#5",
+      "originalName": "param5",
+      "to": "obfuscationGuard",
+      "evidence": "sk.java: Generates local masks/seeds/character order, constructs offline screen, sets level/snapshot state and requests gameplay screen; guard -12665.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#5"
     },
     {
       "symbol": "P:sk.i(B)V#0",
@@ -65815,9 +66279,9 @@
     },
     {
       "symbol": "F:ak.field_h:I",
-      "renamedSymbol": "F:MultiplayerMatch.field_h:I",
+      "renamedSymbol": "F:MultiplayerMatch.lastRemainingPlayerId:I",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "lastRemainingPlayerId",
       "declaration": {
         "file": "ak.java",
         "start": 221,
@@ -65837,9 +66301,9 @@
     },
     {
       "symbol": "F:ak.field_j:I",
-      "renamedSymbol": "F:MultiplayerMatch.field_j:I",
+      "renamedSymbol": "F:MultiplayerMatch.rematchOfferPlayerMask:I",
       "originalName": "field_j",
-      "renamedName": "field_j",
+      "renamedName": "rematchOfferPlayerMask",
       "declaration": {
         "file": "ak.java",
         "start": 310,
@@ -65881,9 +66345,9 @@
     },
     {
       "symbol": "F:ak.field_n:I",
-      "renamedSymbol": "F:MultiplayerMatch.field_n:I",
+      "renamedSymbol": "F:MultiplayerMatch.drawOfferPlayerMask:I",
       "originalName": "field_n",
-      "renamedName": "field_n",
+      "renamedName": "drawOfferPlayerMask",
       "declaration": {
         "file": "ak.java",
         "start": 204,
@@ -93073,9 +93537,9 @@
     },
     {
       "symbol": "F:qj.field_i:I",
-      "renamedSymbol": "F:GameplayScreen.field_i:I",
+      "renamedSymbol": "F:GameplayScreen.lastReportedLevel:I",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "lastReportedLevel",
       "declaration": {
         "file": "qj.java",
         "start": 200,
@@ -93128,9 +93592,9 @@
     },
     {
       "symbol": "F:qj.field_n:Z",
-      "renamedSymbol": "F:GameplayScreen.field_n:Z",
+      "renamedSymbol": "F:GameplayScreen.resultWordMode:Z",
       "originalName": "field_n",
-      "renamedName": "field_n",
+      "renamedName": "resultWordMode",
       "declaration": {
         "file": "qj.java",
         "start": 261,
@@ -93172,9 +93636,9 @@
     },
     {
       "symbol": "F:qj.field_r:I",
-      "renamedSymbol": "F:GameplayScreen.field_r:I",
+      "renamedSymbol": "F:GameplayScreen.resultLevel:I",
       "originalName": "field_r",
-      "renamedName": "field_r",
+      "renamedName": "resultLevel",
       "declaration": {
         "file": "qj.java",
         "start": 175,
@@ -93216,9 +93680,9 @@
     },
     {
       "symbol": "F:qj.field_v:I",
-      "renamedSymbol": "F:GameplayScreen.field_v:I",
+      "renamedSymbol": "F:GameplayScreen.rematchSetupPlayerMask:I",
       "originalName": "field_v",
-      "renamedName": "field_v",
+      "renamedName": "rematchSetupPlayerMask",
       "declaration": {
         "file": "qj.java",
         "start": 158,
@@ -93249,9 +93713,9 @@
     },
     {
       "symbol": "F:qj.field_y:Z",
-      "renamedSymbol": "F:GameplayScreen.field_y:Z",
+      "renamedSymbol": "F:GameplayScreen.debugControlsEnabled:Z",
       "originalName": "field_y",
-      "renamedName": "field_y",
+      "renamedName": "debugControlsEnabled",
       "declaration": {
         "file": "qj.java",
         "start": 377,
@@ -110851,7 +111315,7 @@
       "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
       "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#0",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "boardIndex",
       "declaration": {
         "file": "ak.java",
         "start": 45135,
@@ -110917,7 +111381,7 @@
       "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#14",
       "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#14",
       "originalName": "var6_int",
-      "renamedName": "var6_int",
+      "renamedName": "boardWidth",
       "declaration": {
         "file": "ak.java",
         "start": 45667,
@@ -110928,7 +111392,7 @@
       "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#15",
       "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#15",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "failure",
       "declaration": {
         "file": "ak.java",
         "start": 45706,
@@ -110939,7 +111403,7 @@
       "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#16",
       "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#16",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "controlSetIndex",
       "declaration": {
         "file": "ak.java",
         "start": 45731,
@@ -112642,9 +113106,9 @@
     },
     {
       "symbol": "L:ak.b(I)Z#0",
-      "renamedSymbol": "L:MultiplayerMatch.b(I)Z#0",
+      "renamedSymbol": "L:MultiplayerMatch.checkMatchCompletion(I)Z#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "remainingPlayerMask",
       "declaration": {
         "file": "ak.java",
         "start": 44581,
@@ -148293,7 +148757,7 @@
     },
     {
       "symbol": "L:fr.a(I)V#0",
-      "renamedSymbol": "L:Mesh3D.a(I)V#0",
+      "renamedSymbol": "L:Mesh3D.updateRematchCaption(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -160063,7 +160527,7 @@
     },
     {
       "symbol": "L:i.c(B)V#0",
-      "renamedSymbol": "L:AchievementIcon.c(B)V#0",
+      "renamedSymbol": "L:AchievementIcon.updateDrawCaption(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -238990,7 +239454,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#14",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#14",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "achievementMaskAlias",
       "declaration": {
         "file": "qj.java",
         "start": 65031,
@@ -239001,7 +239465,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#15",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#15",
       "originalName": "var9_int",
-      "renamedName": "var9_int",
+      "renamedName": "localBoardCount",
       "declaration": {
         "file": "qj.java",
         "start": 65056,
@@ -239012,7 +239476,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#16",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#16",
       "originalName": "var9_ref",
-      "renamedName": "var9_ref",
+      "renamedName": "failure",
       "declaration": {
         "file": "qj.java",
         "start": 65095,
@@ -239023,7 +239487,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#17",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#17",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "achievementWordIndex",
       "declaration": {
         "file": "qj.java",
         "start": 65124,
@@ -239034,7 +239498,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#18",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#18",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "achievementMaskStorage",
       "declaration": {
         "file": "qj.java",
         "start": 65149,
@@ -239045,7 +239509,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#19",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#19",
       "originalName": "var13",
-      "renamedName": "var13",
+      "renamedName": "achievementMaskReference",
       "declaration": {
         "file": "qj.java",
         "start": 65177,
@@ -239067,7 +239531,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#20",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#20",
       "originalName": "var14",
-      "renamedName": "var14",
+      "renamedName": "achievementMask",
       "declaration": {
         "file": "qj.java",
         "start": 65205,
@@ -239078,7 +239542,7 @@
       "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#21",
       "renamedSymbol": "L:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#21",
       "originalName": "var10Lifetime1",
-      "renamedName": "var10Lifetime1",
+      "renamedName": "playerIndex",
       "declaration": {
         "file": "qj.java",
         "start": 65231,
@@ -239175,9 +239639,9 @@
     },
     {
       "symbol": "L:qj.a(BI)V#0",
-      "renamedSymbol": "L:GameplayScreen.a(BI)V#0",
+      "renamedSymbol": "L:GameplayScreen.setStartingLevel(BI)V#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "boardIndex",
       "declaration": {
         "file": "qj.java",
         "start": 36019,
@@ -239186,9 +239650,9 @@
     },
     {
       "symbol": "L:qj.a(BI)V#1",
-      "renamedSymbol": "L:GameplayScreen.a(BI)V#1",
+      "renamedSymbol": "L:GameplayScreen.setStartingLevel(BI)V#1",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "clientBranchFlag",
       "declaration": {
         "file": "qj.java",
         "start": 36041,
@@ -239197,9 +239661,9 @@
     },
     {
       "symbol": "L:qj.a(BI)V#2",
-      "renamedSymbol": "L:GameplayScreen.a(BI)V#2",
+      "renamedSymbol": "L:GameplayScreen.setStartingLevel(BI)V#2",
       "originalName": "var3Lifetime1",
-      "renamedName": "var3Lifetime1",
+      "renamedName": "counterLevelAdjustment",
       "declaration": {
         "file": "qj.java",
         "start": 36088,
@@ -239967,9 +240431,9 @@
     },
     {
       "symbol": "L:qj.a(IZ)V#0",
-      "renamedSymbol": "L:GameplayScreen.a(IZ)V#0",
+      "renamedSymbol": "L:GameplayScreen.setResultLevel(IZ)V#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "counterLevelAdjustment",
       "declaration": {
         "file": "qj.java",
         "start": 38649,
@@ -241320,9 +241784,9 @@
     },
     {
       "symbol": "L:qj.f(I)V#0",
-      "renamedSymbol": "L:GameplayScreen.f(I)V#0",
+      "renamedSymbol": "L:GameplayScreen.requestRematchAction(I)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "guardArithmetic",
       "declaration": {
         "file": "qj.java",
         "start": 64273,
@@ -253970,9 +254434,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#0",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#0",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "playerIndex",
       "declaration": {
         "file": "sk.java",
         "start": 401,
@@ -253981,7 +254445,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#1",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#1",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#1",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -253992,9 +254456,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#10",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#10",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#10",
       "originalName": "var6_int",
-      "renamedName": "var6_int",
+      "renamedName": "localPlayerMask",
       "declaration": {
         "file": "sk.java",
         "start": 794,
@@ -254003,9 +254467,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#11",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#11",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#11",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "failure",
       "declaration": {
         "file": "sk.java",
         "start": 833,
@@ -254014,9 +254478,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#12",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#12",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#12",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "seedWords",
       "declaration": {
         "file": "sk.java",
         "start": 860,
@@ -254025,9 +254489,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#13",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#13",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#13",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "clientBranchFlag",
       "declaration": {
         "file": "sk.java",
         "start": 885,
@@ -254036,9 +254500,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#14",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#14",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#14",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "seedStorage",
       "declaration": {
         "file": "sk.java",
         "start": 909,
@@ -254047,9 +254511,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#15",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#15",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#15",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "randomSeeds",
       "declaration": {
         "file": "sk.java",
         "start": 937,
@@ -254058,9 +254522,9 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#16",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#16",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#16",
       "originalName": "var15",
-      "renamedName": "var15",
+      "renamedName": "characterOrder",
       "declaration": {
         "file": "sk.java",
         "start": 965,
@@ -254069,7 +254533,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#17",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#17",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#17",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -254080,7 +254544,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#2",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#2",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#2",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -254091,7 +254555,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#3",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#3",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -254102,7 +254566,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#4",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#4",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -254113,7 +254577,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#5",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#5",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#5",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -254124,7 +254588,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#6",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#6",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#6",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -254135,7 +254599,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#7",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#7",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#7",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -254146,7 +254610,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#8",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#8",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#8",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -254157,7 +254621,7 @@
     },
     {
       "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#9",
-      "renamedSymbol": "L:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#9",
+      "renamedSymbol": "L:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -290193,9 +290657,9 @@
     },
     {
       "symbol": "M:ak.b(I)Z",
-      "renamedSymbol": "M:MultiplayerMatch.b(I)Z",
+      "renamedSymbol": "M:MultiplayerMatch.checkMatchCompletion(I)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "checkMatchCompletion",
       "declaration": {
         "file": "ak.java",
         "start": 44553,
@@ -297640,9 +298104,9 @@
     },
     {
       "symbol": "M:fr.a(I)V",
-      "renamedSymbol": "M:Mesh3D.a(I)V",
+      "renamedSymbol": "M:Mesh3D.updateRematchCaption(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateRematchCaption",
       "declaration": {
         "file": "fr.java",
         "start": 4599,
@@ -300533,9 +300997,9 @@
     },
     {
       "symbol": "M:i.c(B)V",
-      "renamedSymbol": "M:AchievementIcon.c(B)V",
+      "renamedSymbol": "M:AchievementIcon.updateDrawCaption(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "updateDrawCaption",
       "declaration": {
         "file": "i.java",
         "start": 6796,
@@ -315713,9 +316177,9 @@
     },
     {
       "symbol": "M:qj.a(BI)V",
-      "renamedSymbol": "M:GameplayScreen.a(BI)V",
+      "renamedSymbol": "M:GameplayScreen.setStartingLevel(BI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setStartingLevel",
       "declaration": {
         "file": "qj.java",
         "start": 35978,
@@ -315856,9 +316320,9 @@
     },
     {
       "symbol": "M:qj.a(IZ)V",
-      "renamedSymbol": "M:GameplayScreen.a(IZ)V",
+      "renamedSymbol": "M:GameplayScreen.setResultLevel(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setResultLevel",
       "declaration": {
         "file": "qj.java",
         "start": 38605,
@@ -315999,9 +316463,9 @@
     },
     {
       "symbol": "M:qj.c(I)Z",
-      "renamedSymbol": "M:GameplayScreen.c(I)Z",
+      "renamedSymbol": "M:GameplayScreen.isSpectator(I)Z",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "isSpectator",
       "declaration": {
         "file": "qj.java",
         "start": 19577,
@@ -316032,9 +316496,9 @@
     },
     {
       "symbol": "M:qj.f(I)V",
-      "renamedSymbol": "M:GameplayScreen.f(I)V",
+      "renamedSymbol": "M:GameplayScreen.requestRematchAction(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "requestRematchAction",
       "declaration": {
         "file": "qj.java",
         "start": 64128,
@@ -318496,9 +318960,9 @@
     },
     {
       "symbol": "M:sk.a([Ljava/lang/String;ILoi;IZI)V",
-      "renamedSymbol": "M:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V",
+      "renamedSymbol": "M:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startLocalGame",
       "declaration": {
         "file": "sk.java",
         "start": 307,
@@ -328726,9 +329190,9 @@
     },
     {
       "symbol": "P:ak.b(I)Z#0",
-      "renamedSymbol": "P:MultiplayerMatch.b(I)Z#0",
+      "renamedSymbol": "P:MultiplayerMatch.checkMatchCompletion(I)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ak.java",
         "start": 44559,
@@ -348119,9 +348583,9 @@
     },
     {
       "symbol": "P:fr.a(I)V#0",
-      "renamedSymbol": "P:Mesh3D.a(I)V#0",
+      "renamedSymbol": "P:Mesh3D.updateRematchCaption(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "fr.java",
         "start": 4605,
@@ -355368,9 +355832,9 @@
     },
     {
       "symbol": "P:i.c(B)V#0",
-      "renamedSymbol": "P:AchievementIcon.c(B)V#0",
+      "renamedSymbol": "P:AchievementIcon.updateDrawCaption(B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "i.java",
         "start": 6803,
@@ -396554,7 +397018,7 @@
       "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#1",
       "renamedSymbol": "P:GameplayScreen.<init>(ZZ[Ljava/lang/String;IILLevelSequence;[I[I)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "resultWordMode",
       "declaration": {
         "file": "qj.java",
         "start": 64345,
@@ -396695,9 +397159,9 @@
     },
     {
       "symbol": "P:qj.a(BI)V#0",
-      "renamedSymbol": "P:GameplayScreen.a(BI)V#0",
+      "renamedSymbol": "P:GameplayScreen.setStartingLevel(BI)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 35985,
@@ -396706,9 +397170,9 @@
     },
     {
       "symbol": "P:qj.a(BI)V#1",
-      "renamedSymbol": "P:GameplayScreen.a(BI)V#1",
+      "renamedSymbol": "P:GameplayScreen.setStartingLevel(BI)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "levelIndex",
       "declaration": {
         "file": "qj.java",
         "start": 35997,
@@ -397058,9 +397522,9 @@
     },
     {
       "symbol": "P:qj.a(IZ)V#0",
-      "renamedSymbol": "P:GameplayScreen.a(IZ)V#0",
+      "renamedSymbol": "P:GameplayScreen.setResultLevel(IZ)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "levelIndex",
       "declaration": {
         "file": "qj.java",
         "start": 38611,
@@ -397069,9 +397533,9 @@
     },
     {
       "symbol": "P:qj.a(IZ)V#1",
-      "renamedSymbol": "P:GameplayScreen.a(IZ)V#1",
+      "renamedSymbol": "P:GameplayScreen.setResultLevel(IZ)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "enableResultWordMode",
       "declaration": {
         "file": "qj.java",
         "start": 38627,
@@ -397399,9 +397863,9 @@
     },
     {
       "symbol": "P:qj.c(I)Z#0",
-      "renamedSymbol": "P:GameplayScreen.c(I)Z#0",
+      "renamedSymbol": "P:GameplayScreen.isSpectator(I)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 19583,
@@ -397432,9 +397896,9 @@
     },
     {
       "symbol": "P:qj.f(I)V#0",
-      "renamedSymbol": "P:GameplayScreen.f(I)V#0",
+      "renamedSymbol": "P:GameplayScreen.requestRematchAction(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 64134,
@@ -402228,9 +402692,9 @@
     },
     {
       "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
-      "renamedSymbol": "P:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#0",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#0",
       "originalName": "args",
-      "renamedName": "args",
+      "renamedName": "playerNames",
       "declaration": {
         "file": "sk.java",
         "start": 318,
@@ -402239,9 +402703,9 @@
     },
     {
       "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#1",
-      "renamedSymbol": "P:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#1",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "startingLevel",
       "declaration": {
         "file": "sk.java",
         "start": 328,
@@ -402250,9 +402714,9 @@
     },
     {
       "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#2",
-      "renamedSymbol": "P:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#2",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "configuration",
       "declaration": {
         "file": "sk.java",
         "start": 339,
@@ -402261,9 +402725,9 @@
     },
     {
       "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
-      "renamedSymbol": "P:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#3",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "localPlayerCount",
       "declaration": {
         "file": "sk.java",
         "start": 351,
@@ -402272,9 +402736,9 @@
     },
     {
       "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#4",
-      "renamedSymbol": "P:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#4",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "inputFlag",
       "declaration": {
         "file": "sk.java",
         "start": 367,
@@ -402283,9 +402747,9 @@
     },
     {
       "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#5",
-      "renamedSymbol": "P:sk.a([Ljava/lang/String;ILLevelSequence;IZI)V#5",
+      "renamedSymbol": "P:sk.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#5",
       "originalName": "param5",
-      "renamedName": "param5",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "sk.java",
         "start": 379,
@@ -417775,7 +418239,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "a77508e7fb67a6209be482d973f0d6a1ab551e9bd52b42e590afe51aedad8030",
+      "outputSha256": "7192582c5bb3f5f9872782a3d601d5877cec604fea1fbeb0e874090632b51d9a",
       "edits": [
         {
           "start": 76,
@@ -419689,6 +420153,13 @@
           "renamed": "gameplayScreen"
         },
         {
+          "start": 9400,
+          "end": 9401,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
+        },
+        {
           "start": 9481,
           "end": 9483,
           "symbol": "C:pe",
@@ -419848,6 +420319,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 9817,
+          "end": 9818,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
         },
         {
           "start": 9845,
@@ -420242,6 +420720,13 @@
           "renamed": "match"
         },
         {
+          "start": 11247,
+          "end": 11254,
+          "symbol": "F:ak.field_j:I",
+          "original": "field_j",
+          "renamed": "rematchOfferPlayerMask"
+        },
+        {
           "start": 11257,
           "end": 11263,
           "symbol": "P:BrickABrac.a(Lpi;BI)Z#0",
@@ -420277,6 +420762,13 @@
           "renamed": "Mesh3D"
         },
         {
+          "start": 11339,
+          "end": 11340,
+          "symbol": "M:fr.a(I)V",
+          "original": "a",
+          "renamed": "updateRematchCaption"
+        },
+        {
           "start": 11459,
           "end": 11461,
           "symbol": "C:si",
@@ -420303,6 +420795,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 11556,
+          "end": 11563,
+          "symbol": "F:qj.field_v:I",
+          "original": "field_v",
+          "renamed": "rematchSetupPlayerMask"
         },
         {
           "start": 11566,
@@ -420338,6 +420837,13 @@
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "Mesh3D"
+        },
+        {
+          "start": 11648,
+          "end": 11649,
+          "symbol": "M:fr.a(I)V",
+          "original": "a",
+          "renamed": "updateRematchCaption"
         },
         {
           "start": 11817,
@@ -420928,11 +421434,25 @@
           "renamed": "AchievementIcon"
         },
         {
+          "start": 13772,
+          "end": 13773,
+          "symbol": "M:i.c(B)V",
+          "original": "c",
+          "renamed": "updateDrawCaption"
+        },
+        {
           "start": 13798,
           "end": 13800,
           "symbol": "C:fr",
           "original": "fr",
           "renamed": "Mesh3D"
+        },
+        {
+          "start": 13801,
+          "end": 13802,
+          "symbol": "M:fr.a(I)V",
+          "original": "a",
+          "renamed": "updateRematchCaption"
         },
         {
           "start": 13803,
@@ -421087,6 +421607,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 15707,
+          "end": 15708,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
         },
         {
           "start": 15742,
@@ -437226,7 +437753,7 @@
       "original": "ak.java",
       "renamed": "MultiplayerMatch.java",
       "inputSha256": "44ef57260a869da05db5b717d65518d04318fe4b8ac90975756f82aa77d07565",
-      "outputSha256": "680faea22f285c43f13aa44d1bf29913dd8156a65d28305e2da8c3a23d37ac51",
+      "outputSha256": "7507697ce1ac89f492be4366c860b1a94d7ed900f2d4a4ed93149b24240f66be",
       "edits": [
         {
           "start": 50,
@@ -437285,6 +437812,20 @@
           "renamed": "resultOrder"
         },
         {
+          "start": 204,
+          "end": 211,
+          "symbol": "F:ak.field_n:I",
+          "original": "field_n",
+          "renamed": "drawOfferPlayerMask"
+        },
+        {
+          "start": 221,
+          "end": 228,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
+        },
+        {
           "start": 243,
           "end": 250,
           "symbol": "F:ak.field_f:[Ljava/lang/String;",
@@ -437318,6 +437859,13 @@
           "symbol": "F:ak.field_g:I",
           "original": "field_g",
           "renamed": "playerMaskTwo"
+        },
+        {
+          "start": 310,
+          "end": 317,
+          "symbol": "F:ak.field_j:I",
+          "original": "field_j",
+          "renamed": "rematchOfferPlayerMask"
         },
         {
           "start": 335,
@@ -445345,6 +445893,41 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 44553,
+          "end": 44554,
+          "symbol": "M:ak.b(I)Z",
+          "original": "b",
+          "renamed": "checkMatchCompletion"
+        },
+        {
+          "start": 44559,
+          "end": 44565,
+          "symbol": "P:ak.b(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 44581,
+          "end": 44585,
+          "symbol": "L:ak.b(I)Z#0",
+          "original": "var2",
+          "renamed": "remainingPlayerMask"
+        },
+        {
+          "start": 44599,
+          "end": 44605,
+          "symbol": "P:ak.b(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 44667,
+          "end": 44671,
+          "symbol": "L:ak.b(I)Z#0",
+          "original": "var2",
+          "renamed": "remainingPlayerMask"
+        },
+        {
           "start": 44681,
           "end": 44688,
           "symbol": "F:ak.field_g:I",
@@ -445373,6 +445956,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 44760,
+          "end": 44764,
+          "symbol": "L:ak.b(I)Z#0",
+          "original": "var2",
+          "renamed": "remainingPlayerMask"
+        },
+        {
           "start": 44788,
           "end": 44789,
           "symbol": "M:ak.a(Z)V",
@@ -445380,11 +445970,32 @@
           "renamed": "markResultsReady"
         },
         {
+          "start": 44834,
+          "end": 44838,
+          "symbol": "L:ak.b(I)Z#0",
+          "original": "var2",
+          "renamed": "remainingPlayerMask"
+        },
+        {
+          "start": 44871,
+          "end": 44878,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
+        },
+        {
           "start": 44884,
           "end": 44885,
           "symbol": "M:ed.b(II)I",
           "original": "b",
           "renamed": "unsignedBitLength"
+        },
+        {
+          "start": 44889,
+          "end": 44893,
+          "symbol": "L:ak.b(I)Z#0",
+          "original": "var2",
+          "renamed": "remainingPlayerMask"
         },
         {
           "start": 44917,
@@ -445399,6 +446010,13 @@
           "symbol": "F:ak.field_a:I",
           "original": "field_a",
           "renamed": "playerMaskThree"
+        },
+        {
+          "start": 44952,
+          "end": 44959,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
         },
         {
           "start": 44978,
@@ -445464,11 +446082,39 @@
           "renamed": "characterOrder"
         },
         {
+          "start": 45135,
+          "end": 45139,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
           "start": 45182,
           "end": 45184,
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "Paddle"
+        },
+        {
+          "start": 45667,
+          "end": 45675,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#14",
+          "original": "var6_int",
+          "renamed": "boardWidth"
+        },
+        {
+          "start": 45706,
+          "end": 45710,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#15",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 45731,
+          "end": 45735,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#16",
+          "original": "var7",
+          "renamed": "controlSetIndex"
         },
         {
           "start": 45770,
@@ -445541,11 +446187,46 @@
           "renamed": "playerCount"
         },
         {
+          "start": 45974,
+          "end": 45982,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#14",
+          "original": "var6_int",
+          "renamed": "boardWidth"
+        },
+        {
+          "start": 46008,
+          "end": 46012,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#16",
+          "original": "var7",
+          "renamed": "controlSetIndex"
+        },
+        {
+          "start": 46033,
+          "end": 46037,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
           "start": 46048,
           "end": 46055,
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 46058,
+          "end": 46062,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
+          "start": 46064,
+          "end": 46068,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
         },
         {
           "start": 46091,
@@ -445555,11 +446236,39 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 46099,
+          "end": 46103,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
           "start": 46111,
           "end": 46112,
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 46113,
+          "end": 46121,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#14",
+          "original": "var6_int",
+          "renamed": "boardWidth"
+        },
+        {
+          "start": 46123,
+          "end": 46127,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
+          "start": 46134,
+          "end": 46138,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#16",
+          "original": "var7",
+          "renamed": "controlSetIndex"
         },
         {
           "start": 46140,
@@ -445569,6 +446278,13 @@
           "renamed": "randomSeeds"
         },
         {
+          "start": 46147,
+          "end": 46151,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
           "start": 46154,
           "end": 46160,
           "symbol": "P:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#4",
@@ -445576,11 +446292,25 @@
           "renamed": "characterOrder"
         },
         {
+          "start": 46161,
+          "end": 46165,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
           "start": 46200,
           "end": 46207,
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 46208,
+          "end": 46212,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
         },
         {
           "start": 46214,
@@ -445611,6 +446341,20 @@
           "renamed": "localPlayerMask"
         },
         {
+          "start": 46445,
+          "end": 46449,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#0",
+          "original": "var8",
+          "renamed": "boardIndex"
+        },
+        {
+          "start": 46473,
+          "end": 46477,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#16",
+          "original": "var7",
+          "renamed": "controlSetIndex"
+        },
+        {
           "start": 46522,
           "end": 46529,
           "symbol": "F:ak.field_m:[I",
@@ -445623,6 +446367,27 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 46570,
+          "end": 46577,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
+        },
+        {
+          "start": 46752,
+          "end": 46756,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#15",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 46811,
+          "end": 46815,
+          "symbol": "L:ak.<init>([Ljava/lang/String;ILoi;[I[I)V#15",
+          "original": "var6",
+          "renamed": "failure"
         },
         {
           "start": 46898,
@@ -489086,7 +489851,7 @@
       "original": "cq.java",
       "renamed": "RankingsRequest.java",
       "inputSha256": "64596c3152f369f509e45c4bbe8b2b5690555ea78844e8108a52ebb4e437d5aa",
-      "outputSha256": "092926404af12c9016602df9aad445f8ed3bfba824038b3085c586dc429c4b9a",
+      "outputSha256": "2b34bb542006d64b9e26427d65254ba27260bea0ba7017b0f4c45fb9249c50f9",
       "edits": [
         {
           "start": 50,
@@ -489500,6 +490265,13 @@
           "symbol": "F:wk.field_l:I",
           "original": "field_l",
           "renamed": "attributeByte"
+        },
+        {
+          "start": 3684,
+          "end": 3685,
+          "symbol": "M:sk.a([Ljava/lang/String;ILoi;IZI)V",
+          "original": "a",
+          "renamed": "startLocalGame"
         },
         {
           "start": 4254,
@@ -490734,7 +491506,7 @@
       "original": "da.java",
       "renamed": "ArchiveNetworkRequest.java",
       "inputSha256": "b7092b4fc52e65920d023efeaba958b8560b0f01a847a165b18f9f8600c1de97",
-      "outputSha256": "f0d4c620d228aa16260b82443a2aca8956780570a1c2760d59205f4bd8cf337f",
+      "outputSha256": "bce10b179418eca5232228c92f3060e920c0a6ec77baae801f4154b70375a6fe",
       "edits": [
         {
           "start": 50,
@@ -490889,6 +491661,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 699,
+          "end": 700,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
         },
         {
           "start": 721,
@@ -538106,7 +538885,7 @@
       "original": "fr.java",
       "renamed": "Mesh3D.java",
       "inputSha256": "0cd70bde2fb8c24810a34becf8c4851905d8155b4604028de4b9bf727af97ebb",
-      "outputSha256": "69444e8efed3028f2c98b0e6159f2fc9d01f484fd170f6156e1a52a195c639e9",
+      "outputSha256": "9c2a35af68347f3b6fb0c54df8e04f5f957c9cc313e42e19446761c2541810dc",
       "edits": [
         {
           "start": 50,
@@ -539397,6 +540176,20 @@
           "renamed": "invalidateBounds"
         },
         {
+          "start": 4599,
+          "end": 4600,
+          "symbol": "M:fr.a(I)V",
+          "original": "a",
+          "renamed": "updateRematchCaption"
+        },
+        {
+          "start": 4605,
+          "end": 4611,
+          "symbol": "P:fr.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 4688,
           "end": 4690,
           "symbol": "C:pe",
@@ -539409,6 +540202,20 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 4699,
+          "end": 4700,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
+        },
+        {
+          "start": 4749,
+          "end": 4755,
+          "symbol": "P:fr.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 4774,
@@ -539439,6 +540246,13 @@
           "renamed": "gameplayScreen"
         },
         {
+          "start": 4828,
+          "end": 4835,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
+        },
+        {
           "start": 4854,
           "end": 4856,
           "symbol": "C:pe",
@@ -539458,6 +540272,13 @@
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 4873,
+          "end": 4880,
+          "symbol": "F:ak.field_j:I",
+          "original": "field_j",
+          "renamed": "rematchOfferPlayerMask"
         },
         {
           "start": 4888,
@@ -539509,6 +540330,13 @@
           "renamed": "match"
         },
         {
+          "start": 5011,
+          "end": 5018,
+          "symbol": "F:ak.field_j:I",
+          "original": "field_j",
+          "renamed": "rematchOfferPlayerMask"
+        },
+        {
           "start": 5044,
           "end": 5051,
           "symbol": "F:ag.field_D:[Ljava/lang/String;",
@@ -539549,6 +540377,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 5147,
+          "end": 5154,
+          "symbol": "F:qj.field_v:I",
+          "original": "field_v",
+          "renamed": "rematchSetupPlayerMask"
         },
         {
           "start": 5165,
@@ -539642,6 +540477,13 @@
           "renamed": "match"
         },
         {
+          "start": 5432,
+          "end": 5439,
+          "symbol": "F:ak.field_j:I",
+          "original": "field_j",
+          "renamed": "rematchOfferPlayerMask"
+        },
+        {
           "start": 5464,
           "end": 5471,
           "symbol": "F:ag.field_D:[Ljava/lang/String;",
@@ -539670,6 +540512,13 @@
           "renamed": "match"
         },
         {
+          "start": 5549,
+          "end": 5556,
+          "symbol": "F:ak.field_j:I",
+          "original": "field_j",
+          "renamed": "rematchOfferPlayerMask"
+        },
+        {
           "start": 5579,
           "end": 5581,
           "symbol": "C:pe",
@@ -539682,6 +540531,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 5590,
+          "end": 5597,
+          "symbol": "F:qj.field_v:I",
+          "original": "field_v",
+          "renamed": "rematchSetupPlayerMask"
         },
         {
           "start": 5605,
@@ -571677,7 +572533,7 @@
       "original": "i.java",
       "renamed": "AchievementIcon.java",
       "inputSha256": "9e1806d5b6283651f87e1e1570bf1b830f27f797ab0b33b41cc15d247fbbcaa5",
-      "outputSha256": "8a0368dadefd188cd520ba6eb8bccb0b13898971968e20dd10710d8a7732e0af",
+      "outputSha256": "94bf57d7b979d27ab1e289cf887478f024db1852d97239f458b1d290f18c1249",
       "edits": [
         {
           "start": 50,
@@ -573059,6 +573915,20 @@
           "renamed": "y"
         },
         {
+          "start": 6796,
+          "end": 6797,
+          "symbol": "M:i.c(B)V",
+          "original": "c",
+          "renamed": "updateDrawCaption"
+        },
+        {
+          "start": 6803,
+          "end": 6809,
+          "symbol": "P:i.c(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 6872,
           "end": 6874,
           "symbol": "C:pe",
@@ -573071,6 +573941,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 6883,
+          "end": 6884,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
         },
         {
           "start": 6939,
@@ -573115,6 +573992,13 @@
           "renamed": "match"
         },
         {
+          "start": 6979,
+          "end": 6986,
+          "symbol": "F:ak.field_n:I",
+          "original": "field_n",
+          "renamed": "drawOfferPlayerMask"
+        },
+        {
           "start": 7010,
           "end": 7012,
           "symbol": "C:pe",
@@ -573136,11 +574020,25 @@
           "renamed": "match"
         },
         {
+          "start": 7029,
+          "end": 7036,
+          "symbol": "F:ak.field_n:I",
+          "original": "field_n",
+          "renamed": "drawOfferPlayerMask"
+        },
+        {
           "start": 7060,
           "end": 7067,
           "symbol": "F:ag.field_D:[Ljava/lang/String;",
           "original": "field_D",
           "renamed": "buttonLabels"
+        },
+        {
+          "start": 7102,
+          "end": 7108,
+          "symbol": "P:i.c(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 7238,
@@ -573150,11 +574048,25 @@
           "renamed": "buttonLabels"
         },
         {
+          "start": 7277,
+          "end": 7283,
+          "symbol": "P:i.c(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 7401,
           "end": 7408,
           "symbol": "F:ag.field_D:[Ljava/lang/String;",
           "original": "field_D",
           "renamed": "buttonLabels"
+        },
+        {
+          "start": 7439,
+          "end": 7445,
+          "symbol": "P:i.c(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 7660,
@@ -653034,7 +653946,7 @@
       "original": "km.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "f22df0331a8e5d5b77576f2d37f0ff72e55b9b32052f7e538627c9b5c74e5335",
-      "outputSha256": "f391d470e16608163d7a87f44c85dfd160a207eee9879126a29e7ddf56ce5b14",
+      "outputSha256": "39763dc2436e9fe0c824fc16db2eba5b6f17231e57ee3d9e049bb7f59d48f226",
       "edits": [
         {
           "start": 53,
@@ -655524,6 +656436,13 @@
           "renamed": "gameplayScreen"
         },
         {
+          "start": 14877,
+          "end": 14878,
+          "symbol": "M:qj.f(I)V",
+          "original": "f",
+          "renamed": "requestRematchAction"
+        },
+        {
           "start": 14924,
           "end": 14926,
           "symbol": "B:km.a(IZB)Z#0",
@@ -655709,6 +656628,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 16365,
+          "end": 16372,
+          "symbol": "F:qj.field_r:I",
+          "original": "field_r",
+          "renamed": "resultLevel"
         },
         {
           "start": 16374,
@@ -766817,7 +767743,7 @@
       "original": "po.java",
       "renamed": "po.java",
       "inputSha256": "645ae79ba708ad156bc7e39b943e4b1d16b5bef39a22c15070b29dc74b8500a6",
-      "outputSha256": "5fdeb2d443da2ef574fab3c8f4b9f35efdc19d7ccd41df5295824a14fc7fe451",
+      "outputSha256": "f3a0b8630b58379be745919ebbcb48793b30405c77783f914fe633bc4e1010f3",
       "edits": [
         {
           "start": 96,
@@ -767135,6 +768061,13 @@
           "renamed": "gameplayScreen"
         },
         {
+          "start": 5721,
+          "end": 5722,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
+        },
+        {
           "start": 5752,
           "end": 5754,
           "symbol": "C:pe",
@@ -767147,6 +768080,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 5763,
+          "end": 5770,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
         },
         {
           "start": 5795,
@@ -778016,7 +778956,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "ff4d696d51f6d61e77f9cb50fd5dd7cfc0211e5dbd447089488520d09fb1f941",
+      "outputSha256": "7193c7d3e481720663611f4372d334333b95489940b22821f779d1f5569eb8dd",
       "edits": [
         {
           "start": 50,
@@ -778061,6 +779001,27 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 158,
+          "end": 165,
+          "symbol": "F:qj.field_v:I",
+          "original": "field_v",
+          "renamed": "rematchSetupPlayerMask"
+        },
+        {
+          "start": 175,
+          "end": 182,
+          "symbol": "F:qj.field_r:I",
+          "original": "field_r",
+          "renamed": "resultLevel"
+        },
+        {
+          "start": 200,
+          "end": 207,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
+        },
+        {
           "start": 217,
           "end": 224,
           "symbol": "F:qj.field_x:I",
@@ -778073,6 +779034,13 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 261,
+          "end": 268,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
         },
         {
           "start": 302,
@@ -778094,6 +779062,13 @@
           "symbol": "F:qj.field_m:I",
           "original": "field_m",
           "renamed": "viewedPlayerId"
+        },
+        {
+          "start": 377,
+          "end": 384,
+          "symbol": "F:qj.field_y:Z",
+          "original": "field_y",
+          "renamed": "debugControlsEnabled"
         },
         {
           "start": 398,
@@ -778626,6 +779601,13 @@
           "symbol": "P:qj.b(B)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3180,
+          "end": 3181,
+          "symbol": "M:qj.a(BI)V",
+          "original": "a",
+          "renamed": "setStartingLevel"
         },
         {
           "start": 3252,
@@ -779293,6 +780275,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 5875,
+          "end": 5882,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
+        },
+        {
           "start": 5922,
           "end": 5923,
           "symbol": "M:qj.a(ZZI)V",
@@ -779809,6 +780798,20 @@
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 9252,
+          "end": 9259,
+          "symbol": "F:ak.field_j:I",
+          "original": "field_j",
+          "renamed": "rematchOfferPlayerMask"
+        },
+        {
+          "start": 9290,
+          "end": 9291,
+          "symbol": "M:qj.f(I)V",
+          "original": "f",
+          "renamed": "requestRematchAction"
         },
         {
           "start": 9379,
@@ -780665,6 +781668,13 @@
           "renamed": "levelIndex"
         },
         {
+          "start": 13731,
+          "end": 13738,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
+        },
+        {
           "start": 13766,
           "end": 13768,
           "symbol": "C:ue",
@@ -780684,6 +781694,20 @@
           "symbol": "C:gq",
           "original": "gq",
           "renamed": "NameEntryPopup"
+        },
+        {
+          "start": 13816,
+          "end": 13823,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
+        },
+        {
+          "start": 13915,
+          "end": 13922,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
         },
         {
           "start": 13931,
@@ -780733,6 +781757,13 @@
           "symbol": "F:j.field_qb:I",
           "original": "field_qb",
           "renamed": "levelIndex"
+        },
+        {
+          "start": 14057,
+          "end": 14064,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
         },
         {
           "start": 14097,
@@ -780812,6 +781843,13 @@
           "renamed": "next"
         },
         {
+          "start": 14560,
+          "end": 14567,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
+        },
+        {
           "start": 14594,
           "end": 14601,
           "symbol": "F:qj.field_w:Lak;",
@@ -780882,6 +781920,13 @@
           "renamed": "queueProgressAchievement"
         },
         {
+          "start": 14784,
+          "end": 14791,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
+        },
+        {
           "start": 14799,
           "end": 14806,
           "symbol": "F:qj.field_w:Lak;",
@@ -780922,6 +781967,13 @@
           "symbol": "M:oi.a(IB)Ljava/lang/String;",
           "original": "a",
           "renamed": "getLevelTitle"
+        },
+        {
+          "start": 14886,
+          "end": 14893,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
         },
         {
           "start": 15018,
@@ -781778,6 +782830,27 @@
           "renamed": "sendInputBatch"
         },
         {
+          "start": 19577,
+          "end": 19578,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
+        },
+        {
+          "start": 19583,
+          "end": 19589,
+          "symbol": "P:qj.c(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 19605,
+          "end": 19611,
+          "symbol": "P:qj.c(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 19687,
           "end": 19694,
           "symbol": "F:qj.field_k:I",
@@ -781960,6 +783033,13 @@
           "renamed": "progressBaseLevel"
         },
         {
+          "start": 20210,
+          "end": 20217,
+          "symbol": "F:qj.field_r:I",
+          "original": "field_r",
+          "renamed": "resultLevel"
+        },
+        {
           "start": 20236,
           "end": 20238,
           "symbol": "C:og",
@@ -782009,6 +783089,13 @@
           "renamed": "suppressResultSubmission"
         },
         {
+          "start": 20529,
+          "end": 20530,
+          "symbol": "M:qj.a(IZ)V",
+          "original": "a",
+          "renamed": "setResultLevel"
+        },
+        {
           "start": 20541,
           "end": 20548,
           "symbol": "F:qj.field_w:Lak;",
@@ -782035,6 +783122,13 @@
           "symbol": "C:gq",
           "original": "gq",
           "renamed": "NameEntryPopup"
+        },
+        {
+          "start": 20656,
+          "end": 20663,
+          "symbol": "F:qj.field_r:I",
+          "original": "field_r",
+          "renamed": "resultLevel"
         },
         {
           "start": 20679,
@@ -782070,6 +783164,13 @@
           "symbol": "F:ak.field_b:Loi;",
           "original": "field_b",
           "renamed": "configuration"
+        },
+        {
+          "start": 20795,
+          "end": 20802,
+          "symbol": "F:qj.field_r:I",
+          "original": "field_r",
+          "renamed": "resultLevel"
         },
         {
           "start": 20841,
@@ -783654,6 +784755,13 @@
           "renamed": "networkedMatch"
         },
         {
+          "start": 28640,
+          "end": 28641,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
+        },
+        {
           "start": 28728,
           "end": 28735,
           "symbol": "F:qj.field_w:Lak;",
@@ -783848,6 +784956,13 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 30097,
+          "end": 30104,
+          "symbol": "F:qj.field_y:Z",
+          "original": "field_y",
+          "renamed": "debugControlsEnabled"
         },
         {
           "start": 30130,
@@ -784914,6 +786029,69 @@
           "renamed": "progressBaseLevel"
         },
         {
+          "start": 35978,
+          "end": 35979,
+          "symbol": "M:qj.a(BI)V",
+          "original": "a",
+          "renamed": "setStartingLevel"
+        },
+        {
+          "start": 35985,
+          "end": 35991,
+          "symbol": "P:qj.a(BI)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 35997,
+          "end": 36003,
+          "symbol": "P:qj.a(BI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 36019,
+          "end": 36023,
+          "symbol": "L:qj.a(BI)V#0",
+          "original": "var3",
+          "renamed": "boardIndex"
+        },
+        {
+          "start": 36041,
+          "end": 36045,
+          "symbol": "L:qj.a(BI)V#1",
+          "original": "var4",
+          "renamed": "clientBranchFlag"
+        },
+        {
+          "start": 36088,
+          "end": 36101,
+          "symbol": "L:qj.a(BI)V#2",
+          "original": "var3Lifetime1",
+          "renamed": "counterLevelAdjustment"
+        },
+        {
+          "start": 36115,
+          "end": 36121,
+          "symbol": "P:qj.a(BI)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 36173,
+          "end": 36177,
+          "symbol": "L:qj.a(BI)V#0",
+          "original": "var3",
+          "renamed": "boardIndex"
+        },
+        {
+          "start": 36183,
+          "end": 36187,
+          "symbol": "L:qj.a(BI)V#0",
+          "original": "var3",
+          "renamed": "boardIndex"
+        },
+        {
           "start": 36195,
           "end": 36202,
           "symbol": "F:qj.field_w:Lak;",
@@ -784926,6 +786104,13 @@
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 36219,
+          "end": 36223,
+          "symbol": "L:qj.a(BI)V#0",
+          "original": "var3",
+          "renamed": "boardIndex"
         },
         {
           "start": 36244,
@@ -784942,10 +786127,24 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 36260,
+          "end": 36264,
+          "symbol": "L:qj.a(BI)V#0",
+          "original": "var3",
+          "renamed": "boardIndex"
+        },
+        {
           "start": 36266,
           "end": 36274,
           "symbol": "F:j.field_qb:I",
           "original": "field_qb",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 36277,
+          "end": 36283,
+          "symbol": "P:qj.a(BI)V#1",
+          "original": "param1",
           "renamed": "levelIndex"
         },
         {
@@ -784968,6 +786167,41 @@
           "symbol": "F:qj.field_t:I",
           "original": "field_t",
           "renamed": "progressBaseLevel"
+        },
+        {
+          "start": 36361,
+          "end": 36367,
+          "symbol": "P:qj.a(BI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 36384,
+          "end": 36391,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
+        },
+        {
+          "start": 36394,
+          "end": 36400,
+          "symbol": "P:qj.a(BI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 36412,
+          "end": 36425,
+          "symbol": "L:qj.a(BI)V#2",
+          "original": "var3Lifetime1",
+          "renamed": "counterLevelAdjustment"
+        },
+        {
+          "start": 36428,
+          "end": 36434,
+          "symbol": "P:qj.a(BI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
         },
         {
           "start": 36446,
@@ -784998,6 +786232,13 @@
           "renamed": "resultCounterOne"
         },
         {
+          "start": 36472,
+          "end": 36485,
+          "symbol": "L:qj.a(BI)V#2",
+          "original": "var3Lifetime1",
+          "renamed": "counterLevelAdjustment"
+        },
+        {
           "start": 36522,
           "end": 36529,
           "symbol": "F:qj.field_w:Lak;",
@@ -785017,6 +786258,13 @@
           "symbol": "M:oi.a(IB)Ljava/lang/String;",
           "original": "a",
           "renamed": "getLevelTitle"
+        },
+        {
+          "start": 36545,
+          "end": 36552,
+          "symbol": "F:qj.field_i:I",
+          "original": "field_i",
+          "renamed": "lastReportedLevel"
         },
         {
           "start": 36775,
@@ -785073,6 +786321,13 @@
           "symbol": "M:rd.a(IB)Lki;",
           "original": "a",
           "renamed": "selectBackground"
+        },
+        {
+          "start": 36954,
+          "end": 36955,
+          "symbol": "M:sk.a([Ljava/lang/String;ILoi;IZI)V",
+          "original": "a",
+          "renamed": "startLocalGame"
         },
         {
           "start": 37013,
@@ -785222,6 +786477,48 @@
           "renamed": "startIndex"
         },
         {
+          "start": 38605,
+          "end": 38606,
+          "symbol": "M:qj.a(IZ)V",
+          "original": "a",
+          "renamed": "setResultLevel"
+        },
+        {
+          "start": 38611,
+          "end": 38617,
+          "symbol": "P:qj.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 38627,
+          "end": 38633,
+          "symbol": "P:qj.a(IZ)V#1",
+          "original": "param1",
+          "renamed": "enableResultWordMode"
+        },
+        {
+          "start": 38649,
+          "end": 38653,
+          "symbol": "L:qj.a(IZ)V#0",
+          "original": "var3",
+          "renamed": "counterLevelAdjustment"
+        },
+        {
+          "start": 38671,
+          "end": 38677,
+          "symbol": "P:qj.a(IZ)V#1",
+          "original": "param1",
+          "renamed": "enableResultWordMode"
+        },
+        {
+          "start": 38696,
+          "end": 38703,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
+        },
+        {
           "start": 38739,
           "end": 38746,
           "symbol": "F:qj.field_w:Lak;",
@@ -785236,6 +786533,20 @@
           "renamed": "playerCount"
         },
         {
+          "start": 38773,
+          "end": 38777,
+          "symbol": "L:qj.a(IZ)V#0",
+          "original": "var3",
+          "renamed": "counterLevelAdjustment"
+        },
+        {
+          "start": 38780,
+          "end": 38786,
+          "symbol": "P:qj.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "levelIndex"
+        },
+        {
           "start": 38801,
           "end": 38808,
           "symbol": "F:ep.field_i:I",
@@ -785248,6 +786559,27 @@
           "symbol": "F:ep.field_i:I",
           "original": "field_i",
           "renamed": "resultCounterTwo"
+        },
+        {
+          "start": 38824,
+          "end": 38828,
+          "symbol": "L:qj.a(IZ)V#0",
+          "original": "var3",
+          "renamed": "counterLevelAdjustment"
+        },
+        {
+          "start": 38853,
+          "end": 38860,
+          "symbol": "F:qj.field_r:I",
+          "original": "field_r",
+          "renamed": "resultLevel"
+        },
+        {
+          "start": 38863,
+          "end": 38869,
+          "symbol": "P:qj.a(IZ)V#0",
+          "original": "param0",
+          "renamed": "levelIndex"
         },
         {
           "start": 38901,
@@ -787455,11 +788787,25 @@
           "renamed": "match"
         },
         {
+          "start": 48564,
+          "end": 48565,
+          "symbol": "M:ak.b(I)Z",
+          "original": "b",
+          "renamed": "checkMatchCompletion"
+        },
+        {
           "start": 48606,
           "end": 48613,
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 48614,
+          "end": 48621,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
         },
         {
           "start": 48650,
@@ -787469,6 +788815,13 @@
           "renamed": "match"
         },
         {
+          "start": 48658,
+          "end": 48665,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
+        },
+        {
           "start": 48734,
           "end": 48741,
           "symbol": "F:qj.field_w:Lak;",
@@ -787476,11 +788829,25 @@
           "renamed": "match"
         },
         {
+          "start": 48742,
+          "end": 48749,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
+        },
+        {
           "start": 48794,
           "end": 48801,
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 48802,
+          "end": 48809,
+          "symbol": "F:ak.field_h:I",
+          "original": "field_h",
+          "renamed": "lastRemainingPlayerId"
         },
         {
           "start": 48839,
@@ -789177,6 +790544,13 @@
           "renamed": "viewedPlayerId"
         },
         {
+          "start": 59159,
+          "end": 59166,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
+        },
+        {
           "start": 59300,
           "end": 59307,
           "symbol": "F:qj.field_o:I",
@@ -789268,6 +790642,13 @@
           "renamed": "localPlayerMask"
         },
         {
+          "start": 60282,
+          "end": 60289,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
+        },
+        {
           "start": 60462,
           "end": 60469,
           "symbol": "F:qj.field_w:Lak;",
@@ -789301,6 +790682,13 @@
           "symbol": "F:qj.field_o:I",
           "original": "field_o",
           "renamed": "localPlayerMask"
+        },
+        {
+          "start": 61027,
+          "end": 61034,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
         },
         {
           "start": 61216,
@@ -789877,6 +791265,20 @@
           "renamed": "characterOrder"
         },
         {
+          "start": 64128,
+          "end": 64129,
+          "symbol": "M:qj.f(I)V",
+          "original": "f",
+          "renamed": "requestRematchAction"
+        },
+        {
+          "start": 64134,
+          "end": 64140,
+          "symbol": "P:qj.f(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 64162,
           "end": 64169,
           "symbol": "F:qj.field_p:Z",
@@ -789898,6 +791300,20 @@
           "renamed": "writeCipheredOpcode"
         },
         {
+          "start": 64273,
+          "end": 64277,
+          "symbol": "L:qj.f(I)V#0",
+          "original": "var2",
+          "renamed": "guardArithmetic"
+        },
+        {
+          "start": 64287,
+          "end": 64293,
+          "symbol": "P:qj.f(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 64318,
           "end": 64320,
           "symbol": "M:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V",
@@ -789910,6 +791326,13 @@
           "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#0",
           "original": "param0",
           "renamed": "networkedMatch"
+        },
+        {
+          "start": 64345,
+          "end": 64351,
+          "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#1",
+          "original": "param1",
+          "renamed": "resultWordMode"
         },
         {
           "start": 64362,
@@ -789961,6 +791384,62 @@
           "renamed": "characterOrder"
         },
         {
+          "start": 65031,
+          "end": 65035,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#14",
+          "original": "var9",
+          "renamed": "achievementMaskAlias"
+        },
+        {
+          "start": 65056,
+          "end": 65064,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#15",
+          "original": "var9_int",
+          "renamed": "localBoardCount"
+        },
+        {
+          "start": 65095,
+          "end": 65103,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#16",
+          "original": "var9_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 65124,
+          "end": 65129,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#17",
+          "original": "var10",
+          "renamed": "achievementWordIndex"
+        },
+        {
+          "start": 65149,
+          "end": 65154,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#18",
+          "original": "var12",
+          "renamed": "achievementMaskStorage"
+        },
+        {
+          "start": 65177,
+          "end": 65182,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#19",
+          "original": "var13",
+          "renamed": "achievementMaskReference"
+        },
+        {
+          "start": 65205,
+          "end": 65210,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#20",
+          "original": "var14",
+          "renamed": "achievementMask"
+        },
+        {
+          "start": 65231,
+          "end": 65245,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#21",
+          "original": "var10Lifetime1",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 65260,
           "end": 65267,
           "symbol": "F:qj.field_x:I",
@@ -789973,6 +791452,20 @@
           "symbol": "F:qj.field_s:Z",
           "original": "field_s",
           "renamed": "suppressResultSubmission"
+        },
+        {
+          "start": 65342,
+          "end": 65348,
+          "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#1",
+          "original": "param1",
+          "renamed": "resultWordMode"
+        },
+        {
+          "start": 65366,
+          "end": 65373,
+          "symbol": "F:qj.field_n:Z",
+          "original": "field_n",
+          "renamed": "resultWordMode"
         },
         {
           "start": 65414,
@@ -790024,11 +791517,102 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 65587,
+          "end": 65594,
+          "symbol": "F:qj.field_y:Z",
+          "original": "field_y",
+          "renamed": "debugControlsEnabled"
+        },
+        {
+          "start": 65621,
+          "end": 65626,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#20",
+          "original": "var14",
+          "renamed": "achievementMask"
+        },
+        {
           "start": 65632,
           "end": 65639,
           "symbol": "F:pl.field_b:[I",
           "original": "field_b",
           "renamed": "pendingAchievementMask"
+        },
+        {
+          "start": 65651,
+          "end": 65656,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#19",
+          "original": "var13",
+          "renamed": "achievementMaskReference"
+        },
+        {
+          "start": 65659,
+          "end": 65664,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#20",
+          "original": "var14",
+          "renamed": "achievementMask"
+        },
+        {
+          "start": 65676,
+          "end": 65681,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#18",
+          "original": "var12",
+          "renamed": "achievementMaskStorage"
+        },
+        {
+          "start": 65684,
+          "end": 65689,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#19",
+          "original": "var13",
+          "renamed": "achievementMaskReference"
+        },
+        {
+          "start": 65701,
+          "end": 65705,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#14",
+          "original": "var9",
+          "renamed": "achievementMaskAlias"
+        },
+        {
+          "start": 65708,
+          "end": 65713,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#18",
+          "original": "var12",
+          "renamed": "achievementMaskStorage"
+        },
+        {
+          "start": 65730,
+          "end": 65735,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#17",
+          "original": "var10",
+          "renamed": "achievementWordIndex"
+        },
+        {
+          "start": 65745,
+          "end": 65750,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#17",
+          "original": "var10",
+          "renamed": "achievementWordIndex"
+        },
+        {
+          "start": 65752,
+          "end": 65757,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#17",
+          "original": "var10",
+          "renamed": "achievementWordIndex"
+        },
+        {
+          "start": 65775,
+          "end": 65780,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#20",
+          "original": "var14",
+          "renamed": "achievementMask"
+        },
+        {
+          "start": 65781,
+          "end": 65786,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#17",
+          "original": "var10",
+          "renamed": "achievementWordIndex"
         },
         {
           "start": 65820,
@@ -790080,6 +791664,20 @@
           "renamed": "characterOrder"
         },
         {
+          "start": 65894,
+          "end": 65902,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#15",
+          "original": "var9_int",
+          "renamed": "localBoardCount"
+        },
+        {
+          "start": 65923,
+          "end": 65937,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#21",
+          "original": "var10Lifetime1",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 65948,
           "end": 65955,
           "symbol": "F:qj.field_w:Lak;",
@@ -790094,11 +791692,46 @@
           "renamed": "playerCount"
         },
         {
+          "start": 65966,
+          "end": 65980,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#21",
+          "original": "var10Lifetime1",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 65982,
+          "end": 65996,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#21",
+          "original": "var10Lifetime1",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 66024,
           "end": 66031,
           "symbol": "F:qj.field_o:I",
           "original": "field_o",
           "renamed": "localPlayerMask"
+        },
+        {
+          "start": 66039,
+          "end": 66053,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#21",
+          "original": "var10Lifetime1",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 66077,
+          "end": 66085,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#15",
+          "original": "var9_int",
+          "renamed": "localBoardCount"
+        },
+        {
+          "start": 66129,
+          "end": 66137,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#15",
+          "original": "var9_int",
+          "renamed": "localBoardCount"
         },
         {
           "start": 66216,
@@ -790402,11 +792035,32 @@
           "renamed": "getPeriod"
         },
         {
+          "start": 67413,
+          "end": 67421,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#16",
+          "original": "var9_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 67476,
+          "end": 67484,
+          "symbol": "L:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#16",
+          "original": "var9_ref",
+          "renamed": "failure"
+        },
+        {
           "start": 67559,
           "end": 67565,
           "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#0",
           "original": "param0",
           "renamed": "networkedMatch"
+        },
+        {
+          "start": 67586,
+          "end": 67592,
+          "symbol": "P:qj.<init>(ZZ[Ljava/lang/String;IILoi;[I[I)V#1",
+          "original": "param1",
+          "renamed": "resultWordMode"
         },
         {
           "start": 67621,
@@ -810396,7 +812050,7 @@
       "original": "sb.java",
       "renamed": "sb.java",
       "inputSha256": "115180fb00906adb2b95582433ed6ae9a88ca7cd49de64f7c57980478ba42f14",
-      "outputSha256": "eb416d2032487b60fe4fe7a3d06a3af3876b79ce33690a96a9493e89bbb8c529",
+      "outputSha256": "5e55ea4615d421d595cf3f3d94b18160b803bc099101aea7e777819582aea153",
       "edits": [
         {
           "start": 338,
@@ -810474,6 +812128,13 @@
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 806,
+          "end": 807,
+          "symbol": "M:qj.c(I)Z",
+          "original": "c",
+          "renamed": "isSpectator"
         },
         {
           "start": 865,
@@ -821219,7 +822880,7 @@
       "original": "sk.java",
       "renamed": "sk.java",
       "inputSha256": "287e4e7d36c1e90c404ba2f2e99e925d84b2c85234a884114ea8cecff4676c71",
-      "outputSha256": "0038417a20be335473c94f26803d77a0d395228ad2faba0148cc288bdfb57099",
+      "outputSha256": "8bd9c610d8cb77ada57e36c17ee863f32f94d6c68852a37f332b5b4b8b3ee11c",
       "edits": [
         {
           "start": 103,
@@ -821243,6 +822904,27 @@
           "renamed": "pendingMusicLoads"
         },
         {
+          "start": 307,
+          "end": 308,
+          "symbol": "M:sk.a([Ljava/lang/String;ILoi;IZI)V",
+          "original": "a",
+          "renamed": "startLocalGame"
+        },
+        {
+          "start": 318,
+          "end": 322,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "args",
+          "renamed": "playerNames"
+        },
+        {
+          "start": 328,
+          "end": 334,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#1",
+          "original": "param1",
+          "renamed": "startingLevel"
+        },
+        {
           "start": 336,
           "end": 338,
           "symbol": "C:oi",
@@ -821250,11 +822932,102 @@
           "renamed": "LevelSequence"
         },
         {
+          "start": 339,
+          "end": 345,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#2",
+          "original": "param2",
+          "renamed": "configuration"
+        },
+        {
+          "start": 351,
+          "end": 357,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
+          "original": "param3",
+          "renamed": "localPlayerCount"
+        },
+        {
+          "start": 367,
+          "end": 373,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#4",
+          "original": "param4",
+          "renamed": "inputFlag"
+        },
+        {
+          "start": 379,
+          "end": 385,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 401,
+          "end": 405,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "var8",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 419,
           "end": 421,
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 794,
+          "end": 802,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#10",
+          "original": "var6_int",
+          "renamed": "localPlayerMask"
+        },
+        {
+          "start": 833,
+          "end": 837,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#11",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 860,
+          "end": 864,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#12",
+          "original": "var7",
+          "renamed": "seedWords"
+        },
+        {
+          "start": 885,
+          "end": 889,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#13",
+          "original": "var9",
+          "renamed": "clientBranchFlag"
+        },
+        {
+          "start": 909,
+          "end": 914,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#14",
+          "original": "var10",
+          "renamed": "seedStorage"
+        },
+        {
+          "start": 937,
+          "end": 942,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#15",
+          "original": "var12",
+          "renamed": "randomSeeds"
+        },
+        {
+          "start": 965,
+          "end": 970,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#16",
+          "original": "var15",
+          "renamed": "characterOrder"
+        },
+        {
+          "start": 987,
+          "end": 991,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#13",
+          "original": "var9",
+          "renamed": "clientBranchFlag"
         },
         {
           "start": 1046,
@@ -821292,6 +823065,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 1161,
+          "end": 1167,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 1226,
           "end": 1228,
           "symbol": "C:og",
@@ -821306,11 +823086,116 @@
           "renamed": "nextInt"
         },
         {
+          "start": 1393,
+          "end": 1401,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#10",
+          "original": "var6_int",
+          "renamed": "localPlayerMask"
+        },
+        {
+          "start": 1410,
+          "end": 1416,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
+          "original": "param3",
+          "renamed": "localPlayerCount"
+        },
+        {
+          "start": 1433,
+          "end": 1438,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#15",
+          "original": "var12",
+          "renamed": "randomSeeds"
+        },
+        {
+          "start": 1449,
+          "end": 1455,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
+          "original": "param3",
+          "renamed": "localPlayerCount"
+        },
+        {
+          "start": 1468,
+          "end": 1473,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#14",
+          "original": "var10",
+          "renamed": "seedStorage"
+        },
+        {
+          "start": 1476,
+          "end": 1481,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#15",
+          "original": "var12",
+          "renamed": "randomSeeds"
+        },
+        {
+          "start": 1493,
+          "end": 1497,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#12",
+          "original": "var7",
+          "renamed": "seedWords"
+        },
+        {
+          "start": 1500,
+          "end": 1505,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#14",
+          "original": "var10",
+          "renamed": "seedStorage"
+        },
+        {
+          "start": 1522,
+          "end": 1526,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "var8",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 1532,
+          "end": 1538,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
+          "original": "param3",
+          "renamed": "localPlayerCount"
+        },
+        {
+          "start": 1541,
+          "end": 1545,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "var8",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 1547,
+          "end": 1551,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "var8",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 1569,
+          "end": 1573,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#12",
+          "original": "var7",
+          "renamed": "seedWords"
+        },
+        {
+          "start": 1574,
+          "end": 1578,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "var8",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 1593,
           "end": 1594,
           "symbol": "M:fo.b(I)I",
           "original": "b",
           "renamed": "nextInt"
+        },
+        {
+          "start": 1622,
+          "end": 1627,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#16",
+          "original": "var15",
+          "renamed": "characterOrder"
         },
         {
           "start": 1630,
@@ -821348,6 +823233,41 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 1685,
+          "end": 1689,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "args",
+          "renamed": "playerNames"
+        },
+        {
+          "start": 1695,
+          "end": 1703,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#10",
+          "original": "var6_int",
+          "renamed": "localPlayerMask"
+        },
+        {
+          "start": 1705,
+          "end": 1711,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#2",
+          "original": "param2",
+          "renamed": "configuration"
+        },
+        {
+          "start": 1713,
+          "end": 1718,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#15",
+          "original": "var12",
+          "renamed": "randomSeeds"
+        },
+        {
+          "start": 1720,
+          "end": 1725,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#16",
+          "original": "var15",
+          "renamed": "characterOrder"
+        },
+        {
           "start": 1738,
           "end": 1740,
           "symbol": "C:pe",
@@ -821360,6 +823280,20 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 1749,
+          "end": 1750,
+          "symbol": "M:qj.a(BI)V",
+          "original": "a",
+          "renamed": "setStartingLevel"
+        },
+        {
+          "start": 1763,
+          "end": 1769,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#1",
+          "original": "param1",
+          "renamed": "startingLevel"
         },
         {
           "start": 1782,
@@ -821425,6 +823359,13 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 1939,
+          "end": 1945,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
+          "original": "param3",
+          "renamed": "localPlayerCount"
+        },
+        {
           "start": 1956,
           "end": 1958,
           "symbol": "C:qg",
@@ -821446,6 +823387,48 @@
           "renamed": "requestScreen"
         },
         {
+          "start": 2046,
+          "end": 2052,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#4",
+          "original": "param4",
+          "renamed": "inputFlag"
+        },
+        {
+          "start": 2232,
+          "end": 2236,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#11",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 2291,
+          "end": 2295,
+          "symbol": "L:sk.a([Ljava/lang/String;ILoi;IZI)V#11",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 2373,
+          "end": 2377,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#0",
+          "original": "args",
+          "renamed": "playerNames"
+        },
+        {
+          "start": 2596,
+          "end": 2602,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#1",
+          "original": "param1",
+          "renamed": "startingLevel"
+        },
+        {
+          "start": 2631,
+          "end": 2637,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#2",
+          "original": "param2",
+          "renamed": "configuration"
+        },
+        {
           "start": 2767,
           "end": 2769,
           "symbol": "C:qb",
@@ -821458,6 +823441,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 2889,
+          "end": 2895,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#3",
+          "original": "param3",
+          "renamed": "localPlayerCount"
+        },
+        {
+          "start": 2916,
+          "end": 2922,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#4",
+          "original": "param4",
+          "renamed": "inputFlag"
+        },
+        {
+          "start": 2943,
+          "end": 2949,
+          "symbol": "P:sk.a([Ljava/lang/String;ILoi;IZI)V#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 3015,
@@ -899224,10 +901228,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "fa850982f02f69e5dce2797617c62a5af9d9d4f1bf3e2485c7723a303540fe26",
+    "rulesSha256": "a86db521a0723994c7d3faf340e515d3eeb06644437ec1febfdae9a238fbc874",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "51cf2d848eec544f9b9d89d52470d2206cca4214597baff47adc22e8fa8f3c11",
+    "outputTreeSha256": "d8562e1e7eda3ad1821d7ce10842cf532683aa141d3df45d5f8f8b5d00150591",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -899247,8 +901251,8 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 830528,
-        "traceSha256": "7f00441ee242f1dc6ef94dc4eae573e7052d044b4464e4ead3b5fe5735f2470d",
+        "checks": 854330,
+        "traceSha256": "5b9482fac7b037dd898aea39074daae4f2b6cf85e0717becdbdf110dd12bf02a",
         "rawNamedIdentical": true,
         "independentExpectations": true,
         "headlessClientBoundary": true,
@@ -899439,7 +901443,11 @@
         "rankingStatisticsFixtures": true,
         "rankingRequestFixtures": true,
         "rankingResponseFixtures": true,
-        "rankingSortFixtures": true
+        "rankingSortFixtures": true,
+        "gameplayStartupFixtures": true,
+        "rematchRequestFixtures": true,
+        "rematchCaptionFixtures": true,
+        "drawCaptionFixtures": true
       }
     }
   },

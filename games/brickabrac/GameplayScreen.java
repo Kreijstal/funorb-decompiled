@@ -6,17 +6,17 @@ final class GameplayScreen extends GameScreen {
     static int field_h;
     MultiplayerMatch match;
     static RgbSprite field_l;
-    int field_v;
-    int field_r;
-    private int field_i;
+    int rematchSetupPlayerMask;
+    int resultLevel;
+    private int lastReportedLevel;
     int loadedBoardSnapshots;
     static UiComponent field_u;
-    boolean field_n;
+    boolean resultWordMode;
     static int field_j;
     int localPlayerId;
     boolean suppressResultSubmission;
     private int viewedPlayerId;
-    private boolean field_y;
+    private boolean debugControlsEnabled;
     boolean snapshotsReady;
     int localPlayerMask;
     private int progressBaseLevel;
@@ -101,7 +101,7 @@ final class GameplayScreen extends GameScreen {
           return;
         }
         if (obfuscationGuard > -14) {
-          this.a((byte) -47, -81);
+          this.setStartingLevel((byte) -47, -81);
         }
         this.g(41);
     }
@@ -170,7 +170,7 @@ final class GameplayScreen extends GameScreen {
           ep.resultCounterTwo = ep.resultCounterTwo - var5;
         }
         if (obfuscationGuard != 67) {
-          this.field_i = 125;
+          this.lastReportedLevel = 125;
         }
     }
 
@@ -281,8 +281,8 @@ final class GameplayScreen extends GameScreen {
               fieldTemp$3 = ml.field_f + 1;
               ml.field_f = ml.field_f + 1;
               System.out.println("Concluded " + fieldTemp$3 + " games (" + cf.checksumMismatchCount + " errors)");
-              if ((1 << this.localPlayerId & this.match.field_j) == 0) {
-                this.f(87);
+              if ((1 << this.localPlayerId & this.match.rematchOfferPlayerMask) == 0) {
+                this.requestRematchAction(87);
               }
             }
             po.a((byte) -97);
@@ -417,13 +417,13 @@ final class GameplayScreen extends GameScreen {
         bm.playGameplayAudioEvents(48, 48, true, -30791, var7);
         if (this.match.playerCount == 1) {
           var20 = this.match.playerBoards[0];
-          if (var20.levelIndex > this.field_i) {
+          if (var20.levelIndex > this.lastReportedLevel) {
             var9_long = MonotonicTime.nowMillis(false);
-            this.a(NameEntryPopup.field_Yb, this.field_i, var9_long - fl.field_l, true, 1000);
+            this.a(NameEntryPopup.field_Yb, this.lastReportedLevel, var9_long - fl.field_l, true, 1000);
             fl.field_l = var9_long;
-            this.field_i = var20.levelIndex;
+            this.lastReportedLevel = var20.levelIndex;
             this.queueLevelResult(this.match.configuration.pack, var20.score, (byte) -125, var20.levelIndex);
-            if (this.field_i == 1 &&
+            if (this.lastReportedLevel == 1 &&
               0 == this.match.configuration.pack.packId) {
               var11 = var20;
               var20.field_Q = 0;
@@ -437,14 +437,14 @@ final class GameplayScreen extends GameScreen {
                 var13 = (Ball) (var20.activeBalls.next((byte) 116));
               }
             }
-            if ((this.field_i > 1 ||
+            if ((this.lastReportedLevel > 1 ||
               this.match.configuration.pack.packId == 1) &&
               (LevelPackCard.hasFeatureBit(0, -119) &&
               TabbedPane.currentBackground instanceof HalloweenBackground)) {
               this.queueProgressAchievement(false, 239, 16);
             }
-            if (this.field_i < this.match.configuration.getPeriod(95)) {
-              w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.field_i, (byte) -122), -1);
+            if (this.lastReportedLevel < this.match.configuration.getPeriod(95)) {
+              w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
             }
           }
           if (var20.field_tb) {
@@ -575,8 +575,8 @@ final class GameplayScreen extends GameScreen {
         return;
     }
 
-    final boolean c(int param0) {
-        if (param0 < 93) {
+    final boolean isSpectator(int obfuscationGuard) {
+        if (obfuscationGuard < 93) {
           this.a(false, (byte) -87);
         }
         return this.localPlayerId == -2 ? true : false;
@@ -591,7 +591,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (null == VerticalScrollbar.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
-          VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.field_r});
+          VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.resultLevel});
           if (!QuickChatMenu.h(-26090)) {
             bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
           }
@@ -603,10 +603,10 @@ final class GameplayScreen extends GameScreen {
         if (!this.networkedMatch) {
           if (1 == this.match.playerCount &&
             !this.suppressResultSubmission) {
-            this.a(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
+            this.setResultLevel(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.e(0);
-            this.a(NameEntryPopup.field_Yb, this.field_r, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
-            jj.field_d = jj.field_d | ja.a(this.progressBaseLevel, this.match.configuration, -1 + this.field_r, true);
+            this.a(NameEntryPopup.field_Yb, this.resultLevel, -fl.field_l + MonotonicTime.nowMillis(false), false, 1000);
+            jj.field_d = jj.field_d | ja.a(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
             stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
             be.field_a = stackIn_8_0;
           }
@@ -841,7 +841,7 @@ final class GameplayScreen extends GameScreen {
           boolean decompiledFrameRemainder0 = true;
           var4Lifetime2 = 1;
           if (this.networkedMatch) {
-            if (this.c(113)) {
+            if (this.isSpectator(113)) {
               var4Lifetime2 = 4;
             } else {
               if (!this.match.resultsReady &&
@@ -887,7 +887,7 @@ final class GameplayScreen extends GameScreen {
           return true;
         }
         if (1 == this.match.playerCount &&
-          this.field_y) {
+          this.debugControlsEnabled) {
           var7 = this.match.playerBoards[0];
           var8 = var7;
           if (48 == keyCode) {
@@ -1073,22 +1073,22 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(byte param0, int param1) {
-        int var3 = 0;
-        int var4 = BrickABrac.field_J ? 1 : 0;
-        int var3Lifetime1;
-        if (param0 != 119) {
+    final void setStartingLevel(byte obfuscationGuard, int levelIndex) {
+        int boardIndex = 0;
+        int clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        int counterLevelAdjustment;
+        if (obfuscationGuard != 119) {
           return;
         }
-        for (var3 = 0; var3 < this.match.playerBoards.length; var3++) {
-          this.match.playerBoards[var3].levelIndex = param1;
+        for (boardIndex = 0; boardIndex < this.match.playerBoards.length; boardIndex++) {
+          this.match.playerBoards[boardIndex].levelIndex = levelIndex;
         }
         if (this.match.playerCount == 1) {
-          this.progressBaseLevel = param1;
-          this.field_i = param1;
-          var3Lifetime1 = param1;
-          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var3Lifetime1;
-          w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.field_i, (byte) -122), -1);
+          this.progressBaseLevel = levelIndex;
+          this.lastReportedLevel = levelIndex;
+          counterLevelAdjustment = levelIndex;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + counterLevelAdjustment;
+          w.field_r = lg.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
         }
     }
 
@@ -1098,7 +1098,7 @@ final class GameplayScreen extends GameScreen {
         LevelSequence var4 = new LevelSequence(qh.field_b, kk.createIndexOrder(false, qh.field_b.levelCount, hi.field_w), 3);
         r.field_A = false;
         TabbedPane.currentBackground = rd.selectBackground(0, (byte) 19);
-        sk.a(var3, 0, var4, 2, param1, -12665);
+        sk.startLocalGame(var3, 0, var4, 2, param1, -12665);
     }
 
     final void readResultOrder(BitPacketBuffer packet, int startIndex) {
@@ -1143,16 +1143,16 @@ final class GameplayScreen extends GameScreen {
         int var1 = 47 / ((param0 - 14) / 59);
     }
 
-    private final void a(int param0, boolean param1) {
-        int var3 = 0;
-        if (param1) {
-          this.field_n = true;
+    private final void setResultLevel(int levelIndex, boolean enableResultWordMode) {
+        int counterLevelAdjustment = 0;
+        if (enableResultWordMode) {
+          this.resultWordMode = true;
         }
         if (this.match.playerCount == 1) {
-          var3 = param0;
-          ep.resultCounterTwo = ep.resultCounterTwo - var3;
+          counterLevelAdjustment = levelIndex;
+          ep.resultCounterTwo = ep.resultCounterTwo - counterLevelAdjustment;
         }
-        this.field_r = param0;
+        this.resultLevel = levelIndex;
     }
 
     private final void queueMappedBitAchievement(int achievementId, int obfuscationGuard, int submissionByte) {
@@ -1405,12 +1405,12 @@ final class GameplayScreen extends GameScreen {
               if (!this.match.resultsReady) {
                 this.match.playerMaskThree = this.match.playerMaskThree | this.match.getStateSevenPlayerMask(-17566);
                 this.match.playerMaskTwo = this.match.playerMaskTwo | this.match.getStateZeroPlayerMask((byte) -92);
-                if (this.match.b(82)) {
-                  if (-1 == this.match.field_h) {
-                    this.match.field_h = 0;
+                if (this.match.checkMatchCompletion(82)) {
+                  if (-1 == this.match.lastRemainingPlayerId) {
+                    this.match.lastRemainingPlayerId = 0;
                   }
-                  var6_intLifetime4 = this.match.field_h;
-                  var7Lifetime1 = 1 - this.match.field_h;
+                  var6_intLifetime4 = this.match.lastRemainingPlayerId;
+                  var7Lifetime1 = 1 - this.match.lastRemainingPlayerId;
                   if ((this.match.playerMaskThree & 1 << var7Lifetime1) != 0) {
                     var6_intLifetime4 = var7Lifetime1;
                   }
@@ -1685,7 +1685,7 @@ final class GameplayScreen extends GameScreen {
             nh.a(169, 482, -40, 472, cd.field_h, -1);
             stackIn_83_0 = ((this.localPlayerMask & 1 << this.viewedPlayerId) == 0) ? 0 : 1;
             var7Lifetime3 = stackIn_83_0;
-            stackIn_86_0 = this.field_n;
+            stackIn_86_0 = this.resultWordMode;
             stackIn_86_1 = -103;
             stackIn_86_2 = var21[0];
             stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.localPlayerMask);
@@ -1709,7 +1709,7 @@ final class GameplayScreen extends GameScreen {
             var9Lifetime1 = stackIn_53_0;
             stackIn_56_0 = ((this.localPlayerMask & 1 << var9Lifetime1) == 0) ? 0 : 1;
             var10Lifetime1 = stackIn_56_0;
-            stackIn_59_0 = this.field_n;
+            stackIn_59_0 = this.resultWordMode;
             stackIn_59_1 = -103;
             stackIn_59_2 = var14[0];
             stackIn_61_3 = (var8_int != 0) || (var10Lifetime1 != 0);
@@ -1721,7 +1721,7 @@ final class GameplayScreen extends GameScreen {
             var9Lifetime1 = 1 - var9Lifetime1;
             stackIn_69_0 = (0 == (1 << var9Lifetime1 & this.localPlayerMask)) ? 0 : 1;
             var10Lifetime1Lifetime1 = stackIn_69_0;
-            stackIn_72_0 = this.field_n;
+            stackIn_72_0 = this.resultWordMode;
             stackIn_72_1 = -103;
             stackIn_72_2 = var14[1];
             stackIn_74_3 = (var8_int != 0) || (var10Lifetime1Lifetime1 != 0);
@@ -1784,15 +1784,15 @@ final class GameplayScreen extends GameScreen {
         this(false, false, playerNames, localPlayerId, localPlayerMask, configuration, randomSeeds, characterOrder);
     }
 
-    final void f(int param0) {
+    final void requestRematchAction(int obfuscationGuard) {
         if (!this.networkedMatch) {
           throw new IllegalStateException();
         }
         k.outgoingPackets.writeCipheredOpcode(-13413, 67);
-        int var2 = 68 % ((param0 + 65) / 59);
+        int guardArithmetic = 68 % ((obfuscationGuard + 65) / 59);
     }
 
-    GameplayScreen(boolean networkedMatch, boolean param1, String[] playerNames, int localPlayerId, int localPlayerMask, LevelSequence configuration, int[] randomSeeds, int[] characterOrder) {
+    GameplayScreen(boolean networkedMatch, boolean resultWordMode, String[] playerNames, int localPlayerId, int localPlayerMask, LevelSequence configuration, int[] randomSeeds, int[] characterOrder) {
         super(-1);
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -1808,40 +1808,40 @@ final class GameplayScreen extends GameScreen {
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int[] var9 = null;
-        int var9_int = 0;
-        RuntimeException var9_ref = null;
-        int var10 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        int var10Lifetime1;
+        int[] achievementMaskAlias = null;
+        int localBoardCount = 0;
+        RuntimeException failure = null;
+        int achievementWordIndex = 0;
+        int[] achievementMaskStorage = null;
+        int[] achievementMaskReference = null;
+        int[] achievementMask = null;
+        int playerIndex;
         this.loadedBoardSnapshots = 0;
         this.suppressResultSubmission = false;
         try {
-          stackIn_4_1 = (param1);
-          this.field_n = stackIn_4_1;
+          stackIn_4_1 = (resultWordMode);
+          this.resultWordMode = stackIn_4_1;
           stackIn_7_1 = (networkedMatch);
           this.networkedMatch = stackIn_7_1;
           this.localPlayerMask = localPlayerMask;
           this.localPlayerId = localPlayerId;
           stackIn_10_1 = !(QuickChatHelpDialog.field_Yb < 2);
-          this.field_y = stackIn_10_1;
-          var14 = pl.pendingAchievementMask;
-          var13 = var14;
-          var12 = var13;
-          var9 = var12;
-          for (var10 = 0; 8 > var10; var10++) {
-            var14[var10] = 0;
+          this.debugControlsEnabled = stackIn_10_1;
+          achievementMask = pl.pendingAchievementMask;
+          achievementMaskReference = achievementMask;
+          achievementMaskStorage = achievementMaskReference;
+          achievementMaskAlias = achievementMaskStorage;
+          for (achievementWordIndex = 0; 8 > achievementWordIndex; achievementWordIndex++) {
+            achievementMask[achievementWordIndex] = 0;
           }
           this.match = new MultiplayerMatch(playerNames, this.localPlayerMask, configuration, randomSeeds, characterOrder);
-          var9_int = 0;
-          for (var10Lifetime1 = 0; this.match.playerCount > var10Lifetime1; var10Lifetime1++) {
-            if ((this.localPlayerMask & 1 << var10Lifetime1) != 0) {
-              var9_int++;
+          localBoardCount = 0;
+          for (playerIndex = 0; this.match.playerCount > playerIndex; playerIndex++) {
+            if ((this.localPlayerMask & 1 << playerIndex) != 0) {
+              localBoardCount++;
             }
           }
-          if (var9_int == 2) {
+          if (localBoardCount == 2) {
             stackIn_23_1 = 1;
           } else {
             if (this.localPlayerId < 0) {
@@ -1877,9 +1877,9 @@ final class GameplayScreen extends GameScreen {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var9_ref = decompiledCaughtException;
-          stackIn_31_0 = var9_ref;
-          stackIn_31_1 = new StringBuilder().append("qj.<init>(").append(networkedMatch).append(',').append(param1).append(',');
+          failure = decompiledCaughtException;
+          stackIn_31_0 = failure;
+          stackIn_31_1 = new StringBuilder().append("qj.<init>(").append(networkedMatch).append(',').append(resultWordMode).append(',');
           if (playerNames == null) {
             stackIn_32_2 = "null";
           } else {

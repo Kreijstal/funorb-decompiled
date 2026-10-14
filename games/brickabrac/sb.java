@@ -32,7 +32,7 @@ final class sb implements vc {
         }
         var3 = IntArrayRequest.gameplayScreen;
         var4 = var3.match;
-        if (var3.c(99)) {
+        if (var3.isSpectator(99)) {
           return true;
         }
         if (var3.match.resultsReady) {

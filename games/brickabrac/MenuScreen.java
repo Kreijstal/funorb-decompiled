@@ -481,7 +481,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 12) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  IntArrayRequest.gameplayScreen.f(69);
+                  IntArrayRequest.gameplayScreen.requestRematchAction(69);
                 }
                 break regionExit1;
               }
@@ -524,7 +524,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 33) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  RankingsRequest.a(16727, inputFlag, IntArrayRequest.gameplayScreen.field_r, IntArrayRequest.gameplayScreen.match.configuration);
+                  RankingsRequest.a(16727, inputFlag, IntArrayRequest.gameplayScreen.resultLevel, IntArrayRequest.gameplayScreen.match.configuration);
                 }
                 break regionExit1;
               }

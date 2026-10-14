@@ -145,23 +145,23 @@ final class Mesh3D {
         }
     }
 
-    final static void a(int param0) {
+    final static void updateRematchCaption(int obfuscationGuard) {
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (IntArrayRequest.gameplayScreen.c(124)) {
+        if (IntArrayRequest.gameplayScreen.isSpectator(124)) {
           return;
         }
-        if (param0 != 1) {
+        if (obfuscationGuard != 1) {
           rasterSnapshotPool = (NodeDeque) null;
         }
-        if (IntArrayRequest.gameplayScreen.field_n) {
-          if ((IntArrayRequest.gameplayScreen.match.field_j & 1 << IntArrayRequest.gameplayScreen.localPlayerId) != 0) {
+        if (IntArrayRequest.gameplayScreen.resultWordMode) {
+          if ((IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask & 1 << IntArrayRequest.gameplayScreen.localPlayerId) != 0) {
             ag.buttonLabels[12] = mi.field_a;
           } else {
-            if (IntArrayRequest.gameplayScreen.match.field_j != 0) {
+            if (IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask != 0) {
               ag.buttonLabels[12] = qm.field_c;
             } else {
-              if ((1 << IntArrayRequest.gameplayScreen.localPlayerId | IntArrayRequest.gameplayScreen.field_v) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
+              if ((1 << IntArrayRequest.gameplayScreen.localPlayerId | IntArrayRequest.gameplayScreen.rematchSetupPlayerMask) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
                 ag.buttonLabels[12] = s.field_a;
               } else {
                 ag.buttonLabels[12] = TabbedPane.field_Pb;
@@ -169,11 +169,11 @@ final class Mesh3D {
             }
           }
         } else {
-          if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.field_j) != 0) {
+          if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask) != 0) {
             ag.buttonLabels[12] = ff.field_g;
           } else {
-            if (0 == IntArrayRequest.gameplayScreen.match.field_j) {
-              if ((IntArrayRequest.gameplayScreen.field_v | 1 << IntArrayRequest.gameplayScreen.localPlayerId) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
+            if (0 == IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask) {
+              if ((IntArrayRequest.gameplayScreen.rematchSetupPlayerMask | 1 << IntArrayRequest.gameplayScreen.localPlayerId) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
                 ag.buttonLabels[12] = RectangleBody.field_t;
               } else {
                 ag.buttonLabels[12] = bm.field_b;

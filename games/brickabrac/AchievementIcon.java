@@ -190,29 +190,29 @@ final class AchievementIcon extends IntrusiveNode {
         this.y = -78;
     }
 
-    final static void c(byte param0) {
+    final static void updateDrawCaption(byte obfuscationGuard) {
         int var2 = BrickABrac.field_J ? 1 : 0;
-        if (IntArrayRequest.gameplayScreen.c(116)) {
+        if (IntArrayRequest.gameplayScreen.isSpectator(116)) {
           return;
         }
-        if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.field_n) == 0) {
-          if (IntArrayRequest.gameplayScreen.match.field_n != 0) {
+        if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask) == 0) {
+          if (IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask != 0) {
             ag.buttonLabels[10] = er.field_a;
-            if (param0 != 32) {
+            if (obfuscationGuard != 32) {
               field_o = (String) null;
               return;
             }
             return;
           }
           ag.buttonLabels[10] = t.field_b;
-          if (param0 != 32) {
+          if (obfuscationGuard != 32) {
             field_o = (String) null;
             return;
           }
           return;
         }
         ag.buttonLabels[10] = fh.field_a;
-        if (param0 == 32) {
+        if (obfuscationGuard == 32) {
           return;
         }
         field_o = (String) null;

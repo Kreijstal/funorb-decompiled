@@ -147,8 +147,8 @@ final class po {
           var5 = var4;
           ec.field_Q = TabbedPane.currentBackground;
           SpaceBackground.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
-          TableDataRequest.field_k = IntArrayRequest.gameplayScreen.c(124);
-          cb.field_n = IntArrayRequest.gameplayScreen.field_n;
+          TableDataRequest.field_k = IntArrayRequest.gameplayScreen.isSpectator(124);
+          cb.field_n = IntArrayRequest.gameplayScreen.resultWordMode;
           sk.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
           fh.field_h = new String[sk.field_I];
           for (var2 = 0; var2 < sk.field_I; var2++) {

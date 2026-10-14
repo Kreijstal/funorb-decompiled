@@ -25,7 +25,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
     }
 
     final static void f(byte param0) {
-        if (!IntArrayRequest.gameplayScreen.c(95)) {
+        if (!IntArrayRequest.gameplayScreen.isSpectator(95)) {
           vg.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 31), false, 11);
           ed.field_d = true;
           if (param0 != 122) {
