@@ -538,7 +538,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_gameopt_kick_x_from_this_game", (byte) -115);
                 if (null != var2) {
-                  cq.field_q = MenuButton.a(var2, (byte) 102);
+                  RankingsRequest.field_q = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("mu_gameopt_withdraw_invite_to_x", (byte) -121);
                 if (null != var2) {
@@ -1744,7 +1744,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_alert_namechars", (byte) -109);
                 if (var2 != null) {
-                  cq.field_i = MenuButton.a(var2, (byte) 121);
+                  RankingsRequest.field_i = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = nk.a("create_alert_nameleadingspace", (byte) -120);
                 if (null != var2) {
@@ -2674,7 +2674,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("keychar_the_character_under_questionmark", (byte) 109);
                 if (null != var2) {
-                  SoundCache.field_h = cq.a((byte) -99, var2[0]);
+                  SoundCache.field_h = RankingsRequest.a((byte) -99, var2[0]);
                 }
                 var2 = nk.a("rating_noratings", (byte) -116);
                 if (null != var2) {
@@ -3299,7 +3299,7 @@ final class ContextActionController {
                 o.currentLobbyGame.concludedDurationMillis < 0) {
                 return;
               }
-              this.contextMenu.addAction(rd.a(cq.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
+              this.contextMenu.addAction(rd.a(RankingsRequest.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
               if (unusedGameFlag == 0) {
                 return;
               }

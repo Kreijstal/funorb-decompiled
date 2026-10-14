@@ -35,48 +35,48 @@ abstract class GameScreen {
         field_c = null;
         field_e = null;
         if (param0 != -91) {
-          GameScreen.a(119, 39, -126, (byte) 48);
+          GameScreen.getOrRequestRankings(119, 39, -126, (byte) 48);
           return;
         }
     }
 
-    final static cq a(int param0, int param1, int param2, byte param3) {
-        cq var4;
-        int var5;
-        cq var6;
-        cq var7;
-        cq var4Lifetime1;
-        var5 = BrickABrac.field_J ? 1 : 0;
-        var4 = (cq) (HuffmanCodec.field_f.first(-55));
-        if (param3 < -102) {
-          while (var4 != null) {
-            if (param1 == var4.field_m) {
-              return var4;
+    final static RankingsRequest getOrRequestRankings(int opcode, int rankingKind, int rowLimit, byte obfuscationGuard) {
+        RankingsRequest pendingRequest;
+        int clientBranchFlag;
+        RankingsRequest newRequest;
+        RankingsRequest newRequestAfterWrongGuard;
+        RankingsRequest requestAlias;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
+        pendingRequest = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.first(-55));
+        if (obfuscationGuard < -102) {
+          while (pendingRequest != null) {
+            if (rankingKind == pendingRequest.rankingKind) {
+              return pendingRequest;
             }
-            var4 = (cq) (HuffmanCodec.field_f.next((byte) 116));
+            pendingRequest = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.next((byte) 116));
           }
-          var6 = new cq();
-          var4 = var6;
-          var6.field_s = param2;
-          var6.field_m = param1;
-          HuffmanCodec.field_f.addLast(var6, (byte) 3);
-          MultiplayerExitScreen.a(-21167, var6, param0);
-          return var6;
+          newRequest = new RankingsRequest();
+          pendingRequest = newRequest;
+          newRequest.rowLimit = rowLimit;
+          newRequest.rankingKind = rankingKind;
+          HuffmanCodec.pendingRankingsRequests.addLast(newRequest, (byte) 3);
+          MultiplayerExitScreen.sendRankingsRequest(-21167, newRequest, opcode);
+          return newRequest;
         }
         GameScreen.c((byte) -109);
-        while (var4 != null) {
-          if (param1 == var4.field_m) {
-            return var4;
+        while (pendingRequest != null) {
+          if (rankingKind == pendingRequest.rankingKind) {
+            return pendingRequest;
           }
-          var4 = (cq) (HuffmanCodec.field_f.next((byte) 116));
+          pendingRequest = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.next((byte) 116));
         }
-        var7 = new cq();
-        var4Lifetime1 = var7;
-        var7.field_s = param2;
-        var7.field_m = param1;
-        HuffmanCodec.field_f.addLast(var7, (byte) 3);
-        MultiplayerExitScreen.a(-21167, var7, param0);
-        return var7;
+        newRequestAfterWrongGuard = new RankingsRequest();
+        requestAlias = newRequestAfterWrongGuard;
+        newRequestAfterWrongGuard.rowLimit = rowLimit;
+        newRequestAfterWrongGuard.rankingKind = rankingKind;
+        HuffmanCodec.pendingRankingsRequests.addLast(newRequestAfterWrongGuard, (byte) 3);
+        MultiplayerExitScreen.sendRankingsRequest(-21167, newRequestAfterWrongGuard, opcode);
+        return newRequestAfterWrongGuard;
     }
 
     static {

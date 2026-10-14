@@ -2,12 +2,13 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 194 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 195 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
 | [GameplayScreen](GameplayScreen.java) → [MultiplayerMatch](MultiplayerMatch.java) → [PlayerBoard](PlayerBoard.java) | Gameplay screen, multiplayer match and per-player boards. |
 | [LobbyGame](LobbyGame.java) / [LobbyPlayer](LobbyPlayer.java) | Lobby game settings, capacity, invitations, player membership/rating and row sorting. |
+| [RankingsRequest](RankingsRequest.java) / [RankingsScreen](RankingsScreen.java) | Ranking request lifecycle, packed results, rating and win-rate sorted views. |
 | [MovingBody](MovingBody.java) / [RectangleBody](RectangleBody.java) / [CircleBody](CircleBody.java) | Fixed8 body coordinates/velocities, rectangle/circle geometry, snapshots and checksums. |
 | [Paddle](Paddle.java) / [Ball](Ball.java) / [Brick](Brick.java) | Paddle size stages, balls and bricks. |
 | [IntrusiveNode](IntrusiveNode.java) / [NodeDeque](NodeDeque.java) | Intrusive ownership and deque traversal/transfer. |
@@ -190,5 +191,9 @@ Outgoing lobby requests have named helpers for actions0..11. The outer opcode is
 |11|requestGamePlayerPreview|16-bit game ID|
 
 Independent wire fixtures check every request action across seeded ciphers, boundary IDs/bytes, empty and nonempty arrays, option-word overlap and byte-length wrapping. They preserve source arrays and current-game identity. Preview fixtures check old-name invalidation, full input ID tracking versus low16-bit wire ID, same-ID suppression, stop/restart and subsequent cipher progression. This describes client byte production, not server acceptance of oversized payloads. Controller invocation, live transport/server responses, packet guards outside canonical call values and unresolved mode/option meanings remain unverified.
+
+RankingsRequest names the pending kind/row limit, completion flag, local rating/wins/draws/losses and two name/statistics views. getOrRequestRankings reuses a pending kind even if a new row limit/opcode differs. sendRankingsRequest writes encrypted opcode, kind byte and limit byte without a body-length prefix; pending requests can be resent. handleRankingsResponse reads kind/count, remote names (local name is implicit) and fixed ten-byte MSB-first statistics:21-bit wins,21-bit draws,21-bit losses,17-bit rating. Each result tuple is rating,wins,draws,losses.
+
+Independent BigInteger-packed fixtures check boundary/random statistics and exact cursor consumption. Lifecycle fixtures check kind reuse, wire bytes, resend order, empty completion, local fallback fields and removal from pending ownership. Response fixtures compare both views against independent descending rating/win-rate, secondary win-rate/rating, total-games and source-index order; include equal keys, counts above the partition threshold, zero row limits and zero-game local omission. Int overflow in1000*wins/total is preserved. Omission occurs after top-limit selection, does not backfill, and can leave statistics under null names. Scratch allocation, accumulation, comparison, sorting and row drawing now have names; full rendered UI, missing-kind disconnect routing, malformed packets and live rankings services remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

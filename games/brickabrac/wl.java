@@ -74,7 +74,7 @@ final class wl extends d {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            wl.c(false);
+            wl.handleRankingsResponse(false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,119 +91,119 @@ final class wl extends d {
         }
     }
 
-    final static void c(boolean param0) {
+    final static void handleRankingsResponse(boolean obfuscationGuard) {
         String[][] dupTemp$0 = null;
         int[][] dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        cq var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        String[][] var6 = null;
-        int[][] var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        BitPacketBuffer var14 = null;
-        int var6_intLifetime1;
-        int var9Lifetime1;
+        RuntimeException failure = null;
+        int rankingKind = 0;
+        RankingsRequest request = null;
+        int recordCount = 0;
+        int rowLimit = 0;
+        int nameIndex = 0;
+        String[][] namesBySort = null;
+        int[][] statisticsBySort = null;
+        int rowCount = 0;
+        int ratingRowIndex = 0;
+        int ratingOutputIndex = 0;
+        int ratingSourceIndex = 0;
+        int clientBranchFlag = 0;
+        int winRateOutputIndex = 0;
+        BitPacketBuffer packet = null;
+        int recordIndex;
+        int winRateRowIndex;
         int var10Lifetime1;
-        int var11Lifetime1;
-        var12 = BrickABrac.field_J ? 1 : 0;
+        int winRateSourceIndex;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var14 = jl.incomingPackets;
-          var2 = var14.readUnsignedByte(255);
-          var3 = (cq) (HuffmanCodec.field_f.first(-7));
-          while (var3 != null) {
-            if (var3.field_m != var2) {
-              var3 = (cq) (HuffmanCodec.field_f.next((byte) 116));
+          packet = jl.incomingPackets;
+          rankingKind = packet.readUnsignedByte(255);
+          request = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.first(-7));
+          while (request != null) {
+            if (request.rankingKind != rankingKind) {
+              request = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.next((byte) 116));
               continue;
             }
             break;
           }
-          if (var3 == null) {
+          if (request == null) {
             hn.a((byte) 64);
             return;
           }
-          var4 = var14.readUnsignedByte(255);
-          if (var4 != 0) {
-            LevelCompleteScreen.field_B[0] = tb.field_cb;
-            var5 = var3.field_s;
-            for (var6_int = 1; var4 > var6_int; var6_int++) {
-              LevelCompleteScreen.field_B[var6_int] = var14.readCp1252String(-1);
+          recordCount = packet.readUnsignedByte(255);
+          if (recordCount != 0) {
+            LevelCompleteScreen.receivedRankingNames[0] = tb.field_cb;
+            rowLimit = request.rowLimit;
+            for (nameIndex = 1; recordCount > nameIndex; nameIndex++) {
+              LevelCompleteScreen.receivedRankingNames[nameIndex] = packet.readCp1252String(-1);
             }
-            DualLinkNode.a((byte) 75, var4, var5);
-            for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
-              un.a((byte) -122, var14);
-              if (var6_intLifetime1 == 0) {
-                var3.field_k = fh.field_c;
-                var3.field_n = vj.field_c;
-                var3.field_j = sf.field_Z;
-                var3.field_l = vh.field_U;
-                MessageScreen.a(vj.field_c, fh.field_c, var6_intLifetime1, -19824, sf.field_Z, vh.field_U);
+            DualLinkNode.prepareRankingScratch((byte) 75, recordCount, rowLimit);
+            for (recordIndex = 0; recordCount > recordIndex; recordIndex++) {
+              un.decodeRankingStatistics((byte) -122, packet);
+              if (recordIndex == 0) {
+                request.localDraws = fh.decodedRankingDraws;
+                request.localRating = vj.decodedRankingRating;
+                request.localLosses = sf.decodedRankingLosses;
+                request.localWins = vh.decodedRankingWins;
+                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, vh.decodedRankingWins);
               } else {
-                MessageScreen.a(vj.field_c, fh.field_c, var6_intLifetime1, -19824, sf.field_Z, vh.field_U);
+                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, sf.decodedRankingLosses, vh.decodedRankingWins);
               }
             }
-            gr.a(12429, var5);
-            dupTemp$0 = new String[2][var5];
-            var3.field_r = dupTemp$0;
-            var6 = dupTemp$0;
-            dupTemp$1 = new int[2][4 * var5];
-            var3.field_u = dupTemp$1;
-            var7 = dupTemp$1;
-            var8 = wi.field_m;
-            var9 = 0;
-            var10 = 0;
-            while (var9 < var8) {
-              var11 = VerticalScrollbar.field_Pb[var9];
-              var6[0][var10] = LevelCompleteScreen.field_B[var11];
-              var7[0][4 * var10] = ec.field_N[var11];
-              var7[0][var10 * 4 + 1] = RankingsScreen.field_r[var11];
-              var7[0][2 + var10 * 4] = ObjectHistoryBuffer.field_p[var11];
-              var7[0][4 * var10 + 3] = ib.field_D[var11];
-              if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.field_B[var11], -40) &&
-                0 == ObjectHistoryBuffer.field_p[var11] + RankingsScreen.field_r[var11] + ib.field_D[var11]) {
-                var6[0][var10] = null;
-                var10--;
+            gr.sortRankingViews(12429, rowLimit);
+            dupTemp$0 = new String[2][rowLimit];
+            request.namesBySort = dupTemp$0;
+            namesBySort = dupTemp$0;
+            dupTemp$1 = new int[2][4 * rowLimit];
+            request.statisticsBySort = dupTemp$1;
+            statisticsBySort = dupTemp$1;
+            rowCount = wi.rankingRowCount;
+            ratingRowIndex = 0;
+            ratingOutputIndex = 0;
+            while (ratingRowIndex < rowCount) {
+              ratingSourceIndex = VerticalScrollbar.rankingSortIndices[ratingRowIndex];
+              namesBySort[0][ratingOutputIndex] = LevelCompleteScreen.receivedRankingNames[ratingSourceIndex];
+              statisticsBySort[0][4 * ratingOutputIndex] = ec.rankingRatings[ratingSourceIndex];
+              statisticsBySort[0][ratingOutputIndex * 4 + 1] = RankingsScreen.rankingWins[ratingSourceIndex];
+              statisticsBySort[0][2 + ratingOutputIndex * 4] = ObjectHistoryBuffer.rankingDraws[ratingSourceIndex];
+              statisticsBySort[0][4 * ratingOutputIndex + 3] = ib.rankingLosses[ratingSourceIndex];
+              if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.receivedRankingNames[ratingSourceIndex], -40) &&
+                0 == ObjectHistoryBuffer.rankingDraws[ratingSourceIndex] + RankingsScreen.rankingWins[ratingSourceIndex] + ib.rankingLosses[ratingSourceIndex]) {
+                namesBySort[0][ratingOutputIndex] = null;
+                ratingOutputIndex--;
               }
-              var10++;
-              var9++;
+              ratingOutputIndex++;
+              ratingRowIndex++;
             }
-            var9Lifetime1 = 0;
-            var13 = 0;
-            var10Lifetime1 = var13;
-            while (var8 > var9Lifetime1) {
-              var11Lifetime1 = VerticalScrollbar.field_Pb[var9Lifetime1 + var5];
-              var6[1][var13] = LevelCompleteScreen.field_B[var11Lifetime1];
-              var7[1][var13 * 4] = ec.field_N[var11Lifetime1];
-              var7[1][1 + var13 * 4] = RankingsScreen.field_r[var11Lifetime1];
-              var7[1][2 + 4 * var13] = ObjectHistoryBuffer.field_p[var11Lifetime1];
-              var7[1][var13 * 4 + 3] = ib.field_D[var11Lifetime1];
-              if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.field_B[var11Lifetime1], -31) &&
-                RankingsScreen.field_r[var11Lifetime1] + ObjectHistoryBuffer.field_p[var11Lifetime1] + ib.field_D[var11Lifetime1] == 0) {
-                var6[1][var13] = null;
-                var13--;
+            winRateRowIndex = 0;
+            winRateOutputIndex = 0;
+            var10Lifetime1 = winRateOutputIndex;
+            while (rowCount > winRateRowIndex) {
+              winRateSourceIndex = VerticalScrollbar.rankingSortIndices[winRateRowIndex + rowLimit];
+              namesBySort[1][winRateOutputIndex] = LevelCompleteScreen.receivedRankingNames[winRateSourceIndex];
+              statisticsBySort[1][winRateOutputIndex * 4] = ec.rankingRatings[winRateSourceIndex];
+              statisticsBySort[1][1 + winRateOutputIndex * 4] = RankingsScreen.rankingWins[winRateSourceIndex];
+              statisticsBySort[1][2 + 4 * winRateOutputIndex] = ObjectHistoryBuffer.rankingDraws[winRateSourceIndex];
+              statisticsBySort[1][winRateOutputIndex * 4 + 3] = ib.rankingLosses[winRateSourceIndex];
+              if (SpaceBackground.isLocalPlayerName(LevelCompleteScreen.receivedRankingNames[winRateSourceIndex], -31) &&
+                RankingsScreen.rankingWins[winRateSourceIndex] + ObjectHistoryBuffer.rankingDraws[winRateSourceIndex] + ib.rankingLosses[winRateSourceIndex] == 0) {
+                namesBySort[1][winRateOutputIndex] = null;
+                winRateOutputIndex--;
               }
-              var9Lifetime1++;
-              var13++;
+              winRateRowIndex++;
+              winRateOutputIndex++;
             }
           }
-          if (param0) {
+          if (obfuscationGuard) {
             field_Q = (String) null;
           }
-          var3.field_v = true;
-          var3.unlink((byte) 111);
+          request.complete = true;
+          request.unlink((byte) 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "wl.C(" + param0 + ')');
+          failure = decompiledCaughtException;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "wl.C(" + obfuscationGuard + ')');
         }
     }
 

@@ -43,29 +43,29 @@ final class gr {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void sortRankingViews(int obfuscationGuard, int rowLimit) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          ti.a(BoundedFile.field_l, IntArrayRequest.field_u, wi.field_m, true, 97, param1, 0);
-          if (param0 != 12429) {
-            gr.a(22, -5);
+          ti.sortRankingIndexRange(BoundedFile.field_l, IntArrayRequest.field_u, wi.rankingRowCount, true, 97, rowLimit, 0);
+          if (obfuscationGuard != 12429) {
+            gr.sortRankingViews(22, -5);
           }
-          for (var2_int = 0; var2_int < wi.field_m; var2_int++) {
-            VerticalScrollbar.field_Pb[var2_int + param1] = var2_int;
+          for (var2_int = 0; var2_int < wi.rankingRowCount; var2_int++) {
+            VerticalScrollbar.rankingSortIndices[var2_int + rowLimit] = var2_int;
           }
-          ti.a(uf.field_b, ba.field_w, param1 + wi.field_m, false, 118, param1 + param1, param1);
-          if (param1 < wi.field_m) {
-            wi.field_m = param1;
+          ti.sortRankingIndexRange(uf.field_b, ba.field_w, rowLimit + wi.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
+          if (rowLimit < wi.rankingRowCount) {
+            wi.rankingRowCount = rowLimit;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "gr.D(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "gr.D(" + obfuscationGuard + ',' + rowLimit + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class gr {
           jc.field_J = UiComponent.field_ib;
           tf.field_c = kp.field_e;
           field_c = PlayerInputBatch.field_i;
-          Ball.field_w = cq.field_o;
+          Ball.field_w = RankingsRequest.field_o;
           we.field_b = ch.field_k;
           bq.field_e = hc.field_a;
           gg.field_o = ep.field_j;

@@ -59,7 +59,7 @@ final class ar {
               scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
-                    cq.gameSettingCount != param4) {
+                    RankingsRequest.gameSettingCount != param4) {
                     break scanLoop1;
                   }
                   var8_int = 0;

@@ -5,7 +5,7 @@ final class cf {
     static byte[][] field_b;
     static int decodedCanvasWidth;
     static int checksumMismatchCount;
-    static int[] field_c;
+    static int[] rankingSourceIndices;
 
     final static PauseMenuScreen createPauseMenu(int screenId, int obfuscationGuard) {
         Object var6 = null;
@@ -103,10 +103,10 @@ final class cf {
         field_b = (byte[][]) null;
         if (param0 != -12251) {
           cf.a((byte) -13);
-          field_c = null;
+          rankingSourceIndices = null;
           return;
         }
-        field_c = null;
+        rankingSourceIndices = null;
     }
 
     static {

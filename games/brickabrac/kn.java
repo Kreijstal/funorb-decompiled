@@ -49,7 +49,7 @@ final class kn extends DualLinkNode {
                 if (0 == var6) {
                   stackIn_10_2 = (char)0;
                 } else {
-                  stackIn_10_2 = cq.a((byte) -112, (byte) var6);
+                  stackIn_10_2 = RankingsRequest.a((byte) -112, (byte) var6);
                 }
                 stackIn_9_0[stackIn_9_1] = stackIn_10_2;
               }
@@ -65,7 +65,7 @@ final class kn extends DualLinkNode {
                 if (0 == var6) {
                   stackIn_17_2 = (char)0;
                 } else {
-                  stackIn_17_2 = cq.a((byte) -11, (byte) var6);
+                  stackIn_17_2 = RankingsRequest.a((byte) -11, (byte) var6);
                 }
                 stackIn_16_0[stackIn_16_1] = stackIn_17_2;
               }

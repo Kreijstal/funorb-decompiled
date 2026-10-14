@@ -186,7 +186,7 @@ final class MusicVoice extends IntrusiveNode {
             null != MatchResultScreen.field_v ||
             null != me.field_e)) {
             var9 = 0;
-            while (!(var9 >= cq.gameSettingCount)) {
+            while (!(var9 >= RankingsRequest.gameSettingCount)) {
               var10_int = 255 & o.currentLobbyGame.settings[var9];
               if (var32 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -482,7 +482,7 @@ final class MusicVoice extends IntrusiveNode {
                 var27Lifetime1 = 0;
                 var28_int = 0;
                 while (true) {
-                  if (cq.gameSettingCount > var28_int) {
+                  if (RankingsRequest.gameSettingCount > var28_int) {
                     var29 = o.currentLobbyGame.settings[var28_int] & 255;
                     var30 = 0;
                     if (NodeDeque.field_a != null &&

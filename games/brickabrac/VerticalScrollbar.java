@@ -7,7 +7,7 @@ final class VerticalScrollbar extends UiComponent {
     private int repeatDelay;
     private UiComponent upButton;
     private UiComponent pageUpRegion;
-    static int[] field_Pb;
+    static int[] rankingSortIndices;
     static TableRowSubmission field_Ub;
     private UiComponent thumb;
     private UiComponent downButton;
@@ -203,12 +203,12 @@ final class VerticalScrollbar extends UiComponent {
         field_Ub = null;
         field_Qb = null;
         if (param0 == 33) {
-          field_Pb = null;
+          rankingSortIndices = null;
           return;
         }
         PaletteFont var2 = (PaletteFont) null;
         VerticalScrollbar.a(31, (String) null, 82, (PaletteFont) null, 55, -109);
-        field_Pb = null;
+        rankingSortIndices = null;
     }
 
     final int getDraggedScrollOffset(int contentHeight, int viewportHeight, byte obfuscationGuard, boolean clampMinimumFirst) {

@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends IntrusiveNode {
-    String[][] field_r;
-    int field_s;
+final class RankingsRequest extends IntrusiveNode {
+    String[][] namesBySort;
+    int rowLimit;
     static String field_i;
-    int field_n;
+    int localRating;
     static String field_q;
-    int field_l;
-    boolean field_v;
+    int localWins;
+    boolean complete;
     static int tickTimeCursor;
-    int field_j;
-    int[][] field_u;
+    int localLosses;
+    int[][] statisticsBySort;
     static RgbSprite field_o;
     static int gameSettingCount;
-    int field_m;
-    int field_k;
+    int rankingKind;
+    int localDraws;
 
     public static void a(byte param0) {
         field_q = null;
@@ -66,7 +66,7 @@ final class cq extends IntrusiveNode {
           return;
         }
         var3 = (LevelSequence) null;
-        cq.a(103, true, 42, (LevelSequence) null);
+        RankingsRequest.a(103, true, 42, (LevelSequence) null);
         if (null != ep.field_e) {
           DelayedPacket.a(false, ep.field_e);
         }
@@ -149,7 +149,7 @@ final class cq extends IntrusiveNode {
         }
     }
 
-    cq() {
+    RankingsRequest() {
     }
 
     static {

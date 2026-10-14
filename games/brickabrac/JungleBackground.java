@@ -437,7 +437,7 @@ final class JungleBackground extends BackgroundScene {
           }
           var7 = stackIn_184_0;
           scanLoop1: while (true) {
-            if (cq.gameSettingCount > var7) {
+            if (RankingsRequest.gameSettingCount > var7) {
               dupTemp$1 = MatchCompleteScreen.field_A[var7 + 4];
               var27 = dupTemp$1;
               var8_array = dupTemp$1;
@@ -531,8 +531,8 @@ final class JungleBackground extends BackgroundScene {
                   ContextMenu.field_bc != null && (!param2 ||
                   !fh.pendingGameOptionsReceived)) {
                   if (qo.field_J == null) {
-                    h.field_D = new boolean[cq.gameSettingCount];
-                    qo.field_J = new byte[cq.gameSettingCount];
+                    h.field_D = new boolean[RankingsRequest.gameSettingCount];
+                    qo.field_J = new byte[RankingsRequest.gameSettingCount];
                   }
                   MeshAttributeRecord.field_g = false;
                   MusicVoiceMixer.field_s = false;

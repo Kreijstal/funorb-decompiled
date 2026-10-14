@@ -36,27 +36,27 @@ final class un {
         return 1900 + new Date().getYear();
     }
 
-    final static void a(byte param0, PacketBuffer param1) {
-        int var2_int = 0;
-        int var2_intLifetime1;
-        int var2_intLifetime2;
+    final static void decodeRankingStatistics(byte obfuscationGuard, PacketBuffer packet) {
+        int winsDrawsBoundary = 0;
+        int drawsLossesBoundary;
+        int lossesRatingBoundary;
         try {
-          vh.field_U = param1.readUnsignedShort(65280) << 5;
-          var2_int = param1.readUnsignedByte(255);
-          fh.field_c = 1835008 & var2_int << 18;
-          int var3 = -32 % ((param0 + 69) / 37);
-          vh.field_U = vh.field_U + (var2_int >> 3);
-          fh.field_c = fh.field_c + (param1.readUnsignedShort(65280) << 2);
-          var2_intLifetime1 = param1.readUnsignedByte(255);
-          sf.field_Z = 2064384 & var2_intLifetime1 << 15;
-          fh.field_c = fh.field_c + (var2_intLifetime1 >> 6);
-          sf.field_Z = sf.field_Z + (param1.readUnsignedByte(255) << 7);
-          var2_intLifetime2 = param1.readUnsignedByte(255);
-          sf.field_Z = sf.field_Z + (var2_intLifetime2 >> 1);
-          vj.field_c = 65536 & var2_intLifetime2 << 16;
-          vj.field_c = vj.field_c + param1.readUnsignedShort(65280);
+          vh.decodedRankingWins = packet.readUnsignedShort(65280) << 5;
+          winsDrawsBoundary = packet.readUnsignedByte(255);
+          fh.decodedRankingDraws = 1835008 & winsDrawsBoundary << 18;
+          int guardArithmetic = -32 % ((obfuscationGuard + 69) / 37);
+          vh.decodedRankingWins = vh.decodedRankingWins + (winsDrawsBoundary >> 3);
+          fh.decodedRankingDraws = fh.decodedRankingDraws + (packet.readUnsignedShort(65280) << 2);
+          drawsLossesBoundary = packet.readUnsignedByte(255);
+          sf.decodedRankingLosses = 2064384 & drawsLossesBoundary << 15;
+          fh.decodedRankingDraws = fh.decodedRankingDraws + (drawsLossesBoundary >> 6);
+          sf.decodedRankingLosses = sf.decodedRankingLosses + (packet.readUnsignedByte(255) << 7);
+          lossesRatingBoundary = packet.readUnsignedByte(255);
+          sf.decodedRankingLosses = sf.decodedRankingLosses + (lossesRatingBoundary >> 1);
+          vj.decodedRankingRating = 65536 & lossesRatingBoundary << 16;
+          vj.decodedRankingRating = vj.decodedRankingRating + packet.readUnsignedShort(65280);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "un.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "un.C(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

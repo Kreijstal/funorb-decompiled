@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class pj implements ia {
-    static int[] field_b;
+    static int[] rankingWinRateThousandths;
     static String field_e;
     private long field_f;
     static so field_c;
@@ -27,7 +27,7 @@ abstract class pj implements ia {
     public static void d(int param0) {
         field_c = null;
         field_e = null;
-        field_b = null;
+        rankingWinRateThousandths = null;
         field_d = null;
         if (param0 != 31366) {
           pj.d(-12);

@@ -5,7 +5,7 @@ final class RankingsScreen extends MenuScreen {
     static long field_u;
     private int sortIndex;
     static IndexedSprite field_t;
-    static int[] field_r;
+    static int[] rankingWins;
     static UiComponent field_s;
 
     final int getButtonTop(int buttonIndex, int obfuscationGuard) {
@@ -66,7 +66,7 @@ final class RankingsScreen extends MenuScreen {
           this.e(2);
         }
         if (!obfuscationGuard) {
-          field_r = (int[]) null;
+          rankingWins = (int[]) null;
         }
     }
 
@@ -75,7 +75,7 @@ final class RankingsScreen extends MenuScreen {
         if (obfuscationGuard <= 96) {
           return;
         }
-        ch.field_h = null;
+        ch.screenRankingsRequest = null;
     }
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
@@ -86,8 +86,8 @@ final class RankingsScreen extends MenuScreen {
         if (obfuscationGuard >= -52) {
           return;
         }
-        if (ch.field_h == null) {
-          ch.field_h = GameScreen.a(7, 0, 10, (byte) -114);
+        if (ch.screenRankingsRequest == null) {
+          ch.screenRankingsRequest = GameScreen.getOrRequestRankings(7, 0, 10, (byte) -114);
         }
     }
 
@@ -106,7 +106,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final void onExit(byte obfuscationGuard) {
-        ch.field_h = null;
+        ch.screenRankingsRequest = null;
         if (obfuscationGuard != 79) {
           field_s = (UiComponent) null;
         }
@@ -115,7 +115,7 @@ final class RankingsScreen extends MenuScreen {
     final static void a(byte param0, boolean param1) {
         ag.a((byte) -16, false, param1);
         if (param0 >= -61) {
-          field_r = (int[]) null;
+          rankingWins = (int[]) null;
         }
     }
 
@@ -239,14 +239,14 @@ final class RankingsScreen extends MenuScreen {
         ContextActionController.field_g.drawRight(BufferedFile.field_p, ResourceArchive.field_d[4], var2, var3, -1);
         var2Lifetime1 = 149 + (ContextActionController.field_g.capHeight + ContextActionController.field_g.descent) * 5 / 2;
         var4 = null;
-        if (ch.field_h != null &&
-          ch.field_h.field_v) {
-          if (null == ch.field_h.field_r) {
+        if (ch.screenRankingsRequest != null &&
+          ch.screenRankingsRequest.complete) {
+          if (null == ch.screenRankingsRequest.namesBySort) {
             var4Lifetime1 = BoundedFile.field_d;
           } else {
             var4Lifetime1 = ef.field_f;
-            var5 = ch.field_h.field_r[this.sortIndex];
-            var6 = ch.field_h.field_u[this.sortIndex];
+            var5 = ch.screenRankingsRequest.namesBySort[this.sortIndex];
+            var6 = ch.screenRankingsRequest.statisticsBySort[this.sortIndex];
             var7 = 0;
             for (var8 = 0; var8 < 10; var8++) {
               if (var5[var8] != null) {
@@ -259,12 +259,12 @@ final class RankingsScreen extends MenuScreen {
                   Rasterizer2D.fillRectangleAlpha(50, -15 + var2Lifetime1, 540, 18, 16777215, 16);
                 }
                 var4Lifetime1 = null;
-                AchievementIcon.a(var6[4 * var8 + 3], var2Lifetime1, var5[var8], var6[var8 * 4 + 1], var6[4 * var8], var3Lifetime1, -1, var6[var8 * 4 + 2], var8);
+                AchievementIcon.drawRankingRow(var6[4 * var8 + 3], var2Lifetime1, var5[var8], var6[var8 * 4 + 1], var6[4 * var8], var3Lifetime1, -1, var6[var8 * 4 + 2], var8);
               }
               var2Lifetime1 += 18;
             }
             if (var7 == 0) {
-              AchievementIcon.a(ch.field_h.field_j, var2Lifetime1, tb.field_cb, ch.field_h.field_l, ch.field_h.field_n, 1, -1, ch.field_h.field_k, -1);
+              AchievementIcon.drawRankingRow(ch.screenRankingsRequest.localLosses, var2Lifetime1, tb.field_cb, ch.screenRankingsRequest.localWins, ch.screenRankingsRequest.localRating, 1, -1, ch.screenRankingsRequest.localDraws, -1);
             }
           }
         } else {
@@ -334,7 +334,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     public static void g(int param0) {
-        field_r = null;
+        rankingWins = null;
         field_t = null;
         field_s = null;
         if (param0 >= -65) {

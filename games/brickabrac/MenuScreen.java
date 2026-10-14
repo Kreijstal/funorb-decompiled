@@ -317,7 +317,7 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 37) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   be.field_a = true;
-                  cq.a(16727, inputFlag, 0, new LevelSequence(na.field_L[0]));
+                  RankingsRequest.a(16727, inputFlag, 0, new LevelSequence(na.field_L[0]));
                 }
                 break regionExit1;
               }
@@ -524,7 +524,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 33) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  cq.a(16727, inputFlag, IntArrayRequest.gameplayScreen.field_r, IntArrayRequest.gameplayScreen.match.configuration);
+                  RankingsRequest.a(16727, inputFlag, IntArrayRequest.gameplayScreen.field_r, IntArrayRequest.gameplayScreen.match.configuration);
                 }
                 break regionExit1;
               }

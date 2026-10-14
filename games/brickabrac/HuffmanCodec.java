@@ -5,7 +5,7 @@ final class HuffmanCodec {
     private byte[] codeLengths;
     static String[] field_h;
     private int[] decodeTrie;
-    static NodeDeque field_f;
+    static NodeDeque pendingRankingsRequests;
     static int field_g;
     static double field_b;
     static String field_c;
@@ -286,7 +286,7 @@ final class HuffmanCodec {
         field_h = null;
         field_c = null;
         field_e = null;
-        field_f = null;
+        pendingRankingsRequests = null;
         if (param0 != -94) {
           HuffmanCodec.a(119, (byte) 34);
         }
@@ -667,7 +667,7 @@ final class HuffmanCodec {
     }
 
     static {
-        field_f = new NodeDeque();
+        pendingRankingsRequests = new NodeDeque();
         field_c = "Passwords can only contain letters and numbers";
         field_b = 0.0;
         field_d = "Age:";

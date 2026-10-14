@@ -54,7 +54,7 @@ final class nd {
         }
     }
 
-    final static boolean a(boolean param0, int param1, int param2, boolean param3) {
+    final static boolean comesBeforeRankingRow(boolean obfuscationGuard, int leftIndex, int rightIndex, boolean sortByRating) {
         int var4;
         int var5;
         int var4Lifetime1;
@@ -63,74 +63,74 @@ final class nd {
         int var5Lifetime2;
         int var4Lifetime3;
         int var5Lifetime3;
-        if (param3) {
-          if (ec.field_N[param1] > ec.field_N[param2]) {
+        if (sortByRating) {
+          if (ec.rankingRatings[leftIndex] > ec.rankingRatings[rightIndex]) {
             return true;
           }
-          if (ec.field_N[param2] > ec.field_N[param1]) {
+          if (ec.rankingRatings[rightIndex] > ec.rankingRatings[leftIndex]) {
             return false;
           }
-          if (pj.field_b[param1] > pj.field_b[param2]) {
+          if (pj.rankingWinRateThousandths[leftIndex] > pj.rankingWinRateThousandths[rightIndex]) {
             return true;
           }
-          if (pj.field_b[param2] > pj.field_b[param1]) {
+          if (pj.rankingWinRateThousandths[rightIndex] > pj.rankingWinRateThousandths[leftIndex]) {
             return false;
           }
-          if (param0) {
-            var4 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + RankingsScreen.field_r[param2]);
-            var5 = ib.field_D[param1] + RankingsScreen.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
+          if (obfuscationGuard) {
+            var4 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+            var5 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
             if (var5 > var4) {
               return true;
             }
             if (var5 < var4) {
               return false;
             }
-            return !(param1 <= param2);
+            return !(leftIndex <= rightIndex);
           }
           field_c = -96;
-          var4Lifetime3 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + RankingsScreen.field_r[param2]);
-          var5Lifetime3 = ib.field_D[param1] + RankingsScreen.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
+          var4Lifetime3 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+          var5Lifetime3 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
           if (var5Lifetime3 > var4Lifetime3) {
             return true;
           }
           if (var5Lifetime3 < var4Lifetime3) {
             return false;
           }
-          return !(param1 <= param2);
+          return !(leftIndex <= rightIndex);
         }
-        if (pj.field_b[param1] > pj.field_b[param2]) {
+        if (pj.rankingWinRateThousandths[leftIndex] > pj.rankingWinRateThousandths[rightIndex]) {
           return true;
         }
-        if (pj.field_b[param1] < pj.field_b[param2]) {
+        if (pj.rankingWinRateThousandths[leftIndex] < pj.rankingWinRateThousandths[rightIndex]) {
           return false;
         }
-        if (ec.field_N[param1] > ec.field_N[param2]) {
+        if (ec.rankingRatings[leftIndex] > ec.rankingRatings[rightIndex]) {
           return true;
         }
-        if (ec.field_N[param2] > ec.field_N[param1]) {
+        if (ec.rankingRatings[rightIndex] > ec.rankingRatings[leftIndex]) {
           return false;
         }
-        if (param0) {
-          var4Lifetime1 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + RankingsScreen.field_r[param2]);
-          var5Lifetime1 = ib.field_D[param1] + RankingsScreen.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
+        if (obfuscationGuard) {
+          var4Lifetime1 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+          var5Lifetime1 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
           if (var5Lifetime1 < var4Lifetime1) {
             return false;
           }
-          return !(param1 <= param2);
+          return !(leftIndex <= rightIndex);
         }
         field_c = -96;
-        var4Lifetime2 = ib.field_D[param2] + (ObjectHistoryBuffer.field_p[param2] + RankingsScreen.field_r[param2]);
-        var5Lifetime2 = ib.field_D[param1] + RankingsScreen.field_r[param1] + ObjectHistoryBuffer.field_p[param1];
+        var4Lifetime2 = ib.rankingLosses[rightIndex] + (ObjectHistoryBuffer.rankingDraws[rightIndex] + RankingsScreen.rankingWins[rightIndex]);
+        var5Lifetime2 = ib.rankingLosses[leftIndex] + RankingsScreen.rankingWins[leftIndex] + ObjectHistoryBuffer.rankingDraws[leftIndex];
         if (var5Lifetime2 > var4Lifetime2) {
           return true;
         }
         if (var5Lifetime2 < var4Lifetime2) {
           return false;
         }
-        if (param1 <= param2) {
+        if (leftIndex <= rightIndex) {
           return false;
         }
         return true;

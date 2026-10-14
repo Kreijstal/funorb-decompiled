@@ -35,7 +35,7 @@ final class hm {
           wc.field_e = choiceCount;
           oc.field_p = -1L;
           BufferedFile.gameSettingBitWidths = settingBitWidths;
-          cq.gameSettingCount = settingBitWidths.length;
+          RankingsRequest.gameSettingCount = settingBitWidths.length;
           fh.pendingGameOptionsReceived = false;
           rh.matchmakingChoiceMask = new byte[(wc.field_e + 7) / 8];
           o.currentLobbyGame = null;

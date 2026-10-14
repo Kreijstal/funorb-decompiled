@@ -6,7 +6,7 @@ import java.util.*;
 
 final class wi extends dl {
     static String field_h;
-    static int field_m;
+    static int rankingRowCount;
     static QuickChatParameterType field_i;
     private java.net.ProxySelector field_l;
     static UiComponent field_n;

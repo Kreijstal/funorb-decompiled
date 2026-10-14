@@ -7,7 +7,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
     static int[] field_k;
     static String field_j;
     static RgbSprite[][] arcticCapsSprites;
-    static int[] field_p;
+    static int[] rankingDraws;
     int latestIndex;
     private Object[] entries;
     private int capacity;
@@ -16,7 +16,7 @@ final class ObjectHistoryBuffer extends IntrusiveNode {
         field_j = null;
         arcticCapsSprites = (RgbSprite[][]) null;
         ninjaCharacterSprite = null;
-        field_p = null;
+        rankingDraws = null;
         if (param0 <= 36) {
           return;
         }

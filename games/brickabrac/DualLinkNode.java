@@ -159,7 +159,7 @@ class DualLinkNode extends IntrusiveNode {
 
     final boolean isSecondaryLinked(int obfuscationGuard) {
         if (obfuscationGuard != 2) {
-          DualLinkNode.a((byte) 86, 25, 9);
+          DualLinkNode.prepareRankingScratch((byte) 86, 25, 9);
         }
         if (null == this.secondaryPrevious) {
           return false;
@@ -177,44 +177,44 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryKey = key;
     }
 
-    final static void a(byte param0, int param1, int param2) {
-        if (null == cf.field_c ||
-          !(param1 <= cf.field_c.length)) {
-          cf.field_c = new int[param1 * 2];
+    final static void prepareRankingScratch(byte obfuscationGuard, int recordCount, int rowLimit) {
+        if (null == cf.rankingSourceIndices ||
+          !(recordCount <= cf.rankingSourceIndices.length)) {
+          cf.rankingSourceIndices = new int[recordCount * 2];
         }
-        if (ec.field_N == null ||
-          !(ec.field_N.length >= param1)) {
-          ec.field_N = new int[param1 * 2];
+        if (ec.rankingRatings == null ||
+          !(ec.rankingRatings.length >= recordCount)) {
+          ec.rankingRatings = new int[recordCount * 2];
         }
-        if (RankingsScreen.field_r == null ||
-          !(RankingsScreen.field_r.length >= param1)) {
-          RankingsScreen.field_r = new int[param1 * 2];
+        if (RankingsScreen.rankingWins == null ||
+          !(RankingsScreen.rankingWins.length >= recordCount)) {
+          RankingsScreen.rankingWins = new int[recordCount * 2];
         }
-        if (ObjectHistoryBuffer.field_p == null ||
-          !(param1 <= ObjectHistoryBuffer.field_p.length)) {
-          ObjectHistoryBuffer.field_p = new int[param1 * 2];
+        if (ObjectHistoryBuffer.rankingDraws == null ||
+          !(recordCount <= ObjectHistoryBuffer.rankingDraws.length)) {
+          ObjectHistoryBuffer.rankingDraws = new int[recordCount * 2];
         }
-        if (null == ib.field_D ||
-          !(param1 <= ib.field_D.length)) {
-          ib.field_D = new int[2 * param1];
+        if (null == ib.rankingLosses ||
+          !(recordCount <= ib.rankingLosses.length)) {
+          ib.rankingLosses = new int[2 * recordCount];
         }
-        if (pj.field_b == null ||
-          !(pj.field_b.length >= param1)) {
-          pj.field_b = new int[2 * param1];
+        if (pj.rankingWinRateThousandths == null ||
+          !(pj.rankingWinRateThousandths.length >= recordCount)) {
+          pj.rankingWinRateThousandths = new int[2 * recordCount];
         }
-        if (VerticalScrollbar.field_Pb == null ||
-          !(param2 + param1 <= VerticalScrollbar.field_Pb.length)) {
-          VerticalScrollbar.field_Pb = new int[2 * (param2 + param1)];
+        if (VerticalScrollbar.rankingSortIndices == null ||
+          !(rowLimit + recordCount <= VerticalScrollbar.rankingSortIndices.length)) {
+          VerticalScrollbar.rankingSortIndices = new int[2 * (rowLimit + recordCount)];
         }
         if (null == ga.field_l ||
-          !(ga.field_l.length >= param1)) {
-          ga.field_l = new boolean[2 * param1];
+          !(ga.field_l.length >= recordCount)) {
+          ga.field_l = new boolean[2 * recordCount];
         }
         BoundedFile.field_l = -2147483648;
-        if (param0 < 0) {
+        if (obfuscationGuard < 0) {
           return;
         }
-        wi.field_m = 0;
+        wi.rankingRowCount = 0;
         ba.field_w = 2147483647;
         IntArrayRequest.field_u = 2147483647;
         uf.field_b = -2147483648;

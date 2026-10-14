@@ -6,7 +6,7 @@ final class fh {
     static String field_e;
     static int[] viewVertexX;
     static int field_g;
-    static int field_c;
+    static int decodedRankingDraws;
     static boolean pendingGameOptionsReceived;
     static String[] field_h;
     static String field_b;

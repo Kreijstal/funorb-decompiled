@@ -60,9 +60,9 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if (obfuscationGuard != 26573) {
             field_f = (String) null;
           }
-          previousTickMillis = sm.tickTimes[cq.tickTimeCursor];
-          sm.tickTimes[cq.tickTimeCursor] = nowMillis;
-          cq.tickTimeCursor = 31 & 1 + cq.tickTimeCursor;
+          previousTickMillis = sm.tickTimes[RankingsRequest.tickTimeCursor];
+          sm.tickTimes[RankingsRequest.tickTimeCursor] = nowMillis;
+          RankingsRequest.tickTimeCursor = 31 & 1 + RankingsRequest.tickTimeCursor;
           if (0L != previousTickMillis &&
             previousTickMillis < nowMillis) {
           }

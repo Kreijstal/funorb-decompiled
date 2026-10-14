@@ -8,7 +8,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
     static RgbSprite field_F;
     static String field_z;
     static String[] field_E;
-    static String[] field_B;
+    static String[] receivedRankingNames;
     static String field_J;
     static boolean field_C;
     static RgbSprite field_I;
@@ -22,7 +22,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         field_F = null;
         viewFacePointTwoZ = null;
         field_J = null;
-        field_B = null;
+        receivedRankingNames = null;
         field_z = null;
         field_I = null;
         field_E = null;
@@ -78,7 +78,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         field_E = new String[]{"By rating", "By win percentage"};
         field_z = "Please send me news and updates (I can unsubscribe at any time)";
         field_J = null;
-        field_B = new String[255];
+        receivedRankingNames = new String[255];
         viewFacePointTwoZ = new int[8192];
     }
 }

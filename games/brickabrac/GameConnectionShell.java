@@ -268,7 +268,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             ScrollPaneWithFooter.b(6, 0);
           }
           if (uf.enabledCommonPackets[6]) {
-            qn.a((byte) 119, 7);
+            qn.resendPendingRankingsRequests((byte) 119, 7);
           }
           if (uf.enabledCommonPackets[8]) {
             we.a((byte) -46);
@@ -550,7 +550,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                         this.f(stackIn_22_1);
                       }
                     } else {
-                      wl.c(false);
+                      wl.handleRankingsResponse(false);
                     }
                   } else {
                     MenuSelection.f((byte) -71);

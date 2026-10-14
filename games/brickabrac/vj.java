@@ -4,7 +4,7 @@
 final class vj {
     static n field_e;
     TabbedPane field_d;
-    static int field_c;
+    static int decodedRankingRating;
     static RgbSprite field_b;
     static UiComponent[] field_a;
     static int[] field_f;

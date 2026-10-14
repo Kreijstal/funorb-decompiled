@@ -341,7 +341,7 @@ final class LevelSelectScreen extends MenuScreen {
               return false;
             }
             if (this.levelList.selectedLevelIndex < this.pack.levelCount) {
-              cq.a(16727, inputFlag, this.levelList.selectedLevelIndex, new LevelSequence(this.pack));
+              RankingsRequest.a(16727, inputFlag, this.levelList.selectedLevelIndex, new LevelSequence(this.pack));
             }
           }
         } else {

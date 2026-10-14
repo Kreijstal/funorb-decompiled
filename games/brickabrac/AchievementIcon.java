@@ -19,26 +19,26 @@ final class AchievementIcon extends IntrusiveNode {
     static ScrollPane field_q;
     int y;
 
-    final static void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void drawRankingRow(int losses, int baselineY, String name, int wins, int rating, int textStyle, int winsShadowColor, int draws, int rankIndex) {
         int var9_int = 0;
         try {
-          var9_int = param0 + (param3 + param7);
+          var9_int = losses + (wins + draws);
           if (var9_int != 0) {
-            param7 = (var9_int + 200 * param7) / (2 * var9_int);
-            param0 = (var9_int + 200 * param0) / (var9_int * 2);
-            param3 = (param3 * 200 + var9_int) / (var9_int * 2);
+            draws = (var9_int + 200 * draws) / (2 * var9_int);
+            losses = (var9_int + 200 * losses) / (var9_int * 2);
+            wins = (wins * 200 + var9_int) / (var9_int * 2);
           }
-          if (-1 != param8) {
-            ob.field_D.drawRight(1 + param8 + ". ", qo.field_N + 54, param1, param5, -1);
+          if (-1 != rankIndex) {
+            ob.field_D.drawRight(1 + rankIndex + ". ", qo.field_N + 54, baselineY, textStyle, -1);
           }
-          ob.field_D.drawLeft(param2, 54 + qo.field_N, param1, param5, -1);
-          ob.field_D.drawRight(Integer.toString(param4), ResourceArchive.field_d[0], param1, param5, -1);
-          ob.field_D.drawRight(var9_int < 50 ? Integer.toString(var9_int) : "50+", ResourceArchive.field_d[1], param1, param5, -1);
-          ob.field_D.drawRight(param3 + "%", ResourceArchive.field_d[2], param1, param5, param6);
-          ob.field_D.drawRight(param0 + "%", ResourceArchive.field_d[3], param1, param5, -1);
-          ob.field_D.drawRight(param7 + "%", ResourceArchive.field_d[4], param1, param5, -1);
+          ob.field_D.drawLeft(name, 54 + qo.field_N, baselineY, textStyle, -1);
+          ob.field_D.drawRight(Integer.toString(rating), ResourceArchive.field_d[0], baselineY, textStyle, -1);
+          ob.field_D.drawRight(var9_int < 50 ? Integer.toString(var9_int) : "50+", ResourceArchive.field_d[1], baselineY, textStyle, -1);
+          ob.field_D.drawRight(wins + "%", ResourceArchive.field_d[2], baselineY, textStyle, winsShadowColor);
+          ob.field_D.drawRight(losses + "%", ResourceArchive.field_d[3], baselineY, textStyle, -1);
+          ob.field_D.drawRight(draws + "%", ResourceArchive.field_d[4], baselineY, textStyle, -1);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "i.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "i.H(" + losses + ',' + baselineY + ',' + (name != null ? "{...}" : "null") + ',' + wins + ',' + rating + ',' + textStyle + ',' + winsShadowColor + ',' + draws + ',' + rankIndex + ')');
         }
     }
 

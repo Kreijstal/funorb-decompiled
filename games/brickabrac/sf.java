@@ -3,7 +3,7 @@
  */
 final class sf extends vb implements je {
     static RgbSprite[] field_V;
-    static int field_Z;
+    static int decodedRankingLosses;
     private int field_ab;
     static String field_bb;
     static String field_X;

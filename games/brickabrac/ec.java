@@ -9,7 +9,7 @@ final class ec extends ib implements en {
     private int field_M;
     static boolean field_O;
     static PlatformServices field_P;
-    static int[] field_N;
+    static int[] rankingRatings;
     private String field_R;
     static String field_S;
     private TextFont field_H;
@@ -319,7 +319,7 @@ final class ec extends ib implements en {
         if (param0 != 0) {
           field_Q = (BackgroundScene) null;
         }
-        field_N = null;
+        rankingRatings = null;
         field_L = null;
         field_S = null;
         field_P = null;

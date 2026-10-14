@@ -19,17 +19,17 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         savePrompts = null;
     }
 
-    final static void a(int param0, cq param1, int param2) {
+    final static void sendRankingsRequest(int obfuscationGuard, RankingsRequest request, int opcode) {
         BitPacketBuffer var3 = k.outgoingPackets;
-        if (param0 != -21167) {
+        if (obfuscationGuard != -21167) {
           return;
         }
         try {
-          var3.writeCipheredOpcode(-13413, param2);
-          var3.writeByte(-113, param1.field_m);
-          var3.writeByte(param0 ^ 21215, param1.field_s);
+          var3.writeCipheredOpcode(-13413, opcode);
+          var3.writeByte(-113, request.rankingKind);
+          var3.writeByte(obfuscationGuard ^ 21215, request.rowLimit);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "gn.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "gn.C(" + obfuscationGuard + ',' + (request != null ? "{...}" : "null") + ',' + opcode + ')');
         }
     }
 

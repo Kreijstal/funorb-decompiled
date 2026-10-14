@@ -4,7 +4,7 @@
 import java.util.*;
 
 class ib extends oc implements sd {
-    static int[] field_D;
+    static int[] rankingLosses;
     static RgbSprite field_E;
     static String field_F;
     static String field_C;
@@ -196,7 +196,7 @@ class ib extends oc implements sd {
         field_E = null;
         field_F = null;
         int var1 = -92 / ((param0 + 2) / 38);
-        field_D = null;
+        rankingLosses = null;
         field_C = null;
     }
 

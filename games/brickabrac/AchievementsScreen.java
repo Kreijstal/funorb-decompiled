@@ -36,7 +36,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
           }
           for (var4 = param0; var4 < param2.length(); var4++) {
             if (!UiComponent.a(true, param2.charAt(var4))) {
-              stackIn_11_0 = cq.field_i;
+              stackIn_11_0 = RankingsRequest.field_i;
               return stackIn_11_0;
             }
           }

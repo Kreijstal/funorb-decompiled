@@ -867,7 +867,7 @@ public final class BrickABrac extends InteractiveGameClient {
         TableDataRequest.a(136);
         TableRowSubmission.a(-241);
         TableNameEntry.a((byte) -105);
-        cq.a((byte) -105);
+        RankingsRequest.a((byte) -105);
         hi.c((byte) -93);
         bb.a(false);
         r.d((byte) 91);

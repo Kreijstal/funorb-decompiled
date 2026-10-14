@@ -399,12 +399,12 @@ final class nh {
               var10 = 2;
               if (null != ContextMenu.field_bc) {
                 if (qo.field_J == null) {
-                  h.field_D = new boolean[cq.gameSettingCount];
-                  qo.field_J = new byte[cq.gameSettingCount];
+                  h.field_D = new boolean[RankingsRequest.gameSettingCount];
+                  qo.field_J = new byte[RankingsRequest.gameSettingCount];
                 }
                 var11 = 0;
                 do {
-                  if (!(cq.gameSettingCount > var11)) {
+                  if (!(RankingsRequest.gameSettingCount > var11)) {
                     var10 = 0;
                     break;
                   }
@@ -502,7 +502,7 @@ final class nh {
                   var12 = 0;
                   var13 = 0;
                   while (true) {
-                    if (cq.gameSettingCount > var13) {
+                    if (RankingsRequest.gameSettingCount > var13) {
                       stackOut_80_0 = h.field_D[var13];
                       stackIn_87_0 = stackOut_80_0 ? 1 : 0;
                       stackIn_81_0 = stackOut_80_0;
@@ -559,7 +559,7 @@ final class nh {
                 var15 = 0;
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!(cq.gameSettingCount > var16)))) {
+                while (!(decompiledNaturalLoopExit0 = (!(RankingsRequest.gameSettingCount > var16)))) {
                   var17_int = 255 & o.currentLobbyGame.settings[var16];
                   if (var19 == 0) {
                     if (NodeDeque.field_a != null &&

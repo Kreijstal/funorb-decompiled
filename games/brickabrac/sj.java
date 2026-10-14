@@ -306,7 +306,7 @@ final class sj {
                     var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
                     updatedGame = (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)var3_int, -1));
                     if (updatedGame == null) {
-                      updatedGame = new LobbyGame(cq.gameSettingCount);
+                      updatedGame = new LobbyGame(RankingsRequest.gameSettingCount);
                       LevelResultSubmission.lobbyGameIndex.put((long)var3_int, updatedGame, 47);
                     }
                     eb.decodeLobbyGame(updatedGame, packet, 0, true);
@@ -498,7 +498,7 @@ final class sj {
             }
             if (4 == responseKind) {
               var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
-              o.currentLobbyGame = new LobbyGame(cq.gameSettingCount);
+              o.currentLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
               o.currentLobbyGame.setSecondaryKey((long)var3_int, -105);
               eb.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
               ic.optionChangeDeadlineMillis = 0L;
@@ -510,7 +510,7 @@ final class sj {
               nl.pendingLobbyGame = null;
             } else {
               if (null == nl.pendingLobbyGame) {
-                nl.pendingLobbyGame = new LobbyGame(cq.gameSettingCount);
+                nl.pendingLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
               }
             }
             if (responseKind != 3) {

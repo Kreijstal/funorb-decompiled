@@ -330,8 +330,8 @@ final class so {
           AlignedIconLabel.field_Sb = ap.field_a.copy();
           AlignedIconLabel.field_Sb.rotateCounterclockwise();
           dg.field_e = pl.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
-          cq.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
-          cq.field_o.bindRasterTarget();
+          RankingsRequest.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
+          RankingsRequest.field_o.bindRasterTarget();
           dg.field_e.a(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 118);
           var10 = pl.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);

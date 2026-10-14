@@ -15,7 +15,7 @@ final class vh extends d {
     int field_Z;
     static String field_P;
     static String field_Y;
-    static int field_U;
+    static int decodedRankingWins;
     int field_O;
     static String field_M;
 

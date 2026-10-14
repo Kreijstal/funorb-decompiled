@@ -18,7 +18,7 @@ final class MessageScreen extends MenuScreen {
         MessageScreen.a((String) null, -65L, 54);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void appendRankingStatistics(int rating, int draws, int sourceIndex, int obfuscationGuard, int losses, int wins) {
         int stackIn_8_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_39_0 = 0;
@@ -30,101 +30,101 @@ final class MessageScreen extends MenuScreen {
         int var7Lifetime1;
         int var6Lifetime2;
         int var7Lifetime2;
-        if (param3 == -19824) {
-          cf.field_c[wi.field_m] = param2;
-          VerticalScrollbar.field_Pb[wi.field_m] = wi.field_m;
-          ec.field_N[wi.field_m] = param0;
-          if (param0 <= BoundedFile.field_l) {
-            if (IntArrayRequest.field_u > param0) {
-              ba.field_w = param0;
+        if (obfuscationGuard == -19824) {
+          cf.rankingSourceIndices[wi.rankingRowCount] = sourceIndex;
+          VerticalScrollbar.rankingSortIndices[wi.rankingRowCount] = wi.rankingRowCount;
+          ec.rankingRatings[wi.rankingRowCount] = rating;
+          if (rating <= BoundedFile.field_l) {
+            if (IntArrayRequest.field_u > rating) {
+              ba.field_w = rating;
             }
-            RankingsScreen.field_r[wi.field_m] = param5;
-            ObjectHistoryBuffer.field_p[wi.field_m] = param1;
-            ib.field_D[wi.field_m] = param4;
-            var6 = param1 + param5 + param4;
+            RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
+            ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
+            ib.rankingLosses[wi.rankingRowCount] = losses;
+            var6 = draws + wins + losses;
             if (0 != var6) {
-              stackIn_54_0 = 1000 * param5 / var6;
+              stackIn_54_0 = 1000 * wins / var6;
             } else {
               stackIn_54_0 = 0;
             }
             var7 = stackIn_54_0;
-            pj.field_b[wi.field_m] = var7;
+            pj.rankingWinRateThousandths[wi.rankingRowCount] = var7;
             if (uf.field_b < var7) {
               uf.field_b = var7;
             }
             if (ba.field_w > var7) {
               ba.field_w = var7;
             }
-            wi.field_m = wi.field_m + 1;
+            wi.rankingRowCount = wi.rankingRowCount + 1;
             return;
           }
-          uf.field_b = param0;
-          if (IntArrayRequest.field_u > param0) {
-            ba.field_w = param0;
+          uf.field_b = rating;
+          if (IntArrayRequest.field_u > rating) {
+            ba.field_w = rating;
           }
-          RankingsScreen.field_r[wi.field_m] = param5;
-          ObjectHistoryBuffer.field_p[wi.field_m] = param1;
-          ib.field_D[wi.field_m] = param4;
-          var6Lifetime2 = param1 + param5 + param4;
+          RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
+          ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
+          ib.rankingLosses[wi.rankingRowCount] = losses;
+          var6Lifetime2 = draws + wins + losses;
           if (0 != var6Lifetime2) {
-            stackIn_39_0 = 1000 * param5 / var6Lifetime2;
+            stackIn_39_0 = 1000 * wins / var6Lifetime2;
           } else {
             stackIn_39_0 = 0;
           }
           var7Lifetime2 = stackIn_39_0;
-          pj.field_b[wi.field_m] = var7Lifetime2;
+          pj.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime2;
           if (uf.field_b < var7Lifetime2) {
             uf.field_b = var7Lifetime2;
           }
           if (ba.field_w > var7Lifetime2) {
             ba.field_w = var7Lifetime2;
           }
-          wi.field_m = wi.field_m + 1;
+          wi.rankingRowCount = wi.rankingRowCount + 1;
           return;
         }
         var8 = (StringBuilder) null;
         MessageScreen.resizeAndFillTextBuffer('￰', (StringBuilder) null, -124, false);
-        cf.field_c[wi.field_m] = param2;
-        VerticalScrollbar.field_Pb[wi.field_m] = wi.field_m;
-        ec.field_N[wi.field_m] = param0;
-        if (param0 <= BoundedFile.field_l) {
-          if (IntArrayRequest.field_u > param0) {
-            ba.field_w = param0;
+        cf.rankingSourceIndices[wi.rankingRowCount] = sourceIndex;
+        VerticalScrollbar.rankingSortIndices[wi.rankingRowCount] = wi.rankingRowCount;
+        ec.rankingRatings[wi.rankingRowCount] = rating;
+        if (rating <= BoundedFile.field_l) {
+          if (IntArrayRequest.field_u > rating) {
+            ba.field_w = rating;
           }
-          RankingsScreen.field_r[wi.field_m] = param5;
-          ObjectHistoryBuffer.field_p[wi.field_m] = param1;
-          ib.field_D[wi.field_m] = param4;
-          var6Lifetime1 = param1 + param5 + param4;
+          RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
+          ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
+          ib.rankingLosses[wi.rankingRowCount] = losses;
+          var6Lifetime1 = draws + wins + losses;
           if (0 != var6Lifetime1) {
-            stackIn_8_0 = 1000 * param5 / var6Lifetime1;
+            stackIn_8_0 = 1000 * wins / var6Lifetime1;
           } else {
             stackIn_8_0 = 0;
           }
           var7Lifetime1 = stackIn_8_0;
         } else {
-          uf.field_b = param0;
-          if (IntArrayRequest.field_u > param0) {
-            ba.field_w = param0;
+          uf.field_b = rating;
+          if (IntArrayRequest.field_u > rating) {
+            ba.field_w = rating;
           }
-          RankingsScreen.field_r[wi.field_m] = param5;
-          ObjectHistoryBuffer.field_p[wi.field_m] = param1;
-          ib.field_D[wi.field_m] = param4;
-          var6Lifetime1 = param1 + param5 + param4;
+          RankingsScreen.rankingWins[wi.rankingRowCount] = wins;
+          ObjectHistoryBuffer.rankingDraws[wi.rankingRowCount] = draws;
+          ib.rankingLosses[wi.rankingRowCount] = losses;
+          var6Lifetime1 = draws + wins + losses;
           if (0 != var6Lifetime1) {
-            stackIn_23_0 = 1000 * param5 / var6Lifetime1;
+            stackIn_23_0 = 1000 * wins / var6Lifetime1;
           } else {
             stackIn_23_0 = 0;
           }
           var7Lifetime1 = stackIn_23_0;
         }
-        pj.field_b[wi.field_m] = var7Lifetime1;
+        pj.rankingWinRateThousandths[wi.rankingRowCount] = var7Lifetime1;
         if (uf.field_b < var7Lifetime1) {
           uf.field_b = var7Lifetime1;
         }
         if (ba.field_w > var7Lifetime1) {
           ba.field_w = var7Lifetime1;
         }
-        wi.field_m = wi.field_m + 1;
+        wi.rankingRowCount = wi.rankingRowCount + 1;
         return;
     }
 

@@ -12,7 +12,7 @@ final class ch {
     static int[] incomingPacketLengths;
     static String field_j;
     static String field_e;
-    static cq field_h;
+    static RankingsRequest screenRankingsRequest;
     static String field_d;
     static String field_i;
 
@@ -184,7 +184,7 @@ final class ch {
           }
           field_l = null;
           field_m = null;
-          field_h = null;
+          screenRankingsRequest = null;
           jungleNearSprite = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -215,7 +215,7 @@ final class ch {
         field_j = "Genius!";
         field_e = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
         field_d = "Players";
-        field_h = null;
+        screenRankingsRequest = null;
         field_i = "Blind: distorts your screen";
     }
 }

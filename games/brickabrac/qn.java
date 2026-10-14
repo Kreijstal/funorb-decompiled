@@ -100,26 +100,26 @@ final class qn {
         return;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendPendingRankingsRequests(byte obfuscationGuard, int opcode) {
         int var3 = 0;
-        cq var4 = null;
+        RankingsRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 <= 118) {
+          if (obfuscationGuard <= 118) {
             qn.a(17, -27, -12, -54, -92);
           }
-          var4 = (cq) (HuffmanCodec.field_f.first(-99));
+          var4 = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.first(-99));
           while (var4 != null) {
-            MultiplayerExitScreen.a(-21167, var4, param1);
-            var4 = (cq) (HuffmanCodec.field_f.next((byte) 116));
+            MultiplayerExitScreen.sendRankingsRequest(-21167, var4, opcode);
+            var4 = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "qn.I(" + param0 + ',' + param1 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "qn.I(" + obfuscationGuard + ',' + opcode + ')');
         }
     }
 
