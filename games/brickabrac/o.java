@@ -3,7 +3,7 @@
  */
 final class o {
     static n field_g;
-    static om field_e;
+    static LobbyGame field_e;
     static int field_f;
     static String field_a;
     static ScrollPane field_b;

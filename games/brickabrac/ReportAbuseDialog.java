@@ -229,7 +229,7 @@ final class ReportAbuseDialog extends UiComponent {
           this.body = new UiComponent(0L, (UiComponent) null);
           this.addChild(this.body, 0);
           if (playerName != null) {
-            this.instructions = new UiComponent(0L, textStyle, om.field_rc);
+            this.instructions = new UiComponent(0L, textStyle, LobbyGame.field_rc);
             this.instructions.horizontalAlignment = 1;
             this.instructions.textColor = 11184810;
             this.body.addChild(this.instructions, 0);

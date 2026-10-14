@@ -185,10 +185,10 @@ final class sj {
     }
 
     final static void a(byte param0) {
-        id stackIn_111_0 = null;
+        LobbyPlayer stackIn_111_0 = null;
         boolean stackIn_112_1 = false;
         int stackIn_133_0 = 0;
-        id stackIn_139_0 = null;
+        LobbyPlayer stackIn_139_0 = null;
         boolean stackIn_140_1 = false;
         RuntimeException decompiledCaughtException = null;
         BitPacketBuffer var1 = null;
@@ -196,41 +196,41 @@ final class sj {
         int var2 = 0;
         long var3 = 0L;
         int var3_int = 0;
-        id var3_ref_id = null;
+        LobbyPlayer var3_ref_id = null;
         int var4 = 0;
-        om var4_ref_om = null;
+        LobbyGame var4_ref_om = null;
         int var5 = 0;
         String var6 = null;
-        om var6_ref = null;
-        id var7 = null;
-        id var8 = null;
+        LobbyGame var6_ref = null;
+        LobbyPlayer var7 = null;
+        LobbyPlayer var8 = null;
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        id var14 = null;
-        id var15 = null;
-        om var16 = null;
+        LobbyPlayer var14 = null;
+        LobbyPlayer var15 = null;
+        LobbyGame var16 = null;
         Object var17 = null;
         Object var18 = null;
-        om var18_ref = null;
+        LobbyGame var18_ref = null;
         Object var19 = null;
         Object var20 = null;
-        om var20_ref = null;
-        id var21 = null;
+        LobbyGame var20_ref = null;
+        LobbyPlayer var21 = null;
         Object var22 = null;
-        om var23 = null;
-        id var24 = null;
-        id var25 = null;
+        LobbyGame var23 = null;
+        LobbyPlayer var24 = null;
+        LobbyPlayer var25 = null;
         String var26 = null;
         String var27 = null;
-        id var28 = null;
+        LobbyPlayer var28 = null;
         String var29 = null;
         String var30 = null;
-        id var31 = null;
-        om var32 = null;
-        om var33 = null;
-        id var34 = null;
+        LobbyPlayer var31 = null;
+        LobbyGame var32 = null;
+        LobbyGame var33 = null;
+        LobbyPlayer var34 = null;
         var22 = null;
         var17 = null;
         var20 = null;
@@ -257,21 +257,21 @@ final class sj {
                 var9 = stackIn_133_0;
                 if (var31 != null) {
                   if (var9 != 0) {
-                    var31.a(var30, var29, (byte) -121);
+                    var31.updateNames(var30, var29, (byte) -121);
                   }
                 } else {
-                  var8 = new id(var29, var30, var3);
+                  var8 = new LobbyPlayer(var29, var30, var3);
                   eq.field_m.put(var3, var8, 86);
                 }
-                var8.field_Xb = MonotonicTime.nowMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(255);
-                var8.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                var8.arrivalTimeMillis = MonotonicTime.nowMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(255);
+                var8.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                 var10 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 110);
-                var8.field_ac = var10 >> 1;
+                var8.ratedGameCount = var10 >> 1;
                 stackIn_139_0 = var8;
                 stackIn_140_1 = ((1 & var10) != 0);
-                stackIn_139_0.field_ec = stackIn_140_1;
-                var8.field_Zb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var8.field_Ub = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+                stackIn_139_0.member = stackIn_140_1;
+                var8.badgeId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
+                var8.optionEligibilityMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 wl.a(var8, 17574);
                 break regionExit1;
               }
@@ -280,58 +280,58 @@ final class sj {
                 var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
                 var21 = MatchCompleteScreen.a((byte) 96, var3);
                 if ((var21 != null)) {
-                  if (var21.field_fc) {
+                  if (var21.joinRequestPending) {
                     uf.field_c = uf.field_c - 1;
-                    var21.field_fc = false;
+                    var21.joinRequestPending = false;
                   }
                   if (var5 == 0) {
                     var21.unlink((byte) 111);
                   } else {
-                    var21.field_kc = var5;
-                    var21.field_ic = cm.field_o;
+                    var21.removalStatus = var5;
+                    var21.statusChangeTick = cm.field_o;
                   }
                   var21.unlinkSecondary(param0 ^ 34);
                 }
               } else {
                 if (var2 == 7) {
-                  var34 = (id) (ua.field_c.first(-61));
+                  var34 = (LobbyPlayer) (ua.field_c.first(-61));
                   while (var34 != null) {
                     var34.unlink((byte) 111);
                     var34.unlinkSecondary(3);
-                    var34 = (id) (ua.field_c.next((byte) 116));
+                    var34 = (LobbyPlayer) (ua.field_c.next((byte) 116));
                   }
                   uf.field_c = 0;
                 } else {
                   if (var2 == 8) {
                     var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                    var4_ref_om = (om) (LevelResultSubmission.field_i.get((long)var3_int, -1));
+                    var4_ref_om = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, -1));
                     if (var4_ref_om == null) {
-                      var4_ref_om = new om(cq.field_p);
+                      var4_ref_om = new LobbyGame(cq.field_p);
                       LevelResultSubmission.field_i.put((long)var3_int, var4_ref_om, 47);
                     }
-                    eb.a(var4_ref_om, var1, 0, true);
+                    eb.decodeLobbyGame(var4_ref_om, var1, 0, true);
                     ic.a(true, var4_ref_om);
                   } else {
                     if (9 == var2) {
                       var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                       var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                      var32 = (om) (LevelResultSubmission.field_i.get((long)var3_int, -1));
+                      var32 = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, -1));
                       if ((var32 != null)) {
                         if (var4 == 0) {
                           var32.unlink((byte) 111);
                         } else {
-                          var32.field_Zb = var4;
-                          var32.field_Wb = cm.field_o;
+                          var32.removalStatus = var4;
+                          var32.statusChangeTick = cm.field_o;
                         }
                         var32.unlinkSecondary(3);
                       }
                     } else {
                       if (var2 == 10) {
-                        var33 = (om) (rq.field_a.first(-62));
+                        var33 = (LobbyGame) (rq.field_a.first(-62));
                         while (var33 != null) {
                           var33.unlink((byte) 111);
                           var33.unlinkSecondary(3);
-                          var33 = (om) (rq.field_a.next((byte) 116));
+                          var33 = (LobbyGame) (rq.field_a.next((byte) 116));
                         }
                       } else {
                         if (var2 != 11 &&
@@ -339,15 +339,15 @@ final class sj {
                           if (var2 == 13) {
                             var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                             var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                            var18_ref = (om) (LevelResultSubmission.field_i.get((long)var3_int, param0 - 34));
+                            var18_ref = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, param0 - 34));
                             if ((var18_ref != null)) {
                               var16 = var18_ref;
                               var6_ref = var16;
-                              var18_ref.field_dc = false;
-                              var16.field_Pb = false;
+                              var18_ref.joinRequestPending = false;
+                              var16.invitationPending = false;
                               if (var4 != 0) {
-                                var18_ref.field_Zb = var4;
-                                var18_ref.field_Wb = cm.field_o;
+                                var18_ref.removalStatus = var4;
+                                var18_ref.statusChangeTick = cm.field_o;
                               }
                               ic.a(true, var18_ref);
                             }
@@ -363,18 +363,18 @@ final class sj {
                                     var27 = ((PacketBuffer) ((Object) var1)).readCp1252String(param0 - 34);
                                     var7 = ac.a(var3, 2);
                                     if (var7 == null) {
-                                      var7 = new id(var26, var27, var3);
+                                      var7 = new LobbyPlayer(var26, var27, var3);
                                       BrickABrac.field_F.put(var3, var7, 48);
-                                      o.field_e.field_cc = o.field_e.field_cc + 1;
+                                      o.field_e.playerCount = o.field_e.playerCount + 1;
                                     }
-                                    var7.field_Wb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                                    var7.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
                                     var8_int = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 127);
                                     stackIn_111_0 = var7;
                                     stackIn_112_1 = (0 != (var8_int & 1));
-                                    stackIn_111_0.field_ec = stackIn_112_1;
-                                    var7.field_ac = var8_int >> 1;
-                                    var7.field_Zb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
-                                    var7.field_Ub = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
+                                    stackIn_111_0.member = stackIn_112_1;
+                                    var7.ratedGameCount = var8_int >> 1;
+                                    var7.badgeId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
+                                    var7.optionEligibilityMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
                                     SocialListEntry.field_Tb.addLast(var7, (byte) 3);
                                     break regionExit1;
                                   case 19:
@@ -388,14 +388,14 @@ final class sj {
                                     if (0 == var5) {
                                       var25.unlink((byte) 111);
                                     } else {
-                                      var14.field_ic = cm.field_o;
-                                      var14.field_kc = var5;
+                                      var14.statusChangeTick = cm.field_o;
+                                      var14.removalStatus = var5;
                                     }
                                     var25.unlinkSecondary(param0 - 30);
-                                    o.field_e.field_cc = o.field_e.field_cc - 1;
+                                    o.field_e.playerCount = o.field_e.playerCount - 1;
                                     break regionExit1;
                                   case 20:
-                                    eb.a(o.field_e, var1, 0, false);
+                                    eb.decodeLobbyGame(o.field_e, var1, 0, false);
                                     break regionExit1;
                                   case 21:
                                     var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
@@ -424,16 +424,16 @@ final class sj {
                               var28 = var15;
                               if ((var15 != null)) {
                                 if (15 != var2) {
-                                  if (var28.field_fc) {
-                                    var28.field_fc = false;
+                                  if (var28.joinRequestPending) {
+                                    var28.joinRequestPending = false;
                                     uf.field_c = uf.field_c - 1;
                                   }
                                 } else {
-                                  var15.field_Qb = false;
+                                  var15.invitationPending = false;
                                 }
                                 if (var5 != 0) {
-                                  var28.field_ic = cm.field_o;
-                                  var28.field_kc = var5;
+                                  var28.statusChangeTick = cm.field_o;
+                                  var28.removalStatus = var5;
                                 }
                                 wl.a(var28, 17574);
                               }
@@ -442,12 +442,12 @@ final class sj {
                               var24 = MatchCompleteScreen.a((byte) 96, var3);
                               if ((var24 != null)) {
                                 if (var2 != 14) {
-                                  if (!var24.field_fc) {
+                                  if (!var24.joinRequestPending) {
                                     uf.field_c = uf.field_c + 1;
-                                    var24.field_fc = true;
+                                    var24.joinRequestPending = true;
                                   }
                                 } else {
-                                  var24.field_Qb = true;
+                                  var24.invitationPending = true;
                                 }
                                 wl.a(var24, 17574);
                               }
@@ -455,13 +455,13 @@ final class sj {
                           }
                         } else {
                           var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                          var20_ref = (om) (LevelResultSubmission.field_i.get((long)var3_int, -1));
+                          var20_ref = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, -1));
                           var23 = var20_ref;
                           if ((var23 != null)) {
                             if (var2 != 11) {
-                              var23.field_dc = true;
+                              var23.joinRequestPending = true;
                             } else {
-                              var23.field_Pb = true;
+                              var23.invitationPending = true;
                             }
                             ic.a(true, var23);
                           }
@@ -473,34 +473,34 @@ final class sj {
               }
               break regionExit1;
             }
-            var3_ref_id = (id) (SocialListEntry.field_Tb.first(-8));
+            var3_ref_id = (LobbyPlayer) (SocialListEntry.field_Tb.first(-8));
             while (var3_ref_id != null) {
               var3_ref_id.unlink((byte) 111);
               var3_ref_id.unlinkSecondary(param0 - 30);
-              var3_ref_id = (id) (SocialListEntry.field_Tb.next((byte) 116));
+              var3_ref_id = (LobbyPlayer) (SocialListEntry.field_Tb.next((byte) 116));
             }
-            var3_ref_id = (id) (eq.field_m.first((byte) 89));
+            var3_ref_id = (LobbyPlayer) (eq.field_m.first((byte) 89));
             while (var3_ref_id != null) {
-              if (var3_ref_id.field_Qb ||
-                var3_ref_id.field_fc) {
-                var3_ref_id.field_Qb = false;
-                if (var3_ref_id.field_fc) {
+              if (var3_ref_id.invitationPending ||
+                var3_ref_id.joinRequestPending) {
+                var3_ref_id.invitationPending = false;
+                if (var3_ref_id.joinRequestPending) {
                   uf.field_c = uf.field_c - 1;
-                  var3_ref_id.field_fc = false;
+                  var3_ref_id.joinRequestPending = false;
                 }
                 wl.a(var3_ref_id, 17574);
               }
-              var3_ref_id = (id) (eq.field_m.next(false));
+              var3_ref_id = (LobbyPlayer) (eq.field_m.next(false));
             }
             if (var2 == 1 &&
               o.field_e != null) {
-              TableNameEntry.field_g = o.field_e.field_Fc;
+              TableNameEntry.field_g = o.field_e.displayName;
             }
             if (4 == var2) {
               var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-              o.field_e = new om(cq.field_p);
+              o.field_e = new LobbyGame(cq.field_p);
               o.field_e.setSecondaryKey((long)var3_int, -105);
-              eb.a(o.field_e, var1, 0, false);
+              eb.decodeLobbyGame(o.field_e, var1, 0, false);
               ic.field_b = 0L;
             } else {
               o.field_e = null;
@@ -510,7 +510,7 @@ final class sj {
               nl.field_f = null;
             } else {
               if (null == nl.field_f) {
-                nl.field_f = new om(cq.field_p);
+                nl.field_f = new LobbyGame(cq.field_p);
               }
             }
             if (var2 != 3) {

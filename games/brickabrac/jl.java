@@ -168,7 +168,7 @@ final class jl {
         try {
           nameCharacters = (CharSequence) ((Object) name);
           if (!DualLinkNode.isValidSocialName(nameCharacters, false)) {
-            stackIn_3_0 = om.field_Xb;
+            stackIn_3_0 = LobbyGame.field_Xb;
             return stackIn_3_0;
           }
           if (LevelMetadata.field_m != 2) {

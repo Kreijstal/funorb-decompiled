@@ -18,7 +18,7 @@ final class SpaceBackground extends BackgroundScene {
               HalloweenBackground.a(1, 0, !obfuscationGuard ? true : false, colorIndex, ng.spaceFarSprite, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            AchievementBrowserScreen.a(om.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var8.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
+            AchievementBrowserScreen.a(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var8.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
           }
           return;
         }
@@ -32,7 +32,7 @@ final class SpaceBackground extends BackgroundScene {
           HalloweenBackground.a(1, 0, !obfuscationGuard ? true : false, colorIndex, ng.spaceFarSprite, var7);
           var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        AchievementBrowserScreen.a(om.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var7.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
+        AchievementBrowserScreen.a(LobbyGame.spaceNearSprite, destinationX, scroll16, colorIndex, 640, 0, 0, var7.sprite, 1, LevelResultSubmission.spaceMidSprite, destinationY);
     }
 
     final RgbSprite[] b(int param0) {
@@ -94,7 +94,7 @@ final class SpaceBackground extends BackgroundScene {
         if (!AchievementIcon.field_m.ensureGroupAvailableByName("space", -28138)) {
           return false;
         }
-        om.spaceNearSprite = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.field_m);
+        LobbyGame.spaceNearSprite = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.field_m);
         LevelResultSubmission.spaceMidSprite = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.field_m);
         ng.spaceFarSprite = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.field_m);
         rf.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.field_m);
@@ -103,7 +103,7 @@ final class SpaceBackground extends BackgroundScene {
         if (!obfuscationGuard) {
           BallPulseEffect.framebuffer.bindRaster((byte) 100);
           TableNameEntry.spaceCharacterSprite = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
-          jh.field_d = jh.a(0, om.spaceNearSprite);
+          jh.field_d = jh.a(0, LobbyGame.spaceNearSprite);
           MusicVoiceMixer.field_t = jh.a(0, LevelResultSubmission.spaceMidSprite);
           NodeDequeCursor.field_b = jh.a(0, ng.spaceFarSprite);
           b.spaceLeverSprites = cr.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
@@ -128,7 +128,7 @@ final class SpaceBackground extends BackgroundScene {
     final boolean hasSprites(byte obfuscationGuard) {
         if (obfuscationGuard > -91) {
           field_t = false;
-          if (om.spaceNearSprite == null) {
+          if (LobbyGame.spaceNearSprite == null) {
             return false;
           }
           if (null == LevelResultSubmission.spaceMidSprite) {
@@ -142,7 +142,7 @@ final class SpaceBackground extends BackgroundScene {
           }
           return false;
         }
-        if (om.spaceNearSprite == null) {
+        if (LobbyGame.spaceNearSprite == null) {
           return false;
         }
         if (null == LevelResultSubmission.spaceMidSprite) {

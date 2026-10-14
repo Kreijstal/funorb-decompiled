@@ -284,14 +284,14 @@ final class LevelSelectScreen extends MenuScreen {
           return VolcanicBackground.field_w;
         }
         if (MusicVoice.field_l == MusicEnvelope.field_f) {
-          return om.field_pc;
+          return LobbyGame.field_pc;
         }
         if (!param0) {
           AchievementSubmission var2 = (AchievementSubmission) null;
           LevelSelectScreen.sendAchievementSubmission(67, (AchievementSubmission) null, (byte) 80);
         }
         if (!ma.field_I.b(96)) {
-          return om.field_pc;
+          return LobbyGame.field_pc;
         }
         return GameScreen.field_d;
     }

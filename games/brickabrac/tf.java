@@ -78,7 +78,7 @@ final class tf {
           return;
         }
         String var2 = (String) null;
-        tf.a((om) null, false, (byte) -54, (String) null);
+        tf.a((LobbyGame) null, false, (byte) -54, (String) null);
         javaKeyCodeMap = null;
         cacheSectorScratch = null;
         field_f = null;
@@ -88,7 +88,7 @@ final class tf {
         field_c = null;
     }
 
-    final static void a(om param0, boolean param1, byte param2, String param3) {
+    final static void a(LobbyGame param0, boolean param1, byte param2, String param3) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -108,8 +108,8 @@ final class tf {
         ContextActionController var15 = null;
         try {
           var4_int = 47 / ((param2 + 13) / 51);
-          SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.e((byte) -14), (byte) -58, 0L, (String) null);
-          if (param0.field_Rb && (param0.field_wc == 2 ||
+          SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.getGameId((byte) -14), (byte) -58, 0L, (String) null);
+          if (param0.started && (param0.spectatorMode == 2 ||
             !(QuickChatHelpDialog.field_Yb < 2))) {
             var9 = bm.contextActions;
             var10 = rd.a(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);

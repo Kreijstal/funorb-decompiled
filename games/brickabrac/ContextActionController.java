@@ -83,7 +83,7 @@ final class ContextActionController {
     final void addGameActions(boolean obfuscationGuard) {
         boolean discarded$0 = false;
         RuntimeException decompiledCaughtException = null;
-        om var2 = null;
+        LobbyGame var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
         int var4 = 0;
@@ -91,18 +91,18 @@ final class ContextActionController {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (null == o.field_e) {
-            var2 = dg.a(this.gameId, (byte) 61);
+            var2 = dg.findLobbyGame(this.gameId, (byte) 61);
             if (var2 != null) {
-              var3 = var2.field_Fc;
-              if (var2.field_Pb) {
+              var3 = var2.displayName;
+              if (var2.invitationPending) {
                 this.contextMenu.addAction(rd.a(kk.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
                 this.contextMenu.addAction(rd.a(np.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if (!var2.field_uc) {
-                  if ((!var2.field_dc) && (var2.field_Dc) && (!var2.field_Rb ||
-                    var2.field_uc)) {
+                if (!var2.directJoinAvailable) {
+                  if ((!var2.joinRequestPending) && (var2.protocolFlag8) && (!var2.started ||
+                    var2.directJoinAvailable)) {
                     this.contextMenu.addAction(rd.a(qp.field_a, new String[]{var3}, (byte) 103), 2, (byte) 105);
                     if (var4 != 0) {
                       this.contextMenu.addAction(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
@@ -111,7 +111,7 @@ final class ContextActionController {
                 } else {
                   this.contextMenu.addAction(rd.a(d.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                 }
-                if (var2.field_dc) {
+                if (var2.joinRequestPending) {
                   this.contextMenu.addAction(rd.a(rm.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
                 }
               }
@@ -746,7 +746,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("status_concluded", (byte) -106);
                 if (var2 != null) {
-                  id.field_Sb = MenuButton.a(var2, (byte) 90);
+                  LobbyPlayer.field_Sb = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("status_spectate", (byte) -4);
                 if (var2 != null) {
@@ -798,7 +798,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("you_can_spectate", (byte) 105);
                 if (null != var2) {
-                  id.field_jc = MenuButton.a(var2, (byte) 102);
+                  LobbyPlayer.field_jc = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("you_can_not_spectate", (byte) -112);
                 if (var2 != null) {
@@ -1002,7 +1002,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_trychanging1", (byte) -10);
                 if (null != var2) {
-                  id.field_bc = MenuButton.a(var2, (byte) 106);
+                  LobbyPlayer.field_bc = MenuButton.a(var2, (byte) 106);
                 }
                 var2 = nk.a("gameopt_trychanging2", (byte) 64);
                 if (null != var2) {
@@ -1076,7 +1076,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ra_intro", (byte) 124);
                 if (var2 != null) {
-                  om.field_rc = MenuButton.a(var2, (byte) 99);
+                  LobbyGame.field_rc = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("ra_intro_no_name", (byte) 96);
                 if (null != var2) {
@@ -1820,7 +1820,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("invalid_name", (byte) -113);
                 if (null != var2) {
-                  om.field_Xb = MenuButton.a(var2, (byte) 122);
+                  LobbyGame.field_Xb = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = nk.a("cannot_add_yourself", (byte) -128);
                 if (var2 != null) {
@@ -3277,9 +3277,9 @@ final class ContextActionController {
 
     final void addPlayerGameActions(boolean obfuscationGuard, boolean allowAdditionalActions) {
         RuntimeException decompiledCaughtException = null;
-        id gamePlayer = null;
+        LobbyPlayer gamePlayer = null;
         RuntimeException var3_ref = null;
-        id invitedPlayer = null;
+        LobbyPlayer invitedPlayer = null;
         String caption = null;
         int unusedGameFlag = 0;
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
@@ -3295,8 +3295,8 @@ final class ContextActionController {
             invitedPlayer = ac.a(this.targetId, 2);
             caption = this.getTargetCaption(-12688);
             if (invitedPlayer != null) {
-              if (o.field_e.field_Rb &&
-                o.field_e.field_yc < 0) {
+              if (o.field_e.started &&
+                o.field_e.concludedDurationMillis < 0) {
                 return;
               }
               this.contextMenu.addAction(rd.a(cq.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
@@ -3305,16 +3305,16 @@ final class ContextActionController {
               }
             }
             if (null != gamePlayer &&
-              o.field_e.field_Dc &&
-              o.field_e.field_jc > o.field_e.field_cc) {
-              if (gamePlayer.field_Qb) {
+              o.field_e.protocolFlag8 &&
+              o.field_e.maxPlayers > o.field_e.playerCount) {
+              if (gamePlayer.invitationPending) {
                 this.contextMenu.addAction(rd.a(hm.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
                 if (unusedGameFlag == 0) {
                   return;
                 }
               }
               if (allowAdditionalActions &&
-                gamePlayer.field_fc) {
+                gamePlayer.joinRequestPending) {
                 this.contextMenu.addAction(rd.a(mc.field_b, new String[]{caption}, (byte) 103), 0, (byte) 112);
                 this.contextMenu.addAction(rd.a(RasterCacheSurface.field_o, new String[]{caption}, (byte) 103), 1, (byte) 116);
                 if (unusedGameFlag == 0) {

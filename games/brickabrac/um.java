@@ -765,14 +765,14 @@ class um implements ub, qe {
         boolean stackIn_4_6;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
-        om stackIn_10_0;
+        LobbyGame stackIn_10_0;
         UiComponent stackIn_10_1;
         UiComponent stackIn_10_2;
         long stackIn_10_3;
         UiComponent stackIn_11_1 = null;
         UiComponent stackIn_11_2 = null;
         UiComponent stackIn_11_4 = null;
-        om stackIn_27_0;
+        LobbyGame stackIn_27_0;
         UiComponent stackIn_27_1;
         UiComponent stackIn_27_2;
         long stackIn_27_3;
@@ -796,7 +796,7 @@ class um implements ub, qe {
         long var9 = 0L;
         Object var11 = null;
         int var12 = 0;
-        om var13 = null;
+        LobbyGame var13 = null;
         int var14 = 0;
         int var15 = 0;
         UiComponent var19 = null;
@@ -873,7 +873,7 @@ class um implements ub, qe {
           var9 = MonotonicTime.nowMillis(false);
           var12 = -30 / ((param6 + 26) / 55);
           var11 = null;
-          var13 = (om) (var8.first(-64));
+          var13 = (LobbyGame) (var8.first(-64));
           while (var13 != null) {
             var14 = 0;
             if (null == var13.children) {
@@ -970,7 +970,7 @@ class um implements ub, qe {
               var13.addChild(var13.field_nc, 0);
             }
             var13.field_Ac.text = null;
-            stackIn_32_0 = (!var13.field_Rb) ? param5 : param1;
+            stackIn_32_0 = (!var13.started) ? param5 : param1;
             var15Lifetime1 = stackIn_32_0;
             var13.field_Ac.height = 0;
             var47 = var13.field_Ac;
@@ -1043,13 +1043,13 @@ class um implements ub, qe {
             var31.width = 0;
             var13.width = rl.field_e.content.width;
             var32 = 0;
-            var33 = var13.field_Fc;
-            if (!var13.h(107)) {
+            var33 = var13.displayName;
+            if (!var13.isUnindexed(107)) {
               boolean decompiledFrameRemainder1 = true;
-              if (!var13.field_Rb) {
-                if (!var13.field_uc &&
-                  !var13.field_Pb) {
-                  if (!var13.field_bc) {
+              if (!var13.started) {
+                if (!var13.directJoinAvailable &&
+                  !var13.invitationPending) {
+                  if (!var13.directJoinEnabled) {
                     var13.field_Ac.text = hm.field_a;
                   } else {
                     var13.field_Ac.text = IntArrayRequest.field_p;
@@ -1060,21 +1060,21 @@ class um implements ub, qe {
                   var13.field_nc.text = TooltipSprite.field_k;
                 }
               } else {
-                if (var13.field_yc < 0) {
-                  if (var13.field_Dc && (var13.field_uc ||
-                    var13.field_Pb)) {
+                if (var13.concludedDurationMillis < 0) {
+                  if (var13.protocolFlag8 && (var13.directJoinAvailable ||
+                    var13.invitationPending)) {
                     var13.field_nc.text = TooltipSprite.field_k;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (var13.field_wc != 2) {
+                    if (var13.spectatorMode != 2) {
                       var13.field_Ac.text = qn.field_o;
                     } else {
                       var13.field_nc.text = ag.field_I;
                     }
                   }
                 } else {
-                  var13.field_Ac.text = id.field_Sb;
+                  var13.field_Ac.text = LobbyPlayer.field_Sb;
                 }
               }
               if (null == var13.field_nc.text) {
@@ -1088,32 +1088,32 @@ class um implements ub, qe {
                 !var13.field_Vb.text.equals(var33)) {
                 ep.field_e = var33;
               }
-              var13.field_tc.text = Integer.toString(var13.field_cc);
-              if (!var13.field_Dc) {
+              var13.field_tc.text = Integer.toString(var13.playerCount);
+              if (!var13.protocolFlag8) {
                 var13.field_tc.horizontalAlignment = 1;
                 var13.field_tc.setBounds(np.uiRowHeight, var32, 150, 48, (byte) 64);
               } else {
-                var13.field_Cc.text = "/" + var13.field_jc;
+                var13.field_Cc.text = "/" + var13.maxPlayers;
                 var13.field_tc.horizontalAlignment = 2;
                 var34_int = (348 - var13.field_Cc.font.measureText("/")) / 2;
                 var13.field_tc.setBounds(np.uiRowHeight, var32, 150, -150 + var34_int, (byte) 64);
                 var13.field_Cc.setBounds(np.uiRowHeight, var32, var34_int, 198 - var34_int, (byte) 64);
               }
-              var13.field_mc.text = Integer.toString(var13.field_vc);
+              var13.field_mc.text = Integer.toString(var13.protocolWord16);
               var13.field_mc.setBounds(np.uiRowHeight, var32, 200, 48, (byte) 64);
               stackIn_66_0 = (!vd.field_e) ? 200 : 250;
               var34_intLifetime1 = stackIn_66_0;
               var13.field_ec.setBounds(np.uiRowHeight, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
               var35_int = kn.field_z;
               if ((var15Lifetime1 & 1 << BackgroundRegistry.field_c) != 0) {
-                var51_ref = GameClock.field_f[var13.field_kc];
+                var51_ref = GameClock.field_f[var13.joinSortPriority];
                 var13.field_sc.sprite = var51_ref;
                 var13.field_sc.setBounds(var13.field_ec.height, 0, var35_int, var51_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var51_ref.canvasWidth + kn.field_z);
               }
               if ((var15Lifetime1 & 1 << MotionWaypoint.field_q) != 0) {
-                if (!var13.field_uc) {
-                  stackIn_77_0 = (var13.field_Pb) ? 1 : 0;
+                if (!var13.directJoinAvailable) {
+                  stackIn_77_0 = (var13.invitationPending) ? 1 : 0;
                 } else {
                   stackIn_77_0 = 1;
                 }
@@ -1130,14 +1130,14 @@ class um implements ub, qe {
                 var35_int = var35_int + (var52_ref.canvasWidth + kn.field_z);
               }
               if ((1 << u.field_a & var15Lifetime1) != 0) {
-                var53_ref = Ball.field_K[var13.field_wc - 1];
+                var53_ref = Ball.field_K[var13.spectatorMode - 1];
                 var13.field_Bc.sprite = var53_ref;
                 var13.field_Bc.setBounds(var13.field_ec.height, 0, var35_int, var53_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var53_ref.canvasWidth + kn.field_z);
               }
               if ((var15Lifetime1 & 1 << ScrollPane.field_Pb) != 0) {
                 stackIn_87_0 = bq.field_c;
-                if (var13.field_ac) {
+                if (var13.rated) {
                   stackIn_88_1 = 1;
                 } else {
                   stackIn_88_1 = 0;
@@ -1151,7 +1151,7 @@ class um implements ub, qe {
                 for (var37Lifetime1 = 0; var37Lifetime1 < cq.field_p; var37Lifetime1++) {
                   if (null != aj.field_c[var37Lifetime1] &&
                     (1 << var37Lifetime1 + jc.field_K & var15Lifetime1) != 0) {
-                    var43 = aj.field_c[var37Lifetime1][255 & var13.field_Tb[var37Lifetime1]];
+                    var43 = aj.field_c[var37Lifetime1][255 & var13.settings[var37Lifetime1]];
                     var55 = var43;
                     var13.field_Ec[var37Lifetime1].sprite = var43;
                     var13.field_Ec[var37Lifetime1].setBounds(var13.field_ec.height, 0, var35_int, var55.canvasWidth, (byte) 64);
@@ -1170,10 +1170,10 @@ class um implements ub, qe {
                   dupTemp$0.localX = dupTemp$0.localX + var37Lifetime2;
                 }
               }
-              if (var13.field_Rb) {
-                var38_intLifetime1 = var13.field_yc;
+              if (var13.started) {
+                var38_intLifetime1 = var13.concludedDurationMillis;
                 if (0 > var38_intLifetime1) {
-                  var38_intLifetime1 = (int)(-var13.field_qc + var9);
+                  var38_intLifetime1 = (int)(-var13.activityTimeMillis + var9);
                 }
                 var39_int = var38_intLifetime1 / 1000;
                 var40 = var39_int / 60;
@@ -1188,14 +1188,14 @@ class um implements ub, qe {
               }
               var13.field_zc.setBounds(np.uiRowHeight, var32, 365, var13.width - 365, (byte) 64);
               var32 = var32 + np.uiRowHeight;
-              if (var13.field_Qb != null) {
+              if (var13.playerNames != null) {
                 var32 += 2;
                 var38 = new StringBuilder(64);
                 discarded$1 = var38.append(QuickChatParameterType.field_f);
-                discarded$2 = var38.append(var13.field_Qb[0]);
-                for (var39_intLifetime1 = 1; var13.field_cc > var39_intLifetime1; var39_intLifetime1++) {
+                discarded$2 = var38.append(var13.playerNames[0]);
+                for (var39_intLifetime1 = 1; var13.playerCount > var39_intLifetime1; var39_intLifetime1++) {
                   discarded$3 = var38.append(", ");
-                  discarded$4 = var38.append(var13.field_Qb[var39_intLifetime1]);
+                  discarded$4 = var38.append(var13.playerNames[var39_intLifetime1]);
                 }
                 var39 = var38.toString();
                 var13.field_Ub.text = var39;
@@ -1203,25 +1203,25 @@ class um implements ub, qe {
                 var13.field_Ub.setBounds(np.uiRowHeight * var40Lifetime1, var32, 0, var13.width, (byte) 64);
                 var32 = var32 + np.uiRowHeight * var40Lifetime1;
               }
-              if (var13.field_Pb) {
+              if (var13.invitationPending) {
                 var13.field_ic.text = rd.a(r.field_y, new String[]{var33}, (byte) 103);
-                var13.field_ic.setBounds(np.uiRowHeight, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
+                var13.field_ic.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.uiRowHeight;
               }
-              if (var13.field_dc) {
+              if (var13.joinRequestPending) {
                 var13.field_Sb.text = rd.a(aj.field_b, new String[]{var33}, (byte) 103);
-                var13.field_Sb.setBounds(np.uiRowHeight, var32, om.field_oc, -(om.field_oc * 2) + var13.width, (byte) 64);
+                var13.field_Sb.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.uiRowHeight;
               }
             }
-            var34 = NodeDeque.a(var13.field_Zb, var33, -15);
+            var34 = NodeDeque.a(var13.removalStatus, var33, -15);
             var35 = var34;
             var35Lifetime1 = var34;
             if (var34 != null) {
-              var35_intLifetime1 = var13.field_gc.font.countWrappedLines(var34, -om.field_oc + (var13.width - om.field_oc));
+              var35_intLifetime1 = var13.field_gc.font.countWrappedLines(var34, -LobbyGame.field_oc + (var13.width - LobbyGame.field_oc));
               var13.field_gc.text = var34;
-              var13.field_gc.textAlpha256 = var13.field_Wb * 256 / cm.field_o;
-              var13.field_gc.setBounds(np.uiRowHeight * var35_intLifetime1, var32, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
+              var13.field_gc.textAlpha256 = var13.statusChangeTick * 256 / cm.field_o;
+              var13.field_gc.setBounds(np.uiRowHeight * var35_intLifetime1, var32, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
               var32 = var32 + np.uiRowHeight * var35_intLifetime1;
             }
             if (var7_int == 0) {
@@ -1236,7 +1236,7 @@ class um implements ub, qe {
                   var36 = null;
                 } else {
                   if (ff.field_i[var35_intLifetime2] != null) {
-                    var36 = ff.field_i[var35_intLifetime2][var13.field_Tb[var35_intLifetime2] & 255];
+                    var36 = ff.field_i[var35_intLifetime2][var13.settings[var35_intLifetime2] & 255];
                   } else {
                     var36 = null;
                   }
@@ -1249,15 +1249,15 @@ class um implements ub, qe {
               }
             }
             if (var13.field_sc.activeInside) {
-              if (var13.field_kc != 1) {
-                var35Lifetime2 = AchievementsScreen.field_H[var13.field_kc];
+              if (var13.joinSortPriority != 1) {
+                var35Lifetime2 = AchievementsScreen.field_H[var13.joinSortPriority];
               } else {
                 var35Lifetime2 = SoundCache.field_b;
               }
               ep.field_e = FarmBackground.field_s + " - " + var35Lifetime2;
             }
             if (var13.field_lc.activeInside) {
-              if (var13.field_ac) {
+              if (var13.rated) {
                 stackIn_148_0 = DelayedPacket.field_n;
               } else {
                 stackIn_148_0 = rl.field_b;
@@ -1265,9 +1265,9 @@ class um implements ub, qe {
               ep.field_e = stackIn_148_0;
             }
             if (var13.field_Yb.activeInside) {
-              if (!var13.field_uc &&
-                !var13.field_Pb) {
-                if (!var13.field_Dc) {
+              if (!var13.directJoinAvailable &&
+                !var13.invitationPending) {
+                if (!var13.protocolFlag8) {
                   stackIn_158_0 = AchievementsScreen.field_K;
                 } else {
                   stackIn_158_0 = be.field_n;
@@ -1278,34 +1278,34 @@ class um implements ub, qe {
               ep.field_e = stackIn_158_0;
             }
             if (var13.field_Bc.activeInside) {
-              if (2 != var13.field_wc) {
+              if (2 != var13.spectatorMode) {
                 stackIn_164_0 = cm.field_q;
               } else {
-                stackIn_164_0 = id.field_jc;
+                stackIn_164_0 = LobbyPlayer.field_jc;
               }
               ep.field_e = stackIn_164_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var13.pressedButton != 0) {
-              if (var13.h(109)) {
-                var13 = (om) (var8.next((byte) 116));
+              if (var13.isUnindexed(109)) {
+                var13 = (LobbyGame) (var8.next((byte) 116));
                 continue;
               }
               if (var13.field_nc.pressedButton == 0) {
                 tf.a(var13, param0, (byte) -71, var33);
               } else {
-                if (var13.field_Rb && (!var13.field_Dc ||
-                  !var13.field_uc &&
-                  !var13.field_Pb)) {
-                  dn.b(var13.e((byte) -107), -85, param4);
+                if (var13.started && (!var13.protocolFlag8 ||
+                  !var13.directJoinAvailable &&
+                  !var13.invitationPending)) {
+                  dn.b(var13.getGameId((byte) -107), -85, param4);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  jb.b(var13.e((byte) -34), param4, 11912);
+                  jb.b(var13.getGameId((byte) -34), param4, 11912);
                 }
               }
             }
-            var13 = (om) (var8.next((byte) 116));
+            var13 = (LobbyGame) (var8.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

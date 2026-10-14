@@ -30,14 +30,14 @@ final class GameplayAudioEvent extends IntrusiveNode {
             return stackIn_5_0;
           }
           if (up.field_v == MusicVoice.field_l &&
-            param0.equals(om.field_pc)) {
+            param0.equals(LobbyGame.field_pc)) {
             MusicVoice.field_l = ej.field_P;
             stackIn_9_0 = he.field_H;
             return stackIn_9_0;
           }
           he.field_H = null;
           MusicVoice.field_l = MusicEnvelope.field_f;
-          om.field_pc = param0;
+          LobbyGame.field_pc = param0;
           stackIn_11_0 = null;
           return (oh) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

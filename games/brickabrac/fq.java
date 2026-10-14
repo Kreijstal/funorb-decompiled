@@ -63,12 +63,12 @@ final class fq {
         ug.field_I = param1;
         if (param0 > 83) {
           qh.field_d = param3;
-          om.field_hc = param2;
+          LobbyGame.field_hc = param2;
           return;
         }
         fq.a((byte) -44, 39, -69, 32);
         qh.field_d = param3;
-        om.field_hc = param2;
+        LobbyGame.field_hc = param2;
     }
 
     public static void a(byte param0) {

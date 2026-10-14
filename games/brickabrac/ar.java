@@ -4,7 +4,7 @@
 final class ar {
     static String[] field_a;
 
-    final static void a(boolean param0, om param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(boolean param0, LobbyGame param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         AlignedIconLabel[][] stackIn_33_0 = null;
         int stackIn_34_1 = 0;
         int stackIn_53_0 = 0;
@@ -187,9 +187,9 @@ final class ar {
                   var12 = stackIn_78_0;
                 } else {
                   if (param4 != -1) {
-                    stackIn_69_0 = ((255 & o.field_e.field_Tb[param4]) != var11) ? 0 : 1;
+                    stackIn_69_0 = ((255 & o.field_e.settings[param4]) != var11) ? 0 : 1;
                   } else {
-                    stackIn_69_0 = (o.field_e.field_jc != w.field_n[var11]) ? 0 : 1;
+                    stackIn_69_0 = (o.field_e.maxPlayers != w.field_n[var11]) ? 0 : 1;
                   }
                   var12 = stackIn_69_0;
                 }
@@ -231,8 +231,8 @@ final class ar {
 
     public static void a(int param0) {
         if (param0 != -1) {
-          om var2 = (om) null;
-          ar.a(true, (om) null, -103, -124, -112, 116, 82, 7);
+          LobbyGame var2 = (LobbyGame) null;
+          ar.a(true, (LobbyGame) null, -103, -124, -112, 116, 82, 7);
         }
         field_a = null;
     }

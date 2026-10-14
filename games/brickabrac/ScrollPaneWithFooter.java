@@ -86,7 +86,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           if (param1.channel == 1 &&
             !cb.e(-128) &&
             null != o.field_e &&
-            param1.contextId == o.field_e.e((byte) 118)) {
+            param1.contextId == o.field_e.getGameId((byte) 118)) {
             if (!qo.field_I) {
               var9 = bm.contextActions;
               var10 = hc.field_b;

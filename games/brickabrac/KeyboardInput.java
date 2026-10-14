@@ -25,7 +25,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         try {
           nameCharacters = (CharSequence) ((Object) name);
           if (!DualLinkNode.isValidSocialName(nameCharacters, obfuscationGuard)) {
-            stackIn_3_0 = om.field_Xb;
+            stackIn_3_0 = LobbyGame.field_Xb;
             return stackIn_3_0;
           }
           if (LevelMetadata.field_m != 2) {

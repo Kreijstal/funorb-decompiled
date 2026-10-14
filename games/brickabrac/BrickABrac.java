@@ -407,7 +407,7 @@ public final class BrickABrac extends InteractiveGameClient {
           configuration = new LevelSequence(tq.field_d, var49, repeatMode);
           backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
           TabbedPane.currentBackground = rd.selectBackground(backgroundSelector, (byte) 19);
-          characterOrder = id.createCharacterOrder(matchRandom, false);
+          characterOrder = LobbyPlayer.createCharacterOrder(matchRandom, false);
           VerticalScrollbar.field_Ub = null;
           if (0 <= localPlayerId) {
             stackIn_56_0 = 1 << localPlayerId;
@@ -663,8 +663,8 @@ public final class BrickABrac extends InteractiveGameClient {
         ScrollPaneWithFooter.h(-48);
         ContextActionController.a(0);
         ReportAbuseDialog.k(8421504);
-        id.h(-56);
-        om.d((byte) -32);
+        LobbyPlayer.h(-56);
+        LobbyGame.d((byte) -32);
         SecondaryHashTable.c((byte) 85);
         ce.b(46);
         hn.a(122);

@@ -189,7 +189,7 @@ final class hi extends um {
                   null != jd.field_b) {
                   var7Lifetime15 = "[" + jd.field_b + "] ";
                 } else {
-                  var7Lifetime15 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
+                  var7Lifetime15 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
                 }
               }
             }
@@ -294,7 +294,7 @@ final class hi extends um {
                       null != jd.field_b) {
                       var7Lifetime1Lifetime6 = "[" + jd.field_b + "] ";
                     } else {
-                      var7Lifetime1Lifetime6 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
+                      var7Lifetime1Lifetime6 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
                     }
                   }
                 }
@@ -420,7 +420,7 @@ final class hi extends um {
             return true;
           }
           if (!PowerUp.field_v) {
-            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime2);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
@@ -429,7 +429,7 @@ final class hi extends um {
             return true;
           }
           if (null == jd.field_b) {
-            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime3);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {

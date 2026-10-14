@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class id extends UiComponent {
+final class LobbyPlayer extends UiComponent {
     static int field_Pb;
-    long field_gc;
-    String field_hc;
-    boolean field_Qb;
+    long playerId;
+    String accountName;
+    boolean invitationPending;
     UiComponent field_Tb;
-    UiComponent field_Rb;
+    UiComponent nameLabel;
     static String field_bc;
-    long field_Xb;
-    UiComponent field_cc;
-    boolean field_ec;
-    int field_Wb;
-    int field_kc;
+    long arrivalTimeMillis;
+    UiComponent actionLabel;
+    boolean member;
+    int rating;
+    int removalStatus;
     static String field_jc;
-    UiComponent field_Vb;
-    int field_ac;
-    int field_Zb;
-    String field_Yb;
-    boolean field_fc;
+    UiComponent statusLabel;
+    int ratedGameCount;
+    int badgeId;
+    String displayName;
+    boolean joinRequestPending;
     static String field_Sb;
-    int field_Ub;
-    UiComponent field_dc;
-    int field_ic;
+    int optionEligibilityMask;
+    UiComponent ratingLabel;
+    int statusChangeTick;
 
     public static void h(int param0) {
         int var1 = 102 % ((param0 - 48) / 43);
@@ -32,33 +32,33 @@ final class id extends UiComponent {
         field_Sb = null;
     }
 
-    final void a(String param0, String param1, byte param2) {
+    final void updateNames(String displayName, String accountName, byte obfuscationGuard) {
         CharSequence var6 = null;
         try {
-          this.field_hc = param1;
-          if (param2 != -121) {
-            id var5 = (id) null;
-            this.a((id) null, -125);
+          this.accountName = accountName;
+          if (obfuscationGuard != -121) {
+            LobbyPlayer var5 = (LobbyPlayer) null;
+            this.comesBeforePlayer((LobbyPlayer) null, -125);
           }
-          this.field_Yb = param0;
-          var6 = (CharSequence) ((Object) this.field_hc);
+          this.displayName = displayName;
+          var6 = (CharSequence) ((Object) this.accountName);
           ChatMessage.normalizePlayerName(var6, 116);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "id.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "id.B(" + (displayName != null ? "{...}" : "null") + ',' + (accountName != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    id(String param0, String param1, long param2) {
+    LobbyPlayer(String accountName, String displayName, long playerId) {
         super(0L, (UiComponent) null);
         CharSequence var6 = null;
         try {
-          this.field_hc = param0;
-          this.field_Yb = param1;
-          this.field_gc = param2;
-          var6 = (CharSequence) ((Object) this.field_hc);
+          this.accountName = accountName;
+          this.displayName = displayName;
+          this.playerId = playerId;
+          var6 = (CharSequence) ((Object) this.accountName);
           ChatMessage.normalizePlayerName(var6, 124);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "id.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "id.<init>(" + (accountName != null ? "{...}" : "null") + ',' + (displayName != null ? "{...}" : "null") + ',' + playerId + ')');
         }
     }
 
@@ -103,14 +103,14 @@ final class id extends UiComponent {
         }
     }
 
-    final boolean i(int param0) {
-        if (param0 != 0) {
+    final boolean isUnindexed(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return false;
         }
         return !this.isSecondaryLinked(2) ? true : false;
     }
 
-    final boolean a(id param0, int param1) {
+    final boolean comesBeforePlayer(LobbyPlayer other, int obfuscationGuard) {
         RuntimeException var3 = null;
         String var4 = null;
         boolean stackIn_2_0 = false;
@@ -125,43 +125,43 @@ final class id extends UiComponent {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = param0.field_fc;
-          if (this.field_fc) {
+          stackIn_2_0 = other.joinRequestPending;
+          if (this.joinRequestPending) {
             stackIn_3_1 = 0;
           } else {
             stackIn_3_1 = 1;
           }
           if ((stackIn_2_0 ? 1 : 0) == stackIn_3_1) {
-            stackIn_6_0 = this.field_fc;
+            stackIn_6_0 = this.joinRequestPending;
             return stackIn_6_0;
           }
-          if (param1 != -755) {
+          if (obfuscationGuard != -755) {
             var4 = (String) null;
-            this.a((String) null, (String) null, (byte) -26);
+            this.updateNames((String) null, (String) null, (byte) -26);
           }
-          stackIn_11_0 = this.field_Qb;
-          if (param0.field_Qb) {
+          stackIn_11_0 = this.invitationPending;
+          if (other.invitationPending) {
             stackIn_12_1 = 0;
           } else {
             stackIn_12_1 = 1;
           }
           if ((stackIn_11_0 ? 1 : 0) == stackIn_12_1) {
-            stackIn_15_0 = this.field_Qb;
+            stackIn_15_0 = this.invitationPending;
             return stackIn_15_0;
           }
-          stackIn_19_0 = !(this.field_Xb >= param0.field_Xb);
+          stackIn_19_0 = !(this.arrivalTimeMillis >= other.arrivalTimeMillis);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_22_0 = var3;
           stackIn_22_1 = new StringBuilder().append("id.D(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

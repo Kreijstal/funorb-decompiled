@@ -1689,7 +1689,7 @@ final class GameplayScreen extends GameScreen {
             stackIn_86_1 = -103;
             stackIn_86_2 = var21[0];
             stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.localPlayerMask);
-            om.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.viewedPlayerId], var22[0], this.viewedPlayerId, var7Lifetime3 != 0, this.match);
+            LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.viewedPlayerId], var22[0], this.viewedPlayerId, var7Lifetime3 != 0, this.match);
             nh.a(169, 9, -40, -1, cd.field_h, 0 + (var22[2] - 3));
             nh.a(169, 9, -40, 472, cd.field_h, -3 + var22[2] - 0);
           } else {
@@ -1717,7 +1717,7 @@ final class GameplayScreen extends GameScreen {
             stackIn_64_5 = var15[0];
             stackIn_64_6 = var9Lifetime1;
             stackIn_66_7 = (var7Lifetime3 != 0) || (var10Lifetime1 != 0);
-            om.$cfr$intArgs$a$687785aae666(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_61_3, stackIn_64_4, stackIn_64_5, stackIn_64_6, stackIn_66_7, this.match);
+            LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_61_3, stackIn_64_4, stackIn_64_5, stackIn_64_6, stackIn_66_7, this.match);
             var9Lifetime1 = 1 - var9Lifetime1;
             stackIn_69_0 = (0 == (1 << var9Lifetime1 & this.localPlayerMask)) ? 0 : 1;
             var10Lifetime1Lifetime1 = stackIn_69_0;
@@ -1729,7 +1729,7 @@ final class GameplayScreen extends GameScreen {
             stackIn_77_5 = var15[1];
             stackIn_77_6 = var9Lifetime1;
             stackIn_79_7 = (var7Lifetime3 != 0) || (var10Lifetime1Lifetime1 != 0);
-            om.$cfr$intArgs$a$687785aae666(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_74_3, stackIn_77_4, stackIn_77_5, stackIn_77_6, stackIn_79_7, this.match);
+            LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_74_3, stackIn_77_4, stackIn_77_5, stackIn_77_6, stackIn_79_7, this.match);
           }
         } else {
           var7_ref_j = this.match.playerBoards[0];

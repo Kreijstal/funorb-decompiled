@@ -5,7 +5,7 @@ final class nl {
     static int decodedSpriteCount;
     static RgbSprite chocolateNearSprite;
     static ResourceArchive field_a;
-    static om field_f;
+    static LobbyGame field_f;
     static RgbSprite field_e;
     static RgbSprite field_b;
 
@@ -41,7 +41,7 @@ final class nl {
             return false;
           }
           if (obfuscationGuard != 64) {
-            field_f = (om) null;
+            field_f = (LobbyGame) null;
           }
           nowMillis = MonotonicTime.nowMillis(false);
           if (0 != MonotonicTime.packetDelayMillis &&

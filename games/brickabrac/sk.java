@@ -52,7 +52,7 @@ final class sk extends h {
           for (var8 = 0; param3 > var8; var8++) {
             var7[var8] = hi.field_w.nextInt(97);
           }
-          var15 = id.createCharacterOrder(hi.field_w, false);
+          var15 = LobbyPlayer.createCharacterOrder(hi.field_w, false);
           IntArrayRequest.gameplayScreen = new GameplayScreen(args, -1, var6_int, param2, var12, var15);
           IntArrayRequest.gameplayScreen.a((byte) 119, param1);
           IntArrayRequest.gameplayScreen.snapshotsReady = true;

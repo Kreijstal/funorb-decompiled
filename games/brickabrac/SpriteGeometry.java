@@ -25,12 +25,12 @@ abstract class SpriteGeometry extends DualLinkNode {
         field_w = null;
     }
 
-    final static void a(int param0, int param1, id param2, ScrollPane param3, byte param4, int param5, int param6) {
+    final static void a(int param0, int param1, LobbyPlayer param2, ScrollPane param3, byte param4, int param5, int param6) {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        SpriteGeometry.a(-1, param2, param3, (int[]) null, param2.field_hc, -1, (byte) -58, param2.field_gc, param2.field_Yb);
+        SpriteGeometry.a(-1, param2, param3, (int[]) null, param2.accountName, -1, (byte) -58, param2.playerId, param2.displayName);
         bm.contextActions.addPlayerGameActions(true, true);
         bm.contextActions.addSocialActions((int[]) null, (byte) -120, 0);
         bm.contextActions.addReportAction((byte) -93);

@@ -26,11 +26,11 @@ final class ac {
         return this.field_a;
     }
 
-    final static id a(long param0, int param1) {
+    final static LobbyPlayer a(long param0, int param1) {
         if (param1 != 2) {
-          return (id) null;
+          return (LobbyPlayer) null;
         }
-        return (id) (BrickABrac.field_F.get(param0, -1));
+        return (LobbyPlayer) (BrickABrac.field_F.get(param0, -1));
     }
 
     final void a(boolean param0, int param1) {

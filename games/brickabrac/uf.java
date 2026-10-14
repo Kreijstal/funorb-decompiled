@@ -246,7 +246,7 @@ final class uf {
         try {
           nameCharacters = (CharSequence) ((Object) name);
           if (!DualLinkNode.isValidSocialName(nameCharacters, false)) {
-            stackIn_2_0 = om.field_Xb;
+            stackIn_2_0 = LobbyGame.field_Xb;
             return stackIn_2_0;
           }
           if (2 != LevelMetadata.field_m) {

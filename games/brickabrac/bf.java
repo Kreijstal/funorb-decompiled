@@ -89,7 +89,7 @@ final class bf extends d {
     }
 
     final static void a(byte param0) {
-        id var3 = null;
+        LobbyPlayer var3 = null;
         int var2 = BrickABrac.field_J ? 1 : 0;
         o.field_e = null;
         fh.field_d = false;
@@ -114,10 +114,10 @@ final class bf extends d {
           }
           BrickABrac.field_F = null;
           if (eq.field_m != null) {
-            var3 = (id) (eq.field_m.first((byte) 120));
+            var3 = (LobbyPlayer) (eq.field_m.first((byte) 120));
             while (var3 != null) {
               var3.unlinkSecondary(3);
-              var3 = (id) (eq.field_m.next(false));
+              var3 = (LobbyPlayer) (eq.field_m.next(false));
             }
             eq.field_m = null;
           }

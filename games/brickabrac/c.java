@@ -86,7 +86,7 @@ final class c {
         var11 = BrickABrac.field_J ? 1 : 0;
         if (param3) {
           if (param3) {
-            qh.field_f = id.field_Pb;
+            qh.field_f = LobbyPlayer.field_Pb;
             MusicPatch.a(-128, param3);
             if (ml.field_b > 0) {
               na.a(param8, param3, -94, param2);
@@ -100,7 +100,7 @@ final class c {
               nh.a(true, param3, param8, param2, param7);
             }
             if (hc.field_c &&
-              o.field_e.field_jc <= o.field_e.field_cc) {
+              o.field_e.maxPlayers <= o.field_e.playerCount) {
               IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
               Ball.field_A.enabled = false;
               jh.a(true, IsaacGenerator.field_b.content);
@@ -123,7 +123,7 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
-                o.field_e.field_jc <= o.field_e.field_cc) {
+                o.field_e.maxPlayers <= o.field_e.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -146,7 +146,7 @@ final class c {
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
-                if (o.field_e.field_jc > o.field_e.field_cc) {
+                if (o.field_e.maxPlayers > o.field_e.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -174,7 +174,7 @@ final class c {
               }
             }
             if (param3) {
-              qh.field_f = id.field_Pb;
+              qh.field_f = LobbyPlayer.field_Pb;
               MusicPatch.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
@@ -188,7 +188,7 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
-                o.field_e.field_jc <= o.field_e.field_cc) {
+                o.field_e.maxPlayers <= o.field_e.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -216,7 +216,7 @@ final class c {
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
-                if (o.field_e.field_jc > o.field_e.field_cc) {
+                if (o.field_e.maxPlayers > o.field_e.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -241,7 +241,7 @@ final class c {
               }
             }
             if (param3) {
-              qh.field_f = id.field_Pb;
+              qh.field_f = LobbyPlayer.field_Pb;
               MusicPatch.a(-128, param3);
               if (ml.field_b > 0) {
                 na.a(param8, param3, -94, param2);
@@ -255,7 +255,7 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
-                o.field_e.field_jc <= o.field_e.field_cc) {
+                o.field_e.maxPlayers <= o.field_e.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -278,7 +278,7 @@ final class c {
                   nh.a(true, param3, param8, param2, param7);
                 }
                 if (hc.field_c &&
-                  o.field_e.field_jc <= o.field_e.field_cc) {
+                  o.field_e.maxPlayers <= o.field_e.playerCount) {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
                   jh.a(true, IsaacGenerator.field_b.content);
@@ -301,7 +301,7 @@ final class c {
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  if (o.field_e.field_jc > o.field_e.field_cc) {
+                  if (o.field_e.maxPlayers > o.field_e.playerCount) {
                     IsaacGenerator.field_b.viewport.text = null;
                     Ball.field_A.enabled = true;
                     MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);

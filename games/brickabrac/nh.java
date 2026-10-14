@@ -318,7 +318,7 @@ final class nh {
         NodeDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
-        id var18_ref = null;
+        LobbyPlayer var18_ref = null;
         int var19 = 0;
         RgbSprite[] var20 = null;
         int[] var21 = null;
@@ -352,7 +352,7 @@ final class nh {
             AppletGameShell.field_e.height = 0;
             var7.width = 0;
             if (!hn.b((byte) 7)) {
-              var9_ref_String = o.field_e.field_Fc;
+              var9_ref_String = o.field_e.displayName;
               ba.field_v.text = rd.a(fm.field_a, new String[]{var9_ref_String}, (byte) 103).toUpperCase();
               AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
               AppletGameShell.field_e.text = rd.a(IntrusiveNode.field_a, new String[]{var9_ref_String}, (byte) 103);
@@ -363,7 +363,7 @@ final class nh {
               ba.field_v.text = ba.field_x.toUpperCase();
               var9 = (MultiplayerMatch.field_d.width + 2) / 2;
               pf.field_h.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, -2 + var9, (byte) 64);
-              if (o.field_e.field_jc <= o.field_e.field_cc) {
+              if (o.field_e.maxPlayers <= o.field_e.playerCount) {
                 pf.field_h.text = GameCanvas.field_d.toUpperCase();
                 pf.field_h.enabled = false;
                 if (var19 != 0) {
@@ -436,14 +436,14 @@ final class nh {
                             stackIn_58_0 = var15;
                             stackIn_58_1 = -1;
                             if (stackIn_58_0 != stackIn_58_1) {
-                              if (~(o.field_e.field_Tb[var15] & 255) != ~var16) {
+                              if (~(o.field_e.settings[var15] & 255) != ~var16) {
                                 break scanLoop2;
                               }
                             } else {
                               if (var10 != 0) {
-                                stackIn_51_0 = o.field_e.field_cc;
+                                stackIn_51_0 = o.field_e.playerCount;
                               } else {
-                                stackIn_51_0 = o.field_e.field_jc;
+                                stackIn_51_0 = o.field_e.maxPlayers;
                               }
                               var17_int = stackIn_51_0;
                               if (var17_int != var16 &&
@@ -560,7 +560,7 @@ final class nh {
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (!(cq.field_p > var16)))) {
-                  var17_int = 255 & o.field_e.field_Tb[var16];
+                  var17_int = 255 & o.field_e.settings[var16];
                   if (var19 == 0) {
                     if (NodeDeque.field_a != null &&
                       NodeDeque.field_a[var16] != null &&
@@ -602,11 +602,11 @@ final class nh {
                   var16 = 0;
                 }
                 var17 = TimedSplashScreen.field_u.content.children;
-                var18_ref = (id) (var17.first(-97));
+                var18_ref = (LobbyPlayer) (var17.first(-97));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
-                    stackOut_132_0 = var18_ref.i(0);
+                    stackOut_132_0 = var18_ref.isUnindexed(0);
                     stackIn_153_0 = stackOut_132_0 ? 1 : 0;
                     stackIn_133_0 = stackOut_132_0;
                     if (var19 != 0) {
@@ -615,22 +615,22 @@ final class nh {
                     if (!stackIn_133_0 ||
                       var19 != 0) {
                       if (var11 != 0 &&
-                        !var18_ref.field_ec) {
+                        !var18_ref.member) {
                         var16 = 1;
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        if (var13Lifetime1 > var18_ref.field_Wb) {
+                        if (var13Lifetime1 > var18_ref.rating) {
                           var16 = 1;
                           decompiledFrameRemainder0 = false;
                         }
                         else {
-                          if (var18_ref.field_ac < var14) {
+                          if (var18_ref.ratedGameCount < var14) {
                             var16 = 1;
                             decompiledFrameRemainder0 = false;
                           }
                           else {
-                            if ((var15 & ~var18_ref.field_Ub) > 0) {
+                            if ((var15 & ~var18_ref.optionEligibilityMask) > 0) {
                               var16 = 1;
                               decompiledFrameRemainder0 = false;
                             }
@@ -645,7 +645,7 @@ final class nh {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      var18_ref = (id) (var17.next((byte) 116));
+                      var18_ref = (LobbyPlayer) (var17.next((byte) 116));
                       continue;
                     }
                   }
@@ -679,7 +679,7 @@ final class nh {
               }
               var8.text = rd.a(SpriteGeometry.field_w, new String[]{Integer.toString(var9)}, (byte) 103);
             }
-            um.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.field_e.field_cc), Integer.toString(o.field_e.field_jc)}, (byte) 103);
+            um.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.field_e.playerCount), Integer.toString(o.field_e.maxPlayers)}, (byte) 103);
           }
           stackIn_174_0 = NinjaBackground.field_w;
           stackIn_175_1 = (param2) && (!param1) && (!hc.field_c);
@@ -697,7 +697,7 @@ final class nh {
           sb.field_c.field_d.processTabPresses(0);
           if (null != o.field_e) {
             if (GameUiController.field_e.pressedButton != 0) {
-              vg.a(o.field_e.e((byte) 123), false, param3);
+              vg.a(o.field_e.getGameId((byte) 123), false, param3);
             }
             if (pf.field_h.pressedButton != 0) {
               hc.field_c = true;
@@ -719,55 +719,55 @@ final class nh {
     }
 
     final static void a(int param0) {
-        om stackIn_15_0 = null;
+        LobbyGame stackIn_15_0 = null;
         Object stackIn_23_0 = null;
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        om stackOut_14_0;
-        id var1 = null;
-        om var1_ref = null;
+        LobbyGame stackOut_14_0;
+        LobbyPlayer var1 = null;
+        LobbyGame var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
-        id var1Lifetime1;
+        LobbyPlayer var1Lifetime1;
         int stackIn_29_0Lifetime1;
         int stackIn_29_1Lifetime1;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = (id) (ua.field_c.first(-50));
+          var1 = (LobbyPlayer) (ua.field_c.first(-50));
           while (var1 != null) {
             stackIn_29_0 = -1;
-            stackIn_29_1 = ~var1.field_ic;
+            stackIn_29_1 = ~var1.statusChangeTick;
             if (var2 != 0) {
               while (true) {
                 if (stackIn_29_0 == stackIn_29_1) {
-                  var1.field_kc = 0;
-                  if (var1.i(param0 + 0)) {
+                  var1.removalStatus = 0;
+                  if (var1.isUnindexed(param0 + 0)) {
                     var1.unlink((byte) 111);
                   }
                 }
                 while (true) {
-                  var1 = (id) (SocialListEntry.field_Tb.next((byte) 116));
+                  var1 = (LobbyPlayer) (SocialListEntry.field_Tb.next((byte) 116));
                   return;
                 }
               }
             }
             if (stackIn_29_0 > stackIn_29_1) {
-              var1.field_ic = var1.field_ic - 1;
-              if (var1.field_ic == 0) {
-                var1.field_kc = 0;
-                if (var1.i(0)) {
+              var1.statusChangeTick = var1.statusChangeTick - 1;
+              if (var1.statusChangeTick == 0) {
+                var1.removalStatus = 0;
+                if (var1.isUnindexed(0)) {
                   var1.unlink((byte) 111);
                 }
               }
             }
-            var1 = (id) (ua.field_c.next((byte) 116));
+            var1 = (LobbyPlayer) (ua.field_c.next((byte) 116));
             if (var2 == 0) {
               continue;
             }
             break;
           }
-          var1_ref = (om) (rq.field_a.first(-14));
+          var1_ref = (LobbyGame) (rq.field_a.first(-14));
           if (param0 != 0) {
             receivedChatBadge = -23;
           }
@@ -777,16 +777,16 @@ final class nh {
             stackIn_23_0 = stackOut_14_0;
             stackIn_15_0 = stackOut_14_0;
             if (var2 == 0) {
-              if (stackIn_15_0.field_Wb > 0) {
-                var1_ref.field_Wb = var1_ref.field_Wb - 1;
-                if (var1_ref.field_Wb == 0) {
-                  var1_ref.field_Zb = 0;
-                  if (var1_ref.h(param0 ^ -15)) {
+              if (stackIn_15_0.statusChangeTick > 0) {
+                var1_ref.statusChangeTick = var1_ref.statusChangeTick - 1;
+                if (var1_ref.statusChangeTick == 0) {
+                  var1_ref.removalStatus = 0;
+                  if (var1_ref.isUnindexed(param0 ^ -15)) {
                     var1_ref.unlink((byte) 111);
                   }
                 }
               }
-              var1_ref = (om) (rq.field_a.next((byte) 116));
+              var1_ref = (LobbyGame) (rq.field_a.next((byte) 116));
               continue;
             }
             break;
@@ -794,7 +794,7 @@ final class nh {
           if (decompiledNaturalLoopExit0) {
             stackIn_23_0 = SocialListEntry.field_Tb.first(-21);
           }
-          var1Lifetime1 = (id) (stackIn_23_0);
+          var1Lifetime1 = (LobbyPlayer) (stackIn_23_0);
           while (true) {
             if (var1Lifetime1 == null) {
               return;
@@ -802,18 +802,18 @@ final class nh {
             if (var2 != 0) {
               return;
             }
-            if (var1Lifetime1.field_ic > 0) {
-              var1Lifetime1.field_ic = var1Lifetime1.field_ic - 1;
+            if (var1Lifetime1.statusChangeTick > 0) {
+              var1Lifetime1.statusChangeTick = var1Lifetime1.statusChangeTick - 1;
               stackIn_29_0Lifetime1 = -1;
-              stackIn_29_1Lifetime1 = ~var1Lifetime1.field_ic;
+              stackIn_29_1Lifetime1 = ~var1Lifetime1.statusChangeTick;
               if (stackIn_29_0Lifetime1 == stackIn_29_1Lifetime1) {
-                var1Lifetime1.field_kc = 0;
-                if (var1Lifetime1.i(param0 + 0)) {
+                var1Lifetime1.removalStatus = 0;
+                if (var1Lifetime1.isUnindexed(param0 + 0)) {
                   var1Lifetime1.unlink((byte) 111);
                 }
               }
             }
-            var1Lifetime1 = (id) (SocialListEntry.field_Tb.next((byte) 116));
+            var1Lifetime1 = (LobbyPlayer) (SocialListEntry.field_Tb.next((byte) 116));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

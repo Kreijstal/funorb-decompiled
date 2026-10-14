@@ -20,14 +20,14 @@ final class ContextMenu extends UiComponent {
     private UiComponent emptyItemStyle;
 
     final static void a(int param0, byte param1, int param2) {
-        om var6 = null;
-        om var7 = null;
+        LobbyGame var6 = null;
+        LobbyGame var7 = null;
         BitPacketBuffer var4 = null;
         if (MenuSelection.field_i != param2) {
-          var6 = (om) (LevelResultSubmission.field_i.get((long)MenuSelection.field_i, -1));
+          var6 = (LobbyGame) (LevelResultSubmission.field_i.get((long)MenuSelection.field_i, -1));
           var7 = var6;
           if (var7 != null) {
-            var7.field_Qb = null;
+            var7.playerNames = null;
           }
           MenuSelection.field_i = param2;
           var4 = k.outgoingPackets;

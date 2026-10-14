@@ -202,7 +202,7 @@ final class hc {
           }
           np.uiRowHeight = 15;
           MenuSelection.field_g = 2;
-          om.field_oc = 4;
+          LobbyGame.field_oc = 4;
           if (param0 < 102) {
             return;
           }

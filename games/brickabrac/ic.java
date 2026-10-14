@@ -6,8 +6,8 @@ final class ic {
     static ResourceArchive field_a;
     static VerticalScrollbar field_c;
 
-    final static void a(boolean param0, om param1) {
-        om var2 = null;
+    final static void a(boolean param0, LobbyGame param1) {
+        LobbyGame var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -20,10 +20,10 @@ final class ic {
             field_b = 8L;
           }
           param1.unlink((byte) 111);
-          var2 = (om) (rq.field_a.first(-76));
+          var2 = (LobbyGame) (rq.field_a.first(-76));
           while (var2 != null) {
-            if (var2.a(param1, true)) {
-              var2 = (om) (rq.field_a.next((byte) 116));
+            if (var2.comesBeforeGame(param1, true)) {
+              var2 = (LobbyGame) (rq.field_a.next((byte) 116));
               continue;
             }
             break;
@@ -59,7 +59,7 @@ final class ic {
     final static void disableKeyboardInput(byte obfuscationGuard) {
         Object var1 = null;
         Throwable var2 = null;
-        om var3 = null;
+        LobbyGame var3 = null;
         Throwable decompiledCaughtException = null;
         if (DualLinkDeque.keyboardInput != null) {
           var1 = DualLinkDeque.keyboardInput;
@@ -68,8 +68,8 @@ final class ic {
           }
         }
         if (obfuscationGuard > -63) {
-          var3 = (om) null;
-          ic.a(true, (om) null);
+          var3 = (LobbyGame) null;
+          ic.a(true, (LobbyGame) null);
         }
     }
 

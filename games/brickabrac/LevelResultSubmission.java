@@ -110,7 +110,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + rd.a(fm.field_a, new String[]{o.field_e.field_Fc}, (byte) 103) + "] ";
+                    var4 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
                   }
                 }
               }

@@ -1,57 +1,57 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends UiComponent {
-    boolean field_bc;
-    int field_Zb;
+final class LobbyGame extends UiComponent {
+    boolean directJoinEnabled;
+    int removalStatus;
     static String field_rc;
-    boolean field_uc;
-    int field_cc;
+    boolean directJoinAvailable;
+    int playerCount;
     static int field_oc;
-    int field_yc;
+    int concludedDurationMillis;
     UiComponent field_Vb;
     static String field_Xb;
     UiComponent field_sc;
-    byte[] field_Tb;
-    boolean field_dc;
+    byte[] settings;
+    boolean joinRequestPending;
     UiComponent field_tc;
-    int field_vc;
+    int protocolWord16;
     static String field_pc;
     UiComponent field_nc;
     UiComponent field_lc;
-    long field_qc;
-    boolean field_ac;
+    long activityTimeMillis;
+    boolean rated;
     UiComponent field_Bc;
     UiComponent field_zc;
-    String[] field_Qb;
+    String[] playerNames;
     UiComponent field_ic;
-    boolean field_Dc;
+    boolean protocolFlag8;
     UiComponent[] field_Ec;
     UiComponent field_Cc;
     UiComponent field_Ac;
-    int field_Wb;
-    String field_Fc;
+    int statusChangeTick;
+    String displayName;
     UiComponent field_Ub;
-    boolean field_Pb;
-    int field_kc;
+    boolean invitationPending;
+    int joinSortPriority;
     UiComponent field_mc;
     static RgbSprite spaceNearSprite;
     static int field_hc;
     UiComponent field_gc;
     UiComponent field_ec;
     UiComponent field_Yb;
-    int field_wc;
-    long field_xc;
-    int field_jc;
-    boolean field_Rb;
+    int spectatorMode;
+    long protocolId64;
+    int maxPlayers;
+    boolean started;
     UiComponent field_Sb;
 
-    final boolean h(int param0) {
-        int var2 = -35 / ((74 - param0) / 32);
+    final boolean isUnindexed(int obfuscationGuard) {
+        int var2 = -35 / ((74 - obfuscationGuard) / 32);
         return !this.isSecondaryLinked(2) ? true : false;
     }
 
-    final boolean a(om param0, boolean param1) {
+    final boolean comesBeforeGame(LobbyGame other, boolean obfuscationGuard) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
@@ -70,86 +70,86 @@ final class om extends UiComponent {
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
+        int thisInvitationPriority = 0;
+        RuntimeException failure = null;
+        int otherInvitationPriority = 0;
+        int thisStartedPriority = 0;
+        int otherStartedPriority = 0;
         try {
-          if (!this.field_Pb) {
-            stackIn_6_0 = (6 == this.field_Zb) ? 1 : 0;
+          if (!this.invitationPending) {
+            stackIn_6_0 = (6 == this.removalStatus) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
-          var3_int = stackIn_6_0;
-          if (!param0.field_Pb) {
-            stackIn_12_0 = (param0.field_Zb == 6) ? 1 : 0;
+          thisInvitationPriority = stackIn_6_0;
+          if (!other.invitationPending) {
+            stackIn_12_0 = (other.removalStatus == 6) ? 1 : 0;
           } else {
             stackIn_12_0 = 1;
           }
-          var4 = stackIn_12_0;
-          if (!param1) {
-            this.e((byte) -123);
+          otherInvitationPriority = stackIn_12_0;
+          if (!obfuscationGuard) {
+            this.getGameId((byte) -123);
           }
-          if (var4 != var3_int) {
-            stackIn_17_0 = var3_int;
+          if (otherInvitationPriority != thisInvitationPriority) {
+            stackIn_17_0 = thisInvitationPriority;
             return stackIn_17_0 != 0;
           }
-          if (var3_int == 0) {
-            if (param0.field_uc != this.field_uc) {
-              stackIn_22_0 = this.field_uc;
+          if (thisInvitationPriority == 0) {
+            if (other.directJoinAvailable != this.directJoinAvailable) {
+              stackIn_22_0 = this.directJoinAvailable;
               return stackIn_22_0;
             }
-            if (this.field_uc &&
-              param0.field_kc != this.field_kc) {
-              stackIn_29_0 = !(param0.field_kc <= this.field_kc);
+            if (this.directJoinAvailable &&
+              other.joinSortPriority != this.joinSortPriority) {
+              stackIn_29_0 = !(other.joinSortPriority <= this.joinSortPriority);
               return stackIn_29_0;
             }
           }
-          stackIn_33_0 = (this.field_Rb) ? 0 : 1;
-          if (stackIn_33_0 == (param0.field_Rb ? 1 : 0)) {
-            stackIn_37_0 = !(this.field_Rb);
+          stackIn_33_0 = (this.started) ? 0 : 1;
+          if (stackIn_33_0 == (other.started ? 1 : 0)) {
+            stackIn_37_0 = !(this.started);
             return stackIn_37_0;
           }
-          if (!this.field_Rb) {
-            stackIn_42_0 = !(param0.field_qc <= this.field_qc);
+          if (!this.started) {
+            stackIn_42_0 = !(other.activityTimeMillis <= this.activityTimeMillis);
             return stackIn_42_0;
           }
-          if (this.field_Dc) {
+          if (this.protocolFlag8) {
             stackIn_49_0 = 1;
           } else {
-            stackIn_49_0 = (this.field_wc == 2) ? 1 : 0;
+            stackIn_49_0 = (this.spectatorMode == 2) ? 1 : 0;
           }
-          var5 = stackIn_49_0;
-          if (!param0.field_Dc) {
-            stackIn_55_0 = (2 == param0.field_wc) ? 1 : 0;
+          thisStartedPriority = stackIn_49_0;
+          if (!other.protocolFlag8) {
+            stackIn_55_0 = (2 == other.spectatorMode) ? 1 : 0;
           } else {
             stackIn_55_0 = 1;
           }
-          var6 = stackIn_55_0;
-          stackIn_57_0 = var5;
-          if (var6 != 0) {
+          otherStartedPriority = stackIn_55_0;
+          stackIn_57_0 = thisStartedPriority;
+          if (otherStartedPriority != 0) {
             stackIn_58_1 = 0;
           } else {
             stackIn_58_1 = 1;
           }
           if (stackIn_57_0 == stackIn_58_1) {
-            stackIn_61_0 = var5;
+            stackIn_61_0 = thisStartedPriority;
             return stackIn_61_0 != 0;
           }
-          stackIn_65_0 = !(this.field_qc <= param0.field_qc);
+          stackIn_65_0 = !(this.activityTimeMillis <= other.activityTimeMillis);
           return stackIn_65_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_68_0 = var3;
+          failure = decompiledCaughtException;
+          stackIn_68_0 = failure;
           stackIn_68_1 = new StringBuilder().append("om.B(");
-          if (param0 == null) {
+          if (other == null) {
             stackIn_69_2 = "null";
           } else {
             stackIn_69_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -280,20 +280,20 @@ final class om extends UiComponent {
         field_Xb = null;
         if (param0 != -32) {
           MultiplayerMatch var2 = (MultiplayerMatch) null;
-          om.$cfr$intArgs$a$687785aae666(true, -24, 25, true, (PlayerBoard) null, 48, -120, false, (MultiplayerMatch) null);
+          LobbyGame.$cfr$intArgs$a$687785aae666(true, -24, 25, true, (PlayerBoard) null, 48, -120, false, (MultiplayerMatch) null);
         }
         spaceNearSprite = null;
         field_pc = null;
     }
 
-    final int e(byte param0) {
-        int var2 = -51 % ((param0 - 66) / 35);
+    final int getGameId(byte obfuscationGuard) {
+        int var2 = -51 % ((obfuscationGuard - 66) / 35);
         return (int)this.getSecondaryKey(-19451);
     }
 
-    om(int param0) {
+    LobbyGame(int settingCount) {
         super(0L, (UiComponent) null);
-        this.field_Tb = new byte[param0];
+        this.settings = new byte[settingCount];
     }
 
     static {

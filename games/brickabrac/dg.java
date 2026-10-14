@@ -188,11 +188,11 @@ final class dg implements ub {
         return;
     }
 
-    final static om a(int param0, byte param1) {
-        if (param1 == 61) {
-          return null == LevelResultSubmission.field_i ? null : (om) (LevelResultSubmission.field_i.get((long)param0, -1));
+    final static LobbyGame findLobbyGame(int gameId, byte obfuscationGuard) {
+        if (obfuscationGuard == 61) {
+          return null == LevelResultSubmission.field_i ? null : (LobbyGame) (LevelResultSubmission.field_i.get((long)gameId, -1));
         }
-        return (om) null;
+        return (LobbyGame) null;
     }
 
     final static void a(boolean param0) {

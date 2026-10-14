@@ -15,7 +15,7 @@ final class eb extends ff {
         field_r = (int[][]) null;
         if (param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          eb.a((om) null, (PacketBuffer) null, -20, false);
+          eb.decodeLobbyGame((LobbyGame) null, (PacketBuffer) null, -20, false);
         }
         field_m = null;
         field_p = (String[][]) null;
@@ -29,19 +29,19 @@ final class eb extends ff {
         return vh.field_X;
     }
 
-    final static void a(om param0, PacketBuffer param1, int param2, boolean param3) {
-        int var8 = 0;
-        om stackIn_6_0 = null;
+    final static void decodeLobbyGame(LobbyGame game, PacketBuffer packet, int obfuscationGuard, boolean includePlayerCount) {
+        int playerIndex = 0;
+        LobbyGame stackIn_6_0 = null;
         boolean stackIn_7_1 = false;
-        om stackIn_9_0 = null;
+        LobbyGame stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        om stackIn_12_0 = null;
+        LobbyGame stackIn_12_0 = null;
         boolean stackIn_13_1 = false;
-        om stackIn_15_0 = null;
+        LobbyGame stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        om stackIn_19_0 = null;
+        LobbyGame stackIn_19_0 = null;
         boolean stackIn_20_1 = false;
-        om stackIn_22_0 = null;
+        LobbyGame stackIn_22_0 = null;
         int stackIn_23_1 = 0;
         int stackIn_26_0 = 0;
         int stackIn_29_0 = 0;
@@ -51,84 +51,84 @@ final class eb extends ff {
         StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        var9 = BrickABrac.field_J ? 1 : 0;
+        int flags = 0;
+        RuntimeException failure = null;
+        int hasConcludedDuration = 0;
+        int hasPlayerNames = 0;
+        int firstNamePosition = 0;
+        int clientBranchFlag = 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param3) {
-            param0.field_cc = param1.readUnsignedByte(255);
+          if (includePlayerCount) {
+            game.playerCount = packet.readUnsignedByte(255);
           }
-          param0.field_jc = param1.readUnsignedByte(255);
-          param0.field_kc = param1.readUnsignedByte(param2 ^ 255);
-          var4_int = param1.readUnsignedByte(255);
-          stackIn_6_0 = (om) (param0);
-          stackIn_7_1 = ((var4_int & 128) != 0);
-          stackIn_6_0.field_bc = stackIn_7_1;
-          stackIn_9_0 = (om) (param0);
-          stackIn_10_1 = ((64 & var4_int) != param2);
-          stackIn_9_0.field_Rb = stackIn_10_1;
-          stackIn_12_0 = (om) (param0);
-          stackIn_13_1 = (0 != (var4_int & 32));
-          stackIn_12_0.field_ac = stackIn_13_1;
-          stackIn_15_0 = (om) (param0);
-          stackIn_16_1 = ((var4_int & 8) != 0);
-          stackIn_15_0.field_Dc = stackIn_16_1;
-          stackIn_19_0 = (om) (param0);
-          stackIn_20_1 = (param0.field_bc) && (param0.field_cc < param0.field_jc);
-          stackIn_19_0.field_uc = stackIn_20_1;
-          stackIn_22_0 = (om) (param0);
-          if (0 != (var4_int & 16)) {
+          game.maxPlayers = packet.readUnsignedByte(255);
+          game.joinSortPriority = packet.readUnsignedByte(obfuscationGuard ^ 255);
+          flags = packet.readUnsignedByte(255);
+          stackIn_6_0 = (LobbyGame) (game);
+          stackIn_7_1 = ((flags & 128) != 0);
+          stackIn_6_0.directJoinEnabled = stackIn_7_1;
+          stackIn_9_0 = (LobbyGame) (game);
+          stackIn_10_1 = ((64 & flags) != obfuscationGuard);
+          stackIn_9_0.started = stackIn_10_1;
+          stackIn_12_0 = (LobbyGame) (game);
+          stackIn_13_1 = (0 != (flags & 32));
+          stackIn_12_0.rated = stackIn_13_1;
+          stackIn_15_0 = (LobbyGame) (game);
+          stackIn_16_1 = ((flags & 8) != 0);
+          stackIn_15_0.protocolFlag8 = stackIn_16_1;
+          stackIn_19_0 = (LobbyGame) (game);
+          stackIn_20_1 = (game.directJoinEnabled) && (game.playerCount < game.maxPlayers);
+          stackIn_19_0.directJoinAvailable = stackIn_20_1;
+          stackIn_22_0 = (LobbyGame) (game);
+          if (0 != (flags & 16)) {
             stackIn_23_1 = 2;
           } else {
             stackIn_23_1 = 1;
           }
-          stackIn_22_0.field_wc = stackIn_23_1;
-          stackIn_26_0 = ((4 & var4_int) == 0) ? 0 : 1;
-          var5 = stackIn_26_0;
-          param1.readBytes(0, param0.field_Tb, param2 ^ 125, param0.field_Tb.length);
-          stackIn_29_0 = ((var4_int & 2) == 0) ? 0 : 1;
-          var6 = stackIn_29_0;
-          param0.field_vc = param1.readUnsignedShort(65280);
-          param0.field_qc = MonotonicTime.nowMillis(false) - (long)param1.readInt(255);
-          if (var5 != 0) {
-            param0.field_yc = param1.readInt(255);
+          stackIn_22_0.spectatorMode = stackIn_23_1;
+          stackIn_26_0 = ((4 & flags) == 0) ? 0 : 1;
+          hasConcludedDuration = stackIn_26_0;
+          packet.readBytes(0, game.settings, obfuscationGuard ^ 125, game.settings.length);
+          stackIn_29_0 = ((flags & 2) == 0) ? 0 : 1;
+          hasPlayerNames = stackIn_29_0;
+          game.protocolWord16 = packet.readUnsignedShort(65280);
+          game.activityTimeMillis = MonotonicTime.nowMillis(false) - (long)packet.readInt(255);
+          if (hasConcludedDuration != 0) {
+            game.concludedDurationMillis = packet.readInt(255);
           } else {
-            param0.field_yc = -1;
+            game.concludedDurationMillis = -1;
           }
-          param0.field_xc = param1.readLong(-32768);
-          var7 = param1.position;
-          param0.field_Fc = param1.readCp1252String(~param2);
-          if (var6 != 0) {
-            param0.field_Qb = new String[param0.field_cc];
-            param1.position = var7;
-            for (var8 = 0; param0.field_cc > var8; var8++) {
-              param0.field_Qb[var8] = param1.readCp1252String(-1);
+          game.protocolId64 = packet.readLong(-32768);
+          firstNamePosition = packet.position;
+          game.displayName = packet.readCp1252String(~obfuscationGuard);
+          if (hasPlayerNames != 0) {
+            game.playerNames = new String[game.playerCount];
+            packet.position = firstNamePosition;
+            for (playerIndex = 0; game.playerCount > playerIndex; playerIndex++) {
+              game.playerNames[playerIndex] = packet.readCp1252String(-1);
             }
             return;
           }
-          param0.field_Qb = null;
+          game.playerNames = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_40_0 = var4;
+          failure = decompiledCaughtException;
+          stackIn_40_0 = failure;
           stackIn_40_1 = new StringBuilder().append("eb.D(");
-          if (param0 == null) {
+          if (game == null) {
             stackIn_41_2 = "null";
           } else {
             stackIn_41_2 = "{...}";
           }
           stackIn_43_1 = ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(',');
-          if (param1 == null) {
+          if (packet == null) {
             stackIn_44_2 = "null";
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(obfuscationGuard).append(',').append(includePlayerCount).append(')').toString());
         }
     }
 

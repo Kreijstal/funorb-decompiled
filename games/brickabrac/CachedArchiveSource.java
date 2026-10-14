@@ -73,7 +73,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (ArcticBackground.field_r.selectedIndex != var4) {
                 var5 = ug.field_I;
               } else {
-                var5 = om.field_hc;
+                var5 = LobbyGame.field_hc;
               }
             }
             var6 = kn.field_E[var3];

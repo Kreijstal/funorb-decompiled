@@ -143,7 +143,7 @@ final class MusicVoice extends IntrusiveNode {
         NodeDeque var10 = null;
         int var11 = 0;
         Object var12 = null;
-        id var13 = null;
+        LobbyPlayer var13 = null;
         int var14 = 0;
         UiComponent var15 = null;
         UiComponent var16 = null;
@@ -187,7 +187,7 @@ final class MusicVoice extends IntrusiveNode {
             null != me.field_e)) {
             var9 = 0;
             while (!(var9 >= cq.field_p)) {
-              var10_int = 255 & o.field_e.field_Tb[var9];
+              var10_int = 255 & o.field_e.settings[var9];
               if (var32 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -239,44 +239,44 @@ final class MusicVoice extends IntrusiveNode {
           var10 = param1.content.children;
           var11Lifetime1 = 73 % ((param4 - 41) / 57);
           var12 = null;
-          var13 = (id) (var10.first(-67));
+          var13 = (LobbyPlayer) (var10.first(-67));
           while (null != var13) {
             var14 = 0;
             if (var32 != 0) {
               return;
             }
             if (null == var13.children) {
-              var13.field_Rb = new UiComponent(0L, vb.field_K);
-              var13.addChild(var13.field_Rb, 0);
-              var13.field_dc = new UiComponent(0L, OptionsScreen.field_v);
+              var13.nameLabel = new UiComponent(0L, vb.field_K);
+              var13.addChild(var13.nameLabel, 0);
+              var13.ratingLabel = new UiComponent(0L, OptionsScreen.field_v);
               if (vd.field_e) {
-                var13.addChild(var13.field_dc, 0);
+                var13.addChild(var13.ratingLabel, 0);
               }
-              var13.field_dc.horizontalAlignment = 2;
+              var13.ratingLabel.horizontalAlignment = 2;
               var13.field_Tb = new UiComponent(0L, CappedUrlRequest.field_l);
               var13.addChild(var13.field_Tb, 0);
               var13.markDescendantsToInheritVisualState(true);
-              var13.field_Vb = new UiComponent(0L, ok.field_d);
-              var13.addChild(var13.field_Vb, 0);
-              var13.field_cc = new UiComponent(0L, MotionWaypoint.field_s);
-              var13.addChild(var13.field_cc, 0);
+              var13.statusLabel = new UiComponent(0L, ok.field_d);
+              var13.addChild(var13.statusLabel, 0);
+              var13.actionLabel = new UiComponent(0L, MotionWaypoint.field_s);
+              var13.addChild(var13.actionLabel, 0);
               var14 = 1;
             }
-            var13.field_Rb.text = null;
-            var15 = var13.field_Rb;
-            var13.field_Rb.height = 0;
+            var13.nameLabel.text = null;
+            var15 = var13.nameLabel;
+            var13.nameLabel.height = 0;
             var15.width = 0;
-            var13.field_dc.text = null;
-            var13.field_dc.height = 0;
-            var16 = var13.field_dc;
+            var13.ratingLabel.text = null;
+            var13.ratingLabel.height = 0;
+            var16 = var13.ratingLabel;
             var16.width = 0;
-            var13.field_Vb.text = null;
-            var17 = var13.field_Vb;
-            var13.field_Vb.height = 0;
-            var13.field_cc.text = null;
+            var13.statusLabel.text = null;
+            var17 = var13.statusLabel;
+            var13.statusLabel.height = 0;
+            var13.actionLabel.text = null;
             var17.width = 0;
-            var18 = var13.field_cc;
-            var13.field_cc.height = 0;
+            var18 = var13.actionLabel;
+            var13.actionLabel.height = 0;
             var18.width = 0;
             var13.field_Tb.text = null;
             var19 = var13.field_Tb;
@@ -284,81 +284,81 @@ final class MusicVoice extends IntrusiveNode {
             var19.width = 0;
             var13.width = param1.content.width;
             var20 = 0;
-            var21 = var13.field_Yb;
+            var21 = var13.displayName;
             var22 = 72;
             if (param1 == IsaacGenerator.field_b) {
               var22 += 42;
             }
-            var21 = TextFont.truncateText(var13.field_Rb.font, var21, var22);
-            stackIn_90_0 = (var21.equals(var13.field_Yb)) ? 0 : 1;
+            var21 = TextFont.truncateText(var13.nameLabel.font, var21, var22);
+            stackIn_90_0 = (var21.equals(var13.displayName)) ? 0 : 1;
             var23 = stackIn_90_0;
-            if (4 <= var13.field_Zb) {
-              var21 = "<img=" + (LevelPackLoader.field_g - 4 + var13.field_Zb) + ">" + var21;
+            if (4 <= var13.badgeId) {
+              var21 = "<img=" + (LevelPackLoader.field_g - 4 + var13.badgeId) + ">" + var21;
             } else {
-              if (0 < var13.field_Zb) {
-                var21 = "<img=" + (-1 + var13.field_Zb) + ">" + var21;
+              if (0 < var13.badgeId) {
+                var21 = "<img=" + (-1 + var13.badgeId) + ">" + var21;
               }
             }
-            var13.field_Rb.text = var21;
-            if (!var13.i(0)) {
+            var13.nameLabel.text = var21;
+            if (!var13.isUnindexed(0)) {
               var24_int = 16764006;
               var25_int = 16777215;
               if (var5_int != 0 &&
-                !var13.field_ec ||
-                (!(var6 <= var13.field_Wb) ||
-                !(var7 <= var13.field_ac) ||
-                !(0 >= (var8 & ~var13.field_Ub)))) {
+                !var13.member ||
+                (!(var6 <= var13.rating) ||
+                !(var7 <= var13.ratedGameCount) ||
+                !(0 >= (var8 & ~var13.optionEligibilityMask)))) {
                 var25_int = 8421504;
                 var24_int = 8414771;
               }
-              var13.field_Rb.selectedTextColor = var25_int;
-              var13.field_Rb.capturedTextColor = var25_int;
-              var13.field_Rb.activeTextColor = var25_int;
-              var13.field_Vb.textColor = var24_int;
-              var13.field_dc.textColor = var24_int;
-              var13.field_Rb.textColor = var24_int;
-              var13.field_dc.selectedTextColor = var25_int;
-              var13.field_dc.capturedTextColor = var25_int;
-              var13.field_dc.activeTextColor = var25_int;
-              var13.field_Vb.selectedTextColor = var25_int;
-              var13.field_Vb.capturedTextColor = var25_int;
-              var13.field_Vb.activeTextColor = var25_int;
+              var13.nameLabel.selectedTextColor = var25_int;
+              var13.nameLabel.capturedTextColor = var25_int;
+              var13.nameLabel.activeTextColor = var25_int;
+              var13.statusLabel.textColor = var24_int;
+              var13.ratingLabel.textColor = var24_int;
+              var13.nameLabel.textColor = var24_int;
+              var13.ratingLabel.selectedTextColor = var25_int;
+              var13.ratingLabel.capturedTextColor = var25_int;
+              var13.ratingLabel.activeTextColor = var25_int;
+              var13.statusLabel.selectedTextColor = var25_int;
+              var13.statusLabel.capturedTextColor = var25_int;
+              var13.statusLabel.activeTextColor = var25_int;
               if (param1 == TimedSplashScreen.field_u) {
-                if (!o.field_e.field_Rb) {
-                  var13.field_cc.text = LegacyUtf8Decoder.field_b;
+                if (!o.field_e.started) {
+                  var13.actionLabel.text = LegacyUtf8Decoder.field_b;
                 }
-              } else if (!var13.field_Qb) {
-                if (!var13.field_fc) {
-                  var13.field_Vb.text = ea.field_f;
+              } else if (!var13.invitationPending) {
+                if (!var13.joinRequestPending) {
+                  var13.statusLabel.text = ea.field_f;
                 } else {
-                  var13.field_Rb.text = rd.a(ce.field_g, new String[]{var21}, (byte) 103);
-                  var13.field_Vb.text = JungleBackground.field_t;
-                  var13.field_cc.text = NameEntryPopup.field_Wb;
+                  var13.nameLabel.text = rd.a(ce.field_g, new String[]{var21}, (byte) 103);
+                  var13.statusLabel.text = JungleBackground.field_t;
+                  var13.actionLabel.text = NameEntryPopup.field_Wb;
                 }
               } else {
-                var13.field_Rb.text = rd.a(ll.field_a, new String[]{var21}, (byte) 103);
-                var13.field_cc.text = wl.field_L;
+                var13.nameLabel.text = rd.a(ll.field_a, new String[]{var21}, (byte) 103);
+                var13.actionLabel.text = wl.field_L;
               }
               var26_int = 0;
               if (null != o.field_e &&
                 hn.b((byte) 7) &&
-                ~oc.field_p != ~var13.field_gc) {
-                if (null != var13.field_Vb.text) {
-                  var27 = var13.field_Vb.getContentWidth(123) + 2 * om.field_oc;
-                  var13.field_Vb.setBounds(np.uiRowHeight, var20, var26_int, var27, (byte) 64);
+                ~oc.field_p != ~var13.playerId) {
+                if (null != var13.statusLabel.text) {
+                  var27 = var13.statusLabel.getContentWidth(123) + 2 * LobbyGame.field_oc;
+                  var13.statusLabel.setBounds(np.uiRowHeight, var20, var26_int, var27, (byte) 64);
                   var26_int = var26_int + var27;
                 }
-                if (var13.field_cc.text != null) {
+                if (var13.actionLabel.text != null) {
                   if (TimedSplashScreen.field_u == param1) {
                     var27Lifetime2 = 40;
                   } else {
-                    var27Lifetime2 = var13.field_cc.getContentWidth(99) + 2 * om.field_oc;
+                    var27Lifetime2 = var13.actionLabel.getContentWidth(99) + 2 * LobbyGame.field_oc;
                   }
-                  var13.field_cc.setBounds(np.uiRowHeight, var20, var26_int, var27Lifetime2, (byte) 64);
+                  var13.actionLabel.setBounds(np.uiRowHeight, var20, var26_int, var27Lifetime2, (byte) 64);
                   var26_int = var26_int + var27Lifetime2;
                 }
               }
-              stackIn_155_0 = var13.field_Rb;
+              stackIn_155_0 = var13.nameLabel;
               stackIn_155_1 = np.uiRowHeight;
               stackIn_155_2 = var20;
               stackIn_155_3 = var26_int;
@@ -368,30 +368,30 @@ final class MusicVoice extends IntrusiveNode {
                 stackIn_156_4 = 0;
               }
               ((UiComponent) (Object) stackIn_155_0).setBounds(stackIn_155_1, stackIn_155_2, stackIn_155_3, -stackIn_156_4 + var13.width - var26_int, (byte) 64);
-              var13.field_dc.text = Integer.toString(var13.field_Wb);
-              var13.field_dc.setBounds(np.uiRowHeight, var20, -40 + var13.width, 40, (byte) 64);
-              if (var13.field_Rb.activeInside &&
+              var13.ratingLabel.text = Integer.toString(var13.rating);
+              var13.ratingLabel.setBounds(np.uiRowHeight, var20, -40 + var13.width, 40, (byte) 64);
+              if (var13.nameLabel.activeInside &&
                 var23 != 0) {
-                ep.field_e = var13.field_Yb;
+                ep.field_e = var13.displayName;
                 if (null != PacketBuffer.field_i &&
-                  PacketBuffer.field_i[var13.field_Zb] != null) {
-                  ep.field_e = ep.field_e + " - " + PacketBuffer.field_i[var13.field_Zb];
+                  PacketBuffer.field_i[var13.badgeId] != null) {
+                  ep.field_e = ep.field_e + " - " + PacketBuffer.field_i[var13.badgeId];
                 }
               } else {
-                if (var13.field_Rb.activeInside &&
+                if (var13.nameLabel.activeInside &&
                   null != PacketBuffer.field_i &&
-                  PacketBuffer.field_i[var13.field_Zb] != null) {
-                  ep.field_e = PacketBuffer.field_i[var13.field_Zb];
+                  PacketBuffer.field_i[var13.badgeId] != null) {
+                  ep.field_e = PacketBuffer.field_i[var13.badgeId];
                 }
               }
               var20 = var20 + np.uiRowHeight;
             }
-            var24 = SoundPlayback.a((byte) -110, var21, var13.field_kc);
+            var24 = SoundPlayback.a((byte) -110, var21, var13.removalStatus);
             if (null != var24) {
-              var25_intLifetime1 = var13.field_Tb.font.countWrappedLines(var24, -om.field_oc + var13.width - om.field_oc);
-              var13.field_Tb.textAlpha256 = var13.field_ic * 256 / cm.field_o;
+              var25_intLifetime1 = var13.field_Tb.font.countWrappedLines(var24, -LobbyGame.field_oc + var13.width - LobbyGame.field_oc);
+              var13.field_Tb.textAlpha256 = var13.statusChangeTick * 256 / cm.field_o;
               var13.field_Tb.text = var24;
-              var13.field_Tb.setBounds(var25_intLifetime1 * np.uiRowHeight, var20, om.field_oc, var13.width - 2 * om.field_oc, (byte) 64);
+              var13.field_Tb.setBounds(var25_intLifetime1 * np.uiRowHeight, var20, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
               var20 = var20 + np.uiRowHeight * var25_intLifetime1;
             }
             if (var9 == 0) {
@@ -402,34 +402,34 @@ final class MusicVoice extends IntrusiveNode {
             }
             boolean decompiledFrameRemainder0 = true;
             if (var13.pressedButton != 0 &&
-              !var13.i(0)) {
-              if (0 == var13.field_Vb.pressedButton) {
-                if (var13.field_cc.pressedButton != 0) {
-                  rf.a(param2, var13.field_gc, true);
+              !var13.isUnindexed(0)) {
+              if (0 == var13.statusLabel.pressedButton) {
+                if (var13.actionLabel.pressedButton != 0) {
+                  rf.a(param2, var13.playerId, true);
                 } else {
                   SpriteGeometry.a(0, qo.pressY, var13, param1, (byte) 58, tb.pressX, 0);
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
-                hd.a(var13.field_gc, 66, param2);
+                hd.a(var13.playerId, 66, param2);
               }
             }
             var12 = var13;
             if (var13.hovered &&
-              !var13.i(0)) {
+              !var13.isUnindexed(0)) {
               var25 = null;
-              if (~var13.field_gc == ~oc.field_p) {
+              if (~var13.playerId == ~oc.field_p) {
                 if (var5_int != 0 &&
-                  !var13.field_ec) {
+                  !var13.member) {
                   var25 = ug.field_J;
                 } else {
-                  if (var13.field_ac >= var7) {
-                    if (var6 > var13.field_Wb) {
+                  if (var13.ratedGameCount >= var7) {
+                    if (var6 > var13.rating) {
                       var25 = rd.a(ea.field_h, new String[]{null, Integer.toString(var6)}, (byte) 103);
                     } else {
-                      if ((var8 & ~var13.field_Ub) != 0) {
-                        var26_int = r.a((byte) -82, ~var13.field_Ub & var8);
+                      if ((var8 & ~var13.optionEligibilityMask) != 0) {
+                        var26_int = r.a((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = ObjectHistoryBuffer.field_j;
                         if (var26_int > 0 &&
                           eb.field_p != null &&
@@ -440,7 +440,7 @@ final class MusicVoice extends IntrusiveNode {
                       }
                     }
                   } else {
-                    var26_int = -var13.field_ac + var7;
+                    var26_int = -var13.ratedGameCount + var7;
                     if (var26_int == 1) {
                       var25 = SaveResultsPromptScreen.field_w;
                     }
@@ -449,15 +449,15 @@ final class MusicVoice extends IntrusiveNode {
                 }
               } else {
                 if (var5_int != 0 &&
-                  !var13.field_ec) {
+                  !var13.member) {
                   var25 = rd.a(MenuSelection.field_f, new String[]{var21}, (byte) 103);
                 } else {
-                  if (var13.field_ac >= var7) {
-                    if (var13.field_Wb < var6) {
+                  if (var13.ratedGameCount >= var7) {
+                    if (var13.rating < var6) {
                       var25 = rd.a(cp.field_H, new String[]{var21, Integer.toString(var6)}, (byte) 103);
                     } else {
-                      if ((var8 & ~var13.field_Ub) != 0) {
-                        var26_int = r.a((byte) -82, ~var13.field_Ub & var8);
+                      if ((var8 & ~var13.optionEligibilityMask) != 0) {
+                        var26_int = r.a((byte) -82, ~var13.optionEligibilityMask & var8);
                         var25 = rd.a(IntNode.field_m, new String[]{var21}, (byte) 103);
                         if (var26_int > 0 &&
                           null != eb.field_p &&
@@ -468,7 +468,7 @@ final class MusicVoice extends IntrusiveNode {
                       }
                     }
                   } else {
-                    var26_int = var7 - var13.field_ac;
+                    var26_int = var7 - var13.ratedGameCount;
                     if (var26_int == 1) {
                       var25 = rd.a(di.field_b, new String[]{var21}, (byte) 103);
                     }
@@ -483,12 +483,12 @@ final class MusicVoice extends IntrusiveNode {
                 var28_int = 0;
                 while (true) {
                   if (cq.field_p > var28_int) {
-                    var29 = o.field_e.field_Tb[var28_int] & 255;
+                    var29 = o.field_e.settings[var28_int] & 255;
                     var30 = 0;
                     if (NodeDeque.field_a != null &&
                       NodeDeque.field_a[var28_int] != null &&
                       NodeDeque.field_a[var28_int][var29] &&
-                      !var13.field_ec) {
+                      !var13.member) {
                       var30 = 1;
                     }
                     if (null != AchievementsScreen.field_F &&
@@ -496,10 +496,10 @@ final class MusicVoice extends IntrusiveNode {
                       var31_int = AchievementsScreen.field_F[var28_int][var29];
                       if (var31_int != 0 &&
                         !ea.field_g &&
-                        !var13.field_ec) {
+                        !var13.member) {
                         var30 = 1;
                       }
-                      if (var13.field_Wb < var31_int) {
+                      if (var13.rating < var31_int) {
                         var30 = 1;
                       }
                     }
@@ -508,16 +508,16 @@ final class MusicVoice extends IntrusiveNode {
                       var31_intLifetime1 = MatchResultScreen.field_v[var28_int][var29];
                       if (var31_intLifetime1 != 0 &&
                         !ea.field_g &&
-                        !var13.field_ec) {
+                        !var13.member) {
                         var30 = 1;
                       }
-                      if (var31_intLifetime1 > var13.field_ac) {
+                      if (var31_intLifetime1 > var13.ratedGameCount) {
                         var30 = 1;
                       }
                     }
                     if (null != me.field_e &&
                       me.field_e[var28_int] != null &&
-                      (me.field_e[var28_int][var29] & ~var13.field_Ub) != 0) {
+                      (me.field_e[var28_int][var29] & ~var13.optionEligibilityMask) != 0) {
                       var30 = 1;
                     }
                     if (var30 != 0) {
@@ -541,7 +541,7 @@ final class MusicVoice extends IntrusiveNode {
                     }
                   } else {
                     if (var27Lifetime1 == 0) {
-                      var25 = (String) (var25) + "<br>" + rd.a(id.field_bc, new String[]{(String) (var26)}, (byte) 103);
+                      var25 = (String) (var25) + "<br>" + rd.a(LobbyPlayer.field_bc, new String[]{(String) (var26)}, (byte) 103);
                     } else {
                       var25 = (String) (var25) + "<br>" + QuickChatHelpDialog.field_Rb + (String) (var26);
                     }
@@ -550,13 +550,13 @@ final class MusicVoice extends IntrusiveNode {
                 }
                 if (TimedSplashScreen.field_u == param1 &&
                   !hn.b((byte) 7)) {
-                  var28 = o.field_e.field_Fc;
+                  var28 = o.field_e.displayName;
                   var25 = (String) (var25) + "<br>" + rd.a(ba.field_y, new String[]{var28}, (byte) 103);
                 }
                 ep.field_e = (String) (var25);
               }
             }
-            var13 = (id) (var10.next((byte) 116));
+            var13 = (LobbyPlayer) (var10.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

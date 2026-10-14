@@ -423,15 +423,15 @@ final class wl extends d {
         field_Q = null;
         field_O = null;
         if (param0 != 2) {
-          id var2 = (id) null;
-          wl.a((id) null, -2);
+          LobbyPlayer var2 = (LobbyPlayer) null;
+          wl.a((LobbyPlayer) null, -2);
         }
     }
 
-    final static void a(id param0, int param1) {
-        id var2 = null;
+    final static void a(LobbyPlayer param0, int param1) {
+        LobbyPlayer var2 = null;
         int var3 = 0;
-        id var4 = null;
+        LobbyPlayer var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -441,13 +441,13 @@ final class wl extends d {
         try {
           param0.unlink((byte) 111);
           if (param1 != 17574) {
-            var4 = (id) null;
-            wl.a((id) null, 48);
+            var4 = (LobbyPlayer) null;
+            wl.a((LobbyPlayer) null, 48);
           }
-          var2 = (id) (ua.field_c.first(-69));
+          var2 = (LobbyPlayer) (ua.field_c.first(-69));
           while (var2 != null) {
-            if (var2.a(param0, param1 ^ -18005)) {
-              var2 = (id) (ua.field_c.next((byte) 116));
+            if (var2.comesBeforePlayer(param0, param1 ^ -18005)) {
+              var2 = (LobbyPlayer) (ua.field_c.next((byte) 116));
               continue;
             }
             break;

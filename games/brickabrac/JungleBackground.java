@@ -45,7 +45,7 @@ final class JungleBackground extends BackgroundScene {
         return up.jungleCentreSprites[param1 - 1];
     }
 
-    final static void a(int param0, om param1, boolean param2, boolean param3) {
+    final static void a(int param0, LobbyGame param1, boolean param2, boolean param3) {
         AlignedIconLabel dupTemp$0 = null;
         AlignedIconLabel[] dupTemp$1 = null;
         int stackIn_6_0 = 0;
@@ -184,7 +184,7 @@ final class JungleBackground extends BackgroundScene {
             if (!hn.b((byte) 7)) {
               stackIn_13_0 = 0;
             } else {
-              stackIn_13_0 = (!param1.field_Rb) ? 1 : 0;
+              stackIn_13_0 = (!param1.started) ? 1 : 0;
             }
             var4_int = stackIn_13_0;
           }
@@ -197,8 +197,8 @@ final class JungleBackground extends BackgroundScene {
                 if (var26 == 0) {
                   if (stackIn_40_0 != 0 &&
                     MatchCompleteScreen.field_A[0][1 + var6].pressedButton != 0 &&
-                    param1.field_kc != var6) {
-                    param1.field_kc = var6;
+                    param1.joinSortPriority != var6) {
+                    param1.joinSortPriority = var6;
                     var5 = 1;
                   }
                   stackIn_28_0 = MatchCompleteScreen.field_A[0][var6 + 1];
@@ -209,7 +209,7 @@ final class JungleBackground extends BackgroundScene {
                     MatchCompleteScreen.field_A[0][var6 + 1].enabled = false;
                   }
                   stackIn_37_0 = MatchCompleteScreen.field_A[0][var6 + 1];
-                  stackIn_38_1 = (var6 == param1.field_kc);
+                  stackIn_38_1 = (var6 == param1.joinSortPriority);
                   stackIn_37_0.selected = stackIn_38_1;
                   var6++;
                   continue;
@@ -221,7 +221,7 @@ final class JungleBackground extends BackgroundScene {
                 break;
               }
               if (!hn.b((byte) 7)) {
-                ep.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.field_e.field_Fc}, (byte) 103);
+                ep.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.field_e.displayName}, (byte) 103);
                 if (var26 == 0) {
                   break;
                 }
@@ -274,9 +274,9 @@ final class JungleBackground extends BackgroundScene {
                 MatchCompleteScreen.field_A[1][1 + var7].pressedButton != 0) {
                 if (!param2) {
                   var9 = w.field_n[var7];
-                  if (param1.field_jc != var9) {
+                  if (param1.maxPlayers != var9) {
                     var5 = 1;
-                    param1.field_jc = var9;
+                    param1.maxPlayers = var9;
                   }
                 } else {
                   if (var6Lifetime1 == 0) {
@@ -295,7 +295,7 @@ final class JungleBackground extends BackgroundScene {
               if (!param2) {
                 var9 = w.field_n[var7];
                 stackIn_92_0 = MatchCompleteScreen.field_A[1][1 + var7];
-                stackIn_93_1 = (var9 == param1.field_jc);
+                stackIn_93_1 = (var9 == param1.maxPlayers);
                 stackIn_92_0.selected = stackIn_93_1;
               } else if (var7 == -1) {
                 MatchCompleteScreen.field_A[1][1 + var7].selected = true;
@@ -357,9 +357,9 @@ final class JungleBackground extends BackgroundScene {
               if (stackIn_157_0 != 0 &&
                 0 != var28.pressedButton) {
                 if (!param2) {
-                  if ((param1.field_wc != var6Lifetime2)) {
+                  if ((param1.spectatorMode != var6Lifetime2)) {
                     var5 = 1;
-                    param1.field_wc = var6Lifetime2;
+                    param1.spectatorMode = var6Lifetime2;
                   }
                   decompiledFrameRemainder2 = false;
                 }
@@ -376,7 +376,7 @@ final class JungleBackground extends BackgroundScene {
               stackIn_137_0.enabled = stackIn_138_1;
               if (!param2) {
                 stackIn_142_0 = var28;
-                stackIn_143_1 = ((param1.field_wc & var6Lifetime2) != 0);
+                stackIn_143_1 = ((param1.spectatorMode & var6Lifetime2) != 0);
                 stackIn_142_0.selected = stackIn_143_1;
               } else if (0 == var6Lifetime2) {
                 stackIn_148_0 = var28;
@@ -573,9 +573,9 @@ final class JungleBackground extends BackgroundScene {
                   }
                   else {
                     if (var16Lifetime1 == 0 &&
-                      param1.field_Tb[var7] != (byte)var9) {
+                      param1.settings[var7] != (byte)var9) {
                       var5 = 1;
-                      param1.field_Tb[var7] = (byte)var9;
+                      param1.settings[var7] = (byte)var9;
                     }
                   }
                 }
@@ -769,7 +769,7 @@ final class JungleBackground extends BackgroundScene {
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameCompleted0)) {
                   stackIn_395_0 = var17;
-                  stackIn_396_1 = (MeshAttributeRecord.field_g) && ((byte)var9 == param1.field_Tb[var7]);
+                  stackIn_396_1 = (MeshAttributeRecord.field_g) && ((byte)var9 == param1.settings[var7]);
                   stackIn_395_0.selected = stackIn_396_1;
                 }
                 stackIn_401_0 = var17;
@@ -808,10 +808,10 @@ final class JungleBackground extends BackgroundScene {
 
     final boolean hasSprites(byte obfuscationGuard) {
         boolean stackIn_13_0 = false;
-        om var3;
+        LobbyGame var3;
         if (obfuscationGuard >= -91) {
-          var3 = (om) null;
-          JungleBackground.a(81, (om) null, true, true);
+          var3 = (LobbyGame) null;
+          JungleBackground.a(81, (LobbyGame) null, true, true);
         }
         stackIn_13_0 = (null != ch.jungleNearSprite) && (null != dg.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != ep.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != up.jungleCentreSprites);
         return stackIn_13_0;
