@@ -53,19 +53,19 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 ^ -17, Widget.field_m, var11);
             var8 = var7 + 3;
             MenuSelection.field_q = new int[var8];
-            kn.field_E = new String[var8];
+            QuickChatCategoryDefinition.field_E = new String[var8];
             for (var9 = 0; var8 > var9; var9++) {
               MenuSelection.field_q[var9] = -1;
             }
             ButtonWidgetRenderer.field_A = new int[2];
             for (var9 = 0; var7 > var9; var9++) {
-              kn.field_E[var9] = RasterSnapshot.field_r[var9];
+              QuickChatCategoryDefinition.field_E[var9] = RasterSnapshot.field_r[var9];
             }
-            kn.field_E[-3 + var8] = "";
-            kn.field_E[var8 - 2] = var6;
+            QuickChatCategoryDefinition.field_E[-3 + var8] = "";
+            QuickChatCategoryDefinition.field_E[var8 - 2] = var6;
             MenuSelection.field_q[-2 + var8] = 0;
             ButtonWidgetRenderer.field_A[0] = 1;
-            kn.field_E[-1 + var8] = LevelSequence.field_a;
+            QuickChatCategoryDefinition.field_E[-1 + var8] = LevelSequence.field_a;
             MenuSelection.field_q[var8 - 1] = 1;
             ButtonWidgetRenderer.field_A[1] = 2;
           } else {
@@ -75,24 +75,24 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 - 109, Widget.field_m, var11);
             var8 = 2 + var7;
             MenuSelection.field_q = new int[var8];
-            kn.field_E = new String[var8];
+            QuickChatCategoryDefinition.field_E = new String[var8];
             for (var9 = 0; var8 > var9; var9++) {
               MenuSelection.field_q[var9] = -1;
             }
             ButtonWidgetRenderer.field_A = new int[1];
             for (var9 = 0; var7 > var9; var9++) {
-              kn.field_E[var9] = RasterSnapshot.field_r[var9];
+              QuickChatCategoryDefinition.field_E[var9] = RasterSnapshot.field_r[var9];
             }
-            kn.field_E[var8 - 2] = "";
-            kn.field_E[-1 + var8] = LevelSequence.field_a;
+            QuickChatCategoryDefinition.field_E[var8 - 2] = "";
+            QuickChatCategoryDefinition.field_E[-1 + var8] = LevelSequence.field_a;
             MenuSelection.field_q[-1 + var8] = 0;
             ButtonWidgetRenderer.field_A[0] = 2;
           }
           ArcticBackground.field_r.itemCount = ButtonWidgetRenderer.field_A.length;
           var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; var8Lifetime1 < kn.field_E.length; var8Lifetime1++) {
+          for (var8Lifetime1 = 0; var8Lifetime1 < QuickChatCategoryDefinition.field_E.length; var8Lifetime1++) {
             stackIn_25_0 = 0;
-            stackIn_25_1 = kn.field_E[var8Lifetime1];
+            stackIn_25_1 = QuickChatCategoryDefinition.field_E[var8Lifetime1];
             stackIn_26_2 = !(0 > MenuSelection.field_q[var8Lifetime1]);
             var9Lifetime1 = pl.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
             if (MenuSelection.field_q[var8Lifetime1] != -1) {
@@ -106,7 +106,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           ReflectionCheck.field_r = ArcticBackground.field_r.itemCount * (GameCanvas.field_f + GameClock.field_g << 1);
           LevelPack.field_k = NewAchievementsScreen.field_J - (var7Lifetime1 >> 1);
           var8Lifetime2 = 0;
-          while (kn.field_E.length > var8Lifetime2) {
+          while (QuickChatCategoryDefinition.field_E.length > var8Lifetime2) {
             stackIn_38_0 = ReflectionCheck.field_r;
             stackIn_38_1 = MenuSelection.field_q[var8Lifetime2];
             if (stackIn_38_1 >= 0) {

@@ -13,15 +13,15 @@ abstract class ResourceRequest extends DualLinkNode {
 
     abstract byte[] getData(byte obfuscationGuard);
 
-    final static void a(kn param0, boolean param1) {
+    final static void setQuickChatHelpEntry(QuickChatCategoryDefinition category, boolean obfuscationGuard) {
         try {
-          if (param1) {
+          if (obfuscationGuard) {
             ResourceRequest.a(27, -126, 116, 12, -63, -53, 36, -10, -75);
           }
-          param0.field_v = new int[]{-1};
-          param0.field_u = new char[]{(char)63};
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          category.phraseIds = new int[]{-1};
+          category.phraseShortcuts = new char[]{(char)63};
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "hb.G(" + (category != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -35,8 +35,8 @@ abstract class ResourceRequest extends DualLinkNode {
     public static void a(byte param0) {
         field_A = null;
         if (param0 <= 1) {
-          kn var2 = (kn) null;
-          ResourceRequest.a((kn) null, true);
+          QuickChatCategoryDefinition var2 = (QuickChatCategoryDefinition) null;
+          ResourceRequest.setQuickChatHelpEntry((QuickChatCategoryDefinition) null, true);
           field_z = null;
           return;
         }

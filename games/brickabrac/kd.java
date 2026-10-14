@@ -21,7 +21,7 @@ final class kd {
 
     final static RasterCacheSurface a(int param0, int param1, byte param2) {
         int var3 = 117 / ((param2 - 38) / 63);
-        return so.a(0, param1, param0, ActivityIndicatorWidget.field_N);
+        return QuickChatCategoryRegistry.a(0, param1, param0, ActivityIndicatorWidget.field_N);
     }
 
     final static boolean a(int param0, PacketBuffer param1) {

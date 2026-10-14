@@ -81,7 +81,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        kn var4 = null;
+        QuickChatCategoryDefinition var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -97,14 +97,14 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           }
           param2.decodedFilePolicy = 0;
           param2.discardPackedGroups = false;
-          DebouncedValidationSource.field_c = new so(var3_int, param2, param2);
+          DebouncedValidationSource.quickChatCategories = new QuickChatCategoryRegistry(var3_int, param2, param2);
           nh.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, param2, param2, new rm());
-          var4 = gj.b(0);
+          var4 = gj.findRootQuickChatCategory(0);
           if (var4 == null) {
             AlignedIconLabel.a("QC2", (Throwable) null, param1 - 14);
             return;
           }
-          ResourceRequest.a(var4, false);
+          ResourceRequest.setQuickChatHelpEntry(var4, false);
           var10 = (TextFont) null;
           ArchiveIndex.field_j = DateInputWidget.a(1513239, 1127256, (byte) 123, 65793, 4020342, 5138823, 65793, 1513239, (TextFont) null, 0, 65793, 2245737, 8947848);
           SoftwareFramebuffer.field_e = DateInputWidget.a(0, 0, (byte) 122, 0, 0, 0, 0, 0, param0, 16764006, 0, 0, 0);
@@ -121,7 +121,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             LoginPanel.i((byte) 86);
           }
           Rasterizer2D.bind(var14, var5, var6);
-          ContentTransitionLayer.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
+          ContentTransitionLayer.field_kb = AchievementSubmission.buildQuickChatCategoryMenu(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
           QuickChatPhraseDefinition.quickChatMenuRoot.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -206,7 +206,7 @@ final class hc {
           if (param0 < 102) {
             return;
           }
-          kn.field_z = 2;
+          QuickChatCategoryDefinition.field_z = 2;
           ok.field_f = 11;
           var7 = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "largefont");
           rd.field_e = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "generalfont");
@@ -281,7 +281,7 @@ final class hc {
           TextFieldWidget.field_K = new UiComponent(0L, ProxySocketConnector.field_n);
           TextFieldWidget.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
           var16 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
-          ce.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, kn.field_z, 3, np.uiRowHeight);
+          ce.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, QuickChatCategoryDefinition.field_z, 3, np.uiRowHeight);
           ArcticBackground.field_s = new UiComponent(0L, DualLinkNode.field_t);
           ArcticBackground.field_s.capturedOffsetY = 1;
           ArcticBackground.field_s.capturedOffsetX = 1;

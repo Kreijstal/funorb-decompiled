@@ -1104,12 +1104,12 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               stackIn_66_0 = (!vd.field_e) ? 200 : 250;
               var34_intLifetime1 = stackIn_66_0;
               var13.field_ec.setBounds(np.uiRowHeight, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
-              var35_int = kn.field_z;
+              var35_int = QuickChatCategoryDefinition.field_z;
               if ((var15Lifetime1 & 1 << BackgroundRegistry.field_c) != 0) {
                 var51_ref = GameClock.field_f[var13.joinSortPriority];
                 var13.field_sc.sprite = var51_ref;
                 var13.field_sc.setBounds(var13.field_ec.height, 0, var35_int, var51_ref.canvasWidth, (byte) 64);
-                var35_int = var35_int + (var51_ref.canvasWidth + kn.field_z);
+                var35_int = var35_int + (var51_ref.canvasWidth + QuickChatCategoryDefinition.field_z);
               }
               if ((var15Lifetime1 & 1 << MotionWaypoint.field_q) != 0) {
                 if (!var13.directJoinAvailable) {
@@ -1127,13 +1127,13 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var52_ref = stackIn_79_0[stackIn_80_1];
                 var13.field_Yb.sprite = var52_ref;
                 var13.field_Yb.setBounds(var13.field_ec.height, 0, var35_int, var52_ref.canvasWidth, (byte) 64);
-                var35_int = var35_int + (var52_ref.canvasWidth + kn.field_z);
+                var35_int = var35_int + (var52_ref.canvasWidth + QuickChatCategoryDefinition.field_z);
               }
               if ((1 << u.field_a & var15Lifetime1) != 0) {
                 var53_ref = Ball.field_K[var13.spectatorMode - 1];
                 var13.field_Bc.sprite = var53_ref;
                 var13.field_Bc.setBounds(var13.field_ec.height, 0, var35_int, var53_ref.canvasWidth, (byte) 64);
-                var35_int = var35_int + (var53_ref.canvasWidth + kn.field_z);
+                var35_int = var35_int + (var53_ref.canvasWidth + QuickChatCategoryDefinition.field_z);
               }
               if ((var15Lifetime1 & 1 << ScrollPane.field_Pb) != 0) {
                 stackIn_87_0 = bq.field_c;
@@ -1145,7 +1145,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var54_ref = stackIn_87_0[stackIn_88_1];
                 var13.field_lc.sprite = var54_ref;
                 var13.field_lc.setBounds(var13.field_ec.height, 0, var35_int, var54_ref.canvasWidth, (byte) 64);
-                var35_int = var35_int + (kn.field_z + var54_ref.canvasWidth);
+                var35_int = var35_int + (QuickChatCategoryDefinition.field_z + var54_ref.canvasWidth);
               }
               if (null != aj.field_c) {
                 for (var37Lifetime1 = 0; var37Lifetime1 < RankingsRequest.gameSettingCount; var37Lifetime1++) {
@@ -1155,7 +1155,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                     var55 = var43;
                     var13.field_Ec[var37Lifetime1].sprite = var43;
                     var13.field_Ec[var37Lifetime1].setBounds(var13.field_ec.height, 0, var35_int, var55.canvasWidth, (byte) 64);
-                    var35_int = var35_int + (kn.field_z + var55.canvasWidth);
+                    var35_int = var35_int + (QuickChatCategoryDefinition.field_z + var55.canvasWidth);
                   }
                 }
               }

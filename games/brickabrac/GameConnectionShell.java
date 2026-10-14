@@ -722,7 +722,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           var3 = wn.a((byte) -98) * 1200;
           if (this.reconnectRequested ||
             !(ProxySocketConnector.c(1) <= var3) &&
-            !(var3 >= so.a((byte) -35))) {
+            !(var3 >= QuickChatCategoryRegistry.a((byte) -35))) {
             this.reconnectRequested = false;
             hn.a((byte) 91);
             FarmBackground.g(120);

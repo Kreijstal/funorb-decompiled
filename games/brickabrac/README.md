@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 302 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 304 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -297,5 +297,9 @@ TextFont now names every local declaration and the remaining paragraph/alpha dra
 Three independently encoded contour fixtures verify complete 65536-entry kerning tables, signed accumulation/byte wrapping, excluded space pairs, advances/extents and scalar rich-text widths. Explicit wrapping vectors check per-line width reuse, spaces/hyphens/NBSP, lowercased tag retention, valid/invalid images, explicit breaks and malformed tag boundaries. Recorded glyph calls verify opaque/alpha paragraph entry points, all four alignment modes, short-box wrapping bypass, spacing, justified nonfinal lines, style restoration and shadows. Existing bounds failures for empty width lists and undersized line arrays are retained.
 
 The archived wrapText euro-tag path stores previousCode 8364 instead of the encoded glyph 128. With extended kerning, a following glyph can trigger ArrayIndexOutOfBoundsException; fixtures preserve that failure while ordinary measureText maps euro correctly. Tests run in controlled ROOT locale and restore locale plus font/raster/UI state. Malformed extended metrics, arbitrary locale behavior, shared-buffer concurrency, all rich-text combinations, live rendering and original-JAR equivalence remain unverified.
+
+QuickChatCategoryDefinition/QuickChatCategoryRegistry expose tag-decoded title, child/phrase ID arrays, CP1252 shortcuts, root marker, standard/extended group 0 archives and 64-entry weighted cache. Repeated tags replace corresponding arrays without resetting other fields; root markers remain sticky. Extended lookup ORs 32768 into both ID arrays in place, caches by the original ID and retains empty missing-file definitions. findRootQuickChatCategory scans upward until a marked record without an explicit exhaustion bound. Unrelated static resource/UI helpers remain separate.
+
+buildQuickChatCategoryMenu recursively emits child branches before phrase previews. Missing phrase shortcuts increment a counter initialized to 1, so the first generated shortcut is 2. setQuickChatHelpEntry replaces phrases with singleton -1/question mark while preserving child links. Independent fixtures cover 255-entry records/all 256 shortcut bytes, zero bypass versus decodeCp1252Byte rejection, undefined CP1252 extensions, unknown tags, repeated decode and idempotent extended marking. Controlled group 0/group 1 archives verify missing-file caching, later availability, root discovery, 64-entry eviction, nested menu labels/IDs/shortcuts and help insertion. Noncanonical ID 65536 retains its distinct cache key while selecting extended file 0. Static client/UI state is restored. Cycles, root scans without a marker, arbitrary malformed records, real catalog completeness, live server/menu behavior and original-JAR equivalence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

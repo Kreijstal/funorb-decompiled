@@ -25,7 +25,7 @@ final class rj {
 
     final static void installTextHuffman(HuffmanCodec codec, boolean obfuscationGuard) {
         try {
-          so.textHuffman = codec;
+          QuickChatCategoryRegistry.textHuffman = codec;
           if (obfuscationGuard) {
             rj.b(-94);
           }

@@ -18,7 +18,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         if (param0 >= -60) {
           field_m = (String[]) null;
         }
-        return (java.applet.Applet) ((Object) so.field_f);
+        return (java.applet.Applet) ((Object) QuickChatCategoryRegistry.field_f);
     }
 
     final ValidationStatus validateText(String text, byte obfuscationGuard) {

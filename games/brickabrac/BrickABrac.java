@@ -757,9 +757,9 @@ public final class BrickABrac extends InteractiveGameClient {
         rm.a(-41);
         uo.a((byte) 66);
         QuickChatMenu.d(true);
-        so.b((byte) -19);
+        QuickChatCategoryRegistry.b((byte) -19);
         QuickChatPhraseRegistry.a(64);
-        kn.a((byte) 90);
+        QuickChatCategoryDefinition.a((byte) 90);
         BirthDateValidator.c((byte) -93);
         DateFieldsWidget.k((byte) 84);
         ArrayWidgetGroup.c(false);

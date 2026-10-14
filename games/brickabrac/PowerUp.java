@@ -45,7 +45,7 @@ final class PowerUp extends CircleBody {
           java.awt.Component var4 = (java.awt.Component) null;
           PowerUp.detachKeyboardInput(58, (java.awt.Component) null);
         }
-        return so.a(param2 ^ -20777, param1, param0, JungleBackground.field_s);
+        return QuickChatCategoryRegistry.a(param2 ^ -20777, param1, param0, JungleBackground.field_s);
     }
 
     final boolean isSelfTargeted(boolean obfuscationGuard) {

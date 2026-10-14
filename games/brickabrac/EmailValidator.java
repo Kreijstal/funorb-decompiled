@@ -21,8 +21,8 @@ final class EmailValidator extends TextFieldValidator {
           gr.pointerIdleTicks = gr.pointerIdleTicks + 1;
           MusicPatch.pointerX = DirectByteStorage.livePointerX;
           po.pointerY = WidgetTextLayout.livePointerY;
-          QuickChatHelpDialog.pointerChanged = kn.livePointerChanged;
-          kn.livePointerChanged = false;
+          QuickChatHelpDialog.pointerChanged = QuickChatCategoryDefinition.livePointerChanged;
+          QuickChatCategoryDefinition.livePointerChanged = false;
           BackgroundScene.pressedButton = ContentTransitionPhase.livePressedButton;
           tb.pressX = SoundPlayback.livePressX;
           PlayerNameChooserPanel.pressY = va.livePressY;

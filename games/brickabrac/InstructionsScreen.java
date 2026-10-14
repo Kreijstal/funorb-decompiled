@@ -94,7 +94,7 @@ final class InstructionsScreen extends MenuScreen {
           var5 = (CharSequence) ((Object) text);
           var4 = LevelList.a(var5, false);
           packet.writeUnsignedSmart(-1, var4.length);
-          packet.position = packet.position + so.textHuffman.compress((byte) -119, var4.length, 0, packet.data, packet.position, var4);
+          packet.position = packet.position + QuickChatCategoryRegistry.textHuffman.compress((byte) -119, var4.length, 0, packet.data, packet.position, var4);
           if (obfuscationGuard == 26152) {
             stackIn_4_0 = packet.position - var3_int;
             return stackIn_4_0;

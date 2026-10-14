@@ -110,7 +110,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           var10 = BrickABrac.field_J ? 1 : 0;
           try {
             try {
-              if (so.field_f != null) {
+              if (QuickChatCategoryRegistry.field_f != null) {
                 TableRowSubmission.field_l = TableRowSubmission.field_l + 1;
                 if (TableRowSubmission.field_l < 3) {
                   this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
@@ -121,7 +121,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               }
               WeightedLruCache.field_b = param3;
               u.field_d = param3;
-              so.field_f = this;
+              QuickChatCategoryRegistry.field_f = this;
               WeightedLruCache.field_i = 0;
               var8_int = 88 / ((param1 - 24) / 56);
               LoginPanel.field_W = 0;
@@ -258,7 +258,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         java.awt.Rectangle var2 = null;
         RuntimeException var2_ref = null;
         try {
-          if (so.field_f == this &&
+          if (QuickChatCategoryRegistry.field_f == this &&
             !ParisBackground.field_s) {
             GameplayAudioEvent.redrawRequested = true;
             if (FullscreenFailureKind.field_h &&
@@ -393,7 +393,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 }
               }
               if (decompiledFrameRemainder3) {
-                var1 = so.field_f;
+                var1 = QuickChatCategoryRegistry.field_f;
                 if (CacheEntry.field_x != null) {
                   var1 = CacheEntry.field_x;
                 }
@@ -530,7 +530,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
     }
 
     public final void stop() {
-        if (so.field_f != this ||
+        if (QuickChatCategoryRegistry.field_f != this ||
           ParisBackground.field_s) {
           return;
         }
@@ -646,7 +646,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             }
             if (decompiledFrameRemainder0) {
               if (null == CacheEntry.field_x) {
-                var2 = so.field_f;
+                var2 = QuickChatCategoryRegistry.field_f;
                 if (var4 != 0) {
                   var2 = CacheEntry.field_x;
                   var2 = BackgroundRegistry.field_e;
@@ -801,7 +801,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this == so.field_f &&
+          if (this == QuickChatCategoryRegistry.field_f &&
             !ParisBackground.field_s) {
             BufferedFile.shutdownDeadlineMillis = MonotonicTime.nowMillis(false);
             wj.sleepMillis(-127, 5000L);
@@ -882,7 +882,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
     }
 
     public final void start() {
-        if (so.field_f != this ||
+        if (QuickChatCategoryRegistry.field_f != this ||
           ParisBackground.field_s) {
           return;
         }

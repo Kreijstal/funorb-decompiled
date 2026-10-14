@@ -173,7 +173,7 @@ final class WidgetLayerStack extends SingleChildWidget {
 
     final static void a(int param0, int param1, NineSliceFrame param2, int param3, NineSliceFrame param4, int param5) {
         try {
-          kn.field_y = param1;
+          QuickChatCategoryDefinition.field_y = param1;
           cn.field_c = param5;
           if (param3 <= 25) {
             WidgetLayerStack.h(24);
@@ -288,7 +288,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             var7Lifetime1 = hm.a(!(0 > var4), var6, 0);
             var8Lifetime1 = ProxySocketConnector.field_k - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              var1_int = var1_int + kn.field_y;
+              var1_int = var1_int + QuickChatCategoryDefinition.field_y;
               if (UiComponent.field_H.selectedIndex != var4) {
                 stackIn_44_0 = LoginCredentialKind.field_c;
               } else {
@@ -301,8 +301,8 @@ final class WidgetLayerStack extends SingleChildWidget {
               var1_int = var1_int + DropTargetWidget.field_H;
             }
             if (var4 >= 0) {
-              kp.field_b.drawLeft(var6, var8Lifetime1, var1_int + so.field_b, var5, -1);
-              var1_int = var1_int + (DropTargetWidget.field_H + (kn.field_y + b.field_c));
+              kp.field_b.drawLeft(var6, var8Lifetime1, var1_int + QuickChatCategoryRegistry.field_b, var5, -1);
+              var1_int = var1_int + (DropTargetWidget.field_H + (QuickChatCategoryDefinition.field_y + b.field_c));
             } else {
               StateIconLabel.field_Wb.drawLeft(var6, var8Lifetime1, var1_int + DualLinkIterator.field_f, var5, -1);
               var1_int = var1_int + IntArrayRequest.field_s;

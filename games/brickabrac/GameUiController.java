@@ -201,7 +201,7 @@ final class GameUiController implements GameUiLifecycle {
               } else {
                 ParisBackground.a((byte) 24, 90.0f, MessageScreen.field_u);
                 CacheEntry.field_C.renderClient(106);
-                so.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
+                QuickChatCategoryRegistry.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
               }
             } else {
               ParisBackground.a((byte) 24, 88.0f, ValidatedTextFieldWidget.field_bb);

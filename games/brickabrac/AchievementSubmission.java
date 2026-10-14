@@ -12,133 +12,133 @@ final class AchievementSubmission extends IntrusiveNode {
     int submissionByte;
     static RgbSprite[] field_q;
 
-    final static QuickChatMenu a(UiComponent param0, UiComponent param1, kn param2, int param3, UiComponent param4) {
-        int var14 = 0;
-        Object stackIn_3_0 = null;
-        int stackIn_7_0 = 0;
-        int stackIn_10_0 = 0;
-        QuickChatMenu stackIn_28_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_32_2 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_35_2 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_38_2 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_41_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        String[] var8 = null;
-        char[] var9 = null;
-        int[] var10 = null;
-        QuickChatMenu[] var11 = null;
-        int var12 = 0;
-        kn var13_ref_kn = null;
-        int var13 = 0;
-        int var15 = 0;
-        QuickChatPhraseDefinition var16 = null;
-        int var17 = 0;
-        ResourceArchive var18 = null;
-        int[] var19 = null;
-        char[] var20 = null;
-        int[] var21 = null;
-        char[] var22 = null;
-        int var12Lifetime1;
-        var17 = BrickABrac.field_J ? 1 : 0;
+    final static QuickChatMenu buildQuickChatCategoryMenu(UiComponent labelStyle, UiComponent itemStyle, QuickChatCategoryDefinition category, int obfuscationGuard, UiComponent styleTemplate) {
+        int phraseIndex = 0;
+        Object missingMenu = null;
+        int childCountValue = 0;
+        int phraseCountValue = 0;
+        QuickChatMenu menu = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String labelStyleSummary = null;
+        StringBuilder itemContextBuilder = null;
+        String itemStyleSummary = null;
+        StringBuilder categoryContextBuilder = null;
+        String categorySummary = null;
+        StringBuilder styleContextBuilder = null;
+        String styleTemplateSummary = null;
+        RuntimeException caughtFailure = null;
+        int childCount = 0;
+        RuntimeException failure = null;
+        int phraseCount = 0;
+        int itemCount = 0;
+        String[] labels = null;
+        char[] shortcuts = null;
+        int[] messageIds = null;
+        QuickChatMenu[] submenus = null;
+        int childIndex = 0;
+        QuickChatCategoryDefinition childCategory = null;
+        int defaultShortcut = 0;
+        int phraseId = 0;
+        QuickChatPhraseDefinition phrase = null;
+        int unusedGameFlag = 0;
+        ResourceArchive unusedArchive = null;
+        int[] messageIdsAlias = null;
+        char[] shortcutsAlias = null;
+        int[] newMessageIds = null;
+        char[] newShortcuts = null;
+        int phraseOffset;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param2 == null) {
-            stackIn_3_0 = null;
-            return (QuickChatMenu) (stackIn_3_0);
+          if (category == null) {
+            missingMenu = null;
+            return (QuickChatMenu) (missingMenu);
           }
-          if (param2.field_x != null) {
-            stackIn_7_0 = param2.field_x.length;
+          if (category.subcategoryIds != null) {
+            childCountValue = category.subcategoryIds.length;
           } else {
-            stackIn_7_0 = 0;
+            childCountValue = 0;
           }
-          var5_int = stackIn_7_0;
-          if (param2.field_v != null) {
-            stackIn_10_0 = param2.field_v.length;
+          childCount = childCountValue;
+          if (category.phraseIds != null) {
+            phraseCountValue = category.phraseIds.length;
           } else {
-            stackIn_10_0 = 0;
+            phraseCountValue = 0;
           }
-          var6 = stackIn_10_0;
-          var7 = var5_int + var6;
-          var8 = new String[var7];
-          if (param3 != 4) {
-            var18 = (ResourceArchive) null;
+          phraseCount = phraseCountValue;
+          itemCount = childCount + phraseCount;
+          labels = new String[itemCount];
+          if (obfuscationGuard != 4) {
+            unusedArchive = (ResourceArchive) null;
             AchievementSubmission.a((ResourceArchive) null, 30);
           }
-          var22 = new char[var7];
-          var20 = var22;
-          var9 = var20;
-          var21 = new int[var7];
-          var19 = var21;
-          var10 = var19;
-          var11 = new QuickChatMenu[var7];
-          if (param2.field_x != null) {
-            for (var12 = 0; param2.field_x.length > var12; var12++) {
-              var13_ref_kn = DebouncedValidationSource.field_c.a(param2.field_x[var12], (byte) 124);
-              var8[var12] = var13_ref_kn.field_D;
-              var9[var12] = param2.field_w[var12];
-              var11[var12] = AchievementSubmission.a(param0, param1, var13_ref_kn, 4, param4);
+          newShortcuts = new char[itemCount];
+          shortcutsAlias = newShortcuts;
+          shortcuts = shortcutsAlias;
+          newMessageIds = new int[itemCount];
+          messageIdsAlias = newMessageIds;
+          messageIds = messageIdsAlias;
+          submenus = new QuickChatMenu[itemCount];
+          if (category.subcategoryIds != null) {
+            for (childIndex = 0; category.subcategoryIds.length > childIndex; childIndex++) {
+              childCategory = DebouncedValidationSource.quickChatCategories.getDefinition(category.subcategoryIds[childIndex], (byte) 124);
+              labels[childIndex] = childCategory.title;
+              shortcuts[childIndex] = category.subcategoryShortcuts[childIndex];
+              submenus[childIndex] = AchievementSubmission.buildQuickChatCategoryMenu(labelStyle, itemStyle, childCategory, 4, styleTemplate);
             }
           }
-          if (param2.field_v != null) {
-            var12Lifetime1 = var5_int;
-            var13 = 49;
-            for (var14 = 0; param2.field_v.length > var14; var14++) {
-              var15 = param2.field_v[var14];
-              if (var15 == -1) {
-                var8[var14 + var12Lifetime1] = ng.field_c;
-                var9[var14 + var12Lifetime1] = param2.field_u[var14];
-                var10[var12Lifetime1 + var14] = param2.field_v[var14];
+          if (category.phraseIds != null) {
+            phraseOffset = childCount;
+            defaultShortcut = 49;
+            for (phraseIndex = 0; category.phraseIds.length > phraseIndex; phraseIndex++) {
+              phraseId = category.phraseIds[phraseIndex];
+              if (phraseId == -1) {
+                labels[phraseIndex + phraseOffset] = ng.field_c;
+                shortcuts[phraseIndex + phraseOffset] = category.phraseShortcuts[phraseIndex];
+                messageIds[phraseOffset + phraseIndex] = category.phraseIds[phraseIndex];
               } else {
-                var16 = nh.quickChatPhrases.getDefinition(var15, true);
-                var8[var14 + var12Lifetime1] = var16.getPreview(-3);
-                var9[var14 + var12Lifetime1] = param2.field_u[var14];
-                if (var9[var12Lifetime1 + var14] <= 0) {
-                  var13 = (char)(var13 + 1);
-                  var9[var14 + var12Lifetime1] = (char)var13;
+                phrase = nh.quickChatPhrases.getDefinition(phraseId, true);
+                labels[phraseIndex + phraseOffset] = phrase.getPreview(-3);
+                shortcuts[phraseIndex + phraseOffset] = category.phraseShortcuts[phraseIndex];
+                if (shortcuts[phraseOffset + phraseIndex] <= 0) {
+                  defaultShortcut = (char)(defaultShortcut + 1);
+                  shortcuts[phraseIndex + phraseOffset] = (char)defaultShortcut;
                 }
-                var10[var12Lifetime1 + var14] = param2.field_v[var14];
+                messageIds[phraseOffset + phraseIndex] = category.phraseIds[phraseIndex];
               }
             }
           }
-          stackIn_28_0 = new QuickChatMenu(0L, param4, param1, param0, var11, var21, var8, var22);
-          return stackIn_28_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_31_0 = var5;
-          stackIn_31_1 = new StringBuilder().append("e.A(");
-          if (param0 == null) {
-            stackIn_32_2 = "null";
+          menu = new QuickChatMenu(0L, styleTemplate, itemStyle, labelStyle, submenus, newMessageIds, labels, newShortcuts);
+          return menu;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("e.A(");
+          if (labelStyle == null) {
+            labelStyleSummary = "null";
           } else {
-            stackIn_32_2 = "{...}";
+            labelStyleSummary = "{...}";
           }
-          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',');
-          if (param1 == null) {
-            stackIn_35_2 = "null";
+          itemContextBuilder = ((StringBuilder) (Object) contextBuilder).append(labelStyleSummary).append(',');
+          if (itemStyle == null) {
+            itemStyleSummary = "null";
           } else {
-            stackIn_35_2 = "{...}";
+            itemStyleSummary = "{...}";
           }
-          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',');
-          if (param2 == null) {
-            stackIn_38_2 = "null";
+          categoryContextBuilder = ((StringBuilder) (Object) itemContextBuilder).append(itemStyleSummary).append(',');
+          if (category == null) {
+            categorySummary = "null";
           } else {
-            stackIn_38_2 = "{...}";
+            categorySummary = "{...}";
           }
-          stackIn_40_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_41_2 = "null";
+          styleContextBuilder = ((StringBuilder) (Object) categoryContextBuilder).append(categorySummary).append(',').append(obfuscationGuard).append(',');
+          if (styleTemplate == null) {
+            styleTemplateSummary = "null";
           } else {
-            stackIn_41_2 = "{...}";
+            styleTemplateSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) styleContextBuilder).append(styleTemplateSummary).append(')').toString());
         }
     }
 

@@ -7,29 +7,29 @@ final class gj {
     static String field_d;
     static RgbSprite[] field_c;
 
-    final static kn b(int param0) {
-        int var1_int = 0;
-        kn var2 = null;
-        int var3 = 0;
-        kn stackIn_4_0 = null;
-        Throwable decompiledCaughtException = null;
-        IllegalArgumentException var1 = null;
-        var3 = BrickABrac.field_J ? 1 : 0;
+    final static QuickChatCategoryDefinition findRootQuickChatCategory(int startingCategoryId) {
+        int categoryId = 0;
+        QuickChatCategoryDefinition definition = null;
+        int unusedGameFlag = 0;
+        QuickChatCategoryDefinition result = null;
+        Throwable caughtFailure = null;
+        IllegalArgumentException ignoredInvalidCategory = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = param0;
+          categoryId = startingCategoryId;
           while (true) {
-            var2 = DebouncedValidationSource.field_c.a(var1_int, (byte) -97);
-            if (!var2.field_A) {
-              var1_int++;
+            definition = DebouncedValidationSource.quickChatCategories.getDefinition(categoryId, (byte) -97);
+            if (!definition.rootMarker) {
+              categoryId++;
               continue;
             }
             break;
           }
-          stackIn_4_0 = var2;
-          return stackIn_4_0;
-        } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+          result = definition;
+          return result;
+        } catch (java.lang.IllegalArgumentException caughtParameter) {
+          caughtFailure = caughtParameter;
+          ignoredInvalidCategory = (IllegalArgumentException) (Object) caughtFailure;
           return null;
         }
     }

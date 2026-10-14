@@ -392,7 +392,7 @@ final class MusicCrossfadeStream extends AudioStream {
         if (param2 != 256) {
           return;
         }
-        so.field_b = param0;
+        QuickChatCategoryRegistry.field_b = param0;
         DualLinkIterator.field_f = param3;
         IntArrayRequest.field_s = param4;
     }

@@ -239,14 +239,14 @@ final class CacheIoRequest extends ResourceRequest {
                       var9.width = 0;
                     }
                   } else {
-                    MatchCompleteScreen.field_A[var6][0].setIconLabelBounds(-10411, var5, 2, kn.field_z, var8, var3, 38);
+                    MatchCompleteScreen.field_A[var6][0].setIconLabelBounds(-10411, var5, 2, QuickChatCategoryDefinition.field_z, var8, var3, 38);
                     var8 += 40;
                   }
                   var9_int = 2 + (MultiplayerMatch.field_d.width - (5 + var8));
                   var10 = MatchCompleteScreen.field_A[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    MatchCompleteScreen.field_A[var6][1 + var11].setIconLabelBounds(-10411, var5, 2, kn.field_z, var12 + var8, var3, var9_int * (var11 + 1) / var10 - 2 - var12);
+                    MatchCompleteScreen.field_A[var6][1 + var11].setIconLabelBounds(-10411, var5, 2, QuickChatCategoryDefinition.field_z, var12 + var8, var3, var9_int * (var11 + 1) / var10 - 2 - var12);
                   }
                   var5 = var5 + (var3 + 2);
                 }

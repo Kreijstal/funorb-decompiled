@@ -26,27 +26,27 @@ final class RankingsRequest extends IntrusiveNode {
         field_i = null;
     }
 
-    final static char a(byte param0, byte param1) {
-        int var3 = 0;
-        int var2 = 255 & param1;
-        if (param0 >= 0) {
+    final static char decodeCp1252Byte(byte obfuscationGuard, byte value) {
+        int extensionCharacter = 0;
+        int unsignedValue = 255 & value;
+        if (obfuscationGuard >= 0) {
           return '￪';
         }
-        if (0 == var2) {
-          throw new IllegalArgumentException("" + Integer.toString(var2, 16));
+        if (0 == unsignedValue) {
+          throw new IllegalArgumentException("" + Integer.toString(unsignedValue, 16));
         }
-        if (var2 < 128) {
-          return (char)var2;
+        if (unsignedValue < 128) {
+          return (char)unsignedValue;
         }
-        if (var2 < 160) {
-          var3 = ParisBackground.cp1252Extensions[-128 + var2];
-          if (var3 == 0) {
-            var3 = 63;
+        if (unsignedValue < 160) {
+          extensionCharacter = ParisBackground.cp1252Extensions[-128 + unsignedValue];
+          if (extensionCharacter == 0) {
+            extensionCharacter = 63;
           }
-          var2 = var3;
-          return (char)var2;
+          unsignedValue = extensionCharacter;
+          return (char)unsignedValue;
         }
-        return (char)var2;
+        return (char)unsignedValue;
     }
 
     final static void a(boolean param0, byte param1) {

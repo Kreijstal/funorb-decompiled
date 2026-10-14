@@ -2674,7 +2674,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("keychar_the_character_under_questionmark", (byte) 109);
                 if (null != var2) {
-                  SoundCache.field_h = RankingsRequest.a((byte) -99, var2[0]);
+                  SoundCache.field_h = RankingsRequest.decodeCp1252Byte((byte) -99, var2[0]);
                 }
                 var2 = nk.a("rating_noratings", (byte) -116);
                 if (null != var2) {
@@ -2682,7 +2682,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rating_rating", (byte) -115);
                 if (null != var2) {
-                  so.field_e = MenuButton.a(var2, (byte) 127);
+                  QuickChatCategoryRegistry.field_e = MenuButton.a(var2, (byte) 127);
                 }
                 var2 = nk.a("rating_played", (byte) -128);
                 if (null != var2) {

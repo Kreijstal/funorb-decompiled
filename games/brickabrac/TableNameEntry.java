@@ -51,7 +51,7 @@ final class TableNameEntry {
             return;
           }
           if (AchievementIcon.field_j != 0) {
-            kn.a(true, param1);
+            QuickChatCategoryDefinition.a(true, param1);
             return;
           }
           RankingsScreen.a(param2, -71, false);

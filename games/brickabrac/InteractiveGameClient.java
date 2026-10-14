@@ -80,13 +80,13 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           return;
         }
         if (!un.field_f) {
-          kn.a(true, var2);
+          QuickChatCategoryDefinition.a(true, var2);
           return;
         }
         if (!TextWidgetRenderer.field_t &&
           !QuickChatMenu.h(-26090)) {
           ParisBackground.a((byte) 24, 100.0f, qm.field_e);
-          kn.a(true, var2);
+          QuickChatCategoryDefinition.a(true, var2);
           return;
         }
         IntArrayRequest.field_i = true;

@@ -65,7 +65,7 @@ final class CachedArchiveSource extends ArchiveSource {
           ContentTransitionPhase.field_d = ea.field_e - (ReflectionCheck.field_r >> 1);
           MusicVoiceMixer.field_p = var1_int + LevelPack.field_k;
           var2 = ContentTransitionPhase.field_d;
-          for (var3 = 0; var3 < kn.field_E.length; var3++) {
+          for (var3 = 0; var3 < QuickChatCategoryDefinition.field_E.length; var3++) {
             var4 = MenuSelection.field_q[var3];
             if (var4 < 0) {
               var5 = ValidationStatus.field_d;
@@ -76,7 +76,7 @@ final class CachedArchiveSource extends ArchiveSource {
                 var5 = LobbyGame.field_hc;
               }
             }
-            var6 = kn.field_E[var3];
+            var6 = QuickChatCategoryDefinition.field_E[var3];
             stackIn_12_0 = 0;
             stackIn_12_1 = var6;
             stackIn_13_2 = !(var4 < 0);

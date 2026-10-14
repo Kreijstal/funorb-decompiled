@@ -31,7 +31,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
               QuickChatHelpDialog.liveHeldButton = 1;
             }
             var2_int = event.getModifiers();
-            kn.livePointerChanged = true;
+            QuickChatCategoryDefinition.livePointerChanged = true;
             if ((8 & var2_int) == 0) {
             }
             if (0 != (4 & var2_int)) {
@@ -71,7 +71,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           gr.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
           WidgetTextLayout.livePointerY = event.getY();
-          kn.livePointerChanged = true;
+          QuickChatCategoryDefinition.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +131,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             gr.pointerIdleTicks = 0;
             DirectByteStorage.livePointerX = -1;
             WidgetTextLayout.livePointerY = -1;
-            kn.livePointerChanged = true;
+            QuickChatCategoryDefinition.livePointerChanged = true;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dm.mouseExited(" + (event != null ? "{...}" : "null") + ')');
@@ -149,7 +149,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (null != PowerUpWarning.mouseInput) {
             gr.pointerIdleTicks = 0;
             QuickChatHelpDialog.liveHeldButton = 0;
-            kn.livePointerChanged = true;
+            QuickChatCategoryDefinition.livePointerChanged = true;
             var2_int = event.getModifiers();
             if ((var2_int & 8) != 0) {
             }
@@ -234,7 +234,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           gr.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
           WidgetTextLayout.livePointerY = event.getY();
-          kn.livePointerChanged = true;
+          QuickChatCategoryDefinition.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -263,7 +263,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           gr.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
           WidgetTextLayout.livePointerY = event.getY();
-          kn.livePointerChanged = true;
+          QuickChatCategoryDefinition.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

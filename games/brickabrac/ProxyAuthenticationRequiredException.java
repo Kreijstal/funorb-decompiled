@@ -59,13 +59,13 @@ final class ProxyAuthenticationRequiredException extends IOException {
         if (param0 < -27) {
           var3 = (-BoundedFile.field_h + StrongCacheEntry.field_O) * var2 / var1 + BoundedFile.field_h;
           DualLinkDeque.field_d.setBounds(120, var3, ValidationStatus.field_f, 640, (byte) 64);
-          VerticalScrollbar.a(kn.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
+          VerticalScrollbar.a(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
           return;
         }
         keyEventCodes = (int[]) null;
         var3Lifetime1 = (-BoundedFile.field_h + StrongCacheEntry.field_O) * var2 / var1 + BoundedFile.field_h;
         DualLinkDeque.field_d.setBounds(120, var3Lifetime1, ValidationStatus.field_f, 640, (byte) 64);
-        VerticalScrollbar.a(kn.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
+        VerticalScrollbar.a(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
     }
 
     final static void a(String param0, int param1, int param2, String[] param3) {

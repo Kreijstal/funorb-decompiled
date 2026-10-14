@@ -50,12 +50,12 @@ final class aj {
         try {
           var3_int = param0;
           var4 = ContentTransitionPhase.field_d;
-          while (kn.field_E.length > var3_int) {
+          while (QuickChatCategoryDefinition.field_E.length > var3_int) {
             var5 = MenuSelection.field_q[var3_int];
             if (0 > var5) {
               var4 = var4 + BufferedSocket.field_m;
             } else {
-              var6 = pl.a(0, kn.field_E[var3_int], true);
+              var6 = pl.a(0, QuickChatCategoryDefinition.field_E[var3_int], true);
               var7 = -(var6 >> 1) + NewAchievementsScreen.field_J;
               var4 = var4 + GameClock.field_g;
               if (ReflectionCheck.containsRectanglePoint(-FullscreenFailureDialog.field_lb + var7, (GameCanvas.field_f << 1) + TooltipSprite.field_i, (FullscreenFailureDialog.field_lb << 1) + var6, (byte) 80, param1, param2, var4)) {

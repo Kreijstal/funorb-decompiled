@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class so {
+final class QuickChatCategoryRegistry {
     static String field_e;
-    private WeightedLruCache field_a;
+    private WeightedLruCache definitions;
     static AppletGameShell field_f;
     static int field_b;
     static HuffmanCodec textHuffman;
-    private ResourceArchive field_g;
-    private ResourceArchive field_c;
+    private ResourceArchive standardArchive;
+    private ResourceArchive extendedArchive;
 
     final static RasterCacheSurface a(int param0, int param1, int param2, NodeDeque param3) {
         Object var4 = null;
@@ -23,7 +23,7 @@ final class so {
           var4 = null;
           if (param0 != 0) {
             var6 = (NodeDeque) null;
-            so.a(8, 113, -81, (NodeDeque) null);
+            QuickChatCategoryRegistry.a(8, 113, -81, (NodeDeque) null);
           }
           var5 = (RasterCacheSurface) (param3.first(-15));
           while (var5 != null) {
@@ -67,27 +67,27 @@ final class so {
         return gr.pointerIdleTicks;
     }
 
-    final kn a(int param0, byte param1) {
-        byte[] var4 = null;
-        kn var3 = (kn) (this.field_a.get((long)param0, true));
-        if (var3 != null) {
-          return var3;
+    final QuickChatCategoryDefinition getDefinition(int categoryId, byte obfuscationGuard) {
+        byte[] data = null;
+        QuickChatCategoryDefinition definition = (QuickChatCategoryDefinition) (this.definitions.get((long)categoryId, true));
+        if (definition != null) {
+          return definition;
         }
-        if (param0 < 32768) {
-          var4 = this.field_g.takeFile(param0, 0, 4);
+        if (categoryId < 32768) {
+          data = this.standardArchive.takeFile(categoryId, 0, 4);
         } else {
-          var4 = this.field_c.takeFile(32767 & param0, 0, 4);
+          data = this.extendedArchive.takeFile(32767 & categoryId, 0, 4);
         }
-        var3 = new kn();
-        if (var4 != null) {
-          var3.a(new PacketBuffer(var4), -29539);
+        definition = new QuickChatCategoryDefinition();
+        if (data != null) {
+          definition.decode(new PacketBuffer(data), -29539);
         }
-        if (param0 >= 32768) {
-          var3.c((byte) -124);
+        if (categoryId >= 32768) {
+          definition.markExtendedLinks((byte) -124);
         }
-        int var5 = -120 % ((param1 - 22) / 49);
-        this.field_a.put(72, var3, (long)param0);
-        return var3;
+        int unusedGuardRemainder = -120 % ((obfuscationGuard - 22) / 49);
+        this.definitions.put(72, definition, (long)categoryId);
+        return definition;
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, ResourceArchive param4) {
@@ -274,7 +274,7 @@ final class so {
           Ball.field_D.a(0, 0);
           ch.field_k = new RgbSprite[TextHotspotRegion.field_p.length];
           if (param3 != 29137) {
-            so.a((byte) -25);
+            QuickChatCategoryRegistry.a((byte) -25);
           }
           for (var10_intLifetime6 = 0; ch.field_k.length > var10_intLifetime6; var10_intLifetime6++) {
             ch.field_k[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.field_p[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.field_p[var10_intLifetime6].canvasHeight / 2);
@@ -397,42 +397,42 @@ final class so {
         }
     }
 
-    so(int param0, ResourceArchive param1, ResourceArchive param2) {
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        this.field_a = new WeightedLruCache(64);
+    QuickChatCategoryRegistry(int unusedOption, ResourceArchive standardArchive, ResourceArchive extendedArchive) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String standardArchiveSummary = null;
+        StringBuilder extendedContextBuilder = null;
+        String extendedArchiveSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        this.definitions = new WeightedLruCache(64);
         try {
-          this.field_c = param2;
-          this.field_g = param1;
-          if (this.field_g != null) {
-            this.field_g.getFileCapacity(-123, 0);
+          this.extendedArchive = extendedArchive;
+          this.standardArchive = standardArchive;
+          if (this.standardArchive != null) {
+            this.standardArchive.getFileCapacity(-123, 0);
           }
-          if (this.field_c != null) {
-            this.field_c.getFileCapacity(-113, 0);
+          if (this.extendedArchive != null) {
+            this.extendedArchive.getFileCapacity(-113, 0);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("so.<init>(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("so.<init>(").append(unusedOption).append(',');
+          if (standardArchive == null) {
+            standardArchiveSummary = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            standardArchiveSummary = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
-          if (param2 == null) {
-            stackIn_12_2 = "null";
+          extendedContextBuilder = ((StringBuilder) (Object) contextBuilder).append(standardArchiveSummary).append(',');
+          if (extendedArchive == null) {
+            extendedArchiveSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            extendedArchiveSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) extendedContextBuilder).append(extendedArchiveSummary).append(')').toString());
         }
     }
 

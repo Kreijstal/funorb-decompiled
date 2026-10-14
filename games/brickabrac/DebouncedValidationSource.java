@@ -5,7 +5,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
     static int[] rankingWinRateThousandths;
     static String field_e;
     private long lastEditMillis;
-    static so field_c;
+    static QuickChatCategoryRegistry quickChatCategories;
     static String field_d;
     static int field_a;
 
@@ -25,7 +25,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
     }
 
     public static void d(int param0) {
-        field_c = null;
+        quickChatCategories = null;
         field_e = null;
         rankingWinRateThousandths = null;
         field_d = null;

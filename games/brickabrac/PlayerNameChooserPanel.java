@@ -83,13 +83,13 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
               var4 = var4 + IntArrayRequest.field_s;
             } else {
               var6 = hm.a(true, ValidationStatus.field_i[var3_int], 0);
-              var4 = var4 + kn.field_y;
+              var4 = var4 + QuickChatCategoryDefinition.field_y;
               var7 = ProxySocketConnector.field_k - (var6 >> 1);
               if (ReflectionCheck.containsRectanglePoint(var7 - cn.field_c, (DropTargetWidget.field_H << 1) + b.field_c, var6 + (cn.field_c << 1), (byte) 65, param1, param2, var4)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (kn.field_y + ((DropTargetWidget.field_H << 1) + b.field_c));
+              var4 = var4 + (QuickChatCategoryDefinition.field_y + ((DropTargetWidget.field_H << 1) + b.field_c));
             }
             var3_int++;
           }

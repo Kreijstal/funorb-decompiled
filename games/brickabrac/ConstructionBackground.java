@@ -141,7 +141,7 @@ final class ConstructionBackground extends BackgroundScene {
           param1 = param1 + var3 * (StrongCacheEntry.field_O - param1) / var2;
         }
         DualLinkDeque.field_d.setBounds(120, param1, ValidationStatus.field_f, 640, (byte) 64);
-        VerticalScrollbar.a(kn.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
+        VerticalScrollbar.a(QuickChatCategoryDefinition.field_z, 5, StrongCacheEntry.field_O - 24, 640, LobbyGame.field_oc, 0, (byte) 94);
         if (param0 > -70) {
           RgbSprite var4 = (RgbSprite) null;
           ConstructionBackground.a((RgbSprite) null, 67, 35, -28, -34, (RgbSprite) null, -56, 62, -67, 118, (RgbSprite) null, -55, (RgbSprite) null);

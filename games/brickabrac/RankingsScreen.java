@@ -131,7 +131,7 @@ final class RankingsScreen extends MenuScreen {
         int var6Lifetime1;
         this.sortIndex = 0;
         PlayerNameChooserPanel.field_N = 10 + PasswordFieldRenderer.field_D.measureText("10. ");
-        var8 = new String[]{so.field_e, NodeDeque.field_c, WidgetPaintStyle.field_e, ScrollPaneWithFooter.field_Vb, BufferedFile.field_p};
+        var8 = new String[]{QuickChatCategoryRegistry.field_e, NodeDeque.field_c, WidgetPaintStyle.field_e, ScrollPaneWithFooter.field_Vb, BufferedFile.field_p};
         var9 = var8;
         var2 = ContextActionController.field_g.measureText(IntrusiveNode.a((CharSequence[]) ((Object) var9), true));
         var3 = 582;
@@ -229,7 +229,7 @@ final class RankingsScreen extends MenuScreen {
         var2 = 149 + ContextActionController.field_g.capHeight;
         var3 = 0;
         ContextActionController.field_g.drawLeft(DualLinkIterator.field_i, 66, var2, var3, -1);
-        ContextActionController.field_g.drawRight(so.field_e, ResourceArchive.field_d[0], var2, var3, -1);
+        ContextActionController.field_g.drawRight(QuickChatCategoryRegistry.field_e, ResourceArchive.field_d[0], var2, var3, -1);
         ContextActionController.field_g.drawRight(NodeDeque.field_c, ResourceArchive.field_d[1], var2, var3, -1);
         if (obfuscationGuard >= -14) {
           this.advanceScreen(false, true, 9);
