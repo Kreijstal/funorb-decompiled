@@ -163,10 +163,10 @@ public final class BrickABrac extends InteractiveGameClient {
         StringBuilder stackIn_137_1 = null;
         String stackIn_138_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int resultWordFlag = 0;
         int[] var4 = null;
-        RuntimeException var4_ref = null;
-        String[] var5 = null;
+        RuntimeException failure = null;
+        String[] playerNameStorage = null;
         int[] var5_array = null;
         int var5_int = 0;
         int var6 = 0;
@@ -188,7 +188,7 @@ public final class BrickABrac extends InteractiveGameClient {
         int[] var28 = null;
         int[] var29 = null;
         String[] playerNames = null;
-        int[] var32 = null;
+        int[] randomSeedStorage = null;
         int[] var34 = null;
         int[] var35 = null;
         int[] var36 = null;
@@ -197,7 +197,7 @@ public final class BrickABrac extends InteractiveGameClient {
         int[] var46 = null;
         int[] var47 = null;
         int[] var48 = null;
-        int[] var49 = null;
+        int[] levelOrder = null;
         int[] characterOrder = null;
         int[] var5_arrayLifetime1;
         int[] var5_arrayLifetime2;
@@ -384,12 +384,12 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           sk.finishScreenTransition((byte) -125);
           stackIn_44_0 = (packet.readUnsignedByte(255) == 0) ? 0 : 1;
-          var4_int = stackIn_44_0;
+          resultWordFlag = stackIn_44_0;
           playerNames = new String[packet.readUnsignedByte(255)];
-          var5 = playerNames;
+          playerNameStorage = playerNames;
           localPlayerId = packet.readByte(true);
           for (var7 = 0; playerNames.length > var7; var7++) {
-            var5[var7] = packet.readPrefixedCp1252String(255);
+            playerNameStorage[var7] = packet.readPrefixedCp1252String(255);
           }
           if (localPlayerId < 0) {
             localPlayerId = -2;
@@ -397,14 +397,14 @@ public final class BrickABrac extends InteractiveGameClient {
           var7 = packet.readInt(obfuscationGuard ^ 208);
           matchRandom = new IsaacGenerator(new int[]{var7});
           randomSeeds = new int[playerNames.length];
-          var32 = randomSeeds;
-          seedWords = var32;
+          randomSeedStorage = randomSeeds;
+          seedWords = randomSeedStorage;
           for (var10 = 0; var10 < playerNames.length; var10++) {
             seedWords[var10] = matchRandom.nextInt(105);
           }
-          var49 = kk.createIndexOrder(false, tq.field_d.levelCount, matchRandom);
+          levelOrder = kk.createIndexOrder(false, tq.field_d.levelCount, matchRandom);
           repeatMode = packet.readByte(true);
-          configuration = new LevelSequence(tq.field_d, var49, repeatMode);
+          configuration = new LevelSequence(tq.field_d, levelOrder, repeatMode);
           backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
           TabbedPane.currentBackground = rd.selectBackground(backgroundSelector, (byte) 19);
           characterOrder = LobbyPlayer.createCharacterOrder(matchRandom, false);
@@ -415,7 +415,7 @@ public final class BrickABrac extends InteractiveGameClient {
             stackIn_56_0 = 0;
           }
           localPlayerMask = stackIn_56_0;
-          IntArrayRequest.gameplayScreen = new GameplayScreen(true, var4_int != 0, playerNames, localPlayerId, localPlayerMask, configuration, randomSeeds, characterOrder);
+          IntArrayRequest.gameplayScreen = new GameplayScreen(true, resultWordFlag != 0, playerNames, localPlayerId, localPlayerMask, configuration, randomSeeds, characterOrder);
           stackIn_58_0 = IntArrayRequest.gameplayScreen;
           stackIn_59_1 = (packet.readUnsignedByte(255) == 0);
           stackIn_58_0.snapshotsReady = stackIn_59_1;
@@ -433,8 +433,8 @@ public final class BrickABrac extends InteractiveGameClient {
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_137_0 = var4_ref;
+          failure = decompiledCaughtException;
+          stackIn_137_0 = failure;
           stackIn_137_1 = new StringBuilder().append("BrickABrac.K(");
           if (packet == null) {
             stackIn_138_2 = "null";

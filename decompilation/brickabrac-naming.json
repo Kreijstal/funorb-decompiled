@@ -12996,6 +12996,30 @@
       "renamedSymbol": "L:BrickABrac.renderGameLayer(I)V#4"
     },
     {
+      "symbol": "L:BrickABrac.a(Lpi;BI)Z#17",
+      "originalName": "var4_int",
+      "to": "resultWordFlag",
+      "evidence": "BrickABrac.java: Scoped network-start flag, player-name/seed storage, shuffled level order or exception context, checked through actual packet dispatch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#17"
+    },
+    {
+      "symbol": "L:BrickABrac.a(Lpi;BI)Z#19",
+      "originalName": "var4_ref",
+      "to": "failure",
+      "evidence": "BrickABrac.java: Scoped network-start flag, player-name/seed storage, shuffled level order or exception context, checked through actual packet dispatch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#19"
+    },
+    {
+      "symbol": "L:BrickABrac.a(Lpi;BI)Z#20",
+      "originalName": "var5",
+      "to": "playerNameStorage",
+      "evidence": "BrickABrac.java: Scoped network-start flag, player-name/seed storage, shuffled level order or exception context, checked through actual packet dispatch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#20"
+    },
+    {
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#25",
       "originalName": "var8",
       "to": "matchRandom",
@@ -13052,12 +13076,28 @@
       "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#41"
     },
     {
+      "symbol": "L:BrickABrac.a(Lpi;BI)Z#42",
+      "originalName": "var32",
+      "to": "randomSeedStorage",
+      "evidence": "BrickABrac.java: Scoped network-start flag, player-name/seed storage, shuffled level order or exception context, checked through actual packet dispatch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#42"
+    },
+    {
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#47",
       "originalName": "var39",
       "to": "randomSeeds",
       "evidence": "BrickABrac.java: Reviewed match-start-specific local lifetime; other opcode branches retain their identities.",
       "confidence": "reviewed",
       "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#47"
+    },
+    {
+      "symbol": "L:BrickABrac.a(Lpi;BI)Z#51",
+      "originalName": "var49",
+      "to": "levelOrder",
+      "evidence": "BrickABrac.java: Scoped network-start flag, player-name/seed storage, shuffled level order or exception context, checked through actual packet dispatch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#51"
     },
     {
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#52",
@@ -103483,7 +103523,7 @@
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#17",
       "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#17",
       "originalName": "var4_int",
-      "renamedName": "var4_int",
+      "renamedName": "resultWordFlag",
       "declaration": {
         "file": "BrickABrac.java",
         "start": 4796,
@@ -103505,7 +103545,7 @@
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#19",
       "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#19",
       "originalName": "var4_ref",
-      "renamedName": "var4_ref",
+      "renamedName": "failure",
       "declaration": {
         "file": "BrickABrac.java",
         "start": 4862,
@@ -103527,7 +103567,7 @@
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#20",
       "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#20",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "playerNameStorage",
       "declaration": {
         "file": "BrickABrac.java",
         "start": 4896,
@@ -103791,7 +103831,7 @@
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#42",
       "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#42",
       "originalName": "var32",
-      "renamedName": "var32",
+      "renamedName": "randomSeedStorage",
       "declaration": {
         "file": "BrickABrac.java",
         "start": 5474,
@@ -103901,7 +103941,7 @@
       "symbol": "L:BrickABrac.a(Lpi;BI)Z#51",
       "renamedSymbol": "L:BrickABrac.handleGamePacket(LBitPacketBuffer;BI)Z#51",
       "originalName": "var49",
-      "renamedName": "var49",
+      "renamedName": "levelOrder",
       "declaration": {
         "file": "BrickABrac.java",
         "start": 5726,
@@ -418239,7 +418279,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "7192582c5bb3f5f9872782a3d601d5877cec604fea1fbeb0e874090632b51d9a",
+      "outputSha256": "9aa9f97adbec84cf031f1ea417a29952b0a9180ccd3d1484abc97c7825a409df",
       "edits": [
         {
           "start": 76,
@@ -419369,6 +419409,27 @@
           "renamed": "BitPacketBuffer"
         },
         {
+          "start": 4796,
+          "end": 4804,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#17",
+          "original": "var4_int",
+          "renamed": "resultWordFlag"
+        },
+        {
+          "start": 4862,
+          "end": 4870,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#19",
+          "original": "var4_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 4896,
+          "end": 4900,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#20",
+          "original": "var5",
+          "renamed": "playerNameStorage"
+        },
+        {
           "start": 5020,
           "end": 5022,
           "symbol": "C:fo",
@@ -419439,11 +419500,25 @@
           "renamed": "playerNames"
         },
         {
+          "start": 5474,
+          "end": 5479,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#42",
+          "original": "var32",
+          "renamed": "randomSeedStorage"
+        },
+        {
           "start": 5614,
           "end": 5619,
           "symbol": "L:BrickABrac.a(Lpi;BI)Z#47",
           "original": "var39",
           "renamed": "randomSeeds"
+        },
+        {
+          "start": 5726,
+          "end": 5731,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#51",
+          "original": "var49",
+          "renamed": "levelOrder"
         },
         {
           "start": 5754,
@@ -420930,6 +421005,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 12325,
+          "end": 12333,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#17",
+          "original": "var4_int",
+          "renamed": "resultWordFlag"
+        },
+        {
           "start": 12360,
           "end": 12365,
           "symbol": "L:BrickABrac.a(Lpi;BI)Z#41",
@@ -420949,6 +421031,13 @@
           "symbol": "M:wq.l(I)I",
           "original": "l",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 12405,
+          "end": 12409,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#20",
+          "original": "var5",
+          "renamed": "playerNameStorage"
         },
         {
           "start": 12412,
@@ -420984,6 +421073,13 @@
           "symbol": "L:BrickABrac.a(Lpi;BI)Z#41",
           "original": "var30",
           "renamed": "playerNames"
+        },
+        {
+          "start": 12529,
+          "end": 12533,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#20",
+          "original": "var5",
+          "renamed": "playerNameStorage"
         },
         {
           "start": 12542,
@@ -421063,6 +421159,13 @@
           "renamed": "playerNames"
         },
         {
+          "start": 12782,
+          "end": 12787,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#42",
+          "original": "var32",
+          "renamed": "randomSeedStorage"
+        },
+        {
           "start": 12790,
           "end": 12795,
           "symbol": "L:BrickABrac.a(Lpi;BI)Z#47",
@@ -421075,6 +421178,13 @@
           "symbol": "L:BrickABrac.a(Lpi;BI)Z#26",
           "original": "var9",
           "renamed": "seedWords"
+        },
+        {
+          "start": 12814,
+          "end": 12819,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#42",
+          "original": "var32",
+          "renamed": "randomSeedStorage"
         },
         {
           "start": 12855,
@@ -421103,6 +421213,13 @@
           "symbol": "M:fo.b(I)I",
           "original": "b",
           "renamed": "nextInt"
+        },
+        {
+          "start": 12941,
+          "end": 12946,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#51",
+          "original": "var49",
+          "renamed": "levelOrder"
         },
         {
           "start": 12952,
@@ -421159,6 +421276,13 @@
           "symbol": "C:oi",
           "original": "oi",
           "renamed": "LevelSequence"
+        },
+        {
+          "start": 13059,
+          "end": 13064,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#51",
+          "original": "var49",
+          "renamed": "levelOrder"
         },
         {
           "start": 13066,
@@ -421292,6 +421416,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 13442,
+          "end": 13450,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#17",
+          "original": "var4_int",
+          "renamed": "resultWordFlag"
         },
         {
           "start": 13457,
@@ -421474,6 +421605,20 @@
           "symbol": "P:BrickABrac.a(Lpi;BI)Z#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 14132,
+          "end": 14140,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#19",
+          "original": "var4_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 14196,
+          "end": 14204,
+          "symbol": "L:BrickABrac.a(Lpi;BI)Z#19",
+          "original": "var4_ref",
+          "renamed": "failure"
         },
         {
           "start": 14291,
@@ -901228,10 +901373,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "a86db521a0723994c7d3faf340e515d3eeb06644437ec1febfdae9a238fbc874",
+    "rulesSha256": "efdad952dfc77ce8562b0acd0f98b1b4f8edbed5c80c23a8ae6add80a6918f8f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "d8562e1e7eda3ad1821d7ce10842cf532683aa141d3df45d5f8f8b5d00150591",
+    "outputTreeSha256": "dbfd92b3f89c6195ca192b93e8ce691380b69612bc19e49a194332f816289dc4",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -901251,8 +901396,8 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 854330,
-        "traceSha256": "5b9482fac7b037dd898aea39074daae4f2b6cf85e0717becdbdf110dd12bf02a",
+        "checks": 856483,
+        "traceSha256": "de86bb743a54d72b653f3331e4d9f82abe5a3602c79c66406f239c650d6cd26e",
         "rawNamedIdentical": true,
         "independentExpectations": true,
         "headlessClientBoundary": true,
@@ -901447,7 +901592,9 @@
         "gameplayStartupFixtures": true,
         "rematchRequestFixtures": true,
         "rematchCaptionFixtures": true,
-        "drawCaptionFixtures": true
+        "drawCaptionFixtures": true,
+        "networkMatchStartupFixtures": true,
+        "networkBoardSnapshotFixtures": true
       }
     }
   },
